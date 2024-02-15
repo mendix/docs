@@ -37,7 +37,7 @@ To set up your development tools, follow these steps:
     v14.15.0
     ```
 
-    For Debian-based Linux distributions such as Ubuntu, please refer to [this article](https://github.com/nodesource/distributions#user-content-installation-instructions) to properly set up your apt-get sources.
+    For Debian-based Linux distributions such as Ubuntu, please refer to [NodeSource Node.js Binary Distributions](https://github.com/nodesource/distributions#user-content-installation-instructions) to properly set up your apt-get sources.
 
     In the rest of the how-to's, in blocks such as the above, lines starting with a `$` represent commands to type into a terminal. Sometimes a line follows without a $, represents output of the command.
 
@@ -113,8 +113,8 @@ To set up a working directory for your script, follow these steps:
     ```
 
     The compiler options should be left as-is. The `files` directive is an array of strings with path names of all TypeScript files that make up your Node.js script or app. You can change it so that the compiler uses the right files.
-
-    Create new files in your app directory with Visual Studio Code by hovering with the mouse pointer over the name of the working directory in the left side pane. A "new file" icon appears. Click it to create a new file. For more information on basic editing with Visual Studio Code, check the [manual](https://code.visualstudio.com/Docs/editor/codebasics).
+    
+    Create new files in your app directory with Visual Studio Code by hovering over the name of the working directory in the left-side pane. When the **New file** icon appears, click it to create a new file. For more information on basic editing with VSC, see [Basic Editing](https://code.visualstudio.com/Docs/editor/codebasics).
 
 ## 5 Next Step
 

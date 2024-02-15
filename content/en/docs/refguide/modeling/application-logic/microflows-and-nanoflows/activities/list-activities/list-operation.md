@@ -6,8 +6,8 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="warning" %}}
-This activity can be used in both **Microflows** and **Nanoflows**.
+{{% alert color="info" %}}
+This activity can be used in both microflows and nanoflows.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -51,7 +51,7 @@ The **Action** section of the properties pane shows the action associated with t
 
 You can open a dialog box to configure this action by clicking the ellipsis (**…**) next to the action.
 
-You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
+You can also open the dialog box by double-clicking the activity, or right-clicking the activity and selecting **Properties**.
 
 ### 3.1 Operation
 
@@ -69,7 +69,7 @@ These binary operations have as an input a list and either another list or an ob
 | --- | --- | --- |
 | Union | The result is a combination of the elements of both parameters avoiding duplicates. | List |
 | Intersect | The result is a list containing elements that appear in both parameters. | List |
-| Subtract | The result is the first parameter with the element(s) of the second parameter removed. | List |
+| Subtract | The result is the first parameter with the element (or elements) of the second parameter removed. | List |
 | Contains | Checks whether all elements of the second parameter are present in the first parameter. | Boolean |
 | Equals | Checks whether the lists contain the same elements. | Boolean |
 

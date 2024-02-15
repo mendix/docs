@@ -426,7 +426,7 @@ You can export a single action by right-clicking a JavaScript action in the App 
 
 You can import a single action by right-clicking your module in the App Explorer, and then selecting **Import document from file**. Next, select your JavaScript action file.
 
-A single nanoflow action cannot be published in the Mendix Marketplace. You may publish one as a module, but it is recommended to publish related nanoflow actions as a group within a module. For a module containing multiple nanoflow actions, group actions with a relevant data model like "entities" and provide relevant documentation for external dependencies. Export the module as a whole and upload it to the Mendix Marketplace. For further instructions, see [How to Share Marketplace Content](/appstore/general/share-app-store-content/).
+A single nanoflow action cannot be published in the Mendix Marketplace. You may publish one as a module, but it is recommended to publish related nanoflow actions as a group within a module. For a module containing multiple nanoflow actions, group actions with a relevant data model like "entities" and provide relevant documentation for external dependencies. Export the module as a whole and upload it to the Mendix Marketplace. For further instructions, see [How to Share Marketplace Content](/appstore/sharing-content/).
 
 ### 3.4 Documenting JavaScript Actions{#document}
 

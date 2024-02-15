@@ -490,7 +490,7 @@ The test you created is now run on Firefox only. If you want to make sure the fu
 
 Well done! You created your first automated cross-browser test with TestNG!
 
-Now you know how to create a TestNG test file, how to create a test suite and how to run the automated test(s) on multiple browsers.
+Now you know how to create a TestNG test file, how to create a test suite and how to run the automated test (or tests) on multiple browsers.
 
 Happy testing!
 

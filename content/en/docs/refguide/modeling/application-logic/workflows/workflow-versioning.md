@@ -12,7 +12,7 @@ Workflows are processes that can potentially run for a long time. While a workfl
 ## 2 Workflow Versioning
 
 Workflow instances have functional value for the business. Therefore, when a new workflow version is deployed, the system should decide how to handle running instances. 
-Some workflow engines decide to keep the workflow instance running in the version in which it has been initiated. However, such approach can cause problems, for example, it is then impossible to fix issues in the workflow for existing instances. 
+Some Workflow Engines decide to keep the workflow instance running in the version in which it has been initiated. However, such approach can cause problems, for example, it is then impossible to fix issues in the workflow for existing instances. 
 The Mendix Workflow Engine uses a different approach. Mendix Studio Pro validates the app when it is being deployed using the model in that particular moment. Older versions of a workflow may refer to artifacts that are no longer available, such as roles, pages, workflows, or microflows that were deleted in the latest version (or require a different input or have a different output). As such, the model of the latest app version may no longer be compatible with older workflow versions. Mendix Studio Pro validates whether a workflow instance is compatible with the latest workflow version. 
 
 ## 3 Workflow Versioning Conflict Detection
@@ -25,7 +25,7 @@ After deploying a new app version, the Workflow Engine detects which workflows a
 
 If a workflow instance has already been incompatible in a previous app version, deploying a new app version reruns the Workflow Versioning Conflict Detection. When this new app version introduces a change that resolves a conflict for the workflow instance, this workflow instance will be automatically upgraded to the latest app version and the workflow execution continues. When the same (or a different set of) conflicts are detected, the workflow instance remains incompatible (though with an updated description in the **Reason** attribute when applicable).
 
-### 3.1 Successful Upgrades to the Latest Workflow Definition 
+### 3.1 Successful Upgrades to the Latest Workflow Definition {#workflow-definition-upgrade}
 
 Any of the following changes are interpreted as non-conflicting:
 
@@ -47,7 +47,7 @@ Any of the following changes are interpreted as non-conflicting:
 * Adding outcomes in **Decision**, **Call microflow** or **User task** activities
 * Changing the context entity, referenced microflows, referenced pages, or referenced workflows
 
-### 3.2 Workflow Versioning Conflict Types
+### 3.2 Workflow Versioning Conflict Types {#conflict-types}
 
 The Workflow Versioning Conflict Detection system detects different types of conflicts. This section lists conflict types, explains the impact, and provides option to solve conflicts. When one or more of these conflict types is detected, a workflow instance becomes incompatible and the **Reason** field mentions the conflict types that are found in the workflow instance.
 
@@ -63,15 +63,15 @@ Conflicts with the possible mitigations listed above can be summarized in the fo
 | Workflow Definition Deleted                         | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | N/A                                                          | N/A                                                          | N/A                                                          |
 | *Partially resolvable*:                             |                                                              |                                                              |                                                              |                                                              |
 | Current Activity Removed                            | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | N/A                                                          | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} |
-| Current Activity Moved out of Branch                | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | N/A                                                          | N/A                                                          |
+| Current Activity Moved out of Path                | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | N/A                                                          | N/A                                                          |
 | Parallel Split Introduced in Executed Path          | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | N/A                                                          | N/A                                                          |
 | *Resolvable*:                                       |                                                              |                                                              |                                                              |                                                              |
-| Parallel Branch Introduced                          | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | N/A                                                          |
+| Parallel Path Introduced                          | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | N/A                                                          |
 | Selected Outcome Replaced                           | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} |
 | Multi-User Task Outcome Changed                           | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} |
 | Activities Introduced in Executed Path              | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} |
 | Executed Activities Moved to Re-executable Position | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} |
-| Parallel Split Branch Removed                       | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} |
+| Parallel Split Path Removed                       | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" >}} |
 
 #### 3.2.2 Context Entity Replaced
 
@@ -80,7 +80,27 @@ When an app developer changes the **Workflow Context** entity of a workflow, exi
 You can do one of the following: 
 
 * The workflow can be aborted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
-* The app developer can create a Java action that uses the `void setWorkflowObject(contextObject: IMendixObject)` method on the `com.mendix.workflows.Workflow` interface to manually set the context object of the workflow parameter context for the right entity. For more information on Java actions, see [Extending Your Application with Custom Java](/refguide/extending-your-application-with-custom-java/).
+* The app developer can create a Java action that uses the `void setWorkflowObject(contextObject: IMendixObject)` method on the `com.mendix.workflows.Workflow` interface to manually set the context object of the workflow parameter context for the right entity. See below a Java action example set up within Mendix. It sets a new `$History` object as the workflow context:
+    
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-versioning-and-conflict-mitigation/Java-action-example.png" alt="Expose as Workflow Action Settings" >}}
+
+    Here is the code of the Java action example:
+
+    ```java
+    import com.mendix.workflows.Workflow;   // add this import to the top
+
+    // BEGIN USER CODE
+    try {
+      var workflow = com.mendix.core.Core.workflows().getWorkflow(getContext(), __WorkflowInput); // get the Workflow interface object
+      workflow.setWorkflowContext(__ContextReplacement); // replace the current context object with the new one
+      return true;
+    } catch (Exception e) {
+      return false;
+    }
+    // END USER CODE
+    ``` 
+
+    For more information on Java actions, see [Extending Your Application with Custom Java](/refguide/extending-your-application-with-custom-java/).
 * The app developer can revert changes to the original **Workflow** **Context** entity and deploy this change.
 
 To prevent this issue, you need to make sure that context objects cannot be deleted while they are still being used in running workflow instances.
@@ -118,9 +138,9 @@ You can do one of the following:
 * The Administrator can apply jumping to different activities. The Workflow Commons module has pages where the Administrator can decide which activity in the workflow to continue from (which activity to jump to). As a developer, you can also use microflow activities [Generate jump-to options](/refguide/generate-jump-to-options/) and [Apply jump-to option](/refguide/apply-jump-to-option/) to build custom pages and logic to migrate running workflow instances.
 * The app developer can revert the change (which adds the activities back) and deploy this version.
 
-#### 3.2.6 Current Activity Moved out of Branch
+#### 3.2.6 Current Activity Moved out of Path
 
-When an app developer moves activities out of a branch of a **Parallel Split**, currently running workflow instances that are executing the moved activity cannot complete the **Parallel Split**.
+When an app developer moves activities out of a **Parallel Split** path, currently running workflow instances that are executing the moved activity cannot complete the **Parallel Split**.
 
 You can do one of the following:
 
@@ -130,7 +150,7 @@ You can do one of the following:
 
 #### 3.2.7 Parallel Split Introduced in Executing Path
 
-When an app developer adds a **Parallel Split** with one or more branches and moves some activities inside a branch of that **Parallel Split**, workflow instances executing the moved activities cannot complete the parallel split.
+When an app developer adds a **Parallel Split** with one or more paths and moves some activities inside a path of that **Parallel Split**, workflow instances executing the moved activities cannot complete the parallel split.
 
 You can do one of the following:
 
@@ -138,15 +158,15 @@ You can do one of the following:
 * The workflow can be restarted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
 * The app developer can revert the change (which moves the activities out of the **Parallel Split**) and deploy this version.
 
-#### 3.2.8 Parallel Branch Introduced
+#### 3.2.8 Parallel Path Introduced
 
-When an app developer adds a branch to a **Parallel Split** and deploys this change, workflow instances currently executing activities inside this **Parallel Split** cannot complete the parallel split.
+When an app developer adds a path to a **Parallel Split** and deploys this change, workflow instances currently executing activities inside this **Parallel Split** cannot complete the parallel split.
 
 You can do one of the following:
 
 * The workflow can be aborted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
 * The workflow can be restarted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
-* The Administrator can use **Mark-as-Resolved** to fix this issue (the first activity of the newly added branch will be added to the executing activities of the workflow instance).
+* The Administrator can use **Mark-as-Resolved** to fix this issue (the first activity of the newly added path will be added to the executing activities of the workflow instance).
 * The app developer can revert the change (which moves the activity back) and deploy this version.
 
 #### 3.2.9 Selected Outcome Replaced
@@ -193,13 +213,13 @@ You can do one of the following:
 * The Administrator can use **Mark-as-Resolved** to fix this issue.
 * The app developer can revert the change (which moves the activity back) and deploy this version.
 
-#### 3.2.13 Parallel Split Branch Removed
+#### 3.2.13 Parallel Split Path Removed
 
-When an app developer removes a branch from a **Parallel Split** and deploys this change, the currently running workflow instances that are executing activities within that branch cannot continue execution. 
+When an app developer removes a path from a **Parallel Split** and deploys this change, the currently running workflow instances that are executing activities within that path cannot continue execution. 
 
 You can do one of the following:
 
 * The workflow can be aborted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
 * The workflow can be restarted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
-* The Administrator can use **Mark-as-Resolved** to fix this issue (the currently running activity within the removed branch will be aborted).
-* The app developer can revert the change (which adds the branch back) and deploy it.
+* The Administrator can use **Mark-as-Resolved** to fix this issue (the currently running activity within the removed path will be aborted).
+* The app developer can revert the change (which adds the path back) and deploy it.

@@ -21,7 +21,7 @@ The *Mendix Studio Pro 8 Guide* covers important topics concerning [Studio Pro](
 
 Before installing Studio Pro 8, please read [System Requirements](/refguide8/system-requirements/). For information on how to install Studio Pro, see [How to Install Mendix Studio Pro](/howto8/general/install/).
 
-If you have been using Desktop Modeler version 7, we recommend reading [Moving from Desktop Modeler 7 to Studio Pro 8](/refguide8/moving-from-7-to-8/).
+If you have been using Desktop Modeler version 7, Mendix recommends reading [Moving from Desktop Modeler 7 to Studio Pro 8](/refguide8/moving-from-7-to-8/).
 
 If you are looking for step-by-step guides on performing various Mendix actions, browse the [Studio Pro 8 How-tos](/howto8/).
 

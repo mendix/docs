@@ -9,7 +9,7 @@ aliases:
     - /howto/collaboration-requirements-management/on-premises-git-howto/
 ---
 
-## 1 Introduction
+## 1 Introduction {#intro}
 
 When developing Mendix applications, changes to these applications are stored in a version control system. This system is called [Team Server](/developerportal/general/team-server/) and is part of the Mendix Platform. This means that the application's files are stored in the Mendix online environment. For more information, see the [Version Control Reference Guide](/refguide/version-control/).
 
@@ -18,6 +18,12 @@ While using Team Server is the recommended for most Mendix developers, you may p
 {{% alert color="info" %}}
 This document does not describe how to set up a Git server from scratch; typically, this will be taken care of by the IT department of your organization.
 {{% /alert %}}
+
+{{% alert color="info" %}}When you use a third-party Git version control repository, the following products and capabilities are not available:
+
+* Deployment using the Developer Portal directly from the Team Server
+* Integrated platform APIs such as the [App repository API](/apidocs-mxsdk/apidocs/app-repository-api/), [Build API](/apidocs-mxsdk/apidocs/build-api/), [Platform SDK](/apidocs-mxsdk/mxsdk/), [Permissions API](/apidocs-mxsdk/apidocs/permissions-api/), [Projects API](/apidocs-mxsdk/apidocs/projects-api/), [Stories API](/apidocs-mxsdk/apidocs/stories-api/), and [User management API](/apidocs-mxsdk/apidocs/user-management-api/)
+* [AQM](/addons/aqm-addon/){{% /alert %}}
 
 ## 2 Prerequisites
 
@@ -55,7 +61,7 @@ Studio Pro is able to use the following Git server providers:
 * BitBucket Server
 * BitBucket Data Center
 
-{{% alert color="info" %}} Please note that some Git server providers have added additional limitations to their Git offering, such as a limit on filesize for individual files. In some cases the Mendix .MPR file can grow larger than 100MB. Please take this into account when choosing a provider. {{% /alert %}}
+{{% alert color="info" %}} Please note that some Git server providers have added additional limitations to their Git offering, such as a limit on the size of individual files. In some cases the Mendix .MPR file can grow larger than 100MB. Please take this into account when choosing a provider. {{% /alert %}}
 
 You need to create a private repository in the selected provider and create a personal access token (PAT) to provide access to it. The PAT is used as a password.
 
@@ -164,7 +170,15 @@ The app is uploaded successfully. You can check on your private server and see t
 
 ### 4.7 Moving a Subversion App to Git
 
-If you already have an existing versioned app (with Subversion) that you would like to upload to your Git private server instead, you can export it, then re-import it, and uploading it to your server. Follow the steps below:
+If you already have an existing versioned app (with Subversion) that you would like to upload to your Git private server instead, you can export it, then re-import it, and uploading it to your server.
+
+{{% alert color="info" %}}
+This creates an unversioned app, based on the branch you are working on in Studio Pro. This means that you will not get version history or other branches in the Git repo.
+
+You can move the whole app, including branches and history, to the Mendix Git repository by following the instructions in [Migrate to Git](/developerportal/general/migrate-to-git/)
+{{% /alert %}}
+
+Follow the steps below:
 
 1. Once the app is opened, go to **File > Export App Package**. 
 2. In the **Export App Package** dialog box, browse to the location you would like to save the *.mpk* (Mendix Package) file, or accept the default location, a new **packages** folder in the root of the application folder. Take note of this location, as you will need it later. You can also rename the *.mpk* file (for example,*MyGitApp.mpk*) and the app will be named that way once you import it and upload it to the Git server:

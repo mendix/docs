@@ -54,12 +54,12 @@ The [Team Server](/refguide7/team-server/) is implemented using Subversion, and 
 ### 4.3 Database Server
 
 * [IBM DB2](/refguide7/db2/) 11.5 for Linux, Unix, and Windows
-* [MariaDB](/refguide7/mysql/) 10.2, 10.3, 10.4, 10.5, 10.6, 10.11
-* [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/) 2019, 2021
+* [MariaDB](/refguide7/mysql/) 10.4, 10.5, 10.6, 10.11
+* [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/) 2019, 2022
 * Azure SQL v12 (support is not independently verified and is available only through compatible versions of SQL Server)
 * [MySQL](/refguide7/mysql/) 8.0
 * [Oracle Database](/refguide7/oracle/) 19, 21c
-* PostgreSQL 11, 12, 13, 14, 15 (please note that support for 10 is deprecated and will be removed in Studio Pro 7.23.35)
+* PostgreSQL 11, 12, 13, 14, 15, 16
 * [SAP HANA](/refguide7/saphana/) 2.00.040.00.1545918182
 
 ### 4.4 Java
@@ -105,7 +105,7 @@ Only devices running on these operating system versions receive up-to-date secur
 
 You can build hybrid apps with Mendix that run on older operating system versions than the ones we support. However, to receive official Mendix support you must demonstrate that your problem also occurs on a supported operating system version.
 
-We recommend the following minimum hardware requirements for all mobile devices running hybrid Mendix apps:
+Mendix recommends the following minimum hardware requirements for all mobile devices running hybrid Mendix apps:
 
 * CPU: minimum 2 cores with 2 GHz
 * Memory: minimum 2 GB

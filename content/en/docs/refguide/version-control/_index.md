@@ -66,10 +66,6 @@ Pulling is the action, invoked in Studio Pro, which gets the latest revision of 
 
 Committing is the action, invoked in Studio Pro, of creating a set of changes and pushing all your changes to the [repository](#repository) and making a new [revision](#revision). It is possible to store the committed data in a local repository, but not yet push it to the central [repository](#repository).
 
-{{% alert color="info" %}}
-When using Git, it is possible to store the committed data in a local repository, but not yet push it to the central [repository](#repository). 
-{{% /alert %}}
-
 If there are no conflicts, the changes are then sent to the repository to make a new revision.
 
 ### 2.9 Development Line {#development-line}

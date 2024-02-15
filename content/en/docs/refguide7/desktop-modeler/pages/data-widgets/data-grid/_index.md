@@ -196,8 +196,8 @@ If you choose 'Custom' as the date format (see above) the custom date format det
 | G | 1 | AD | Era |
 | y | 1..n | 2010 | Year |
 | M | 1..2 | 09 | Month |
-| M | 3 | Sept |
-| M | 4 | September |
+| M | 3 | Sept | Month |
+| M | 4 | September | Month |
 | w | 1..2 | 27 | Week of Year |
 | D | 1..3 | 93 | Day of Year |
 | a | 1 | AM | AM or PM |

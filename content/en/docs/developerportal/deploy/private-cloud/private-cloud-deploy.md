@@ -103,10 +103,14 @@ All environments are defined as production environments, which means that [secur
 3. An **Internal Name** (UUID) will be generated for you. This will be used when creating your environment to ensure that all the environment names in your namespace are unique.
 
     {{% alert color="info" %}}
-You can change the internal name if you wish, but do not reuse one which has already been used in this namespace, even if the environment it was used for has been deleted.
-{{% /alert %}}
+    You can change the internal name if you wish, but do not reuse one which has already been used in this namespace, even if the environment it was used for has been deleted.
+    {{% /alert %}}
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/customizeEnvironmentPage1.png" >}}
+
+    {{% alert color="warning" %}}
+    In the case of the Global Operator, do not use the same internal names for the managed namespaces under the same Global Operator namespace. Using the same internal name may result in unwanted issues.
+    {{% /alert %}}    
 
 4. Enter the **Environment Name**, the name for the environment. The environment name can only contain lowercase letters, numbers and dashes and must start and end with an alphanumeric character. You can have several environments for your app, for example test, acceptance, and production, however, all environments will be treated by Mendix as production environments, when you create them.
 
@@ -163,6 +167,8 @@ You can change the internal name if you wish, but do not reuse one which has alr
 
     See [Deploying the Deployment Package](#deploy-package), below, for instructions on how to check that the environment has been created successfully.
 
+    You can also filter the environment by the namespace name, environment ID, and environment name.
+
 {{% alert color="info" %}}
 The word **Licensed** shows that the Operator managing that environment is licensed, otherwise its *Trial* 
 {{% /alert %}}  
@@ -179,7 +185,7 @@ If creation of the environment fails, then contact your cluster manager. If they
 
 You can deploy the deployment package of your app by doing the following:
 
-1. Click **Deploy** button provided in **...** section next to the deployment package you wish to deploy.
+1. Click the **Deploy** button provided in the **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) menu next to the deployment package you wish to deploy.
 2. Select the **Destination** environment by clicking on Change environment (you can select a different one here if one is available).
 3. Confirm that the **Status** is *Ready*.
 4. Click **Transport**.
@@ -251,6 +257,10 @@ This creates a new package as described in [Creating a Deployment Package](#crea
 This displays details of the deployment package.
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image18.png" >}}
+
+{{% alert color="info" %}}
+Should a deployment package remain unused, inactive, or unlocked for a period exceeding 2 weeks, it will be automatically deleted according to the expiry date. To retain the deployment package for future use, be sure to lock it.
+{{% /alert %}}
 
 The information shows here is labeled to help you. The indicators in the environment description are described in the next section, [Environments](#environments), below.
 
@@ -449,9 +459,9 @@ For a *connected* cluster, the top level MendixApp​ CRD will be deleted from t
 
     {{% alert color="info" %}}If the storage plan is using a JDBC plan (not Postgres or SQL Server), the database and the user will remain untouched).{{% /alert %}}
 
-* ​​Files related to that environment will be deleted from the S3/Minio/Tencent storage bucket (or prefix if this is using a shared bucket).
+* ​​Files related to that environment will be deleted from the S3/Minio storage bucket (or prefix if this is using a shared bucket).
 
-    {{% alert color="info" %}}If you are using the S3 [create account with existing policy](/developerportal/deploy/private-cloud-cluster/#storage-plan) plan - the files remain untouched.{{% /alert %}} 
+    {{% alert color="info" %}}If you are using the S3 [create account with existing policy](/developerportal/deploy/standard-operator/#storage-plan) plan - the files remain untouched.{{% /alert %}} 
 
 * ​​S3/Minio users and policies will be deleted (if there is a storage plan specified to create those objects).
 
@@ -472,6 +482,8 @@ If you need to enter or change the subscription secret, then you can do that her
 Subscription secrets are obtained from [Mendix support](https://support.mendix.com/).
 
 We have also released an alternate way of licensing your apps in the Private Cloud by using PCLM. For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/).
+
+For users of the Private Cloud License Manager who wish to set the product type for the Runtime license in a particular environment, it can be done by editing the Product type. This ensures that the associated environment obtains the license from the license bundle with the specified Product type. By default, the value is set to the one defined in the Namespace configuration page.
 
 #### 5.1.4 Security
 
@@ -589,7 +601,7 @@ Delete all environments before you delete an app. If you delete an app which has
 
 ### 6.3 Deployment Package Size
 
-Mendix for Private Cloud has a limit of 512 MB on the size of a deployment package.
+Mendix for Private Cloud has a limit of 1024 MB on the size of a deployment package.
 
 ## 7 Troubleshooting
 
@@ -701,6 +713,90 @@ When an Istio service mesh is enabled in a namespace, every pod's traffic is rou
 To fix this issue, enable the `holdApplicationUntilProxyStarts: true` setting in the Istio [proxy config](https://istio.io/latest/docs/reference/config/istio.mesh.v1alpha1/#ProxyConfig). With this option, containers are only started once the Istio sidecar is ready to accept network traffic.
 
 For more information, see https://github.com/istio/istio/pull/24737.
+
+### 7.7 Out of Memory Killed Error
+
+This error refers to a situation where a running pod is terminated because it has exhausted the available memory resources on the node where it is running. This can occur when a pod consumes more memory than it has been allocated, or when a node runs out of resources (memory). In this case, the node will kill random pods that are using more memory than their requests value. In Kubernetes, this is called overcommitment. For more information, refer to [Red Hat documentation](https://docs.okd.io/4.13/post_installation_configuration/node-tasks.html#nodes-cluster-overcommit-resource-requests_post-install-node-tasks).
+
+To fix this issue, you can raise memory requests to match the memory limit by performing the following steps:
+
+1. Update the default *OperatorConfiguration*, *mendix-agent* and *mendix-operator* deployments. Make sure that the memory request is equal to memory limit in below resources.
+
+    {{% alert color="info" %}}For Global Operator scenarios, if the operator configurations in the managed namespace differ from the configurations in the Global Operator namespace, the configurations from the managed namespace will consistently take precedence.{{% /alert %}}
+
+    1. To update the Mendix Operator configuration, use the following command:
+
+        For Kubernetes:
+
+        ```shell
+        kubectl -n {namespace} edit operatorconfiguration
+        ```
+
+        For Openshift:
+
+        ```shell
+        oc -n {namespace} edit operatorconfiguration
+        ```
+
+    2. To update the Mendix Agent, use the following command:
+
+        For Kubernetes:
+
+        ```shell
+        kubectl -n {namespace} edit deployment mendix-agent
+        ```
+
+        For Openshift:
+
+        ```shell
+        oc -n {namespace} edit deployment mendix-agent
+        ```
+
+    3. To update the Mendix Operator, use the following command:
+
+        For Kubernetes:
+
+        ```shell
+        kubectl -n {namespace} edit deployment mendix-operator
+        ```
+
+        For Openshift:
+
+        ```shell
+        oc -n {namespace} edit deployment mendix-operator
+        ```
+
+    4. Restart the Mendix operator by using the following command:
+
+        For Openshift:
+
+        ```shell
+        oc -n {namespace} scale deployment mendix-operator --replicas=0
+        oc -n {namespace} scale deployment mendix-operator --replicas=1
+        ```
+
+        For Kubernetes:
+
+        ```shell
+        kubectl -n {namespace} scale deployment mendix-operator --replicas=0
+        kubectl -n {namespace} scale deployment mendix-operator --replicas=1
+        ```
+
+2. When running the upgrade procedure in mxpc-cli, check that the memory request values for *OperatorConfiguration*, *mendix-agent* and *mendix-operator* deployments are equal to the memory limit value.
+3. In the portal, update the default core environment sizes so that memory requests are at least equal to memory limits.
+4. For Mendix apps, edit the environment memory request by running the following command:
+
+    For Openshift:
+
+    ```shell
+    oc -n {namespace} edit mendixapp {environmentInternalId}
+    ```
+
+    For Kubernetes:
+
+    ```shell
+    kubectl -n {namespace} edit mendixapp {environmentInternalId}
+    ```
 
 ## 8 How the Operator Deploys Your App {#how-operator-deploys}
 

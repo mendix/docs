@@ -7,10 +7,6 @@ tags: ["studio pro", "string function calls", "expression", "expressions"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/string-function-calls.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 This document describes functions that are used to convert and inspect [strings](/refguide8/data-types/). Note that these functions never change the string itself, they only return a new value.
@@ -159,16 +155,22 @@ The output is the following:
 'mystring'
 ```
 
-Another example of an input is:
+If you use a third parameter to specify the desired length of the output:
 
-```java
-substring('mendixapp', 6,3)
+```java {linenos=false}
+substring('thisismystring', 6, 2)
 ```
 
 The output is the following:
 
-```java
-'app'
+```java {linenos=false}
+'my'
+```
+
+To prevent the value of the third parameter from getting out of range, you can set a limit to the third parameter, for instance, using the `min` and `length` functions:
+
+```java {linenos=false}
+substring('thisismystring', 0, min(length('thisismystring'), 20))
 ```
 
 ## 6 find

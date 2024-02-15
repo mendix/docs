@@ -5,14 +5,6 @@ weight: 30
 tags: ["studio pro"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/committing-objects.pdf).
-{{% /alert %}}
-
-{{% alert color="warning" %}}
-This activity can be used in both **Microflows** and **Nanoflows**.
-{{% /alert %}}
-
 ## 1 Introduction
 
 The **Commit** activity can commit one or more objects. For persistable entities this means that the object will be stored in the database. Committing non-persistable entities stores the current attribute values and association values in memory, this allows a rollback to revert to those values. See also [Persistability](/refguide8/persistability/).
@@ -75,7 +67,7 @@ When testing your app, ensure that the desired data is being displayed by the wi
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-When committing a large number of objects, we recommend that you do not enable 'Refresh in client' because it can slow things down.
+When committing a large number of objects, Mendix recommends not enabling **Refresh in client**, because it can slow things down.
 {{% /alert %}}
 
 #### 3.3.1 Microflow is Called from the Client in an Online App

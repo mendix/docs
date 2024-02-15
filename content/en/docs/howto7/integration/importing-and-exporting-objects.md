@@ -151,7 +151,7 @@ To import widgets, follow these steps:
 
 ### 2.5 Importing Content from the Marketplace
 
-To learn more about importing content from the Marketplace, see [Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/).
+To learn more about importing content from the Marketplace, see [Using Marketplace Content](/appstore/overview/use-content/).
 
 ## 3 Exporting Objects
 

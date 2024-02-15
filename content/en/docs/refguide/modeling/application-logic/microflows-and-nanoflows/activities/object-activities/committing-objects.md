@@ -5,8 +5,8 @@ weight: 30
 tags: ["studio pro", "commit object", "activity"]
 ---
 
-{{% alert color="warning" %}}
-This activity can be used in both **Microflows** and **Nanoflows**.
+{{% alert color="info" %}}
+This activity can be used in both microflows and nanoflows.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -19,13 +19,13 @@ A Mendix commit does not always behave like a database commit. See [How Commits 
 
 ## 2 Properties
 
-An example of commit object(s) properties is represented in the image below:
+An example of **Commit object(s)** properties is represented in the image below:
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/committing-objects/commit-properties.png" alt="commit object(s) properties" width="650px" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
-The commit object(s) properties pane consists of the following sections:
+The **Commit object(s)** properties pane consists of the following sections:
 
 * [Action](#action)
 * [Common](#common)
@@ -36,7 +36,7 @@ The **Action** section of the properties pane shows the action associated with t
 
 You can open a dialog box to configure this action by clicking the ellipsis (**…**) next to the action.
 
-You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
+You can also open the dialog box by double-clicking the activity, or right-clicking the activity and selecting **Properties**.
 
 ### 3.1 Object or List
 
@@ -56,9 +56,9 @@ Default: **Yes**
 
 Nanoflows do not have this property.
 
-If the commit object(s) activity is used in an online app, it sends a commit request to the Mendix Runtime and always runs the events.
+If the **Commit object(s)** activity is used in an online app, it sends a commit request to the Mendix Runtime and always runs the events.
 
-If the commit object(s) activity is used in an offline app, the changes are committed to the offline database, and event handlers are run when the offline app synchronizes.
+If the **Commit object(s)** activity is used in an offline app, the changes are committed to the offline database, and event handlers are run when the offline app synchronizes.
 
 ### 3.3 Refresh in Client{#refresh-in-client}
 
@@ -75,7 +75,7 @@ When testing your app, ensure that the desired data is being displayed by the wi
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-When committing a large number of objects, we recommend that you do not enable **Refresh in client** because it can slow things down.
+When committing a large number of objects, Mendix recommends not enabling **Refresh in client**, because it can slow things down.
 {{% /alert %}}
 
 #### 3.3.1 Microflow is Called from the Client in an Online App

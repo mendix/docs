@@ -1,4 +1,4 @@
-# Mendix Documentation [![badge](https://img.shields.io/badge/hugo-0.109.0-green.svg)](https://gohugo.io/) [![badge](https://img.shields.io/badge/node-18.14.0-green.svg)](https://nodejs.org/en/) [![badge](https://img.shields.io/badge/docsy-0.6.0-green.svg)](https://www.docsy.dev/)
+# Mendix Documentation [![badge](https://img.shields.io/badge/hugo-0.109.0-green.svg)](https://gohugo.io/) [![badge](https://img.shields.io/badge/node-18.19.0-green.svg)](https://nodejs.org/en/) [![badge](https://img.shields.io/badge/docsy-0.6.0-green.svg)](https://www.docsy.dev/)
 
 This repository contains the Mendix documentation, which is served on [https://docs.mendix.com](https://docs.mendix.com).
 
@@ -9,7 +9,7 @@ Build status:
 
 ## Contribute
 
-Want to contribute? Take a look at [How to Contribute to the Mendix Documentation](https://docs.mendix.com/developerportal/community-tools/contribute-to-the-mendix-documentation). It will guide you through the process of submitting updates to the docs directly from Github or from a local branch.
+Want to contribute? Take a look at [How to Contribute to Mendix Docs](https://docs.mendix.com/community-tools/contribute-to-mendix-docs/). It will guide you through the process of submitting updates to the docs directly from Github or from a local branch.
 
 ## Local Build
 

@@ -3,49 +3,69 @@ title: "MxAssist Logic Bot"
 url: /refguide/mx-assist-logic-bot/
 weight: 10
 description: "Describes MxAssist Logic Bot in Mendix Studio Pro."
-tags: ["studio pro", "logic bot", mendix assist", "AI", "assist", "mx assist"]
+tags: ["studio pro", "logic bot", "mendix assist", "AI", "assist", "mx assist"]
 ---
 
 ## 1 Introduction 
 
-MxAssist Logic Bot is an AI-powered virtual co-developer bot that helps you to model and configure your application logic (microflows) in Mendix Studio Pro. It gives you contextualized recommendations on the next best activity in your microflow based on the already designed activities, parameters, and other context-related information. 
+{{% alert color="info" %}}
+MxAssist Logic Bot has been enhanced from Studio Pro 10.6. In Studio Pro 10.6 and above, MxAssist Logic Bot is available not only for microflows but also for nanoflows and rules.
+{{% /alert %}}
 
-MxAssist Logic Bot is built using the machine learning analysis of over twelve million anonymized application logics (microflows) built with Mendix to detect and learn the best practice patterns in microflows.
+{{% alert color="info" %}}
+MxAssist Logic Bot is still available when you are not signed in, but you need to sign in to get AI recommendations.
+{{% /alert %}}
 
-The key features of MxAssist Logic Bot are the following: 
+MxAssist Logic Bot is an AI-powered virtual co-developer bot that helps you to model and configure your application logic in Mendix Studio Pro. It gives you contextualized recommendations on the next best activity in your logic based on the already designed activities, parameters, and other context-related information. It is built using the machine learning analysis of over twelve million anonymized application logics built with Mendix to detect and learn the best practice patterns in Mendix.
 
-* **Next best action suggestion** – it recommends the top five next best activities out of more than 40 different options with accuracy of 95%. 
+The key features of MxAssist Logic Bot are the following:
+
+* **Smart search** (from Studio Pro 10.6.0) - you can search for the element you want to add to your flow based on microflow or nanoflow parameters, domain model entities, or the documents in your app.
+
+* **Next best action suggestion** – it recommends the next best activities out of more than 40 different options with accuracy of 95%. 
 * **Auto-configuration** – it does not only provide next best action, but automates the development further by pre-populating the parameters for such action.
-* **Contextual  suggestions** – it derives context in different ways, including by 'looking' left and right in a microflow when the developer inserts a new activity or decision mid-flow; and by inferring the context using the page where it is called from.  
+* **Contextual  suggestions** – it derives context in different ways, including by 'looking' left and right in your logic when the developer inserts a new activity or decision mid-flow; and by inferring the context using the page where it is called from.  
 * **High accuracy** – continuous improvement and training of the model has elevated the accuracy level from 95%.
 
-## 2 MxAssist Logic Bot Settings
+## 2  Modeling Using MxAssist Logic Bot {#logic-bot}
 
-You can switch MxAssist Logic Bot on and off using the **On-Off** button in the top right corner of the microflow editor:
+### 2.1 Studio Pro 10.6 and Above
 
-{{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-assist-logic-bot/mx-assist-on-off-button.png" alt="On-Off-Button" >}}
+{{% alert color="info" %}}
+In Studio Pro 10.6 and above, MxAssist Logic Bot is enabled by default. You cannot switch it off.
+{{% /alert %}}
 
-To access settings of MxAssist Logic Bot, open **Edit** > **Preferences** >the **Mendix Assist** tab >the **Logic Bot** section. For more information, see [Preferences](/refguide/preferences-dialog/).
+MxAssist Logic Bot is displayed as a blue dot in the flow. When you want to view recommendations on a particular flow, you can hover the mouse over that flow and click on the blue circle, or navigate to it with the keyboard and press <kbd>Enter</kbd>.
 
-In the **Mendix Assist** tab, section **Logic Bot**, you can set the following: 
+{{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-assist-logic-bot/assist-bulb.png" >}}
 
-* **Enable MxAssist Logic Bot** – switches MxAssist Logic Bot on and off
+A Logic Bot dialog box is shown with recommendations of objects or activities to insert. This list initially contains the top 10 contextual suggestions. You can select an element directly from the recommendation list:
 
-* **Show suggestions for system variables** – when enabled, MxAssist Logic Bot will make suggestions for system objects (for example, it can suggest that you change such objects as **currentUser** or **currentSession**):
+{{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-assist-logic-bot/initial-recommendations.png" >}}
 
-    {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-assist-logic-bot/mx-assist-system-variables.png" alt="Suggestions for System Variables" >}}
+You can also type in the search box to search for the elements that you want to add to the flow. MxAssist Logic Bot works with fuzzy search, which means that it finds direct matches first and then any matches in the recommendations. For instance, you can use `cr ob`  to search for the recommendations that contain **Create Object**.
 
-For more information on preferences, see [Preferences](/refguide/preferences-dialog/).
+The search is based on your microflow or nanoflow parameters, domain model entities, or the documents in your app. You can search for generic activities or elements from the toolbox:
 
-## 3 Using MxAssist Logic Bot to Build Microflows
+{{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-assist-logic-bot/search-toolbox.png" width="500px" >}}
 
-MxAssist Logic Bot is enabled by default and is displayed as a blue dot in the flow of a [microflow](/refguide/microflows/):
+You can search for sub-actions of an aggregate list or list operation activity, such as sum, count, or average:
 
-{{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-assist-logic-bot/mendix-assist-icon.png" alt="Logic Bot Icon" >}}
+{{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-assist-logic-bot/search-sub-actions.png" >}}
 
-It is possible to add elements to the microflow in a regular way without using MxAssist Logic Bot, however, MxAssist Logic Bot helps you add elements to the microflow faster as it suggests a short list of the most relevant activities. 
+You can also use the search to call microflows or nanoflows with a concrete document:
 
-To use MxAssist Logic Bot, do the following:
+{{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-assist-logic-bot/search-microflows-nanoflows.png" >}}
+
+Choose a suggestion with the arrow keys and press the <kbd>Enter</kbd> key to accept it. The suggested element will be added to the flow and the Logic Bot will open on the next flow so that you can continue adding activities.
+
+To open the properties dialog box after adding a suggested element, accept the suggestion with <kbd>Shift</kbd> + <kbd>Enter</kbd> (or <kbd>Shift</kbd> + mouse click). After closing the properties dialog box, the Logic Bot will open on the next flow.
+
+### 2.2 Studio Pro 10.5 and Below
+
+In Studio Pro 10.5 and below, an older version of MxAssist Logic Bot is available. It is enabled by default. You can switch it on and off using the **On-Off** toggle in the top right corner of the editor. You can also enable or disable it through the **Enable MxAssist Logic Bot** setting under the **Mendix Assist** tab in Studio Pro [Preferences](/refguide/preferences-dialog/#logic-bot).
+
+To use this older version of MxAssist Logic Bot, do the following:
 
 1. Click the icon to see the next best action recommendations:
 
@@ -59,6 +79,6 @@ The activity/event is added to your microflow.
 
 If you do not see the desired activity or element in the top-five recommendation list, you can click **Add other element** and choose an activity, loop, decision, merge, or object type decision.
 
-## 4 Read More
+## 3 Read More
 
-* [Microflows](/refguide/microflows/)
+* [Microflows and Nanoflows](/refguide/microflows-and-nanoflows/)

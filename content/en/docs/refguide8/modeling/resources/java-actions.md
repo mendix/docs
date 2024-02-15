@@ -7,10 +7,6 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/java-actions.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 With Java actions you can extend the functionality of your application in situations where it would be hard to implement this functionality in microflows. You can call a Java action from a microflow using the [Java action call](/refguide8/java-action-call/).

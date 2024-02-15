@@ -1,5 +1,5 @@
 ---
-title: "Deep Link"
+title: "Deep Link ⚠"
 url: /appstore/modules/deep-link/
 category: "Modules"
 description: "Describes the configuration and usage of the Deep Link module, which is available in the Mendix Marketplace."
@@ -7,20 +7,26 @@ tags: ["marketplace", "marketplace component", "deep link", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert color="warning" %}}
+⚠ This module is deprecated from Studio Pro 10.6.0. It is replaced by [page URLs](/refguide/page-properties/#url) and [microflow URLs](/refguide/microflow/#url). For instructions on migrating to Page and Microflow URLs, see the [Migrating to Page and Microflow URLs](#migrate-page-micro) section below.
+
+We will continue to actively support this module for Mendix 9.
+{{% /alert %}}
+
 ## 1 Introduction
 
 The [Deep Link](https://marketplace.mendix.com/link/component/43/) module allows you to configure a mapping between a request handler and microflows. In this way, you can create additional entry points to access specific parts of your application. The Deep Link module is design- and runtime-configurable, it respects security, and it supports links for both logged-in and anonymous users.
 
 {{% alert color="info" %}}
-If you are using Mendix 9.20 or above, you need to use version 9.0.8 or above of the Deep Link module.
+If you are using Mendix version 9.20 or higher, you need to use version 9.0.8 or higher of the Deep Link module.
 {{% /alert %}}
 
 If you need to access pages or set up a published REST service, the Deep Link module may not be the best solution – there are also other approaches available. For the differences between these approaches, see the table below:
 
 | Solution  | Description | Advantage                                                 | Disadvantage                                                 |
 | ---------------- | ---- | --------------------------------------------------------- | ------------------------------------------------------------ |
-| URL property of a page | You can access a page by specifying the [URL property of the page](/refguide/page-properties/#url). This is an out-of-the-box feature of Mendix Studio Pro. | Mapping is clearly configured in the application model. | <ul><li>The object ID of the data is owned by Mendix runtime, so when the object ID changes for whatever reason, the link will be broken</li><li>You can only use this solution to access pages</li></ul> |
-| Deep Link module | The Deep Link module processes the request and creates a reference object which is being stored with the user session. After this, the user is forwarded to a location which takes care of loading the Mendix Client. This is by default the `index.html` page. When the Mendix Client is loaded, the **Home** microflow (configured in the model) is executed and the microflow which is configured to handle the deep link request is being executed. | It is possible to set up non-persistent actions which can be passed as a parameter to a page. |The model consistency check is not sufficient in certain scenarios. When a microflow which is configured with a deep link at runtime and afterwards deleted at design time, Mendix consistency checking mechanism cannot catch it.|
+| URL property | This property is available both for [pages](/refguide/page-properties/#url) and [microflows](/refguide/microflow/#url). This is an out-of-the-box feature introduced in Mendix Studio Pro 10.6.0 and, since that version, the recommended approach for most users. | Mapping is clearly configured in the application model. No setup is required. | |
+| Deep Link module | The Deep Link module processes the request and creates a reference object which is being stored with the user session. After this, the user is forwarded to a location which takes care of loading the Mendix Client. This is by default the `index.html` page. When the Mendix Client is loaded, the **Home** microflow (configured in the model) is executed and the microflow which is configured to handle the deep link request is being executed. | It is possible to set up non-persistent entities which can be passed as a parameter to a page. |The model consistency check is not sufficient in certain scenarios. When a microflow which is configured with a deep link at runtime and afterwards deleted at design time, Mendix consistency checking mechanism cannot catch it.|
 
 {{% alert color="info" %}}
 There can be other approaches which are implemented by community-supported Marketplace modules, but these are not listed in this table.
@@ -41,9 +47,13 @@ The typical usage scenario is configuring a link to trigger a microflow, for exa
 * Provide a colleague with a link to a certain object instead of describing the necessary navigation steps
 * Generate confirmation links that can be emailed to users
 
+### 1.3 Dependencies
+
+* [Data Widgets](https://marketplace.mendix.com/link/component/116540): required for the Deep Link module in Studio Pro 10.0.6 and higher.
+
 ## 2 Installation
 
-Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the Deep Link module into your app.
+Follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the Deep Link module into your app.
 
 {{% alert color="info" %}}After you install the Deep Link module and set up deep links, these links will not break if you upgrade from Mendix Studio Pro 9 to 10.{{% /alert %}}
 
@@ -129,8 +139,9 @@ To view all the available deep link configurations and example URLs, add the **D
 
     * When the value is left empty, the default location is `login.html` (this file should be available in the theme folder).
     * When the login location ends with `=` (for example, in the case of Mendix SSO: `/openid/login?continuation=`), the original deep link location will be appended to the login location.
-    * When using the module with a MindSphere app, use `/mindspherelogin.html?redirect_uri=` as a login location (MindSphere SSO v2.0 and above is required).
-    * When using XSUAA, set the value to `/xsauaalogin/login?ret=`.
+    * When using the module with a MindSphere app, use `/mindspherelogin.html?redirect_uri=` as a login location (MindSphere SSO v2.0 and higher is required).
+    * When using the [XSUAA](/appstore/connectors/sap/sap-xsuaa-connector/) module, set the value to `/xsauaalogin/login?ret=`.
+    * When using the [OIDC](/appstore/modules/oidc/) module, set the value to `/oauth/v2/login?cont=`. The DeepLink module does not have full support for multiple IdPs, so it can only trigger logins at one IdP. You can specify which IdP should be used by adding the alias (MyIdPAlias) to the LoginLocation: `/oauth/v2/login?idp={MyIdpAlias}&cont=`.
     * When using the [SAML](/appstore/modules/saml/) module, set the value to `/SSO/login?f=true&cont=` to redirect the user to the original deep link location after a successful login.
         * When using version 6.1.0 or higher of the Deep Link module, you should also set the **EnableLeadingSlash** constant to `false` to prevent the users from being redirected to an invalid deep link location.
 
@@ -141,15 +152,15 @@ To view all the available deep link configurations and example URLs, add the **D
 
 ## 4 Troubleshooting
 
-### 4.1 Endless Redirect Loop (Mendix 9 and Above) 
+### 4.1 Endless Redirect Loop (Mendix 9 and Higher) 
 
-When using the Deep Link module in Mendix 9 and above, you might get stuck in an endless redirect loop.
+When using the Deep Link module in Mendix 9 and higher, you might get stuck in an endless redirect loop.
 
 This is because for Mendix 9, the [default value for SameSite cookies](/developerportal/deploy/environments-details/#samesite) has been changed to `"Strict"` meaning that session cookies cannot be forwarded.
 
 To avoid this issue, make sure your IdP (identity provider) and your app are in the same domain, and thus on the same site. For example, if your app is on `app.domain.com` and you open the deep link `app.domain.com/link/test`, then you are redirected to your IdP to sign in on `idp.domain.com/SSO`. After you sign in successfully, you are sent back to `app.domain.com/SSO/assertion`. Finally, you are forwarded to `app.domain.com/link/test`. Since your requests always stay on the same site, the cookie can be forwarded each time. If it is not an option to have the IdP and the app in the same domain, set the value for the SameSite cookies to `"None"` or`"Lax"` to solve the problem. See also [Runtime Customization](/refguide/custom-settings/).
 
-Additionally, there is an incompatibility between Mendix 9.20 and above and earlier versions of the Deep Link module which could cause this. If you are using Mendix 9.20 or above, you need to use version 9.0.8 or above of the Deep Link module.
+Additionally, there is an incompatibility between Mendix version 9.20 and higher and earlier versions of the Deep Link module which could cause this. If you are using Mendix version 9.20 or higher, you need to use version 9.0.8 or higher of the Deep Link module.
 
 ### 4.2 Deep Link Redirect Fails After Login {#deep-link-redirect-fails}
 
@@ -174,3 +185,16 @@ To solve this problem, you can use one of the following solutions:
        }
      }
      ```
+
+## 5 Migrating to Page and Microflow URLs {#migrate-page-micro}
+
+The functionality of the Deep Link module has been replaced by various built-in features of the Mendix Platform:
+
+* **Page URLs** – For links to pages that have either no parameters or only parameters that are persistable entities, you should use [page URLs](/refguide/page-properties/#url). Using page URLs instead of microflow URLs increases performance speed because no microflow has to be executed. Furthermore, the URL will always be used for the page (even when opening it from a different source then the deep link). To keep the same URL as before, put the `name` of the deep link in the URL field, followed by the name of the attribute that was configured in the deep link. For example, use `product/{PageParameterName/AttributeName}` for a deep link with `name` `product` and `attribute` `AttributeName`.
+    * Within the runtime setting of your application you can configure the page URL prefix. Change this from the default `p` to `link` to keep you our existing URLs working. Note that after this you have to completely remove the Deep Link module from your app, or else your app will fail to start. 
+* **Microflow URLs** – For cases not entirely covered by the page URL functionality, use [microflow URLs](/refguide/microflow/#url). Specifically, add a URL to the microflows you were using with the Deep Link module. Because microflow URLs do not use query parameters (for example `?param1=foo&param2=bar`), you can end up with a different URL than before.
+* **Miscellaneous** – Other features of the deep link module can be replaced by their dedicated built-in features:
+    * `Do not force a login action` is replaced by the [built-in security features](/howto/security/set-up-anonymous-user-security/) for [anonymous users](/refguide/anonymous-users/). 
+    * `Alternative Index Page` is replaced by using distinct [theming options](/howto/front-end/configuring-your-theme/) depending on use case. If you specifically want to set up a dark mode page, see this [Mendix blog](https://www.mendix.com/blog/how-to-implement-dark-mode-in-your-apps/).  
+    * `Track hit count` is replaced by [application access logs and metrics](/developerportal/operate/logs/) which allow you to track your app's traffic. 
+    * `Keep the deep link the entire session` is no longer relevant, as page URLs give you finer-grained control over the URL the user sees in the browser.

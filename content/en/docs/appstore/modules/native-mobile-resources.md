@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "native mobile resources", "nativ
 
 ## 1 Introduction
 
-The [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513/) module is a bundle of Mendix Platform-supported widgets and nanoflow actions for building native mobile and hybrid applications. For more information on styling widgets, see the [Native Mobile Styling Reference Guide](/refguide/native-styling-refguide/).
+The [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513/) module is a bundle of Mendix platform-supported widgets and nanoflow actions for building native mobile and hybrid applications. For more information on styling widgets, see the [Native Mobile Styling Reference Guide](/refguide/native-styling-refguide/).
 
 For excellent deep-dive demonstrations of how to use these native mobile widgets, check out the videos below on the [Carousel](#carousel) and [Popup Menu](#popup-menu) widgets:
 
@@ -152,7 +152,7 @@ These are the nanoflow actions in the native mobile category:
     * FontScale: the device font scale (1 is normal)
     * FreeDiskStorage: the available storage size in bytes
     * Manufacturer: the device manufacturer (for example: Apple)
-    * Model: the device model (due to reliability, we recommend using DeviceId instead) 
+    * Model: the device model (due to reliability, Mendix recommends using DeviceId instead) 
     * ReadableVersion: the application version and build number
     * SystemName: the operating system name (iOS or Android)
     * SystemVersion: the operating system version

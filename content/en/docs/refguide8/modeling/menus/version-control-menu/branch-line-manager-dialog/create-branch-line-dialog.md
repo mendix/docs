@@ -5,10 +5,6 @@ weight: 90
 tags: ["studio pro", "create branch line"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/create-branch-line-dialog.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 Use the **Create Branch Line** dialog box to create a new [branch line](/refguide8/version-control/#branches) via the **Branch Line Manager**:
@@ -42,7 +38,7 @@ Select from which revision of the main line or a branch line you want to create 
 
 This setting is only available when you select [Branch line](#branch-line) in **Create branch from**. 
 
-Select from which branch line you want to create another branch line. We recommend that you make branch lines only from the main line but in some cases branching a branch line can be useful.
+Select from which branch line you want to create another branch line. Mendix recommends making branch lines only from the main line but in some cases branching a branch line can be useful.
 
 ## 5 Tagged Version
 

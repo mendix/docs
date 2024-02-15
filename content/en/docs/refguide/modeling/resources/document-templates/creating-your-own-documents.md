@@ -11,7 +11,7 @@ Have you been wondering how to create your own documents with Mendix? This refer
 
 With Mendix, you can generate documents in different ways. Here, you will learn the fundamentals of generating a document from your own application.
 
-Before we start, we recommend you first read the following two pages:
+Before we start, Mendix recommends first reading these pages:
 
 * [Document Templates](/refguide/document-templates/)
 * [Generate Documents](/refguide/generate-document/)
@@ -135,4 +135,4 @@ This is the resulting document:
 
 {{< figure src="/attachments/refguide/modeling/resources/document-templates/creating-your-own-documents/15_Result.png" >}}
 
-In this example, you retrieved the **OrderLine** information via the **Entity (path)** data source. An alternative way of doing this would be to use a microflow that returns objects for the list presentation. If you do this, make sure to add the correct user role(s) to the microflows that are being used as data source microflows within the document template.
+In this example, you retrieved the **OrderLine** information via the **Entity (path)** data source. An alternative way of doing this would be to use a microflow that returns objects for the list presentation. If you do this, make sure to add the correct user role (or roles) to the microflows that are being used as data source microflows within the document template.

@@ -13,7 +13,7 @@ Mendix Studio Pro 9 gives you powerful new tools to enhance your apps. For the f
 
 ## 2 Updating from Studio Pro 8 to 9 {#studio-pro-upgrade}
 
-The following sub-sections explain the steps to take in converting your app from Studio Pro 8 to Studio Pro 9. We recommend you first review the [Breaking Changes](/releasenotes/studio-pro/9.0/#breaking-changes) section of the *Studio Pro 9.0* release notes as well as our updated [System Requirements](/refguide9/system-requirements/).
+The following sub-sections explain the steps to take in converting your app from Studio Pro 8 to Studio Pro 9. Mendix recommends first reviewing the [Breaking Changes](/releasenotes/studio-pro/9.0/#breaking-changes) section of the *Studio Pro 9.0* release notes as well as our updated [System Requirements](/refguide9/system-requirements/).
 
 ### 2.1 Backing Up Your App
 
@@ -22,13 +22,13 @@ Make sure that you have either committed your latest changes to Team Server, or 
 ### 2.2 Upgrading to the Latest Release of Version 8
 
 {{% alert color="warning" %}}
-It is technically required for you to upgrade your app to Mendix 8.12 first to be able to update it to Mendix 9. However, we recommend you update to the latest version of Mendix 8: [8.18](/releasenotes/studio-pro/8.18/).
+It is technically required for you to upgrade your app to Mendix 8.12 first to be able to update it to Mendix 9. However, Mendix recommends updating to the latest version of Mendix 8: [8.18](/releasenotes/studio-pro/8.18/).
 {{% /alert %}}
 
 To upgrade to Mendix 8.18, follow these steps:
 
 1. Download the latest patch release of Studio Pro [8.18](/releasenotes/studio-pro/8.18/).
-1. Open your app in Studio Pro v8.18.
+1. Open your app in Studio Pro 8.18.
 1. Allow it to upgrade the app, if necessary.
 
 ### 2.3 Reviewing Your Mendix 8 App
@@ -89,7 +89,7 @@ Before Mendix 9, Mendix could ensure data uniqueness using either the Mendix run
 
 If your app is still using Mendix runtime for uniqueness validation, then you should set the custom runtime setting `DataStorage.EnableDiagnostics` to `true`  to check for potential data redundancy issues that might exist in the database. 
 
-If any are found, an error like **An error occurred while initializing the Runtime: Detected unique constrain violation...** will be logged. To solve this, your app will have to be prepared before moving to Mendix 9. You can obtain the tools you need by [submitting a support request](/developerportal/support/submit-support-request/).
+If any are found, an error like **An error occurred while initializing the Runtime: Detected unique constrain violation...** will be logged. To solve this, your app will have to be prepared before moving to Mendix 9. You can obtain the tools you need by [submitting a support request](/support/submit-support-request/).
 
 ### 3.2 Mendix Object Changed Flag
 

@@ -13,7 +13,7 @@ aliases:
 
 This guide teaches you how to go from a blank slate to an app running on a device.
 
-The Mendix Native Mobile Builder is the UI tool to set up and build your Mendix Native Mobile Apps. It is directly accessible in Mendix Studio Pro v8.15 and above for all apps with a native mobile navigation profile.
+The Mendix Native Mobile Builder is the UI tool to set up and build your Mendix Native Mobile Apps. It is directly accessible in Mendix Studio Pro 8.15 and above for all apps with a native mobile navigation profile.
 
 {{% alert color="info" %}}
 The Mendix Native Mobile Builder does not currently support connections behind proxy servers. Please make sure you are not behind a proxy server and that your security rules allow access to the required services.
@@ -27,7 +27,7 @@ Before starting this guide, make sure you have completed the following prerequis
 * Read [Get Started with Native Mobile](/refguide/mobile/getting-started-with-mobile/) to see how to create, style and debug an application with Mendix Studio Pro
 * Deploy your native mobile app to the cloud via Studio Pro and have the cloud address of your deployed application available
 * A [GitHub](https://github.com/) account.
-* An [App Center](https://appcenter.ms/) account. We recommend a paid account if you will be building and deploying regularly.
+* An [App Center](https://appcenter.ms/) account. Mendix recommends a paid account if you will be building and deploying regularly.
 
 ### 2.1 Platform-Specific Prerequisites
 
@@ -112,7 +112,7 @@ You have completed the mandatory basic app configuration required to build your 
 
 Next, do the following:
 
-1. Fill in an intentional version number. For defaults, we recommend you use these numbering guidelines:
+1. Fill in an intentional version number. For defaults, Mendix recommends using these numbering guidelines:
 
     * Versions lower than 0.5.0 for alpha releases
     * Versions ranging from 0.5 to 0.9.x for beta releases

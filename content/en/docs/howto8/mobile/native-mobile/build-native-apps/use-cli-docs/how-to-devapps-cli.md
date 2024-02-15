@@ -115,7 +115,7 @@ Builds with the Native Builder are stripped of simulator artifacts. Therefore, t
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-devapps-cli/xcode-target-selection.png" alt="Dev target selection" >}}
 
-9. Click **Play**.
+9. Click **Run** ({{% icon name="controls-play" %}}).
 
 #### 4.2.2 Distributing the Custom Developer App
 

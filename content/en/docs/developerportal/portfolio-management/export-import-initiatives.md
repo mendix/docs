@@ -30,11 +30,11 @@ You can only export the active initiatives, not the archived ones.
 
 2. If you only want to export a selection of initiatives, before you start exporting initiatives, use **Filters** on the upper-right corner of the **Initiatives Overview** page to filter the initiatives that you want to export.
 
-5. Click the following icon on the upper-right corner to open a drop-down menu:
+3. Click the {{% icon name="office-sheet" %}} icon on the upper-right corner to open a drop-down menu:
 
-   {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/export-import-icon.png"  width="600"  >}}
+   {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/export-import-icon.png"  class="image-border" width="600"  >}}
 
-6. On the drop-down menu, select **Export Initiatives**. The **Export Initiatives** dialog box opens:
+4. On the drop-down menu, select **Export Initiatives**. The **Export Initiatives** dialog box opens:
 
    * Click **Export All** to export all initiatives of the portfolio.
    * Click **Export Selection** to only export the selection of your currently-filtered initiatives.
@@ -56,9 +56,9 @@ All the details of an initiative are exported, except the data of the following 
 
 1. In Portfolio Management, click the portfolio to open it. The portfolio opens. You can see the **Initiatives Overview** page.
 
-2. On the **Initiatives Overview** page, click the following icon on the upper-right corner to open a drop-down menu:
+2. On the **Initiatives Overview** page, click the {{% icon name="office-sheet" %}} icon on the upper-right corner to open a drop-down menu:
 
-   {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/export-import-icon.png"  width="600"    >}}
+   {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/export-import-icon.png"  class="image-border" width="600"    >}}
 
 3. On the drop-down menu, select **Import Initiatives**. The **Import Initiatives** dialog box opens.
 
@@ -73,7 +73,8 @@ All the details of an initiative are exported, except the data of the following 
    | Column | Required                                                     | Format                       | Additional Constraints | Remarks               | Example Value                          |
    | --------------------- | ------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------------ |--| -------------------------------------- |
    | **Name**              | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/check-mark.svg" >}} | String                       |  Character limit: 200                                                           | If an initiative with the same name already exists in the portfolio, a duplicate will be created. |`My first initiative`|
-   | **Stage**             | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/check-mark.svg" >}} | String                       |  Character limit: 200                                                             | If a stage does not exist in the portfolio, it will be created. |`Proposal`|
+   | **Stage**             | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/check-mark.svg" >}} | String                       |  Character limit: 200                                                            | If a stage does not exist in the portfolio, it will be created. |`Proposal`|
+   | **Status**             | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                      |  Only one of the three statuses can be filled in: `On Track`, `At Risk`, or `Off Track`.  |                                       |`On Track`|
    | **Tags**              | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                       |  <ul><li>Character limit: 50 per tag.</li></ul> <ul><li>Multiple tags should be separated by commas.</li></ul>     | If a tag does not exist in the portfolio, it will be created. |`Important, Operational, Architecture`|
    | **Description**       | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                       |                                                              |                               |`A description of the initiative.`|
    | **Department**        | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                       |  Character limit: 200                                                              | If a department does not exist in the portfolio, it will be created. |`Finance`|
@@ -91,8 +92,8 @@ All the details of an initiative are exported, except the data of the following 
    | **WSJFRiskReduction** | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                       | The selectable options can be found in the [WSJF](/developerportal/portfolio-management/prioritization-models/#wsjf) section in *Prioritization Models*. |                                |`Medium`|
    | **WSJFJobSize**     | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                       | The selectable options can be found in the [WSJF](/developerportal/portfolio-management/prioritization-models/#wsjf) section in *Prioritization Models*. |                                    |`XS`|
 
-5. When your Excel file is ready to be imported, drag it to the **Import Initiatives** dialog box, or click **Upload** and select the file.
+6. When your Excel file is ready to be imported, drag it to the **Import Initiatives** dialog box, or click **Upload** and select the file.
 
-6. Click **Import**.
+7. Click **Import**.
 
 All the initiatives in the Excel file are imported successfully. You can see the initiatives on the **Initiatives Overview** page. 

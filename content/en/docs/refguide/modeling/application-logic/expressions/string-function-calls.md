@@ -85,39 +85,11 @@ The output is the following:
 'THISISMYSTRING'
 ```
 
-## 4 length
-
-Determines the length of a string.
-
-### 4.1 Input Parameters
-
-The input parameters are described in the table below:
-
-| Value             | Type   |
-| ----------------- | ------ |
-| String to find length of | String |
-
-### 4.2 Output
-
-The output is described in the table below:
-
-| Value                | Type    |
-| -------------------- | ------- |
-| Length of the string | Integer |
-
-### 4.3 Examples
-
-| Input | Output |
-| --- | --- |
-| `length('thisismystring')` | 14 |
-| `length($MyString)` and `MyString = 'qwer'` | 4 |
-| `length($MyString)` and `MyString` is empty | 0 |
-
-## 5 substring
+## 4 substring
 
 Retrieves a substring of a string. Note that the first character of a string is located at position `0`, and the last character is located at position `length(string)-1`.
 
-### 5.1 Input Parameters
+### 4.1 Input Parameters
 
 The input parameters are described in the table below:
 
@@ -127,7 +99,7 @@ The input parameters are described in the table below:
 | Start position of the substring             | Integer |
 | Desired length of the result **(optional)** | Integer |
 
-### 5.2 Output
+### 4.2 Output
 
 The output is described in the table below:
 
@@ -142,7 +114,7 @@ The function will output an error for the following:
 * When the desired length of the result is longer than the substring
 {{% /alert %}}
 
-### 5.3 Example
+### 4.3 Example
 
 If you use the following input:
 
@@ -156,23 +128,29 @@ The output is the following:
 'mystring'
 ```
 
-Another example of an input is:
+If you use a third parameter to specify the desired length of the output:
 
 ```java {linenos=false}
-substring('funwithmendixapps', 7,6)
+substring('thisismystring', 6, 2)
 ```
 
 The output is the following:
 
 ```java {linenos=false}
-'mendix'
+'my'
 ```
 
-## 6 find
+To prevent the value of the third parameter from getting out of range, you can set a limit to the third parameter, for instance, using the `min` and `length` functions:
+
+```java {linenos=false}
+substring('thisismystring', 0, min(length('thisismystring'), 20))
+```
+
+## 5 find
 
 Finds the position of the first occurrence of the substring in the string.
 
-### 6.1 Input Parameters
+### 5.1 Input Parameters
 
 The input parameters are described in the table below:
 
@@ -182,7 +160,7 @@ The input parameters are described in the table below:
 | Substring that you want to search for                  | String  |
 | Start location to begin the search from **(optional)** | Integer |
 
-### 6.2 Output
+### 5.2 Output
 
 The output is described in the table below:
 
@@ -190,7 +168,7 @@ The output is described in the table below:
 | ------------------------------------------------------------ | ------- |
 | The first location of the substring in the original string. Will return `-1` if the substring does not occur at all in the original string. | Integer |
 
-### 6.3 Example
+### 5.3 Example
 
 If you use the following input:
 
@@ -228,11 +206,11 @@ The output is:
 11
 ```
 
-## 7 findLast
+## 6 findLast
 
 Finds the position of the last occurrence of a substring in the original string.
 
-### 7.1 Input Parameters
+### 6.1 Input Parameters
 
 The input parameters are described in the table below:
 
@@ -242,7 +220,7 @@ The input parameters are described in the table below:
 | Substring that you want to search for                  | String  |
 | Last location to be searched **(optional)**            | Integer |
 
-### 7.2 Output
+### 6.2 Output
 
 The output is described in the table below:
 
@@ -250,7 +228,7 @@ The output is described in the table below:
 | ------------------------------------------------------------ | ------- |
 | The last location of the substring in the original string. Will return `-1` if the substring does not occur at all in the original string. | Integer |
 
-### 7.3 Example
+### 6.3 Example
 
 If you use the following input:
 
@@ -290,7 +268,7 @@ The output is:
 
 As the optional parameter is `5`, the string gets searched up to (and including) position `5`, which means searching the substring `'thisis'`. The last instance of `'i'` in that substring is at position `4`.
 
-## 8 contains
+## 7 contains
 
 Determines whether the original string (first parameter) contains a substring (second parameter).
 
@@ -318,7 +296,7 @@ The input above will return `true`.
 This function is case-sensitive.
 {{% /alert %}}
 
-### 8.1 Input Parameters
+### 7.1 Input Parameters
 
 The input parameters are described in the table below:
 
@@ -327,7 +305,7 @@ The input parameters are described in the table below:
 | Original string, the string that you want to search in | String |
 | Substring that you want to search for                  | String |
 
-### 8.2 Output
+### 7.2 Output
 
 The output is described in the table below:
 
@@ -335,7 +313,7 @@ The output is described in the table below:
 | --------------------------------------------------- | ------- |
 | Whether the original string contains the substring. | Boolean |
 
-### 8.3 Example
+### 7.3 Example
 
 If you use the following input:
 
@@ -349,9 +327,44 @@ The output is:
 true
 ```
 
-## 9 startsWith
+## 8 startsWith
 
 Determines whether a string starts with the specified substring.
+
+### 8.1 Input Parameters
+
+The input parameters are described in the table below:
+
+| Value                                                  | Type   |
+| ------------------------------------------------------ | ------ |
+| Original string, the string that you want to search in | String |
+| Substring that you want to search for                  | String |
+
+### 8.2 Output
+
+The output is described in the table below:
+
+| Value                                                  | Type    |
+| ------------------------------------------------------ | ------- |
+| Whether the original string starts with the substring. | Boolean |
+
+### 8.3 Example
+
+If you use the following input:
+
+```java {linenos=false}
+startsWith('thisismystring', 'this')
+```
+
+The output is:
+
+```java {linenos=false}
+true
+```
+
+## 9 endsWith
+
+Determines whether a string ends with the specified substring.
 
 ### 9.1 Input Parameters
 
@@ -366,46 +379,11 @@ The input parameters are described in the table below:
 
 The output is described in the table below:
 
-| Value                                                  | Type    |
-| ------------------------------------------------------ | ------- |
-| Whether the original string starts with the substring. | Boolean |
-
-### 9.3 Example
-
-If you use the following input:
-
-```java {linenos=false}
-startsWith('thisismystring', 'this')
-```
-
-The output is:
-
-```java {linenos=false}
-true
-```
-
-## 10 endsWith
-
-Determines whether a string ends with the specified substring.
-
-### 10.1 Input Parameters
-
-The input parameters are described in the table below:
-
-| Value                                                  | Type   |
-| ------------------------------------------------------ | ------ |
-| Original string, the string that you want to search in | String |
-| Substring that you want to search for                  | String |
-
-### 10.2 Output
-
-The output is described in the table below:
-
 | Value                                                | Type    |
 | ---------------------------------------------------- | ------- |
 | Whether the original string ends with the substring. | Boolean |
 
-### 10.3 Example
+### 9.3 Example
 
 If you use the following input:
 
@@ -419,11 +397,11 @@ The output is:
 true
 ```
 
-## 11 trim {#trim}
+## 10 trim {#trim}
 
 Removes all the whitespace at the beginning and end of a string.
 
-### 11.1 Input Parameters
+### 10.1 Input Parameters
 
 The input parameters are described in the table below:
 
@@ -431,7 +409,7 @@ The input parameters are described in the table below:
 | -------- | ------ |
 | A string | String |
 
-### 11.2 Output
+### 10.2 Output
 
 The output is described in the table below:
 
@@ -439,7 +417,7 @@ The output is described in the table below:
 | -------------------------------------------------------- | ------ |
 | Same string, but without spaces at the beginning and end. | String |
 
-### 11.3 Example
+### 10.3 Example
 
 If you use the following input:
 
@@ -453,11 +431,23 @@ The output is:
 'this is my string'
 ```
 
-## 12 isMatch
+If the input string is empty, it returns an empty string. So, if you use the following input and `MyString` in the input is empty:
+
+```java {linenos=false}
+trim($MyString)
+```
+
+The output is:
+
+```java {linenos=false}
+''
+```
+
+## 11 isMatch
 
 Checks to see if a string matches a given regular expression.
 
-### 12.1 Input Parameters
+### 11.1 Input Parameters
 
 The input parameters are described in the table below:
 
@@ -479,7 +469,7 @@ Please note that this function call uses the regular expression language provide
 
 {{% /alert %}}
 
-### 12.2 Output
+### 11.2 Output
 
 The output is described in the table below:
 
@@ -487,7 +477,7 @@ The output is described in the table below:
 | ---------------------------------- | ------- |
 | Whether the string matches or not. | Boolean |
 
-### 12.3 Example
+### 11.3 Example
 
 This input below tests to see whether the string contains only numbers:
 
@@ -512,11 +502,11 @@ NB searching an empty string:
 
 * `isMatch('', '.*[0-9].*')` returns `false`
 
-## 13 replaceAll
+## 12 replaceAll
 
 Replaces all occurrences of a regular expression with another string.
 
-### 13.1 Input Parameters
+### 12.1 Input Parameters
 
 The input parameters are described in the table below:
 
@@ -539,7 +529,7 @@ Please note that this function call uses the regular expression language provide
 
 {{% /alert %}}
 
-### 13.2 Output
+### 12.2 Output
 
 The output is described in the table below:
 
@@ -547,7 +537,7 @@ The output is described in the table below:
 | ------------------------------------------------------------ | ------ |
 | The original string, with all occurrences of the regular expression replaced by the replacement string. If the regular expression does not occur in the string, the original is returned. | String |
 
-### 13.3 Example
+### 12.3 Example
 
 If you use the following input:
 
@@ -573,11 +563,11 @@ And the output is that there are no matches for the input:
 'this is a string with no numbers thrown in'
 ```
 
-## 14 replaceFirst
+## 13 replaceFirst
 
 Replaces the first occurrence of the regular expression with a replacement string.
 
-### 14.1 Input Parameters
+### 13.1 Input Parameters
 
 The input parameters are described in the table below:
 
@@ -600,7 +590,7 @@ Please note that this function call uses the regular expression language provide
 
 {{% /alert %}}
 
-### 14.2 Output
+### 13.2 Output
 
 The output is described in the table below:
 
@@ -608,7 +598,7 @@ The output is described in the table below:
 | ------------------------------------------------------------ | ------ |
 | The original string, with the first occurrence of the regular expression replaced by the replacement string. If the regular expression does not occur in the string, the original is returned. | String |
 
-### 14.3 Example
+### 13.3 Example
 
 If you use the following input:
 
@@ -622,11 +612,11 @@ The output is:
 'this is a string with NUMBER5 some numbers 234 thrown in'
 ```
 
-## 15 String Concatenation ( + )
+## 14 String Concatenation ( + )
 
 The `+` operator can be used to concatenate two strings or a string and a number.
 
-### 15.1 Input Parameters
+### 14.1 Input Parameters
 
 The input parameters are described in the table below:
 
@@ -641,7 +631,7 @@ At least one of the parameters must be of type string.
 
 {{% /alert %}}
 
-### 15.2 Output
+### 14.2 Output
 
 The output is described in the table below:
 
@@ -649,7 +639,7 @@ The output is described in the table below:
 | ------------------------------------------------------------ | ------ |
 | A new string that is the literal concatenation of the two input parameters. | String |
 
-### 15.3 Example
+### 14.3 Example
 
 An example of an input to combine two strings can be the following:
 
@@ -675,7 +665,7 @@ The output is:
 '4.73 kilometers'
 ```
 
-## 16 urlEncode {#urlEncode}
+## 15 urlEncode {#urlEncode}
 
 Converts a string to be used in a URL. This function is useful when you want to use the string as part of the URL.
 
@@ -685,7 +675,7 @@ For example:
 'http://google.com/search?q=' + urlEncode($myQuery)
 ```
 
-### 16.1 Input Parameters
+### 15.1 Input Parameters
 
 The input parameters are described in the table below:
 
@@ -693,7 +683,7 @@ The input parameters are described in the table below:
 | ----------------- | ------ |
 | String to convert | String |
 
-### 16.2 Output
+### 15.2 Output
 
 The output is described in the table below:
 
@@ -701,7 +691,7 @@ The output is described in the table below:
 | ------------------------ | ------ |
 | The string, URL-encoded. | String |
 
-### 16.3 Example
+### 15.3 Example
 
 If you use the following input:
 
@@ -715,11 +705,11 @@ The output is:
 'Hello%2C+world%21'
 ```
 
-## 17 urlDecode
+## 16 urlDecode
 
 Converts a string back from a URL. The opposite of [urlEncode](#urlEncode).
 
-### 17.1 Input Parameters
+### 16.1 Input Parameters
 
 The input parameters are described in the table below:
 
@@ -727,7 +717,7 @@ The input parameters are described in the table below:
 | ------------------------------- | ------ |
 | A URL-encoded string to convert | String |
 
-### 17.2 Output
+### 16.2 Output
 
 The output is described in the table below:
 
@@ -735,7 +725,7 @@ The output is described in the table below:
 | ------------------------ | ------ |
 | The string, URL-decoded. | String |
 
-### 17.3 Example
+### 16.3 Example
 
 If you use the following input:
 

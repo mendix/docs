@@ -3,7 +3,7 @@ title: "Catalog APIs"
 url: /apidocs-mxsdk/apidocs/catalog-apis/
 category: "API Documentation"
 description: "Describes the Catalog APIs (which are for registering data sources from other business applications) and how to generate the personal access token."
-weight: 25
+weight: 20
 tags: ["data hub", Catalog API", "authentication", "personal access token"]
 aliases:
     - /apidocs-mxsdk/apidocs/data-hub-apis/
@@ -27,7 +27,7 @@ These APIs were previously called Data Hub APIs.
 
 ### 1.1 Authentication and Access Rights
 
-The Catalog APIs support OAuth2.0 and personal access tokens. For more information, see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section of *Mendix Profile*.
+The Catalog APIs support OAuth2.0 and personal access tokens. For more information, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section of *Mendix Profile*.
 
 To view authentication instructions for each API, open the OpenAPI spec and click **Authorize** on the upper right of the screen. Supported authentication methods are documented there. As mentioned above, the **Try it out** feature does not work.
 

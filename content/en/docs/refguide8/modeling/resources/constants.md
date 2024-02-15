@@ -6,17 +6,13 @@ tags: ["studio pro", "constant", "constants"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/constants.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 Constants are used to define configuration values. These can differ per environment.
 
 When running the application on a licensed Mendix Cloud environment, SAP BTP, or Private Cloud you can configure the constant values for each environment separately using the [Model Options](/developerportal/deploy/environments-details/#model-options) tab of the **Environment Details** page to set your constants.
 
-For other cloud environments – for example, [MindSphere](/partners/siemens/mindsphere/) – the constants can be accessed as **Environment Variables** in, for instance, Cloud Foundry. The constant is exposed with the name **module** + **.** + **constant** (for example, `mymodule.myconstant`).
+For other cloud environments – for example, [Insights Hub](/partners/siemens/mindsphere/) – the constants can be accessed as **Environment Variables** in, for instance, Cloud Foundry. The constant is exposed with the name **module** + **.** + **constant** (for example, `mymodule.myconstant`).
 
 When running the application locally or in a Free App environment, the values defined in Studio Pro are used.
 

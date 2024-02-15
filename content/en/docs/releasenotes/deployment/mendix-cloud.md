@@ -15,7 +15,90 @@ There are separate release notes for other deployment targets; see the [Deployme
 
 For information on the current status of deployment to Mendix Cloud and any planned releases, see [Mendix Status](https://status.mendix.com/).
 
+## 2024
+
+### February 08, 2024
+
+#### Bug Fixes
+
+* We have removed an extra white space on the Logs page. 
+* On the Metrics page, when viewing both the application and the database metrics together, they are now separated instead of presented together. The Logs page now shows all the application metrics graphs first, followed by the database metrics graphs.
+* The Environments drop-down list maintains the same sorting order as on the Environments page in the Developer Portal.
+
+### January 31, 2024 
+
+#### Improvements
+
+* We added the AWS Osaka, Seoul, and Jakarta regions as new deployment targets in Mendix Cloud Asia Pacific.
+* We added support for regional fallback in Japan (Tokyo and Osaka).
+
+### January 18, 2024
+
+#### Bug Fixes
+
+* We have fixed an issue with two-factor authentication (2FA) on the **Metrics** and **Logs** pages. The 2FA is now session based and not at the account level.
+* Memory-related metrics graphs now display in gibibytes (GiB) and not gigabytes (GB).
+
 ## 2023
+
+### December 28, 2023
+
+#### New Features
+
+* We now support [regional fallback](/developerportal/deploy/mendix-cloud-deploy/#regional-fallback) in Mendix Cloud. With regional fallback, the database and file storage of your application are replicated to another Mendix Cloud region. If the primary region of your application goes down due to an outage, we will switch over to the fallback region. Your app will then be available to process requests from the fallback region. Without regional fallback, you will have to wait for the primary region to become available again. Regional fallback is part of our Premium Plus cloud resource packs.
+    * Regional fallback is available in all Mendix Cloud regions except Tokyo. We will offer regional fallback in Tokyo in Q1 of 2024.
+
+### December 21, 2023
+
+#### Improvements
+
+* If a user tries to upload or transport an MDA file that exceeds the maximum size of 1 GB, they will now see an error message warning them that their MDA file is too big.
+
+### December 14, 2023
+
+#### Improvements
+
+* The application disk usage and CPU usage graphs on the Metrics page now have y-axes that scale dynamically, with the minimum set to 0 and the maximum set to the maximum data point included in the request.
+* Under the Deploy API v4, we increased the maximum limit value for `/apps/{appId}/environments` from 20 to 100. 100 is also the new default limit value. For more information, see [Deploy API – Version 4](/apidocs-mxsdk/apidocs/deploy-api-4/).
+
+### November 22, 2023
+
+#### Improvements
+
+* We improved the layout and display of the Metrics page. Metrics can now be filtered via drop-down menus that set the time period (day, week, month, or quarter) and the group (application, database, or all) for the graphs. We also updated the visual style of the graphs. For more information, see [Metrics](/developerportal/operate/metrics/).
+* We improved the layout and functionality of the Logs page. The log archives now display file size for app and access logs, and they include an option to filter logs by date. For more information, see [Logs](/developerportal/operate/logs/).
+* The Logs page now has an activity log, which reports data on who has viewed or downloaded the logs. The activity log records access by team members as well as members of Mendix Support, who may view or download your app's logs in connection with any support tickets you have open. 
+
+### November 16, 2023
+
+#### Improvements
+
+* We added support for sending application runtime logs and metrics to [New Relic](/developerportal/operate/newrelic-metrics/).
+* We deprecated the `SPLUNK_LOGS_REDACTION` and `DATADOG_LOGS_REDACTION` environment variables.
+* We introduced the `LOGS_REDACTION` variable, which is compatible with [Splunk](/developerportal/operate/splunk-metrics/), [Datadog](/developerportal/operate/datadog-metrics/), and [New Relic](/developerportal/operate/newrelic-metrics/).
+
+### October 26, 2023
+
+#### Improvements
+
+* We added support for an `Origin-Trials` HTTP header in the Developer Portal. To use this header, the customer must first deploy (or redeploy) their app sometime after 26 October, 12:00 PM. If the customer has deployed since this date, then they can simply set the header and restart their app to use the header. For more information, see [HTTP Headers](/developerportal/deploy/environments-details/#http-headers).
+
+### October 25, 2023
+
+#### Improvements
+
+* We added support for gp3 storage instances for databases; this provides higher baseline storage performance compared to gp2. IOPS and throughput performance will be upgraded according to the table below.
+
+    * From October 25 onwards, when a customer creates a new DB instance, it is provisioned with a gp3 storage instance if it has a storage size of at least 20 GiB (as specified in the table below). This also occurs when the customer's database is recreated.
+    | Mendix Plans      | Storage Instance Type | Storage Size         | Baseline Storage Performance | Provisioned IOPS Range | Provisioned Throughput Range |
+    |-------------------|-----------------------|----------------------|------------------------------|------------------------|------------------------------|
+    | S and M           | gp2                   | Less than 20 GiB     | 100IOPS (3000 Burst)         | 100 - 1197 IOPS        | 128-250 MiB/s                |
+    | L, XL, XXL, and XXXL | gp3                   | Between 20 and 400 GiB | 3000 IOPS / 125 MiB/s        | N/A                    | N/A                          |
+    | XXXL              | gp3                   | 400 GiB and higher   | 12000 IOPS / 500 MiB/s       | 12000 - 64000 IOPS     | 500 - 4000 MiB/s             |
+
+    * Existing databases eligible for this upgrade will be migrated later. More details will follow.
+
+    * For more information, see [Database IOPS Burst Balance](/developerportal/operate/metrics/#Trends-dbmxdatabaseburstbalance) in the *Metrics* documentation.
 
 ### October 12, 2023
 
@@ -100,7 +183,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 * We have added webhooks which can trigger endpoints when changes are committed to a Team Server Git repository, or a new deployment package is available for deployment to the Mendix Cloud. See [Webhooks](/developerportal/deploy/webhooks/) for more information.
 
-    {{% alert color="info" %}}This feature is currently in a [Beta Release](/releasenotes/beta-features/).{{% /alert %}}
+    {{% alert color="info" %}}This feature is currently in a [beta release](/releasenotes/beta-features/).{{% /alert %}}
 
 ### February 23, 2023
 
@@ -224,17 +307,17 @@ We added the ability to enable and disable additional services at an app and env
 
 We replaced the TLS certificate for `*.apps.ca-1a.mendixcloud.com` on June 29, 2022. Browsers like Mozilla Firefox, Microsoft Edge, and Google Chrome automatically trust the new certificate. In those cases, there is nothing you have to do.
 
-Current Certificate Details: <https://crt.sh/?id=4793020705>
+Current Certificate Details: [https://crt.sh/?id=4793020705](https://crt.sh/?id=4793020705)
 
-New Certificate Details: <https://crt.sh/?id=6940447552>
+New Certificate Details: [https://crt.sh/?id=6940447552](https://crt.sh/?id=6940447552)
 
 **Update of `*.apps.au-1a.mendixcloud.com` TLS certificate**
 
 We replaced the TLS certificate for `*.apps.au-1a.mendixcloud.com` on June 29, 2022. Browsers like Mozilla Firefox, Microsoft Edge, and Google Chrome automatically trust the new certificate. In those cases, there is nothing you have to do.
 
-Current Certificate Details: <https://crt.sh/?id=4793020687>
+Current Certificate Details: [https://crt.sh/?id=4793020687](https://crt.sh/?id=4793020687)
 
-New Certificate Details: <https://crt.sh/?id=6940402070>
+New Certificate Details: [https://crt.sh/?id=6940402070](https://crt.sh/?id=6940402070)
 
 ### June 15, 2022
 
@@ -351,9 +434,9 @@ New Certificate Details: <https://crt.sh/?id=6940402070>
 
 We will gradually replace the TLS certificate for `*.mendix.com` in January 2022. Browsers like Mozilla Firefox, Microsoft Edge, Google Chrome, and Internet Explorer automatically trust the new certificate. In those cases, there is nothing you have to do.
 
-Current Certificate Details: <https://crt.sh/?id=2349479044>
+Current Certificate Details: [https://crt.sh/?id=2349479044](https://crt.sh/?id=2349479044)
 
-New Certificate Details: <https://crt.sh/?id=5832398831>
+New Certificate Details: [https://crt.sh/?id=5832398831](https://crt.sh/?id=5832398831)
 
 ### November 18, 2021
 
@@ -433,7 +516,7 @@ Existing applications will be updated in the next few weeks. Technical contacts 
 
 #### Announcement
 
-* We are deprecating [Version 1 of the Backups API](/apidocs-mxsdk/apidocs/backups-api-v1/). We recommend that you use [Backups API v2](/apidocs-mxsdk/apidocs/backups-api/) which handles long-running backup and restore jobs more robustly.
+* We are deprecating [Version 1 of the Backups API](/apidocs-mxsdk/apidocs/backups-api-v1/). Mendix recommends using the [Backups API v2](/apidocs-mxsdk/apidocs/backups-api/), which handles long-running backup and restore jobs more robustly.
 
 ### June 14, 2021
 
@@ -567,7 +650,7 @@ If you encounter errors using APIs, please ensure that the format matches the do
 
 ### December 17, 2020
 
-* We added the ability to allow customers to test Beta features by adding certain allowed Custom Environment Variables. These can be added like Custom Environment Variables in Mendix Cloud v4 environment, using a text field beside the current dropdown.
+* We added the ability to allow customers to test beta features by adding certain allowed Custom Environment Variables. These can be added like Custom Environment Variables in Mendix Cloud v4 environment, using a text field beside the current dropdown.
 
     For more information on custom environment variables, see [Runtime Tab](/developerportal/deploy/environments-details/#custom-environment-variables) in the *Environment Details* documentation.
 
@@ -647,7 +730,7 @@ If you encounter errors using APIs, please ensure that the format matches the do
 
 #### Improvements
 
-* We improved the way that the SSL/TLS connection is established to the database instance in Mendix Cloud **v4**. Now the application will verify that the Subject Alternative Name attribute(s) or the Common Name attribute of the database server certificate is matched against the database host name.
+* We improved the way that the SSL/TLS connection is established to the database instance in Mendix Cloud **v4**. Now the application will verify that the Subject Alternative Name attribute (or attributes) or the Common Name attribute of the database server certificate is matched against the database host name.
 
 {{% alert color="info" %}}This change will take effect the next time you deploy your application.{{% /alert %}}
 
@@ -803,7 +886,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
         {{% alert color="info" %}}Existing configurations will not be changed and environments can be restarted safely.<br/><br/>To migrate to the new ARPs, you must remove **all** existing ARPs and replace them with *clones* that you have edited using the latest Developer Portal.<br/>In other words **Clone** the existing ARPs, **Edit** the CAs, and **Apply** the new ARPs to all paths.{{% /alert %}}
         For more information see [How To Restrict Access for Incoming Requests](/developerportal/deploy/access-restrictions/).
 
-    You will need to redeploy your app in order to apply the new ARP(s).
+    You will need to redeploy your app in order to apply the new ARP (or ARPs).
 
 ### May 1, 2020
 
@@ -1021,7 +1104,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 #### Improvements
 
-* We have introduced *Flexible Environments* for Mendix Cloud v4. This means that you can have more than three environments for your licensed node. More information is available [here](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments). If you need more than three environments, contact [Mendix Support](/developerportal/support/). Features of Flexible Environments include the following:
+* We have introduced *Flexible Environments* for Mendix Cloud v4. This means that you can have more than three environments for your licensed node. More information is available [here](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments). If you need more than three environments, contact [Mendix Support](/support/). Features of Flexible Environments include the following:
     * You can search for the environment for which you want to see details
     * The Technical Contact can rename the environments
     * The Technical Contact can re-order the environments

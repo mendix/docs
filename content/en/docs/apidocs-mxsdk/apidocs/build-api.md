@@ -264,16 +264,16 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages
 
 ##### 2.5.1.2 Payload
 
-The payload depends on whether the app is held in a [git repository or an SVN repository](/refguide/version-control-faq/#which-team-server).
+The payload depends on whether the app is held in a [Git repository or an SVN repository](/refguide/version-control-faq/#which-team-server).
 
 An object with the following key-value pairs:
 
 * *Branch* (String) : Name of the branch.
     * For SVN, this is 'trunk' for the main line or 'branches/*branch name*' for a specific branch.
-    * For git, this is 'main' for the main line or 'branches/*branch name*' for a specific branch.
+    * For Git, this is 'main' for the main line or 'branches/*branch name*' for a specific branch.
 * *Revision* (String) : Number of the revision to build a package from.
     * For SVN, this is an integer reflecting the revision number.
-    * For git, this is the commit hash. The API will accept either the short commit hash or the full commit hash.
+    * For Git, this is the commit hash. The API will accept either the short commit hash or the full commit hash.
 * *Version* (String) : Package version. This will also be the name of the tag on the project team server.
 * *Description* (String) : Description of the package.
 

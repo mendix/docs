@@ -53,7 +53,7 @@ To configure your Windows virtual machine to work with Mendix Studio Pro, follow
 
     {{< figure src="/attachments/refguide9/general/using-mendix-studio-pro-on-a-mac/windows-control-center.png" alt="parallels control center"   width="450"  >}}
 
-2. Click the **gear** symbol to open the **Configuration Panel**.
+2. Click **Configuration** ({{% icon name="cog" %}}) to open the **Configuration Panel**.
 3. Navigate to the **Hardware** tab, and select **Network** from the left panel:
 
     {{< figure src="/attachments/refguide9/general/using-mendix-studio-pro-on-a-mac/windows-configuration.png" alt="network in configuration"   width="450"  >}}

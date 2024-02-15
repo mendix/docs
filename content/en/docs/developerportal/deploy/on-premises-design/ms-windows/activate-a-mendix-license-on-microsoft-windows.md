@@ -7,10 +7,6 @@ tags: ["license", "Windows", "on-premises", "Mendix Service Console"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/activate-a-mendix-license-on-microsoft-windows.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 If you want to run your app on a Microsoft Windows server without the restrictions placed on unlicensed apps, you will need to activate a license. The restrictions which are placed on unlicensed apps are described in [Licensing Apps](/developerportal/deploy/licensing-apps-outside-mxcloud/).

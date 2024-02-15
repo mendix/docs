@@ -50,6 +50,7 @@ This defines a property's type. A `type` must be one of the following:
     * [object](#object)
     * [file](#file)
     * [datasource](#datasource)
+    * [selection](#selection)
 
 ### 1.2 XML Elements
 
@@ -521,6 +522,7 @@ When a `dataSource` attribute is specified and configured by the user, it is pas
 | `onChange`   | No       | Property Path  | The path to an [`action`](#action) property that will be run by the Mendix Platform when the value is changed by the widget |
 | `required`   | No       | Boolean        | Decides if the property must be specified by the user, `true` by default                                                         |
 | `dataSource` | No       | Property Path  | Specifies the path to a [`datasource`](#datasource) property linked to this attribute property                                   |
+| `setLabel`   | No       | Boolean        | `true` to enable setting [`Label`](#setLabel) value automatically with configured attribute, false `otherwise`                   |
 
 #### 4.4.2 XML Elements
 
@@ -591,6 +593,7 @@ When a `dataSource` attribute is specified and configured by the user, it is pas
 | `required`          | No       | Boolean        | Decides if the property must be specified by the user, `true` by default                                                         |
 | `selectableObjects` | Yes      | Property Path  | Specifies the path to a [`datasource`](#datasource) property that will provide selectable objects for the association            |
 | `dataSource`        | No       | Property Path  | Specifies the path to a [`datasource`](#datasource) property linked to this association property                                 |
+| `setLabel`          | No       | Boolean        | `true` to enable setting [`Label`](#setLabel) value automatically with configured entity, false `otherwise`                      |
 
 #### 4.5.2 XML Elements
 
@@ -669,7 +672,7 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-widgets-property-types/object.png" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-widgets-property-types/object.png" class="image-border">}}
 
 ### 4.7 File {#file}
 
@@ -696,7 +699,7 @@ When the property is defined as follows:
 
 Then the Studio Pro UI for the property appears like this:
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-widgets-property-types/file.png" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-widgets-property-types/file.png" class="image-border">}}
 
 ### 4.8 Datasource {#datasource}
 
@@ -736,6 +739,57 @@ Then the Studio Pro UI for the property appears like this:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-widgets-property-types/datasource.png" >}}
 
+### 4.9 Selection {#selection}
+
+{{% alert color="info" %}}
+The property type was introduced in Mendix [10.7](/releasenotes/studio-pro/10.7/).
+{{% /alert %}}
+
+The selection property allows a widget to read and set a selection that can be used in actions, expressions, or a `Listen to` data source of a data view.
+
+#### 4.9.1 XML Attributes
+
+| Attribute      | Required | Attribute Type      | Description                                                                                     |
+|----------------|----------|---------------------|-------------------------------------------------------------------------------------------------|
+| `type`         | Yes      | String              | Must be `selection`                                                                             |
+| `key`          | Yes      | String              | See [key](#key)                                                                                 |
+| `dataSource`   | Yes      | Property Path       | Specifies the path to a [`datasource`](#datasource) property linked to this selection property  |
+| `defaultValue` | No       | String (Expression) | Default value for the property                                                                  |
+
+#### 4.9.2 XML Elements
+
+`<selectionTypes>` (required) — This element encapsulates `<selectionType>` elements which declare supported selection types available while configuring the selection property in Studio Pro.
+
+`<selectionType>` (required one or more) — This element defines the selection type in the `name` attribute.
+
+| Supported Selection Types | Corresponding Types Client Components Receive |
+|---------------------------|-----------------------------------------------|
+| `None`                    | `undefined`                                   |
+| `Single`                  | `SelectionSingleValue`                        |
+| `Multi`                   | `SelectionMultiValue`                         |
+
+For more information, see the [SelectionValue](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#selection-value) section of *Client APIs Available to Pluggable Widgets*.
+
+#### 4.1.3 Studio Pro UI
+
+When the property is defined as follows:
+
+```xml
+<property key="selection" type="selection" dataSource="datasource">
+  <caption>Selection</caption>
+  <description />
+  <selectionTypes>
+    <selectionType name="None" />
+    <selectionType name="Single" />
+    <selectionType name="Multi" />
+  </selectionTypes>
+</property>
+```
+
+Then the Studio Pro UI for the property appears like this:
+
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-widgets-property-types/selection.png" class="image-border">}}
+
 ## 5 System Properties {#system-properties}
 
 System properties is a way for a pluggable widget to adopt extended widget functionality provided by Mendix Platform. System properties should be defined as `<systemProperty>` elements. The only property XML attribute `<systemProperty>` requires is `key` attribute, which defines a system property's type. The following values are allowed:
@@ -753,6 +807,45 @@ Label property allows a pluggable widget to have labeling functionality similar 
 ```xml
 <systemProperty key="Label"/>
 ```
+
+#### 5.2 setLabel {#setLabel}
+
+{{% alert color="info" %}}
+The `setLabel` attribute was introduced in Mendix [10.5](/releasenotes/studio-pro/10.5/).
+{{% /alert %}}
+
+You can use `setLabel` to specify which properties can be used to set the `Label` property value. 
+
+Configuring the value of a property with the `setLabel` attribute will automatically update the value of `Label`.
+
+Only attribute and association properties can use the `setLabel` attribute. 
+
+The `Label` value is set only if it lacks a non-default value when you set it. If a property become hidden, the `Label` value is reverted back to default. More than one property can set the label. However if multiple properties with the `setLabel` attribute are visible simultaneously, the first one updated sets the label. For example, when properties are defined as follows:
+
+```xml
+<property key="myAttribute" setLabel="true" type="attribute">
+	<caption>My string</caption>
+	<description>My string setting</description>
+    <attributeTypes>
+        <attributeType name="String" />
+        <attributeType name="Boolean" />
+    </attributeTypes>
+</property>
+<property key="myAssociation" setLabel="true" type="association" selectableObjects="objectsDatasource">
+    <caption>Reference</caption>
+    <description>Reference</description>
+    <associationTypes>
+        <associationType name="Reference"/>
+        <associationType name="ReferenceSet"/>
+    </associationTypes>
+</property>
+<property key="objectsDatasource" type="datasource" isList="true">
+    <caption>Selectable objects</caption>
+    <description/>
+</property>
+```
+
+Then the `Label` property will be set by the first property configured. 
 
 ### 5.2 Name {#name}
 

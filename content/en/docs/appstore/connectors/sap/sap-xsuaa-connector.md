@@ -48,7 +48,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 The SAP app may already have the XSUAA Connector for SAP Business Technology Platform installed. If installed, you can find it in the **App** > **Marketplace modules** list for the **SapAuthentication** module.
 
-If the connector is not already in your app, download it from the [XSUAA Connector for SAP Business Technology Platform](https://marketplace.mendix.com/link/component/78091/) page in the Mendix Marketplace, and then follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the connector into your app.
+If the connector is not already in your app, download it from the [XSUAA Connector for SAP Business Technology Platform](https://marketplace.mendix.com/link/component/78091/) page in the Mendix Marketplace, and then follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the connector into your app.
 
 ## 3 Configuration
 
@@ -239,11 +239,11 @@ Here, we add a new Role Collection for the Inspector 2 role in the SAP BTP space
 
     {{< figure src="/attachments/appstore/connectors/sap-xsuaa-connector/select-role-collection.png" >}}
 
-3. Add the Role(s) which you want to include in this Role Collection.
+3. Add the Role (or Roles) which you want to include in this Role Collection.
 
     {{< figure src="/attachments/appstore/connectors/sap-xsuaa-connector/add-role.png" >}}
 
-The new role collection can now be seen in the SAP BTP cockpit for this Subaccount, with the Role(s) which it includes.
+The new role collection can now be seen in the SAP BTP cockpit for this Subaccount, with the Role (or Roles) which it includes.
 
 {{< figure src="/attachments/appstore/connectors/sap-xsuaa-connector/show-role-collection.png" >}}
 

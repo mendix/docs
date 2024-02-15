@@ -26,6 +26,8 @@ Pluggable widgets can also include a preview component for when they are preview
 
 For information on which libraries Mendix supports when developing pluggable widgets, see the [Pluggable Widgets](/refguide/mendix-client/#pluggable-widgets) section of *Mendix Client*.
 
+For information on how to update Pluggable Widgets Tools to a newer version, see [Updating Pluggable Widgets Tools](/howto/extensibility/update-pluggable-widgets-tools/)
+
 {{% alert color="info" %}}
 Using [System Texts](/refguide/system-texts/) to translate languages is not available for use with the Pluggable Widgets API.
 {{% /alert %}}
@@ -142,7 +144,7 @@ In Mendix Studio Pro, the widget described above would look like this:
 
 #### 4.2.1 Help Page {#help}
 
-You can provide additional help information to widget users by using a help page. If you do so, a widget configuration screen will get a **Help** button, assigned to the <kbd>{F1}</kbd> shortcut key, that opens a specified page. This button is positioned in the left-bottom corner of the popup dialog:
+You can provide additional help information to widget users by using a help page. If you do so, a widget configuration screen will get a **Help** button, assigned to the <kbd>{F1}</kbd> shortcut key, that opens a specified page. This button is positioned in the lower-left corner of the popup dialog:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/widget-dialog-help-button.png" alt="basic widget" >}}
 

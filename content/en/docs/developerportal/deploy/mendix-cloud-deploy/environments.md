@@ -9,7 +9,7 @@ tags: ["Deploy","App","Developer Portal"]
 
 ## 1 Introduction
 
-You can use the **Environments** page to access information about your environments, deploy packages, manage certificates and access restrictions, and more.
+You can use the **Environments** page to access information about your environments, deploy packages, manage certificates and access restrictions, and more. To access your app's **Environments** page, open your app in the Developer Portal and click **Environments** in the navigation pane.
 
 The **Environments** page has the following tabs:
 
@@ -25,26 +25,36 @@ In the **Deploy** tab, you can view information about your environments. You can
 
 ### 2.1 Deployment Package Repository{#package-repository}
 
-The **Deployment Package Repository** section has an overview of all the available deployment packages, with the following details:
+The **Deployment Package Repository** section has an overview of your deployment packages.
 
-* **Deployment Package** name
-* **Version** of the deployment package
-* **Date** that the deployment package was created
-* **Uploaded by** account
-* **Expiry date** of the deployment package, if one is set
-
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deployment-package.png" alt="The Deployment Package Repository section" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deployment-package.png" alt="The Deployment Package Repository section" class="image-border" >}}
 
 You can perform the following actions in this section:
 
-* **Create Package From Teamserver** – select a branch to build the revision that it contains
-* **Upload** – upload a deployment package from your local device
-* **Delete**
-* **Details**:
-    * View the package size, description, build output, and an overview of the environments that are running the package
-    * **Delete Package**
-    * **Download** the package
-* **Deploy** – transport the package from the Team Server to the selected environment
+* Use the **Search** field to search the deployment packages by name, version, or creator
+* Click **Upload** to upload a deployment package from your local device
+* Click **Create Deployment Package** to create a deployment package based on a specific branch
+
+You can also see information and perform actions on the existing deployment packages. For each deployment package, the table contains the following details:
+
+* Deployment package name
+* Version of the deployment package
+* Date that the deployment package was created
+* Creator account
+* Expiry date of the deployment package, if one is set
+    * Currently deployed packages do not expire. Among any non-deployed packages, the five most recently deployed packages do not expire.
+    * Expiry dates apply only to packages that do not meet either of two non-expiry criteria outlined above. These packages are set to expire and be deleted within 15 days, unless they are deployed before that date.
+
+To deploy a package, transporting it from the Team Server to an environment where you can run your app, click **Deploy** ({{% icon name="deploy" %}}).
+
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deploy-icon.png" class="image-border" alt="" >}}
+
+If you click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) on a package, you can do the following:
+
+* View details, including the package size, description, build output, and an overview of the environments that are running the package
+* Delete the package
+
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deployment-package-options.png" class="image-border" alt="More Options" >}}
 
 ### 2.2 Environments
 
@@ -56,79 +66,75 @@ For standard plans, your node has production and acceptance environments. It can
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deploy-environments.png" alt="The Environments section for standard environments" >}}
 
-The **Environments** section shows the following details:
+For standard plans, the **Environments** section shows the following information:
 
-* Environment name (for example, **Acceptance**)
+* Environment name (Acceptance, Production, or Test)
 * Environment status, indicated by the icon next to the environment name:
-    * Green check mark – there are no alerts
-    * Orange exclamation mark – there is at least one warning alert, but no critical alerts
-    * Red cross – there is at least one critical alert
+    * {{% icon name="checkmark-circle-filled" color="green" %}} – the application in this environment is running
+    * {{% icon name="subtract-circle-filled" color="gray" %}} – no application has been started yet in this environment, or it has been turned off
+    * {{% icon name="remove-circle-filled" color="red" %}} – the application in this environment is unstable and probably not usable anymore
+* Name of the deployment package
+* Version of the deployment package
+* Runtime, the Studio Pro version with which the app was built
+* URL of the app
     
-    {{% alert color="info" %}}The environment status is cached; there can be a delay of up to five minutes before the status icon displays a change of status. To see the details of the alerts, click **Alerts**. For more information, see [Alerts](/developerportal/operate/monitoring-application-health/).{{% /alert %}}
-    
-* **Name** of the deployment package (for example, Main line-1.0.0.20.mda)
-* **Version** of the deployment package (for example, 1.0.0.20)
-* **Runtime**, the Studio Pro version with which the app is built (for example, 7.6.0)
-* **URL** of the app (for example, `https://mytestapp.mendixcloud.com`)
+{{% alert color="info" %}}The environment status is cached; there can be a delay of up to five minutes before the status icon displays a change of status. For information on the details of any alerts, see [Alerts](/developerportal/operate/monitoring-application-health/).{{% /alert %}}
 
 You can perform the following actions in this section:
 
-* [Details](/developerportal/deploy/environments-details/) – view details of the environment
-* **Transport to** – stage an environment to acceptance or production
-* **Setup Studio Pro Deployment** – the [Technical Contact](/developerportal/general/app-roles/#technical-contact) can set the target environment to which apps are deployed from Studio Pro; for more information, see [Studio Pro Deployment Settings](/developerportal/deploy/studio-deployment-settings/)
+* View an environment's details – Click **Details** ({{% icon name="notes-paper-edit" %}}) to go to the [Environment Details](/developerportal/deploy/environments-details/) page.
+* Transport an environment – If you have [Transport rights](/developerportal/deploy/node-permissions/#transport-rights) enabled, you will see a **More Options** button ({{% icon name="three-dots-menu-horizontal" %}}) that you can click to stage an environment to acceptance or production.
 
-#### 2.2.2 Flexible Environments {#flexible-environments}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/transport-to.png" alt="" >}}
+
+* Set up deployment – If you are the [Technical Contact](/developerportal/general/app-roles/#technical-contact), you will see a **Setup Studio Pro Deployment** button. You can use this to set the target environment to which apps are deployed from Studio Pro; for more information, see [Studio Pro Deployment Settings](/developerportal/deploy/studio-deployment-settings/).
+
+#### 2.2.2 Flexible Environments{#flexible-environments}
 
 If your Mendix license supports flexible environments, you can define the number and type of environments that you have. You must define at least two environments, one of which must be a production environment. The other environment (or environments) may be designated according to your requirements. For example, you can have a production environment and multiple staging environments if your deployment process requires it.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deploy-flex-environments.png" alt="The Environments section with flexible environments" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deploy-flex-environments.png" alt="The Environments section with flexible environments" class="image-border" >}}
 
-For flexible environments, the **Environments** section shows the following details:
+For flexible environments, the **Environments** section shows the following information:
 
-* Environment name (for example, **Acceptance**)
-* **Prod** indicates whether the environment is a production environment; this is set when the environment is created
 * Environment status, indicated by the icon next to the environment name:
-    * Green check mark – there are no alerts
-    * Orange exclamation mark – there is at least one warning alert, but no critical alerts
-    * Red cross – there is at least one critical alert
-    
-    {{% alert color="info" %}}The environment status is cached; there can be a delay of up to five minutes before the status icon displays a change of status. To see the details of the alerts, click **Alerts**. For more information, see [Alerts](/developerportal/operate/monitoring-application-health/).{{% /alert %}}
-    
-* **Name** of the deployment package (for example, Main line-1.0.0.20.mda)
-* **Version** of the deployment package (for example, 1.0.0.20)
-* **Runtime**, the Studio Pro version with which the app is built (for example, 7.6.0)
-* **Plan** for the environment; for more information, see [Environment Details](/developerportal/deploy/environments-details/)
-* **URL** of the app (for example, `https://mytestapp.mendixcloud.com`)
+    * {{% icon name="checkmark-circle-filled" color="green" %}} – the application in this environment is running
+    * {{% icon name="subtract-circle-filled" color="gray" %}} – no application has been started yet in this environment, or it has been turned off
+    * {{% icon name="remove-circle-filled" color="red" %}} – the application in this environment is unstable and probably not usable anymore
+* Name of the environment
+* Version of the deployment package
+* Runtime, the Studio Pro version with which the app was built
+* Plan for the environment
+* URL of the app
+
+{{% alert color="info" %}}The environment status is cached; there can be a delay of up to five minutes before the status icon displays a change of status. For information on the details of any alerts, see [Alerts](/developerportal/operate/monitoring-application-health/).{{% /alert %}}
 
 You can perform the following actions in this section:
 
-* [Details](/developerportal/deploy/environments-details/) – view the environment's details
-* **Setup Studio Pro Deployment** – the [Technical Contact](/developerportal/general/app-roles/#technical-contact) can set the target environment to which apps will be deployed from Studio Pro; for more information, see [Studio Pro Deployment Settings](/developerportal/deploy/studio-deployment-settings/)
-* **Search** – find a specific environment using the **Search** field
-* Reorder environments - the [Technical Contact](/developerportal/general/app-roles/#technical-contact) can reorder the environments by dragging them in the list (for example, to group environments of the same type together):
+* Search for an environment – Find a specific environment using the **Search** field.
+* View an environment's details – Go to the environment's [Details](/developerportal/deploy/environments-details/) page by clicking **Details** ({{% icon name="notes-paper-edit" %}}).
+* Set up deployment – If you are the [Technical Contact](/developerportal/general/app-roles/#technical-contact), you will see a **Setup Studio Pro Deployment** button. You can use this to set the target environment to which apps are deployed from Studio Pro; for more information, see [Studio Pro Deployment Settings](/developerportal/deploy/studio-deployment-settings/).
+* Reorder environments – If you are the [Technical Contact](/developerportal/general/app-roles/#technical-contact), you can reorder the environments by clicking **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) and selecting **Move Up** or **Move Down**.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/reorder-environments.gif" alt="Reordering environments in a list" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/reorder-environments.png" alt="Move Up and Move Down options" class="image-border" >}}
 
-    {{% alert color="info" %}}The **Transport to** button is not available when flexible environments are enabled. This is because you must choose your deployment target each time you deploy when you have flexible environments. To deploy, click **Deploy** in the [Deployment Package Repository](https://docs.mendix.com/developerportal/deploy/environments/#package-repository) section.{{% /alert %}}
+    {{% alert color="info" %}}The button to transport an environment is not available when flexible environments are enabled. This is because you must choose your deployment target each time you deploy when you have flexible environments. To deploy, click **Deploy** ({{% icon name="deploy" %}}) in the [Deployment Package Repository](https://docs.mendix.com/developerportal/deploy/environments/#package-repository) section, as described above.{{% /alert %}}
 
 ### 2.3 Activity
 
 In the **Activity** section, you can view a log of deployment activities performed on your environments.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/activity.png" alt="Sample activity log" >}}
-
-If you are the [Technical Contact](/developerportal/general/app-roles/#technical-contact), you can download a copy of the activity log by following these steps:
-
-1. Click **Download to CSV**.
-2. Select the period for which you want to download log entries. For **Custom Period**, you must enter a valid period using **Start Date** and **End Date**.
-
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/download-activity-log.png" alt="Sample custom period with a validation error" >}}
-
-3. Click **Download**.
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/activity.png" alt="Sample activity log" class="image-border" >}}
 
 {{% alert color="info" %}}
 Operations performed on a customer's behalf through an authorized Mendix support ticket are not logged in the activity log.
 {{% /alert %}}
+
+If you are the [Technical Contact](/developerportal/general/app-roles/#technical-contact), you can download a copy of the activity log by following these steps:
+
+1. Click **Download to CSV**. (This button is only visible if you are the Technical Contact.)
+2. Select the period for which you want to download log entries.
+3. Click **Download**.
 
 ## 3 Custom Domains
 
@@ -144,7 +150,7 @@ For details on setting up access restriction profiles, see [Restrict Access for 
 
 ## 5 Permissions{#permissions}
 
-In the **Permissions** tab, the [Technical Contact](/developerportal/general/app-roles/#technical-contact) and other team members who have the **Manage Permissions** permission can manage various permissions to the environments for each team member. Team members who have a role with **Cloud Access** can view the permissions.
+In the **Permissions** tab, the [Technical Contact](/developerportal/general/app-roles/#technical-contact) and other team members who have **Manage Permissions** enabled can manage various permissions to the environments for each team member. Team members who have a role with **Cloud Access** can view the permissions.
 
 For details on managing node permissions, see [Node Permissions](/developerportal/deploy/node-permissions/).
 
@@ -154,7 +160,7 @@ In the **Services** tab, the Technical Contact can determine which custom servic
 
 ### 6.1 Available Services
 
-One custom service is available: **Mendix Event Broker**. This service is required to use [Mendix Business Events](/appstore/modules/business-events/) on production apps.
+One custom service is available: **Mendix Event Broker**. This service is required to use [Mendix Business Events](/appstore/services/business-events/) on production apps.
 
 ### 6.2 Enabling Custom Services
 
@@ -166,7 +172,7 @@ Once a service has been enabled for an app, Technical Contacts can selectively e
 
 ## 7 Read More
 
-* [Deploy and Manage](/developerportal/deploy/)
+* [Deployment](/developerportal/deploy/)
 * [Environment Details](/developerportal/deploy/environments-details/)
 * [How to Receive Environment Status Alerts](/developerportal/operate/receive-alerts/)
 * [How to Restrict Access for Incoming Requests](/developerportal/deploy/access-restrictions/)

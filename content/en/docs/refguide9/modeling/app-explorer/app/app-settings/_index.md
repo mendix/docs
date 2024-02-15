@@ -309,11 +309,11 @@ Security settings of workflows and user tasks allow you to access workflow or us
 
 #### 7.3.1 Workflow State Change {#workflow-state-change}
 
-A microflow selected for this setting will start every time a workflow changes its state, for example, when the workflow is completed or has failed. This setting is app-wide, you can override it by setting a workflow-specific microflow in the [workflow properties](/refguide9/workflow-properties/#events).
+A microflow selected for this setting will start every time a workflow changes its state, for example, when the workflow is completed or has failed. This setting is app-wide, you can override it by setting a workflow-specific microflow in [workflow properties](/refguide9/workflow-properties/#events).
 
 #### 7.3.2 User Task State Change {#user-task-state-change}
 
-A microflow selected for this setting will start every time a user task changes its state, for example, when a user task is completed or paused. This setting is app-wide, you can override it by setting a workflow-specific microflow in the [workflow properties](/refguide9/workflow-properties/#events).
+A microflow selected for this setting will start every time a user task changes its state, for example, when a user task is completed or paused. This setting is app-wide, you can override it by setting a workflow-specific microflow in [workflow properties](/refguide9/workflow-properties/#events).
 
 ## 8 Deployment Tab {#deployment}
 

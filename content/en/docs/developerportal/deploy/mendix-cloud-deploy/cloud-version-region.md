@@ -24,11 +24,13 @@ To view the Mendix Cloud region in which your app is hosted, follow these steps:
 
 2. Open the **Environments** page for your app.
 
-3. Click **Details** for the desired environment.
+3. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the desired environment.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/cloud-version-region/environment-details.png" >}}
 
-4. Next to **Region**, you will see the region of the data center where your app is hosted.
+4. Scroll down to the **Region** row to see the region of the data center where your app is hosted.
+
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/cloud-version-region/region-row.png" alt="" >}}
 
 ## 3 Read More
 

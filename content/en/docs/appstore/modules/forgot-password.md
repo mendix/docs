@@ -7,7 +7,8 @@ tags: ["marketplace", "marketplace component", "forgot password", "password", "l
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction 
+## 1 Introduction
+
 The [Forgot Password](https://marketplace.mendix.com/link/component/1296/) module enables the users to sign up and also to reset their password. It works with the local accounts which are managed within your Mendix App. These accounts are the best choice when you do not want to use a single sign-on (SSO) solution to integrate with your existing identity and access management (IAM) infrastructure.
 
 This module allows the end-user to enter their email address, and an email will be sent with a confirmation link. The end-user then opens the link and gets the option to reset their password in both scenarios (sign up and forgot password). In the sign up case, the end-user is also asked to provide their name. For version 5.3.0 and above of the module, you can specify different templates to be sent, depending on the language in which the end-user is seeing the app.
@@ -87,7 +88,7 @@ In these instructions, it is assumed that your main module is **MyFirstModule**.
             * **MxModelReflection.TokenUser**
             * **System.User**
             * **yFirstModule.User**
-          
+
     * In the **Anonymous users** tab, set **Allow Anonymous users** to *Yes*
 1. Open [Navigation](/refguide/navigation/) and do the following:
     * Set **Role-based home pages** so the target of user role **Guest** is **ForgotPassword.Nav_GuestHomePage**
@@ -122,7 +123,7 @@ To disable the sign up functionality and use the Forgot Password module only for
 ### 2.1 Using Email Aliases{#email-aliases}
 
 From version 5.4.0 of the Forgot Password module, the **fromAddress** used in the email template does not have to be the same as the email address in the SMTP configuration. This provides flexibility, allowing you to send emails from different addresses while utilizing the same SMTP configuration for authentication.
- 
+
 Consider a scenario, where your SMTP username is *user@example.com* and you have configured this account in your SMTP configuration. You could set the **fromAddress** in your email template to be any email address or alias you have control over, such as **sales@example.com**, **support@example.com**, or **ceo@example.com**, and this is what the recipient will see in the email they receive.
 
 {{% alert color="info" %}}
@@ -134,17 +135,16 @@ You may have to configure an email alias on your SMTP server if you are using a 
 1. Sign out of the app.
 1. On the sign in page, click **Signup**.
 1. Enter your name and email ID and click **Send**. You will get confirmation that a password recovery email has been sent.
-
-{{< figure src="/attachments/appstore/modules/forgot-password/test-signup.png" >}}
+  
+    {{< figure src="/attachments/appstore/modules/forgot-password/test-signup.png" >}}
 
     You will receive an email containing a link to reset your password.
+  
+    {{< figure src="/attachments/appstore/modules/forgot-password/email-example.png" >}}
 
-        {{< figure src="/attachments/appstore/modules/forgot-password/email-example.png" >}}
+1. Open the link in the browser. You can now reset your password.
 
-1. Open the link in the browser.
-    You can now reset your password.
-
-        {{< figure src="/attachments/appstore/modules/forgot-password/reset-password-page.png" >}}
+    {{< figure src="/attachments/appstore/modules/forgot-password/reset-password-page.png" >}}
 
 ## 4 Upgrading from Mendix 8 to Mendix 9 {#upgrade8-9}
 
@@ -160,8 +160,8 @@ To convert from Mendix 8.18.x to Mendix 9.12.5 or above, follow the steps below:
 
 1. Double click one of the errors to open the error page and change the (primary) layout to **Atlas_TopBar(Atlas_UI_Resources)**.
 
-    {{< figure src="/attachments/appstore/modules/forgot-password/change-layout.png" >}} 
-    
+    {{< figure src="/attachments/appstore/modules/forgot-password/change-layout.png" >}}
+
     This will resolve two of the errors.
 1. Open the error page and again change the (primary) layout to **Atlas_TopBar(Atlas_UI_Resources)**.
 
@@ -170,9 +170,10 @@ You have now successfully upgraded the Forgot Password Module to work with Mendi
 ## 5 Migrating from Email Module with Templates to Email Connector{#migrate-email}
 
 Below versions of the Forgot Password module use the [Email Connector](https://docs.mendix.com/appstore/connectors/email-connector/) module rather than the deprecated [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module.
+
 * Version 4.1.0 (for Mendix 8)
 * Version 5.1.0 (for Mendix 9 and above)
-* Version above 5.1.0 
+* Version above 5.1.0
 
 There is a community-supported [Email Connector Migration Utility](https://marketplace.mendix.com/link/component/205008) to assist with the upgrade to these versions.
 

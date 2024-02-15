@@ -19,7 +19,7 @@ Before starting this how-to, make sure you know how to do the following:
 * Create overview and detail pages (see [How to Create Your First Two Overview and Detail Pages](/howto9/front-end/create-your-first-two-overview-and-detail-pages/))
 * Create menu items (see [Setting Up Navigation](/refguide9/setting-up-the-navigation-structure/))
 * Create microflows (see [Triggering a Microflow From a Menu Item](/refguide9/triggering-microflow-from-menu-item/)
-* Add Marketplace content to your app (see [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/))
+* Add Marketplace content to your app (see [Using Marketplace Content](/appstore/overview/use-content/))
 * Secure your applications (see [How to Create a Secure App](/howto9/security/create-a-secure-app/))
 
 ## 3 Preparing the Data Structure, GUI and Modules
@@ -62,7 +62,7 @@ Because an enumeration is used for the **OrderStatus** attribute, you need to cr
 
 In order to set up import templates for importing data, your application model metadata should be reflected in the client. This can be achieved by using the [Mx Model Reflection](/appstore/modules/model-reflection/) module. In this section, you will learn how to do this by following these steps:
 
-1. Click the play button (**Run Locally**) to start your application.
+1. Click **Run Locally** ({{% icon name="controls-play" %}}) to start your application.
 2. Click **View App** to open your application in the browser.
 3. **Log in** as an Administrator.
 4. Click on the menu item for the **MxObjects_Overview** in your navigation.

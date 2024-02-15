@@ -6,10 +6,6 @@ tags: ["studio pro", "module", "modules"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/modules.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 A Mendix project consists of modules: a **System** module, a [UI resources package](/refguide8/ui-resources-package/), and one or more user-defined modules. Modules are a way to split the functionality of your application into separate parts. For example, a web shop can put order management in a different module than customer and product management. Studio Pro does not enforce any kind of module structure; it is up to you to choose logical modules for your application.
@@ -47,7 +43,7 @@ Furthermore, a module can contain many different types of documents. Each type o
 | [Java Actions](/refguide8/java-actions/) | With Java actions you can extend the functionality of your application in situations where it would be hard to implement this functionality in microflows. You can call a Java action from a microflow. |
 | [Regular Expressions](/refguide8/regular-expressions/) | A regular expression is used by [validation rules](/refguide8/validation-rules/) on an entity to describe a set of criteria that a string can match. |
 | [Rules](/refguide8/rules/) | A rule defines a set of criteria, with a certain input the rule will result in a Boolean or enumeration depending on the criteria met. It can be called from a decision to determine the direction the microflow should go once the decision is reached. |
-| [Scheduled Events](/refguide8/scheduled-events/) | A scheduled event is used to execute a microflow at a certain point in time. You can also schedule it to repeat after a given time. For example, a scheduled event can run every morning at 6 A.M. |
+| [Scheduled Events](/refguide8/scheduled-events/) | A scheduled event is used to execute a microflow at a certain point in time. You can also schedule it to repeat after a given time. For example, a scheduled event can run every morning at 6 AM |
 
 ## 5 Consumed Services
 

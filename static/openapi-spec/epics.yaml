@@ -1,4 +1,4 @@
-openapi: "3.0.0"
+openapi: 3.0.0
 info:
   version: 1.0.0
   title: Epics API
@@ -15,163 +15,806 @@ paths:
     get:
       tags:
         - statuses
-      summary: Get statuses by app ID
-      description: Returns an array of statuses
+      summary: Get statuses by the app ID
+      description: Returns an array of statuses.
       operationId: getProjectStatuses
       parameters:
-        - $ref: '#/components/parameters/appId'
+        - in: path
+          name: appId
+          description: The ID of the app
+          required: true
+          schema:
+            type: string
+            format: uuid
       responses:
         '200':
-          description: successful operation
+          description: Successful operation
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/statuses'
         '401':
-          $ref: '#/components/responses/error401'
+          description: |-
+            No usable authentication credentials were found.
+
+            The error response gives additional feedback.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              example:
+                status: 401
+                title: Unauthorized
+                detail: Credentials could not be authenticated.
         '404':
-          $ref: '#/components/responses/error404'
+          description: |-
+            The required item could not be found.
+
+            The error response gives additional feedback.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              example:
+                status: 404
+                title: Not Found
+                detail: The app does not exist or you do not have access to it.
   /projects/{appId}/stories:
     get:
       tags:
         - stories
-      summary: Get stories by app ID
-      description: Returns an array of stories
+      summary: Get stories by the app ID
+      description: Returns an array of stories.
       operationId: getProjectStories
       parameters:
-        - $ref: '#/components/parameters/appId'
-        - $ref: '#/components/parameters/limitStories'
-        - $ref: '#/components/parameters/offsetStories'
+        - in: path
+          name: appId
+          description: The ID of the app
+          required: true
+          schema:
+            type: string
+            format: uuid
+        - in: query
+          name: limit
+          description: The maximum number of stories that can be returned per request. If the total number of the stories retrieved is more than this limit, then in the response you can find links to pages for retrieving subsequent stories.
+          required: false
+          schema:
+            type: integer
+            format: int64
+            minimum: 1
+            maximum: 100
+            default: 20
+        - in: query
+          name: offset
+          description: The offset is the zero-based index of the first story to be returned on the page.
+          required: false
+          schema:
+            type: integer
+            format: int64
+            minimum: 0
+            default: 0
       responses:
         '200':
-          description: successful operation
+          description: Successful operation
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/stories'
         '400':
-          $ref: '#/components/responses/error400query'
+          description: |-
+            The request likely contains invalid data or is missing data.
+
+            The error response gives additional feedback.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              example:
+                status: 400
+                title: Bad Request
+                detail: Unsupported query parameter was used.
         '401':
-          $ref: '#/components/responses/error401'
+          description: |-
+            No usable authentication credentials were found.
+
+            The error response gives additional feedback.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              example:
+                status: 401
+                title: Unauthorized
+                detail: Credentials could not be authenticated.
         '404':
-          $ref: '#/components/responses/error404'
+          description: |-
+            The required item could not be found.
+
+            The error response gives additional feedback.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              example:
+                status: 404
+                title: Not Found
+                detail: The app does not exist or you do not have access to it.
     post:
       tags:
         - stories
       summary: Create stories for an app
-      description: Returns an array of created stories
+      description: Returns an array of created stories.
       operationId: postProjectStories
       parameters:
-        - $ref: '#/components/parameters/appId'
+        - in: path
+          name: appId
+          description: The ID of the app
+          required: true
+          schema:
+            type: string
+            format: uuid
       requestBody:
-        description: Create stories for an app
+        description: Create stories for an app.
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/post-stories-request'
+              type: array
+              items:
+                type: object
+                properties:
+                  title:
+                    type: string
+                    example: Users need to have a homepage that gives them access to pages where information can be seen.
+                  description:
+                    type: string
+                    example: Add buttons to the existing homepage which give users access to other pages.
+                  storyType:
+                    type: string
+                    example: Feature
+                    enum:
+                      - Bug
+                      - Feature
+                  storyPoints:
+                    type: integer
+                    format: int64
+                    minimum: 0
+                    example: 5
+                  storyLevel:
+                    type: string
+                    example: Active
+                    enum:
+                      - Active
+                      - NextSprint
+                      - InRefinement
+                      - Backlog
       responses:
         '200':
-          description: successful operation
+          description: Successful operation
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/post-stories-200'
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        code:
+                          type: integer
+                          format: int64
+                          example: 200
+                        story:
+                          type: object
+                          properties:
+                            uuid:
+                              type: string
+                              format: uuid
+                              example: 346a2cad-6b96-477a-9225-3957b73ctest
+                            storyId:
+                              type: string
+                              example: TEST-1
         '207':
-          description: partial successful operation
+          description: Partial successful operation
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/post-stories-207'
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        code:
+                          type: integer
+                          format: int64
+                          example: 400
+                        reason:
+                          type: string
+                          example: Unsupported story type
         '400':
-          $ref: '#/components/responses/error400postStoriesMalformed'
+          description: |-
+            The request likely contains invalid data or is missing data.
+
+            The error response gives additional feedback.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                Example 1:
+                  value:
+                    status: 400
+                    title: Bad Request
+                    detail: The request was malformed and could not be read.
+                Example 2:
+                  value:
+                    status: 400
+                    title: Bad Request
+                    detail: The maximum number of stories per request is 50. Please do not exceed the limit.
         '401':
-          $ref: '#/components/responses/error401'
+          description: |-
+            The required item could not be found.
+
+            The error response gives additional feedback. 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              example:
+                status: 401
+                title: Unauthorized
+                detail: The token is invalid.
         '404':
-          $ref: '#/components/responses/error404'
+          description: |-
+            The required item could not be found.
+
+            The error response gives additional feedback.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              example:
+                status: 404
+                title: Not Found
+                detail: The app does not exist or you do not have access to it.
   /projects/{appId}/stories/{storyId}:
     patch:
       tags:
         - stories
-      summary: Patch stories by story ID 
-      description: Returns success 
+      summary: Patch a story by the story ID
+      description: Returns the status code 204.
       operationId: patchProjectStory
       parameters:
-        - $ref: '#/components/parameters/appId'
-        - $ref: '#/components/parameters/storyId'
+        - in: path
+          name: appId
+          description: The ID of the app
+          required: true
+          schema:
+            type: string
+            format: uuid
+        - in: path
+          name: storyId
+          description: The readable ID of the story
+          required: true
+          schema:
+            type: string
       requestBody:
-        description: Patch stories by story ID
+        description: Patch a story by the story ID.
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/patch-stories-request' 
+              type: object
+              properties:
+                title:
+                  type: string
+                  example: Users need to have a homepage that gives them access to pages where information can be seen.
+                description: 
+                  type: string
+                  example: Update story description.
+                storyPoints:
+                  type: integer
+                  format: int64
+                  minimum: 0
+                  example: 5
+                storyType:
+                  type: string
+                  example: Feature
+                  enum:
+                    - Bug
+                    - Feature
+                storyLevel:
+                  type: string
+                  example: Active
+                  enum:
+                    - Active
+                    - NextSprint
+                    - InRefinement
+                    - Backlog
+                storyStatus:
+                  type: string
+                  example: Done
       responses:
         '204':
-          description: successful operation
+          description: Successful operation
         '400':
-          $ref: '#/components/responses/error400patchStories'
+          description: |-
+            The request likely contains invalid data or is missing data.
+
+            The error response gives additional feedback.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                Example 1:
+                  value:
+                    status: 400
+                    title: Bad Request
+                    detail: The request is malformed and could not be read.
+                Example 2:
+                  value:
+                    status: 400
+                    title: Bad Request
+                    detail: The title of a story is required.
+                Example 3:
+                  value:
+                    status: 400
+                    title: Bad Request
+                    detail: The maximum number of characters for Title is 200. 
+                Example 4:
+                  value:
+                    status: 400
+                    title: Bad Request
+                    detail: The attribute "{attribute name} does not exist or you do not have access to it".
+                Example 5:
+                  value:
+                    status: 400
+                    title: Bad Request
+                    detail: Invalid data type was used for "{attribute name}".
+                Example 6:
+                  value:
+                    status: 400
+                    title: Bad Request
+                    detail: Invalid value was used for storyLevel.
+                Example 7:
+                  value:
+                    status: 400
+                    title: Bad Request
+                    detail: The story cannot be moved to the active sprint, because there is no active sprint available for this project.
+                Example 8:
+                  value:
+                    status: 400
+                    title: Bad Request
+                    detail: Story status is required when the story is active. 
+                Example 9:
+                  value:
+                    status: 400
+                    title: Bad Request
+                    detail: The storyStatus does not exist for the project.
         '401':
-          $ref: '#/components/responses/error401'
+          description: |-
+            The required item could not be found.
+
+            The error response gives additional feedback. 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              example:
+                status: 401
+                title: Unauthorized
+                detail: Credentials could not be authenticated.
         '404':
-          $ref: '#/components/responses/error404'
+          description: |-
+            The required item could not be found.
+
+            The error response gives additional feedback.
+          content:
+            application/json:
+              schema: 
+                $ref: '#/components/schemas/error'
+              example:
+                status: 404
+                title: Not Found
+                detail: The app does not exist or you do not have access to it.
+    get:
+      tags:
+        - stories
+      summary: Get a story by the story ID
+      description: Returns success
+      operationId: getProjectStory
+      parameters:
+        - in: path
+          name: appId
+          description: The ID of the app
+          required: true
+          schema:
+            type: string
+            format: uuid
+        - in: path
+          name: storyId
+          description: The readable ID of the story
+          required: true
+          schema: 
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/story'
+        '401':
+          description: |-
+            The required item could not be found.
+
+            The error response gives additional feedback.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              example:
+                status: 401
+                title: Unauthorized
+                detail: Credentials could not be authenticated.
+        '404':
+          description: |-
+            The required item could not be found.
+
+            The error response gives additional feedback.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              example:
+                status: 404
+                title: Not Found
+                detail: The app does not exist or you do not have access to it.
   /projects/{appId}/epics:
     get:
       tags:
         - epics
-      summary: Get epics by app ID
-      description: Returns an array of epics
+      summary: Get epics by the app ID
+      description: Returns an array of epics.
       operationId: getProjectEpics
       parameters:
-        - $ref: '#/components/parameters/appId'
-        - $ref: '#/components/parameters/limitEpics'
-        - $ref: '#/components/parameters/offsetEpics'
+        - in: path
+          name: appId
+          description: The ID of the app
+          required: true
+          schema: 
+            type: string
+            format: uuid
+        - in: query
+          name: limit
+          description: The maximum number of epics that can be returned per request. If the total number of the epics retrieved is more than this limit, then in the response you can find links to pages for retrieving subsequent epics. 
+          required: false
+          schema:
+            type: integer
+            format: int64
+            minimum: 1
+            maximum: 100
+            default: 20
+        - in: query
+          name: offset
+          description: The offset is the zero-based index of the first epic to be returned on the page.
+          required: false
+          schema:
+            type: integer
+            format: int64
+            minimum: 0 
+            default: 0
       responses:
         '200':
-          description: successful operation
+          description: Successful operation
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/epics'
         '400':
-          $ref: '#/components/responses/error400query'
+          description: |-
+            The request likely contains invalid data or is missing data.
+
+            The error response gives additional feedback.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              example:
+                status: 400
+                title: Bad Request
+                detail: Unsupported query parameter was used.
         '401':
-          $ref: '#/components/responses/error401'
+          description: |-
+            The required item could not be found.
+
+            The error response gives additional feedback.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              example:
+                status: 401
+                title: Unauthorized
+                detail: Credentials could not be authenticated.
         '404':
-          $ref: '#/components/responses/error404'
+          description: |-
+            The required item could not be found.
+
+            The error response gives additional feedback.
+          content:
+            application/json:
+              schema: 
+                $ref: '#/components/schemas/error'
+              example:
+                status: 404
+                title: Not Found
+                detail: The app does not exist or you do not have access to it.
   /projects/{appId}/stories/{storyId}/tasks:
     get:
       tags:
         - tasks
-      summary: Get tasks of a story by story ID and app ID
-      description: Returns an array of tasks
+      summary: Get tasks of a story by the story ID and the app ID
+      description: Returns an array of tasks.
       operationId: getStoryTasks
       parameters:
-        - $ref: '#/components/parameters/appId'
-        - $ref: '#/components/parameters/storyId'
+        - in: path
+          name: appId
+          description: The ID of the app
+          required: true
+          schema: 
+            type: string
+            format: uuid
+        - in: path
+          name: storyId
+          description: The readable ID of the story
+          required: true
+          schema:
+            type: string
       responses:
         '200':
-          description: successful operation
+          description: Successful operation
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/tasks'
         '401':
-          $ref: '#/components/responses/error401'
+          description: |-
+            The required item could not be found.
+
+            The error response gives additional feedback.
+          content:
+            application/json:
+              schema: 
+                $ref: '#/components/schemas/error'
+              example:
+                status: 401
+                title: Unauthorized
+                detail: Credentials could not be authenticated.
         '404':
-          $ref: '#/components/responses/error404'
+          description: |-
+            The required item could not be found.
+
+            The error response gives additional feedback.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              example:
+                status: 404
+                title: Not Found
+                detail: The app does not exist or you do not have access to it.
+    post:
+      tags:
+        - tasks
+      summary: Create tasks for a story 
+      description: Returns an array of created tasks.
+      operationId: postStoryTasks
+      parameters:
+        - in: path
+          name: appId
+          description: The ID of the app
+          required: true
+          schema: 
+            type: string
+            format: uuid
+        - in: path
+          name: storyId
+          description: The readable ID of the story
+          required: true
+          schema: 
+            type: string
+      requestBody:
+        description: Successful operation
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: object
+                properties:
+                  title:
+                    type: string
+                    example: Users need to have a homepage that gives them access to pages where information can be seen.
+                  isDone:
+                    type: boolean
+                    example: false
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        code:
+                          type: integer
+                          format: int64
+                          example: 200
+                        task:
+                          type: object
+                          properties:
+                            uuid:
+                              type: string
+                              example: 346a2cad-6b96-477a-9225-3957b73ctest 
+        '207':
+          description: Partial successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        code:
+                          type: integer
+                          format: int64
+                          example: 400
+                        reason:
+                          type: string
+                          example: The title of a task is required.
+        '400':
+          description: |-
+            The request likely contains invalid data or is missing data.
+
+            The error response gives additional feedback.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              examples:
+                Example 1:
+                  value:
+                    status: 400
+                    title: Bad Request
+                    detail: The request is malformed and could not be read.
+                Example 2:
+                  value:
+                    status: 400
+                    title: Bad Request
+                    detail: The maximum number of stories per request is 50. Please do not exceed the limit.
+        '401':
+          description: |-
+            No usable authentication credentials were found.
+
+            The error response gives additional feedback.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              example:
+                status: 401
+                title: Unauthorized
+                detail: Credentials could not be authenticated.
+        '404':
+          description: |-
+            The required item could not be found.
+
+            The error response gives additional feedback.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              example:
+                status: 404
+                title: Not Found
+                detail: The app does not exist or you do not have access to it.
+  /projects/{appId}/labels:
+    get:
+      tags:
+        - labels
+      summary: Get labels by the app ID
+      description: Returns an array of labels.
+      operationId: getProjectLabels
+      parameters:
+        - in: path
+          name: appId
+          description: The ID of the app
+          required: true
+          schema: 
+            type: string
+            format: uuid
+        - in: query
+          name: limit
+          description: The maximum number of labels that can be returned per request. If the total number of the labels retrieved is more than this limit, then in the reponse you can find the links to pages for retrieving subsequent labels.
+          required: false
+          schema: 
+            type: integer
+            format: int64
+            minimum: 1
+            maximum: 100
+            default: 20
+        - in: query
+          name: offset
+          description: The offset is the zero-based index of the first label to be returned on the page.
+          required: false
+          schema: 
+            type: integer
+            format: int64
+            minimum: 0
+            maximum: 0
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/labels'
+        '400':
+          description: |-
+            The request likely contains invalid data or is missing data.
+
+            The error response gives additional feedback.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              example:
+                status: 400
+                title: Bad Request
+                detail: Unsupported query parameter was used.
+        '401':
+          description: |-
+            No usable authentication credentials were found.
+
+            The error response gives additional feedback.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              example:
+                status: 401
+                title: Unauthorized
+                detail: Credentials could not be authenticated.
+        '404':
+          description: |-
+            The required item could not be found.
+
+            The error response gives additional feedback.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/error'
+              example:
+                status: 404
+                title: Not Found
+                detail: The app does not exist or you do not have access to it.
 components:
   parameters:
-    appId:
-      name: appId
-      in: path
-      description: ID of the app
-      required: true
-      schema:
-        type: string
-        format: uuid
     storyId:
       name: storyId
       in: path
-      description: Readable ID of the story
+      description: The readable ID of the story
       required: true
       schema:
         type: string
@@ -185,14 +828,6 @@ components:
         minimum: 1
         maximum: 100
         default: 20
-    limitStories:
-      allOf:
-        - $ref: '#/components/parameters/limit'
-          description: The maximum number of stories that can be returned per request. If the total stories retrieved is more than this limit, then we shall provide page links for retrieval of subsequent stories in the response.
-    limitEpics:
-      allOf:
-        - $ref: '#/components/parameters/limit'
-          description: The maximum number of epics that can be returned per request. If the total epics retrieved is more than this limit, then we shall provide page links for retrieval of subsequent epics in the response.
     offset:
       name: offset
       in: query
@@ -202,70 +837,6 @@ components:
         format: int64
         minimum: 0
         default: 0
-    offsetStories:
-      allOf:
-        - $ref: '#/components/parameters/offset'
-          description: The offset is the zero-based index of the first story to be returned on the page.
-    offsetEpics:
-      allOf:
-        - $ref: '#/components/parameters/offset'
-          description: The offset is the zero-based index of the first epic to be returned on the page.
-  responses:
-    error400:
-      description: |-
-        The request likely contains invalid data or is missing data.
-
-        The error response gives additional feedback.
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/error'
-          examples:
-            example-400:
-              value:
-                error:
-                  status: 400
-                  title: Bad Request
-                  detail: Request validation errors
-    error400query:
-      allOf:
-        - $ref: '#/components/responses/error400'
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/error400query'
-    error400postStoriesMalformed:
-      allOf:
-        - $ref: '#/components/responses/error400'
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/error400postStoriesMalformed'
-    error400patchStories:
-      allOf:
-        - $ref: '#/components/responses/error400'
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/error400patchStories'
-    error401:
-      description: |-
-        There were no usable authentication credentials found.
-
-        The error response gives additional feedback.
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/error401'
-    error404:
-      description: |-
-        The required item could not be found.
-
-        The error response gives additional feedback.
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/error404'
   schemas:
     error:
       type: object
@@ -280,82 +851,6 @@ components:
         detail:
           type: string
           example: Malformed request body
-    error400query:
-      type: object
-      properties:
-        status:
-          type: integer
-          format: int64
-          example: 400
-        title:
-          type: string
-          example: Bad Request
-        detail:
-          type: string
-          example: Unsupported query parameter was used
-    error400postStoriesMalformed:
-      type: object
-      properties:
-        status:
-          type: integer
-          format: int64
-          example: 400
-        title:
-          type: string
-          example: Bad Request
-        detail:
-          type: string
-          example: The request is malformed and could not be read
-    error400patchStories:
-      type: object
-      properties:
-        status:
-          type: integer
-          format: int64
-          example: 400
-        title:
-          type: string
-          example: Bad Request
-        detail:
-          type: string
-          example: The title of a story is required.
-    error401:
-      type: object
-      properties:
-        status:
-          type: integer
-          format: int64
-          example: 401
-        title:
-          type: string
-          example: Unauthorized
-        detail:
-          type: string
-          example: Credentials could not be authenticated.
-    error404:
-      type: object
-      properties:
-        status:
-          type: integer
-          format: int64
-          example: 404
-        title:
-          type: string
-          example: Not Found
-        detail:
-          type: string
-          example: The app does not exist or you do not have access to it
-    limit:
-      type: integer
-      format: int64
-      example: 20
-      minimum: 0
-      maximum: 100
-    offset:
-      type: integer
-      format: int64
-      minimum: 0
-      example: 120
     links:
       type: array
       items:
@@ -374,40 +869,6 @@ components:
             type: string
             format: url
             example: "https://epics-api.mendix.com/v1/projects/346a2cad-6b96-477a-9225-3957b73ctpro/{tag}?limit=20&offset=120"
-    sortId:
-      type: integer
-      format: int64
-      minimum: 0
-      example: 0
-    storyId:
-      type: string
-      example: TEST-1
-    storyLevel:
-      type: string
-      example: Active
-      enum:
-        - Active
-        - NextSprint
-        - InRefinement
-        - Backlog 
-    storyPoints:
-      type: integer
-      format: int64
-      minimum: 0
-      example: 5
-    storyType:
-      type: string
-      example: Feature
-      enum:
-        - Bug
-        - Feature
-    title:
-      type: string
-      example: "Title of something to do" 
-    uuid:
-      type: string
-      format: uuid
-      example: 346a2cad-6b96-477a-9225-3957b73ctest
     statuses:
       type: object
       properties:
@@ -423,6 +884,57 @@ components:
                 type: integer
                 format: int64
                 example: 0
+    story:
+      type: object
+      properties:
+        uuid:
+          type: string
+          format: uuid
+          example: 346a2cad-6b96-477a-9225-3957b73ctest
+        storyId:
+          type: string
+          example: TEST-1
+        sortId:
+          type: integer
+          format: int64
+          minimum: 0
+          example: 0
+        title:
+          type: string
+          example: Users need to have a homepage that gives them access to pages where information can be seen.
+        descriptionHTML:
+          type: string
+          format: html
+          example: <p>Add buttons to the existing homepage which give users access to other pages.</p>
+        descriptionPlain:
+          type: string
+          example: Add buttons to the existing homepage which give users access to other pages.
+        storyPoints:
+          type: integer
+          format: int64
+          minimum: 0
+          example: 5
+        storyType:
+          type: string
+          example: Feature
+          enum:
+            - Bug
+            - Feature
+        storyLevel:
+          type: string
+          example: Active
+          enum:
+            - Active 
+            - NextSprint
+            - InRefinement
+            - Backlog
+        numberOfTasks:
+          type: integer
+          format: int64
+          example: 1
+        status:
+          type: string
+          example: Done
     stories:
       type: object
       properties:
@@ -432,26 +944,46 @@ components:
             type: object
             properties:
               uuid:
-                $ref: '#/components/schemas/uuid'
+                type: string
+                format: uuid
+                example: 346a2cad-6b96-477a-9225-3957b73ctest
               storyId:
-                $ref: '#/components/schemas/storyId'
+                type: string
+                example: TEST-1
               sortId:
-                $ref: '#/components/schemas/sortId'
+                type: integer
+                format: int64
+                minimum: 0
+                example: 0
               title:
-                $ref: '#/components/schemas/title'
+                type: string
+                example: "Users need to have a homepage that gives them access to pages where information can be seen."
               descriptionHTML:
                 type: string
                 format: html 
-                example: <p>A simple story description</p>
+                example: <p>Add buttons to the existing homepage which give users access to other pages.</p>
               descriptionPlain:
                 type: string
-                example: A simple story description
+                example: Add buttons to the existing homepage which give users access to other pages.
               storyPoints:
-                $ref: '#/components/schemas/storyPoints'
+                type: integer
+                format: int64
+                minimum: 0
+                example: 5
               storyType:
-                $ref: '#/components/schemas/storyType'
+                type: string
+                example: Feature
+                enum:
+                  - Bug
+                  - Feature
               storyLevel:
-                $ref: '#/components/schemas/storyLevel'
+                type: string
+                example: Active
+                enum:
+                  - Active
+                  - NextSprint
+                  - InRefinement
+                  - Backlog
               numberOfTasks:
                 type: integer
                 format: int64
@@ -466,9 +998,16 @@ components:
         links: 
           $ref: '#/components/schemas/links'
         limit:
-          $ref: '#/components/schemas/limit'
+          type: integer
+          format: int64
+          example: 20
+          minimum: 0
+          maximum: 100
         offset:
-          $ref: '#/components/schemas/offset'
+          type: integer
+          format: int64
+          minimum: 0
+          example: 0
     epics:
       type: object
       properties:
@@ -485,7 +1024,7 @@ components:
                 example: Public API Initiative
               objective:
                 type: string
-                example: ability to change stories programatically
+                example: Ability to change stories programatically
               numberOfStories:
                 type: integer
                 format: int64
@@ -504,9 +1043,49 @@ components:
         links:
           $ref: '#/components/schemas/links'
         limit:
-          $ref: '#/components/schemas/limit'
+          type: integer
+          format: int64
+          example: 20
+          minimum: 0
+          maximum: 100
         offset:
-          $ref: '#/components/schemas/offset'
+          type: integer
+          format: int64
+          minimum: 0
+          example: 0
+    labels:
+      type: object
+      properties:
+        labels:
+          type: array
+          items:
+            type: object
+            properties:
+              uuid:
+                type: string
+                format: uuid
+                example: 346a2cad-6b96-477a-9225-3957b73ctest
+              name:
+                type: string
+                example: Add post endpoint to generate resources.
+        totalLabels:
+          type: integer
+          format: int64
+          minimum: 0
+          example: 240
+        links:
+          $ref: '#/components/schemas/links'
+        limit:
+          type: integer
+          format: int64
+          example: 20
+          minimum: 0
+          maximum: 100
+        offset:
+          type: integer
+          format: int64
+          minimum: 0
+          example: 0
     tasks:
       type: object
       properties:
@@ -516,87 +1095,24 @@ components:
             type: object
             properties:
               title:
-                $ref: '#/components/schemas/title' 
+                type: string
+                example: Design the new buttons for the homepage.
               isDone:
                 type: boolean
                 example: false
               sortId:
-                $ref: '#/components/schemas/sortId'
-    post-stories-200:
-      type: object
-      properties:
-        items:
-          type: array
-          items:
-            type: object
-            properties:
-              code:
                 type: integer
                 format: int64
-                example: 200
-              story:
-                type: object
-                properties:
-                  uuid:
-                    $ref: '#/components/schemas/uuid'
-                  storyId:
-                    $ref: '#/components/schemas/storyId'
-    post-stories-207:
-      type: object
-      properties:
-        items:
-          type: array
-          items:
-            type: object
-            properties:
-              code:
-                type: integer
-                format: int64
-                example: 400
-              reason:
-                type: string
-                example: Unsupported story type
-    post-stories-request:
-      type: array
-      items:
-        type: object
-        properties:
-          title:
-            $ref: '#/components/schemas/title'
-          description:
-            type: string
-            example: Description of a new user story
-          storyType:
-            $ref: '#/components/schemas/storyType'
-          storyPoints:
-            $ref: '#/components/schemas/storyPoints'
-          storyLevel:
-            $ref: '#/components/schemas/storyLevel'
-    patch-stories-request:
-      type: object
-      properties:
-        title:
-          $ref: '#/components/schemas/title'
-        description: 
-          type: string
-          example: Update story description
-        storyPoints:
-          $ref: '#/components/schemas/storyPoints'
-        storyType:
-          $ref: '#/components/schemas/storyType'
-        storyLevel:
-          $ref: '#/components/schemas/storyLevel'
-        storyStatus:
-          type: string
-          example: Done
+                example: 0
   securitySchemes:
     PersonalAccessToken:
       name: Authorization
       type: apiKey
       in: header
-      description: 'For more information about requesting and using a token see the [documentation](https://docs.mendix.com/developerportal/community-tools/mendix-profile/#pat).<br/> The header must be set to `MxToken <Your PAT>`.'        
+      description: 'For more information about requesting and using a token see the [documentation](https://docs.mendix.com/community-tools/mendix-profile/user-settings/#pat).<br/> The header must be set to `MxToken <Your PAT>`.'        
 tags:
   - name: epics
+  - name: labels
   - name: statuses
   - name: stories
   - name: tasks

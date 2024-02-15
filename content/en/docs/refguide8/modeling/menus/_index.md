@@ -7,10 +7,6 @@ weight: 12
 tags: ["Studio Pro", "menu", "top bar"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/menus.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 The top-bar of Studio Pro contains the following menus:
@@ -44,7 +40,7 @@ In the **Project** menu, you can view and/or manipulate settings that are connec
 
 ## 6 Run Menu {#run}
 
-The **Run** menu contains actions for deploying and monitoring your app, such as **Run**, **Run locally**, or **Debugger**. For more information on the **Run** menu, see [Run Menu](/refguide8/run-menu/). 
+The **Run** menu contains actions for deploying and monitoring your app, such as **Run**, **Run Locally**, or **Debugger**. For more information on the **Run** menu, see [Run Menu](/refguide8/run-menu/). 
 
 ## 7 Version Control Menu {#version-control}
 

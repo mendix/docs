@@ -5,17 +5,13 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/consumed-web-services.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 This document describes imported web services. For further information on the consumed web services screen, see [Consumed Web Service](/refguide8/consumed-web-service/).
 
 ## 2 Web Services
 
-Web services (see also [Wikipedia](http://en.wikipedia.org/wiki/Web_service)) are a way of exposing or absorbing functions and data entities between systems. They can be used to enable applications to "talk" to each other through the network (or Internet).
+Web services (see also [Wikipedia](http://en.wikipedia.org/wiki/Web_service)) are a way of exposing or absorbing functions and data entities between systems. They can be used to enable applications to "talk" to each other through the network (or internet).
 
 Mendix supports the interaction between servers using SOAP. This can either be Mendix-to-Mendix, Mendix-to-ThirdParty or ThirdParty-to-Mendix.
 

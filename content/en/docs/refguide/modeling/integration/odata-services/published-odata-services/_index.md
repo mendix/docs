@@ -8,7 +8,7 @@ tags: ["studio pro","OData","publish"]
 
 ## 1 Introduction
 
-In Studio Pro, entities can be exposed as [OData resources](/refguide/published-odata-resource/) by adding them to a published OData service. You can expose any number of related resources in a published OData service. By default, the plural of the non-qualified names of entities are used in the URI to uniquely identify them, but you can override the name of the resource as well. 
+In Studio Pro, [entities can be published](/refguide/published-odata-entity/) by adding them to a published OData service. You can publish any number of related entities in a published OData service. By default, the plural of the non-qualified names of entities are used in the URI to uniquely identify them, but you can override the name of the published entity as well. 
 
 A published OData service is a REST service with an OpenAPI contract, which means that OpenAPI compatible REST clients can easily interact with it. 
 
@@ -23,11 +23,11 @@ This document describes the options available to you when you create a published
 {{% alert color="info" %}}
 Published OData services deployed to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) are automatically registered in the [Catalog](/catalog/).{{% /alert %}}
 
-## 2 General
+## 2 General {#general}
 
 To create a Published OData Service, right-click on the module in your app and choose **Add other** > **Published OData service**. You can also edit an existing published OData service by double-clicking on it, or right-clicking on it and selecting **Open**.
 
-### 2.1 Service Name
+### 2.1 Service Name {#service-name}
 
 The service name uniquely identifies the published OData service within the app.
 
@@ -47,7 +47,9 @@ This is because changes to a particular version of a published OData service wil
 
 ### 2.3 Location
 
-The location denotes where the service will be available. The part before `/odata/` may be different depending on where the app is running. You can specify the part after `/odata/` yourself. It is recommended to specify the service name and the major version in the location.
+The location denotes where the service will be available. It is recommended to include the service name and the major version in the location, e.g. `svc/products/v1/`.
+
+The URL prefixes `api-doc/`, `xas/`, `p/`, and `reload/` are reserved and cannot be used at the start of the location. Otherwise, you can change the location to any valid URL.
 
 ### 2.4 Namespace
 
@@ -55,7 +57,7 @@ In OData, the namespace is used to refer to data types. You can customize this n
 
 ### 2.5 Entities
 
-This list gives an overview of all entities published as [OData resources](/refguide/published-odata-resource/).
+This list gives an overview of all [published entities](/refguide/published-odata-entity/).
 
 #### 2.5.1 Entity Details
 
@@ -95,6 +97,14 @@ You can choose between OData 4 (recommended) and OData 3. One of the main differ
 
 You can select how you want to represent associations. For more information, see the [Associations](/refguide/odata-representation/#associations) section of *OData Representation*.
 
+#### 3.1.3 Include metadata in response by default
+
+This checkbox allows you to choose if the service should include the metadata (for example, the `@context` property) in the response. This setting is enabled by default to conform to the OData specification. Disabling this setting has the same effect as including `metadata=none` in the `Accept` header of your HTTP request. Note that the value passed in the `Accept` header always takes precedences over this setting.
+
+{{% alert color="info" %}}
+Disabling this setting could break integrations with this service, specifically integrations with Microsoft Excel and PowerBI. This setting must enabled to use these features.
+{{% /alert %}}
+
 ### 3.2 Export
 
 In this section, you can save the different representations of the service to file.
@@ -117,9 +127,9 @@ You can configure security for the OData service when [App Security](/refguide/a
 
 #### 3.3.1 Requires Authentication {#authentication}
 
-Select whether clients need to authenticate or not. Select **No** to allow access to the resources without restrictions. Select **Yes** to be able to select which authentication methods to support.
+Select whether clients need to authenticate or not. Select **No** to allow access to the service without restrictions. Select **Yes** to be able to select which authentication methods to support.
 
-Even when you choose **Yes**, you can still expose OData resources to anonymous users. For detailed information on allowing anonymous users, see [Anonymous User Role](/refguide/anonymous-users/).
+Even when you choose **Yes**, you can still expose the service to anonymous users. For detailed information on allowing anonymous users, see [Anonymous User Role](/refguide/anonymous-users/).
 
 {{% alert color="info" %}}
 The **Authentication** section of a published OData service is only visible when you have enabled [app security](/refguide/app-security/).
@@ -131,7 +141,7 @@ If authentication is required, you can select which authentication methods you w
 
 * Select **Username and password** to allow clients to authenticate themselves using a username and a password in the **Authorization** header (this is called "basic authentication")
 * Select **Active session** to allow access from JavaScript inside your current application
-* Select **Custom** to authenticate using a microflow (this microflow is called every time a user wants to access a resource)
+* Select **Custom** to authenticate using a microflow (this microflow is called every time a user wants to access a published entity)
 
 Check more than one authentication method to have the service try each of them. It will first try **Custom** authentication, then **Username and password**, and then **Active session**.
 
@@ -153,7 +163,7 @@ To prevent cross-site request forgery, the `X-Csrf-Token` header needs to be set
 
 ```js
 var xmlHttp = new XMLHttpRequest();
-xmlHttp.open("GET", "http://mysite/odata/myservice/myresource", false);
+xmlHttp.open("GET", "http://mysite/odata/myservice/myentity", false);
 xmlHttp.setRequestHeader("X-Csrf-Token", mx.session.getConfig("csrftoken"));
 xmlHttp.send(null);
 ```
@@ -225,14 +235,14 @@ Default value: *No*
 Once your app is published, a list of the published OData services will be available on the root URL of the app followed by `/odata-doc/`. For example, `http://localhost:8080/odata-doc/`. For each OData 4 service, there is a link to a Swagger UI page that shows an interactive documentation page on which users can interact with the service.
 
 {{% alert color="warning" %}}
-While the API documentation for OData resources is enabled by default, access to it may be restricted by the administrator for apps running in production.
+While the API documentation for published OData services is enabled by default, access to it may be restricted by the administrator for apps running in production.
 {{% /alert %}}
 
 For details on how to filter the OData response, refer to [OData Query Options](/refguide/odata-query-options/).
 
 For details on how Mendix attributes are represented in OData, refer to [OData Representation](/refguide/odata-representation/).
 
-When exposing entities through OData, the entities are retrieved from the Mendix database in a streaming fashion, to avoid out-of-memory errors in the Mendix Runtime.
+When publishing entities through OData, the entities are retrieved from the Mendix database in a streaming fashion, to avoid out-of-memory errors in the Mendix Runtime.
 
 ### 6.2 On-Premises Deployments
 
@@ -250,7 +260,7 @@ The Mendix runtime returns status codes for OData payloads. The possible status 
 
 ## 8 Publishing OData Services
 
-To publish an OData resource with full CRUD (Create, Read, Update, or Delete functionality, or in Studio Pro, **Insertable**, **Readable**, **Updateable**, and **Deletable**), select the relevant checkboxes in the [Capabilities](/refguide/published-odata-resource/#capabilities) section in the [Published OData Resource](/refguide/published-odata-resource/). You can then [Send](/refguide/send-external-object/) and [Delete](/refguide/delete-external-object/) these resources using [External Object activities](/refguide/external-object-activities/). 
+To publish an entity with full CRUD (Create, Read, Update, or Delete functionality, or in Studio Pro, **Insertable**, **Readable**, **Updateable**, and **Deletable**), select the relevant checkboxes in the [Capabilities](/refguide/published-odata-entity/#capabilities) section in [Published OData Entity](/refguide/published-odata-entity/). You can then [Send](/refguide/send-external-object/) and [Delete](/refguide/delete-external-object/) objects using [External Object activities](/refguide/external-object-activities/). 
 
 ## 9 Limitations
 

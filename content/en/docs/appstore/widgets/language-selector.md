@@ -29,8 +29,8 @@ To configure this widget, follow these steps:
 
 #### 2.1.1 Languages Section
 
-* **Data source** (required) – select a language datasource (we recommend using the **System.Language** entity as your database data source).
-* **Language caption** (required) – add your expression to use for language items (we recommend using the expression *$currentObject/Description*).
+* **Data source** (required) – select a language data source (Mendix recommends using the **System.Language** entity as your database data source)
+* **Language caption** (required) – add your expression to use for language items (Mendix recommends using the expression `$currentObject/Description`)
 
 #### 2.1.2 General Section
 

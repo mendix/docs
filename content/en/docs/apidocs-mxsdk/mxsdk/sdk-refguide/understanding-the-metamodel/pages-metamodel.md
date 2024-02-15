@@ -116,7 +116,7 @@ Only one TabPage is visible at the same time, allowing to show a subset of widge
 ## 5 Buttons
 
 Buttons perform an action when clicked. They can be rendered as a button or as a hyperlink through the RenderType enumeration.
-The ButtonStyle enumeration determines the visual cues for the type of button (e.g. Warning, Success).
+The ButtonStyle enumeration determines the visual cues for the type of button (for example, Warning, Success).
 
 Buttons can have a caption, which is translatable and can be templated through the ClientTemplate.
 Through the icon property, the button can refer to an icon from either an image collection (using ImageIcon) or to a
@@ -221,7 +221,7 @@ The number of columns to show can be set with the `numberOfColumns` property, th
 
 Input widgets, such as a text box, will derive their content from their context.
 The data widgets themselves get this data from their configured data source.
-Depending on the data widget, different sources are applicable (e.g. a ListViewDatabaseSource is only applicable for
+Depending on the data widget, different sources are applicable (for example, a ListViewDatabaseSource is only applicable for
 a ListView widget).
 
 The data sources can be divided by how their retrieve their data:
@@ -250,7 +250,7 @@ The reference selector and input reference set selector are input widgets that c
 Objects selectable for the association are determined by the SelectorSource, and can be queried from the database or
 retrieved from a microflow (only for the reference selector).
 
-Both widgets have a `selectPageSettings` that determines the page used to select the linked object(s). The reference selector
+Both widgets have a `selectPageSettings` that determines the page used to select the linked object (or objects). The reference selector
 optionally also has a `goToPageSettings` that determines the page used to display detailed information about the associated
 object.
 

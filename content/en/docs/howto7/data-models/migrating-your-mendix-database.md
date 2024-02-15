@@ -73,13 +73,22 @@ To export a PostgreSQL database, refer to either the [PG Dump](https://www.postg
 
 ### 3.2 Uploading an Exported PostgreSQL Database to the Mendix Cloud Database
 
-Use Developer Portal to upload the migrated, exported database backup to Mendix Cloud. This can be accessed using the Nodes page in the Developer Portal: select your app and environment, click **Details**, click the **Backup** tab and use the **Upload Data** button to upload your Database using the file chooser to select the exported database file from your local file system. This will stop and clear your existing environment.
+Use Developer Portal to upload the migrated, exported database backup to Mendix Cloud. This can be accessed using the Nodes page in the Developer Portal: 
+
+1. Select your app and environment.
+2. Click **Backups**.
+3. Click **Upload Backup**, using the file chooser to select the exported database file from your local file system. This stops and clears your existing environment.
 
 ## 4 Exporting a Mendix Cloud Database
 
-The same procedure can be used to export an existing Mendix Cloud database, import it into an on-premises PostgreSQL source database and migrate that to an on-premises non-PostgreSQL target database.
+The same procedure can be used to export an existing Mendix Cloud database, import it into an on-premises PostgreSQL source database, and migrate that to an on-premises non-PostgreSQL target database.
 
-Export the Mendix Cloud database via the Developer Portal. This can be accessed using the Nodes page in the Developer Portal: select your app and environment, click **Details**, click the **Backup** tab, select an existing Backup from the list, and click the **Download Backup** button to download the database to your local file system using the Database URL shown in the dialog. A fresh backup with recent data could also be created first using the **Create Backup** button.
+Export the Mendix Cloud database via the Developer Portal. This can be accessed using the Nodes page in the Developer Portal:
+
+1. Select your app and environment.
+2. Click **Backups**.
+3. Optionally, create a fresh backup with recent data by clicking **Create Backup**.
+4. On the backup you want to download, click **More Options** > **Download**. This downloads the database to your local file system using the database URL shown in the dialog box.
 
 ### 4.1 Importing into an On-premises PostgreSQL Database
 

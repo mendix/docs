@@ -218,7 +218,7 @@ HTTP Method: GET
 URL: https://deploy.mendix.com/api/1/apps/<AppId>/environments
 ```
 
-#### 3.4.2 Request
+#### 3.4.2 Request {#list-environments-request}
 
 **Request Parameter**
 

@@ -5,10 +5,6 @@ weight: 40
 tags: ["studio pro", "translation", "languages", "translatable text"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/language-operations.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 When creating an app in multiple languages, there are a number of tasks which you may want to carry out on all the texts in the app, or in a specific module.

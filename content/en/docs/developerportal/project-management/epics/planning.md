@@ -33,7 +33,7 @@ On the upper-left corner of the page, you can use the search box to search stori
 On the upper-right corner of the page, you can see two buttons:
 
 * **Create Story** – Clicking this enables you to create a new story.
-* Ellipsis (**...**) – Clicking this shows the following options:
+* **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) – Clicking this shows the following options:
     * **Create Epic** – This enable you to create an epic.
     * **Edit Sprint** (only available for [a Scrum workflow](#scrum-planning)) – This enables you to edit the current Sprint.
     * **End Sprint** (only available for [a Scrum workflow](#scrum-planning)) – This enables you to the current Sprint.
@@ -61,7 +61,7 @@ To move multiple stories, select these stories, choose the category name where t
 
 {{< figure src="/attachments/developerportal/project-management/epics/planning/move-multiple-stories.png" >}}
 
-To [archive](/developerportal/project-management/epics/archive/) or delete a story, click the **...** icon at the end of the row, and then select the corresponding option:
+To [archive](/developerportal/project-management/epics/archive/) or delete a story, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) at the end of the row, and then select the corresponding option:
 
 {{< figure src="/attachments/developerportal/project-management/epics/planning/archive-delete-story-kanban.png" >}}
 
@@ -94,7 +94,7 @@ If there is an active Sprint, on the upper-left corner, you can find the name of
 
 In the main area of the page, stories are grouped in these categories: **Active Sprint** (if there is an active Sprint), **Next Sprint**, **Refinement**, and **Backlog**.
 
-On the upper-right corner, you can find these Scrum items if you click the **...** button:
+On the upper-right corner, you can find these Scrum items if you click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}):
 
 * **Start Sprint** – Clicking this allows you to start a new Sprint. Once a Sprint is created, all the items in the **Next Sprint** are moved to the **Active Sprint** automatically. 
     * This is available only when there is no Sprint running at this moment.
@@ -115,7 +115,7 @@ If your board type is Kanban, the stories are grouped in these categories: **To 
 
 You can import your stories using an Excel file to Epics as follows:
 
-1. On the upper-right corner of the **Planning** page, click **...** and then click **Import Stories**.
+1. On the upper-right corner of the **Planning** page, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) and then click **Import Stories**.
 
    {{< figure src="/attachments/developerportal/project-management/epics/planning/import-stories.png" >}}
 
@@ -123,7 +123,7 @@ You can import your stories using an Excel file to Epics as follows:
 
 2. Click **Download** to download the Excel file template.
 
-   {{% alert color="warning" %}}To prevent errors, we recommend that you use this Excel file template to import your stories.{{% /alert %}}
+   {{% alert color="warning" %}}To prevent errors, Mendix recommends using this Excel file template to import your stories.{{% /alert %}}
 
 3. Open the Excel file. Enter the data for your stories as follows:
 
@@ -161,7 +161,7 @@ You can find all the imported stories in the **Backlog**.
 
 You can export your stories on the **Planning** page to an Excel file as follows:
 
-1. On the upper-right corner of the **Planning** page, click **...** and then click **Export Stories**.
+1. On the upper-right corner of the **Planning** page, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) and then click **Export Stories**.
 
    {{< figure src="/attachments/developerportal/project-management/epics/planning/export-stories.png" >}}
 2. Select from where you want to export stories.
@@ -170,7 +170,7 @@ You can export your stories on the **Planning** page to an Excel file as follows
 
 ## 5 Board Settings {#settings}
 
-When you click **...** on the upper-right corner of the **Planning** page, and select **Board Settings**, a dialog box opens with four tabs: **Manage Tags**, **Board Type**, and **Toast Settings**. These tabs are described in the sections below.
+When you click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) on the upper-right corner of the **Planning** page, and select **Board Settings**, a dialog box opens with four tabs: **Manage Tags**, **Board Type**, and **Toast Settings**. These tabs are described in the sections below.
 
 {{< figure src="/attachments/developerportal/project-management/epics/planning/board-settings.png" >}}
 
@@ -178,11 +178,11 @@ When you click **...** on the upper-right corner of the **Planning** page, and s
 
 On this tab, you can add, rename, and delete tags, as well as change tag colors. The changes here affect all the tags in your app.
 
-To add a tag, click **+Add Tag**, enter the name,  select a color, and then click the save icon to save it.
+To add a tag, click **+Add Tag**, enter the name,  select a color, and then click **Save** {{% icon name="checkmark-circle" %}} to save it.
 
-To rename a tag, double click the tag name, change the name in the text box, and then click outside the text box to save it.
+To rename a tag, double-click the tag name, change the name in the text box, and then click outside the text box to save it.
 
-To delete a tag, hover over the row of the tag, and then click the delete icon that appears at the end of the row.
+To delete a tag, hover over the row of the tag, and then click the **Cancel** button ({{% icon name="remove" %}}) that appears at the end of the row.
 
 To change the tag color, click the current color, and then select the new color from the dialog box.
 
@@ -206,11 +206,11 @@ Mendix recommends you migrate your stories to Epics as soon as possible, as Stor
 
 To migrate from Stories to Epics, follow these steps:
 
-1. Click the **...** icon on the upper-right corner of the **Planning** page, and select **Migrate from Stories**.
+1. Click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) on the upper-right corner of the **Planning** page, and select **Migrate from Stories**.
 
     {{< figure src="/attachments/developerportal/project-management/epics/planning/export-stories-menu.png" >}}
 
-2.  Read the information and then click **Start Migration**:
+2. Read the information and then click **Start Migration**:
 
    {{< figure src="/attachments/developerportal/project-management/epics/planning/data-migration-info.png" width="400px" >}}
 
@@ -218,7 +218,7 @@ To migrate from Stories to Epics, follow these steps:
 
     {{< figure src="/attachments/developerportal/project-management/epics/planning/data-migration-content.png" width="400px" >}}
 
-A notification is sent in the Developer Portal's [top bar](/developerportal/#navigation) informing you of the status of the migration. An email is also sent with this information. You can open the [migration report](#migration-report) by clicking the notification or the button provided in the email.
+A notification is sent in the [global navigation](/developerportal/global-navigation/#notifications) informing you of the status of the migration. An email is also sent with this information. You can open the [migration report](#migration-report) by clicking the notification or the button provided in the email.
 
 {{% alert color="warning" %}}
 Once you have migrated your stories from Stories to Epics, Mendix archives any work you may have had in Stories. You can review your work in [Stories Archive](/developerportal/collaborate/general-settings/#story-archive) on the **Settings** page of the app, and download it if necessary. 

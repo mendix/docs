@@ -7,10 +7,6 @@ description_list: true
 tags: ["Charts", "Any Chart", "Studio Pro", "Pages"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/chart-widgets.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 Chart widgets allow you to display data series visually on your app pages in a wide range of charts.
@@ -50,7 +46,7 @@ With *Any Chart* you can build all the chart types that are possible with Plotly
 
 The plotly charts require a configuration based on JSON, therefore *Any Chart* has JSON as input parameters. You can create this JSON dynamically in your microflow via a JSON Structure document and use this in the *Any Chart* configuration. It is also possible to define static JSON configuration which is combined with the dynamic JSON.
 
-This module also contains several [building blocks](/refguide8/charts-any-building-blocks/) for inspiration and as starting point. If you want to create a new chart, we suggest you check out the plotly.js website.
+This module also contains several [building blocks](/refguide8/charts-any-building-blocks/) for inspiration and as starting point. If you want to create a new chart, Mendix suggests checking out the plotly.js website.
 
 See [Any Chart Widgets](/refguide8/charts-any-configuration/) to learn how to configure *Any charts* widgets.
 

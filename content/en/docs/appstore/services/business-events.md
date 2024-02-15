@@ -254,7 +254,7 @@ Business Events offers four different deployment models:
 * Deploying locally with the [Local Setup Tool](https://github.com/mendix/event-broker-tools)
 * Free apps using a free multi-tenant event broker
 * Production apps using the [Mendix Event Broker](#mendix-event-broker) running in the Mendix Cloud
-* Apps running their own Kafka cluster (bring your own Kafka;
+* Apps running their own Kafka cluster (bring your own Kafka)
 
 ### 6.1 Local Deployment
 

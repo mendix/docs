@@ -58,7 +58,7 @@ Mendix Event Broker Bridges allow for the integration of the Mendix Event Broker
 
 {{< figure src="/attachments/appstore/services/event-broker/event_broker_bridges.png" >}}
 
-### 3.1 Standard message format
+### 3.1 Standard Message Format
 
 To move an event from SQS to Mendix Event Broker, a message must contain the following message attributes and start with `ce_`:
 
@@ -77,19 +77,19 @@ Technical Contacts with a license to the Mendix Event Broker can manage this fea
 
 The creation process contains three steps on the Mendix side and policies that need to be implemented on the AWS side.
 
-### 3.3 Select a service to configure
+### 3.3 Select a Service to Configure
 
 Within the scope of the current Public Beta for this feature, Mendix Event Broker Bridges are capable of transporting events between the Mendix Event Broker and AWS SQS.  Other options in the list are currently not available for use.
 
 {{< figure src="/attachments/appstore/services/event-broker/event_broker_bridges_create_2.png">}}
 
-### 3.4 Configuration details
+### 3.4 Configuration Details
 
 The next step of configuration is to select a [Space](#manage-mx-broker), Name and Region for the bridge to operate in.
 
 {{< figure src="/attachments/appstore/services/event-broker/event_broker_bridges_create_3.png">}}
 
-### 3.5 Choose the business events to integrate
+### 3.5 Choose the Business Events to Integrate
 
 In this step the user must select events from the Event Broker landscape of events to send to or receive from AWS SQS.  Events can be added to the configuration by selecting the `Add Business Events` option, searching for the appropriate events and adding them once selected
 
@@ -113,7 +113,7 @@ Once the Mendix Event Broker Bridge has been successfully deployed its configura
 
 {{< figure src="/attachments/appstore/services/event-broker/event_broker_bridges_overview.png">}}
 
-### 3.6 Configure AWS Acesss Policy for sending Messages to Mendix
+### 3.6 Configure AWS Acesss Policy for Sending Messages to Mendix
 
 Add this object to your Access Policy of the AWS SQS queue if it is sending message to Mendix.
 
@@ -133,7 +133,7 @@ Add this object to your Access Policy of the AWS SQS queue if it is sending mess
 }
 ```
 
-### 3.7 Configure AWS Acesss Policy for receiving Messages from Mendix
+### 3.7 Configure AWS Acesss Policy for Receiving Messages from Mendix
 
 Add this object to your Access Policy of the AWS SQS queue if it is receiving message from Mendix.
 

@@ -13,7 +13,7 @@ The Native Builder, a CLI tool, has been deprecated in favor of the Mendix Nativ
 
 The [Native Builder](/refguide8/native-builder/) is a command line input tool which helps you build your Mendix native mobile app. After the Native Builder simplifies your build process, you can do what you want most: test and publish your app. The Native Builder uses MxBuild, GitHub, and App Center to simplify the app building process. 
 
-We are heavily invested in streamlining the experience of building your apps and are continuously improving upon the tool's capabilities. For more information on using the Native Builder, see [Deploy Your First Mendix Native Mobile App](/refguide9/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/).
+We are heavily invested in streamlining the experience of building your apps and are continuously improving upon the tool's capabilities. For more information on using the Native Builder, see [Build a Mendix Native App in the Cloud](/refguide9/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/).
 
 {{% alert color="warning" %}}
 Please update to Native Builder v3.2.1 or higher. Version 3.2.1 includes the fixes required to accommodate Github's transition of using **main** instead of **master** for naming the default branch for new repositories. 

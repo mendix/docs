@@ -16,7 +16,7 @@ MendixChat does not use any project, customer, or company information. It only u
 {{% /alert %}}
 
 {{% alert color="info" %}}
-Internet connection is required and make sure you are signed in to Studio Pro.
+To use MendixChat, internet connection is required and make sure you are signed in to Studio Pro.
 {{% /alert %}}
 
 MendixChat is a built-in chat interface powered by Generative AI in Studio Pro. Developers can ask questions about app development in Mendix, including how to apply concepts, best practices, and development patterns. 

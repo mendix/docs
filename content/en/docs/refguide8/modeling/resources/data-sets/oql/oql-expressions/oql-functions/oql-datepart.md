@@ -4,10 +4,6 @@ url: /refguide8/oql-datepart/
 tags: ["studio pro"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/oql-datepart.pdf).
-{{% /alert %}}
-
 The DATEPART function retrieves a specified element from a date/time values. This element is of type integer.
 
 The syntax is as follows:

@@ -5,10 +5,6 @@ weight: 20
 tags: ["studio pro", "common widgets", "widget"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/common-widgets.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 Common widgets category contain widgets that are commonly used. This category contains the following widgets:

@@ -13,7 +13,7 @@ aliases:
 
 The [Mendix Forum](https://forum.mendixcloud.com) is where the Mendix community comes together to help each other with questions and answers and to propose ideas for improving the Mendix Platform.
 
-The Mendix Forum is closely integrated with the [Mendix Profile](/community-tools/mendix-profile/) so that Mendix community members can see all the interesting and useful information about who is participating in the Mendix Forum. If someone clicks your name anywhere on the Mendix Forum, your profile will open, so make sure to [make your Mendix Profile public](/community-tools/mendix-profile/#profile) so everyone can see your details and progress!
+The Mendix Forum is closely integrated with the [Mendix Profile](/community-tools/mendix-profile/) so that Mendix community members can see all the interesting and useful information about who is participating in the Mendix Forum. If someone clicks your name anywhere on the Mendix Forum, your profile will open, so make sure to [make your Mendix Profile public](/community-tools/mendix-profile/user-settings/#profile) so everyone can see your details and progress!
 
 Click **Create a Post** to ask a question, start an exchange with the community, or share an idea.
 

@@ -141,7 +141,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Improvements
 
-* When your company has connected its own [Identity Provider](/control-center/security/set-up-sso-byoidp/) to the Developer Portal, you should be using [personal access tokens](/community-tools/mendix-profile/#pat) to connect to the Team Server. To reflect this, we show a different URL on the [Team Server](/developerportal/general/team-server/) page.
+* When your company has connected its own [Identity Provider](/control-center/security/set-up-sso-byoidp/) to the Developer Portal, you should be using [personal access tokens](/community-tools/mendix-profile/user-settings/#pat) to connect to the Team Server. To reflect this, we show a different URL on the [Team Server](/developerportal/general/team-server/) page.
 
 #### Fixes
 
@@ -371,7 +371,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### New Features
 
-* You can now use a [Personal Access Token](/community-tools/mendix-profile/#pat) to access SVN repositories in [Team Server](/developerportal/general/team-server/) without using your personal Mendix credentials.
+* You can now use a [Personal Access Token](/community-tools/mendix-profile/user-settings/#pat) to access SVN repositories in [Team Server](/developerportal/general/team-server/) without using your personal Mendix credentials.
 
 ### May 4, 2023
 

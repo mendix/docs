@@ -15,18 +15,22 @@ MendixChat is powered by Generative AI and is currently a beta feature, introduc
 MendixChat does not use any project, customer, or company information. It only uses the data that you have entered in MendixChat. Please do not enter any personal or sensitive data in the chat!
 {{% /alert %}}
 
+{{% alert color="info" %}}
+Internet connection is required and make sure you are signed in to Studio Pro.
+{{% /alert %}}
+
 MendixChat is a built-in chat interface powered by Generative AI in Studio Pro. Developers can ask questions about app development in Mendix, including how to apply concepts, best practices, and development patterns. 
 
-MendixChat is built based on large language models (LLMs), using data from [Mendix Docs](https://docs.mendix.com/), [Mendix Forum](https://forum.mendix.com/index3.html#/community), and [Mendix Academy](https://academy.mendix.com/link/home). 
+MendixChat is built based on large language models (LLMs), using data from [Mendix Docs](https://docs.mendix.com/), [Mendix Forum](https://forum.mendix.com/index3.html#/community), and [Mendix Academy](https://academy.mendix.com/link/home).
 
 ## 2 Using MendixChat
 
-{{% alert color="warning" %}}
-Currently, MendixChat cannot make changes to your project, automate tasks, or create elements, components, documents, or models. In upcoming releases, these functionalities will be added to MendixChat or as separate features.
+{{% alert color="warning"%}}
+In some cases, even if you are already signed in to Studio Pro, you might still need to click **Sign in** under the **MendixChat** tab to make MendixChat available for use .
 {{% /alert %}}
 
-{{% alert color="warning"%}}
-In some cases, even if you are already logged in to Studio Pro, you might still need to click **Sign in** under the **MendixChat** tab to make MendixChat available for use .
+{{% alert color="warning" %}}
+Currently, MendixChat cannot make changes to your project, automate tasks, or create elements, components, documents, or models. In upcoming releases, these functionalities will be added to MendixChat or as separate features.
 {{% /alert %}}
 
 To access MendixChat, follow these steps:

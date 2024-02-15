@@ -16,8 +16,8 @@ paths:
     get:
       tags:
         - Feedback Items
-      summary: Get Feedback Items
-      description: Returns list of feedback items based on the query parameters. Using storyId or legacyId will always return a list containing a single item.
+      summary: Get feedback items
+      description: Returns a list of feedback items based on the query parameters. Using `storyId` or `legacyId` will always return a list containing a single item.
       operationId: get-feedback-items
       parameters:
         - $ref: '#/components/parameters/Authorization'
@@ -51,8 +51,8 @@ paths:
     post:
       tags:
         - Feedback Items
-      summary: Create Feedback Item
-      description: This call adds a new feedback item to a specified project and returns the legacyId and UUID  of the new feedback item.
+      summary: Create a feedback item
+      description: This call adds a new feedback item to a specified app and returns the `legacyId` and UUID  of the new feedback item.
       operationId: post-feedback-item
       parameters:
         - $ref: '#/components/parameters/Authorization'
@@ -81,7 +81,7 @@ paths:
     patch:
       tags:
         - Feedback Items
-      summary: Change Feedback Item Status
+      summary: Change feedback item status
       description: Changes the status of a feedback item.
       operationId: patch-feedback-item
       parameters:
@@ -112,7 +112,7 @@ paths:
     get:
       tags:
         - Feedback Items
-      summary: Get a Feedback Item
+      summary: Get a feedback item
       description: This call retrieves a single feedback item by the UUID of the feedback item.
       operationId: get-feedback-item
       parameters:
@@ -137,7 +137,7 @@ paths:
     delete:
       tags:
         - Feedback Items
-      summary: Delete a Feedback Item
+      summary: Delete a feedback item
       description: Deletes a feedback item.
       operationId: delete-feedback-item
       parameters:
@@ -163,8 +163,8 @@ paths:
     get:
       tags:
         - Feedback Items
-      summary: Get a Screenshot by Feedback Item UUID
-      description: Returns a screenshot for a specified feedback item. The image result is in Binary format.
+      summary: Get a screenshot by feedback item UUID
+      description: Returns a screenshot for a specified feedback item. The image result is in the binary format.
       operationId: get-feedback-item-screenshot
       parameters:
         - name: Authorization
@@ -202,7 +202,7 @@ paths:
     get:
       tags:
         - Feedback Items
-      summary: Get an Attachment
+      summary: Get an attachment
       description: Returns a specific attachment for a specified feedback item.
       operationId: get-feedback-item-attachment
       parameters:
@@ -236,7 +236,7 @@ components:
     projectId:
       name: projectId
       in: query
-      description: The unique id of the project
+      description: The unique id of the app
       required: true
       schema:
         type: string
@@ -252,7 +252,7 @@ components:
     limit:
       name: limit
       in: query
-      description: 'The maximum number of feedback items that can be returned per request If no limit, is provided, it shall be defaulted to 100, the maximum limit that can be supplied is 100, if a limit over 100 is supplied, it shall be defaulted to 100 and no error message shall be generated.'
+      description: 'The maximum number of feedback items that can be returned per request. If no limit is provided, it shall be defaulted to 100. The maximum limit that can be supplied is 100. If a limit over 100 is supplied, it shall be defaulted to 100 and no error message shall be generated.'
       required: false
       schema:
         type: string
@@ -276,7 +276,7 @@ components:
     legacyId:
       name: legacyId
       in: query
-      description: The legacy unique feedback id
+      description: The legacy unique feedback ID
       required: false
       schema:
         type: string
@@ -321,7 +321,7 @@ components:
             properties:
               projectId:
                 type: string
-                description: The unique id of the project
+                description: The unique id of the app
               submitterDisplayName:
                 type: string
                 description: The name of the submitter
@@ -330,22 +330,22 @@ components:
                 description: The email address of the submitter
               submitterUUID:
                 type: string
-                description: Unique ID of the user who submitted the feedback item
+                description: The unique ID of the user who submitted the feedback item
               subject:
                 type: string
-                description: Subject line of a feedback item
+                description: The subject line of a feedback item
               description:
                 type: string
-                description: Description of a feedback item
+                description: The description of a feedback item
               screenshot:
                 type: string
                 description: 'Base64 binary representation of an image (allowed extensions: .jpg or .png)'
               screenshotName:
                 type: string
-                description: Name of the physical document of the screenshot
+                description: The name of the physical document of the screenshot
               priority:
                 type: string
-                description: 'Name of the priority (Low, Medium, High, Urgent)'
+                description: 'The name of the priority (Low, Medium, High, Urgent)'
             required:
               - projectId
           examples:
@@ -356,7 +356,7 @@ components:
                 submitterEmail: john.doe@email.com
                 submitterUUID: 00000000-0000-0000-0000-000000000000
                 subject: Unable to export feedback
-                description: When i click on the 'export' button on the feedback overview i get an error telling me to contact the system administrator
+                description: When I click on the 'export' button on the feedback overview, I get an error telling me to contact the system administrator.
                 screenshot: Base64 string
                 screenshotName: FeedbackExportBug1.png
                 priority: Urgent
@@ -379,7 +379,7 @@ components:
   securitySchemes:
     Authorization:
       type: apiKey
-      description: 'For more information about requesting and using a token see the [documentation](https://docs.mendix.com/developerportal/community-tools/mendix-profile/#pat).<br/> The header must be set to `MxToken <Your PAT>`.'
+      description: 'For more information about requesting and using a token see the [documentation](https://docs.mendix.com/developerportal/community-tools/mendix-profile/user-settings/#pat).<br/> The header must be set to `MxToken <Your PAT>`.'
       name: MxToken 7LJE…vk
       in: header
   responses:
@@ -644,7 +644,7 @@ components:
                   code: 404
                   instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
     500-Something-went-wrong:
-      description: Something went wrong
+      description: Something went wrong.
       content:
         application/json:
           schema:
@@ -666,7 +666,7 @@ components:
               value:
                 error:
                   message: Internal Server Error
-                  detail: Something went wrong
+                  detail: Something went wrong.
                   code: 500
                   instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
     200-Feedback-Items:
@@ -742,9 +742,9 @@ components:
                   - legacyId: 0
                     uuid: 82fb475a-e4dd-4a9e-acb7-e3b8a6fc8869
                     subject: Unable to export feedback
-                    description: When i click on the 'export' button on the feedback overview i get an error telling me to contact the system administrator
+                    description: When I click on the 'export' button on the feedback overview, I get an error telling me to contact the system administrator.
                     displayId: 102
-                    summary: I have looked into the logic and I believe this error is related to the export template not being configured correctly
+                    summary: I have looked into the logic and I believe this error is related to the export template not being configured correctly.
                     activeUserRoles: User
                     pageName: FeedbackManagement/Overview.page.xml
                     environmentUrl: 'https://purchaserequest.company.com/link/feedback/overview'
@@ -831,9 +831,9 @@ components:
                 legacyId: 0
                 uuid: 82fb475a-e4dd-4a9e-acb7-e3b8a6fc8869
                 subject: Unable to export feedback
-                description: When i click on the 'export' button on the feedback overview i get an error telling me to contact the system administrator
+                description: When I click on the 'export' button on the feedback overview, I get an error telling me to contact the system administrator.
                 displayId: 102
-                summary: I have looked into the logic and I believe this error is related to the export template not being configured correctly
+                summary: I have looked into the logic and I believe this error is related to the export template not being configured correctly.
                 activeUserRoles: User
                 pageName: FeedbackManagement/Overview.page.xml
                 environmentUrl: 'https://purchaserequest.company.com/link/feedback/overview'

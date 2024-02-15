@@ -19,7 +19,7 @@ Authentication for the Epics API uses a personal access token (PAT).
 
 ### 2.1 Generating a PAT {#generate}
 
-To generate a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/#pat) section in *Mendix Profile*.
+To generate a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section in *User Settings*.
 
 Select the following as **Deployment Mendix Cloud** scopes:
 

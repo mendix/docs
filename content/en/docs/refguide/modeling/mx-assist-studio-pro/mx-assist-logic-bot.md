@@ -30,7 +30,7 @@ The key features of MxAssist Logic Bot are the following:
 {{% alert color="info" %}}
 In Studio Pro 10.6 and above, MxAssist Logic Bot is enabled by default. You cannot switch it off. 
 
-It is available to use when you are not signed in to Studio Pro, but you need to sign in to get AI recommendations.
+It is available for use when you are not signed in to Studio Pro, but you need to sign in to get AI recommendations.
 {{% /alert %}}
 
 MxAssist Logic Bot is displayed as a blue dot in the flow. When you want to view recommendations on a particular flow, you can hover the mouse over that flow and click on the blue circle, or navigate to it with the keyboard and press <kbd>Enter</kbd>.

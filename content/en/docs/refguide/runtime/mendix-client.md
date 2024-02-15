@@ -13,11 +13,23 @@ The Mendix Client runs on the end-user's device and handles the interface betwee
 
 This description of the Mendix Client is based on using the Runtime Server of an app running in the cloud. You can also run Mendix locally for testing, but this is conceptually the same.
 
+{{% alert color="info" %}}
+In Studio Pro versions 10.6.0 and above, there is an alternative version of the Mendix Client written in React. This is currently a [beta](/releasenotes/beta-features/). You can enable this React client in [App Settings](/refguide/app-settings/#react-client).
+
+The React client replaces [Dojo](https://dojotoolkit.org/) with [React](https://react.dev/) for the view layer. This means that widgets based on Dojo will no longer work. You will get consistency errors if your app contains Dojo widgets, or you can choose **Migration mode** which will allow you to build your app but will replace incompatible widgets with a placeholder.
+
+Other components of the Mendix Client are the same in both the React and Dojo client. See our [Release Blog](https://www.mendix.com/blog/mendix-release-10-7-go-mac-it/#react-client-public-beta) for more information.
+{{% /alert %}}
+
 ## 2 Description {#description}
 
 The Mendix Client is a part of every application built with Mendix: both web and mobile.
 
-For **web applications**, Mendix Client acts as a single page application. This means that all paging is handled by the Mendix Client, rather than being separate pages served using different URLs. Mendix Client is bootstrapped by loading a `mxui.js` script from an HTML page provided by the *theme*.
+For **web applications**, Mendix Client acts as a single page application. This means that all paging is handled by the Mendix Client, rather than being separate pages served using different URLs.
+
+The Mendix Dojo Client is bootstrapped by loading a `mxui.js` script from an HTML page provided by the *theme*.
+
+The Mendix React client is bootstrapped in different way. Its loads the `index.js` file which loads the `common.js` with the Mendix client. More JavaScript files will be loaded after this that contain page, layout and nanoflow definitions.
 
 For **mobile applications** Mendix Client acts as a React Native application. This means that apps created by Mendix consist of two parts: a *wrapper* and a *bundle*. The wrapper is a native iOS or Android application that loads the bundle and exposes platform functionality to it. The bundle includes Client Core, Pluggable Widgets, and application-specific resources like nanoflows and pages.
 
@@ -38,7 +50,7 @@ Below is a chart showing the components of the Mendix Client. Each of the compon
 This can be seen as the interpreter of the client. It uses the client config and client state to decide how to process a request from the end-user.
 The client core controls the various processes which need to take place to service the request. These processes include data fetching and manipulation, client-side expressions, and navigation.
 
-The client core is written in JavaScript.
+The client core is mostly written in TypeScript.
 
 Mendix apps do not modify the client core, all logic is held in the model. However, each patch version of Mendix comes with its own version of the client core.
 
@@ -195,24 +207,40 @@ When the end-user launches an app in the browser, it triggers the following flow
 5. The Mendix Client contacts the Runtime Server and authenticates the end-user.
 6. The Mendix Client gets any additional configuration required from the Runtime Server.
 
-    *The Mendix Client is now ready to start interacting with the end-user and will repeat the following steps for as long as the end-user’s session continues.*
+    The Mendix Client is now ready to start interacting with the end-user.
 
-7. The Mendix Client loads the page definition.
-8. The Mendix Client loads pluggable widgets used on the page.
-9. The Mendix Client retrieves any data required from the Runtime Server.
-10. The Mendix Client builds the page.
-11. The Mendix Client displays the page to the end-user.
-12. The Mendix Client processes input from the end-user and repeats the steps above to show the correct page.
+##### 4.1.1.1 Dojo Client
+    
+The Mendix Dojo Client, which is not built entirely using React, will repeat the following steps for as long as the end-user’s session continues.
+
+1. The Mendix Client loads the page definition.
+1. The Mendix Client loads pluggable widgets used on the page.
+1. The Mendix Client retrieves any data required from the Runtime Server.
+1. The Mendix Client builds the page.
+1. The Mendix Client displays the page to the end-user.
+1. The Mendix Client processes input from the end-user and repeats the steps above to show the correct page.
+
+##### 4.1.1.2 React Client
+
+The React client works differently to the Dojo client.
+
+During the build process, Studio Pro exports JavaScript files containing JavaScript and React components into the `pages`, `layouts` and `nanoflows` folders. The contents of those folders are bundled into the `dist` folder using [Rollup](https://rollupjs.org/), which generates *chunks*.
+
+The React client dynamically loads these chunks when needed for optimal performance.
 
 #### 4.1.2 Location of Mendix Client Resources
 
 When the app is deployed, the static resources are placed in a structure referred to as the CDN. This includes the following:
 
 * index.html – the initial HTML page which is loaded when the end-user starts the Mendix Client — this contains the client configuration and other static non-Mendix content (for example if Google analytics is added to the app)
-* mxui.js – the main Mendix Client code
 * app styling/Atlas – the app-specific CSS styling and static visual elements which define how a page is displayed
 * widgets – both native and web core widgets which are used by this app
-* page definitions – xml page definitions which tell the Mendix Client what the pages for this app look like
+* The Dojo client has the following resources:
+    * mxui.js – the main Mendix Client code.
+    * page definitions – xml page definitions which tell the Mendix Client what the pages for this app look like.
+* The React client has the following resources:
+    * index.js and commons.js – the main Mendix Client code.
+    * Exported JavaScript files from Studio Pro containing the React components for pages and layouts.
 
 #### 4.1.3 Cookies{#cookies}
 

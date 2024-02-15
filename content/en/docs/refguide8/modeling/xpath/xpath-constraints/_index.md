@@ -4,10 +4,6 @@ url: /refguide8/xpath-constraints/
 tags: ["studio pro"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/xpath-constraints.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 A constraint can be added to any XPath query to filter the data retrieved. It should always take the form of a valid [expression](/refguide8/xpath-expressions/). This should consist of one or more variables combined with [operators](/refguide8/xpath-operators/), [functions](/refguide8/xpath-constraint-functions/), [keywords or system variables](/refguide8/xpath-keywords-and-system-variables/).

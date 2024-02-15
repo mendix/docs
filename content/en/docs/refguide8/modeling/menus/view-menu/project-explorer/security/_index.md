@@ -4,10 +4,6 @@ url: /refguide8/security/
 tags: ["studio pro", "security"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/security.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 Security in Mendix has two sides: you want different people to see different parts of your application and you want to prevent unauthorized access. Both of these can be managed from Studio Pro. Access to forms, data and microflows can be limited to authorized users.

@@ -5,10 +5,6 @@ weight: 90
 tags: ["studio pro", "create branch line"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/create-branch-line-dialog.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 Use the **Create Branch Line** dialog box to create a new [branch line](/refguide8/version-control/#branches) via the **Branch Line Manager**:

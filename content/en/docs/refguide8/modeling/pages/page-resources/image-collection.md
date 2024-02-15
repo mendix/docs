@@ -6,10 +6,6 @@ description: "Why and how to create an image collection"
 tags: ["Studio Pro", "Images", "Image Collection"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/image-collection.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 If you want to use your own static images within an application, for example for branding or to give your buttons a unique feel, you will need to store them in your app. To do this, you create an **image collection** where you can store your images.

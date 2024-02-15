@@ -5,10 +5,6 @@ weight: 20
 tags: ["studio pro"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/commit-dialog.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 The commit dialog is used for committing changes to the Team Server. You can enter a message and, if applicable, select related stories.

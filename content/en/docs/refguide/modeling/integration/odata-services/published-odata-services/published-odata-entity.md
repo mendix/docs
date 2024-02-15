@@ -48,7 +48,7 @@ Attributes of type **Binary** cannot be exported through OData services except f
 
 For published OData services, the **Can be empty** checkbox appears when you edit a published attribute. 
 
-When the checkbox Can be empty is unselected, and there is no **Required** validation rule set, you will be prompted to add a 'required' validation rule or use a before commit microflow to ensure that end-users do not leave it empty.
+When the checkbox is unselected and there is no **Required** validation rule set, you are prompted to add a required validation rule or use a before commit microflow to ensure end-users do not leave it empty.
 
 ## 4 Mapping from Internal Names to Exposed Names
 
@@ -62,7 +62,7 @@ Location URIs must be unique. Publishing two different entities at the same loca
 
 Attributes and associations can be customized in the same way by clicking **Edit** in the list on the right. 
 
-For associations, the exposed name is the name given to the navigation property (which is the property referring to the associated object (or objects)). The default is the same as the name of the association in the domain model.
+For associations, the exposed name is the name given to the navigation property, which is the property referring to the associated object (or objects). The default is the same as the name of the association in the domain model.
 
 {{% alert color="info" %}}
 
@@ -76,13 +76,13 @@ These features make it easier to refactor the domain model without affecting ext
 
 It is possible to customize the name of the entity set that is displayed in the **Exposed set name** field of the **Edit published entity** window. This forms the last part of the URL of the published entity as given in the **Example of location**.
 
-Default: *{Entity name}s*
+Default: {Entity name}s
 
 ## 6 Use Paging {#paging}
 
 The **Use paging** option is used to set a maximum number of objects per response and include a link to the next set of objects. A client such as [Tableau](https://www.tableau.com) is able use this to display progress and automatically continue to follow the links until all the data is retrieved. The memory usage of the clients can be improved if paging is set to a reasonable page size.
 
-Default: *No*
+Default: **No**
 
 When set to **Yes**, select **Top supported** and **Skip supported** [query options](#query-options).
 
@@ -92,7 +92,7 @@ Setting **Use paging** to **Yes** may result in inconsistency in the retrieved d
 
 When **Use paging** is set to **Yes**, the number of objects per page can be set in **Page size**.
 
-Default: *10000*
+Default: **10000**
 
 ## 8 Key {#key}
 

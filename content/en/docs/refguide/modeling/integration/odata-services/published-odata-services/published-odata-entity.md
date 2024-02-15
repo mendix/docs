@@ -18,15 +18,15 @@ For an overview of OData services, see [Published OData Services](/refguide/publ
 
 ### 2.1 Add an Entity
 
-Click **Add** in the **Entities** pane of the **Published OData Service** window to open the **Select Entity** window. Select an entity to publish and click **Select**.
+In the **Entities** pane of the **Published OData Service** window, click **Add** to open the **Select Entity** window. Select an entity to publish and click **Select**.
 
-An alternative way to add an entity is by right-clicking an entity in the **Domain Model** and choosing **Publish in OData service**. You will be asked to select a published OData service, or create a new one. 
+An alternative way to add an entity is by right-clicking an entity in the domain model and choosing **Publish in OData service**. You can select a published OData service or create a new one. 
 
 ### 2.2 Edit a Published Entity
 
 In the **Entities** pane of the **Published OData Service** window, select an entity and click **Edit** to display the **Edit published entity** window. 
 
-It is possible to select another **Entity** or view the entity in the domain model by clicking **Show**.
+It is possible to select another entity or view the entity in the domain model by clicking **Show**.
 
 You can see the location where the entity is published in **Example of location**.
 
@@ -34,9 +34,9 @@ In the **Public documentation** tab, you can provide a summary and a description
 
 ## 3 Selecting Published Attributes and Associations {#exatass}
 
-When you have selected an entity in the list to the left, its published attributes and associations are shown in the list to the right. In this list, you can add, edit, delete and move these attributes and associations.
+When you have selected an entity in the list to the left, its published attributes and associations are shown in the list to the right. In this list, you can add, edit, delete, and move these attributes and associations.
 
-Attributes of published entities are **Nillable** by default. This means that if their value is empty then they will be encoded as explicit nulls in the OData content. If **Nillable** is unchecked for an attribute, the attribute cannot be empty (as this will result in a runtime error).
+Attributes of published entities are **Nillable** by default. This means if their value is empty, they will be encoded as explicit nulls in the OData content. If **Nillable** is unchecked for an attribute, the attribute cannot be empty (as this will result in a runtime error).
 
 {{% alert color="info" %}}
 

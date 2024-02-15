@@ -14,6 +14,8 @@ servers:
 paths:
   /feedback-items:
     get:
+      tags:
+        - Feedback Items
       summary: Get Feedback Items
       description: Returns list of feedback items based on the query parameters. Using storyId or legacyId will always return a list containing a single item.
       operationId: get-feedback-items
@@ -44,7 +46,11 @@ paths:
           $ref: '#/components/responses/404-Not-Found'
         '500':
           $ref: '#/components/responses/500-Something-went-wrong'
+      security:
+        - Authorization: []
     post:
+      tags:
+        - Feedback Items
       summary: Create Feedback Item
       description: This call adds a new feedback item to a specified project and returns the legacyId and UUID  of the new feedback item.
       operationId: post-feedback-item
@@ -70,7 +76,11 @@ paths:
           $ref: '#/components/responses/404-Not-Found'
         '500':
           $ref: '#/components/responses/500-Something-went-wrong'
+      security:
+        - Authorization: []
     patch:
+      tags:
+        - Feedback Items
       summary: Change Feedback Item Status
       description: Changes the status of a feedback item.
       operationId: patch-feedback-item
@@ -96,8 +106,12 @@ paths:
           $ref: '#/components/responses/404-Not-Found'
         '500':
           $ref: '#/components/responses/500-Something-went-wrong'
+      security:
+        - Authorization: []
   '/feedback-items/{feedback-item-uuid}':
     get:
+      tags:
+        - Feedback Items
       summary: Get a Feedback Item
       description: This call retrieves a single feedback item by the UUID of the feedback item.
       operationId: get-feedback-item
@@ -115,10 +129,14 @@ paths:
           $ref: '#/components/responses/404-Not-Found'
         '500':
           $ref: '#/components/responses/500-Something-went-wrong'
+      security:
+        - Authorization: []
       servers:
         - url: 'https://feedback-api.mendix.com/v2'
           description: Base URL
     delete:
+      tags:
+        - Feedback Items
       summary: Delete a Feedback Item
       description: Deletes a feedback item.
       operationId: delete-feedback-item
@@ -136,11 +154,15 @@ paths:
           $ref: '#/components/responses/404-Not-Found'
         '500':
           $ref: '#/components/responses/500-Something-went-wrong'
+      security:
+        - Authorization: []
       servers:
         - url: 'https://feedback-api.mendix.com/v2'
           description: Base URL
   '/feedback-items/{feedback-item-uuid}screenshot':
     get:
+      tags:
+        - Feedback Items
       summary: Get a Screenshot by Feedback Item UUID
       description: Returns a screenshot for a specified feedback item. The image result is in Binary format.
       operationId: get-feedback-item-screenshot
@@ -174,8 +196,12 @@ paths:
           $ref: '#/components/responses/404-Not-Found'
         '500':
           $ref: '#/components/responses/500-Something-went-wrong'
+      security:
+        - Authorization: []
   '/feedback-items/{feedback-item-uuid}/attachments/{file-id}':
     get:
+      tags:
+        - Feedback Items
       summary: Get an Attachment
       description: Returns a specific attachment for a specified feedback item.
       operationId: get-feedback-item-attachment
@@ -198,11 +224,13 @@ paths:
           $ref: '#/components/responses/404-Not-Found'
         '500':
           $ref: '#/components/responses/500-Something-went-wrong'
+      security:
+        - Authorization: []
       servers:
         - url: 'https://feedback-api.mendix.com/v2'
           description: Base URL
 tags:
-  - name: Feedback
+  - name: Feedback Items
 components:
   parameters:
     projectId:
@@ -348,6 +376,12 @@ components:
             Request example:
               value:
                 status: Inbox
+  securitySchemes:
+    Authorization:
+      type: apiKey
+      description: 'For more information about requesting and using a token see the [documentation](https://docs.mendix.com/developerportal/community-tools/mendix-profile/#pat).<br/> The header must be set to `MxToken <Your PAT>`.'
+      name: MxToken 7LJE…vk
+      in: header
   responses:
     400-Bad-Request:
       description: Bad Request

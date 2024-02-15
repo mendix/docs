@@ -44,7 +44,7 @@ Store the generated value `{GENERATED_PAT}` somewhere safe so you can use it to 
 Each request must contain an `Authorization` header with the value `MxToken {GENERATED_PAT}`. For example:
 
 ```http {linenos=false}
-GET /api/v3/clusters HTTP/1.1
+GET /repositories/d92064a5-b1fd-4be4-97db-53fc90201d1c/info HTTP/1.1
 Authorization: MxToken 7LJE…vk
 ```
 

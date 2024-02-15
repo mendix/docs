@@ -38,7 +38,7 @@ Each request must contain an `Authorization` header with the value `MxToken {GEN
 Here is an example:
 
 ```http {linenos=false}
-GET /api/v3/clusters HTTP/1.1
+GET /content HTTP/1.1
 Authorization: MxToken 7LJE…vk
 ```
 

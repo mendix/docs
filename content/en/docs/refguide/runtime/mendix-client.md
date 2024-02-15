@@ -14,7 +14,7 @@ The Mendix Client runs on the end-user's device and handles the interface betwee
 This description of the Mendix Client is based on using the Runtime Server of an app running in the cloud. You can also run Mendix locally for testing, but this is conceptually the same.
 
 {{% alert color="info" %}}
-In Studio Pro versions 10.6.0 and above, there is an alternative version of the Mendix Client written in React. This is currently a [beta](/releasenotes/beta-features/). You can enable this new client in [App Settings](/refguide/app-settings/#react-client).
+In Studio Pro versions 10.6.0 and above, there is an alternative version of the Mendix Client written in React. This is currently a [beta](/releasenotes/beta-features/). You can enable this React client in [App Settings](/refguide/app-settings/#react-client).
 
 The React client replaces [Dojo](https://dojotoolkit.org/) with [React](https://react.dev/) for the view layer. This means that widgets based on Dojo will no longer work. You will get consistency errors if your app contains Dojo widgets, or you can choose **Migration mode** which will allow you to build your app but will replace incompatible widgets with a placeholder.
 
@@ -25,9 +25,11 @@ Other components of the Mendix Client are the same in both the React and Dojo cl
 
 The Mendix Client is a part of every application built with Mendix: both web and mobile.
 
-For **web applications**, Mendix Client acts as a single page application. This means that all paging is handled by the Mendix Client, rather than being separate pages served using different URLs. Mendix Client is bootstrapped by loading a `mxui.js` script from an HTML page provided by the *theme*.
+For **web applications**, Mendix Client acts as a single page application. This means that all paging is handled by the Mendix Client, rather than being separate pages served using different URLs.
 
-The new React client is bootstrapped in different way. Its loads the `index.js` file which loads the `common.js` with the Mendix client. More JavaScript files will be loaded after this that contain page, layout and nanoflow definitions.
+The Mendix Dojo Client is bootstrapped by loading a `mxui.js` script from an HTML page provided by the *theme*.
+
+The Mendix React client is bootstrapped in different way. Its loads the `index.js` file which loads the `common.js` with the Mendix client. More JavaScript files will be loaded after this that contain page, layout and nanoflow definitions.
 
 For **mobile applications** Mendix Client acts as a React Native application. This means that apps created by Mendix consist of two parts: a *wrapper* and a *bundle*. The wrapper is a native iOS or Android application that loads the bundle and exposes platform functionality to it. The bundle includes Client Core, Pluggable Widgets, and application-specific resources like nanoflows and pages.
 

@@ -6,10 +6,6 @@ weight: 40
 tags: ["Studio Pro", "project menu", "top bar"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/version-control-menu.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 In the **Version Control** menu you can view and/or manipulate settings that are connected to the version control. For example, you can view the history of the current development line.

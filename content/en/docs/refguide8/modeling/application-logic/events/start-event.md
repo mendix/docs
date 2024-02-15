@@ -5,10 +5,6 @@ weight: 1
 tags: ["studio pro", "start event", "event"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/start-event.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 A start event defines the starting point of a microflow or a nanoflow and is represented by a green circle. A flow can contain only one start event.

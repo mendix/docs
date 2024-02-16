@@ -197,9 +197,7 @@ The functionality of the Deep Link module has been replaced by various built-in 
     
 * **Microflow URLs** – For cases not entirely covered by the page URL functionality, use [microflow URLs](/refguide/microflow/#url). Specifically, add a URL to the microflows you were using with the Deep Link module. Because microflow URLs do not use query parameters (for example `?param1=foo&param2=bar`), you can end up with a different URL than before.
 
-    {{% alert color="warning" %}}
-    Because microflow URLs do not use query parameters (for example `?param1=foo&param2=bar`), you can end up with a different URL than before.
-    {{%/alert %}}
+    {{% alert color="warning" %}}Because microflow URLs do not use query parameters (for example `?param1=foo&param2=bar`), you can end up with a different URL than before.{{%/alert %}}
 
 * **Miscellaneous** – Other features of the deep link module can be replaced by their dedicated built-in features:
     * `Do not force a login action` is replaced by the [built-in security features](/howto/security/set-up-anonymous-user-security/) for [anonymous users](/refguide/anonymous-users/). 

@@ -281,6 +281,12 @@ Documents used to support integration should have the prefixes listed below.
 | JSON structure                            | JSON\_ |
 | Deeplink                                  | DL\_   |
 
+{{% alert color="warning" %}}
+⚠ The Deep Link module is deprecated from Studio Pro 10.6.0. It is replaced by [page URLs](/refguide/page-properties/#url) and [microflow URLs](/refguide/microflow/#url). For instructions on migrating to page and microflow URLs, see the [Migrating to Page and Microflow URLs](#migrate-page-micro) section in *Deep Link*. 
+
+We will continue to actively support this module for Mendix 9.
+{{% /alert %}}
+
 ### 3.6 Home Pages
 
 You can define the [home pages](/refguide/show-home-page/) per device and role in your navigation. The recommended page names are listed below:

@@ -31,10 +31,6 @@ To indicate whether or not an object should be committed, you can use Boolean as
 
 #### 2.1.2 URL {#url}
 
-{{% alert color="warning" %}}
-Microflow URLs are not yet able to support continuations, for instance, for SSO modules like OIDC. As a result, you cannot configure the SSO correctly using microflow URLs. We aim to add these features in Q2 2024.
-{{% /alert %}}
-
 Microflow URLs allow you to execute a microflow when the end-user navigates to a specific URL within your application. The microflow is executed during the client startup, just before the home page is shown. When the microflow executes a [Show page](/refguide/on-click-event/#show-page) activity, its page is the first page shown to the end-user. The microflow's full URL starts with the base URL of your application, followed by `/p/`, and then by the microflow's configured URL. For example, `http://example.mendixcloud.com/p/microflow` is the full URL for the microflow's configured URL `microflow`.
 
 Microflows with parameters can also have URLs. Such cases require that all parameters are present in the URL. You should include the parameters in the URL by writing their names between brackets, for example, `my-microflow/{Name}` where `Name` is the parameter's name. 
@@ -47,7 +43,7 @@ You can also use `Id` as an attribute to include the entity's identifier in the 
 
 In the **Edit Microflow URL** dialog box, the configured URL is shown together with an example URL with example values filled in for the parameters. It also shows how the parameter will be retrieved:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/microflow/microflow-url.png" alt="microflow url dialog"  width="550" >}}
+{{<figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/microflow/microflow-url.png" alt="microflow url dialog"  width="550" >}}
 
 {{% alert color="warning" %}}
 URLs are not supported for microflows that have non-persistable entities or lists as parameters.

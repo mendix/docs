@@ -7,7 +7,13 @@ aliases:
     - /howto/mobile/build-native-apps/
 ---
 
-These step-by-step guides teach you how to build native mobile applications and more. Many of these guides use the Mendix Native Mobile Builder UI tool included in Mendix Studio Pro 8.15 and above:
+These step-by-step guides teach you how to build native mobile applications and more. 
+
+{{% alert color="info" %}}
+Building native mobile apps can be challenging because mobile operating systems are constantly evolving. That is why we strongly recommend starting with building locally to understand the entire build process. When building locally, errors that might occur are much easier to understand and the process of resolving errors is much faster. When you have mastered local building, you can automate it by moving to the cloud. This way, you can revert to local building if problems occur in the future.
+{{% /alert %}}
+
+Many of these guides use the Mendix Native Mobile Builder UI tool included in Mendix Studio Pro 8.15 and above:
 
 * [Build a Mendix Native App Locally](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/) – Follow this guide to build your apps locally using the Mendix Native Mobile Builder.
 * [Build a Mendix Native App Locally Manually](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally-manually/) – Follow this guide to build your apps locally and without an internet connection.

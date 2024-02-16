@@ -4,11 +4,6 @@ url: /refguide8/map-automatically/
 tags: ["studio pro"]
 ---
 
-NOTE
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/map-automatically.pdf).
-{{% /alert %}}
-
 ## 1 Creating Entities, Attributes and Associations from Import or Export Mappings
 
 After you have selected a schema source for the mapping document, you need to connect it to entities, associations and attributes. When you do not yet have suitable entities available in your domain model, creating new ones by hand can be quite cumbersome, especially in large mappings. The button "Map automatically" does the majority of the work for you. Based on the selected schema elements, it creates domain model entities and uses them in the mapping.

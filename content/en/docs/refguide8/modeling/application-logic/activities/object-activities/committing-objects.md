@@ -5,14 +5,6 @@ weight: 30
 tags: ["studio pro"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/committing-objects.pdf).
-{{% /alert %}}
-
-{{% alert color="warning" %}}
-This activity can be used in both **Microflows** and **Nanoflows**.
-{{% /alert %}}
-
 ## 1 Introduction
 
 The **Commit** activity can commit one or more objects. For persistable entities this means that the object will be stored in the database. Committing non-persistable entities stores the current attribute values and association values in memory, this allows a rollback to revert to those values. See also [Persistability](/refguide8/persistability/).

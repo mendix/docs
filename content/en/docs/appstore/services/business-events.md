@@ -292,9 +292,9 @@ When this occurs, do the following:
 
 ### 6.4 Apps Running Own Kafka Cluster (Bring Your Own Kafka) {#byok}
 
-Business events are powered by Apache Kafka (see [Mendix Event Broker](#mendix-event-broker). If you wish to use your own Kafka cluster instead of the [Mendix Event Broker](#mendix-event-broker), see [Configuring Deployment Constants for Own Kafka Cluster](#deployment-constants). Running your own cluster is referred to as Bring Your Own Kafka (BYOK).
+Business events are powered by Apache Kafka (see [Mendix Event Broker](#mendix-event-broker)). If you want to use your own Kafka cluster instead of the [Mendix Event Broker](#mendix-event-broker), see [Configuring Deployment Constants for Own Kafka Cluster](#deployment-constants). Running your own cluster is referred to as Bring Your Own Kafka (BYOK).
 
-#### 6.4.1 Configuring Deployment Constants for own Kafka cluster {#deployment-constants}
+#### 6.4.1 Configuring Deployment Constants for Own Kafka Cluster {#deployment-constants}
 
 Business Events service exposes configuration via [constants](/refguide/constants/). These are set up during deployment to connect to your Kafka cluster.
 
@@ -305,19 +305,19 @@ All the constants are part of the Mendix Business Events service.
 * `BusinessEvents.EventBrokerSpace` – This setting helps you group events into Kafka [topics](#topics-channels). With this setting, each business event will be put in its own topic. Set the `EventBrokerSpace` value to your environment names (or Kubernetes namespaces) like `test` or `production`. Doing so ensures that when each business event that is defined in an app is deployed to a specific environment, it will have its own topic. For example, an `OrdersReceived` business event defined in an app when deployed to two different environments will have two topics. A topic is named in the form of `businessevents.<channel>.<EventBrokerSpace>`. A channel is written as a UUID and is used to group events.
 * `TruststoreLocation` and `TruststorePassword` - [OPTIONAL] The service supports adding a Truststore and password in order to allow for SSL verification of the server.
 
-{{% alert color="warning" %}}Special characters are not allowed in the `BusinessEvents.EventBrokerSpace` constant. {{% /alert %}}
+{{% alert color="warning" %}} Special characters are not allowed in the `BusinessEvents.EventBrokerSpace` constant. {{% /alert %}}
 
-For further explanation on topics and channels, see [Topics and Channels](#topics-channels) and the [Mendix Event Broker](#mendix-event-broker) section.
+For further explanation on topics and channels, see [Topics and Channels](#topics-channels) and [Mendix Event Broker](#mendix-event-broker).
 
-#### 6.4.2 DevOps tasks not covered when running own Kafka cluster
+#### 6.4.2 DevOps Tasks Not Covered When Running Own Kafka Cluster
 
 As operating your own Kafka cluster falls outside of the scope of the Mendix Cloud environment, the following `DevOps` tasks should be taken into consideration (this list is not extensive):
 
-* Client username and password provision on Kafka - The creation of usernames and password on the Kafka cluster will need to be managed but the customer
-* Topic creation on Kafka - Unless the Kafka cluster is configured with `auto.create.topics.enable` set to true (default setting in Apache Kafka), topics will need to be created by the customer. See [Topics and Channels](#topics-channels)
-* Access Control - Unless the Kafka cluster is configured with `allow.everyone.if.no.acl.found` set to true (default setting in Apache Kafka), the ACLs need to be maintained by the customer
+* Client user name and password provision on Kafka - The creation of usernames and password on the Kafka cluster will need to be managed by the customer.
+* Topic creation on Kafka - Unless the Kafka cluster is configured with `auto.create.topics.enable` set to true (default setting in Apache Kafka), topics will need to be created by the customer. See [Topics and Channels](#topics-channels).
+* Access Control - Unless the Kafka cluster is configured with `allow.everyone.if.no.acl.found` is set to true (default setting in Apache Kafka), the ACLs need to be maintained by the customer.
 
-#### 6.4.3 Managing topics on own Kafka cluster
+#### 6.4.3 Managing Topics on Own Kafka Cluster
 
 The channel UUID can be retrieved by inspecting the exported AsyncAPI document under the channels section of the document.
 

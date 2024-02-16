@@ -151,24 +151,24 @@ The business event service document is open in Studio Pro:
 After following the instructions in [Using an Existing Business Event Service](#two-way-be-create), you can publish or subscribe (or both, depending on the [service definitions](#add-be-definitions)) in the following ways:
 
 * Open the business service document and click **Add**
-* **Drag and drop** the business event from the [Integration Pane](/refguide/integration-pane/) to your domain model
+* Drag and drop the business event from the [Integration Pane](/refguide/integration-pane/) to your domain model
 
 To publish a business event service, you need to use it in a microflow.
 
 ### 4.2 Automatically Created Event Handler Microflow and Entity {#two-way-be-handler}
 
-When you click **Add** to add the events from the document into your service, Studio Pro will automatically create a **persistable** consumed entity within your domain model and an **Event Handler** microflow (**Handle_BE**) to manage the flow of the event after delivery. The **Event Handler** microflow is created in the same directory as your service.
+When you click **Add** to add the events from the document into your service, Studio Pro will automatically create a persistable consumed entity within your domain model and an **Event Handler** microflow (**Handle_BE**) to manage the flow of the event after delivery. The **Event Handler** microflow is created in the same directory as your service.
 
-Currently, we don’t support multiple subscribers to the same business event within the same app.
+Currently, Mendix does not support multiple subscribers to the same business event within the same app.
 
 ### 4.3 Modelling with Business Events (All Supported Studio Pro Versions) {#be-modelling}
 
-Once you have created a service in [Studio Pro 9.24 and above](#two-way-be), you can start modelling with them in your app.
+Once you have created a service in [Studio Pro 9.24 and above](#two-way-be), you can start modeling with them in your app.
 
 Business events are defined using entities specializing the **PublishedBusinessEvent** entity that is included in the Mendix Business Events service.
 
-1. In your [Domain Model](/refguide/domain-model/), double-click the entity you want to publish as a business event to display the entity properties.
-2. In the **Generalization** field, click **Select** and select the **PublishedBusinessEvent** entity.
+1. In your [Domain model](/refguide/domain-model/), double-click the entity you want to publish as a business event to display the entity properties.
+2. In the **Generalization** field, click **Select** and choose the **PublishedBusinessEvent** entity.
 
 The base values for your entity are taken from the **PublishedBusinessEvent**, and your entity will behave like a specialized entity. For more information, see [Generalization, Specializations and Inheritance](/refguide/generalization-and-association/).
 

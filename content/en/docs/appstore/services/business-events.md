@@ -30,7 +30,7 @@ Business events help you automate the resulting actions when something happens i
 To use Mendix Business Events, you will need the following:
 
 * The [Mendix Business Events](https://marketplace.mendix.com/link/component/202649) service from the Mendix Marketplace
-* Studio Pro [9.18](/releasenotes/studio-pro/9.18/) and above for one-way events, Studio Pro [9.24](/releasenotes/studio-pro/9.24/) and above for [two-way events](#two-way-be)
+* Studio Pro [9.24](/releasenotes/studio-pro/9.24/) and above
 * An event broker, either a licensed [Mendix Event Broker](#mendix-event-broker) for apps running in the Mendix Cloud or the [local testing](#local-testing) broker (see [Deployment](#deployment))
 * [Docker](https://www.docker.com/) for local deployment
 
@@ -67,9 +67,6 @@ This section explains how to use business events in Mendix apps with the Mendix 
 ### 4.1 Using Business Events {#two-way-be}
 
 Studio Pro 9.24 and above supports newer behavior of business events, sometimes called *two way* business events. In these versions, business events are published by an app, and one or more apps consume, or subscribe to, the events. A publisher can also consume a business event of some other publishing app, and a subscriber can publish a business event to another app.
-
-{{% alert color="info" %}}
-If you are modelling in Studio Pro 9.18 through 9.23, go back up to [Publishing and Consuming Business Events in Studio Pro 9.18 through 9.23](#one-way-be), or learn how [migrating business event apps](#migrate-two-way-be) to Studio Pro 9.24 and above works. For modelling with any version, see [Modelling with Business Events](#be-modelling).{{% /alert %}}
 
 #### 4.1.1 Creating a New Business Event Service {#two-way-be-create}
 
@@ -166,7 +163,7 @@ Currently, we don’t support multiple subscribers to the same business event wi
 
 ### 4.3 Modelling with Business Events (All Supported Studio Pro Versions) {#be-modelling}
 
-Once you have created a service in Studio Pro 9.18 through 9.23 or [Studio Pro 9.24 and above](#two-way-be), you can start modelling with them in your app.
+Once you have created a service in [Studio Pro 9.24 and above](#two-way-be), you can start modelling with them in your app.
 
 Business events are defined using entities specializing the **PublishedBusinessEvent** entity that is included in the Mendix Business Events service.
 
@@ -270,7 +267,7 @@ Any free app in your organization will be able to receive any event published by
 
 ### 6.3 Production Deployment
 
-To deploy to production, you must have a subscription to the [Mendix Event Broker](https://marketplace.mendix.com/link/component/202907). For more information, see the (Mendix Event Broker License)[/appstore/services/event-broker/#event-broker-license] section of *Mendix Event Broker*.  
+To deploy to production, you must have a subscription to the [Mendix Event Broker](https://marketplace.mendix.com/link/component/202907). For more information, see the [Mendix Event Broker License](/appstore/services/event-broker/#event-broker-license) section of *Mendix Event Broker*.
 
 Make sure you enable the Mendix Event Broker for every app and environment before deploying. See [Mendix Event Broker](/appstore/services/event-broker/) for more information.
 

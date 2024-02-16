@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "deep link", "platform support"]
 ---
 
 {{% alert color="warning" %}}
-⚠ This module is deprecated from Studio Pro 10.6.0. It is replaced by [page URLs](/refguide/page-properties/#url) and [microflow URLs](/refguide/microflow/#url). For instructions on migrating to Page and Microflow URLs, see the [Migrating to Page and Microflow URLs](#migrate-page-micro) section below.
+⚠ This module is deprecated from Studio Pro 10.6.0. It is replaced by [page URLs](/refguide/page-properties/#url) and [microflow URLs](/refguide/microflow/#url). For instructions on migrating to page and microflow URLs, see the [Migrating to Page and Microflow URLs](#migrate-page-micro) section below. However, both the page URLs and microflow URLs are not yet able to support continuations, for instance, for SSO modules like OIDC. As a result, you cannot configure the SSO correctly using page URLs and microflow URLs. If this affects your app, then you should not stop using the Deep Link module yet. We aim to add these features in Q2 2024.
 
 We will continue to actively support this module for Mendix 9.
 {{% /alert %}}
@@ -187,6 +187,8 @@ To solve this problem, you can use one of the following solutions:
      ```
 
 ## 5 Migrating to Page and Microflow URLs {#migrate-page-micro}
+
+{{% alert color="warning" %}}Both the page URLs and microflow URLs are not able to support continuations, for instance, for SSO modules like OIDC. As a result, the SSO cannot be configured correctly. If this affects your app, then you should not stop using the Deep Link module yet. We aim to add these features in Q2 2024. Stay tuned.{{% /alert %}}
 
 The functionality of the Deep Link module has been replaced by various built-in features of the Mendix Platform:
 

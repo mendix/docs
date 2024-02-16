@@ -57,7 +57,7 @@ This is the directory in which the Java Development Kit (JDK) is located on the 
 
 The JDK is necessary to run Mendix applications, because the Mendix Runtime is written in Java.
 
-As of Mendix 10.8.0 JDK 17 is installed by default. If JDK 11 is needed, then it can be downloaded following this [link](https://adoptium.net/temurin/releases/?version=11) and configured as the JDK Directory.
+As of Mendix 10.8.0, JDK 17 is installed with Studio Pro. If JDK 11 is needed, then it can be downloaded following this [link](https://adoptium.net/temurin/releases/?version=11) and configured as the JDK Directory.
 
 #### 3.1.2 Enable Run Optimizations
 

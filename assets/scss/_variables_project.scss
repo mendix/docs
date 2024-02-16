@@ -1,17 +1,7 @@
-/*
+// Bootstrap options
 
-Bootstrap variables overrides for theme.
-See https://github.com/twbs/bootstrap/pull/23260
-*/
-
-// Bootstrap flags. For more, see https://getbootstrap.com/docs/4.0/getting-started/theming/
 $enable-gradients: true !default;
-$enable-rounded: true !default;
 $enable-shadows: true !default;
-
-// Theme flags
-
-$td-enable-google-fonts: true !default;
 
 // Theme colors
 
@@ -154,6 +144,8 @@ $link-hover-color: darken($link-color, 15%) !default;
 $link-hover-decoration: none !default;
 
 // Fonts
+
+$td-enable-google-fonts: true !default;
 
 $google_font_name: "Noto Sans" !default; // NK - changed to Mendix font
 $google_font_family: "Noto+Sans:ital,wght@0,400;0,600;1,400;1,600" !default; // MvM - changed by request in #docs 2023-12-11

@@ -638,7 +638,7 @@ The DeepLink module does not have full support for multiple IdPs, so it can only
 
 You can also specify which IdP should be used by adding the alias (`MyIdPAlias`) to the `LoginLocation`: `/oauth/v2/login?idp={MyIdpAlias}&cont=`. For example, `/oauth/v2/login?idp=Google&cont=`. This setting will apply to all deeplinks in your app.
 
-To use OIDC SSO module in conjunction with the DeepLink module, you can choose between the following methods of selecting an IdP:
+To use OIDC SSO module in conjunction with the DeepLink module, you can choose between the methods described in the following sections to select an IdP.
 
 ### 8.4 Logging Out
 
@@ -646,7 +646,7 @@ A standard logout action will end an end-user's Mendix session, but will not end
 
 To do this, add a menu item or button for your end-users that calls the nanoflow `ACT_Logout`.
 
-### 8.5 Use ACR to Request Authentication Method
+### 8.5 Using ACR to Request Authentication Method
 
 By default, the OIDC SSO module does not care how users are signed in at your IdP, that is left to the discretion of the IdP. In some cases your IdP may support different methods for end-users to be authenticated and your app may want to indicate a preference.
 

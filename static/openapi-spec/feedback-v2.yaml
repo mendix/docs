@@ -17,17 +17,10 @@ paths:
       tags:
         - Feedback Items
       summary: Get feedback items
-      description: Returns a list of feedback items based on the query parameters. Using `storyId` or `legacyId` will always return a list containing a single item.
+      description: '> Returns a list of feedback items based on the query parameters. Using storyId or legacyId will always return a list containing a single item.'
       operationId: get-feedback-items
       parameters:
         - $ref: '#/components/parameters/Authorization'
-        - $ref: '#/components/parameters/projectId'
-        - $ref: '#/components/parameters/storyId'
-        - $ref: '#/components/parameters/legacyId'
-        - $ref: '#/components/parameters/status'
-        - $ref: '#/components/parameters/priority'
-        - $ref: '#/components/parameters/limit'
-        - $ref: '#/components/parameters/offset'
         - $ref: '#/components/parameters/projectId'
         - $ref: '#/components/parameters/storyId'
         - $ref: '#/components/parameters/legacyId'
@@ -52,24 +45,17 @@ paths:
       tags:
         - Feedback Items
       summary: Create a feedback item
-      description: This call adds a new feedback item to a specified app and returns the `legacyId` and UUID  of the new feedback item.
+      description: This call adds a new feedback item to a specified app and returns the legacyId and UUID  of the new feedback item.
       operationId: post-feedback-item
       parameters:
         - $ref: '#/components/parameters/Authorization'
-        - $ref: '#/components/parameters/projectId'
-        - $ref: '#/components/parameters/storyId'
-        - $ref: '#/components/parameters/legacyId'
-        - $ref: '#/components/parameters/status'
-        - $ref: '#/components/parameters/priority'
-        - $ref: '#/components/parameters/limit'
-        - $ref: '#/components/parameters/offset'
       requestBody:
         $ref: '#/components/requestBodies/feedback'
       responses:
         '201':
           $ref: '#/components/responses/201-Feedback-Item-Created'
         '400':
-          $ref: '#/components/responses/400-Bad-Request'
+          $ref: '#/components/responses/400-Bad-Request-Post'
         '401':
           $ref: '#/components/responses/401-Invalid-Token'
         '404':
@@ -81,18 +67,11 @@ paths:
     patch:
       tags:
         - Feedback Items
-      summary: Change feedback item status
+      summary: Change the status of a feedback item
       description: Changes the status of a feedback item.
       operationId: patch-feedback-item
       parameters:
         - $ref: '#/components/parameters/Authorization'
-        - $ref: '#/components/parameters/projectId'
-        - $ref: '#/components/parameters/storyId'
-        - $ref: '#/components/parameters/legacyId'
-        - $ref: '#/components/parameters/status'
-        - $ref: '#/components/parameters/priority'
-        - $ref: '#/components/parameters/limit'
-        - $ref: '#/components/parameters/offset'
       requestBody:
         $ref: '#/components/requestBodies/status'
       responses:
@@ -163,7 +142,7 @@ paths:
     get:
       tags:
         - Feedback Items
-      summary: Get a screenshot by feedback item UUID
+      summary: Get a screenshot by the UUID of a feedback item
       description: Returns a screenshot for a specified feedback item. The image result is in the binary format.
       operationId: get-feedback-item-screenshot
       parameters:
@@ -176,7 +155,7 @@ paths:
             example: MxToken <PAT>
         - name: feedback-item-uuid
           in: path
-          description: The unique id of the feedback item
+          description: The unique ID of the feedback item
           required: true
           schema:
             type: string
@@ -236,7 +215,7 @@ components:
     projectId:
       name: projectId
       in: query
-      description: The unique id of the app
+      description: The unique ID of the app
       required: true
       schema:
         type: string
@@ -284,14 +263,14 @@ components:
     storyId:
       name: storyId
       in: query
-      description: The story id of a feedback item
+      description: The story ID of a feedback item
       schema:
         type: string
         example: '22'
     feedback-item-uuid:
       name: feedback-item-uuid
       in: path
-      description: The unique id of the feedback item
+      description: The unique ID of the feedback item
       required: true
       schema:
         type: string
@@ -299,7 +278,7 @@ components:
     file-id:
       name: file-id
       in: path
-      description: The unique id of the attachment
+      description: The unique ID of the attachment
       required: true
       schema:
         type: integer
@@ -321,7 +300,7 @@ components:
             properties:
               projectId:
                 type: string
-                description: The unique id of the app
+                description: The unique ID of the app
               submitterDisplayName:
                 type: string
                 description: The name of the submitter
@@ -342,12 +321,14 @@ components:
                 description: 'Base64 binary representation of an image (allowed extensions: .jpg or .png)'
               screenshotName:
                 type: string
-                description: The name of the physical document of the screenshot
+                description: "The name of the physical document of the screenshot\r\n*Required if a screenshot is provided"
               priority:
                 type: string
                 description: 'The name of the priority (Low, Medium, High, Urgent)'
             required:
               - projectId
+              - submitterEmail
+              - subject
           examples:
             Request example:
               value:
@@ -644,7 +625,7 @@ components:
                   code: 404
                   instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
     500-Something-went-wrong:
-      description: Something went wrong.
+      description: Something went wrong
       content:
         application/json:
           schema:
@@ -666,7 +647,7 @@ components:
               value:
                 error:
                   message: Internal Server Error
-                  detail: Something went wrong.
+                  detail: Something went wrong
                   code: 500
                   instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
     200-Feedback-Items:
@@ -869,3 +850,38 @@ components:
               value:
                 legacyId: 34
                 UUID: 00000000-0000-0000-0000-000000000000
+    400-Bad-Request-Post:
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: object
+                properties:
+                  code:
+                    type: integer
+                  message:
+                    type: string
+                  instance:
+                    type: string
+                  invalid-params:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        reason:
+                          type: string
+          examples:
+            Example 1:
+              value:
+                error:
+                  code: 400
+                  message: Bad Request
+                  instance: 'urn:uuid:3693079d-8262-4663-8636-288a5aa459a2'
+                  invalid-params:
+                    - name: subject
+                      reason: Subject is required

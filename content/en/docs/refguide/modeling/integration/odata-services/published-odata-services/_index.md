@@ -14,7 +14,9 @@ A published OData service is a REST service with an OpenAPI contract, which mean
 
 The standard used for OData in Mendix is [OData v4](http://www.odata.org/documentation), which returns data in JSON format.
 
-⚠ The option to publish [OData v3](http://www.odata.org/documentation/odata-version-3-0) services, which return data in Atom XML format, is deprecated and will be removed in a future version.
+{{% alert color="warning" %}}
+he option to publish [OData v3](http://www.odata.org/documentation/odata-version-3-0) services, which return data in Atom XML format, is deprecated and will be removed in a future version.
+{{% /alert %}}
 
 Not all parts of the standard are implemented. If something is not documented here, it is has not yet been added.
 

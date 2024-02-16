@@ -21,13 +21,11 @@ This document teaches you how to do the following:
 
 This how-to assumes that you are familiar with using Studio Pro to create a simple app with a Domain Model, Pages, and Microflows.
 
-Before starting this how-to, make sure you have completed the following prerequisites:
+Before starting this how-to, Mendix recommends that you install Eclipse. Eclipse is a Java editor which can be downloaded from the [Eclipse Foundation](https://eclipse.org/).
 
-* Install Eclipse
-    
-    Eclipse is a Java editor which can be downloaded from the [Eclipse Foundation](https://eclipse.org/).
-
-    {{% alert color="info" %}}Mendix recommends using Eclipse to edit your Java code, although you can use any text editor. Studio Pro contains a [Deploy for Eclipse](/refguide/app-menu/#eclipse) feature which automatically configures everything so you only have to import the app into your Eclipse working environment.{{% /alert %}}
+{{% alert color="info" %}}
+Mendix recommends using Eclipse to edit your Java code, although you can use any text editor. Studio Pro contains a [Deploy for Eclipse](/refguide/app-menu/#eclipse) feature which automatically configures everything so you only have to import the app into your Eclipse working environment.
+{{% /alert %}}
 
 ## 3 Setting Up a Simple App{#simple-app}
 

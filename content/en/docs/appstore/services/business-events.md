@@ -167,18 +167,18 @@ Once you have created a service in [Studio Pro 9.24 and above](#two-way-be), you
 
 Business events are defined using entities specializing the **PublishedBusinessEvent** entity that is included in the Mendix Business Events service.
 
-1. In your [Domain model](/refguide/domain-model/), double-click the entity you want to publish as a business event to display the entity properties.
+1. In your [domain model](/refguide/domain-model/), double-click the entity you want to publish as a business event to display the entity properties.
 2. In the **Generalization** field, click **Select** and choose the **PublishedBusinessEvent** entity.
 
-The base values for your entity are taken from the **PublishedBusinessEvent**, and your entity will behave like a specialized entity. For more information, see [Generalization, Specializations and Inheritance](/refguide/generalization-and-association/).
+The base values for your entity are taken from the **PublishedBusinessEvent**, and your entity will behave like a specialized entity. For more information, see [Generalization, Specializations, and Inheritance](/refguide/generalization-and-association/).
 
-The text with the blue background above the entity tells you that it is a specialized entity based on the **PublishedBusinessEvent** entity in the **BusinessEvents** service:
+The text with the blue background above the entity tells you it is a specialized entity based on the **PublishedBusinessEvent** entity in the **BusinessEvents** service:
 
 {{< figure src="/attachments/appstore/services/business-events/specialized-entity.png" >}}
 
 #### 4.3.1 Using the Publish Business Event Activity
 
-After defining your business events, and adding them to a published service, you can publish the events in your microflows whenever a noticeable event occurs.
+After defining your business events and adding them to a published service, you can publish the events in your microflows whenever a noticeable event occurs.
 
 {{% alert color="info" %}}
 A microflow needs to be triggered somewhere in order to publish a business event. {{% /alert %}}
@@ -187,15 +187,15 @@ Do this using the **Publish business event** activity:
 
 1. Open the microflow in which the business events will be published.
 2. Create an object of the business events you want to publish.
-3. In the **Toolbox**, search for the **Publish business event** action and drag it and place it in your microflow.
+3. In the **Toolbox**, search for the **Publish business event** action, drag it, and place it in your microflow.
 4. Double-click **Publish business event** to display the **Publish Business Event** property box.
 5. Enter the following information:
-    * **Subject**: This can be anything you consider useful, like a short description of what can be expected in the payload, similar to email subject. It will help subscribed apps decide if the event might be useful to them.
-    * **Event Data**: Enter the entity representing the business event that you want to publish.
-    * **Task Queue/Output:** These values are not currently used for Business Events and should be left unchanged.
+    * **Subject** - This can be anything you consider useful, like a short description of what can be expected in the payload, similar to email subject. It will help subscribed apps decide if the event is useful to them.
+    * **Event Data** - Enter the entity representing the business event that you want to publish.
+    * **Task Queue/Output** - These values are not currently used for business events and should be left unchanged.
 
 {{% alert color="info" %}}
-The *Publish Business Event* Activity will commit all event objects at the start of the publishing process as an **Outbox** entity. This is an implementation detail. In case something goes wrong during the publishing process, a retry mechanism will be triggered for up to 48 hours.  If the publishing microflow fails, the entity in the **Outbox** will be rolled back as well. See the [Business Event Entities](#be-entities) section for more information on the **Outbox** entity.
+The **Publish Business Event** activity will commit all event objects at the start of the publishing process as an **Outbox** entity. This is an implementation detail. In case something goes wrong during the publishing process, a retry mechanism will be triggered for up to 48 hours.  If the publishing microflow fails, the entity in the **Outbox** will be rolled back as well. See the [Business Event Entities](#be-entities) section for more information on the **Outbox** entity.
 {{% /alert %}}
 
 #### 4.3.2 Business Event Entities {#be-entities}
@@ -204,10 +204,10 @@ The **PublishedBusinessEvent** and **ConsumedBusinessEvent** entities are necess
 
 {{< figure src="/attachments/appstore/services/business-events/four-entities-in-domain-model.png" >}}
 
-* **PublishedBusinessEvent**: This non-persistable entity has the fields settings that every published event will include. Every published business event will inherit from this entity. The three fields can be set from the Java Action. This is used to define what your published business events look like.
-* **ConsumedBusinessEvent**: This entity has the fields that every consumed event will include. Every consumed business event will inherit from this entity. These fields will be set from the service, as will any additional fields that match with the payload of the event. This defines what you want to receive from the business events you subscribe to.
-* **DeadLetterQueue**: This persistent entity within the Domain Model of the Business Events service is used for generating a historical record of events that are generated for business event activities that were not successful or had errors when received by the consumer and can be referred to for troubleshooting. You can query the DeadLetterQueue entity to determine which received events could not be processed.
-* **Outbox**: This entity is used to store the event prior to being sent.  This entity is connected to the microflow where a Business event is triggered.  If the microflow fails, the entity will be removed as part of the same transaction. If the event broker is down at runtime, business events will accumulate in the **Outbox**. They will be retried at increasing intervals for 48 hours, and they will fail after that time. Once an event is successfully delivered, it gets deleted from the **Outbox**.
+* **PublishedBusinessEvent** - This non-persistable entity has the fields settings that every published event will include. Every published business event will inherit from this entity. The three fields can be set from the Java Action. This is used to define what your published business events look like.
+* **ConsumedBusinessEvent** - This entity has the fields that every consumed event will include. Every consumed business event will inherit from this entity. These fields will be set from the service, as will any additional fields that match with the payload of the event. This defines what you want to receive from the business events you subscribe to.
+* **DeadLetterQueue** - This persistent entity within the domain model of the Business Events service is used for generating a historical record of events that are generated for business event activities that were not successful or had errors when received by the consumer and can be referred to for troubleshooting. You can query the DeadLetterQueue entity to determine which received events could not be processed.
+* **Outbox** - This entity is used to store the event prior to being sent.  This entity is connected to the microflow where a business event is triggered.  If the microflow fails, the entity will be removed as part of the same transaction. If the event broker is down at runtime, business events will accumulate in the **Outbox**. They will be retried at increasing intervals for 48 hours and will fail after that time. Once an event is successfully delivered, it gets deleted from the **Outbox**.
 
 #### 4.3.3 Dead Letter Queue for Failed Messages {#dead-letter-queue}
 

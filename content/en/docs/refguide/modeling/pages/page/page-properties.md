@@ -62,6 +62,10 @@ The title can be overridden. For example, the [Create button](/refguide/control-
 
 #### 3.1.5 URL {#url}
 
+{{% alert color="warning" %}}
+Page URLs are not yet able to support continuations, for instance, for SSO modules like OIDC. As a result, you cannot configure the SSO correctly using microflow URLs. We aim to add these features in Q2 2024.
+{{% /alert %}}
+
 A page's URL allows end users to directly navigate to the page (for example, from external links or bookmarks). It will be shown in the address bar of the browser when you visit the page. When navigating to a page without a URL configured, the last visited URL is shown. Note that the full URL of the page will be the base URL of your application followed by `/p/` and then by the configured URL of the page (for example, `http://example.mendixcloud.com/p/home_page`).
 
 Pages with parameters can also have URLs. For those pages, all page parameters must be present in the URL. To do this, define which attribute of each page parameter you want to be used in the URL. The syntax for this is the name of the page parameter, a `/`, and then the name of the attribute that should be used placed between curly brackets. 

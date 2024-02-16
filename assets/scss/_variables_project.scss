@@ -1,17 +1,7 @@
-/*
+// Bootstrap options
 
-Bootstrap variables overrides for theme.
-See https://github.com/twbs/bootstrap/pull/23260
-*/
-
-// Bootstrap flags. For more, see https://getbootstrap.com/docs/4.0/getting-started/theming/
 $enable-gradients: true !default;
-$enable-rounded: true !default;
 $enable-shadows: true !default;
-
-// Theme flags
-
-$td-enable-google-fonts: true !default;
 
 // Theme colors
 
@@ -155,6 +145,8 @@ $link-hover-decoration: none !default;
 
 // Fonts
 
+$td-enable-google-fonts: true !default;
+
 $google_font_name: "Noto Sans" !default; // NK - changed to Mendix font
 $google_font_family: "Noto+Sans:ital,wght@0,400;0,600;1,400;1,600" !default; // MvM - changed by request in #docs 2023-12-11
 $web-font-path: "https://fonts.googleapis.com/css2?family=#{$google_font_family}&display=swap"; // NK - changed to Mendix font
@@ -191,17 +183,6 @@ $h3-font-size: $font-size-base * 1.5 !default;
 $h4-font-size: $font-size-base * 1.35 !default;
 $h5-font-size: $font-size-base * 1.15 !default;
 $h6-font-size: $font-size-base !default;
-
-// Display styles
-
-$display1-weight: $font-weight-bold !default;
-$display2-weight: $font-weight-bold !default;
-$display3-weight: $font-weight-bold !default;
-$display4-weight: $font-weight-bold !default;
-$display1-size: 3rem !default;
-$display2-size: 2.5rem !default;
-$display3-size: 2rem !default;
-$display4-size: 1.75rem !default;
 
 // Space
 

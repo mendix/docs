@@ -211,7 +211,7 @@ The **PublishedBusinessEvent** and **ConsumedBusinessEvent** entities are necess
 
 #### 4.3.3 Dead Letter Queue for Failed Messages {#dead-letter-queue}
 
-Every time a business event is received, it is transformed to match the Entity created as part of the Subscription. When the Entity within the Business Event has changed based on the imported AsyncAPI document, it can render the Entity unable to be processed. In such a scenario the Business Event will fail into a **Dead Letter Queue** which contains the representation of the Entity within the data column.
+Every time a business event is received, it is transformed to match the entity created as part of the subscription. When the entity within the business event has changed based on the imported AsyncAPI document, it can render the entity unable to be processed. In such a scenario, the business event will fail into a **Dead Letter Queue**, which contains the representation of the entity within the data column.
 
 The most important fields in this entity to be checked when there are errors include the following:
 
@@ -220,15 +220,15 @@ The most important fields in this entity to be checked when there are errors inc
 * `subject`
 * `data`
 
-Use these fields to transform the payload back into a Mendix entity again. If the subject is missing from the original event, the value will be an empty string. If the consumed event does not have the correct format, the event will not go to the Dead Letter Queue, but will throw an error.
+Use these fields to transform the payload back into a Mendix entity. If the subject is missing from the original event, the value will be an empty string. If the consumed event does not have the correct format, the event will not go to the Dead Letter Queue, but will throw an error.
 
 ## 5 Mendix Event Broker {#mendix-event-broker}
 
-Within Mendix Public Cloud, a Mendix Event Broker is available for easy application deployment using the Mendix Business Events module.  For further information, see [Mendix Event Broker](/appstore/services/event-broker/).
+Within Mendix Public Cloud, a Mendix Event Broker is available for easy application deployment using the Mendix Business Events module.  For more information, see [Mendix Event Broker](/appstore/services/event-broker/).
 
 ### 5.1 Topics and Channels {#topics-channels}
 
-Events are placed in Channels, sometimes called Topics. Apps subscribed to a channel will receive events published to this channel.
+Events are placed in channels, sometimes called topics. Apps subscribed to a channel will receive events published to this channel.
 
 Events published by Free Apps are published to one shared company channel on a multi-tenant free Event Broker. Events published by apps running on licensed nodes are published to their own channels on the company Event Broker. These channels, implemented as topics on Kafka, are automatically created upon deployment of the app publishing the events.
 
@@ -236,7 +236,7 @@ For information on setting topics and channels for your own Kafka clusters ("Bri
 
 ### 5.2 Error Handling
 
-Event publishing is part of the transaction where the publishing occurs. This means that if you decide that something has gone wrong in your microflow logic, and you roll back all changes, the publishing of your events is also rolled back. No event will be sent to other apps.
+Event publishing is part of the transaction where the publishing occurs. This means if you decide that something has gone wrong in your microflow logic and you roll back all changes, the publishing of your events is also rolled back. No event will be sent to other apps.
 
 This is implemented as follows:
 
@@ -255,7 +255,7 @@ Business Events offers four different deployment models:
 
 ### 6.1 Local Deployment
 
-Use our [Local Setup Tool](https://github.com/mendix/event-broker-tools) for local deployments. See [Using the Business Events Local Setup Tool](#local-setup).
+Use the [Local Setup Tool](https://github.com/mendix/event-broker-tools) for local deployments. For more information, see [Using the Business Events Local Setup Tool](#local-setup).
 
 When you deploy your apps to the free cluster, a free event broker is provided and configured automatically. In the Mendix Free App environment, there is a limit of 1000 events per app per day.
 
@@ -285,10 +285,10 @@ The app that defines a business event service (**app A**), needs to be deployed 
 
 When this requirement is not met, **app B** will either be terminated or, when using [Business Events](https://marketplace.mendix.com/link/component/202649) service version 3.7.0 and higher, produce errors in the log.
 
-When this occurs, please execute the following steps:
+When this occurs, do the following:
 
 1. Ensure **app A** has started in the same space as **app B**.
-1. Restart **app B**.
+2. Restart **app B**.
 
 ### 6.4 Apps Running Own Kafka Cluster (Bring Your Own Kafka) {#byok}
 

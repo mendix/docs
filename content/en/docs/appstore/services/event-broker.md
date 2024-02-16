@@ -93,7 +93,7 @@ The next step of configuration is to select a [Space](#manage-mx-broker), Name, 
 
 The user must select events from the Event Broker landscape of events to send to or receive from AWS SQS. To do this, do the following:
 
-1. Select **Add Business Events* and searching for the appropriate events. 
+1. Select ***Add Business Events** and search for the appropriate events. 
 2. Select the checkbox for the event you want to add, then click **Select**.
 
   {{< figure src="/attachments/appstore/services/event-broker/event_broker_bridges_create_4.png">}}
@@ -106,7 +106,7 @@ The user must select events from the Event Broker landscape of events to send to
 
 {{< figure src="/attachments/appstore/services/event-broker/event_broker_bridges_create_6.png">}}
 
-1. After all events have been configured, click **Start** to start the Mendix Event Broker Bridge. This process will take several minutes to complete.
+5. After all events have been configured, click **Start** to start the Mendix Event Broker Bridge. This process will take several minutes to complete.
 
 {{< figure src="/attachments/appstore/services/event-broker/event_broker_bridges_create_7.png">}}
 

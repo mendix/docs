@@ -15,13 +15,13 @@ The Mendix Feedback API allows you to retrieve, add, and manage feedback for you
 
 ## 2 Authentication {#authentication}
 
-Authentication for the Epics API uses a personal access token (PAT).
+Authentication for the Feedback API uses a personal access token (PAT).
 
 ### 2.1 Generating a PAT {#generate}
 
 To generate a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section in *User Settings*.
 
-Select the following as **Deployment Mendix Cloud** scopes:
+Select the following as **App Insights** scopes:
 
 * `mx:feedback:read` – to perform `GET` operations
 * `mx:feedback:write` – to perform all operations (`GET`, `POST`, `PUT`, and `DELETE`)

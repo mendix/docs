@@ -25,7 +25,7 @@ The following frameworks are automatically installed (if necessary):
 * Microsoft .NET Framework 4.7.2 and all applicable Windows security patches
 * Microsoft Visual C++ 2010 SP1 Redistributable Package
 * Microsoft Visual C++ 2015 Redistributable Package
-* Adoptium JDK 17 (installed automatically as of [Mendix 8.18.29](/releasenotes/studio-pro/8.18/#81828) if you do not have any JDK 17 installed) 
+* AdoptOpenJDK 11 (installed automatically as of [Mendix 8.0.0](/releasenotes/studio-pro/8.0/#800) if you do not have any JDK 11 installed) 
 
 {{% alert color="info" %}}
 You can choose which JDK is used for building and running locally via the **Edit** > **Preferences** menu item in Studio Pro.
@@ -98,7 +98,11 @@ The Mendix Docker buildpack supports the following Kubernetes versions:
 
 ### 6.3 Java
 
-When running Mendix on a server, you will need Java Runtime Environment (JRE) 11 or 17. To download an OpenJDK distribution from Adoptium, see [Adoptium Installation](https://adoptium.net/temurin/releases). To download a commercial Oracle distribution, see [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
+When running Mendix on a server, you will need Java Runtime Environment (JRE) 11. To download an OpenJDK distribution from Adoptium, see [Adoptium Installation](https://adoptium.net/temurin/releases). To download a commercial Oracle distribution, see [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
+
+{{% alert color="warning" %}}
+As Java 11 approaches the end of support in October, 2024, compatibility with Java 17 is planned for Q1 2024.
+{{% /alert %}}
 
 {{% alert color="info" %}}
 There is an issue since Java 7 that causes timeouts when using web services with a certain amount of data. You can circumvent this issue by adding the VM params `-Djava.net.preferIPv4Stack=true`. Mendix Studio Pro will do this for you, but if you are running Mendix on premises on a Windows server, you will need to do this yourself. For more information about this issue, see [Possible Bug in Java 7](https://community.oracle.com/tech/developers/discussion/comment/9987709).
@@ -181,7 +185,7 @@ Depending on your app's complexity, these minimum hardware requirements might no
 MxBuild is a Windows and Linux command-line tool that can be used to build a Mendix Deployment Package. For more information, see [MxBuild](/refguide8/mxbuild/).
 
 * Mono v5.20.x or .NET v4.7.2
-* JDK 11 or 17
+* JDK 11
 
 ## 13 mx Command-Line Tool {#mxtool}
 

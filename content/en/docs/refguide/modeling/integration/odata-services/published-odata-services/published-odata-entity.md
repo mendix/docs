@@ -176,6 +176,6 @@ Select the options to include for the **Readable** OData capability.
 * **Top supported** – This option indicates whether clients can specify that they want to retrieve only a limited number of items. Enable this option when [Use paging](#paging) is selected.
 * **Skip supported** – This option indicates whether clients can specify the number of items in the queried collection that are to be skipped and not included in the result. Enable this option when [Use paging](#paging) is selected.
 
-The **Top supported** and **Skip supported** queries are required for pagination, when the server allows the client to request only a subset of the data and skips the first **n*** objects. [Paging](#paging) occurs when the client requests a lot of data and the server returns a subset and a link to request the rest.
+The **Top supported** and **Skip supported** queries are required for pagination, when the server allows the client to request only a subset of the data and skips the first **n** objects. [Paging](#paging) occurs when the client requests a lot of data and the server returns a subset and a link to request the rest.
 
 For more information, see the [System Query Option $top and $skip](https://www.odata.org/getting-started/basic-tutorial/#topskip) in the *Basic Tutorial* on OData.org

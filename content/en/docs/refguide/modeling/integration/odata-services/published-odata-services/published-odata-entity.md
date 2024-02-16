@@ -139,7 +139,7 @@ A published OData entity is always readable.
 
 There are two options to handle an incoming GET request for a published entity:
 
-1. **Read from database** – This action will parse the incoming OData query to a database query and retrieve the data from the database. This is the default action for *Readable* section. This action is not applicable to non-persistable entities, because non-persistable entities cannot be retrieved from the database.
+1. **Read from database** – This action will parse the incoming OData query to a database query and retrieve the data from the database. This is the default action for **Readable** section. This action is not applicable to non-persistable entities, because non-persistable entities cannot be retrieved from the database.
 2. **Call a microflow** – This action will call a microflow. You can specify your custom logic in this microflow to return a list of objects that correspond to the incoming request.
 
 You can also set the [query options](#query-options) for each request.
@@ -176,6 +176,6 @@ Select the options to include for the **Readable** OData capability.
 * **Top supported** – This option indicates whether clients can specify that they want to retrieve only a limited number of items. Enable this option when [Use paging](#paging) is selected.
 * **Skip supported** – This option indicates whether clients can specify the number of items in the queried collection that are to be skipped and not included in the result. Enable this option when [Use paging](#paging) is selected.
 
-The **Top supported** and **skip supported** queries are required for pagination, when the server allows the client to request only a subset of the data and skips the first *n* objects. [Paging](#paging) occurs when the client requests a lot of data, and the server returns a subset and a link to request the rest.
+The **Top supported** and **Skip supported** queries are required for pagination, when the server allows the client to request only a subset of the data and skips the first **n*** objects. [Paging](#paging) occurs when the client requests a lot of data and the server returns a subset and a link to request the rest.
 
 For more information, see the [System Query Option $top and $skip](https://www.odata.org/getting-started/basic-tutorial/#topskip) in the *Basic Tutorial* on OData.org

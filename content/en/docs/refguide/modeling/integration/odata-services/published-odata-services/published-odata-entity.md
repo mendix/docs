@@ -18,15 +18,15 @@ For an overview of OData services, see [Published OData Services](/refguide/publ
 
 ### 2.1 Add an Entity
 
-Click **Add** in the **Entities** pane of the **Published OData Service** window to open the **Select Entity** window. Select an entity to publish and click **Select**.
+In the **Entities** pane of the **Published OData Service** window, click **Add** to open the **Select Entity** window. Select an entity to publish and click **Select**.
 
-An alternative way to add an entity is by right-clicking an entity in the **Domain Model** and choosing **Publish in OData service**. You will be asked to select a published OData service, or create a new one. 
+An alternative way to add an entity is by right-clicking an entity in the domain model and choosing **Publish in OData service**. You can select a published OData service or create a new one. 
 
 ### 2.2 Edit a Published Entity
 
 In the **Entities** pane of the **Published OData Service** window, select an entity and click **Edit** to display the **Edit published entity** window. 
 
-It is possible to select another **Entity** or view the entity in the domain model by clicking **Show**.
+It is possible to select another entity or view the entity in the domain model by clicking **Show**.
 
 You can see the location where the entity is published in **Example of location**.
 
@@ -34,9 +34,9 @@ In the **Public documentation** tab, you can provide a summary and a description
 
 ## 3 Selecting Published Attributes and Associations {#exatass}
 
-When you have selected an entity in the list to the left, its published attributes and associations are shown in the list to the right. In this list, you can add, edit, delete and move these attributes and associations.
+When you have selected an entity in the list to the left, its published attributes and associations are shown in the list to the right. In this list, you can add, edit, delete, and move these attributes and associations.
 
-Attributes of published entities are **Nillable** by default. This means that if their value is empty then they will be encoded as explicit nulls in the OData content. If **Nillable** is unchecked for an attribute, the attribute cannot be empty (as this will result in a runtime error).
+Attributes of published entities are **Nillable** by default. This means if their value is empty, they will be encoded as explicit nulls in the OData content. If **Nillable** is unchecked for an attribute, the attribute cannot be empty (as this will result in a runtime error).
 
 {{% alert color="info" %}}
 
@@ -48,7 +48,7 @@ Attributes of type **Binary** cannot be exported through OData services except f
 
 For published OData services, the **Can be empty** checkbox appears when you edit a published attribute. 
 
-When the checkbox Can be empty is unselected, and there is no **Required** validation rule set, you will be prompted to add a 'required' validation rule or use a before commit microflow to ensure that end-users do not leave it empty.
+When the checkbox is unselected and there is no **Required** validation rule set, you are prompted to add a required validation rule or use a before commit microflow to ensure end-users do not leave it empty.
 
 ## 4 Mapping from Internal Names to Exposed Names
 
@@ -62,7 +62,7 @@ Location URIs must be unique. Publishing two different entities at the same loca
 
 Attributes and associations can be customized in the same way by clicking **Edit** in the list on the right. 
 
-For associations, the exposed name is the name given to the navigation property (which is the property referring to the associated object (or objects)). The default is the same as the name of the association in the domain model.
+For associations, the exposed name is the name given to the navigation property, which is the property referring to the associated object (or objects). The default is the same as the name of the association in the domain model.
 
 {{% alert color="info" %}}
 
@@ -76,23 +76,23 @@ These features make it easier to refactor the domain model without affecting ext
 
 It is possible to customize the name of the entity set that is displayed in the **Exposed set name** field of the **Edit published entity** window. This forms the last part of the URL of the published entity as given in the **Example of location**.
 
-Default: *{Entity name}s*
+Default: {Entity name}s
 
 ## 6 Use Paging {#paging}
 
-The **Use paging** option is used to set a maximum number of objects per response and include a link to the next set of objects. A client such as [Tableau](https://www.tableau.com) is able use this to display progress and automatically continue to follow the links until all the data is retrieved. The memory usage of the clients can be improved if paging is set to a reasonable page size.
+The **Use paging** option is used to set a maximum number of objects per response and includes a link to the next set of objects. A client such as [Tableau](https://www.tableau.com) is able use this to display progress and automatically continue to follow the links until all the data is retrieved. The memory usage of the clients can be improved if paging is set to a reasonable page size.
 
-Default: *No*
+Default: **No**
 
 When set to **Yes**, select **Top supported** and **Skip supported** [query options](#query-options).
 
-Setting **Use paging** to **Yes** may result in inconsistency in the retrieved data because the data will not be retrieved in a single transaction. As an example, sorting on the **Age** attribute in an entity called **Customer** and retrieving customers set to 1000 objects per page. If a customer is deleted between two calls, then the customer with **Age** 23 at position 1001 then moves to position 1000. This means that the object that would be the first item on the second page is moved to the first page and is no longer retrieved. Similarly, data inserted between calls can result in a duplication of the data. This option should only be used when this kind of inconsistency is acceptable.
+Setting **Use paging** to **Yes** may result in inconsistency in the retrieved data because the data will not be retrieved in a single transaction. As an example, sorting on the **Age** attribute in an entity called **Customer** and retrieving customers set to 1000 objects per page. If a customer is deleted between two calls, then the customer with **Age** 23 at position 1001 moves to position 1000. This means the object that would be the first item on the second page is moved to the first page and is no longer retrieved. Similarly, data inserted between calls can result in a duplication of the data. This option should only be used when this kind of inconsistency is acceptable.
 
 ## 7 Page Size
 
 When **Use paging** is set to **Yes**, the number of objects per page can be set in **Page size**.
 
-Default: *10000*
+Default: **10000**
 
 ## 8 Key {#key}
 
@@ -100,9 +100,9 @@ Every entity in Mendix has an [ID](/refguide/odata-representation/#id-representa
 
 Select a combination of attributes with the following constraints:
 
-* Unique – The combination of key attributes should be unique, so each key points to exactly one object.
+* Unique – The combination of key attributes should be unique so each key points to exactly one object.
 * Required – If one of the key attribute values is empty, you cannot find an object with it anymore.
-* Stable over time – The attribute values used for the key should not change, so that you can find it again later.
+* Stable over time – The attribute values used for the key should not change so you can find it again later.
 
 Having an [index](/refguide/indexes/) for the key attribute (or attributes) makes retrieving objects by key perform better.
 
@@ -139,7 +139,7 @@ A published OData entity is always readable.
 
 There are two options to handle an incoming GET request for a published entity:
 
-1. **Read from database** – This action will parse the incoming OData query to a database query and retrieve the data from the database. This is the default action for *Readable* section. This action is not applicable to non-persistable entities, because non-persistable entities cannot be retrieved from the database.
+1. **Read from database** – This action will parse the incoming OData query to a database query and retrieve the data from the database. This is the default action for **Readable** section. This action is not applicable to non-persistable entities, because non-persistable entities cannot be retrieved from the database.
 2. **Call a microflow** – This action will call a microflow. You can specify your custom logic in this microflow to return a list of objects that correspond to the incoming request.
 
 You can also set the [query options](#query-options) for each request.
@@ -176,6 +176,6 @@ Select the options to include for the **Readable** OData capability.
 * **Top supported** – This option indicates whether clients can specify that they want to retrieve only a limited number of items. Enable this option when [Use paging](#paging) is selected.
 * **Skip supported** – This option indicates whether clients can specify the number of items in the queried collection that are to be skipped and not included in the result. Enable this option when [Use paging](#paging) is selected.
 
-The **Top supported** and **skip supported** queries are required for pagination, when the server allows the client to request only a subset of the data and skips the first *n* objects. [Paging](#paging) occurs when the client requests a lot of data, and the server returns a subset and a link to request the rest.
+The **Top supported** and **Skip supported** queries are required for pagination, when the server allows the client to request only a subset of the data and skips the first **n** objects. [Paging](#paging) occurs when the client requests a lot of data and the server returns a subset and a link to request the rest.
 
 For more information, see the [System Query Option $top and $skip](https://www.odata.org/getting-started/basic-tutorial/#topskip) in the *Basic Tutorial* on OData.org

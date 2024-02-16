@@ -27,7 +27,9 @@ In the **Versioning with Git** section, Scrum Masters can migrate apps from SVN 
 
 ## 3 Team Server URL
 
-The **Team Server URL** can be used to directly access your app content. On SVN you can see all the files and branches of your app. The URL can have the following form:
+The **Team Server URL** can be used to manually access the repo (using the Git/SVN command line). For SVN you can also browse URLs using the browser. 
+
+The URL can have the following form:
 
 * `https://git.api.mendix.com/<your AppID>.git` if it is a Git-enabled app
 * `https://teamserver.sprintr.com/<your AppID>/` if it is an SVN-enabled app that you access using your Mendix credentials
@@ -44,9 +46,7 @@ If you are connecting to Git, or connecting to SVN using a PAT, you need to crea
 
 When connecting, your username is your Mendix account username, and your password is the PAT you created. When connecting to Git, you can also use the word *pat* as your username.
 
-### 3.1 Using the Command Line
-
-If you want to clone/checkout your repository using the command line, you must include your PAT as part of the command.
+To clone/checkout your repository using the command line, you must include your PAT as part of the command.
 
 For Git, the command has the form `git clone https://pat:{USERPAT}@git.api.mendix.com/{APPID}.git`, where `{USERPAT}` is your PAT.
 

@@ -325,7 +325,7 @@ A topic is named in the form of `businessevents.<channel>.<EventBrokerSpace>`. A
 
 ## 7 Local Testing {#local-testing}
 
-For development and testing it may be useful to run all your apps on your local workstation, including the Event Broker. You can do this by creating an event broker, a Kafka cluster, on your workstation by running Kafka through `docker-compose`.
+For development and testing, it is useful to run all your apps on your local workstation, including the event broker, which can be done by running Kafka through `docker-compose`.
 
 ### 7.1 Using the Business Events Local Setup Tool {#local-setup}
 
@@ -335,7 +335,7 @@ Start your docker cluster using the command `docker-compose up`. This will downl
 
 ### 7.2 Using PostgreSQL Database (Optional) {#postgres-db}
 
-You can configure the app running in Studio Pro to use the postgres database created using docker. Remember to use a different database name for every app.
+You can configure the app running in Studio Pro to use the postgres database created using Docker. Remember to use a different database name for every app.
 
 {{< figure src="/attachments/appstore/services/business-events/postgres.png" >}}
 
@@ -361,11 +361,11 @@ Here is an example of postgres service that you can add to your `docker-compose.
 
 2. Can I publish my own events from other software directly to a Kafka topic?
 
-    No, that is currently not supported when using Mendix Cloud Event Broker.  This can be achieved on [your own Kafka cluster](#byok).
+    No, that is currently not supported when using Mendix Cloud Event Broker. This can be achieved on [your own Kafka cluster](#byok).
 
 3. Can I send related or associated objects as a single business event?
 
-    No, only a flat object. For complex data structures, provide an API where the consuming app can retrieve the complex structure upon retrieval of a Business Event. Alternatively, you can use a string attribute in the Business Event to store JSON or XML using mappings.
+    No, only a flat object. For complex data structures, provide an API where the consuming app can retrieve the complex structure upon retrieval of a business event. Alternatively, you can use a string attribute in the business event to store JSON or XML using mappings.
 
 4. I want to replicate data between my Mendix apps. Should I use business events?
 
@@ -373,11 +373,11 @@ Here is an example of postgres service that you can add to your `docker-compose.
 
 5. Are business events guaranteed to be delivered only once?
 
-    The **Outbox** will publish each business event only once.  This does not prevent business logic from sending duplicate messages to the [Outbox](#be-entities).
+    The [Outbox](#be-entities) will publish each business event only once. This does not prevent business logic from sending duplicate messages to the Outbox.
 
 6. Are business events guaranteed to be delivered in the original sequence?
 
-    Events will be delivered in the sequence they are produced. The Mendix Business Events service, however, persists the event to the **Entity** table in this order. Once the entity is persisted it triggers the microflow for the persisted entity. A failure in the microflow can cause data to become out of sequence. Event ordering is not currently a feature of the Mendix Business Event service.
+    Events are delivered in the sequence they are produced. The Mendix Business Events service, however, persists the event to the **Entity** table in this order. Once the entity is persisted, it triggers the microflow for the persisted entity. A failure in the microflow can cause data to become out of sequence. Event ordering is not currently a feature of the Mendix Business Event service.
 
 7. How do I detect and correct failed processing of received events?
 
@@ -385,7 +385,7 @@ Here is an example of postgres service that you can add to your `docker-compose.
 
 8. How do I configure which Kafka cluster to use?
 
-    During modelling, you can use the **Constants** described in the [Configuring Local Deployments](#config-local-deployment) section to configure to a local or other Kafka. This does not transfer through to runtime.
+    During modeling, you can use the **Constants** described in the [Configuring Local Deployments](#config-local-deployment) section to configure to a local or other Kafka. This does not transfer through to runtime.
 
 9. How do I delete or clean up events and tasks?
 
@@ -397,7 +397,7 @@ Here is an example of postgres service that you can add to your `docker-compose.
 
 11. How do I know events are consumed successfully?
 
-    The flow of events are controlled by the persistence of the event to the **Consumed Business Event** entity (see [Business Event Entities](#be-entities)).  The flow will not continue in the case of such a failure.   They only cause for such failure would be database-related and unlikely to occur.
+    The flow of events are controlled by the persistence of the event to the **Consumed Business Event** entity (see [Business Event Entities](#be-entities)).  The flow will not continue in the case of such a failure. They only cause for such failure would be database-related and is unlikely to occur.
 
     On the microflow, a log message action can be added after the start action in order to track the movement. Refer to the [Dead Letter Queue for Failed Messages](#dead-letter-queue) section for more information.
 

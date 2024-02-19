@@ -25,7 +25,7 @@ The following frameworks are required. They will be installed automatically by t
 * Microsoft .NET 6.0.x desktop runtime (x64) and all applicable Windows security patches
 * Microsoft Visual C++ 2015 Redistributable Package (x64)
 * Microsoft Visual C++ 2019 Redistributable Package (x64)
-* A Java Developer Kit (JDK) version 11 or 17 - the flavor which will be installed, if correct version of Java is not already installed on your machine, depends on which version of Studio Pro you are installing
+* A Java Developer Kit (JDK) version 11 or 17 - the flavor which will be installed if the correct version of Java is not already installed on your machine—this depends on which version of Studio Pro you are installing
     * AdoptOpenJDK 11 (x64) – for Mendix 9.13 and below
     * Adoptium Temurin JDK 11 (x64) – for Mendix 9.14 to 9.17
     * Eclipse Temurin JDK 11 (x64)– for Mendix between 9.18.1 and 9.18.15

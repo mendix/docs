@@ -13,26 +13,22 @@ This guide covers how to use REST to send and retrieve files, including images, 
 You will learn about the following:
 
 * [Creating a REST service](#create-service) from a **System.Image** or **System.FileDocument** entity
-    * [Trying out, or testing,](#test-service) the service
+    * [Trying out or testing](#test-service) the service
     * [Setting the MIME type](#set-mime-type) for supported files
 * [Retrieving files](#retrieve-files) with REST
 
-If you are only interesting in consuming files, you can skip down to the [Retrieve Images and Files with REST](#retrieve-files) section.
+If you are only interested in consuming files, you can skip down to the [Retrieve Images and Files with REST](#retrieve-files) section.
 
 ### 1.1 Prerequisites
 
-To publish or retrieve files with REST, do the following:
-
-* Install Studio Pro
-
-Mendix recommends reading the following for some more background:
+It is recommend to read the following for some more background information:
 
 * [Publishing](/howto/integration/publish-rest-service/) and [consuming](/howto/integration/consume-a-rest-service/) REST services
 * Working with [Images, Videos, and Files](/refguide/image-and-file-widgets/) in Studio Pro
 
 ## 2 Send Files with REST {#create-service}
 
-Imagine that your app is functioning as a content management system (CMS), and you want to be able to send and receive images and files. You can publish the generalized entities as a REST service, which exposes the binary data of files stored in the entity.
+Imagine your app is functioning as a content management system (CMS) and you want to be able to send and receive images and files. You can publish the generalized entities as a REST service, which exposes the binary data of files stored in the entity.
 
 ### 2.1 Publishing the Service {#publish-service}
 
@@ -47,11 +43,11 @@ To publish the **System.Image** or **System.Filedocument** entities as a [REST s
      {{< figure src="/attachments/refguide/modeling/integration/rest-binary/starting-entity.png" >}}
 
 4. Generate the overview pages for the file or image entity, then link them to the home page and navigation.
-     * Right click on the **System.Image** or **System.FileDocument** entity that you want to publish, and click **Generate overview pages**. 
+     * Right-click on the **System.Image** or **System.FileDocument** entity that you want to publish and click **Generate overview pages**. 
      * Add a button to the home page that links to the **Overview** page you created.
 
 5. Expose the entity as a REST resource.
-     * Right-click on the **System.Image** or **System.FileDocument** entity that contains the file (or files) that you want to publish, and click **Expose as a REST resource**.
+     * Right-click on the **System.Image** or **System.FileDocument** entity that contains the file (or files) that you want to publish and click **Expose as a REST resource**.
      * Click **Select** next to the **Service** field, then click on the folder where you want to create the service and click **New**. Enter a name for the REST service and click **OK**.
 
 6. Back in the **Generate resource and operations** window, select **MyFileID** as the **Key attribute** and check the boxes for the following **Operations***:
@@ -64,13 +60,13 @@ To publish the **System.Image** or **System.Filedocument** entities as a [REST s
 
 7. Click **OK**. 
 
-The **Published REST service** document for the exposed image or file entity has been created and is now open on your screen. 
+The **Published REST service** document for the exposed image or file entity has been created and is now open. 
 
 After you run your app, click the URL in the **Location** field to view the OpenAPI specs.
 
 #### 2.1.1 Understanding the Service Details {#service-details}
 
-Open your published REST service, then double-click the **Get by** key, or single-click and click **Edit**, to open the **Get by** property details. By default, the **Get by** key will return a binary response. The **Export mapping** is blank because a binary object without an export mapping returns binary content.
+Open your published REST service, then double-click the **Get by** key, or single-click and click **Edit** to open the **Get by** property details. By default, the **Get by** key will return a binary response. The **Export mapping** is blank because a binary object without an export mapping returns binary content.
 
 {{< figure src="/attachments/refguide/modeling/integration/rest-binary/no-export-mapping.png" >}}
 
@@ -78,9 +74,9 @@ Click **Show** next to the **Microflow** field to view the **MyFirstModule.MyFil
 
 ### 2.2 Adding the MIME Type to a GET Microflow {#set-mime-type}
 
-A `GET` request to the REST endpoint you created (in this example, `http://localhost:8080/rest/cmsapi/v1/myfile/1`) will return the binary for the first uploaded file. We need to specify the expected media type so that it returns the file in the expected way (for example, displaying an image).
+A `GET` request to the REST endpoint you created (in this example, `http://localhost:8080/rest/cmsapi/v1/myfile/1`) will return the binary for the first uploaded file. We need to specify the expected media type so it returns the file in the expected way (for example, displaying an image).
 
-In the **GET_ByKey** microflow, specify the media type (or MIME type) in the content headers. To learn more about content headers in microflows, see the **Return a file document** entry in the [Microflow](/refguide/published-rest-operation/#microflow) section of *Published REST Operation*. Detailed steps are explained below.
+In the **GET_ByKey** microflow, specify the media type (or MIME type) in the content headers. To learn more about content headers in microflows, see the **Return a file document** entry in the [Microflow](/refguide/published-rest-operation/#microflow) section of *Published REST Operation*. 
 
 See [Common MIME types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types) for a generic, external list of common content header types.
 

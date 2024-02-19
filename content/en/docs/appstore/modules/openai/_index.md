@@ -1,9 +1,11 @@
 ---
 title: "OpenAI"
-url: /appstore/connectors/openai-connector/
+url: /appstore/modules/openai-connector/
 linktitle: "OpenAI"
 description: "Describes the configuration and usage of the OpenAI Connector from the Mendix Marketplace that allows developers to integrate generative AI into your Mendix app."
 tags: ["OpenAI", "generative AI", "AI", "connector", "marketplace", "chatgpt", "dall-e", "genAI", "embeddings", "RAG", "Azure OpenAI"]
+aliases:
+    - /appstore/connectors/openai-connector/
 ---
 
 ## 1 Introduction {#introduction}

@@ -1,9 +1,11 @@
 ---
 title: "Email"
-url: /appstore/connectors/email-connector/
+url: /appstore/modules/email-connector/
 category: "Connectors"
 description: "Describes the configuration and usage of the Email Connector module, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "imap", "pop3", "email", "platform support", "encryption", "templates"]
+aliases:
+    - /appstore/connectors/email-connector/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -16,7 +18,7 @@ The [Email](https://marketplace.mendix.com/link/component/120739) connector allo
 The Email connector includes the following features:
 
 * Configuration of multiple email accounts
- 
+
     * Supports basic authentication and creating an account with OAuth 2.0 (via authorization code flow or client credentials flow) to configure Microsoft Entra ID (formerly known as Azure Active Directory) accounts
     * Supports shared mailboxes using basic and OAuth 2.0 authentication
 * Digital signatures and encryption

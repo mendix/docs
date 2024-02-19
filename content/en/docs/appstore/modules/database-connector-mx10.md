@@ -1,9 +1,11 @@
 ---
 title: "External Database Connector"
-url: /appstore/connectors/external-database-connector/
+url: /appstore/modules/external-database-connector/
 category: "Connectors"
 description: "Describes the configuration and usage of the new Database connector, which incorporates your external data directly in your Mendix app."
 tags: ["marketplace",  "marketplace component", "database connector", "mendix 10", "studio pro 10", "query", "mssql", "mysql", "postgresql", "oracle", "new"]
+aliases:
+    - /appstore/connectors/external-database-connector/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
@@ -133,7 +135,7 @@ Use the Query External Database activity to call the database in a microflow. Do
 5. In the Output field, select if you want to **Use return value**.
 
     {{< figure src="/attachments/appstore/connectors/external-database-connector/return-type.png" >}}
- 
+
 6. Click **OK**.
 7. Configure the end event (such as displaying a list, if you are selecting data to appear in a list). 
 

@@ -11,7 +11,7 @@ aliases:
 
 ## 1 Introduction
 
-Using server-side paging and sorting for a microflow data source, you can model out how you retrieve data to a single page and ensure it ends up in the correct sorting order. With this approach, you do not need to return all the data to the client — you can just return a single page. This can be helpful for getting data from external sources like a REST service, but can also be useful for a regular retrieve activity in a microflow. To do this, however, you must model the logic for getting the correct data in the microflow itself.
+Using server-side paging and sorting for a microflow data source, you can model out how you retrieve data to a single page and ensure it ends up in the correct sorting order. With this approach, you do not need to return all the data to the client — you can just return a single page. This can be helpful for getting data from external sources like a REST service, but can also be useful for a regular retrieve activity in a microflow. To do this, you must model the logic for getting the correct data in the microflow itself.
 
 This how-to teaches you how to do the following:
 
@@ -22,14 +22,14 @@ This how-to teaches you how to do the following:
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* If you are not familiar with using data from REST services, read [Consume a REST Service](/howto/integration/consume-a-rest-service/)
 * Install Studio Pro [8.2.0 or above](https://marketplace.mendix.com/link/studiopro/)
+* If you are not familiar with using data from REST services, read [Consume a REST Service](/howto/integration/consume-a-rest-service/)
 
 ## 3 Creating a Microflow Data Source
 
 In this section, you will create a JSON structure and import mapping for a REST service. To do this, complete the first four sections of [Consume a REST Service](/howto/integration/consume-a-rest-service/) — (until **Adding an Input Entity to the Domain Model** is done). 
 
-You must complete these steps with one crucial change: you must use this REST service URL for your JSON snippet: `https://my-json-server.typicode.com/mendix/howto-api-data/airports`.
+Complete these steps with one crucial change: you must use this REST service URL for your JSON snippet: `https://my-json-server.typicode.com/mendix/howto-api-data/airports`.
 
 Once successful, your app should have the following elements:
 
@@ -69,9 +69,10 @@ Now, you can start calling the REST service from your microflow data source. To 
     {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/call-rest-response.png" alt="variable result"   width="500"  >}}
 
 10. From the **Toolbox**, drag the **Retrieve** activity into the microflow and double-click it.
-11. Click **Association** > **Select**, click **Expand All**, and select **JsonObject_Summary (List of NativeMobile.JsonObject)**. 
-12. Click **OK** to accept this association.
-13. Right-click the **Retrieve** activity and select **Set $JsonObjectList as return value**:
+11. Click **Association** > **Select**.
+12. Click **Expand All** and select **JsonObject_Summary (List of NativeMobile.JsonObject)**. 
+13. Click **OK** to accept this association.
+14. Right-click the **Retrieve** activity and select **Set $JsonObjectList as return value**:
 
     {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/call-rest-returned.png" alt="set return value"   width="500"  >}}
 
@@ -92,7 +93,7 @@ In the previous section, you created a microflow which returns a list of charact
 
     {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/auto-fill.png" alt="click yes"   width="500"  >}}
 
-8. When you see the  **“Do you want to generate controls for microflow source parameters of the data grid? This will enable server-side paging sorting and searching for the grid.”** pop-up window, click **Yes**:
+8. When you see the **“Do you want to generate controls for microflow source parameters of the data grid? This will enable server-side paging sorting and searching for the grid.”** pop-up window, click **Yes**:
 
     {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/question-dialog.png" alt="click yes again"   width="500"  >}}
 

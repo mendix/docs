@@ -103,21 +103,20 @@ This generates a data view around your data grid, creates the necessary widgets 
 
 ## 5 Adding Paging Support to the Microflow Data Source
 
-In the previous section, you added the **Paging** input parameter to your microflow. This parameter contains the **PageNumber** attribute which is updated when you navigate through the pages with the paging bar in the client. In this section, you will use the **PageNumber** attribute to retrieve a specified page from your REST service:
+In the previous section, you added the **Paging** input parameter to your microflow. This parameter contains the **PageNumber** attribute, which is updated when you navigate through the pages with the paging bar in the client. In this section, you will use the **PageNumber** attribute to retrieve a specified page from your REST service:
 
 1. Open the **CallREST** microflow.
-2. Double-click the **Call REST service** activity. 
-3. Click **Location** > **Edit**.
-4. Change **Template** to `https://my-json-server.typicode.com/mendix/howto-api-data/airports?_limit=5&_page={1}`:
+2. Double-click the **Call REST service** activity and click **Location** > **Edit**.
+3. Change **Template** to `https://my-json-server.typicode.com/mendix/howto-api-data/airports?_limit=5&_page={1}`:
 
     {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/template-param-one.png" alt="add page bit to template"   width="500"  >}}
 
-5. Click **Parameters** > **New** for a new parameter and enter the following expression `toString($Paging/PageNumber)` for this parameter:
+4. Click **Parameters** > **New** for a new parameter and enter the expression `toString($Paging/PageNumber)` for this parameter:
 
     {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/page-parameter.png" alt="add page number parameter"   width="500"  >}}
 
-6. Click **OK** to accept this expression.
-7. Click **OK** to accept the changes for the location, and click **OK** once more to accept the changes for the **Call REST service** activity. You are now back at your microflow.
+5. Click **OK** > **OK** to accept this expression and in the location. 
+6. Click **OK** to accept the changes for the **Call REST service** activity. You are now back at your microflow.
 
 Deploy your app and navigate to the page where you added your data grid. You can now use your newly added server-side paging by using the paging bar buttons above the data grid. 
 
@@ -125,31 +124,29 @@ Deploy your app and navigate to the page where you added your data grid. You can
 
 Now, you have service-side paging for your data grid. Next, add server-side sorting to it.
 
-Clicking the header on the data grid in the client will update the **Paging** entity by setting the attribute **SortAttribute** to the attribute which is associated to the header you clicked, and the **SortAscending** is set to **true** for ascending and **false** for a descending sort order. 
+Clicking the header on the data grid in the client will update the **Paging** entity by setting the attribute **SortAttribute** to the attribute which is associated to the header you clicked. The **SortAscending** is set to **true** for ascending and **false** for a descending sort order.
 
 Use these attributes when calling your REST service:
 
 1. Open your **Call_REST** microflow.
-2. Double-click the **Call REST service** activity. 
-3. Click **Location** > **Edit**.
-4. Add `&_sort={2}&_order={3}` to the end of your current **Template** address:
+2. Double-click the **Call REST service** activity and click **Location** > **Edit**.
+3. Add `&_sort={2}&_order={3}` to the end of your current **Template** address:
 
     {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/appended-template.png" alt="add sort and order bits to template"   width="500"  >}}
 
-5. Click **Parameters** > **New** to add the second parameter and enter the following expression `toLowerCase($Paging/SortAttribute)`:
+4. Click **Parameters** > **New** to add the second parameter and enter the expression `toLowerCase($Paging/SortAttribute)`:
 
     {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/second-param.png" alt="add second parameter"   width="500"  >}}
 
-6. Click **OK** to accept this expression.
-7. Click **Parameters** > **New** to add the third parameter and enter the following expression `if $Paging/SortAscending then 'asc' else 'desc'`:
+5. Click **OK** to accept this expression.
+6. Click **Parameters** > **New** to add the third parameter and enter the expression `if $Paging/SortAscending then 'asc' else 'desc'`:
 
     {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/third-param.png" alt="add third parameter"   width="500"  >}}
 
-8. Click **OK** to accept this expression.
-9. Click **OK** to accept the changes in the location. 
-10. Click **OK** once more to accept the changes in the **Call REST service** activity.
+7. Click **OK** > **OK** to accept this expression and in the location. 
+8. Click **OK** to accept the changes in the **Call REST service** activity.
 
-Deploy your app again and navigate to the page with your data grid. Click the column headers to see your server-side sorting in action!
+Deploy your app again and navigate to the page with your data grid. Click the column headers to see your server-side sorting in action.
 
 {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/header-sorting-smaller2.gif" alt="click headers to sort" >}}
 
@@ -170,7 +167,7 @@ You can set a default sort order for data. When a user has not clicked a header,
 
     {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/name-value.png" alt="name value"   width="500"  >}}
 
-8. Click **OK** to accept the changes to the member, and click **OK** once more to accept the changes to the **Create object** activity.
+8. Click **OK** > **OK** to accept the changes to the member and the **Create object** activity.
 
 Deploy your app again and navigate to the page with your data grid. The data is now ordered by **Name**.
 
@@ -178,7 +175,7 @@ Deploy your app again and navigate to the page with your data grid. The data is 
 
 ### 6.2 Disabling Server-Side Sorting
 
-Apps that use a REST service which does not support sorting, or apps which do not enable users to change sorting order, require special functionality. In these cases, disable sorting so that clicking the header has no effect:
+Apps that use a REST service that does not support sorting, or apps that do not enable users to change sorting order, require special functionality. In these cases, disable sorting so that clicking the header has no effect:
 
 1. Open the page containing the data grid.
 2. Right-click the data view surrounding the data grid and select **Go to data source nanoflow**.
@@ -189,9 +186,9 @@ Apps that use a REST service which does not support sorting, or apps which do no
 
     {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/disable-sort.png" alt="value false" >}}
 
-7. Click **OK** to accept the changes to the member, and click **OK** once more to accept the changes to the **Create object** activity.
+7. Click **OK** > **OK** to accept the changes to the member and the **Create object** activity.
 
-Deploy your app again and navigate to the page with your data grid. The data is still now ordered by **Name**, but you can no longer change the sorting by clicking the header. Note the lack of an arrow above the **Name** header.
+Deploy your app again and navigate to the page with your data grid. The data is still ordered by **Name**, but you can no longer change the sorting by clicking the header. Note the lack of an arrow above the **Name** header.
 
 {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/sorting-disabled.png" alt="sorted but not clickable" >}}
 
@@ -202,13 +199,12 @@ Generating controls also generates input fields for all your attributes of the e
 You only need to use this data in your microflow and pass the search criteria to your REST call to get a filtered set of data. As an example, follow the instructions below to filter the **Name** attribute:
 
 1. Open your **Call_REST** microflow.
-2. Double-click the **Call REST service** activity.
-3. Click **Location** > **Edit**.
-4. Add `&name_like={4}` to the end of your current **Template** address:
+2. Double-click the **Call REST service** activity and click **Location** > **Edit**.
+3. Add `&name_like={4}` to the end of your current **Template** address:
 
     {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/template-add-search.png" alt="add search bits to template"   width="500"  >}}
 
-5. Click **Parameters** > **New** to add the fourth parameter and enter the following expression:
+4. Click **Parameters** > **New** to add the fourth parameter and enter the following expression:
 
     ```text {linenos=false}
     if $Paging/Name = empty then '' else $Paging/Name
@@ -216,9 +212,8 @@ You only need to use this data in your microflow and pass the search criteria to
 
     {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services/server-side-paging/fourth-param.png" alt="add fourth parameter"   width="500"  >}}
 
-6. Click **OK** to accept this expression.
-7. Click **OK** to accept the changes in the location. 
-8. Click **OK** once more to accept the changes in the **Call REST service** activity.
+5. Click **OK** > **OK** to accept this expression and the changes in the location. 
+6. Click **OK** to accept the changes in the **Call REST service** activity.
 
 Deploy your app again and navigate to the page with your data grid. Enter a value for a part of the name, for example, *International*, and click **Search** to see your server-side searching in action!
 

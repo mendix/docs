@@ -434,7 +434,7 @@ This example shows a **CustomerEmailRequest** entity that a client can create us
 
 ### 6.4 Running Operations Asynchronously 
 
-Consider running operations that take longer to complete [asynchronously](https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design#asynchronous-operations). This means you tell the client that the request has been received, that it is not yet completely processed, but that it will be done in the background. In Mendix Studio Pro, you can use a [task queue](/refguide/task-queue/) to schedule the logic to run in the background. In the meantime, the client can `GET` the resource to see what the status is.
+Consider running operations that take longer to complete [asynchronously](https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design#asynchronous-operations). This means you tell the client that the request has been received, that it is not yet completely processed, but that it will be done in the background. In Studio Pro, you can use a [task queue](/refguide/task-queue/) to schedule the logic to run in the background. In the meantime, the client can `GET` the resource to see what the status is.
 
 The last activity of the insert microflow calls the SendCustomerEmail microflow using the task queue:
 
@@ -456,7 +456,7 @@ The response is as follows:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/call-send-email-logic.png" width="300" >}} 
 
-When you `GET` the resource from the location provided, the status has the value *Sent*, indicating that the logic has completed. See the following `GET` request:
+When you `GET` the resource from the location provided, the status has the value **Sent**, indicating that the logic has completed. See the following `GET` request:
 
 ```
 GET http://localhost:8080/odata/CustomerApi/v1/CustomerEmailRequests(12)
@@ -468,9 +468,9 @@ The response is as follows:
 
 ## 7 Versioning {#versioning}
 
-Reliable versioning is important for APIs. Client applications should trust your API to not make any incompatible changes that will cause the app to malfunction. Any change you make to an API should always be backwards-compatible, though backwards-incompatible changes can be made in a new major version. Breaking changes can only be introduced in a new major version, offering the end-user a period of time where they can migrate from the old version to the new version. This means you need to the ability to run two versions of the same API side by side.
+Reliable versioning is important for APIs. Client applications should trust your API to not make any incompatible changes that will cause the app to malfunction. Any change you make to an API should always be backwards-compatible, though backwards-incompatible changes can be made in a new major version. Breaking changes can only be introduced in a new major version, offering the end-user a period of time where they can migrate from the old version to the new version. This means you need to have the ability to run two versions of the same API side by side.
 
-With OData, similar to REST APIs in Mendix, you have full control over how you define your versions. By default, Mendix suggests using [semantic versioning](https://semver.org/), adding the major version number to the URL. 
+With OData, similar to REST APIs in Studio Pro, you have full control over how you define your versions. By default, it is suggested you use [semantic versioning](https://semver.org/), adding the major version number to the URL. 
 
 If you need to introduce breaking changes, duplicate the entire OData service and change the major version:
 

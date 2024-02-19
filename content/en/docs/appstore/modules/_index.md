@@ -33,8 +33,7 @@ To check out which modules a category contains, click the category name, which b
 * [Tracing](#tracing)
 * [User Interface](#user-interface)
 * [Utility](#utility)
-* [Visualization](#visualization)
-* [Uncategorised(#uncategorized)
+* [Uncategorised](#uncategorized)
 
 ### 2.1 Artificial Intelligence {#artificial-intelligence}
 
@@ -172,9 +171,7 @@ To check out which modules a category contains, click the category name, which b
 * [PDF Document Generation](/appstore/modules/document-generation/)
 * [Web Actions](/appstore/modules/web-actions/)
 
-### 2.15 Visualization {#visualization}
-
-### 2.16 Uncategorized {#uncategorized}
+### 2.15 Uncategorized {#uncategorized}
 
 * [Any Chart](/appstore/modules/any-chart/)
 * [App Switcher](/appstore/modules/app-switcher/)

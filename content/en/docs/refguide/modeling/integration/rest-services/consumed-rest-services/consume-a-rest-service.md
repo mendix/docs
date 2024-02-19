@@ -12,7 +12,7 @@ aliases:
 
 ## 1 Introduction
 
-In your Mendix app, you can use information from REST services. This how-to shows you how to do that through an example in which you create an app that retrieves Wikipedia pages from a REST service. The resulting app is [available for download](/attachments/refguide/modeling/integration/consume-a-rest-service/WikipediaApi.mpk).
+In your Mendix app, you can use information from REST services. This how-to shows you how to do that through an example where you create an app that retrieves Wikipedia pages from a REST service. The resulting app is [available for download](/attachments/refguide/modeling/integration/consume-a-rest-service/WikipediaApi.mpk).
 
 This how-to teaches you how to do the following:
 
@@ -22,16 +22,18 @@ This how-to teaches you how to do the following:
 
 The Wikipedia REST service allows you to retrieve the summary of a page. This service can be reached at `https://en.wikipedia.org/api/rest_v1/page/summary/{title}`, where `{title}` is the title of a page.
 
-We will start by providing Studio Pro as an example of what the REST service returns:
+The steps below use Studio Pro as an example of what the REST service returns:
 
 1. Open your browser and go to [https://en.wikipedia.org/api/rest_v1/page/summary/Tahiti](https://en.wikipedia.org/api/rest_v1/page/summary/Tahiti).
-2. This calls the REST service with a GET request – the result is the summary of the [Tahiti page on Wikipedia](https://en.wikipedia.org/wiki/Tahiti) in the JSON format:
+   
+   This calls the REST service with a `GET` request. The result is the summary of the [Tahiti page on Wikipedia](https://en.wikipedia.org/wiki/Tahiti) in JSON format:
 
     {{< figure src="/attachments/refguide/modeling/integration/consume-a-rest-service/get-call-result.png" alt="Screenshot of the result of the rest call" >}}
 
-3. Select the **Raw Data** tab and copy the whole whole JSON snippet.
-4. Create a module and name it *RESTconsume*. Add the new [JSON structure](/refguide/json-structures/) to your module: right-click the module in the **App Explorer** and select **Add other** > **JSON structure**. 
-5. Enter a **Name** for the structure: *JSON_structure* and click **OK**.
+2. Select the **Raw Data** tab and copy the whole JSON snippet.
+3. Create a module and name it *RESTconsume*. 
+4. Add the new [JSON structure](/refguide/json-structures/) to your module by right-clicking the module in the **App Explorer** and selecting **Add other** > **JSON structure**. 
+5. Enter *JSON_structure* in the **Name** field and click **OK**.
 6. In the **JSON Structure** dialog box, paste the JSON snippet in the **General** tab and click **Refresh** in the **Structure** section. This analyzes the structure of the JSON snippet and provides a representation of it.
 
     {{< figure src="/attachments/refguide/modeling/integration/consume-a-rest-service/json-structure.png" >}}
@@ -43,10 +45,10 @@ We will start by providing Studio Pro as an example of what the REST service ret
 An [import mapping](/refguide/import-mappings/) specifies how the JSON relates to [entities](/refguide/entities/). You can map the JSON to any entity you like. The following steps describe how to generate the entities and create an import mapping:
 
 1. Right-click the module in the **App Explorer** and select **Add other** > **Import Mapping**.
-2. Enter a **Name** for the import mapping: *Import_mapping* and click **OK**.
-3. In the **Select schema elements for import mapping** dialog box, click the radio button for **JSON structure** and then click **Select**.
+2. Enter *Import_mapping* in the **Name** field and click **OK**.
+3. In the **Select schema elements for import mapping** dialog box, click the radio button for **JSON structure**, then click **Select**.
 4. Double-click **JSON_structure** in the **Select JSON Structure** dialog box.
-5. Click **Expand all** and then click **Check all**.
+5. Click **Expand all** > **Check all**.
 
     {{< figure src="/attachments/refguide/modeling/integration/consume-a-rest-service/import-mapping.png" >}}
 

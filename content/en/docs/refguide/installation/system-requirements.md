@@ -20,7 +20,9 @@ Mendix Studio Pro has the requirements listed in the following sections.
 
 [Mendix Studio Pro](/refguide/modeling/) 10 is supported on 64-bit versions of Windows 10 release 1809 and above; this also includes Windows 11. 
 
-Studio Pro 10.7 and above can run on an Apple Mac on ARM and Intel Mac running macOS Sonoma and above. Studio Pro versions 10.0 and above can run on the M series Apple Silicon Mac using [Parallels 17](https://www.parallels.com/) and Windows 11. Earlier versions of Studio Pro can run on Apple Mac [using Parallels](/refguide/using-mendix-studio-pro-on-a-mac/).
+Studio Pro 10.7 and above can run on an Apple Mac on ARM and Intel Mac running macOS Sonoma 14.0 or higher. Studio Pro versions 10.0 and above can run on the M series Apple Silicon Mac using [Parallels 17](https://www.parallels.com/) and Windows 11. Earlier versions of Studio Pro can run on Apple Mac [using Parallels](/refguide/using-mendix-studio-pro-on-a-mac/).
+
+> **Note:** As new major versions of macOS are made generally available, Mendix will remove support for the oldest version and support the newest version of macOS. For the best experience, use the latest version of macOS.
 
 These are the known limitations for Mac:
 
@@ -30,6 +32,10 @@ These are the known limitations for Mac:
 * The search in the **App Explorer** does not work yet; you can use <kbd>CMD</kbd> + <kbd>G</kbd> to search for documents.
 * If you have already installed JDK previously, it may not be picked up properly during installation. You can either configure this manually or remove all references to JDK and run the installer again.
 * The installer is currently not notarized yet; you bypass the dialog box by using right-click > **Open**.
+
+{{% alert color="warning" %}}
+Administrator rights are required to install Mendix Studio Pro Beta for macOS.
+{{% /alert %}}
 
 The following frameworks are required. They will be installed automatically by the Studio Pro installer, if necessary:
 
@@ -60,6 +66,10 @@ Mendix Studio Pro will run on any machine which can run the [minimum requirement
 * **Disk Space** – Studio Pro requires 2GB disk space to install, and each app you create will vary in size depending on the functionality, but will take a minimum of around 150MB
 * **RAM** – 4GB
 * **Display Resolution** –  1080p (1920x1080)
+
+{{% alert color="info" %}}
+Mendix Studio Pro Beta on macOS will run on any computer compatible with [macOS Sonoma](https://support.apple.com/en-us/105113)
+{{% /alert %}}
 
 ### 2.3 Firewall Settings {#firewall-settings}
 

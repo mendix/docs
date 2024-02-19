@@ -22,7 +22,7 @@ The **Feedback** page contains two tabs: [Inbox](#inbox) and [Archive](#archive)
 
 #### 1.1.1 What Happens to Your Team
 
-After a user reports feedback in the app using the feedback widget, the feedback item goes automatically to the [Inbox](#inbox) on the **Feedback** page, and everyone in your team will get a [notification](/developerportal/global-navigation/#notifications). If you no longer want to receive feedback notifications for a specific app, you can [stop watching](https://docs.mendix.com/developerportal/#my-apps) the app. 
+After a user reports feedback in the app using the feedback widget, the feedback item goes automatically to the [Inbox](#inbox) on the **Feedback** page, and the members in your team who are Scrum Master or who have the same permissions as the default permissions of a Scrum Master will get a [notification](/developerportal/global-navigation/#notifications). If you no longer want to receive feedback notifications for a specific app, you can [stop watching](https://docs.mendix.com/developerportal/#my-apps) the app. 
 
 Next to getting a notification in the Developer Portal, Scrum Masters of your team will also receive an email with a link to the details of the new feedback item.
 

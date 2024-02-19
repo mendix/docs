@@ -24,7 +24,7 @@ For versions below Mendix 9.12.0, [scheduled events](/refguide/scheduled-events/
 Before following the steps outlined on this page, make sure you meet the following prerequisites:
 
 * Have a licensed app hosted in Mendix Cloud.
-* Have a standard or premium plan with a cloud resource pack that provides more than 1 GiB of memory. You can find this information on the [Environment Details](/developerportal/deploy/environments-details/) page. For details on the cloud resource packs that Mendix offers, see [Cloud Resource Packs](https://docs.mendix.com/developerportal/deploy/mendix-cloud-deploy/#resource-pack).
+* Have a standard or premium plan with a cloud resource pack that provides more than 1 GiB of memory. You can find this information on the [Environment Details](/developerportal/deploy/environments-details/) page. For details on the cloud resource packs that Mendix offers, see [Cloud Resource Packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack).
 * Have Transport Rights for the environment you want to scale. For details on configuring permissions, see [Node Permissions](/developerportal/deploy/node-permissions/).
 
 ## 3 Scaling Your Environment
@@ -43,11 +43,15 @@ To scale your licensed app in Mendix Cloud, follow these steps:
 
 5. To set the number of **Instances** you want to use, drag the **Instances** indicator bar.
 
-    {{% alert color="warning" %}}The number of available instances depends on the total memory provided by your cloud resource pack and the memory per instance that you have set. It is not possible to set scaling values that exceed the memory provided by your cloud resource pack.{{% /alert %}}  
-
-6. Click **Apply**. This restarts your environment (causing brief downtime) to apply the changes.
+6. Click **Apply**. This restarts your environment to apply the changes.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/scale-environment/scale.png" class="image-border" alt="Scaling dashboard" max-width=75% >}}
+
+### 3.1 Scaling Notes
+
+* Restarting your environment to apply horizontal or vertical scaling changes causes brief downtime.
+* The number of available instances depends on the total memory provided by your cloud resource pack and the memory per instance that you have set. It is not possible to set scaling values that exceed the memory provided by your [cloud resource pack](/developerportal/deploy/mendix-cloud-deploy/#resource-pack).
+* It is not possible for a single instance to use more than 32 GiB of RAM. Some very large cloud resource packs, such as XXXL21 or XXXXL21, provide more than this 32 GiB maximum; to use the full RAM in this case, you need more than one instance. For example, to use 64 GiB of RAM, you must spread the RAM between two or more instances.
 
 ## 4 Examples
 

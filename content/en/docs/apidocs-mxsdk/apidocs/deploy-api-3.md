@@ -10,7 +10,7 @@ tags: ["API", "deploy", "licensed", "deployment", "cloud"]
 ---
 
 {{% alert color="warning" %}}
-⚠ The Deploy API version 3 is deprecated and will be removed in March 2024. Please use [Deploy API – Version 4](/apidocs-mxsdk/apidocs/deploy-api-4/) which contains all the v3 endpoints, plus additional endpoints.
+The Deploy API version 3 is deprecated and will be removed in March 2024. Please use [Deploy API – Version 4](/apidocs-mxsdk/apidocs/deploy-api-4/) which contains all the v3 endpoints, plus additional endpoints.
 
 The Deploy API only works for apps which are deployed to the Mendix Cloud.
 {{% /alert %}}
@@ -29,7 +29,7 @@ Authentication for the Deploy API v3 uses a personal access token (PAT).
 
 ### 2.1 Generating a PAT
 
-To generate a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/#pat) section in *Mendix Profile*.
+To generate a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section in *Mendix Profile*.
 
 Select the following as **Deployment Mendix Cloud** scopes:
 
@@ -43,7 +43,7 @@ Store the generated value `{GENERATED_PAT}` somewhere safe so you can use it to 
 Each request must contain an `Authorization` header with the value `MxToken {GENERATED_PAT}`. For example:
 
 ```http {linenos=false}
-GET /api/v3/clusters HTTP/1.1
+GET /apps/80a28d6e-c5fc-43d9-87c2-d7d56b07542e/environments/6b61f27c-dac9-48c5-b359-f861374ceb36/permissions HTTP/1.1
 Authorization: MxToken 7LJE…vk
 ```
 

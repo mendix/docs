@@ -5,10 +5,6 @@ tags: ["studio pro", "button", "action button", "drop-down button", "button widg
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/button-properties.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 A button can perform various actions such as calling a microflow or nanoflow or opening a page. 

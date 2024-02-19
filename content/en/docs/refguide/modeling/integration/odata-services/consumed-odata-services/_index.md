@@ -24,7 +24,9 @@ The OData implementation in Mendix does not support all features in the OData sp
 
 ### 2.1 External Entities {#external-entities}
 
-When an external entity is used in an app, the associated data for the entity is retrieved through the information in the consumed OData service contract and returned.
+#### 2.1.1 Readable External Entities
+
+When a readable external entity is used in an app, the associated data for the entity is retrieved through the information in the consumed OData service contract and returned.
 
 External entities have some limitations compared to persistable entities:
 
@@ -36,6 +38,17 @@ External entities have some limitations compared to persistable entities:
 Associations between external entities (as defined in the originating app) are shown in the domain model. You can only use the associations where both sides are published.
 
 You can create associations between local [persistable entities](/refguide/persistability/#persistable) and external entities. For those associations, the persistable entities need to be the owner.
+
+#### 2.1.2 Non-Readable External Entities
+
+When an external entity is not readable, it can still be added to the domain model. It will behave like a non-persistable entity.
+
+Non-readable external entities have the following limitations:
+
+* You cannot add attributes
+* There is no possibility to enable **System members**  `createdDate`, `changedDate`, `owner`, and `changedBy`
+* These entities cannot be turned into persistable entities
+* Non-readable external entities cannot be the owner of an association
 
 ### 2.2 External Actions {#external-actions}
 

@@ -3,7 +3,7 @@ title: "Modules"
 url: /appstore/modules/
 description: "Presents details on the modules available in the Mendix Marketplace."
 weight: 5
-no_list: false
+no_list: true
 tags: ["marketplace", "marketplace component", "module"]
 ---
 
@@ -17,30 +17,31 @@ When you download these modules, they will go into the **App** > **Marketplace m
 
 Modules in the Mendix Marketplace have the following categories. Some modules may belong to more Ethan one category. 
 
-To check out which modules a category contains, click the category name, which brings you to the corresponding section:
+To check out which modules a category contains, click the category name, which brings you to the corresponding sub-section:
 
-* Artificial Intelligence
-* Authentication
-* AWS
-* Communication
-* Connectors
-* Data
-* Import/Export
-* Internet-of-Things
-* Mobile
-* SAP Connector
-* Scheduling
-* Tracing
-* User Interface
-* Utility
-* Visualization
+* [Artificial Intelligence]()
+* [Authentication](#authentication)
+* [AWS](#aws)
+* [Communication](#communication)
+* [Connectors](#connectors)
+* [Data](#data)
+* [Import/Export](#import-export)
+* [Internet-of-Things](#internet-of-things)
+* [Mobile](#mobile)
+* [SAP Connector](#sap-connector)
+* [Scheduling](#scheduling)
+* [Tracing](#tracing)
+* [User Interface](#user-interface)
+* [Utility](#utility)
+* [Visualization](#visualization)
+* [Uncategorised(#uncategorized)
 
-## Artificial Intelligence {#artificial-intelligence}
+### 2.1 Artificial Intelligence {#artificial-intelligence}
 
 * [Amazon Bedrock](https://docs.mendix.com/appstore/connectors/aws/amazon-bedrock/)
 * OpenAI Connector
 
-## Authentication {#authentication}
+### 2.2 Authentication {#authentication}
 
 * [AWS Authentication](https://docs.mendix.com/appstore/connectors/aws/aws-authentication/)
 * [Deep Link ⚠](/appstore/modules/deep-link/)
@@ -50,7 +51,7 @@ To check out which modules a category contains, click the category name, which b
 * [OpenID Connect (OIDC) SSO](https://marketplace.mendix.com/link/component/120371)
 * [SAML](/appstore/modules/saml/)
 
-## AWS {#aws}
+### 2.3 AWS {#aws}
 
 - [AWS Authentication](https://docs.mendix.com/appstore/connectors/aws/aws-authentication/)
 
@@ -88,7 +89,7 @@ To check out which modules a category contains, click the category name, which b
 
 - [Amazon SQS](https://docs.mendix.com/appstore/connectors/aws/amazon-sqs/)
 
-## Communication {#communication}
+### 2.4 Communication {#communication}
 
 * [Data Widgets](/appstore/modules/data-widgets/)
   * [Data Grid 2](/appstore/modules/data-grid-2/)
@@ -97,7 +98,7 @@ To check out which modules a category contains, click the category name, which b
 * [Mendix Feedback](/appstore/modules/mendix-feedback/)
 * [Push Notifications Connector](/appstore/modules/push-notifications/)
 
-## Connectors {#connectors}
+### 2.5 Connectors {#connectors}
 
 * [Amazon Bedrock](https://docs.mendix.com/appstore/connectors/aws/amazon-bedrock/)
 * [AWS Authentication](https://docs.mendix.com/appstore/connectors/aws/aws-authentication/)
@@ -108,14 +109,14 @@ To check out which modules a category contains, click the category name, which b
 * OpenAI Connector
 * XSUAA Connector for SAP Business Technology Platform
 
-## Data {#data}
+### 2.6 Data {#data}
 
 * [Data Importer](/appstore/modules/data-importer/)
 * Database Connector
 * [Mendix Feedback](/appstore/modules/mendix-feedback/)
 * [Mendix Mini Surveys](/appstore/modules/mendix-mini-surveys/)
 
-## Import/Export {#import-export}
+### 2.7 Import/Export {#import-export}
 
 * [Data Importer](/appstore/modules/data-importer/)
 * [Database Replication](/appstore/modules/database-replication/)
@@ -125,16 +126,16 @@ To check out which modules a category contains, click the category name, which b
 * [PDF Document Generation](/appstore/modules/document-generation/)
 * [User Migration](/appstore/modules/user-migration-module/)
 
-## Internet-of-Things {#internet-of-things}
+### 2.8 Internet-of-Things {#internet-of-things}
 
 * MQTT Connector
 * [AWS IoT SiteWise](https://docs.mendix.com/appstore/connectors/aws/aws-iot-sitewise/)
 
-## Mobile {#mobile}
+### 2.9 Mobile {#mobile}
 
 * [Nanoflow Commons](/appstore/modules/nanoflow-commons/)
 
-## SAP Connector {#sap-connector}
+### 2.10 SAP Connector {#sap-connector}
 
 * OData Connector for SAP Solutions
 * BAPI Connector for SAP Solutions
@@ -142,24 +143,24 @@ To check out which modules a category contains, click the category name, which b
 * XSUAA Connector for SAP Business Technology Platform
 * SAP Logging Connector
 
-## Scheduling {#scheduling}
+### 2.11 Scheduling {#scheduling}
 
 * [Workflow Commons](/appstore/modules/workflow-commons/)
 
-## Tracing {#tracing}
+### 2.12 Tracing {#tracing}
 
 * [Audit Trail](/appstore/modules/audit-trail/)
 * [Advanced Audit Trail](/appstore/modules/advanced-audit-trail/)
 * [Unit Testing](/appstore/modules/unit-testing/)
 
-## User Interface {#user-interface}
+### 2.13 User Interface {#user-interface}
 
 * [Atlas Core](/appstore/modules/atlas-core/)
 * [Mendix Mini Surveys](/appstore/modules/mendix-mini-surveys/)
 * [SAP Fiori UI Resources](/appstore/modules/sap-ui-resources/sap-fiori-3-0/)
 * [SAP Horizon Native UI Resources](/appstore/modules/sap-ui-resources/sap-native-resources/)
 
-## Utility {#utility}
+### 2.14 Utility {#utility}
 
 * [Administration](/appstore/modules/administration/)
 * [Community Commons](/appstore/modules/community-commons-function-library/)
@@ -171,9 +172,9 @@ To check out which modules a category contains, click the category name, which b
 * [PDF Document Generation](/appstore/modules/document-generation/)
 * [Web Actions](/appstore/modules/web-actions/)
 
-## Visualization {#visualization}
+### 2.15 Visualization {#visualization}
 
-## Uncategorized
+### 2.16 Uncategorized {#uncategorized}
 
 * [Any Chart](/appstore/modules/any-chart/)
 * [App Switcher](/appstore/modules/app-switcher/)

@@ -262,11 +262,11 @@ The response is as follows:
 
 You can generate and reuse generated validation microflows. The following example shows a validation microflow for the customer entity. 
 
-1. On a save button, right click and select **Generate validation microflow**. The resulting validation microflow looks like this:
+1. On a save button, right-click and select **Generate validation microflow**. The resulting validation microflow looks like this:
 
      {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/validation-microflow.png" >}} 
 
-2. Use the *show validation message* activity to set the errors to be shown in the UI in this generated validation microflow. This microflow will be called in the insert microflow displayed below.
+2. Use the **Show validation message** activity to set the errors to be shown in the UI in this generated validation microflow. This microflow will be called in the insert microflow displayed below.
 
 3. Specify that you want to use a microflow to insert a new **Customer** resource via the OData API. This microflow will be called when you do a `POST` operation on the endpoint of the resource:
 
@@ -367,7 +367,7 @@ You may not want to directly publish APIs for your persistable entities because 
 
 There are two ways to take an API-first approach, as explained in [API-First vs. API Design-First: A Comprehensive Guide](https://blog.stoplight.io/api-first-vs.-api-design-first-a-comprehensive-guide):
 
-* Define a contract, like an OpenAPI document. This is not something supported by Mendix OData services unless the contract is also based on OData.
+* Define a contract, like an OpenAPI document. This is not supported by Mendix OData services unless the contract is also based on OData.
 * Set the use case and developer experience of using your APIs first. This is not tied to a specific tool. You can start by defining your APIs on a whiteboard, in a text document, or any other tool. The main challenge is to define a resource model that makes sense to your API users.
 
 ### 6.1 Defining a Resource Model

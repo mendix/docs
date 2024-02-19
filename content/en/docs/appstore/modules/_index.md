@@ -175,6 +175,7 @@ To check out which modules a category contains, click the category name, which b
 
 * [Any Chart](/appstore/modules/any-chart/)
 * [App Switcher](/appstore/modules/app-switcher/)
+* [Atlas UI Resources ⚠](/appstore/modules/atlas-ui-resources/)
 * [Google Tag](/appstore/modules/google-tag/)
 * [Hybrid Mobile Actions ⚠](/appstore/modules/hybrid-mobile-actions/)
 * [Image Crop](/appstore/modules/image-crop/)

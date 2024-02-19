@@ -78,7 +78,7 @@ To import module packages through the App Explorer in Studio Pro, follow these s
 
 4. Click **Import**. You may see a **Warning** pop-up window that will inform you of any included module dependencies that will be overwritten in your app.
 
-    {{% alert color="info" %}}Widgets are only overwritten in case the module contains a newer version.{{% /alert %}}
+    {{% alert color="info" %}}Widgets are only overwritten when an imported module contains a newer version of the widget.{{% /alert %}}
 
 5. Click **OK**. 
 

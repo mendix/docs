@@ -39,7 +39,7 @@ Associations between external entities (as defined in the originating app) are s
 
 You can create associations between local [persistable entities](/refguide/persistability/#persistable) and external entities. For those associations, the persistable entities need to be the owner.
 
-#### 2.1.2 Non-Readable External Entities
+#### 2.1.2 Non-Readable External Entities {#non-readable-external-entities}
 
 When an external entity is not readable, it can still be added to the domain model. It will behave like a non-persistable entity.
 
@@ -49,6 +49,10 @@ Non-readable external entities have the following limitations:
 * There is no possibility to enable **System members**  `createdDate`, `changedDate`, `owner`, and `changedBy`
 * These entities cannot be turned into persistable entities
 * Non-readable external entities cannot be the owner of an association
+
+{{% alert type="info" %}}
+Support for consuming non-readable external entities was introduced in Studio Pro [10.8.0](/releasenotes/studio-pro/10.8/).
+{{% /alert %}}
 
 ### 2.2 External Actions {#external-actions}
 

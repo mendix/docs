@@ -7,7 +7,7 @@ tags: ["marketplace", "marketplace component", "widget", "bootstrap tooltip", "p
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 {{% alert color="warning" %}}
-⚠ This widget is deprecated. For an alternative, see [Tooltip](/appstore/widgets/tooltip/).
+This widget is deprecated. For an alternative, see [Tooltip](/appstore/widgets/tooltip/).
 {{% /alert %}}
 
 ## 1 Introduction

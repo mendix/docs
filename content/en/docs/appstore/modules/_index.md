@@ -33,7 +33,7 @@ To check out which modules a category contains, click the category name, which b
 * [Tracing](#tracing)
 * [User Interface](#user-interface)
 * [Utility](#utility)
-* [Visualization][#visualization]
+* [Visualization](#visualization)
 * [Uncategorised](#uncategorized)
 
 ### 2.1 Artificial Intelligence {#artificial-intelligence}

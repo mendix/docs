@@ -65,7 +65,7 @@ Description | Track the CPU utilization of the application container |
 Example message | Application container 34234543-6543-6543-6543-153d247b6543 - Instance Index: 0 has high CPU usage: 90.5
 Warning Threshold | CPU utilization is between 75% and 85%. |
 Critical Threshold | CPU utilization is higher than 85%.
-First actions to take | Inspect the trends for **Application node CPU usage** combined with all **Application Statistics** for anomalies and correlate those with application behavior. |
+First actions to take | Inspect the trends for **CPU usage** combined with all **Application Statistics** for anomalies and correlate those with application behavior. |
 
 Application Container Disk Percentage | |
 :---|:---|
@@ -73,7 +73,7 @@ Description | Track the disk utilization of the application container |
 Example message | Application container 34234543-6543-6543-6543-153d247b6543 - Instance Index: 0 has high disk usage: 90.5
 Warning Threshold | Disk utilization is between 75% and 85%. |
 Critical Threshold | Disk utilization is higher than 85%.
-First actions to take | Inspect the trends for **Application node disk usage (percentage)** combined with all **Application Statistics** for anomalies and correlate those with application behavior. |
+First actions to take | Inspect the trends for **Disk usage** combined with all **Application Statistics** for anomalies and correlate those with application behavior. |
 
 Application Container Memory Percentage | |
 :---|:---|
@@ -81,7 +81,7 @@ Description | Track the memory utilization of the application container |
 Example message | Application container 34234543-6543-6543-6543-153d247b6543 - Instance Index: 0 has high memory usage: 90.5
 Warning Threshold | Memory utilization is between 90% and 95%. |
 Critical Threshold | Memory utilization is higher than 95%.
-First actions to take | Inspect the trends for **Application node operating system memory** combined with all **Application Statistics** for anomalies and correlate those with application behavior. |
+First actions to take | Inspect the trends for **Memory usage** combined with all **Application Statistics** for anomalies and correlate those with application behavior. |
 
 Critical Logs | |
 :---|:---|
@@ -97,7 +97,7 @@ Description | Track the CPU utilization for the database belonging to the applic
 Example message | Database has 95% CPU utilization.
 Warning Threshold | Not used.
 Critical Threshold | CPU utilization is higher than 90%. 
-First actions to take | Inspect the trends for **Application node CPU usage** combined with **Application node disk throughput** and **Application node load** for anomalies and correlate those with application behavior.
+First actions to take | Inspect the trends for **CPU usage** combined with **Application node disk throughput** and **Application node load** for anomalies and correlate those with application behavior.
 
 Database Free Space | |
 :---|:---|
@@ -113,7 +113,7 @@ Description | Track the amount of freeable memory for the database belonging to 
 Example message | Database has 35% freeable memory.
 Warning Threshold | Not used.
 Critical Threshold | Database has 10% freeable memory.
-First actions to take | Inspect the trends graph **Database Node Operating System Memory** for anomalies and correlate those with application behavior. Resolve by identifying and optimizing long-running database queries, or upgrading the cloud resource pack (for example, by ordering more memory).
+First actions to take | Inspect the trends graph **Database memory** for anomalies and correlate those with application behavior. Resolve by identifying and optimizing long-running database queries, or upgrading the cloud resource pack (for example, by ordering more memory).
 
 Database IOPS Burst Balance | |
 :---|:---|

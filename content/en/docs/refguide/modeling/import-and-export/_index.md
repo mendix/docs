@@ -77,6 +77,9 @@ To import module packages through the App Explorer in Studio Pro, follow these s
     {{% alert color="info" %}}If you replace the module with a new version, the existing user data will be retained based on the names of entities, attributes, and associations. If you delete a module and then add a newer version of it, all user data will be lost.{{% /alert %}}
 
 4. Click **Import**. You may see a **Warning** pop-up window that will inform you of any included module dependencies that will be overwritten in your app.
+
+    {{% alert color="info" %}}Widgets are only overwritten in case the module contains a newer version.{{% /alert %}}
+
 5. Click **OK**. 
 
 If you are importing a module with the *.mxmodule* extension, a dialog informing you about the imported add-on module is displayed:
@@ -200,7 +203,7 @@ Select **Find usages of other user modules** to view the references, or click **
 
 {{< figure src="/attachments/refguide/modeling/import-and-export/select-dependencies.png" >}}
 
-Here you can select files you would like to include in your package. This list includes any files in the **userlib** or **resources** folders in your app directory. If you do not want to include these files, you can uncheck the boxes.
+Here you can select files you would like to include in your package. This list includes any files in the **userlib** or **resources** folders in your app directory, as well as widgets that are used in the module you are exporting. If you do not want to include these files, you can uncheck the boxes.
 
 {{% alert color="info" %}}To uncheck all the files quickly, press **<kbd>Ctrl</kbd>+<kbd>A</kbd>** to select all of the items then press the <kbd>spacebar</kbd> to uncheck all the elements.
 {{% /alert %}}

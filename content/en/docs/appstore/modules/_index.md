@@ -104,15 +104,15 @@ To check out which modules a category contains, click the category name, which b
 * [AWS Authentication](https://docs.mendix.com/appstore/connectors/aws/aws-authentication/)
 * [AWS IoT SiteWise](https://docs.mendix.com/appstore/connectors/aws/aws-iot-sitewise/)
 * [Data Importer](/appstore/modules/data-importer/)
-* Email Connector
-* OData Connector for SAP Solutions
-* OpenAI Connector
-* XSUAA Connector for SAP Business Technology Platform
+* [Email Connector](/appstore/connectors/email-connector/)
+* [OData Connector for SAP Solutions](/appstore/connectors/sap/sap-odata-connector/)
+* [OpenAI Connector](appstore/connectors/openai-connector/)
+* [XSUAA Connector for SAP Business Technology Platform](/appstore/connectors/sap/sap-xsuaa-connector/)
 
 ### 2.6 Data {#data}
 
 * [Data Importer](/appstore/modules/data-importer/)
-* Database Connector
+* [Database Connector](/appstore/connectors/database-connector/)
 * [Mendix Feedback](/appstore/modules/mendix-feedback/)
 * [Mendix Mini Surveys](/appstore/modules/mendix-mini-surveys/)
 
@@ -128,7 +128,7 @@ To check out which modules a category contains, click the category name, which b
 
 ### 2.8 Internet-of-Things {#internet-of-things}
 
-* MQTT Connector
+* [MQTT Connector](/appstore/connectors/mqtt/)
 * [AWS IoT SiteWise](https://docs.mendix.com/appstore/connectors/aws/aws-iot-sitewise/)
 
 ### 2.9 Mobile {#mobile}
@@ -137,11 +137,11 @@ To check out which modules a category contains, click the category name, which b
 
 ### 2.10 SAP Connector {#sap-connector}
 
-* OData Connector for SAP Solutions
-* BAPI Connector for SAP Solutions
-* SAP Event Mesh Connector
-* XSUAA Connector for SAP Business Technology Platform
-* SAP Logging Connector
+* [OData Connector for SAP Solutions](/appstore/connectors/sap/sap-odata-connector/)
+* [BAPI Connector for SAP Solutions](/appstore/connectors/sap/sap-bapi-connector/)
+* [SAP Event Mesh Connector](/appstore/connectors/sap/sap-event-mesh-connector/r)
+* [XSUAA Connector for SAP Business Technology Platform](/appstore/connectors/sap/sap-xsuaa-connector/)
+* [SAP Logging Connector](/appstore/connectors/sap/sap-logger/)
 
 ### 2.11 Scheduling {#scheduling}
 

@@ -45,7 +45,7 @@ To scale your licensed app in Mendix Cloud, follow these steps:
 
     {{% alert color="warning" %}}The number of available instances depends on the total memory provided by your cloud resource pack and the memory per instance that you have set. It is not possible to set scaling values that exceed the memory provided by your cloud resource pack.{{% /alert %}}  
 
-6. Click **Apply**. This restarts your environment to apply the changes.
+6. Click **Apply**. This restarts your environment (causing brief downtime) to apply the changes.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/scale-environment/scale.png" class="image-border" alt="Scaling dashboard" max-width=75% >}}
 

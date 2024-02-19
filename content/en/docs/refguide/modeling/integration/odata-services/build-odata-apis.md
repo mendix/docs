@@ -7,7 +7,7 @@ tags: ["connectors", "data hub", "studio pro", "build", "API", "REST", "connecto
 
 ## 1 Introduction
 
-Companies with a large portfolio of custom-built REST APIs use a set of best practices to ensure these APIs function properly in a predictable way. Mendix Studio Pro gives you full control of all these aspects when creating a [published REST service](/refguide/published-rest-service/).
+Companies with a large portfolio of custom-built REST APIs use a set of best practices to ensure these APIs function properly and in a predictable way. Mendix Studio Pro gives you full control of all these aspects when creating a [published REST service](/refguide/published-rest-service/).
 
 If you plan to create a large number of APIs, implementing REST using published OData services can save you a lot of time and ensure consistency across your APIs. 
 
@@ -20,7 +20,7 @@ REST API best practices usually include some of the following:
 * **Use JSON** – JSON is easy to read, and libraries to process it are available in most languages. 
 * **Use nouns, not verbs (resource-first, no actions in path)** – APIs should be resource-based instead of action-based to improve decoupling; all interactions assume resources and a limited set of standardized operations.
 * **A resource has an ID** – Every resource has a unique path where it can be retrieved or updated. For more details, see the [Retrieving Data](#retrieving-data) section in this document.
-* **A resource has a uniform interface (for example, the correct use of an HTTP operation)** – Use the standardized set of HTTP operations to work with your resources: `GET` (retrieve), `POST` (create/insert), `PUT` (replace), `PATCH` (update), DELETE. For more details, see the [Creating and Changing Data with Full CRUD](#creating-changing-data) section in this document.
+* **A resource has a uniform interface (for example, the correct use of an HTTP operation)** – Use the standardized set of HTTP operations to work with your resources: `GET` (retrieve), `POST` (create/insert), `PUT` (replace), `PATCH` (update), `DELETE`. For more details, see the [Creating and Changing Data with Full CRUD](#creating-changing-data) section in this document.
 * **Name collections with plurals** – An endpoint that can return more than one resource should indicate that by naming the resource in plural.
 * **Use of standard HTTP status codes** – HTTP has standardized status codes for most situations. Status codes work the same way across applications. Application-specific errors should be handled in the payload. For more details, see the [Automatic Standard HTTP Error Codes](#http-codes) section in this document.
 * **Use filtering, sorting, and pagination** – These features enable clients to flexibly define what data they need to ensure the best possible performance and limit resource usage. They also help to decouple the client and the service, as not all clients have the same needs.  For more details, see the [Filtering, Sorting, Paginating, and Selecting Data](#filter-sort-page-select-data) section in this document.
@@ -37,7 +37,7 @@ REST APIs, and especially OData APIs, often provide access to data within the ap
 
 ## 2 Creating OData APIs {#creating-odata-apis}
 
-Create OData APIs by right clicking on an entity > **Publish in OData service** or right clicking on a module > **Add other** > **Published OData service**. 
+Create OData APIs by right-clicking on an entity > **Publish in OData service** or right clicking on a module > **Add other** > **Published OData service**. 
 
 ### 2.1 Published OData Service Document
 

@@ -33,12 +33,13 @@ To check out which modules a category contains, click the category name, which b
 * [Tracing](#tracing)
 * [User Interface](#user-interface)
 * [Utility](#utility)
+* [Visualization][#visualization]
 * [Uncategorised](#uncategorized)
 
 ### 2.1 Artificial Intelligence {#artificial-intelligence}
 
 * [Amazon Bedrock](https://docs.mendix.com/appstore/connectors/aws/amazon-bedrock/)
-* OpenAI Connector
+* [OpenAI Connector](/appstore/connectors/openai-connector/)
 
 ### 2.2 Authentication {#authentication}
 
@@ -105,7 +106,7 @@ To check out which modules a category contains, click the category name, which b
 * [Data Importer](/appstore/modules/data-importer/)
 * [Email Connector](/appstore/connectors/email-connector/)
 * [OData Connector for SAP Solutions](/appstore/connectors/sap/sap-odata-connector/)
-* [OpenAI Connector](appstore/connectors/openai-connector/)
+* [OpenAI Connector](/appstore/connectors/openai-connector/)
 * [XSUAA Connector for SAP Business Technology Platform](/appstore/connectors/sap/sap-xsuaa-connector/)
 
 ### 2.6 Data {#data}
@@ -121,7 +122,6 @@ To check out which modules a category contains, click the category name, which b
 * [Database Replication](/appstore/modules/database-replication/)
 * [Excel Exporter](/appstore/modules/excel-exporter/)
 * [Excel Importer](/appstore/modules/excel-importer/)
-* [Native Mobile AR](/appstore/modules/native-mobile-ar/)
 * [PDF Document Generation](/appstore/modules/document-generation/)
 * [User Migration](/appstore/modules/user-migration-module/)
 
@@ -133,12 +133,13 @@ To check out which modules a category contains, click the category name, which b
 ### 2.9 Mobile {#mobile}
 
 * [Nanoflow Commons](/appstore/modules/nanoflow-commons/)
+* [Native Mobile AR](/appstore/modules/native-mobile-ar/)
 
 ### 2.10 SAP Connector {#sap-connector}
 
 * [OData Connector for SAP Solutions](/appstore/connectors/sap/sap-odata-connector/)
 * [BAPI Connector for SAP Solutions](/appstore/connectors/sap/sap-bapi-connector/)
-* [SAP Event Mesh Connector](/appstore/connectors/sap/sap-event-mesh-connector/r)
+* [SAP Event Mesh Connector](/appstore/connectors/sap/sap-event-mesh-connector/)
 * [XSUAA Connector for SAP Business Technology Platform](/appstore/connectors/sap/sap-xsuaa-connector/)
 * [SAP Logging Connector](/appstore/connectors/sap/sap-logger/)
 
@@ -171,7 +172,11 @@ To check out which modules a category contains, click the category name, which b
 * [PDF Document Generation](/appstore/modules/document-generation/)
 * [Web Actions](/appstore/modules/web-actions/)
 
-### 2.15 Uncategorized {#uncategorized}
+### 2.15 Visualisation {#visualization}
+
+* [Native Mobile AR](/appstore/modules/native-mobile-ar/)
+
+### 2.16 Uncategorized {#uncategorized}
 
 * [Any Chart](/appstore/modules/any-chart/)
 * [App Switcher](/appstore/modules/app-switcher/)

@@ -44,6 +44,8 @@ Attributes of type **Binary** cannot be exported through OData services except f
 
 {{% /alert %}}
 
+You cannot include associations to and from entities that are published without the __Readable__ capability. 
+
 ### 3.1 Required Validation Rules for Published Attributes
 
 For published OData services, the **Can be empty** checkbox appears when you edit a published attribute. 

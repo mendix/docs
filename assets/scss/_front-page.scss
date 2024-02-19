@@ -134,7 +134,8 @@ div.cards-layout{
 img.my-icon{
     width: 1.75rem;
     height: 1.75rem;
-    margin: 0.5rem 0rem 0rem 1.5rem;
+    float:left;
+    margin: 0.5rem;
 }
 img.nav-icon{
     width: 24px;
@@ -161,7 +162,7 @@ h4.card-title-w-50{
 div.card-body{
     padding: 1rem;
 }
-p.card-text{
+ul.card-text{
     margin-top: 1rem;
     font-size: 1.125rem;
 }

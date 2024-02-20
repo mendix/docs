@@ -260,15 +260,15 @@ To configure Amazon Cognito for the OIDC SSO module, follow these steps:
         {{< figure src="/attachments/appstore/connectors/aws-cognito/createappclient.png" alt="The Create app client button on the App integration page">}}
 
     3. On the **Create app client** page, configure the following settings:
-            * **App type** - **Public client**
-            * **App client name** - Enter a descriptive app client name
-            * **Client secret** - Select **Generate a client secret**
-            * **Authentication flows** - Select **ALLOW_USER_PASSWORD_AUTH**
-            * **Authentication flow session duration** - Enter a value from *3* to *15*
-            * **Allowed callback URLs** - Enter a URL in the following format: `https://<your-app-url>/oauth/v2/callback`
-            * **Allowed sign-out URLs** - This setting is optional, and you may leave it blank
-            * **Identity providers** - Select **Cognito user pool**
-            * **OAuth 2.0 grant types** - Select **Authorization code grant**
+        * **App type** - **Public client**
+        * **App client name** - Enter a descriptive app client name
+        * **Client secret** - Select **Generate a client secret**
+        * **Authentication flows** - Select **ALLOW_USER_PASSWORD_AUTH**
+        * **Authentication flow session duration** - Enter a value from *3* to *15*
+        * **Allowed callback URLs** - Enter a URL in the following format: `https://<your-app-url>/oauth/v2/callback`
+        * **Allowed sign-out URLs** - This setting is optional, and you may leave it blank
+        * **Identity providers** - Select **Cognito user pool**
+        * **OAuth 2.0 grant types** - Select **Authorization code grant**
               
     4. Save your changes.
     5. Open the app client that you created.

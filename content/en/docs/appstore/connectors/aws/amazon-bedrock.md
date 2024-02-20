@@ -134,15 +134,17 @@ Please refer to [Agents in Bedrock](https://docs.aws.amazon.com/bedrock/latest/u
 
 Then follow these steps in the Mendix application: 
 1. Create a new microflow and add the 'InvokeAgent' operation.
-2. Either pass an InvokeAgentRequest object as a parameter to the flow or create one within the microflow. Ensure that the following attributes are populated:
-    1. Input text (the prompt to send to the agent).
-    2. The session id (by reusing this value in a subsequent request, it is possible to continue a conversation).
-    3. Make a choice on 'EnableTrace' to enable or disable the tracking of the reasoning process.
-    4. Set 'EndSession' to specify whether or not you want to have the option of continuing the conversation in another request.
+2. Either pass an InvokeAgentRequest object as a parameter to the flow or create one within the microflow. Ensure that the following attributes are populated for the request:
+    1. Agent ID
+    2. Agent Alias ID
+    3. Input text (the prompt to send to the agent).
+    4. The session id (by reusing this value in a subsequent request, it is possible to continue a conversation).
+    5. Make a choice on 'EnableTrace' to enable or disable the tracking of the reasoning process.
+    6. Set 'EndSession' to specify whether or not you want to have the option of continuing the conversation in another request.
   
-3. Enter the desired region as a value of the AWSAuthentication.ENUM_Region type.
-4. Select a Credentials object. You can put it in scope with the AWSAuthenication.GetStaticCredentials or the AWSAuthenication.GetTemporaryCredentials microflow.
-5. Select a microflow that takes an AmazonBedrockConnector.InvokeAgentResponse object as an input and handles that response. This is necessary because InvokeAgent is an asynchronous operation which means that it will not necessarily finish when the process it was invoked from finishes. By giving the operation a handler microflow, we can still handle the response as soon as it arrives. You can find an example handler in the connector module for some orientation: AmazonBedrockConnector.InvokeAgentResponse_Handle. This microflow logs the response so you can also use it just to investigate the response.
+4. Enter the desired region as a value of the AWSAuthentication.ENUM_Region type.
+5. Select a Credentials object. You can put it in scope with the AWSAuthenication.GetStaticCredentials or the AWSAuthenication.GetTemporaryCredentials microflow.
+6. Select a microflow that takes an AmazonBedrockConnector.InvokeAgentResponse object as an input and handles that response. This is necessary because InvokeAgent is an asynchronous operation which means that it will not necessarily finish when the process it was invoked from finishes. By giving the operation a handler microflow, we can still handle the response as soon as it arrives. You can find an example handler in the connector module for some orientation: AmazonBedrockConnector.InvokeAgentResponse_Handle. This microflow logs the response so you can also use it just to investigate the response.
 
 
 ## 4 Technical Reference

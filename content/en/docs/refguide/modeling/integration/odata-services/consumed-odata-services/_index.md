@@ -24,9 +24,7 @@ The OData implementation in Mendix does not support all features in the OData sp
 
 ### 2.1 External Entities {#external-entities}
 
-#### 2.1.1 Readable External Entities
-
-When a readable external entity is used in an app, the associated data for the entity is retrieved through the information in the consumed OData service contract and returned.
+When a external entity is used in an app, the associated data for the entity is retrieved through the information in the consumed OData service contract and returned.
 
 External entities have some limitations compared to persistable entities:
 
@@ -39,19 +37,13 @@ Associations between external entities (as defined in the originating app) are s
 
 You can create associations between local [persistable entities](/refguide/persistability/#persistable) and external entities. For those associations, the persistable entities need to be the owner.
 
-#### 2.1.2 Non-Readable External Entities {#non-readable-external-entities}
+#### 2.1.1 External Non-Persistable Entities {#external-non-persistable-entities}
 
-When an external entity is not readable, it can still be added to the domain model. It will behave like a non-persistable entity.
-
-Non-readable external entities have the following limitations:
-
-* You cannot add attributes
-* There is no possibility to enable **System members**  `createdDate`, `changedDate`, `owner`, and `changedBy`
-* These entities cannot be turned into persistable entities
-* Non-readable external entities cannot be the owner of an association
+When a service defines an entity without an entity set, it means that this entity is not persistable. It can be added to the domain model as a non-persistable entity.
+The definition of this entity is read-only and is controlled in the service that publishes it, meaning that you cannot change or add attributes.
 
 {{% alert type="info" %}}
-Support for consuming non-readable external entities was introduced in Studio Pro [10.8.0](/releasenotes/studio-pro/10.8/).
+Support for importing non-persistable entities from a consumed OData service was introduced in Studio Pro [10.8.0](/releasenotes/studio-pro/10.8/).
 {{% /alert %}}
 
 ### 2.2 External Actions {#external-actions}

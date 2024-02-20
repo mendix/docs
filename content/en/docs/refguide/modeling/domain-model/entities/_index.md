@@ -35,7 +35,9 @@ The entity type defines how the data is handled and there are two types:
 {{< figure src="/attachments/refguide/modeling/domain-model/entities/type-of-entities.jpg" >}}
 
 {{% alert color="info" %}}
-You can also use data sources from other applications in your app through the [Integration pane](/refguide/integration-pane/). These data sources are represented in the domain model as *external entities* which are displayed as purple entity containers in the domain model.
+You can also use data sources from other applications in your app through the [Integration pane](/refguide/integration-pane/). These data sources are represented in the domain model as *external entities* which are displayed as purple entity containers in the domain model. 
+
+Data structures from other sources that have been imported through the Integration pane that cannot be retrieved are represented as *non-readable external entities* and behave similarly to non-persistable entities. Like non-persistable entities, these are displayed as yellow entity containers.
 
 For further information see [External Entities](/refguide/external-entities/).
 {{% /alert %}}

@@ -14,7 +14,7 @@ Use the Integration pane in Studio Pro to use available data sources from the di
 
 You can search in the Catalog through the [Integration pane](/refguide/integration-pane/) to discover data sources that you can use in your app. Via this pane you can add the entities that are published in the registered OData services into your app's domain model. These entities are called [external entities](/refguide/external-entities/) and are different because they enable the connection to the data associated with the entities in the originating app.
 
-Besides external entities, OData services can expose actions that can be called from within microflows. From this pane you can drag these actions onto a microflow, where they will appear as a **Call external action** activity. In this activity you can configure the parameters and result variable.
+Besides external entities, OData services can expose actions that can be called from within microflows, and can define non-persistable entities that can be used as parameters or return types of these actions. From this pane you can drag these actions onto a microflow, where they will appear as a **Call external action** activity. In this activity you can configure the parameters and result variable. If a parameter or result has a non-persistable entity as its type, it will add those to the domain model for you.
 
 To display the [Integration pane](/refguide/integration-pane/), click **View** > **Integration**.
 
@@ -138,6 +138,7 @@ Unsupported attributes are grayed out and are not included in your app.
 
 If the entity, association, or attribute supports **C**reate, **R**ead, **U**pdate, or **D**elete capabilities and it is also supported by Studio Pro, then it is displayed in the [Integration pane](/refguide/integration-pane/).
 Entities and associations can have any of the CRUD capabilities, while attributes can only have create and update. For more information on CRUD capabilities, see [Write Data to Another App](/catalog/write-data/).
+If an entity does not support any capability, it will be displayed with a yellow entity icon. Importing this will result in a non-persistable entity being added to your domain model.
 
 ### 4.3 Actions {#actions}
 

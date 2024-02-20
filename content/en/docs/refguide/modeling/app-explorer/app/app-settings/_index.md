@@ -73,6 +73,8 @@ Here you can select which Java version to use for you application.
 
 For local development the JDK configured in the [Studio Pro preferences](/refguide/preferences-dialog#jdk-directory) has to be compatible with the Java version configured here.
 
+Applications deployed to the cloud will use this setting to select which Java version to use.
+
 ### 3.6 After Startup{#after-startup}
 
 Here you can select a microflow that is automatically executed immediately after the application has been started up.

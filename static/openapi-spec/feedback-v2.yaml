@@ -32,9 +32,9 @@ paths:
         '200':
           $ref: '#/components/responses/200-Feedback-Items'
         '400':
-          $ref: '#/components/responses/400-Bad-Request'
+          $ref: '#/components/responses/400-Feedback-Items-ProjectId'
         '401':
-          $ref: '#/components/responses/401-Invalid-Token'
+          $ref: '#/components/responses/401-Unauthorized'
         '404':
           $ref: '#/components/responses/404-Not-Found'
         '500':
@@ -57,7 +57,7 @@ paths:
         '400':
           $ref: '#/components/responses/400-Bad-Request-Post'
         '401':
-          $ref: '#/components/responses/401-Invalid-Token'
+          $ref: '#/components/responses/401-Unauthorized'
         '404':
           $ref: '#/components/responses/404-Not-Found'
         '500':
@@ -67,7 +67,7 @@ paths:
     patch:
       tags:
         - Feedback Items
-      summary: Change the status of a feedback item
+      summary: Change Feedback Item Status
       description: Changes the status of a feedback item.
       operationId: patch-feedback-item
       parameters:
@@ -78,9 +78,9 @@ paths:
         '204':
           description: ''
         '400':
-          $ref: '#/components/responses/400-Bad-Request'
+          $ref: '#/components/responses/400-Change-Status'
         '401':
-          $ref: '#/components/responses/401-Invalid-Token'
+          $ref: '#/components/responses/401-Unauthorized'
         '404':
           $ref: '#/components/responses/404-Not-Found'
         '500':
@@ -91,7 +91,7 @@ paths:
     get:
       tags:
         - Feedback Items
-      summary: Get a feedback item
+      summary: Get a Feedback Item
       description: This call retrieves a single feedback item by the UUID of the feedback item.
       operationId: get-feedback-item
       parameters:
@@ -101,9 +101,9 @@ paths:
         '200':
           $ref: '#/components/responses/200-Feedback-Item'
         '400':
-          $ref: '#/components/responses/400-Bad-Request'
+          $ref: '#/components/responses/400-Feedback-Item-UUID'
         '401':
-          $ref: '#/components/responses/401-Invalid-Token'
+          $ref: '#/components/responses/401-Unauthorized'
         '404':
           $ref: '#/components/responses/404-Not-Found'
         '500':
@@ -116,7 +116,7 @@ paths:
     delete:
       tags:
         - Feedback Items
-      summary: Delete a feedback item
+      summary: Delete a Feedback Item
       description: Deletes a feedback item.
       operationId: delete-feedback-item
       parameters:
@@ -126,9 +126,9 @@ paths:
         '204':
           description: ''
         '400':
-          $ref: '#/components/responses/400-Bad-Request'
+          $ref: '#/components/responses/400-Feedback-Item-UUID'
         '401':
-          $ref: '#/components/responses/401-Invalid-Token'
+          $ref: '#/components/responses/401-Unauthorized'
         '404':
           $ref: '#/components/responses/404-Not-Found'
         '500':
@@ -168,9 +168,9 @@ paths:
               schema:
                 type: object
         '400':
-          $ref: '#/components/responses/400-Bad-Request'
+          $ref: '#/components/responses/400-Feedback-Item-UUID'
         '401':
-          $ref: '#/components/responses/401-Invalid-Token'
+          $ref: '#/components/responses/401-Unauthorized'
         '404':
           $ref: '#/components/responses/404-Not-Found'
         '500':
@@ -196,9 +196,9 @@ paths:
               schema:
                 type: object
         '400':
-          $ref: '#/components/responses/400-Bad-Request'
+          $ref: '#/components/responses/400-File-Attachment'
         '401':
-          $ref: '#/components/responses/401-Invalid-Token'
+          $ref: '#/components/responses/401-Unauthorized'
         '404':
           $ref: '#/components/responses/404-Not-Found'
         '500':
@@ -321,7 +321,7 @@ components:
                 description: 'Base64 binary representation of an image (allowed extensions: .jpg or .png)'
               screenshotName:
                 type: string
-                description: "The name of the physical document of the screenshot\r\n*Required if a screenshot is provided"
+                description: "The name of the physical document of the screenshot\r\n*Required if a screenshot is provided."
               priority:
                 type: string
                 description: 'The name of the priority (Low, Medium, High, Urgent)'
@@ -337,7 +337,7 @@ components:
                 submitterEmail: john.doe@email.com
                 submitterUUID: 00000000-0000-0000-0000-000000000000
                 subject: Unable to export feedback
-                description: When I click on the 'export' button on the feedback overview, I get an error telling me to contact the system administrator.
+                description: When I click the 'Export' button on the feedback overview, I get an error telling me to contact the system administrator.
                 screenshot: Base64 string
                 screenshotName: FeedbackExportBug1.png
                 priority: Urgent
@@ -364,240 +364,6 @@ components:
       name: MxToken 7LJE…vk
       in: header
   responses:
-    400-Bad-Request:
-      description: Bad Request
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              error:
-                type: object
-                properties:
-                  message:
-                    type: string
-                  detail:
-                    type: string
-                  code:
-                    type: integer
-                  instance:
-                    type: string
-          examples:
-            Response example:
-              value:
-                error:
-                  message: Bad Request
-                  detail: ''
-                  code: 400
-                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
-    400-Invalid-or-empty-Authorization-header:
-      description: Invalid or empty Authorization header
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              error:
-                type: object
-                properties:
-                  message:
-                    type: string
-                  detail:
-                    type: string
-                  code:
-                    type: integer
-                  instance:
-                    type: string
-          examples:
-            Response example:
-              value:
-                error:
-                  message: Bad Request
-                  detail: Invalid or empty Authorization header
-                  code: 400
-                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
-    400-Authorization-header-value-is-not-a-Bearer-token:
-      description: Authorization header value is not a Bearer token
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              error:
-                type: object
-                properties:
-                  message:
-                    type: string
-                  detail:
-                    type: string
-                  code:
-                    type: integer
-                  instance:
-                    type: string
-          examples:
-            Response example:
-              value:
-                error:
-                  message: Bad Request
-                  detail: Authorization header value is not a Bearer token
-                  code: 400
-                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
-    400-Authorization-header-value-is-not-a-MxToken-token:
-      description: Authorization header value is not a MxToken token
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              error:
-                type: object
-                properties:
-                  message:
-                    type: string
-                  detail:
-                    type: string
-                  code:
-                    type: integer
-                  instance:
-                    type: string
-          examples:
-            Response example:
-              value:
-                error:
-                  message: Bad Request
-                  detail: Authorization header value is not a MxToken token
-                  code: 400
-                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
-    400-ProjectId-is-missing:
-      description: ProjectId is missing
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              error:
-                type: object
-                properties:
-                  message:
-                    type: string
-                  detail:
-                    type: string
-                  code:
-                    type: integer
-                  instance:
-                    type: string
-          examples:
-            Response example:
-              value:
-                error:
-                  message: Bad Request
-                  detail: ProjectId is missing
-                  code: 400
-                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
-    401-The-access-token-expired:
-      description: The access token expired
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              error:
-                type: object
-                properties:
-                  message:
-                    type: string
-                  detail:
-                    type: string
-                  code:
-                    type: integer
-                  instance:
-                    type: string
-          examples:
-            Response example:
-              value:
-                error:
-                  message: Unauthorized
-                  detail: Invalid scope
-                  code: 401
-                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
-    401-Invalid-Token:
-      description: Invalid Token
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              error:
-                type: object
-                properties:
-                  message:
-                    type: string
-                  detail:
-                    type: string
-                  code:
-                    type: integer
-                  instance:
-                    type: string
-          examples:
-            Response example:
-              value:
-                error:
-                  message: Unauthorized
-                  detail: Invalid Token
-                  code: 401
-                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
-    401-Invalid-scope:
-      description: Invalid scope
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              error:
-                type: object
-                properties:
-                  message:
-                    type: string
-                  detail:
-                    type: string
-                  code:
-                    type: integer
-                  instance:
-                    type: string
-          examples:
-            Response example:
-              value:
-                error:
-                  message: Unauthorized
-                  detail: Invalid scope
-                  code: 401
-                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
-    401-Missing-required-scopes:
-      description: Missing required scopes
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              error:
-                type: object
-                properties:
-                  message:
-                    type: string
-                  detail:
-                    type: string
-                  code:
-                    type: integer
-                  instance:
-                    type: string
-          examples:
-            Response example:
-              value:
-                error:
-                  message: Unauthorized
-                  detail: Invalid scope
-                  code: 401
-                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
     404-Not-Found:
       description: Not Found
       content:
@@ -617,11 +383,10 @@ components:
                   instance:
                     type: string
           examples:
-            Response example:
+            Not Found:
               value:
                 error:
                   message: Not Found
-                  detail: ''
                   code: 404
                   instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
     500-Something-went-wrong:
@@ -643,7 +408,7 @@ components:
                   instance:
                     type: string
           examples:
-            Response example:
+            Internal Server Error:
               value:
                 error:
                   message: Internal Server Error
@@ -723,9 +488,9 @@ components:
                   - legacyId: 0
                     uuid: 82fb475a-e4dd-4a9e-acb7-e3b8a6fc8869
                     subject: Unable to export feedback
-                    description: When I click on the 'export' button on the feedback overview, I get an error telling me to contact the system administrator.
+                    description: When I click the 'Export' button on the feedback overview, I get an error telling me to contact the system administrator.
                     displayId: 102
-                    summary: I have looked into the logic and I believe this error is related to the export template not being configured correctly.
+                    summary: I have looked into the logic and I believe this error is related to the export template not being configured correctly
                     activeUserRoles: User
                     pageName: FeedbackManagement/Overview.page.xml
                     environmentUrl: 'https://purchaserequest.company.com/link/feedback/overview'
@@ -812,9 +577,9 @@ components:
                 legacyId: 0
                 uuid: 82fb475a-e4dd-4a9e-acb7-e3b8a6fc8869
                 subject: Unable to export feedback
-                description: When I click on the 'export' button on the feedback overview, I get an error telling me to contact the system administrator.
+                description: When I click the 'Export' button on the feedback overview, I get an error telling me to contact the system administrator.
                 displayId: 102
-                summary: I have looked into the logic and I believe this error is related to the export template not being configured correctly.
+                summary: I have looked into the logic and I believe this error is related to the export template not being configured correctly
                 activeUserRoles: User
                 pageName: FeedbackManagement/Overview.page.xml
                 environmentUrl: 'https://purchaserequest.company.com/link/feedback/overview'
@@ -876,7 +641,7 @@ components:
                         reason:
                           type: string
           examples:
-            Example 1:
+            Bad Request:
               value:
                 error:
                   code: 400
@@ -885,3 +650,291 @@ components:
                   invalid-params:
                     - name: subject
                       reason: Subject is required
+            Invalid or empty Authorization header:
+              value:
+                error:
+                  message: Invalid or empty Authorization header
+                  code: 400
+                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
+            Authorization header value is not a Bearer token:
+              value:
+                error:
+                  message: Authorization header value is not a Bearer token
+                  code: 400
+                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
+            Authorization header value is not a MxToken token:
+              value:
+                error:
+                  message: Authorization header value is not a MxToken token
+                  code: 400
+                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
+            projectId is missing:
+              value:
+                error:
+                  message: projectId is missing
+                  code: 400
+                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
+            See invalid parameters list:
+              value:
+                error:
+                  code: 400
+                  message: See invalid parameters list
+                  instance: 'urn:uuid:3693079d-8262-4663-8636-288a5aa459a2'
+                  invalid-params:
+                    - name: subject
+                      reason: Subject is required
+    400-Feedback-Items-ProjectId:
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  detail:
+                    type: string
+                  code:
+                    type: integer
+                  instance:
+                    type: string
+          examples:
+            ProjectId is missing:
+              value:
+                error:
+                  message: projectId is missing
+                  code: 400
+                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
+            Invalid or empty Authorization header:
+              value:
+                error:
+                  message: Invalid or empty Authorization header
+                  code: 400
+                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
+            Authorization header value is not a Bearer token:
+              value:
+                error:
+                  message: Authorization header value is not a Bearer token
+                  code: 400
+                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
+            Authorization header value is not a MxToken token:
+              value:
+                error:
+                  message: Authorization header value is not a MxToken token
+                  code: 400
+                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
+            Bad Request:
+              value:
+                error:
+                  message: Bad Request
+                  code: 400
+                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
+    401-Unauthorized:
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  detail:
+                    type: string
+                  code:
+                    type: integer
+                  instance:
+                    type: string
+          examples:
+            Invalid Token:
+              value:
+                error:
+                  message: Unauthorized
+                  detail: Invalid token
+                  code: 401
+                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
+            Invalid Scope:
+              value:
+                error:
+                  message: Unauthorized
+                  detail: Invalid scope
+                  code: 401
+                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
+            Missing required scopes:
+              value:
+                error:
+                  message: Unauthorized
+                  detail: Missing required scopes
+                  code: 401
+                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
+            The access token expired:
+              value:
+                error:
+                  message: Unauthorized
+                  detail: The access token expired
+                  code: 401
+                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
+    400-Feedback-Item-UUID:
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  detail:
+                    type: string
+                  code:
+                    type: integer
+                  instance:
+                    type: string
+          examples:
+            Bad Request:
+              value:
+                error:
+                  message: Bad Request
+                  code: 400
+                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
+            Invalid or empty Authorization header:
+              value:
+                error:
+                  message: Invalid or empty Authorization header
+                  code: 400
+                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
+            Authorization header value is not a Bearer token:
+              value:
+                error:
+                  message: Authorization header value is not a Bearer token
+                  code: 400
+                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
+            Authorization header value is not a MxToken token:
+              value:
+                error:
+                  message: Authorization header value is not a MxToken token
+                  code: 400
+                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
+            feedback-item-uuid is missing:
+              value:
+                error:
+                  message: feedback-item-uuid is missing
+                  code: 400
+                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
+    400-File-Attachment:
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  detail:
+                    type: string
+                  code:
+                    type: integer
+                  instance:
+                    type: string
+          examples:
+            Bad Request:
+              value:
+                error:
+                  message: Bad Request
+                  code: 400
+                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
+            file-id missing:
+              value:
+                error:
+                  message: file-id missing
+                  code: 400
+                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
+            Invalid or empty Authorization header:
+              value:
+                error:
+                  message: Invalid or empty Authorization header
+                  code: 400
+                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
+            Authorization header value is not a Bearer token:
+              value:
+                error:
+                  message: Authorization header value is not a Bearer token
+                  code: 400
+                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
+            Authorization header value is not a MxToken token:
+              value:
+                error:
+                  message: Authorization header value is not a MxToken token
+                  code: 400
+                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
+            feedback-item-uuid is missing:
+              value:
+                error:
+                  message: feedback-item-uuid is missing
+                  code: 400
+                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
+    400-Change-Status:
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  detail:
+                    type: string
+                  code:
+                    type: integer
+                  instance:
+                    type: string
+          examples:
+            Bad Request:
+              value:
+                error:
+                  message: Bad Request
+                  code: 400
+                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
+            Invalid or empty Authorization header:
+              value:
+                error:
+                  message: Invalid or empty Authorization header
+                  code: 400
+                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
+            Authorization header value is not a Bearer token:
+              value:
+                error:
+                  message: Authorization header value is not a Bearer token
+                  code: 400
+                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
+            Authorization header value is not a MxToken token:
+              value:
+                error:
+                  message: Authorization header value is not a MxToken token
+                  code: 400
+                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
+            feedback-item-uuid is missing:
+              value:
+                error:
+                  message: feedback-item-uuid is missing
+                  code: 400
+                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
+            ' The status does not exist':
+              value:
+                error:
+                  message: The status does not exist
+                  code: 400
+                  instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'

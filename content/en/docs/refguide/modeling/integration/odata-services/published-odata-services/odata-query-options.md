@@ -266,7 +266,7 @@ The request body is always a JSON object, with a property for each parameter tha
 
 If a parameter's data type is object, the value of the parameter's property is a JSON object. If a parameter's data type is list, the value of the parameter's property is a JSON array. This is similar to what is expected when [inserting objects](#inserting-objects) for that entity.
 
-For parameters whose type is an entity with the __Readable__ capability, you can pass an existing object. Use the [`@id` syntax](https://docs.oasis-open.org/odata/odata-json-format/v4.01/odata-json-format-v4.01.html#sec_EntityReference) to reference the object. When you pass an object using the `@id` reference, you can also pass attributes of the object; this assigns the specified attribute values to the existing object. Here is an example that passes the `Employees(1783)` object while specifying a value for the `Email` attribute:
+For parameters whose type is an entity with the __Readable__ capability you can pass an existing object. Use the [`@id` syntax](https://docs.oasis-open.org/odata/odata-json-format/v4.01/odata-json-format-v4.01.html#sec_EntityReference) to reference the object. When you pass an object using the `@id` reference, you can also pass attributes of the object; this assigns the specified attribute values to the existing object. Here is an example that passes the `Employees(1783)` object while specifying a value for the `Email` attribute:
 
 ```json
 {

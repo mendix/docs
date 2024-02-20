@@ -24,7 +24,7 @@ The OData implementation in Mendix does not support all features in the OData sp
 
 ### 2.1 External Entities {#external-entities}
 
-When a external entity is used in an app, the associated data for the entity is retrieved through the information in the consumed OData service contract and returned.
+When an external entity is used in an app, the associated data for the entity is retrieved through the information in the consumed OData service contract and returned.
 
 External entities have some limitations compared to persistable entities:
 

@@ -33,7 +33,7 @@ In the **General** tab, you can find the following information about your enviro
 * **Project ID** – the unique identifier of the app
 * **Environment ID** – the unique identifier of the environment
 * **Custom domains** – any [custom domains](/developerportal/deploy/custom-domains/) of the app
-* **Java Version** – Oracle version 1.8, AdoptOpenJDK version 11 or Eclipse Temurin JDK 17
+* **Java Version** – Oracle version 1.8, AdoptOpenJDK version 11, or Eclipse Temurin JDK 17
 * **Studio Pro Target**
 * **Plan** – the type of plan covered by your license (for more information, see the [Overviews](/developerportal/deploy/environments-details/#overviews) section below)
 * **Instances** – a summary of the number and memory allocation of instances of the environment (for more information, see the [Scaling](#scaling) section below)

@@ -124,7 +124,7 @@ There are two options to handle an incoming GET request for a published entity:
 
 You can also set the [query options](#query-options) for each request.
 
-A published OData entity is by default readable. It is possible to disable this capability, which means that the data of this entity will not be exposed; instead only the type and structure of the entity will be published. The entity can then still be used as a parameter or return type of a published microflow.
+A published OData entity is readable by default. It is possible to disable this capability, which means that the service only exposes the type and structure of the entity, but not the data. You can use the entity as a parameter or return type of a published microflow.
 
 When **Readable** is enabled you can configure how data can be queried in the [exposed data](#exposed-data) section. Note that **Readable** must be enabled in order to enable the other capabilities.
 

@@ -39,8 +39,8 @@ You can create associations between local [persistable entities](/refguide/persi
 
 #### 2.1.1 External Non-Persistable Entities {#external-non-persistable-entities}
 
-When a service defines an entity without an entity set, it means that this entity is not persistable. It can be added to the domain model as a non-persistable entity.
-The definition of this entity is read-only and is controlled in the service that publishes it, meaning that you cannot change or add attributes.
+When a service defines an entity without an entity set, it means that this entity is not persistable. You can add it to the domain model as a non-persistable entity.
+The definition of this entity is read-only and is controlled in the service that publishes it. This means that you cannot add attributes or change them.
 
 {{% alert type="info" %}}
 Support for importing non-persistable entities from a consumed OData service was introduced in Studio Pro [10.8.0](/releasenotes/studio-pro/10.8/).

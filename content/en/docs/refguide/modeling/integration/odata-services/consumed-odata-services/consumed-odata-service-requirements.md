@@ -67,7 +67,7 @@ The key can consist of one or more properties, as long as the following conditio
 The list above for supported key fields does not include `Date` or `DateTime` data types.
 {{% /alert %}}
 
-Entities that are not accessible through an entity set can be imported as a [non-persistable entity](/refguide/consumed-odata-services/#external-non-persistable-entities).
+Entities that are not accessible through an entity set can be used as a [non-persistable entity](/refguide/consumed-odata-services/#external-non-persistable-entities).
 
 ### 3.2 Attributes
 

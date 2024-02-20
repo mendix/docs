@@ -162,7 +162,7 @@ $font-family-sans-serif: $td-fonts-serif !default;
 
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base: $font_family !default; // NK - changed to Mendix font
-$font-size-base: 0.875rem !default; // NK - if we want 14px default -> 0.875rem
+$font-size-base: 0.875rem; // NK - if we want 14px default -> 0.875rem
 $line-height-base: 1.4 !default; // NK - changed
 
 // Font weights
@@ -177,12 +177,12 @@ $headings-font-weight: $font-weight-normal !default; // NK - adjusted weight
 
 // Heading sizes
 
-$h1-font-size: $font-size-base * 2.25 !default;
-$h2-font-size: $font-size-base * 2 !default;
-$h3-font-size: $font-size-base * 1.5 !default;
-$h4-font-size: $font-size-base * 1.35 !default;
-$h5-font-size: $font-size-base * 1.15 !default;
-$h6-font-size: $font-size-base !default;
+$h1-font-size: $font-size-base * 2.25;
+$h2-font-size: $font-size-base * 2;
+$h3-font-size: $font-size-base * 1.5;
+$h4-font-size: $font-size-base * 1.35;
+$h5-font-size: $font-size-base * 1.15;
+$h6-font-size: $font-size-base;
 
 // Space
 

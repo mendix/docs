@@ -15,7 +15,9 @@ When you download these modules, they will go into the **App** > **Marketplace m
 
 ## 2 Categories
 
-Modules in the Mendix Marketplace have the different categories, as listed below. Some modules may belong to more than one category. To check out which modules a category contains, click the category name, which brings you to the corresponding sub-section:
+Modules in the Mendix Marketplace have different categories, as listed in the sub-sections below. Some modules may belong to more than one category. 
+
+To check out which modules a category contains, click the category in the list below, which directs you to the sub-section for this category.
 
 * [Artificial Intelligence]()
 * [Authentication](#authentication)

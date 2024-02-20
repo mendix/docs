@@ -17,6 +17,12 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2024
 
+### February 22, 2024
+
+#### Improvements
+
+* Improvements on internal monitoring for metrics widgets
+
 ### February 08, 2024
 
 #### Bug Fixes

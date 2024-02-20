@@ -483,7 +483,7 @@ You can set up custom user provisioning once your app is running using the `OIDC
 3. Select the **Provisioning** tab.
 4. Set up the following information:
     
-    * **Custom user Entity (extension of System.User)** – the Mendix entity in which you will store and look up the user account. If you are using the Administration module this would be `Administration.Account`.
+    * **Custom user Entity (extension of System.User)** – the Mendix entity in which you will store and look up the user account. If you are using the [Administration module](https://marketplace.mendix.com/link/component/23513), this would be `Administration.Account`.
     * **The attribute where the user principal is stored** –  unique identifier associated with an authenticated user.
     * **Allow the module to create users** – This enables the module to create users based on user provisioning and attribute mapping configurations. When disabled, it will still update existing users. However, for new users, it will display an exception message stating that the login action was successful but no user has been configured.
         * By default, the value is set to ***Yes***.
@@ -500,13 +500,15 @@ You can set up custom user provisioning once your app is running using the `OIDC
     * The **IdP Attribute** is one of the fixed claims supported by the OIDC SSO module
     * IdP Attributes(Claims) cannot be of type enum, autonumber, or an association
 
-6. In **Select the CustomUserProvisioning**, select a microflow you want to run for [Custom User Provisioning Using a Microflow](#custom-provisioning-mf).
+6. In the **Custom UserProvisioning**, select a microflow you want to run for [Custom User Provisioning Using a Microflow](#custom-provisioning-mf).
 
     The custom microflow name must begin with the string `UC_CustomProvisioning`. If you have added a new microflow, you will need to refresh the module containing your microflow as described in [Installing Mx Model Reflection](#mxmodelreflection).
 
     This selection can be blank if you do not want to add custom logic.
 
 7. Click **Save** to save the configuration.
+
+    {{< figure src="/attachments/appstore/modules/oidc/user commons.png" max-width=80% class="image-border" >}}
 
 ### 6.3 Evaluating Multiple User Matches
 

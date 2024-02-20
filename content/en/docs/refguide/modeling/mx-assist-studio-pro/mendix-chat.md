@@ -82,7 +82,7 @@ It is easy and intuitive to interact with MendixChat. Let's get started!
 
 ### 2.2 Asking Follow-Up Questions in MendixChat
 
-In Studio Pro 10.8.0 and above, MendixChat supports asking follow-up questions based on your previous questions and the answers you have received. For example, you can ask MendixChat to summarize the latest answer you received by typing the following in the chat: *Can you summarize that?*.
+In Studio Pro 10.8.0 and above, MendixChat supports asking follow-up questions based on your previous question and the answer you have received. For example, you can ask MendixChat to summarize the latest answer you received by typing the following in the chat: *Can you summarize that?*.
 
 ## 3 Limitation 
 

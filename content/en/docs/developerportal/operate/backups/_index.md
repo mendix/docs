@@ -27,7 +27,7 @@ Backups are created and retained as follows:
 
 Each backup is automatically deleted when its retention period is over, but you can always manually delete it before then. By default, backups are retained for exactly the specified period; for example, a weekly backup created at 3:18 on December 3 expires at 3:18 on March 3. If you want to keep a backup for longer than scheduled, you can download the backup to your computer.
 
-{{% alert color="info" %}}Backups are only created when the app is deployed and running.{{% /alert %}}
+{{% alert color="info" %}}Automatic backups are only created when the app is deployed and running.{{% /alert %}}
 
 ### 2.1 Nightly Backups{#nightly-backups}
 

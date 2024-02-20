@@ -52,7 +52,7 @@ In the enterprise market, SOAP (see also [Wikipedia](http://en.wikipedia.org/wik
 
 ## 5 XSD {#xsd}
 
-An XSD (XML Schema Definition) document is a document that describes how the XML is structured so that both parties know what the message means. An XSD itself is written in XML.
+An XSD (XML Schema Definition) document is a document that describes how the XML is structured so both parties know what the message means. An XSD itself is written in XML.
 
 When importing an XSD file into your app, Studio Pro only accepts absolute paths, and the accepted schemes are limited to files or links starting with `https` or `http`.
 

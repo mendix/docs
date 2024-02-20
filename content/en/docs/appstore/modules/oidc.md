@@ -465,8 +465,8 @@ You can set up custom user provisioning by setting the following constants. You 
 | Constant | Use | Notes | Example |
 | --- | --- | --- | --- |
 | CustomUserEntity | a custom user entity | in the form `modulename.entityname` – a specialization of `System.User` | `Administration.Account` |
-| PrincipalAttribute | the attribute holding the unique identifier of an authenticated user | | `Email` |
-| IdPAttribute | the IdP claim which is the unique identifier of an authenticated user | | `Email` |
+| PrincipalAttribute | the attribute holding the unique identifier of an authenticated user | | `Name` |
+| IdPAttribute | the IdP claim which is the unique identifier of an authenticated user | | `Sub` |
 | Userrole | the role which will be assigned to newly created users | *optional* | `User` |
 | CustomUserProvisioning | a custom microflow to use for user provisioning | *optional* – in the form `modulename.microflowname` – the microflow name must begin with the string `CustomUserProvisioning` | `Mymodule.CustomUserProvisioningEntra` |
 

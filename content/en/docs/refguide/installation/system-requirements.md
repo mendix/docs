@@ -20,9 +20,9 @@ Mendix Studio Pro has the requirements listed in the following sections.
 
 [Mendix Studio Pro](/refguide/modeling/) 10 is supported on 64-bit versions of Windows 10 release 1809 and above; this also includes Windows 11. 
 
-Studio Pro 10.7 and above can run on an Apple Mac on ARM and Intel Mac running macOS Sonoma 14.0 or higher. Studio Pro versions 10.0 and above can run on the M series Apple Silicon Mac using [Parallels 17](https://www.parallels.com/) and Windows 11. Earlier versions of Studio Pro can run on Apple Mac [using Parallels](/refguide/using-mendix-studio-pro-on-a-mac/).
+Studio Pro 10.7 and above can run in beta mode on an Apple Mac on ARM and Intel Mac running macOS Sonoma 14.0 or higher. Studio Pro versions 10.0 and above can run on the M series Apple Silicon Mac using [Parallels 17](https://www.parallels.com/) and Windows 11. Earlier versions of Studio Pro can run on Apple Mac [using Parallels](/refguide/using-mendix-studio-pro-on-a-mac/).
 
-> **Note:** As new major versions of macOS are made generally available, Mendix will remove support for the oldest version and support the newest version of macOS. For the best experience, use the latest version of macOS.
+> **Note:** During the beta period for Mac, we only verify the beta version on the latest macOS version available. Support for older versions is not guaranteed and it is best to update macOS to the newest version when using Studio Pro.
 
 These are the known limitations for Mac:
 

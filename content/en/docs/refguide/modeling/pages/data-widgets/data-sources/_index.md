@@ -28,7 +28,8 @@ The **Microflow** source is not supported in offline applications because it imp
 ## 3 List Widgets {#list-widgets}
 
 ### 3.1 Introduction
-A data grid, template grid, and list view are list widgets. Also, some [pluggable widgets](/apidocs-mxsdk/apidocs/pluggable-widgets/) may behave as list widgets and use data sources. Supported data sources are listed below:
+
+Data grids, template grids, and list views are list widgets. Also, some [pluggable widgets](/apidocs-mxsdk/apidocs/pluggable-widgets/) may behave as list widgets and use data sources. Supported data sources are listed below:
 
 * [Database](/refguide/database-source/) – objects are retrieved from the database; database constraints can be used to limit which objects are shown. 
 * [XPath](/refguide/xpath-source/) – objects are retrieved from the database; an XPath constraint can be used to constrain which objects are shown.
@@ -44,20 +45,24 @@ Database and nanoflow data sources are the only data sources supported offline. 
 {{% /alert %}}
 
 ### 3.2 Network optimization mode {#optimization-mode}
-At runtime the client will retrieve the data which is configured in Studio Pro. The data can be retrieved in two possible modes depending on how the page is modeled, [optimize for network round trips](#optimize-for-network-round-trips) or [optimize for network load](#optimize-for-network-load).
-Which of the modes is used can be seen in the advanced tab of the data source properties.
 
-If "optimize for network load" is the default then this can be changed to the other mode. In case the mode
-defaults to "optimize for network round trips" then this is required by the client and cannot be changed.
+At runtime, the client will retrieve the data which is configured in Studio Pro. The data can be retrieved in two possible modes depending on how the page is modeled, [optimize for network round trips](#optimize-for-network-round-trips) or [optimize for network load](#optimize-for-network-load).
+You can see which of the modes is used in the **Advanced** tab of the data source properties.
+
+If **Network load** is the default, you can change this to **Network round trips**. If **Optimize for**
+defaults to **Network round trips** then this is required by the client and cannot be changed.
 
 {{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-sources/data-source-advanced.png" alt="data source advanced tabpage">}}
-#### Optimize for network round trips {#optimize-for-network-round-trips}
-In this mode all the attributes of the data source entity are returned for the client, even if not all these attributes are shown by the widget.
-The advantage of this mode is when a [client action](/refguide/on-click-event/#actions) is triggered, an additional request to the runtime might be prevented. 
 
-#### Optimize for network load {#optimize-for-network-load}
-In this mode only the attributes which are shown by the list widget are returned to the client.  This reduces the amount of data transferred over the network.
-But when a [client action](/refguide/on-click-event/#actions) is triggered an additional request to the runtime might be necessary. 
+#### 3.2.1 Optimize for Network Round Trips {#optimize-for-network-round-trips}
+
+In this mode, all the attributes of the data source entity are returned to the Mendix Client, even if not all these attributes are shown by the widget.
+The advantage of this mode is when a [client action](/refguide/on-click-event/#actions) is triggered, an additional request to the Runtime Server might be prevented. 
+
+#### 3.2.2 Optimize for Network Load {#optimize-for-network-load}
+
+In this mode, only the attributes which are shown by the list widget are returned to the Mendix Client.  This reduces the amount of data transferred over the network.
+This means that when a [client action](/refguide/on-click-event/#actions) is triggered an additional request to the Mendix Runtime might be necessary.
 
 ## 4 Read More
 

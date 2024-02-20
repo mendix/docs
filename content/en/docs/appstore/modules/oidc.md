@@ -466,7 +466,7 @@ You can set up custom user provisioning by setting the following constants. You 
 | --- | --- | --- | --- |
 | CustomUserEntity | a custom user entity | in the form `modulename.entityname` – a specialization of `System.User` | `Administration.Account` |
 | PrincipalAttribute | the attribute holding the unique identifier of an authenticated user | | `Name` |
-| IdPAttribute | the IdP claim which is the unique identifier of an authenticated user | | `Sub` |
+| IdPAttribute | the IdP claim which is the unique identifier of an authenticated user | | `sub` |
 | Userrole | the role which will be assigned to newly created users | *optional* | `User` |
 | CustomUserProvisioning | a custom microflow to use for user provisioning | *optional* – in the form `modulename.microflowname` – the microflow name must begin with the string `CustomUserProvisioning` | `Mymodule.CustomUserProvisioningEntra` |
 
@@ -496,7 +496,7 @@ You can set up custom user provisioning once your app is running using the `OIDC
     Note the following:
 
     * You cannot use the IdP claim which is the primary attribute identifying the user and you cannot use the attribute you set in **The attribute where the user principal is stored**
-    * You can only map one IdP claim to a **Configured Entity Attribute**
+    * You can map multiple **IdP Attribute** (claims) to a **Configured Entity Attribute** but you cannot map a new **IdP Attribute** to a **Configured Entity Attribute** if it is already mapped.
     * The **IdP Attribute** is one of the fixed claims supported by the OIDC SSO module
     * IdP Attributes(Claims) cannot be of type enum, autonumber, or an association
 

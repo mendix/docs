@@ -73,7 +73,8 @@ When a Mendix app is on premises, it is running on the customer's own infrastruc
 ### 4.3 Changing the Technical Contact {#change-technical-contact}
 
 {{% alert color="info" %}}
-It is not possible to have more than one Technical Contact for an app. 
+It is not possible to have more than one Technical Contact for an app.
+
 You can only change the Technical Contact for licensed Mendix apps. You cannot change the Technical Contact for Free Apps or apps running outside the Mendix Cloud.
 {{% /alert %}}
 

@@ -117,10 +117,6 @@ The following steps will create a cluster, register and install a namespace, add
 If required, the invitation for the cluster/namespace member can be auto-accepted by setting `autoAcceptInvite` to true in the update cluster/namespace API request.
 {{% /alert %}}
 
-{{% alert color="info" %}}
-Configuration of License Product type via the deploy API is not yet supported.
-{{% /alert %}}
-
 ### 3.2 Using the API to Restart an App {#restart}
 
 The following steps will restart an app by setting the number of instances to zero and then setting it back to the number of instances required.

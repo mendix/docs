@@ -13,6 +13,23 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2024
 
+### Februry 22, 2024
+
+#### Portal Improvements
+
+* You can now specify a custom value for `jettyOptions` under Runtime Section.
+* We now set the expiry Date for the deployment packages which are failed.
+* We have addressed an issue where changes in the data type and value of the model constants were not reflected in the application (Ticket [205850](https://mendixsupport.zendesk.com/agent/tickets/205850).)
+* We addreessed an issue where `Calendar dates` in datatime constant with dark mode was not visible correctly.
+* We addressed an issue where more name 10 namespaces were not shown in the Cluster Overview page (Ticket [208220](https://mendixsupport.zendesk.com/agent/tickets/208220).)
+* We have removed the Cluster Manager button from the top menu bar of the Private Cloud portal
+* We have fixed the typo in the  core resources tool tip in Environment details page.
+
+
+#### Deploy API Improvements
+
+* You can now configure the `product type` for the Runtime license on the **Namespace** and **Environment** level via Deploy API.
+
 ### Februry 1, 2024
 
 #### Portal Improvements

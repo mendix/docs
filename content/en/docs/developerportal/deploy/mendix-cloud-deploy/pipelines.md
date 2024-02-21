@@ -180,7 +180,7 @@ Or, if the user has configured their user settings but does not have sufficient 
 You only need to add your API key and PAT once; the settings configured here apply to all future pipeline runs across all of your apps.
 {{% /alert %}}
 
-### 4.3.1 Configuring User Settings{#configure-settings}
+### 4.1 Configuring User Settings{#configure-settings}
 
 To configure your user settings, click **Setup** on the **Settings** tab. This launches the **Setup** dialog box, where you can enter your email, API key, and PAT.
 
@@ -200,7 +200,7 @@ For security reasons, the API key and PAT values are not displayed once they are
 
 To change your API key and PAT, click **Delete** and then **Setup** to relaunch the **Setup** dialog box. Then provide your new API key and PAT values.
 
-### 4.3.2 Notifications
+### 4.2 Notifications
 
 If the pipeline fails, it sends a notification to the user who triggered the pipeline. The notification is sent via email or the **Notifications** ({{% icon name="alarm-bell" %}}) menu in the Developer Portal, depending on the user's [notification settings](/community-tools/mendix-profile/#notifications).
 

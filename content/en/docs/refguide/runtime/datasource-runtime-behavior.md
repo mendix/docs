@@ -1,69 +1,65 @@
 ---
-title: "Data sources retrieval"
+title: "Data Sources Retrieval"
 url: /refguide/datasource-runtime
 tags: ["studio pro", "data source"]
 weight: 60
 ---
 
-## Introduction
-When configuring a [list widget](/refguide/data-sources/#list-widgets) it doesn't matter which data source you select. 
-All types of data sources provide the same features when configuring a list widget. For example, widgets contained by the list widget can use attributes of the entity that is provided by the data source. If the list widget supports sorting and filtering it supports it for all types of data sources.
+## 1 Introduction
 
-Likewise, when implementing a [pluggable widget](/apidocs-mxsdk/apidocs/pluggable-widgets/), the type of data source configured is not a concern as all types of data sources work with the same [API](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/).
+When configuring a [list widget](/refguide/data-sources/#list-widgets) all data sources provide the same features. For example, widgets contained in a list widget can use attributes of the entity that is provided by the data source, or if the list widget supports sorting and filtering it supports it for all data sources.
 
-Although the internal mechanics of data sources are hidden away, and you don't need be aware of them, there are cases
-where it is helpful to know some details to be able to make a page more efficient or performant.
-It will also help to get a better understanding of the behavior of a list widget. This page describes what happens behind the 
-scenes with data flow in the Mendix platform and what the differences are at runtime.
+Likewise, when implementing a [pluggable widget](/apidocs-mxsdk/apidocs/pluggable-widgets/), you do not have to worry about the data source as all data sources work with the same [API](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/).
 
-## Paging, sorting and filtering {#paging-sorting-filtering}
-All types of data sources support paging, sorting and filtering but the way they are handled at runtime depends on the type. 
+Although you don't need to know about the internal mechanics of data sources, there are cases
+where it is helpful to know some details to be able to make a page more efficient or perform better. It will also help to get a better understanding of the behavior of a list widget. This page describes the different data flows which happen behind the scenes in the Mendix Runtime and what differences these make.
 
-For the [Database source](/refguide/database-source/) these operations are applied by the runtime.
-This means the client sends a request with all the paging, sorting and filtering information and the
-runtime server applies this information so that the requested objects (with paging, filter and sort order applied) are returned to the client.
+## 2 Paging, sorting and filtering {#paging-sorting-filtering}
 
-As these operations are applied by the server and only the requested objects are returned to the client this is a 
-performant approach as the amount of data transferred over the network is minimal. When the user interacts with the widget and moves to a different page or changes the filter, that issues a new request to the server.
+All data sources support paging, sorting, and filtering but the way they are handled at runtime depends on the type.
 
-{{< figure src="/attachments/refguide/runtime/mendix-client/data-source-server-paged.png" alt="server side paging, sorting and filtering">}}
+### 2.1 Database Source
 
-For the [Microflow source](/refguide/microflow-source/) and the [Nanoflow source]() these operations are not applied by the server but by the client.
-This means the Microflow or Nanoflow data source returns all the objects, according to the modeled out logic, after which paging, sorting and filtering is applied by the client. 
+For a [Database source](/refguide/database-source/), these operations are applied by the Runtime Server. This means the Mendix Client sends a request with all the paging, sorting and filtering information and the Runtime Server applies this information so that the requested objects (with paging, filter and sort order applied) are returned to the Mendix Client.
 
-The consequence of this approach is that even if a limited set of objects is requested by paging or a filter, first the complete set of all objects is determined and transferred over the network.
-As all the data is available on the client after the first request, changes in paging, sorting or filtering acts on the same set of objects without triggering the Microflow or Nanoflow.
+As these operations are applied by the Runtime Server and only the requested objects are returned to the Mendix Client, this is improves performance as the amount of data transferred over the network is minimal. When the user interacts with the widget and moves to a different page or changes the filter, that issues a new request to the Runtime Server.
 
-A similar approach is applied for the [Association source](/refguide/association-source/), but now the full set of objects is based on objects which are linked by the specified association.  
+{{< figure src="/attachments/refguide/runtime/mendix-client/data-source-server-paged.png" >}}
 
-{{< figure src="/attachments/refguide/runtime/mendix-client/data-source-client-paged.png" alt="server side paging, sorting and filtering">}}
+### 2.2 Microflow or Nanoflow Source
 
-## Network optimization modes
-As described in previous section the type of data source impacts when a network request is triggered.
-The size of the response of this request depends on the number of objects returned but also on the optimization mode. 
+For a [Microflow source](/refguide/microflow-source/) and the [Nanoflow source](/refguide/nanoflow-source/) these operations are applied by Mendix Client, not the Runtime Server. This means the Microflow or Nanoflow data source returns all the objects, according to the modeled out logic, after which paging, sorting and filtering is applied by the Mendix Client.
 
-There are two [optimization modes](/refguide/data-sources/#optimization-mode) and the one that applies to the data source can be seen in the data source properties.
+This means that even if a limited set of objects is requested by paging or a filter, first the complete set of all objects returned by the Microflow or Nanoflow is determined and transferred over the network. As all the data is available on the Mendix Client after the first request, changes in paging, sorting or filtering acts on the same list of objects without triggering the Microflow or Nanoflow.
 
-As an example how this modes impact the performance and behavior of the widget we use a Data grid 2 as an example.
-The data grid is configured with a database datasource of entity `OrderLine`. The data grid is configured to have two columns which both show an attribute, the `Description` and the `Price` attribute.
+### 2.3 Association Source
 
-### Optimize for network round trips
-In this mode when objects are requested it returns the objects from the server and the objects include all the attributes of the `OrderLine` entity.
-So if the entity would also have a `Quantity` attribute, it would be included in the network response, even though it is not displayed in the data grid. This increases the network load as more information is returned over the network.
-The higher the number of attributes, the more data is transferred over the network.
+An [Association source](/refguide/association-source/) works in the same way as a Microflow or Nanoflow source, but now the list of objects contains those which are linked by the specified association.
 
-In this mode the object received from the runtime is registered in the [Mendix object cache](/refguide/mendix-client/#210-object-cache).
-When the client needs the object, for example when running a client action, the object is retrieved from cache and won't issue a request to the server. 
+{{< figure src="/attachments/refguide/runtime/mendix-client/data-source-client-paged.png" >}}
 
-When a widget uses objects from cache it is notified on changes made to the attributes on that object without the need to reload the data source.
-E.g. when another widget is making changes to the `Price` attribute without committing this is immediately reflected in the grid widget.
+## 3 Network Optimization Modes
 
-In some scenarios it is required for the client to have all attributes of the object available. In that case this will be the default mode and cannot be changed. 
+As described in previous section, the type of data source impacts when a network request is triggered. The size of the response of this request depends on the number of objects returned but also on the optimization mode.
 
-### Optimize for network load
-In this mode the server returns the objects but the objects only includes the attributes used by the grid.
-This will limit the amount of data transferred over the network.
+There are two [optimization modes](/refguide/data-sources/#optimization-mode) and the one that applies to the data source can be seen in the data source advanced properties.
 
-Objects which don't contain all the attributes will not be registered in the [Mendix object cache](/refguide/mendix-client/#210-object-cache).
-This means when the object is needed by the client, e.g. in a client action, an additional request will be issued to the server to get the object with all the attributes. 
-Additionally, the data shown will not be updated until the data source is reloaded.
+To show how these modes impact the performance and behavior of the widget, consider a [Data grid 2](/appstore/modules/data-grid-2/). The data grid is configured with a database datasource of entity `OrderLine`. The data grid is configured to have two columns which show the `Description` and the `Price` attribute, respectively.
+
+### 3.1 Optimize for Network Round Trips
+
+In the **Network Round Trips** optimization mode, the Runtime Server returns all the attributes of the requested objects of the `OrderLine` entity. If the entity has additional attributes, such as a `Quantity` attribute, this would be included in the network response, although it is not displayed in the data grid. This increases the network load as more information is returned over the network. The higher the number of attributes, the more data is transferred over the network.
+
+In this mode the object received from the runtime is registered in the [Mendix object cache](/refguide/mendix-client/#object-cache). If the Mendix Client needs the object, for example when running a client action, the object is retrieved from the cache and doesn't issue a request to the Runtime Server.
+
+Because the object is cached, data shown in widgets on the page will be updated immediately, without the need to reload that page.
+
+In some scenarios the Mendix Client has to have all the attributes of the object available. In this case **Network Round Trips** will be the default mode and cannot be changed.
+
+### 3.2 Optimize for Network Load
+
+In the **Optimize for Network Load** optimization mode, the Runtime Server returns only the attributes used by the grid for the requested objects of the `OrderLine` entity. This limits the amount of data transferred over the network.
+
+Objects which don't contain all the attributes will not be registered in the [Mendix object cache](/refguide/mendix-client/#object-cache). This means when the object is needed by the Mendix Client, e.g. in a client action, an additional request will be issued to the Runtime Server to get the object with all its attributes.
+
+Data shown in widgets on the page will not be updated until the data source is reloaded.

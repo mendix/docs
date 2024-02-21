@@ -48,7 +48,7 @@ Before you start experimenting with the end-to-end process, make sure that you h
 
 * You have configured the connection to the above-mentioned database in the OpenAI showcase app.
 
-### 3.1 Creating a PostgreSQL Database with Amazon RDS {#rds-database}
+### 3.2 Creating a PostgreSQL Database with Amazon RDS {#rds-database}
 
 {{% alert color="info" %}}For detailed steps for creating a PostgreSQL Database with Amazon RDS, see [Create and Connect to a PostgreSQL Database](https://aws.amazon.com/getting-started/hands-on/create-connect-postgresql-db/) in *AWS Documentation*. You can check out the following sections in AWS Documentation for preliminary background knowledge:
 

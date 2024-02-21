@@ -12,10 +12,10 @@ aliases:
 
 ## 1 Introduction
 
-The [AWS Authentication](https://marketplace.mendix.com/link/component/120333) connector provides a way to authenticate on AWS for other compatible AWS connectors. This includes [connectors supported by Mendix](/appstore/aws-connectors/), as well as connectors developed by members of the Mendix community. If you want to develop your own AWS connector, you can use the AWS Authentication connector as a ready and reliable way to authenticate with AWS services, instead of developing an authentication method from scratch.
+The [AWS Authentication](https://marketplace.mendix.com/link/component/120333) connector provides a way to authenticate on AWS for other compatible AWS connectors. This includes [connectors supported by Mendix](/appstore/aws-modules/), as well as connectors developed by members of the Mendix community. If you want to develop your own AWS connector, you can use the AWS Authentication connector as a ready and reliable way to authenticate with AWS services, instead of developing an authentication method from scratch.
 
 {{% alert color="info" %}}
-This document describes the process of configuring the AWS Authentication connector from the perspective of a developer building their own community-supported connector. If you use a [platform-supported AWS connector](/appstore/aws-connectors/), some aspects of the process are simplified. The following sections make a note of those differences where relevant.
+This document describes the process of configuring the AWS Authentication connector from the perspective of a developer building their own community-supported connector. If you use a [platform-supported AWS connector](/appstore/aws-modules/), some aspects of the process are simplified. The following sections make a note of those differences where relevant.
 {{% /alert %}}
 
 ### 1.1 Typical Use Cases
@@ -31,7 +31,7 @@ The AWS Authentication connector gives your app the ability to use the following
 You can implement the above authentication types by means of adding a corresponding activity to the microflow that requires AWS authentication (for example, in order to connect to Amazon Dynamo DB and retrieve specific information from a table). Each activity returns a Credentials object, which is then used for authentication.
 
 {{% alert color="info" %}}
-If you plan to use AWS Authentication with a [platform-supported AWS connector](/appstore/aws-connectors/), refer to the documentation provided with the connector for more information about the required authentication type.
+If you plan to use AWS Authentication with a [platform-supported AWS connector](/appstore/aws-modules/), refer to the documentation provided with the connector for more information about the required authentication type.
 {{% /alert %}}
 
 ### 1.2 Example

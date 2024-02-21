@@ -21,7 +21,7 @@ AWS IoT SiteWise is a managed service that simplifies collecting, organizing, an
 
 The AWS IoT SiteWise connector requires Mendix Studio Pro 9.18.0 or above.
 
-To authenticate with Amazon Web Service (AWS), you must also install and configure the [AWS Authentication connector version 2.3.0 or higher](https://marketplace.mendix.com/link/component/120333). If you are using the Amazon Iot SiteWise connector version 2.0 or higher, it requires the AWS Authentication connector version 3.0 or higher. It is crucial for the Amazon Iot SiteWise connector to function correctly. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
+To authenticate with Amazon Web Service (AWS), you must also install and configure the [AWS Authentication connector version 2.3.0 or higher](https://marketplace.mendix.com/link/component/120333). If you are using the Amazon Iot SiteWise connector version 2.0 or higher, it requires the AWS Authentication connector version 3.0 or higher. It is crucial for the Amazon Iot SiteWise connector to function correctly. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/modules/aws/aws-authentication/).
 
 ### 1.3 Licensing and Cost
 
@@ -47,7 +47,7 @@ In order to use the Amazon IoT SiteWise service, you must authenticate with AWS.
 
 As of version 3.0.0 of the [AWS Authentication Connector](https://marketplace.mendix.com/link/component/120333), all the resources and logic required to set up authentication are centralized inside the AWS Authentication Connector module. 
 
-The AWS Authentication Connector supports both **static credentials** and **temporary credentials**. For more information and detailed instructions please refer to the [AWS Authentication Connector documentation page](https://docs.mendix.com/appstore/connectors/aws/aws-authentication/).
+The AWS Authentication Connector supports both **static credentials** and **temporary credentials**. For more information and detailed instructions please refer to the [AWS Authentication Connector documentation page](/appstore/modules/aws/aws-authentication/).
    
 ### 3.2 Configuring a Microflow for an AWS Service
 

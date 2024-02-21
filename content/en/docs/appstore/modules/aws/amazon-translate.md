@@ -1,12 +1,12 @@
 ---
 title: "Amazon Translate"
-url: /appstore/modules/aws/amazon-translate
+url: /appstore/modules/aws/amazon-translate/
 description: "Describes the configuration and usage of the Amazon Translate app service. Amazon Translate is a neural machine translation service that delivers fast, high-quality, affordable, and customizable language translation."
 weight: 20
 tags: ["translation", "service", "app store", "marketplace", "component", "platform support"]
 aliases:
     - /appstore/connectors/amazon-translate/
-    - /appstore/connectors/aws/amazon-translate
+    - /appstore/connectors/aws/amazon-translate/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
@@ -23,7 +23,7 @@ With Amazon Translate, you can localize content such as websites and application
 
 The Amazon Translate connector requires Mendix Studio Pro 9.18.0 or above.
 
-To authenticate with Amazon Web Service (AWS), you must also install and configure the [AWS authentication connector](https://marketplace.mendix.com/link/component/120333).  If you are using the Amazon Translate Connector version 2.0 or higher, it requires the AWS Authentication connector version 3.0 or higher. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
+To authenticate with Amazon Web Service (AWS), you must also install and configure the [AWS authentication connector](https://marketplace.mendix.com/link/component/120333).  If you are using the Amazon Translate Connector version 2.0 or higher, it requires the AWS Authentication connector version 3.0 or higher. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/modules/aws/aws-authentication/).
 
 ### 1.3 Licensing and Cost
 
@@ -53,7 +53,7 @@ In order to use the Amazon Translate service, you must authenticate with AWS. To
 
 As of version 3.0.0 of the [AWS Authentication Connector](https://marketplace.mendix.com/link/component/120333), all the resources and logic required to set up authentication are centralized inside the AWS Authentication Connector module. 
 
-The AWS Authentication Connector supports both **static credentials** and **temporary credentials**. For more information and detailed instructions please refer to the [AWS Authentication Connector documentation page](https://docs.mendix.com/appstore/connectors/aws/aws-authentication/).
+The AWS Authentication Connector supports both **static credentials** and **temporary credentials**. For more information and detailed instructions please refer to the [AWS Authentication Connector documentation page](/appstore/modules/aws/aws-authentication/).
 
 ## 4 Technical Reference
 

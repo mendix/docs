@@ -38,12 +38,12 @@ To check out which modules a category contains, click the category in the list b
 
 ### 2.1 Artificial Intelligence {#artificial-intelligence}
 
-* [Amazon Bedrock](https://docs.mendix.com/appstore/connectors/aws/amazon-bedrock/)
+* [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/)
 * [OpenAI Connector](/appstore/connectors/openai-connector/)
 
 ### 2.2 Authentication {#authentication}
 
-* [AWS Authentication](https://docs.mendix.com/appstore/connectors/aws/aws-authentication/)
+* [AWS Authentication](/appstore/modules/aws/aws-authentication/)
 * [Deep Link ⚠](/appstore/modules/deep-link/)
 * [Forgot Password](/appstore/modules/forgot-password/)
 * [LDAP](/appstore/modules/ldap/)
@@ -53,41 +53,24 @@ To check out which modules a category contains, click the category in the list b
 
 ### 2.3 AWS {#aws}
 
-- [AWS Authentication](https://docs.mendix.com/appstore/connectors/aws/aws-authentication/)
-
-- [Amazon Bedrock](https://docs.mendix.com/appstore/connectors/aws/amazon-bedrock/)
-
-- [Amazon DynamoDB](https://docs.mendix.com/appstore/connectors/aws/amazon-dynamodb/)
-
-- [Amazon EventBridge](https://docs.mendix.com/appstore/connectors/aws/amazon-eventbridge/)
-
-- [Amazon Polly](https://docs.mendix.com/appstore/connectors/aws/amazon-polly/)
-
-- [Create a Database with Amazon RDS and the Mendix Database Connector](https://docs.mendix.com/appstore/connectors/aws/amazon-rds-database-connector/)
-
-- [Amazon Rekognition](https://docs.mendix.com/appstore/connectors/aws/amazon-rekognition/)
-
-- [Amazon S3](https://docs.mendix.com/appstore/connectors/aws/amazon-s3/)
-
-- [Add Machine Learning Capabilities to Your App with Amazon SageMaker](https://docs.mendix.com/appstore/connectors/aws/amazon-sagemaker-machine-learning/)
-
-- [Send Emails with Amazon SES and Mendix Email Connector](https://docs.mendix.com/appstore/connectors/aws/amazon-ses-email-connector/)
-
-- [Amazon SNS](https://docs.mendix.com/appstore/connectors/aws/amazon-sns/)
-
-- [Amazon Textract](https://docs.mendix.com/appstore/connectors/aws/amazon-textract/)
-
-- [Amazon Translate](https://docs.mendix.com/appstore/connectors/aws/amazon-translate/)
-
-- [AWS IoT SiteWise](https://docs.mendix.com/appstore/connectors/aws/aws-iot-sitewise/)
-
-- [AWS IoT TwinMaker](https://docs.mendix.com/appstore/connectors/aws/aws-iot-twinmaker/)
-
-- [AWS Lambda](https://docs.mendix.com/appstore/connectors/aws/aws-lambda-connector/)
-
-- [Build an AWS Connector](https://docs.mendix.com/appstore/connectors/aws/build-aws-connector/)
-
-- [Amazon SQS](https://docs.mendix.com/appstore/connectors/aws/amazon-sqs/)
+* [AWS Authentication](/appstore/modules/aws/aws-authentication/)
+* [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/)
+* [Amazon DynamoDB](/appstore/modules/aws/amazon-dynamodb/)
+* [Amazon EventBridge](/appstore/modules/aws/amazon-eventbridge/)
+* [Amazon Polly](/appstore/modules/aws/amazon-polly/)
+* [Create a Database with Amazon RDS and the Mendix Database Connector](/appstore/modules/aws/amazon-rds-database-connector/)
+* [Amazon Rekognition](/appstore/modules/aws/amazon-rekognition/)
+* [Amazon S3](/appstore/modules/aws/amazon-s3/)
+* [Add Machine Learning Capabilities to Your App with Amazon SageMaker](/appstore/modules/aws/amazon-sagemaker-machine-learning/)
+* [Send Emails with Amazon SES and Mendix Email Connector](/appstore/modules/aws/amazon-ses-email-connector/)
+* [Amazon SNS](/appstore/modules/aws/amazon-sns/)
+* [Amazon Textract](/appstore/modules/aws/amazon-textract/)
+* [Amazon Translate](/appstore/modules/aws/amazon-translate/)
+* [AWS IoT SiteWise](/appstore/modules/aws/aws-iot-sitewise/)
+* [AWS IoT TwinMaker](/appstore/modules/aws/aws-iot-twinmaker/)
+* [AWS Lambda](/appstore/modules/aws/aws-lambda-connector/)
+* [Build an AWS Connector](/appstore/modules/aws/build-aws-connector/)
+* [Amazon SQS](/appstore/modules/aws/amazon-sqs/)
 
 ### 2.4 Communication {#communication}
 
@@ -100,9 +83,9 @@ To check out which modules a category contains, click the category in the list b
 
 ### 2.5 Connectors {#connectors}
 
-* [Amazon Bedrock](https://docs.mendix.com/appstore/connectors/aws/amazon-bedrock/)
-* [AWS Authentication](https://docs.mendix.com/appstore/connectors/aws/aws-authentication/)
-* [AWS IoT SiteWise](https://docs.mendix.com/appstore/connectors/aws/aws-iot-sitewise/)
+* [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/)
+* [AWS Authentication](/appstore/modules/aws/aws-authentication/)
+* [AWS IoT SiteWise](/appstore/modules/aws/aws-iot-sitewise/)
 * [Data Importer](/appstore/modules/data-importer/)
 * [Email Connector](/appstore/connectors/email-connector/)
 * [OData Connector for SAP Solutions](/appstore/connectors/sap/sap-odata-connector/)
@@ -128,7 +111,7 @@ To check out which modules a category contains, click the category in the list b
 ### 2.8 Internet-of-Things {#internet-of-things}
 
 * [MQTT Connector](/appstore/connectors/mqtt/)
-* [AWS IoT SiteWise](https://docs.mendix.com/appstore/connectors/aws/aws-iot-sitewise/)
+* [AWS IoT SiteWise](/appstore/modules/aws/aws-iot-sitewise/)
 
 ### 2.9 Mobile {#mobile}
 

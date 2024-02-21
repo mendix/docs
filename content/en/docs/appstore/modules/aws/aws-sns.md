@@ -22,7 +22,7 @@ Amazon Simple Notification Service (SNS) can send app-to-app (A2A) and app-to-pe
  
 The Amazon SNS connector requires Mendix Studio Pro 9.18.0 or above.
  
-To authenticate with Amazon Web Service (AWS), you must also install and configure the [AWS authentication connector](https://marketplace.mendix.com/link/component/120333). The Amazon SNS Connector version 3.0.0 and newer require at least version 3.0 of the AWS Authentication Connector. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
+To authenticate with Amazon Web Service (AWS), you must also install and configure the [AWS authentication connector](https://marketplace.mendix.com/link/component/120333). The Amazon SNS Connector version 3.0.0 and newer require at least version 3.0 of the AWS Authentication Connector. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/modules/aws/aws-authentication/).
  
 {{% alert color="info" %}}
 Ensure that the AWS user account used for authentication has the appropriate permissions to access the SNS service in AWS.
@@ -52,7 +52,7 @@ In order to use the Amazon SNS service, you must authenticate with AWS. To do so
 
 As of version 3.0.0 of the [AWS Authentication Connector](https://marketplace.mendix.com/link/component/120333), all the resources and logic required to set up authentication are centralized inside the AWS Authentication Connector module. 
 
-The AWS Authentication Connector supports both **static credentials** and **temporary credentials**. For more information and detailed instructions please refer to the [AWS Authentication Connector documentation page](https://docs.mendix.com/appstore/connectors/aws/aws-authentication/).
+The AWS Authentication Connector supports both **static credentials** and **temporary credentials**. For more information and detailed instructions please refer to the [AWS Authentication Connector documentation page](/appstore/modules/aws/aws-authentication/).
  
 ### 3.2 Configuring a Microflow for an AWS Service
 

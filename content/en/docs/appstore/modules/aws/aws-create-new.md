@@ -34,12 +34,12 @@ Before starting this how-to, make sure you have completed the following prerequi
 When developing AWS connectors, you can choose between integration by means of a REST API or an SDK. Although an SDK-based integration means that the implementation is alike across all AWS services, using a REST API is more suitable when the focus is on using standard platform capabilities. In addition, using a REST API does not require any Java-based development. Because of that, this how-to focuses on developing AWS connectors with the REST API.
 
 {{% alert color="info" %}}
-The platform-supported [Amazon Rekognition connector](/appstore/connectors/aws/amazon-rekognition/) was built using the REST API. If required, you can use it as reference when building your own connector.
+The platform-supported [Amazon Rekognition connector](/appstore/modules/aws/amazon-rekognition/) was built using the REST API. If required, you can use it as reference when building your own connector.
 {{% /alert %}}
 
 ## 3 Building a REST API-based AWS Connector
 
-The process of building an AWS connector consists of several stages. Refer to the following sections for a step-by-step description of the process, based on the steps used by Mendix to create the platform-supported [Amazon Polly connector](/appstore/connectors/aws/amazon-polly/).
+The process of building an AWS connector consists of several stages. Refer to the following sections for a step-by-step description of the process, based on the steps used by Mendix to create the platform-supported [Amazon Polly connector](/appstore/modules/aws/amazon-polly/).
 
 ### 3.1. Initiating the Project {#initiate}
 
@@ -50,7 +50,7 @@ To start creating your connector, do the following steps:
     For more information about the recommended naming convention for the module, see [Naming Conventions for Elements within the Connector](#naming).
 2. Install and configure the [AWS Authentication connector version 2.1 or higher](https://marketplace.mendix.com/link/component/120333).
 
-    This connector is required to authenticate with Amazon Web Services (AWS). For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
+    This connector is required to authenticate with Amazon Web Services (AWS). For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/modules/aws/aws-authentication/).
 3. In your connector module, create a folder structure similar to the following figure:
 
     {{< figure src="/attachments/appstore/connectors/aws-create-new/samplefolders.png" alt="The folder structure for the platform-supported Amazon Polly connector">}}
@@ -112,11 +112,11 @@ After modeling the API response, you can create the corresponding action to use 
     
     Name the microflow according to the [best-practice naming conventions](#naming).
 
-2. Configure the microflow to return a SigV4Header object by using the **Get SigV4 Headers** Java action from the [AWS Authentication](/appstore/connectors/aws/aws-authentication/) module.
-3. Configure both [static and session-based credentials](/appstore/connectors/aws/aws-authentication/).
+2. Configure the microflow to return a SigV4Header object by using the **Get SigV4 Headers** Java action from the [AWS Authentication](/appstore/modules/aws/aws-authentication/) module.
+3. Configure both [static and session-based credentials](/appstore/modules/aws/aws-authentication/).
 4. Create a **Call REST** activity and configure the headers from the SigV4Header object.
 
-    For more information, see [AWS Authentication: Implementing Signature Version 4 Headers](/appstore/connectors/aws/aws-authentication/#signature-v4-headers).
+    For more information, see [AWS Authentication: Implementing Signature Version 4 Headers](/appstore/modules/aws/aws-authentication/#signature-v4-headers).
 
 The signing of headers may differ across AWS services, for example:
 

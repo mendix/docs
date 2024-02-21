@@ -22,7 +22,7 @@ The [AWS Lambda](https://marketplace.mendix.com/link/component/204511) connector
 
 The AWS Lambda connector requires Mendix Studio Pro 9.18.0 or above.
 
-To authenticate with Amazon Web Service (AWS), you must also install and configure the [AWS authentication connector](https://marketplace.mendix.com/link/component/120333). If you are using the Amazon Lambda connector version 2.0 or higher, it requires the AWS Authentication connector version 3.0 or higher. It is crucial for the Amazon S3 connector to function correctly For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
+To authenticate with Amazon Web Service (AWS), you must also install and configure the [AWS authentication connector](https://marketplace.mendix.com/link/component/120333). If you are using the Amazon Lambda connector version 2.0 or higher, it requires the AWS Authentication connector version 3.0 or higher. It is crucial for the Amazon S3 connector to function correctly For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/modules/aws/aws-authentication/).
 
 ### 1.3 Licensing and Cost
 
@@ -48,14 +48,14 @@ In order to use the AWS Lambda service, you must authenticate with AWS. To do so
 
 As of version 3.0.0 of the [AWS Authentication Connector](https://marketplace.mendix.com/link/component/120333), all the resources and logic required to set up authentication are centralized inside the AWS Authentication Connector module. 
 
-The AWS Authentication Connector supports both **static credentials** and **temporary credentials**. For more information and detailed instructions please refer to the [AWS Authentication Connector documentation page](https://docs.mendix.com/appstore/connectors/aws/aws-authentication/).
+The AWS Authentication Connector supports both **static credentials** and **temporary credentials**. For more information and detailed instructions please refer to the [AWS Authentication Connector documentation page](/appstore/modules/aws/aws-authentication/).
 
 ### 3.2 Configuring a Microflow for an AWS Service
 
 To quickly configure the connection to AWS Lambda by configuring a microflow, perform the following steps:
 
 1. In the App Explorer, in **App** > **Marketplace modules** > **AWSAuthentication** > **ConnectionDetails**, configure the required authentication credentials.
-    For more information about the difference between static and temporary credentials, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
+    For more information about the difference between static and temporary credentials, see [AWS Authentication](/appstore/modules/aws/aws-authentication/).
 2. Create a new microflow.   
 3. In **AWSLambdaConnector** > **Operations**, find the microflow activty for the operation you want to perform. For example, if you want to get the list of available Lambda functions, find the **ListFunctions** activity and drag it to your microflow. For more information about the activities that the microflows can perform, see [Activities](#activities).
 4. Configure the required parameters:

@@ -303,8 +303,8 @@ div.date-format{
     padding-bottom: 0px;
     @each $color, $value in $theme-colors {
         &-#{$color} {
-            background-color: map-get($theme-colors, '#{$color}-1'); //Add background color from _variables_project.scss
-            border: 1px solid map-get($theme-colors, '#{$color}-6'); //Add border color from _variables_project.scss
+            background-color: map-get($custom-theme-colors, '#{$color}-1'); //Add background color from _variables_project.scss
+            border: 1px solid map-get($custom-theme-colors, '#{$color}-6'); //Add border color from _variables_project.scss
         }
     }
 }

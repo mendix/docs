@@ -10,7 +10,7 @@ tags: ["studio pro", "data source"]
 
 Widgets that display information stored in entities require you to assign a method by which to retrieve the relevant data. Such methods are collectively known as data sources. Widgets that require a data source include all [data containers](/refguide/data-widgets/) and [input elements](/refguide/input-widgets/). [Pluggable widgets](/apidocs-mxsdk/apidocs/pluggable-widgets/) can also use data sources.
 
-In this document, we describe data sources of data containers. 
+This document describes data sources of data containers. 
 
 ## 2 Data View
 
@@ -45,6 +45,10 @@ Database and nanoflow data sources are the only data sources supported offline. 
 {{% /alert %}}
 
 ### 3.2 Network optimization mode {#optimization-mode}
+
+{{% alert color="info" %}}
+The **Advanced** tab and **Optimization mode** properties are available in Mendix version 10.8.0 and above.
+{{% /alert %}}
 
 At runtime, the client will retrieve the data which is configured in Studio Pro. The data can be retrieved in two possible modes depending on how the page is modeled, [optimize for network round trips](#optimize-for-network-round-trips) or [optimize for network load](#optimize-for-network-load).
 You can see which of the modes is used in the **Advanced** tab of the data source properties.

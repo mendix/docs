@@ -125,7 +125,9 @@ To add a step, launch the **Pipeline Steps** dialog box by clicking **Add Step**
 
 Your pipeline can include the following steps:
 
-* Start Pipeline – This is a mandatory step for each pipeline; you cannot delete this step. This step defines the conditions that will automatically trigger the pipeline to run. To configure this step, define the conditions on which the pipeline should start; you can set the pipeline to run in response to Teamserver pushes or according to a recurring weekly schedule (in UTC).
+* Start Pipeline – This is a mandatory step for each pipeline; you cannot delete this step. This step defines the conditions that will automatically trigger the pipeline to run. To configure this step, define the conditions on which the pipeline should start; you can set the pipeline to run in response to either of the following triggers:
+    * Teamserver push (Git) – The pipeline runs when a new push is made to Teamserver (Git) for the specified branch. For details on specifying the branch in the **Branch Expression** field, see [Branch Expression](#branch-expression), below.
+    * Scheduled – The pipeline runs on a recurring weekly schedule, on the days and times you specify. Times are set in UTC.
 * Checkout – Check out a branch.
 * Build – Build a deployment package based on the latest major, minor, or patch version of the branch you checked out. The highest version is incremented based on the increment settings specified in this step.
 * Publish – Publish the newly built deployment package to a repository.
@@ -135,7 +137,27 @@ Your pipeline can include the following steps:
 
 Expand each step to configure it, delete it, or view its outputs. You can expand or collapse any step in your pipeline by clicking the step's name.
 
-##### 3.2.1.1 Variables
+#### 2.2.1.1 Branch Expression{#branch-expression}
+
+If you select **Teamserver push (Git)** as the trigger in the Start Pipeline step, you need to specify the relevant branch (or branches) in the **Branch expression** field.
+
+If you want the pipeline to run when there is a push to one specific branch, you can type the name of that branch. Or, if you want to specify multiple branches, you can use an asterisk (`*`) as a wildcard in this field. The asterisk means "match zero or more of any character."
+
+Here are some examples of valid branch expressions:
+
+* `Main` - The branch named "Main"
+* `*` – All branches
+* `Main*` - All branches that start with "Main"
+* `*Main` - All branches that end with "Main" 
+
+Keep the following in mind:
+
+* Branch expressions are case sensitive.
+* White spaces are allowed.
+* Do not use multiple asterisks in the branch expression. For example, `**Main` is an invalid expression.
+* Do not use the asterisk between two words. For example, `Main*Main` is an invalid expression.
+
+##### 3.2.1.2 Variables
 
 Some steps depend on the outputs of other steps. Therefore, you must add Checkout before Build, Build before Publish, and Publish before Deploy.
 
@@ -208,9 +230,11 @@ If the pipeline fails, it sends a notification to the user who triggered the pip
 Pipeline failure notifications are only sent if the user who triggered the pipeline has previously saved a pipeline or added their API key and PAT in the **Settings** tab.
 {{% /alert %}}
 
-## 5 Limitations
+## 5 Additional Notes
 
 Pipelines time out if they run for more than three hours. In other words, if the operations in your pipeline cumulatively take longer than three hours to complete, then the pipeline will fail.
+
+To trigger pipelines based on Teamserver push (Git), Mendix automatically creates a webhook on your behalf. You can see this webhook if you click **Webhooks** in the [navigation pane](/developerportal/#navigation-pane). Do not delete this webhook; deleting it would cause pipeline run failures for pipelines that rely on the Teamserver push (Git) trigger type.
 
 ## 6 Read More
 

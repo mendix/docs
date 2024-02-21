@@ -73,7 +73,7 @@ The new features were divided into these major themes, which are described in th
 | Webhooks (Mendix Cloud, Cloud Dedicated, Private Cloud, Private Mendix Platform) | Released for GA [Jun 15, 2023](/releasenotes/developer-portal/mendix-cloud/#june-15-2023) |
 | Private Mendix Platform | Released [Nov 15, 2023](/releasenotes/private-platform/)   |
 | Multi-region failover (Mendix Cloud, Cloud Dedicated) | Released for GA [Dec 28, 2023](/releasenotes/developer-portal/mendix-cloud/#december-28-2023) |
-| Pipelines (Mendix Cloud, Cloud Dedicated) | Public beta: Q1 2024<br>GA: TBD |
+| Pipelines (Mendix Cloud, Cloud Dedicated) | Released for public beta [February 29, 2024](/releasenotes/developer-portal/mendix-cloud/#february-29-2024)<br>GA: TBD |
 | Pipelines (Private Cloud) | GA: TBD |
 
 ## 6 Governance and Control {#governance}

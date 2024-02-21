@@ -34,8 +34,8 @@ This how-to was written based on Studio Pro 9.24. All the images, names, and ste
 
     {{< figure src="/attachments/refguide/modeling/integration/expose-a-web-service/8945665.png" >}}
 
-2. Create overview and detail pages to manage objects of the **Customer** type (for details on how to create overview and detail pages, see [How to Create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/).
-3. Create a menu item to access the customer overview page (for details on how to create menu items, see [Setting Up Navigation](/refguide/setting-up-the-navigation-structure/).
+2. Create overview and detail pages to manage objects of the **Customer** type (for details on how to create overview and detail pages, see [How to Create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/)).
+3. Create a menu item to access the customer overview page (for details on how to create menu items, see [Setting Up Navigation](/refguide/setting-up-the-navigation-structure/)).
 4. Run the application and add some data to expose in the web service.
 
 ## 4 Creating a Published Web Service{#create-published-web-service}
@@ -44,27 +44,27 @@ To create a published web service, follow these steps:
 
 1. Right-click the module in which you want to store the published web service and select **Add other** > **Published web service**.
 
-2. In the **Add Published Web Service** window, enter *CustomerWebService* for the **Name** and then click **OK**:
+2. In the **Add Published Web Service** window, enter *CustomerWebService* for the **Name**, then click **OK**:
 
     {{< figure src="/attachments/refguide/modeling/integration/expose-a-web-service/18581728.png" >}}
 
 3. You should now see the **Published Web Service** properties window. Take note of the following tab details:
-    * On the **Operations** tab, you can see the available operations of the web service (currently the list is empty, so we'll add an operation in section [Publishing a Microflow](#publish-a-microflow)):
+    * On the **Operations** tab, you can see the available operations of the web service (currently, the list is empty, so an operation will be added in the section [Publishing a Microflow](#publish-a-microflow), below):
 
         {{< figure src="/attachments/refguide/modeling/integration/expose-a-web-service/18581713.png" >}}
 
-    * On the **Settings** tab, you can configure the other settings. Do change them before publishing your web service, especially the **Target namespace** (for details on these settings, see [Published Web Service](/refguide/published-web-service/) in the *Studio Pro Guide*):
+    * On the **Settings** tab, you can configure the other settings. Do change them before publishing your web service, especially the **Target namespace** (for details on these settings, see [Published Web Service](/refguide/published-web-service/)):
 
         {{< figure src="/attachments/refguide/modeling/integration/expose-a-web-service/18581712.png" >}}
 
-4. Click **OK.**
+4. Click **OK**.
 
 ## 5 Creating the Functionality to Expose {#expose}
 
 To create the functionality to expose, follow these steps:
 
 1. Create a microflow that retrieves and returns a list of customers from the database (for details on how to create a microflow, see [Triggering a Microflow From a Menu Item](/refguide/triggering-microflow-from-menu-item/)).
-2. To make the microflow more exciting, add two input parameters to dynamically set the range settings of the retrieve action. Configure the range options of the retrieve action like this:
+2. Add two input parameters to dynamically set the range settings of the retrieve action. Configure the range options of the retrieve action like this:
 
     {{< figure src="/attachments/refguide/modeling/integration/expose-a-web-service/18581709.png" >}}
 
@@ -72,7 +72,7 @@ To create the functionality to expose, follow these steps:
 
     {{< figure src="/attachments/refguide/modeling/integration/expose-a-web-service/model.jpg" >}}
 
-If you get any errors, you will need to mark the input parameters in the **Operations** > **Paremeters** section of the service document as **Optional** and **Nillable** (see the following section.)
+If you get any errors, you will need to mark the input parameters in the **Operations** > **Parameters** section of the service document as **Optional** and **Nillable** (see the following section.)
 
 ## 6 Publishing a Microflow{#publish-a-microflow}
 
@@ -90,7 +90,7 @@ To publish a microflow, follow these steps:
 
     * On the **General** tab, you can change the **Name** and **Documentation**.
     * On the **Parameters** tab, you can mark the input parameters as **Optional** and **Nillable** (needed when adding  [parameters](/refguide/parameter/) during the [creating the functionality to expose](#expose) step)
-    * On the **Return type** tab you can configure the return type.
+    * On the **Return type** tab, you can configure the return type.
 
 4. Click **Select...** to select which attributes and associations of the return object **Customer** you want to expose:
 

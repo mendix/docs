@@ -7,7 +7,11 @@ tags: ["Deploy","App","Developer Portal", "CI/CD"]
 status: "Public Beta"
 ---
 
-{{% alert color="warning" %}}Mendix Pipelines is in [public beta](/releasenotes/beta-features/). It is currently available for unlimited use with all licensed Mendix Cloud apps. Limitations may be put on its use in the future.{{% /alert %}}
+{{% alert color="warning" %}}
+Mendix Pipelines will be launched for [public beta](/releasenotes/beta-features/) on February 29, 2024.
+
+Initially, it will be available for unlimited use with all licensed Mendix Cloud apps. Limitations may be put on its use in the future.
+{{% /alert %}}
 
 ## 1 Introduction
 

@@ -15,22 +15,22 @@ $success: #0D990D !default; // DB - Green-8 from PDS
 $info: #146FF4 !default; // MX Blue YL - updated the Mendix Blue color to its latest version in MX 10
 $warning: #C97800 !default; // DB - Yellow-8 from PDS
 $danger:  #D31E23 !default; // DB - Red-7 PDS
-$white: #fff !default;
+$white: #fff; // YL - Overide the default color defined in _variables_forward.scss
 $light: #99D0FF !default; // DB - Blue-3 from PDS
 $dark: #0A1325 !default; // Gray-10 from PDS (MxDock color)
-$blue: #146FF4 !default; // MX Blue YL - updated the Mendix Blue color to its latest version in MX 10
+$blue: #146FF4; // YL - Mendix Blue in SP 10; Overide the default color defined in _variables_forward.scss
 $gray-light: #f2f2f3 !default;
 $gray-100: #f7f7f7 !default;
 $gray-200: #f2f2f3 !default;
-$gray-300: #e7e7e9 !default;
+$gray-300: #e7e7e9; // YL - Overide the default color defined in _variables_forward.scss
 $gray-400: #d9dbdd !default;
 $gray-500: #c1c3c8 !default;
 $gray-border: $gray-500 !default;
-$gray-600: #9ea2a9 !default;
+$gray-600: #9ea2a9; // YL - Overide the default color defined in _variables_forward.scss
 $gray-700: #6b707b !default;
 $gray-800: #535965 !default;
 $gray-900: #2f3646 !default;
-$black: #000 !default;
+$black: #000 !default; // YL - Overide the default color defined in _variables_forward.scss
 
 $code-color: darken($secondary, 20%) !default;
 
@@ -78,52 +78,49 @@ $danger-8: #bc1622;
 $danger-9: #9e051b;
 $danger-10: #780328;
 
-$theme-colors: () !default;
-$theme-colors: map-merge(
-  (
-    "info-1":       $info-1,
-    "info-2":       $info-2,
-    "info-3":       $info-3,
-    "info-4":       $info-4,
-    "info-5":       $info-5,
-    "info-6":       $info-6,
-    "info-7":       $info-7,
-    "info-8":       $info-8,
-    "info-9":       $info-9,
-    "info-10":      $info-10,
-    "success-1":    $success-1,
-    "success-2":    $success-2,
-    "success-3":    $success-3,
-    "success-4":    $success-4,
-    "success-5":    $success-5,
-    "success-6":    $success-6,
-    "success-7":    $success-7,
-    "success-8":    $success-8,
-    "success-9":    $success-9,
-    "success-10":   $success-10,
-    "warning-1":    $warning-1,
-    "warning-2":    $warning-2,
-    "warning-3":    $warning-3,
-    "warning-4":    $warning-4,
-    "warning-5":    $warning-5,
-    "warning-6":    $warning-6,
-    "warning-7":    $warning-7,
-    "warning-8":    $warning-8,
-    "warning-9":    $warning-9,
-    "warning-10":   $warning-10,
-    "danger-1":     $danger-1,
-    "danger-2":     $danger-2,
-    "danger-3":     $danger-3,
-    "danger-4":     $danger-4,
-    "danger-5":     $danger-5,
-    "danger-6":     $danger-6,
-    "danger-7":     $danger-7,
-    "danger-8":     $danger-8,
-    "danger-9":     $danger-9,
-    "danger-10":    $danger-10
-  ),
-  $theme-colors
+$custom-theme-colors: (
+  "info-1":       $info-1,
+  "info-2":       $info-2,
+  "info-3":       $info-3,
+  "info-4":       $info-4,
+  "info-5":       $info-5,
+  "info-6":       $info-6,
+  "info-7":       $info-7,
+  "info-8":       $info-8,
+  "info-9":       $info-9,
+  "info-10":      $info-10,
+  "success-1":    $success-1,
+  "success-2":    $success-2,
+  "success-3":    $success-3,
+  "success-4":    $success-4,
+  "success-5":    $success-5,
+  "success-6":    $success-6,
+  "success-7":    $success-7,
+  "success-8":    $success-8,
+  "success-9":    $success-9,
+  "success-10":   $success-10,
+  "warning-1":    $warning-1,
+  "warning-2":    $warning-2,
+  "warning-3":    $warning-3,
+  "warning-4":    $warning-4,
+  "warning-5":    $warning-5,
+  "warning-6":    $warning-6,
+  "warning-7":    $warning-7,
+  "warning-8":    $warning-8,
+  "warning-9":    $warning-9,
+  "warning-10":   $warning-10,
+  "danger-1":     $danger-1,
+  "danger-2":     $danger-2,
+  "danger-3":     $danger-3,
+  "danger-4":     $danger-4,
+  "danger-5":     $danger-5,
+  "danger-6":     $danger-6,
+  "danger-7":     $danger-7,
+  "danger-8":     $danger-8,
+  "danger-9":     $danger-9,
+  "danger-10":    $danger-10
 );
+
 
 // UI element colors
 

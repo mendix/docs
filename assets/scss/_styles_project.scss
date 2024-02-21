@@ -13,20 +13,6 @@
     unicode-range: U+000-5FF; /* Latin glyphs */
 }
 
-// Temp bug fixes for version update
-
-.btn-info { //_blog.scss
-    all: unset;
-}
-
-.btn-outline-primary { //_drawio.scss
-    all: unset;
-}
-
-.td-box--dark { //main.scss
-    all: unset;
-}
-
 // _alert.scss - Style alert boxes (alert layout defined in alert.html)
 
 .alert {
@@ -38,8 +24,8 @@
     align-items: flex-start; // Align items at the top of the flexbox
     @each $color, $value in $theme-colors {
         &-#{$color} {
-            background-color: map-get($theme-colors, '#{$color}-1'); //Add background color from _variables_project.scss
-            border: 1px solid map-get($theme-colors, '#{$color}-2'); //Add border color from _variables_project.scss
+            background-color: map-get($custom-theme-colors, '#{$color}-1'); //Add background color from _variables_project.scss
+            border: 1px solid map-get($custom-theme-colors, '#{$color}-2'); //Add border color from _variables_project.scss
         }
     }
 }
@@ -666,8 +652,22 @@ nav.foldable-nav {
    .mx-footer__link:focus-visible {
          outline: 2px solid #298efb;
          outline-offset: 2px;
-   }
+    }
 
    .footer .container {
     text-align: center;
 }
+
+
+//_badge.scss
+
+.badge-warning {
+    color: #fff;
+    background-color: #C97800;
+  }
+
+.badge-pill {
+    padding-right: 0.6em;
+    padding-left: 0.6em;
+    border-radius: 10rem;
+  }

@@ -13,10 +13,11 @@ The **Preferences** option in the menu opens a dialog box where you can set user
 
 ## 2 General Tab {#general}
 
-### 2.1 Enable autosave
-When enabled, it automatically saves your changes on various actions, such as running and deploying your app, executing version control operations like committing, merging, or reverting, closing files or projects, exporting modules, or exiting Studio Pro.
+### 2.1 Enable Autosave {#autosave}
 
-Additionally, you have the option to enable autosave when attepting any of these actions with unsaved changes. In such cases, a dialogue will show up, giving you the choice to save or discard your changes. You can speed up this process by checking the "Do not ask me again" checkbox, It will prevent further prompts and enabling the autosave functionality.
+When enabled, this option automatically saves your changes on various actions, such as running and deploying your app, executing version control operations (for example, committing, merging, or reverting), closing files or apps, exporting modules, or exiting Studio Pro.
+
+Additionally, you have the option to enable autosave for any of these actions when you have unsaved changes. In such cases a dialogue box is opened, where you can choose to save or discard your changes. You can speed this process up by checking the **Do not ask me again** checkbox, which prevents further prompts and enables the autosave functionality.
 
 ### 2.2 Interface {#interface}
 

@@ -15,7 +15,7 @@ When you have created your app, it is important to be able to manage it. There a
 Access to operations information is divided into four pages: Metrics, Alerts, Logs, and Backups.
 
 {{% alert color="info" %}}
-This page describes the operations pages for apps deployed to Mendix Cloud. If your app is deployed to SAP Business Technology Platform (SAP BTP) instead, the **Metrics**, **Alerts**, **Logs**, and **Backups** pages in the Developer Portal link to the corresponding pages on SAP BTP.
+This page describes the operations pages for apps deployed to Mendix Cloud. If your app is deployed to SAP Business Technology Platform (SAP BTP) instead, the **Metrics**, **Alerts**, **Logs**, and **Backups** pages in the Developer Portal link to the SAP BTP cockpit.
 {{% /alert %}}
 
 {{% alert color="info" %}}

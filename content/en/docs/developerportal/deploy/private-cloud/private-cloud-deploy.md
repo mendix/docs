@@ -508,9 +508,8 @@ If the MxApp constants are configured in both the CSI Secrets Storage and anothe
 {{% /alert %}}
 
 {{% alert color="info" %}}
-If alterations are made to both the data type and its corresponding value in the mpr file, those modifications will be reflected in the portal. However, if only the value is changed without altering the data type, the update will not appear in the portal; only modifications to the data type will be reflected.
+If you change the data type and value in the .mpr file, the changes are visible in the Portal. Changes that only affect the data value without altering the data type are not visible in the Portal.
 {{% /alert %}}
-
 
 ### 5.3 Network Tab
 

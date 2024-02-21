@@ -70,13 +70,15 @@
                                 </div>
                             </div>
                             <div class="row inner-row">
-                                <h3 class="title-row">Most Popular</h3>
+                                <h3 class="col title-row">Most Popular</h3>
                             </div>
                             <!-- NK - moved Most Popular section to partial -->
                             {{ partial "landingpage/most-popular.html" . }}
                             <br>
                             <div class="row inner-row">
-                                {{ partial "landingpage/note.html" . }}
+                                <div class="col">
+                                    {{ partial "landingpage/note.html" . }}
+                                </div>
                             </div>
 
 

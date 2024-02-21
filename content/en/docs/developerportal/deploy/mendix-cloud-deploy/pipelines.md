@@ -224,7 +224,7 @@ To change your API key and PAT, click **Delete** and then **Setup** to relaunch 
 
 ### 4.2 Notifications
 
-If the pipeline fails, it sends a notification to the user who triggered the pipeline. The notification is sent via email or the **Notifications** ({{% icon name="alarm-bell" %}}) menu in the Developer Portal, depending on the user's [notification settings](/community-tools/mendix-profile/#notifications).
+If the pipeline fails, it sends a notification to the user who triggered the pipeline. The notification is sent via email or the **Notifications** ({{% icon name="alarm-bell" %}}) menu in the Developer Portal, depending on the user's [notification settings](/community-tools/mendix-profile/user-settings/#notifications).
 
 {{% alert color="warning" %}}
 Pipeline failure notifications are only sent if the user who triggered the pipeline has previously saved a pipeline or added their API key and PAT in the **Settings** tab.

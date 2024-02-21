@@ -42,11 +42,11 @@ To import a WSDL, follow these steps:
 To create logic to call the web service, follow these steps:
 
 1. Right-click your module in the **App Explorer** and select **Add microflow** from the menu:
-2. Enter a name for the new microflow: *ConvertCelsiusToFahrenheit* and click **OK**.
+2. Name your microflow *ConvertCelsiusToFahrenheit* and click **OK**.
 
     {{< figure src="/attachments/refguide/modeling/integration/consume-a-simple-web-service/18582083.png" >}}
 
-3. An empty microflow will be displayed:
+3. An empty microflow is displayed:
 
     {{< figure src="/attachments/refguide/modeling/integration/consume-a-simple-web-service/18582081.png" >}}
 
@@ -61,7 +61,7 @@ To create logic to call the web service, follow these steps:
     {{< figure src="/attachments/refguide/modeling/integration/consume-a-simple-web-service/18582079.png" >}}
 
 8. Drag a **Call web service** activity from the toolbox and add it to the microflow just before the end event.
-9. Double-click this activity to open the **Call Web Service** properties editor. For the **Operation** of your consumed web service, click **Select**. Expand the **TemperatureConverter** web service and under **TempConvert** click **CelsiusToFahrenheit** and click **Select**:
+9. Double-click this activity to open the **Call Web Service** properties editor. For the **Operation** of your consumed web service, click **Select**. Expand the **TemperatureConverter** web service and under **TempConvert**, click **CelsiusToFahrenheit** > **Select**:
 
     {{< figure src="/attachments/refguide/modeling/integration/consume-a-simple-web-service/18582076.png" >}}
 

@@ -106,7 +106,7 @@ These are the user types:
 
 The **JVM Object Heap** graph shows the internal distribution of allocated memory inside the application process for Java objects. Java objects are created in Java actions, but they also include all objects that are used by microflows running in your app at runtime.
 
-{{< figure src="/attachments/developerportal/operate/metrics/jvm-heap.png" >}}
+{{< figure src="/attachments/developerportal/operate/metrics/jvm-heap.png" class="image-border" >}}
 
 Note that the JVM does not immediately clean up objects that are no longer in use. This graph shows unused memory as still in use until the garbage collector—which analyzes the memory to free up space—is run. So, before a garbage collection, you cannot see how much of the JVM memory will be available after the garbage collection cycle. This is because the garbage collection process only finds that out when it actually runs.
 
@@ -115,11 +115,15 @@ These are the types of objects:
 | Object Type            | Explanation                                                         |
 |------------------------|---------------------------------------------------------------------|
 | **tenured generation** |  As objects "survive" repeated garbage collections in the eden space, they are migrated to the tenured generation. You can look at this metric as a number of long-living objects in JVM. |
-| **native memory**      | The native memory is the memory available to the operating system.  |
-| **eden space**         | The eden space is the pool from which memory is initially allocated for most objects. |
+| **survivor space**     | The Survivor space is the pool containing objects that have survived the garbage collection of the Eden space.  |
+| **eden space**         | The Eden space is the pool from which memory is initially allocated for most objects. |
 | **unused**             | This is the unused JVM heap memory.                                             |
 
-{{% alert color="warning" %}}It is difficult to base conclusions on JVM heap memory graphs. Imagine, for example, a scenario where the tenured generation is shown as 65% of the complete heap size.<br><br>If a garbage collection is triggered when the percentage reaches two-thirds of the total heap size, then the tenured generation could drop to 0%. However, it could stay at 65% if all data in this memory part is still referenced by running actions in the application.{{% /alert %}}
+{{% alert color="warning" %}}
+It is difficult to base conclusions on JVM heap memory graphs. Imagine, for example, a scenario where the tenured generation is shown as 65% of the complete heap size.
+
+If a garbage collection is triggered when the percentage reaches two-thirds of the total heap size, then the tenured generation could drop to 0%. However, it could stay at 65% if all data in this memory part is still referenced by running actions in the application.
+{{% /alert %}}
 
 ### 4.4 JVM Process Memory Usage{#Trends-appmxruntimejvmprocessmemory}
 

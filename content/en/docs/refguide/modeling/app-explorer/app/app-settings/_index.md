@@ -27,7 +27,7 @@ For more information on settings in a configuration, see [Configuration](/refgui
 
 These settings influence the behavior of the Runtime when running your application.
 
-### 3.1 Use React Client (Beta)
+### 3.1 Use React Client (Beta) {#react-client}
 
 This setting enables the new React client. This client was released into beta in [Mendix 10.7](/releasenotes/studio-pro/10.7/#react-client). There are three options:
 
@@ -270,13 +270,13 @@ The look and feel of a Mendix application is governed by the [UI resources packa
 ### 6.2 ⚠ Theme ZIP File
 
 {{% alert color="warning" %}}
-⚠ The use of a ZIP file to configure an app's theme is deprecated. A [UI resources package](/refguide/ui-resources-package/) is the preferred method of sharing themes.
+The use of a ZIP file to configure an app's theme is deprecated. A [UI resources package](/refguide/ui-resources-package/) is the preferred method of sharing themes.
 {{% /alert %}}
 
 Older apps may still use a theme ZIP file as the basis for their theme. In this situation, the **Theme ZIP file** setting can be used to switch between any ZIP files found in the **theme** folder. 
 
 {{% alert color="warning" %}}
-⚠ This practice is deprecated and will be removed in a future version.
+This practice is deprecated and will be removed in a future version.
 {{% /alert %}}
 
 Switching from a ZIP file to a UI resources package is straightforward:
@@ -349,7 +349,7 @@ For more information on workflow events, see [Workflow Events](/refguide/workflo
 ### 7.4 ⚠ Events (Deprecated) {#events} 
 
 {{% alert color="warning" %}}
-⚠ State-change events are deprecated and replaced with the new [event handlers](#event-handlers) above that also contain events for state changes. It is suggested to migrate the microflows to the new event handlers.
+State-change events are deprecated and replaced with the new [event handlers](#event-handlers) above that also contain events for state changes. It is suggested to migrate the microflows to the new event handlers.
 {{% /alert %}}
 
 Events allow you to set a microflow for workflow and user task state changes in your app. 

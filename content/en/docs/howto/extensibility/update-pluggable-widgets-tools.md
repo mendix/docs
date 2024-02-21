@@ -22,7 +22,7 @@ Follow this guide to update the Pluggable Widgets Tools package used by your plu
 To update a specific widget's Pluggable Widget Tools package, run the following commands at the root of the widget's directory:
 
 1. Open the widget with the IDE of your choice.
-1. Run `npm install --save-dev @mendix/pluggable-widgets-tools` to get the latest version.
+1. Run `npm install --save-dev @mendix/pluggable-widgets-tools@latest` to get the latest version.
    * You can use `npm install --save-dev @mendix/pluggable-widgets-tools@YOUR_VERSION` if you are targeting a specific version.
 1. When the installation finishes, run `npm run start`.
    * It might prompt you about handling the old dependencies. You should enter `Y`(es). It will take some time before the update finishes.

@@ -4,10 +4,6 @@ url: /refguide8/numeric-formatting/
 tags: ["studio pro"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/numeric-formatting.pdf).
-{{% /alert %}}
-
 ## 1 Behavior in Your Mendix Application
 
 A number will be translated into XML untouched, except that any trailing zeroes will be stripped and the representation will always be in non-scientific notation. The rounding mode used is configured in the [Project Settings](/refguide8/project-settings/).

@@ -4,10 +4,6 @@ url: /refguide8/http-request-and-response-entities/
 tags: ["studio pro"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/http-request-and-response-entities.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 `HttpRequest` is a system entity that represents a request to a server. `HttpResponse` represents the response from the server. Use these entities when [publishing](/refguide8/published-rest-services/) or [consuming](/refguide8/consumed-rest-services/) REST services.

@@ -22,13 +22,13 @@ To retrieve all objects, specify the URI (for example, `/odata/myservice/v1/Empl
 
 ### 2.2 Retrieving a Single Object
 
-To retrieve a single object, pass the object identifier in the URI. Here is an example: `/odata/myservice/v1/Employees(8444249301330581)`.
+To retrieve a single object, pass the object identifier in the URI (for example, `/odata/myservice/v1/Employees(8444249301330581)`).
 
 ### 2.3 Retrieving Associated Objects
 
 To retrieve associated objects, pass the `$expand` query parameter.
 
-For example, imagine that you have four entities in your domain model: **Employee**, **Car**, **Address**, and **City**. They include the following associations:
+For example, imagine you have four entities in your domain model: **Employee**, **Car**, **Address**, and **City**. They include the following associations:
 
 * An association between **Employee** and **Car**
 * An association between **Employee** and **Address**
@@ -93,7 +93,7 @@ Mendix supports the following comparison operators:
 
 ### 4.4 Combining Filters
 
-Filters can be combined with `and`, `or`, `not`, and `()`. Here is an example: `?$filter=Name eq 'John' and (Age gt 65 or Age lt 11)`.
+Filters can be combined with `and`, `or`, `not`, and `()` (for example, `?$filter=Name eq 'John' and (Age gt 65 or Age lt 11)`).
 
 | Combination | Example                                                          |
 | ----------- | ---------------------------------------------------------------- |
@@ -119,13 +119,13 @@ The use of arithmetic operators such as `add`, `sub`, `mul`, `div`, and `mod` in
 
 ## 5 Sorting
 
-To sort the result, use the `$orderby` query option. Here are some examples: `?$orderby=Name` and `?$orderby=BirthPlace/CityName`.
+To sort the result, use the `$orderby` query option (for example, `?$orderby=Name` and `?$orderby=BirthPlace/CityName`).
 
 The default sort direction is ascending. You can make this explicit as follows: `?$orderby=Name asc`.
 
-You can also order the result in descending direction. Here is an example: `?$orderby=Name desc`.
+You can also order the result in descending direction (for example, `?$orderby=Name desc`).
 
-To sort on multiple attributes, separate each attribute with a comma. Here is an example: `?$orderby=Name asc,Age desc`.
+To sort on multiple attributes, separate each attribute with a comma (for example, `?$orderby=Name asc,Age desc`).
 
 ## 6 Selecting fields
 
@@ -249,7 +249,7 @@ When a published entity has the [Deletable](/refguide/published-odata-entity/#de
 
 ## 13 Calling Microflows {#actions}
 
-To call microflows that are published in your OData service, send a `POST` request to the action's endpoint URL. Here is an example: `POST /odata/myservice/v1/OnboardNewEmployee`.
+To call microflows that are published in your OData service, send a `POST` request to the action's endpoint URL (for example, `POST /odata/myservice/v1/OnboardNewEmployee`).
 
 The endpoint URL is defined by the base URL of the OData service and the exposed name of the microflow. To find an example URL, you can open the [Edit published microflow](/refguide/published-odata-microflow/#edit-microflow) dialog box and look at the **Example of location** property.
 

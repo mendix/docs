@@ -459,7 +459,7 @@ For a *connected* cluster, the top level MendixApp​ CRD will be deleted from t
 
     {{% alert color="info" %}}If the storage plan is using a JDBC plan (not Postgres or SQL Server), the database and the user will remain untouched).{{% /alert %}}
 
-* ​​Files related to that environment will be deleted from the S3/Minio/Tencent storage bucket (or prefix if this is using a shared bucket).
+* ​​Files related to that environment will be deleted from the S3/Minio storage bucket (or prefix if this is using a shared bucket).
 
     {{% alert color="info" %}}If you are using the S3 [create account with existing policy](/developerportal/deploy/standard-operator/#storage-plan) plan - the files remain untouched.{{% /alert %}} 
 

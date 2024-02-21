@@ -18,7 +18,7 @@ The **Metrics** page contains detailed graphs about your app and its environment
 
 These statistics are displayed as trends over time. The data covers the past three months, and you can adjust the view to display data for the past day, week, month, or quarter.
 
-{{% alert color="info" %}}This page describes metrics for licensed apps deployed to Mendix Cloud. Metrics are not available for Free Apps deployed to Mendix Cloud.<br><br>If your app is deployed to SAP Business Technology Platform (SAP BTP) instead, the **Metrics** page displays links to the corresponding page on SAP BTP.{{% /alert %}}
+{{% alert color="info" %}}This page describes metrics for licensed apps deployed to Mendix Cloud. Metrics are not available for Free Apps deployed to Mendix Cloud.<br><br>If your app is deployed to SAP Business Technology Platform (SAP BTP) instead, the **Metrics** page displays links to the SAP BTP cockpit.{{% /alert %}}
 
 ## 2 Accessing the Metrics Graphs
 

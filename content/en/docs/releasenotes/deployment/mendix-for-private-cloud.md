@@ -23,7 +23,6 @@ For information on the current status of deployment to Mendix for Private Cloud 
 * We addreessed an issue where **Calendar dates** in **datetime** constants were not visible correctly in dark mode.
 * We addressed an issue where only 10 namespaces were displayed in the **Cluster Overview** page (Ticket [208220](https://mendixsupport.zendesk.com/agent/tickets/208220).)
 * The **Cluster Manager** button has been removed from the top menu bar of the Private Cloud portal. You can now navigate to the **Cluster Overview** page using the **Mendix for Private Cloud** button.
-* We have fixed a typo in the core resources tooltip on the **Environment details** page.
 * You can now export the app constants to an Excel file.
 
 #### Deploy API Improvements

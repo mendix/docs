@@ -52,11 +52,7 @@ To see the results of a particular run, click **Results** ({{% icon name="paper-
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/run-details.png" class="image-border" alt="" >}}
 
-From this page, you can view an overview of the run. You can also expand each executed step to see more information about it; this is especially useful for debugging when a pipeline run fails. Expanding a step shows the following information:
-
-* The step log
-* A **View Logs in fullscreen** button
-* A **View Parameters** button, which you can use to view the input and output parameters as well as the values of the step
+From this page, you can view an overview of the run. You can also expand each executed step to see more information about it; this is especially useful for debugging when a pipeline run fails. When you expand a step, you can also see a **View Parameters** button, which you can use to view the input and output parameters as well as the values of the step.
 
 At the top of the page, there are several cards that display important information, such as whether the run succeeded or failed. If it failed, it includes information about the error that caused the run failure. There are two types of errors: step-level errors and system-level errors.
 

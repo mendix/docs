@@ -55,6 +55,7 @@ You can see which of the modes is used in the **Advanced** tab of the data sourc
 
 If **Network load** is the default, you can change this to **Network round trips**. If **Optimize for**
 defaults to **Network round trips** then this is required by the client and cannot be changed.
+For the [data grid](/refguide/data-grid/), [template grid](/refguide/template-grid/) and [list view](/refguide/list-view/) widgets the optimization mode cannot be changed. 
 
 {{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-sources/data-source-advanced.png" alt="data source advanced tabpage">}}
 

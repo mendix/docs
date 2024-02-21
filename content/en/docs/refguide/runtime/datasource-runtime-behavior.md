@@ -22,7 +22,7 @@ All data sources support paging, sorting, and filtering but the way they are han
 
 For a [Database source](/refguide/database-source/), these operations are applied by the Runtime Server. This means the Mendix Client sends a request with all the paging, sorting and filtering information and the Runtime Server applies this information so that the requested list of objects (with paging, filter and sort order applied) is returned to the Mendix Client.
 
-As these operations are applied by the Runtime Server, and only the requested objects are returned to the Mendix Client, this is improves performance as the amount of data transferred over the network is minimal. When the user interacts with the widget and moves to a different page or changes the filter, Mendix Client issues a new request to the Runtime Server.
+As these operations are applied by the Runtime Server, and only the requested objects are returned to the Mendix Client, this improves performance as the amount of data transferred over the network is minimal. When the user interacts with the widget and moves to a different page or changes the filter, Mendix Client issues a new request to the Runtime Server.
 
 {{< figure src="/attachments/refguide/runtime/mendix-client/data-source-server-paged.png" >}}
 

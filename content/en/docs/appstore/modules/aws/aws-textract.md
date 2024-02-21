@@ -1,9 +1,11 @@
 ---
 title: "Amazon Textract"
-url: /appstore/connectors/aws/amazon-textract/
+url: /appstore/modules/aws/amazon-textract/
 description: "Describes the configuration and usage of the Amazon Textract connector from the Mendix Marketplace. Amazon Textract is a service that enables developers to extract text, handwriting and data in a structured manner from documents."
 weight: 20
 tags: ["marketplace", "marketplace component", "amazon", "textract", "connector"]
+aliases:
+    - /appstore/connectors/aws/amazon-textract/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 

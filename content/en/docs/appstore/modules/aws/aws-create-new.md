@@ -1,9 +1,11 @@
 ---
 title: "Build an AWS Connector"
-url: /appstore/connectors/aws/build-aws-connector/
+url: /appstore/modules/aws/build-aws-connector/
 description: "Describes the basic steps for building new connectors for AWS services."
 weight: 25
 tags: ["connectors", "amazon", "aws", "build", "connector guide", "how to"]
+aliases:
+    - /appstore/connectors/aws/build-aws-connector/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 

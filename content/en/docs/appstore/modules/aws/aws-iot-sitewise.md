@@ -1,9 +1,11 @@
 ---
 title: "AWS IoT SiteWise"
-url: /appstore/connectors/aws/aws-iot-sitewise/
+url: /appstore/modules/aws/aws-iot-sitewise/
 description: "Describes the configuration and usage of the AWS Iot SiteWise connector from the Mendix Marketplace. AWS Iot SiteWise is a managed service that simplifies collecting, organizing, and analyzing industrial equipment data."
 weight: 20
 tags: ["marketplace", "marketplace component", "amazon", "AWS IoT SiteWise", "connector"]
+aliases:
+    - /appstore/connectors/aws/aws-iot-sitewise/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 

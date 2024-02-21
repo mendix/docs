@@ -1,9 +1,11 @@
 ---
 title: "AWS IoT TwinMaker"
-url: /appstore/connectors/aws/aws-iot-twinmaker/
+url: /appstore/modules/aws/aws-iot-twinmaker/
 description: "Describes the configuration and usage of the AWS IoT TwinMaker connector from the Mendix Marketplace. AWS IoT TwinMaker is a connector to read data from your digital twin stored in the AWS cloud."
 weight: 20
 tags: ["marketplace", "marketplace component", "amazon", "AWS IoT TwinMaker", "connector"]
+aliases:
+    - /appstore/connectors/aws/aws-iot-sitewise/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 

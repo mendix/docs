@@ -1,9 +1,11 @@
 ---
 title: "Amazon EventBridge"
-url: /appstore/connectors/aws/amazon-eventbridge/
+url: /appstore/modules/aws/amazon-eventbridge/
 description: "Describes the configuration and usage of the Amazon EventBridge connector from the Mendix Marketplace. Amazon EventBridge is a serverless service that uses events to connect application components together."
 weight: 20
 tags: ["marketplace", "marketplace component", "aws", "amazon", "eventbridge", "connector"]
+aliases:
+    - /appstore/connectors/aws/amazon-eventbridge/
 ---
 
 ## 1 Introduction

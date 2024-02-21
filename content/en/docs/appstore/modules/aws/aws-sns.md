@@ -1,11 +1,12 @@
 ---
 title: "Amazon SNS"
-url: /appstore/connectors/aws/amazon-sns/
+url: /appstore/modules/aws/amazon-sns/
 description: "Describes the configuration and usage of the Amazon SNS connector from the Mendix Marketplace. Amazon Simple Notification Service (Amazon SNS) is a managed service that provides message delivery from publishers to subscribers (also known as producers and consumers)."
 weight: 20
 tags: ["marketplace", "marketplace component", "amazon", "sns", "connector"]
 aliases:
     - /appstore/connectors/amazon-sns/
+    - /appstore/connectors/aws/amazon-sns/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
  

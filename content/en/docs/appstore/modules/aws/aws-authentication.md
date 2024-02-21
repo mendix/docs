@@ -1,11 +1,12 @@
 ---
 title: "AWS Authentication"
-url: /appstore/connectors/aws/aws-authentication/
+url: /appstore/modules/aws/aws-authentication/
 description: "Use the AWS Authentication connector to securely authenticate your Mendix app with an AWS service. This connector is required for all platform-supported AWS connectors. You can also use it if you want to build your own AWS connectors."
 weight: 10
 tags: ["marketplace", "marketplace component", "aws", "authentication"]
 aliases:
     - /appstore/connectors/aws-authentication/
+    - /appstore/connectors/aws/aws-authentication/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 

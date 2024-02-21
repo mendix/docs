@@ -1,9 +1,11 @@
 ---
 title: "Amazon Bedrock"
-url: /appstore/connectors/aws/amazon-bedrock/
+url: /appstore/modules/aws/amazon-bedrock/
 description: "Describes the configuration and usage of the Amazon Bedrock connector from the Mendix Marketplace. Amazon Bedrock is a fully managed service that makes foundation models (FMs) from Amazon and leading AI startups available through an API."
 weight: 20
 tags: ["marketplace", "marketplace component", "amazon", "bedrock", "connector"]
+aliases:
+    - /appstore/connectors/aws/amazon-bedrock/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 

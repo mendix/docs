@@ -1,11 +1,13 @@
 ---
 title: "SAP Connectors"
-url: /appstore/sap-connectors/
+url: /appstore/sap-modules/
 description: "Presents details on the SAP-specific connectors available in the Mendix Marketplace."
 weight: 40
 no_list: false
 description_list: true
 tags: ["marketplace", "marketplace component", "connector", "SAP"]
+aliases:
+    - /appstore/sap-connectors/
 ---
 
 ## 1 Introduction

@@ -21,12 +21,12 @@ Refer to the sections below for information about SAP connectors, modules, and d
 
 The following articles contain the documentation for all platform-supported SAP connectors:
 
-* [OData Connector for SAP Solutions](/appstore/connectors/sap/sap-odata-connector/) – describes the actions and domain model of the [OData Connector for SAP solutions](https://marketplace.mendix.com/link/component/74525) 
-* [BAPI Connector for SAP Solutions](/appstore/connectors/sap/sap-bapi-connector/) – describes the actions and domain model used when using this connector to integrate with SAP BAPI
+* [OData Connector for SAP Solutions](/appstore/modules/sap/sap-odata-connector/) – describes the actions and domain model of the [OData Connector for SAP solutions](https://marketplace.mendix.com/link/component/74525) 
+* [BAPI Connector for SAP Solutions](/appstore/modules/sap/sap-bapi-connector/) – describes the actions and domain model used when using this connector to integrate with SAP BAPI
 * [Model Creator for SAP Integrations](/appstore/services/use-sap-model-creator/)
-* [XSUAA Connector for SAP Business Technology Platform](/appstore/connectors/sap/sap-xsuaa-connector/) – presents information on the [XSUAA Connector for SAP Business Technology Platform](https://marketplace.mendix.com/link/component/78091)
-* [SAP Logging Connector](/appstore/connectors/sap/sap-logger/) - describes a connector that allows a Mendix app to output logs in a format supported by the SAP BTP Kibana dashboard.
-* [SAP Event Mesh Connector](/appstore/connectors/sap/sap-event-mesh-connector/) - describes a connector which enables you to connect your app to [SAP Event Mesh](https://discovery-center.cloud.sap/serviceCatalog/event-mesh) and connect your Mendix app to applications, services, and systems across hybrid environments.
+* [XSUAA Connector for SAP Business Technology Platform](/appstore/modules/sap/sap-xsuaa-connector/) – presents information on the [XSUAA Connector for SAP Business Technology Platform](https://marketplace.mendix.com/link/component/78091)
+* [SAP Logging Connector](/appstore/modules/sap/sap-logger/) - describes a connector that allows a Mendix app to output logs in a format supported by the SAP BTP Kibana dashboard.
+* [SAP Event Mesh Connector](/appstore/modules/sap/sap-event-mesh-connector/) - describes a connector which enables you to connect your app to [SAP Event Mesh](https://discovery-center.cloud.sap/serviceCatalog/event-mesh) and connect your Mendix app to applications, services, and systems across hybrid environments.
 
 ### 2.2 SAP Modules
 

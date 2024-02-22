@@ -1,9 +1,11 @@
 ---
 title: "SAP Event Mesh Connector"
-url: /appstore/connectors/sap/sap-event-mesh-connector/
+url: /appstore/modules/sap/sap-event-mesh-connector/
 description: "Describes the configuration and usage of the SAP Event Mesh connector from the Mendix Marketplace. The SAP Event Mesh service is allows applications to communicate through asynchronous events."
 weight: 20
 tags: ["marketplace", "marketplace component", "SAP", "SAP Event Mesh", "connector"]
+aliases:
+    - /appstore/connectors/sap/sap-event-mesh-connector/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 

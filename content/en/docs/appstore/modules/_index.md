@@ -87,9 +87,9 @@ To check out which modules a category contains, click the category in the list b
 * [AWS IoT SiteWise](/appstore/modules/aws/aws-iot-sitewise/)
 * [Data Importer](/appstore/modules/data-importer/)
 * [Email Connector](/appstore/connectors/email-connector/)
-* [OData Connector for SAP Solutions](/appstore/connectors/sap/sap-odata-connector/)
+* [OData Connector for SAP Solutions](/appstore/modules/sap/sap-odata-connector/)
 * [OpenAI Connector](/appstore/connectors/openai-connector/)
-* [XSUAA Connector for SAP Business Technology Platform](/appstore/connectors/sap/sap-xsuaa-connector/)
+* [XSUAA Connector for SAP Business Technology Platform](/appstore/modules/sap/sap-xsuaa-connector/)
 
 ### 2.6 Data {#data}
 
@@ -120,12 +120,12 @@ To check out which modules a category contains, click the category in the list b
 
 ### 2.10 SAP Connector {#sap-connector}
 
-* [BAPI Connector for SAP Solutions](/appstore/connectors/sap/sap-bapi-connector/)
+* [BAPI Connector for SAP Solutions](/appstore/modules/sap/sap-bapi-connector/)
 * [Hybrid Mobile Actions ⚠](/appstore/modules/hybrid-mobile-actions/)
-* [OData Connector for SAP Solutions](/appstore/connectors/sap/sap-odata-connector/)
-* [SAP Event Mesh Connector](/appstore/connectors/sap/sap-event-mesh-connector/)
-* [SAP Logging Connector](/appstore/connectors/sap/sap-logger/)
-* [XSUAA Connector for SAP Business Technology Platform](/appstore/connectors/sap/sap-xsuaa-connector/)
+* [OData Connector for SAP Solutions](/appstore/modules/sap/sap-odata-connector/)
+* [SAP Event Mesh Connector](/appstore/modules/sap/sap-event-mesh-connector/)
+* [SAP Logging Connector](/appstore/modules/sap/sap-logger/)
+* [XSUAA Connector for SAP Business Technology Platform](/appstore/modules/sap/sap-xsuaa-connector/)
 
 ### 2.11 Scheduling {#scheduling}
 

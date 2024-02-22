@@ -71,7 +71,7 @@ The activity log records access by team members as well as members of Mendix Sup
 For apps deployed to SAP Business Technology Platform (SAP BTP), you can see the logs using Kibana.
 
 {{% alert color="info" %}}
-To make full use of Kibana and see proper mapping of the log level, multi-line log messages, and stack traces, you need to configure the *SAP Logger Connector* in your app. For more information, see [SAP Logger Connector](/appstore/connectors/sap/sap-logger/).
+To make full use of Kibana and see proper mapping of the log level, multi-line log messages, and stack traces, you need to configure the *SAP Logger Connector* in your app. For more information, see [SAP Logger Connector](/appstore/modules/sap/sap-logger/).
 {{% /alert %}}
 
 The **Logs** page shows all the environments for this app. Click the **Logs** button to open the log in Kibana.

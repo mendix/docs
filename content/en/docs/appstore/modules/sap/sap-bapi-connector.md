@@ -1,12 +1,13 @@
 ---
 title: "BAPI Connector for SAP Solutions"
-url: /appstore/connectors/sap/sap-bapi-connector/
+url: /appstore/modules/sap/sap-bapi-connector/
 category: "SAP"
 weight: 18
 description: "Presents reference information on the use of the BAPI Connector for SAP solutions."
 tags: ["SAP", "integration", "OData", "BAPI"]
 aliases:
     - /partners/sap/sap-bapi-connector/
+    - /appstore/connectors/sap/sap-bapi-connector/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -182,7 +183,7 @@ The values for the properties can be found in the **Connection Properties** of t
 If you are using the SAP Cloud Connector to connect to your SAP backend system, you can secure access to the *bapi-service* microservice component by using the SAP XSUAA service. The service supports both user-based authentication with a user access token obtained from the SAP XSUAA service, and application-based authentication with an access token obtained from the SAP XSUAA service bindings.
 
 {{% alert color="info" %}}
-To help you implement the XSUAA service for your app, Mendix provides the platform-supported XSUAA Connector for SAP BTP. After installing the connector, you can use the [XSUAA Configurator](/appstore/connectors/sap/sap-xsuaa-connector/#configurator) to create the required XSUAA service configuration.
+To help you implement the XSUAA service for your app, Mendix provides the platform-supported XSUAA Connector for SAP BTP. After installing the connector, you can use the [XSUAA Configurator](/appstore/modules/sap/sap-xsuaa-connector/#configurator) to create the required XSUAA service configuration.
 {{% /alert %}}
 
 ### 5.1 Trust Configuration

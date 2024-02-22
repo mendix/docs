@@ -74,9 +74,9 @@ When names have been customized in this way, the name of the entity, attribute, 
 
 These features make it easier to refactor the domain model without affecting external APIs.
 
-### 5 Key {#key}
+## 5 Key {#key}
 
-Every entity in Mendix has an [ID](/refguide/odata-representation/#id-representation) that is used internally to store the object in the database. However, this ID is not stable over time, since it can change in certain scenarios (such as data migration). That means that it is not recommended to use the ID as a key. A published entity should have a key attribute or a combination of attributes that form a key instead. The attribute (or attributes) can be of type **Integer**, **Long**, **String**, or **AutoNumber**.
+Every entity in Mendix has an [ID](/refguide/odata-representation/#id-representation) that is used internally to store the object in the database. However, this ID is not stable over time, as it can change in certain scenarios (such as data migration). That means it is not recommended to use the ID as a key. A published entity should have a key attribute or a combination of attributes that form a key instead. The attribute (or attributes) can be of type **Integer**, **Long**, **String**, or **AutoNumber**.
 
 Select a combination of attributes with the following constraints:
 
@@ -124,9 +124,9 @@ There are two options to handle an incoming GET request for a published entity:
 
 You can also set the [query options](#query-options) for each request.
 
-A published OData entity is readable by default. It is possible to disable this capability, which means that the service only exposes the type and structure of the entity, but not the data. You can use the entity as a parameter or return type of a published microflow.
+A published OData entity is readable by default. It is possible to disable this capability, which means the service only exposes the type and structure of the entity, not the data. You can use the entity as a parameter or return type of a published microflow.
 
-When **Readable** is enabled you can configure how data can be queried in the [exposed data](#exposed-data) section. Note that **Readable** must be enabled in order to enable the other capabilities.
+When **Readable** is enabled, you can configure how data is queried in the [exposed data](#exposed-data) section. Note that **Readable** must be enabled in order to enable the other capabilities.
 
 {{% alert type="info" %}}
 Support for publishing entities without the __Readable__ capability was introduced in Studio Pro [10.8.0](/releasenotes/studio-pro/10.8/).
@@ -134,13 +134,13 @@ Support for publishing entities without the __Readable__ capability was introduc
 
 ## 6.2.1 Query Options {#query-options}
 
-Select the options to include for the **Readable** OData capability.
+Select the options to include for the **Readable** OData capability:
 
 * **Countable** – This option is required for getting the total number of records.
 * **Top supported** – This option indicates whether clients can specify that they want to retrieve only a limited number of items. Enable this option when [Use paging](#paging) is selected.
 * **Skip supported** – This option indicates whether clients can specify the number of items in the queried collection that are to be skipped and not included in the result. Enable this option when [Use paging](#paging) is selected.
 
-The **Top supported** and **Skip supported** queries are required for pagination, when the server allows the client to request only a subset of the data and skips the first **n** objects. [Paging](#paging) occurs when the client requests a lot of data and the server returns a subset and a link to request the rest.
+The **Top supported** and **Skip supported** queries are required for pagination, which is when the server allows the client to request only a subset of the data and skips the first **n** objects. [Paging](#paging) occurs when the client requests a lot of data and the server returns a subset and a link to request the rest.
 
 For more information, see the [System Query Option $top and $skip](https://www.odata.org/getting-started/basic-tutorial/#topskip) in the *Basic Tutorial* on OData.org
 
@@ -178,13 +178,13 @@ Default: {Entity name}s
 
 ### 7.2 Use Paging {#paging}
 
-The **Use paging** option is used to set a maximum number of objects per response and includes a link to the next set of objects. A client such as [Tableau](https://www.tableau.com) is able use this to display progress and automatically continue to follow the links until all the data is retrieved. The memory usage of the clients can be improved if paging is set to a reasonable page size.
+The **Use paging** option is used to set a maximum number of objects per response and includes a link to the next set of objects. A client such as [Tableau](https://www.tableau.com) is able use this to display progress and automatically continues to follow the links until all the data is retrieved. The memory usage of the clients can be improved if paging is set to a reasonable page size.
 
 Default: **No**
 
 When set to **Yes**, select **Top supported** and **Skip supported** [query options](#query-options).
 
-Setting **Use paging** to **Yes** may result in inconsistency in the retrieved data because the data will not be retrieved in a single transaction. As an example, sorting on the **Age** attribute in an entity called **Customer** and retrieving customers set to 1000 objects per page. If a customer is deleted between two calls, then the customer with **Age** 23 at position 1001 moves to position 1000. This means the object that would be the first item on the second page is moved to the first page and is no longer retrieved. Similarly, data inserted between calls can result in a duplication of the data. This option should only be used when this kind of inconsistency is acceptable.
+Setting **Use paging** to **Yes** may result in inconsistency in the retrieved data because the data will not be retrieved in a single transaction. For example, sorting on the **Age** attribute in an entity called **Customer** and retrieving customers set to 1000 objects per page. If a customer is deleted between two calls, the customer with **Age** 23 at position 1001 moves to position 1000. This means the object that would be the first item on the second page is moved to the first page and is no longer retrieved. Similarly, data inserted between calls can result in a duplication of the data. This option should only be used when this kind of inconsistency is acceptable.
 
 #### 7.3 Page Size
 

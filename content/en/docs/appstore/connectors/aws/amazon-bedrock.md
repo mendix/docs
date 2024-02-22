@@ -130,9 +130,9 @@ To invoke a specific model, perform the following steps:
 
 ### 3.5 Invoking an agent with the InvokeAgent operation
 
-Please refer to [Agents in Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/agents.html) to learn more about this functionality. Follow the steps here [Create an agent](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-create.html) to create an agent and an alias [Deploy your agent](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-deploy.html) before you start configuring the InvokeAgent operation.
+Please refer to [Agents in Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/agents.html) to learn more about this functionality. Follow these steps [Create an agent](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-create.html) to create an agent and follow [Deploy your agent](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-deploy.html) to create an alias before you start configuring the InvokeAgent operation.
 
-Then follow these steps in the Mendix application: 
+Next follow these steps in the Mendix application: 
 1. Create a new microflow and add the 'InvokeAgent' operation.
 2. Either pass an InvokeAgentRequest object as a parameter to the flow or create one within the microflow. Ensure that the following attributes are populated for the request:
     1. Agent ID

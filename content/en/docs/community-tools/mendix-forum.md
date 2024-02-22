@@ -1,9 +1,9 @@
 ---
-title: "Mendix Forum"
-url: /community-tools/mendix-forum/
+title: "Mendix Community"
+url: /community-tools/mendix-community/
 category: "Community Tools"
 weight: 3
-description: "Describes the Mendix Forum, where the Mendix community can ask and answer questions as well as post ideas for how to improve the Mendix Platform."
+description: "Describes the Mendix Community, where people can ask and answer questions as well as post ideas for how to improve the Mendix Platform."
 aliases:
     - /developerportal/community-tools/mendix-forum/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -11,9 +11,9 @@ aliases:
 
 ## 1 Introduction
 
-The [Mendix Forum](https://forum.mendixcloud.com) is where the Mendix community comes together to help each other with questions and answers and to propose ideas for improving the Mendix Platform.
+The [Mendix Community](https://forum.mendixcloud.com) is where people come together to help each other with questions and answers and to propose ideas for improving the Mendix Platform.
 
-The Mendix Forum is closely integrated with the [Mendix Profile](/community-tools/mendix-profile/) so that Mendix community members can see all the interesting and useful information about who is participating in the Mendix Forum. If someone clicks your name anywhere on the Mendix Forum, your profile will open, so make sure to [make your Mendix Profile public](/community-tools/mendix-profile/user-settings/#profile) so everyone can see your details and progress!
+The Mendix Community is closely integrated with the [Mendix Profile](/community-tools/mendix-profile/) so that Mendix community members can see all the interesting and useful information about who is participating in the Mendix Forum. If someone clicks your name anywhere on the Mendix Forum, your profile will open, so make sure to [make your Mendix Profile public](/community-tools/mendix-profile/user-settings/#profile) so everyone can see your details and progress!
 
 Click **Create a Post** to ask a question, start an exchange with the community, or share an idea.
 

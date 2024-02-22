@@ -35,7 +35,10 @@ The following frameworks are required. They will be installed automatically by t
 
 * Microsoft .NET 6.0.x desktop runtime (x64) and all applicable Windows security patches
 * Microsoft Visual C++ 2019 Redistributable Package (x64)
-* A Java Developer Kit (JDK) version 11 - if not yet installed on your machine, Mendix will install 'Eclipse Temurin JDK 11 (x64)'
+* A Java Developer Kit (JDK)
+  *  Mendix 10.7 and lower: Java version 11 - if not yet installed on your machine, Mendix will install 'Eclipse Temurin JDK 11 (x64)'
+  *  Mendix 10.8 and up: Java version 17
+  *  [Planned] Mendix 10.10 and up: Java version 21
 * Git for Windows (x64) version 2.41.0 or above
 * Mendix Native Mobile Builder
 * Microsoft Edge WebView2 Evergreen Runtime (x64)
@@ -186,11 +189,7 @@ The Mendix Docker buildpack supports the following Kubernetes versions:
 When running Mendix on a server, you will need Java Runtime Environment (JRE) 11. To download an OpenJDK distribution from Adoptium, see [Adoptium Installation](https://adoptium.net/temurin/releases). To download a commercial Oracle distribution, see [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
 
 {{% alert color="warning" %}}
-As Java 11 approaches the end of support in October, 2024, Mendix will stop supporting Java 11 with the release of Studio Pro 10.17 in November, 2024.<br/>
-<br/>
-Compatibility with Java 17 is planned for Studio Pro version 10.8, to be released in February 2024. Switching to a Studio Pro version compatible with Java 17 can be considered optional.<br/>
-<br/>
-Compatibility with Java 21 is planned for Studio Pro version 10.10, to be released in April 2024. Mendix recommends switching to a Studio Pro version compatible with Java 21 once it is available.
+Compatibility with JDK 17 has been released with Studio Pro version 10.8. Compatibility with Java 21 is planned for Studio Pro version 10.10, to be released in April 2024. Mendix recommends switching to a Studio Pro version compatible with Java 21 once it is available.
 {{% /alert %}}
 
 ## 7 Databases {#databases}

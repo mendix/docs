@@ -5,10 +5,6 @@ weight: 15
 tags: ["domain model", "association", "studio pro"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/association-member-properties.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 There are two ways to edit the properties of an [association](/refguide8/associations/). This document describes the properties you can edit from the **Associations** tab in the entity properties. If you want to edit the association as described in [Association Properties](/refguide8/association-properties/), you can click **Edit** to open the association properties dialog.
@@ -66,7 +62,7 @@ Ownership is important as it defines two aspects of an association:
 * where the association is recorded
 
 {{% alert color="info" %}}
-An external entity cannot be the owner for an association between a external and a local entity.
+An external entity cannot be the owner for an association between an external and a local entity.
 {{% /alert %}}
 
 #### 2.3.1 Cardinality

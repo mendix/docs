@@ -2,15 +2,15 @@
 title: "Build JavaScript Actions for Native Mobile"
 url: /howto/extensibility/create-native-javascript-action/
 weight: 30
-description: "This tutorial will teach you to build a JavaScript action for native mobile apps."
+description: "This how-to teaches you how to build a JavaScript action for native mobile apps."
 tags: ["NFC", "Near Field Communication", "JavaScript", "native", "mobile"]
 ---
 
 ## 1 Introduction
 
-Native mobile applications have faster performance and give you the ability to use device hardware features. This tutorial will teach you to build your own JavaScript actions, specifically ones that harness your native mobile device's hardware to read Near Field Communication (NFC) tags. If you would like to use third-party modules other than an NFC scanner, refer to this tutorial as a general overview.
+Native mobile applications have faster performance and give you the ability to use device hardware features. This tutorial teaches you how to build your own JavaScript actions, specifically ones that harness your native mobile device's hardware to read Near Field Communication (NFC) tags. If you would like to use third-party modules other than an NFC scanner, refer to this tutorial as a general overview.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Build a JavaScript action for a native mobile app
 * Add a dependency to the native JavaScript action
@@ -191,7 +191,7 @@ To make the nanoflow shown above, do the following:
 
 ### 3.5 Writing an NFC Tag {#write-nfc-tag}
 
-Now you have a way to read NFC *NDEF* tags. Next you will write some text for your tag. You can create a JavaScript action for this yourself or use an existing tool. If you use an existing tool, we recommend [NFC Tools Android](https://play.google.com/store/apps/details?id=com.wakdev.wdnfc) or [NFC Tools iOS](https://apps.apple.com/us/app/nfc-tools/id1252962749).
+Now you have a way to read NFC *NDEF* tags. Next you will write some text for your tag. You can create a JavaScript action for this yourself or use an existing tool. If you use an existing tool, Mendix recommends [NFC Tools Android](https://play.google.com/store/apps/details?id=com.wakdev.wdnfc) or [NFC Tools iOS](https://apps.apple.com/us/app/nfc-tools/id1252962749).
 
 To write your own NFC tag, do the following:
 
@@ -316,11 +316,11 @@ Congratulations on making your own native JavaScript action! Please use your own
 
 Until this section, you have used a custom developer app to validate your application. When you want to distribute your app in the Google Play Store or Apple App Store, you have to make a build that includes the bundled Mendix app.
 
-For the full explanation on how to build, sign, and distribute your app to an app store see [Deploy Your First Mendix Native Mobile App](/refguide/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/), as well as the tutorial's subsequent sections.
+For the full explanation on how to build, sign, and distribute your app to an app store see [Build a Mendix Native App in the Cloud](/refguide/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/), as well as the tutorial's subsequent sections.
 
 ## 5 Read More
 
-* [How to Deploy Your First Mendix Native Mobile App](/refguide/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/)
+* [How to Build a Mendix Native App in the Cloud](/refguide/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/)
 * [JavaScript Actions Reference Guide](/refguide/javascript-actions/)
 * [How To Build JavaScript actions](/howto/extensibility/build-javascript-actions/)
 * [Declaring Native Dependencies](/apidocs-mxsdk/apidocs/pluggable-widgets-native-dependencies/)

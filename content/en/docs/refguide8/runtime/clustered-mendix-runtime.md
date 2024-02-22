@@ -6,10 +6,6 @@ description: "Using the cluster functionality, you can set up your Mendix applic
 tags: ["runtime", "cluster", "load balancer", "failover", "studio pro"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/clustered-mendix-runtime.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 This page describes the behavior and impact of running Mendix Runtime as a cluster. Using the cluster functionality, you can set up your Mendix application to run behind a load balancer to enable a failover and/or high availability architecture.
@@ -39,7 +35,7 @@ Mendix Runtime has the concept of a cluster leader. This is a single node within
 * **Cluster node expiration handling** – removing cluster nodes after they have expired (meaning, not giving a heartbeat for a configured timespan)
 * **Background job expiration handling** – removing data about background jobs after the information has expired (meaning, older than a specific timespan)
 * **Unblocking blocked users**
-* **Cleanup unreferenced files** - *(for Mendix version 8.13.0 and above)* removing from storage any file documents that have been deleted, replaced, or were never committed
+* **Cleanup unreferenced files** - *(for Mendix 8.13.0 and above)* removing from storage any file documents that have been deleted, replaced, or were never committed
 * **Executing Scheduled Events** – scheduled events are only executed on the cluster leader
 * **Performing database synchronization after new deploy**
 * **Clear persistent sessions after new deploy** – invalidating all existing sessions so that they get in sync with the latest model version

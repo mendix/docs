@@ -16,35 +16,45 @@ Tab containers are used to show information categorized into tabs. This can be v
 
 {{< figure src="/attachments/refguide/modeling/pages/structure-widgets/tab-container/tab-container.png" alt="Tab Container" >}}
 
-## 2 Properties
+## 2 Properties Pane
 
-An example of tab container properties is represented in the image below:
+The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Tab container properties consist of the following sections:
 
-{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/tab-container/tab-container-properties.png" alt="Tab Container Properties"   width="250"  >}}
+Properties:
 
-Tab container properties consist of the following sections:
-
-* [Common](#common)
-* [Design Properties](#design-properties)
 * [Visibility](#visibility)
+* [Common](#common)
 
-### 2.1 Common Section {#common}
+Styling:
 
-{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+* [Design Properties](#design-properties)
+* [Common](#common-styling)
 
-### 2.2 Design Properties Section {#design-properties}
+## 3 Properties 
 
-{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
-
-### 2.3 Visibility Section {#visibility}
+### 3.1 Visibility Section {#visibility}
 
 {{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
 
-## 3 Tab Page {#tab-page}
+### 3.2 Common Section {#common}
+
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+
+## 4 Styling
+
+### 4.1 Design Properties Section {#design-properties}
+
+{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
+
+### 4.2 Common Section {#common-styling}
+
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+
+## 5 Tab Page {#tab-page}
 
 A tab container contains one or more tab pages where you place widgets. For example, a tab page can contain a grid of orders.
 
-### 3.1 Tab Page-Specific Properties
+### 5.1 Tab Page-Specific Properties
 
 #### 3.1.1 Default Tab Page
 
@@ -52,7 +62,7 @@ A tab container contains one or more tab pages where you place widgets. For exam
 
 Default: *False*
 
-#### 3.1.2 Refresh on Show {#refresh}
+#### 5.1.2 Refresh on Show {#refresh}
 
 **Refresh on show** indicates whether the contents of the tab page should be refreshed when the tab page is shown. Set this property to *No* if you know that nothing will affect the information on the tab page.
 
@@ -62,7 +72,7 @@ Default: *True*
 This property is not supported on native mobile pages.
 {{% /alert %}}
 
-## 4 Read More
+## 6 Read More
 
 * [Page](/refguide/page/)
 * [Structure](/refguide/structure-widgets/)

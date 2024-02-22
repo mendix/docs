@@ -14,7 +14,7 @@ For Java applications, most monitoring tools provide a way to hook into [JMX](ht
 
 Mendix doesn’t provide any runtime or application specific MBeans, which means that without writing your own MBeans, you will only be able to monitor generic JVM statistics. This how-to will also describe enabling JMX on your Mendix Runtime as well as writing custom MBeans to expose Mendix Runtime information and app-specific information.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Start Mendix Runtime with JMX
 * Expose management information with an MBean
@@ -154,7 +154,7 @@ The idea is that you will have a Java Action that you can call in a microflow wh
 
 * [Find the Root Cause of Runtime Errors](/howto8/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
 * [Clear Warning Messages](/howto8/monitoring-troubleshooting/clear-warning-messages/)
-* [Test Web Services Using SoapUI](/howto8/testing/testing-web-services-using-soapui/)
+* [Test Web Services Using SoapUI](/howto8/integration/testing-web-services-using-soapui/)
 * [Monitor Mendix Using JMX](/howto8/monitoring-troubleshooting/monitoring-mendix-using-jmx/)
 * [Debug Java Actions Remotely](/howto8/monitoring-troubleshooting/debug-java-actions-remotely/)
 * [Log Levels](/howto8/monitoring-troubleshooting/log-levels/)

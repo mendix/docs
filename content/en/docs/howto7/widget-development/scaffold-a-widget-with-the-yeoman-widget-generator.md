@@ -8,9 +8,9 @@ tags: ["widget", "develop widget", "scaffold", "yeoman"]
 
 ## 1 Introduction
 
-This how-to will teach you how to use the widget generator, which is a [Yeoman](http://yeoman.io/) generator that lets you quickly scaffold a new widget. The generator integrates Grunt, which is a task runner, to speed up your widget development.
+This how-to teaches you how to use the widget generator, which is a [Yeoman](http://yeoman.io/) generator that lets you quickly scaffold a new widget. The generator integrates Grunt, which is a task runner, to speed up your widget development.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Set up a widget development environment with Node.JS, Yeoman, and Grunt
 * Test a custom widget at runtime
@@ -74,7 +74,7 @@ You can watch for any changes in your *src* folder by using the default watch ta
 
 {{< figure src="/attachments/howto7/widget-development/scaffold-a-widget-with-the-yeoman-widget-generator/19398842.png" >}}
 
-Now, everytime you make changes in your *src* folder, it will automatically build a new .mpk file and put this in your */test/widgets/* folder. It will also copy the changes to the */test/deployment/web/widgets/* folder.
+Now, everytime you make changes in your *src* folder, it will automatically build a new *.mpk* file and put this in your */test/widgets/* folder. It will also copy the changes to the */test/deployment/web/widgets/* folder.
 
 #### 4.2.1 Why and How to Use Grunt Watch
 
@@ -93,7 +93,7 @@ To update the widget, press **F4** in the Modeler or select **Project** > **Sync
 
 The `grunt build` will clean your */dist/* and */test/widgets/* folders and will only destroy your custom widget. It will place a new one, built from the */src/* folder.
 
-## 5 Troubleshooting<a name="Troubleshooting"></a>
+## 5 Troubleshooting {#Troubleshooting}
 
 ### 5.1 Installing Dependencies Results in Errors
 

@@ -1,5 +1,5 @@
 ---
-title: "Bootstrap Tooltip"
+title: "Bootstrap Tooltip ⚠"
 url: /appstore/widgets/bootstrap-tooltip/
 category: "Widgets"
 description: "Describes the configuration and usage of the Bootstrap Tooltip widget, which is available in the Mendix Marketplace."

@@ -10,7 +10,7 @@ tags: ["monitoring", "troubleshooting", "runtime error", "runtime", "error"]
 
 This how to will show you how to find the information necessary to locate the root cause of a runtime error. The message displayed in the application is often vague and non-descript. Depending on the environment in which the error occurred, there are two methods for finding this information.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Find the root cause of runtime errors via two methods
 
@@ -55,7 +55,7 @@ With these three pieces of information, you should be able to find the cause of 
 ## 4 Read More
 
 * [Clear Warning Messages](/howto8/monitoring-troubleshooting/clear-warning-messages/)
-* [Test Web Services Using SoapUI](/howto8/testing/testing-web-services-using-soapui/)
+* [Test Web Services Using SoapUI](/howto8/integration/testing-web-services-using-soapui/)
 * [Monitor Mendix Using JMX](/howto8/monitoring-troubleshooting/monitoring-mendix-using-jmx/)
 * [Debug Java Actions Remotely](/howto8/monitoring-troubleshooting/debug-java-actions-remotely/)
 * [Log Levels](/howto8/monitoring-troubleshooting/log-levels/)

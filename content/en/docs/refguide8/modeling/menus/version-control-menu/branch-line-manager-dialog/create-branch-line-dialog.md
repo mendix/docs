@@ -5,10 +5,6 @@ weight: 90
 tags: ["studio pro", "create branch line"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/create-branch-line-dialog.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 Use the **Create Branch Line** dialog box to create a new [branch line](/refguide8/version-control/#branches) via the **Branch Line Manager**:
@@ -22,15 +18,15 @@ To view the **Create Branch Line** dialog box,  do the following:
 
 The **Create Branch Line** dialog box is displayed.
 
-For more information on how to manage branch lines, see the [Managing Development Lines in Studio Pro](/refguide8/collaborative-development/#managing-branches) section in *Collaborative Development* and [Branch Line Manager](/refguide8/branch-line-manager-dialog/). For information on the version control, see [Version Control](/refguide8/version-control/). 
+For more information on how to manage branch lines, see [Branch Line Manager](/refguide8/branch-line-manager-dialog/). For information on the version control, see [Version Control](/refguide8/version-control/). 
 
 ## 2 Create Branch From
 
 **Create branch from** allows you to choose the development line you want to create the branch line from. You can choose one of the following options:
 
-* <a name="main-line"></a>**Main line** – generally you would want to select *Main line* if you want to develop a large feature independently of the main line
-* <a name="branch-line"></a>**Branch line** – allows you to create a branch line from another branch line
-* <a name="tagged-version"></a>**Tagged version** – if you are doing maintenance on a deployed version you probably want to select a *tagged version*
+* <a id="main-line"></a>**Main line** – generally you would want to select *Main line* if you want to develop a large feature independently of the main line
+* <a id="branch-line"></a>**Branch line** – allows you to create a branch line from another branch line
+* <a id="tagged-version"></a>**Tagged version** – if you are doing maintenance on a deployed version you probably want to select a *tagged version*
 
 ## 3 Revision 
 
@@ -42,7 +38,7 @@ Select from which revision of the main line or a branch line you want to create 
 
 This setting is only available when you select [Branch line](#branch-line) in **Create branch from**. 
 
-Select from which branch line you want to create another branch line. We recommend that you make branch lines only from the main line but in some cases branching a branch line can be useful.
+Select from which branch line you want to create another branch line. Mendix recommends making branch lines only from the main line but in some cases branching a branch line can be useful.
 
 ## 5 Tagged Version
 
@@ -65,4 +61,3 @@ Since branch line names must be unique, this option shows the existing branch li
 ## 8 Read More
 
 * [Version Control](/refguide8/version-control/)
-* [Collaborative Development](/refguide8/collaborative-development/)

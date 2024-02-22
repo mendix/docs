@@ -18,7 +18,7 @@ Selenium IDE is a Firefox plugin that records and plays back user interactions w
 
 ## 2 Prerequisites
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Download and install [Firefox](https://www.mozilla.org/nl/firefox/new/)
 * Download and install [Selenium IDE](https://addons.mozilla.org/en-US/firefox/addon/selenium-ide/) (when Selenium IDE is installed, it is then available as a Firefox plugin)
@@ -55,7 +55,7 @@ Follow these steps to install and run the Company Expenses app:
 
     {{< figure src="/attachments/howto/testing/testing-mendix-applications-using-selenium-ide/download.png" >}}
 
-5. Click the play button (**Run Locally**), then **View App**.
+5. Click **Run Locally** ({{% icon name="controls-play" %}}), then **View App**.
 
 ## 4 Create Your First Automated Test
 

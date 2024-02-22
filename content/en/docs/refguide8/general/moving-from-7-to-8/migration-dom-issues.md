@@ -315,13 +315,13 @@ Text area:
 <textarea class="form-control mx-textarea-input mx-textarea mx-textarea-input-noresize"></textarea>
 ```
 
-Check box:
+Checkbox:
 
 ```html {linenos=false}
 <input type="checkbox" value="" />
 ```
 
-Check box when **Label position** is set to **After control** (in this case the label on the form group is not shown):
+Checkbox when **Label position** is set to **After control** (in this case the label on the form group is not shown):
 
 ```html
 <input type="checkbox" id="123_abc" value="" />

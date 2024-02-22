@@ -4,7 +4,7 @@ url: /appstore/creating-content/sol-set-up
 linktitle: "Set Up a Solution"
 weight: 10
 description: "Describes properly initializing a Mendix solution to be compatible with future upgrades."
-tags: ["solutions", "set-up solution", "startup", "adaptive solutions", "prescriptive solutions" ]
+tags: ["solutions", "set-up solution", "startup", "adaptable solutions", "prescriptive solutions" ]
 ---
 
 ## 1 Introduction
@@ -15,7 +15,7 @@ Setting up a Mendix solution is the process of creating your app from the soluti
 
 To set up a Mendix solution, make sure the following prerequisites are met:
 
-* A solution can only be set up with the Studio Pro version that exactly matches the version used to create it (for example, if Studio Pro 9.6.0 was used to create the solution, only that version can be used to set up the solution), so make sure you are using the correct Studio Pro version
+* A solution can only be set up with the Studio Pro version that exactly matches the version used to create it (for example, if Studio Pro 10.0 was used to create the solution, only that version can be used to set up the solution), so make sure you are using the correct Studio Pro version
 * The solution must be version-controlled with Git so that it is compatible with upgrades
 * It is impossible to initialize a solution on a non-empty repository
 

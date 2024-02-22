@@ -9,23 +9,21 @@ aliases:
     - /howto/collaboration-requirements-management/on-premises-git-howto/
 ---
 
-{{% alert color="warning" %}}
-This functionality is in Beta. For more information on Beta products, see [Beta Releases](/releasenotes/beta-features/).
-{{% /alert %}}
+## 1 Introduction {#intro}
 
-## 1 Introduction
+When developing Mendix applications, changes to these applications are stored in a version control system. This system is called [Team Server](/developerportal/general/team-server/) and is part of the Mendix Platform. This means that the application's files are stored in the Mendix online environment. For more information, see the [Version Control Reference Guide](/refguide/version-control/).
 
-When developing Mendix applications, changes to these applications are stored in a version control system. This system is called [Team Server](/developerportal/collaborate/team-server/) and is part of the Mendix Platform. This means that the application's files are stored in the Mendix online environment. For more information, see the [Version Control Reference Guide](/refguide/version-control/).
-
-While using Team Server is the recommended for most Mendix developers, you may prefer to store your application's files in a system controlled by your own organization. For version control, Mendix uses the [Subversion](https://subversion.apache.org) system (also known as SVN) and [Git](/refguide/on-premises-git/). This document describes how to work with Git version control system.
+While using Team Server is the recommended for most Mendix developers, you may prefer to store your application's files in a system controlled by your own organization. For version control, Mendix uses [Git](/refguide/on-premises-git/). This document describes how to work with Git version control system.
 
 {{% alert color="info" %}}
 This document does not describe how to set up a Git server from scratch; typically, this will be taken care of by the IT department of your organization.
 {{% /alert %}}
 
-{{% alert color="warning" %}}
-You will not be able to use Mendix Studio for collaborative development if you use an on-premises version control server. Collaborative development between Studio and Studio Pro will only work if you use the Mendix Team Server.
-{{% /alert %}}
+{{% alert color="info" %}}When you use a third-party Git version control repository, the following products and capabilities are not available:
+
+* Deployment using the Developer Portal directly from the Team Server
+* Integrated platform APIs such as the [App repository API](/apidocs-mxsdk/apidocs/app-repository-api/), [Build API](/apidocs-mxsdk/apidocs/build-api/), [Platform SDK](/apidocs-mxsdk/mxsdk/), [Permissions API](/apidocs-mxsdk/apidocs/permissions-api/), [Projects API](/apidocs-mxsdk/apidocs/projects-api/), [Stories API](/apidocs-mxsdk/apidocs/stories-api/), and [User management API](/apidocs-mxsdk/apidocs/user-management-api/)
+* [AQM](/addons/aqm-addon/){{% /alert %}}
 
 ## 2 Prerequisites
 
@@ -36,7 +34,7 @@ Make sure you have completed the following prerequisites:
 
 ## 3 Supported Authentication Mechanisms
 
-Currently, we only support HTTP Basic authentication for Git service providers. With most providers this takes the form of using of Personal Access Tokens (PATs).
+Currently, we only support HTTP Basic authentication for Git service providers. With most providers, this takes the form of using of personal access tokens (PATs).
 
 To use PAT (or another equivalent), you need to specify it in the **Password** field when Studio Pro requests credentials for the version control server:
 
@@ -63,13 +61,15 @@ Studio Pro is able to use the following Git server providers:
 * BitBucket Server
 * BitBucket Data Center
 
-You need to create a private repository in the selected provider and create a Personal Access Token (PAT) to provide access to it. The PAT is used as a password.
+{{% alert color="info" %}} Please note that some Git server providers have added additional limitations to their Git offering, such as a limit on the size of individual files. In some cases the Mendix .MPR file can grow larger than 100MB. Please take this into account when choosing a provider. {{% /alert %}}
+
+You need to create a private repository in the selected provider and create a personal access token (PAT) to provide access to it. The PAT is used as a password.
 
 To interact with this private repository from Studio Pro, you need a link to the repository and a PAT.
 
 ### 4.2 Preparing Studio Pro for Git {#preparing-git-support}
 
-To use Git, you need to activate the Git support in Studio Pro by navigating to **Edit** > **Preferences** > **Version Control** and selecting **Enable private version control with Git**. The name and email values will be used to identify your commit:
+To use on-premise Git, you need to configure name and email values that will be used to identify your commit in Studio Pro by navigating to **Edit** > **Preferences** > **Version Control**:
 
 {{< figure src="/attachments/refguide/version-control/on-premises-git/preferences-git.png" alt="Preferences dialog" >}}
 
@@ -85,23 +85,23 @@ Once the app is created, you can upload it to your private Git repository. For m
 
 ### 4.4 Downloading from a Private Repository
 
+{{% alert color="info" %}}
+Please note that the libraries Mendix uses to operate Git do not support <kbd>{Space}</kbd> characters in Git repo URLs.
+{{% /alert %}}
+
 Now that you have a Git app on your server, you can download it to another directory or one of your team members can download it on their machine. Follow the steps below:
 
 1. Under **Version Control > Download from Version Control Server**, select the **Private server** option and enter the URL of your repository, which contains the app you want to download. If you are not sure what URL to use, you can find this info in your Git server.
-2. If you have both Subversion and Git enabled for the private version control in your preferences in Studio Pro, specify which version control system your repository uses. For this case, enable the **Git** radio button:
-
-    {{< figure src="/attachments/refguide/version-control/on-premises-git/download-from-version-control-server.png" alt="Download from Version Control Server dialog" >}}
-
-3. Enter the link to the repository in the **App repository address** and click **Connect**. Now you will have the option to change the directory where the app is downloaded to:
+1. Enter the link to the repository in the **App repository address** and click **Connect**. Now you will have the option to change the directory where the app is downloaded to:
 
     {{< figure src="/attachments/refguide/version-control/on-premises-git/download-from-version-control-server-extended.png" alt="Download from Version Control Server Extended dialog" >}}
 
-4. Click **OK**. 
-5. In the **Sign In** dialog box, enter your credentials:
+1. Click **OK**. 
+1. In the **Sign In** dialog box, enter your credentials:
 
     {{< figure src="/attachments/refguide/version-control/on-premises-git/sign-in-dialog.png" alt="Sign In dialog" >}}
 
-6. Enter username (it can be anything except empty) and use the PAT you saved earlier as the password. 
+1. Enter username (it can be anything except empty) and use the PAT you saved earlier as the password. 
 
 The app is downloaded and ready to be used with version control.
 
@@ -170,7 +170,15 @@ The app is uploaded successfully. You can check on your private server and see t
 
 ### 4.7 Moving a Subversion App to Git
 
-If you already have an existing versioned app (with Subversion) that you would like to upload to your Git private server instead, you can export it, then re-import it, and uploading it to your server. Follow the steps below:
+If you already have an existing versioned app (with Subversion) that you would like to upload to your Git private server instead, you can export it, then re-import it, and uploading it to your server.
+
+{{% alert color="info" %}}
+This creates an unversioned app, based on the branch you are working on in Studio Pro. This means that you will not get version history or other branches in the Git repo.
+
+You can move the whole app, including branches and history, to the Mendix Git repository by following the instructions in [Migrate to Git](/developerportal/general/migrate-to-git/)
+{{% /alert %}}
+
+Follow the steps below:
 
 1. Once the app is opened, go to **File > Export App Package**. 
 2. In the **Export App Package** dialog box, browse to the location you would like to save the *.mpk* (Mendix Package) file, or accept the default location, a new **packages** folder in the root of the application folder. Take note of this location, as you will need it later. You can also rename the *.mpk* file (for example,*MyGitApp.mpk*) and the app will be named that way once you import it and upload it to the Git server:
@@ -187,7 +195,7 @@ If you already have an existing versioned app (with Subversion) that you would l
 
 5. Once the file browser dialog box is open, navigate to the location you save the *.mpk* file during the export process.
 6. In the **Import App Package** dialog box, select **Private server** option in the **Where should we store your App?** section. 
-7. In the **Private Server Type** option, select **Git** (if you have both **Subversion** and **Git** enabled in the **Preferences** form). 
+7. In the **Private Server Type** option, select **Git** (if you have both **Subversion** and **Git** enabled in the **Preferences** form).  
 8. Enter the link to the private repository in the address textbox and click **OK**. Remember, the repository **must be completely empty**, or **Studio Pro** will not be able to upload an app to it:
 
     {{< figure src="/attachments/refguide/version-control/on-premises-git/import-project-package-git-dialog.png" alt="Import Git Package menu" >}}
@@ -203,5 +211,5 @@ Note that your previous app still exists, **Studio Pro** will simply make an unv
 ## 5 Read More
 
 * [Version Control Reference Guide](/refguide/version-control/)
-* [Team Server](/developerportal/collaborate/team-server/)
+* [Team Server](/developerportal/general/team-server/)
 * [Upload to Version Control Server Reference Guide](/refguide/upload-to-version-control-dialog/)

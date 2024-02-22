@@ -14,7 +14,7 @@ To ensure your applications run smoothly, they need to be actively monitored so 
 
 New Relic is a flexible application performance management tool that provides information to help you achieve the above goals.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Set up application performance management for your Mendix application on New Relic
 
@@ -26,7 +26,7 @@ Before starting with this how-to, make sure you have completed the following pre
 
 ## 3 Setting Up
 
-In this section, we will walk through all the steps to configure New Relic so that it can be used for the [application performance diagnostics](/addons/apd-addon/) of your Mendix application.
+In this section, we will walk through all the steps to configure New Relic so that it can be used for the [application performance diagnostics](/appstore/partner-solutions/apd/) of your Mendix application.
 
 ## 3.1 Setting up New Relic (On-Premises Only)
 

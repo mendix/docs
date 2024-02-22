@@ -9,7 +9,7 @@ tags: ["monitoring", "troubleshooting", "debug", "microflow", "nanoflow"]
 
 Mendix Studio Pro has a built-in consistency checker that validates if the application you are building contains any obvious errors. This dramatically reduces the amount of technical errors during run-time, but Studio Pro isn't able to check if your app contains functional errors. This is mainly a manual practice, but Mendix does support enough tools to make this easier. If you run into a functional error in any of the microflows or nanoflows, you can easily debug them with the debugger.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Use breakpoints
 * Debugging Microflows and Nanoflows
@@ -18,7 +18,7 @@ This how-to will teach you how to do the following:
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Read [How to Create a Basic Data Layer](/howto/data-models/create-a-basic-data-layer/)
+* Read [Configuring a Domain Model](/refguide/configuring-a-domain-model/)
 * Read [How to Create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/)
 
 ## 3 Debugging Overview

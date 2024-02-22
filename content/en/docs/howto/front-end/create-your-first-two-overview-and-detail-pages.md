@@ -12,7 +12,7 @@ tags: ["front end"]
 
 This how-to explains how you can create overview and detail pages in Mendix. 
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Create overview and detail pages
 * Configure navigation and security
@@ -21,7 +21,7 @@ This how-to will teach you how to do the following:
 
 Before starting with this how-to, make sure you have completed the following prerequisite:
 
-* Set up a basic data structure by reading [How to Create a Basic Data Layer](/howto/data-models/create-a-basic-data-layer/):
+* Create a domain model by following [Configuring a Domain Model](/refguide/configuring-a-domain-model/):
 
     {{< figure src="/attachments/howto/front-end/create-your-first-two-overview-and-detail-pages/18582175.png" >}}
 

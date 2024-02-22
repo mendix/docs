@@ -1,5 +1,5 @@
 ---
-title: "CI/CD for Mendix for Standalone Private Cloud using Tekton"
+title: "CI/CD for Mendix for Standalone Private Cloud Using Tekton"
 linktitle: "CI/CD with Tekton"
 url: /developerportal/deploy/private-cloud-tekton/
 description: "Describes how to use Tekton to create a CI/CD solution for Mendix environments in the Private Cloud"
@@ -39,7 +39,7 @@ To follow these instructions you will need:
 * Administrator access to a Kubernetes/OpenShift cluster
 * The standalone [cluster registered in the Mendix Developer Portal](/developerportal/deploy/private-cloud-cluster/#create-cluster)
 * A [namespace added](/developerportal/deploy/private-cloud-cluster/#add-namespace) to the cluster
-* The [Mendix Operator installed](/developerportal/deploy/private-cloud-cluster/#install-operator) and configured in the cluster
+* The [Mendix Operator v2.8.0+ installed](/developerportal/deploy/private-cloud-cluster/#install-operator) and configured in the cluster
 * The [Helm](https://helm.sh) package manager
 * The Mendix Tekton pipelines – these can be requested through your CSM
 * Access to the internet to copy images to your air-gapped registry, or to install images directly onto your cluster
@@ -119,33 +119,33 @@ If your cluster is air-gapped and does not have access to the internet, you will
 When you have followed those instructions, you can continue with [Installing Triggers](#installing-triggers), below.
 {{% /alert %}}
 
-## 5 Tekton Installation for Non Air-gapped (Regular) Environments{#tekton-installation}
+## 5 Tekton Installation for Non Air-Gapped (Regular) Environments {#tekton-installation}
 
 If Tekton is already installed in your namespace, you can skip to [Pipeline Installation for non air-gapped Environments](#pipelines-installation).
 
-### 5.1 Installing on Non Air-gapped Kubernetes
+### 5.1 Installing on Non Air-Gapped Kubernetes
 
 To install Tekton with Tekton Triggers, apply the following *yaml* manifests:
 
 ```bash {linenos=false}
-kubectl apply --filename https://storage.googleapis.com/tekton-releases/pipeline/previous/v0.33.2/release.yaml
-kubectl apply --filename https://storage.googleapis.com/tekton-releases/triggers/previous/v0.19.0/release.yaml
-kubectl apply --filename https://storage.googleapis.com/tekton-releases/triggers/previous/v0.19.0/interceptors.yaml
+kubectl apply --filename https://storage.googleapis.com/tekton-releases/pipeline/previous/v0.41.1/release.yaml
+kubectl apply --filename https://storage.googleapis.com/tekton-releases/triggers/previous/v0.22.1/release.yaml
+kubectl apply --filename https://storage.googleapis.com/tekton-releases/triggers/previous/v0.22.1/interceptors.yaml
 ```
 
 {{% alert color="info" %}}
 The manifests target the `tekton-pipelines` namespace.
 {{% /alert %}}
 
-### 5.2 Installing on Non Air-gapped OpenShift
+### 5.2 Installing on Non Air-Gapped OpenShift
 
 To install Tekton and Tekton Triggers on OpenShift you can use Red Hat OpenShift Pipelines, follow the instructions on the [Installing OpenShift Pipelines](https://docs.openshift.com/container-platform/4.7/cicd/pipelines/installing-pipelines.html) page of the OpenShift documentation. 
 
 Main objects would be installed in `openshift-pipelines` namespace. 
 
-At the moment we support Red Hat OpenShift Pipelines v1.7.2. 
+At the moment we support Red Hat OpenShift Pipelines v1.9.2. 
 
-## 6 Pipeline Installation for Non Air-gapped Environments{#pipelines-installation}
+## 6 Pipeline Installation for Non Air-Gapped Environments {#pipelines-installation}
 
 Before you install the Mendix pipelines, which contain all Tekton-related objects, you need to do the following:
 
@@ -301,7 +301,11 @@ spec:
 
 Make sure that an ingress controller already installed. You can use an [NGINX Controller](https://kubernetes.github.io/ingress-nginx/) for this purpose.
 
-In this example and in the rest of this document, we use `pipeline.trigger.yourdomain.com` to refer to this trigger.
+This service expects parameters in JSON/HTTP Header format. Examples of HTTP requests are provided in the [Triggering Pipelines](#triggering-pipelines) section.
+
+By exposing the service with the HTTP protocol all traffic might go unencrypted over the public internet. Mendix recommends enabling HTTPS/TLS protocols.
+
+In this example and in the rest of this document, Mendix uses `pipeline.trigger.yourdomain.com` to refer to this trigger.
 
 ## 8 Authentication to External Services
 
@@ -309,7 +313,7 @@ This needs to be configured before you trigger any pipelines.
 
 ### 8.1 Git Access
 
-Your Tekton pipeline needs to have access to the git repository. To provide access, you need to use a `basic-auth` type `Secret`. To do this, follow the [instruction in the tektoncd GitHub repo](https://github.com/tektoncd/pipeline/blob/main/docs/auth.md#configuring-basic-auth-authentication-for-git) and link that secret to the `tekton-triggers-mx-sa` service account.
+Your Tekton pipeline needs to have access to the Git repository. To provide access, you need to use a `basic-auth` type `Secret`. To do this, follow the [instruction in the tektoncd GitHub repo](https://github.com/tektoncd/pipeline/blob/main/docs/auth.md#configuring-basic-auth-authentication-for-git) and link that secret to the `tekton-triggers-mx-sa` service account.
 
 ### 8.2 Registry Push Access
 
@@ -509,9 +513,9 @@ spec:
                   kubectl patch serviceaccount tekton-triggers-mx-sa -p '{"secrets":[{"name":"aws-registry"}]}'
 ```
 
-## 9 Triggering Pipelines
+## 9 Triggering Pipelines  {#triggering-pipelines}
 
-This section documents the HTTP requests which will trigger the various Mendix pipelines, using the triggers you have installed in the [Installing Triggers](#installing-triggers) section, and describes their parameters.
+This section documents the HTTP requests which will trigger the various Mendix pipelines, using the triggers you have installed in the [Installing Triggers](#installing-triggers) section, and describes their parameters. 
 
 ### 9.1 Create App Pipeline
 
@@ -528,6 +532,7 @@ curl -X POST \
     "env-internal-name":"mx-environment-internal-name",
     "dtap-mode":"D",
     "storage-plan-name":"file-plan-name",
+    "mx-admin-password":"Welc0me!",
     "database-plan-name":"db-plan-name"
 }'
 ```
@@ -537,8 +542,9 @@ curl -X POST \
 | `namespace`         | name of the Kubernetes namespace where the Mendix Operator runs                                                                                                                                                                            |
 | `env-internal-name` | Mendix environment internal name. The MendixApp CR will be created with this name                                                                                                                                                          |
 | `dtap-mode`         | mode for running the Mendix application. Available options:<br/>`P` – Production (for all production environments)<br/>`D` – Development<br/> Your app can only be deployed to a production environment if [security in the app is set on](/refguide/app-security/).  |
-| `storage-plan-name` | name of an already-created storage plan                                                                                                                                                                                                    |
-| `database-plan-name` | name of an already-created database plan                                                                                                                                                                                                   |
+| `storage-plan-name` | name of an existing storage plan                                                                                                                                                                                                    |
+| `database-plan-name` | name of an existing database plan                                                                                                                                                                                                   |
+| `mx-admin-password` | Mendix admin password                                                                                                                                                                                                |
 | `X-GitLab-Token: SomeLongSecureToken42` | token from [7.2 section](#authentication). You can remove this field if authentication is disabled.                                                                                                                                        |
 
 ### 9.2 Build Pipeline
@@ -571,8 +577,8 @@ curl -X POST \
 
 | Parameter | Explanation                                                                                                                                                                                                                                                         |
 | --- |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `repo.url` | URL of git repository that will be fetched                                                                                                                                                                                                                          |
-| `repo.revision` | a git revision (for example, branch, tag, or sha) that will be fetched                                                                                                                                                                                              |
+| `repo.url` | The URL of Git repository that will be fetched                                                                                                                                                                                                                          |
+| `repo.revision` | A Git revision (for example, branch, tag, or SHA) that will be fetched                                                                                                                                                                                              |
 | `namespace` | name of the Kubernetes namespace where Mendix Operator runs                                                                                                                                                                                                         |
 | `env-internal-name` | Mendix environment internal name. You can get all the internal environment names with the command `kubectl get mendixapps -n $namespace_name`                                                                                                                       |
 | `scheduledEventsMode` | `manual` – throws an error if scheduled events listed in `myScheduledEvents` in the MendixApp CR do not exist in the Mendix MPR<br/><br/>`auto` – removes scheduled events listed in `myScheduledEvents` in the MendixApp CR if they do not exist in the Mendix MPR |
@@ -605,6 +611,7 @@ curl -X POST \
     "namespace":"namespace-with-operator",
     "env-internal-name":"mx-environment-internal-name",
     "source-url":"https://example.com/url-to-mda/or/oci-image",
+    "mx-admin-password":"Welc0me!",
     "replicas":5,
     "dtap-mode":"D",
     "set-constants":"{\"key\":\"value\"}",
@@ -621,6 +628,7 @@ curl -X POST \
 | `namespace` | name of the Kubernetes namespace where Mendix Operator runs                                                                                   |
 | `env-internal-name` | Mendix environment internal name. You can get all the internal environment names with the command `kubectl get mendixapps -n $namespace_name` |
 | `source-url` *(Optional)* | .mda file url or oci-image (using `oci-image://` scheme) url. If empty, the url is not changed                                                |
+| `mx-admin-password` | Mendix admin password     |
 | `replicas` *(Optional)* | number of replicas. If empty, the number of replicas remains the same                                                                         |
 | `dtap-mode` *(Optional)* | mode for running the Mendix application. Available options<br/>`P` – Production (for all production environments)<br/>`D` – Development       |
 | `set-constants` *(Optional)* | constants to set provided as a JSON map. Replaces the old list with the new one. Example: {"KEY":"VALUE"}                                     |

@@ -11,12 +11,12 @@ tags: ["microflow"]
 
 Mendix uses visual models called microflows to define the logic of your application. Microflows are visual ways of expressing what traditionally would be written in code. This how-to explains how you can create a very simple "Hello World" microflow.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Create a menu item
 * Create and edit a microflow
 
-## <a name="CreatingaMenuItem"></a>2 Creating a Menu Item
+## 2 Creating a Menu Item {#CreatingaMenuItem}
 
 Microflows can be triggered in many different ways (for details, see [Trigger Logic Using Microflows](/howto7/logic-business-rules/triggering-logic-using-microflows/)). For this how-to, you'll be using a menu item to trigger the new microflow.
 
@@ -55,7 +55,7 @@ To edit the new microflow, follow these steps:
 
     {{< figure src="/attachments/howto7/logic-business-rules/create-your-first-microflow-hello-world/18580967.png" >}}
 
-3. Drag a **Show message** action from the **Toolbox** to the line between the green start even and red end event, which will insert a show message action activity:
+3. Drag a **Show message** action from the **Toolbox** to the line between the green start event and red end event, which will insert a show message action activity:
 
     {{< figure src="/attachments/howto7/logic-business-rules/create-your-first-microflow-hello-world/18580972.png" >}}
 

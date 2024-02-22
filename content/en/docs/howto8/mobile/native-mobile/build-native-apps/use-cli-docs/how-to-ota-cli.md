@@ -23,7 +23,7 @@ OTA updates are bound to a specific app version and build number. Therefore, you
 Currently OTA  does not update your app while the app is open or minimized.
 {{% /alert %}}
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Push an OTA update for a released app
 * Rollback an update
@@ -35,7 +35,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Install Native Builder 3.0.0 or higher
 * Install Mendix Studio Pro 8.4 or higher
-* Complete [How to Deploy your First Mendix Native Mobile App](/howto8/mobile/deploying-native-app/)
+* Complete [How to Build a Mendix Native App in the Cloud](/howto8/mobile/deploying-native-app/)
 * Complete at least one successful build using Native Builder v3.0.0 and Native Template v2.0.0
 * Install your app on a test device or emulator
 * Read the [Offline First Reference Guide](/refguide8/offline-first/)
@@ -99,7 +99,7 @@ To release a new version OTA, follow these steps:
     {{% alert color="info" %}}
 This command does the following:<br />
 
-* Runs Mx Build to build your project<br />
+* Runs MxBuild to build your project<br />
 * Packages your project to be pushed as a new update<br />
 * Pushes the new update package for the app's version 1.0.0<br />
 * Sets the rollout percentage to 100% (all app users)<br />
@@ -181,7 +181,7 @@ Using a modification of `rollout-percentage` you can make builds optional. To do
 native-builder.exe release push-update --project-name "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 100 --mandatory false
 ```
 
-Instead of the mandatory update pop-up window, you app's users should now be greeted with a optional pop-up window. This window will allow them to choose to install the update or not.
+Instead of the mandatory update pop-up window, you app's users should now be greeted with an optional pop-up window. This window will allow them to choose to install the update or not.
 
 ## 8 Preserving your Model's Integrity
 
@@ -204,7 +204,7 @@ This issue is independent from OTA updates and specific to offline apps. Your of
 
 ## 9 Read More
 
-* [How to Deploy Your First Mendix Native Mobile App](/howto8/mobile/deploying-native-app/)
+* [How to Build a Mendix Native App in the Cloud](/howto8/mobile/deploying-native-app/)
 * [Native Builder Reference Guide](/refguide8/native-builder/)
 * [Offline First Reference Guide](/refguide8/offline-first/)
 * [Codepush Introduction](https://docs.microsoft.com/en-us/appcenter/distribution/codepush/)

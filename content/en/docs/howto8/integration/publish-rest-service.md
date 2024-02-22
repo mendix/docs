@@ -11,7 +11,7 @@ tags: ["rest", "rest service", "web service", "integration"]
 
 Mendix allows you to publish REST web services natively from Studio Pro. This how-to will show you how to publish a REST service in an example project. This example will demonstrate the GET operation for a published REST service.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Create a published REST service and return the results in JSON or XML
 
@@ -96,7 +96,7 @@ To be able to use the data from your model in the REST service, you need to crea
 
     {{< figure src="/attachments/howto8/integration/publish-rest-service/RetrieveOrder.png" >}}
 
-11. <a name="eleven"></a>From the Project Explorer, right-click the RESTExample module and select **Add** > **Mappings** > **Export Mapping** to add a new mapping named **EM_ExportOrder**:
+11. <a id="eleven"></a>From the Project Explorer, right-click the RESTExample module and select **Add** > **Mappings** > **Export Mapping** to add a new mapping named **EM_ExportOrder**:
 
     {{< figure src="/attachments/howto8/integration/publish-rest-service/AddExportMapping.png" >}}
 
@@ -112,11 +112,11 @@ To be able to use the data from your model in the REST service, you need to crea
 
 14. Now go back to the **PRS_GetGetOrderByID** microflow and add an **Export with mapping** activity.
 15. In the **Mapping** field of the dialog box, select the mapping created above in [step 11](#eleven). For the **Parameter** field, select the **Order** object retrieved with the database retrieve action in the microflow.
-16. <a name="sixteen"></a>Select **JSON** for the result, and store the output in a **String variable**. Enter *Order_JSON* for the variable's **Name**.
+16. <a id="sixteen"></a>Select **JSON** for the result, and store the output in a **String variable**. Enter *Order_JSON* for the variable's **Name**.
 
     {{< figure src="/attachments/howto8/integration/publish-rest-service/MFExportWithMapping.png" >}}
 
-17. Add a an activity to the microflow to create an object of the type **HttpResponse**:
+17. Add an activity to the microflow to create an object of the type **HttpResponse**:
 
     {{< figure src="/attachments/howto8/integration/publish-rest-service/httpResponse.png" >}}
 

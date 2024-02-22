@@ -3,21 +3,18 @@ title: "Send External Object"
 url: /refguide/send-external-object/
 tags: ["studio pro", "integration activity"]
 ---
-{{% alert color="warning" %}}
-These activities can only be used in **Microflows**.
+
+{{% alert color="info" %}}
+This activity can only be used in microflows.
 {{% /alert %}}
 
 ## 1 Introduction
 
-The **Send external object** activity can be used to persist changes to an external object. It can be used to send objects that have been first retrieved and then changed, or to to send newly created objects.
+The **Send external object** activity can be used to persist changes to an external object. It can be used to send objects that have been first retrieved and then changed, or to send newly created objects.
 
-{{% alert color="info" %}}
-The ability to send attributes using this activity was introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.6/). The sending of association members was added in Studio Pro [9.8.0](/releasenotes/studio-pro/9.8/), and sending a new object was added in Studio Pro [9.12.0](/releasenotes/studio-pro/9.12/).
-{{% /alert %}}
+## 2 Using This Activity
 
-## 2 Using the **Send external object** Activity
-
-Use this activity with [updatable exernal entities](#updatable-entities) to send objects that have been first retrieved and then changed, or with [creatable external entities](#creatable-entities) to send newly created objects.
+Use this activity with [updatable external entities](#updatable-entities) to send objects that have been first retrieved and then changed, or with [creatable external entities](#creatable-entities) to send newly created objects.
 
 ### 2.1 Updatable External Entities {#updatable-entities}
 
@@ -41,7 +38,7 @@ This activity sends new objects and their attributes and owned associations to b
 
 ## 3 Activity Properties
 
-To manage the properties of the activity, double click the **Send external object** activity, or right-click the activity and select **Properties**. 
+To manage the properties of the activity, double-click the **Send external object** activity, or right-click the activity and select **Properties**. 
 
 Single-clicking on the activity displays the properties in the **Properties** pane.
 
@@ -57,8 +54,10 @@ This setting defines how changes are reflected in the pages presented to the end
 
 After this activity, the `$latestHttpResponse` variable (of the [HttpResponse](/refguide/http-request-and-response-entities/#http-response) type) is available to inspect the response returned by the service.
 
+After this activity, an external object is updated based on the received response.
+
 {{% alert color="info" %}}
-The feature to set `$latestHttpResponse` was introduced in Studio Pro [9.15.0](/releasenotes/studio-pro/9.15/).
+The feature to update an external entity was introduced in Studio Pro 10.3.0.
 {{% /alert %}}
 
 ## 5 Related

@@ -2,7 +2,7 @@
 title: "App Permissions"
 url: /refguide/mobile/using-mobile-capabilities/generic-permission-action/
 weight: 85
-description: "This guide will teach you to use request generic permission actions for native mobile apps."
+description: "This guide teaches you how to use request generic permission actions for native mobile apps."
 tags: ["permissions", "JavaScript", "native", "mobile"]
 ---
 
@@ -12,8 +12,8 @@ Advanced features in mobile apps often require permission from users. Apps need 
 
 ## 2 Prerequisites
 
-* Complete the [Prerequisites](/refguide/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/#prerequisites) section of *Deploy Your First Mendix Native Mobile App*.
-* Install Mendix Studio Pro v9.10.0 and above to use the Native Mobile App Builder and the latest Nanoflow Commons module.
+* Complete the [Prerequisites](/refguide/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/#prerequisites) section of *Build a Mendix Native App in the Cloud*.
+* Install Mendix Studio Pro to use the Native Mobile App Builder and the latest Nanoflow Commons module.
 * Make sure your [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module is up to date.
 * Make sure you are using [Make It Native 9 app](/releasenotes/mobile/make-it-native-parent/), and it is up-to-date.
 
@@ -102,7 +102,7 @@ To test the remaining permissions you can build a [native app](/refguide/mobile/
 During deployment you must specify the permissions that your application has used to be able to request them from the user on production. To do that you can navigate to **App permissions** while using Native Builder UI and add the permissions you are using in your application for iOS and Android.
 
 {{% alert color="info" %}}
-The permissions that you cannot find using the Native builder UI can be added manually per the [Update Native App Permissions](#update-native-permissions) section below.
+The permissions that you cannot find using the Native Builder UI can be added manually per the [Update Native App Permissions](#update-native-permissions) section below.
 {{% /alert %}}
 
 ## 5 Updating Native App Permissions {#update-native-permissions}

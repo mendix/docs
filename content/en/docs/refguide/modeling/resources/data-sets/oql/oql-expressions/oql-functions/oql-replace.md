@@ -4,10 +4,6 @@ url: /refguide/oql-replace/
 tags: ["studio pro"]
 ---
 
-{{% alert color="info" %}}
-This function is only available for Mendix Studio Pro 9.21.0 and above.
-{{% /alert %}}
-
 ## 1 Description
 
 The `REPLACE` function replaces all occurrences of a specified string value with another string value. The function supports limited and unlimited strings. Arguments of other types are not supported.

@@ -38,7 +38,7 @@ The [HTML/JavaScript Snippet](https://marketplace.mendix.com/link/component/56/)
         jQuery('p').css('color', 'red')
         ```
 
-* **Contents** – the HTML or Javascript to embe
+* **Contents** – the HTML or Javascript to embed
 * **External File** – the path to the HTML or JavaScript file you want to add
     * The root is the **theme** folder
     * This will override the **Contents** section if used

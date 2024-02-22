@@ -117,8 +117,6 @@ To cut/copy/paste you can use the following shortcuts:
 
 {{% alert color="info" %}}
 You can cut/copy/paste elements on a page to different apps in Studio Pro if they have the same Mendix version. However, you cannot cut/copy/paste the whole page.
-
-You cannot cut/copy/paste from Studio Pro to Studio.
 {{% /alert %}}
 
 To delete an element from a page, select this element and press <kbd>Delete</kbd> or right-click an element and select **Delete** in a drop-down menu. 
@@ -131,14 +129,14 @@ To change the parameters of the page, click the **Parameters** button in the top
 
 There are two different ways to edit your page:
 
-* [Structure Mode](#structure-mode), which clearly shows the relationship between page elements, together with additional information about each element
-* [Design Mode](#design-mode), a WYSIWYG (**W**hat **Y**ou **S**ee **I**s **W**hat **Y**ou **G**et) editor which better reflects what the page will look like when it is published
+* [Structure mode](#structure-mode), which clearly shows the relationship between page elements, together with additional information about each element
+* [Design mode](#design-mode), a WYSIWYG (**W**hat **Y**ou **S**ee **I**s **W**hat **Y**ou **G**et) editor which better reflects what the page will look like when it is published
 
 You can toggle between the modes by clicking the **Design mode** or **Structure mode** button on the right of the top bar.
 
 {{< figure src="/attachments/refguide/modeling/pages/page/design-mode.png" alt="Design mode and Structure mode buttons" width="250" >}}
 
-By default, pages open in **Structure mode**, but if you prefer **Design mode**, this can be set as default in the **Preferences** (**Edit > Preferences > Work Environment > Default Page Editor**). For more information, see the [Default Page Editor](/refguide/preferences-dialog/#default-page-editor) section in *Preferences*.
+By default, pages open in **Design mode**, but if you prefer **Structure mode**, this can be set as default in the **Preferences** (**Edit > Preferences > Work Environment > Default Page Editor**). For more information, see the [Default Page Editor](/refguide/preferences-dialog/#default-page-editor) section in *Preferences*.
 
 Both modes allow you to edit your page by doing the following:
 
@@ -147,18 +145,18 @@ Both modes allow you to edit your page by doing the following:
 * Viewing and editing properties of each widget in the **Properties** pane
 * Opening a **Properties** dialog box from the menu you get when you right-click the widget
 
-Additionally, the [Page Explorer](/refguide/page-explorer/) can be used in combination with Structure Mode or Design Mode, which shows a tree view of your page structure and contains the same editing capabilities.
+Additionally, the [Page Explorer](/refguide/page-explorer/) can be used in combination with **Structure mode** or **Design mode**, which shows a tree view of your page structure and contains the same editing capabilities.
 
 ### 3.1 Structure Mode {#structure-mode}
 
-In **Structure mode**, the page widgets are laid out so that it is easy to see the logical relationship between them. It has the following features which are not available in Design mode:
+In **Structure mode**, the page widgets are laid out so that it is easy to see the logical relationship between them. It has the following features which are not available in **Design mode**:
 
 * You can zoom a page in or out using the **Zoom** drop-down menu in the upper-right corner of a page
 * Widgets are shown with additional information easily visible – for example, data sources for data grids and the width assigned to columns
 
     {{< figure src="/attachments/refguide/modeling/pages/page/structure-mode-info.png" alt="Structure mode info" >}}
 
-* Each widget has a drop-zone before/above and after/below it – this makes it easier to place widgets correctly when they appear close together in Design mode
+* Each widget has a drop-zone before/above and after/below it – this makes it easier to place widgets correctly when they appear close together in **Design mode**
 * Right-click a drop-zone allows you to insert a widget into it
 * The top bar of the page consists of icons representing the most frequently used widgets – these cannot be dragged, but are positioned by clicking a drop-zone after selecting the widget (the last two open a dialog box that lets you choose an element from a list of widgets/building blocks)
 
@@ -173,16 +171,16 @@ In **Structure mode**, the page widgets are laid out so that it is easy to see t
 In **Design mode**, the page is laid out as it will appear when published so that it is easy to see the spatial relationship between the elements. 
 
 {{% alert color="info" %}}
-It is recommended to use it in combination with the [Page Explorer](/refguide/page-explorer/), which allows to see and select structural elements that are hidden in Design mode due to styling.
+It is recommended to use it in combination with the [Page Explorer](/refguide/page-explorer/), which allows to see and select structural elements that are hidden in **Design mode** due to styling.
 {{% /alert %}}
 
-For example, the example page shown in [Structure Mode](#structure-mode), above, will look like this in **Design mode** for a desktop:
+For example, the example page shown in [Structure mode](#structure-mode), above, will look like this in **Design mode** for a desktop:
 
 {{< figure src="/attachments/refguide/modeling/pages/page/design-mode-example.png" alt="Design mode page as displayed on a tablet" >}}
 
 It has the following features which are not available in **Structure mode**:
 
-* The widgets are shown as they will be on the page – for example two text widgets which are laid out vertically in structural mode may actually be laid out horizontally when the app is published, and this will be reflected in Design mode
+* The widgets are shown as they will be on the page – for example two text widgets which are laid out vertically in structural mode may actually be laid out horizontally when the app is published, and this will be reflected in **Design mode**
 * The page layout can be seen for different device modes – for example phone or browser by clicking the appropriate device mode button:
 
     {{< figure src="/attachments/refguide/modeling/pages/page/design-factor.png" alt="Show styles button" >}}

@@ -46,7 +46,7 @@ More information on multiple instances is in [Clustered Mendix Runtime](/refguid
 
 ### 2.2 External Services
 
-External services provide data and other functions from outside your Mendix app. These can be external data sources like SAP, external display widgets like Google maps, or external data processing like IBM Watson machine learning. The Runtime Server communicates with these over HTTP(S) connections.
+External services provide data and other functions from outside your Mendix app. These can be external data sources like SAP, external display widgets like Google maps, or external data processing like IBM Watson machine learning. The Runtime Server communicates with these over HTTP (or HTTPS) connections.
 
 ### 2.3 Infrastructure
 
@@ -84,7 +84,7 @@ You need a license to run an application in production mode. Without a license, 
 
 ## 4 APIs
 
-You can extend the functionality of the Runtime Server by writing Java actions. For more information,  see the [Runtime API](/apidocs-mxsdk/apidocs/#runtime) section of *API Documentation*.
+You can extend the functionality of the Runtime Server by writing Java actions. For more information, see the [Mendix  Runtime API](/apidocs-mxsdk/apidocs/runtime-api/).
 
 {{% alert color="info" %}}
 If the app contains published services, links to available API documentation such as [OpenAPI documentation](/refguide/open-api/) for [published REST services](/refguide/published-rest-services/), links to [published OData services](/refguide/published-odata-services/), and WSDLs for [published web services](/refguide/published-web-services/), are available on the URL path `/api-doc` (for example: `https://myapp.mendixcloud.com/api-doc/`).

@@ -2,25 +2,25 @@
 title: "Data Grid 2"
 url: /appstore/modules/data-grid-2/
 description: "Describes the configuration and usage of the Data Grid 2 widget, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "data grid", "platform support"]
+tags: ["marketplace", "marketplace component", "data grid", "platform support", "external entities"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## 1 Introduction {#introduction}
 
-[Data Grid 2](https://marketplace.mendix.com/link/component/116540) is the successor to the standard data grid widget for displaying content in a tabular form. It comes with many powerful new features and settings like support for widgets, row and cell coloring, responsive layout, accessibility, and different paging options like virtual scrolling. It offers personalization support so that end-users can show, hide, and re-order columns. Personalizations can be persisted in the database for flexibility and control. The data grid is packaged as a module and uses a flexible approach for filtering. Developers can drag data-grid-specific widgets into the header of the grid and tailor the behavior of the filters. This module includes filters for text, numbers, dates, and the option to add drop-down filters for single or multiple selections.
+[Data Grid 2](https://marketplace.mendix.com/link/component/116540) is the successor to the standard data grid widget for displaying content in a tabular form. It comes with many powerful new features and settings like support for widgets, row and cell coloring, responsive layout, accessibility, and paging options like virtual scrolling. 
+
+The Data Grid 2 module offers personalization support so that end-users can show, hide, and re-order columns. Personalizations can be persisted in the database for flexibility and control. 
+
+The data source determines which objects will be shown in a Data Grid 2 module. In v2.3.0 and above, selecting the entity of the data source will automatically fill the contents, create columns with filters, and create buttons. You can also select which columns to use for the content generation.
+
+The module also uses a flexible approach for filtering. You can drag data-grid-specific widgets into the header of the grid and tailor the behavior of the filters. There are filters for text, numbers, and dates, and there is an option to add drop-down filters for single or multiple selections.
 
 Here is an example of a data grid using filters:
 
 {{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/example.png" alt="Example of data grid using filters" >}}
 
-### 1.2 Advanced Options
-
-{{% alert color="info" %}}
-The **Enable advanced options** toggle is available in Mendix Studio. In Mendix Studio Pro these advanced options are always available.
-{{% /alert %}}
-
-The data grid has an option to enable advanced options. When this option is toggled on, it enables numerous features to customize your data grid:
+You can enable these advanced options to customize your data grid:
 
 * Pagination type
 * Pagination position
@@ -62,33 +62,42 @@ Here is an example of reordering in progress:
 
 ### 2.4 Hiding
 
-**Hiding** enables a column to be hidden. When this option is enabled for any column, a button with an eye icon will appear on the right side of the data grid like the example below. It contains all the columns **hidden by default** or enabled to be hidden. When de-selected, the column will not be visible in the grid anymore.
+**Hiding** enables a column to be hidden. When this option is enabled for any column, a button with an eye icon ({{% icon name="view" %}}) will appear on the right side of the data grid like the example below. It contains all the columns **hidden by default** or enabled to be hidden. When de-selected, the column will not be visible in the grid anymore.
 
 Here is an example of hiding button containing columns to be hidden:
 
 {{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/hiding.png" alt="Example of hiding button containing columns to be hidden" >}}
 
 {{% alert color="info" %}}
-When a column is marked as “Yes, hidden by default” it will render differently in Structure mode and Design mode (Studio Pro) and in Studio to indicate that the column is hidden. **When running the application, the column will in fact be hidden by default**.
+When a column is marked as “Yes, hidden by default” it will render differently in **Structure mode** and **Design mode** and to indicate that the column is hidden. **When running the application, the column will in fact be hidden by default**. 
 {{% /alert %}}
 
-Here is an example containing a column with **Yes, hidden by default** in Structure mode:
+Here is an example containing a column with **Yes, hidden by default** in **Structure mode**:
 
 {{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/hidden-columns-structure-mode.png" alt="Example containing a column with “Yes, hidden by default” in Structure mode" >}}
 
-Here is an example containing a column with **Yes, hidden by default** in Design mode and Studio:
+Here is an example containing a column with **Yes, hidden by default** in **Design mode**:
 
-{{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/hidden-columns-design-mode.png" alt="Example containing a column with “Yes, hidden by default” in Design mode and Studio" >}}
+{{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/hidden-columns-design-mode.png" alt="Example containing a column with “Yes, hidden by default” in Design mode" >}}
 
 ## 3 Pagination
+
+{{% alert color="info" %}}
+This widget does not support [system texts](/refguide/system-texts/), meaning is not possible to translate its content to another language.
+{{% /alert %}}
 
 In the new data grid we offer two types of pagination: **Paging Buttons** and **Virtual Scrolling**.
 
 ### 3.1 Paging Buttons
 
-The **Paging Buttons** option will render the default buttons as the previous data grid. When the data source is uncountable (like entities in Data Hub) neither the last page button nor the counting will be be available. The paging can be positioned above or below the grid:
+The **Paging Buttons** option will render the default buttons as the previous data grid. When the data source is uncountable (for example, external entities), neither the last page button nor the counting will be be available.
 
-{{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/paging-buttons.png" alt="Example of paging buttons" >}}
+{{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/paging-buttons.png" alt="Example of paging buttons" class="image-border">}}
+
+You can configure pagination based on the following properties:
+
+* **Position** — The **Position of paging button** options allow you to position paging buttons above or below the data grid.
+* **Visibility** — The **Show paging buttons** options allow you to always show paging, or to automatically show and hide paging based on the amount of available data compared to the display limit per page.
 
 ### 3.2 Virtual Scrolling 
 
@@ -100,7 +109,7 @@ In Data Grid you can choose what you want to render into columns. This can be an
 
 Here is an example of column properties:
 
-{{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/column-properties.png" alt="Example of column properties" >}}
+{{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/column-properties.png" alt="Example of column properties" class="image-border">}}
 
 ### 4.1 Attribute
 
@@ -116,7 +125,7 @@ Here is an example of column properties:
 
 **Custom Content** allows users to drop widgets into the data grid and use the column attribute value to show custom content. After selecting this option you will be given dropzones in which to drop your widgets.
 
-Here is an example of custom content using new Badge widget in Structure mode:
+Here is an example of custom content using new Badge widget in **Structure mode**:
 
 {{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/column-custom-content.png" alt="Example of custom content using new Badge widget in Structure mode" >}}
 
@@ -165,10 +174,24 @@ If you are using **Custom content** in the **Show** option of the **General** ta
 If you need to display advisory information for cell content, you can specify the tooltip text. This text will be shown when a user is hovering over the cell content.
 
 {{% alert color="warning" %}}
-This property not available if you enable "Custom content" for the column
+This property is not available if you enable **Custom content** for the column
 {{% /alert %}}
 
 {{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/tooltip-prop.png" alt="Example of wrap text" >}}
+
+### 4.9 Association Filter {#association-filter}
+
+* **Reference** — this property defines the association that will be used for filtering. When set, it enables filtering over association with the Drop-down filter. Drop-down filter will prioritize this property over `Attribute` property.
+* **Data source** — defines data source for filter options. The data source should return list of all possible entities that could be associated with a parent.
+* **Option caption** — the expression that will be used as caption for the option.
+
+{{% alert color="info" %}}
+This column configuration is intended to be used in conjunction with [Drop-down Filter](#drop-down-filter). Other filter types don't support association filtering.
+{{% /alert %}}
+
+### 4.10 Visible {#visible-filter}
+
+When using a data grid, sometimes columns do not need to be shown. Using this **Visible** expression configuration, you can specify when you want to display columns
 
 ## 5 Rows
 
@@ -212,7 +235,7 @@ Also the desired attribute must be filterable. For example, not a value which is
 
 {{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/settings-show-column-filters.png" alt="Settings for data grid 2" >}}
 
-Here is an example of dropzones for filters in Structure mode:
+Here is an example of dropzones for filters in **Structure mode**:
 
 {{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/dropzones-for-filters.png" alt="Example of dropzones for filters in Structure mode" >}}
 
@@ -260,7 +283,7 @@ When **Default filter** is defined as **Between** these fields will appear to de
 
 #### 7.1.1 Configurations
 
-In this section you can select a **Saved attribute** in order to save the current value of the filter. The attribute available in this section must be this type:
+In this section you can select a **Saved attribute** in order to save the current value of the filter. However, the value is not automatically applied to the widget. To restore the previously saved value of the filter, you must configure the same attribute as the **Default value** of the widget. The attribute available in this section must be this type:
 
 * Date & Time
 
@@ -268,13 +291,15 @@ In this section you can select a **Saved attribute** in order to save the curren
 
 In this section you can select an action to be executed **On change** by the filter value. This means every time the user types or selects a value it will be executed.
 
-### 7.2 Drop-Down Filter
+### 7.2 Drop-Down Filter {#drop-down-filter}
 
 {{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/dropdown-filter.png" alt="Example of default drop-down filter" >}}
 
-**Drop-down filter** allows users to match enumeration values or a Boolean attribute. To configure the available options when you press the drop-down filter, you can manually add them in the options list or select **Automatic options** to automatically load the values:
+**Drop-down filter** allows users to match enumeration values, Boolean attributes, or an association attribute. To configure the available options when you press the drop-down filter, you can manually add them to the options list or select **Automatic options** to automatically load the values:
 
 {{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/dropdown-filter-settings.png" alt="Example of settings for drop-down filter" >}}
+
+When a drop-down filter is used in conjunction with an Association Filter data grid configuration, only **Automatic options** are supported. Any custom options will be ignored. To enable association filtering, see the [Association Filter](#association-filter) section.
 
 When adding a new option, the following properties are required:
 
@@ -291,7 +316,7 @@ You can also define the empty option caption, which will be rendered as the firs
 
 #### 7.2.1 Configurations
 
-In this section you can select a **Saved attribute** in order to save the current value of the filter. The attribute available in this section must be this type:
+In this section you can select a **Saved attribute** in order to save the current value of the filter. However, the value is not automatically applied to the widget. To restore the previously saved value of the filter, you must configure the same attribute as the **Default value** of the widget. The attribute available in this section must be this type:
 
 * String
 
@@ -332,11 +357,11 @@ Here is an example of **Number Filter** with **Adjustable by user** set as **No*
 
 You can also define the default value of the widget, which will be predefined as initial value when opening your data grid page.
 
-To have better control of when the filter will be applied, we offer a **Apply after (ms)** option under the **On change behavior** group. This option will only trigger the filter after a predefined period of time while typing. By default, we suggest 500ms.
+To have better control of when the filter will be applied, we offer a **Apply after (ms)** option under the **On change behavior** group. This option will only trigger the filter after a predefined period of time while typing. By default, Mendix suggests 500ms.
 
 #### 7.3.1 Configurations
 
-In this section you can select a **Saved attribute** in order to save the current value of the filter. The attribute available in this section must be one of the following types:
+In this section you can select a **Saved attribute** in order to save the current value of the filter. However, the value is not automatically applied to the widget. To restore the previously saved value of the filter, you must configure the same attribute as the **Default value** of the widget. The attribute available in this section must be one of the following types:
 
 * Autonumber
 * Decimal
@@ -379,11 +404,11 @@ Here is an example of Text Filter with **Adjustable by user** set to **No**:
 
 You can also define the default value of the widget, which will be predefined as initial value when opening your data grid page.
 
-To have better control of when the filter will be applied, we offer a **Apply after (ms)** option under the **On change behavior** group. This option will only trigger the filter after a predefined period of time while typing. By default, we suggest 500ms.
+To have better control of when the filter will be applied, we offer a **Apply after (ms)** option under the **On change behavior** group. This option will only trigger the filter after a predefined period of time while typing. By default, Mendix suggests 500ms.
 
 #### 7.4.1 Configurations
 
-In this section you can select a **Saved attribute** in order to save the current value of the filter. The attribute available in this section must be one of the following types:
+In this section you can select a **Saved attribute** in order to save the current value of the filter. However, the value is not automatically applied to the widget. To restore the previously saved value of the filter, you must configure the same attribute as the **Default value** of the widget. The attribute available in this section must be one of the following types:
 
 * Hashed string
 * String
@@ -392,9 +417,9 @@ In this section you can select a **Saved attribute** in order to save the curren
 
 In this section you can select an action to be executed **On change** by the filter value. This means every time the user types or selects a value it will be executed.
 
-### 7.5 Header Filtering
+### 7.5 Grid Wide Filtering
 
-In order to enable filtering within the data grid header (outside the columns) you need to enable `Show header filters` and select the desired attributes to be filtered in the **Filtering** tab. You can select attributes of the following types:
+In order to enable filtering within the data grid header (outside the columns) you need to enable `Grid wide filters` and select the desired attributes to be filtered in the **Filtering** tab. You can select attributes of the following types:
 
 * Autonumber
 * Boolean
@@ -412,9 +437,24 @@ The attributes selected here will be used for the matching filter placed inside 
 If a filter is being used and its type does not match with any selected attribute, then it will throw an error requesting you to select the correct filter widget.
 {{% /alert %}}
 
-## 8 Configuration
+{{% alert color="warn" %}}
+There cannot be more than one filter of the same type in the data grid header. For example, if a data grid header already has a `Number Filter`, adding another `Number Filter` will cause incorrect data filtering.
+{{% /alert %}}
 
-You can define an attribute to store the current configuration of the data grid. In this way, if you re-open your page then the current sorted columns, order, and hidden columns will remain the same as in the previous state. To set this option, you need to select a `String` attribute with `Unlimited` as its size as the attribute in the data grid **Personalization** tab in Studio Pro or **Configuration** in Studio.
+## 8 Export to Excel
+
+The Data Grid 2 widget ships with built-in functionality to export data from the data source you configured in the settings. The export is done via the *Export_To_Excel* JavaScript action that is distributed as part of the [Data Widgets](/appstore/modules/data-widgets/) module.
+
+To export data from the data grid, create a new nanoflow that calls *Export_To_Excel*. The *Export_To_Excel* action has a set of inputs:
+
+* **Datagrid name** - the name of the data grid from which data should be exported (the name can be found and copied from the data grid's settings (**Properties** > **Common** > **Name**))
+* **File name** - the file name to use for the exported document (does not require an appended file extension)
+* **Sheet name** - the name to use for the Excel sheet of the exported document
+* **Include column names** - a Boolean expression that, if true, tells the action to include column captions as the first row in the exported document
+
+## 9 Configuration
+
+You can define an attribute to store the current configuration of the data grid. In this way, if you re-open your page then the current sorted columns, order, and hidden columns will remain the same as in the previous state. To set this option, you need to select a `String` attribute with `Unlimited` as its size as the attribute in the data grid **Personalization** tab in Studio Pro.
 
 {{% alert color="warning" %}}
 If the desired `String` attribute does not contain `Unlimited` in its size, the Data grid will not be able to save all the configurations as expected.
@@ -430,11 +470,11 @@ Here is an example of a configuration containing an On change action:
 
 {{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/configuration.png" alt="Example of a configuration containing on change action" >}}
 
-## 9 Performance
+## 10 Performance
 
 The performance of the new data grid can be affected if sorting or filtering are enabled. This is because Data widgets v1.1 - 1.2 retrieve all available values for sorting or filtering while the widget runs. This problem does not occur in versions above 1.3 because those version use [Filtering Apis](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#filter-helpers) to retrieve only the necessary data.
 
-## 10 Troubleshooting
+## 11 Troubleshooting
 
 If you are using Atlas v2.x and you cannot upgrade to Atlas 3 at the moment, please replace the line 3 `cssFiles` with the following code in the file `theme/settings.json`:
 

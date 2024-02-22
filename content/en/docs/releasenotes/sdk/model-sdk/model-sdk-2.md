@@ -105,7 +105,7 @@ SDK version 2.2.0 and 2.2.1 were unpublished because they were published in a br
 | Impact | Description |
 | --- | --- |
 | Minor | Added support for Mendix 6.4.0 |
-| Low | Working copies that are connected to sprintr projects can now be deployed and their runtime status can be requested |
+| Low | Working copies that are connected to projects can now be deployed and their runtime status can be requested |
 | Low | Unit-loading now has an extra optional forceRefresh option. If set, it will then bypass the Mendix MOdel SDK cache, and get the fresh unit straight from the source/server. |
 | Minor | All classes that could be useful for reflection on the model are now exposed through `mendixmodelsdk`, so imports from `mendixmodelsdk/dist/sdk/internal/...` should no longer be needed. |
 | Minor | Private members (starting with an underscore `_`) were not available in the docs but were available in the public typings and therefore in the IDEs. This has been fixed. It should never be necessary to access these members. However, if you did access them you now need to access the object to `any` before the typechecker allows you to access these members. The method `allProperties()` is now available on all structures for reflection purposes. |
@@ -119,7 +119,7 @@ This release introduces a number of breaking changes in the SDK's API, so becaus
 | 612773 | High | The mechanics of model elements being contained has been reworked: see below for more details. |
 | 634662 | Low | The `toPlainJson` method on elements and units has been renamed to `toJSON`, because for example, the Chrome Developer Tools understand this to produce nice, human-readably representations of such objects. Rename all usages of `toPlainJson` to `toJSON` to fix your code. |
 | 639825 | Low | Broken by-name references are automatically fixed when a target is added to the model again. |
-| 637545 | None | Minor internal modifications for upcoming Mendix version 6.3.0. |
+| 637545 | None | Minor internal modifications for upcoming Mendix 6.3.0. |
 | 633932 | None | Added support for long-lived working copies (that are not deleted after 24 hours) to SDK. Note that this is currently **not** available to non-trusted back ends! |
 | 620108 | None | Removed exported interface `IObservable` from an internal namespace and replaced its use by the one from the `MObservable` library. |
 | 631960 | None | Added support for checking deployment status. |

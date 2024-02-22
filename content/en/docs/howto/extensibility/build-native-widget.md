@@ -14,13 +14,13 @@ Pluggable widgets enable developers to create new widgets beyond the core widget
 
 In this how-to, you will learn to create a group box pluggable widget for native mobile applications with React Native.
 
-This how-to will teach you core widget concepts by having you build configure, and style a group box widget. For more information on customizing pluggable widgets, see the [Pluggable Widgets API Documentation](/apidocs-mxsdk/apidocs/pluggable-widgets/).
+This how-to teaches you core widget concepts by having you build configure, and style a group box widget. For more information on customizing pluggable widgets, see the [Pluggable Widgets API Documentation](/apidocs-mxsdk/apidocs/pluggable-widgets/).
 
 A group box can be used to visually group related widgets together. Group boxes are displayed as a frame around nested widgets with an optional header. Group boxes can be configured to collapse and expand dynamically, and look like this:
 
 {{< figure src="/attachments/howto/extensibility/build-native-widget/group-box-tease.png" alt="final widget" >}}
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Generate a widget structure
 * Put a pluggable widget into a Mendix app
@@ -1091,8 +1091,6 @@ First change the widget property configuration:
 
     2. Rename the file to *GroupBox.icon.png*
     3. Add the file to the *src* folder which contains the *xml* file
-
-    {{% alert color="info" %}}This functionality was introduced in Studio Pro v9.6. To show a widget icon in Studio Pro v9.5 or below, the icon needs to be added to the *xml* file. To do this, follow the steps from the [Mendix 8](/howto8/extensibility/build-native-widget/#adding-a-collapsible-property) version of this document.{{% /alert %}}
 
 Now support this section's two features with your display component:
 

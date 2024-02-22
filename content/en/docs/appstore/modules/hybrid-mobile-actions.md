@@ -1,11 +1,15 @@
 ---
-title: "Hybrid Mobile Actions"
+title: "Hybrid Mobile Actions ⚠"
 url: /appstore/modules/hybrid-mobile-actions/
 category: "Modules"
 description: "Describes the configuration and usage of the Hybrid Mobile Actions module, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "platform support", "hybrid mobile", "hybrid mobile actions",  "mobile"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
+
+{{% alert color="warning" %}}
+This module is deprecated. Mendix recommends building a native or progressive web app instead. For more information, see [Introduction to Mobile Technologies](/refguide/mobile/introduction-to-mobile-technologies/).
+{{% /alert %}}
 
 ## 1 Introduction
 

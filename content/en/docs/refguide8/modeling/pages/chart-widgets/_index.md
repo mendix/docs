@@ -2,12 +2,10 @@
 title: "Chart Widgets"
 url: /refguide8/chart-widgets/
 weight: 70
+no_list: false
+description_list: true 
 tags: ["Charts", "Any Chart", "Studio Pro", "Pages"]
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/chart-widgets.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 
@@ -48,7 +46,7 @@ With *Any Chart* you can build all the chart types that are possible with Plotly
 
 The plotly charts require a configuration based on JSON, therefore *Any Chart* has JSON as input parameters. You can create this JSON dynamically in your microflow via a JSON Structure document and use this in the *Any Chart* configuration. It is also possible to define static JSON configuration which is combined with the dynamic JSON.
 
-This module also contains several [building blocks](/refguide8/charts-any-building-blocks/) for inspiration and as starting point. If you want to create a new chart, we suggest you check out the plotly.js website.
+This module also contains several [building blocks](/refguide8/charts-any-building-blocks/) for inspiration and as starting point. If you want to create a new chart, Mendix suggests checking out the plotly.js website.
 
 See [Any Chart Widgets](/refguide8/charts-any-configuration/) to learn how to configure *Any charts* widgets.
 
@@ -59,11 +57,3 @@ The [Any Chart Cheat Sheet](/refguide8/charts-any-cheat-sheet/) lists the most c
 {{% snippet file="/static/_includes/refguide8/performing-basic-functions-widgets.md" %}}
 
 ## 5 Documents in This Section
-
-The following documents explain how to use charts in more detail:
-
-* [Chart Configuration](/refguide8/charts-configuration/)
-* [Chart Advanced Cheat Sheet](/refguide8/charts-advanced-cheat-sheet/)
-* [Any Chart Widgets](/refguide8/charts-any-configuration/)
-* [Any Chart Building Blocks](/refguide8/charts-any-building-blocks/)
-* [Any Chart Cheat Sheet](/refguide8/charts-any-cheat-sheet/)

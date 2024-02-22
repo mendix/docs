@@ -1,17 +1,26 @@
 ---
-title: "User Management API"
+title: "User Management API ⚠"
 url: /apidocs-mxsdk/apidocs/user-management-api/
 category: "API Documentation"
-weight: 70
+description: "Use this API to integrate your company's user management systems with the Mendix Platform. You can then create and manage user accounts and groups as well as define group policies for your apps."
+weight: 96
 ---
 
 ## 1 Introduction
 
+{{% alert color="warning" %}}
+This API is deprecated. If you are currently using this API or intend to start using it, please look at, and contribute to, [this idea in the Mendix Forum](https://forum.mendix.com/link/space/user-experience/ideas/3962). This will allow us to understand your use case and will help us to prioritize a new API that is fit for purpose. 
+{{% /alert %}}
+
 The User Management API allows your company's user management systems to integrate with the Mendix Platform. Through this API, you can create and manage user accounts in your company. Additionally you can create and manage groups. In the Mendix Platform, you can define group policies for groups which grant access to your company's applications to their members.
+
+{{% alert color="warning" %}}
+The Group management functions of this API apply only to apps which are using the [Mendix SSO](/appstore/modules/mendix-sso/) module to authenticate end-users. This allows end-users to use their Mendix account to sign in to your app (or apps).
+{{% /alert %}}
 
 ## 2 Authentication
 
-The User Management API requires its users with the required permissions to authenticate themselves. This can be done by using API keys; for more information about this please refer to [this article](/apidocs-mxsdk/apidocs/authentication/).
+The User Management API requires its users with the required permissions to authenticate themselves. This can be done by using API keys; for more information about this please refer to [Authentication](/apidocs-mxsdk/apidocs/authentication/).
 
 ## 3 Error Handling
 
@@ -51,10 +60,8 @@ The following error codes can be returned on authentication and authorization er
 
 | Error code | Description |
 | --- | --- |
-| UNAUTHORIZED
-401 | Authentication failed. Credentials provided with the request are either invalid or incomplete. |
-| FORBIDDEN
-403 | Authentication succeeded, but user is not authorized to execute this request. |
+| UNAUTHORIZED 401 | Authentication failed. Credentials provided with the request are either invalid or incomplete. |
+| FORBIDDEN 403 | Authentication succeeded, but user is not authorized to execute this request. |
 
 #### 3.1.2 General Error Codes
 
@@ -62,21 +69,16 @@ The following error codes can be returned on authentication and authorization er
 
 | Error code | Description |
 | --- | --- |
-| PARAMETER_MISSING
-400 | One of the required parameters for the request is missing or does not contain a value. |
-| BAD_PARAMETER
-400 | One of the parameters included with the request has an illegal value. |
-| RESOURCE_NOT_FOUND
-404 | The requested resource cannot be found on the server. |
-| RESOURCE_ALREADY_EXISTS
-409 | The resource cannot be created on the server because it already exists. |
+| PARAMETER_MISSING 400 | One of the required parameters for the request is missing or does not contain a value. |
+| BAD_PARAMETER 400 | One of the parameters included with the request has an illegal value. |
+| RESOURCE_NOT_FOUND 404 | The requested resource cannot be found on the server. |
+| RESOURCE_ALREADY_EXISTS 409 | The resource cannot be created on the server because it already exists. |
 
 ##### 3.1.2.2 Server Errors (5xx)
 
 | Error code | Description |
 | --- | --- |
-| SERVICE_UNAVAILABLE
-503 | Service is unavailable. Please try again later. |
+| SERVICE_UNAVAILABLE 503 | Service is unavailable. Please try again later. |
 
 ## 4 API Calls
 
@@ -90,7 +92,7 @@ Users that are able to sign in to the Mendix Platform with their credentials are
 
 #### 4.1.2 Company (Account) {#company-account}
 
-A group of users that work for the same legal entity. Companies can own email domains (for example "@acme.org"), which means that every new user that signs up with an email address within this domain will become part of the domain owning company. (Additional) email domains for a company can be requested through [Control Center](/developerportal/control-center/) or[Mendix Support](https://support.mendix.com/).
+A group of users that work for the same legal entity. Companies can own email domains (for example "@acme.org"), which means that every new user that signs up with an email address within this domain will become part of the domain owning company. (Additional) email domains for a company can be requested through [Control Center](/control-center/) or[Mendix Support](https://support.mendix.com/).
 
 #### 4.1.3 Groups
 

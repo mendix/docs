@@ -4,10 +4,6 @@ url: /refguide8/published-odata-resource/
 tags: ["studio pro"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/published-odata-resource.pdf).
-{{% /alert %}}
-
 {{% alert color="warning" %}}
 
 This document describes the properties of a published OData resource. For an overview of OData services, see [Published OData Services](/refguide8/published-odata-services/).
@@ -76,7 +72,7 @@ Location URIs must be unique. Exposing two different resources at the same locat
 
 {{% /alert %}}
 
-Attributes and associations can be customized in the same way in the **Exposed attributes and associations** list window under the the **Exposed name** column. 
+Attributes and associations can be customized in the same way in the **Exposed attributes and associations** list window under the **Exposed name** column. 
 
 For associations, the exposed name is the name given to the navigation property (which is the property referring to the associated object(s)). The default is the same as the name of the association in the domain model.
 

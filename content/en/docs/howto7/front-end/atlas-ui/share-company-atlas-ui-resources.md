@@ -9,7 +9,7 @@ tags: ["Atlas", "UI", "UX", "user experience"]
 
 Creating company UI resources is a great way to let Mendix developers quickly create new beautiful applications with out-of-the-box company-branded themes, page templates, and building blocks. This is a great way to align multiple apps with the same UI resources, keeping your company brand as well as look and feel consistent. 
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Share the UI Resources module
 * Maintain the UI Resources module
@@ -103,5 +103,4 @@ To use the UI Resources module from teh Mendix Marketplace, follow these steps:
 * [How to Get Started with Atlas UI](/howto7/front-end/get-started-with-atlasui/)
 * [How to Create Company Atlas UI Resources](/howto7/front-end/create-company-atlas-ui-resources/)
 * [How to Create Custom Preview Images for Building Blocks and Page Templates](/howto7/front-end/create-custom-preview-images-for-building-blocks-and-page-templates/)
-* [How to Extend Design Properties to Customize the Web Modeler Experience](/howto7/front-end/extend-design-properties-to-customize-the-web-modeler-experience/)
 * [How to Migrate Existing Projects to Atlas UI](/howto7/front-end/migrate-existing-projects-to-atlasui/)

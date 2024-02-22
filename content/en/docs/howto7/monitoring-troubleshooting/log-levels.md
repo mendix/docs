@@ -10,7 +10,7 @@ tags: ["monitoring", "troubleshooting", "log level", "logging", "log"]
 
 Each application has a log and log messages to monitor the health of the running of the application. Log levels are used to distinguish the log messages and to highlight the highest priority ones so that they can receive the immediate intervention they require.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Configure the log levels for the various occurrence of logging within your app
 
@@ -28,7 +28,7 @@ Log messages are notes that appear in the log of your Mendix application that pr
 
 #### 2.1.1 Log Node
 
-The log node name defines the source of the log message. For example, in a log message from the e-mail module, the log name would appear as **Email Module**.
+The log node name defines the source of the log message. For example, in a log message from the email module, the log name would appear as **Email Module**.
 
 #### 2.1.2 Message
 
@@ -44,9 +44,9 @@ In the image above, the template for the message is **Email not sent to customer
 
 The stack trace is a list of method calls from the point when the application was started to the point where the exception occurred. 
 
-In the Modeler, log messages that include a stack trace are marked with a paperclip icon. Double-clicking this icon shows the stack trace.
+In the Modeler, log messages that include a stack trace are marked with a paperclip icon ({{% icon name="paperclip" %}}). Double-clicking this icon shows the stack trace.
 
-### 2.2 Level<a name="Level"></a>
+### 2.2 Level {#Level}
 
 The log level defines the severity of the log message. In the Modeler, this is represented by different colors and an icon. 
 

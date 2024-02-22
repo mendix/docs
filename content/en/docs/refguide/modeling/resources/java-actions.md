@@ -31,7 +31,7 @@ Each parameter has a name, type, category, and description.
 
 Use categories to keep the parameters apart in the [Java action call](/refguide/java-action-call/). If you do not specify a category, the parameter will appear in the **Input** group.
 
-See [Data Types](/refguide/data-types/) for the possible standard parameter types. When the type is an Object or List, you must also select its Entity type, which can be either a specific entity or a type parameter. The type parameter postpones the selection of the actual entity type until the Java action is used in a microflow. This allows your Java action to accept a (list of) Mendix object(s) of an arbitrary entity type.
+See [Data Types](/refguide/data-types/) for the possible standard parameter types. When the type is an Object or List, you must also select its Entity type, which can be either a specific entity or a type parameter. The type parameter postpones the selection of the actual entity type until the Java action is used in a microflow. This allows your Java action to accept a (list of) Mendix object (or objects) of an arbitrary entity type.
 
 The other types supported by Java actions are described below.
 
@@ -80,7 +80,7 @@ A Java action has zero or more type parameters. Each type parameter should have 
 
 ## 4 Expose as Microflow Action {#expose-microflow-action}
 
-By selecting the **Expose as microflow action** option, it is possible to expose the Java action as a microflow action. Exposing the Java action will make it appear in the the **Toolbox** window when editing a microflow in the category of your choice. When this action is used in a microflow, it will show the provided caption and icon.
+By selecting the **Expose as microflow action** option, it is possible to expose the Java action as a microflow action. Exposing the Java action will make it appear in the **Toolbox** window when editing a microflow in the category of your choice. When this action is used in a microflow, it will show the provided caption and icon.
 
 The caption and category of the microflow action are required, but the icon and tile image are optional. It is possible to specify icon and tile image independenty for light and dark modes of Studio Pro. When no icon or no tile image are selected, the default java action icon and tile image are used.
 

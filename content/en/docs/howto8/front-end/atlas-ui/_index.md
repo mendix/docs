@@ -17,23 +17,19 @@ Mendix Atlas UI is the design framework that makes building elegant user experie
 
 Visit the [Atlas UI site](https://atlas2.mendix.com/) for detailed previews and descriptions of all Atlas UI elements, or see the Atlas UI Framework [GitHub repository](https://github.com/mendix/Atlas-UI-Framework). If you wish to customize your Mendix apps' styling, see [How to Customize Your Styling Using Calypso](/howto8/front-end/calypso/).
 
-### 1.1 Mendix Studio
-
-[Mendix Studio](/studio8/) brings the collaborative Mendix Platform to the browser, making it easier than ever to share and collaborate on application models. Every app built in Mendix Studio is styled with the Atlas UI framework. For more information, see [Get Started with Atlas UI](/howto8/front-end/get-started-with-atlasui/). 
-
-### 1.2 Design Principles
+### 1.1 Design Principles
 
 Atlas UI has a philosophy based on the core principles described below. These principles guide all our design decisions at Mendix, and we encourage every Mendix user to adopt them when building their own apps.
 
-#### 1.2.1 Simplicity
+#### 1.1.1 Simplicity
 
 Freedom from complexity: we strive for simplicity to help you focus on what is important.
 
-#### 1.2.2 Harmony
+#### 1.1.2 Harmony
 
 Create familiarity and consistency throughout your apps landscape, regardless of the device you use.
 
-#### 1.2.3 Flexibility
+#### 1.1.3 Flexibility
 
 Design apps that look good and scale in all situations without losing an intuitive and consistent experience.
 
@@ -41,7 +37,7 @@ Design apps that look good and scale in all situations without losing an intuiti
 
 ## 2 Design Elements
 
-Our UI library is fully integrated into Mendix Studio. After choosing a navigation layout in Mendix Studio, you can find page templates, building blocks, and widgets directly in your **Toolbox**. These UI elements form the foundation of your app.
+Our UI library is fully integrated. After choosing a navigation layout, you can find page templates, building blocks, and widgets directly in your **Toolbox**. These UI elements form the foundation of your app.
 
 {{< figure src="/attachments/howto8/front-end/atlas-ui/designelements.png" >}}
 
@@ -72,6 +68,5 @@ You can further customize widgets by changing their design properties. Colors, t
 * [Create Company Atlas UI Resources](/howto8/front-end/create-company-atlas-ui-resources/)
 * [Share Company Atlas UI Resources](/howto8/front-end/share-company-atlas-ui-resources/)
 * [Create Custom Preview Images for Building Blocks and Page Templates](/howto8/front-end/create-custom-preview-images-for-building-blocks-and-page-templates/)
-* [Extend Design Properties to Customize Your Studio Experience](/howto8/front-end/extend-design-properties-to-customize/)
 * [Troubleshooting Atlas UI Changes](/refguide8/migration-atlas/)
 * [How to Customize Your Styling Using Calypso](/howto8/front-end/calypso/)

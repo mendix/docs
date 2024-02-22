@@ -20,8 +20,8 @@ While this guide gives your end-user the ability to switch their app's language,
 
 Before starting this guide, make sure you have completed the following prerequisites:
 
-* Install Mendix Studio Pro version **9.14.0** or above
-* Complete the [Prerequisites](/refguide/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/#prerequisites) section of *Deploy Your First Mendix Native Mobile App*
+* Install Mendix Studio Pro version [9.14.0](/releasenotes/studio-pro/9.14/) or above
+* Complete the [Prerequisites](/refguide/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/#prerequisites) section of *Build a Mendix Native App in the Cloud*
 * Make sure your [Nanoflow Commons](/appstore/modules/nanoflow-commons/) module is up to date
 * Read the [Language Menu](/refguide/translatable-texts/) guide to understand the basics of the Mendix Language menu
 * Set up the required [languages](/refguide/language-settings/) in Studio Pro—this tutorial has been configured with three languages as below:
@@ -35,7 +35,7 @@ Internationalization with Mendix's mobile apps is fairly simple. You will use tw
 {{% alert color="info" %}}
 This guide requires the following nanoflow actions: 
 
-* **Clear cached session data** – This action clears saved session data from the local storage for offline native app and PWAs. This nanoflow action is only compatible with Studio Pro v9.14 and above. Therefore, please use Studio Pro v9.14.0 or above.
+* **Clear cached session data** – This action clears saved session data from the local storage for offline native app and PWAs.
 * **Reload** – This action reloads web and native apps.
 {{% /alert %}}
 
@@ -123,7 +123,7 @@ Congratulations, you just implemented internationalization in your native app! Y
 
 ## 5 Read More
 
-* [Use Translatable Validation Messages](/howto/logic-business-rules/translatable-validation-messages/)
+* [Using Translatable Validation Messages](/refguide/translatable-validation-messages/)
 * [Language Menu](/refguide/translatable-texts/): gives more information on translating the languages of different Mendix UI elements
 * [Change Language by Clicking a Link](https://forum.mendixcloud.com/link/questions/91821): explanations and ideas on the Mendix forum for refreshing the page when the language is changed
 * [Anonymous User Journey](https://forum.mendixcloud.com/link/questions/91676): a discussion on the Mendix forum about switching languages for anonymous end-users

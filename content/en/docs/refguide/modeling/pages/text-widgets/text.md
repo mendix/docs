@@ -10,7 +10,7 @@ tags: ["studio pro", "text", "text widget", "common widget"]
 
 The text widget displays a text which can optionally contain parameters. A parameter can be an attribute of a context object or an [expression](/refguide/expressions/) which also has access to the surrounding context objects and their attributes. When used with parameters, every parameter placeholder in the text (which may appear as {0}, {1}, or {2} for example) is replaced with the value of its corresponding attribute or expression. 
 
-For example, if you want to build a page that shows some detailed information about books, you can configure a [data grid](/refguide/data-grid/) to retrieve the whole list of **Book** objects from the database. Then, you can place a text widget inside a [data view](/refguide/data-view/) that is configured to listen to this data grid (for more information, see [Listen to Widget Source](/refguide/listen-to-grid-source/). Finally, you can add parameters for your text widget to display information about the selected book from the data grid.
+For example, if you want to build a page that shows some detailed information about books, you can configure a [data grid](/refguide/data-grid/) to retrieve the whole list of **Book** objects from the database. Then, you can place a text widget inside a [data view](/refguide/data-view/) that is configured to listen to this data grid (for more information, see [Listen to Widget Source](/refguide/listen-to-grid-source/)). Finally, you can add parameters for your text widget to display information about the selected book from the data grid.
 
 {{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/text.png" alt="Text Widget"  >}}
 
@@ -18,36 +18,32 @@ For example, if you want to build a page that shows some detailed information ab
 If you start typing in any empty container, Studio Pro will automatically generate a text widget to display your text.
 {{% /alert %}}
 
-## 2 Properties
+## 2 Properties Pane
 
-An example of text properties is represented in the image below:
+The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Text properties consist of the following sections:
 
-{{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/text-properties.png" alt="Text Properties" width="200" >}}
+Properties:
 
-Text properties consist of the following sections:
-
-* [Common](#common)
-* [Design Properties](#design-properties)
 * [General](#general)
 * [Visibility](#visibility)
+* [Common](#common)
 
-### 2.1 Common Section {#common}
+Styling:
 
-{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+* [Design Properties](#design-properties)
+* [Common](#common-styling)
 
-### 2.2 Design Properties Section {#design-properties}
+## 3 Properties
 
-{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
+### 3.1 General Section {#general}
 
-### 2.3 General Section {#general}
-
-#### 2.3.1 Caption {#caption}
+#### 3.1.1 Caption {#caption}
 
 **Caption** defines a text that will be shown. The caption can contain parameters that are written between braces, for example, {1}.  
 
 For more information on using parameters, see the [Parameters](#parameters) section below. 
 
-#### 2.3.2 Parameters {#parameters}
+#### 3.1.2 Parameters {#parameters}
 
 Parameters are attributes or expressions whose values will be displayed as part of the text defined in the **Caption** setting. To view **Parameters**, do one of the following:
 
@@ -68,11 +64,11 @@ Parameters have the following settings:
 You can use the formatter functions in the expression editor when using expressions. For more information, see [this list](/refguide/expressions/#expressions-formatter-functions).
 {{% /alert %}}
 
-##### 2.3.2.1 Adding New Parameters
+##### 3.1.1.1 Adding New Parameters
 
 To use parameters, do the following:
 
-1. Place the **Text** widget in a context of an entity, as in, inside a [data widget](/refguide/data-widgets/).
+1. Place the **Text** widget in a context of an entity, as in, inside a [data container](/refguide/data-widgets/).
 2. Double-click the **Caption** setting in the text widget properties.
 3. In the **Edit Caption** dialog box > **Parameters** section click **New**:
 
@@ -87,7 +83,7 @@ To use parameters, do the following:
 
     {{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/fallback-text-example.png" alt="Fallback Text Example"   width="450" >}}
 
-##### 2.3.2.2 Performing Other Actions on Parameters
+##### 3.1.1.2 Performing Other Actions on Parameters
 
 In addition to adding new parameters, you can perform the following actions on parameters:
 
@@ -98,7 +94,7 @@ In addition to adding new parameters, you can perform the following actions on p
 
     {{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/parameter-actions.png" alt="Parameter Actions"   width="450" >}}
 
-#### 2.3.3 Render Mode
+#### 3.1.3 Render Mode
 
 The render mode determines how the text will be displayed. 
 
@@ -108,11 +104,25 @@ The render mode determines how the text will be displayed.
 | Paragraph | The text will be rendered as a separate paragraph (`<p>` tag in HTML).  |
 | Heading 1 - Heading 6 | The text will be rendered as a selected heading (for example, `<h1>` tag in HTML). **Heading 1** is the largest type of heading, **Heading 6** is the smallest one. |
 
-### 2.4 Visibility Section {#visibility}
+### 3.2 Visibility Section {#visibility}
 
 {{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
 
-## 3 Read More
+### 3.3 Common Section {#common}
+
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+
+## 4 Styling
+
+### 4.2 Design Properties Section {#design-properties}
+
+{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
+
+### 4.3 Common Section {#common-styling}
+
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+
+## 5 Read More
 
 * [Page](/refguide/page/)
 * [Text Widgets](/refguide/text-widgets/)

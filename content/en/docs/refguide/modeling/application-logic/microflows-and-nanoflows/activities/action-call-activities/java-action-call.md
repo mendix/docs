@@ -6,23 +6,19 @@ tags: ["studio pro", "Java", "java action call", "action call"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="warning" %}}
-This activity can only be used in **Microflows**.
+{{% alert color="info" %}}
+This activity can only be used in microflows.
 {{% /alert %}}
 
 ## 1 Introduction
 
-The **Java action call** activity can be used to call a [Java action](/refguide/java-actions/). 
-
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/java-action-call/java-action-call.png" alt="Java Action"   width="200"  >}}
-
-Arguments can be passed to the action and the result can be stored.
+The **Java action call** activity can be used to call a [Java action](/refguide/java-actions/). Arguments can be passed to the action and the result can be stored.
 
 ## 2 Properties
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/java-action-call/java-action-call-properties.png" alt="Java Action Call Properties" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/java-action-call/java-action-call-properties.png" alt="Java Action Call Properties" max-width=80% >}}
 
 The **Java action call** properties pane consists of the following sections:
 
@@ -35,7 +31,7 @@ The **Action** section of the properties pane shows the action associated with t
 
 You can open a dialog box to configure this action by clicking the ellipsis (**…**) next to the action.
 
-You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
+You can also open the dialog box by double-clicking the activity, or right-clicking the activity and selecting **Properties**.
 
 ### 3.1 Java Action
 
@@ -73,7 +69,7 @@ If you want a microflow to call a Java action to run in the background using a t
 
 1. Check **Execute this Java action in a Task Queue**.
 2. Identify which task queue it should run in in **Select Task Queue**.
-3. (optionally – in Mendix version 9.10.0 and above) Select an automatic retry strategy.
+3. (optionally) Select an automatic retry strategy.
 
 For more information about task queues, see [Task Queue](/refguide/task-queue/).
 

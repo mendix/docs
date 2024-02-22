@@ -20,13 +20,13 @@ The Mendix domain model is based on the [class diagram](http://en.wikipedia.org/
 
 {{< figure src="/attachments/refguide/modeling/domain-model/generalization-and-association/generalization-indication.png" alt="example of generalization notation" >}}
 
-UML also allows us to specify the types of associations, such as an [Aggregation](http://en.wikipedia.org/wiki/Aggregation_(object-oriented_programming)) or [Composition](http://en.wikipedia.org/wiki/Object_composition). The definition of these associations specify whether or not the objects can exist without each other. Unlike UML we can not specify how strong a relationship is. Any dependencies between the two objects have to be specified using [event microflows](/refguide/event-handlers/) or [delete behavior/prevention](/refguide/association-properties/#delete-behavior).
+UML also allows us to specify the types of associations, such as an [Aggregation](http://en.wikipedia.org/wiki/Aggregation_(object-oriented_programming)) or [Composition](http://en.wikipedia.org/wiki/Object_composition). The definition of these associations specify whether or not the objects can exist without each other. Unlike UML we can not specify how strong a relationship is. Any dependencies between the two objects have to be specified using [event microflows](/refguide/event-handlers/) or [on delete behavior/prevention](/refguide/association-properties/#delete-behavior).
 
 ### 2.1 Performance
 
 To understand the impact on, and behavior of, the application, you need to understand the basic concepts of [Transactions](http://en.wikipedia.org/wiki/Database_transaction) and [(Database) Isolation Levels](http://en.wikipedia.org/wiki/Isolation_(database_systems)#Read_committed).
 
-The Mendix Platform uses transactions, which means that every microflow, commit, and delete will happen in a (database) transaction.  The transaction is initialized as soon as the microflow executes its first database action, and only ends when the microflow completes. Write actions to the database take write locks on the modified objects and these are held until the end of the transaction. This is the reason we recommend that write activities for all types of entities and associations are moved as far as possible towards the end of the microflow. Locks taken for retrieve activities, on the other hand, only last until the end of the retrieve action.
+The Mendix Platform uses transactions, which means that every microflow, commit, and delete will happen in a (database) transaction.  The transaction is initialized as soon as the microflow executes its first database action, and only ends when the microflow completes. Write actions to the database take write locks on the modified objects and these are held until the end of the transaction. This is why Mendix recommends that write activities for all types of entities and associations are moved as far as possible towards the end of the microflow. Locks taken for retrieve activities, on the other hand, only last until the end of the retrieve action.
 
 The Mendix Platform uses the isolation level [Read Committed](http://en.wikipedia.org/wiki/Isolation_(database_systems)#Read_committed), which means that only committed objects can be read outside the transaction. If another microflow is trying to read an object that is in the middle of being changed, it will have to wait until the transaction has completed. The details of the way the database implements this isolation level depend on the underlying database management system (for example, PostgreSQL). This is important to know, since this has significant impact on your choice between inheritance or associated objects.
 
@@ -84,9 +84,11 @@ When loading data during an integration, inheritance can improve the development
 
 Although data retrieval for pages is optimized to only join with entities and retrieve attributes which are used in the data view, microflow retrieve activities are not. In a microflow, *all* columns are retrieved, from generalizations and specializations of the entity. In addition, all associated entities are retrieved where the selected entity is at the parent end of an association.
  
-For entities with a lot of attributes this leads to a lot of data being retrieved from the database. For entities with a lot of associations where they are the parent, this also leads to a lot of additional queries.
+For entities with a lot of attributes, this leads to a lot of data being retrieved from the database. For entities with a lot of associations where they are the parent, this also leads to a lot of additional queries.
  
-The most efficient retrieval in a microflow is of an object with associations with owner type `Default` where the object is the `child`. In other words, where you are retrieving an object which is at the `one` end of a `one-to-many` association. If you retrieve this object, no association tables will be read by default, because you are the child. Having a one-to-many association is not always handy, but making a one-to-one association, with owner type `Both` makes the association act like a parent-to-parent association so that a retrieval of the object will always retrieve the associated object.
+The most efficient retrieval in a microflow is of an object with associations with owner type `Default` where the object is the `Child`. In other words, you are retrieving an object which is at the `one` end of a `one-to-many` association. If you retrieve this object, no association tables are read by default, because the object is the child. 
+
+However, having a one-to-many association is not always handy. Having a one-to-one association with owner type `Both` makes the association act like a parent-to-parent association. So a retrieval of an object from either side of the one-to-one association involves reading the association table. 
 
 ## 5 Conclusion
 

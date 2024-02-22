@@ -34,7 +34,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 Hybrid Mendix apps can be viewed in mobile web browsers. However, some features of mobile devices cannot be accessed through HTML and JavaScript. Also, if you want to publish your app in the Apple App Store or Google Play Store, you have to wrap your app in a native shell. Mendix uses [Cordova](https://cordova.apache.org/) to do this. Cordova creates a native wrapper around a web application and provides access to native functionality through a JavaScript API. These apps are called hybrid apps, because they are a hybrid of a web and a native app. To create binaries of your app, Mendix leverages PhoneGap Build so that you do not need to install software (Android SDK, XCode) for this.
 
-### 3.2 How Authentication Against an IdP Works<a name="how"></a>
+### 3.2 How Authentication Against an IdP Works {#how}
 
 When authenticating against an identity provider (IdP), the following steps are taken:
 
@@ -49,11 +49,11 @@ When authenticating against an identity provider (IdP), the following steps are 
 
 For more information on the authentication process, see Wikipedia's [SAML 2.0 Web Browser SSO Profile](https://en.wikipedia.org/wiki/SAML_2.0#SP_POST_Request;_IdP_POST_Response).
 
-## 4 The Problems<a name="problems"></a>
+## 4 The Problems {#problems}
 
 There are two main problems when trying to implement SSO on a hybrid app.
 
-### 4.1 The First Problem<a name="firstproblem"></a>
+### 4.1 The First Problem {#firstproblem}
 
 The first problem is that the JavaScript needed to start up the app mobile functionality is stored inside the Mendix hybrid app. The application is loaded from the locally stored *index.html* file.
 
@@ -61,7 +61,7 @@ This is a problem because of all the browser redirects happening when doing the 
 
 When a Mendix hybrid app is started on the mobile device, the localhost *index.html* page is loaded in order to load all the necessary JavaScript to run the app. However, to be able to authenticate the user, the user is redirected to the IdP, and then the IdP needs to redirect the user back to the app. The problem is that there is no way for the IdP to redirect to a localhost page, so there is no way to start the app while still including the right Cordova JavaScript.
 
-### 4.2 The Second Problem<a name="secondproblem"></a>
+### 4.2 The Second Problem {#secondproblem}
 
 The second problem is that Cordova does not store cookies permanently. And since Cordova does not store (authentication) cookies, when an app is closed, the IdP cannot recognize a returning user, so it will always ask the user for authentication.
 
@@ -69,7 +69,7 @@ The second problem is that Cordova does not store cookies permanently. And since
 
 Mendix has created a standard approach to support SSO via the SAML module in a Mendix hybrid app. This approach contains reusable JavaScript code which can be added to the PhoneGap Build package that is used to build the app binaries. It also requires a simple configuration change on the SAML module. These components can be used by Mendix developers to make mobile apps compatible with SAML. However, care must always be taken to ensure the solution fits the requirements for specific apps.
 
-### 5.1 The JavaScript<a name="javascript"></a>
+### 5.1 The JavaScript {#javascript}
 
 The JavaScript code below will address the two problems described above.
 
@@ -130,7 +130,7 @@ To address the [second problem](#secondproblem), after a successful authenticati
 
 To use the hybrid app package, follow these steps:
 
-1. Open your app in the Developer Portal and under **DEPLOY** in the left sidebar menu, click **Mobile App**.
+1. Open your app in the Developer Portal. In the navigation pane, click **Mobile App**.
 2. Click **Publish for Mobile App Stores**:
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/download-hybrid-app-package-step1.png" >}}
@@ -161,7 +161,7 @@ To use the hybrid app package, follow these steps:
 ### 5.3 The SAML Module 
 
 {{% alert color="warning" %}}
-Not all versions of the SAML module will work correctly when implementing SSO for your hybrid app. Please make sure you use a version of the SAML module that is capable of creating mobile app tokens (that is, version 1.9.3 or above). We recommend updating the SAML module to the latest version available, and if needed, updating the Mendix version of your application.
+Not all versions of the SAML module will work correctly when implementing SSO for your hybrid app. Please make sure you use a version of the SAML module that is capable of creating mobile app tokens (that is, version 1.9.3 or above). Mendix recommends updating the SAML module to the latest version available, and if needed, updating the Mendix version of your application.
 
 See the [Dependencies](/appstore/modules/saml/#dependencies) section of the *SAML* documentation for more information.
 {{% /alert %}}
@@ -169,8 +169,8 @@ See the [Dependencies](/appstore/modules/saml/#dependencies) section of the *SAM
 {{% alert color="info" %}}
 The **SAML20.HybridAppLoginTimeOutInMinutes** constant is only available in the following module versions:
 
-* v3.2.2 and above for Mendix v9 (only for apps migrated from Mendix v8)
-* v2.2.2 and above for Mendix v8
+* v3.2.2 and above for Mendix 9 (only for apps migrated from Mendix 8)
+* v2.2.2 and above for Mendix 8
 {{% /alert %}}
 
 If you have the **com.mendix.webui.HybridAppLoginTimeOut** [custom runtime setting](/refguide8/custom-settings/#web-client-settings) configured to customize the expiration of mobile authentication tokens, you will have to set the value of the **SAML20.HybridAppLoginTimeOutInMinutes** constant to match the value of the custom runtime setting. When you use the SAML module for SSO in your Mendix app, the authentication token is not created by the Mendix runtime, which uses the custom runtime setting. Instead, the authentication token is created by the Java code in the SAML module. This Java code does not have access to the custom runtime setting value, and thus requires the constant value to be set. 

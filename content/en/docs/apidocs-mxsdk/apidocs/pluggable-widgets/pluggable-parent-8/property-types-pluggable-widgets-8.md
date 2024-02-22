@@ -1,7 +1,7 @@
 ---
-title: "Pluggable Widget Property Types"
+title: "Property Types – Mx8"
 url: /apidocs-mxsdk/apidocs/property-types-pluggable-widgets-8/
-weight: 20
+weight: 10
 description: A guide for understanding pluggable widgets' property types.
 tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React"]
 ---
@@ -50,13 +50,13 @@ This defines a property's type. A `type` must be one of the following:
 
 ### 1.2 XML Elements
 
-`<caption>` (required) — This defines the property name visible for the user (not the end-user) while configuring the widget in Studio and Studio Pro.
+`<caption>` (required) — This defines the property name visible for the user (not the end-user) while configuring the widget in Studio Pro.
 
 `<description>` (required) — This is a description which explains a property's purpose.
 
 ## 2 Static Types
 
-Static types are made to pass values configured in Studio or Studio Pro to the widget. They do not depend on any dynamic data. Static properties are passed to the widget client component as simple primitive values.
+Static types are made to pass values configured in Studio Pro to the widget. They do not depend on any dynamic data. Static properties are passed to the widget client component as simple primitive values.
 
 ### 2.1 String{#string}
 
@@ -69,7 +69,7 @@ The string property type is represented as a simple text input in Studio Pro. It
 | `type`         | Yes      | String         | Must be `string`                                             |
 | `key`          | Yes      | String         | See [key](#key) |
 | `defaultValue` | No       | String         | Default value for the property                              |
-| `multiline`    | No       | Boolean        | `true` to enable multiline input in Studio, `false` otherwise |
+| `multiline`    | No       | Boolean        | `true` to enable multiline input, `false` otherwise |
 | `required`     | No       | Boolean        | Whether the property must be specified by the user, `true` by default |
 
 #### 2.1.2 Studio Pro UI
@@ -308,7 +308,7 @@ Support for the `dataSource` attribute was introduced in Mendix 8.7.
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-Some widgets are not yet supported inside pluggable widgets. Placing unsupported widgets inside a pluggable widget results in a consistency error in Studio and Studio Pro.
+Some widgets are not yet supported inside pluggable widgets. Placing unsupported widgets inside a pluggable widget results in a consistency error in Studio Pro.
 {{% /alert %}}
 
 #### 3.3.1 XML Attributes
@@ -420,7 +420,7 @@ Support for the `dataSource` attribute was introduced in Mendix 8.14.
 | ------------ | -------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type`       | Yes      | String         | Must be `textTemplate`                                                                                                                                               |
 | `key`        | Yes      | String         | See [key](#key) |
-| `multiline`  | No       | Boolean        | `true` to enable multiline input in Studio, `false` otherwise                                                                                                   |
+| `multiline`  | No       | Boolean        | `true` to enable multiline input, `false` otherwise                                                                                                   |
 | `required`   | No       | Boolean        | Whether the property must be specified by the user, `true` by default                                                                                                |
 | `dataSource` | No       | Property Path  | Specifies the path to a [`datasource`](#datasource) property linked to this text template property |
 
@@ -501,13 +501,13 @@ Support for the `dataSource` attribute was introduced in Mendix 8.12.
 | ------------ | -------- | -------------- | ------------------------------------------------------------ |
 | `type`       | Yes      | String         | Must be `attribute`                                          |
 | `key`        | Yes      | String         | See [key](#key) |
-| `onChange`   | No       | Property Path  | The path to an Action property that will be executed by the Mendix Platform when the value is changed by the widget |
+| `onChange`   | No       | Property Path  | The path to an Action property that will be run by the Mendix Platform when the value is changed by the widget |
 | `required`   | No       | Boolean        | Decides if the property must be specified by the user, `true` by default |
 | `dataSource` | No       | Property Path  | Specifies the path to a [`datasource`](#datasource) property linked to this attribute property |
 
 #### 4.4.2 XML Elements
 
-`<attributeTypes>` (required) — This element encapsulates `<attributeType>` elements which declare supported attribute types available while configuring the attribute property in the Studios.
+`<attributeTypes>` (required) — This element encapsulates `<attributeType>` elements which declare supported attribute types available while configuring the attribute property in Studio Pro.
 
 `<attributeType>` (required one or more) — this element defines the allowed attribute type in the `name` attribute.
 

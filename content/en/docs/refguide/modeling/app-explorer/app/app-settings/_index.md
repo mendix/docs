@@ -13,7 +13,7 @@ aliases:
 
 In the **App Settings** dialog box, you can alter the settings that are applicable to the whole app:
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/app/app-settings/app-settings-configuration.png" >}}
+{{< figure src="/attachments/refguide/modeling/app-explorer/app/app-settings/app-settings-configuration.png" width="300px" >}}
 
 The categories described below are available.
 
@@ -27,19 +27,47 @@ For more information on settings in a configuration, see [Configuration](/refgui
 
 These settings influence the behavior of the Runtime when running your application.
 
-### 3.1 Static Resources from Disk
+### 3.1 Use React Client (Beta) {#react-client}
+
+This setting enables the new React client. This client was released into beta in [Mendix 10.7](/releasenotes/studio-pro/10.7/#react-client). There are three options:
+
+* **No**: Do not use the React client (default).
+* **Yes**: Use the React client. In this mode, you will get consistency errors for incompatible widgets.
+* **Migration mode**: Use the React client and ignore incompatible widgets. Placeholders are displayed in the case of incompatible widgets. Recommended when trying out the new client.
+
+### 3.2 Static Resources from Disk
 
 If this option is enabled, the static resources for your mobile application are downloaded as soon as you open your application rather than bit by bit as you navigate through the app. This can drastically cut down the number of network requests, as the files can be retrieved from the disk rather than from the server.
 
 The resources are downloaded to the device once for each deployment and are reused for subsequent runs of your app. This affects a number of files, including your theme, the JavaScript client, CSS files, and pages.
 
-### 3.2 Optimize Network Calls {#optimize-network-calls}
+### 3.3 Optimize Network Calls {#optimize-network-calls}
 
 If this option is enabled (**true** by default), Mendix analyzes every microflow that can be triggered from the client to minimize the number of objects required to be sent. This speeds up your app significantly.
 
 If you experience an issue while running your app in which objects seem to be lost, this option can be disabled to resolve that issue. If this does resolve the issue, please file a bug report so that we can fix the issue in the platform.
 
-### 3.3 After Startup{#after-startup}
+### 3.4 URL Prefix{#url-prefix}
+
+Here you have the option to change the default URL prefix for all pages and microflows in your application. The default prefix value is `/p/`.
+
+{{< figure src="/attachments/refguide/modeling/app-explorer/app/app-settings/url-prefix.png" width="300px" >}}
+
+The URL prefix must be alphanumeric. It cannot be empty, contain whitespace, or contain any of the following values: 
+
+* "api-doc"
+* "odata"
+* "odata-doc"
+* "pages"
+* "reload"
+* "rest-doc"
+* "ws"
+* "ws-doc"
+* "xas"
+
+If the URL prefix breaks any of the rules mentioned above, then you will get a consistency error.
+
+### 3.5 After Startup{#after-startup}
 
 Here you can select a microflow that is automatically executed immediately after the application has been started up.
 
@@ -49,11 +77,11 @@ There is a timeout of *11 minutes* on the after startup microflow. If your after
 **After startup** is designed to initialize the app and therefore runs *before* the app is able to respond to incoming service requests (for example, published REST services).
 {{% /alert %}}
 
-### 3.4 Before Shutdown
+### 3.6 Before Shutdown
 
 Here you can select a microflow that is automatically executed when a shutdown command has been given, just before the application shuts down.
 
-### 3.5 Health Check
+### 3.7 Health Check
 
 Here you can select a microflow which performs the checks on a running app that you think are required to assess the app's health.
 
@@ -67,7 +95,7 @@ The health check microflow is specific to the [Mendix Cloud](/developerportal/de
 
 {{% /alert %}}
 
-### 3.6 First Day of the Week {#first-day-of-the-week}
+### 3.8 First Day of the Week {#first-day-of-the-week}
 
 The **First day of the week** setting determines the first day of the week in the date picker widget.
 
@@ -82,19 +110,19 @@ The **First day of the week** setting determines the first day of the week in th
 | **Friday** | Use Friday as first day of the week in date picker widgets. |
 | **Saturday** | Use Saturday as first day of the week in date picker widgets. |
 
-### 3.7 Default Time Zone
+### 3.9 Default Time Zone
 
 The **Default time zone** determines the time zone for newly created users. If your application is only used in one time zone, setting this default will make sure that users of your application never have to worry about setting their time zone.
 
-### 3.8 Scheduled Event Time Zone {#scheduled}
+### 3.10 Scheduled Event Time Zone {#scheduled}
 
-The **Scheduled event time zone** defines under which timezone scheduled events run. The default is UTC. If you would like to run scheduled events under another time zone (such as the time zone of the company office or the app default timezone), you can select it here.
+The **Scheduled event time zone** defines under which time zone scheduled events run. The default is UTC. If you would like to run scheduled events under another time zone (such as the time zone of the company office or the app default time zone), you can select it here.
 
 This affects time zone-related operations, such as parsing and formatting dates from/to strings and obtaining the beginning of the current day.
 
 If you run on-premises, then you can select the time zone to which the server is set. However, please note that no guarantees are given for the whereabouts of application servers in the cloud.
 
-### 3.9 Hash Algorithm{#hash-algorithm}
+### 3.11 Hash Algorithm{#hash-algorithm}
 
 The **Hash algorithm** is used to generate hash values for attributes of the hashed string type, such as the password of a user. Mendix offers two recommended hashing algorithms:
 
@@ -105,19 +133,19 @@ The **Hash algorithm** is used to generate hash values for attributes of the has
 
 Mendix believes both algorithms are secure enough to store passwords within Mendix. The main difference between **BCrypt** and **SSHA256** is that the BCrypt algorithm has been configured so that it is relatively slow on purpose, since it was designed specifically to stop brute force attacks. That's why this results in a slight performance difference with the SSHA256 algorithm.
 
-#### 3.9.1 BCrypt Cost {#bcrypt-cost}
+#### 3.11.1 BCrypt Cost {#bcrypt-cost}
 
-**BCrypt cost** is used to specify the cost of the BCrypt algorithm. The default value is 10, and can go up to 30. The higher the value is, the slower the process of hashing values. For more information, see the subsections below.
+**BCrypt cost** is used to specify the cost of the BCrypt algorithm. The default value is 12, and can go up to 30. The higher the value is, the slower the process of hashing values. For more information, see the subsections below.
 
-#### 3.9.2 Performance
+#### 3.11.2 Performance
 
 If the BCrypt cost is low, the performance difference is hardly noticeable to a single user when signing in (meaning, the password you enter when signing in is hashed using the selected algorithm). This means performance alone is not a reason to choose **SSHA256** over **BCrypt**. The situation can change when dealing with high concurrency of hashing operations, for example, published web services exposing operations that compute quickly, like short-running microflows.
 
-#### 3.9.3 Performance Tests
+#### 3.11.3 Performance Tests
 
 A (web service) user will sign in to execute a web service operation, wait for the operation to finish, and finally get the result back (if any).
 
-Imagine an empty microflow that returns nothing at all exposed as a published web service. We ask one user to execute this operation as many times as he can in one minute (simulated with SoapUI). First we set the hashing algorithm to **BCrypt** (with cost value 10), then we set it to **SSHA256**. Any extra overhead here (on top of establishing the connection, building the XML message and so forth) is basically the hashing algorithm, as the operation should take near zero milliseconds and there is no result. So that leaves only the login, or, more precisely, the hashing of the password.
+Imagine an empty microflow that returns nothing at all exposed as a published web service. We ask one user to execute this operation as many times as they can in one minute (simulated with SoapUI). First we set the hashing algorithm to **BCrypt** (with cost value 10), then we set it to **SSHA256**. Any extra overhead here (on top of establishing the connection, building the XML message and so forth) is basically the hashing algorithm, as the operation should take near zero milliseconds and there is no result. So that leaves only the login, or, more precisely, the hashing of the password.
 
 | Hashing Algorithm | Total Operations Executed | Operation per Second | Overhead in Milliseconds |
 | --- | --- | --- | --- |
@@ -140,7 +168,7 @@ The difference is noticeable when the operation takes less time. So if you expec
 It is important to remember when changing hashing algorithms that any hashed attribute (like the `System$User` password attribute) has its algorithm set on hashing. In other words, for the hashing type to take effect, any existing hashed attribute will have to be reset using the new hashing type.
 {{% /alert %}}
 
-### 3.10 Rounding Numbers{#rounding}
+### 3.12 Rounding Numbers{#rounding}
 
 The **Round Numbers** setting is used to select how to round numbers when performing calculations.
 
@@ -161,7 +189,7 @@ This table presents the results of rounding the input to one digit with the give
 | -2.5 | -3 | -2 |
 | -5.5 | -6 | -6 |
 
-### 3.11 Multiple Sessions per User {#multiple-sessions}
+### 3.13 Multiple Sessions per User {#multiple-sessions}
 
 If this option is enabled, users can sign in multiple times through different clients (for example, desktop browser and tablet). Otherwise, an existing session for a user is signed out when the user signs in somewhere else.
 
@@ -239,15 +267,17 @@ For background information, see [Transport Layer Security (TLS) Renegotiation Is
 
 The look and feel of a Mendix application is governed by the [UI resources package](/refguide/ui-resources-package/). This package supplies the app with all the required theme information accompanied by matching page templates and building blocks. The module which is designated as the UI resources package is governed by the **UI resources package** setting. Generally, this is automatically updated when a new UI resources package is imported. However, with this setting, the desired module can also be set manually.
 
-### 6.2 Theme ZIP File
+### 6.2 ⚠ Theme ZIP File
 
 {{% alert color="warning" %}}
-
-[Deprecated] The use of a ZIP file to configure an app's theme is deprecated. A [UI resources package](/refguide/ui-resources-package/) is the preferred method of sharing themes.
-
+The use of a ZIP file to configure an app's theme is deprecated. A [UI resources package](/refguide/ui-resources-package/) is the preferred method of sharing themes.
 {{% /alert %}}
 
-Older apps may still use a theme ZIP file as the basis for their theme. In this situation, the **Theme ZIP file** setting can be used to switch between any ZIP files found in the **theme** folder. Note that this practice is deprecated and will be removed in a future version.
+Older apps may still use a theme ZIP file as the basis for their theme. In this situation, the **Theme ZIP file** setting can be used to switch between any ZIP files found in the **theme** folder. 
+
+{{% alert color="warning" %}}
+This practice is deprecated and will be removed in a future version.
+{{% /alert %}}
 
 Switching from a ZIP file to a UI resources package is straightforward:
 
@@ -275,11 +305,11 @@ You can set an explicit order in the theme settings (**App Settings** > **Theme*
 
 ### 7.1 User Entity
 
-**User entity** defines the entity which is used in [assigning a user task](/refguide/user-task/#user-assignment). If you assign a user task using an XPath, you can use attributes of this entity. If you are using a microflow, the entity defines the return type the microflows expects. For more information, see the [User Task Assignment](/refguide/user-task/#user-assignment) section in *User Task*.
+**User entity** defines the entity which is used in [target-users-using](/refguide/user-task/#target-users). If you assign a user task using an XPath, you can use attributes of this entity. If you are using a microflow, the entity defines the return type the microflows expects. For more information, see the [Targeted Users Section](/refguide/user-task/#users) section in *User Task*.
 
 ### 7.2 Optimization
 
-Allows you to configure the maximum number of workflow and microflow threads that can be executed simultaneously by the Runtime. This is an advanced setting that gives developers control over app performance. Change these settings when you face performance issues on executing workflow instances or workflow-initiated microflows. The two values indicate the amount of threads that process the queues containing workflow instances or workflow-initiated microflows, for more information see [Workflow Imstance Threads](#workflow-instance-threads) and [Microflow Threads](#microflow-threads) sections below. 
+Allows you to configure the maximum number of workflow and microflow threads that can be executed simultaneously by the Runtime. This is an advanced setting that gives developers control over app performance. Change these settings when you face performance issues on executing workflow instances or workflow-initiated microflows. The two values indicate the amount of threads that process the queues containing workflow instances or workflow-initiated microflows, for more information see [Workflow Instance Threads](#workflow-instance-threads) and [Microflow Threads](#microflow-threads) sections below. 
 App performance can be tracked (from Mendix 9.19 and above) using the following Task Queue metrics:
 
 * `mx.runtime.stats.taskqueue.queue-wait-time` – the amount of time a task has to wait for execution
@@ -301,38 +331,77 @@ Defines the maximum number of threads that can process active workflow instances
 
 Defines the maximum number of workflow-initiated microflows that the Runtime executes simultaneously. Workflow-initiated microflows are microflows defined as event handlers or microflow call activities defined in workflows. This setting has no influence on microflows executed by pages or other parts of the system.
 
-### 7.3 Events {#events}
+### 7.3 Event Handlers {#event-handlers}
+
+An event handler allows you to specify a microflow which is triggered when the subscribed event (or events) occur. Each event handler can subscribe to multiple events and there can be multiple event handlers. An event is triggered when the workflow or its activity goes through transitions which warrant the event. This setting is app-wide; you can override it by setting workflow-specific event handlers in [workflow properties](/refguide/workflow-properties/#event-handlers).
+
+An event handler has the following configuration:
+
+* **Name** – describes the event handler
+* **Documentation** – provides more information regarding the usage of the event handler
+* **When** – allows you to select the [workflow event types](/refguide/workflow-events/#workflow-event-types), for which the handler should be triggered
+* **Microflow** – allows you to select a microflow that should be triggered for each of the above selected workflow event types
+
+You can use the data from the event handler microflow to build audit trails or for logging purposes. For example, you can define an event handler that only collects data from user task events.
+
+For more information on workflow events, see [Workflow Events](/refguide/workflow-events/).
+
+### 7.4 ⚠ Events (Deprecated) {#events} 
+
+{{% alert color="warning" %}}
+State-change events are deprecated and replaced with the new [event handlers](#event-handlers) above that also contain events for state changes. It is suggested to migrate the microflows to the new event handlers.
+{{% /alert %}}
 
 Events allow you to set a microflow for workflow and user task state changes in your app. 
 
 Security settings of workflows and user tasks allow you to access workflow or user task data only if you have Admin rights or if the workflow/user task is targeted to you. Data from events allows you to build a dashboard or audit trails. For example, it can be useful for a manager to see progress of an employee onboarding process. 
 
-#### 7.3.1 Workflow State Change {#workflow-state-change}
+#### 7.4.1 Workflow State Change {#workflow-state-change}
 
-A microflow selected for this setting will start every time a workflow changes its state, for example, when the workflow is completed or has failed. This setting is app-wide, you can override it by setting a workflow-specific microflow in the [workflow properties](/refguide/workflow-properties/#events).
+A microflow selected for this setting will start every time a workflow changes its state, for example, when the workflow is completed or has failed. This setting is app-wide; you can override it by setting a workflow-specific microflow in [workflow properties](/refguide/workflow-properties/#events).
 
-#### 7.3.2 User Task State Change {#user-task-state-change}
+#### 7.4.2 User Task State Change {#user-task-state-change}
 
-A microflow selected for this setting will start every time a user task changes its state, for example, when a user task is completed or paused. This setting is app-wide, you can override it by setting a workflow-specific microflow in the [workflow properties](/refguide/workflow-properties/#events).
+A microflow selected for this setting will start every time a user task changes its state, for example, when a user task is completed or paused. This setting is app-wide; you can override it by setting a workflow-specific microflow in [workflow properties](/refguide/workflow-properties/#events).
 
 ## 8 Deployment Tab {#deployment}
 
 This tab allows you to exclude libraries from deployment. For example, you can exclude libraries when you consume a different version of an existing add-on module.
 
-## 9 Miscellaneous Tab {#miscellaneous}
+## 9 Solution Tab {#solution}
+
+Settings on the **Solution** tab allow you to configure application distribution as an [adaptable solution](/appstore/creating-content/sol-solutions-guide/). 
+
+If you want to distribute your app as an adaptable solution package and allow upgrading it from the [implementer's side](/appstore/creating-content/sol-solutions-impl/), you need to **Enable solution adaptation** on this tab. The title of your app in the App Explorer will change to *Solution* and the solution version will be displayed after the app name.
+
+A distributable app must have a **Solution version** that you can set on this tab.
+
+If you are implementing a solution, **Based on** setting shows the version of the solution package your app is currently based on.
+
+## 10 Miscellaneous Tab {#miscellaneous}
 
 These settings determine the behavior of Studio Pro for this app. The settings apply to everyone that is working on this app.
 
-### 9.1 Bundle Widgets When Running Locally
+### 10.1 Bundle Widgets When Running Locally
 
 When deploying to the cloud, custom widgets are bundled to optimize client-server communication. When deploying locally, this step is skipped to accelerate startup duration. In some cases, this may obfuscate errors triggered by faulty custom widgets.
 
 If this option is set, custom widgets will also be bundled locally. This mimics the production deployment, eliminating risk at the cost of start-up time.
 
-### 9.2 Suggest Lower-Case Variable Names in Microflows
+### 10.2 Suggest Lower-Case Variable Names in Microflows
 
 When enabled, the names that Studio Pro suggests in microflows will start with a lower-case letter instead of an upper-case letter.
 
-### 9.3 Activity Default Colors
+### 10.3 Activity Default Colors
 
 This table allows you to select a default color for each microflow activity type that is available in your app. The selected color will be used as the background color for all microflow activities of that type in your app. It is possible to override this default value for individual activities in the microflow editor. If you change the default color for an activity type, and there are activities of that type present in the app that have an individual background color specified, a dialog will be shown that allows you to apply the new default color to these activities as well.
+
+### 10.4 Use Data Grid 2, Combo Box, and Image Widgets for Content Generation{#use-dg-cb-i}
+
+If this setting is enabled, modern widgets like [Data Grid 2](/appstore/modules/data-grid-2/), [Combo Box](/appstore/widgets/combobox/), and [Image](/appstore/widgets/image/) will be used when generating overview pages or the content of data views. Existing generated content remains as is. 
+
+See the list below for detailed information on which widgets are generated in various circumstances:
+
+* A Data Grid 2 module is generated instead of a Data Grid 1 module
+* A combo box is generated instead of a combination of dropdown, reference selector, and input reference set selector widgets
+* An image widget is generated instead of a static image widget and a dynamic image widget

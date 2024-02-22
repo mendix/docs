@@ -6,8 +6,8 @@ tags: ["studio pro", "synchronize", "offline", "client activity"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="warning" %}}
-This activity can only be used in **Nanoflows** that run in an offline-first app (a native or offline PWA app).
+{{% alert color="info" %}}
+This activity can only be used in nanoflows that run in an offline-first app (a native or offline PWA app).
 {{% /alert %}}
 
 ## 1 Introduction
@@ -18,7 +18,7 @@ The **Synchronize** activity can be used to synchronize your data between your d
 
 All three modes perform synchronization in two phases: upload and download. For more information, see the [Synchronization Behavior](#synchronization-behavior) section below and the [Synchronization types](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/synchronization/) section of *Offline Synchronization*.
 
-### 2.1 All Objects
+### 2.1 All Objects {#all-objects}
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/synchronize/synchronize.png" alt="Synchronize"   width="200"  >}}
 

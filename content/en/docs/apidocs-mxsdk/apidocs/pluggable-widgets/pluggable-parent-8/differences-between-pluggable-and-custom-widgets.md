@@ -1,5 +1,5 @@
 ---
-title: "Differences Between Pluggable and Custom Widgets"
+title: "Compare Pluggable and Custom Widgets – Mx8"
 linktitle: "Compare Pluggable and Custom Widgets"
 url: /apidocs-mxsdk/apidocs/differences-between-pluggable-and-custom-widgets/
 description: This document explains the differences between pluggable and custom widgets.
@@ -8,7 +8,7 @@ tags: ["Widget", "Pluggable",  "JavaScript"]
 
 ## 1 Introduction
 
-Pluggable widgets are the successor to [Custom widgets](/howto8/extensibility/widget-development/). Pluggable widgets are based on a modern React framework, have access to better APIs in the client, and can use more advanced properties in Studio and Studio Pro. Therefore, pluggable widgets allow you to more easily implement existing front-end libraries, tools, and your own expertise. Pluggable widgets should be used instead of custom widgets whenever possible.
+Pluggable widgets are the successor to [Custom widgets](/howto8/extensibility/widget-development/). Pluggable widgets are based on a modern React framework, have access to better APIs in the client, and can use more advanced properties in Studio Pro. Therefore, pluggable widgets allow you to more easily implement existing front-end libraries, tools, and your own expertise. Pluggable widgets should be used instead of custom widgets whenever possible.
 
 ## 2 Differences Between Pluggable and Custom Widgets
 
@@ -17,7 +17,7 @@ Pluggable widgets are the successor to [Custom widgets](/howto8/extensibility/wi
 | Framework    | [React](/apidocs-mxsdk/apidocs/pluggable-widgets/#client-component)                                                                         | [Dojo](/howto8/extensibility/widget-development/#dojo)                 |
 | Data access  | Declarative, props-based                                                                              | Imperative, callback-based                                               |
 | Data updates | [Receive updates in props](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#dynamic-value) | [Subscribe](https://apidocs.rnd.mendix.com/8/client/mx.data.html#.subscribe) |
-| API          | [Pluggable widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets/)                                     | [Mendix client API](https://apidocs.rnd.mendix.com/8/client/index.html)                |
+| API          | [Pluggable widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets/)                                     | [Mendix Client API](/apidocs-mxsdk/apidocs/client-api/)                |
 | Platform     | [Web and native](/apidocs-mxsdk/apidocs/pluggable-widgets/#widget-description)                                                            | Web                                                                      |
 
 | Feature                                                           | Pluggable widgets                                    | Custom widgets                                                        |

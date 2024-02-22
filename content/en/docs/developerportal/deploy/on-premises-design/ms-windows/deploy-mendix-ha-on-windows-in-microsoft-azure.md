@@ -14,7 +14,7 @@ It describes the installation and configuration of the Mendix software on multip
 
 * Setting up an Azure Load Balancer
 
-* Deploying a Mendix app with master and slave nodes
+* Deploying a Mendix app with leader and follower nodes
 
 * Configuring Azure Blob Storage as shared storage
 
@@ -34,7 +34,7 @@ It describes the installation and configuration of the Mendix software on multip
 
     * Storage accounts
 
-## 3 Configure cluster slave nodes
+## 3 Configure Cluster Slave Nodes
 
 In a clustered environment there are some tasks (for example, cleaning up expired user sessions from the database) that should only be handled by one of the cluster members. By default, each Mendix app server will execute these tasks, which can lead to issues. Ensure that only one server executes these tasks by adding the Custom Mendix setting *com.mendix.core.isClusterSlave* and setting it to *true* for all servers **except one**. So if you have a two server cluster, add this setting for one server and if you have five servers in your cluster, add it for four of them.
 
@@ -59,7 +59,7 @@ More information on the cluster leader and slave roles can be found in the [Clus
 The exact configuration details of the load balancer will depend on your network environment and availability demands. The Mendix Runtime does not require sticky sessions. Make sure you have configured health probes for HTTP (port 80) and HTTPS (port 443), a back-end pool containing all your Mendix application servers, and load balancing rules to forward ports 80 and 443 to the servers in the back-end pool using the corresponding health probe.
 More information regarding the configuration of Azure Load Balancers is available in [the Microsoft Azure documentation](https://docs.microsoft.com/en-us/azure/load-balancer/quickstart-load-balancer-standard-public-portal?tabs=option-1-create-load-balancer-standard).
 
-## 5 Configuring Azure Blob Storage as shared storage
+## 5 Configuring Azure Blob Storage as Shared Storage
 
 Go to the Azure Portal to retrieve the Azure Storage account name and an access key:
 

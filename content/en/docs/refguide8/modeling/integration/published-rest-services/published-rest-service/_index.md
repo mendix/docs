@@ -6,10 +6,6 @@ description: "Configuration options for a published REST service"
 tags: ["published REST", "service", "reserved URL prefixes", "swagger", "security", "CORS", "resources", "operation", "how-to", "studio pro"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/published-rest-service.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 Use a published REST service to expose your entities and microflows to other apps using the REST standard.
@@ -42,7 +38,7 @@ Example:
 http//localhost:8080/rest/my_service_name/v1
 ```
 
-You can change the the default location to almost any valid URL.
+You can change the default location to almost any valid URL.
 
 #### 2.3.1 Reserved Prefixes
 
@@ -66,7 +62,7 @@ The public documentation is used in the service's [OpenAPI 2.0 (Swagger) Documen
 
 ### 2.5 Export swagger.json {#export-swagger-json}
 
-To save a service's [OpenAPI (Swagger) documentation](/refguide8/open-api/) somewhere on your machine, simply right-click the service in the **Project Explorer** and select **Export swagger.json** (or just click the **Export swagger.json** button, depending on your Studio Pro version). This is a machine-readable file in the [OpenAPI 2.0 file format](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md). Most API tools support this format.
+To save a service's [OpenAPI (Swagger) documentation](/refguide8/open-api/) somewhere on your machine, simply right-click the service in the **Project Explorer** and select **Export swagger.json** (or just click the **Export swagger.json** button, depending on your Studio Pro version). This is a machine-readable file in the [OpenAPI 2.0 file format](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/2.0.md). Most API tools support this format.
 
 When the app is running, this file is available under */rest-doc/servicename/swagger.json*.
 

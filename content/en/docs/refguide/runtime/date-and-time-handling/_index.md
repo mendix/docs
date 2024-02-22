@@ -49,7 +49,7 @@ If you do nothing in a multiple time zone app the situation for server operation
 There are several things you can do in a multiple time zone app:
 
 * Nothing. If you do nothing server operations will use the user's current UTC offset and this is a reasonable approximation of actually setting the time zone. Only DST will not be handled properly.
-* Allow the users to set their own time zone. Add the time zone reference selector to the page with which users can manage their own account, by default MyAccount in Administration. When doing this, take note that a timezone will only effectively be updated after a user logged out and back in.
+* Allow the users to set their own time zone. Add the time zone reference selector to the page with which users can manage their own account, by default MyAccount in Administration. When doing this, take note that a time zone will only effectively be updated after a user logged out and back in.
 * The administrator sets the time zone. Add the time zone reference selector to the page with which the administrator manages accounts, by default Account_NewEdit in Administration. If the application does not have too many users this is a viable solution.
 * Automatically set the time zone by using a microflow. If your application is used in few time zones and you can automatically determine which users should which time zone you can write an after startup microflow to set the time zones. For example, if the application is used in the United States and in the Netherlands and all users in the United States have their language set to American English and all users in the Netherlands have their language set to Dutch a microflow can loop through all users and set the time zone based on the language code of the user.
 
@@ -63,9 +63,9 @@ If your application is accessible without signing in, those anonymous users will
 
 ## 6 To Localize or Not to Localize
 
-Per attribute of type **Date and time** you can specify whether you want the date and time to be localized. This is not a new feature but worth mentioning on this page. Both localized and non-localized attributes are stored in UTC but only localized attributes are converted to the time zone of the user when displaying their value. Use non-localized attributes if you are not interested in the time component (for example, birthdays) or if you want a date to look exactly the same all over the world.
+Per attribute of type **Date and time** you can specify whether you want the date and time to be localized when displaying (or picking) their value. This is not a new feature but worth mentioning on this page. Both localized and non-localized attributes are stored in UTC but only localized attributes are converted to the time zone of the user when displaying their value (for example, in the client or in generated documents). Use non-localized attributes if you are not interested in the time component of a date and you want the date to be exactly the same all over the world (for example, a birthday).
 
-See the documentation of the Localize property of [Attributes](/refguide/attributes/) for more information.
+For more information, see the [Localize](/refguide/attributes/#localize) section in *Attributes*.
 
 ## 7 Tokens
 

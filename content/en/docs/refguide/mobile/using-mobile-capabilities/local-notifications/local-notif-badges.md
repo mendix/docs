@@ -18,7 +18,7 @@ In this document you will learn to add badge functionality to your app, as well 
 
 Before starting this guide, make sure you have completed the following prerequisites:
 
-* Review the [basic differences](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/) between local notifications and push notifications
+* Review the [basic differences](https://developer.apple.com/documentation/usernotifications) between local notifications and push notifications
 * Install the [Make It Native](/refguide/getting-the-make-it-native-app/) app on your mobile device
 * Complete the preceding tutorial in this [Use Local Notifications](/refguide/mobile/using-mobile-capabilities/local-notifications/) series
 

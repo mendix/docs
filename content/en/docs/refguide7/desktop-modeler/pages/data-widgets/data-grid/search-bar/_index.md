@@ -5,7 +5,7 @@ url: /refguide7/search-bar/
 ---
 
 
-The search bar contains search fields that allow the end-user to quickly find the information he or she needs.
+The search bar contains search fields that allow the end-user to quickly find the information they need.
 
 ## Search Fields
 

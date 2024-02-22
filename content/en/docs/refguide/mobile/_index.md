@@ -19,9 +19,9 @@ With Mendix, you can create different channels (for example, responsive, native 
 
 ## 2 Getting Started with Mobile
 
-As you begin mobile development with Mendix, our [Getting Started with Mobile](/refguide/mobile/getting-started-with-mobile/) guide can help you learn the basics. This simple guide will teach you to create a native mobile Mendix app. After you create it, you will view your app on a mobile device using our [Make It Native](/releasenotes/mobile/make-it-native-parent/) testing app. Getting Started with Mobile is a lean guide designed to show the basics of mobile development.
+As you begin mobile development with Mendix, our [Getting Started with Mobile](/refguide/mobile/getting-started-with-mobile/) guide can help you learn the basics. This simple guide teaches you how to create a native mobile Mendix app. After you create it, you will view your app on a mobile device using our [Make It Native](/releasenotes/mobile/make-it-native-parent/) testing app. Getting Started with Mobile is a lean guide designed to show the basics of mobile development.
 
-For a broader introduction to Mendix development, you may also use the [Quickstart](/refguide/quickstart-guide/) guide to learn some Studio Pro fundamentals:
+For a broader introduction to Mendix development, you may also use the [Quick Starts](/quickstarts/) to learn some Studio Pro fundamentals:
 
 * Learn Mendix Studio Pro's UI 
 * Make a web app that uses the Domain Model, dynamic data, and handles logic with a microflow
@@ -49,7 +49,7 @@ After you have built your application and tested it on end-user devices, you may
 The following documents will help you understand data syncing, accelerate your app's performance, and more:
 
 * [Optimizing Native Startup](/refguide/mobile/building-efficient-mobile-apps/native-startup/) – This guide teaches you how to speed up your native app's startup time.
-* [Logging In Native Apps](/refguide/mobile/building-efficient-mobile-apps/logging/) – In Mendix Studio Pro v9.16 and above, native mobile apps are able to send logs to the [Mendix Runtime](/refguide/runtime/). Read this guide for information on native app logging configuration.
+* [Logging In Native Apps](/refguide/mobile/building-efficient-mobile-apps/logging/) – Native mobile apps are able to send logs to the [Mendix Runtime](/refguide/runtime/). Read this guide for information on native app logging configuration.
 * [Offline-First Data](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/): native and progressive web apps use an offline database and a synchronization mechanism to replicate data on the client for efficient access and offline capabilities
 
 ## 6 Using Mobile Capabilities
@@ -70,8 +70,14 @@ For more information on empowering your apps, see [Using Mobile Capabilities](/r
 
 ## 7 Building, Testing, and Distributing Apps
 
-Distributing web apps is a single step; deploying to the production environment lets your end-users access the latest version of the web app. However, native mobile apps require more steps. Part of the application model (pages, nanoflows, and JavaScript actions) are distributed as part of the native mobile app. Even if you deploy a new version of the app, your end users will be interacting with the old version. That is why a second step is needed: distribution. To distribute the latest version of a native mobile app to users, you can either build a new version using the Native Mobile Builder and then release it to online app stores, or you can use the [over-the-air](/refguide/mobile/distributing-mobile-apps/overtheair-updates/) update mechanism to update the app elements stored in the apps without releasing a new version of your native mobile app. For more information on all aspects of the app life cycle, see [Building, Testing, and Distributing Apps](/refguide/mobile/distributing-mobile-apps/).
+Distributing web apps is a single step; deploying to the production environment lets your end-users access the latest version of the web app. However, native mobile apps require more steps. Part of the application model (pages, nanoflows, and JavaScript actions) are distributed as part of the native mobile app. Even if you deploy a new version of the app, your end users will be interacting with the old version. That is why a second step is needed: distribution. To distribute the latest version of a native mobile app to users, you can either build a new version using the Native Mobile Builder and then release it to online app stores, or you can use the [over-the-air](/refguide/mobile/distributing-mobile-apps/overtheair-updates/) update mechanism to update the app elements stored in the apps without releasing a new version of your native mobile app. For more information on all aspects of the app lifecycle, see [Building, Testing, and Distributing Apps](/refguide/mobile/distributing-mobile-apps/).
 
 As your native mobile app gets more complex, monitoring your app's behavior and users' interactions becomes an essential part of your app development cycle. Therefore Mendix supports sending default and custom logs of different levels from the Mendix native app to the [Mendix Runtime](/refguide/runtime/). This allows app administrators to monitor the app, gain insight on different app states, and possess an improved overview for troubleshooting. To learn more about logging in native mobile apps, see [Logging](/refguide/mobile/building-efficient-mobile-apps/logging/).
 
 We also have the information you need to [test](/refguide/mobile/distributing-mobile-apps/testing-mobile-apps/) and [debug](/refguide/mobile/distributing-mobile-apps/native-debug/) your Mendix apps. To debug a web app's JavaScript, you simply open the developer console. But to debug a Mendix native app, you can use the Make It Native testing app's **Enable Remote JS Debugging** function to open the app up to normal debugging with Chrome.
+
+## 8 Best Practices for Mobile Apps
+
+Building mobile and offline-first apps can be challenging. To help you make the most of our mobile capabilities, we have collected several best practice patterns. These patterns describe common challenges our developers face and established approaches how to resolve them.
+
+To learn about these best practices, see [Best Practices for Mobile Apps](/refguide/mobile/best-practices/).

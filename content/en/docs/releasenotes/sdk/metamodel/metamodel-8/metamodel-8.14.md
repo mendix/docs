@@ -6,7 +6,7 @@ weight: 87
 
 ## 8.14.0
 
-**Release date: September 21st, 2020** 
+**Release date: September 21, 2020** 
  
 ### DomainModels
 

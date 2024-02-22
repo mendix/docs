@@ -9,15 +9,11 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/annotation.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 An annotation is an element that can be used to put comments to a flow.
 
-In the example below, you use a **Show message** activity to warn end-users about unpaid orders with a pop-up message in the client. Later you want to extend this warning with an e-mail message send to the user. You can use an annotation as a reminder and put it above the current activity.
+In the example below, you use a **Show message** activity to warn end-users about unpaid orders with a pop-up message in the client. Later you want to extend this warning with an email message send to the user. You can use an annotation as a reminder and put it above the current activity.
 
 {{< figure src="/attachments/refguide8/modeling/application-logic/annotation/anotation.png" >}}
 

@@ -59,7 +59,11 @@ When **Check Security** is enabled, for each user role Studio Pro checks which f
 
 ### 2.3 Strict Page URL Checking {#strict-page-url-checking}
 
-When **Strict page URL checking** is enabled, pages that are only accessible through a page URL will also produce consistency errors for security problems. By default, this is enabled in new apps. 
+When **Strict page URL checking** is disabled, a page's security is only checked when the page is accessible through navigation, pages, or microflows. The page security (such as entity access in Studio Pro) is not checked if a page is only accessible via URL.
+
+When **Strict page URL checking** is enabled, pages that are only accessible through a page URL will also produce consistency errors for security problems. By default, this is enabled in new apps. With this setting enabled, pages are checked in the same was as pages accessible via navigation. **Strict page URL checking** is enabled by default to increase  security.
+
+Enabling **Strict page URL checking** works for pages with custom URLs, but it cannot be applied to [deep links](/appstore/modules/deep-link/). Studio Pro cannot determine which types of pages are used based on their deep links, as those are configured in the Mendix Runtime.
 
 ### 2.4 App Status {#app-status}
 

@@ -9,11 +9,11 @@ tags: ["security", "secure app"]
 
 ## 1 Introduction
 
-Each application must have a proper security configuration in order to have its data secured. This how-to will teach you how to turn the security on and configure it.
+Each application must have a proper security configuration in order to have its data secured. This how-to teaches you how to turn the security on and configure it.
 
 You will start with the configuration of user and module roles for access to pages and microflows, so we’ll turn on the prototype/demo security. Next you will deal with production security.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Configure prototype/demo security
 * Configure production security
@@ -22,7 +22,7 @@ This how-to will teach you how to do the following:
 
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
-* Know how to create a domain model (for details, see [How to Create a Basic Data Layer](/howto/data-models/create-a-basic-data-layer/))
+* Know how to create a domain model (for details, see [Creating a Basic Data Layer](/refguide/configuring-a-domain-model/))
 * Know how to create overview and detail pages (for details, see [How to Create Your First Two Overview and Details Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/))
 * Know how to create menu items (for details, see [Setting Up Navigation](/refguide/setting-up-the-navigation-structure/))
 * Know how to add action buttons (for details, see [Buttons](/refguide/button-widgets/))
@@ -65,7 +65,7 @@ To see the results of this how-to, you must set up a test project with test data
 
 ## 4 Setting the Security Level to Prototype/Demo {#prototype}
 
-In this part of the how-to, you will learn how to configure the security at the prototype/demo level. Be aware that this level of security is only applicable for development/demo purposes. This level is available for the quick development of demo applications. It simulates security without the more complex configuration of data access. When deploying to the Mendix cloud, production security is mandatory.
+In this part of the how-to, you will learn how to configure the security at the prototype/demo level. Be aware that this level of security is only applicable for development/demo purposes. This level is available for the quick development of demo applications. It simulates security without the more complex configuration of data access. When deploying to Mendix Cloud, production security is mandatory.
 
 To set the security level to prototype/demo, follow these steps:
 
@@ -78,7 +78,7 @@ To set the security level to prototype/demo, follow these steps:
 
     {{< figure src="/attachments/howto/security/create-a-secure-app/18581559.png" >}}
 
-3. Go to the **Administrator** tab and set the master administrator **Password**:
+3. Go to the **Administrator** tab and set the primary administrator **Password**:
 
     {{< figure src="/attachments/howto/security/create-a-secure-app/18581565.png" >}}
 
@@ -148,7 +148,7 @@ To configure the page and microflow access of a module, follow these steps:
 
 ## 5 Setting the Security Level to Production {#production}
 
-In this section of the how-to, you will configure the security at the production level. At this level, all security settings must be configured. In addition to prototype/demo security, you have to configure the entity (data) access. Production security is mandatory when deploying to the Mendix cloud.
+In this section of the how-to, you will configure the security at the production level. At this level, all security settings must be configured. In addition to prototype/demo security, you have to configure the entity (data) access. Production security is mandatory when deploying to Mendix Cloud.
 
 To set the security level to production, follow these steps:
 
@@ -174,7 +174,7 @@ To configure the form entity access, follow these steps:
 
 ### 5.2 Creating Access Rules for the Administrator Module Role
 
-You will now create access rules for the Administrator module role. Since this role represents an administrator, let’s assume that he/she is allowed to create, delete, read, and write everything, so you can create the rules in a quick batch.
+You will now create access rules for the Administrator module role. Since this role represents an administrator, let’s assume that they are allowed to create, delete, read, and write everything, so you can create the rules in a quick batch.
 
 To create access roles for the Administrator module role, follow these steps:
 
@@ -198,7 +198,7 @@ A separate access rule will be created for all entities when the module role is 
 
 ### 5.3 Creating Access Rules for the User Module Role
 
-Next you have to create access rules for the User module role. Since this role represents a user with limited access, let’s assume he/she is only allowed to read most data and is allowed to write some of the Order data. This means you have to configure all the access rules individually.
+Next you have to create access rules for the User module role. Since this role represents a user with limited access, let’s assume they are only allowed to read most data and is allowed to write some of the Order data. This means you have to configure all the access rules individually.
 
 To create access roles for the User module role, follow these steps:
 

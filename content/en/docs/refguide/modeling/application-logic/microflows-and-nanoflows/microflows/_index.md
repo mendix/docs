@@ -17,6 +17,8 @@ This page is a summary of the elements which make up a microflow, together with 
 
 For the properties of the microflow itself, see [Microflow Properties](/refguide/microflow/). For more best practice details, see [Microflow Naming Conventions](/refguide/dev-best-practices/#microflow-naming-conventions), [Microflow General Best Practices](/refguide/dev-best-practices/#microflow-dev-best-practices), and [Microflow Best Practices from the Community](/refguide/community-best-practices-for-app-performance/#microflow-community-best-practices).
 
+For information on using microflows as data sources, see [Microflow Source](/refguide/microflow-source/).
+
 ## 2 Microflow Notation
 
 The graphical notation of microflows is based on the [Business Process Model and Notation](https://en.wikipedia.org/wiki/Business_Process_Model_and_Notation) (BPMN). BPMN is a standardized graphical notation for drawing business processes in a workflow.
@@ -66,7 +68,7 @@ Decisions deal with making choices and merging different paths again.
 
 [Activities](/refguide/activities/) are the actions that are executed in a microflow:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/activity.png" alt="Activity" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/activity.png" alt="Activity" width="150px" >}}
 
 ### 2.5 Loop {#loop}
 
@@ -92,27 +94,69 @@ An [annotation](/refguide/annotation/) is an element that can be used to put com
 
 ### 2.6 Item Usages
 
-Studio Pro visualizes which items are used by the selected element(s). It does this by showing the used items in white text on a blue background. Conversely, elements that use the item(s) returned by the selected element(s) are marked with the word 'Usage' in white text on a green background.
+Studio Pro visualizes which items are used by the selected element (or elements). It does this by showing the used items in white text on a blue background. Conversely, elements that use the item (or items) returned by the selected element (or elements) are marked with the word 'Usage' in white text on a green background.
 
 In the example below, the parameter **AccountPasswordData** is highlighted because it is used in the selected activity (**Retrieve Account**). And the activity **Save password** has a **Usage** label because it uses the object returned by **Retrieve Account**.
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/microflow-nanoflow-example.png" >}}
 
-## 3 Keyboard Support{#keyboard}
+## 3 Keyboard Support {#keyboard}
 
-The microflow editor offers keyboard support for navigating and manipulating microflows. The following table shows the keys that can be used.
+### 3.1 Studio Pro 10.6 and Above {#keyboard-improved}
+
+The tables in the following sub-sections present the shortcut keys that can be used for navigating and manipulating microflows in the microflow editor in Studio Pro 10.6 and above.
+
+#### 3.1.1 Selection
 
 | Key | Effect |
 | --- | --- |
 | Arrow Keys | Select nearby element (activity, event, loop or parameter) in the direction of the arrow. |
+| <kbd>Home</kbd> | Select the start event. |
+| <kbd>End</kbd> | Select the first end event. |
+| <kbd>Ctrl</kbd> + <kbd>a</kbd> | Select all elements. |
+| <kbd>Tab</kbd> | If a loop is selected, the first element inside the loop will be selected. |
+| <kbd>Shift</kbd> + <kbd>Tab</kbd> | If an element inside a loop is selected, the loop itself will be selected. |
+
+#### 3.1.2 Navigation
+
+| Key | Effect |
+| --- | --- |
+| mouse scroll | Scroll up/down. |
+| <kbd>Shift</kbd> + mouse scroll | Scroll left/right. |
+| <kbd>Space</kbd> + mouse button | Drag screen.  |
+| <kbd>Ctrl</kbd> + <kbd>+</kbd>/<kbd>-</kbd> | Zoom in/out.  |
+| <kbd>Ctrl</kbd> + <kbd>0</kbd> | Reset zoom level to 100%. |
+| <kbd>Ctrl</kbd> + mouse scroll | Zoom in/out. |
+
+#### 3.1.3 Element Manipulation
+
+| Key | Effect |
+| --- | --- |
+| <kbd>Enter</kbd> - on an element | If an element is selected, edit its properties. |
+| <kbd>Enter</kbd> - on a flow arrow | If a flow arrow is selected, open the Logic Bot dialog box. |
+| <kbd>Enter</kbd> - on a Logic Bot suggestion list item | The selected item is added on the flow arrow. The Logic Bot dialog box is shown again for the next action to be added. |
+| <kbd>Shift</kbd> + <kbd>Enter</kbd> (or <kbd>Shift</kbd> + mouse click) - on a Logic Bot suggestion list item| The selected item is added on the flow arrow. The element’s property dialog box is opened. |
+| <kbd>F2</kbd> | Rename the variable returned by the selected element. |
+| <kbd>Shift</kbd> + <kbd>F2</kbd> | Edit the caption of the selected element. |
+| Context-menu key | Open the context-menu for the currently selected element. |
+
+### 3.2 Studio Pro 10.5 and Below
+
+The following table shows the shortcut keys that can be used in the microflow editor in Studio Pro 10.5 and below.
+
+| Key | Effect |
+| --- | --- |
+| Arrow keys | Move the selection box to the activity or element in the direction of the arrow key. For example, if currently a show page activity is selected and you press the right arrow key, the activity to the right of it becomes selected. |
 | <kbd>Enter</kbd> | Edit the properties of the selected element. |
-| <kbd>F2</kbd> | Rename the item returned by the selected element. |
+| <kbd>F2</kbd> | Edit the name of the return value of the selected activity. This shortcut only functions on activities that return a result. |
 | <kbd>Shift</kbd> + <kbd>F2</kbd> or just start typing | Edit the caption of the selected element. |
 | <kbd>Ctrl</kbd> + arrow keys | Move the selected element in the direction of the arrow. |
 | <kbd>Tab</kbd> | If a loop is selected, the first element inside the loop will be selected. |
 | <kbd>Shift</kbd> + <kbd>Tab</kbd> | If an element inside a loop is selected, the loop itself will be selected. |
 | <kbd>Home</kbd> | Select the start event. |
 | <kbd>End</kbd> | Cycle through the end events. |
+| <kbd>Shift</kbd>  | By holding <kbd>Shift</kbd> when resizing an activity, it will stay centered at its current position and expand equally in all directions. |
+| <kbd>Ctrl</kbd>  | When pressing the <kbd>Ctrl</kbd>, you can select additional activities. Clicking a selected component while holding <kbd>Ctrl</kbd> will deselect it. |
 | Context-menu key or <kbd>Shift</kbd> + <kbd>F10</kbd> | Open the context-menu for the currently selected element. |
 
 ## 4 Microflow Debugging
@@ -121,3 +165,15 @@ If you want to see what happens while a microflow is executing, you can use the 
 
 * [Debugging Microflows and Nanoflows](/refguide/debug-microflows-and-nanoflows/)
 * [Debugging Microflows Remotely](/refguide/debug-microflows-remotely/)
+
+## 5 Converting a Microflow to a Nanoflow {#convert-to-nanoflow}
+
+To convert a microflow to a nanoflow, you have two options. The first option is to right-click anywhere in the microflow editor and select **Convert to nanoflow**. Alternatively, in the **App Explorer**, right-click on the name of the microflow you want to convert, and select **Convert to nanoflow**.
+
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/convert-to-nanoflow.PNG" alt="Convert to nanoflow" width="550px" >}}
+
+A new nanoflow is created and added to the same directory, and you can get consistency errors if there are actions that are not supported by nanoflows.
+
+## 6 Canvas Interaction {#canvas-interaction}
+
+In the microflow editor from Studio Pro 10.6, you can use common patterns like unlimited canvas, enhanced zoom and scroll, and a snap-to-flow to make new activities from the toolbox and toolbar always well aligned in your flow. 

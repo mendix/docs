@@ -2,7 +2,7 @@
 title: "Best Practices for Building Connectors"
 url: /appstore/creating-content/connector-guide-best-practices/
 weight: 7
-tags: ["connectors", "data hub", "studio pro", "build", "connector guide", "best practices"]
+tags: ["data hub", "connectors", "studio pro", "build", "connector guide", "best practices"]
 ---
 
 ## 1 Introduction
@@ -29,7 +29,7 @@ Create a Mendix app in Studio Pro with the main connector module and a testing m
 
 #### 2.2.1 Main Connector Module Setup {#main-setup}
 
-We recommend that the *main module* for your connector include the following:
+Mendix recommends the *main module* for your connector include the following:
 
 * **_Docs** (folder) – contains documentation or a reference to documentation and a version indicator
     * **ReadMe** (snippet) – used to give a reference to documentation and/or some direct documentation on how to use the module
@@ -48,7 +48,7 @@ This app folder structure example is based on the **Blank Web App** starter app 
 
 #### 2.2.2 App Root Setup {#root-setup}
 
-We recommend that you add additional folders to the root of your app (on disk). These include the following:
+Mendix recommends adding add additional folders to the root of your app (on disk). These include the following:
 
 * **DIST** – contains the releases of your module kept for reference
 * **MarketplaceResources** – contains all the assets used in the Mendix Marketplace (except for the release packages), including screenshots, videos, and reference documents
@@ -65,7 +65,7 @@ Use as few dependency modules as possible. When you must use one, make sure they
 
 Add the app to [Team Server](/refguide/version-control/#team-server) (or GitHub) version control, if you have not already done so when creating the app. 
 
-We recommend that you have a separate public Git repository next to your private Team Server SVN/Git repository, so that you can continue committing and applying changes while you only push to the public repository for a new release to the Marketplace. The automated integration with GitHub from the Marketplace makes this a good option for your public-facing Git repository.
+Mendix recommends having a separate public Git repository next to your private Team Server Git repository, so that you can continue committing and applying changes while you only push to the public repository for a new release to the Marketplace. The automated integration with GitHub from the Marketplace makes this a good option for your public-facing Git repository.
 
 ### 2.4 Working with Java-Intensive Apps
 
@@ -168,13 +168,13 @@ Depending on your module's functionality, you might need to store data in the en
 
 Actions that may be batched or divided over multiple threads due to a large load or volume should be offloaded to the [task queue](/refguide/task-queue/). Using this method, you can offload multiple tasks at once to multiple instances and over multiple threads. You can also run these tasks in the background without the user request waiting for it. Make sure that the end-user is aware that something is going on by setting a certain Task Status, or maybe implementing a progress log.
 
-If you are using Studio Pro [8.18](/releasenotes/studio-pro/8.18/) or older, you can consider using the process queue. See the [Replacing Process Queue](/refguide/task-queue/#process-queue) section of *Task Queue* for the difference between these functionalities.
+If you are using Studio Pro [8.18](/releasenotes/studio-pro/8.18/) or older, you can consider using the process queue. See the [Replacing Process Queue](/refguide9/task-queue/#process-queue) section of *Task Queue* for the difference between these functionalities.
 
 ### 3.6 ConnectionDetails Entity
 
 Use a **ConnectionDetails** entity for all general connection and security settings for the call. Use a **ConnectionDetails_Get** microflow in all your Operations. This way it is easy to change all the settings in one location. The individual settings can be stored in a constant or in the database and set in the create. Using constants are recommended because this avoids a dependency on the Encryption module.  
 
-{{% alert color="warning" %}} Using either the default value of a constant or the project’s configuration setting is unsafe. Both these places are readable by others and visible in the version management copies made by SVN. If you can share these settings with other developers, set them in the project configuration and leave the default values blank. This will limit the risk of accidentally exposing the settings when exporting the module.{{% /alert %}}
+{{% alert color="warning" %}} Using either the default value of a constant or the project’s configuration setting is unsafe. Both these places are readable by others and visible in the version management. If you can share these settings with other developers, set them in the project configuration and leave the default values blank. This will limit the risk of accidentally exposing the settings when exporting the module.{{% /alert %}}
 
 If you do need to store sensitive information in the database, then always use the [Encryption](/appstore/modules/encryption/) module to encrypt and store and to retrieve and decrypt the information.
 
@@ -204,7 +204,7 @@ Any dependencies your module has should be well documented including the minimum
 
 ### 3.11 IP Protection
 
-Right now, you will not be able to protect your IP or prevent end-users from changing any logic that you ship in a module using Mendix tooling. Access to this functionality is currently limited and can be gained through the [Mendix Vendor Program](/appstore/creating-content/vendor-program/).
+For members of the [Mendix Partner Program](/appstore/partner-program/) and the [Mendix Commercial Solution Partner Program](https://www.mendix.com/partners/become-a-partner/isv-program/), protecting your intellectual property (IP) or preventing end-users from changing any logic that you ship in a module using Mendix tooling is possible. For details, see [How to Apply IP Protection](/appstore/creating-content/sol-ip-protection/).
 
 If protecting your IP or preventing end-users from changing your logic is not a requirement, you can use all the tooling that Mendix provides to build a connector using available Mendix tools. If you want IP protection today, you need to implement the sensitive parts of the module in a hidden Java library. 
 
@@ -382,7 +382,7 @@ The [SAML](/appstore/modules/saml/) module, available on the Mendix Marketplace,
 
 You can test Mendix by calling microflows with the [Unit Testing](/appstore/modules/unit-testing/) module for whole pieces of functionality. Use unit tests for smaller, more targeted tests at the method-level of your Java code.
 
-As with any automated testing, it is a great supplement for capturing known, expected behavior. For capturing known unknowns and unknown unknowns, we recommend risk-based exploratory testing.
+As with any automated testing, it is a great supplement for capturing known, expected behavior. For capturing known unknowns and unknown unknowns, Mendix recommends risk-based exploratory testing.
 
 ### 6.1 Testing Microflows
 
@@ -401,11 +401,11 @@ The following tools are part of the testing process of custom Java code in your 
 * [JaCoCo](https://www.jacoco.org/jacoco/trunk/index.html) (Java Code Coverage) — This helps you check how well your code is covered by tests.
 * Gradle — This pulls everything together to manage Java dependencies, and provides a way to work with JUnit and Mockito.
 
-Gradle can handle managing Java dependencies and running [JUnit](http://junit.org) tests. Read about setting up Gradle in [Extending App Setup for Building Connectors with Java](#extend-app-java). If you have a pipeline, we recommend running your tests as part of it. 
+Gradle can handle managing Java dependencies and running [JUnit](http://junit.org) tests. Read about setting up Gradle in [Extending App Setup for Building Connectors with Java](#extend-app-java). If you have a pipeline, Mendix recommends running your tests as part of it. 
 
 #### 6.2.2 Using the Java Unit Test Reference
 
-Mendix apps need `Core` classes, and the [Core API](https://apidocs.rnd.mendix.com/9/runtime/com/mendix/core/Core.html) allows you to do things that you usually do in a microflow, like committing an object. `CoreProxy` serves as a mockable layer between your Java logic and the `Core` API. 
+Mendix apps need `Core` classes, and the **Class Core** [Runtime API](/apidocs-mxsdk/apidocs/runtime-api/) allows you to do things that you usually do in a microflow, like committing an object. `CoreProxy` serves as a mockable layer between your Java logic and the **Core** API. 
 
 Our [Java unit test reference](https://Github.com/mendixlabs/javaunittestreference) is available to help you through this process. `MendixUnitTestBase.java` is extendable and reusable for your own purposes. When extended, it enables Mockito on your test classes and mocks `Core` API behavior.  This does the following:
 
@@ -453,7 +453,7 @@ Ensure a new release includes the following:
 
 ### 8.2 Versioning {#versioning}
 
-The [Update Existing Marketplace Content](/appstore/general/share-app-store-content/#updating) section of *Share Marketplace Content* provides explanations of the recommended versioning system. The following points go into more detail on the versioning number system:
+The [Update Existing Marketplace Content](/appstore/sharing-content/#updating) section of *Share Marketplace Content* provides explanations of the recommended versioning system. The following points go into more detail on the versioning number system:
 
 * *Major version* — This is the first digit. This number goes up when you release major breaking changes, or at the very least a major new feature, as part of your connector. Determining what is major is up to you. You can deploy minor/patch versions for older major versions when you have bugs that need resolving.
 
@@ -463,4 +463,4 @@ The [Update Existing Marketplace Content](/appstore/general/share-app-store-cont
 
 ## 9 Licensing
 
-Follow your Java Libraries and default to Mendix EULA. Also, we recommend that you do not use copy-left licenses for commercially available connectors.
+Follow your Java Libraries and default to Mendix EULA. Also, Mendix recommends that you do not use copy-left licenses for commercially available connectors.

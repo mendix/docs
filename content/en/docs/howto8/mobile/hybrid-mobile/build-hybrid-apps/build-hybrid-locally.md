@@ -42,7 +42,7 @@ Optionally, you can set various environments in the **config/environments.json**
 To target a specific DTAP endpoint with your app, you can specify it as a parameter to `npm run package` or `npm run package:x86`. Such code could, for example, look like this:
 
 ```shell {linenos=false}
-npm run package -- --env.target=test  # target the test endpoint for ARM architecture
+npm run package -- --env target=test  # target the test endpoint for ARM architecture
 ```
 
 Possible targets are `development`, `test`, `acceptance`, `production` (default), and `sandbox`. For convenience you can shorten these to their first letters. Note that if no `--env.target` parameter is provided, the hybrid app endpoint will default to the production environment. 
@@ -86,7 +86,7 @@ Using XCode can be easier than the Cordova CLI due to XCode's friendly visual in
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/setup-signing-wrong.png" alt="Signing screen with errors"   width="400"  >}}
 
-1. Both **Debug** and **Release** might have been configured for **Automatically manage signing**. Clear both check boxes to switch to manual signing. The screen should change to the following:
+1. Both **Debug** and **Release** might have been configured for **Automatically manage signing**. Clear both checkboxes to switch to manual signing. The screen should change to the following:
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/setup-signing-correct.png" alt="Signing screen correctly configured"   width="400"  >}}
 

@@ -3,10 +3,6 @@ title: "Using a Proxy to Call a Web Service"
 url: /refguide8/using-a-proxy-to-call-a-webservice/
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/using-a-proxy-to-call-a-webservice.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 In some cases, you're stuck behind a firewall, and thus unable to call a webservice directly. This document shows you how to configure the JVM to use a proxy to call such services.

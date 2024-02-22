@@ -24,7 +24,7 @@ This image shows what the microflow toolbox looks like after including all the m
 
 For the basics of building toolbox actions, see the blog post [Introducing the Mendix Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/). 
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Use advanced features when creating your own microflow actions
 * Create the **Create object list** action
@@ -182,7 +182,7 @@ The action is defined as follows:
 
 Implement the action in Java as follows:
 
-1. Create an InputStream from the the JSON input so it can be read by the import mapping.
+1. Create an InputStream from the JSON input so it can be read by the import mapping.
 2. Use `Core.integration().importStream()` to import the JSON with the specified mapping.
 3. Return the first object imported.
 

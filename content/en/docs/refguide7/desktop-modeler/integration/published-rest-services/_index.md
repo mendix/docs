@@ -25,7 +25,7 @@ You can easily expose an entity via REST by right-clicking the entity in the [do
 
 To publish a microflow as a REST operation, right-click anywhere in the editor and select [Publish as REST service operation](/refguide7/publish-microflow-as-rest-operation/).
 
-## <a name="authorization"></a>3 Authentication
+## 3 Authentication {#authorization}
 
 Published REST services can be secured with basic authentication, active session authentication and custom authentication. Basic and active session authentication are the default, and are automatically applied when you set the [security level](/refguide7/project-security/) of your app to **Prototype / demo**  or **Production**.
 
@@ -41,7 +41,7 @@ Note that web service users cannot access REST services.
 
 For more details, see [Published REST Routing](/refguide7/published-rest-routing/) and the [Requires Authentication](/refguide7/published-rest-service/#authentication) section in *Published REST Service*.
 
-## <a name="interactive-documentation"></a>4 Documentation
+## 4 Documentation {#interactive-documentation}
 
 Every [published REST service](/refguide7/published-rest-service/) is automatically documented. This documentation is available in the app under `http://yourapp.com/rest-doc/`. Each service has an interactive documentation page using [Swagger UI](https://swagger.io/swagger-ui/). You can interact with the service to see how it behaves.
 

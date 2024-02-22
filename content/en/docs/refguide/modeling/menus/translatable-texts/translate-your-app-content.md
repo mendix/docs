@@ -11,7 +11,7 @@ aliases:
 
 Delivering your Mendix app in multiple languages is an important capability for reaching a wide audience. Most of the text that the end-user sees is stored as translatable texts (for example, labels, button names, and menu items). Using the language features of Mendix, you can quickly make your app multilingual and translate the content to many other languages.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Add a new language to your app
 * Change the working language
@@ -69,7 +69,7 @@ To add an additional language, do the following:
 2. Click **Add** to open the **Add Language** dialog box.  
 3. Select a **Language**. In this example, we select **Russian, Russia**, but you can use any language you like.
 
-    {{% alert color="info" %}} We recommend that you do *not* choose **Dutch, Netherlands**, as this already contains translations for many of the translatable texts.{{% /alert %}}
+    {{% alert color="info" %}}Mendix recommends that you do *not* choose **Dutch, Netherlands**, as this already contains translations for many of the translatable texts.{{% /alert %}}
 
 4. Click **OK** to save the changes. The **Add Language** dialog box closes.
 
@@ -126,7 +126,7 @@ To translate multiple occurrences and multiple texts from the default language, 
 
     {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/batch-translate-myfirstmodule.png" alt="Select only MyFirstModule" >}}
 
-6. Click **OK**. You can now see all the translatable texts in your module. The **Translation (Russian, Russia)** column shows the individual translations you made in the previous section. The **#** column shows the number of times each text appears in the selected module(s).
+6. Click **OK**. You can now see all the translatable texts in your module. The **Translation (Russian, Russia)** column shows the individual translations you made in the previous section. The **#** column shows the number of times each text appears in the selected module (or modules).
 
     {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/batch-translate-initial.png" alt="Translatable texts in MyFirstModule" >}}
 
@@ -232,7 +232,7 @@ To set up the completeness check, do the following:
 
 1. Go to **Language > Language Settings**. The **App Settings** dialog box opens.
 2. In the grid, double-click the language for which you want to set the completeness check. The **Edit Language** dialog box opens.
-3. Select the **Check completeness** check box.
+3. Select the **Check completeness** checkbox.
 4. Click **OK** to close the **Edit Language** dialog box. 
 5. In the **App Settings** dialog box, click **OK** to save the changes and close the dialog box. You then receive warnings about all text which has not been translated into that language. There is always a completeness check for the default language.
 

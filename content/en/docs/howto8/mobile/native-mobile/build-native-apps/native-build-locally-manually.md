@@ -36,7 +36,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 For iOS builds:
 
 * Have a Mac OS X machine 
-* Install [XCode 11.7](https://apps.apple.com/us/app/xcode/id497799835?mt=12) and [CocoaPods](https://guides.cocoapods.org/using/getting-started.html) 
+* Install the latest version of [XCode](https://developer.apple.com/xcode/resources/) and [CocoaPods](https://guides.cocoapods.org/using/getting-started.html) 
 
 For Android Builds:
 
@@ -157,7 +157,7 @@ To build an Android app with Android Studio, do the following:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/native-build-locally-manually/as-build-variants.png" alt="Android Build Varients"   width="350"  >}}
 
-1. After a short time the app should be synchronized and the play button (**Run Locally**) should be selectable. Select a device or create a device from the drop-down menu and click the play button (**Run Locally**) to build and install your app on the device:
+1. After a short time the app should be synchronized and **Run Locally** ({{% icon name="controls-play" %}}) should be selectable. Select a device or create a device from the drop-down menu and click **Run Locally** to build and install your app on the device:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/native-build-locally-manually/as-start-build.png" alt="Android Build Toolbar"   width="250"  >}}
 
@@ -174,7 +174,7 @@ The Native Template does not yet support the ARM 64 Simulator architecture. For 
 1. Ensure you have Rosetta installed on your system (for more information, see this [Apple documentation](https://support.apple.com/en-us/HT211861)).
 1. Run `arch -x86_64 pod install` to install the correct type of pods.
 1. Right-click on the **XCode.app** icon and select **Get info**.
-1. Select the check box **Open using Rosetta**.
+1. Select the checkbox **Open using Rosetta**.
 1. Start XCode.
 
 XCode will now use x86_64 simulators and building should work as expected. Now that you have set up the 86 pods, click [here](#resume-ios) to skip the second path and resume the build process.
@@ -188,7 +188,7 @@ To build an iOS app with a Mac running Intel Silicon, do the following:
 
 The iOS project is using CocoaPods for its dependency management. For more information on installing the CocoaPods dependency manager on your machine see this CocoaPods [documentation](https://cocoapods.org/#install).
 
-<a name="resume-ios"></a>Now that you have completed one of the two paths listed above, you can resume building your iOS app:
+<a id="resume-ios"></a>Now that you have completed one of the two paths listed above, you can resume building your iOS app:
 
 1. Open *.xcodeworkspace* using XCode.
 1. Navigate to **Signing and Capabilities** and choose your **Team** from the drop-down menu:
@@ -197,7 +197,7 @@ The iOS project is using CocoaPods for its dependency management. For more infor
 
     As with the Android **Build Variants** the iOS app makes use of **Build Targets** to switch between building a custom developer app or a release app.
 
-1. From the drop-down menu choose **nativeTemplate** and the device you would like to run the app on, then click the play button (**Run Locally**) to start a build for your app:
+1. From the drop-down menu, choose **nativeTemplate** and the device you would like to run the app on. Then click **Run Locally** ({{% icon name="controls-play" %}}) to start a build for your app:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/native-build-locally-manually/xc-start-build.png" alt="XCode Build Toolbar"   width="250"  >}}
 
@@ -254,5 +254,5 @@ To remove dependencies which do not support auto-linking, do the following:
 
 ## 8 Read More
 
-* [How to Deploy Your First Mendix Native Mobile App](/howto8/mobile/deploying-native-app/)
+* [How to Build a Mendix Native App in the Cloud](/howto8/mobile/deploying-native-app/)
 * [How to Create a Custom Developer App](/howto8/mobile/how-to-devapps/)

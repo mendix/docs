@@ -3,7 +3,7 @@ title: "Deploy Your First Mendix Native Mobile App with the Native Builder CLI"
 linktitle: "Deploy Mobile App with Native Builder CLI"
 url: /howto8/mobile/deploying-native-app-cli/
 weight: 20
-description: Describes how to deploy your first Mendix native mobile app with the Native Builder.
+description: Describes how to build a Mendix native app in the cloud with the Native Builder CLI.
 tags: ["native", "mobile", "deploy", "native-builder", "builder", "appcenter"]
 ---
 
@@ -17,7 +17,7 @@ Please update to Native Builder v3.2.2. Native Builder v3.2.2 includes the fixes
 
 ## 1 Introduction
 
-This how-to will teach you how to go from a blank slate to an app running on a device.
+This how-to teaches you how to go from a blank slate to an app running on a device.
 
 Every Native Builder project has configurations. These configurations are useful for preparing your app, and then creating builds on App Center and GitHub respectively. Configurations are also critical for making updates to apps already delivered to production devices. For more information on the Native Builder's capabilities, see the [Native Builder Reference Guide](/refguide8/native-builder/). The native build process will use your local application, create a repository on GitHub, have App Center use the GitHub repo, build an *.apk*, then download that *.apk* to your local storage. 
 
@@ -34,7 +34,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Use v2.0.0 with Mendix 8.1.0 and above
 * Use v3.0.0 with Mendix 8.3.0 and above
 * A [GitHub](https://github.com/) account.
-* An [App Center](https://appcenter.ms/) account. We recommend a paid account if you will be building and deploying regularly.
+* An [App Center](https://appcenter.ms/) account. Mendix recommends a paid account if you will be building and deploying regularly.
 
 ### 2.1 Platform-Specific Prerequisites
 
@@ -76,7 +76,7 @@ The Native Builder needs to communicate with GitHub and App Center. Therefore, m
 
 ## 4 Preparing Your Project {#preparing}
 
-The native builder uses the `prepare` command as well as a line of parameters in your CLI to specify the details of your build. Below is an example of a `prepare` command with a complete set of parameters:
+The Native Builder uses the `prepare` command as well as a line of parameters in your CLI to specify the details of your build. Below is an example of a `prepare` command with a complete set of parameters:
 
 ```bash
 native-builder.exe prepare --project-name CoolApp --java-home "C:\Program Files\Java\jdk-11.0.3" --project-path "Y:\Documents\Mendix\CoolApp\CoolApp.mpr" --mxbuild-path "C:\Program Files\Mendix\8.6.0.715\modeler\mxbuild.exe" --github-access-token b609183aa226a8c2d962700be7a387bd7776e986 --appcenter-api-token 440725eb1311ddfced62894a4d23fc90843370c7 --appcenter-organization "cool-organization" --runtime-url "https://coolapp.mendixcloud.com" --app-name "My Cool App" --app-identifier "com.mendix.coolapp" --mendix-version "8.6.0"
@@ -132,7 +132,7 @@ You have successfully prepared your app, and in the next section will make a bui
 
 To initiate your first build in the Native Builder, you will execute a command in CLI with various parameters included. For more information on parameters, see the [Commands](/refguide8/native-builder/#commands) section in the *Native Builder* guide. While some parameters are optional, two are required: the `--project-name` parameter and the `--build-number` parameter.
 
-This is an example build command using the the two required parameters mentioned above, as well as the optional `--app-version` command (it is best practice to include a [new app version](https://semver.org/) with each release):
+This is an example build command using the two required parameters mentioned above, as well as the optional `--app-version` command (it is best practice to include a [new app version](https://semver.org/) with each release):
 
 ```bash {linenos=false}
 native-builder.exe build --project-name CoolApp --build-number 1 --app-version 0.1.0
@@ -250,7 +250,7 @@ After your start your Native Builder build, you will see some or all of the foll
 
 If your build times out, you can either sign your app locally as described in [Android Local Signing](#android-local-signing) and [iOS Local Signing](#ios-local-signing) below, or upgrade to a paid App Center account. This build issue is more likely to affect iOS builds because of how long signing takes with an iOS developer profile.
 
-In case of failure, the build logs will be downloaded for your convenience. Please provide them when filing a [Support ticket](/developerportal/support/submit-support-request/) with Mendix.
+In case of failure, the build logs will be downloaded for your convenience. Please provide them when filing a [Support ticket](/support/submit-support-request/) with Mendix.
 
 Afer your build succeeds, note the downloaded *.zip* archives at the path provided by Native Builder.
 
@@ -376,7 +376,7 @@ By default, building for tablets is disabled in XCode. Do the following to enabl
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/tablet-workspace.png" alt="select tablet options"   width="300"  >}}
 
-1. Commit these changes to your project's master branch so consecutive builds have the tablet settings enabled.
+1. Commit these changes to your project's primary branch so consecutive builds have the tablet settings enabled.
 
 ##### 6.2.3.2 Directly Change the Files on GitHub
 
@@ -386,14 +386,14 @@ First, navigate to your project's repository. This should be `www.github.com/<yo
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/github-find-file.png" alt="find file toolbar"   width="400"  >}}
 
-1. Click the edit icon:
+1. Click **Edit this file** ({{% icon name="pencil" %}}):
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/github-edit-file.png" alt="find file toolbar"   width="400"  >}}
 
 1. Change both instances of `TARGET_DEVICE_FAMILY = “1”;` to `TARGET_DEVICE_FAMILY = “1,2";`.
 1. Commit these changes.
 1. Using the **Find file** functionality again, find and open *info.plist*.
-1. Click the edit icon, then change the code like so: 
+1. Click **Edit this file** again, then change the code like so: 
 
     1. Before the final `</dict>` line, add this key:<br />
 
@@ -426,7 +426,7 @@ First, navigate to your project's repository. This should be `www.github.com/<yo
 
 #### 6.2.4 Uploading to the Apple App Store
 
-To upload your app to the iOS App Store, follow these instructions (to continue, you must have completed the [Signing a Build](#signing-a-build) section above and recieved a build signed for the Apple Store):
+To upload your app to the iOS App Store, follow these instructions (to continue, you must have completed the [Signing a Build](#signing-a-build) section above and received a build signed for the Apple Store):
 
 1. Follow Apple's [Add an app to your account](https://help.apple.com/app-store-connect/#/dev2cd126805) tutorial to add an app entry to your account.
 2. After adding a new app to your account, follow Apple's [View and edit app information](https://help.apple.com/app-store-connect/#/dev97865727c) tutorial to describe your new app entry. Consult the other pages under the left menu's **Enter app information** category should they apply to your app:

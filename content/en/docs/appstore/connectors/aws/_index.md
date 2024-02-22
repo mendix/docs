@@ -10,6 +10,6 @@ tags: ["marketplace", "marketplace component", "connector", "AWS"]
 
 ## 1 Introduction
 
-Mendix has a strategic alliance with AWS to make Mendix the fastest and easiest way to build apps on AWS. A key objective of the alliance is to provide a rich set of AWS connectors, which make integration between AWS Services and Mendix apps simple and secure. To learn more about our AWS connector strategy, see [AWS Connectors](https://marketplace.mendix.com/link/component/204913) in the Mendix Marketplace. 
+Mendix has a strategic alliance with AWS to make Mendix the fastest and easiest way to build apps on AWS. A key objective of the alliance is to provide a rich set of AWS connectors, which make integration between AWS Services and Mendix apps simple and secure. To learn more about our AWS connector strategy, see [AWS Connectors](https://www.mendix.com/evaluation-guide/strategic-partners/aws/aws-connectors-marketplace/). 
 
 ## 2 Documents in This Category

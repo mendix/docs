@@ -29,13 +29,13 @@ The maximum number of files allowed in a working copy is 10,000.
 
 ### 1.6 What Apps Can I Access With the Model API?
 
-You can access all apps stored on [Mendix Team Server](/developerportal/collaborate/team-server/). Apps stored elsewhere, for example in your on-premises Git server, cannot be accessed with the model API.
+You can access all apps stored on [Mendix Team Server](/developerportal/general/team-server/). Apps stored elsewhere, for example in your on-premises Git server, cannot be accessed with the model API.
 
 ## 2 Common Error Messages
 
 ### 2.1 Delta Rejected, Delta Queue Connection Has Closed
 
-This error message is shown when making changes on a model, but the connection to the Online Working Copy on the Model Server has already been closed. This sometimes happens if your script executes a commit too quickly, without waiting until all model updates have been executed.
+This error message is shown when making changes on a model, but the connection to the Online Working Copy on the Model Server has already been closed. This sometimes happens if your script executes a commit too quickly, without waiting until all model updates have been run.
 
 ### 2.2 JS Allocation Failed, Process Out of Memory
 

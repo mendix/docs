@@ -6,10 +6,6 @@ tags: ["studio pro", "data"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/text-box.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 A text box is used to display and, optionally, allow the end-user to edit the value of an attribute from an object in a textual form. It can be used to display attributes of the following [data types](/refguide8/data-types/):
@@ -179,7 +175,7 @@ The placeholder text is shown when no text has been entered yet, or when a displ
 
 It can be used, for example, to give a hint to the end-user what kind of text should be entered.
 
-<a name="label-properties"></a>
+<a id="label-properties"></a>
 
 ### 2.9 Label Section{#label}
 

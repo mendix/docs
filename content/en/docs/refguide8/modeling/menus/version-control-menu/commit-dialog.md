@@ -5,10 +5,6 @@ weight: 20
 tags: ["studio pro"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/commit-dialog.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 The commit dialog is used for committing changes to the Team Server. You can enter a message and, if applicable, select related stories.
@@ -34,7 +30,7 @@ Enter a message describing the changes you have made. This message may contain m
 
 {{< figure src="/attachments/refguide8/modeling/menus/version-control-menu/commit-dialog/commit-dialog-stories.png" alt="Version Control Menu" >}}
 
-Tick the boxes next to the stories that are related to your commit. We recommend committing a small number of changes at a time, so there is usually just one related story.
+Tick the boxes next to the stories that are related to your commit. Mendix recommends committing a small number of changes at a time, so there is usually just one related story.
 
 ### 4.2 Changes in Model
 

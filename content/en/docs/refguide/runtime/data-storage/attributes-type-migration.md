@@ -13,9 +13,9 @@ Mendix allows you to change attribute and association types on existing domain m
 
 ### 2.1 Data Type Change Behavior
 
-If the type of an existing attribute is changed in Mendix Studio or Mendix Studio Pro, the existing attribute will usually be deleted and a new attribute will be created. For some attribute type changes Mendix tries to convert existing data in the database to the new type.
+If the type of an existing attribute is changed in Mendix Studio Pro, the existing attribute will usually be deleted and a new attribute will be created. For some attribute type changes Mendix tries to convert existing data in the database to the new type.
 
-If data should NOT be converted to the new type, you must remove the attribute in Studio or Studio Pro and create a new column (with the same name). If you change the type and rename the column, Mendix remembers the old column name and will try to convert the column values if possible.
+If data should NOT be converted to the new type, you must remove the attribute in Studio Pro and create a new column (with the same name). If you change the type and rename the column, Mendix remembers the old column name and will try to convert the column values if possible.
 
 ### 2.2 Conversion Table
 

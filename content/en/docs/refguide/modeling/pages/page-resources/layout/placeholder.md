@@ -10,7 +10,7 @@ weight: 10
 A **placeholder** can be used in two ways:
 
 * In a [layout](/refguide/layout/) to define a "gap" that can be filled in a [page](/refguide/page/) based on that layout
-* In a layout that defines the layout as a master layout
+* In a layout that defines the layout as a primary layout
 
 Each placeholder is colored blue with its name displayed in the middle of it. The placeholder named **Main** is always shown in a darker shade of blue. 
 
@@ -18,13 +18,9 @@ For example, the image below shows two placeholders, **Main** and **Other** posi
 
 {{< figure src="/attachments/refguide/modeling/pages/page-resources/layout/placeholder/placeholder.png" alt="Two placeholders in a layout grid. One is labeled 'Main', and one is labeled 'Other'"   width="400"  >}}
 
-## 2 Properties
+## 2 Properties Pane
 
-An example of placeholder properties is represented in the image below:
-
-{{< figure src="/attachments/refguide/modeling/pages/page-resources/layout/placeholder/placeholder-properties.png" alt="Properties pane for a placeholder" >}}
-
-A placeholder has a single section, **Misc** and a single property, **Name**.
+A placeholder has a single property: **Name**.
 
 ### 2.1 Name
 

@@ -10,7 +10,7 @@ tags: ["monitoring", "troubleshooting", "debug", "hybrid mobile"]
 
 This how-to explains the steps involved in debugging a Mendix application that is running in the Mendix Developer App on your mobile phone.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Debug a mobile application
 
@@ -30,7 +30,7 @@ From your console, start weinre with the following parameters: `weinre --boundHo
 
 ## 3 Connect Your Mendix Developer App
 
-Click the settings icon in the upper-right corner of the screen to configure your debugger:
+Click **Settings** ({{% icon name="cog" %}}) on the upper-right corner of the screen to configure your debugger:
 
 {{< figure src="/attachments/howto8/monitoring-troubleshooting/debug-a-hybrid-mobile-application/18580021.png" >}}
 
@@ -42,7 +42,7 @@ You can now navigate to the same address on your local browser to start the debu
 
 * [Find the Root Cause of Runtime Errors](/howto8/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
 * [Clear Warning Messages in Mendix](/howto8/monitoring-troubleshooting/clear-warning-messages/)
-* [Test Web Services Using SoapUI](/howto8/testing/testing-web-services-using-soapui/)
+* [Test Web Services Using SoapUI](/howto8/integration/testing-web-services-using-soapui/)
 * [Monitor Mendix Using JMX](/howto8/monitoring-troubleshooting/monitoring-mendix-using-jmx/)
 * [Debug Java Actions Remotely](/howto8/monitoring-troubleshooting/debug-java-actions-remotely/)
 * [Log Levels](/howto8/monitoring-troubleshooting/log-levels/)

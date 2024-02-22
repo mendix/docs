@@ -50,9 +50,9 @@ To import a complete app or solution package, follow these steps:
     You have the following options in this dialog box:
 
     * Decide whether to store your app in a **New Mendix Team Server** (recommended), an **Existing Mendix Team Server**, **Private server**, or **Locally on disk**
-	
-	{{% alert color="info" %}} For a solution to be compatible with future upgrades, it must be set up using **New Mendix Team Server** (recommended) or **Private server** only. Solutions stored **Locally on disk** cannot be upgraded.{{% /alert %}}
-	
+
+    {{% alert color="info" %}} For a solution to be compatible with future upgrades, it must be set up using **New Mendix Team Server** (recommended) or **Private server** only. Solutions stored **Locally on disk** cannot be upgraded.{{% /alert %}}
+
     * Provide an **App name** (by default, it will be named as it was in the Mendix package file)
     * Determine the local folder where you would like to store your app in **App directory**
 
@@ -77,6 +77,9 @@ To import module packages through the App Explorer in Studio Pro, follow these s
     {{% alert color="info" %}}If you replace the module with a new version, the existing user data will be retained based on the names of entities, attributes, and associations. If you delete a module and then add a newer version of it, all user data will be lost.{{% /alert %}}
 
 4. Click **Import**. You may see a **Warning** pop-up window that will inform you of any included module dependencies that will be overwritten in your app.
+
+    {{% alert color="info" %}}Widgets are only overwritten when an imported module contains a newer version of the widget.{{% /alert %}}
+
 5. Click **OK**. 
 
 If you are importing a module with the *.mxmodule* extension, a dialog informing you about the imported add-on module is displayed:
@@ -166,7 +169,7 @@ To import widgets, follow these steps:
 
 ### 2.5 Importing Content from the Marketplace
 
-To learn more about importing content from the Marketplace, see [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/).
+To learn more about importing content from the Marketplace, see [Using Marketplace Content](/appstore/overview/use-content/).
 
 ## 3 Exporting Various Elements
 
@@ -200,7 +203,7 @@ Select **Find usages of other user modules** to view the references, or click **
 
 {{< figure src="/attachments/refguide/modeling/import-and-export/select-dependencies.png" >}}
 
-Here you can select files you would like to include in your package. This list includes any files in the **userlib** or **resources** folders in your app directory. If you do not want to include these files, you can uncheck the boxes.
+Here you can select files you would like to include in your package. This list includes any files in the **userlib** or **resources** folders in your app directory, as well as widgets that are used in the module you are exporting. If you do not want to include these files, you can uncheck the boxes.
 
 {{% alert color="info" %}}To uncheck all the files quickly, press **<kbd>Ctrl</kbd>+<kbd>A</kbd>** to select all of the items then press the <kbd>spacebar</kbd> to uncheck all the elements.
 {{% /alert %}}

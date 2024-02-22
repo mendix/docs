@@ -6,10 +6,6 @@ weight: 35
 tags: ["Studio Pro", "run", "run menu"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/run-menu.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 The **Run** menu allows you to deploy and monitor your app:

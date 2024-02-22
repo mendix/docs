@@ -12,7 +12,7 @@ When using more generic domain models, you often turn to using inheritance or se
 
 {{< figure src="/attachments/howto7/data-models/query-over/18581639.png" >}}
 
-There are 5 groups relevant to this example. Group with ID 4 and 5 are the parent groups and each have the same three subgroups. 
+There are five groups relevant to this example. Group with ID 4 and 5 are the parent groups and each have the same three subgroups. 
 
 If you have the ParentGroup available in your microflow you can easily retrieve the subgroup. The platform automatically determines which of the two groups from the association is used. Each association has a left side (the association owner) and a right side (child in the association). XPath constraint can are read from left to right as well, and this is key to how you should interpret which of the two groups is being used.  
 

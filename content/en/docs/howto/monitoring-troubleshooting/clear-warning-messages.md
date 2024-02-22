@@ -11,7 +11,7 @@ tags: ["monitoring", "troubleshooting", "warning", "error", "warning message"]
 
 This how-to explains how to eliminate design time warnings. While these warnings will not cause the application to break, it is important to fix them to keep a clean app.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * View warning messages
 * Clear warning messages
@@ -31,18 +31,14 @@ To get more information, double-click or right-click the warning.
 ## 3 Common Warnings
 
 {{% alert color="warning" %}}
-
-[Deprecated] Using the main placeholder contents for pop-ups is deprecated.  This potion will be removed in a future version.  Please use a separate pop-up layout instead.
-
+Using the main placeholder contents for pop-ups is deprecated.  This option will be removed in a future version.  Please use a separate pop-up layout instead.
 {{% /alert %}}
 
 * This will not affect the app in this version of Studio Pro, but it may cause problems when upgrading
 * In this example, the pop-up layout must be adjusted in order to no longer use the main placeholder
 
 {{% alert color="warning" %}}
-
 A flow origination from an error handler should not return to the main flow.
-
 {{% /alert %}}
 
 * Once the microflow has split due to an error, the flow that executes due to the error should not merge with the flow that executes when no error occurs

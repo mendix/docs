@@ -108,7 +108,7 @@ The `System.Statistics` entity has been removed from the **System** module, as t
 
 The semantics have changed for `MxObject.get` and `mx.parser.parseValue`. They now return a value of an appropriate type (for example, `Big` for numbers, numbers for dates) instead of always returning a string. For more details, see [Class: mendix/lib/MxObject](https://apidocs.rnd.mendix.com/7/client/mendix_lib_MxObject.html#get).
 
-Support for `dojo.require` has been dropped. It never worked in hybrid apps, and we have now made it official. Write your custom widgets in the AMD style, as described in the [Widget Boilerplate](https://github.com/mendix/AppStoreWidgetBoilerplate).
+Support for `dojo.require` has been dropped. It never worked in hybrid apps, and we have now made it official. Previously we recommended a Widget Boilerplate as the place to start when developing your own widget. Now, however, it is best to [Build a Pluggable Web Widget](/howto8/extensibility/create-a-pluggable-widget-one/).
 
 Dojo APIs exposed through the global `dojo` object are no longer supported, as they were never supposed to work in AMD widgets. Some of these APIs (for example, `dojo.html`) have already been removed, but others will be removed in the future without notice. Use these at your own risk, or better yet, don't use them at all!
 
@@ -151,7 +151,7 @@ For more information, see [Layouts](/refguide7/layout/#layout-type) and the blog
 
 #### 6.1.3 Apply Context and Remove from Context
 
-The **Apply context** and **Remove from context** options of the reference selector, data grid, and template grid data sources were deprecated in Mendix version 5.19, and they have been removed. You will now get consistency errors in places where you used them. We suggest using explicit XPath constraints instead.
+The **Apply context** and **Remove from context** options of the reference selector, data grid, and template grid data sources were deprecated in Mendix 5.19, and they have been removed. You will now get consistency errors in places where you used them. Mendix suggests using explicit XPath constraints instead.
 
 ### 6.2 Removed Client APIs
 

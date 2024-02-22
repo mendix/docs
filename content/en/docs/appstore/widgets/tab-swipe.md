@@ -1,11 +1,15 @@
 ---
-title: "Tab Swipe"
+title: "Tab Swipe ⚠"
 url: /appstore/widgets/tab-swipe/
 category: "Widgets"
 description: "Describes the configuration and usage of the Tab Swipe widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "widget", "tab swipe", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
+
+{{% alert color="warning" %}}
+This widget is deprecated. For an alternative, please use a [native app](/refguide/mobile/introduction-to-mobile-technologies/native-mobile/) which supports tab swipe inherently.
+{{% /alert %}}
 
 ## 1 Introduction
 

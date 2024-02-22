@@ -6,7 +6,7 @@ weight: 20
 
 ## 1 Introduction
 
-In [How to Set Up Your Development Environment](/apidocs-mxsdk/mxsdk/setting-up-your-development-environment/) and [How to Set Up Your Personal Access Token](/apidocs-mxsdk/mxsdk/setup-your-pat/), you set up all the development tools and security settings. Now you will create an SDK script that automatically bootstraps a new Mendix app.
+In [How to Set Up Your Development Environment](/apidocs-mxsdk/mxsdk/setting-up-your-development-environment/) and [How to Set Up Your Personal Access Token](/apidocs-mxsdk/mxsdk/set-up-your-pat/), you set up all the development tools and security settings. Now you will create an SDK script that automatically bootstraps a new Mendix app.
 
 ## 2 Writing a First Script
 
@@ -45,7 +45,7 @@ After setting up all the prerequisites, you can start writing a first script tha
     main().catch(console.error);
     ```
 
-Don't forget to [Setup your Personal Access Token](/apidocs-mxsdk/mxsdk/setup-your-pat/) before executing the script.
+Don't forget to [set up your personal access token](/apidocs-mxsdk/mxsdk/set-up-your-pat/) before executing the script.
 
 ### 2.1 Code Explanation
 
@@ -116,12 +116,6 @@ Once you are done with the model changes, you can flush the changes to make sure
 
 Note that the steps for app creation and committing to the Team Server can take some time, so please be patient.
 
-## 4 Opening the App in Studio Pro
-
-1. In the **Apps** page of the [Developer Portal](https://sprintr.home.mendix.com/), the app you just created should be visible at the top of the list.
-2. Open the new app, and on the right side, click **Edit in Studio**.
-3. If you have the latest [Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/), it will start and load the app you just created from the Team Server.
-
-## 5 Next Step
+## 4 Next Step
 
 Continue with [How to Create the Domain Model](/apidocs-mxsdk/mxsdk/creating-the-domain-model/).

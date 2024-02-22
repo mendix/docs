@@ -11,7 +11,7 @@ tags: ["Version Control", "Conflicts", "Resolve", "Merge", "Patch", "Branch", "D
 
 ## 1 Introduction
 
-This reference guide describes how to use version control the Desktop Modeler. The theory behind how version control works in Mendix, and a definition of the concepts can be found in [Version Contol](/refguide7/version-control/).
+This reference guide describes how to use version control the Desktop Modeler. The theory behind how version control works in Mendix and a definition of concepts can be found in [Version Contol](/refguide7/version-control/).
 
 ## 2 Starting a Project with Version Control
 
@@ -28,7 +28,7 @@ The app is created on the Team Server, and a working copy is created in the **Pr
 
 ## 3 Joining a Project
 
-If there is already a Team Server enabled project, you can be invited to join it (see [Team](/developerportal/collaborate/team/).
+If there is already a Team Server enabled project, you can be invited to join it (see [Team](/developerportal/general/team/).
 
 Once you are a team member, providing you have been given a role with sufficient rights, you can work on the app by doing the following:
 
@@ -85,7 +85,7 @@ When you successfully commit your project, this becomes the new original and all
 
 ### 4.2 Committing
 
-Sending changes to the repository is called *committing*. The idea is that you commit small, consistent pieces of work to the repository. We recommend you commit your changes often. Preferably, the versions in the repository are always error-free, the Modeler will warn against committing while there are errors in your project.
+Sending changes to the repository is called *committing*. The idea is that you commit small, consistent pieces of work to the repository. Mendix recommends committing your changes often. Preferably, the versions in the repository are always error-free, the Modeler will warn against committing while there are errors in your project.
 
 To commit your changes, click the **Commit** button in the *Changes* dock, or choose the **Project > Commit...** menu item.
 
@@ -100,7 +100,7 @@ In general, it is a good idea to commit after implementing one feature or fixing
 Committing results in a new revision in the repository. You can add the following information in the Desktop Modeler when you perform a commit, and this will be attached to the newly created revision:
 
 * A textual message. This should be a summary of the changes you made
-* A list of Developer Portal stories that relate to the commit. A small commit will probably relate to one story. The Modeler shows stories that are in the current sprint and do not have a status of *Done*. Adding the story to the commit will not change the state of the Developer Portal story. Setting the status to 'Done' must be done manually and depends on your *definition of done*.
+* A list of Developer Portal stories that relate to the commit. A small commit will probably relate to one story. The Modeler shows stories that are in the current Sprint and do not have a status of *Done*. Adding the story to the commit will not change the state of the Developer Portal story. Setting the status to 'Done' must be done manually and depends on your *definition of done*.
 
 {{< figure src="/attachments/refguide7/version-control/using-version-control-in-the-dm/2018-02-21_13-50-03.png" >}}
 

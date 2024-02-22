@@ -1,14 +1,14 @@
 ---
-title: "Navigation Before Mendix Version 7.2"
+title: "Navigation Before Mendix 7.2"
 url: /refguide7/navigation-before-72/
-description: "Describes the concept of navigation in apps and the properties of a profile for Mendix versions 7.0 and 7.1."
+description: "Describes the concept of navigation in apps and the properties of a profile for Mendix 7.0 and 7.1."
 ---
 
 ## 1 Introduction
 
 {{% alert color="warning" %}}
 
-This document describes the concept of navigation in Mendix applications and the properties of a profile. Applicable for Mendix versions 7.0 and 7.1. For details on how this works in Mendix versions 7.2 and 7.3, see [Navigation in 7.2 and 7.3](/refguide7/navigation-in-72-and-73/). For Mendix version 7.4 and above, see [Navigation](/refguide7/navigation/).
+This document describes the concept of navigation in Mendix applications and the properties of a profile. Applicable for Mendix 7.0 and 7.1. For details on how this works in Mendix 7.2 and 7.3, see [Navigation in 7.2 and 7.3](/refguide7/navigation-in-72-and-73/). For Mendix 7.4 and above, see [Navigation](/refguide7/navigation/).
 
 {{% /alert %}}
 
@@ -30,7 +30,7 @@ The device type of a currently logged-in user is available in [microflows](/refg
 
 The hybrid tablet and hybrid phone profiles are different from the other profiles in that they do more than simply redirect users based on their device type. These profiles are designed to allow users to continue using their Mendix application even when they have no internet connection, though certain restrictions apply. For an overview of the ramifications of running an offline device profile, see [Offline](/refguide7/offline/).
 
-## 4 Redirection to Profiles<a name="Redirection"></a>
+## 4 Redirection to Profiles {#Redirection}
 
 Mendix Runtime automatically redirects users to the home page of the appropriate device type based on the device they are using. This happens by examining the User-Agent string that is sent by the device's browser. The default configuration for this redirection is as follows:
 

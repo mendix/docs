@@ -4,10 +4,6 @@ url: /refguide/oql-lower/
 tags: ["studio pro"]
 ---
 
-{{% alert color="info" %}}
-This function is only available for Mendix Studio Pro 9.21.0 and above.
-{{% /alert %}}
-
 ## 1 Description
 
 The `LOWER` function converts all uppercase characters in a given string to lowercase and returns the result.

@@ -1,7 +1,7 @@
 ---
 title: "Mendix Metamodel"
 url: /apidocs-mxsdk/mxsdk/mendix-metamodel/
-description: "</br>This set of documents describes how the Mendix Metamodel works. It covers the following topics:</br></br>• How the Mendix handles projects in relation to modules and documents</br>• How a Domain Model works with all its components (attributes, access rules, etc.)</br>• How pages, layouts, and page content are structured.</br>• How you can create and invoke microflows. "
+description: "</br>This set of documents describes how the Mendix Metamodel works. It covers the following topics:</br></br>• How the Mendix handles apps in relation to modules and documents</br>• How a Domain Model works with all its components (attributes, access rules, etc.)</br>• How pages, layouts, and page content are structured.</br>• How you can create and invoke microflows. "
 no_list: false
 simple_list: true
 weight: 1
@@ -11,12 +11,12 @@ weight: 1
 
 We have opened up our Mendix Metamodel, which is a detailed description of how all Mendix app models are structured. This set of documents helps you understand the Mendix Metamodel.
 
-If you are familiar with Studio Pro you know that a Mendix model is just a collection of documents (microflows, domain models, pages, layouts, modules, folders, etc.) organised in a tree and accessible through the App Explorer. In the SDK we refer to documents with the generic name `units`. Basically, any item in the App Explorer of Studio Pro is a `unit`.
+If you are familiar with Studio Pro you know that a Mendix model is just a collection of documents (microflows, domain models, pages, layouts, modules, folders, etc.) organized in a tree and accessible through the App Explorer. In the SDK we refer to documents with the generic name `units`. Basically, any item in the App Explorer of Studio Pro is a `unit`.
 
 Units come in two flavors:
 
-* Structural units – These are the nodes in the project tree and can only be: the entire project (root), modules, and folders. A structural unit mainly provides structure and contains very little information itself.
-* Model units – These are the leafs in the project tree: microflows, pages, etc. These can be edited in an editor of Studio Pro. Internally, a model unit is a collection of model objects which we call: *elements*.
+* Structural units – These are the nodes in the app tree and can only be: the entire app (root), modules, and folders. A structural unit mainly provides structure and contains very little information itself.
+* Model units – These are the leafs in the app tree: microflows, pages, etc. These can be edited in an editor of Studio Pro. Internally, a model unit is a collection of model objects which we call: *elements*.
 
 ## 2 Elements
 
@@ -32,7 +32,7 @@ A lot of elements (or element types) share features. For example: microflows and
 
 ## 3 Properties
 
-Almost all elements have one or more properties, or rather: their values. The properties are determined by the element's type and the type of the values of a property are determined by the property. These typically show up as a editable values in the Properties pane/view. As before with elements, some properties will be rather technical in nature and (seemingly) do not map 1-to-1/clearly with anything shown in Studio Pro. For example the `Location` property of an entity denotes the position where the entity is drawn in Studio Pro.
+Almost all elements have one or more properties, or rather: their values. The properties are determined by the element's type and the type of the values of a property are determined by the property. These typically show up as editable values in the **Properties** pane/view. As before with elements, some properties will be rather technical in nature and (seemingly) do not map 1-to-1/clearly with anything shown in Studio Pro. For example the `Location` property of an entity denotes the position where the entity is drawn in Studio Pro.
 
 ### 3.1 References
 
@@ -53,6 +53,6 @@ All other details, such as documentation, validation rules, etc., are not availa
 
 All element types have both an interface and a full form. In the JavaScriptDoc you can see easily the difference in information that is available in for example [the Entity interface](https://apidocs.rnd.mendix.com/modelsdk/latest/interfaces/domainmodels.ientity.html) and the [full Entity class](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.entity.html). The unit interfaces exclusively contain the interface forms of public elements.
 
-After the server has sent all unit interfaces, the Model SDK client reconstructs the project tree from the available information. However, before you can manipulate an (existing) unit/element or access information on it that's not available in its interface, you have to obtain the full unit/element. 
+After the server has sent all unit interfaces, the Model SDK client reconstructs the app tree from the available information. However, before you can manipulate an (existing) unit/element or access information on it that's not available in its interface, you have to obtain the full unit/element. 
 
 ## 5 Documents in This Cateogery

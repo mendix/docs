@@ -29,7 +29,7 @@ When the Make It Native app finishes loading your app, do the following:
 
 Your mobile app should start reloading, and a Chrome window should launch on your desktop pointing to a debugging address. Change the address in your browser's navigation bar to *localhost:8083/debugger-ui* manually and go to that page.
 
-If Chrome launches but does not load your app, check that your app is running in Mendix Studio Pro. If it is, click the **Stop** button, then click the play button (**Run Locally**) again to restart your app. 
+If Chrome launches but does not load your app, check that your app is running in Mendix Studio Pro. If it is, click **Stop** ({{% icon name="controls-stop" %}}), then click **Run Locally** ({{% icon name="controls-play" %}}) again to restart your app. 
 
 You should see this page:
 
@@ -45,9 +45,9 @@ Other tools can help you debug Mendix apps, such as the [Using React Developer T
 
 ### 2.1 Using React Developer Tools{#rn-dev}
 
-React Developer Tools is [an app](https://github.com/facebook/react/tree/master/packages/react-devtools) which will allow you to see investigate the way your native page is rendering, adjust things like spacing in a live editor, and inspect the state and props of your pluggable and native widgets. To proceed, you must also have [Node and NPM](https://nodejs.org/en/download/) installed.
+React Developer Tools is [an app](https://github.com/facebook/react/tree/main/packages/react-devtools) which will allow you to see investigate the way your native page is rendering, adjust things like spacing in a live editor, and inspect the state and props of your pluggable and native widgets. To proceed, you must also have [Node and NPM](https://nodejs.org/en/download/) installed.
 
-You can consult Facebook's [official documentation](https://reactnative.dev/docs/debugging) for extra information, but this document will teach you the basics of using React Developer Tools. 
+You can consult Facebook's [official documentation](https://reactnative.dev/docs/debugging) for extra information, but this document teaches you the basics of using React Developer Tools. 
 
 To install React Developer Tools, do the following:
 

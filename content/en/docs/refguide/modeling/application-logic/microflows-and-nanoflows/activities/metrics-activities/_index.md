@@ -2,7 +2,12 @@
 title: "Metrics Activities"
 url: /refguide/metrics-activities/
 tags: ["studio pro", "microflow", "metrics", "micrometer"]
+weight: 81
 ---
+
+{{% alert color="info" %}}
+These activities can only be used in microflows.
+{{% /alert %}}
 
 ## 1 Introduction
 

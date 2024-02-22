@@ -9,10 +9,6 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/show-message.pdf).
-{{% /alert %}}
-
 {{% alert color="warning" %}}
 This activity can be used in both **Microflows** and **Nanoflows**.
 {{% /alert %}}
@@ -64,7 +60,7 @@ There are three message options:
 
 For each parameter in the template, you define an attribute of the context entity or an associated entity. The value of this attribute will be inserted at the position of the parameter. Parameters should be entered using [expressions](/refguide8/expressions/) resulting in a string.
 
-With parameters you can customize your message with data specific to the situation. For example, the message "An e-mail has been sent to customer {1}." with parameter `$customer/FullName` will show the full name of the customer who an e-mail has been sent to.
+With parameters you can customize your message with data specific to the situation. For example, the message "An email has been sent to customer {1}." with parameter `$customer/FullName` will show the full name of the customer who an email has been sent to.
 
 ### 3.4 Blocking
 

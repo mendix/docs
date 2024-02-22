@@ -13,7 +13,7 @@ These different technologies (for example, responsive, native phone) can be conf
 
 ## 2 Native Mobile Apps {#nativemobile}
 
-With Mendix 9, it is possible to build fully native mobile apps. Native mobile apps do not render inside a web view, but use native UI elements instead. This results in fast performance, smooth animations, natural interaction patterns (like swipe gestures), and improved access to all native device capabilities.  To make such responsive native mobile apps, Mendix leverages the popular open-source framework [React Native](https://facebook.github.io/react-native/).
+Studio Pro makes it is possible to build fully native mobile apps. Native mobile apps do not render inside a web view, but use native UI elements instead. This results in fast performance, smooth animations, natural interaction patterns (like swipe gestures), and improved access to all native device capabilities.  To make such responsive native mobile apps, Mendix leverages the popular open-source framework [React Native](https://facebook.github.io/react-native/).
 
 For more information, see [Native Mobile](/refguide/mobile/introduction-to-mobile-technologies/native-mobile/).
 
@@ -29,24 +29,14 @@ Progressive web apps have three main characteristics:
 
 For more information, see [Progressive Web App](/refguide/mobile/introduction-to-mobile-technologies/progressive-web-app/).
 
-## 4 Hybrid Mobile
-
-Hybrid mobile applications are web applications that run inside a native application. They can access device capabilities via JavaScript or by relying on the native application to provide the required functionality in native code.
-
-{{% alert color="warning" %}}
-Hybrid mobile apps are deprecated as of Mendix 9. This means that hybrid mobile apps are still supported in Mendix 9 but their usage is discouraged. Accordingly, the creation of new hybrid navigation profiles is disabled.
-{{% /alert %}}
-
-For more information, see [Hybrid Mobile (Deprecated)](/refguide/mobile/introduction-to-mobile-technologies/hybrid-mobile/).
-
-## 5 Deciding Between a PWA or Native Mobile App
+## 4 Deciding Between a PWA or Native Mobile App
 
 Mendix offers options to build both native mobile apps and PWAs. Depending on your app's requirements or constraints, one or the other can be a better fit. It is also possible to have both native mobile and PWA profiles in a single app, which can run next to each other and overlap significantly.
 
 {{% alert color="warning" %}}
-PWAs have the following limitations on iOS:
+PWAs have the following limitations:
 
-* Push notifications are not supported for PWAs on iOS
+* Push notifications are not supported for PWAs
 * Offline data is not supported for PWAs on iOS
 {{% /alert %}}
 

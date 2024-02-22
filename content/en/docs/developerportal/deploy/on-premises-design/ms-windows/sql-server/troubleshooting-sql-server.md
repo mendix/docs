@@ -5,10 +5,6 @@ weight: 80
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/troubleshooting-sql-server.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 This document covers various errors you might encounter when using SQL Server, and offers suggestions on how to resolve them.
@@ -34,7 +30,7 @@ CREATE FUNCTION [dbo].[mx_toLocalDateTime] (@utcDateTime datetime, @dstTimeZone 
 
 This permission is granted implicitly to the `db_ddladmin` and `db_owner` fixed database roles. In SQL Server 2005 or higher, the user will still need `ALTER SCHEMA` rights to create the function in a particular schema.
 
-In general if the user has the the `db_owner` role for the database he will have sufficient privileges to executing this query. 
+In general if the user has the `db_owner` role for the database they will have sufficient privileges to executing this query. 
 
 ### 2.3 JDBC Connections
 

@@ -13,7 +13,7 @@ aliases:
 
 We like to work with our community, and we encourage you to create and contribute using pull requests!
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Contribute to a Mendix GitHub Repository according to Mendix guidelines
 
@@ -29,9 +29,9 @@ Before starting with this how-to, make sure you have completed the following pre
 
 To make changes to an existing repository, follow these guidelines:
 
-* Create a new branch from where you want to base your work on your fork (this is usually the repository's master branch)
-* To quickly create a branch based on master, use `git checkout -b fix/master/my_contribution master`
-    * Avoiding working directly on the master branch is advised
+* Create a new branch from where you want to base your work on your fork (this is usually the repository's production branch)
+* To quickly create a branch based on production, use `git checkout -b fix/production/my_contribution production`
+    * Avoiding working directly on the production branch is advised
 * Make commits of logical units
 * Check for unnecessary whitespace with `git diff --check` before committing.
 * Make sure you have added the necessary tests for your changes
@@ -49,7 +49,6 @@ To submit changes, follow these guidelines:
 
 ## 5 Read More
 
-* [Stories](/developerportal/collaborate/stories/)
 * [Start Your Own Repository](/howto8/collaboration-requirements-management/starting-your-own-repository/)
 * [Version Control](/refguide8/version-control/)
 * [Share the Development Database](/howto8/collaboration-requirements-management/sharing-the-development-database/)

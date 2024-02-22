@@ -17,51 +17,45 @@ A user's home page can vary based on their [user roles](/refguide/user-roles/).
 
 ## 2 Profiles {#profiles}
 
-At the heart of the navigation model in Mendix, these are the available profiles:
+The core of Mendix's navigation model is founded on the following profiles:
 
-* Responsive
-* Hybrid tablet app online
-* Hybrid tablet app offline
-* Hybrid phone
-* Hybrid phone app offline
+* Responsive web
+    * Responsive web offline
 * Tablet web
+    * Tablet web offline
 * Phone web
-* Native phone
+    * Phone web offline
+* Native mobile (tablet & phone)
 
 Users that access the app via a particular device type are automatically redirected to the homepage of the appropriate profile based on the profile type (for details, see the [Redirection to Profiles](#redirection) section below).
 
 The device type of the currently logged-in user is available in [microflows](/refguide/microflows/) as the `$currentDeviceType` variable. The type of this variable is the [enumeration](/refguide/enumerations/) `System.DeviceType`, which has the values `Phone`, `Tablet`, and `Desktop`. You can use `$currentDeviceType` to perform different actions based on the device type. A typical example is to show different pages based on the device type.
 
-### 2.1 Responsive
+### 2.1 Responsive web
 
-Every app always has one profile of a Responsive type which cannot be deleted. This is the default profile used by a Mendix app. This profile can be used to make web applications.
+Every app always has one profile of a Responsive type which cannot be deleted. This is the default profile used by a Mendix app. This profile can be used to make web applications. This profile also has an offline version.
 
-### 2.2 Hybrid Profiles {#hybrid-profiles}
+### 2.2 Tablet Web
 
-A Mendix app can be installed on a tablet or phone as an app by creating a [local build](/howto8/mobile/build-hybrid-locally/) hybrid package. Hybrid profiles can be accessed from such a locally built app. Hybrid app profiles are determined by device type (phone or tablet) and by the offline accessibility feature enabled (online or offline). If no profile exists with the requested combination, an error will be displayed in the app.
+All the users accessing a Mendix app from a browser on a tablet will automatically be redirected to a profile of the Tablet web type. If no profile exists of that type, the user will be redirected to the Responsive profile. This profile can be used to make web applications. This profile also has an offline version.
 
-Hybrid offline apps are designed to allow users to continue using their Mendix app even when they have no internet connection. However, certain restrictions apply. For an overview of the ramifications of running an offline device profile, see [Offline First](/refguide/offline-first/).
+### 2.3 Phone Web
 
-Four different hybrid profiles are available:
+All the users accessing the Mendix app from a browser on a phone will automatically be redirected to a profile of the Phone web type. If no profile exists of that type, the user will be redirected to the Responsive profile. This profile can be used to make web applications. This profile also has an offline version.
 
-* Hybrid tablet app online
-* Hybrid tablet app offline
-* Hybrid phone
-* Hybrid phone app offline
+### 2.4 Native Mobile {#native-phone}
 
-### 2.3 Tablet Web
+A Mendix app can be installed on a phone as a native application which offers several advantages:
 
-All the users accessing a Mendix app from a browser on a tablet will automatically be redirected to a profile of the Tablet web type. If no profile exists of that type, the user will be redirected to the Responsive profile. This profile can be used to make web applications.
+* **Enhanced Performance** — Native apps are optimized for the specific platform, resulting in faster load times and smoother user interactions.
+* **Access to Device Features** — Native apps can harness the full potential of a phone's hardware features, such as GPS, camera, and push notifications, enhancing the user experience.
+* **Offline Functionality** — Native apps store data locally on the phone, ensuring that users can access content even without an internet connection. 
 
-### 2.4 Phone Web
+The Mendix app will run in [offline-first](/refguide/offline-first/) mode. This means that all the data is stored on the phone and only synchronized with the server on request.
 
-All the users accessing the Mendix app from a browser on a phone will automatically be redirected to a profile of the Phone web type. If no profile exists of that type, the user will be redirected to the Responsive profile. This profile can be used to make web applications.
-
-### 2.5 Native Phone {#native-phone}
-
-A Mendix app can be installed on a phone as a native application which has the benefit of a more responsive UI. The app will also be [offline-first](/refguide/offline-first/), which means all the data is stored on the phone and only synchronized with the server on request.
-
+{{% alert color="info" %}}
 You are required to enable anonymous users in your app's security settings and include anonymous user roles on native login pages. This is because there is no built-in login screen in the native profile; login pages are modeled as regular native pages. 
+{{% /alert %}}
 
 ## 3 Redirection to Profiles {#redirection}
 
@@ -75,7 +69,7 @@ Mendix Runtime automatically redirects users to the home page of the appropriate
 
 To configure the regular expressions used to match phone or tablet users, see [Runtime Customization](/refguide/custom-settings/).
 
-It is also possible to force the client to use a specific profile by adding a `profile` query string parameter to the URL when visiting a Mendix application. The possible values are the names of the profiles, which are Responsive, Tablet, Phone, HybridTablet, and HybridPhone. For example:
+It is also possible to force the client to use a specific profile by adding a `profile` query string parameter to the URL when visiting a Mendix application. The possible values are the names of the profiles, which are Responsive, Tablet, and Phone. For example:
 
 `https://myapp.mendixcloud.com/index.html?profile=Responsive`
 
@@ -105,7 +99,7 @@ The default home page indicates which [page](/refguide/page/) or [microflow](/re
 The default home page is visible to all unauthenticated users.
 {{% /alert %}}
 
-#### 4.2.2 Role-Based Home Pages
+#### 4.2.2 Role-Based Home Pages{#role-based}
 
 By using role-based home pages, you can show different home pages for different users. If a user logs in, the first role-based home page of which the user role matches the user role of the user is displayed. If no match is found, the default home page is used.
 
@@ -135,7 +129,7 @@ Allows for changing the [profile type](/refguide/navigation/).
 
 This deletes the profile. If [Menus and Navigation](/refguide/menu-widgets/) are still referring to the profile, errors will appear. It is possible to undo the deletion of a profile.
 
-#### 4.5.2 Synchronization Configuration {#customize}
+#### 4.5.3 Synchronization Configuration {#customize}
 
 Only available on profiles supporting offline synchronization.
 

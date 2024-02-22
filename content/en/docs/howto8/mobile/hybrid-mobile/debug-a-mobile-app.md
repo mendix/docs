@@ -15,10 +15,10 @@ Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Be
 
 To build a hybrid app and publish it, see [How to Build a Mendix Hybrid App Locally](/howto8/mobile/build-hybrid-locally/) for information on local building.
 
-To publish your app in an app store, we recommend you build native iOS apps instead. For more information, see [How to Build Native Apps](/howto8/mobile/build-native-apps/).
+To publish your app in an app store, Mendix recommends building native iOS apps instead. For more information, see [How to Build Native Apps](/howto8/mobile/build-native-apps/).
 {{% /alert %}}
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Build and run a hybrid Mendix mobile app that connects to your local development machine
 * Debug the mobile app using Mendix debugging tools, Chrome DevTools and the Safari Web Inspector
@@ -30,7 +30,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Ensure that you have a network utilities tool on your mobile device (I use [PingTools](https://play.google.com/store/apps/details?id=ua.com.streamsoft.pingtools) on Android, and [NetworkPing Lite](https://itunes.apple.com/us/app/network-ping-lite/id289967115?mt=8) on iOS) in order to ensure connectivity between your device and your computer
 * Acquire a paid Apple Developer Membership—see [Apple Membership](https://developer.apple.com/support/membership/) for more details
 
-## 3 Android and macOS <a name="AndroidMac"></a>
+## 3 Android and macOS {#AndroidMac}
 
 This is perhaps the easiest combination of a mobile target platform and a development environment to configure.
 
@@ -128,7 +128,7 @@ You can use PhoneGap Build to build the native mobile application and tell it to
 
 3. Open the **Chrome** browser.
 4. Open the **Chrome Developer Tools (F12)**.
-5. Click the options icon (vertical ellipsis) and select **More tools** > **Remote devices**:
+5. Click **Customize and control DevTools** ({{% icon name="three-dots-menu-vertical" %}}) and select **More tools** > **Remote devices**:
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/debug-a-mobile-app/android-3.png" alt="android-3" >}}
 
@@ -140,7 +140,7 @@ You can use PhoneGap Build to build the native mobile application and tell it to
 
 You can now take advantage of all the debugging tools you know and love with Mendix, including offline breakpoints, quick updates/refreshes, and the Chrome Developer Tools.
 
-## 4 iOS and macOS <a name="iosAndMac"></a>
+## 4 iOS and macOS {#iosAndMac}
 
 ### 4.1 Apple Developer Configuration
 
@@ -228,7 +228,7 @@ In order to build (and debug) a Mendix iOS app, you need to ensure that you have
 
 1. Download your Provisioning Profile (you will need this for Phonegap).
 
-### 4.2 Phonegap Configuration <a name="PhonegapConfiguration"></a>
+### 4.2 Phonegap Configuration {#PhonegapConfiguration}
 
 You can use PhoneGap Build to build the native mobile application and tell it to initialize based on this new URL, rather than the default. Follow these steps to change the PhoneGap Build
 
@@ -326,7 +326,7 @@ You can use PhoneGap Build to build the native mobile application and tell it to
 
 10. This will bring up the **Safari Web Inspector** for your device.
 
-## 5 Android + Windows <a name="AndroidAndWindows"></a>
+## 5 Android + Windows {#AndroidAndWindows}
 
 ### 5.1 Windows Configuration
 
@@ -393,7 +393,7 @@ You can use PhoneGap Build to build the native mobile application and tell it to
 
 3. Open the **Chrome** browser.
 4. Open the **Chrome Developer Tools (F12)**.
-5. Click the options icon (vertical ellipsis) and select **More tools** > **Remote devices**:
+5. Click **Customize and control DevTools** ({{% icon name="three-dots-menu-vertical" %}}) and select **More tools** > **Remote devices**:
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/debug-a-mobile-app/android-3.png" alt="android-3" >}}
 

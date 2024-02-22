@@ -8,10 +8,6 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/select--elements.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 For both [import](/refguide8/import-mappings/)and [export mappings](/refguide8/export-mappings/) you need to specify the elements structure you want to map. You do this in the **Select schema elements** window. An example of this screen is shown below.
@@ -62,4 +58,5 @@ You may encounter element selection checkboxes that are greyed out. If you hover
 | Collapse all | Collapses the entire tree, so that only the root node remains visible |
 | Check all | Checks the box next to every expanded node and visible leaf node. Collapsed nodes and their children are not affected. |
 | Uncheck all | Unchecks the box next to every expanded node and visible leaf node. Collapsed nodes and their children are not affected. |
+
 {{% /alert %}}

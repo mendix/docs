@@ -40,7 +40,7 @@ Module role conditions can only be used for the visibility of table rows and tab
 
 By selecting this option, visibility or editability becomes conditional based on the value of the attribute that is selected.
 
-For example, if you have a Boolean indicating whether a user wants to receive email, you can create a check box to edit the value of this Boolean. The row that asks for an email address can be shown only if the check box is checked.
+For example, if you have a Boolean indicating whether a user wants to receive email, you can create a checkbox to edit the value of this Boolean. The row that asks for an email address can be shown only if the checkbox is checked.
 
 #### 2.1.1 Attribute
 

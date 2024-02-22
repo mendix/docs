@@ -7,10 +7,6 @@ tags: ["studio pro", "navigation"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/navigation.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 This document describes the concept of navigation in Mendix applications and the properties of a profile. The **Navigation** document can be found by expanding the **Project** node in the **Project Explorer**. It defines the navigation structure of the application for users. It also allows you to set the home page of your application and to define the menu structures that can be used in [menu widgets](/refguide8/menu-widgets/). 
@@ -32,7 +28,7 @@ At the heart of the navigation model in Mendix, these are the available profiles
 * Phone browser
 * Native phone
 
-Users that access the app via a particular device type are automatically redirected to the homepage of the appropriate profile based on the profile type (for details, see the [Redirection to Profiles](#redirection) section below).
+Users that access the app via a particular device type are automatically redirected to the home page of the appropriate profile based on the profile type (for details, see the [Redirection to Profiles](#redirection) section below).
 
 The device type of the currently logged-in user is available in [microflows](/refguide8/microflows/) as the `$currentDeviceType` variable. The type of this variable is the [enumeration](/refguide8/enumerations/) `System.DeviceType`, which has the values `Phone`, `Tablet`, and `Desktop`. You can use `$currentDeviceType` to perform different actions based on the device type. A typical example is to show different pages based on the device type.
 

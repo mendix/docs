@@ -27,7 +27,7 @@ If you give an anonymous user write access on any field in the application, you 
 
 ## 4 Read Access
 
-If an anonymous user needs to have access to certain master data tables or needs the name of a user in an overview, the anonymous user needs read access on that entity. However, you should always limit this access. If the user doesn't need to have access to all fields, do not give it to them. If you see an anonymous user with full read access, always confirm that they cannot work with less access.
+If an anonymous user needs to have access to certain primary data tables or needs the name of a user in an overview, the anonymous user needs read access on that entity. However, you should always limit this access. If the user doesn't need to have access to all fields, do not give it to them. If you see an anonymous user with full read access, always confirm that they cannot work with less access.
 
 ## 5 Security Review
 
@@ -50,8 +50,6 @@ If you have anonymous access, you need to limit the access to as few entities as
 If you need to give an anonymous user access to change an object ALWAYS apply instance access as well. An anonymous user should NEVER have write access on all records in an entity. 
 
 Limiting the navigation or page display is not the same thing as security. All data can be accessed by talking directly to the Platform APIs, and anything that is visible according to the security model is accessible by sending the correct messages to the server. Limiting data in the UI does not mean that it cannot be accessed. Only instance access rules guarantee what you can and cannot do.
-
-For example, to download a file, it is possible to get the UR (for example, `https://myMendixApp.com/file?fileID=2804771`). All that is necessary is to try random numbers until a file is found that is accessible. Unless you specify instance or object access, in that case, the platform would always validate the request against your privileges before presenting the information.
 
 ## 7 Read More
 

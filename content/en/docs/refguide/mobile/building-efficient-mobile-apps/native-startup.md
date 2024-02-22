@@ -39,7 +39,7 @@ You can an OTA bundle's size by downloading it via a link like this from a deplo
 
 Synchronization ensures that the changes to domain model objects on the client and the runtime are kept in sync. Full synchronization ensures that all changes from the client are sent to the runtime, and all entities that are configured to synchronize “All Objects” are sent to the client. For more details see [Offline Synchronization](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/synchronization/).
 
-The initial full sync cannot be skipped. Therefore, for data-heavy apps it is important to control the sync behavior and use **All Objects** and **By Xpath** sparingly. 
+The initial full sync cannot be skipped. Therefore, for data-heavy apps it is important to control the sync behavior and use **All Objects** and **By XPath** sparingly. 
 
 It is often better to use **Nothing (preserve data)** and synchronize (using a microflow and Sync-To-Device) only when the data is accessed or refreshed. Excluding file documents and images from startup synchronization and then synchronizing them lazily on-demand can boost your app's performance significantly. 
 
@@ -49,4 +49,4 @@ If you need to synchronize files and images on startup, ensure their size is sma
 
 If you have configured a nanoflow as a startup nanoflow it may affect your app's startup performance—especially if the nanoflow performs additional data synchronization, excessive data operations on the local device, or microflow calls. 
 
-We recommend creating short-running startup nanoflows, because native apps keep showing their splash screen until your startup nanoflow executes a **Show page** action. If you must perform long operations in your startup nanoflow, you can show a page at the beginning to help the end-user understand the process. 
+Mendix recommends creating short-running startup nanoflows, because native apps keep showing their splash screen until your startup nanoflow executes a **Show page** action. If you must perform long operations in your startup nanoflow, you can show a page at the beginning to help the end-user understand the process. 

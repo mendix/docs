@@ -5,17 +5,13 @@ description: "This documentation will give you insight into creating documents w
 tags: ["Document", "Generate", "Word", "PDF", "studio pro"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/creating-your-own-documents.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 Have you been wondering how to create your own documents with Mendix? This reference will tell you how to do it!
 
 With Mendix, you can generate documents in different ways. Here, you will learn the fundamentals of generating a document from your own application.
 
-Before we start, we recommend you first read the following two pages:
+Before we start, Mendix recommends reading these pages:
 
 * [Document Templates](/refguide8/document-templates/)
 * [Generate Documents](/refguide8/generate-document/)
@@ -24,9 +20,9 @@ Before we start, we recommend you first read the following two pages:
 
 Before you start producing a document with Mendix, it is advisable to make a draft version of the document you want to produce. You can sketch something on a piece of paper or ask your customer to provide you with an example. Either way, it is good to have in mind what you want to achieve.
 
-Using your desired document, you can choose a strategy for producing it. Mendix offers numerous options for producing documents using the out-of-the-box document template functionality, but you may find that the Mendix features are not sufficient to generate your document. Don’t worry. For an alternative way of producing documents with Mendix, see [Alternative Way of Creating Documents](#Alternative).
+Using your desired document, you can choose a strategy for producing it. Mendix offers numerous options for producing documents using the out-of-the-box document template functionality.
 
-For our example, we’ve concluded that the Mendix functionality does suffice. So, let’s have a look at how this works with an example.
+Let’s have a look at how this works with an example.
 
 ## 3 Business Case
 
@@ -140,9 +136,3 @@ This is the resulting document:
 {{< figure src="/attachments/refguide8/modeling/resources/document-templates/creating-your-own-documents/15_Result.png" >}}
 
 In this example, you retrieved the **OrderLine** information via the **Entity (path)** data source. An alternative way of doing this would be to use a microflow that returns objects for the list presentation. If you do this, make sure to add the correct user role(s) to the microflows that are being used as data source microflows within the document template.
-
-## 5 Alternative Way of Creating Documents {#Alternative}
-
-The other way to generate documents is via a Java API called IText. This Java library is free to use.
-
-For more information on this way of working, see [iText Developers](http://developers.itextpdf.com/developers-home).

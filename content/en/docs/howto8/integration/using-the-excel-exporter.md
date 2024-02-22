@@ -60,7 +60,7 @@ In this section, you will learn how to add the required pages in the app's **Nav
 
 In this section, you will create an entity which will be used to export the Excel workbook. This will be associated with the entity holding the data with which you want to fill the Excel spreadsheet. This how to will use a **Policy** entity to hold the data.
 
-1. Open the domain model for your app and add an entity to serve as a "master export" entity that is a specialization of **FileDocument**.
+1. Open the domain model for your app and add an entity to serve as a "primary export" entity that is a specialization of **FileDocument**.
 2. Create an association between the newly created entity and the entity (or entities) that you will want to serve as a base for the Excel export.
 
     {{< figure src="/attachments/howto8/integration/using-the-excel-exporter/18581908.png" >}}

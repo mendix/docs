@@ -2,7 +2,7 @@
 title: "Build a Mendix Native App Locally Manually"
 linktitle: "Native App Local Manual Build"
 url: /refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally-manually/
-weight: 30
+weight: 20
 description: Describes how to build your first Mendix native mobile app locally, without using the Mendix Native Mobile Builder.
 aliases:
     - /howto/mobile/native-build-locally-manually/
@@ -13,8 +13,6 @@ aliases:
 {{% alert color="info" %}}
 When the Mendix Native Mobile Builder identifies a Native Template version (v5.1.9 and above) that is Mobile Toolkit capable, it will not apply changes directly to the app. To apply the changes when building locally, check out your latest changes, run `npm install` (for NPM v7 and above run `npm install --legacy-peer-deps`), then make sure to run `npm run configure`.
 {{% /alert %}}
-
-By default when building your native mobile app binaries, Mendix uses [Visual Studio App Center](https://appcenter.ms/sign-in?original_url=%2Fapps) as a service so that users can build without having to install tools like XCode or Android Studio. However, there are cases when using App Center is not allowed or possible. In those situations, you can build your apps locally without an internet connection.
 
 Follow the sections below through [Building Your Native App](#building-app-project) to complete your builds. To go beyond those instructions, see [Adding Dependencies](#adding-dependencies) and [Removing Dependencies](#removing-dependencies) sections below. These sections will allow you to further customize your local builds.
 
@@ -37,7 +35,7 @@ Before starting this guide, make sure you have completed the following prerequis
 For iOS builds:
 
 * Have a Mac OS X machine 
-* Install [XCode 11.7](https://apps.apple.com/us/app/xcode/id497799835?mt=12) and [CocoaPods](https://guides.cocoapods.org/using/getting-started.html) 
+* Install the latest version of [XCode](https://developer.apple.com/xcode/resources/) and [CocoaPods](https://guides.cocoapods.org/using/getting-started.html) 
 
 For Android Builds:
 
@@ -143,6 +141,10 @@ In the sections below you can see the basic steps to get an app up and running o
 During this process, do not accept any suggestions to update to latest Gradle or Kotlin version.
 {{% /alert %}}
 
+{{% alert color="info" %}}
+During development in Android Studio, if you select the **devDebug** build variant your application will reload changes automatically without redeploying the package.
+{{% /alert %}}
+
 To build an Android app with Android Studio, do the following:
 
 1. Run `npm install` (for NPM v7 and above run `npm install --legacy-peer-deps`) in the app root to install the required dependencies.
@@ -158,7 +160,7 @@ To build an Android app with Android Studio, do the following:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-build-locally-manually/as-build-variants.png" alt="Android Build Varients"   width="350"  >}}
 
-1. After a short time the app should be synchronized and the play button (**Run Locally**) should be selectable. Select a device or create a device from the drop-down menu and click the play button (**Run Locally**) to build and install your app on the device:
+1. After a short time, the app should be synchronized, and **Run Locally** ({{% icon name="controls-play" %}}) should be selectable. Select a device or create a device from the drop-down menu and click **Run Locally** to build and install your app on the device:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-build-locally-manually/as-start-build.png" alt="Android Build Toolbar"   width="250"  >}}
 
@@ -176,7 +178,7 @@ To build an Android app with Android Studio, do the following:
 
     As with the Android **Build Variants** the iOS app makes use of **Build Targets** to switch between building a custom developer app or a release app.
 
-1. From the drop-down menu choose **nativeTemplate** and the device you would like to run the app on, then click the play button (**Run Locally**) to start a build for your app:
+1. From the drop-down menu, choose **nativeTemplate** and the device you would like to run the app on. Then click **Run Locally** ({{% icon name="controls-play" %}}) to start a build for your app:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-build-locally-manually/xc-start-build.png" alt="XCode Build Toolbar"   width="250"  >}}
 
@@ -184,9 +186,9 @@ After the build succeeds the app should be running on the selected device and co
 
 ## 6 Adding Dependencies{#adding-dependencies}
 
-Mendix Studio Pro 9 and later support a new format for widgets and JS actions, allowing them to define them Native Dependencies required. Mendix Native Mobile Builder, is able to derive the Native Dependencies required from the app and automatically adds them to the package.json of the app's Native Template. This works with all auto-linkable Native Dependencies. 
+Mendix Studio Pro supports a new format for widgets and JS actions, allowing them to define them Native Dependencies required. Mendix Native Mobile Builder, is able to derive the Native Dependencies required from the app and automatically adds them to the package.json of the app's Native Template. This works with all auto-linkable Native Dependencies. 
 
-In some cases though, like when a dependency isn't derivable by its use case, like from a widget or JS action, or the dependency requires extra additions, like an elaborated initialisation process that can't be described via the auto-linking protocol, you will have to modify your app and add it manually.
+In some cases though, like when a dependency is not derivable by its use case (such as from a widget or JS action) or the dependency requires extra additions (like an elaborated initialisation process that cannot be described via the auto-linking protocol) you will have to modify your app and add it manually.
 
 Mendix native mobile apps are build on top of React Native. Therefore, any React Native module can be added and used in an app. The same rules apply as with any React Native app.
 
@@ -199,7 +201,7 @@ Mendix supports RN and therefore auto-linking. Auto linking is a React Native me
 
 ### 6.2 Adding Dependencies Which Do Not Support Auto-Linking
 
-If a dependency does not suport auto-linking follow the steps of the dependency's documentation to add it to the Android and iOS apps.
+If a dependency does not support auto-linking follow the steps of the dependency's documentation to add it to the Android and iOS apps.
 
 ## 7 Removing Dependencies{#removing-dependencies}
 

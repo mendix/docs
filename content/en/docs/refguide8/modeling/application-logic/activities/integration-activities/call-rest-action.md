@@ -6,10 +6,6 @@ weight: 10
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/call-rest-action.pdf).
-{{% /alert %}}
-
 {{% alert color="warning" %}}
 This activity can only be used in **Microflows**.
 {{% /alert %}}
@@ -123,7 +119,7 @@ When this identifier is not set (either not pinned or not present in *ClientCert
 
 ### 5.1 Use HTTP Authentication
 
-The **Use HTTP authentication** check box defines whether basic authentication should be used.
+The **Use HTTP authentication** checkbox defines whether basic authentication should be used.
 
 ### 5.2 User Name
 

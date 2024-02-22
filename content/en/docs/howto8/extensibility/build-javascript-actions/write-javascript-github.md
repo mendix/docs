@@ -3,7 +3,7 @@ title: "Build JavaScript Actions: Part 2 (Advanced)"
 linktitle: "2. Build JavaScript Actions"
 url: /howto8/extensibility/write-javascript-github/
 weight: 20
-description: "This advanced how-to will teach you to make a JavaScript action which can search for GitHub users."
+description: "This advanced how-to teaches you how to make a JavaScript action which can search for GitHub users."
 tags: ["widget", "search", "GitHub", "JavaScript", "API", "JavaScript-API"]
 ---
 
@@ -11,7 +11,7 @@ tags: ["widget", "search", "GitHub", "JavaScript", "API", "JavaScript-API"]
 
 Mendix has made nanoflows even more powerful with pluggable nanoflow actions — called JavaScript actions — in Mendix 8. [How to Build JavaScript Actions: Part 1 (Basic)](/howto8/extensibility/write-javascript-actions/) shows you how to create a JavaScript TextToSpeech action, expose it as a nanoflow action, and then use it in a demo. In this advanced how-to you will learn to call a REST service, use a generic return type, and make an API to enhance the power of your JavaScript actions.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Create a JavaScript action
 * Configure input and output parameters
@@ -187,7 +187,7 @@ To create a JavaScript action that can search for users on GitHub, follow the st
     }
     ```
 
-12. <a name="step-twelve"></a>Now the attributes are dynamic, but the names of the module and entity are not. To solve this, do the following: <br/>
+12. <a id="step-twelve"></a>Now the attributes are dynamic, but the names of the module and entity are not. To solve this, do the following: <br/>
     1. Open **Settings** > **Type parameters**. <br/>
     2. Click **Add**. <br/>
     3. Provide the name *UserEntity*. <br/>
@@ -316,7 +316,7 @@ Congratulations! Using the power of JavaScript actions, your app can search for 
 ## 5 Read More
 
 * [Build JavaScript Actions: Part 1 (Basic)](/howto8/extensibility/write-javascript-actions/)
-* [Mendix Client API](https://apidocs.rnd.mendix.com/8/client/index.html)
+* [Mendix Client API](/apidocs-mxsdk/apidocs/client-api/)
 * [JavaScript Actions](/refguide8/javascript-actions/)
 * JavaScript Resources
     * [JavaScript Basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)

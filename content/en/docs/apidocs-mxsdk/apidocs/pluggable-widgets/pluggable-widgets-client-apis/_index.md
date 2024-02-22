@@ -1,12 +1,12 @@
 ---
-title: "Client APIs Available to Pluggable Widgets"
+title: "Client APIs"
 linktitle: "Client APIs for Pluggable Widgets"
 url: /apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/
-description: A guide for understanding the client APIs available to pluggable widgets.
+description: A guide for understanding the client APIs available to pluggable widgets in Mx10.
 tags: ["Widget", "Pluggable",  "JavaScript"]
 weight: 20
 aliases:
- - /apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets
+    - /apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets
 ---
 
 ## 1 Introduction
@@ -27,11 +27,11 @@ Alongside the props that correspond to the properties specified in widget defini
 
 ### 3.1 Name 
 
-In Mendix Studio and Mendix Studio Pro, every widget must have a name configured. The primary usage of a widget name is to make its component identifiable in the client so that it can be targeted using [Selenium](/howto/integration/selenium-support/) or Appium test automation. In web apps, the Mendix Platform automatically adds the class `mx-name-{widgetName}` to a widget so that no extra action from a component developer is required. Unfortunately, this solution is not possible for [native mobile apps](/refguide/mobile/). For native mobile apps a component developer must manually pass a given `string` `name` prop to an underlying React Native [testID](https://facebook.github.io/react-native/docs/view#testid).
+In Mendix Studio Pro, every widget must have a name configured. The primary usage of a widget name is to make its component identifiable in the client so that it can be targeted using [Selenium](/howto/integration/selenium-support/) or Appium test automation. In web apps, the Mendix Platform automatically adds the class `mx-name-{widgetName}` to a widget so that no extra action from a component developer is required. Unfortunately, this solution is not possible for [native mobile apps](/refguide/mobile/). For native mobile apps a component developer must manually pass a given `string` `name` prop to an underlying React Native [testID](https://facebook.github.io/react-native/docs/view#testid).
 
 ### 3.2 Class
 
-A user can specify multiple classes for every widget. They can do this either directly by configuring a [class](/refguide/common-widget-properties/#class) property in the Studios, or by using design properties. In web apps, the Mendix Platform creates a CSS class string from the configuration and passes it as a `string` `class` prop to every client component. Unfortunately, React Native does not have similar support for classes. Therefore in native mobile apps a component will not receive `class` prop, but a `style` prop instead.
+A user can specify multiple classes for every widget. They can do this either directly by configuring a [class](/refguide/common-widget-properties/#class) property in Studio Pro, or by using design properties. In web apps, the Mendix Platform creates a CSS class string from the configuration and passes it as a `string` `class` prop to every client component. Unfortunately, React Native does not have similar support for classes. Therefore in native mobile apps a component will not receive `class` prop, but a `style` prop instead.
 
 ### 3.3 Style
 
@@ -57,7 +57,7 @@ export interface ActionValue {
 }
 ```
 
-The flag `canExecute` indicates if an action can be executed under the current conditions. This helps you prevent executing actions that are not allowed by the app's security settings. User roles can be set in the microflows and nanoflows, allowing users to call them. For more information on user roles and security, see the [Module Security Reference Guide](/refguide/module-security/). You can also employ this flag when using a **Call microflow** action triggering a microflow with a parameter. Such an action cannot be executed until a parameter object is available, for example when a parent Data view has finished loading. An attempt to `execute` an action that cannot be executed will have no effect except generating a debug-level warning message. 
+The flag `canExecute` indicates if an action can be run under the current conditions. This helps you prevent executing actions that are not allowed by the app's security settings. User roles can be set in the microflows and nanoflows, allowing users to call them. For more information on user roles and security, see the [Module Security Reference Guide](/refguide/module-security/). You can also employ this flag when using a **Call microflow** action triggering a microflow with a parameter. Such an action cannot be run until a parameter object is available, for example when a parent Data view has finished loading. An attempt to `execute` an action that cannot be run will have no effect except generating a debug-level warning message. 
 
 The flag `isExecuting` indicates whether an action is currently running. A long-running action can take seconds to complete. Your component might use this information to render an inline loading indicator which lets users track loading progress. Often it is not desirable to allow a user to trigger multiple actions in parallel. Therefore, a component (maybe based on a configuration) can decide to skip triggering an action while a previous execution is still in progress.
 
@@ -128,7 +128,7 @@ The value can be read from the `value` field and modified using `setValue` funct
 
 When setting a value, a new value might not satisfy certain validation rules — for example a value might be bigger that the underlying attribute allows. In this case, your change will affect only `value` and `displayValue` received through a prop. Your change will not be propagated to an object’s attribute and will not be visible outside of your component. The component will also receive a validation error text through the `validation` field of `EditableValue`.
 
-It is possible for a component to extend the defined set of validation rules. A new validator — a function that checks a passed value and returns a validation message string if any — can be provided through the `setValidator` function. A component can have only a single custom validator. The Mendix Platform ensures that custom validators are executed whenever necessary, for example when a page is being saved by an end-user. It is best practice to call `setValidator` early in a component's lifecycle — specifically in the [componentDidMount](https://en.reactjs.org/docs/react-component.html#componentdidmount) function.
+It is possible for a component to extend the defined set of validation rules. A new validator — a function that checks a passed value and returns a validation message string if any — can be provided through the `setValidator` function. A component can have only a single custom validator. The Mendix Platform ensures that custom validators are run whenever necessary, for example when a page is being saved by an end-user. It is best practice to call `setValidator` early in a component's lifecycle — specifically in the [componentDidMount](https://en.reactjs.org/docs/react-component.html#componentdidmount) function.
 
 In practice, many client components present values as nicely formatted strings which take locale-specific settings into account. To facilitate such cases `EditableValue` exposes a field `displayValue` formatted version of `value`, and a method `setTextValue` — a version of `setValue` that takes care of parsing. `setTextValue` also validates that a passed value can be parsed and assigns the target attribute’s type. Similarly to `setValue`, a change to an invalid value will not be propagated further that the prop itself, but a `validation` is reported. Note that if a value cannot be parsed, the prop will contain only a `displayValue` string and `value` will become undefined.
 
@@ -177,9 +177,9 @@ The flag `readOnly` indicates whether a value can actually be edited. It will be
 
 The value can be read from the `value` field and modified using the `setValue` function.  The `value` contains an `ObjectItem` or an `ObjectItem[]` based on the configured association. The `ObjectItem` can be passed to the `get` function of any [linked property value](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#linked-values) which is linked to the selectable object's datasource. 
 
-When setting a value, the `ObjectItem`(s) must be items from the selectable object's data source. Note that `setValue` returns nothing and does not guarantee that the value is changed synchronously. But when a change is propagated, a component receives a new prop reflecting the change.
+When setting a value, the `ObjectItem` must be items from the selectable object's data source. Note that `setValue` returns nothing and does not guarantee that the value is changed synchronously. But when a change is propagated, a component receives a new prop reflecting the change.
 
-It is possible for a component to extend the defined set of validation rules. A new validator — a function that checks a passed value and returns a validation message string if any — can be provided through the `setValidator` function. A component can have only a single custom validator. The Mendix Platform ensures that custom validators are executed whenever necessary, for example when a page is being saved by an end-user. It is best practice to call `setValidator` early in a component's lifecycle — specifically in the [componentDidMount](https://en.reactjs.org/docs/react-component.html#componentdidmount) function.
+It is possible for a component to extend the defined set of validation rules. A new validator — a function that checks a passed value and returns a validation message string if any — can be provided through the `setValidator` function. A component can have only a single custom validator. The Mendix Platform ensures that custom validators are run whenever necessary, for example when a page is being saved by an end-user. It is best practice to call `setValidator` early in a component's lifecycle — specifically in the [componentDidMount](https://en.reactjs.org/docs/react-component.html#componentdidmount) function.
 
 ### 4.5 IconValue {#icon-value}
 
@@ -195,13 +195,18 @@ interface WebImageIcon {
     readonly type: "image";
     readonly iconUrl: string;
 }
+
+interface Icon {
+    readonly type: "icon";
+    readonly iconClass: string;
+}
     
 interface NativeImageIcon {
     readonly type: "image";
     readonly iconUrl: Readonly<ImageURISource>;
 }
     
-export type WebIcon = GlyphIcon | WebImageIcon | undefined;
+export type WebIcon = GlyphIcon | WebImageIcon | Icon | undefined;
 export type NativeIcon = GlyphIcon | NativeImageIcon | undefined;
 export type IconValue = WebIcon | NativeIcon;
 ```
@@ -238,6 +243,36 @@ export interface FileValue {
 ### 4.8 List values{#list-values}
 
 `ListValue` is used to represent a list of objects for the [datasource](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#datasource) property. See [List Values](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/) for more information about usage of `ListValue` and associated property values.
+
+### 4.9 SelectionValue {#selection-value}
+
+`SelectionValue` is used to represent selections. It is passed only to [selection properties](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#selection), and is defined as follows:
+
+```ts
+declare interface SelectionValue<T> {
+    readonly selection: T;
+    readonly setSelection: (value: T) => void;
+}
+```
+
+The type received by the component for the selection property depends on the allowed selection types:
+
+* If only single selection is allowed, the component receives a `SelectionSingleValue` defined as `SelectionValue<Option<ObjectItem>> & { type: "Single" };`.
+* If only multi selection is allowed, the client gets a `SelectionMultiValue` defined as `SelectionValue<ObjectItem[]> & { type: "Multi" };`.
+
+Finally, when both selection types are allowed, then the type is a union of `SelectionSingleValue` and `SelectionMultiValue` and the widget should check the `type` to determine if a single or multi selection is configured and act accordingly in the code. Checking the type will also [narrow](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#handbook-content) to the correct type in TypeScript:
+
+```ts
+if (selection?.selection === undefined) {
+    return "None";
+}
+
+if (selection.type === "Single") {
+    selection.setSelection(objectItem);
+} else {
+    selection.setSelection([objectItem]);
+}
+```
 
 ## 5 Exposed Modules
 

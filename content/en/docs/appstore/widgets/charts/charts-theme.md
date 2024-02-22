@@ -12,7 +12,7 @@ aliases:
 
 The look of individual **Charts** widgets can be fine tuned with advanced settings. A theme allows developers to create global settings that apply to all charts. In this way color, language, font and many more things can be set for all the charts in an app.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Change the font style for all charts
 * Add a theme configuration
@@ -34,7 +34,7 @@ This is how the original chart looks:
 
 To create the required custom configuration easily, follow these steps:
 
-1. Open the app with the chart(s).
+1. Open the app with the chart (or charts).
 1. Open a page with a chart.
 1. Open the chart settings.
 1. Go to the tab **Advanced**.

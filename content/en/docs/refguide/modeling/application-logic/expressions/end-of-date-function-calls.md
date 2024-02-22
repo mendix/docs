@@ -6,10 +6,6 @@ description: Describes end-of date function calls in Studio Pro expressions.
 tags: ["studio pro", "expressions", "end-of date function"]
 ---
 
-{{% alert color="info" %}}
-This function is only available for Mendix Studio Pro 9.18.0 and above. 
-{{% /alert %}}
-
 ## 1 Introduction
 
 End-of date function calls calculate the end of the day, week, month, or year and return the value.

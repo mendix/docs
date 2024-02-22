@@ -11,7 +11,7 @@ tags: ["import", "xml", "integration"]
 
 Mendix is the app platform for the enterprise organization, and in enterprise software, you likely do not work in a [green field](https://en.wikipedia.org/wiki/Greenfield_project). In almost every situation, you will need to integrate with existing systems. Mendix supports many ways of integration, but this how-to focuses on how you can import XML documents with Mendix.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Prepare the data structure and GUI
 * Add an XML schema
@@ -21,8 +21,8 @@ This how-to will teach you how to do the following:
 
 Before you continue, make sure that you know how to create:
 
-* Domain models (see [How to Create a Basic Data Layer](/howto/data-models/create-a-basic-data-layer/))
-* A custom file document (see [How to Work with Images and Files](/howto/data-models/working-with-images-and-files/))
+* Domain models (see [Configuring a Domain Model](/refguide/configuring-a-domain-model/))
+* A custom file document (see [File Manager](/refguide/file-manager/))
 * Overview and detail pages (see [How to Create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/))
 * Menu items (see [Setting Up Navigation](/refguide/setting-up-the-navigation-structure/))
 

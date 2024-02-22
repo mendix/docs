@@ -3,7 +3,7 @@ title: "Customize Styling Using Calypso"
 url: /howto8/front-end/calypso/
 weight: 10
 tags: ["Atlas", "UI", "UX", "Calypso", "styling", "CSS", "low-code"]
-description: "This document will teach you to use Calypso, a tool which improves the way you edit styling."
+description: "This document teaches you how to use Calypso, a tool which improves the way you edit styling."
 ---
 
 ## 1 Introduction
@@ -24,7 +24,7 @@ For a deep-dive look into styling with Calypso, check out this video:
 
 ## 2 Prerequisites
 
-* Download Calypso [here](https://www.dropbox.com/sh/r1vx2kig86v5wa6/AABQC8MJfNi8Ff9skinrIf7Ea?dl=0)
+* Download Calypso [here](https://github.com/mendix/Atlas-UI-Framework/releases/download/calypso-v1/Calypso.Setup.1.0.0.exe)
 
 ## 3 Setting Up Calypso
 

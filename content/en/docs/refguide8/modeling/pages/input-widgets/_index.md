@@ -6,10 +6,6 @@ description: "Widgets which can be added to pages to view and edit attributes of
 tags: ["studio pro", "input widgets", "widget", "reference selector", "reference set", "association", "edit", "data input"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/input-widgets.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 Input widgets show data to the end-user and, optionally, allow them to edit the data.
@@ -34,9 +30,9 @@ There are several different input widgets, these are used for different [data ty
 
     {{< figure src="/attachments/refguide8/modeling/pages/input-widgets/drop-down.png" alt="Drop down containing region attribute" >}}
 
-* [Check Box](/refguide8/check-box/) – shows the current value of and, optionally, allows end-users to set a *Boolean* attribute to `true` or `false`:
+* [Checkbox](/refguide8/check-box/) – shows the current value of and, optionally, allows end-users to set a *Boolean* attribute to `true` or `false`:
 
-    {{< figure src="/attachments/refguide8/modeling/pages/input-widgets/check-box.png" alt="Check box showing personal attribute" >}}
+    {{< figure src="/attachments/refguide8/modeling/pages/input-widgets/check-box.png" alt="Checkbox showing personal attribute" >}}
 
 * [Radio Buttons](/refguide8/radio-buttons/) – shows the current value of and, optionally, allows end-users to pick an option from a list of options in an *enumeration* attribute or the value of a *Boolean* attribute:
 

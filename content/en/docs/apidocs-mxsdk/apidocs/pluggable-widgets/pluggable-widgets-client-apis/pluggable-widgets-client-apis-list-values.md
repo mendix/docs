@@ -1,7 +1,7 @@
 ---
 title: "List Values"
 url: /apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/
-description: A guide to understanding the list of objects for the datasource property.
+description: A guide to understanding the list of objects for the datasource property in Mx10.
 tags: ["Pluggable", "Widget", "ListValue", "ListActionValue", "ListAttributeValue", "ListWidgetValue", "ListExpressionValue"]
 
 ---
@@ -191,10 +191,6 @@ this.props.myDataSource.setSortOrder(undefined);
 
 The `setSort` method is supported for all [data sources](/refguide/data-sources/#list-widgets). For `Database` and `XPath` data sources the sorting is done by the back end. For all the other data sources the sorting is done by the client.
 
-{{% alert color="info" %}}
-This feature was introduced in Mendix Studio Pro v9.3.
-{{% /alert %}}
-
 ### 2.4 Filtering {#listvalue-filtering}
 
 It is possible to set filtering conditions for items of a datasource. `setFilter()` method accepts filter conditions and applies filtering. `filter` field represents the current filter condition.
@@ -218,10 +214,6 @@ interface MyListWidgetsProps {
 ```
 
 The `setFilter` method is supported for all [data sources](/refguide/data-sources/#list-widgets). For `Database` and `XPath` data sources the filtering is done by the back end. For all the other data sources the filtering is done by the client. In both cases the widget will receive the filtered items in the `items` property.
-
-{{% alert color="info" %}}
-This feature was introduced in Mendix Studio Pro v9.3.
-{{% /alert %}}
 
 #### 2.4.1 Simple Filtering {#simple-filtering}
 
@@ -395,18 +387,12 @@ interface MyListWidgetsProps {
 The following code sample shows how to call `myListAction` on the first element from the `myDataSource`.
 
 ```ts
-const actionOnFirstItem = this.props.myDataSource.myListAction.get(this.props.myDataSource.item[0]);
+const actionOnFirstItem = this.props.myListAction.get(this.props.myDataSource.item[0]);
 
 actionOnFirstItem.execute();
 ```
 
 In this code sample, checks of status `myDataSource` and availability of items are omitted for simplicity. See the [ActionValue section](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#actionvalue) for more information about the usage of `ActionValue`.
-
-{{% alert color="info" %}}
-The `get` method was introduced in Mendix Studio Pro v9.0.
-
-You can obtain an instance of `ActionValue` by using the `ListActionValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function.
-{{% /alert %}}
 
 ### 3.2 ListAttributeValue {#listattributevalue}
 
@@ -452,12 +438,6 @@ const attributeValue = this.props.myAttributeOnDatasource.get(this.props.myDataS
 ```
 
 Note: in this code sample checks of status of `myDataSource` and availability of items are omitted for simplicity. See [EditableValue section](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#editable-value) for more information about usage of `EditableValue`.
-
-{{% alert color="info" %}}
-The `get` method was introduced in Mendix Studio Pro v9.0.
-
-You can obtain an instance of `EditableValue` by using the `ListAttributeValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function.
-{{% /alert %}}
 
 #### 3.2.2 Attribute ID, Sortable and Filterable Flags {#listattributevalue-id-sortable-filterable}
 
@@ -580,12 +560,6 @@ this.props.myDataSource.items.map(i => this.props.myWidgets.get(i));
 
 When the `widgets` property is not required, there may not be any child widgets configured. In that case the value of the widgets property will be `undefined` (as in the example above`myWidgets`).
 
-{{% alert color="info" %}}
-The `get` method was introduced in Mendix Studio Pro v9.0.
-
-You can obtain an instance of `ReactNode` by using the `ListWidgetValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function.
-{{% /alert %}}
-
 ### 3.5 ListExpressionValue {#listexpressionvalue}
 
 `ListExpressionValue` represents an [expression property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#expression) or [text template property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#texttemplate) that is linked to a data source. This allows the client component to access expression or text template values for individual items from a `ListValue`. `ListExpressionValue` is an object and its definition is as follows:
@@ -613,12 +587,6 @@ The following code sample shows how to get a `DynamicValue` that represents the 
 ```ts
 const expressionValue = this.props.myDataSource.myExpressionOnDatasource.get(this.props.myDataSource.item[0]);
 ```
-
-{{% alert color="info" %}}
-The `get` method was introduced in Mendix Studio Pro v9.0.
-
-You can obtain an instance of `DynamicValue` by using the `ListExpressionValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function.
-{{% /alert %}}
 
 ## 4 Filter Helpers{#filter-helpers}
 

@@ -34,7 +34,7 @@ Before starting this guide, make sure you have completed the following prerequis
 Android devices running MIUI (Xiaomi/Redmi devices) are not supported as Mendix test devices. They can run a production version of your Mendix app, but not the development version based on the [Make It Native App](/releasenotes/mobile/make-it-native-9/) or a [custom developer app](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/).
 {{% /alert %}}
 
-## 3 Creating a New App Based on the Quickstart App {#quickstartapp}
+## 3 Creating a New App Based on the Quickstarter App {#quickstartapp}
 
 For more information on building native mobile apps, see the [Build a Native Mobile Inspection App](https://academy.mendix.com/link/path/66) learning path (you must be signed in to the Mendix Platform to see this learning path).
 
@@ -45,7 +45,7 @@ To start a new app based on a template, follow these steps:
 1. Open Mendix Studio Pro. Select **File** > **New App** , and then select the **Blank Native Mobile App**.
 2. Click **Use this starting point**.
 3. Click **Create app** to close the dialog box.
-4. Click the play button (**Run Locally**) to see the app in action. Please note that starting a native mobile app for the first time can take a bit longer (about one minute total) than subsequent instances.
+4. Click **Run Locally** ({{% icon name="controls-play" %}}) to see the app in action. Please note that starting a native mobile app for the first time can take a bit longer (about one minute total) than subsequent instances.
 5. After running your app, you may see a Windows Security Alert dialog box. Accept the permissions selected by default and click **Allow access** to close the dialog box.
 6. If asked to create database **'default'**, click **Yes**.
 
@@ -55,15 +55,11 @@ At this point you have a running native mobile app. To view your app on a mobile
 
 #### 3.2.1 Downloading for Android
 
-To view your app on an Android device (or emulator), you must download and install the Make It Native 9 app from the [Google Play store](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx9):
-
-{{< figure src="/attachments/howto/mobile/native-mobile/get-started/getting-started-with-native-mobile/make-it-native-googleplay.png" alt="native app on googleplay"   width="500"  >}}
+To view your app on an Android device (or emulator), you must download and install the Make It Native 10 app from the [Google Play store](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx10).
 
 #### 3.2.2 Downloading for iOS {#downloading-for-ios}
 
-To view your app on a iOS device, you must download and install the Make It Native 9 app from the [Apple App Store](https://apps.apple.com/us/app/make-it-native-9/id1542182000):
-
-{{< figure src="/attachments/howto/mobile/native-mobile/get-started/getting-started-with-native-mobile/make-it-native-ios.png" alt="native app on app store"   width="500"  >}}
+To view your app on an iOS device, you must download and install the Make It Native 10 app from the [Apple App Store](https://apps.apple.com/us/app/make-it-native-10/id6450037464).
 
 ### 3.3 Viewing Your App on Your Testing Device
 
@@ -79,7 +75,7 @@ Viewing your app on a mobile device will allow you to test native features and o
 5. Point your mobile device's camera at the QR code. It will automatically launch your test app on your mobile device.
 
 {{% alert color="warning" %}}
-Your mobile device has to be on the same network as your development machine for the Make It Native app to work. If this is the case and the connection still fails, make sure that communication between devices is allowed in the Wi-Fi access point. Also, we recommend keeping the **Runtime port** in **App Settings** > **Edit** on **8080**. If you change it, do not change it to **8083**, because that is designated for app packaging.
+Your mobile device has to be on the same network as your development machine for the Make It Native app to work. If this is the case and the connection still fails, make sure that communication between devices is allowed in the Wi-Fi access point. Also, Mendix recommends keeping the **Runtime port** in **App Settings** > **Edit** on **8080**. If you change it, do not change it to **8083**, because that is designated for app packaging.
 {{% /alert %}}
 
 Now you can see your app on your device. While this is just a template app, whenever you make changes you will be able to view them live on your Make It Native app.
@@ -96,7 +92,7 @@ To see how changes made in Mendix Studio Pro are displayed live on your testing 
 
     {{< figure src="/attachments/howto/mobile/native-mobile/get-started/getting-started-with-native-mobile/new-text-studiopro.png" alt="new studio pro text" >}}
 
-2. Click the play button (**Run Locally**) to automatically update the running app on your device, and see your new text. When you click the play button (**Run Locally**), your app will automatically reload while keeping state. 
+2. Click **Run Locally** ({{% icon name="controls-play" %}}) to automatically update the running app on your device, and see your new text. When you click **Run Locally**, your app will automatically reload while keeping state. 
 
 If you get an error screen while testing your app, there are easy ways to restart it: 
 

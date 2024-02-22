@@ -1,5 +1,5 @@
 ---
-title: "Mobile Device"
+title: "Mobile Device ⚠"
 url: /appstore/widgets/mobile-device/
 category: "Widgets"
 description: "Describes the configuration and usage of the Mobile Device widget, which is available in the Mendix Marketplace."
@@ -21,7 +21,7 @@ The [Mobile Device](https://marketplace.mendix.com/link/component/65139/) widget
 * **App ID** – the unique identifier of your mobile app (for example, *com.mycompany.awesomeapp*)
 * **App version** – the version of your mobile app (for example, *1.2.1*)
 
-Using this widget for Mendix [hybrid mobile](/refguide/hybrid-mobile/) applications is recommended.
+This widget is used for Mendix hybrid mobile applications.
 
 ### 1.1 Features
 

@@ -2,7 +2,7 @@
 title: "Data Containers"
 url: /refguide/data-widgets/
 weight: 15
-tags: ["studio pro", "data widgets", "data containers", "data view", "list view", "data grid"]
+tags: ["studio pro", "data widgets", "data containers", "data view", "list view", "data grid", "snippet"]
 ---
 
 ## 1 Introduction
@@ -27,6 +27,8 @@ The Data containers category contains the following widgets:
 
     {{< figure src="/attachments/refguide/modeling/pages/data-widgets/list-view-example.png"   width="450"  >}}
 
+A [snippet](/refguide/snippet/) can also function as a data container when it has at least one snippet parameter. Unlike other data containers, a snippet never exposes a `$currentObject` variable because it can represent multiple independent objects.
+
 ## 2 Performing Basic Functions
 
 {{% snippet file="/static/_includes/refguide/performing-basic-functions-widgets.md" %}}
@@ -35,3 +37,4 @@ The Data containers category contains the following widgets:
 
 * [Page](/refguide/page/)
 * [Pages](/refguide/pages/)
+* [Snippet](/refguide/snippet/)

@@ -6,10 +6,6 @@ description: "Describes the JSON schemas for operation request bodies and operat
 tags: ["published REST", "JSON", "Schema", "operation", "request body", "result", "message definition"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/published-rest-service-json-schema.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 When you [publish a rest service](/refguide8/published-rest-services/), an [OpenApi (Swagger) documentation page](/refguide8/published-rest-services/#interactive-documentation) is generated for it. It includes a description of the structure of the messages that the service can receive and return. This structure is described using JSON Schema.
@@ -46,7 +42,7 @@ The schema of an attribute depends on the attribute type:
 | Boolean        | `{ "type": "boolean" }` |
 | Date and time  | `{ "type": "string", "format": "date-time" }` |
 | Decimal        | `{ "type": "number" }` |
-| Enumeration    | `{ "type": "string", "enum": ["Male", "Female"] }` |
+| Enumeration    | `{ "type": "string", "enum": ["cat", "dog"] }` |
 | Hashed string  | `{ "type": "string" }` |
 | Integer        | `{ "type": "integer", "format": "int32" }` |
 | Long           | `{ "type": "integer", "format": "int64" }` |

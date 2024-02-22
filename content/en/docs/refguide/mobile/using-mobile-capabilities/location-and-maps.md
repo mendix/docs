@@ -2,7 +2,7 @@
 title: "Location and Maps"
 url: /refguide/mobile/using-mobile-capabilities/location-and-maps/
 weight: 30
-description: This guide will teach you to set up native mobile maps capabilities for Android and Apple devices.
+description: This guide teaches you how to set up native mobile maps capabilities for Android and Apple devices.
 aliases:
     - /howto/mobile/how-to-maps/
 ---
@@ -19,8 +19,8 @@ The Mendix Native Mobile Builder does not currently support connections behind p
 
 * Complete the [Prerequisites](/refguide/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/#prerequisites) section of *Deploying Native Apps*
 * Create an app on the [Google Cloud Console](https://console.cloud.google.com/google/maps-apis/overview) and have Google Maps enabled for Android (and iOS, if you wish to use Google Maps on iOS as well) and also posses an [API key](https://developers.google.com/maps/documentation/android-sdk/get-api-key). 
-* Before you can start using the Google Maps Platform APIs and SDKs, you must sign up and create a [billing account] (https://developers.google.com/maps/gmp-get-started#create-billing-account).
-* Install Mendix Studio Pro v8.15.0 and above to use the Native Mobile App Builder
+* Before you can start using the Google Maps Platform APIs and SDKs, you must sign up and create a [billing account](https://developers.google.com/maps/gmp-get-started#create-billing-account).
+* Install Mendix Studio Pro 8.15.0 and above to use the Native Mobile App Builder
 
 ## 3 Setting Up the Maps Module
 

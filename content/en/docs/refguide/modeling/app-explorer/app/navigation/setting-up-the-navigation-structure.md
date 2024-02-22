@@ -10,7 +10,7 @@ aliases:
 ---
 ## 1 Introduction
 
-Once you created some pages, it is important that your users can access them. For this, you need to create a navigation menu. The navigation editor of Studio Pro allows you define the navigation menu for different type of apps and devices for example, for responsive, tablet browser, hybrid phone, or native mobile apps. It also allows you to define which page is shown as a default home page depending on the user role.
+Once you created some pages, it is important that your users can access them. For this, you need to create a navigation menu. The navigation editor of Studio Pro allows you define the navigation menu for different type of apps and devices for example, for responsive, tablet browser, or native mobile apps. It also allows you to define which page is shown as a default home page depending on the user role.
 
 ## 2 Setting a Default Home Page {#home}
 

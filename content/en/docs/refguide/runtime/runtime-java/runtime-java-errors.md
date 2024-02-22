@@ -11,11 +11,11 @@ Once your application starts performing poorly, becomes unstable or even worse: 
 
 ## 2 Common Errors
 
-Some of the more common errors you can find in the application log that can cause your application to go down are the topic of this article. Let’s dive right in.
+Some of the more common errors you can find in the application log that can cause your application to go down are the topic of this document. Let’s dive right in.
 
 ### 2.1 java.lang.StackOverflowError
 
-Your application is not going to recover from one of these bad boys. When you encounter one of these while running your Mendix application it is practically always going to be caused by an infinite loop. You can easily recreate this by creating a microflow called *Microflow* with a single microflow call action and selecting the microflow called *Microflow*. The infinite loop will crash your app and produce a stack overflow error.
+Your application is not going to recover from one of these errors. When you encounter one of these while running your Mendix application it is practically always going to be caused by an infinite loop. You can easily recreate this by creating a microflow called *Microflow* with a single microflow call action and selecting the microflow called *Microflow*. The infinite loop will crash your app and produce a stack overflow error.
 
 ### 2.2 java.lang.OutOfMemoryError: Java heap space
 

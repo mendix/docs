@@ -8,7 +8,7 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-In this how-to, you will learn how to set up a GitHub repository. The repository will contain your development content and can be shared for others to contribute to an application or [Marketplace component](/appstore/general/share-app-store-content/).
+In this how-to, you will learn how to set up a GitHub repository. The repository will contain your development content and can be shared for others to contribute to an application or [Marketplace component](/appstore/sharing-content/).
 
 ## 2 Preparation
 
@@ -23,13 +23,13 @@ The description should say what the item does. This description can also be used
 
 Add a *.gitignore* file to make sure you keep your repo clean.
 
-## 4 Widget Boilerplate
+## 4 Making a Widget
 
-When making a new widget, use the [Widget Boilerplate](https://github.com/mendix/AppStoreWidgetBoilerplate) from GitHub. This has everything you need to get started developing a Mendix widget.
+When making a new widget, Mendix suggests you [Build a Pluggable Web Widget](/howto8/extensibility/create-a-pluggable-widget-one/).
 
 ## 5 Releases
 
-If you want to make a new release for the Mendix Marketplace, start with a new tag on the appropriate commit on the master or release branch. From these tags, you can create a [new release in GitHub](https://help.github.com/articles/creating-releases). In this release, set your release notes (which you can then use for the Marketplace release as well) and provide an official name. If you add the *.mpk* file as a binary file to the release tag, the Mendix Marketplace will automatically sync the *.mpk* to your new draft:
+If you want to make a new release for the Mendix Marketplace, start with a new tag on the appropriate commit on the production or release branch. From these tags, you can create a [new release in GitHub](https://help.github.com/articles/creating-releases). In this release, set your release notes (which you can then use for the Marketplace release as well) and provide an official name. If you add the *.mpk* file as a binary file to the release tag, the Mendix Marketplace will automatically sync the *.mpk* to your new draft:
 
 {{< figure src="/attachments/howto8/collaboration-requirements-management/starting-your-own-repository/18580533.png" >}}
 

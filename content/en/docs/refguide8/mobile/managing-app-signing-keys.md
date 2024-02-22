@@ -29,7 +29,17 @@ If you have an Apple Mac available, see the Apple developer documentation on [ce
 
 ### 2.2 On Other Platforms
 
-If you do not have an Apple Mac available, you can create a certificate signing request manually. First, create a private key and certificate signing request with the OpenSSL utilty. The following steps assume you have a Windows machine, but these are equally applicable to Linux machines, which usually have the OpenSSL package pre-installed.
+If you do not have an Apple Mac available, you can create a certificate signing request manually. First, create a private key and certificate signing request with the OpenSSL utilty. 
+
+{{% alert color="warning" %}}
+**Do not use OpenSSL version 3.x on Windows**
+
+If you use OpenSSL version 3.x on Windows and you get the error `Could not open certificate container. Wrong password or corrupted file. Please try again.`, please use the latest patch release of **version 1.x**, which can be downloaded here: [OpenSSL for Windows](https://slproweb.com/products/Win32OpenSSL.html).
+
+Another option is to use OpenSSL from within the **Windows Subsystem for Linux** to generate the certificate. Use the instructions [Install Linux on Windows with WSL](https://learn.microsoft.com/en-us/windows/wsl/install) to set this up.
+{{% /alert %}}
+
+The following steps assume you have a Windows machine, but these are equally applicable to Linux machines, which usually have the OpenSSL package pre-installed.
 
 To create a certificate signing request manually, follow these steps:
 

@@ -68,7 +68,7 @@ This setting handles the parameter's name. A name is required. Names must start 
 |   Boolean   |   The Boolean parameter type allows you to pass a Boolean value to a JavaScript action.  |
 |   Date and Time   |  The date and time parameter type allows you to pass a date and time value to a JavaScript action. In the generated JavaScript action code, this type will be represented as a JavaScript `Date`.  |
 |   Decimal   |  The decimal parameter type allows you to pass a decimal value to a JavaScript action. In the generated JavaScript action code, this type will be represented as a [Big](https://www.npmjs.com/package/big-js) object.  |
-|   Enumeration   |  The enumeration parameter type allows you to pass a enumeration value to a JavaScript action. In the generated JavaScript action code, this type will be represented as a string.  |
+|   Enumeration   |  The enumeration parameter type allows you to pass an enumeration value to a JavaScript action. In the generated JavaScript action code, this type will be represented as a string.  |
 |   Integer/Long   |  The integer/long parameter type allows you to pass a decimal value to a JavaScript action. In the generated JavaScript action code, this type will be represented as a [Big](https://www.npmjs.com/package/big-js) object.  |
 |   String   |  The string parameter type allows you to pass a string value to a JavaScript action. |
 
@@ -89,7 +89,7 @@ The return parameter type determines the type of data a JavaScript action return
 JavaScript actions can be for a specific platform, they have an optional platform property with the following values:
 
 * All *(default)*
-* Web – can be used in a browser or hybrid mobile app
+* Web – can be used in a browser or web app
 * Native – can be used in a native mobile app
 
 When using a JavaScript action for a specific platform in a nanoflow, it will restrict the platform for that nanoflow. For example, only native pages can be opened in a nanoflow that contains a JavaScript action where the platform is set to **Native**.
@@ -126,7 +126,7 @@ The **Icon** property is optional when exposing a JavaScript action. The image i
 
 When no icon is selected, the default JavaScript action icon is used. The required icon size is 64x64 pixels; the required icon format is PNG. 
 
-A separate icon can be provided for the [dark mode](/refguide/preferences-dialog/#dark-mode) of Studio Pro to fit its color scheme.
+A separate icon can be provided for the [dark mode](/refguide/preferences-dialog/#studio-pro-theme) of Studio Pro to fit its color scheme.
 
 ### 4.4 Image
 
@@ -136,7 +136,7 @@ When no image and no icon is selected, the default JavaScript action image is us
 
 The required image size is 256x192 pixels; the required the image format is PNG. 
 
-A separate image can be provided for the [dark mode](/refguide/preferences-dialog/#dark-mode) of Studio Pro to fit its color scheme.
+A separate image can be provided for the [dark mode](/refguide/preferences-dialog/#studio-pro-theme) of Studio Pro to fit its color scheme.
 
 ## 5 Documentation
 

@@ -63,7 +63,7 @@ When an event is triggered, you can choose what action is triggered. Possible op
 * [Save changes](#save-changes) 
 * [Cancel changes](#cancel-changes) 
 * [Close page](#close-page) 
-* [Delete](#delete) 
+* [Delete object(s)](#delete-objects) 
 * [Synchronize](#synchronize) 
 * [Sign out](#sign-out) 
 * [Call workflow](#call-workflow)
@@ -83,7 +83,7 @@ The **Show a page** event opens the specified page. Select the page which opens 
   
 * **Page settings** – opens a dialog box enabling you to configure the page in more detail (including the page title).
 
-* **Page for specializations** – allows you to configure a different page for each specialization of the context object. If this action is placed inside a data view, it is possible to configure different page(s) for each specialization of the data view object. If this action is placed in a data grid, it is possible to configure different pages for each specialization of the data grid entity. This setting is not shown when there is not a context object or when the context object has no specializations.
+* **Page for specializations** – allows you to configure a different page for each specialization of the context object. If this action is placed inside a data view, it is possible to configure different page (or pages) for each specialization of the data view object. If this action is placed in a data grid, it is possible to configure different pages for each specialization of the data grid entity. This setting is not shown when there is not a context object or when the context object has no specializations.
 
 #### 3.2.1 Page Settings {#page-settings}
 
@@ -93,7 +93,7 @@ The **Show a page** event opens the specified page. Select the page which opens 
   
 * **Page title** – the page you open can be given a unique title, depending on where you open it from. This allows you to re-use the same page for different purposes. For example, by setting the title to **New Customer** from one button and **Edit Customer** from another, you can use the same page for editing new and existing customers.
 
-  This option is activated by checking the **Override page title** check box.
+  This option is activated by checking the **Override page title** checkbox.
 
 * **Page arguments** – a list of parameters of the selected page and the objects that will be passed to each of them.
 
@@ -116,11 +116,21 @@ The following settings are specific for this event:
 
 The [microflow](/refguide/microflow/) that should be executed.
 
+You can either select an existing microflow or create a new microflow by clicking the **New** button from the **Select Microflow** dialog box.
+
+In Studio Pro 10.4.0 and above, when creating a new microflow, a dialog box is shown where you can set the name and select parameters for the new microflow. You can choose the data view, snippet, page parameter, or available selection from which the parameter must be created in the new microflow:
+
+{{< figure src="/attachments/refguide/modeling/pages/on-click-event/configure-new-microflow-with-parameter.png" width="650px" >}}
+
+If there is nothing to pass to the new microflow, then a dialog box is shown where you can only specify the name of the microflow:
+
+{{< figure src="/attachments/refguide/modeling/pages/on-click-event/configure-new-microflow-no-parameter.png" >}}
+
 #### 3.3.2 Microflow Settings {#microflow-settings}
 
 **Microflow settings** opens a dialog box enabling you to specify what parameters will be passed to the microflow and how the microflow will be run.
 
-{{< figure src="/attachments/refguide/modeling/pages/on-click-event/microflow-settings.png" alt="Microflow settings dialog" >}}
+{{< figure src="/attachments/refguide/modeling/pages/on-click-event/microflow-settings.png" alt="Microflow settings dialog" width="550px" >}}
 
 ##### 3.3.2.1 Microflow
 
@@ -191,6 +201,10 @@ For example, *Do not empty*.
 
 For buttons which call a microflow from inside a grid, **Maintain selection after microflow** specifies whether the current selection of rows in the grid should be maintained after executing the microflow.
 
+{{% alert color="warning" %}}
+If the data in the grid is updated, selection on the *not* visible pages is lost if the items are selected via an approach other than a **Select all** button. Therefore, consider this feature carefully when implementing it in an app with multiple pages.
+{{%/alert %}}
+
 ##### 3.3.2.11 Abort on Validation Errors {#abort-on-validation-errors}
 
 For microflows that are used within a data widget, setting **Abort on Validation Errors** to **Yes** forces widget validations to be performed *before* executing the microflow. If the validations fail, the microflow will not be executed.
@@ -205,7 +219,15 @@ For microflows that are used within a data widget, setting **Abort on Validation
 
 The **Call a nanoflow** event executes the specified nanoflow. 
 
+#### 3.4.1 Nanoflow
+
 Set the **Nanoflow** property to specify a [nanoflow](/refguide/nanoflow/) that should be executed.
+
+You can either select an existing nanoflow or create a new nanoflow by clicking the **New** button from the **Select Nanoflow** dialog box.
+
+In Studio Pro 10.4.0 and above, when creating a new nanoflow, a dialog box is shown where you can set the name and select parameters for the new nanoflow. You can choose the data view, snippet, page parameter, or available selection from which the parameter must be created in the new nanoflow.
+
+If there is nothing to pass to the new nanoflow, then a dialog box is shown where you can only specify the name of the nanoflow.
 
 ### 3.5 Open Link {#open-link}
 
@@ -260,9 +282,15 @@ Set the **Close page** property to indicate whether the current page should be c
 
 The **Close page** event closes a pop-up window (for pop-up pages) or navigates to the previously visited page (for content pages).
 
-### 3.10 Delete {#delete}
+### 3.10 Delete object(s) {#delete-objects}
 
-The **Delete event** deletes an object. Its behavior depends on a data container it is placed in. When placed in a data view, deletes the connected object; it does not delete objects in a nested data view unless configured through delete behavior. When placed in a data grid, template grid, or reference set selector control bar, it deletes the selected object(s). When placed inside a list view, it deletes the corresponding list view item.
+When placed in the control bar of a [data grid](/refguide/data-grid/), [template grid](/refguide/template-grid/), or [reference set selector](/refguide/reference-set-selector/) the **Delete object(s)** event will delete the selected objects.
+
+In other situations, the user can select which objects to delete. The object can be from any surrounding data container, [snippet parameter](/refguide/snippet/), [page parameter](/refguide/page-properties/#parameters) or selections of [pluggable widgets](/refguide/mendix-client/#pluggable-widgets) (for example a [Data Grid 2](/appstore/modules/data-grid-2/) or [Gallery](/appstore/modules/gallery/) widget).
+
+{{% alert color="info" %}}
+The option to configure which objects to delete was introduced in Studio Pro 10.4.0.
+{{% /alert %}}
 
 This event cannot be used to delete [external objects](/refguide/external-entities/). Use a microflow with a [Delete External Object](/refguide/delete-external-object/) activity to delete external objects.
 
@@ -290,7 +318,7 @@ The following properties are specific for this event:
 
 ### 3.14 Show Workflow Admin Page {#show-workflow-page}
 
-**Show workflow admin page** opens a workflow overview page. This page is typically used by a workflow administrator role to inspect status of a workflow instance and to manage the instance, e.g. abort a workflow if required.
+**Show workflow admin page** opens a workflow overview page. This page is typically used by a workflow administrator role to inspect status of a workflow instance and to manage the instance, for example, abort a workflow if required.
 
 An element calling this event should be placed in a data container connected to the **System.WorkflowInstance** entity. 
 

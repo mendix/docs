@@ -22,9 +22,9 @@ Below is a domain model that defines customers and orders. The names of the enti
 | --- | --- |
 | Annotation | A comment explaining an aspect of the domain model |
 | Entity Name | How the [entity](/refguide/entities/) will be referred to in the database |
-| Event Handler(s) | An indication that one or more [event handlers](/refguide/event-handlers/) have been set up for this entity |
+| Event Handler | An indication that one or more [event handlers](/refguide/event-handlers/) have been set up for this entity |
 | Image | An image which helps to identify the entity |
-| Validation Rule(s) | An indication that one or more [validation rules](/refguide/validation-rules/) have been set up for this attribute |
+| Validation Rule | An indication that one or more [validation rules](/refguide/validation-rules/) have been set up for this attribute |
 | Calculated Value | An indication that the value of this [attribute](/refguide/attributes/) is calculated |
 | One | Indicates that one of this entity relates to the quantity of the entity at the other end of the association |
 | Association Name | How the [association](/refguide/associations/) will be referred to in the database |
@@ -62,3 +62,7 @@ The entity 'Order' is stored in the table 'module$order' which is shown below. I
 | --- | --- | --- |
 | 5 | 5 | 2009-11-27 09:56:45.099 |
 | 8 | 8 | 2008-04-01 08:10:45.053 |
+
+## 3 Read More
+
+* [Configuring a Domain Model](/refguide/configuring-a-domain-model/)

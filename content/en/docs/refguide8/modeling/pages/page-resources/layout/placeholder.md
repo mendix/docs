@@ -5,16 +5,12 @@ weight: 10
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/placeholder.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 A **placeholder** can be used in two ways:
 
 * In a [layout](/refguide8/layout/) to define a "gap" that can be filled in a [page](/refguide8/page/) based on that layout
-* In a layout that defines the layout as a master layout
+* In a layout that defines the layout as a primary layout
 
 Each placeholder is colored blue with its name displayed in the middle of it. The placeholder named **Main** is always shown in a darker shade of blue. 
 

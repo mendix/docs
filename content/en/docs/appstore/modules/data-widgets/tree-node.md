@@ -10,7 +10,7 @@ tags: ["marketplace", "marketplace component", "widget", "tree node", "bootstrap
 
 The [Tree Node](https://marketplace.mendix.com/link/component/116540) widget displays a level of tree nodes.
 
-We recommend that you use multiple Tree Node widgets in a nested matter. In this way, you can map out your entire domain model in the form of a tree view. If you only need one tree node, then the [Accordion](/appstore/widgets/accordion/) widget is a better alternative.
+Mendix recommends using multiple Tree Node widgets in a nested matter. In this way, you can map out your entire domain model in the form of a tree view. If you only need one tree node, then the [Accordion](/appstore/widgets/accordion/) widget is a better alternative.
 
 ## 2 Features
 
@@ -64,29 +64,10 @@ Drag the Tree Node widget onto the page and use the configuration properties des
     * Configurable when **Has children** is set to **Yes**; default: **No**
 * **Animate** – defines whether the content is animated when a tree node expands and collapses
     * Default: **Yes**
-    * Configurable when [**Enable advanced options**](#advanced) is set to **Yes** in Mendix Studio
 
-### 3.2 Advanced Tab {#advanced}
+### 3.2 Visualization Tab {#visualization}
 
-The **Enable advanced options** button (default: **No**) determines whether advanced configuration properties become visible.
-
-When set to **Yes**, the following tabs and properties become visible:
-
-* [General](#general) tab
-    * **Animate**
-* [Visualization](#visualization) tab
-    * **Show icon**
-    * **Expanded icon**
-    * **Collapsed icon**
-    * **Animate icon**
-
-{{% alert color="info" %}}
-The **Advanced** tab is only available in Mendix Studio. In Mendix Studio Pro there is no **Advanced** tab and all the advanced options listed above are always available on the related tabs.
-{{% /alert %}}
-
-### 3.3 Visualization Tab {#visualization}
-
-The **Visualization** tab is only visible when the [Enable advanced options](#advanced) is set to **Yes** in Mendix Studio. It includes the following properties:
+The **Visualization** tab includes the following properties:
 
 * **Show icon** – defines the location of the icon relative to the header
     * Default: **Left**

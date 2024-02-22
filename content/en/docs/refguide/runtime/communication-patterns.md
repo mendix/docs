@@ -24,7 +24,7 @@ The Mendix Platform consists of the following components:
 * Mendix Platform – a completely integrated application platform-as-a-service (aPaaS) for designing, building, deploying, and managing apps
 * Developer Portal – a web-based collaborative environment for designing, developing, and deploying apps, managing users and environments, deploying apps to the cloud with a single click, and managing and monitoring their performance
 * Marketplace – a portal with hundreds of publicly-available building blocks to speed up app development
-* Mendix Studio and Studio Pro – multi-user modeling studios of the Mendix Platform
+* Mendix Studio Pro – the modeling studio of the Mendix platform
 * Team Server – a central repository for managing application model versions
 * Mendix Runtime – runs applications using a server part (the [Runtime Server](/refguide/runtime-server/)) and a client part ([Mendix Client](/refguide/mendix-client/))
 * Build – a process which creates deployment packages from artifacts such as models, style sheets, and custom Java classes
@@ -42,7 +42,7 @@ Communication between these components operates as follows:
     * Static resources like pages, stylesheets, widgets, images, etc.
     * Application data-related communication, which includes CRUD commands on data and logic that may require data
 * The Runtime Server communicates with different (relational) databases using SQL statements handled by a JDBC library
-    * Application data is stored in a ER-model in an database
+    * Application data is stored in an ER-model in an database
 
 ## 3 Basic CRUD Communication Pattern{#crud}
 
@@ -266,7 +266,7 @@ Change and validate the changed attributes of the object in the Runtime Server:
 This will trigger the following actions on the database:
 
 * Get the original object from the database
-* Update the attribute(s) changed by the user in the Runtime Server
+* Update the attribute (or attributes) changed by the user in the Runtime Server
 
 The first step is required to determine all the data business logic and validations defined on the entity.
 
@@ -379,7 +379,7 @@ Refresh the data grid:
 }
 ```
 
-### 3.5 Security Issues
+### 3.5 Security Issues{#security}
 
 The security model of Mendix ensures that attributes that the user cannot see are never transferred to the client. This means that changes made in the Runtime Server (for example, in a microflow) to an attribute that the user cannot see will not be persisted if an object is sent to the Mendix Client without being committed to the database. See the blog post [Transient attributes and access rights - be careful](https://gandy84.medium.com/transient-attributes-and-access-rights-be-careful-mendix-and-me-57cf0aa1c98e) published on *Medium* for a deeper discussion of this.
 

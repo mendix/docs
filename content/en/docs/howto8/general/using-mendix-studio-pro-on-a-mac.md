@@ -17,7 +17,7 @@ To run Studio Pro on Apple Silicon Macs, such as the M1(X), an LTS version start
 
 To start making Mendix native mobile apps on your Mac, follow this how-to.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Configure your Windows virtual machine for Mendix Studio Pro
 * Run a Mendix app on a test device using your Windows virtual machine
@@ -38,7 +38,7 @@ To configure your Windows virtual machine to work with Mendix Studio Pro, follow
 
     {{< figure src="/attachments/howto8/general/using-mendix-studio-pro-on-a-mac/windows-control-center.png" alt="parallels control center"   width="450"  >}}
 
-2. Click the **gear** symbol to open the **Configuration Panel**.
+2. Click **Configuration** ({{% icon name="cog" %}}) to open the **Configuration Panel**.
 3. Navigate to the **Hardware** tab, and select **Network** from the left panel:
 
     {{< figure src="/attachments/howto8/general/using-mendix-studio-pro-on-a-mac/windows-configuration.png" alt="network in configuration"   width="450"  >}}
@@ -55,7 +55,7 @@ To configure your Windows virtual machine to work with Mendix Studio Pro, follow
 
     {{< figure src="/attachments/howto8/general/using-mendix-studio-pro-on-a-mac/parallels-preferences-no-ports.png" alt="network tab"   width="450"  >}}
 
-8. Click the **+** button and add two ports: one for 8080 and one for 8083, both forwarded to your Windows virtual machine (the 8083 port is only necessary for developing native mobile apps):
+8. Click the {{% icon name="add" %}} button and add two ports: one for 8080 and one for 8083, both forwarded to your Windows virtual machine (the 8083 port is only necessary for developing native mobile apps):
 
     {{< figure src="/attachments/howto8/general/using-mendix-studio-pro-on-a-mac/port-setup.png" alt="plus button"   width="450"  >}}
 
@@ -93,7 +93,7 @@ Instead, you must enter your Mac's IP address into your Make It Native app. To r
 
 2. Place your cursor over your Wi-Fi symbol in your system tray, then and click while holding <kbd>Option</kbd> to see your Mac's advanced network information. You will see your **IP Address** in this drop-down menu.
 
-3. In your Make It Native app's **Host** field, type *{your IP address}:8080*:
+3. In your Make It Native app's **Host** field, type `{your IP address}:8080` like this:
 
     {{< figure src="/attachments/howto8/general/using-mendix-studio-pro-on-a-mac/ip-in-dev-app.png" alt="ip in dev app"   width="300"  >}}
 

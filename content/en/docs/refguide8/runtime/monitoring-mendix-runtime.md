@@ -9,16 +9,12 @@ tags: ["runtime", "json", "studio pro", "on-premises", "local"]
 
 ## 1 Introduction
 
-For on-premises and local deployments of Mendix, the Mendix Runtime monitoring actions can be called by sending a JSON request to the admin handler. This is accomplished by sending a request to the admin port which is specified in the application configuration (the default port is 8090).
+For on-premises and local deployments of Mendix, the Mendix Runtime monitoring actions can be called by sending a JSON request to the admin handler. This is accomplished by sending a request to the admin port that is specified in the application configuration (the default port is 8090).
 
 {{% alert color="info" %}}
 This is only available for local and on-premises deployments of your app.
 
-For deployments to the Mendix Cloud, you will not have access to the m2ee admin handler. However, you can get the same information from various pages in the Developer Portal. For more information see:
-
-* [Metrics](/developerportal/operate/metrics/)
-* [Trends in Mendix Cloud v4](/developerportal/operate/trends-v4/)
-* [Running Now Metrics](/developerportal/operate/troubleshooting-mxcloud-runningnow/)
+For deployments to Mendix Cloud, you will not have access to the m2ee admin handler. However, you can get the same information from various pages in the Developer Portal. For more information, see [Metrics](/developerportal/operate/metrics/) and [Running Now](/developerportal/deploy/mxcloud-runningnow/).
 {{% /alert %}}
 
 You can change the admin port from Studio Pro by navigating to **Project** > **Settings** > **Configurations** > *your configuration* > **Server** > **Admin port**.
@@ -28,7 +24,7 @@ The request needs to be of the **POST** type with **No Authorization** and the f
 * Content-Type: **application/json**
 * X-M2EE-Authentication: **yourM2EEPassword_Base64Encoded**
 
-The M2EE password is NOT the super administrator password, but a separate password. If you have the application deployed *on premises*, you can set this password in the **settings.yaml** file, which is located in the **Apps/YourProject** folder. If you are *running the application from Studio Pro*, the M2EE password is set automatically by Mendix, and you can retrieve it from the environment variables of your application process.
+The M2EE password is not the super administrator password; it is a separate password. If you have the application deployed on premises, you can set this password in the **settings.yaml** file, which is located in the **Apps/YourProject** folder. If you are running the application from Studio Pro, the M2EE password is set automatically by Mendix, and you can retrieve it from the environment variables of your application process.
 
 The next sections explain which monitoring actions are supported.
 
@@ -255,9 +251,9 @@ Number of database requests. Distinguishes between "select", "update", "insert",
 Memory statistics should only be interpreted by experts, lack of detailed knowledge of the Java memory model can lead to false conclusions.
 {{% /alert %}}
 
-Represents the number of bytes allocated to the specified memory sections. For a general explanation, see the [Oracle documentation on tuning garbage collection](http://docs.oracle.com/javase/8/docs/technotes/guides/vm/gctuning/). For the heap and non-heap fields see the [memory usage](https://docs.oracle.com/javase/8/docs/api/java/lang/management/MemoryUsage.html) page.
+Represents the number of bytes allocated to the specified memory sections. For a general explanation, see the [Oracle documentation on tuning garbage collection](https://docs.oracle.com/en/java/javase/11/gctuning/introduction-garbage-collection-tuning.html). For the heap and non-heap fields see the [memory usage](https://docs.oracle.com/en/java/javase/11/docs/api/java.management/java/lang/management/MemoryUsage.html) page.
 
-The "memorypools" section contains an ordered list of all the memory pools exactly as we receive them from the JVM with some fields of the [MemoryPoolMxBean](http://docs.oracle.com/javase/8/docs/api/java/lang/management/MemoryPoolMXBean.html):
+The "memorypools" section contains an ordered list of all the memory pools exactly as we receive them from the JVM with some fields of the [MemoryPoolMxBean](https://docs.oracle.com/en/java/javase/11/docs/api/java.management/java/lang/management/MemoryPoolMXBean.html):
 
 * "usage" – returns an estimate of the memory usage of this memory pool (in bytes)
 * "is_heap" – is this memory pool part of the heap or not?

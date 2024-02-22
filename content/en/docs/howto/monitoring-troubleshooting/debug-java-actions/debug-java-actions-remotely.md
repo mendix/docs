@@ -6,9 +6,13 @@ tags: ["monitoring", "troubleshooting", "java action", "debug"]
 
 ## 1 Introduction
 
+{{% alert color = "warning" %}}
+It is not possible to debug Java actions remotely in Eclipse for applications that are hosted by Mendix Cloud.
+{{% /alert %}}
+
 To debug the Java actions used in a Mendix microflow, you need to make some configuration changes to the way you start the Mendix Runtime. This how-to will explain how to manage this.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Edit the server configuration
 * Configure remote debugging
@@ -21,7 +25,9 @@ To edit the server configuration with extra JVM parameters, follow these steps:
 
 1. Open the [App Settings](/refguide/app-settings/).
 2. Edit the configuration on the **Configurations** tab.
-3. Go to the **Server** tab of the configuration, add the following line to the **Extra JVM parameters** field: `-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005`
+3. Go to the **Server** tab of the configuration, add the following line to the **Extra JVM parameters** field:
+
+    `-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005`
 
     {{< figure src="/attachments/howto/monitoring-troubleshooting/debug-java-actions/debug-java-actions-remotely/18580063.png" >}}
 

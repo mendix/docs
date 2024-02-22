@@ -15,12 +15,12 @@ Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Be
 
 To build a hybrid app and publish it, see [How to Build a Mendix Hybrid App Locally](/howto8/mobile/build-hybrid-locally/) for information on local building.
 
-To publish your app in an app store, we recommend you build native iOS apps instead. For more information, see [Building Native Apps](/refguide/mobile/distributing-mobile-apps/building-native-apps/).
+To publish your app in an app store, Mendix recommends building native iOS apps instead. For more information, see [Building Native Apps](/refguide/mobile/distributing-mobile-apps/building-native-apps/).
 {{% /alert %}}
 
 The hybrid mobile app publishing process is based on Adobe PhoneGap. We have integrated the [Adobe PhoneGap Build](https://build.phonegap.com/) service into Mendix to provide support for automatically building the required hybrid mobile packages. Instead of worrying about technical details, you can focus on what matters most: rapidly developing an app to support your business processes.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Set up app signing keys
 * Complete the app-packaging process
@@ -51,7 +51,7 @@ To start the packaging process, follow these steps:
 5. On the **App Info** tab set up the following settings for your app:
     1. Fill in the name that your app will have in the app stores and on the device. The **Name**  should correspond to the name set up in your Apple certificate.
     2. Set the unique **App Identifier** for your app. The **App Identifier** should correspond to the ones set up in your Apple certificate.
-    3. If your app does not employ push notifications, disable the **Push Notifications** permission by clearing its check box.
+    3. If your app does not employ push notifications, disable the **Push Notifications** permission by clearing its checkbox.
 6. Select the platforms that you want to support (this how-to assumes that you will choose at least iOS).
 7. Optionally, upload custom-branded app icons and splash screens under the tabs for the different platforms. You can find those tabs next to the **App Info** tab.
 
@@ -158,7 +158,7 @@ After you create your build you can download the resulting APK using a download 
 2. Open **Apps and notifications,** or on a Samsung Galaxy **Biometrics and Security**.
 3. Tap **Install unknown apps** (on certain devices you may have to tap **Special access** first).
 4. Select the browser you wish to use when downloading APK files.
-5. Enable the **Allow from this source** switch or check box.
+5. Enable the **Allow from this source** switch or checkbox.
 6. Tap the **OK** button if prompted.
 
 ### 6.2 Installing Your APK
@@ -177,7 +177,7 @@ To install an APK file directly from your Android's **Download** folder:
 
 1. Tap the **Back** button to see your list of apps.
 2. Tap the file manager app you will use to install the APK file.
-3. Tap the **Allow** switch or check box.
+3. Tap the **Allow** switch or checkbox.
 4. Tap the **OK** button if prompted.
 
 #### 6.2.2 Option 2: Using a USB Cord

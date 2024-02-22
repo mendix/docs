@@ -2,15 +2,15 @@
 title: "Build JavaScript Actions for Native Mobile"
 url: /howto8/extensibility/create-native-javascript-action/
 weight: 30
-description: "This tutorial will teach you to build a JavaScript action for native mobile apps."
+description: "This tutorial teaches you how to build a JavaScript action for native mobile apps."
 tags: ["NFC", "Near Field Communication", "JavaScript", "native", "mobile"]
 ---
 
 ## 1 Introduction
 
-Native mobile applications have faster performance and give you the ability to use device hardware features. This tutorial will teach you to build your own JavaScript actions, specifically ones that harness your native mobile device's hardware to read Near Field Communication (NFC) tags. If you would like to use third-party modules other than an NFC scanner, refer to this tutorial as a general overview.
+Native mobile applications have faster performance and give you the ability to use device hardware features. This tutorial teaches you how to build your own JavaScript actions, specifically ones that harness your native mobile device's hardware to read Near Field Communication (NFC) tags. If you would like to use third-party modules other than an NFC scanner, refer to this tutorial as a general overview.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Build a JavaScript action for a native mobile app
 * Add a dependency to the native JavaScript action
@@ -82,8 +82,8 @@ In this section, you will create a normal custom developer app to learn the proc
 
 Now you will build a native custom developer app and install it on your phone:
 
-1. If you do not have your GitHub and App Center keys, follow the [Getting Your Tokens](/howto8/mobile/deploying-native-app/#getting-your-tokens) section of *Deploy Your First Mendix Native Mobile App with the Native Builder CLI* to get your authentication codes.
-1. Complete the [Preparing Your Project](/howto8/mobile/deploying-native-app-cli/#preparing) section of *How to Deploy Your First Mendix Native Mobile App* using these parameters:
+1. If you do not have your GitHub and App Center keys, follow [Getting Your Tokens](/howto8/mobile/deploying-native-app/#getting-your-tokens) to get your authentication codes.
+1. Complete the [Preparing Your Project](/howto8/mobile/deploying-native-app-cli/#preparing) section of *How to Build a Mendix Native App in the Cloud* using these parameters:
 
     ```shell
     native-builder.exe prepare --java-home "C:\Program Files\AdoptOpenJDK\jdk-11.0.3.7-hotspot" --mxbuild-path "C:\Program Files\Mendix\8.6.0.715\modeler\mxbuild.exe" --project-path "Y:\MendixProjects\NativeNFC\NativeNFC.mpr" --github-access-token "a1f422..." --appcenter-api-token "a1b95a..." --project-name "Native NFC App" --app-name "Native NFC App" --app-identifier "com.mendix.howto.nativenfc" --runtime-url "https://nativenfc-sandbox.mxapps.io/"
@@ -114,13 +114,13 @@ Your apps are now available in the *C:\native-builder\builds* folder, where you 
 
 {{% /alert %}}
 
-1. Install the app on your device. For more information on app installation, see the [Distributing](/howto8/mobile/deploying-native-app/#distributing) section of *How to Deploy Your First Mendix Native Mobile App*.
+1. Install the app on your device. For more information on app installation, see the [Distributing](/howto8/mobile/deploying-native-app/#distributing) section of *How to Build a Mendix Native App in the Cloud*.
 1. Open your app on your testing device.
 1. Tap your NFC button. You will incur this error: **JavaScript action was not implemented**. You will implement your action later.
 
 ### 3.3 Installing a Dependency in Your Custom Developer App {#installing-dependency-app}
 
-In this section you will install the external library [react-native-nfc-manager](https://www.npmjs.com/package/react-native-nfc-manager) which makes adding NFC functionality easier. Mendix Studio Pro 8.6 is based on *React Native version 0.59*, which will influence the selected version of the library. You will make all changes to the **master** branch, because with each build a new branch is created (`build/{number}`) from **master** with your latest changes.
+In this section you will install the external library [react-native-nfc-manager](https://www.npmjs.com/package/react-native-nfc-manager) which makes adding NFC functionality easier. Mendix Studio Pro 8.6 is based on *React Native version 0.59*, which will influence the selected version of the library. You will make all changes to the **main** branch, because with each build a new branch is created (`build/{number}`) from **main** with your latest changes.
 
 The dependency is split into two parts: the native operating system part and the client JavaScript part. To add the dependency for the app, do the following:
 
@@ -185,7 +185,7 @@ For more information about linking, see the following resources:
 
 * Facebook's React Native [Linking Documentation](https://facebook.github.io/react-native/docs/linking)
 * The Medium post [Demystifying React Native Modules Linking](https://engineering.brigad.co/demystifying-react-native-modules-linking-964399ec731b)
-* The GitHub React Native community post [Autolinking](https://github.com/react-native-community/cli/blob/master/docs/autolinking.md)
+* The GitHub React Native community post [Autolinking](https://github.com/react-native-community/cli/blob/main/docs/autolinking.md)
 
 #### 3.3.3 Using the Modules {#using-modules}
 
@@ -332,7 +332,7 @@ To make the nanoflow shown above, do the following:
 
 ### 3.7 Writing an NFC Tag {#write-nfc-tag}
 
-Now you have a way to read NFC *NDEF* tags. Next you will write some text for your tag. You can create a JavaScript action for this yourself or use an existing tool. If you use an existing tool, we recommend [NFC Tools Android](https://play.google.com/store/apps/details?id=com.wakdev.wdnfc) or [NFC Tools iOS](https://apps.apple.com/us/app/nfc-tools/id1252962749).
+Now you have a way to read NFC *NDEF* tags. Next you will write some text for your tag. You can create a JavaScript action for this yourself or use an existing tool. If you use an existing tool, Mendix recommends [NFC Tools Android](https://play.google.com/store/apps/details?id=com.wakdev.wdnfc) or [NFC Tools iOS](https://apps.apple.com/us/app/nfc-tools/id1252962749).
 
 To write your own NFC tag, do the following:
 
@@ -372,7 +372,7 @@ Making software is an iterative process. If you integrate your own module or bui
     This builder will use the configuration you set during the [Install a Dependency in Your Project](#install-dependency-project) section above.
 1. After the build has successfully finished, the build file will be available in *C:\native-builder\builds*.
 1. Uninstall the previous version of the app on your device.
-1. Install the app on your device. For more information on installing an app on your device, see the [Distributing](/howto8/mobile/deploying-native-app/#distributing) section of *Deploy Your First Mendix Native Mobile App*.
+1. Install the app on your device. For more information on installing an app on your device, see the [Distributing](/howto8/mobile/deploying-native-app/#distributing) section of *Build a Mendix Native App in the Cloud*.
 1. Open the app, tap **Scan tag**, and scan your NFC tag. You should see a dialog box with the text you assigned to your tag:
 
     {{< figure src="/attachments/howto8/extensibility/build-javascript-actions/create-native-javascript-action/native-nfc-app-success-android.png" alt="read NFC successfully"   width="250"  >}}
@@ -482,7 +482,7 @@ The Native Builder will locally run MxBuild. The output is a *bundles.js* file w
 
 ## 5 Read More
 
-* [How to Deploy Your First Mendix Native Mobile App](/howto8/mobile/deploying-native-app/)
+* [How to Build a Mendix Native App in the Cloud](/howto8/mobile/deploying-native-app/)
 * [JavaScript Actions Reference Guide](/refguide8/javascript-actions/)
 * [How To Build JavaScript actions](/howto8/extensibility/build-javascript-actions/)
 * GitHub's [NFC React Native Library](https://github.com/whitedogg13/react-native-nfc-manager)

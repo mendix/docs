@@ -10,7 +10,7 @@ tags: ["front end"]
 
 This document will cover the basics of how to create pages using layouts and snippets.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Create style layouts
 * Create snippets
@@ -67,7 +67,7 @@ With regions, you divide the layout container into sections in order to position
 
 #### 3.2.3 Placeholders
 
-A placeholder can be used in a layout to define an area that can be filled in in a page based on that layout or in another layout defining that layout as the master layout.
+A placeholder can be used in a layout to define an area that can be filled in in a page based on that layout or in another layout defining that layout as the primary layout.
 
 {{< figure src="/attachments/howto8/front-end/layouts-and-snippets/placeholders.png" >}} 
 
@@ -75,13 +75,13 @@ When the area is filled in a page, this will be the content area of that page, s
 
 #### 3.2.4 Inheritance
 
-A layout can also be based on another layout, which is called the "master layout" in this context. If a layout is based on a master layout, the layout can fill the areas defined by the master layout and define new area using placeholders. Pages that use a layout based on a master layout will only see the areas defined by the layout, not those of the master layout.
+A layout can also be based on another layout, which is called the "primary layout" in this context. If a layout is based on a primary layout, the layout can fill the areas defined by the primary layout and define new area using placeholders. Pages that use a layout based on a primary layout will only see the areas defined by the layout, not those of the primary layout.
 
 ## 4 Desktop, Tablet, or Mobile?
 
 All pages can be opened on all device types, because the generated HTML for the pages is HTML5.  However, each device has its own specific UI design needs. Therefore, it is logical for you to define a set of layouts per device type that serves the needs of that specific device type.
 
-By default, the desktop and phone layouts are available out-of-the-box, and the design of the layouts can be customized to your needs. You can change and extend the default layouts as wel as create new layouts as needed. 
+By default, the desktop and phone layouts are available out-of-the-box, and the design of the layouts can be customized to your needs. You can change and extend the default layouts as well as create new layouts as needed. 
 
 Be careful with how you design these layouts. For example, in the mobile apps, you do not want to have too many regions, or the design will look crowded and confusing to the end-user. On the other hand, a desktop application might require different regions that allow for more content to be shown and details to be displayed.
 
@@ -97,9 +97,9 @@ These are some layout examples:
 
     {{< figure src="/attachments/howto8/front-end/layouts-and-snippets/basic-mobile.png" >}}
 
-* Master layout with added menu:
+* Primary layout with added menu:
 
-    {{< figure src="/attachments/howto8/front-end/layouts-and-snippets/master.png" >}}
+    {{< figure src="/attachments/howto8/front-end/layouts-and-snippets/primary.png" >}}
 
 {{% alert color="info" %}}
 
@@ -163,7 +163,7 @@ At the heart of the navigation model in Mendix, are three device types: Desktop,
 
 {{< figure src="/attachments/howto8/front-end/layouts-and-snippets/device-profiles.png" >}}
 
-When a user visits a Mendix application, she is automatically redirected to the home page of the appropriate device type (for details, see the section [Redirection to Device Types](#RedirectiontoDeviceTypes)).
+When a user visits a Mendix application, they are automatically redirected to the home page of the appropriate device type (for details, see the section [Redirection to Device Types](#RedirectiontoDeviceTypes)).
 
 For more information on navigation profiles, see [Navigation in Mendix](/refguide8/navigation/).
 
@@ -179,8 +179,8 @@ The Mendix Runtime automatically redirects users to the home page of the appropr
 
 | User-Agent String Regular Expression | Device Type |
 | ------------------------------------ | ----------- |
-| `Android.*Mobile|iPhone`             | Phone       |
-| `Android|iPad`                       | Tablet      |
+| `Android.*Mobile` or `iPhone`             | Phone       |
+| `Android` or `iPad`                       | Tablet      |
 | (Other)                              | Desktop     |
 
 The string for specific user interphases can also be configured within the server custom settings (this is more advanced and not covered here).

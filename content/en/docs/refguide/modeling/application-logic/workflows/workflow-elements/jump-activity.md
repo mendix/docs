@@ -15,26 +15,26 @@ The **Jump** activity allows you to jump to other activities in the workflow. Th
 
 The Jump activity properties consist of the following sections:
 
-* [Common](#common)
 * [General](#general)
+* [Common](#common)
 
-### 2.1 Common Section {#common}
+### 2.1 General Section {#general}
 
-**Name** is the internal name of the element. When referring to the element in the app you will use this name. It must be unique within the workflow, but you can have two elements with the same name in different workflows. 
-
-### 2.2 General Section {#general}
-
-#### 2.2.1 Caption
+#### 2.1.1 Caption
 
 The **Caption** describes what happens in this element. It is displayed in the workflow element to make the workflow easier to read and understand without needing to add annotations.
 
-#### 2.2.2 Target
+#### 2.1.2 Target
 
 **Target** is the activity that the workflow process will jump to during execution. You can select the activity you would like to go to from the drop-down menu. 
 
 {{% alert color="warning" %}}
 You cannot use the **Jump** activity in a [Parallel split](/refguide/parallel-split/) or in a path where it would end the workflow without any other path continuing it. 
 {{% /alert %}}
+
+### 2.2 Common Section {#common}
+
+**Name** is the internal name of the element. When referring to the element in the app you will use this name. It must be unique within the workflow, but you can have two elements with the same name in different workflows. 
 
 ## 3 Read More
 

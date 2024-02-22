@@ -9,7 +9,7 @@ tags: ["mobile", "push notification"]
 
 This how-to will walk you through the steps needed to implement push notifications in your application.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Import the PushNotifications module
 * Add the push notification widget and administrator pages
@@ -48,7 +48,7 @@ To include these dependencies, download them from the Marketplace in a way simil
 
 {{% alert color="info" %}}
 
-If your app is using an older version of the [Encryption](/appstore/modules/encryption/) module, it might trigger an error for referencing a non-existent layout. You can fix this by assigning the master layout of the **Encryption.ResponsiveLayout_Certificate** layout to another layout (please note that in this specific use case, it is not important which layout is used). This does not apply to version 1.3.1 and above.
+If your app is using an older version of the [Encryption](/appstore/modules/encryption/) module, it might trigger an error for referencing a non-existent layout. You can fix this by assigning the primary layout of the **Encryption.ResponsiveLayout_Certificate** layout to another layout (please note that in this specific use case, it is not important which layout is used). This does not apply to version 1.3.1 and above.
 
 {{< figure src="/attachments/howto7/mobile/push-notifications/implementation-guide/20217886.jpg" >}}
 
@@ -74,7 +74,7 @@ Please do not remove the button with the caption **Device Registration reference
 
 The PushNotifications module contains a microflow named **AfterStartup_PushNotifications** that will start the APNs connector for you. Call this microflow from your **AfterStartup** microflow.
 
-If your app already has a microflow set to execute after startup, we suggest to change your startup microflow to a new microflow, from where you call both after startup microflows. Reference the microflow below:
+If your app already has a microflow set to execute after startup, Mendix suggests changing your startup microflow to a new microflow, from where you call both after startup microflows. Reference the microflow below:
 
 {{< figure src="/attachments/howto7/mobile/push-notifications/implementation-guide/after-startup-microflow.png" >}}
 
@@ -108,7 +108,7 @@ At this point, all the implementation steps are done and you can deploy your app
 
 {{% alert color="warning" %}}
 
-Make sure that the `Encryption.EncryptionKey` constant has a value before you start the application. If the value is not set, you will get a NullPointerException when you try to send a notification to APNs. If you are using a Free App, set a default value for the constant in the model. Otherwise, configure the constant value in the Mendix Developer Portal.
+Make sure that the `Encryption.EncryptionKey` constant has a value before you start the application. If the value is not set, you will get a `NullPointerException` when you try to send a notification to APNs. If you are using a Free App, set a default value for the constant in the model. Otherwise, configure the constant value in the Mendix Developer Portal.
 
 {{% /alert %}}
 

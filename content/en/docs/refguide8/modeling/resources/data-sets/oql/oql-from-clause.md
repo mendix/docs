@@ -4,10 +4,6 @@ url: /refguide8/oql-from-clause/
 tags: ["studio pro"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/oql-from-clause.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 The `FROM` clause specifies the entities or other source from which the data must be retrieved. This clause starts with the `FROM` keyword, following by an entity name. To select data from other entities as well, add these entities via the `JOIN` keywords. This syntax is a little more strict than the official `SQL FROM` clause syntax.
@@ -81,7 +77,7 @@ The syntax is as follows:
 
 #### 4.3.2 LEFT OUTER JOIN
 
-With a `LEFT OUTER JOIN` construction, the query compares each row of entity A with each row of entity B to find all pairs of rows which have an association and thus satisfy the `JOIN` predicate. When the association exists and the the `JOIN` predicate is satisfied, column values for each matched pair of rows of A and B are combined into a resulting row.
+With a `LEFT OUTER JOIN` construction, the query compares each row of entity A with each row of entity B to find all pairs of rows which have an association and thus satisfy the `JOIN` predicate. When the association exists and the `JOIN` predicate is satisfied, column values for each matched pair of rows of A and B are combined into a resulting row.
 
 However, in contrast to the `INNER JOIN` construction, the query will also return rows of entity A which do not match entity B. When columns of entity B are specified, these columns contain a null value for these rows.
 

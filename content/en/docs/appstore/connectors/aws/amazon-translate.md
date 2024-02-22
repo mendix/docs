@@ -1,6 +1,6 @@
 ---
 title: "Amazon Translate"
-url: /appstore/connector/aws/amazon-translate
+url: /appstore/connectors/aws/amazon-translate
 description: "Describes the configuration and usage of the Amazon Translate app service. Amazon Translate is a neural machine translation service that delivers fast, high-quality, affordable, and customizable language translation."
 weight: 20
 tags: ["translation", "service", "app store", "marketplace", "component", "platform support"]
@@ -18,89 +18,105 @@ The [Amazon Translate](https://marketplace.mendix.com/link/component/204706) con
 Amazon Translate is a neural machine translation service that delivers fast, high-quality, affordable, and customizable language translation. Neural machine translation is a form of language translation automation that uses deep learning models to deliver more accurate and more natural sounding translation than traditional statistical and rule-based translation algorithms.
 With Amazon Translate, you can localize content such as websites and applications for your diverse users, easily translate large volumes of text for analysis, and efficiently enable cross-lingual communication between users.
 
-### 1.2 Prerequisites
+### 1.2 Prerequisites {#prerequisites}
 
-The Amazon Translate connector requires the [AWS Authentication connector](https://marketplace.mendix.com/link/component/120333) to authenticate with Amazon Web Services (AWS). For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
+The Amazon Translate connector requires Mendix Studio Pro 9.18.0 or above.
+
+To authenticate with Amazon Web Service (AWS), you must also install and configure the [AWS authentication connector](https://marketplace.mendix.com/link/component/120333).  If you are using the Amazon Translate Connector version 2.0 or higher, it requires the AWS Authentication connector version 3.0 or higher. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
+
+### 1.3 Licensing and Cost
+
+This connector is available as a free download from the Mendix Marketplace, but the AWS service to which is connects may incur a usage cost. For more information, refer to AWS documentation.
+
+{{% alert color="info" %}}
+Most AWS services provide a free tier that allows easy access to most services. To find out if this service is included in the free tier, see [AWS Free Tier](https://aws.amazon.com/free/). To calculate the potential cost of using an AWS service outside of the free tier, use the [AWS Cost calculator](https://calculator.aws/).
+{{% /alert %}}
+
+Depending on your use case, your deployment environment, and the type of app that you want to build, you may also need a license for your Mendix app. For more information, refer to [Licensing Apps](/developerportal/deploy/licensing-apps-outside-mxcloud/).
 
 ## 2 Installation
 
-Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the Amazon Translate connector into your app.
+Follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the Amazon Translate connector into your app.
 
 ## 3 Configuration
 
-After you install the connector, you can find it in the **App Explorer**, in the **Translation** section. The connector provides a [domain model](#domain-model), as well as the [enumerations](#enumerations) and [microflows](#microflows) that you can use to implement automatic translation for your app.
+After you install the connector, you can find it in the **App Explorer**, in the **AmazonTranslateConnector** section. The connector provides the [domain model](#domain-model) and [activities](#activities) that you can use to implement automatic translation for your app.
 
 {{% alert color="info" %}}
-The artifacts that you need are contained in the **AmazonTranslateConnector** > **Operations** folder. The content in the **Translation** > **Internal** folder is for internal use only. In most cases, you will not need to use it directly.
+The artifacts that you need are contained in the **AmazonTranslateConnector** > **Operations** folder. The content in the **Translation** > **Private** folder is for internal use. In most cases, you will not need to use it directly.
 {{% /alert %}}
 
-To help you work with the Amazon Translate connector, the following sections of this document list the available entities, constants, microflows, and nanoflows that you can use in your application.
+### 3.1 Configuring AWS Authentication
 
-### 3.1 Domain model {#domain-model}
+In order to use the Amazon Translate service, you must authenticate with AWS. To do so, you must set up a configuration profile in your Mendix app. After you set up the configuration profile, the connector module handles the authentication internally.
 
-The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Domain Model](/refguide/domain-model/). For the Amazon Translate connector, the domain model contains the `Translator` and `Language` entities.
+As of version 3.0.0 of the [AWS Authentication Connector](https://marketplace.mendix.com/link/component/120333), all the resources and logic required to set up authentication are centralized inside the AWS Authentication Connector module. 
 
-#### 3.1.1 TranslateRequest
+The AWS Authentication Connector supports both **static credentials** and **temporary credentials**. For more information and detailed instructions please refer to the [AWS Authentication Connector documentation page](https://docs.mendix.com/appstore/connectors/aws/aws-authentication/).
 
-The `TranslateRequest` entity is an entity that returns the output of the translation as a string from the microflow action. The entity  contains `InputLanguageCode`, `OutputLanguageCode` and `InputText` as attributes.
+## 4 Technical Reference
+
+To help you work with the Amazon Translate connector, the following sections of this document list the available entities, enumerations, and actions that you can use in your application.
+
+### 4.1 Domain model {#domain-model}
+
+The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Domain Model](/refguide/domain-model/). 
+
+#### 4.1.1 ListLanguagesRequest {#list-languages-request}
 
 | Attribute | Description |
 | --- | --- |
-| `InputText` | The input text string (minimum length: 1, maximum length: 5000). |
-| `OutputText` | The output text string. |
+| N/A | The entity does not contain any attributes. |
 
-#### 3.1.2 ListLanguageResponse
-
-The `ListLanguageResponse` entity is used when calling the ListLanguages action. It is associated with a `LanguageResponse` entity.
+#### 4.1.2 ListLanguagesResponse {#list-languages-response}
 
 | Attribute | Description |
 | --- | --- |
-| `Name` | The language name, equivalent to the locale name. |
-| `Code` | The [language code](https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html) that assigns letters or numbers as identifiers or classifiers for languages (minimum length: 2, maximum length: 5). |
+| N/A | The entity does not contain any attributes, but it contains a list of [Language](#language) objects. |
 
-### 3.2 Enumerations {#enumerations}
+#### 4.1.3 Language {#language}
 
-An enumeration is a predefined list of values that can be used as an attribute type. For the Amazon Translate connector, an enumeration is used to list available AWS regions.
-
-#### 3.2.1 `AWS_Region` {#aws-region}
-
-| Name | Caption |
+| Attribute | Description |
 | --- | --- |
-| `us_east_2` |    **US Easth (Ohio)** |
-| `us_east_1` |    **US East (N. Virginia)** |
-| `us_west_1` |    **US West (N. California)** |
-| `us_west_2` |    **US West (Oregon)** |
-| `af_south_1` |    **Africa (Cape Town)** |
-| `ap_east_1` |    **Asia Pacific (Hong Kong)** |
-| `ap_southeast_3` |    **Asia Pacific (Jakarta)** |
-| `ap_south_1` |    **Asia Pacific (Mumbai)** |
-| `ap_northeast_3` |    **Asia Pacific (Osaka)** |
-| `ap_northeast_2` |    **Asia Pacific (Seoul)** |
-| `ap_southeast_1` |    **Asia Pacific (Singapore)** |
-| `ap_southeast_2` |    **Asia Pacific (Sydney)** |
-| `ap_northeast_1` |    **Asia Pacific (Tokyo)** |
-| `ca_central_1` |    **Canada (Central)** |
-| `eu_central_1` |    **Europe (Frankfurt)** |
-| `eu_west_1` |    **Europe (Ireland)** |
-| `eu_west_2` |    **Europe (London)** |
-| `eu_south_1` |    **Europe (Milan)** |
-| `eu_west_3` |    **Europe (Paris)** |
-| `eu_north_1` |    **Europe (Stockholm)** |
-| `me_south_1` |    **Middle East (Bahrain)** |
-| `sa_east_1` |    **South America (São Paulo)** |
+| `LanguageName` | The language name, equivalent to the locale name (string)|
+| `LanguageCode` | The [language code](https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html) that assigns letters or numbers as identifiers or classifiers for languages / minimum length: 2, maximum length: 5 (string) |
 
-### 3.3 Microflows {#microflows}
+#### 4.1.4 TranslateTextRequest {#translate-text-request}
 
-Microflows allow you to express the logic of your application. A microflow can perform actions such as creating and updating objects, showing pages and making choices. Microflows run in the runtime server and can therefore not be used in offline apps. For more information, see [Microflows](/refguide/microflows/).
+| Attribute | Description |
+| --- | --- |
+| `SourceLanguageCode` | The language code of the input text (string) |
+| `TargetLanguageCode` | The language code of the desired output text (string) |
+| `InputText` | The input text (string) |
 
-#### 3.3.1 CreateTranslator {#create-translator}
+#### 4.1.5 TranslateTextResponse {#translate-text-response}
 
-The `CreateTranslator` microflow takes `inputText`, `inputLanguageCode`, and `outputLanguageCode` as input parameters and creates translator actions in the back-end service. For instance, `inputLanguageCode` and `outputLanguageCode` can be set to `en-US`.
+| Attribute | Description |
+| --- | --- |
+| `SourceLanguageCode` | The language code of the input text (string) |
+| `TargetLanguageCode` | The language code of the desired output text (string) |
+| `InputText` | The input text (string) |
+
+### 4.2 Activities {#activities}
+
+Activities define the actions that are executed in a microflow or a nanoflow.
+
+#### 4.2.1 ListLanguages {#list-languages}
+
+The `ListLanguages` Amazon Translate action allow you to retrieve a list of supported languages that can used for translation. It requires a valid `ENUM_Region` and `Credentials` object, as well as a `ListLanguagesRequest` object and returns a `ListLanguagesResponse` object. The input and output for this service are shown in the table below: 
+
+| Input | Output | 
+| --- | --- | 
+| `ListLanguagesRequest`, `ENUM_Region`, `Credentials` | `ListLanguagesResponse` |
 
 {{% alert color="info" %}}
-For more information about the language codes, see the [list of supported languages](https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html) in AWS documentation.
+For more information about the language codes, see the [list of supported languages](https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html) in the AWS documentation.
 {{% /alert %}}
 
-#### 3.3.2 TranslateText
+#### 4.2.2 TranslateText {#translate-text}
 
-The `TranslateText` microflow takes the `TranslateRequest` object as an input parameter and performs text translation actions.
+The `TranslateText` Amazon Translate action allow you to retrieve the translation of the input text. It requires a valid `ENUM_Region` and `Credentials` object, as well as a `TranslateTextRequest` object and returns a `TranslateTextResponse` object. The input and output for this service are shown in the table below: 
+
+| Input | Output | 
+| --- | --- | 
+| `TranslateTextRequest`, `ENUM_Region`, `Credentials` | `TranslateTextResponse` |

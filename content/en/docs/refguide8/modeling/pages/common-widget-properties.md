@@ -3,12 +3,10 @@ title: "Properties Common in the Page Editor"
 url: /refguide8/common-widget-properties/
 weight: 120
 tags: ["studio pro", "widget properties", "properties", "common", "widget", "classes"]
+aliases:
+    - /refguide8/Conditions
 #Common Section and Visibility section anchors are used in links of common-section-link and visibility-section-link snippets. If moving or renaming them, do not forget to update snippets.
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/common-widget-properties.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 
@@ -29,7 +27,7 @@ The **Screen reader caption** property can be set on the following widgets:
 * [Text Box](/refguide8/text-box/)
 * [Text Area](/refguide8/text-area/)
 * [Drop-down](/refguide8/drop-down/)
-* [Check Box](/refguide8/check-box/)
+* [Checkbox](/refguide8/check-box/)
 * [Radio Buttons](/refguide8/radio-buttons/)
 * [Date Picker](/refguide8/date-picker/)
 * [File Manager](/refguide8/file-manager/)
@@ -79,7 +77,7 @@ The dynamic classes property allows you to specify one or more cascading stylesh
 {{< figure src="/attachments/refguide8/modeling/pages/common-widget-properties/dynamic-classes.png" >}}
 
 {{% alert color="info" %}}
-The dynamic classes property was introduced in Mendix Studio Pro v8.14.
+The dynamic classes property was introduced in Mendix Studio Pro 8.14.
 {{% /alert %}}
 
 You can see which widgets in a page have styling applied via the style or class property by clicking the **Show styles** button.
@@ -103,7 +101,7 @@ With the following widgets, the Attribute (Path) specifies the attribute which i
 * [Text Box](/refguide8/text-box/)
 * [Text Area](/refguide8/text-area/)
 * [Drop-down](/refguide8/drop-down/)
-* [Check Box](/refguide8/check-box/)
+* [Checkbox](/refguide8/check-box/)
 * [Radio Buttons](/refguide8/radio-buttons/)
 * [Date Picker](/refguide8/date-picker/)
 

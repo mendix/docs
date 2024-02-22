@@ -10,7 +10,7 @@ aliases:
 
 ## 1 Introduction
 
-You can use Google's Firebase Cloud Messaging (FCM) service to send push notifications to both Android and iOS devices. To send push notifications using FCM from the Push Notifications Connector module, you must set up a Firebase account with FCM enabled. This section will teach you how to register for FCM and configure the service in your app.
+You can use Google's Firebase Cloud Messaging (FCM) service to send push notifications to both Android and iOS devices. To send push notifications using FCM from the Push Notifications Connector module, you must set up a Firebase account with FCM enabled. This section teaches you how to register for FCM and configure the service in your app.
 
 ## 2 Prerequisites
 
@@ -18,7 +18,7 @@ Before starting this section, make sure you have completed the following prerequ
 
 * Have a Firebase account (https://firebase.google.com)
 
-## 3 Setting up a Firebase Project
+## 3 Setting Up a Firebase Project
 
 There are two possible scenarios: you can create a new FCM project, or you can update your existing GCM project to FCM. Both scenarios are described below.
 
@@ -66,6 +66,10 @@ For a native mobile app, your bundle ID will be what you specify for the **App i
 * For Android, open *android/app/build.gradle* and consult **applicationId** to find your ID 
 * For iOS, open *ios/Config/config.xcconfig* and consult **BUNDLE_IDENTIFIER** to find your ID
 
+{{% alert color="info" %}}
+If you also want to support a [custom developer app](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/), repeat above the steps and append `.developerapp` to the IDs.
+{{% /alert %}}
+
 Click **Deploy**, then **Mobile App**. Your ID is listed as **App Identifier**:
 
 {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/setting-up-google-firebase-cloud-messaging-server/hybrid_app_identifier.png"   width="350"  >}}
@@ -95,7 +99,7 @@ If you wish to send push notifications to iOS devices through FCM, you will need
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/setting-up-google-firebase-cloud-messaging-server/push_notifications_cloud_messaging.png"   width="350"  >}}
 
-1. On this tab, upload either your APNs key or your APNs certificate(s) as configured in your [Apple Developer account](https://developer.apple.com).
+1. On this tab, upload either your APNs key or your APNs certificate (or certificates) as configured in your [Apple Developer account](https://developer.apple.com).
 
 ## 6 Setting Up a Service Account {#setting-up-a-service-account}
 

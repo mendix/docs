@@ -6,10 +6,6 @@ tags: ["studio pro", "logging activity", "logging activities", "log message"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/log-message.pdf).
-{{% /alert %}}
-
 {{% alert color="warning" %}}
 This activity can be used in both **Microflows** and **Nanoflows**.
 {{% /alert %}}
@@ -48,7 +44,7 @@ The log level defines the severity of the log message. In the [Studio Pro Consol
 | Trace |   | Used for detailed execution traces. |
 | Debug |   | Used to debug execution. |
 | Info  *(default)*  |   | Used to log informative messages. |
-| Warning | {{< figure src="/attachments/refguide8/modeling/application-logic/activities/log-message/warning.png" alt="Warning"   width="15%"  >}} | Used to log warnings. These messages appear in orange. |{{< figure src="/attachments/refguide8/modeling/application-logic/activities/log-message/warning.png" alt="Warning"   width="15%"  >}}{{< figure src="/attachments/refguide8/modeling/application-logic/activities/log-message/warning.png" alt="Warning"   width="15%"  >}}
+| Warning | {{< figure src="/attachments/refguide8/modeling/application-logic/activities/log-message/warning.png" alt="Warning"   width="15%"  >}} | Used to log warnings. These messages appear in orange. |
 | Error | {{< figure src="/attachments/refguide8/modeling/application-logic/activities/log-message/error.png" alt="Error" width="15%" >}} | Used to log error messages. These messages appear in red. |
 | Critical | {{< figure src="/attachments/refguide8/modeling/application-logic/activities/log-message/critical-error.png" alt="Critical Error" width="15%" >}} | Used to log critical errors. These messages appear in white on red. |
 
@@ -76,13 +72,13 @@ For each parameter in the template you define a microflow expression of which th
 
 {{% alert color="info" %}}
 
-With parameters you can customize your message with data specific to the situation. For example, the message *An e-mail has been sent to customer {1}*. with parameter `$customer/FullName` will show the full name of the customer who an e-mail has been sent to.
+With parameters you can customize your message with data specific to the situation. For example, the message *An email has been sent to customer {1}*. with parameter `$customer/FullName` will show the full name of the customer who an email has been sent to.
 
 {{% /alert %}}
 
 ### 3.5 Include Latest Stack Trace
 
-Defines whether to include the stack trace of the latest error in this log message. In Studio Pro, log messages that include a stack trace are marked with a paperclip icon.
+Defines whether to include the stack trace of the latest error in this log message. In Studio Pro, log messages that include a stack trace are marked with a paperclip icon ({{% icon name="paperclip" %}}).
 
 Double-clicking these log messages shows the stack trace.
 

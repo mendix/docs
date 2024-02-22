@@ -5,13 +5,13 @@ url: /refguide7/check-box/
 ---
 
 
-A check box is an [input widget](/refguide7/input-widgets/) that can be used to display and edit Boolean attributes. It will display a tick if the value is true and remain empty if it is false.
+A checkbox is an [input widget](/refguide7/input-widgets/) that can be used to display and edit Boolean attributes. It will display a tick if the value is true and remain empty if it is false.
 
 {{% alert color="info" %}}
 
 {{< figure src="/attachments/refguide7/desktop-modeler/pages/input-widgets/check-box/check-box.png" >}}
 
-This check box allows you to change whether someone is subscribed to the newsletter.
+This checkbox allows you to change whether someone is subscribed to the newsletter.
 
 {{% /alert %}}
 

@@ -8,7 +8,7 @@ tags: ["mobile", "push notification", "local", "push", "notification"]
 
 ## 1 Introduction
 
-Several apps which use push notifications will also need actions to trigger after a user taps a notification. This step-by-step guide will teach you to make a tapped notification show a specific page.
+Several apps which use push notifications will also need actions to trigger after a user taps a notification. This step-by-step guide teaches you how to make a tapped notification show a specific page.
 
 {{% alert color="warning" %}}
 The Make It Native app is currently experiencing limitations which interfere with notifications. We are currently fixing those limitations. To test your local notification actions, please use a native release app installed on a mobile testing device instead of the Make It Native app. To build a native release app, please complete [How to Deploy a Native App](/howto8/mobile/deploying-native-app/) and use that app to test local notification actions.
@@ -18,7 +18,7 @@ The Make It Native app is currently experiencing limitations which interfere wit
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Review the [basic differences](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/) between local notifications and push notifications
+* Review the [basic differences](https://developer.apple.com/documentation/usernotifications) between local notifications and push notifications
 * Install the [Make It Native](/refguide8/getting-the-make-it-native-app/) app on your mobile device
 * Complete the preceding tutorials in this [Use Local Notifications](/howto8/mobile/local-notif-parent/) series
 

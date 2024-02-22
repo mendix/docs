@@ -1,15 +1,15 @@
 ---
-title: "Check Box Set Selector"
+title: "Checkbox Set Selector"
 url: /appstore/widgets/check-box-set-selector/
 category: "Widgets"
-description: "Describes the configuration and usage of the Check Box Set Selector widget, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "widget", "check box set selector", "check box", "platform support"]
+description: "Describes the configuration and usage of the Checkbox Set Selector widget, which is available in the Mendix Marketplace."
+tags: ["marketplace", "marketplace component", "widget", "checkbox set selector", "checkbox", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-The [Check Box Set Selector](https://marketplace.mendix.com/link/component/121/) widget lets you use a list of check boxes for your reference set. It supports multiple display attributes and looks the same as a [reference set selector](/refguide/reference-set-selector/).
+The [Checkbox Set Selector](https://marketplace.mendix.com/link/component/121/) widget lets you use a list of checkboxes for your reference set. It supports multiple display attributes and looks the same as a [reference set selector](/refguide/reference-set-selector/).
 
 ### 1.1 Typical Usage Scenario
 
@@ -48,4 +48,4 @@ You must designate at least one **Display Attribute** (with **Header text** and 
 
 ## 3 Read More
 
-* [Check Box Set Selector (ATS)](/addons/ats-addon/rg-one-checkbox-set-selector/)
+* [Checkbox Set Selector (ATS)](/appstore/partner-solutions/ats/rg-one-checkbox-set-selector/)

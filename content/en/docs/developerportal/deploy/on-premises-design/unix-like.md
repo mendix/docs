@@ -7,10 +7,6 @@ tags: ["Red Hat", "CentOS", "install", "deploy", "m2ee", "Debian", "GNU", "Linux
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/unix-like.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 Mendix can be installed on-premises on systems running Unix-like operating systems. The installation consists of the following:
@@ -27,6 +23,10 @@ Installation on other Unix-like operating systems is possible, but these have no
 ## 2 Technical Documentation
 
 The documentation describing the installation and basic configuration of the Mendix software on a Unix-like system is available as part of the m2ee-tools helper program: [https://github.com/mendix/m2ee-tools/tree/develop/doc/README.md](https://github.com/mendix/m2ee-tools/tree/develop/doc/README.md).
+
+{{% alert color="info" %}}
+Specific Mendix versions require specific versions of the buildpack. For more information, see [Supported Mendix Versions](https://github.com/mendix/cf-mendix-buildpack#supported-mendix-versions).
+{{% /alert %}}
 
 ## 3 License Key Activation on Linux
 

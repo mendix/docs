@@ -66,7 +66,7 @@ Add-on widgets each have their own default styling classes based on their full w
 
 ```javascript
 export const com_mendix_widget_native_badge_Badge = (Badge = {
-	text: {
+	caption: {
 		// TextStyle properties
 		color: "#00FF00",
 	}
@@ -328,7 +328,7 @@ The widget’s style properties are structured as follows:
 | `input` | `placeholderTextColor` | This is the text color of the placeholder string. |
 | `input` | `selectionColor` | This is the highlight and cursor color of the text input. |
 | `input` | `underlineColorAndroid` | This is the color of the `input` underline. |
-| `inputFocused` | Same properties as `input` | Overrides `input` styles if the text box is focused (with Studio Pro v8.15). |
+| `inputFocused` | Same properties as `input` | Overrides `input` styles if the text box is focused (with Studio Pro 8.15). |
 | `inputError` | This has the same properties as `input` | Overrides `input` styles if there are validation errors. |
 | `inputDisabled` | Same properties as `input` | Overrides `input` styles if the text box is non-editable. |
 | `label` | This has all TextStyle properties |   |
@@ -350,7 +350,7 @@ The default class to style all text areas is named `TextArea`.
 
 A drop-down is an input widget that can be used to display and edit enumeration attributes.
 
-Since Studio Pro v8.11, the drop-down widget has a new style property called `useUniformDesign: boolean` which enables the uniform design in both platforms.
+Since Studio Pro 8.11, the drop-down widget has a new style property called `useUniformDesign: boolean` which enables the uniform design in both platforms.
 
 The widget’s render hierarchy is as follows for non-uniform:
 
@@ -405,25 +405,25 @@ The widget’s render hierarchy is as follows for uniform:
 | `pickerIOS` | This has all ViewStyle properties. |  |
 | `pickerBackdropIOS` | This has all ViewStyle properties. |   |
 | `pickerTopIOS` | This has all ViewStyle properties. |   |
-| `validationMessage` | This has all TextStyle properties. | Styles the validation message (with Studio Pro v8.11).|
+| `validationMessage` | This has all TextStyle properties. | Styles the validation message (with Studio Pro 8.11).|
 | `value`  | This has all TextStyle properties  | Styles the value button which toggle's dropdown and PickerIOS items. If placeholder is selected, placeholderTextColor will be applied |
-| `useUniformDesign` | `boolean` | Enables new uniformDesign (with Studio Pro v8.11). |
-| `iconStyle`  | This has all TextStyle properties | Styles the arrow down icon next to the value (with Studio Pro v8.15).|
-| `value`  | `placeholderTextColor: string` | If placeholder is selected, placeholderTextColor will be applied (with Studio Pro v8.11).|
-| `valueFocused`  | Same properties as `value` | Overrides `value` styles if the dropdown box is focused. (with Studio Pro v8.15).|
-| `valueContainer` | This has all ViewStyle properties & rippleColor | Styles the value button's container (with Studio Pro v8.11).|
-| `valueContainerFocused` | Same properties as `valueContainer` | Overrides `valueContainer` styles if the dropdown box is focused (with Studio Pro v8.15).|
-| `menuWrapper` | This has all ViewStyle properties | Styles the wrapper view surrounding all the menu items (with Studio Pro v8.11).|
-| `itemContainer` | This has all ViewStyle properties | Styles all the item containers in dropdown menu including selected item container (with Studio Pro v8.11).|
-| `item` | This has all TextStlye properties | Styles all the items in dropdown menu including selected item (with Studio Pro v8.11).|
-| `selectedItem` | This has all TextStyle properties | Styles the selected item in dropdown menu (with Studio Pro v8.11).|
-| `selectedItemContainer` | This has all ViewStyle properties | Styles the selected item's container in dropdown menu (with Studio Pro v8.11).|
+| `useUniformDesign` | `boolean` | Enables new uniformDesign (with Studio Pro 8.11). |
+| `iconStyle`  | This has all TextStyle properties | Styles the arrow down icon next to the value (with Studio Pro 8.15).|
+| `value`  | `placeholderTextColor: string` | If placeholder is selected, placeholderTextColor will be applied (with Studio Pro 8.11).|
+| `valueFocused`  | Same properties as `value` | Overrides `value` styles if the dropdown box is focused. (with Studio Pro 8.15).|
+| `valueContainer` | This has all ViewStyle properties & rippleColor | Styles the value button's container (with Studio Pro 8.11).|
+| `valueContainerFocused` | Same properties as `valueContainer` | Overrides `valueContainer` styles if the dropdown box is focused (with Studio Pro 8.15).|
+| `menuWrapper` | This has all ViewStyle properties | Styles the wrapper view surrounding all the menu items (with Studio Pro 8.11).|
+| `itemContainer` | This has all ViewStyle properties | Styles all the item containers in dropdown menu including selected item container (with Studio Pro 8.11).|
+| `item` | This has all TextStyle properties | Styles all the items in dropdown menu including selected item (with Studio Pro 8.11).|
+| `selectedItem` | This has all TextStyle properties | Styles the selected item in dropdown menu (with Studio Pro 8.11).|
+| `selectedItemContainer` | This has all ViewStyle properties | Styles the selected item's container in dropdown menu (with Studio Pro 8.11).|
 
-### 6.4 Check Box 
+### 6.4 Checkbox 
 
-A check box input widget can be used to display and edit Boolean attributes and is rendered as a switch. This is how a check box widget could look in an app:
+A checkbox input widget can be used to display and edit Boolean attributes and is rendered as a switch. This is how a checkbox widget could look in an app:
 
-{{< figure src="/attachments/refguide8/mobile/native-mobile/native-styling-refguide/check-box.png" alt="check box"   width="350"  >}}
+{{< figure src="/attachments/refguide8/mobile/native-mobile/native-styling-refguide/check-box.png" alt="checkbox"   width="350"  >}}
 
 The widget’s style properties structure is as follows:
 
@@ -455,13 +455,13 @@ The widget’s style properties structure is as follows:
 | `input` | `thumbColorOn` | Color of the foreground switch grip when turned on. If this is set on iOS, the switch grip will lose its drop shadow. |
 | `input` | `thumbColorOff` | Color of the foreground switch grip when turned off. If this is set on iOS, the switch grip will lose its drop shadow. |
 | `inputError` | This has the same properties as `input` | Overrides `input` styles if there are validation errors. |
-| `inputDisabled` | This has the same properties as `input` | Overrides `input` styles if the check box is non-editable. |
+| `inputDisabled` | This has the same properties as `input` | Overrides `input` styles if the checkbox is non-editable. |
 | `label` | This has all TextStyle properties   |  |
 | `label` | `numberOfLines` | The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis. Defaults to `1`. |
-| `labelDisabled` | Same properties as `label` | Overrides `label` styles if the check box is non-editable. |
+| `labelDisabled` | Same properties as `label` | Overrides `label` styles if the checkbox is non-editable. |
 | `validationMessage` | This has all TextStyle properties.   |  |
 
-The default class to style all check box inputs is named `Checkbox`.
+The default class to style all checkbox inputs is named `Checkbox`.
 
 ### 6.5 Date Picker
 
@@ -677,14 +677,14 @@ The widget’s style properties are as follows:
 
 ```xml
 <container>
-	<text>New</text>
+	<caption>New</caption>
 </container>
 ```
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |      |
-| `text` | This has all TextStyle properties. |      |
+| `caption` | This has all TextStyle properties. |      |
 
 The default class to style all badges is named `com_mendix_widget_native_badge_Badge`.
 
@@ -1102,7 +1102,7 @@ The widget’s style properties are as follows:
 | `icon` | `size` | The size of the icon. |
 | `icon` | `color` | The color of the icon. |
 
-The default class to style all into screen widgets is named `com_mendix_widget_native_animation_Animation`.
+The default class to style all into screen widgets is named `com_mendix_widget_native_introscreen_IntroScreen`.
 
 ### 11.22 List View Swipe
 
@@ -1373,7 +1373,7 @@ The widget consists of the following elements:
 | `xAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
 | `xAxis` > `label` | `relativePositionGrid` | Positions the axis label at the bottom or right side of the grid ("bottom" or "right"). |
 | `yAxis` | All `xAxis` element styles. | |
-| `yAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. |
+| `yAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
 | `yAxis` > `label` | `relativePositionGrid` | Positions the axis label at the top or left side of the grid ("top" or "left"). |
 | `legend` > `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
 | `legend` > `item` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
@@ -1458,7 +1458,7 @@ The widget consists of the following elements:
 | `xAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
 | `xAxis` > `label` | `relativePositionGrid` | Positions the axis label at the **bottom** or **right** side of the grid. |
 | `yAxis` | All `xAxis` element styles. | |
-| `yAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. |
+| `yAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
 | `yAxis` > `label` | `relativePositionGrid` | Positions the axis label at the **top** or **left** side of the grid. |
 | `legend` > `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
 | `legend` > `item` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |

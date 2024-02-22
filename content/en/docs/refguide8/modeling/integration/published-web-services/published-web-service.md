@@ -4,10 +4,6 @@ url: /refguide8/published-web-service/
 tags: ["studio pro"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/published-web-service.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 This document describes the properties of a published web service. If you want a general overview of how Mendix publishes microflows as web services, see [Published Web Services](/refguide8/published-web-services/).
@@ -44,7 +40,7 @@ It is important to correctly configure the target namespace before publishing yo
 
 Select **Include tags for associations** if you need to include tags for associations in XML. This is usually not necessary, and support for this will be removed in a future version.
 
-To see the effect of this check box, consider a person with two dogs and a cat. When you do not select **Include tags for associations**, the XML looks like this:
+To see the effect of this checkbox, consider a person with two dogs and a cat. When you do not select **Include tags for associations**, the XML looks like this:
 
 ```xml
 <Person name="John">

@@ -29,11 +29,11 @@ An end user in a Mendix application has one or more user roles. These roles can 
 
 See [User Roles](/refguide7/user-roles/).
 
-Each module defines its own set of module roles and you only have to specify security within a module in terms of those module roles. An e-mail module maybe has two module roles, one for normal user and one for an administrator; other modules may have just one or more than two module roles depending on the requirements for those modules.
+Each module defines its own set of module roles and you only have to specify security within a module in terms of those module roles. An email module maybe has two module roles, one for normal user and one for an administrator; other modules may have just one or more than two module roles depending on the requirements for those modules.
 
 See [Module Role](/refguide7/module-role/).
 
-A user role is a combination of module roles. A user that signs into the system gets the access rights of all of his or her user roles and indirectly to the module roles that are contained by those user roles.
+A user role is a combination of module roles. A user that signs into the system gets the access rights of all of their user roles and indirectly to the module roles that are contained by those user roles.
 
 {{% alert color="info" %}}
 
@@ -49,7 +49,7 @@ Let us say you have a project with two modules: System and ProjectManagement (PM
 
 ## Entity Access versus Form Access
 
-Per entity you can specify who can read or write what members (attributes and associations) under what circumstances. Using XPath constraints you can express powerful security behavior; for example, "an employee can only see orders created by the department he is a part of".
+Per entity you can specify who can read or write what members (attributes and associations) under what circumstances. Using XPath constraints you can express powerful security behavior; for example, "an employee can only see orders created by the department they are a part of".
 
 Per form you can specify who can open it from navigation. The menu bar is even optimized so that only those forms are visible that the user has access to.
 

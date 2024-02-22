@@ -50,7 +50,7 @@ When you select **Override**, you can configure dynamically whether to use a pro
 
 ### 3.1 Authentication
 
-The **Use HTTP authentication** check box defines whether basic authentication should be used.
+The **Use HTTP authentication** checkbox defines whether basic authentication should be used.
 
 The **User name** property defines the user name that will be used to authenticate over HTTP. The user name needs to be entered using [microflow Expressions](/refguide7/expressions/). The microflow expression should result in a string.
 
@@ -120,7 +120,7 @@ This section is applicable when the HTTP response status code is not successful 
 
 When the **Store message body in $latestHttpResponse variable** option is selected, `$latestHttpResponse/Content` will be set with the response body. It might contain some useful information provided by the server (for example, why the authentication is rejected).
 
-### 5.4 $latestHttpResponse Variable<a name="latesthttpresponse"></a>
+### 5.4 $latestHttpResponse Variable {#latesthttpresponse}
 
 The `$latestHttpResponse` variable is of the [HttpResponse](/refguide7/http-request-and-response-entities/#http-response) type. It is available after a Call REST activity.
 

@@ -1,7 +1,7 @@
 ---
 title: "List View"
 url: /refguide/list-view/
-weight: 40
+weight: 30
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -37,6 +37,10 @@ List view properties consist of the following sections:
 
 ### 2.1 Common Section {#common}
 
+The rows of the list view can be sorted using the `Sort order` property. It is only available for **Database** [data sources](#data-source). For more information on sorting, see [Sort Order](/refguide/sort-order/).
+
+To specify which attributes to use when searching, configure the search attributes property. It is only available for **Database** [data sources](#data-source).
+
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
 ### 2.2. Data Source Section {#data-source}
@@ -49,11 +53,12 @@ The list view supports the following types of data sources:
 
 * [Database source](/refguide/database-source/) – objects are retrieved directly form the database. The database source can be used in [offline](/refguide/offline-first/) applications. 
 * [XPath source](/refguide/xpath-source/) – objects are retrieved directly form the database
+    {{% alert color="info" %}}From Mendix version 10.5, the list view does not have a separate XPath source, you can apply XPath constraints to the **Database** source.{{% /alert %}}
 * [Microflow source](/refguide/microflow-source/) – calculates the list of objects by executing a microflow
 * [Nanoflow source](/refguide/nanoflow-source/) – calculates the list of objects by executing a nanoflow
 * [Association source](/refguide/association-source/) – follows an association to get to objects
 
-The database and XPath sources retrieve objects from the database and supports searching and sorting. 
+The database and, below version 10.5, XPath sources retrieve objects from the database and supports searching and sorting. 
 
 {{% alert color="warning" %}}Searching is not supported on native mobile pages.{{% /alert %}}
 

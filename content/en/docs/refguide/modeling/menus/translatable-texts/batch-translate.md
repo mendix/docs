@@ -29,16 +29,16 @@ Click **Select…** and check the modules you want to work on.
 
 The default is to work on all modules in the app.
 
-### 2.2 Source Text Contains
+### 2.2 Search
 
 To search for a particular phrase in the source language text, type what you want to search for. It is not possible to search for text in the destination language.
 
 {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/batch-translate/batch-translate-search.png" alt="Batch translate search" >}}
 
-By default, all the translatable text from the selected module(s) will be shown.
+By default, all the translatable text from the selected module (or modules) will be shown.
 
 Each found text will be displayed in the **Source** column.
-The **#** column shows the number of times it occurs in the selected module(s).
+The **#** column shows the number of times it occurs in the selected module (or modules).
 
 If you select a line, you can look in the **Show occurrence** section to see the **Object** containing the text and the **Document** it appears in. Double-clicking or clicking **Show occurrence** will open the document and select the object so you can easily see the context.
 
@@ -54,13 +54,13 @@ In **Translation**, type new text that you want to use instead of the existing t
 
 If you have two texts which are identical in the source language but different in the translation language, you will have to review and change these individually. This is not very common but imagine, for example, you have used `Order Lines` to both *describe the lines on an order* and to *label a button which sorts some lines*. See [Working in the Currently Selected Language](/refguide/translatable-texts/#selected-language) in *Language Menu* to find how to change individual texts.
 
-## 3 Exporting and Importing Text{#export-import}
+## 3 Exporting and Importing Text {#export-import}
 
 If you want to translate a language outside Studio Pro, you can export the translatable texts to the Microsoft Excel (*.xlsx*) format, make changes, and then import the changes from the updated Excel file.
 
 This is particularly useful if you are working on multiple apps and you want to apply your translations to a different app.
 
-### 3.1 Export to Excel
+### 3.1 Export to Excel {#export}
 
 Click **Export to Excel…** to export the currently displayed text items to a Microsoft Excel (*.xlsx*) format file.
 
@@ -76,15 +76,15 @@ The file will be in the format shown below:
 
 You can make changes in column B which will be processed if the file is imported.
 
-### 3.2 Import from Excel
+### 3.2 Import from Excel {#import}
 
 Click **Import from Excel…** to import a correctly-constructed Microsoft Excel (*.xlsx*) format file.
 
 This does the following:
 
-* The selected module(s) are set to the ones in the *Filter:* line of the file
+* The selected module (or modules) are set to the ones in the *Filter:* line of the file
 * Any texts which are empty in column B will be ignored
-* Any texts in column A which do not match translatable texts in the selected module(s) will be ignored
+* Any texts in column A which do not match translatable texts in the selected module (or modules) will be ignored
 * Any text in column B which is not ignored is entered into the **Translation** column
 
 Changes will only be made if you click **Translate**.

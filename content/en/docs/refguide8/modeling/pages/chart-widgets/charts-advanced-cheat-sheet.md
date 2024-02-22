@@ -5,10 +5,6 @@ weight: 20
 tags: ["Charts", "Advanced", "Studio Pro", "Layout Controls", "Data Properties", "Series Properties", "studio pro"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/charts-advanced-cheat-sheet.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 This reference describes advanced configuration settings for the chart widget.
@@ -292,7 +288,7 @@ More options can be found here: [Title configurations](https://plot.ly/javascrip
 
 ### 2.7 Color
 
-Sets the the background color of a graph.
+Sets the background color of a graph.
 
 ``` json
 {

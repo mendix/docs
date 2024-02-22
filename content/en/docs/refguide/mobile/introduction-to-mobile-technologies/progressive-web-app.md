@@ -8,12 +8,17 @@ aliases:
 
 ## 1 Introduction
 
-Progressive web apps (PWAs) are an evolution of traditional web apps. Overall, PWAs tend to behave more like native mobile apps, and their popularity is increasing. One difference and possible advantage of PWAs compared to hybrid and native mobile apps is that PWAs do not need to be distributed via an app store but can be accessed directly via the browser.
+{{% alert color="info" %}}
+If you plan to build an offline-first progressive web app with Mendix, please consult [WebSQL Removal and How It Affects Your Mendix PWAs
+](https://www.mendix.com/blog/websql-removal-and-how-it-affects-your-mendix-pwas/) first.
+{{% /alert %}}
+
+Progressive web apps (PWAs) are an evolution of traditional web apps. Overall, PWAs tend to behave more like native mobile apps, and their popularity is increasing. One difference and possible advantage of PWAs compared to native mobile apps is that PWAs do not need to be distributed via an app store but can be accessed directly via the browser.
 
 Progressive web apps have three main characteristics:
 
 * **Installable** – PWAs let you add your app to your user's home screen and start a full screen app. This makes PWAs feel more fully-capable native apps.
-* **Reliable** – Using service workers, PWAs can work offline or partially offline. Mendix PWAs can work partially offline (resources like styling, pages, and images are cached) or fully offline (like hybrid offline and native mobile apps).
+* **Reliable** – Using service workers, PWAs can work offline or partially offline. Mendix PWAs can work partially offline (resources like styling, pages, and images are cached) or fully offline (like native mobile apps).
 * **Capable** – PWAs can leverage several device capabilities like the camera and location, and can offer support for web push notifications. Note that support for features depend on which browser is used.
 
 ## 2 Enabling PWA Features
@@ -27,7 +32,7 @@ PWAs require a version of Atlas 2 or above.
 {{% alert color="warning" %}}
 PWAs have the following limitations on iOS:
 
-* Push notifications are not supported for PWAs on iOS
+* Push notifications are not supported for PWAs
 * Offline data is not supported for PWAs on iOS
 {{% /alert %}}
 
@@ -172,10 +177,47 @@ This table lists the most used device features and APIs, and also documents thei
 
 For more information on browser support for certain device features, see the third-party website [Can I Use](https://caniuse.com/).
 
+{{% alert color="warning" %}}
+In iOS, using the Camera feature (`MediaDevices` in [Mozilla's API](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia)) in any browser requires HTTPS.
+{{% /alert %}}
+
 {{% alert color="info" %}}
 In order to test the features requiring HTTPS protocol, use [ngrok](https://ngrok.com/) to enable features in your localhost.
 {{% /alert %}}
 
-{{% alert color="warning" %}}
-In iOS, using the Camera feature (`MediaDevices` in [Mozilla's API](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia)) in any browser requires HTTPS.
-{{% /alert %}}
+## 7 Troubleshooting
+
+### 7.1 Clearing the Cache
+
+Progressive web apps (PWAs) cache resources such as pages, images, and their offline databases. This can interfere with local development or when updating your environment configuration, such as when adding HTTP headers. 
+
+If you are experiencing unexpected issues, it is a good idea to clear the cache and make your progressive web app download all resources again. To do so, follow these steps on the affected client:
+
+1. Open the Mendix PWA in Google Chrome or Microsoft Edge.
+1. Open the developer tools by pressing <kbd>{F12}</kbd>: 
+
+    {{< figure src="/attachments/refguide/mobile/progressive-web-app/pwa-cache.png" alt="Full PWA Cache" width="350">}}
+
+1. Open the **Application** tab and click on **Storage** in the left-side navigation.
+1. Configure which cached resources you want to reset in the **Storage** section (see below for guidance).
+1. Click **Clear site data**.
+1. Close the developer tools and reload the page.
+ 
+You can choose to clear the following resources:
+
+* **Local and session storage**: clears anything stored using the local storage nanoflow actions from [Community Commons](/appstore/modules/community-commons-function-library/)
+* **IndexDB**: not used by Mendix
+* **Web SQL**: clears the offline database
+* **Cookies**: clears the session and sign out the user (local and session storage must be selected as well)
+* **Cache storage**: clears all cached pages, images, and client JavaScript code (this will also refresh HTTP headers sent from the Mendix deployment environment)
+
+### 7.2 Enabling WebSQL Support in Development
+
+Offline-first PWAs make use of WebSQL to store offline data. This was deprecated by Chromium and has since been disabled in several web browsers. To enable it for production environments, please read [this guide](https://www.mendix.com/blog/websql-removal-and-how-it-affects-your-mendix-pwas/) on our blog.
+
+This solution should not be used for local development. Instead, you should test with Google Chrome and enable support for WebSQL locally. To do this, follow these instructions:
+
+1. Open the URL `chrome://flags` in Google Chrome.
+1. Search for *WebSQL* in the search box at the top.
+1. Change the dropdown next to **Allow access to WebSQL APIs** from **Default** to **Enabled**.
+1. Close the tab and start testing your offline-first PWA locally.

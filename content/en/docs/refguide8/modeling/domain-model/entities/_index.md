@@ -6,10 +6,6 @@ tags: ["domain model", "entity", "entities", "attribute", "validation rule", "ev
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/entities.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 An entity usually represents a class of real-world objects, such as customers, invoices, CDs, etc. An instance of an entity is called an object.

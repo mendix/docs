@@ -12,7 +12,7 @@ tags: ["legacy", "legacy system", "integration"]
 
 Mendix applications frequently need to communicate with existing systems. Whether replacing an older platform entirely or leveraging an existing database to enhance your app, the ability to integrate with legacy systems is key to your success. This how-to introduces a range of options that exist within the Mendix Platform to integrate with legacy systems.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Assess potential options for integrating an existing system with a Mendix app
 * Integrate with a legacy system using REST
@@ -21,7 +21,7 @@ This how-to will teach you how to do the following:
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Know how to create domain models (for details, see [How to Create a Basic Data Layer](/howto/data-models/create-a-basic-data-layer/))
+* Know how to create domain models (for details, see [Configuring a Domain Model](/refguide/configuring-a-domain-model/))
 * Know how to create overview and detail pages (for details, see [How to Create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/))
 * Know how to create microflows (for details, see [How to Build Your First Microflow: Hello world!](/refguide/triggering-microflow-from-menu-item/))
 * Understand the concepts behind REST and web services (for more information, see [How to Consume a Complex Web Service](/howto/integration/consume-a-complex-web-service/))

@@ -3,6 +3,8 @@ title: "Build Custom Widgets"
 url: /howto8/extensibility/widget-development/
 category: "Extensibility"
 weight: 30
+no_list: false
+description_list: true 
 tags: ["widget", "develop widget", "customize"]
 ---
 
@@ -30,15 +32,15 @@ The sections below describe the Mendix resources that can help you understand ho
 
 ### 3.2 Dojo {#dojo}
 
-Custom widgets are Dojo widgets. In order to understand how widgets are structured and what their life cycle is, you need to know how Dojo widgets are built. You can consult this quick introduction:
+Custom widgets are Dojo widgets. In order to understand how widgets are structured and what their lifecycle is, you need to know how Dojo widgets are built. You can consult this quick introduction:
 
 * [Dojo Documentation Tutorials](http://dojotoolkit.org/documentation/#tutorials)
 
-For details on the widget life cycle, reference this documentation:
+For details on the widget lifecycle, reference this documentation:
 
 * [Writing Your Own Widget](http://dojotoolkit.org/reference-guide/1.10/quickstart/writingWidgets.html)
 * [dijit.\_WidgetBase](https://dojotoolkit.org/reference-guide/1.10/dijit/_WidgetBase.html)
-* [Tutorial: Widget Life Cycle](https://apidocs.rnd.mendix.com/6/client/tutorial-widget-lifecycle.html)
+* [Tutorial: Widget Lifecycle](https://apidocs.rnd.mendix.com/6/client/tutorial-widget-lifecycle.html)
 
 ### 3.3 Widget Scaffolding
 
@@ -48,7 +50,7 @@ This information is covered in [Expert Series: Kickstart Your Widget Development
 
 ### 3.4 Interacting with Mendix Runtime
 
-Widgets have the ability to get data from the Runtime, manipulate objects, show validations, and set references. This is done through the Client API. For the latest version of the this API, see [Client API](https://apidocs.rnd.mendix.com/8/client/index.html).
+Widgets have the ability to get data from the Runtime, manipulate objects, show validations, and set references. This is done through the Client API. For the latest version of the this API, see [Client API](/apidocs-mxsdk/apidocs/client-api/).
 
 ### 3.5 Configuring the Widget in Mendix
 
@@ -74,13 +76,10 @@ Most of the widgets in the [Mendix Marketplace](https://marketplace.mendix.com/)
 
 Using the widget generator, you get a test project. With the test project (or your own project), you can quickly start creating widgets.
 
-By debugging your widgets, you will quickly learn where you make mistakes and how the widget life cycle works.
+By debugging your widgets, you will quickly learn where you make mistakes and how the widget lifecycle works.
 
 ### 4.3 Ask the Community
 
 Within the Mendix community of developers, there are plenty of widget developers. The [Mendix Forum](https://forum.mendixcloud.com) is the place to go to when you have questions.
 
-## 5 Main Documents in This Category
-
-* [Build a Preview Image for a Custom Widget](/howto8/extensibility/add-a-preview-image-for-custom-widget/)
-* [Build Widgets with XML](/howto8/extensibility/use-xml-widget/)
+## 5 Documents in This Category

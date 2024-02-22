@@ -1,5 +1,5 @@
 ---
-title: "Google Maps"
+title: "Google Maps ⚠"
 url: /appstore/widgets/google-maps/
 category: "Widgets"
 description: "Describes the configuration and usage of the Google Maps widget, which is available in the Mendix Marketplace."

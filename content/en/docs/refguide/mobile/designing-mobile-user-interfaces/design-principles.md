@@ -2,7 +2,7 @@
 title: "Design Principles"
 url: /refguide/mobile/designing-mobile-user-interfaces/design-principles/
 weight: 10
-description: "This document will teach you how to build a native mobile app's UI."
+description: "This document teaches you how to build a native mobile app's UI."
 tags: ["design", "styling"]
 aliases:
     - /howto/mobile/ui-best-practices/
@@ -42,7 +42,7 @@ In apps where custom UX or UI is more important (for example B2C and B2B apps) t
 
 At Mendix we strongly believe in enabling other developers as they grow to scale and speed up development. In general there are more Mendix developers than UI or UX designers. Therefore, when building a mobile app it is important that a UI or UX designer can enable Mendix developers as much as possible to speed up development.
 
-One could compare building with Mendix to building with toy blocks. Give a maker a set of generic blocks that can be combined, and they can build anything. However if they constantly need to buy new types of specific blocks,  their building would be slow and hampered.
+One could compare building with Mendix to building with toy blocks. Give a user a set of generic blocks that can be combined, and they can build anything. However if they constantly need to buy new types of specific blocks,  their building would be slow and hampered.
 
 To learn about building a Mendix native mobile app's UI, consult the sections below. Be sure to see the [Configure Design Properties](#configure-design-props) section below for key information on implementing design easily.
 
@@ -92,7 +92,7 @@ There are several cases in which an app's standard theme and content is not rich
 
 ### 3.5 Iterating and Discussing
 
-Mendix is a platform for Agile development environments, which also applies when creating a UI kit and the related Mendix themes and components. Keep iterating, discussing, and improving.
+Mendix is a platform for [Agile development](https://www.mendix.com/blog/design-thinking-vs-agile-combine-problem-finding-problem-solving-better-outcomes/) environments, which also applies when creating a UI kit and the related Mendix themes and components. Keep iterating, discussing, and improving.
 
 ## 4 Best Practices 
 

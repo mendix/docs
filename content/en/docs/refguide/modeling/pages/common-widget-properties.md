@@ -3,6 +3,8 @@ title: "Properties Common in the Page Editor"
 url: /refguide/common-widget-properties/
 weight: 120
 tags: ["studio pro", "widget properties", "properties", "common", "widget", "classes"]
+aliases:
+    - /refguide/Conditions
 #Common Section and Visibility section anchors are used in links of common-section-link and visibility-section-link snippets. If moving or renaming them, do not forget to update snippets.
 ---
 
@@ -25,7 +27,7 @@ The **Screen reader caption** property can be set on the following widgets:
 * [Text Box](/refguide/text-box/)
 * [Text Area](/refguide/text-area/)
 * [Drop-down](/refguide/drop-down/)
-* [Check Box](/refguide/check-box/)
+* [Checkbox](/refguide/check-box/)
 * [Radio Buttons](/refguide/radio-buttons/)
 * [Date Picker](/refguide/date-picker/)
 * [File Manager](/refguide/file-manager/)
@@ -38,7 +40,7 @@ The **Screen reader caption** property can be set on the following widgets:
 
 ### 3.1 Name{#name}
 
-The internal name of the widget. You can use this to give sensible names to widgets. The name property also appears in the generated HTML: the widget DOM element automatically includes the class `mx-name-{NAME}`, which can be useful for [Selenium testing](/howto7/integration/selenium-support/).
+The internal name of the widget. You can use this to give sensible names to widgets. The name property also appears in the generated HTML: the widget DOM element automatically includes the class `mx-name-{NAME}`, which can be useful for [Selenium testing](/howto/integration/selenium-support/).
 
 ### 3.2 Tab Index{#tab-index}
 
@@ -75,10 +77,14 @@ The dynamic classes property allows you to specify one or more cascading stylesh
 {{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/dynamic-classes.png" >}}
 
 {{% alert color="info" %}}
-The dynamic classes property was introduced in Mendix Studio Pro v8.14.
+The dynamic classes property was introduced in Mendix Studio Pro 8.14.
 {{% /alert %}}
 
 You can see which widgets in a page have styling applied via the style or class property by clicking the **Show styles** button.
+
+{{% alert color="info" %}}
+On a DataGrid column, a dynamic class is only applied to the `<col>` element, not to the `<td>` element (in contrast to the class property). 
+{{% /alert %}}
 
 ### 3.6 Documentation{#documentation}
 
@@ -99,7 +105,7 @@ With the following widgets, the Attribute (Path) specifies the attribute which i
 * [Text Box](/refguide/text-box/)
 * [Text Area](/refguide/text-area/)
 * [Drop-down](/refguide/drop-down/)
-* [Check Box](/refguide/check-box/)
+* [Checkbox](/refguide/check-box/)
 * [Radio Buttons](/refguide/radio-buttons/)
 * [Date Picker](/refguide/date-picker/)
 
@@ -145,12 +151,13 @@ The attribute can be of one of the following [data types](/refguide/data-types/)
 
 The editable property indicates whether the end-user will be able to change the value displayed by the widget. The possible values are:
 
-| Value       | Description                                                  |
-| ----------- | ------------------------------------------------------------ |
-| Default     | The value is editable if security allows it such as if the user that is signed in has write access to the selected attribute (default value for widgets outside a snippet). |
-| Inherited from snippet call | Set to **Default** or **Never** by the containing data container of the snippet call (default value for widgets inside a snippet). |
-| Never       | The value is never editable.                                 |
-| Conditionally | The value is editable if the specified condition holds (see below). |
+| Value | Description  |
+|--------|------------|
+| Default      | The value is editable if the containing data container is editable and if security allows it. For example, if the user that is signed in has write access to the selected attribute (the default value for widgets outside a snippet). |
+| Inherited from snippet call    | Set to **Default** or **Never** by the containing data container of the snippet call (default value for widgets inside a snippet).                                                                                           |
+| Never     | The value is never editable.    |
+| Conditionally  | The value is editable if the specified condition holds (see below).  |
+| Conditionally (combined with inherited condition) | The value is editable if the specified condition holds and the conditions for all conditional editable data containers also hold.  |
 
 ### 5.2 Condition
 
@@ -347,7 +354,7 @@ You can choose both **Context** conditions and **Module roles** conditions to ap
 {{% alert color="warning" %}}
 With the **Visible** property, you only hide data and do not protect it. You can hide a tab or a table row from an end-user, but if they still have access to the data then they could see it some other way. To restrict access to sensitive data, use a constraint on the domain model, not on individual pages.
 
-Depending on the condition used to set the **Visible** property, hiding an element containing a microflow or snippet will not necessarily prevent the microflow or snippet from being triggered. We recommend that you do not use this method to control whether a microflow is run or not, but include the condition in the microflow itself.
+Depending on the condition used to set the **Visible** property, hiding an element containing a microflow or snippet will not necessarily prevent the microflow or snippet from being triggered. Mendix recommends that you do not use this method to control whether a microflow is run or not, but include the condition in the microflow itself.
 {{% /alert %}}
 
 #### 9.1.1 Context
@@ -358,7 +365,24 @@ A practical example would be a web shop in which the user must submit both billi
 
 ##### 9.1.1.1 Based on Attribute Value{#visibility-based-on-attribute-value}
 
-When selected, this shows the widget while a particular attribute has a certain value. Only Boolean and enumeration attributes can be used for this purpose.
+When selected, this shows the widget while a particular attribute has a certain value. 
+
+{{% alert color="info" %}}
+Visibility based on an attribute value can be set only for widgets that are inside data containers (a data view, list view, or data grid). 
+
+Only Boolean and enumeration attributes can be used for this purpose.
+
+{{% /alert %}}
+
+For example, you have a web shop and you would like to show a field with a billing address only when a customer unchecks the **Billing address is the same as delivery address** option (it is checked by default). 
+
+A page where a customer fills in their details can look the following way:
+
+{{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/customer-page-example.png" alt="Customer Details"  width="500">}}
+
+The visibility of the billing address depends whether the customer checks that the billing address is different from the delivery address. In your domain model, you have an attribute of the Boolean type called **BillingAddressSame**, so when it is set to *false*, the billing address should be visible. This means that the visibility of the billing address depends on the value of the **BillingAddressSame** attribute:
+
+{{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/condition-for-visibility-dialog.png" alt="An example of visibility properties" width="500">}}
 
 ##### 9.1.1.2 Based on Expression{#visibility-based-on-expression}
 

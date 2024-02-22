@@ -3,7 +3,7 @@ title: "Build a Pluggable Web Widget: Part 1"
 linktitle: "1. Build Pluggable Web Widget"
 url: /howto/extensibility/create-a-pluggable-widget-one/
 weight: 10
-description: "This how-to will teach you to create a pluggable web widget."
+description: "This how-to teaches you how to create a pluggable web widget."
 tags: ["widget", "pluggable", "JavaScript", "API", "JavaScript-API"]
 ---
 
@@ -11,7 +11,7 @@ tags: ["widget", "pluggable", "JavaScript", "API", "JavaScript-API"]
 
 Pluggable web widgets are the new generation of custom-built widgets. These widgets are based on React and use a different architecture than the older custom widgets based on Dojo. With pluggable web widgets, you can develop powerful tools in simple, precise ways. In the first part of this series, you will learn to create a text input widget.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Generate a widget structure
 * Create a basic text input widget
@@ -43,7 +43,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Creating a TextBox Input Widget
 
-The following steps will teach you to build a pluggable input widget, and show you how to use the new pluggable widget API.
+The following steps teach you how to build a pluggable input widget, and show you how to use the new pluggable widget API.
 
 ### 3.1 Creating a Test App {#creating-a-test-project}
 
@@ -91,7 +91,7 @@ The generator will ask you a few questions during setup. Answer the questions by
 * Mendix App path: *../../*
 * Programming language: **TypeScript**
 * Which type of components do you want to use? **Class Components** 
-* Widget type: **For web and hybrid mobile apps**
+* Widget type: **For web mobile apps**
 * Widget template: **Empty widget (recommended for more experienced developers)**
 * Unit tests: **No**
 * End-to-end tests: **No**
@@ -223,7 +223,7 @@ Open the *(YourMendixApp)/CustomWidgets/TextBox* folder in your IDE of choice (a
 
     {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/updateallwidgets.png" >}}
 
-    {{% alert color="info" %}}The widgets in Studio and Studio Pro are not automatically updated. First, run the `npm start` command again. To refresh your widgets, press F4 or select **App** > **Synchronize App Directory** from the Studio Pro menu to reload the widgets from the file system. Finally, right-click the widget and select Update all widgets to update the newly-changed properties in the widget.{{% /alert %}}
+    {{% alert color="info" %}}The widgets Studio Pro are not automatically updated. First, run the `npm start` command again. To refresh your widgets, press F4 or select **App** > **Synchronize App Directory** from the Studio Pro menu to reload the widgets from the file system. Finally, right-click the widget and select Update all widgets to update the newly-changed properties in the widget.{{% /alert %}}
 
 8. When running the app, the new widget is already functional. The first text box is a standard Text box widget and the second is your pluggable web widget. When data is changed in the first input and the cursor is moved to the next widget, the data of your widget is also updated: 
 
@@ -383,7 +383,7 @@ The value from the attribute can be displayed and updated using the other input,
 
 Congratulations, you have now made a fully functional input widget!
 
-Continue with the next tutorial to learn how to add validation feedback, custom validations, and an on-change event activity. You will also learn how to handle a read-only state, improve web accessibility, and make a Mendix Studio or Mendix Studio Pro preview.
+Continue with the next tutorial to learn how to add validation feedback, custom validations, and an on-change event activity. You will also learn how to handle a read-only state, improve web accessibility, and make a Mendix Studio Pro preview.
 
 ## 4 Read More
 

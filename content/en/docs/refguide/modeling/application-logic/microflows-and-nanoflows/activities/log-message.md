@@ -6,15 +6,13 @@ tags: ["studio pro", "logging activity", "logging activities", "log message"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="warning" %}}
-This activity can be used in both **Microflows** and **Nanoflows**.
+{{% alert color="info" %}}
+This activity can be used in both microflows and nanoflows.
 {{% /alert %}}
 
 ## 1 Introduction
 
-With the **Log message** activity you can create messages that appear in the log of your Mendix application:
-
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/log-message/log-message.png" alt="Log Message" >}}
+With the **Log message** activity you can create messages that appear in the log of your Mendix application.
 
 ## 2 Properties
 
@@ -33,7 +31,7 @@ The **Action** section of the properties pane shows the action associated with t
 
 You can open a dialog box to configure this action by clicking the ellipsis (**…**) next to the action.
 
-You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
+You can also open the dialog box by double-clicking the activity, or right-clicking the activity and selecting **Properties**.
 
 ### 3.1 Log Level
 
@@ -44,7 +42,7 @@ The log level defines the severity of the log message. In the [Studio Pro Consol
 | Trace |   | Used for detailed execution traces. |
 | Debug |   | Used to debug execution. |
 | Info  *(default)*  |   | Used to log informative messages. |
-| Warning | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/log-message/warning.png" alt="Warning"   width="15%"  >}} | Used to log warnings. These messages appear in orange. |{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/log-message/warning.png" alt="Warning"   width="15%"  >}}{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/log-message/warning.png" alt="Warning"   width="15%"  >}}
+| Warning | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/log-message/warning.png" alt="Warning"   width="15%"  >}} | Used to log warnings. These messages appear in orange. |
 | Error | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/log-message/error.png" alt="Error" width="15%" >}} | Used to log error messages. These messages appear in red. |
 | Critical | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/log-message/critical-error.png" alt="Critical Error" width="15%" >}} | Used to log critical errors. These messages appear in white on red. |
 
@@ -70,13 +68,13 @@ For each parameter in the template you define a microflow expression of which th
 
 {{% alert color="info" %}}
 
-With parameters you can customize your message with data specific to the situation. For example, the message *An e-mail has been sent to department {1}*. with parameter `$Department/Name` shows the name of the department to which an e-mail has been sent.
+With parameters you can customize your message with data specific to the situation. For example, the message *An email has been sent to department {1}*. with parameter `$Department/Name` shows the name of the department to which an email has been sent.
 
 {{% /alert %}}
 
 ### 3.5 Include Latest Stack Trace
 
-Defines whether to include the stack trace of the latest error in this log message. In Studio Pro, log messages that include a stack trace are marked with a paperclip icon.
+Defines whether to include the stack trace of the latest error in this log message. In Studio Pro, log messages that include a stack trace are marked with a paperclip icon ({{% icon name="paperclip" %}}).
 
 Double-clicking these log messages shows the stack trace.
 

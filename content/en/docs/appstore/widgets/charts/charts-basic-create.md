@@ -12,7 +12,7 @@ aliases:
 
 The charts widget provides a basic implementation of different types of chart (for example: area, line, bar, column, and pie) in a Mendix application.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Create a chart with basic sample data
 
@@ -107,5 +107,5 @@ To view the chart, follow these steps:
 ## 4 Read More
 
 * [Use a Chart With a REST Data Source](/howto/front-end/charts-basic-rest/)
-* [Use Any Chart](/howto/front-end/charts-any-usage/)
+* [Use Any Chart](/appstore/widgets/charts-any-usage/)
 * [Use Charts Themes](/howto/front-end/charts-theme/)

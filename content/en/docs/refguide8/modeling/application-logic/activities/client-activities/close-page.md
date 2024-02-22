@@ -11,10 +11,6 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/close-page.pdf).
-{{% /alert %}}
-
 {{% alert color="warning" %}}
 This activity can be used in both **Microflows** and **Nanoflows**.
 {{% /alert %}}
@@ -46,7 +42,7 @@ The **Action** section of the properties pane shows the action associated with t
 ### 3.1 Number of Pages
 
 {{% alert color="info" %}}
-This option is only available for native mobile and was introduced with Mendix Studio Pro v8.14.
+This option is only available for native mobile and was introduced with Mendix Studio Pro 8.14.
 {{% /alert %}}
 
 This property allows you to control how many pages should be closed.

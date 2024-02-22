@@ -4,10 +4,6 @@ url: /refguide8/ui-resources-package/
 tags: ["studio pro", "ui resources"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/ui-resources-package.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 The UI resources package is a specific [module](/refguide8/modules/) marked by a green icon in the Project Explorer, that determines the projects look and feel. It does this in two distinct ways. First, the package supplies the project with all the page documents required to create well-designed, consistent pages, such as [page templates](/refguide8/page-templates/) and [building blocks](/refguide8/building-block/). Second, the package contains theme information, which allows users to easily switch out themes that complement the accompanying page documents. 

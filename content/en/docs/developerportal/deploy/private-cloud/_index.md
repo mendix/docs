@@ -63,13 +63,13 @@ If you have chosen to register a standalone cluster, then all communication with
 
 ## 3 Product Capability Comparison
 
-The table below shows the differences between the capabilities for apps deployed to the Mendix Cloud, Mendix for Private Cloud (Mx4PC) Connected, and Mx4PC Standalone.
+The table below shows the differences between the capabilities for apps deployed to Mendix Cloud, Mendix for Private Cloud Connected, and Mendix for Private Cloud Standalone.
 
-| Capability | Mendix Cloud | Mx4PC Connected | Mx4PC Standalone |
+| Capability | Mendix Cloud | Mendix for Private Cloud Connected | Mendix for Private Cloud Standalone |
 | --- | --- | --- | --- |
 | Environment provisioning | Fully automated | Provisioned with database and blob storage provided by the customer | Provisioned with database and blob storage provided by the customer|
 | Environment configuration<br/>*For example, constants and scheduled event* | Mendix Developer Portal | Mendix Developer Portal | Custom Resources via Mendix Operator |
-| Mendix app/deployment package deployment | Mendix Developer Portal, Studio Pro, and Studio | Mendix Developer Portal and Studio Pro | Custom Resources via Mendix Operator<br/>*normally combined in a CI/CD pipeline* |
+| Mendix app/deployment package deployment | Mendix Developer Portal and Studio Pro | Mendix Developer Portal and Studio Pro | Custom Resources via Mendix Operator<br/>*normally combined in a CI/CD pipeline* |
 | Backup and restore | Mendix Developer Portal | Services supplied by the database server and file storage used¹ | Services supplied by the database server and file storage used¹ |
 | Monitoring | Mendix Developer Portal | App metrics sent to a Prometheus-compatible monitoring tool | App metrics sent to a Prometheus-compatible monitoring tool |
 | App logs | Mendix Developer Portal | Prints app logs to `stdout` | Prints app logs to `stdout` |
@@ -79,9 +79,32 @@ The table below shows the differences between the capabilities for apps deployed
 ¹ No backup or restore functionality is installed automatically with Mendix for Private Cloud. You will need to choose and deploy your own  solution, dependent on your choice of database, file storage, and cloud platform.
 {{% /alert %}}
 
-## 4 Licensing Mendix for Private Cloud{#licensing}
+## 4 Memory Allocation
 
-### 4.1 Operator License
+Each Mendix app or environment pod has the following containers:
+
+* Mx Runtime and the Mendix app itself
+* The m2ee sidecar container
+* The metrics sidecar container (only used when compatibility mode metrics are enabled)
+
+All of those containers, including the sidecar containers, have specific resource requests and limits, so each Mendix app pod will request a certain amount of CPU cores and memory.
+
+The Mendix container is specified per app in the portal. You can update the resource allocation in the [Mendix App CR](https://docs.mendix.com/developerportal/deploy/private-cloud-operator/#edit-cr).
+The m2ee-sidecar container's resources are specified in the [OperatorConfiguration CR](https://docs.mendix.com/developerportal/deploy/private-cloud-cluster/#635-resource-definition-via-operator-configuration-manifest).
+
+{{% alert color="info" %}}
+If the app is running in Standalone mode and its MendixApp CR does not have any resources assigned in the MendixApp CR specification resources, the Mendix Operator will use the value of *OperatorConfiguration* CR's *spec.runtimeResources* instead.
+{{% /alert %}}
+
+If the customer decided to use a [Vertical Pod autoscaler](https://docs.mendix.com/developerportal/deploy/private-cloud-cluster/#663-vertical-pod-autoscaling), the autoscaler can override any pod or container resources.
+
+When a user sets CPU and memory limits, the JVM (JRE 8u191+) will automatically detect the container requests and limits, and automatically set Java memory limits based on the container details.
+However, by default, the JVM will limit the heap memory to 25% of the container's memory limit. Mx4PC just sets the container limits, but does not go further into configuring the JVM. 
+This percentage can be adjusted by providing a custom value in Custom JVM Options in the [Runtime tab](https://docs.mendix.com/developerportal/deploy/private-cloud-deploy/#54-runtime-tab) in the Private Cloud Portal, for example: *-XX:MaxRAMPercentage=75.0*.
+
+## 5 Licensing Mendix for Private Cloud{#licensing}
+
+### 5.1 Operator License
 
 Mendix for Private Cloud is a premium offering from Mendix, and you will need an additional license to use it for your applications. This **Operator license** allows you to manage Mendix apps in your cluster through the Mendix Operator and, optionally, the Mendix Gateway Agent.
 
@@ -100,15 +123,15 @@ You can request an Operator license by doing the following:
     * The name of your company (if requesting on behalf of a client, enter the name of their company).
     * License Type: Operator
     * The Mendix for Private Cloud architecture type. See [Connected and Standalone Clusters](#connected-standalone), above, for more information — optionally, leave additional information in the **comment** field
-    * The namespace(s) for which you want to request an Operator license
+    * The namespace (or namespaces) for which you want to request an Operator license
 
 5. Save the request.
 
-You will receive your Operator license(s) from Mendix Support, together with instructions on how to configure it(them).
+You will receive your Operator license (or licenses) from Mendix Support, together with instructions on how to configure it(them).
 
 You can run the Mendix Operator in trial mode for evaluation purposes. When the Operator is running in trial mode, it will stop managing an environment ninety days (thirty days for Mendix Operator versions 1.12.0 and earlier) after the environment was created. In this case you will be unable to stop or start your app, or deploy an app to this environment. The only action you can take is to delete the environment. 
 
-### 4.2 Runtime License
+### 5.2 Runtime License
 
 The Operator license is independent of a Mendix Runtime license. The Mendix Runtime license removes [trial restrictions](/developerportal/deploy/licensing-apps-outside-mxcloud/) from a Mendix App itself. You need both licenses to manage and run an application through Mendix for Private Cloud.
 
@@ -125,13 +148,13 @@ You can request a Runtime license by doing the following:
     * The name of your company (if requesting on behalf of a client, enter the name of their company).
     * License Type: Runtime
     * The Mendix for Private Cloud architecture type. See [Connected and Standalone Clusters](#connected-standalone), above, for more information — optionally, leave additional information in the **comment** field
-    * If "Connected" please provide the namespace(s) for which you are requesting the runtime license(s)
+    * If "Connected" please provide the namespace (or namespaces) for which you are requesting the runtime license (or licenses)
 
 5. Save the request.
 
-You will receive your Runtime license(s) from Mendix Support. See [Online Private Cloud Apps](#activate-online) and [Offline Private Cloud Apps](#activate-offline), below, for instructions on how to configure them.
+You will receive your Runtime license (or licenses) from Mendix Support. See [Online Private Cloud Apps](#activate-online) and [Offline Private Cloud Apps](#activate-offline), below, for instructions on how to configure them.
 
-### 4.3 Request Both Operator and Runtime license
+### 5.3 Request Both Operator and Runtime License
 
 You can also request for both the Operator and Runtime license within the same request following the steps below:
 
@@ -146,16 +169,20 @@ You can also request for both the Operator and Runtime license within the same r
     * The name of your company (if requesting on behalf of a client, enter the name of their company).
     * License Type: Operator and Runtime
     * The Mendix for Private Cloud architecture type. See [Connected and Standalone Clusters](#connected-standalone), above, for more information — optionally, leave additional information in the **comment** field
-    * The namespace(s) for which you want to request an Operator license
+    * The namespace (or namespaces) for which you want to request an Operator license
 
-### 4.4 Activating Your License(s)
+### 5.4 Activating Your License (or Licenses)
 
-#### 4.4.1 Online Private Cloud Apps{#activate-online}
+#### 5.4.1 Online Private Cloud Apps{#activate-online}
 
 If your app is able to connect to the internet to contact the Mendix license server, you will receive a **Subscription Secret** from Mendix Support.
 
 If your app is **Connected** to the Developer Portal, you can enter the subscription secret [in the Developer Portal](/developerportal/deploy/private-cloud-deploy/#license-mendix)
 
-#### 4.4.2 Standalone & Offline Private Cloud Apps{#activate-offline}
+#### 5.4.2 Standalone & Offline Private Cloud Apps{#activate-offline}
 
 If your app is **Standalone** or unable to contact the Mendix license server, you will receive a **LicenseId** and a **LicenseKey**. You will have to apply these by [editing the CR](/developerportal/deploy/private-cloud-operator/#edit-cr) in the cluster.
+
+#### 5.4.3 Private Cloud Licensing Manager
+
+With Mendix Operator version 2.11.0 and above, you can start using the Private Cloud Licensing Manager to import a license bundle consisting of Operator and Runtime licenses. Private Cloud Licensing Manager automatically retrieves the licenses from the license bundle, so that you do not need to apply the license per environment. For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/).

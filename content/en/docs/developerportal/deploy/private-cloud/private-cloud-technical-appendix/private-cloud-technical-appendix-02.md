@@ -58,14 +58,14 @@ Mendix for Private Cloud will not install, create, or maintain the database serv
 
 For apps that don't need persistence (for example demo or frontend apps), an ephemeral database can be used. The Mendix Runtime will use an in-memory database which will not persist any data between restarts.
 
-### 2.3 File storage
+### 2.3 File Storage
 
 To store files, Mendix environments need access to a blob (object) storage server, such as AWS S3 or Minio. A specialized blob storage server is much easier to maintain and manage than block storage (CSI or mounted volumes). Unlike databases, a single blob storage bucket and account can be shared by multiple environments.
 Depending on the storage provider, Mendix for Private Cloud can either provision the bucket and IAM user automatically when a new environment is created, or let an environment use a pre-provisioned bucket and IAM account.
 
 Mendix for Private Cloud will not install, create, or maintain the blob storage server (such as Minio) – you will need to install the blob storage server and maintain it. When using a managed storage solution such as AWS S3 or Azure Blob Storage, you will need to create the storage account and IAM role to be used by the Mendix Operator.
 
-### 2.4 Network endpoint
+### 2.4 Network Endpoint
 
 To allow HTTP clients to communicate with the Mendix Runtime, you will need to set up the network infrastructure. This typically includes a DNS wildcard domain, a load balancer, and an ingress controller. The infrastructure will depend on how exactly your network is set up and how Mendix apps should be reachable. For example, you might have a requirement allow Mendix apps to only be reachable from a private intranet and use domains from a private DNS zone.
 
@@ -79,20 +79,20 @@ Mendix for Private Cloud can create one of:
 
 Mendix for Private Cloud allows you to customize some Ingress, Route, and Service properties either globally (for the entire namespace) or per environment.
 
-### 2.5 Container registry
+### 2.5 Container Registry
 
 Kubernetes uses container images to distribute software. Before deploying a Mendix app (.mda) file, Mendix for Private Cloud will repack the .mda file into a container image and push this image into a container image registry such as *ECR*, *quay.io*, or *Nexus*. Using a centralized container registry simplifies cluster scaling and provides insights into what is running in a cluster.
 For example, it is possible to use [Trivy scanner](https://github.com/aquasecurity/trivy) to scan all images deployed in a cluster for CVEs.
 
 You will need to create the container registry and provide credentials to the Mendix Operator so that it can push images to the registry. In addition, your Kubernetes cluster needs to be authorized to pull images from the registry.
 
-### 2.6 Network connectivity
+### 2.6 Network Connectivity
 
 Your cluster needs network connectivity to the database and file (blob) storage.
 
 For *Connected* clusters, Mendix for Private Cloud needs to be able to connect to [Mendix Services](/developerportal/deploy/private-cloud-cluster/#prerequisites-connected). If necessary, communication can be done through an HTTPS proxy. The Mendix Operator doesn't require any internet-facing open ports (port forwarding) to communicate with Mendix services. All communication with the Developer Portal is over HTTPS and is initiated from the Kubernetes cluster. It is even possible to run Mendix for Private Cloud behind Network Address Translation (NAT) devices or even a series of NAT devices.
 
-## 3 Installation{#installation}
+## 3 Installation {#installation}
 
 The diagram below shows the steps which you need to take to install Mendix for Private Cloud in a namespace. It assumes that the Cluster Administrator has already set up the cluster so that the Developer Portal knows about it. See [Creating a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster/#create-cluster) for more information.
 
@@ -140,7 +140,7 @@ The diagram below provides a more detailed explanation how the Mendix Operator c
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-technical-appendix/private-cloud-technical-appendix-02/mx4pc-provision-storage.png" >}}
 
 The Operator doesn't communicate with the database or file storage directly, instead, the `StorageInstance` controller runs a provisioner pod (a “task” pod) to create a new storage tenant in the database or file server.
-The `StoragePlan` CR (created earlier when the Operator was [configured with the `mxpc-cli` configuration tool](/developerportal/deploy/private-cloud-cluster/#configure-namespace)) contains blueprints for the provisioner pod, such as:
+The `StoragePlan` CR (created earlier when the Operator was [configured with the `mxpc-cli` configuration tool](/developerportal/deploy/standard-operator/#configure-namespace) contains blueprints for the provisioner pod, such as:
 
 * The provisioner image name
 * The name of the Kubernetes secret containing management credentials – such as the PostgreSQL admin username/password or AWS credentials
@@ -171,7 +171,7 @@ When the `Build` controller detects that the source URL (`spec.sourceURL`) in th
 The build pod will then do the following:
 
 * download the MDA from the specified `spec.sourceURL`
-* convert the MDA into a OCI image layer (app layer)
+* convert the MDA into an OCI image layer (app layer)
 * append the app layer to a `runtime-base` image
     {{% alert color="info" %}}`runtime-base` images are prebuilt Mendix Runtime images that contain a specific version of the Mendix Runtime and all of its dependencies (JRE, fonts)<br/>Internally, the app layer is appended by using the [crane append](https://github.com/google/go-containerregistry/blob/main/cmd/crane/doc/crane_append.md) operation{{% /alert %}}
 * push the resulting image to the image registry
@@ -199,8 +199,8 @@ To use an Ingress controller, you need to install it first:
 1. Install your chosen ingress controller.
     Most ingress controllers will also create a Kubernetes load balancer service on installation
 2. Set up DNS in one of two ways:
-    * ensure that your app domain(s) (or wildcard domain) resolve to the load balancer's external IP address – see, for example, the article [Routing traffic to an ELB load balancer](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-elb-load-balancer.html), which explains how to set up Route 53
-    * install and set up Kubernetes [External DNS](https://github.com/kubernetes-sigs/external-dns) to automatically manage your DNS server
+    * Ensure that your app domains (or wildcard domain) resolve to the load balancer's external IP address – see, for example, the article [Routing traffic to an ELB load balancer](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-elb-load-balancer.html), which explains how to set up Route 53
+    * Install and set up Kubernetes [External DNS](https://github.com/kubernetes-sigs/external-dns) to automatically manage your DNS server
 3. Create a test ingress object and deploy a test app to verify that the network setup is working.
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-technical-appendix/private-cloud-technical-appendix-02/mx4pc-ingress-controller.png" >}}

@@ -1,17 +1,14 @@
 <!doctype html>
-<html lang="{{ .Site.Language.Lang }}" class="no-js">
+<html itemscope itemtype="http://schema.org/WebPage" lang="{{ .Site.Language.Lang }}" class="no-js">
   <head>
     {{ partial "head.html" . }}
   </head>
   <body class="td-{{ .Kind }}{{ with .Page.Params.body_class }} {{ . }}{{ end }}">
-
 {{/* NK - deactivation of original navbar 
     <header>
       {{ partial "navbar.html" . }}
     </header>
-    </div> 
 */}}
-
     <div class="container-fluid td-outer">
       <div class="td-main">
         <div class="row flex-xl-nowrap stretch-main">
@@ -33,25 +30,25 @@
         {{ if not .Title }}
             {{ warnf "File %s \n\t\t\t\thas no title in the front matter\n " .Page.File.Path }}
         {{ end }}
-		 <!-- NK - START of addition of versions selector menu, 
-		taken from themes\docsy\layouts\partials\navbar.html, 
-		this might get moved again, with further styling changes -->
-			{{ if  .Site.Params.versions }}
-			<li class="nav-item dropdown mr-4 d-none d-lg-block">
-				{{ partial "navbar-version-selector.html" . }}
-			</li>
-			{{ end }}
-		  <!-- END of addition -->
+         <!-- NK - START of addition of versions selector menu, 
+        taken from themes\docsy\layouts\partials\navbar.html, 
+        this might get moved again, with further styling changes -->
+            {{ if  .Site.Params.versions }}
+            <li class="nav-item dropdown mr-4 d-none d-lg-block">
+                {{ partial "navbar-version-selector.html" . }}
+            </li>
+            {{ end }}
+          <!-- END of addition -->
           <!-- MvM: Move breadcrumb above banner -->
           {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
-		  
+          
           {{ partial "version-banner.html" . }}
-		  
+          
             {{ block "main" . }}{{ end }}
           </main>
         </div>
       </div>
-	  {{ partial "footer.html" . }}
+      {{ partial "footer.html" . }}
     </div>
     {{ partial "scripts.html" . }}
   </body>

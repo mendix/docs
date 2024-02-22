@@ -53,7 +53,7 @@ If you have determined that slow loads are your issue, take a look at the slow l
 
 #### 3.2.1 Slow Network
 
-If your data transfers are taking a long time for a small amount of data, you may wish to contact a system administrator for further assistance. This article focuses on issues you can resolve within your application model.
+If your data transfers are taking a long time for a small amount of data, you may wish to contact a system administrator for further assistance. This document focuses on issues you can resolve within your application model.
 
 #### 3.2.2 Retrieve Action
 
@@ -169,11 +169,11 @@ If you find that your microflow has a large number of objects to loop over, or e
 
 As always, make sure you look at the retrieves and commits performed in your loops, and try to minimize them wherever possible.
 
-## 6 Using MxAssist Performance Bot
+## 6 Using MxAssist Best Practice Bot
 
-[MxAssist Performance Bot](/refguide/mx-assist-performance-bot/) can help you find potential improvements to your app for better performance. It can be accessed via **View** > **MxAssist Performance Bot**.
+[MxAssist Best Practice Bot](/refguide/mx-assist-performance-bot/) can help you find potential improvements to your app in general, such as performance, security, naming conventions, and so on. It can be accessed via **View** > **Best Practice Bot**.
 
-For more information on performance best practices, see [Performance Best Practices](/refguide/performance-best-practices/).
+For more information on best practices, see [Recommendations from MxAssist Best Practice Bot](/refguide/performance-best-practices/).
 
 ## 7 Read More
 

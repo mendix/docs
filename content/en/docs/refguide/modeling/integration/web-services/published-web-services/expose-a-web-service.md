@@ -114,14 +114,14 @@ To get a WSDL, follow these steps:
     {{< figure src="/attachments/refguide/modeling/integration/expose-a-web-service/18581703.png" >}}
 
     You should see the name of your web service in the list.
-4. Click the "WSDL schema" URL to open the WSDL. This WSDL can be given to others so that they can interact with your web service.
+4. Click the "WSDL schema" URL to open the WSDL. This WSDL can be given to others so they can interact with your web service.
 
 ## 8 Authentication and Users
 
 To change the user authentication, follow these steps:
 
-1. Double-click the published web service in the **App Explorer** to open it.
-2. In the **Published Web Service** properties window, open the **Settings** tab. Because **No Authentication** is set, currently users of the web service do not need to authenticate:
+1. Double-click the published web service in the **App Explorer**.
+2. In the **Published Web Service** properties window, open the **Settings** tab. Because **No Authentication** is set, current users of the web service do not need to authenticate:
 
     {{< figure src="/attachments/refguide/modeling/integration/expose-a-web-service/18581702.png" >}}
 
@@ -129,13 +129,13 @@ To change the user authentication, follow these steps:
 
 4. Click **OK** and re-run the application. Users now need to authenticate before they can use the web service.
 
-Mendix enables creating your own user management functionality as long as your own user object inherits from `System.User`. The `User` entity in the `System` module contains the `WebServiceUser` Boolean attribute. This attribute determines if an user is able to interact with web services. If you want a certain user to be able to interact with web services, the value of this attribute must be *true*.
+Studio Pro enables creating your own user management functionality as long as your own user object inherits from `System.User`. The `User` entity in the `System` module contains the `WebServiceUser` Boolean attribute. This attribute determines if an user is able to interact with web services. If you want a certain user to be able to interact with web services, the value of this attribute must be **True**.
 
 ## 9 Considerations
 
 When exposing a web service, consider the following things:
 
-* In Studio Pro some words are reserved for Mendix use (for example, type, Enumeration)
+* In Studio Pro, some words are reserved for Mendix use (for example: type, Enumeration)
 * Because you may not want to publish a "_type" attribute with an underscore ("`_`") in front of it, you can change the WSDL name by changing the last column in the selected attribute window
 * If an attribute is renamed after it is published, the name in the WSDL does not automatically change (because that would break the customer's implementation)
 

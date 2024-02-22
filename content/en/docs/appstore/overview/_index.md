@@ -154,7 +154,7 @@ Support on content in this category is up to the user or organization providing 
 
 * Open an issue on the GitHub repository associated with the content (for details on GitHub issues, see [Mastering Issues](https://guides.github.com/features/issues/))
 * Contact the owner of the content via the contact details available on the Marketplace component's detail pages
-* Ask a question on the [Mendix Forum](https://mxforum.mendix.com/)
+* Ask a question in the [Mendix Community](https://community.mendix.com/)
 * Contribute 
 
 The level of support depends on the availability and effort of the developer and/or the Mendix community.

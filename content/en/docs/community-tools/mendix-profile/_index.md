@@ -96,13 +96,13 @@ This card on your profile presents your points and ranking for the last 30 days:
 
 Clicking **View All** takes you to the **Leaderboards** page, where you can view leaders per category, for the whole Mendix Platform, or for your company only.
 
-You can climb the leaderboard by earning points through various activities on the Mendix Platform. For example, let's say you have some time to spare while your app is deploying. You get a cup of coffee and check out the [Mendix Forum]. One questions pops out because you came across a similar problem a few weeks back. You decide to help the community member and post an answer to their question. Not long after, the author marks your answer as accepted. Boom! 15 points right there.
+You can climb the leaderboard by earning points through various activities on the Mendix Platform. For example, let's say you have some time to spare while your app is deploying. You get a cup of coffee and check out the [Mendix Community]. One questions pops out because you came across a similar problem a few weeks back. You decide to help the community member and post an answer to their question. Not long after, the author marks your answer as accepted. Boom! 15 points right there.
 
 Check out the tables below for all the ways to earn points.
 
-### 7.1 Forum Points
+### 7.1 Community Points
 
-These are points you can gain through activity on the [Mendix Forum](https://forum.mendix.com/).
+These are points you can gain through activity in the [Mendix Community](https://community.mendix.com//).
 
 | Activity | Points | Max. Points per Day |
 | --- | --- | --- |
@@ -200,8 +200,8 @@ If you cannot finish your portfolio entry or do not want to publish yet, click *
 
 ## 9 Activity
 
-On the **Activity** tab, you can see a list of the last 20 public events for your badges, Marketplace, and Forum activity.
+On the **Activity** tab, you can see a list of the last 20 public events for your badges, the Marketplace, and the Mendix Community activity.
 
 ## 10 Point Penalties
 
-Abusing the Mendix Forum, point system, or other community tools is not allowed. Any such action can result in a point penalty. Mendix reserves the right to penalize a user who bypasses or games the system without informing them.
+Abusing the Mendix Community, point system, or other community tools is not allowed. Any such action can result in a point penalty. Mendix reserves the right to penalize a user who bypasses or games the system without informing them.

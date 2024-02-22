@@ -130,15 +130,15 @@ For example: in the query `//Customer[Customer_Address/Address/City = 'Rotterdam
 
 Check out how the Mendix community resolves upgrade issues in the following Forum posts:
 
-* [Upgrade from Mendix 8 to Mendix 9](https://forum.mendix.com/link/space/studio-pro/questions/123696) – on *.jar* files and the *userlib* directory
-* [Native app styling difference with Mendix 9 upgrade](https://forum.mendix.com/link/space/mobile/questions/118280) – on [upgrading to Atlas 3](/refguide9/moving-from-atlas-2-to-3/)
-* [Error importing Excel file after upgrade to Mendix 9](https://forum.mendix.com/link/space/studio-pro/questions/117814) – on converting attribute values
-* [Does anyone have experience with upgrading Mx applications from 7 to 9?](https://forum.mendix.com/link/space/studio-pro/questions/112229) – on considerations for moving from 7 to 8 and then 8 to 9
-* [Native Mobile Synchronization Error after Mendix 9 Upgrade](https://forum.mendix.com/link/space/integrations/questions/112173) – on synchronizing objects and security rules
-* [Unable to Upgrade App from Mendix 8.18.7 to 9.4.0](https://forum.mendix.com/link/space/studio-pro/questions/109310) – on problems with Mendix Team Server and Git
-* [Mendix Native 8 to 9 Upgrade Deployment Structure Error](https://forum.mendix.com/link/space/deployment/questions/106428) – on deployment file structures and Marketplace component directories
-* [MX 9.5.0 Upgrade error from MX 8.18.8: The type cache does not contain a type with qualified name WebServices$ProvidedService](https://forum.mendix.com/link/space/studio-pro/questions/109620) – on upgrading with app services
-* [Error while upgrading to Mx 9](https://forum.mendix.com/link/space/studio-pro/questions/105907) – on upgrading with app services
+* [Upgrade from Mendix 8 to Mendix 9](https://community.mendix.com/link/space/studio-pro/questions/123696) – on *.jar* files and the *userlib* directory
+* [Native app styling difference with Mendix 9 upgrade](https://community.mendix.com/link/space/mobile/questions/118280) – on [upgrading to Atlas 3](/refguide9/moving-from-atlas-2-to-3/)
+* [Error importing Excel file after upgrade to Mendix 9](https://community.mendix.com/link/space/studio-pro/questions/117814) – on converting attribute values
+* [Does anyone have experience with upgrading Mx applications from 7 to 9?](https://community.mendix.com/link/space/studio-pro/questions/112229) – on considerations for moving from 7 to 8 and then 8 to 9
+* [Native Mobile Synchronization Error after Mendix 9 Upgrade](https://community.mendix.com/link/space/integrations/questions/112173) – on synchronizing objects and security rules
+* [Unable to Upgrade App from Mendix 8.18.7 to 9.4.0](https://community.mendix.com/link/space/studio-pro/questions/109310) – on problems with Mendix Team Server and Git
+* [Mendix Native 8 to 9 Upgrade Deployment Structure Error](https://community.mendix.com/link/space/deployment/questions/106428) – on deployment file structures and Marketplace component directories
+* [MX 9.5.0 Upgrade error from MX 8.18.8: The type cache does not contain a type with qualified name WebServices$ProvidedService](https://community.mendix.com/link/space/studio-pro/questions/109620) – on upgrading with app services
+* [Error while upgrading to Mx 9](https://community.mendix.com/link/space/studio-pro/questions/105907) – on upgrading with app services
 
 ## 9 Read More
 

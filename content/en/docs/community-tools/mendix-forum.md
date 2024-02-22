@@ -11,7 +11,7 @@ aliases:
 
 ## 1 Introduction
 
-The [Mendix Community](https://forum.mendixcloud.com) is where Mendix community members come together to help each other with questions and answers, exchange information, and propose ideas for improving the Mendix Platform.
+The [Mendix Community](https://community.mendix.com) is where Mendix community members come together to help each other with questions and answers, exchange information, and propose ideas for improving the Mendix Platform.
 
 The Mendix Community is closely integrated with the [Mendix Profile](/community-tools/mendix-profile/) so that Mendix community members can see all the interesting and useful information about who is participating in the Mendix Community. If someone clicks your name anywhere in the Mendix Community, your profile will open, so make sure to [make your Mendix Profile public](/community-tools/mendix-profile/user-settings/#profile) so everyone can see your details and progress!
 
@@ -283,7 +283,7 @@ The URL for each idea is unique.
 If you have a great idea that you would like to see implemented on the Mendix Platform, we want to hear it. But please make sure you search the Mendix Community for similar ideas before submitting a new idea. There may be someone else who has already posted the same idea!
 {{% /alert %}}
 
-To submit your own idea to the idea forum, follow these steps:
+To submit your own idea to the Mendix Community, follow these steps:
 
 1. Click **Create a Post** > **Share an Idea**, or click **Ask a Question** on the **Ideas** page. 
 2. On the **Share an Idea** page, fill in the following details in the editor:

@@ -13,7 +13,7 @@ aliases:
 
 The Mendix Platform contains an identity provider (IdP) that allows platform users to sign in to:
 
-* Mendix Platform services such as the Developer Portal, the Marketplace, Control Center, and the Mendix Forum
+* Mendix Platform services such as the Developer Portal, the Marketplace, Control Center, and the Mendix Community
 * Studio Pro
 
 Platform users can have separate Mendix credentials, or you can provide them with an end-to-end SSO experience by setting up an identity federation between the Mendix Platform and your corporate IdP. 

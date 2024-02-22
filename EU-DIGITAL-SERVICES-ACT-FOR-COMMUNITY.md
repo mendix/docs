@@ -1,6 +1,6 @@
 # EU Digital Services Act
 
-The Digital Services Act (DSA, Regulation (EU) 2022/2065) is an EU Regulation which entered into force on November 16, 2022.  It aims to set out harmonized rules for a safe, predictable and trusted online environment applicable to intermediary services that, among others, connect users with goods, services, and content from others and includes online platforms such as the Mendix Community: https://forum.mendix.com/.
+The Digital Services Act (DSA, Regulation (EU) 2022/2065) is an EU Regulation which entered into force on November 16, 2022.  It aims to set out harmonized rules for a safe, predictable and trusted online environment applicable to intermediary services that, among others, connect users with goods, services, and content from others and includes online platforms such as the Mendix Community: https://community.mendix.com//.
 
 Under Article 24 (2) of the DSA, online platforms are required to publish "information on the average monthly active recipients of the service" in the EU by February 17, 2023 and at least once every six months thereafter. This is for the purposes of determining whether an online platform is a "very large online platform" (VLOP) as per the DSA, meaning, a platform which reaches an average of at least 45 million users per month in the EU (representing 10% of the EU population). VLOPs are subject to additional requirements due to the role they play in the dissemination of content throughout the EU.
 

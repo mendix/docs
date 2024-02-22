@@ -7,7 +7,7 @@ weight: 85
 ---
 
 {{% alert color="warning" %}}
-The Projects API is deprecated. Mendix aims to remove the Project API on March 1, 2024.
+The Projects API is deprecated. Mendix aims to remove the Project API on March 31, 2024.
 {{% /alert %}}
 
 ## 1 Introduction

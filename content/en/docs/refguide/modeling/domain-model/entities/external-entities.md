@@ -47,7 +47,7 @@ When a new version of a consumed service becomes available in the Catalog, this 
 You can make local changes to the properties of external entities that only affect how the data is used and presented in the consuming app. All other properties are defined in the originating app and cannot be changed. When multiple external entities from the same OData service are used in a module or app, associations between the entities (made in the originating app) will automatically be made in the local module.
 
 {{% alert color="info" %}}
-If you delete an external entity from the domain model, the service documents remain in the App Explorer list and the service continues to be listed in the Integration pane. You can delete the two service documents if you are no longer going to use any entities from the consumed service.
+If you delete an external entity from the domain model, the service documents remain in the App Explorer list and the service remains listed in the Integration pane. You can delete the two service documents if you are no longer going to use any entities from the consumed service.
 {{% /alert %}}
 
 For more information on using published OData services and entities through the Catalog, see [Consume Registered Assets](/catalog/consume/consume-registered-assets/).

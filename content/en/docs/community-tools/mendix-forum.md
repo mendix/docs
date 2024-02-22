@@ -23,11 +23,11 @@ Under **PERSONAL**, you can find [Community Feed](#community-feed), [Bookmarks](
 
 ### 2.1 Community Feed {#community-feed}
 
-Clicking **Personal** > **Community Feed** brings you back to the home page of the Mendix Community.
+Clicking **PERSONAL** > **Community Feed** brings you back to the home page of the Mendix Community.
 
 ### 2.2 Bookmarks {#bookmarks}
 
-In **Personal** > **Bookmarks**, the following tabs are available:
+In **PERSONAL** > **Bookmarks**, the following tabs are available:
 
 * **Questions** – the questions you have bookmarked (for details, see [Question Details](#question-details) below)
 * **Exchanges** – the exchanges you have bookmarked (for details, see [Exchange Details](#exchange-details) below)
@@ -35,7 +35,7 @@ In **Personal** > **Bookmarks**, the following tabs are available:
 
 ### 2.3 Posts {#posts}
 
-In **Personal** > **Posts**, the following tabs are available:
+In **PERSONAL** > **Posts**, the following tabs are available:
 
 * **Posted** – the questions and ideas you have posted (for details, see [Asking Your Question](#asking-question) and [Posting Your Idea](#posting-idea) below)
 * **Answered** – the questions you have answered (for details, see [Question Details](#question-details) below)
@@ -46,7 +46,7 @@ In **Personal** > **Posts**, the following tabs are available:
 
 ### 3.1 Questions {#questions-tab}
 
-In **General** > **Questions**, there is an overview of the questions that have been asked. Here is an example question:
+In **GENERAL** > **Questions**, you can see an overview of the questions that have been asked. Here is an example question:
 
 {{< figure src="/attachments/community-tools/mendix-forum/question-example.png" >}}
 
@@ -142,7 +142,7 @@ Once a question you have asked receives several answers, you can accept an answe
 
 ### 3.2 Exchanges {#exchanges-tab}
 
-In **General** > **Exchanges**, there is an overview of the exchanges that have been posted. Here is an example exchange:
+In **GENERAL** > **Exchanges**, there is an overview of the exchanges that have been posted. Here is an example exchange:
 
 {{< figure src="/attachments/community-tools/mendix-forum/exchange-example.png" >}}
 
@@ -211,7 +211,7 @@ To ask your own question on the Mendix Community, follow these steps:
 
 ### 3.3 Ideas {#ideas-tab}
 
-In **General** > **Ideas**, you can see an overview of the ideas and feature requests for improving the Mendix Platform that have been submitted by Mendix community members. Here is an example idea:
+In **GENERAL** > **Ideas**, you can see an overview of the ideas and feature requests for improving the Mendix Platform that have been submitted by Mendix community members. Here is an example idea:
 
 {{< figure src="/attachments/community-tools/mendix-forum/idea-example.png" >}}
 

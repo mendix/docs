@@ -130,9 +130,9 @@ To invoke a specific model, perform the following steps:
 
 ### 3.5 Invoking an agent with the InvokeAgent operation
 
-Please refer to [Agents in Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/agents.html) to learn more about this functionality. Follow these steps [Create an agent](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-create.html) to create an agent and follow [Deploy your agent](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-deploy.html) to create an alias before you start configuring the InvokeAgent operation.
+Please refer to [Agents in Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/agents.html) to learn more about this functionality. Follow [Create an agent](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-create.html) to create an agent and follow [Deploy your agent](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-deploy.html) to create an alias before you start configuring the InvokeAgent operation.
 
-Next follow these steps in the Mendix application: 
+Next, complete these steps in the Mendix application: 
 1. Create a new microflow and add the 'InvokeAgent' operation.
 2. Either pass an InvokeAgentRequest object as a parameter to the flow or create one within the microflow. Ensure that the following attributes are populated for the request:
     1. Agent ID
@@ -306,16 +306,22 @@ The `S3Location` entity holds information about the S3 location of the data sour
 | --- | --- |
 | N/A | The entity does not contain any attributes, but it inherits from the [`Location`](#location) entity. |
 
-#### 4.1.19 RetrieveAndGenerateRequest {#retrieve-and-generate-request}
+#### 4.1.19 ReferenceLocation {#reference-location}
+
+| Attribute | Description |
+| --- | --- |
+| N/A | The entity does not contain any attributes, but it inherits from the [`Location`](#location) entity. |
+
+#### 4.1.20 RetrieveAndGenerateRequest {#retrieve-and-generate-request}
 
 This is the request entity of the `RetrieveAndGenerate` action.
 
 | Attribute | Description |
 | --- | --- |
 | `InputText` | The `InputText` attribute describes the query made to the knowledge base and is a required parameter. |
-| `SessionId` | The `SessionId` attribute describes the unique identifier of the session. Reuse the same value to continue the same session with the knowledge base. |
+| `SessionId` | The `SessionId` attribute describes the unique identifier of the session. Reuse the same value to continue the same session with the knowledge base.|
 
-#### 4.1.20 RetrieveAndGenerateConfiguration {#retrieve-and-generate-configuration}
+#### 4.1.21 RetrieveAndGenerateConfiguration {#retrieve-and-generate-configuration}
 
 The `RetrieveAndGenerateConfiguration` entity holds information about the resource being queried.
 
@@ -325,7 +331,7 @@ The `RetrieveAndGenerateConfiguration` entity holds information about the resour
 | `ModelARN` | The `ModelARN` attribute describes the ARN of the foundation model used to generate a response and is a required parameter. |
 | `RetrieveAndGenerateType` | The `RetrieveAndGenerateType` attribute describes the type of resource that is queried by the request. Currently, the only supported value is 'KNOWLEDGE_BASE'. |
 
-#### 4.1.21 SessionConfiguration {#session-configuration}
+#### 4.1.22 SessionConfiguration {#session-configuration}
 
 The `SessionConfiguration` entity holds information about details of the session with the knowledge base.
 
@@ -333,7 +339,7 @@ The `SessionConfiguration` entity holds information about details of the session
 | --- | --- |
 | `KmsKeyArn` | The `KmsKeyArn` attribute describes the ARN of the AWS KMS key encrypting the session. |
 
-#### 4.1.22 RetrieveAndGenerateResponse {#retrieve-and-generate-response}
+#### 4.1.23 RetrieveAndGenerateResponse {#retrieve-and-generate-response}
 
 This is the request entity of the `RetrieveAndGenerate` action.
 
@@ -342,11 +348,12 @@ This is the request entity of the `RetrieveAndGenerate` action.
 | `OutputText` | The `OutputText` attribute describes the response generated from querying the knowledge base. |
 | `SessionId` | The `SessionId` attribute describes the unique identifier of the session. Reuse the same value to continue the same session with the knowledge base. |
 
-#### 4.1.23 Citation {#citation}
+#### 4.1.24 Citation {#citation}
 
 The `Citation` entity contains a segment of the generated response that is based on a source in the knowledge base, alongside information about the source.
 
-#### 4.1.24 GeneratedResponsePart {#generated-response-part}
+
+#### 4.1.25 GeneratedResponsePart {#generated-response-part}
 
 The `GeneratedResponsePart` entity holds information about a part of the generated response that is accompanied by a citation.
 
@@ -356,7 +363,7 @@ The `GeneratedResponsePart` entity holds information about a part of the generat
 | `Start` | The `Start` attribute describes where the text with a citation starts in the generated output. |
 | `End` | The `End` attribute describes where the text with a citation ends in the generated output. |
 
-#### 4.1.25 RetrievedReference {#retrieved-reference}
+#### 4.1.26 RetrievedReference {#retrieved-reference}
 
 The `RetrievedReference` entity holds information about a sources cited for the generated response.
 
@@ -364,26 +371,34 @@ The `RetrievedReference` entity holds information about a sources cited for the 
 | --- | --- |
 | `Text` | The `Text` attribute contains the cited text from the data source. |
 
-#### 4.1.26 RetrieveAndGenerateLocation {#retrieve-and-generate-location}
+#### 4.1.27 CitationRetrievedReference (#citation-retrieved-reference)
+
+The `CitationRetrievedResponse` entity holds information about the citation, which contains a segment of the generated response that is based on a source in the knowledge base, alongside information about the source.
+
+| Attribute | Description |
+| --- | --- |
+| N/A | The entity does not contain any attributes, but it inherits from the [`RetrievedReference`](#retrieved-reference) entity. |
+
+#### 4.1.28 RetrieveAndGenerateLocation {#retrieve-and-generate-location}
 
 | Attribute | Description |
 | --- | --- |
 | N/A | The entity does not contain any attributes, but it inherits from the [`Location`](#location) entity. |
 
-#### 4.1.27 ListKnowledgeBasesRequest {#list-knowledge-bases-request}
+#### 4.1.29 ListKnowledgeBasesRequest {#list-knowledge-bases-request}
 
 | Attribute | Description |
 | --- | --- |
 | `MaxResults` | The maximum number of results to return in the response.  |
 | `NextToken` | If the total number of results is greater than the maxResults value provided in the request, enter the token returned in the NextToken field in the response in this field to return the next batch of results. |
 
-#### 4.1.28 ListKnowledgeBasesResponse {#list-knowledge-bases-response}
+#### 4.1.30 ListKnowledgeBasesResponse {#list-knowledge-bases-response}
 
 | Attribute | Description |
 | --- | --- |
 | `NextToken` | If the total number of results is greater than the maxResults value provided in the request, enter the token returned in the NextToken field in the response in this field to return the next batch of results. |
 
-#### 4.1.29 KnowledgeBaseSummary {#knowledge-base-summary}
+#### 4.1.31 KnowledgeBaseSummary {#knowledge-base-summary}
 
 | Attribute | Description |
 | --- | --- |
@@ -393,7 +408,7 @@ The `RetrievedReference` entity holds information about a sources cited for the 
 | `UpdatedAt` | The time at which the knowledge base was last updated.  |
 | `Description` | The description of the knowledge base.  |
 
-#### 4.1.30 StartIngestionJobRequest {#start-ingestion-job-request}
+#### 4.1.32 StartIngestionJobRequest {#start-ingestion-job-request}
 
 This is the request entity of the `StartIngestionJob` action.
 
@@ -402,7 +417,7 @@ This is the request entity of the `StartIngestionJob` action.
 | `DataSourceId` | The `Text` attribute contains the unique identifier of the data source to ingest. |
 | `KnowledgeBaseId` | The `Text` attribute contains the unique identifier of the knowledge base to which to add the data source. |
 
-#### 4.1.31 GetIngestionJobRequest {#get-ingestion-job-request}
+#### 4.1.33 GetIngestionJobRequest {#get-ingestion-job-request}
 
 This is the request entity of the `GetIngestionJob` action.
 
@@ -412,27 +427,27 @@ This is the request entity of the `GetIngestionJob` action.
 | `IngestionJobId` | The `Text` attribute contains the unique identifier of the ingestion job to retrieve. |
 | `KnowledgeBaseId` | The `Text` attribute contains the unique identifier of the knowledge base to which to add the data source. |
 
-#### 4.1.32 GetIngestionJobResponse {#get-ingestion-job-response}
+#### 4.1.34 GetIngestionJobResponse {#get-ingestion-job-response}
 
 This is the response entity of the `GetIngestionJob` action.
 
-#### 4.1.33 StartIngestionJobResponse {#start-ingestion-job-response}
+#### 4.1.35 StartIngestionJobResponse {#start-ingestion-job-response}
 
 This is the response entity of the `StartIngestionJob` action.
 
-#### 4.1.34 StartIngestionJob {#start-ingestion-job}
+#### 4.1.36 StartIngestionJob {#start-ingestion-job}
 
 | Attribute | Description |
 | --- | --- |
 | N/A | The entity does not contain any attributes, but it inherits from the [`IngestionJob`](#ingestion-job) entity. |
 
-#### 4.1.35 GetIngestionJob {#start-ingestion-job}
+#### 4.1.37 GetIngestionJob {#start-ingestion-job}
 
 | Attribute | Description |
 | --- | --- |
 | N/A | The entity does not contain any attributes, but it inherits from the [`IngestionJob`](#ingestion-job) entity. |
 
-#### 4.1.36 IngestionJob {#ingestion-job}
+#### 4.1.38 IngestionJob {#ingestion-job}
 
 This is the response entity of the `IngestionJob` action.
 
@@ -445,7 +460,7 @@ This is the response entity of the `IngestionJob` action.
 | `StartedAt` | The `Timestamp` at which the ingestion job started. |
 | `UpdatedAt` | The `Timestamp` at which the ingestion job was last updated. |
 
-#### 4.1.37 FailureReason {#failure-reason}
+#### 4.1.39 FailureReason {#failure-reason}
 
 The `FailureReason` entity holds the reason an interaction failed.
 
@@ -453,7 +468,7 @@ The `FailureReason` entity holds the reason an interaction failed.
 | --- | --- |
 | `Text` | The `Text` attribute describes reason the interaction failed. |
 
-#### 4.1.38 IngestionJobStats {#ingestion-job-stats}
+#### 4.1.40 IngestionJobStats {#ingestion-job-stats}
 
 The `IngestionJobStats` entity contains information about the failure of the interaction.
 
@@ -465,7 +480,7 @@ The `IngestionJobStats` entity contains information about the failure of the int
 | `numberOfModifiedDocumentsIndexed` | The `Long` attribute holds the number of modified documents in the data source that were successfully indexed. |
 | `numberOfNewDocumentsIndexed` | The `Long` attribute holds the number of new documents in the data source that were successfully indexed. |
 
-#### 4.1.39 InvokeModelRequestAnthropicClaude {#invoke-model-request-anthropic-claude}
+#### 4.1.41 InvokeModelRequestAnthropicClaude {#invoke-model-request-anthropic-claude}
 
 The `InvokeModelRequestAnthropicClaude` entity holds the request parameters needed to invoke Anthropic Claude foundational model and is used in the example implementation included in the Amazon Bedrock Connector. In addition it is potentially associated to a list of AnthropicClaude_StopSequences objects that are used to specify a list of stop sequences.
 
@@ -477,7 +492,7 @@ The `InvokeModelRequestAnthropicClaude` entity holds the request parameters need
 | `Top_k` | The `Top_k` attribute can be used to reduce repetitiveness of generated tokens. The higher the value, the stronger a penalty is applied to previously present tokens, proportional to how many times they have already appeared in the prompt or prior generation.|
 | `Top_p` | The `Top_p` attribute influences what tokens will be chosen by the model. If set to float less than 1, only the smallest set of most probable tokens with probabilities that add up to top_p or higher are kept for generation.|
 
-#### 4.1.40 AnthropicClaude_StopSequences {#anthropic-claude-stop-sequence}
+#### 4.1.42 AnthropicClaude_StopSequences {#anthropic-claude-stop-sequence}
 
 The `AnthropicClaude_StopSequences` entity holds the stop sequence parameter that can be used to invoke Anthropic Claude foundational model and is used in the example implementation included in the Amazon Bedrock Connector. A list of up to four of these objects can be associated to the InvokeModelRequestAnthropicClaude object used for invoking the Claude model.
 
@@ -485,7 +500,7 @@ The `AnthropicClaude_StopSequences` entity holds the stop sequence parameter tha
 | --- | --- |
 | `Sequence` | The `Sequence` attribute holds a string and tells the API to stop generating further tokens when this string is encountered.|
 
-#### 4.1.41 InvokeModelResponseAnthropicClaude {#invoke-model-response-anthropic-claude}
+#### 4.1.43 InvokeModelResponseAnthropicClaude {#invoke-model-response-anthropic-claude}
 
 The `InvokeModelResponseAnthropicClaude` entity holds the response of the Anthropic Claude model.
 
@@ -494,7 +509,7 @@ The `InvokeModelResponseAnthropicClaude` entity holds the response of the Anthro
 | `Completion` | The `Completion` attribute holds the response string of Claude.|
 | `StopReason` | The `StopReason` attribute holds the reason that Claude stopped generating text.|
 
-#### 4.1.42 InvokeModelRequestStabilityAIStableDiffusionXL {#invoke-model-request-stabilityai-stable-diffusionxl}
+#### 4.1.44 InvokeModelRequestStabilityAIStableDiffusionXL {#invoke-model-request-stabilityai-stable-diffusionxl}
 
 The `InvokeModelRequestStabilityAIStableDiffusionXL` entity holds the settings needed to invoke StabilityAI diffusion XL foundational model and is used in the example implementation included in the Amazon Bedrock Connector. In addition it is associated to a StabilityAIStableDiffusionXL_TextPrompt object.
 
@@ -504,14 +519,14 @@ The `InvokeModelRequestStabilityAIStableDiffusionXL` entity holds the settings n
 | `Seed` | The `Seed` attribute is part of the inference configuration Determines initial noise. Using same seed with same settings will create similar images.|
 | `Steps` | The `Steps` is part of the inference configuration. How many times image is sampled. More steps may be more accurate.|
 
-#### 4.1.43 StabilityAIStableDiffusionXL_TextPrompt {#stability-ai-stablediffusionxl-text-prompt}
+#### 4.1.45 StabilityAIStableDiffusionXL_TextPrompt {#stability-ai-stablediffusionxl-text-prompt}
 
 The `StabilityAIStableDiffusionXL_TextPrompt` entity holds the part of the request of the StabilityAI diffusion XL foundational model containing the Prompt on which the response will be based and is used in the example implementation included in the Amazon Bedrock Connector.
 | Attribute | Description |
 | --- | --- |
 | `InputText` | The `InputText` attribute describes the content of the text prompt used to generate an image.|
 
-#### 4.1.44 InvokeModelResponseStabilityAIStableDiffusionXL {#invoke-model-response-stabilityai-stable-diffusionxl}
+#### 4.1.46 InvokeModelResponseStabilityAIStableDiffusionXL {#invoke-model-response-stabilityai-stable-diffusionxl}
 
 The `InvokeModelResponseStabilityAIStableDiffusionXL` entity holds the response of the StabilityAI diffusion XL foundational model and is used in the example implementation included in the Amazon Bedrock Connector. In addition it will be associated to a list of StabilityAIStableDiffusionXL_Settings objects.
 
@@ -520,7 +535,7 @@ The `InvokeModelResponseStabilityAIStableDiffusionXL` entity holds the response 
 | `Result` | The `Result` attribute describes the outcome of the Invoke Model action.|
 | `PromptId` | The `PromptId` attribute describes an identifier of the used prompt.|
 
-#### 4.1.45 StabilityAIStableDiffusionXL_Settings {#stability-ai-stablediffusionxl-settings}
+#### 4.1.47 StabilityAIStableDiffusionXL_Settings {#stability-ai-stablediffusionxl-settings}
 
 The `StabilityAIStableDiffusionXL_Settings` entity holds part of the response of the StabilityAI diffusion XL foundational model and is used in the example implementation included in the Amazon Bedrock Connector. 
 | Attribute | Description |
@@ -528,6 +543,107 @@ The `StabilityAIStableDiffusionXL_Settings` entity holds part of the response of
 | `Seed` | The `Seed` attribute specifies the seed that was used for the image generated.|
 | `FinishReason` | The `FinishReason` attribute describes the reason the process finished.|
 | `Base64` | The `Base64` attribute describes the image content as a base64 encrypted string.|
+
+
+
+#### 4.1.48 ModelInvocationInput (#model-invocation-input)
+
+The `ModelInvocationInput` contains parameters that specify the input to the pre- or post-processing step..
+
+| Attribute | Description |
+| --- | --- |
+| `OverrideLambda` | The `OverrideLambda` attribute holds the ARN of the Lambda function to use when parsing the raw foundation model output in parts of the agent sequence.|
+| `ParserMode` | The `ParserMode` attribute specifies whether to override the default parser Lambda function when parsing the raw foundation model output in the part of the agent sequence defined by the promptType.|
+| `PromptCreationMode` | The `PromptCreationMode` attribute specifies whether the default prompt template was overridden.|
+| `Text` | The `Text` attribute holds the text that prompted the agent at this step.|
+| `PromptType` | The `PromptType` attribute specifies the step in the agent sequence.|
+
+
+#### 4.1.49 Parameter (#parameter)
+
+The `Parameter` is a generalization for orchestration trace parameter objects.
+
+| Attribute | Description |
+| --- | --- |
+| `Name` | The `Name` attribute holds name of the parameter.|
+| `_Type` | The `_Type` attribute specifies the parameter type.|
+| `Value` | The `Value` attribute specifies the parameter value. |
+
+
+#### 4.1.50 InvokeAgentAttribute (#invoke-agent-attribute)
+
+The `InvokeAgentAttribute` holds all attributes needed to to create a request to invoke an agent.
+
+| Attribute | Description |
+| --- | --- |
+| `Key` | The `Key` attribute holds an attribute key.|
+| `Value` | The `Value` attribute holds an attribute value.|
+
+
+#### 4.1.51 InvokeAgentRequest (#invoke-agent-request)
+
+The `InvokeAgentRequest` holds all attributes needed to create a request to invoke an agent.
+
+| Attribute | Description |
+| --- | --- |
+| `InputText` | The `InputText` attribute holds the prompt text to send to the agent.|
+| `AgentId` | The `AgentId` attribute holds the unique identifier of the agent to use.|
+| `AgentAliasId` | The `AgentAliasId` attribute holding the alias of the agent to use.|
+| `SessionId` | The `SessionId` attribute holds the unique identifier of the session. Use the same value across requests to continue the same conversation.|
+| `EnableTrace` | The `EnableTrace` attribute specifies whether to turn on the trace or not to track the agent's reasoning process.|
+| `EndSession` | The `EndSession` attribute specifies whether to end the session with the agent or not.|
+
+
+#### 4.1.49 SessionState (#session-state)
+
+The `SessionState` entity is associated to objects that hold information about the session.
+
+| Attribute | Description |
+| --- | --- |
+| N/A | The entity does not contain any attributes. |
+
+
+#### 4.1.50 SessionAttribute (#session-attribute)
+
+The `SessionAttribute` entity inherits from the InvokeAgentAttribute entity and holds information about the session.
+
+| Attribute | Description |
+| --- | --- |
+| N/A | The entity does not contain any attributes but it inherits from the [`InvokeAgentAttribute`](#invoke-agent-attribute). |
+
+
+#### 4.1.51 PromptSessionAttribute (#session-attribute)
+
+The `PromptSessionAttribute` entity inherits from the InvokeAgentAttribute entity and holds information about the session.
+
+| Attribute | Description |
+| --- | --- |
+| N/A | The entity does not contain any attributes but it inherits from the [`InvokeAgentAttribute`](#invoke-agent-attribute). |
+
+
+#### 4.1.52 InvokeAgentResponse (#invoke-agent-response)
+
+The `InvokeAgentResponse` is the response object of the invokeAgent operation.
+
+| Attribute | Description |
+| --- | --- |
+| `OutputText` | The `InputText` attribute holds the prompt text to send to the agent.|
+| `AgentId` | The `AgentId` attribute holds the unique identifier of the agent to use.|
+| `AgentAliasId` | The `AgentAliasId` attribute holding the alias of the agent to use.|
+| `SessionId` | The `SessionId` attribute holds the unique identifier of the session. Use the same value across requests to continue the same conversation.|
+| `EnableTrace` | The `EnableTrace` attribute specifies whether to turn on the trace or not to track the agent's reasoning process.|
+| `EndSession` | The `EndSession` attribute specifies whether to end the session with the agent or not.|
+
+
+
+
+
+
+
+
+
+
+
 
 ### 4.2 Activities {#activities}
 

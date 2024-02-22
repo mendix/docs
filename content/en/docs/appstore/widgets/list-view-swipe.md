@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "widget", "list view swipe", "pla
 ---
 
 {{% alert color="warning" %}}
-⚠ This widget is deprecated.
+This widget is deprecated.
 {{% /alert %}}
 
 ## 1 Introduction

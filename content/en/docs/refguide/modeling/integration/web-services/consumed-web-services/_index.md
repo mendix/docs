@@ -12,21 +12,21 @@ This document describes imported web services. For further information on the co
 
 ## 2 Web Services
 
-Web services (see also [Wikipedia](http://en.wikipedia.org/wiki/Web_service)) are a way of exposing or absorbing functions and data entities between systems. They can be used to enable applications to "talk" to each other through the network (or internet).
+Web services (see also [Wikipedia](http://en.wikipedia.org/wiki/Web_service)) are a way of exposing or absorbing functions and data entities between systems. They can be used to enable applications to communicate through the network (or internet).
 
-Mendix supports the interaction between servers using SOAP. This can either be Mendix-to-Mendix, Mendix-to-ThirdParty or ThirdParty-to-Mendix.
+Mendix supports the interaction between servers using SOAP. This can either be Mendix-to-Mendix, Mendix-to-ThirdParty, or ThirdParty-to-Mendix.
 
 ### 2.1 Consumed Web Services
 
-Using third party web services is easy in Mendix. There is a microflow activity available which calls a web service on another system and imports the XML in the Mendix database.
+To use third-party web services in Studio Pro, there is a microflow activity available, which calls a web service on another system and imports the XML in the Mendix database.
 
 ### 2.2 Published web Services
 
-To expose functionality in a Mendix Server (thus enabling other systems to make use of certain functions) a microflow can easily be published as a web service. For further information, see [Published Web Services](/refguide/published-web-services/).
+To expose functionality in a Mendix Server (thus enabling other systems to make use of certain functions), a microflow can easily be published as a web service. For more information, see [Published Web Services](/refguide/published-web-services/).
 
 ## 3 XML
 
-To enable systems to understand each other, a standard way of "encoding" data is needed. XML (eXtensible Markup Language) is a format in which data is encoded (or wrapped) so that both parties understand what the message means. The following is a simple example of XML coding:
+To enable systems to understand each other, a standard way of encoding data is needed. XML (eXtensible Markup Language) is a format in which data is encoded (or wrapped) so both parties understand what the message means. The following is a simple example of XML coding:
 
 ```xml
 <person>
@@ -39,12 +39,12 @@ To enable systems to understand each other, a standard way of "encoding" data is
 </person>
 ```
 
-In this case, the object 'person' is described with the corresponding values for the attributes 'name', 'age' and the referred object 'address'.
+In this case, the object 'person' is described with the corresponding values for the attributes 'name', 'age', and the referred object 'address'.
 
-XML can be used in Mendix for serialization and de-serialization in order to export and import data.
+XML can be used in Studio Pro for serialization and de-serialization in order to export and import data.
 
-See [XML Schemas](/refguide/xml-schemas/) for further information on importing XSDs into your application.
-See  [Import Mappings](/refguide/import-mappings/) for further information on mapping XML documents to domain model entities and [Export Mappings](/refguide/export-mappings/) for further information on exporting domain entities as XML.
+* See [XML Schemas](/refguide/xml-schemas/) for further information on importing XSDs into your application.
+* See  [Import Mappings](/refguide/import-mappings/) for further information on mapping XML documents to domain model entities and [Export Mappings](/refguide/export-mappings/) for further information on exporting domain entities as XML.
 
 ## 4 SOAP {#soap}
 
@@ -52,7 +52,7 @@ In the enterprise market, SOAP (see also [Wikipedia](http://en.wikipedia.org/wik
 
 ## 5 XSD {#xsd}
 
-An XSD (XML Schema Definition) document is a document that describes how the XML is structured so that both parties know what the message means. An XSD itself is written in XML.
+An XSD (XML Schema Definition) document is a document that describes how the XML is structured so both parties know what the message means. An XSD itself is written in XML.
 
 When importing an XSD file into your app, Studio Pro only accepts absolute paths, and the accepted schemes are limited to files or links starting with `https` or `http`.
 
@@ -87,4 +87,4 @@ Mendix supports consuming web service data according to the following protocols:
 * WS-ReliableMessaging 1.1
 * WS-Addressing 1.0 (from Mendix 8.16)
 
-To connect to a Microsoft .NET web service, you have to configure your web service to use basicHttpBinding (SOAP 1.1) or wsHttpBinding (SOAP 1.2). For a secure connection, you have to configure SSL and to set the security mode to `Transport` with clientCredentialType `Basic` in the **web.config** file. The user credentials can be configured in Studio Pro as a **Call Web Service** activity as described in [Use HTTP authentication](/refguide/call-web-service-action/#http-headers).
+To connect to a Microsoft .NET web service, you have to configure your web service to use basicHttpBinding (SOAP 1.1) or wsHttpBinding (SOAP 1.2). For a secure connection, you have to configure SSL and to set the security mode to `Transport` with clientCredentialType `Basic` in the *web.config* file. The user credentials can be configured in Studio Pro as a **Call Web Service** activity as described in [Use HTTP authentication](/refguide/call-web-service-action/#http-headers).

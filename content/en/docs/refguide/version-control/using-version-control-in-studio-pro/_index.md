@@ -384,7 +384,7 @@ When using external tools, you might be asked to authenticate separately to Team
 
 Connecting to Git is done using a personal access token (PAT).
 
-For information on how to create a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/#pat) section of *Mendix Profile*.
+For information on how to create a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section of *Mendix Profile*.
 
 To connect to Git you need to use the following URL and credentials:
 

@@ -177,6 +177,10 @@ This table lists the most used device features and APIs, and also documents thei
 
 For more information on browser support for certain device features, see the third-party website [Can I Use](https://caniuse.com/).
 
+{{% alert color="warning" %}}
+In iOS, using the Camera feature (`MediaDevices` in [Mozilla's API](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia)) in any browser requires HTTPS.
+{{% /alert %}}
+
 {{% alert color="info" %}}
 In order to test the features requiring HTTPS protocol, use [ngrok](https://ngrok.com/) to enable features in your localhost.
 {{% /alert %}}

@@ -39,26 +39,26 @@ These release notes cover changes to the Mendix Profile, Mendix Forum, and other
 
 #### Improvements
 
-* You can now create and manage personal access tokens (PATs) in **User Settings** > **Developer Settings**. This location replaces the Warden tool that was previously used. For more information, see the [Personal Access Tokens](/community-tools/mendix-profile/#pat) section in *Mendix Profile*.
+* You can now create and manage personal access tokens (PATs) in **User Settings** > **Developer Settings**. This location replaces the Warden tool that was previously used. For more information, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section in *Mendix Profile*.
 
 ### March 9, 2023
 
 #### Improvements
 
-* We simplified the way your [Notification](/community-tools/mendix-profile/#notifications) settings are stored.
+* We simplified the way your [Notification](/community-tools/mendix-profile/user-settings/#notifications) settings are stored.
 
 ### February 23, 2023
 
 #### Fixes
 
-* We fixed an issue where the country of residence you selected during sign-up was not properly stored in your [Mendix Profile](/community-tools/mendix-profile/#profile).
+* We fixed an issue where the country of residence you selected during sign-up was not properly stored in your [Mendix Profile](/community-tools/mendix-profile/user-settings/#profile).
 
 ### February 13, 2023 {#feb-13-23}
 
 #### Improvements
 
-* We moved the notification settings you set for your app management to **Account Settings** > [Notifications](/community-tools/mendix-profile/#notifications) (which you can access via the menu beneath your avatar in the top bar). This page includes a list of the apps you are watching.
-* In addition, personal **API Keys** are available via **Account Settings** > [Developer Settings](/community-tools/mendix-profile/#dev-settings).
+* We moved the notification settings you set for your app management to **Account Settings** > [Notifications](/community-tools/mendix-profile/user-settings/#notifications) (which you can access via the menu beneath your avatar in the top bar). This page includes a list of the apps you are watching.
+* In addition, personal **API Keys** are available via **Account Settings** > [Developer Settings](/community-tools/mendix-profile/user-settings/#dev-settings).
 
 ## 2022
 

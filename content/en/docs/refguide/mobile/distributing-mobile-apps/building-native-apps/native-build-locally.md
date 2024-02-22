@@ -1,15 +1,13 @@
 ---
 title: "Build a Mendix Native App Locally"
 url: /refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/
-weight: 20
+weight: 10
 description: Describes how to build your first Mendix native mobile app locally using Mendix Native Mobile Builder.
 aliases:
     - /howto/mobile/native-build-locally/
 ---
 
 ## 1 Introduction
-
-By default when building your native mobile app binaries, Mendix uses [Visual Studio App Center](https://appcenter.ms/sign-in?original_url=%2Fapps) as a service so that users can build without having to install tools like XCode or Android Studio. However, there are cases when using App Center is not allowed or possible. In those situations, you can build your apps locally.
 
 Follow the sections below through [Building Your Native App](#building-app-project) to complete your builds. To go beyond those instructions, see [Adding Dependencies](#adding-dependencies) and [Removing Dependencies](#removing-dependencies) sections below. These sections will allow you to further customize your local builds.
 
@@ -48,7 +46,7 @@ To set up your local app, do the following:
     {{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/deploying-native-app/wizard-app-details.png" alt="Wizard App Details"   width="350"  >}}
 
 1. Click **Next Step** when ready.
-1. In the **Build type** choose the **Advanced** checkbox. 
+1. In the **Build type** make sure the **Local** option is selected. 
     {{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-build-locally/wizard-buildtype-local.png" alt="Build type"   width="350"  >}}
 1. Select the folder for your app's Native Template. Valid choices are an empty directory or a directory with an existing Native Template.
 1. Disable any service you do not wish to use. App Center requires GitHub as a service to work.
@@ -57,7 +55,7 @@ To set up your local app, do the following:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-build-locally/advanced-buildtype-local.png" alt="Build type"   width="350"  >}}
 
-    As you already selected to use the Advanced flow with this app it is not possible to switch back to just using Cloud services. But you can enable or disable any service as needed. If for instance GitHub is enabled, Native Mobile Builder will synchronize any local changes with your repository the next time you configure your app and commit your changes. But keep in mind that the Mendix Native Builder is not a replacement of a Git client, and pushing local changes to a repository can add to the configuration time.
+    As you already selected to use the Local build flow with this app it is not possible to switch back to just using Cloud services. But you can enable or disable any service as needed. If for instance GitHub is enabled, Native Mobile Builder will synchronize any local changes with your repository the next time you configure your app and commit your changes. But keep in mind that the Mendix Native Builder is not a replacement of a Git client, and pushing local changes to a repository can add to the configuration time.
 
 1. Select **Configure app locally** and fill in the information as needed for your app.
 {{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-build-locally/advanced-configure-app-locally.png" alt="Build type"   width="350"  >}}

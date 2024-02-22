@@ -10,7 +10,7 @@ aliases:
 
 ## 1 Introduction
 
-Use the Integration pane in Studio Pro to use available data sources from the different applications in an organization into your Mendix apps. New apps can be created using shared datasets that are registered in the [Catalog](/catalog/). In Studio Pro, this is possible using the integrated functionality of Catalog through the **Integration pane**.
+Use the Integration pane in Studio Pro to use available data sources from the different applications in an organization into your Mendix apps. New apps can be created using shared datasets that are registered in the [Catalog](/catalog/). In Studio Pro, this is possible using the integrated functionality of Catalog through the **Integration** pane.
 
 You can search in the Catalog through the Integration pane to discover data sources that you can use in your app. Via this pane you can add the entities that are published in the registered OData services into your app's domain model. These entities are called [external entities](/refguide/external-entities/) and are different because they enable the connection to the data associated with the entities in the originating app.
 
@@ -138,6 +138,7 @@ Unsupported attributes are grayed out and are not included in your app.
 
 If the entity, association, or attribute supports **C**reate, **R**ead, **U**pdate, or **D**elete capabilities and it is also supported by Studio Pro, then it is displayed in the Integration pane.
 Entities and associations can have any of the CRUD capabilities, while attributes can only have create and update. For more information on CRUD capabilities, see [Write Data to Another App](/catalog/write-data/).
+
 If an entity does not support any capability, it will be displayed with a yellow entity icon. This results in a non-persistable entity in the domain model.
 
 ### 4.3 Actions {#actions}

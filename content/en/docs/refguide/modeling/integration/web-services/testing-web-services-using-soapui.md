@@ -65,7 +65,7 @@ In this section, you will create a new SOAP project.
 
 ## 5 Building a TestSuite, TestCase, and TestStep
 
-In this section, you will build a testsuite. A testsuite contains one or more testcases. Every testcase contains one ore more teststeps. 
+In this section, you will build a TestSuite. A TestSuite contains one or more TestCase. Every TestCase contains one ore more TestSteps. 
 
 1. In SoapUI, press **CTRL+T** to create a new TestSuite. You can use the given name `TestSuite 1.
 2. Click **OK**.
@@ -136,7 +136,7 @@ In this section, you will build a testsuite. A testsuite contains one or more te
 
 ## 6 Assertions
 
-Assertions are used to validate the message received by a TestStep during execution, usually by comparing parts of the message (or the entire message) to some expected value. In this chapter you will create an assertion that validates the number of customers.
+Assertions are used to validate the message received by a TestStep during execution, usually by comparing parts of the message (or the entire message) to some expected value. In this section, you will create an assertion that validates the number of customers.
 
 1. Click **Assertions (1)**.
     {{< figure src="/attachments/refguide/modeling/integration/testing-web-services-using-soapui/18580307.png" >}}
@@ -146,15 +146,15 @@ Assertions are used to validate the message received by a TestStep during execut
 3. Click **Property Content**.
 4. Click **XPath Match**.
 5. Enter *count(//Customer)* in the XPath Expression field.
-6. In step 1.4 of the previous how-to you have added some data. Enter the number of created customers in the **Expected Result** field. In this example four customers were created.
+6. In step 1.4 of the previous how-to, you added some data. Enter the number of created customers in the **Expected Result** field. In this example, four customers were created.
     {{< figure src="/attachments/refguide/modeling/integration/testing-web-services-using-soapui/18580323.png" >}}
 7. Click **Save**.
 
 ## 7 Extending Your Test Case
 
-In this chapter you will extend your test case with multiple test steps and assertions.
+In this section, you will extend your TestCase with multiple test steps and assertions.
 
-1. Add a new SOAP request to the existing test case with the following details:
+1. Add a new SOAP request to the existing TestCase with the following details:
 
     | Field | Value |
     | --- | --- |
@@ -179,18 +179,17 @@ In this chapter you will extend your test case with multiple test steps and asse
 
 3. Add a **Contains Assertion** and enter *true* in the content field.
     {{< figure src="/attachments/refguide/modeling/integration/testing-web-services-using-soapui/18580322.png" >}} 
-4. Right-click test step **Retrieve Customers**.
+4. Right-click TestStep **Retrieve Customers**.
 5. Select **Clone TestStep**.
-
 6. Change **TestStep Name** to *Retrieve Customers 2*.
     {{< figure src="/attachments/refguide/modeling/integration/testing-web-services-using-soapui/18580320.png" >}}
 7. Click **OK**.
-8. Open teststep **Retrieve Customers 2**.
+8. Open TestStep **Retrieve Customers 2**.
 9. Click **Assertions (2)**.
 10. Open **XPath Match - Unknown**.
 11. Change **Expected result** to *1 + [the number you entered in step 5.6]*.
 12. Click **Save**.
-13. Add a new SOAP request to the existing test case with the following details:
+13. Add a new SOAP request to the existing TestCase with the following details:
     * In the **Specify name for step**, enter *Delete Customer*.
     * In the **Select operation to invoke for request** field, enter *CustomerWebServiceSoap -> DeleteCustomer*.
 
@@ -207,16 +206,16 @@ In this chapter you will extend your test case with multiple test steps and asse
     </soapenv:Envelope>
     ```
 
-## 8 Running the Test Case
+## 8 Running the TestCase
 
-In this chapter you will learn how to run the test case you created in previous chapters.
+In this section, you will learn how to run the TestCase you created in previous chapters.
 
-1. Open testcase **TestCase 1**.
+1. Open TestCase **TestCase 1**.
     {{< figure src="/attachments/refguide/modeling/integration/testing-web-services-using-soapui/18580310.png" >}}
-2. Click the run this testcase icon.
+2. Click the run this TestCase icon.
     {{< figure src="/attachments/refguide/modeling/integration/testing-web-services-using-soapui/18580309.png" >}}
 
-Congratulations! You have just created your first automated test with SoapUI.
+Congratulations! You have created your first automated test with SoapUI.
 
 ## 9 Read More
 

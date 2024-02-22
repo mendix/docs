@@ -34,7 +34,6 @@ To check out which modules a category contains, click the category in the list b
 * [User Interface](#user-interface)
 * [Utility](#utility)
 * [Visualization](#visualization)
-* [Uncategorised](#uncategorized)
 
 ### 2.1 Artificial Intelligence {#artificial-intelligence}
 
@@ -117,17 +116,20 @@ To check out which modules a category contains, click the category in the list b
 
 * [Nanoflow Commons](/appstore/modules/nanoflow-commons/)
 * [Native Mobile AR](/appstore/modules/native-mobile-ar/)
+* [Native Mobile Resources](/appstore/modules/native-mobile-resources/)
 
 ### 2.10 SAP Connector {#sap-connector}
 
-* [OData Connector for SAP Solutions](/appstore/connectors/sap/sap-odata-connector/)
 * [BAPI Connector for SAP Solutions](/appstore/connectors/sap/sap-bapi-connector/)
+* [Hybrid Mobile Actions ⚠](/appstore/modules/hybrid-mobile-actions/)
+* [OData Connector for SAP Solutions](/appstore/connectors/sap/sap-odata-connector/)
 * [SAP Event Mesh Connector](/appstore/connectors/sap/sap-event-mesh-connector/)
-* [XSUAA Connector for SAP Business Technology Platform](/appstore/connectors/sap/sap-xsuaa-connector/)
 * [SAP Logging Connector](/appstore/connectors/sap/sap-logger/)
+* [XSUAA Connector for SAP Business Technology Platform](/appstore/connectors/sap/sap-xsuaa-connector/)
 
 ### 2.11 Scheduling {#scheduling}
 
+* [Process Queue ⚠](/appstore/modules/process-queue/)
 * [Workflow Commons](/appstore/modules/workflow-commons/)
 
 ### 2.12 Tracing {#tracing}
@@ -139,6 +141,9 @@ To check out which modules a category contains, click the category in the list b
 ### 2.13 User Interface {#user-interface}
 
 * [Atlas Core](/appstore/modules/atlas-core/)
+* [Atlas UI Resources ⚠](/appstore/modules/atlas-ui-resources/)
+* [Google Tag](/appstore/modules/google-tag/)
+* [Image Crop](/appstore/modules/image-crop/)
 * [Mendix Mini Surveys](/appstore/modules/mendix-mini-surveys/)
 * [SAP Fiori UI Resources](/appstore/modules/sap-ui-resources/sap-fiori-3-0/)
 * [SAP Horizon Native UI Resources](/appstore/modules/sap-ui-resources/sap-native-resources/)
@@ -146,6 +151,7 @@ To check out which modules a category contains, click the category in the list b
 ### 2.14 Utility {#utility}
 
 * [Administration](/appstore/modules/administration/)
+* [App Switcher](/appstore/modules/app-switcher/)
 * [Community Commons](/appstore/modules/community-commons-function-library/)
 * [Encryption](/appstore/modules/encryption/)
 * [Mendix Feedback](/appstore/modules/mendix-feedback/)
@@ -157,15 +163,5 @@ To check out which modules a category contains, click the category in the list b
 
 ### 2.15 Visualisation {#visualization}
 
-* [Native Mobile AR](/appstore/modules/native-mobile-ar/)
-
-### 2.16 Uncategorized {#uncategorized}
-
 * [Any Chart](/appstore/modules/any-chart/)
-* [App Switcher](/appstore/modules/app-switcher/)
-* [Atlas UI Resources ⚠](/appstore/modules/atlas-ui-resources/)
-* [Google Tag](/appstore/modules/google-tag/)
-* [Hybrid Mobile Actions ⚠](/appstore/modules/hybrid-mobile-actions/)
-* [Image Crop](/appstore/modules/image-crop/)
-* [Native Mobile Resources](/appstore/modules/native-mobile-resources/)
-* [Process Queue ⚠](/appstore/modules/process-queue/)
+* [Native Mobile AR](/appstore/modules/native-mobile-ar/)

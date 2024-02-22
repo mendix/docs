@@ -177,5 +177,5 @@ In order to test the features requiring HTTPS protocol, use [ngrok](https://ngro
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-In iOS, using the Camera feature (`MediaDevices` in Mozilla's API) in any browser requires HTTPS.
+In iOS, using the Camera feature (`MediaDevices` in [Mozilla's API](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia)) in any browser requires HTTPS.
 {{% /alert %}}

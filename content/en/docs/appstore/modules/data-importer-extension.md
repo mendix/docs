@@ -70,7 +70,7 @@ Select or drop the file in the **Select Source File** window. You can choose whi
 
 {{< figure src="/attachments/appstore/modules/data-importer-extension/select-sheet-and-header-data-row.png" >}}
 
-Click **Preview Source Data & Entity** to view the data from the file. The first 10 rows from the source file are shown in the data preview section. The column names correspond to the attribute name within the entity.
+Click **Preview Source Data & Entity** to view the data from the file. The first 10 rows from the source file are shown in the data preview section. The Sheet name is used to create an entity (NPE), but this can be edited. The column names correspond to the attribute names within the entity.
 
 All the columns are selected (checked) by default. You can uncheck the columns you do not want to import. At the bottom of the table, you can see the target data type of the attribute, which is based on the cell type defined in the file's first data row. If any data types are incorrect, check the cell type of the first data row in Excel and adjust the cell type definition accordingly.
 
@@ -89,13 +89,13 @@ Specify the values for all four configurations (Delimiter, Quote Character, Esca
 * **Escape Characters** – current supported escape characters are backslash, single, and double quotes; the default is double quotes
 * **Add Header Row** – specify if you want to add a header row or if the header row is already part of the CSV file; the default is the header row already included in file
 
-Click **Preview Source Data & Entity** to view the data from the file. The first ten rows from the source file are shown in the data preview section. The file name is used to create an entity (NPE), but this can be customized. The column names correspond to the attribute name within the entity.
+Click **Preview Source Data & Entity** to view the data from the file. The first ten rows from the source file are shown in the data preview section. The file name is used to create an entity (NPE), but this can be edited. The column names correspond to the attribute names within the entity.
 
 All the columns are selected (checked) by default. You can uncheck the columns you do not want to import. At the bottom of the table, you can see the target data type of the attribute, which defaults to **String**.
 
 {{% alert color="warning" %}} Column names that do not adhere to Mendix naming conventions will be autocorrected. {{% /alert %}}
 
-For example, for the following source data (CSV), the separator is specified as Comma and Quote, and the Escape Character is Double Quote and Header. This is already part of the input file.
+For example, for the following source data (CSV), the separator is specified as Comma. The Quote and Escape Characters are set to Double Quote and Header is included in the input file.
 
 {{< figure src="/attachments/appstore/modules/data-importer-extension/source-csv-data.png" >}}
 
@@ -103,9 +103,50 @@ The data preview and resulting entity would be as seen below:
 
 {{< figure src="/attachments/appstore/modules/data-importer-extension/preview-csv-data-and-entity.png" >}}
 
-### 2.3 Creating an Entity {#create-entity}
+### 2.3 Editing an Entity {#edit-entity}
 
-You can view the entity in the entity preview section. You can change the name of the entity, though one is suggested for you. To create the entity in your domain model, click **Create Entity** > **OK**.
+You can edit the Entity right from the "Entity Preview" section. Data Importer supports various options to -
+
+* Edit the name of resultant Entity
+* Edit the name of the attribute(s) of the Entity
+* Edit the data-type of a given attribute
+
+Click on the "Edit" link present at top-right corner of Entity preview. This will render a pop-up window where you can change the name of the Entity. You can also change the name of the attribute - *Original Name* is the name of the column from input file and *Attribute Name* will be the new name that you want to assign to this column. You can also change the data-type of this attribute by selecting a relevant value from the dropdown as shown below.
+
+{{< figure src="/attachments/appstore/modules/data-importer-extension/edit-csv-entity.png" >}}
+
+Once you are satisfied with all the changes, click on OK to save or Cancel to discard your changes.
+
+{{% alert color="info" %}}
+The Edit Entity can come handy for CSV import as all the columns of an CSV file will be marked as "String" by default and you may want to set their data-type correctly. Please be guided by the following table which shows the source to target data conversion matrix.
+
+Input CSV File
+  
+| Source Type | Target- String | Target- Int | Target- Long | Target- Decimal | Target- Boolean | Target- DateTime |
+| :-------- | :------- | :-------- | :------- | :-------- | :------- | :-------- |
+| String  | YES    | Partial    | Partial    | Partial    | Partial    | NO    |
+
+Input Excel File
+  
+| Source Type | Target- String | Target- Int | Target- Long | Target- Decimal | Target- Boolean | Target- DateTime |
+| :-------- | :------- | :-------- | :------- | :-------- | :------- | :-------- |
+| String  | YES    | Partial    | Partial    | Partial    | Partial    | NO    |
+| Boolean  | YES    | NO    | NO    | NO    | YES    | NO    |
+| Decimal  | YES    | Partial    | Partial    | YES    | NO    | NO    |
+| DateTime  | YES    | NO    | NO    | NO    | NO    | YES    |
+
+*Partial* - If source data is valid and within range then only it will be converted into Target Data type.
+
+{{% /alert %}}
+
+{{% alert color="warning" %}}
+* *enum* is not supported as a target data-type.
+* Runtime exception(s) can occur if the input data cannot be converted into desired target data-type because of various reasons like invalid data, data truncation, casting etc.
+{{% /alert %}}
+
+### 2.4 Creating an Entity {#create-entity}
+
+Once you are done editing the Entity by changing it's name, attribute names and their data-types etc, click on  **Create Entity** > **OK**. This will create the Entity in your domain model.
 
 When the entity is created, you can view the mapping of the source columns to the target entity attributes. 
 

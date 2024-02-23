@@ -92,7 +92,7 @@ To submit a request with Mendix Support, follow these steps:
 
 5. Make sure all your attachments have finished uploading before clicking **Next**.
 
-If investigating the documentation and searching the [Mendix Community](https://community.mendix.com) does not help you solve your issue, you can submit the Mendix Support request.    
+If investigating the documentation and searching the [Mendix Community](https://community.mendix.com/) does not help you solve your issue, you can submit the Mendix Support request.    
 
 ## 4 Request Priority {#request-priority}
 

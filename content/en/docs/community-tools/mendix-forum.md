@@ -11,7 +11,7 @@ aliases:
 
 ## 1 Introduction
 
-The [Mendix Community](https://community.mendix.com) is where Mendix community members come together to help each other with questions and answers, exchange information, and propose ideas for improving the Mendix Platform.
+The [Mendix Community](https://community.mendix.com/) is where Mendix community members come together to help each other with questions and answers, exchange information, and propose ideas for improving the Mendix Platform.
 
 The Mendix Community is closely integrated with the [Mendix Profile](/community-tools/mendix-profile/) so that Mendix community members can see all the interesting and useful information about who is participating in the Mendix Community. If someone clicks your name anywhere in the Mendix Community, your profile will open, so make sure to [make your Mendix Profile public](/community-tools/mendix-profile/user-settings/#profile) so everyone can see your details and progress!
 

@@ -299,11 +299,11 @@ Mendix looks forward to hearing your ideas!
 
 ## 4 Spaces
 
-In different spaces in the Mendix Community, you can have discussions around the topics that interest you the most. The spaces that you have joined are shown under **SPACES**.
+In different spaces in the Mendix Community, you can have discussions around the topics that interest you the most. The spaces that you have joined are shown under **SPACES** on the left navigation menu.
 
-Clicking **Explore Spaces** on the left navigation menu shows all the public spaces. Public spaces are visible to all community members. To join a space, click **Join** on the card for that space.
+Clicking **Explore Spaces** shows all the public spaces. Public spaces are visible to all community members. To join a space, click **Join** on the space card.
 
-Moreover, it is possible to have a private space for all Mendix users within your organization. Click **Learn More** at the bottom to apply for opening a private space.
+Moreover, it is possible to have a private space for members within your organization. Click **Learn More** at the bottom to apply for opening a private space.
 
 ## 5 Read More
 

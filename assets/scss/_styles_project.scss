@@ -172,6 +172,7 @@
     > h2 {
         margin-bottom: 1rem;
         font-size: 1.7rem; // NK - custom edit
+        font-weight: 600; // LZ - Semi-bold font weight
     }
 
     > h2:not(:first-child) {
@@ -185,6 +186,7 @@
     > h3, > h4, > h5, > h6 {
         margin-bottom: 1rem;
         margin-top: 1.5rem; // NK - decrease space between sections
+        font-weight: 600; // LZ - Semi-bold font weight
     }
 
     /* ordered lists inside ordered lists will be displayed using letters */

@@ -168,7 +168,7 @@ These are points you can gain through activity in the [Mendix Marketplace](https
 | Give a presentation on Mendix | 25 | N/A |
 | Write a blog post that is featured on the [Mendix Community Blog](https://developers.mendix.com/community-blog/) | 25 | N/A |
 | Complete a lecture in the Mendix Academy | 1 | N/A |
-| Complete a learning path in the [Mendix Academy](https://academy.mendix.com/link/home) | 25 | N/A |
+| Complete a learning path in the [Mendix Academy](https://academy.mendix.com/) | 25 | N/A |
 
 ### 7.6 Point Levels {#level}
 

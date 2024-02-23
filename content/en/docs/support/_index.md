@@ -61,7 +61,7 @@ We expect that many questions and issues can be solved by reading the [Mendix Do
 
 ### 2.1 Mendix Academy
 
-If you have questions about [Mendix Academy](https://academy.mendix.com/link/home) these will normally be handled by the Academy team.
+If you have questions about [Mendix Academy](https://academy.mendix.com/) these will normally be handled by the Academy team.
 
 You can contact Mendix Academy directly at [academy@mendix.com](mailto:academy@mendix.com). Mendix Academy may take 3-5 business days to reply to your inquiry.
 

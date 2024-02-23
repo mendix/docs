@@ -21,7 +21,7 @@ To use MendixChat, internet connection is required and make sure you are signed 
 
 MendixChat is a built-in chat interface powered by Generative AI in Studio Pro. Developers can ask questions about app development in Mendix, including how to apply concepts, best practices, and development patterns. 
 
-MendixChat is built based on large language models (LLMs), using data from [Mendix Docs](https://docs.mendix.com/), [Mendix Community](https://community.mendix.com/index3.html#/community), and [Mendix Academy](https://academy.mendix.com/link/home).
+MendixChat is built based on large language models (LLMs), using data from [Mendix Docs](https://docs.mendix.com/), [Mendix Community](https://community.mendix.com/), and [Mendix Academy](https://academy.mendix.com/).
 
 ## 2 Using MendixChat
 

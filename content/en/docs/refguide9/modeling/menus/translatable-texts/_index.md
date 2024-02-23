@@ -104,5 +104,5 @@ The above only applies to pages *within* your Mendix application (meaning, pages
 
 * [Translating Your App Content](/refguide9/translate-your-app-content/) – a worked example of adding a translation 
 * [Using Translatable Validation Messages](/refguide9/translatable-validation-messages/)
-* [Change language by clicking a link](https://community.mendix.com/link/questions/91821) – explanations and ideas on the Mendix Community for refreshing the page when the language is changed
-* [Anonymous User Journey](https://community.mendix.com/link/questions/91676) – a discussion on the Mendix Community about switching languages for anonymous end-users
+* [Change language by clicking a link](https://community.mendix.com/link/questions/91821) – explanations and ideas in the Mendix Community for refreshing the page when the language is changed
+* [Anonymous User Journey](https://community.mendix.com/link/questions/91676) – a discussion in the Mendix Community about switching languages for anonymous end-users

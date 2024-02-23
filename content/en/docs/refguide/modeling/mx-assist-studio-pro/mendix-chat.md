@@ -61,7 +61,7 @@ The following steps present an example of how you can interact with MendixChat b
     * Feedback icons
     * Top relevant references from various resources like Mendix documentation, Mendix Community, and Academy learning paths
 
-        {{% alert color="info" %}}In Studio Pro 10.7.0 and above, you can also see the Mendix version of the references, the level required if the reference comes from Mendix Academy, and the date and answer status if the reference comes from Mendix Community.{{% /alert %}}
+        {{% alert color="info" %}}In Studio Pro 10.7.0 and above, you can also see the Mendix version of the references, the level required if the reference comes from Mendix Academy, and the date and answer status if the reference comes from the Mendix Community.{{% /alert %}}
 
         {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mendix-chat/mendix-chat-example.png" width="300px" class="image-border" >}}
 

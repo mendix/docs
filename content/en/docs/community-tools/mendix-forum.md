@@ -118,10 +118,10 @@ The URL for each question is unique.
 #### 3.1.3 Asking Your Question {#asking-question}
 
 {{% alert color="info" %}}
-It has never been easier to ask a question on the Mendix Community. But before you submit a new question, be sure to search the Mendix Community for similar questions that have already been asked. There may be someone else who has already posted the same question!
+It has never been easier to ask a question in the Mendix Community. But before you submit a new question, be sure to search the Mendix Community for similar questions that have already been asked. There may be someone else who has already posted the same question!
 {{% /alert %}}
 
-To ask your own question on the Mendix Community, follow these steps:
+To ask your own question in the Mendix Community, follow these steps:
 
 1. Click **Create a Post** > **Ask a Question**, or click **Ask a Question** on the **Questions** page. 
 2. On the **Ask Your Question** page, fill in the following details in the editor:
@@ -197,7 +197,7 @@ The URL for each exchange is unique.
 
 #### 3.2.3 Posting an Exchange {#posting-exchange}
 
-To ask your own question on the Mendix Community, follow these steps:
+To ask your own question in the Mendix Community, follow these steps:
 
 1. Click **Create a Post** > **Exchange with Community**, or click **Post Exchange** on the **Exchanges** page. 
 2. On the **Create a Post** page, fill in the following details in the editor:

@@ -27,7 +27,7 @@ Before submitting a new Mendix Support request, check these resources to make su
 * [Mendix Documentation](/)
 * [Mendix Platform status](https://status.mendix.com)
 
-If you cannot find the answer to your question on the Mendix Community or in the Mendix documentation, you can submit a support request. The Mendix Support Portal will walk you through the ticket creation by asking for relevant information based on the type of request. 
+If you cannot find the answer to your question in the Mendix Community or in the Mendix documentation, you can submit a support request. The Mendix Support Portal will walk you through the ticket creation by asking for relevant information based on the type of request. 
 
 ## 3 Submitting a New Request {#submitting}
 

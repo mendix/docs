@@ -20,8 +20,8 @@ For information on the current status of deployment to Mendix for Private Cloud 
 * You can now specify a custom value for the **jettyOptions** within the **Runtime** section.
 * Deployment packages that have failed now have an expiry date set.
 * We have addressed an issue where changes in the data type and value of the model constants were not reflected in the application. (Ticket [205850](https://mendixsupport.zendesk.com/agent/tickets/205850).)
-* We addressed an issue where **Calendar dates** in **datetime** constants were not visible correctly in dark mode.
-* We addressed an issue where only 10 namespaces were displayed in the **Cluster Overview** page (Ticket [208220](https://mendixsupport.zendesk.com/agent/tickets/208220).)
+* We have addressed an issue where **Calendar dates** in **datetime** constants were not visible correctly in dark mode.
+* We have addressed an issue where only 10 namespaces were displayed in the **Cluster Overview** page (Ticket [208220](https://mendixsupport.zendesk.com/agent/tickets/208220).)
 * The **Cluster Manager** button has been removed from the top menu bar of the Private Cloud portal. You can now navigate to the **Cluster Overview** page using the **Mendix for Private Cloud** button.
 * You can now export the app constants to an Excel file.
 

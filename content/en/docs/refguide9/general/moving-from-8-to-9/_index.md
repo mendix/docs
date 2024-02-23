@@ -126,9 +126,9 @@ For example: in the query `//Customer[Customer_Address/Address/City = 'Rotterdam
 * While not allowed by Studio Pro, it was possible to use a non-boolean attribute as a constraint in a Java action, for example `//Address[City]`. QE7 accepts such queries but, depending on the database, it may give unexpected results. QE9 will reject such queries.
 * While not supported or documented, it is possible to use a query like `//Customer/Customer_Address/Address` in a Java action. If an instance of `Address` is reachable from multiple `Customer` instances, QE7 would return the instance of `Address` multiple times. QE9 will return each matching instance of `Address` only once.
 
-## 8 Relevant Forum Posts
+## 8 Relevant Mendix Community Posts
 
-Check out how the Mendix community resolves upgrade issues in the following Forum posts:
+Check out how the Mendix community resolves upgrade issues in the following Mendix Community posts:
 
 * [Upgrade from Mendix 8 to Mendix 9](https://community.mendix.com/link/space/studio-pro/questions/123696) – on *.jar* files and the *userlib* directory
 * [Native app styling difference with Mendix 9 upgrade](https://community.mendix.com/link/space/mobile/questions/118280) – on [upgrading to Atlas 3](/refguide9/moving-from-atlas-2-to-3/)

@@ -71,7 +71,7 @@ If you have passed a Mendix certification, Mendix Academy will need 3-5 business
 
 We would like to invite you to an important channel where you can provide feature requests to Mendix: the [Mendix Community](https://community.mendix.com/link/ideas). Any customer can post a feature request that can be reviewed, expanded on, and voted on by other members of the Mendix community. Based on this feedback, every quarter we will determine which features have the most value according to our customers, and we will implement them.
 
-For more details, see [Forum](/community-tools/mendix-community/).
+For more details, see [Mendix Community](/community-tools/mendix-community/).
 
 ## 4 Accessing Mendix Support
 

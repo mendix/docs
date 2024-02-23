@@ -105,48 +105,48 @@ The data preview and resulting entity would be as seen below:
 
 ### 2.3 Editing an Entity {#edit-entity}
 
-You can edit the entity in the Entity Preview section. The Data Importer supports various ways to:
+You can edit the entity in the **Entity Preview** section. The Data Importer supports various ways to:
 
 * Edit the name of resultant entity
 * Edit the name of the attribute (or attributes) of the entity
 * Edit the data type of a given attribute
 
-Click the Edit link present at top-right corner of Entity preview. This will render a pop-up window where you can change the name of the Entity. You can also change the name of the attribute - *Original Name* is the name of the column from input file and *Attribute Name* will be the new name that you want to assign to this column. You can also change the data-type of this attribute by selecting a relevant value from the dropdown as shown below.
+Click **Edit** at top-right corner of **Entity Preview**. This will render a pop-up window where you can change the name of the entity. You can also change the name of the attribute; *Original Name* is the name of the column from input file and *Attribute Name* will be the new name that you want to assign to this column. You can also change the data type of this attribute by selecting a relevant value from the drop-down as shown below.
 
 {{< figure src="/attachments/appstore/modules/data-importer-extension/edit-csv-entity.png" >}}
 
-Once you are satisfied with all the changes, click on OK to save or Cancel to discard your changes.
+Once you are satisfied with the changes, click **OK** to save or **Cancel** to discard your changes.
 
 {{% alert color="info" %}}
-The Edit Entity can come handy for CSV import as all the columns of an CSV file will be marked as "String" by default and you may want to set their data-type correctly. Please be guided by the following table which shows the source to target data conversion matrix.
+The **Edit Entity** feature is useful for CSV import, as all the columns of an CSV file are marked as String by default, so you can change the data type if necessary. The following table shows the source-to-target data conversion matrix:
 
 Input CSV File
   
 | Source Type | Target- String | Target- Int | Target- Long | Target- Decimal | Target- Boolean | Target- DateTime |
 | :-------- | :------- | :-------- | :------- | :-------- | :------- | :-------- |
-| String  | YES    | Partial    | Partial    | Partial    | Partial    | NO    |
+| String  | Yes    | Partial    | Partial    | Partial    | Partial    | No    |
 
 Input Excel File
   
 | Source Type | Target- String | Target- Int | Target- Long | Target- Decimal | Target- Boolean | Target- DateTime |
 | :-------- | :------- | :-------- | :------- | :-------- | :------- | :-------- |
-| String  | YES    | Partial    | Partial    | Partial    | Partial    | NO    |
-| Boolean  | YES    | NO    | NO    | NO    | YES    | NO    |
-| Decimal  | YES    | Partial    | Partial    | YES    | NO    | NO    |
-| DateTime  | YES    | NO    | NO    | NO    | NO    | YES    |
+| String  | Yes    | Partial    | Partial    | Partial    | Partial    | No    |
+| Boolean  | Yes    | No    | No    | No    | Yes    | No    |
+| Decimal  | Yes    | Partial    | Partial    | Yes    | No    | No    |
+| DateTime  | Yes    | No    | No    | No    | No    | Yes    |
 
-*Partial* - If source data is valid and within range then only it will be converted into Target Data type.
+**Partial** - If source data is valid and within range, it will be converted into target data type.
 
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-* *enum* is not supported as a target data-type.
-* Runtime exception(s) can occur if the input data cannot be converted into desired target data-type because of various reasons like invalid data, data truncation, casting etc.
+* **Enum** is not supported as a target data type
+* Runtime exceptions can occur if the input data cannot be converted into desired the target data type for various reasons (for example, invalid data, data truncation, casting etc.)
 {{% /alert %}}
 
 ### 2.4 Creating an Entity {#create-entity}
 
-Once you are done editing the Entity by changing it's name, attribute names and their data-types etc, click on  **Create Entity** > **OK**. This will create the Entity in your domain model.
+When you are done editing the entity, click **Create Entity** > **OK**. This will create the entity in your domain model.
 
 When the entity is created, you can view the mapping of the source columns to the target entity attributes. 
 

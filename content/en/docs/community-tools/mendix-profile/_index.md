@@ -102,7 +102,7 @@ Check out the tables below for all the ways to earn points.
 
 ### 7.1 Community Points
 
-These are points you can gain through activity in the [Mendix Community](https://community.mendix.com//).
+These are points you can gain through activity in the [Mendix Community](https://community.mendix.com/).
 
 | Activity | Points | Max. Points per Day |
 | --- | --- | --- |

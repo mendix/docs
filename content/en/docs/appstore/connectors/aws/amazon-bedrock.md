@@ -545,7 +545,6 @@ The `StabilityAIStableDiffusionXL_Settings` entity holds part of the response of
 | `Base64` | The `Base64` attribute describes the image content as a base64 encrypted string.|
 
 
-
 #### 4.1.48 ModelInvocationInput (#model-invocation-input)
 
 The `ModelInvocationInput` contains parameters that specify the input to the pre- or post-processing step..
@@ -594,7 +593,7 @@ The `InvokeAgentRequest` holds all attributes needed to create a request to invo
 | `EndSession` | The `EndSession` attribute specifies whether to end the session with the agent or not.|
 
 
-#### 4.1.49 SessionState (#session-state)
+#### 4.1.52 SessionState (#session-state)
 
 The `SessionState` entity is associated to objects that hold information about the session.
 
@@ -603,7 +602,7 @@ The `SessionState` entity is associated to objects that hold information about t
 | N/A | The entity does not contain any attributes. |
 
 
-#### 4.1.50 SessionAttribute (#session-attribute)
+#### 4.1.53 SessionAttribute (#session-attribute)
 
 The `SessionAttribute` entity inherits from the InvokeAgentAttribute entity and holds information about the session.
 
@@ -612,7 +611,7 @@ The `SessionAttribute` entity inherits from the InvokeAgentAttribute entity and 
 | N/A | The entity does not contain any attributes but it inherits from the [`InvokeAgentAttribute`](#invoke-agent-attribute). |
 
 
-#### 4.1.51 PromptSessionAttribute (#session-attribute)
+#### 4.1.54 PromptSessionAttribute (#session-attribute)
 
 The `PromptSessionAttribute` entity inherits from the InvokeAgentAttribute entity and holds information about the session.
 
@@ -621,28 +620,202 @@ The `PromptSessionAttribute` entity inherits from the InvokeAgentAttribute entit
 | N/A | The entity does not contain any attributes but it inherits from the [`InvokeAgentAttribute`](#invoke-agent-attribute). |
 
 
-#### 4.1.52 InvokeAgentResponse (#invoke-agent-response)
+#### 4.1.55 InvokeAgentResponse (#invoke-agent-response)
 
 The `InvokeAgentResponse` is the response object of the invokeAgent operation.
 
 | Attribute | Description |
 | --- | --- |
-| `OutputText` | The `InputText` attribute holds the prompt text to send to the agent.|
-| `AgentId` | The `AgentId` attribute holds the unique identifier of the agent to use.|
-| `AgentAliasId` | The `AgentAliasId` attribute holding the alias of the agent to use.|
-| `SessionId` | The `SessionId` attribute holds the unique identifier of the session. Use the same value across requests to continue the same conversation.|
-| `EnableTrace` | The `EnableTrace` attribute specifies whether to turn on the trace or not to track the agent's reasoning process.|
-| `EndSession` | The `EndSession` attribute specifies whether to end the session with the agent or not.|
+| `OutputText` | The `OutputText` attribute contains the 'bytes' part of the response as text.|
 
 
+#### 4.1.56 InvokeAgentCitation (#invoke-agent-citation)
+
+The `InvokeAgentCitation` contains a segment of the generated response that is based on a source in the knowledge base, alongside information about the source.
+
+| Attribute | Description |
+| --- | --- |
+| N/A | The entity does not contain any attributes but it inherits from the [`Citation`](#citation). |
+
+#### 4.1.57 TracePart (#trace-part)
+
+The `TracePart` is a generalization which contains information about the agent and session, alongside the agent's reasoning process and results from calling API actions and querying knowledge bases and metadata about the trace. 
+
+| Attribute | Description |
+| --- | --- |
+| `AgentAliasId` | The `AgentAliasId` attribute holds the corresponding value from the InvokeAgentRequest.|
+| `AgentId` | The `AgentId` attribute holds the corresponding value from the InvokeAgentRequest.|
+| `SessionId` | The `SessionId` attribute holds the corresponding value from the InvokeAgentRequest.|
 
 
+#### 4.1.58 AbstractTrace (#abstract-trace)
+
+The `AbstractTrace` contains one part of the agent's reasoning process and results from calling API actions and querying knowledge bases. 
+
+| Attribute | Description |
+| --- | --- |
+| `TraceId` | The `TraceId` attribute holds the unique identifier of the trace.|
+| `TraceType` | The `TraceType` attribute holds the enumeration value of the trace type.|
 
 
+#### 4.1.59 FailureTrace (#failure-trace)
+
+The `FailureTrace` contains information about the failure of the interaction. 
+
+| Attribute | Description |
+| --- | --- |
+| `FailureReason` | The `FailureReason` attribute holds the reason for te failure of the interaction.|
 
 
+#### 4.1.60 PreProcessingModelInvocationOutput (#pre-processing-model-invocation-output)
+
+The `PreProcessingModelInvocationOutput` contains information about the foundation model output from the pre-processing step. 
+
+| Attribute | Description |
+| --- | --- |
+| `IsValid` | The `IsValid` attribute actually comes from entity PreProcessingParsedResponse. Specifies whether the user input is valid or not.|
+| `Rationale` | The `Rationale` attribute holds the text returned by the parsing of the pre-processing step, explaining the steps that the agent plans to take in orchestration, if the user input is valid.|
 
 
+#### 4.1.61 PreProcessingModelInvocationInput (#pre-processing-model-invocation-input)
+
+The `PreProcessingModelInvocationInput` contains the foundation model input for the pre-processing step.
+
+| Attribute | Description |
+| --- | --- |
+| N/A | The entity does not contain any attributes but it inherits from the [`ModelInvocationInput`](#model-invocation-input). |
+
+
+#### 4.1.62 PostProcessingModelInvocationOutput (#post-processing-model-invocation-output)
+
+The `PostProcessingModelInvocationOutput` contains information about the foundation model output from the post-processing step. 
+
+| Attribute | Description |
+| --- | --- |
+| `ParsedResponse` | The `ParsedResponse` attribute holds details about the response from the Lambda parsing of the output of the post-processing step.|
+
+
+#### 4.1.63 PostProcessingModelInvocationInput (#post-processing-model-invocation-input)
+
+The `PostProcessingModelInvocationInput` contains the foundation model input for the post-processing step. 
+
+| Attribute | Description |
+| --- | --- |
+| N/A | The entity does not contain any attributes but it inherits from the [`ModelInvocationInput`](#model-invocation-input). |
+
+
+#### 4.1.64 PostProcessingModelInvocationInput (#post-processing-model-invocation-input)
+
+The `PostProcessingModelInvocationInput` contains the foundation model input for the post-processing step. 
+
+| Attribute | Description |
+| --- | --- |
+| N/A | The entity does not contain any attributes but it inherits from the [`ModelInvocationInput`](#model-invocation-input). |
+
+
+#### 4.1.65 InvocationInput (#invocation-input)
+
+The `InvocationInput` contains information pertaining to the action group or knowledge base that is being invoked.
+
+| Attribute | Description |
+| --- | --- |
+| `InvocationType` | The `InvocationType` attribute specifies whether the agent is invoking an action group or a knowledge base.|
+
+
+#### 4.1.66 ActionGroupInvocationInput (#action-group-invocation-input)
+
+The `ActionGroupInvocationInput` contains information pertaining to the action group or knowledge base that is being invoked.
+
+| Attribute | Description |
+| --- | --- |
+| `ActionGroupName` | The `ActionGroupName` attribute specifies the name of the action group.|
+| `ApiPath` | The `ApiPath` attribute specifies the path to the API to call, based off the action group.|
+| `Verb` | The `Verb` attribute specifies the API method being used, based off the action group.|
+
+
+#### 4.1.67 RequestBodyContent (#request-body-content)
+
+The `RequestBodyContent` holds the parameters in the request body for the Lambda input event.
+
+| Attribute | Description |
+| --- | --- |
+| `ContentKey` | The `ContentKey` as returned in the RequestBodyContent|
+
+
+#### 4.1.68 RequestBodyContentParameter (#request-body-content-parameter)
+
+The `RequestBodyContentParameter` is a parameter in the Lambda input event (for the request body).
+
+| Attribute | Description |
+| --- | --- |
+| N/A | The entity does not contain any attributes but it inherits from the [`Parameter`](#parameter).|
+
+
+#### 4.1.69 InvocationInputParameter (#invocation-input-parameter)
+
+The `RequestBodyContent` holds the parameters in the request body for the Lambda input event.
+
+| Attribute | Description |
+| --- | --- |
+| N/A | The entity does not contain any attributes but it inherits from the [`Parameter`](#parameter).|
+
+
+#### 4.1.70 KnowledgeBaseLookupInput (#knowledge-base-lookup-input)
+
+The `KnowledgeBaseLookupInput` contains details about the knowledge base to look up and the query to be made.
+
+| Attribute | Description |
+| --- | --- |
+| `KnowledgeBaseId` | The `KnowledgeBaseId` the unique identifier of the knowledge base to look up.|
+| `Text` | The `Text` is the query made to the knowledge base.|
+
+
+#### 4.1.71 Rationale (#rationale)
+
+The `Rationale` contains the reasoning, based on the input, that the agent uses to justify carrying out an action group or getting information from a knowledge base.
+
+| Attribute | Description |
+| --- | --- |
+| `Text` | The `Text` attribute specifies the reasoning or thought process of the agent, based on the input.|
+
+
+#### 4.1.72 OrchestrationModelInvocationInput (#orchestration-model-invocation-input)
+
+The `OrchestrationModelInvocationInput` holds the input for the pre-processing step.
+
+| Attribute | Description |
+| --- | --- |
+| N/A | The entity does not contain any attributes but it inherits from the [`ModelInvocationInput`](#model-invocation-input).|
+
+
+#### 4.1.73 Observation (#observation)
+
+The `Observation` contains the result or output of an action group or knowledge base, or the response to the user.
+
+| Attribute | Description |
+| --- | --- |
+| `ActionGroupInvocationOutput` | The `ActionGroupInvocationOutput` attribute contains the JSON-formatted string returned by the API invoked by the action group.|
+| `FinalResponse` | The `FinalResponse` attribute contains details about the response to the user.|
+| `ObservationType` | The `ObservationType` attribute specifies what kind of information the agent returns in the observation. The following values are possible.|
+
+
+#### 4.1.74 RepromptResponse (#reprompt-response)
+
+The `RepromptResponse` contains details about the agent's response to reprompt the input.
+
+| Attribute | Description |
+| --- | --- |
+| `RepromptSource` | The `RepromptSource` attribute specifies what output is prompting the agent to reprompt the input.|
+| `Text` | The `Text` reprompting the input.|
+
+
+#### 4.1.75 ObservationRetrievedReference (#observation-retrieved-reference)
+
+The `ObservationRetrievedReference` holds information about a sources cited for the generated response.
+
+| Attribute | Description |
+| --- | --- |
+| N/A | The entity does not contain any attributes but it inherits from the [`RetrievedReference`](#retrieved-reference).|
 
 
 ### 4.2 Activities {#activities}
@@ -730,6 +903,18 @@ The input and output for this service are shown in the table below:
 | Input | Output |
 | --- | --- |
 | `ENUM_Region (enumeration)`, `Credentials (object)`, `GetIngestionJobRequest (object)` | `GetIngestionJobResponse (object)` |
+
+
+#### 4.2.8 InvokeAgent {#invoke-agent}
+
+The `InvokeAgent` activity allows you to invoke an agent from Amazon Bedrock so that you can orchestrate tasks involving Foundation models and enrich the process with organisational data and user input. It requires `ENUM_Region`, `Credentials`, `InvokeAgentRequest` and a `ResponseHandlerMicroflow` as input parameters. The latter is necessary since InvokeAgent is an asynchronous operation. It is required that this is a flow that has only one input parameter of the InvokeAgentResponse entity type. The Amazon Bedrock Connector includes a sample handler microflow to help you set up a handler for the response.
+
+The input and output for this service are shown in the table below:
+
+| Input | Output |
+| --- | --- |
+| `ENUM_Region (enumeration)`, `Credentials (object)`, `InvokeModelRequest (object)`, `InvokeModelRequest (object)`, `ResponseHandlerMicroflow` | `InvokeModelResponse (object)` |
+
 
 ## 5 Troubleshooting
 

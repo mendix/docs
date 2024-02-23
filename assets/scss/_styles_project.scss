@@ -59,6 +59,7 @@
   body {
     font-family: "noto-sans", sans-serif;
     font-weight: 400;
+    line-height: 1.5; // LZ - line height 1.5 (Regular) according to PDS
   }
   
   /* Page Title H1 use Patron Medium. The rest of headings on your page should use Noto Sans */
@@ -163,16 +164,18 @@
     }
 
     > h1 {
-        font-family: "Patron"; //LZ - to set the font for the page titles of the docs to Patron
+        font-family: "Patron"; //LZ - to set the font for the page titles of the docs to Patron according to PDS
         font-weight: $font-weight-normal; // NK - adjusted for use with multiple Noto Sans weights
         margin-bottom: 1rem;
         font-size: 2rem; // NK - custom edit
+        line-height: 1.2; // LZ - line height 1.2 (Compact) according to PDS
     }
 
     > h2 {
         margin-bottom: 1rem;
         font-size: 1.7rem; // NK - custom edit
-        font-weight: 600; // LZ - Semi-bold font weight
+        font-weight: 600; // LZ - Semi-bold font weight according to PDS
+        line-height: 1.2; // LZ - line height 1.2 (Compact) according to PDS
     }
 
     > h2:not(:first-child) {
@@ -186,7 +189,8 @@
     > h3, > h4, > h5, > h6 {
         margin-bottom: 1rem;
         margin-top: 1.5rem; // NK - decrease space between sections
-        font-weight: 600; // LZ - Semi-bold font weight
+        font-weight: 600; // LZ - Semi-bold font weight according to PDS
+        line-height: 1.2; // LZ - line height 1.2 (Compact) according to PDS
     }
 
     /* ordered lists inside ordered lists will be displayed using letters */

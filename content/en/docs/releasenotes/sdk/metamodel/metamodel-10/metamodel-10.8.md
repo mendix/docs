@@ -1,6 +1,7 @@
 ---
 title: "10.8"
-parent: "metamodel-10"
+url: /releasenotes/sdk/metamodel-10.8/
+weight: 92
 ---
 
 ## 10.8.0
@@ -32,5 +33,3 @@ parent: "metamodel-10"
 
 #### DataSource (Element)
 * We introduced the `forceFullObjects` property. 
-
-This page has been generated automatically.

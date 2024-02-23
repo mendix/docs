@@ -114,6 +114,7 @@ To check out which modules a category contains, click the category in the list b
 
 ### 2.9 Mobile {#mobile}
 
+* [Hybrid Mobile Actions ⚠](/appstore/modules/hybrid-mobile-actions/)
 * [Nanoflow Commons](/appstore/modules/nanoflow-commons/)
 * [Native Mobile AR](/appstore/modules/native-mobile-ar/)
 * [Native Mobile Resources](/appstore/modules/native-mobile-resources/)
@@ -121,7 +122,6 @@ To check out which modules a category contains, click the category in the list b
 ### 2.10 SAP Connector {#sap-connector}
 
 * [BAPI Connector for SAP Solutions](/appstore/modules/sap/sap-bapi-connector/)
-* [Hybrid Mobile Actions ⚠](/appstore/modules/hybrid-mobile-actions/)
 * [OData Connector for SAP Solutions](/appstore/modules/sap/sap-odata-connector/)
 * [SAP Event Mesh Connector](/appstore/modules/sap/sap-event-mesh-connector/)
 * [SAP Logging Connector](/appstore/modules/sap/sap-logger/)

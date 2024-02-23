@@ -100,7 +100,7 @@ Check this box to mark the operation as deprecated in the service's OpenApi (Swa
 
 #### 2.1.6 Parameters
 
-You can **Add**, **Update** or **Delete** the parameters of the operation which is described in [Operation Parameters for Published REST](/refguide/published-rest-operation-parameter/).
+You can **Add**, **Update**, or **Delete** the parameters of the operation, which is described in [Operation Parameters for Published REST](/refguide/published-rest-operation-parameter/).
 
 ##### 2.1.6.1 Import Mapping {#import-mapping}
 
@@ -108,15 +108,15 @@ For a body parameter, you can select an [import mapping](/refguide/import-mappin
 
 To select an import mapping, double-click the parameter or click **Edit** in the grid after you select the parameter. When selecting the import mapping, you can also choose the commit behavior of the mapping: you can choose to either commit, commit without events, or not commit imported objects.
 
-You can select an import mapping that takes no parameter, or an import mapping that takes a primitive parameter (for example, string, integer). If you select an import mapping with a primitive parameter, you need to have exactly one [path parameter](/refguide/published-rest-path-parameters/) with the same type. That path parameter will be passed to the import mapping.
+You can select an import mapping that takes no parameter, or an import mapping that takes a primitive parameter (for example, string, or integer). If you select an import mapping with a primitive parameter, you need to have exactly one [path parameter](/refguide/published-rest-path-parameters/) with the same type. That path parameter will be passed to the import mapping.
 
-You can indicate what should happen **if no object was found** when the import mapping has checked the box **decide this at the place where the mapping gets used**.
+You can indicate what should happen **If no object was found** when the import mapping has checked the box **Decide this at the place where the mapping gets used**.
 
-If you select an import mapping that supports both XML and JSON (for example, a mapping that is based on a message definition), then the operation will be able to handle both XML and JSON requests.
+If you select an import mapping that supports both XML and JSON (for example, a mapping that is based on a message definition), the operation will be able to handle both XML and JSON requests.
 
-Valid requests must contain a *Content-Type* header. See [Recognized media types](#table1) for a list of media types that are understood by the import mapping. If an unsupported content type is used, the operation will result in a "**400 Bad Request**" response.
+Valid requests must contain a Content-Type header. See [Recognized media types](#table1) for a list of media types that are understood by the import mapping. If an unsupported content type is used, the operation will result in a **400 Bad Request** response.
 
-The import mapping is also used to generate object schemas for operation responses in [OpenAPI (Swagger) documentation page](/refguide/published-rest-services/#interactive-documentation) based on [JSON Schema](/refguide/published-rest-service-json-schema/)
+The import mapping is also used to generate object schemas for operation responses in [OpenAPI (Swagger) documentation page](/refguide/published-rest-services/#interactive-documentation) based on [JSON Schema](/refguide/published-rest-service-json-schema/).
 
 #### 2.1.7 Response
 
@@ -130,9 +130,9 @@ This shows the result type of the microflow.
 
 When the microflow returns an object or a list of objects, you must specify how this result is mapped to JSON or XML. Select an export mapping that takes the result of the microflow as input.
 
-If you select an export mapping that supports both XML and JSON (for example, a mapping that is based on a message definition), then the output depends on whether the microflow has a parameter of type *System.HttpResponse* and adds a *Content-Type* header to it. The possible scenarios are given below:
+If you select an export mapping that supports both XML and JSON (for example, a mapping that is based on a message definition), the output depends on whether the microflow has a parameter of type `System.HttpResponse` and adds a Content-Type header to it. The possible scenarios are given below:
 
-* When the microflow sets the *Content-Type* header parameter with a media type that is XML, then the operation returns XML as given in the table below.
+* When the microflow sets the Content-Type header parameter with a media type that is XML, the operation returns XML as seen in the table below.
 
     <a id="table1">**Recognized media types**</a>
 
@@ -144,17 +144,17 @@ If you select an export mapping that supports both XML and JSON (for example, a 
     | *application/json*           | JSON |
     | anything ending with *+json* | JSON |
 
-* When the microflow sets the *Content-Type* header to something else, then the operation returns JSON.
+* When the microflow sets the Content-Type header to something else, the operation returns JSON.
 
-* When the microflow does not set the *Content-Type* header, then the output is determined by inspecting the *Accept* header in the request. The first media type that is recognized to be XML or JSON (as given in the table above) determines the operation result: the *Content-Type* is *application/xml* (when it is XML) or *application/json* (when it is JSON).
+* When the microflow does not set the Content-Type header, the output is determined by inspecting the Accept header in the request. The first media type that is recognized to be XML or JSON (as given in the table above) determines the operation result: the Content-Type is *application/xml* (when it is XML) or *application/json* (when it is JSON).
 
-* When there is no *Accept* header or the *Accept* header does not contain a recognizable media type, then the operation returns JSON and the *Content-Type* is *application/json*.
+* When there is no Accept header or the Accept header does not contain a recognizable media type, the operation returns JSON and the Content-Type is *application/json*.
 
 The export mapping is also used to generate object schemas for operation responses in the [OpenAPI (Swagger) documentation page](/refguide/published-rest-services/#interactive-documentation) based on the [JSON schema](/refguide/published-rest-service-json-schema/).
 
 ### 2.2 Public Documentation
 
-In the **Public Documentation** tab you can specify the documentation that will be used in the service's [OpenAPI (Swagger) documentation page](/refguide/published-rest-services/#interactive-documentation).
+In the **Public Documentation** tab, you can specify the documentation that will be used in the service's [OpenAPI (Swagger) documentation page](/refguide/published-rest-services/#interactive-documentation).
 
 #### 2.2.1 Summary {#summary}
 

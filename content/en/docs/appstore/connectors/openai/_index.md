@@ -226,7 +226,7 @@ For technical details, see the [Technical reference](#embeddings-single-technica
 
 #### 3.4.2 `Embeddings (list input)` {#embeddings-list}
 
-The microflow activity `Embeddings (list input)` supports the more complex scenario where a list of strings must be vectorized in a single API call, e.g. converting a batch of text strings (chunks) from a private knowledge base into embeddings. Instead of calling the API for each string, executing a single call for a list of strings can significantly reduce HTTP overhead. The embedding vectors returned after a successful API call will be stored as `EmbeddingVector` attribute in the same `DataChunk` entity. Thus, the microflow does not return an Object or List, but only a `Success` boolean. Two accompanying microflows are available to help construct the input for the main microflow: 
+The microflow activity `Embeddings (list input)` supports the more complex scenario where a list of strings must be vectorized in a single API call, e.g. converting a batch of text strings (chunks) from a private knowledge base into embeddings. Instead of calling the API for each string, executing a single call for a list of strings can significantly reduce HTTP overhead. The embedding vectors returned after a successful API call will be stored as `EmbeddingVector` attribute in the same `DataChunk` entity. Thus, the microflow does not return an Object or List, but only a `Success` Boolean. Two accompanying microflows are available to help construct the input for the main microflow: 
 
 * `DataBatch_Create` is used to create the wrapper object for the list of `DataChunk` objects that must be passed as input parameter. 
 * `DataChunk_Create` can be used repetitively to attach a chunk of text (as a string) to the `DataBatch` entity. 
@@ -770,7 +770,7 @@ Use the microflow `Embeddings_Execute_ListInput` to execute an embeddings API ca
 | ----------- | ------- | ------------------------------------------------------------ |
 | `Success`   | Boolean | The value is `true` if the embeddings request was successful. The value is `false` if an error occurred or a validation failed. |
 
-The `DataBatch` is a wrapper object for the list of text strings for which the embeddings are generated. You can use `DataBatch_Create` to create a new `Databatch`  and with `DataChunk_Create` new `DataChunk` objects will be added to the wrapper. The order is not relevant technically here; each `DataChunk` will be enriched with the corresponding embedding vector that was returned in the API call: the microflow `Embeddings_Execute_ListInput` already takes care of mapping the result onto the correct `DataChunk` entities and the microflow itself only returns a `Success` boolean.
+The `DataBatch` is a wrapper object for the list of text strings for which the embeddings are generated. You can use `DataBatch_Create` to create a new `Databatch`  and with `DataChunk_Create` new `DataChunk` objects will be added to the wrapper. The order is not relevant technically here; each `DataChunk` will be enriched with the corresponding embedding vector that was returned in the API call: the microflow `Embeddings_Execute_ListInput` already takes care of mapping the result onto the correct `DataChunk` entities and the microflow itself only returns a `Success` Boolean.
 
 ##### 4.3.3.3 Embeddings (Advanced) {#embeddings-advanced-technical}
 

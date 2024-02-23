@@ -12,9 +12,9 @@ aliases:
 
 ## 1 Introduction
 
-Mendix apps can consume OData services exposed by SAP back-end systems. To do this you need to use the [OData Connector for SAP Solutions](/appstore/connectors/sap/sap-odata-connector/), which needs to know details of the OData service which has been exposed. This involves mapping the data structures exposed by the OData service (via the $metadata URL) to entities and attributes of the domain model. This information is created as a Mendix module (*.mpk*) file which can be imported into your Mendix app.
+Mendix apps can consume OData services exposed by SAP back-end systems. To do this you need to use the [OData Connector for SAP Solutions](/appstore/modules/sap/sap-odata-connector/), which needs to know details of the OData service which has been exposed. This involves mapping the data structures exposed by the OData service (via the $metadata URL) to entities and attributes of the domain model. This information is created as a Mendix module (*.mpk*) file which can be imported into your Mendix app.
 
-SAP data models reflect an [OData](/appstore/connectors/sap/sap-odata-connector/) service or [BAPI](/appstore/connectors/sap/sap-bapi-connector/) from SAP back-end systems like SAP Business Suite (SAP ERP 6.0), SAP S/4HANA, and SAP S/4HANA Cloud.
+SAP data models reflect an [OData](/appstore/modules/sap/sap-odata-connector/) service or [BAPI](/appstore/modules/sap/sap-bapi-connector/) from SAP back-end systems like SAP Business Suite (SAP ERP 6.0), SAP S/4HANA, and SAP S/4HANA Cloud.
 
 Handcrafting a Mendix domain model for these services would be a lot of work. The [Model Creator for SAP Integrations](https://marketplace.mendix.com/link/component/119968) automates this process by creating a Mendix module for the selected service containing the Mendix domain model which can be imported in your app. The data model also contains additional information such as the URL of the exposed endpoint, a list of collections in the service, and a list of functions provided by the service.
 
@@ -64,7 +64,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Identify the SAP back-end system and OData service or BAPI you wish to use
 * Create an app in Mendix Studio Pro (version 8.18.10 or above)
-* For a BAPI you will need to download a BAPI Schema – see [BAPI Schema for Model Creator](/appstore/connectors/sap/sap-bapi-connector/#bapi-schema) in *BAPI Connector for SAP Solutions* for more information
+* For a BAPI you will need to download a BAPI Schema – see [BAPI Schema for Model Creator](/appstore/modules/sap/sap-bapi-connector/#bapi-schema) in *BAPI Connector for SAP Solutions* for more information
 * Obtain authentication credentials, if needed, for the SAP Catalog Service or SAP back-end system you wish to use
 
 {{% alert color="warning" %}}
@@ -274,7 +274,7 @@ Use [Model Creator for SAP Integrations](https://sapmodelcreator.mendixcloud.com
 
     {{< figure src="/attachments/appstore/services/sap-model-creator/model-creator-bapi-type.png" >}}
 
-2. Upload a [BAPI schema file](/appstore/connectors/sap/sap-bapi-connector/#bapi-schema) and click **Next**.
+2. Upload a [BAPI schema file](/appstore/modules/sap/sap-bapi-connector/#bapi-schema) and click **Next**.
 
     {{< figure src="/attachments/appstore/services/sap-model-creator/model-creator-bapi-upload-bapi-schema.png" >}}
 
@@ -323,10 +323,10 @@ Now you have a Mendix module ready to import into your app.
 Do not change the names of entities, attributes, or associations in the Domain Model of the module; they need to match the names used by the SAP OData service for the OData Connector for SAP Solutions to work correctly.
 {{% /alert %}}
 
-For more information on how to use the imported data model together with the OData Connector for SAP Solutions, see [OData Connector for SAP Solutions](/appstore/connectors/sap/sap-odata-connector/).
+For more information on how to use the imported data model together with the OData Connector for SAP Solutions, see [OData Connector for SAP Solutions](/appstore/modules/sap/sap-odata-connector/).
 
 ## 6 Read More
 
 * [Using Marketplace Content](/appstore/overview/use-content/)
-* [OData Connector for SAP Solutions](/appstore/connectors/sap/sap-odata-connector/)
+* [OData Connector for SAP Solutions](/appstore/modules/sap/sap-odata-connector/)
 * [Model Creator for SAP Integrations (SAP)](https://sapmodelcreator.mendixcloud.com/link/odata)

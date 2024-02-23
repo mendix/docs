@@ -16,7 +16,7 @@ The **Query External Database** activity is used with the [External Database Con
 
 This document covers the properties of the **Query External Database** activity. 
 
-To learn how to use this activity in a microflow and configure other aspects of the Database connector, see the [Configuration](/appstore/connectors/external-database-connector/#configuration) section of *External Database Connector*.
+To learn how to use this activity in a microflow and configure other aspects of the Database connector, see the [Configuration](/appstore/modules/external-database-connector/#configuration) section of *External Database Connector*.
 
 ## 2 Properties
 

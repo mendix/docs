@@ -10,9 +10,9 @@ tags: ["Published REST", "operation", "method", "path", "example location", "map
 
 ## 1 Introduction
 
-A published REST operation is part of a [published REST resource](/refguide/published-rest-resource/) and defines an endpoint that a client can call to GET, PUT, POST, PATCH, or DELETE items from the resource.
+A published REST operation is part of a [published REST resource](/refguide/published-rest-resource/) and defines an endpoint that a client can call to `GET`, `PUT`, `POST`, `PATCH`, or `DELETE` items from the resource.
 
-In the **Published REST Service** document you can add items to be included in the service as **Resources**:
+In the **Published REST Service** document, you can add items to be included in the service as **Resources**:
 
 {{< figure src="/attachments/refguide/modeling/integration/published-rest-services/published-rest-service/published-rest-operation/publshed-rest-service.png" alt="Published REST Service" >}}
 
@@ -28,7 +28,7 @@ In the **General** tab, you can enter the operation details as described in this
 
 #### 2.1.1 Method
 
-The method specifies the type of operation that is performed by the microflow. From the drop-down menu you can select one of the following:
+The method specifies the type of operation that is performed by the microflow. From the drop-down menu, you can select one of the following:
 
 * **GET** – retrieve the entry or entries at the specified location
 * **PUT** – replace the entry or entries at the specified location, or create them if they do not exist
@@ -40,7 +40,7 @@ The method specifies the type of operation that is performed by the microflow. F
 
 #### 2.1.2 Operation Path{#operation-path}
 
-The location where the operation can be reached starts with the URL of the resource and the **Operation path** specifies the remainder of the path for the operation. You can leave it empty to use the location of the resource.
+The location where the operation can be reached starts with the URL of the resource, and the **Operation path** specifies the remainder of the path for the operation. You can leave it empty to use the location of the resource.
 
 You can use [path parameters](/refguide/published-rest-path-parameters/) to capture part of the location as a microflow parameter or as a parameter to the import mapping. Specify path parameters in the operation path between `{` and `}`. The value that is in the URL for the path parameter will be passed to the microflow or the import mapping.
 

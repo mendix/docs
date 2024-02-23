@@ -119,7 +119,6 @@ If, after your analysis, you suspect there is an issue with the Mendix Platform 
 
 You may sometimes want to perform testing on your app which could impact cloud operations. This might include the following:
 
-* Distributed Denial of Service (DDOS) test
 * Load test
 * Performance test
 * Penetration (PEN) test 
@@ -128,14 +127,17 @@ Your SLA contains the following clause:
 
 > Without first obtaining the prior written consent of Mendix, Customer may not intentionally perform any actions, such as load tests, performance tests, or similar tests that might interfere with or disrupt the integrity or performance of the App Platform or Cloud Services.
 
-If you are planning such please raise a ticket with Mendix Support and include as much information as possible, including:
+If you are planning this sort of testing you must raise a ticket with Mendix Support and include as much information as possible, including:
 
 * type of test
 * IP addresses
 * environment IDs
 * exact timings
+* contact details of parties directly involved – including any third parties who are assisting
 
-Mendix Support can then ensure that your tests do not impact other customers, and that you can get the information you need. If Mendix is not aware of your tests, you may find that they are interrupted if they cause unexpected alerts to be generated for our Cloud Operations or Security teams.
+You and Mendix Support can then sign an indemnification agreement to confirm this information and ensure that your tests do not impact other customers, and that you can get the information you need.
+
+If Mendix is not aware of your tests, you may find that they are interrupted if they cause unexpected alerts to be generated for our Cloud Operations or Security teams. You may also be breaking your agreement with Mendix.
 
 ## 8 Product Support Period
 

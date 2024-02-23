@@ -70,7 +70,7 @@ Select or drop the file in the **Select Source File** window. You can choose whi
 
 {{< figure src="/attachments/appstore/modules/data-importer-extension/select-sheet-and-header-data-row.png" >}}
 
-Click **Preview Source Data & Entity** to view the data from the file. The first 10 rows from the source file are shown in the data preview section. The Sheet name is used to create an entity (NPE), but this can be edited. The column names correspond to the attribute names within the entity.
+Click **Preview Source Data & Entity** to view the data from the file. The first 10 rows from the source file are shown in the data preview section. The Sheet Name is used to create a NPE, but this can be edited. The column names correspond to the attribute names within the entity.
 
 All the columns are selected (checked) by default. You can uncheck the columns you do not want to import. At the bottom of the table, you can see the target data type of the attribute, which is based on the cell type defined in the file's first data row. If any data types are incorrect, check the cell type of the first data row in Excel and adjust the cell type definition accordingly.
 
@@ -89,13 +89,13 @@ Specify the values for all four configurations (Delimiter, Quote Character, Esca
 * **Escape Characters** – current supported escape characters are backslash, single, and double quotes; the default is double quotes
 * **Add Header Row** – specify if you want to add a header row or if the header row is already part of the CSV file; the default is the header row already included in file
 
-Click **Preview Source Data & Entity** to view the data from the file. The first ten rows from the source file are shown in the data preview section. The file name is used to create an entity (NPE), but this can be edited. The column names correspond to the attribute names within the entity.
+Click **Preview Source Data & Entity** to view the data from the file. The first ten rows from the source file are shown in the data preview section. The file name is used to create a NPE, but this can be edited. The column names correspond to the attribute names within the entity.
 
 All the columns are selected (checked) by default. You can uncheck the columns you do not want to import. At the bottom of the table, you can see the target data type of the attribute, which defaults to **String**.
 
 {{% alert color="warning" %}} Column names that do not adhere to Mendix naming conventions will be autocorrected. {{% /alert %}}
 
-For example, for the following source data (CSV), the separator is specified as Comma. The Quote and Escape Characters are set to Double Quote and Header is included in the input file.
+For example, for the following source data (CSV), the separator is specified as Comma. The Quote and Escape Characters are set to Double Quote, and Header is included in the input file.
 
 {{< figure src="/attachments/appstore/modules/data-importer-extension/source-csv-data.png" >}}
 
@@ -105,13 +105,13 @@ The data preview and resulting entity would be as seen below:
 
 ### 2.3 Editing an Entity {#edit-entity}
 
-You can edit the Entity right from the "Entity Preview" section. Data Importer supports various options to -
+You can edit the entity in the Entity Preview section. The Data Importer supports various ways to:
 
-* Edit the name of resultant Entity
-* Edit the name of the attribute(s) of the Entity
-* Edit the data-type of a given attribute
+* Edit the name of resultant entity
+* Edit the name of the attribute (or attributes) of the entity
+* Edit the data type of a given attribute
 
-Click on the "Edit" link present at top-right corner of Entity preview. This will render a pop-up window where you can change the name of the Entity. You can also change the name of the attribute - *Original Name* is the name of the column from input file and *Attribute Name* will be the new name that you want to assign to this column. You can also change the data-type of this attribute by selecting a relevant value from the dropdown as shown below.
+Click the Edit link present at top-right corner of Entity preview. This will render a pop-up window where you can change the name of the Entity. You can also change the name of the attribute - *Original Name* is the name of the column from input file and *Attribute Name* will be the new name that you want to assign to this column. You can also change the data-type of this attribute by selecting a relevant value from the dropdown as shown below.
 
 {{< figure src="/attachments/appstore/modules/data-importer-extension/edit-csv-entity.png" >}}
 

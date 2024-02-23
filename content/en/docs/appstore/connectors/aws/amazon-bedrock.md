@@ -352,6 +352,10 @@ This is the request entity of the `RetrieveAndGenerate` action.
 
 The `Citation` entity contains a segment of the generated response that is based on a source in the knowledge base, alongside information about the source.
 
+| Attribute | Description |
+| --- | --- |
+| N/A | The entity does not contain any attributes. |
+
 
 #### 4.1.25 GeneratedResponsePart {#generated-response-part}
 
@@ -547,7 +551,7 @@ The `StabilityAIStableDiffusionXL_Settings` entity holds part of the response of
 
 #### 4.1.48 ModelInvocationInput (#model-invocation-input)
 
-The `ModelInvocationInput` contains parameters that specify the input to the pre- or post-processing step..
+The `ModelInvocationInput` contains parameters that specify the input to the pre- or post-processing step.
 
 | Attribute | Description |
 | --- | --- |

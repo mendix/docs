@@ -42,6 +42,10 @@ To access the Validation Assist, right-click a button or an input widget listed 
 The page should contain at least one input widget, for the **Generate validation microflow** option to be available. 
 {{% /alert %}} 
 
+{{% alert color="info" %}}
+The **Generate validation microflow** is only available for core input widgets. It is currently not possible to select attributes from pluggable widgets, such as the [Combo Box](/appstore/widgets/combobox/) widget.
+{{% /alert %}}
+
 The **Generate Validation Microflow** dialog box is where you can configure all validations:
 
 {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-validation-assist/generate-validation-microflow-dialog.png" alt="Generate Validation Microflow Dialog Box" >}}

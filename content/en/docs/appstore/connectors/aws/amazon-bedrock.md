@@ -664,7 +664,7 @@ The `FailureTrace` contains information about the failure of the interaction.
 
 | Attribute | Description |
 | --- | --- |
-| `FailureReason` | The `FailureReason` attribute holds the reason for te failure of the interaction.|
+| `FailureReason` | The `FailureReason` attribute holds the reason for the failure of the interaction.|
 
 
 #### 4.1.60 PreProcessingModelInvocationOutput (#pre-processing-model-invocation-output)

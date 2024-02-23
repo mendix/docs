@@ -96,7 +96,7 @@ This card on your profile presents your points and ranking for the last 30 days:
 
 Clicking **View All** takes you to the **Leaderboards** page, where you can view leaders per category, for the whole Mendix Platform, or for your company only.
 
-You can climb the leaderboard by earning points through various activities on the Mendix Platform. For example, let's say you have some time to spare while your app is deploying. You get a cup of coffee and check out the [Mendix Community]. One questions pops out because you came across a similar problem a few weeks back. You decide to help the community member and post an answer to their question. Not long after, the author marks your answer as accepted. Boom! 15 points right there.
+You can climb the leaderboard by earning points through various activities on the Mendix Platform. For example, let's say you have some time to spare while your app is deploying. You get a cup of coffee and check out the [Mendix Community](https://community.mendix.com/). One questions pops out because you came across a similar problem a few weeks back. You decide to help the community member and post an answer to their question. Not long after, the author marks your answer as accepted. Boom! 15 points right there.
 
 Check out the tables below for all the ways to earn points.
 

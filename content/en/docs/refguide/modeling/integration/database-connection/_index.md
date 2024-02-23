@@ -82,7 +82,7 @@ The **Tables & Columns** field on the right side of the screen displays the info
 
 ### 3.3 Response {#response}
 
-After [querying the database](/appstore/connectors/external-database-connector/#query-database), you can view the data included in the query in the **Response** screen.
+After [querying the database](/appstore/modules/external-database-connector/#query-database), you can view the data included in the query in the **Response** screen.
 
 If you are satisfied with the response, click **Use Response**. This will take you to the [Data Structure](#data-structure) tab where you can preview and create an entity from the response.
 

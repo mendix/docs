@@ -56,23 +56,23 @@ An operation can have the following parameters:
 
 * [Query parameters](/refguide/published-rest-query-parameters/), which are at the end of the URL in the form of `?name1=value1&name2=value2`
 
-    {{% alert color="info" %}}When a microflow parameter is not in the path and is not an object, then it is considered to be a query parameter.{{% /alert %}}
+    {{% alert color="info" %}}When a microflow parameter is not in the path and is not an object, it is considered to be a query parameter.{{% /alert %}}
 
 * [Path parameters](/refguide/published-rest-path-parameters/), which form part of the path of the URL
 * A body parameter (optional), which is in the body of the request to the operation 
 
-    {{% alert color="info" %}}The **GET**, **HEAD**, and **DELETE** operations do not have a body parameter.{{% /alert %}}
+    {{% alert color="info" %}}The `GET`, `HEAD`, and `DELETE` operations do not have a body parameter.{{% /alert %}}
 
 * Header parameters, which come from the HTTP headers of the request
 * A form parameter (optional), which is a part of the body of a multipart form request
 
 A microflow for an operation takes these operation parameters as input.
 
-A microflow parameter that has the *List* or *Object* type indicates a body parameter. You can specify an import mapping to convert the incoming JSON or XML. A parameter of the *FileDocument* type (or that inherits from a *FileDocument*) is special: It can also be used for form parameters, and an import mapping is not needed.
+A microflow parameter that has the List or Object type indicates a body parameter. You can specify an import mapping to convert the incoming JSON or XML. A parameter of the FileDocument type (or that inherits from a FileDocument) is special; it can also be used for form parameters, and an import mapping is not needed.
 
 An operation microflow may also take an [HttpRequest](/refguide/http-request-and-response-entities/#http-request) parameter. You can add this parameter if you want to inspect the requested URL and headers.
 
-To set the status code and headers, add an [HttpResponse](/refguide/http-request-and-response-entities/#http-response) object parameter and set the attributes of that object, or return an *HttpResponse*. Setting a custom reason phrase on the `HttpResponse` object has no effect; the runtime always returns the default reason phrase for the status code.
+To set the status code and headers, add an [HttpResponse](/refguide/http-request-and-response-entities/#http-response) object parameter and set the attributes of that object, or return an `HttpResponse`. Setting a custom reason phrase on the `HttpResponse` object has no effect; the runtime always returns the default reason phrase for the status code.
 
 The result of the microflow is the result of the operation and can include the following:
 
@@ -82,17 +82,17 @@ The result of the microflow is the result of the operation and can include the f
    c. Use additional HTTP response headers to communicate other information about the file.
    See the [Setting Up the MIME Type](/refguide/send-receive-files-rest/#set-mime-type) section of *Publish and Consume Images and Files with REST* for more information.
 
-2. **Return a** ***list*** **or an** ***object*** – specify an export mapping to convert it to XML or JSON.
+2. **Return a list of an object** – specify an export mapping to convert it to XML or JSON.
 
-3. **Return a primitive** – when the microflow returns a value, for example, a string, integer, or Boolean, then the response to the operation will be that value.
-    {{% alert color="info" %}}If the microflow returns a non-empty value, the *Content* attribute of the *HttpResponse* object is ignored. If the microflow returns an empty value, then the *Content* of the *HttpResponse* is taken as the result. {{% /alert %}}
+3. **Return a primitive** – when the microflow returns a value (for example, a string, integer, or Boolean), the response to the operation will be that value.
+    {{% alert color="info" %}}If the microflow returns a non-empty value, the Content attribute of the `HttpResponse` object is ignored. If the microflow returns an empty value, the Content of the `HttpResponse` is taken as the result. {{% /alert %}}
 
-4. **Return an** [HttpResponse](/refguide/http-request-and-response-entities/#http-response) – in the *HttpResponse*, you can set the status code and content (as a string). You can fill the content with, for example, the result of a mapping or a string from another source. You can also add headers to the response. 
-    {{% alert color="info" %}}One important header to set is *Content-Type*. Do not return an *empty* *HttpResponse* because that will always result in an error.{{% /alert %}}
+4. **Return an** [HttpResponse](/refguide/http-request-and-response-entities/#http-response) – in the `HttpResponse`, you can set the status code and content (as a string). You can fill the content with, for example, the result of a mapping or a string from another source. You can also add headers to the response. 
+    {{% alert color="info" %}}One important header to set is **Content-Type**. Do not return an empty `HttpResponse` because that will always result in an error.{{% /alert %}}
 
 If the microflow throws an unhandled exception, the response is **500: Internal server error**.
 
-When security is enabled, then then microflow needs to have at least one role configured to be accessible.
+When security is enabled, the microflow needs to have at least one role configured to be accessible.
 
 #### 2.1.5 Deprecated
 

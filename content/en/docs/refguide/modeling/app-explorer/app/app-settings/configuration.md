@@ -69,6 +69,29 @@ Each custom setting consists of a name and a value. For example, to set the hash
 
 For settings overview, see [Runtime Customization](/refguide/custom-settings/).
 
-## 3 Read More
+## 3 An Example
+
+Say you have an app which calls an API. In your app you have a constant `API_ENDPOINT` which points to this endpoint and has the default value `https://example.com/usefulendpoint`.
+
+You want to test your app locally against a new API endpoint which also runs locally on your machine, using port `8080`. Unfortunately, `8080` is also the default port for connecting to a Mendix app running locally.
+
+You can set up a new configuration which tells Mendix to deploy to a different port, and changes the value of the constant which specifies the API endpoint to use the local API.
+
+To do this, perform the following steps:
+
+1. In the Studio Pro **App Explorer** open the app **Settings**.
+2. In the **Configurations** tab, click **New** to create a new configuration.
+3. Enter a **Name** for the configuration. For example, *LocalAPI*.
+4. In the **Server** tab change the **Runtime port** number to `8081` so that it doesn't clash with your local API endpoint.
+5. In the **Constants** tab, click **New** to add a new constant.
+6. Select the constant you want to change, in this case `API_ENDPOINT`.
+7. Enter the new **Value**, in this example *localhost:8080*
+8. Save your changes.
+
+The new configuration will become the active configuration. If you deploy your app locally now, it will be accessible using port `8081` and `API_ENDPOINT` will point to `localhost:8080`.
+
+You can select which configuration is active using **Make active**.
+
+## 4 Read More
 
 * [App Settings](/refguide/app-settings/)

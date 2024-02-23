@@ -818,6 +818,8 @@ The `ObservationRetrievedReference` holds information about a sources cited for 
 | N/A | The entity does not contain any attributes but it inherits from the [`RetrievedReference`](#retrieved-reference).|
 
 
+
+
 ### 4.2 Activities {#activities}
 
 Activities define the actions that are executed in a microflow or a nanoflow. For more information, see [Activities](https://docs.mendix.com/refguide/activities/).
@@ -913,7 +915,8 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `ENUM_Region (enumeration)`, `Credentials (object)`, `InvokeModelRequest (object)`, `InvokeModelRequest (object)`, `ResponseHandlerMicroflow` | `InvokeModelResponse (object)` |
+| `ENUM_Region (enumeration)`, `Credentials (object)`, `InvokeModelRequest (object)`, `ResponseHandlerMicroflow` | `InvokeModelResponse (object)` |
+
 
 
 ## 5 Troubleshooting

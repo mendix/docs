@@ -921,6 +921,22 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `ENUM_Region (enumeration)`, `Credentials (object)`, `InvokeModelRequest (object)`, `ResponseHandlerMicroflow` | `InvokeModelResponse (object)` |
 
+##### Ways to handle the asynchronous InvokeAgentResponse
+
+The `InvokeAgentResponse' object is passed as a parameter to the ResponseHandler microflow. This microflow can perform any custom logic with the `InvokeAgentResponse`, for example storing it in the database. The microflow is called in another background thread, so the client is not automatically notified when the response is processed. 
+Since it is a common use case to display the agent's response to the user in the front end, here are 3 different ways to achieve this in Mendix:
+
+1. Polling
+The easiest way to make sure the client gets a response is to constantly poll for it until it is available. This can be done using the [Microflow Timer Widget](https://marketplace.mendix.com/link/component/27), which allows you to configure a microflow or nanoflow to run every X number of seconds.
+This approach is only recommended for testing and for applications that don't have a large number of concurrent users. It is not preferred for scaling.
+
+3. Websockets
+WebSockets is a communication protocol that provides full-duplex communication channels over a single, persistent connection. Unlike traditional HTTP connections, which are request-response based and stateless, WebSockets enable real-time, bi-directional communication between a client (such as a Web browser) and a server.
+The open source [EZ Websocket Module] (https://marketplace.mendix.com/link/component/205276) from the Mendix Marketplace provides an easy way to implement real-time server-to-client communication using WebSockets without external dependencies.
+
+5. Pusher
+The platform-supported [Pusher Module](https://marketplace.mendix.com/link/component/107957) is built around the [Pusher Channels](https://pusher.com/channels/) offering. This module requires a Pusher account. Pusher Channels is a paid service, but it also has a [Free Sandbox Plan](https://pusher.com/channels/pricing/).
+This module allows you to trigger a Notify event on the server to immediately trigger an action in the client application.
 
 
 ## 5 Troubleshooting
@@ -973,7 +989,7 @@ In Bedrock, a *knowledge base* denotes a substantial storehouse of data and info
 
 For more information about knowledge bases, see [Knowledge Base](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html) in the Amazon Bedrock documentation.
 
-#### 6.1.1 Creating a Knowledge Base 
+#### 6.1.1 Creating a Knowledge Base
 
 Setting up knowledge bases is usually a one-time configuration, which can be done with the AWS Console. In order to get the best results, you should consider whether you want to use one of the chunking strategies available on AWS when creating the knowledge base, or whether you want to pre-process the data beforehand. 
 

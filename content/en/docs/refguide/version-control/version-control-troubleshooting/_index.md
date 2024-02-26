@@ -152,3 +152,8 @@ This will recreate the metadata and you should now be able to create a deploymen
 Studio Pro requires a specific minimum version of Git (for more information, see [System Requirements](/refguide/system-requirements/)). If this version is not installed on your device, Studio Pro will show a message during a start-up indicating that certain features will not be available.
 
 You can download and install a recent version of Git from [here](https://git-scm.com/downloads). 
+
+### 2.10 The Index Is Locked
+
+Sometimes the Git process may crash during performing any operation on the repository. The reason for this can be a dead battery, a blue screen on Windows, or any other unexpected shutdown. As a result, there is a leftover in the form of the *index.lock* file, which blocks other Git operations.
+To fix this, go to `<directory of your app>/.git/` and delete the *index.lock* file.

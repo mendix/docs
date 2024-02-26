@@ -447,7 +447,7 @@ Review the microflow `CUSTOM_UserProvisioning` in the **USE_ME** > **1. Configur
 
 Make a single call from `CUSTOM_UserProvisioning` to your own module where you implement the provisioning flow you need. This way, it will be easy to install new versions of the OIDC SSO module over time without overwriting your custom provisioning.
 
-The OIDC SSO module supports multiple IdPs. Since each provider can provide user data in a different format, you may want to use multiple provisioning flows. See the microflow `UserProvisioning_Sample` for an example and details on how to do this.
+The OIDC SSO module supports multiple IdPs. Since each provider can provide user data in a different format, you may want to use multiple provisioning flows. The microflow should contain the prefix `OIDC_CustomUserParsing`. See the microflow `UserProvisioning_Sample` for an example and details on how to do this.
 
 #### 6.2.2 Custom User Provisioning at Deploy Time{#custom-provisioning-dep}
 
@@ -638,7 +638,9 @@ This section is only relevant if you are a Mendix partner and you want to integr
 To parse of SAM access tokens you need to do the following when performing [OIDC Client Configuration](#client-configuration):
 
 1. Select *OIDC.Default_SAM_TokenProcessing_CustomATP* as the **custom AccessToken processing microflow**.
-    {{< figure src="/attachments/appstore/modules/oidc/enable-sam-parsing.png" >}}
+
+    {{< figure src="/attachments/appstore/modules/oidc/parsing_sam_token.png" max-width=80% class="image-border" >}}
+
 1. Add the scopes `sam_account`, `samauth.role`, `samauth.tier`, and `samauth.ten` to the **Selected Scopes** in the OIDC Client Configuration.
 1. Configure the user roles in your app to match the roles returned by SAM. End-users will be given the matching role when they sign into the app. If the role in the SAM token is not found in the Mendix app the end-user will be given the role `User`.
 1. Save the configuration.
@@ -659,7 +661,7 @@ To parse the OIDC Provider access tokens you need to do the following when perfo
 
 1. Select `OIDC.Default_OIDCProvider_TokenProcessing_CustomATP` as the **custom AccessToken processing microflow**.
 
-    {{< figure src="/attachments/appstore/modules/oidc/enable-oidc-provider-parsing.png" >}}
+    {{< figure src="/attachments/appstore/modules/oidc/oidcprovider_parsing.png" max-width=80% class="image-border" >}}
 
 2. Add the scopes `openid` and the ModelGUID or Name to the **Selected Scopes** in the OIDC Client Configuration. The ModelGUID will look something like `53f5d6fa-6da9-4a71-b011-454ec052cce8`.
 

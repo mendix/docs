@@ -932,7 +932,7 @@ This approach is only recommended for testing and for applications that don't ha
 
 3. Websockets
 WebSockets is a communication protocol that provides full-duplex communication channels over a single, persistent connection. Unlike traditional HTTP connections, which are request-response based and stateless, WebSockets enable real-time, bi-directional communication between a client (such as a Web browser) and a server.
-The open source [EZ Websocket Module] (https://marketplace.mendix.com/link/component/205276) from the Mendix Marketplace provides an easy way to implement real-time server-to-client communication using WebSockets without external dependencies.
+The open source [EZ Websocket Module](https://marketplace.mendix.com/link/component/205276) from the Mendix Marketplace provides an easy way to implement real-time server-to-client communication using WebSockets without external dependencies.
 
 5. Pusher
 The platform-supported [Pusher Module](https://marketplace.mendix.com/link/component/107957) is built around the [Pusher Channels](https://pusher.com/channels/) offering. This module requires a Pusher account. Pusher Channels is a paid service, but it also has a [Free Sandbox Plan](https://pusher.com/channels/pricing/).

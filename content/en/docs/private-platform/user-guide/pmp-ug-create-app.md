@@ -3,7 +3,7 @@ title: "Create an App in Private Mendix Platform"
 linktitle: "Create an App"
 url: /private-mendix-platform-user-guide/create-app/
 description: "Contains information about creating an app in Private Mendix Platform."
-weight: 50
+weight: 30
 tags: ["private mendix platform",  "private platform", "user guide", "create an app"]
 ---
 

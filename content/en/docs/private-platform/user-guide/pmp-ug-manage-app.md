@@ -3,7 +3,7 @@ title: "Manage an App in Private Mendix Platform"
 linktitle: "Manage an App"
 url: /private-mendix-platform-user-guide/manage-app/
 description: "Contains information about managing apps created in Private Mendix Platform."
-weight: 50
+weight: 40
 tags: ["private mendix platform",  "private platform", "user guide", "manage an app"]
 ---
 

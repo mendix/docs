@@ -3,7 +3,7 @@ title: "Install Mendix Studio Pro for Private Mendix Platform"
 linktitle: "Install Mendix Studio Pro"
 url: /private-mendix-platform-user-guide/install-studio-pro/
 description: "Contains information about installing Mendix Studio Pro for Private Mendix Platform."
-weight: 50
+weight: 20
 tags: ["private mendix platform",  "private platform", "user guide", "installation", "Mendix Studio Pro"]
 ---
 

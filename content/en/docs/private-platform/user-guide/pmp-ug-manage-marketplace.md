@@ -3,7 +3,7 @@ title: "Manage Marketplace Content in Private Mendix Platform"
 linktitle: "Manage Marketplace Content"
 url: /private-mendix-platform-user-guide/deploy-app/
 description: "Contains information about managing Marketplace content in Private Mendix Platform."
-weight: 50
+weight: 60
 tags: ["private mendix platform",  "private platform", "user guide", "marketplace"]
 ---
 

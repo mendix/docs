@@ -3,7 +3,7 @@ title: "Configure the Private Mendix Platform User Profile and Settings"
 linktitle: "Configure the User Profile and Settings"
 url: /private-mendix-platform-user-guide/profile/
 description: "Contains information about configuring the user profile and settings for the Private Mendix Platform."
-weight: 50
+weight: 10
 tags: ["private mendix platform",  "private platform", "user guide", "user profile", "user settings"]
 ---
 

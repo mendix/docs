@@ -97,24 +97,24 @@ To create the mapping, follow these steps:
 
 #### 4.2.1 Building an Export Mapping (optional){#export-mapping}
 
-The next steps explain how to ensure that outputs are generated in JSON. You can do this using [Export Mappings](/refguide/export-mappings/) or in a microflow. Creating an export mapping is not required because published REST services in Mendix support [content negotiation](https://nordicapis.com/content-negotiation/); in other words, the REST services let you select which media type you want to be returned to the server.
+The next steps explain how to ensure that outputs are generated in JSON. You can do this using [Export Mappings](/refguide/export-mappings/) or in a microflow. Creating an export mapping is not required because published REST services in Studio Pro support [content negotiation](https://nordicapis.com/content-negotiation/), which means the REST services let you select which media type you want to be returned to the server.
 
-{{% alert color="info" %}}You can follow the next steps in this document to learn how to set up export mapping, but note that you can also return the list of objects from the microflow. The platform will export it in the desired format, as indicated by the `Accept` header. You can then specify if you want to receive XML or JSON. If you are using a microflow instead of export mappings, skip ahead to [Viewing the App](#viewing).{{% /alert %}}
+{{% alert color="info" %}}You can follow the next steps in this document to learn how to set up export mapping, but note that you can also return the list of objects from the microflow. Studio Pro will export it in the desired format, as indicated by the `Accept` header. You can then specify if you want to receive XML or JSON. If you are using a microflow instead of export mappings, skip ahead to [Viewing the App](#viewing).{{% /alert %}}
 
 To build an export mapping, follow these steps:
 
-1. Right-click the **RESTExample** module on the **App Explorer** and select **Add other** > **Export Mapping** to add a new export mapping named *EM_ExportOrder*.
+1. Right-click the **RESTExample** module on the **App Explorer** and select **Add other** > **Export mapping** to add a new export mapping named *EM_ExportOrder*.
     
-2. In the **Select schema elements for export mapping** dialog box, select **Message definition**. Then use the **Select** button to select **Orders** from the **MD_Orders** mapping you created earlier. Select all the attributes, as shown below, and click **OK**.
+2. In the **Select schema elements for export mapping** dialog box, select **Message definition**. Then, click **Select** to choose **Order** from the **MD_Orders** mapping you created earlier. Select all the attributes, as shown below, and click **OK**.
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/SelectSchemaForExport.png" alt="All attribute checkboxes selected in the Select schema elements for export mapping dialog" >}}
 
-3. In the export mapping that is shown, map the schema object elements to the matching entities from the domain model (either by double-clicking the schema object elements or dragging the entities from the **Connector** pane). Make sure to map the attributes with the same names. Your mapping should look like this:
+3. In the export mapping that is shown, map the schema object elements to the matching entities from the domain model by either double-clicking the schema object elements or dragging the entities from the **Connector** pane. Make sure to map the attributes with the same names. Your mapping should look like this:
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/ExportMappingResult.png" alt="Mapping Order to Order and OrderItem to OrderItem" >}}
 
 4. Go back to the **PRS_GetGetOrderByID** microflow and add an **Export with mapping** activity.
-5. In the **Mapping** field of the dialog box, select the **EM_ExportOrder** mapping. For the **Parameter** field, select the **Order** object that was retrieved with the **Retrieve** action in the microflow.
+5. In the **Mapping** field of the dialog box, select the **EM_ExportOrder** mapping. In the **Parameter** field, select the **Order** object that was retrieved with the **Retrieve** action in the microflow.
 6. Select **JSON** for the result, and store the output in a **String Variable**. Enter *Order_JSON* for the **Variable name**.
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/MFExportWithMapping.png" alt="Export With Mapping dialog box settings" >}}
@@ -126,7 +126,7 @@ To build an export mapping, follow these steps:
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/httpResponse.png" alt="Create Object dialog box for HttpResponse object" >}}
 
-8. Add a **Create object** activity to the microflow for adding a header to the response. Create three new members:
+8. Add a **Create object** activity to the microflow to create an object of type **HttpHeader**. Create three new members:
     * **Key**, set to `'Content-Type'`
     * **Value**, set to `'application/json'` (or `'application/xml'` if your response contains XML rather than JSON)
     * **System.HttpHeaders**, set to your HTTP response (`$NewHttpResponse`).

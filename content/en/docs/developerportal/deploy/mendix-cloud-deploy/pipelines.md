@@ -127,7 +127,7 @@ Your pipeline can include the following steps:
 
 * Start Pipeline – This is a mandatory step for each pipeline; you cannot delete this step. This step defines the conditions that will automatically trigger the pipeline to run. To configure this step, define the conditions on which the pipeline should start; you can set the pipeline to run in response to either of the following triggers:
     * Teamserver push (Git) – The pipeline runs when a new push is made to Teamserver (Git) for the specified branch. For details on specifying the branch in the **Branch Expression** field, see [Branch Expression](#branch-expression), below.
-    * Scheduled – The pipeline runs on a recurring weekly schedule, on the days and times you specify. Times are set in UTC.
+    * Recurring schedule – The pipeline runs on a recurring weekly schedule, on the days and times you specify. Times are set in UTC.
 * Checkout – Check out a branch.
 * Build – Build a deployment package based on the latest major, minor, or patch version of the branch you checked out. The highest version is incremented based on the increment settings specified in this step.
 * Publish – Publish the newly built deployment package to a repository.
@@ -235,6 +235,12 @@ Pipeline failure notifications are only sent if the user who triggered the pipel
 Pipelines time out if they run for more than three hours. In other words, if the operations in your pipeline cumulatively take longer than three hours to complete, then the pipeline will fail.
 
 To trigger pipelines based on Teamserver push (Git), Mendix automatically creates a webhook on your behalf. You can see this webhook if you click **Webhooks** in the [navigation pane](/developerportal/#navigation-pane). Do not delete this webhook; deleting it would cause pipeline run failures for pipelines that rely on the Teamserver push (Git) trigger type.
+
+If you delete a pipeline design in the **Designs** tab, any run history associated with that pipeline design is deleted from the **Runs** tab.
+
+### 5.1 Known Issues
+
+Pipelines is in public beta and is undergoing optimizations. Initial stages may involve occasional slowness, leading to pipeline failures. Mendix is committed to resolving these issues swiftly and appreciates your understanding.
 
 ## 6 Read More
 

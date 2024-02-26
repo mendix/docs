@@ -11,7 +11,7 @@ aliases:
 
 ## 1 Introduction
 
-Mendix allows you to publish REST web services natively from Studio Pro. This how-to explains how to publish a REST service in an example project, and it demonstrates the `GET` operation for a published REST service.
+Mendix allows you to publish REST web services natively from Studio Pro. This how-to explains how to publish a REST service in an example project and demonstrates the `GET` operation for a published REST service.
 
 This how-to teaches you how to do the following:
 
@@ -54,8 +54,8 @@ To create the mapping, follow these steps:
 
 1. In the **App Explorer**, right-click the **RESTExample** module and select **Add other** > **Message definitions**.
 2. In the **Add Message Definitions** dialog box, enter *MD_Orders* in the **Name** field. Click **OK** to create and start editing the new message definition.
-3. Select **Add** to launch the **Message Definition** dialog box.
-4. You need to select the entity to use for the **MD_Orders** definition. Click **Select** and choose the **Order** entity from the list. Selecting the entity fills in the **Structure** part of the **Message Definition** dialog box. By default, only the **Order** checkbox is selected.
+3. Select **Add** to open the **Message Definition** dialog box.
+4. Click **Select** and choose the **Order** entity from the list. Selecting the entity fills in the **Structure** part of the **Message definition** dialog box. By default, only the **Order** checkbox is selected.
 5. Select the **OrderID** and **Customer** attributes.
 6. Select and expand the **OrderItem_Order** association, then select the **Product** and **Quantity** attributes:
 
@@ -68,22 +68,22 @@ To create the mapping, follow these steps:
 
 1. In the **App Explorer**, right-click the **RESTExample** module and select **Add other** > **Published REST Service**.
 2. Enter *PRS_OrderService* for the **Name** of your REST service. Then press **OK** to create and start editing the new REST service.
-3. Add a new resource to your service by clicking **Add** in the **Resources** section. Enter **GetOrderByID** for the **Resource name**, then click **OK** to close the dialog box.
+3. Add a new resource to your service by clicking **Add** in the **Resources** field. Enter **GetOrderByID** for the **Resource name**, then click **OK**.
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/AddRestResource.png" alt="Adding a GetOrderByID resource" >}}
 
-4. Add an operation to your resource by clicking **Add** in the **Operations for resource** section.
+4. Add an operation to your resource by clicking **Add** in the **Operations for resource** field.
 5. In the **Operation** dialog box, enter `{OrderID}` in the **Operation path** field, making sure to include the braces (`{}`). This allows the REST service to be invoked with the order ID in the URL shown in the **Example location** field of the dialog box.
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/AddOperation.png" alt="{OrderID} in the Operation path field" >}}
 
-6. In the same dialog box, click **Select** next to the **Microflow** field. You do not yet have a microflow for this operation, so select the **RESTExample** module in the dialog box and click **New** to create a new microflow. Enter *PRS_GetGetOrderByID* for the **Name** of this new microflow.
+6. In the same dialog box, click **Select** next to the **Microflow** field. You do not yet have a microflow for this operation, so select the **RESTExample** module in the dialog box and click **New** to create a new microflow. Enter *PRS_GetGetOrderByID* for the **Name** of this new microflow, then click **OK**.
 
-7. From the **Parameters** section of the same **Operation** dialog box, click **Add** and add an **OrderID** path parameter.
+7. In the **Parameters** field of the same **Operation** dialog box, click **Add** and add an **OrderID** path parameter.
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/OperationsDialogSettings.png" alt="Operation path, microflow, and parameter settings" >}}
 
-8. <a id="edit-microflow"></a>Click **OK** to close out the **Operation** dialog box, and then click **Show** to start editing the newly created microflow. Add two parameters: **httpRequest** and **OrderID**.
+8. <a id="edit-microflow"></a>Click **OK** to close out the **Operation** dialog box,  then click **Show** to start editing the newly created microflow. Add two parameters: **httpRequest** and **OrderID**.
 
     {{% alert color="info" %}}These parameters might be added automatically, along with an **httpResponse** parameter. If you follow the steps below in [Building an Export Mapping](#export-mapping), you must remove the **httpResponse** parameter to avoid getting errors.{{% /alert %}}
 

@@ -153,11 +153,7 @@ Studio Pro requires a specific minimum version of Git (for more information, see
 
 You can download and install a recent version of Git from [here](https://git-scm.com/downloads). 
 
-### 2.10 The index is locked
+### 2.10 The Index Is Locked
 
-It may happen that git process could have crashed during performing any operation on the repository.
-Source of this could be a dead battery, blue screen on windows, or any other unexpected shutdown.
-
-Due to this there is a leftover in the form of `index.lock` file, blocking other git operations.
-
-To fix this please go to `<directory of application>/.git/` and delete `index.lock` file.
+Sometimes the Git process may crash during performing any operation on the repository. The reason for this can be a dead battery, a blue screen on Windows, or any other unexpected shutdown. As a result, there is a leftover in the form of the *index.lock* file, which blocks other Git operations.
+To fix this, go to `<directory of your app>/.git/` and delete the *index.lock* file.

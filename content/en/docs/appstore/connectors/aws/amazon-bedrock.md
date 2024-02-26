@@ -512,6 +512,7 @@ The `InvokeModelResponseAnthropicClaude` entity holds the response of the Anthro
 | --- | --- |
 | `Completion` | The `Completion` attribute holds the response string of Claude.|
 | `StopReason` | The `StopReason` attribute holds the reason that Claude stopped generating text.|
+| `Stop` | The `Stop` attribute holds the Sequence the generation stopped, when the `StopReason` was a StopSequence|
 
 #### 4.1.44 InvokeModelRequestStabilityAIStableDiffusionXL {#invoke-model-request-stabilityai-stable-diffusionxl}
 

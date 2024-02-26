@@ -168,7 +168,7 @@ Ensure that you have allocated the following user roles to the OIDC module and (
 | Anonymous | OIDC.Anonymous |
 | User | OIDC.User |
 
-{{< figure src="/attachments/appstore/modules/oidc/user-roles.png" >}}
+{{< figure src="/attachments/appstore/modules/oidc/user_roles.png" >}}
 
 {{% alert color="info" %}}
 You may have to add the *Anonymous* user role if it does not exist already.
@@ -309,7 +309,7 @@ In this case, the OIDC client is the app you are making.
     * If you need refresh tokens for your end-users, you also need the `offline_access` scope.
     * Add other scopes as needed.
 1. Select your user provisioning flow. By default, this module will use standard OpenID claims to provision end-users in your app. Also included is a flow that uses the standard UserInfo endpoint in OIDC, which is useful in the case that your IdP uses "thin tokens". You can also use your own custom user entity to manage users of the app. See the section on [Custom User Provisioning](#custom-provisioning) for more information on what you can do to implement provisioning logic which fits your business needs. The module includes a Salesforce-specific example.
-1. Optionally, check **Enable Access Token Parsing** if you want to use additional information from the OIDC IdP. This can be used, for example, to assign end-user roles based on information from the IdP – see [Access Token Parsing](#access-token-parsing) for more information.
+1. Optionally, you can select the `CustomAccessTokenParsing` microflow if you want to use additional information from the OIDC IdP. This can be used, for example, to assign end-user roles based on information from the IdP – see [Access Token Parsing](#access-token-parsing) for more information.
 
 Once you have completed these steps, the SSO-configuration is ready for testing. See the section on [Testing and troubleshooting](#testing) for more information.
 
@@ -374,12 +374,17 @@ The following error messages will be displayed when you try to edit/delete.
 * error at delete:  You cannot delete as it is created from deployment.
 {{% /alert %}}
 
-The following constants are mandatory when creating an OIDC SSO configuration
+The following constants are mandatory when creating an OIDC SSO configuration and user provisioning:
 
 * **ClientID** – the client id
 * **ClientAlias** – the client alias
 * **ClientSecret** – the client secret (see security best-practice, above)
 * **AutomaticConfigurationURL** – the URL of the well-known endpoint
+* **CustomUserEntity** – a custom user entity
+* **PrincipalAttribute** – the attribute holding the unique identifier of an authenticated user
+* **IdPAttribute** – the IdP claim which is the unique identifier of an authenticated user
+
+For more information, see the [Custom User Provisioning at Deploy Time](#custom-provisioning-dep) section.
 
 The following constants are optional:
 
@@ -423,7 +428,7 @@ By default, end-users are provisioned using the `Account` object in the Administ
 
 ### 6.1 Default User Provisioning
 
-By default, the `CUSTOM_UserProvisioning` microflow in the **USE_ME** > **1. Configuration** folder of the OIDC module uses the `UserProvisioning_StandardOIDC` microflow. This applies the following mapping:
+By default, the `CUSTOM_UserProvisioning` microflow in the **USE_ME** > **1. Configuration** folder of the OIDC module uses the `OIDC_CustomUserParsing_Standard` microflow. This applies the following mapping:
 
 | ID-token Provided by your IdP | Attribute of `Administration.Account` Object |
 | ----------------------------- | ----------------------------- |
@@ -432,7 +437,7 @@ By default, the `CUSTOM_UserProvisioning` microflow in the **USE_ME** > **1. Con
 | email                         | Email                         |
 
 {{% alert color="warning" %}}
-Do not change the `UserProvisioning_StandardOIDC` microflow. This may give problems if you upgrade to a newer version of the OIDC SSO module. Apply customizations to the `CUSTOM_UserProvisioning` microflow only.
+Do not change the `OIDC_CustomUserParsing_Standard` microflow. This may give problems if you upgrade to a newer version of the OIDC SSO module. Apply customizations to the `CUSTOM_UserProvisioning` microflow only.
 {{% /alert %}}
 
 ### 6.2 Custom User Provisioning{#custom-provisioning}

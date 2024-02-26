@@ -148,7 +148,7 @@ To view and try out your app, follow these steps:
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/RESTTestDetails.png" alt="Details for the PRS_OrderService" >}}
 
-3. Click **GET**. Then click **Try it out** and fill in an **OrderID**.
+3. Click **GET**. Then, click **Try it out** and enter an **OrderID**.
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/RESTTestExecute.png" alt="OrderID with Description input field" >}}
 

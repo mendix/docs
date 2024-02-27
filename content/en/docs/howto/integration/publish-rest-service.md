@@ -144,7 +144,7 @@ To build an export mapping, follow these steps:
 To view and try out your app, follow these steps:
 
 1. Run your app and open it in the browser using this URL: [http://localhost:8080/rest-doc/](http://localhost:8080/rest-doc/).
-2. You will see a page with the documentation of all your published REST services. Select the **PRS_OrderService** link to view the details:
+2. You will see a page with the documentation of all your published REST services. Click the **PRS_OrderService** link to view the details:
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/RESTTestDetails.png" alt="Details for the PRS_OrderService" >}}
 
@@ -160,28 +160,30 @@ Congratulations! You have published your first REST service from Mendix.
 
 ## 5 Error Handling
 
-You have not yet implemented error handling in this new service. For example, if you enter text instead of an integer in the **OrderID** parameter (or if you leave it blank) before clicking **Execute**, you will see a generic `500` or `404` error. So, to publish a more robust service, you should implement error handling.
+You have not yet implemented error handling in this new service. For example, if you enter text instead of an integer in the **OrderID** parameter (or if you leave it blank) before clicking **Execute**, you will see a generic `500` or `404` error. To publish a more robust service, implement error handling.
 
 ### 5.1 Adding Error Handling
 
 1. Open the **PRS_GetGetOrderByID** microflow and right-click the first activity. Select **Set error handling** > **Custom with rollback**. Press **OK**.
-2. Below the initial **Create variable** activity, add a **Create object** activity. Set it to create a new **HttpResponse** object, and enter *NewHttpErrorResponse* for the **Name**. Then map the attributes like this:
+2. Hover your mouse over the error handling flow. Click the blue circle and select **Create object**.
+   
+    {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/create-object" >}}
+
+3. Create a new **HttpResponse** object, and enter *NewHttpErrorResponse* for the **Name**. Then, map the attributes as shown below:
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/ParsingErrorResponse.png" alt="Create Object dialog box for NewHttpErrorResponse" >}}
 
     {{% alert color="info" %}}The **Content** value is the JSON string `'{"Error": "The OrderID can only be an integer"}'`.{{% /alert %}}
 
-3. Right-click the sequence flow between the **Create variable** and **Create object** activities, and select **Set as error handler**.
-4. Below the **Create object** activity, add another **Create object** activity that creates a new **httpHeader** object:
+4. Hover your mouse over the next error handling flow, click the blue dot and add another **Create object** activity to create a new **httpHeader** object. Map the attributes as shown below:
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/ParsingErrorResponseHeader.png" alt="Create Object dialog box for NewHttpHeader_1" >}}
 
-5. Right-click the sequence flow between the two **Create object** activities, and select **Set as error handler**.
-6. Add an **End Event** and set `$NewHttpErrorResponse` as its return value. Your microflow should look like this:
+5. Add an **End Event** and set `$NewHttpErrorResponse` as its return value. Your microflow should look like this:
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/ParsingErrorMicroflow.png" alt="Updated microflow with error handling" >}}
 
-7. Test your error handler, as you did with the app in the [Viewing the App](#viewing) section. Enter some text in the **OrderID** parameter, click **Execute**, and observe the request's response:
+6. Test your error handler, as you did with the app in the [Viewing the App](#viewing) section. Enter some text in the **OrderID** parameter, click **Execute**, and observe the request's response:
 
     {{< figure src="/attachments/refguide/modeling/integration/publish-rest-service/ParsingErrorRESTResult.png" alt="Error in server response" >}}
 

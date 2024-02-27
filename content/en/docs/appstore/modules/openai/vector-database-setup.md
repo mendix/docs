@@ -114,7 +114,7 @@ If no action is taken, resources in AWS will stay around indefinitely. Make sure
 
 Setting up an AWS RDS database with the pgvector extension is one of the easiest options for using a vector database for our sample implementation. However, there are also alternatives and general considerations, which are described in this section.
 
-### 5.1 Running a PostgreSQL Database locally {#local-database}
+### 5.1 Running a PostgreSQL Database Locally {#local-database}
 
 It is possible to run a PostgreSQL database locally. It is useful to familiarize yourself with PostgreSQL and tooling like pgAdmin. 
 
@@ -137,7 +137,7 @@ If you get the error message **FATAL: password authentication failed for user "p
 When this occurs, do as follows:
 
 1. Make sure the configuration was set up correctly. Re-enter the password to be sure.
-2. Close all browser tabs that opened the Mendix app. 
+2. Close all browser tabs. 
 3. Shut down the app locally and run the app again.
 
 ### 6.2 Error in Logs of the Mendix App about the Extension "Vector" {#extension-error}

@@ -12,7 +12,7 @@ tags: ["published REST", "resource", "studio pro"]
 
 A published REST resource is part of a [published REST service](/refguide/published-rest-service/) and represents a collection of items on which one or more [operations](/refguide/published-rest-operation/) can be defined.
 
-You can generate a published REST resource from an entity in your domain model. See [Generate a Published REST resource](/refguide/generate-rest-resource/).
+You can generate a published REST resource from an entity in your domain model. For more information, see [Generate a Published REST resource](/refguide/generate-rest-resource/).
 
 ## 2 General
 

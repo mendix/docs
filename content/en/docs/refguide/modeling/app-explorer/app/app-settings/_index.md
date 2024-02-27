@@ -67,11 +67,11 @@ The URL prefix must be alphanumeric. It cannot be empty, contain whitespace, or 
 
 If the URL prefix breaks any of the rules mentioned above, then you will get a consistency error.
 
-### 3.5 Java version{#java-version}
+### 3.5 Java Version{#java-version}
 
 Here you can select which Java version to use for you application.
 
-For local development the JDK configured in the [Studio Pro preferences](/refguide/preferences-dialog#jdk-directory) has to be compatible with the Java version configured here.
+For local development the JDK configured in the [Studio Pro preferences](/refguide/preferences-dialog/#jdk-directory) has to be compatible with the Java version configured here.
 
 Applications deployed to the cloud will use this setting to select which Java version to use.
 

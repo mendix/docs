@@ -8,7 +8,7 @@ status: "Public Beta"
 ---
 
 {{% alert color="warning" %}}
-Mendix Pipelines will be launched for [public beta](/releasenotes/beta-features/) on February 29, 2024.
+Mendix Pipelines will be launched in [public beta](/releasenotes/beta-features/) on February 29, 2024.
 
 Initially, it will be available for unlimited use with all licensed Mendix Cloud apps. Limitations may be put on its use in the future.
 {{% /alert %}}
@@ -17,16 +17,12 @@ Initially, it will be available for unlimited use with all licensed Mendix Cloud
 
 From the **Pipelines** page, you can set up automated build and deployment pipelines for your app. Once you have designed and activated a pipeline, you can use it for automated, zero-click builds and deployments. Each pipeline runs automatically according to the trigger conditions defined in your [Start Pipeline step](#pipeline-steps).
 
-To access the **Pipelines** page, open your app in the Developer Portal. Then select **Pipelines** in the navigation pane.
-
-{{% alert color="info" %}}
-To view the **Pipelines** page, you must have a role with cloud access. For details on configuring roles, see [Team](/developerportal/general/team/).
-{{% /alert %}}
+To access the **Pipelines** page, open your app in the Developer Portal. Then select **Pipelines** in the navigation pane. (To view this page, you must have a [role](/developerportal/general/team/) with cloud access.)
 
 The **Pipelines** page has three tabs: **Runs**, **Designs**, and **Settings**. You can see all three tabs as soon as your app has its first pipeline saved.
 
 {{% alert color="info" %}}
-If your app does not have any pipelines yet, skip to [Designing a New Pipeline](#design-pipeline). If you need to configure your user settings so that you can run a pipeline for the first time, skip to [Configuring User Settings](#configure-settings).
+If your app does not have any pipelines yet, skip to [Designing a New Pipeline](#design-pipeline), below. If you need to configure your user settings so that you can run a pipeline for the first time, skip to [Configuring User Settings](#configure-settings).
 {{% /alert %}}
 
 ## 2 The Runs Tab{#runs-tab}
@@ -70,9 +66,9 @@ If a step fails, that step is flagged with an error icon ({{% icon name="alert-t
 
 #### 2.1.2 System-Level Errors
 
-System-level errors occur when the pipeline does not run. This happens if there are internal system errors or if [user settings](#configure-settings) have not been configured.
+System-level errors occur if [user settings](#configure-settings) have not been configured or if an internal Mendix component is down.
 
-In this case, the card in the upper-left corner of the **Results** page identifies the error that caused the run to fail. Click **See details** on the card to view more information about the error.
+If a system-level error occurs, the card in the upper-left corner of the **Results** page identifies the error that caused the run to fail. Click **See details** on the card to view more information about the error.
  
 ## 3 The Designs Tab{#designs-tab}
 
@@ -92,6 +88,10 @@ For each design, you can view the following information:
 Click **Details** ({{% icon name="paper-clipboard" %}}) on a pipeline design to go to its **Details** page. From there, you can view and edit the pipeline details, as described in [Editing a Pipeline](#edit-pipeline), below.
 
 Click **Delete** ({{% icon name="trash-can" %}}) to delete a pipeline design.
+
+{{% alert color="warning" %}}
+If you delete a pipeline design in the **Designs** tab, any run history associated with that pipeline design is deleted from the **Runs** tab.
+{{% /alert %}}
 
 ### 3.1 Designing a New Pipeline{#design-pipeline}
 
@@ -137,7 +137,7 @@ Your pipeline can include the following steps:
 
 Expand each step to configure it, delete it, or view its outputs. You can expand or collapse any step in your pipeline by clicking the step's name.
 
-#### 2.2.1.1 Branch Expression{#branch-expression}
+##### 3.2.1.1 Branch Expression{#branch-expression}
 
 If you select **Teamserver push (Git)** as the trigger in the Start Pipeline step, you need to specify the relevant branch (or branches) in the **Branch expression** field.
 
@@ -145,10 +145,10 @@ If you want the pipeline to run when there is a push to one specific branch, you
 
 Here are some examples of valid branch expressions:
 
-* `Main` - The branch named "Main"
+* `Main` – The branch named "Main"
 * `*` – All branches
-* `Main*` - All branches that start with "Main"
-* `*Main` - All branches that end with "Main" 
+* `Main*` – All branches that start with "Main"
+* `*Main` – All branches that end with "Main" 
 
 Keep the following in mind:
 
@@ -157,9 +157,13 @@ Keep the following in mind:
 * Do not use multiple asterisks in the branch expression. For example, `**Main` is an invalid expression.
 * Do not use the asterisk between two words. For example, `Main*Main` is an invalid expression.
 
-##### 3.2.1.2 Variables
+##### 3.2.1.2 Variables and Dependent Steps
 
 Some steps depend on the outputs of other steps. Therefore, you must add Checkout before Build, Build before Publish, and Publish before Deploy.
+
+{{% alert color="info" %}}
+If you try to add a dependent step without the step that creates the output it depends on, a validation error will display and prompt you to add the missing step first.
+{{% /alert %}}
 
 These pipeline steps use Mendix-defined variables to reference the outputs of previous steps. Variables are indicated with a `$` sign and generally use the format `$StepName.OutputName`. For example, Publish uses the output of Build as `$Build.DeploymentPackage`. Similarly, Deploy uses `$Publish.DeploymentPackage` to deploy to the selected environment.
 
@@ -175,7 +179,7 @@ When you are finished editing your pipeline design, click **Save & Activate**. T
 
 1. Saves your design.
 2. Checks if all mandatory fields in your pipeline steps have been filled out. If any of the steps are missing information, an error message displays and the step with the missing information is highlighted.
-3. Checks if your user settings have been configured. If you have not yet added a personal access token and API key in the [**Settings** tab](#settings-tab), an error message displays.
+3. Checks if your user settings have been configured. If you have not yet added a personal access token and API key in the [**Settings** tab](#settings-tab), you will be prompted to add your user settings before activating the pipeline.
 4. If the above conditions are met, activates your pipeline.
 
 Once activated, your pipeline runs automatically according to the trigger defined in the [Start Pipeline step](#pipeline-steps).
@@ -192,7 +196,7 @@ The pipeline design's status (**Active** or **Inactive**) is displayed in the ov
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/settings-tab.png" alt="" class="image-border" >}}
 
-The **Settings** tab lets you configure user settings. You must add your API key and personal access token (PAT) before you can activate or run your first pipeline. If you still need to configure these user settings, the **Settings** tab is marked with an alert ({{% icon name="alert-circle-filled" color="red" %}}).
+The **Settings** tab lets you configure user settings. You must add your API key and personal access token (PAT) before you can activate or run your first pipeline. If you still need to configure these user settings, the **Settings** tab is marked with an alert icon ({{% icon name="alert-circle-filled" color="red" %}}).
 
 Adding your API key and PAT allows your existing permissions to be used to run the pipeline. For example, if the trigger in your Start Pipeline step is set to **Teamserver push (Git)**, then the pipeline runs whenever someone pushes to the specified branch. However, if that user has not configured their user settings yet, then the pipeline run will fail.
 
@@ -207,16 +211,16 @@ You only need to add your API key and PAT once; the settings configured here app
 To configure your user settings, click **Setup** on the **Settings** tab. This launches the **Setup** dialog box, where you can enter your email, API key, and PAT.
 
 {{% alert color="warning" %}}
-Your pipeline runs will fail if these user settings are not configured.
+Your pipeline runs will fail if these user settings are not configured. All team members who run pipelines need to add these user settings.
 {{% /alert %}}
 
 Your PAT should have the following scope:
 
 * Deployment Mendix Cloud – `mx:deployment:write`
-* Model Repository – `mx:modelrepository:write`
+* Model Repository – `mx:modelrepository:read` and `mx:modelrepository:write`
 * Webhook Portal – `mx:webhook:read` and `mx:webhook:write`
 
-If your PAT scope does not include all four of these, your pipeline runs may fail.
+If your PAT scope does not include all five of these, your pipeline runs may fail.
 
 For security reasons, the API key and PAT values are not displayed once they are saved; instead, you see a {{% icon name="checkmark-circle" %}} icon in the overview table if the values are saved and a {{% icon name="remove-circle" %}} icon if no values are saved.
 
@@ -227,7 +231,7 @@ To change your API key and PAT, click **Delete** and then **Setup** to relaunch 
 If the pipeline fails, it sends a notification to the user who triggered the pipeline. The notification is sent via email or the **Notifications** ({{% icon name="alarm-bell" %}}) menu in the Developer Portal, depending on the user's [notification settings](/community-tools/mendix-profile/user-settings/#notifications).
 
 {{% alert color="warning" %}}
-Pipeline failure notifications are only sent if the user who triggered the pipeline has previously saved a pipeline or added their API key and PAT in the **Settings** tab.
+Pipeline failure notifications only send if the user who triggered the pipeline has previously saved a pipeline or added their API key and PAT in the **Settings** tab.
 {{% /alert %}}
 
 ## 5 Additional Notes
@@ -235,8 +239,6 @@ Pipeline failure notifications are only sent if the user who triggered the pipel
 Pipelines time out if they run for more than three hours. In other words, if the operations in your pipeline cumulatively take longer than three hours to complete, then the pipeline will fail.
 
 To trigger pipelines based on Teamserver push (Git), Mendix automatically creates a webhook on your behalf. You can see this webhook if you click **Webhooks** in the [navigation pane](/developerportal/#navigation-pane). Do not delete this webhook; deleting it would cause pipeline run failures for pipelines that rely on the Teamserver push (Git) trigger type.
-
-If you delete a pipeline design in the **Designs** tab, any run history associated with that pipeline design is deleted from the **Runs** tab.
 
 ### 5.1 Known Issues
 

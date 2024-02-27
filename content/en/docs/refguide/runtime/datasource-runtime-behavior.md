@@ -1,6 +1,6 @@
 ---
 title: "Data Sources Retrieval"
-url: /refguide/datasource-runtime
+url: /refguide/datasource-runtime/
 tags: ["studio pro", "data source"]
 weight: 60
 ---

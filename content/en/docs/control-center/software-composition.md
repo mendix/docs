@@ -9,7 +9,7 @@ no_list: true
 
 ## 1 Introduction
 
-On the **Software Composition** page, you can see all the component details of all deployed apps and their components.
+The **Software Composition** page helps you gain an overview of the composition of your apps and reduce the security vulnerabilities for your apps. On the page, you can see which components any deployed app contains and in which deployed apps a component is used.
 
 {{% alert color="info" %}}Make sure you are on a compatible Mendix version. Component details and related actions are available for apps made with the LTS version of Mendix 9 (9.24.XX) or Mendix version 10.X.0 and above when they are deployed to Mendix Cloud or Cloud Dedicated. Upgrade to one of these versions to see component information reflected here. {{% /alert %}}
 

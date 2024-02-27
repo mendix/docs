@@ -10,7 +10,7 @@ tags: ["marketplace", "marketplace component", "Mobile SSO", "IdP", "single sign
 
 ## 1 Introduction
 
-The Mobile SSO module allows end-users of your mobile Mendix app to sign in via Single Sign-On (SSO) using the OpenID Connect (OIDC) protocol. As the Mobile SSO module depends on the [OIDC SSO module](https://marketplace.mendix.com/link/component/120371), your IdP needs to support the OIDC protocol.
+The Mobile SSO module allows end-users of your mobile Mendix app to sign in via Single Sign-On (SSO) using the OpenID Connect (OIDC) protocol. As the Mobile SSO module depends on the [OIDC SSO module](https://marketplace.mendix.com/link/component/120371) for authentication, your IdP needs to support this protocol.
 
 The following diagram gives an overview of architecture of the module:
 
@@ -28,7 +28,7 @@ The following diagram gives an overview of architecture of the module:
 The Mobile SSO module has the following features:
 
 * Supports [native mobile apps](/refguide/mobile/introduction-to-mobile-technologies/native-mobile/)
-* Supports the assignment of user roles from your IdP
+* User role assignment from your IdP
     
 #### 1.2.2 Limitations
 
@@ -148,7 +148,7 @@ The following subsections show how to configure IdP for Azure AD and Okta:
         ],
         ```
 
-        {{% alert color="info" %}} Use the same <appname> which you used in the **Custom callback URL** tab of the configuration and while building the application using **Build Native Mobile App**. For more information, see the [Configuring Client Information](#client-info) and [Building Native Mobile App](#build-native) sections above. {{% /alert %}}
+        {{% alert color="info" %}} Use the same `<appname>` which you used in the **Custom callback URL** tab of the configuration and while building the application using **Build Native Mobile App**. For more information, see the [Configuring Client Information](#client-info) and [Building Native Mobile App](#build-native) sections above. {{% /alert %}}
 
         {{< figure src="/attachments/appstore/modules/mobile-sso/Manifest.png" max-width=80% class="image-border">}}
 
@@ -168,14 +168,14 @@ The following subsections show how to configure IdP for Azure AD and Okta:
         {{% alert color="info" %}} Make sure to add `makeitnative://oauth/callback` to the **Custom callback URL** tab of the configuration. For more information, see the [Configuring Client Information](#client-info) section above. {{% /alert %}}
 
 1. Save the **Manifest** file.
-1. In the Azure AD, click **Certificates & secrets** tab of the application and create **New client secret**. You can use this **Value** in the **Client Secret** field on the **OIDC_Client_Overview** page of the OIDC SSO module.
+1. In Entra ID, click **Certificates & secrets** tab of the application and create **New client secret**. You can use this **Value** in the **Client Secret** field on the **OIDC_Client_Overview** page of the OIDC SSO module.
 1. Click **Overview** tab of the application and copy **Application (client) ID**. Use this copied value in the **Client ID** field on the **OIDC_Client_Overview** page of the OIDC SSO module.
 1. Import the configuration in the page and add the required scopes such as, `openid`, `profile`, and `email`.
 1. Save the configuration and you can login into the application using Azure SSO.
 
 #### 4.7.2 Configuring IdP for Okta
 
-1. Go to the [Okta](https://dev-5541262-admin.okta.com/admin/apps/active) and click **Create a new app integration**.
+1. Go to the [Okta](https://dev-5541262-admin.okta.com/admin/apps/active) portal and click **Create a new app integration**.
 1. Select **OIDC-OpenID Connect** option for the **Sign-in method**.
 1. Select **Native Application** for the **Application type** and click **Next**.
 

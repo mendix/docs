@@ -2,7 +2,7 @@
 title: "Configuring CI/CD on Kubernetes"
 url: /private-mendix-platform-configure-k8s/
 description: "Documents the initial configuration for the Private Mendix Platform."
-weight: 30
+weight: 100
 tags: ["private mendix platform",  "private platform", "private marketplace", "kubernetes", "k8s"]
 ---
 

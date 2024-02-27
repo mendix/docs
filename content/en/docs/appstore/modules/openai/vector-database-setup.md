@@ -146,7 +146,7 @@ If there is an error in the logs of your Mendix app about the extension called â
 
 When this occurs, make sure that you use the PostgreSQL version 11 or above. If you are using a PostgreSQL database on your local machine, make sure you have followed all the installation prerequisites specific for your setup and operating system. 
 
-### 6.3 Timeout Error in  Logs of the Mendix App When You Try to Connect to the External Database {#timeout-error}
+### 6.3 Timeout Error in Logs of the Mendix App When You Try to Connect to the External Database {#timeout-error}
 
 If there is a timeout error in the logs of my Mendix app when you try to connect to the external database, the cause could be that some company network prohibits connections to AWS servers. 
 

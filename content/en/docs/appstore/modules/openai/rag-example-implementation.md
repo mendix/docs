@@ -12,7 +12,7 @@ tags: ["OpenAI", "generative AI", "AI", "connector", "marketplace", "chatgpt", "
 
 Retrieval augmented generation (RAG) is a framework for an AI-based search with a private or external knowledge base that combines embeddings-based knowledge retrieval with a text generation model. The starting point will be a collection of data to be considered as the private knowledge base. The final goal is that an end user of the app can ask questions about the data and the assistant responses will only be based on this knowledge base. 
 
-## 2 High-level Steps {#rag-high-level}
+## 2 High-level Flow {#rag-high-level}
 
 The complete technical flow can be split up into the following three steps at a high level:
 
@@ -39,17 +39,17 @@ In summary, in the first step, you need to provide the private knowledge base, s
 
 Before you start experimenting with the end-to-end process, make sure that you have covered the following prerequisites:
 
-* You have access to a (remote) PostgreSQL database with the [pgvector](https://github.com/pgvector/pgvector) extension available.
+You have access to a (remote) PostgreSQL database with the [pgvector](https://github.com/pgvector/pgvector) extension available.
 
-  {{% alert color="info" %}}If you have access to an Amazon Web Services (AWS) account, Mendix recommends you use a [free-tier RDS](https://aws.amazon.com/rds/faqs/#product-faqs#amazon-rds-faqs#free-tier) setup described in the [Creating a PostgreSQL Database with Amazon RDS](/appstore/modules/openai/vector-database-setup/#rds-database) section. This is convenient, since PostgreSQL databases in Amazon RDS by default have the required pgvector extension available.{{% /alert %}}
+{{% alert color="info" %}}If you have access to an Amazon Web Services (AWS) account, Mendix recommends you use a [free-tier RDS](https://aws.amazon.com/rds/faqs/#product-faqs#amazon-rds-faqs#free-tier) setup described in the [Creating a PostgreSQL Database with Amazon RDS](/appstore/modules/openai/vector-database-setup/#rds-database) section. This is convenient, since PostgreSQL databases in Amazon RDS by default have the required pgvector extension available.{{% /alert %}}
 
-### 3.2 Step-by-Step {#step-by-step}
+### 3.2 Steps {#steps}
 
 1. Download, run and login to the [OpenAI Showcase App](https://marketplace.mendix.com/link/component/220475).
 
 2. Go to the **Retrieval Augmented Generation** example and read **Step 1: Introduction**.
 
-3. [Setup a vector database](/appstore/modules/openai/vector-database-setup/) and configure the connection in **Step 2: Vector Database Configuration**.
+3. [Setup a PostgreSQL vector database](/appstore/modules/openai/vector-database-setup/) and configure the connection in **Step 2: Vector Database Configuration**.
 
 4. Go to **Step 3: Knowledge Base** and create embeddings from a text and store. You can our default text about ornamental flowering plants, or paste your own content.
 
@@ -62,11 +62,11 @@ Before you start experimenting with the end-to-end process, make sure that you h
 
 {{% alert color="info" %}}
 
-The showcase application uses the Mendix [Database Connector](https://marketplace.mendix.com/link/component/2888) to run queries and statements on your remote database. If you want to know more about this or if you are looking for certain technical details, see [Database Connector](/appstore/modules/database-connector/).
+The OpenAI showcase application uses the Mendix [Database Connector](https://marketplace.mendix.com/link/component/2888) to run queries and statements on your remote database. If you want to know more about this or if you are looking for certain technical details, see [Database Connector](/appstore/modules/database-connector/).
 
-The showcase application takes care of creating the required tables in the remote vector database, including the open-source extension called pgvector. If you want to know more about the extension and how the tables look like in combination with this extension, see the [pgvector source code and documentation on GitHub](https://github.com/pgvector/pgvector).
+The OpenAI showcase application takes care of creating the required tables in the remote vector database, including the open-source extension called pgvector. If you want to know more about the extension and how the tables look like in combination with this extension, see the [pgvector source code and documentation on GitHub](https://github.com/pgvector/pgvector).
 
-If you want to know more about RAG, embeddings, or [vector databases](/appstore/modules/openai/vector-database-setup/), make sure to review the links on the **Resources** page of the showcase application or in the [Read More](#read-more) section.
+If you want to know more about RAG, embeddings, or [vector databases](/appstore/modules/openai/vector-database-setup/), make sure to review the links on the **Resources** page of the OpenAI showcase application or in the [Read More](#read-more) section.
 
 {{% /alert %}}
 
@@ -74,11 +74,11 @@ If you want to know more about RAG, embeddings, or [vector databases](/appstore/
 
 This section lists some general key points that apply regardless of which architecture you choose.
 
-If you would like to build your own RAG setup, feel free to learn from the showcase application and start building your own app. Below you can find the key takeaways from the showcase app:
+If you would like to build your own RAG setup, feel free to learn from the OpenAI showcase application and start building your own app. Below you can find the key takeaways from the OpenAI showcase app:
 
-* For RAG, you need a storage space for embeddings outside of your normal Mendix app database. Typically, this is a remote vector database. In order to connect to it, the showcase application uses the Mendix database connector. For a step by step tutorial, see [Vector Database Setup](/appstore/modules/openai/vector-database-setup/)
+* For RAG, you need a storage space for high-dimensional embedding vectors outside of your normal Mendix app database. Typically, this is a remote vector database. In order to connect to it, the OpenAI showcase application uses the Mendix database connector. See [Vector Database Setup](/appstore/modules/openai/vector-database-setup/) for more details.
 
-* The showcase application relies on a PostgreSQL solution with the pgvector extension included. Even if you choose to use a different vector database, the queries or statements you will have to do probably cover at least the following:
+* The OpenAI showcase application relies on a PostgreSQL solution with the pgvector extension included. Even if you choose to use a different vector database, the queries or statements you will have to do probably cover at least the following:
     * Include the vector extension if applicable.
     
     * Create tables to store the embeddings (create table).
@@ -88,9 +88,8 @@ If you would like to build your own RAG setup, feel free to learn from the showc
     * Find top-k nearest neighbors (select query; typically using cosine distance optimization as recommended by OpenAI).
     
     * Remove individual records (delete) or tables (drop table).
-    
 
-{{% alert color="info" %}}Example queries in the form of SQL statements are available for inspiration in the source code of the showcase application.{{% /alert %}}
+{{% alert color="info" %}}Example queries in the form of SQL statements are available for inspiration in the source code of the OpenAI showcase application.{{% /alert %}}
 
 ## 5 Read More {#read-more}
 

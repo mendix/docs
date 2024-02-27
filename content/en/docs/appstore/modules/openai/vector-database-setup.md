@@ -10,27 +10,16 @@ tags: ["OpenAI", "generative AI", "AI", "connector", "marketplace", "chatgpt", "
 
 ## 1 Introduction {#introduction}
 
-Vector databases play a crucial role in embeddings-based AI usecases like Semantic Search and Retrieval Augmented Generation (RAG) by facilitating efficient storage, retrieval, and manipulation of high-dimensional vectors representing textual or semantic information. This page describes how a PostgreSQL vector database can be setup to explore embeddings-based usecases with the [OpenAI Showcase App](https://marketplace.mendix.com/link/component/220475).
-
-## 2 Procedure {#procedure}
+Vector databases play an important role in embeddings-based AI usecases by facilitating efficient storage, retrieval, and manipulation of high-dimensional vectors representing textual or semantic information. A crucial step within those usecases like Semantic Search and Retrieval Augmented Generation (RAG) is to find the closest and thus most similar pieces of information to a given semantic input. Those similarity and distance calculations between high-dimensional vectors cannot be done on a normal database and thus a vector databse is needed.
+This page describes how a PostgreSQL vector database can be setup to explore embeddings-based usecases with the [OpenAI Showcase App](https://marketplace.mendix.com/link/component/220475).
 
 {{% alert color="info" %}}
-This procedure describes a setup based on a PostgreSQL database with the pgvector extension to query vectors. However, this is not the only possible solution. Other (vector) database types may better fit your use case. If you want to build your own RAG setup, see the [Building Your Own RAG Setup](#build-your-own-rag-setup) section.
+This procedure describes a setup based on a PostgreSQL database with the pgvector extension to query embedding vectors. However, this is not the only possible solution. Other (vector) database types may better fit your use case.
 {{% /alert %}}
 
-### 2.1 Prerequisites {#prerequisites}
+## 2 Creating a PostgreSQL Database with Amazon RDS {#rds-database}
 
-Before you start experimenting with the end-to-end process, make sure that you have covered the following prerequisites:
-
-* You have access to a (remote) PostgreSQL database with the [pgvector](https://github.com/pgvector/pgvector) extension available.
-
-  {{% alert color="info" %}}If you have access to an Amazon Web Services (AWS) account, Mendix recommends you use a [free-tier RDS](https://aws.amazon.com/rds/faqs/#product-faqs#amazon-rds-faqs#free-tier) setup described in the [Creating a PostgreSQL Database with Amazon RDS](#rds-database) section. This is convenient, since PostgreSQL databases in Amazon RDS by default have the required pgvector extension available.{{% /alert %}}
-
-* You have configured the connection to the above-mentioned database in the OpenAI showcase app.
-
-### 2.2 Creating a PostgreSQL Database with Amazon RDS {#rds-database}
-
-{{% alert color="info" %}}For detailed steps for creating a PostgreSQL Database with Amazon RDS, see [Create and Connect to a PostgreSQL Database](https://aws.amazon.com/getting-started/hands-on/create-connect-postgresql-db/) in *AWS Documentation*. You can check out the following sections in AWS Documentation for preliminary background knowledge:
+{{% alert color="info" %}}For detailed steps for creating a PostgreSQL Database with Amazon RDS, see [Create and Connect to a PostgreSQL Database](https://aws.amazon.com/getting-started/hands-on/create-connect-postgresql-db/) in the *AWS Documentation*. You can check out the following sections in the AWS Documentation for preliminary background knowledge:
 
 * Enter the RDS Console
 * Create a PostgreSQL DB Instance
@@ -82,15 +71,15 @@ You can use the values in the steps below for experimental purposes:
       
          {{% alert color="info" %}}For a single IPv4 address, the CIDR range is equal to the IP address with `/32` appended.{{% /alert %}}
 
-### 2.3 Deleting Resources in AWS {#deleting-aws-resources}
+## 3 Deleting Resources in AWS {#deleting-aws-resources}
 
-If no action is taken, resources in AWS stay around indefinitely. Make sure to think about deleting the resources when you are done experimenting. When using services from AWS, you are responsible for having the necessary resources and deleting the ones that are no longer needed, to prevent from being charged more than is required. This is especially relevant the moment resources fall outside of the free-tier after a certain time.
+If no action is taken, resources in AWS will stay around indefinitely. Make sure to think about deleting the resources when you are done experimenting. When using services from AWS, you are responsible for having the necessary resources and deleting the ones that are no longer needed, to prevent from being charged more than is required. This is especially relevant the moment resources fall outside of the free-tier after a certain time.
 
-## 3 Configuring the Database Connection Details in the Showcase Application {#configure-database-connection}
+## 4 Configuring the Database Connection Details in the Showcase Application {#configure-database-connection}
 
 1. Download, run and login to the [OpenAI Showcase App](https://marketplace.mendix.com/link/component/220475).
 
-2. Navigate to the Retrieval Augmented Generation of the Clustering Example.
+2. Navigate to the **Retrieval Augmented Generation** or the **Semantic Search** Example.
 
 3. Read **Step 1: Introduction**.
 
@@ -116,10 +105,12 @@ If no action is taken, resources in AWS stay around indefinitely. Make sure to t
 
    3. Save & test the configuration.
 
-   4. Proceed to with the following steps in the wizard.
+   4. Proceed with the following steps in the wizard.
+
+   {{% alert color="info" %}}For more details about Retrieval Augmented Generation, view [RAG Example Implementation](/appstore/connectors/openai-connector/rag-example-implementation/).{{% /alert %}}
 
 
-## 4 Setup Alternatives {#etup-alternatives}
+## 5 Setup Alternatives {#setup-alternatives}
 
 Setting up an AWS RDS database with the pgvector extension is one of the easiest options for using a vector database for our sample implementation. However, there are also alternatives and general considerations, which are described in this section.
 
@@ -135,11 +126,11 @@ Make sure that you meet the following prerequisites:
    2. Create a database, for example, myVectorDatabase. You will need this later.
 3. Have the pgvector extension installed. Depending on your hardware and operating system, the steps to install the pgvector extension can be different. Follow the [installation instructions](https://github.com/pgvector/pgvector?tab=readme-ov-file#installation) on GitHub carefully and make sure to check the [installation notes](https://github.com/pgvector/pgvector?tab=readme-ov-file#installation-notes).
 
-In this case, the configuration of the database connection details in the showcase application is similar to what was described in the [Configuring the Database Connection Details in the Showcase Application](#configure-database-connection) section. Your jdbc URL will now look like `jdbc:postgresql://localhost:5432/{vectorDatabaseName}` where the value for `{vectorDatabaseName}` is the one you have chosen while creating the database.
+In this case, the configuration of the database connection details in the showcase application is similar to what was described in the [Configuring the Database Connection Details in the Showcase Application](#configure-database-connection) section. Your Jdbc URL will now look like `jdbc:postgresql://localhost:5432/{vectorDatabaseName}` where the value for `{vectorDatabaseName}` is the one you have chosen while creating the database.
 
-## 5 Troubleshooting {#troubleshooting}
+## 6 Troubleshooting {#troubleshooting}
 
-### 5.1 Password Authentication Failed for User "postgres" in the Mendix App {#authentication-error}
+### 6.1 Password Authentication Failed for User "postgres" in the Mendix App {#authentication-error}
 
 If you get the error message **FATAL: password authentication failed for user "postgres"**, it could be a caching issue during the running of queries from apps locally.
 
@@ -149,19 +140,19 @@ When this occurs, do as follows:
 2. Close all browser tabs for the Mendix app. 
 3. Shut down the app locally and run the app again.
 
-### 5.2 Error in Logs of the Mendix App about the Extension "Vector" {#extension-error}
+### 6.2 Error in Logs of the Mendix App about the Extension "Vector" {#extension-error}
 
 If there is an error in the logs of your Mendix app about the extension called “vector", it could be that your PostgreSQL version does not meet the requirement of pgvector, or you have not met the installation prerequisites.
 
 When this occurs, make sure that you use the PostgreSQL version 11 or above. If you are using a PostgreSQL database on your local machine, make sure you have followed all the installation prerequisites specific for your setup and operating system. 
 
-### 5.3 Timeout Error in  Logs of the Mendix App When You Try to Connect to the External Database {#timeout-error}
+### 6.3 Timeout Error in  Logs of the Mendix App When You Try to Connect to the External Database {#timeout-error}
 
 If there is a timeout error in the logs of my Mendix app when you try to connect to the external database, the cause could be that some company network prohibits connections to AWS servers. 
 
 When this occurs, make sure you are connected to a network that does allow these connections, for example, with a phone hotspot or from your home network.
 
-## 6 Read More {#read-more}
+## 7 Read More {#read-more}
 
 - [Embeddings-based Search – Open AI Cookbook](https://cookbook.openai.com/examples/question_answering_using_embeddings)
 - [Vector Database Options on AWS](https://aws.amazon.com/blogs/database/the-role-of-vector-datastores-in-generative-ai-applications/)

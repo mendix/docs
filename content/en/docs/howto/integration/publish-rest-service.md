@@ -167,7 +167,7 @@ You have not yet implemented error handling in this new service. For example, if
 1. Open the **PRS_GetGetOrderByID** microflow and right-click the first activity. Select **Set error handling** > **Custom with rollback**. Press **OK**.
 2. Hover your mouse over the error handling flow. Click the blue circle and select **Create object**.
    
-    {{< figure src="/attachments/howto/integration/publish-rest-service/create-object" >}}
+    {{< figure src="/attachments/howto/integration/publish-rest-service/create-object.png" >}}
 
 3. Create a new **HttpResponse** object, and enter *NewHttpErrorResponse* for the **Name**. Then, map the attributes as shown below:
 

@@ -162,9 +162,10 @@ If a repeated scheduled event takes longer than the interval then the next sched
 
 The execution of a scheduled event produces a `System.ScheduledEventInformation` row in the database. Over time these accumulate and the table can grow large.
 
-In Mendix 9.9 and above, the `System.ScheduledEventInformation` can be cleaned up automatically by specifying the `com.mendix.core.ScheduledEventsCleanupAge` runtime setting. This setting specifies (in milliseconds) how old rows in the table have to be before they are automatically cleaned up. Only rows with the "Completed" status are cleaned up. The cleanup action will be run every [`ClusterManagerActionInterval`](/refguide9/custom-settings/#general), and does not produce any log messages.
+In Mendix 9.9 and above, the `System.ScheduledEventInformation` can be cleaned up automatically by specifying the `com.mendix.core.ScheduledEventsCleanupAge` runtime setting. This setting specifies (in milliseconds) how old rows in the table have to be before they are automatically cleaned up. Only rows with the "Completed" status are cleaned up. The cleanup action will be run every [`ClusterManagerActionInterval`](/refguide9/custom-settings/#general), and does not produce any log messages. In Mendix 9.24.17 and later by default the cleanup action will remove 10000 rows each time it runs, this can be configured with the [`com.mendix.core.ScheduledEventsCleanupBatchSize`](/refguide/custom-settings/#commendixcoreScheduledEventsCleanupBatchSize) runtime setting. Before Mendix 9.24.17 the action will remove all matching rows.
 
-If `com.mendix.core.ScheduledEventsCleanupAge` is not specified, no cleanup is performed.
+In Mendix 9.9 and above if `com.mendix.core.ScheduledEventsCleanupAge` is not specified, no cleanup is performed.
+In Mendix 10 if `com.mendix.core.ScheduledEventsCleanupAge` is not specified, then the default setting is 365 days for projects migrated from Mendix 9 and 7 days for new projects or projects with an empty database.
 
 {{% alert color="info" %}}
 When turning on the automatic cleanup after having used scheduled events for a long time, there might be many rows to clean up, which will be initiated when the runtime starts. This may cause additional load on the database, but will not block the startup. It is recommended not to do this during a busy period.

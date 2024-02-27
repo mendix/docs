@@ -68,27 +68,16 @@ For more information, see [Common Section](/refguide/common-widget-properties/#c
 
 {{% alert color="info" %}}For more information, see [Event Actions](/refguide/on-click-event/#actions) in *Properties Common in the Page Editor*.{{% /alert %}}
 
-
-
-## 3. Advanced configuration
+## 3 Advanced Configuration
 
 ### 3.4 HTML Sanitization
 
-#### 3.4.1 Sanitization configuration
+#### 3.4.1 Sanitization Configuration
 
-{{% alert color="warning" %}}
-This setting requires advanced knowledge of XML/HTML to properly configure sanitization. Incorrect configuration can result in corrupted and malfunctioning widget content.
-{{% /alert %}}
-
-This setting stores the [DOMPurify](https://cure53.de/purify) library configuration in JSON.
-
-{{% alert color="info" %}}
-Because this setting value should be a valid JSON, not all DOMPurify settings allowed including functions, RegExps, and other complex types.
-{{% /alert %}}
-
-Use this setting to fine-tune how the sanitization process handles input HTML. You can block tags, whitelist dangerous tags and values, and more.
+This setting stores the [DOMPurify](https://cure53.de/purify) library configuration in JSON. Use this setting to fine-tune how the sanitization process handles input HTML. You can block tags, whitelist dangerous tags and values, and more.
 
 For example, here is a short config that disallows all `<style>`:
+
 ```json
 {
   "FORBID_TAGS": [
@@ -99,3 +88,10 @@ For example, here is a short config that disallows all `<style>`:
 
 Visit the DOMPurify project [README](https://github.com/cure53/DOMPurify/blob/main/README.md) for more examples and available settings.
 
+{{% alert color="warning" %}}
+This setting requires advanced knowledge of XML/HTML to properly configure sanitization. Incorrect configuration can result in corrupted and malfunctioning widget content.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+Because this setting value should be a valid JSON, not all DOMPurify settings (such as functions, RegExps, and other complex types) are allowed.
+{{% /alert %}}

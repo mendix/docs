@@ -13,13 +13,19 @@ The **Preferences** option in the menu opens a dialog box where you can set user
 
 ## 2 General Tab {#general}
 
-### 2.1 Interface {#interface}
+### 2.1 Enable Autosave {#autosave}
 
-#### 2.1.1 Keep Active Document Selected in the App Explorer
+When enabled, this option automatically saves your changes on various actions, such as running and deploying your app, executing version control operations (for example, committing, merging, or reverting), closing files or apps, exporting modules, or exiting Studio Pro.
+
+Additionally, you have the option to enable autosave for any of these actions when you have unsaved changes. In such cases a dialogue box is opened, where you can choose to save or discard your changes. You can speed this process up by checking the **Do not ask me again** checkbox, which prevents further prompts and enables the autosave functionality.
+
+### 2.2 Interface {#interface}
+
+#### 2.2.1 Keep Active Document Selected in the App Explorer
 
 When enabled, **App Explorer** automatically highlights the document that is currently active. When this property is disabled, the selection in **App Explorer** remains unchanged when the active document changes.
 
-#### 2.1.2 Show Styling For
+#### 2.2.2 Show Styling For
 
 The **Show styling for** setting configures which styling files are shown in the App Explorer. 
 
@@ -31,19 +37,19 @@ You can select one of the following options:
 
 For more information about the styling editor, see the [Using the Styling Editor](/howto/front-end/customize-styling-new/#styling-editor) section in *How to Customize Styling*.
 
-### 2.2 Error List
+### 2.3 Error List
 
-#### 2.2.1 Auto-Check Delay
+#### 2.3.1 Auto-Check Delay
 
 The **Auto-check delay** is the number of milliseconds that Studio Pro waits after a change, before starting the consistency checks. Increase this setting for large apps if Studio Pro responses slowly after changes.
 
-#### 2.2.2 Highlight Shown Errors and Warnings in the Editor
+#### 2.3.2 Highlight Shown Errors and Warnings in the Editor
 
 When **Highlight shown errors and warnings in the editor** is checked, the errors and warnings which are currently shown in the Error List (as determined by the **Errors** and **Warnings** toggle buttons and the suppression rules) will be highlighted on the affected elements in the editor.
 
-### 2.3 Disk Location
+### 2.4 Disk Location
 
-#### 2.3.1 Default App Directory {#default-directory}
+#### 2.4.1 Default App Directory {#default-directory}
 
 This is the directory where new apps are stored. It is used in the [App Settings](/refguide/new-app/#app-settings) dialog box when you create a new app. If a different directory is selected in the **App Settings** dialog box, that directory is stored as the new default app directory.
 

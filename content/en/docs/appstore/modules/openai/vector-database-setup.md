@@ -10,7 +10,7 @@ tags: ["OpenAI", "generative AI", "AI", "connector", "marketplace", "chatgpt", "
 
 ## 1 Introduction {#introduction}
 
-Vector databases play an important role in embeddings-based AI usecases by facilitating efficient storage, retrieval, and manipulation of high-dimensional vectors representing textual or semantic information. A crucial step within those usecases like Semantic Search and Retrieval Augmented Generation (RAG) is to find the closest and thus most similar pieces of information to a given semantic input. Those similarity and distance calculations between high-dimensional vectors cannot be done on a normal database and thus a vector databse is needed.
+Vector databases play an important role in embeddings-based AI usecases by facilitating efficient storage, retrieval, and manipulation of high-dimensional vectors representing textual or semantic information. A crucial step within those usecases like Semantic Search and Retrieval Augmented Generation (RAG) is to find the closest and thus most similar pieces of information to a given semantic input. Those similarity and distance calculations between high-dimensional vectors cannot be done on a normal database and thus a vector database is needed.
 This page describes how a PostgreSQL vector database can be setup to explore embeddings-based usecases with the [OpenAI Showcase App](https://marketplace.mendix.com/link/component/220475).
 
 {{% alert color="info" %}}

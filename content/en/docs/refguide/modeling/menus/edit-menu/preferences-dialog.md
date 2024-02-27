@@ -57,7 +57,7 @@ This is the directory where new apps are stored. It is used in the [App Settings
 
 ### 3.1 Deployment
 
-#### 3.1.1 JDK directory
+#### 3.1.1 JDK directory {#jdk-directory}
 
 This is the directory in which the Java Development Kit (JDK) is located on the computer on which you deploy the application. Usually, the correct directory is located automatically.
 

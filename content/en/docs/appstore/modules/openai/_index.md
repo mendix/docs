@@ -12,9 +12,9 @@ aliases:
 
 The [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) allows you to integrate generative AI into your Mendix app and is compatible with [OpenAI's platform](https://platform.openai.com/) as well as [Azure's OpenAI service](https://oai.azure.com/). 
 
-The current scope covers text generation use cases based on the [OpenAI Chat Completions API](https://platform.openai.com/docs/api-reference/chat), image generation use case based on the [Image Generations API](https://platform.openai.com/docs/api-reference/images), and embeddings use cases based on the [Embeddings API](https://platform.openai.com/docs/api-reference/embeddings).
+The current scope covers text generation use cases based on the [OpenAI Chat Completions API](https://platform.openai.com/docs/api-reference/chat), image generation use cases based on the [Image Generations API](https://platform.openai.com/docs/api-reference/images), and embeddings use cases based on the [Embeddings API](https://platform.openai.com/docs/api-reference/embeddings).
 
-Image generations with the DALL-E models is currently only supported from OpenAI, and Azure OpenAI only supports it in preview mode. For all other operations, Mendix provides dual platform support for OpenAI as well as Azure OpenAI.
+Image generation with the DALL-E models is currently supported only by OpenAI, while Azure OpenAI only supports it in preview mode. For all other operations, Mendix provides dual platform support for OpenAI as well as Azure OpenAI.
 
 ### 1.1 Typical Use Cases {#use-cases}
 
@@ -93,7 +93,7 @@ After you install the OpenAI Connector, you can find it in the **App Explorer**,
 
 1. Add the module role **OpenAIConnector.Administrator** to your Administrator user role in the security settings of your app. 
 2. Add the **Configuration_Overview** page (**USE_ME > Configuration**) to your navigation or add the **Snippet_Configurations** to a page that is already part of your navigation. 
-3. Continue to set up your OpenAI configuration at runtime. Depending the type of your configuration, continue with one of the following sections:
+3. Continue to set up your OpenAI configuration at runtime. Based on the type of your configuration, continue with one of the following sections:
    * [OpenAI Configuration](#openai-configuration)
    * [Azure OpenAI Configuration](#azure-openai-configuration)
 

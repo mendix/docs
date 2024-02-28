@@ -18,7 +18,7 @@ In Studio Pro versions 10.7.0 and above, there is an alternative version of the 
 
 The React client replaces [Dojo](https://dojotoolkit.org/) with [React](https://react.dev/) for the view layer. This means that widgets based on Dojo will no longer work. You will get consistency errors if your app contains Dojo widgets, or you can choose **Migration mode** which will allow you to build your app but will replace incompatible widgets with a placeholder.
 
-Other components of the Mendix Client are the same in both the React and Dojo client. See our [Release Blog](https://www.mendix.com/blog/mendix-release-10-7-go-mac-it/#react-client-public-beta) for more information.
+Other components of the Mendix Client are the same in both the React and Dojo client. See [React Client](/refguide/mendix-client/react) for more information.
 {{% /alert %}}
 
 ## 2 Description {#description}

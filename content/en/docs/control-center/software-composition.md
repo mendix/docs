@@ -13,7 +13,7 @@ no_list: true
 
 The **Software Composition** page provides you with an overview of the composition of your apps and helps you reduce the security vulnerabilities for your apps. On this page, you can see all the components that a deployed app contains and where a component is used.
 
-{{% alert color="info" %}}Make sure you are on a compatible Mendix version. Component details and related actions are only available for apps made with Mendix [10.5.0](/releasenotes/studio-pro/10.5/) or above when they are deployed to Mendix Cloud or Cloud Dedicated. Upgrade to one of these versions to see component information reflected here. {{% /alert %}}
+{{% alert color="info" %}}Make sure you are on a compatible Mendix version. Component details and related actions are only available for apps made with Mendix [10.5.0](/releasenotes/studio-pro/10.5/) or above when they are deployed to Mendix Cloud or Cloud Dedicated. Upgrade to one of these versions to see component information reflected on this page. {{% /alert %}}
 
 The page contains two tabs: [Overview](#overview) and [All Components](#all-components).
 

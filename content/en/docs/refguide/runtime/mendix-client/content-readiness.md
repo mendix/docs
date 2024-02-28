@@ -17,7 +17,7 @@ If the Marketplace content you are interested in is not included in the list, ad
 
 The following table shows which of the more popular platform-supported marketplace content is ready for the react client (✅) or not (❌). We will continuously update this table as we improve the compatibility of our marketplace content.
 
-| Marketplace Content | React Ready |
+| Marketplace Content | React Client Ready |
 | --- | --- |
 | [Community Commons](https://marketplace.mendix.com/link/component/170) | ✅ |
 | [Mx Model Reflection](https://marketplace.mendix.com/link/component/69) | ❌ |

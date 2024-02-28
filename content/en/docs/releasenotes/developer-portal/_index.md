@@ -17,6 +17,21 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 ## 2024
 
+### February 29
+
+#### Improvements
+
+* The Feedback API has been improved:
+   * We now also send information on the Priority status of a feedback through various calls.
+   * The /GET call is optimized.
+   * We have better error logs for the various calls.  
+
+#### Fixes
+
+* We fixed a bug where the sidepanel would flicker upon loading either mini survey or Feedback.
+* In Feedback, creating, archiving and deleting feedback should now show the correct pages.
+
+
 ### February 8
 
 #### New Features

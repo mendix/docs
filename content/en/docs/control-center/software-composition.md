@@ -21,13 +21,13 @@ The page contains two tabs: [Overview](#overview) and [All Components](#all-comp
 
 On the **Overview** tab, you can see a list of all the deployed apps.
 
-Above the list, you can use the search box to search for an app. Next to the search box, you can filter apps by selecting the Mendix Runtime version. You can click **Export All** on the right side above the list to export all the information in the list to an Excel file.
+Above the list, you can use the search box to search for an app. Next to the search box, you can filter apps by selecting the type of the cloud and the Mendix Runtime version. You can click **Export All** on the right side above the list to export all the information in the list to an Excel file.
 
 The list contains the following information:
 
 * **App Name**: This is the name of the app.
 * **Production**: This shows whether the app is deployed in the production environment.
-* **Environment**: This is the name of the environment.
+* **Environment**: This is the name of the environment where the app is deployed.
 * **Runtime**: This shows the Mendix Runtime version.
 * **Technical Contact**: This shows the Technical Contact of the app.
 * **Target Cloud**: This shows the type of the cloud where the app is deployed.
@@ -84,7 +84,7 @@ The list shows all the apps where the component is used, with the following info
 
 * **App Name**: This is the name of the app.
 * **Production**: This shows whether the app is deployed in the production environment.
-* **Environment**: This is the name of the environment.
+* **Environment**: This is the name of the environment where the app is deployed.
 * **Runtime**: This shows the Mendix Runtime version.
 * **Target Cloud**: This shows the type of the cloud where the app is deployed.
 * **Technical Contact**: This shows the Technical Contact of the app.

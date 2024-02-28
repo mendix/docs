@@ -61,7 +61,7 @@ To the `javaopts` list in your *m2ee.yaml* file, add "-javaagent:<path-to-javaag
 
 ```java
  javaopts: [
-   "-Dfile.encoding=UTF-8", "-XX:MaxPermSize=128M", "-Xmx512M", "-Xms512M",
+   "-Dfile.encoding=UTF-8", "-Xmx512M", "-Xms512M",
    "-Djava.io.tmpdir=/srv/mendix/data/tmp",
    "-javaagent:/opt/newrelic/javaagent.jar"
  ]

@@ -8,6 +8,8 @@ tags: ["studio pro", "data grid", "grid", "data widget"]
 
 {{% alert color="warning" %}}The data grid widget is not supported on native mobile pages.{{% /alert %}}
 
+{{% alert color="warning" %}}The data grid widget, which is not supported by the React client added to Mendix in [10.7](/releasenotes/studio-pro/10.7/#react-client), can be converted to a [Data Grid 2 module](/appstore/modules/data-grid-2/) through the context menu of the widget when the React client is enabled.{{% /alert %}}
+
 ## 1 Introduction
 
 A data grid shows a list of objects in a table format. For example, a data grid can show customer's name, grade, and all the orders a customer has placed:

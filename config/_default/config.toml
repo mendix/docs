@@ -22,7 +22,7 @@ defaultContentLanguageInSubdir = false
 enableMissingTranslationPlaceholders = true
 languageCode = "en-us"
 
-disableKinds = ["taxonomy","taxonomyTerm","term"]
+disableKinds = ["taxonomy", "term"]
 
 # Image processing configuration. (Do we use this - probably not?)
 [imaging]
@@ -119,7 +119,7 @@ disableKinds = ["taxonomy","taxonomyTerm","term"]
     #gcs_engine_id = "d72aa9b2712488cc3"
 
     # Algolia DocSearch
-    algolia_docsearch = false
+    search.algolia = false
 
     # Lunr.js offline search
     offlineSearch = false

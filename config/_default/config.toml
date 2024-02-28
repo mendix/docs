@@ -119,7 +119,7 @@ disableKinds = ["taxonomy", "term"]
     #gcs_engine_id = "d72aa9b2712488cc3"
 
     # Algolia DocSearch
-    algolia_docsearch = false
+    search.algolia = false
 
     # Lunr.js offline search
     offlineSearch = false

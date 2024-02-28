@@ -914,13 +914,13 @@ The input and output for this service are shown in the table below:
 
 #### 4.2.8 InvokeAgent {#invoke-agent}
 
-The `InvokeAgent` activity allows you to invoke an agent from Amazon Bedrock so that you can orchestrate tasks involving Foundation models and enrich the process with organisational data and user input. It requires `ENUM_Region`, `Credentials`, `InvokeAgentRequest` and a `ResponseHandlerMicroflow` as input parameters. The latter is necessary since InvokeAgent is an asynchronous operation. It is required that this is a flow that has only one input parameter of the InvokeAgentResponse entity type. The Amazon Bedrock Connector includes a sample handler microflow to help you set up a handler for the response.
+The `InvokeAgent` activity allows you to invoke an agent from Amazon Bedrock so that you can orchestrate tasks involving Foundation models and enrich the process with organisational data and user input. It requires `ENUM_Region`, `Credentials`, `InvokeAgentRequest`, a `ResponseHandlerMicroflow` and a `ErrorHandlerMicroflow` as input parameters. The microflow parameters are necessary since InvokeAgent is an asynchronous operation. The `ResponseHandlerMicroflow` is required to have exactly one input parameter of the InvokeAgentResponse entity type. It will be called in a background threat once the respose is available. The `ErrorHandlerMicroflow` is required to have exactly one input parameter of type String. It will be called when there is an error during the asynchronous process and the error type will be passed to it's string parameter. The Amazon Bedrock Connector include sample response handler & error handler microflows to help you set up handlers for your implementation.
 
 The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `ENUM_Region (enumeration)`, `Credentials (object)`, `InvokeModelRequest (object)`, `ResponseHandlerMicroflow` | `InvokeModelResponse (object)` |
+- | `ENUM_Region (enumeration)`, `Credentials (object)`, `InvokeModelRequest (object)`, `ResponseHandlerMicroflow (microflow)`, `ErrorHandlerMicroflow (microflow)` | `none` |
 
 ##### Ways to handle the asynchronous InvokeAgentResponse
 

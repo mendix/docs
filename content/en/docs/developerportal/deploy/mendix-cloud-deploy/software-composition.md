@@ -11,7 +11,7 @@ no_list: true
 
 ## 1 Introduction
 
-The **Software Composition** page provides you with an overview of the composition of your deployment packages and helps you reduce the security vulnerabilities for your deployment packages. On this page, you can see all the components that a deployment package contains and where a component is used.
+The **Software Composition** page provides you with an overview of the composition of your deployment packages and helps you reduce the security vulnerabilities for them. On this page, you can see all the components that a deployment package contains and where a component is used.
 
 {{% alert color="info" %}}Make sure you are on a compatible Mendix version. Component details and related actions are only available for deployment packages made with Mendix [10.5.0](/releasenotes/studio-pro/10.5/) or above when they are deployed to Mendix Cloud or Cloud Dedicated. Upgrade to one of these versions to see component information reflected on this page. {{% /alert %}}
 
@@ -27,7 +27,7 @@ The list contains the following information:
 
 * **Deployment Package**: This is the name of the deployment package.
 * **Production**: This shows whether the deployment package is deployed in the production environment.
-* **Environment**: This is the name of the environment.
+* **Environment**: This is the name of the environment where the deployment package is deployed.
 * **Runtime**: This shows the Mendix Runtime version.
 * **Target Cloud**: This shows the type of the cloud where the deployment package is deployed.
 * **Technical Contact**: This shows the Technical Contact of the app.
@@ -81,7 +81,7 @@ Above the list, you can use the search box to search for an environment. You can
 
 The list shows all the environment where the deployment package containing the component is used, with the following information: 
 
-* **Environment**: This is the name of the environment.
+* **Environment**: This is the name of the environment where the deployment package is deployed.
 * **Production**: This shows whether the deployment package is deployed in the production environment.
 * **Runtime**: This shows the Mendix Runtime version.
 * **Version**: This shows the version of the component that is used.

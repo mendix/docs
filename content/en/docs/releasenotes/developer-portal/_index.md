@@ -21,15 +21,15 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 #### Improvements
 
-* The Feedback API has been improved:
-   * We now also send information on the Priority status of a feedback through various calls.
-   * The /GET call is optimized.
-   * We have better error logs for the various calls.  
+* We released a new version of [Feedback API](/apidocs-mxsdk/apidocs/feedback-api-2/) with the following improvements:
+   * We now send information on the priority status of a feedback item through various calls.
+   * We have optimized the GET call.
+   * We have better error logs for various calls.
 
 #### Fixes
 
-* We fixed a bug where the sidepanel would flicker upon loading either mini survey or Feedback.
-* In Feedback, creating, archiving and deleting feedback should now show the correct pages.
+* We fixed a bug where the sidepanel would flicker upon loading either [Mini survey](/developerportal/app-insights/mini-surveys/) or [Feedback](/developerportal/app-insights/feedback/).
+* In Feedback, creating, archiving, and deleting feedback items should now show the correct pages.
 
 
 ### February 8

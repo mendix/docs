@@ -116,7 +116,7 @@ Input Excel File
 | Decimal  | Yes    | Partial    | Partial    | Yes    | No    | No    |
 | DateTime  | Yes    | No    | No    | No    | No    | Yes    |
 
-**Partial** - If source data is valid and within range, it will be converted into target data type.
+**Partial** - If source data is valid and within range, it will be converted into the target data type.
 
 {{% /alert %}}
 

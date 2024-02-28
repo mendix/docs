@@ -9,13 +9,15 @@ tags: ["runtime", "mendix client", "react client"]
 
 ## 1 Introduction
 
+The Mendix Marketplace contains many useful and reusable widgets and modules created by Mendix as well as by our partners and community. Not all content found in the Mendix Marketplace is ready for the react client, yet, including platform-supported content provided by Mendix. This guide will help you understand which of the popular modules are widgets are ready for the react client and which are not.
 
+If the Marketplace content you are interested in is not included in the list, add it to your application with the react client enabled and look out for cnosistency errors.
 
 ## 2 Marketplace Content Status
 
 The following tables shows for popular platform-supported marketplace content whether it is ready for the react client (✅) or not (❌). We will continuously update this table as we improve the compatibility of our marketplace content.
 
-| Marketplace Content | Status |
+| Marketplace Content | React Ready |
 | --- | --- |
 | [Community Commons](https://marketplace.mendix.com/link/component/170) | ✅ |
 | [Mx Model Reflection](https://marketplace.mendix.com/link/component/69) | ❌ |

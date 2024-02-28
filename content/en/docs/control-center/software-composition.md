@@ -7,6 +7,8 @@ weight: 80
 no_list: true
 ---
 
+{{% alert color="warning" %}}This feature is in beta. For more information, see [Beta Releases](/releasenotes/beta-features). {{% /alert %}}
+
 ## 1 Introduction
 
 The **Software Composition** page provides you with an overview of the composition of your apps and helps you reduce the security vulnerabilities for your apps. On this page, you can see all the components that a deployed app contains and where a component is used.

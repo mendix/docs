@@ -36,15 +36,15 @@ The Mobile SSO module has the following limitations:
 
 * Mendix sessions in the mobile app do not time out
 * Does not support local sign out
-* Mobile SSO module cannot be used with IdPs that support only the [SAML](/appstore/modules/saml/) protocol
+* Mobile SSO module does not support any other protocol except OIDC.
 * Mendix has not pen-tested the Mobile SSO module yet
-* Does not support Progressive web app (PWA). If you are building a progressive web app, you need to use OIDC SSO module instead.
-* It doesn't support IdPs that lack Custom Callback URLs, such as Google
-* Private use URI Scheme’s as per [RFC8252, section 7.1](https://datatracker.ietf.org/doc/html/rfc8252#section-7.1) is not used.
+* Does not support Progressive web app (PWA). If you are building a progressive web app, you need to use the OIDC SSO module instead.
+* It doesn't support IdPs that lack Custom Callback URLs, such as Facebook.
+* Private use URI Schemes as per [RFC8252, section 7.1](https://datatracker.ietf.org/doc/html/rfc8252#section-7.1) are not used.
 
 #### 1.2.3 Adherence
 
-This section clarifies to what extend a Mobile Mendix app using Mobile SSO module adheres to best practices for mobile SSO as per [RFC 8252](https://www.rfc-editor.org/rfc/rfc8252.txt):
+This section clarifies to what extent a Mobile Mendix app using Mobile SSO module adheres to best practices for mobile SSO as per [RFC 8252](https://www.rfc-editor.org/rfc/rfc8252.txt):
 
 * The Mobile SSO module uses an embedded browser for sign in and does not utilize an external browser.
 * Native Mendix apps have a back-end counterpart that holds the credentials for client authentication, as shown in the diagram above. This makes the native app a confidential client instead of a public client.
@@ -77,14 +77,13 @@ This guide provides the step-by-step process of integrating the Mobile Single Si
 
 ## 4 Configuration
 
-This section shows you how to configure your app to use OIDC for SSO.
+This section shows you how to configure your app to use Mobile SSO.
 
 ### 4.1 Configuration Settings
 
 Refer to the [OIDC SSO](/appstore/modules/oidc/) documentation for the configuration settings of the [OIDC SSO](https://marketplace.mendix.com/link/component/120371) module and ensure the **OIDC_Client_Overview** page is appropriately set up.
-As the Mobile SSO module supports the OIDC SSO features, follow the [OIDC SSO](/appstore/modules/oidc/) documentation for the configuration.
 
-{{% alert color="warning" %}} Configure the IdP in the web application (web page of OIDC SSO using **OIDC_Client_Overview** ) {{% /alert %}}
+{{% alert color="info" %}} Configure the IdP in the web application (web page of OIDC SSO using **OIDC_Client_Overview** ). {{% /alert %}}
 
 ### 4.2 Configuring Navigation
 
@@ -103,13 +102,13 @@ If you want to customize the login page, make sure to add the **App events** wid
 
 ### 4.4 Configuring Client Information {#client-info}
 
-Follow the [General OIDC Providers](https://docs.mendix.com/appstore/modules/oidc/#511-general-oidc-providers) section of the ***OIDC SSO*** documentation for configuring client information.
+Follow the [General OIDC Providers](/appstore/modules/oidc/#511-general-oidc-providers) section of the ***OIDC SSO*** documentation for configuring client information.
 
 {{% alert color="info" %}} Make sure to add a **Custom callback URL** in the client and IdP. This configuration is optional for web apps but mandatory for mobile apps. For Example, `<appname>://oauth/callback`, where <appname> is an application name which is used to create the application using **Build Native Mobile App** {{% /alert %}}
 
 {{< figure src="/attachments/appstore/modules/mobile-sso/Configure client information.png" >}}
 
-In the developer mode or local system application, add the `makeitnative://oauth/callback` URL in the **Custom callback URL** tab. This configuration also supports signing in with acr_values.
+When testing locally, add the `makeitnative://oauth/callback` URL in the **Custom callback URL** tab. This configuration also supports signing in with acr_values. For more information, see the [Configurations](/refguide/configuration/).
 
 ### 4.5 Single Log Out
 
@@ -126,17 +125,17 @@ When you are building the native mobile app using **Build Native Mobile App** op
 
 ### 4.7 Configuring IdP
 
-The following subsections show how to configure IdP for Azure AD and Okta:
+The following subsections show how to configure your *Entra ID or Okta IdP*:
 
-#### 4.7.1 Configuring IdP for Azure AD
+#### 4.7.1 Configuring IdP for Entra ID
 
-1. On [Microsoft Entra ID](https://portal.azure.com/#home) portal, select **App Registrations**.
+1. On the [Microsoft Entra ID](https://portal.azure.com/#home) portal, select **App Registrations**.
 1. Click **New registration**, provide required information, and click **Register**.
 1. In the **Authentication** tab, select **No** to disable the option to **Allow public client flows** as this module only supports confidential client flows.
 
     {{< figure src="/attachments/appstore/modules/mobile-sso/Public client flows.png" max-width=80% class="image-border">}}
 
-1. Go to the **Manifest** of the application and add following JSON representations to it:
+1. Add the following JSON representations to the **Manifest** of the application:
     1. For the application that has been deployed using **Build Native Mobile App**
 
         ```
@@ -152,7 +151,7 @@ The following subsections show how to configure IdP for Azure AD and Okta:
 
         {{< figure src="/attachments/appstore/modules/mobile-sso/Manifest.png" max-width=80% class="image-border">}}
 
-    2. For local testing, use below JSON representation to the **Manifest** of the application:
+    2. For local testing, use the JSON below in the **Manifest** of the application:
 
         ```
         {
@@ -168,7 +167,7 @@ The following subsections show how to configure IdP for Azure AD and Okta:
         {{% alert color="info" %}} Make sure to add `makeitnative://oauth/callback` to the **Custom callback URL** tab of the configuration. For more information, see the [Configuring Client Information](#client-info) section above. {{% /alert %}}
 
 1. Save the **Manifest** file.
-1. In Entra ID, click **Certificates & secrets** tab of the application and create **New client secret**. You can use this **Value** in the **Client Secret** field on the **OIDC_Client_Overview** page of the OIDC SSO module.
+1. In Entra ID, click the **Certificates & secrets** tab of the application and create **New client secret**. You can use this **Value** in the **Client Secret** field on the **OIDC_Client_Overview** page of the OIDC SSO module.
 1. Click **Overview** tab of the application and copy **Application (client) ID**. Use this copied value in the **Client ID** field on the **OIDC_Client_Overview** page of the OIDC SSO module.
 1. Import the configuration in the page and add the required scopes such as, `openid`, `profile`, and `email`.
 1. Save the configuration and you can login into the application using Azure SSO.

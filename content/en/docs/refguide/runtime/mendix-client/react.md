@@ -9,15 +9,15 @@ tags: ["runtime", "mendix client", "react client"]
 
 ## 1 Introduction
 
-In Studio Pro versions 10.7.0 and above, there is an alternative version of the Mendix Client written in React. This is currently a [beta](/releasenotes/beta-features/). You can enable this React client in [App Settings](/refguide/app-settings/#react-client).
+In Studio Pro versions 10.7.0 and above, there is an alternative version of the Mendix Client written in React. This is currently a [beta](/releasenotes/beta-features/). You can enable this React Client in [App Settings](/refguide/app-settings/#react-client).
 
-The React client replaces [Dojo](https://dojotoolkit.org/) with [React](https://react.dev/) for the view layer. This change comes with many advantages: improved performance, incremental loading, and future-proofing your application.
+The React Client replaces [Dojo](https://dojotoolkit.org/) with [React](https://react.dev/) for the view layer. This change comes with many advantages: improved performance, incremental loading, and future-proofing your application.
 
 ### 1.1 Improved Performance
 
 Web application performance is one of the most important metrics today. If a website does not open quickly or feels sluggish to use, many users will abandon it immediately. In fact, Google decided to make performance a key criterion for their algorithm to determine the relevance of a website for their search results. While this is less relevant for internal apps, performance is still key to worker productivity and application scalability.
 
-The most prominent tool to measure web application performance is [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk), which is built into the Chrome browser. It reports the overall performance of a web application and key indices that lead up to the performance score. When comparing a conventional Mendix web application with the same application using the new React client, we observe the following improvements:
+The most prominent tool to measure web application performance is [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk), which is built into the Chrome browser. It reports the overall performance of a web application and key indices that lead up to the performance score. When comparing a conventional Mendix web application with the same application using the new React Client, we observe the following improvements:
 
 | Metric | Without React Client | With React Client | Improvement |
 | --- | --- | --- | --- |
@@ -26,27 +26,27 @@ The most prominent tool to measure web application performance is [Lighthouse](h
 | Largest Contentful Paint | 2.0s | 1.8s | -10% |
 | Speed Index | 1.6s | 1.3s | -19% |
 
-In our opinion, the most important metric for most web applications is largest contentful paint, because it represents when the majority of the application has been loaded successfully. In this metric, the new React client performance 10% better than the previous client. A significant change that requires no optimization effort at all on the application model.
+In our opinion, the most important metric for most web applications is largest contentful paint, because it represents when the majority of the application has been loaded successfully. In this metric, the new React Client performance 10% better than the previous client. A significant change that requires no optimization effort at all on the application model.
 
 ### 1.2 Incremental Page Loading
 
-The second advantage of the React client becomes immediately apparent, when your web app contains complex pages with multiple datasources. In the previous Mendix client, the user sees a progress indicator until the entire page is loaded. In the new React client, the core structure of your website is shown immediately and content is added as it is loaded. This way, your users can already make sense of part of your data or orient themselves in your application’s user interface before it has finished loading. This greatly improves the perceived speediness of your application.
+The second advantage of the React Client becomes immediately apparent, when your web app contains complex pages with multiple datasources. In the previous Mendix client, the user sees a progress indicator until the entire page is loaded. In the new React Client, the core structure of your website is shown immediately and content is added as it is loaded. This way, your users can already make sense of part of your data or orient themselves in your application’s user interface before it has finished loading. This greatly improves the perceived speediness of your application.
 
 ### 1.3 Future-Proof
 
-Finally, the React client allowed us to clean up our client and remove many libraries that are no longer needed, such as the Dojo framework. While popular at the time it was introduced in Mendix, it has now come out of fashion. By removing such dependencies in favor of modern frameworks, such as React, we can better ensure that your applications run stable and secure in your users’ web browsers.
+Finally, the React Client allowed us to clean up our client and remove many libraries that are no longer needed, such as the Dojo framework. While popular at the time it was introduced in Mendix, it has now come out of fashion. By removing such dependencies in favor of modern frameworks, such as React, we can better ensure that your applications run stable and secure in your users’ web browsers.
 
 ## 2 Prerequisites
 
-This section explains all prerequisites that your application must fulfill before it can leverage the react client.
+This section explains all prerequisites that your application must fulfill before it can leverage the React Client.
 
 ### 2.1 Mendix version
 
-The react client was introduced in Mendix 10.7.0 as a [beta feature](/releasenotes/beta-features/). It is planned to be released for general availability in Mendix 10.12.0.
+The React Client was introduced in Mendix 10.7.0 as a [beta feature](/releasenotes/beta-features/). It is planned to be released for general availability in Mendix 10.12.0.
 
 ### 2.2 Widgets
 
-Widgets must fulfill the following requirements to be compatible with application leveraging the react client:
+Widgets must fulfill the following requirements to be compatible with application leveraging the React Client:
 
 * The widget must be a pluggable widget.
 * The widget must be compiled using the pluggable-widget-tools version 9.4.1 or later.
@@ -62,25 +62,25 @@ JavaScript actions must not use any of the following client apis:
 
 These APIs are related to dojo and are no longer needed. For opening pages, please use the Nanoflow action [Show Page](/refguide/show-page) instead.
 
-### 2.4 Enable react client
+### 2.4 Enable React Client
 
-To enable the react client for your Mendix project, make sure it fulfills the prerequesites above and then enable it in the [App Settings](/refguide/app-settings/#react-client).
+To enable the React Client for your Mendix project, make sure it fulfills the prerequesites above and then enable it in the [App Settings](/refguide/app-settings/#react-client).
 
-The migration mode will show warnings instead of errors for all incompatible widgets found in your project. This can help exploring and testing the react client in your project. For deploying an application leveraging the react client, we recommend setting the react client to Yes and resolving all errors before deploying.
+The migration mode will show warnings instead of errors for all incompatible widgets found in your project. This can help exploring and testing the React Client in your project. For deploying an application leveraging the React Client, we recommend setting the React Client to Yes and resolving all errors before deploying.
 
 ## 3 Migration Guide
 
-This sections provides guides to convert your application to become ready for the react client.
+This sections provides guides to convert your application to become ready for the React Client.
 
 ### 3.1 Marketplace content
 
-Not all content found on the Mendix marketplace is ready for the react client, yet. Refer to [Marketplace Content Rect Readiness](/refguide/mendix-client/content-readiness) to see which of the most popular marketplace content is ready. If a module or widget you are using is not on the list, test for yourself if it is compatible and reach out to the authors to update it if not.
+Not all content found on the Mendix marketplace is ready for the React Client, yet. Refer to [Marketplace Content Rect Readiness](/refguide/mendix-client/content-readiness) to see which of the most popular marketplace content is ready. If a module or widget you are using is not on the list, test for yourself if it is compatible and reach out to the authors to update it if not.
 
-Update all marketplace content before enabling the react client.
+Update all marketplace content before enabling the React Client.
 
 ### 3.2 Dynamic & Static image
 
-The Dynamic Image and Static Image widget are not supported in the react client. They should be replaced with the universal [Image](/appstore/widgets/image) widget. You can [download the Image widget from the Mendix Marketplace](https://marketplace.mendix.com/link/component/118579).
+The Dynamic Image and Static Image widget are not supported in the React Client. They should be replaced with the universal [Image](/appstore/widgets/image) widget. You can [download the Image widget from the Mendix Marketplace](https://marketplace.mendix.com/link/component/118579).
 
 To automatically convert a Dynamic image or a Static image right click on the widget or the error message and select Convert to Image.
 
@@ -90,7 +90,7 @@ We are working on a batch conversion for image widgets that lets you convert all
 
 ### 3.3 Reference selector
 
-The Reference selector widgets (Reference selector, Reference set selector, Input reference set selector) are not supported in the react client. They should be replaced with the [Combo box](/appstore/widgets/combobox) widget. The Combo box widget can be [downloaded from the Mendix Marketplace](https://marketplace.mendix.com/link/component/219304).
+The Reference selector widgets (Reference selector, Reference set selector, Input reference set selector) are not supported in the React Client. They should be replaced with the [Combo box](/appstore/widgets/combobox) widget. The Combo box widget can be [downloaded from the Mendix Marketplace](https://marketplace.mendix.com/link/component/219304).
 
 To replace a Reference selector widget, follow these steps:
 
@@ -125,7 +125,7 @@ We are working on an automatic conversion for reference selector widgets that le
 
 ### 3.4 Data grid
 
-The Data grid widget is not supported in the react client. It should be replaced with the [Data grid 2](/appstore/modules/data-grid-2) widget. The Data grid 2 widget is part of the [Data Widgets Module on the Mendix Marketplace](https://marketplace.mendix.com/link/component/116540).
+The Data grid widget is not supported in the React Client. It should be replaced with the [Data grid 2](/appstore/modules/data-grid-2) widget. The Data grid 2 widget is part of the [Data Widgets Module on the Mendix Marketplace](https://marketplace.mendix.com/link/component/116540).
 
 To automatically convert a Data grid right click on the widget or the error message and select Convert to Data grid 2.
 
@@ -135,7 +135,7 @@ We are working on a batch conversion for data grid widgets that lets you convert
 
 ### 3.5 Template grid
 
-The Template grid widget is not supported in the react client. It should be replaced with the [Gallery widget](/appstore/modules/gallery). The Gallery widget is part of the [Data Widgets Module on the Mendix Marketplace](https://marketplace.mendix.com/link/component/116540).
+The Template grid widget is not supported in the React Client. It should be replaced with the [Gallery widget](/appstore/modules/gallery). The Gallery widget is part of the [Data Widgets Module on the Mendix Marketplace](https://marketplace.mendix.com/link/component/116540).
 
 To replace a Template grid widget, follow these steps:
 
@@ -147,7 +147,7 @@ To replace a Template grid widget, follow these steps:
 
 ### 3.6 Custom widget
 
-Dojo widgets are no longer supported in the react client. They should be replaced with a pluggable widget based on react. Converting a dojo widget to a react widget requires JavaScript programming. Follow the guide [/howto/extensibility/create-a-pluggable-widget-one](Build a Pluggable Web Widget: Part 1) to get started.
+Dojo widgets are no longer supported in the React Client. They should be replaced with a pluggable widget based on react. Converting a dojo widget to a react widget requires JavaScript programming. Follow the guide [/howto/extensibility/create-a-pluggable-widget-one](Build a Pluggable Web Widget: Part 1) to get started.
 
 Pluggable widgets must be built with pluggable-widget-tools version 9.4.1 or later. Follow these steps to update pluggable-widget-tools and rebuild your widget:
 
@@ -161,13 +161,13 @@ Pluggable widgets must be built with pluggable-widget-tools version 9.4.1 or lat
 
 ### 3.7 Styling
 
-The react client introduces some minor changes to the DOM structure of the Mendix application. These changes can have an impact on your styles defined in SCSS. To avoid any issues, test your custom styles before deploying the updated application.
+The React Client introduces some minor changes to the DOM structure of the Mendix application. These changes can have an impact on your styles defined in SCSS. To avoid any issues, test your custom styles before deploying the updated application.
 
 If your application's navigation bar does not fill the entire screen, you are likely using an outdated version of the [Atlas Core](https://marketplace.mendix.com/link/component/117187) module. Please update it to the latest version. Also make sure to not set the SCSS variable `$use-modern-client` anywhere in your custom styles.
 
 ### 3.8 JavaScript action
 
 JavaScript actions should be mostly unaffected. Problems arise only if you use outdated actions or make extensive use of our client API.
-Problems in JavaScript actions are not captured by the consistency checker. To validate that the JavaScript actions works with the react client it should be executed with the react client active. Any errors reported by the Browser Console (Press F12 to access it) will help identify the problem.
+Problems in JavaScript actions are not captured by the consistency checker. To validate that the JavaScript actions works with the React Client it should be executed with the React Client active. Any errors reported by the Browser Console (Press F12 to access it) will help identify the problem.
 
 If you encounter problems with platform-supported JavaScript actions (for example from Nanoflow Commons) make sure to update the module containing the action from the marketplace. In most cases, this will resolve the issue. If it is not resolved, reach out to the maintainer of the module and let the know of the issue.

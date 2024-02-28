@@ -29,11 +29,11 @@ These settings influence the behavior of the Runtime when running your applicati
 
 ### 3.1 Use React Client (Beta) {#react-client}
 
-This setting enables the new React client. This client was released into beta in [Mendix 10.7](/releasenotes/studio-pro/10.7/#react-client). There are three options:
+This setting enables the new React Client. This client was released into beta in [Mendix 10.7](/releasenotes/studio-pro/10.7/#react-client). There are three options:
 
-* **No**: Do not use the React client (default).
-* **Yes**: Use the React client. In this mode, you will get consistency errors for incompatible widgets.
-* **Migration mode**: Use the React client and ignore incompatible widgets. Placeholders are displayed in the case of incompatible widgets. Recommended when trying out the new client.
+* **No**: Do not use the React Client (default).
+* **Yes**: Use the React Client. In this mode, you will get consistency errors for incompatible widgets.
+* **Migration mode**: Use the React Client and ignore incompatible widgets. Placeholders are displayed in the case of incompatible widgets. Recommended when trying out the new client.
 
 ### 3.2 Static Resources from Disk
 

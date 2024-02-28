@@ -14,9 +14,9 @@ The Mendix Client runs on the end-user's device and handles the interface betwee
 This description of the Mendix Client is based on using the Runtime Server of an app running in the cloud. You can also run Mendix locally for testing, but this is conceptually the same.
 
 {{% alert color="info" %}}
-In Studio Pro versions 10.7.0 and above, there is an alternative version of the Mendix Client written in React. This is currently a [beta](/releasenotes/beta-features/). You can enable this React client in [App Settings](/refguide/app-settings/#react-client).
+In Studio Pro versions 10.7.0 and above, there is an alternative version of the Mendix Client written in React. This is currently a [beta](/releasenotes/beta-features/). You can enable this React Client in [App Settings](/refguide/app-settings/#react-client).
 
-The React client replaces [Dojo](https://dojotoolkit.org/) with [React](https://react.dev/) for the view layer. This means that widgets based on Dojo will no longer work. You will get consistency errors if your app contains Dojo widgets, or you can choose **Migration mode** which will allow you to build your app but will replace incompatible widgets with a placeholder.
+The React Client replaces [Dojo](https://dojotoolkit.org/) with [React](https://react.dev/) for the view layer. This means that widgets based on Dojo will no longer work. You will get consistency errors if your app contains Dojo widgets, or you can choose **Migration mode** which will allow you to build your app but will replace incompatible widgets with a placeholder.
 
 Other components of the Mendix Client are the same in both the React and Dojo client. See [React Client](/refguide/mendix-client/react) for more information.
 {{% /alert %}}
@@ -29,7 +29,7 @@ For **web applications**, Mendix Client acts as a single page application. This 
 
 The Mendix Dojo Client is bootstrapped by loading a `mxui.js` script from an HTML page provided by the *theme*.
 
-The Mendix React client is bootstrapped in different way. Its loads the `index.js` file which loads the `common.js` with the Mendix client. More JavaScript files will be loaded after this that contain page, layout and nanoflow definitions.
+The Mendix React Client is bootstrapped in different way. Its loads the `index.js` file which loads the `common.js` with the Mendix client. More JavaScript files will be loaded after this that contain page, layout and nanoflow definitions.
 
 For **mobile applications** Mendix Client acts as a React Native application. This means that apps created by Mendix consist of two parts: a *wrapper* and a *bundle*. The wrapper is a native iOS or Android application that loads the bundle and exposes platform functionality to it. The bundle includes Client Core, Pluggable Widgets, and application-specific resources like nanoflows and pages.
 
@@ -222,11 +222,11 @@ The Mendix Dojo Client, which is not built entirely using React, will repeat the
 
 ##### 4.1.1.2 React Client
 
-The React client works differently to the Dojo client.
+The React Client works differently to the Dojo client.
 
 During the build process, Studio Pro exports JavaScript files containing JavaScript and React components into the `pages`, `layouts` and `nanoflows` folders. The contents of those folders are bundled into the `dist` folder using [Rollup](https://rollupjs.org/), which generates *chunks*.
 
-The React client dynamically loads these chunks when needed for optimal performance.
+The React Client dynamically loads these chunks when needed for optimal performance.
 
 #### 4.1.2 Location of Mendix Client Resources
 
@@ -238,7 +238,7 @@ When the app is deployed, the static resources are placed in a structure referre
 * The Dojo client has the following resources:
     * mxui.js – the main Mendix Client code.
     * page definitions – xml page definitions which tell the Mendix Client what the pages for this app look like.
-* The React client has the following resources:
+* The React Client has the following resources:
     * index.js and commons.js – the main Mendix Client code.
     * Exported JavaScript files from Studio Pro containing the React components for pages and layouts.
 

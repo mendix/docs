@@ -80,6 +80,10 @@ The following steps present an example of how you can interact with MendixChat b
 
 It is easy and intuitive to interact with MendixChat. Let's get started!
 
-## 3 Limitation
+### 2.2 Asking Follow-Up Questions in MendixChat
 
-You can ask questions that are related to the Mendix domain knowledge. However, only limited questions can be answered at this moment. If your question cannot be answered, you will get a default reply that asks you to provide another question. Currently, MendixChat does not support follow-up questions based on your previous ones, so please keep asking new questions.
+In Studio Pro 10.8.0 and above, MendixChat supports asking follow-up questions based on your previous question and the answer you have received. For example, you can ask MendixChat to summarize the latest answer you received by typing the following in the chat: *Can you summarize that?*.
+
+## 3 Limitation 
+
+You can ask questions that are related to the Mendix domain knowledge. However, only limited questions can be answered at this moment. If your question cannot be answered, you will get a default reply that asks you to provide another question.

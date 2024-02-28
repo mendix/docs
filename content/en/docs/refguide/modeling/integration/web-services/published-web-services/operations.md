@@ -6,9 +6,9 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-Provides the actual methods of which the webservice is composed.
+This document provides the methods of which the web service is composed.
 
-Looking at an operation in more detail, you can see that a microflow can be selected. When you select a microflow, the other fields will be automatically filled. These can be changed as needed.
+Looking at an operation in more detail, you can see that a microflow can be selected. When you select a microflow, the other fields will automatically fill. These can be changed as needed.
 
 An operation has the properties described below.
 
@@ -22,7 +22,7 @@ This is what the operation is called in the WSDL.
 
 ### 2.2 Microflow
 
-Defines which microflow will be executed when this webservice is called.
+Defines which microflow will be executed when this web service is called.
 
 ### 2.3 Documentation
 
@@ -34,41 +34,41 @@ Describes the operation and is included in the WSDL.
 
 ### 3.1 Microflow Parameter
 
-Defines the name of the parameter in the microflow
+Defines the name of the parameter in the microflow.
 
 ### 3.2 Type
 
-Defines which type the parameter is, for example a List of Vehicle entities.
+Defines which type the parameter is (for example, a List of Vehicles entity).
 
 ### 3.3 Optional
 
-Defines whether this parameter is optional in the webservice call.
+Defines if this parameter is optional in the web service call.
 
 ### 3.4 Nillable
 
-Defines whether this parameter can have a nil value in the webservice call.
+Defines if this parameter can have a nil value in the web service call.
 
 ### 3.5 Operation Parameter
 
-Defines the name of the parameter in the webservice call. This is initially copied from the microflow parameter name but can be modified.
+Defines the name of the parameter in the web service call. This is initially copied from the microflow parameter name, but it can be modified.
 
 ### 3.6 Operation Object Name
 
-Is available when the parameter is a list, and can be used to name the object in the list.
+This is available when the parameter is a list, and can be used to name the object in the list.
 
 {{% alert color="info" %}}
-The CountCarsAndHp operation. It takes a non-optional list of Vehicle as a parameter which is called VehicleList and consists of objects called Vehicle. This information is based on the microflow and entity model but can be modified.
+The `CountCarsAndHp` operation takes a non-optional list of vehicles as a parameter, which is called *VehicleList* and consists of objects called *Vehicle*. This information is based on the microflow and entity model, but can be modified.
 {{% /alert %}}
 
 {{< figure src="/attachments/refguide/modeling/integration/published-web-services/operations/918221.png" >}}
 
-The microflow attached to the CountCarsAndHp operation. It takes a list of objects of the entity Vehicle as input and returns an object that holds the number of cars and the total amount of horsepower of those cars.
+The microflow attached to the `CountCarsAndHp` operation. It takes a list of objects of the entity Vehicle as input and returns an object that holds the number of cars and the total amount of horsepower of those cars.
 
 ### 3.7 Exposed Attributes and Associations
 
-If you click **Select** in the parameter tab, you can select individual members of the entity that is being passed as a parameter. The toolbar buttons are available to help you quickly perform operations that would otherwise be laborious.
+If you click **Select** in the **Parameter** tab, you can select individual members of the entity that is being passed as a parameter. The toolbar buttons are available to help you quickly perform operations that would otherwise be difficult.
 
-| Collapse all | Collapses the entire tree, so that only the root node remains visible |
+| Collapse all | Collapses the entire tree, so that only the root node remains visible. |
 | --- | --- |
 | Check all | Checks the box next to every expanded node and visible leaf node. Collapsed nodes and their children are not affected. |
 | Uncheck all | Unchecks the box next to every expanded node and visible leaf node. Collapsed nodes and their children are not affected. |
@@ -79,16 +79,16 @@ If you click **Select** in the parameter tab, you can select individual members 
 
 {{< figure src="/attachments/refguide/modeling/integration/published-web-services/operations/16843878.png" >}}
 
-Here you can select which members of the entity can be passed and/or are optional or nillable, as well as set their names. Note that checking Optional or Nillable on the root element has no effect; you should set these values in the operation editor.
+Here you can select which members of the entity can be passed and/or are optional or nillable, as well as set their names. Note that checking **Optional** or **Nillable** on the root element has no effect; set these values in the operation editor.
 
 {{% alert color="info" %}}
-The order of XML elements in the WSDL does not by definition reflect the order of attributes in entities in the domain model. The order of members in the dialog is the same as the order of elements in the WSDL (and can be different from the order of attributes in entities). This gives a better overview of the WSDL contract that is exposed from Mendix. The structure you see in the members dialog reflects the structure in the WSDL.
+The order of XML elements in the WSDL does not, by definition, reflect the order of attributes in entities in the domain model. The order of members in the dialog is the same as the order of elements in the WSDL (and can be different from the order of attributes in entities). This gives a better overview of the WSDL contract that is exposed from Mendix. The structure you see in the members dialog reflects the structure in the WSDL.
 
-New attributes from entities will appear as new elements *below* members that are already in the WSDL. This will prevent breaking the WSDL contract, because if you insert new XML elements inside a XML *Sequence* container, existing web service consumers that strictly validate against the WSDL may break.
+New attributes from entities will appear as new elements below members that are already in the WSDL. This will prevent breaking the WSDL contract; if you insert new XML elements inside a XML Sequence container, existing web service consumers that strictly validate against the WSDL can break.
 {{% /alert %}}
 
 {{% alert color="info" %}}
-If you expose the Password (hashed string) attribute of a System.User entity (or a specialization thereof), a warning appears that there is a risk that someone does a brute-force attack to obtain the original plain-text password. The risk is considerably less when you use a strong hashing algorithm (preferably 'BCrypt'). The hashing algorithm can be set in the app settings.
+If you expose the Password (hashed string) attribute of a `System.User` entity (or a specialization thereof), a warning appears that there is a risk that someone does a brute-force attack to obtain the original plain-text password. The risk is considerably less when you use a strong hashing algorithm (preferably 'BCrypt'). The hashing algorithm can be set in the app settings.
 {{% /alert %}}
 
 ## 4 Return Type
@@ -97,11 +97,11 @@ This section pertains to the return type of the microflow and how it is transfor
 
 ### 4.1 Type
 
-Defines what kind of object will be returned by the microflow. If the returned type is a complex type (as in, something from your entity model) you can use the Members button to select which members will be returned in the same way as parameters.
+Defines what kind of object will be returned by the microflow. If the returned type is a complex type (as in, something from your entity model) you can use the **Members** button to select which members will be returned in the same way as parameters.
 
 ### 4.2 Name
 
-The name of the return type. This determines the output element name in the XML that results from a webservice call.
+The name of the return type. This determines the output element name in the XML that results from a web service call.
 
 ### 4.3 Optional
 

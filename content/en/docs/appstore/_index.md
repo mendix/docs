@@ -34,7 +34,7 @@ For details on the Studio Pro version required for use and when the component wa
 
 And our strategic partner connectors:
 
-* [AWS connectors](/appstore/aws-connectors/)
+* [AWS connectors](/appstore/aws-modules/)
 * [SAP connectors](/partners/sap/)
 
 In addition to platform-supported connectors and modules, Mendix Connect functionalities include:

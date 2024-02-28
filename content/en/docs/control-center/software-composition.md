@@ -27,7 +27,7 @@ On the **Overview** tab, you can see a list of all the deployed app, with the fo
 * **Runtime**: This shows the Mendix Runtime version.
 * **Technical Contact**: This shows the Technical Contact of the app.
 * **Target Cloud**: This shows the type of the cloud where the app is deployed.
-* {{% icon name="view" %}}: You can customize the columns in the list by clicking the {{% icon name="view" %}} icon and adjusting the selection of the check boxes.
+* {{% icon name="view" %}}: You can customize the columns of the list by clicking the {{% icon name="view" %}} icon and adjusting the selection of the check boxes.
 * **View details**: Click this opens the [Component Summary](#component-summary) page.
 
 Above the list, you can use the search box to search for an app. Next to the search box, you can filter apps by selecting the Mendix Runtime version. 
@@ -47,7 +47,7 @@ Below, the list shows all the components used in the app, with the following inf
 * **Component**: This is the component name.
 * **Version**: This is the version of the component used in this app.
 * **Type**: This shows the type of the component.
-* {{% icon name="view" %}}: You can customize the columns in the list by clicking the {{% icon name="view" %}} icon and adjusting the selection of the check boxes.
+* {{% icon name="view" %}}: You can customize the columns of the list by clicking the {{% icon name="view" %}} icon and adjusting the selection of the check boxes.
 
 Above the list, you can use the search box to search for a component. Next to the search box, you can filter components by selecting the component type.
 
@@ -63,7 +63,7 @@ The **All Components** tab gives an overview of all the components used across y
 * **Type**: This shows the type of the component.
 * **Version**: This is the component version.
 * **Apps using component**: This shows the number of apps where the component is used.
-* {{% icon name="view" %}}: You can customize the columns in the list by clicking the {{% icon name="view" %}} icon and adjusting the selection of the check boxes.
+* {{% icon name="view" %}}: You can customize the columns of the list by clicking the {{% icon name="view" %}} icon and adjusting the selection of the check boxes.
 * **View details**: Click this opens the [Component Usage](#component-usage) page.
 
 Above the list, you can use the search box to search for a component. Next to the search box, you can filter components by selecting the component type.
@@ -86,7 +86,7 @@ Below, the list shows all the apps where the component is used, with the followi
 * **Runtime**: This shows the Mendix Runtime version.
 * **Target Cloud**: This shows the type of the cloud where the app is deployed.
 * **Technical Contact**: This shows the Technical Contact of the app.
-* {{% icon name="view" %}}: You can customize the columns in the list by clicking the {{% icon name="view" %}} icon and adjusting the selection of the check boxes.
+* {{% icon name="view" %}}: You can customize the columns of the list by clicking the {{% icon name="view" %}} icon and adjusting the selection of the check boxes.
 
 Above the list, you can use the search box to search for an app. Next to the search box, you can filter apps by selecting the type of the cloud and the Mendix Runtime version. 
 

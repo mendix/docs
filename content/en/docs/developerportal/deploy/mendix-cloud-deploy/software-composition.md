@@ -11,9 +11,9 @@ no_list: true
 
 ## 1 Introduction
 
-The **Software Composition** page provides you with an overview of the composition of your apps and helps you reduce the security vulnerabilities for your apps. On this page, you can see all the components that a deployed app contains and where a component is used.
+The **Software Composition** page provides you with an overview of the composition of your deployment packages and helps you reduce the security vulnerabilities for your deployment packages. On this page, you can see all the components that a deployment package contains and where a component is used.
 
-{{% alert color="info" %}}Make sure you are on a compatible Mendix version. Component details and related actions are only available for apps made with Mendix [10.5.0](/releasenotes/studio-pro/10.5/) or above when they are deployed to Mendix Cloud or Cloud Dedicated. Upgrade to one of these versions to see component information reflected here. {{% /alert %}}
+{{% alert color="info" %}}Make sure you are on a compatible Mendix version. Component details and related actions are only available for deployment packages made with Mendix [10.5.0](/releasenotes/studio-pro/10.5/) or above when they are deployed to Mendix Cloud or Cloud Dedicated. Upgrade to one of these versions to see component information reflected on this page. {{% /alert %}}
 
 The page contains two tabs: [Overview](#overview) and [All Components](#all-components).
 
@@ -26,10 +26,10 @@ Above the list, you can use the search box to search for a deployment package. N
 The list contains the following information:
 
 * **Deployment Package**: This is the name of the deployment package.
-* **Production**: This shows whether the app is deployed in the production environment.
+* **Production**: This shows whether the deployment package is deployed in the production environment.
 * **Environment**: This is the name of the environment.
 * **Runtime**: This shows the Mendix Runtime version.
-* **Target Cloud**: This shows the type of the cloud where the app is deployed.
+* **Target Cloud**: This shows the type of the cloud where the deployment package is deployed.
 * **Technical Contact**: This shows the Technical Contact of the app.
 * {{% icon name="view" %}}: You can customize the columns of the list by clicking the {{% icon name="view" %}} icon and adjusting the selection of the check boxes.
 * **View details**: Click this opens the [Deployment Package Summary](#deployment-package-summary) page.
@@ -40,13 +40,13 @@ To export the information of selected items in the list to an Excel file, select
 
 On the **Overview** tab, if you click **View Details** for a deployment package in the list, the **Deployment Package Summary** page opens. 
 
-On the top of the page, you can find the app name, whether the app is deployed in the production environment, the environment name, the Mendix Runtime version, the name of the Technical Contact, the type of the cloud where the app is deployed, and the version of the app.
+On the top of the page, you can find the name of the deployment package, whether the deployment package is deployed in the production environment, the environment name, the Mendix Runtime version, the name of the Technical Contact, the type of the cloud where the deployment package is deployed, and the version of the deployment package.
 
 On the upper-right corner of the page, you can click {{% icon name="download-bottom" %}}**SBOM** to download the software bill of materials (SBOM).
 
 Above the list, you can use the search box to search for a component. Next to the search box, you can filter components by selecting the component type. You can click **Export All** on the right side above the list to export all the information in the list to an Excel file.
 
-The list shows all the components used in the app, with the following information: 
+The list shows all the components used in the deployment package, with the following information: 
 
 * **Component**: This is the component name.
 * **Version**: This is the version of the component used in the deployment package.
@@ -57,7 +57,7 @@ To export the information of selected items in the list to an Excel file, select
 
 ## 3 All Components {#all-components}
 
-The **All Components** tab gives an overview of all the components used across your apps. 
+The **All Components** tab gives an overview of all the components used across your deployment packages. 
 
 Above the list, you can use the search box to search for a component. Next to the search box, you can filter components by selecting the component type. You can click **Export All** on the right side above the list to export all the information in the list to an Excel file.
 
@@ -77,12 +77,12 @@ On the **All Components** tab, if you click **View details** for an item, the **
 
 On the top of the page, you can find the component name, the component version, and the component type. 
 
-Above the list, you can use the search box to search for an app. Next to the search box, you can filter apps by selecting the type of the cloud and the Mendix Runtime version. You can click **Export All** on the right side above the list to export all the information in the list to an Excel file.
+Above the list, you can use the search box to search for an environment. You can click **Export All** on the right side above the list to export all the information in the list to an Excel file.
 
-The list shows all the apps where the component is used, with the following information: 
+The list shows all the environment where the deployment package containing the component is used, with the following information: 
 
 * **Environment**: This is the name of the environment.
-* **Production**: This shows whether the app is deployed in the production environment.
+* **Production**: This shows whether the deployment package is deployed in the production environment.
 * **Runtime**: This shows the Mendix Runtime version.
 * **Version**: This shows the version of the component that is used.
 * {{% icon name="view" %}}:  You can customize the columns in the list by clicking the {{% icon name="view" %}} icon and adjusting the selection of the check boxes.

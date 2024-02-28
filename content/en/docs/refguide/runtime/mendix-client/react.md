@@ -9,7 +9,32 @@ tags: ["runtime", "mendix client", "react client"]
 
 ## 1 Introduction
 
+In Studio Pro versions 10.7.0 and above, there is an alternative version of the Mendix Client written in React. This is currently a [beta](/releasenotes/beta-features/). You can enable this React client in [App Settings](/refguide/app-settings/#react-client).
 
+The React client replaces [Dojo](https://dojotoolkit.org/) with [React](https://react.dev/) for the view layer. This change comes with many advantages: improved performance, incremental loading, and future-proofing your application.
+
+### 1.1 Improved Performance
+
+Web application performance is one of the most important metrics today. If a website does not open quickly or feels sluggish to use, many users will abandon it immediately. In fact, Google decided to make performance a key criterion for their algorithm to determine the relevance of a website for their search results. While this is less relevant for internal apps, performance is still key to worker productivity and application scalability.
+
+The most prominent tool to measure web application performance is [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk), which is built into the Chrome browser. It reports the overall performance of a web application and key indices that lead up to the performance score. When comparing a conventional Mendix web application with the same application using the new React client, we observe the following improvements:
+
+| Metric | Without React Client | With React Client | Improvement |
+| --- | --- | --- | --- |
+| Peformance | 87 | 91 | +5% |
+| First Contentful Paint | 1.1s | 0.7s | -36% |
+| Largest Contentful Paint | 2.0s | 1.8s | -10% |
+| Speed Index | 1.6s | 1.3s | -19% |
+
+In our opinion, the most important metric for most web applications is largest contentful paint, because it represents when the majority of the application has been loaded successfully. In this metric, the new React client performance 10% better than the previous client. A significant change that requires no optimization effort at all on the application model.
+
+### 1.2 Incremental Page Loading
+
+The second advantage of the React client becomes immediately apparent, when your web app contains complex pages with multiple datasources. In the previous Mendix client, the user sees a progress indicator until the entire page is loaded. In the new React client, the core structure of your website is shown immediately and content is added as it is loaded. This way, your users can already make sense of part of your data or orient themselves in your application’s user interface before it has finished loading. This greatly improves the perceived speediness of your application.
+
+### 1.3 Future-Proof
+
+Finally, the React client allowed us to clean up our client and remove many libraries that are no longer needed, such as the Dojo framework. While popular at the time it was introduced in Mendix, it has now come out of fashion. By removing such dependencies in favor of modern frameworks, such as React, we can better ensure that your applications run stable and secure in your users’ web browsers.
 
 ## 2 Prerequisites
 

@@ -164,18 +164,18 @@ You have not yet implemented error handling in this new service. For example, if
 
 ### 5.1 Adding Error Handling
 
-1. Open the **PRS_GetGetOrderByID** microflow and right-click the first activity. Select **Set error handling** > **Custom with rollback**. Press **OK**.
+1. Open the **PRS_GetGetOrderByID** microflow and right-click the first activity. Select **Set error handling** > **Custom with rollback** > **OK**.
 2. Hover your mouse over the error handling flow. Click the blue circle and select **Create object**.
    
     {{< figure src="/attachments/howto/integration/publish-rest-service/create-object.png" >}}
 
-3. Create a new **HttpResponse** object, and enter *NewHttpErrorResponse* for the **Name**. Then, map the attributes as shown below:
+3. Create a new **HttpResponse** object and enter *NewHttpErrorResponse* for the **Name**. Then, map the attributes as shown below:
 
     {{< figure src="/attachments/howto/integration/publish-rest-service/ParsingErrorResponse.png" alt="Create Object dialog box for NewHttpErrorResponse" >}}
 
     {{% alert color="info" %}}The **Content** value is the JSON string `'{"Error": "The OrderID can only be an integer"}'`.{{% /alert %}}
 
-4. Hover your mouse over the next error handling flow, click the blue dot and add another **Create object** activity to create a new **httpHeader** object. Map the attributes as shown below:
+4. Hover your mouse over the next error handling flow, click the blue dot, and add another **Create object** activity to create a new **httpHeader** object. Map the attributes as shown below:
 
     {{< figure src="/attachments/howto/integration/publish-rest-service/ParsingErrorResponseHeader.png" alt="Create Object dialog box for NewHttpHeader_1" >}}
 
@@ -189,9 +189,9 @@ You have not yet implemented error handling in this new service. For example, if
 
 ### 5.2 Additional Error Handling
 
-Now that you have covered the error handling of the **OrderID** parameter parsing, it is time to handle empty responses. Empty responses are not technically errors, but it is always a good idea to indicate what happened when nothing is returned. To add error handling for those situations when the **OrderID** parameter is filled with a valid integer but no corresponding **Order** result is found in the database, follow these steps:
+Now that you have covered the **OrderID** parameter error handling, it is time to handle empty responses. Empty responses are not technically errors, but it is good practice to indicate what happened when nothing is returned. To add error handling for the situations when the **OrderID** parameter is filled with a valid integer but no corresponding **Order** result is found in the database, follow these steps:
 
-1. After the activity for retrieving from the database, add a decision activity with the following expression: `$Order != empty`. Connect the **true** exit to the activity for exporting to JSON. For the **false** exit, add a new **Create object** activity that creates a **NewHttpErrorNotFoundResponse** object.
+1. After the Retrieve order from database activity, add a decision activity with the following expression: `$Order != empty`. Connect the **true** exit to the activity for exporting to JSON. For the **false** exit, add a new **Create object** activity that creates a **NewHttpErrorNotFoundResponse** object.
 
     {{< figure src="/attachments/howto/integration/publish-rest-service/OrderNotFoundResponse.png" alt="Create Object dialog box for NewHttpErrorNotFoundResponse" >}}
 

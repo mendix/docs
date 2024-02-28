@@ -88,7 +88,7 @@ These include the initial environment (for example, the browser shell page) need
 
 This allows the Mendix Client to fetch and manipulate data in offline storage or the Mendix Runtime.
 
-### 2.10 Object Cache
+### 2.10 Object Cache{#object-cache}
 
 This holds and manages objects which are being used by the Mendix Client in memory – for example non-persistable objects, new objects, and objects returned by the Runtime Server to be displayed on a page. It also holds changes to attributes and associations for these objects.
 

@@ -20,6 +20,6 @@ To download the Make It Native app, search for *Make It Native 8* in your device
 
 ## 2 Read More
 
-* [How to Deploy Your First Mendix Native Mobile App](/howto8/mobile/deploying-native-app/)
+* [How to Build a Mendix Native App in the Cloud](/howto8/mobile/deploying-native-app/)
 * [How to Create a Custom Developer App](/howto8/mobile/how-to-devapps/)
 * [How to Debug Native Mobile Apps (Advanced)](/howto8/mobile/native-debug/)

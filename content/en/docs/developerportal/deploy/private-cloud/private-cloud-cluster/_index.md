@@ -54,8 +54,8 @@ Should you consider using a connected environment, the following URLs should be 
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image4.png" >}}
 
-4. Open the the [Global Navigation menu](/developerportal/global-navigation/) and select **Deployment**.
-5. Select **Cluster Manager** from the top menu bar in the Developer Portal.
+4. Open the [Global Navigation menu](/developerportal/global-navigation/) and select **Deployment**.
+5. Select **Mendix for Private Cloud** from the top menu bar in the Developer Portal.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-manager.png" >}}
 

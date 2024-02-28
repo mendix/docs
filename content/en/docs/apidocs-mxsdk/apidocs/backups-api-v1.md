@@ -7,7 +7,7 @@ weight: 11
 ---
 
 {{% alert color="warning" %}}
-⚠ The Backups API version 1 is deprecated and will be retired by the end of 2023.
+The Backups API version 1 is deprecated and will be retired by the end of 2023.
 
 You are advised to use the [Backups API version 2](/apidocs-mxsdk/apidocs/backups-api/) which uses asynchronous calls to support long-running tasks.
 {{% /alert %}}

@@ -14,11 +14,13 @@ A published OData service is a REST service with an OpenAPI contract, which mean
 
 The standard used for OData in Mendix is [OData v4](http://www.odata.org/documentation), which returns data in JSON format.
 
-⚠ The option to publish [OData v3](http://www.odata.org/documentation/odata-version-3-0) services, which return data in Atom XML format, is deprecated and will be removed in a future version.
+{{% alert color="warning" %}}
+he option to publish [OData v3](http://www.odata.org/documentation/odata-version-3-0) services, which return data in Atom XML format, is deprecated and will be removed in a future version.
+{{% /alert %}}
 
-Not all parts of the standard are implemented. If something is not documented here, it is has not yet been added.
+Not all parts of the standard are implemented. If something is not documented here, it has not yet been added.
 
-This document describes the options available to you when you create a published OData service, and ends with some runtime considerations.
+This document describes the options available to you when you create a published OData service and ends with some runtime considerations.
 
 {{% alert color="info" %}}
 Published OData services deployed to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) are automatically registered in the [Catalog](/catalog/).{{% /alert %}}
@@ -42,12 +44,12 @@ It is recommended to use [semantic versioning](https://semver.org/) for services
 {{% alert color="warning" %}}
 Once a version is released to production, any further changes should be made to a new version of the service.
 
-This is because changes to a particular version of a published OData service will be reflected in the entities and attributes available through the catalog for every environment for which the service is published. For example, if you have version 1.0.0 published to both non-production and production environments, any changes you make to version 1.0.0 of the service in the non-production environment will also be reflected in the service in production.  
+This is because changes to a particular version of a published OData service will be reflected in the entities and attributes available through the Catalog for every environment for which the service is published. For example, if you have version 1.0.0 published to both non-production and production environments, any changes you make to version 1.0.0 of the service in the non-production environment will also be reflected in the service in production.  
 {{% /alert %}}
 
 ### 2.3 Location
 
-The location denotes where the service will be available. It is recommended to include the service name and the major version in the location, e.g. `svc/products/v1/`.
+The location denotes where the service will be available. It is recommended to include the service name and the major version in the location (for example, `svc/products/v1/`).
 
 The URL prefixes `api-doc/`, `xas/`, `p/`, and `reload/` are reserved and cannot be used at the start of the location. Otherwise, you can change the location to any valid URL.
 
@@ -143,11 +145,11 @@ If authentication is required, you can select which authentication methods you w
 * Select **Active session** to allow access from JavaScript inside your current application
 * Select **Custom** to authenticate using a microflow (this microflow is called every time a user wants to access a published entity)
 
-Check more than one authentication method to have the service try each of them. It will first try **Custom** authentication, then **Username and password**, and then **Active session**.
+Check more than one authentication method to have the service try each of them. It will first try **Custom** authentication, then **Username and password**, then **Active session**.
 
 ##### 3.3.2.1 Username and Password {#username-password}
 
-Authentication can be done by including basic authentication in the HTTP header of the call. To do this you need to construct a header called **Authorization** and its content should be constructed as follows:
+Authentication can be done by including basic authentication in the HTTP header of the call. To do this, construct a header called **Authorization** and its content should be constructed as follows:
 
 1. Username and password are combined into a string "username:password".
 2. The resulting string is then encoded using the [RFC2045-MIME](https://tools.ietf.org/html/rfc2045) variant of Base64 (except not limited to 76 char/line).
@@ -190,7 +192,7 @@ You can configure a published OData service to authenticate with the [Mendix SSO
 
 To set up authentication with Mendix SSO, do the following:
 
-1. Ensure that the [Mendix SSO](/appstore/modules/mendix-sso/) module has been installed and configured in your app.
+1. Ensure the [Mendix SSO](/appstore/modules/mendix-sso/) module has been installed and configured in your app.
 2. In the published OData service, choose **Custom** authentication and select the **AuthorizeRequestWithAccessTokenFrom Request** microflow.
 
 #### 3.3.3 Allowed Roles
@@ -207,7 +209,7 @@ In the **Public documentation** tab, you can write a summary and a description i
 
 ## 5 Properties
 
-In the properties pane when an OData service document is displayed, you can edit some of the values that you can also set in the **General** tab, such as **Service name**, **Version**, and **Namespace**.
+In the Properties pane when an OData service document is displayed, you can edit some of the values that you can also set in the **General** tab, such as **Service name**, **Version**, and **Namespace**.
 
 This section describes the additional values that you can set.
 
@@ -217,22 +219,17 @@ Here you can add a description of the service. This is available to other users 
 
 ### 5.2 Replace Illegal XML Characters
 
-Some special characters cannot be used in XML. If your data contains these
-characters, the client will get an error. If you set this setting to *Yes*,
-those illegal characters are replaced by the DEL character, and the client will
-not get an error. However, the data that the client receives will not be exactly
-what is stored in your database, because these characters have been replaced.
+Some special characters cannot be used in XML. If your data contains these characters, the client will get an error. If you set this setting to **Yes**, the illegal characters are replaced by the DEL character, and the client will not get an error. However, the data the client receives will not be exactly what is stored in your database because these characters have been replaced.
 
-This *Replace Illegal XML Characters* option is not available when the OData
-version is OData 4, because OData 4 returns data in JSON format.
+The **Replace Illegal XML Characters** option is not available when the OData version is OData 4, because OData 4 returns data in JSON format.
 
-Default value: *No*
+Default value: **No**
 
 ## 6 Runtime Considerations
 
 ### 6.1 General
 
-Once your app is published, a list of the published OData services will be available on the root URL of the app followed by `/odata-doc/`. For example, `http://localhost:8080/odata-doc/`. For each OData 4 service, there is a link to a Swagger UI page that shows an interactive documentation page on which users can interact with the service.
+Once your app is published, a list of the published OData services will be available on the root URL of the app followed by `/odata-doc/` (for example, `http://localhost:8080/odata-doc/`). For each OData 4 service, there is a link to a Swagger UI page that shows an interactive documentation page on which users can interact with the service.
 
 {{% alert color="warning" %}}
 While the API documentation for published OData services is enabled by default, access to it may be restricted by the administrator for apps running in production.
@@ -242,11 +239,11 @@ For details on how to filter the OData response, refer to [OData Query Options](
 
 For details on how Mendix attributes are represented in OData, refer to [OData Representation](/refguide/odata-representation/).
 
-When publishing entities through OData, the entities are retrieved from the Mendix database in a streaming fashion, to avoid out-of-memory errors in the Mendix Runtime.
+When publishing entities through OData, the entities are retrieved from the Mendix database in a streaming fashion to avoid out-of-memory errors in the Mendix Runtime.
 
 ### 6.2 On-Premises Deployments
 
-Some on-premises servers, in particular those using Microsoft IIS, will strip the host header from requests. This means that your OData service and documentation will be published on an unexpected URL.
+Some on-premises servers (in particular, those using Microsoft IIS) will strip the host header from requests. This means your OData service and documentation will be published on an unexpected URL.
 
 To resolve this issue, you will need to ensure your server preserves host headers. See the section [Preserving the Host Header](/developerportal/deploy/deploy-mendix-on-microsoft-windows/#preserve-header) in the *Microsoft Windows* deployment documentation.
 
@@ -256,11 +253,11 @@ The Mendix runtime returns status codes for OData payloads. The possible status 
 
 * `200`, `201`, `204` – [Successful responses](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#successful_responses)
 * `401`, `402`, `403`, `404`, `405`, `422` – [Client error responses](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#client_error_responses)
-* `500` – Mendix default when something goes wrong and it has not been modelled; may or may not be the standard [internal server error](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500)
+* `500` – Mendix default when something goes wrong and it has not been modeled; may or may not be the standard [internal server error](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500)
 
 ## 8 Publishing OData Services
 
-To publish an entity with full CRUD (Create, Read, Update, or Delete functionality, or in Studio Pro, **Insertable**, **Readable**, **Updateable**, and **Deletable**), select the relevant checkboxes in the [Capabilities](/refguide/published-odata-entity/#capabilities) section in [Published OData Entity](/refguide/published-odata-entity/). You can then [Send](/refguide/send-external-object/) and [Delete](/refguide/delete-external-object/) objects using [External Object activities](/refguide/external-object-activities/). 
+To publish an entity with full CRUD (Create, Read, Update, or Delete functionality; or in Studio Pro, **Insertable**, **Readable**, **Updateable**, and **Deletable**), select the relevant checkboxes in the [Capabilities](/refguide/published-odata-entity/#capabilities) section in [Published OData Entity](/refguide/published-odata-entity/). You can then [Send](/refguide/send-external-object/) and [Delete](/refguide/delete-external-object/) objects using [External Object activities](/refguide/external-object-activities/). 
 
 ## 9 Limitations
 

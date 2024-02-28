@@ -25,6 +25,14 @@ Organizations can also have their own Mendix Cloud. This service is named [Mendi
 
 If you are new to the Mendix community and would like to deploy and share your own app, you can do so for free on Mendix's public cloud offering. The Free App environment allows any Mendix developer to create and share their applications with their users. Note that a Free App does not support complex or large applications.
 
+{{% alert color="info" %}}
+Free Apps are part of Mendix's Free Edition.
+
+If you are not currently a customer but would prefer to use a licensed cloud node, you can find more information on the [Mendix Platform Pricing](http://www.mendix.com/pricing) page.
+
+If you are an existing customer, you should deploy into your licensed cloud node.
+{{% /alert %}}
+
 A Free App has several limitations compared to a licensed app. The main limitations are summarized in the table below:
 
 | Feature | Free App | Licensed App |
@@ -47,10 +55,6 @@ A Free App has several limitations compared to a licensed app. The main limitati
 | Historic app logs | Not available; only live logs are available | Available |
 | Backups | Performed daily and cannot be triggered manually; stored for up to two weeks | Performed daily and can also be created manually; kept for up to one year, depending on your plan |
 | Support | No support | Depends on your license option |
-
-{{% alert color="info" %}}
-Free Apps are part of Mendix's Free Edition.<br><br>If you are not currently a customer but would prefer to use a licensed cloud node, you can find more information on the [Mendix Platform Pricing](http://www.mendix.com/pricing) page.<br><br>If you are an existing customer, you should deploy into your licensed cloud node.
-{{% /alert %}}
 
 ¹ End-users of your app are classified as either internal or external. You will need to report this for licensing purposes using either the [USAGE_METRICS_EMAIL_FIELDS custom variable](/developerportal/deploy/environments-details/#custom-environment-variables) (if you are using email domains to distinguish between them) or by [populating the user type](/howto/monitoring-troubleshooting/populate-user-type/) for each end-user of your app. Only end-users whose Mendix accounts are marked as **Active** are counted towards the number of end-users of the app.
 
@@ -97,11 +101,11 @@ Apps that run on Mendix Cloud are automatically given their own URLs. The format
 
 | License Type | Environment | URL Format | Example URL |
 | ------------ | ----------- | ---------- | ----------- |
-| Licensed app | Production  | Depends on the region:<br /> `{app-name}.mendixcloud.com`¹<br />or<br />`{app-name}.apps.{region}.mendixcloud.com`¹ | `myappname.mendixcloud.com`, <br /> `myappname.apps.ap-3a.mendixcloud.com` |
-| Licensed app | Test, acceptance, flexible environments | Depends on the region:<br /> `{app-name}-{environment-type}.mendixcloud.com`¹<br />or<br />`{app-name}-{environment-type}.apps.{region}.mendixcloud.com`¹ | `myappname-accp.mendixcloud.com`, <br /> `myappname-accp.apps.ap-3a.mendixcloud.com` |
+| Licensed app | Production  | Depends on the region:<br /> `{app-name}.mendixcloud.com`<br />or<br />`{app-name}.apps.{region}.mendixcloud.com` | `myappname.mendixcloud.com`, <br /> `myappname.apps.ap-3a.mendixcloud.com` |
+| Licensed app | Test, acceptance, flexible environments | Depends on the region:<br /> `{app-name}-{environment-type}.mendixcloud.com`<br />or<br />`{app-name}-{environment-type}.apps.{region}.mendixcloud.com` | `myappname-accp.mendixcloud.com`, <br /> `myappname-accp.apps.ap-3a.mendixcloud.com` |
 | Free App     | N/A         | `{app-name}-sandbox.mxapps.io`<br />or<br />`{app-name}.mxapps.io` | `myfreeappname.mxapps.io` |
 
-{{% alert color="info" %}}¹The URL of an app on some clusters in a region contains `apps.{region}`. You can select the region only for your app, not for the cluster.{{% /alert %}}
+{{% alert color="info" %}}As shown in the table above, the URL of an app on some clusters in a region contains `apps.{region}`. You can select the region for only your app, not for the cluster.{{% /alert %}}
 
 You can customize a URL by adding [custom domains](/developerportal/deploy/custom-domains/).
 

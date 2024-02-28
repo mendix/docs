@@ -11,9 +11,9 @@ aliases:
 
 ## 1 Introduction
 
-Mendix is the app platform for the enterprise, and in enterprise software it is not likely that you work in a [greenfield project](https://en.wikipedia.org/wiki/Greenfield_project). In almost every situation, you will need to integrate with existing systems. Mendix supports many ways of integration, and this how-to focuses on how you can consume web services with Mendix.
+Mendix is the app platform for the enterprise, and in enterprise software, it is not likely that you work in a [greenfield project](https://en.wikipedia.org/wiki/Greenfield_project). In almost every situation, you will need to integrate with existing systems. This how-to focuses on how you can consume web services with Studio Pro.
 
-In this how-to, you will be using an example web service of [W3Schools](http://www.w3schools.com/). This is a very simple web service that converts temperatures from Celsius to Fahrenheit and vice versa. The converted temperature will be returned as a string value that can be stored in a variable directly. If you want to invoke a web service that returns a complex XML message, you can use the XML-to-domain mappings described in [How to Import XML Documents](/howto/integration/importing-xml-documents/).
+In this how-to, you will use an example web service from [W3Schools](http://www.w3schools.com/). This is a very simple web service that converts temperatures from Celsius to Fahrenheit and vice versa. The converted temperature will be returned as a string value that can be stored in a variable directly. If you want to invoke a web service that returns a complex XML message, you can use the XML-to-domain mappings described in [How to Import XML Documents](/howto/integration/importing-xml-documents/).
 
 This how-to teaches you how to do the following:
 
@@ -27,13 +27,13 @@ A WSDL describes the operations of a web service and can be imported in Studio P
 To import a WSDL, follow these steps:
 
 1. Right-click your module in the **App Explorer** and select **Add other** > **Consumed web service**.
-2. Enter a name for the new consumed web service (for example, **TemperatureConverter**) and click **OK**.
-3. On the **Consumed Web Service** screen. Click **Edit**. Enter `https://www.w3schools.com/xml/tempconvert.asmx?wsdl` as the **URL** and click **Import**.
+2. Enter a name for the new consumed web service (for example, *TemperatureConverter*) and click **OK**.
+3. On the **Consumed Web Service** screen, click **Edit**. Enter `https://www.w3schools.com/xml/tempconvert.asmx?wsdl` as the **URL** and click **Import**.
 4. The **Select Ports** dialog box is displayed for selecting a web service port:
 
     {{< figure src="/attachments/refguide/modeling/integration/consume-a-simple-web-service/18582065.png" >}}
 
-5. Click **OK** to select the default, and click **OK** to close the **WSDL Source** dialog. The operations **CelsiusToFahrenheit** and **FahrenheitToCelsius** are imported into the app:
+5. Click **OK** to select the default, then click **OK** to close the **WSDL Source** dialog. The operations **CelsiusToFahrenheit** and **FahrenheitToCelsius** are imported into the app:
 
     {{< figure src="/attachments/refguide/modeling/integration/consume-a-simple-web-service/18582084.png" >}}
 
@@ -42,11 +42,11 @@ To import a WSDL, follow these steps:
 To create logic to call the web service, follow these steps:
 
 1. Right-click your module in the **App Explorer** and select **Add microflow** from the menu:
-2. Enter a name for the new microflow: *ConvertCelsiusToFahrenheit* and click **OK**.
+2. Name your microflow *ConvertCelsiusToFahrenheit* and click **OK**.
 
     {{< figure src="/attachments/refguide/modeling/integration/consume-a-simple-web-service/18582083.png" >}}
 
-3. An empty microflow will be displayed:
+3. An empty microflow is displayed:
 
     {{< figure src="/attachments/refguide/modeling/integration/consume-a-simple-web-service/18582081.png" >}}
 
@@ -61,13 +61,13 @@ To create logic to call the web service, follow these steps:
     {{< figure src="/attachments/refguide/modeling/integration/consume-a-simple-web-service/18582079.png" >}}
 
 8. Drag a **Call web service** activity from the toolbox and add it to the microflow just before the end event.
-9. Double-click this activity to open the **Call Web Service** properties editor. For the **Operation** of your consumed web service, click **Select**. Expand the **TemperatureConverter** web service and under **TempConvert** click **CelsiusToFahrenheit** and click **Select**:
+9. Double-click this activity to open the **Call Web Service** properties editor. For the **Operation** of your consumed web service, click **Select**. Expand the **TemperatureConverter** web service and under **TempConvert**, click **CelsiusToFahrenheit** > **Select**:
 
     {{< figure src="/attachments/refguide/modeling/integration/consume-a-simple-web-service/18582076.png" >}}
 
-10. In the **Location** section for this operation , check the **Override location** box to override the location and use the secure location of the web service.
-11. Click **Edit** and change `http` to `https` for the URL in the **Location** editor and click **OK**.
-12. In the **SOAP Request Body** tab of the **Call Web Service** properties editor, double-click the **Celsius (optional)** input parameter and enter `toString($TemperatureInCelsius)` for the expression. The web service operation expects a string value, which is why you need to use the `toString` function. Then click **OK**.
+10. In the **Location** section for this operation, check the **Override location** box to override the location and use the secure location of the web service.
+11. Click **Edit** and change `http` to `https` for the URL in the **Location** editor, then click **OK**.
+12. In the **SOAP Request Body** tab of the **Call Web Service** properties editor, double-click the **Celsius (optional)** input parameter and enter `toString($TemperatureInCelsius)` for the expression, as the web service operation expects a string value. Then, click **OK**.
 
     {{< figure src="/attachments/refguide/modeling/integration/consume-a-simple-web-service/18582075.png" >}}
 

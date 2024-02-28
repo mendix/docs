@@ -100,6 +100,8 @@ The output is described in the table below:
 | ------------------------------------------------------------ | ------ |
 | A string representation of the decimal in the format specified by the `format` parameter. | String |
 
+Note that the exact output may depend on the Java version and user locale, depending on the passed format.
+
 ### 3.3 Microflow Examples
 
 The examples below illustrate which value the expression returns:

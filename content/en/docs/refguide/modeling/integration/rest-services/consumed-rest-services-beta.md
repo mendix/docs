@@ -22,7 +22,7 @@ This feature is supported for [Mendix Studio Pro 10.6](/releasenotes/studio-pro/
 You can use this Consumed REST service document to do the following:
 
 * Consume a REST service
-* Configure `GET`, `POST`, `PUT`, `PATCH` and `DELETE` requests
+* Configure `GET`, `POST`, `PUT`, `PATCH`, and `DELETE` requests
 * Create entities directly in the domain model
 * Send REST requests through a microflow
 

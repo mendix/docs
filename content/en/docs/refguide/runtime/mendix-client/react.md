@@ -165,7 +165,7 @@ Pluggable widgets must be built with pluggable-widget-tools version 9.4.1 or lat
 
 The React Client introduces some minor changes to the DOM structure of the Mendix application. These changes can have an impact on your styles defined in SCSS. To avoid any issues, test your custom styles before deploying the updated application.
 
-If your application's navigation bar does not fill the entire screen, you are likely using an outdated version of the [Atlas Core](https://marketplace.mendix.com/link/component/117187) module. Please update it to the latest version. Also make sure to not set the SCSS variable `$use-modern-client` anywhere in your custom styles.
+If your application's navigation bar does not fill the entire screen, you are likely using an outdated version of the [Atlas Core](https://marketplace.mendix.com/link/component/117187) module. Please update it to the latest version.
 
 ### 3.8 JavaScript action
 

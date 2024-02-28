@@ -14,7 +14,7 @@ The [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) all
 
 The current scope covers text generation use cases based on the [OpenAI Chat Completions API](https://platform.openai.com/docs/api-reference/chat), image generation use cases based on the [Image Generations API](https://platform.openai.com/docs/api-reference/images), and embeddings use cases based on the [Embeddings API](https://platform.openai.com/docs/api-reference/embeddings).
 
-Image generation with the DALL-E models is currently supported only by OpenAI, while Azure OpenAI only supports it in preview mode. For all other operations, Mendix provides dual platform support for OpenAI as well as Azure OpenAI.
+Image generations with the DALL-E models is currently supported only by OpenAI, while Azure OpenAI only supports it in preview mode. For all other operations, Mendix provides dual platform support for OpenAI as well as Azure OpenAI.
 
 ### 1.1 Typical Use Cases {#use-cases}
 

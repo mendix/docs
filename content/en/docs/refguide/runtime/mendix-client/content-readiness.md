@@ -15,7 +15,7 @@ If the Marketplace content you are interested in is not included in the list, ad
 
 ## 2 Marketplace Content Status
 
-The following tables shows for popular platform-supported marketplace content whether it is ready for the react client (✅) or not (❌). We will continuously update this table as we improve the compatibility of our marketplace content.
+The following table shows which of the more popular platform-supported marketplace content is ready for the react client (✅) or not (❌). We will continuously update this table as we improve the compatibility of our marketplace content.
 
 | Marketplace Content | React Ready |
 | --- | --- |

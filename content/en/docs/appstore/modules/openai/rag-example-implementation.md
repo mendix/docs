@@ -53,7 +53,7 @@ You have access to a (remote) PostgreSQL database with the [pgvector](https://gi
 
 4. Go to **Step 3: Knowledge Base** and create embeddings from a text and store. You can use our default text about ornamental flowering plants, or paste your own content.
 
-5. Go to **Step 4: Embedding Vectors**. Verify the embedding vectors that have been created in your new database. If you ever want to go back to load different content instead, Mendix recommends using the clear button here first.
+5. Go to **Step 4: Embedding Vectors**. Verify the embedding vectors have been created in your new database. If you ever want to go back to load different content instead, Mendix recommends using the clear button here first.
 
 6. Go to **Step 5: User Prompt** and do as follows:
    1. Ask something about the entered text. The system prompt is automatically enriched with the chunks of text from the knowledge base that are most relevant for the user query. 
@@ -78,14 +78,14 @@ If you would like to build your own RAG setup, feel free to learn from the OpenA
 
 * For RAG, you need a storage space for high-dimensional embedding vectors outside of your normal Mendix app database. Typically, this is a remote vector database. In order to connect to it, the OpenAI showcase application uses the Mendix database connector. See [Vector Database Setup](/appstore/modules/openai/vector-database-setup/) for more details.
 
-* The OpenAI showcase application relies on a PostgreSQL solution with the pgvector extension included. Even if you choose to use a different vector database, the queries or statements, which you will have to do, should probably cover at least the following:
-    * Include the vector extension if applicable.
+* The OpenAI showcase application relies on a PostgreSQL database with the pgvector extension included. Even if you choose to use a different vector database, the database queries and statements, which you will have to perform, should cover at least the following:
+    * Include the vector extension if applicable (create extension).
     
-    * Create tables to store the embeddings (create table).
+    * Create tables to store the embedding vectors (create table).
     
-    * Add new embeddings to tables (insert).
+    * Add new embedding vectors to tables (insert).
     
-    * Find top-k nearest neighbors (select query; typically using cosine distance optimization as recommended by OpenAI).
+    * Find top-k nearest neighbors (select query; typically using cosine distance/similarity optimization as recommended by OpenAI).
     
     * Remove individual records (delete) or tables (drop table).
 

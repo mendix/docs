@@ -10,7 +10,7 @@ tags: ["OpenAI", "generative AI", "AI", "connector", "marketplace", "chatgpt", "
 
 ## 1 Introduction {#introduction}
 
-Vector databases play an important role in embeddings-based AI usecases by facilitating efficient storage, retrieval, and manipulation of high-dimensional vectors representing textual or semantic information. A crucial step within those usecases like Semantic Search and Retrieval Augmented Generation (RAG) is to find the closest and thus most similar pieces of information to a given semantic input. Those similarity and distance calculations between high-dimensional vectors cannot be done on a normal database and thus a vector databse is needed.
+Vector databases play an important role in embeddings-based AI usecases by facilitating efficient storage, retrieval, and manipulation of high-dimensional vectors representing textual or semantic information. A crucial step within those usecases like Semantic Search and Retrieval Augmented Generation (RAG) is to find the closest and thus most similar pieces of information to a given semantic input. Those similarity and distance calculations between high-dimensional vectors cannot be done on a normal database and thus a vector database is needed.
 This page describes how a PostgreSQL vector database can be setup to explore embeddings-based usecases with the [OpenAI Showcase App](https://marketplace.mendix.com/link/component/220475).
 
 {{% alert color="info" %}}
@@ -114,7 +114,7 @@ If no action is taken, resources in AWS will stay around indefinitely. Make sure
 
 Setting up an AWS RDS database with the pgvector extension is one of the easiest options for using a vector database for our sample implementation. However, there are also alternatives and general considerations, which are described in this section.
 
-### 5.1 Running a PostgreSQL Database locally {#local-database}
+### 5.1 Running a PostgreSQL Database Locally {#local-database}
 
 It is possible to run a PostgreSQL database locally. It is useful to familiarize yourself with PostgreSQL and tooling like pgAdmin. 
 
@@ -137,7 +137,7 @@ If you get the error message **FATAL: password authentication failed for user "p
 When this occurs, do as follows:
 
 1. Make sure the configuration was set up correctly. Re-enter the password to be sure.
-2. Close all browser tabs that opened the Mendix app. 
+2. Close all browser tabs. 
 3. Shut down the app locally and run the app again.
 
 ### 6.2 Error in Logs of the Mendix App about the Extension "Vector" {#extension-error}
@@ -146,7 +146,7 @@ If there is an error in the logs of your Mendix app about the extension called â
 
 When this occurs, make sure that you use the PostgreSQL version 11 or above. If you are using a PostgreSQL database on your local machine, make sure you have followed all the installation prerequisites specific for your setup and operating system. 
 
-### 6.3 Timeout Error in  Logs of the Mendix App When You Try to Connect to the External Database {#timeout-error}
+### 6.3 Timeout Error in Logs of the Mendix App When You Try to Connect to the External Database {#timeout-error}
 
 If there is a timeout error in the logs of my Mendix app when you try to connect to the external database, the cause could be that some company network prohibits connections to AWS servers. 
 

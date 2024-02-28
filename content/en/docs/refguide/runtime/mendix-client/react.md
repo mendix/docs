@@ -62,6 +62,8 @@ JavaScript actions must not use any of the following client apis:
 
 These APIs are related to dojo and are no longer needed. For opening pages, please use the Nanoflow action [Show Page](/refguide/show-page) instead.
 
+Fore more information please refer to our [React Client API Documentation](https://apidocs.rnd.mendix.com/10/client-react/index.html)
+
 ### 2.4 Enable React Client
 
 To enable the React Client for your Mendix project, make sure it fulfills the prerequesites above and then enable it in the [App Settings](/refguide/app-settings/#react-client).

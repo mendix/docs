@@ -99,7 +99,7 @@ Click **Edit** at top-right corner of **Entity Preview**. This will render a pop
 Once you are satisfied with the changes, click **OK** to save or **Cancel** to discard your changes.
 
 {{% alert color="info" %}}
-The **Edit Entity** feature is useful for CSV import, as all the columns of an CSV file are marked as String by default, so you can change the data type if necessary. The following table shows the source-to-target data conversion matrix:
+The **Edit Entity** feature is useful for CSV import, as all the columns of a CSV file are marked as String by default, so you can change the data type if necessary. The following table shows the source-to-target data conversion matrix:
 
 Input CSV File
 

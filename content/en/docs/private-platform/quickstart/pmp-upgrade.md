@@ -15,7 +15,7 @@ This document provides a guide for upgrading the Private Mendix Platform.
 If you have installed Private Mendix Platform before, you can upgrade it by doing the following steps:
 
 1. Ensure that your Mendix Operator version is 2.12 or newer.
-2. Reinstall PCLM as described in the [Installing Private Cloud License Manager](#install-pclm) section above.
+2. Reinstall PCLM as described in [Installing Private Cloud License Manager](/private-mendix-platform-quickstart/install/#install-pclm).
 3. Run the command `./installer platform -n=<namespace name>`, where `-n` indicates the namespace where your Private Mendix Platform is installed.
 4. Click **Upgrade Namespace**.
 

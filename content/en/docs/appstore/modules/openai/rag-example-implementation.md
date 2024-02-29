@@ -1,6 +1,6 @@
 ---
 title: "RAG Example Implementation in the OpenAI Showcase Application"
-url: /appstore/connectors/openai-connector/rag-example-implementation/
+url: /appstore/modules/openai-connector/rag-example-implementation/
 category: "Open AI"
 linktitle: "RAG Example Implementation"
 weight: 5

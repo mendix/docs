@@ -103,17 +103,17 @@ We are working on a batch conversion for image widgets that lets you convert all
 
 ### 3.3 Reference Selector{#reference-selector}
 
-The Reference selector widgets (Reference selector, Reference set selector, Input reference set selector) are not supported in the React Client. They should be replaced with the [Combo Box](/appstore/widgets/combobox) widget. The Combo box widget can be [downloaded from the Mendix Marketplace](https://marketplace.mendix.com/link/component/219304).
+The reference selector widgets ([Reference Selector](/refguide/reference-selector/), [Reference Set Selector](/refguide/reference-set-selector/), and [Input Reference Set Selector](/refguide/input-reference-set-selector/)) are not supported in the React Client. To leverage React, replace them with the [Combo Box](/appstore/widgets/combobox) widget. The combo box widget can be [downloaded from the Mendix Marketplace](https://marketplace.mendix.com/link/component/219304).
 
-To replace a Reference selector widget, follow these steps:
+To replace a reference selector widget, follow these steps:
 
-1. Add a Combo box widget next to the original widget.
-1. Set the Attribute, Caption and Label properties to match the original widget.
+1. Add a combo box widget next to the original widget.
+1. Set the **Attribute**, **Caption**, and **Label** properties to match the original widget.
 1. Set any other properties to match the original widget.
 
-To replace a Reference Set Selector widget, follow these steps:
+To replace a reference set selector widget, follow these steps:
 
-1. Add a Combo box widget next to the original widget.
+1. Add a combo box widget next to the original widget.
 1. Set the Attribute to the association used as Data source in the original widget.
 1. Set the Caption to the attribute used in the column of the original widget or use an expression to reflect multiple columns.
 1. Set the Label to a meaningful label for the attribute.
@@ -138,9 +138,9 @@ We are working on an automatic conversion for reference selector widgets that le
 
 ### 3.4 Data Grid{#data-grid}
 
-The Data grid widget is not supported in the React Client. It should be replaced with the [Data grid 2](/appstore/modules/data-grid-2) widget. The Data grid 2 widget is part of the [Data Widgets Module on the Mendix Marketplace](https://marketplace.mendix.com/link/component/116540).
+The Data grid widget is not supported in the React Client. To leverage React, replace it with the [Data Grid 2](/appstore/modules/data-grid-2) widget. The Data grid 2 widget is part of the [Data Widgets Module on the Mendix Marketplace](https://marketplace.mendix.com/link/component/116540).
 
-To automatically convert a Data grid right click on the widget or the error message and select Convert to Data grid 2.
+To automatically convert a Data Grid widget to a Data Grid 2, right click on the widget (or the error message) and select **Convert to Data Grid 2**.
 
 {{% alert color="info" %}}
 We are working on a batch conversion for data grid widgets that lets you convert all data grids in your project with a few clicks. We will announce the release in our [Release Notes](/releasenotes/studio-pro/10).

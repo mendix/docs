@@ -22,7 +22,9 @@ To access the **Pipelines** page, open your app in the Developer Portal. Then se
 The **Pipelines** page has three tabs: **Runs**, **Designs**, and **Settings**. You can see all three tabs as soon as your app has its first pipeline saved.
 
 {{% alert color="info" %}}
-If your app does not have any pipelines yet, skip to [Designing a New Pipeline](#design-pipeline), below. If you need to configure your user settings so that you can run a pipeline for the first time, skip to [Configuring User Settings](#configure-settings).
+If your app does not have any pipelines yet, skip to [Designing a New Pipeline](#design-pipeline), below.
+
+If you need to configure your user settings so that you can run a pipeline for the first time, skip to [Configuring User Settings](#configure-settings).
 {{% /alert %}}
 
 ## 2 The Runs Tab{#runs-tab}
@@ -128,7 +130,7 @@ Your pipeline can include the following steps:
 * Start Pipeline – This is a mandatory step for each pipeline; you cannot delete this step. This step defines the conditions that will automatically trigger the pipeline to run. To configure this step, define the conditions on which the pipeline should start; you can set the pipeline to run in response to either of the following triggers:
     * Teamserver push (Git) – The pipeline runs when a new push is made to Teamserver (Git) for the specified branch. For details on specifying the branch in the **Branch Expression** field, see [Branch Expression](#branch-expression), below.
     * Recurring schedule – The pipeline runs on a recurring weekly schedule, on the days and times you specify. Times are set in UTC.
-* Checkout – Check out a branch.
+* Checkout – Check out a branch. To configure this step, use the drop-down menu to select the branch to check out; you will be able to select either the main branch or one of your most recently used branches.
 * Build – Build a deployment package based on the latest major, minor, or patch version of the branch you checked out. The highest version is incremented based on the increment settings specified in this step.
 * Publish – Publish the newly built deployment package to a repository.
 * Stop Environment – Stop a selected environment.

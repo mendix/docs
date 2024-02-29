@@ -13,6 +13,12 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2024
 
+### February 29, 2024
+
+#### Fixes
+
+* We addressed a potential security vulnerability.
+
 ### February 8, 2024
 
 #### Fixes

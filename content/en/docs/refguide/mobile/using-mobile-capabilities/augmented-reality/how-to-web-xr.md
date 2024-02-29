@@ -10,10 +10,35 @@ tags: "AR", "VR", "XR", "WebXR"
 
 ## 1 Introduction
 
-The following document will describe how to get started using WebXR technology with Mendix.
-In this guide we'll go over what WebXR is in a nutshell, what widgets are available and how to quickly get started
+With the WebXR widgets you can build fully immersive XR (meaning both AR and VR) experiences. This module contains the following widgets:
 
-## 2 Prerequisites {#prerecs}
+Container widgets:
+
+- Container (XR)
+- Node (XR)
+- Repeater (XR)
+
+3D Object widgets:
+
+- Text (XR)
+- 3D Object (XR)
+- Sphere (XR)
+- Cube (XR)
+- Square (XR)
+
+### 1.1 Features
+
+- Allows you to show 3D objects in either a VR or AR space, fully immersive or just in the browser.
+- Allows you to use Mendix microflow and nanoflows to model out interactions with these 3D objects.
+
+## 2 Configuration
+
+These widgets require a certain configuration to work, where all the widgets need to be contained in the **Container (XR)**. There can only be one Container (XR) per page. This then contains all the other widget you want to use.
+A very simple configuration could be:
+
+{{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-webxr/container-with-cube.jpg" alt="Container (AR) with Cube (AR)"  width="400"  >}}
+
+### 2.1 Important prerequisite
 
 The most important prerequisite is that you'll have to run the project through the HTTPS protocol for WebXR to work. The preview can still be seen through the normal HTTP protocol, but the button to start the XR session will be hidden. If you're not able to see this button, this is probably why.
 
@@ -28,88 +53,104 @@ Here is that same scene with that button:
 Currently it's not possible to start the experience without the user clicking the button. This is due to the user needing to give permission to have their space taken over by this experience, and not being surprised by this happening.
 Depending on which browser you plan to use, you'll need to enable the WebXR feature flags.
 
-These are all requirements set by the WebXR standard, which is the underlying technology enabling the features in these widgets.
-While the application starts in a regular web browser, it's possible to start an immersive experience that's indistinguishable from native implementations. However, it must be said that not all native features are available for WebXR. For example, positioning will not be saved between sessions. Meaning that if you place an object in a room in an immersive experience, it will not be there again when you come back to it in a later session. More info about WebXR: https://developer.mozilla.org/en-US/docs/Web/API/WebXR_Device_API.
+## 3 Container widgets
 
-## 3 Exploring the WebXR widgets
+Container widgets are widgets which contain other widgets. Either to move multiple widgets as one, or to be able to repeat a certain configuration.
 
-Currently there are 9 WebXR widgets. They are very similar to the AR widgets available for Native Mobile. While based on the same technology, they are different from the Native Mobile widgets in that they can also be used for VR (Virtual Reality) in addition to AR (Augmented Reality) and don't use native functionality but rely on the WebXR standard.
-Next, we'll go over all the currently available widgets. These are based on the native widgets, and share a lot of functionality. More on the Native AR widgets [here](/refguide/mobile/using-mobile-capabilities/augmented-reality/_index.md/).
+### 3.1 Container (XR)
 
-There are two types of WebXR widgets, the Container type widgets and the 3D object type widgets.
-
-### Container type widgets
-
-Container widgets are WebXR widgets which can contain an other widget. Currently the following container widget exist in the WebXR module:
-
-#### Container (XR)
-
-This is the widgets that contains all other AR widgets, it is what can start and stop the experience and has scene-wide properties. For example, the reflection map for the lighting in the scene can be set here.
+This is the widget that contains all other AR widgets, it is what can start and stop the experience and has scene-wide properties. For example, the reflection map for the lighting in the scene can be set here. Only one of these widgets can be used per page.
 It has the following properties that can be set in Studio Pro:
 
-On the **General** tab:
+#### 3.1.1 General tab
 
 - **Camera distance** - The distance in meters from the 3D model, this can be altered to make sure the entire scene is in view.
 - **Starting position** - This is the position which is at the center of the preview, changing this will change the point the camera is focussed on. **X** is the left to right axis, **Y** is the up and down axis and **Z** is the depth axis.
 - **Realistic lighting** - When an object uses **Realistic Lighting**, an environment map can be added here. The environment map is what will be reflected on those objects.
 
-#### Node (XR)
+### 3.2 Node (XR)
 
 An empty container widget which can be used to group other widgets. This is useful for when you want to move multiple objects as one, or scale multiple objects as one. It also has a **Billboard rotation** feature, which can be used to have objects rotate to always face the user.
-It has the following properties that can be set in Studop PRo:
+It has the same properties as [3D Object widgets](#3dobject), with the following addition:
 
-On the **General** tab:
+#### 3.2.1 General tab
 
 - **Billboard rotation** - **None**, **Billboard**, **Billboard X** or **Billboard Y**. Sets wether billboarding should be enabled and on which axis it should occur
-- **Position** -
-- **Rotation** -
-- **Scale** -
 
-On the **Interaction** tab:
+### 3.3 Repeater (XR)
 
-- **Dragging** - **Yes** or **No** sets wether to activate the dragging interface
+The Repeater (XR) widget allows the user to create one configuration and repeat that a number of times based on a datasource.
 
-- **Enable dragging** - Sets wether the dragging interface should be active at this moment. This could for example be switched on and off when the user clicks a specific 3D object
+#### 3.3.1 General tab
 
-- **Type** - **Fixed distance** or **Fixed to world**, sets wether
+- **Data Source** - The datasource based on which the objects should be repeated. For example, this could have a list of 5 objects that have a hex color value. Based on this, while only modeling out 1 **Sphere (XR)** object where the color value could be tied to this. Creating 5 **Sphere (XR)** with different colors.
 
-##### Properties
+## 4 3D Object widgets {#3dobject}
 
-#### Properties of container widgets
+These are widgets that show a 3D Object, either predetermained (like **Cube (XR)**, **Sphere (XR)** and **Square (XR)**) or based on input (**3D Object (XR)** and **Text (XR)**)
 
-### 3D object type widgets
+### 4.1 Shared properties
 
-#### Types of 3D object widgets
+These properties exist for all 3D Object widgets (**Cube (XR)**, **Sphere (XR)**, **Square (XR)**, **3D Object (XR)** ,**Text (XR)** and the **Node (XR)** widget)
 
-#### Properties of 3D object widgets
+#### 4.1.1 General tab
 
-### 3D Object (XR)
+- **Position** - Sets the position of the Node in meters. Setting **X** to 1 means the Node will be placed 1 meter to the right. **Y** controls the up and down axis. **Z** moves the Node front to back.
+- **Rotation** - Sets the rotation of the Node in degrees (from 0 degrees to 360 degrees) on three axis.
+- **Scale** - Sets the scale of the object, this multiplies the size of the object as it is. If the objects is 1 meter wide, setting the **X** to 2 will make the object 2 meters wide.
+
+#### 4.1.2 Material tab
+
+- **Type**
+  - **Object** - Only available for **3D Object (XR)**, selecting this will make the object use the material as present on the 3D Object.
+  - **Texture** - Sets a Static or Dynamic image for this object. This image will then be mapped onto the 3D object.
+  - **Color** - Sets a solid color on an object, this should be provided in the #rrggbb format.
+- **Opacity** - The transparency of the object, 0 is seethrough, 1 is opaque.
+
+- **Lighting**
+  - **Type** - The kind of lighting that should be used on this object. **Simple** lighting is more basic looking, but easier to render, leading to better framerates. **Realistic** lighting shows more complex reflections and adds options for the type of material this object is supposed to have:
+    - **Roughness** - Takes a value from 0 - 1, where with 0 the object is smooth as glass, with higher values making it more matte.
+    - **Metalness** - Takes a value from 0 - 1, where 0 will make an object appear more like plastic, with 1 making an object appear metallic.
+
+#### 4.1.3 Interaction tab
+
+All interactions are done through a mesh like interface around the object. The different types of interaction (scaling, rotating and position) are all done with this one interface. The different options can be enabled or disabled independently.
+
+- **Dragging**
+
+  - **Dragging** - **Yes** or **No** sets wether to activate the dragging interface
+  - **Enable dragging** - Sets wether the dragging interface should be active at this moment. This could for example be switched on and off when the user clicks a specific 3D object
+  - **Type** - **Fixed distance** or **Fixed to world**, sets wether the dragging should be at a fixed distance in front of the user (**Fixed distance**), or if the object should 'stick' to the world (**Fixed to world**).
+  - **On drag** - An event called when the object is dragged.
+
+- **Pinching**
+  - **Scaling interaction** - **Yes** or **No**, wether this interface should be enabled at all.
+  - **Enable scaling interface** - **Yes** or **No**, wether this interface should be enabled at this moment. This can be connected to a clicking event, for example, when a user clicks on an object the interface could appear allowing a user to make changes to it.
+  - **Enabled rotation interface** - **Yes** or **No**, works the same as the scaling interface, but for rotation instead.
+  - **Scaling interface color** - The color of that interface, should be provided in the #rrggbb format.
+  - **Scaling interface size** - The size of the object in the interface in meters.
+  - **On scale** - An event called when the object is scaled.
+
+#### 4.1.4 Events tab
+
+- **On click** - An event called when object is clicked
+- **On hover enter** - An event called when the user hovers over object, without clicking it.
+- **On hover exit** - An event called when the user stops hovering over an object.
+
+### 4.2 Each widget and their specific properties
+
+#### 4.2.1 3D Object (XR)
 
 Shows 3D object, in gltf or glb formats. Requires a link to a 3D Object to show. 3D Objects can be shown in their original size and material by not altering the **Scale** and setting the **Material** to **Object**. The object will appear in the scale that it was made, meaning that 1 unit will be 1 meter. Units can differ between modeling programs (sometimes a unit is a meter, sometimes a unit is a centimeter, sometimes the modeler doesn't take actual size into account and only works relatively), so it's good to check that the model is of the size you expect it to be. If it's too large or too small, you can adjust it with the Scale property on this widget.
 Apart from the properties also found on the other AR widgets, the **3D Object (XR)** widget has a **URL** property:
 
 - **URL** - the **URL** to the 3D object that should be shown here. Has to be either of the glb or gltf format.
 
-### Cube (XR), Sphere (XR), Square (XR)
+#### 4.2.2 Cube (XR), Sphere (XR), Square (XR)
 
 Shows a predetermined object, either a cube, sphere or square. These are quite simple objects to help you quickly create something (eg. use the **Sphere (XR)** in combination with a map of the world to create a globe).
-The properties on these widgets are mostly the same as their [native counterparts](/refguide/mobile/using-mobile-capabilities/augmented-reality/how-to-ar-simple-cube.md/).
 
-### Text (XR)
+#### 4.2.3 Text (XR)
 
 Shows a 3D representation of the current set **Text**, which can be dynamically changed. Due to how this is implemented in the library we're using for these widgets, the object will be completely destroyed and recreated when changing the text so performance does take a hit during this.
 The properties of this widgets are the same as other AR widgets, with an extra **Text** property for the actual text this widget should show.
-
-### Node (XR)
-
-An empty container widget which can be used to group other widgets. This is useful for when you want to move multiple objects as one, or scale multiple objects as one. It also has a **Billboard rotation** feature, which can be used to have objects rotate to always face the user.
-
-### Repeater (XR)
-
-Shows nothing on it's own, this is a container widget which takes a **Data source** and can repeat other AR widgets based on that **Data source**.
-
-## 4 Widget usage
-
-These widgets do require a certain setup to work, a page can only have 1 **Container (XR)** widget. In this container widget you can put any number of the other AR widgets.
-
-{{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-webxr/container-with-cube.jpg" alt="Container (AR) with Cube (AR)"  width="400"  >}}

@@ -87,7 +87,7 @@ Read further for guides that allow you convert your app so it is ready for the R
 
 ### 3.1 Marketplace Components{#marketplace}
 
-Not all Mendix Marketplace components are ready for the React Client. Refer to [Marketplace Content Rect Readiness](/refguide/mendix-client/content-readiness) to see which of the most popular marketplace components are React ready. If a module or widget you are using is not on the list, test it for yourself then reach out to the authors to update it if not.
+Not all Mendix Marketplace components are ready for the React Client. Refer to [Marketplace Content React Readiness](/refguide/mendix-client/content-readiness) to see which of the most popular marketplace components are React ready. If a module or widget you are using is not on the list, test it for yourself then reach out to the authors to update it if not.
 
 Mendix recommends refreshing all Marketplace components in your app before enabling the React Client.
 

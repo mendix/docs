@@ -58,7 +58,7 @@ Embeddings are commonly used for:
 Combine embeddings with text generation capabilities and leverage specific sources of information to create a smart chat functionality tailored to your own knowledge base.
 
 {{% alert color="info" %}}
-See [RAG Example Implementation in the OpenAI Showcase Application](/appstore/connectors/openai-connector/rag-example-implementation/) for more information on how to set up a vector database for retrieval augmented generation (RAG). Also, check out our [showcase app](https://marketplace.mendix.com/link/component/220475) for an example implementation.
+See [RAG Example Implementation in the OpenAI Showcase Application](/appstore/modules/openai-connector/rag-example-implementation/) for more information on how to set up a vector database for retrieval augmented generation (RAG). Also, check out our [showcase app](https://marketplace.mendix.com/link/component/220475) for an example implementation.
 {{% /alert %}}
 
 ### 1.2 Features {#features}
@@ -256,7 +256,7 @@ The domain model in Mendix is a data model that describes the information in you
 
 #### 4.1.1 Configuration {#configuration-domain-model}
 
-{{< figure src="/attachments/appstore/connectors/openai-connector/domainModel-Configuration.png" class="image-border" >}}
+{{< figure src="/attachments/appstore/modules/openai-connector/domainModel-Configuration.png" class="image-border" >}}
 
 ##### 4.1.1.1 `Configuration` {#configuration-entity} 
 
@@ -292,7 +292,7 @@ This entity is only used to send a simple [chat completions request](#chat-compl
 
 #### 4.1.2 Generalizations {#generalizations-domain-model}
 
-{{< figure src="/attachments/appstore/connectors/openai-connector/domainModel-Generalizations.png" class="image-border" >}}
+{{< figure src="/attachments/appstore/modules/openai-connector/domainModel-Generalizations.png" class="image-border" >}}
 
 ##### 4.1.2.1 `AbstractUsage` {#abstractusage}
 
@@ -316,7 +316,7 @@ This is the abstract entity for `ChatCompletionsMessage`. Do not use this entity
 
 #### 4.1.3 Chat Completions {#chatcompletions-domain-model}
 
-{{< figure src="/attachments/appstore/connectors/openai-connector/domainModel-ChatCompletionsWithSession.png" class="image-border" >}}
+{{< figure src="/attachments/appstore/modules/openai-connector/domainModel-ChatCompletionsWithSession.png" class="image-border" >}}
 
 ##### 4.1.3.1 `ChatCompletionsRequest` {#chatcompletionsrequest} 
 
@@ -394,7 +394,7 @@ This is a specialization of the [AbstractChatCompletionsMessage](#abstractchatco
 
 #### 4.1.4 Image Generations {#imagegenerations-domain-model}
 
-{{< figure src="/attachments/appstore/connectors/openai-connector/domainModel-Images.png" class="image-border" >}}
+{{< figure src="/attachments/appstore/modules/openai-connector/domainModel-Images.png" class="image-border" >}}
 
 ##### 4.1.4.1 `ImageGenerationsRequest` {#imagegenerationsrequest} 
 
@@ -449,7 +449,7 @@ This is an entity that is used to map the [image](#image) data from the API resp
 
 #### 4.1.5 Embeddings {#embeddings-domain-model}
 
-{{< figure src="/attachments/appstore/connectors/openai-connector/domainModel-EmbeddingsWithDataBatch.png" class="image-border" >}}
+{{< figure src="/attachments/appstore/modules/openai-connector/domainModel-EmbeddingsWithDataBatch.png" class="image-border" >}}
 
 ##### 4.1.5.1 `EmbeddingsRequest` {#embeddingsrequest} 
 
@@ -798,7 +798,7 @@ The following flows may be used in order to construct and handle the required in
 
 For more inspiration or guidance on how to use those microflows in your logic, Mendix highly recommends downloading the [showcase app](https://marketplace.mendix.com/link/component/220475) from the Marketplace that displays a variety of example use cases.
 
-{{% alert color="info" %}}For more information on how to set up a vector database for retrieval augmented generation (RAG),  see [RAG Example Implementation in the OpenAI Showcase Application](/appstore/connectors/openai-connector/rag-example-implementation/).{{% /alert %}}
+{{% alert color="info" %}}For more information on how to set up a vector database for retrieval augmented generation (RAG),  see [RAG Example Implementation in the OpenAI Showcase Application](/appstore/modules/openai-connector/rag-example-implementation/).{{% /alert %}}
 
 ## 6 Troubleshooting {#troubleshooting}
 

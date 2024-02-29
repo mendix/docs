@@ -9,23 +9,23 @@ tags: ["runtime", "mendix client", "react client"]
 
 ## 1 Introduction
 
-The Mendix Marketplace contains many useful and reusable widgets and modules created by Mendix as well as by our partners and community. Not all content found in the Mendix Marketplace is ready for the React Client, yet, including platform-supported content provided by Mendix. This guide will help you understand which of the popular modules are widgets are ready for the React Client and which are not.
+The Mendix Marketplace has several reusable widgets and modules created by Mendix, as well other made by our partners and community. Not all content found in the Mendix Marketplace is ready for the React Client yet, including platform-supported content provided by Mendix. This guide will help you understand which of the popular widgets and modules are ready for the React client and which are not.
 
-If the Marketplace content you are interested in is not included in the list, add it to your application with the React Client enabled and look out for consistency errors.
+If the Marketplace component you are interested in is not included on this list, add it to your application with the React client enabled, see if consistency errors arise, and troubleshoot them.
 
 ## 2 Marketplace Content Status
 
-The following table shows which of the more popular platform-supported marketplace content is ready for the React Client (✅) or not (❌). We will continuously update this table as we improve the compatibility of our marketplace content.
+The following table shows which of the more popular platform-supported Marketplace components are ready for the React client (✅) or not (❌). We will continuously update this table as we improve the compatibility of our Marketplace components.
 
 | Marketplace Content | React Client Ready |
 | --- | --- |
 | [Community Commons](https://marketplace.mendix.com/link/component/170) | ✅ |
 | [Mx Model Reflection](https://marketplace.mendix.com/link/component/69) | ❌ |
-| [Excel importer](https://marketplace.mendix.com/link/component/72) | ❌ |
+| [Excel Importer](https://marketplace.mendix.com/link/component/72) | ❌ |
 | [Encryption](https://marketplace.mendix.com/link/component/1011) | ❌ |
 | [SAML](https://marketplace.mendix.com/link/component/1174) | ❌ |
-| [Excel exporter](https://marketplace.mendix.com/link/component/726) | ❌ |
-| [Deep link module](https://marketplace.mendix.com/link/component/43) | ✅ |
+| [Excel Exporter](https://marketplace.mendix.com/link/component/726) | ❌ |
+| [Deep Link Module](https://marketplace.mendix.com/link/component/43) | ✅ |
 | [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513) | ✅ |
 | [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515) | ✅ |
 | [Data Widgets](https://marketplace.mendix.com/link/component/116540) | ✅ |
@@ -37,11 +37,11 @@ The following table shows which of the more popular platform-supported marketpla
 | [MendixSSO](https://marketplace.mendix.com/link/component/111349) | ✅ |
 | [OData Connector for SAP solutions](https://marketplace.mendix.com/link/component/74525) | ✅ |
 | [Atlas Web Content](https://marketplace.mendix.com/link/component/117183) | ✅ |
-| [Forgot Password module](https://marketplace.mendix.com/link/component/1296) | ❌ |
+| [Forgot Password Module](https://marketplace.mendix.com/link/component/1296) | ❌ |
 | [Audittrail](https://marketplace.mendix.com/link/component/138) | ❌ |
 | [DatabaseReplication](https://marketplace.mendix.com/link/component/160) | ❌ |
 | [ObjectHandling](https://marketplace.mendix.com/link/component/37114) | ✅ |
-| [Administration module](https://marketplace.mendix.com/link/component/23513) | ✅ |
+| [Administration Module](https://marketplace.mendix.com/link/component/23513) | ✅ |
 | [Push Notifications Connector](https://marketplace.mendix.com/link/component/3003) | ❌ |
 | [AnyChart](https://marketplace.mendix.com/link/component/106517) | ❌ |
 | [Mendix Application Performance Diagnostics](https://marketplace.mendix.com/link/component/6127) | ❌ |

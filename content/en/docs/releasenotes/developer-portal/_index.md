@@ -21,7 +21,7 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 #### Improvements
 
-* The Feedback API has been improved. We are happy to release our new REST Feedback API. The new API will replace the existing SOAP API, but it also comes with extra functionality like being able to retrieve the screenshot for a feedback item. Check out the [docs](/apidocs-mxsdk/apidocs/feedback-api-2/) for more information. The following changes have been made:
+* The Feedback API has been improved. We are happy to release our new REST Feedback API. The new API will replace the existing SOAP API, but it also comes with extra functionality like being able to retrieve the screenshot for a feedback item. Check out the [docs](/apidocs-mxsdk/apidocs/feedback-api-v2/) for more information. The following changes have been made:
    * We now send information on the priority status of a feedback item through various calls.
    * We have optimized the GET call.
    * We have better error logs for various calls.

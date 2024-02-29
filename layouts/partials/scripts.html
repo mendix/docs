@@ -59,6 +59,7 @@ window.markmap = {
 
 {{ $jsBs := resources.Get "vendor/bootstrap/dist/js/bootstrap.bundle.js" -}}
 {{ $jsBase := resources.Get "js/base.js" -}}
+<!--DB: Remove jsAnchor references and anchor.js, enable render hook after upgrading to Hugo 0.123+. See https://www.docsy.dev/docs/adding-content/navigation/#heading-self-links and https://github.com/google/docsy/pull/1463 -->
 {{ $jsAnchor := resources.Get "js/anchor.js" -}}
 <!-- MvM: Add scripts used by ToC Highlighting -->
 {{ $jsLodashDebouncd := resources.Get "js/lodash-debounce.js" }}

@@ -87,7 +87,7 @@ Read further for guides that allow you convert your app so it is ready for the R
 
 ### 3.1 Marketplace Components{#marketplace}
 
-Not all components found on the Mendix marketplace is ready for the React Client. Refer to [Marketplace Content Rect Readiness](/refguide/mendix-client/content-readiness) to see which of the most popular marketplace components are React ready. If a module or widget you are using is not on the list, test it for yourself then reach out to the authors to update it if not.
+Not all Mendix Marketplace components are ready for the React Client. Refer to [Marketplace Content Rect Readiness](/refguide/mendix-client/content-readiness) to see which of the most popular marketplace components are React ready. If a module or widget you are using is not on the list, test it for yourself then reach out to the authors to update it if not.
 
 Mendix recommends refreshing all Marketplace components in your app before enabling the React Client.
 
@@ -95,7 +95,7 @@ Mendix recommends refreshing all Marketplace components in your app before enabl
 
 The [Dynamic Image](/refguide/image-viewer/) and [Static Image](/refguide/image/) widgets are not supported in the React Client. TO use React, replace them with the universal [Image](/appstore/widgets/image) widget. You can [download the Image widget from the Mendix Marketplace](https://marketplace.mendix.com/link/component/118579).
 
-To automatically convert a dynamic image or a static image, right click on the widget (or the error message) and select **Convert to Image**.
+To automatically convert a dynamic image or a static image, right-click the widget (or the error message) and select **Convert to Image**.
 
 {{% alert color="info" %}}
 We are working on a batch conversion for image widgets that lets you convert all images in your project with a few clicks. We will announce the release in our [Release Notes](/releasenotes/studio-pro/10).
@@ -114,23 +114,23 @@ To replace a reference selector widget, follow these steps:
 To replace a reference set selector widget, follow these steps:
 
 1. Add a combo box widget next to the original widget.
-1. Set the Attribute to the association used as Data source in the original widget.
-1. Set the Caption to the attribute used in the column of the original widget or use an expression to reflect multiple columns.
-1. Set the Label to a meaningful label for the attribute.
+1. Set the **Attribute** to the association that was used as data source in the original widget.
+1. Set the **Caption** to the attribute used in the column of the original widget, or use an expression to reflect multiple columns.
+1. Set the **Label** to a meaningful label for the attribute.
 
-This will replace the table from the Reference set selector with a more commonly used dropdown widget supporting multiple selection.
+This will replace the table from the reference set selector with a more commonly used [drop-down widget](/refguide/drop-down/) supporting multiple selection.
 
-To replace an Input reference set selector, follow these steps:
+To replace an input reference set selector, follow these steps:
 
-1. Add a Combo box widget next to the original widget.
-1. Set the Attribute to the association used as Data source on the select page used by the original widget.
-1. Set the Caption to the attribute used on the select page or use an expression to reflect multiple columns.
-1. Set the Label and any other properties to match the original widget.
+1. Add a combo box widget next to the original widget.
+1. Set the **Attribute** to the association used as data source on the select page used by the original widget.
+1. Set the **Caption** to the attribute used on the select page, or use an expression to reflect multiple columns.
+1. Set the **Label** and any other properties to match the original widget.
 1. Remove the select page.
 
-This will replace the popup showing a table for selection with a more commonly used dropdown widget supporting multiple selection (see above).
+This will replace the pop-up showing a table for selection with a more commonly used dropdown widget supporting multiple selection (see above).
 
-It is also recommended to replace the Drop-down widget with the Combo box widget for a better user experience. This change is not required.
+We also recommended you replace drop down widgets with combo box widgets for a better user experience. This change is not required.
 
 {{% alert color="info" %}}
 We are working on an automatic conversion for reference selector widgets that lets you convert a reference selector automatically to a combo box. We will announce the release in our [Release Notes](/releasenotes/studio-pro/10).
@@ -138,9 +138,9 @@ We are working on an automatic conversion for reference selector widgets that le
 
 ### 3.4 Data Grid{#data-grid}
 
-The Data grid widget is not supported in the React Client. To leverage React, replace it with the [Data Grid 2](/appstore/modules/data-grid-2) widget. The Data grid 2 widget is part of the [Data Widgets Module on the Mendix Marketplace](https://marketplace.mendix.com/link/component/116540).
+The data grid widget is not supported in the React Client. To leverage React, replace it with the [Data Grid 2](/appstore/modules/data-grid-2) widget. The data grid 2 widget is part of the [Data Widgets Module](https://marketplace.mendix.com/link/component/116540) in the Mendix Marketplace.
 
-To automatically convert a Data Grid widget to a Data Grid 2, right click on the widget (or the error message) and select **Convert to Data Grid 2**.
+To automatically convert a data grid widget to a data grid 2, right-click the widget (or the error message) and select **Convert to Data Grid 2**.
 
 {{% alert color="info" %}}
 We are working on a batch conversion for data grid widgets that lets you convert all data grids in your project with a few clicks. We will announce the release in our [Release Notes](/releasenotes/studio-pro/10).
@@ -148,40 +148,42 @@ We are working on a batch conversion for data grid widgets that lets you convert
 
 ### 3.5 Template Grid{#template-grid}
 
-The Template grid widget is not supported in the React Client. It should be replaced with the [Gallery widget](/appstore/modules/gallery). The Gallery widget is part of the [Data Widgets Module on the Mendix Marketplace](https://marketplace.mendix.com/link/component/116540).
+The template grid widget is not supported in the React Client. It should be replaced with the [Gallery widget](/appstore/modules/gallery). The gallery widget is part of the [Data Widgets Module](https://marketplace.mendix.com/link/component/116540) in the Mendix Marketplace.
 
-To replace a Template grid widget, follow these steps:
+To replace a template grid widget, follow these steps:
 
-1. Add a Gallery widget next to the original Template grid widget.
-1. Set up the data source to match the original widget.
+1. Add a gallery widget next to the original template grid widget.
+1. Set up the gallery widget's data source to match the original widget.
 1. Configure the columns and any other properties to match the original widget.
 1. Add any actions that items from your original widget as icon buttons to the content area.
-1. Add any actions that do not affect rows as buttons to the header of the Gallery.
+1. Add any actions that do not affect rows as buttons to the gallery widget's header.
 
 ### 3.6 Custom Widgets{#custom-widgets}
 
-Dojo widgets are no longer supported in the React Client. They should be replaced with a pluggable widget based on react. Converting a dojo widget to a react widget requires JavaScript programming. Follow the guide [/howto/extensibility/create-a-pluggable-widget-one](Build a Pluggable Web Widget: Part 1) to get started.
+Dojo widgets are no longer supported in the React Client. They should be replaced with a pluggable widget based on React. 
 
-Pluggable widgets must be built with pluggable-widget-tools version 9.4.1 or later. Follow these steps to update pluggable-widget-tools and rebuild your widget:
+Converting a Dojo widget to a React widget requires JavaScript programming. Follow [Build a Pluggable Web Widget: Part 1](/howto/extensibility/create-a-pluggable-widget-one).
 
-1. Open your widget folder in your favorite text editor
-1. Edit `package.json`
-1. Find the line containing `"@mendix/pluggable-widgets-tools": "~[version]",`
-2. Replace `[version]` with a newer version, for example `9.24.0`
-3. Save the file
-4. Install the new dependencies by running `npm install`
-5. Build the widget by running `npm run release`
+Pluggable widgets must be built with `pluggable-widget-tools` version 9.4.1 or higher. Follow these steps to update `pluggable-widget-tools` and rebuild your widget:
+
+1. Open your widget folder in your text editor of choice.
+1. Edit `package.json`.
+1. Find the line containing `"@mendix/pluggable-widgets-tools": "~[version]",`.
+2. Replace `[version]` with a newer version (for example `9.24.0`).
+3. Save the file.
+4. Install the new dependencies by running `npm install`.
+5. Build the widget by running `npm run release`.
 
 ### 3.7 Styling{#styling}
 
-The React Client introduces some minor changes to the DOM structure of the Mendix application. These changes can have an impact on your styles defined in SCSS. To avoid any issues, test your custom styles before deploying the updated application.
+The React client introduces some minor changes to the DOM structure of Mendix applications. These changes can have an impact on your styles as defined in SCSS. To avoid any issues, test your custom styles before deploying the updated application.
 
-If your application's navigation bar does not fill the entire screen, you are likely using an outdated version of the [Atlas Core](https://marketplace.mendix.com/link/component/117187) module. Please update it to the latest version.
+If your application's navigation bar does not fill the entire screen, you are likely using an outdated version of the [Atlas Core](https://marketplace.mendix.com/link/component/117187) module. Please update it to the latest version to fix this.
 
 ### 3.8 JavaScript Actions{#js-actions}
 
-JavaScript actions should be mostly unaffected. Problems arise only if you use outdated actions or make extensive use of our client API.
+JavaScript actions should be mostly unaffected by React. Problems arise only if you use outdated actions or make extensive use of our [Client API](/apidocs-mxsdk/apidocs/client-api/).
 
-Problems in JavaScript actions are not captured by the consistency checker. To validate that the JavaScript actions works with the React Client it should be executed with the React Client active. Any errors reported by the Browser Console (Press F12 to access it) will help identify the problem.
+Problems in JavaScript actions are not captured by the consistency checker. To validate that JavaScript actions work with the React client, the checker should be executed with the React client active. Any errors reported by the **Browser Console** (Press F12 to access it) will help identify the problem.
 
-If you encounter problems with platform-supported JavaScript actions (for example from Nanoflow Commons) make sure to update the module containing the action from the marketplace. In most cases, this will resolve the issue. If it is not resolved, reach out to the maintainer of the module and let the know of the issue.
+If you encounter problems with platform-supported JavaScript actions (for example from the [Nanoflow Commons](/appstore/modules/nanoflow-commons/) module) make sure to update the module containing the action from the Marketplace. In most cases, this will resolve the issue. If it is not resolved, reach out to the maintainer of the module and let them know of the issue.

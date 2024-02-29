@@ -91,12 +91,12 @@ These are widgets that show a 3D Object, either predetermained (like **Cube (XR)
 
 ### 4.1 Shared properties
 
-These properties exist for all 3D Object widgets (**Cube (XR)**, **Sphere (XR)**, **Square (XR)**, **3D Object (XR)** ,**Text (XR)** and the **Node (XR)** widget)
+These properties exist for all 3D Object widgets (**Cube (XR)**, **Sphere (XR)**, **Square (XR)**, **3D Object (XR)** ,**Text (XR)**) and the **Node (XR)** widget
 
 #### 4.1.1 General tab
 
-- **Position** - Sets the position of the Node in meters. Setting **X** to 1 means the Node will be placed 1 meter to the right. **Y** controls the up and down axis. **Z** moves the Node front to back.
-- **Rotation** - Sets the rotation of the Node in degrees (from 0 degrees to 360 degrees) on three axis.
+- **Position** - Sets the position of the object in meters. Setting **X** to 1 means the object will be placed 1 meter to the right. **Y** controls the up and down axis. **Z** moves the object front to back.
+- **Rotation** - Sets the rotation of the object in degrees (from 0 degrees to 360 degrees) on three axis.
 - **Scale** - Sets the scale of the object, this multiplies the size of the object as it is. If the objects is 1 meter wide, setting the **X** to 2 will make the object 2 meters wide.
 
 #### 4.1.2 Material tab

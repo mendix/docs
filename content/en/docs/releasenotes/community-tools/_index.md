@@ -7,7 +7,7 @@ weight: 37
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-These release notes cover changes to the Mendix Profile, Mendix Forum, and other [Mendix community tools](/community-tools/).
+These release notes cover changes to the Mendix Profile, Mendix Community, and other [Mendix community tools](/community-tools/).
 
 ## 2024
 
@@ -16,6 +16,12 @@ These release notes cover changes to the Mendix Profile, Mendix Forum, and other
 #### New Features
 
 * Deactivating and resetting your two-factor authentication (2FA) is now self-service. If you want to deactivate your 2FA, you can do this in your Developer Settings; previously, deactivating your 2FA required submitting a Mendix Support ticket. Deactivating your 2FA is the first step if you want to change your 2FA method, phone number, or authenticator app. For more information, see [Changing Your Authentication Method](/developerportal/deploy/two-factor-authentication/#change-2fa-method).
+
+### January 29, 2024
+
+#### Improvements
+
+* We are excited to announce that the Mendix Forum has grown into something much more than just a forum. As a result, we have decided to give it a new name: welcome to the [Mendix Community](/community-tools/mendix-community/)!
 
 ## 2023
 
@@ -92,7 +98,7 @@ These release notes cover changes to the Mendix Profile, Mendix Forum, and other
 
 #### Improvements
 
-* We introduced a new layout of the [Mendix Forum](/community-tools/mendix-forum/) that features the following changes:
+* We introduced a new layout of the [Mendix Community](/community-tools/mendix-community/) that features the following changes:
     * The main navigation has been moved to a navigation pane on the left of the screen
     * There is a dedicated for page for your bookmarks
     * Breadcrumb navigation
@@ -102,7 +108,7 @@ These release notes cover changes to the Mendix Profile, Mendix Forum, and other
 
 #### New Features
 
-* We changed the button from favorite to bookmark in the [Mendix Forum](/community-tools/mendix-forum/). You can now more easily bookmark posts for future reference.
+* We changed the button from favorite to bookmark in the [Mendix Community](/community-tools/mendix-community/). You can now more easily bookmark posts for future reference.
 
 ## 2021
 

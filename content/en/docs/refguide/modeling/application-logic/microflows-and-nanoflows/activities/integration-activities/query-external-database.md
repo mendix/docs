@@ -12,7 +12,7 @@ This activity can only be used in **Microflows**.
 
 ## 1 Introduction
 
-The **Query External Database** activity is used with the [External Database Connector](/appstore/connectors/external-database-connector/) to use preconfigured database queries and display retrieved data in your app.
+The **Query External Database** activity is used with the [External Database Connector](/appstore/modules/external-database-connector/) to use preconfigured database queries and display retrieved data in your app.
 
 This document covers the properties of the **Query External Database** activity. 
 

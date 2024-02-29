@@ -129,7 +129,7 @@ Your pipeline can include the following steps:
 
 * Start Pipeline – This is a mandatory step for each pipeline; you cannot delete this step. This step defines the conditions that will automatically trigger the pipeline to run. To configure this step, define the conditions on which the pipeline should start; you can set the pipeline to run in response to either of the following triggers:
     * Teamserver push (Git) – The pipeline runs when a new push is made to Teamserver (Git) for the specified branch. For details on specifying the branch in the **Branch Expression** field, see [Branch Expression](#branch-expression), below.
-    * Recurring schedule – The pipeline runs on a recurring weekly schedule, on the days and times you specify. Times are set in UTC.
+    * Recurring schedule – The pipeline runs on a recurring weekly schedule, on the days and times you specify. This works for both Git and SVN repositories. Times are set in UTC.
 * Checkout – Check out a branch. To configure this step, use the drop-down menu to select the branch to check out; you will be able to select either the main branch or one of your most recently used branches.
 * Build – Build a deployment package based on the latest major, minor, or patch version of the branch you checked out. The highest version is incremented based on the increment settings specified in this step.
 * Publish – Publish the newly built deployment package to a repository.
@@ -242,9 +242,11 @@ Pipelines time out if they run for more than three hours. In other words, if the
 
 To trigger pipelines based on Teamserver push (Git), Mendix automatically creates a webhook on your behalf. You can see this webhook if you click **Webhooks** in the [navigation pane](/developerportal/#navigation-pane). Do not delete this webhook; deleting it would cause pipeline run failures for pipelines that rely on the Teamserver push (Git) trigger type.
 
-### 5.1 Known Issues
+### 5.1 Known Issues and Limitations
 
 Pipelines is in public beta and is undergoing optimizations. Initial stages may involve occasional slowness, leading to pipeline failures. Mendix is committed to resolving these issues swiftly and appreciates your understanding.
+
+It is not currently possible to add the same pipeline step more than once in a pipeline. This will be improved in the future.
 
 ## 6 Read More
 

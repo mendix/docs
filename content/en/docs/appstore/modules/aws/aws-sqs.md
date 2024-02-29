@@ -50,7 +50,7 @@ For example, to list all existing Amazon SQS subscriptions, implement the [List 
 1. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
 2. Enter a name for your microflow, for example, *ACT_ListQueues*, and then click **OK**.
 3. In the new microflow, configure AWS Authentication with either temporary or static credentials.
-    For more information, see [AWS Authentication](/appstore/modules/aws-authentication/).
+    For more information, see [AWS Authentication](/appstore/modules/aws/aws-authentication/).
 4. In the **App Explorer**, in the **AmazonSQSConnector** > **Operations** section, find the **List Queues** activity.
 5. Drag the **List Queues** activity onto the work area of your microflow.
 6. In the **App Explorer**, in the **AWSAuthentication** > **Operations** section, find either the **GetStaticCredentials** or the **GetTemporaryCredentials** action and place it at the beginning of your Microflow.

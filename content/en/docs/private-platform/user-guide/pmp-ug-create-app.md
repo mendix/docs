@@ -12,7 +12,7 @@ To create a new app in Private Mendix Platform, perform the following steps:
 1. Log in to Private Mendix Platform.
 2. If you have not already configured an access token for a Gitlab, Github, AzureDevOps, or Bitbucket repository, click the user icon in the top right corner of the screen, and then click **Manage My Account** > **Service Credentials**. 
 
-    For more information, see [Service Credentials](#service-credentials).
+    For more information, see [Service Credentials](/private-mendix-platform-user-guide/profile/#service-credentials).
 
 3. On the home page, click **Create App Project**.
 

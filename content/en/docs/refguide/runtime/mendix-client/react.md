@@ -22,12 +22,13 @@ Beyond those sections, consult the following major sections to leverage the Reac
 * [Prerequisites](#prerequisites) – learn the prerequisites your app must fulfill in order to use the React Client.
 * [Migration Guide](#migration-gude) – use guides to convert your application so it is ready for the React Client.
 
-
 ### 1.1 Improved Performance{#improved-performance}
 
-Web application performance is one of the most important metrics today. If a website does not open quickly or feels sluggish to use, many users will abandon it immediately. In fact, Google decided to make performance a key criterion for their algorithm to determine the relevance of a website for their search results. While this is less relevant for internal apps, performance is still key to worker productivity and application scalability.
+Web application performance is a key metric for quality apps. If a website does not open quickly or feels sluggish to use, many external users will abandon it immediately. For internal apps, smooth performance ensures employees can focus more on their work than on their tools. 
 
-The most prominent tool to measure web application performance is [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk), which is built into the Chrome browser. It reports the overall performance of a web application and key indices that lead up to the performance score. When comparing a conventional Mendix web application with the same application using the new React Client, we observe the following improvements:
+[Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk) (built into the Chrome browser) is a commonly used tool that measures app performance. It reports the overall performance of a web application and key indices that lead up to the performance score. 
+
+When comparing a conventional Mendix web application with the same application using the new React Client, we observe the following improvements:
 
 | Metric | Without React Client | With React Client | Improvement |
 | --- | --- | --- | --- |
@@ -36,11 +37,11 @@ The most prominent tool to measure web application performance is [Lighthouse](h
 | Largest Contentful Paint | 2.0s | 1.8s | -10% |
 | Speed Index | 1.6s | 1.3s | -19% |
 
-In our opinion, the most important metric for most web applications is largest contentful paint, because it represents when the majority of the application has been loaded successfully. In this metric, the new React Client performance 10% better than the previous client. A significant change that requires no optimization effort at all on the application model.
+Mendix believes the most important metric for most web applications is largest contentful paint, because it represents when the majority of the application has been loaded successfully. By this metric, the new React Client performs 10% faster than the previous client – a significant change that requires no optimization work at all on the application model.
 
 ### 1.2 Incremental Page Loading{#incremental-page-loading}
 
-The second advantage of the React Client becomes immediately apparent, when your web app contains complex pages with multiple datasources. In the previous Mendix client, the user sees a progress indicator until the entire page is loaded. In the new React Client, the core structure of your website is shown immediately and content is added as it is loaded. This way, your users can already make sense of part of your data or orient themselves in your application’s user interface before it has finished loading. This greatly improves the perceived speediness of your application.
+The second advantage of the React Client becomes immediately apparent when your web app contains complex pages with multiple datasources. In the previous Mendix Client, the user just sees a progress indicator until the entire page is loaded. In the new React Client, the core structure of your website is shown immediately and content is added as it is loaded. This way, your users can already see some loaded data or orient themselves in your app’s user interface instead of staring at a progress indicator. This psychological difference significantly improves the *perceived* speed of your application.
 
 ### 1.3 Future-Proof{#future-proof}
 
@@ -102,7 +103,7 @@ We are working on a batch conversion for image widgets that lets you convert all
 
 ### 3.3 Reference Selector{#reference-selector}
 
-The Reference selector widgets (Reference selector, Reference set selector, Input reference set selector) are not supported in the React Client. They should be replaced with the [Combo box](/appstore/widgets/combobox) widget. The Combo box widget can be [downloaded from the Mendix Marketplace](https://marketplace.mendix.com/link/component/219304).
+The Reference selector widgets (Reference selector, Reference set selector, Input reference set selector) are not supported in the React Client. They should be replaced with the [Combo Box](/appstore/widgets/combobox) widget. The Combo box widget can be [downloaded from the Mendix Marketplace](https://marketplace.mendix.com/link/component/219304).
 
 To replace a Reference selector widget, follow these steps:
 

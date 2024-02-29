@@ -41,7 +41,7 @@ Before you start experimenting with the end-to-end process, make sure that you h
 
 You have access to a (remote) PostgreSQL database with the [pgvector](https://github.com/pgvector/pgvector) extension available.
 
-{{% alert color="info" %}}If you have access to an Amazon Web Services (AWS) account, Mendix recommends you use a [free-tier RDS](https://aws.amazon.com/rds/faqs/#product-faqs#amazon-rds-faqs#free-tier) setup described in the [Creating a PostgreSQL Database with Amazon RDS](/appstore/modules/openai/vector-database-setup/#rds-database) section. This is convenient, since PostgreSQL databases in Amazon RDS by default have the required pgvector extension available.{{% /alert %}}
+{{% alert color="info" %}}If you have access to an Amazon Web Services (AWS) account, Mendix recommends you use a [free-tier RDS](https://aws.amazon.com/rds/faqs/#product-faqs#amazon-rds-faqs#free-tier) setup described in the [Creating a PostgreSQL Database with Amazon RDS](/appstore/modules/openai-connector/vector-database-setup/#rds-database) section. This is convenient, since PostgreSQL databases in Amazon RDS by default have the required pgvector extension available.{{% /alert %}}
 
 ### 3.2 Steps {#steps}
 
@@ -49,7 +49,7 @@ You have access to a (remote) PostgreSQL database with the [pgvector](https://gi
 
 2. Go to the **Retrieval Augmented Generation** example and read **Step 1: Introduction**.
 
-3. [Setup a PostgreSQL vector database](/appstore/modules/openai/vector-database-setup/) and configure the connection in **Step 2: Vector Database Configuration**.
+3. [Setup a PostgreSQL vector database](/appstore/modules/openai-connector/vector-database-setup/) and configure the connection in **Step 2: Vector Database Configuration**.
 
 4. Go to **Step 3: Knowledge Base** and create embeddings from a text and store. You can use our default text about ornamental flowering plants, or paste your own content.
 
@@ -66,7 +66,7 @@ The OpenAI showcase application uses the Mendix [Database Connector](https://mar
 
 The OpenAI showcase application takes care of creating the required tables in the remote vector database, including the open-source extension called pgvector. If you want to know more about the extension and how the tables look like in combination with this extension, see the [pgvector source code and documentation on GitHub](https://github.com/pgvector/pgvector).
 
-If you want to know more about RAG, embeddings, or [vector databases](/appstore/modules/openai/vector-database-setup/), make sure to review the links on the **Resources** page of the OpenAI showcase application or in the [Read More](#read-more) section.
+If you want to know more about RAG, embeddings, or [vector databases](/appstore/modules/openai-connector/vector-database-setup/), make sure to review the links on the **Resources** page of the OpenAI showcase application or in the [Read More](#read-more) section.
 
 {{% /alert %}}
 
@@ -76,7 +76,7 @@ This section lists some general key points that apply regardless of which archit
 
 If you would like to build your own RAG setup, feel free to learn from the OpenAI showcase application and start building your own app. Below you can find the key takeaways from the OpenAI showcase app:
 
-* For RAG, you need a storage space for high-dimensional embedding vectors outside of your normal Mendix app database. Typically, this is a remote vector database. In order to connect to it, the OpenAI showcase application uses the Mendix database connector. See [Vector Database Setup](/appstore/modules/openai/vector-database-setup/) for more details.
+* For RAG, you need a storage space for high-dimensional embedding vectors outside of your normal Mendix app database. Typically, this is a remote vector database. In order to connect to it, the OpenAI showcase application uses the Mendix database connector. See [Vector Database Setup](/appstore/modules/openai-connector/vector-database-setup/) for more details.
 
 * The OpenAI showcase application relies on a PostgreSQL database with the pgvector extension included. Even if you choose to use a different vector database, the database queries and statements, which you will have to perform, should cover at least the following:
     * Include the vector extension if applicable (create extension).

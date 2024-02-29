@@ -804,7 +804,7 @@ For more inspiration or guidance on how to use those microflows in your logic, M
 
 ### 6.1 Outdated JDK Version Causing Errors while Calling the Embeddings API {#outdated-jdk-version}
 
-The Java Development Kit (JDK) is a framework needed by Mendix Studio Pro to deploy and run applications. For more infomation, see [Studio Pro System Requirements](/refguide/installation/system-requirements/). Usually, the right JDK version is installed during the installation of Studio Pro, but in some cases it still may be outdated causing exceptions when calling the Embeddings API or other REST-based services with large data volumes.
+The Java Development Kit (JDK) is a framework needed by Mendix Studio Pro to deploy and run applications. For more infomation, see [Studio Pro System Requirements](/refguide/system-requirements/). Usually, the right JDK version is installed during the installation of Studio Pro, but in some cases it still may be outdated causing exceptions when calling the Embeddings API or other REST-based services with large data volumes.
 
 We have seen the following two exceptions when using JDK version `jdk-11.0.3.7-hotspot`:
 `java.net.SocketException - Connection reset` or

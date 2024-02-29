@@ -59,6 +59,7 @@ window.markmap = {
 
 {{ $jsBs := resources.Get "vendor/bootstrap/dist/js/bootstrap.bundle.js" -}}
 {{ $jsBase := resources.Get "js/base.js" -}}
+{{ $jsAnchor := resources.Get "js/anchor.js" -}}
 <!-- MvM: Add scripts used by ToC Highlighting -->
 {{ $jsLodashDebouncd := resources.Get "js/lodash-debounce.js" }}
 {{ $jsLodashThrottle := resources.Get "js/lodash-throttle.js" }}
@@ -72,7 +73,7 @@ window.markmap = {
   {{ $jsSearch = resources.Get "js/offline-search.js" -}}
 {{ end -}}
 
-{{ $jsArray := slice $jsBs $jsBase $jsSearch $jsPlantuml $jsMarkmap $jsDrawio -}}
+{{ $jsArray := slice $jsBs $jsBase $jsAnchor $jsSearch $jsPlantuml $jsMarkmap $jsDrawio -}}
 
 {{ if .Page.Store.Get "hasmermaid" -}}
 {{- partial "scripts/mermaid.html" . -}}

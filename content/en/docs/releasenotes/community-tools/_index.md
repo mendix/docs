@@ -11,15 +11,17 @@ These release notes cover changes to the Mendix Profile, Mendix Community, and o
 
 ## 2024
 
-### January 29, 2024
-
-* We are excited to announce that the Mendix Forum has grown into something much more than just a forum. As a result, we have decided to give it a new name: welcome to the [Mendix Community](/community-tools/mendix-community/)!
-
 ### February 8, 2024
 
 #### New Features
 
 * Deactivating and resetting your two-factor authentication (2FA) is now self-service. If you want to deactivate your 2FA, you can do this in your Developer Settings; previously, deactivating your 2FA required submitting a Mendix Support ticket. Deactivating your 2FA is the first step if you want to change your 2FA method, phone number, or authenticator app. For more information, see [Changing Your Authentication Method](/developerportal/deploy/two-factor-authentication/#change-2fa-method).
+
+### January 29, 2024
+
+#### Improvements
+
+* We are excited to announce that the Mendix Forum has grown into something much more than just a forum. As a result, we have decided to give it a new name: welcome to the [Mendix Community](/community-tools/mendix-community/)!
 
 ## 2023
 

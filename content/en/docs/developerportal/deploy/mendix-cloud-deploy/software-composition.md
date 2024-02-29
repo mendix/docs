@@ -21,7 +21,7 @@ The page contains two tabs: [Overview](#overview) and [All Components](#all-comp
 
 The **Overview** tab shows a list of all the deployment packages.
 
-Above the list, you can use the search box to search for a deployment package. Next to the search box, you can filter deployment packages by selecting the Mendix Runtime version. You can click **Export All** on the right side above the list to export all the information in the list to an Excel file.
+Above the list, you can use the search box to search for a deployment package. Next to the search box, you can filter deployment packages by selecting the Mendix Runtime version. You can click {{% icon name="office-sheet" %}}**Export all to Excel** on the right side above the list to export all the information in the list to an Excel file.
 
 The list contains the following information:
 
@@ -34,7 +34,7 @@ The list contains the following information:
 * {{% icon name="view" %}}: You can customize the columns of the list by clicking the {{% icon name="view" %}} icon and adjusting the selection of the check boxes.
 * **View details**: Click this opens the [Deployment Package Summary](#deployment-package-summary) page.
 
-To export the information of selected items in the list to an Excel file, select the check boxes of the items in the list, and then click **Selection Export to Excel** that appears at the bottom of the page.
+To export the information of selected items in the list to an Excel file, select the check boxes of the items in the list, and then click {{% icon name="office-sheet" %}}**Selection Export to Excel** that appears at the bottom of the page.
 
 ### 2.1 Deployment Package Summary {#deployment-package-summary}
 
@@ -44,7 +44,7 @@ On the top of the page, you can find the name of the deployment package, whether
 
 On the upper-right corner of the page, you can click {{% icon name="download-bottom" %}}**SBOM** to download the software bill of materials (SBOM).
 
-Above the list, you can use the search box to search for a component. Next to the search box, you can filter components by selecting the component type. You can click **Export All** on the right side above the list to export all the information in the list to an Excel file.
+Above the list, you can use the search box to search for a component. Next to the search box, you can filter components by selecting the component type. You can click {{% icon name="office-sheet" %}}**Export all to Excel** on the right side above the list to export all the information in the list to an Excel file.
 
 The list shows all the components used in the deployment package, with the following information: 
 
@@ -53,23 +53,23 @@ The list shows all the components used in the deployment package, with the follo
 * **Type**: This shows the type of the component.
 * {{% icon name="view" %}}: You can customize the columns of the list by clicking the {{% icon name="view" %}} icon and adjusting the selection of the check boxes.
 
-To export the information of selected items in the list to an Excel file, select the check boxes of the items in the list, and then click **Selection Export to Excel** that appears at the bottom of the page.
+To export the information of selected items in the list to an Excel file, select the check boxes of the items in the list, and then click {{% icon name="office-sheet" %}}**Selection Export to Excel** that appears at the bottom of the page.
 
 ## 3 All Components {#all-components}
 
 The **All Components** tab gives an overview of all the components used across your deployment packages. 
 
-Above the list, you can use the search box to search for a component. Next to the search box, you can filter components by selecting the component type. You can click **Export All** on the right side above the list to export all the information in the list to an Excel file.
+Above the list, you can use the search box to search for a component. Next to the search box, you can filter components by selecting the component type. You can click {{% icon name="office-sheet" %}}**Export all to Excel** on the right side above the list to export all the information in the list to an Excel file.
 
 The list shows the following information about the component:
 
 * **Component**: This is the name of the component.
-* **Type**: This shows the type of the component.
 * **Version**: This is the component version.
+* **Type**: This shows the type of the component.
 * {{% icon name="view" %}}: You can customize the columns of the list by clicking the {{% icon name="view" %}} icon and adjusting the selection of the check boxes.
 * **View details**: Click this opens the [Component Usage](#component-usage) page.
 
-To export the information of selected items in the list to an Excel file, select the check boxes of the items in the list, and then click **Selection Export to Excel** that appears at the bottom of the page.
+To export the information of selected items in the list to an Excel file, select the check boxes of the items in the list, and then click {{% icon name="office-sheet" %}}**Selection Export to Excel** that appears at the bottom of the page.
 
 ### 3.1 Component Usage {#component-usage}
 
@@ -77,9 +77,9 @@ On the **All Components** tab, if you click **View details** for an item, the **
 
 On the top of the page, you can find the component name, the component version, and the component type. 
 
-Above the list, you can use the search box to search for an environment. You can click **Export All** on the right side above the list to export all the information in the list to an Excel file.
+Above the list, you can use the search box to search for an environment. You can click {{% icon name="office-sheet" %}}**Export all to Excel** on the right side above the list to export all the information in the list to an Excel file.
 
-The list shows all the environment where the deployment package containing the component is used, with the following information: 
+The list shows all the environment where the deployment package containing the component is deployed, with the following information: 
 
 * **Environment**: This is the name of the environment where the deployment package is deployed.
 * **Production**: This shows whether the deployment package is deployed in the production environment.
@@ -87,4 +87,4 @@ The list shows all the environment where the deployment package containing the c
 * **Version**: This shows the version of the component that is used.
 * {{% icon name="view" %}}:  You can customize the columns in the list by clicking the {{% icon name="view" %}} icon and adjusting the selection of the check boxes.
 
-To export the information of selected items in the list to an Excel file, select the check boxes of the items in the list, and then click **Selection Export to Excel** that appears at the bottom of the page.
+To export the information of selected items in the list to an Excel file, select the check boxes of the items in the list, and then click {{% icon name="office-sheet" %}}**Selection Export to Excel** that appears at the bottom of the page.

@@ -1,6 +1,6 @@
 ---
-title: "Vector Databasde Setup"
-url: /appstore/connectors/openai-connector/vector-database-setup/
+title: "Setting up a Vector Database"
+url: /appstore/modules/openai-connector/vector-database-setup/
 category: "Open AI"
 linktitle: "Vector Database Setup"
 weight: 5
@@ -10,8 +10,9 @@ tags: ["OpenAI", "generative AI", "AI", "connector", "marketplace", "chatgpt", "
 
 ## 1 Introduction {#introduction}
 
-Vector databases play an important role in embeddings-based AI usecases by facilitating efficient storage, retrieval, and manipulation of high-dimensional vectors representing textual or semantic information. A crucial step within those usecases like Semantic Search and Retrieval Augmented Generation (RAG) is to find the closest and thus most similar pieces of information to a given semantic input. Those similarity and distance calculations between high-dimensional vectors cannot be done on a normal database and thus a vector database is needed.
-This page describes how a PostgreSQL vector database can be setup to explore embeddings-based usecases with the [OpenAI Showcase App](https://marketplace.mendix.com/link/component/220475).
+Vector databases play an important role in embeddings-based AI use cases by facilitating efficient storage, retrieval, and manipulation of high-dimensional vectors representing textual or semantic information. A crucial step within those use cases like semantic search and Retrieval Augmented Generation (RAG) is to find the closest and thus most similar pieces of information to a given semantic input. Those similarity and distance calculations between high-dimensional vectors cannot be done on a normal database and thus a vector database is needed.
+
+This page describes how a PostgreSQL vector database can be set up to explore embeddings-based use cases with the [OpenAI Showcase App](https://marketplace.mendix.com/link/component/220475).
 
 {{% alert color="info" %}}
 This procedure describes a setup based on a PostgreSQL database with the pgvector extension to query embedding vectors. However, this is not the only possible solution. Other (vector) database types may better fit your use case.
@@ -19,11 +20,11 @@ This procedure describes a setup based on a PostgreSQL database with the pgvecto
 
 ## 2 Creating a PostgreSQL Database with Amazon RDS {#rds-database}
 
-{{% alert color="info" %}}For detailed steps for creating a PostgreSQL Database with Amazon RDS, see [Create and Connect to a PostgreSQL Database](https://aws.amazon.com/getting-started/hands-on/create-connect-postgresql-db/) in the *AWS Documentation*. You can check out the following sections in the AWS Documentation for preliminary background knowledge:
+{{% alert color="info" %}}
+For detailed steps for creating a PostgreSQL Database with Amazon RDS, see [Create and Connect to a PostgreSQL Database](https://aws.amazon.com/getting-started/hands-on/create-connect-postgresql-db/) in the *AWS Documentation*. You can check out the following sections in the AWS Documentation for preliminary background knowledge:
 
 * Enter the RDS Console
 * Create a PostgreSQL DB Instance
-
 {{% /alert %}}
 
 You can use the values in the steps below for experimental purposes:
@@ -77,7 +78,7 @@ If no action is taken, resources in AWS will stay around indefinitely. Make sure
 
 ## 4 Configuring the Database Connection Details in the Showcase Application {#configure-database-connection}
 
-1. Download, run and login to the [OpenAI Showcase App](https://marketplace.mendix.com/link/component/220475).
+1. Download, run, and login to the [OpenAI Showcase App](https://marketplace.mendix.com/link/component/220475).
 
 2. Navigate to the **Retrieval Augmented Generation** or the **Semantic Search** Example.
 
@@ -103,11 +104,11 @@ If no action is taken, resources in AWS will stay around indefinitely. Make sure
 
    2. Use the master username and master password that you set in the **Settings** when you [created the PostgreSQL Database with Amazon RDS](#rds-database) as your username and password.
 
-   3. Save & test the configuration.
+   3. Save and test the configuration.
 
-   4. Proceed with the following steps in the wizard.
+   4. Proceed with the rest of the steps in the wizard.
 
-   {{% alert color="info" %}}For more details about Retrieval Augmented Generation, view [RAG Example Implementation](/appstore/connectors/openai-connector/rag-example-implementation/).{{% /alert %}}
+   {{% alert color="info" %}}For more details about Retrieval Augmented Generation, see [RAG Example Implementation](/appstore/connectors/openai-connector/rag-example-implementation/).{{% /alert %}}
 
 
 ## 5 Setup Alternatives {#setup-alternatives}

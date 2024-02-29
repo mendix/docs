@@ -29,15 +29,15 @@ The Mobile SSO module has the following features:
 
 * Supports [native mobile apps](/refguide/mobile/introduction-to-mobile-technologies/native-mobile/)
 * User role assignment from your IdP
-* If you are building a Progressive Web Application (PWA), you do not need the Mobile SSO module, but you only need the OIDC SSO module.
+* If you are building a Progressive Web Application (PWA), you do not need the Mobile SSO module, but you only need the OIDC SSO module
     
 #### 1.2.2 Limitations
 
 The Mobile SSO module has the following limitations:
 
-* Mendix sessions in the mobile app do not time out
+* Mendix sessions in the mobile app do not time out.
 * Mobile SSO module does not support any other protocol except OIDC.
-* It doesn't support IdPs that lack Custom Callback URLs, such as Facebook.
+* It doesn not support IdPs that lack Custom callback URLs, such as Facebook.
 * Private use URI Schemes as per [RFC8252, section 7.1](https://datatracker.ietf.org/doc/html/rfc8252#section-7.1) are not used.
 * Approximately 5% of sign in attempts for the iOS app are unsuccessful, resulting in an error message indicating failure to sign in. However, a subsequent attempt usually leads to successful sign in.
 
@@ -103,11 +103,24 @@ If you want to customize the login page, make sure to add the **App events** wid
 
 Follow the [General OIDC Providers](/appstore/modules/oidc/#511-general-oidc-providers) section of the ***OIDC SSO*** documentation for configuring client information.
 
-{{% alert color="info" %}} Make sure to add a **Custom callback URL** in the client and IdP. This configuration is optional for web apps but mandatory for mobile apps. For Example, `<appname>://oauth/callback`, where <appname> is an application name which is used to create the application using **Build Native Mobile App** {{% /alert %}}
+The following subsections show how to set up IdP for mobile or web and mobile platforms:
+
+#### 4.4.1 Configuring IdP for Mobile
+
+{{% alert color="info" %}} Make sure to add a **Custom callback URL** in the client and IdP. This configuration is optional for web apps but mandatory for mobile apps. For Example, `<appname>://oauth/callback`, where `<appname>` is an application name which is used to create the application using **Build Native Mobile App** {{% /alert %}}
 
 {{< figure src="/attachments/appstore/modules/mobile-sso/Configure client information.png" >}}
 
 When testing locally, add the `makeitnative://oauth/callback` URL in the **Custom callback URL** tab. This configuration also supports signing in with acr_values. For more information, see the [Configurations](/refguide/configuration/).
+
+#### 4.4.2 Configuring single IdP for Web and Mobile
+
+If you are building SSO application, you can use the common IdP configuration for both web and mobile platform, ensuring that this IdP configuration is not specific to any particular device.
+
+To do this, follow the steps below:
+
+1. Replace the `SUB_GetCallbackURL` sub-microflow from the OIDC SSO module with the `SUB_GetMobileCallbackURL` microflow of the Mobile SSO module in the `handleAuthorizationCode` and `GetAuthorizationURL` microflows.
+1. In the Mobile SSO module, go to the **Configuration** in the **helpers** folder and add the `<appname>` in the `MobileURLScheme` constant.
 
 ### 4.5 Single Log Out
 
@@ -169,7 +182,7 @@ The following subsections show how to configure your *Entra ID or Okta IdP*:
 1. In Entra ID, click the **Certificates & secrets** tab of the application and create **New client secret**. You can use this **Value** in the **Client Secret** field on the **OIDC_Client_Overview** page of the OIDC SSO module.
 1. Click **Overview** tab of the application and copy **Application (client) ID**. Use this copied value in the **Client ID** field on the **OIDC_Client_Overview** page of the OIDC SSO module.
 1. Import the configuration in the page and add the required scopes such as, `openid`, `profile`, and `email`.
-1. Save the configuration and you can login into the application using Azure SSO.
+1. Save the configuration and you can sign in into the application using Azure SSO.
 
 #### 4.7.2 Configuring IdP for Okta
 
@@ -195,10 +208,10 @@ The following subsections show how to configure your *Entra ID or Okta IdP*:
         {{< figure src="/attachments/appstore/modules/mobile-sso/Okta local.png" max-width=80% class="image-border">}}
 
 1. Save the configuration and use the **Client Secret**, **Client ID**, and **Automatic Configuration URL** to import the configuration in the **OIDC_Client_Overview** page of the OIDC SSO module.
-1. Add the required scopes such as openid, profile, and email.
+1. Add the required scopes such as, `openid`, `profile`, and `email`.
 1. Save the configuration and you can login into the application using Okta SSO.
 
-## 5 Testing and troubleshooting
+## 5 Testing and Troubleshooting
 
 ### 5.1 IdP Integration
 

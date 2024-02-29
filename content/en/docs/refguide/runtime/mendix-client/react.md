@@ -13,19 +13,17 @@ In Studio Pro versions 10.7.0 and above, there is an alternative version of the 
 
 The React Client replaces [Dojo](https://dojotoolkit.org/) with [React](https://react.dev/) for the view layer. This change allows for improved performance, enables incremental loading, and future-proofs your application. For more information on these three aspects, see the sections below:
 
-* [Improved Performance]()
-* [Incremental Page Loading]()
-* [Future-Proof]()
+* [Improved Performance](#improved-performance)
+* [Incremental Page Loading](#incremental-page-loading)
+* [Future-Proof](#future-proof)
 
-Beyond that, consult the following major sections to leverage the React Client to its fullest potential:
+Beyond those sections, consult the following major sections to leverage the React Client to its fullest potential:
 
-
-* [Prerequisites]()
-* [Incremental Page Loading]()
-* [Future-Proof]()
+* [Prerequisites](#prerequisites) – learn the prerequisites your app must fulfill in order to use the React Client.
+* [Migration Guide](#migration-gude) – use guides to convert your application so it is ready for the React Client.
 
 
-### 1.1 Improved Performance{#}
+### 1.1 Improved Performance{#improved-performance}
 
 Web application performance is one of the most important metrics today. If a website does not open quickly or feels sluggish to use, many users will abandon it immediately. In fact, Google decided to make performance a key criterion for their algorithm to determine the relevance of a website for their search results. While this is less relevant for internal apps, performance is still key to worker productivity and application scalability.
 
@@ -40,17 +38,17 @@ The most prominent tool to measure web application performance is [Lighthouse](h
 
 In our opinion, the most important metric for most web applications is largest contentful paint, because it represents when the majority of the application has been loaded successfully. In this metric, the new React Client performance 10% better than the previous client. A significant change that requires no optimization effort at all on the application model.
 
-### 1.2 Incremental Page Loading{#}
+### 1.2 Incremental Page Loading{#incremental-page-loading}
 
 The second advantage of the React Client becomes immediately apparent, when your web app contains complex pages with multiple datasources. In the previous Mendix client, the user sees a progress indicator until the entire page is loaded. In the new React Client, the core structure of your website is shown immediately and content is added as it is loaded. This way, your users can already make sense of part of your data or orient themselves in your application’s user interface before it has finished loading. This greatly improves the perceived speediness of your application.
 
-### 1.3 Future-Proof{#}
+### 1.3 Future-Proof{#future-proof}
 
 Finally, the React Client allowed us to clean up our client and remove many libraries that are no longer needed, such as the Dojo framework. While popular at the time it was introduced in Mendix, it has now come out of fashion. By removing such dependencies in favor of modern frameworks, such as React, we can better ensure that your applications run stable and secure in your users’ web browsers.
 
 ## 2 Prerequisites{#prerequisites}
 
-This section explains all prerequisites that your application must fulfill before it can leverage the React Client.
+Review the prerequisites below that your application must fulfill before it can leverage the React Client.
 
 ### 2.1 Mendix Version{#mendix-version}
 
@@ -84,7 +82,7 @@ The migration mode will show warnings instead of errors for all incompatible wid
 
 ## 3 Migration Guide{#migration}
 
-This sections provides guides to convert your application to become ready for the React Client.
+Read further for guides that allow you convert your application so it is ready for the React Client.
 
 ### 3.1 Marketplace Content{#marketplace}
 

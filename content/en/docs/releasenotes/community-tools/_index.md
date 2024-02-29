@@ -11,9 +11,9 @@ These release notes cover changes to the Mendix Profile, Mendix Community, and o
 
 ## 2024
 
-### XXXX, 2024
+### January 29, 2024
 
-* The Mendix Forum has changed its name. It is now called the [Mendix Community](/community-tools/mendix-community/). We look forward to continuing to see you help each other with questions and answers and propose ideas for improving the Mendix Platform there!
+* We are excited to announce that the Mendix Forum has grown into something much more than just a forum. As a result, we have decided to give it a new name: welcome to the [Mendix Community](/community-tools/mendix-community/)!
 
 ### February 8, 2024
 

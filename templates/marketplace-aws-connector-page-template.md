@@ -21,7 +21,7 @@ tags: ["marketplace", "marketplace component", "amazon", "{CONNECTOR NAME}", "co
 
 The {CONNECTOR NAME} connector requires Mendix Studio Pro version 9.18.0 or above.
 
-To authenticate with Amazon Web Service (AWS), you must also install and configure the [AWS Authentication connector version {MINIMUM REQUIRED VERSION} or higher](https://marketplace.mendix.com/link/component/120333). It is crucial for the {CONNECTOR NAME} connector to function correctly. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
+To authenticate with Amazon Web Service (AWS), you must also install and configure the [AWS Authentication connector version {MINIMUM REQUIRED VERSION} or higher](https://marketplace.mendix.com/link/component/120333). It is crucial for the {CONNECTOR NAME} connector to function correctly. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/modules/aws/aws-authentication/).
 
 #### VARIANT 2 - IF THE CONNECTOR ALSO HAS OTHER DEPENDENCIES
 
@@ -29,7 +29,7 @@ The {CONNECTOR NAME} connector requires Mendix Studio Pro version 9.18.0 or abov
 
 To use the {CONNECTOR NAME} connector, you must also install and configure the following modules:
 
-* [AWS Authentication connector version {MINIMUM REQUIRED VERSION} or higher](https://marketplace.mendix.com/link/component/120333) - This connector is required to authenticate with Amazon Web Services (AWS). It is crucial for the {CONNECTOR NAME} connector to function correctly. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/connectors/aws/aws-authentication/).
+* [AWS Authentication connector version {MINIMUM REQUIRED VERSION} or higher](https://marketplace.mendix.com/link/component/120333) - This connector is required to authenticate with Amazon Web Services (AWS). It is crucial for the {CONNECTOR NAME} connector to function correctly. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/modules/aws/aws-authentication/).
 * {OTHER MODULES AS REQUIRED, WITH A SHORT DESCRIPTION OF THEIR PURPOSE AND A LINK TO THEIR PAGES ON MARKETPLACE.}
 
 ### 1.3 Licensing and Cost

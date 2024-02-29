@@ -1,11 +1,13 @@
 ---
-title: "Rich Text"
-url: /appstore/widgets/rich-text/
+title: "Rich Text V2"
+url: /appstore/widgets/rich-text-v2/
 category: "Widgets"
 description: "Describes the configuration and usage of the Rich Text widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "widget", "rich text", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
+
+ {{% alert color="info" %}}This is a documentation for Rich Text widget version 2, for Rich Text Version 3.0 and above, please see this [Rich Text](/appstore/widgets/rich-text/) documentation.  {{% /alert %}}
 
 ## 1 Introduction
 

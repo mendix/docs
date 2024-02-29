@@ -14,7 +14,7 @@ The Mobile SSO module allows end-users of your mobile Mendix app to sign in via 
 
 The following diagram gives an overview of architecture of the module:
 
-{{< figure src="/attachments/appstore/modules/mobile-sso/architecture.png" max-width=80% class="image-border">}}
+{{< figure src="/attachments/appstore/modules/mobile-sso/Module architecture.png" max-width=80% class="image-border">}}
 
 ### 1.1 Typical Usage Scenarios
 
@@ -29,20 +29,19 @@ The Mobile SSO module has the following features:
 
 * Supports [native mobile apps](/refguide/mobile/introduction-to-mobile-technologies/native-mobile/)
 * User role assignment from your IdP
+* If you are building a Progressive Web Application (PWA), you do not need the Mobile SSO module, but you only need the OIDC SSO module.
     
 #### 1.2.2 Limitations
 
 The Mobile SSO module has the following limitations:
 
 * Mendix sessions in the mobile app do not time out
-* Does not support local sign out
 * Mobile SSO module does not support any other protocol except OIDC.
-* Mendix has not pen-tested the Mobile SSO module yet
-* Does not support Progressive web app (PWA). If you are building a progressive web app, you need to use the OIDC SSO module instead.
 * It doesn't support IdPs that lack Custom Callback URLs, such as Facebook.
 * Private use URI Schemes as per [RFC8252, section 7.1](https://datatracker.ietf.org/doc/html/rfc8252#section-7.1) are not used.
+* Approximately 5% of sign in attempts for the iOS app are unsuccessful, resulting in an error message indicating failure to sign in. However, a subsequent attempt usually leads to successful sign in.
 
-#### 1.2.3 Adherence
+#### 1.2.3 Adherence to OAuth/OpenID Connect Protocol Specifications
 
 This section clarifies to what extent a Mobile Mendix app using Mobile SSO module adheres to best practices for mobile SSO as per [RFC 8252](https://www.rfc-editor.org/rfc/rfc8252.txt):
 

@@ -3,7 +3,7 @@ title: "Mendix Community"
 url: /community-tools/mendix-community/
 category: "Community Tools"
 weight: 3
-description: "Describes the Mendix Community, where community members can ask and answer questions as well as post ideas for how to improve the Mendix Platform."
+description: "Describes the Mendix Community, where community members can ask and answer questions, exchange information, as well as post ideas for how to improve the Mendix Platform."
 aliases:
     - /developerportal/community-tools/mendix-forum/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -123,7 +123,7 @@ It has never been easier to ask a question in the Mendix Community. But before y
 
 To ask your own question in the Mendix Community, follow these steps:
 
-1. Click **Create a Post** > **Ask a Question**, or click **Ask a Question** on the **Questions** page. 
+1. Click **Create a Post** > **Ask a Question** on the home page, or click **Ask a Question** on the **Questions** page. 
 2. On the **Ask Your Question** page, fill in the following details in the editor:
 
     * The **Space** that reflects your question (for example, **Connectors**, **Databases**, or **Security**)
@@ -199,7 +199,7 @@ The URL for each exchange is unique.
 
 To ask your own question in the Mendix Community, follow these steps:
 
-1. Click **Create a Post** > **Exchange with Community**, or click **Post Exchange** on the **Exchanges** page. 
+1. Click **Create a Post** > **Exchange with Community** on the home page, or click **Post Exchange** on the **Exchanges** page. 
 2. On the **Create a Post** page, fill in the following details in the editor:
 
     * The **Space** that reflects your post
@@ -285,7 +285,7 @@ If you have a great idea that you would like to see implemented on the Mendix Pl
 
 To submit your own idea to the Mendix Community, follow these steps:
 
-1. Click **Create a Post** > **Share an Idea**, or click **Ask a Question** on the **Ideas** page. 
+1. Click **Create a Post** > **Share an Idea** on the home page, or click **Ask a Question** on the **Ideas** page. 
 2. On the **Share an Idea** page, fill in the following details in the editor:
 
     * The **Space** that reflects your idea (for example, **Catalog**, **Marketplace**, or **Usability**)
@@ -299,11 +299,11 @@ Mendix looks forward to hearing your ideas!
 
 ## 4 Spaces
 
-In different spaces in the Mendix Community, you can have discussions around the topics that interest you the most. The spaces that you have joined are shown under **SPACES** on the left navigation menu.
+In spaces in the Mendix Community, you can have discussions around the topics that interest you the most. The spaces that you have joined are shown under **SPACES** on the left navigation menu.
 
 Clicking **Explore Spaces** shows all the public spaces. Public spaces are visible to all community members. To join a space, click **Join** on the space card.
 
-Moreover, it is possible to have a private space for members within your organization. Click **Learn More** at the bottom to apply for opening a private space.
+Moreover, it is possible to have a private space for members within your organization. While you explore spaces, click **Learn More** at the bottom to check this out.
 
 ## 5 Read More
 

@@ -108,7 +108,7 @@ If no action is taken, resources in AWS will stay around indefinitely. Make sure
 
    4. Proceed with the rest of the steps in the wizard.
 
-   {{% alert color="info" %}}For more details about Retrieval Augmented Generation, see [RAG Example Implementation](/appstore/connectors/openai-connector/rag-example-implementation/).{{% /alert %}}
+   {{% alert color="info" %}}For more details about Retrieval Augmented Generation, see [RAG Example Implementation](/appstore/modules/openai-connector/rag-example-implementation/).{{% /alert %}}
 
 
 ## 5 Setup Alternatives {#setup-alternatives}

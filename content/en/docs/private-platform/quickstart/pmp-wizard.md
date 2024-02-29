@@ -2,7 +2,7 @@
 title: "Run the Private Mendix Platform Configuration Wizard"
 linktitle: "Run the Configuration Wizard"
 url: /private-mendix-platform-quickstart/wizard/
-description: "Documents the installation of the Mendix Operator for the Private Mendix Platform."
+description: "Documents the configuration wizard of the Private Mendix Platform."
 weight: 30
 tags: ["private mendix platform",  "private platform", "private marketplace", "configuration wizard"]
 ---

@@ -1,15 +1,15 @@
 ---
-title: "Marketplace Content React Readiness"
+title: "Marketplace Component React Readiness"
 url: /refguide/mendix-client/content-readiness
 category: "Mendix Runtime"
-description: "Describes the React Client."
+description: "Describes Mendix's React client."
 weight: 20
 tags: ["runtime", "mendix client", "react client"]
 ---
 
 ## 1 Introduction
 
-The Mendix Marketplace has several reusable widgets and modules created by Mendix, as well other made by our partners and community. Not all content found in the Mendix Marketplace is ready for the React Client yet, including platform-supported content provided by Mendix. This guide will help you understand which of the popular widgets and modules are ready for the React client and which are not.
+The Mendix Marketplace has several reusable widgets and modules created by Mendix, as well other made by our partners and community. Not all content found in the Mendix Marketplace is ready for the [React version of the Mendix Client](/releasenotes/studio-pro/10.7/#react-client) yet, including platform-supported content provided by Mendix. This guide will help you understand which of the popular widgets and modules are ready for the React client and which are not.
 
 If the Marketplace component you are interested in is not included on this list, add it to your application with the React client enabled, see if consistency errors arise, and troubleshoot them.
 
@@ -17,7 +17,7 @@ If the Marketplace component you are interested in is not included on this list,
 
 The following table shows which of the more popular platform-supported Marketplace components are ready for the React client (✅) or not (❌). We will continuously update this table as we improve the compatibility of our Marketplace components.
 
-| Marketplace Content | React Client Ready |
+| Marketplace Component | React Client Ready |
 | --- | --- |
 | [Community Commons](https://marketplace.mendix.com/link/component/170) | ✅ |
 | [Mx Model Reflection](https://marketplace.mendix.com/link/component/69) | ❌ |

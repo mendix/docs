@@ -45,7 +45,7 @@ The second advantage of the React Client becomes immediately apparent when your 
 
 ### 1.3 Future-Proof{#future-proof}
 
-Finally, the React Client allowed us to clean up our client and remove many libraries that are no longer needed, such as the Dojo framework. While popular at the time it was introduced in Mendix, it has now come out of fashion. By removing such dependencies in favor of modern frameworks, such as React, we can better ensure that your applications run stable and secure in your users’ web browsers.
+Finally, the React Client allows Mendix to clean up our client and remove many libraries that are no longer needed, such as the Dojo framework. While it was popular when we introduced in Mendix, it has now come out of fashion. By removing such dependencies in favor of modern frameworks, such as React, we can better ensure that your applications run stable and secure in your users’ web browsers.
 
 ## 2 Prerequisites{#prerequisites}
 
@@ -57,45 +57,45 @@ The React Client was introduced in Mendix 10.7.0 as a [beta feature](/releasenot
 
 ### 2.2 Widgets{#widgets}
 
-Widgets must fulfill the following requirements to be compatible with application leveraging the React Client:
+Widgets must fulfill the following requirements to be compatible with apps leveraging the React Client:
 
-* The widget must be a pluggable widget.
-* The widget must be compiled using the pluggable-widget-tools version 9.4.1 or later.
+* The widget must be a pluggable widget
+* The widget must be compiled using the `pluggable-widget-tools` version 9.4.1 or above
 
 ### 2.3 JavaScript Actions{#js-actions-prerec}
 
-JavaScript actions must not use any of the following client apis:
+JavaScript actions must not use any of the following client APIs:
 
 * The global symbol `dojo`
 * The global symbol `dijit`
 * The setting `mx.modulePath`
 * The function `mx.ui.openForm`
 
-These APIs are related to dojo and are no longer needed. For opening pages, please use the Nanoflow action [Show Page](/refguide/show-page) instead.
+These APIs are related to Dojo and are no longer needed. For opening pages, please use the nanoflow [Show Page](/refguide/show-page) action instead.
 
-Fore more information please refer to our [React Client API Documentation](https://apidocs.rnd.mendix.com/10/client-react/index.html)
+Fore more information on React and APIs in Mendix, see our [React Client API Documentation](https://apidocs.rnd.mendix.com/10/client-react/index.html)
 
 ### 2.4 Enable React Client{#enable-react}
 
-To enable the React Client for your Mendix project, make sure it fulfills the prerequesites above and then enable it in the [App Settings](/refguide/app-settings/#react-client).
+To enable the React Client for your Mendix project, make sure it fulfills the prerequisites above. Then, enable the React Client in [App Settings](/refguide/app-settings/#react-client).
 
-The migration mode will show warnings instead of errors for all incompatible widgets found in your project. This can help exploring and testing the React Client in your project. For deploying an application leveraging the React Client, we recommend setting the React Client to Yes and resolving all errors before deploying.
+The migration mode will show warnings instead of errors for all incompatible widgets found in your project. This can help you explore and test the React Client without being blocked by errors. When deploying an app leveraging the React Client, we recommend setting **React Client** to **Yes** and resolving all errors before deploying.
 
 ## 3 Migration Guide{#migration}
 
-Read further for guides that allow you convert your application so it is ready for the React Client.
+Read further for guides that allow you convert your app so it is ready for the React Client.
 
-### 3.1 Marketplace Content{#marketplace}
+### 3.1 Marketplace Components{#marketplace}
 
-Not all content found on the Mendix marketplace is ready for the React Client, yet. Refer to [Marketplace Content Rect Readiness](/refguide/mendix-client/content-readiness) to see which of the most popular marketplace content is ready. If a module or widget you are using is not on the list, test for yourself if it is compatible and reach out to the authors to update it if not.
+Not all components found on the Mendix marketplace is ready for the React Client. Refer to [Marketplace Content Rect Readiness](/refguide/mendix-client/content-readiness) to see which of the most popular marketplace components are React ready. If a module or widget you are using is not on the list, test it for yourself then reach out to the authors to update it if not.
 
-Update all marketplace content before enabling the React Client.
+Mendix recommends refreshing all Marketplace components in your app before enabling the React Client.
 
 ### 3.2 Dynamic & Static Image{#dynamic-static}
 
-The Dynamic Image and Static Image widget are not supported in the React Client. They should be replaced with the universal [Image](/appstore/widgets/image) widget. You can [download the Image widget from the Mendix Marketplace](https://marketplace.mendix.com/link/component/118579).
+The [Dynamic Image](/refguide/image-viewer/) and [Static Image](/refguide/image/) widgets are not supported in the React Client. TO use React, replace them with the universal [Image](/appstore/widgets/image) widget. You can [download the Image widget from the Mendix Marketplace](https://marketplace.mendix.com/link/component/118579).
 
-To automatically convert a Dynamic image or a Static image right click on the widget or the error message and select Convert to Image.
+To automatically convert a dynamic image or a static image, right click on the widget (or the error message) and select **Convert to Image**.
 
 {{% alert color="info" %}}
 We are working on a batch conversion for image widgets that lets you convert all images in your project with a few clicks. We will announce the release in our [Release Notes](/releasenotes/studio-pro/10).

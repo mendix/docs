@@ -800,7 +800,27 @@ For more inspiration or guidance on how to use those microflows in your logic, M
 
 {{% alert color="info" %}}For more information on how to set up a vector database for retrieval augmented generation (RAG),  see [RAG Example Implementation in the OpenAI Showcase Application](/appstore/connectors/openai-connector/rag-example-implementation/).{{% /alert %}}
 
-## 6 Read More {#read-more}
+## 6 Troubleshooting {#troubleshooting}
+
+### 6.1 Outdated JDK Version Causing Errors while Calling the Embeddings API {#outdated-jdk-version}
+
+The Java Development Kit (JDK) is a framework needed by Mendix Studio Pro to deploy and run applications. For more infomation, see [Studio Pro System Requirements](/refguide/installation/system-requirements/). Usually, the right JDK version is installed during the installation of Studio Pro, but in some cases it still may be outdated causing exceptions when calling the Embeddings API or other REST-based services with large data volumes.
+
+We have seen the following two exceptions when using JDK version `jdk-11.0.3.7-hotspot`:
+`java.net.SocketException - Connection reset` or
+`javax.net.ssl.SSLException - Received fatal alert: record_overflow`.
+
+Follow these steps to check your JDK version and update if neccessary:
+1. Check your JDK version: In Studio Pro Go to **Edit** -> **Preferences** -> **Deployment**-> **JDK directory**. If the path point to `jdk-11.0.3.7-hotspot`, you need to update it by following the next steps.
+2. Go to [Eclipse Temurin JDK 11](https://adoptium.net/en-GB/temurin/releases/?variant=openjdk11&os=windows&package=jdk) and download the `.msi` file of the latest release of **JDK 11**.
+3. Open the downloaded file and follow the installation steps. Remember the installation path. Usually this should be somethink like `C:/Program Files/Eclipse Adoptium/jdk-11.0.22.7-hotspot`.
+4. After the installation has finished, you might be asked to restart your computer.
+5. Open Studio Pro and go to **Edit** -> **Preferences** -> **Deployment** -> **JDK directory**. Click on **Browse** and select the folder with the new JDK version you just installed. This should be the folder containing the *bin* folder. Save your settings by clicking **OK**.
+6. Run the project and execute the action that threw the above mentioned execption earlier.
+    1. You might get an error saying `FAILURE: Build failed with an exception. The supplied javaHome seems to be invalid. I cannot find the java executable.`. Verify that you have selected the right JDK directory containing the updated JDK version. You may also need to updated Gradle. For this, go to **Edit** -> **Preferences** -> **Deployment** -> **Gradle directory**. Click **Browse** and select a newer gradle version from the Mendix folder. In this case we replaced `grade-7.6` with `gradle-7.6.3`. Save your settings by clicking **OK**.
+    2. Rerun the project.
+
+## 7 Read More {#read-more}
 
 * [Prompt Engineering – Open AI Documentation](https://platform.openai.com/docs/guides/prompt-engineering)
 * [Introduction to Prompt Engineering – Microsoft Azure Documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/prompt-engineering)

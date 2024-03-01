@@ -29,7 +29,7 @@ These settings influence the behavior of the Runtime when running your applicati
 
 ### 3.1 Use React Client (Beta) {#react-client}
 
-This setting enables the new React client. This client was released into beta in [Mendix 10.7](/releasenotes/studio-pro/10.7/#react-client). There are three options:
+This setting enables the new React version of the Mendix Client. This React client was released into beta in [Mendix 10.7](/releasenotes/studio-pro/10.7/#react-client). There are three options:
 
 * **No**: Do not use the React client (default).
 * **Yes**: Use the React client. In this mode, you will get consistency errors for incompatible widgets.

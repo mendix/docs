@@ -1,6 +1,6 @@
 ---
-title: "Marketplace Component React Readiness"
-url: /refguide/mendix-client/content-readiness
+title: "Marketplace Component React Status"
+url: /refguide/mendix-client/marketplace-react-status/
 category: "Mendix Runtime"
 description: "Describes Mendix's React client."
 weight: 20
@@ -13,7 +13,7 @@ The Mendix Marketplace has several reusable widgets and modules created by Mendi
 
 If the Marketplace component you are interested in is not included on this list, add it to your application with the React client enabled, see if consistency errors arise, and troubleshoot them.
 
-## 2 Marketplace Content Status
+## 2 Marketplace Component Status Table
 
 The following table shows which of the more popular platform-supported Marketplace components are ready for the React client (✅) or not (❌). We will continuously update this table as we improve the compatibility of our Marketplace components.
 

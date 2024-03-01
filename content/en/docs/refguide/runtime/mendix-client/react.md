@@ -71,7 +71,7 @@ JavaScript actions must not use any of the following client APIs:
 * The setting `mx.modulePath`
 * The function `mx.ui.openForm`
 
-These APIs are related to Dojo and are no longer needed. For opening pages, please use the nanoflow [Show Page](/refguide/show-page) action instead.
+These APIs are related to Dojo and are no longer needed. For opening pages, please use the nanoflow [Show Page](/refguide/show-page/) action instead.
 
 Fore more information on React and APIs in Mendix, see our [Mendix 10 React Client API](https://apidocs.rnd.mendix.com/10/client-react/index.html) documentation.
 
@@ -93,17 +93,17 @@ Mendix recommends refreshing all Marketplace components in your app before enabl
 
 ### 3.2 Dynamic & Static Image{#dynamic-static}
 
-The [Dynamic Image](/refguide/image-viewer/) and [Static Image](/refguide/image/) widgets are not supported in the React client. TO use React, replace them with the universal [Image](/appstore/widgets/image) widget. You can [download the Image widget from the Mendix Marketplace](https://marketplace.mendix.com/link/component/118579).
+The [Dynamic Image](/refguide/image-viewer/) and [Static Image](/refguide/image/) widgets are not supported in the React client. TO use React, replace them with the universal [Image](/appstore/widgets/image/) widget. You can [download the Image widget from the Mendix Marketplace]().
 
 To automatically convert a dynamic image or a static image, right-click the widget (or the error message) and select **Convert to Image**.
 
 {{% alert color="info" %}}
-We are working on a batch conversion for image widgets that lets you convert all images in your project with a few clicks. We will announce the release in our [Release Notes](/releasenotes/studio-pro/10).
+We are working on a batch conversion for image widgets that lets you convert all images in your project with a few clicks. We will announce the release in our [Release Notes](/releasenotes/studio-pro/10/).
 {{% /alert %}}
 
 ### 3.3 Reference Selector{#reference-selector}
 
-The reference selector widgets ([Reference Selector](/refguide/reference-selector/), [Reference Set Selector](/refguide/reference-set-selector/), and [Input Reference Set Selector](/refguide/input-reference-set-selector/)) are not supported in the React client. To leverage React, replace them with the [Combo Box](/appstore/widgets/combobox) widget. The combo box widget can be [downloaded from the Mendix Marketplace](https://marketplace.mendix.com/link/component/219304).
+The reference selector widgets ([Reference Selector](/refguide/reference-selector/), [Reference Set Selector](/refguide/reference-set-selector/), and [Input Reference Set Selector](/refguide/input-reference-set-selector/)) are not supported in the React client. To leverage React, replace them with the [Combo Box](/appstore/widgets/combobox/) widget. The combo box widget can be [downloaded from the Mendix Marketplace](https://marketplace.mendix.com/link/component/219304).
 
 To replace a reference selector widget, follow these steps:
 
@@ -133,22 +133,22 @@ This will replace the pop-up showing a table for selection with a more commonly 
 We also recommended you replace drop down widgets with combo box widgets for a better user experience. This change is not required.
 
 {{% alert color="info" %}}
-We are working on an automatic conversion for reference selector widgets that lets you convert a reference selector automatically to a combo box. We will announce the release in our [Release Notes](/releasenotes/studio-pro/10).
+We are working on an automatic conversion for reference selector widgets that lets you convert a reference selector automatically to a combo box. We will announce the release in our [Release Notes](/releasenotes/studio-pro/10/).
 {{% /alert %}}
 
 ### 3.4 Data Grid{#data-grid}
 
-The data grid widget is not supported in the React client. To leverage React, replace it with the [Data Grid 2](/appstore/modules/data-grid-2) widget. The data grid 2 widget is part of the [Data Widgets Module](https://marketplace.mendix.com/link/component/116540) in the Mendix Marketplace.
+The data grid widget is not supported in the React client. To leverage React, replace it with the [Data Grid 2](/appstore/modules/data-grid-2/) widget. The data grid 2 widget is part of the [Data Widgets Module](https://marketplace.mendix.com/link/component/116540) in the Mendix Marketplace.
 
 To automatically convert a data grid widget to a data grid 2, right-click the widget (or the error message) and select **Convert to Data Grid 2**.
 
 {{% alert color="info" %}}
-We are working on a batch conversion for data grid widgets that lets you convert all data grids in your project with a few clicks. We will announce the release in our [Release Notes](/releasenotes/studio-pro/10).
+We are working on a batch conversion for data grid widgets that lets you convert all data grids in your project with a few clicks. We will announce the release in our [Release Notes](/releasenotes/studio-pro/10/).
 {{% /alert %}}
 
 ### 3.5 Template Grid{#template-grid}
 
-The template grid widget is not supported in the React client. It should be replaced with the [Gallery widget](/appstore/modules/gallery). The gallery widget is part of the [Data Widgets Module](https://marketplace.mendix.com/link/component/116540) in the Mendix Marketplace.
+The template grid widget is not supported in the React client. It should be replaced with the [Gallery widget](/appstore/modules/gallery/). The gallery widget is part of the [Data Widgets Module](https://marketplace.mendix.com/link/component/116540) in the Mendix Marketplace.
 
 To replace a template grid widget, follow these steps:
 
@@ -162,7 +162,7 @@ To replace a template grid widget, follow these steps:
 
 Dojo widgets are no longer supported in the React client. They should be replaced with a pluggable widget based on React. 
 
-Converting a Dojo widget to a React widget requires JavaScript programming. Follow [Build a Pluggable Web Widget: Part 1](/howto/extensibility/create-a-pluggable-widget-one).
+Converting a Dojo widget to a React widget requires JavaScript programming. Follow [Build a Pluggable Web Widget: Part 1](/howto/extensibility/create-a-pluggable-widget-one/).
 
 Pluggable widgets must be built with `pluggable-widget-tools` version 9.4.1 or higher. Follow these steps to update `pluggable-widget-tools` and rebuild your widget:
 

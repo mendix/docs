@@ -1,8 +1,10 @@
 ---
-title: "Complete Task"
-url: /refguide/complete-task/
+title: "Complete User Task"
+url: /refguide/complete-user-task/
 weight: 30
-tags: ["studio pro", "user task", "workflow", "task outcome", "complete task"]
+tags: ["studio pro", "user task", "workflow", "task outcome", "complete task", "complete user task"]
+aliases:
+    - /refguide/complete-task/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -12,17 +14,17 @@ This activity can only be used in microflows.
 
 ## 1 Introduction
 
-The **Complete task** activity can be used to define which outcome the [user task](/refguide/user-task/) should follow. 
+The **Complete user task** activity can be used to define which outcome the [user task](/refguide/user-task/) should follow. 
 
 ## 2 Properties
 
-An example of complete task properties is represented in the image below:
+An example of complete user task properties is represented in the image below:
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/complete-task/complete-task-properties.jpg" alt="Complete Task Properties" width="650px" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
-The **Complete task** properties pane consists of the following sections:
+The **Complete user task** properties pane consists of the following sections:
 
 * [Action](#action)
 * [Common](#common)
@@ -37,7 +39,7 @@ You can also open the dialog box by double-clicking the activity, or right-click
 
 ### 3.1 User Task Object
 
-The user task object of the System.WorkflowUserTask entity available from the microflow parameters.
+The user task object of the **System.WorkflowUserTask** entity available from the microflow parameters.
 
 ### 3.2 User Task
 

@@ -32,7 +32,6 @@ The complete technical flow can be split up into the following three steps at a 
 
 In summary, in the first step, you need to provide the private knowledge base, such as a text snippet. You need to prepare the content for RAG, which happens only once. If the content changes, you need to provide it again for RAG. The last two steps happen every time an end-user triggers the RAG flow, for example, by asking a question about the data.
 
-
 ## 3 RAG Example in the OpenAI Showcase Application {#rag-showcase-app}
 
 ### 3.1 Prerequisites {#prerequisites}
@@ -93,4 +92,4 @@ If you would like to build your own RAG setup, feel free to learn from the OpenA
 
 ## 5 Read More {#read-more}
 
-- [Embeddings-based Search – Open AI Cookbook](https://cookbook.openai.com/examples/question_answering_using_embeddings)
+* [Embeddings-based Search – Open AI Cookbook](https://cookbook.openai.com/examples/question_answering_using_embeddings)

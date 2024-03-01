@@ -36,7 +36,7 @@ These are the known limitations for Mac:
 * The installer is currently not notarized yet; you bypass the dialog box by using right-click > **Open**.
 
 {{% alert color="warning" %}}
-Administrator rights are required to install Mendix Studio Pro Beta for macOS.
+Administrator rights are required to install Mendix Studio Pro on Mac (Beta).
 {{% /alert %}}
 
 The following frameworks are required. They will be installed automatically by the Studio Pro installer, if necessary:

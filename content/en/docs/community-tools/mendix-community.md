@@ -1,9 +1,9 @@
 ---
-title: "Mendix Forum"
-url: /community-tools/mendix-forum/
+title: "Mendix Community"
+url: /community-tools/mendix-community/
 category: "Community Tools"
 weight: 3
-description: "Describes the Mendix Forum, where the Mendix community can ask and answer questions as well as post ideas for how to improve the Mendix Platform."
+description: "Describes the Mendix Community, where community members can ask and answer questions, exchange information, as well as post ideas for how to improve the Mendix Platform."
 aliases:
     - /developerportal/community-tools/mendix-forum/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -11,34 +11,44 @@ aliases:
 
 ## 1 Introduction
 
-The [Mendix Forum](https://forum.mendixcloud.com) is where the Mendix community comes together to help each other with questions and answers and to propose ideas for improving the Mendix Platform.
+The [Mendix Community](https://community.mendix.com/) is where Mendix community members come together to help each other with questions and answers, exchange information, and propose ideas for improving the Mendix Platform.
 
-The Mendix Forum is closely integrated with the [Mendix Profile](/community-tools/mendix-profile/) so that Mendix community members can see all the interesting and useful information about who is participating in the Mendix Forum. If someone clicks your name anywhere on the Mendix Forum, your profile will open, so make sure to [make your Mendix Profile public](/community-tools/mendix-profile/user-settings/#profile) so everyone can see your details and progress!
+The Mendix Community is closely integrated with the [Mendix Profile](/community-tools/mendix-profile/) so that Mendix community members can see all the interesting and useful information about who is participating in the Mendix Community. If someone clicks your name anywhere in the Mendix Community, your profile will open, so make sure to [make your Mendix Profile public](/community-tools/mendix-profile/user-settings/#profile) so everyone can see your details and progress!
 
 Click **Create a Post** to ask a question, start an exchange with the community, or share an idea.
 
-## 2 Bookmarks
+## 2 Personal
 
-In **Personal** > **Bookmarks**, the following tabs are available:
+Under **PERSONAL**, you can find [Community Feed](#community-feed), [Bookmarks](#bookmarks), and [Posts](#posts).
+
+### 2.1 Community Feed {#community-feed}
+
+Clicking **PERSONAL** > **Community Feed** brings you back to the home page of the Mendix Community.
+
+### 2.2 Bookmarks {#bookmarks}
+
+In **PERSONAL** > **Bookmarks**, the following tabs are available:
 
 * **Questions** – the questions you have bookmarked (for details, see [Question Details](#question-details) below)
 * **Exchanges** – the exchanges you have bookmarked (for details, see [Exchange Details](#exchange-details) below)
 * **Ideas** – the ideas you have bookmarked (for details, see [Idea Details](#idea-details) below)
 
-## 3 Posts {#posts}
+### 2.3 Posts {#posts}
 
-In **Personal** > **Posts**, the following tabs are available:
+In **PERSONAL** > **Posts**, the following tabs are available:
 
 * **Posted** – the questions and ideas you have posted (for details, see [Asking Your Question](#asking-question) and [Posting Your Idea](#posting-idea) below)
 * **Answered** – the questions you have answered (for details, see [Question Details](#question-details) below)
 * **Commented** – the questions, exchanges, and ideas that you have commented on
 * **Drafts** – the post drafts you have started
 
-## 4 Questions {#questions-tab}
+## 3 General
 
-In **General** > **Questions**, there is an overview of the questions that have been asked. Here is an example question:
+### 3.1 Questions {#questions-tab}
 
-{{< figure src="/attachments/community-tools/mendix-forum/question-example.png" >}}
+In **GENERAL** > **Questions**, you can see an overview of the questions that have been asked. Here is an example question:
+
+{{< figure src="/attachments/community-tools/mendix-community/question-example.png" >}}
 
 Each question has the following details:
 
@@ -59,7 +69,7 @@ Each question has the following details:
 Hover over the developer name to see the profile card with their Mendix points. Click the developer name on the card to go to their Mendix Profile.
 {{% /alert %}}
 
-### 4.1 Searching and Filtering Questions
+#### 3.1.1 Searching and Filtering Questions
 
 To search for a question, enter your keywords in the **Search** text box.
 
@@ -71,11 +81,11 @@ To filter the searching results, you can use the following filters:
 * **Type in a Tag** – the tags set when the question was asked (for details, see [Asking Your Question](#asking-question) below)
 * **Version** – the Mendix version to which the question is related (for details, see [Asking Your Question](#asking-question) below)
 
-### 4.2 Question Details {#question-details}
+#### 3.1.2 Question Details {#question-details}
 
 Clicking the title of a question brings you to its details page:
 
-{{< figure src="/attachments/community-tools/mendix-forum/question-details.png" >}}
+{{< figure src="/attachments/community-tools/mendix-community/question-details.png" >}}
 
 On this page, you do the following:
 
@@ -95,25 +105,25 @@ On this page, you do the following:
 
 Below the question details are the answers to the question. Click the **▲** or **▼** button to upvote or downvote the answer based on how it addresses the question. You can also click **Comment** to comment on an answer.
 
-{{< figure src="/attachments/community-tools/mendix-forum/question-answer.png"   width="65%" >}}
+{{< figure src="/attachments/community-tools/mendix-community/question-answer.png"   width="65%" >}}
 
-In the **Your Answer** section, you can contribute to the Mendix Forum by writing your answer in the editor and then clicking **Submit Answer**:
+In the **Your Answer** section, you can contribute to the Mendix Community by writing your answer in the editor and then clicking **Submit Answer**:
 
-{{< figure src="/attachments/community-tools/mendix-forum/your-answer.png"  width="50%" >}}
+{{< figure src="/attachments/community-tools/mendix-community/your-answer.png"  width="50%" >}}
 
 {{% alert color="info" %}}
 The URL for each question is unique.
 {{% /alert %}}
 
-### 4.3 Asking Your Question {#asking-question}
+#### 3.1.3 Asking Your Question {#asking-question}
 
 {{% alert color="info" %}}
-It has never been easier to ask a question on the Mendix Forum. But before you submit a new question, be sure to search the Mendix Forum for similar questions that have already been asked. There may be someone else who has already posted the same question!
+It has never been easier to ask a question in the Mendix Community. But before you submit a new question, be sure to search the Mendix Community for similar questions that have already been asked. There may be someone else who has already posted the same question!
 {{% /alert %}}
 
-To ask your own question on the Mendix Forum, follow these steps:
+To ask your own question in the Mendix Community, follow these steps:
 
-1. Click **Create a Post** > **Ask a Question**, or click **Ask a Question** on the **Questions** page. 
+1. Click **Create a Post** > **Ask a Question** on the home page, or click **Ask a Question** on the **Questions** page. 
 2. On the **Ask Your Question** page, fill in the following details in the editor:
 
     * The **Space** that reflects your question (for example, **Connectors**, **Databases**, or **Security**)
@@ -125,16 +135,16 @@ To ask your own question on the Mendix Forum, follow these steps:
 3. Click **Ask Question** to post your question or **Save as Draft** to return to it via [Posts](#posts) > **Drafts** .
 
 {{% alert color="info" %}}
-You can easily upload images in the Mendix Forum by dragging them directly into the text editor. In order to resize and position an image, double-click it in the editor or click the **Image** button in the toolbar.
+You can easily upload images in the Mendix Community by dragging them directly into the text editor. In order to resize and position an image, double-click it in the editor or click the **Image** button in the toolbar.
 {{% /alert %}}
 
 Once a question you have asked receives several answers, you can accept an answer by clicking the check mark next to the answer. You should accept the answer that properly and accurately responds to your question in the best way possible.
 
-## 5 Exchanges {#exchanges-tab}
+### 3.2 Exchanges {#exchanges-tab}
 
-In **General** > **Exchanges**, there is an overview of the exchanges that have been posted. Here is an example exchange:
+In **GENERAL** > **Exchanges**, there is an overview of the exchanges that have been posted. Here is an example exchange:
 
-{{< figure src="/attachments/community-tools/mendix-forum/exchange-example.png" >}}
+{{< figure src="/attachments/community-tools/mendix-community/exchange-example.png" >}}
 
 Each exchange has the following details:
 
@@ -148,9 +158,9 @@ Each exchange has the following details:
 * ⑥ The number of comments on the exchange
 * ⑦ The number of views the exchange has received
 * ⑧ The name, avatar, and [level](/community-tools/mendix-profile/#level) of the Mendix community member who posted the exchange
-* ⑨ The avatars of the Mendix comminity members who have commented
+* ⑨ The avatars of the Mendix community members who have commented
 
-### 5.1 Searching and Filtering Exchanges
+#### 3.2.1 Searching and Filtering Exchanges
 
 To search for an exchange, enter your keywords in the **Search** text box.
 
@@ -160,11 +170,11 @@ To filter the searching results, you can use the following filters:
 * **Spaces** – the space set when the exchange was posted (for details, see [Posting an Exchange](#posting-exchange) below)
 * **Type in a Tag** – the tags set when the exchange was posted (for details, see [Posting an Exchange](#posting-exchange) below)
 
-### 5.2 Exchange Details {#exchange-details}
+#### 3.2.2 Exchange Details {#exchange-details}
 
 Clicking the title of an exchange brings you to its details page:
 
-{{< figure src="/attachments/community-tools/mendix-forum/exchange-details.png" >}}
+{{< figure src="/attachments/community-tools/mendix-community/exchange-details.png" >}}
 
 On this page, you do the following:
 
@@ -179,17 +189,17 @@ On this page, you do the following:
 
 Below the exchange details are comments on the exchange. 
 
-In the **Your Comment** section, you can contribute to the Mendix Forum by writing your comment in the editor and then clicking **Submit Comment**.
+In the **Your Comment** section, you can contribute to the Mendix Community by writing your comment in the editor and then clicking **Submit Comment**.
 
 {{% alert color="info" %}}
 The URL for each exchange is unique.
 {{% /alert %}}
 
-### 5.3 Posting an Exchange {#posting-exchange}
+#### 3.2.3 Posting an Exchange {#posting-exchange}
 
-To ask your own question on the Mendix Forum, follow these steps:
+To ask your own question in the Mendix Community, follow these steps:
 
-1. Click **Create a Post** > **Exchange with Community**, or click **Post Exchange** on the **Exchanges** page. 
+1. Click **Create a Post** > **Exchange with Community** on the home page, or click **Post Exchange** on the **Exchanges** page. 
 2. On the **Create a Post** page, fill in the following details in the editor:
 
     * The **Space** that reflects your post
@@ -199,11 +209,11 @@ To ask your own question on the Mendix Forum, follow these steps:
 
 3. Click **Post Exchange** to post your question or **Save as Draft** to return to it via [Posts](#posts) > **Drafts** .
 
-## 6 Ideas {#ideas-tab}
+### 3.3 Ideas {#ideas-tab}
 
-In **General** > **Ideas**, you can see an overview of the ideas and feature requests for improving the Mendix Platform that have been submitted by Mendix community members. Here is an example idea:
+In **GENERAL** > **Ideas**, you can see an overview of the ideas and feature requests for improving the Mendix Platform that have been submitted by Mendix community members. Here is an example idea:
 
-{{< figure src="/attachments/community-tools/mendix-forum/idea-example.png" >}}
+{{< figure src="/attachments/community-tools/mendix-community/idea-example.png" >}}
 
 Each idea has the following details:
 
@@ -224,7 +234,7 @@ Each idea has the following details:
 * ⑩ The name, avatar, and [level](/community-tools/mendix-profile/#level) of the Mendix community member who posted the idea
 * ⑪ The avatars of the Mendix comminity members who have commented
 
-### 6.1 Searching and Filtering Ideas
+#### 3.3.1 Searching and Filtering Ideas
 
 To search for an idea, enter your keywords in the **Search** text box.
 
@@ -235,11 +245,11 @@ To filter the searching results, you can use the following filters:
 * **Spaces** – the space set when the idea was posted (for details, see [Posting Your Idea](#posting-idea) below)
 * **Type in a Tag** – the tags set when the idea was posted (for details, see [Posting Your Idea](#posting-idea) below)
 
-### 6.2 Idea Details {#idea-details}
+#### 3.3.2 Idea Details {#idea-details}
 
 Clicking the title of an idea brings you to its details page:
 
-{{< figure src="/attachments/community-tools/mendix-forum/idea-details.png" >}}
+{{< figure src="/attachments/community-tools/mendix-community/idea-details.png" >}}
 
 On this page, you do the following:
 
@@ -261,21 +271,21 @@ On this page, you do the following:
 
 Below the ideas details are the comments on the idea. 
 
-In the **Your Comment** section, you can contribute to the Mendix Forum by writing your idea in the editor and then clicking **Submit Comment**.
+In the **Your Comment** section, you can contribute to the Mendix Community by writing your idea in the editor and then clicking **Submit Comment**.
 
 {{% alert color="info" %}}
 The URL for each idea is unique.
 {{% /alert %}}
 
-### 6.3 Posting an Idea {#posting-idea}
+#### 3.3.3 Posting an Idea {#posting-idea}
 
 {{% alert color="info" %}}
-If you have a great idea that you would like to see implemented on the Mendix Platform, we want to hear it. But please make sure you search the Mendix Forum for similar ideas before submitting a new idea. There may be someone else who has already posted the same idea!
+If you have a great idea that you would like to see implemented on the Mendix Platform, we want to hear it. But please make sure you search the Mendix Community for similar ideas before submitting a new idea. There may be someone else who has already posted the same idea!
 {{% /alert %}}
 
-To submit your own idea to the idea forum, follow these steps:
+To submit your own idea to the Mendix Community, follow these steps:
 
-1. Click **Create a Post** > **Share an Idea**, or click **Ask a Question** on the **Ideas** page. 
+1. Click **Create a Post** > **Share an Idea** on the home page, or click **Ask a Question** on the **Ideas** page. 
 2. On the **Share an Idea** page, fill in the following details in the editor:
 
     * The **Space** that reflects your idea (for example, **Catalog**, **Marketplace**, or **Usability**)
@@ -287,6 +297,14 @@ To submit your own idea to the idea forum, follow these steps:
 
 Mendix looks forward to hearing your ideas!
 
-## 7 Read More
+## 4 Spaces
+
+In spaces in the Mendix Community, you can have discussions around the topics that interest you the most. The spaces that you have joined are shown under **SPACES** on the left navigation menu.
+
+Clicking **Explore Spaces** shows all the public spaces. Public spaces are visible to all community members. To join a space, click **Join** on the space card.
+
+Moreover, it is possible to have a private space for members within your organization. While you explore spaces, click **Learn More** at the bottom to check this out.
+
+## 5 Read More
 
 * [How to Contribute to Mendix Documentation](/community-tools/contribute-to-mendix-docs/)

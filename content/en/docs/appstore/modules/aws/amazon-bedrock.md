@@ -127,7 +127,7 @@ To invoke a specific model, perform the following steps:
     7. Map the relevant elements to the correct attributes by double-clicking the shown entities and choosing the correct entity attributes for the correct elements.
 6. Create a microflow that invokes a specific model using the [Invoke Model](#invoke-model) operation, such as in the following figure (for Claude v. 2.1):
 
-    {{< figure src="/attachments/appstore/connectors/aws-bedrock/microflow.png" >}}
+    {{< figure src="/attachments/appstore/modules/aws-bedrock/microflow.png" >}}
 
 ## 4 Technical Reference
 

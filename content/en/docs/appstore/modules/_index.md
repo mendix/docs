@@ -38,7 +38,7 @@ To check out which modules a category contains, click the category in the list b
 ### 2.1 Artificial Intelligence {#artificial-intelligence}
 
 * [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/)
-* [OpenAI Connector](/appstore/connectors/openai-connector/)
+* [OpenAI Connector](/appstore/modules/openai-connector/)
 
 ### 2.2 Authentication {#authentication}
 
@@ -86,15 +86,15 @@ To check out which modules a category contains, click the category in the list b
 * [AWS Authentication](/appstore/modules/aws/aws-authentication/)
 * [AWS IoT SiteWise](/appstore/modules/aws/aws-iot-sitewise/)
 * [Data Importer](/appstore/modules/data-importer/)
-* [Email Connector](/appstore/connectors/email-connector/)
+* [Email Connector](/appstore/modules/email-connector/)
 * [OData Connector for SAP Solutions](/appstore/modules/sap/sap-odata-connector/)
-* [OpenAI Connector](/appstore/connectors/openai-connector/)
+* [OpenAI Connector](/appstore/modules/openai-connector/)
 * [XSUAA Connector for SAP Business Technology Platform](/appstore/modules/sap/sap-xsuaa-connector/)
 
 ### 2.6 Data {#data}
 
 * [Data Importer](/appstore/modules/data-importer/)
-* [Database Connector](/appstore/connectors/database-connector/)
+* [Database Connector](/appstore/modules/database-connector/)
 * [Mendix Feedback](/appstore/modules/mendix-feedback/)
 * [Mendix Mini Surveys](/appstore/modules/mendix-mini-surveys/)
 
@@ -109,7 +109,7 @@ To check out which modules a category contains, click the category in the list b
 
 ### 2.8 Internet-of-Things {#internet-of-things}
 
-* [MQTT Connector](/appstore/connectors/mqtt/)
+* [MQTT Connector](/appstore/modules/mqtt/)
 * [AWS IoT SiteWise](/appstore/modules/aws/aws-iot-sitewise/)
 
 ### 2.9 Mobile {#mobile}

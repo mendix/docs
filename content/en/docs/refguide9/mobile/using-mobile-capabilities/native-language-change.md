@@ -125,5 +125,5 @@ Congratulations, you just implemented internationalization in your native app! Y
 
 * [Using Translatable Validation Messages](/refguide9/translatable-validation-messages/)
 * [Language Menu](/refguide9/translatable-texts/): gives more information on translating the languages of different Mendix UI elements
-* [Change Language by Clicking a Link](https://forum.mendixcloud.com/link/questions/91821): explanations and ideas on the Mendix forum for refreshing the page when the language is changed
-* [Anonymous User Journey](https://forum.mendixcloud.com/link/questions/91676): a discussion on the Mendix forum about switching languages for anonymous end-users
+* [Change Language by Clicking a Link](https://community.mendix.com/link/questions/91821): explanations and ideas in the Mendix Community for refreshing the page when the language is changed
+* [Anonymous User Journey](https://community.mendix.com/link/questions/91676): a discussion in the Mendix Community about switching languages for anonymous end-users

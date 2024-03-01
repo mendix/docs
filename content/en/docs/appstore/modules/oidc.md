@@ -17,7 +17,7 @@ OIDC is an extension of OAuth2 that propagates the end-user's identity to your a
 {{% alert color="warning" %}}
 This OIDC SSO module works with Mendix 9.0 and above. If you are using a previous version of Mendix, you can use the community-supported module [OpenIDConnect Single Sign-on (OIDC, OAuth2, SSO)](https://marketplace.mendix.com/link/component/117529).
 
-If you are using Mendix 9.20 and above, please use version 2.0.0 or above of the OIDC SSO module.
+If you are using Mendix 9.20 and above, ensure you are using version 2.0.0 or above of the OIDC SSO module. For Mendix 10.0 and above, you need to use version 2.3.0 or above of the OIDC SSO module.
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -90,7 +90,7 @@ The OIDC SSO module also has the following limitations:
 
 ## 2 Dependencies
 
-The OIDC module requires your app to be using Mendix 8.18 or above.
+The OIDC module requires your app to be using Mendix 9.0 or above.
 
 It requires the following Marketplace modules to be included in your app:
 
@@ -314,11 +314,12 @@ In this case, the OIDC client is the app you are making.
 
 | Default Microflow | Use |
 | --- | --- |
-| OIDC_CustomUserParsing_Standard | xxxxxxxxxx |
-| OIDC_CustomUserParsing_UserInfo | xxxxxx |
-| OIDC_CustomUserParsing_Salesforce | xxxxxxxxxx |
+| OIDC_CustomUserParsing_Standard | It implements some standard OpenID claims to find/provision a user. |
+| OIDC_CustomUserParsing_UserInfo | It is similar as standard OIDC user provisioning flow, except it works with identity providers that use `opaque` tokens. |
+| OIDC_CustomUserParsing_Salesforce | It offers an `id` endpoint that retrieves information about user. You can use OpenID token (`id_token`) to map user attributes. |
 
-You can set the timezone and language with `xxxxx` or `xxxxxx` microflow.
+In version below 3.0.0 of the OIDC SSO module, you can configure the timezone and language using the `OIDC_CustomUserParsing_Standard` and `OIDC_CustomUserParsing_UserInfo` microflow. However, in version 3.0.0 and above of the OIDC SSO module, you can set the timezone and language using any standard microflow.
+
 You can also use your own custom user entity to manage users of the app. See the section on [Custom User Provisioning](#custom-provisioning) for more information on what you can do to implement provisioning logic which fits your business needs. The module includes a Salesforce-specific example.
 
 1. Optionally, you can select the `CustomAccessTokenParsing` microflow if you want to use additional information from the OIDC IdP. This can be used, for example, to assign end-user roles based on information from the IdP – see [Access Token Parsing](#access-token-parsing) for more information.

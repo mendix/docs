@@ -139,6 +139,9 @@ The steps for each procedure are described in the sections below.
 
 1. Add the snippet **Snip_AppRegistration** to a page in your app that is accessible to users with the **Administrator** module role set in the **DocumentGeneration** module. The snippet can be found in the  **_UseMe** > **Admin** folder of the **DocumentGeneration** module.
 2. Enable the scheduled event **SE_AccessToken_Refresh** to automatically refresh the access token that is used to secure access to the Document Generation cloud service. The scheduled event can be found in the  **_UseMe** > **Scheduled events** folder of the **DocumentGeneration** module.
+
+	* In version 1.6.0 and above, for apps deployed on Mendix Free Cloud, a **Renew app registration** button will be visible in the **Snip_AppRegistration** snippet if your registration is going to expire within 24 hours or has already expired. You can use this button to manually refresh your token.
+
 3. Make sure that your changes are [deployed to your Mendix Cloud environment](/developerportal/deploy/mendix-cloud-deploy/#deploy-app-mendix-cloud).
 4. Sign in to the app environment you want to register.
 5. Navigate to the page that contains the **Snip_AppRegistration** snippet.

@@ -20,7 +20,7 @@ The React client replaces [Dojo](https://dojotoolkit.org/) with [React](https://
 Beyond those sections, consult the following major sections to leverage the React client to its fullest potential:
 
 * [Prerequisites](#prerequisites) – learn the prerequisites your app must fulfill in order to use the React client.
-* [Migration Guide](#migration-gude) – use guides to convert your application so it is ready for the React client.
+* [Migration Guide](#migration-guide) – use guides to convert your application so it is ready for the React client.
 
 ### 1.1 Improved Performance{#improved-performance}
 
@@ -81,7 +81,7 @@ To enable the React client for your Mendix project, make sure it fulfills the pr
 
 The migration mode will show warnings instead of errors for all incompatible widgets found in your project. This can help you explore and test the React client without being blocked by errors. When deploying an app leveraging the React client, we recommend setting **React Client** to **Yes** and resolving all errors before deploying.
 
-## 3 Migration Guide{#migration}
+## 3 Migration Guide{#migration-guide}
 
 Read further for guides that allow you convert your app so it is ready for the React client.
 

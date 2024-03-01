@@ -64,7 +64,7 @@ The examples below illustrate which value the expression returns:
 
 ## 3 formatDateTime[UTC]
 
-Converts the Date and time value to a string, formatted according to the format parameter. Without the format parameter, a standard format is used, which depends on the [Java version](/refguide/java-version-migration.md#21-changes-in-date-formatting-when-locale-is-dutch) and user locale. The function `formatDateTime` uses the users calendar and `formatDateTimeUTC` uses the UTC calendar.
+Converts the Date and time value to a string, formatted according to the format parameter. Without the format parameter, a standard format is used, which depends on the [Java version](/refguide/java-version-migration#date-locale-dutch) and user locale. The function `formatDateTime` uses the users calendar and `formatDateTimeUTC` uses the UTC calendar.
 
 ### 3.1 Input Parameters
 
@@ -139,7 +139,7 @@ the output is:
 
 ## 5 formatDate[UTC]
 
-Converts the date part of Date and time value to a string in a standard format, which depends on the [Java version](/refguide/java-version-migration.md#21-changes-in-date-formatting-when-locale-is-dutch) and user locale. `formatDate` uses the users calendar and `formatDateUTC` uses the UTC calendar.
+Converts the date part of Date and time value to a string in a standard format, which depends on the [Java version](/refguide/java-version-migration#date-locale-dutch) and user locale. `formatDate` uses the users calendar and `formatDateUTC` uses the UTC calendar.
 
 ### 5.1 Input Parameters
 

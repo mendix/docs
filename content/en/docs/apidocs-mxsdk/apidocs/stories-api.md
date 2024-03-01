@@ -1,5 +1,5 @@
 ---
-title: "Stories API"
+title: "Stories API ⚠"
 url: /apidocs-mxsdk/apidocs/stories-api/
 category: "API Documentation"
 description: "Use this API to extend the requirements and project management capabilities of the Mendix Platform or connect third-party service management and project management tools."
@@ -8,6 +8,10 @@ weight: 90
 
 {{% alert color="warning" %}}
 We will delete all data from Mendix Stories starting October 1, 2023. We strongly urge you to [download your work](/developerportal/collaborate/general-settings/#story-archive) before that date. [Epics](/developerportal/project-management/epics/) is now the default tool for you to manage the development process of apps.
+{{% /alert %}}
+
+{{% alert color="warning" %}}
+Stories API is deprecated and will be removed on March 31, 2024. Please use [Epics API](/apidocs-mxsdk/apidocs/epics-api/) to retrieve, create, and update your stories.
 {{% /alert %}}
 
 ## 1 Introduction

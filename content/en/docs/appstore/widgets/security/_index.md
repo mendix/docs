@@ -47,8 +47,13 @@ For information on Maps widget CSP configurations, see [Maps CSP](/appstore/widg
 You can enable `allowlist` CSP for [Rich Text](/appstore/widgets/rich-text/) by including these directives:
 
 ```text
+style-src 'self' 'unsafe-inline';
+```
+
+For Rich text version 2.x and below, you will need to add the following directives:
+```text
 script-src 'self' 'unsafe-inline';
-style-src 'self' 'unsafe-inline';;
+style-src 'self' 'unsafe-inline';
 ```
 
 ### 3.6 Progress Circle

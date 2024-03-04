@@ -57,6 +57,8 @@ You can trigger a manual synchronization in the menu **App** > **Synchronize dep
 
 Once Gradle has resolved and downloaded all dependencies successfully, it places them in the `vendorlib` directory. This directory is used to store `.jar` files of all the managed dependencies. Unlike the `userlib` folder, which needs to be updated manually, the `vendorlib` folder is completely managed by Studio Pro. Files here will automatically be added and removed based on the specified dependencies. The `vendorlib` folder will be committed to your version control just like the `userlib`.
 
+Additionally, we also generate `vendorlib-sbom.json` file. This is the Software Bill of Materials of the `vendorlib` directory.
+
 ## 4 Unmanaged Dependencies{#unmanaged}
 
 Most dependencies can be managed using the managed dependencies feature. However, you may have a custom jar which you are experimenting on, or which is simply not available in any remote repositories. In this case, you can still place these unmanaged `.jar` files in the `userlib` folder to make it a dependency of your Mendix app.

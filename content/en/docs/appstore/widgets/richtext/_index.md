@@ -12,7 +12,9 @@ tags: ["marketplace", "marketplace component", "widget", "rich text", "platform 
 {{% alert color="info" %}}
 This documentation applies to Rich Text widget versions 3.0 and above. 
 
-For documentation on Rich Text widget versions 2.0 and below, see [Rich Text v2.0 & Below](/appstore/widgets/rich-text-v2/) documentation.  
+For documentation on Rich Text widget versions 2.0 and below, see [Rich Text v2.0 & Below](/appstore/widgets/rich-text-v2/) documentation.
+
+Due to CKEditor 4 reaching end of life support status, we transitioned the rich text widget to tinyMCE starting with version 3.0.0.
 {{% /alert %}}
 
 The [Rich Text](https://marketplace.mendix.com/link/component/74889/) widget provides the user with an WYSIWYG editor, where the user can enter and edit rich-text content. The widget automatically converts the rich-text content into a string in HTML format, which can be stored in an attribute of an entity.

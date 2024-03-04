@@ -44,17 +44,17 @@ The rest of this how-to gives some examples of typical changes that occur and ho
 
 #### 3.1.1 Scenario
 
-You have a REST service in Petstore version 1.0.0 in production. You find out that you need a small change to the GetPet microflow. When the incoming `pet_id` is empty, it is giving an error that results in "500 Internal Server Error," but it should be "400 Bad Request."
+You have a REST service in Petstore version 1.0.0 in production. You find out that you need a small change to the GetPet microflow. When the incoming `pet_id` is empty, it is giving an error that results in a **500 Internal Server Error**, but it should be **400 Bad Request**.
 
 #### 3.1.2 Solution
 
-Since this is a non-breaking change, there are two solutions to this problem. One is to create a separate patch version, and the other is to just fix the bug in the current version.
+Since this is a non-breaking change, there are two solutions to this problem: create a separate patch version, or fix the bug in the current version.
 
 To create a patch version, do the following:
 
-1. Create a new folder called **PetStore_1_0_1**.
-2. Duplicate the PetStore service. Call it **PetStore_1_0_1** and move it to the **PetStore_1_0_1** folder.
-3. Duplicate the GetPet microflow. Call it **GetPet_1_0_1** and move it to the **PetStore_1_0_1** folder.
+1. Create a new folder called *PetStore_1_0_1*.
+2. Duplicate the PetStore service, name it *PetStore_1_0_1*, and move it to the **PetStore_1_0_1** folder.
+3. Duplicate the GetPet microflow, name it *GetPet_1_0_1*, and move it to the **PetStore_1_0_1** folder.
 4. Update the **PetStore_1_0_1** service, making the GET operation refer to **GetPet_1_0_1**.
 5. Change the **GetPet_1_0_1** microflow to fix the behavior.
 

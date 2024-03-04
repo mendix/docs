@@ -551,7 +551,6 @@ The `StabilityAIStableDiffusionXL_Settings` entity holds part of the response of
 | `FinishReason` | The `FinishReason` attribute describes the reason the process finished.|
 | `Base64` | The `Base64` attribute describes the image content as a base64 encrypted string.|
 
-
 #### 4.1.48 ModelInvocationInput (#model-invocation-input)
 
 The `ModelInvocationInput` contains parameters that specify the input to the pre- or post-processing step.
@@ -564,7 +563,6 @@ The `ModelInvocationInput` contains parameters that specify the input to the pre
 | `Text` | The `Text` attribute holds the text that prompted the agent at this step.|
 | `PromptType` | The `PromptType` attribute specifies the step in the agent sequence.|
 
-
 #### 4.1.49 Parameter (#parameter)
 
 The `Parameter` is a generalization for orchestration trace parameter objects.
@@ -575,7 +573,6 @@ The `Parameter` is a generalization for orchestration trace parameter objects.
 | `_Type` | The `_Type` attribute specifies the parameter type.|
 | `Value` | The `Value` attribute specifies the parameter value. |
 
-
 #### 4.1.50 InvokeAgentAttribute (#invoke-agent-attribute)
 
 The `InvokeAgentAttribute` holds all attributes needed to to create a request to invoke an agent.
@@ -584,7 +581,6 @@ The `InvokeAgentAttribute` holds all attributes needed to to create a request to
 | --- | --- |
 | `Key` | The `Key` attribute holds an attribute key.|
 | `Value` | The `Value` attribute holds an attribute value.|
-
 
 #### 4.1.51 InvokeAgentRequest (#invoke-agent-request)
 
@@ -599,7 +595,6 @@ The `InvokeAgentRequest` holds all attributes needed to create a request to invo
 | `EnableTrace` | The `EnableTrace` attribute specifies whether to turn on the trace or not to track the agent's reasoning process.|
 | `EndSession` | The `EndSession` attribute specifies whether to end the session with the agent or not.|
 
-
 #### 4.1.52 SessionState (#session-state)
 
 The `SessionState` entity is associated to objects that hold information about the session.
@@ -607,7 +602,6 @@ The `SessionState` entity is associated to objects that hold information about t
 | Attribute | Description |
 | --- | --- |
 | N/A | The entity does not contain any attributes. |
-
 
 #### 4.1.53 SessionAttribute (#session-attribute)
 
@@ -617,7 +611,6 @@ The `SessionAttribute` entity inherits from the InvokeAgentAttribute entity and 
 | --- | --- |
 | N/A | The entity does not contain any attributes but it inherits from the [`InvokeAgentAttribute`](#invoke-agent-attribute). |
 
-
 #### 4.1.54 PromptSessionAttribute (#session-attribute)
 
 The `PromptSessionAttribute` entity inherits from the InvokeAgentAttribute entity and holds information about the session.
@@ -626,7 +619,6 @@ The `PromptSessionAttribute` entity inherits from the InvokeAgentAttribute entit
 | --- | --- |
 | N/A | The entity does not contain any attributes but it inherits from the [`InvokeAgentAttribute`](#invoke-agent-attribute). |
 
-
 #### 4.1.55 InvokeAgentResponse (#invoke-agent-response)
 
 The `InvokeAgentResponse` is the response object of the invokeAgent operation.
@@ -634,7 +626,6 @@ The `InvokeAgentResponse` is the response object of the invokeAgent operation.
 | Attribute | Description |
 | --- | --- |
 | `OutputText` | The `OutputText` attribute contains the 'bytes' part of the response as text.|
-
 
 #### 4.1.56 InvokeAgentCitation (#invoke-agent-citation)
 
@@ -654,7 +645,6 @@ The `TracePart` is a generalization which contains information about the agent a
 | `AgentId` | The `AgentId` attribute holds the corresponding value from the InvokeAgentRequest.|
 | `SessionId` | The `SessionId` attribute holds the corresponding value from the InvokeAgentRequest.|
 
-
 #### 4.1.58 AbstractTrace (#abstract-trace)
 
 The `AbstractTrace` contains one part of the agent's reasoning process and results from calling API actions and querying knowledge bases. 
@@ -664,7 +654,6 @@ The `AbstractTrace` contains one part of the agent's reasoning process and resul
 | `TraceId` | The `TraceId` attribute holds the unique identifier of the trace.|
 | `TraceType` | The `TraceType` attribute holds the enumeration value of the trace type.|
 
-
 #### 4.1.59 FailureTrace (#failure-trace)
 
 The `FailureTrace` contains information about the failure of the interaction. 
@@ -672,7 +661,6 @@ The `FailureTrace` contains information about the failure of the interaction.
 | Attribute | Description |
 | --- | --- |
 | `FailureReason` | The `FailureReason` attribute holds the reason for the failure of the interaction.|
-
 
 #### 4.1.60 PreProcessingModelInvocationOutput (#pre-processing-model-invocation-output)
 
@@ -683,7 +671,6 @@ The `PreProcessingModelInvocationOutput` contains information about the foundati
 | `IsValid` | The `IsValid` attribute actually comes from entity PreProcessingParsedResponse. Specifies whether the user input is valid or not.|
 | `Rationale` | The `Rationale` attribute holds the text returned by the parsing of the pre-processing step, explaining the steps that the agent plans to take in orchestration, if the user input is valid.|
 
-
 #### 4.1.61 PreProcessingModelInvocationInput (#pre-processing-model-invocation-input)
 
 The `PreProcessingModelInvocationInput` contains the foundation model input for the pre-processing step.
@@ -691,7 +678,6 @@ The `PreProcessingModelInvocationInput` contains the foundation model input for 
 | Attribute | Description |
 | --- | --- |
 | N/A | The entity does not contain any attributes but it inherits from the [`ModelInvocationInput`](#model-invocation-input). |
-
 
 #### 4.1.62 PostProcessingModelInvocationOutput (#post-processing-model-invocation-output)
 
@@ -701,7 +687,6 @@ The `PostProcessingModelInvocationOutput` contains information about the foundat
 | --- | --- |
 | `ParsedResponse` | The `ParsedResponse` attribute holds details about the response from the Lambda parsing of the output of the post-processing step.|
 
-
 #### 4.1.63 PostProcessingModelInvocationInput (#post-processing-model-invocation-input)
 
 The `PostProcessingModelInvocationInput` contains the foundation model input for the post-processing step. 
@@ -709,7 +694,6 @@ The `PostProcessingModelInvocationInput` contains the foundation model input for
 | Attribute | Description |
 | --- | --- |
 | N/A | The entity does not contain any attributes but it inherits from the [`ModelInvocationInput`](#model-invocation-input). |
-
 
 #### 4.1.64 PostProcessingModelInvocationInput (#post-processing-model-invocation-input)
 
@@ -719,7 +703,6 @@ The `PostProcessingModelInvocationInput` contains the foundation model input for
 | --- | --- |
 | N/A | The entity does not contain any attributes but it inherits from the [`ModelInvocationInput`](#model-invocation-input). |
 
-
 #### 4.1.65 InvocationInput (#invocation-input)
 
 The `InvocationInput` contains information pertaining to the action group or knowledge base that is being invoked.
@@ -727,7 +710,6 @@ The `InvocationInput` contains information pertaining to the action group or kno
 | Attribute | Description |
 | --- | --- |
 | `InvocationType` | The `InvocationType` attribute specifies whether the agent is invoking an action group or a knowledge base.|
-
 
 #### 4.1.66 ActionGroupInvocationInput (#action-group-invocation-input)
 
@@ -739,7 +721,6 @@ The `ActionGroupInvocationInput` contains information pertaining to the action g
 | `ApiPath` | The `ApiPath` attribute specifies the path to the API to call, based off the action group.|
 | `Verb` | The `Verb` attribute specifies the API method being used, based off the action group.|
 
-
 #### 4.1.67 RequestBodyContent (#request-body-content)
 
 The `RequestBodyContent` holds the parameters in the request body for the Lambda input event.
@@ -747,7 +728,6 @@ The `RequestBodyContent` holds the parameters in the request body for the Lambda
 | Attribute | Description |
 | --- | --- |
 | `ContentKey` | The `ContentKey` as returned in the RequestBodyContent|
-
 
 #### 4.1.68 RequestBodyContentParameter (#request-body-content-parameter)
 
@@ -757,7 +737,6 @@ The `RequestBodyContentParameter` is a parameter in the Lambda input event (for 
 | --- | --- |
 | N/A | The entity does not contain any attributes but it inherits from the [`Parameter`](#parameter).|
 
-
 #### 4.1.69 InvocationInputParameter (#invocation-input-parameter)
 
 The `RequestBodyContent` holds the parameters in the request body for the Lambda input event.
@@ -765,7 +744,6 @@ The `RequestBodyContent` holds the parameters in the request body for the Lambda
 | Attribute | Description |
 | --- | --- |
 | N/A | The entity does not contain any attributes but it inherits from the [`Parameter`](#parameter).|
-
 
 #### 4.1.70 KnowledgeBaseLookupInput (#knowledge-base-lookup-input)
 
@@ -776,7 +754,6 @@ The `KnowledgeBaseLookupInput` contains details about the knowledge base to look
 | `KnowledgeBaseId` | The `KnowledgeBaseId` the unique identifier of the knowledge base to look up.|
 | `Text` | The `Text` is the query made to the knowledge base.|
 
-
 #### 4.1.71 Rationale (#rationale)
 
 The `Rationale` contains the reasoning, based on the input, that the agent uses to justify carrying out an action group or getting information from a knowledge base.
@@ -785,7 +762,6 @@ The `Rationale` contains the reasoning, based on the input, that the agent uses 
 | --- | --- |
 | `Text` | The `Text` attribute specifies the reasoning or thought process of the agent, based on the input.|
 
-
 #### 4.1.72 OrchestrationModelInvocationInput (#orchestration-model-invocation-input)
 
 The `OrchestrationModelInvocationInput` holds the input for the pre-processing step.
@@ -793,7 +769,6 @@ The `OrchestrationModelInvocationInput` holds the input for the pre-processing s
 | Attribute | Description |
 | --- | --- |
 | N/A | The entity does not contain any attributes but it inherits from the [`ModelInvocationInput`](#model-invocation-input).|
-
 
 #### 4.1.73 Observation (#observation)
 
@@ -805,7 +780,6 @@ The `Observation` contains the result or output of an action group or knowledge 
 | `FinalResponse` | The `FinalResponse` attribute contains details about the response to the user.|
 | `ObservationType` | The `ObservationType` attribute specifies what kind of information the agent returns in the observation. The following values are possible.|
 
-
 #### 4.1.74 RepromptResponse (#reprompt-response)
 
 The `RepromptResponse` contains details about the agent's response to reprompt the input.
@@ -815,7 +789,6 @@ The `RepromptResponse` contains details about the agent's response to reprompt t
 | `RepromptSource` | The `RepromptSource` attribute specifies what output is prompting the agent to reprompt the input.|
 | `Text` | The `Text` reprompting the input.|
 
-
 #### 4.1.75 ObservationRetrievedReference (#observation-retrieved-reference)
 
 The `ObservationRetrievedReference` holds information about a sources cited for the generated response.
@@ -823,9 +796,6 @@ The `ObservationRetrievedReference` holds information about a sources cited for 
 | Attribute | Description |
 | --- | --- |
 | N/A | The entity does not contain any attributes but it inherits from the [`RetrievedReference`](#retrieved-reference).|
-
-
-
 
 ### 4.2 Activities {#activities}
 
@@ -913,10 +883,9 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `ENUM_Region (enumeration)`, `Credentials (object)`, `GetIngestionJobRequest (object)` | `GetIngestionJobResponse (object)` |
 
-
 #### 4.2.8 InvokeAgent {#invoke-agent}
 
-The `InvokeAgent` activity allows you to invoke an agent from Amazon Bedrock so that you can orchestrate tasks involving Foundation models and enrich the process with organisational data and user input. It requires `ENUM_Region`, `Credentials`, `InvokeAgentRequest`, a `ResponseHandlerMicroflow` and a `ErrorHandlerMicroflow` as input parameters. The microflow parameters are necessary since InvokeAgent is an asynchronous operation. The `ResponseHandlerMicroflow` is required to have exactly one input parameter of the InvokeAgentResponse entity type. It will be called in a background threat once the respose is available. The `ErrorHandlerMicroflow` is required to have exactly one input parameter of type String. It will be called when there is an error during the asynchronous process and the error type will be passed to it's string parameter. The Amazon Bedrock Connector include sample response handler & error handler microflows to help you set up handlers for your implementation.
+The `InvokeAgent` activity allows you to invoke an agent from Amazon Bedrock, so that you can orchestrate tasks involving foundation models and enrich the process with organisational data and user input. It requires `ENUM_Region`, `Credentials`, `InvokeAgentRequest`, a `ResponseHandlerMicroflow` and a `ErrorHandlerMicroflow` as input parameters. The microflow parameters are necessary since `InvokeAgent` is an asynchronous operation. The `ResponseHandlerMicroflow` is required to have exactly one input parameter of the `InvokeAgentResponse` entity type. It is called in a background threat once the respose is available. The `ErrorHandlerMicroflow` is required to have exactly one input parameter of type String. It will be called when there is an error during the asynchronous process and the error type will be passed to it's string parameter. The Amazon Bedrock Connector includea  sample response handler and error handler microflows to help you set up handlers for your implementation.
 
 The input and output for this service are shown in the table below:
 
@@ -924,26 +893,25 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 - | `ENUM_Region (enumeration)`, `Credentials (object)`, `InvokeModelRequest (object)`, `ResponseHandlerMicroflow (microflow)`, `ErrorHandlerMicroflow (microflow)` | `none` |
 
-##### Ways to handle the asynchronous InvokeAgentResponse
+##### 4.2.8.1 Handling the asynchronous InvokeAgentResponse
 
-The `InvokeAgentResponse` object is passed as a parameter to the ResponseHandler microflow. This microflow can perform any custom logic with the `InvokeAgentResponse`, for example storing it in the database. The microflow is called in another background thread, so the client is not automatically notified when the response is processed. 
-Since it is a common use case to display the agent's response to the user in the front end, here are 3 different ways to achieve this in Mendix:
+The `InvokeAgentResponse` object is passed as a parameter to the ResponseHandler microflow. This microflow can perform any custom logic with the `InvokeAgentResponse`, for example storing it in the database. The microflow is called in another background thread, so the client is not automatically notified when the response is processed. If you want to display the agent's response to the user of your app, you can use one of the following methods:
 
-1. Polling
+###### 4.2.8.1.1 Polling
 
 The easiest way to make sure the client gets a response is to constantly poll for it until it is available. This can be done using the [Microflow Timer Widget](https://marketplace.mendix.com/link/component/27), which allows you to configure a microflow or nanoflow to run every X number of seconds.
-This approach is only recommended for testing and for applications that don't have a large number of concurrent users. It is not preferred for scaling.
 
-2. Websockets
+This approach is only recommended for testing and for applications that do not have a large number of concurrent users. It is not preferred for scaling.
+
+###### 4.2.8.1.2 Websockets
 
 WebSockets is a communication protocol that provides full-duplex communication channels over a single, persistent connection. Unlike traditional HTTP connections, which are request-response based and stateless, WebSockets enable real-time, bi-directional communication between a client (such as a Web browser) and a server.
+
 The open source [EZ Websocket Module](https://marketplace.mendix.com/link/component/205276) from the Mendix Marketplace provides an easy way to implement real-time server-to-client communication using WebSockets without external dependencies.
 
-3. Pusher
+###### 4.2.8.1.3 Pusher
 
-The platform-supported [Pusher Module](https://marketplace.mendix.com/link/component/107957) is built around the [Pusher Channels](https://pusher.com/channels/) offering. This module requires a Pusher account. Pusher Channels is a paid service, but it also has a [Free Sandbox Plan](https://pusher.com/channels/pricing/).
-This module allows you to trigger a Notify event on the server to immediately trigger an action in the client application.
-
+The platform-supported [Pusher Module](https://marketplace.mendix.com/link/component/107957) is built around the [Pusher Channels](https://pusher.com/channels/) offering. This module requires a Pusher account. Pusher Channels is a paid service, but it also has a [Free Sandbox Plan](https://pusher.com/channels/pricing/). This module allows you to trigger a Notify event on the server to immediately trigger an action in the client application.
 
 ## 5 Troubleshooting
 

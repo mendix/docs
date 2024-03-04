@@ -231,8 +231,6 @@ The list of variables is described below:
 * `$WorkflowContext` – an instance of the business-related entity that travels through the workflow
 * `$WorkflowInstance` – an instance of a currently running workflow (**System.Workflow**)
 
-For more information on workflow-related entities in the System module, see the [Workflow Entities in the System Module](#workflow-entities) section above. 
-
 For example, you can use these variables as parameters in the **Task name** and **Task description** properties of a user task. For more information, see [User Task](/refguide/user-task/). 
 
 ## 6 Workflow-Specific Activities in Microflows

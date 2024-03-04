@@ -28,12 +28,12 @@ The image below presents an example of how you can configure an event handler ei
 
 ## 3 Event Mechanism
 
-When something happens in the workflow engine, an event is emitted when subscribed to that event. This event is posted asynchronously using the task queue as described in [Workflow Engine](/refguide/workflow-engine/#workflow-task-queue). We take a snapshot of the event state at the time when it occurs to get real-time data. This snapshot data is then converted by the task queue task to the system module non-persistent [workflow entities](/refguide/workflows/#workflow-entities): **WorkflowEvent**, **WorkflowRecord** and **WorkflowActivityRecord**.
+When something happens in the workflow engine, an event is emitted when subscribed to that event. This event is posted asynchronously using the task queue as described in [Workflow Engine](/refguide/workflow-engine/#workflow-task-queue). We take a snapshot of the event state at the time when it occurs to get real-time data. This snapshot data is then converted by the task queue task to the system module non-persistent workflow entities: **WorkflowEvent**, **WorkflowRecord**, and **WorkflowActivityRecord**.
 
 The **WorkflowEvent** entity represents workflow event data at a specific execution moment. It contains the following attributes and association:
 
 * **EventTime** – the time at which the event occurred.
-* **EventType** – the type of the event being triggered. For more information, see the [Event Types](/refguide/workflow-events/#workflow-event-types) section in *Workflow Events*.
+* **EventType** – the type of the event being triggered. For more information, see the [Event Types](#workflow-event-types) section below.
 * **WorkflowEvent_Initiator** – an association to the current user object which is logged in. The [activity workflow events](/refguide/workflow-events/#activity-event-type) will have an initiator in cases where a user takes some action, otherwise it will be empty. For example, when a user specifies the outcome of a user task or when a user notifies a suspended workflow, then this user becomes the initiator. As a special case, it will also be empty for the **Workflow Initiated** event of a sub-workflow because a sub-workflow is directly related to the [Call workflow](/refguide/call-workflow/) activity.
 
 The **WorkflowActivityRecord** entity represents workflow activity data at a specific execution moment. For example, a snapshot of a workflow activity at the moment when it was completed.
@@ -72,7 +72,7 @@ In the case of workflow [operations](/refguide/change-workflow-state/#operation)
 ## 5 Event Types {#workflow-event-types}
 
 {{% alert color="info" %}}
-The event types listed in the tables below correspond to the enumeration values of the **EventType** attribute of the [workflow entity](/refguide/workflows/#workflow-entities) **WorkflowEvent** in the system module.
+The event types listed in the tables below correspond to the enumeration values of the **EventType** attribute of the workflow entity **WorkflowEvent** in the system module.
 {{% /alert %}}
 
 ### 5.1 Workflow Lifecycle Events

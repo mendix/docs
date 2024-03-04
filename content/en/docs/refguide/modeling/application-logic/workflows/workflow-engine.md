@@ -44,7 +44,7 @@ Security-wise, only users with the **Administrator** role can access definition-
 
 The Workflow Engine stores execution data in regular entities. The purpose of these entities is to store the state during workflow execution. Only users who are involved in the workflow process have access to these entities. The main purpose of the workflow data is to handle the tasks and process execution and it is unaware of the business context it is running in. All workflow data is aimed at supporting the Workflow Engine. Business context can be added by a developer via the context entity.
 
-#### 2.2.1 System.Workflow
+#### 2.2.1 System.Workflow {#system-workflow}
 
 It represents a running workflow, that is, a workflow instance. As soon as the workflow is initiated (using the **Call workflow** activity in microflows, a client action, or using the corresponding Java API), an object is created in this entity. 
 
@@ -60,7 +60,7 @@ Security-wise, users with the **Administrator** role can access all instances. O
 For an app developer, it is allowed to change the **Name**, **Description**, and **DueDate** attributes of **System.Workflow** instances. Other attributes or outgoing associations should not be changed.
 {{% /alert %}}
 
-#### 2.2.2 System.WorkflowUserTask
+#### 2.2.2 System.WorkflowUserTask {#system-workflow-user-task}
 
 When the workflow runs a user task activity, an instance of **System.WorkflowUserTask** is created. 
 

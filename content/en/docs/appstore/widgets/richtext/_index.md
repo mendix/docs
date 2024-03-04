@@ -60,9 +60,9 @@ To configure this widget, follow these steps:
     * **Menu bar** display menu bar on top of the editor
         * **Hidden** – if selected, no menu bar is shown
         * **Basic** – if selected, the following menu will be shown: 
-            * **file** |  **edit** | **insert** |  **view**
+            * | **file** |  **edit** | **insert** |  **view** |
         * **Full** – if selected, the following menu will be shown: 
-            * **file** |  **edit** | **insert** |  **view** | **format** | **table** |  **tools** |  **help**
+            * | **file** |  **edit** | **insert** |  **view** | **format** | **table** |  **tools** |  **help** |
         * **Custom** – allows you to make your own menubar selection based on the **full** selection list
     * **Enable status bar** display status bar on the bottom of the editor
 
@@ -70,21 +70,29 @@ To configure this widget, follow these steps:
 * **Toolbar**
     * **Toolbar** display toolbar based on the selected location on the editor.
         * **Basic** – if selected, the following menu will be shown: 
-            * bold italic | bullist numlist | outdent indent | link | removeformat | help
+            * | **bold italic** | **bullist numlist** | **outdent indent** | **link** | **removeformat** | **help** |
         * **Standard** – if selected, the following menu will be shown: 
-            * undo redo | bold italic strikethrough | removeformat | bullist numlist | blockquote | outdent indent | ltr rtl | alignleft aligncenter alignright alignjustify | fontfamily fontsize forecolor backcolor | image link media | blocks anchor | cut copy paste pastetext | codesample preview code | selectall fullscreen | help
+            * | undo redo | bold italic strikethrough | removeformat | bullist numlist | blockquote | outdent indent | ltr rtl | alignleft aligncenter alignright alignjustify | fontfamily fontsize forecolor backcolor | image link media | blocks anchor | cut copy paste pastetext | codesample preview code | selectall fullscreen | help |
         * **Full** – if selected, the following menu will be shown: 
-            * undo redo | bold italic underline strikethrough | superscript subscript | removeformat | bullist numlist | blockquote | outdent indent | ltr rtl | alignleft aligncenter alignright alignjustify | fontfamily fontsize forecolor backcolor | image link media | blocks anchor | cut copy paste pastetext | codesample preview code | emoticons insertdatetime searchreplace | selectall fullscreen | help
+            * | undo redo | bold italic underline strikethrough | superscript subscript | removeformat | bullist numlist | blockquote | outdent indent | ltr rtl | alignleft aligncenter alignright alignjustify | fontfamily fontsize forecolor backcolor | image link media | blocks anchor | cut copy paste pastetext | codesample preview code | emoticons insertdatetime searchreplace | selectall fullscreen | help |
         * **Custom** – allows you to make your own menubar selection based on the **full** selection list
     * **Mode** - defines transition mode used for displaying out of screen toolbar when the three dots [...] button being clicked
-        * **Sliding** – the toolbar appears as a fixed toolbar below the first toolbar when the overflow icon drawer is clicked
-        {{< figure src="/attachments/appstore/widgets/rich-text/sliding.gif" alt="Example" >}}
-        * **Floating** – the toolbar appears under the toolbar overflow icon in a floating shelf format when the overflow icon drawer is clicked
-        {{< figure src="/attachments/appstore/widgets/rich-text/floating.png" alt="Example" >}}
-        * **Scrolling** – the overflow toolbar buttons will remain on the toolbar. To access the overflow toolbar buttons, scroll the toolbar. This mode is usually better on touch screen devices
-        {{< figure src="/attachments/appstore/widgets/rich-text/scroll.png" alt="Example" >}}
-        * **Wrap** – the overflow toolbar buttons will be shown on one or more toolbars below the primary toolbar
-        {{< figure src="/attachments/appstore/widgets/rich-text/wrap.png" alt="Example" >}}
+        * **Sliding** – the toolbar appears as a fixed toolbar below the first toolbar when the overflow icon drawer is clicked:
+
+            {{< figure src="/attachments/appstore/widgets/rich-text/sliding.gif" alt="Example" >}}
+        
+        * **Floating** – the toolbar appears under the toolbar overflow icon in a floating shelf format when the overflow icon drawer is clicked:
+       
+            {{< figure src="/attachments/appstore/widgets/rich-text/floating.png" alt="Example" >}}
+        
+        * **Scrolling** – the overflow toolbar buttons will remain on the toolbar. To access the overflow toolbar buttons, scroll the toolbar. This mode is usually better on touch screen devices:
+        
+            {{< figure src="/attachments/appstore/widgets/rich-text/scroll.png" alt="Example" >}}
+        
+        * **Wrap** – the overflow toolbar buttons will be shown on one or more toolbars below the primary toolbar:
+        
+            {{< figure src="/attachments/appstore/widgets/rich-text/wrap.png" alt="Example" >}}
+    
     * **Location** 
 
 * **Editable** – determines when user can edit content in the editor and when it is read-only
@@ -171,15 +179,15 @@ The full configuration of the menubar groups are as follows:
 
 ### 2.6 Advanced Tab
 
-* **Additional valid elements** – defines extra valid element for sanitisation purposes
+* **Additional valid elements** – defines extra valid element for sanitization purposes, as shown in this example:
 
-example: 
-```text
-img[class|src|border=0|alt|title|hspace|vspace|width|height|align|onmouseover|onmouseout|name]
-```
-* **Enable spell checking** – This option configures to use the browser’s native spell checker. 
-* **Highlight on focus** - This option adds a blue outline to the editor when that editor is made the input focus
-* **Editor resize** - This option allows the resize handle to be disabled or to set the resize handler to resize both horizontally and vertically
+    ```text
+    img[class|src|border=0|alt|title|hspace|vspace|width|height|align|onmouseover|onmouseout|name]
+    ```
+
+* **Enable spell checking** – configures to use the browser’s native spell checker. 
+* **Highlight on focus** - adds a blue outline to the editor when that editor is made the input focus
+* **Editor resize** - allows the resize handle to be disabled or to set the resize handler to resize both horizontally and vertically
 
 ### 2.7 Common Tab
 

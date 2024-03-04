@@ -1,5 +1,5 @@
 ---
-title: "Rich Text V2"
+title: "Rich Text v2.0 & Below"
 url: /appstore/widgets/rich-text-v2/
 category: "Widgets"
 description: "Describes the configuration and usage of the Rich Text widget, which is available in the Mendix Marketplace."
@@ -7,9 +7,13 @@ tags: ["marketplace", "marketplace component", "widget", "rich text", "platform 
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
- {{% alert color="info" %}}This is a documentation for Rich Text widget version 2, for Rich Text Version 3.0 and above, please see this [Rich Text](/appstore/widgets/rich-text/) documentation.  {{% /alert %}}
-
 ## 1 Introduction
+
+{{% alert color="info" %}}
+This documentation applies to Rich Text widget versions 2.0 and below. 
+
+For documentation on Rich Text widget versions 3.0 and above, see [Rich Text](/appstore/widgets/rich-text/).  
+{{% /alert %}}
 
 The [Rich Text](https://marketplace.mendix.com/link/component/74889/) widget provides the user with an WYSIWYG editor, where the user can enter and edit rich-text content. The widget automatically converts the rich-text content into a string in HTML format, which can be stored in an attribute of an entity.
 
@@ -168,7 +172,7 @@ For more information, see [Common Section](/refguide/common-widget-properties/#c
 
 ## 3 Strict CSP Compatibility
 
-This widget is not yet fully compliant with strict content security policy (CSP). If used with strict CSP, it will result in CSP errors in the console and potentially broken flows in the widget. Please refer to the [widget CSP document](/appstore/widgets/security/content-security-policy/) for more detail.
+This widget is not yet fully compliant with strict content security policy (CSP). If used with strict CSP, it will result in CSP errors in the console and potentially broken flows in the widget. For more information on CSP compliance, see [Widget CSP Overview](/appstore/widgets/security/content-security-policy/).
 
 ## 4 Widgets Below Version 2.0.0
 

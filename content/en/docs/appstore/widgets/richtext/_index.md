@@ -21,13 +21,13 @@ The [Rich Text](https://marketplace.mendix.com/link/component/74889/) widget pro
 
 ### 1.1 Features
 
-* Allow the user to enter and format text in a WYSIWYG editor
-* Configure which buttons are available on the toolbar of the editor
-* Automatically output the formatted text in a string in HTML format
-* Sanitize the user's input automatically or with additional rules
-* Support spelling and grammar checker in the editor
-* Support code highlight, which enables the user to insert code fragments and have a live preview with highlighted syntax
-* Support the following keyboard shortcuts in the editor:
+* Allows the user to enter and format text in a WYSIWYG editor
+* Configures which buttons are available on the toolbar of the editor
+* Automatically outputs the formatted text in a string in HTML format
+* Sanitizes the user's input automatically or with additional rules
+* Supports spelling and grammar checker in the editor
+* Supports code highlight, which enables the user to insert code fragments and have a live preview with highlighted syntax
+* Supports the following keyboard shortcuts in the editor:
     * <kbd>Ctrl</kbd> + <kbd>B</kbd> – bold
     * <kbd>Ctrl</kbd> + <kbd>I</kbd>– italicize
     * <kbd>Ctrl</kbd> + <kbd>U</kbd> – underline
@@ -37,21 +37,21 @@ The [Rich Text](https://marketplace.mendix.com/link/component/74889/) widget pro
     * <kbd>Ctrl</kbd> + <kbd>V</kbd> – paste
     * <kbd>Ctrl</kbd> + <kbd>K</kbd> – insert link
     * <kbd>tab</kbd> – moves the focus to the next element
-    * for more details, please click on the help button on the toolbar.
+
+For more details, click the **Help** button on the toolbar.
 
 ## 2 Configuration
 
 To configure this widget, follow these steps:
 
-1. Place the Rich Text widget in a Data View, a List View, or a Template Grid with a data source that has a String attribute to store the rich-text content.
-2. Double-click the Rich Text  widget to open the **Edit Rich Text** dialog box.
-3. Configure the widget using the properties described in the sections below.
+1. Place the rich text widget in a data biew, list view, or a template grid with a data source that has a string attribute to store the rich-text content.
+1. Double-click the rich text  widget to open the **Edit Rich Text** dialog box.
+1. Configure the widget using the properties described in the sections below.
 
 ### 2.1 General Tab
 
 * **Data source**
     * **Value attribute** (required) – sets a String attribute to store the rich-text content
-
 * **General** 
     * **Show label** 
         * **Yes** – if selected, you can define the label caption
@@ -60,17 +60,15 @@ To configure this widget, follow these steps:
     * **Menu bar** display menu bar on top of the editor
         * **Hidden** – if selected, no menu bar is shown
         * **Basic** – if selected, the following menu will be shown: 
-            * | **file** |  **edit** | **insert** |  **view** |
+            * | file | edit | insert |  view |
         * **Full** – if selected, the following menu will be shown: 
-            * | **file** |  **edit** | **insert** |  **view** | **format** | **table** |  **tools** |  **help** |
+            * | file |  edit | insert |  view | format | table |  tools |  help |
         * **Custom** – allows you to make your own menubar selection based on the **full** selection list
     * **Enable status bar** display status bar on the bottom of the editor
-
-
 * **Toolbar**
-    * **Toolbar** display toolbar based on the selected location on the editor.
+    * **Toolbar** display toolbar based on the selected location on the editor
         * **Basic** – if selected, the following menu will be shown: 
-            * | **bold italic** | **bullist numlist** | **outdent indent** | **link** | **removeformat** | **help** |
+            * | bold italic | bullist numlist | outdent indent | link | removeformat | help |
         * **Standard** – if selected, the following menu will be shown: 
             * | undo redo | bold italic strikethrough | removeformat | bullist numlist | blockquote | outdent indent | ltr rtl | alignleft aligncenter alignright alignjustify | fontfamily fontsize forecolor backcolor | image link media | blocks anchor | cut copy paste pastetext | codesample preview code | selectall fullscreen | help |
         * **Full** – if selected, the following menu will be shown: 
@@ -99,7 +97,6 @@ To configure this widget, follow these steps:
 
     {{% alert color="info" %}}For more information, see [Editability Section](/refguide/common-widget-properties/#editability) in the *Studio Pro Guide*.{{% /alert %}}
 
-
 * **Visible** – determines if the widget is visible on the page
 
     {{% alert color="info" %}}For more information, see [Visibility Section](/refguide/common-widget-properties/#visibility-properties) in the *Studio Pro Guide*.{{% /alert %}}
@@ -109,14 +106,14 @@ To configure this widget, follow these steps:
 * **Custom** – allows you to make your menubar with customized options
     * **Menubar group** 
         * **Basic** (default) – if selected, you can select which of the following menubar to be displayed
-            * **File** - items: newdocument restoredraft | preview | export print | deleteallconversations
-            * **Edit** - items: undo redo | cut copy paste pastetext | selectall | searchreplace
-            * **Insert** - items: image link media addcomment pageembed codesample inserttable | charmap emoticons hr | pagebreak nonbreaking anchor tableofcontents | insertdatetime
+            * **File** - items: | newdocument restoredraft | preview | export print | deleteallconversations |
+            * **Edit** - items: | undo redo | cut copy paste pastetext | selectall | searchreplace |
+            * **Insert** - items: | image link media addcomment pageembed codesample inserttable | charmap emoticons hr | pagebreak nonbreaking anchor tableofcontents | insertdatetime |
             * **View** - items: code | visualaid visualchars visualblocks | spellchecker | preview fullscreen | showcomments
-            * **Format** - items: bold italic underline strikethrough superscript subscript codeformat | blocks fontfamily fontsize align lineheight | forecolor backcolor | language | removeformat
-            * **Table** - items: inserttable | cell row column | advtablesort | tableprops deletetable
-            * **Tools** - items: spellchecker spellcheckerlanguage | a11ycheck code wordcount
-            * **Help** - display quick help information
+            * **Format** - items: | bold italic underline strikethrough superscript subscript codeformat | blocks fontfamily fontsize align lineheight | forecolor backcolor | language | removeformat |
+            * **Table** - items: | inserttable | cell row column | advtablesort | tableprops deletetable |
+            * **Tools** - items: | spellchecker spellcheckerlanguage | a11ycheck code wordcount |
+            * **Help** - displays quick help information
         * **Advanced** – if selected, you can configure menubar display and sequence
             * **New** – opens the **Edit Advanced Groups Item** dialog box where you can add a new button to a menu button
                 * **Button** – specifies the button to be included in the menubar
@@ -130,27 +127,27 @@ The full configuration of the menubar groups are as follows:
 * **Custom** – allows you to make your toolbar with customized options
     * **Toolbar group** 
         * **Basic** (default) – if selected, you can select which of the following toolbar groups are available in the toolbar
-            * **Basic style** - items: bold underline italic
-            * **Extended style** - items: strikethrough subscript superscript
-            * **Text align** - items: aligncenter alignjustify alignleft alignright alignnone
-            * **Clipboard** - items: cut copy paste pastetext
-            * **Font style** - items: fontfamily fontsize forecolor backcolor
-            * **Paragraph** - items: lineheight hr indent outdent blockquote blocks
-            * **Document** - items: newdocument print
-            * **History** - items: undo redo
+            * **Basic style** - items: bold, underline, italic
+            * **Extended style** - items: strikethrough, subscript, superscript
+            * **Text align** - items: aligncenter, alignjustify, alignleft, alignright, alignnone
+            * **Clipboard** - items: cut, copy, paste, pastetext
+            * **Font style** - items: fontfamily, fontsize, forecolor, backcolor
+            * **Paragraph** - items: lineheight, hr indent, outdent, blockquote, blocks
+            * **Document** - items: newdocument, print
+            * **History** - items: undo, redo
             * **Accordion** - items: accordion
-            * **Code** - items: code codesample
+            * **Code** - items: code, codesample
             * **Anchor** - items: anchor
-            * **Direction** - items: ltr rtl
-            * **Link** - items: link unlink openlink
-            * **List** - items: bullist numlist
-            * **Preview** - items: preview fullscreen
-            * **Table** - items: table tabledelete tableinsertdialog
-            * **Visual aid** - items: visualaid visualblocks visualchars
-            * **Media** - items: media image
-            * **Util** - items: selectall insertdatetime searchreplace pagebreak wordcount
+            * **Direction** - items: ltr, rtl
+            * **Link** - items: link, unlink, openlink
+            * **List** - items: bullist, numlist
+            * **Preview** - items: preview, fullscreen
+            * **Table** - items: table, tabledelete, tableinsertdialog
+            * **Visual aid** - items: visualaid, visualblocks, visualchars
+            * **Media** - items: media, image
+            * **Util** - items: selectall, insertdatetime, searchreplace, pagebreak, wordcount
             * **Emoticon** - items: emoticons
-            * **Remove** - items: remove removeformat
+            * **Remove** - items: remove, removeformat
         * **Advanced** – if selected, you can configure buttons for different toolbar groups
 
             {{% alert color="info" %}}All the toolbar groups that you configure will be available in the toolbar. With vertical bars or separator options ("|"), you can separate different toolbar groups.{{% /alert %}}

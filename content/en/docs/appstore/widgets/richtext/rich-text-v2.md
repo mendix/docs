@@ -21,14 +21,14 @@ The [Rich Text](https://marketplace.mendix.com/link/component/74889/) widget pro
 
 ### 1.1 Features
 
-* Allow the user to enter and format text in a WYSIWYG editor
-* Configure which buttons are available on the toolbar of the editor
-* Automatically output the formatted text in a string in HTML format
-* Sanitize the user's input automatically or with advanced, customized filters, and display the text
-* Enable the user to wrap text elements using the keyboard shortcut <kbd>Enter</kbd> or <kbd>Shift</kbd> + <kbd>Enter</kbd>
-* Support spelling and grammar checker in the editor
-* Support code highlight, which enables the user to insert code fragments and have a live preview with highlighted syntax
-* Support the following keyboard shortcuts in the editor:
+* Allows the user to enter and format text in a WYSIWYG editor
+* Configures which buttons are available on the toolbar of the editor
+* Automatically outputs the formatted text in a string in HTML format
+* Sanitizes the user's input automatically or with advanced, customized filters, and display the text
+* Enables the user to wrap text elements using the keyboard shortcut <kbd>Enter</kbd> or <kbd>Shift</kbd> + <kbd>Enter</kbd>
+* Supports spelling and grammar checker in the editor
+* Supports code highlight, which enables the user to insert code fragments and have a live preview with highlighted syntax
+* Supports the following keyboard shortcuts in the editor:
     * <kbd>Ctrl</kbd> + <kbd>B</kbd> – bold
     * <kbd>Ctrl</kbd> + <kbd>I</kbd>– italicize
     * <kbd>Ctrl</kbd> + <kbd>U</kbd> – underline

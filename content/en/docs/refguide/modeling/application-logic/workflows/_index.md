@@ -18,27 +18,18 @@ A workflow is composed of elements that you can use in the workflow editor: you 
 
 You can perform the following basic functions when working on workflows:
 
-* Open a workflow
-* Create a workflow
-* Delete a workflow
-* Add elements to a workflow
-* Move elements in a workflow
-* Cut, copy, or paste elements in a workflow
-* View element properties
-* Trigger a workflow from a page or via a microflow
-* Export a workflow to an image
-* Switch between portrait and landscape editor orientation
+* [Add a workflow](#add-workflow)
+* [Open a workflow](#open-workflow)
+* [Delete a workflow](#delete-workflow)
+* [Add elements to a workflow](#add-elements-to-workflow)
+* [Move elements in a workflow](#move-elements)
+* [Cut, copy, or paste elements in a workflow](#cut-copy-paste-elements)
+* [View element properties](#view-element-properties)
+* [Trigger a workflow from a page or via a microflow](#trigger-workflow)
+* [Export a workflow to an image](#export-workflow)
+* [Switch between portrait and landscape editor orientation](#orientation-modes)
 
-### 3.1 Opening a Workflow
-
-To open a workflow in Studio Pro, do the following:
-
-1. In the [App Explorer](/refguide/app-explorer/), open a module where this workflow is located.
-2. Navigate to the workflow’s location inside the module and double-click the workflow.
-
-The selected workflow is opened.
-
-### 3.2 Adding a Workflow
+### 3.1 Adding a Workflow {#add-workflow}
 
 To add a workflow to your app, do the following:
 
@@ -50,7 +41,16 @@ To add a workflow to your app, do the following:
 
 The workflow is created.
 
-### 3.3 Deleting a Workflow
+### 3.2 Opening a Workflow {#open-workflow}
+
+To open a workflow in Studio Pro, do the following:
+
+1. In the [App Explorer](/refguide/app-explorer/), open a module where this workflow is located.
+2. Navigate to the workflow’s location inside the module and double-click the workflow.
+
+The selected workflow is opened.
+
+### 3.3 Deleting a Workflow {#delete-workflow}
 
 To delete a workflow, do the following:
 
@@ -88,7 +88,7 @@ When adding elements, note the following:
 * It is not possible to add an **End** event or a **Jump** activity before an **End** event or a **Jump** activity as this makes the next element unreachable.
 * An **End** event cannot be placed in paths of a parallel split. This is the same for placing an **End** event on, for example, an outcome of a user task if this user task is placed on a path of a parallel split. 
 
-### 3.5 Moving Elements and Paths in a Workflow
+### 3.5 Moving Elements and Paths in a Workflow {#move-elements}
 
 #### 3.5.1 Moving Elements in a Workflow
 
@@ -104,7 +104,7 @@ You can swap outgoing paths from a parallel split, a user task, or a decision in
 
 This swaps the dragged path and its content with the targeted path. You can only swap paths that come from the same element.
 
-### 3.6 Cutting/Coping/Pasting Elements in a Workflow
+### 3.6 Cutting/Coping/Pasting Elements in a Workflow {#cut-copy-paste-elements}
 
 To cut/copy/paste elements, use <kbd>Ctrl</kbd> + <kbd>X</kbd> /  <kbd>Ctrl</kbd> + <kbd>C</kbd> / <kbd>Ctrl</kbd> + <kbd>V</kbd> or  <kbd>Cmd</kbd> + <kbd>X</kbd> /  <kbd>Cmd</kbd> + <kbd>C</kbd> / <kbd>Cmd</kbd> + <kbd>V</kbd>.
 
@@ -131,7 +131,7 @@ The following elements cannot be cut, copied or pasted in the workflow editor:
 * End activity (the final **End activity** which is at the end of the workflow)
 * Outcomes (meaning outcomes of different outgoing flows from an activity that can have several flows, for example, a Decision)
 
-### 3.7 Viewing Element Properties 
+### 3.7 Viewing Element Properties {#view-element-properties}
 
 To view properties of an element, do one of the following:
 
@@ -139,7 +139,7 @@ To view properties of an element, do one of the following:
 2. Right-click an element and select **Properties** from the list of options that opens.
 3. Double-click an element.
 
-### 3.8 Triggering a Workflow
+### 3.8 Triggering a Workflow {#trigger-workflow}
 
 You can trigger a workflow [from a page](#trigger-page) or [via a microflow](#trigger-microflow). 
 
@@ -177,7 +177,7 @@ Do the following:
 
 Now when you run this microflow, it will trigger the selected workflow. 
 
-### 3.9 Exporting a Workflow to an Image
+### 3.9 Exporting a Workflow to an Image {#export-workflow}
 
 There are two ways to export a workflow to an image: 
 

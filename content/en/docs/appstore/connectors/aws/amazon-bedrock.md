@@ -359,7 +359,6 @@ The `Citation` entity contains a segment of the generated response that is based
 | --- | --- |
 | N/A | The entity does not contain any attributes. |
 
-
 #### 4.1.25 GeneratedResponsePart {#generated-response-part}
 
 The `GeneratedResponsePart` entity holds information about a part of the generated response that is accompanied by a citation.

@@ -229,7 +229,7 @@ Workflows have dedicated variables that can be used in an XPath and Expressions 
 The list of variables is described below: 
 
 * `$WorkflowContext` – an instance of the business-related entity that travels through the workflow
-* `$WorkflowInstance` – an instance of a currently running workflow (**System.Workflow**)
+* `$WorkflowInstance` – an instance of a currently running workflow ([System.Workflow](/refguide/workflow-engine/#system-workflow))
 
 For example, you can use these variables as parameters in the **Task name** and **Task description** properties of a user task. For more information, see [User Task](/refguide/user-task/). 
 

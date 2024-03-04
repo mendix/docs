@@ -66,7 +66,7 @@ You have a REST service in Petstore version 1.0.0 in production. You want to add
 
 #### 3.2.2 Solution
 
-Since this change is backwards-compatible, there are two solutions to this problem. One is to create a new minor version, and the other is to just add the operation to the current version.
+Since this change is backwards-compatible, there are two solutions to this problem:  create a new minor version, or add the operation to the current version.
 
 To create a new minor version, do the following:
 
@@ -84,20 +84,20 @@ You want to change the year of birth to date of birth.
 
 #### 3.3.2 Solution
 
-Note that this is a breaking change (because it is not backwards compatible), so you must create a new version if you do not want to get complaints from existing users of your service.
+Note that this is a breaking change (because it is not backwards-compatible), so you must create a new version to avoid receiving complaints from existing users of your service.
 
 1. Add a new attribute **DateOfBirth** to the **Pet** entity.
-2. Create a new folder called **PetStore_2_0_0**.
+2. Create a new folder called *PetStore_2_0_0*.
 3. Duplicate the new message definitions. Call it **PetStoreMessages_2_0_0** and move it to the **PetStore_2_0_0** folder. Remove any message definitions that you do not want to change.
-4. Create a new export mapping called **ExportPet_2_0_0** in the **PetStore_2_0_0** folder. Base it on the **Pet** entity, selecting the same attributes as before, but choosing **DateOfBirth** instead of **YearOfBirth**.
-5. Duplicate the **PetStore** service. Call it **PetStore_2_0_0** and move it to the **PetStore_2_0_0** folder.
+4. Create a new export mapping called *ExportPet_2_0_0* in the **PetStore_2_0_0** folder. Base it on the **Pet** entity, selecting the same attributes as before, but choosing **DateOfBirth** instead of **YearOfBirth**.
+5. Duplicate the **PetStore** service. Call it *PetStore_2_0_0* and move it to the **PetStore_2_0_0** folder.
 6. Update the **GET /pet** operation in the **PetStore_2_0_0** service, choosing the **ExportPet_2_0_0** export mapping.
 
 ## 4 Deprecation
 
-After you have created a new version of your service, you should mark the old version as deprecated.
+After you have created a new version of your service, mark the old version as deprecated.
 
-You do that by adding **(deprecated)** to the service name. Write a description of why it was deprecated and what the new version number is in the **Public documentation** of the service. You should also mark all the operations that changed as deprecated. This way, the user can see which operations have changed from one version to the next.
+Do this by adding **(deprecated)** to the service name. Write a description of why it was deprecated and what the new version number is in the **Public documentation** of the service. You should also mark all the operations that changed as deprecated. This way, the user can see which operations have changed from one version to the next.
 
 You should let users know that the this version is deprecated (for instance, by publishing release notes).
 

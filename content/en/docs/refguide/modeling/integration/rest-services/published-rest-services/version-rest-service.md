@@ -22,17 +22,17 @@ Give each service a version number following the `MAJOR.MINOR.PATCH` format:
 
 * A service must get a new `MAJOR` version when you make incompatible API changes (such as removing an operation)
 * A service should get a new `MINOR` version when you add functionality that is backwards-compatible (such as adding an operation)
-* A service may get a new `PATCH` version when you make a bug fix that is backwards compatible
+* A service may get a new `PATCH` version when you make a bug fix that is backwards-compatible
 
-To make versioning more explicit in your model, Mendix suggests creating a folder for each service. Call it *ServiceName_Version*. Store all microflows, mappings, and message definitions that are used in the service in that folder.
+To make versioning more explicit in your model, it is suggested you create a folder for each service named *ServiceName_Version*. Store all microflows, mappings, and message definitions that are used in the service in this folder.
 
 After you have published a service and users are using it, it is not advisable to change it anymore. 
 
-If you were to change it in a way that requires the user to change, you would introduce a "breaking change." The user would start getting errors without doing anything different.
+If you were to change it in a way that requires the user to change, you would introduce a breaking change, which would cause the user to get errors without doing anything different.
 
-Instead of changing a published service, you should duplicate the service and give it a new major version. If you want to change a microflow, a mapping, or a message definition, duplicate that as well, and change the duplicate.
+Instead of changing a published service, you should duplicate the service and give it a new major version. If you want to change a microflow, a mapping, or a message definition, duplicate it as well, and change the duplicate.
 
-Change the location of the new version to include the new version, for example, **rest/myservice/v1.1**. It is customary to omit the **.0** or **.0.0** in the URL.
+Change the location of the new version to include the new version (for example, **rest/myservice/v1.1**). It is customary to omit the **.0** or **.0.0** in the URL.
 
 The new version of the service reuses all microflows, mappings, and message definitions from the previous version that that did not change in the new version.
 

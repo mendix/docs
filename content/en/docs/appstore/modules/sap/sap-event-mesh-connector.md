@@ -80,7 +80,7 @@ The entities in the table below describe all generalizations. These are reused b
 | **Queue** | Queue details response |
 | **QueueSubscriptions** | Queue subscription response |
 
-{{< figure src="/attachments/appstore/connectors/sap-event-mesh-connector/domain-model.png" >}}
+{{< figure src="/attachments/appstore/modules/sap-event-mesh-connector/domain-model.png" >}}
 
 ### 4.2 Enumerations
 
@@ -123,7 +123,7 @@ The `PublishMessage` activity allows you to publish messages to queues or topics
 
 ##### 4.3.1.1 Sample Microflow
 
-{{< figure src="/attachments/appstore/connectors/sap-event-mesh-connector/publish-message.png" >}}
+{{< figure src="/attachments/appstore/modules/sap-event-mesh-connector/publish-message.png" >}}
 
 #### 4.3.2 Consume Message from a Queue
 
@@ -134,7 +134,7 @@ The `ConsumeMessage` activity allows you to consume a message from a queue. It r
 
 ##### 4.3.2.1 Sample Microflow
 
-{{< figure src="/attachments/appstore/connectors/sap-event-mesh-connector/consume-message.png" >}}
+{{< figure src="/attachments/appstore/modules/sap-event-mesh-connector/consume-message.png" >}}
 
 #### 4.3.3 Publish Event
 
@@ -148,7 +148,7 @@ The `PublishCloudEvent` activity allows you to publish events that are compliant
 
 ##### 4.3.3.1 Sample Microflow
 
-{{< figure src="/attachments/appstore/connectors/sap-event-mesh-connector/publish-event.png" >}}
+{{< figure src="/attachments/appstore/modules/sap-event-mesh-connector/publish-event.png" >}}
 
 #### 4.3.4 Get All Queues
 
@@ -156,7 +156,7 @@ The `GetQueueList` microflow allows you to retrieve a list of queues. It require
 
 ##### 4.3.4.1 Sample Microflow
 
-{{< figure src="/attachments/appstore/connectors/sap-event-mesh-connector/get-queue-list.png" >}}
+{{< figure src="/attachments/appstore/modules/sap-event-mesh-connector/get-queue-list.png" >}}
 
 #### 4.3.5 Get Queue Details
 
@@ -164,7 +164,7 @@ The `GetQueueDetails` microflow allows you to retrieve detailed information abou
 
 ##### 4.3.5.1 Sample Microflow
 
-{{< figure src="/attachments/appstore/connectors/sap-event-mesh-connector/get-queue-details.png" >}}
+{{< figure src="/attachments/appstore/modules/sap-event-mesh-connector/get-queue-details.png" >}}
 
 #### 4.3.6 Get Queue Subscriptions
 
@@ -172,7 +172,7 @@ The `GetQueueSubscriptions` microflow allows you to retrieve information about s
 
 ##### 4.3.6.1 Sample Microflow
 
-{{< figure src="/attachments/appstore/connectors/sap-event-mesh-connector/get-queue-subscriptions.png" >}}
+{{< figure src="/attachments/appstore/modules/sap-event-mesh-connector/get-queue-subscriptions.png" >}}
 
 #### 4.3.7 Create or Update Queue
 
@@ -180,7 +180,7 @@ The `CreateOrUpdateQueue` activity allows you to create a new queue or update an
 
 ##### 4.3.7.1 Sample Microflow
 
-{{< figure src="/attachments/appstore/connectors/sap-event-mesh-connector/create-queue.png" >}}
+{{< figure src="/attachments/appstore/modules/sap-event-mesh-connector/create-queue.png" >}}
 
 #### 4.3.8 Delete Queue
 
@@ -188,7 +188,7 @@ The `DeleteQueue` activity allows you to delete a queue. It requires the Managem
 
 ##### 4.3.8.1 Sample Microflow
 
-{{< figure src="/attachments/appstore/connectors/sap-event-mesh-connector/delete-queue.png" >}}
+{{< figure src="/attachments/appstore/modules/sap-event-mesh-connector/delete-queue.png" >}}
 
 #### 4.3.9 Create Queue Subscription
 
@@ -200,7 +200,7 @@ The `CreateQueueSubscription` activity allows you to create a new subscription t
 
 ##### 4.3.9.1 Sample Microflow
 
-{{< figure src="/attachments/appstore/connectors/sap-event-mesh-connector/create-queue-subscription.png" >}}
+{{< figure src="/attachments/appstore/modules/sap-event-mesh-connector/create-queue-subscription.png" >}}
 
 #### 4.3.10 Delete Queue Subscription
 
@@ -212,4 +212,4 @@ The `DeleteQueueSubscription` activity allows you to delete a subscription to a 
 
 ##### 4.3.10.1 Sample Microflow
 
-{{< figure src="/attachments/appstore/connectors/sap-event-mesh-connector/delete-queue-subscription.png" >}}
+{{< figure src="/attachments/appstore/modules/sap-event-mesh-connector/delete-queue-subscription.png" >}}

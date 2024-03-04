@@ -14,11 +14,11 @@ The Mendix Client runs on the end-user's device and handles the interface betwee
 This description of the Mendix Client is based on using the Runtime Server of an app running in the cloud. You can also run Mendix locally for testing, but this is conceptually the same.
 
 {{% alert color="info" %}}
-In Studio Pro versions 10.6.0 and above, there is an alternative version of the Mendix Client written in React. This is currently a [beta](/releasenotes/beta-features/). You can enable this React client in [App Settings](/refguide/app-settings/#react-client).
+In Studio Pro versions 10.7.0 and above, there is an alternative version of the Mendix Client written in React. This is currently a [beta](/releasenotes/beta-features/). You can enable this React client in [App Settings](/refguide/app-settings/#react-client).
 
 The React client replaces [Dojo](https://dojotoolkit.org/) with [React](https://react.dev/) for the view layer. This means that widgets based on Dojo will no longer work. You will get consistency errors if your app contains Dojo widgets, or you can choose **Migration mode** which will allow you to build your app but will replace incompatible widgets with a placeholder.
 
-Other components of the Mendix Client are the same in both the React and Dojo client. See our [Release Blog](https://www.mendix.com/blog/mendix-release-10-7-go-mac-it/#react-client-public-beta) for more information.
+Other components of the Mendix Client are the same in both the React and Dojo client. See [Mendix React Client](/refguide/mendix-client/react/) for more information.
 {{% /alert %}}
 
 ## 2 Description {#description}
@@ -31,7 +31,7 @@ The Mendix Dojo Client is bootstrapped by loading a `mxui.js` script from an HTM
 
 The Mendix React client is bootstrapped in different way. Its loads the `index.js` file which loads the `common.js` with the Mendix client. More JavaScript files will be loaded after this that contain page, layout and nanoflow definitions.
 
-For **mobile applications** Mendix Client acts as a React Native application. This means that apps created by Mendix consist of two parts: a *wrapper* and a *bundle*. The wrapper is a native iOS or Android application that loads the bundle and exposes platform functionality to it. The bundle includes Client Core, Pluggable Widgets, and application-specific resources like nanoflows and pages.
+For **mobile applications**, the Mendix Client acts as a React Native application. This means that apps created by Mendix consist of two parts: a *wrapper* and a *bundle*. The wrapper is a native iOS or Android application that loads the bundle and exposes platform functionality to it. The bundle includes Client Core, Pluggable Widgets, and application-specific resources like nanoflows and pages.
 
 The three supported types of wrappers for mobile applications are as follows:
 
@@ -68,7 +68,7 @@ The UI layer performs navigation, resource loading, and platform integration. It
 
 ### 2.5 HTTPS Server
 
-The HTTPS server serves pages, widgets, and javascript actions, held in the model, to the end-user of the app.
+The HTTPS server serves pages, widgets, and JavaScript actions, held in the model, to the end-user of the app.
 
 ### 2.6 Logic
 
@@ -88,7 +88,7 @@ These include the initial environment (for example, the browser shell page) need
 
 This allows the Mendix Client to fetch and manipulate data in offline storage or the Mendix Runtime.
 
-### 2.10 Object Cache
+### 2.10 Object Cache{#object-cache}
 
 This holds and manages objects which are being used by the Mendix Client in memory – for example non-persistable objects, new objects, and objects returned by the Runtime Server to be displayed on a page. It also holds changes to attributes and associations for these objects.
 

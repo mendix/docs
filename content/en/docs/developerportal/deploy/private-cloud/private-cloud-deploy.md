@@ -259,7 +259,7 @@ This displays details of the deployment package.
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image18.png" >}}
 
 {{% alert color="info" %}}
-Should a deployment package remain unused, inactive, or unlocked for a period exceeding 2 weeks, it will be automatically deleted according to the expiry date. To retain the deployment package for future use, be sure to lock it.
+Should a deployment package remain unused, inactive, or unlocked for a period exceeding 2 weeks, it will be automatically deleted according to the expiry date. To retain the deployment package for future use, be sure to lock it. This also applies to deployment packages for which the status is **Failed**.
 {{% /alert %}}
 
 The information shows here is labeled to help you. The indicators in the environment description are described in the next section, [Environments](#environments), below.
@@ -473,7 +473,7 @@ For a *connected* cluster, the top level MendixApp​ CRD will be deleted from t
 
     {{% alert color="info" %}}If the storage plan is using a JDBC plan (not Postgres or SQL Server), the database and the user will remain untouched).{{% /alert %}}
 
-* ​​Files related to that environment will be deleted from the S3/Minio/Tencent storage bucket (or prefix if this is using a shared bucket).
+* ​​Files related to that environment will be deleted from the S3/Minio storage bucket (or prefix if this is using a shared bucket).
 
     {{% alert color="info" %}}If you are using the S3 [create account with existing policy](/developerportal/deploy/standard-operator/#storage-plan) plan - the files remain untouched.{{% /alert %}}
 
@@ -515,10 +515,14 @@ The **Model Options** tab allows you to change the configuration of scheduled ev
 
 To toggle any scheduled events, select the scheduled event you want to enable or disable and click **Toggle**.
 
-To change any constants, select the constant you want to edit and then click **Edit**.
+To change any constants, select the constant you want to edit and then click **Edit**. You also have the option to export the app constants to an Excel file by selecting **Export Constants to Excel**.
 
 {{% alert color="info" %}}
 If the MxApp constants are configured in both the CSI Secrets Storage and another location (such as the Developer Portal or MendixApp CR), the secret storage configuration has a higher priority and overrides the value specified elsewhere.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+If you change the data type and value in the .mpr file, the changes are visible in the Portal. Changes that only affect the data value without altering the data type are not visible in the Portal.
 {{% /alert %}}
 
 ### 5.3 Network Tab

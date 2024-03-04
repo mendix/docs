@@ -5,10 +5,6 @@ tags: ["studio pro", "database", "data source"]
 weight: 10
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/database-source.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 If **Database** is selected as the data source for a widget then an object or objects shown are retrieved directly from the database with a query. This data source is also supported in [offline](/refguide8/offline-first/) applications in which case the data will come from the database on the mobile device.

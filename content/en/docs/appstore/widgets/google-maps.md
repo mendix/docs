@@ -10,7 +10,7 @@ aliases:
 ---
 
 {{% alert color="warning" %}}
-⚠ This widget is deprecated. You can use the [Maps](/appstore/widgets/maps/) widget instead.
+This widget is deprecated. You can use the [Maps](/appstore/widgets/maps/) widget instead.
 {{% /alert %}}
 
 ## 1 Introduction

@@ -7,10 +7,6 @@ weight: 12
 tags: ["Studio Pro", "menu", "top bar"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/menus.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 The top-bar of Studio Pro contains the following menus:
@@ -24,7 +20,7 @@ The top-bar of Studio Pro contains the following menus:
 * [Run](#run) – contains actions for deploying and monitoring your app 
 * [Version Control](#version-control) – contains setting for version control
 * [Language](#language) – contains language and translation settings
-* [Help](#help)  – allows you to view documentation, the [Mendix Forum](https://forum.mendix.com/p/questions), open log file directory, or view information on  the current information of Studio Pro
+* [Help](#help)  – allows you to view documentation, the [Mendix Community](https://community.mendix.com/p/questions), open log file directory, or view information on  the current information of Studio Pro
 
 ## 2 File Menu {#file}
 
@@ -60,7 +56,7 @@ In the **Language** menu, you can add alternative languages to your app so that 
 | --- | --- | --- |
 | **Help** | Opens the documentation page about the currently selected element. If an entity is selected, for example, the documentation for entities will be shown. | <kbd>F1</kbd> |
 | **Help Contents** | Opens the home page of the documentation in the default web browser. |   |
-| **Ask a Question** | Opens the [Mendix Forum](https://forum.mendix.com/p/questions) in the default web browser. |   |
+| **Ask a Question** | Opens the [Mendix Community](https://community.mendix.com/p/questions) in the default web browser. |   |
 | **Open Log File Directory** | Opens the log files for your app locally. |   |
 | **About Mendix Studio Pro** | Shows information about the current version of Mendix Studio Pro. |   |
 

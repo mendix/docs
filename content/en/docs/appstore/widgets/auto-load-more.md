@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "widget", "auto-load more", "load
 ---
 
 {{% alert color="warning" %}}
-⚠ This widget is deprecated. For an alternative, see the [Gallery](/appstore/modules/gallery/) module.
+This widget is deprecated. For an alternative, see the [Gallery](/appstore/modules/gallery/) module.
 {{% /alert %}}
 
 ## 1 Introduction

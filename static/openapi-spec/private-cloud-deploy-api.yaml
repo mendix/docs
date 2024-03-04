@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   title: Mendix for Private Cloud Deploy API
-  version: 4.6.0
+  version: 4.7.0
   contact:
     name: Mendix Support
     url: 'https://support.mendix.com'
@@ -624,6 +624,10 @@ components:
                 secretsStoreEnabled:
                   type: boolean
                   default: false
+                OverwriteProductTypePCLM:
+                  type: string
+                  x-stoplight:
+                    id: kledhwkqv84h5
             deployment:
               type: object
               required:
@@ -1072,6 +1076,7 @@ components:
             - name
             - installationType
             - secret
+            - productTypePCLM
           properties:
             namespaceId:
               type: string
@@ -1085,6 +1090,11 @@ components:
             secret:
               type: string
               example: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
+            productTypePCLM:
+              type: string
+              example: standard
+              x-stoplight:
+                id: 2r6towzytlu3z
             plans:
               type: array
               items:
@@ -1530,6 +1540,7 @@ components:
                     production: true
                     defaultStudioTarget: true
                     secretsStoreEnabled: false
+                    OverwriteProductTypePCLM: standard
                   deployment:
                     appUrl: 'https://test.app.url'
                     packageId: 045b8cf4-c9cd-41b4-b241-414b87a7f219
@@ -1609,6 +1620,7 @@ components:
                         production: true
                         defaultStudioTarget: true
                         secretsStoreEnabled: false
+                        OverwriteProductTypePCLM: standard
                       deployment:
                         appUrl: 'http://test.app.url'
                         packageId: 045b8cf4-c9cd-41b4-b241-414b87a7f219
@@ -1763,6 +1775,7 @@ components:
                   name: my-namespace
                   installationType: Connected
                   secret: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
+                  productTypePCLM: standard
                   plans:
                     - planName: ephemeral
                       planType: OnDemand
@@ -1840,6 +1853,7 @@ components:
                       name: my-namespace
                       installationType: Connected
                       secret: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
+                      productTypePCLM: standard
                       plans:
                         - planName: ephemeral
                           planType: OnDemand
@@ -1901,6 +1915,7 @@ components:
                       name: my-namespace-2
                       installationType: Standalone
                       secret: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
+                      productTypePCLM: standard
                       plans:
                         - planName: ephemeral
                           planType: OnDemand
@@ -1983,7 +1998,7 @@ components:
       name: Authorization
       type: apiKey
       in: header
-      description: 'For more information about requesting and using a token see the [documentation](https://docs.mendix.com/developerportal/community-tools/mendix-profile/#pat).<br/> The header must be set to `MxToken <Your PAT>`.'
+      description: 'For more information about requesting and using a token see the [documentation](https://docs.mendix.com/community-tools/mendix-profile/user-settings/#pat).<br/> The header must be set to `MxToken <Your PAT>`.'
   requestBodies:
     environmentManifest:
       content:
@@ -2041,6 +2056,7 @@ components:
             production: true
             defaultStudioTarget: true
             secretsStoreEnabled: false
+            OverwriteProductTypePCLM: standard
           deployment:
             appUrl: 'https://test.app.url'
             packageId: 045b8cf4-c9cd-41b4-b241-414b87a7f219
@@ -2137,6 +2153,7 @@ components:
           name: my-namespace
           installationType: Connected
           secret: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
+          productTypePCLM: standard
           plans:
             - planName: ephemeral
               planType: OnDemand

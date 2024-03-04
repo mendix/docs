@@ -19,9 +19,9 @@ Open your [published OData service](/refguide/published-odata-services/) or crea
 
 {{< figure src="/attachments/refguide/modeling/integration/published-odata-services/published-odata-microflow/microflows-grid.png" alt="Published microflows" width="600" >}}
 
-In the **Microflows** tab of the published OData service, click **Add**. This opens a selector dialog box where you can select the microflow you want to publish. From here, you can also click **New** to create a new microflow.
+In the **Microflows** tab of the published OData service, click **Add**. This opens a selector dialog box where you can select the microflow you want to publish. You can also click **New** to create a new microflow.
 
-Click **Select** to add the microflow with the microflow name as its default **Exposed name**. If you want to change this and add documentation, edit the published microflow as described below.
+Click **Select** to add the microflow with the microflow name as its default **Exposed name**. If you want to change this and add documentation, [edit the published microflow](#edit-microflow).
 
 Another way of publishing a microflow is from the microflow itself. You can do one of the following:
 
@@ -32,10 +32,10 @@ When you publish a microflow that has object, list, or enumeration parameters or
 
 ### 2.2 Edit a Published Microflow{#edit-microflow}
 
-Either select the microflow and click **Edit**, or double-click the microflow to open its properties. In the [Edit published microflow](#pub-odata-mflow-parameters) dialog box, you can change the **Exposed name** and change the **Microflow**. Below that, in the **Example of location** field, you can find the URI where the action will be located when the app is running.
+Either select the microflow and click **Edit**, or double-click the microflow to open its properties. In the [Edit published microflow](#pub-odata-mflow-parameters) dialog box, you can change the **Exposed name** and the **Microflow**. Below that, in the **Example of location** field, you can find the URI where the action will be located when the app is running.
 
 {{% alert color="info" %}}
-The resulting location must be unique. This means that a published microflow cannot have the same exposed name as another published microflow or published entity.
+The resulting location must be unique. This means a published microflow cannot have the same exposed name as another published microflow or published entity.
 {{% /alert %}}
 
 In the **Public documentation** tab, you can add a short **Summary** and a longer **Description** to describe the behavior of the action.

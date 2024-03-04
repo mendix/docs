@@ -5,11 +5,11 @@ url: /refguide/using-a-proxy-to-call-a-webservice/
 
 ## 1 Introduction
 
-In some cases, you're stuck behind a firewall, and thus unable to call a webservice directly. This document shows you how to configure the JVM to use a proxy to call such services.
+In some cases, you're stuck behind a firewall and thus unable to call a web service directly. This document shows you how to configure the JVM to use a proxy to call such services.
 
 ## 2 Proxy Host and Proxy Port
 
-There are two JVM parameters (system properties) that specify which proxy server to use. These are http.proxyHost and http.proxyPort
+There are two JVM parameters (system properties) that specify which proxy server to use: `http.proxyHost` and `http.proxyPort`
 You can specify these in your .m2eerc under JVM parameters:
 
 ```java
@@ -37,6 +37,6 @@ Some proxies require authentication. To specify the user and password, simply pa
 
 ## 4 SSL
 
-You can also connect while using a secure sockets layer (ie https). To configure the proxy, you need to specify **different** proxy settings to connect. These settings are called https.proxyHost and https.proxyPort. In addition, you need to import the ssl certificate of the proxy server into your java keystore. More info can be found on the [Oracle website](http://download.oracle.com/javaee/1.4/tutorial/doc/Security6.html)
+You can also connect while using a secure sockets layer (such as `https`). To configure the proxy, you need to specify different proxy settings to connect: `https.proxyHost` and `https.proxyPort`. In addition, you need to import the ssl certificate of the proxy server into your java keystore. More information can be found on the [Oracle website](http://download.oracle.com/javaee/1.4/tutorial/doc/Security6.html)
 
-For more inforamtion, see the [Oracle documentation on proxies](http://download.oracle.com/javase/6/docs/technotes/guides/net/proxies.html).
+For more details, see the [Oracle documentation on proxies](http://download.oracle.com/javase/6/docs/technotes/guides/net/proxies.html).

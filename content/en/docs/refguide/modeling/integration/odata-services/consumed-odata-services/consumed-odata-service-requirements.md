@@ -41,14 +41,13 @@ Vocabulary annotations can be used in a service to indicate features that are no
 * **Countable** – an entity set marked as `Countable="false"` prevents the user from adding the entity to the app.
 * **Filterable** – an entity set marked as `Filterable="false"` sets all properties as non-filterable.
 * **Sortable** – an entity set marked as `Sortable="false"` sets all properties as non-sortable.
-* Marking an entity set as `Filterable="false"` and `Sortable="false"` sets all properties as non-filterable and non-sortable; marking properties with the `NonFilterableProperties` annotation or the `NonSortableProperties` annotation sets specific attributes as non-filterable or non-sortable.
+* Marking an entity set as `Filterable="false"` and `Sortable="false"` sets all properties as non-filterable and non-sortable. Marking properties with the `NonFilterableProperties` annotation or the `NonSortableProperties` annotation sets specific attributes as non-filterable or non-sortable.
 * **Insertable** – an entity marked as `Insertable="true"` will make the entity creatable in the domain model. That means, for example, that you can model pages that create new objects, and that you can use the entity in the [Create Object](/refguide/create-object/) activity. For insertable entities, the annotations `NonInsertableProperties` and `NonInsertableNavigationProperties` list the (navigation) properties that cannot be passed to the service in the [Send External Object](/refguide/send-external-object/) activity.
-* **Updatable** – an entity marked as `Updatable="true"` with `DeltaUpdateSupported="true"` and `UpdateMethod="2"` will make the entity updatable in the domain model. That means, for example, that you can model pages that change attributes values and associated objects, and that you can use the entity in the [Change Object](/refguide/change-object/) activity. For updatable entities, the annotations `NonUpdatableProperties` and `NonUpdatableNavigationProperties` list the (navigation)properties that cannot be updated.
+* **Updatable** – an entity marked as `Updatable="true"` with `DeltaUpdateSupported="true"` and `UpdateMethod="2"` will make the entity updatable in the domain model. That means, for example, that you can model pages that change attributes values and associated objects, and that you can use the entity in the [Change Object](/refguide/change-object/) activity. For updatable entities, the annotations `NonUpdatableProperties` and `NonUpdatableNavigationProperties` list the (navigation) properties that cannot be updated.
 * **Deletable** - an entity marked as `Deletable="true"` can be used in the [Delete External Object](/refguide/delete-external-object/) activity.
 
-An entity can only be used when it is accessible through an entity set.
-
-Furthermore, an entity can only be used if it is uniquely identifiable with a key. The key can consist of one or more properties, as long as the following conditions are met:
+An entity can only be used as an external entity when it is accessible through an entity set, and when it is uniquely identifiable with a key. 
+The key can consist of one or more properties, as long as the following conditions are met:
 
 * The properties cannot be nullable (so they must have `isNullable="false"` specified).
 * Only the following types are allowed: 
@@ -68,6 +67,8 @@ Furthermore, an entity can only be used if it is uniquely identifiable with a ke
 The list above for supported key fields does not include `Date` or `DateTime` data types.
 {{% /alert %}}
 
+Entities that are not accessible through an entity set can be used as a [non-persistable entity](/refguide/consumed-odata-services/#external-non-persistable-entities).
+
 ### 3.2 Attributes
 
 #### 3.2.1 Supported Attribute Types {#supported-types}
@@ -80,7 +81,7 @@ The most commonly used attribute types can be used in your app. The types of the
 
 | OData Type                     | Mendix Type                           |
 | ---                            | ---                                   |
-| Binary                         | Binary (but see [Binary Attributes](#binary-attributes), below) |
+| Binary                         | Binary (see [Binary Attributes](#binary-attributes) below) |
 | Boolean                        | Boolean ¹ |
 | Byte, SByte, Int16, Int32      | Integer |
 | DateTime, DateTimeOffset, Time | Date/time |
@@ -100,7 +101,7 @@ The most commonly used attribute types can be used in your app. The types of the
 Support for consuming attributes of complex types was introduced in Mendix version 10.6.
 {{% /alert %}}
 
-Complex types are not supported by the Mendix domain model. Mendix does, however, allow you to read external entities that contain attributes of a complex type by importing the properties of the complex type as attributes of the containing entity.
+Complex types are not supported by the domain model. However, Studio Pro allows you to read external entities that contain attributes of a complex type by importing the properties of the complex type as attributes of the containing entity.
 
 By default, the attribute names consist of the name of the complex attribute and the name of the property that is part of the complex type, separated by an underscore. For example, if your external entity `Employee` contains an attribute `HomeAddress` of type `Lato.Address` with properties `Street`, `PostcalCode`, and `City`, Studio Pro allows you to add these as attributes of external entity `Employee` with default names `HomeAddress_Street`, `HomeAddress_PostalCode`, and `HomeAddress_City`, respectively. Note that only the properties of the types described in [Supported Attribute Types](#supported-types) are supported.
 

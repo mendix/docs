@@ -5,10 +5,6 @@ weight: 110
 tags: ["studio pro", "common properties", "microflow", "nanoflow"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/microflow-element-common-properties.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 This document describes common properties that are shared by many elements in the microflow editor.

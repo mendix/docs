@@ -17,13 +17,26 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2024
 
-### February 08, 2024
+### February 29, 2024
+
+#### New Features
+
+* We launched a new feature: Pipelines. Pipelines lets you build and deploy software in an automated way. You can design pipelines with a set of configurable, low-code steps. Activated pipelines run automatically according to your design. This new Pipelines feature is intended to make it quick and easy for teams to automate their CI/CD process. For more information, see [Pipelines](/developerportal/deploy/pipelines/).
+    * The Pipelines feature is in [public beta](/releasenotes/beta-features/). It is currently available for unlimited use with all licensed Mendix Cloud apps. Limitations may be put on its use in the future.
+
+### February 19, 2024
 
 #### Bug Fixes
 
-* We have removed an extra white space on the Logs page. 
-* On the Metrics page, when viewing both the application and the database metrics together, they are now separated instead of presented together. The Logs page now shows all the application metrics graphs first, followed by the database metrics graphs.
-* The Environments drop-down list maintains the same sorting order as on the Environments page in the Developer Portal.
+* We corrected one of the labels on the [JVM object heap graph](/developerportal/operate/metrics/#Trends-appmxruntimejvmheap) on the **Metrics** page; it shows survivor space rather than native memory.
+
+### February 8, 2024
+
+#### Bug Fixes
+
+* We have removed an extra white space on the **Logs** page. 
+* On the **Metrics** page, when viewing both the application and the database metrics together, they are now separated instead of presented together. The **Logs** page now shows all the application metrics graphs first, followed by the database metrics graphs.
+* The **Environments** drop-down list maintains the same sorting order as on the **Environments** page in the Developer Portal.
 
 ### January 31, 2024 
 

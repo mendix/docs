@@ -5,10 +5,6 @@ tags: ["studio pro", "data source"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/data-sources.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 Widgets that display information stored in entities require you to assign a method by which to retrieve the relevant data. Such methods are collectively known as data sources. Widgets that require a data source include all [data widgets](/refguide8/data-widgets/) and [input widgets](/refguide8/input-widgets/). [Pluggable widgets](/apidocs-mxsdk/apidocs/pluggable-widgets/) can also use data sources.

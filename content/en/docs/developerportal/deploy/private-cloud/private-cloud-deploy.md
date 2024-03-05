@@ -102,15 +102,15 @@ All environments are defined as production environments, which means that [secur
 
 3. An **Internal Name** (UUID) will be generated for you. This will be used when creating your environment to ensure that all the environment names in your namespace are unique.
 
-    {{% alert color="info" %}}
-    You can change the internal name if you wish, but do not reuse one which has already been used in this namespace, even if the environment it was used for has been deleted.
-    {{% /alert %}}
+{{% alert color="info" %}}
+You can change the internal name if you wish, but do not reuse one which has already been used in this namespace, even if the environment it was used for has been deleted.
+{{% /alert %}}
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/customizeEnvironmentPage1.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/customizeEnvironmentPage1.png" >}}
 
-    {{% alert color="warning" %}}
-    In the case of the Global Operator, do not use the same internal names for the managed namespaces under the same Global Operator namespace. Using the same internal name may result in unwanted issues.
-    {{% /alert %}}
+{{% alert color="warning" %}}
+In the case of the Global Operator, do not use the same internal names for the managed namespaces under the same Global Operator namespace. Using the same internal name may result in unwanted issues.
+{{% /alert %}}
 
 4. Enter the **Environment Name**, the name for the environment. The environment name can only contain lowercase letters, numbers and dashes and must start and end with an alphanumeric character. You can have several environments for your app, for example test, acceptance, and production, however, all environments will be treated by Mendix as production environments, when you create them.
 
@@ -143,22 +143,22 @@ All environments are defined as production environments, which means that [secur
 
     Alternatively, you can choose **Custom**, and enter your own requirements for **CPU** and **Memory**. Ensure that these values are the same or greater than the values for a *Small* environment, otherwise you may run into problems running your app.
 
-    {{% alert color="info" %}}If the cluster manager has added and enabled customized core resource plan on Cluster manager page, only the configured custom core resource plans will be visible for selection. Once the custom core resources plans are enabled, environments cannot be created using the default plans until all the associated environments using the custom core resource plan are deleted and the custom resource plan is disabled on the **Cluster manager** page.
-    {{% /alert %}}
+{{% alert color="info" %}}If the cluster manager has added and enabled customized core resource plan on Cluster manager page, only the configured custom core resource plans will be visible for selection. Once the custom core resources plans are enabled, environments cannot be created using the default plans until all the associated environments using the custom core resource plan are deleted and the custom resource plan is disabled on the **Cluster manager** page.
+{{% /alert %}}
 
 9. Select a **Database plan** from the list of plans set up in the namespace.
 
-    {{% alert color="info" %}}
-    If the Cluster Manager has configured a secret store for this namespace, this option will be disabled. You can find more information on configuring the secret store in [Integrate Kubernetes with Secret Stores](/developerportal/deploy/secret-store-credentials/).
-    {{% /alert %}}
+{{% alert color="info" %}}
+If the Cluster Manager has configured a secret store for this namespace, this option will be disabled. You can find more information on configuring the secret store in [Integrate Kubernetes with Secret Stores](/developerportal/deploy/secret-store-credentials/).
+{{% /alert %}}
 
 10. Select a **Storage plan** from the list of plans set up in the namespace.
 
-    {{% alert color="info" %}}
-    If the Cluster Manager has configured a secret store for this namespace, this option will be disabled. You can find more information on configuring the secret store in [Integrate Kubernetes with Secret Stores](/developerportal/deploy/secret-store-credentials/).
-    {{% /alert %}}
+{{% alert color="info" %}}
+If the Cluster Manager has configured a secret store for this namespace, this option will be disabled. You can find more information on configuring the secret store in [Integrate Kubernetes with Secret Stores](/developerportal/deploy/secret-store-credentials/).
+{{% /alert %}}
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image7.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image7.png" >}}
 
 11. Click **Create Environment**.
 12. You will see your new environment listed. An *in-progress* icon will be shows next to the resource plans until they have been provisioned.

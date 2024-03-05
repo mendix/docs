@@ -9,16 +9,16 @@ tags: ["Samba", "share"]
 
 ## 1 Introduction
 
-You can use a Samba connection to pull or push files to a Windows share. When doing this, you need to use a static IP address in the connection string. The library could support the usage of a servername, but that requires extensive configuration to specify the DNS server location, DFS address, etc. It is far more efficient to use the IP address.
+You can use a Samba connection to pull or push files to a Windows share. When doing this, you need to use a static IP address in the connection string. The library could support the usage of a server name, but that requires extensive configuration to specify the DNS server location and DFS address, so it is more efficient to use the IP address.
 
-This how-to teaches you how to do the following:
+This reference shows you how to do the following:
 
-* Access a Samba share from the MxCloud
-* Use a servername instead of an IP address
+* Access a Samba share from the Mendix Cloud
+* Use a server name instead of an IP address
 
 ## 2 Code Example
 
-When connecting to a Samba share using a regular username, password, and IP address, the code below with the NTLMFileHandler is sufficient. Based on the SMB configuration and the name of the FileDocument, the FileHandler will connect to the Samba share and pull the document with the same file name.
+When connecting to a Samba share using a regular user name, password, and IP address, the code below with the NTLMFileHandler is sufficient. Based on the SMB configuration and the name of the FileDocument, the FileHandler will connect to the Samba share and pull the document with the same file name.
 
 ```java
 public ReadFileFromSMBDrive(SMBConfiguration SMBConfig, FileDocument DocumentParameter1)
@@ -41,7 +41,7 @@ public Boolean executeAction() throws Exception
 }
 ```
 
-## 3 Using a Servername Instead of an IP Address
+## 3 Using a Server name Instead of an IP Address
 
 If you choose to connect to a server based on the server name instead of the IP address, you will have to enable all the properties related to this option. For details on the different WINS properties that need to be specified in order for the library to resolve the domain and the server, see this page: [https://jcifs.samba.org/src/docs/resolver.html](https://jcifs.samba.org/src/docs/resolver.html).
 

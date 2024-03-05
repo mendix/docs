@@ -151,7 +151,6 @@ To check out which modules a category contains, click the category in the list b
 ### 2.14 Utility {#utility}
 
 * [Administration](/appstore/modules/administration/)
-* [App Switcher](/appstore/modules/app-switcher/)
 * [Community Commons](/appstore/modules/community-commons-function-library/)
 * [Encryption](/appstore/modules/encryption/)
 * [Mendix Feedback](/appstore/modules/mendix-feedback/)

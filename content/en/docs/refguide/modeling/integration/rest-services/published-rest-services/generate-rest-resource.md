@@ -10,7 +10,7 @@ tags: ["published REST", "resource", "entity", "operations", "expose", "studio p
 
 ## 1 Introduction
 
-You can publish a REST resource with basic operations based on an entity by right-clicking an entity in the domain model and selecting **Expose as REST resource**. Alternatively, you can drag an entity or message definition onto the list of resources of a published REST service. This page describes the options you have once you perform one of these actions.
+You can publish a REST resource with basic operations based on an entity by right-clicking an entity in the domain model and selecting **Expose as REST resource**. Alternatively, you can drag an entity or [message definition](/refguide/message-definitions/) onto the list of resources of a published REST service. This page describes the options you have once you perform one of these actions.
 
 ## 2 REST Service
 
@@ -24,7 +24,7 @@ Type the name of the resource that you want to publish.
 
 ### 3.2 Key Attribute
 
-To be able to create a **Get by key**, a **Patch** or a **Delete** operation, there needs to be a unique attribute on the entity. Select that attribute here.
+To be able to create a **Get by key**, a **Patch**, or a **Delete** operation, there needs to be a unique attribute on the entity. Select that attribute here.
 
 ## 4 Operations {#operations}
 
@@ -42,7 +42,7 @@ When you click **OK**, the following items are created:
 * All the operations that you selected
 * A microflow for each operation
 * A message definition
-* An import mapping (for the **Post** and **Patch** operations)
-* An export mapping (for the **Get all** and **Get by key** operations)
+* An [import mapping](/refguide/import-mappings/) (for the **Post** and **Patch** operations)
+* An [export mapping](/refguide/export-mappings/) (for the **Get all** and **Get by key** operations)
 
 If you have already created a message definition for the entity, that message definition will be reused. Existing import and export mappings based on that message definition will also be reused.

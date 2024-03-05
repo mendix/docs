@@ -10,7 +10,7 @@ tags: ["published REST", "resource", "entity", "operations", "expose", "studio p
 
 ## 1 Introduction
 
-You can publish a REST resource with basic operations based on an entity by right-clicking an entity in the domain model and selecting **Expose as REST resource**. Alternatively, you can drag an entity or [message definition](refguide/message-definitions/) onto the list of resources of a published REST service. This page describes the options you have once you perform one of these actions.
+You can publish a REST resource with basic operations based on an entity by right-clicking an entity in the domain model and selecting **Expose as REST resource**. Alternatively, you can drag an entity or [message definition](/refguide/message-definitions/) onto the list of resources of a published REST service. This page describes the options you have once you perform one of these actions.
 
 ## 2 REST Service
 

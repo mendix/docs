@@ -5,16 +5,18 @@ category: "Modules"
 description: "Describes the configuration and usage of the Mobile SSO module, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "Mobile SSO", "IdP", "single sign on", "platform support", "Azure","Okta"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
-# Linked from 
+# Linked from https://marketplace.mendix.com/link/component/223516
 ---
 
 ## 1 Introduction
 
-The Mobile SSO module allows end-users of your mobile Mendix app to sign in via Single Sign-On (SSO) using the OpenID Connect (OIDC) protocol. As the Mobile SSO module depends on the [OIDC SSO module](https://marketplace.mendix.com/link/component/120371) for authentication, your IdP needs to support this protocol.
+The [Mobile SSO](https://marketplace.mendix.com/link/component/223516) module allows end-users of your mobile Mendix app to sign in via Single Sign-On (SSO) using the OpenID Connect (OIDC) protocol. As the Mobile SSO module depends on the [OIDC SSO module](https://marketplace.mendix.com/link/component/120371) for authentication, your IdP needs to support this protocol.
 
 The following diagram gives an overview of architecture of the module:
 
 {{< figure src="/attachments/appstore/modules/mobile-sso/Module architecture.png" max-width=80% class="image-border">}}
+
+{{% alert color="info" %}} If you are building a Progressive Web Application (PWA), you need to use [OIDC SSO](https://marketplace.mendix.com/link/component/120371) module instead. {{% /alert %}}
 
 ### 1.1 Typical Usage Scenarios
 
@@ -29,11 +31,10 @@ The Mobile SSO module has the following features:
 
 * Supports [native mobile apps](/refguide/mobile/introduction-to-mobile-technologies/native-mobile/)
 * User role assignment from your IdP
-* If you are building a Progressive Web Application (PWA), you do not need the Mobile SSO module, but you only need the OIDC SSO module
     
 #### 1.2.2 Limitations
 
-The Mobile SSO module has the following limitations:
+This module has the following limitations:
 
 * Mendix sessions in the mobile app do not time out.
 * Mobile SSO module does not support any other protocol except OIDC.
@@ -50,7 +51,7 @@ This section clarifies to what extent a Mobile Mendix app using Mobile SSO modul
 
 ## 2 Dependencies
 
-The Mobile SSO module requires your app to be using Mendix 9.24 or above.
+The [Mobile SSO](https://marketplace.mendix.com/link/component/223516) module requires your app to be using Mendix 9.24 or above.
 
 It requires the following Marketplace modules to be included in your app:
 
@@ -61,7 +62,7 @@ It requires the following Marketplace modules to be included in your app:
 
 This guide provides the step-by-step process of integrating the Mobile Single Sign-On (SSO) module into your Mendix Studio Pro application. 
 
-1. Add the Mobile SSO module to your app.
+1. Add the [Mobile SSO](https://marketplace.mendix.com/link/component/223516) module to your app.
 2. Add the necessary dependencies listed above from the Marketplace, if they are not already included in your app.
 3. Follow the [OIDC SSO](/appstore/modules/oidc/) documentation to configure the app security settings for the [OIDC SSO](https://marketplace.mendix.com/link/component/120371) module. 
 
@@ -111,7 +112,7 @@ The following subsections show how to set up IdP for mobile or web and mobile pl
 
 {{< figure src="/attachments/appstore/modules/mobile-sso/Configure client information.png" >}}
 
-When testing locally, add the `makeitnative://oauth/callback` URL in the **Custom callback URL** tab. This configuration also supports signing in with acr_values. For more information, see the [Configurations](/refguide/configuration/).
+When testing locally, add the `makeitnative://oauth/callback` URL in the **Custom callback URL** tab. This configuration also supports signing in with acr_values.
 
 #### 4.4.2 Configuring single IdP for Web and Mobile
 

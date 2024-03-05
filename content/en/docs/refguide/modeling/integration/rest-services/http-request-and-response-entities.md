@@ -36,7 +36,7 @@ The `HttpResponse` entity has the following attributes:
 
 For more information on HTTP status codes, see the [W3C Specification of Status Code Definitions](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html).
 
-Setting `ReasonPhrase` has no effect; the runtime always uses the default reason phrase for the status code.
+Setting `ReasonPhrase` has no effect; for HTTP/1.x requests the runtime always returns the default reason phrase for the status code, whereas HTTP/2 does not support reason phrases at all.
 
 You can retrieve or create response headers via the `HttpHeaders` association.
 

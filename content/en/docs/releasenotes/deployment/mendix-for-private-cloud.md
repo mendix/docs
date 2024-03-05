@@ -20,19 +20,19 @@ For information on the current status of deployment to Mendix for Private Cloud 
 * The build process was refactored by decoupling the base OS image (containing the OS, Java and their dependencies) and Mendix Runtime layers.
   * This simplifies replacing the base OS and Java versions, and keeping them up to date.
   * The Operator will detect which version of Java is required by the app and use the same major Java version that was used to build the app.
-* It's now possible to switch the image builder build app images based on `ubi9` instead of `ubi8`.
+* It is now possible to switch the image builder build app images based on `ubi9` instead of `ubi8`.
 * Instead of checking if the app is responding to HTTP requests (which only happens after an app has completed its startup process), the liveness probe now calls a dedicated healthcheck endpoint.
   * This prevents Kubernetes from restarting an app if it's temporarily overwhelmed with requests or background tasks - instead, an app fails a liveness check only if it's not replying to healthcheck calls, or returning a failed healthcheck status.
-  * It's no longer necessary to adjust startup or liveness probes, as the app will be detected as healthy a few seconds after it's started.
-* For Standalone clusters, it's no longer necessary to specify all `microflowConstants` in the MendixApp CR.
+  * It is no longer necessary to adjust startup or liveness probes, as the app will be detected as healthy a few seconds after it is started.
+* For Standalone clusters, it is no longer necessary to specify all `microflowConstants` in the MendixApp CR.
   * The Operator will use default constant values for any constants that are not specified.
-  * With this change, _Missing microflow constant definitions_ errors will no longer cause deployments to fail.
+  * With this change, *Missing microflow constant definitions* errors will no longer cause deployments to fail.
   * In addition, the `mendixRuntimeVersion` parameter no longer needs to be updated.
-* The MendixApp CR status will show more details about each of the app's replicas. In the future, the _More Info_ button next to the Runtime status will show details such as number of restarts or the replica's pod phase.
-* It's now possible to specify the Debugger password in the Kubernetes CSI Secrets Store, enabling secure storage of configurations in credential storage systems like Hashcorp Vault or AWS Secrets Manager.
-* After closing the `mxpc-cli` installation and configuration tool, it's possible to resume a previous session and values of all filled in fields.
+* The MendixApp CR status will show more details about each of the app's replicas. In the future, the **More Info** button next to the Runtime status will show details such as number of restarts or the replica's pod phase.
+* It is now possible to specify the Debugger password in the Kubernetes CSI Secrets Store, enabling secure storage of configurations in credential storage systems like Hashcorp Vault or AWS Secrets Manager.
+* After closing the `mxpc-cli` installation and configuration tool, it is possible to resume a previous session and values of all filled in fields.
 * The log collection feature of the `mxpc-cli` installation and configuration tool has been expanded to include the saving of operator configuration, storage plans, storage instances, Mendix App CRs, build, pods, endpoint and services.
-* When upgrading to this version, configuration of managed namespaces (managed by Global Operator) will be upgraded to ensure that all managed namespaces use a configuration that's compatible with the Global Operator..
+* When upgrading to this version, configuration of managed namespaces (managed by Global Operator) will be upgraded to ensure that all managed namespaces use a configuration that is compatible with the Global Operator.
 * When removing an ingress or service annotation in the Private Cloud Portal or MendixApp CR, the Operator will remove this annotation from the Kubernetes ingress, route or service resource.
 * We have fixed ARN validation in the `mxpc-cli` installation and configuration tool, and no longer mark ARNs from custom [AWS partition](https://docs.aws.amazon.com/whitepapers/latest/aws-fault-isolation-boundaries/partitions.html) as invalid. This should improve support for AWS China and GovCloud.
 * We fixed an issue where a StorageInstance from a deleted an environment would still show in the StoragePlan status.

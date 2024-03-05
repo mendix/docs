@@ -41,19 +41,31 @@ Alternatives to using OIDC SSO for managing single sign-on are:
 
 #### 1.2.1 Features
 
+The OIDC SSO module supports the following features:
+
+1. IdP Integration Capabilities:
+
 * Supports SSO login with one or multiple OIDC/OAuth-compatible IdPs, such as AWS Cognito, Google, Salesforce, Apple, Okta, Ping, Microsoft's Entra ID (formerly known as Azure AD), and SAP Cloud Identity Services.
-* Easy configuration, by leveraging the so-called well-known discovery endpoint at your IdP. The IdP's well-known endpoint also indicates which user claims the IdP may provide during single sign-on. The module reads this information, so the developer does not need to configure it. The available claims can be used in custom provisioning microflow, as decsribed in the section [Custom User Provisioning Using a Microflow](#custom-provisioning-mf)
-    * For example, PKCE will be used automatically if it is detected.
-* Configuration can be controlled through constants set during your deployment (version 2.3.0 and above). 
 * Comes with helper microflows (DELETE, GET, PATCH, POST, and PUT) which call an API with a valid token (and automate the token refresh process).
 * Supports multiple OIDC IdPs by allowing configuration of user provisioning and access token parsing microflows per IdP.
 * Supports Authentication Context Class Reference (ACR) to allow your app to suggest the desired method or level of authentication for user login to the Identity Provider (IdP) (version 2.3.0 and above).
 * Supports responsive web applications, also known as browser based applications.
 * Works with the Mendix DeepLink module.
 * Supports user provisioning to custom user entities; you can map claims onto attributes of an entity which is a specialization of the `System.User` entity.
+
+1. Configuration Experince Features:
+
+* Easy configuration, by leveraging the so-called well-known discovery endpoint at your IdP. The IdP's well-known endpoint also indicates which user claims the IdP may provide during single sign-on. The module reads this information, so the developer does not need to configure it. The available claims can be used in custom provisioning microflow, as decsribed in the section [Custom User Provisioning Using a Microflow](#custom-provisioning-mf)
+    * For example, PKCE will be used automatically if it is detected.
+* Configuration can be controlled through constants set during your deployment (version 2.3.0 and above). 
 * Comes with default user provisioning microflow that works with Entra ID; there you may need to build a custom user provisioning flow.
-* Built primarily in standard Mendix components (minimal Java) to allow for easy customization and ongoing development.
 * User provisioning microflows can be used from any other modules in your app. They do not need to be exclusively a part of the oidc module.
+
+1. Developer Experience Features:
+
+* Built primarily in standard Mendix components (minimal Java) to allow for easy customization and ongoing development.
+
+#### 1.2.2 OIDC Protocol Adherence
 
 For readers with more knowledge of the OAuth and OIDC protocol.
 
@@ -72,7 +84,7 @@ For readers with more knowledge of the OAuth and OIDC protocol.
 * Can be configured to use either client_secret_post or client_secret_basic as the client authentication method. Both make use of the client-id and client-secret as configured at the IdP.
 * Supports ACR in authorization requests. The ACR in OIDC protocol is used to indicate the desired level of assurance or strength of authentication during the authentication process. It allows the relying party (your application) to request a specific level of authentication assurance from the identity provider (IdP) (version 2.3.0 and above).
 
-#### 1.2.2 Limitations
+#### 1.2.3 Limitations
 
 The OIDC SSO module does not yet support the following:
 
@@ -159,6 +171,10 @@ If your app is already developed using Mendix 9 or above, but uses the community
 ## 4 OIDC App Configuration{#app-configuration}
 
 This section shows you how to configure your app to use OIDC for SSO.
+
+{{% alert color="warning" %}}
+If you are using OIDC module version 3.0.0 and above, you need to configure your app to run the startup microflow (`OIDC.Startup`) in the OIDC module as part of the after-startup microflow.
+{{% /alert %}}
 
 ### 4.1 Configuring Roles
 

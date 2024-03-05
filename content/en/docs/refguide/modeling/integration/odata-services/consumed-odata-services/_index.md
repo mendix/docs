@@ -46,6 +46,12 @@ The definition of this entity is read-only and is controlled in the service that
 Support for importing non-persistable entities from a consumed OData service was introduced in Studio Pro [10.8.0](/releasenotes/studio-pro/10.8/).
 {{% /alert %}}
 
+### 2.1.2 External Enumerations
+
+When you consume an external entity that has an attribute of an enumeration type, the corresponding enumeration will be added to your project if it was not previously existing. The enumeration is created according to the definition in the OData service contract, meanning that all allowed values will be automatically added to your enumeration.
+
+When the consumed OData service is deleted from your project, Studio Pro allows you to keep using an enumeration that was created from the deleted service by detaching it using the **Detach** button on the **External enumeration** dialog.
+
 ### 2.2 External Actions {#external-actions}
 
 External actions allow you to execute actions published by the OData service. An action can take parameters and may return a value. This is defined in the OData service contract.

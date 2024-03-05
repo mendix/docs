@@ -11,102 +11,43 @@ aliases:
 
 ## 1 Introduction
 
-This how-to explains how to consume a (third-party) web service with which you can integrate your Mendix application and re-use functionality and data from other applications. Web services are the preferred way of integrating a Mendix application with external systems. They can be used to retrieve data, send updates, and perform operations. In Mendix, calling a web service is done in a microflow using the call web service action.
+This how-to explains how to consume a (third-party) web service with which you can integrate your Mendix application and reuse functionality and data from other applications. Web services are the preferred way of integrating a Mendix application with external systems. They can be used to retrieve data, send updates, and perform operations. In Studio Pro, calling a web service is done in a microflow using the call web service action.
 
 This how-to teaches you how to do the following:
 
-* Import a web service using the **Import Web Service** wizard
 * Directly import a web service document into your app
 * Configure a web service call
 
-{{% alert color="warning" %}}⚠ The **Import Web Service** wizard is deprecated and will be removed in Studio Pro 10.6.{{% /alert %}}
+## 2 Importing a Web Service
 
-## 2 Importing a Web Service Using the Wizard
-
-This section describes the powerful wizard that enables integrating—in just a few clicks—the creation of an imported web service, the related data entities, the XML-mapping, and a microflow to trigger the web service.
-
-### 2.1 The Configuration
-
-To import a web service using the wizard, follow these steps:
-
-1. Open your domain model and click **Import web service/XML file** in the toolbar.
-
-    {{< figure src="/attachments/refguide/modeling/integration/consume-a-complex-web-service/import-web-service-wizard-button.png" >}}
-
-    This opens the **Import Web Service or XML Schema** wizard that will guide you through importing the result of a web service (or an XML file). As a result, it will generate the following:
-    * Domain model entities to store the results
-    * An XML-to-domain mapping that maps the incoming XML to Mendix objects
-    * An imported web service (or XML schema) document
-    * A microflow that calls the web service (or imports an XML file) (optional)
-2. On the **Import Web Service or XML Scheme** dialog box, select **Web service operation** and click **Next**:
-
-    {{< figure src="/attachments/refguide/modeling/integration/consume-a-complex-web-service/wizard-import-schema.png" alt="wizard banner" >}}
-
-3. On the **Import Web Service** dialog box, select **Web service operation** and click **Next**.
-4. In the **New Web Service Operation** dialog box, for **WSDL source** , specify the WSDL to be used for this imported web service. For the **WSDL source** you can either provide the **URL** (for example, http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?WSDL) or load a **File** from your computer.
-
-    {{< figure src="/attachments/refguide/modeling/integration/consume-a-complex-web-service/wizard-new-operation.png" >}}
-
-5. Click **Next** to fetch the services and operations in the WSDL.
-6. In the **Select Ports** pop-up window select a web service port and click **OK**. Studio Pro now imports the operations.
-
-    {{< figure src="/attachments/refguide/modeling/integration/consume-a-complex-web-service/port.png" >}}
-
-7. On the **New Web Service Operation** dialog box, you can review the services and operations that are available to the imported web service. If you click on any of the operations, information about the operation will be displayed in the right pane. Select a web service operation and click **Next**.
-
-    {{< figure src="/attachments/refguide/modeling/integration/consume-a-complex-web-service/wizard-web-service-list.png" alt="wizard web service" >}}
-
-8. On the **Select Elements** dialog box, you can optionally select individual elements to map as return values of the web service. Click **Next**.
-
-    {{< figure src="/attachments/refguide/modeling/integration/consume-a-complex-web-service/wizard-select-elements.png" alt="wizard select elements" >}}
-
-9. In the final step of this wizard you can select icons that will be attached to the generated entities and create a microflow in which the imported web service is called: 
-
-    {{< figure src="/attachments/refguide/modeling/integration/consume-a-complex-web-service/wizard-select-icon.png" >}}
-
-10. Click **Finish** to create the web service.
-
-### 2.2 The Outcome
-
-When finished the wizard will add the following to your model based on the options selected:
-
-* The imported service
-* An XML to domain mapping
-* A microflow in which the web service operation is called
-* Domain model entities (by default, Studio Pro creates non-persistable entities)
-
-{{< figure src="/attachments/refguide/modeling/integration/consume-a-complex-web-service/web-service-entity.png" >}}
-
-## 3 Importing a Web Service Directly
-
-An alternative to using the wizard described above is to import a web service document directly into your app. For further information, see [Consumed Web Services](/refguide/consumed-web-services/) in the *Studio Pro Guide*.
+You can import a web service document into your app. For more information, see [Consumed Web Services](/refguide/consumed-web-services/).
 
 To import a web service directly, follow these steps:
 
 1. Right-click a module and select **Add Other** > **Consumed web service**.
 2. Specify a name for the new consumed web service and click **OK**.
-3. In the **Consumed Web Service** box, specify the **WSDL Source** to be used for this consumed web service. Click **Edit**, and in the **WSDL Source** dialog box, specify a **URL** or load a **File** from your computer.
+3. In the **Consumed Web Service** box, specify the **WSDL Source** to be use this consumed web service. Click **Edit**, and in the **WSDL Source** dialog box, specify a **URL** or load a **File** from your computer.
 
     {{< figure src="/attachments/refguide/modeling/integration/consume-a-complex-web-service/enter-wsdl-url.png" >}}
 
 4. Click **Import** to fetch the services and operations in the WSDL. If prompted, in the **WSDL Source** dialog box, select the ports you want to use and click **OK**.
 
-5. In the **Consumed Web Services** screen, review the **Services** and **Operations** available to the imported web service. If you click on any of the **Operations**, information about the operation will be displayed in the right pane. You can select individual web service operations from the list otherwise the whole service and operation will be imported:
+5. In the **Consumed web service** screen, review the **Services** and **Operations** available to the imported web service. If you click on any of the operations, information about the operation will be displayed in the right pane. You can select individual web service operations from the list, otherwise the whole service and operation will be imported:
 
     {{< figure src="/attachments/refguide/modeling/integration/consume-a-complex-web-service/consumed-web-service-doc.png" >}}  
 
-## 4 Configuring the Web Service Call
+## 3 Configuring the Web Service Call
 
 To configure the web service call, follow these steps:
 
-1. If you did not use the web service wizard or did not use the option in the wizard to automatically create a microflow, you have to create a microflow that will call the imported web service:
+1. If you did not use the web service wizard or did not use the option in the wizard to automatically create a microflow, create a microflow that will call the imported web service:
 
     {{< figure src="/attachments/refguide/modeling/integration/consume-a-complex-web-service/import-microflow.png" >}}
 
     {{% alert color="info" %}}Make sure the microflow either creates the variables required as arguments for the web service call or has them passed to it.{{% /alert %}}
 
-2. If you are creating your own microflow, add the call web service activity to the microflow. For details on how to add activities to a microflow, see [Activities](/refguide/activities/) in the *Studio Pro Guide*.
-3. Double-click the activity to open the **Call Web Service** properties editor and in the **Operation** section, click **Select** for **Operation**.
+2. If you are creating your own microflow, add the [Call web service](/refguide/call-web-service-action/) activity to the microflow. For details on how to add activities to a microflow, see [Activities](/refguide/activities/).
+3. Double-click the activity to open the **Call Web Service** properties editor and in the **Operation** field, click **Select**.
 4. In the **Select Web Service Operation** dialog box, you can select the operation for this web service call:
 
     {{< figure src="/attachments/refguide/modeling/integration/consume-a-complex-web-service/select-web-service-op.png" alt="select web service op" >}}
@@ -135,9 +76,10 @@ To configure the web service call, follow these steps:
         {{< figure src="/attachments/refguide/modeling/integration/consume-a-complex-web-service/18581789.png" >}}
 
     * If you want to ignore the return, select **Ignore**
-8. Your imported web service is now ready to be used in your application.
 
-## 5 Read More
+Your imported web service is now ready to be used in your application.
+
+## 4 Read More
 
 * [Consume a Simple Web Service](/howto/integration/consume-a-simple-web-service/)
 * [Export XML Documents](/howto/integration/export-xml-documents/)

@@ -16,11 +16,11 @@ aliases:
 
 The **Metrics** page contains detailed graphs about your app and its environment. You can use this page to monitor the performance and health of your app; for example, you can track the usage growth of your app or debug performance problems.
 
-These statistics are displayed as trends over time. You can adjust the view to display data for the past day, week, month, or quarter.
+These statistics are displayed as trends over time. The data covers the past three months, and you can adjust the view to display data for the past day, week, month, or quarter.
+
+{{% alert color="info" %}}This page describes metrics for licensed apps deployed to Mendix Cloud. Metrics are not available for Free Apps deployed to Mendix Cloud.<br><br>If your app is deployed to SAP Business Technology Platform (SAP BTP) instead, the **Metrics** page displays links to the SAP BTP cockpit.{{% /alert %}}
 
 ## 2 Accessing the Metrics Graphs
-
-Metrics are included in all paid editions of Mendix Cloud.
 
 To access the graphs on the **Metrics** page, you must have **Access to Monitoring** permissions enabled. For more information, see [Node Permissions](/developerportal/deploy/node-permissions/).
 
@@ -106,7 +106,7 @@ These are the user types:
 
 The **JVM Object Heap** graph shows the internal distribution of allocated memory inside the application process for Java objects. Java objects are created in Java actions, but they also include all objects that are used by microflows running in your app at runtime.
 
-{{< figure src="/attachments/developerportal/operate/metrics/jvm-heap.png" >}}
+{{< figure src="/attachments/developerportal/operate/metrics/jvm-heap.png" class="image-border" >}}
 
 Note that the JVM does not immediately clean up objects that are no longer in use. This graph shows unused memory as still in use until the garbage collector—which analyzes the memory to free up space—is run. So, before a garbage collection, you cannot see how much of the JVM memory will be available after the garbage collection cycle. This is because the garbage collection process only finds that out when it actually runs.
 
@@ -115,11 +115,15 @@ These are the types of objects:
 | Object Type            | Explanation                                                         |
 |------------------------|---------------------------------------------------------------------|
 | **tenured generation** |  As objects "survive" repeated garbage collections in the eden space, they are migrated to the tenured generation. You can look at this metric as a number of long-living objects in JVM. |
-| **native memory**      | The native memory is the memory available to the operating system.  |
-| **eden space**         | The eden space is the pool from which memory is initially allocated for most objects. |
+| **survivor space**     | The Survivor space is the pool containing objects that have survived the garbage collection of the Eden space.  |
+| **eden space**         | The Eden space is the pool from which memory is initially allocated for most objects. |
 | **unused**             | This is the unused JVM heap memory.                                             |
 
-{{% alert color="warning" %}}It is difficult to base conclusions on JVM heap memory graphs. Imagine, for example, a scenario where the tenured generation is shown as 65% of the complete heap size.<br><br>If a garbage collection is triggered when the percentage reaches two-thirds of the total heap size, then the tenured generation could drop to 0%. However, it could stay at 65% if all data in this memory part is still referenced by running actions in the application.{{% /alert %}}
+{{% alert color="warning" %}}
+It is difficult to base conclusions on JVM heap memory graphs. Imagine, for example, a scenario where the tenured generation is shown as 65% of the complete heap size.
+
+If a garbage collection is triggered when the percentage reaches two-thirds of the total heap size, then the tenured generation could drop to 0%. However, it could stay at 65% if all data in this memory part is still referenced by running actions in the application.
+{{% /alert %}}
 
 ### 4.4 JVM Process Memory Usage{#Trends-appmxruntimejvmprocessmemory}
 
@@ -148,7 +152,7 @@ These are the types:
 
 ### 4.5 Memory Usage{#Trends-appmemory}
 
-The **Memory Usage** graph shows the distribution of operating system memory that is available for this server. It is measured in gigabytes.
+The **Memory Usage** graph shows the distribution of operating system memory that is available for this server. It is measured in gibibytes.
 
 {{< figure src="/attachments/developerportal/operate/metrics/node-os-memory.png" >}}
 
@@ -188,7 +192,7 @@ In addition to the threadpool that is used for external HTTP requests (described
 
 ### 4.8 CPU Usage{#Trends-appcpu}
 
-The **CPU usage** graph shows the app CPU utilization, as a percentage.
+The **CPU usage** graph shows the app's CPU utilization, as a percentage. The graph's y-axis scales dynamically based on the data, ranging from 0 to the maximum data point included in the request.
 
 {{< figure src="/attachments/developerportal/operate/metrics/app-cpu.png" >}}
 
@@ -196,7 +200,7 @@ The **CPU usage** graph shows the app CPU utilization, as a percentage.
 CPU usage of the database is shown in [Database Node CPU Usage](#Trends-dbcpu), below.
 {{% /alert %}}
 
-This graph is normalized so that 100% is the full capacity of a single CPU. If you have two CPUs, you would expect your graph to peak at 200%. 
+This graph is normalized so that 100% is the full capacity of a single CPU, 200% is the full capacity of two CPUs, and so on.
 
 Your app can always access at least the amount of CPU specified for your container. However, because of the way resources are allocated to Mendix apps, your app may be able to burst to use more than the CPU specified for your container. For example, an app running in a container with two CPUs might show CPU usage of 250% where you would expect the maximum to be 200%.
 
@@ -204,7 +208,7 @@ Your app can always access at least the amount of CPU specified for your contain
 
 ### 4.9 Disk Usage {#Trends-appdf}
 
-The **Disk usage** graph shows the relative amounts of application node data stored on disk, displayed in percentage.
+The **Disk usage** graph shows the relative amounts of application node data stored on disk, displayed as a percentage. The graph's y-axis scales dynamically based on the data. If the app's disk usage is below 100%, then the y-axis ranges from 0 to the maximum data point included in the request.
 
 {{< figure src="/attachments/developerportal/operate/metrics/app-disk-usage-pct.png" >}}
 
@@ -307,7 +311,7 @@ The standard configuration sets a maximum of 50 connections per instance. You ca
 
 ### 5.5 Database Memory{#Trends-dbmemory}
 
-The **Database memory** graph shows the distribution of operating system memory, in gigabytes, that is available for this server.
+The **Database memory** graph shows the distribution of operating system memory, in gibibytes, that is available for this server.
 
 {{% alert color="info" %}}
 You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package/) because you are using a private schema on a shared database server.
@@ -354,9 +358,9 @@ If you see large values here that do not immediately drop back again, it may ind
 
 ### 5.8 Database Disk Usage{#Trends-dbdfabs}
 
-The **Database disk usage** graph displays used storage (the absolute amount of data that is stored on disk) as well as free space (the remaining space on the database node). When hovering over the graph, you will also see the total size of your database.
+The **Database disk usage** graph displays used storage (the absolute amount of data that is stored on disk) as well as free space (the remaining space on the database node). It is measured in gibibytes.
 
-The value for used storage also includes space that is used to store transaction logs. These are required to maintain the integrity of the database. Although limits are set to keep the transaction logs to a minimum, storage used by the transaction logs can sometimes exceed 2 GiB. 
+The value for used storage also includes space that is used to store transaction logs. These are required to maintain the integrity of the database. Although limits are set to keep the transaction logs to a minimum, storage used by the transaction logs can sometimes exceed 2 gibibytes.
 
 {{% alert color="info" %}}
 You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package/) because you are using a private schema on a shared database server.

@@ -47,7 +47,7 @@ When a new version of a consumed service becomes available in the Catalog, this 
 You can make local changes to the properties of external entities that only affect how the data is used and presented in the consuming app. All other properties are defined in the originating app and cannot be changed. When multiple external entities from the same OData service are used in a module or app, associations between the entities (made in the originating app) will automatically be made in the local module.
 
 {{% alert color="info" %}}
-If you delete an external entity from the domain model, the service documents remain in the App Explorer list and the service aryA listed in the Integration pane. You can delete the two service documents if you are no longer going to use any entities from the consumed service.
+If you delete an external entity from the domain model, the service documents remain in the App Explorer list and the service remains listed in the Integration pane. You can delete the two service documents if you are no longer going to use any entities from the consumed service.
 {{% /alert %}}
 
 For more information on using published OData services and entities through the Catalog, see [Consume Registered Assets](/catalog/consume/consume-registered-assets/).
@@ -67,9 +67,11 @@ This group displays the general properties of the external entity. These values 
 {{< figure src="/attachments/refguide/modeling/domain-model/external-entities/external-entity-properties.png" alt="External Entity Properties" >}}
 
 * **Name** – the name of the entity in the local app
+* **From service** – shows the service from which this entity originates
 * **Original name** – shows the name of the entity as defined in the originating app
 * **Capabilities** - indicates whether the service supports creating, reading, updating, and/or deleting objects
 * **Create and change locally** - when switched off, the app can only create and update objects when the server supports it; when switched on, the app can create and update objects, but will not be able to [send](/refguide/send-external-object/) them to the server
+* **Persistable** – indicates if this a persistable external entity, which means the originating app allows retrieving (reading) objects
 * **Summary** – shows the description for the entity in the originating app (shown only when there is a description)
 
 ### 3.2 Attributes {#attributes}
@@ -92,11 +94,13 @@ The **Edit Attribute** dialog can be used to specify a local name and add a loca
 
 * **General**
     * **Name** – a local name for the attribute
-    * **Original Name** – a read-only value that displays the original name of the attribute in the originating app
+    * **Original Name** – a read-only value that displays the original name of the attribute in the originating app ¹
     * **Summary** – a read-only summary that displays the description for the attribute in the originating app; local descriptions are entered in the [Documentation tab](#documentation)
     * **Type** – read-only values for the **Type**, **Length**, and **Max length** of the attribute as defined in the originating app
     * **Default value** - the default value for this attribute when the app creates an object (visible only when the entity is creatable)
 * **Documentation** – a description for the attribute as defined in the originating app
+
+¹ For attributes that represent a property of a complex attribute, a forward slash (`/`) separates the name of the attribute of the entity and the name of the property of the complex type.
 
 ### 3.3 Associations {#associations}
 
@@ -179,7 +183,11 @@ Learn more about adding authentication information to a consumed OData service:
 
 External entities are the endpoints that are defined in the published OData service from the originating app. The consumed OData service document displays the values from the service metadata when the external entity is used through the Integration pane. The datasets associated with the entities are maintained in the originating apps.
 
-External entities cannot be committed. Use the [Send External Object activity](/refguide/send-external-object/) to persist changes to external entities. This means the following:
+{{% alert color="info" %}}
+Please note that external entities are not supported in native offline apps.
+{{% /alert %}}
+
+Furthermore, external entities cannot be committed. Use the [Send External Object activity](/refguide/send-external-object/) to persist changes to external entities. This means the following:
 
 * The **Commit** activity does not work. Use **Send External Object** instead.
 * On pages, the [Save button](/refguide/button-widgets/) and the [Save Changes event](/refguide/on-click-event/#save-changes) do not work when the page contains widgets that update external entities. Call a microflow that persists the changes using **Send External Object** instead.

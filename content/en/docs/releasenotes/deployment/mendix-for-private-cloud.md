@@ -11,7 +11,67 @@ These release notes cover changes to deployment to [Mendix for Private Cloud](/d
 
 For information on the current status of deployment to Mendix for Private Cloud and any planned releases see [Mendix Status](https://status.mendix.com/).
 
+## 2024
+
+### February 22, 2024
+
+#### Portal Improvements
+
+* You can now specify a custom value for the **jettyOptions** within the **Runtime** section.
+* Deployment packages that have failed now have an expiry date set.
+* We have addressed an issue where changes in the data type and value of the model constants were not reflected in the application. (Ticket [205850](https://mendixsupport.zendesk.com/agent/tickets/205850).)
+* We have addressed an issue where **Calendar dates** in **datetime** constants were not visible correctly in dark mode.
+* We have addressed an issue where only 10 namespaces were displayed in the **Cluster Overview** page (Ticket [208220](https://mendixsupport.zendesk.com/agent/tickets/208220).)
+* The **Cluster Manager** button has been removed from the top menu bar of the Private Cloud portal. You can now navigate to the **Cluster Overview** page using the **Mendix for Private Cloud** button.
+* You can now export the app constants to an Excel file.
+
+#### Deploy API Improvements
+
+* You can now configure the **product type** for the Runtime license on the **Namespace** and **Environment** level by using the Deploy API.
+
+### Februry 1, 2024
+
+#### Portal Improvements
+
+* We have addressed an issue where changes in the data type and value of the model constants were not reflected in the application. (Ticket [205850](https://mendixsupport.zendesk.com/agent/tickets/205850).)
+
+### January 14, 2024
+
+#### New Global Operator Installation Method
+
+* We have introduced a streamlined approach to installing the Operator within a namespace. With the [Global Operator installation](https://docs.mendix.com/developerportal/deploy/global-operator/), users only need to install a single Global Operator and Agent to efficiently manage applications across various namespaces. For more information, see the Global Operator installation documentation.
+
+{{% alert color="info" %}}
+This feature is currently in beta. For more information, see [Beta Releases](/releasenotes/beta-features/).
+
+Some features, such as Private Cloud License Manager, are not fully supported yet. In addition, the Deploy API does not support the Global Operator yet.
+{{% /alert %}}
+
+#### Portal Improvements
+
+* We have added a new option to configure the product type for the Runtime license on the **Namespace details** and **Environment details** page.
+* We have addressed an issue on the PCLM statistics page where users encountered difficulty navigating to the license list if it contained more than 100 licenses.
+* We have added a warning on the **Namespace Customization** page to let you know that the Ingress annotation will still be kept in the Ingress object even if it is removed from the Portal.
+* We have implemented a feature to automatically remove deployment packages that have been inactive for more than two weeks.
+* Applying the changes or refreshing the **Environment Details** page will now remember the tab on which the user was present and it will not redirect the user the **General** tab anymore.
+* You can now invite multiple individuals as Cluster managers and namespace members by using a semicolon (;) as a separator.
+* We addressed an issue in the Deploy API where the character limit for the **Operate** link was restricted to 200. This limitation has been removed, and the **Operate** link now supports unlimited characters, aligning with the Portal behavior (Ticket-202867).
+
 ## 2023
+
+### December 8th, 2023
+
+#### Mendix Operator v2.14.0 {#2.14.0}
+
+* We have added the following validation checks to the `mxpc-cli` installation and configuration tool:
+    * When configuring a namespace, check to see that the database and blob file storage plans do not use the same name.
+    * The registry name is validated to match the [OCI registry spec](https://github.com/opencontainers/distribution-spec/blob/v1.0.1/spec.md#pulling-manifests).
+* We have improved the authentication security of the Mendix Gateway Agent connection by switching to digest validation of the cluster ID and secret.
+* We have updated our AWS implementation to detect if a custom [AWS partition](https://docs.aws.amazon.com/whitepapers/latest/aws-fault-isolation-boundaries/partitions.html) should be used, and use that partition's ARN format. This should improve support for AWS China and GovCloud.
+* We have updated third-party component versions.
+* We have improved the reliability of the code that processes statuses for resources such as Network, Build and Runtime. This reduces the number of retries for *the object has been modified, please apply your changes to the latest version and try again* errors, and ensures that status icons are updated as soon as possible.
+* For standalone clusters, it is now possible to specify the Kubernetes [topologySpreadConstraints](https://kubernetes.io/docs/concepts/scheduling-eviction/topology-spread-constraints/) field.
+* Upgrading to Mendix Operator v2.14.0 from a previous version will restart environments managed by that version of the Operator.
 
 ### November 23, 2023
 
@@ -429,7 +489,7 @@ Your build may fail if you try to deploy the same deployment package more than o
 * We fixed a build error which happened when an MDA included a data snapshot.
 * We resolved an issue where the sidecar container didn’t process the shutdown signal, even when the app container was stopped (this meant that stopping an app took 30 seconds)
 * We have disabled the `enableServiceLinks` Kubernetes feature — this prevents app pods from receiving a list of all services running in a namespace through environment variables.
-* When connecting to the Development Portal, the Mendix Gateway Agent will now trust CAs specified through [Custom TLS](/developerportal/deploy/private-cloud-cluster/#custom-tls)
+* When connecting to the Development Portal, the Mendix Gateway Agent will now trust CAs specified through [Custom TLS](/developerportal/deploy/standard-operator/#custom-tls)
 * We fixed an issue where the Operator was restarting the build pod when using AWS identity webhooks.
 
 #### Portal Improvements
@@ -683,7 +743,7 @@ To upgrade an existing installation of Mendix for Private Cloud to Mendix Operat
     * customize the Ingress path and path type (required to support Ingress controllers such as AWS Application Load Balancer).
     * customize the Ingress class.
     * customize the Service type.
-    * customize the Service port(s).
+    * customize the Service port (or ports).
 * We have added options to override the following Ingress and Service options per-environment (only supported in Standalone mode at the moment):
     * Ingress annotations
     * Service annotations

@@ -46,12 +46,12 @@ To extract the validation steps into a sub-microflow, follow these steps:
 
 3. In the **Add microflow** dialog box, enter a name for the sub-microflow.
 
-    {{% alert color="info" %}}As a best practice, use a consistent naming scheme that clearly identifies the microflow, for example, *Sub_{MicroflowDescription}*. For more information, see [Microflow Naming Conventions](/refguide/dev-best-practices/#microflow-naming-conventions).{{% /alert %}}
+    {{% alert color="info" %}}As a best practice, use a consistent naming scheme that clearly identifies the sub-microflow, for example, *SUB_{MicroflowDescription}*. For more naming best practices, see [Microflow Naming Conventions](/refguide/dev-best-practices/#microflow-naming-conventions).{{% /alert %}}
 
 4. Click **OK**.
 5. Open the sub-microflow by right-clicking the sub-microflow call and selecting **Go to microflow**.
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/extracting-and-using-sub-microflows/submicroflow-in-parent-microflow.png" alt="Multiple actions replaced with a microflow action" >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/extracting-and-using-sub-microflows/submicroflow-in-parent-microflow.png" alt="Multiple actions replaced with a microflow action" class="image-border" >}}
 
 6. Make any other required configuration changes depending on the contents of the sub-microflow. 
 

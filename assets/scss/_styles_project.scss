@@ -3,26 +3,46 @@
 // _front-page.scss is only custom styling page not from Docsy/Bootstrap
 @import "front-page";
 
-// _alert.scss - Style alert boxes
+@font-face { // MvM - Added for MxDock by request in #docs 2023-12-08
+    font-family: "Patron";
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: local("Patron"), url("/fonts/patron/PatronWEB-Medium.woff2") format("woff2"),
+      url("/fonts/patron/PatronWEB-Medium.woff") format("woff");
+    unicode-range: U+000-5FF; /* Latin glyphs */
+}
+
+// _alert.scss - Style alert boxes (alert layout defined in alert.html)
 
 .alert {
     font-weight: $font-weight-normal; // NK - adjusted for use with multiple Noto Sans weights
-    //background: $white; // NK - turns off explicit color set, now it's inherited from bootstrap _alerts.scss
     color: inherit;
-    border-radius: 0;
-
+    border-radius: 4px; // Round corners
+    padding: 14px;
+    display: flex;
+    align-items: flex-start; // Align items at the top of the flexbox
     @each $color, $value in $theme-colors {
         &-#{$color} {
-            & .alert-heading {
-                color: $value;
-            }
-
-            border-style: solid;
-            border-color: $value;
-            border-width: 0 0 0 4px;
-            background-color: fade-out($value, 0.85%); // NK - adds faded gradient to alert backgrounds
+            background-color: map-get($custom-theme-colors, '#{$color}-1'); //Add background color from _variables_project.scss
+            border: 1px solid map-get($custom-theme-colors, '#{$color}-2'); //Add border color from _variables_project.scss
         }
     }
+}
+
+.alert-content { // Format all alert content
+    display: flex; // Nested flexbox container
+}
+
+.alert-svg { // Format alert icons
+    height:1.3rem;
+    width:1.3rem;
+    flex-shrink: 0; // Prevent icon from shrinking when text wraps
+    margin-right:12px;
+}
+
+.alert.has-line-breaks { // Reduce bottom padding of .alert when alert text has line breaks
+    padding-bottom: 0px;
 }
 
 // _code.scss -  Code formatting
@@ -256,6 +276,39 @@ div.date-format{
     }
 }
 
+// DB - custom edit, inline SVG icons for shortcode
+.inline-svg {
+    display: inline-block;
+    height:0.9rem;
+    width:0.9rem;
+    vertical-align:0.05rem;
+  }
+
+// Images
+// DB – custom edit, class for adding borders around images
+.image-border {
+    border-color: #d7d7d7;
+    border-width: 1px;
+    border-style: solid;
+}
+
+// _pageinfo.scss - Custom pageinfo styling, used on the banners (similar to the alert styling)
+
+.pageinfo {
+    font-weight: $font-weight-medium;
+    color: inherit;
+    border-radius: 4px;
+    margin: 2rem;
+    padding: 14px;
+    padding-bottom: 0px;
+    @each $color, $value in $theme-colors {
+        &-#{$color} {
+            background-color: map-get($custom-theme-colors, '#{$color}-1'); //Add background color from _variables_project.scss
+            border: 1px solid map-get($custom-theme-colors, '#{$color}-6'); //Add border color from _variables_project.scss
+        }
+    }
+}
+
 // Foldable sidebar menu
 nav.foldable-nav {
 
@@ -469,7 +522,7 @@ nav.foldable-nav {
   
     th,
     td {
-      padding: $table-cell-padding;
+      padding: 0.75rem 0.75rem; // YL - set bigger padding values
       vertical-align: top;
       border: $table-border-width solid $table-border-color; // NK - added borders to tables
       font-size: 0.8rem; // NK - smaller font size
@@ -542,3 +595,129 @@ nav.foldable-nav {
       border-bottom: 1px solid rgba(0, 0, 0, 0.125);
     }
   }
+
+  // Footer styling
+ .mx-footer {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         gap: 0.5rem;
+         flex-wrap: wrap;
+         background-color: #f7f7f7;
+         color: rgba(10, 19, 36, 0.7);
+         font-size: 0.75rem;
+         text-align: center;
+         border-top: 1px solid #e7e7e9;
+         padding: 1rem;
+         font-family: 'noto-sans', 'Noto Sans', sans-serif;
+   }
+    
+   .mx-footer__copyright {
+         margin: 0;
+   }
+    
+   .mx-footer__link {
+         color: rgba(10, 19, 36, 0.7);
+         text-decoration: none;
+         white-space: nowrap;
+         border-radius: 0.125rem;
+   }
+    
+   .mx-footer__links-list {
+         list-style: none;
+         padding: 0;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         gap: 0.5rem;
+         flex-wrap: wrap;
+         margin: 0;
+    
+         > li::before {
+               content: '';
+               border-left: 1px solid #e7e7e9;
+               margin-right: 0.5rem;
+         }
+   }
+    
+   .mx-footer__link:hover {
+         color: #0123c6;
+         text-decoration: underline;
+   }
+    
+   .mx-footer__link:focus {
+         outline: none;
+   }
+    
+   .mx-footer__link:focus-visible {
+         outline: 2px solid #298efb;
+         outline-offset: 2px;
+    }
+
+   .footer .container {
+    text-align: center;
+}
+
+
+//_badge.scss
+
+.badge-warning {
+    color: #fff;
+    background-color: #C97800;
+  }
+
+.badge-pill {
+    padding-right: 0.6em;
+    padding-left: 0.6em;
+    border-radius: 10rem;
+  }
+
+// Swagger styling
+
+.swagger-ui .info .title,
+.swagger-ui .model-title {
+    font-family: $font-family !important;
+    color: var(--bs-body-color);
+}
+
+.swagger-ui .info a {
+    font-family: $font-family !important;
+    color: $link-color !important;
+}
+
+.swagger-ui .info .title small pre {
+    background: transparent;
+ }
+
+.swagger-ui .servers>label select {
+    margin-top: 1.5rem;
+}
+
+.swagger-ui .model-title {
+    font-size: $font-size-base !important;
+}
+
+.swagger-ui .renderedMarkdown p,
+.swagger-ui table tr td,
+.swagger-ui .opblock-tag,
+.swagger-ui .opblock-description-wrapper p,
+.swagger-ui .opblock .opblock-summary-description,
+.swagger-ui .opblock .opblock-section-header h4 {
+    font-family: $font-family !important;
+}
+
+.swagger-ui .model-box-control:focus,
+.swagger-ui .models-control:focus,
+.swagger-ui .opblock-summary-control:focus {
+    outline: transparent !important;
+}
+
+.swagger-ui table tbody tr td {
+    padding: .5rem !important;
+}
+
+.swagger-ui .renderedMarkdown code {
+    padding: 0rem !important;
+    font-size: $font-size-base !important;
+    color: $primary !important;
+}

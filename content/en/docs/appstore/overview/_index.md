@@ -115,7 +115,7 @@ The component details page also presents the following tabs:
     * Click **Add Review** to open a section where you can add text, rate the component, and submit the review
         * Your reviews are listed on your [Reviews](/appstore/overview/my-marketplace/#my-reviews) page in **My Marketplace**
     * If you are a developer of the component, you can **Reply** to a review
-* **Developers** – the names of the developers who most recently updated the component, with links to their [Mendix Profile](/developerportal/community-tools/mendix-profile/)
+* **Developers** – the names of the developers who most recently updated the component, with links to their [Mendix Profile](/community-tools/mendix-profile/)
 
 ## 4 Marketplace Content Support {#support}
 
@@ -145,7 +145,7 @@ Content in this support category is supported as-is. When changing the content, 
 
 #### 4.2.2 Deprecated Category {#deprecated}
 
-Mendix moves platform-supported content into this category when the content is considered end-of-life. These decisions factor in popularity, the availability of improved alternative(s), and industry standards.
+Mendix moves platform-supported content into this category when the content is considered end-of-life. These decisions factor in popularity, the availability of improved alternatives, and industry standards.
 
 Support for content in this category is limited and is decided by Mendix on a case-by-case basis. You can still follow the standard support process using the [Mendix Support Portal](https://support.mendix.com). However, the Mendix SLA no longer applies. 
 
@@ -155,7 +155,7 @@ Support on content in this category is up to the user or organization providing 
 
 * Open an issue on the GitHub repository associated with the content (for details on GitHub issues, see [Mastering Issues](https://guides.github.com/features/issues/))
 * Contact the owner of the content via the contact details available on the Marketplace component's detail pages
-* Ask a question on the [Mendix Forum](https://mxforum.mendix.com/)
+* Ask a question in the [Mendix Community](https://community.mendix.com/)
 * Contribute 
 
 The level of support depends on the availability and effort of the developer and/or the Mendix community.

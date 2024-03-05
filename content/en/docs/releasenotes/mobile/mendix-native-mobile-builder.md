@@ -9,6 +9,36 @@ description: "Mendix Native Mobile Builder release notes."
 
 The Mendix Native Mobile Builder is a UI-based tool, complimentary to Mendix Studio Pro, which helps you build your Mendix native mobile app. After the Mendix Native Mobile Builder simplifies your build process, you can do what you want most: test and publish your app. The Mendix Native Mobile Builder uses MxBuild, GitHub, and App Center to simplify the app building process and is directly accessible via Mendix Studio Pro. 
 
+## 2024
+
+### Release 1.0.131
+
+**Release date: February 19, 2024**
+
+#### Fixes
+
+* We fixed a build regression introduced in [1.0.130](#10130).
+
+### Release 1.0.130 {#10130}
+
+**Release date: February 13, 2024**
+
+#### Fixes
+
+*  We fixed an issue where the namespace in the `native-template` Gradle file was not updating correctly when building an application using Native Builder UI.
+
+### Release 1.0.129
+
+**Release date: January 29, 2024**
+
+#### Improvements
+
+* We now recommend local building over using AppCenter and changed the Native Builder to reflect that.
+
+#### Fixes
+
+* We fixed an issue where iOS apps were containing push notifications entitlement code even after notifications were disabled in the Native Builder (Ticket #167685).
+
 ## 2022
 
 ### Release 1.0.128
@@ -429,7 +459,7 @@ This release focuses mainly on quality of life bug fixes and features.
 
 **Release date: October 27, 2020**
 
-This marks the initial release of the Mendix Native Mobile Builder UI tool. It is included in [Mendix Studio Pro v8.15](/releasenotes/studio-pro/8.15/) and higher.
+This marks the initial release of the Mendix Native Mobile Builder UI tool. It is included in [Mendix Studio Pro 8.15](/releasenotes/studio-pro/8.15/) and higher.
 
 #### Features
 

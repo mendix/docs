@@ -10,7 +10,7 @@ tags: ["native", "mobile", "build", "local", "xcode", "android studio"]
 ## 1 Introduction
 
 {{% alert color="info" %}}
-For this how-to, Mendix Studio Pro v8.15.1 is required. If you are using an older Studio Pro version, please use [How to Build a Mendix Native Mobile App Locally Manually](/howto8/mobile/native-build-locally-manually/).
+For this how-to, Mendix Studio Pro 8.15.1 is required. If you are using an older Studio Pro version, please use [How to Build a Mendix Native Mobile App Locally Manually](/howto8/mobile/native-build-locally-manually/).
 {{% /alert %}}
 
 By default when building your native mobile app binaries, Mendix uses [Visual Studio App Center](https://appcenter.ms/sign-in?original_url=%2Fapps) as a service so that users can build without having to install tools like XCode or Android Studio. However, there are cases when using App Center is not allowed or possible. In those situations, you can build your apps locally.
@@ -105,7 +105,7 @@ To build an Android app with Android Studio, do the following:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/native-build-locally-manually/as-build-variants.png" alt="Android Build Varients"   width="350"  >}}
 
-1. After a short time the app should be synchronized and the play button (**Run Locally**) should be selectable. Select a device or create a device from the drop-down menu and click the play button (**Run Locally**) to build and install your app on the device:
+1. After a short time the app should be synchronized and **Run Locally** ({{% icon name="controls-play" %}}) should be selectable. Select a device or create a device from the drop-down menu and click **Run Locally** to build and install your app on the device:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/native-build-locally-manually/as-start-build.png" alt="Android Build Toolbar"   width="250"  >}}
 
@@ -123,7 +123,7 @@ To build an Android app with Android Studio, do the following:
 
     As with the Android **Build Variants** the iOS app makes use of **Build Targets** to switch between building a custom developer app or a release app.
 
-1. From the drop-down menu choose **nativeTemplate** and the device you would like to run the app on, then click the play button (**Run Locally**) to start a build for your app:
+1. From the drop-down menu choose **nativeTemplate** and the device you would like to run the app on, then click **Run Locally** ({{% icon name="controls-play" %}}) to start a build for your app:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/native-build-locally-manually/xc-start-build.png" alt="XCode Build Toolbar"   width="250"  >}}
 
@@ -180,5 +180,5 @@ To remove dependencies which do not support auto-linking, do the following:
 
 ## 7 Read More
 
-* [How to Deploy Your First Mendix Native Mobile App](/howto8/mobile/deploying-native-app/)
+* [How to Build a Mendix Native App in the Cloud](/howto8/mobile/deploying-native-app/)
 * [How to Create a Custom Developer App](/howto8/mobile/how-to-devapps/)

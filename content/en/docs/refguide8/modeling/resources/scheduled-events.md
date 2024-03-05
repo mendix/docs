@@ -7,10 +7,6 @@ tags: ["Scheduled Event", "Execution properties", "Timing", "intervals", "schedu
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/scheduled-events.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 With scheduled events you can let the runtime execute a microflow at a specific moment in time. The event can also be repeated with a given interval, for example every day.
@@ -107,7 +103,7 @@ parseInteger( formatDateTime( [%CurrentDateTime%], 'dd') ) = 15
 // This will run the scheduled event on the 1st and 15th of the month
 ```
 
-Or as [Herbert Vujik](https://forum.mendix.com/link/questions/6934) suggests, use this expression for running it on the last day of the month:
+Or as [Herbert Vujik](https://community.mendix.com/link/questions/6934) suggests, use this expression for running it on the last day of the month:
 
 ```java
 formatDateTime([%CurrentDateTime%], 'dd') = formatDateTime([%EndOfCurrentMonth%], 'dd') 

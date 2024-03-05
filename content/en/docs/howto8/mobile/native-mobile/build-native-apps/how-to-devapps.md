@@ -15,7 +15,7 @@ A custom developer app helps you by serving as a replacement for the Make It Nat
 ## 2 Prerequisites
 
 * Complete [How to Get Started with Native Mobile](/howto8/mobile/getting-started-with-native-mobile/)
-* Complete the Mendix Native Mobile Builder wizard as found in [Deploy Your First Mendix Native Mobile App](/howto8/mobile/deploying-native-app/)
+* Complete the Mendix Native Mobile Builder wizard as found in [Build a Mendix Native App in the Cloud](/howto8/mobile/deploying-native-app/)
 
 ## 3 Build Your Developer App {#build-your-developer-app}
 
@@ -67,7 +67,7 @@ There are various ways install an app on a device. Installing using a USB is det
 
 ### 4.2 iOS
 
-By default your custom developer app will be unsigned. To get a signed *IPA*, follow the steps in the [Signing Your Build](/howto8/mobile/deploying-native-app/#signing-a-build) section of *How to Deploy Your First Mendix Native Mobile App*. Your custom developer app branch is named **developer**.
+By default your custom developer app will be unsigned. To get a signed *IPA*, follow the steps in the [Signing Your Build](/howto8/mobile/deploying-native-app/#signing-a-build) section of *How to Build a Mendix Native App in the Cloud*. Your custom developer app branch is named **developer**.
 
 The unsigned output of an iOS build is an *XCArchive* file. *XCArchive* files require manual signing before they are ready to be installed on a device.
 
@@ -116,9 +116,9 @@ Builds with the Mendix Native Mobile Builder are stripped of simulator artifacts
 
 To run your custom developer app on a device which is not a test device, you will have to sign the developer app with your certificates. 
 
-If you want Native Builder to sign your custom developer app, follow the steps in the [Signing Your Build](/howto8/mobile/deploying-native-app/#signing-a-build) section of *How to Deploy Your First Mendix Native Mobile App*.
+If you want Native Builder to sign your custom developer app, follow the steps in the [Signing Your Build](/howto8/mobile/deploying-native-app/#signing-a-build) section of *How to Build a Mendix Native App in the Cloud*.
 
 ## 5 Read More
 
-* [How to Deploy Your First Mendix Native Mobile App](/howto8/mobile/deploying-native-app/)
+* [How to Build a Mendix Native App in the Cloud](/howto8/mobile/deploying-native-app/)
 * [How to Use Over the Air Updates](/howto8/mobile/how-to-ota/)

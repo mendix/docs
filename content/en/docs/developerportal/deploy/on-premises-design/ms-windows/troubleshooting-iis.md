@@ -8,10 +8,6 @@ tags: ["IIS", "Windows", "Internet Information Services", "Mendix Service Consol
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/troubleshooting-iis.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 This page will help you troubleshoot issues you come across when setting up Microsoft Internet Information Services (IIS) as a webserver in front of Mendix.
@@ -58,7 +54,7 @@ This section describes a few common problems that people have run into when sett
 
 We cannot provide a solution here for all the problems you may find. Use the techniques below to isolate the cause of your problem. If the solution is not clear, there are many resources on the internet which can help you to solve your specific issue.
 
-You can also ask for help on the [Mendix Forum](https://forum.mendixcloud.com/p/questions).
+You can also ask for help in the [Mendix Community](https://community.mendix.com/p/questions).
 
 If you have some useful tips, please feel free to add them to this document.
 

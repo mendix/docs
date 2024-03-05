@@ -17,7 +17,7 @@ This how-to teaches you the following:
 * Basic steps for building and publishing connectors
 
 {{% alert color="info" %}}
-For in-depth instructions and best practices, see [Best Practices for Building Connectors](/appstore/creating-content/connector-guide-best-practices/). To learn more about advanced ways to build connectors, see [Wrap Services, APIS, or Databases with OData](/refguide/wrap-services-odata/).
+For in-depth instructions and best practices, see [Best Practices for Building Connectors](/appstore/creating-content/connector-guide-best-practices/).
 {{% /alert %}}
 
 ### 1.1 Prerequisites
@@ -66,7 +66,7 @@ The [Catalog](/catalog/) is a hub for shared registered assets made available in
 
 ### 2.2 Getting Mendix Connectors
 
-Many existing Mendix [Connectors](/appstore/connectors/) can be downloaded from the [Mendix Marketplace](https://marketplace.mendix.com/) directly into your app. Depending on your use case, your company's private Mendix Marketplace could also have a variety of Mendix connector modules available. For more information on the distinction between public and private Marketplace content, see the [Adding New Marketplace Content](/appstore/sharing-content/#adding) section of *Share Marketplace Content*.
+Many existing Mendix [Connectors](/appstore/modules/#connectors) can be downloaded from the [Mendix Marketplace](https://marketplace.mendix.com/) directly into your app. Depending on your use case, your company's private Mendix Marketplace could also have a variety of Mendix connector modules available. For more information on the distinction between public and private Marketplace content, see the [Adding New Marketplace Content](/appstore/sharing-content/#adding) section of *Share Marketplace Content*.
 
 Because connectors expose data via custom microflow activities, you can find them in the Studio Pro [Toolbox](/refguide/view-menu/#toolbox) to implement when building your application logic. Then, you can drag them to where you want to use the connector functionality.
 
@@ -74,7 +74,7 @@ Because connectors expose data via custom microflow activities, you can find the
 
 Once you deploy an application, the connector will automatically deploy with it. You can also set a few runtime or node specific configurations (via the application interface or constants).
 
-As an example, check out the [Amazon SNS](/appstore/connectors/amazon-sns/) connector. This connector uses AWS-provided libraries to interact with the Amazon Simple Notification Service. The functions are exposed via a set of Mendix actions that are available in the toolbox to use in your logic.
+As an example, check out the [Amazon SNS](/appstore/modules/aws/amazon-sqs/) connector. This connector uses AWS-provided libraries to interact with the Amazon Simple Notification Service. The functions are exposed via a set of Mendix actions that are available in the toolbox to use in your logic.
 
 ## 3 Building a Mendix Connector in Studio Pro {#build-connector}
 
@@ -148,5 +148,4 @@ Because connectors are exported as modules and then published on the Marketplace
 
 * Read [How to Share Marketplace Content](/appstore/sharing-content/)
 * Check out [Best Practices for Building Connectors](/appstore/creating-content/connector-guide-best-practices/)
-* See [Wrap Services, APIs, or Databases with OData](/refguide/wrap-services-odata/) for more advanced ways of building connectors
-* Read about building a [Third-Party Service Connector](/refguide/wrap-services-odata/#third-party)
+* See more about building a third-party service connector using [OData Services](/refguide/integration/odata-services/)

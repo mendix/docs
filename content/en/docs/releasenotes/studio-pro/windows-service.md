@@ -12,6 +12,15 @@ To download the Windows Service, go to the [Get Studio Pro](https://marketplace.
 
 ## 4.7
 
+### 4.7.3
+
+**Release date: December 18, 2023**
+
+* We now sign all Mendix Service Console executables and libraries, next to the main executable and the installer file (excluding third-party libraries).
+* We changed the default installation directory for the Service Console to the 64-bit program files directory (which is usually *C:\Program Files*), instead of the 32-bit directory (which is usually *C:\Program Files (x86)*), as the Service Console actually runs 64 bits when the OS supports this.
+* We added the `NoService` parameter to the `Start-MxApp` cmdlet, which will cause the cmdlet to start the app as a local process instead of as a service.
+* The `Stop-MxApp` cmdlet will now stop apps if they are started as a local process and as a service.
+
 ### 4.7.2
 
 **Release date: September 21, 2023**
@@ -177,7 +186,7 @@ Changes between 4.2-beta2 and 4.2:
 * The Java temporary directory (-Djava.io.tmpdir) will now be set to the Mendix temporary directory, if not already set.
 * Added options to Advanced Settings, Jetty configuration: Request header size and Response header size for Mendix 3.3.7 and higher and Mendix 4.4.4 and higher.
 * Disabled possibility to set environment of app to the deprecated runtime configuration mode 'Acceptance' for apps of Mendix 5 and higher.
-* Improved check about already used ports in your or other apps if you choose the same one(s) and improved the information about already used ports.
+* Improved check about already used ports in your or other apps if you choose the same one (or ones) and improved the information about already used ports.
 * Improved unique port number generation for new apps.
 * The Console now checks on startup if apps share the same license configuration. The user has to choose one app for this license.
 * The Console now shows the correct service start/stop button text after starting a service, even if an error occurred while connecting to the app.

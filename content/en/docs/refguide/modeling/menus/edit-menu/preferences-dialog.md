@@ -13,13 +13,19 @@ The **Preferences** option in the menu opens a dialog box where you can set user
 
 ## 2 General Tab {#general}
 
-### 2.1 Interface {#interface}
+### 2.1 Enable Autosave {#autosave}
 
-#### 2.1.1 Keep Active Document Selected in the App Explorer
+When enabled, this option automatically saves your changes on various actions, such as running and deploying your app, executing version control operations (for example, committing, merging, or reverting), closing files or apps, exporting modules, or exiting Studio Pro.
+
+Additionally, you have the option to enable autosave for any of these actions when you have unsaved changes. In such cases a dialogue box is opened, where you can choose to save or discard your changes. You can speed this process up by checking the **Do not ask me again** checkbox, which prevents further prompts and enables the autosave functionality.
+
+### 2.2 Interface {#interface}
+
+#### 2.2.1 Keep Active Document Selected in the App Explorer
 
 When enabled, **App Explorer** automatically highlights the document that is currently active. When this property is disabled, the selection in **App Explorer** remains unchanged when the active document changes.
 
-#### 2.1.2 Show Styling For
+#### 2.2.2 Show Styling For
 
 The **Show styling for** setting configures which styling files are shown in the App Explorer. 
 
@@ -31,19 +37,19 @@ You can select one of the following options:
 
 For more information about the styling editor, see the [Using the Styling Editor](/howto/front-end/customize-styling-new/#styling-editor) section in *How to Customize Styling*.
 
-### 2.2 Error List
+### 2.3 Error List
 
-#### 2.2.1 Auto-Check Delay
+#### 2.3.1 Auto-Check Delay
 
 The **Auto-check delay** is the number of milliseconds that Studio Pro waits after a change, before starting the consistency checks. Increase this setting for large apps if Studio Pro responses slowly after changes.
 
-#### 2.2.2 Highlight Shown Errors and Warnings in the Editor
+#### 2.3.2 Highlight Shown Errors and Warnings in the Editor
 
 When **Highlight shown errors and warnings in the editor** is checked, the errors and warnings which are currently shown in the Error List (as determined by the **Errors** and **Warnings** toggle buttons and the suppression rules) will be highlighted on the affected elements in the editor.
 
-### 2.3 Disk Location
+### 2.4 Disk Location
 
-#### 2.3.1 Default App Directory {#default-directory}
+#### 2.4.1 Default App Directory {#default-directory}
 
 This is the directory where new apps are stored. It is used in the [App Settings](/refguide/new-app/#app-settings) dialog box when you create a new app. If a different directory is selected in the **App Settings** dialog box, that directory is stored as the new default app directory.
 
@@ -51,7 +57,7 @@ This is the directory where new apps are stored. It is used in the [App Settings
 
 ### 3.1 Deployment
 
-#### 3.1.1 JDK directory
+#### 3.1.1 JDK directory {#jdk-directory}
 
 This is the directory in which the Java Development Kit (JDK) is located on the computer on which you deploy the application. Usually, the correct directory is located automatically.
 
@@ -77,12 +83,16 @@ Here you can specify which repositories to use for Gradle. The content of this f
 
 ## 4 Mendix Assist Tab
 
-### 4.1 Logic Bot
+### 4.1 Logic Bot {#logic-bot}
+
+{{% alert color="info" %}}
+These settings only apply to the **Classic** editor in Studio Pro 10.5 and below.
+{{% /alert %}}
 
 The **Logic Bot** tab contains the following settings:
 
-* **Enable MxAssist Logic Bot** – when enabled, [MxAssist Logic Bot](/refguide/mx-assist-logic-bot/) is activated and can give you suggestions for microflow activities. You can also switch MxAssist Logic Bot on and off in the top right corner of the microflow editor.
-* **Show suggestions for system variables** – when enabled, MxAssist Logic Bot will include system objects in its suggestions (for example, it can suggest that you change system objects like `currentUser` or `currentSession`).
+* **Enable MxAssist Logic Bot (Classic editor only)** – when enabled, [MxAssist Logic Bot](/refguide/mx-assist-logic-bot/) is activated and can give you suggestions for microflow activities. You can also switch MxAssist Logic Bot on and off in the top right corner of the microflow editor.
+* **Show suggestions for system variables (Classic editor only)** – when enabled, MxAssist Logic Bot will include system objects in its suggestions.
 
 ### 4.2 Best Practice Bot
 
@@ -187,13 +197,25 @@ When the **Send Studio Pro usage data to Mendix** setting is enabled, Studio Pro
 
 ## 9 New Features Tab {#new-features}
 
-### 9.1 Micro- And Nanoflow Editor
+### 9.1 Access Rules Editor
 
-Logic editors are currently being redesigned. The beta logic editors are available to try out in Studio Pro 10.4.0. When **Use the Beta version as the default editor** setting is enabled, the beta logic editors will be the default editors for all your microflows, nanoflows, and rules. For more information, see [Logic Editors (Beta)](/refguide/logic-editors-beta/).
+In Studio Pro version 10.6 a new access rule editor was introduced in Beta. Enable this option to use the new editor in the *Access rules* tab of the entity properties dialog.
 
-### 9.2 Visual Builder
+For more information, see [Defining Access Rules Using the New Editor](/refguide/access-rules/#new-editor) section of *Access Rules*.
 
-In Studio Pro version 10.5, a new, visual, way of constructing XPath constraints was introduced. This is called Visual Builder for database constraints. The default way to construct XPath constraints is to write XPath expressions, but you can change the default by checking **Enable the Builder as the default XPath constraint editor**.
+### 9.2 Use the Modernized Expression Editor
+
+The expression editor is modernized since Studio Pro 10.6. This setting is enbaled by default. The editor allows the user to write rich text statements and get instant feedback on their validity. In Studio Pro, it is often used to write an expression for a decision or to write an XPath expression for data filtering.
+
+### 9.3 Micro- And Nanoflow Editor
+
+In Studio Pro 10.4 and 10.5, only the **Use the Beta version as the default editor** setting is shown. When this setting is enabled, the modern logic editors (as a beta feature) will become the default editors for all your microflows, nanoflows, and rules. 
+
+In Studio Pro 10.6, only the **Enable switching to the Classic version of the editor** setting is shown. When this setting is enabled, you will be able to see the toggle to switch between the **Classic** and **Modern** version in your logic editors.
+
+### 9.4 Visual Builder
+
+In Studio Pro version 10.5, a new, visual, way of constructing XPath constraints was introduced. This is called Visual Builder for database constraints. The default way to construct XPath constraints is to write XPath expressions, but you can change the default by checking **Enable the XPath Builder as the default XPath constraint editor**.
 
 ## 10 Read More
 

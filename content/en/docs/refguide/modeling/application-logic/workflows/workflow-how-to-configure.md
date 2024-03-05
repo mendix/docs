@@ -370,7 +370,7 @@ Users who have tasks assigned to them (Manager, Facilities roles) will see their
 
 To test your workflow, you need to switch between different user roles. Follow the steps below:
 
-1. In the top bar of Mendix Studio Pro, click **Run locally**.
+1. In the top bar of Mendix Studio Pro, click **Run Locally** ({{% icon name="controls-play" %}}).
 2. After your app is deployed, click **View App**.
 3. In your browser, log in as an Admin user.
 4. Click the user icon on the right to switch to another user role:

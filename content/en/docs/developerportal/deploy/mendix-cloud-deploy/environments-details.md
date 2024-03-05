@@ -11,9 +11,11 @@ tags: ["Deploy","App","Environment","Developer Portal"]
 
 ## 1 Introduction
 
-To open the **Environment Details** page, go to the [Developer Portal](http://sprintr.home.mendix.com) and click **Environments** on your licensed app. Then click the **Details** icon by the environment you want to view.
+To open the **Environment Details** page, go to the [Developer Portal](http://sprintr.home.mendix.com) and click **Environments** on your licensed app. Then click **Details** ({{% icon name="notes-paper-edit" %}}) by the environment you want to view.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/environment-details.png" alt="The Details icon is on the right side of the row">}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/environment-details.png" alt="The Details icon is on the right side of the row" class="image-border" >}}
+
+{{% alert color="info" %}}You must have permissions for **Transport Rights** or **Access to Monitoring** to view the **Environment Details** page. For details on configuring permissions, see [Node Permissions](/developerportal/deploy/node-permissions/).{{% /alert %}}
 
 The **Environment Details** page shows information about the selected environment. You can use this page to manage and debug several aspects of the environment. The page has eight tabs: **General**, **Model Options**, **Network**, **Log Levels**, **Runtime**, **Maintenance**, **Tags**, and **Services**.
 
@@ -22,16 +24,16 @@ The **Environment Details** page shows information about the selected environmen
 In the **General** tab, you can find the following information about your environment:
 
 * **Status**
-    * Green check mark – the application in this environment is running
-    * Gray dash – no application has been started yet in this environment, or it has been turned off
-    * Red cross – the application in this environment is unstable and probably not usable anymore
+    * {{% icon name="checkmark-circle" color="green" %}} – the application in this environment is running
+    * {{% icon name="subtract-circle" color="gray" %}} – no application has been started yet in this environment, or it has been turned off
+    * {{% icon name="remove-circle" color="red" %}} – the application in this environment is unstable and probably not usable anymore
 * **Running since** – the date the app was started, if it is running
 * **Name** – the type of environment (Acceptance, Production, Test, or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments)); for more information, see the [Naming of Environments](#naming) section below
 * **Url** – the URL of the app
 * **Project ID** – the unique identifier of the app
 * **Environment ID** – the unique identifier of the environment
 * **Custom domains** – any [custom domains](/developerportal/deploy/custom-domains/) of the app
-* **Java Version** – Oracle version 1.8 or AdoptOpenJDK version 11
+* **Java Version** – Oracle version 1.8, AdoptOpenJDK version 11, or Eclipse Temurin JDK 17
 * **Studio Pro Target**
 * **Plan** – the type of plan covered by your license (for more information, see the [Overviews](/developerportal/deploy/environments-details/#overviews) section below)
 * **Instances** – a summary of the number and memory allocation of instances of the environment (for more information, see the [Scaling](#scaling) section below)
@@ -50,7 +52,7 @@ On the right side of the screen in the **General** tab, there are buttons that y
 
 When your app is running, you can see the following action buttons:
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/actions-v5.png" alt="Available actions when the app is running" width=40% >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/actions-v5.png" alt="Available actions when the app is running" max-width=40% >}}
 
 * **Restart Application** – This stops the running application and starts it again. Restarting your app is required for applying new constant values or scheduled events to the environment.
 * **Stop Application** – This stops the application.
@@ -62,7 +64,7 @@ When your app is running, you can see the following action buttons:
 
 When your app is stopped, you see this set of action buttons instead:
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/actions-stopped.png" alt="Available actions when the app is stopped" width=40% >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/actions-stopped.png" alt="Available actions when the app is stopped" max-width=40% >}}
 
 * **Start Application** – This starts the application.
 * **Stop Application** – This stops the application.
@@ -87,10 +89,13 @@ To clear your environment, follow these steps:
 2. Select one of the following options:
     * **Only clear the database** – This empties all data from your database. After you confirm the deletion, the application is stopped, the existing database is deleted, a new database is created, and the application is restarted. Ensure you have a backup of any data that you want to keep.
     * **Clear the full environment (model and database)** – This clears all data from your database and file storage. It also removes your app from this environment. Clear the full environment if you want to deploy a different app to the environment.
-3. Confirm that you want to clear your environment by typing *clear*.
+3. Confirm that you want to clear your environment by typing the indicated text (*clear database* or *clear model and database*, depending on which option you selected).
 4. Click **Clear Environment**.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/clear-environment.png" alt="Clear Environment options and confirmation"   width="400"  >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/clear-environment.png"
+    alt="Clear Environment options and confirmation"
+    max-width=70%
+    class="image-border" >}}
 
 ### 2.2 Naming of Environments – Flexible Environments in Mendix Cloud {#naming}
 
@@ -266,7 +271,7 @@ Mendix and the deployment environment automatically add some non-configurable re
 | --------------- | -------- |
 | `cache-control`| The buildpack for *index.html* and *login.html* – the Mendix Runtime for other pages |
 | `permissions-policy: interest-cohort=()` | Exclude from Federated Learning of Cohorts (FLoC) calculation |
-| `strict-transport-security` | TLS terminating webservers – set to `max-age=31536000` |
+| `strict-transport-security` | TLS terminating webservers – set to `max-age=31536000` (365 days, in seconds)|
 | `x-vcap-request-id` | Cloud Foundry to track requests through CF |
 
 #### 4.2.2 Running Your App in an Iframe {#iframe}
@@ -402,6 +407,7 @@ When using the **Log Levels** tab, bear in mind the following considerations:
 * If your app is not running, the tab only shows log nodes that are set to a level other than Info. Log nodes that are set to the Info level become visible when your app is restarted.
     * For custom nodes, log nodes become visible when your app is restarted and after messages have been logged to them.
 * If you change the log level, this level will continue to be used even if you later restart your app.
+* If you change the log level, the startup logs (the logs that are created while starting the runtime, including the logs that the after-startup microflow generates) are not affected. It is not possible to change the log level of the startup logs for apps hosted on Mendix Cloud. 
 * For an application running a single instance, any changes are applied immediately to the application.
 * For an application running more than one instance, the changes can only be applied after a restart of the app. This is because it is not possible to instruct the load balancer to set the log level for a specific running instance. 
 * Log levels may not persist across restarts if you change them outside the Developer Portal (for example, using an app module).
@@ -524,7 +530,7 @@ In the **Services** tab, the [Technical Contact](/developerportal/general/app-ro
 
 ### 9.1 Available Services
 
-One custom service is available: Mendix Event Broker. This service is required to use [Mendix Business Events](/appstore/modules/business-events/) on production apps.
+One custom service is available: Mendix Event Broker. This service is required to use [Mendix Business Events](/appstore/services/business-events/) on production apps.
 
 ### 9.2 Enabling Custom Services
 

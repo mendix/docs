@@ -71,10 +71,10 @@ In this chapter you will set up the unit testing module and run the example test
 
     {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/18580341.png" >}}
 
-    At the left side 2 buttons are shown. When you click the Run all button, all unit tests will be executed. When you click the Reset button, the status of all tests will change to not executed (question mark icon). Beneath the buttons all modules which contains unit tests are shown. In this case UnitTesting is the only module which contains unit tests. When you click UnitTesting, all unit tests of this module are shown.
+    At the left side 2 buttons are shown. When you click the **Run all** button, all unit tests will be executed. When you click the **Reset** button, the status of all tests will change to not executed (question mark icon). Beneath the buttons all modules which contains unit tests are shown. In this case UnitTesting is the only module which contains unit tests. When you click UnitTesting, all unit tests of this module are shown.
     If you want to save all changes made in the microflow to the database, you need to uncheck the checkbox 'Rollback microflow tests after execution'. Keep the checkbox checked if you want to rollback all changes.
-    At the right side the unit tests of the selected module are shown. In this example five unit tests are shown. When you click the Run all button, all unit tests of the selected module will be executed. When you click the play button next to a unit test, only that unit test will be executed.
-18. Click on the play button of **UnitTesting.Test_ValidUnitTest**.
+    At the right side the unit tests of the selected module are shown. In this example five unit tests are shown. When you click the **Run all** button, all unit tests of the selected module will be executed. When you click **Run** ({{% icon name="controls-play" %}}) next to a unit test, only that unit test will be executed.
+18. Click **Run** on **UnitTesting.Test_ValidUnitTest**.
 
     {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/18580359.png" >}}
 

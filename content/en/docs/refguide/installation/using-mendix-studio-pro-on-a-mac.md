@@ -12,6 +12,11 @@ aliases:
 
 ## 1 Introduction
 
+{{% alert color="info" %}}
+From Mendix 10.7.0 and above, you can run Mendix Studio Pro natively on macOS. This means you no longer need to follow the guide below to get started on Mac. If you are using  versions of Studio Pro below 10.7.0, follow the guide to get started.
+Since the Studio Pro macOS client is still in beta, you will need to right-click the installer and open it to run it.
+{{% /alert %}}
+
 Using Parallels, you can run Mendix Studio Pro on your Mac device using a Windows virtual machine.
 
 {{% alert color="info" %}}
@@ -49,7 +54,7 @@ To configure your Windows virtual machine to work with Mendix Studio Pro, follow
 
     {{< figure src="/attachments/refguide/installation/using-mendix-studio-pro-on-a-mac/windows-control-center.png" alt="parallels control center"   width="450"  >}}
 
-2. Click the **gear** symbol to open the **Configuration Panel**.
+2. Click **Configuration** ({{% icon name="cog" %}}) to open the **Configuration Panel**.
 3. Navigate to the **Hardware** tab, and select **Network** from the left panel:
 
     {{< figure src="/attachments/refguide/installation/using-mendix-studio-pro-on-a-mac/windows-configuration.png" alt="network in configuration"   width="450"  >}}

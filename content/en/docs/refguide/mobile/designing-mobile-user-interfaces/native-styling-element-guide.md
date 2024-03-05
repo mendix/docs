@@ -146,6 +146,7 @@ export const Text = {
 | `container` | This has all ViewStyle properties. |                 |
 | `text`      | This has all TextStyle properties. |                 |
 | `text`     | `numberOfLines`                     | This is the maximum number of lines to wrap the label text. If the text is any longer, it will be cut off with an ellipsis (defaults to `0`). |
+
 The default class to style all texts is named `Text`.
 
 ### 4.2 Page Title 
@@ -169,6 +170,7 @@ export const PageTitle = {
 | `container` | This has all ViewStyle properties. |                 |
 | `text`      | This has all TextStyle properties. |                 |
 | `text`      | `numberOfLines`                     | This is the maximum number of lines to wrap the label text. If the text is any longer, it will be cut off with an ellipsis (defaults to `0`). |
+
 The default class to style all page titles is named `PageTitle`.
 
 ## 5 Structure Widgets
@@ -353,7 +355,7 @@ export const TextBox = {
 | `input` | `placeholderTextColor` | This is the text color of the placeholder string. |
 | `input` | `selectionColor` | This is the highlight and cursor color of the text input. |
 | `input` | `underlineColorAndroid` | This is the color of the `input` underline. |
-| `inputFocused` | Same properties as `input` | Overrides `input` styles if the text box is focused (with Studio Pro v8.15). |
+| `inputFocused` | Same properties as `input` | Overrides `input` styles if the text box is focused (with Studio Pro 8.15). |
 | `inputError` | This has the same properties as `input` | Overrides `input` styles if there are validation errors. |
 | `inputDisabled` | Same properties as `input` | Overrides `input` styles if the text box is non-editable. |
 | `label` | This has all TextStyle properties |   |
@@ -375,7 +377,7 @@ The default class to style all text areas is named `TextArea`.
 
 A drop-down is an input widget that can be used to display and edit enumeration attributes.
 
-Since Studio Pro v8.11, the drop-down widget has a new style property called `useUniformDesign: boolean` which enables the uniform design in both platforms.
+Since Studio Pro 8.11, the drop-down widget has a new style property called `useUniformDesign: boolean` which enables the uniform design in both platforms.
 
 ```javascript
 export const DropDown = {
@@ -446,26 +448,26 @@ export const DropDown = {
 | --- | --- | --- |
 | `container` | This has all ViewStyle properties. |  |
 | `containerDisabled` | Same properties as `container` | Overrides `container` styles if the drop-down is non-editable. |
-| `iconStyle`  | This has all TextStyle properties | Styles the arrow down icon next to the value (with Studio Pro v8.15).|
-| `item` | This has all TextStyle properties | Styles all the items in dropdown menu including selected item (with Studio Pro v8.11).|
-| `itemContainer` | This has all ViewStyle properties | Styles all the item containers in dropdown menu including selected item container (with Studio Pro v8.11).|
+| `iconStyle`  | This has all TextStyle properties | Styles the arrow down icon next to the value (with Studio Pro 8.15).|
+| `item` | This has all TextStyle properties | Styles all the items in dropdown menu including selected item (with Studio Pro 8.11).|
+| `itemContainer` | This has all ViewStyle properties | Styles all the item containers in dropdown menu including selected item container (with Studio Pro 8.11).|
 | `label` | This has all TextStyle properties. | |
 | `label` | `numberOfLines` | The maximum number of lines to wrap the label text. If the text is any longer it will be cut off with an ellipsis. Defaults to `1`. |
 | `labelDisabled` | Same properties as `label` | Overrides `label` styles if the drop-down is non-editable. |
-| `menuWrapper` | This has all ViewStyle properties | Styles the wrapper view surrounding all the menu items (with Studio Pro v8.11).|
+| `menuWrapper` | This has all ViewStyle properties | Styles the wrapper view surrounding all the menu items (with Studio Pro 8.11).|
 | `pickerIOS` | This has all ViewStyle properties. |  |
 | `pickerBackdropIOS` | This has all ViewStyle properties. |   |
 | `pickerTopIOS` | This has all ViewStyle properties. |   |
-| `selectedItem` | This has all TextStyle properties | Styles the selected item in dropdown menu (with Studio Pro v8.11).|
-| `selectedItemContainer` | This has all ViewStyle properties | Styles the selected item's container in dropdown menu (with Studio Pro v8.11).|
-| `useUniformDesign` | `boolean` | Enables new uniformDesign (with Studio Pro v8.11). |
-| `validationMessage` | This has all TextStyle properties. | Styles the validation message (with Studio Pro v8.11).|
+| `selectedItem` | This has all TextStyle properties | Styles the selected item in dropdown menu (with Studio Pro 8.11).|
+| `selectedItemContainer` | This has all ViewStyle properties | Styles the selected item's container in dropdown menu (with Studio Pro 8.11).|
+| `useUniformDesign` | `boolean` | Enables new uniformDesign (with Studio Pro 8.11). |
+| `validationMessage` | This has all TextStyle properties. | Styles the validation message (with Studio Pro 8.11).|
 | `value`  | This has all TextStyle properties  | Styles the value button which toggle's dropdown and PickerIOS items. If placeholder is selected, placeholderTextColor will be applied |
-| `value`  | `placeholderTextColor: string` | If placeholder is selected, placeholderTextColor will be applied (with Studio Pro v8.11).|
-| `valueContainer` | This has all ViewStyle properties and rippleColor | Styles the value button's container (with Studio Pro v8.11).|
-| `valueContainerFocused` | Same properties as `valueContainer` | Overrides `valueContainer` styles if the dropdown box is focused (with Studio Pro v8.15).|
+| `value`  | `placeholderTextColor: string` | If placeholder is selected, placeholderTextColor will be applied (with Studio Pro 8.11).|
+| `valueContainer` | This has all ViewStyle properties and rippleColor | Styles the value button's container (with Studio Pro 8.11).|
+| `valueContainerFocused` | Same properties as `valueContainer` | Overrides `valueContainer` styles if the dropdown box is focused (with Studio Pro 8.15).|
 | `valueContainerError` | Same properties as `valueContainer`  | Overrides `valueContainer` styles if the dropdown has a validation error (with Studio Pro v9.19.0).|
-| `valueFocused`  | Same properties as `value` | Overrides `value` styles if the dropdown box is focused. (with Studio Pro v8.15).|
+| `valueFocused`  | Same properties as `value` | Overrides `value` styles if the dropdown box is focused. (with Studio Pro 8.15).|
 
 The default class to style all text areas is named `DropDown`.
 
@@ -1831,19 +1833,19 @@ export const com_mendix_widget_native_signature_Signature = {
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | This has all ViewStyle properties.   |   |
+| `container` | | This has all ViewStyle properties.   |
 | `container` | `penColor` | This will change the color of the stroke. |
-| `buttonWrapper` | This has all ViewStyle properties. |
-| `buttonClearContainer` | This has all ViewStyle properties. |
+| `buttonWrapper` | | This has all ViewStyle properties. |
+| `buttonClearContainer` | | This has all ViewStyle properties. |
 | `buttonClearContainer` | `rippleColor` | This will change the color of the ripple on Android.  |
 | `buttonClearContainer` | `activeOpacity` | This will change the opacity when touch is active on iOS.  |
 | `buttonClearContainer` | `underlayColor` | This will change the underlay color when touch is active on iOS.  |
-| `buttonClearCaption` | This has all TextStyle properties. |
-| `buttonSaveContainer` | This has all ViewStyle properties. |
+| `buttonClearCaption` | | This has all TextStyle properties. |
+| `buttonSaveContainer` | | This has all ViewStyle properties. |
 | `buttonSaveContainer` | `rippleColor` | This will change the color of the ripple on Android.  |
 | `buttonSaveContainer` | `activeOpacity` | This will change the opacity when touch is active on iOS.  |
 | `buttonSaveContainer` | `underlayColor` | This will change the underlay color when touch is active on iOS.  |
-| `buttonSaveCaption` | This has all TextStyle properties. |
+| `buttonSaveCaption` | | This has all TextStyle properties. |
 
 The default class to style all text boxes is named `com_mendix_widget_native_signature_Signature`.
 
@@ -1957,7 +1959,7 @@ export const com_mendix_widget_native_linechart_LineChart = {
 | `xAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
 | `xAxis` > `label` | `relativePositionGrid` | Positions the axis label at the bottom or right side of the grid ("bottom" or "right"). |
 | `yAxis` | All `xAxis` element styles. | |
-| `yAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. |
+| `yAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
 | `yAxis` > `label` | `relativePositionGrid` | Positions the axis label at the top or left side of the grid ("top" or "left"). |
 | `legend` > `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
 | `legend` > `item` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
@@ -2091,7 +2093,7 @@ export const com_mendix_widget_native_barchart_BarChart = {
 | `xAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
 | `xAxis` > `label` | `relativePositionGrid` | Positions the axis label at the **bottom** or **right** side of the grid. |
 | `yAxis` | All `xAxis` element styles. | |
-| `yAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. |
+| `yAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
 | `yAxis` > `label` | `relativePositionGrid` | Positions the axis label at the **top** or **left** side of the grid. |
 | `legend` > `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
 | `legend` > `item` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
@@ -2375,7 +2377,7 @@ export const com_mendix_widget_native_columnchart_ColumnChart = {
 | `xAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
 | `xAxis` > `label` | `relativePositionGrid` | Positions the axis label at the **bottom** or **right** side of the grid. |
 | `yAxis` | All `xAxis` element styles. | |
-| `yAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. |
+| `yAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
 | `yAxis` > `label` | `relativePositionGrid` | Positions the axis label at the **top** or **left** side of the grid. |
 | `legend` > `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
 | `legend` > `item` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |

@@ -96,11 +96,11 @@ These options are described in more detail below.
 
 #### 2.6.1 On Delete of ‘{Name of Entity}’ Object Keep ‘{Name of Associated Entity}’ Object(s) *(default)*
 
-When an object is deleted, the associated object(s) are not deleted. This is the default.
+When an object is deleted, the associated object( or objects) are not deleted. This is the default.
 
 #### 2.6.2 On Delete of ‘{Name of Entity}’ Object Delete ‘{Name of Associated Entity}’ Object(s) as Well
 
-When an object is deleted, the associated object(s) are also deleted.
+When an object is deleted, the associated object (or objects) are also deleted.
 
 This delete behavior is used, for example, if you want to delete any associated **Profile** when a **Customer** is deleted:
 
@@ -112,7 +112,7 @@ This option is not available for associations that involve an external entity.
 
 #### 2.6.3 On Delete of ‘{Name of Entity}’ Object Delete ‘{Name of Entity}’ Object Only If It Is Not Associated with ‘{Name of Associated Entity}’ Object(s)
 
-An object can only be deleted if it is not associated with any other object(s).
+An object can only be deleted if it is not associated with any other object (or objects).
 
 This delete behavior is used, for example, if you want to be able to delete a **Customer** only if it is not associated with any **Order**. In this case you will be asked to enter an **Error message if 'Customer' object cannot be deleted** to inform the end user that this customer cannot be deleted and perhaps suggest a next course of action:
 

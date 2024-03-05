@@ -77,7 +77,7 @@ The dynamic classes property allows you to specify one or more cascading stylesh
 {{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/dynamic-classes.png" >}}
 
 {{% alert color="info" %}}
-The dynamic classes property was introduced in Mendix Studio Pro v8.14.
+The dynamic classes property was introduced in Mendix Studio Pro 8.14.
 {{% /alert %}}
 
 You can see which widgets in a page have styling applied via the style or class property by clicking the **Show styles** button.
@@ -151,12 +151,13 @@ The attribute can be of one of the following [data types](/refguide/data-types/)
 
 The editable property indicates whether the end-user will be able to change the value displayed by the widget. The possible values are:
 
-| Value       | Description                                                  |
-| ----------- | ------------------------------------------------------------ |
-| Default     | The value is editable if security allows it such as if the user that is signed in has write access to the selected attribute (default value for widgets outside a snippet). |
-| Inherited from snippet call | Set to **Default** or **Never** by the containing data container of the snippet call (default value for widgets inside a snippet). |
-| Never       | The value is never editable.                                 |
-| Conditionally | The value is editable if the specified condition holds (see below). |
+| Value | Description  |
+|--------|------------|
+| Default      | The value is editable if the containing data container is editable and if security allows it. For example, if the user that is signed in has write access to the selected attribute (the default value for widgets outside a snippet). |
+| Inherited from snippet call    | Set to **Default** or **Never** by the containing data container of the snippet call (default value for widgets inside a snippet).                                                                                           |
+| Never     | The value is never editable.    |
+| Conditionally  | The value is editable if the specified condition holds (see below).  |
+| Conditionally (combined with inherited condition) | The value is editable if the specified condition holds and the conditions for all conditional editable data containers also hold.  |
 
 ### 5.2 Condition
 

@@ -48,7 +48,7 @@ These are the common cases and best practices:
 * HTML content, usually derived from an HTML editor and displayed using an HTML viewer, format string,  or an email client – these are the ways to avoid this abuse:
     * Use the XSSSanitize action from the [CommunityCommons Function Library](/appstore/modules/community-commons-function-library/) module to strip malicious code from the entered HTML
     * Display the value of an attribute as HTML or using the HTMLEncode function from the [Community Commons Function Library](/appstore/modules/community-commons-function-library/) module
-* Database connections (for example, using the [Database Connector](/appstore/connectors/database-connector/)), where user input is being used within constraints – these are the ways to avoid this abuse:
+* Database connections (for example, using the [Database Connector](/appstore/modules/database-connector/)), where user input is being used within constraints – these are the ways to avoid this abuse:
     * Use prepared statements, which will cause the database-specific connector to take care of escaping the value
     * Sanity-check your user input (for example, use a regular expression to check if your user input only contains alphanumeric characters, spaces, and dashes)
 
@@ -145,7 +145,7 @@ The session token can be acquired by calling `mx.session.getConfig("csrftoken")`
 
 #### 5.2.3 Authentication Option 3, Custom {#custom}
 
-If you choose this option, the API passes the HttpRequest including all the attached HTTP request headers to a microflow. These can be used in your microflow to verify the existence of a valid custom Authorization header or other identifier(s). The microflow returns a `System.User` object or entity specialization thereof. This can be a new or existing object, based on the content of the HTTP request headers.
+If you choose this option, the API passes the HttpRequest including all the attached HTTP request headers to a microflow. These can be used in your microflow to verify the existence of a valid custom Authorization header or other identifier (or identifiers). The microflow returns a `System.User` object or entity specialization thereof. This can be a new or existing object, based on the content of the HTTP request headers.
 
 This functionality allows you, for example, to contact an external Identity Provider or verify the access to the API endpoint and resource based on scopes and claims encoded in a JWT token.
 

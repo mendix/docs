@@ -22,27 +22,21 @@ A template grid showing products with name, description, and image.
 
 {{% /alert %}}
 
-## 2 Components
+## 2 Appearance Properties
 
-### 2.1 Sort Bar
-
-See [Sort Bar](/refguide/sort-bar/).
-
-## 3 Appearance Properties
-
-### 3.1 Enable Striping
+### 2.1 Enable Striping
 
 With striping enabled you can set the contents of even and uneven template grid rows individually. This way you can create a striping effect by varying color for the 2 different row styles.
 
-### 3.2 Number of Columns
+### 2.2 Number of Columns
 
 This defines the amount of columns the template grid will contain.
 
-## 4 Common Properties
+## 3 Common Properties
 
 {{% snippet file="/static/_includes/refguide/name-property.md" %}}
 
-## 5 Data Source Properties
+## 4 Data Source Properties
 
 The data source properties determine which objects will be shown in the template grid. The list of objects in the template grid is constrained by the following mechanisms:
 
@@ -50,10 +44,10 @@ The data source properties determine which objects will be shown in the template
 2. For nested template grids, if an entity path is used, only the objects reachable by following the path from the containing object are shown.
 3. For nested template grids, if a microflow is used, the objects returned by the microflow are shown.
 
-### 5.1 Entity (Path)
+### 4.1 Entity (Path)
 
 The entity (path) property specifies from which entity instances will be shown in the template grid. A top-level template grid is always connected to an entity. A nested template grid can either be connected to an entity or to an entity path starting in the entity of the containing data view. The entity path can follow associations irrespective of type and ownership.
 
-### 5.2 Microflow
+### 4.2 Microflow
 
 When a nested template grid is connected to an entity, a microflow is needed to retrieve the data. The input parameter of these microflows is always the object of the containing data view and the output is a list of objects with the type of the nested template grid.

@@ -13,9 +13,9 @@ aliases:
 
 ## 1 Introduction
 
-Catalog is an open, standards-based metadata repository that enables Mendix developers and administrators to discover and explore data sources throughout their connected ecosystem. This respository is accessible to [authorized users](/catalog/manage-data-sources/user-roles/) in your company on the web app, catalog.mendix.com, or through [Catalog APIs](/apidocs-mxsdk/apidocs/catalog-apis/).
+Catalog is an open, standards-based metadata repository that enables Mendix developers and administrators to discover and explore data sources throughout their connected ecosystem. This repository is accessible to [authorized users](/catalog/manage-data-sources/user-roles/) in your company on the web app, catalog.mendix.com, or through [Catalog APIs](/apidocs-mxsdk/apidocs/catalog-apis/).
 
-{{% alert color="info" %}}The Catalog currently supports OData data sources, or services, APIs, or databases that are [wrapped in OData](/refguide/wrap-services-odata/).{{% /alert %}}
+{{% alert color="info" %}}The Catalog currently supports OData data sources, or services, APIs, or databases that are wrapped in OData.{{% /alert %}}
 
 ## 2 Your Company's Catalog
 
@@ -34,16 +34,16 @@ You can use the Catalog with any deployment method, though there are differences
 | Deployment Method | How are Data Sources Registered? | 
 | --- | --- |
 | [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) | Published OData services in a deployed app are [registered automatically](/catalog/register/register-data/#mendix-cloud) as data sources in the Catalog <br> [Register sources using the Registration API](/catalog/register/register-data/#register-services) |
-| [Private Cloud](/developerportal/deploy/private-cloud/), [Tencent Cloud](/developerportal/deploy/tencent-deploy/) | Using the [Registration API](/catalog/register/register-data/#register-services) |
+| [Private Cloud](/developerportal/deploy/private-cloud/) | Using the [Registration API](/catalog/register/register-data/#register-services) |
 | [On-Premises](/developerportal/deploy/on-premises-design/) | Using the [Registration API](/catalog/register/register-data/#register-services) |
 
 Once data sources are registered, the metadata is stored in the Catalog so that you can share these sources with authorized users in your company.
 
 ## 4 Try It Out
 
-Follow [Share Data Between Apps](/data-hub/share-data/) to use the Catalog to share data between two Mendix apps.
+Follow [Share Data Between Apps](/howto/integration/share-data/) to use the Catalog to share data between two Mendix apps.
 
-Build on this experience by learning how to [write data to another app](/catalog/write-data/).
+Build on this experience by learning how to [write data to another app](/howto/integration/write-data/).
 
 ## 5 Processes and Properties
 

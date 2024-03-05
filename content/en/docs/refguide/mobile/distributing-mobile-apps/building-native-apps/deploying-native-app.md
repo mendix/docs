@@ -1,9 +1,9 @@
 ---
-title: "Deploy Your First Mendix Native Mobile App"
+title: "Build a Mendix Native App in the Cloud"
 linktitle: "Deploy Mendix Native Mobile App"
 url: /refguide/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/
-weight: 10
-description: Describes how to deploy your first Mendix native mobile app with the Mendix Native Mobile Builder.
+weight: 30
+description: Describes how to Build a Mendix native app in the cloud with the Mendix Native Mobile Builder.
 tags: ["native", "mobile", "deploy", "mendix native mobile builder", "builder", "appcenter"]
 aliases:
     - /howto/mobile/deploying-native-app/
@@ -13,7 +13,7 @@ aliases:
 
 This guide teaches you how to go from a blank slate to an app running on a device.
 
-The Mendix Native Mobile Builder is the UI tool to set up and build your Mendix Native Mobile Apps. It is directly accessible in Mendix Studio Pro v8.15 and above for all apps with a native mobile navigation profile.
+The Mendix Native Mobile Builder is the UI tool to set up and build your Mendix Native Mobile Apps. It is directly accessible in Mendix Studio Pro 8.15 and above for all apps with a native mobile navigation profile.
 
 {{% alert color="info" %}}
 The Mendix Native Mobile Builder does not currently support connections behind proxy servers. Please make sure you are not behind a proxy server and that your security rules allow access to the required services.

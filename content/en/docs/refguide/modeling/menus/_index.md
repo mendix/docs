@@ -21,7 +21,7 @@ The top-bar of Studio Pro contains the following menus:
 * [Run](#run) – contains actions for deploying and monitoring your app 
 * [Version Control](#version-control) – contains setting for version control
 * [Language](#language) – contains language and translation settings
-* [Help](#help)  – allows you to view documentation, the [Mendix Forum](https://forum.mendixcloud.com/p/questions), open log file directory, or view information on  the current information of Studio Pro
+* [Help](#help)  – allows you to view documentation, the [Mendix Community](https://community.mendix.com/p/questions), open log file directory, or view information on  the current information of Studio Pro
 
 ## 2 Global Navigation Menu {#global-navigation-menu}
 
@@ -45,7 +45,7 @@ In the **App** menu, you can view and/or manipulate settings that are connected 
 
 ## 7 Run Menu {#run}
 
-The **Run** menu contains actions for deploying and monitoring your app, such as **Publish**, **Run locally**, or **Debugger**. For more information on the **Run** menu, see [Run Menu](/refguide/run-menu/). 
+The **Run** menu contains actions for deploying and monitoring your app, such as **Publish**, **Run Locally**, or **Debugger**. For more information on the **Run** menu, see [Run Menu](/refguide/run-menu/). 
 
 ## 8 Version Control Menu {#version-control}
 
@@ -61,7 +61,7 @@ In the **Language** menu, you can add alternative languages to your app so that 
 | --- | --- | --- |
 | **Help** | Opens the documentation page about the currently selected element. If an entity is selected, for example, the documentation for entities will be shown. | <kbd>F1</kbd> |
 | **Help Contents** | Opens the home page of the documentation in the default web browser. |   |
-| **Ask a Question** | Opens the Mendix Forum in the default web browser. |   |
+| **Ask a Question** | Opens the Mendix Community in the default web browser. |   |
 | **Open Log File Directory** | Opens the log files written by Studio Pro that can be used to see what might be the reason something went wrong in Studio Pro. Log files can also be used to share with Mendix Support when you submit a ticket. |   |
 | **About Mendix Studio Pro** | Shows information about the current version of Mendix Studio Pro. |   |
 

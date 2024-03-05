@@ -217,7 +217,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 * We added a section to **Get Studio Pro** for downloading versions that have [long-term support (LTS)](/releasenotes/studio-pro/lts-mts/#lts) and [medium-term support (MTS)](/releasenotes/studio-pro/lts-mts/#mts).
 
-    {{% alert color="info" %}}This is based on an [upvoted idea from Alexander Keßler](https://forum.mendixcloud.com/link/ideas/2212) submitted to the [Mendix Idea Forum](https://forum.mendixcloud.com/link/ideas). Thanks, Alexander!{{% /alert %}}
+    {{% alert color="info" %}}This is based on an [upvoted idea from Alexander Keßler](https://community.mendix.com/link/ideas/2212) submitted to the [Mendix Community](https://community.mendix.com/link/ideas). Thanks, Alexander!{{% /alert %}}
 
 #### Fixes
 
@@ -337,7 +337,7 @@ Content that was marked as **Protected** as well as content marked as **Shared w
 
 We added the flexibility to label your App Store content with a [custom version number](/appstore/sharing-content/#updating).
 
-{{% alert color="info" %}}This is based on an [upvoted idea from Andreas Blaesius](https://forum.mendixcloud.com/link/ideas/1324) submitted to the [Mendix Idea Forum](https://forum.mendixcloud.com). Thanks, Andreas!{{% /alert %}}
+{{% alert color="info" %}}This is based on an [upvoted idea from Andreas Blaesius](https://community.mendix.com/link/ideas/1324) submitted to the [Mendix Community](https://community.mendix.com/). Thanks, Andreas!{{% /alert %}}
 
 ### August 30, 2019
 
@@ -386,7 +386,7 @@ We renamed all the SAP-related connectors and app templates in the App Store to 
 
 #### Improvements
 
-We added a component in the App Store which, when configured in your app, allows you to use the logging format supported by SAP Kibana. For more information, see [SAP Logging Connector](/appstore/connectors/sap/sap-logger/).
+We added a component in the App Store which, when configured in your app, allows you to use the logging format supported by SAP Kibana. For more information, see [SAP Logging Connector](/appstore/modules/sap/sap-logger/).
 
 ### June 6, 2019
 

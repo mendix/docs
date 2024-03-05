@@ -11,8 +11,10 @@ aliases:
 
 {{% alert color="info" %}}
 This document is for the Mendix Feedback module, compatible with Studio Pro 9.18.6 and above.
+{{% /alert %}}
 
-⚠ If you are using the deprecated Mendix Feedback widget (compatible with Studio Pro 8.6.0 and above), see the [Legacy Mendix Feedback Widget Documentation](#legacy-feedback-docs) sections below. Mendix recommends using the newer Mendix Feedback module, as the deprecated Feedback widget will no longer receive regular updates.
+{{% alert color="warning" %}}
+If you are using the deprecated Mendix Feedback widget (compatible with Studio Pro 8.6.0 and above), see the [Legacy Mendix Feedback Widget Documentation](#legacy-feedback-docs) sections below. Mendix recommends using the newer Mendix Feedback module, as the deprecated Feedback widget will no longer receive regular updates.
 {{% /alert %}}
 
 {{% alert color="warning" %}}
@@ -39,7 +41,7 @@ The [Mendix Feedback](https://marketplace.mendix.com/link/component/205506) modu
 {{% alert color="info" %}}
 From 12 August, 2023 onwards, the way that feedback is presented in the Developer Portal will become part of **App Insights**. For details the [Feedback](/developerportal/app-insights/feedback/) documentation for details.
 
-Existing and new feedback items will continue to be available and you will not need to change the Mendix Feedback module in your app(s).
+Existing and new feedback items will continue to be available and you will not need to change the Mendix Feedback module in your app.
 {{% /alert %}}
 
 The Mendix Feedback module is easy to set up and automatically attaches additional information to each submitted issue such as the user’s name, role, active form, browser version, and screen resolution.

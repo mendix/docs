@@ -156,11 +156,11 @@ If you manage your projects in Jira, you can connect your apps in the Developer 
 ## 7 Webhooks {#webhooks}
 
 {{% alert color="warning" %}}
-⚠ This tab is for webhooks for stories and Sprints, and it is deprecated. This tab will be removed and these webhooks will be discontinued later in 2023. It is no longer possible to add new webhook configurations for stories and Sprints to your apps, but existing configurations will remain active and can still be edited. 
+This tab is for webhooks for stories and Sprints, and it is deprecated. This tab will be removed and these webhooks will be discontinued later in 2023. It is no longer possible to add new webhook configurations for stories and Sprints to your apps, but existing configurations will remain active and can still be edited. 
 {{% /alert %}}
 
 {{% alert color="info" %}}
-You can also set webhooks for your app to trigger endpoints when changes are made to deployment packages or models held in the git Team Server. For details, see [Webhooks](/developerportal/deploy/webhooks/).
+You can also set webhooks for your app to trigger endpoints when changes are made to deployment packages or models held in the Git Team Server. For details, see [Webhooks](/developerportal/deploy/webhooks/).
 {{% /alert %}}
 
 {{% alert color="info" %}}

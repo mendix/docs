@@ -35,8 +35,6 @@ There are three ways to install a Marketplace component, which are described in 
 
 #### 2.1.1 For Studio Pro 9.19 and Above {#current-sp}
 
-{{% alert color="info" %}}This procedure works for all types of Marketplace components, unless you are using Studio Pro China Edition.{{% /alert %}}
-
 To download content in Studio Pro [9.19](/releasenotes/studio-pro/9.19/) and above, follow these steps:
 
 1. Open Studio Pro and sign in with your Mendix credentials.
@@ -88,7 +86,7 @@ To download content in Studio Pro [9.18](/releasenotes/studio-pro/9.18/) and bel
 
 ### 2.2 Importing Content from Studio Pro's App Explorer {#import}
 
-{{% alert color="info" %}}This procedure works for [connectors](/appstore/connectors/), and [modules](/appstore/modules/) (including [add-on and solution modules](/refguide/module-settings/#module-type)).{{% /alert %}}
+{{% alert color="info" %}}This procedure works for [modules](/appstore/modules/) (including [add-on and solution modules](/refguide/module-settings/#module-type)).{{% /alert %}}
 
 To import content downloaded from the online Mendix Marketplace into Studio Pro, follow these steps:
 

@@ -68,7 +68,7 @@ div.my-column{
         flex: 0 0 31%;
         max-width: 31%;
     }
-    @include media-breakpoint-down(lg){
+    @include media-breakpoint-down(xl){
         flex: 0 0 46%;
         max-width: 46%;
     }
@@ -84,11 +84,11 @@ div.w-50{
         flex: 0 0 44%;
         max-width: 44%;
     }
-    @include media-breakpoint-down(lg){
+    @include media-breakpoint-down(xl){
         flex: 0 0 90%;
         max-width: 90%;
     }
-    @include media-breakpoint-down(md){
+    @include media-breakpoint-down(lg){
         flex: 0 0 90%;
         max-width: 90%;
     }
@@ -132,9 +132,10 @@ div.cards-layout{
     padding-left: 0;
 }
 img.my-icon{
-    width: 24px;
-    height: 24px;
-    margin: 0.5rem 0rem 0rem 1.5rem;
+    width: 1.75rem;
+    height: 1.75rem;
+    float:left;
+    margin: 0rem 0.5rem 0.5rem 0.5rem;
 }
 img.nav-icon{
     width: 24px;
@@ -159,9 +160,10 @@ h4.card-title-w-50{
         }
 }
 div.card-body{
-    padding: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
 }
-p.card-text{
+ul.card-text{
     margin-top: 1rem;
     font-size: 1.125rem;
 }

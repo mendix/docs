@@ -8,6 +8,8 @@ tags: ["studio pro", "data grid", "grid", "data widget"]
 
 {{% alert color="warning" %}}The data grid widget is not supported on native mobile pages.{{% /alert %}}
 
+{{% alert color="warning" %}}The data grid widget, which is not supported by the React client added to Mendix in [10.7](/releasenotes/studio-pro/10.7/#react-client), can be converted to a [Data Grid 2 module](/appstore/modules/data-grid-2/) through the context menu of the widget when the React client is enabled.{{% /alert %}}
+
 ## 1 Introduction
 
 A data grid shows a list of objects in a table format. For example, a data grid can show customer's name, grade, and all the orders a customer has placed:
@@ -23,8 +25,7 @@ A data grid contains the following components:
 
 1. [Search bar](/refguide/search-bar/) – allows end-users to search for objects in the data grid
 2. [Control bar](/refguide/control-bar/) – allows you to control the objects displayed in the data grid by means of buttons
-3. [Sort bar](/refguide/sort-bar/) – allows end-users to sort items in the data grid 
-4. [Grid Columns](/refguide/columns/) – allows end-users to set properties for a data grid column
+3. [Grid Columns](/refguide/columns/) – allows end-users to set properties for a data grid column
     {{< figure src="/attachments/refguide/modeling/pages/data-widgets/grids/data-grid/data-grid-components.png" >}}
 
 ## 3 Properties
@@ -42,6 +43,8 @@ Data grid properties consist of the following sections:
 * [Visibility](#visibility)
 
 ### 3.1 Common Section {#common}
+
+The rows of the data grid can be sorted using the `Sort order` property. It is only available for **Database** [data sources](#data-source). For more information on sorting, see [Sort Order](/refguide/sort-order/).
 
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 

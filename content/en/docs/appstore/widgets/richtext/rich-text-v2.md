@@ -1,6 +1,6 @@
 ---
-title: "Rich Text"
-url: /appstore/widgets/rich-text/
+title: "Rich Text v2.0 & Below"
+url: /appstore/widgets/rich-text-v2/
 category: "Widgets"
 description: "Describes the configuration and usage of the Rich Text widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "widget", "rich text", "platform support"]
@@ -9,20 +9,28 @@ tags: ["marketplace", "marketplace component", "widget", "rich text", "platform 
 
 ## 1 Introduction
 
+{{% alert color="info" %}}
+This documentation applies to Rich Text widget versions 2.0 and below. 
+
+For documentation on Rich Text widget versions 3.0 and above, see [Rich Text](/appstore/widgets/rich-text/).
+
+Due to CKEditor 4 reaching end of life support status, we transitioned the rich text widget to tinyMCE starting with version 3.0.0.
+{{% /alert %}}
+
 The [Rich Text](https://marketplace.mendix.com/link/component/74889/) widget provides the user with an WYSIWYG editor, where the user can enter and edit rich-text content. The widget automatically converts the rich-text content into a string in HTML format, which can be stored in an attribute of an entity.
 
 {{< figure src="/attachments/appstore/widgets/rich-text/example.jpg" alt="Example" >}}
 
 ### 1.1 Features
 
-* Allow the user to enter and format text in a WYSIWYG editor
-* Configure which buttons are available on the toolbar of the editor
-* Automatically output the formatted text in a string in HTML format
-* Sanitize the user's input automatically or with advanced, customized filters, and display the text
-* Enable the user to wrap text elements using the keyboard shortcut <kbd>Enter</kbd> or <kbd>Shift</kbd> + <kbd>Enter</kbd>
-* Support spelling and grammar checker in the editor
-* Support code highlight, which enables the user to insert code fragments and have a live preview with highlighted syntax
-* Support the following keyboard shortcuts in the editor:
+* Allows the user to enter and format text in a WYSIWYG editor
+* Configures which buttons are available on the toolbar of the editor
+* Automatically outputs the formatted text in a string in HTML format
+* Sanitizes the user's input automatically or with advanced, customized filters, and display the text
+* Enables the user to wrap text elements using the keyboard shortcut <kbd>Enter</kbd> or <kbd>Shift</kbd> + <kbd>Enter</kbd>
+* Supports spelling and grammar checker in the editor
+* Supports code highlight, which enables the user to insert code fragments and have a live preview with highlighted syntax
+* Supports the following keyboard shortcuts in the editor:
     * <kbd>Ctrl</kbd> + <kbd>B</kbd> – bold
     * <kbd>Ctrl</kbd> + <kbd>I</kbd>– italicize
     * <kbd>Ctrl</kbd> + <kbd>U</kbd> – underline
@@ -166,7 +174,7 @@ For more information, see [Common Section](/refguide/common-widget-properties/#c
 
 ## 3 Strict CSP Compatibility
 
-This widget is not yet fully compliant with strict content security policy (CSP). If used with strict CSP, it will result in CSP errors in the console and potentially broken flows in the widget.
+This widget is not yet fully compliant with strict content security policy (CSP). If used with strict CSP, it will result in CSP errors in the console and potentially broken flows in the widget. For more information on CSP compliance, see [Widget CSP Overview](/appstore/widgets/security/content-security-policy/).
 
 ## 4 Widgets Below Version 2.0.0
 

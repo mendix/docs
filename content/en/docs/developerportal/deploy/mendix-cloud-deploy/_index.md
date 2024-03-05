@@ -127,7 +127,9 @@ Before starting the process for deploying a licensed app, make sure to complete 
 * Your app is linked to a licensed cloud node
 * You have [transport rights](/developerportal/deploy/node-permissions/#transport-rights)
 * Your [two-factor authentication](/developerportal/deploy/two-factor-authentication/) is set up
-* The deployment package for your app is not bigger than 1 GB
+* The deployment package for your app is not bigger than 1 GB (uncompressed)
+
+{{% alert color="info" %}}You can verify that your app is under the 1 GB limit by creating a deployment package, as described below, and then viewing that package's size in the package details.{{% /alert %}}
 
 #### 2.1.2 Creating a Deployment Package for a Licensed App
 
@@ -188,7 +190,7 @@ The app is now deployed. You can configure the administrative account.
 Before starting the process for deploying a Free App, make sure to complete these prerequisites:
 
 * You have created an app
-* As with licensed apps, there is a size limit of 1 GB; you can verify that your app is under the limit by creating a deployment package (although you will not need to use that package for the deployment itself)
+* As with licensed apps, the uncompressed size of the deployment package must not exceed 1 GB
 
 #### 2.2.2 Deploying the App
 

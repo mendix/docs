@@ -140,6 +140,13 @@ You can now configure the resources required for your namespace.
 
 The first time you configure the namespace, you should select all the items under **Select items to configure** except **Proxy** and **Custom TLS**. Only select **Proxy** if you want to configure a proxy for your namespace. Select **Custom TLS** only if you want to configure custom CAs for your namespace.
 
+After pressing the **Configure namespace** button, you will see a prompt to resume a previous session.
+Clicking the **OK** button will load form field values from a locally saved previous session file.
+For example, if you'd like to change the database hostname, or if you exited without saving or applying changes.
+
+* Press **OK** to restore all filled forms to their valued values from the previous session.
+* Press **Cancel** to start with empty form fields (for example, to create an additional database plan).
+
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/configure-namespace.png" >}}
 
 The options do the following:

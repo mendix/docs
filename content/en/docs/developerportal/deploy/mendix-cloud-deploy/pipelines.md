@@ -248,4 +248,5 @@ It is not currently possible to add the same pipeline step more than once in a p
 
 ## 6 Read More
 
+* [Learning Path: Choose the Right Software Delivery Approach](https://academy.mendix.com/link/paths/156/Choose-the-Right-Software-Delivery-Approach) – This learning path provides a structured, hands-on introduction to Pipelines, as well as a couple of other methods for building and deploying Mendix apps.
 * [Implement a Simple CI/CD Pipeline with Mendix APIs](/howto/integration/implement-cicd-pipeline/) – This document describes how to use Mendix APIs to set up your CI/CD process; this is possible if you use Jenkins, GitLab, or another CI/CD tool.

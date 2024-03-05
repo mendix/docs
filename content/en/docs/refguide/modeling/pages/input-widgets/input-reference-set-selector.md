@@ -96,7 +96,7 @@ You can generate a new page to show by right-clicking the widget and selecting *
 
 The properties in the Selectable objects section determine the objects from which the end user can make a selection. As source, you can use **Database** or **XPath**. When using **XPath**, you can add an **XPath constraint**, or use a **Constrained by** path.
 
-For more information, see the [XPath](/refguide/reference-selector/#xpath-constraints) section of *Reference Selector*.
+For more information, see the [Selectable Objects](/refguide/reference-selector/#selectable-objects) section of *Reference Selector*.
 
 {{% alert color="info" %}}
 You cannot use a microflow to define selectable objects in an input reference set selector.

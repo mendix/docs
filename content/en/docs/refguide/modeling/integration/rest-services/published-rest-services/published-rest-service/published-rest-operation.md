@@ -72,7 +72,7 @@ A microflow parameter that has the List or Object type indicates a body paramete
 
 An operation microflow may also take an [HttpRequest](/refguide/http-request-and-response-entities/#http-request) parameter. You can add this parameter if you want to inspect the requested URL and headers.
 
-To set the status code and headers, add an [HttpResponse](/refguide/http-request-and-response-entities/#http-response) object parameter and set the attributes of that object, or return an `HttpResponse`. Setting a custom reason phrase on the `HttpResponse` object has no effect; for HTTP/1.x requests the runtime always returns the default reason phrase for the status code, and HTTP/2 does not support reason phrases at all.
+To set the status code and headers, add an [HttpResponse](/refguide/http-request-and-response-entities/#http-response) object parameter and set the attributes of that object, or return an `HttpResponse`. Setting a custom reason phrase on the `HttpResponse` object [has no effect](/refguide/http-request-and-response-entities/#reason-phrase).
 
 The result of the microflow is the result of the operation and can include the following:
 

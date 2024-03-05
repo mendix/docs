@@ -36,8 +36,12 @@ The `HttpResponse` entity has the following attributes:
 
 For more information on HTTP status codes, see the [W3C Specification of Status Code Definitions](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html).
 
-Setting `ReasonPhrase` has no effect; for HTTP/1.x requests the runtime always returns the default reason phrase for the status code, whereas HTTP/2 does not support reason phrases at all.
-
 You can retrieve or create response headers via the `HttpHeaders` association.
 
 An important `HttpResponse` header is `Content-Type`, which indicates how the content should be interpreted. For more information on this header, see the [W3C specification of Content-Type](https://www.w3.org/Protocols/rfc1341/4_Content-Type.html).
+
+### 3.1 Why Does Setting `ReasonPhrase` Have No Effect? {#reason-phrase}
+
+The HTTP/1.x protocol allowed servers to include a __reason phrase__ in the response, including non-standard ones. In HTTP/2, reason phrases have been removed. Following that, many web servers (including the one that the Mendix runtime uses), do not allow setting anything other than the default reason phrase for the status code, even in HTTP/1.x, which technically allows it.
+
+The attribute `ReasonPhrase` is maintained as it is still included when an `HttpResponse` is received from a consumed REST service call.

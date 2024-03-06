@@ -48,9 +48,9 @@ Support for importing non-persistable entities from a consumed OData service was
 
 ### 2.1.2 External Enumerations
 
-When you consume an external entity that has an attribute of an enumeration type, the corresponding enumeration will be added to your project if it was not previously existing. The enumeration is created according to the definition in the OData service contract, meaning that all allowed values will be automatically added to your enumeration.
+When you consume an external entity that has an attribute of an enumeration type, the corresponding enumeration will be added to your project if it did not previously exist. The enumeration is created according to the definition in the OData service contract, meaning that all allowed values will be automatically added to your enumeration.
 
-When the consumed OData service is deleted from your project, Studio Pro allows you to keep using an enumeration that was created from the deleted service by detaching it using the **Detach** button on the **External enumeration** dialog.
+When the consumed OData service is deleted from your project, Studio Pro allows you to keep using an enumeration that was created from the deleted service by using the **Detach** button on the **External enumeration** dialog.
 
 ### 2.2 External Actions {#external-actions}
 

@@ -1,17 +1,7 @@
-/*
+// Bootstrap options
 
-Bootstrap variables overrides for theme.
-See https://github.com/twbs/bootstrap/pull/23260
-*/
-
-// Bootstrap flags. For more, see https://getbootstrap.com/docs/4.0/getting-started/theming/
 $enable-gradients: true !default;
-$enable-rounded: true !default;
 $enable-shadows: true !default;
-
-// Theme flags
-
-$td-enable-google-fonts: true !default;
 
 // Theme colors
 
@@ -25,22 +15,22 @@ $success: #0D990D !default; // DB - Green-8 from PDS
 $info: #146FF4 !default; // MX Blue YL - updated the Mendix Blue color to its latest version in MX 10
 $warning: #C97800 !default; // DB - Yellow-8 from PDS
 $danger:  #D31E23 !default; // DB - Red-7 PDS
-$white: #fff !default;
+$white: #fff; // YL - Override the default color defined in _variables_forward.scss
 $light: #99D0FF !default; // DB - Blue-3 from PDS
 $dark: #0A1325 !default; // Gray-10 from PDS (MxDock color)
-$blue: #146FF4 !default; // MX Blue YL - updated the Mendix Blue color to its latest version in MX 10
+$blue: #146FF4; // YL - Mendix Blue in SP 10; Override the default color defined in _variables_forward.scss
 $gray-light: #f2f2f3 !default;
 $gray-100: #f7f7f7 !default;
 $gray-200: #f2f2f3 !default;
-$gray-300: #e7e7e9 !default;
+$gray-300: #e7e7e9; // YL - Override the default color defined in _variables_forward.scss
 $gray-400: #d9dbdd !default;
 $gray-500: #c1c3c8 !default;
 $gray-border: $gray-500 !default;
-$gray-600: #9ea2a9 !default;
+$gray-600: #9ea2a9; // YL - Override the default color defined in _variables_forward.scss
 $gray-700: #6b707b !default;
 $gray-800: #535965 !default;
 $gray-900: #2f3646 !default;
-$black: #000 !default;
+$black: #000 !default; // YL - Override the default color defined in _variables_forward.scss
 
 $code-color: darken($secondary, 20%) !default;
 
@@ -88,52 +78,49 @@ $danger-8: #bc1622;
 $danger-9: #9e051b;
 $danger-10: #780328;
 
-$theme-colors: () !default;
-$theme-colors: map-merge(
-  (
-    "info-1":       $info-1,
-    "info-2":       $info-2,
-    "info-3":       $info-3,
-    "info-4":       $info-4,
-    "info-5":       $info-5,
-    "info-6":       $info-6,
-    "info-7":       $info-7,
-    "info-8":       $info-8,
-    "info-9":       $info-9,
-    "info-10":      $info-10,
-    "success-1":    $success-1,
-    "success-2":    $success-2,
-    "success-3":    $success-3,
-    "success-4":    $success-4,
-    "success-5":    $success-5,
-    "success-6":    $success-6,
-    "success-7":    $success-7,
-    "success-8":    $success-8,
-    "success-9":    $success-9,
-    "success-10":   $success-10,
-    "warning-1":    $warning-1,
-    "warning-2":    $warning-2,
-    "warning-3":    $warning-3,
-    "warning-4":    $warning-4,
-    "warning-5":    $warning-5,
-    "warning-6":    $warning-6,
-    "warning-7":    $warning-7,
-    "warning-8":    $warning-8,
-    "warning-9":    $warning-9,
-    "warning-10":   $warning-10,
-    "danger-1":     $danger-1,
-    "danger-2":     $danger-2,
-    "danger-3":     $danger-3,
-    "danger-4":     $danger-4,
-    "danger-5":     $danger-5,
-    "danger-6":     $danger-6,
-    "danger-7":     $danger-7,
-    "danger-8":     $danger-8,
-    "danger-9":     $danger-9,
-    "danger-10":    $danger-10
-  ),
-  $theme-colors
+$custom-theme-colors: (
+  "info-1":       $info-1,
+  "info-2":       $info-2,
+  "info-3":       $info-3,
+  "info-4":       $info-4,
+  "info-5":       $info-5,
+  "info-6":       $info-6,
+  "info-7":       $info-7,
+  "info-8":       $info-8,
+  "info-9":       $info-9,
+  "info-10":      $info-10,
+  "success-1":    $success-1,
+  "success-2":    $success-2,
+  "success-3":    $success-3,
+  "success-4":    $success-4,
+  "success-5":    $success-5,
+  "success-6":    $success-6,
+  "success-7":    $success-7,
+  "success-8":    $success-8,
+  "success-9":    $success-9,
+  "success-10":   $success-10,
+  "warning-1":    $warning-1,
+  "warning-2":    $warning-2,
+  "warning-3":    $warning-3,
+  "warning-4":    $warning-4,
+  "warning-5":    $warning-5,
+  "warning-6":    $warning-6,
+  "warning-7":    $warning-7,
+  "warning-8":    $warning-8,
+  "warning-9":    $warning-9,
+  "warning-10":   $warning-10,
+  "danger-1":     $danger-1,
+  "danger-2":     $danger-2,
+  "danger-3":     $danger-3,
+  "danger-4":     $danger-4,
+  "danger-5":     $danger-5,
+  "danger-6":     $danger-6,
+  "danger-7":     $danger-7,
+  "danger-8":     $danger-8,
+  "danger-9":     $danger-9,
+  "danger-10":    $danger-10
 );
+
 
 // UI element colors
 
@@ -155,59 +142,14 @@ $link-hover-decoration: none !default;
 
 // Fonts
 
-$google_font_name: "Noto Sans" !default; // NK - changed to Mendix font
-$google_font_family: "Noto+Sans:ital,wght@0,400;0,600;1,400;1,600" !default; // MvM - changed by request in #docs 2023-12-11
+$google_font_name: "Noto Sans"; // NK - changed to Mendix font
+$google_font_family: "Noto+Sans:ital,wght@0,400;0,600;1,400;1,600"; // MvM - changed by request in #docs 2023-12-11
 $web-font-path: "https://fonts.googleapis.com/css2?family=#{$google_font_family}&display=swap"; // NK - changed to Mendix font
-$font-awesome-font-name: "Font Awesome 6 Free" !default;
 $font-family: "Noto Sans"; // NK - changed to Mendix font
-$td-fonts-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
-@if $td-enable-google-fonts {
-    $td-fonts-serif: prepend($td-fonts-serif, "#{$google_font_name}");
-}
-
-$font-family-sans-serif: $td-fonts-serif !default;
-
-$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-$font-family-base: $font_family !default; // NK - changed to Mendix font
-$font-size-base: 0.875rem !default; // NK - if we want 14px default -> 0.875rem
+$font-family-base: $font_family; // NK - changed to Mendix font
+$font-size-base: 0.875rem; // NK - if we want 14px default -> 0.875rem
 $line-height-base: 1.4 !default; // NK - changed
-
-// Font weights
-
-$font-weight-light: 300 !default;
-$font-weight-normal: 400 !default;
-$font-weight-medium: 500 !default;
-$font-weight-bold: 700 !default;
-
-$font-weight-body-text: $font-weight-normal !default;
-$headings-font-weight: $font-weight-normal !default; // NK - adjusted weight
-
-// Heading sizes
-
-$h1-font-size: $font-size-base * 2.25 !default;
-$h2-font-size: $font-size-base * 2 !default;
-$h3-font-size: $font-size-base * 1.5 !default;
-$h4-font-size: $font-size-base * 1.35 !default;
-$h5-font-size: $font-size-base * 1.15 !default;
-$h6-font-size: $font-size-base !default;
-
-// Display styles
-
-$display1-weight: $font-weight-bold !default;
-$display2-weight: $font-weight-bold !default;
-$display3-weight: $font-weight-bold !default;
-$display4-weight: $font-weight-bold !default;
-$display1-size: 3rem !default;
-$display2-size: 2.5rem !default;
-$display3-size: 2rem !default;
-$display4-size: 1.75rem !default;
-
-// Space
-
-$spacer: 1rem;
-$td-block-space-top-base: 4 * $spacer !default;
-$td-block-space-bottom-base: 4 * $spacer !default;
 
 // Pagination
 

@@ -45,7 +45,7 @@ The following articles contain information about deploying your Mendix app on th
 * [Use SAP Connectivity Services with REST and SOAP](/developerportal/deploy/sap-cloud-platform/sap-destination-with-rest/)
 * [Application Autoscaler for SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/sap-autoscaler/) – has information on binding and configuring the Application Autoscaler
 * [SAP Single Sign-On](/developerportal/deploy/sap-cloud-platform/sap-single-sign-on/) – describes utilizing all the options of Mendix SSO as an SAP user
-* [SAP Cloud Connector](/appstore/connectors/sap/sap-cloud-connector/) – describes using the SAP Cloud Connector so that a Mendix app deployed on SAP BTP can access any SAP system running on premises
+* [SAP Cloud Connector](/developerportal/deploy/sap-cloud-platform/sap-cloud-connector/) – describes using the SAP Cloud Connector so that a Mendix app deployed on SAP BTP can access any SAP system running on premises
 
 ## 3 Learning Path
 

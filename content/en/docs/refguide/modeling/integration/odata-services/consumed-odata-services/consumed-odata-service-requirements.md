@@ -46,9 +46,8 @@ Vocabulary annotations can be used in a service to indicate features that are no
 * **Updatable** – an entity marked as `Updatable="true"` with `DeltaUpdateSupported="true"` and `UpdateMethod="2"` will make the entity updatable in the domain model. That means, for example, that you can model pages that change attributes values and associated objects, and that you can use the entity in the [Change Object](/refguide/change-object/) activity. For updatable entities, the annotations `NonUpdatableProperties` and `NonUpdatableNavigationProperties` list the (navigation) properties that cannot be updated.
 * **Deletable** - an entity marked as `Deletable="true"` can be used in the [Delete External Object](/refguide/delete-external-object/) activity.
 
-An entity can only be used when it is accessible through an entity set.
-
-Furthermore, an entity can only be used if it is uniquely identifiable with a key. The key can consist of one or more properties, as long as the following conditions are met:
+An entity can only be used as an external entity when it is accessible through an entity set, and when it is uniquely identifiable with a key. 
+The key can consist of one or more properties, as long as the following conditions are met:
 
 * The properties cannot be nullable (so they must have `isNullable="false"` specified).
 * Only the following types are allowed: 
@@ -67,6 +66,8 @@ Furthermore, an entity can only be used if it is uniquely identifiable with a ke
 {{% alert color="info" %}}
 The list above for supported key fields does not include `Date` or `DateTime` data types.
 {{% /alert %}}
+
+Entities that are not accessible through an entity set can be used as a [non-persistable entity](/refguide/consumed-odata-services/#external-non-persistable-entities).
 
 ### 3.2 Attributes
 

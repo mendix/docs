@@ -103,16 +103,16 @@ To add the certificate, perform the following steps:
 3. In the **Network** tab, in the **Outgoing Connections Certificates** section, add the client certificate that you used to create a trust anchor in Roles Anywhere.
 4. From the list, select the certificate that you added, and then click **Details**.
 
-   {{< figure src="/attachments/appstore/connectors/aws-authentication/ongoing-connections-certificate.png" >}}
+   {{< figure src="/attachments/appstore/modules/aws-authentication/ongoing-connections-certificate.png" >}}
 
 5. Click **New**.
 6. In the **Details** dialog box, in the **Web Service Call name** field, enter an identifier for the certificate, for example, *MY_S3*.
     The client certificate identifier is used as input when you create the temporary credentials.
-   {{< figure src="/attachments/appstore/connectors/aws-authentication/identifier.png" >}}
+   {{< figure src="/attachments/appstore/modules/aws-authentication/identifier.png" >}}
 
 The client certificate that you added now shows as **Currently enabled**.
 
-{{< figure src="/attachments/appstore/connectors/aws-authentication/certificate-currently-enabled.png" >}}
+{{< figure src="/attachments/appstore/modules/aws-authentication/certificate-currently-enabled.png" >}}
 
 #### 4.1.1.2 Configuring the Temporary Credentials Connection Details in the Developer Portal {#configure-credentials}
 
@@ -131,7 +131,7 @@ The client certificate that you added now shows as **Currently enabled**.
 
    The image below shows an example:
 
-   {{< figure src="/attachments/appstore/connectors/aws-authentication/devportal-edit-constant.png" >}}
+   {{< figure src="/attachments/appstore/modules/aws-authentication/devportal-edit-constant.png" >}}
 
 4. Fill out the **New Value** field and click **Save**.
 5. After setting all constants, restart the environment in order to apply the new constant values.
@@ -144,14 +144,14 @@ After enabling the certificate, you can now configure the microflow that authent
 2. Create or edit the microflow that requires AWS authentication.
 3. Drag a **GetTemporaryCredentials** activity from the **Toolbox** into the work area of the microflow.
 
-    {{< figure src="/attachments/appstore/connectors/aws-authentication/toolbox-temporary.png" >}}
+    {{< figure src="/attachments/appstore/modules/aws-authentication/toolbox-temporary.png" >}}
 
-    {{< figure src="/attachments/appstore/connectors/aws-authentication/microflow-temporary.png" >}}
+    {{< figure src="/attachments/appstore/modules/aws-authentication/microflow-temporary.png" >}}
 
 4. Select the **AWSRegion** parameter and click **Edit parameter value**.
 5. Select **Expression** and enter the corresponding AWS region from the enumeration **ENUM_Region**. Then click **OK**.
 
-    {{< figure src="/attachments/appstore/connectors/aws-authentication/set-awsregion-param.png" >}}
+    {{< figure src="/attachments/appstore/modules/aws-authentication/set-awsregion-param.png" >}}
 
 6. Click **OK**. The activity returns a **TemporaryCredentials** object that provides the required AWS authentication credentials for your microflow.
 7. Continue the configuration by adding more activities to your microflow, as required by your specific use case.
@@ -164,7 +164,7 @@ To run the AWS Authentication connector locally using Studio Pro, you must add t
 2. Create a new configuration or edit an existing configuration.
 3. Go to the **Custom** tab for the configuration, and add the **ClientCertificates** and **ClientCertificatePasswords** runtime settings.
 
-   {{< figure src="/attachments/appstore/connectors/aws-authentication/custom-settings.png" >}}
+   {{< figure src="/attachments/appstore/modules/aws-authentication/custom-settings.png" >}}
 
    {{% alert color="info" %}}For more information, see [Runtime Customization](/refguide/custom-settings/).{{% /alert %}}
 
@@ -172,7 +172,7 @@ To run the AWS Authentication connector locally using Studio Pro, you must add t
 5. Make sure that the value of **Client certificate ID** correctly indicates the position of the certificate in the runtime setting. For example, if three certificates have been added in the runtime setting, and the client certificate that you want to use is the second one, then set **Client certificate ID** to *2*. 
 6. click **OK**.
 
-   {{< figure src="/attachments/appstore/connectors/aws-authentication/local-config-session-credentials-constants.png" >}}
+   {{< figure src="/attachments/appstore/modules/aws-authentication/local-config-session-credentials-constants.png" >}}
 
 #### 4.1.2 Using Credentials Generated Outside of Studio Pro {#credentials-cli}
 
@@ -196,14 +196,14 @@ To create static credentials with the **GetStaticCredentials** activity in your 
 2. Create or edit the microflow that requires AWS authentication.
 3. Drag the **GetStaticCredentials** microflow from the **Toolbox** into the work area of the microflow.
 
-    {{< figure src="/attachments/appstore/connectors/aws-authentication/toolbox-static.png" >}}
+    {{< figure src="/attachments/appstore/modules/aws-authentication/toolbox-static.png" >}}
 
-    {{< figure src="/attachments/appstore/connectors/aws-authentication/microflow-static.png" >}}
+    {{< figure src="/attachments/appstore/modules/aws-authentication/microflow-static.png" >}}
 
 4. Create a new **Configuration** in the **Settings** of your app.
 5. In the **Constants** tab, add the **Access key ID** and **Secret access key** that you [obtained from the AWS Console](#prerequisites) as **AWSAuthentication.AccessKey** and **AWSAuthentication.SecretAccessKey** respectively. You can decide how to provide them securely in your app.
 
-    {{< figure src="/attachments/appstore/connectors/aws-authentication/local-config-static-credentials-constants.png" >}}
+    {{< figure src="/attachments/appstore/modules/aws-authentication/local-config-static-credentials-constants.png" >}}
 
     The activity returns a **Credentials** object that provides the required AWS authentication credentials for your microflow.
 
@@ -250,13 +250,13 @@ The `GetSigV4Headers` microflow action computes and provides the signed headers.
 
 The output of the action is a `SigV4Headers` object.
 
-{{< figure src="/attachments/appstore/connectors/aws-authentication/sigv4action.png" >}}
+{{< figure src="/attachments/appstore/modules/aws-authentication/sigv4action.png" >}}
 
 #### 4.3.3 Example Microflow {#microflow}
 
 The following microflow shows an example implementation of signature version 4 headers authentication.
 
-{{< figure src="/attachments/appstore/connectors/aws-authentication/sigv4microflow.png" >}}
+{{< figure src="/attachments/appstore/modules/aws-authentication/sigv4microflow.png" >}}
 
 In this example, a `SigV4Builder` object and a  `Credentials` object are passed as input parameters. In the microflow, two lists of the type `SigV4Parameter` are created, one for the request headers, and one for the query parameters.
 

@@ -63,7 +63,7 @@ After setting up the authentication, to analyze a document, implement the [Analy
     3. Set the access rights for **Name**, **DeleteAfterDownload** and **Contents** to **Read/write**
     4. Set the remaining access rights to **Read**.
 
-    {{< figure src="/attachments/appstore/connectors/aws-textract/6-completed-access-rules.png" >}}
+    {{< figure src="/attachments/appstore/modules/aws-textract/6-completed-access-rules.png" >}}
    
 6. In the App Explorer, right-click on the name of your module, click **Add page**, and then select the **Grid** template.
 7. Enter a name for your page, for example, *Document_Overview*, and then click **OK**.
@@ -97,7 +97,7 @@ After setting up the authentication, to analyze a document, implement the [Analy
     2. Set the values for [AWS_Region](https://docs.aws.amazon.com/general/latest/gr/textract.html#textract_region), **AnalyzeDocumentRequest**, and the **FileDocument** parameter.
     3. Click **OK**.
 
-    {{< figure src="/attachments/appstore/connectors/aws-textract/analyze-document-properties.png" >}}
+    {{< figure src="/attachments/appstore/modules/aws-textract/analyze-document-properties.png" >}}
     
 21. In the **Toolbox** [pane](/refguide/view-menu/#layout-of-panes), search for the **AnalyzeDocumentResponse_ProcessResults** microflow and drag it onto the microflow area.
 22. Position the **AnalyzeDocumentResponse_ProcessResults** microflow between the **AnalyzeDocument** activity and the microflow end event.
@@ -113,7 +113,7 @@ After setting up the authentication, to analyze a document, implement the [Analy
     3. Select the list that the **AnalyzeDocumentResponse_ProcessResults** microflow returns.
 27. Create a page with a data view of the **Page** entity, and configure the page to display the specialized `BlockItem` model.
 
-    {{< figure src="/attachments/appstore/connectors/aws-textract/block-item-page.png" >}}
+    {{< figure src="/attachments/appstore/modules/aws-textract/block-item-page.png" >}}
 
 28. In the **Toolbox** pane, find the **Show page** activity.
 29. Drag the activity onto the microflow area between the **List* operation** activity and the end event.
@@ -125,7 +125,7 @@ After setting up the authentication, to analyze a document, implement the [Analy
 31. On the **Document_Overview** page, right-click the **Delete** button and add an **Action** button.
 32. Right-click the **Action** button, and select the **ACT_AnalyzeDocument** microflow as the on-click action. 
 
-    {{< figure src="/attachments/appstore/connectors/aws-textract/analyze-document-configure-microflow.png" >}}
+    {{< figure src="/attachments/appstore/modules/aws-textract/analyze-document-configure-microflow.png" >}}
 
 ## 4 Technical Reference
 

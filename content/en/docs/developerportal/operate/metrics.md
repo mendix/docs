@@ -409,7 +409,7 @@ There are two sets of values:
 {{% alert color="info" %}}
 As of [October 25, 2023](/releasenotes/developer-portal/mendix-cloud/#october-25-2023), whenever you create a new DB instance, it will be provisioned with a gp3 storage instance if it meets the eligibility criteria defined in the table below. This also occurs if your database is recreated.
 
-Existing databases of apps on eligible plans in Mendix Cloud (as specified in the table below) will also be migrated to gp3 storage instances soon.
+All existing databases of environments on eligible plans in Mendix Cloud (as specified in the table below) will eventually be migrated to gp3 storage instances. As of March 6, 2024, the databases of non-production environments have been migrated; production environments will also be migrated soon.
 
 | Mendix Plans      | Storage Instance Type | Storage Size         | Baseline Storage Performance | Provisioned IOPS Range | Provisioned Throughput Range |
 |-------------------|-----------------------|----------------------|------------------------------|------------------------|------------------------------|

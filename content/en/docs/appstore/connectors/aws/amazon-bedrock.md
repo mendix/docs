@@ -996,3 +996,12 @@ The sync can be done from the information page of your knowledge base in the Ama
 {{% alert color="info" %}}
 The sync can take up to a few minutes and the calls to your knowledge base during this process cannot be handled accurately. To make sure the sync process has ended, you can use the [GetIngestionJob](#get-ingestion-job) action in the Amazon Bedrock Connector to retrieve the status of the ingestion job, along with other details.
 {{% /alert %}}
+
+#### 6.1.3 Guardrails
+
+AWS has introduced safeguards for Bedrock (currently in preview). When available, this feature will allow you to 
+- Filter harmful content with configurable thresholds based on your responsible AI policies
+- Determine how to handle personally identifiable information (PII) 
+- Deny topics.
+
+More information can be found in this [AWS blogpost](https://aws.amazon.com/blogs/aws/guardrails-for-amazon-bedrock-helps-implement-safeguards-customized-to-your-use-cases-and-responsible-ai-policies-preview/) and in the [AWS documentation](https://aws.amazon.com/de/bedrock/guardrails/).

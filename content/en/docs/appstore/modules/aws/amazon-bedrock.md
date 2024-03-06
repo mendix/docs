@@ -669,13 +669,15 @@ The sync can be done from the information page of your knowledge base in the Ama
 The sync can take up to a few minutes and the calls to your knowledge base during this process cannot be handled accurately. To make sure the sync process has ended, you can use the [GetIngestionJob](#get-ingestion-job) action in the Amazon Bedrock Connector to retrieve the status of the ingestion job, along with other details.
 {{% /alert %}}
 
-#### 6.1.3 Safeguards
+#### 6.2 Safeguards
 
-AWS has introduced safeguards for Bedrock (currently in preview). When available, there will be two features: Guardrails and Watermark detection. The guardrail feature will allow you to 
-- Filter harmful content with configurable thresholds based on your responsible AI policies
-- Determine how to handle personally identifiable information (PII) and
-- Deny topics.
+AWS has introduced safeguards for Bedrock (currently in preview). When available, there will be two features: Guardrails and Watermark detection. 
 
-The watermark detection feature makes it possible to tell if an image has been created using Amazon Titan.
+The guardrail feature will allow you to: 
+* Filter harmful content with configurable thresholds based on your responsible AI policies.
+* Determine how to handle personally identifiable information (PII).
+* Deny topics.
 
-More information about guardrails can be found in this [AWS blogpost](https://aws.amazon.com/blogs/aws/guardrails-for-amazon-bedrock-helps-implement-safeguards-customized-to-your-use-cases-and-responsible-ai-policies-preview/) and in the [AWS documentation](https://aws.amazon.com/de/bedrock/guardrails/).
+The watermark detection feature will make it possible to tell if an image has been created using Amazon Titan.
+
+More information about guardrails can be found in this [AWS blogpost](https://aws.amazon.com/blogs/aws/guardrails-for-amazon-bedrock-helps-implement-safeguards-customized-to-your-use-cases-and-responsible-ai-policies-preview/) and in the [AWS documentation](https://aws.amazon.com/en/bedrock/guardrails/).

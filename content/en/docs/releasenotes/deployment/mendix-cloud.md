@@ -19,16 +19,15 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ### March 7, 2024
 
-#### Bug fixes
+#### Bug Fixes
 
-* We corrected rendering of the metrics graphs: 
-    * When there were some missing data points, all the existing data points used to shift to the left of the graph. Now all teh data points are displayed where they are supposed to be.
-    * Scale of the graphs used to change when there are missing data points. That is fixed now.
+* We corrected some rendering issues in the **Metrics** graphs: 
+     * When there were some missing data points, all the existing data points used to shift to the left of the graph. Now all the data points display where they are supposed to.
+     * The scale of the graphs used to change when there were missing data points. The scale is fixed now.
 
 #### Improvements
 
-* We added a link to the multi-factor authentication dialog so that it can be reset when needed
-
+* We added a link to the multi-factor authentication dialog so that it can be reset when needed.
 
 ### February 29, 2024
 

@@ -17,6 +17,12 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 ## 2024
 
+### March 06
+
+#### Deprecations
+
+* We want to inform you that the Feedback API v1 is scheduled for deprecation, and it will be completely removed from our system by September 30, 2024. To ensure a seamless transition, we strongly recommend migrating to [Feedback API v2](/apidocs-mxsdk/apidocs/feedback-api-v2/) for all your feedback-related operations, including retrieval, creation, and updates.
+
 ### February 29
 
 #### Improvements

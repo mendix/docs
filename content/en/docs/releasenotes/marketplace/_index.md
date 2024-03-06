@@ -19,12 +19,12 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 This release focuses on improving the Marketplace Reviews feature and making it even better for our users.
 
-* We have created a new Write Review Screen with User Tips. This feature is available both in the Web and InIDE versions of the Marketplace. Now, when writing a review, users will have access to useful tips that will guide them through the process.
-* We have decoupled Ratings and Reviews. It is now possible to rate a component 4 or 5 stars without leaving a review. For 3, 2, and 1 star ratings, a review is mandatory.
-* We have added an Anonymous User Screen in Marketplace Web. This screen allows anonymous users to browse through reviews and gain valuable insights without the need for authentication.
-* We have removed the "Company Reviews" Page from My Marketplace. This change eliminates any clutter and ensures a more focused and intuitive user experience.
-* We have added the ability for you to filter reviews based on specific criteria and navigate through the review list more efficiently.
-* We have added a new Reply to Review Screen with Supplier Tips. This improves communication between suppliers and reviewers.
+* We have improved the **Review** tab to give you tips when writing your review. This feature is available both on the Marketplace site and within Studio Pro.
+* We have decoupled ratings and reviews. You can now rate a component 4 or 5 stars without leaving a review. For 3, 2, and 1 star ratings, a review is mandatory.
+* You can now see additional information, such as reviews, on the Marketplace site without needing to sign in.
+* We have removed the "Company Reviews" page from **My Marketplace**.
+* You can now to filter reviews based on specific criteria.
+* We have improved the **Review** tab to give you tips when replying to a review of your Marketplace component.
 
 ## 2023
 

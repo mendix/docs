@@ -12,7 +12,7 @@ Studio Pro Extensions are a functionality in Studio Pro that allows you to add n
 
 These extensions are part of your application, and therefore will become available for all members of your project who are developing this application. 
 
-Currently, extensions can only be created by Mendix Partners.
+Currently, extensions can only be created by Mendix Partners and are available from 10.6.3 onwards.
 
 ## 2 Studio Pro Extensions API
 The Studio Pro Extensions API allows you to interact with different parts of Mendix Studio Pro by adding new functionality to them, as well as interact with the opened app model. 

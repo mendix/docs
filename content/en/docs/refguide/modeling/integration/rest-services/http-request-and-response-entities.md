@@ -42,6 +42,6 @@ An important `HttpResponse` header is `Content-Type`, which indicates how the co
 
 ### 3.1 Why Does Setting `ReasonPhrase` Have No Effect? {#reason-phrase}
 
-The HTTP/1.x protocol allowed servers to include a __reason phrase__ in the response, including non-standard ones. In HTTP/2, reason phrases have been removed. Following that, many web servers (including the one that the Mendix runtime uses), do not allow setting anything other than the default reason phrase for the status code, even in HTTP/1.x, which technically allows it.
+The HTTP/1.x protocol allowed servers to include a reason phrase in the response, including non-standard ones. In HTTP/2, reason phrases have been removed. Many web servers (including the one Mendix Runtime uses), do not allow setting anything other than the default reason phrase for the status code (even in HTTP/1.x, which technically allows it).
 
 As a result, the `ReasonPhrase` attribute is only useful for reading.

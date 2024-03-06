@@ -17,7 +17,7 @@ OIDC is an extension of OAuth2 that propagates the end-user's identity to your a
 {{% alert color="warning" %}}
 This OIDC SSO module works with Mendix 9.0 and above. If you are using a previous version of Mendix, you can use the community-supported module [OpenIDConnect Single Sign-on (OIDC, OAuth2, SSO)](https://marketplace.mendix.com/link/component/117529).
 
-If you are using Mendix 9.20 and above, ensure you are using version 2.0.0 or above of the OIDC SSO module. For Mendix 10.0 and above, you need to use version 2.3.0 or above of the OIDC SSO module.
+If you are using Mendix 9.20 and above, ensure you are using version 2.0.0 or above of the OIDC SSO module. For Mendix 10.0 and above, you need to use version 2.2.0 or above of the OIDC SSO module.
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -469,6 +469,10 @@ By default, the `CUSTOM_UserProvisioning` microflow in the **USE_ME** > **1. Con
 Do not change the `OIDC_CustomUserParsing_Standard` microflow. This may give problems if you upgrade to a newer version of the OIDC SSO module. Apply customizations to the `CUSTOM_UserProvisioning` microflow only.
 {{% /alert %}}
 
+{{% alert color="info" %}}
+The previous versions of the OIDC module below version 3.0.0 use `sub` as the primary identifier. If you are using version 3.0.0 and above of the OIDC module, you need to use `preferred_username` as the primary identifier.
+{{% /alert %}}
+
 ### 6.2 Custom User Provisioning{#custom-provisioning}
 
 If you create custom user entities as specializations of the `System.User` entity, you can store user information that is more extensive than is possible with the `System.User` or `Administration.Account` entities. You can use these specializations as target entities for end-user provisioning using one of the methods described below.
@@ -500,7 +504,7 @@ You can set up custom user provisioning by setting the following constants. You 
 | --- | --- | --- | --- |
 | CustomUserEntity | a custom user entity | in the form `modulename.entityname` – a specialization of `System.User` | `Administration.Account` |
 | PrincipalAttribute | the attribute holding the unique identifier of an authenticated user | | `Name` |
-| IdPAttribute | the IdP claim which is the unique identifier of an authenticated user | | `sub` |
+| IdPAttribute | the IdP claim which is the unique identifier of an authenticated user | | `preferred_username` |
 | Userrole | the role which will be assigned to newly created users | *optional* | `User` |
 | CustomUserProvisioning | a custom microflow to use for user provisioning | *optional* – in the form `modulename.microflowname` – the microflow name must begin with the string `CustomUserProvisioning` | `Mymodule.CustomUserProvisioningEntra` |
 

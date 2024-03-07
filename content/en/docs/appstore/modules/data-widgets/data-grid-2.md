@@ -484,3 +484,72 @@ If you are using Atlas v2.x and you cannot upgrade to Atlas 3 at the moment, ple
     "theme.compiled.css" 
 ],
 ```
+
+## 12 In-memory selection {#selection}
+
+{{% alert color="info" %}}
+In-memory selection is introduced in Data Widgets v2.7.0.
+{{% /alert %}}
+
+Enabling selection allows users to select a row by clicking the row or a checkbox. Selection is disabled by default and can be activated by changing the 'Selection' setting from 'None' to either 'Single' or 'Multi'.
+
+Since Data Grid keep selected items in short-living memory that is cleared evry time you chaning datagrid page, selecting items across multiple pages is not supported. This means that  the user can select only items that are currently visible.
+
+### 12.1 Selection mode
+
+In Single selection mode, users are limited to selecting one row at a time. In Multi mode, the user can select multiple rows.
+
+### 12.2 Selection method
+
+When selection is enabled, you can choose a method for selecting rows. The 'Checkbox' method adds a checkbox to the beginning of each row, and the user must click the checkbox to select the row. In contrast, the 'Row' method does not add any additional controls to the row, and the user must click the row itself to select that row.
+
+
+
+### 12.3 Show (un)check all toggle
+
+If this setting is enabled data grid shows a checkbox at the header. This checkbox controls the selection for all visible items. Clicking on this checkbox will select all visible items. If all items are already selected, clicking the checkbox clears the selection.
+
+
+
+### 12.4 Selection and row click action
+
+{{% alert color="info" %}}
+The “On click trigger” setting was introduced in Data Widgets v2.13.0. Previous versions did not allow both selection and click actions at the same time.
+{{% /alert %}}
+
+The data grid settings support the case where it's possible to have both a selection and an "on click" action at the same time.
+
+The setting for action triggers is related to the selection method and can sometimes be ambiguous. See the table below to see which combinations of selection method and trigger are supported.
+
+| Selection method | Action trigger          | Selection trigger                                | Supported |
+| ---------------- | ----------------------- | ------------------------------------------------ | --------- |
+| Checkbox         | Single click on the row | Click on the checkbox, Ctrl/Cmd+Click on the row | Yes       |
+| Checkbox         | Double click on the row | Click on the checkbox, Ctrl/Cmd+Click on the row | Yes       |
+| Row              | Single click on the row |                                                  | No        |
+| Row              | Double click on the row | Ctrl/Cmd + Click on the row                      | Yes       |
+
+To achieve this behavior, set the “On click trigger” to “Double click”. When data grid configured this way user may select row by 
+
+
+## 13 Keyboard support {#keyboard-support}
+
+| Key                      | Function                                                     |
+| ------------------------ | ------------------------------------------------------------ |
+| Right Arrow              | Moves focus one cell to the right.                           |
+| Left Arrow               | Moves focus one cell to the left.                            |
+| Down Arrow               | Moves focus one cell down.                                   |
+| Up Arrow                 | Moves focus one cell up.                                     |
+| Page Up                  | Moves focus one page up.                                     |
+| Page Down                | Moves focus once page down.                                  |
+| Home                     | Moves focus to the first cell in the row.                    |
+| End                      | Moves focus to the last cell in the row.                     |
+| Ctrl + Home              | Moves focus to the first cell in grid.                       |
+| Ctrl + End               | Moves focus to the last cell in grid.                        |
+| Shift + Space            | Selects current row. (1)                                     |
+| Ctrl/Cmd + A             | Select all visible rows. (1)(2)                              |
+| Shift + {Down, Up} Arrow | Moves focus and selects current and row above/below. (1)(2)  |
+| Shift + Page {Up, Down}  | Moves focus one page up/down and selects all rows between current and final row. (1)(2) |
+| Shift + Home/End         | Moves focus to the end/start of the grid and selects all rows between current and final row. (1)(2) |
+
+1. Available only when selection is enabled.
+2. Available only when selection mode should be “Multi”.

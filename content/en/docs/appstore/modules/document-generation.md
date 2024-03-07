@@ -139,6 +139,9 @@ The steps for each procedure are described in the sections below.
 
 1. Add the snippet **Snip_AppRegistration** to a page in your app that is accessible to users with the **Administrator** module role set in the **DocumentGeneration** module. The snippet can be found in the  **_UseMe** > **Admin** folder of the **DocumentGeneration** module.
 2. Enable the scheduled event **SE_AccessToken_Refresh** to automatically refresh the access token that is used to secure access to the Document Generation cloud service. The scheduled event can be found in the  **_UseMe** > **Scheduled events** folder of the **DocumentGeneration** module.
+
+	* In version 1.6.0 and above, for apps deployed on Mendix Free Cloud, a **Renew app registration** button will be visible in the **Snip_AppRegistration** snippet if your registration is going to expire within 24 hours or has already expired. You can use this button to manually refresh your token.
+
 3. Make sure that your changes are [deployed to your Mendix Cloud environment](/developerportal/deploy/mendix-cloud-deploy/#deploy-app-mendix-cloud).
 4. Sign in to the app environment you want to register.
 5. Navigate to the page that contains the **Snip_AppRegistration** snippet.
@@ -186,6 +189,8 @@ Rule | Name | Pattern | Rewrite URL
 ---- | ---- | ------- | -----------
 1 | p | `^(p/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
 2 | docgen | `^(docgen/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
+
+{{% alert color="info" %}}Rule 1 is based on the default URL prefix (`p`) for page/microflow URLs. In case you configured a different prefix in the runtime settings of your app, adjust the rule accordingly.{{% /alert %}}
 
 ## 4 Usage
 
@@ -370,6 +375,8 @@ In general, we recommend that you perform the following steps in case of any iss
 #### 6.2.1 Rendering/Styling Issues
 
 In case of issues regarding styling, Mendix recommends temporarily adding the page microflow to your app navigation (for details, see step 2 in the [Module Usage and Runtime Issues](#module-usage-runtime-issues) section). This allows you to preview the page in your browser and inspect the applied styles. Mendix recommends using Chrome or Chromium and the [Chrome DevTools](https://developer.chrome.com/docs/devtools/css/) for this, since Chromium is the browser that is used by the document generation service.
+
+In case the resulting PDF document only contains a part of the expected content, verify that the layout used for the page does not include a scroll container. Layouts that do include a scroll container, such as **Atlas_Default**, will not work properly.
 
 {{% alert color="warning" %}}
 When testing the PDF Document Generation module locally using Chrome or Chromium version 117 or 118, the scaling of your PDF document might be different compared to the document generated from the PDF document generation service in Mendix Cloud. This issue has been fixed in Chrome version 119, we recommend that you update your Chrome version to the latest release if you run into this issue. To guarantee the same result locally as when using our PDF document generation service, we advise using the Chromium version cited in the [Chromium](#chromium) section above.

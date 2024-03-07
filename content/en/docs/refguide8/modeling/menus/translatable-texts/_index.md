@@ -6,10 +6,6 @@ tags: ["studio pro", "translation", "languages", "translatable text"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/translatable-texts.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 Mendix is designed so that it is easy to present the same information to users who have different language requirements. To support this, all texts that are presented to the end-user can be translated to different languages.
@@ -102,5 +98,5 @@ The above only applies to pages *within* your Mendix application (meaning, pages
 
 * [How to Translate Your App Content](/howto8/collaboration-requirements-management/translate-your-app-content/) – a worked example of adding a translation 
 * [How To Use Translatable Validation Messages](/howto8/logic-business-rules/translatable-validation-messages/)
-* [Change language by clicking a link](https://forum.mendixcloud.com/link/questions/91821) – explanations and ideas on the Mendix forum for refreshing the page when the language is changed
-* [Anonymous User Journey](https://forum.mendixcloud.com/link/questions/91676) – a discussion on the Mendix forum about switching languages for anonymous end-users
+* [Change language by clicking a link](https://community.mendix.com/link/questions/91821) – explanations and ideas in the Mendix Community for refreshing the page when the language is changed
+* [Anonymous User Journey](https://community.mendix.com/link/questions/91676) – a discussion in the Mendix Community about switching languages for anonymous end-users

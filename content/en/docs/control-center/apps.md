@@ -166,7 +166,7 @@ The description of the items that you can select are as follows:
 * **Mainline Version**: the Mendix version of the app on the mainline in the repository
 * **Last Commit**: the date of the last commit in the main line
 * **Members**: the number of the team members in the app development team
-* **Actions**: adding the action menu ({{% icon name="three-dots-menu-horizontal" %}}) to enable you to **Activate App** and **Delete App**. (For more information, see the [Deactivating and Deleting Apps](http://localhost:1313/control-center/apps/#deactivate-delete-apps) section.)
+* **Actions**: adding the action menu ({{% icon name="three-dots-menu-horizontal" %}}) to enable you to **Activate App** and **Delete App**. (For more information, see the [Deactivating and Deleting Apps](#deactivate-delete-apps) section.)
 
 You can filter the apps in the table. For details, see the [Filtering Apps in the Table](#filter-apps)section.
 

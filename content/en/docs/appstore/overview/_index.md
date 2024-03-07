@@ -108,11 +108,12 @@ The component details page also presents the following tabs:
 * **Documentation** – includes details on typical use cases, features and limitations, dependencies, installation and configuration, frequently asked questions, and screenshots
     * [Platform-supported components](/appstore/overview/#category) are documented according to content type or category in the [Marketplace Guide](/appstore/)
 * **Releases** – lists all the versions of the component along with details like the **Framework version** and the **UUID**
-    * The component versions can be downloaded by clicking **Download**
+    * Each version can be downloaded by clicking **Download**
     * The **UUID** can be used in the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api/#createnewapp) in the *Projects API*
 * **Reviews** – user reviews of the component
+    * Browse, **Sort by review date**, and **Filter** these reviews for insights on the component
     * Click **Add Review** to open a section where you can add text, rate the component, and submit the review
-    * Your reviews are listed on your [Reviews](/appstore/overview/my-marketplace/#my-reviews) page in **My Marketplace**
+        * Your reviews are listed on your [My Reviews](/appstore/overview/my-marketplace/#my-reviews) page in **My Marketplace**
     * If you are a developer of the component, you can **Reply** to a review
 * **Developers** – the names of the developers who most recently updated the component, with links to their [Mendix Profile](/community-tools/mendix-profile/)
 
@@ -154,7 +155,7 @@ Support on content in this category is up to the user or organization providing 
 
 * Open an issue on the GitHub repository associated with the content (for details on GitHub issues, see [Mastering Issues](https://guides.github.com/features/issues/))
 * Contact the owner of the content via the contact details available on the Marketplace component's detail pages
-* Ask a question on the [Mendix Forum](https://mxforum.mendix.com/)
+* Ask a question in the [Mendix Community](https://community.mendix.com/)
 * Contribute 
 
 The level of support depends on the availability and effort of the developer and/or the Mendix community.

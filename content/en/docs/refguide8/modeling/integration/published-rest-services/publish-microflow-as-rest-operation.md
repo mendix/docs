@@ -9,10 +9,6 @@ tags: ["Microflow", "REST", "operation", "resource"]
 # linked from DM: edit microflow > (right-click) Publish as REST service operation > New > Help (integration)
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/publish-microflow-as-rest-operation.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 To publish a microflow as a REST service operation, right-click in the microflow editor and select **Publish as REST service operation**.

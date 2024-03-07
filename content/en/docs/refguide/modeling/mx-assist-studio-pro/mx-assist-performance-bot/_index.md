@@ -8,6 +8,10 @@ tags: ["studio pro", "best practice bot", "mendix assist", "AI", "mx assist", "M
 
 ## 1 Introduction 
 
+{{% alert color="info" %}}
+MxAssist Best Practice Bot works both online and offline. No internet connection or signing-in is required.
+{{% /alert %}}
+
 MxAssist Best Practice Bot is an intelligent virtual co-developer bot that helps you improve your app by inspecting your app model against Mendix development best practice in Mendix Studio Pro. It detects anti-patterns during the design and development, pinpoints you to these anti-patterns, suggests you how to resolve it, and in some cases can automatically fix these issues. 
 
 MxAssist Best Practice Bot is built using statistical analysis of thousands of anonymized Mendix app to learn common anti-patterns as well as using Mendix Expert Services best practices in the development of microflows, domain models, pages, security, and so on.

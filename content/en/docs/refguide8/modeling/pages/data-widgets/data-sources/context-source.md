@@ -5,10 +5,6 @@ tags: ["studio pro", "context", "data source"]
 weight: 30
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/context-source.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 The **Context** source is a data source of a data view. Data views with this data source get their object from the context, which can be one of two things:

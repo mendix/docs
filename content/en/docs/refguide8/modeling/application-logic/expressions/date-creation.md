@@ -5,10 +5,6 @@ weight: 90
 tags: ["studio pro", "expression", "date creation", "expressions"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/date-creation.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 Dates can be created with the `dateTime` and `dateTimeUTC` functions. The difference between them is that  `dateTime` uses the calendar of the session used in the function call, and `dateTimeUTC` uses the UTC calendar. The system session runs as UTC by default, except for scheduled events, which can be configured in the [Scheduled Event Time Zone](/refguide8/project-settings/#scheduled) section of **Project Settings**.

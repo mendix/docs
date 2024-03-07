@@ -81,7 +81,7 @@ For this how-to, we will use the publicly available Google Books API (for detail
 The above example demonstrates how a Mendix application can quickly integrate data systems using REST. This basic framework can be built upon to incorporate a wide range of activities. Possible ways to extend this framework include the following: 
 
 * Adding additional microflow processing logic to leverage data in Mendix
-* Using the REST POST actions to push values from Mendix
+* Using the REST `POST` actions to push values from Mendix
 * Updating Mendix app data from a different source
 
 For further documentation and to see the GitHub project for REST services, see the [Mendix RestServices GitHub page](https://github.com/mendix/RestServices).

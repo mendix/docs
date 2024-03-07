@@ -3,7 +3,7 @@ title: "Backups API – Version 1 ⚠"
 linktitle: "Backups API v1 ⚠"
 url: /apidocs-mxsdk/apidocs/backups-api-v1/
 description: "An API to allow the triggering of backups creation, restore, download and to get information about existing snapshots."
-weight: 11
+weight: 15
 ---
 
 {{% alert color="warning" %}}

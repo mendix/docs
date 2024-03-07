@@ -119,13 +119,13 @@ You should now see a bar chart of the data.
 
 ## 6 Filtering Data With Query Parameters
 
-By default, all data is retrieved by Tableau, but Mendix allows you to add filters to the query so only the desired data is being retrieved.
+By default, all data is retrieved by Tableau, but Studio Pro allows you to add filters to the query so only the desired data is being retrieved.
 
 To filter data with query parameters, follow these steps:
 
 1. Right-click a data source and select **Edit Data Source...**.
 2. Click the OData URL to change the connection settings.
-3. Add *?$top=2* to the server URL (in order to only retrieve the first two values, engineers in this case) and click **Sign In**:
+3. Add `?$top=2` to the server URL (in order to only retrieve the first two values) and click **Sign In**:
 
     {{< figure src="/attachments/howto/integration/exposing-data-to-bi-tools-using-odata/18581998.png" >}}
 

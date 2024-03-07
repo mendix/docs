@@ -19,7 +19,7 @@ Modules in the Mendix Marketplace have different categories, as listed in the su
 
 To check out which modules a category contains, click the category in the list below, which directs you to the sub-section for this category.
 
-* [Artificial Intelligence]()
+* [Artificial Intelligence](#artificial-intelligence)
 * [Authentication](#authentication)
 * [AWS](#aws)
 * [Communication](#communication)

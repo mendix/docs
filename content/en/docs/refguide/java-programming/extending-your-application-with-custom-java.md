@@ -152,15 +152,15 @@ Now you will add a button to the Product_NewEdit page which uses a microflow to 
 
     {{< figure src="/attachments/refguide/java-programming/extending-your-application-with-custom-java/product-parameter.png" >}}
 
-13. Click **OK** to save the properties. 
+7. Click **OK** to save the properties. 
 8. Drag a **Show message** activity into the microflow.
-15. In the **Show Message** properties editor enter *Reversed name: {1}* for **Template**.
-16. In the **Parameters** section, add a **New** parameter with the value **$ReversedName**. This is the output variable of the Java action.
-18. Click **OK** to save the parameter. The **Show Message** properties should now look like this:
+9. In the **Show Message** properties editor enter *Reversed name: {1}* for **Template**.
+10. In the **Parameters** section, add a **New** parameter with the value **$ReversedName**. This is the output variable of the Java action.
+11. Click **OK** to save the parameter. The **Show Message** properties should now look like this:
 
     {{< figure src="/attachments/refguide/java-programming/extending-your-application-with-custom-java/show-message.png" >}}
 
-19. Click **OK** to save the **Show message** activity. The microflow will be similar to this this:
+12. Click **OK** to save the **Show message** activity. The microflow will be similar to this this:
 
     {{< figure src="/attachments/refguide/java-programming/extending-your-application-with-custom-java/microflow4.png"  class="image-border" >}}
 

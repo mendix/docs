@@ -27,7 +27,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### Improvements
 
-* To make it easier to reset the multi-factor authentication settings when needed, we added a link to these settings on the **Logs** and **Metrics** pages.
+* To make it easier to reset the two-factor authentication settings when needed, we added a link to these settings on the **Logs** and **Metrics** pages. This link appears whenever you try to access a page that you need 2FA to view.
 
 ### February 29, 2024
 

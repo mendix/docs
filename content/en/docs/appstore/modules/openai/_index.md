@@ -811,6 +811,7 @@ We have seen the following two exceptions when using JDK version `jdk-11.0.3.7-h
 `javax.net.ssl.SSLException - Received fatal alert: record_overflow`.
 
 Follow these steps to check your JDK version and update if neccessary:
+
 1. Check your JDK version: In Studio Pro Go to **Edit** -> **Preferences** -> **Deployment**-> **JDK directory**. If the path points to `jdk-11.0.3.7-hotspot`, you need to update the JDK by following the next steps.
 2. Go to [Eclipse Temurin JDK 11](https://adoptium.net/en-GB/temurin/releases/?variant=openjdk11&os=windows&package=jdk) and download the `.msi` file of the latest release of **JDK 11**.
 3. Open the downloaded file and follow the installation steps. Remember the installation path. Usually this should be somethink like `C:/Program Files/Eclipse Adoptium/jdk-11.0.22.7-hotspot`.

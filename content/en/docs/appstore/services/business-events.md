@@ -92,28 +92,28 @@ To define what information is included in your events, as well as what the servi
 {{< figure src="/attachments/appstore/services/business-events/add-event-definition.png" >}}
 
 1. Define what information is included in this event
-
-In the **General** section, provide the **Event name** and **Description** to let others know what the service is about.
-
-In the **Attributes** section, click **Add** to define attributes. Changes you make here later might lead to breaking changes if the entity the attribute belongs to is consumed, though related entities will be updated automatically.
-
-{{< figure src="/attachments/appstore/services/business-events/wizard-step-1.png" >}}
+    
+    In the **General** section, provide the **Event name** and **Description** to let others know what the service is about.
+    
+    In the **Attributes** section, click **Add** to define attributes. Changes you make here later might lead to breaking changes if the entity the attribute belongs to is consumed, though related entities will be updated automatically.
+    
+    {{< figure src="/attachments/appstore/services/business-events/wizard-step-1.png" >}}
 
 2. Decide what other apps can do and what service this will implement
 
-Under **Other apps can**, you can select how other apps can use the service. **This Business Events service implements** section defines whether the service will be responsible for publishing events, subscribing to events, or both.
+    Under **Other apps can**, you can select how other apps can use the service. **This Business Events service implements** section defines whether the service will be responsible for publishing events, subscribing to events, or both.
 
-Below is an explanation of the possibilities for what other apps can do and what the service implements:
+    Below is an explanation of the possibilities for what other apps can do and what the service implements:
 
-| If you say that other apps can: | Then the service itself must implement: | The service could also implement: | The following are automatically created: |
-| ---------- | ---------- | ---------- | ---------- |
-| Publish events | Subscribing to events | Publishing events | **ConsumedBusinessEvent** entity and a [handler microflow](#two-way-be-handler) |
-| Subscribe to events | Publishing events | Subscribing to events | When publishing, **PublishedBusinessEvent** entity and handler microflow <br>If subscribing, a **ConsumedBusinessEvent** entity |
-| Publish events and<br>Subscribe to events | [Nothing required: if apps can do both, there is no obligation for the service to implement anything] | Publishing events and/or subscribing to events | If no service implementations are selected, then nothing created <br>If publishing, **PublishedBusinessEvent** entity and handler microflow <br>If subscribing, a **ConsumedBusinessEvent** entity <br>If both, then both entities and the handler microflow are created|
+    | If you say that other apps can: | Then the service itself must implement: | The service could also implement: | The following are automatically created: |
+    | ---------- | ---------- | ---------- | ---------- |
+    | Publish events | Subscribing to events | Publishing events | **ConsumedBusinessEvent** entity and a [handler microflow](#two-way-be-handler) |
+    | Subscribe to events | Publishing events | Subscribing to events | When publishing, **PublishedBusinessEvent** entity and handler microflow <br>If subscribing, a **ConsumedBusinessEvent** entity |
+    | Publish events and<br>Subscribe to events | [Nothing required: if apps can do both, there is no obligation for the service to implement anything] | Publishing events and/or subscribing to events | If no service implementations are selected, then nothing created <br>If publishing, **PublishedBusinessEvent** entity and handler microflow <br>If subscribing, a **ConsumedBusinessEvent** entity <br>If both, then both entities and the handler microflow are created|
 
 3. Click **Done** to exit the wizard and view the defined service document.
 
-**Export AsyncAPI Document** exports the YAML file of the business event service so other apps can [use your newly created service](#two-way-be-existing).
+    **Export AsyncAPI Document** exports the YAML file of the business event service so other apps can [use your newly created service](#two-way-be-existing).
 
 #### 4.1.3 Attribute Types {#attribute-types}
 

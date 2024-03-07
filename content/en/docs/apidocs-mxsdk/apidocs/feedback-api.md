@@ -1,6 +1,6 @@
 ---
-title: "Feedback API – Version 1"
-linktitle: "Feedback API v1"
+title: "Feedback API – Version 1 ⚠"
+linktitle: "Feedback API v1 ⚠"
 url: /apidocs-mxsdk/apidocs/feedback-api/
 category: "API Documentation"
 description: "Presents details for using this API to build on top of the feedback management functionality of the Mendix Platform and to connect your own feedback gathering tool."
@@ -8,7 +8,11 @@ weight: 50
 tags: ["Feedback", "Developer Portal", "API"]
 ---
 
-{{% alert color="warning" %}} Feedback API v1 is scheduled for deprecation, and it will be completely removed from our system by September 30, 2024. To ensure a seamless transition, we strongly recommend migrating to [Feedback API v2](/apidocs-mxsdk/apidocs/feedback-api-v2/) for all your feedback-related operations, including retrieval, creation, and updates. {{% /alert %}}
+{{% alert color="warning" %}}
+Feedback API v1 is deprecated, and it will be turned off completely on September 30, 2024.
+
+To ensure a seamless transition, Mendix strongly recommends migrating to [Feedback API v2](/apidocs-mxsdk/apidocs/feedback-api-v2/) for all your feedback-related operations, including retrieval, creation, and updates.
+{{% /alert %}}
 
 ## 1 Introduction
 

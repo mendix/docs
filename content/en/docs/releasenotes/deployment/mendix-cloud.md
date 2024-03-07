@@ -27,7 +27,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### Improvements
 
-* We added a link to the multi-factor authentication dialog so that it can be reset when needed.
+* To make it easier to reset the multi-factor authentication settings when needed, we added a link to these settings on the **Logs** and **Metrics** pages.
 
 ### February 29, 2024
 

@@ -65,14 +65,14 @@ In this section, we will outline the steps for adding more than one published en
 
 ### 5.1 Use Case
 
-Imagine that you have an app that helps with asset management. You have a Published OData Service with persistable entities called **SmartTask** and **Employee** that expose information. The domain model looks like this:
+Imagine you have an app that helps with asset management. You have a Published OData Service with persistable entities called **SmartTask** and **Employee** that expose information. The domain model looks like this:
 
 {{< figure src="/attachments/howto/integration/exposing-data-to-bi-tools-using-odata/asset-manager-domain-model.png" >}}
 
 To visualize data from your app in Tableau, follow these steps:
 
 1. Open **Tableau** and select **Connect** > **To a Server** > **OData**:
-2. Return to Studio Pro, and double-click the published OData service. Copy the link the **Location** field to the clipboard.
+2. Return to Studio Pro and double-click the published OData service. Copy the link in the **Location** field to the clipboard.
 3. On the **Server Connection** dialog box, enter the copied OData service **Location** link for the **Server**  address:
 
     {{< figure src="/attachments/howto/integration/exposing-data-to-bi-tools-using-odata/18582020.png" >}}
@@ -81,7 +81,7 @@ To visualize data from your app in Tableau, follow these steps:
 
 4. Click **Sign In** to save the server connection. You should now see the data source details.
 5. Click the name of the server connection and change it to a name related to your entity (in this case, **SmartTasks**) for readability.
-6. Click **Data** > **New Data Source** and repeat step 1–5 to add a server connection for other published OData services.
+6. Click **Data** > **New Data Source** and repeat steps 1–5 to add a server connection for other published OData services.
 7. Open **Sheet1**. Under **Data**, click the first entity and drag a desired entity **Attribute** from **Measures** to **Dimensions**. In this case, click **Engineers** and drag **ID** from **Measures** to **Dimensions**:
 
     {{< figure src="/attachments/howto/integration/exposing-data-to-bi-tools-using-odata/18582012.png" >}}
@@ -89,8 +89,8 @@ To visualize data from your app in Tableau, follow these steps:
 8. Similarly, click and drag an attribute from the second entity from **Measures** to **Dimensions**. In this case, click **SmartTasks** and drag **SmartTask_Engineer** from **Measures** to **Dimensions**.
 9. Go to **Data** > **Edit Relationships...** to define the relationship between the different data sources.
 10. On the **Relationships** window, do the following:<br />
-    1. Select your first entity for the **Primary data source**. In our imagined scenario, that is **SmartTasks**.<br />
-    2. Select your second entity for the **Secondary data source**. In our imagined scenario, that is **Engineers**.<br />
+    1. Select your first entity for the **Primary data source**. In this scenario, that is **SmartTasks**.<br />
+    2. Select your second entity for the **Secondary data source**. In this scenario, that is **Engineers**.<br />
     3. Switch to **Custom** mapping.<br />
     4. Remove any default mappings.<br />
     5. Click **Add...** to configure a field mapping.

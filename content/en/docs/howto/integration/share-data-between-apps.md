@@ -65,15 +65,15 @@ Customize the home page further by changing the banner text.
 
 ## 4 Publishing to the Catalog {#publishing}
 
-You need to register the **Customer** entity in the Catalog to use this entity in other apps. To do this, you need to expose the **Customer** entity in a [Published OData service](/refguide/published-odata-services/) in Mendix Studio Pro. OData v3 and OData v4 are REST-based protocols and standard formats for registering services in the Catalog. 
+You need to register the **Customer** entity in the Catalog to use this entity in other apps. To do this, expose the **Customer** entity in a [Published OData service](/refguide/published-odata-services/) in Studio Pro. OData v3 and OData v4 are REST-based protocols and standard formats for registering services in the Catalog. 
 
 Do the following:
 
-1. In the App Explorer, right-click **MyFirstModule**. From the drop-down list, select **Add a folder**. Name it  *APIs*.
+1. In the App Explorer, right-click **MyFirstModule**. From the drop-down list, select **Add a folder** and name it *APIs*.
 
     {{% alert color="info" %}}The published OData service functions as an API to your app. Some apps may have several published services, so it is good practice to keep them together in a folder for each module.{{% /alert %}}
 
-2. In the **Domain Model**, right-click the **Customer** entity and select **Expose as OData resource…**.
+2. In the **Domain model**, right-click the **Customer** entity and select **Expose as OData resource…**.
 
     {{< figure src="/attachments/catalog/share-data/expose-as-odata-resource.png" >}}
 
@@ -87,7 +87,7 @@ Do the following:
 
     {{< figure src="/attachments/catalog/share-data/edit-published-resource-box.png" >}}
 
-    {{% alert color="info" %}}  Make a note of the **Exposed set name**. This defaults to the **Exposed name** with an "**s"** added to the end. When the service is registered in the Catalog, the **Exposed set name** will be displayed as the available **Dataset**. {{% /alert %}}
+    {{% alert color="info" %}} Make a note of the **Exposed set name**. This defaults to the **Exposed name** with an "**s"** added to the end. When the service is registered in the Catalog, the **Exposed set name** will be displayed as the available **Dataset**. {{% /alert %}}
 
 5. Click **OK** twice to display the **OData Service** document that will be registered in the Catalog. In the **General** tab, notice the **Version** number. 
 
@@ -97,7 +97,7 @@ Do the following:
 
 6. Click **Publish** in the top bar to deploy the app and publish it. When prompted, click **Save and continue** to save any unsaved changes to the app.     
 
-7. The app is deployed, and the OData service is automatically registered in the Catalog. Click **View App** to open the app in a browser. 
+7. The app is deployed and the OData service is automatically registered in the Catalog. Click **View App** to open the app in a browser. 
 8. On the app's home page, click **Customers Overview**.
 9. Add data to the app. Click **New** to add data for a customer entry.
 
@@ -113,7 +113,7 @@ Do the following:
 
 1. Go to the [Catalog](https://catalog.mendix.com/).
 
-2. In the search field, enter the search term *{yourname}*. All services and datasets that satisfy this search string are displayed in the **Search Results** pane in the **Search Details** screen. However, the service does not appear in the **Search Results** yet, as by default, a filter is set to show results in **Production** environments.
+2. In the search field, enter the search term *{yourname}*. All services and datasets that satisfy this search string are displayed in the search results pane. However, the service does not appear in the search results yet, as by default, a filter is set to show results in **Production** environments.
 3. In the panel on the left, click **Filter** to see the **Filters** dialog box.
 4. Your app was deployed to the **Mendix Free App** or **Sandbox** environment. Check **Sandbox** to include it in the search results, then click **Apply**:
 

@@ -106,7 +106,7 @@ After you have obtained an API response, you can use it to model the service in 
 
 ### 3.4 Modeling the Request
 
-Since the update of the AWS Authentication connector to version 3.0.0 it is a best practice to use a request entity that inherits from the AWSAuthentication.AbstractRequest entity even when there is no payload. The reason behind this is that it keeps all AWS connectors compatible. You can create it using an import mapping as explained in the section above and then export it with an export mapping to get the required JSON request body for the REST call.
+Since the update of the AWS Authentication connector to version 3.0.0 it is a best practice to use a request entity that inherits from the AWSAuthentication.AbstractRequest entity even when there is no payload. The reason behind this is that it keeps all AWS connectors compatible. You can create it using an import mapping as explained in the section above and then export it with an export mapping to get the required JSON request body for the REST call. This might be relevant for you, when you intend to publish the connector on the marketplace. If you don't intend to do that, you can also just create the JSON request manually and hardcode the timeout value. 
 
 ### 3.5 Creating a Microflow Action
 

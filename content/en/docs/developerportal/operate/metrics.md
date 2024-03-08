@@ -33,6 +33,10 @@ If you meet the above conditions, you can find the graphs by following these ste
 
     {{< figure src="/attachments/developerportal/operate/metrics/metrics-selection.png" >}}
 
+{{% alert color="info" %}}
+The **Metrics** page does not support multi-instance metrics. If you [horizontally scale](/developerportal/deploy/scale-environment/) your environment to multiple instances, you will be able to see metrics for only one of those instances. If you need data on multiple instances, consider using an [APM integration](/developerportal/operate/monitoring-with-apm/).
+{{% /alert %}}
+
 ## 3 Interpreting the Graphs
 
 As with all complex IT systems, there are many interrelated components that can cause performance issues. This document cannot cover all possibilities; it is intended as a general introduction to the information that is displayed. It also suggests a few ideas about where to look for possible areas of concern.

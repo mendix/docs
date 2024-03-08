@@ -3,6 +3,8 @@ title: "Deploy API – Version 4"
 linktitle: "Deploy API v4"
 url: /apidocs-mxsdk/apidocs/deploy-api-4/
 type: swagger
+aliases:
+    - /apidocs-mxsdk/apidocs/deploy-api-3/
 category: "API Documentation"
 description: "Deploy API v4 can be used to deploy Mendix apps to licensed nodes, manage application environments in Mendix Cloud, retrieve statuses, start and stop applications, and deploy or transport new model versions to application environments."
 weight: 46
@@ -15,10 +17,10 @@ The Deploy API only works for apps that are deployed to Mendix Cloud.
 
 ## 1 Introduction
 
-The Deploy API allows you to manage application environments in Mendix Cloud. Version 4 introduces additional actions and improved features for some actions. It replaces the deprecated [Deploy API – Version 3](/apidocs-mxsdk/apidocs/deploy-api-3/).
+The Deploy API allows you to manage application environments in Mendix Cloud. Version 4 introduces additional actions and improved features for some actions. It replaces the deprecated Deploy API – Version 3.
 
 {{% alert color="info" %}}
-The v4 Deploy API only supports the endpoints listed here. For all other API calls, the [v2 API](/apidocs-mxsdk/apidocs/deploy-api-2/) or [v1 API](/apidocs-mxsdk/apidocs/deploy-api/) must be used.
+The v4 Deploy API only supports the endpoints listed here. For all other API calls, use the [v2 API](/apidocs-mxsdk/apidocs/deploy-api-2/) or [v1 API](/apidocs-mxsdk/apidocs/deploy-api/).
 
 Mendix recommends using calls from the same version of the API where possible; this is because the naming across versions is inconsistent. For example, the {appId} in the version 4 API is retrieved as the {ProjectId} from the version 1 API.
 {{% /alert %}}

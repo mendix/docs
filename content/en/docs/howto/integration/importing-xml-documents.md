@@ -28,7 +28,7 @@ Before you continue, make sure that you know how to create:
 
 ## 3 Preparing the Data Structure and GUI
 
-The XML document used in this how-to contains customers. To be able to see the imported data, you first need to set up the data structure and GUI to maintain the customer data. Then, you need to facilitate the uploading and downloading of XML documents. Finally, you will create the actual import logic and the corresponding import mapping.
+The XML document used in this how-to contains customers. To see the imported data, you first need to set up the data structure and GUI to maintain the customer data. Then, you need to facilitate the uploading and downloading of XML documents. Finally, you will create the actual import logic and the corresponding import mapping.
 
 To prepare the data structure and the GUI, follow these steps:
 
@@ -38,21 +38,21 @@ To prepare the data structure and the GUI, follow these steps:
 
 2. Create the overview and detail pages to manage objects of the **Customer** type.
 3. Create a menu item to access the customer overview page.
-4. Create an entity called **XMLDocument** that inherits all the properties from **System.FileDocument**:
+4. Create an entity called *XMLDocument* that inherits all the properties from **System.FileDocument**:
 
     {{< figure src="/attachments/howto/integration/export-xml-documents/18581650.png" >}}
 
 5. Create the overview and detail pages to manage objects of the **XMLDocument** type.
-6. Create a menu item to access the XML document overview page (for more information, see [Setting Up Navigation](/refguide/setting-up-the-navigation-structure/).
+6. Create a menu item to access the XML document overview page (for more information, see [Setting Up Navigation](/refguide/setting-up-the-navigation-structure/)).
 
 ## 4 Adding an XML Schema (XSD)
 
-Whether you plan to import or export documents, working with XML means that your application must contain an XML schema, which is also called an XSD. An XSD describes the possible contents of an XML file. Based on the XSD, your application knows how to read or write an XML file. If you don't have an XSD file, there are some online XSD generators that accept an XML document as input. For this how-to, you can use [Customers.xsd](/attachments/howto/integration/importing-xml-documents/18581652.xsd).
+Whether you plan to import or export documents, working with XML means your application must contain an XML schema, which is also called an XSD. An XSD describes the possible contents of an XML file. Based on the XSD, your application knows how to read or write an XML file. If you don't have an XSD file, there are some online XSD generators that accept an XML document as input. For this how-to, you can use [Customers.xsd](/attachments/howto/integration/importing-xml-documents/18581652.xsd).
 
 To add an XML schema (XSD), follow these steps:
 
 1. Right-click a module in the **App Explorer** and select **Add Other** > **XML schema** from the menu.
-2. Enter **CustomersXSD** as the **Name** and click **OK**:
+2. Enter *CustomersXSD* as the **Name** and click **OK**:
 
     {{< figure src="/attachments/howto/integration/export-xml-documents/18581696.png" >}}
 
@@ -69,7 +69,7 @@ The XML schema describes what the possible contents of an XML file are, but we n
 To create the XML-to-domain mapping, follow these steps:
 
 1. Right-click a module in the **App Explorer** and select **Add Other** > **Import mapping**.
-2. Enter **ImportCustomersMapping** as the **Name** and click **OK.**  The new mapping will open automatically and the elements will be shown.
+2. Enter *ImportCustomersMapping* as the **Name** and click **OK.**  The new mapping will open automatically and the elements will be shown.
 
     {{< figure src="/attachments/howto/integration/importing-xml-documents/18581689.png" >}}
 
@@ -83,7 +83,7 @@ To create the XML-to-domain mapping, follow these steps:
     {{< figure src="/attachments/howto/integration/importing-xml-documents/18581655.png" >}}
 
 6. Open the connector (from the lower-right side of Studio Pro or from the **View** menu).
-7. Drag the entity **Customer** from the connector into the place-holder in the mapping editor:
+7. Drag the entity **Customer** from the connector into the placeholder in the mapping editor:
 
     {{< figure src="/attachments/howto/integration/importing-xml-documents/18581681.png" >}}  
 

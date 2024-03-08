@@ -138,7 +138,7 @@ paths:
       servers:
         - url: 'https://feedback-api.mendix.com/v2'
           description: Base URL
-  '/feedback-items/{feedback-item-uuid}screenshot':
+  '/feedback-items/{feedback-item-uuid}/screenshot':
     get:
       tags:
         - Feedback Items

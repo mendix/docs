@@ -104,7 +104,11 @@ After you have obtained an API response, you can use it to model the service in 
 
 11. Rename the entities according to the [best-practice naming conventions](#naming).
 
-### 3.4 Creating a Microflow Action
+### 3.4 Modeling the Request
+
+Since the update of the AWS Authentication connector to version 3.0.0 it is a best practice to use a request entity that inherits from the AWSAuthentication.AbstractRequest entity. You can create it using an import mapping as explained in the section above and then export it with an export mapping to get the required JSON request body for the REST call.
+
+### 3.5 Creating a Microflow Action
 
 After modeling the API response, you can create the corresponding action to use in your microflows.
 

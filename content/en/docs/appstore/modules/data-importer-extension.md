@@ -140,6 +140,7 @@ Input Excel File
 {{% /alert %}}
 
 {{% alert color="warning" %}}
+
 * **Enum** is not supported as a target data type
 * Runtime exceptions can occur if the input data cannot be converted into desired the target data type for various reasons (for example, invalid data, data truncation, casting etc.)
 {{% /alert %}}
@@ -183,3 +184,9 @@ To perform testing, you can do the following actions:
 3. View the message about x number of rows being imported into a list of entities. 
 
 {{< figure src="/attachments/appstore/modules/data-importer-extension/local-app-run.png" >}}
+
+## 5 Known Issues
+
+### 5.1 Unchecked Columns
+
+It is not possible to rename an attribute or change a data type if there are unchecked columns. To avoid this issue, format your Excel or CSV file in a way that does not require you to uncheck any columns after inputting to Studio Pro.

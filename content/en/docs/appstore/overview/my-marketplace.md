@@ -156,11 +156,7 @@ When you are developing your app, set the app service's binding keys as [constan
 
 Refer to the documentation on specific app services for how to use the binding keys (for example, see the [Authenticating Insights Hub REST Calls](/partners/siemens/mindsphere-app-service/#authenticating) section of *Insights Hub IIoT for Makers*).
 
-## 10 Company Reviews {#company-reviews}
-
-This page contains reviews of **Your company's content** as well as **Your company's reviews** that users from your company have written of other content.
-
-## 11 Content Groups {#content-groups}
+## 10 Content Groups {#content-groups}
 
 The **Content Groups** menu item and page are visible to all users. However, only [Mendix Admins](/control-center/company-settings/) can create and delete content groups. Both [Group Admins](#members) and Mendix Admins can manage content group members. 
 
@@ -176,7 +172,7 @@ This table breaks down the roles and permissions for content groups:
 | Organization member (not part of any group) | ✘ | ✘ | ✘ | ✘ | ✔ | ✔ |
 | Guest | ✘ | ✘ | ✘ | ✘ | ✔ | ✘ |
 
-### 11.1 Content Tab {#group-content}
+### 10.1 Content Tab {#group-content}
 
 On this tab, you can assign content to this content group that can only be managed by members of this group. To assign a component to a content group, click **Assign Content** and select a company Marketplace component from the dialog box:
 
@@ -192,7 +188,7 @@ Click the context menu to access various options for managing this content:
 
 The options in this menu are the same as described for the context menu for the [My Content](#my-content) section above. The **Unassign from Group** button is only available for [Group Admins](#members) and can be used to remove content from the content group.
 
-### 11.2 Members Tab {#members}
+### 10.2 Members Tab {#members}
 
 On this tab, you can enter the email address of a Mendix Platform user from your company and click **Add Member** to add them as a content group member. Content group members can manage the [content](#group-content) assigned to the group.
 
@@ -200,7 +196,7 @@ Once a member is added, you can select their permission level: **Group Member** 
 
 To remove a member, click **Remove** next to their name.
 
-### 11.3 Guests Tab {#guests}
+### 10.3 Guests Tab {#guests}
 
 A guest is a Mendix Platform user from outside your organization who can download the selected private [Content](#group-content) of this group. To add a guest, enter their email address in the box and click **Add Guest**:
 
@@ -212,7 +208,7 @@ The guest must be a registered Mendix Platform user; otherwise, they will not be
 
 To remove a guest, click **Remove**.
 
-### 11.4 Settings Tab {#settings}
+### 10.4 Settings Tab {#settings}
 
 {{% alert color="info" %}}
 This tab is only accessible to [Group Admins](#members) and [Mendix Admins](/control-center/company-settings/).

@@ -43,7 +43,7 @@ Alternatives to using OIDC SSO for managing single sign-on are:
 
 * Supports SSO login with one or multiple OIDC/OAuth-compatible IdPs, such as AWS Cognito, Google, Salesforce, Apple, Okta, Ping, Microsoft's Entra ID (formerly known as Azure AD), and SAP Cloud Identity Services.
 * Easy configuration, by leveraging the so-called well-known discovery endpoint at your IdP.
-  * For example, PKCE will be used automatically if it is detected.
+    * For example, PKCE will be used automatically if it is detected.
 * Configuration can be controlled through constants set during your deployment (version 2.3.0 and above).
 * Helper microflows (DELETE, GET, PATCH, POST, and PUT) which call an API with a valid token (and automate the token refresh process).
 * Supports multiple OIDC IdPs by allowing configuration of user provisioning and access token parsing microflows per IdP.

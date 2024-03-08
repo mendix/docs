@@ -67,7 +67,7 @@ Should you consider using a connected environment, the following URLs should be 
 
     1. **Installation Type**  – Choose Global Installation if you want a single operator namespace to manage multiple namespaces or just a single operator namespace. For more information, see [Global Operator](/developerportal/deploy/global-operator/).
 
-    2. **Cluster Name** – The name that you want to give the cluster which you are creating.    
+    2. **Cluster Name** – The name that you want to give the cluster which you are creating.
 
     3. **Cluster Type** – Choose the correct type for your cluster. For more information, see [Supported Providers](/developerportal/deploy/private-cloud-supported-environments/).
 
@@ -157,7 +157,37 @@ kubectl -n {namespace} edit operatorconfiguration mendix-operator-configuration
 Changing options which are not documented here can cause the Mendix Operator to configure environments incorrectly. Mendix recommends making a backup before applying any changes.
 {{% /alert %}}
 
-### 6.1 Endpoint (network) Configuration {#advanced-network-settings}
+### 6.1 Runtime Base Image
+
+Starting from version 2.15.0, the OperatorConfiguration contains allows to specify the base OS image tag template.
+
+The Operator will parse the MDA file metadata and use this metadata to fill in the `JavaVersion` field.
+
+```yaml
+apiVersion: privatecloud.mendix.com/v1alpha1
+kind: OperatorConfiguration
+# ...
+# omitted lines for brevity
+# ...
+spec:
+  baseOSImageTagTemplate: 'ubi8-1-jre{{.JavaVersion}}-entrypoint'
+```
+
+At the moment, the `baseOSImageTagTemplate` can be set to one of the following values:
+
+* `ubi8-1-jre{{.JavaVersion}}-entrypoint` - to use Red Hat UBI 8 Micro images; this is the default option.
+* `ubi9-1-jre{{.JavaVersion}}-entrypoint` - to use Red Hat UBI 9 Micro images; this option can be used to use a newer OS and improve security scores..
+
+{{% alert color="info" %}}
+
+Future Studio Pro releases will have an option to use alternative (newer) LTS versions of Java, such as Java 17 or Java 21.
+
+If an app's MDA was built using a newer Java version, Mendix Operator 2.15.0 (and newer versions) will detect this and use a base image with the same major Java version that was used to build the MDA.
+
+{{% /alert %}}
+
+
+### 6.2 Endpoint (network) Configuration {#advanced-network-settings}
 
 The OperatorConfiguration contains the following user-editable options for network configuration:
 
@@ -209,7 +239,7 @@ spec:
       pathType: ImplementationSpecific
 # ...
 # omitted lines for brevity
-# ...      
+# ...
 ```
 
 When using **OpenShift Routes** for network endpoints:
@@ -281,7 +311,7 @@ You can change the following options:
 When switching between Ingress and OpenShift Routes, you need to [restart the Mendix Operator](#restart-after-changing-network-cr) for the changes to be fully applied.
 {{% /alert %}}
 
-### 6.2 Mendix App Deployment settings {#advanced-deployment-settings}
+### 6.3 Mendix App Deployment settings {#advanced-deployment-settings}
 
 The OperatorConfiguration contains the following user-editable options for configuring Mendix app Deployments (Pods):
 
@@ -306,7 +336,7 @@ You can change the following options:
 * **runtimeAutomountServiceAccountToken**: – specify if Mendix app Pods should get a Kubernetes Service Account token; defaults to `false`; should be set to `true` when using Linkerd [Automatic Proxy Injection](https://linkerd.io/2.10/features/proxy-injection/)
 * **runtimeDeploymentPodAnnotations**: – specify default annotations for Mendix app Pods
 
-### 6.3 Mendix App Resource Customization {#advanced-resource-customization}
+### 6.4 Mendix App Resource Customization {#advanced-resource-customization}
 
 The Deployment object that controls the pod of a given Mendix application contains user-editable options for fine-tuning the execution to the application's runtime resources.
 
@@ -364,13 +394,13 @@ spec:
         livenessProbe:
           failureThreshold: 3
           httpGet:
-          path: /
-          port: mendix-app
-          scheme: HTTP
+            path: /m2ee-sidecar/v1/healthz
+            port: 8800
+            scheme: HTTP
           initialDelaySeconds: 60
           periodSeconds: 15
           successThreshold: 1
-          timeoutSeconds: 1
+          timeoutSeconds: 3
         readinessProbe:
           failureThreshold: 3
           httpGet:
@@ -381,15 +411,6 @@ spec:
           periodSeconds: 1
           successThreshold: 1
           timeoutSeconds: 1
-        startupProbe:
-            httpGet:
-              path: /
-              port: mendix-app
-              scheme: HTTP
-            timeoutSeconds: 1
-            periodSeconds: 25
-            successThreshold: 1
-            failureThreshold: 4
         terminationGracePeriodSeconds: 300
         resources:
           limits:
@@ -400,12 +421,12 @@ spec:
             memory: 512Mi
 # ...
 # omitted lines for brevity
-# ...    
+# ...
 ```
 
-#### 6.3.1 Resource Definition via Operator Configuration Manifest
+#### 6.4.1 Resource Definition via Operator Configuration Manifest
 
-For a given namespace, all the resource information is aggregated in the `mendix-operator-configuration` manifest. This centralizes and overrides all the configuration explained above. For an example of the Operator configuration manifest, see below. Note that the below configuration is just for reference puropose. 
+For a given namespace, all the resource information is aggregated in the `mendix-operator-configuration` manifest. This centralizes and overrides all the configuration explained above. For an example of the Operator configuration manifest, see below. Note that the below configuration is just for reference puropose.
 
 ```yaml
 apiVersion: privatecloud.mendix.com/v1alpha1
@@ -448,6 +469,7 @@ spec:
   runtimeReadinessProbe:
     initialDelaySeconds: 5
     periodSeconds: 1
+  # startup probes are deprecated in Mendix Operator 2.15.0
   runtimeStartupProbe:
     failureThreshold: 30
     periodSeconds: 10
@@ -456,13 +478,22 @@ spec:
 
 The following fields can be configured:
 
-* `Liveness`, `readiness`, `startupProbe`, and `terminationGracePeriodSeconds` – these are used for all Mendix app deployments in the namespace; any changes made in the deployments will be discarded and overwritten with values from the `OperatorConfiguration` resource
+* `liveness`, `readiness`, and `terminationGracePeriodSeconds` – these are used for all Mendix app deployments in the namespace; any changes made in the deployments will be discarded and overwritten with values from the `OperatorConfiguration` resource
 * `sidecarResources` –  this is used for all `m2ee-sidecar` containers in the namespace
 * `metricsSidecarResources` – this is used for all `m2ee-metrics` containers in the namespace
 * `runtimeResources` – this is used for `mendix-runtime` containers in the namespace (but this is overwritten if the Mendix app CRD has a resources block)
 * `buildResources`  – this is used for the main container in `*-build` pods
 
-#### 6.3.2 Customize Liveness Probe to Resolve Crash Loopback Scenarios
+{{% alert color="info" %}}
+Mendix Operator 2.15.0 uses an improved liveness probe that runs a healthcheck of the Mendix Runtime.
+
+As soon as the Mendix Runtime begins the startup process, the liveness check will return a valid response - as long as the Mendix Runtime is starting and passes its internal healthchecks.
+
+The liveness probe will begin returning valid responses just a few seconds after the Runtime container starts, and this removes the need to use startup probes.
+Starting from Mendix Operator 2.15.0, startup probes are no longer used, and changing their settings will have no effect.
+{{% /alert %}}
+
+#### 6.4.2 Customize Liveness Probe to Resolve Crash Loopback Scenarios
 
 The `liveness probe` informs the cluster whether the pod is dead or alive. If the pod fails to respond to the liveness probe, the pod will be restarted (this is called a `crash loopback`).
 
@@ -478,8 +509,8 @@ Let us now analyze the `liveness probe` section from the application deployment 
 livenessProbe:
   failureThreshold: 3
   httpGet:
-    path: /
-    port: mendix-app
+    path: /m2ee-sidecar/v1/healthz
+    port: 8800
     scheme: HTTP
   initialDelaySeconds: 60
   periodSeconds: 15
@@ -491,7 +522,7 @@ The following fields can be configured:
 
 * `initialDelaySeconds` – the number of seconds after the container has started that the probe is initiated. Minimum value is 0.
 * `periodSeconds` – how often (in seconds) to perform the probe. Default is 10 seconds. Minimum value is 1.
-* `timeoutSeconds` – the number of seconds after which the probe times out. Default is 1 second. Minimum value is 1.
+* `timeoutSeconds` – the number of seconds after which the probe times out. Default is 3 second. Minimum value is 1.
 * `successThreshold` – the number of consecutive successes required before the probe is considered successful after having failed. Defaults to 1. Must be 1 for liveness and startup Probes. Minimum value is 1.
 * `failureThreshold` – the number of times Kubernetes will retry when a probe fails before giving up. Giving up in case of a liveness probe means restarting the container. Defaults to 3. Minimum value is 1.
 
@@ -499,7 +530,13 @@ The following fields can be configured:
 If we are deploying a large application that takes much longer to start than the defined 60 seconds, we will observe it restarting multiple times. To solve this scenario we must edit field `initialDelaySeconds` for the **Liveness probe** to a substantially larger value.
 {{% /alert %}}
 
-#### 6.3.3 Customize Startup Probes for Slow Starting Applications
+{{% alert color="warning" %}}
+Mendix Operator 2.15.0 uses an improved liveness probe that runs a healthcheck of the Mendix Runtime.
+
+The default settings for the liveness probe should work for almost every use case, and should not be modified unless instructed by Mendix Support.
+{{% /alert %}}
+
+#### 6.4.3 Customize Startup Probes for Slow Starting Applications
 
 If you want to wait before executing a liveness probe you should use `initialDelaySeconds` or a startup probe.
 
@@ -529,7 +566,13 @@ Startup probes are available in the Mendix for Private Cloud Operator version 2.
 In Kubernetes version 1.19, startup probes are still a [beta feature](https://kubernetes.io/blog/2020/08/21/moving-forward-from-beta/).
 {{% /alert %}}
 
-#### 6.3.4 Customize terminationGracePeriodSeconds for Gracefully Shutting Down the Application Pod
+{{% alert color="warning" %}}
+Mendix Operator 2.15.0 uses an improved liveness probe that runs a healthcheck of the Mendix Runtime.
+
+Startup probes are no longer used, and changing the `startupProbe` settings will have no effect.
+{{% /alert %}}
+
+#### 6.4.4 Customize terminationGracePeriodSeconds for Gracefully Shutting Down the Application Pod
 
 Using `terminationGracePeriodSeconds`, the application is given a certain amount of time to terminate. The default value is 300 seconds. This time can be configured using the `terminationGracePeriodSeconds` key in the pod's spec and so if your pod usually takes longer than 300 seconds to shut down, you can increase the grace period. You can do that by setting the `terminationGracePeriodSeconds` key in the pod YAML.
 
@@ -541,7 +584,7 @@ terminationGracePeriodSeconds: 300
 The `terminationGracePeriodSeconds` setting is available in the Mendix for Private Cloud Operator version 2.6.0 and above.
 {{% /alert %}}
 
-#### 6.3.5 Customize Container Resources: Memory and CPU
+#### 6.4.5 Customize Container Resources: Memory and CPU
 
 The `resources` following section shows an example configuration of the `resources` section from the example application deployment, above. Note that the configuration is just for reference purpose.
 
@@ -563,7 +606,7 @@ The settings in the example above mean that
 * if the server node where a pod is running has enough of a given resource available the container can be granted resource than its `requests`
 * a container will never be granted more than its resource `limits`
 
-##### 6.3.5.1 Meaning of CPU
+##### 6.4.5.1 Meaning of CPU
 
 Limits and requests for CPU resources are measured in cpu units. One CPU, in this context, is equivalent to 1 vCPU/Core for cloud providers and 1 hyperthread on bare-metal Intel processors.
 
@@ -571,7 +614,7 @@ Fractional requests are allowed. For instance, in this example, we are requestin
 
 A precision finer than 1m is not allowed.
 
-##### 6.3.5.2 Meaning of Memory
+##### 6.4.5.2 Meaning of Memory
 
 Limits and requests for memory are measured in bytes. You can express memory as a plain integer or as a fixed-point number using one of these suffixes: E, P, T, G, M, K. You can also use the power-of-two equivalents: Ei, Pi, Ti, Gi, Mi, Ki. For example, the following represent roughly the same value: `128974848`, `129e6`, `129M`, `123Mi`
 
@@ -581,7 +624,7 @@ For instance, in the example above, we are requesting and limiting memory usage 
 Modifying the resource configuration should be performed carefully as that might have direct implications on the performance of your application, and the resource usage of the server node.
 {{% /alert %}}
 
-### 6.4 Customize Runtime Metrics {#customize-runtime-metrics}
+### 6.5 Customize Runtime Metrics {#customize-runtime-metrics}
 
 Mendix for Private Cloud provides a Prometheus API, which can be used to collect metrics from Mendix apps.
 
@@ -640,7 +683,7 @@ To disable the Prometheus metrics API, remove the `runtimeMetricsConfiguration` 
 
 For more information about collecting metrics in Mendix for Private Cloud, see [Monitoring Environments in Mendix for Private Cloud](/developerportal/deploy/private-cloud-monitor/).
 
-### 6.5 Customize Service Account {#customize-service-account}
+### 6.6 Customize Service Account {#customize-service-account}
 
 The Mendix environment can be configured to use a specific Kubernetes ServiceAccount instead of the default ServiceAccount.
 
@@ -652,7 +695,7 @@ The service account can be customized for Private Cloud Operator version 2.7.0 a
 
 If required, you can use additional annotations. For example, in order to authenticate with AWS services instead of with static credentials, you can attach an AWS IAM role to an environment and use [IRSA](https://aws.amazon.com/blogs/opensource/introducing-fine-grained-iam-roles-service-accounts/).
 
-### 6.6 Autoscaling
+### 6.7 Autoscaling
 
 Mendix for Private Cloud is compatible with multiple types of Kubernetes autoscalers.
 
@@ -662,13 +705,13 @@ To optimize resource utilization, autoscaling can terminate running instances of
 When autoscaling scales down an app or Kubernetes node, microflows in affected pods will be terminated, and the terminating pod will no longer accept new HTTP connections.
 {{% /alert %}}
 
-#### 6.6.1 Cluster Autoscaling
+#### 6.7.1 Cluster Autoscaling
 
 The Kubernetes [cluster autoscaler](https://github.com/kubernetes/autoscaler/tree/master/cluster-autoscaler) monitors resource usage and automatically adjusts the size of the cluster based on its resource needs.
 
 Mendix for Private Cloud is compatible with cluster autoscaling. To install and enable cluster autoscaling, follow your cluster vendor's recommended way of configuring the cluster autoscaler.
 
-#### 6.6.2 Horizontal Pod Autoscaling {#horizontal-autoscaling}
+#### 6.7.2 Horizontal Pod Autoscaling {#horizontal-autoscaling}
 
 {{% alert color="info" %}}
 You need to have the Mendix Operator version 2.4.0 or above installed in your namespace to use horizontal pod autoscaling.
@@ -707,7 +750,7 @@ When an environment is scaled (manually or automatically), it will not be restar
 Scaling an environment up (increasing the number of replicas) adds more pods - without restarting any already running pods; once the additional pods become available, they will start receiving HTTP (or HTTPS) requests.
 Scaling an environment down (decreasing the number of replicas) removes some of the running pods - without restarting remaining pods; all HTTP (or HTTPS) traffic will be routed to the remaining pods.
 
-#### 6.6.3 Vertical Pod Autoscaling
+#### 6.7.3 Vertical Pod Autoscaling
 
 [Vertical pod autoscaling](https://github.com/kubernetes/autoscaler/tree/master/vertical-pod-autoscaler) can automatically configure CPU and memory resources and requirements for a pod.
 
@@ -726,9 +769,9 @@ Mendix recommends using horizontal pod autoscaling to adjust environments to mee
 Vertical pod autoscaling cannot be combined with horizontal pod autoscaling.
 {{% /alert %}}
 
-### 6.7 Log format
+### 6.8 Log format
 
-#### 6.7.1 Runtime log format{#runtime-log-format}
+#### 6.8.1 Runtime log format{#runtime-log-format}
 
 Mendix Operator version 2.11.0 or above allows you to specify the log format used by Mendix apps.
 
@@ -763,9 +806,9 @@ In the `json` format, newline characters will be sent as `\n` (as specified in t
 For example, to correctly display newline characters in Grafana, use the [Escape newlines](https://github.com/grafana/grafana/pull/31352) button.
 {{% /alert %}}
 
-### 6.8 Pod labels
+### 6.9 Pod labels
 
-#### 6.8.1 General pod labels
+#### 6.9.1 General pod labels
 
 Mendix Operator version 2.13.0 or above allows you to specify default pod labels for app-related pods: task pods (build and storage provisioners) and runtime (app) pods.
 
@@ -791,9 +834,9 @@ Alternatively, for Standalone clusters, pod labels can be specified in the `Mend
 The Mendix Operator uses some labels for internal use. To avoid conflicts with these internal pod labels, please avoid using labels starting with the `privatecloud.mendix.com/` prefix.
 {{% /alert %}}
 
-### 6.9 GKE Autopilot Workarounds {#gke-autopilot-workarounds}
+### 6.10 GKE Autopilot Workarounds {#gke-autopilot-workarounds}
 
-In GKE Autopilot, one of the key features is its ability to automatically adjust resource settings based on the observed resource utilization of the containers. GKE Autopilot verifies the resource allocations and limits for all containers, and makes adjustments to deployments when the resources are not as per its requirements. 
+In GKE Autopilot, one of the key features is its ability to automatically adjust resource settings based on the observed resource utilization of the containers. GKE Autopilot verifies the resource allocations and limits for all containers, and makes adjustments to deployments when the resources are not as per its requirements.
 
 As a result, there can be a continuous back-and-forth interaction between Mx4PC and GKE Autopilot, where both entities engage in a loop, attempting to counteract each other's modifications to deployments and pods.
 
@@ -1051,20 +1094,9 @@ The new value for the annotation will only be applied when the application is re
 {{% /alert %}}
 
 {{% alert color="info" %}}
-When removing an **Ingress annotation** from the Private Cloud Portal, it is important to note that the annotation will not be automatically removed from the Ingress. In the event that an ingress annotation is removed, please be aware that the annotation will persist within the Ingress object. In order to remove the annotation from the Ingress object, you can run the folllowing commands:
+Mendix Operator version 2.14.0 (and older) don't remove ingress or service annotations when an annotation is removed from the Private Cloud Portal or in the `MendixApp` CR.
 
-To retrieve the value of the Ingress object:
-
-```shell
-kubectl -n {namespace} get ingress
-```
-
-To remove the annotation:
-
-```shell
-kubectl -n {namespace} annotate ingress {ingress-object} {annotationKey}-
-```
-
+This is addressed in Mendix Operator version 2.15.0; if you need to remove an ingress or service annotation, please upgrade to the latest Mendix Operator version first.
 {{% /alert %}}
 
 You can configure the runtime metrics for the environment in the **Runtime** section. For more information, see [Customize Runtime Metrics](#customize-runtime-metrics).
@@ -1201,14 +1233,14 @@ kubectl -n {namespace} delete storageplan {StoragePlanName}
 
 #### 7.2.5 Custom Core Resource Plan
 
-Here, you can create customized plan for your core resources. 
+Here, you can create customized plan for your core resources.
 
 1. Click **Add New Plan**.
 2. Provide a name to the plan under **Plan Name**.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/customPlan.png" >}}
 
-3. Provide the required **CPU Limits**, **CPU Request**, **Memory Limit**, **Memory Request**, **Ephemeral Storage Request** and **Ephemeral Storage Limit** based on your choice. 
+3. Provide the required **CPU Limits**, **CPU Request**, **Memory Limit**, **Memory Request**, **Ephemeral Storage Request** and **Ephemeral Storage Limit** based on your choice.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/customPlanDetails.png" >}}.
 

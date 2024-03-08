@@ -17,14 +17,14 @@ aliases:
 
 ## 1 Introduction
 
-This how-to will demonstrate how easy it is to build apps using data from different sources using the Catalog. The steps describe the following: 
+This how-to will demonstrate how easy it is to build apps using data from different sources using the [Catalog](https://catalog.mendix.com/). The steps describe the following: 
 
 * Create an app in Mendix Studio Pro
 * Publish an entity from the app and register it in the Catalog 
 * Use the Catalog to explore the data sources from the organization that are registered as assets 
 * Connect to the registered asset that you published earlier and use it in a new app
 * Change data in the original app and see it updated in the new or consuming app
-* See the network of shared data in the Landscape
+* See the network of shared data in the [Landscape](/catalog/manage/landscape/)
 
 ## 2 Prerequisites
 
@@ -34,10 +34,10 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Creating an App {#createapp} 
 
-Follow these steps to create a simple app in Mendix Studio Pro. 
+Follow these steps to create a simple app in Studio Pro: 
 
-1. In Studio Pro, click **New App** to create a new app using the **Blank** app template. Fill in the **App Name** as *{yourname}CustomerServiceApp* and select **Create app**. 
-2. In the App Explorer, double-click the **Domain Model** in **MyFirstModule**. 
+1. In Studio Pro, click **New App** and choose the **Blank** app template. Fill in the **App Name** as *{yourname}CustomerServiceApp* and select **Create app**. 
+2. In the App Explorer, double-click the **Domain model** in **MyFirstModule**. 
 3. In the **Toolbox**, select **Entity** and drag it into the domain model.
 4. Double-click the entity to open its properties and set its **Name** to *Customer*.
 5. In the **Attributes** tab, click **New** and do the following:
@@ -57,11 +57,11 @@ Follow these steps to create a simple app in Mendix Studio Pro.
     {{< figure src="/attachments/catalog/share-data/overview-pages-for-customer-entity.png" >}}
 
 11. In the **App Explorer**, double-click **Home_Web** to open the **Home_Web** page.
-12. From the **App Explorer** drag **Customer_Overview** into the empty **Auto-fill** container under the *Home* banner.
+12. From the **App Explorer**, drag **Customer_Overview** into the empty **Auto-fill** container under the **Home** banner.
 
-You have created a simple app with the entity **Customer**, and a web page where we can view and edit details for this entity. 
+You have created a simple app with the entity **Customer**, and a web page where you can view and edit details for this entity. 
 
-Go ahead and customize the home page further by changing the banner text.
+Customize the home page further by changing the banner text.
 
 ## 4 Publishing to the Catalog {#publishing}
 

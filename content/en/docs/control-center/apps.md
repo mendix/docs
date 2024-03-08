@@ -15,7 +15,7 @@ aliases:
 
 The **Apps** page shows you all the apps belonging to your company. It also allows you to manage default app roles in your company.
 
-The **Apps** page has the following tabs available: **Mendix Cloud**, **Mendix Free Cloud**, **Other Apps**, **Deactivated Apps**, and **Default App Roles**.
+The **Apps** page has the following tabs available: **Mendix Cloud**, **Mendix Free Cloud**, **Other Apps**, and **Deactivated Apps**
 
 {{% alert color="info" %}}
 We are working on giving private clouds a separate tab. Stay tuned.

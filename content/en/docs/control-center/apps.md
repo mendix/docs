@@ -13,7 +13,7 @@ aliases:
 
 ## 1 Introduction
 
-The **Apps** page shows you all the apps belonging to your company. The page has the following tabs available: **Mendix Cloud**, **Mendix Free Cloud**, **Other Apps**, and **Deactivated Apps**.
+The **Apps** page gives an overview of all the apps belonging to your company. The page has the following tabs available: **Mendix Cloud**, **Mendix Free Cloud**, **Other Apps**, and **Deactivated Apps**.
 
 {{% alert color="info" %}}
 We are working on giving private clouds a separate tab. Stay tuned.

@@ -30,6 +30,10 @@ There are three versions of the Forgot Password module, depending on whether you
 
 If you already use the Forgot Password module in your Mendix 8 app, you can find instructions on how to upgrade in [Upgrading from Mendix 8 to Mendix 9](#upgrade8-9) section below.
 
+{{% alert color="warning" %}}
+The Forgot Password module is not supported in the Mendix version 10.6.0 and above, as it relies on the deprecated [Deep Link](/appstore/modules/deep-link/) module. The Deep Link module has been replaced by [page URLs](/refguide/page-properties/#url) and [microflow URLs](/refguide/microflow/#url). Mendix is working on a solution to enable the Forgot password module (compatible with Mendix version 10.6.0 and above) to work with these URLs.
+{{% /alert %}}
+
 ### 1.1 Dependencies {#dependencies}
 
 The Forgot Password module has the following dependencies:

@@ -69,7 +69,7 @@ The XML schema describes what the possible contents of an XML file are, but we n
 To create the XML-to-domain mapping, follow these steps:
 
 1. Right-click a module in the **App Explorer** and select **Add Other** > **Import mapping**.
-2. Enter *ImportCustomersMapping* as the **Name** and click **OK.**  The new mapping will open automatically and the elements will be shown.
+2. Enter *ImportCustomersMapping* as the **Name** and click **OK**.  The new mapping will open automatically and the elements will be shown.
 
     {{< figure src="/attachments/howto/integration/importing-xml-documents/18581689.png" >}}
 
@@ -117,7 +117,7 @@ To create the import logic, follow these steps:
 
 3. Double-click the new button to open the **Edit Action Button** editor and do the following:<br />
     1. Change the caption to *Import XML Document*<br />
-    2. For the **On click** event, select **Call a microflow**, then click **Select** for the microflow, create a new microflow, and name it **XMLDocument_Import**.<br />
+    2. For the **On click** event, select **Call a microflow**, then click **Select** for the microflow, create a new microflow, and name it *XMLDocument_Import*.<br />
     3. Click **OK** to save the properties.<br />
 
     {{< figure src="/attachments/howto/integration/importing-xml-documents/18581646.png" >}}

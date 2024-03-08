@@ -135,7 +135,9 @@ If you are planning this sort of testing you must raise a ticket with Mendix Sup
 * exact timings
 * contact details of parties directly involved – including any third parties who are assisting
 
-You and Mendix Support can then sign an indemnification agreement to confirm this information and ensure that your tests do not impact other customers, and that you can get the information you need.
+Please provide this information as early as possible, at least two weeks in advance of the test date. Mendix may refuse permission to do some kinds of test if they break local laws or pose too high a risk to the Mendix infrastructure or other customers.
+
+If you want to perform penetration tests, your Customer Service Manager (CSM) can provide you with an indemnification agreement. This should be signed by all parties, confirming the information above, and agreeing that your tests are legal and do not impact other customers. If you don't know who your CSM is, Mendix Support can provide you with their contact details. 
 
 If Mendix is not aware of your tests, you may find that they are interrupted if they cause unexpected alerts to be generated for our Cloud Operations or Security teams. You may also be breaking your agreement with Mendix.
 

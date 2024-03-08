@@ -93,7 +93,7 @@ To develop modules and submit them to the Marketplace, follow these guidelines:
 
 You can set up a GitHub repository to contain the development content for your Marketplace component, and you can share this repo URL as the component source on the [Package](#package) page in the submission process.
 
-When setting up the GitHub repo for your componen, follow these guidelines:
+When setting up the GitHub repo for your component, follow these guidelines:
 
 * Make sure the repo name matches the name that will be used for the published Marketplace component
 * Use UpperCamelCase to replace the spaces in the name (for example, *MyFirstApp*)
@@ -233,18 +233,6 @@ If this is the first version of the component you are uploading, the number in t
 
 Enter **Release Notes** for the component in the box provided describing what is new in that release.
 
-Finally, you can upload a **Virus Scan Report**. Uploading a scan report is currently optional, but Mendix strongly recommends that you create this report using a service (for example, [VirusTotal](https://www.virustotal.com/gui/home/upload)). This will ensure a high-quality and secure component. Once you upload your app package or component file (for example, *.mpk*, *.mxmodule*, *.zip*, *.class*, *.csv*, *.txt*, or *.tar*) and run the scan with the scanning service, save the report as a PDF (via a screenshot, if necessary). Then, click **Upload** in the Marketplace to upload your report.
-
-{{% alert color="warning" %}}
-If the virus scan report is invalid or there is some issue with it, the [Marketplace approval process](/appstore/sharing-content/governance-process/) will reject the component and it will not be listed in the Marketplace. Ensure you upload a true virus scan report to avoid the rejection of your component.
-{{% /alert %}}
-
-{{% alert color="warning" %}}
-If this report is not attached and during our approval process we identify security issues in your component, the component will not be listed in the public Marketplace until the issue is resolved.
-{{% /alert %}}
-
-{{< figure src="/attachments/appstore/sharing-content/package.png" >}}
-
 ### 4.3 Enable {#doc}
 
 On the **Enable** page, you can enter details on requirements and configuration for your component in the **Documentation**. Note that the documentation option is only available when the **Import Documentation** box has not been selected on the **Package** page above. 
@@ -301,7 +289,7 @@ Mendix expects the following updates for components in the Platform, Community, 
 * Bug fixes
 * New features
 * Feature removal
-* Compatiblity updates with the latest Studio Pro version and other dependencies
+* Compatibility updates with the latest Studio Pro version and other dependencies
 
 To update content that has already been published, follow these steps:
 

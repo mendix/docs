@@ -21,7 +21,7 @@ The page contains two tabs: [Overview](#overview) and [All Components](#all-comp
 
 On the **Overview** tab, you can see a list of all the deployed apps and environments.
 
-Above the list, you can use the search box to search for an app. Next to the search box, you can filter apps by selecting the type of the cloud and the Mendix Runtime version. You can click {{% icon name="office-sheet" %}}**Export all** on the right side above the list to export all the information in the list to an Excel file.
+Above the list, you can use the search box to search for information in any column in the list except for **Target Cloud**. Next to the search box, you can filter apps by selecting the type of the cloud and the Mendix Runtime version. You can click {{% icon name="office-sheet" %}}**Export all** on the right side above the list to export all the information in the list to an Excel file.
 
 The list contains the following information:
 
@@ -43,13 +43,13 @@ On the top of the page, you can find the app name, the environment name, the Men
 
 On the upper-right corner of the page, you can click {{% icon name="download-bottom" %}}**SBOM** to download the software bill of materials (SBOM).
 
-Above the list, you can use the search box to search for a component. Next to the search box, you can filter components by selecting the component type. You can click {{% icon name="office-sheet" %}}**Export all to Excel** on the right side above the list to export all the information in the list to an Excel file.
+Above the list, you can use the search box to search for a component name or version. Next to the search box, you can filter components by selecting the component type. You can click {{% icon name="office-sheet" %}}**Export all to Excel** on the right side above the list to export all the information in the list to an Excel file.
 
 The list shows all the components used in the app, with the following information: 
 
 * **Component**: This is the component name.
 * **Version**: This is the version of the component used in this app.
-* **Type**: This shows the type of the component.
+* **Type**: This shows the type of the component. This could be modules, widgets, framework which refers to the Mendix Runtime version, and java libraries (JAR). In case a type is not recognized, it is shown as **Unknown**.
 * {{% icon name="view" %}}: You can customize the columns of the list by clicking the {{% icon name="view" %}} icon and adjusting the selection of the check boxes.
 
 To export the information of selected items in the list to an Excel file, select the check boxes of the items in the list, and then click {{% icon name="office-sheet" %}}**Selection Export to Excel** that appears at the bottom of the page.

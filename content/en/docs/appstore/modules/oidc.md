@@ -33,7 +33,7 @@ Alternatives to using OIDC SSO for managing single sign-on are:
 
 * **B2C apps:** Your app is aimed at consumers who have an identity at a 'social IdP' which uses OIDC, such as Google. In this case your app will only delegate the authentication to the IdP, no further user information is available to the app.
 * **B2E app:** Your app is aimed at your company's employees and you want these employees to sign in to your app using corporate credentials hosted by your identity provider (IdP) that supports the OIDC protocol. In this case your app may have its own logic to assign user roles or you may use authorization information from your IdP as provided to your app using an access token.
-* **API consumption.** If your app makes calls to APIs of other services on behalf of your end-user, you can use the access token obtained via the “OIDC SSO” module. This scenario is not supported when using SAML SSO. This makes the OIDC SSO module suitable for Mendix customers using Mendix Catalog.
+* **API consumption.** If your app makes calls to APIs of other services on behalf of your end-user, you can use the access token obtained via the OIDC SSO module. This scenario is not supported when using SAML SSO. This makes the OIDC SSO module suitable for Mendix customers using Mendix Catalog.
 * **Authorizing access to a Mendix back-end app.**  If you want to secure APIs in Mendix back-end apps using an access token, your API can use an access token passed by the calling app in the authorization header. If the access token is a JWT, your app can use the user and/or the user’s authorizations to assign user roles based on the claims in the access token JWT.
 * **Xcelerator apps.** Your Siemens Xcelerator app is designed to be integrated with Siemens' SAM IdP.  The Siemens SAM IdP supports the OIDC protocol and allows your app to delegate both authentication (login) and authorization (roles).
 
@@ -70,7 +70,7 @@ The OIDC SSO module supports the following features:
 For readers with more knowledge of the OAuth and OIDC protocol.
 
 * Uses the Authorization Code Grant flow to sign the end-user in via the browser.
-* Uses the 'nonce' parameter to defend against replay attacks.
+* Uses the `nonce` parameter to defend against replay attacks.
 * Validates ID-token signatures.
 * Uses the Proof Key for Code Exchange (PKCE – pronounced “pixie") security enhancement as per RFC 7636. If your IdP’s well-known endpoint indicates “S256” as value for “code_challenge_methods_supported”, the OIDC Module will automatically apply the PKCE feature. PKCE can be seen as a security add-on to the original OAuth protocol. It is generally recommended to use this feature to be better protected against hackers who try to get access to your app.
 * When authenticating APIs, it validates access tokens in one of two ways:
@@ -152,21 +152,21 @@ To migrate from Mendix 8.18.x to Mendix 9.8.1 or above, follow the steps below:
 2. Save the upgraded version of the app.
 3. Review the guidance in [Moving from Mendix Studio Pro 8 to 9](/refguide9/moving-from-8-to-9/).
 4. Open your app in Mendix 9.8.1 or above and allow it to be upgraded.
-5. Import the “OIDC SSO” Platform Edition module from the Marketplace.
-6. Import the “Mx Model Reflection” module from Marketplace.
+5. Import the [OIDC SSO](https://marketplace.mendix.com/link/component/120371) Platform Edition module from the Marketplace.
+6. Import the [Mx Model Reflection](https://marketplace.mendix.com/link/component/69) module from the Marketplace.
 7. In the dialog **Security** > **User roles**, select *Administrator* and click **Edit**.
 8. Enable `MxModelReflection.ModelAdministrator` and close the dialog boxes with the **OK** button.
-9. You can see some errors in the Errors tab. To resolve these errors, import the “Atlas Core” module from the Marketplace.
+9. You can see some errors in the **Errors** tab. To resolve these errors, import the [Atlas Core](https://marketplace.mendix.com/link/component/117187) module from the Marketplace.
 10. If you still have errors, review the information in [Migrate From Atlas 2 To Atlas 3](/refguide9/moving-from-atlas-2-to-3/) and use it to resolve the issues.
-11. Delete the “Atlas_UI_Resources” module from your app. Your app is now using themes from the Atlas Core Module.
-12. Update the “Administration” and “MendixSSO” modules to the latest version by importing them from the Marketplace.
+11. Delete the Atlas_UI_Resources module from your app. Your app is now using themes from the Atlas Core Module.
+12. Update the [Administration module](https://marketplace.mendix.com/link/component/23513) and [MendixSSO](https://marketplace.mendix.com/link/component/111349) modules to the latest version by importing them from the Marketplace.
 
 #### 3.2.2 Replacing Community Edition with Platform Edition on Mendix 9
 
-If your app is already developed using Mendix 9 or above, but uses the community edition of the OIDC SSO module, you can just do the following.
+If your app is already developed using Mendix 9 or above, but uses the community edition of the OIDC SSO module, you can just do the following:
 
 1. Import the "OIDC" platform edition module from the Marketplace.
-2. Import the "Mx Model Reflection" Module from the Marketplace.
+2. Import the [Mx Model Reflection](https://marketplace.mendix.com/link/component/69) module from the Marketplace.
 
 ## 4 OIDC App Configuration{#app-configuration}
 
@@ -205,7 +205,7 @@ In the **Anonymous** tab of the app security settings, do the following:
 
 ### 4.3 Configuring Navigation{#configure-nav}
 
-The OIDC SSO module works without a specified sign-in page. Therefore, in the navigation section of your app, set **Sign-in page** (in the **Authentication** section) to *(none)*.
+The OIDC SSO module works without a specified sign-in page. Therefore, in the navigation section of your app, set **Sign-in page** (in the **Authentication** section) to *none*.
 
 If you are configuring navigation for web/responsive apps and want to allow your end-users to choose from a number of different IdPs, or to have the option to sign in back into the app after they have signed out, set a **Role-based home page** for role **Anonymous** to **OIDC.Login_Web_Button**. When you configure navigation for PWA apps, set a **Role-based home page** for role **Anonymous** to **OIDC.Login_PWA_Button**. See [Role-Based Home Pages](/refguide/navigation/#role-based) in *Navigation* for more information.
 
@@ -231,9 +231,9 @@ Follow the instructions to [set an encryption key in the Encryption module](/app
 
 This section gives some guidance for doing the necessary configurations at your entra ID (formerly known as Azure AD) provider to obtain access tokens containing the right authorization claims to secure your APIs.
 
-If you don’t set the access token up correctly, you will get access tokens containing default `aud` (audience) claims. The default audience is the Microsoft Graph API and so these access tokens cannot be validated by your API.
+If you don not set the access token up correctly, you will get access tokens containing default `aud` (audience) claims. The default audience is the Microsoft Graph API and so these access tokens cannot be validated by your API.
 
-To get the Microsoft Identity Platform to issue access tokens you can pass to your API, you need to set up a custom scope in the App Registration’s **Expose an API** tab, and request that scope when you acquire the tokens. TO do this:
+To get the Microsoft Identity Platform to issue access tokens you can pass to your API, you need to set up a custom scope in the App Registration’s **Expose an API** tab, and request that scope when you acquire the tokens. To do this, follow the steps below:
 
 1. Open the **Expose an API** tab in the **App Registration** page of the Azure Portal.
 1. In the **Expose an API** tab, set up a custom scope.
@@ -314,12 +314,12 @@ In this case, the OIDC client is the app you are making.
 1. Choose the **Client authentication method** — make sure that you select a method that is supported by your IdP. You can normally check this via the `token_endpoint_auth_methods_supported` setting on the IdP’s well-known endpoint. Also ensure that the correct client authentication method is configured at the IdP when you register the client.
 
     The options are:
-    * client_secret_basic: Your app will use the HTTP Basic Authentication scheme to authenticate itself at your IdP. (Default – for security reasons this should be your preferred choice)
-    * client_secret_post: Your app will authenticate itself by including its client_id and client_secret in the payload of token requests. (Older versions of the OIDC SSO module used this method).
+    * `client_secret_basic`: Your app will use the HTTP Basic Authentication scheme to authenticate itself at your IdP. (Default – for security reasons this should be your preferred choice)
+    * `client_secret_post`: Your app will authenticate itself by including its client_id and client_secret in the payload of token requests. (Older versions of the OIDC SSO module used this method).
 
 1. Add the **Client Secret**.
 1. If you have the **Automatic Configuration URL** (also known as the *well-known endpoint*), enter it and click **Import Configuration** to automatically fill the other endpoints.
-    * If you don't have an automatic configuration URL, you can fill in the other endpoints manually.
+    * If you don not have an automatic configuration URL, you can fill in the other endpoints manually.
 1. Click **Save**
     {{% alert color="info" %}}Your client configuration is not yet complete, but you have to save at this point to allow you to set up the rest of the information.{{% /alert %}}
 1. Select your client configuration and click **Edit**.
@@ -505,7 +505,9 @@ You can set up custom user provisioning by setting the following constants. You 
 | CustomUserEntity | a custom user entity | in the form `modulename.entityname` – a specialization of `System.User` | `Administration.Account` |
 | PrincipalAttribute | the attribute holding the unique identifier of an authenticated user | | `Name` |
 | IdPAttribute | the IdP claim which is the unique identifier of an authenticated user | | `preferred_username` |
+| AllowcreateUsers | allow to create users in the application | *optional* | `True` |
 | Userrole | the role which will be assigned to newly created users | *optional* | `User` |
+| UserType | assign usertype to the created users | *optional* | `Internal` |
 | CustomUserProvisioning | a custom microflow to use for user provisioning | *optional* – in the form `modulename.microflowname` – the microflow name must begin with the string `CustomUserProvisioning` | `Mymodule.CustomUserProvisioningEntra` |
 
 #### 6.2.3 Custom User Provisioning at Runtime{#custom-provisioning-rt}
@@ -866,7 +868,7 @@ To resolve this, open the Mendix Service Console and ensure that the **Port numb
 
 {{< figure src="/attachments/appstore/modules/oidc/service-console-ports.png" >}}
 
-### 9.5 `CommunityCommons.RandomStrongPassword` microflow does not match the expected parameters
+### 9.5 `CommunityCommons.RandomStrongPassword` Microflow Does Not Match the Expected Parameters
 
 When you are using OIDC SSO module with Community Commons (version 10.0.3 and above), you may get the following error message in the Mendix Studio Pro console logs:
 “The arguments that are passed to Java action CommunityCommons.RandomStrongPassword do not match the expected parameters and need to be refreshed”.

@@ -39,15 +39,23 @@
                 // Append the cloned elements to the heading
                 heading.appendChild(clone);
 
-                // Make icon and tooltip visible on hover
+                // Show icon on hover
                 heading.addEventListener('mouseenter', function () {
                     a.style.visibility = 'initial';
+                });
+
+                // Hide icon when mouse leaves
+                heading.addEventListener('mouseleave', function () {
+                    a.style.visibility = 'hidden';
+                });
+                
+                // Show tooltip when hovering over the icon
+                a.addEventListener('mouseenter', function () {
                     tooltip.style.visibility = 'initial';
                 });
 
-                // Hide icon and tooltip when mouse leaves
-                heading.addEventListener('mouseleave', function () {
-                    a.style.visibility = 'hidden';
+                // Hide tooltip when mouse leaves
+                a.addEventListener('mouseleave', function () {
                     tooltip.style.visibility = 'hidden';
                     tooltip.textContent = 'Copy link to clipboard'; // Reset tooltip text when mouse leaves
                 });

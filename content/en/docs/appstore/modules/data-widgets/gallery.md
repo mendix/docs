@@ -51,7 +51,7 @@ Defines the amount of data shown for each page or the limit to be presented when
 This widget does not support [system texts](/refguide/system-texts/), meaning is not possible to translate its content to another language.
 {{% /alert %}}
 
-You can choose between paging buttons (button being presented below or above the grid) or virtual scrolling (mechanism that automatically loads data when the users reaches the bottom of the scroll bar). 
+You can choose between paging buttons (button being presented below or above the grid) or virtual scrolling (mechanism that automatically loads data when the users reaches the bottom of the scroll bar).
 
 #### 2.3.3 Position of Paging Buttons
 
@@ -118,7 +118,7 @@ For more information about filters, see the [Filters](/appstore/modules/data-gri
 In the new Gallery widget it is possible to add sorting widgets to the composable region and use them based on the configurations available in the **Sorting** tab. In order to make the attributes available for the sorting widgets, you must select an attribute and define the name it will show via the sort button.
 
 {{% alert color="info" %}}
-If you have a sorting applied in the datasource of the gallery it will pre-select the value in the drop-down filter if it matches the selection made in the configurations and override the filter selected in the datasource in case you have more options defined. 
+If you have a sorting applied in the datasource of the gallery it will pre-select the value in the drop-down filter if it matches the selection made in the configurations and override the filter selected in the datasource in case you have more options defined.
 {{% /alert %}}
 
 {{< figure src="/attachments/appstore/modules/data-widgets/gallery/sorting.png" alt="Example of sorting configuration"   width="300"  >}}
@@ -132,7 +132,33 @@ The Drop-Down Sort widget has two options you can set:
 * Empty option caption: value to be used when no value is selected
 * Screen reader caption: value to be announced by screen readers when using assistive technology
 
-## 5 Troubleshooting
+## 5 Keyboard navigation and selection
+
+In the Gallery widget it's possible to navigate and select items using  the keyboard. It's a great way to be more efficient, and it's also important for accessibility, meaning users can better use the Gallery widget.
+
+To improve user experience, it's possible to see what is the item where the keyboard focus. The visual way to know when an item get focus is to check if the item have a thin blue border.
+
+Also, it's possible to see when an item is selected. The visual way to know when an item is selected is to check if the item have a light gray background.
+
+### 5.1 Keyboard Navigation
+
+With the arrow keys (`up`, `down`, `left`, `right`) in the keyboard the user can navigate between the items displayed in the Gallery. Also, the user can use special keyboard keys like `home`, `end`, `pageup` and `pagedown`.
+
+From the keyboard, the users can press `Tab` and navigate between elements to reach the Gallery items.
+
+### 5.2 Keyboard Selection
+
+Keyboard selection, different than navigation, is like the click of the mouse on an item. So after navigating to a desired item, the user can `Shift+Space` and the item will be selected.
+
+### 5.3 Keyboard Multi-Selection
+
+To further improve the user experience, it's also possible to select many items only using the keyboard. To achieve that, the user can hold `Shift` on the first item and navigate with arrow key to the last item the user wants to select. With that all the items between the first and last selected will also be selected.
+
+### 5.4 Accessibility
+
+Using the keyboard is a great way to whiz around Gallery widget, but it's also about making things accessible for everyone. Not everyone can use a mouse, so these keyboard skills ensure that everyone can interact with the Gallery widget.
+
+## 6 Troubleshooting
 
 The new Gallery widget uses [CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) as its base for styling. If you need to combine rows or columns you can achieve this using the following helper classes in the `Dynamic item class`:
 

@@ -1,9 +1,8 @@
 (function ($) {
     'use strict';
 
-    // Headers' anchor link that shows on hover
     $(function () {
-        // append anchor links to headings in markdown.
+        // Append anchor links to headings in Markdown
         var article = document.getElementsByTagName('main')[0];
         if (!article) {
             return;
@@ -14,8 +13,8 @@
                 var a = document.createElement('a');
                 // [a11y] hide this from screen readers, etc..
                 a.setAttribute('aria-hidden', 'true');
-                // material insert_link icon in svg format
-                a.innerHTML = ' <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>';
+                // Material insert_link icon in svg format
+                a.innerHTML = ' <svg xmlns="http://www.w3.org/2000/svg" fill="var(--bs-link-color)" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>';
                 a.href = '#' + heading.id;
                 a.style.visibility = 'hidden';
 
@@ -48,23 +47,30 @@
                 // Insert the tip into the tooltip
                 tooltip.appendChild(tip);
 
-                // Insert the tooltip directly into the heading
+                // Insert the tooltip into the heading
                 heading.appendChild(a);
                 heading.appendChild(tooltip);
 
+                // Make icon and tooltip visible on hover
                 heading.addEventListener('mouseenter', function () {
                     a.style.visibility = 'initial';
                     tooltip.style.visibility = 'initial';
                 });
+
+                // Hide icon and tooltip when mouse leaves
                 heading.addEventListener('mouseleave', function () {
                     a.style.visibility = 'hidden';
                     tooltip.style.visibility = 'hidden';
+                    tooltip.textContent = 'Copy link to clipboard'; // Reset tooltip text when mouse leaves
                 });
-
-                // Add click event listener to copy href to clipboard
+                
+                // Add on-click behavior
                 a.addEventListener('click', function(event) {
+                    event.preventDefault(); // Prevent scrolling
                     var href = a.href;
-                    navigator.clipboard.writeText(href);
+                    navigator.clipboard.writeText(href); // Copy to clipboard
+                    tooltip.textContent = 'Copied!'; // Update tooltip text
+                    window.history.pushState({}, document.title, href); // Update URL
                 });
             }
         });

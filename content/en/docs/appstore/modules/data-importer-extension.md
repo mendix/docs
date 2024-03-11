@@ -10,10 +10,10 @@ aliases:
 
 ## 1 Introduction
 
-The [Data Importer](https://marketplace.mendix.com/link/component/219833) allows you to import data from an Excel or comma-separated value (CSV) file. You can choose which sheet and columns to import, preview the data, and create a non-persistable entity (NPE) in your domain model that corresponds to your input. You can import data into your app using the [Import Data from File](/refguide/import-data-from-file/) activity.
+The [Data Importer](https://marketplace.mendix.com/link/component/219833) allows you to import data from an Excel or comma-separated value (CSV) file. You can choose which sheet and columns to import, preview the data, and create a non-persistable entity (NPE) in your domain model that corresponds to your input. Then, you can import data into your app using the [Import Data from File](/refguide/import-data-from-file/) activity.
 
 {{% alert color="info" %}}
-The Data Importer is available in Studio Pro 10.6 and above.
+The Data Importer is available in [Studio Pro 10.6](/releasenotes/studio-pro/10.6/) and above.
 {{% /alert %}}
 
 ### 1.1 Typical Use Cases

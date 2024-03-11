@@ -40,9 +40,9 @@ This extension currently has the following limitations:
 
 * Studio Pro 10.6 or above
 
-### 1.5  Dependencies
+### 1.5 Installation
 
-This connector needs [Mendix Runtime](https://marketplace.mendix.com/link/component/219833) to import data from an Excel file. Download this component from the Marketplace and [add it into your app](/appstore/overview/use-content/).
+Download the [Data Importer](https://marketplace.mendix.com/link/component/219833) from the Marketplace and [add it into your app](/appstore/overview/use-content/).
 
 ## 2 Data Importer Document
 
@@ -64,7 +64,7 @@ Once you have [created the Data Importer document](#create-document), click **Se
 
 Select or drop the file in the **Select Source File** window. You can choose which sheet to import data from and specify the header row and starting data row.
 
-* **Sheet Name** – name of the worksheet from where data needs to be imported; if the Excel has multiple worksheets, the sheet name appears in the dropdown
+* **Sheet Name** – name of the worksheet from where data needs to be imported; if the Excel has multiple worksheets, the sheet name appears in the drop-down
 * **Header Row No.** – row number of the file header; the default is 1
 * **Read Data From Row No.** – starting line for reading data; the default is 2
 
@@ -84,9 +84,9 @@ Select or drop the CSV file in the **Select Source File** window. CSV import sup
 
 Specify the values for all four configurations (Delimiter, Quote Character, Escape Character, and Add Header Row):
 
-* **Delimiter (Separator)** – current supported delimiters are comma, semicolon, pipe, and tab; the default is comma
-* **Quote Characters** – current supported quote characters are single and double quotes; the default is double quotes
-* **Escape Characters** – current supported escape characters are backslash, single, and double quotes; the default is double quotes
+* **Delimiter (Separator)** – supported delimiters are comma, semicolon, pipe, and tab; the default is comma
+* **Quote Characters** – supported quote characters are single and double quotes; the default is double quotes
+* **Escape Characters** – supported escape characters are backslash, single, and double quotes; the default is double quotes
 * **Add Header Row** – specify if you want to add a header row or if the header row is already part of the CSV file; the default is the header row already included in file
 
 Click **Preview Source Data & Entity** to view the data from the file. The first ten rows from the source file are shown in the data preview section. The file name is used to create a NPE, but this can be edited. The column names correspond to the attribute names within the entity.
@@ -111,7 +111,7 @@ You can edit the entity in the **Entity Preview** section. The Data Importer sup
 * Edit the name of the attribute (or attributes) of the entity
 * Edit the data type of a given attribute
 
-Click **Edit** at top-right corner of **Entity Preview**. This will render a pop-up window where you can change the name of the entity. You can also change the name of the attribute; *Original Name* is the name of the column from input file and *Attribute Name* will be the new name that you want to assign to this column. You can also change the data type of this attribute by selecting a relevant value from the drop-down as shown below.
+Click **Edit** at top-right corner of **Entity Preview**. This will render a pop-up window where you can change the name of the entity. You can also change the name of the attribute; *Original Name* is the name of the column from the input file and *Attribute Name* is the new name you can assign to this column. You can also change the data type of this attribute by selecting a relevant value from the drop-down as shown below.
 
 {{< figure src="/attachments/appstore/modules/data-importer-extension/edit-csv-entity.png" >}}
 
@@ -135,13 +135,13 @@ Input Excel File
 | Decimal  | Yes    | Partial    | Partial    | Yes    | No    | No    |
 | DateTime  | Yes    | No    | No    | No    | No    | Yes    |
 
-**Partial** - If source data is valid and within range, it will be converted into target data type.
+**Partial** - If the source data is valid and within range, it will be converted into the target data type.
 
 {{% /alert %}}
 
 {{% alert color="warning" %}}
 * **Enum** is not supported as a target data type
-* Runtime exceptions can occur if the input data cannot be converted into desired the target data type for various reasons (for example, invalid data, data truncation, casting etc.)
+* Runtime exceptions can occur if the input data cannot be converted into desired the target data type for various reasons (for example, invalid data, data truncation, casting, etc.)
 {{% /alert %}}
 
 ### 2.4 Creating an Entity {#create-entity}
@@ -156,18 +156,18 @@ The Data Importer document creation is complete and can be used to [import data 
 
 ## 3 Importing Data in a Microflow {#import-microflow}
 
-Use the previously created Data Importer document to import data from your input file (or files) in a microflow. The example below shows how to import data from Excel file. The same steps are applicable to import data from CSV files.
+Use the previously created Data Importer document to import data from your input file (or files) in a microflow. The example below shows how to import data from an Excel file. The same steps are applicable to import data from CSV files.
 
 1. Create a new microflow and drag the **Import data from file** activity into it.
 
    {{< figure src="/attachments/appstore/modules/data-importer-extension/custom-activity.png" >}}
 
-2. Double-click the activity and in the **File** field and select an input file (either Excel or CSV).
+2. Double-click the activity and in the **File** field, select an input file (Excel or CSV).
 3. In the **Data importer document** field, click **Select** and choose the Data Importer document you want to use. Choose an appropriate Data Importer document based on the input file.
 
    {{< figure src="/attachments/appstore/modules/data-importer-extension/choose-data-importer-template.png" >}}
 
-4. After selecting the Data Importer document, the **Return type** and **Variable name** will autopopulate. You can also change the name of the output variable.
+4. After selecting the Data Importer document, the **Return type** and **Variable name** will auto-populate. You can also change the name of the output variable.
 5. Click **OK**.
 
 The custom activity is configured and you can import data from input files.
@@ -178,9 +178,9 @@ The custom activity is configured and you can import data from input files.
 
 To perform testing, you can do the following actions:
 
-1. Provide a placeholder to upload a file (System.FileDocument) on a page and a button to call the configured microflow. 
-2. Deploy your app locally and browse and upload an input file that resembles the file used to create Data Importer document.
-3. View the message about x number of rows being imported into a list of entities. 
+* Provide a placeholder to upload a file (System.FileDocument) on a page and a button to call the configured microflow
+* Deploy your app locally and browse and upload an input file that resembles the file used to create Data Importer document
+* View the message about x number of rows being imported into a list of entities
 
 {{< figure src="/attachments/appstore/modules/data-importer-extension/local-app-run.png" >}}
 
@@ -188,4 +188,4 @@ To perform testing, you can do the following actions:
 
 ### 5.1 Unchecked Columns
 
-It is not possible to rename an attribute or change a data type if there are unchecked columns. To avoid this issue, format your Excel or CSV file in a way that does not require you to uncheck any columns after inputting to Studio Pro.
+It is not possible to rename an attribute or change a data type if there are unchecked columns. To avoid this issue, format your Excel or CSV file in a way that does not require you to uncheck any columns after inputting to Studio Pro. 

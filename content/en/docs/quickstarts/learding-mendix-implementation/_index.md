@@ -2,208 +2,12 @@
 title: "Leading Mendix Implementation in Your Organization"
 url: /quickstarts/leading-mendix-implementation-in-your-organization/
 weight: 30
-description: "Lead Mendix Implementation in your organization."
+description: "Unlock the full potential of the Mendix platform and accelerate your
+application development journey in your organization.."
 tags: ["Mendix Implementation"]
 ---
 
-## 1 Learning Path Overview
-
-1.  Purpose: An **actionable collection of learning resources** that a
-    change owner needs to have in order to successfully support MX
-    implementation and the 1st MX application to go live. Can be
-    documentation, learning paths, videos, and more. 
-
-2.  Audience (who is the learning path aimed at?): Change Program Owners
-    at an organisation that are new to Mendix …and/or new LOBs or groups
-    within organizations already using Mendix.
-
-    -   Focus on paid customers 
-
-    -   Prospects can use this as part of their evaluation process,
-        together with Evaluation Guide. 
-
-3.  Duration: **TBD**
-
-4.  Prerequisites (anything they absolutely need to know before this?):
-    **TBD**
-
-5.  Keywords (what are the relevant buzzwords?): **TBD**
-
-6.  Learning goals (what will the learners learn?): 
-
-    1.  Familiarize with the steps. 
-
-    2.  Be able to find the right resources when needed.
-
-7.  Use Case: N/A
-
-8.  Mendix Version: N/A
-
-9.  Deadline: **2th February 2024**
-
-## Content overview
-
-<img src="./markdown/media/image1.png"
-style="width:0.22222in;height:0.22222in" alt="check mark button" /→
-Ready for review and iteration
->
-<img src="./markdown/media/image2.png"
-style="width:0.22222in;height:0.22222in" alt="writing hand" /→ We
-have base content, to be written
->
-<img src="./markdown/media/image3.png"
-style="width:0.22222in;height:0.22222in" alt="person raising hand" />
-→ Need help from an SME
-
-<table>
-<colgroup>
-<col style="width: 27%" />
-<col style="width: 72%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><blockquote>
-<p><strong>Module</strong></p>
-</blockquote></th>
-<th><blockquote>
-<p><strong>Lecture</strong></p>
-</blockquote></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><blockquote>
-<p>Introduction</p>
-</blockquote></td>
-<td><p><a href="#_Lecture_1.1_Welcome">1.1 Welcome</a(what you will
-learn in this learning path)</p>
-<p><a href="#_Lecture_1.2_Who">1.2 Who this guide is for, how to use it,
-and for how long</a></p>
-<p><a href="#_Lecture_1.3_Questions">1.3 Questions and
-Feedback</a></p></td>
-</tr>
-<tr class="even">
-<td><blockquote>
-<p><a href="#_Module_2:_Get">Get Familiar with the 5 P’s of the Digital
-Execution Practice</a></p>
-</blockquote></td>
-<td><p><a href="#_2.1_Introduction">2.1 Introduction</a></p>
-<p><a href="#_Lecture_2.2_Assign">2.2 Assign Mendix Admin</a></p>
-<p><a href="#_Lecture_2.3_Get">2.3 Get Familiar with Mendix</a></p>
-<p><a href="#_Lecture_2.4_Introduction">2.4 Introduction to Digital
-Execution Practice (DEP)</a></p>
-<blockquote>
-<p><a href="#_2.4.1_Portfolio:_Choosing">2.4.1 Portfolio</a></p>
-<p><a href="#_2.4.2_People:_Building">2.4.2 People</a></p>
-<p><a href="#_2.4.3_Process:_Building">2.4.3 Process</a></p>
-<p><a
-href="#platform-tying-all-these-pieces-together-with-a-pure-low-code-platform">2.4.4
-Platform</a></p>
-<p><a href="#_2.4.5_Promotion:_Showcasing">2.4.5 Promotion</a></p>
-<p><a href="#_2.4.6_Additional_resources">2.4.6 Additional
-Resources</a></p>
-</blockquote>
-<p><a href="#_Lecture_2.6_Stay">2.5 Stay up to date with Mendix</a></p>
-<p><a href="#_Lecture_2.6_Summary">2.6 Summary</a></p></td>
-</tr>
-<tr class="odd">
-<td><blockquote>
-<p><a href="#_Module_3:_Create">Create a Getting Started Plan</a></p>
-</blockquote></td>
-<td><p><a href="#learning-objectives-1">Learning Objectives</a></p>
-<p><a href="#_Lecture_3.1_Create">3.1 Create (or revise) your low-code
-vision</a></p>
-<p><a href="#_Lecture_3.3_Build">3.2 Build your getting started
-plan</a></p>
-<p><a href="#_Lecture_3.4_Start">3.3 Start your Mendix portfolio</a></p>
-<p><a href="#_Lecture_3.5_Finalize">3.4 Finalize first application
-selection</a></p>
-<p><a href="#_Lecture_3.6_Defining">3.5 Define application value</a></p>
-<p><a href="#_Lecture_3.7 _Set">3.6 Set up deployment architecture and
-resources</a></p>
-<p><a
-href="#lecture-3.7-review-options-for-development-resources-who-will-build-your-first-app">3.7
-Review options for development resources</a></p>
-<p><a href="#_Lecture_3.10_Summary">3.8 Summary</a></p></td>
-</tr>
-<tr class="even">
-<td><blockquote>
-<p><a href="#_Module_4:_Kick-off">Kick-Off Mendix Program</a></p>
-</blockquote></td>
-<td><p><a href="#_Lecture_4.1_Introduction">4.1 Introduction</a></p>
-<p><a href="#_Lecture_4.2_Introduction">4.2 Introduction to
-Agile</a></p>
-<p><a href="#_Lecture_4.3_Identify">4.3 Identify Your First Mendix
-Project Team</a></p>
-<p><a href="#_Lecture_4.5_Arrange">4.5 Arrange Academy Training for Your
-Team</a></p>
-<p><a href="#_4.6_Summary">4.6 Summary</a></p></td>
-</tr>
-<tr class="odd">
-<td><blockquote>
-<p><a href="#_Module_5:_Governance">Governance and Control in
-Mendix</a></p>
-</blockquote></td>
-<td><p><a href="#lecture-5.1-introduction-to-governance-in-mendix">5.1
-Introduction</a></p>
-<p><a href="#_Lecture_5.2_Configure">5.2 Configure Platform in Control
-Center</a></p>
-<p><a href="#_￼Lecture_5.3_Summary">5.3 Summary</a></p></td>
-</tr>
-<tr class="even">
-<td><blockquote>
-<p><a href="#_Module_6:_Get">Get Started with the First Project</a></p>
-</blockquote></td>
-<td><p><a href="#_6.1_Introduction">6.1 Introduction</a></p>
-<p><a href="#_Lecture_6.2_Organize">6.2 Organize your first project
-kick-off</a></p>
-<p><a
-href="#lecture-6.2-create-your-project-and-make-sure-everyone-has-access">6.3
-Create your project and make sure everyone has access</a></p>
-<p><a href="#_Lecture_6.4_Setting">6.4 Setting up the agile way of
-working</a></p>
-<p><a href="#_Lecture_6.5:_Defining">6.5 Defining requirements</a></p>
-<p><a href="#_Lecture_6.6_Familiarize">6.6 Familiarize yourself with
-continuous collaboration through Mendix</a></p>
-<p><a href="#_Lecture_6.7_The">6.7 The development process and why it’s
-not part of this guide</a></p>
-<p><a href="#_Lecture_6.8_Summary">6.8 Summary</a></p></td>
-</tr>
-<tr class="odd">
-<td><blockquote>
-<p><a href="#_Module_7:_Launching">Launching Your First
-Application</a></p>
-</blockquote></td>
-<td><p><a href="#_7.1_Introduction">7.1 Introduction</a></p>
-<p><a href="#_Lecture_7.2_Deploy">7.2 Deploy Your Application</a></p>
-<p><a href="#_Lecture_7.3_Test">7.3 Test Your Application</a></p>
-<p><a href="#_Lecture_7.4_User">7.4 User acceptance testing</a></p>
-<p><a href="#_Lecture_7.5_Launch">7.5 Launch &amp; Promote Your
-Application</a></p>
-<p><a href="#_Lecture_7.6_After">7.6 After the launch</a></p>
-<p><a href="#_Lecture_7.7_Maintain">7.7 Maintain and upgrade your
-applications</a></p>
-<p><a href="#_Lecture_7.8_Summary">7.8 Summary</a></p></td>
-</tr>
-<tr class="even">
-<td><blockquote>
-<p><a href="#_Module_8:_Conclusion">Conclusion</a></p>
-</blockquote></td>
-<td><p><a href="#_Lecture_8.1_Summary">8.1 Summary</a></p>
-<p><a href="#_Lecture_8.2_Next">8.2 Next Steps</a></p>
-<p><a href="#_Lecture_8.3_Survey">8.3 Survey</a> </p></td>
-</tr>
-</tbody>
-</table>
-
-# Main Learning Path Content
-
-## General Learning Path information (main tile):
-
-Unlock the full potential of the Mendix platform and accelerate your
-application development journey in your organization.
-
-## Main learning path information (after you click “view path”):
+## 1 Introduction
 
 This learning path covers everything you need to know to get started
 with Mendix in your company. This guide is meant for anyone who is in
@@ -927,7 +731,7 @@ on the Forum provides a unique opportunity to interact with other
 Mendix leaders. Ask questions from experienced Mendix team members or
 other customers about anything related to digital transformation.  
 >
- 
+
 >
 **Subscribe to platform news**
 >
@@ -935,7 +739,7 @@ other customers about anything related to digital transformation.  
 keep up with all the changes happening with the Mendix platform and
 how it could affect your apps.
 >
- 
+
 >
 **Mx Forum**
 >
@@ -1360,7 +1164,7 @@ it’s actually beneficial. It may sound contradictory, but good first
 applications are often ones that your organization previously failed
 to deliver.
 >
- 
+
 >
 For instance, a Mendix customer initially failed to build an
 application that calculates prices because the algorithm was so
@@ -1863,7 +1667,7 @@ Your team does not have to fit this exact mold, but it is important
 that all the responsibilities outlined here are covered to ensure
 success in your low-code program. Here’s a typical team structure:
 >
- 
+
 >
 <img src="./markdown/media/image14.png"
 style="width:6.5in;height:3.6519in" />
@@ -1950,7 +1754,7 @@ proof that someone is ready to be added to operating teams and can
 contribute from the start by applying your knowledge and skills in
 different parts of the project development lifecycle.
 >
- 
+
 >
  You can find information as well as required courseware for the
 Intermediate certification
@@ -2217,7 +2021,7 @@ your Mendix apps.
 If you don’t enable SSO, you will want to specify if the user
 passwords expire or not. If you do not want the passwords to expire,
 toggle **Passwords of company members never expire** to **On**.  
- 
+
 
 ##  Lecture 5.3 Summary
 
@@ -2571,7 +2375,7 @@ Mendix Cloud. It requires only a few steps to set it up, which you
 only need to do once for each application. Once the cloud settings of
 your application is done, you can deploy and redeploy your application
 with just one click.  
-  
+
 Note that Mendix also offers [other deployment
 options](https://docs.mendix.com/releasenotes/developer-portal/deployment/)
 than the Mendix cloud e.g. to a private cloud if that’s a requirement.

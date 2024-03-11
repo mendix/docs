@@ -239,6 +239,7 @@ The following shortcut keys are assigned to menu actions that can be used in all
 | <kbd>Ctrl</kbd> + <kbd>W</kbd> | Closes the current document. |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>W</kbd> | Closes all document tabs. |
 | <kbd>Delete</kbd> | Deletes the selected element. |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> | Menu quick access search palette. |
 
 ## 8 Read More
 

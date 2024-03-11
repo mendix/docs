@@ -753,7 +753,7 @@ If your microflow is not correctly implemented you will be told that **Authentic
 The OIDC module version 3.0.0 and above does not support the DeepLink module, as it has been deprecated from Studio Pro 10.6.0. It is replaced by [page URLs](/refguide/page-properties/#url) and [microflow URLs](/refguide/microflow/#url).
 {{% /alert %}}
 
-To use this module in conjunction with the DeepLink module, you'll need to set the `LoginLocation` constant of the DeepLink module to `/oauth/v2/login?cont=`.
+To use OIDC SSO module in conjunction with the DeepLink module, you will need to set the `LoginLocation` constant of the DeepLink module to `/oauth/v2/login?cont=`.
 
 If end-users that use the deeplink do not yet have a session in your app, the deeplink can trigger the SSO process. If that is successful, the end-user will automatically be redirected back to the deeplink.
 

@@ -98,13 +98,67 @@ There are some dependencies that are required by Mendix. These need to be added 
 
 * The Gradle plugin [cyclonedx-gradle-plugin](https://github.com/CycloneDX/cyclonedx-gradle-plugin), which generates a Software Bill of Materials (SBoM) required in certain contexts
 
-## 7 Marketplace Modules
+## 7 Proxy Settings{#proxy-settings}
+
+Many a times your local setup can be configured to work with a proxy or can be behind a firewall. This means your system will have restricted access to the internet. In such cases, Gradle cannot access external repositories to download the required dependencies to build the project. You'll have to configure Gradle/JVM with the proxy settings on your system for it to be able to build and run the project on your local setup.
+
+Below are the few options you can try to configure Gradle with custom proxy settings
+
+### 7.1 Gradle Proxy Settings
+
+You can create a `gradle.properties` file in [Gradle User Home](https://docs.gradle.org/current/userguide/directory_layout.html#dir:gradle_user_home) and have the proxy settings configured there. Just replace the values in the sample file below with your values.
+You can also refer to the official [Gradle guide](https://docs.gradle.org/current/userguide/networking.html) for further details.
+
+Sample `gradle.properties` file
+```{linenos=false}
+systemProp.http.proxyHost=proxy-host-ip
+systemProp.http.proxyPort=proxy-port
+systemProp.http.proxyUser=userid
+systemProp.http.proxyPassword=password
+systemProp.https.proxyHost=proxy-host-ip
+systemProp.https.proxyPort=proxy-port
+systemProp.https.proxyUser=userid
+systemProp.https.proxyPassword=password 
+```
+
+Additionally, you can also configure HTTPS/SSL certificate store that Gradle uses if it still fails to download dependencies with the correct proxy settings configured.
+You can add the following lines to the `gradle.properties` file
+```{linenos=false}
+systemProp.javax.net.ssl.trustStore=\\path\\to\\win_ini_file
+systemProp.javax.net.ssl.trustStoreType=Windows-ROOT 
+```
+
+### 7.2 VPN Setup
+
+Some customers can use VPN or firewall that blocks/restricts access to certain websites. In this case, you need to ask your network/system administrators to allow access to the following sites:
+
+* jcenter.bintray.com
+* plugins-artifacts.gradle.org
+* plugins.gradle.org
+* repo.maven.apache.org
+
+### 7.3 Java Proxy Settings
+
+If the above options do not work, you can also try adding your proxy settings to the JDK proxy settings file and reboot your system to apply the settings. Henceforth, Gradle will pick up these settings and will attempt to connect to external repositories through the proxy.
+You can find the file your java installation under `/conf/net.properties`
+
+Sample `net.properties` file
+```{linenos=false}
+http.proxyHost=your.proxy.ip.address
+http.proxyPort=your.proxy.port
+https.proxyHost=your.proxy.ip.address
+https.proxyPort=your.proxy.port
+```
+
+If the above options don't work for you, please reach out to [Mendix Support](https://support.mendix.com/) for further assistance.
+
+## 8 Marketplace Modules
 
 Dependency information is included per module and included in Marketplace Modules. The actual artifacts (`.jar` files) are not part of the module. They are downloaded to the `vendorlib` folder automatically when synchronization is run when the module is imported.
 
 If you have an issue with the managed dependencies of a Marketplace module, you can revert to an earlier version by removing the new version and downloading an earlier version from the Marketplace.
 
-## 8 Troubleshooting
+## 9 Troubleshooting
 
 There can be multiple reasons the dependencies cannot be resolved. See the following for some common failure causes with steps on how to fix the issue.
 
@@ -136,9 +190,5 @@ There can be multiple reasons the dependencies cannot be resolved. See the follo
 6. CE9803 – Any failure which is not covered in the above scenarios.
 
     * Try manually synchronizing dependencies once more.
-    * If you are using a VPN then the following hosts must be accessible:
-        * repo.maven.apache.org
-        * plugins.gradle.org
-        * jcenter.bintray.com
-        * plugins-artifacts.gradle.org
+    * Is your setup configured with a proxy or firewall? Then you might want to configure [proxy settings for Gradle](#proxy-settings).
     * Reach out to [Mendix Support](https://support.mendix.com/) if the issue persists.

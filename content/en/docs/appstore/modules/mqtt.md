@@ -11,15 +11,15 @@ aliases:
 
 ## 1 Introduction
 
-You can use the [MQTT](https://marketplace.mendix.com/link/component/119508) connector with your Mendix app to communicate with an MQTT broker. [MQTT](https://mqtt.org/) is a lightweight internet of things (IoT) messaging protocol. 
+[MQTT](https://mqtt.org/) is a lightweight internet of things (IoT) messaging protocol. You can use the [MQTT](https://marketplace.mendix.com/link/component/119508) connector with your Mendix app to communicate with an MQTT broker. 
 
 ### 1.1 Typical Use Cases
 
-The MQTT Connector consists of microflow actions that enable doing the following:
+The MQTT connector consists of microflow actions that enable you to do the following:
 
-* Publishing data to the MQTT broker
-* Subscribing to the MQTT broker 
-* Unsubscribing from the MQTT broker
+* Publish data to the MQTT broker
+* Subscribe to the MQTT broker 
+* Unsubscribe from the MQTT broker
 
 ### 1.2 Features
 
@@ -31,18 +31,18 @@ The MQTT connector allows you to publish to, subscribe to, and unsubscribe from 
 
 Configure your broker connection information by adding the **ConnectionAdministration** page to your app, then running locally and setting up in that page. The **Connection Name**, **Broker host**, and **Broker port** fields point to the MQTT broker. 
 
-If the broker needs basic authentication for connection, then you can set up a username and password that will be stored in the domain model. See the [Authentication](#auth) section below.
+If the broker needs basic authentication for connection, you can set up a user name and password that will be stored in the domain model. See the [Authentication](#auth) section below for more information. 
 
 #### 2.1.1 Creating a Broker Connection in a Microflow {#broker-microflow}
 
 You can set up a broker connection in a microflow directly if you do not want it to be [stored in the domain model](#configuration). To do this, follow these steps:
 
-1. In your microflow, use the [Create object](/refguide/create-object/) activity to create the **ConnectonDetail** object by providing the required parameters.
+1. In your microflow, use the [Create object](/refguide/create-object/) activity to create the **ConnectionDetail** object by providing the required parameters.
 2. Use the created **ConnectionDetail** object for **Publish**, **Subscribe**, or **Unsubscribe** operations.
 
 #### 2.2 Setting Up Authentication {#auth}
 
-If an MQTT broker needs a username and password for connection, set credentials on the **ConnectionAdministration** page. Set the **Authentication method** to **BASIC**, and then set the values for **UserName** and **Password**.
+If an MQTT broker needs a user name and password for connection, set credentials on the **ConnectionAdministration** page. Set the **Authentication method** to **BASIC**, then set the values for **UserName** and **Password**.
 
 Setting the **Authentication method** to **NONE** indicates that authentication is not required to connect to the MQTT broker. 
 
@@ -53,7 +53,9 @@ The **Password** is encrypted using the **EncryptionKey** constant. For better s
 Enabling SSL will establish a secure connection to the broker. To input your SSL certificates, follow these steps:
 
 1. Open your certificates file in any text editor. 
-2. Copy all content of the file and paste it to the **CA Certificate** and **Client Certificate** fields. Certificates start with `-----BEGIN CERTIFICATE-----` and end with `-----END CERTIFICATE-----`. Client keys typically start with `-----BEGIN RSA PRIVATE KEY-----` or `-----BEGIN PKCS7-----`.
+2. Copy all content of the file and paste it to the **CA Certificate** and **Client Certificate** fields. 
+   * Certificates start with `-----BEGIN CERTIFICATE-----` and end with `-----END CERTIFICATE-----`. 
+   * Client keys typically start with `-----BEGIN RSA PRIVATE KEY-----` or `-----BEGIN PKCS7-----`.
 3. Add the **Client Certificate Key** and the **Certificate password** if one was set.
     * Currently supported certificate types are X.509 format (*.crt*, *.cer*)
     * Currently supported key types are X.509 format (*.pem*, *.pkcs*)

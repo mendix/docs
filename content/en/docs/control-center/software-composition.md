@@ -56,14 +56,16 @@ To export the information of selected items in the list to an Excel file, select
 
 ## 3 All Components {#all-components}
 
-The **All Components** tab gives an overview of all the components used across your apps.
+The **All Components** tab gives an overview of all the unique components used across your app landscape.
+
+{{% alert color="info" %}This only includes the newly created apps for which a deployment package and hence a software bill of materials is available.{{% /alert %}}
 
 Above the list, you can use the search box to search for a component. Next to the search box, you can filter components by selecting the component type.  You can click {{% icon name="office-sheet" %}}**Export all** on the right side above the list to export all the information in the list to an Excel file.
 
 The list shows the following information about the component:
 
 * **Component**: This is the name of the component.
-* **Type**: This shows the type of the component.
+* **Type**: This shows the type of the component. This could be modules, widgets, framework which refers to the Mendix Runtime version, and java libraries (JAR). In case a type is not recognized, it is shown as **Unknown**.
 * **Version**: This is the component version.
 * **Apps using component**: This shows the number of apps where the component is used.
 * {{% icon name="view" %}}: You can customize the columns of the list by clicking the {{% icon name="view" %}} icon and adjusting the selection of the check boxes.
@@ -85,7 +87,7 @@ The list shows all the apps where the component is used, with the following info
 * **Production**: This shows whether the app is deployed in the production environment.
 * **Environment**: This is the name of the environment.
 * **Runtime**: This shows the Mendix Runtime version.
-* **Target Cloud**: This shows the type of the cloud where the app is deployed. Currently, only Free Cloud, Cloud and Cloud Dedicated are supported.
+* **Target Cloud**: This shows the type of the cloud where the app is deployed. Currently, only Free Cloud, Cloud, and Cloud Dedicated are supported.
 * **Technical Contact**: This shows the Technical Contact of the app.
 * {{% icon name="view" %}}: You can customize the columns of the list by clicking the {{% icon name="view" %}} icon and adjusting the selection of the check boxes.
 

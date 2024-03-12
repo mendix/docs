@@ -100,10 +100,10 @@ You can use a parameter as a key or in a microflow to obtain objects. When you u
 
 If you are importing a very long JSON string, the underlying conversion library may not be able to handle it. In this case you will get a message similar to the following:
 
-`Caused by: com.fasterxml.jackson.databind.JsonMappingException: String length (20051119) exceeds the maximum length (20000000)`
+`com.mendix.systemvideinterfaces.MendixRuntimeException: com.fasterxm1.jackson.core.exc.StreamConstraintsException: String value length (20051112) exceeds the maximum allowed (20000000, from 'StreamReadConstraints.getMaxStringLength()')`
 
 Mendix uses the Jackson Core XML library when performing the import mapping and this [has a limit of 20 million](https://javadoc.io/static/com.fasterxml.jackson.core/jackson-core/2.15.1/com/fasterxml/jackson/core/StreamReadConstraints.html#DEFAULT_MAX_STRING_LEN) characters (in earlier versions 5 million) in the JSON string.
 
 In Mendix version 10.9.0 and above, you can override this using the [mapping.import.MaxJsonReadingLength](/refguide/custom-settings/#mapping.import.MaxJsonReadingLength) custom setting.
 
-Mendix recommends that you only add this setting if you will be getting very long JSON strings as it will have an impact on performance.
+Mendix recommends that you only add this setting if you will be getting very long JSON strings as it may result in more memory usage.

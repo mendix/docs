@@ -11,11 +11,9 @@ no_list: true
 
 ## 1 Introduction
 
-From the **Software Composition** page in Control Center, you can drill down and view the components of each app environment. You can also view the usage of components across your app landscape. In the event when a security vulnerability is detected, the component usage will help you assess the impact radius and take action accordingly.
+From the **Software Composition** page in Control Center, you can drill down and view the components of each app environment. Besides, you can view the usage of components across your app landscape under [All Components](#all-components), where standard marketplace modules, widgets, java libraries, and Mendix runtime version are available. In the event when a security vulnerability is detected, [Component Usage](#component-usage) can help you assess the impact radius and take action accordingly.
 
 {{% alert color="info" %}}Component details and related actions are only available for apps made with Mendix [9.24.14](/releasenotes/studio-pro/9.24/#92414) and above or [10.5.0](/releasenotes/studio-pro/10.5/#1050) and above when they are deployed to Mendix Cloud or Cloud Dedicated. Upgrade to one of these versions to see component information reflected on this page. Besides, new deployment packages will have to be created and deployed in order to see Software Composition be populated.{{% /alert %}}
-
-The page contains two tabs: [Overview](#overview) and [All Components](#all-components).
 
 ## 2 Overview {#overview}
 

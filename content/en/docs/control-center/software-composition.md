@@ -30,9 +30,9 @@ Then, when this deployment package is deployed to an environment, the informatio
 
 ## 2 Overview {#overview}
 
-On the **Overview** tab, you can see a list of all the deployed apps and their components.
+On the **Overview** tab, you can see a list of all the deployed apps and their environments.
 
-Above the list, you can use the search box to search for information in any column in the list except for **Target Cloud**. Next to the search box, you can filter apps by selecting the type of the cloud and the Mendix Runtime version. You can click {{% icon name="office-sheet" %}}**Export all** on the right side above the list to export all the information in the list to an Excel file.
+Above the list, you can use the search box to search for information in the list. Next to the search box, you can filter apps by selecting the type of the cloud. You can click {{% icon name="office-sheet" %}}**Export all** on the right side above the list to export all the information in the list to an Excel file.
 
 The list contains the following information:
 
@@ -52,7 +52,7 @@ On the **Overview** tab, if you click **View Details** for an item in the list, 
 
 On the top of the page, you can find the app name, the environment name, the Mendix Runtime version, the name of the Technical Contact, the type of the cloud where the deployment package is deployed, and the version of the deployment package (*.mda*) deployed to this environment.
 
-For details about the information in the list and how to filtering and exporting information in the list, see the [All Components](#all-components) section.
+For details about the information in the list and how to search, filter, and export information in the list, see the [All Components](#all-components) section.
 
 #### 2.1.1 Downloading the Software Bill of Materials
 
@@ -94,4 +94,4 @@ On the **All Components** tab, if you click **View details** for an item, the **
 
 On the top of the page, you can find the component name, the component version, the component type, the number of apps where the component is used, and the number of environments where apps containing this component are deployed.
 
-For details about the information in the list and how to filtering and exporting information in the list, see the [Overview](#overview) section.
+For details about the information in the list and how to search, filter, and export information in the list, see the [Overview](#overview) section.

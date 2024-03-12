@@ -1012,7 +1012,7 @@ The watermark detection feature will make it possible to tell if an image has be
 
 More information about guardrails can be found in this [AWS blogpost](https://aws.amazon.com/blogs/aws/guardrails-for-amazon-bedrock-helps-implement-safeguards-customized-to-your-use-cases-and-responsible-ai-policies-preview/) and in the [AWS documentation](https://aws.amazon.com/en/bedrock/guardrails/).
 
-#### 6.3 Advanced Prompt for Agents
+#### 6.3 Advanced Prompts for Agents
 
 By default, an agent is configured with four base prompt templates. One for each step in the agent sequence: 
 * Pre-processing

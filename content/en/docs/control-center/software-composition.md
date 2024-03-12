@@ -58,7 +58,7 @@ To export the information of selected items in the list to an Excel file, select
 
 The **All Components** tab gives an overview of all the unique components used across your app landscape. 
 
-{{% alert color="info" %}This only includes the newly-created apps for which a deployment package and hence a software bill of materials is available.{{% /alert %}}
+{{% alert color="info" %}}This only includes the newly-created apps for which a deployment package and hence a software bill of materials is available.{{% /alert %}}
 
 Above the list, you can use the search box to search for a component name or version. Next to the search box, you can filter components by selecting the component type.  You can click {{% icon name="office-sheet" %}}**Export all** on the right side above the list to export all the information in the list to an Excel file.
 

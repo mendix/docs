@@ -1024,6 +1024,6 @@ By customizing the prompt templates you gain the ability to fine-tune your agent
 
 More information about advanced prompts can be found in the [AWS documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/advanced-prompts.html).
 
-Further, there is the possibility to use placeholder variables in agent prompt templates. For example, in the orchestration prompt template the **$prompt_session_attributes$** placeholder variable can be used to ingest the information from the `PromptSessionAttribute` entity into the prompt, if it was specified as part of the `InvokeAgentRequest`. 
+Further, there is the possibility to use placeholder variables in agent prompt templates. For example, in the orchestration prompt template the *$prompt_session_attributes$* placeholder variable can be used to ingest the information from the `PromptSessionAttribute` entity into the prompt, if it was specified as part of the `InvokeAgentRequest`. 
 
 For a complete overview of the placeholder variables available in agent prompt templates, see the [AWS documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-placeholders.html).

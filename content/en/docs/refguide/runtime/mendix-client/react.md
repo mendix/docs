@@ -32,7 +32,7 @@ When comparing a conventional Mendix web application with the same application u
 
 | Metric | Without React Client | With React Client | Improvement |
 | --- | --- | --- | --- |
-| Peformance | 87 | 91 | +5% |
+| Performance | 87 | 91 | +5% |
 | First Contentful Paint | 1.1s | 0.7s | -36% |
 | Largest Contentful Paint | 2.0s | 1.8s | -10% |
 | Speed Index | 1.6s | 1.3s | -19% |
@@ -93,7 +93,7 @@ Mendix recommends refreshing all Marketplace components in your app before enabl
 
 ### 3.2 Dynamic & Static Image{#dynamic-static}
 
-The [Dynamic Image](/refguide/image-viewer/) and [Static Image](/refguide/image/) widgets are not supported in the React client. TO use React, replace them with the universal [Image](/appstore/widgets/image/) widget. You can [download the Image widget from the Mendix Marketplace]().
+The [Dynamic Image](/refguide/image-viewer/) and [Static Image](/refguide/image/) widgets are not supported in the React client. TO use React, replace them with the universal [Image](/appstore/widgets/image/) widget. You can [download the Image widget from the Mendix Marketplace](https://marketplace.mendix.com/link/component/118579).
 
 To automatically convert a dynamic image or a static image, right-click the widget (or the error message) and select **Convert to Image**.
 
@@ -169,10 +169,10 @@ Pluggable widgets must be built with `pluggable-widget-tools` version 9.4.1 or h
 1. Open your widget folder in your text editor of choice.
 1. Edit `package.json`.
 1. Find the line containing `"@mendix/pluggable-widgets-tools": "~[version]",`.
-2. Replace `[version]` with a newer version (for example `9.24.0`).
-3. Save the file.
-4. Install the new dependencies by running `npm install`.
-5. Build the widget by running `npm run release`.
+1. Replace `[version]` with a newer version (for example `9.24.0`).
+1. Save the file.
+1. Install the new dependencies by running `npm install`.
+1. Build the widget by running `npm run release`.
 
 ### 3.7 Styling{#styling}
 

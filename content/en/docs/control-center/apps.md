@@ -13,9 +13,7 @@ aliases:
 
 ## 1 Introduction
 
-The **Apps** page shows you all the apps belonging to your company. It also allows you to manage default app roles in your company.
-
-The **Apps** page has the following tabs available: **Mendix Cloud**, **Mendix Free Cloud**, **Other Apps**, **Deactivated Apps**, and **Default App Roles**.
+The **Apps** page gives an overview of all the apps belonging to your company. The page has the following tabs available: **Mendix Cloud**, **Mendix Free Cloud**, **Other Apps**, and **Deactivated Apps**.
 
 {{% alert color="info" %}}
 We are working on giving private clouds a separate tab. Stay tuned.
@@ -201,7 +199,7 @@ The app details page has the following tabs:
     * You can directly deactivate a team member from the app by clicking their name and selecting **Deactivate Member**.
     * For other member management options, click **Manage Members**, which will open the **Security** > [Team](/developerportal/general/team/#managing) page. As a Mendix Admin, you can also add yourself to a team via this page.
 * **Environments** – This tab shows all Mendix Cloud environments. For the free Mendix Cloud environment, you can delete the environment on this tab. Once the free environment is deleted, all data will be removed. However, the app team members can still access the associated app repository in the Developer Portal.
-* **App Roles** – This tab presents the app team roles defined via the **Default App Roles** tab and/or customized for a particular app
+* **App Roles** – This tab presents the app team roles defined via the **Default App Roles** feature on the [Roles & Permissions](/control-center/roles-and-permissions/) page.
 
 If the app is not a licensed app, you can see the action menu ({{% icon name="three-dots-menu-horizontal" %}}) on the upper-right corner of the page. If the app is active, then you have the options to deactivate the app and delete the app; and if the app is deactivated, then you have the options to activate the app and delete the app.
 

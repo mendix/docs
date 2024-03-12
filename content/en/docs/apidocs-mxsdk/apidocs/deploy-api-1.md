@@ -4,7 +4,7 @@ linktitle: "Deploy API v1"
 url: /apidocs-mxsdk/apidocs/deploy-api/
 category: "API Documentation"
 description: "This API can be used to deploy Mendix apps to licensed nodes, manage application environments in the Mendix Cloud, retrieve statuses, start and stop applications, and deploy or transport new model versions to application environments."
-weight: 30
+weight: 40
 tags: ["API", "deploy", "licensed", "deployment", "cloud"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

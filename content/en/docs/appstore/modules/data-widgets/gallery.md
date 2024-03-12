@@ -132,23 +132,23 @@ The Drop-Down Sort widget has two options you can set:
 * Empty option caption: value to be used when no value is selected
 * Screen reader caption: value to be announced by screen readers when using assistive technology
 
-## 5 Keyboard navigation and selection
+## 5 Keyboard Navigation and Selection
 
-In the Gallery widget it's possible to navigate and select items using  the keyboard. It's a great way to be more efficient, and it's also important for accessibility, meaning users can better use the Gallery widget.
+In the Gallery widget it is possible to navigate and select items using  the keyboard. Keyboard navigation can increase user speed, as well as makes the widget more accessible.
 
-To improve user experience, it's possible to see what is the item where the keyboard focus. The visual way to know when an item get focus is to check if the item have a thin blue border.
+To improve user experience, it is possible to detect which item has keyboard focus. Visually, you can see which item has keyboard focus by spotting the thin blue border.
 
-Also, it's possible to see when an item is selected. The visual way to know when an item is selected is to check if the item have a light gray background.
+You can also see when an item is selected: an item with a light gray background is selected.
 
 ### 5.1 Keyboard Navigation
 
-With the arrow keys (`up`, `down`, `left`, `right`) in the keyboard the user can navigate between the items displayed in the Gallery. Also, the user can use special keyboard keys like `home`, `end`, `pageup` and `pagedown`.
+Using the keyboard arrow keys (`up`, `down`, `left`, `right`) the user can navigate between the items displayed in the Gallery. Also, the user can use special keyboard keys like `home`, `end`, `pageup`, and `pagedown`.
 
-From the keyboard, the users can press `Tab` and navigate between elements to reach the Gallery items.
+With the keyboard, the user can press `Tab` and navigate between elements to reach the Gallery items.
 
 ### 5.2 Keyboard Selection
 
-Keyboard selection, different than navigation, is like the click of the mouse on an item. So after navigating to a desired item, the user can `Shift+Space` and the item will be selected.
+Keyboard selection, which differs from navigation, simulates the click of the mouse on an item. Thus, after navigating to a desired item, the user can press `Shift+Space` and the item will be selected.
 
 ### 5.3 Keyboard Multi-Selection
 

@@ -95,3 +95,15 @@ Import mappings have the additional option to receive an incoming parameter. The
 To define a parameter for your mapping, click the parameter box and select the data type. You can also drag an entity into the parameter box. 
 
 You can use a parameter as a key or in a microflow to obtain objects. When you use an entity parameter, you can set associations to it. When you use a primitive parameter (string, integer, etc.), you can write the value to an attribute of an object that is being imported.
+
+## 4 Troubleshooting{#troubleshooting}
+
+If you are importing a very long JSON string, the underlying conversion library may not be able to handle it. In this case you will get a message similar to the following:
+
+`com.mendix.systemvideinterfaces.MendixRuntimeException: com.fasterxm1.jackson.core.exc.StreamConstraintsException: String value length (20051112) exceeds the maximum allowed (20000000, from 'StreamReadConstraints.getMaxStringLength()')`
+
+Mendix uses the Jackson Core XML library when performing the import mapping and this [has a limit of 20 million](https://javadoc.io/static/com.fasterxml.jackson.core/jackson-core/2.15.1/com/fasterxml/jackson/core/StreamReadConstraints.html#DEFAULT_MAX_STRING_LEN) characters (in earlier versions 5 million) in the JSON string.
+
+In Mendix version 9.24.17 and above, you can override this using the [mapping.import.MaxJsonReadingLength](/refguide/custom-settings/#mapping.import.MaxJsonReadingLength) custom setting.
+
+Mendix recommends that you only add this setting if you will be getting very long JSON strings as it may result in more memory usage.

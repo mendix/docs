@@ -1011,3 +1011,19 @@ The guardrail feature will allow you to:
 The watermark detection feature will make it possible to tell if an image has been created using Amazon Titan.
 
 More information about guardrails can be found in this [AWS blogpost](https://aws.amazon.com/blogs/aws/guardrails-for-amazon-bedrock-helps-implement-safeguards-customized-to-your-use-cases-and-responsible-ai-policies-preview/) and in the [AWS documentation](https://aws.amazon.com/en/bedrock/guardrails/).
+
+#### 6.3 Advanced Prompt for Agents
+
+By default, an agent is configured with four base prompt templates. One for each step of the agent sequence: 
+* Pre-processing
+* Orchestration 
+* Knowledge base response generation 
+* Post-processing
+  
+By customizing the prompt templates you gain the ability to fine-tune your agent's accuracy by modifying these template configurations. Additionally, you can provide custom examples for a technique known as few-shot prompting. This involves providing labeled examples for specific tasks, further enhancing the model's performance in targeted areas.
+
+More information about advanced prompts can be found in the [AWS documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/advanced-prompts.html).
+
+Further, there is the possibility to use placeholder variables in agent prompt templates. For example, in the orchestration prompt template the **$prompt_session_attributes$** placeholder variable can be used to ingest the information from the `PromptSessionAttribute` entity into the prompt, if it were specified as part of the `InvokeAgentRequest`. 
+
+A complete overview of available placeholder variables in agent prompt templates can be found in the [AWS documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-placeholders.html).

@@ -8,7 +8,7 @@ no_list: true
 ---
 
 {{% alert color="warning" %}}
-This feature is in beta. For more information, see [Beta Releases](/releasenotes/beta-features). 
+This feature is in beta. For more information, see [Beta Releases](/releasenotes/beta-features/). 
 {{% /alert %}}
 
 ## 1 Introduction

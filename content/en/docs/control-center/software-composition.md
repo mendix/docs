@@ -43,16 +43,7 @@ On the top of the page, you can find the app name, the environment name, the Men
 
 On the upper-right corner of the page, you can click {{% icon name="download-bottom" %}}**SBOM** to download the software bill of materials (SBOM). A software bill of material is a vehicle to share information on the inventory of a software component. It contains a description about the Mendix app and the components (dependencies) put into it. The curren  version of the SBOM contains standard marketplace modules, widgets, java libraries and the mendix runtime version. The SBOM is a *.json* file in the CycloneDX format.
 
-Above the list, you can use the search box to search for a component name or version. Next to the search box, you can filter components by selecting the component type. You can click {{% icon name="office-sheet" %}}**Export all to Excel** on the right side above the list to export all the information in the list to an Excel file.
-
-The list shows all the components used in the app, with the following information: 
-
-* **Component**: This is the component name.
-* **Version**: This is the version of the component used in this app.
-* **Type**: This shows the type of the component. This could be modules, widgets, framework which refers to the Mendix Runtime version, and java libraries (JAR). In case a type is not recognized, it is shown as **Unknown**.
-* {{% icon name="view" %}}: You can customize the columns of the list by clicking the {{% icon name="view" %}} icon and adjusting the selection of the check boxes.
-
-To export the information of selected items in the list to an Excel file, select the check boxes of the items in the list, and then click {{% icon name="office-sheet" %}}**Selection Export to Excel** that appears at the bottom of the page.
+The items in the rest of the page are the same as on the [All Components](#all-components) tab.
 
 ## 3 All Components {#all-components}
 
@@ -79,15 +70,4 @@ On the **All Components** tab, if you click **View details** for an item, the **
 
 On the top of the page, you can find the component name, the component version, the component type, the number of apps where the component is used, and the number of environments where apps containing this component are deployed.
 
-Above the list, you can use the search box to search for an app. Next to the search box, you can filter apps by selecting the type of the cloud and the Mendix Runtime version. You can click {{% icon name="office-sheet" %}}**Export all** on the right side above the list to export all the information in the list to an Excel file.
-
-The list shows all the apps where the component is used, with the following information: 
-
-* **App Name**: This is the name of the app.
-* **Environment**: This is the name of the environment.
-* **Runtime**: This shows the Mendix Runtime version.
-* **Target Cloud**: This shows the type of the cloud where the app is deployed. Currently, only Free Cloud, Cloud, and Cloud Dedicated are supported.
-* **Technical Contact**: This shows the Technical Contact of the app.
-* {{% icon name="view" %}}: You can customize the columns of the list by clicking the {{% icon name="view" %}} icon and adjusting the selection of the check boxes.
-
-To export the information of selected items in the list to an Excel file, select the check boxes of the items in the list, and then click {{% icon name="office-sheet" %}}**Selection Export to Excel** that appears at the bottom of the page.
+The items in the rest of the page are the same as on the [Overview](#overview) tab.

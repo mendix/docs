@@ -11,9 +11,9 @@ aliases:
 
 ## 1 Introduction
 
-[MQTT](https://mqtt.org/) is a lightweight internet of things (IoT) messaging protocol. You can use the [MQTT](https://marketplace.mendix.com/link/component/119508) connector with your Mendix app to communicate with an MQTT broker. 
+[MQTT](https://mqtt.org/) is a lightweight Internet of Things (IoT) messaging protocol. You can use the [MQTT](https://marketplace.mendix.com/link/component/119508) connector with your Mendix app to communicate with an MQTT broker.
 
-### 1.1 Typical Use Cases
+### 1.1 Features
 
 The MQTT connector consists of microflow actions that enable you to do the following:
 
@@ -21,21 +21,17 @@ The MQTT connector consists of microflow actions that enable you to do the follo
 * Subscribe to the MQTT broker 
 * Unsubscribe from the MQTT broker
 
-### 1.2 Features
-
-The MQTT connector allows you to publish to, subscribe to, and unsubscribe from an MQTT broker.
-
 ## 2 Broker Configuration {#configuration}
 
 ### 2.1 Configuring the Broker {#configure-broker}
 
-Configure your broker connection information by adding the **ConnectionAdministration** page to your app, then running locally and setting up in that page. The **Connection Name**, **Broker host**, and **Broker port** fields point to the MQTT broker. 
+Configure your broker connection information by adding the **ConnectionAdministration** page to your app. Input your broker information, then set up and run the app locally. Enter the **Connection Name**, **Broker host**, and **Broker port**. 
 
-If the broker needs basic authentication for connection, you can set up a user name and password that will be stored in the domain model. See the [Authentication](#auth) section below for more information. 
+If the broker needs basic authentication to connect, you can set up a user name and password that is stored in the domain model. See the [Authentication](#auth) section below for more information. 
 
 #### 2.1.1 Creating a Broker Connection in a Microflow {#broker-microflow}
 
-You can set up a broker connection in a microflow directly if you do not want it to be [stored in the domain model](#configuration). To do this, follow these steps:
+You can set up a broker connection directly in a microflow if you do not want it to be [stored in the domain model](#configuration). To do this, follow these steps:
 
 1. In your microflow, use the [Create object](/refguide/create-object/) activity to create the **ConnectionDetail** object by providing the required parameters.
 2. Use the created **ConnectionDetail** object for **Publish**, **Subscribe**, or **Unsubscribe** operations.
@@ -77,12 +73,13 @@ To publish data to the MQTT broker, follow these steps:
 1. Search for **Publish MQTT** in the **Toolbox**.
 2. Drag the **Publish MQTT** event into your microflow.
 3. Edit the event to include the following details:
-    * **Topic** – topic to which the payload is published
+    * **Connection detail** 
+     **Topic** – topic to which the payload is published
     * **Payload** – string message to be published
-    * [QoS (Quality of Service)](https://www.eclipse.org/paho/files/mqttdoc/MQTTClient/html/qos.html) – an attribute of each message being published
+    * [Qo S (Quality of Service)](https://www.eclipse.org/paho/files/mqttdoc/MQTTClient/html/qos.html) – an attribute of each message being published
     * **Retained** – the retained setting serves two purposes depending on whether the message it is associated with is being published or received:
-        * **Retained** set to **Yes** – For messages being published, setting Retained to Yes indicates that the MQTT server should retain a copy of the message. The message will then be transmitted to new subscribers to a topic that matches the message topic. For subscribers registering a new subscription, the flag being true indicates that the received message is not a new one, but one that has been retained by the MQTT server.
-        * **Retained** set to **No** – For publishers, this indicates that this message should not be retained by the MQTT server. For subscribers, it indicates this is a normal message, received as a result of it being published to the server.
+        * **Yes** – For messages being published, setting Retained to Yes indicates that the MQTT server should retain a copy of the message. The message will then be transmitted to new subscribers to a topic that matches the message topic. For subscribers registering a new subscription, the flag being true indicates that the received message is not a new one, but one that has been retained by the MQTT server.
+        * **No** – For publishers, this indicates that this message should not be retained by the MQTT server. For subscribers, it indicates this is a normal message, received as a result of it being published to the server.
 
 #### 3.2.2 Subscribe
 

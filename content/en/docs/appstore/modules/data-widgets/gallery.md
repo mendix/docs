@@ -141,8 +141,8 @@ To improve user experience, it is possible to detect which item has keyboard foc
 You can also see when an item is selected: an item with a light gray background is selected.
 
 For the keyboard navigation and keyboard selection to work, the user must open the **General** tab and then set the **Selection** property to one of the following:
-* **Single** (to enable keyboard navigation with just single selection)
-* **Multi** (to enable keyboard navigation with multi-selection)
+* **Single**: enables keyboard navigation with just single selection
+* **Multi**: to enable keyboard navigation with multi-selection
 
 ### 5.1 Keyboard Navigation
 

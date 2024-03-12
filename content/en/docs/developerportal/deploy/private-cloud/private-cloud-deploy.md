@@ -32,7 +32,7 @@ You can also create environments and deploy and manage apps using the [Mendix fo
 To deploy an app to your private cloud platform, you need the following:
 
 * A Mendix account with **Deploy App** rights to an existing Cluster – see [Registering a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster/) for more information on setting up clusters and namespaces and adding members
-* Mendix Studio Pro 7.23.3 (build 48173) or above.
+* Mendix Studio Pro 8.0.0 (build 56467) or above.
 * A Mendix app created with the version of Studio Pro you are using.
 * Make sure that the security of the app is set to Production. By default, all environments are set to Production mode when created. If you want to change it to Developer mode, the Cluster Manager can do this from the cluster manager page.
 
@@ -102,15 +102,15 @@ All environments are defined as production environments, which means that [secur
 
 3. An **Internal Name** (UUID) will be generated for you. This will be used when creating your environment to ensure that all the environment names in your namespace are unique.
 
-    {{% alert color="info" %}}
-    You can change the internal name if you wish, but do not reuse one which has already been used in this namespace, even if the environment it was used for has been deleted.
-    {{% /alert %}}
+{{% alert color="info" %}}
+You can change the internal name if you wish, but do not reuse one which has already been used in this namespace, even if the environment it was used for has been deleted.
+{{% /alert %}}
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/customizeEnvironmentPage1.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/customizeEnvironmentPage1.png" >}}
 
-    {{% alert color="warning" %}}
-    In the case of the Global Operator, do not use the same internal names for the managed namespaces under the same Global Operator namespace. Using the same internal name may result in unwanted issues.
-    {{% /alert %}}    
+{{% alert color="warning" %}}
+In the case of the Global Operator, do not use the same internal names for the managed namespaces under the same Global Operator namespace. Using the same internal name may result in unwanted issues.
+{{% /alert %}}
 
 4. Enter the **Environment Name**, the name for the environment. The environment name can only contain lowercase letters, numbers and dashes and must start and end with an alphanumeric character. You can have several environments for your app, for example test, acceptance, and production, however, all environments will be treated by Mendix as production environments, when you create them.
 
@@ -143,22 +143,22 @@ All environments are defined as production environments, which means that [secur
 
     Alternatively, you can choose **Custom**, and enter your own requirements for **CPU** and **Memory**. Ensure that these values are the same or greater than the values for a *Small* environment, otherwise you may run into problems running your app.
 
-    {{% alert color="info" %}}If the cluster manager has added and enabled customized core resource plan on Cluster manager page, only the configured custom core resource plans will be visible for selection. Once the custom core resources plans are enabled, environments cannot be created using the default plans until all the associated environments using the custom core resource plan are deleted and the custom resource plan is disabled on the **Cluster manager** page.
-    {{% /alert %}}
+{{% alert color="info" %}}If the cluster manager has added and enabled customized core resource plan on Cluster manager page, only the configured custom core resource plans will be visible for selection. Once the custom core resources plans are enabled, environments cannot be created using the default plans until all the associated environments using the custom core resource plan are deleted and the custom resource plan is disabled on the **Cluster manager** page.
+{{% /alert %}}
 
 9. Select a **Database plan** from the list of plans set up in the namespace.
 
-    {{% alert color="info" %}}
-    If the Cluster Manager has configured a secret store for this namespace, this option will be disabled. You can find more information on configuring the secret store in [Integrate Kubernetes with Secret Stores](/developerportal/deploy/secret-store-credentials/).
-    {{% /alert %}}
+{{% alert color="info" %}}
+If the Cluster Manager has configured a secret store for this namespace, this option will be disabled. You can find more information on configuring the secret store in [Integrate Kubernetes with Secret Stores](/developerportal/deploy/secret-store-credentials/).
+{{% /alert %}}
 
 10. Select a **Storage plan** from the list of plans set up in the namespace.
 
-    {{% alert color="info" %}}
-    If the Cluster Manager has configured a secret store for this namespace, this option will be disabled. You can find more information on configuring the secret store in [Integrate Kubernetes with Secret Stores](/developerportal/deploy/secret-store-credentials/).
-    {{% /alert %}}
+{{% alert color="info" %}}
+If the Cluster Manager has configured a secret store for this namespace, this option will be disabled. You can find more information on configuring the secret store in [Integrate Kubernetes with Secret Stores](/developerportal/deploy/secret-store-credentials/).
+{{% /alert %}}
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image7.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image7.png" >}}
 
 11. Click **Create Environment**.
 12. You will see your new environment listed. An *in-progress* icon will be shows next to the resource plans until they have been provisioned.
@@ -170,8 +170,8 @@ All environments are defined as production environments, which means that [secur
     You can also filter the environment by the namespace name, environment ID, and environment name.
 
 {{% alert color="info" %}}
-The word **Licensed** shows that the Operator managing that environment is licensed, otherwise its *Trial* 
-{{% /alert %}}  
+The word **Licensed** shows that the Operator managing that environment is licensed, otherwise its *Trial*
+{{% /alert %}}
 
 ### 3.4 Deploying the Deployment Package{#deploy-package}
 
@@ -401,6 +401,20 @@ Most of the information is self-explanatory, but the status information gives yo
 
 This status shows you the following information – how many replicas are running, whether there was a successful build, and how long since the app was last started.
 
+In order to get more detailed information per replica in the application, you can click on **More Info** button.
+
+You can get the information related to Runtime status, License status and Sources w.r.t to Database, Storage, MxAdmin password, Debugger password, App constants and Custom Runtime settings. Along with this, from Operator version 2.15.0 onwards, you can also specifically collect information w.r.t to pods running in the application. Below is the brief explanation of the fields in the section:
+
+1. **deletionInitiated**: This indicates whether the deletion of the pod has been initiated (pod is stopping). If it's `false`, it means the pod is not currently being deleted.
+
+2. **ready**: This shows whether the pod is ready to serve requests. If it's `false`, it means the pod is not ready to serve requests, possibly due to containers within the pod not being ready or other issues.
+
+3. **restartCount**: This represents the number of times the containers within the pod have been restarted.
+
+4. **started**: This indicates whether the pod has started. If it's `false`, it means the pod has not yet started successfully.
+
+5. **state**: This describes the current state of the pod. In this case, it indicates that the pod is in a waiting state, which means it is not running but waiting for something to happen, such as a container to become ready or other conditions to be met before it can start running.
+
 #### 5.1.2 Environment Details > Status
 
 This shows you the status of the environment and is the same as the status shown on the Environments page and described in [Environment Status Indicators](#environment-status), above.
@@ -461,7 +475,7 @@ For a *connected* cluster, the top level MendixApp​ CRD will be deleted from t
 
 * ​​Files related to that environment will be deleted from the S3/Minio storage bucket (or prefix if this is using a shared bucket).
 
-    {{% alert color="info" %}}If you are using the S3 [create account with existing policy](/developerportal/deploy/standard-operator/#storage-plan) plan - the files remain untouched.{{% /alert %}} 
+    {{% alert color="info" %}}If you are using the S3 [create account with existing policy](/developerportal/deploy/standard-operator/#storage-plan) plan - the files remain untouched.{{% /alert %}}
 
 * ​​S3/Minio users and policies will be deleted (if there is a storage plan specified to create those objects).
 
@@ -591,6 +605,10 @@ On the Debugger tab you can set up and view the credentials you need to debug yo
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/debuggerTab.png" >}}
 
+{{% alert color="info" %}}
+If the Debugger password is configured in both the CSI Secrets Storage and another location (such as the Developer Portal or MendixApp CR), the secret storage configuration has a higher priority and overrides the value specified elsewhere.
+{{% /alert %}}
+
 ## 6 Current Limitations{#limitations}
 
 ### 6.1 Reserved Names for Mendix Apps{#reserved-names}
@@ -701,6 +719,12 @@ To use this feature, run the following command, replacing `{namespace}` with the
 ```bash {linenos=false}
 mxpc-cli log-extract -n {namespace} -f {filename}
 ```
+
+From version 2.15.0 onwards, it will now also be possible to collect Mendix App CR, Operator Configuration, Storage Plans, Storage Instance, endpoints, deployments, services, build, pods and operator version. However, if you would not like to share data such as Mendix App CR, Operator Configuration, Storage Plans, Storage Instance with the Mendix Support, you can use below flags to false.
+
+  -m - Mendix Apps CR(s) (default true)
+  -o - OperatorConfig (default true)
+  -s - Storage Plan and Storage Instance (default true)
 
 This file can be shared with Mendix Support or the team responsible for maintaining infrastructure.
 

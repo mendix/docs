@@ -115,8 +115,15 @@ Mendix apps cannot use custom ports. They communicate on the standard HTTP and H
 
 The method for deploying an app to Mendix Cloud differs depending on whether you have a licensed app or a Free App:
 
-* For a licensed app, you first create a deployment package via Studio Pro or the Developer Portal, and then you deploy it to a node environment where you can run it. For details on how to do this, see [Deploying a Licensed App](#deploy-licensed-app), below.
+* For a licensed app, there are several deployment options:
+    * Manual deployment – Create a deployment package via Studio Pro or the Developer Portal, and then deploy the package to a node environment where you can run it. For details on how to do this, see [Deploying a Licensed App](#deploy-licensed-app), below. This is the simplest deployment method, especially if you are just getting started with Mendix.
+    * Pipelines built with low code – If you want to automate your build and deployment process, you can use Pipelines in the Developer Portal to design and activate a pipeline with a set of configurable, low-code steps. For details, see [Pipelines (Beta)](/developerportal/deploy/pipelines/). The Pipelines feature is intended to make it quick and easy for teams to automate their CI/CD process, without requiring any third-party tools or DevOps expertise.
+    * Pipelines built with APIs – If you use Jenkins, GitLab, or another CI/CD tool, you can use Mendix APIs to automate your build and deployment process. For details, see [Implement a Simple CI/CD Pipeline with Mendix APIs](/howto/integration/implement-cicd-pipeline/). This method is highly customizable but does require CI/CD tooling and DevOps expertise to set up.
 * For a Free App, you deploy the app directly from Studio Pro. For details on how to do this, see [Deploying a Free App](#deploy-free-app), below.
+
+{{% alert color="info" %}}
+For a hands-on introduction to the different deployment options for licensed apps, try the learning path [Choose the Right Software Delivery Approach](https://academy.mendix.com/link/paths/156/Choose-the-Right-Software-Delivery-Approach).
+{{% /alert %}}
 
 ### 2.1 Deploying a Licensed App{#deploy-licensed-app}
 
@@ -127,7 +134,9 @@ Before starting the process for deploying a licensed app, make sure to complete 
 * Your app is linked to a licensed cloud node
 * You have [transport rights](/developerportal/deploy/node-permissions/#transport-rights)
 * Your [two-factor authentication](/developerportal/deploy/two-factor-authentication/) is set up
-* The deployment package for your app is not bigger than 1 GB
+* The deployment package for your app is not bigger than 1 GB (uncompressed)
+
+{{% alert color="info" %}}You can verify that your app is under the 1 GB limit by creating a deployment package, as described below, and then viewing that package's size in the package details.{{% /alert %}}
 
 #### 2.1.2 Creating a Deployment Package for a Licensed App
 
@@ -188,7 +197,7 @@ The app is now deployed. You can configure the administrative account.
 Before starting the process for deploying a Free App, make sure to complete these prerequisites:
 
 * You have created an app
-* As with licensed apps, there is a size limit of 1 GB; you can verify that your app is under the limit by creating a deployment package (although you will not need to use that package for the deployment itself)
+* As with licensed apps, the uncompressed size of the deployment package must not exceed 1 GB
 
 #### 2.2.2 Deploying the App
 

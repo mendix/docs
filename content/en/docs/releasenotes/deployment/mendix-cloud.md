@@ -3,19 +3,38 @@ title: "Mendix Cloud"
 url: /releasenotes/developer-portal/mendix-cloud/
 category: "Deployment"
 weight: 10
-description: "Release notes for deployment to Mendix Clouds"
+description: "Release notes for deployment to Mendix Cloud"
 tags: ["release notes", "deployment", "cloud environment", "Mendix Cloud", "free app"]
 ---
 
 These release notes cover changes to deployment to [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/).
 
-Mendix Cloud deployments are also dependent on the latest version of the [Mendix Cloud Foundry Buildpack](https://github.com/mendix/cf-mendix-buildpack). The [Mendix Cloud Foundry Buildpack release notes](https://github.com/mendix/cf-mendix-buildpack/releases) are published separately as other deployment targets are also dependent on the buildpack.
+Mendix Cloud deployments are also dependent on the latest version of the [Mendix Cloud Foundry Buildpack](https://github.com/mendix/cf-mendix-buildpack). The [Mendix Cloud Foundry Buildpack release notes](https://github.com/mendix/cf-mendix-buildpack/releases) are published separately, as other deployment targets are also dependent on the buildpack.
 
-There are separate release notes for other deployment targets; see the [Deployment](/releasenotes/developer-portal/deployment/) release notes page for further information.
+There are separate release notes for other deployment targets; for more information, see the [Deployment](/releasenotes/developer-portal/deployment/) release notes.
 
 For information on the current status of deployment to Mendix Cloud and any planned releases, see [Mendix Status](https://status.mendix.com/).
 
 ## 2024
+
+### March 7, 2024
+
+#### Bug Fixes
+
+* We corrected some rendering issues in the **Metrics** graphs: 
+     * When there were some missing data points, all the existing data points used to shift to the left of the graph. Now all the data points display where they are supposed to.
+     * The scale of the graphs used to change when there were missing data points. The scale is fixed now.
+
+#### Improvements
+
+* To make it easier to reset the two-factor authentication settings when needed, we added a link to these settings on the **Logs** and **Metrics** pages. This link appears whenever you try to access a page that you need 2FA to view.
+
+### February 29, 2024
+
+#### New Features
+
+* We launched a new feature: Pipelines. Pipelines lets you build and deploy software in an automated way. You can design pipelines with a set of configurable, low-code steps. Activated pipelines run automatically according to your design. This new Pipelines feature is intended to make it quick and easy for teams to automate their CI/CD process. For more information, see [Pipelines](/developerportal/deploy/pipelines/).
+    * The Pipelines feature is in [public beta](/releasenotes/beta-features/). It is currently available for unlimited use with all licensed Mendix Cloud apps. Limitations may be put on its use in the future.
 
 ### February 19, 2024
 
@@ -27,7 +46,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### Bug Fixes
 
-* We have removed an extra white space on the **Logs** page. 
+* We removed a blank line on the **Logs** page. 
 * On the **Metrics** page, when viewing both the application and the database metrics together, they are now separated instead of presented together. The **Logs** page now shows all the application metrics graphs first, followed by the database metrics graphs.
 * The **Environments** drop-down list maintains the same sorting order as on the **Environments** page in the Developer Portal.
 
@@ -205,19 +224,19 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### Improvements
 
-* We now return HTTP headers for the SHA1 Fingerprint and Serial number of an authenticated Client Certificate. See [Mendix Cloud HTTP Request Headers](/developerportal/deploy/mendix-cloud-request-headers/) for more information.
+* We now return HTTP headers for the SHA1 Fingerprint and Serial number of an authenticated Client Certificate. For more information, see [Mendix Cloud HTTP Request Headers](/developerportal/deploy/mendix-cloud-request-headers/).
 
 ### February 16, 2023
 
 #### Improvements
 
-* Customers can now download access logs for their applications. The Deploy API has also been updated with this functionality — see [Download Access Logs](/apidocs-mxsdk/apidocs/deploy-api/#download-logs) in *Deploy API* for more information.
+* Customers can now download access logs for their applications. The Deploy API has also been updated with this functionality; for more information, see [Download Access Logs](/apidocs-mxsdk/apidocs/deploy-api/#download-logs) in *Deploy API*.
 
 ### January 26, 2023
 
 #### Improvements
 
-* We added a new version of the Deploy API which allows you to change the Technical Contact and team permissions of an app. See [Deploy API – Version 3](/apidocs-mxsdk/apidocs/deploy-api-3/) for further information.
+* We added a new version of the Deploy API; this version allows you to change the Technical Contact and team permissions of an app. For more information, see [Deploy API – Version 3](/apidocs-mxsdk/apidocs/deploy-api-3/).
 
 ### January 18, 2023
 
@@ -229,7 +248,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### Improvements
 
-* We added the AWS Middle East (Bahrain) and AWS Africa (Cape Town) regions as a new deployment targets.
+* We added the AWS Middle East (Bahrain) and AWS Africa (Cape Town) regions as new deployment targets.
 
 ### January 5, 2023
 
@@ -243,14 +262,14 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### Improvements
 
-* We have configured reverse DNS for the outgoing IP addresses of Mendix Cloud v4. A reverse DNS lookup is commonly used by email services to filter out spams.
+* We have configured reverse DNS for the outgoing IP addresses of Mendix Cloud v4. A reverse DNS lookup is commonly used by email services to filter out spam.
 
 ### November 10, 2022
 
 #### Improvements
 
 * We updated the **Virtual Machine Out of Memory** and **Virtual Machine Error** alerts to offer more clarity and visibility into the application behavior. These changes are available after you redeploy your app.
-* We now warn you if you try to set unsupported custom runtime settings. These are settings, mainly related to storage options, which are controlled by the Mendix Cloud deployment and cannot be customized for apps which are deployed to the Mendix Cloud.
+* We now warn you if you try to set unsupported custom runtime settings. These are settings, mainly related to storage options, which are controlled by the Mendix Cloud deployment and cannot be customized for apps which are deployed to Mendix Cloud.
 
 ### November 1, 2022
 
@@ -275,7 +294,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### Improvements
 
-* We have improved the maintenance banner message at application and environment level to show more information about the maintenance.
+* We have improved the maintenance banner message at the application and environment level to show more information about the maintenance.
 
 #### Fix
 
@@ -329,7 +348,7 @@ New Certificate Details: [https://crt.sh/?id=6940402070](https://crt.sh/?id=6940
 
 #### Improvements
 
-* We have enabled a Web Application Firewall (WAF) service for the licensed regions of the Mendix Cloud. See the [release note for March 30](#waf) for more information over WAF.
+* We have enabled a Web Application Firewall (WAF) service for the licensed regions of the Mendix Cloud. For more information about WAF, see the [release note for March 30](#waf).
 
     | Region | Date Enabled |
     | --- | --- |
@@ -387,7 +406,7 @@ New Certificate Details: [https://crt.sh/?id=6940402070](https://crt.sh/?id=6940
 
     The Web Application Firewall (WAF) is a security service that protects applications from malicious and unwanted internet traffic without modifying your application code. WAF for Free Apps addresses various attack categories including many high risk and commonly occurring vulnerabilities described in OWASP publications such as [OWASP Top 10](https://owasp.org/www-project-top-ten/). These include the following:
 
-    * Cross site scripting
+    * Cross-site scripting
     * HTTP protocol violations
     * Bots, crawlers, and scanners
     * HTTP Denial of Service
@@ -528,13 +547,13 @@ Existing applications will be updated in the next few weeks. Technical contacts 
 
 #### Improvements
 
-* We have improved our logging to provide more stability and robustness. This addresses issues faced by customers such as failing log downloads and incomplete log files.
+* We have improved our logging to provide more stability and robustness. This addresses issues faced by customers, such as failing log downloads and incomplete log files.
 
 ### June 11, 2021
 
 #### Mendix Cloud v3 Archived Logs
 
-* We have deleted archived logs older than 6 months for all Mendix Cloud **v3** apps. This is in line with the warning given in the Developer Portal and the current commitment to keep logs for 6 months.
+* We have deleted archived logs older than six months for all Mendix Cloud **v3** apps. This is in line with the warning given in the Developer Portal and the current commitment to keep logs for six months.
 
 ### June 8, 2021
 
@@ -564,7 +583,7 @@ Existing applications will be updated in the next few weeks. Technical contacts 
 
 #### Improvements
 
-* We increased the maximum number of instances you can set when [scaling](/developerportal/deploy/environments-details/#scaling) your app to 32. If you need more than 32 instances please contact Mendix Support.
+* We increased the maximum number of instances you can set when [scaling](/developerportal/deploy/environments-details/#scaling) your app to 32. If you need more than 32 instances, contact Mendix Support.
 
 #### Announcement - Internet Protocol Version 6 (IPv6) will be supported for applications in Mendix Cloud v4 from **July 1, 2021**
 
@@ -705,8 +724,7 @@ If you encounter errors using APIs, please ensure that the format matches the do
 #### Improvements
 
 * We are in the process of migrating the alerting service to our internal infrastructure to improve maintainability. Your alerts will continue to operate in the same way after the migration.
-* As part of the migration the existing alert history will be deleted. The alerts history tab will only contain those alerts which have been triggered since the migration.
-
+* As part of the migration, the existing alert history will be deleted. The alerts history tab will only contain those alerts which have been triggered since the migration.
 * We added the ability for the Technical Contact to download a list of [node permissions](/developerportal/deploy/node-permissions/) as a CSV to assist with audits
 * We added information about the size of backup files.
 
@@ -723,8 +741,8 @@ If you encounter errors using APIs, please ensure that the format matches the do
 #### Improvements
 
 * We have added the ability for Technical Contacts to download the activity log from an environment.
-* On some of the Developer Portal pages (*Environments*, *Mobile App*, *App Services*, *Metrics*, *Alerts*, *Logs*, *Backups*, and the *Node Permissions* tab of *Security*) we have split the **Edit App** button into two separate buttons: **Edit in Studio** and **Edit in Studio Pro**.
-* We removed the ability to build PhoneGap hybrid applications through the Developer Portal. The PhoneGap Build service is removed by Adobe on 1 October, so this action would have failed after this date. You can still build your hybrid app locally.
+* On some of the Developer Portal pages (*Environments*, *Mobile App*, *App Services*, *Metrics*, *Alerts*, *Logs*, *Backups*, and the *Node Permissions* tab of *Security*), we have split the **Edit App** button into two separate buttons: **Edit in Studio** and **Edit in Studio Pro**.
+* We removed the ability to build PhoneGap hybrid applications through the Developer Portal. The PhoneGap Build service will be removed by Adobe on 1 October, so this action would have failed after this date. You can still build your hybrid app locally.
 
 #### Fixes
 
@@ -752,9 +770,9 @@ If you encounter errors using APIs, please ensure that the format matches the do
 
 #### Announcement - Deprecation of HTTPS SSL/TLS weak ciphers from **December 1, 2020**
 
-To improve the security of the HTTPS connections made to apps in Mendix Cloud v4 we [enabled TLSv1.3 in February this year](#tls-v1_3). Since then more than 50% of the requests to Cloud v4 apps have been served over TLSv1.3.
+To improve the security of the HTTPS connections made to apps in Mendix Cloud v4, we [enabled TLSv1.3 in February this year](#tls-v1_3). Since then, more than 50% of the requests to Cloud v4 apps have been served over TLSv1.3.
 
-To further improve the security of the HTTPS connections to apps in Mendix Cloud v4 we are deprecating and stopping support for block ciphers. Block ciphers are considered weak.
+To further improve the security of the HTTPS connections to apps in Mendix Cloud v4, we are deprecating and stopping support for block ciphers. Block ciphers are considered weak.
 
 **On December 1, 2020**, we will stop technical support for **TLSv1.2 Block ciphers (CBC)** for HTTPS connections to apps in **Mendix Cloud v4**.
 
@@ -809,7 +827,7 @@ SSL/TLS ciphers that are still supported for HTTPS connections after December 1,
 
 * We improved the error handling and feedback of the scale app functionality for Mendix Cloud v4. (Ticket 103304) 
 * We fixed an issue where some customers were not able to access the [Deploy APIs](/apidocs-mxsdk/apidocs/deploy-api/). (Ticket 103241)
-* We have modified the [Deploy to Licensed Cloud Node](/refguide9/app-menu/#deploy) flow in Mendix Studio Pro. When **Deploy to Licensed Cloud Node** is selected in Mendix Studio Pro, your application will automatically be deployed to the *Mendix Studios Target* environment of your licensed node. This deployment will include a restart of that environment. It is now only possible to deploy Mendix Cloud v4 applications which have a [Mendix Studios Target](/developerportal/deploy/studio-deployment-settings/#target) set. Please note that you will get an error message if you deploy from Studio Pro when no **Mendix Studios Target** is set.
+* We have modified the [Deploy to Licensed Cloud Node](/refguide9/app-menu/#deploy) flow in Mendix Studio Pro. When **Deploy to Licensed Cloud Node** is selected in Mendix Studio Pro, your application will automatically be deployed to the *Mendix Studios Target* environment of your licensed node. This deployment will include a restart of that environment. It is now only possible to deploy Mendix Cloud v4 applications that have a [Mendix Studios Target](/developerportal/deploy/studio-deployment-settings/#target) set. You will get an error message if you deploy from Studio Pro when no **Mendix Studios Target** is set.
 
 #### Fixes
 
@@ -845,7 +863,7 @@ SSL/TLS ciphers that are still supported for HTTPS connections after December 1,
 #### Fixes
 
 * We resolved an issue where deactivated users were still shown in the [Node Permissions](/developerportal/deploy/node-permissions/) tab of the Security page for an app. (Tickets 90744 95319, 97722, 98474, 99978, 100493, 101595, 103007, and 103549)
-* We resolved an issue where you could not change the role of the inbuilt administrator account for apps deployed to the cloud. (Tickets 87013 and 87605)
+* We resolved an issue where you could not change the role of the built-in administrator account for apps deployed to the cloud. (Tickets 87013 and 87605)
     {{% alert color="info" %}}You will still need to change the password of the administrator account for the new role to be assigned to the administrator. See the [User Role](/refguide9/administrator/#user-role) section of *Administrator* for more information{{% /alert %}}
 * We resolved an issue where an incorrect debugger password could be displayed for Mendix Cloud **v4** when the **Show Debugger Information** button was clicked on the Environment Details page. (Ticket 99469)
 
@@ -886,11 +904,11 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 #### Improvements
 
 * We introduced a new graph in the **Trends** metrics for Mendix Cloud v4. This shows the **database burst balance**. See [Database Burst Balance](/developerportal/operate/metrics/#Trends-dbmxdatabaseburstbalance) in the *Trends in the Mendix Cloud v4* document for more information.
-* In Mendix Cloud v4 we introduced changes to the Access Restriction Profile (ARP) Certificate Authorities (CAs). These changes allow you to:
+* In Mendix Cloud v4, we introduced changes to the Access Restriction Profile (ARP) Certificate Authorities (CAs). These changes allow you to:
     * Have stricter access restrictions by allowing the selection of intermediate certificates instead of the root
     * Use different root certificates for each path
-        {{% alert color="info" %}}Existing configurations will not be changed and environments can be restarted safely.<br/><br/>To migrate to the new ARPs, you must remove **all** existing ARPs and replace them with *clones* that you have edited using the latest Developer Portal.<br/>In other words **Clone** the existing ARPs, **Edit** the CAs, and **Apply** the new ARPs to all paths.{{% /alert %}}
-        For more information see [How To Restrict Access for Incoming Requests](/developerportal/deploy/access-restrictions/).
+        {{% alert color="info" %}}Existing configurations will not be changed and environments can be restarted safely.<br/><br/>To migrate to the new ARPs, you must remove **all** existing ARPs and replace them with *clones* that you have edited using the latest Developer Portal.<br/>In other words, **Clone** the existing ARPs, **Edit** the CAs, and **Apply** the new ARPs to all paths.{{% /alert %}}
+        For more information, see [How To Restrict Access for Incoming Requests](/developerportal/deploy/access-restrictions/).
 
     You will need to redeploy your app in order to apply the new ARP (or ARPs).
 
@@ -916,7 +934,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
     * Your environment details page will display a message while the backup is being restored
     * The environment activity log will indicate when the restore has completed
 * New Deploy API calls have been added. These will be added to the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api/) documentation shortly.
-* You will now be warned that you cannot restore a file-only backup to Mendix Cloud. You can only restore backups which include the database.
+* You will now be warned that you cannot restore a file-only backup to Mendix Cloud. You can only restore backups that include the database.
 
 ### February 27, 2020{#tls-v1_3}
 
@@ -978,7 +996,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 
 <a id="ki20201030"></a>**Known Issue**
 
-* In the **Environments** page, when you click the **Details** button for a **Production** environment and successfully complete two-factor authentication you are redirected to the **first** environment listed for your app, *not the Production environment*. (Ticket 90999)
+* In the **Environments** page, when you click the **Details** button for a **Production** environment and successfully complete two-factor authentication, you are redirected to the **first** environment listed for your app, *not the Production environment*. (Ticket 90999)
 
     * Workaround – Choose the **Details** for the **Production** environment again and you will be taken to the correct environment.
     * Resolved by release on [November 7](#20201107).
@@ -1051,7 +1069,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 #### Fixes
 
-* We fixed an issue which prevented the adding of comments to a backup. (Ticket 81993)
+* We fixed an issue that prevented the adding of comments to a backup. (Ticket 81993)
 * We updated the **Read documentation** link in the Mendix Cloud v4 metrics page to point to the right document. (Ticket 82130)
 * We added appropriate feedback if you try to upload a client certificate which is unsupported because it is not encoded in PEM. (Ticket 82299)
 * We fixed an issue which prevented the offboarding of a single environment if you wanted to retain other environments in the Mendix Cloud node. (Ticket 83189)
@@ -1060,7 +1078,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 #### Improvements
 
-* All **HTTP Request Headers** set by the Mendix Cloud which available to app developers are documented in [Mendix Cloud HTTP Request Headers](/developerportal/deploy/mendix-cloud-request-headers/).
+* All **HTTP Request Headers** set by Mendix Cloud that are available to app developers are documented in [Mendix Cloud HTTP Request Headers](/developerportal/deploy/mendix-cloud-request-headers/).
 * The `X-Client-Certificate` request header that is currently present is deprecated and will be removed in a later stage. Any application relying on this header must switch to the new `SSL-Client-S-DN` header. See the previously mentioned documentation for more information.
 
 ### May 17, 2019
@@ -1073,7 +1091,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 #### Improvements
 
-* We redesigned the App User management page of the Developer Portal for Mendix Cloud environments which are enabled for single sign-on (SSO).
+* We redesigned the App User management page of the Developer Portal for Mendix Cloud environments that are enabled for single sign-on (SSO).
 
 ### May 9, 2019
 
@@ -1085,7 +1103,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 #### Improvements
 
-* For Mendix Cloud v4, we have extended the range of HTTP Headers which are supported in the Developer Portal. Previously, only *X-Frame-Options* was supported. For more information, see [Environment Details](/developerportal/deploy/environments-details/#http-headers).
+* For Mendix Cloud v4, we have extended the range of HTTP Headers that are supported in the Developer Portal. Previously, only *X-Frame-Options* was supported. For more information, see [Environment Details](/developerportal/deploy/environments-details/#http-headers).
     * If you add or change these settings, you will need to redeploy your app before the changes take effect.
 * For Mendix Cloud v4 deployments of Mendix apps version 7.23.1 and above, we now support AdoptOpenJDK, and the relevant Java version is displayed on the Environment Details page.
 * We clarified which logs can be downloaded from the Developer Portal by changing the button text from *Download Today's Log* to *Download Current Log*
@@ -1098,7 +1116,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 #### Improvements
 
-* We released **Free Edition** of Mendix. This removes the limit of 10 named users on Free Apps which are deployed to the Mendix Cloud. To take advantage of the *Free Edition* for an existing app, you need to redeploy your app.
+* We released **Free Edition** of Mendix. This removes the limit of 10 named users on Free Apps that are deployed to Mendix Cloud. To take advantage of the *Free Edition* for an existing app, you need to redeploy your app.
 
 ### April 4, 2019
 
@@ -1114,13 +1132,13 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
     * You can search for the environment for which you want to see details
     * The Technical Contact can rename the environments
     * The Technical Contact can re-order the environments
-* As part of support for Flexible Environments we have made the following changes:
-    * When deploying your application via the Developer Portal you can choose the destination environment
+* As part of support for Flexible Environments, we have made the following changes:
+    * When deploying your application via the Developer Portal, you can choose the destination environment
     * When viewing metrics, logs, backups, etc. you will have to choose the environment using a drop-down rather than clicking directly on the environment you want
 
 #### Other Improvements
 
-* We have added the ability to manage tags through the Developer Portal, in addition to the current method which involved using the API
+* We have added the ability to manage tags through the Developer Portal, in addition to the current method, which involved using the API.
 
 ### March 7, 2019
 
@@ -1128,17 +1146,17 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 * We have fixed the issue where custom domains were not getting bound to environments if they were added before the environment was initialized. (Tickets 78324, 76159, 76439, 77366, 77504, 78324, 78484)
 * We have fixed the issue which caused the "Running Since" value in the Environment Details to be updated after transporting an MDA to an environment but where the process was canceled without restarting the environment. (Ticket 76893)
-* We have fixed the issue regarding unclear application version numbering when building an MDA packages. The "App latest tag" and "Branch latest tag" have been replaced with "App highest tag" and "Branch highest tag" respectively to represent the values more precisely. (Ticket 78699)
-* We have fixed the issue which meant that license information was displayed incorrectly in the Developer Portal for some Mendix Cloud v3 production environments. (Ticket 78229, 80336)
+* We have fixed the issue regarding unclear application version numbering when building an MDA package. The "App latest tag" and "Branch latest tag" have been replaced with "App highest tag" and "Branch highest tag", respectively, to represent the values more precisely. (Ticket 78699)
+* We have fixed the issue causing license information to be displayed incorrectly in the Developer Portal for some Mendix Cloud v3 production environments. (Ticket 78229, 80336)
 
 ### February 6, 2019
 
 #### Fixes
 
-* We addressed and fixed an issue which caused some Mendix Cloud v4 backups to be duplicated.
-* We fixed a problem on Mendix Cloud v3 which prevented Path-based Access Restrictions from working with multiple TLS certificate authorities. (Ticket 77282)
+* We addressed and fixed an issue that caused some Mendix Cloud v4 backups to be duplicated.
+* We fixed a problem on Mendix Cloud v3 thath prevented Path-based Access Restrictions from working with multiple TLS certificate authorities. (Ticket 77282)
 * We fixed the problem which prevented users in the Pacific Time Zone from being able to download the current day's logs. (Tickets 78325, 78586, 79119, 79162, 79427)
-* We addressed and solved a problem which meant that some sandboxes could not be resumed after getting stopped.
+* We addressed and solved a problem that meant that some sandboxes could not be resumed after getting stopped.
 * We have fixed the issue that prevented apps with ACS (AppCloudServices) from being deployed using the Web Modeler. (Ticket 76888)
 
 ### January 28, 2019
@@ -1154,7 +1172,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 #### Fixes
 
 * We fixed issues regarding incorrect values for some application constants for some Mendix Cloud v4 and v3 applications. (Tickets 77302, 77390, 77505, 77797)
-* We addressed and fixed an issue that prevented some Mendix Cloud v3 users from being able to change Java version of their applications. (Tickets 77251, 77652)
+* We addressed and fixed an issue that prevented some Mendix Cloud v3 users from being able to change the Java version of their applications. (Tickets 77251, 77652)
 
 ## 2018
 

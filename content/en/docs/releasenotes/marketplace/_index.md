@@ -11,6 +11,21 @@ aliases:
 
 These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
+## 2024
+
+### March 7, 2024
+
+#### New Features
+
+This release focuses on improving the Marketplace Reviews feature and making it even better for our users.
+
+* We have improved the **Review** tab to give you tips when writing your review. This feature is available both on the Marketplace site and within Studio Pro.
+* We have decoupled ratings and reviews. You can now rate a component 4 or 5 stars without leaving a review. For 3, 2, and 1 star ratings, a review is mandatory.
+* You can now see additional information, such as reviews, on the Marketplace site without needing to sign in.
+* We have removed the "Company Reviews" page from **My Marketplace**.
+* You can now to filter reviews based on specific criteria.
+* We have improved the **Review** tab to give you tips when replying to a review of your Marketplace component.
+
 ## 2023
 
 ### November 30, 2023
@@ -217,7 +232,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 * We added a section to **Get Studio Pro** for downloading versions that have [long-term support (LTS)](/releasenotes/studio-pro/lts-mts/#lts) and [medium-term support (MTS)](/releasenotes/studio-pro/lts-mts/#mts).
 
-    {{% alert color="info" %}}This is based on an [upvoted idea from Alexander Keßler](https://forum.mendixcloud.com/link/ideas/2212) submitted to the [Mendix Idea Forum](https://forum.mendixcloud.com/link/ideas). Thanks, Alexander!{{% /alert %}}
+    {{% alert color="info" %}}This is based on an [upvoted idea from Alexander Keßler](https://community.mendix.com/link/ideas/2212) submitted to the [Mendix Community](https://community.mendix.com/link/ideas). Thanks, Alexander!{{% /alert %}}
 
 #### Fixes
 
@@ -337,7 +352,7 @@ Content that was marked as **Protected** as well as content marked as **Shared w
 
 We added the flexibility to label your App Store content with a [custom version number](/appstore/sharing-content/#updating).
 
-{{% alert color="info" %}}This is based on an [upvoted idea from Andreas Blaesius](https://forum.mendixcloud.com/link/ideas/1324) submitted to the [Mendix Idea Forum](https://forum.mendixcloud.com). Thanks, Andreas!{{% /alert %}}
+{{% alert color="info" %}}This is based on an [upvoted idea from Andreas Blaesius](https://community.mendix.com/link/ideas/1324) submitted to the [Mendix Community](https://community.mendix.com/). Thanks, Andreas!{{% /alert %}}
 
 ### August 30, 2019
 

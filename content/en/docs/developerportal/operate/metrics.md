@@ -33,6 +33,10 @@ If you meet the above conditions, you can find the graphs by following these ste
 
     {{< figure src="/attachments/developerportal/operate/metrics/metrics-selection.png" >}}
 
+{{% alert color="info" %}}
+The **Metrics** page does not support multi-instance metrics. If you [horizontally scale](/developerportal/deploy/scale-environment/) your environment to multiple instances, you will be able to see metrics for only one of those instances. If you need data on multiple instances, consider using an [APM integration](/developerportal/operate/monitoring-with-apm/).
+{{% /alert %}}
+
 ## 3 Interpreting the Graphs
 
 As with all complex IT systems, there are many interrelated components that can cause performance issues. This document cannot cover all possibilities; it is intended as a general introduction to the information that is displayed. It also suggests a few ideas about where to look for possible areas of concern.
@@ -409,7 +413,7 @@ There are two sets of values:
 {{% alert color="info" %}}
 As of [October 25, 2023](/releasenotes/developer-portal/mendix-cloud/#october-25-2023), whenever you create a new DB instance, it will be provisioned with a gp3 storage instance if it meets the eligibility criteria defined in the table below. This also occurs if your database is recreated.
 
-Existing databases of apps on eligible plans in Mendix Cloud (as specified in the table below) will also be migrated to gp3 storage instances soon.
+All existing databases of environments on eligible plans in Mendix Cloud (as specified in the table below) will eventually be migrated to gp3 storage instances. As of March 6, 2024, the databases of non-production environments have been migrated; production environments will also be migrated soon.
 
 | Mendix Plans      | Storage Instance Type | Storage Size         | Baseline Storage Performance | Provisioned IOPS Range | Provisioned Throughput Range |
 |-------------------|-----------------------|----------------------|------------------------------|------------------------|------------------------------|

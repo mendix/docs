@@ -30,7 +30,7 @@ Use the various filters to refine your search results:
 
 ## 4 Support Menu
 
-Click **Open Support Menu** ({{% icon name="question-circle" color="color" %}}) to read up on [what's new](https://www.mendix.com/releases/) in the Mendix Platform, [ask a question](/community-tools/mendix-forum/#questions-tab) to the Mendix community, [share an idea](/community-tools/mendix-forum/#ideas-tab) with the community, explore more [Mendix documentation](/), or contact [Mendix Support](/support/).
+Click **Open Support Menu** ({{% icon name="question-circle" color="color" %}}) to read up on [what's new](https://www.mendix.com/releases/) in the Mendix Platform, [ask a question](/community-tools/mendix-community/#questions-tab) to the Mendix community, [share an idea](/community-tools/mendix-community/#ideas-tab) with the community, explore more [Mendix documentation](/), or contact [Mendix Support](/support/).
 
 {{< figure src="/attachments/developerportal/global-nav/help-menu.png" width="300" >}}
 

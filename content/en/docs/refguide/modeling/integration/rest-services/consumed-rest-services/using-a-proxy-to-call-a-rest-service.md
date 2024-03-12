@@ -12,6 +12,7 @@ In some cases, you will be stuck behind a firewall and unable to call a REST ser
 ## 2 Proxy Host and Proxy Port
 
 There are two parameters that specify which proxy server to use when making REST calls: 
+
 * `http.proxyHost`
 * `http.proxyPort`
 

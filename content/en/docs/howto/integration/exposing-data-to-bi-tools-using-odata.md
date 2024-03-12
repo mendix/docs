@@ -11,13 +11,13 @@ tags: ["expose", "bi tools", "odata", "integration", "reporting tools", "excel",
 
 Mendix apps encourage the application of a services-oriented architecture, with multiple smaller services providing APIs and user interfaces for a specific set of data and logic. Enterprises build up complete solutions by assembling these services.
 
-One important aspect of services is that all access to data and logic is handled by the service operations. Direct access to databases used for storing the service data is discouraged, because this would bypass the business rules and security handled by the service. This creates a challenge for generic reporting, data warehousing, and ETL tooling.
+One important aspect of services is that all access to data and logic is handled by the service operations. Direct access to databases used for storing the service data is discouraged because this would bypass the business rules and security handled by the service. This creates a challenge for generic reporting, data warehousing, and ETL tooling.
 
-The OData standard is being adopted because it enables generic data access within a services-oriented architecture. [OData](http://www.odata.org) is “an open protocol to allow the creation and consumption of queryable and interoperable Restful APIs in a simple and standard way.". In other words, it enables tools to use any REST/OData service by providing metadata that describes the data being provided, and by standardizing the messages exchanged with the OData services.
+The OData standard is being adopted because it enables generic data access within a services-oriented architecture. [OData](http://www.odata.org) is “an open protocol to allow the creation and consumption of queryable and interoperable RESTful APIs in a simple and standard way.". In other words, it enables tools to use any REST/OData service by providing metadata that describes the data being provided, and by standardizing the messages exchanged with the OData services.
 
 A reporting tool like Excel or Tableau can discover what data and functionality is available in an OData service, and provide a generic way for users to build new queries for the data.
 
-**This guide will outline how to do the following:**
+This how-to outlines how to do the following:
 
 * Create a published OData service with resources
 * Add the OData server to Tableau and Excel
@@ -26,10 +26,10 @@ A reporting tool like Excel or Tableau can discover what data and functionality 
 
 ## 2 Prerequisites
 
-Before checking out this guide, make sure you do the following:
+Before reviewing this guide, make sure you do the following:
 
-* Create an app that includes data you want to expose. You can either have published OData services already, or follow the steps in the [Creating a Published OData Service](#create-service) section below. For detailed steps to publishing an OData service,see the [Creating an App](/howto/integration/share-data/#createapp) and [Publishing to the Catalog](/howto/integration/share-data/#publishing) sections of *Share Data Between Apps*. 
-* Install Excel (we will use Excel for Office 365).
+* Create an app that includes data you want to expose. You can either have published OData services already, or follow the steps in the [Creating a Published OData Service](#create-service) section below. For detailed steps to publishing an OData service, see the [Creating an App](/howto/integration/share-data/#createapp) and [Publishing to the Catalog](/howto/integration/share-data/#publishing) sections of *Share Data Between Apps*. 
+* Install Excel (this document uses Excel for Office 365).
 * Download and install the public version of [Tableau](https://public.tableau.com).
 
 ## 3 Creating a Published OData Service {#create-service}
@@ -42,7 +42,7 @@ A published OData service can be used by third-party applications to read data f
 4. Under **Entities**, click **Add**:
 5. In the **Select Persistable Entity** window, select the entity you want to expose and click **Select**.
 
-    {{% alert color="info" %}}Security in OData is managed by the **App Security** settings and the entity-level access rules; therefore, if you have already configured access rules in your app, you do not have to configure security separately for OData.{{% /alert %}}
+    {{% alert color="info" %}}Security in OData is managed by the **App Security** settings and the entity-level access rules. If you have already configured access rules in your app, you do not have to configure security separately for OData.{{% /alert %}}
 
 6. On the **Settings** tab, choose **As an associated id** for **Associations**. Excel can handle the setting **As a link**, but Tableau does not support it.
 7. Start the application. 
@@ -53,8 +53,8 @@ The OData service is now ready to be consumed.
 
 1. Open Excel.
 2. Open the **DATA** tab and select **Get Data** > **From Other Sources** > **From OData Feed**.
-3. Retun to Studio Pro, and double-click the published OData service. Copy the link in the **Location** field to the clipboard.
-4. Back in Excel, on the **OData Feed** dialog box, enter the copied link for the **URL** and Click **OK**:
+3. Return to Studio Pro and double-click the published OData service. Copy the link in the **Location** field to the clipboard.
+4. Back in Excel, on the **OData Feed** dialog box, enter the copied link for the **URL** and click **OK**.
 5. Select the name of the published entity in the Navigator and click **Load**.
 
 The data of the Mendix application is now available in Excel.
@@ -65,14 +65,14 @@ In this section, we will outline the steps for adding more than one published en
 
 ### 5.1 Use Case
 
-Imagine that you have an app that helps with asset management. You have a Published OData Service with persistable entities called **SmartTask** and **Employee** that expose information. The domain model looks like this:
+Imagine you have an app that helps with asset management. You have a Published OData Service with persistable entities called **SmartTask** and **Employee** that expose information. The domain model looks like this:
 
 {{< figure src="/attachments/howto/integration/exposing-data-to-bi-tools-using-odata/asset-manager-domain-model.png" >}}
 
 To visualize data from your app in Tableau, follow these steps:
 
 1. Open **Tableau** and select **Connect** > **To a Server** > **OData**:
-2. Return to Studio Pro, and double-click the published OData service. Copy the link the **Location** field to the clipboard.
+2. Return to Studio Pro and double-click the published OData service. Copy the link in the **Location** field to the clipboard.
 3. On the **Server Connection** dialog box, enter the copied OData service **Location** link for the **Server**  address:
 
     {{< figure src="/attachments/howto/integration/exposing-data-to-bi-tools-using-odata/18582020.png" >}}
@@ -81,7 +81,7 @@ To visualize data from your app in Tableau, follow these steps:
 
 4. Click **Sign In** to save the server connection. You should now see the data source details.
 5. Click the name of the server connection and change it to a name related to your entity (in this case, **SmartTasks**) for readability.
-6. Click **Data** > **New Data Source** and repeat step 1–5 to add a server connection for other published OData services.
+6. Click **Data** > **New Data Source** and repeat steps 1–5 to add a server connection for other published OData services.
 7. Open **Sheet1**. Under **Data**, click the first entity and drag a desired entity **Attribute** from **Measures** to **Dimensions**. In this case, click **Engineers** and drag **ID** from **Measures** to **Dimensions**:
 
     {{< figure src="/attachments/howto/integration/exposing-data-to-bi-tools-using-odata/18582012.png" >}}
@@ -89,8 +89,8 @@ To visualize data from your app in Tableau, follow these steps:
 8. Similarly, click and drag an attribute from the second entity from **Measures** to **Dimensions**. In this case, click **SmartTasks** and drag **SmartTask_Engineer** from **Measures** to **Dimensions**.
 9. Go to **Data** > **Edit Relationships...** to define the relationship between the different data sources.
 10. On the **Relationships** window, do the following:<br />
-    1. Select your first entity for the **Primary data source**. In our imagined scenario, that is **SmartTasks**.<br />
-    2. Select your second entity for the **Secondary data source**. In our imagined scenario, that is **Engineers**.<br />
+    1. Select your first entity for the **Primary data source**. In this scenario, that is **SmartTasks**.<br />
+    2. Select your second entity for the **Secondary data source**. In this scenario, that is **Engineers**.<br />
     3. Switch to **Custom** mapping.<br />
     4. Remove any default mappings.<br />
     5. Click **Add...** to configure a field mapping.
@@ -119,13 +119,13 @@ You should now see a bar chart of the data.
 
 ## 6 Filtering Data With Query Parameters
 
-By default, all data is retrieved by Tableau, but Mendix allows you to add filters to the query so only the desired data is being retrieved.
+By default, all data is retrieved by Tableau, but Studio Pro allows you to add filters to the query so only the desired data is being retrieved.
 
 To filter data with query parameters, follow these steps:
 
 1. Right-click a data source and select **Edit Data Source...**.
 2. Click the OData URL to change the connection settings.
-3. Add *?$top=2* to the server URL (in order to only retrieve the first two values, engineers in this case) and click **Sign In**:
+3. Add `?$top=2` to the server URL (in order to only retrieve the first two values) and click **Sign In**:
 
     {{< figure src="/attachments/howto/integration/exposing-data-to-bi-tools-using-odata/18581998.png" >}}
 

@@ -4,7 +4,7 @@ url: /apidocs-mxsdk/apidocs/epics-api/
 type: swagger
 category: "API Documentation"
 description: "Use this API to extend the requirements and project management capabilities of the Mendix Platform or connect third-party service management and project management tools."
-weight: 47
+weight: 55
 tags: ["API", "epics", "project management"]
 ---
 
@@ -22,7 +22,7 @@ Authentication for the Epics API uses a personal access token (PAT).
 
 ### 2.1 Generating a PAT {#generate}
 
-To generate a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section in *Mendix Profile*.
+To generate a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section in *User Settings*.
 
 Select the following as **Epics** scopes:
 

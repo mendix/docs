@@ -140,6 +140,8 @@ To improve user experience, it is possible to detect which item has keyboard foc
 
 You can also see when an item is selected: an item with a light gray background is selected.
 
+For the keyboard navigation and keyboard selection to work the user need to have the property `Selection` in `General` tab set to 'Single' or 'Multi', and if the user want the multi selection to work, then the 'Multi' option is the right choice.
+
 ### 5.1 Keyboard Navigation
 
 Using the keyboard arrow keys (<kbd>{↑}</kbd>, <kbd>{↓}</kbd>, <kbd>{←}</kbd>, <kbd>{→}</kbd>) the user can navigate between the items displayed in the Gallery. Also, the user can use special keyboard keys like <kbd>{Home}</kbd>, <kbd>{End}</kbd>, <kbd>{Pageup}</kbd>, and <kbd>{Pagedown}</kbd>.

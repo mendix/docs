@@ -78,7 +78,7 @@ After [installing](#installation) the connector, get started by doing the follow
 
 4. Click **Save** to open the external database document for this database.
 
-Now you can start [querying the database](#query-database) to select data for use in your app.
+Now you can start [querying the database](#query-database) to select data to use in your app.
 
 ### 3.2 Querying a Database {#query-database}
 
@@ -123,7 +123,7 @@ Click **Save Query & Create Entity** to create the entity and add it to your dom
 
 ### 3.5 Using the Entity in a Microflow {#entity-microflow}
 
-Use the Query External Database activity to call the database in a microflow. Do the following:
+Use the [Query External Database](/refguide/query-external-database/) activity to call the database in a microflow. Do the following:
 
 1. Create a new microflow and drag the **Query external database** activity into it.
 
@@ -132,14 +132,14 @@ Use the Query External Database activity to call the database in a microflow. Do
 2. Double-click the activity and in the **Database** field, click **Select** to choose the database you want to query.
 3. Select the **Query** you want to include in the activity (that you saved while [querying the database](#query-database)).
 4. Include any [parameters](#parameters).
-5. In the Output field, select if you want to **Use return value**.
+5. In the **Output** field, choose if you want to **Use return value**.
 
     {{< figure src="/attachments/appstore/modules/external-database-connector/return-type.png" >}}
 
 6. Click **OK**.
 7. Configure the end event (such as displaying a list, if you are selecting data to appear in a list). 
 
-You can now use the microflow in your app. Here is an example of a configured microflow:
+You can now use the microflow in your app. Below is an example of a configured microflow:
 
 {{< figure src="/attachments/appstore/modules/external-database-connector/example-microflow.png" >}}
 

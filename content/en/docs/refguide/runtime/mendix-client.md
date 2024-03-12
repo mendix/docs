@@ -132,7 +132,7 @@ Where an app is “offline-first”, data created and changed in the app is stor
 
 This ensures that any session with the runtime is kept alive and restored if necessary. It also acts as the authentication for all communications with the runtime which require it.
 
-For a description of the session management, see [Session Management](/refguide/session-management/)
+For a description of the session and authentication tokens, see [Session Management](/refguide/session-management/)
 
 ### 2.13 Runtime Server
 

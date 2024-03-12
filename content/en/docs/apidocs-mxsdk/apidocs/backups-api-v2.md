@@ -10,7 +10,7 @@ weight: 17
 
 ## 1 Introduction
 
-The **Backups API v2** lets you manage backups of the data in your app hosted in Mendix Cloud.
+The Backups API v2 lets you manage backups of the data in your app hosted in Mendix Cloud.
 
 Data snapshots consist of a PostgreSQL database dump and all the file objects referenced from the database.
 
@@ -18,7 +18,7 @@ Database archives are a zip file which contains all the data in the snapshot, or
 
 You cannot currently upload an archive through this API. This function is currently only supported via the [Developer Portal](/developerportal/operate/backups/). However, you can use this API to restore data from an existing environment snapshot.
 
-This API focuses on working with snapshots and archives asynchronously, because these can be very long-running tasks for large quantities of data.
+This API focuses on working with snapshots and archives asynchronously, because these can be very long-running tasks for large quantities of data. It replaces the deprecated Backups API v1.
 
 ## 2 Authentication
 

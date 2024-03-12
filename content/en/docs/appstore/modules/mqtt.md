@@ -62,20 +62,20 @@ Enabling SSL will establish a secure connection to the broker. To input your SSL
 
 ## 3 Usage
 
-To use the MQTT Connector, make sure you have [configured the broker connection](#configure-broker), or [create a broker connection directly in a microflow](#broker-microflow). 
+To use the MQTT connector, make sure you have [configured the broker connection](#configure-broker), or [create a broker connection directly in a microflow](#broker-microflow). 
 
-Build microflows that use the connection details from the domain model to connect, and set up connection details using the domain model. Include microflows that first use the connection details from the domain model to connect, before the subscribe or publish actions can be performed.
+You can build microflows that use the connection details from the domain model to connect, then set up connection details using the domain model. Include microflows that first use the connection details from the domain model to connect, before the subscribe or publish actions can be performed.
 
 ### 3.2 Microflow Actions
 
-After you have set up the connection with the broker (in the [Configuration](#configuration) section or in a microflow), you can use the actions Publish, Subscribe, or Unsubscribe. These actions are used in microflows. The **SampleUses** microflow gives a sample setup for your reference.
+After you have set up the connection with the broker (in the [Configuration](#configuration) section or in a microflow), you can use the actions **Publish**, **Subscribe**, or **Unsubscribe** in a microflow. The **SampleUses** microflow gives a sample setup to reference.
 
 #### 3.2.1 Publish
 
 To publish data to the MQTT broker, follow these steps:
 
-1. Search for *Publish MQTT* in the **Toolbox**.
-2. Drag the *Publish MQTT* event into your microflow.
+1. Search for **Publish MQTT** in the **Toolbox**.
+2. Drag the **Publish MQTT** event into your microflow.
 3. Edit the event to include the following details:
     * **Topic** – topic to which the payload is published
     * **Payload** – string message to be published
@@ -88,8 +88,8 @@ To publish data to the MQTT broker, follow these steps:
 
 To subscribe to the MQTT broker, follow these steps:
 
-1. Search for *Subscribe MQTT* in the **Toolbox**.
-2. Drag the *Subscribe MQTT* event into your microflow.
+1. Search for **Subscribe to MQTT** in the **Toolbox**.
+2. Drag the **Subscribe to MQTT** event into your microflow.
 3. Edit the event to include the following details:
     * **Topic** – topic to subscribe to
     * **OnMessageMicroflow** – microflow to be executed when a message is received on subscribed topic
@@ -101,7 +101,7 @@ When subscribing to a topic, define in the subscribe action which microflow is t
 
 To unsubscribe from the MQTT broker, follow these steps:
 
-1. Search for *Unsubscribe MQTT* in the **Toolbox**.
-2. Drag the *Unsubscribe MQTT* event into your microflow.
+1. Search for **Unsubscribe from MQTT** in the **Toolbox**.
+2. Drag the **Unsubscribe from MQTT** event into your microflow.
 3. Edit the event to include the following details:
     * **Topic** – topic to unsubscribe from

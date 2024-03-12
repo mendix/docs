@@ -41,9 +41,14 @@ On the **Overview** tab, if you click **View Details** for an item in the list, 
 
 On the top of the page, you can find the app name, the environment name, the Mendix Runtime version, the name of the Technical Contact, the type of the cloud where the app is deployed, and the version of the deployment package (*.mda*) deployed to this environment.
 
-On the upper-right corner of the page, you can click {{% icon name="download-bottom" %}}**SBOM** to download the software bill of materials (SBOM). A software bill of material is a vehicle to share information on the inventory of a software component. It contains a description about the Mendix app and the components (dependencies) put into it. The curren  version of the SBOM contains standard marketplace modules, widgets, java libraries and the mendix runtime version. The SBOM is a *.json* file in the CycloneDX format.
+On the upper-right corner of the page, you can click {{% icon name="download-bottom" %}}**SBOM** to download the software bill of materials (SBOM). A software bill of material is a vehicle to share information on the inventory of a software component. It contains a description about the Mendix app and the components (dependencies) put into it. The curren version of the SBOM contains standard marketplace modules, widgets, java libraries and the mendix runtime version. The SBOM is a *.json* file in the CycloneDX format. Currently, the SBOM has the following known limitations:
 
-The items in the rest of the page are the same as on the [All Components](#all-components) tab.
+* Add-on modules, solution modules, solutions, and npms are not available as SBOM components currently. This will be improved in future versions.
+* Components which are not imported via the Marketplace are not visible in the SBOM.
+* Metadata of private marketplace components and meta data of widgets imported as a part of a module will be limited.
+* No dependency information between components is available in the SBOM, except for the java dependencies available for SBOMs created from Studio Pro versions 10.5.0 and above.
+
+The items in the rest of the **Component Summary** page are the same as on the [All Components](#all-components) tab.
 
 ## 3 All Components {#all-components}
 

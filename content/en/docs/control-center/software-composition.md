@@ -37,11 +37,11 @@ To export the information of selected items in the list to an Excel file, select
 
 ### 2.1 Component Summary {#component-summary}
 
-On the **Overview** tab, if you click **View Details** for an item in the list, the **Component Summary** page opens.
+On the **Overview** tab, if you click **View Details** for an item in the list, the **Component Summary** page opens. The page shows the components of the selected app environment for your easy visual consumption.
 
 On the top of the page, you can find the app name, the environment name, the Mendix Runtime version, the name of the Technical Contact, the type of the cloud where the app is deployed, and the version of the deployment package (*.mda*) deployed to this environment.
 
-On the upper-right corner of the page, you can click {{% icon name="download-bottom" %}}**SBOM** to download the software bill of materials (SBOM).
+On the upper-right corner of the page, you can click {{% icon name="download-bottom" %}}**SBOM** to download the software bill of materials (SBOM). A software bill of material is a vehicle to share information on the inventory of a software component. It contains a description about the Mendix app and the components (dependencies) put into it. The curren  version of the SBOM contains standard marketplace modules, widgets, java libraries and the mendix runtime version. The SBOM is a *.json* file in the CycloneDX format.
 
 Above the list, you can use the search box to search for a component name or version. Next to the search box, you can filter components by selecting the component type. You can click {{% icon name="office-sheet" %}}**Export all to Excel** on the right side above the list to export all the information in the list to an Excel file.
 
@@ -56,11 +56,11 @@ To export the information of selected items in the list to an Excel file, select
 
 ## 3 All Components {#all-components}
 
-The **All Components** tab gives an overview of all the unique components used across your app landscape.
+The **All Components** tab gives an overview of all the unique components used across your app landscape. 
 
-{{% alert color="info" %}This only includes the newly created apps for which a deployment package and hence a software bill of materials is available.{{% /alert %}}
+{{% alert color="info" %}This only includes the newly-created apps for which a deployment package and hence a software bill of materials is available.{{% /alert %}}
 
-Above the list, you can use the search box to search for a component. Next to the search box, you can filter components by selecting the component type.  You can click {{% icon name="office-sheet" %}}**Export all** on the right side above the list to export all the information in the list to an Excel file.
+Above the list, you can use the search box to search for a component name or version. Next to the search box, you can filter components by selecting the component type.  You can click {{% icon name="office-sheet" %}}**Export all** on the right side above the list to export all the information in the list to an Excel file.
 
 The list shows the following information about the component:
 
@@ -75,7 +75,7 @@ To export the information of selected items in the list to an Excel file, select
 
 ### 3.1 Component Usage {#component-usage}
 
-On the **All Components** tab, if you click **View details** for an item, the **Component Usage** page opens.
+On the **All Components** tab, if you click **View details** for an item, the **Component Usage** page opens. This page lists the apps and the environments where the selected component is being used. If a security vulnerabilities is found in one of the components, then the component usage tab can be used to assess  the impact radius. The relevant Technical Contacts can be informed to take the necessary remediation actions.
 
 On the top of the page, you can find the component name, the component version, the component type, the number of apps where the component is used, and the number of environments where apps containing this component are deployed.
 
@@ -84,7 +84,6 @@ Above the list, you can use the search box to search for an app. Next to the sea
 The list shows all the apps where the component is used, with the following information: 
 
 * **App Name**: This is the name of the app.
-* **Production**: This shows whether the app is deployed in the production environment.
 * **Environment**: This is the name of the environment.
 * **Runtime**: This shows the Mendix Runtime version.
 * **Target Cloud**: This shows the type of the cloud where the app is deployed. Currently, only Free Cloud, Cloud, and Cloud Dedicated are supported.

@@ -1052,9 +1052,9 @@ style="width:6.5in;height:1.44219in" /
 A Rapid Developer has a baseline knowledge of the Mendix platform and knows where to find information using the documentation and forum.
 This certification is proof of basic Mendix knowledge and demonstrates that someone can join a project team and independently build prototypes.
 
-The Rapid Developer certification is a minimum requirement for working in Mendix. Before taking a certification exam, there is required coursework for each level. All courses can either be taken via [[instructor-led](https://academy.mendix.com/link/classrooms)](https://academy.mendix.com/link/classrooms)
+The Rapid Developer certification is a minimum requirement for working in Mendix. Before taking a certification exam, there is required coursework for each level. All courses can either be taken via [instructor-led](https://academy.mendix.com/link/classrooms)](https://academy.mendix.com/link/classrooms)
 or via a
-[[self-led](https://academy.mendix.com/link/paths)](https://academy.mendix.com/link/paths)
+[self-led](https://academy.mendix.com/link/paths)](https://academy.mendix.com/link/paths)
 . 
 
 You can find all the details about the certification, as well as the required coursework [here](https://academy.mendix.com/link/certifications/23/rapid). 

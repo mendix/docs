@@ -19,9 +19,9 @@ $white: #fff; // YL - Override the default color defined in _variables_forward.s
 $light: #99D0FF !default; // DB - Blue-3 from PDS
 $dark: #0A1325 !default; // Gray-10 from PDS (MxDock color)
 $blue: #146FF4; // YL - Mendix Blue in SP 10; Override the default color defined in _variables_forward.scss
-$gray-light: #f2f2f3 !default;
 $gray-100: #f7f7f7 !default;
 $gray-200: #f2f2f3 !default;
+$gray-light: $gray-200 !default;
 $gray-300: #e7e7e9; // YL - Override the default color defined in _variables_forward.scss
 $gray-400: #d9dbdd !default;
 $gray-500: #c1c3c8 !default;

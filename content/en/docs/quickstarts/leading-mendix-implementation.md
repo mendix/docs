@@ -6,24 +6,180 @@ description: "Lead Mendix Implementation in your organization."
 tags: ["Mendix Implementation"]
 ---
 
-## Introduction
+## 1 Learning Path Overview
+1.  Purpose: An **actionable collection of learning resources** that achange owner needs to have in order to successfully support MXimplementation and the 1st MX application to go live. Can bedocumentation, learning paths, videos, and more. 
+
+2.  Audience (who is the learning path aimed at?): Change Program Ownersat an organisation that are new to Mendix …and/or new LOBs or groupswithin organizations already using Mendix.
+
+* Focus on paid customers 
+
+* Prospects can use this as part of their evaluation process,
+together with Evaluation Guide. 
+
+3.  Duration: **TBD**
+
+4.  Prerequisites (anything they absolutely need to know before this?):
+**TBD**
+
+5.  Keywords (what are the relevant buzzwords?): **TBD**
+
+6.  Learning goals (what will the learners learn?): 
+
+1.  Familiarize with the steps. 
+
+2.  Be able to find the right resources when needed.
+
+7.  Use Case: N/A
+8.  Mendix Version: N/A
+9.  Deadline: **2th February 2024**
+
+## Content overview
+ {{< figure src="image/path" max-width=80% class="image-border"  >}}image1.png"
+style="width:0.22222in;height:0.22222in" alt="check mark button" /→
+Ready for review and iteration
+ {{< figure src="image/path" max-width=80% class="image-border"  >}}image2.png"
+style="width:0.22222in;height:0.22222in" alt="writing hand" /→ Wehave base content, to be written
+ {{< figure src="image/path" max-width=80% class="image-border"  >}}image3.png"
+style="width:0.22222in;height:0.22222in" alt="person raising hand" /
+→ Need help from an SME
+<table
+<colgroup
+<col style="width: 27%" /
+<col style="width: 72%" /
+</colgroup
+<thead
+<tr class="header"
+<th<blockquote
+<p<strongModule</strong</p
+</blockquote</th
+<th<blockquote
+<p<strongLecture</strong</p
+</blockquote</th
+</tr
+</thead
+<tbody
+<tr class="odd"
+<td<blockquote
+<pIntroduction</p
+</blockquote</td
+<td<p<a href="#_Lecture_1.1_Welcome"1.1 Welcome</a(what you willlearn in this learning path)</p
+<p<a href="#_Lecture_1.2_Who"1.2 Who this guide is for, how to use it,
+and for how long</a</p
+<p<a href="#_Lecture_1.3_Questions"1.3 Questions andFeedback</a</p</td
+</tr
+<tr class="even"
+<td<blockquote
+<p<a href="#_Module_2:_Get"Get Familiar with the 5 P’s of the DigitalExecution Practice</a</p
+</blockquote</td
+<td<p<a href="#_2.1_Introduction"2.1 Introduction</a</p
+<p<a href="#_Lecture_2.2_Assign"2.2 Assign Mendix Admin</a</p
+<p<a href="#_Lecture_2.3_Get"2.3 Get Familiar with Mendix</a</p
+<p<a href="#_Lecture_2.4_Introduction"2.4 Introduction to DigitalExecution Practice (DEP)</a</p
+<blockquote
+<p<a href="#_2.4.1_Portfolio:_Choosing"2.4.1 Portfolio</a</p
+<p<a href="#_2.4.2_People:_Building"2.4.2 People</a</p
+<p<a href="#_2.4.3_Process:_Building"2.4.3 Process</a</p
+<p<ahref="#platform-tying-all-these-pieces-together-with-a-pure-low-code-platform"2.4.4
+Platform</a</p
+<p<a href="#_2.4.5_Promotion:_Showcasing"2.4.5 Promotion</a</p
+<p<a href="#_2.4.6_Additional_resources"2.4.6 AdditionalResources</a</p
+</blockquote
+<p<a href="#_Lecture_2.6_Stay"2.5 Stay up to date with Mendix</a</p
+<p<a href="#_Lecture_2.6_Summary"2.6 Summary</a</p</td
+</tr
+<tr class="odd"
+<td<blockquote
+<p<a href="#_Module_3:_Create"Create a Getting Started Plan</a</p
+</blockquote</td
+<td<p<a href="#learning-objectives-1"Learning Objectives</a</p
+<p<a href="#_Lecture_3.1_Create"3.1 Create (or revise) your low-codevision</a</p
+<p<a href="#_Lecture_3.3_Build"3.2 Build your getting startedplan</a</p
+<p<a href="#_Lecture_3.4_Start"3.3 Start your Mendix portfolio</a</p
+<p<a href="#_Lecture_3.5_Finalize"3.4 Finalize first applicationselection</a</p
+<p<a href="#_Lecture_3.6_Defining"3.5 Define application value</a</p
+<p<a href="#_Lecture_3.7 _Set"3.6 Set up deployment architecture andresources</a</p
+<p<ahref="#lecture-3.7-review-options-for-development-resources-who-will-build-your-first-app"3.7
+Review options for development resources</a</p
+<p<a href="#_Lecture_3.10_Summary"3.8 Summary</a</p</td
+</tr
+<tr class="even"
+<td<blockquote
+<p<a href="#_Module_4:_Kick-off"Kick-Off Mendix Program</a</p
+</blockquote</td
+<td<p<a href="#_Lecture_4.1_Introduction"4.1 Introduction</a</p
+<p<a href="#_Lecture_4.2_Introduction"4.2 Introduction toAgile</a</p
+<p<a href="#_Lecture_4.3_Identify"4.3 Identify Your First MendixProject Team</a</p
+<p<a href="#_Lecture_4.5_Arrange"4.5 Arrange Academy Training for YourTeam</a</p
+<p<a href="#_4.6_Summary"4.6 Summary</a</p</td
+</tr
+<tr class="odd"
+<td<blockquote
+<p<a href="#_Module_5:_Governance"Governance and Control inMendix</a</p
+</blockquote</td
+<td<p<a href="#lecture-5.1-introduction-to-governance-in-mendix"5.1
+Introduction</a</p
+<p<a href="#_Lecture_5.2_Configure"5.2 Configure Platform in ControlCenter</a</p
+<p<a href="#_￼Lecture_5.3_Summary"5.3 Summary</a</p</td
+</tr
+<tr class="even"
+<td<blockquote
+<p<a href="#_Module_6:_Get"Get Started with the First Project</a</p
+</blockquote</td
+<td<p<a href="#_6.1_Introduction"6.1 Introduction</a</p
+<p<a href="#_Lecture_6.2_Organize"6.2 Organize your first projectkick-off</a</p
+<p<ahref="#lecture-6.2-create-your-project-and-make-sure-everyone-has-access"6.3
+Create your project and make sure everyone has access</a</p
+<p<a href="#_Lecture_6.4_Setting"6.4 Setting up the agile way ofworking</a</p
+<p<a href="#_Lecture_6.5:_Defining"6.5 Defining requirements</a</p
+<p<a href="#_Lecture_6.6_Familiarize"6.6 Familiarize yourself withcontinuous collaboration through Mendix</a</p
+<p<a href="#_Lecture_6.7_The"6.7 The development process and why it’snot part of this guide</a</p
+<p<a href="#_Lecture_6.8_Summary"6.8 Summary</a</p</td
+</tr
+<tr class="odd"
+<td<blockquote
+<p<a href="#_Module_7:_Launching"Launching Your FirstApplication</a</p
+</blockquote</td
+<td<p<a href="#_7.1_Introduction"7.1 Introduction</a</p
+<p<a href="#_Lecture_7.2_Deploy"7.2 Deploy Your Application</a</p
+<p<a href="#_Lecture_7.3_Test"7.3 Test Your Application</a</p
+<p<a href="#_Lecture_7.4_User"7.4 User acceptance testing</a</p
+<p<a href="#_Lecture_7.5_Launch"7.5 Launch &amp; Promote YourApplication</a</p
+<p<a href="#_Lecture_7.6_After"7.6 After the launch</a</p
+<p<a href="#_Lecture_7.7_Maintain"7.7 Maintain and upgrade yourapplications</a</p
+<p<a href="#_Lecture_7.8_Summary"7.8 Summary</a</p</td
+</tr
+<tr class="even"
+<td<blockquote
+<p<a href="#_Module_8:_Conclusion"Conclusion</a</p
+</blockquote</td
+<td<p<a href="#_Lecture_8.1_Summary"8.1 Summary</a</p
+<p<a href="#_Lecture_8.2_Next"8.2 Next Steps</a</p
+<p<a href="#_Lecture_8.3_Survey"8.3 Survey</a </p</td
+</tr
+</tbody
+</table
+
+# Main Learning Path Content
+## General Learning Path information (main tile):
 
 Unlock the full potential of the Mendix platform and accelerate yourapplication development journey in your organization.
 
-This guide covers everything you need to know to get startedwith Mendix in your company. This guide is meant for anyone who is incharge of managing the entire Mendix program in an organization. Itwill take you through defining your low code vision, definingcompany-wide settings as well as kicking off what will become thefirst app you will launch. Follow these steps to unlock the fullpotential of the Mendix platform and accelerate your journey into thedigital execution practice.
+## Main learning path information (after you click “view path”):
+
+This learning path covers everything you need to know to get startedwith Mendix in your company. This guide is meant for anyone who is incharge of managing the entire Mendix program in an organization. Itwill take you through defining your low code vision, definingcompany-wide settings as well as kicking off what will become thefirst app you will launch. Follow these steps to unlock the fullpotential of the Mendix platform and accelerate your journey into thedigital execution practice.
 
 # Module 1: Introduction
 ## Module introduction (modules list): 
 
-In this module, you will find guide objectives, the intendedaudience, and learn how to best use this guide.
+In this module, you will find learning path objectives, the intendedaudience, and learn how to best use this learning path.
 
-## Lecture 1.1 Welcome (what you will learn in this guide)
+## Lecture 1.1 Welcome (what you will learn in this learning path)
 
 Welcome to Mendix, the leading low-code application developmentplatform that empowers you to turn your ideas into outcomes quicklyand efficiently! 
 
-The “Lead Mendix Implementation in Your Organization*”* guideis designed to help you navigate through the initial steps of gettingstarted with Mendix in your company. Follow these steps to unlock thefull potential of the Mendix platform and accelerate your applicationdevelopment journey.
+The “Lead Mendix Implementation in Your Organization*”* learning pathis designed to help you navigate through the initial steps of gettingstarted with Mendix in your company. Follow these steps to unlock thefull potential of the Mendix platform and accelerate your applicationdevelopment journey.
 
-By the end of this guide, you’ll be able to: 
+By the end of this learning path, you’ll be able to: 
 
 * Describe the various elements of the Mendix platform
 * Explain the 5 P’s of the Digital Execution Practice and how they areimperative to low-code success
@@ -34,12 +190,12 @@ By the end of this guide, you’ll be able to: 
 * Prepare your first project and onboard your first project team
 * Launch your first application
 ## Lecture 1.2 Who This Guide Is For, How to Use It, and for How Long
-This guide is tailored for organizations new to Mendix,
+This learning path is tailored for organizations new to Mendix,
 especially for leaders responsible for implementing Mendix in theircompany. It is designed to help you navigate your Mendix journey fromstarting up until your first application is launched. It also reflectsthe most common steps in that journey and is a collection of resourcesyou can use to ensure success on each of these steps.
 
-We will not talk about technical setup here, but will guide youthrough managing the organizational change along with all the initialdecisions you will need to make to ensure success. Think of thisguide as your guide to getting started with Mendix at yourcompany and if you are (a part of the team) in charge of making that asuccess, then this is the perfect starting point for you.
+We will not talk about technical setup here, but will guide youthrough managing the organizational change along with all the initialdecisions you will need to make to ensure success. Think of thislearning path as your guide to getting started with Mendix at yourcompany and if you are (a part of the team) in charge of making that asuccess, then this is the perfect starting point for you.
 
-The content in this guide can be covered in a few hours, butit was designed as more of a guide versus a course, so you will likelycome back to it as you are working towards getting that first applive. Our most successful customers tend to do that within 4-5 months,
+The content in this learning path can be covered in a few hours, butit was designed as more of a guide versus a course, so you will likelycome back to it as you are working towards getting that first applive. Our most successful customers tend to do that within 4-5 months,
 but the time frame heavily depends on your organization, the choice ofthat first app, and many other factors that will also influence howlong you might find the content in this guide useful.
 
 ## Lecture 1.3 Questions and Feedback
@@ -48,7 +204,7 @@ but the time frame heavily depends on your organization, the choice ofthat first
 * Reach out to your Mendix team:
 
 They are always willing to answer questions, help you make decisions,
-and provide extra information. But even if you don’t have a dedicatedCSM, we have provided extra resources throughout this guidethat should help you out.
+and provide extra information. But even if you don’t have a dedicatedCSM, we have provided extra resources throughout this learning paththat should help you out.
 
 * Ask the Community in our [Digital Execution Practicespace](https://community.mendix.com/link/space/digital-execution-community):
 
@@ -73,12 +229,12 @@ contact our [SupportTeam](https://support.mendix.com/hc/en-us), and they will do
 
 * Feedback Widget:
 
-On every page of the guide, you will see a Feedback button onthe right side. Got any specific feedback on this guide?
+On every page of the learning path, you will see a Feedback button onthe right side. Got any specific feedback on this learning path?
 Submit your input and the snapshot on the item in question by clickingon the Feedback button!
 
 * Fill out the Survey:
 
-At the end of each guide, you will be asked to fill in asurvey. Please tell us what you think. Your opinion will help us tokeep improving!
+At the end of each learning path, you will be asked to fill in asurvey. Please tell us what you think. Your opinion will help us tokeep improving!
 
 # Module 2: Get Familiar With the 5 P’s of the Digital Execution Practice
 ## Module introduction (module title): 
@@ -302,7 +458,7 @@ Similar to your deployment strategy, you also want to beginconsidering what your
 We’ve all heard the saying, “If a tree falls in the forest but no oneis around to hear it, does it make any sound?” Similarly, if you areexcellent at the core components of digital transformation but don’tcommunicate it to anyone, does it really have an impact? That is wherepromotion comes into play. Without promotion, success can gounnoticed, and the value of your efforts may not be recognized.
 Promotion tends to be a challenge for many IT organizations, in partbecause IT teams do not often have professional marketers. Evenwithout a marketing team behind you, here are five ways you can betterpromote the value of low-code within your organization. 
 
-***Shaping and communicating your low-code vision:** *We’ll help yousolidify your low-code vision later in this guide, but onceyou have it, don’t let it live on a shelf or in the cloud — allow itto evolve with input from your organization. Communicate your visionin cross-functional meetings and ask for support in gettingorganizational leadership to embed the vision into their message aswell. 
+***Shaping and communicating your low-code vision:** *We’ll help yousolidify your low-code vision later in this learning path, but onceyou have it, don’t let it live on a shelf or in the cloud — allow itto evolve with input from your organization. Communicate your visionin cross-functional meetings and ask for support in gettingorganizational leadership to embed the vision into their message aswell. 
 
 ***Stakeholder management:*** Involve stakeholders early and often tobuild enthusiasm for digital transformation success. Start by bringingcross-functional partners on board who you already have strongrelationships with, and work together to identify the problems youwant to solve. By building a plan together you can help ensure yourinitiatives will get support. 
 
@@ -325,7 +481,7 @@ to learn the steps of successful digital execution and the meaningof rapid appli
 
 <!-- --
 
-* In the Agile Awareness guide, you can read more about the[Digital ExecutionStages](https://academy.mendix.com/link/modules/389/lectures/3133/2.2-Digital-Execution-Stages:-Start,-Structure,-Scale)
+* In the Agile Awareness learning path, you can read more about the[Digital ExecutionStages](https://academy.mendix.com/link/modules/389/lectures/3133/2.2-Digital-Execution-Stages:-Start,-Structure,-Scale)
 as well as the [core tenets of digitalexecution](https://academy.mendix.com/link/modules/389/lectures/3135/2.4-People,-Portfolio,-Process,-and-Platform-(4-P’s)).
 
 <!-- --
@@ -527,7 +683,7 @@ You should have already created your portfolio in lecture 2.5, if youhaven’t y
 If you have done a portfolio workshop already and maybe have your listof initiatives in an Excel file, you can easily import them. If not,
 just create a few cards that represent your ideas. Your Mendix teamcan also help you with this, so please do not hesitate to reach out tothem to go over everything together.
 
-Portfolio management is a key activity that ensures you are alwayscreating solutions that bring the most value to your organization (andsince we’re talking Mendix here, this is where you also decide ifMendix is the right tool for each one of the ideas). This means thatyou (maybe together with your stakeholders) need to go over your mainportfolio, keep initiatives up to date and adjust or reprioritize ifneeded. You can learn a lot more about this process in the dedicatedguide . For now, the most important thing is to list theinitiatives that are top of mind for you and use that input to choosethe ideal first app. 
+Portfolio management is a key activity that ensures you are alwayscreating solutions that bring the most value to your organization (andsince we’re talking Mendix here, this is where you also decide ifMendix is the right tool for each one of the ideas). This means thatyou (maybe together with your stakeholders) need to go over your mainportfolio, keep initiatives up to date and adjust or reprioritize ifneeded. You can learn a lot more about this process in the dedicatedlearning path . For now, the most important thing is to list theinitiatives that are top of mind for you and use that input to choosethe ideal first app. 
 
 So, let’s add your initiatives. Click the *Create Initiative* buttonon the top right and start jotting down your ideas.
 
@@ -873,7 +1029,7 @@ style="width:6.5in;height:3.6519in" /
 ## Lecture 4.3 Arrange Academy Training for Your Team
 As you begin to map out your Mendix team, it's important to establisha training plan. Properly training your Mendix team helps accelerateyour time to first value and promotes long-term low-code success. Ithelps each team member take charge of their own success and theoverall team’s success.
 
-Take the time to familiarize yourself with the [MendixAcademy](https://academy.mendix.com/link/home). Here, we provide avariety of guides and individual courses for various roles anddiverse backgrounds to allow you to customize the learning journeyappropriate for each team member and role. Once you are familiar withthe various guides, diverse topics and individual courses,
+Take the time to familiarize yourself with the [MendixAcademy](https://academy.mendix.com/link/home). Here, we provide avariety of learning paths and individual courses for various roles anddiverse backgrounds to allow you to customize the learning journeyappropriate for each team member and role. Once you are familiar withthe various learning paths, diverse topics and individual courses,
 create a training plan with each team member based on their role andexperience. 
 
 Here is a sample you can use as a template:
@@ -1234,7 +1390,7 @@ By the end of this module, you will be able to: 
 ### Deploy your application to the Mendix Cloud
 Deploying your application to the Mendix Cloud is a simple process,
 that will give you access to all the features and services in theMendix Cloud. It requires only a few steps to set it up, which youonly need to do once for each application. Once the cloud settings ofyour application is done, you can deploy and redeploy your applicationwith just one click.  
-
+  
 Note that Mendix also offers [other deploymentoptions](/releasenotes/developer-portal/deployment/)
 than the Mendix cloud e.g. to a private cloud if that’s a requirement.
 
@@ -1377,7 +1533,7 @@ Your first application is launched, and you now know all abouttesting, launching
 # Module 8: Conclusion
 ## Conclusion introduction (module tile): 
 
-This module provides an overview of what you’ve learned in thisguide.
+This module provides an overview of what you’ve learned in thislearning path.
 
 ## Lecture 8.1 Summary
 Congratulations, you’ve made it to the end of this journey, and yourfirst Mendix application has been launched! You’ve learned a lot alongthe way. The resources you’ve explored will also be very helpfulduring the next phases of your journey. You’ve made a great start andare ready to keep a successful journey going with Mendix. 
@@ -1388,7 +1544,7 @@ An exiting Mendix journey has just begun, and we hope this guide was auseful too
 
 ## Lecture 8.2 Survey
 We strive to make our learning material live up to your expectations.
-For that reason, we would appreciate your feedback. Please take thisquick survey to let us know what you think about this guide.
+For that reason, we would appreciate your feedback. Please take thisquick survey to let us know what you think about this learning path.
 
 We respect your privacy. Your feedback is anonymous. We do not use anyinformation from the survey to identify the user.
 

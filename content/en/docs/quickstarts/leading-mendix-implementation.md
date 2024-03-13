@@ -42,36 +42,36 @@ The content in this guide can be covered in a few hours, but it was designed as 
 
 * Reach out to your Mendix team:
 
-They are always willing to answer questions, help you make decisions, and provide extra information. But even if you don’t have a dedicated CSM, we have provided extra resources throughout this guide that should help you out.
+  They are always willing to answer questions, help you make decisions, and provide extra information. But even if you don’t have a dedicated CSM, we have provided extra resources throughout this guide that should help you out.
 
 * Ask the Community in our [Digital Execution Practice space](https://community.mendix.com/link/space/digital-execution-community):
 
-This is a part of the Mendix Community that is specifically dedicated to helping others succeed with their digital execution practice. Feel free to ask questions there, and our own Mendix experts, as well as other companies using Mendix who have been down the same road you are starting now, will share their experience. If you haven’t already joined, you can do that with one click [here](https://community.mendix.com/link/invitation/space/Digital-Execution-Community/0438b34d-3432-44c1-ac85-d5bc940116e9).
+  This is a part of the Mendix Community that is specifically dedicated to helping others succeed with their digital execution practice. Feel free to ask questions there, and our own Mendix experts, as well as other companies using Mendix who have been down the same road you are starting now, will share their experience. If you haven’t already joined, you can do that with one click [here](https://community.mendix.com/link/invitation/space/Digital-Execution-Community/0438b34d-3432-44c1-ac85-d5bc940116e9).
 
 **Having trouble with something (more) technical?**
 
 * Check out the [Mendix Documentation](/):
 
-Sometimes the right information is just a click away in a document.
+  Sometimes the right information is just a click away in a document.
 
 * Contact the Mendix Community:
 
-The [Mendix Forum](https://forum.mendixcloud.com/link/questions)is where you can find help when you get **stuck.** You can also help others when you know the answer! Be sure to first check whether someone has already asked the question you're wondering about. If not, feel free to post it and our community will help you out! If you didn’t already know, you can gain **points** when you do so!
+  The [Mendix Forum](https://forum.mendixcloud.com/link/questions) is where you can find help when you get **stuck.** You can also help others when you know the answer! Be sure to first check whether someone has already asked the question you're wondering about. If not, feel free to post it and our community will help you out! If you didn’t already know, you can gain **points** when you do so!
 
 * Submit a Support ticket:
 
-If something really appears to be broken from a technical point of view (for example, you can’t even visit or edit your app anymore), contact our [Support Team](https://support.mendix.com/hc/en-us), and they will do their absolute best to help you out.
+  If something really appears to be broken from a technical point of view (for example, you can’t even visit or edit your app anymore), contact our [Support Team](https://support.mendix.com/hc/en-us), and they will do their absolute best to help you out.
 
 **Have some feedback?**
 
 * Feedback Widget:
 
-On every page of the guide, you will see a Feedback button on the right side. Got any specific feedback on this guide?
-Submit your input and the snapshot on the item in question by clicking on the Feedback button!
+  On every page of the guide, you will see a Feedback button on the right side. Got any specific feedback on this guide?
+  Submit your input and the snapshot on the item in question by clicking on the Feedback button!
 
 * Fill out the Survey:
 
-At the end of each guide, you will be asked to fill in a survey. Please tell us what you think. Your opinion will help us to keep improving!
+  At the end of each guide, you will be asked to fill in a survey. Please tell us what you think. Your opinion will help us to keep improving!
 
 ## Module 2: Get Familiar With the 5 P’s of the Digital Execution Practice 
 ### Module introduction (module title): 

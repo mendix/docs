@@ -34,12 +34,12 @@ together with Evaluation Guide. 
 9.  Deadline: **2th February 2024**
 
 ## Content overview 
-<img src="./markdown/media/image1.png"
+ {{< figure src="image/path" class="image-border"  >}}image1.png"
 style="width:0.22222in;height:0.22222in" alt="check mark button" /→
 Ready for review and iteration 
-<img src="./markdown/media/image2.png"
+ {{< figure src="image/path" class="image-border"  >}}image2.png"
 style="width:0.22222in;height:0.22222in" alt="writing hand" /→ We have base content, to be written 
-<img src="./markdown/media/image3.png"
+ {{< figure src="image/path" class="image-border"  >}}image3.png"
 style="width:0.22222in;height:0.22222in" alt="person raising hand" /
 → Need help from an SME 
 <table
@@ -337,7 +337,7 @@ Your talent has been trained and activated in such a way that you can shift them
 Sounds great, right? But how do you get there? Step by step. There are five major areas you will need to focus on. We call these the **5 P’s of Digital Transformation** and aligning the P’s (Portfolio, People,
 Process, Platform, and Promotion) to your organization's digital strategy is crucial to your Mendix success. Let’s go over them one by one.
 
-<img src="./markdown/media/image4.png"
+ {{< figure src="image/path" class="image-border"  >}}image4.png"
 style="width:6.5in;height:3.53438in" /
 
 ## 2.3.1 Portfolio: Choosing a Use Case That Is Equally Meaningful and Doable 
@@ -349,7 +349,7 @@ Proving the value of a program—whether it’s through software that allows you
 
 And guess what? We have a tool to help you with that. Mendix Portfolio Management gives you a way to identify, track, and plan out your initiatives. So, let's get started by creating your Portfolio board [<uhere</u](https://portfolio.mendix.com/index.html). All you need to do is click on *Get Started* and then *Create your first Portfolio*. 
 
-<img src="./markdown/media/image5.png"
+ {{< figure src="image/path" class="image-border"  >}}image5.png"
 style="width:6.5in;height:3.15859in" /
 
 If you would like to learn more about how to manage your portfolio of ideas and applications, . You might also have done a portfolio workshop with Mendix experts before, in which case, you may already have an Excel file with your list of initiatives that you can easily import into your brand new board. If not, we discuss your first app selection in more detail in Module 3.
@@ -360,9 +360,7 @@ The people you choose for your teams are absolutely crucial to the success of yo
 
 A strong first Mendix team is more than just the number of people in the room. Your first Mendix team should include a core development team comprised of a combination of a professional developer — someone with technical expertise — and a business developer — someone familiar with the platform that can act as a power user if needed. The key is to have developers who can collaborate closely with end users,
 bridging the gap between business needs and technical possibilities.
-In the beginning, it’s highly likely that not all these people will come from your own organization (we will further review the options in Lecture 3.7), but this is an overview of all the higher level roles you will need sooner or later.
-
-The following leadership roles are essential to the success of any new platform or paradigm:
+In the beginning, it’s highly likely that not all these people will come from your own organization (we will further review the options in Lecture 3.7), but this is an overview of all the higher level roles you will need sooner or later.The following leadership roles are essential to the success of any new platform or paradigm:
 
 * **Executive Sponsors:** Success starts at the top, where senior executive buy-in is a must. These are the top-level executives,
 ideally representing both the Business/Operations and IT, who are willing to be engaged periodically to provide oversight and steering-committee level guidance. These people won’t necessarily be involved day-to-day, but they understand the big picture vision of how Mendix will help the enterprise achieve its digital transformation and low-code goals, how it fits to ‘play nicely’ with other technology stacks and tools like Microsoft’s ADO or Power Apps, and what the transformational value is expected. Your Mendix team can work with these individuals to help understand, define, and refine their role, the value proposition for high ROI, etc.
@@ -444,7 +442,7 @@ High-level positioning is about knowing how and where Mendix fits in with the re
 
 The Start stage is an excellent time to start exploring your cloud options, and use this knowledge as input for strategic choices in the future. You’re most likely going to deploy your application on the Mendix Cloud because it’s the most optimized cloud to run Mendix-built applications. Built on top of Cloud Foundry and AWS, the Mendix Cloud is the deployment solution in which Mendix provides hosting environments for you. It’s available globally and comes standard with deep insights, alerting capabilities, high availability options, and backups. 
 
-<img src="./markdown/media/image6.png"
+ {{< figure src="image/path" class="image-border"  >}}image6.png"
 style="width:6.5in;height:1.64544in" /
 
 But as you expand your portfolio and move from Start to Structure, you will need to consider other deployment options and moving to a multi-cloud environment. Understanding the cloud environments to which you’ll deploy—for example, the security features and how they fit into your existing security framework—will help inform how you move to Structure. 
@@ -659,10 +657,10 @@ The final step of your getting started plan involves capturing your 5
 P milestones and building a timeline. Below are some examples that we use frequently with Mendix customers that you can take and make your own: Add details, and overlay dates appropriate for your organization,
 etc. Work independently or work with your customer success manager to think through what this might look like for you.
 
-<img src="./markdown/media/image7.png"
+ {{< figure src="image/path" class="image-border"  >}}image7.png"
 style="width:6.5in;height:3.48958in" /
 
-<img src="./markdown/media/image8.png"
+ {{< figure src="image/path" class="image-border"  >}}image8.png"
 style="width:6.51042in;height:3.66211in" /
 
 ## Lecture 3.3 Start Your Mendix Portfolio 
@@ -673,7 +671,7 @@ across every department. At this level, program owners or managers empower colla
 
 Portfolio Management starts at the company level, where strategy is defined. The company strategy leads to a Portfolio Vision, which is translated into a backlog and budget for all initiatives. 
 
-<img src="./markdown/media/image9.png"
+ {{< figure src="image/path" class="image-border"  >}}image9.png"
 style="width:6.5in;height:3.45677in" /
 
 To start, think about the big picture: What is your organization striving to achieve? Jot down a few ideas that can help you get there.
@@ -688,7 +686,7 @@ Portfolio management is a key activity that ensures you are always creating solu
 
 So, let’s add your initiatives. Click the *Create Initiative* button on the top right and start jotting down your ideas.
 
-<img src="./markdown/media/image10.png"
+ {{< figure src="image/path" class="image-border"  >}}image10.png"
 style="width:6.5in;height:3.00117in" /
 
 ## Lecture 3.4 Finalize First Application Selection 
@@ -729,7 +727,7 @@ Using the complexity matrix is a great way to assess the right projects for your
 **Exposure** is the amount of usage or availability an application has. **Complexity** can be defined as how technically complex the application is; i.e., how many integrations does the application require? You want to start on the left-hand side of the quadrant,
 which represents your team learning and feeling comfortable with the new way of working. 
 
-<img src="./markdown/media/image11.png"
+ {{< figure src="image/path" class="image-border"  >}}image11.png"
 style="width:6.5in;height:6.57431in"
 alt="A white grid with black text Description automatically generated" /
 
@@ -849,7 +847,7 @@ By thoroughly defining the application’s purpose and value, you provide a clea
 
 You can also try filling in a template such as this one (you can find this template attached in the Resources box at the top of this page):
 
-<img src="./markdown/media/image12.png"
+ {{< figure src="image/path" class="image-border"  >}}image12.png"
 style="width:6.5in;height:3.37695in" /
 
 ## Lecture 3.6  Set up Deployment Architecture and Resources 
@@ -888,7 +886,7 @@ For Private deployment , **please be ready to start that process immediately in 
 
 See below for Private Cloud responsibility matrix:
 
-<img src="./markdown/media/image13.png"
+ {{< figure src="image/path" class="image-border"  >}}image13.png"
 style="width:6.5in;height:2.69648in" /
 
 ## Lecture 3.7 Review Options for Development Resources (Who Will Build Your First App?)
@@ -1020,7 +1018,7 @@ represent strategical, tactical, and operational levels of the business. 
 Your team does not have to fit this exact mold, but it is important that all the responsibilities outlined here are covered to ensure success in your low-code program. Here’s a typical team structure:
 
 
-<img src="./markdown/media/image14.png"
+ {{< figure src="image/path" class="image-border"  >}}image14.png"
 style="width:6.5in;height:3.6519in" /
 
 **Additional Resources**
@@ -1037,7 +1035,7 @@ create a training plan with each team member based on their role and experience.
 
 Here is a sample you can use as a template:
 
-<img src="./markdown/media/image15.png"
+ {{< figure src="image/path" class="image-border"  >}}image15.png"
 style="width:6.5in;height:3.6519in" /
 
 This will vary based on the specific people taking each role. A Scrum Master who used to be a full-stack developer could take the *Crash Course* instead of the *Become a Rapid Developer* course. Your EA may need to add *Native Mobile* or *Configure Advanced Security* for your particular organization, project and team needs. Your Mendix team is happy to help create your training plan.
@@ -1046,7 +1044,7 @@ This will vary based on the specific people taking each role. A Scrum Master who
 
 Mendix provides four different certification levels to measure developer maturity, each with an increasing level of required skill and experience:
 
-<img src="./markdown/media/image16.png"
+ {{< figure src="image/path" class="image-border"  >}}image16.png"
 style="width:6.5in;height:1.44219in" /
 
 **Rapid Developer Certification**
@@ -1141,7 +1139,7 @@ Knowing the broad strokes capabilities of the Mendix platform early on helps in 
 
 When you start, the governance responsibility will probably be in the hands of your Mendix admin, but as your Mendix landscape grows you may want to define a Center of Excellence. Admins can use Control Center,
 a dashboard that gives you an overview of various company activities on the Mendix platform, to manage many of the aspects of landscape governance.  
-<img src="./markdown/media/image17.png"
+ {{< figure src="image/path" class="image-border"  >}}image17.png"
 style="width:6.25in;height:3.33333in" /
 
 There are several advanced capabilities in the Control Center to help you manage your app landscape as it grows.
@@ -1169,7 +1167,7 @@ New capabilities are released regularly, so exploring Control Center regularly i
 
 But as you can tell from the slide below, governance touches many aspects of the development cycle and it’s not just confined to control center.
 
-<img src="./markdown/media/image18.png"
+ {{< figure src="image/path" class="image-border"  >}}image18.png"
 style="width:6.36055in;height:3.28628in" /
 
 If you would like to learn more about our governance features, you can check out the [Control Center Guide,](https://docs.mendix.com/control-center/) [Control center learning path](https://academy.mendix.com/link/paths/116/Govern-and-Scale-your-App-Landscape-with-Mendix-Control-Center),
@@ -1180,9 +1178,9 @@ A lot of these options will become more relevant for you as you scale your Mendi
 ## Lecture 5.2 Configure the Platform in Control Center 
 The Mendix platform has a few options to tailor the platform to your specific governance needs. 
 
-**Claim additional email domains  **<img src="./markdown/media/image19.png"
+**Claim additional email domains  ** {{< figure src="image/path" class="image-border"  >}}image19.png"
 style="width:0.22222in;height:0.22222in" alt="direct hit" / 
-<img src="./markdown/media/image20.png"
+ {{< figure src="image/path" class="image-border"  >}}image20.png"
 style="width:5in;height:2.19792in" /
 
 If your company has more than one email domain, all your email domains should be claimed, such as: MyCompany.com, MyCompany.nl,
@@ -1192,7 +1190,7 @@ MyCompany-SpecialUnit.com etc. This is to ensure all users that do a signup with
 here.](https://docs.mendix.com/control-center/company-settings/#company-email-domains)
 
 **Assign a security contact**  
-<img src="./markdown/media/image21.png"
+ {{< figure src="image/path" class="image-border"  >}}image21.png"
 style="width:3.50864in;height:1.47929in" / 
 Provide a specific **Security Contact** who is informed if there are critical security issues with the Mendix platform and platform-supported Marketplace components. Mendix strongly recommends applying a team email address or a functional mailbox instead of a personal individual email address.
 
@@ -1202,16 +1200,16 @@ to get familiar with the process around security fixes.
 [Additional reading](https://docs.mendix.com/control-center/company-settings/#security-contact)
 
 **Define company brand and description**
-<img src="./markdown/media/image19.png"
+ {{< figure src="image/path" class="image-border"  >}}image19.png"
 style="width:0.22222in;height:0.22222in" alt="direct hit" / 
-<img src="./markdown/media/image22.png"
+ {{< figure src="image/path" class="image-border"  >}}image22.png"
 style="width:5in;height:3.63542in" / 
 On the **Company Brand** page, you can upload, edit, or remove a **Company Logo**. The company logo uploaded here will appear across the platform where it is used. For instance, it will be displayed on your published Marketplace content.
 
 [Additional reading](https://docs.mendix.com/control-center/company-brand/)
 
 **Setup IDP or SSO for access to the Mendix platform**
-<img src="./markdown/media/image23.png"
+ {{< figure src="image/path" class="image-border"  >}}image23.png"
 style="width:0.22222in;height:0.22222in" alt="direct hit" /
 
 It is recommended that you [<uset-up SSO</u](https://docs.mendix.com/control-center/security/set-up-sso-byoidp/)
@@ -1278,12 +1276,12 @@ You may take one of the following approaches:
 And now that everyone has a Mendix account, this is the moment you’ve all been waiting for — it’s time to actually create your first app!
 Anyone from your team can click the Create App button on the Mendix platform, just make sure they are logged in with an email address from your company domain.
 
-<img src="./markdown/media/image24.png"
+ {{< figure src="image/path" class="image-border"  >}}image24.png"
 style="width:6.5in;height:3.16367in" /
 
 Once the project is created, everyone from the team should get access to it as well as their appropriate role. This is the overview of the default project roles on the Mendix platform: 
 
-<img src="./markdown/media/image25.png"
+ {{< figure src="image/path" class="image-border"  >}}image25.png"
 style="width:6.5in;height:3.02148in" /
 
 ## Lecture 6.3 Setting up the Agile Way of Working 
@@ -1311,7 +1309,7 @@ create user stories, and of course sprints. Both the Agile and Kanban methods ar
 
 An organization that is familiar with the Agile way of working will likely already use related tools, such as JIRA. JIRA is often used for Scrum projects, which is why it is now possible to link JIRA to your Mendix Project. The Scrum Master of the project can choose between Epics or Jira in the Settings part of the project navigation, in the Project Management tab.
 
-<img src="./markdown/media/image26.png"
+ {{< figure src="image/path" class="image-border"  >}}image26.png"
 style="width:6.5in;height:5.54531in" /
 
 Make sure that the tool and process you choose supports close collaboration between the product owner, developers, users, and other stakeholders. The tool should enable clear visibility and tracing between user stories, implementation, feedback, and deployments. Team members unfamiliar with your chosen tool may also need additional training to maximize use of the tool.
@@ -1347,19 +1345,19 @@ Mendix partners or by the Mendix community.
 ## Lecture 6.6 Familiarize Yourself With Continuous Collaboration Through Mendix 
 One of the core values of the Mendix platform is continuous collaboration between business and IT. We have already shown you how that works in practice when it comes to aligning on wider strategic objectives (your low-code vision), program goals as well as your project goals. Now it’s time to see how it all works throughout the application development lifecycle. 
 
-<img src="./markdown/media/image27.png"
+ {{< figure src="image/path" class="image-border"  >}}image27.png"
 style="width:6.5in;height:3.65625in" /
 
 It all starts with your portfolio. You have already added a couple of initiatives in it, but now that you have the MVP scope of your first application, add it in as a separate initiative and describe or link to documentation showing what needs to be delivered exactly and why. 
 
 You also have your application, so now you can link it to the initiative. To do this, you just need to select *Edit initiative* and start typing your app name to select it from the dropdown.
 
-<img src="./markdown/media/image28.png"
+ {{< figure src="image/path" class="image-border"  >}}image28.png"
 style="width:6.5in;height:5.88743in" /
 
 If you are using Epics as your agile planning tool, you will be able to link the right epics to this initiative. This means that anyone who opens that initiative in Portfolio Management will be able to see development progress on the epic level.
 
-<img src="./markdown/media/image29.png"
+ {{< figure src="image/path" class="image-border"  >}}image29.png"
 style="width:6.5in;height:9.48723in" /
 
 Another important part of collaboration in the application development lifecycle is the collaboration between the development team and their end users. Mendix makes that super easy using the feedback module.

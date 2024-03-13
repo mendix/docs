@@ -133,9 +133,7 @@ Mendix is the platform that helps you turn ideas into outcomes. It contains all 
 ### Lecture 2.3 Introduction to Digital Execution Practice (DEP): the 3 S’s and the 5 P’s 
 **The 3 S’s of Digital Execution Practice: Start, Structure and Scale**
 
-Your journey to innovation will go through three major stages:
-**Start**, **Structure** and **Scale**. You are now in the **Start**
-stage, where the goal is to lay the foundations for your innovation factory. In Start, you want to develop applications that realize value quickly. The reason for this is two-fold:
+Your journey to innovation will go through three major stages: **Start**, **Structure** and **Scale**. You are now in the **Start** stage, where the goal is to lay the foundations for your innovation factory. In Start, you want to develop applications that realize value quickly. The reason for this is two-fold:
 
 1.  You’ll be spending a lot of time building a team and putting the necessary prerequisites in place in terms of infrastructure and process. Because of that... 
 
@@ -172,9 +170,8 @@ If you would like to learn more about how to manage your portfolio of ideas and 
 #### 2.3.2 People: Building a Strong Mendix Team 
 The people you choose for your teams are absolutely crucial to the success of your digital execution program. You want to find the right people with the right skills who are excited about and can commit time and energy to the program, no matter their job title. 
 
-
 A strong first Mendix team is more than just the number of people in the room. Your first Mendix team should include a core development team comprised of a combination of a professional developer — someone with technical expertise — and a business developer — someone familiar with the platform that can act as a power user if needed. The key is to have developers who can collaborate closely with end users, bridging the gap between business needs and technical possibilities.
-In the beginning, it’s highly likely that not all these people will come from your own organization (we will further review the options in Lecture 3.7), but this is an overview of all the higher level roles you will need sooner or later.The following leadership roles are essential to the success of any new platform or paradigm:
+In the beginning, it’s highly likely that not all these people will come from your own organization (we will further review the options in [Lecture 3.7](#3.7)), but this is an overview of all the higher level roles you will need sooner or later.The following leadership roles are essential to the success of any new platform or paradigm:
 
 * **Executive Sponsors:** Success starts at the top, where senior executive buy-in is a must. These are the top-level executives, ideally representing both the Business/Operations and IT, who are willing to be engaged periodically to provide oversight and steering-committee level guidance. These people won’t necessarily be involved day-to-day, but they understand the big picture vision of how Mendix will help the enterprise achieve its digital transformation and low-code goals, how it fits to ‘play nicely’ with other technology stacks and tools like Microsoft’s ADO or Power Apps, and what the transformational value is expected. Your Mendix team can work with these individuals to help understand, define, and refine their role, the value proposition for high ROI, etc.
 
@@ -258,7 +255,7 @@ Similar to your deployment strategy, you also want to begin considering what you
 We’ve all heard the saying, “If a tree falls in the forest but no one is around to hear it, does it make any sound?” Similarly, if you are excellent at the core components of digital transformation but don’t communicate it to anyone, does it really have an impact? That is where promotion comes into play. Without promotion, success can go unnoticed, and the value of your efforts may not be recognized.
 Promotion tends to be a challenge for many IT organizations, in part because IT teams do not often have professional marketers. Even without a marketing team behind you, here are five ways you can better promote the value of low-code within your organization. 
 
-***Shaping and communicating your low-code vision:** *We’ll help you solidify your low-code vision later in this guide, but once you have it, don’t let it live on a shelf or in the cloud — allow it to evolve with input from your organization. Communicate your vision in cross-functional meetings and ask for support in getting organizational leadership to embed the vision into their message as well. 
+**Shaping and communicating your low-code vision:** We’ll help you solidify your low-code vision later in this guide, but once you have it, don’t let it live on a shelf or in the cloud — allow it to evolve with input from your organization. Communicate your vision in cross-functional meetings and ask for support in getting organizational leadership to embed the vision into their message as well. 
 
 ***Stakeholder management:*** Involve stakeholders early and often to build enthusiasm for digital transformation success. Start by bringing cross-functional partners on board who you already have strong relationships with, and work together to identify the problems you want to solve. By building a plan together you can help ensure your initiatives will get support. 
 
@@ -282,24 +279,22 @@ Below you can find a collection of different resources to grow your knowledge re
 ### Lecture 2.4 Stay up to Date With Mendix 
 It’s important to know what’s happening with the Mendix Platform to be sure that you’re getting the most out of every capability.
 
-**DEP Space on Forum**
+* **DEP Space on Forum**
 
-[The DEP Space](https://forum.mendix.com/link/invitation/space/Digital-Execution-Community/0438b34d-3432-44c1-ac85-d5bc940116e9)
-on the Forum provides a unique opportunity to interact with other Mendix leaders. Ask questions from experienced Mendix team members or other customers about anything related to digital transformation.  
+  [The DEP Space](https://forum.mendix.com/link/invitation/space/Digital-Execution-Community/0438b34d-3432-44c1-ac85-d5bc940116e9)
+  on the Forum provides a unique opportunity to interact with other Mendix leaders. Ask questions from experienced Mendix team members or other customers about anything related to digital transformation.  
 
+* **Subscribe to platform news**
 
-**Subscribe to platform news**
+  [Subscribe to Platform Updates](https://status.mendix.com/) to keep up with all the changes happening with the Mendix platform and how it could affect your apps.
 
-[Subscribe to Platform Updates](https://status.mendix.com/) to keep up with all the changes happening with the Mendix platform and how it could affect your apps.
+* **Mx Forum**
 
+  [Join the Mendix Community](https://forum.mendix.com/p/questions) to connect with over 290,000 community members. The Forum is a great place for developers to ask questions and post ideas for our product managers. 
 
-**Mx Forum**
+* **Mx Blog**
 
-[Join the Mendix Community](https://forum.mendix.com/p/questions) to connect with over 290,000 community members. The Forum is a great place for developers to ask questions and post ideas for our product managers. 
-
-**Mx Blog**
-
-[Subscribe to our blog](https://www.mendix.com/blog/#blog__subscribe) and deep dive into our diverse library of articles and blog posts, where we discuss everything from Mendix best practices to industry trends.
+  [Subscribe to our blog](https://www.mendix.com/blog/#blog__subscribe) and deep dive into our diverse library of articles and blog posts, where we discuss everything from Mendix best practices to industry trends.
 
 We’ve got more steps to success coming your way.
 
@@ -663,7 +658,7 @@ See below for Private Cloud responsibility matrix:
 {{< figure src="image/path" class="image-border"  >}}image13.png"
 style="width:6.5in;height:2.69648in" /
 
-### Lecture 3.7 Review Options for Development Resources (Who Will Build Your First App?)
+### Lecture 3.7 Review Options for Development Resources (Who Will Build Your First App?) {#3.7}
 
 With Mendix, you have multiple options to choose from for the development of your applications:
 

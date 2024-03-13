@@ -52,9 +52,9 @@ Before starting this how-to, make sure you have the following prerequisites:
 
 To download and install the Mendix Service Console, follow these steps:
 
-1. Download the latest version of the Mendix Service Console from [Windows Service Console](https://marketplace.mendix.com/link/component/223425) module of the Marketplace.
+1. Download the latest version of the [Windows Service Console](https://marketplace.mendix.com/link/component/223425) module from the Marketplace.
 
-    {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/MendixServiceConsole_Download.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/service_console_download.png" >}}
 
 2. Install the Mendix Service Console by following the installation wizard.
 
@@ -98,9 +98,9 @@ To deploy a Mendix app using the Mendix Service Console, follow these steps:
 
     {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/18580728.png" >}}
 
-5. On the **Project Files** screen, click **Select app...**.
+5. On the **Project Files** screen, click **Select app…**.
 
-    {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/MendixServiceConsole_SelectApp.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/service_console_selectapp.png" >}}
 
 6. Now select the **MDA** file that was [created in Studio Pro](/refguide/create-deployment-package-dialog/) and contains your application logic. After the installation of your MDA file, you will see which Mendix server (Mendix Runtime) version is needed.
 

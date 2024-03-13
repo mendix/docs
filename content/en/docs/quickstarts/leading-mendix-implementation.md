@@ -212,7 +212,7 @@ This is a part of the Mendix Community that is specifically dedicated to helping
 
 **Having trouble with something (more) technical?**
 
-* Check out the [<uMendix Documentation</u](https://docs.mendix.com/):
+* Check out the [<uMendix Documentation</u](/):
 
 Sometimes the right information is just a click away in a document.
 
@@ -263,11 +263,11 @@ By the end of this module, you will: 
 ## Lecture 2.1 Assign Your Mendix Admin 
 First let’s get one admin (no pun intended) thing out of the way. Your company needs **at least one Admin**. It might make sense for the first admin to be you and then you can easily assign as many other admins as you need.
 
-So why do you need an admin? Your developers are able to create new apps, invite other users to their app teams, deploy apps, and invite app end-users to give feedback, among many other activities. Insights into these company activities are provided in [<uControl Center</u](https://controlcenter.mendix.com/index.html) in one central overview. You can read more about Control Center [<uhere</u](https://docs.mendix.com/control-center/) or follow this [<ulearning path. </u](https://academy.mendix.com/link/paths/116/Govern-and-Scale-your-App-Landscape-with-Mendix-Control-Center)
+So why do you need an admin? Your developers are able to create new apps, invite other users to their app teams, deploy apps, and invite app end-users to give feedback, among many other activities. Insights into these company activities are provided in [<uControl Center</u](https://controlcenter.mendix.com/index.html) in one central overview. You can read more about Control Center [<uhere</u](/control-center/) or follow this [<ulearning path. </u](https://academy.mendix.com/link/paths/116/Govern-and-Scale-your-App-Landscape-with-Mendix-Control-Center)
 
 Do you already have at least one admin? If that’s the case, you can see them on the list when you open [<uControl Center</u](https://controlcenter.mendix.com/index.html), and you can skip the rest of this lecture.
 
-A **Mendix Admin** will normally be someone in the IT department of your company, and they will have full access to Control Center, which will give them visibility and essential controls to make sure the apps deliver business value at acceptable cost and risk.  You can assign your first Mendix Admin through [<uMendix Support</u](https://support.mendix.com/hc/en-us/requests/new), just choose "Standard Change: Assign Mendix Admin" from the dropdown. This first admin can then [<uadd other admins</u](https://docs.mendix.com/control-center/company-settings/#3-mendix-admins). 
+A **Mendix Admin** will normally be someone in the IT department of your company, and they will have full access to Control Center, which will give them visibility and essential controls to make sure the apps deliver business value at acceptable cost and risk.  You can assign your first Mendix Admin through [<uMendix Support</u](https://support.mendix.com/hc/en-us/requests/new), just choose "Standard Change: Assign Mendix Admin" from the dropdown. This first admin can then [<uadd other admins</u](/control-center/company-settings/#3-mendix-admins). 
 
 ## Lecture 2.2 Get Familiar With Mendix 
 <https://videoshare.mendix.com/watch/AVffVf7KCVt7h1ioBvUQ1f
@@ -285,7 +285,7 @@ lecture in our Rapid Developer course</uoffers a short description of each of th
 
 
 
-* The <u[Developer Portal Guide](https://docs.mendix.com/developerportal/)</uwill help you explore the Developer Portal: the central location to collaborate,
+* The <u[Developer Portal Guide](/developerportal/)</uwill help you explore the Developer Portal: the central location to collaborate,
 deploy, and manage your Mendix apps.
 
 **Also, don’t forget to bookmark your “Favorites”! **
@@ -302,7 +302,7 @@ Online community
 [**Mendix Blog**](https://www.mendix.com/blog/)
 
 Articles and trending topics 
-[**Mendix Docs**](https://docs.mendix.com/)
+[**Mendix Docs**](/)
 
 Platform documentation 
 [**Mendix Partner Hub**](https://www.mendix.com/partners/)
@@ -867,7 +867,7 @@ If your organization is deploying on **Private Cloud or on-prem**,
 please **make sure that you are ready to take on the effort and responsibility of managing all hosting and support of the application deployments**.
 
 For a list of all the deployment options that are available, see:
-[<uhttps://docs.mendix.com/developerportal/deploy/</u](https://docs.mendix.com/developerportal/deploy/). 
+[<u/developerportal/deploy/</u](/developerportal/deploy/). 
 
 Some highlights to consider:
 
@@ -1144,23 +1144,23 @@ style="width:6.25in;height:3.33333in" /
 
 There are several advanced capabilities in the Control Center to help you manage your app landscape as it grows.
 
-* [Dashboard](https://docs.mendix.com/control-center/dashboard/)
+* [Dashboard](/control-center/dashboard/)
 provides insight into some KPIs of how your company is advancing.
 
-* [Apps](https://docs.mendix.com/control-center/apps/) provides easy visibility into all apps, environments, their deployment status,
+* [Apps](/control-center/apps/) provides easy visibility into all apps, environments, their deployment status,
 technical contact, version, and more.
 
-* [Health dashboard](https://docs.mendix.com/control-center/application-health-dashboard/)
+* [Health dashboard](/control-center/application-health-dashboard/)
 provides an insight into the running status of your app landscape.
 
-* [Entitlements](https://docs.mendix.com/control-center/entitlements/)
+* [Entitlements](/control-center/entitlements/)
 shows the resources you’ve bought and used.
 
-* You can add, resize or remove environments in the [Deployed apps](https://docs.mendix.com/control-center/deployed-apps/) view.
+* You can add, resize or remove environments in the [Deployed apps](/control-center/deployed-apps/) view.
 
-* Additional curation settings are available for [Marketplace](https://docs.mendix.com/control-center/private-marketplace/),
-[Portfolios](https://docs.mendix.com/control-center/portfolios/),
-and [Data Catalog](https://docs.mendix.com/control-center/catalog-admin/),
+* Additional curation settings are available for [Marketplace](/control-center/private-marketplace/),
+[Portfolios](/control-center/portfolios/),
+and [Data Catalog](/control-center/catalog-admin/),
 which apply to all your developers.
 
 New capabilities are released regularly, so exploring Control Center regularly is always a good idea!
@@ -1170,7 +1170,7 @@ But as you can tell from the slide below, governance touches many aspects of the
  {{< figure src="image/path" class="image-border"  >}}image18.png"
 style="width:6.36055in;height:3.28628in" /
 
-If you would like to learn more about our governance features, you can check out the [Control Center Guide,](https://docs.mendix.com/control-center/) [Control center learning path](https://academy.mendix.com/link/paths/116/Govern-and-Scale-your-App-Landscape-with-Mendix-Control-Center),
+If you would like to learn more about our governance features, you can check out the [Control Center Guide,](/control-center/) [Control center learning path](https://academy.mendix.com/link/paths/116/Govern-and-Scale-your-App-Landscape-with-Mendix-Control-Center),
 or the Mendix documentation. You probably already involved your subject matter experts while you were evaluating Mendix, so they might want to do a deeper dive.
 
 A lot of these options will become more relevant for you as you scale your Mendix portfolio, so for now, we will just point to a couple of key settings that are important for getting started and launching your first app.
@@ -1187,17 +1187,17 @@ If your company has more than one email domain, all your email domains should b
 MyCompany-SpecialUnit.com etc. This is to ensure all users that do a signup with an email address on any of these domains all end-up in the same ‘company’ on the Mendix platform. If you don’t do this from the start, your users may create projects in different ‘companies’/tenants on the Mendix platform, which is hard to govern and may require cumbersome merging activities later.
 
 [You can read more about that,
-here.](https://docs.mendix.com/control-center/company-settings/#company-email-domains)
+here.](/control-center/company-settings/#company-email-domains)
 
 **Assign a security contact**  
  {{< figure src="image/path" class="image-border"  >}}image21.png"
 style="width:3.50864in;height:1.47929in" / 
 Provide a specific **Security Contact** who is informed if there are critical security issues with the Mendix platform and platform-supported Marketplace components. Mendix strongly recommends applying a team email address or a functional mailbox instead of a personal individual email address.
 
-Your security contact person(s) may want to subscribe the [<uMendix Security Advisories</u](https://docs.mendix.com/releasenotes/security-advisories/)
+Your security contact person(s) may want to subscribe the [<uMendix Security Advisories</u](/releasenotes/security-advisories/)
 to get familiar with the process around security fixes.
 
-[Additional reading](https://docs.mendix.com/control-center/company-settings/#security-contact)
+[Additional reading](/control-center/company-settings/#security-contact)
 
 **Define company brand and description**
  {{< figure src="image/path" class="image-border"  >}}image19.png"
@@ -1206,13 +1206,13 @@ style="width:0.22222in;height:0.22222in" alt="direct hit" /
 style="width:5in;height:3.63542in" / 
 On the **Company Brand** page, you can upload, edit, or remove a **Company Logo**. The company logo uploaded here will appear across the platform where it is used. For instance, it will be displayed on your published Marketplace content.
 
-[Additional reading](https://docs.mendix.com/control-center/company-brand/)
+[Additional reading](/control-center/company-brand/)
 
 **Setup IDP or SSO for access to the Mendix platform**
  {{< figure src="image/path" class="image-border"  >}}image23.png"
 style="width:0.22222in;height:0.22222in" alt="direct hit" /
 
-It is recommended that you [<uset-up SSO</u](https://docs.mendix.com/control-center/security/set-up-sso-byoidp/)
+It is recommended that you [<uset-up SSO</u](/control-center/security/set-up-sso-byoidp/)
 between the Mendix platform and your corporate IDP such as Microsoft Entra ID (f.k.a. Azure AD) or Okta.  This will put your IDP in control of how users are authenticated before they can access your content on the Mendix platform. Leavers (former employees) will not be able to login. Your platform users get the convenience of Single Sign-On,
 rather than yet-another-password. See also our [<uBYOIDP blog</u](https://www.mendix.com/blog/introducing-byoidp-bring-your-own-identity-provider/).
 
@@ -1332,9 +1332,9 @@ Here is a couple of topics to keep in mind:
 
 **End user login**
 
-Every app will need a way for your end users to get access to it. We advise to use the [<uOIDC SSO module</u](https://docs.mendix.com/appstore/modules/oidc/) for (B2E)
-apps you are developing. This is a sensible default as it is the easiest and most flexible approach for Single Sign-On and is supported by Microsoft’s Entra ID and most other IdPs.  As an alternative you may advise [<uSAML</u](https://docs.mendix.com/appstore/modules/saml/)
-(e.g. for regulated B2C-apps) or [<uLDAP</u](https://docs.mendix.com/appstore/modules/ldap/) for on-prem apps or the [<uForgot My Password</u](https://docs.mendix.com/appstore/modules/forgot-password/)
+Every app will need a way for your end users to get access to it. We advise to use the [<uOIDC SSO module</u](/appstore/modules/oidc/) for (B2E)
+apps you are developing. This is a sensible default as it is the easiest and most flexible approach for Single Sign-On and is supported by Microsoft’s Entra ID and most other IdPs.  As an alternative you may advise [<uSAML</u](/appstore/modules/saml/)
+(e.g. for regulated B2C-apps) or [<uLDAP</u](/appstore/modules/ldap/) for on-prem apps or the [<uForgot My Password</u](/appstore/modules/forgot-password/)
 module for non-SSO apps.
 
 **Familiarize with the Marketplace**
@@ -1391,22 +1391,22 @@ By the end of this module, you will be able to: 
 Deploying your application to the Mendix Cloud is a simple process,
 that will give you access to all the features and services in the Mendix Cloud. It requires only a few steps to set it up, which you only need to do once for each application. Once the cloud settings of your application is done, you can deploy and redeploy your application with just one click.  
   
-Note that Mendix also offers [other deployment options](https://docs.mendix.com/releasenotes/developer-portal/deployment/)
+Note that Mendix also offers [other deployment options](/releasenotes/developer-portal/deployment/)
 than the Mendix cloud e.g. to a private cloud if that’s a requirement.
 
 ### Obtain a licensed node 
-You can deploy your application for free on the Mendix Cloud. These [Free Apps have limitations](https://docs.mendix.com/developerportal/deploy/mendix-cloud-deploy/#free-app)
+You can deploy your application for free on the Mendix Cloud. These [Free Apps have limitations](/developerportal/deploy/mendix-cloud-deploy/#free-app)
 when it comes to run time, features and resources. You can publish Free Apps to test the Mendix platform, a specific feature of to quickly prototype an application to test an idea. Once you decide to take your application to the next-level and start serious development on it, you will need to obtain a licensed node, so this is something you will need to do before your launch.
 
 If you have an existing contract that allows for more licensed nodes,
-you can [request a new licensed node](https://docs.mendix.com/developerportal/deploy/licensing-apps/#31-obtaining-a-licensed-node).
+you can [request a new licensed node](/developerportal/deploy/licensing-apps/#31-obtaining-a-licensed-node).
 If you don’t have a contract, or if your contract doesn’t allow for more licensed nodes, contact your Customer Success Manager.
 
 ### Link your application to your licensed node 
-If you have a licensed node available, you can link your application to this licensed node. If your application was published as a Free App, you will have to unlink the application from the Free App environment first. This will delete all data on that Free App environment. So, before you unlink your Free App, [back up the data](https://docs.mendix.com/developerportal/deploy/licensing-apps/#backing-up)
+If you have a licensed node available, you can link your application to this licensed node. If your application was published as a Free App, you will have to unlink the application from the Free App environment first. This will delete all data on that Free App environment. So, before you unlink your Free App, [back up the data](/developerportal/deploy/licensing-apps/#backing-up)
 first, if you require it.
 
-If you have backed up your data, you can [unlink your application](https://docs.mendix.com/developerportal/deploy/licensing-apps/#unlink-free)
+If you have backed up your data, you can [unlink your application](/developerportal/deploy/licensing-apps/#unlink-free)
 from the Free App environment.
 
 When your app is unlinked from a Free App environment, you can link it to a licensed node. By linking it to a licensed node, you get access to all the features of the Mendix Cloud, such as one-click deployment from Studio Pro and our platform, log management, backups management and monitoring tools.
@@ -1414,7 +1414,7 @@ When your app is unlinked from a Free App environment, you can link it to a lice
 ### Set node permissions 
 Once you have linked your application to a licensed node, your team needs to determine what users can perform what actions on the node.
 Who can configure an environment, who can deploy to an environment,
-who has access to the logs of an environment, etc. All of that is controlled by [node permissions](https://docs.mendix.com/developerportal/deploy/node-permissions/).
+who has access to the logs of an environment, etc. All of that is controlled by [node permissions](/developerportal/deploy/node-permissions/).
 By default, only the Technical Contact of a node has permissions to perform any action on the licensed node. The Technical Contact can grant permissions to other members of the app team.
 
 Granting permissions to team members is dependent on your deployment strategy and process: do you have DevOps teams where the developers also deploy and monitor the apps? Or does your company have separate Ops teams, where the deployment is done by people other than the developers? You can set node permissions for each of the environments of your node, so you can grant developers to deploy the app to the Test environment, but restrict deployment permissions for the Production environment to a smaller team.
@@ -1424,23 +1424,23 @@ When the node permissions are set up, you can start configuring your cloud setti
 
 Things can you can customize for your applications in the Mendix Cloud include:
 
-* [Studio Pro deployment target](https://docs.mendix.com/developerportal/deploy/studio-deployment-settings/#2-selecting-the-target-environment)
+* [Studio Pro deployment target](/developerportal/deploy/studio-deployment-settings/#2-selecting-the-target-environment)
 
-* [Custom domains](https://docs.mendix.com/developerportal/deploy/custom-domains/)
+* [Custom domains](/developerportal/deploy/custom-domains/)
 
-* [HTTP headers](https://docs.mendix.com/howto/security/best-practices-security/#adding-http-header)
+* [HTTP headers](/howto/security/best-practices-security/#adding-http-header)
 
-* [Path-based access restrictions](https://docs.mendix.com/developerportal/deploy/access-restrictions/)
+* [Path-based access restrictions](/developerportal/deploy/access-restrictions/)
 
-* [Environment variables](https://docs.mendix.com/developerportal/deploy/environments-details/#custom-environment-variables)
+* [Environment variables](/developerportal/deploy/environments-details/#custom-environment-variables)
 
-* [Services](https://docs.mendix.com/developerportal/deploy/environments-details/#services),
-such as [the Event Broker service](https://docs.mendix.com/appstore/services/business-events/#mendix-event-broker)
+* [Services](/developerportal/deploy/environments-details/#services),
+such as [the Event Broker service](/appstore/services/business-events/#mendix-event-broker)
 
 ### Deploy your application 
 Once you have linked and configured your Mendix Cloud node, which you only have to do once, you can start deploying your application to the Mendix Cloud. It is recommended that you deploy any new version of your application to the Test or Acceptance environment of your application first for testing, before deploying it to the Production environment.
 
-There are multiple ways to deploy your application to the Mendix Cloud, so there is always a deployment flow that fits your needs. You (or your team) can get a complete overview of those [in this docs page](https://docs.mendix.com/developerportal/deploy/mendix-cloud-deploy/#deploy-app-mendix-cloud).
+There are multiple ways to deploy your application to the Mendix Cloud, so there is always a deployment flow that fits your needs. You (or your team) can get a complete overview of those [in this docs page](/developerportal/deploy/mendix-cloud-deploy/#deploy-app-mendix-cloud).
 
 ## Lecture 7.2 Test Your Application 
 Mendix has a module that allows developers to write and execute Unit Tests: the UnitTesting module in Marketplace. With the UnitTesting module, critical parts of the application can be tested.
@@ -1525,7 +1525,7 @@ After developing and publishing your first Mendix app, it's important to put pro
 
 Mendix supports three major versions at a time. For example, today Mendix supports major versions 8, 9, and 10. When the next version (11) is released, then version 8 will sunset, and versions 9, 10, and 11 will be supported.
 
-Learn more about [version details and release timelines](https://docs.mendix.com/releasenotes/studio-pro/lts-mts/#major-version).
+Learn more about [version details and release timelines](/releasenotes/studio-pro/lts-mts/#major-version).
 
 ## Lecture 7.7 Summary 
 Your first application is launched, and you now know all about testing, launching, and promoting your application as well as the importance of continuous improvement, maintenance and upgrades. It was a long journey, but you made it!  

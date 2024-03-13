@@ -8,13 +8,13 @@ tags: ["swagger", "swagger.json", "OpenAPI 2.0", "documentation", "paths", "oper
 
 ## 1 Introduction
 
-Every [published REST service](/refguide/published-rest-service/) is automatically documented. The system generates a *swagger.json* file that conforms to the [OpenAPI 2.0 specification](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/2.0.md) (formerly known as the "swagger specification"). This file can be [saved from Studio Pro](/refguide/published-rest-service/#export-openapi-documentation) or downloaded from */rest-doc/{location}/swagger.json*, where *{location}* is the location of the REST service, for instance *rest/myservice/v1*.
+Every [published REST service](/refguide/published-rest-service/) is automatically documented. The system generates a *swagger.json* file that conforms to the [OpenAPI 2.0 specification](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/2.0.md) (formerly known as the "swagger specification"). This file can be [saved from Studio Pro](/refguide/published-rest-service/#export-openapi-documentation) or downloaded from */rest-doc/{location}/swagger.json*, where *{location}* is the location of the REST service (for example, *rest/myservice/v1*).
 
 If you need to communicate with the service from another app, you can use the *swagger.json* file to generate an API in many different systems, including Microsoft Visual Studio, React, Angular, and Java. This makes it easy to communicate between your different apps.
 
-Many of the popular API tools support OpenAPI 2.0, including [SoapUI](https://www.soapui.org/), [Postman](https://www.getpostman.com/), and [Swagger UI](https://swagger.io/swagger-ui/) (for a longer list of supported tools, see [tools.openapis.org](https://tools.openapis.org/)). This means that you can easily test your published service from any of these tools.
+Many of the popular API tools support OpenAPI 2.0, including [SoapUI](https://www.soapui.org/), [Postman](https://www.getpostman.com/), and [Swagger UI](https://swagger.io/swagger-ui/) (for a longer list of supported tools, see [tools.openapis.org](https://tools.openapis.org/)). This means you can easily test your published service from any of these tools.
 
-A technical description is presented below of which parts of the *swagger.json* file are generated.
+A technical description is presented below, of which parts of the *swagger.json* file are generated.
 
 ## 2 Schema
 
@@ -48,6 +48,6 @@ Each operation generates an `Operation` object:
 | `tags` | The [name](/refguide/published-rest-resource/#name) of the resource. |
 | `summary` | The [public documentation summary](/refguide/published-rest-operation/#summary) of the operation. |
 | `description` | The [public documentation description](/refguide/published-rest-operation/#description) of the operation. |
-| `parameters` | The path and query parameters. For the POST, PUT, PATCH, and OPTIONS methods, there is also a body parameter. |
+| `parameters` | The path and query parameters. For the `POST`, `PUT`, `PATCH`, and `OPTIONS` methods, there is also a body parameter. |
 | `responses` | The OK response. If security is enabled, this is also the unauthorized response. |
 | `deprecated` | Set to true when the operation is marked as deprecated. |

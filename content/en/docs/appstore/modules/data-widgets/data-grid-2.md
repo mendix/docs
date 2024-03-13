@@ -448,7 +448,7 @@ The Data Grid 2 widget ships with built-in functionality to export data from the
 To export data from the data grid, create a new nanoflow that calls *Export_To_Excel*. The *Export_To_Excel* action has a set of inputs:
 
 * **Datagrid name** - the name of the data grid from which data should be exported (the name can be found and copied from the data grid's settings (**Properties** > **Common** > **Name**))
-* **File name** - the file name to use for the exported document
+* **File name** - the file name to use for the exported document (does not require an appended file extension)
 * **Sheet name** - the name to use for the Excel sheet of the exported document
 * **Include column names** - a Boolean expression that, if true, tells the action to include column captions as the first row in the exported document
 

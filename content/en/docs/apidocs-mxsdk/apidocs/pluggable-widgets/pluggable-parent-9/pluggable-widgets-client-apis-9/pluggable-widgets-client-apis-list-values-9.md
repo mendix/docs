@@ -403,8 +403,10 @@ In this code sample, checks of status `myDataSource` and availability of items a
 
 {{% alert color="info" %}}
 The `get` method was introduced in Mendix Studio Pro 9.0.
+{{% /alert %}}
 
-⚠ You can obtain an instance of `ActionValue` by using the `ListActionValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function.
+{{% alert color="warning" %}}
+You can obtain an instance of `ActionValue` by using the `ListActionValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function.
 {{% /alert %}}
 
 ### 3.2 ListAttributeValue {#listattributevalue}
@@ -454,8 +456,10 @@ Note: in this code sample checks of status of `myDataSource` and availability of
 
 {{% alert color="info" %}}
 The `get` method was introduced in Mendix Studio Pro 9.0.
+{{% /alert %}}
 
-⚠ You can obtain an instance of `EditableValue` by using the `ListAttributeValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function.
+{{% alert color="warning" %}}
+You can obtain an instance of `EditableValue` by using the `ListAttributeValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function.
 {{% /alert %}}
 
 #### 3.2.2 Attribute ID, Sortable and Filterable Flags {#listattributevalue-id-sortable-filterable}
@@ -581,8 +585,10 @@ When the `widgets` property is not required, there may not be any child widgets 
 
 {{% alert color="info" %}}
 The `get` method was introduced in Mendix Studio Pro 9.0.
+{{% /alert %}}
 
-⚠ You can obtain an instance of `ReactNode` by using the `ListWidgetValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function.
+{{% alert color="warning" %}}
+You can obtain an instance of `ReactNode` by using the `ListWidgetValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function.
 {{% /alert %}}
 
 ### 3.5 ListExpressionValue {#listexpressionvalue}
@@ -615,8 +621,10 @@ const expressionValue = this.props.myDataSource.myExpressionOnDatasource.get(thi
 
 {{% alert color="info" %}}
 The `get` method was introduced in Mendix Studio Pro 9.0.
+{{% /alert %}}
 
-⚠ You can obtain an instance of `DynamicValue` by using the `ListExpressionValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function.
+{{% alert color="warning" %}}
+You can obtain an instance of `DynamicValue` by using the `ListExpressionValue` as a function and calling it with an item. This is deprecated, will be removed in Mendix 10, and should be replaced by a call to the `get` function.
 {{% /alert %}}
 
 ## 4 Filter Helpers{#filter-helpers}

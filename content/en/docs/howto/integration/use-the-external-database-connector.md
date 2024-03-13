@@ -71,7 +71,7 @@ Once the connection is successful and saved, you can explore and search the **Ta
 
 4. Click **Run Query** to validate the query and view the response.
 
-For example, the query below retrieves a list of RequestedProductRequirement where the ProductLine is "Planes"
+For example, the query below retrieves a list of RequestedProductRequirement where the ProductLine is **Planes**.
 
 SQL Query:
 `Select requestedProductRequirement from productlines where productLine = {productLine}`

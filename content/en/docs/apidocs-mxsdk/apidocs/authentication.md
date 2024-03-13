@@ -3,7 +3,7 @@ title: "Authentication"
 url: /apidocs-mxsdk/apidocs/authentication/
 category: "API Documentation"
 description: "Describes how to retrieve and use authentication keys for Mendix APIs."
-weight: 5
+weight: 10
 tags: ["API", "API Key", "Authentication"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -14,7 +14,7 @@ Most Mendix Platform APIs require you to authenticate yourself. This is done by 
 
 ## 2 Obtaining API Keys
 
-To obtain a Mendix API key, follow the instructions in the [API Keys](/community-tools/mendix-profile/#profile-api-keys) section of Mendix Profile.
+To obtain a Mendix API key, follow the instructions in the [API Keys](/community-tools/mendix-profile/user-settings/#profile-api-keys) section of Mendix Profile.
 
 ## 3 Using Authentication Headers
 

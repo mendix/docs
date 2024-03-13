@@ -57,11 +57,11 @@ Please contact your Customer Success Manager or [Mendix Support](https://support
 
 ## 2 Finding Your Answers
 
-We expect that many questions and issues can be solved by reading the [Mendix Documentation](/) and by exploring the [Mendix Forum](https://forum.mendix.com/). If you cannot find the answer to your question in one of these locations, you can submit a question, incident, or change request to Mendix Support. We will act as the focal point for issues on Mendix Studio Pro, your applications, and the [Developer Portal](https://home.mendix.com/). We will forward the issue to the second- and third-line if necessary.
+We expect that many questions and issues can be solved by reading the [Mendix Documentation](/) and by exploring the [Mendix Community](https://community.mendix.com/). If you cannot find the answer to your question in one of these locations, you can submit a question, incident, or change request to Mendix Support. We will act as the focal point for issues on Mendix Studio Pro, your applications, and the [Developer Portal](https://home.mendix.com/). We will forward the issue to the second- and third-line if necessary.
 
 ### 2.1 Mendix Academy
 
-If you have questions about [Mendix Academy](https://academy.mendix.com/link/home) these will normally be handled by the Academy team.
+If you have questions about [Mendix Academy](https://academy.mendix.com/) these will normally be handled by the Academy team.
 
 You can contact Mendix Academy directly at [academy@mendix.com](mailto:academy@mendix.com). Mendix Academy may take 3-5 business days to reply to your inquiry.
 
@@ -69,9 +69,9 @@ If you have passed a Mendix certification, Mendix Academy will need 3-5 business
 
 ## 3 Feature Requests
 
-We would like to invite you to an important channel where you can provide feature requests to Mendix: the [Mendix Idea Forum](https://forum.mendix.com/link/ideas). Any customer can post a feature request that can be reviewed, expanded on, and voted on by other members of the Mendix community. Based on this feedback, every quarter we will determine which features have the most value according to our customers, and we will implement them.
+We would like to invite you to an important channel where you can provide feature requests to Mendix: the [Mendix Community](https://community.mendix.com/link/ideas). Any customer can post a feature request that can be reviewed, expanded on, and voted on by other members of the Mendix community. Based on this feedback, every quarter we will determine which features have the most value according to our customers, and we will implement them.
 
-For more details, see [Forum](/community-tools/mendix-forum/).
+For more details, see [Mendix Community](/community-tools/mendix-community/).
 
 ## 4 Accessing Mendix Support
 
@@ -123,7 +123,7 @@ With our Multi-Cloud strategy, Mendix allows the apps that you build to be deplo
 
 The full stack is depicted in the table below. This indicates which components are **Mendix** supported, or supported by a **Mendix Partner** or a third party. If no support is indicated, then you will need to arrange support of this component yourself. Each of the components is described in more detail in [Components of the Mendix Stack](#components), below.
 
-| Stack (see [below](#components) for more information) | Public Cloud | Cloud Dedi&shy;cated | Private Cloud - Con&shy;nected | Private Cloud - Stand&shy;alone | Private Mendix Platform | SAP BTP or Tencent | Cloud Foundry/ Docker & Kuber&shy;netes | Tradi&shy;tional³ |
+| Stack (see [below](#components) for more information) | Public Cloud | Cloud Dedi&shy;cated | Private Cloud - Con&shy;nected | Private Cloud - Stand&shy;alone | Private Mendix Platform | SAP BTP | Cloud Foundry/ Docker & Kuber&shy;netes | Tradi&shy;tional³ |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | **Appli&shy;cation** | | | | | | | | |
 | **Platform Support&shy;ed Marketplace content** | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix | Mendix |
@@ -137,7 +137,7 @@ The full stack is depicted in the table below. This indicates which components a
 | **Infra&shy;structure** | Mendix | Mendix | | | Certified Mendix Partner² | Mendix Partner¹ | | |
 | **Database/ File Storage/ Network** | Mendix | Mendix | | | Certified Mendix Partner² | Mendix Partner¹ | | |
 
-¹Support will go through [SAP Support](https://launchpad.support.sap.com/#/incident/create/prefilled/comp_name=XX-PART-MDX-RAD) or Tencent Support.
+¹Support will go through [SAP Support](https://launchpad.support.sap.com/#/incident/create/prefilled/comp_name=XX-PART-MDX-RAD).
 
 ²Support will go through Private Mendix Platform Certified Partners.
 
@@ -174,15 +174,7 @@ Mendix Support does not have access to app health, logs, graphs and monitoring �
 
 {{< figure src="/attachments/support/sap-cloud-platform.png"   width="40%"  >}}
 
-### 9.5 Tencent
-
-Mendix provides an integration with Tencent for customers in China.
-
-Mendix Support does not have access to app health, logs, graphs and monitoring – for support on these components, please contact **Tencent Support**. If you run into issues or want to ask a question on the supported components, please always provide relevant logs, data, and your own analysis that explains why you suspect the issue is caused by one of our supported components
-
-{{< figure src="/attachments/support/tencent.png"   width="40%"  >}}
-
-### 9.56 Cloud Foundry / Docker and Kubernetes / Traditional Architectures
+### 9.5 Cloud Foundry / Docker and Kubernetes / Traditional Architectures
 
 Mendix is compatible with all the well-known cloud providers: IBM Cloud, Microsoft Azure, Amazon Web Services (AWS), Red Hat OpenShift, and Google Cloud Platform.
 Depending on the Cloud architecture a Mendix application is built using the [Mendix Cloud Foundry buildpack](https://github.com/mendix/cf-mendix-buildpack), the [Mendix Docker Buildpack](https://github.com/mendix/docker-mendix-buildpack) or to a Unix-like or Windows server.

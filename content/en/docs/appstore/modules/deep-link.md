@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "deep link", "platform support"]
 ---
 
 {{% alert color="warning" %}}
-⚠ This module is deprecated from Studio Pro 10.6.0. It is replaced by [page URLs](/refguide/page-properties/#url) and [microflow URLs](/refguide/microflow/#url). For instructions on migrating to Page and Microflow URLs, see the [Migrating to Page and Microflow URLs](#migrate-page-micro) section below.
+This module is deprecated from Studio Pro 10.6.0. It is replaced by [page URLs](/refguide/page-properties/#url) and [microflow URLs](/refguide/microflow/#url). For instructions on migrating to Page and Microflow URLs, see the [Migrating to Page and Microflow URLs](#migrate-page-micro) section below.
 
 We will continue to actively support this module for Mendix 9.
 {{% /alert %}}
@@ -140,7 +140,7 @@ To view all the available deep link configurations and example URLs, add the **D
     * When the value is left empty, the default location is `login.html` (this file should be available in the theme folder).
     * When the login location ends with `=` (for example, in the case of Mendix SSO: `/openid/login?continuation=`), the original deep link location will be appended to the login location.
     * When using the module with a MindSphere app, use `/mindspherelogin.html?redirect_uri=` as a login location (MindSphere SSO v2.0 and higher is required).
-    * When using the [XSUAA](/appstore/connectors/sap/sap-xsuaa-connector/) module, set the value to `/xsauaalogin/login?ret=`.
+    * When using the [XSUAA](/appstore/modules/sap/sap-xsuaa-connector/) module, set the value to `/xsauaalogin/login?ret=`.
     * When using the [OIDC](/appstore/modules/oidc/) module, set the value to `/oauth/v2/login?cont=`. The DeepLink module does not have full support for multiple IdPs, so it can only trigger logins at one IdP. You can specify which IdP should be used by adding the alias (MyIdPAlias) to the LoginLocation: `/oauth/v2/login?idp={MyIdpAlias}&cont=`.
     * When using the [SAML](/appstore/modules/saml/) module, set the value to `/SSO/login?f=true&cont=` to redirect the user to the original deep link location after a successful login.
         * When using version 6.1.0 or higher of the Deep Link module, you should also set the **EnableLeadingSlash** constant to `false` to prevent the users from being redirected to an invalid deep link location.

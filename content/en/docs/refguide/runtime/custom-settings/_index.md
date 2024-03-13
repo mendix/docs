@@ -236,6 +236,12 @@ For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these
 | <a id="commendixstorageazureTimeoutIntervalInMs" href="#commendixstorageazureTimeoutIntervalInMs">com.<wbr>mendix.<wbr>storage.<wbr>azure.<wbr>TimeoutIntervalInMs</a> | Sets the amount of time (in milliseconds) to allow a call to the storage service to complete. For more information, see the [Azure libraries](https://azure.github.io/azure-sdk-for-java/storage.html). | No timeout |
 | <a id="commendixstorageazureMaximumExecutionTimeInMs" href="#commendixstorageazureMaximumExecutionTimeInMs">com.<wbr>mendix.<wbr>storage.<wbr>azure.<wbr>MaximumExecutionTimeInMs</a> | Sets the maximum execution time (in milliseconds) to use when making this request. For more information, see the [Azure libraries](https://azure.github.io/azure-sdk-for-java/storage.html). | No maximum time |
 
+{{% alert type="warning" %}}
+`com.mendix.storage.azure.BlobEndpoint` setting can include container name, as in `https://storageaccount.blob.core.windows.net/some-container-name`. In this case the value in the `com.mendix.storage.azure.Container` setting will be used as a directory name.
+
+This behavior is broken in versions 8.18.28, 9.24.14, 9.24.15, 9.24.16, 9.24.17, 9.24.18, 10.6.1, 10.6.2, 10.6.3, 10.6.4, 10.6.5, 10.7.0, 10.8.0, 10.8.1. In those versions, the container name in the `com.mendix.storage.azure.BlobEndpoint` setting is ignored and files are stored at the root of the container.
+{{% /alert %}}
+
 {{% alert color="warning" %}}
 Azure blob storage's default connection protocol is HTTPS in order to encourage secure connections by default. This is a highly recommended best practice (for more information, see [Configure Azure Storage Connection Strings](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string)). This should now be transparent, unless you use custom domain names (for details, see [Require Secure Transfer](https://docs.microsoft.com/en-us/azure/storage/common/storage-require-secure-transfer)). In that case, you should use the `UseHttps` setting above to revert to the previous default behavior and disable HTTPS.
 {{% /alert %}}

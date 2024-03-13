@@ -206,24 +206,24 @@ but the time frame heavily depends on your organization, the choice of that firs
 They are always willing to answer questions, help you make decisions,
 and provide extra information. But even if you don’t have a dedicated CSM, we have provided extra resources throughout this learning path that should help you out.
 
-* Ask the Community in our [<uDigital Execution Practice space</u](https://community.mendix.com/link/space/digital-execution-community):
+* Ask the Community in our [Digital Execution Practice space](https://community.mendix.com/link/space/digital-execution-community):
 
-This is a part of the Mendix Community that is specifically dedicated to helping others succeed with their digital execution practice. Feel free to ask questions there, and our own Mendix experts, as well as other companies using Mendix who have been down the same road you are starting now, will share their experience. If you haven’t already joined, you can do that with one click [<uhere</u](https://community.mendix.com/link/invitation/space/Digital-Execution-Community/0438b34d-3432-44c1-ac85-d5bc940116e9).
+This is a part of the Mendix Community that is specifically dedicated to helping others succeed with their digital execution practice. Feel free to ask questions there, and our own Mendix experts, as well as other companies using Mendix who have been down the same road you are starting now, will share their experience. If you haven’t already joined, you can do that with one click [here](https://community.mendix.com/link/invitation/space/Digital-Execution-Community/0438b34d-3432-44c1-ac85-d5bc940116e9).
 
 **Having trouble with something (more) technical?**
 
-* Check out the [<uMendix Documentation</u](/):
+* Check out the [Mendix Documentation](/):
 
 Sometimes the right information is just a click away in a document.
 
 * Contact the Mendix Community:
 
-<uThe [Mendix Forum](https://forum.mendixcloud.com/link/questions)</uis where you can find help when you get **stuck.** You can also help others when you know the answer! Be sure to first check whether someone has already asked the question you're wondering about. If not, feel free to post it and our community will help you out! If you didn’t already know, you can gain **points** when you do so!
+The [Mendix Forum](https://forum.mendixcloud.com/link/questions)is where you can find help when you get **stuck.** You can also help others when you know the answer! Be sure to first check whether someone has already asked the question you're wondering about. If not, feel free to post it and our community will help you out! If you didn’t already know, you can gain **points** when you do so!
 
 * Submit a Support ticket:
 
 If something really appears to be broken from a technical point of view (for example, you can’t even visit or edit your app anymore),
-contact our [<uSupport Team</u](https://support.mendix.com/hc/en-us), and they will do their absolute best to help you out.
+contact our [Support Team](https://support.mendix.com/hc/en-us), and they will do their absolute best to help you out.
 
 **Have some feedback?**
 
@@ -263,11 +263,11 @@ By the end of this module, you will: 
 ## Lecture 2.1 Assign Your Mendix Admin 
 First let’s get one admin (no pun intended) thing out of the way. Your company needs **at least one Admin**. It might make sense for the first admin to be you and then you can easily assign as many other admins as you need.
 
-So why do you need an admin? Your developers are able to create new apps, invite other users to their app teams, deploy apps, and invite app end-users to give feedback, among many other activities. Insights into these company activities are provided in [<uControl Center</u](https://controlcenter.mendix.com/index.html) in one central overview. You can read more about Control Center [<uhere</u](/control-center/) or follow this [<ulearning path. </u](https://academy.mendix.com/link/paths/116/Govern-and-Scale-your-App-Landscape-with-Mendix-Control-Center)
+So why do you need an admin? Your developers are able to create new apps, invite other users to their app teams, deploy apps, and invite app end-users to give feedback, among many other activities. Insights into these company activities are provided in [Control Center](https://controlcenter.mendix.com/index.html) in one central overview. You can read more about Control Center [here](/control-center/) or follow this [learning path. ](https://academy.mendix.com/link/paths/116/Govern-and-Scale-your-App-Landscape-with-Mendix-Control-Center)
 
-Do you already have at least one admin? If that’s the case, you can see them on the list when you open [<uControl Center</u](https://controlcenter.mendix.com/index.html), and you can skip the rest of this lecture.
+Do you already have at least one admin? If that’s the case, you can see them on the list when you open [Control Center](https://controlcenter.mendix.com/index.html), and you can skip the rest of this lecture.
 
-A **Mendix Admin** will normally be someone in the IT department of your company, and they will have full access to Control Center, which will give them visibility and essential controls to make sure the apps deliver business value at acceptable cost and risk.  You can assign your first Mendix Admin through [<uMendix Support</u](https://support.mendix.com/hc/en-us/requests/new), just choose "Standard Change: Assign Mendix Admin" from the dropdown. This first admin can then [<uadd other admins</u](/control-center/company-settings/#3-mendix-admins). 
+A **Mendix Admin** will normally be someone in the IT department of your company, and they will have full access to Control Center, which will give them visibility and essential controls to make sure the apps deliver business value at acceptable cost and risk.  You can assign your first Mendix Admin through [Mendix Support](https://support.mendix.com/hc/en-us/requests/new), just choose "Standard Change: Assign Mendix Admin" from the dropdown. This first admin can then [add other admins](/control-center/company-settings/#3-mendix-admins). 
 
 ## Lecture 2.2 Get Familiar With Mendix 
 <https://videoshare.mendix.com/watch/AVffVf7KCVt7h1ioBvUQ1f
@@ -280,12 +280,12 @@ ensure the right ideas get invested in, manage the entire application developmen
 
 **Here are some resources to help familiarize yourself with the Mendix platform: **
 
-* The <u[“Mendix](https://academy.mendix.com/link/modules/78/lectures/504/1.3-Mendix-Ecosystem)Ecosystem”
-lecture in our Rapid Developer course</uoffers a short description of each of the elements of the platform relevant for developers together with useful links. 
+* The [“Mendix](https://academy.mendix.com/link/modules/78/lectures/504/1.3-Mendix-Ecosystem)Ecosystem”
+lecture in our Rapid Developer courseoffers a short description of each of the elements of the platform relevant for developers together with useful links. 
 
 
 
-* The <u[Developer Portal Guide](/developerportal/)</uwill help you explore the Developer Portal: the central location to collaborate,
+* The [Developer Portal Guide](/developerportal/)will help you explore the Developer Portal: the central location to collaborate,
 deploy, and manage your Mendix apps.
 
 **Also, don’t forget to bookmark your “Favorites”! **
@@ -347,7 +347,7 @@ Why quick wins?
 
 Proving the value of a program—whether it’s through software that allows your business to create a new channel of revenue or an application that saves employees time on an internal process—allows you to realize immediate success and justify a broader organizational change. A diversity of use cases is important here, to show that your application portfolio can reach many different departments and address a variety of needs.
 
-And guess what? We have a tool to help you with that. Mendix Portfolio Management gives you a way to identify, track, and plan out your initiatives. So, let's get started by creating your Portfolio board [<uhere</u](https://portfolio.mendix.com/index.html). All you need to do is click on *Get Started* and then *Create your first Portfolio*. 
+And guess what? We have a tool to help you with that. Mendix Portfolio Management gives you a way to identify, track, and plan out your initiatives. So, let's get started by creating your Portfolio board [here](https://portfolio.mendix.com/index.html). All you need to do is click on *Get Started* and then *Create your first Portfolio*. 
 
 {{< figure src="image/path" class="image-border"  >}}image5.png"
 style="width:6.5in;height:3.15859in" /
@@ -468,24 +468,24 @@ Promotion tends to be a challenge for many IT organizations, in part because IT 
 ## 2.3.6 Additional Resources 
 Below you can find a collection of different resources to grow your knowledge regarding the 5 P’s of Digital Transformation and their importance in your Mendix journey. 
 
-* In our [<uDEP Manual</u](https://www.mendix.com/resources/digital-execution-manual/)
+* In our [DEP Manual](https://www.mendix.com/resources/digital-execution-manual/)
 you can learn more about the 5 P’s and how to best leverage Mendix’s low-code platform.
 
 
 
-* Follow the [<uDigital Execution Learning Path</u](https://academy.mendix.com/link/paths/52/Digital-Execution)
+* Follow the [Digital Execution Learning Path](https://academy.mendix.com/link/paths/52/Digital-Execution)
 to learn the steps of successful digital execution and the meaning of rapid application development maturity. 
 
 
 
-* In the Agile Awareness learning path, you can read more about the [<uDigital Execution Stages</u](https://academy.mendix.com/link/modules/389/lectures/3133/2.2-Digital-Execution-Stages:-Start,-Structure,-Scale)
-as well as the [<ucore tenets of digital execution</u](https://academy.mendix.com/link/modules/389/lectures/3135/2.4-People,-Portfolio,-Process,-and-Platform-(4-P’s)).
+* In the Agile Awareness learning path, you can read more about the [Digital Execution Stages](https://academy.mendix.com/link/modules/389/lectures/3133/2.2-Digital-Execution-Stages:-Start,-Structure,-Scale)
+as well as the [core tenets of digital execution](https://academy.mendix.com/link/modules/389/lectures/3135/2.4-People,-Portfolio,-Process,-and-Platform-(4-P’s)).
 
 
 
-* You can check our Mendix blog where you will find many interesting articles for Digital Transformation, like [<uthis one</u](https://www.mendix.com/blog/successful-digital-transformation-a-practice-makes-perfect/)
+* You can check our Mendix blog where you will find many interesting articles for Digital Transformation, like [this one](https://www.mendix.com/blog/successful-digital-transformation-a-practice-makes-perfect/)
 that explains the importance of digital transformation and the 5
-P’s; or [<uthis one</u](https://www.mendix.com/blog/digital-transformation-a-matter-of-time/#learning-to-walk-the-4-ps-and-3-ss-of-digital-transformation)
+P’s; or [this one](https://www.mendix.com/blog/digital-transformation-a-matter-of-time/#learning-to-walk-the-4-ps-and-3-ss-of-digital-transformation)
 about the digital transformation journey.  
 
 ## Lecture 2.4 Stay up to Date With Mendix 
@@ -493,22 +493,22 @@ It’s important to know what’s happening with the Mendix Platform to be sure 
 
 **DEP Space on Forum**
 
-[<uThe DEP Space</u](https://forum.mendix.com/link/invitation/space/Digital-Execution-Community/0438b34d-3432-44c1-ac85-d5bc940116e9)
+[The DEP Space](https://forum.mendix.com/link/invitation/space/Digital-Execution-Community/0438b34d-3432-44c1-ac85-d5bc940116e9)
 on the Forum provides a unique opportunity to interact with other Mendix leaders. Ask questions from experienced Mendix team members or other customers about anything related to digital transformation.  
 
 
 **Subscribe to platform news**
 
-[<uSubscribe to Platform Updates</u](https://status.mendix.com/) to keep up with all the changes happening with the Mendix platform and how it could affect your apps.
+[Subscribe to Platform Updates](https://status.mendix.com/) to keep up with all the changes happening with the Mendix platform and how it could affect your apps.
 
 
 **Mx Forum**
 
-[<uJoin the Mendix Community</u](https://forum.mendix.com/p/questions) to connect with over 290,000 community members. The Forum is a great place for developers to ask questions and post ideas for our product managers. 
+[Join the Mendix Community](https://forum.mendix.com/p/questions) to connect with over 290,000 community members. The Forum is a great place for developers to ask questions and post ideas for our product managers. 
 
 **Mx Blog**
 
-[<uSubscribe to our blog</u](https://www.mendix.com/blog/#blog__subscribe) and deep dive into our diverse library of articles and blog posts, where we discuss everything from Mendix best practices to industry trends.
+[Subscribe to our blog](https://www.mendix.com/blog/#blog__subscribe) and deep dive into our diverse library of articles and blog posts, where we discuss everything from Mendix best practices to industry trends.
 
 We’ve got more steps to success coming your way.
 
@@ -677,12 +677,12 @@ style="width:6.5in;height:3.45677in" /
 To start, think about the big picture: What is your organization striving to achieve? Jot down a few ideas that can help you get there.
 These could include solutions to migrate from legacy apps, improve customer experience or increase efficiency. And Mendix has a tool to help you do just that!
 
-You should have already created your portfolio in lecture 2.5, if you haven’t yet let’s start by creating your Portfolio board, you can do that by going [<uhere</u](https://portfolio.mendix.com/), clicking Open Portfolio Management and then click **Create Portfolio.**You can make it restricted for the time being (that means you will have to approve other people before they gain access to it).  
+You should have already created your portfolio in lecture 2.5, if you haven’t yet let’s start by creating your Portfolio board, you can do that by going [here](https://portfolio.mendix.com/), clicking Open Portfolio Management and then click **Create Portfolio.**You can make it restricted for the time being (that means you will have to approve other people before they gain access to it).  
 
 If you have done a portfolio workshop already and maybe have your list of initiatives in an Excel file, you can easily import them. If not,
 just create a few cards that represent your ideas. Your Mendix team can also help you with this, so please do not hesitate to reach out to them to go over everything together.
 
-Portfolio management is a key activity that ensures you are always creating solutions that bring the most value to your organization (and since we’re talking Mendix here, this is where you also decide if Mendix is the right tool for each one of the ideas). This means that you (maybe together with your stakeholders) need to go over your main portfolio, keep initiatives up to date and adjust or reprioritize if needed. You can learn a lot more about this process in the dedicated learning path <u. For now, the most important thing is to list the initiatives that are top of mind for you and use that input to choose the ideal first app. </u
+Portfolio management is a key activity that ensures you are always creating solutions that bring the most value to your organization (and since we’re talking Mendix here, this is where you also decide if Mendix is the right tool for each one of the ideas). This means that you (maybe together with your stakeholders) need to go over your main portfolio, keep initiatives up to date and adjust or reprioritize if needed. You can learn a lot more about this process in the dedicated learning path . For now, the most important thing is to list the initiatives that are top of mind for you and use that input to choose the ideal first app. 
 
 So, let’s add your initiatives. Click the *Create Initiative* button on the top right and start jotting down your ideas.
 
@@ -867,7 +867,7 @@ If your organization is deploying on **Private Cloud or on-prem**,
 please **make sure that you are ready to take on the effort and responsibility of managing all hosting and support of the application deployments**.
 
 For a list of all the deployment options that are available, see:
-[<u/developerportal/deploy/</u](/developerportal/deploy/). 
+[/developerportal/deploy/](/developerportal/deploy/). 
 
 Some highlights to consider:
 
@@ -960,7 +960,7 @@ Understanding how to work in Agile allows organizations to [stay responsive to c
 and reduce time-to-market by nearly 50%. Mendix highlights these benefits by providing capabilities such as sprints, story management,
 and integrated feedback management within the platform itself.
 
-In the Academy, you can find an [<uAgile Awareness learning path</u](https://academy.mendix.com/link/paths/110/Agile-Awareness)
+In the Academy, you can find an [Agile Awareness learning path](https://academy.mendix.com/link/paths/110/Agile-Awareness)
 that you can use to train your team in the Agile Framework and how it will define your Mendix journey. 
 
 ## Lecture 4.2 Identify Your First Mendix Project Team 
@@ -969,7 +969,7 @@ Ensuring you have the right people in the right roles is a critical step in succ
 
 **Setting up your Agile Scrum team**
 
-To work in Mendix, we recommend working in an Agile Scrum Team that is already familiar with the Agile Framework (if needed, refer to this [<uAgile Awareness Learning Path)</u](https://academy.mendix.com/link/paths/110/Agile-Awareness).
+To work in Mendix, we recommend working in an Agile Scrum Team that is already familiar with the Agile Framework (if needed, refer to this [Agile Awareness Learning Path)](https://academy.mendix.com/link/paths/110/Agile-Awareness).
 This framework allows development teams to collaborate better, respond to change, and continuously incorporate user feedback.
 
 It’s important to have small cross-functional teams to make sure that knowledge of all aspects is available within the team with all roles being covered. If needed, a person can take on multiple roles as long as they have the skills, expertise, and time to commit to each role.
@@ -977,7 +977,7 @@ Ideal Scrum Teams are composed of 5-7 people, never exceeding nine for larger en
 
 Getting all the required knowledge in each team might be difficult while keeping your team small, efficient, and aligned. Mendix considers a Scrum team as a juncture of a **core team** and **accelerators**. 
 
-**<uCore Team:</u**
+**Core Team:**
 
 * **Product Owner (PO):** responsible for defining the direction of a project. They have a clear understanding of what the business and users need from the product being developed and the value to be delivered. They translate these needs to the Scrum team. The PO:
 
@@ -986,8 +986,8 @@ Getting all the required knowledge in each team might be difficult while keeping
 * Ensures the product being developed delivers the required value for the business and users. 
 
 * Accepts or rejects the completed work 
-Ideal POs have these five key [<uskills &
-characteristics.</u](https://www.mendix.com/blog/5-important-product-owner-skills-for-rapid-app-dev/)
+Ideal POs have these five key [skills &
+characteristics.](https://www.mendix.com/blog/5-important-product-owner-skills-for-rapid-app-dev/)
 
 * **Scrum Master (SM):** ensures that the team follows Agile best practices and ioversees addressing and removing any productivity blockers that may come up. Essentially, the Scrum master is the authority in Agile and Scrum to keep the team working together efficiently and effectively. SMs:
 
@@ -1006,7 +1006,7 @@ characteristics.</u](https://www.mendix.com/blog/5-important-product-owner-skill
 * Work with the SM in the key Scrum activities of sprint planning,
 sprint review, retrospectives and daily standups to keep their assigned tasks on track with high-quality code during each sprint, while working towards continuous improvement as a team.
 
-**<uAccelerators:</u**
+**Accelerators:**
 
 * **BAs or SMEs** get involved when a team requires detailed knowledge about such subjects as UX/UI, QA, testing and integration. 
 
@@ -1023,14 +1023,14 @@ style="width:6.5in;height:3.6519in" /
 
 **Additional Resources**
 
-* Learn more about the Agile team, roles and responsibilities in this [<ulecture of the Agile Awareness learning path</u](https://academy.mendix.com/link/modules/390/lectures/3142/3.3-Agile-Team,-Roles-and-Responsibilities). 
+* Learn more about the Agile team, roles and responsibilities in this [lecture of the Agile Awareness learning path](https://academy.mendix.com/link/modules/390/lectures/3142/3.3-Agile-Team,-Roles-and-Responsibilities). 
 
-* Find additional content on our Mendix blog, like this article on [<uHow to Structure an Agile Scrum Team</u](https://www.mendix.com/blog/the-road-to-adopting-scrum-team-composition/).
+* Find additional content on our Mendix blog, like this article on [How to Structure an Agile Scrum Team](https://www.mendix.com/blog/the-road-to-adopting-scrum-team-composition/).
 
 ## Lecture 4.3 Arrange Academy Training for Your Team 
 As you begin to map out your Mendix team, it's important to establish a training plan. Properly training your Mendix team helps accelerate your time to first value and promotes long-term low-code success. It helps each team member take charge of their own success and the overall team’s success.
 
-Take the time to familiarize yourself with the [<uMendix Academy</u](https://academy.mendix.com/link/home). Here, we provide a variety of learning paths and individual courses for various roles and diverse backgrounds to allow you to customize the learning journey appropriate for each team member and role. Once you are familiar with the various learning paths, diverse topics and individual courses,
+Take the time to familiarize yourself with the [Mendix Academy](https://academy.mendix.com/link/home). Here, we provide a variety of learning paths and individual courses for various roles and diverse backgrounds to allow you to customize the learning journey appropriate for each team member and role. Once you are familiar with the various learning paths, diverse topics and individual courses,
 create a training plan with each team member based on their role and experience. 
 
 Here is a sample you can use as a template:
@@ -1052,12 +1052,12 @@ style="width:6.5in;height:1.44219in" /
 A Rapid Developer has a baseline knowledge of the Mendix platform and knows where to find information using the documentation and forum.
 This certification is proof of basic Mendix knowledge and demonstrates that someone can join a project team and independently build prototypes.
 
-The Rapid Developer certification is a minimum requirement for working in Mendix. Before taking a certification exam, there is required coursework for each level. All courses can either be taken via [[<uinstructor-led</u](https://academy.mendix.com/link/classrooms)](https://academy.mendix.com/link/classrooms)
-<uor via a</u
-[<u[self-led](https://academy.mendix.com/link/paths)</u](https://academy.mendix.com/link/paths)
-<u. </u
+The Rapid Developer certification is a minimum requirement for working in Mendix. Before taking a certification exam, there is required coursework for each level. All courses can either be taken via [[instructor-led](https://academy.mendix.com/link/classrooms)](https://academy.mendix.com/link/classrooms)
+or via a
+[[self-led](https://academy.mendix.com/link/paths)](https://academy.mendix.com/link/paths)
+. 
 
-You can find all the details about the certification, as well as the required coursework [<uhere</u](https://academy.mendix.com/link/certifications/23/rapid). 
+You can find all the details about the certification, as well as the required coursework [here](https://academy.mendix.com/link/certifications/23/rapid). 
 
 As your team grows and takes on more projects, it's important to continue to also level up on your Mendix expertise. Proper enablement will allow your team to take on more complex projects and deliver more business impact. When able, remember to take the time to level up on your Mendix Certification.
 
@@ -1065,7 +1065,7 @@ As your team grows and takes on more projects, it's important to continue to als
 
 An Intermediate Developer has the fundamental knowledge of the Mendix platform to start building the next great apps. This certification is proof that someone is ready to be added to operating teams and can contribute from the start by applying your knowledge and skills in different parts of the project development lifecycle.
 
-You can find information as well as required courseware for the Intermediate certification [<uhere</u](https://academy.mendix.com/link/certifications/22/intermediate). 
+You can find information as well as required courseware for the Intermediate certification [here](https://academy.mendix.com/link/certifications/22/intermediate). 
 
 **Advanced Developer Certification**
 
@@ -1075,7 +1075,7 @@ You can find information as well as required courseware for the Advanced certifi
 **Expert Developer Certification **
 
 The Expert Developer Certificate is not only proof of Mendix knowledge, it confirms a developer’s expertise and shows they have applied what they know about Mendix in their day-to-day job.
-You can find information as well as required courseware for the Advanced certification [<uhere</u](https://academy.mendix.com/link/certifications/24/expert). 
+You can find information as well as required courseware for the Advanced certification [here](https://academy.mendix.com/link/certifications/24/expert). 
 
 ## Lecture 4.4 Organize Your Program Kick-Off 
 The program kick-off is important to hold before the project kick-off as this meeting ensures alignment across all groups and team members involved, from leadership to the development team, on goals, vision,
@@ -1194,7 +1194,7 @@ here.](/control-center/company-settings/#company-email-domains)
 style="width:3.50864in;height:1.47929in" / 
 Provide a specific **Security Contact** who is informed if there are critical security issues with the Mendix platform and platform-supported Marketplace components. Mendix strongly recommends applying a team email address or a functional mailbox instead of a personal individual email address.
 
-Your security contact person(s) may want to subscribe the [<uMendix Security Advisories</u](/releasenotes/security-advisories/)
+Your security contact person(s) may want to subscribe the [Mendix Security Advisories](/releasenotes/security-advisories/)
 to get familiar with the process around security fixes.
 
 [Additional reading](/control-center/company-settings/#security-contact)
@@ -1212,9 +1212,9 @@ On the **Company Brand** page, you can upload, edit, or remove a **Company Logo*
 {{< figure src="image/path" class="image-border"  >}}image23.png"
 style="width:0.22222in;height:0.22222in" alt="direct hit" /
 
-It is recommended that you [<uset-up SSO</u](/control-center/security/set-up-sso-byoidp/)
+It is recommended that you [set-up SSO](/control-center/security/set-up-sso-byoidp/)
 between the Mendix platform and your corporate IDP such as Microsoft Entra ID (f.k.a. Azure AD) or Okta.  This will put your IDP in control of how users are authenticated before they can access your content on the Mendix platform. Leavers (former employees) will not be able to login. Your platform users get the convenience of Single Sign-On,
-rather than yet-another-password. See also our [<uBYOIDP blog</u](https://www.mendix.com/blog/introducing-byoidp-bring-your-own-identity-provider/).
+rather than yet-another-password. See also our [BYOIDP blog](https://www.mendix.com/blog/introducing-byoidp-bring-your-own-identity-provider/).
 
 Optionally, you may set up access rules in your IDP to control which of your employees can and cannot work on the Mendix platform. As we encourage collaboration in multi-disciplined teams, be careful not to be too restrictive or not apply any restriction at all. For example,
 potential end-users of Mendix apps may want to contribute to development teams. In a later stage you can set up restrictive access rules as you start putting more business-critical IPs in the logic of your Mendix apps.
@@ -1261,7 +1261,7 @@ A sample agenda for a successful project kickoff might include:
 * What does success look like: How will you know if you have delivered value? These could be project milestones, but also metrics you would like to influence.
 
 ## Lecture 6.2 Create Your Project and Make Sure Everyone Has Access 
-Anyone can sign up to the Mendix platform using their business email address, so there is no need to on-board a specific list of users. All they need to do is go to [<usignup.mendix.com</u](http://signup.mendix.com) and use the relevant company email domain (any from the list you have added in lecture 5.2). 
+Anyone can sign up to the Mendix platform using their business email address, so there is no need to on-board a specific list of users. All they need to do is go to [signup.mendix.com](http://signup.mendix.com) and use the relevant company email domain (any from the list you have added in lecture 5.2). 
 
 If you are working with implementation partners, you need to decide **how to give those team members access to your app projects**.
 
@@ -1303,7 +1303,7 @@ Regardless of Agile methodology, some of the practices that you can consider sta
 * Team retrospectives 
 Care should be taken to incorporate feedback from team retrospectives and other Agile ceremonies into your standards as part of your continuous improvement process. That includes reviewing and analyzing any shortcuts taken or other deviations from the standard process to understand why it was necessary and potentially consider adapting your standards or putting another appropriate measure in place.
 
-Development teams can work most efficiently if requirements are clearly described (e.g. in user stories), to estimate the effort and implementation. Because of this, it is important that you choose a tool in which these can be tracked. The Mendix platform offers a collaborative tool called [<uEpics</u](https://www.mendix.com/blog/mendix-projects-and-the-wizardry-of-epics/),
+Development teams can work most efficiently if requirements are clearly described (e.g. in user stories), to estimate the effort and implementation. Because of this, it is important that you choose a tool in which these can be tracked. The Mendix platform offers a collaborative tool called [Epics](https://www.mendix.com/blog/mendix-projects-and-the-wizardry-of-epics/),
 in which this is possible. Here you can manage the backlog, epics,
 create user stories, and of course sprints. Both the Agile and Kanban methods are supported.
 
@@ -1332,9 +1332,9 @@ Here is a couple of topics to keep in mind:
 
 **End user login**
 
-Every app will need a way for your end users to get access to it. We advise to use the [<uOIDC SSO module</u](/appstore/modules/oidc/) for (B2E)
-apps you are developing. This is a sensible default as it is the easiest and most flexible approach for Single Sign-On and is supported by Microsoft’s Entra ID and most other IdPs.  As an alternative you may advise [<uSAML</u](/appstore/modules/saml/)
-(e.g. for regulated B2C-apps) or [<uLDAP</u](/appstore/modules/ldap/) for on-prem apps or the [<uForgot My Password</u](/appstore/modules/forgot-password/)
+Every app will need a way for your end users to get access to it. We advise to use the [OIDC SSO module](/appstore/modules/oidc/) for (B2E)
+apps you are developing. This is a sensible default as it is the easiest and most flexible approach for Single Sign-On and is supported by Microsoft’s Entra ID and most other IdPs.  As an alternative you may advise [SAML](/appstore/modules/saml/)
+(e.g. for regulated B2C-apps) or [LDAP](/appstore/modules/ldap/) for on-prem apps or the [Forgot My Password](/appstore/modules/forgot-password/)
 module for non-SSO apps.
 
 **Familiarize with the Marketplace**
@@ -1361,7 +1361,7 @@ If you are using Epics as your agile planning tool, you will be able to link the
 style="width:6.5in;height:9.48723in" /
 
 Another important part of collaboration in the application development lifecycle is the collaboration between the development team and their end users. Mendix makes that super easy using the feedback module.
-Your app users just need to click the *Feedback* button in your app and tell you what they like, need or miss, and your development team will be able to immediately respond. Once your app is live, the team will be able to set up a mini-survey to ask for user satisfaction, or get more targeted input by asking specific questions. Here you can read more on [<uthe importance of user feedback for application development</u](https://www.mendix.com/blog/how-to-collect-and-analyze-user-feedback-in-your-app/).
+Your app users just need to click the *Feedback* button in your app and tell you what they like, need or miss, and your development team will be able to immediately respond. Once your app is live, the team will be able to set up a mini-survey to ask for user satisfaction, or get more targeted input by asking specific questions. Here you can read more on [the importance of user feedback for application development](https://www.mendix.com/blog/how-to-collect-and-analyze-user-feedback-in-your-app/).
 
 ## Lecture 6.7 The Development Process Itself and Why That’s Not a Part of This Guide 
 We have created this guide in order to help anyone who is in charge of implementing Mendix in their organization to hit the ground running.
@@ -1520,8 +1520,8 @@ Whatever it is, make sure you have measured it and will continue to measure it. 
 ## Lecture 7.6 Maintain and Upgrade Your Applications 
 **Platform: Maintaining your Mendix App**
 
-After developing and publishing your first Mendix app, it's important to put proper maintenance measures in place. [<uEstablishing a regular upgrade practice</u](https://www.mendix.com/wp-content/uploads/Your-Mendix-Upgrade-Guide-1.pdf)
-<u\[DB37\]</u<u\[UT38\]</uwill help keep your app up to date with support and retain access to the latest features.
+After developing and publishing your first Mendix app, it's important to put proper maintenance measures in place. [Establishing a regular upgrade practice](https://www.mendix.com/wp-content/uploads/Your-Mendix-Upgrade-Guide-1.pdf)
+\[DB37\]\[UT38\]will help keep your app up to date with support and retain access to the latest features.
 
 Mendix supports three major versions at a time. For example, today Mendix supports major versions 8, 9, and 10. When the next version (11) is released, then version 8 will sunset, and versions 9, 10, and 11 will be supported.
 

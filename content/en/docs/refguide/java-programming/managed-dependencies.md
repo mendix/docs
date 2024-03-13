@@ -122,7 +122,7 @@ systemProp.https.proxyUser=userid
 systemProp.https.proxyPassword=password 
 ```
 
-Additionally, if it still fails to download dependencies with the correct proxy settings configured, you can configure the HTTPS/SSL certificate store that Gradle uses.
+If Gradle still fails to download dependencies with the correct proxy settings configured, you can configure the HTTPS/SSL certificate store that Gradle uses.
 
 Add the following lines to the `gradle.properties` file:
 

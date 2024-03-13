@@ -12,11 +12,9 @@ With this guide, you can unlock the full potential of the Mendix platform and ac
 This guide covers everything you need to know to get started with Mendix in your company. This guide is meant for anyone who is in charge of managing the entire Mendix program in an organization. It will take you through defining your low code vision, defining company-wide settings as well as kicking off what will become the first app you will launch. Follow these steps to unlock the full potential of the Mendix platform and accelerate your journey into the digital execution practice.
 
 ## Module 1: Introduction 
-### Module introduction (modules list): 
-
 In this module, you will find guide objectives, the intended audience, and learn how to best use this guide.
 
-### Lecture 1.1 Welcome (what you will learn in this guide)
+### Lecture 1.1 Welcome! What You Will Learn in This Guide
 
 Welcome to Mendix, the leading low-code application development platform that empowers you to turn your ideas into outcomes quickly and efficiently! 
 
@@ -33,21 +31,18 @@ By the end of this guide, you’ll be able to: 
 * Prepare your first project and onboard your first project team 
 * Launch your first application 
 ### Lecture 1.2 Who This Guide Is For, How to Use It, and for How Long 
-This guide is tailored for organizations new to Mendix,
-especially for leaders responsible for implementing Mendix in their company. It is designed to help you navigate your Mendix journey from starting up until your first application is launched. It also reflects the most common steps in that journey and is a collection of resources you can use to ensure success on each of these steps.
+This guide is tailored for organizations new to Mendix, especially for leaders responsible for implementing Mendix in their company. It is designed to help you navigate your Mendix journey from starting up until your first application is launched. It also reflects the most common steps in that journey and is a collection of resources you can use to ensure success on each of these steps.
 
 We will not talk about technical setup here, but will guide you through managing the organizational change along with all the initial decisions you will need to make to ensure success. Think of this guide as your guide to getting started with Mendix at your company and if you are (a part of the team) in charge of making that a success, then this is the perfect starting point for you.
 
-The content in this guide can be covered in a few hours, but it was designed as more of a guide versus a course, so you will likely come back to it as you are working towards getting that first app live. Our most successful customers tend to do that within 4-5 months,
-but the time frame heavily depends on your organization, the choice of that first app, and many other factors that will also influence how long you might find the content in this guide useful.
+The content in this guide can be covered in a few hours, but it was designed as more of a guide versus a course, so you will likely come back to it as you are working towards getting that first app live. Our most successful customers tend to do that within 4-5 months, but the time frame heavily depends on your organization, the choice of that first app, and many other factors that will also influence how long you might find the content in this guide useful.
 
 ### Lecture 1.3 Questions and Feedback 
 **Got a question on anything related to the Digital Execution Practice and the process of getting started on the organization side of things?**
 
 * Reach out to your Mendix team:
 
-They are always willing to answer questions, help you make decisions,
-and provide extra information. But even if you don’t have a dedicated CSM, we have provided extra resources throughout this guide that should help you out.
+They are always willing to answer questions, help you make decisions, and provide extra information. But even if you don’t have a dedicated CSM, we have provided extra resources throughout this guide that should help you out.
 
 * Ask the Community in our [Digital Execution Practice space](https://community.mendix.com/link/space/digital-execution-community):
 
@@ -65,8 +60,7 @@ The [Mendix Forum](https://forum.mendixcloud.com/link/questions)is where you can
 
 * Submit a Support ticket:
 
-If something really appears to be broken from a technical point of view (for example, you can’t even visit or edit your app anymore),
-contact our [Support Team](https://support.mendix.com/hc/en-us), and they will do their absolute best to help you out.
+If something really appears to be broken from a technical point of view (for example, you can’t even visit or edit your app anymore), contact our [Support Team](https://support.mendix.com/hc/en-us), and they will do their absolute best to help you out.
 
 **Have some feedback?**
 
@@ -118,8 +112,7 @@ A **Mendix Admin** will normally be someone in the IT department of your company
 
 Let’s start with building the foundation of your Mendix knowledge and get you familiar with the Mendix platform! 
 
-Mendix is the platform that helps you turn ideas into outcomes. It contains all the tools you need to plan your application portfolio,
-ensure the right ideas get invested in, manage the entire application development lifecycle, and get end-user feedback on what to build. The Mendix platform also provides a space for anyone working with Mendix to interact with the community, share ideas and components as well as find help in case they get stuck.
+Mendix is the platform that helps you turn ideas into outcomes. It contains all the tools you need to plan your application portfolio, ensure the right ideas get invested in, manage the entire application development lifecycle, and get end-user feedback on what to build. The Mendix platform also provides a space for anyone working with Mendix to interact with the community, share ideas and components as well as find help in case they get stuck.
 
 **Here are some resources to help familiarize yourself with the Mendix platform: **
 
@@ -128,8 +121,7 @@ lecture in our Rapid Developer courseoffers a short description of each of the e
 
 
 
-* The [Developer Portal Guide](/developerportal/)will help you explore the Developer Portal: the central location to collaborate,
-deploy, and manage your Mendix apps.
+* The [Developer Portal Guide](/developerportal/)will help you explore the Developer Portal: the central location to collaborate, deploy, and manage your Mendix apps.
 
 **Also, don’t forget to bookmark your “Favorites”! **
 
@@ -177,8 +169,7 @@ Your talent has been trained and activated in such a way that you can shift them
 
 **The 5 P’s of Digital Transformation**
 
-Sounds great, right? But how do you get there? Step by step. There are five major areas you will need to focus on. We call these the **5 P’s of Digital Transformation** and aligning the P’s (Portfolio, People,
-Process, Platform, and Promotion) to your organization's digital strategy is crucial to your Mendix success. Let’s go over them one by one.
+Sounds great, right? But how do you get there? Step by step. There are five major areas you will need to focus on. We call these the **5 P’s of Digital Transformation** and aligning the P’s (Portfolio, People, Process, Platform, and Promotion) to your organization's digital strategy is crucial to your Mendix success. Let’s go over them one by one.
 
 {{< figure src="image/path" class="image-border"  >}}image4.png"
 style="width:6.5in;height:3.53438in" /
@@ -201,33 +192,26 @@ If you would like to learn more about how to manage your portfolio of ideas and 
 The people you choose for your teams are absolutely crucial to the success of your digital execution program. You want to find the right people with the right skills who are excited about and can commit time and energy to the program, no matter their job title. 
 
 
-A strong first Mendix team is more than just the number of people in the room. Your first Mendix team should include a core development team comprised of a combination of a professional developer — someone with technical expertise — and a business developer — someone familiar with the platform that can act as a power user if needed. The key is to have developers who can collaborate closely with end users,
-bridging the gap between business needs and technical possibilities.
+A strong first Mendix team is more than just the number of people in the room. Your first Mendix team should include a core development team comprised of a combination of a professional developer — someone with technical expertise — and a business developer — someone familiar with the platform that can act as a power user if needed. The key is to have developers who can collaborate closely with end users, bridging the gap between business needs and technical possibilities.
 In the beginning, it’s highly likely that not all these people will come from your own organization (we will further review the options in Lecture 3.7), but this is an overview of all the higher level roles you will need sooner or later.The following leadership roles are essential to the success of any new platform or paradigm:
 
-* **Executive Sponsors:** Success starts at the top, where senior executive buy-in is a must. These are the top-level executives,
-ideally representing both the Business/Operations and IT, who are willing to be engaged periodically to provide oversight and steering-committee level guidance. These people won’t necessarily be involved day-to-day, but they understand the big picture vision of how Mendix will help the enterprise achieve its digital transformation and low-code goals, how it fits to ‘play nicely’ with other technology stacks and tools like Microsoft’s ADO or Power Apps, and what the transformational value is expected. Your Mendix team can work with these individuals to help understand, define, and refine their role, the value proposition for high ROI, etc.
+* **Executive Sponsors:** Success starts at the top, where senior executive buy-in is a must. These are the top-level executives, ideally representing both the Business/Operations and IT, who are willing to be engaged periodically to provide oversight and steering-committee level guidance. These people won’t necessarily be involved day-to-day, but they understand the big picture vision of how Mendix will help the enterprise achieve its digital transformation and low-code goals, how it fits to ‘play nicely’ with other technology stacks and tools like Microsoft’s ADO or Power Apps, and what the transformational value is expected. Your Mendix team can work with these individuals to help understand, define, and refine their role, the value proposition for high ROI, etc.
 
 * **Program Owner:**  You need a person to lead the program and mandate/enable change; who generates excitement about the importance of this transformation and can inspire people to *want* to participate. This person is directly responsible for the overall success of the platform’s implementation, bringing impactful apps to fruition, ensuring value targets are defined and tracked, and that the teams are properly assigned and allocated for success. 
 
-It’s common for Program Owners to work very closely with their Mendix CSMs to define and implement success plans and to evolve those plans over time to ensure ever-increasing returns and solid value. For smaller organizations, this person may also be part of the Core Team;
-for larger organizations, it’s common for this person to be a part of the Center of Excellence leadership team or to be a dedicated senior resource overseeing global success. Areas of responsibility include assurance of proper architectural and governance guidelines/adherence,
-successful regional and global rollouts, successful team growth/training/enablement plans, KPI definition and tracking, etc.  
+It’s common for Program Owners to work very closely with their Mendix CSMs to define and implement success plans and to evolve those plans over time to ensure ever-increasing returns and solid value. For smaller organizations, this person may also be part of the Core Team; for larger organizations, it’s common for this person to be a part of the Center of Excellence leadership team or to be a dedicated senior resource overseeing global success. Areas of responsibility include assurance of proper architectural and governance guidelines/adherence, successful regional and global rollouts, successful team growth/training/enablement plans, KPI definition and tracking, etc.  
 
-* **Center of Excellence Lead (COE Lead):** Generally, larger organizations implement a Mendix COE to help define and enforce good governance, development, and enablement practices that can evolve with the business and technological changes for overall platform and program success throughout the enterprise over time. The COE Lead ensures the Mendix COE is properly staffed to support, oversee and enable development teams, and ensures the products produced are of high-quality following best practices for high re-usability,
-maintainability and return on investment. This person generally has sufficient senior-level technical and managerial skills to oversee the COE’s Enterprise and Solution Architects, DevOps technical leads, trainers and mentors, and other experienced staff.
+* **Center of Excellence Lead (COE Lead):** Generally, larger organizations implement a Mendix COE to help define and enforce good governance, development, and enablement practices that can evolve with the business and technological changes for overall platform and program success throughout the enterprise over time. The COE Lead ensures the Mendix COE is properly staffed to support, oversee and enable development teams, and ensures the products produced are of high-quality following best practices for high re-usability, maintainability and return on investment. This person generally has sufficient senior-level technical and managerial skills to oversee the COE’s Enterprise and Solution Architects, DevOps technical leads, trainers and mentors, and other experienced staff.
 
 **Product owners** are key players to a successful program, because they’ll have in-depth knowledge of the business, the product, and its users, and will have insight into the value that it will create. If possible, make sure that your first product owner comes from your own organization and is familiar with the problem you are setting out to solve with your first application. Product owner is not really a leadership role, but the choice of a product owner is crucial for the success of your first app, which is why we touch on it here. can POs are also a part of the agile scrum team, so we will mention them again in section 4.2.
 
-**Architects** will help establish a target architecture,
-infrastructure, and governance. 
+**Architects** will help establish a target architecture, infrastructure, and governance. 
 
 Finally, an **application development manager** needs to spearhead the initiative and drive the program and the cross-functional teams who will deliver on those projects. 
 
 **The blueprint to build your first Mendix team**
 
-We’ve created the blueprint for building your first Mendix team,
-assessing that team, and showing how it can grow and collaborate with the business and other departments within your organization. 
+We’ve created the blueprint for building your first Mendix team, assessing that team, and showing how it can grow and collaborate with the business and other departments within your organization. 
 
 **Find problem solvers** 
 
@@ -237,16 +221,13 @@ attitude who can be change evangelists. 
 
 Traditional developers (with experience in programming languages such as C#, Python, Java, etc.) are usually very quick to grasp Mendix as well. Here you might want to look for people who are more outcome-oriented and love adding new tools to their toolbox.
 
-That said, don’t get too hung up on job roles — you also need people who want to test their limit and have some technical proficiency, but also understand business challenges. A host of individuals that we’ve seen successfully make the transition come from business analysis, UX,
-front-end web design, and business intelligence backgrounds. 
+That said, don’t get too hung up on job roles — you also need people who want to test their limit and have some technical proficiency, but also understand business challenges. A host of individuals that we’ve seen successfully make the transition come from business analysis, UX, front-end web design, and business intelligence backgrounds. 
 
 In the end, selecting the right team and arming them for success is the cornerstone of success, not just for your first project but for your entire rapid application development program. 
 
 **A who’s who** 
 
-It’s important to keep your team small as you build your Mendix Center of Excellence (your central repository of development expertise,
-reusable components, and governance guidance that business teams can access as they build their specialized solutions). With a small team,
-you can deliver new applications quickly, avoiding much of the miscommunication and delays that often come with larger development teams. Smaller teams encourage productivity and creativity. Amazon CEO Jeff Bezos’ “two pizza rule” states that you should never have a meeting where two pizzas couldn’t feed the entire group. The smaller the team, the more room for brainstorming and peer review. 
+It’s important to keep your team small as you build your Mendix Center of Excellence (your central repository of development expertise, reusable components, and governance guidance that business teams can access as they build their specialized solutions). With a small team, you can deliver new applications quickly, avoiding much of the miscommunication and delays that often come with larger development teams. Smaller teams encourage productivity and creativity. Amazon CEO Jeff Bezos’ “two pizza rule” states that you should never have a meeting where two pizzas couldn’t feed the entire group. The smaller the team, the more room for brainstorming and peer review. 
 
 **Mendix developers come with all types of skill-sets** 
 
@@ -262,15 +243,13 @@ It ditches the division between those departments to get rid of unnecessary know
 
 One important concept to embrace for your process (if you haven’t already) is the **Minimum Viable Product (MVP)**. MVP is a version of an application with just enough features to be usable by early customers who can then provide feedback for future development. 
 
-Minimum viable products are meant to be incomplete by nature, with the goal of delivering value quickly, then figuring out next requirements and iterating on them based on the input from actual users. This ensures that the application will provide the right user experience and achieve the goals you set. It is easier said than done, though,
-and the change in the way of working takes a bit of time to get used to. If you haven’t involved your end users into the process before, it may feel like an extra task that is slowing you down but trust the process — getting their input early on will save you many costly changes down the road. And just because something is not a part of the MVP, does not mean it won’t be delivered just a couple of days or weeks later, since this way of working enables lighting fast iterations!
+Minimum viable products are meant to be incomplete by nature, with the goal of delivering value quickly, then figuring out next requirements and iterating on them based on the input from actual users. This ensures that the application will provide the right user experience and achieve the goals you set. It is easier said than done, though, and the change in the way of working takes a bit of time to get used to. If you haven’t involved your end users into the process before, it may feel like an extra task that is slowing you down but trust the process — getting their input early on will save you many costly changes down the road. And just because something is not a part of the MVP, does not mean it won’t be delivered just a couple of days or weeks later, since this way of working enables lighting fast iterations!
 
 **Put a governance structure in place** 
 
 A core element to success is repeating it. Repeated success leads to and informs your governance around rapid application development. You need to define and implement processes and rules around application development that help you coordinate and control your application portfolio. 
 
-Governance is creating a centralized hub where you establish best practices around agile and scrum, UI/UX, and guidelines around build,
-deployment, and architecture as well as security/compliance. You’re assigning the people on your team responsibilities around these best practices. 
+Governance is creating a centralized hub where you establish best practices around agile and scrum, UI/UX, and guidelines around build, deployment, and architecture as well as security/compliance. You’re assigning the people on your team responsibilities around these best practices. 
 
 #### 2.3.4 Platform: Tying All These Pieces Together With a Pure Low-Code Platform 
 As you hurtle towards digital execution, the Rapid Application Development platform you choose shouldn’t just be about new technology trends, like Artificial Intelligence, Big Data, or Blockchain, or whatever comes down the line. You need a platform that also helps you improve operational efficiency, reduce time-to-market, and foster collaboration between Business and IT. Something that addresses the present and prepares you for the future. Seek out a platform that helps you not only deliver faster, but more accurately, so that you can produce robust applications in a matter of weeks.
@@ -387,25 +366,19 @@ By the end of this module, you will be able to: 
 <span class="mark"\[Resources for this lecture Vision Preparation Questions PDF\]</span
 
 We encourage you to take the time to develop a clear vision for low-code development in your organization. It is critical to the success of your low-code change initiative because it takes the guesswork out of people trying to understand what you want to achieve.
-Low-code shouldn't (and frankly, doesn't) operate in its own universe,
-so the vision should be aligned and contribute to other visions,
-values, strategies, and initiatives that are already in motion in your organization.
+Low-code shouldn't (and frankly, doesn't) operate in its own universe, so the vision should be aligned and contribute to other visions, values, strategies, and initiatives that are already in motion in your organization.
 
-There is a wide variety of ideas and opinions regarding the length,
-form, structure, and scope of a vision. And your vision should reflect your company's culture. We have compiled **a set of guidelines and recommendations to help you in defining your vision**. Some are widely recognized as best practices, and others are based on our extensive experience. Your Mendix Transformation Manager, Digital Business Advisor, or Customer Success Manager will be able to support you in this endeavor. And if you have defined your low code vision already,
-now is the perfect time to revisit it and make sure you are happy with it. 
+There is a wide variety of ideas and opinions regarding the length, form, structure, and scope of a vision. And your vision should reflect your company's culture. We have compiled **a set of guidelines and recommendations to help you in defining your vision**. Some are widely recognized as best practices, and others are based on our extensive experience. Your Mendix Transformation Manager, Digital Business Advisor, or Customer Success Manager will be able to support you in this endeavor. And if you have defined your low code vision already, now is the perfect time to revisit it and make sure you are happy with it. 
 
 1\. **Preparation**
 
 This step requires some analysis and time investment. Reference company documents and talk to your team and other key stakeholders on the business and technology side.
 
-It is key to ensuring alignment and contribution to other visions,
-values, strategies, and initiatives that are already in place in your organization. We have included a list of useful questions to consider in the supporting content for the preparation task (you can find this in the resources, at the top of this page).
+It is key to ensuring alignment and contribution to other visions, values, strategies, and initiatives that are already in place in your organization. We have included a list of useful questions to consider in the supporting content for the preparation task (you can find this in the resources, at the top of this page).
 
 2\. **First iteration: Mind map / brainstorm**
 
-Start exploring the areas that you want to transform. We recommend thinking along the lines of the 5 P’s – People, Process, Platform,
-Portfolio, Promotion – because these cover all the aspects you need when undergoing a transformation. This also ties well into other tools we use such as the Maturity Assessment, which is also grouped according to the 5 P’s.
+Start exploring the areas that you want to transform. We recommend thinking along the lines of the 5 P’s – People, Process, Platform, Portfolio, Promotion – because these cover all the aspects you need when undergoing a transformation. This also ties well into other tools we use such as the Maturity Assessment, which is also grouped according to the 5 P’s.
 
 Imagine how you want those areas to look like in 3-4 years. That timeframe is the perfect balance between realistic and achievable and it gives you the chance to work on different aspects simultaneously.
 More than that and it's too far in the future, too fuzzy, you can't know what the world will look like in 10 years. Too short and there's not enough time to do something impactful – it won't be inspirational.
@@ -454,8 +427,7 @@ You may choose to have town halls or an all-hands to present it in person. Other
 ### Lecture 3.2 Build Your Getting Started Plan 
 As the primary person responsible for the implementation of Mendix within your organization, it’s critical to have a plan for getting started. So far, we’ve introduced the 5 P’s, and now it’s time to think about how each of these relates to your own organization’s success. Having a plan for getting started helps to build alignment and buy-in among your business and IT stakeholders. Your low-code vision, as discussed in the previous section, is critically important to this plan.
 
-First, work with stakeholders to align your start stage goals and key challenges. These goals should be focused on what success looks like for your team and how to measure it. Goals could be something like “At the end of Q3, we will have at least two apps live” or “We want to generate X-amount of ROI with our first application”. The start stage is all about bringing together your first team, building, deploying,
-and celebrating your first apps while defining a future portfolio vision. Keep your start-stage goals related to these topics, but customize them based on what you want to achieve. You should consider your low-code vision as the future state you are working toward, then break those into digestible goals for your getting started plan.
+First, work with stakeholders to align your start stage goals and key challenges. These goals should be focused on what success looks like for your team and how to measure it. Goals could be something like “At the end of Q3, we will have at least two apps live” or “We want to generate X-amount of ROI with our first application”. The start stage is all about bringing together your first team, building, deploying, and celebrating your first apps while defining a future portfolio vision. Keep your start-stage goals related to these topics, but customize them based on what you want to achieve. You should consider your low-code vision as the future state you are working toward, then break those into digestible goals for your getting started plan.
 
 After you’ve established your goals, think about the challenges that might get in your way and then build a mitigation plan to avoid those.
 Is your team new to working in Agile? Adopting a new way of working might be one of your challenges, and the getting started plan will need to focus on how to bring your team up to speed. Think through any factors that might hinder your progress and work with stakeholders on how you’ll tackle them together.
@@ -485,8 +457,7 @@ Here are some ideas:
 * Gather relevant stakeholders to show progress 
 * Share the success at company meeting or in newsletters 
 The final step of your getting started plan involves capturing your 5
-P milestones and building a timeline. Below are some examples that we use frequently with Mendix customers that you can take and make your own: Add details, and overlay dates appropriate for your organization,
-etc. Work independently or work with your customer success manager to think through what this might look like for you.
+P milestones and building a timeline. Below are some examples that we use frequently with Mendix customers that you can take and make your own: Add details, and overlay dates appropriate for your organization, etc. Work independently or work with your customer success manager to think through what this might look like for you.
 
 {{< figure src="image/path" class="image-border"  >}}image7.png"
 style="width:6.5in;height:3.48958in" /
@@ -497,8 +468,7 @@ style="width:6.51042in;height:3.66211in" /
 ### Lecture 3.3 Start Your Mendix Portfolio 
 Now let’s focus on developing your portfolio. Portfolio Management is a top-down process led by a portfolio manager and decision-makers. Its main purpose is to assess potential initiatives and ensure they align with business goals. Initiatives that don't meet the criteria are excluded from consideration.
 
-To make sure that the strategy is reflected in the initiatives, you need to put into place a program to ensure vision alignment at every level,
-across every department. At this level, program owners or managers empower collaboration across departments. This will ensure that every solution will always meet the criteria and support the goals of the vision. It’s about trying to create software that delivers immediate value, which requires input from and collaboration with many people across your organization.
+To make sure that the strategy is reflected in the initiatives, you need to put into place a program to ensure vision alignment at every level, across every department. At this level, program owners or managers empower collaboration across departments. This will ensure that every solution will always meet the criteria and support the goals of the vision. It’s about trying to create software that delivers immediate value, which requires input from and collaboration with many people across your organization.
 
 Portfolio Management starts at the company level, where strategy is defined. The company strategy leads to a Portfolio Vision, which is translated into a backlog and budget for all initiatives. 
 
@@ -510,8 +480,7 @@ These could include solutions to migrate from legacy apps, improve customer expe
 
 You should have already created your portfolio in lecture 2.5, if you haven’t yet let’s start by creating your Portfolio board, you can do that by going [here](https://portfolio.mendix.com/), clicking Open Portfolio Management and then click **Create Portfolio.**You can make it restricted for the time being (that means you will have to approve other people before they gain access to it).  
 
-If you have done a portfolio workshop already and maybe have your list of initiatives in an Excel file, you can easily import them. If not,
-just create a few cards that represent your ideas. Your Mendix team can also help you with this, so please do not hesitate to reach out to them to go over everything together.
+If you have done a portfolio workshop already and maybe have your list of initiatives in an Excel file, you can easily import them. If not, just create a few cards that represent your ideas. Your Mendix team can also help you with this, so please do not hesitate to reach out to them to go over everything together.
 
 Portfolio management is a key activity that ensures you are always creating solutions that bring the most value to your organization (and since we’re talking Mendix here, this is where you also decide if Mendix is the right tool for each one of the ideas). This means that you (maybe together with your stakeholders) need to go over your main portfolio, keep initiatives up to date and adjust or reprioritize if needed. You can learn a lot more about this process in the dedicated guide . For now, the most important thing is to list the initiatives that are top of mind for you and use that input to choose the ideal first app. 
 
@@ -524,8 +493,7 @@ style="width:6.5in;height:3.00117in" /
 
 It’s important that your first applications bring immediate value upon launch, because rapid application development isn’t just about delivering rapidly, it’s about realizing value quicker than you have before. 
 
-We recommend that you start with adding at least three applications ideas to your portfolio. While the first success is always important,
-to truly grasp the new rapid application development process and the Mendix platform, developing multiple apps and demonstrating repeated success is a best practice. 
+We recommend that you start with adding at least three applications ideas to your portfolio. While the first success is always important, to truly grasp the new rapid application development process and the Mendix platform, developing multiple apps and demonstrating repeated success is a best practice. 
 
 As for your very first project, you want to pick a use case out of your portfolio that is equal parts meaningful and doable. A great first project is something that impacts the enterprise positively but can be completed by a relatively small team in a reasonable timeframe. 
 
@@ -535,16 +503,13 @@ Here’s a **quick checklist of things to consider when choosing your first appl
 
 **Make them worthy:** The first application should also be highly visible within the organization. It must have the right urgency and executive support, and also deliver tangible business value. Select an app idea where you’re sure the results will get noticed and the success will be shared by your stakeholders. 
 
-**Involve business stakeholders:** Requirements are often unclear and need to be refined through collaboration with, and feedback from,
-business stakeholders. The goal is to illustrate the higher level of creativity and collaboration facilitated by this new rapid application development approach.   The key to involving business stakeholders lies with the role of the product owner. The product owner knows what needs to be built. Application success is achieved when the development team and product owner work together with a passion for making applications that deliver value. 
+**Involve business stakeholders:** Requirements are often unclear and need to be refined through collaboration with, and feedback from, business stakeholders. The goal is to illustrate the higher level of creativity and collaboration facilitated by this new rapid application development approach.   The key to involving business stakeholders lies with the role of the product owner. The product owner knows what needs to be built. Application success is achieved when the development team and product owner work together with a passion for making applications that deliver value. 
 
-**Limit dependencies:** External factors over which you have little,
-or no control can quickly diminish the productivity advantage offered by the Mendix platform. That’s like using a permanent marker on a brand-new whiteboard. 
+**Limit dependencies:** External factors over which you have little, or no control can quickly diminish the productivity advantage offered by the Mendix platform. That’s like using a permanent marker on a brand-new whiteboard. 
 
 **Don’t get bogged down in requirements:** Digital innovation projects are often marked by unclear business requirements. Don’t worry; this is a good thing, because it is better to define a high-level goal or purpose versus having detailed requirements. The more requirements your first applications have upfront, the longer it’s going to take to release. Make sure that you have at least two follow-up iterations planned so that you can capture and refine requirements and build trust with the business stakeholders. This shows them that even if their requirements don’t make it into the initial MVP, they will come in the next versions. 
 
-**Make failures into wins:** It’s ok to admit defeat. In this case,
-it’s actually beneficial. It may sound contradictory, but good first applications are often ones that your organization previously failed to deliver.
+**Make failures into wins:** It’s ok to admit defeat. In this case, it’s actually beneficial. It may sound contradictory, but good first applications are often ones that your organization previously failed to deliver.
 
 
 For instance, a Mendix customer initially failed to build an application that calculates prices because the algorithm was so specific to the business, and the .NET developer couldn’t grasp all the nuances. Using Mendix, business stakeholders and IT developers were able to take that failure and turn it into a win, collaborate much more closely, and successfully deliver a first version of the application in a few days. 
@@ -555,8 +520,7 @@ For instance, a Mendix customer initially failed to build an application that ca
 
 Using the complexity matrix is a great way to assess the right projects for your Start stage portfolio. 
 
-**Exposure** is the amount of usage or availability an application has. **Complexity** can be defined as how technically complex the application is; i.e., how many integrations does the application require? You want to start on the left-hand side of the quadrant,
-which represents your team learning and feeling comfortable with the new way of working. 
+**Exposure** is the amount of usage or availability an application has. **Complexity** can be defined as how technically complex the application is; i.e., how many integrations does the application require? You want to start on the left-hand side of the quadrant, which represents your team learning and feeling comfortable with the new way of working. 
 
 {{< figure src="image/path" class="image-border"  >}}image11.png"
 style="width:6.5in;height:6.57431in"
@@ -687,15 +651,13 @@ Mendix applications can be deployed in different ways, mainly:
 1.  Public 
 2.  Private 
 3.  On-premise 
-**Mendix Public Cloud** is the default deployment option and has the advantage of being a fully integrated solution, with easy setting up and administrating. When developing your first application and if there are no specific (private) cloud constraints, it makes sense to choose the user friendly Mendix Cloud option. Within Mendix Cloud,
-there are options for multi-tenant cloud environments and single-tenant cloud environments. Deploying to Mendix Cloud gives you the shortest time-to-value.
+**Mendix Public Cloud** is the default deployment option and has the advantage of being a fully integrated solution, with easy setting up and administrating. When developing your first application and if there are no specific (private) cloud constraints, it makes sense to choose the user friendly Mendix Cloud option. Within Mendix Cloud, there are options for multi-tenant cloud environments and single-tenant cloud environments. Deploying to Mendix Cloud gives you the shortest time-to-value.
 
 Mendix can also be deployed to any cloud platform which supports a version of Cloud Foundry. With **Mendix for Private Cloud**, you can choose the cloud provider of your preference, e.g. your own Azure or AWS infrastructures. If there already is access to an on-premise hosting environment, Mendix can also be deployed on-premise.
 
 When setting up your deployment strategy, it is important to look at the features that are needed, as some features that rely on the target platform can work differently.
 
-If your organization is deploying on **Private Cloud or on-prem**,
-please **make sure that you are ready to take on the effort and responsibility of managing all hosting and support of the application deployments**.
+If your organization is deploying on **Private Cloud or on-prem**, please **make sure that you are ready to take on the effort and responsibility of managing all hosting and support of the application deployments**.
 
 For a list of all the deployment options that are available, see:
 [/developerportal/deploy/](/developerportal/deploy/). 
@@ -732,8 +694,7 @@ When training in-house, we recommend choosing individuals who either have a trad
 
 1.  **Mendix partner**
 
-1.  Bring in one of our certified Mendix partners to support your app development.  Our directory of partners is listed [here](https://developerprofiles.mendix.com/link/partneroverview),
-but your Mendix team is a great resource to identify a good fit for you.
+1.  Bring in one of our certified Mendix partners to support your app development.  Our directory of partners is listed [here](https://developerprofiles.mendix.com/link/partneroverview), but your Mendix team is a great resource to identify a good fit for you.
 
 This can be a great option to get your project kick-started, or if you have no future goals of building out your internal development team.
 
@@ -788,8 +749,7 @@ By the end of this module, you will be able to: 
 Defining and honing your development process is a critical factor in program success. By nature of low-code, **the [Agile Framework](https://www.mendix.com/agile-framework/) is the best way to work with Mendix.**
 
 Understanding how to work in Agile allows organizations to [stay responsive to change](https://s2.bl-1.com/h/i/dtfq477y/xKsSFL1?url=https://www.mendix.com/blog/design-thinking-vs-agile-combine-problem-finding-problem-solving-better-outcomes/)
-and reduce time-to-market by nearly 50%. Mendix highlights these benefits by providing capabilities such as sprints, story management,
-and integrated feedback management within the platform itself.
+and reduce time-to-market by nearly 50%. Mendix highlights these benefits by providing capabilities such as sprints, story management, and integrated feedback management within the platform itself.
 
 In the Academy, you can find an [Agile Awareness guide](https://academy.mendix.com/link/paths/110/Agile-Awareness)
 that you can use to train your team in the Agile Framework and how it will define your Mendix journey. 
@@ -834,8 +794,7 @@ characteristics.](https://www.mendix.com/blog/5-important-product-owner-skills-f
 
 * May be comprised of non-developers and traditional developers alike: architects, writers, technical BAs, designers, and other specialized roles can all be part of the development team. 
 
-* Work with the SM in the key Scrum activities of sprint planning,
-sprint review, retrospectives and daily standups to keep their assigned tasks on track with high-quality code during each sprint, while working towards continuous improvement as a team.
+* Work with the SM in the key Scrum activities of sprint planning, sprint review, retrospectives and daily standups to keep their assigned tasks on track with high-quality code during each sprint, while working towards continuous improvement as a team.
 
 **Accelerators:**
 
@@ -843,8 +802,7 @@ sprint review, retrospectives and daily standups to keep their assigned tasks on
 
 * **The Business Owner** is the primary stakeholder who is ultimately responsible and accountable for the end-result of the project and product including the actual value delivered. 
 
-* **Stakeholders** are the end-users of the product under development,
-represent strategical, tactical, and operational levels of the business. 
+* **Stakeholders** are the end-users of the product under development, represent strategical, tactical, and operational levels of the business. 
 
 Your team does not have to fit this exact mold, but it is important that all the responsibilities outlined here are covered to ensure success in your low-code program. Here’s a typical team structure:
 
@@ -861,8 +819,7 @@ style="width:6.5in;height:3.6519in" /
 ### Lecture 4.3 Arrange Academy Training for Your Team 
 As you begin to map out your Mendix team, it's important to establish a training plan. Properly training your Mendix team helps accelerate your time to first value and promotes long-term low-code success. It helps each team member take charge of their own success and the overall team’s success.
 
-Take the time to familiarize yourself with the [Mendix Academy](https://academy.mendix.com/link/home). Here, we provide a variety of guides and individual courses for various roles and diverse backgrounds to allow you to customize the learning journey appropriate for each team member and role. Once you are familiar with the various guides, diverse topics and individual courses,
-create a training plan with each team member based on their role and experience. 
+Take the time to familiarize yourself with the [Mendix Academy](https://academy.mendix.com/link/home). Here, we provide a variety of guides and individual courses for various roles and diverse backgrounds to allow you to customize the learning journey appropriate for each team member and role. Once you are familiar with the various guides, diverse topics and individual courses, create a training plan with each team member based on their role and experience. 
 
 Here is a sample you can use as a template:
 
@@ -909,8 +866,7 @@ The Expert Developer Certificate is not only proof of Mendix knowledge, it confi
 You can find information as well as required courseware for the Advanced certification [here](https://academy.mendix.com/link/certifications/24/expert). 
 
 ### Lecture 4.4 Organize Your Program Kick-Off 
-The program kick-off is important to hold before the project kick-off as this meeting ensures alignment across all groups and team members involved, from leadership to the development team, on goals, vision,
-and value.  This meeting sets the foundation for bridging business and IT as you begin your Mendix journey.
+The program kick-off is important to hold before the project kick-off as this meeting ensures alignment across all groups and team members involved, from leadership to the development team, on goals, vision, and value.  This meeting sets the foundation for bridging business and IT as you begin your Mendix journey.
 
 **Who should be there?**
 
@@ -968,8 +924,7 @@ increase transparency, and get the most ROI out of what your teams build and dep
 It will help you maximize business value at acceptable risk and cost.
 Knowing the broad strokes capabilities of the Mendix platform early on helps in getting solid early successes.
 
-When you start, the governance responsibility will probably be in the hands of your Mendix admin, but as your Mendix landscape grows you may want to define a Center of Excellence. Admins can use Control Center,
-a dashboard that gives you an overview of various company activities on the Mendix platform, to manage many of the aspects of landscape governance.  
+When you start, the governance responsibility will probably be in the hands of your Mendix admin, but as your Mendix landscape grows you may want to define a Center of Excellence. Admins can use Control Center, a dashboard that gives you an overview of various company activities on the Mendix platform, to manage many of the aspects of landscape governance.  
 {{< figure src="image/path" class="image-border"  >}}image17.png"
 style="width:6.25in;height:3.33333in" /
 
@@ -978,8 +933,7 @@ There are several advanced capabilities in the Control Center to help you manage
 * [Dashboard](/control-center/dashboard/)
 provides insight into some KPIs of how your company is advancing.
 
-* [Apps](/control-center/apps/) provides easy visibility into all apps, environments, their deployment status,
-technical contact, version, and more.
+* [Apps](/control-center/apps/) provides easy visibility into all apps, environments, their deployment status, technical contact, version, and more.
 
 * [Health dashboard](/control-center/application-health-dashboard/)
 provides an insight into the running status of your app landscape.
@@ -989,10 +943,7 @@ shows the resources you’ve bought and used.
 
 * You can add, resize or remove environments in the [Deployed apps](/control-center/deployed-apps/) view.
 
-* Additional curation settings are available for [Marketplace](/control-center/private-marketplace/),
-[Portfolios](/control-center/portfolios/),
-and [Data Catalog](/control-center/catalog-admin/),
-which apply to all your developers.
+* Additional curation settings are available for [Marketplace](/control-center/private-marketplace/), [Portfolios](/control-center/portfolios/), and [Data Catalog](/control-center/catalog-admin/), which apply to all your developers.
 
 New capabilities are released regularly, so exploring Control Center regularly is always a good idea!
 
@@ -1001,8 +952,7 @@ But as you can tell from the slide below, governance touches many aspects of the
 {{< figure src="image/path" class="image-border"  >}}image18.png"
 style="width:6.36055in;height:3.28628in" /
 
-If you would like to learn more about our governance features, you can check out the [Control Center Guide,](/control-center/) [Control center guide](https://academy.mendix.com/link/paths/116/Govern-and-Scale-your-App-Landscape-with-Mendix-Control-Center),
-or the Mendix documentation. You probably already involved your subject matter experts while you were evaluating Mendix, so they might want to do a deeper dive.
+If you would like to learn more about our governance features, you can check out the [Control Center Guide,](/control-center/) [Control center guide](https://academy.mendix.com/link/paths/116/Govern-and-Scale-your-App-Landscape-with-Mendix-Control-Center), or the Mendix documentation. You probably already involved your subject matter experts while you were evaluating Mendix, so they might want to do a deeper dive.
 
 A lot of these options will become more relevant for you as you scale your Mendix portfolio, so for now, we will just point to a couple of key settings that are important for getting started and launching your first app.
 
@@ -1014,11 +964,9 @@ style="width:0.22222in;height:0.22222in" alt="direct hit" /
 {{< figure src="image/path" class="image-border"  >}}image20.png"
 style="width:5in;height:2.19792in" /
 
-If your company has more than one email domain, all your email domains should be claimed, such as: MyCompany.com, MyCompany.nl,
-MyCompany-SpecialUnit.com etc. This is to ensure all users that do a signup with an email address on any of these domains all end-up in the same ‘company’ on the Mendix platform. If you don’t do this from the start, your users may create projects in different ‘companies’/tenants on the Mendix platform, which is hard to govern and may require cumbersome merging activities later.
+If your company has more than one email domain, all your email domains should be claimed, such as: MyCompany.com, MyCompany.nl, MyCompany-SpecialUnit.com etc. This is to ensure all users that do a signup with an email address on any of these domains all end-up in the same ‘company’ on the Mendix platform. If you don’t do this from the start, your users may create projects in different ‘companies’/tenants on the Mendix platform, which is hard to govern and may require cumbersome merging activities later.
 
-[You can read more about that,
-here.](/control-center/company-settings/#company-email-domains)
+[You can read more about that, here.](/control-center/company-settings/#company-email-domains)
 
 **Assign a security contact**  
 {{< figure src="image/path" class="image-border"  >}}image21.png"
@@ -1044,15 +992,12 @@ On the **Company Brand** page, you can upload, edit, or remove a **Company Logo*
 style="width:0.22222in;height:0.22222in" alt="direct hit" /
 
 It is recommended that you [set-up SSO](/control-center/security/set-up-sso-byoidp/)
-between the Mendix platform and your corporate IDP such as Microsoft Entra ID (f.k.a. Azure AD) or Okta.  This will put your IDP in control of how users are authenticated before they can access your content on the Mendix platform. Leavers (former employees) will not be able to login. Your platform users get the convenience of Single Sign-On,
-rather than yet-another-password. See also our [BYOIDP blog](https://www.mendix.com/blog/introducing-byoidp-bring-your-own-identity-provider/).
+between the Mendix platform and your corporate IDP such as Microsoft Entra ID (f.k.a. Azure AD) or Okta.  This will put your IDP in control of how users are authenticated before they can access your content on the Mendix platform. Leavers (former employees) will not be able to login. Your platform users get the convenience of Single Sign-On, rather than yet-another-password. See also our [BYOIDP blog](https://www.mendix.com/blog/introducing-byoidp-bring-your-own-identity-provider/).
 
-Optionally, you may set up access rules in your IDP to control which of your employees can and cannot work on the Mendix platform. As we encourage collaboration in multi-disciplined teams, be careful not to be too restrictive or not apply any restriction at all. For example,
-potential end-users of Mendix apps may want to contribute to development teams. In a later stage you can set up restrictive access rules as you start putting more business-critical IPs in the logic of your Mendix apps.
+Optionally, you may set up access rules in your IDP to control which of your employees can and cannot work on the Mendix platform. As we encourage collaboration in multi-disciplined teams, be careful not to be too restrictive or not apply any restriction at all. For example, potential end-users of Mendix apps may want to contribute to development teams. In a later stage you can set up restrictive access rules as you start putting more business-critical IPs in the logic of your Mendix apps.
 
 ### Setup password policy 
-If you don’t enable SSO, you will want to specify if the user passwords expire or not. If you do not want the passwords to expire,
-toggle **Passwords of company members never expire** to **On**.  
+If you don’t enable SSO, you will want to specify if the user passwords expire or not. If you do not want the passwords to expire, toggle **Passwords of company members never expire** to **On**.  
 
 ##  Lecture 5.3 Summary 
 Now that you know how Mendix can be tailored to your own governance needs, you are ready to get your first project started! You will find all the useful information to do this in the following module.
@@ -1118,8 +1063,7 @@ style="width:6.5in;height:3.02148in" /
 ### Lecture 6.3 Setting up the Agile Way of Working 
 Sprint Zero is all about laying the groundwork for a successful project by focusing on planning and preparation rather than immediately jumping into development. It might seem like this is a whole lot of process while the team is ready to get to building, but especially for your first project, it is crucial to set up the right process, get everyone comfortable with it and define the initial requirements — this will absolutely speed you up very soon. 
 
-Let’s start by setting up your agile ways of working. You might have defined some things already in your project kick-off, so you can start by revisiting that. Moving forward, you also need to determine which Agile practices will become your organizational standard: this could be Scrum (the Mendix platform is optimized for Scrum at team level),
-Kanban, or other variants. Creating a standard doesn't mean that all teams will be forced to work in exactly the same way, but having a shared set of practices will increase mobility between teams. The more familiar and standardized this methodology is across your organization, the tighter the collaboration will be amongst teams as team members understand expectations and roles. 
+Let’s start by setting up your agile ways of working. You might have defined some things already in your project kick-off, so you can start by revisiting that. Moving forward, you also need to determine which Agile practices will become your organizational standard: this could be Scrum (the Mendix platform is optimized for Scrum at team level), Kanban, or other variants. Creating a standard doesn't mean that all teams will be forced to work in exactly the same way, but having a shared set of practices will increase mobility between teams. The more familiar and standardized this methodology is across your organization, the tighter the collaboration will be amongst teams as team members understand expectations and roles. 
 
 However, it should be noted that your agile methodology should remain lightweight and flexible to keep administrative burden as low as possible while maximizing the benefits to your organization. The way of working should suit the team's needs, so that they can get the best out of themselves. Take a pragmatic approach so that this can be discovered progressively. 
 
@@ -1134,9 +1078,7 @@ Regardless of Agile methodology, some of the practices that you can consider sta
 * Team retrospectives 
 Care should be taken to incorporate feedback from team retrospectives and other Agile ceremonies into your standards as part of your continuous improvement process. That includes reviewing and analyzing any shortcuts taken or other deviations from the standard process to understand why it was necessary and potentially consider adapting your standards or putting another appropriate measure in place.
 
-Development teams can work most efficiently if requirements are clearly described (e.g. in user stories), to estimate the effort and implementation. Because of this, it is important that you choose a tool in which these can be tracked. The Mendix platform offers a collaborative tool called [Epics](https://www.mendix.com/blog/mendix-projects-and-the-wizardry-of-epics/),
-in which this is possible. Here you can manage the backlog, epics,
-create user stories, and of course sprints. Both the Agile and Kanban methods are supported.
+Development teams can work most efficiently if requirements are clearly described (e.g. in user stories), to estimate the effort and implementation. Because of this, it is important that you choose a tool in which these can be tracked. The Mendix platform offers a collaborative tool called [Epics](https://www.mendix.com/blog/mendix-projects-and-the-wizardry-of-epics/), in which this is possible. Here you can manage the backlog, epics, create user stories, and of course sprints. Both the Agile and Kanban methods are supported.
 
 An organization that is familiar with the Agile way of working will likely already use related tools, such as JIRA. JIRA is often used for Scrum projects, which is why it is now possible to link JIRA to your Mendix Project. The Scrum Master of the project can choose between Epics or Jira in the Settings part of the project navigation, in the Project Management tab.
 
@@ -1150,8 +1092,7 @@ If at all possible, make sure the development team talks to the future end-users
 
 When defining requirements, try to not take things at face value. Your stakeholders might have a clear list of requirements, but always start by making sure that you have a shared understanding of the problem (this is what the part about defining application value was for). Then look at the various ways you can help solve that problem — maybe that first idea is not always the best one, and the way things have always been done can be adapted for maximum efficiency.
 
-Once the team has enough information, they should list the key features and functionalities that the application will offer. This could include data entry forms, workflow automation, reporting tools,
-or any other capabilities that align with the application's purpose.
+Once the team has enough information, they should list the key features and functionalities that the application will offer. This could include data entry forms, workflow automation, reporting tools, or any other capabilities that align with the application's purpose.
 Think about what the user needs to be able to do and how. 
 
 Next step is to prioritize features based on their importance to achieving the primary goal. Remember, a minimum viable product is all about achieving that initial value. Just because something is not a part of that scope, does not mean it’s considered unimportant or that it will not get done. Often things your stakeholders, or even end-users consider crucial are things they can probably live without for a couple of weeks. And if done right, your team will have a rhythm that ensures they consistently continue delivering value.
@@ -1170,8 +1111,7 @@ module for non-SSO apps.
 
 **Familiarize with the Marketplace**
 
-Low-code development may be fast, but using modules or content from the Marketplace may even be faster. You may find modules relevant to your portfolio or your first app in particular and create a shortlist for your teams.  Marketplace content may be supported by Mendix,
-Mendix partners or by the Mendix community.
+Low-code development may be fast, but using modules or content from the Marketplace may even be faster. You may find modules relevant to your portfolio or your first app in particular and create a shortlist for your teams.  Marketplace content may be supported by Mendix, Mendix partners or by the Mendix community.
 
 ### Lecture 6.6 Familiarize Yourself With Continuous Collaboration Through Mendix 
 One of the core values of the Mendix platform is continuous collaboration between business and IT. We have already shown you how that works in practice when it comes to aligning on wider strategic objectives (your low-code vision), program goals as well as your project goals. Now it’s time to see how it all works throughout the application development lifecycle. 
@@ -1219,8 +1159,7 @@ By the end of this module, you will be able to: 
 * Recognize the importance and options to maintain and upgrade your application 
 ### Lecture 7.1 Deploy Your Application 
 ### Deploy your application to the Mendix Cloud 
-Deploying your application to the Mendix Cloud is a simple process,
-that will give you access to all the features and services in the Mendix Cloud. It requires only a few steps to set it up, which you only need to do once for each application. Once the cloud settings of your application is done, you can deploy and redeploy your application with just one click.  
+Deploying your application to the Mendix Cloud is a simple process, that will give you access to all the features and services in the Mendix Cloud. It requires only a few steps to set it up, which you only need to do once for each application. Once the cloud settings of your application is done, you can deploy and redeploy your application with just one click.  
 
 Note that Mendix also offers [other deployment options](/releasenotes/developer-portal/deployment/)
 than the Mendix cloud e.g. to a private cloud if that’s a requirement.
@@ -1229,8 +1168,7 @@ than the Mendix cloud e.g. to a private cloud if that’s a requirement.
 You can deploy your application for free on the Mendix Cloud. These [Free Apps have limitations](/developerportal/deploy/mendix-cloud-deploy/#free-app)
 when it comes to run time, features and resources. You can publish Free Apps to test the Mendix platform, a specific feature of to quickly prototype an application to test an idea. Once you decide to take your application to the next-level and start serious development on it, you will need to obtain a licensed node, so this is something you will need to do before your launch.
 
-If you have an existing contract that allows for more licensed nodes,
-you can [request a new licensed node](/developerportal/deploy/licensing-apps/#31-obtaining-a-licensed-node).
+If you have an existing contract that allows for more licensed nodes, you can [request a new licensed node](/developerportal/deploy/licensing-apps/#31-obtaining-a-licensed-node).
 If you don’t have a contract, or if your contract doesn’t allow for more licensed nodes, contact your Customer Success Manager.
 
 ### Link your application to your licensed node 
@@ -1244,8 +1182,7 @@ When your app is unlinked from a Free App environment, you can link it to a lice
 
 ### Set node permissions 
 Once you have linked your application to a licensed node, your team needs to determine what users can perform what actions on the node.
-Who can configure an environment, who can deploy to an environment,
-who has access to the logs of an environment, etc. All of that is controlled by [node permissions](/developerportal/deploy/node-permissions/).
+Who can configure an environment, who can deploy to an environment, who has access to the logs of an environment, etc. All of that is controlled by [node permissions](/developerportal/deploy/node-permissions/).
 By default, only the Technical Contact of a node has permissions to perform any action on the licensed node. The Technical Contact can grant permissions to other members of the app team.
 
 Granting permissions to team members is dependent on your deployment strategy and process: do you have DevOps teams where the developers also deploy and monitor the apps? Or does your company have separate Ops teams, where the deployment is done by people other than the developers? You can set node permissions for each of the environments of your node, so you can grant developers to deploy the app to the Test environment, but restrict deployment permissions for the Production environment to a smaller team.
@@ -1265,8 +1202,7 @@ Things can you can customize for your applications in the Mendix Cloud include:
 
 * [Environment variables](/developerportal/deploy/environments-details/#custom-environment-variables)
 
-* [Services](/developerportal/deploy/environments-details/#services),
-such as [the Event Broker service](/appstore/services/business-events/#mendix-event-broker)
+* [Services](/developerportal/deploy/environments-details/#services), such as [the Event Broker service](/appstore/services/business-events/#mendix-event-broker)
 
 ### Deploy your application 
 Once you have linked and configured your Mendix Cloud node, which you only have to do once, you can start deploying your application to the Mendix Cloud. It is recommended that you deploy any new version of your application to the Test or Acceptance environment of your application first for testing, before deploying it to the Production environment.
@@ -1287,8 +1223,7 @@ Before launching your first application, it is important to thoroughly test the 
 It’s simple — always get your end users to actually try out the app before the go-live. This will give you the chance to catch any last-minute bugs and make sure your app is meeting (and exceeding)
 user expectations. 
 
-Mendix feedback module makes it super easy to organize user acceptance tests, all you need to do is to select the environment you want to do this in, make sure the feedback module is set up there, inform your end-users that you need their help and give them information on how to log in and how to provide feedback (maybe you want them to test specific scenarios you would give them on advance, or just let them play around themselves and give feedback on anything they notice might need to be changed). Then your development team will be able to fix any issues and respond to questions that might arise. Keep in mind that they might need extra time to tackle this feedback, so be sure you get user input at least a week before your planned go live date,
-preferably even longer. 
+Mendix feedback module makes it super easy to organize user acceptance tests, all you need to do is to select the environment you want to do this in, make sure the feedback module is set up there, inform your end-users that you need their help and give them information on how to log in and how to provide feedback (maybe you want them to test specific scenarios you would give them on advance, or just let them play around themselves and give feedback on anything they notice might need to be changed). Then your development team will be able to fix any issues and respond to questions that might arise. Keep in mind that they might need extra time to tackle this feedback, so be sure you get user input at least a week before your planned go live date, preferably even longer. 
 
 ### Lecture 7.4 Launch and Promote Your Application 
 Congratulations! If you made it this far, you’ve most likely launched your first Mendix app and have already started delivering value for your organization. You’ve probably tried doing things a bit differently than before and your team, as well as your whole organization, learned a lot along the way. To ensure continued success, here are a couple of things you need to think about now.

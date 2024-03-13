@@ -17,13 +17,15 @@ Mendix now utilizes authentication tokens instead of earlier approaches for long
 
 ### 2.1 Enable Authentication Token
 
-We now support a new core client login API, `login2`, that allows you to pass an extra parameter, `useAuthToken`. You can pass `true` to enable authentication token or `false` to disable it. When the runtime receives this parameter during the login action, it adds an HttpOnly cookie `useAuthToken` indicating that an authentication token should be generated in the later `get_session_data` action.
+We now support a new core client login API, `login2`, that allows you to pass an extra parameter, `useAuthToken`. You can pass `true` to enable authentication token or `false` to disable it. When the runtime receives this parameter during the login action, it adds an HttpOnly cookie `useAuthToken` indicating that an authentication token should be generated during the client startup.
 
 With the introduction of this new core login API, You can begin modeling your login page to utilize the authentication token. Additionally, you can provide end users the option to decide whether they want to be remembered or not.
 
 ### 2.2 Authentication Token Generation
 
-When the runtime receives the `get_session_data`, it checks the existence of the `useAuthToken` cookies. If present, it adds an additional HttpOnly cookie holding the generated unique authentication token `authtoken`. This token is then used in the subsequent actions to authenticate the user and extend the session upon its expiration.
+When the runtime receives the `get_session_data` request, it checks the existence of the `useAuthToken` cookies. If present, it adds an additional HttpOnly cookie holding the generated unique authentication token `authtoken`. This token is then used in the subsequent actions to authenticate the user and extend the session upon its expiration.
+
+This approach enhances security, as these cookies are inaccessible to anything other than the server.
 
 ### 2.3 Authentication Token Expiry
 
@@ -34,14 +36,6 @@ There is a custom runtime setting, `com.mendix.webui.HybridAppLoginTimeOut` that
 ### 3.1 Native and Offline PWA Applications
 
 This feature maintains backward compatibility, so we preserve the previous session management approach for existing applications. For upgraded offline applications, whether native or web, that currently use the old login API, `login`, are now supposed to use the new authentication token system by default. You can always disable this behaviour by using the new API, login2, and setting the useAuthToken parameter to false.
-
-### 4.1 Offline PWAs
-
-The key change is that Mendix now use authentication tokens to reinitialize the session  instead of the previous approach of keeping the users logged in for a longer period.
-
-### 5.1 Native
-
-The key change is that Mendix now use HTTPOnly cookie to hold the authentication token instead of storing it on the device. This enhances security, as these cookies are inaccessible to anything other than the server.
 
 ### Client-Runtime Session Management Flow
 

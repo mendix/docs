@@ -115,39 +115,21 @@ Mendix is the platform that helps you turn ideas into outcomes. It contains all 
 
 **Here are some resources to help familiarize yourself with the Mendix platform: **
 
-* The [“Mendix](https://academy.mendix.com/link/modules/78/lectures/504/1.3-Mendix-Ecosystem)Ecosystem”
-lecture in our Rapid Developer courseoffers a short description of each of the elements of the platform relevant for developers together with useful links. 
+* The [“Mendix Ecosystem”](https://academy.mendix.com/link/modules/78/lectures/504/1.3-Mendix-Ecosystem) lecture in our Rapid Developer courseoffers a short description of each of the elements of the platform relevant for developers together with useful links. 
 
-
-
-* The [Developer Portal Guide](/developerportal/)will help you explore the Developer Portal: the central location to collaborate, deploy, and manage your Mendix apps.
+* The [Developer Portal Guide](/developerportal/) will help you explore the Developer Portal: the central location to collaborate, deploy, and manage your Mendix apps.
 
 **Also, don’t forget to bookmark your “Favorites”! **
 
-[**Mendix Support**](https://support.mendix.com/hc/en-us)
+* [**Mendix Support**](https://support.mendix.com/hc/en-us): Tickets, issues, incidents
+* [**Mendix Academy**](https://academy.mendix.com/index3.html): Certifications and trainings 
+* [**Mendix Forum**](https://forum.mendix.com/p/questions): Online community 
+* [**Mendix Blog**](https://www.mendix.com/blog/): Articles and trending topics 
+* [**Mendix Docs**](/): Platform documentation 
+* [**Mendix Partner Hub**](https://www.mendix.com/partners/): Explore our Partner Network 
+* [**Siemens Annual Reports**](https://www.siemens.com/global/en/company/investor-relations/events-publications-ad-hoc/annualreports.html?gclid=CjwKCAjwzo2mBhAUEiwAf7wjkpk1onH3tK1d_kOzGxjbQa5MTFF91cbKKfp7a6F3AS8mDpov1_M6choCbE8QAvD_BwE&acz=1): Financial, corporate governance, sustainability 
+* [**Mendix Marketplace**](https://marketplace.mendix.com/): Modules and other content provided by Mendix, partners or the community 
 
-Tickets, issues, incidents 
-[**Mendix Academy**](https://academy.mendix.com/index3.html)
-
-Certifications and trainings 
-[**Mendix Forum**](https://forum.mendix.com/p/questions)
-
-Online community 
-[**Mendix Blog**](https://www.mendix.com/blog/)
-
-Articles and trending topics 
-[**Mendix Docs**](/)
-
-Platform documentation 
-[**Mendix Partner Hub**](https://www.mendix.com/partners/)
-
-Explore our Partner Network 
-[**Siemens Annual Reports**](https://www.siemens.com/global/en/company/investor-relations/events-publications-ad-hoc/annualreports.html?gclid=CjwKCAjwzo2mBhAUEiwAf7wjkpk1onH3tK1d_kOzGxjbQa5MTFF91cbKKfp7a6F3AS8mDpov1_M6choCbE8QAvD_BwE&acz=1)
-
-Financial, corporate governance, sustainability 
-[**Mendix Marketplace**](https://marketplace.mendix.com/)
-
-Modules and other content provided by Mendix, partners or the community 
 ### Lecture 2.3 Introduction to Digital Execution Practice (DEP): the 3 S’s and the 5 P’s 
 **The 3 S’s of Digital Execution Practice: Start, Structure and Scale**
 

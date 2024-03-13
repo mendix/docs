@@ -9,7 +9,7 @@ tags: ["Portfolio Management"]
 
 ## 1 Introduction
 
-The [Portfolio Management](https://portfolio.mendix.com) tool is available to all Mendix customers. It enables staying informed about initiatives and managing them in the different development stages. It provides portfolio managers, business stakeholders, and developers with everything they need to collaborate effectively in one place and bring new initiatives to the Mendix Platform. To start the Portfolio Management app, go to the Developer Portal, open the [Switch to menu](/developerportal/), and select **Portfolio**.
+The [Portfolio Management](https://portfolio.mendix.com) tool is available to all Mendix customers. It enables staying informed about initiatives and managing them in the different development stages. It provides portfolio managers, business stakeholders, and developers with everything they need to collaborate effectively in one place and bring new initiatives to the Mendix Platform. To start the Portfolio Management app, go to the Developer Portal, open the [Global Navigation menu](/developerportal/) ({{% icon name="layout-rounded-1-filled" %}}), and select **Portfolio**.
 
 ## 2 Portfolio Landscape Overview {#portfolio-landscape}
 
@@ -86,7 +86,7 @@ The **Initiatives Overview** page gives an overview of all the initiatives in th
 
 In the search box on the top, you can search for an initiative by the initiative name.
 
-On the upper-right corner, you can use the drop-down list to [change the view](#change-view). Clicking **Filters** enables you to filter initiatives and the results persist even after you change to a new view. You can [export and import Initiatives](/developerportal/portfolio-management/export-import-initiatives/) by clicking the {{% icon name="office-sheet" %}} icon, and [create a new initiative](#create-new-initiative) by clicking the **Create Initiative** button.
+On the upper-right corner, you can use the drop-down list to [change the view](#change-view). Clicking **Filters** enables you to filter initiatives, and the results persist even after you change to a new view. You can [export and import initiatives](/developerportal/portfolio-management/export-import-initiatives/) by clicking the {{% icon name="office-sheet" %}} icon, and [create a new initiative](#create-new-initiative) by clicking the **Create Initiative** button.
 
 ### 3.1 Creating a New Initiative {#create-new-initiative}
 
@@ -96,7 +96,7 @@ To create a new initiative and add details to it, do as follows:
 
 1. [Create the initiative.](#create-initiative)
 2. [Add general information.](#add-general-information)
-3. [Link Epics to an Initiative.](#link-epics)
+3. [Link Epics to an initiative.](#link-epics)
 4. [Add planning information.](#add-planning-information)
 5. [Add prioritization information.](#add-prioritization-information)
 6. [Add estimated value.](#add-estimated-value)
@@ -120,9 +120,9 @@ To add general information to your initiative, follow these steps:
 
 {{% alert color="info" %}}Some fields in this procedure have an {{% icon name="info-circle" %}} icon next to them, for example, the **Link Existing App** field. You can check out the descriptions of these fields by hovering over the {{% icon name="info-circle" %}} icons.{{% /alert %}}
 
-1. In the **Edit Initiative** side pane, select the status of your inititive, it can be **On Track**, **At Risk**, or **Off Track**.
+1. In the **Edit Initiative** side pane, select the status of your initiative: **On Track**, **At Risk**, or **Off Track**.
 
-2. Select **Tags** for the initiative. You can use tags to classify your initiatives, for example by types. You can select existing tags or create new tags. 
+2. Select **Tags** for the initiative. You can use tags to classify your initiatives; for example, you can classify them by type. You can select existing tags or create new tags. 
 
     {{% alert color="info" %}}For more information about how to create new tags, edit existing tags, or delete existing tags, see the [Managing Tags](#manage-tags) section.{{% /alert %}}
 
@@ -150,7 +150,7 @@ Now you can proceed to [link Epics to your initiative](#link-epics).
 
 While you are in the process of [adding general information](#add-general-information), you can manage tags as follows:
 
-In the **Edit Initiative** side pane, click the {{% icon name="cog" %}} icon next to the **Tags** text box.
+In the **Edit Initiative** side pane, click **Manage tags** ({{% icon name="cog" %}}) next to the **Tags** text box.
 
 {{< figure src="/attachments/developerportal/portfolio-management/manage-tags.png" class="image-border" max-width="80%" >}}
 
@@ -167,8 +167,8 @@ To create a new tag, do as follows:
 
 To edit an existing tag, do as follows:
 
-1. To change the tag name, click the name of the tag. After the name becomes editable. Edit the name in the text box, and then click outside the text box to save the change.
-2. To change the tag color, click the colored circle, and select a different color.
+1. To change the tag name, click the name of the tag. After, the name becomes editable. Edit the name in the text box, and then click outside the text box to save the change.
+2. To change the tag color, click the colored circle and select a different color.
 
 To delete an existing tag, do as follows:
 
@@ -226,7 +226,7 @@ In the **Edit Initiative** side pane, click **Planning** to show all the fields 
 * **Start Date** – the date when the first actions are taken to start implementation
 * **Go-Live date** – the date when the initiative is expected to be delivered or implemented.
 
-Now you can proceed to [add prioritization information](#add-prioritization-information).
+Now, you can proceed to [add prioritization information](#add-prioritization-information).
 
 #### 3.1.5 Adding Prioritization Information {#add-prioritization-information}
 
@@ -277,7 +277,7 @@ To change your view on the **Initiatives Overview** page, click the drop-down li
 
 #### 3.2.1 Kanban View {#kanban-view}
 
-In Kanban view, all the initiatives are represented by initiative cards, and are categorized in different columns. A column indicates the stage that an initiative is currently in. Clicking an initiative card opens a [side pane](#view-initiative) that shows initiative details. To move an initiative to a different stage, hover over the initiative card, and then click **Move Left** ({{% icon name="chevron-left" %}}) or **Move Right** ({{% icon name="chevron-right" %}}) on the left or right side of the card.
+In Kanban view, all the initiatives are represented by initiative cards and are categorized in different columns. A column indicates the stage that an initiative is currently in. Clicking an initiative card opens a [side pane](#view-initiative) that shows initiative details. To move an initiative to a different stage, hover over the initiative card, and then click **Move Left** ({{% icon name="chevron-left" %}}) or **Move Right** ({{% icon name="chevron-right" %}}) on the left or right side of the card.
 
 {{% alert type="info" %}}A Portfolio Manager can set up custom stages for initiatives on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
 
@@ -432,7 +432,7 @@ Both Portfolio Managers and Contributors can archive an initiative. Only Viewers
 To archive an initiative, perform the following steps:
 
 1. On the **Initiatives Overview** page, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) for that initiative, and then select **Archive**. Alternatively, you can also click **More Options** in the [side pane](#view-initiative) where you view initiative details, and then select **Archive**.
-2. In the dialog box that opens, select the reason why the initiative is archived: **Completed**, **Canceled**, **On Hold** or **Other Reason**, and also enter any information that other people should know about this change, and then click **Archive**.
+2. In the dialog box that opens, select the reason why the initiative is archived: **Completed**, **Canceled**, **On Hold**, or **Other Reason**. Also, enter any information that other people should know about this change. Then click **Archive**.
 
     {{< figure src="/attachments/developerportal/portfolio-management/archive-dialog-box.png" >}}
 
@@ -456,7 +456,7 @@ The list contains the following information:
 
 * **Department** – This shows the department to which the initiative belongs.
 * **Stage** – This shows which stage the initiative was in when it was archived.
-* **Archiving Reason** – This shows reason why the initiative was archived.
+* **Archiving Reason** – This shows the reason why the initiative was archived.
 * **Archived Date** – This shows the date when the initiative was archived.
 * **Archived By** – This shows the avatar of the user who archived the initiative.
 * **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) – Clicking this opens a menu that enables you to [restore](#restore-delete-archived-initiative) or [delete](#restore-delete-archived-initiative) the archived initiative.
@@ -553,7 +553,7 @@ The users that you invited receive a notification per email and now appear on th
 
 For users outside your company, they need to accept the invitation. They will appear on the **Pending Invites** tab until they accept or reject the invitation. After they accept the invitation, they will appear in the **Members** tab.
 
-For users within your company, they do not need to accept their invitation. If they have a Mendix account, they will immediately be given access and appear on the **Members** tab. If they do not have an Mendix account, they will appear on the **Pending Invites** tab. After they create a Mendix account and log in to Portfolio Management, they will immediately be given access and appear on the **Members** tab. 
+For users within your company, they do not need to accept their invitation. If they have a Mendix account, they will immediately be given access and appear on the **Members** tab. If they do not have a Mendix account, they will appear on the **Pending Invites** tab. After they create a Mendix account and log in to Portfolio Management, they will immediately be given access and appear on the **Members** tab. 
 
 #### 5.1.3 Removing Deactivated Users
 
@@ -567,9 +567,9 @@ When there are deactivated members in the portfolio, the **Remove Deactivated Us
 This tab is only visible to Portfolio Managers.
 {{% /alert %}}
 
-Users from the same company can request to join to a restricted or open portfolio.
+Users from the same company can request to join a restricted or open portfolio.
 
-For restricted portfolios you can request to join from the [Portfolio Landscape Overview](#portfolio-landscape) by clicking **Request to Join** on the portfolio card. For open portfolios you can request to join by clicking **Request to Join** on the lower-left corner after opening the portfolio. Access requests need to be approved by a Portfolio Manager. Portfolio Managers automatically get a [notification](/developerportal/global-navigation/#notifications) for a new access request.
+For restricted portfolios, you can request to join from the [Portfolio Landscape Overview](#portfolio-landscape) by clicking **Request to Join** on the portfolio card. For open portfolios, you can request to join by clicking **Request to Join** on the lower-left corner after opening the portfolio. Access requests need to be approved by a Portfolio Manager. Portfolio Managers automatically get a [notification](/developerportal/global-navigation/#notifications) for a new access request.
 
 {{< figure src="/attachments/developerportal/portfolio-management/access-requests.png" >}}
 
@@ -587,7 +587,7 @@ The **Access Requests** tab shows all open access requests for the portfolio. Yo
 This tab is only visible to Portfolio Managers.
 {{% /alert %}}
 
-When a Portfolio Manager invites a user outside the company to join the portfolio, the user gets an invite via email. The user must first accept the invite, then they can access this portfolio. Until the user accepts or rejects the invite, the invite appears on the **Pending Invites** tab. After they accept the invitation, they will appear on the **Members** tab.
+When a Portfolio Manager invites a user outside the company to join the portfolio, the user gets an invite via email. The user must first accept the invite; then they can access this portfolio. Until the user accepts or rejects the invite, the invite appears on the **Pending Invites** tab. After they accept the invitation, they will appear on the **Members** tab.
 
 The **Pending Invites** tab shows all pending invites of external users. You can search a user by their email. You can also filter users by their role. The list contains the following items:
 
@@ -634,7 +634,7 @@ On the **Portfolio Settings** page, Portfolio Managers can change the following 
 
 * **Expected Value - Types**
 
-To delete or edit an existing option for a setting, hover over the option to show the **Delete** button ({{% icon name="trash-can" %}}) or the **Edit** button ({{% icon name="pencil" %}}) at the end of row, and then click the corresponding button.
+To delete or edit an existing option for a setting, hover over the option to show the **Delete** button ({{% icon name="trash-can" %}}) or the **Edit** button ({{% icon name="pencil" %}}) at the end of the row, and then click the corresponding button.
 
 {{< figure src="/attachments/developerportal/portfolio-management/delete-edit-stage.png" >}}
 

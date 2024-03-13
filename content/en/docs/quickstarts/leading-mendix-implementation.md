@@ -2,7 +2,7 @@
 title: "Leading Mendix Implementation in Your Organization"
 url: /quickstarts/leading-mendix-implementation-in-your-organization/
 weight: 30
-description: "Lead Mendix Implementation in your organization."
+description: "Unlock the full potential of the Mendix platform and accelerate your application development journey in your organization."
 tags: ["Mendix Implementation"]
 ---
 

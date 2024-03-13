@@ -357,7 +357,6 @@ If you would like to learn more about how to manage your portfolio of ideas and 
 ## 2.3.2 People: Building a Strong Mendix Team 
 The people you choose for your teams are absolutely crucial to the success of your digital execution program. You want to find the right people with the right skills who are excited about and can commit time and energy to the program, no matter their job title. 
 
- 
 
 A strong first Mendix team is more than just the number of people in the room. Your first Mendix team should include a core development team comprised of a combination of a professional developer — someone with technical expertise — and a business developer — someone familiar with the platform that can act as a power user if needed. The key is to have developers who can collaborate closely with end users,
 bridging the gap between business needs and technical possibilities.
@@ -367,8 +366,6 @@ The following leadership roles are essential to the success of any new platform 
 
 * **Executive Sponsors:** Success starts at the top, where senior executive buy-in is a must. These are the top-level executives,
 ideally representing both the Business/Operations and IT, who are willing to be engaged periodically to provide oversight and steering-committee level guidance. These people won’t necessarily be involved day-to-day, but they understand the big picture vision of how Mendix will help the enterprise achieve its digital transformation and low-code goals, how it fits to ‘play nicely’ with other technology stacks and tools like Microsoft’s ADO or Power Apps, and what the transformational value is expected. Your Mendix team can work with these individuals to help understand, define, and refine their role, the value proposition for high ROI, etc.
-
-
 
 * **Program Owner:**  You need a person to lead the program and mandate/enable change; who generates excitement about the importance of this transformation and can inspire people to *want* to participate. This person is directly responsible for the overall success of the platform’s implementation, bringing impactful apps to fruition, ensuring value targets are defined and tracked, and that the teams are properly assigned and allocated for success. 
 
@@ -501,13 +498,11 @@ It’s important to know what’s happening with the Mendix Platform to be sure 
 [<uThe DEP Space</u](https://forum.mendix.com/link/invitation/space/Digital-Execution-Community/0438b34d-3432-44c1-ac85-d5bc940116e9)
 on the Forum provides a unique opportunity to interact with other Mendix leaders. Ask questions from experienced Mendix team members or other customers about anything related to digital transformation.  
 
- 
 
 **Subscribe to platform news**
 
 [<uSubscribe to Platform Updates</u](https://status.mendix.com/) to keep up with all the changes happening with the Mendix platform and how it could affect your apps.
 
- 
 
 **Mx Forum**
 
@@ -722,7 +717,6 @@ or no control can quickly diminish the productivity advantage offered by the Men
 **Make failures into wins:** It’s ok to admit defeat. In this case,
 it’s actually beneficial. It may sound contradictory, but good first applications are often ones that your organization previously failed to deliver.
 
- 
 
 For instance, a Mendix customer initially failed to build an application that calculates prices because the algorithm was so specific to the business, and the .NET developer couldn’t grasp all the nuances. Using Mendix, business stakeholders and IT developers were able to take that failure and turn it into a win, collaborate much more closely, and successfully deliver a first version of the application in a few days. 
 
@@ -1025,7 +1019,6 @@ represent strategical, tactical, and operational levels of the business. 
 
 Your team does not have to fit this exact mold, but it is important that all the responsibilities outlined here are covered to ensure success in your low-code program. Here’s a typical team structure:
 
- 
 
 <img src="./markdown/media/image14.png"
 style="width:6.5in;height:3.6519in" /
@@ -1074,21 +1067,17 @@ As your team grows and takes on more projects, it's important to continue to als
 
 An Intermediate Developer has the fundamental knowledge of the Mendix platform to start building the next great apps. This certification is proof that someone is ready to be added to operating teams and can contribute from the start by applying your knowledge and skills in different parts of the project development lifecycle.
 
- 
-
- You can find information as well as required courseware for the Intermediate certification [<uhere</u](https://academy.mendix.com/link/certifications/22/intermediate). 
+You can find information as well as required courseware for the Intermediate certification [<uhere</u](https://academy.mendix.com/link/certifications/22/intermediate). 
 
 **Advanced Developer Certification**
 
 An Advanced Developer has the knowledge and skills required to build production-ready applications. This certification is proof of someone’s advanced knowledge of the platform and their professional experience with developing Mendix apps.
-
- You can find information as well as required courseware for the Advanced certification [here](https://academy.mendix.com/link/certifications/6/advanced). 
+You can find information as well as required courseware for the Advanced certification [here](https://academy.mendix.com/link/certifications/6/advanced). 
 
 **Expert Developer Certification **
 
 The Expert Developer Certificate is not only proof of Mendix knowledge, it confirms a developer’s expertise and shows they have applied what they know about Mendix in their day-to-day job.
-
- You can find information as well as required courseware for the Advanced certification [<uhere</u](https://academy.mendix.com/link/certifications/24/expert). 
+You can find information as well as required courseware for the Advanced certification [<uhere</u](https://academy.mendix.com/link/certifications/24/expert). 
 
 ## Lecture 4.4 Organize Your Program Kick-Off 
 The program kick-off is important to hold before the project kick-off as this meeting ensures alignment across all groups and team members involved, from leadership to the development team, on goals, vision,
@@ -1235,7 +1224,6 @@ potential end-users of Mendix apps may want to contribute to development teams. 
 ### Setup password policy 
 If you don’t enable SSO, you will want to specify if the user passwords expire or not. If you do not want the passwords to expire,
 toggle **Passwords of company members never expire** to **On**.  
- 
 
 ##  Lecture 5.3 Summary 
 Now that you know how Mendix can be tailored to your own governance needs, you are ready to get your first project started! You will find all the useful information to do this in the following module.

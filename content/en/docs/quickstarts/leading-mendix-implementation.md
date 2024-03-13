@@ -283,7 +283,7 @@ ensure the right ideas get invested in, manage the entire application developmen
 * The <u[“Mendix](https://academy.mendix.com/link/modules/78/lectures/504/1.3-Mendix-Ecosystem)Ecosystem”
 lecture in our Rapid Developer course</uoffers a short description of each of the elements of the platform relevant for developers together with useful links. 
 
-<!-- --
+
 
 * The <u[Developer Portal Guide](https://docs.mendix.com/developerportal/)</uwill help you explore the Developer Portal: the central location to collaborate,
 deploy, and manage your Mendix apps.
@@ -368,7 +368,7 @@ The following leadership roles are essential to the success of any new platform 
 * **Executive Sponsors:** Success starts at the top, where senior executive buy-in is a must. These are the top-level executives,
 ideally representing both the Business/Operations and IT, who are willing to be engaged periodically to provide oversight and steering-committee level guidance. These people won’t necessarily be involved day-to-day, but they understand the big picture vision of how Mendix will help the enterprise achieve its digital transformation and low-code goals, how it fits to ‘play nicely’ with other technology stacks and tools like Microsoft’s ADO or Power Apps, and what the transformational value is expected. Your Mendix team can work with these individuals to help understand, define, and refine their role, the value proposition for high ROI, etc.
 
-<!-- --
+
 
 * **Program Owner:**  You need a person to lead the program and mandate/enable change; who generates excitement about the importance of this transformation and can inspire people to *want* to participate. This person is directly responsible for the overall success of the platform’s implementation, bringing impactful apps to fruition, ensuring value targets are defined and tracked, and that the teams are properly assigned and allocated for success. 
 
@@ -476,17 +476,17 @@ Below you can find a collection of different resources to grow your knowledge re
 * In our [<uDEP Manual</u](https://www.mendix.com/resources/digital-execution-manual/)
 you can learn more about the 5 P’s and how to best leverage Mendix’s low-code platform.
 
-<!-- --
+
 
 * Follow the [<uDigital Execution Learning Path</u](https://academy.mendix.com/link/paths/52/Digital-Execution)
 to learn the steps of successful digital execution and the meaning of rapid application development maturity. 
 
-<!-- --
+
 
 * In the Agile Awareness learning path, you can read more about the [<uDigital Execution Stages</u](https://academy.mendix.com/link/modules/389/lectures/3133/2.2-Digital-Execution-Stages:-Start,-Structure,-Scale)
 as well as the [<ucore tenets of digital execution</u](https://academy.mendix.com/link/modules/389/lectures/3135/2.4-People,-Portfolio,-Process,-and-Platform-(4-P’s)).
 
-<!-- --
+
 
 * You can check our Mendix blog where you will find many interesting articles for Digital Transformation, like [<uthis one</u](https://www.mendix.com/blog/successful-digital-transformation-a-practice-makes-perfect/)
 that explains the importance of digital transformation and the 5

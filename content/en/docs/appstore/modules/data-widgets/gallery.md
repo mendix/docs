@@ -51,7 +51,7 @@ Defines the amount of data shown for each page or the limit to be presented when
 This widget does not support [system texts](/refguide/system-texts/), meaning is not possible to translate its content to another language.
 {{% /alert %}}
 
-You can choose between paging buttons (button being presented below or above the grid) or virtual scrolling (mechanism that automatically loads data when the users reaches the bottom of the scroll bar). 
+You can choose between paging buttons (button being presented below or above the grid) or virtual scrolling (mechanism that automatically loads data when the users reaches the bottom of the scroll bar).
 
 #### 2.3.3 Position of Paging Buttons
 
@@ -118,7 +118,7 @@ For more information about filters, see the [Filters](/appstore/modules/data-gri
 In the new Gallery widget it is possible to add sorting widgets to the composable region and use them based on the configurations available in the **Sorting** tab. In order to make the attributes available for the sorting widgets, you must select an attribute and define the name it will show via the sort button.
 
 {{% alert color="info" %}}
-If you have a sorting applied in the datasource of the gallery it will pre-select the value in the drop-down filter if it matches the selection made in the configurations and override the filter selected in the datasource in case you have more options defined. 
+If you have a sorting applied in the datasource of the gallery it will pre-select the value in the drop-down filter if it matches the selection made in the configurations and override the filter selected in the datasource in case you have more options defined.
 {{% /alert %}}
 
 {{< figure src="/attachments/appstore/modules/data-widgets/gallery/sorting.png" alt="Example of sorting configuration"   width="300"  >}}
@@ -132,7 +132,37 @@ The Drop-Down Sort widget has two options you can set:
 * Empty option caption: value to be used when no value is selected
 * Screen reader caption: value to be announced by screen readers when using assistive technology
 
-## 5 Troubleshooting
+## 5 Keyboard Navigation and Selection
+
+In the Gallery widget it is possible to navigate and select items using  the keyboard. Keyboard navigation can increase user speed, as well as makes the widget more accessible.
+
+To improve user experience, it is possible to detect which item has keyboard focus. Visually, you can see which item has keyboard focus by spotting the thin blue border.
+
+You can also see when an item is selected: an item with a light gray background is selected.
+
+For the keyboard navigation and keyboard selection to work, the user must open the **General** tab and then set the **Selection** property to one of the following:
+* **Single**: enables keyboard navigation with just single selection
+* **Multi**: to enable keyboard navigation with multi-selection
+
+### 5.1 Keyboard Navigation
+
+Using the keyboard arrow keys (<kbd>{↑}</kbd>, <kbd>{↓}</kbd>, <kbd>{←}</kbd>, <kbd>{→}</kbd>) the user can navigate between the items displayed in the Gallery. Also, the user can use special keyboard keys like <kbd>{Home}</kbd>, <kbd>{End}</kbd>, <kbd>{Pageup}</kbd>, and <kbd>{Pagedown}</kbd>.
+
+With the keyboard, the user can press <kbd>{tab}</kbd> and navigate between elements to reach the Gallery items.
+
+### 5.2 Keyboard Selection
+
+Keyboard selection, which differs from navigation, simulates the click of the mouse on an item. Thus, after navigating to a desired item, the user can press <kbd>{Shift}</kbd> +<kbd>{Space}</kbd> and the item will be selected.
+
+### 5.3 Keyboard Multi-Selection
+
+To further improve the user experience, it is also possible to select many items only using the keyboard. To achieve this, the user can hold <kbd>{Shift}</kbd> on the first item and navigate with arrow key to the last item they want to select. By doing this, all the items between the first and last selected will also be selected.
+
+### 5.4 Accessibility
+
+Employing keyboard navigation is an effective way of ensuring users who cannot use a mouse can still interact with the Gallery widget.
+
+## 6 Troubleshooting
 
 The new Gallery widget uses [CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) as its base for styling. If you need to combine rows or columns you can achieve this using the following helper classes in the `Dynamic item class`:
 

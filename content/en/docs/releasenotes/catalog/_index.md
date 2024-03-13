@@ -13,6 +13,12 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2024
 
+### March 14, 2024
+
+#### Fixes
+
+* We fixed an issue where endpoints would get re-created once for an application that was converted from Mendix 10.6 or older to 10.7 or newer.
+
 ### February 29, 2024
 
 #### Fixes

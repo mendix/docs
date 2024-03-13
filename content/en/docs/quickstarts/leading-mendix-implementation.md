@@ -298,7 +298,7 @@ It’s important to know what’s happening with the Mendix Platform to be sure 
 
 We’ve got more steps to success coming your way.
 
-### Lecture 2.5 Summary 
+### Lecture 2.5 Summary {#2.5}
 In this module, you learned more about the Mendix platform and explored the 3 S’s and the 5 P’s of digital transformation and how these can contribute to a successful journey. More specifically you:
 
 * Created your Mendix Portfolio Management board that will help you identify, track, and plan out your initiatives.
@@ -339,20 +339,20 @@ By the end of this module, you will be able to: 
 * List the different development options and choose the right one for your organization 
 ### Lecture 3.1 Create (Or Revise) Your Low-Code Vision 
 
-<span class="mark"\[Resources for this lecture Vision Preparation Questions PDF\]</span
+{{% todo %}}Provide the PDF{{% /todo %}}
 
 We encourage you to take the time to develop a clear vision for low-code development in your organization. It is critical to the success of your low-code change initiative because it takes the guesswork out of people trying to understand what you want to achieve.
 Low-code shouldn't (and frankly, doesn't) operate in its own universe, so the vision should be aligned and contribute to other visions, values, strategies, and initiatives that are already in motion in your organization.
 
 There is a wide variety of ideas and opinions regarding the length, form, structure, and scope of a vision. And your vision should reflect your company's culture. We have compiled **a set of guidelines and recommendations to help you in defining your vision**. Some are widely recognized as best practices, and others are based on our extensive experience. Your Mendix Transformation Manager, Digital Business Advisor, or Customer Success Manager will be able to support you in this endeavor. And if you have defined your low code vision already, now is the perfect time to revisit it and make sure you are happy with it. 
 
-1\. **Preparation**
+1. **Preparation**
 
 This step requires some analysis and time investment. Reference company documents and talk to your team and other key stakeholders on the business and technology side.
 
 It is key to ensuring alignment and contribution to other visions, values, strategies, and initiatives that are already in place in your organization. We have included a list of useful questions to consider in the supporting content for the preparation task (you can find this in the resources, at the top of this page).
 
-2\. **First iteration: Mind map / brainstorm**
+2. **First iteration: Mind map / brainstorm**
 
 Start exploring the areas that you want to transform. We recommend thinking along the lines of the 5 P’s – People, Process, Platform, Portfolio, Promotion – because these cover all the aspects you need when undergoing a transformation. This also ties well into other tools we use such as the Maturity Assessment, which is also grouped according to the 5 P’s.
 
@@ -360,13 +360,13 @@ Imagine how you want those areas to look like in 3-4 years. That timeframe is th
 More than that and it's too far in the future, too fuzzy, you can't know what the world will look like in 10 years. Too short and there's not enough time to do something impactful – it won't be inspirational.
 Add key words to a mind map for each of the five areas.
 
-3\. **Second iteration: Prioritize and add details**
+3. **Second iteration: Prioritize and add details**
 
 Select the most important ideas and create full sentences as bullet points, adding details so that anyone reading the sentence can understand what it means.
 
 You can also start adding key results or placeholders for them, such as, "Achieve an ROI of \[amount\] by \[date\]".
 
-4\. **Third iteration: Evaluate and refine**
+4. **Third iteration: Evaluate and refine**
 
 Review and refine your bullet points. You need to ensure that you can evaluate whether a particular point has been completed or achieved.
 Finish adding relevant key results or placeholders. You may choose to leave the actual numbers in the key results blank and ask your teams or key people in your organization to set the ambition levels themselves. This creates ownership and buy-in to your vision.
@@ -377,7 +377,7 @@ The objectives need to be achievable, but it also shouldn't be too easy. You nee
 More about that in the "Use your vision to steer your journey"
 objective.
 
-5\. **Socialize your vision and gather feedback**
+5. **Socialize your vision and gather feedback**
 
 Show your draft vision to key stakeholders and a selection of employees to get their feedback. When others read your vision, they need to experience a moment of awe and wonder. If their jaws don’t drop a little bit, you need to think bigger. Small, safe, calculated plans don’t inspire – a vision needs a wow factor. And don't be put off if there’s a small number – around 10%-15% or so – who don't like it.
 
@@ -386,13 +386,13 @@ What you don't want is indifference.
 Check during this refining stage that people understand the vision –
 and that it accurately represents what you want to achieve and what your organization needs.
 
-**6. Write your final version**
+6. Write your final version**
 
 In this final stage, you need to consider what feedback is relevant and what you want to incorporate.
 
 If you think it would be more efficient, you might want to get support from a writer to polish some of those sentences so they pop off the page and resonate with your team and stakeholders. However, balance the effort you invest – done is better than perfect!
 
-**Communicate your vision effectively **
+7. **Communicate your vision effectively **
 
 Once you have your vision, you need to communicate it effectively to your team. You need to make sure that everyone understands it so that they are motivated to work towards it. 
 
@@ -454,7 +454,7 @@ style="width:6.5in;height:3.45677in" /
 To start, think about the big picture: What is your organization striving to achieve? Jot down a few ideas that can help you get there.
 These could include solutions to migrate from legacy apps, improve customer experience or increase efficiency. And Mendix has a tool to help you do just that!
 
-You should have already created your portfolio in lecture 2.5, if you haven’t yet let’s start by creating your Portfolio board, you can do that by going [here](https://portfolio.mendix.com/), clicking Open Portfolio Management and then click **Create Portfolio.**You can make it restricted for the time being (that means you will have to approve other people before they gain access to it).  
+You should have already created your portfolio in [Lecture 2.5](#2.5), if you haven’t yet let’s start by creating your Portfolio board, you can do that by going [here](https://portfolio.mendix.com/), clicking Open Portfolio Management and then click **Create Portfolio.**You can make it restricted for the time being (that means you will have to approve other people before they gain access to it).  
 
 If you have done a portfolio workshop already and maybe have your list of initiatives in an Excel file, you can easily import them. If not, just create a few cards that represent your ideas. Your Mendix team can also help you with this, so please do not hesitate to reach out to them to go over everything together.
 
@@ -572,7 +572,7 @@ Even though you can build almost anything with Mendix, especially with the exten
 * Applications where the main goal is to visualize data 
 
 ### Lecture 3.5 Define Application Value 
-<span class="mark"\[Lecture Resource Value Template for Customers PPT)</span
+{{% todo %}}Provide the PPT{{% /todo %}}
 
 By thoroughly defining the application’s purpose and value, you provide a clear roadmap for development, aligning the project with organizational goals, and setting the stage for successful implementation and adoption. What will help you do that is trying to think along these lines:
 
@@ -635,8 +635,7 @@ When setting up your deployment strategy, it is important to look at the feature
 
 If your organization is deploying on **Private Cloud or on-prem**, please **make sure that you are ready to take on the effort and responsibility of managing all hosting and support of the application deployments**.
 
-For a list of all the deployment options that are available, see:
-[/developerportal/deploy/](/developerportal/deploy/). 
+For a list of all the deployment options that are available, see [Deployment](/developerportal/deploy/). 
 
 Some highlights to consider:
 
@@ -662,30 +661,34 @@ style="width:6.5in;height:2.69648in" /
 
 With Mendix, you have multiple options to choose from for the development of your applications:
 
-1.  **In-house development**
+1. **In-house development**
 
-1.  Train and/or hire Mendix developers to develop and support all your Mendix applications.
+   a. Train and/or hire Mendix developers to develop and support all your Mendix applications.
 
-When training in-house, we recommend choosing individuals who either have a traditional development background or have some understanding of OOP (object-oriented programming).  We’ve also seen individuals without a technical background succeed if they have the right problem-solving mindset!  Beyond the technical side, you also want to look for individuals who can provide consulting to your business team. Mendix development is quick and Agile, and you need someone who can speak to not only the technical side of Mendix but also the business side at the same time in order to prevent project bottlenecks.
+      When training in-house, we recommend choosing individuals who either have a traditional development background or have some understanding of OOP (object-oriented programming).  We’ve also seen individuals without a technical background succeed if they have the right problem-solving mindset!  Beyond the technical side, you also want to look for individuals who can provide consulting to your business team. Mendix development is quick and Agile, and you need someone who can speak to not only the technical side of Mendix but also the business side at the same time in order to prevent project bottlenecks.
 
-1.  **Mendix partner**
+2. **Mendix partner**
 
-1.  Bring in one of our certified Mendix partners to support your app development.  Our directory of partners is listed [here](https://developerprofiles.mendix.com/link/partneroverview), but your Mendix team is a great resource to identify a good fit for you.
+   a. Bring in one of our certified Mendix partners to support your app development.  Our directory of partners is listed [here](https://developerprofiles.mendix.com/link/partneroverview), but your Mendix team is a great resource to identify a good fit for you.
 
-This can be a great option to get your project kick-started, or if you have no future goals of building out your internal development team.
+      This can be a great option to get your project kick-started, or if you have no future goals of building out your internal development team.
 
-1.  **Mendix Expert Services**
 
-1.  Our team of experts are here to support you! We have many options for enabling your team and helping you quickly demonstrate the power of Mendix.
+3. **Mendix Expert Services**
 
-Choosing Expert Services is the right option if you plan on building out your internal team and need enablement and support alongside application development.  Expert Services can help prove the value of the Mendix internally while simultaneously coaching your team on how to continue with the application(s).
+   a. Our team of experts are here to support you! We have many options for enabling your team and helping you quickly demonstrate the power of Mendix.
 
-1.  **Hybrid**
+      Choosing Expert Services is the right option if you plan on building out your internal team and need enablement and support alongside application development.  Expert Services can help prove the value of the Mendix internally while simultaneously coaching your team on how to continue with the application(s).
 
-1.  You can simultaneously grow your in-house team and supplement with a Mendix partner and/or our Expert Services team 
+
+4.  **Hybrid**
+    a.  You can simultaneously grow your in-house team and supplement with a Mendix partner and/or our Expert Services team.
+    
+
 Regardless of which option you choose, we always recommend that at least one person internally has been trained on Mendix and is technically capable of directing the project.  Outsourcing every technical role creates a siloed development team that does not truly understand your business needs.
 
 ### Lecture 3.8 Summary 
+
 By now you should have finalized your getting started plan, and are ready to start your first application development! How exciting!
 You’ve done a great job so far and learned a lot along the way. By now you should have:
 

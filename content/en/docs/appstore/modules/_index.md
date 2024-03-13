@@ -19,7 +19,7 @@ Modules in the Mendix Marketplace have different categories, as listed in the su
 
 To check out which modules a category contains, click the category in the list below, which directs you to the sub-section for this category.
 
-* [Artificial Intelligence]()
+* [Artificial Intelligence](#artificial-intelligence)
 * [Authentication](#authentication)
 * [AWS](#aws)
 * [Communication](#communication)
@@ -74,9 +74,9 @@ To check out which modules a category contains, click the category in the list b
 ### 2.4 Communication {#communication}
 
 * [Data Widgets](/appstore/modules/data-widgets/)
-  * [Data Grid 2](/appstore/modules/data-grid-2/)
-  * [Gallery](/appstore/modules/gallery/)
-  * [Tree Node](/appstore/modules/tree-node/)
+    * [Data Grid 2](/appstore/modules/data-grid-2/)
+    * [Gallery](/appstore/modules/gallery/)
+    * [Tree Node](/appstore/modules/tree-node/)
 * [Mendix Feedback](/appstore/modules/mendix-feedback/)
 * [Push Notifications Connector](/appstore/modules/push-notifications/)
 
@@ -151,6 +151,7 @@ To check out which modules a category contains, click the category in the list b
 ### 2.14 Utility {#utility}
 
 * [Administration](/appstore/modules/administration/)
+* [App Switcher](/appstore/modules/app-switcher/)
 * [Community Commons](/appstore/modules/community-commons-function-library/)
 * [Encryption](/appstore/modules/encryption/)
 * [Mendix Feedback](/appstore/modules/mendix-feedback/)

@@ -13,7 +13,13 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2024
 
-### March 5th, 2023
+### March 11th, 2024
+
+#### Mendix Operator v2.15.1 {#2.15.1}
+
+* We have fixed an issue where, in some scenarios, environments didn't restart automatically after deploying a new MDA package. (Ticket 211206)
+
+### March 5th, 2024
 
 #### Mendix Operator v2.15.0 {#2.15.0}
 

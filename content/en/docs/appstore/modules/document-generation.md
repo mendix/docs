@@ -22,7 +22,7 @@ The [PDF Document Generation](https://marketplace.mendix.com/link/component/2115
 ### 1.2 Limitations
 
 * Currently, PDF is the only supported document export format.
-* For deployment, currently we support [Mendix Public Cloud](/developerportal/deploy/mendix-cloud-deploy/), [Mendix for Private Cloud Connected](/developerportal/deploy/private-cloud/), and [On-Premises](/developerportal/deploy/on-premises-design/). Other deployment scenarios will be supported at a later stage.
+* For deployment, currently we support [Mendix Public Cloud](/developerportal/deploy/mendix-cloud-deploy/), [Mendix Cloud Dedicated](/developerportal/deploy/mendix-cloud-deploy/), [Mendix for Private Cloud Connected](/developerportal/deploy/private-cloud/), and [On-Premises](/developerportal/deploy/on-premises-design/). Other deployment scenarios will be supported at a later stage.
 
     {{% alert color="info" %}}For all deployment types except for on-premises, we only support apps that allow bi-directional communication with the PDF Service in the Mendix Public Cloud.{{% /alert %}}
 
@@ -66,6 +66,7 @@ Follow the instructions in [Using Marketplace Content](/appstore/overview/use-co
 
     1. [Running on Mendix Cloud](#run-on-mendix-cloud) using the PDF service in the Mendix Public Platform. This option is available for apps that are deployed to the following environments:
         * [Mendix Public Cloud](/developerportal/deploy/mendix-cloud-deploy/)
+        * [Mendix Cloud Dedicated](/developerportal/deploy/mendix-cloud-deploy/)
         * [Mendix for Private Cloud Connected](/developerportal/deploy/private-cloud/)
 
     2. [Running On-Premises](#run-on-premises) using a local version of the PDF service. This option is available for apps that are deployed to the following environments:
@@ -96,7 +97,7 @@ To allow the module to send and receive document generation requests on your Men
 
 1. Enable the DocGen request handler.
 
-   {{% alert color="info" %}}This step is only for licensed apps on the Mendix Public Cloud. If your app is deployed on [Mendix for Private Cloud Connected](/developerportal/deploy/private-cloud/), skip this step and make sure that the */docgen/* path is accessible.{{% /alert %}}
+   {{% alert color="info" %}}This step is only for licensed apps on the Mendix Public Cloud or Mendix Cloud Dedicated. If your app is deployed on [Mendix for Private Cloud Connected](/developerportal/deploy/private-cloud/), skip this step and make sure that the */docgen/* path is accessible.{{% /alert %}}
 
 2. Register your app environments.
 
@@ -108,7 +109,7 @@ The steps for each procedure are described in the sections below.
 
 1. Make sure that you have configured the **DocumentGeneration** module as described in the [Configuration](#configuration) section.
 
-2. Make sure that you have the application [deployed to Mendix Public Cloud](/developerportal/deploy/mendix-cloud-deploy/#deploy-app-mendix-cloud).
+2. Make sure that you have the application [deployed to the desired Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/#deploy-app-mendix-cloud).
 
 3. To allow the module to send and receive document generation requests in your Mendix Cloud environments, enable the DocGen request handler as follows:
 
@@ -361,6 +362,7 @@ In case you encounter any issues while [registering your app environment](#regis
 | **Invalid Developer Credentials** | "Invalid developer credentials" | The developer information as provided in the **Email** and **API key** fields is incorrect. | Verify that the provided email address in the **Email** field matches the username in your Mendix developer profile, and also that the API key that is being used is correct and still active. |
 | **Invalid App** | <ul><li>"Invalid app"</li></ul><ul><li>"App not found for the given user"</li></ul> | The provided apple ID is either incorrect or the developer (based on the **Email** and **API key** fields) does not have access to this app. | Verify that the **App ID** field is correct, and also that the developer account corresponding to the details entered in the **Email** and **API key** fields has access to the given app. |
 | **Invalid Application URL** | "Application URL does not match any of the environment URLs" | The app corresponding to the **App ID** field does not contain any environment that matches the URL given in the **Application URL** field. | Verify that the **App ID** and **Application URL** fields are correct. |
+| **Invalid Deployment Type** | <ul><li>"Application should be deployed on Mendix Public Cloud"</li></ul><ul><li>"Deployment type should be Mendix Public Cloud"</li></ul> | The provided **Application URL** is either incorrect or the chosen **Deployment type** is incorrect for this app. | Verify that the entered **Application URL** is correct and that you have chosen the correct **Deployment type**. |
 | **Unable to Reach App** | <ul><li>"Domain verification failed, unable to reach app"</li></ul><ul><li>"Domain verification failed, unable to reach verification endpoint"</li></ul><ul><li>"Domain verification failed, verification endpoint inactive" </li></ul>| The cloud service was unable to reach your app. | Verify that you enabled the `ASu_DocumentGeneration_Initialize` after startup microflow and also allowed access to the DocGen request handler. For more information, see [Enabling the DocGen Request Handler](#enable-docgen). |
 | **Invalid Token** | "Domain verification failed, invalid token" | The cloud service was able to reach your app, but could not verify that this app is currently trying to register. | Verify that the application URL matches the current environment. |
 | **Other Errors** |<ul><li>"Project verification failed"</li></ul><ul><li>"Domain verification failed, invalid response from verification endpoint"</li></ul><ul><li>"Domain verification failed for unknown reason"</li></ul> | An unexpected error occurred. | Verify that your app was not restarted by someone else during the registration process. If not, submit a ticket in the Mendix Support Portal. |
@@ -395,7 +397,7 @@ We recommend that you temporarily set the log level of the `DocumentGeneration` 
 
 #### 6.2.3 Cloud Service Errors
 
-In case you encounter the message "Unable to generate document, service response code: 401" in the logs of your cloud environment, the request was rejected by the document generation service. This could be caused by the following reasons:
+In case you encounter the message "Unable to generate document for request `<requestId>`, service response code: 401" in the logs of your cloud environment, the request was rejected by the document generation service. This could be caused by the following reasons:
 
 * The scheduled event **SE_AccessToken_Refresh** is not enabled, which caused the registration to expire. Enable the scheduled event and [register](#register-app) the affected app environment again.
 * The URL of the app environment does not match the URL that was provided during registration. This could be the case when you requested a change to the URL of your app, or after restoring a database backup from one environment to another. [Register](#register-app) the affected app environment (or environments) again.

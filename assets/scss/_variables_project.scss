@@ -136,9 +136,7 @@ $td-sidebar-border-color: $gray-border !default;
 $td-box-colors: $dark, $primary, $secondary, $info, $primary-light, $gray-600, $success, $warning, $dark, $danger, $primary, $secondary, !default;
 
 $link-color: $blue !default; // NK - removed darken color
-$link-decoration: none !default;
 $link-hover-color: darken($link-color, 15%) !default;
-$link-hover-decoration: none !default;
 
 // Fonts
 

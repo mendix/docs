@@ -76,6 +76,7 @@ The following custom settings can be configured:
 | <a id="TempPath" href="#TempPath">TempPath</a> | The location of the temporary files. | [deployment folder]\data\tmp |
 | <a id="TrackWebServiceUserLastLogin" href="#TrackWebServiceUserLastLogin">TrackWebServiceUserLastLogin</a> | Defines whether to update the web service user's `LastLogin` field on each login. When this happens a database update query has to be sent and this can have performance consequences on heavy load systems. When this setting is set to false, no database interaction is necessary. | true |
 | <a id="UploadedFilesPath" href="#UploadedFilesPath">UploadedFilesPath</a> | The location of the uploaded files. A valid path can be: `\\FileServer\CustomerPortalFiles`. | [deployment folder]\data\files |
+| <a id="mapping.import.MaxJsonReadingLength" href="#mapping.import.MaxJsonReadingLength">mapping.import.MaxJsonReadingLength</a> | The maximum length of the JSON string received from the remote which can be processed with import mapping. Use this setting when you expect a string which is longer than the default. See [Import Mappings](/refguide/import-mappings/#troubleshooting) for more information. <br />*This setting was introduced in Mendix version 9.24.17.* | 20000000 *(dependent on library version)* |
 
 ## 3 Log File Settings
 

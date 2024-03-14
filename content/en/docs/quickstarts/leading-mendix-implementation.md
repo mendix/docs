@@ -458,9 +458,7 @@ Portfolio Management starts at the company level, where strategy is defined. The
 
 {{< figure src="/attachments/quickstarts/leading-mendix-implementation/strategy.png" class="image-border"  >}}
 
-To start, think about the big picture: What is your organization striving to achieve? Jot down a few ideas that can help you get there.
-
-These could include solutions to migrate from legacy apps, improve customer experience or increase efficiency. And Mendix has a tool to help you do just that!
+To start, think about the big picture: What is your organization striving to achieve? Jot down a few ideas that can help you get there. These could include solutions to migrate from legacy apps, improve customer experience or increase efficiency. And Mendix has a tool to help you do just that!
 
 You should have already created your portfolio in Lecture [2.5](#2.5), if you haven’t yet let’s start by creating your Portfolio board, you can do that by going [here](https://portfolio.mendix.com/), clicking Open Portfolio Management and then click **Create Portfolio**. You can make it restricted for the time being (that means you will have to approve other people before they gain access to it).  
 
@@ -580,44 +578,55 @@ Even though you can build almost anything with Mendix, especially with the exten
 By thoroughly defining the application’s purpose and value, you provide a clear roadmap for development, aligning the project with organizational goals, and setting the stage for successful implementation and adoption. What will help you do that is trying to think along these lines:
 
 1.  **Business value proposition:**
+    * Clearly articulate the value proposition of the application. Ask yourself: What problem does this application solve? What specific business process or pain point does it address? How does it contribute to the organization's success? What benefits will it bring to the business, such as cost savings, revenue generation, or improved customer satisfaction?
 
-* Clearly articulate the value proposition of the application. Ask yourself: What problem does this application solve? What specific business process or pain point does it address? How does it contribute to the organization's success? What benefits will it bring to the business, such as cost savings, revenue generation, or improved customer satisfaction?
 
-2.  **User experience and satisfaction:**
+2. **User experience and satisfaction:**
 
-* Identify the target audience or users who will benefit from the application. Understanding the end-users helps in tailoring the application to their needs.
+   * Identify the target audience or users who will benefit from the application. Understanding the end-users helps in tailoring the application to their needs.
 
-* Consider the user experience as a critical aspect of the application's value. An intuitive and user-friendly interface enhances user satisfaction and adoption.
 
-* Value is often derived not just from functionalities but also from how easily and effectively users can accomplish their tasks.
+   * Consider the user experience as a critical aspect of the application's value. An intuitive and user-friendly interface enhances user satisfaction and adoption.
 
-3.  **Efficiency and productivity:**
 
-* Assess how the application improves operational efficiency and productivity. Identify areas where manual processes can be automated, reducing errors and saving time.
+   * Value is often derived not just from functionalities but also from how easily and effectively users can accomplish their tasks.
 
-* Highlight any potential cost savings or resource optimization achieved through the application.
 
-4.  **Innovation and competitive advantage:**
+3. **Efficiency and productivity:**
 
-* If applicable, emphasize how the application introduces innovative solutions or features that set your organization apart from competitors.
+   * Assess how the application improves operational efficiency and productivity. Identify areas where manual processes can be automated, reducing errors and saving time.
 
-* Consider how the application positions the organization for future growth and adaptation to changing market conditions.
+
+   * Highlight any potential cost savings or resource optimization achieved through the application.
+
+
+4. **Innovation and competitive advantage:**
+
+   * If applicable, emphasize how the application introduces innovative solutions or features that set your organization apart from competitors.
+
+
+   * Consider how the application positions the organization for future growth and adaptation to changing market conditions.
+
 
 5.  **Adaptability and scalability:**
+    * Highlight the application's adaptability to changing business needs and its scalability to accommodate future growth. A valuable application is one that can evolve with the organization.
 
-* Highlight the application's adaptability to changing business needs and its scalability to accommodate future growth. A valuable application is one that can evolve with the organization.
 
-6.  **Measurable objectives:**
+6. **Measurable objectives:**
 
-* Establish measurable objectives to gauge the success of the application. Define key performance indicators (KPIs) that will help evaluate its impact on business processes, efficiency, or other relevant metrics.
+   * Establish measurable objectives to gauge the success of the application. Define key performance indicators (KPIs) that will help evaluate its impact on business processes, efficiency, or other relevant metrics.
 
-* Measurable objectives provide a basis for assessing the application's effectiveness and return on investment.
 
-7.  **Alignment with organizational goals:**
+   * Measurable objectives provide a basis for assessing the application's effectiveness and return on investment.
 
-* Confirm that the application purpose aligns with the overall goals and vision of the organization. It should contribute positively to the strategic direction of the company.
 
-* Understand how the application fits into the larger ecosystem of organizational processes and systems.
+7. **Alignment with organizational goals:**
+
+   * Confirm that the application purpose aligns with the overall goals and vision of the organization. It should contribute positively to the strategic direction of the company.
+
+
+   * Understand how the application fits into the larger ecosystem of organizational processes and systems.
+
 
 You can also try filling in a template such as this one (you can find this template attached in the Resources box at the top of this page):
 
@@ -648,8 +657,8 @@ Some highlights to consider:
 **Mendix Public Cloud:**
 
 * Pros: Fast and easy, all hosting is taken care of.  It has the best utilization rate for your infrastructure allowing you to maintain optimal flexibility and convert your capital investment into operational expenses. This option is supported by Mendix and it is the most optimized cloud to run Mendix applications.
+* Cons: Some organizations don’t allow shared cloud usage and require air-gapped or private-cloud options
 
-* Cons: Some organizations don’t allow shared cloud usage and require air-gapped or private-cloud options 
 **Mendix Private Cloud:**
 
 * Pros: Your DevOps team has complete control over application deployment and application lifecycle, with centralized management. It is cloud agnostic, and you can choose on-premise or your chosen cloud provider.
@@ -707,7 +716,8 @@ You’ve done a great job so far and learned a lot along the way. By now you sho
 And 
 * Decided who will help you build this app.
 
-* Established the necessary components for your Program Kick-Off meeting with business & IT leadership 
+* Established the necessary components for your Program Kick-Off meeting with business & IT leadership
+
 Time to start putting everything you’ve prepared into practice!
 
 ## Module 4: Start Your Mendix Program
@@ -899,9 +909,7 @@ By the end of this module, you will be able to:
 
 ### Lecture 5.1 Introduction to Governance in Mendix
 
-Low-code governance is about having oversight and maintaining control over both a landscape of apps and individual app development. It provides guardrails for your development process and brings resources together to achieve the enterprise’s objectives.
-
-Increase accountability, increase transparency, and get the most ROI out of what your teams build and deploy.  It will help you maximize business value at acceptable risk and cost.
+Low-code governance is about having oversight and maintaining control over both a landscape of apps and individual app development. It provides guardrails for your development process and brings resources together to achieve the enterprise’s objectives. Increase accountability, increase transparency, and get the most ROI out of what your teams build and deploy.  It will help you maximize business value at acceptable risk and cost.
 Knowing the broad strokes capabilities of the Mendix platform early on helps in getting solid early successes.
 
 When you start, the governance responsibility will probably be in the hands of your Mendix admin, but as your Mendix landscape grows you may want to define a Center of Excellence. Admins can use Control Center, a dashboard that gives you an overview of various company activities on the Mendix platform, to manage many of the aspects of landscape governance. 
@@ -969,7 +977,7 @@ It is recommended that you [set-up SSO](/control-center/security/set-up-sso-byoi
 
 Optionally, you may set up access rules in your IDP to control which of your employees can and cannot work on the Mendix platform. As we encourage collaboration in multi-disciplined teams, be careful not to be too restrictive or not apply any restriction at all. For example, potential end-users of Mendix apps may want to contribute to development teams. In a later stage you can set up restrictive access rules as you start putting more business-critical IPs in the logic of your Mendix apps.
 
-### Setup password policy
+#### Setup password policy
 
 If you don’t enable SSO, you will want to specify if the user passwords expire or not. If you do not want the passwords to expire, toggle **Passwords of company members never expire** to **On**.  
 
@@ -1143,20 +1151,20 @@ By the end of this module, you will be able to: 
 
 ### Lecture 7.1 Deploy Your Application
 
-### Deploy your application to the Mendix Cloud
+#### Deploy your application to the Mendix Cloud
 
 Deploying your application to the Mendix Cloud is a simple process, that will give you access to all the features and services in the Mendix Cloud. It requires only a few steps to set it up, which you only need to do once for each application. Once the cloud settings of your application is done, you can deploy and redeploy your application with just one click.  
 
 Note that Mendix also offers [other deployment options](/releasenotes/developer-portal/deployment/) than the Mendix cloud e.g. to a private cloud if that’s a requirement.
 
-### Obtain a licensed node
+#### Obtain a licensed node
 
 You can deploy your application for free on the Mendix Cloud. These [Free Apps have limitations](/developerportal/deploy/mendix-cloud-deploy/#free-app) when it comes to run time, features and resources. You can publish Free Apps to test the Mendix platform, a specific feature of to quickly prototype an application to test an idea. Once you decide to take your application to the next-level and start serious development on it, you will need to obtain a licensed node, so this is something you will need to do before your launch.
 
 If you have an existing contract that allows for more licensed nodes, you can [request a new licensed node](/developerportal/deploy/licensing-apps/#31-obtaining-a-licensed-node).
 If you don’t have a contract, or if your contract doesn’t allow for more licensed nodes, contact your Customer Success Manager.
 
-### Link your application to your licensed node
+#### Link your application to your licensed node
 
 If you have a licensed node available, you can link your application to this licensed node. If your application was published as a Free App, you will have to unlink the application from the Free App environment first. This will delete all data on that Free App environment. So, before you unlink your Free App, [back up the data](/developerportal/deploy/licensing-apps/#backing-up) first, if you require it.
 
@@ -1164,7 +1172,7 @@ If you have backed up your data, you can [unlink your application](/developerpor
 
 When your app is unlinked from a Free App environment, you can link it to a licensed node. By linking it to a licensed node, you get access to all the features of the Mendix Cloud, such as one-click deployment from Studio Pro and our platform, log management, backups management and monitoring tools.
 
-### Set node permissions
+#### Set node permissions
 
 Once you have linked your application to a licensed node, your team needs to determine what users can perform what actions on the node.
 
@@ -1174,7 +1182,7 @@ By default, only the Technical Contact of a node has permissions to perform any 
 
 Granting permissions to team members is dependent on your deployment strategy and process: do you have DevOps teams where the developers also deploy and monitor the apps? Or does your company have separate Ops teams, where the deployment is done by people other than the developers? You can set node permissions for each of the environments of your node, so you can grant developers to deploy the app to the Test environment, but restrict deployment permissions for the Production environment to a smaller team.
 
-### Set cloud settings
+#### Set cloud settings
 
 When the node permissions are set up, you can start configuring your cloud settings. This can be done by any team member with the correct permissions. Changing your cloud settings is not mandatory, as most of settings are set for you by default in the Mendix Cloud, but in some cases you want to customize them to tailor the end user experience or to adhere to company standards.
 
@@ -1192,7 +1200,7 @@ Things can you can customize for your applications in the Mendix Cloud include:
 
 * [Services](/developerportal/deploy/environments-details/#services), such as [the Event Broker service](/appstore/services/business-events/#mendix-event-broker)
 
-### Deploy your application
+#### Deploy your application
 
 Once you have linked and configured your Mendix Cloud node, which you only have to do once, you can start deploying your application to the Mendix Cloud. It is recommended that you deploy any new version of your application to the Test or Acceptance environment of your application first for testing, before deploying it to the Production environment.
 

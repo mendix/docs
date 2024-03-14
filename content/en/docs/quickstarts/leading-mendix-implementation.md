@@ -89,20 +89,17 @@ Let’s start with building the foundation of your Mendix knowledge!
 By the end of this module, you will: 
 
 * Assign your Mendix Admin 
-
 * List the different components of the Mendix platform and explain their role 
 * Identify the three major stages of the Digital Execution Practice and what each stage entails 
 * Describe the 5 P’s of the Digital Execution Practice and their importance to your long-term success 
 * Create your Portfolio in Mendix Portfolio Management to manage your initiatives 
 * Recognize the different roles and skills required to build your first Mendix team 
 * Choose the right people for your Mendix team 
-
 * Explain how to build repeatable practices and long-term outcomes 
-
 * Describe the benefits that the Mendix Platform brings to an organization 
 * Identify best practices to promote the value of low-code within your organization 
 * List the available options you have for staying up to date with Mendix
-* 
+
 ### Lecture 2.1 Assign Your Mendix Admin
 
 First let’s get one admin (no pun intended) thing out of the way. Your company needs **at least one Admin**. It might make sense for the first admin to be you and then you can easily assign as many other admins as you need.
@@ -124,7 +121,6 @@ Mendix is the platform that helps you turn ideas into outcomes. It contains all 
 **Here are some resources to help familiarize yourself with the Mendix platform:**
 
 * The [“Mendix Ecosystem”](https://academy.mendix.com/link/modules/78/lectures/504/1.3-Mendix-Ecosystem) lecture in our Rapid Developer courseoffers a short description of each of the elements of the platform relevant for developers together with useful links. 
-
 * The [Developer Portal Guide](/developerportal/) will help you explore the Developer Portal: the central location to collaborate, deploy, and manage your Mendix apps.
 
 **Also, don’t forget to bookmark your “Favorites”!**
@@ -145,7 +141,6 @@ Mendix is the platform that helps you turn ideas into outcomes. It contains all 
 Your journey to innovation will go through three major stages: **Start**, **Structure** and **Scale**. You are now in the **Start** stage, where the goal is to lay the foundations for your innovation factory. In Start, you want to develop applications that realize value quickly. The reason for this is two-fold:
 
 1.  You’ll be spending a lot of time building a team and putting the necessary prerequisites in place in terms of infrastructure and process. Because of that... 
-
 2.  You want quick wins. Quick wins are important because you’ll use these to prove the value of your new approach. Celebrating your first success will help you gain broader support around the company.
 
 If the Start stage is about establishing and proving the benefits of rapid application development, then **Structure** is about building out predictability and continuity. Structure is about growing from your first set of apps to a portfolio with a diverse array of apps addressing multiple use cases, expanding your first team into multiple teams, and expanding your developer center. 
@@ -184,9 +179,9 @@ In the beginning, it’s highly likely that not all these people will come from 
 
 * **Executive Sponsors:** Success starts at the top, where senior executive buy-in is a must. These are the top-level executives, ideally representing both the Business/Operations and IT, who are willing to be engaged periodically to provide oversight and steering-committee level guidance. These people won’t necessarily be involved day-to-day, but they understand the big picture vision of how Mendix will help the enterprise achieve its digital transformation and low-code goals, how it fits to ‘play nicely’ with other technology stacks and tools like Microsoft’s ADO or Power Apps, and what the transformational value is expected. Your Mendix team can work with these individuals to help understand, define, and refine their role, the value proposition for high ROI, etc.
 
-* **Program Owner:**  You need a person to lead the program and mandate/enable change; who generates excitement about the importance of this transformation and can inspire people to *want* to participate. This person is directly responsible for the overall success of the platform’s implementation, bringing impactful apps to fruition, ensuring value targets are defined and tracked, and that the teams are properly assigned and allocated for success. 
+* **Program Owner:**  You need a person to lead the program and mandate/enable change; who generates excitement about the importance of this transformation and can inspire people to *want* to participate. This person is directly responsible for the overall success of the platform’s implementation, bringing impactful apps to fruition, ensuring value targets are defined and tracked, and that the teams are properly assigned and allocated for success.
 
-It’s common for Program Owners to work very closely with their Mendix CSMs to define and implement success plans and to evolve those plans over time to ensure ever-increasing returns and solid value. For smaller organizations, this person may also be part of the Core Team; for larger organizations, it’s common for this person to be a part of the Center of Excellence leadership team or to be a dedicated senior resource overseeing global success. Areas of responsibility include assurance of proper architectural and governance guidelines/adherence, successful regional and global rollouts, successful team growth/training/enablement plans, KPI definition and tracking, etc.  
+    It’s common for Program Owners to work very closely with their Mendix CSMs to define and implement success plans and to evolve those plans over time to ensure ever-increasing returns and solid value. For smaller organizations, this person may also be part of the Core Team; for larger organizations, it’s common for this person to be a part of the Center of Excellence leadership team or to be a dedicated senior resource overseeing global success. Areas of responsibility include assurance of proper architectural and governance guidelines/adherence, successful regional and global rollouts, successful team growth/training/enablement plans, KPI definition and tracking, etc.  
 
 * **Center of Excellence Lead (COE Lead):** Generally, larger organizations implement a Mendix COE to help define and enforce good governance, development, and enablement practices that can evolve with the business and technological changes for overall platform and program success throughout the enterprise over time. The COE Lead ensures the Mendix COE is properly staffed to support, oversee and enable development teams, and ensures the products produced are of high-quality following best practices for high re-usability, maintainability and return on investment. This person generally has sufficient senior-level technical and managerial skills to oversee the COE’s Enterprise and Solution Architects, DevOps technical leads, trainers and mentors, and other experienced staff.
 
@@ -267,13 +262,9 @@ We’ve all heard the saying, “If a tree falls in the forest but no one is aro
 Promotion tends to be a challenge for many IT organizations, in part because IT teams do not often have professional marketers. Even without a marketing team behind you, here are five ways you can better promote the value of low-code within your organization. 
 
 **Shaping and communicating your low-code vision:** We’ll help you solidify your low-code vision later in this guide, but once you have it, don’t let it live on a shelf or in the cloud — allow it to evolve with input from your organization. Communicate your vision in cross-functional meetings and ask for support in getting organizational leadership to embed the vision into their message as well. 
-
 ***Stakeholder management:*** Involve stakeholders early and often to build enthusiasm for digital transformation success. Start by bringing cross-functional partners on board who you already have strong relationships with, and work together to identify the problems you want to solve. By building a plan together you can help ensure your initiatives will get support. 
-
 ***Internal PR:*** Build a plan for how you will raise awareness and involvement in your low-code implementation and ensure your executive sponsor helps your PR efforts. You can leverage existing communication channels such as company meetings, newsletters, or shared collaboration sites to spread your message. Start by sharing your plan and vision, and then use these channels to celebrate success after your first go-live.  
-
 ***Community building:*** Digital transformation is all about bringing together business and IT. Start with a portfolio workshop to brainstorm ideas for your first application, and then identify teams who will collaborate through implementation and launch. Identify a core group of champions who can raise awareness on your behalf even when you aren’t in the room. 
-
 ***Celebrating success:*** We love a good reason to celebrate, and hope you’ll use milestones large and small to celebrate your successes. Acknowledging your achievements, whether it’s getting the team to complete Academy certifications, building the first reusable component, finishing the first development sprint or launching your first application, celebrations are a powerful way to boost team morale and drive future momentum. 
 
 #### 2.3.6 Additional Resources
@@ -281,11 +272,8 @@ Promotion tends to be a challenge for many IT organizations, in part because IT 
 Below you can find a collection of different resources to grow your knowledge regarding the 5 P’s of Digital Transformation and their importance in your Mendix journey. 
 
 * In our [DEP Manual](https://www.mendix.com/resources/digital-execution-manual/) you can learn more about the 5 P’s and how to best leverage Mendix’s low-code platform.
-
 * Follow the [Digital Execution Learning Path](https://academy.mendix.com/link/paths/52/Digital-Execution) to learn the steps of successful digital execution and the meaning of rapid application development maturity.
-
 * In the Agile Awareness Learning Path, you can read more about the [Digital Execution Stages](https://academy.mendix.com/link/modules/389/lectures/3133/2.2-Digital-Execution-Stages:-Start,-Structure,-Scale) as well as the [core tenets of digital execution](https://academy.mendix.com/link/modules/389/lectures/3135/2.4-People,-Portfolio,-Process,-and-Platform-(4-P’s)).
-
 * You can check our Mendix blog where you will find many interesting articles for Digital Transformation, like [this one](https://www.mendix.com/blog/successful-digital-transformation-a-practice-makes-perfect/) that explains the importance of digital transformation and the 5P’s; or [this one](https://www.mendix.com/blog/digital-transformation-a-matter-of-time/#learning-to-walk-the-4-ps-and-3-ss-of-digital-transformation) about the digital transformation journey.  
 
 ### Lecture 2.4 Stay up to Date With Mendix
@@ -316,18 +304,14 @@ We’ve got more steps to success coming your way.
 In this module, you learned more about the Mendix platform and explored the 3 S’s and the 5 P’s of digital transformation and how these can contribute to a successful journey. More specifically you:
 
 * Created your Mendix Portfolio Management board that will help you identify, track, and plan out your initiatives.
-
 * Started thinking about the people you want to include to establish a strong Mendix team.
-
 * Familiarized with the processes you ‘ll have to build to ensure long-term outcomes.
-
 * Outlined the benefits the Mendix Platform brings to your organization.
-
 * Identified best practices to promote the value of low-code within your organization.
-
 * Assigned your Mendix admin.
 
-and 
+and
+
 * You are now a member of our Mendix community, where you can always seek additional resources or inspiration! 
 
 Great job! You are now ready to move to the next phase: Create a getting-started plan. You can find out more about that and helpful resources in the following module. 
@@ -351,7 +335,6 @@ By the end of this module, you will be able to: 
 * Choose your first application 
 * Define the value and purpose of your first application 
 * Identify the most suitable deployment option for your Mendix app 
-
 * List the different development options and choose the right one for your organization
 
 ### Lecture 3.1 Create (Or Revise) Your Low-Code Vision 
@@ -386,13 +369,14 @@ You can also start adding key results or placeholders for them, such as, "Achiev
 4. **Third iteration: Evaluate and refine**
 
 Review and refine your bullet points. You need to ensure that you can evaluate whether a particular point has been completed or achieved.
+    
 Finish adding relevant key results or placeholders. You may choose to leave the actual numbers in the key results blank and ask your teams or key people in your organization to set the ambition levels themselves. This creates ownership and buy-in to your vision.
-
+    
 Once you have full sentences for all bullet points and the relevant key results, you need to review them all, asking "Is this ambitious enough or is it too ambitious?"
 
 The objectives need to be achievable, but it also shouldn't be too easy. You need to find that balance. But don't overthink it – you will probably need to adjust some key results along the way, and that's OK.
-More about that in the "Use your vision to steer your journey"
-objective.
+
+More about that in the "Use your vision to steer your journey" objective.
 
 5. **Socialize your vision and gather feedback**
 
@@ -403,13 +387,13 @@ What you don't want is indifference.
 Check during this refining stage that people understand the vision –
 and that it accurately represents what you want to achieve and what your organization needs.
 
-6. Write your final version**
+6. **Write your final version**
 
 In this final stage, you need to consider what feedback is relevant and what you want to incorporate.
 
 If you think it would be more efficient, you might want to get support from a writer to polish some of those sentences so they pop off the page and resonate with your team and stakeholders. However, balance the effort you invest – done is better than perfect!
 
-7. **Communicate your vision effectively **
+7. **Communicate your vision effectively**
 
 Once you have your vision, you need to communicate it effectively to your team. You need to make sure that everyone understands it so that they are motivated to work towards it. 
 
@@ -897,7 +881,7 @@ You are now ready to move to the next phase. Good job! 
 
 In this module, you will get a quick view on the features we offer to incorporate governance in your process. We will show you in detail which of these you need to configure at the start, so the platform supports your organisation’s onboarding.
 
-## Learning Objectives
+### Learning Objectives
 
 Now that you have kicked-off your Mendix Program, it’s time to familiarize with the features Mendix offers to incorporate governance in your process.
 
@@ -982,7 +966,7 @@ Optionally, you may set up access rules in your IDP to control which of your emp
 
 If you don’t enable SSO, you will want to specify if the user passwords expire or not. If you do not want the passwords to expire, toggle **Passwords of company members never expire** to **On**.  
 
-##  Lecture 5.3 Summary
+###  Lecture 5.3 Summary
 
 Now that you know how Mendix can be tailored to your own governance needs, you are ready to get your first project started! You will find all the useful information to do this in the following module.
 

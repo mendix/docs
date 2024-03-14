@@ -13,6 +13,18 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2024
 
+### March 14, 2024
+
+#### Fixes
+
+* We fixed an issue where endpoints would get deleted and re-created when an application was converted from Mendix version 10.6 or below to  version 10.7 or above.
+
+### February 29, 2024
+
+#### Fixes
+
+* We addressed a potential security vulnerability.
+
 ### February 8, 2024
 
 #### Fixes
@@ -145,7 +157,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 #### Features
 
-* We added [beta](/releasenotes/beta-features/) support for published REST services (OpenAPI) to the Catalog. REST services in your Mendix app are now automatically registered when you deploy to the Mendix Cloud. For more information, see [OpenAPI Automatic Registration](/catalog/register/openapi-automatic-registration/). Have a look and [let us know what you think](https://forum.mendix.com/link/space/catalog).
+* We added [beta](/releasenotes/beta-features/) support for published REST services (OpenAPI) to the Catalog. REST services in your Mendix app are now automatically registered when you deploy to the Mendix Cloud. For more information, see [OpenAPI Automatic Registration](/catalog/register/openapi-automatic-registration/). Have a look and [let us know what you think](https://community.mendix.com/link/space/catalog).
 
 #### Improvements
 

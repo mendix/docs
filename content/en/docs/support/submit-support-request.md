@@ -23,11 +23,11 @@ For critical production incidents, please contact Mendix Support by [phone](http
 
 Before submitting a new Mendix Support request, check these resources to make sure your question has not already been answered:
 
-* [Mendix Forum](https://forum.mendix.com)
+* [Mendix Community](https://community.mendix.com/)
 * [Mendix Documentation](/)
 * [Mendix Platform status](https://status.mendix.com)
 
-If you cannot find the answer to your question on the Mendix Forum or in the Mendix documentation, you can submit a support request. The Mendix Support Portal will walk you through the ticket creation by asking for relevant information based on the type of request. 
+If you cannot find the answer to your question in the Mendix Community or in the Mendix documentation, you can submit a support request. The Mendix Support Portal will walk you through the ticket creation by asking for relevant information based on the type of request. 
 
 ## 3 Submitting a New Request {#submitting}
 
@@ -81,8 +81,8 @@ To submit a request with Mendix Support, follow these steps:
         * **Developer Platform - Account** – issues/questions regarding your Mendix account (for example, when you have difficulties creating an account or signing in)
         * **Developer Platform - Marketplace** - issues/questions regarding the [Mendix Marketplace](/appstore/) (for example, when you have difficulties uploading new modules to the Marketplace)
         * **Developer Platform - Sprintr** – issues/questions regarding the [Developer Portal](/developerportal/) (for example, when you cannot create a [story](/developerportal/project-management/epics/) or start a Sprint)
-        * **Developer Platform - Academy** – issues/questions regarding the [Mendix Academy](https://academy.mendix.com/link/home) (for example, when you cannot open a learning path or you cannot find the attachments required for a module)
-        * **Developer Platform - Forum** – issues/questions regarding the [Mendix Forum](https://forum.mendixcloud.com/index3.html) (for example, when you cannot create a new question or add an answer)
+        * **Developer Platform - Academy** – issues/questions regarding the [Mendix Academy](https://academy.mendix.com/) (for example, when you cannot open a learning path or you cannot find the attachments required for a module)
+        * **Developer Platform - Forum** – issues/questions regarding the [Mendix Community](https://community.mendix.com/) (for example, when you cannot create a new question or add an answer)
         * **Developer Platform - Cloud Portal** – issues/questions regarding [deploying in the Developer Portal](/developerportal/deploy/) (for example, when you cannot view your [log](/developerportal/operate/logs/) files or [scale](/developerportal/deploy/scale-environment/) your environment)
         * **Developer Platform - Catalog** – issues/questions regarding the [Catalog](/catalog/) (for example, when you have difficulties accessing the Catalog)
         * **Developer Platform - Control Center** - issues/questions regarding [Control Center](/control-center/) (for example, when you have difficulties deactivating applications from Control Center) 
@@ -92,7 +92,7 @@ To submit a request with Mendix Support, follow these steps:
 
 5. Make sure all your attachments have finished uploading before clicking **Next**.
 
-If investigating the documentation and searching the [Mendix Forum](https://forum.mendixcloud.com) does not help you solve your issue, you can submit the Mendix Support request.    
+If investigating the documentation and searching the [Mendix Community](https://community.mendix.com/) does not help you solve your issue, you can submit the Mendix Support request.    
 
 ## 4 Request Priority {#request-priority}
 
@@ -224,7 +224,7 @@ The ticket can have the following statuses:
 
 ## 8 Submitting a Feature Request
 
-On the [Mendix Idea Forum](https://forum.mendixcloud.com/p/ideas), Mendix captures ideas and requests from customers and developers in the Mendix community. Each quarter, the Mendix Idea Forum is treated as a short-list of the top features that the Mendix community supports via topics with the most upvotes.
+On the [Mendix Community](https://community.mendix.com/p/ideas), Mendix captures ideas and requests from customers and developers in the Mendix community. Each quarter, the Mendix Community is treated as a short-list of the top features that the Mendix community supports via topics with the most upvotes.
 
 ## 9 Read More
 

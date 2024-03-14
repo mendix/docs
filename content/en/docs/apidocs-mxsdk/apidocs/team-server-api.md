@@ -3,7 +3,7 @@ title: "Team Server API ⚠"
 url: /apidocs-mxsdk/apidocs/team-server-api/
 category: "API Documentation"
 description: "This API enables retrieving information (branches, revisions) about application models stored in Mendix Team Server."
-weight: 95
+weight: 110
 ---
 
 {{% alert color="warning" %}}

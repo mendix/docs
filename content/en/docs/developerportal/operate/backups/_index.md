@@ -14,6 +14,8 @@ Backup snapshots for apps running in Mendix Cloud are automatically created ever
 
 Backup snapshots contain both the database and file documents referred to in the database.
 
+{{% alert color="info" %}}This page describes backups for apps deployed to Mendix Cloud. If your app is deployed to SAP Business Technology Platform (SAP BTP) instead, the **Backups** page links to the SAP BTP cockpit.{{% /alert %}}
+
 ## 2 Creation and Retention Schedules
 
 Backups are created and retained as follows:

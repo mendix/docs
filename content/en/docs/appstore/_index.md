@@ -25,16 +25,16 @@ For details on the Studio Pro version required for use and when the component wa
 
 [Mendix Connect](https://www.mendix.com/data-hub/) is a collection of functionalities available in the Mendix Platform that allow people in your organization to discover, understand, connect, and govern data securely. The following connectors and modules are part of the Mendix Connect ecosystem:
 
-* [Database](/appstore/connectors/database-connector/) connnector
+* [Database](/appstore/modules/database-connector/) connnector
 * [Excel Importer](/appstore/modules/excel-importer/) module
 * [Excel Exporter](/appstore/modules/excel-exporter/) module
-* [Email](/appstore/connectors/email-connector/) connector
-* [MQTT](/appstore/connectors/mqtt/) connector
+* [Email](/appstore/modules/email-connector/) connector
+* [MQTT](/appstore/modules/mqtt/) connector
 * [Mendix Business Events](/appstore/services/business-events/) module
 
 And our strategic partner connectors:
 
-* [AWS connectors](/appstore/aws-connectors/)
+* [AWS connectors](/appstore/aws-modules/)
 * [SAP connectors](/partners/sap/)
 
 In addition to platform-supported connectors and modules, Mendix Connect functionalities include:

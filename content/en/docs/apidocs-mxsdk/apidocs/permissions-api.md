@@ -3,7 +3,7 @@ title: "Permissions API ⚠"
 url: /apidocs-mxsdk/apidocs/permissions-api/
 category: "API Documentation"
 description: "With this API, you can retrieve the user roles of your app users so that you can grant them specific access levels."
-weight: 75
+weight: 85
 ---
 
 ## 1 Introduction

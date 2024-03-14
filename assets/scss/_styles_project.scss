@@ -3,15 +3,70 @@
 // _front-page.scss is only custom styling page not from Docsy/Bootstrap
 @import "front-page";
 
-@font-face { // MvM - Added for MxDock by request in #docs 2023-12-08
+@font-face { // LZ - Added for MxDock by request 2024-01-30
+    font-family: "noto-sans";
+    src: local("noto-sans"), url("/fonts/noto-sans/noto-sans-400.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "noto-sans";
+    src: local("noto-sans"), url("/fonts/noto-sans/noto-sans-400-italic.woff2") format("woff2");
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "noto-sans";
+    src: local("noto-sans"), url("/fonts/noto-sans/noto-sans-600.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "noto-sans";
+    src: local("noto-sans"), url("/fonts/noto-sans/noto-sans-600-italic.woff2") format("woff2");
+    font-style: italic;
+    font-weight: 600;
+    font-display: swap;
+  }
+  
+  /* Medium */
+  @font-face {
     font-family: "Patron";
     font-style: normal;
-    font-weight: normal;
+    font-weight: 500;
     font-display: swap;
-    src: local("Patron"), url("/fonts/patron/PatronWEB-Medium.woff2") format("woff2"),
-      url("/fonts/patron/PatronWEB-Medium.woff") format("woff");
-    unicode-range: U+000-5FF; /* Latin glyphs */
-}
+    src: local("Patron Medium"), local("Patron-Medium"),
+      url("/fonts/patron/PatronWEB-Medium.woff2") format("woff2");
+  }
+  
+  /* Light */
+  @font-face {
+    font-family: "Patron";
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: local("Patron Light"), local("Patron-Light"),
+      url("/fonts/patron/PatronWEB-Light.woff2") format("woff2");
+  }
+  
+  /* The main font is Noto Sans */
+  body {
+    font-family: "noto-sans", sans-serif;
+    font-weight: 400;
+    line-height: 1.5; // LZ - line height 1.5 (Regular) according to PDS
+  }
+  
+  /* Page Title H1 use Patron Medium. The rest of headings on your page should use Noto Sans */
+  .page-title {
+    font-family: "Patron", "noto-sans", sans-serif;
+    font-weight: 500;
+  }  
 
 // _alert.scss - Style alert boxes (alert layout defined in alert.html)
 
@@ -24,8 +79,8 @@
     align-items: flex-start; // Align items at the top of the flexbox
     @each $color, $value in $theme-colors {
         &-#{$color} {
-            background-color: map-get($theme-colors, '#{$color}-1'); //Add background color from _variables_project.scss
-            border: 1px solid map-get($theme-colors, '#{$color}-2'); //Add border color from _variables_project.scss
+            background-color: map-get($custom-theme-colors, '#{$color}-1'); //Add background color from _variables_project.scss
+            border: 1px solid map-get($custom-theme-colors, '#{$color}-2'); //Add border color from _variables_project.scss
         }
     }
 }
@@ -119,14 +174,18 @@
     }
 
     > h1 {
+        font-family: "Patron"; //LZ - to set the font for the page titles of the docs to Patron according to PDS
         font-weight: $font-weight-normal; // NK - adjusted for use with multiple Noto Sans weights
         margin-bottom: 1rem;
         font-size: 2rem; // NK - custom edit
+        line-height: 1.2; // LZ - line height 1.2 (Compact) according to PDS
     }
 
     > h2 {
         margin-bottom: 1rem;
         font-size: 1.7rem; // NK - custom edit
+        font-weight: 600; // LZ - Semi-bold font weight according to PDS
+        line-height: 1.2; // LZ - line height 1.2 (Compact) according to PDS
     }
 
     > h2:not(:first-child) {
@@ -140,6 +199,8 @@
     > h3, > h4, > h5, > h6 {
         margin-bottom: 1rem;
         margin-top: 1.5rem; // NK - decrease space between sections
+        font-weight: 600; // LZ - Semi-bold font weight according to PDS
+        line-height: 1.2; // LZ - line height 1.2 (Compact) according to PDS
     }
 
     /* ordered lists inside ordered lists will be displayed using letters */
@@ -303,8 +364,8 @@ div.date-format{
     padding-bottom: 0px;
     @each $color, $value in $theme-colors {
         &-#{$color} {
-            background-color: map-get($theme-colors, '#{$color}-1'); //Add background color from _variables_project.scss
-            border: 1px solid map-get($theme-colors, '#{$color}-6'); //Add border color from _variables_project.scss
+            background-color: map-get($custom-theme-colors, '#{$color}-1'); //Add background color from _variables_project.scss
+            border: 1px solid map-get($custom-theme-colors, '#{$color}-6'); //Add border color from _variables_project.scss
         }
     }
 }
@@ -513,7 +574,6 @@ nav.foldable-nav {
 // _tables.scss - from https://github.com/twbs/bootstrap/blob/v4.6.2/scss/_tables.scss
 
 .table {
-    width: 90%; // NK - adjusted width to match rest of content
     margin-bottom: $spacer;
     color: $table-color;
     background-color: $table-bg; // Reset for nesting within parents with `background-color`.
@@ -522,7 +582,7 @@ nav.foldable-nav {
   
     th,
     td {
-      padding: $table-cell-padding;
+      padding: 0.75rem 0.75rem; // YL - set bigger padding values
       vertical-align: top;
       border: $table-border-width solid $table-border-color; // NK - added borders to tables
       font-size: 0.8rem; // NK - smaller font size
@@ -652,4 +712,72 @@ nav.foldable-nav {
    .mx-footer__link:focus-visible {
          outline: 2px solid #298efb;
          outline-offset: 2px;
-   }
+    }
+
+   .footer .container {
+    text-align: center;
+}
+
+
+//_badge.scss
+
+.badge-warning {
+    color: #fff;
+    background-color: #C97800;
+  }
+
+.badge-pill {
+    padding-right: 0.6em;
+    padding-left: 0.6em;
+    border-radius: 10rem;
+  }
+
+// Swagger styling
+
+.swagger-ui .info .title,
+.swagger-ui .model-title {
+    font-family: $font-family !important;
+    color: var(--bs-body-color);
+}
+
+.swagger-ui .info a {
+    font-family: $font-family !important;
+    color: $link-color !important;
+}
+
+.swagger-ui .info .title small pre {
+    background: transparent;
+ }
+
+.swagger-ui .servers>label select {
+    margin-top: 1.5rem;
+}
+
+.swagger-ui .model-title {
+    font-size: $font-size-base !important;
+}
+
+.swagger-ui .renderedMarkdown p,
+.swagger-ui table tr td,
+.swagger-ui .opblock-tag,
+.swagger-ui .opblock-description-wrapper p,
+.swagger-ui .opblock .opblock-summary-description,
+.swagger-ui .opblock .opblock-section-header h4 {
+    font-family: $font-family !important;
+}
+
+.swagger-ui .model-box-control:focus,
+.swagger-ui .models-control:focus,
+.swagger-ui .opblock-summary-control:focus {
+    outline: transparent !important;
+}
+
+.swagger-ui table tbody tr td {
+    padding: .5rem !important;
+}
+
+.swagger-ui .renderedMarkdown code {
+    padding: 0rem !important;
+    font-size: $font-size-base !important;
+    color: $primary !important;
+}

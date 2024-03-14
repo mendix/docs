@@ -18,7 +18,7 @@ This how-to teaches you how to do the following:
 
 ## 2 Prerequisites
 
-Before you can start exporting XML documents, you need data in your application that is used during the export. You first need to set up the data structure and GUI to maintain the customer data. Then you'll create the actual export logic and the corresponding export mapping. So, you need to know how to do the following:
+Before you can start exporting XML documents, you need data in your application that is used during the export. You first need to set up the data structure and GUI to maintain the customer data. Then, you'll create the actual export logic and the corresponding export mapping. To do this, you need to know how to do the following:
 
 * Create a domain model (for more information, see [Configuring a Domain Model](/refguide/configuring-a-domain-model/))
 * Create a custom file document (for more information, see [File Manager](/refguide/file-manager/))
@@ -80,7 +80,7 @@ The XML schema describes what the contents of an XML document should be. We need
 
     {{< figure src="/attachments/howto/integration/export-xml-documents/18581809.png" >}}
 
-    The mapping editor for this element will pop up, you can close that by clicking **OK**.
+    The mapping editor for this element will pop up which can be closed by clicking **OK**.
 
 6. Drag the **Customer** entity from the **Connector** into the placeholder:
 
@@ -91,9 +91,9 @@ The XML schema describes what the contents of an XML document should be. We need
     {{< figure src="/attachments/howto/integration/export-xml-documents/18581806.png" >}}
 
 7. In the mapping editor, verify the following:<br />
-    1. **Method** is set to **By association**<br />
-    2. **Association to parent** is set to **XMLDocument_Customer**<br />
-8. Select attributes for all five **Attribute to value element mapping** instances (or click **Map attributes by name** to accomplish this). You should have the following mapping:
+    * **Method** is set to **By association**<br />
+    * **Association to parent** is set to **XMLDocument_Customer**<br />
+8. Select attributes for all five **Attribute to value element mapping** instances (or click **Map attributes by name**). You should have the following mapping:
 
     {{< figure src="/attachments/howto/integration/export-xml-documents/18581807.png" >}}
 
@@ -142,13 +142,13 @@ To create the export logic, follow these steps:
     {{< figure src="/attachments/howto/integration/export-xml-documents/18581801.png" >}}
 
 12. In the **Edit Change Item** editor, do the following:
-    * For the **Member** for the change item, select the **XMLDocument_Customer** reference:
-    * For the **Value**, enter *$CustomerList*
+    * For the **Member**, for the change item, select the **XMLDocument_Customer** reference:
+    * For the **Value**, enter `$CustomerList`
 
     {{< figure src="/attachments/howto/integration/export-xml-documents/18581825.png" >}}
 
 13. Click **OK** to save the change item.
-14. Create a change item to set the **Name** attribute to: *'customers.xml'* (including the single quotation marks [']). The **Create Object** dialog box should now look like this:
+14. Create a change item to set the **Name** attribute to *'customers.xml'* (including the single quotation marks [']). The **Create Object** dialog box should now look like this:
 
     {{< figure src="/attachments/howto/integration/export-xml-documents/create-object.png" >}}
 

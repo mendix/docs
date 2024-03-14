@@ -8,9 +8,9 @@ tags: ["studio pro", "database connector", "mendix 10", "mendix connect", "conne
 
 ## 1 Introduction
 
-The [Database Connector](/appstore/connectors/external-database-connector/) integrates with Studio Pro with an **External database connection** service document. Use this document alongside the connector to connect to external databases right in Studio Pro.
+The [Database Connector](/appstore/modules/external-database-connector/) integrates with Studio Pro with an **External database connection** service document. Use this document alongside the connector to connect to external databases right in Studio Pro.
 
-This page references the **External database connection** document in Studio Pro. See [External Database Connector](/appstore/connectors/external-database-connector/) for the complete documentation. 
+This page references the **External database connection** document in Studio Pro. See [External Database Connector](/appstore/modules/external-database-connector/) for the complete documentation. 
 
 {{% alert color="warning" %}}
 You must have the [External Database Connector](https://marketplace.mendix.com/link/component/219862) installed for external database connections to work properly while running your app. For instructions on adding modules or connectors to your app, see [Use Marketplace Content in Studio Pro](/appstore/overview/use-content/).
@@ -20,7 +20,7 @@ You must have the [External Database Connector](https://marketplace.mendix.com/l
 
 Right-click on your module and click **Add other > External database connection** to open the **Connect to Database** wizard:
 
-{{< figure src="/attachments/appstore/connectors/external-database-connector/database-connection-wizard.png" >}}
+{{< figure src="/attachments/appstore/modules/external-database-connector/database-connection-wizard.png" >}}
 
 Once in the wizard, enter or select the following:
 
@@ -55,7 +55,7 @@ After entering your database information in the **Connect to Database** wizard, 
 
 The name of the document is the **Name** (not **Database name**) you provided when running the wizard:
 
-{{< figure src="/attachments/appstore/connectors/external-database-connector/database-service-document.png" >}}
+{{< figure src="/attachments/appstore/modules/external-database-connector/database-service-document.png" >}}
 
 ### 3.1 Query Screen {#query-screen}
 
@@ -82,7 +82,7 @@ The **Tables & Columns** field on the right side of the screen displays the info
 
 ### 3.3 Response {#response}
 
-After [querying the database](/appstore/connectors/external-database-connector/#query-database), you can view the data included in the query in the **Response** screen.
+After [querying the database](/appstore/modules/external-database-connector/#query-database), you can view the data included in the query in the **Response** screen.
 
 If you are satisfied with the response, click **Use Response**. This will take you to the [Data Structure](#data-structure) tab where you can preview and create an entity from the response.
 

@@ -4,7 +4,7 @@ url: /apidocs-mxsdk/apidocs/private-cloud-deploy-api/
 type: swagger
 category: "API Documentation"
 description: "This API allows you to manage application environments deployed to your private cloud using the Mendix Operator."
-weight: 60
+weight: 72
 ---
 
 {{% alert color="info" %}}
@@ -115,10 +115,6 @@ The following steps will create a cluster, register and install a namespace, add
 
 {{% alert color="info" %}}
 If required, the invitation for the cluster/namespace member can be auto-accepted by setting `autoAcceptInvite` to true in the update cluster/namespace API request.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-Configuration of License Product type via the deploy API is not yet supported.
 {{% /alert %}}
 
 ### 3.2 Using the API to Restart an App {#restart}

@@ -18,6 +18,8 @@ aliases:
 
 When your application has reached production status, it is important to keep track of its status and health. When you click **Alerts** in the Developer Portal, you can inspect your application's health in Mendix Cloud. 
 
+{{% alert color="info" %}}This page describes alerts for licensed apps deployed to Mendix Cloud. Alerts are not available for Free Apps deployed to Mendix Cloud.<br><br>If your app is deployed to SAP Business Technology Platform (SAP BTP) instead, the **Alerts** page links to the SAP BTP cockpit.{{% /alert %}}
+
 Mendix analyzes the application and platform status periodically. All status alerts are logged in the **History** of the **Alerts**. 
 
 {{% alert color="info" %}}
@@ -65,23 +67,25 @@ Description | Track the CPU utilization of the application container |
 Example message | Application container 34234543-6543-6543-6543-153d247b6543 - Instance Index: 0 has high CPU usage: 90.5
 Warning Threshold | CPU utilization is between 75% and 85%. |
 Critical Threshold | CPU utilization is higher than 85%.
-First actions to take | Inspect the trends for **Application node CPU usage** combined with all **Application Statistics** for anomalies and correlate those with application behavior. |
+First actions to take | Inspect the metrics for **CPU usage** combined with all **Application Statistics** for anomalies and correlate those with application behavior. |
 
 Application Container Disk Percentage | |
 :---|:---|
+Also called | Container disk overload |
 Description | Track the disk utilization of the application container |
 Example message | Application container 34234543-6543-6543-6543-153d247b6543 - Instance Index: 0 has high disk usage: 90.5
 Warning Threshold | Disk utilization is between 75% and 85%. |
 Critical Threshold | Disk utilization is higher than 85%.
-First actions to take | Inspect the trends for **Application node disk usage (percentage)** combined with all **Application Statistics** for anomalies and correlate those with application behavior. |
+First actions to take | Inspect the metrics for **Disk usage** combined with all **Application Statistics** for anomalies and correlate those with application behavior. |
 
 Application Container Memory Percentage | |
 :---|:---|
+Also called | Container memory overload |
 Description | Track the memory utilization of the application container |
 Example message | Application container 34234543-6543-6543-6543-153d247b6543 - Instance Index: 0 has high memory usage: 90.5
 Warning Threshold | Memory utilization is between 90% and 95%. |
 Critical Threshold | Memory utilization is higher than 95%.
-First actions to take | Inspect the trends for **Application node operating system memory** combined with all **Application Statistics** for anomalies and correlate those with application behavior. |
+First actions to take | Inspect the metrics for **Memory usage** combined with all **Application Statistics** for anomalies and correlate those with application behavior. |
 
 Critical Logs | |
 :---|:---|
@@ -97,7 +101,7 @@ Description | Track the CPU utilization for the database belonging to the applic
 Example message | Database has 95% CPU utilization.
 Warning Threshold | Not used.
 Critical Threshold | CPU utilization is higher than 90%. 
-First actions to take | Inspect the trends for **Application node CPU usage** combined with **Application node disk throughput** and **Application node load** for anomalies and correlate those with application behavior.
+First actions to take | Inspect the metrics for **CPU utilization of the database** combined with **Database throughput** for anomalies, and correlate those with application behavior.
 
 Database Free Space | |
 :---|:---|
@@ -113,7 +117,7 @@ Description | Track the amount of freeable memory for the database belonging to 
 Example message | Database has 35% freeable memory.
 Warning Threshold | Not used.
 Critical Threshold | Database has 10% freeable memory.
-First actions to take | Inspect the trends graph **Database Node Operating System Memory** for anomalies and correlate those with application behavior. Resolve by identifying and optimizing long-running database queries, or upgrading the cloud resource pack (for example, by ordering more memory).
+First actions to take | Inspect the metrics graph **Database memory** for anomalies and correlate those with application behavior. Resolve by identifying and optimizing long-running database queries, or upgrading the cloud resource pack (for example, by ordering more memory).
 
 Database IOPS Burst Balance | |
 :---|:---|
@@ -121,7 +125,7 @@ Description | Track the available IOPS burst balance credit for the database bel
 Example message | Database has 10% IOPS burst balance.
 Warning Threshold | Not used.
 Critical Threshold | Database has 20% IOPS burst balance.
-First actions to take | Inspect the trends graph **Database IOPS Burst Balance** for anomalies and correlate those with application behavior.
+First actions to take | Inspect the metrics graph **Database IOPS Burst Balance** for anomalies and correlate those with application behavior.
 
 Health Check | |
 :---|:---|

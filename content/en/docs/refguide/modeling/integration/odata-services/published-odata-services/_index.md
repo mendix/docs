@@ -18,7 +18,7 @@ The standard used for OData in Mendix is [OData v4](http://www.odata.org/documen
 he option to publish [OData v3](http://www.odata.org/documentation/odata-version-3-0) services, which return data in Atom XML format, is deprecated and will be removed in a future version.
 {{% /alert %}}
 
-Not all parts of the standard are implemented. If something is not documented here, it is has not yet been added.
+Not all parts of the standard are implemented. If something is not documented here, it has not yet been added.
 
 This document describes the options available to you when you create a published OData service and ends with some runtime considerations.
 

@@ -17,6 +17,26 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 ## 2024
 
+### March 06
+
+#### Deprecations
+
+* Feedback API v1 is deprecated, and it will be turned off completely on September 30, 2024. To ensure a seamless transition, Mendix strongly recommends migrating to [Feedback API v2](/apidocs-mxsdk/apidocs/feedback-api-v2/) for all your feedback-related operations, including retrieval, creation, and updates.
+
+### February 29
+
+#### Improvements
+
+* The Feedback API has been improved. We are happy to release our new REST Feedback API. The new API will replace the existing SOAP API, but it also comes with extra functionality like being able to retrieve the screenshot for a feedback item. Check out the [docs](/apidocs-mxsdk/apidocs/feedback-api-v2/) for more information. The following changes have been made:
+    * We now send information on the priority status of a feedback item through various calls.
+    * We have optimized the GET call.
+    * We have better error logs for various calls.
+
+#### Fixes
+
+* We fixed a bug where the sidepanel would flicker upon loading either [Mini survey](/developerportal/app-insights/mini-surveys/) or [Feedback](/developerportal/app-insights/feedback/).
+* In Feedback, creating, archiving, and deleting feedback items should now show the correct pages.
+
 ### February 8
 
 #### New Features

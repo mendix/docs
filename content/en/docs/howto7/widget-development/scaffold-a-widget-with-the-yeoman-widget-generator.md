@@ -113,7 +113,7 @@ from **null** to `<path to VersionSelector.exe>` – make sure you use double ba
 
 ### 5.3 Errors in the Test project 'Could not find the widget type "WidgetName.widget.WidgetName" in the "widgets" directory.'
 
-For reference, see [this Mendix Forum question](https://forum.mendixcloud.com/link/questions/9428).
+For reference, see [this Mendix Community question](https://community.mendix.com/link/questions/9428).
 
 The solution is to go to the `WidgetName` element and replace it with your own widget:
 

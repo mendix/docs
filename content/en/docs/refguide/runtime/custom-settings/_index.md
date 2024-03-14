@@ -228,7 +228,7 @@ For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these
 | <a id="commendixstorageazureAccountName" href="#commendixstorageazureAccountName">com.<wbr>mendix.<wbr>storage.<wbr>azure.<wbr>AccountName</a> | Account name to authenticate with the Azure blob storage service. |   |
 | <a id="commendixstorageazureAccountKey" href="#commendixstorageazureAccountKey">com.<wbr>mendix.<wbr>storage.<wbr>azure.<wbr>AccountKey</a> | Account key to authenticate with the Azure blob storage service. |   |
 | <a id="commendixstorageazureSharedAccessSignature" href="#commendixstorageazureSharedAccessSignature">com.<wbr>mendix.<wbr>storage.<wbr>azure.<wbr>SharedAccessSignature</a> | Provides delegated access to resources in your storage account. For more information, see [Shared Access Signature on docs.microsoft.com](https://docs.microsoft.com/en-us/azure/storage/common/storage-dotnet-shared-access-signature-part-1). |   |
-| <a id="commendixstorageazureBlobEndpoint" href="#commendixstorageazureBlobEndpoint">com.<wbr>mendix.<wbr>storage.<wbr>azure.<wbr>BlobEndpoint</a> | Set the blob endpoint. This setting is required when authentication by `SharedAccessSignature` is used. |   |
+| <a id="commendixstorageazureBlobEndpoint" href="#commendixstorageazureBlobEndpoint">com.<wbr>mendix.<wbr>storage.<wbr>azure.<wbr>BlobEndpoint</a>¹ | Set the blob endpoint. This setting is required when authentication by `SharedAccessSignature` is used. |   |
 | <a id="commendixstorageazureContainer" href="#commendixstorageazureContainer">com.<wbr>mendix.<wbr>storage.<wbr>azure.<wbr>Container</a> | Name of the container containing the blob. |   |
 | <a id="commendixstorageazureCreateContainerIfNotExists" href="#commendixstorageazureCreateContainerIfNotExists">com.<wbr>mendix.<wbr>storage.<wbr>azure.<wbr>CreateContainerIfNotExists</a> | Indicates whether to check if the container exists, and creates it if it does not exist. | `true` |
 | <a id="commendixstorageazureParallelismFactor" href="#commendixstorageazureParallelismFactor">com.<wbr>mendix.<wbr>storage.<wbr>azure.<wbr>ParallelismFactor</a> | Maximum number of parallel multi-part file uploads/downloads. We advise not changing this setting unless you experience slow file transfers for large files. Choosing larger values will lead to higher memory usage. | 5 |
@@ -237,9 +237,15 @@ For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these
 | <a id="commendixstorageazureMaximumExecutionTimeInMs" href="#commendixstorageazureMaximumExecutionTimeInMs">com.<wbr>mendix.<wbr>storage.<wbr>azure.<wbr>MaximumExecutionTimeInMs</a> | Sets the maximum execution time (in milliseconds) to use when making this request. For more information, see the [Azure libraries](https://azure.github.io/azure-sdk-for-java/storage.html). | No maximum time |
 
 {{% alert type="warning" %}}
-`com.mendix.storage.azure.BlobEndpoint` setting can include container name, as in `https://storageaccount.blob.core.windows.net/some-container-name`. In this case the value in the `com.mendix.storage.azure.Container` setting will be used as a directory name.
+¹ The `com.mendix.storage.azure.BlobEndpoint` setting can include the container name, as in `https://storageaccount.blob.core.windows.net/some-container-name`. In this case the value in the `com.mendix.storage.azure.Container` setting will be used as a directory name.
 
-This behavior is broken in versions 8.18.28, 9.24.14, 9.24.15, 9.24.16, 9.24.17, 9.24.18, 10.6.1, 10.6.2, 10.6.3, 10.6.4, 10.6.5, 10.7.0, 10.8.0, 10.8.1. In those versions, the container name in the `com.mendix.storage.azure.BlobEndpoint` setting is ignored and files are stored at the root of the container.
+This behavior is broken in the following versions
+
+* 8.18.28
+* 9.24.14, 9.24.15, 9.24.16, 9.24.17, 9.24.18
+* 10.6.1, 10.6.2, 10.6.3, 10.6.4, 10.6.5, 10.7.0, 10.8.0, 10.8.1.
+
+In these versions, the container name in the `com.mendix.storage.azure.BlobEndpoint` setting is ignored and files are stored at the root of the container. If you upgrade to one of these versions from a previous version, you will no longer have access to any files uploaded previously.
 {{% /alert %}}
 
 {{% alert color="warning" %}}

@@ -953,7 +953,7 @@ After the status of the models changes to **Access Granted**, you can use it wit
 
 ### 5.3 Error code 403 - AccessDeniedException
 
-When invoking a model the error code *403 - Access denied* indicates that you don't have access to the targeted resource.
+When invoking a model the error code *403 - Access denied* indicates that you do not have access to the targeted resource.
 
 #### 5.3.1 Cause
 

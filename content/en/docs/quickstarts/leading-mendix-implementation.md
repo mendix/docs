@@ -215,7 +215,7 @@ It’s important to keep your team small as you build your Mendix Center of Exce
 
 Developers come from all parts of the business, not just IT. From your high-code programmers, to your business-centric developers, to your tech-savvy business analysts, low-code platforms let you build teams of makers from all backgrounds. 
 
-As the main action point here, start thinking about who you need to kick off building your first Mendix application and start talking to them about it. Some names are probably coming to mind already and you will get much more information on who you need exactly in **Lecture 4.2 Identify Your First Mendix Project Team**.
+As the main action point here, start thinking about who you need to kick off building your first Mendix application and start talking to them about it. Some names are probably coming to mind already and you will get much more information on who you need exactly in [Lecture 4.2 Identify Your First Mendix Project Team](#4.2).
 
 #### 2.3.3 Process: Building Repeatable Practices for Long-Term Outcomes
 
@@ -261,10 +261,14 @@ Similar to your deployment strategy, you also want to begin considering what you
 We’ve all heard the saying, “If a tree falls in the forest but no one is around to hear it, does it make any sound?” Similarly, if you are excellent at the core components of digital transformation but don’t communicate it to anyone, does it really have an impact? That is where promotion comes into play. Without promotion, success can go unnoticed, and the value of your efforts may not be recognized.
 Promotion tends to be a challenge for many IT organizations, in part because IT teams do not often have professional marketers. Even without a marketing team behind you, here are five ways you can better promote the value of low-code within your organization. 
 
-**Shaping and communicating your low-code vision:** We’ll help you solidify your low-code vision later in this guide, but once you have it, don’t let it live on a shelf or in the cloud — allow it to evolve with input from your organization. Communicate your vision in cross-functional meetings and ask for support in getting organizational leadership to embed the vision into their message as well. 
-***Stakeholder management:*** Involve stakeholders early and often to build enthusiasm for digital transformation success. Start by bringing cross-functional partners on board who you already have strong relationships with, and work together to identify the problems you want to solve. By building a plan together you can help ensure your initiatives will get support. 
-***Internal PR:*** Build a plan for how you will raise awareness and involvement in your low-code implementation and ensure your executive sponsor helps your PR efforts. You can leverage existing communication channels such as company meetings, newsletters, or shared collaboration sites to spread your message. Start by sharing your plan and vision, and then use these channels to celebrate success after your first go-live.  
-***Community building:*** Digital transformation is all about bringing together business and IT. Start with a portfolio workshop to brainstorm ideas for your first application, and then identify teams who will collaborate through implementation and launch. Identify a core group of champions who can raise awareness on your behalf even when you aren’t in the room. 
+**Shaping and communicating your low-code vision:** We’ll help you solidify your low-code vision later in this guide, but once you have it, don’t let it live on a shelf or in the cloud — allow it to evolve with input from your organization. Communicate your vision in cross-functional meetings and ask for support in getting organizational leadership to embed the vision into their message as well.
+
+***Stakeholder management:*** Involve stakeholders early and often to build enthusiasm for digital transformation success. Start by bringing cross-functional partners on board who you already have strong relationships with, and work together to identify the problems you want to solve. By building a plan together you can help ensure your initiatives will get support.
+
+***Internal PR:*** Build a plan for how you will raise awareness and involvement in your low-code implementation and ensure your executive sponsor helps your PR efforts. You can leverage existing communication channels such as company meetings, newsletters, or shared collaboration sites to spread your message. Start by sharing your plan and vision, and then use these channels to celebrate success after your first go-live.
+
+***Community building:*** Digital transformation is all about bringing together business and IT. Start with a portfolio workshop to brainstorm ideas for your first application, and then identify teams who will collaborate through implementation and launch. Identify a core group of champions who can raise awareness on your behalf even when you aren’t in the room.
+
 ***Celebrating success:*** We love a good reason to celebrate, and hope you’ll use milestones large and small to celebrate your successes. Acknowledging your achievements, whether it’s getting the team to complete Academy certifications, building the first reusable component, finishing the first development sprint or launching your first application, celebrations are a powerful way to boost team morale and drive future momentum. 
 
 #### 2.3.6 Additional Resources
@@ -316,9 +320,7 @@ and
 
 Great job! You are now ready to move to the next phase: Create a getting-started plan. You can find out more about that and helpful resources in the following module. 
 
-## Module 3: Create a Getting Started Plan
-
-### Module introduction (module tile): 
+## Module 3: Create a Getting Started Plan 
 
 In this module, you will learn why and how to create an effective getting started plan.
 
@@ -414,26 +416,31 @@ Now that you have your goals and challenges identified, consider milestones for 
 Here are some ideas:
 
 * Portfolio 
-* First app identified 
-* App value definition completed 
-* First app live 
-* Portfolio defined 
+  * First app identified 
+  * App value definition completed 
+  * First app live 
+  * Portfolio defined 
+
 * People 
-* First team trained 
-* Training and enablement plan defined 
-* Team growth strategy defined 
+  * First team trained 
+  * Training and enablement plan defined 
+  * Team growth strategy defined 
+
 * Process 
-* Governance strategy defined 
-* Mendix support introduced 
-* Stage retrospective executed 
+  * Governance strategy defined 
+  * Mendix support introduced 
+  * Stage retrospective executed 
+
 * Platform 
-* Deployment strategy defined 
-* Data and integration strategy defined 
-* Architecture strategy defined 
+  * Deployment strategy defined 
+  * Data and integration strategy defined 
+  * Architecture strategy defined 
+
 * Promotion 
-* Host a go-live celebration for first application 
-* Gather relevant stakeholders to show progress 
-* Share the success at company meeting or in newsletters
+  * Host a go-live celebration for first application 
+  * Gather relevant stakeholders to show progress 
+  * Share the success at company meeting or in newsletters
+
 
 The final step of your getting started plan involves capturing your 5 P milestones and building a timeline. Below are some examples that we use frequently with Mendix customers that you can take and make your own: Add details, and overlay dates appropriate for your organization, etc. Work independently or work with your customer success manager to think through what this might look like for you.
 
@@ -455,7 +462,7 @@ To start, think about the big picture: What is your organization striving to ach
 
 These could include solutions to migrate from legacy apps, improve customer experience or increase efficiency. And Mendix has a tool to help you do just that!
 
-You should have already created your portfolio in Lecture [2.5](#2.5), if you haven’t yet let’s start by creating your Portfolio board, you can do that by going [here](https://portfolio.mendix.com/), clicking Open Portfolio Management and then click **Create Portfolio.**You can make it restricted for the time being (that means you will have to approve other people before they gain access to it).  
+You should have already created your portfolio in Lecture [2.5](#2.5), if you haven’t yet let’s start by creating your Portfolio board, you can do that by going [here](https://portfolio.mendix.com/), clicking Open Portfolio Management and then click **Create Portfolio**. You can make it restricted for the time being (that means you will have to approve other people before they gain access to it).  
 
 If you have done a portfolio workshop already and maybe have your list of initiatives in an Excel file, you can easily import them. If not, just create a few cards that represent your ideas. Your Mendix team can also help you with this, so please do not hesitate to reach out to them to go over everything together.
 
@@ -497,12 +504,12 @@ For instance, a Mendix customer initially failed to build an application that ca
 
 {{< figure src="/attachments/quickstarts/leading-mendix-implementation/level-of-complexity.png" class="image-border"  >}}
 
-**Which type of projects is Mendix a good fit for? **
+**Which type of projects is Mendix a good fit for?**
 
 Another thing that might help is understanding which type of projects Mendix is the best fit for (and which ones are not a great fit).
 Here’s a little guide for that.
 
-**Mendix fits a wide variety of software applications, but some really stand out as a perfect fit: **
+**Mendix fits a wide variety of software applications, but some really stand out as a perfect fit:**
 
 * Any software requirement where there is no off-the-shelf solution available 
 
@@ -546,7 +553,7 @@ Here’s a little guide for that.
 
 * Extensions of System of Record (ERP/PLM/MES etc.) 
 
-**Which type of projects would Mendix potentially not be the perfect fit for? **
+**Which type of projects would Mendix potentially not be the perfect fit for?**
 
 Even though you can build almost anything with Mendix, especially with the extensibility of the platform using Java, Mendix might not be the perfect fit for every application. Below are some examples of applications where additional work needs to be done. 
 
@@ -800,7 +807,7 @@ Here is a sample you can use as a template:
 
 This will vary based on the specific people taking each role. A Scrum Master who used to be a full-stack developer could take the *Crash Course* instead of the *Become a Rapid Developer* course. Your EA may need to add *Native Mobile* or *Configure Advanced Security* for your particular organization, project and team needs. Your Mendix team is happy to help create your training plan.
 
-**Mendix Certificates **
+**Mendix Certificates**
 
 Mendix provides four different certification levels to measure developer maturity, each with an increasing level of required skill and experience:
 
@@ -818,7 +825,7 @@ You can find all the details about the certification, as well as the required co
 
 As your team grows and takes on more projects, it's important to continue to also level up on your Mendix expertise. Proper enablement will allow your team to take on more complex projects and deliver more business impact. When able, remember to take the time to level up on your Mendix Certification.
 
-**Intermediate Developer Certification **
+**Intermediate Developer Certification**
 
 An Intermediate Developer has the fundamental knowledge of the Mendix platform to start building the next great apps. This certification is proof that someone is ready to be added to operating teams and can contribute from the start by applying your knowledge and skills in different parts of the project development lifecycle.
 
@@ -830,7 +837,7 @@ An Advanced Developer has the knowledge and skills required to build production-
 
 You can find information as well as required courseware for the Advanced certification [here](https://academy.mendix.com/link/certifications/6/advanced). 
 
-**Expert Developer Certification **
+**Expert Developer Certification**
 
 The Expert Developer Certificate is not only proof of Mendix knowledge, it confirms a developer’s expertise and shows they have applied what they know about Mendix in their day-to-day job.
 
@@ -929,7 +936,7 @@ A lot of these options will become more relevant for you as you scale your Mendi
 
 The Mendix platform has a few options to tailor the platform to your specific governance needs. 
 
-**Claim additional email domains **
+**Claim additional email domains**
 
 {{< figure src="/attachments/quickstarts/leading-mendix-implementation/company-email-domains.png" class="image-border"  >}}
 
@@ -1238,7 +1245,7 @@ Yes, you absolutely need to celebrate. Here are some tips to maximize the impact
 
 ### Lecture 7.5 After the Launch
 
-**Establish a retrospective cadence **
+**Establish a retrospective cadence**
 
 To achieve this milestone, it’s first important to establish the goals of a retrospective. The retrospective should look back on the project and review successes and lessons learned. 
 

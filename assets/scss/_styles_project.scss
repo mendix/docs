@@ -100,6 +100,19 @@
     padding-bottom: 0px;
 }
 
+// Anchor icon styling for anchor.js
+
+.anchor-icon {
+    display: none;
+    padding: 0rem .3rem .1rem .3rem;
+    margin: -.5rem 0rem -.5rem .3rem;
+    border-radius: 4px;
+}
+
+.anchor-icon:hover {
+    background: $gray-light;
+}
+
 // _code.scss -  Code formatting
 
 .td-content {

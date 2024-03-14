@@ -464,6 +464,11 @@ nav.foldable-nav {
     vertical-align: top;
 
 }
+
+.toc-title { // DB – added class for ToC title styling 
+    color: $gray-800 !important;
+}
+
 .td-toc {
 
     height: calc(100vh - 180px); // NK - added to allow scrolling
@@ -491,15 +496,15 @@ nav.foldable-nav {
             padding-top: .25rem;
 
             &:hover {
-                color: $blue;
+                color: $link-color;
                 text-decoration: none;
             }
         }
         // NK - styling for ToC highlighting
         .activeToc {
             font-weight: $font-weight-bold;
-            color: $blue;
-            border-left-color: $blue;
+            color: $link-color;
+            border-left-color: $link-color;
         }
     }
 }

@@ -6,7 +6,7 @@ description: "Unlock the full potential of the Mendix platform and accelerate yo
 tags: ["Mendix Implementation"]
 ---
 
-## 1 Introduction 
+## Overview 
 With this guide, you can unlock the full potential of the Mendix platform and accelerate your application development journey in your organization.
 
 This guide covers everything you need to know to get started with Mendix in your company. This guide is meant for anyone who is in charge of managing the entire Mendix program in an organization. It will take you through defining your low code vision, defining company-wide settings as well as kicking off what will become the first app you will launch. Follow these steps to unlock the full potential of the Mendix platform and accelerate your journey into the digital execution practice.
@@ -74,8 +74,6 @@ The content in this guide can be covered in a few hours, but it was designed as 
   At the end of each guide, you will be asked to fill in a survey. Please tell us what you think. Your opinion will help us to keep improving!
 
 ## Module 2: Get Familiar With the 5 P’s of the Digital Execution Practice 
-### Module introduction (module title): 
-
 In this module you will learn about the 5 P’s of Digital Transformation and their importance to your Mendix success. You will also get an overview of the Mendix platform and learn where you can find all the extra information you may need. 
 
 ### Learning Objectives 
@@ -100,7 +98,7 @@ By the end of this module, you will: 
 ### Lecture 2.1 Assign Your Mendix Admin 
 First let’s get one admin (no pun intended) thing out of the way. Your company needs **at least one Admin**. It might make sense for the first admin to be you and then you can easily assign as many other admins as you need.
 
-So why do you need an admin? Your developers are able to create new apps, invite other users to their app teams, deploy apps, and invite app end-users to give feedback, among many other activities. Insights into these company activities are provided in [Control Center](https://controlcenter.mendix.com/index.html) in one central overview. You can read more about Control Center [here](/control-center/) or follow this [guide](https://academy.mendix.com/link/paths/116/Govern-and-Scale-your-App-Landscape-with-Mendix-Control-Center).
+So why do you need an admin? Your developers are able to create new apps, invite other users to their app teams, deploy apps, and invite app end-users to give feedback, among many other activities. Insights into these company activities are provided in [Control Center](https://controlcenter.mendix.com/index.html) in one central overview. You can read more about Control Center [here](/control-center/) or follow this [learning path](https://academy.mendix.com/link/paths/116/Govern-and-Scale-your-App-Landscape-with-Mendix-Control-Center).
 
 Do you already have at least one admin? If that’s the case, you can see them on the list when you open [Control Center](https://controlcenter.mendix.com/index.html), and you can skip the rest of this lecture.
 
@@ -267,9 +265,9 @@ Below you can find a collection of different resources to grow your knowledge re
 
 * In our [DEP Manual](https://www.mendix.com/resources/digital-execution-manual/) you can learn more about the 5 P’s and how to best leverage Mendix’s low-code platform.
 
-* Follow the [Digital Execution guide](https://academy.mendix.com/link/paths/52/Digital-Execution) to learn the steps of successful digital execution and the meaning of rapid application development maturity.
+* Follow the [Digital Execution Learning Path](https://academy.mendix.com/link/paths/52/Digital-Execution) to learn the steps of successful digital execution and the meaning of rapid application development maturity.
 
-* In the Agile Awareness guide, you can read more about the [Digital Execution Stages](https://academy.mendix.com/link/modules/389/lectures/3133/2.2-Digital-Execution-Stages:-Start,-Structure,-Scale) as well as the [core tenets of digital execution](https://academy.mendix.com/link/modules/389/lectures/3135/2.4-People,-Portfolio,-Process,-and-Platform-(4-P’s)).
+* In the Agile Awareness Learning Path, you can read more about the [Digital Execution Stages](https://academy.mendix.com/link/modules/389/lectures/3133/2.2-Digital-Execution-Stages:-Start,-Structure,-Scale) as well as the [core tenets of digital execution](https://academy.mendix.com/link/modules/389/lectures/3135/2.4-People,-Portfolio,-Process,-and-Platform-(4-P’s)).
 
 * You can check our Mendix blog where you will find many interesting articles for Digital Transformation, like [this one](https://www.mendix.com/blog/successful-digital-transformation-a-practice-makes-perfect/) that explains the importance of digital transformation and the 5P’s; or [this one](https://www.mendix.com/blog/digital-transformation-a-matter-of-time/#learning-to-walk-the-4-ps-and-3-ss-of-digital-transformation) about the digital transformation journey.  
 
@@ -453,7 +451,7 @@ You should have already created your portfolio in Lecture [2.5](#2.5), if you ha
 
 If you have done a portfolio workshop already and maybe have your list of initiatives in an Excel file, you can easily import them. If not, just create a few cards that represent your ideas. Your Mendix team can also help you with this, so please do not hesitate to reach out to them to go over everything together.
 
-Portfolio management is a key activity that ensures you are always creating solutions that bring the most value to your organization (and since we’re talking Mendix here, this is where you also decide if Mendix is the right tool for each one of the ideas). This means that you (maybe together with your stakeholders) need to go over your main portfolio, keep initiatives up to date and adjust or reprioritize if needed. You can learn a lot more about this process in the dedicated guide . For now, the most important thing is to list the initiatives that are top of mind for you and use that input to choose the ideal first app. 
+Portfolio management is a key activity that ensures you are always creating solutions that bring the most value to your organization (and since we’re talking Mendix here, this is where you also decide if Mendix is the right tool for each one of the ideas). This means that you (maybe together with your stakeholders) need to go over your main portfolio, keep initiatives up to date and adjust or reprioritize if needed. You can learn a lot more about this process in the dedicated learning path . For now, the most important thing is to list the initiatives that are top of mind for you and use that input to choose the ideal first app. 
 
 So, let’s add your initiatives. Click the *Create Initiative* button on the top right and start jotting down your ideas.
 
@@ -719,7 +717,7 @@ Defining and honing your development process is a critical factor in program suc
 
 Understanding how to work in Agile allows organizations to [stay responsive to change](https://s2.bl-1.com/h/i/dtfq477y/xKsSFL1?url=https://www.mendix.com/blog/design-thinking-vs-agile-combine-problem-finding-problem-solving-better-outcomes/) and reduce time-to-market by nearly 50%. Mendix highlights these benefits by providing capabilities such as sprints, story management, and integrated feedback management within the platform itself.
 
-In the Academy, you can find an [Agile Awareness guide](https://academy.mendix.com/link/paths/110/Agile-Awareness) that you can use to train your team in the Agile Framework and how it will define your Mendix journey. 
+In the Academy, you can find an [Agile Awareness Learning Path](https://academy.mendix.com/link/paths/110/Agile-Awareness) that you can use to train your team in the Agile Framework and how it will define your Mendix journey. 
 
 ### Lecture 4.2 Identify Your First Mendix Project Team {#4.2}
 This section addresses how you set up your first Mendix Project Team.
@@ -727,7 +725,7 @@ Ensuring you have the right people in the right roles is a critical step in succ
 
 **Setting up your Agile Scrum team**
 
-To work in Mendix, we recommend working in an Agile Scrum Team that is already familiar with the Agile Framework (if needed, refer to this [Agile Awareness guide)](https://academy.mendix.com/link/paths/110/Agile-Awareness).
+To work in Mendix, we recommend working in an Agile Scrum Team that is already familiar with the Agile Framework (if needed, refer to this [Agile Awareness Learning Path)](https://academy.mendix.com/link/paths/110/Agile-Awareness).
 
 This framework allows development teams to collaborate better, respond to change, and continuously incorporate user feedback.
 
@@ -776,14 +774,14 @@ Your team does not have to fit this exact mold, but it is important that all the
 
 **Additional Resources**
 
-* Learn more about the Agile team, roles and responsibilities in this [lecture of the Agile Awareness guide](https://academy.mendix.com/link/modules/390/lectures/3142/3.3-Agile-Team,-Roles-and-Responsibilities). 
+* Learn more about the Agile team, roles and responsibilities in this [lecture of the Agile Awareness Learning Path](https://academy.mendix.com/link/modules/390/lectures/3142/3.3-Agile-Team,-Roles-and-Responsibilities). 
 
 * Find additional content on our Mendix blog, like this article on [How to Structure an Agile Scrum Team](https://www.mendix.com/blog/the-road-to-adopting-scrum-team-composition/).
 
 ### Lecture 4.3 Arrange Academy Training for Your Team 
 As you begin to map out your Mendix team, it's important to establish a training plan. Properly training your Mendix team helps accelerate your time to first value and promotes long-term low-code success. It helps each team member take charge of their own success and the overall team’s success.
 
-Take the time to familiarize yourself with the [Mendix Academy](https://academy.mendix.com/link/home). Here, we provide a variety of guides and individual courses for various roles and diverse backgrounds to allow you to customize the learning journey appropriate for each team member and role. Once you are familiar with the various guides, diverse topics and individual courses, create a training plan with each team member based on their role and experience. 
+Take the time to familiarize yourself with the [Mendix Academy](https://academy.mendix.com/link/home). Here, we provide a variety of learning paths and individual courses for various roles and diverse backgrounds to allow you to customize the learning journey appropriate for each team member and role. Once you are familiar with the various guides, diverse topics and individual courses, create a training plan with each team member based on their role and experience. 
 
 Here is a sample you can use as a template:
 
@@ -906,7 +904,7 @@ But as you can tell from the slide below, governance touches many aspects of the
 
 {{< figure src="/attachments/quickstarts/leading-mendix-implementation/governance-capability-highlights.png" class="image-border"  >}}
 
-If you would like to learn more about our governance features, you can check out the [Control Center Guide,](/control-center/) [Control center guide](https://academy.mendix.com/link/paths/116/Govern-and-Scale-your-App-Landscape-with-Mendix-Control-Center), or the Mendix documentation. You probably already involved your subject matter experts while you were evaluating Mendix, so they might want to do a deeper dive.
+If you would like to learn more about our governance features, you can check out the [Control Center Guide,](/control-center/) [Control Center Learning Path](https://academy.mendix.com/link/paths/116/Govern-and-Scale-your-App-Landscape-with-Mendix-Control-Center), or the Mendix documentation. You probably already involved your subject matter experts while you were evaluating Mendix, so they might want to do a deeper dive.
 
 A lot of these options will become more relevant for you as you scale your Mendix portfolio, so for now, we will just point to a couple of key settings that are important for getting started and launching your first app.
 

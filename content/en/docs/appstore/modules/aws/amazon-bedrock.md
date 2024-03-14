@@ -953,7 +953,7 @@ After the status of the models changes to **Access Granted**, you can use it wit
 
 ### 5.3 Error code 403 - AccessDeniedException
 
-When invoking a model the error code *403 - Access denied* indicates that you do not have access to the targeted resource.
+When invoking a model, the error code *403 - Access denied* indicates that you do not have access to the targeted resource.
 
 #### 5.3.1 Cause
 
@@ -963,13 +963,11 @@ Possible root causes for this error include the following:
 
 #### 5.3.2 Solution
 
-To solve this issue, verify the following:
-
-1. Ensure that you have selected an AWS Region where you have model access. You can see an overview of the models accessible to you in the AWS Management Console, in the [Model Access](https://us-west-2.console.aws.amazon.com/bedrock/home?#/modelaccess) section of your Amazon Bedrock environment.
+To solve this issue, ensure that you have selected an AWS Region where you have model access. You can see an overview of the models accessible to you in the AWS Management Console, in the [Model Access](https://us-west-2.console.aws.amazon.com/bedrock/home?#/modelaccess) section of your Amazon Bedrock environment.
 
 ### 5.4 Error code 404 - ResourceNotFoundException
 
-When invoking a model the error code *404 - Resource not found* indicates that the targeted resource was not found.
+When invoking a model, the error code *404 - Resource not found* indicates that the targeted resource was not found.
 
 #### 5.4.1 Cause
 

@@ -72,6 +72,7 @@ The following custom settings can be configured:
 | <a id="UploadedFilesPath" href="#UploadedFilesPath">UploadedFilesPath</a> | The location of the uploaded files. A valid path can be: `\\FileServer\CustomerPortalFiles`. | [deployment folder]\data\files |
 | <a id="EnableFileDocumentCaching" href="#EnableFileDocumentCaching">EnableFileDocumentCaching</a> | Defines whether file documents should be cached. Only enable this if you are sure that the file documents will not contain sensitive information. Images are always cached. | false |
 | <a id="ObjectManagementStrictChangeBehavior" href="#ObjectManagementStrictChangeBehavior">ObjectManagement.<wbr>StrictChangeBehavior</a> | Defines the behavior when changing values of Enums and Calculated attributes.<br/>When set to true, setting an invalid value for an Enum attribute and/or setting a value for a Calculated attribute will result in an InvalidEnumerationValueException and/or ReadOnlyAttributeException respectively.<br/>When set to false, changes to the values of Enums and/or Calculated attributes will be allowed.<br/>We plan to remove this setting in Mendix 11, after which, an exception will always be raised when setting an invalid value. | true |
+| <a id="mapping.import.MaxJsonReadingLength" href="#mapping.import.MaxJsonReadingLength">mapping.import.MaxJsonReadingLength</a> | The maximum length of the JSON string received from the remote which can be processed with import mapping. Use this setting when you expect a string which is longer than the default. See [Import Mappings](/refguide/import-mappings/#troubleshooting) for more information. <br />*This setting was introduced in Mendix MTS version 10.6, patch versions 10.6.5 and above.* | 20000000 *(dependent on library version)* |
 
 ### 2.1 ApplicationRootUrl {#applicationrooturl-section}
 
@@ -227,13 +228,25 @@ For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these
 | <a id="commendixstorageazureAccountName" href="#commendixstorageazureAccountName">com.<wbr>mendix.<wbr>storage.<wbr>azure.<wbr>AccountName</a> | Account name to authenticate with the Azure blob storage service. |   |
 | <a id="commendixstorageazureAccountKey" href="#commendixstorageazureAccountKey">com.<wbr>mendix.<wbr>storage.<wbr>azure.<wbr>AccountKey</a> | Account key to authenticate with the Azure blob storage service. |   |
 | <a id="commendixstorageazureSharedAccessSignature" href="#commendixstorageazureSharedAccessSignature">com.<wbr>mendix.<wbr>storage.<wbr>azure.<wbr>SharedAccessSignature</a> | Provides delegated access to resources in your storage account. For more information, see [Shared Access Signature on docs.microsoft.com](https://docs.microsoft.com/en-us/azure/storage/common/storage-dotnet-shared-access-signature-part-1). |   |
-| <a id="commendixstorageazureBlobEndpoint" href="#commendixstorageazureBlobEndpoint">com.<wbr>mendix.<wbr>storage.<wbr>azure.<wbr>BlobEndpoint</a> | Set the blob endpoint. This setting is required when authentication by `SharedAccessSignature` is used. |   |
+| <a id="commendixstorageazureBlobEndpoint" href="#commendixstorageazureBlobEndpoint">com.<wbr>mendix.<wbr>storage.<wbr>azure.<wbr>BlobEndpoint</a>¹ | Set the blob endpoint. This setting is required when authentication by `SharedAccessSignature` is used. |   |
 | <a id="commendixstorageazureContainer" href="#commendixstorageazureContainer">com.<wbr>mendix.<wbr>storage.<wbr>azure.<wbr>Container</a> | Name of the container containing the blob. |   |
 | <a id="commendixstorageazureCreateContainerIfNotExists" href="#commendixstorageazureCreateContainerIfNotExists">com.<wbr>mendix.<wbr>storage.<wbr>azure.<wbr>CreateContainerIfNotExists</a> | Indicates whether to check if the container exists, and creates it if it does not exist. | `true` |
 | <a id="commendixstorageazureParallelismFactor" href="#commendixstorageazureParallelismFactor">com.<wbr>mendix.<wbr>storage.<wbr>azure.<wbr>ParallelismFactor</a> | Maximum number of parallel multi-part file uploads/downloads. We advise not changing this setting unless you experience slow file transfers for large files. Choosing larger values will lead to higher memory usage. | 5 |
 | <a id="commendixstorageazureUseHttps" href="#commendixstorageazureUseHttps">com.<wbr>mendix.<wbr>storage.<wbr>azure.<wbr>UseHttps</a> | For enabling or disabling secure connections using HTTPS. Can be `true` or `false`. | `true` |
 | <a id="commendixstorageazureTimeoutIntervalInMs" href="#commendixstorageazureTimeoutIntervalInMs">com.<wbr>mendix.<wbr>storage.<wbr>azure.<wbr>TimeoutIntervalInMs</a> | Sets the amount of time (in milliseconds) to allow a call to the storage service to complete. For more information, see the [Azure libraries](https://azure.github.io/azure-sdk-for-java/storage.html). | No timeout |
 | <a id="commendixstorageazureMaximumExecutionTimeInMs" href="#commendixstorageazureMaximumExecutionTimeInMs">com.<wbr>mendix.<wbr>storage.<wbr>azure.<wbr>MaximumExecutionTimeInMs</a> | Sets the maximum execution time (in milliseconds) to use when making this request. For more information, see the [Azure libraries](https://azure.github.io/azure-sdk-for-java/storage.html). | No maximum time |
+
+{{% alert type="warning" %}}
+¹ The `com.mendix.storage.azure.BlobEndpoint` setting can include the container name, as in `https://storageaccount.blob.core.windows.net/some-container-name`. In this case the value in the `com.mendix.storage.azure.Container` setting will be used as a directory name.
+
+This behavior is broken in the following versions
+
+* 8.18.28
+* 9.24.14, 9.24.15, 9.24.16, 9.24.17, 9.24.18
+* 10.6.1, 10.6.2, 10.6.3, 10.6.4, 10.6.5, 10.7.0, 10.8.0, 10.8.1.
+
+In these versions, the container name in the `com.mendix.storage.azure.BlobEndpoint` setting is ignored and files are stored at the root of the container. If you upgrade to one of these versions from a previous version, you will no longer have access to any files uploaded previously.
+{{% /alert %}}
 
 {{% alert color="warning" %}}
 Azure blob storage's default connection protocol is HTTPS in order to encourage secure connections by default. This is a highly recommended best practice (for more information, see [Configure Azure Storage Connection Strings](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string)). This should now be transparent, unless you use custom domain names (for details, see [Require Secure Transfer](https://docs.microsoft.com/en-us/azure/storage/common/storage-require-secure-transfer)). In that case, you should use the `UseHttps` setting above to revert to the previous default behavior and disable HTTPS.

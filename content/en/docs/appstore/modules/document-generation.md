@@ -109,7 +109,7 @@ The steps for each procedure are described in the sections below.
 
 1. Make sure that you have configured the **DocumentGeneration** module as described in the [Configuration](#configuration) section.
 
-2. Make sure that you have the application [deployed to the desired Mendix cloud](/developerportal/deploy/mendix-cloud-deploy/#deploy-app-mendix-cloud).
+2. Make sure that you have the application [deployed to the desired Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/#deploy-app-mendix-cloud).
 
 3. To allow the module to send and receive document generation requests in your Mendix Cloud environments, enable the DocGen request handler as follows:
 

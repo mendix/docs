@@ -574,7 +574,6 @@ nav.foldable-nav {
 // _tables.scss - from https://github.com/twbs/bootstrap/blob/v4.6.2/scss/_tables.scss
 
 .table {
-    width: 90%; // NK - adjusted width to match rest of content
     margin-bottom: $spacer;
     color: $table-color;
     background-color: $table-bg; // Reset for nesting within parents with `background-color`.

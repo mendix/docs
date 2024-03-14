@@ -951,22 +951,36 @@ To solve this issue, follow these steps:
 
 After the status of the models changes to **Access Granted**, you can use it with the Amazon Bedrock connector.
 
-### 5.2 Error code 404 - Resource Not Found
+### 5.3 Error code 403 - AccessDeniedException
 
-When invoking a model the error code *404 - Resource Not Found* indicates that the targeted resource was not found.
+When invoking a model, the error code *403 - Access denied* indicates that you do not have access to the targeted resource.
 
-#### 5.2.1 Cause
+#### 5.3.1 Cause
 
 Possible root causes for this error include the following:
 
 * You do not have access to the model in the specified AWS region.
+
+#### 5.3.2 Solution
+
+To solve this issue, ensure that you have selected an AWS Region where you have model access. You can see an overview of the models accessible to you in the AWS Management Console, in the [Model Access](https://us-west-2.console.aws.amazon.com/bedrock/home?#/modelaccess) section of your Amazon Bedrock environment.
+
+### 5.4 Error code 404 - ResourceNotFoundException
+
+When invoking a model, the error code *404 - Resource not found* indicates that the targeted resource was not found.
+
+#### 5.4.1 Cause
+
+Possible root causes for this error include the following:
+
+* The model which you are trying to invoke is not available in your specified AWS region.
 * The model which you are trying to invoke is deprecated.
 
-#### 5.2.2 Solution
+#### 5.4.2 Solution
 
 To solve this issue, verify the following:
 
-1. Ensure that you have selected an AWS Region where you have model access. You can see an overview of the models accessible to you in the AWS Management Console, in the [Model Access](https://us-west-2.console.aws.amazon.com/bedrock/home?region=us-west-2#/modelaccess) section of your Amazon Bedrock environment.
+1. Ensure that you have selected an AWS Region where the targeted model exists. You can see an overview of the models accessible to you in the AWS Management Console, on the [Overiew page](https://us-west-2.console.aws.amazon.com/bedrock/home?#/overview) of your Amazon Bedrock environment. Make sure the region specified in the AWS Console matches the region you have configured in Mendix. 
 2. Ensure that the model that you have selected is not deprecated and that the *model-id* is currently available in Amazon Bedrock.
 
 ## 6 Appendix

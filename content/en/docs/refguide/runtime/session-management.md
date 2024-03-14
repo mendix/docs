@@ -4,16 +4,16 @@ url: /refguide/session-management/
 category: "Mendix Runtime"
 description: "Describes how sessions are established and managed."
 tags: ["Runtime", "Mendix Client", "Login", "Session", "authentication"]
-weight: 20
+weight: 35
 ---
 
 ## 1 Introduction 
 
-When a user login to an application, the Mendix Runtime establishes a session that persists as long as the user remains active within the application. The session is supposed to expire after a certain amount of inactivity, determined by the time elapsed since the last runtime request in accordance with the session timeout.
+When a user signs in to an application, the Mendix Runtime establishes a session that persists as long as the user remains active within the application. The session is supposed to expire after a certain amount of inactivity, determined by the time elapsed since the last runtime request in accordance with the session timeout.
 
-Mendix now utilizes authentication tokens instead of earlier approaches for long-lived sessions to keep them session active while users are not actively working in the app, improving security and providing a more unified solution for session management across various application types. Consequently, long-lived sessions are now supported for both online and offline applications, whether native or web-based.
+Mendix versions 10.9.0 and above, use authentication tokens to keep a session active while users are not actively working in the app. This replaces earlier approaches for long-lived sessions, improving security and providing a more unified solution for session management across various types of application. This means that long-lived sessions are now supported for both online and offline applications, whether native or web-based.
 
-### 2 Authentocation Token
+### 2 Authentication Token
 
 ### 2.1 Enable Authentication Token
 
@@ -31,14 +31,14 @@ This approach enhances security, as these cookies are inaccessible to anything o
 
 There is a custom runtime setting, `com.mendix.webui.HybridAppLoginTimeOut` that determines the validity of the authentication token. If no value is set, the token remains valid for one year.
 
-### 3 Application Behaviour
+### 3 Application Behavior
 
 ### 3.1 Native and Offline PWA Applications
 
-This feature maintains backward compatibility, so we preserve the previous session management approach for existing applications. For upgraded offline applications, whether native or web, that currently use the old login API, `login`, are now supposed to use the new authentication token system by default. You can always disable this behaviour by using the new API, login2, and setting the useAuthToken parameter to false.
+This feature maintains backward compatibility, so we preserve the previous session management approach for existing applications. For upgraded offline applications, whether native or web, that currently use the old login API, `login`, are now supposed to use the new authentication token system by default. You can always disable this behavior by using the new API, login2, and setting the useAuthToken parameter to false.
 
-### Client-Runtime Session Management Flow
+### 3.2 Client-Runtime Session Management Flow
 
 {{< figure src="/attachments/refguide/runtime/session.png" alt="The Session Management Flow between client and the runtime." >}}
 
-This diagram illustrates the interaction between the client and the runtime to initilize or retrieve the session.
+This diagram illustrates the interaction between the client and the runtime to initialize or retrieve the session.

@@ -134,7 +134,7 @@ For more information on the available properties in the web app manifest, read t
 
 ### 5.2 Sessions {#sessions}
 
-Offline-first PWAs use authentication token by default to keep the session active while users are not actively working in the app.
+Offline-first PWAs use an authentication token by default to keep the session active while users are not actively working in the app.
 
 For more information on the session and authentication tokens, see [Session Management](/refguide/session-management/)
 

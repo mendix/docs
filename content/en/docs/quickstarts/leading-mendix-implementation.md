@@ -1120,12 +1120,10 @@ By now most probably your first application has been developed and is ready for 
 
 Time to move on and prepare for launching your first application!
 
-## Module 7: Launching Your First Application 
-### Module introduction (module tile): 
-
+## Module 7: Launching Your First Application
 You’ve come a long way, and it is time to launch your first application. This module covers all you need to know at this stage. 
 
-## Learning Objectives 
+### Learning Objectives 
 Well done, you’ve gone a long way and learned a lot through the process! It’s time to launch your first application. Exciting! 
 
 By the end of this module, you will be able to: 
@@ -1137,28 +1135,26 @@ By the end of this module, you will be able to: 
 ### Deploy your application to the Mendix Cloud 
 Deploying your application to the Mendix Cloud is a simple process, that will give you access to all the features and services in the Mendix Cloud. It requires only a few steps to set it up, which you only need to do once for each application. Once the cloud settings of your application is done, you can deploy and redeploy your application with just one click.  
 
-Note that Mendix also offers [other deployment options](/releasenotes/developer-portal/deployment/)
-than the Mendix cloud e.g. to a private cloud if that’s a requirement.
+Note that Mendix also offers [other deployment options](/releasenotes/developer-portal/deployment/) than the Mendix cloud e.g. to a private cloud if that’s a requirement.
 
 ### Obtain a licensed node 
-You can deploy your application for free on the Mendix Cloud. These [Free Apps have limitations](/developerportal/deploy/mendix-cloud-deploy/#free-app)
-when it comes to run time, features and resources. You can publish Free Apps to test the Mendix platform, a specific feature of to quickly prototype an application to test an idea. Once you decide to take your application to the next-level and start serious development on it, you will need to obtain a licensed node, so this is something you will need to do before your launch.
+You can deploy your application for free on the Mendix Cloud. These [Free Apps have limitations](/developerportal/deploy/mendix-cloud-deploy/#free-app) when it comes to run time, features and resources. You can publish Free Apps to test the Mendix platform, a specific feature of to quickly prototype an application to test an idea. Once you decide to take your application to the next-level and start serious development on it, you will need to obtain a licensed node, so this is something you will need to do before your launch.
 
 If you have an existing contract that allows for more licensed nodes, you can [request a new licensed node](/developerportal/deploy/licensing-apps/#31-obtaining-a-licensed-node).
 If you don’t have a contract, or if your contract doesn’t allow for more licensed nodes, contact your Customer Success Manager.
 
 ### Link your application to your licensed node 
-If you have a licensed node available, you can link your application to this licensed node. If your application was published as a Free App, you will have to unlink the application from the Free App environment first. This will delete all data on that Free App environment. So, before you unlink your Free App, [back up the data](/developerportal/deploy/licensing-apps/#backing-up)
-first, if you require it.
+If you have a licensed node available, you can link your application to this licensed node. If your application was published as a Free App, you will have to unlink the application from the Free App environment first. This will delete all data on that Free App environment. So, before you unlink your Free App, [back up the data](/developerportal/deploy/licensing-apps/#backing-up) first, if you require it.
 
-If you have backed up your data, you can [unlink your application](/developerportal/deploy/licensing-apps/#unlink-free)
-from the Free App environment.
+If you have backed up your data, you can [unlink your application](/developerportal/deploy/licensing-apps/#unlink-free) from the Free App environment.
 
 When your app is unlinked from a Free App environment, you can link it to a licensed node. By linking it to a licensed node, you get access to all the features of the Mendix Cloud, such as one-click deployment from Studio Pro and our platform, log management, backups management and monitoring tools.
 
 ### Set node permissions 
 Once you have linked your application to a licensed node, your team needs to determine what users can perform what actions on the node.
+
 Who can configure an environment, who can deploy to an environment, who has access to the logs of an environment, etc. All of that is controlled by [node permissions](/developerportal/deploy/node-permissions/).
+
 By default, only the Technical Contact of a node has permissions to perform any action on the licensed node. The Technical Contact can grant permissions to other members of the app team.
 
 Granting permissions to team members is dependent on your deployment strategy and process: do you have DevOps teams where the developers also deploy and monitor the apps? Or does your company have separate Ops teams, where the deployment is done by people other than the developers? You can set node permissions for each of the environments of your node, so you can grant developers to deploy the app to the Test environment, but restrict deployment permissions for the Production environment to a smaller team.
@@ -1195,8 +1191,7 @@ Aside from unit tests, performance tests can also be performed with multiple thi
 After go-live, the Mendix Cloud offers metrics and logs to provide insights into application performance and can help track down bugs.
 
 ### Lecture 7.3 User Acceptance Testing 
-Before launching your first application, it is important to thoroughly test the application, not just in terms of bug bashing, but also to make sure it fulfills end user needs. That is why User Acceptance Tests should be performed before any go-live. What does that mean?
-It’s simple — always get your end users to actually try out the app before the go-live. This will give you the chance to catch any last-minute bugs and make sure your app is meeting (and exceeding)
+Before launching your first application, it is important to thoroughly test the application, not just in terms of bug bashing, but also to make sure it fulfills end user needs. That is why User Acceptance Tests should be performed before any go-live. What does that mean? It’s simple — always get your end users to actually try out the app before the go-live. This will give you the chance to catch any last-minute bugs and make sure your app is meeting (and exceeding)
 user expectations. 
 
 Mendix feedback module makes it super easy to organize user acceptance tests, all you need to do is to select the environment you want to do this in, make sure the feedback module is set up there, inform your end-users that you need their help and give them information on how to log in and how to provide feedback (maybe you want them to test specific scenarios you would give them on advance, or just let them play around themselves and give feedback on anything they notice might need to be changed). Then your development team will be able to fix any issues and respond to questions that might arise. Keep in mind that they might need extra time to tackle this feedback, so be sure you get user input at least a week before your planned go live date, preferably even longer. 
@@ -1219,14 +1214,14 @@ Yes, you absolutely need to celebrate. Here are some tips to maximize the impact
 * Captivate your audience by presenting the astonishing results of your project. Have the business show the demo.
 
 * Here’s who you can consider inviting to celebrate with you: 
+  * Project team 
+  * Business stakeholders 
 
-* Project team 
-* Business stakeholders 
+  * Stakeholders from other lines of business 
+  * IT leaders 
+  * Mendix Expert Services or the Partner that helped guide the team through the project 
+    But it doesn’t stop there. You need to continue talking about your first success. This part might feel like shameless promotion, and it might not come naturally to you or your team, but trust us, it’s vital and it works. Some of our most successful customers went on to share their success story in the form of a blog for your company website or intranet, a video, a podcast or at the very least a value one-pager that can be shared across your organization. Trust us, it’s worth it.
 
-* Stakeholders from other lines of business 
-* IT leaders 
-* Mendix Expert Services or the Partner that helped guide the team through the project 
-But it doesn’t stop there. You need to continue talking about your first success. This part might feel like shameless promotion, and it might not come naturally to you or your team, but trust us, it’s vital and it works. Some of our most successful customers went on to share their success story in the form of a blog for your company website or intranet, a video, a podcast or at the very least a value one-pager that can be shared across your organization. Trust us, it’s worth it.
 
 ### Lecture 7.5 After the Launch 
 **Establish a retrospective cadence **
@@ -1241,7 +1236,8 @@ To achieve this milestone, it’s first important to establish the goals of a re
 
 Embrace all feedback, whether it’s perception or reality. Again, let the business know they have a voice and that their input is vital to improving future projects. Seek their advice on how to develop a more structured rapid application development approach that further enhances engagement and collaboration with other business units.
 
-One of the most important questions to ask the business stakeholders in the retrospective is “What would you tell your friends/colleagues about this project to make them enthusiastic?” This elevator pitch is great fodder for internal feedback, with the goal of implementing this approach more broadly across the organization. To effectively engage the business, you may have to reverse years of perception. The key is constant communication and proof. Once business users see that you have done what you said you would do — and that they can have a significant impact on the project —they will quickly embrace this new approach 
+One of the most important questions to ask the business stakeholders in the retrospective is “What would you tell your friends/colleagues about this project to make them enthusiastic?” This elevator pitch is great fodder for internal feedback, with the goal of implementing this approach more broadly across the organization. To effectively engage the business, you may have to reverse years of perception. The key is constant communication and proof. Once business users see that you have done what you said you would do — and that they can have a significant impact on the project —they will quickly embrace this new approach.
+
 Make sure to do a team retrospective as well, these are some of the points you can consider:
 
 * What went well?
@@ -1262,8 +1258,7 @@ Whatever it is, make sure you have measured it and will continue to measure it. 
 ### Lecture 7.6 Maintain and Upgrade Your Applications 
 **Platform: Maintaining your Mendix App**
 
-After developing and publishing your first Mendix app, it's important to put proper maintenance measures in place. [Establishing a regular upgrade practice](https://www.mendix.com/wp-content/uploads/Your-Mendix-Upgrade-Guide-1.pdf)
-\[DB37\]\[UT38\]will help keep your app up to date with support and retain access to the latest features.
+After developing and publishing your first Mendix app, it's important to put proper maintenance measures in place. [Establishing a regular upgrade practice](https://www.mendix.com/wp-content/uploads/Your-Mendix-Upgrade-Guide-1.pdf) [DB37\]\[UT38\]will help keep your app up to date with support and retain access to the latest features.
 
 Mendix supports three major versions at a time. For example, today Mendix supports major versions 8, 9, and 10. When the next version (11) is released, then version 8 will sunset, and versions 9, 10, and 11 will be supported.
 
@@ -1272,9 +1267,7 @@ Learn more about [version details and release timelines](/releasenotes/studio-pr
 ### Lecture 7.7 Summary 
 Your first application is launched, and you now know all about testing, launching, and promoting your application as well as the importance of continuous improvement, maintenance and upgrades. It was a long journey, but you made it!  
 
-## Module 8: Conclusion 
-## Conclusion introduction (module tile): 
-
+## Module 8: Conclusion
 This module provides an overview of what you’ve learned in this guide.
 
 ### Lecture 8.1 Summary 
@@ -1290,4 +1283,4 @@ For that reason, we would appreciate your feedback. Please take this quick surve
 
 We respect your privacy. Your feedback is anonymous. We do not use any information from the survey to identify the user.
 
-<https://www.surveymonkey.com/r/66CCZ92
+https://www.surveymonkey.com/r/66CCZ92

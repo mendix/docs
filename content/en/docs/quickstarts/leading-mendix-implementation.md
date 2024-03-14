@@ -78,7 +78,7 @@ The content in this guide can be covered in a few hours, but it was designed as 
 
 In this module you will learn about the 5 P’s of Digital Transformation and their importance to your Mendix success. You will also get an overview of the Mendix platform and learn where you can find all the extra information you may need. 
 
-## Learning Objectives 
+### Learning Objectives 
 Let’s start with building the foundation of your Mendix knowledge!
 
 By the end of this module, you will: 
@@ -323,7 +323,7 @@ Great job! You are now ready to move to the next phase: Create a getting-started
 
 In this module, you will learn why and how to create an effective getting started plan.
 
-## Learning Objectives 
+### Learning Objectives 
 Now that you are familiar with the Mendix platform and the 5 P’s of digital transformation, it is crucial to continue by creating a getting-started plan for your Mendix journey! 
 
 By the end of this module, you will be able to: 
@@ -690,6 +690,7 @@ Regardless of which option you choose, we always recommend that at least one per
 ### Lecture 3.8 Summary 
 
 By now you should have finalized your getting started plan, and are ready to start your first application development! How exciting!
+
 You’ve done a great job so far and learned a lot along the way. By now you should have:
 
 * Define the goals and objectives you want to achieve by using Mendix within your team or organization.
@@ -707,11 +708,9 @@ And
 Time to start putting everything you’ve prepared into practice!
 
 ## Module 4: Start Your Mendix Program 
-### Module introduction (module tile): 
-
 In this module, you will learn all you need to know to kick-off your Mendix program. 
 
-## Learning Objectives 
+### Learning Objectives 
 By now, you are familiar with what you can do with Mendix in your organization and have finalized your getting started plan. Now, it’s time to kick-off your Mendix program!
 
 By the end of this module, you will be able to: 
@@ -727,11 +726,9 @@ By the end of this module, you will be able to: 
 
 Defining and honing your development process is a critical factor in program success. By nature of low-code, **the [Agile Framework](https://www.mendix.com/agile-framework/) is the best way to work with Mendix.**
 
-Understanding how to work in Agile allows organizations to [stay responsive to change](https://s2.bl-1.com/h/i/dtfq477y/xKsSFL1?url=https://www.mendix.com/blog/design-thinking-vs-agile-combine-problem-finding-problem-solving-better-outcomes/)
-and reduce time-to-market by nearly 50%. Mendix highlights these benefits by providing capabilities such as sprints, story management, and integrated feedback management within the platform itself.
+Understanding how to work in Agile allows organizations to [stay responsive to change](https://s2.bl-1.com/h/i/dtfq477y/xKsSFL1?url=https://www.mendix.com/blog/design-thinking-vs-agile-combine-problem-finding-problem-solving-better-outcomes/) and reduce time-to-market by nearly 50%. Mendix highlights these benefits by providing capabilities such as sprints, story management, and integrated feedback management within the platform itself.
 
-In the Academy, you can find an [Agile Awareness guide](https://academy.mendix.com/link/paths/110/Agile-Awareness)
-that you can use to train your team in the Agile Framework and how it will define your Mendix journey. 
+In the Academy, you can find an [Agile Awareness guide](https://academy.mendix.com/link/paths/110/Agile-Awareness) that you can use to train your team in the Agile Framework and how it will define your Mendix journey. 
 
 ### Lecture 4.2 Identify Your First Mendix Project Team 
 This section addresses how you set up your first Mendix Project Team.
@@ -740,6 +737,7 @@ Ensuring you have the right people in the right roles is a critical step in succ
 **Setting up your Agile Scrum team**
 
 To work in Mendix, we recommend working in an Agile Scrum Team that is already familiar with the Agile Framework (if needed, refer to this [Agile Awareness guide)](https://academy.mendix.com/link/paths/110/Agile-Awareness).
+
 This framework allows development teams to collaborate better, respond to change, and continuously incorporate user feedback.
 
 It’s important to have small cross-functional teams to make sure that knowledge of all aspects is available within the team with all roles being covered. If needed, a person can take on multiple roles as long as they have the skills, expertise, and time to commit to each role.
@@ -750,30 +748,27 @@ Getting all the required knowledge in each team might be difficult while keeping
 **Core Team:**
 
 * **Product Owner (PO):** responsible for defining the direction of a project. They have a clear understanding of what the business and users need from the product being developed and the value to be delivered. They translate these needs to the Scrum team. The PO:
+  * Is a liaison between the business and the development team to build, prioritize, and manage the backlog to drive production forward.
 
-* Is a liaison between the business and the development team to build, prioritize, and manage the backlog to drive production forward.
+  * Ensures the product being developed delivers the required value for the business and users. 
 
-* Ensures the product being developed delivers the required value for the business and users. 
-
-* Accepts or rejects the completed work 
-Ideal POs have these five key [skills &
-characteristics.](https://www.mendix.com/blog/5-important-product-owner-skills-for-rapid-app-dev/)
+  * Accepts or rejects the completed work 
+    Ideal POs have these five key [skills & characteristics.](https://www.mendix.com/blog/5-important-product-owner-skills-for-rapid-app-dev/)
 
 * **Scrum Master (SM):** ensures that the team follows Agile best practices and ioversees addressing and removing any productivity blockers that may come up. Essentially, the Scrum master is the authority in Agile and Scrum to keep the team working together efficiently and effectively. SMs:
+  * Should be supportive leaders. 
 
-* Should be supportive leaders. 
+  * Help POs define the product’s value, plan work, and manage the backlog. 
 
-* Help POs define the product’s value, plan work, and manage the backlog. 
-
-* Help developers self-organize.
+  * Help developers self-organize.
 
 * **Development Team:** consists of the people who actually build the app. They are responsible for turning the requirements into functionality, based on the input provided by the Product Owner. The development team:
+  * Is comprised of one or more people with the skills needed to build the product as envisioned by the PO.
 
-* Is comprised of one or more people with the skills needed to build the product as envisioned by the PO.
+  * May be comprised of non-developers and traditional developers alike: architects, writers, technical BAs, designers, and other specialized roles can all be part of the development team. 
 
-* May be comprised of non-developers and traditional developers alike: architects, writers, technical BAs, designers, and other specialized roles can all be part of the development team. 
+  * Work with the SM in the key Scrum activities of sprint planning, sprint review, retrospectives and daily standups to keep their assigned tasks on track with high-quality code during each sprint, while working towards continuous improvement as a team.
 
-* Work with the SM in the key Scrum activities of sprint planning, sprint review, retrospectives and daily standups to keep their assigned tasks on track with high-quality code during each sprint, while working towards continuous improvement as a team.
 
 **Accelerators:**
 
@@ -817,12 +812,10 @@ style="width:6.5in;height:1.44219in" /
 **Rapid Developer Certification**
 
 A Rapid Developer has a baseline knowledge of the Mendix platform and knows where to find information using the documentation and forum.
+
 This certification is proof of basic Mendix knowledge and demonstrates that someone can join a project team and independently build prototypes.
 
-The Rapid Developer certification is a minimum requirement for working in Mendix. Before taking a certification exam, there is required coursework for each level. All courses can either be taken via [instructor-led](https://academy.mendix.com/link/classrooms)](https://academy.mendix.com/link/classrooms)
-or via a
-[self-led](https://academy.mendix.com/link/paths)](https://academy.mendix.com/link/paths)
-. 
+The Rapid Developer certification is a minimum requirement for working in Mendix. Before taking a certification exam, there is required coursework for each level. All courses can either be taken via [instructor-led](https://academy.mendix.com/link/classrooms) or via a [self-led](https://academy.mendix.com/link/paths).
 
 You can find all the details about the certification, as well as the required coursework [here](https://academy.mendix.com/link/certifications/23/rapid). 
 
@@ -837,11 +830,13 @@ You can find information as well as required courseware for the Intermediate cer
 **Advanced Developer Certification**
 
 An Advanced Developer has the knowledge and skills required to build production-ready applications. This certification is proof of someone’s advanced knowledge of the platform and their professional experience with developing Mendix apps.
+
 You can find information as well as required courseware for the Advanced certification [here](https://academy.mendix.com/link/certifications/6/advanced). 
 
 **Expert Developer Certification **
 
 The Expert Developer Certificate is not only proof of Mendix knowledge, it confirms a developer’s expertise and shows they have applied what they know about Mendix in their day-to-day job.
+
 You can find information as well as required courseware for the Advanced certification [here](https://academy.mendix.com/link/certifications/24/expert). 
 
 ### Lecture 4.4 Organize Your Program Kick-Off 
@@ -858,15 +853,15 @@ A sample agenda of a successful program kickoff can include:
 * A round of introductions 
 * Why Mendix was chosen 
 * Business and IT alignment on:
+  * Organizational challenges and needs Mendix is solving (this is where your low-code vision will be very important — you always need to be able to tie Mendix work back to the larger business needs)
 
-* Organizational challenges and needs Mendix is solving (this is where your low-code vision will be very important — you always need to be able to tie Mendix work back to the larger business needs)
+  * An overview of Mendix vision and strategy for your organization 
+    * Goals and success at both the organizational and project levels 
+    * Important milestones 
 
-* An overview of Mendix vision and strategy for your organization 
-* Goals and success at both the organizational and project levels 
-* Important milestones 
+    * Value measurement and impact 
 
-* Value measurement and impact 
-* Identify initial concerns or challenges and build mitigation plans(s)
+  * Identify initial concerns or challenges and build mitigation plans(s)
 
 * Establish a cadence for this group to meet going forward for a business review - quarterly, every other month, monthly, etc.
 
@@ -884,8 +879,6 @@ Amazing, you should have kicked-off your Mendix Program by now! During this phas
 You are now ready to move to the next phase. Good job! 
 
 ## Module 5: Governance and Control in Mendix 
-### Module introduction (module tile): 
-
 In this module, you will get a quick view on the features we offer to incorporate governance in your process. We will show you in detail which of these you need to configure at the start, so the platform supports your organisation’s onboarding.
 
 ## Learning Objectives 
@@ -896,14 +889,13 @@ By the end of this module, you will be able to:
 * Recognize the options Mendix offers to tailor the platform to your specific governance needs 
 * Identify the required steps to Configure the Platform in Control Center 
 ### Lecture 5.1 Introduction to Governance in Mendix 
-Low-code governance is about having oversight and maintaining control over both a landscape of apps and individual app development. It provides guardrails for your development process  
-and brings resources together to achieve the enterprise’s objectives.
-Increase accountability,  
-increase transparency, and get the most ROI out of what your teams build and deploy.  
-It will help you maximize business value at acceptable risk and cost.
+Low-code governance is about having oversight and maintaining control over both a landscape of apps and individual app development. It provides guardrails for your development process and brings resources together to achieve the enterprise’s objectives.
+
+Increase accountability, increase transparency, and get the most ROI out of what your teams build and deploy.  It will help you maximize business value at acceptable risk and cost.
 Knowing the broad strokes capabilities of the Mendix platform early on helps in getting solid early successes.
 
-When you start, the governance responsibility will probably be in the hands of your Mendix admin, but as your Mendix landscape grows you may want to define a Center of Excellence. Admins can use Control Center, a dashboard that gives you an overview of various company activities on the Mendix platform, to manage many of the aspects of landscape governance.  
+When you start, the governance responsibility will probably be in the hands of your Mendix admin, but as your Mendix landscape grows you may want to define a Center of Excellence. Admins can use Control Center, a dashboard that gives you an overview of various company activities on the Mendix platform, to manage many of the aspects of landscape governance. 
+
 {{< figure src="image/path" class="image-border"  >}}image17.png"
 style="width:6.25in;height:3.33333in" /
 

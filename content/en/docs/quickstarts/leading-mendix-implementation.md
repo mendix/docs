@@ -1117,9 +1117,7 @@ If you are using Epics as your agile planning tool, you will be able to link the
 
 {{< figure src="/attachments/quickstarts/leading-mendix-implementation/development-progress.png" class="image-border"  >}}
 
-Another important part of collaboration in the application development lifecycle is the collaboration between the development team and their end users. Mendix makes that super easy using the feedback module.
-
-Your app users just need to click the *Feedback* button in your app and tell you what they like, need or miss, and your development team will be able to immediately respond. Once your app is live, the team will be able to set up a mini-survey to ask for user satisfaction, or get more targeted input by asking specific questions. Here you can read more on [the importance of user feedback for application development](https://www.mendix.com/blog/how-to-collect-and-analyze-user-feedback-in-your-app/).
+Another important part of collaboration in the application development lifecycle is the collaboration between the development team and their end users. Mendix makes that super easy using the feedback module. Your app users just need to click the *Feedback* button in your app and tell you what they like, need or miss, and your development team will be able to immediately respond. Once your app is live, the team will be able to set up a mini-survey to ask for user satisfaction, or get more targeted input by asking specific questions. Here you can read more on [the importance of user feedback for application development](https://www.mendix.com/blog/how-to-collect-and-analyze-user-feedback-in-your-app/).
 
 ### Lecture 6.7 The Development Process Itself and Why That’s Not a Part of This Guide
 
@@ -1248,7 +1246,9 @@ Yes, you absolutely need to celebrate. Here are some tips to maximize the impact
   * Stakeholders from other lines of business 
   * IT leaders 
   * Mendix Expert Services or the Partner that helped guide the team through the project 
-    But it doesn’t stop there. You need to continue talking about your first success. This part might feel like shameless promotion, and it might not come naturally to you or your team, but trust us, it’s vital and it works. Some of our most successful customers went on to share their success story in the form of a blog for your company website or intranet, a video, a podcast or at the very least a value one-pager that can be shared across your organization. Trust us, it’s worth it.
+
+
+But it doesn’t stop there. You need to continue talking about your first success. This part might feel like shameless promotion, and it might not come naturally to you or your team, but trust us, it’s vital and it works. Some of our most successful customers went on to share their success story in the form of a blog for your company website or intranet, a video, a podcast or at the very least a value one-pager that can be shared across your organization. Trust us, it’s worth it.
 
 
 ### Lecture 7.5 After the Launch
@@ -1313,8 +1313,6 @@ An exiting Mendix journey has just begun, and we hope this guide was a useful to
 ### Lecture 8.2 Survey
 
 We strive to make our learning material live up to your expectations.
-For that reason, we would appreciate your feedback. Please take this quick survey to let us know what you think about this guide.
+For that reason, we would appreciate your feedback. Please take this [quick survey](https://www.surveymonkey.com/r/66CCZ92) to let us know what you think about this guide.
 
 We respect your privacy. Your feedback is anonymous. We do not use any information from the survey to identify the user.
-
-https://www.surveymonkey.com/r/66CCZ92

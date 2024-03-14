@@ -397,7 +397,7 @@ We recommend that you temporarily set the log level of the `DocumentGeneration` 
 
 #### 6.2.3 Cloud Service Errors
 
-In case you encounter the message "Unable to generate document, service response code: 401" in the logs of your cloud environment, the request was rejected by the document generation service. This could be caused by the following reasons:
+In case you encounter the message "Unable to generate document for request `<requestId>`, service response code: 401" in the logs of your cloud environment, the request was rejected by the document generation service. This could be caused by the following reasons:
 
 * The scheduled event **SE_AccessToken_Refresh** is not enabled, which caused the registration to expire. Enable the scheduled event and [register](#register-app) the affected app environment again.
 * The URL of the app environment does not match the URL that was provided during registration. This could be the case when you requested a change to the URL of your app, or after restoring a database backup from one environment to another. [Register](#register-app) the affected app environment (or environments) again.

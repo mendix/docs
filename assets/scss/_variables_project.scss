@@ -78,6 +78,8 @@ $danger-8: #bc1622;
 $danger-9: #9e051b;
 $danger-10: #780328;
 
+$purple: #4701d4;
+
 $custom-theme-colors: (
   "info-1":       $info-1,
   "info-2":       $info-2,
@@ -118,7 +120,8 @@ $custom-theme-colors: (
   "danger-7":     $danger-7,
   "danger-8":     $danger-8,
   "danger-9":     $danger-9,
-  "danger-10":    $danger-10
+  "danger-10":    $danger-10,
+  "$purple":      $purple,
 );
 
 

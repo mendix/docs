@@ -901,16 +901,13 @@ style="width:6.25in;height:3.33333in" /
 
 There are several advanced capabilities in the Control Center to help you manage your app landscape as it grows.
 
-* [Dashboard](/control-center/dashboard/)
-provides insight into some KPIs of how your company is advancing.
+* [Dashboard](/control-center/dashboard/) provides insight into some KPIs of how your company is advancing.
 
 * [Apps](/control-center/apps/) provides easy visibility into all apps, environments, their deployment status, technical contact, version, and more.
 
-* [Health dashboard](/control-center/application-health-dashboard/)
-provides an insight into the running status of your app landscape.
+* [Health dashboard](/control-center/application-health-dashboard/) provides an insight into the running status of your app landscape.
 
-* [Entitlements](/control-center/entitlements/)
-shows the resources you’ve bought and used.
+* [Entitlements](/control-center/entitlements/) shows the resources you’ve bought and used.
 
 * You can add, resize or remove environments in the [Deployed apps](/control-center/deployed-apps/) view.
 
@@ -939,9 +936,11 @@ If your company has more than one email domain, all your email domains should b
 
 [You can read more about that, here.](/control-center/company-settings/#company-email-domains)
 
-**Assign a security contact**  
+**Assign a security contact**
+
 {{< figure src="image/path" class="image-border"  >}}image21.png"
 style="width:3.50864in;height:1.47929in" / 
+
 Provide a specific **Security Contact** who is informed if there are critical security issues with the Mendix platform and platform-supported Marketplace components. Mendix strongly recommends applying a team email address or a functional mailbox instead of a personal individual email address.
 
 Your security contact person(s) may want to subscribe the [Mendix Security Advisories](/releasenotes/security-advisories/)
@@ -950,20 +949,23 @@ to get familiar with the process around security fixes.
 [Additional reading](/control-center/company-settings/#security-contact)
 
 **Define company brand and description**
+
 {{< figure src="image/path" class="image-border"  >}}image19.png"
 style="width:0.22222in;height:0.22222in" alt="direct hit" / 
+
 {{< figure src="image/path" class="image-border"  >}}image22.png"
 style="width:5in;height:3.63542in" / 
+
 On the **Company Brand** page, you can upload, edit, or remove a **Company Logo**. The company logo uploaded here will appear across the platform where it is used. For instance, it will be displayed on your published Marketplace content.
 
 [Additional reading](/control-center/company-brand/)
 
 **Setup IDP or SSO for access to the Mendix platform**
+
 {{< figure src="image/path" class="image-border"  >}}image23.png"
 style="width:0.22222in;height:0.22222in" alt="direct hit" /
 
-It is recommended that you [set-up SSO](/control-center/security/set-up-sso-byoidp/)
-between the Mendix platform and your corporate IDP such as Microsoft Entra ID (f.k.a. Azure AD) or Okta.  This will put your IDP in control of how users are authenticated before they can access your content on the Mendix platform. Leavers (former employees) will not be able to login. Your platform users get the convenience of Single Sign-On, rather than yet-another-password. See also our [BYOIDP blog](https://www.mendix.com/blog/introducing-byoidp-bring-your-own-identity-provider/).
+It is recommended that you [set-up SSO](/control-center/security/set-up-sso-byoidp/) between the Mendix platform and your corporate IDP such as Microsoft Entra ID (f.k.a. Azure AD) or Okta.  This will put your IDP in control of how users are authenticated before they can access your content on the Mendix platform. Leavers (former employees) will not be able to login. Your platform users get the convenience of Single Sign-On, rather than yet-another-password. See also our [BYOIDP blog](https://www.mendix.com/blog/introducing-byoidp-bring-your-own-identity-provider/).
 
 Optionally, you may set up access rules in your IDP to control which of your employees can and cannot work on the Mendix platform. As we encourage collaboration in multi-disciplined teams, be careful not to be too restrictive or not apply any restriction at all. For example, potential end-users of Mendix apps may want to contribute to development teams. In a later stage you can set up restrictive access rules as you start putting more business-critical IPs in the logic of your Mendix apps.
 
@@ -974,8 +976,6 @@ If you don’t enable SSO, you will want to specify if the user passwords expire
 Now that you know how Mendix can be tailored to your own governance needs, you are ready to get your first project started! You will find all the useful information to do this in the following module.
 
 ## Module 6: Get Started With Your First Project 
-### Module introduction (module tile): 
-
 In this module, you will get all the information you need to know to help you get started with your first Mendix project.
 
 ## Learning Objectives 
@@ -1043,10 +1043,15 @@ Regardless of Agile methodology, some of the practices that you can consider sta
 * Sprint 0 (or design sprints) 
 
 * Daily stand-ups 
+
 * Sprint planning 
+
 * Backlog refinement 
+
 * Product demos 
-* Team retrospectives 
+
+* Team retrospectives
+
 Care should be taken to incorporate feedback from team retrospectives and other Agile ceremonies into your standards as part of your continuous improvement process. That includes reviewing and analyzing any shortcuts taken or other deviations from the standard process to understand why it was necessary and potentially consider adapting your standards or putting another appropriate measure in place.
 
 Development teams can work most efficiently if requirements are clearly described (e.g. in user stories), to estimate the effort and implementation. Because of this, it is important that you choose a tool in which these can be tracked. The Mendix platform offers a collaborative tool called [Epics](https://www.mendix.com/blog/mendix-projects-and-the-wizardry-of-epics/), in which this is possible. Here you can manage the backlog, epics, create user stories, and of course sprints. Both the Agile and Kanban methods are supported.
@@ -1075,10 +1080,7 @@ Here is a couple of topics to keep in mind:
 
 **End user login**
 
-Every app will need a way for your end users to get access to it. We advise to use the [OIDC SSO module](/appstore/modules/oidc/) for (B2E)
-apps you are developing. This is a sensible default as it is the easiest and most flexible approach for Single Sign-On and is supported by Microsoft’s Entra ID and most other IdPs.  As an alternative you may advise [SAML](/appstore/modules/saml/)
-(e.g. for regulated B2C-apps) or [LDAP](/appstore/modules/ldap/) for on-prem apps or the [Forgot My Password](/appstore/modules/forgot-password/)
-module for non-SSO apps.
+Every app will need a way for your end users to get access to it. We advise to use the [OIDC SSO module](/appstore/modules/oidc/) for (B2E) apps you are developing. This is a sensible default as it is the easiest and most flexible approach for Single Sign-On and is supported by Microsoft’s Entra ID and most other IdPs.  As an alternative you may advise [SAML](/appstore/modules/saml/) (e.g. for regulated B2C-apps) or [LDAP](/appstore/modules/ldap/) for on-prem apps or the [Forgot My Password](/appstore/modules/forgot-password/) module for non-SSO apps.
 
 **Familiarize with the Marketplace**
 
@@ -1103,16 +1105,19 @@ If you are using Epics as your agile planning tool, you will be able to link the
 style="width:6.5in;height:9.48723in" /
 
 Another important part of collaboration in the application development lifecycle is the collaboration between the development team and their end users. Mendix makes that super easy using the feedback module.
+
 Your app users just need to click the *Feedback* button in your app and tell you what they like, need or miss, and your development team will be able to immediately respond. Once your app is live, the team will be able to set up a mini-survey to ask for user satisfaction, or get more targeted input by asking specific questions. Here you can read more on [the importance of user feedback for application development](https://www.mendix.com/blog/how-to-collect-and-analyze-user-feedback-in-your-app/).
 
 ### Lecture 6.7 The Development Process Itself and Why That’s Not a Part of This Guide 
 We have created this guide in order to help anyone who is in charge of implementing Mendix in their organization to hit the ground running.
+
 The end goal of this phase is to bring your first app to life, but if you are working on managing the Mendix program, odds are you will not be the person actually developing the app itself. Rather, your job is to enable the set up of everything, focus on the 5 P’s, and empower the development team to focus on development only. 
 
 There are many dedicated resources on the platform to help new (or seasoned developers) get the most out of Mendix.So for the sake of your time, this guide’s length, and your sanity, let us skip a few steps ahead and pretend that the application is now almost ready.
 
 ### Lecture 6.8 Summary 
 By now most probably your first application has been developed and is ready for launch! You’ve learned how to kick off your project and have ensured access for all stakeholders involved. You’ve also laid the foundation for establishing an Agile way of working and made sure there is a clear understanding of project requirements shared amongst all stakeholders. Also, you are aware of what tools are in place to support continuous collaboration that you can leverage through Mendix.
+
 Time to move on and prepare for launching your first application!
 
 ## Module 7: Launching Your First Application 

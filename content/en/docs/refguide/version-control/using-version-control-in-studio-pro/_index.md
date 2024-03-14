@@ -11,17 +11,20 @@ tags: ["Version Control", "Conflicts", "Resolve", "Merge", "Patch", "Branch", "D
 
 ## 1 Introduction
 
-This reference guide describes how to use version control in Mendix Studio Pro. The theory behind how version control works in Mendix, and a definition of the concepts can be found in [Version Control](/refguide/version-control/).
+This document describes how to use version control in Mendix Studio Pro. 
+
+For more information on related concepts and the theory behind how version control works in Mendix, see [Version Control](/refguide/version-control/).
 
 ## 2 Starting an App with Version Control
 
-To start a new app with version control do the following:
+To start a new app with version control, do the following:
 
-1. In the **Open App** dialog box, click **Create New App**, or select **File** > **New App**. 
-2. Select the starting point – an app template.
-3. In the **App Settings** dialog box, set **Enable online services** to *Yes*. This option creates a Team Server repository and a Developer Portal app.
-4. Change the **App directory**, or leave the default suggested by Studio Pro.
-5. Click **Create app**.
+1. Open Studio Pro.
+2. In the **Select App** dialog box, click **Create New App**. 
+3. Select the starting point – an app template.
+4. In the **App Settings** dialog box, make sure that **Enable online services** is set to *Yes*. This option creates a Team Server repository and an app in the Developer Portal.
+5. Optionally, change the default **App directory** set by Studio Pro.
+6. Click **Create app**.
 
 The app is created on the Team Server, and a working copy is created in the **App directory**. This is opened in Studio Pro so that you can start working immediately.
 
@@ -53,29 +56,29 @@ You can also see a **history** of all the changes which have been committed, no 
 
 The status of your app is a summary of all the changes in your working copy when compared with the original. Studio Pro shows the status both in the **App Explorer** and in the **Changes** pane.
 
-The **App Explorer** shows an icon in front of items (documents, folders, and modules) that are changed in some way. The different icons indicate the different kinds of changes which have been made.
+The **App Explorer** shows an icon in front of each item (including each document, folder, and module) to present its status. The different icons indicate the different kinds of changes which have been made.
 
 | Icon | Meaning |
 | --- | --- |
 | {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/no-changes.png" >}} | Nothing happened to this item. It is unchanged with the respect to the original. |
-| {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/item-modified.png" >}} | You modified this item (as in, document, folder or module). |
+| {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/item-modified.png" >}} | You modified this item. |
 | {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/item-added.png" >}} | You added this item. |
 | {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/item-moved.png" >}} | You moved this item to another position in the app tree. |
 | {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/item-deleted.png" >}} | You deleted this item. |
 | {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/item-conflicting.png" >}} | You and somebody else made conflicting changes to this item. For more information, see the [Dealing With Conflicts](#conflicts) section below. |
 
 {{% alert color="info" %}}
-There is only room for one icon and if a document is both modified and moved it is shown as modified.
+In the **App Explorer**, there is only room for one icon for each item. If an item is both modified and moved, it is shown as modified with a yellow icon.
 {{% /alert %}}
 
-For example, say that the microflow *ChangePassword* has been modified. Also a new folder called 'Flows' was added and all microflows were moved inside this folder. The folders and modules containing changes will be depicted with a yellow icon, and the microflows which have been moved have a blue icon. This helps you to quickly see where in the app the changes are.
+For example, say that the microflow **ChangePassword** has been modified. Then, a new folder called **Flows** was added and all microflows, including the modified microflow, were moved inside this folder. The new folder gets a green icon and the module containing those changes is depicted with a yellow icon. The microflows which were moved but had not been modified get a blue icon. The modified microflow **ChangePassword** gets a yellow icon. This helps you to quickly see where in the app the changes are.
 
-You can see the same information in the **Changes** pane. In this case there is an entry for each *change* to an item. If a document is both modified and moved there are *two* lines for that document. The pane also shows items that were deleted, something the app explorer cannot do.
+In the **Changes** pane, you can find more information. There is an entry for each change to an item. If a document is both modified and moved, there are two lines for that document. The pane also shows items that were deleted, something the app explorer cannot do.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/changes-pane.png" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/changes-pane.png" max-width=100% class="image-border">}}
 
 {{% alert color="info" %}}
-When you successfully commit your app, this becomes the new original and all the change information is removed from the App Explorer and the Changes pane.
+When you successfully commit your app, this becomes the new original and all the change information is removed from the **App Explorer** and the **Changes** pane.
 {{% /alert %}}
 
 ### 4.2 Committing

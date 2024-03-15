@@ -76,7 +76,7 @@ The Mendix Client communicates with the load balancer using HTTPS. Communication
 
 ### 2.9 Static Content
 
-Every Mendix app needs static content to be served in order to load the Mendix client in the browser. These include the scripts needed to start the Mendix Client, CSS files which define the app's theme, and JavaScript files which define client-side logic.
+Every Mendix app needs static content to be served in order to load the Mendix client in the browser. This includes the scripts needed to start the Mendix Client, CSS files which define the app's theme, and JavaScript files which define client-side logic.
 
 ## 3 Licensing
 

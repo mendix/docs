@@ -230,7 +230,7 @@ The React client dynamically loads these chunks when needed for optimal performa
 
 #### 4.1.2 Location of Mendix Client Resources
 
-When the app is deployed, the static resources are placed in a structure referred to as the CDN. This includes the following:
+When the app is deployed, the static resources are placed in a separate structure. This includes the following:
 
 * index.html – the initial HTML page which is loaded when the end-user starts the Mendix Client — this contains the client configuration and other static non-Mendix content (for example if Google analytics is added to the app)
 * app styling/Atlas – the app-specific CSS styling and static visual elements which define how a page is displayed

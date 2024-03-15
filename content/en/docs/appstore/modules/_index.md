@@ -25,6 +25,7 @@ To check out which modules a category contains, click the category in the list b
 * [Communication](#communication)
 * [Connectors](#connectors)
 * [Data](#data)
+* [Extensions](#extensions)
 * [Import/Export](#import-export)
 * [Internet-of-Things](#internet-of-things)
 * [Mobile](#mobile)
@@ -97,6 +98,11 @@ To check out which modules a category contains, click the category in the list b
 * [Database Connector](/appstore/modules/database-connector/)
 * [Mendix Feedback](/appstore/modules/mendix-feedback/)
 * [Mendix Mini Surveys](/appstore/modules/mendix-mini-surveys/)
+
+### 2.7 Extensions
+
+* [Advanced Audit Trail](/appstore/modules/advanced-audit-trail/)
+* [Windows Service Console](/developerportal/deploy/deploy-mendix-on-microsoft-windows/)
 
 ### 2.7 Import/Export {#import-export}
 

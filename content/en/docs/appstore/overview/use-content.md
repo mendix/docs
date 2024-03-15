@@ -231,7 +231,41 @@ Each module that you download from the Marketplace is different. Some modules ca
 
 Keep in mind that some modules you can download may come with their own user roles. If the **Security level** of your app is set to **Prototype/demo** or **Production**, you need to map the module roles to the applicable user roles in your app.
 
-### 3.3  Using a Starter App
+### 3.3 Using an Extension
+
+Extensions are a functionality in Studio Pro that allows you to add new functionality to your development environment. 
+
+Extensions are part of your application, and therefore will become available to all members of your app who are developing it. 
+
+Currently, extensions can only be created by Mendix Partners and are available from Studio Pro 10.6.3 and above.
+
+#### 3.3.1 Studio Pro Extensions API
+
+The Studio Pro Extensions API allows you to customize different parts of Mendix Studio Pro by adding a new functionality to them, as well as interact with the open app model. 
+
+Customizable interface elements are panes, top bar menus, context menus in the domain model and [App Explorer](/refguide/app-explorer/). 
+
+It is possible to add new functionality to these elements and add custom interfaces that interact with the current open app model.
+
+#### 3.3.2 Installing Extensions
+
+Extensions come as part of [add-on modules](/refguide/consume-add-on-modules-and-solutions/). This means you can download them directly from the marketplace. 
+
+Once you find an extension you would like to use from the Marketplace, you can follow the following steps: 
+
+1. Open the extension in the Marketplace and click **Download**.
+
+2. A warning opens. Click **Trust module and enable extension**. If you decide to not trust the extension, you will get asked whether or not to trust the extension every time you reload the application. 
+    If you do not want to trust the extension and would prefer to remove the extension altogether, you can remove the add-on module that was added:
+
+    {{< figure src="/attachments/appstore/overview/use-content/trust-extension.png" alt="trust extension" >}}
+
+3. Click on **OK** in the confirmation pop-up window. 
+
+
+Your extension is now installed and is ready to use. Depending on the extension that you have installed, the functionality will appear in a certain location of your app. Read the extension specific documentation to get more information on how to use it. 
+
+### 3.4  Using a Starter App
 
 Downloading a starter app (via **Create New App**) creates a new app structure in the storage location that you select. After you click **Download**, a window will appear where you can specify how the app should be created.
 

@@ -28,15 +28,15 @@ The Advanced Audit Trail solution is different from the [Audit Trail](/appstore/
 
 ### 1.2 Features
 
-* Records the timestamp, the old value and the changed value, the microflow that triggered the change, and whether the object was created, modified, or deleted, and the user who made the change and their user role
+* Records the timestamp, the old value, the changed value, the microflow that triggered the change, whether the object was created, modified, or deleted, the user who made the change, and their user role
 * Supports viewing all changes that happened in the same microflow, which helps the auditor understand the context better
 * Captures the checksum, file size, and name of files which can be used for validation
-* Supports scheduled events that regularly sends the stored snapshots to an external system
+* Supports scheduled events that regularly send the stored snapshots to an external system
 * Allows the developer to configure an input field where additional information can be supplied about the snapshot to be created—once added, this category will be automatically added to all snapshots
 * Offers microflows and pages that open a generalized view to show users the trail of a specific object
-* Supports decoupling: when the external system cannot be reached, the snapshots will be stored in the local database, thus ensuring that the main system will keep on working without a dependency on the external database
+* Supports decoupling—when the external system cannot be reached, the snapshots will be stored in the local database, thus ensuring that the main system will keep on working without a dependency on the external database
 * Offers auditor interface to search through the external database (across entities)
-* Supports full-text search on data and search on changed data, and export of data to the CSV format using Kibana
+* Supports full-text search on data and search on changed data, and also export of data to the CSV format using Kibana
 * Support configuring different permissions for audit data for different users
 
 ### 1.3 Limitations 
@@ -47,7 +47,7 @@ The Advanced Audit Trail solution is different from the [Audit Trail](/appstore/
 ### 1.4 Prerequisites
 
 * You need to use Advanced Audit Trail with Studio Pro versions starting with [9.12](/releasenotes/studio-pro/9.12/).
-* You need to have a [subscription](#obtain-license-key) to the Advanced Audit Trail solution to store your data in an external data storage that runs in the Mendix Cloud
+* You need to have a [subscription](#obtain-license-key) to the Advanced Audit Trail solution to store your data in an external data storage that runs in the Mendix Cloud.
 
 ### 1.5 Dependencies
 
@@ -75,7 +75,7 @@ To install the component, click the **Contact Us** button on the [Advanced Audit
 
     In case you need to follow a compliance that requires you to never delete an object, implement this outside the context of the audit trail module. 
 
-    You can create **CommitList** microflows that commit a list of objects without events, but use **Create Snapshot (List)** from the **Toolbox** (the **JA_Object_CreateSnapshot_List** action). This ensures that the snapshots are committed in a list as well, and therefore minimizing performance impact of the module. When an object is committed without events, this change is not audited unless you explicitly add **Create Snapshot** (the **JA_Object_CreateSnapshot** action) or **Create Snapshot (List)** (the **JA_Object_CreateSnapshot_List** action) before the commit.
+    You can create **CommitList** microflows that commit a list of objects without events, but use **Create Snapshot (List)** from the **Toolbox** (the **JA_Object_CreateSnapshot_List** action). This ensures that the snapshots are committed in a list as well, and therefore minimizing the performance impact of the module. When an object is committed without events, this change is not audited unless you explicitly add **Create Snapshot** (the **JA_Object_CreateSnapshot** action) or **Create Snapshot (List)** (the **JA_Object_CreateSnapshot_List** action) before the commit.
 
     {{% alert color="info" %}}When your Mendix application includes entities with inheritance, Mendix recommends only applying the event handler on the generalization of this entity. There are cases where it makes sense to apply the event handler on the specialization instead, but applying the event handler to both the generalization and specialization will lead to duplicate snapshots of the same action.</br></br>When there are multiple **Before Commit** (**BCo**) or **Before Delete** **(Bde)** events that may change the object, the order is not guaranteed. see [Event Handlers](/refguide/event-handlers/). This means that some changes could theoretically fall outside the context of an audit.{{% /alert %}}
 
@@ -95,31 +95,31 @@ To install the component, click the **Contact Us** button on the [Advanced Audit
 ### 3.2 Configuring Constants {#constants}
 
 * Retention settings for the local cached data
-    * **SnapshotRetentionDays**: This is the days that the records be kept in the local snapshot cache.
+    * **SnapshotRetentionDays**: This is the days that the records should be kept in the local snapshot cache.
     * **OnlyDeleteProcessedItems**: This indicates whether items should be deleted only if they are sent to the external data storage.
         * If **OnlyDeleteProcessedItems** is set to **True**, the **SnapshotRetentionDays** is only applicable to processed snapshots.
 
 * Snapshots
-    * **IncludeHashedStrings**: This indicates whether to include attributes of type Hashed String (for example, password fields) in the snapshots.
+    * **IncludeHashedStrings**: This indicates whether to include attributes of type hashed string (for example, password fields) in the snapshots.
 
-        * **True**: Hashed Strings will be included (storing bcrypt/or other hashed value).
-        * **False**: Hashed Strings will be excluded and therefore not audited.
+        * **True**: Hashed strings will be included (storing bcrypt/or other hashed value).
+        * **False**: Hashed strings will be excluded and therefore not audited.
 
-        {{% alert color="info" %}}Manually-encrypted (for example, using the [Encryption](/appstore/modules/encryption/) module) Strings are not the type of Hashed String and will not be affected by this setting.{{% /alert %}}
+        {{% alert color="info" %}}Manually-encrypted (for example, using the [Encryption](/appstore/modules/encryption/) module) strings are not the type of hashed string and will not be affected by this setting.{{% /alert %}}
 
 * Integration
     * **EnvironmentName**: This is the name of the environment within Kibana, which should be unique in your audit data storage, for example, *myApp-prod*. Do not use any whitespace or tilde (~) for the environment name.
 
         {{% alert color="info" %}}If two applications use the same name, the audit trail will not be able to distinguish between the two, effectively breaking the audit trail for both applications irreversibly.{{% /alert %}}
 
-    * **EnvironmentURL** (optional): This is the URL used to identify the environment. If left empty, the Application Runtime URL is used instead. 
+    * **EnvironmentURL** (optional): This is the URL used to identify the environment. If left empty, the application runtime URL is used instead. 
     * **Kafka_Endpoint** / **Kafka_Username** and **Kafka_Password**: These are the credentials for the Kafka environment for sending the data into the long-term storage.
     * **Kibana_Endpoint** / **Kibana_Username** and **Kibana_Password**: These are the credentials for the Kibana environment for receiving the data from the long-term storage.
 
 ### 3.3 Configuring Scheduled Events {#scheduled-events}
 
 * **SE_SendAuditSnapshots**: This sends the cached data to the external data storage. This occurs each minute.
-* **SE_CleanupSnapshotCache**: This cleans up the cached data based on the retention settings – **OnlyDeleteProcessedItems** and **SnapshotRetentionDays**. This occurs daily at 3:00 AM UTC.
+* **SE_CleanupSnapshotCache**: This cleans up the cached data based on the retention settings—**OnlyDeleteProcessedItems** and **SnapshotRetentionDays**. This occurs daily at 3:00 AM UTC.
 * **SE_PeriodicVacuum**: This runs a periodic vacuum on a PostgreSQL database. This is not needed on Microsoft SQL. Other database types are not supported. This occurs every 2 hours.
 
     {{% alert color="info" %}}Enable the scheduled event **SE_PeriodicVacuum** in the cloud portal for PostgreSQL databases. PostgreSQL databases require a regular VACUUM when the application creates and deletes a lot of objects in order to stay quick and not to grow out of disk space. The default Mendix Cloud settings will not always perform the VACUUM when needed. The scheduled event **SE_PeriodicVacuum** performs the VACUUM regularly. This scheduled event is for PostgreSQL only. For more information, see PostgreSQL documentation on [VACUUM]( https://www.postgresql.org/docs/9.6/sql-vacuum.html ) and [ANALYZE](https://www.postgresql.org/docs/9.6/sql-analyze.html).{{% /alert %}}

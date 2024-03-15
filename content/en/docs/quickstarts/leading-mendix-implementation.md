@@ -112,9 +112,7 @@ A **Mendix Admin** will normally be someone in the IT department of your company
 
 ### Lecture 2.2 Get Familiar With Mendix
 
-https://videoshare.mendix.com/watch/AVffVf7KCVt7h1ioBvUQ1f 
-
-Let’s start with building the foundation of your Mendix knowledge and get you familiar with the Mendix platform! 
+Check out this [video](https://videoshare.mendix.com/watch/AVffVf7KCVt7h1ioBvUQ1f). Let’s start with building the foundation of your Mendix knowledge and get you familiar with the Mendix platform! 
 
 Mendix is the platform that helps you turn ideas into outcomes. It contains all the tools you need to plan your application portfolio, ensure the right ideas get invested in, manage the entire application development lifecycle, and get end-user feedback on what to build. The Mendix platform also provides a space for anyone working with Mendix to interact with the community, share ideas and components as well as find help in case they get stuck.
 

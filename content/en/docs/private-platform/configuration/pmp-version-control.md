@@ -2,7 +2,7 @@
 title: "Configuring the Version Control System for Private Mendix Platform"
 url: /private-mendix-platform-version-control/
 description: "Documents the initial configuration for the Private Mendix Platform."
-weight: 30
+weight: 110
 tags: ["private mendix platform",  "private platform", "private marketplace", "version control"]
 ---
 

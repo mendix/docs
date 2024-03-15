@@ -98,8 +98,8 @@ After you configure the authentication profile for Amazon Bedrock, you can imple
 
 To help users understand what needs to be done to invoke a specific model using the [Invoke Model](#invoke-model), we have included two example implementations in the Amazon Bedrock Connector:
 
-* An implementation for invoking the Claude v. 2.1 LLM that generates text
-* An implementation for the SDXL v. 1.0 LDM model that generates images from a text prompt.
+* An implementation for invoking the Claude 3 Sonnet foundation model that generates text.
+* An implementation for the TitanImageGeneratorG1 foundation model that generates images from a text prompt.
 
 These examples can be used as a reference together with the documentation found on this page, in the Bedrock console, and offered by the provider of the model. For more Example implementations, see [Amazon Bedrock Example Implementation](https://marketplace.mendix.com/link/component/215751).  
 
@@ -107,7 +107,7 @@ To invoke a specific model, perform the following steps:
 
 1. Choose the model with which you want to interact by using the [Invoke Model](#invoke-model) operation.
 2. In the [Model Parameters](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html) section of the Amazon Bedrock user guide, find the request and response JSON structures of the specific model that you want to invoke.
-3. Create your domain model inspired by the JSON structures that you found by using a tool to visualize Json structures, such as [JSON Crack](https://jsoncrack.com/editor).
+3. Create your domain model inspired by the JSON structures that you found. You can use a tool to visualize Json structures if needed, such as [JSON Crack](https://jsoncrack.com/editor).
 4. In Mendix Studio Pro, create a JSON structure by doing the following steps:
     1. Right-click on the target folder.
     2. Click **Add other** > **JSON structure**.
@@ -951,22 +951,36 @@ To solve this issue, follow these steps:
 
 After the status of the models changes to **Access Granted**, you can use it with the Amazon Bedrock connector.
 
-### 5.2 Error code 404 - Resource Not Found
+### 5.3 Error code 403 - AccessDeniedException
 
-When invoking a model the error code *404 - Resource Not Found* indicates that the targeted resource was not found.
+When invoking a model, the error code *403 - Access denied* indicates that you do not have access to the targeted resource.
 
-#### 5.2.1 Cause
+#### 5.3.1 Cause
 
 Possible root causes for this error include the following:
 
 * You do not have access to the model in the specified AWS region.
+
+#### 5.3.2 Solution
+
+To solve this issue, ensure that you have selected an AWS Region where you have model access. You can see an overview of the models accessible to you in the AWS Management Console, in the [Model Access](https://us-west-2.console.aws.amazon.com/bedrock/home?#/modelaccess) section of your Amazon Bedrock environment.
+
+### 5.4 Error code 404 - ResourceNotFoundException
+
+When invoking a model, the error code *404 - Resource not found* indicates that the targeted resource was not found.
+
+#### 5.4.1 Cause
+
+Possible root causes for this error include the following:
+
+* The model which you are trying to invoke is not available in your specified AWS region.
 * The model which you are trying to invoke is deprecated.
 
-#### 5.2.2 Solution
+#### 5.4.2 Solution
 
 To solve this issue, verify the following:
 
-1. Ensure that you have selected an AWS Region where you have model access. You can see an overview of the models accessible to you in the AWS Management Console, in the [Model Access](https://us-west-2.console.aws.amazon.com/bedrock/home?region=us-west-2#/modelaccess) section of your Amazon Bedrock environment.
+1. Ensure that you have selected an AWS Region where the targeted model exists. You can see an overview of the models accessible to you in the AWS Management Console, on the [Overiew page](https://us-west-2.console.aws.amazon.com/bedrock/home?#/overview) of your Amazon Bedrock environment. Make sure the region specified in the AWS Console matches the region you have configured in Mendix. 
 2. Ensure that the model that you have selected is not deprecated and that the *model-id* is currently available in Amazon Bedrock.
 
 ## 6 Appendix
@@ -1011,3 +1025,16 @@ The guardrail feature will allow you to:
 The watermark detection feature will make it possible to tell if an image has been created using Amazon Titan.
 
 More information about guardrails can be found in this [AWS blogpost](https://aws.amazon.com/blogs/aws/guardrails-for-amazon-bedrock-helps-implement-safeguards-customized-to-your-use-cases-and-responsible-ai-policies-preview/) and in the [AWS documentation](https://aws.amazon.com/en/bedrock/guardrails/).
+
+#### 6.3 Advanced Prompts for Agents
+
+By default, an agent is configured with the following base prompt templates, one for each step in the agent sequence:
+
+* Pre-processing
+* Orchestration 
+* Knowledge base response generation 
+* Post-processing
+  
+By customizing the prompt templates and modifying these configurations, you can fine-tune your agent's accuracy. Additionally, you can provide custom examples for a technique known as few-shot prompting. This involves providing labeled examples for specific tasks, which further enhances the model's performance in targeted areas. For more information about advanced prompts, see [Advanced prompts](https://docs.aws.amazon.com/bedrock/latest/userguide/advanced-prompts.html) in the AWS documentation.
+
+You can also use placeholder variables in agent prompt templates. For example, in the orchestration prompt template, the *$prompt_session_attributes$* placeholder variable can be used to ingest the information from the `PromptSessionAttribute` entity into the prompt, if it was specified as part of the `InvokeAgentRequest`. For more information about placeholder variables available in agent prompt templates, see [Prompt placeholders](https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-placeholders.html) in the AWS documentation.

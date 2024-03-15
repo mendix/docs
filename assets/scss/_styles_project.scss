@@ -100,6 +100,19 @@
     padding-bottom: 0px;
 }
 
+// Anchor icon styling for anchor.js
+
+.anchor-icon {
+    display: none;
+    padding: 0rem .3rem .1rem .3rem;
+    margin: -.5rem 0rem -.5rem .3rem;
+    border-radius: 4px;
+}
+
+.anchor-icon:hover {
+    background: $gray-light;
+}
+
 // _code.scss -  Code formatting
 
 .td-content {
@@ -574,7 +587,6 @@ nav.foldable-nav {
 // _tables.scss - from https://github.com/twbs/bootstrap/blob/v4.6.2/scss/_tables.scss
 
 .table {
-    width: 90%; // NK - adjusted width to match rest of content
     margin-bottom: $spacer;
     color: $table-color;
     background-color: $table-bg; // Reset for nesting within parents with `background-color`.

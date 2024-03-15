@@ -10,7 +10,7 @@ aliases:
 
 ## I Introduction
 
-[Advanced Audit Trail](https://marketplace.mendix.com/link/component/120943) allows you to trace changes and use infinitely-scalable and fully-indexed data search. Once configured, the system automatically creates audit snapshots of objects to store in the audit trail. The audit trail is centralized and sent to long-term data storage, and therefore, supports complex search queries and keeps the operational database small and performant.
+[Advanced Audit Trail](https://marketplace.mendix.com/link/component/120943) allows you to trace changes and use infinitely-scalable and fully-indexed data search. Once configured, the system automatically creates audit snapshots of objects to store in the audit trail. The audit trail is centralized and sent to long-term data storage, therefore supporting complex search queries and keeping the operational database small and performant.
 
 Advanced Audit Trail employs a software stack on top of Kafka, Elasticsearch, and Kibana to leverage their utility. Kafka is used for long-term immutable data storage for audit data. Elasticserach and Kibana are used to index audit data. You can find an integration diagram below:
 
@@ -73,7 +73,7 @@ To install the component, click the **Contact Us** button on the [Advanced Audit
 
     {{< figure src="/attachments/appstore/modules/advanced-audit-trail/example.png" >}}
 
-    In case you need to follow a compliance that requires you to never delete an object, implement this outside the context of the audit trail module. 
+    In case you need to follow a compliance that requires you never to delete an object, implement this outside the context of the audit trail module. 
 
     You can create **CommitList** microflows that commit a list of objects without events, but use **Create Snapshot (List)** from the **Toolbox** (the **JA_Object_CreateSnapshot_List** action). This ensures that the snapshots are committed in a list as well, therefore minimizing the performance impact of the module. When an object is committed without events, this change is not audited unless you explicitly add **Create Snapshot** (the **JA_Object_CreateSnapshot** action) or **Create Snapshot (List)** (the **JA_Object_CreateSnapshot_List** action) before the commit.
 
@@ -96,13 +96,13 @@ To install the component, click the **Contact Us** button on the [Advanced Audit
 
 * Retention settings for the local cached data
     * **SnapshotRetentionDays**: This is the days that the records should be kept in the local snapshot cache.
-    * **OnlyDeleteProcessedItems**: This indicates whether items should be only deleted if they are sent to the external data storage.
-        * If **OnlyDeleteProcessedItems** is set to **True**, the **SnapshotRetentionDays** is only applicable to processed snapshots.
+    * **OnlyDeleteProcessedItems**: This indicates whether items should only be deleted if they are sent to the external data storage.
+        * If **OnlyDeleteProcessedItems** is set to **True**, **SnapshotRetentionDays** only applies to processed snapshots.
 
 * Snapshots
     * **IncludeHashedStrings**: This indicates whether to include attributes of type hashed string (for example, password fields) in the snapshots.
 
-        * **True**: Hashed strings will be included (storing bcrypt or other hashed value).
+        * **True**: Hashed strings (storing bcrypt or other hashed value) will be included.
         * **False**: Hashed strings will be excluded and, therefore, not audited.
 
         {{% alert color="info" %}}Manually-encrypted (for example, using the [Encryption](/appstore/modules/encryption/) module) strings are not the type of hashed string and will not be affected by this setting.{{% /alert %}}
@@ -112,7 +112,7 @@ To install the component, click the **Contact Us** button on the [Advanced Audit
 
         {{% alert color="info" %}}If two applications use the same name, the audit trail will not be able to distinguish between the two, effectively breaking the audit trail for both applications irreversibly.{{% /alert %}}
 
-    * **EnvironmentURL** (optional): This is the URL used to identify the environment. If left empty, the application runtime URL is used instead. 
+    * **EnvironmentURL** (optional): This URL is used to identify the environment. If left empty, the application runtime URL is used instead. 
     * **Kafka_Endpoint** / **Kafka_Username** and **Kafka_Password**: These are the credentials for the Kafka environment for sending the data into the long-term storage.
     * **Kibana_Endpoint** / **Kibana_Username** and **Kibana_Password**: These are the credentials for the Kibana environment for receiving the data from the long-term storage.
 
@@ -122,7 +122,7 @@ To install the component, click the **Contact Us** button on the [Advanced Audit
 * **SE_CleanupSnapshotCache**: This cleans up the cached data based on the retention settings—**OnlyDeleteProcessedItems** and **SnapshotRetentionDays**. This occurs daily at 3:00 AM UTC.
 * **SE_PeriodicVacuum**: This runs a periodic vacuum on a PostgreSQL database. This is not needed on Microsoft SQL. Other database types are not supported. This occurs every 2 hours.
 
-    {{% alert color="info" %}}Enable the scheduled event **SE_PeriodicVacuum** in the cloud portal for PostgreSQL databases. PostgreSQL databases require a regular VACUUM when the application creates and deletes a lot of objects in order to stay quick and not grow out of disk space. The default Mendix Cloud settings will not always perform the VACUUM when needed. The scheduled event **SE_PeriodicVacuum** performs the VACUUM regularly. This scheduled event is for PostgreSQL only. For more information, see PostgreSQL documentation on [VACUUM]( https://www.postgresql.org/docs/9.6/sql-vacuum.html ) and [ANALYZE](https://www.postgresql.org/docs/9.6/sql-analyze.html).{{% /alert %}}
+    {{% alert color="info" %}}Enable the scheduled event **SE_PeriodicVacuum** in the cloud portal for PostgreSQL databases. PostgreSQL databases require a regular VACUUM when the application creates and deletes many objects in order to stay quick and not grow out of disk space. The default Mendix Cloud settings will not always perform the VACUUM when needed. The scheduled event **SE_PeriodicVacuum** performs the VACUUM regularly. This scheduled event is for PostgreSQL only. For more information, see PostgreSQL documentation on [VACUUM]( https://www.postgresql.org/docs/9.6/sql-vacuum.html ) and [ANALYZE](https://www.postgresql.org/docs/9.6/sql-analyze.html).{{% /alert %}}
 
 ### 3.4 Configuring Advanced Features (Optional)
 

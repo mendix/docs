@@ -226,12 +226,13 @@
     }
 }
 
-.btn {
-    border-radius: 0.25rem;
+// Style visited links but exclude buttons
+a:not(.btn):visited {
+    color: $purple;
 }
 
-a:visited.btn {
-    color: white;
+.btn {
+    border-radius: 0.25rem;
 }
 
 // main.scss

@@ -341,7 +341,7 @@ By the end of this module, you will be able to: 
 
 ### Lecture 3.1 Create (Or Revise) Your Low-Code Vision 
 
-{{% todo %}}Provide the PDF{{% /todo %}}
+{{% alert color="info" %}}For more resources for this section, see [Vision Preparation Questions](/attachments/quickstarts/leading-mendix-implementation/vision-preparation-questions.pdf).{{% /alert %}}
 
 We encourage you to take the time to develop a clear vision for low-code development in your organization. It is critical to the success of your low-code change initiative because it takes the guesswork out of people trying to understand what you want to achieve.
 Low-code shouldn't (and frankly, doesn't) operate in its own universe, so the vision should be aligned and contribute to other visions, values, strategies, and initiatives that are already in motion in your organization.
@@ -573,7 +573,7 @@ Even though you can build almost anything with Mendix, especially with the exten
 
 ### Lecture 3.5 Define Application Value
 
-{{% todo %}}Provide the PPT{{% /todo %}}
+{{% alert color="info" %}}For more resources for this section, see [Value Template for End Customers](/attachments/quickstarts/leading-mendix-implementation/value-template-for-end-customers.pptx).{{% /alert %}}
 
 By thoroughly defining the application’s purpose and value, you provide a clear roadmap for development, aligning the project with organizational goals, and setting the stage for successful implementation and adoption. What will help you do that is trying to think along these lines:
 

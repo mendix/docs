@@ -145,12 +145,12 @@ Use **Configure Username mapping** from the **Toolbox** (the **JA_ConfigureUsern
 
 ### 3.8 Implementing Display Formatters (Optional)
 
-Use the formatter microflows to change how externally stored values will be displayed inside your Mendix application.
+Use the formatter microflows to change how externally-stored values will be displayed inside your Mendix application.
 
 | Microflow | Formater | Description |
 | --------- | -------- |---|
 | **GetAttributes_ConvertDate** | Date formatter |Date formatting is determined inside JA_ConfigureFormatters in the after start-up flow. By default, the date follows the US format (month/day/year).|
-| **GetAttributes_ConvertDecimal** | Decimal formatter |Decimal formatting is determined inside JA_ConfigureFormatters in the after start-up flow. By default, the decimal formatting follows the US format (period – ".") to separate an integer from its partial fractional part.|
+| **GetAttributes_ConvertDecimal** | Decimal formatter |Decimal formatting is determined inside JA_ConfigureFormatters in the after start-up flow. By default, the decimal formatting follows the US format (period—".") to separate an integer from its partial fractional part.|
 | **GetAttributes_ConvertMxIdentifier** | Mendix object identifier formatter |Mendix object formatting is determined inside JA_ConfigureFormatters in the after start-up flow. By default, what is displayed in a reference is `[ModuleName].[EntityName] (ObjectGUID)`. One may prefer to display (a combination of) an attribute of the said object as a reference.|
 
 ### 3.9 Getting Microflow Stack Trace (Optional)
@@ -165,7 +165,7 @@ Update the **AuditSnapshots_ResponsiveLayout** to update the layouts without cha
 
 You can deploy Advanced Audit Trail locally or in a Mendix Free App for free. However, to deploy Advanced Audit Trail in the Mendix Cloud, you need to start a subscription to [obtain a license key](#obtain-license-key), and then configure it.
 
-Before you deploy your app, configure the app **Constants** in the deployment package in the [Developer Portal](/developerportal/deploy/environments-details/).
+Before you deploy your app, configure the app **Constants** in the [deployment package](/developerportal/deploy/environments-details/) in the Developer Portal.
 
 If you have already deployed your app, change the existing **Licensekey** constant value on the **Model Options** tab and restart the app.
 

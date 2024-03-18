@@ -10,19 +10,19 @@ tags: ["marketplace", "content ", "best practices", ""]
 
 This document is an addition to the Mendix Marketplace Guidelines and aims to provide Partners with best practices, recommendations, and tips for preparing a product as well as submitting it to the public Marketplace.  
 
-You will find information on:
+You will find information on the following topics:
 
-*   Technical recommendations, including architectural best practices.
+*   Technical recommendations, including architectural best practices
 
-*   Marketing tips, for example, on how to write nice description, what name to choose for the product.
+*   Marketing tips, for example, on how to write nice description, what name to choose for the product
 
-*   Operational recommendations for support, product lifecycle.
+*   Operational recommendations for support, product lifecycle
 
 ## 2 Technical Best Practices
 
 ### 2.1 Low Code Security Misconfigurations (Recommended)
 
-Mendix applications, widgets, connectors, modules are developed Mendix, so traditional code based SAST scanners will not be very helpful to detect security issues in the low-code. They also cannot point out security misconfigurations - if any. It is recommended to use a tool that can look into security best practices outlined in the [Mendix documentation](https://docs.mendix.com/howto/security/best-practices-security/) and point out any security misconfigurations and bad practices. 
+Mendix applications, widgets, connectors, modules are developed Mendix, so traditional code based SAST scanners will not be very helpful to detect security issues in the low-code. They also cannot point out security misconfigurations—if any. It is recommended to use a tool that can look into security best practices outlined in the [Mendix documentation](/howto/security/best-practices-security/) and point out any security misconfigurations and bad practices. 
 
 Mendix Marketplace contains the following products which you could use for the check: [Clevr ACR](https://marketplace.mendix.com/link/component/114669), [SIG QSM/AQM](https://www.softwareimprovementgroup.com/solutions/sigrid-for-mendix-application-quality-monitoring/), [Bizzomate](https://chrome.google.com/webstore/detail/bizzomate-mendix-dev-tool/nkbokoloejkhohjlickhfkjfmbmboaof) , [Omnext Software Analyses Suit](https://marketplace.mendix.com/link/component/120746). These can be used to inspect and correct your Module, Widget or Connector. It is recommended for Partner to inspect the component before you onboard your content on marketplace. 
 
@@ -62,10 +62,10 @@ Service Reliability
 
 Useful links 
 
-* [Community Best Practices for App Performance](https://docs.mendix.com/howto/general/community-best-practices-for-app-performance/)
-* [Minimize the Number of In-Use Objects in Your Session](https://docs.mendix.com/howto/general/minimize-number/)
+* [Community Best Practices for App Performance](/howto/general/community-best-practices-for-app-performance/)
+* [Minimize the Number of In-Use Objects in Your Session](/howto/general/minimize-number/)
 * [Implement Best Practices for App Security](/howto/security/best-practices-security/)
-* [Mendix Best Practices for Development](https://docs.mendix.com/howto/security/best-practices-security/)
+* [Mendix Best Practices for Development](/howto/security/best-practices-security/)
 * [Best Practices for Building Connectors](/appstore/creating-content/connector-guide-best-practices/)
 
 ## 3 Marketing Best Practices

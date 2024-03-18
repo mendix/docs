@@ -392,7 +392,7 @@ The view contains the following information:
 * Initiative status – This shows the status of your initiative. It can be **On Track**, **At Risk**, or **Off Track**.
 * Icon of the linked apps – If there is only one linked app, clicking the icon shows the information about the app. If there are multiple apps or no linked apps, the icon is not clickable.
 * Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
-* Timeline bar - The timeline bars indicates the start date and the go-live date of an initiative. Hovering over the timeline bar shows these dates in a tooltip:
+* Timeline bar - The timeline bar indicates the start date and the go-live date of an initiative. Hovering over the timeline bar shows these dates in a tooltip:
     * **Start date** – The start date is the date when the first actions are taken to start implementation.
     * **Go-Live** – The go-live date is the date when the initiative is expected to be delivered or implemented.
 * Today indicator (the vertical blue line) – This indicates the date of today.
@@ -481,7 +481,7 @@ The **Access Management** page allows you to view and manage user access to the 
 
 ### 5.1 Members {#members}
 
-The **Members** tab lists all the users that have portfolio access. You can search a user by their user name, email, or company. You can also filter users by their role and status. The list contains the following items:
+The **Members** tab lists all the users that have portfolio access. You can search for a user by their user name, email, or company. You can also filter users by their role and status. The list contains the following items:
 
 * **User Name** – This is the name of the user.
 
@@ -504,7 +504,7 @@ The table below shows the permissions of Portfolio Managers, Contributors, and V
 
 | Action | Portfolio Manager | Contributor | Viewer\* |
 | --- | --- | --- | --- |
-| Invite users | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
+| Invite users | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
 | Remove user permissions and roles | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
 | Update user permissions and roles | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
 | View user access information | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} |

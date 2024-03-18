@@ -11,14 +11,13 @@ aliases:
 
 ## 1 Introduction
 
-The [Email](https://marketplace.mendix.com/link/component/120739) connector allows you to send and receive emails on your own email server. It includes features such as sending emails using template, or sending signed and encrypted emails.
+The [Email](https://marketplace.mendix.com/link/component/120739) connector allows you to send and receive emails on your own email server. It includes features such as sending emails using a template, or sending signed and encrypted emails.
 
 ### 1.1 Features
 
 The Email connector includes the following features:
 
 * Configuration of multiple email accounts
-
     * Supports basic authentication and creating an account with OAuth 2.0 (via authorization code flow or client credentials flow) to configure Microsoft Entra ID (formerly known as Azure Active Directory) accounts
     * Supports shared mailboxes using basic and OAuth 2.0 authentication
 * Digital signatures and encryption
@@ -34,7 +33,7 @@ The Email connector supports the following protocols:
 ### 1.2 Prerequisites {#prerequisites}
 
 {{% alert color="warning" %}}
-Follow these prerequisites carefully. Missing a step might lead to errors.
+Follow these prerequisites carefully. Missing a step can lead to errors.
 {{% /alert %}}
 
 Before you use the Email connector in your app, do the following:
@@ -49,7 +48,7 @@ Before you use the Email connector in your app, do the following:
 
 If you are migrating to the Email connector from another email module, consider testing your settings in a new app first.
 
-Mendix recommends using the community-supported [Email Connector Migration Utility](https://marketplace.mendix.com/link/component/205008) module to migrate data from the [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) service.
+It is recommended to use the community-supported [Email Connector Migration Utility](https://marketplace.mendix.com/link/component/205008) module to migrate data from the [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) service.
 
 ### 1.3 Included Widgets {#included-widgets}
 

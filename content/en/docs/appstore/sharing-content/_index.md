@@ -77,7 +77,7 @@ To develop modules and submit them to the Marketplace, follow these guidelines:
 * Create a folder named **USE_ME** and add the microflows and pages that are relevant for the user
 * Create an empty folder with the version number as its name, which will appear in Studio Pro's App Explorer
 * Java dependencies
-    * In versions Mendix 10.3.0 and above, use [managed dependencies]{/refguide/managed-dependencies/} where possible. For versions below 10.3, ensure that Java dependencies are put in the `userlib` folder. You should also put any [unmanaged dependencies](/refguide/managed-dependencies/#unmanaged) (that is, non-publicly-available `.jar` files) in the `userlib` folder.
+    * In versions Mendix 10.3.0 and above, use [managed dependencies](/refguide/managed-dependencies/) where possible. For versions below 10.3, ensure that Java dependencies are put in the `userlib` folder. You should also put any [unmanaged dependencies](/refguide/managed-dependencies/#unmanaged) (that is, non-publicly-available `.jar` files) in the `userlib` folder.
         * When putting `.jar` files in the `userlib` folder, make sure the name includes a version number (for example, `org.apache.commons.io-2.3.0.jar`) and is accompanied by a blank `{jarfile-including-version}.{module_name}.RequiredLib` file so that users know where the .*jar* files come from (for example, for the module *MyModule*, `org.apache.commons.io-2.3.0.jar.MyModule.RequiredLib`)
 
     {{< figure src="/attachments/appstore/sharing-content/userlibBlankFiles_boxed.jpg" width="400"  >}}

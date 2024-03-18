@@ -64,7 +64,7 @@ On the **Portfolio Landscape Overview** page, you can create a new portfolio as 
 
 2. Enter **Portfolio Name** and **Description** for the new portfolio.
 
-3. For **Privacy Settings**, select **Private**, **Restricted**, or **Open**. For details on privacy settings, see the [Different Privacy Settings of a Portfolio](#privacy-settings) section.
+3. For **Privacy Settings**, select **Private**, **Restricted**, or **Open**. For details on privacy settings, see the [Different Privacy Settings of a Portfolio](#privacy-settings) section, above.
 
     {{% alert color="info" %}}If the toggle on the [Privacy Requests](/control-center/portfolios/#privacy-requests) tab is turned on in Control Center, a Mendix Admin needs to approve the creation of a restricted or open portfolio. In that case, a Mendix Admin will receive a notification about your request and can approve or reject your request from the [Control Center](/control-center/portfolios/#privacy-requests). The **Privacy Settings** of the portfolio will be **Private** until a Mendix Admin approves your request.{{% /alert %}}
 

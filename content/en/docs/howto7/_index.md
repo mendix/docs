@@ -12,6 +12,7 @@ cascade:
     - banner: "Mendix 7 is no longer supported unless you have Extended Support (for details, please contact Mendix Support). Mendix 7 documentation will remain available for customers with Extended Support until July, 2024."
     - old_content: true
     - hide_feedback: true
+    - notsitemap: true
     - sitemap:
         priority: 0.1
 ---

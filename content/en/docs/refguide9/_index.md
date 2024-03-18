@@ -10,6 +10,7 @@ cascade:
     - space: "Studio Pro 9 Guide"
     - mendix_version: 9
     - old_content: true
+    - notsitemap: true
     - sitemap:
         priority: 0.4
 ---

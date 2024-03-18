@@ -1,3 +1,11 @@
+---
+title: "Best Practices for Content Creation"
+url: /appstore/creating-content/best-practices/
+description: "Describes some best practices to create content in the Mendix Marketplace."
+weight: 5
+tags: ["marketplace", "content ", "best practices", ""]
+---
+
 ## 1 Introduction
 
 This document is an addition to the Mendix Marketplace Guidelines and aims to provide Partners with best practices, recommendations, and tips for preparing a product as well as submitting it to the public Marketplace.  

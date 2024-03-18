@@ -13,11 +13,10 @@ You will find information on:
 ## Low code security misconfigurations \[Recommended\]
 
 Mendix applications, widgets, connectors, modules are developed Mendix,
-so traditional code based SAST scanners will not be very helpful to detect security issues in the low-code. They also cannot point out security misconfigurations - if any. It is recommended to use a tool that can look into security best practices outlined in the [Mendix documentation](https://docs.mendix.com/howto/security/best-practices-security/\) and point out any security misconfigurations and bad practices. 
+so traditional code based SAST scanners will not be very helpful to detect security issues in the low-code. They also cannot point out security misconfigurations - if any. It is recommended to use a tool that can look into security best practices outlined in the [Mendix documentation](https://docs.mendix.com/howto/security/best-practices-security/) and point out any security misconfigurations and bad practices. 
 
-Mendix Marketplace contains the following products which you could use for the check: [Clevr ACR](https://marketplace.mendix.com/link/component/114669), [SIG
-QSM/AQM](https://www.softwareimprovementgroup.com/solutions/sigrid-for-mendix-application-quality-monitoring/),
-[Bizzomate](https://chrome.google.com/webstore/detail/bizzomate-mendix-dev-tool/nkbokoloejkhohjlickhfkjfmbmboaof\) , [Omnext Software Analyses Suit](https://marketplace.mendix.com/link/component/120746). These can be used to inspect and correct your Module, Widget or Connector. It is recommended for Partner to inspect the component before you onboard your content on marketplace. 
+Mendix Marketplace contains the following products which you could use for the check: [Clevr ACR](https://marketplace.mendix.com/link/component/114669), [SIG QSM/AQM](https://www.softwareimprovementgroup.com/solutions/sigrid-for-mendix-application-quality-monitoring/),
+[Bizzomate](https://chrome.google.com/webstore/detail/bizzomate-mendix-dev-tool/nkbokoloejkhohjlickhfkjfmbmboaof) , [Omnext Software Analyses Suit](https://marketplace.mendix.com/link/component/120746). These can be used to inspect and correct your Module, Widget or Connector. It is recommended for Partner to inspect the component before you onboard your content on marketplace. 
 
 ## Architectural best practices \[Recommended\]
 
@@ -36,7 +35,7 @@ Access Management
 
 5.  Log any operation with binding keys for auditing purposes 
 6.  Return 404 for both scenarios below. This prevents giving clue to hackers 
-    1.  absence of a resource ( service instance \) 
+    1.  absence of a resource ( service instance ) 
     2.  access of a resource to which the accessor does not have rights for 
     Service Reliability 
 1.  If the service cannot be complete the provided operation within 2 seconds consider using an asynchronous response mechanism.
@@ -53,15 +52,15 @@ Access Management
 8.  Broadcast availability of your service and scheduled maintenance window 
 Useful links 
 [<img src="./markdown/media/image1.png"
-style="width:0.22083in;height:0.22083in" />Implement Community Best Practices for App Performance](https://docs.mendix.com/howto/general/community-best-practices-for-app-performance/\) 
+style="width:0.22083in;height:0.22083in" />Implement Community Best Practices for App Performance](https://docs.mendix.com/howto/general/community-best-practices-for-app-performance/) 
 [<img src="./markdown/media/image1.png"
-style="width:0.22083in;height:0.22083in" />Minimize the Number of In-Use Objects in Your Session](https://docs.mendix.com/howto/general/minimize-number/\) 
+style="width:0.22083in;height:0.22083in" />Minimize the Number of In-Use Objects in Your Session](https://docs.mendix.com/howto/general/minimize-number/) 
 [<img src="./markdown/media/image1.png"
-style="width:0.22083in;height:0.22083in" />Implement Best Practices for App Security](https://docs.mendix.com/howto/security/best-practices-security/\) 
+style="width:0.22083in;height:0.22083in" />Implement Best Practices for App Security](https://docs.mendix.com/howto/security/best-practices-security/) 
 [<img src="./markdown/media/image1.png"
-style="width:0.22083in;height:0.22083in" />Implement Mendix Best Practices for Development](https://docs.mendix.com/howto/general/dev-best-practices/\) 
+style="width:0.22083in;height:0.22083in" />Implement Mendix Best Practices for Development](https://docs.mendix.com/howto/general/dev-best-practices/) 
 [<img src="./markdown/media/image1.png"
-style="width:0.22083in;height:0.22083in" />Best Practices for Building Connectors](https://docs.mendix.com/appstore/creating-content/connector-guide-best-practices/\) 
+style="width:0.22083in;height:0.22083in" />Best Practices for Building Connectors](https://docs.mendix.com/appstore/creating-content/connector-guide-best-practices/) 
 # Marketing Best Practices 
 ## Product logo 
 
@@ -83,7 +82,7 @@ However, we still have some rules associated to naming:
     therefore showing the dedicated to the region content. Therefore, if you want a global exposure (rather than regional) - we recommend using English name.
 
 *   Do not use content type as part of the name. We classify products by content types and categories, which help customers with filtering and search. Avoid using standard platform terms in the name of your product and focus on the main product feature/benefit. (e.g.
-    “Widget” could be substituted with “3D Viewer”\) 
+    “Widget” could be substituted with “3D Viewer”) 
 *   Avoid using non commonly known abbreviations. It is important to draw customer’s attention right from the thumbnail view, so potential customer opens the listing itself to get more information.
     Apart from the image, the name has to be catchy.
 
@@ -179,7 +178,7 @@ This is the template of the declaration you could use for T&Cs.
 *   Export control 
 *   Data Privacy, including data processing agreement, as necessary 
 
-*   Customer Service Level Agreement (SLA\) 
+*   Customer Service Level Agreement (SLA) 
 ## Support Recommendations 
 The objective is to provide the best level of support to customers of the product. To that end, we provide the following recommendations:
 

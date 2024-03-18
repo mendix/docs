@@ -25,7 +25,7 @@ This connector has one dependency: [HikariCP](https://github.com/brettwooldridge
 
 ## 2 Prerequisites{#prerequisites}
 
-These are the prerequisites for using this connector:
+To use the Database connector, you must have the following prerequisites:
 
 * A database URL address that points to your database
 * The username for logging into the database, relative to the database URL address
@@ -34,15 +34,21 @@ These are the prerequisites for using this connector:
     * For example, if you want to connect to the Amazon RDS PostgreSQL database (`jdbc:postgresql://xyz-rds-instance.ccnapcvoeosh.eu-west-1.rds.amazonaws.com:5432/postgres`), you need to place the PostgreSQL JDBC driver *.jar* inside the **userlib** folder
     * For more information, see the [Common JDBC Drivers](#links) section below
 * Specific to the `Execute` query action: an entity in the domain model that can be used for the results of the executed query
-    * For example, a query like `select name, number from stock` has two columns (of the string and integer type, respectively). So, to use the **Execute query** action, you have to add an entity in the domain model that has the same attributes as the columns in the query.
+    * For example, a query like `select name, number from stock` has two columns (of the string and integer type, respectively). To use the **Execute query** action, you have to add an entity in the domain model that has the same attributes as the columns in the query.
 
 {{% alert color="info" %}}
-Follow these prerequisites carefully to avoid connection errors. It is especially important to make sure that you add the *.jar* files for the database to which you want to connect into the *userlib* folder.
+Follow these prerequisites carefully to avoid connection errors. It is especially important to make sure you add the *.jar* files for the database to which you want to connect into the **userlib** folder.
 {{% /alert %}}
 
 ## 3 Getting Started
 
-Once you have imported the Database connector into your app, you will have the **Database connector** category available in the **Toolbox**. This connector supports five actions: **Execute query**, **Execute statement**, **Execute parameterized query**, **Execute parameterized statement**, and **Execute callable statement**.
+Once you have imported the Database connector into your app, you will have the **Database connector** category available in the **Toolbox**. This connector supports five actions: 
+
+* **Execute query**
+* **Execute statement**
+* **Execute parameterized query**
+* **Execute parameterized statement**
+* **Execute callable statement**
 
 {{< figure src="/attachments/appstore/modules/database-connector/database-connector-in-toolbox.png" >}}
 
@@ -50,7 +56,7 @@ Once you have imported the Database connector into your app, you will have the *
 
 #### 3.1.1 Usage
 
-To use **Execute parameterized query**, **Execute parameterized statement**, **Execute query**, or **Execute statement** in your Mendix application, drag it into your microflow. Next, provide all the arguments for the selected action and choose the output result name.
+To use **Execute parameterized query**, **Execute parameterized statement**, **Execute query**, or **Execute statement** in your application, drag it into your microflow. Next, provide all the arguments for the selected action and choose the output result name.
 
 The **Execute query** and **Execute parameterized query** actions are used for querying objects with a `SELECT` SQL command. The **Execute statement** and **Execute parameterized statement** actions should be used for the other DML commands (for instance, `INSERT`, `UPDATE`, or `DELETE`).
 
@@ -66,11 +72,11 @@ To use the **Execute query** action, you need to create an actual object of the 
 
 ##### 3.1.1.2 Execute Statement Action
 
-See [Execute an SQL Statement on an External Database](/howto/integration/execute-an-sql-statement-on-an-external-database/) for detailed instructions on using this action.
+See [Execute an SQL Statement on an External Database](/howto/integration/execute-an-sql-statement-on-an-external-database/) for detailed instructions on how to use this action.
 
 #### 3.1.2 Results
 
-These are the results of the actions:
+The results of the actions are:
 
 * **Execute query** and **Execute parameterized query** – a list of objects of the row type, which is also the output of the `SELECT` SQL query
 * **Execute statement** and **Execute parameterized statement** – either an integer or a long value, which usually represents the number of affected rows

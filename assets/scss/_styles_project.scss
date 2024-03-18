@@ -425,7 +425,7 @@ nav.foldable-nav {
     }
 
     .ul-1 .with-child > input:checked ~ label:before { 
-        color: $primary;
+        color: $link-color;
         transform: rotate(90deg);
         transition: transform 0s; // NK - disables animation transition time, now switch is instant
     }
@@ -436,13 +436,13 @@ nav.foldable-nav {
     nav.foldable-nav {
 
         .ul-1 .with-child > label:hover:before { 
-            color: $primary;
+            color: $link-color;
             transform: rotate(30deg);
             transition: transform 0s; // NK - disables animation transition time, now switch is instant
         }
 
         .ul-1 .with-child > input:checked ~ label:hover:before { 
-            color: $primary;
+            color: $link-color;
             transform: rotate(60deg) !important;
             transition: transform 0s; // NK - disables animation transition time, now switch is instant
         }
@@ -686,11 +686,11 @@ nav.foldable-nav {
          justify-content: center;
          gap: 0.5rem;
          flex-wrap: wrap;
-         background-color: #f7f7f7;
+         background-color: $gray-100;
          color: rgba(10, 19, 36, 0.7);
          font-size: 0.75rem;
          text-align: center;
-         border-top: 1px solid #e7e7e9;
+         border-top: 1px solid $gray-300;
          padding: 1rem;
          font-family: 'noto-sans', 'Noto Sans', sans-serif;
    }
@@ -718,13 +718,13 @@ nav.foldable-nav {
     
          > li::before {
                content: '';
-               border-left: 1px solid #e7e7e9;
+               border-left: 1px solid $gray-300;
                margin-right: 0.5rem;
          }
    }
     
    .mx-footer__link:hover {
-         color: #0123c6;
+         color: $link-hover-color;
          text-decoration: underline;
    }
     
@@ -733,7 +733,7 @@ nav.foldable-nav {
    }
     
    .mx-footer__link:focus-visible {
-         outline: 2px solid #298efb;
+         outline: 2px solid $info-6;
          outline-offset: 2px;
     }
 
@@ -745,8 +745,8 @@ nav.foldable-nav {
 //_badge.scss
 
 .badge-warning {
-    color: #fff;
-    background-color: #C97800;
+    color: $white;
+    background-color: $warning-8;
   }
 
 .badge-pill {
@@ -760,7 +760,7 @@ nav.foldable-nav {
 .swagger-ui .info .title,
 .swagger-ui .model-title {
     font-family: $font-family !important;
-    color: var(--bs-body-color);
+    color: $secondary;
 }
 
 .swagger-ui .info a {

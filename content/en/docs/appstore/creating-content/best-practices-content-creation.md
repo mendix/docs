@@ -20,13 +20,13 @@ You will find information on:
 
 ## 2 Technical Best Practices
 
-### 2.1 Low code security misconfigurations (Recommended)
+### 2.1 Low Code Security Misconfigurations (Recommended)
 
 Mendix applications, widgets, connectors, modules are developed Mendix, so traditional code based SAST scanners will not be very helpful to detect security issues in the low-code. They also cannot point out security misconfigurations - if any. It is recommended to use a tool that can look into security best practices outlined in the [Mendix documentation](https://docs.mendix.com/howto/security/best-practices-security/) and point out any security misconfigurations and bad practices. 
 
 Mendix Marketplace contains the following products which you could use for the check: [Clevr ACR](https://marketplace.mendix.com/link/component/114669), [SIG QSM/AQM](https://www.softwareimprovementgroup.com/solutions/sigrid-for-mendix-application-quality-monitoring/), [Bizzomate](https://chrome.google.com/webstore/detail/bizzomate-mendix-dev-tool/nkbokoloejkhohjlickhfkjfmbmboaof) , [Omnext Software Analyses Suit](https://marketplace.mendix.com/link/component/120746). These can be used to inspect and correct your Module, Widget or Connector. It is recommended for Partner to inspect the component before you onboard your content on marketplace. 
 
-### 2.2 Architectural best practices (Recommended)
+### 2.2 Architectural Best Practices (Recommended)
 
 As the supplier ecosystem evolves, different types of services will emerge. This section shares the best practice relevant for each type of offering in respect to the Access management and Service Reliability.
 
@@ -70,7 +70,7 @@ Useful links
 
 ## 3 Marketing Best Practices
 
-### 3.1 Product logo 
+### 3.1 Product Logo 
 
 Display your cover image in your Mendix Marketplace listing by uploading your file (.jpg) in the right dimensions: resolution of minimum 600px x 420px and file size of maximum 1 MB. Do check the copyright branding guidelines of other companies, if you use their logo as part of your image.
 
@@ -79,7 +79,7 @@ The thumbnail is visible on the Mendix Marketplace homepage. It is the same imag
 It is important to carefully think about the thumbnail image, since it is the 1st item which draws attention of the potential customers to your product offering. Therefore, we recommend to not use personal photos,
 rather an image that represents your offering.
 
-### 3.2 Product name taxonomy 
+### 3.2 Product Name Taxonomy 
 One of the most challenging topics regarding your product is finding a perfect name. In our marketplace we have almost no restrictions on the names and as a supplier, knowing your product, you are responsible to find the best option.
 
 However, we still have some rules associated to naming:
@@ -96,7 +96,7 @@ However, we still have some rules associated to naming:
 
 *   If you use the name of your company in the product name, similarly to the previous bullet point, do not abbreviate it, so that customer remembers your brand, and in future potentially draws attention to it.
 
-### 3.3 Product description
+### 3.3 Product Description
 
 Use this field to explain your offering. Product description is one of the most important aspects of online selling. Even if your product is great, it is significant to let your customer know that.
 
@@ -122,7 +122,7 @@ Tips which may help you write a proper product description:
 *   You can also add some keywords to your descriptions to optimizing the content for search engines like Mendix or Google search. That way if someone is searching for your product using a certain word,
     your product may come out in the search of the potential customer.
 
-### 3.4 Screenshots and assets
+### 3.4 Screenshots and Assets
 
 A picture says more than 1,000 words! Share up to 10 screenshots of your offering to showcase what your offering looks like, so future users know what to expect. You can also upload asset links like white papers,
 eBooks, customer and/or developer testimonials.

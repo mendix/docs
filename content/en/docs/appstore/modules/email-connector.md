@@ -98,14 +98,14 @@ Based on the entered email address domain, the module will try to fetch configur
 You may need to adjust your Gmail settings before you can add a Gmail account. For more information, see [Gmail Accounts](#gmail-accounts).
 {{% /alert %}}
 
-In Studio Pro, it is also possible to use the **GetAutoConfig** Java action to get all supported email configurations for the provided username. This action returns results as **Email_Connector.EmailProvider**. Process the **Email_Connector.EmailProvider** records to get the desired configuration and create the **Email_Connector.EmailAccount**.
+In Studio Pro, it is also possible to use the **GetAutoConfig** Java action to get all supported email configurations for the provided user name. This action returns results as **Email_Connector.EmailProvider**. Process the **Email_Connector.EmailProvider** records to get the desired configuration and create the **Email_Connector.EmailAccount**.
 
 #### 3.1.2 Manual Configuration
 
 To manually configure the account for sending and receiving emails, enter the protocol, server host, and server port. Refer to the email server documentation to get this information.
 
 {{% alert color="info" %}}
-Even if you do not select *Use SSL* or *Use TLS** when you configure the **Email Protocol**, as long as your mail server allows secure connections, then a secure connection is initialized regardless your configuration. This means a higher priority is given to a secure connection than an unsecured one, if the underlying Email server infra supports secure connection.
+Even if you do not select **Use SSL** or **Use TLS** when you configure the **Email Protocol**, as long as your mail server allows secure connections, a secure connection is initialized regardless your configuration. This means a higher priority is given to a secure connection than an unsecured one, if the underlying Email server infra supports secure connection.
 {{% /alert %}}
 
 ### 3.2 Additional Account Settings {#other-account-settings}
@@ -113,8 +113,8 @@ Even if you do not select *Use SSL* or *Use TLS** when you configure the **Email
 You can choose to adjust the following account settings:
 
 * **Subscribe to incoming emails** – By default, this is turned off. Turn it on if you want to get notifications about new incoming emails. For modeling, use the **SubscribeToIncomingEmail** Java action. Note that this setting is only supported for IMAP protocols, and some servers may not support it at all. For more information, see the [Subscribing to Incoming Email](#subscribe-incoming-email) section below.
-* **Sanitize email to prevent XSS attacks** – By default, this is turned off, but Mendix strongly recommends turning it on. Turn it on if you want the connector to remove malicious scripts to prevent XSS attacks. To learn more about this option, see [Sanitize Untrusted HTML (To Prevent XSS)](https://jsoup.org/cookbook/cleaning-html/safelist-sanitizer).
-* **Replicate everything in 'Inbox' folder** – By default, this is turned off. When it is off, the connector will fetch the number of emails mentioned in the **Number of emails to retrieve from server** field, based on the selected **Fetch strategy**. Turn this setting on if you want the connector to instead fetch all the emails from the inbox (or another folder that you specify), in the batch size specified in the **Email batch size** field. The emails will be ordered from oldest to newest.
+* **Sanitize email to prevent XSS attacks** – By default, this is turned off, but it is strongly recommended to turn it on. Turn it on if you want the connector to remove malicious scripts to prevent XSS attacks. To learn more about this option, see [Sanitize Untrusted HTML (To Prevent XSS)](https://jsoup.org/cookbook/cleaning-html/safelist-sanitizer).
+* **Replicate everything in 'Inbox' folder** – By default, this is turned off. When it is off, the connector will fetch the number of emails mentioned in the **Number of emails to retrieve from server** field, based on the selected **Fetch strategy**. Turn this setting on if you want the connector to fetch all the emails from the inbox (or another folder that you specify), in the batch size specified in the **Email batch size** field. The emails will be ordered from oldest to newest.
 * **Connection Timeout (milliseconds)** – By default, this is set to **20000**. If you want to adjust the connection timeout duration for sending and receiving emails, you can change this value in the account settings or the **EmailAccount** object.
 
 ## 4 Usage

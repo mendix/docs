@@ -13,16 +13,18 @@ This document is about [Private Mendix Platform](/private-mendix-platform/) API.
 
 ## 1 Introduction
 
-The Private Mendix Platform Project API allows you to manage projects in Private Mendix Platform. You can use the API to do the following:
+The Private Mendix Platform Project API allows you to manage projects in Private Mendix Platform. {{% todo %}}I would add an business use case here. Something like: "For example, you can delete all apps that have versions Mendix 7 or below." (I am not sure if this example is correct).{{% / todo %}}
 
-* Get a project by ID
-* Get a list of all projects for the current user
-* Create or delete a project
-* Retrieve the project creation status
-* Change the project name, description, or status
-* Change the owning user and group of a project
-* Get all project team members
-* Add or remove members and groups from a project
+You can use the API to do the following:
+
+* Get an app by ID
+* Get a list of all apps for the current user
+* Create or delete an app
+* Retrieve the app creation status
+* Change the app name, description, or status
+* Change the owning user and group of an app
+* Get all app team members
+* Add or remove members and groups from an app
 
 ## 2 API Reference
 

@@ -135,8 +135,6 @@ For container-based deployments using Docker, Kubernetes, or Cloud Foundry, the 
 * SAP AWS S3 Object Storage
 * SAP Azure Blob Storage
 
-For container-mounted storage in Kubernetes, provided by an external storage class, see also [Use Docker with Minikube](/developerportal/deploy/run-mendix-on-kubernetes/).
-
 ### 8.2 Storage types for Servers
 
 For server-based installations, the following storage types mounted by the OS are supported:

@@ -116,15 +116,7 @@ docker run -it \
   mendix/mendix-buildpack:…
 ```
 
-### 3.7 Kubernetes
-
-To activate a license on your app running on Kubernetes, you need the license credentials provided by Mendix Support.
-
-Two additional environment variables, `LICENSE_ID` and `LICENSE_KEY`, need to be set to the values of the **LicenseId** and **LicenseKey** provided by Mendix Support. To do this, add them to the deployment command for your app.
-
-For full instructions on how to do this and how to supply the keys using a **Secrets** file, see the [Deploying the Application](/developerportal/deploy/run-mendix-on-kubernetes/#deploy) section of *Use Docker with Minikube*.
-
-### 3.8 Windows Server
+### 3.7 Windows Server
 
 To license a Mendix app on Microsoft Windows, follow these steps:
 
@@ -134,7 +126,7 @@ To license a Mendix app on Microsoft Windows, follow these steps:
 
 For full instructions on how to do this, see [Activate a Mendix License on Microsoft Windows](/developerportal/deploy/activate-a-mendix-license-on-microsoft-windows/).
 
-### 3.9 Unix-Like Server
+### 3.8 Unix-Like Server
 
 To license a Mendix app on Linux, or another Unix-like operating system, follow these steps:
 

@@ -34,7 +34,7 @@ The app is created on the Team Server, and a working copy is created in the **Ap
 
 If there is already a Team Server-enabled app, you can be invited to join it (see [Team](/developerportal/general/team/)).
 
-Once you are a team member, providing you have been given a role with sufficient rights, you can work on the app by doing the following:
+Once you are a team member, provided that you have been given a role with sufficient rights, you can work on the app by doing the following:
 
 1. Choose **Open App** in Studio Pro.
 2. Choose your app from the list of the **Open App** dialog box.
@@ -44,13 +44,13 @@ The app will be downloaded from the Team Server and opened in Studio Pro.
 
 ## 4 Day-to-Day Development
 
-Let us say you have a working copy of an app on disk. You make changes to the app and save them. Saved changes are not immediately visible to others. The documents, folders, and modules which have been changed can be identified by looking at the **status**.
+Let us say you have a working copy of an app on disk. You make changes to the app and save them. Saved changes are not immediately visible to others. The documents, folders, and modules that have been changed can be identified by looking at the **status**.
 
 When you are happy with a set of changes, you **commit** them to the repository. Others can then choose to update/pull and retrieve those changes.
 
 You can **update/pull** your working copy with changes committed by others.
 
-You can also see a **history** of all the changes which have been committed, no matter who committed them.
+You can also see a **history** of all the changes that have been committed, no matter who committed them.
 
 ### 4.1 Status
 
@@ -71,11 +71,11 @@ The **App Explorer** shows an icon in front of each item (including each documen
 In the **App Explorer**, there is only room for one icon for each item. If an item is both modified and moved, it is shown as modified with a yellow icon.
 {{% /alert %}}
 
-For example, say that the microflow **ChangePassword** has been modified. Then, a new folder called **Flows** was added and all microflows, including the modified microflow, were moved inside this folder. The new folder gets a green icon and the module containing those changes is depicted with a yellow icon. The microflows which were moved but had not been modified get a blue icon. The modified microflow **ChangePassword** gets a yellow icon. This helps you to quickly see where in the app the changes are.
+For example, say that the microflow **ChangePassword** has been modified. Then, a new folder called **Flows** was added and all microflows, including the modified microflow, were moved into this folder. The new folder gets a green icon, and the module containing those changes is depicted with a yellow icon. The microflows which were moved but had not been modified get a blue icon. The modified microflow **ChangePassword** gets a yellow icon. This helps you to quickly see where in the app the changes are.
 
-In the **Changes** pane, you can find more information. There is an entry for each change to an item. If a document is both modified and moved, there are two lines for that document. The pane also shows items that were deleted, something the app explorer cannot do.
+In the **Changes** pane, you can find more detailed information. There is an entry for each change to an item. If a document is both modified and moved, there are two lines for that document. The pane also shows items that were deleted, something the app explorer cannot do.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/changes-pane.png" max-width=100% class="image-border">}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/changes-pane.png" max-width=80% class="image-border">}}
 
 {{% alert color="info" %}}
 When you successfully commit your app, this becomes the new original and all the change information is removed from the **App Explorer** and the **Changes** pane.
@@ -83,17 +83,17 @@ When you successfully commit your app, this becomes the new original and all the
 
 ### 4.2 Committing
 
-Sending changes to the repository is called *committing*. The idea is that you commit small, consistent pieces of work to the repository. Mendix recommends committing your changes often. Preferably, the versions in the repository are always error-free, Studio Pro will warn against committing while there are errors in your app.
+Sending changes to the repository is called committing. The idea is that you commit small, consistent pieces of work to the repository. Mendix recommends committing your changes often. Preferably, the versions in the repository are always error-free. Studio Pro will warn against committing while there are errors in your app.
 
-To commit your changes, click the **Commit** button in the **Changes** pane, or choose the **Version Control** > **Commit...** menu item.
+To commit your changes, click the **Commit** button in the **Changes** pane, or choose the **Version Control** > **Commit** menu item.
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-button.png" alt="Commit Button" >}}
 
-Git only creates a local commit and to submit your local commit (or commits) to the centralized server you need to *push* your changes (pushing changes is selected by default in the **Commit** dialog box). As a result, your local changes are committed faster, and you can roll back to a previous state without having to contact the version control server.
+Git only creates a local commit. To submit your local commit (or commits) to the centralized server, you need to **push** your changes (pushing changes is selected by default in the **Commit** dialog box). As a result, your local changes are committed faster, and you can roll back to a previous state without having to contact the version control server.
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/local-repo-and-team-server.png" alt="Local Repository and Team Server" >}}
 
-For example, you are developing a feature together with another developer on the same branch. You both have the same starting point (3). When your colleague commits a change, you can choose to retrieve these changes and integrate them. To enable this, we ask developers to first commit existing changes locally (6), so the changes can be automatically merged when they are retrieved by other developers. After this you commit the merged result, and optionally push the merged result (7) to be used by your colleague. Because changes are already explicitly committed, you can always see what you changed and you cannot accidentally override your local changes when you are resolving conflicts.
+For example, you are developing a feature together with another developer on the same branch. You both have the same starting point (3). When your colleague commits a change, you can choose to retrieve these changes and integrate them. To enable this, developers first need to commit existing changes locally (6), so that the changes can be automatically merged when they are retrieved by other developers. After this, you commit the merged result, and optionally push the merged result (7) to be used by your colleague. Because changes are already explicitly committed, you can always see what you changed and you cannot accidentally override your local changes when you are resolving conflicts.
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/incoming-changes.png" alt="Incoming changes in Git" >}}
 
@@ -105,21 +105,21 @@ In general, it is a good idea to commit after implementing one feature or fixing
 
 Committing results in a new revision in the repository. You can add the following information in Studio Pro when you perform a commit, and this will be attached to the newly created revision:
 
-* A textual message. This should be a summary of the changes you made
-* A list of Developer Portal stories that relate to the commit. A small commit will probably relate to one story. Studio Pro shows stories that are in the current Sprint and do not have a status of *Done*. Adding the story to the commit will not change the state of the Developer Portal story. Setting the status to 'Done' must be done manually and depends on your *definition of done*.
+* A textual message – this should be a summary of the changes you made.
+* A list of Developer Portal stories that relate to the commit. A small commit probably relates to one story. Studio Pro shows stories that are in the current Sprint and do not have a status of **Done**. Adding the story to the commit does not change the state of the story in the Developer Portal. Setting the status to **Done** must be done manually and depends on how you define  'done'.
 
     {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-dialog.png" >}}
 
 Studio Pro also attaches some information automatically:
 
-* The person who committed (the *author*)
+* The person who committed (the **author**)
 * The date and time of the commit
-* The list of changed documents, folders, and modules along with the type of the change (for example *modify* or *add*)
+* The list of changed documents, folders, and modules along with the type of the change (for example **modify** or **add**)
 * The version of Studio Pro that was used to commit
 
-If you also changed Java source code, added widgets or made other changes that affect files other than the app file you will see a **Changes on disk** tab page that shows you what disk changes you are about to commit.
+If you also changed Java source code, added widgets, or made other changes that affect files other than the app file, you will see a **Changes on disk** tab page that shows you what disk changes you are about to commit.
 
-Committing is only allowed if your working copy is up to date with the repository. If someone else committed a change since the last time you pulled, you will have to pull first. This is because the revision you create with the commit should incorporate both your changes and the changes by the other person. Updating will combine the latest changes in the repository with your changes. After reviewing the result, and fixing any conflicts, you can commit again.
+Committing is only allowed if your working copy is up to date with the repository. If someone else committed a change since the last time you pulled, you will have to pull first. This is because the revision you create with the commit should incorporate both your changes and the changes by the other person. Updating will combine the latest changes in the repository with your changes. After reviewing the result and fixing any conflicts, you can commit again.
 
 ### 4.3 Pushing {#pushing}
 

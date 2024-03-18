@@ -40,31 +40,25 @@ Access Management
 6. Return 404 for both scenarios below. This prevents giving clue to hackers 
    1.  absence of a resource ( service instance ) 
    2.  access of a resource to which the accessor does not have rights for 
-   Service Reliability 
 
-7. If the service cannot be complete the provided operation within 2 seconds consider using an asynchronous response mechanism.
+Service Reliability 
 
-8. Throttle requests to avoid noisy neighborhood issues.
+1. If the service cannot be complete the provided operation within 2 seconds consider using an asynchronous response mechanism.
+2. Throttle requests to avoid noisy neighborhood issues.
+3. Respond 4XX for invalid inputs and If preconditions are not met.
+4. In case of server error, the consuming app may retry invoking the service multiple times. An idempotent endpoint will be more robust for retries.
+5. Choose appropriate scaling mechanism to handle varying loads. Prefer horizontal scaling against vertical scaling 
+6. Setup appropriate tools that enable monitoring of the service workload and can raise notifications 
+7. Have a disaster recovery plan for your service 
+8. Broadcast availability of your service and scheduled maintenance window
 
-9. Respond 4XX for invalid inputs and If preconditions are not met.
+Useful links 
 
-10. In case of server error, the consuming app may retry invoking the service multiple times. An idempotent endpoint will be more robust for retries.
-
-11. Choose appropriate scaling mechanism to handle varying loads. Prefer horizontal scaling against vertical scaling 
-
-12. Setup appropriate tools that enable monitoring of the service workload and can raise notifications 
-
-13. Have a disaster recovery plan for your service 
-
-14. Broadcast availability of your service and scheduled maintenance window
-
-    Useful links 
-
-    * [Community Best Practices for App Performance](https://docs.mendix.com/howto/general/community-best-practices-for-app-performance/)
-    * [Minimize the Number of In-Use Objects in Your Session](https://docs.mendix.com/howto/general/minimize-number/)
-    * [Implement Best Practices for App Security](/howto/security/best-practices-security/)
-    * [Mendix Best Practices for Development](https://docs.mendix.com/howto/security/best-practices-security/)
-    * [Best Practices for Building Connectors](/appstore/creating-content/connector-guide-best-practices/)
+* [Community Best Practices for App Performance](https://docs.mendix.com/howto/general/community-best-practices-for-app-performance/)
+* [Minimize the Number of In-Use Objects in Your Session](https://docs.mendix.com/howto/general/minimize-number/)
+* [Implement Best Practices for App Security](/howto/security/best-practices-security/)
+* [Mendix Best Practices for Development](https://docs.mendix.com/howto/security/best-practices-security/)
+* [Best Practices for Building Connectors](/appstore/creating-content/connector-guide-best-practices/)
 
 ## 3 Marketing Best Practices
 
@@ -110,9 +104,8 @@ Tips which may help you write a proper product description:
 
 *   Product description should cover the key answers makers have when looking for content.
 
-*   Product benefits. Rather than speaking about a large number of technical features ( which you could also cover in documentation section), overview section could be used to draw attention to the benefits. Meaning how your product can improve customer’s app development or work life in general. Before writing the description,
-    what could help you is making an outline of features and benefits of your product. For every feature that you list, think how it will directly benefit the customer.
-
+*   Product benefits. Rather than speaking about a large number of technical features ( which you could also cover in documentation section), overview section could be used to draw attention to the benefits. Meaning how your product can improve customer’s app development or work life in general. Before writing the description, what could help you is making an outline of features and benefits of your product. For every feature that you list, think how it will directly benefit the customer.
+    
 *   Knowing the target audience, will help you understand why this person needs your product, what features, or benefits would interest your customer. That way you can put the focus on the right aspects 
 *   Using natural language. Imagine you are telling your friend about the product. Reading the description outload will help you see if you bring the natural tone like in the real conversation. Reading friendly easily explained lines of the description will help your customers connect to your product. 
 
@@ -141,44 +134,9 @@ If your product is not licensed as an Open-Source component and you would like t
 
 This is the template of the declaration you could use for T&Cs.
 
-<table>
-<colgroup>
-<col style="width: 26%" />
-<col style="width: 27%" />
-<col style="width: 24%" />
-<col style="width: 21%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th><blockquote>
-<p>Software Name and Version</p>
-</blockquote></th>
-<th><blockquote>
-<p>Software URL</p>
-</blockquote></th>
-<th><blockquote>
-<p>What does the Software do? Why is it needed?</p>
-</blockquote></th>
-<th><blockquote>
-<p>License</p>
-</blockquote></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td></td>
-<td><blockquote>
-<p> </p>
-</blockquote></td>
-<td><blockquote>
-<p> </p>
-</blockquote></td>
-<td><blockquote>
-<p> </p>
-</blockquote></td>
-</tr>
-</tbody>
-</table>
+| Software Name and Version | Software URL | What does the Software do? Why is it needed? |License|
+|-|-|-|-|
+|||||
 
 *   Export control 
 *   Data Privacy, including data processing agreement, as necessary 

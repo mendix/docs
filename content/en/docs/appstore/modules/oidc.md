@@ -389,7 +389,7 @@ Users who are part of the user pool you created in Amazon Cognito can now log in
 In version 2.3.0 and above, you can configure the OIDC SSO module using app [constants](/refguide/constants/) rather than using the app's administration pages. As the developer of an app using OIDC SSO, you can set default values. These values can be overridden using the app’s constants.
 
 {{% alert color="info" %}}
-When using OIDC version 3.0.0 and above, it is mandatory to configure the IdPAttribute constant as `sub` if you have created an IdP during deploytime configuration.
+When using OIDC version 3.0.0 and above, `preferred_username` is provided as default IdP principle attribute. However, it is mandatory to configure the `PrincipalIdPAttribute` constant as `sub` if you have created an IdP configuration using deploy-time constants feature in the version below 3.0.0 of the OIDC module.
 {{% /alert %}}
 
 To enable the use of app constants to configure the OIDC SSO module, configure your app to run the Startup microflow in the OIDC module (OIDC.Startup) as (part of) the [after startup](/refguide/app-settings/#after-startup) microflow.

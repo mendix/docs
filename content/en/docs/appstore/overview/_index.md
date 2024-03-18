@@ -114,7 +114,8 @@ The component details page also presents the following tabs:
     * You can browse,  sort by review date, and filter by ratings for insights on the component.
     * You can select the **Only show my reviews** checkbox only check your own review.
     * You can click **Write Review** to open a section where you can add text, rate the component, and submit the review.
-        * Your reviews are listed on your [My Reviews](/appstore/overview/my-marketplace/#my-reviews) page in **My Marketplace**.
+        * Before you write a review, you can first read the **Tips for Sharing Your Review**, which appears on the right side of the text box.
+        * You can find all your reviews on your [My Reviews](/appstore/overview/my-marketplace/#my-reviews) page in **My Marketplace**.
     * If you are a developer of the component, you can **Reply** to a review.
 * **Developers** – This tab shows the names of the developers who most recently updated the component, with links to their [Mendix Profile](/community-tools/mendix-profile/).
 

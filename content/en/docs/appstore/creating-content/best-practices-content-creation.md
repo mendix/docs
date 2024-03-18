@@ -12,13 +12,13 @@ You will find information on:
 
 ## 2 Technical Best Practices
 
-### 2.1 Low code security misconfigurations \[Recommended\]
+### 2.1 Low code security misconfigurations (Recommended)
 
 Mendix applications, widgets, connectors, modules are developed Mendix, so traditional code based SAST scanners will not be very helpful to detect security issues in the low-code. They also cannot point out security misconfigurations - if any. It is recommended to use a tool that can look into security best practices outlined in the [Mendix documentation](https://docs.mendix.com/howto/security/best-practices-security/) and point out any security misconfigurations and bad practices. 
 
 Mendix Marketplace contains the following products which you could use for the check: [Clevr ACR](https://marketplace.mendix.com/link/component/114669), [SIG QSM/AQM](https://www.softwareimprovementgroup.com/solutions/sigrid-for-mendix-application-quality-monitoring/), [Bizzomate](https://chrome.google.com/webstore/detail/bizzomate-mendix-dev-tool/nkbokoloejkhohjlickhfkjfmbmboaof) , [Omnext Software Analyses Suit](https://marketplace.mendix.com/link/component/120746). These can be used to inspect and correct your Module, Widget or Connector. It is recommended for Partner to inspect the component before you onboard your content on marketplace. 
 
-### 2.2 Architectural best practices \[Recommended\]
+### 2.2 Architectural best practices (Recommended)
 
 As the supplier ecosystem evolves, different types of services will emerge. This section shares the best practice relevant for each type of offering in respect to the Access management and Service Reliability.
 
@@ -126,7 +126,7 @@ Tips which may help you write a proper product description:
 A picture says more than 1,000 words! Share up to 10 screenshots of your offering to showcase what your offering looks like, so future users know what to expect. You can also upload asset links like white papers,
 eBooks, customer and/or developer testimonials.
 
-### 3.5 Video or Demo \[Optional\]
+### 3.5 Video or Demo (Optional)
 
 Did you know that video retains 95% of a video’s message in comparison to 10% when reading the text? That’s why it would be great if you upload a short (demo) video (30-90 sec) of your offering in which you briefly explain why people need it, what it does, how it works and/or how it can be implemented. Demo videos are important for Makers because they give them an idea of how your product looks and works It is very powerful resource, especially for "paid" content.
 
@@ -179,7 +179,6 @@ This is the template of the declaration you could use for T&Cs.
 </tr>
 </tbody>
 </table>
-
 
 *   Export control 
 *   Data Privacy, including data processing agreement, as necessary 

@@ -32,13 +32,16 @@ li.link-list{
     font-size: 1rem;
     list-style-position: outside;
     list-style: none;
-    color: $blue;
+    color: $link-color;
     a {
+        text-decoration: none;
         &:hover {
             color: $link-hover-color;
+            text-decoration: underline;
         }
     }
 }
+
 p.rn-date{
     color: $gray-600;
     font-size: 0.85rem;
@@ -142,9 +145,9 @@ h4.card-title-w-50{
     font-weight: $font-weight-medium; // NK - adjusted weight
     font-size: $h3-font-size; // NK - adjusted size
     margin: 0.5rem 0rem 0.5rem 1rem; // NK - bring title closer to icon
-
         &:hover {
             color: $link-hover-color;
+            text-decoration: underline;
         }
 }
 div.card-body{

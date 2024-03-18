@@ -1,5 +1,6 @@
 # Introduction
-This document is an addition to the Mendix Marketplace Guidelines andaims to provide Partners with best practices, recommendations, and tipsfor preparing a product as well as submitting it to the publicMarketplace.  
+
+This document is an addition to the Mendix Marketplace Guidelines andaims to provide Partners with best practices, recommendations, and tipsfor preparing a product as well as submitting it to the publicMarketplace. 
 
 You will find information on:
 
@@ -139,7 +140,6 @@ Did you know that video retains 95% of a video’s message in comparisonto 10% w
 If your product is not licensed as an Open-Source component and youwould like to specify some certain licensing terms and conditions or EndUser License agreement, we recommend creating a document, which shouldcover the following topics:
 
 -   Copyright information and license conditions
-<!-- -->
 
 -   IP Usage – list of OSS/commercial licenses used 
 

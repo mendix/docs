@@ -76,7 +76,9 @@ To develop modules and submit them to the Marketplace, follow these guidelines:
 
 * Create a folder named **USE_ME** and add the microflows and pages that are relevant for the user
 * Create an empty folder with the version number as its name, which will appear in Studio Pro's App Explorer
-* If you add any **userlib** .*jar* files, make sure they are accompanied by a blank **MyModule.RequiredLib** file so that users know where the .*jar* files come from
+* Java dependencies
+  * As of Mendix 10.6 please use [managed dependencies]{/refguide/managed-dependencies/} where possible. To support older Mendix versions or use non-publicly available *.jar* files, please use **userlib**.
+  * When putting *.jar* files in the **userlib** folder, make sure the name includes a version number (ie *org.apache.commons.io-2.3.0.jar*) and are accompanied by a blank **MyModule.RequiredLib** file so that users know where the .*jar* files come from
 
     {{< figure src="/attachments/appstore/sharing-content/userlibBlankFiles_boxed.jpg"   width="400"  >}}
 

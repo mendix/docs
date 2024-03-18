@@ -510,8 +510,8 @@ nav.foldable-nav {
             padding-top: .25rem;
 
             &:hover {
-                color: $link-color;
-                text-decoration: none;
+                color: $link-hover-color;
+                text-decoration: underline;
             }
         }
         // NK - styling for ToC highlighting
@@ -559,7 +559,10 @@ nav.foldable-nav {
         // NK - overrides special styling for pages with no children
         &__page {
             color: inherit;//$gray-700;
-            font-weight: inherit;//$font-weight-light;
+            font-weight: inherit;//$font-weight-light;`
+        }
+        :hover {
+            text-decoration: underline;
         }
     }
     

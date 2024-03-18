@@ -112,9 +112,9 @@ The component details page also presents the following tabs:
     * The **UUID** can be used in the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api/#createnewapp) in the *Projects API.*
 * **Reviews** – This tab shows user reviews of the component.
     * You can browse,  sort by review date, and filter by ratings for insights on the component.
-    * You can select the **Only show my reviews** checkbox only check your own review.
+    * You can select the **Only show my reviews** checkbox to check your own reviews.
     * You can click **Write Review** to open a section where you can add text, rate the component, and submit the review.
-        * Before you write a review, you can first read the **Tips for Sharing Your Review**, which appears on the right. You can now rate a component 4 or 5 stars without leaving a review. For 3, 2, and 1 star ratings, a review is mandatory.
+        * Before you write a review, you can first read the **Tips for Sharing Your Review**, which appears on the right. You can now rate a component four or five stars without leaving a review. For three-, two-, and one-star ratings, a review is mandatory.
         * You can find all your reviews on your [My Reviews](/appstore/overview/my-marketplace/#my-reviews) page in **My Marketplace**.
     * If you are a developer of the component, you can **Reply** to a review.
 * **Developers** – This tab shows the names of the developers who most recently updated the component, with links to their [Mendix Profile](/community-tools/mendix-profile/).

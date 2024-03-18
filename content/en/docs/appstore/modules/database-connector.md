@@ -144,7 +144,7 @@ List items can be represented by associated **DatabaseConnector.Parameter** obje
 
 ##### 3.2.1.4 ParameterRefCursor Type
 
-To deal with **REF CURSOR** outputs, use the **DatabaseConnector.ParameterRefCursor** type:
+To manage **REF CURSOR** outputs, use the **DatabaseConnector.ParameterRefCursor** type:
 
 {{< figure src="/attachments/appstore/modules/database-connector/parameter-ref-cursor-parameter.png" >}}
 
@@ -176,12 +176,12 @@ When using the Database connector, keep these best practices in mind:
 * [SQLite](https://www.sqlite.org/src/tree?ci=trunk)
 
 {{% alert color="info" %}}
-If you intend to connect to SQL Server using integrated security, be aware that the JDBC driver in the **userlib** folder needs to match the version supplied with the Mendix Platform (via the **runtime/bundles/** folder inside the Mendix installation directory).
+If you intend to connect to SQL Server using integrated security, be aware that the JDBC driver in the **userlib** folder needs to match the version supplied with Studio Pro (via the **runtime/bundles/** folder inside the Mendix installation directory).
 {{% /alert %}}
 
 ### 5.1 Errors
 
-Errors can often be resolved by adding missing *JAR* dependencies to the **userlib** folder in the module. For more information, see the [Prerequisites](#prerequisites) section.
+Errors can often be resolved by adding missing **JAR** dependencies to the **userlib** folder in the module. For more information, see the [Prerequisites](#prerequisites) section.
 
 ## 6 Developing This Marketplace Component
 
@@ -189,7 +189,7 @@ To develop this component, follow these steps:
 
 1. Clone [https://github.com/mendix/database-connector.git](https://github.com/mendix/database-connector.git).
 2. Open the *DatabaseConnector.mpr* in the Desktop Modeler or Studio Pro.
-3. Use the **Deploy for Eclipse** option (<kbd>F6</kbd>) and then import this connector as an Eclipse project to the Eclipse IDE.
+3. Use the **Deploy for Eclipse** option (<kbd>F6</kbd>), then import this connector as an Eclipse project to the Eclipse IDE.
 
 ## 7 Read More
 

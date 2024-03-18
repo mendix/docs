@@ -198,7 +198,15 @@ Your [app settings](/refguide/app-settings/) provide three events that can trigg
 | Before shutdown | BeforeShutDown | BSD\_                 |
 | Health check    | HealthCheck    | HCH\_                 |
 
-#### 3.4.8 Unit Test Microflows
+#### 3.4.8 Sub-Microflows
+
+Use a consistent naming scheme that clearly identifies a [sub-microflow](/refguide/extracting-and-using-sub-microflows/), for example, *SUB_{MicroflowDescription}*.
+
+| Event Type      | Prefix                     |
+|-----------------|----------------------------|
+| Sub-microflow   | SUB_{MicroflowDescription} |
+
+#### 3.4.9 Unit Test Microflows
 
 Microflows containing unit tests should have the prefix **TEST_** or **UT_** (case-insensitive). For more information about the Unit Testing module, see [Unit Testing](/appstore/modules/unit-testing/).
 
@@ -206,7 +214,7 @@ Microflows containing unit tests should have the prefix **TEST_** or **UT_** (ca
 |-----------------|----------------------|
 | Unit Test       | TEST\_ or UT_ |
 
-#### 3.4.9 Integration Microflows
+#### 3.4.10 Integration Microflows
 
 For integrations, you have the following types of microflow:
 

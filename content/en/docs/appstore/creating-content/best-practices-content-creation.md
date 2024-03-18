@@ -8,7 +8,7 @@ tags: ["marketplace", "content ", "best practices", ""]
 
 ## 1 Introduction
 
-This document is an addition to the Mendix Marketplace Guidelines and aims to provide Partners with best practices, recommendations, and tips for preparing a product as well as submitting it to the public Marketplace.  
+This document is an addition to the Mendix Marketplace Guidelines and aims to provide partners with best practices, recommendations, and tips for preparing a product as well as submitting it to the public Marketplace.  
 
 You will find information on the following topics:
 
@@ -24,43 +24,37 @@ You will find information on the following topics:
 
 Mendix applications, widgets, modules are developed Mendix, so traditional code based SAST scanners will not be very helpful to detect security issues in the low-code. They also cannot point out security misconfigurations—if any. It is recommended to use a tool that can look into security best practices outlined in the [Mendix documentation](/howto/security/best-practices-security/) and point out any security misconfigurations and bad practices. 
 
-Mendix Marketplace contains the following products which you could use for the check: [Clevr ACR](https://marketplace.mendix.com/link/component/114669), [SIG QSM/AQM](https://www.softwareimprovementgroup.com/solutions/sigrid-for-mendix-application-quality-monitoring/), [Bizzomate](https://chrome.google.com/webstore/detail/bizzomate-mendix-dev-tool/nkbokoloejkhohjlickhfkjfmbmboaof), [Omnext Software Analyses Suit](https://marketplace.mendix.com/link/component/120746). These can be used to inspect and correct your modules and widgets. It is recommended for Partner to inspect the component before you onboard your content on marketplace. 
+Mendix Marketplace contains the following products which you could use for the check: [Clevr ACR](https://marketplace.mendix.com/link/component/114669), [SIG QSM/AQM](https://www.softwareimprovementgroup.com/solutions/sigrid-for-mendix-application-quality-monitoring/), [Bizzomate](https://chrome.google.com/webstore/detail/bizzomate-mendix-dev-tool/nkbokoloejkhohjlickhfkjfmbmboaof), [Omnext Software Analyses Suit](https://marketplace.mendix.com/link/component/120746). These can be used to inspect and correct your modules and widgets. It is recommended for partners to inspect the component before you onboard your content on marketplace. 
 
 ### 2.2 Architectural Best Practices (Recommended)
 
 As the supplier ecosystem evolves, different types of services will emerge. This section shares the best practice relevant for each type of offering in respect to the Access management and Service Reliability.
 
-Backend service implementation 
+ {{% todo %}}Check what this sentence is for{{% /todo %}}Backend Service Implementation
 
-Access Management 
+#### 2.2.1 Access Management 
 
-1. Issue one set of keys to access one service instance only.
+* Issue one set of keys to access one service instance only.
+* Ensure that provided keys can provide minimal access rights for the application to perform any operations on the service instance. Service can choose the level of access according to the service instance configuration.
+* Ensure that the number of binding keys per service instance is not a limiting factor. Mendix platform does not store keys issued to service consumer. If the consumer loses the key, they are bound to generate multiple binding keys for same instances.
+* On deletion of binding delete the corresponding keys. Do not reuse the keys for any other binding key request.
+* Log any operation with binding keys for auditing purposes 
+* 404 is returned for both scenarios below. This prevents giving clue to hackers:
+  * absence of a resource ( service instance ) 
+  * access of a resource to which the accessor does not have rights for 
 
-2. Ensure that provided keys can provide minimal access rights for the application to perform any operations on the service instance.
-   Service can choose the level of access according to the service instance configuration.
+#### 2.2.2 Service Reliability 
 
-3. Mendix platform does not store keys issued to service consumer. If the consumer loses the key, she is bound to generate multiple binding keys for same instances. Hence ensure that the number of binding keys per service instance is not a limiting factor.
+* If the service cannot be complete the provided operation within 2 seconds, consider using an asynchronous response mechanism.
+* Use throttle requests to avoid noisy neighborhood issues.
+* 4XX is returned for invalid inputs and if preconditions are not met.
+* In case of server error, the consuming app may retry invoking the service multiple times. An idempotent endpoint will be more robust for retries.
+* Choose appropriate scaling mechanism to handle varying loads. Prefer horizontal scaling against vertical scaling 
+* Set up appropriate tools that enable monitoring of the service workload and can raise notifications 
+* Have a disaster recovery plan for your service 
+* Broadcast availability of your service and scheduled maintenance window
 
-4. On deletion of binding delete the corresponding keys. Don’t reuse the keys for any other binding key request.
-
-5. Log any operation with binding keys for auditing purposes 
-
-6. Return 404 for both scenarios below. This prevents giving clue to hackers 
-   1.  absence of a resource ( service instance ) 
-   2.  access of a resource to which the accessor does not have rights for 
-
-Service Reliability 
-
-1. If the service cannot be complete the provided operation within 2 seconds consider using an asynchronous response mechanism.
-2. Throttle requests to avoid noisy neighborhood issues.
-3. Respond 4XX for invalid inputs and If preconditions are not met.
-4. In case of server error, the consuming app may retry invoking the service multiple times. An idempotent endpoint will be more robust for retries.
-5. Choose appropriate scaling mechanism to handle varying loads. Prefer horizontal scaling against vertical scaling 
-6. Setup appropriate tools that enable monitoring of the service workload and can raise notifications 
-7. Have a disaster recovery plan for your service 
-8. Broadcast availability of your service and scheduled maintenance window
-
-Useful links 
+#### 2.2.3 More Resources
 
 * [Community Best Practices for App Performance](/howto/general/community-best-practices-for-app-performance/)
 * [Minimize the Number of In-Use Objects in Your Session](/howto/general/minimize-number/)
@@ -85,15 +79,10 @@ One of the most challenging topics regarding your product is finding a perfect n
 However, we still have some rules associated to naming:
 
 *   The size of the name has to be 30-32 characters to fit it in the thumbnail.
-
 *   Names have to be in English. Currently, our marketplace is international and we have no option to switch the languages,
-    therefore showing the dedicated to the region content. Therefore, if you want a global exposure (rather than regional) - we recommend using English name.
-
-*   Do not use content type as part of the name. We classify products by content types and categories, which help customers with filtering and search. Avoid using standard platform terms in the name of your product and focus on the main product feature/benefit. (e.g.
-    “Widget” could be substituted with “3D Viewer”) 
-*   Avoid using non commonly known abbreviations. It is important to draw customer’s attention right from the thumbnail view, so potential customer opens the listing itself to get more information.
-    Apart from the image, the name has to be catchy.
-
+    therefore showing the dedicated to the region content. Therefore, if you want a global exposure (rather than regional)—we recommend using English name.
+*   Do not use content type as part of the name. We classify products by content types and categories, which help customers with filtering and search. Avoid using standard platform terms in the name of your product and focus on the main product feature and benefit. (e.g. “Widget” could be substituted with “3D Viewer”) 
+*   Avoid using non commonly known abbreviations. It is important to draw customer’s attention right from the thumbnail view, so potential customer opens the listing itself to get more information. Apart from the image, the name has to be catchy.
 *   If you use the name of your company in the product name, similarly to the previous bullet point, do not abbreviate it, so that customer remembers your brand, and in future potentially draws attention to it.
 
 ### 3.3 Product Description

@@ -66,14 +66,7 @@ The content in this guide can be covered in a few hours, but it was designed as 
 
 **Have some feedback?**
 
-* Feedback Widget:
-
-  On every page of the guide, you will see a Feedback button on the right side. Got any specific feedback on this guide?
-  Submit your input and the snapshot on the item in question by clicking on the Feedback button!
-
-* Fill out the Survey:
-
-  At the end of each guide, you will be asked to fill in a survey. Please tell us what you think. Your opinion will help us to keep improving!
+* Give your feedback on this doc using our **Feedback** widget at the bottom of the page. If you have suggestions for improvement, please tell us.
 
 ## 2 Get Familiar With the 5 P’s of the Digital Execution Practice 
 
@@ -122,7 +115,7 @@ Mendix is the platform that helps you turn ideas into outcomes. It contains all 
 
 * [**Mendix Support**](https://support.mendix.com/hc/en-us): Tickets, issues, incidents
 * [**Mendix Academy**](https://academy.mendix.com/index3.html): Certifications and trainings 
-* [**Mendix Forum**](https://forum.mendix.com/p/questions): Online community 
+* [**Mendix Community**](https://forum.mendix.com/p/questions): Online community 
 * [**Mendix Blog**](https://www.mendix.com/blog/): Articles and trending topics 
 * [**Mendix Docs**](/): Platform documentation 
 * [**Mendix Partner Hub**](https://www.mendix.com/partners/): Explore our Partner Network 
@@ -1295,19 +1288,8 @@ Your first application is launched, and you now know all about testing, launchin
 
 ## 8 Conclusion
 
-This section provides an overview of what you’ve learned in this guide.
-
-### 8.1 Summary
-
 Congratulations, you’ve made it to the end of this journey, and your first Mendix application has been launched! You’ve learned a lot along the way. The resources you’ve explored will also be very helpful during the next phases of your journey. You’ve made a great start and are ready to keep a successful journey going with Mendix. 
 
 By now you are familiar with the Mendix ecosystem and the importance of the 5 P’s of Digital Transformation. You know how to create an action plan, and successfully manage your Mendix program and are ready to keep managing and adding value to your portfolio. 
 
 An exiting Mendix journey has just begun, and we hope this guide was a useful tool during your first steps!
-
-### 8.2 Survey
-
-We strive to make our learning material live up to your expectations.
-For that reason, we would appreciate your feedback. Please take this [quick survey](https://www.surveymonkey.com/r/66CCZ92) to let us know what you think about this guide.
-
-We respect your privacy. Your feedback is anonymous. We do not use any information from the survey to identify the user.

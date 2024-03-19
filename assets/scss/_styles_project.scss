@@ -231,6 +231,21 @@ a:not(.btn):not(.td-sidebar-link):visited {
     color: $purple;
 }
 
+// Add icon after external links (but exclude buttons and the right sidebar icons)
+a[href*=".com"]:not([href*="github.com/mendix/"]):not(.btn)::after {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    margin-left: .2rem;
+    vertical-align: sub;
+    content: url("/icons/external-unvisited.svg"); //<!-- Fill color is $link-color (blue-8 from PDS). Keep it updated with _variables_project.scss. ->
+}
+
+// Use icon with different fill color for visited links
+a[href*=".com"]:visited:not([href*="github.com/mendix/"]):not(.btn)::after {
+    content: url("/icons/external-visited.svg"); // <!-- Fill color is $link-visited-color (purple-8 from PDS). Keep it updated with _variables_project.scss. ->
+}
+
 .btn {
     border-radius: 0.25rem;
 }

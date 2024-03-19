@@ -23,11 +23,14 @@ If you are using standard Mendix sign in flows in version 10.9.0 or above, the a
 
 ### 2.1 Enable Authentication Token
 
-{{% todo %}}Need a link to login2 api documentation{{% /todo %}}
-
 The `login2` API allows you to pass the parameter `useAuthToken`. The value `true` enables the authentication token, `false` disables it. If the login action passes `true` to the runtime, the runtime adds an HttpOnly cookie `useAuthToken` indicating that an authentication token should be generated during the client startup.
 
-Your login page can then utilize the authentication token. You can also provide end-users the option to decide whether they want to be remembered or not.
+Your login page will then utilize the authentication token. You can also provide end-users the option to decide whether they want to be remembered or not.
+
+Follow the links below to find the login2 API specifications for the following:
+
+* [React](https://apidocs.rnd.mendix.com/10/client-react/mx.html#.login2)
+* [Non-react (Dojo)](https://apidocs.rnd.mendix.com/10/client/mx.html#.login2)  
 
 ### 2.2 Authentication Token Generation
 

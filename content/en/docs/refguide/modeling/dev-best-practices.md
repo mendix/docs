@@ -188,7 +188,7 @@ For the microflow that you use in your [scheduled events](/refguide/scheduled-ev
 |-----------------|----------------------|
 | Scheduled Event | SCE\_                 |
 
-#### 3.4.7 App Microflows
+#### 3.4.7 App Microflows {#app-microflows}
 
 Your [app settings](/refguide/app-settings/) provide three events that can trigger a microflow. In these cases we advise writing out the purpose as a microflow name. These microflows are defined only once per app and should preferably call sub-microflows to do the actual processing. These sub-microflows should have a prefix indicated below:
 
@@ -200,7 +200,7 @@ Your [app settings](/refguide/app-settings/) provide three events that can trigg
 
 #### 3.4.8 Sub-Microflows
 
-Use a consistent naming scheme that clearly identifies a [sub-microflow](/refguide/extracting-and-using-sub-microflows/), for example, *SUB_{MicroflowDescription}*.
+To clearly identify a [sub-microflow](/refguide/extracting-and-using-sub-microflows/), use the prefix **SUB_**. Exceptions can happen if there are other sub-microflow prefixes that are generally accepted too, for instance, the sub-microflow prefixes mentioned in the [App Microflows](#app-microflows) section above.
 
 | Event Type      | Prefix                     |
 |-----------------|----------------------------|

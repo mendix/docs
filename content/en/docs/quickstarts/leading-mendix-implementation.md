@@ -571,7 +571,7 @@ Even though you can build almost anything with Mendix, especially with the exten
 
 ### Lecture 3.5 Define Application Value
 
-{{% alert color="info" %}}For more resources for this section, see [Value Template for End Customers](/attachments/quickstarts/leading-mendix-implementation/value-template-for-end-customers.pptx).{{% /alert %}}
+{{% alert color="info" %}}For more resources for this section, see [Company Apps Value Template](/attachments/quickstarts/leading-mendix-implementation/company-apps-value-template.pptx).{{% /alert %}}
 
 By thoroughly defining the application’s purpose and value, you provide a clear roadmap for development, aligning the project with organizational goals, and setting the stage for successful implementation and adoption. What will help you do that is trying to think along these lines:
 

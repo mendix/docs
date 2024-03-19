@@ -12,6 +12,17 @@ To download the Windows Service, go to the [Get Studio Pro](https://marketplace.
 
 ## 4.7
 
+### 4.7.4 
+
+**Release date: February 28, 2024**
+
+* We created the new cmdlet `New-MxApp` which initializes a new app with a basic Settings.yaml file.
+* We created the new cmdlet `Set-MxLogLevel` which sets all log nodes of a log subscriber to the specified log level at once.
+* We fixed the problem that the service startup type **Automatic** is stored with a wrong value when running the Service Console under the Turkish locale.
+* We check the right configured Java version if one is specified for a Mendix app (only possible in recent Mendix versions).
+* We updated the Newtonsoft Json.NET library from version 13.0.2 to 13.0.3.
+* We updated the YamlDotNet library from version 12.3.1 to 15.1.1.
+
 ### 4.7.3
 
 **Release date: December 18, 2023**

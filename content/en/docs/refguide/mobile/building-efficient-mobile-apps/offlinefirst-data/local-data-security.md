@@ -14,7 +14,7 @@ Offline-first apps built with Mendix store data in the local database to provide
 
 ## 2 Local Data Safety
 
-In native mobile apps, the Mendix Client stores the data and files in the file system—often sandboxed and encrypted by the operating system. This ensures that other apps, external entities, or end-users cannot access the app's data. 
+In native mobile apps, the Mendix Client stores the data and files in the file system, often sandboxed and encrypted by the operating system. This ensures that other apps, external entities, or end-users cannot access the app's data. 
 
 Data stored in a Mendix app is excluded from standard backup mechanisms to prevent data from leaking outside the app's boundaries. However, the built-in mechanisms can be bypassed in cases where the operating system is compromised, such as rooting an Android device.
 

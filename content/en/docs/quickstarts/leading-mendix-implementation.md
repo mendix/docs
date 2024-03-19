@@ -58,7 +58,7 @@ The content in this guide can be covered in a few hours, but it was designed as 
 
 * Contact the Mendix Community:
 
-  The [Mendix Community Questions](https://forum.mendixcloud.com/link/questions) is where you can find help when you get **stuck.** You can also help others when you know the answer! Be sure to first check whether someone has already asked the question you're wondering about. If not, feel free to post it and our community will help you out! If you didn’t already know, you can gain **points** when you do so!
+  The [Mendix Community](https://forum.mendixcloud.com/link/questions) is where you can find help when you get **stuck.** You can also help others when you know the answer! Be sure to first check whether someone has already asked the question you're wondering about. If not, feel free to post it and our community will help you out! If you didn’t already know, you can gain **points** when you do so!
 
 * Submit a Support ticket:
 
@@ -163,7 +163,7 @@ If you would like to learn more about how to manage your portfolio of ideas and 
 The people you choose for your teams are absolutely crucial to the success of your digital execution program. You want to find the right people with the right skills who are excited about and can commit time and energy to the program, no matter their job title. 
 
 A strong first Mendix team is more than just the number of people in the room. Your first Mendix team should include a core development team comprised of a combination of a professional developer — someone with technical expertise — and a business developer — someone familiar with the platform that can act as a power user if needed. The key is to have developers who can collaborate closely with end users, bridging the gap between business needs and technical possibilities.
-In the beginning, it’s highly likely that not all these people will come from your own organization (we will further review the options in [3.7](#3.7)), but this is an overview of all the higher level roles you will need sooner or later.The following leadership roles are essential to the success of any new platform or paradigm:
+In the beginning, it’s highly likely that not all these people will come from your own organization (we will further review the options in section [Review Options for Development Resources](#review-options-for-development-resources)), but this is an overview of all the higher level roles you will need sooner or later.The following leadership roles are essential to the success of any new platform or paradigm:
 
 * **Executive Sponsors:** Success starts at the top, where senior executive buy-in is a must. These are the top-level executives, ideally representing both the Business/Operations and IT, who are willing to be engaged periodically to provide oversight and steering-committee level guidance. These people won’t necessarily be involved day-to-day, but they understand the big picture vision of how Mendix will help the enterprise achieve its digital transformation and low-code goals, how it fits to ‘play nicely’ with other technology stacks and tools like Microsoft’s ADO or Power Apps, and what the transformational value is expected. Your Mendix team can work with these individuals to help understand, define, and refine their role, the value proposition for high ROI, etc.
 
@@ -173,7 +173,7 @@ In the beginning, it’s highly likely that not all these people will come from 
 
 * **Center of Excellence Lead (COE Lead):** Generally, larger organizations implement a Mendix COE to help define and enforce good governance, development, and enablement practices that can evolve with the business and technological changes for overall platform and program success throughout the enterprise over time. The COE Lead ensures the Mendix COE is properly staffed to support, oversee and enable development teams, and ensures the products produced are of high-quality following best practices for high re-usability, maintainability and return on investment. This person generally has sufficient senior-level technical and managerial skills to oversee the COE’s Enterprise and Solution Architects, DevOps technical leads, trainers and mentors, and other experienced staff.
 
-**Product owners** are key players to a successful program, because they’ll have in-depth knowledge of the business, the product, and its users, and will have insight into the value that it will create. If possible, make sure that your first product owner comes from your own organization and is familiar with the problem you are setting out to solve with your first application. Product owner is not really a leadership role, but the choice of a product owner is crucial for the success of your first app, which is why we touch on it here. can POs are also a part of the agile scrum team, so we will mention them again in section [4.2](#4.2).
+**Product owners** are key players to a successful program, because they’ll have in-depth knowledge of the business, the product, and its users, and will have insight into the value that it will create. If possible, make sure that your first product owner comes from your own organization and is familiar with the problem you are setting out to solve with your first application. Product owner is not really a leadership role, but the choice of a product owner is crucial for the success of your first app, which is why we touch on it here. can POs are also a part of the agile scrum team, so we will mention them again in section [Identify Your First Mendix Project Team](#identify-first-mendix-team).
 
 **Architects** will help establish a target architecture, infrastructure, and governance. 
 
@@ -203,7 +203,7 @@ It’s important to keep your team small as you build your Mendix Center of Exce
 
 Developers come from all parts of the business, not just IT. From your high-code programmers, to your business-centric developers, to your tech-savvy business analysts, low-code platforms let you build teams of makers from all backgrounds. 
 
-As the main action point here, start thinking about who you need to kick off building your first Mendix application and start talking to them about it. Some names are probably coming to mind already and you will get much more information on who you need exactly in [4.2 Identify Your First Mendix Project Team](#4.2).
+As the main action point here, start thinking about who you need to kick off building your first Mendix application and start talking to them about it. Some names are probably coming to mind already and you will get much more information on who you need exactly in section [Identify Your First Mendix Project Team](#4.2).
 
 #### 2.3.3 Process: Building Repeatable Practices for Long-Term Outcomes
 
@@ -281,7 +281,7 @@ It’s important to know what’s happening with the Mendix Platform to be sure 
 
   [Subscribe to Platform Updates](https://status.mendix.com/) to keep up with all the changes happening with the Mendix platform and how it could affect your apps.
 
-* **Mx Forum**
+* **Mx Community**
 
   [Join the Mendix Community](https://forum.mendix.com/p/questions) to connect with over 290,000 community members. The Forum is a great place for developers to ask questions and post ideas for our product managers. 
 
@@ -291,7 +291,7 @@ It’s important to know what’s happening with the Mendix Platform to be sure 
 
 We’ve got more steps to success coming your way.
 
-### 2.5 Summary {#2.5}
+### 2.5 Summary {#summary}
 
 In this section, you learned more about the Mendix platform and explored the 3 S’s and the 5 P’s of digital transformation and how these can contribute to a successful journey. More specifically you:
 
@@ -448,7 +448,7 @@ Portfolio Management starts at the company level, where strategy is defined. The
 
 To start, think about the big picture: What is your organization striving to achieve? Jot down a few ideas that can help you get there. These could include solutions to migrate from legacy apps, improve customer experience or increase efficiency. And Mendix has a tool to help you do just that!
 
-You should have already created your portfolio in [2.5](#2.5), if you haven’t yet let’s start by creating your Portfolio board, you can do that by going [here](https://portfolio.mendix.com/), clicking Open Portfolio Management and then click **Create Portfolio**. You can make it restricted for the time being (that means you will have to approve other people before they gain access to it).  
+You should have already created your portfolio in section [Summary](#summary), if you haven’t yet let’s start by creating your Portfolio board, you can do that by going [here](https://portfolio.mendix.com/), clicking Open Portfolio Management and then click **Create Portfolio**. You can make it restricted for the time being (that means you will have to approve other people before they gain access to it).  
 
 If you have done a portfolio workshop already and maybe have your list of initiatives in an Excel file, you can easily import them. If not, just create a few cards that represent your ideas. Your Mendix team can also help you with this, so please do not hesitate to reach out to them to go over everything together.
 
@@ -659,7 +659,7 @@ See below for Private Cloud responsibility matrix:
 
 {{< figure src="/attachments/quickstarts/leading-mendix-implementation/responsibility-matrix.png" class="image-border"  >}}
 
-### 3.7 Review Options for Development Resources (Who Will Build Your First App?) {#3.7}
+### 3.7 Review Options for Development Resources (Who Will Build Your First App?) {#review-options-for-development-resources}
 
 With Mendix, you have multiple options to choose from for the development of your applications:
 
@@ -735,7 +735,7 @@ Understanding how to work in Agile allows organizations to [stay responsive to c
 
 In the Academy, you can find an [Agile Awareness Learning Path](https://academy.mendix.com/link/paths/110/Agile-Awareness) that you can use to train your team in the Agile Framework and how it will define your Mendix journey. 
 
-### 4.2 Identify Your First Mendix Project Team {#4.2}
+### 4.2 Identify Your First Mendix Project Team {#identify-first-mendix-team}
 
 This section addresses how you set up your first Mendix Project Team.
 Ensuring you have the right people in the right roles is a critical step in successfully getting started. Everyone participating should be interested and enthusiastic about learning how to leverage this powerful platform, how to constantly improve collaboration and best practices across roles and groups within the BizDevOps model, and how the work they’ll be doing will bring value to the end users and the overall organization.

@@ -52,7 +52,7 @@ The content in this guide can be covered in a few hours, but it was designed as 
 
 **Having trouble with something (more) technical?**
 
-* Check out the [Mendix Documentation](/):
+* Check out docs in [Mendix Documentation](/):
 
   Sometimes the right information is just a click away in a document.
 
@@ -79,7 +79,7 @@ The content in this guide can be covered in a few hours, but it was designed as 
 
 In this section you will learn about the 5 P’s of Digital Transformation and their importance to your Mendix success. You will also get an overview of the Mendix platform and learn where you can find all the extra information you may need. 
 
-### Learning Objectives
+**Learning Objectives**
 
 Let’s start with building the foundation of your Mendix knowledge!
 
@@ -319,7 +319,7 @@ Great job! You are now ready to move to the next phase: Create a getting-started
 
 In this section, you will learn why and how to create an effective getting started plan.
 
-### Learning Objectives
+**Learning Objectives**
 
 Now that you are familiar with the Mendix platform and the 5 P’s of digital transformation, it is crucial to continue by creating a getting-started plan for your Mendix journey! 
 
@@ -719,7 +719,7 @@ Time to start putting everything you’ve prepared into practice!
 
 In this section, you will learn all you need to know to kick-off your Mendix program. 
 
-### Learning Objectives
+**Learning Objectives**
 
 By now, you are familiar with what you can do with Mendix in your organization and have finalized your getting started plan. Now, it’s time to kick-off your Mendix program!
 
@@ -893,7 +893,7 @@ You are now ready to move to the next phase. Good job! 
 
 In this section, you will get a quick view on the features we offer to incorporate governance in your process. We will show you in detail which of these you need to configure at the start, so the platform supports your organisation’s onboarding.
 
-### Learning Objectives
+**Learning Objectives**
 
 Now that you have kicked-off your Mendix Program, it’s time to familiarize with the features Mendix offers to incorporate governance in your process.
 
@@ -984,7 +984,7 @@ Now that you know how Mendix can be tailored to your own governance needs, you a
 
 In this section, you will get all the information you need to know to help you get started with your first Mendix project.
 
-## Learning Objectives
+**Learning Objectives**
 
 It’s now time to begin your first Mendix project! How exciting!
 
@@ -1132,7 +1132,7 @@ Time to move on and prepare for launching your first application!
 
 You’ve come a long way, and it is time to launch your first application. This section covers all you need to know at this stage. 
 
-### Learning Objectives
+**Learning Objectives**
 
 Well done, you’ve gone a long way and learned a lot through the process! It’s time to launch your first application. Exciting! 
 

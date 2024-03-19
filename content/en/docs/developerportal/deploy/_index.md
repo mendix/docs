@@ -67,26 +67,18 @@ The instructions for doing this are in [Private Cloud](/developerportal/deploy/p
 
 From within Studio Pro, you can deploy directly to Cloud Foundry-based platforms. To get started, see [Cloud Foundry](/developerportal/deploy/cloud-foundry-deploy/) and the [Cloud Foundry Mendix Buildpack](https://github.com/mendix/cf-mendix-buildpack).
 
-## 8 Docker and Kubernetes
-
-Mendix can be deployed in a Docker container to provide highly scalable solutions and automated delivery pipelines (CI/CD).
-
-Instructions for using the buildpack are in [How to Build a Docker Image from a Mendix App](/developerportal/deploy/docker-deploy/). 
-
-The Docker buildpack is available at [Mendix Docker Buildpack](https://github.com/mendix/docker-mendix-buildpack).
-
-## 9 Azure
+## 8 Azure
 
 Deploying to Azure is possible from the [Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/mendix.mendix-pro).
 
-## 10 On-Premises
+## 9 On-Premises
 
 To learn how to deploy your Mendix application on premises, see [How to Deploy Mendix on Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows/) and [Unix-Like Deployment](/developerportal/deploy/unix-like/).
 
-## 11 Mendix Applications on Industrial Edge
+## 10 Mendix Applications on Industrial Edge
 
 You can bring your Mendix app to Industrial Edge, which is the Siemens platform to host applications from different vendors on a computing platform close to the shop floor. This enables the extensions of automation, deployment of demanding stream processing and learning algorithms, as well as the hosting from integration code to site automation.
 
 For information about how to do this, see [Mendix Applications on Industrial Edge](/developerportal/deploy/mendix-app-on-industrial-edge/).
 
-## 12 Documents in This Category
+## 11 Documents in This Category

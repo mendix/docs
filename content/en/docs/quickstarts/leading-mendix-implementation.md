@@ -622,7 +622,7 @@ You can also try filling in a template such as this one (you can find this templ
 
 {{< figure src="/attachments/quickstarts/leading-mendix-implementation/template.png" class="image-border"  >}}
 
-### 3.6  Set up Deployment Architecture and Resources
+### 3.6 Set up Deployment Architecture and Resources
 
 Mendix applications can be deployed in different ways, mainly:
 
@@ -967,7 +967,7 @@ It is recommended that you [set-up SSO](/control-center/security/set-up-sso-byoi
 
 Optionally, you may set up access rules in your IDP to control which of your employees can and cannot work on the Mendix platform. As we encourage collaboration in multi-disciplined teams, be careful not to be too restrictive or not apply any restriction at all. For example, potential end-users of Mendix apps may want to contribute to development teams. In a later stage you can set up restrictive access rules as you start putting more business-critical IPs in the logic of your Mendix apps.
 
-#### Setup password policy
+**Setup password policy**
 
 If you don’t enable SSO, you will want to specify if the user passwords expire or not. If you do not want the passwords to expire, toggle **Passwords of company members never expire** to **On**.  
 
@@ -1139,20 +1139,20 @@ By the end of this section, you will be able to: 
 
 ### 7.1 Deploy Your Application
 
-#### Deploy your application to the Mendix Cloud
+**Deploy your application to the Mendix Cloud**
 
 Deploying your application to the Mendix Cloud is a simple process, that will give you access to all the features and services in the Mendix Cloud. It requires only a few steps to set it up, which you only need to do once for each application. Once the cloud settings of your application is done, you can deploy and redeploy your application with just one click.  
 
 Note that Mendix also offers [other deployment options](/releasenotes/developer-portal/deployment/) than the Mendix cloud e.g. to a private cloud if that’s a requirement.
 
-#### Obtain a licensed node
+**Obtain a licensed node**
 
 You can deploy your application for free on the Mendix Cloud. These [Free Apps have limitations](/developerportal/deploy/mendix-cloud-deploy/#free-app) when it comes to run time, features and resources. You can publish Free Apps to test the Mendix platform, a specific feature of to quickly prototype an application to test an idea. Once you decide to take your application to the next-level and start serious development on it, you will need to obtain a licensed node, so this is something you will need to do before your launch.
 
 If you have an existing contract that allows for more licensed nodes, you can [request a new licensed node](/developerportal/deploy/licensing-apps/#31-obtaining-a-licensed-node).
 If you don’t have a contract, or if your contract doesn’t allow for more licensed nodes, contact your Customer Success Manager.
 
-#### Link your application to your licensed node
+**Link your application to your licensed node**
 
 If you have a licensed node available, you can link your application to this licensed node. If your application was published as a Free App, you will have to unlink the application from the Free App environment first. This will delete all data on that Free App environment. So, before you unlink your Free App, [back up the data](/developerportal/deploy/licensing-apps/#backing-up) first, if you require it.
 
@@ -1160,7 +1160,7 @@ If you have backed up your data, you can [unlink your application](/developerpor
 
 When your app is unlinked from a Free App environment, you can link it to a licensed node. By linking it to a licensed node, you get access to all the features of the Mendix Cloud, such as one-click deployment from Studio Pro and our platform, log management, backups management and monitoring tools.
 
-#### Set node permissions
+**Set node permissions**
 
 Once you have linked your application to a licensed node, your team needs to determine what users can perform what actions on the node.
 
@@ -1170,7 +1170,7 @@ By default, only the Technical Contact of a node has permissions to perform any 
 
 Granting permissions to team members is dependent on your deployment strategy and process: do you have DevOps teams where the developers also deploy and monitor the apps? Or does your company have separate Ops teams, where the deployment is done by people other than the developers? You can set node permissions for each of the environments of your node, so you can grant developers to deploy the app to the Test environment, but restrict deployment permissions for the Production environment to a smaller team.
 
-#### Set cloud settings
+**Set cloud settings**
 
 When the node permissions are set up, you can start configuring your cloud settings. This can be done by any team member with the correct permissions. Changing your cloud settings is not mandatory, as most of settings are set for you by default in the Mendix Cloud, but in some cases you want to customize them to tailor the end user experience or to adhere to company standards.
 
@@ -1188,7 +1188,7 @@ Things can you can customize for your applications in the Mendix Cloud include:
 
 * [Services](/developerportal/deploy/environments-details/#services), such as [the Event Broker service](/appstore/services/business-events/#mendix-event-broker)
 
-#### Deploy your application
+**Deploy your application**
 
 Once you have linked and configured your Mendix Cloud node, which you only have to do once, you can start deploying your application to the Mendix Cloud. It is recommended that you deploy any new version of your application to the Test or Acceptance environment of your application first for testing, before deploying it to the Production environment.
 

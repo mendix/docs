@@ -13,11 +13,11 @@ This document is about [Private Mendix Platform](/private-mendix-platform/) API.
 
 ## 1 Introduction
 
-The Private Mendix Platform Marketplace API allows you to manage the Marketplace in Private Mendix Platform. {{% todo %}}Will it be a good idea to add an business use case here? Something like: "For example, you can download all modules created by your company." (I am not sure if this example is correct).{{% / todo %}}
+The Private Mendix Platform Marketplace API allows you to manage the Marketplace in Private Mendix Platform.
 
 You can use the API to do the following:
 
-* Retrieve all Marketplace content items {{% todo %}}What is a content item? Can we add a couple of examples of content items here? "content items, such as modules, solutions, widgets"{{% / todo %}}
+* Retrieve all Marketplace content items, such as modules or demo apps
 * Create a new Marketplace content item
 * Get versions of an existing Marketplace content item
 * Create a new version of an existing content item

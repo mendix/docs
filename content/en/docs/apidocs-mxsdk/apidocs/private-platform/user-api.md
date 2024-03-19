@@ -13,7 +13,7 @@ This document is about [Private Mendix Platform](/private-mendix-platform/) API.
 
 ## 1 Introduction
 
-The Private Mendix Platform User API allows you to manage users in Private Mendix Platform. {{% todo %}}Will it be a good idea to add an business use case here? Something like: "For example, you can delete all users that were inactive for a year." (I am not sure if this example is correct).{{% / todo %}}
+The Private Mendix Platform User API allows you to manage users in Private Mendix Platform. For example, you can use it to reset a user's password.
 
 You can use the API to do the following:
 

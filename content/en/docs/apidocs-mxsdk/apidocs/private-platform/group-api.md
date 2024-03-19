@@ -13,7 +13,7 @@ This document is about [Private Mendix Platform](/private-mendix-platform/) API.
 
 ## 1 Introduction
 
-The Private Mendix Platform Group API allows you to manage user groups in Private Mendix Platform. {{% todo %}}Will it be a good idea to add an business use case here? Something like: "For example, you can add all users with an Administrator user role to Administration group." (I am not sure if this example is correct). This comment can apply to all sub-pages of the category.{{% / todo %}}
+The Private Mendix Platform Group API allows you to manage user groups in Private Mendix Platform. For example, you can use it to add new users with an Administrator user role to an Administration group.
 
 You can use the API to do the following:
 

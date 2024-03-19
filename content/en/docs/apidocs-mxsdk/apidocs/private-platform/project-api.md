@@ -13,7 +13,7 @@ This document is about [Private Mendix Platform](/private-mendix-platform/) API.
 
 ## 1 Introduction
 
-The Private Mendix Platform Project API allows you to manage projects in Private Mendix Platform. {{% todo %}}I would add an business use case here. Something like: "For example, you can delete all apps that have versions Mendix 7 or below." (I am not sure if this example is correct).{{% / todo %}}
+The Private Mendix Platform Project API allows you to manage projects in Private Mendix Platform. For example, you can use it to delete apps that are no longer in use.
 
 You can use the API to do the following:
 

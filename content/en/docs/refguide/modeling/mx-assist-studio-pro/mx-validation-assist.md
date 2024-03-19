@@ -42,18 +42,18 @@ To access the Validation Assist, right-click a button or an input widget listed 
 The page should contain at least one input widget, for the **Generate validation microflow** option to be available. 
 {{% /alert %}} 
 
-The **Generate Validation Microflow** dialog box is where you can configure all validations:
+The **Generate Validation Microflow** dialog box allows you to configure all validations:
 
 {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-validation-assist/generate-validation-microflow-dialog.png" alt="Generate Validation Microflow Dialog Box" >}}
 
 The dialog box consists of two sections:
 
-* **Microflow Properties,** where the general properties of the validation microflow are configured. Properties contain the following:
+* **Microflow Properties,** where the general properties of the validation microflow are configured. These properties include:
 
-    * **Microflow** – microflow name
-    * **Commit** – defines whether changes should be committed to the database (only for buttons)
-    * **Close Page** – defines whether the page should be closed after clicking the button (only for buttons)
-    * **On Event** – defines when to trigger the validation check (only for input widgets), for more information on events, see [On Click Events and Events Section](/refguide/on-click-event/)
+    * **Microflow** – Microflow name
+    * **Commit** – Defines whether changes should be committed to the database (only for buttons)
+    * **Close Page** – Defines whether the page should be closed after clicking the button (only for buttons)
+    * **On Event** – Defines when to trigger the validation check (only for input widgets), for more information on events, see [On Click Events and Events Section](/refguide/on-click-event/)
 
 * **Validations** where validations for the microflow are configured. This section contains the following: 
 

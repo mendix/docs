@@ -87,7 +87,7 @@ Sending changes to the repository is called committing. The idea is that you com
 
 To commit your changes, click the **Commit** button in the **Changes** pane, or choose the **Version Control** > **Commit** menu item.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-button.png" alt="Commit Button" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-button.png" max-width=60% class="image-border" alt="Commit Button" >}}
 
 Git only creates a local commit. To submit your local commit (or commits) to the centralized server, you need to **push** your changes (pushing changes is selected by default in the **Commit** dialog box). As a result, your local changes are committed faster, and you can roll back to a previous state without having to contact the version control server.
 
@@ -112,7 +112,7 @@ Committing results in a new revision in the repository. You can add the followin
 
 Studio Pro also attaches some information automatically:
 
-* The person who committed (the **author**)
+* The person who committed (the **Author**)
 * The date and time of the commit
 * The list of changed documents, folders, and modules along with the type of the change (for example **modify** or **add**)
 * The version of Studio Pro that was used to commit
@@ -123,9 +123,9 @@ Committing is only allowed if your working copy is up to date with the repositor
 
 ### 4.3 Pushing {#pushing}
 
-Pushing is sending your local changes to the Team Server. After committing you need to push the committed changes if you want them to be accessible to others. By default, this is done when committing, but it is possible to wait for this step until later.
+Pushing is sending your local changes to the Team Server. After committing, you need to push the committed changes if you want them to be accessible to others. By default, this is done when committing, but it is possible to wait for this step until later.
 
-To push changes, select **Version Control** > **Push** or make sure that the **Also push changes to the remote server** setting is set to **Yes** in the **Commit** dialog box, this way changes are pushed automatically when you commit them:
+To push changes, select **Version Control** > **Push** or make sure that the **Also push changes to the remote server** setting is set to **Yes** in the **Commit** dialog box. By doing so, changes are pushed automatically when you commit them:
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-git.png" >}}
 
@@ -135,17 +135,17 @@ To push changes, select **Version Control** > **Push** or make sure that the **A
 The features described in this section were introduced in Mendix version 10.3.
 {{% /alert %}}
 
-While you were working on your branch somebody may have pushed their changes to the same branch on the server already. In this case pushing isn’t possible and you will need to take further action first.
+While you were working on your branch, somebody may have pushed their changes to the same branch on the server already. In this case, pushing is not possible and you will need to take further action first.
 
-In Studio Pro, [automatic fetching](/refguide/auto-fetch/) can be used to discover changes on the server. If at the moment you click **Commit** Studio Pro knows that there are remote changes, the commit dialog will contain a note about this and **Also push changes to the remote server** will be set to **No** and disabled.
+In Studio Pro, [automatic fetching](/refguide/auto-fetch/) can be used to discover changes on the server. At the moment when you click **Commit**, if Studio Pro knows that there are remote changes, the commit dialog will contain a note about this, and **Also push changes to the remote server** will be set to **No** and disabled.
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-dialog-incoming.png" >}}
 
-If the changes are discovered during the push, an information dialog with instructions will be shown.
+If the changes are discovered during the push, the following information dialog with instructions is shown:
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-pull-first-dialog.png" >}}
 
-Git prevents you from pushing your changes because it sees your changes and the remote changes as potentially conflicting. In this diagram you see that Git doesn’t know how to combine commits #3 and #5.
+Git prevents you from pushing your changes if it sees your changes and the remote changes as potentially conflicting. In this diagram, you see that Git does not know how to combine commits #3 and #5.
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/server-your-work.png" alt="The local changes consist of commits 1, 4, and 5 while the remote server has commits 1, 2, and 3 on the same branch.">}} 
 
@@ -153,12 +153,10 @@ When you pull the changes, Studio Pro will merge the changes from the branch on 
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/merge-commit.png" alt="The local changes and the remote changes are combined into a merge commit which is pushed to the remote server.">}} 
 
-There are 2 possible scenarios when merging and needing to make a merge commit:
+There are two possible scenarios when merging and needing to make a merge commit:
 
-1. No conflicts (for example, you added a microflow and somebody else added a module on the server)
-    In this case Studio pro can automatically resolve this and there is nothing for you to do.
-2. Conflicting changes (for example, the text on a button was changed locally by you and by another developer on the remote)
-    In this case you will need to make some changes to resolve conflicts (for example, choose which of the two possible texts should be displayed on the button). The merge commit will contain these changes so that all the changes can be reviewed in history: what you did locally, what somebody else pushed to the server while you were working, and what you did to integrate their changes into yours.
+* No conflicts (for example, you added a microflow and somebody else added a module on the server). In this case, Studio pro can automatically resolve this and there is nothing for you to do.
+* Conflicting changes (for example, the text on a button was changed locally by you and by another developer on the remote). In this case, you need to make some changes to resolve conflicts (for example, choose which of the two possible texts should be displayed on the button). The merge commit will contain these changes so that all the changes can be reviewed in history: what you did locally, what somebody else pushed to the server while you were working, and what you did to integrate their changes into yours.
 
 ### 4.4 Pulling
 
@@ -166,7 +164,7 @@ Pulling retrieves the latest changes from the repository. You need to do this to
 
 To update the working copy of your app, click **Pull** in the **Changes** pane, or choose the **Version Control** > **Pull** menu item.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/update-button.png" alt="Update Button" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/pull-button.png" max-width=60% class="image-border" alt="Pull Button" >}}
 
 Changes you receive from the repository when pulling are combined with the changes you have made to your working copy (if any). Afterwards, your working copy will contain both your changes and the changes you received. As part of the pull, the original of your working copy is updated as well.
 
@@ -178,21 +176,21 @@ If your team is committing often you will have to pull often. Frequent pulling h
 
 ### 4.5 History {#history}
 
-The *history* of the app is a list of all revisions that have been committed. To view the history of the app, click the **History** button in the **Changes** pane, or choose the **Version Control** > **History** menu item.
+The history of the app is a list of all revisions that have been committed. To view the history of the app, click the **History** button in the **Changes** pane, or choose the **Version Control** > **History** menu item.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/history-button.png" alt="History Button" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/history-button.png" max-width=60% class="image-border" alt="History Button" >}}
 
-The revisions are shown in reverse chronological order (newest is at top of list). The history dialog shows you revision number, date, time, author and message of each revision.
+The revisions are shown in reverse chronological order (newest is at top of list). The history dialog shows you revision number, date, time, author, and message of each revision.
 
-Select a revision to see additional details such as related Developer Portal stories, changed documents, Studio Pro version and changes on disk. Icons summarize the kinds of changes that happened in the app.
+Select a revision to see additional details, such as related Developer Portal stories, changed documents, Studio Pro version, and changes on disk. Icons summarize the kinds of changes that happened in the app.
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/history-of-dialog.png" >}}
 
 ## 5 Reverting Changes
 
-Changes that have not yet been committed can be reverted. Say, for example, that you have made a lot of changes to a page and you are not happy with the result. You can revert the page to the original: that is, the state of the page before you started making changes.
+Changes that have not yet been committed can be reverted. Say, for example, that you have made a lot of changes to a page and you are not happy with the result. You can revert the page to the original state, that is, the state of the page before you started making changes.
 
-Deletes of documents, folders, and modules can also be reverted. This will bring them back into the app. Note that you will get back the latest version you have *committed*. For example, if you commit, make some changes to a microflow, and then delete the microflow, reverting the delete will give you the microflow without the changes that you made.
+Deletes of documents, folders, and modules can also be reverted. This brings them back into the app. Note that you will get back the latest version you have committed. For example, if you commit, make some changes to a microflow, and then delete the microflow, reverting the delete gives you the microflow without the changes that you made.
 
 You can revert changes in the **Changes** pane, from **Version Control** > **Revert All Changes**, or from the right-click menu on the document you want to revert.
 
@@ -200,17 +198,17 @@ You can revert changes in the **Changes** pane, from **Version Control** > **Rev
 
 ## 6 Dealing With Conflicts {#conflicts}
 
-If you update/pull your app and the changes cannot be merged automatically you will receive a message telling you there are conflicts. A conflict arises when two changes cannot be combined.
+If you update/pull your app and the changes cannot be merged automatically, you will receive a message telling you that there are conflicts. A conflict arises when two changes cannot be combined.
 
-See [Combining Changes and Conflict Resolution](/refguide/merge-algorithm/) for more information.
+For more information, see [Combining Changes and Conflict Resolution](/refguide/merge-algorithm/).
 
 ## 7 Using Branches
 
-A repository can contain a number of development lines. Each development line offers independent development from the other development lines. In the simple case there is just one development line called the main line. All development then happens inside that one line.
+A repository can contain a number of development lines. Each development line offers independent development from the other development lines. A simple case is that there is just one development line called the main line. All development then happens inside that one line.
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/main-branch-line.png" >}}
 
-It is often convenient to have more than one development line. For example, one development line for fixing bugs in the currently deployed version of your app and another line where you develop new functionality. If you then find a bug in the deployed version you can fix it in the corresponding development line irrespective of the state of the development line where new functionality is developed. See [Version Control](/refguide/version-control/) for more information about branches.
+It is often convenient to have more than one development line. For example, one development line is for fixing bugs in the currently deployed version of your app and another line is where you develop new functionality. If you then find a bug in the deployed version, you can fix it in the corresponding development line irrespective of the state of the development line where new functionality is developed. For more information about branches, see [Version Control](/refguide/version-control/). 
 
 ### 7.1 When to Use a Branch
 
@@ -218,8 +216,8 @@ It is often convenient to have more than one development line. For example, one 
 
 If you want to add some functionality to a deployed application or you want to fix a bug in it, you can do so without interfering with other development.
 
-1. Determine the version of the deployed application. This information is in the Developer Portal. Alternatively, you can find the version in the *metadata.json* file in the **model** subfolder of your deployment package (mda) archive. For example, `"ModelVersion": "1.0.0.16"`
-2. Choose **Version Control > Manage Branch Lines...** and create a branch based on the tag with the that version number as its name.
+1. Determine the version of the deployed application. This information is in the Developer Portal. Alternatively, you can find the version in the *metadata.json* file in the **model** subfolder of your deployment package (mda) archive, for example, `"ModelVersion": "1.0.0.16"`.
+2. Choose **Version Control > Manage Branch Lines...** and create a branch based on the tag with the version number as its name.
 
     {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/create-from-tag.png" >}}
 
@@ -243,10 +241,10 @@ Firstly, select **Version Control > Manage Branch Lines...** and create a branch
 
 Now work on the branch until the feature is done and commit the completed work.
 
-When you want to merge the whole branch back to the main line to integrate the feature there. Do the following:
+To merge the whole branch back to the main line to integrate the feature there, do the following:
 
 1. Open the main line.
-2. Choose **Version Control > Merge changes here**.
+2. Choose **Version Control > Merge Changes Here**.
 3. Select **Merge feature branch** option.
 4. Click **Merge**.
 5. Resolve any conflicts and errors.

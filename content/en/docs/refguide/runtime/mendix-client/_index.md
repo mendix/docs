@@ -9,9 +9,9 @@ tags: ["runtime", "mendix client", "offline-first", "browser", "javascript", "na
 
 ## 1 Introduction
 
-The Mendix Client runs on the end-user's device and handles the interface between the end-user and the app. Sometimes it can run completely independently of the Runtime Server and perform all processing locally. Mostly, it interacts with the Runtime Server to get or update shared data, or perform additional application logic.
+The Mendix Client runs on the end-user's device and serves as the interface between the end-user and the app. Sometimes it can run completely independently of the Runtime Server and perform all processing locally. Most of the time, it interacts with the Runtime Server to get or update shared data, or perform additional application logic.
 
-This description of the Mendix Client is based on using the Runtime Server of an app running in the cloud. You can also run Mendix locally for testing, but this is conceptually the same.
+The above description of the Mendix Client is based on using the Runtime Server of an app running in the cloud. You can also run Mendix locally for testing, which conceptually works in a similar way.
 
 {{% alert color="info" %}}
 In Studio Pro versions 10.7.0 and above, there is an alternative version of the Mendix Client written in React. This is currently a [beta](/releasenotes/beta-features/). You can enable this React client in [App Settings](/refguide/app-settings/#react-client).
@@ -29,7 +29,7 @@ For **web applications**, Mendix Client acts as a single page application. This 
 
 The Mendix Dojo Client is bootstrapped by loading a `mxui.js` script from an HTML page provided by the *theme*.
 
-The Mendix React client is bootstrapped in different way. Its loads the `index.js` file which loads the `common.js` with the Mendix client. More JavaScript files will be loaded after this that contain page, layout and nanoflow definitions.
+The Mendix React client is bootstrapped in different way. Its loads the `index.js` file which loads the `common.js` with the Mendix client. More JavaScript files will be loaded after this that contain page, layout, and nanoflow definitions.
 
 For **mobile applications**, the Mendix Client acts as a React Native application. This means that apps created by Mendix consist of two parts: a *wrapper* and a *bundle*. The wrapper is a native iOS or Android application that loads the bundle and exposes platform functionality to it. The bundle includes Client Core, Pluggable Widgets, and application-specific resources like nanoflows and pages.
 
@@ -41,7 +41,7 @@ The three supported types of wrappers for mobile applications are as follows:
 
 The first two of these load a bundle dynamically, while the last one includes a pre-packaged bundle that can be [updated](/refguide/mobile/distributing-mobile-apps/overtheair-updates/) later.
 
-Below is a chart showing the components of the Mendix Client. Each of the components is described below the chart.
+Here is a chart showing the components of the Mendix Client (for more information on the components, see the sections written beneath the chart):
 
 {{< figure src="/attachments/refguide/runtime/mendix-client/mendix-client.png" alt="The makeup of the Mendix Client" >}}
 

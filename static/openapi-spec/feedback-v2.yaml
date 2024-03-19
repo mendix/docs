@@ -41,6 +41,9 @@ paths:
           $ref: '#/components/responses/500-Something-went-wrong'
       security:
         - Authorization: []
+      servers:
+        - url: 'https://feedback-api.mendix.com/v2'
+          description: Base URL
     post:
       tags:
         - Feedback Items
@@ -64,6 +67,9 @@ paths:
           $ref: '#/components/responses/500-Something-went-wrong'
       security:
         - Authorization: []
+      servers:
+        - url: 'https://feedback-api.mendix.com/v2'
+          description: Base URL
     patch:
       tags:
         - Feedback Items
@@ -87,6 +93,9 @@ paths:
           $ref: '#/components/responses/500-Something-went-wrong'
       security:
         - Authorization: []
+      servers:
+        - url: 'https://feedback-api.mendix.com/v2'
+          description: Base URL
   '/feedback-items/{feedback-item-uuid}':
     get:
       tags:
@@ -177,6 +186,9 @@ paths:
           $ref: '#/components/responses/500-Something-went-wrong'
       security:
         - Authorization: []
+      servers:
+        - url: 'https://feedback-api.mendix.com/v2'
+          description: Base URL
   '/feedback-items/{feedback-item-uuid}/attachments/{file-id}':
     get:
       tags:
@@ -337,7 +349,7 @@ components:
                 submitterEmail: john.doe@email.com
                 submitterUUID: 00000000-0000-0000-0000-000000000000
                 subject: Unable to export feedback
-                description: When I click the 'Export' button on the feedback overview, I get an error telling me to contact the system administrator.
+                description: 'When I click the ''Export'' button on the feedback overview, I get an error telling me to contact the system administrator.'
                 screenshot: Base64 string
                 screenshotName: FeedbackExportBug1.png
                 priority: Urgent
@@ -488,7 +500,7 @@ components:
                   - legacyId: 0
                     uuid: 82fb475a-e4dd-4a9e-acb7-e3b8a6fc8869
                     subject: Unable to export feedback
-                    description: When I click the 'Export' button on the feedback overview, I get an error telling me to contact the system administrator.
+                    description: 'When I click the ''Export'' button on the feedback overview, I get an error telling me to contact the system administrator.'
                     displayId: 102
                     summary: I have looked into the logic and I believe this error is related to the export template not being configured correctly
                     activeUserRoles: User
@@ -577,7 +589,7 @@ components:
                 legacyId: 0
                 uuid: 82fb475a-e4dd-4a9e-acb7-e3b8a6fc8869
                 subject: Unable to export feedback
-                description: When I click the 'Export' button on the feedback overview, I get an error telling me to contact the system administrator.
+                description: 'When I click the ''Export'' button on the feedback overview, I get an error telling me to contact the system administrator.'
                 displayId: 102
                 summary: I have looked into the logic and I believe this error is related to the export template not being configured correctly
                 activeUserRoles: User

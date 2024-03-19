@@ -114,7 +114,7 @@ Studio Pro also attaches some information automatically:
 
 * The person who committed (the **Author**)
 * The date and time of the commit
-* The list of changed documents, folders, and modules along with the type of the change (for example **modify** or **add**)
+* The list of changed documents, folders, and modules along with the type of the change (for example, **modify** or **add**)
 * The version of Studio Pro that was used to commit
 
 If you also changed Java source code, added widgets, or made other changes that affect files other than the app file, you will see a **Changes on disk** tab page that shows you what disk changes you are about to commit.
@@ -170,9 +170,9 @@ Changes you receive from the repository when pulling are combined with the chang
 
 For example, if the last time you pulled you received all changes up to and including revision N, this means that the original for your working copy is revision 40. Since you started making changes to your working copy, other people on your team have made another four commits (X, Y, and Z). If you now pull, you will receive those changes and Z will be the new *original* to which your changes are compared.
 
-Usually, combining your changes with the latest revision from the repository will be done automatically. For example, one person may add a page while you are changing a microflow. If the changes are too close, however, a conflict can arise. For example, if one of your team has changed the properties of the same data view which you have also changed. You will have to resolve such conflicts before you can commit. See the  [Dealing With Conflicts](#conflicts) section, below, for information on how to do this.
+Usually, combining your changes with the latest revision from the repository is done automatically. For example, one person may add a page while you are changing a microflow. If the changes are too close, however, a conflict can arise. For example, if one of your team has changed the properties of the same data view that you have also changed, you will have to resolve such conflicts before you can commit. For information on how to do this, see the [Dealing With Conflicts](#conflicts) section below.
 
-If your team is committing often you will have to pull often. Frequent pulling has the benefit that you receive fewer changes with each pull, so integrating those changes with your work is easier.
+If your team is committing often, you then should pull often. Frequent pulling has the benefit that you receive fewer changes with each pull so that integrating those changes with your work is easier.
 
 ### 4.5 History {#history}
 
@@ -239,7 +239,7 @@ Firstly, select **Version Control > Manage Branch Lines...** and create a branch
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/create-branch-line-dialog.png" >}}
 
-Now work on the branch until the feature is done and commit the completed work.
+Now, work on the branch until the feature is done and commit the completed work.
 
 To merge the whole branch back to the main line to integrate the feature there, do the following:
 
@@ -286,12 +286,12 @@ After a reverse merge the app will look like the changes never happened; if you 
 
 There are two methods for fully replacing your main line with a branch line.
 
-The first method is to merge the entire branch line into the main line, essentially replacing the main line contents with the branch line contents). This works as long as the branch line is up to date with the main line (to avoid conflicts). To do this, follow these steps:
+The first method is to merge the entire branch line into the main line, essentially replacing the main line contents with the branch line contents. This works as long as the branch line is up to date with the main line (to avoid conflicts). To do this, follow these steps:
 
 1. Select **Version Control** > **Merge Changes Here** > **Merge feature branch**.
 2. Select the branch to merge into the main line.
 
-The second method should be used if the first method is not possible for some reason and you want to "overwrite" the main line with your branch line. For this method, you must follow these steps:
+The second method should be used if the first method is not possible for some reason and you want to "overwrite" the main line with your branch line. To use the second method, follow these steps:
 
 1. Check out both the main line and the branch line locally.
 2. Overwrite all the files in the main line app directory with those of the branch line (except for the *.git* directory). 
@@ -314,7 +314,7 @@ Navigate to the *.gitconfig* file in C:/Users/[USER_NAME] and add the following:
   driver = [MX.EXE_PATH] merge %O %A %B
 ```
 
-Where `[MX.EXE_PATH]` should be replaced by the *mx.exe* path with only forward slashes pointing to a drive using `/C/` instead of `C:/`.
+`[MX.EXE_PATH]` should be replaced by the *mx.exe* path with only forward slashes pointing to a drive using `/C/` instead of `C:/`.
 
 You can also configure the Git driver locally per repository using the following commands:
 
@@ -335,7 +335,7 @@ Save the files and now when **git merge** is run and it involves *.mpr* files, t
 
 ### 8.1 Deploying Locally
 
-While developing you can deploy and run your app on your local machine by clicking the menu item **Run** > **Run Locally**. This allows you to test the app as it currently is stored on your local machine.
+While developing, you can deploy and run your app on your local machine by clicking the menu item **Run** > **Run Locally**. This allows you to test the app as it currently is stored on your local machine.
 
 ### 8.2 Deploying Your Working Copy
 
@@ -355,7 +355,7 @@ When it creates the package, Studio Pro will also create a tag representing this
 
 #### 8.3.1 Deploying a Specific Version to a Mendix Licensed Cloud Node
 
-If you are using the Mendix Cloud you can choose **App** > **Deploy to Licensed Cloud Node** to deploy a specific version.
+If you are using the Mendix Cloud, you can choose **App** > **Deploy to Licensed Cloud Node** to deploy a specific version.
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/deploy-to-cloud.png" >}}
 
@@ -367,27 +367,25 @@ If you are using a different hosting environment, you create a deployment packag
 
 ## 9 Working Outside Studio Pro {#working-outside-studio-pro}
 
-Studio Pro takes care of some file management automatically. If you add or remove custom widgets they are automatically added or removed from version control, too. Some files and directories (for example, deployment and releases directories) are automatically ignored so that they are not committed to version control.
+Studio Pro takes care of some file management automatically. If you add or remove custom widgets, they are automatically added or removed from version control too. Some files and directories (for example, deployment and releases directories) are automatically ignored so that they are not committed to version control.
 
-We advise you to always commit and update/pull inside Studio Pro because in this way useful metadata is added to your revisions. Studio Pro has ways to recover from external updates or merges but it is best to not depend on that.
+We advise you to always commit and update/pull inside Studio Pro, because, in this way, useful metadata is added to your revisions. Studio Pro has ways to recover from external updates or merges but it is best to not depend on that.
 
 ### 9.1 External Tools {#external-tools}
 
-If you are doing more advanced changes to files, like adding Java actions or resources to your app, you will have to install a separate tool on your computer and perform some operations yourself: you can use TortoiseGit [https://tortoisegit.org/](https://tortoisegit.org/) (can be downloaded for free).
+If you are doing more advanced changes to files, like adding Java actions or resources to your app, you will have to install a separate tool on your computer and perform some operations yourself: you can use [TortoiseGit](https://tortoisegit.org/) (can be downloaded for free).
 
 {{% alert color="info" %}}
-Studio Pro adds metadata on the Mendix version of your app to each revision when you commit or create a branch. Therefore, when committing or merging using third-party tools, it may no longer be possible to deploy to the Mendix Cloud. This can be fixed by making a commit using Studio Pro, so the correct metadata is present again.
+Studio Pro adds metadata on the Mendix version of your app to each revision when you commit or create a branch. Therefore, when committing or merging using third-party tools, it may no longer be possible to deploy to the Mendix Cloud. This can be fixed by making a commit using Studio Pro so that the correct metadata is present again.
 {{% /alert %}}
 
 ### 9.2 Authenticating to Team Server
 
 When using external tools, you might be asked to authenticate separately to Team Server.
 
-Connecting to Git is done using a personal access token (PAT).
+Connecting to Git is done using a personal access token (PAT). For more information on how to create a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section of *Mendix Profile*.
 
-For information on how to create a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section of *Mendix Profile*.
-
-To connect to Git you need to use the following URL and credentials:
+To connect to Git, you need to use the following URL and credentials:
 
 * URL: `https://git.api.mendix.com/<your AppID>.git`
 * Username: your Mendix account username (alternatively, you can use the word *pat* as your username)
@@ -395,7 +393,7 @@ To connect to Git you need to use the following URL and credentials:
 
 ### 9.3 Adding Files and Directories
 
-If you add files or directories or delete files using Windows Explorer, Studio Pro automatically adds or deletes these from version control, too.
+If you add or delete files (or directories) using Windows Explorer, Studio Pro automatically adds or deletes these from version control too.
 
 Make sure you use the **Export** feature of TortoiseGit if you are copying a directory that is already under version control in your app.
 

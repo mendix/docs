@@ -17,9 +17,9 @@ This guide covers everything you need to know to get started with Mendix in your
 
 Welcome to Mendix, the leading low-code application development platform that empowers you to turn your ideas into outcomes quickly and efficiently! 
 
-The “Lead Mendix Implementation in Your Organization*”* guide is designed to help you navigate through the initial steps of getting started with Mendix in your company. Follow these steps to unlock the full potential of the Mendix platform and accelerate your application development journey.
+The “Lead Mendix Implementation in Your Organization" guide is designed to help you navigate through the initial steps of getting started with Mendix in your company.
 
-By the end of this guide, you’ll be able to: 
+By the end of this guide, you’ll be able to:
 
 * Describe the various elements of the Mendix platform 
 * Explain the 5 P’s of the Digital Execution Practice and how they are imperative to low-code success 
@@ -58,7 +58,7 @@ The content in this guide can be covered in a few hours, but it was designed as 
 
 * Contact the Mendix Community:
 
-  The [Mendix Community](https://forum.mendixcloud.com/link/questions) is where you can find help when you get **stuck.** You can also help others when you know the answer! Be sure to first check whether someone has already asked the question you're wondering about. If not, feel free to post it and our community will help you out! If you didn’t already know, you can gain **points** when you do so!
+  The [Mendix Community](https://community.mendix.com/p/questions) is where you can find help when you get **stuck.** You can also help others when you know the answer! Be sure to first check whether someone has already asked the question you're wondering about. If not, feel free to post it and our community will help you out! If you didn’t already know, you can gain **points** when you do so!
 
 * Submit a Support ticket:
 
@@ -117,7 +117,7 @@ Mendix is the platform that helps you turn ideas into outcomes. It contains all 
 
 * [**Mendix Support**](https://support.mendix.com/hc/en-us): Tickets, issues, incidents
 * [**Mendix Academy**](https://academy.mendix.com/index3.html): Certifications and trainings 
-* [**Mendix Community**](https://forum.mendix.com/p/questions): Online community 
+* [**Mendix Community**](https://community.mendix.com/p/questions): Online community 
 * [**Mendix Blog**](https://www.mendix.com/blog/): Articles and trending topics 
 * [**Mendix Docs**](/): Platform documentation 
 * [**Mendix Partner Hub**](https://www.mendix.com/partners/): Explore our Partner Network 
@@ -285,7 +285,7 @@ It’s important to know what’s happening with the Mendix Platform to be sure 
 
 * **Mx Community**
 
-  [Join the Mendix Community](https://forum.mendix.com/p/questions) to connect with over 290,000 community members. The Forum is a great place for developers to ask questions and post ideas for our product managers. 
+  [Join the Mendix Community](https://community.mendix.com/p/questions) to connect with over 290,000 community members. The Mendix Community is a great place for developers to ask questions and post ideas for our product managers. 
 
 * **Mx Blog**
 
@@ -815,7 +815,7 @@ Mendix provides four different certification levels to measure developer maturit
 
 **Rapid Developer Certification**
 
-A Rapid Developer has a baseline knowledge of the Mendix platform and knows where to find information using the documentation and forum.
+A Rapid Developer has a baseline knowledge of the Mendix platform and knows where to find information using the documentation and the Mendix community.
 
 This certification is proof of basic Mendix knowledge and demonstrates that someone can join a project team and independently build prototypes.
 

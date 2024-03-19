@@ -58,7 +58,7 @@ The content in this guide can be covered in a few hours, but it was designed as 
 
 * Contact the Mendix Community:
 
-  The [Mendix Forum](https://forum.mendixcloud.com/link/questions) is where you can find help when you get **stuck.** You can also help others when you know the answer! Be sure to first check whether someone has already asked the question you're wondering about. If not, feel free to post it and our community will help you out! If you didn’t already know, you can gain **points** when you do so!
+  The [Mendix Community Questions](https://forum.mendixcloud.com/link/questions) is where you can find help when you get **stuck.** You can also help others when you know the answer! Be sure to first check whether someone has already asked the question you're wondering about. If not, feel free to post it and our community will help you out! If you didn’t already know, you can gain **points** when you do so!
 
 * Submit a Support ticket:
 

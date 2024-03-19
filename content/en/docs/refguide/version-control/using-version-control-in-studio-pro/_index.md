@@ -399,7 +399,7 @@ Make sure you use the **Export** feature of TortoiseGit if you are copying a dir
 
 ### 9.4 Deleting Files and Directories
 
-If you delete a file from your app, Studio Pro will automatically also delete it from the Team Server.
+If you delete a file from your app, Studio Pro automatically deletes it from the Team Server too.
 
 A folder is no longer be tracked if all the files in the folder are removed.
 

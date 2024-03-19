@@ -48,6 +48,7 @@ Here is a chart showing the components of the Mendix Client (for more informatio
 ### 2.1 Client Core
 
 This can be seen as the interpreter of the client. It uses the client config and client state to decide how to process a request from the end-user.
+
 The client core controls the various processes which need to take place to service the request. These processes include data fetching and manipulation, client-side expressions, and navigation.
 
 The client core is mostly written in TypeScript.
@@ -68,19 +69,19 @@ The UI layer performs navigation, resource loading, and platform integration. It
 
 ### 2.5 HTTPS Server
 
-The HTTPS server serves pages, widgets, and JavaScript actions, held in the model, to the end-user of the app.
+The HTTPS server serves pages, widgets, and JavaScript actions (held in the model) to the end-user of the app.
 
 ### 2.6 Logic
 
-This runs client-side logic which is defined in the nanoflows in the model.
+This runs client-side logic, which is defined in the model's nanoflows.
 
 ### 2.7 Platform APIs
 
-These are functions of the environment in which the Mendix Client is running. In most cases this will be a function of a mobile device such as the camera or GPS location, but it can also include making calls to Mendix Native APIs or browser functions such as accessing an image file.
+These are functions of the environment in which the Mendix Client is running. In most cases this will be a function of a mobile device, such as the camera or GPS location. However, it can also include making calls to Mendix Native APIs or browser functions (such as accessing an image file).
 
 ### 2.8 Client Config
 
-This is the static data which is needed by the Mendix Client. For a browser-based client, this data is held online, with the Runtime Server. For native mobile apps, this is held locally on the device.
+This is the static data which is needed by the Mendix Client. For a browser-based client, this data is held online with the Runtime Server. For native mobile apps, this is held locally on the device.
 
 These include the initial environment (for example, the browser shell page) needed to start the Mendix Client, Cascading Style Sheets (CSS files) which define the app’s theme, and JavaScript files which define client-side logic.
 
@@ -96,7 +97,7 @@ State handling will perform garbage collection to ensure that memory is released
 
 ### 2.11 Offline Storage
 
-This is permanent storage, usually on a mobile device, where data can be stored for apps which are running in offline mode. It differs from the temporary object storage in that data here is not lost at the end of a session, but is kept until it can be synced to the Runtime Server.
+This is permanent storage (usually on a mobile device) where data can be stored for apps which are running in offline mode. It differs from the temporary object storage in that data here is not lost at the end of a session, but is kept until it can be synced to the Runtime Server.
 
 ### 2.12 State/Sync/Session
 

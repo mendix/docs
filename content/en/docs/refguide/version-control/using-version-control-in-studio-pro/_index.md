@@ -256,7 +256,7 @@ You can delete the branch after merging it back, if you want.
 
 #### 7.2.1 Branching
 
-Development lines other than the main line are called branch lines. Our advice would be to develop new features in the *main line* and to use *branch lines* for fixing bugs in versions that have been deployed. This is the scenario Studio Pro makes easy but other scenarios for more complex apps are supported as well.
+Development lines other than the main line are called branch lines. Our advice would be to develop new features in the main line and to use branch lines for fixing bugs in versions that have been deployed. This is the scenario Studio Pro makes easy but other scenarios for more complex apps are supported as well.
 
 You can create branch lines from the Branch Line Manager which you can find at **Version Control > Manage Branch Lines...**.
 

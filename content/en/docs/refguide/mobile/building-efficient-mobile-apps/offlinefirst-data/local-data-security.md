@@ -26,31 +26,31 @@ It is a best practice to synchronize as little data as possible to the device an
 
 ### 3.1 Configuring Domain Model Access Rules 
 
-The Mendix Client only stores objects and attributes that the current user has read access to. Incomplete or misconfigured access rules on the domain model may cause too much data to be synchronized to the device databases.
+The Mendix Client only stores objects and attributes that the current user has read access to. Incomplete or misconfigured access rules on the domain model can cause too much data to be synchronized to the device databases.
 
 To learn more about configuring access rules, see [Access Rules](/refguide/access-rules/).
 
 ### 3.2 Limiting Data with XPath Constraints
 
-In apps where you want to grant end-users working with objects access to the responsive profile, but you do not wish to grant them access to an offline-first navigation profile, it is possible to limit the amount of data by an XPath constraint using the **Configure Synchronization** screen.
+In apps where you want to grant end-users working with objects access to the responsive profile, but you do not want to grant them access to an offline-first navigation profile, you can limit the amount of data by an XPath constraint using the **Configure Synchronization** screen.
 
-To learn more about customizing the synchronization behavior, see [Customizable Synchronization](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/synchronization/#customizable-synchronization).
+To learn more about customizing synchronization behavior, see [Customizable Synchronization](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/synchronization/#customizable-synchronization).
 
 ### 3.3 Using Non-Persistent Entities
 
 For sensitive data that should never be stored locally, consider using non-persistent entities to store the data temporarily and use microflow calls to securely process the data on the server. 
 
-The app keeps the non-persistent objects only in the memory and removes them when they are no longer needed. However, this approach requires connectivity to the Mendix Runtime to call microflows, and thus limits the app's offline-first capabilities.
+The app keeps non-persistent objects only in the memory and removes them when they are no longer needed. However, this approach requires connectivity to the Mendix Runtime to call microflows, and thus limits the app's offline-first capabilities.
 
 ### 3.4 Encrypting the Local Database
 
-Suppose you have to store sensitive data on a device and cannot control the operating system your app is running on. In that case, you should enable database encryption for your app. This ensures that all data in the local database is encrypted before storing it on the device. Note that encryption will impact your app's performance. Full synchronization of all clients is required to enable it.
+Suppose you have to store sensitive data on a device and cannot control the operating system your app is running on. In this scenario, you should enable database encryption for your app. This ensures all data in the local database is encrypted before storing it on the device. Note that encryption will impact your app's performance. Full synchronization of all clients is required to enable it.
 
 To learn more, see [Encrypting Local Databases](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/local-data-security/#encrypting-local-databases)
 
 ### 3.5 Encrypting User Files and Images {#encrypting-files-images}
 
-Similar to encrypting the local database, you should enable local file encryption for extra protection if the files or images your app stores are sensitive. This option ensures that file contents for entities that specialize from either `System.FileDocument` or `System.Image` are encrypted. This option also includes files added to the app by the end-user, for example, when a user takes a photo using the camera of the device and store it in an entity that specialized from `System.Image`.
+It is recommended to enable local file encryption for extra protection if the files or images your app stores are sensitive. This option ensures file contents for entities that specialize from either `System.FileDocument` or `System.Image` are encrypted. This option also includes files added to the app by the end-user, for example, when a user takes a photo using the camera of the device and stores it in an entity that specialized from `System.Image`.
 
 To learn more, see the [Encrypting User Files](#encrypting-user-files) section below.
 
@@ -62,7 +62,7 @@ Studio Pro allows you to encrypt the local databases of native apps. Database en
 
 ### 4.1 Prerequisites {#encryption-prerequisites}
 
-Before enabling local database encryption, ensure that these prerequisites are met:
+Before enabling local database encryption, ensure these prerequisites are met:
 
 * Use Mendix Studio Pro 
 * Upgrade your Native Template to the latest version compatible with your app 
@@ -70,21 +70,21 @@ Before enabling local database encryption, ensure that these prerequisites are m
 
 ### 4.2 Enabling Database Encryption for New Apps
 
-Suppose you are working on a new Mendix app that you have not released to your users before. In that case, you can check the checkbox shown above and use the latest version of the native template to build and release your app.
+Suppose you are working on a new Mendix app that you have not released to your users before. In this case, you can check the checkbox shown above and use the latest version of the native template to build and release your app.
 
 ### 4.3 Enabling Database Encryption for Existing Apps
 
-Upgrading an existing app with an encrypted database requires careful strategy, because the app already has users using an unencrypted database. 
+Upgrading an existing app with an encrypted database requires careful strategy because the app already has users using an unencrypted database.
 
 Encrypting the existing database is not possible. Therefore, the Mendix Client needs to remove the current database and create a new encrypted database to use this feature.
 
 Enabling database encryption and deploying a new version of the Mendix app to the cloud does not affect the existing devices. This setting takes effect once users update their apps, either through OTA or an app update. After the app is updated on the device, it will sign out the current user and start with an empty database. This step may cause unsynchronized data to be lost. 
 
-Consider the [prerequisites above](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/local-data-security/#encryption-prerequisites) before enabling database encryption, especially for existing apps
+Consider the [prerequisites above](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/local-data-security/#encryption-prerequisites) before enabling database encryption, especially for existing apps.
 
 ### 4.4 Disabling Database Encryption
 
-Disabling database encryption will apply only to newly-installed apps. Existing app users will continue to work with an encrypted local database until they uninstall and reinstall the app by hand.   
+Disabling database encryption will apply only to newly-installed apps. Existing app users will continue to work with an encrypted local database until they uninstall and reinstall the app manually.   
 
 ### 4.5 Native Database Encryption and the Make It Native App
 
@@ -92,7 +92,7 @@ Local database encryption also works with the Make It Native App and a custom de
 
 ### 4.6 How Local Database Encryption Works
 
-Local database encryption works by creating a random key when the app is started for the first time. The database file is encrypted with this key, which is stored in the app's local storage and encrypted with another key, which is stored in the mobile operating system's secure storage system (iOS uses Keychain, while Android uses Keystore). The Mendix Client reads and decrypts the database key stored in the local storage, and then uses it to unlock the database.
+Local database encryption works by creating a random key when the app is started for the first time. The database file is encrypted with this key, which is stored in the app's local storage and encrypted with another key, which is stored in the mobile operating system's secure storage system (iOS uses Keychain, while Android uses Keystore). The Mendix Client reads and decrypts the database key stored in the local storage, then uses it to unlock the database.
 
 ### 4.7 Verifying a Database is Encrypted
 
@@ -102,11 +102,11 @@ Once you access the database file, you can attempt to open it using any SQLite v
 
 #### 4.7.1 Locating the Database File on Android
 
-Viewing the file system of an Android device requires [Android Studio](https://developer.android.com/studio/). Once you have that software, do the following:
+Viewing the file system of an Android device requires [Android Studio](https://developer.android.com/studio/). Once you have this software, do the following:
 
 1. Ensure that you are running a debug build of your app (or custom developer app).
 1. Enable [USB debugging](https://developer.android.com/studio/debug/dev-options) on your device and connect it to your computer.
-1. Start Android Studio, and activate the [Device File Explorer](https://developer.android.com/studio/debug/device-file-explorer).
+1. Start Android Studio and activate the [Device File Explorer](https://developer.android.com/studio/debug/device-file-explorer).
 1. Navigate to this folder: */data/data/{your_app_id}/databases/*.
 1. Find the database file in this folder (often named *default* without an extension). Right-click this file, then click **Save as**. 
 1. Save the file in a folder on your computer.
@@ -116,15 +116,15 @@ Viewing the file system of an Android device requires [Android Studio](https://d
 To locate the database file on iOS, do the following:
 
 1. Ensure that you are running a debug build of your app in a simulator, not on a physical device.
-1. Open Finder on your Mac and click **Go** > **Go to the folder**.
-1. Enter *~/Library/Developer/CoreSimulator/Devices* to the prompt.
-1. Once the **Devices** folder is opened, sort the folders by **Date Modified (descending)**.
-1. Go to the first folder (for example **9DA843C5-089F-44F6-AB1A-3ECEF6D3D05C**).
-1. Go to **data** > **Containers** > **Data** > **Application**.
-1. Sort folders by **Date Modified (descending)** and open the first one.
-1. Go to **Library** > **LocalDatabase**.
-1. You will see a file named *default* (without an extension). This file is the database file used by the Mendix Client.
-1. Save the *default* file in a folder on your computer.
+2. Open Finder and click **Go** > **Go to the folder**.
+3. Enter *~/Library/Developer/CoreSimulator/Devices* in the prompt.
+4. Once the **Devices** folder is opened, sort the folders by **Date Modified (descending)**.
+5. Go to the first folder (for example, **9DA843C5-089F-44F6-AB1A-3ECEF6D3D05C**).
+6. Go to **Data** > **Containers** > **Data** > **Application**.
+7. Sort the folders by **Date Modified (descending)** and open the first one.
+8. Go to **Library** > **LocalDatabase**.
+   * You will see a file named *default* (without an extension). This file is the database file used by the Mendix Client.
+9. Save the *default* file in a folder on your computer.
 
 ## 5 Encrypting User Files {#encrypting-user-files}
 
@@ -134,7 +134,7 @@ Studio Pro allows you to encrypt the files and images stored in native apps. Ena
 
 ### 5.1 Prerequisites
 
-Before enabling local file encryption, ensure that these prerequisites are met:
+Before enabling local file encryption, ensure these prerequisites are met:
 
 * Install and use Mendix Studio Pro 
 * Upgrade your Native Template to the latest version compatible with your app
@@ -154,4 +154,4 @@ You can enable file encryption for both new and existing apps. Once the users up
 
 ### 5.3 Disabling Local File Encryption
 
-Disabling local file encryption is not supported and may cause unexpected behaviors for end-users with encrypted files on their devices. You can disable the encryption if you have not released the encrypted version of your app to your users.
+Disabling local file encryption is not supported and can cause unexpected behaviors for end-users with encrypted files on their devices. You can disable the encryption if you have not released the encrypted version of your app to your users.

@@ -251,7 +251,7 @@ Similar to your deployment strategy, you also want to begin considering what you
 We’ve all heard the saying, “If a tree falls in the forest but no one is around to hear it, does it make any sound?” Similarly, if you are excellent at the core components of digital transformation but don’t communicate it to anyone, does it really have an impact? That is where promotion comes into play. Without promotion, success can go unnoticed, and the value of your efforts may not be recognized.
 Promotion tends to be a challenge for many IT organizations, in part because IT teams do not often have professional marketers. Even without a marketing team behind you, here are five ways you can better promote the value of low-code within your organization. 
 
-**Shaping and communicating your low-code vision:** We’ll help you solidify your low-code vision later in this guide, but once you have it, don’t let it live on a shelf or in the cloud — allow it to evolve with input from your organization. Communicate your vision in cross-functional meetings and ask for support in getting organizational leadership to embed the vision into their message as well.
+***Shaping and communicating your low-code vision:*** We’ll help you solidify your low-code vision later in this guide, but once you have it, don’t let it live on a shelf or in the cloud — allow it to evolve with input from your organization. Communicate your vision in cross-functional meetings and ask for support in getting organizational leadership to embed the vision into their message as well.
 
 ***Stakeholder management:*** Involve stakeholders early and often to build enthusiasm for digital transformation success. Start by bringing cross-functional partners on board who you already have strong relationships with, and work together to identify the problems you want to solve. By building a plan together you can help ensure your initiatives will get support.
 
@@ -346,10 +346,10 @@ It is key to ensuring alignment and contribution to other visions, values, strat
 
 2. **First iteration: Mind map / brainstorm**
 
-Start exploring the areas that you want to transform. We recommend thinking along the lines of the 5 P’s – People, Process, Platform, Portfolio, Promotion – because these cover all the aspects you need when undergoing a transformation. This also ties well into other tools we use such as the Maturity Assessment, which is also grouped according to the 5 P’s.
+Start exploring the areas that you want to transform. We recommend thinking along the lines of the 5 P’s—People, Process, Platform, Portfolio, Promotion—because these cover all the aspects you need when undergoing a transformation. This also ties well into other tools we use such as the Maturity Assessment, which is also grouped according to the 5 P’s.
 
 Imagine how you want those areas to look like in 3-4 years. That timeframe is the perfect balance between realistic and achievable and it gives you the chance to work on different aspects simultaneously.
-More than that and it's too far in the future, too fuzzy, you can't know what the world will look like in 10 years. Too short and there's not enough time to do something impactful – it won't be inspirational.
+More than that and it's too far in the future, too fuzzy, you can't know what the world will look like in 10 years. Too short and there's not enough time to do something impactful—it won't be inspirational.
 Add key words to a mind map for each of the five areas.
 
 3. **Second iteration: Prioritize and add details**
@@ -366,13 +366,13 @@ Finish adding relevant key results or placeholders. You may choose to leave the 
     
 Once you have full sentences for all bullet points and the relevant key results, you need to review them all, asking "Is this ambitious enough or is it too ambitious?"
 
-The objectives need to be achievable, but it also shouldn't be too easy. You need to find that balance. But don't overthink it – you will probably need to adjust some key results along the way, and that's OK.
+The objectives need to be achievable, but it also shouldn't be too easy. You need to find that balance. But don't overthink it—you will probably need to adjust some key results along the way, and that's OK.
 
 More about that in the "Use your vision to steer your journey" objective.
 
 5. **Socialize your vision and gather feedback**
 
-Show your draft vision to key stakeholders and a selection of employees to get their feedback. When others read your vision, they need to experience a moment of awe and wonder. If their jaws don’t drop a little bit, you need to think bigger. Small, safe, calculated plans don’t inspire – a vision needs a wow factor. And don't be put off if there’s a small number – around 10%-15% or so – who don't like it.
+Show your draft vision to key stakeholders and a selection of employees to get their feedback. When others read your vision, they need to experience a moment of awe and wonder. If their jaws don’t drop a little bit, you need to think bigger. Small, safe, calculated plans don’t inspire—a vision needs a wow factor. And don't be put off if there’s a small number—around 10%-15% or so—who don't like it.
 
 What you don't want is indifference.
 
@@ -383,7 +383,7 @@ and that it accurately represents what you want to achieve and what your organiz
 
 In this final stage, you need to consider what feedback is relevant and what you want to incorporate.
 
-If you think it would be more efficient, you might want to get support from a writer to polish some of those sentences so they pop off the page and resonate with your team and stakeholders. However, balance the effort you invest – done is better than perfect!
+If you think it would be more efficient, you might want to get support from a writer to polish some of those sentences so they pop off the page and resonate with your team and stakeholders. However, balance the effort you invest—done is better than perfect!
 
 7. **Communicate your vision effectively**
 
@@ -1200,7 +1200,7 @@ Mendix has a module that allows developers to write and execute Unit Tests: the 
 
 There are a variety of tools available for testing, from Mendix-supported ones to third-party ones. Read more about [Test Automation and Quality Assurance](https://www.mendix.com/evaluation-guide/app-lifecycle/test-automation-quality-assurance/).
 
-Aside from unit tests, performance tests can also be performed with multiple third-party tools, such as JMeter, BlazeMeter and LoadRunner – all of which are capable of testing the performance of your Mendix application.
+Aside from unit tests, performance tests can also be performed with multiple third-party tools, such as JMeter, BlazeMeter and LoadRunner—all of which are capable of testing the performance of your Mendix application.
 
 After go-live, the Mendix Cloud offers metrics and logs to provide insights into application performance and can help track down bugs.
 

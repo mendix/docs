@@ -19,9 +19,9 @@ $white: #fff; // YL - Override the default color defined in _variables_forward.s
 $light: #99D0FF !default; // DB - Blue-3 from PDS
 $dark: #0A1325 !default; // Gray-10 from PDS (MxDock color)
 $blue: #146FF4; // YL - Mendix Blue in SP 10; Override the default color defined in _variables_forward.scss
-$gray-light: #f2f2f3 !default;
 $gray-100: #f7f7f7 !default;
 $gray-200: #f2f2f3 !default;
+$gray-light: $gray-200 !default;
 $gray-300: #e7e7e9; // YL - Override the default color defined in _variables_forward.scss
 $gray-400: #d9dbdd !default;
 $gray-500: #c1c3c8 !default;
@@ -31,8 +31,6 @@ $gray-700: #6b707b !default;
 $gray-800: #535965 !default;
 $gray-900: #2f3646 !default;
 $black: #000 !default; // YL - Override the default color defined in _variables_forward.scss
-
-$code-color: darken($secondary, 20%) !default;
 
 $info-1: #dceefe;
 $info-2: #c2e2ff;
@@ -124,11 +122,9 @@ $custom-theme-colors: (
 
 // UI element colors
 
-$breadcrumb-bg: $white !default; // NK - added to override Docsy grey
 $border-color: $gray-200 !default; // NK - changed to better align to Figma Docs mockup
 $td-sidebar-tree-root-color: $secondary !default; // NK - switched top left nav bar link and line color to secondary
 $td-sidebar-bg-color: $gray-light !default;//rgba($primary, 0.03) !default;
-$td-sidebar-border-color: $gray-border !default;
 
 // Background colors for the sections on home page etc. It is a paint by number system, starting at 0, where the number is taken from the shortcode's ordinal
 // if not provided by the user.
@@ -137,7 +133,6 @@ $td-box-colors: $dark, $primary, $secondary, $info, $primary-light, $gray-600, $
 
 $link-color: $blue !default; // NK - removed darken color
 $link-decoration: none !default;
-$link-hover-color: darken($link-color, 15%) !default;
 $link-hover-decoration: none !default;
 
 // Fonts
@@ -151,22 +146,5 @@ $font-family-base: $font_family; // NK - changed to Mendix font
 $font-size-base: 0.875rem; // NK - if we want 14px default -> 0.875rem
 $line-height-base: 1.4 !default; // NK - changed
 
-// Pagination
-
-$pagination-color: $gray-600 !default;
-$pagination-border-color: rgba($black, 0.1) !default;
-$pagination-active-border-color: darken($primary, 5%) !default;
-$pagination-disabled-color: $gray-300 !default;
-
-// Navbar
-
-$navbar-dark-color: rgba($white, 0.75) !default;
-$navbar-dark-hover-color: rgba($white, 0.5) !default;
-$navbar-dark-active-color: $white !default;
-$navbar-dark-disabled-color: rgba($white, 0.25) !default;
-
 // Tooltip
 $tooltip-bg: $secondary;
-
-// The yiq lightness value that determines when the lightness of color changes from "dark" to "light".
-$yiq-contrasted-threshold: 200 !default;

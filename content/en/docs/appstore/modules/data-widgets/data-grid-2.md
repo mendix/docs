@@ -553,3 +553,8 @@ To achieve this behavior, set the “On click trigger” to “Double click”. 
 
 1. Available only when selection is enabled.
 2. Available only when selection mode should be “Multi”.
+
+## Resetting filters
+
+Resetting filters is possible using "Reset_Filter" and "Reset_All_Filters" actions available as part of Data Widgets module. Setting up these actions is a manual process that requires creating a nanoflow and setting the name of the filter or datagrid to be reset.
+The name of the filter or datagrid can be found at Properties>Common>Name.

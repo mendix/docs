@@ -146,11 +146,5 @@ $font-family-base: $font_family; // NK - changed to Mendix font
 $font-size-base: 0.875rem; // NK - if we want 14px default -> 0.875rem
 $line-height-base: 1.4 !default; // NK - changed
 
-// Navbar
-
-$navbar-dark-color: rgba($white, 0.75) !default;
-$navbar-dark-hover-color: rgba($white, 0.5) !default;
-
 // Tooltip
 $tooltip-bg: $secondary;
-

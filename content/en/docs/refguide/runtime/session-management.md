@@ -17,7 +17,9 @@ This approach provides a more unified solution for session management, allowing 
 
 If you create a new app in Mendix version 10.9.0 or above, session management will work as described below.
 
-If you are using an app created in a version below 10.9.0, then long-lived sessions will be used for offline-first apps. See the [Sessions](/refguide/mobile/introduction-to-mobile-technologies/progressive-web-app/#sessions) section of *Progressive Web App* for more information. Online apps in Mendix versions below 10.9.0 cannot have their sessions extended.
+If you are using an app created in a version below 10.9.0, then long-lived sessions will be used for offline-first apps. See the [Sessions](/refguide/mobile/introduction-to-mobile-technologies/progressive-web-app/#sessions) section of *Progressive Web App* for more information.
+
+Online apps in Mendix versions below 10.9.0 have a different approach, using the [EnableKeepAlive](/refguide/tricky-custom-runtime-settings/#session-duration) setting to send keep alive requests from the client.
 
 ## 2 Authentication Token
 

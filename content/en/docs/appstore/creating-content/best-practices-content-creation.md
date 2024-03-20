@@ -41,8 +41,8 @@ As the supplier ecosystem evolves, different types of services will emerge. This
 * On deletion of binding, delete the corresponding keys. Do not reuse the keys for any other binding key request.
 * Log any operation with binding keys for auditing purposes.
 * Return 404 for both scenarios below. This prevents giving clues to hackers:
-  * absence of a resource (service instances) 
-  * access of a resource to which the accessor does not have rights for 
+  * absence of a resource (service instances)
+  * access of a resource to which the accessor does not have rights for
 
 #### 2.2.2 Service Reliability 
 
@@ -50,7 +50,7 @@ As the supplier ecosystem evolves, different types of services will emerge. This
 * Use throttle requests to avoid noisy neighborhood issues.
 * Return 4XX for invalid inputs and if preconditions are not met.
 * In case of server error, the consuming app may retry invoking the service multiple times. An idempotent endpoint will be more robust for retries.
-* Choose appropriate scaling mechanism to handle varying loads. Prefer horizontal scaling against vertical scaling.
+* Choose an appropriate scaling mechanism to handle varying loads. Prefer horizontal scaling to vertical scaling.
 * Set up appropriate tools that enable monitoring of the service workload and can raise notifications.
 * Have a disaster recovery plan for your service.
 * Broadcast availability of your service and scheduled maintenance window.
@@ -67,14 +67,15 @@ As the supplier ecosystem evolves, different types of services will emerge. This
 
 ### 3.1 Product Logo 
 
-Display your cover image in your Mendix Marketplace listing by uploading your file (*.jpg*) in the right dimensions: resolution of minimum 600px x 420px and file size of maximum 1 MB. Do check the copyright branding guidelines of other companies, if you use their logo as part of your image.
+Display your cover image in your Mendix Marketplace listing by uploading your file (*.jpg*) in the right dimensions: resolution of minimum 600px x 420px and file size of maximum 1 MB. Check the copyright branding guidelines of other companies if you use their logo as part of your image.
 
 The thumbnail is visible on the Mendix Marketplace homepage. It is the same image as the cover image in the listing itself.
 
-It is important to carefully think about the thumbnail image, since it is the first item which draws attention of the potential customers to your product offering. Therefore, we recommend not to use personal photos, rather an image that represents your offering.
+It is important to carefully think about the thumbnail image, since it is the first item that draws the attention of the potential customers to your product offering. Therefore, we recommend not using personal photos but rather an image that represents your offering.
 
-### 3.2 Product Name Taxonomy 
-One of the most challenging topics regarding your product is finding a perfect name. In our marketplace we have almost no restrictions on the names and as a supplier. Knowing your product, you are responsible for finding the best option.
+### 3.2 Product Name Taxonomy
+
+Finding a perfect name is one of the most challenging topics regarding your product. In our Marketplace, we have almost no restrictions on the names and as a supplier. Knowing your product, you are responsible for finding the best option.
 
 However, we still have some rules associated with naming:
 
@@ -84,37 +85,37 @@ However, we still have some rules associated with naming:
     
      {{% todo %}}What is "therefore showing the dedicated to the region content?"{{% /todo %}}
     
-* Do not use content type as part of the name. We classify products by content types and categories, which help customers with filtering and search. Avoid using standard platform terms in the name of your product and focus on the main product feature and benefit. (e.g. “Widget” can be substituted with “3D Viewer”) 
+* Do not use content type as part of the name. We classify products by content types and categories, which help customers with filtering and searching. Avoid using standard platform terms in the name of your product and focus on the main product features and benefits. (e.g., “Widget” can be substituted with “3D Viewer”) 
 
-* Avoid using non commonly-known abbreviations. It is important to draw customers' attention right from the thumbnail view, so potential customers open the listing itself to get more information. Apart from the image, the name has to be catchy.
+* Avoid using non-commonly-known abbreviations. It is important to draw customers' attention right from the thumbnail view so potential customers open the listing itself to get more information. Apart from the image, the name has to be catchy.
 
-*   If you use the name of your company in the product name, similarly to the previous bullet point, do not abbreviate it so that customers remember your brand and in future potentially give attention to it.
+* If you use your company's name in the product name, similarly to the previous bullet point, do not abbreviate it so that customers remember your brand and pay attention to it in the future.
 
 ### 3.3 Product Description
 
 Use this field to explain your offering. Product description is one of the most important aspects of online selling. Even if your product is great, it is significant to let your customer know that.
 
-Start introducing your offering by describing the challenges that your potential customers may face in day-to-day life and how your offering can solve those issues.
+Start introducing your offering by describing the challenges your potential customers may face daily and how your offering can solve those issues.
 
 Follow your description by adding information on how the product solves the problems and what benefits the product brings.
 
 The requirements for the product description are as follows:
 
-*   There is no limit on the characters for the description.
-*   We recommend adding a catchy one-liner before the rich text of the description. This line is used in the thumbnail of the product as plain text—maximum 150 characters.
+*   There is no limit on the characters in the description.
+*   We recommend adding a catchy one-liner before the rich text of the description. This line is used in the product's thumbnail as plain text—a maximum of 150 characters.
 
-Tips which may help you write a proper product description:
+Tips that may help you write a proper product description:
 
-*   The product description should cover the key answers that developers have when looking for content.
+*   The product description should cover the key answers that developers have when they look for content.
 
-*   The product description should cover the product benefits. Rather than speaking about a large number of technical features (which you can also cover in the **Documentation** tab), the **Overview** tab can be used to draw attention to the benefits. Specify how your product can improve customers' app development or work life in general. Before writing the description, what can help you is making an outline of the features and benefits of your product. For every feature that you list, think how it will directly benefit a customer.
+*   The product description should cover the product benefits. Rather than covering many technical features (which you can also cover in the **Documentation** tab), the **Overview** tab can draw attention to the benefits. Specify how your product can improve customers' app development or work life in general. Before writing the description, what can help you is outlining the features and benefits of your product. For every feature you list, think about how it will directly benefit a customer.
     
-*   Knowing the target audience will help you understand why this person needs your product, what features, or benefits would interest your customer. That way, you can put the focus on the right aspects.
-*   Using natural language. Imagine you are telling your friend about the product. Reading the description out loud helps you see if you bring the natural tone like in the real conversation. Reading friendly- and easily-explained lines of the description helps your customers connect to your product. 
+*   Knowing the target audience will help you understand why this person needs your product, what features or benefits interest your customer. That way, you can put the focus on the right aspects.
+*   Use natural language. Imagine you are telling your friend about the product. Reading the description aloud helps you see if you bring the natural tone like in the real conversation. Friendly- and easily-explained lines in the description help your customers connect to your product. 
 
-*   Try not to use plain text, but rather support your description with bullet points, short paragraphs, different size fonts. That way, you will help customers skim your text faster and draw attention to the most important parts of the text.
+*   Try not to use plain text, but rather support your description with bullet points, short paragraphs, and different size fonts. That way, you will help customers skim your text faster and draw attention to the most important parts of the text.
 
-*   You can also add some keywords to your description to optimize the content for search engines like Mendix or Google search. That way, if someone is searching for your product using a certain word, your product may come out in the search of the potential customer.
+*   You can also add keywords to your description to optimize the content for search engines like Mendix or Google Search. That way, if someone is searching for your product using a certain word, your product may come out in the search of the potential customer.
 
 ### 3.4 Screenshots and Assets
 

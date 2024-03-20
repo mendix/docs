@@ -235,14 +235,14 @@ The React client dynamically loads these chunks when needed for optimal performa
 
 When the app is deployed, the static resources are placed in a separate structure. This includes the following:
 
-* index.html – the initial HTML page which is loaded when the end-user starts the Mendix Client — this contains the client configuration and other static non-Mendix content (for example if Google analytics is added to the app)
-* app styling/Atlas – the app-specific CSS styling and static visual elements which define how a page is displayed
-* widgets – both native and web core widgets which are used by this app
+* *index.html* – the initial HTML page which is loaded when the end-user starts the Mendix Client — this contains the client configuration and other static non-Mendix content (for example if Google analytics is added to the app)
+* App styling/Atlas – the app-specific CSS styling and static visual elements which define how a page is displayed
+* Widgets – both native and web core widgets which are used by this app
 * The Dojo client has the following resources:
-    * mxui.js – the main Mendix Client code.
-    * page definitions – XML page definitions which tell the Mendix Client what the pages for this app look like.
+    * *mxui.js* – the main Mendix Client code.
+    * Page definitions – XML page definitions which tell the Mendix Client what the pages for this app look like.
 * The React client has the following resources:
-    * index.js and commons.js – the main Mendix Client code.
+    * *index.js* and *commons.js* – the main Mendix Client code.
     * Exported JavaScript files from Studio Pro containing the React components for pages and layouts.
 
 #### 4.1.3 Cookies{#cookies}

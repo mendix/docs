@@ -19,7 +19,11 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 ### March 21
 
-* We have fixed a bug that caused the cursor in the text editor for story and epic descriptions and comments to jump to a different place unexpectedly. There is a small trade-off though, since we replaced the text editor widget completely, it will not be possible to link stories using a # anymore. Your existing links will become plain text that still contain story ID and title. Copying and pasting the link to the story can be used as a workaround in the meantime.
+#### Fixes
+
+* We have fixed a bug in [Epics](/developerportal/project-management/epics/) that caused the cursor in text editors to jump to a different place unexpectedly. This problem happened in text editors for story descriptions, epic descriptions, and comments.
+
+  There is a small trade-off though, since we replaced the text editor widget completely, it will not be possible to link stories using a # anymore. Your existing links will become plain text that still contain story ID and title. Copying and pasting the link to the story can be used as a workaround in the meantime.
 
 ### March 6
 

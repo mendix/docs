@@ -13,6 +13,11 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2024
 
+### March 21, 2024
+
+#### Improvement
+* We improved the accessibility for various pages on the app.
+
 ### March 14, 2024
 
 #### Fixes

@@ -242,10 +242,10 @@ a[href*=".org"]:not(.btn)::after {
     content: url("/icons/external-unvisited.svg"); // Fill color is $link-color (blue-8 from PDS). Keep it updated with _variables_project.scss.
 }
 
-// Use icon with different fill color for visited links
-a[href*=".com"]:visited:not([href*="github.com/mendix/"]):not(.btn),
-a[href*=".org"]:visited:not(.btn)::after {
-    content: url("/icons/external-visited.svg"); // Fill color is $link-visited-color (purple-8 from PDS). Keep it updated with _variables_project.scss.
+// Use icon with different fill color when link is hovered over
+a[href*=".com"]:hover:not([href*="github.com/mendix/"]):not(.btn)::after,
+a[href*=".org"]:hover:not(.btn)::after {
+    content: url("/icons/external-hover.svg"); // Fill color is $link-hover-color (blue-9 from PDS). Keep it updated with _variables_project.scss.
 }
 
 .btn {

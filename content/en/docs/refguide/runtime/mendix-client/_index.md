@@ -225,6 +225,7 @@ The Mendix Dojo Client, which is not built entirely using React, will repeat the
 
 ##### 4.1.1.2 React Client
 
+The React client works differently than the Dojo client.
 
 During the build process, Studio Pro exports JavaScript files containing JavaScript and React components into the `pages`, `layouts` and `nanoflows` folders. The contents of those folders are bundled into the `dist` folder using [Rollup](https://rollupjs.org/), which generates *chunks*.
 

@@ -129,6 +129,17 @@ img.my-icon{
     float:left;
     margin: 0rem 0.5rem 0.5rem 0.5rem;
 }
+img.ToC-icon{
+    width: 2.5rem;
+    height: 2.5rem;
+    float:left;
+    margin: 0rem 0.5rem 0rem 0.5rem;
+    padding: 0.3rem;
+    border-radius: 4px;
+    &:hover {
+        background-color: $gray-light;
+    };
+}
 img.nav-icon{
     width: 24px;
     height: 24px;

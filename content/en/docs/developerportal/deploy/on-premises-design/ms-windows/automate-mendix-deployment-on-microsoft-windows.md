@@ -117,6 +117,30 @@ wget https://cdn.mendix.com/runtime/mendix-{<major>.<minor>.<patch>.<build>}.tar
 Install-MxServer -LiteralPath {<target folder for the downloaded file>}\mendix-{<major>.<minor>.<patch>.<build>}.gz
 ```
 
+### 4.4 Sample Script - Create new Mendix app
+
+The following script example demonstrates how to create a new Mendix app with an app folder and basic Settings.yaml file. Below is the command to create new Mendix app.
+
+```text {linenos=table}
+$APP_NAME = ‘Name of Mendix app’
+
+# Create new Mendix app
+New-MxApp -Name $APP_NAME -Credential (Get-Credential)
+```
+
+### 4.5 Sample Script - Set Log Level for Mendix app
+
+The following script example demonstrates how to set log level for all nodes of a log subscriber at once. Below is the command to set log level for all log nodes.
+
+```text {linenos=table}
+$APP_NAME = ‘Name of Mendix app’
+$SubscriberName = ‘Log subscriber name of the app’
+$Level = ‘Log level which needs to be assigned’
+
+# Set log level for all nodes of a log subscriber at once
+Set-MxLogLevel $APP_NAME -SubscriberName $SubscriberName -Level $Level
+```
+
 ## 5 Troubleshooting
 
 If you encounter any issues while automating Mendix deployment on Windows using cmdlets, use the following troubleshooting tips to help you solve them.

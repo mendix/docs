@@ -29,13 +29,13 @@ This approach enhances security, as these cookies are inaccessible to anything o
 
 ### 2.2 Enable Authentication Token
 
-For offline-first apps using standard Mendix sign in with version 10.9.0 or above, the authentication token will be generated automatically.
+For offline-first apps using the client API `login`, with version 10.9.0 or above, the authentication token system will be used by default.
 
-If you want to generate authentication tokens in your online app, you will have to use custom JavaScript or Java sign in code using the `login2` API. 
+If you want to generate authentication tokens in your online app, you have to use the client API `login2`. 
 
-The `login2` API allows you to pass the parameter `useAuthToken`. The value `true` enables the authentication token, `false` disables it. If the login action passes `true` to the runtime, the runtime adds an HttpOnly cookie `useAuthToken` indicating that an authentication token should be generated during the client startup. Your login flow will then utilize the authentication token.
+The `login2` API allows you to pass the parameter `useAuthToken`. The value `true` enables the authentication token, `false` disables it. If the login action passes `true` to the runtime, the runtime adds an HttpOnly cookie `useAuthToken` indicating that an authentication token should be generated during the client startup. 
 
-You could also provide end-users a "remember me" option so they can decide whether they want to be remembered or not.
+You could also model your login page to provide end-users with a "remember me" option so they can decide whether they want to be remembered or not.
 
 Follow the links below to find the `login2` API specifications for the following:
 

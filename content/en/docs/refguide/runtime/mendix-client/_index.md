@@ -109,7 +109,7 @@ For more information about the communication between the Mendix Client and the R
 
 This communicates the current state of the app (held in the object cache) to the Runtime Server. As the state is held in the Mendix Client, the Runtime Server can be stateless. This ensures that it is easier to scale your app horizontally by adding more instances as any instance can handle any request.
 
-To avoid performance issues, the Mendix Client does not send the entire state to the runtime. State handling decides which parts of the state should be sent by analyzing the model during the deployment of the applications. This analysis consists of two parts. 
+To avoid performance issues, the Mendix Client does not send the entire state to the runtime. State handling decides which parts of the state should be sent by analyzing the model during app deployment. This analysis consists of two parts. 
 
 Firstly, during deployment, all microflows “reachable” from the client are analyzed. For example:
 

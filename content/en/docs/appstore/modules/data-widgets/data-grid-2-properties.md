@@ -2,7 +2,14 @@
 title: "<title>"
 url: <utl>
 description: "<description>"
-tags: ["marketplace", "marketplace component", "data grid", "platform support", "external entities"]
+tags:
+    [
+        "marketplace",
+        "marketplace component",
+        "data grid",
+        "platform support",
+        "external entities"
+    ]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -42,7 +49,7 @@ A list of columns to display in the data grid. Each item in this list is a set o
 
 #### Show column filters
 
-If set to “No” all column filters will be hidden. 
+If set to “No” all column filters will be hidden.
 
 ### Rows
 
@@ -140,3 +147,74 @@ Defines a string value that labels the checkbox of the row when the selection is
 
 ## Column properties {#column-properties}
 
+### General
+
+#### Show
+
+Controls the type of the data displayed in the column.
+
+The attribute displays the value of an entity attribute. The dynamic text uses the expression and can have multiple parameters, and the custom content allows for custom text and widgets.
+
+#### Attribute
+
+This property controls the attribute used for the column. This property is required when filtering or sorting is enabled.
+
+#### Caption
+
+Text to be displayed in the column header.
+
+#### Tooltip
+
+Text to display when hovering over column header.
+
+#### Reference
+
+This property is used to select the reference entity that can be used for association filtering. Useful only in conjunction with the dropdown filter widget.
+
+#### Data source
+
+A data source that should return a list of entities selected in the reference property. All items in this list will be available in the dropdown filter.
+
+#### Option caption
+
+An expression used to create a caption for each reference. This text is then visible as an option in the dropdown filter.
+
+#### Visible
+
+A boolean expression that controls the visibility of columns in the data grid. If the expression returns false, the column is  hidden and remains hidden unless the expression value is changed to true.
+
+### Column capabilities
+
+#### Can sort
+
+If set to yes, then rows can be sorted by the data in this column.
+
+#### Can resize
+
+If set to yes, the column can be resized by dragging the edge of the column header.
+
+#### Can reorder
+
+If set to yes, the column position in the grid can be changed by the user.
+
+#### Can hide
+
+If set to yes, the column can be hidden in the view settings. If hidden by default, column is hidden on first render and can be shown using view settings. If set to no, column can't be hidden in view settings.
+
+### Appearance
+
+#### Column width
+
+Property that controls how the column width is calculated. Auto-fill will fills the available space. Auto-fit content uses just enough space to display the column content. Manual is used to set the number for the flex-grow CSS property.
+
+#### Alignment
+
+Sets the text alignment in the column.
+
+#### Dynamic cell calss
+
+An expression used to compute the CSS class for the row using the data for the current entity and the list of selected items.
+
+#### Wrap text
+
+If set to yes, the column tries to wrap long text.

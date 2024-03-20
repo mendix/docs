@@ -219,6 +219,15 @@ The template for the label can contain parameters that are written as a number b
 
 For each parameter in the template, you define an attribute of the context entity or an associated entity. The value of this attribute will be inserted at the position of the parameter.
 
+## 6.3 Label Position
+
+* Describe Default (after) if needed
+    * Is "Default (after)" the same as "After control"?
+
+Describe what the following do:
+* Before control
+* After control
+
 ## 7 Formatting Section{#numeric-formatting}
 
 {{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/numeric-formatting-section.png" alt="Numeric Formatting Section" >}}

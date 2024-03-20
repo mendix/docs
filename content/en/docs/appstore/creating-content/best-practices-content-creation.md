@@ -8,7 +8,7 @@ tags: ["marketplace", "content ", "best practices", ""]
 
 ## 1 Introduction
 
-This document is an addition to the Mendix Marketplace Guidelines and aims to provide partners with best practices, recommendations, and tips for preparing a product as well as submitting it to the public Marketplace.  
+This document is an addition to the [Mendix Marketplace Guidelines](/url-needed) and aims to provide partners with best practices, recommendations, and tips for preparing a product as well as submitting it to the public Marketplace.  
 
 You will find information on the following topics:
 
@@ -16,43 +16,44 @@ You will find information on the following topics:
 
 *   Marketing tips, for example, on how to write nice description, what name to choose for the product
 
-*   Operational recommendations for support, product lifecycle
+
+Operational recommendations for support and product lifecycle
 
 ## 2 Technical Best Practices
 
 ### 2.1 Low Code Security Misconfigurations (Recommended)
 
-Mendix applications, widgets, modules are developed Mendix, so traditional code based SAST scanners will not be very helpful to detect security issues in the low-code. They also cannot point out security misconfigurations—if any. It is recommended to use a tool that can look into security best practices outlined in the [Mendix documentation](/howto/security/best-practices-security/) and point out any security misconfigurations and bad practices. 
+Mendix applications, widgets, modules are developed Mendix, so traditional-code based SAST scanners will not be very helpful to detect security issues in the low code. They also cannot point out security misconfigurations—if any. It is recommended to use a tool that can look into security best practices outlined in [Implement Best Practices for App Security](/howto/security/best-practices-security/) and point out any security misconfigurations and bad practices. 
 
 Mendix Marketplace contains the following products which you could use for the check: [Clevr ACR](https://marketplace.mendix.com/link/component/114669), [SIG QSM/AQM](https://www.softwareimprovementgroup.com/solutions/sigrid-for-mendix-application-quality-monitoring/), [Bizzomate](https://chrome.google.com/webstore/detail/bizzomate-mendix-dev-tool/nkbokoloejkhohjlickhfkjfmbmboaof), [Omnext Software Analyses Suit](https://marketplace.mendix.com/link/component/120746). These can be used to inspect and correct your modules and widgets. It is recommended for partners to inspect the component before you onboard your content on marketplace. 
 
 ### 2.2 Architectural Best Practices (Recommended)
 
-As the supplier ecosystem evolves, different types of services will emerge. This section shares the best practice relevant for each type of offering in respect to the Access management and Service Reliability.
+As the supplier ecosystem evolves, different types of services will emerge. This section shares the best practice relevant for each type of offering in respect to the access management and service reliability.
 
  {{% todo %}}Check what this sentence is for{{% /todo %}}Backend Service Implementation
 
 #### 2.2.1 Access Management 
 
 * Issue one set of keys to access one service instance only.
-* Ensure that provided keys can provide minimal access rights for the application to perform any operations on the service instance. Service can choose the level of access according to the service instance configuration.
-* Ensure that the number of binding keys per service instance is not a limiting factor. Mendix platform does not store keys issued to service consumer. If the consumer loses the key, they are bound to generate multiple binding keys for same instances.
-* On deletion of binding delete the corresponding keys. Do not reuse the keys for any other binding key request.
-* Log any operation with binding keys for auditing purposes 
-* 404 is returned for both scenarios below. This prevents giving clue to hackers:
-  * absence of a resource ( service instance ) 
+* Ensure that provided keys can provide minimal access rights for the application to perform any operations on the service instance. A service can choose the level of access according to the service instance configuration.
+* Ensure that the number of binding keys per service instance is not a limiting factor. Mendix platform does not store keys issued to a service consumer. If the consumer loses the key, they are bound to generate multiple binding keys for same instances.
+* On deletion of binding, delete the corresponding keys. Do not reuse the keys for any other binding key request.
+* Log any operation with binding keys for auditing purposes.
+* Return 404 for both scenarios below. This prevents giving clues to hackers:
+  * absence of a resource (service instances) 
   * access of a resource to which the accessor does not have rights for 
 
 #### 2.2.2 Service Reliability 
 
 * If the service cannot be complete the provided operation within 2 seconds, consider using an asynchronous response mechanism.
 * Use throttle requests to avoid noisy neighborhood issues.
-* 4XX is returned for invalid inputs and if preconditions are not met.
+* Return 4XX for invalid inputs and if preconditions are not met.
 * In case of server error, the consuming app may retry invoking the service multiple times. An idempotent endpoint will be more robust for retries.
-* Choose appropriate scaling mechanism to handle varying loads. Prefer horizontal scaling against vertical scaling 
-* Set up appropriate tools that enable monitoring of the service workload and can raise notifications 
-* Have a disaster recovery plan for your service 
-* Broadcast availability of your service and scheduled maintenance window
+* Choose appropriate scaling mechanism to handle varying loads. Prefer horizontal scaling against vertical scaling.
+* Set up appropriate tools that enable monitoring of the service workload and can raise notifications.
+* Have a disaster recovery plan for your service.
+* Broadcast availability of your service and scheduled maintenance window.
 
 #### 2.2.3 More Resources
 
@@ -66,12 +67,11 @@ As the supplier ecosystem evolves, different types of services will emerge. This
 
 ### 3.1 Product Logo 
 
-Display your cover image in your Mendix Marketplace listing by uploading your file (.jpg) in the right dimensions: resolution of minimum 600px x 420px and file size of maximum 1 MB. Do check the copyright branding guidelines of other companies, if you use their logo as part of your image.
+Display your cover image in your Mendix Marketplace listing by uploading your file (*.jpg*) in the right dimensions: resolution of minimum 600px x 420px and file size of maximum 1 MB. Do check the copyright branding guidelines of other companies, if you use their logo as part of your image.
 
 The thumbnail is visible on the Mendix Marketplace homepage. It is the same image as the cover image in the listing itself.
 
-It is important to carefully think about the thumbnail image, since it is the 1st item which draws attention of the potential customers to your product offering. Therefore, we recommend to not use personal photos,
-rather an image that represents your offering.
+It is important to carefully think about the thumbnail image, since it is the first item which draws attention of the potential customers to your product offering. Therefore, we recommend not to use personal photos, rather an image that represents your offering.
 
 ### 3.2 Product Name Taxonomy 
 One of the most challenging topics regarding your product is finding a perfect name. In our marketplace we have almost no restrictions on the names and as a supplier, knowing your product, you are responsible to find the best option.

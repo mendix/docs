@@ -266,9 +266,11 @@ When the Mendix client is running, it sets a number of technical cookies to reco
 
 ### 4.2 Launching Native Mendix Client
 
-The flow when launching a native mobile app is different from launching in a browser. More information is stored locally as part of the app, and a native mobile app can even be designed to run “offline-first”, which means that it can still be run without any connection to the Runtime Server.
+The flow when launching a native mobile app is different from launching in a browser. More information is stored locally as part of the app, and a native mobile app can even be designed to run [offline-first](/refguide/offline-first/), which means that it can still be run without any connection to the Runtime Server.
 
-The flow described here is for production apps. During development, the flow is not the same. This enables you to do faster deployments and online debugging.
+The flow described below applies to production apps. During development, the flow is not the same. This enables you to do faster deployments and online debugging.
+
+When launching a native mobile app in production, the following occurs:
 
 1. The end-user opens the app on their device. This is a project specific shell app, which runs natively on iOS or Android. It is released to the app store appropriate for the device. If a new version of the app is downloaded to the device, the app will behave as if the end-user has opened it for the first time, even if it was already open on their device.
 2. The shell app loads a native bundle. This is the equivalent of the Mendix Client resources used by the Mendix Client running in a browser. It contains, for example, the Mendix Client code and page definitions. However, it is held locally on the device rather than centrally with the Runtime Server.

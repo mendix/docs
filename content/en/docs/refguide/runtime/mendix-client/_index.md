@@ -129,7 +129,7 @@ State handling is also responsible for garbage collection. If you want to know m
 
 #### 2.12.2 Synchronization
 
-If an app is “offline-first”, data created and changed in the app is stored locally until it is synchronized with the Runtime Server. This job is carried out by the synchronization process. This synchronizes the offline storage and object cache with the Runtime Server. For more information on offline-first apps and synchronization, see [Offline-First](/refguide/offline-first/).
+If an app is offline-first, data created and changed in the app is stored locally until it is synchronized with the Runtime Server. This job is carried out by the synchronization process. This synchronizes the offline storage and object cache with the Runtime Server. For more information on offline-first apps and synchronization, see [Offline-First](/refguide/offline-first/).
 
 #### 2.12.3 Session
 
@@ -137,7 +137,7 @@ This ensures that any session with the runtime is kept alive and restored if nec
 
 ### 2.13 Runtime Server
 
-The Runtime Server waits for requests from the Mendix Client, processes the request, and returns the requested data, plus any additional state information where appropriate. This is done through a private API called *xas*.
+The Runtime Server waits for requests from the Mendix Client, processes the request, and returns the requested data (plus any additional state information where appropriate). This is done through a private API called *xas*.
 
 It will also notify the Mendix Client when changes are made to the app, and allows developers to connect a debugger to the client to debug nanoflows.
 
@@ -225,7 +225,6 @@ The Mendix Dojo Client, which is not built entirely using React, will repeat the
 
 ##### 4.1.1.2 React Client
 
-The React client works differently to the Dojo client.
 
 During the build process, Studio Pro exports JavaScript files containing JavaScript and React components into the `pages`, `layouts` and `nanoflows` folders. The contents of those folders are bundled into the `dist` folder using [Rollup](https://rollupjs.org/), which generates *chunks*.
 

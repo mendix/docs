@@ -240,7 +240,7 @@ When the app is deployed, the static resources are placed in a separate structur
 * widgets – both native and web core widgets which are used by this app
 * The Dojo client has the following resources:
     * mxui.js – the main Mendix Client code.
-    * page definitions – xml page definitions which tell the Mendix Client what the pages for this app look like.
+    * page definitions – XML page definitions which tell the Mendix Client what the pages for this app look like.
 * The React client has the following resources:
     * index.js and commons.js – the main Mendix Client code.
     * Exported JavaScript files from Studio Pro containing the React components for pages and layouts.

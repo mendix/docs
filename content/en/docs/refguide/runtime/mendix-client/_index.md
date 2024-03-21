@@ -11,7 +11,7 @@ tags: ["runtime", "mendix client", "offline-first", "browser", "javascript", "na
 
 The Mendix Client runs on the end-user's device and serves as the interface between the end-user and the app. Sometimes it can run completely independently of the Runtime Server and perform all processing locally. Most of the time, it interacts with the Runtime Server to get or update shared data, or perform additional application logic.
 
-The above description of the Mendix Client is based on using the Runtime Server of an app running in the cloud. You can also run Mendix locally for testing, which conceptually works in a similar way.
+The above description of the Mendix Client is based on using the Runtime Server of an app running in the cloud. You can also run Mendix locally for testing, which works in a conceptually similar way.
 
 {{% alert color="info" %}}
 In Studio Pro versions 10.7.0 and above, there is an alternative version of the Mendix Client written in React. This is currently a [beta](/releasenotes/beta-features/). You can enable this React client in [App Settings](/refguide/app-settings/#react-client).

@@ -46,7 +46,7 @@ The Workflow Engine stores execution data in regular entities. The purpose of th
 
 #### 2.2.1 System.Workflow {#system-workflow}
 
-It represents a running workflow, that is, a workflow instance. As soon as the workflow is initiated (using the **Call workflow** activity in microflows, a client action, or using the corresponding Java API), an object is created in this entity. 
+It represents a running workflow, that is, a workflow instance. As soon as the workflow is initiated (using the **Call workflow** activity in microflows, a client action, or using the corresponding Java API), an object of this entity is created. 
 
 The **Name** and **Description** attributes are populated based on the [properties defined in the workflow](/refguide/workflow-properties/). The **DueDate** attribute is based on the configured [Due date workflow property](/refguide/workflow-properties/#due-date). The **StartTime** attribute is set to the current time. The **State** attribute is set to **InProgress**. The **System.Workflow_WorkflowDefinition** association is set to the corresponding **System.WorkflowDefinition** object. The **System.owner** is set to the user initiating the workflow.
 

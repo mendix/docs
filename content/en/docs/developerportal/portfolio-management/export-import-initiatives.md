@@ -44,7 +44,8 @@ The initiatives are exported to an Excel file.
 {{% alert color="info" %}}
 All the details of an initiative are exported, except the data of the following fields:
 
-* **Linked App**
+* **Linked Apps**
+* **Linked Epics**
 * **Owner**
 * **Created By**
 * **Comments**
@@ -78,6 +79,7 @@ All the details of an initiative are exported, except the data of the following 
     | **Tags**              | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                       |  <ul><li>Character limit: 50 per tag.</li></ul> <ul><li>Multiple tags should be separated by commas.</li></ul>     | If a tag does not exist in the portfolio, it will be created. |`Important, Operational, Architecture`|
     | **Description**       | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                       |                                                              |                               |`A description of the initiative.`|
     | **Department**        | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                       |  Character limit: 200                                                              | If a department does not exist in the portfolio, it will be created. |`Finance`|
+    | **Location**        | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                       |  Character limit: 200                                                              | If a location does not exist in the portfolio, it will be created. |`Paris`|
     | **Country**           | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                       | Only countries that appear as options for **Countries** on the [Portfolio Settings](/developerportal/portfolio-management/#portfolio-settings) page can be filled in. |                           |`Netherlands`|
     | **UseCase**          | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                       |  Character limit: 200                                                              |                            |`Innovation`|
     | **IntakeDate**       | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | Date-Time                    | The year must be between 1900 and 9999.                      |                           |`28/Jul/2022`|
@@ -92,8 +94,8 @@ All the details of an initiative are exported, except the data of the following 
     | **WSJFRiskReduction** | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                       | The selectable options can be found in the [WSJF](/developerportal/portfolio-management/prioritization-models/#wsjf) section in *Prioritization Models*. |                                |`Medium`|
     | **WSJFJobSize**     | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                       | The selectable options can be found in the [WSJF](/developerportal/portfolio-management/prioritization-models/#wsjf) section in *Prioritization Models*. |                                    |`XS`|
 
-5. When your Excel file is ready to be imported, drag it to the **Import Initiatives** dialog box, or click **Upload** and select the file.
+6. When your Excel file is ready to be imported, drag it to the **Import Initiatives** dialog box, or click **Upload** and select the file.
 
-6. Click **Import**.
+7. Click **Import**.
 
 All the initiatives in the Excel file are imported successfully. You can see the initiatives on the **Initiatives Overview** page. 

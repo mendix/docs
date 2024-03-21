@@ -205,7 +205,7 @@ It’s important to keep your team small as you build your Mendix Center of Exce
 
 Developers come from all parts of the business, not just IT. From your high-code programmers, to your business-centric developers, to your tech-savvy business analysts, low-code platforms let you build teams of makers from all backgrounds. 
 
-As the main action point here, start thinking about who you need to kick off building your first Mendix application and start talking to them about it. Some names are probably coming to mind already and you will get much more information on who you need exactly in section [Identify Your First Mendix Project Team](#4.2).
+As the main action point here, start thinking about who you need to kick off building your first Mendix application and start talking to them about it. Some names are probably coming to mind already and you will get much more information on who you need exactly in section [Identify Your First Mendix Project Team](#identify-first-mendix-team).
 
 #### 2.3.3 Process: Building Repeatable Practices for Long-Term Outcomes
 

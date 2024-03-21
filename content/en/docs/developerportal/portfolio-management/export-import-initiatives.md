@@ -50,7 +50,7 @@ All the details of an initiative are exported, except the data of the following 
 * **Comments**
 * **Attachments**
 * **Additional Information** of the **Expected Value**
-* **Archived By**(Only for archived export)
+* **Archived By**
   {{% /alert %}}
 
 ### 3.2 Importing Initiatives {#import-initiatives}

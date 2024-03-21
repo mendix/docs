@@ -56,7 +56,7 @@ If you select **Edit Webhook** from **More Options** ({{% icon name="three-dots-
 
 ## 3 Webhook Headers
 
-Every `POST`` payload contains the following delivery information as part of the header:
+Every `POST` payload contains the following delivery information as part of the header:
 
 * **connection** – `close`, indicating that there is no further information for the HTTP request
 * **content-length** – the size of the HTTP request in bytes (for example, `475`)

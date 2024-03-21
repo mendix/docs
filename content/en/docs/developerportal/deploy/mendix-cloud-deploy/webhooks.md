@@ -3,8 +3,8 @@ title: "Webhooks"
 linktitle: "Webhooks"
 url: /developerportal/deploy/webhooks/
 weight: 75
-description: "Creating a webhook to trigger actions from Mendix Cloud"
-tags: ["Mendix Cloud", "Webhooks", "CI/CD", "Pipeline"]
+description: "Creating a webhook to trigger actions from Mendix Cloud and Mendix for Private Cloud."
+tags: ["Mendix Cloud", "Mendix for Private Cloud", "Webhooks", "CI/CD", "Pipeline"]
 ---
 
 ## 1 Introduction
@@ -21,8 +21,6 @@ The webhooks contain a retry mechanism if an error response is received from the
 
 {{% alert color="info" %}}
 Webhooks are only available for licensed Mendix apps that are deployed to Mendix Cloud or Mendix for Private Cloud.
-
-They are set up and work independently of the deprecated [webhooks for Sprints and Stories](/developerportal/collaborate/general-settings/#webhooks).
 {{% /alert %}}
 
 ## 2 Configuring a Webhook{#setting-up}

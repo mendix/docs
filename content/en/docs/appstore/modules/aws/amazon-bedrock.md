@@ -98,8 +98,8 @@ After you configure the authentication profile for Amazon Bedrock, you can imple
 
 To help users understand what needs to be done to invoke a specific model using the [Invoke Model](#invoke-model), we have included two example implementations in the Amazon Bedrock Connector:
 
-* An implementation for invoking the Claude v. 2.1 LLM that generates text
-* An implementation for the SDXL v. 1.0 LDM model that generates images from a text prompt.
+* An implementation for invoking the Claude 3 Sonnet foundation model that generates text.
+* An implementation for the TitanImageGeneratorG1 foundation model that generates images from a text prompt.
 
 These examples can be used as a reference together with the documentation found on this page, in the Bedrock console, and offered by the provider of the model. For more Example implementations, see [Amazon Bedrock Example Implementation](https://marketplace.mendix.com/link/component/215751).  
 
@@ -107,7 +107,7 @@ To invoke a specific model, perform the following steps:
 
 1. Choose the model with which you want to interact by using the [Invoke Model](#invoke-model) operation.
 2. In the [Model Parameters](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html) section of the Amazon Bedrock user guide, find the request and response JSON structures of the specific model that you want to invoke.
-3. Create your domain model inspired by the JSON structures that you found by using a tool to visualize Json structures, such as [JSON Crack](https://jsoncrack.com/editor).
+3. Create your domain model inspired by the JSON structures that you found. You can use a tool to visualize Json structures if needed, such as [JSON Crack](https://jsoncrack.com/editor).
 4. In Mendix Studio Pro, create a JSON structure by doing the following steps:
     1. Right-click on the target folder.
     2. Click **Add other** > **JSON structure**.

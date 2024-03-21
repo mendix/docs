@@ -11,6 +11,7 @@ cascade:
     - mendix_version: 8
     - old_content: true
     - hide_feedback: true
+    - notsitemap: true
     - sitemap:
         priority: 0.3
 ---

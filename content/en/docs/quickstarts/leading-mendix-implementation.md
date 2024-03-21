@@ -1,6 +1,6 @@
 ---
 title: "Leading Mendix Implementation in Your Organization"
-linktitle: "Adopting Mendix in Your Organization"
+linktitle: "Implementing Mendix in Your Organization"
 url: /quickstarts/leading-mendix-implementation-in-your-organization/
 weight: 30
 description: "Unlock the full potential of the Mendix platform and accelerate your application development journey in your organization."
@@ -52,7 +52,7 @@ The content in this guide can be covered in a few hours, but it was designed as 
 
 **Having trouble with something (more) technical?**
 
-* Check out docs in [Mendix Documentation](/):
+* Check out Mendix Documentation:
 
   Sometimes the right information is just a click away in a document.
 

@@ -116,7 +116,7 @@ To use breakpoint conditions, follow these steps:
     ```
 
     The expression should look like this:
-    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/debug-microflows-and-nanoflows/18580012.png" >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/debug-microflows-and-nanoflows/18580012.png" max-width=70% >}}
 
 3. Click **OK** to save the breakpoint condition.
 

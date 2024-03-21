@@ -30,6 +30,11 @@ The image below presents an example of how you can configure an event handler ei
 
 When something happens in the workflow engine, an event is emitted when subscribed to that event. This event is posted asynchronously using the task queue as described in [Workflow Engine](/refguide/workflow-engine/#workflow-task-queue). We take a snapshot of the event state at the time when it occurs to get real-time data. This snapshot data is then converted by the task queue task to the system module non-persistent workflow entities: **WorkflowEvent**, **WorkflowRecord**, and **WorkflowActivityRecord**.
 
+There are a few advantages of this mechanism:
+
+* The event handler microflow might fail, without failing or halting the workflow.
+* The execution (time) of the event handler microflow is not delaying the continuation of the workflow.
+
 The **WorkflowEvent** entity represents workflow event data at a specific execution moment. It contains the following attributes and association:
 
 * **EventTime** – the time at which the event occurred.
@@ -41,11 +46,6 @@ The **WorkflowActivityRecord** entity represents workflow activity data at a spe
 The **WorkflowRecord** entity represents workflow instance data at a specific execution moment. For example, a snapshot of a workflow instance at the moment when it was completed.
 
 {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-events/workflow-event-entities.png" max-width=100% class="image-border" >}}
-
-There are a few advantages of this mechanism:
-
-* The event handler microflow might fail, without failing or halting the workflow.
-* The execution (time) of the event handler microflow is not delaying the continuation of the workflow.
 
 {{% alert color="warning" %}}
 All associations to the above-mentioned non-persistent entities (with the exception of a sub **WorkflowRecord**) are associations to "live" objects, whose state may have been updated since the event occurred.

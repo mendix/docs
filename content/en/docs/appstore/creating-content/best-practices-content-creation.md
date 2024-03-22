@@ -2,8 +2,8 @@
 title: "Best Practices for Content Creation"
 url: /appstore/creating-content/best-practices/
 description: "Describes some best practices to create content in the Mendix Marketplace."
-weight: 1
-tags: ["marketplace", "content ", "best practices", ""]
+weight: 3
+tags: ["marketplace", "content creation", "best practices"]
 ---
 
 ## 1 Introduction

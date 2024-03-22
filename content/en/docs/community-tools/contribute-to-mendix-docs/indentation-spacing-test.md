@@ -413,4 +413,6 @@ A new list
 
 [Internal Anchor](/developerportal/community-tools/indentation-spacing-test/#test-links)
 
-[External Link](https://news.bbc.co.uk)
+[External com Link](https://bbc.com)
+
+[External other top level domain Link](https://news.bbc.co.uk)

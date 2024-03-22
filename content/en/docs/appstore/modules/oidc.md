@@ -630,15 +630,21 @@ If your microflow is not correctly implemented you will be told that **Authentic
 
 ### 8.3 Deep Links
 
+{{% alert color="warning" %}}
+The Deep Link module is deprecated from Studio Pro 10.6.0. It is replaced by [page URLs](/refguide/page-properties/#url) and [microflow URLs](/refguide/microflow/#url). For instructions on migrating to page and microflow URLs, see the [Migrating to Page and Microflow URLs](/appstore/modules/deep-link/#migrate-page-micro) section in *Deep Link*. 
+
+We will continue to actively support this module for Mendix 9.
+{{% /alert %}}
+
 To use this module in conjunction with the DeepLink module, you'll need to set the `LoginLocation` constant of the DeepLink module to '/oauth/v2/login?cont='
 
 If end-users that use the deeplink do not yet have a session in your app, the deeplink can trigger the SSO process. If that is successful, the end-user will automatically be redirected back to the deeplink.
 
-The DeepLink module does not have full support for multiple IdPs, so it can only trigger logins at one IdP. If you do not specify which IdP you want the DeepLink module to use, it will use the default IdP.
+The Deep Link module does not have full support for multiple IdPs, so it can only trigger logins at one IdP. If you do not specify which IdP you want the DeepLink module to use, it will use the default IdP.
 
 You can also specify which IdP should be used by adding the alias (`MyIdPAlias`) to the `LoginLocation`: `/oauth/v2/login?idp={MyIdpAlias}&cont=`. For example, `/oauth/v2/login?idp=Google&cont=`. This setting will apply to all deeplinks in your app.
 
-To use OIDC SSO module in conjunction with the DeepLink module, you can choose between the following methods of selecting an IdP:
+To use OIDC SSO module in conjunction with the DeepLink module, you can choose between the methods described in the following sections to select an IdP.
 
 ### 8.4 Logging Out
 
@@ -646,7 +652,7 @@ A standard logout action will end an end-user's Mendix session, but will not end
 
 To do this, add a menu item or button for your end-users that calls the nanoflow `ACT_Logout`.
 
-### 8.5 Use ACR to Request Authentication Method
+### 8.5 Using ACR to Request Authentication Method
 
 By default, the OIDC SSO module does not care how users are signed in at your IdP, that is left to the discretion of the IdP. In some cases your IdP may support different methods for end-users to be authenticated and your app may want to indicate a preference.
 

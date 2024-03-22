@@ -10,9 +10,9 @@ tags: ["studio pro", "mendix assist", "validation assist", "bot", "validation bo
 
 The Validation Assist helps you build validation microflows in a more automated way using pre-built expressions. [Validation rules](/refguide/validation-rules/) are conditions that should be satisfied before an object is committed. There are different ways to [set up data validations](/refguide/setting-up-data-validation/) in Mendix. Building data validation in microflows is a manual and repetitive task and Validation Assist helps automate it. 
 
-The main features of the Validation Assist are the following:
+The main features of the Validation Assist are as follows:
 
-* List of checks for all members which data type can be empty, for example, when a customer’s name is not filled in a form  
+* List of checks for all members whose data type can be empty, such as when a customer’s name is left unfilled in a form  
 * Prefilled dialog box with microflow and validation properties
 * Ability to extract validations as a sub-microflow 
 * Ability to call an existing validation sub-microflow in a new validation microflow
@@ -20,7 +20,7 @@ The main features of the Validation Assist are the following:
 
 ## 2 Validation Assist Overview
 
-The Validation Assist is activated by default in the page elements where data validation might be needed. These elements are the following:
+The Validation Assist is activated by default in the page elements where data validation might be needed. These elements include:
 
 * A button with the **Save changes** on-click event
 * A button with the **Call microflow** on-click event
@@ -48,12 +48,12 @@ The **Generate Validation Microflow** dialog box allows you to configure all val
 
 The dialog box consists of two sections:
 
-* **Microflow Properties,** where the general properties of the validation microflow are configured. These properties include:
+* **Microflow Properties** where the general properties of the validation microflow are configured. These properties include:
 
-    * **Microflow** – Microflow name
-    * **Commit** – Defines whether changes should be committed to the database (only for buttons)
-    * **Close Page** – Defines whether the page should be closed after clicking the button (only for buttons)
-    * **On Event** – Defines when to trigger the validation check (only for input widgets), for more information on events, see [On Click Events and Events Section](/refguide/on-click-event/)
+    * **Microflow** – microflow name
+    * **Commit** – defines whether changes should be committed to the database (only for buttons)
+    * **Close Page** – defines whether the page should be closed after clicking the button (only for buttons)
+    * **On Event** – defines when to trigger the validation check (only for input widgets); for more information on events, see [On Click Events and Events Section](/refguide/on-click-event/)
 
 * **Validations** where validations for the microflow are configured. This section contains the following: 
 
@@ -84,7 +84,7 @@ To configure the **Save** button for the use case above, do the following:
 
     {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-validation-assist/generate-validation-microflow-option.png" alt="Generate Validation Microflow Option" >}}
 
-3. In the **Generate Validation Microflow** dialog box, you can see that **Microflow** properties, for example, a microflow name, and validations were configured for you. Three expressions were added to validations: to check if the name, treatment type, and date and time fields are filled in.
+3. In the **Generate Validation Microflow** dialog box, you can see the **Microflow Properties**, for example, a microflow name, and validations were configured for you. Three expressions were added to validations: to check if the name, treatment type, and date and time fields are filled in.
 
     {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-validation-assist/generate-validation-microflow-dialog.png" alt="Generate Validation Microflow Dialog Box" >}}
 

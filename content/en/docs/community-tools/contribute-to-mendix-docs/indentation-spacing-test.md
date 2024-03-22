@@ -405,3 +405,12 @@ A new list
 
 {{% button color="outline-dark" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Dark" title="What do you think of this button?" %}}
 
+## Test Links{#test-links}
+
+### [This is a link](/developerportal/community-tools/indentation-spacing-test/)
+
+[Internal Link](/developerportal/community-tools/indentation-spacing-test/)
+
+[Internal Anchor](/developerportal/community-tools/indentation-spacing-test/#test-links)
+
+[External Link](https://news.bbc.co.uk)

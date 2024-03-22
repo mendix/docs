@@ -231,30 +231,19 @@ a:not(.btn):not(.td-sidebar-link):visited {
     color: $purple;
 }
 
-// Define list of top-level domains
-$tlds: ".co", ".org", ".io", ".net", ".gov", ".edu", ".nl", ".de";
-
-// Add external icon after links with the specified domains
-main a {
-  @each $tld in $tlds {
-    &[href*="#{$tld}"]:not(.btn)::after {
-        display: inline-block;
-        width: 1rem;
-        height: 1rem;
-        margin-left: .2rem;
-        vertical-align: sub;
-        content: url("/icons/external-unvisited.svg"); // Fill color is $link-color (blue-8 from PDS). Keep it updated with _variables_project.scss.
-    }
-  }
+// Add icon after external links in main content (but exclude buttons)
+main a[href*="https://"]:not(.btn)::after {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    margin-left: .2rem;
+    vertical-align: sub;
+    content: url("/icons/external-unvisited.svg"); // Fill color is $link-color (blue-8 from PDS). Keep it updated with _variables_project.scss.
 }
 
 // Change external link icon (color) upon hover
-main a {
-    @each $tld in $tlds {
-      &[href*="#{$tld}"]:hover:not(.btn)::after {
+main a[href*="https://"]:hover:not(.btn)::after {
           content: url("/icons/external-hover.svg"); // Fill color is $link-color (blue-8 from PDS). Keep it updated with _variables_project.scss.
-      }
-    }
 }
 
 .btn {

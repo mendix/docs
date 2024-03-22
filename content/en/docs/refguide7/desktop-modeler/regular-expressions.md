@@ -98,4 +98,4 @@ The following quantifiers can be used:
 ## **Read More**
 
 * [https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html#matches-java.lang.String-java.lang.CharSequence-](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html#matches-java.lang.String-java.lang.CharSequence-)
-* [http://www.regular-expressions.info/java.html](http://www.regular-expressions.info/java.html)
+* [http://www.regular-expressions.info/java.html](https://www.regular-expressions.info/java.html)

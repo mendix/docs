@@ -139,4 +139,4 @@ The debugger is now connected to your app running in the cloud.
 * [Log Levels](/howto8/monitoring-troubleshooting/log-levels/)
 * [Debug Microflows](/howto8/monitoring-troubleshooting/debug-microflows/)
 * [Debug Java Actions](/howto8/monitoring-troubleshooting/debug-java-actions/)
-* [The Ultimate Debugger](http://www.mendix.com/tech-blog/the-ultimate-debugger/) 
+* [The Ultimate Debugger](https://www.mendix.com/tech-blog/the-ultimate-debugger/) 

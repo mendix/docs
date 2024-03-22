@@ -178,7 +178,7 @@ If you know your JavaScript action does not require this extended precision (for
 var numberValue = Number(bigJsValue); // number
 ```
 
-For information on how to use *Big.js*, consult [big.js API](https://mikemcl.github.io/big.js/).
+For information on how to use *Big.js*, consult the [big.js API](https://mikemcl.github.io/big.js/).
 
 #### 2.2.3 Creating Objects
 

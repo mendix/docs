@@ -8,7 +8,7 @@ tags: ["marketplace", "content ", "best practices", ""]
 
 ## 1 Introduction
 
-This document is an addition to the [Mendix Marketplace Guidelines](/url-needed). It aims to provide partners with best practices, recommendations, and tips for preparing a product as well as submitting it to the public Marketplace.  
+This document is an addition to the [Mendix Marketplace Guidelines](/url-needed). It aims to provide content creators with best practices, recommendations, and tips for preparing a product as well as submitting it to the public Marketplace.  
 
 You will find information on the following topics:
 
@@ -25,7 +25,7 @@ Operational recommendations for support and product lifecycle
 
 Mendix applications, widgets, and modules are developed by Mendix, so traditional code-based SAST scanners will not be very helpful in detecting security issues in the low code. They also cannot point out security misconfigurations—if any. Mendix recommends using a tool that can look into security best practices outlined in [Implement Best Practices for App Security](/howto/security/best-practices-security/) and pointing out any security misconfigurations and bad practices. 
 
-Mendix Marketplace contains the following products which you can use for the check: [Clevr ACR](https://marketplace.mendix.com/link/component/114669), [SIG QSM/AQM](https://www.softwareimprovementgroup.com/solutions/sigrid-for-mendix-application-quality-monitoring/), [Bizzomate](https://chrome.google.com/webstore/detail/bizzomate-mendix-dev-tool/nkbokoloejkhohjlickhfkjfmbmboaof), [Omnext Software Analyses Suit](https://marketplace.mendix.com/link/component/120746). These can be used to inspect and correct your modules and widgets. Mendix recommends partners inspect the component before onboarding content on the Marketplace. 
+Mendix Marketplace contains the following products which you can use for the check: [Clevr ACR](https://marketplace.mendix.com/link/component/114669), [SIG QSM/AQM](https://www.softwareimprovementgroup.com/solutions/sigrid-for-mendix-application-quality-monitoring/), [Bizzomate](https://chrome.google.com/webstore/detail/bizzomate-mendix-dev-tool/nkbokoloejkhohjlickhfkjfmbmboaof), [Omnext Software Analyses Suit](https://marketplace.mendix.com/link/component/120746). These can be used to inspect and correct your modules and widgets. Mendix recommends content creators inspect the component before onboarding content on the Marketplace. 
 
 ### 2.2 Architectural Best Practices (Recommended)
 

@@ -231,8 +231,8 @@ a:not(.btn):not(.td-sidebar-link):visited {
     color: $purple;
 }
 
-// Add icon after external links in main content (but exclude buttons)
-main a[href*="https://"]:not(.btn)::after {
+// Add icon after external links in main content (but exclude buttons and breadcrumb)
+main a[href*="https://"]:not(.btn):not(.td-breadcrumbs a)::after {
     display: inline-block;
     width: 1rem;
     height: 1rem;
@@ -242,7 +242,7 @@ main a[href*="https://"]:not(.btn)::after {
 }
 
 // Change external link icon (color) upon hover
-main a[href*="https://"]:hover:not(.btn)::after {
+main a[href*="https://"]:hover:not(.btn):not(.td-breadcrumbs a)::after {
           content: url("/icons/external-hover.svg"); // Fill color is $link-color (blue-8 from PDS). Keep it updated with _variables_project.scss.
 }
 

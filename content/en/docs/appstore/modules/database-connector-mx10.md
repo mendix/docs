@@ -41,14 +41,15 @@ This connector supports the following statements:
 * `UPDATE`
 * `DELETE`
 
+{{% alert color="info" %}} Stored **Procedures** with no parameters are supported in Studio Pro 10.9 and above. {{% /alert %}}
+
 ### 1.3 Limitations 
 
 * `SELECT` queries can be saved only if they are successfully executed and a response structure is created
 * The connector supports columns with primitive data types only
 * If column names contain special characters, use an alias for the column name
 * Parameters are only supported for filter values (prepared statements)
-* In Database Connection document, parameters with empty test-values are not supported 
-* Stored Procedures with no parameters are only supported (from Studio Pro 10.9 or above)
+* Parameters with empty test values are not supported in the database connection document
 
 ### 1.4 Prerequisites
 

@@ -106,7 +106,7 @@ The requirements for the product description are as follows:
 
 Tips that may help you write a proper product description:
 
-*   The product description should cover the key answers that developers have when they look for content.
+*   The product description should cover answers to the key questions that developers have when they look for content.
 
 *   The product description should cover the product benefits. Rather than covering many technical features (which you can also cover in the **Documentation** tab), the **Overview** tab can draw attention to the benefits. Specify how your product can improve customers' app development or work life in general. Before writing the description, what can help you is outlining the features and benefits of your product. For every feature you list, think about how it will directly benefit a customer.
     
@@ -119,7 +119,7 @@ Tips that may help you write a proper product description:
 
 ### 3.4 Screenshots and Assets
 
-A picture says more than 1,000 words! Share up to 10 screenshots of your offering to showcase what your offering looks like, so future users know what to expect. You can also upload asset links like white papers, eBooks, testimonials.
+A picture says more than 1,000 words! Share up to 10 screenshots of your offering to showcase what your offering looks like so that future users know what to expect. You can also upload asset links like white papers, eBooks, and testimonials.
 
 ### 3.5 Video or Demo (Optional)
 
@@ -129,13 +129,13 @@ Did you know that people retain 95% of a video’s message in comparison with 10
 
 ### 4.1 Terms & Conditions 
 
-If your product is not licensed as an open-source component and you would like to specify some certain licensing terms and conditions or end-user license agreements, we recommend creating a document, which should cover the following topics:
+If your product is not licensed as an open-source component and you would like to specify certain licensing terms and conditions or end-user license agreements, we recommend creating a document that covers the following topics:
 
 * Copyright information and license conditions 
 
 * IP Usage – list of OSS/commercial licenses used 
 
-  This is the template of the declaration you can use for terms & conditons.
+  Below is a declaration template you can use for terms & conditions.
 
 | Software Name and Version | Software URL | What does the Software do? Why is it needed? |License|
 |-|-|-|-|
@@ -147,11 +147,11 @@ If your product is not licensed as an open-source component and you would like t
 
 ### 4.2 Support Recommendations 
 
-The objective is to provide the best level of support to customers of the product. To that end, we provide the following recommendations:
+The objective is to provide the best level of support to customers of the product. To that end, we offer the following recommendations:
 
 *   Set up a Service Level Agreement (SLA). For inspiration, consider the Mendix SLA as one example.
 *   Provide customers 24 x 7 x 365 support with global coverage. Ideally, a dedicated support team is available. In any case, make it straightforward for customers to identify which team or contact person gives them support. Ensure proper Mendix training for the team—Mendix Advanced Certification is recommended.
-*   Monitor customer satisfaction with both the product itself and the support you are providing on a continuous basis.
-*   The support team should have a direct line of communications with the engineering team delivering the product as second-or third-line support.
-*   Put internal procedures in place for the management of changes, incidents, and escalations.
+*   Continuously monitor customer satisfaction with both the product itself and the support you are providing.
+*   The support team should have a direct line of communication with the engineering team delivering the product as second- or third-line support.
+*   Put internal procedures in place to manage changes, incidents, and escalations.
 *   Make a status page like status.mendix.com available for all customers.

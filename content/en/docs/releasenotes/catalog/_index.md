@@ -1104,6 +1104,6 @@ No more! We are very proud to announce that [Mendix Data Hub](https://catalog.me
 
 Every organization has valuable data in different applications. With Mendix Data Hub, you can use the data from different sources in your app without having to deal with complex integrations. All you need to do is just search for the data, add it to your domain model, and use it.
 
-Want to know how it can help you? Check out the launch blog post: [Data Hub: The Low-Code Approach to Data Integration](http://www.mendix.com/blogs/data-hub-the-low-code-approach-to-data-integration).
+Want to know how it can help you? Check out the launch blog post: [Data Hub: The Low-Code Approach to Data Integration](https://www.mendix.com/blogs/data-hub-the-low-code-approach-to-data-integration).
 
 For even more information, please consult the [Data Hub Guide](/data-hub/).

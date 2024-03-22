@@ -154,9 +154,9 @@ When using the Database connector, keep these best practices in mind:
 ## 5 Common JDBC Drivers{#links}
 
 * [Amazon Redshift](https://docs.aws.amazon.com/redshift/latest/mgmt/configure-jdbc-connection.html#download-jdbc-driver)
-* [Apache Derby](http://db.apache.org/derby/derby_downloads.html)
-* [Firebird](http://www.firebirdsql.org/en/jdbc-driver/)
-* [H2 Database Engine](http://www.h2database.com/html/main.html)
+* [Apache Derby](https://db.apache.org/derby/derby_downloads.html)
+* [Firebird](https://www.firebirdsql.org/en/jdbc-driver/)
+* [H2 Database Engine](https://www.h2database.com/html/main.html)
 * [HSQLDB](https://sourceforge.net/projects/hsqldb/files/)
 * [IBM DB2](https://www.ibm.com/support/pages/download-initial-version-115-clients-and-drivers)
 * [IBM Informix](https://www.ibm.com/products/informix?mhsrc=ibmsearch_a&mhq=informix)

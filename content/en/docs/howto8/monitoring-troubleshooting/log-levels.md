@@ -124,4 +124,3 @@ To set the level of custom log messages that you have created via a microflow, f
 * [Monitor Mendix Using JMX](/howto8/monitoring-troubleshooting/monitoring-mendix-using-jmx/)
 * [Debug Microflows](/howto8/monitoring-troubleshooting/debug-microflows/)
 * [Debug Java Actions](/howto8/monitoring-troubleshooting/debug-java-actions/)
-* [A Script to Set the Log Node Levels in Mendix](http://www.mxblog.eu/p/post/2533274790397906)

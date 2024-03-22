@@ -151,7 +151,7 @@ The attributes of the **System.SoapFault** entity are shown below:
 | Role | String | The role element of the SOAP fault. |
 | Detail | String | The detail element of the SOAP fault. |
 
-For more information, see [SOAP Fault](http://www.w3.org/TR/soap12-part1/#soapfault).
+For more information, see [SOAP Fault](https://www.w3.org/TR/soap12-part1/#soapfault).
 
 ## 5 Best Practices
 

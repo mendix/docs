@@ -22,7 +22,7 @@ Unlicensed apps, running outside Mendix Cloud, have some restrictions. These res
 | **Time limitation** | Runtime stops after 2-4 hours (randomly chosen) regardless of user activity.³ | Does not have a time limitation. |
 | **Number of Named Users** | No limit | Depends on your pricing plan.¹ |
 
-¹ More information on the capabilities of different license options is available on [Mendix Platform Pricing](http://www.mendix.com/pricing).
+¹ More information on the capabilities of different license options is available on [Mendix Platform Pricing](https://www.mendix.com/pricing).
 
 ² End-users of your app are classified as either internal or external. You will need to report this for licensing purposes using either the [`USAGE_METRICS_EMAIL_FIELDS` custom variable](/developerportal/deploy/environments-details/#custom-environment-variables) (if you are using email domain to distinguish between them) or by [populating the user type](/howto/monitoring-troubleshooting/populate-user-type/) for each end-user of your app. Only end-users whose Mendix accounts are marked as **Active** are counted towards the number of end-users of the app.
 

@@ -154,7 +154,7 @@ The following table shows the attributes of System.Error and System.SoapFault.
 | System.SoapFault | Role | String | The Role element of the SOAP fault. |
 | System.SoapFault | Detail | String | The Detail element of the SOAP fault. |
 
-Click [here](http://www.w3.org/TR/soap12-part1/#soapfault) for more information on SOAP faults.
+Click [here](https://www.w3.org/TR/soap12-part1/#soapfault) for more information on SOAP faults.
 
 {{% alert color="warning" %}}
 

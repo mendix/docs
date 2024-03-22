@@ -14,7 +14,7 @@ Your team can include all of your colleagues working on an app. As well as devel
 
 To view and manage your team members, follow these steps:
 
-1. In the [Developer Portal](http://sprintr.home.mendix.com), select the app you want to manage.
+1. In the [Developer Portal](https://sprintr.home.mendix.com), select the app you want to manage.
 2. In the navigation pane, click **Team**.
 
 ## 2 Managing the Team {#managing}

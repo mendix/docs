@@ -29,7 +29,7 @@ Mendix supports functionality to extract a part of a date and time in a query. I
 
 In Mendix, DateTimes are stored in the UTC time zone. For these functions to work correctly, it is important that the database supports converting dates and times from UTC to another time zone. If this is not possible, the functions will operate on the date and time in the UTC time zone. That can lead to incorrect results if the user expects the date to work in their time zone.
 
-MySQL does not fully support time zone conversion out-of-the-box. You have to fill in some time zone tables (for more details, see [5.1.14 MySQL Server Time Zone Support](http://dev.mysql.com/doc/refman/8.0/en/time-zone-support.html)). You do not have to do this if you do not use this sort of function in your queries, or if you always want to work with UTC dates and times.
+MySQL does not fully support time zone conversion out-of-the-box. You have to fill in some time zone tables (for more details, see [5.1.14 MySQL Server Time Zone Support](https://dev.mysql.com/doc/refman/8.0/en/time-zone-support.html)). You do not have to do this if you do not use this sort of function in your queries, or if you always want to work with UTC dates and times.
 
 MariaDB supports an identical configuration for time zone conversions.
 

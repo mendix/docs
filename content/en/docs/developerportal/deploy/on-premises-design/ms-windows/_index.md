@@ -52,7 +52,7 @@ Before starting this how-to, make sure you have the following prerequisites:
 
 To download and install the Mendix Service Console, follow these steps:
 
-1. Download the latest version of the [Windows Service Console](https://marketplace.mendix.com/link/component/223425) module from the Marketplace.
+1. Download the latest version of the [Mendix Service Console](https://marketplace.mendix.com/link/component/223425) module from the Marketplace.
 
     {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/service_console_download.png" >}}
 

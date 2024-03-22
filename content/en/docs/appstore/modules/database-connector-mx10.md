@@ -47,6 +47,8 @@ This connector supports the following statements:
 * The connector supports columns with primitive data types only
 * If column names contain special characters, use an alias for the column name
 * Parameters are only supported for filter values (prepared statements)
+* In Database Connection document, parameters with empty test-values are not supported 
+* Stored Procedures with no parameters are only supported (from Studio Pro 10.9 or above)
 
 ### 1.4 Prerequisites
 

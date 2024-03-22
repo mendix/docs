@@ -57,7 +57,7 @@ For example: `*Database*_DBsource.`
 
 ### 3.2 Explore Schemas of a Connected Database
 
-WHen the connection is successful and saved, you can search the **Browse database** tab for Tables, Views, stored Procedures, and Functions.
+When the connection is successful and saved, you can search the **Browse database** tab for Tables, Views, Procedures, and Functions.
 
 {{< figure src="/attachments/howto/integration/use-the-external-database-connector/3.png" >}}
 

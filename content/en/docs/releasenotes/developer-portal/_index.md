@@ -462,7 +462,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Deprecations
 
-* We have deprecated **General Settings** > **Webhooks** for stories and Sprints. For more information, see the deprecation note in the [Webhooks](/developerportal/collaborate/general-settings/#webhooks) section of *General Settings*. You can now set webhooks for building and deploying your app. These are described in [Webhooks](/developerportal/deploy/webhooks/).
+* We have deprecated **General Settings** > **Webhooks** for stories and Sprints. You can now set webhooks for building and deploying your app. These are described in [Webhooks](/developerportal/deploy/webhooks/).
 
 ### March 9, 2023
 

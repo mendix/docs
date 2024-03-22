@@ -21,7 +21,7 @@ This how-to covers the basics of accessing the Marketplace from Studio Pro and p
 This how-to teaches you how to do the following:
 
 * Download content from the Marketplace via Studio Pro
-* Use content (for example, widgets, modules, and connectors) downloaded from the Marketplace in Studio Pro
+* Use content (for example, widgets and modules) downloaded from the Marketplace in Studio Pro
 
 {{% alert color="warning" %}}
 If you are using Studio Pro on a Mac with Parallels, see [this update](https://kb.parallels.com/112091#section7) for improving the loading time of Marketplace in Studio Pro.
@@ -61,13 +61,13 @@ To download content in Studio Pro [9.19](/releasenotes/studio-pro/9.19/) and abo
 
 6. <a id="step-six"></a>Click **Download** to download the component. The correct version of the component that is compatible with your Studio Pro version is integrated directly into your application (for widgets, version compatibility is not applicable). By default, the highest correct version of the component is downloaded. If you want to download an older component version, go to the **Releases** tab and click **Download** for the desired version.
     * If you download a widget,  a pop-up window states the module was successfully imported; click **OK**, and you can find the imported widget in the **Toolbox**
-    * If you download a module or a connector, the **Import Module** dialog box opens, where you should perform the following steps:
+    * If you download a module, the **Import Module** dialog box opens, where you should perform the following steps:
         1. Select one of these options:
             * **Add as a new module** (default option when the module is downloaded to your app for the first time ) – if you select this option, new entities and attributes are created in your app
             * **Replace existing module** (default option when the module already exists in your app) – if you select this option, you need to specify which **Module to replace**
             {{% alert color="warning" %}}If you have made any changes to the existing module, selecting the **Replace existing module** option will replace all the changes that you made (for example, your renamed entities, attributes, and associations as well as their respective tables and columns represented in the database will all be replaced). Your user data will stay if you have not changed entities, attributes, or associations. If you have changed data types, your user data can be influenced as well. For more information, see [Attribute Type Migration](/refguide/attributes-type-migration/).{{% /alert %}}
         2. Click **Import**.
-        3. Wait until a pop-up window states that the module was successfully imported. Click **OK**. You can find the imported module or connector in the **App Explorer**.
+        3. Wait until a pop-up window states that the module was successfully imported. Click **OK**. You can find the imported module in the **App Explorer**.
     * If you download an app, the **Download Marketplace App** dialog box opens, where you should perform the following steps:
         1. Select where the app should be stored: **New Mendix Team Server**, **Existing Mendix Team Server**, or **Locally on disk**. 
         2. Configure the necessary settings based on your storage choice.
@@ -110,7 +110,7 @@ To import content downloaded from the online Mendix Marketplace into Studio Pro,
 7. Click **Import**. 
 8. Wait until a pop-up window states that the module was successfully imported. Click **OK**. 
 
-You can find the imported module or connector in the **App Explorer**.
+You can find the imported module in the **App Explorer**.
 
 ### 2.3 Manually Adding Content into App Directory {#add}
 
@@ -231,7 +231,41 @@ Each module that you download from the Marketplace is different. Some modules ca
 
 Keep in mind that some modules you can download may come with their own user roles. If the **Security level** of your app is set to **Prototype/demo** or **Production**, you need to map the module roles to the applicable user roles in your app.
 
-### 3.3  Using a Starter App
+### 3.3 Using an Extension
+
+Extensions are a functionality in Studio Pro that allows you to add new functionality to your development environment. 
+
+Extensions are part of your application, and therefore will become available to all members of your app who are developing it. 
+
+Currently, extensions can only be created by Mendix Partners and are available from Studio Pro 10.6.3 and above.
+
+#### 3.3.1 Studio Pro Extensions API
+
+The Studio Pro Extensions API allows you to customize different parts of Mendix Studio Pro by adding a new functionality to them, as well as interact with the open app model. 
+
+Customizable interface elements are panes, top bar menus, context menus in the domain model and [App Explorer](/refguide/app-explorer/). 
+
+It is possible to add new functionality to these elements and add custom interfaces that interact with the current open app model.
+
+#### 3.3.2 Installing Extensions
+
+Extensions come as part of [add-on modules](/refguide/consume-add-on-modules-and-solutions/). This means you can download them directly from the marketplace. 
+
+Once you find an extension you would like to use from the Marketplace, you can follow the following steps: 
+
+1. Open the extension in the Marketplace and click **Download**.
+
+2. A warning opens. Click **Trust module and enable extension**. If you decide to not trust the extension, you will get asked whether or not to trust the extension every time you reload the application. 
+    If you do not want to trust the extension and would prefer to remove the extension altogether, you can remove the add-on module that was added:
+
+    {{< figure src="/attachments/appstore/overview/use-content/trust-extension.png" alt="trust extension" >}}
+
+3. Click on **OK** in the confirmation pop-up window. 
+
+
+Your extension is now installed and is ready to use. Depending on the extension that you have installed, the functionality will appear in a certain location of your app. Read the extension specific documentation to get more information on how to use it. 
+
+### 3.4  Using a Starter App
 
 Downloading a starter app (via **Create New App**) creates a new app structure in the storage location that you select. After you click **Download**, a window will appear where you can specify how the app should be created.
 

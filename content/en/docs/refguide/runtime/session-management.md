@@ -52,7 +52,11 @@ There is a custom runtime setting, [`com.mendix.webui.HybridAppLoginTimeOut`](/r
 
 ### 3.1 Native and Offline PWA Applications
 
-In Mendix version 10.9.0 and above, login should always support authentication tokens. 
+This feature maintains backward compatibility, If end users haven't updated their apps on their devices, but the runtime is a newer version, it still functions correctly to support the previous session management methods.
+
+Upgraded offline-first applications to version 10.9 or above, that currently use the client API, `login`, will use the new authentication token system by default as we internally call the new API login2 and enable the authentication token system. If you do not want your offline-first app to create an authentication token, you can disable it by using the new API, `login2`, but setting the `useAuthToken` parameter to `false`.
+
+Applications created with version 10.9 or above, whether offline or online, have the flexibility to enable or disable the authentication token system via the client API 'login2' and set the 'useAuthToken' parameter according to their preferences.
 
 This means that when offline-first applications below Mendix version 10.9 using long-lived sessions are upgraded to version 10.9.0 or above, the authentication token approach will provide the same behavior.
 

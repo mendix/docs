@@ -104,7 +104,7 @@ To configure the **Save** button for the use case above, do the following:
     4. In the **Expression** field, fill in *$Appointment/Customer_Name*. 
     5. Click **OK** to save changes.
 
-6. You would like to save validations for the **Customer_Name** attribute (ensuring that the name is not empty and consists of alphabets only) as a sub-microflow to use them as a separate validation on a different page.  Do the following:
+6. You would like to save validations for the **Customer_Name** attribute (ensuring that the name is not empty and consists of alphabets only) as a sub-microflow to use them as a separate validation on a different page. Do the following:
 
     1. In the **Generate Validation Microflow** dialog box, select two validations for *Customer_Name* and click **Extract submicroflow**.
 

@@ -41,6 +41,10 @@ Each time, you can only export initiatives from one portfolio. It is not possibl
 The initiatives are exported to an Excel file.
 
 {{% alert color="info" %}}
+Exported columns may change as new fields are added to Portfolio Management.
+{{% /alert %}}
+
+{{% alert color="info" %}}
 All the details of an initiative are exported, except the data of the following fields:
 
 * **Linked Apps**

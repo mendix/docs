@@ -485,25 +485,25 @@ If you are using Atlas v2.x and you cannot upgrade to Atlas 3 at the moment, ple
 ],
 ```
 
-## 12 In-memory selection {#selection}
+## 12 In-Memory Selection {#selection}
 
 {{% alert color="info" %}}
-In-memory selection is introduced in Data Widgets v2.7.0.
+In-memory selection was introduced in Data Widgets v2.7.0.
 {{% /alert %}}
 
-Enabling selection allows users to select a row by clicking the row or a checkbox. Selection is disabled by default and can be activated by changing the 'Selection' setting from 'None' to either 'Single' or 'Multi'.
+Enabling selection allows users to select a row by clicking the row or a checkbox. Selection is disabled by default, and can be activated by changing the **Selection** setting from **None** to either **Single** or **Multi**.
 
-Since Data Grid keep selected items in short-living memory that is cleared evry time you chaning datagrid page, selecting items across multiple pages is not supported. This means that  the user can select only items that are currently visible.
+Since the data grid widget keeps selected items in short-living memory that is cleared every time you change the data grid page, selecting items across multiple pages is not supported. This means that the end-user can  only select items that are currently visible.
 
-### 12.1 Selection mode
+### 12.1 Selection Mode
 
-In Single selection mode, users are limited to selecting one row at a time. In Multi mode, the user can select multiple rows.
+In **Single** selection mode, users are limited to selecting one row at a time. 
 
-### 12.2 Selection method
+In **Multi** mode, the user can select multiple rows.
+
+### 12.2 Selection Method
 
 When selection is enabled, you can choose a method for selecting rows. The 'Checkbox' method adds a checkbox to the beginning of each row, and the user must click the checkbox to select the row. In contrast, the 'Row' method does not add any additional controls to the row, and the user must click the row itself to select that row.
-
-
 
 ### 12.3 Show (un)check all toggle
 

@@ -25,7 +25,7 @@ Other components of the Mendix Client are the same in both the React and Dojo cl
 
 The Mendix Client is a part of every application built with Mendix: both web and mobile.
 
-For **web applications**, Mendix Client acts as a single page application. This means that all paging is handled by the Mendix Client, rather than being separate pages served using different URLs.
+For **web applications**, the Mendix Client acts as a single page application. This means that all paging is handled by the Mendix Client, rather than being separate pages served using different URLs.
 
 The Mendix Dojo Client is bootstrapped by loading a `mxui.js` script from an HTML page provided by the *theme*.
 
@@ -47,7 +47,7 @@ Here is a chart showing the components of the Mendix Client (for more informatio
 
 ### 2.1 Client Core
 
-This can be seen as the interpreter of the client. It uses the client config and client state to decide how to process a request from the end-user.
+The Client Core can be seen as the interpreter of the client. It uses the client config and client state to decide how to process a request from the end-user.
 
 The client core controls the various processes which need to take place to service the request. These processes include data fetching and manipulation, client-side expressions, and navigation.
 
@@ -57,11 +57,11 @@ Mendix apps do not modify the client core, all logic is held in the model. Howev
 
 ### 2.2 Widgets
 
-These are the fundamental building blocks of the Mendix Client. All the actions which the client takes are controlled by widgets. They are responsible for what is displayed on pages, and how user input is managed. There is a more detailed description of widgets in [Widgets](#widgets), below.
+Widgets are the fundamental building blocks of the Mendix Client. All the actions which the client takes are controlled by widgets. They are responsible for what is displayed on pages, and how user input is managed. There is a more detailed description of widgets in [Widgets](#widgets), below.
 
 ### 2.3 JavaScript Actions
 
-This runs custom JavaScript, added by the app developer, which is held as JavaScript actions in the client config.
+JavaScript Actions run custom JavaScript, added by the app developer, which are held in the client config.
 
 ### 2.4 UI Layer
 
@@ -73,43 +73,45 @@ The HTTPS server serves pages, widgets, and JavaScript actions (held in the mode
 
 ### 2.6 Logic
 
-This runs client-side logic, which is defined in the model's nanoflows.
+Logic runs client-side logic, which is defined in the model's nanoflows.
 
 ### 2.7 Platform APIs
 
-These are functions of the environment in which the Mendix Client is running. In most cases this will be a function of a mobile device, such as the camera or GPS location. However, it can also include making calls to Mendix Native APIs or browser functions (such as accessing an image file).
+Platform APIs are functions of the environment in which the Mendix Client is running. In most cases these will be a function of a mobile device, such as the camera or GPS location. However, they can also include making calls to Mendix Native APIs or browser functions (such as accessing an image file).
 
 ### 2.8 Client Config
 
-This is the static data which is needed by the Mendix Client. For a browser-based client, this data is held online with the Runtime Server. For native mobile apps, this is held locally on the device.
+Client Config is the static data which is needed by the Mendix Client. For a browser-based client, this data is held online with the Runtime Server. For native mobile apps, this is held locally on the device.
 
-These include the initial environment (for example, the browser shell page) needed to start the Mendix Client, Cascading Style Sheets (CSS files) which define the app’s theme, and JavaScript files which define client-side logic.
+The Client Config includes the initial environment (for example, the browser shell page) needed to start the Mendix Client, Cascading Style Sheets (CSS files) which define the app’s theme, and JavaScript files which define client-side logic.
 
 ### 2.9 Data API
 
-This allows the Mendix Client to fetch and manipulate data in offline storage or the Mendix Runtime.
+The Data API allows the Mendix Client to fetch and manipulate data in offline storage or the Mendix Runtime.
 
 ### 2.10 Object Cache{#object-cache}
 
-This holds and manages objects which are being used by the Mendix Client in memory – for example non-persistable objects, new objects, and objects returned by the Runtime Server to be displayed on a page. It also holds changes to attributes and associations for these objects.
+The Object Cache holds and manages objects which are being used by the Mendix Client in memory – for example non-persistable objects, new objects, and objects returned by the Runtime Server to be displayed on a page. It also holds changes to attributes and associations for these objects.
 
 State handling will perform garbage collection to ensure that memory is released when it is no longer needed.
 
 ### 2.11 Offline Storage
 
-This is permanent storage (usually on a mobile device) where data can be stored for apps which are running in offline mode. It differs from the temporary object storage in that data here is not lost at the end of a session, but is kept until it can be synced to the Runtime Server.
+Offline Storage is permanent storage (usually on a mobile device) where data can be stored for apps which are running in offline mode. It differs from the temporary object storage in that data here is not lost at the end of a session, but is kept until it can be synced to the Runtime Server.
 
 ### 2.12 State/Sync/Session
 
-This manages requests to the Runtime Server. Note that some actions in the Mendix Client will not require access to the Runtime Server. For example, if the Object Cache already has access to the required data in the temporary object storage, or if the app is offline-first. 
+State, Synchronization, and Session handling manages requests to the Runtime Server. Note that some actions in the Mendix Client will not require access to the Runtime Server. For example, if the Object Cache already has access to the required data in the temporary object storage, or if the app is offline-first. 
 
 For more information on offline-first app types, see [Introduction to Mobile Technologies](/refguide/mobile/introduction-to-mobile-technologies/).
 
 For more information about the communication between the Mendix Client and the Runtime Server, see [Communication Patterns in the Mendix Runtime](/refguide/communication-patterns/).
 
+The three functions are described separately, below.
+
 #### 2.12.1 State Handling
 
-This communicates the current state of the app (held in the object cache) to the Runtime Server. As the state is held in the Mendix Client, the Runtime Server can be stateless. This ensures that it is easier to scale your app horizontally by adding more instances as any instance can handle any request.
+State Handling communicates the current state of the app (held in the object cache) to the Runtime Server. As the state is held in the Mendix Client, the Runtime Server can be stateless. This ensures that it is easier to scale your app horizontally by adding more instances as any instance can handle any request.
 
 To avoid performance issues, the Mendix Client does not send the entire state to the runtime. State handling decides which parts of the state should be sent by analyzing the model during app deployment. This analysis consists of two parts. 
 
@@ -133,7 +135,7 @@ If an app is offline-first, data created and changed in the app is stored locall
 
 #### 2.12.3 Session
 
-This ensures that any session with the runtime is kept alive and restored if necessary. It also acts as the authentication for all communications with the runtime which require it.
+Session management ensures that any session with the runtime is kept alive and restored if necessary. It also acts as the authentication for all communications with the runtime which require it.
 
 ### 2.13 Runtime Server
 

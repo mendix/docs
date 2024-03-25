@@ -29,7 +29,7 @@ For **web applications**, the Mendix Client acts as a single page application. T
 
 The Mendix Dojo Client is bootstrapped by loading a `mxui.js` script from an HTML page provided by the *theme*.
 
-The Mendix React client is bootstrapped in different way. It loads the `index.js` file which loads the `common.js` with the Mendix client. More JavaScript files will be loaded after this that contain page, layout, and nanoflow definitions.
+The Mendix React client is bootstrapped in different way. It loads the `index.js` file which loads the `common.js` with the Mendix client. More JavaScript files that contain page, layout, and nanoflow definitions will be loaded after this.
 
 For **mobile applications**, the Mendix Client acts as a React Native application. This means that apps created by Mendix consist of two parts: a *wrapper* and a *bundle*. The wrapper is a native iOS or Android application that loads the bundle and exposes platform functionality to it. The bundle includes Client Core, Pluggable Widgets, and application-specific resources like nanoflows and pages.
 
@@ -107,7 +107,7 @@ For more information on offline-first app types, see [Introduction to Mobile Tec
 
 For more information about the communication between the Mendix Client and the Runtime Server, see [Communication Patterns in the Mendix Runtime](/refguide/communication-patterns/).
 
-The three functions are described separately, below.
+The three functions (state, sync, and session) are described separately, below.
 
 #### 2.12.1 State Handling
 
@@ -121,7 +121,7 @@ Firstly, during deployment, all microflows “reachable” from the client are a
 * Microflows called from a nanoflow
 * Microflows called from the page
 
-This analysis is done based on the microflow parameters and their usages throughout the microflow. Any time an association is used in the microflow, the association is marked, and will also be sent in the request if needed. In some cases, such as Java actions, the analysis is not done as it would be too performance heavy. In that case, all objects associated with the microflow parameters will be sent along.
+This analysis is done based on the microflow parameters and their usages throughout the microflow. Any time an association is used in the microflow, the association is marked, and will also be sent in the request if needed. In some cases, such as Java actions, the analysis is not done as it would be too performance heavy. In that case, all objects associated with the microflow parameters will be sent.
 
 Secondly, for other (non-microflow) actions such as committing or deleting objects, a simpler analysis is performed on the client side to determine which associations should be included in the request.
 
@@ -163,7 +163,7 @@ Mendix has a number of core widgets which support the standard functions of Mend
 
 In native mobile applications an implementation based on React Native framework is used. In web applications, implementation is based on either React or Dojo. Widgets that use Dojo have some limitations, for example they cannot be used inside a [pluggable widget](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#widgets). These Dojo implementations are gradually being replaced.
 
-### 3.1 Pluggable Widgets {#pluggable-widgets}
+### 3.2 Pluggable Widgets {#pluggable-widgets}
 
 You can also write your own widgets, called **Pluggable widgets**, in cases where Core widgets do not suffice. Pluggable widgets can be downloaded through the Marketplace. They are based on React (in web applications) or React Native (in native mobile applications) and are the recommended way of writing widgets. They replace Custom widgets, described below.
 
@@ -184,7 +184,7 @@ Mendix supports the following third-party libraries:
 
 For more information, see [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets/).
 
-### 3.2 Custom Widgets
+### 3.3 Custom Widgets
 
 You can also write **Custom widgets**. These are based on Dojo framework and run only in web applications. They have access to a different, more low-level, API than pluggable widgets. Custom widgets should only be used if you cannot create the functionality in a Pluggable widget.
 

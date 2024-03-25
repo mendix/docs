@@ -503,21 +503,19 @@ In **Multi** mode, the user can select multiple rows.
 
 ### 12.2 Selection Method
 
-When selection is enabled, you can choose a method for selecting rows. The 'Checkbox' method adds a checkbox to the beginning of each row, and the user must click the checkbox to select the row. In contrast, the 'Row' method does not add any additional controls to the row, and the user must click the row itself to select that row.
+When selection is enabled, you can choose a method for selecting rows. The **Checkbox** method adds a checkbox to the beginning of each row, and the end-user must click the checkbox to select the row. By contrast, the **Row** method does not add any additional controls to the row, and the end-user must click the row itself to select that row.
 
-### 12.3 Show (un)check all toggle
+### 12.3 Show (Un)check All Toggle
 
-If this setting is enabled data grid shows a checkbox at the header. This checkbox controls the selection for all visible items. Clicking on this checkbox will select all visible items. If all items are already selected, clicking the checkbox clears the selection.
+If this setting is enabled, then the data grid widget shows a checkbox at the header. This checkbox controls the selection for all visible items. Clicking on this checkbox will select all visible items. If all items are already selected, clicking the checkbox clears the selection.
 
-
-
-### 12.4 Selection and row click action
+### 12.4 Selection and Row Click Action
 
 {{% alert color="info" %}}
-The “On click trigger” setting was introduced in Data Widgets v2.13.0. Previous versions did not allow both selection and click actions at the same time.
+The **On click trigger** setting was introduced in Data Widgets v2.13.0. Previous versions did not allow both selection and click actions at the same time.
 {{% /alert %}}
 
-The data grid settings support the case where it's possible to have both a selection and an "on click" action at the same time.
+The data grid settings support the case where it is possible to have both a selection and an on-click action at the same time.
 
 The setting for action triggers is related to the selection method and can sometimes be ambiguous. See the table below to see which combinations of selection method and trigger are supported.
 
@@ -528,10 +526,9 @@ The setting for action triggers is related to the selection method and can somet
 | Row              | Single click on the row |                                                  | No        |
 | Row              | Double click on the row | Ctrl/Cmd + Click on the row                      | Yes       |
 
-To achieve this behavior, set the “On click trigger” to “Double click”. When data grid configured this way user may select row by 
+To achieve this behavior, set the **On click trigger** to **Double click**. When a data grid is configured this way user may select a row by double clicking on it.
 
-
-## 13 Keyboard support {#keyboard-support}
+## 13 Keyboard Support {#keyboard-support}
 
 | Key                      | Function                                                     |
 | ------------------------ | ------------------------------------------------------------ |
@@ -551,10 +548,13 @@ To achieve this behavior, set the “On click trigger” to “Double click”. 
 | Shift + Page {Up, Down}  | Moves focus one page up/down and selects all rows between current and final row. (1)(2) |
 | Shift + Home/End         | Moves focus to the end/start of the grid and selects all rows between current and final row. (1)(2) |
 
+Legend:
+
 1. Available only when selection is enabled.
 2. Available only when selection mode should be “Multi”.
 
-## Resetting filters
+## 14 Resetting Filters
 
-Resetting filters is possible using "Reset_Filter" and "Reset_All_Filters" actions available as part of Data Widgets module. Setting up these actions is a manual process that requires creating a nanoflow and setting the name of the filter or datagrid to be reset.
-The name of the filter or datagrid can be found at Properties>Common>Name.
+Resetting filters is possible using **Reset_Filter** and **Reset_All_Filters** actions available as part of the Data Widgets module. Setting up these actions is a manual process that requires creating a nanoflow and setting the name of the filter or data grid to be reset.
+
+The name of the filter or data grid can be found at **Properties** > **Common** > **Name**.

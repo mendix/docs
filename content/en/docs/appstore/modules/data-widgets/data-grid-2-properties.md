@@ -1,220 +1,216 @@
 ---
-title: "<title>"
-url: <utl>
-description: "<description>"
+title: "Data Grid 2 Properties"
+url: /appstore/modules/dg2-props/
+description: "This document describes the properties of the Data Grid 2 and their configurations."
 tags:
-    [
-        "marketplace",
-        "marketplace component",
-        "data grid",
-        "platform support",
-        "external entities"
-    ]
+    [ "marketplace","marketplace component","data grid","platform support","external entities"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## Data grid 2 properties {#data-grid2-properties}
+## 1 Introduction 
 
-### General
+## 2 Configuration {#data-grid2-properties}
 
-#### Data source
+### 2.1 General Tab
+
+#### 2.1.1 Data Source
 
 Data source specifies the source of the data being presented in the data grid. You can select data from **Database**, **Microflow**, **Nanoflow** or **Association**.
 
-#### Refresh time
+#### 2.1.2 Refresh time
 
 The time, in milliseconds (thousandths of a second), the grid should wait between refreshing the data. Auto refreshing turned off when value is 0.
 
-#### Selection
+#### 2.1.3 Selection
 
 This property controls row selection capabilities. Selection is turned off by default, but can be enabled by choosing ether “Single” or “Multi” option. The “Single” selection is selection type where only one row can be selected at the time. The “Multi” type support selecting several rows at the time.
 
 {{% alert color="info" %}}Current versions of data grid support only “in-memory” selection. This implies some limitation which allows selecting only visible rows. If you change data grid page or reload browser window selection will be cleared.{{% /alert %}}
 
-#### Selection method
+#### 2.1.4 Selection method
 
 This property specifies the method of selection. The “Checkbox” method adds a checkbox to the beginning of the row, which acts as the primary way to select the row. The “Row click” method, as it's name suggests, makes the whole row clickable and clicking on a row makes it selected.
 
-#### Show (un)check all toggle
+#### 2.1.5 Show (un)check all toggle
 
 {{% alert color="info" %}}This property is available only when **Selection method** is set to “Checkbox” in combination with **Selection** “Multi”.{{% /alert %}}
 
 When set to “Yes”, the data grid displays a checkbox in the header that, when checked, selects all visible rows. Unchecking it will clear the selection.
 
-### Columns
+### 2.2 Columns Tab
 
-#### Columns
+#### 2.2.1 Columns
 
 A list of columns to display in the data grid. Each item in this list is a set of properties that define and control the appearance and behavior of the column. To read more about each property, go to the [Column properties](#column-properties) section.
 
-#### Show column filters
+#### 2.2.2 Show column filters
 
 If set to “No” all column filters will be hidden.
 
-### Rows
+### 2.3 Rows Tab
 
-#### Page size
+#### 2.3.1 Page size
 
 The number of rows to display per page. When **Pagination** type is “Virtual scrolling” this number define how many rows added to the end when the grid is scrolled to the bottom.
 
-#### Pagination
+#### 2.3.2 Pagination
 
-#### Position of pagination
+#### 2.3.3 Position of pagination
 
 Defines the type of pagination. By default, the data grid groups rows into pages, and buttons used to navigate between pages.
 
 When the property set to "Virtual scrolling", the navigation buttons are hidden and the data grid scrolling is used as a trigger to show next chunk of data.
 
-#### Show paging buttons
+#### 2.3.4 Show paging buttons
 
 This property controls the visibility of navigation buttons. If set to "Auto", navigation buttons are only visible when the number of elements in the data source exceeds the page size.
 
-#### Empty list message
+#### 2.3.5 Empty list message
 
 A custom message to display when there is no data in the data source or the filter result is empty.
 
-#### Dynamic row class
+#### 2.3.6 Dynamic row class
 
 An expression that returns the CSS class for the row. The data source entity is available as `$currentObject` within the scope of the expression.
 
-### Events
+### 2.4 Events Tab
 
-#### On click trigger
+#### 2.4.1 On click trigger
 
 This property determines how the click action is triggered. The default option is “Single click”, which triggers the action on a single click on a row. If set to “Double click”, the action is triggered when the row is double clicked.
 
-#### On click action
+#### 2.4.2 On click action
 
 This property sets the action to be performed when the row is clicked.
 
-#### On selection change
+#### 2.4.3 On selection change
 
 This property sets the action to be performed when the row is selected or unselected.
 
-### Column capabilities
+### 2.5 Column capabilities Tab
 
-#### Sorting
+#### 2.5.1 Sorting
 
 This flag controls column sorting for the entire data grid. If set to “No” sorting is disabled for any column.
 
-#### Resizing
+#### 2.5.2 Resizing
 
 This flag controls column resizing for the entire data grid. If set to “No” resizing is disabled for any column.
 
-#### Reordering
+#### 2.5.3 Reordering
 
 This flag controls column reordering for the entire data grid. If set to “No” reordering is disabled for any column.
 
-#### Hiding
+#### 2.5.4 Hiding
 
 This flag controls column hiding for the entire data grid. If set to “No” hiding is disabled for any column.
 
-### Configuration
+### 2.6 Configuration Tab
 
-#### Attribute
+#### 2.6.1 Attribute
 
 This property sets the entity attribute that is used to store custom visual settings for the data grid.
 
-#### On change
+#### 2.6.2 On change
 
 This property sets the action to be performed when the **Attribute** value is changed.
 
-### Grid wide filtering
+### 2.7 Grid wide filtering
 
-#### Filters
+#### 2.7.1 Filters
 
 A list of filters that can be used in the header of the data grid. Each filter defines an attribute that is used as part of a joined query to select data from the data source.
 
 {{% alert color="info" %}}This property require some advanced knowledge of data grid widget and, may cause some confusion for beginners. Please follow the documentation and examples to facilitate faster learning.{{% /alert %}}
 
-### Aria labels
+### 2.8 Aria labels
 
-#### Filter section
+#### 2.8.1 Filter section
 
 Defines a string value that labels the header area of the data grid. Used by assistive technologies and screen readers.
 
-#### Export progress
+#### 2.8.2 Export progress
 
 Defines a string value that labels the export dialog of the data grid. Used by assistive technologies and screen readers.
 
-#### Cancel data export
+#### 2.8.3 Cancel data export
 
 Defines a string value that labels the cancel export button of the export dialog. Used by assistive technologies and screen readers.
 
-#### Select row
+#### 2.8.4 Select row
 
 Defines a string value that labels the checkbox of the row when the selection is enabled. Used by assistive technologies and screen readers.
 
-## Column properties {#column-properties}
+## 3 Column Properties {#column-properties}
 
-### General
+### 3.1 General Tab
 
-#### Show
+#### 3.1.1 Show
 
 Controls the type of the data displayed in the column.
 
 The attribute displays the value of an entity attribute. The dynamic text uses the expression and can have multiple parameters, and the custom content allows for custom text and widgets.
 
-#### Attribute
+#### 3.1.2 Attribute
 
 This property controls the attribute used for the column. This property is required when filtering or sorting is enabled.
 
-#### Caption
+#### 3.1.3 Caption
 
 Text to be displayed in the column header.
 
-#### Tooltip
+#### 3.1.4 Tooltip
 
 Text to display when hovering over column header.
 
-#### Reference
+#### 3.1.5 Reference
 
 This property is used to select the reference entity that can be used for association filtering. Useful only in conjunction with the dropdown filter widget.
 
-#### Data source
+#### 3.1.6 Data source
 
 A data source that should return a list of entities selected in the reference property. All items in this list will be available in the dropdown filter.
 
-#### Option caption
+#### 3.1.7 Option caption
 
 An expression used to create a caption for each reference. This text is then visible as an option in the dropdown filter.
 
-#### Visible
+#### 3.1.8 Visible
 
 A boolean expression that controls the visibility of columns in the data grid. If the expression returns false, the column is  hidden and remains hidden unless the expression value is changed to true.
 
-### Column capabilities
+### 3.2 Column capabilities
 
-#### Can sort
+#### 3.2.1 Can sort
 
 If set to yes, then rows can be sorted by the data in this column.
 
-#### Can resize
+#### 3.2.2 Can resize
 
 If set to yes, the column can be resized by dragging the edge of the column header.
 
-#### Can reorder
+#### 3.2.3 Can reorder
 
 If set to yes, the column position in the grid can be changed by the user.
 
-#### Can hide
+#### 3.2.4 Can hide
 
 If set to yes, the column can be hidden in the view settings. If hidden by default, column is hidden on first render and can be shown using view settings. If set to no, column can't be hidden in view settings.
 
-### Appearance
+### 3.3 Appearance
 
-#### Column width
+#### 3.3.1 Column width
 
 Property that controls how the column width is calculated. Auto-fill will fills the available space. Auto-fit content uses just enough space to display the column content. Manual is used to set the number for the flex-grow CSS property.
 
-#### Alignment
+#### 3.3.2 Alignment
 
 Sets the text alignment in the column.
 
-#### Dynamic cell calss
+#### 3.3.3 Dynamic cell calss
 
 An expression used to compute the CSS class for the row using the data for the current entity and the list of selected items.
 
-#### Wrap text
+#### 3.3.4 Wrap text
 
 If set to yes, the column tries to wrap long text.

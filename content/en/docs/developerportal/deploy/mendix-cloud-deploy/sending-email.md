@@ -13,7 +13,7 @@ aliases:
 
 ## 1 Introduction
 
-You may want to send email from your apps running in Mendix Cloud via, for example, the [Email](/appstore/connectors/email-connector/) connector. After you have installed this, you will need to configure an SMTP server in your application. There are several options:
+You may want to send email from your apps running in Mendix Cloud via, for example, the [Email](/appstore/modules/email-connector/) connector. After you have installed this, you will need to configure an SMTP server in your application. There are several options:
 
 | Service                        | Mendix Cloud | Free App environment |
 | ------------------------------ | ------------ | -------------------- |
@@ -30,7 +30,7 @@ For apps deployed to Mendix Cloud, you must set up a third-party mail provider t
 
 In general, Mendix recommends external services because these offer specialized tools for sending emails, working with spam filters, keeping track of sent emails, and gaining insights into your target reach via analytics tools.
 
-The [Email](/appstore/connectors/email-connector/) connector from the Marketplace is compatible with all providers that offer an SMTP interface. You can also use other ways of sending email using an external service, such as REST APIs or creating your own Java actions to send email.
+The [Email](/appstore/modules/email-connector/) connector from the Marketplace is compatible with all providers that offer an SMTP interface. You can also use other ways of sending email using an external service, such as REST APIs or creating your own Java actions to send email.
 
 To use an external provider, you will need to sign up for an account with the provider and use their SMTP settings. These include the following:
 
@@ -44,8 +44,8 @@ Here are some frequently used providers:
 
 |Provider|Settings|
 |---|---|
-|[Amazon Simple Email Service](https://aws.amazon.com/ses/)|[Settings](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-connect.html)|
-|[Gmail](https://mail.google.com/)|[Settings](https://support.google.com/a/answer/176600?hl=en), [common configuration problem](http://stackoverflow.com/questions/20337040/gmail-smtp-debug-error-please-log-in-via-your-web-browser)|
+|[Amazon Simple Email Service](https://aws.amazon.com/ses/)|[Settings](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-connect.html)|
+|[Gmail](https://mail.google.com/)|[Settings](https://support.google.com/a/answer/176600?hl=en), [common configuration problem](https://stackoverflow.com/questions/20337040/gmail-smtp-debug-error-please-log-in-via-your-web-browser)|
 |[Mailchimp Transactional Emails](https://mailchimp.com/features/transactional-email/)|[Settings](https://mailchimp.com/developer/transactional/docs/fundamentals/)|
 |[Mailgun](https://mailgun.com/)|[Settings](https://documentation.mailgun.com/en/latest/quickstart-sending.html#send-with-smtp-or-api)|
 |[SendGrid](https://sendgrid.com/)|[Settings](https://sendgrid.com/docs/ui/account-and-settings/mail/)|

@@ -154,4 +154,4 @@ The debugger is now connected to your app running in the cloud.
 ## 4 Read More
 
 * [Debugging Microflows and Nanoflows](/refguide/debug-microflows-and-nanoflows/)
-* [The Ultimate Debugger](http://www.mendix.com/tech-blog/the-ultimate-debugger/) 
+* [The Ultimate Debugger](https://www.mendix.com/tech-blog/the-ultimate-debugger/) 

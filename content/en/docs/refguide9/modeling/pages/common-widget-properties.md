@@ -192,7 +192,7 @@ This property determines how the widget is rendered if it is read-only.
 
 {{< figure src="/attachments/refguide9/modeling/pages/common-widget-properties/label-section.png" alt="Label Section" >}}
 
-A label can be used to described the purpose of the widget to the user. The label is shown next to the widget in the user interface. If a label is configured, the widget will be rendered in the browser wrapped in a form group. See [Bootstrap documentation](http://getbootstrap.com/css/#forms).
+A label can be used to described the purpose of the widget to the user. The label is shown next to the widget in the user interface. If a label is configured, the widget will be rendered in the browser wrapped in a form group. See [Bootstrap documentation](https://getbootstrap.com/css/#forms).
 
 {{% alert color="info" %}}
 The position of the label in relation to the widget is configured in the **Form orientation** and **Label width (weight)** properties of the data container.

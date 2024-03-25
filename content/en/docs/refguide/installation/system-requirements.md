@@ -20,7 +20,11 @@ Mendix Studio Pro has the requirements listed in the following sections.
 
 [Mendix Studio Pro](/refguide/modeling/) 10 is supported on 64-bit versions of Windows 10 release 1809 and above; this also includes Windows 11. 
 
-Studio Pro 10.7 and above can run on an Apple Mac on ARM and Intel Mac running macOS Sonoma and above. Studio Pro versions 10.0 and above can run on the M series Apple Silicon Mac using [Parallels 17](https://www.parallels.com/) and Windows 11. Earlier versions of Studio Pro can run on Apple Mac [using Parallels](/refguide/using-mendix-studio-pro-on-a-mac/).
+Studio Pro 10.7 and above can run in beta mode on an ARM Mac and Intel Mac running macOS Sonoma 14.0 and above. Studio Pro versions 10.0 and above can run on the M series Apple Silicon Mac using [Parallels 17](https://www.parallels.com/) and Windows 11. Earlier versions of Studio Pro can run on Apple Mac [using Parallels](/refguide/using-mendix-studio-pro-on-a-mac/).
+
+{{% alert color="info" %}}
+While Studio Pro on Mac is in [public beta](/releasenotes/beta-features/), Mendix can only verify support for the latest macOS version available. Support for earlier versions is not guaranteed and it is best to update macOS to the newest version when using Studio Pro.
+{{% /alert %}}
 
 These are the known limitations for Mac:
 
@@ -31,11 +35,15 @@ These are the known limitations for Mac:
 * If you have already installed JDK previously, it may not be picked up properly during installation. You can either configure this manually or remove all references to JDK and run the installer again.
 * The installer is currently not notarized yet; you bypass the dialog box by using right-click > **Open**.
 
+{{% alert color="warning" %}}
+Administrator rights are required to install Mendix Studio Pro on Mac (Beta).
+{{% /alert %}}
+
 The following frameworks are required. They will be installed automatically by the Studio Pro installer, if necessary:
 
 * Microsoft .NET 6.0.x desktop runtime (x64) and all applicable Windows security patches
 * Microsoft Visual C++ 2019 Redistributable Package (x64)
-* A Java Developer Kit (JDK) version 11 - if not yet installed on your machine, Mendix will install 'Eclipse Temurin JDK 11 (x64)'
+* A Java Developer Kit (JDK) version 11 or 17 - if not yet installed on your machine, Mendix will install 'Eclipse Temurin JDK 11 (x64)'
 * Git for Windows (x64) version 2.41.0 or above
 * Mendix Native Mobile Builder
 * Microsoft Edge WebView2 Evergreen Runtime (x64)
@@ -61,6 +69,8 @@ Mendix Studio Pro will run on any machine which can run the [minimum requirement
 * **RAM** – 4GB
 * **Display Resolution** –  1080p (1920x1080)
 
+Mendix Studio Pro on Mac (Beta) runs on any machine compatible with [macOS Sonoma](https://support.apple.com/en-us/105113)
+
 ### 2.3 Firewall Settings {#firewall-settings}
 
 Studio Pro needs access to the following URLs in order to work. If your firewall is blocking these, you will need to safelist them:
@@ -68,6 +78,8 @@ Studio Pro needs access to the following URLs in order to work. If your firewall
 * `*.mendix.com`
 * `*.mendixcloud.com`
 * `*.teamserver.sprintr.com`
+
+If you have set up managed dependencies and are working behind a firewall or using a proxy, see the [Proxy Settings](/refguide/managed-dependencies/#proxy-settings) section of *Managed Dependencies* for advice on what you need to do to allow the managed dependencies to work.
 
 To run a Mendix app, Mendix Studio Pro uses the following ports by default. If your firewall is blocking these, you will need to open them:
 
@@ -183,14 +195,10 @@ The Mendix Docker buildpack supports the following Kubernetes versions:
 
 ### 6.3 Java {#java}
 
-When running Mendix on a server, you will need Java Runtime Environment (JRE) 11. To download an OpenJDK distribution from Adoptium, see [Adoptium Installation](https://adoptium.net/temurin/releases). To download a commercial Oracle distribution, see [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
+When running Mendix on a server, you will need Java Runtime Environment (JRE) 11 or 17. To download an OpenJDK distribution from Adoptium, see [Adoptium Installation](https://adoptium.net/temurin/releases). To download a commercial Oracle distribution, see [Java SE Downloads](https://www.oracle.com/technetwork/java/javase/downloads/index.html).
 
 {{% alert color="warning" %}}
-As Java 11 approaches the end of support in October, 2024, Mendix will stop supporting Java 11 with the release of Studio Pro 10.17 in November, 2024.<br/>
-<br/>
-Compatibility with Java 17 is planned for Studio Pro version 10.8, to be released in February 2024. Switching to a Studio Pro version compatible with Java 17 can be considered optional.<br/>
-<br/>
-Compatibility with Java 21 is planned for Studio Pro version 10.10, to be released in April 2024. Mendix recommends switching to a Studio Pro version compatible with Java 21 once it is available.
+Compatibility with JDK 17 has been released with Studio Pro version 10.8. Compatibility with Java 21 is planned for Studio Pro version 10.10, to be released in April 2024. Mendix recommends switching to a Studio Pro version compatible with Java 21 once it is available.
 {{% /alert %}}
 
 ## 7 Databases {#databases}

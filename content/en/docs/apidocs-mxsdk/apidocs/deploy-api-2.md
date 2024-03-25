@@ -3,26 +3,26 @@ title: "Deploy API – Version 2"
 linktitle: "Deploy API v2"
 url: /apidocs-mxsdk/apidocs/deploy-api-2/
 category: "API Documentation"
-description: "Deploy API v2 can be used to deploy Mendix apps to licensed nodes, manage application environments in the Mendix Cloud, retrieve statuses, start and stop applications, and deploy or transport new model versions to application environments."
-weight: 35
+description: "Deploy API v2 can be used to deploy Mendix apps to licensed nodes, manage application environments in Mendix Cloud, retrieve statuses, start and stop applications, and deploy or transport new model versions to application environments."
+weight: 42
 tags: ["API", "deploy", "licensed", "deployment", "cloud"]
 ---
 
 {{% alert color="warning" %}}
-The Deploy API only works for apps which are deployed to the Mendix Cloud.
+The Deploy API only works for apps that are deployed to Mendix Cloud.
 {{% /alert %}}
 
 ## 1 Introduction
 
-The Deploy API allows you to manage application environments in the Mendix Cloud. Version 2 introduces improved APIs for some actions.
+The Deploy API allows you to manage application environments in Mendix Cloud. Version 2 introduces improved APIs for some actions.
 
 {{% alert color="warning" %}}
-The v2 Deploy API only supports the endpoints listed here. For all other API calls, the [v1 API](/apidocs-mxsdk/apidocs/deploy-api/) must be used.
+The v2 Deploy API only supports the endpoints listed here. For all other API calls, use the [v1 API](/apidocs-mxsdk/apidocs/deploy-api/) or [v4 API](/apidocs-mxsdk/apidocs/deploy-api-4/).
 {{% /alert %}}
 
 ## 2 Authentication{#authentication}
 
-The Deploy API requires authentication via API keys as discussed in the [Authentication](/apidocs-mxsdk/apidocs/deploy-api/#authentication) section of *Deploy API* (v1).
+The Deploy API requires authentication via API keys, as discussed in the [Authentication](/apidocs-mxsdk/apidocs/deploy-api/#authentication) section of *Deploy API v1*.
 
 ## 3 API Calls
 
@@ -37,15 +37,19 @@ HTTP Method: POST
 URL: https://deploy.mendix.com/api/v2/apps/<AppId>/packages/upload?name=<PackageName>
 ```
 
+{{% alert color="warning" %}}
+For apps on Mendix Cloud, it is not possible to upload files bigger than 1 GB to your app. 
+{{% /alert %}}
+
 #### 3.1.2 Request
 
-**Request Parameters**
+##### 3.1.2.1 Request Parameters
 
 * *AppId* (String): Subdomain name of an app
-* *PackageName* (String): the name given to the package (mda) when it is uploaded — if this is omitted, it will be given the name *default.mda*
+* *PackageName* (String): the name given to the package (MDA) when it is uploaded — if this is omitted, it will be given the name *default.mda*
 * *file* (File): Deployment package as multipart/form-data (see [IETF RFC 7578: Returning Values from Forms: multipart/form-data](https://tools.ietf.org/html/rfc7578))
 
-**Example Request**
+##### 3.1.2.2 Example Request
 
 <!--Check this is correct -->
 
@@ -72,7 +76,7 @@ curl -v -F "file=@%USERPROFILE%/Documents/Mendix/calc-main/releases/calc_1.0.0.4
 
 #### 3.1.3 Output
 
-The API call returns the following json:
+The API call returns the following JSON:
 
 ```json
 {
@@ -84,7 +88,7 @@ The API call returns the following json:
 Where:
 
 * `<packageID>` is the ID of the package which will be created by the API
-* `<JobID>` is the ID of the job which is creating the package — the status of the job can be interrogated with the [Job Status](#job-status) API
+* `<JobID>` is the ID of the job that is creating the package — the status of the job can be interrogated with the [Job Status](#job-status) API
 
 ### 3.2 Job Status{#job-status}
 
@@ -99,12 +103,12 @@ URL: https://deploy.mendix.com/api/v2/apps/<AppId>/jobs/<JobId>
 
 #### 3.2.2 Request
 
-**Request Parameters**
+##### 3.2.2.1 Request Parameters
 
 * *AppId* (String): Subdomain name of an app
-* *JobID* (String): the ID of a job which was triggered by a previous API call
+* *JobID* (String): the ID of a job that was triggered by a previous API call
 
-**Example Request**
+##### 3.2.2.2 Example Request
 
 ```bash
 GET /api/v2/apps/calc/jobs/66046953-ecf7-4550-a889-4b7e9f1e1705
@@ -116,7 +120,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 #### 3.2.3 Output
 
-The API call returns the following json:
+The API call returns the following JSON:
 
 ```json
 {
@@ -124,7 +128,7 @@ The API call returns the following json:
 }
 ```
 
-Where `<status>` is one of:
+Where `<status>` is one of the following:
 
 * Queued
 * Running

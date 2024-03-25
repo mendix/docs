@@ -8,7 +8,7 @@ tags: ["widget", "develop widget", "scaffold", "yeoman"]
 
 ## 1 Introduction
 
-This how-to teaches you how to use the widget generator, which is a [Yeoman](http://yeoman.io/) generator that lets you quickly scaffold a new widget. The generator integrates Grunt, which is a task runner, to speed up your widget development.
+This how-to teaches you how to use the widget generator, which is a [Yeoman](https://yeoman.io/) generator that lets you quickly scaffold a new widget. The generator integrates Grunt, which is a task runner, to speed up your widget development.
 
 This how-to teaches you how to do the following:
 
@@ -113,7 +113,7 @@ from **null** to `<path to VersionSelector.exe>` – make sure you use double ba
 
 ### 5.3 Errors in the Test project 'Could not find the widget type "WidgetName.widget.WidgetName" in the "widgets" directory.'
 
-For reference, see [this Mendix Forum question](https://forum.mendixcloud.com/link/questions/9428).
+For reference, see [this Mendix Community question](https://community.mendix.com/link/questions/9428).
 
 The solution is to go to the `WidgetName` element and replace it with your own widget:
 

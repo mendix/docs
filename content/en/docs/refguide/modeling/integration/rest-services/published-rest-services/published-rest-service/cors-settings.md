@@ -20,7 +20,7 @@ Choose a constant that specifies which websites are allowed to access this servi
 
 ## 3 Max Age
 
-Here you can choose how long a browser is allowed to remember these settings before checking whether there are new CORS settings. A longer time is good for performance, because the browser will perform fewer requests. However, if you change the CORS settings, these changes will not take effect in all browsers until this time has passed.
+Choose how long a browser is allowed to remember these settings before checking whether there are new CORS settings. A longer time is good for performance, because the browser will perform fewer requests. However, if you change the CORS settings, these changes will not take effect in all browsers until this time has passed.
 
 ## 4 Allow Credentials
 

@@ -63,4 +63,4 @@ With these three pieces of information, you shouold be able to find the cause of
 * [How to Debug Microflows Remotely](/howto7/monitoring-troubleshooting/debug-microflows-remotely/)
 * [How to Debug Java Actions](/howto7/monitoring-troubleshooting/debug-java-actions/)
 * [How to Handle Common SSO Errors](/howto7/monitoring-troubleshooting/handle-common-mendix-sso-errors/)
-* [The Root Cause of Runtime Errors and Resolving the 2 Most Common Issues](http://www.mendix.com/blog/the-root-cause-of-runtime-errors-and-resolving-the-2-most-common-issues/)
+* [The Root Cause of Runtime Errors and Resolving the 2 Most Common Issues](https://www.mendix.com/blog/the-root-cause-of-runtime-errors-and-resolving-the-2-most-common-issues/)

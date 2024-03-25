@@ -37,9 +37,9 @@ For the purposes of this how-to, there are two important points to know about re
 
 First, Mendix requires you to store each Mendix application in a separate repository. It is not possible to place multiple Mendix apps into a single repository.
 
-Second, when uploading an app to a repository, Mendix requires the repository to be empty (except for the recommended SVN layout, as described in [Recommended Repository Layout](http://svnbook.red-bean.com/en/1.7/svn.tour.importing.html#svn.tour.importing.layout)). Specifically, this means that the repository should contain only three empty folders, called **branches**, **tags**, and **trunk**.
+Second, when uploading an app to a repository, Mendix requires the repository to be empty (except for the recommended SVN layout, as described in [Recommended Repository Layout](https://svnbook.red-bean.com/en/1.7/svn.tour.importing.html#svn.tour.importing.layout)). Specifically, this means that the repository should contain only three empty folders, called **branches**, **tags**, and **trunk**.
 
-Usually, repositories are created and maintained by the administrator of your SVN server. For more details about repositories, see [Repository Administration](http://svnbook.red-bean.com/en/1.7/svn-book.html#svn.reposadmin).
+Usually, repositories are created and maintained by the administrator of your SVN server. For more details about repositories, see [Repository Administration](https://svnbook.red-bean.com/en/1.7/svn-book.html#svn.reposadmin).
 
 In the following sections of this how-to, it is assumed that you have a repository available for your application.
 

@@ -10,7 +10,7 @@ tags: ["integration", "wsdl", "web service", "consume"]
 
 Mendix is the app platform for the enterprise, and in enterprise software, it is not likely that you work in a [greenfield project](https://en.wikipedia.org/wiki/Greenfield_project). In almost every situation, you will need to integrate with existing systems. Mendix supports many ways of integrating, and this how-to focuses on how you can consume web services with Mendix.
 
-For this how-to, you will be using an example web service of [W3Schools](http://www.w3schools.com/). Please note that this is a very simple web service that converts temperatures from Celsius to Fahrenheit and vice versa. The converted temperature will be returned as a string value that can be stored in a variable directly. If you want to invoke a web service that returns a complex XML message, you can use the XML-to-domain mappings explained in [How to Import XML Documents](/howto7/integration/importing-xml-documents/).
+For this how-to, you will be using an example web service of [W3Schools](https://www.w3schools.com/). Please note that this is a very simple web service that converts temperatures from Celsius to Fahrenheit and vice versa. The converted temperature will be returned as a string value that can be stored in a variable directly. If you want to invoke a web service that returns a complex XML message, you can use the XML-to-domain mappings explained in [How to Import XML Documents](/howto7/integration/importing-xml-documents/).
 
 This how-to teaches you how to do the following:
 

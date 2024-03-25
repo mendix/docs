@@ -3,7 +3,7 @@ title: "Deploy Your First Mendix Native Mobile App with the Native Builder CLI"
 linktitle: "Deploy Mobile App with Native Builder CLI"
 url: /howto8/mobile/deploying-native-app-cli/
 weight: 20
-description: Describes how to deploy your first Mendix native mobile app with the Native Builder.
+description: Describes how to build a Mendix native app in the cloud with the Native Builder CLI.
 tags: ["native", "mobile", "deploy", "native-builder", "builder", "appcenter"]
 ---
 
@@ -297,7 +297,7 @@ This section details publishing a signed Android app to the Google Play store. T
 * Produced an *app-release.apk* build
 * Read Google's overview of [the Android app publishing process](https://developer.android.com/studio/publish). 
 
-Before submitting your app to an app store, you will have to complete Google's [signup steps](https://play.google.com/apps/publish/signup/). Also, [review the launch checklist](http://developer.android.com/distribute/tools/launch-checklist.html) before publishing your app. Beyond the launch checklist information, check Google's [Preparing your app for release](https://developer.android.com/studio/publish/preparing) for information on edge cases to resolve before publishing. 
+Before submitting your app to an app store, you will have to complete Google's [signup steps](https://play.google.com/apps/publish/signup/). Also, [review the launch checklist](https://developer.android.com/distribute/tools/launch-checklist.html) before publishing your app. Beyond the launch checklist information, check Google's [Preparing your app for release](https://developer.android.com/studio/publish/preparing) for information on edge cases to resolve before publishing. 
 
 Once you have satisfied those requirements, you can follow Google's [Upload your app to the Play Console](https://developer.android.com/studio/publish/upload-bundle). Then, follow Google's [Prepare and roll out a release](https://support.google.com/googleplay/android-developer/answer/7159011) to create, prepare, review, and roll out your app release.
 

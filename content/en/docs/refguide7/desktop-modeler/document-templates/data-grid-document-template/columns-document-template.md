@@ -48,7 +48,7 @@ Possible values: 'Date', 'Time', 'Date and time' and in 2.5.3 'Custom'.
 ### Custom Date Format (Only for Attributes of the DateTime Type)
 
 If you choose 'Custom' as the date format (see above) the custom date format determines the way date and/or time are formatted. The custom date format is a string that follows the rules described in
-[http://download.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html](http://download.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html).
+[Class SimpleDateFormat](https://docs.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html).
 
 {{% alert color="info" %}}
 

@@ -5,10 +5,6 @@ weight: 20
 tags: ["studio pro", "administrator", "project security", "security"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/administrator.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 In the **Administrator** tab of the **Project Security**, you can change the default credentials and a user role for the Administrator user:

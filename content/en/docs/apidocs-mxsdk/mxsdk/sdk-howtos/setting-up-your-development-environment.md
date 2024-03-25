@@ -41,7 +41,7 @@ To set up your development tools, follow these steps:
 
     In the rest of the how-to's, in blocks such as the above, lines starting with a `$` represent commands to type into a terminal. Sometimes a line follows without a $, represents output of the command.
 
-3. Install [Visual Studio Code](https://code.visualstudio.com/) (not to be confused with Visual Studio), a text editor/IDE with good support for [TypeScript](http://www.typescriptlang.org/). Make sure you have a recent version (v1.11.0+); check the version you are using through Help > About when you have Code opened.
+3. Install [Visual Studio Code](https://code.visualstudio.com/) (not to be confused with Visual Studio), a text editor/IDE with good support for [TypeScript](https://www.typescriptlang.org/). Make sure you have a recent version (v1.11.0+); check the version you are using through Help > About when you have Code opened.
 4. Install TypeScript 4.4.3 or higher with [`npm`](https://www.npmjs.com/) (or [`yarn`](https://yarnpkg.com/)), Node.js's package manager:
 
     ```bash {linenos=false}

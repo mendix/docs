@@ -2,14 +2,14 @@
 title: "Web Services"
 url: /refguide/integration/web-services/
 category: "Integration"
-weight: 60
+weight: 50
 description: "Introduces web services (SOAP)."
 tags: ["Web services"]
 ---
 
 ## 1 Introduction
 
-You can publish your own web services in a Mendix application. Published web services are based on SOAP 1.1. These web services are made up of operations. Other applications can then call operations of this webservice and you can return a result. This result is based on a microflow that will be executed when the webservice is called.
+You can publish your own web services in a Mendix application. Published web services are based on SOAP 1.1. These web services are made up of operations. Other applications can call operations of this web service and you can return a result. This result is based on a microflow that will be executed when the web service is called.
 
 To publish web services, see:
 

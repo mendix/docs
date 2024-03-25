@@ -3,11 +3,11 @@ title: "Projects API ⚠"
 url: /apidocs-mxsdk/apidocs/projects-api/
 category: "API Documentation"
 description: "This API allows you to programmatically create an app in your company space and move working copies between the Mendix Team Server and the Model Server."
-weight: 85
+weight: 100
 ---
 
 {{% alert color="warning" %}}
-⚠ The Projects API is deprecated. Mendix aims to remove the Project API on March 1, 2024.
+The Projects API is deprecated. Mendix aims to remove the Project API on March 31, 2024.
 {{% /alert %}}
 
 ## 1 Introduction

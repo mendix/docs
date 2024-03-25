@@ -58,6 +58,12 @@ These are the current LTS versions of Studio Pro:
 
 Mendix advises using LTS versions for all production apps, as LTS versions of Studio Pro enjoy the highest security and stability. LTS versions also have the longest support duration compared to other versions.
 
+{{% alert color="info" %}}
+
+Mendix recommends using the latest patch version of the release as the latest version will contain the latest fixes.
+
+{{% /alert %}}
+
 ### 2.1 Support Duration
 
 Support for an LTS version ends when a third consecutive major version is released for general availability (for example, support on version 6 ended with the GA release of version 9).
@@ -95,6 +101,12 @@ MTS versions (for example, 9.6) remain supported until the next major version ha
 {{% /alert %}}
 
 If you are on an innovation track with your development and need to get the latest and greatest Mendix has to offer every month, then upgrade to an MTS and stay on that version with its patch releases until the next MTS version is released.
+
+{{% alert color="info" %}}
+
+Mendix recommends using the latest patch version of the release as the latest version will contain the latest fixes.
+
+{{% /alert %}}
 
 ### 3.1 Support Duration
 

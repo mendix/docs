@@ -208,7 +208,7 @@ When the end-user launches an app in the browser, it triggers the following flow
 
 #### 4.1.2 Location of Mendix Client Resources
 
-When the app is deployed, the static resources are placed in a structure referred to as the CDN. This includes the following:
+When the app is deployed, the static resources are placed in a separate structure. This includes the following:
 
 * index.html – the initial HTML page which is loaded when the end-user starts the Mendix Client — this contains the client configuration and other static non-Mendix content (for example if Google analytics is added to the app)
 * mxui.js – the main Mendix Client code

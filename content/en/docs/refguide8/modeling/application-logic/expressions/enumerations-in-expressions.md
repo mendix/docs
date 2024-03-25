@@ -5,10 +5,6 @@ weight: 170
 tags: ["studio pro", "expression", "enumeration", "expressions"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/enumerations-in-expressions.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 Enumerations are referenced by `<modulename>.<enumerationname>.<enumerationvalue>`.

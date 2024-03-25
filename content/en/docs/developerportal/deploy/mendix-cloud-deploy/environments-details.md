@@ -11,7 +11,7 @@ tags: ["Deploy","App","Environment","Developer Portal"]
 
 ## 1 Introduction
 
-To open the **Environment Details** page, go to the [Developer Portal](http://sprintr.home.mendix.com) and click **Environments** on your licensed app. Then click **Details** ({{% icon name="notes-paper-edit" %}}) by the environment you want to view.
+To open the **Environment Details** page, go to the [Developer Portal](https://sprintr.home.mendix.com) and click **Environments** on your licensed app. Then click **Details** ({{% icon name="notes-paper-edit" %}}) by the environment you want to view.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/environment-details.png" alt="The Details icon is on the right side of the row" class="image-border" >}}
 
@@ -24,16 +24,16 @@ The **Environment Details** page shows information about the selected environmen
 In the **General** tab, you can find the following information about your environment:
 
 * **Status**
-    * {{% icon name="checkmark-circle" color="green" %}} – the application in this environment is running
-    * {{% icon name="subtract-circle" color="gray" %}} – no application has been started yet in this environment, or it has been turned off
-    * {{% icon name="remove-circle" color="red" %}} – the application in this environment is unstable and probably not usable anymore
+    * {{% icon name="checkmark-circle-filled" color="green" %}} – the application in this environment is running
+    * {{% icon name="subtract-circle-filled" color="gray" %}} – no application has been started yet in this environment, or it has been turned off
+    * {{% icon name="remove-circle-filled" color="red" %}} – the application in this environment is unstable and probably not usable anymore
 * **Running since** – the date the app was started, if it is running
 * **Name** – the type of environment (Acceptance, Production, Test, or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments)); for more information, see the [Naming of Environments](#naming) section below
 * **Url** – the URL of the app
 * **Project ID** – the unique identifier of the app
 * **Environment ID** – the unique identifier of the environment
 * **Custom domains** – any [custom domains](/developerportal/deploy/custom-domains/) of the app
-* **Java Version** – Oracle version 1.8 or AdoptOpenJDK version 11
+* **Java Version** – Oracle version 1.8, AdoptOpenJDK version 11, or Eclipse Temurin JDK 17
 * **Studio Pro Target**
 * **Plan** – the type of plan covered by your license (for more information, see the [Overviews](/developerportal/deploy/environments-details/#overviews) section below)
 * **Instances** – a summary of the number and memory allocation of instances of the environment (for more information, see the [Scaling](#scaling) section below)
@@ -271,7 +271,7 @@ Mendix and the deployment environment automatically add some non-configurable re
 | --------------- | -------- |
 | `cache-control`| The buildpack for *index.html* and *login.html* – the Mendix Runtime for other pages |
 | `permissions-policy: interest-cohort=()` | Exclude from Federated Learning of Cohorts (FLoC) calculation |
-| `strict-transport-security` | TLS terminating webservers – set to `max-age=31536000` |
+| `strict-transport-security` | TLS terminating webservers – set to `max-age=31536000` (365 days, in seconds)|
 | `x-vcap-request-id` | Cloud Foundry to track requests through CF |
 
 #### 4.2.2 Running Your App in an Iframe {#iframe}

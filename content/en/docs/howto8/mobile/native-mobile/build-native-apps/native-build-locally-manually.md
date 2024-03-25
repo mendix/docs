@@ -254,5 +254,5 @@ To remove dependencies which do not support auto-linking, do the following:
 
 ## 8 Read More
 
-* [How to Deploy Your First Mendix Native Mobile App](/howto8/mobile/deploying-native-app/)
+* [How to Build a Mendix Native App in the Cloud](/howto8/mobile/deploying-native-app/)
 * [How to Create a Custom Developer App](/howto8/mobile/how-to-devapps/)

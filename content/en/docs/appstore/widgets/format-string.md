@@ -8,7 +8,7 @@ tags: ["marketplace", "marketplace component", "widget", "format string", "platf
 ---
 
 {{% alert color="warning" %}}
-⚠ This widget is deprecated. For an alternative, see [Text](/refguide/text/) or [HTML Element](/appstore/widgets/htmlelement/) depending on your use case.
+This widget is deprecated. For an alternative, see [Text](/refguide/text/) or [HTML Element](/appstore/widgets/htmlelement/) depending on your use case.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -86,7 +86,7 @@ The widget has default values for **nl-nl**, **en-us**, and **en-gb**.
 
 ## 3 Example Scenario
 
-In this scenario, you have an attribute that contains a hyperlink to a website (for example, `http://mendix.com`). The attribute is called **Link**.
+In this scenario, you have an attribute that contains a hyperlink to a website (for example, `https://mendix.com`). The attribute is called **Link**.
 
 You want to show this link as a simple HTML link.
 

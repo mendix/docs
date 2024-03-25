@@ -30,11 +30,15 @@ There are three versions of the Forgot Password module, depending on whether you
 
 If you already use the Forgot Password module in your Mendix 8 app, you can find instructions on how to upgrade in [Upgrading from Mendix 8 to Mendix 9](#upgrade8-9) section below.
 
+{{% alert color="warning" %}}
+The Forgot Password module is not supported in the Mendix version 10.6.0 and above, as it relies on the deprecated [Deep Link](/appstore/modules/deep-link/) module. The Deep Link module has been replaced by [page URLs](/refguide/page-properties/#url) and [microflow URLs](/refguide/microflow/#url). Mendix is working on a solution to enable the Forgot password module (compatible with Mendix version 10.6.0 and above) to work with these URLs.
+{{% /alert %}}
+
 ### 1.1 Dependencies {#dependencies}
 
 The Forgot Password module has the following dependencies:
 
-* [Email Connector](/appstore/connectors/email-connector/) - Versions of the Forgot Password module 3.x.x (for Mendix 7), below 4.1.0 (for Mendix 8), and 5.1.0 (for Mendix 9 and above) have a dependency on the deprecated [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module. If you are using Mendix 8 and above, Mendix recommends upgrading to the latest version using the instructions in the [Migrate from Email Module with Templates to Email Connector](#migrate-email) section below
+* [Email Connector](/appstore/modules/email-connector/) - Versions of the Forgot Password module 3.x.x (for Mendix 7), below 4.1.0 (for Mendix 8), and 5.1.0 (for Mendix 9 and above) have a dependency on the deprecated [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module. If you are using Mendix 8 and above, Mendix recommends upgrading to the latest version using the instructions in the [Migrate from Email Module with Templates to Email Connector](#migrate-email) section below
 * [Deep Link](/appstore/modules/deep-link/)
 * [Encryption](/appstore/modules/encryption/)
 * [Mx Model Reflection](/appstore/modules/model-reflection/)
@@ -204,7 +208,7 @@ Import the modules which are needed for the migration process.
 
 Troubleshoot any Atlas UI issues related to the [Email Connector](https://docs.mendix.com/appstore/connectors/email-connector/) and [Email Connector Migration Utility](https://marketplace.mendix.com/link/component/205008) modules that may arise due to your Studio Pro version.
 
-See the documentation for the [Email Connector](/appstore/connectors/email-connector/) and the [Email Connector Migration Utility](https://github.com/mendixlabs/EmailConnectorMigrationUtility) (on GitHub) for more information.
+See the documentation for the [Email Connector](/appstore/modules/email-connector/) and the [Email Connector Migration Utility](https://github.com/mendixlabs/EmailConnectorMigrationUtility) (on GitHub) for more information.
 
 #### 5.2.2 Configuring App Security
 
@@ -222,7 +226,7 @@ Follow the [Migration Steps](https://github.com/mendixlabs/EmailConnectorMigrati
 
 #### 5.2.4 Actions After the Migration
 
-1. Import the latest version of the Forgot Password module (v4.1.0 or above for Mendix 8, or v5.1.0 or above for Mendix 9 and above). This will have the [Email Connector](/appstore/connectors/email-connector/) module as a dependency.
+1. Import the latest version of the Forgot Password module (v4.1.0 or above for Mendix 8, or v5.1.0 or above for Mendix 9 and above). This will have the [Email Connector](/appstore/modules/email-connector/) module as a dependency.
 1. Delete the [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module.
 1. Delete the [Email Connector Migration Utility](https://marketplace.mendix.com/link/component/205008) module.
 1. Remove the Administrator user roles for `EmailTemplate` and `MigrationUtility`.

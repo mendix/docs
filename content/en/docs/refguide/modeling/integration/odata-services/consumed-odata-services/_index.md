@@ -10,7 +10,7 @@ tags: ["studio pro"]
 
 Data can be published from an app for use by other apps through [published OData services](/refguide/published-odata-services/). Consumed OData services can be used to integrate external data sources and actions in apps through the [Integration pane](/refguide/integration-pane/).
 
-OData services that are registered in the [Catalog](/catalog/) publish entities that can be dragged and dropped into your domain model through the [Integration pane](/refguide/integration-pane/) as external entities. The OData service document that is added to your app provides the information for retrieving the metadata for the service and published entities.
+OData services that are registered in the [Catalog](/catalog/) publish entities that can be dragged and dropped into your domain model through the Integration pane as external entities. The OData service document that is added to your app provides the information for retrieving the metadata for the service and published entities.
 
 For further details on the consumed OData service document and updating consumed OData services in your app, see [Consumed OData Service](/refguide/consumed-odata-service/).
 
@@ -36,6 +36,21 @@ External entities have some limitations compared to persistable entities:
 Associations between external entities (as defined in the originating app) are shown in the domain model. You can only use the associations where both sides are published.
 
 You can create associations between local [persistable entities](/refguide/persistability/#persistable) and external entities. For those associations, the persistable entities need to be the owner.
+
+#### 2.1.1 External Non-Persistable Entities {#external-non-persistable-entities}
+
+When a service defines an entity without an entity set, it means that this entity is not persistable. You can add it to the domain model as a non-persistable entity.
+The definition of this entity is read-only and is controlled in the service that publishes it. This means that you cannot add attributes or change them.
+
+{{% alert type="info" %}}
+Support for importing non-persistable entities from a consumed OData service was introduced in Studio Pro [10.8.0](/releasenotes/studio-pro/10.8/).
+{{% /alert %}}
+
+### 2.1.2 External Enumerations
+
+When you consume an external entity that has an attribute of an enumeration type, the corresponding enumeration will be added to your project if it did not previously exist. The enumeration is created according to the definition in the OData service contract, meaning that all allowed values will be automatically added to your enumeration.
+
+When the consumed OData service is deleted from your project, Studio Pro allows you to keep using an enumeration that was created from the deleted service by using the **Detach** button on the **External enumeration** dialog.
 
 ### 2.2 External Actions {#external-actions}
 

@@ -6,10 +6,6 @@ tags: ["domain model", "entity", "validation rule"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/validation-rules.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 Validation rules are conditions that should be satisfied before an object is committed. If a condition defined by a validation rule is not satisfied when the object is committed, the runtime server generates a validation error.
@@ -67,7 +63,7 @@ The rule defines which condition an attribute should satisfy.
 | Maximum length | The attribute may have no more than the specified number of characters. |
 
 {{% alert color="info" %}}
-Date values should be entered in [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) format, for example 2015-07-26.
+Date values should be entered in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format, for example 2015-07-26.
 {{% /alert %}}
 
 #### 2.2.2 Rule Order

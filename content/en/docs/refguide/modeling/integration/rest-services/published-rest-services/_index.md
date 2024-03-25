@@ -22,7 +22,7 @@ To publish a microflow as a REST operation, right-click anywhere in the editor a
 
 ## 3 Authentication {#authorization}
 
-Published REST services can be secured with basic authentication, active session authentication and custom authentication. Basic and active session authentication are the default, and are automatically applied when you set the [security level](/refguide/app-security/) of your app to **Prototype / demo**  or **Production**.
+Published REST services can be secured with basic authentication, active session authentication, and custom authentication. Basic and active session authentication are the default and are automatically applied when you set the [security level](/refguide/app-security/) of your app to **Prototype / demo**  or **Production**.
 
 If you don't want basic authentication, there are three options:
 
@@ -31,7 +31,7 @@ If you don't want basic authentication, there are three options:
 * You can implement [custom authentication using a microflow](/refguide/published-rest-service/#authentication-microflow).
 
 {{% alert color="warning" %}}
-Note that web service users cannot access REST services.
+Web service users cannot access REST services.
 {{% /alert %}}
 
 For more details, see [Published REST Routing](/refguide/published-rest-routing/) and the [Requires Authentication](/refguide/published-rest-service/#authentication) section in *Published REST Service*.

@@ -30,9 +30,9 @@ To install and use the PCLM, you need the following prerequisites:
 * Administrative rights to a Kubernetes namespace to install PCLM server (a dedicated namespace is recommended). This can be within your Mendix for Private Cloud cluster, or in another cluster which is accessible over HTTP
 * A Postgres or SQLServer database server and within it:
     * A dedicated database with remote access which will be used to store your licenses, user authorization details, and usage information
-        * Public accessibility must be set to yes
-        * Database server must allow inbound connections
-        * Database must be called `mxlicenses`
+        * The database server should be accessible to the cluster where the application is deployed.
+        * The database server must allow inbound connections.
+        * The database must be called *mxlicenses*.
     * A dedicated administrator user role with all grants over this database (including the `Create Table` server role, and `Select`, `Insert`, `Update`, `Delete`, and `Truncate` database roles for the tables that are created)
 * Kubectl or the OpenShift CLI
 * The mx-pclm-cli tool
@@ -76,7 +76,7 @@ Where you need to supply the following parameters
 * `<tls-boolean>` – whether the database uses strict TLS, `true` or `false` *(default)*
 * `<ssl-root-certificate>` – the location of the SSL Root certificate file, if `<tls-boolean>` is `true`
 * `<docker-repo>` – location of the image repo, default: `private-cloud.registry.mendix.com/privatecloud-license-manager`
-* `<docker-tag>` – the docker image tag, default: `0.3.0`
+* `<docker-tag>` – the docker image tag, default: `0.4.0`
 * `<out-file>` – the name of the file where the yaml is written, for example `manifest.yaml`
 
 ### 3.2 Applying the Manifest

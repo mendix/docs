@@ -46,6 +46,8 @@ Select **Sortable** to allow clients to sort results based on this attribute.
 
 Select **Filter** to allow clients to filter results based on this attribute.
 
+Note that these capabilities are not shown for attributes of entities without the **Readable** capability.
+
 ## 3 Public Documentation
 
-In the **Public documentation** tab, you can write a summary and a description intended for people using the service.
+In the **Public documentation** tab, you can write a summary and description intended for people using the service.

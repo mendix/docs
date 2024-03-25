@@ -207,9 +207,9 @@ Follow the instructions to [set an encryption key in the Encryption module](/app
     * `https://<your-app-url>/oauth/v2/callback`
     * `makeitnative://<your-app-url>/oauth/callback`
 
-#### 5.1.2 Microsoft Azure AD Provider Configuration for APIs{#azure-portal}
+#### 5.1.2 Microsoft Entra ID Provider Configuration for APIs{#azure-portal}
 
-This section gives some guidance for doing the necessary configurations at your Azure AD provider to obtain access tokens containing the right authorization claims to secure your APIs.
+This section gives some guidance for doing the necessary configurations at your entra ID (formerly known as Azure AD) provider to obtain access tokens containing the right authorization claims to secure your APIs.
 
 If you don’t set the access token up correctly, you will get access tokens containing default `aud` (audience) claims. The default audience is the Microsoft Graph API and so these access tokens cannot be validated by your API.
 
@@ -232,7 +232,7 @@ To configure Amazon Cognito for the OIDC SSO module, follow these steps:
     2. On the **Verified identities** page, in the **Identities** section, click **Create identity**.
     3. Verify the email address or addresses that you want to use for the user pool
 
-        {{< figure src="/attachments/appstore/connectors/aws-cognito/verifyemail.png" alt="The Verified identities page in Amazon SES">}}
+        {{< figure src="/attachments/appstore/modules/aws-cognito/verifyemail.png" alt="The Verified identities page in Amazon SES">}}
 
 2. Create a user pool for Amazon Cognito by doing the following steps:
     1. In the Amazon Console, open the Amazon Cognito service.
@@ -240,7 +240,7 @@ To configure Amazon Cognito for the OIDC SSO module, follow these steps:
     3. Follow the **Create user pool** wizard to configure the sign-in and sign-up, security requirements, and message delivery.
     4. In the **Integrate your app** step of the wizard, enter a name for your user pool and leave the other settings as default.
 
-        {{< figure src="/attachments/appstore/connectors/aws-cognito/userpoolname.png" alt="The Integrate your app step in the Create user pool wizard">}}
+        {{< figure src="/attachments/appstore/modules/aws-cognito/userpoolname.png" alt="The Integrate your app step in the Create user pool wizard">}}
 
     5. Review and create the user pool.
 
@@ -249,13 +249,13 @@ To configure Amazon Cognito for the OIDC SSO module, follow these steps:
     2. On the **Users** tab of the user pool, click **Create user**.
     3. Specify a verified email and a password.
 
-        {{< figure src="/attachments/appstore/connectors/aws-cognito/addusers.png" alt="The Users tab of a user pool">}}
+        {{< figure src="/attachments/appstore/modules/aws-cognito/addusers.png" alt="The Users tab of a user pool">}}
 
 4. Configure the app integration by doing the following steps:
     1. Go to the **App integration** tab of the user pool that you created.
     2. In the **App clients and analytics** section, click **Create app client**.
 
-        {{< figure src="/attachments/appstore/connectors/aws-cognito/createappclient.png" alt="The Create app client button on the App integration page">}}
+        {{< figure src="/attachments/appstore/modules/aws-cognito/createappclient.png" alt="The Create app client button on the App integration page">}}
 
     3. On the **Create app client** page, configure the following settings:
         * **App type** - **Public client**
@@ -271,14 +271,14 @@ To configure Amazon Cognito for the OIDC SSO module, follow these steps:
     5. Open the app client that you created.
     6. In the **App client information** section, copy the **Client ID** and the **Client secret**, and save them in a secure location.
 
-        {{< figure src="/attachments/appstore/connectors/aws-cognito/idsecret.png" alt="The Client ID and Client secret on the App client information page">}}
+        {{< figure src="/attachments/appstore/modules/aws-cognito/idsecret.png" alt="The Client ID and Client secret on the App client information page">}}
 
     7. Go back to the user pool that you created.
     8. On the **App integration** tab, in the **Domain** section, copy the **Cognito domain** and save it in a secure location.
 
 ### 5.2 OIDC Client Configuration{#client-configuration}
 
-You can configure your OIDC client using the app pages – see [General OIDC Clients](#general-oidc), [Microsoft Azure AD Client Configuration](#azure), and [Amazon Cognito Client Configuration](#cognito), below. In version 2.3.0 and above, you can also use constants to configure your app at deployment time – see [Automated Deploy-time SSO Configuration](#deploy-time), below.
+You can configure your OIDC client using the app pages – see [General OIDC Clients](#general-oidc), [Microsoft Entra ID Client Configuration](#azure), and [Amazon Cognito Client Configuration](#cognito), below. In version 2.3.0 and above, you can also use constants to configure your app at deployment time – see [Automated Deploy-time SSO Configuration](#deploy-time), below.
 
 #### 5.2.1 General OIDC Clients {#general-oidc}
 
@@ -312,14 +312,14 @@ Once you have completed these steps, the SSO-configuration is ready for testing.
 
 See the section [Optional Features](#optional) information on additional optional features you may want to implement.
 
-#### 5.2.2 Microsoft Azure AD Client Configuration for APIs {#azure}
+#### 5.2.2 Microsoft Entra ID Client Configuration for APIs {#azure}
 
-For Azure AD access to APIs through an access token, in addition to the configuration described above, we can request the scope [configured in Azure portal](#azure-portal), described above, from the OIDC SSO UI configuration.
+For Entra ID access to APIs through an access token, in addition to the configuration described above, we can request the scope [configured in Azure portal](#azure-portal), described above, from the OIDC SSO UI configuration.
 
 1. Start your app, log in as an administrator, for example *demo_administrator*, and access the OpenID Setup page.
 1. Add the custom scope which you [configured in Azure](#azure-portal) in **Available scopes**.
 1. Save the configuration.
-1. Edit the Azure AD configuration and add the custom scope to **Selected scopes**.
+1. Edit the Entra ID configuration and add the custom scope to **Selected scopes**.
 
 Now, you can acquire tokens which can be validated using JWKS URI.
 
@@ -338,14 +338,14 @@ After you configure the necessary settings in Amazon Cognito, you must add the e
 
 2. Click **Import Configuration** to automatically fill the other endpoints.
 
-    {{< figure src="/attachments/appstore/connectors/aws-cognito/filledendpoints.png" alt="Sample endpoint URLs">}}
+    {{< figure src="/attachments/appstore/modules/aws-cognito/filledendpoints.png" alt="Sample endpoint URLs">}}
 
 3. Click **Save**.
 4. Add an Amazon Cognito sign in button to a page in your app.
 
     You can achieve this by adding the **ACT_StartWebSignIn_Default** nanoflow to the button. For more information about creating custom buttons, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
 
-    {{< figure src="/attachments/appstore/connectors/aws-cognito/samplelogin.png" alt="Sample endpoint URLs">}}
+    {{< figure src="/attachments/appstore/modules/aws-cognito/samplelogin.png" alt="Sample endpoint URLs">}}
 
 Users who are part of the user pool you created in Amazon Cognito can now log in with their Amazon Cognito user name and password.
 
@@ -530,7 +530,7 @@ If you want to use the information in an access token which is a JWT, you need t
         ]
         ```
 
-    * Microsoft Azure AD – in this case the `roles` claim is interpreted, using the roles claim in the access token — for example:
+    * Microsoft Entra ID – in this case the `roles` claim is interpreted, using the roles claim in the access token — for example:
 
         ```json {linenos=false}
         "roles": [
@@ -566,13 +566,13 @@ To parse of SAM access tokens you need to do the following when performing [OIDC
 1. Configure the user roles in your app to match the roles returned by SAM. End-users will be given the matching role when they sign into the app. If the role in the SAM token is not found in the Mendix app the end-user will be given the role `User`.
 1. Save the configuration.
 
-#### 8.2.2 Parsing Microsoft Azure AD Access Tokens
+#### 8.2.2 Parsing Microsoft Entra ID Access Tokens
 
-The OIDC SSO module provides a default access token parsing microflow for Azure AD. To use it, select the appropriate access token parsing microflow:
+The OIDC SSO module provides a default access token parsing microflow for Entra ID. To use it, select the appropriate access token parsing microflow:
 
-* For Azure AD, the default access token parsing microflow is `OIDC.Default_Azure_TokenProcessing_CustomATP`.
+* For Entra ID, the default access token parsing microflow is `OIDC.Default_Azure_TokenProcessing_CustomATP`.
 
-To confirm that the authorization is working, get an access token from your Azure AD IdP and pass it to the API Endpoint using the authorization header.
+To confirm that the authorization is working, get an access token from your Entra ID IdP and pass it to the API Endpoint using the authorization header.
 
 #### 8.2.3 Parsing OIDC Provider Access Tokens
 
@@ -596,10 +596,10 @@ To confirm that the authorization is working, get an access token from your OIDC
 
 #### 8.2.4 Parsing Access Tokens Using a Custom Microflow{#custom-parsing}
 
-If you choose to implement your own microflow to parse an access token, the microflow name must contain `CustomATP`, for example `CustomATP_MyTokenParser`. This is how you can parse access tokens issued by IdPs such as Microsoft Azure AD.
+If you choose to implement your own microflow to parse an access token, the microflow name must contain `CustomATP`, for example `CustomATP_MyTokenParser`. This is how you can parse access tokens issued by IdPs such as Microsoft Entra ID.
 
 {{% alert color="info" %}}
-If you are using Microsoft Azure AD, ensure you have followed the instructions for getting valid tokens in [Configuration of OIDC Provider](#oidc-configuration), above.
+If you are using Microsoft Entra ID, ensure you have followed the instructions for getting valid tokens in [Configuration of OIDC Provider](#oidc-configuration), above.
 {{% /alert %}}
 
 You can find a sample microflow for parsing access tokens, `OIDC.ACT_Token_CustomATPRetrieveRoles` in the OIDC module.

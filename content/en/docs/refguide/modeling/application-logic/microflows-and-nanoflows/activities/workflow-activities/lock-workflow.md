@@ -15,19 +15,15 @@ This activity can only be used in microflows.
 The **Lock workflow** activity can be used to lock a [workflow](/refguide/workflows/). 
 
 {{% alert color="info" %}}
-
 When the workflow is locked, it is the workflow definition that is locked. It means that when a workflow definition is locked it is not possible to start new instances of the workflow.
-
 {{% /alert %}}
 
 This microflow activity allows developers to build a function for the workflow administration that stops the workflow execution. The Lock  workflow activity can be used when the workflow definition contains errors and you have to prevent further damage to the process execution or data that will be difficult to undo/revert.
 
-The information whether the workflow is locked is stored in the **IsLocked** attribute of the **WorkflowDefinition** entity. For more information, see the [Workflow Entities in the System Module](/refguide/workflows/#workflow-entities) section in *Workflows*. 
+The information whether the workflow is locked is stored in the **IsLocked** attribute of the **WorkflowDefinition** entity. For more information, see the [Definition-Related Entities](/refguide/workflow-engine/#definition) section in *Workflow Engine*. 
 
 {{% alert color="warning" %}}
-
 If the workflow is locked, new workflow instances from the selected workflow cannot be created and the activity will result in a Runtime error. If you try the lock the workflow which has been already locked, it will also result in a Runtime error.  For information on how to handle the error, see [Error Handling in Microflows](/refguide/error-handling-in-microflows/).
-
 {{% /alert %}}
 
 For information on unlocking the workflow, see the [Unlock Workflow](/refguide/unlock-workflow/).

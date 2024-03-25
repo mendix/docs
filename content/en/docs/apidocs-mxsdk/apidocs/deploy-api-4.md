@@ -3,9 +3,11 @@ title: "Deploy API – Version 4"
 linktitle: "Deploy API v4"
 url: /apidocs-mxsdk/apidocs/deploy-api-4/
 type: swagger
+aliases:
+    - /apidocs-mxsdk/apidocs/deploy-api-3/
 category: "API Documentation"
 description: "Deploy API v4 can be used to deploy Mendix apps to licensed nodes, manage application environments in Mendix Cloud, retrieve statuses, start and stop applications, and deploy or transport new model versions to application environments."
-weight: 42
+weight: 46
 tags: ["API", "deploy", "licensed", "deployment", "cloud"]
 ---
 
@@ -15,10 +17,10 @@ The Deploy API only works for apps that are deployed to Mendix Cloud.
 
 ## 1 Introduction
 
-The Deploy API allows you to manage application environments in Mendix Cloud. Version 4 introduces additional actions and improved features for some actions. It replaces the deprecated [Deploy API – Version 3](/apidocs-mxsdk/apidocs/deploy-api-3/).
+The Deploy API allows you to manage application environments in Mendix Cloud. Version 4 introduces additional actions and improved features for some actions. It replaces the deprecated Deploy API – Version 3.
 
 {{% alert color="info" %}}
-The v4 Deploy API only supports the endpoints listed here. For all other API calls, the [v2 API](/apidocs-mxsdk/apidocs/deploy-api-2/) or [v1 API](/apidocs-mxsdk/apidocs/deploy-api/) must be used.
+The v4 Deploy API only supports the endpoints listed here. For all other API calls, use the [v2 API](/apidocs-mxsdk/apidocs/deploy-api-2/) or [v1 API](/apidocs-mxsdk/apidocs/deploy-api/).
 
 Mendix recommends using calls from the same version of the API where possible; this is because the naming across versions is inconsistent. For example, the {appId} in the version 4 API is retrieved as the {ProjectId} from the version 1 API.
 {{% /alert %}}
@@ -29,7 +31,7 @@ Authentication for the Deploy API v4 uses a personal access token (PAT).
 
 ### 2.1 Generating a PAT
 
-To generate a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/#pat) section of *Mendix Profile*.
+To generate a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section of *Mendix Profile*.
 
 Select the following as **Deployment Mendix Cloud** scopes:
 
@@ -43,7 +45,7 @@ Store the generated value `{GENERATED_PAT}` somewhere safe so you can use it to 
 Each request must contain an `Authorization` header with the value `MxToken {GENERATED_PAT}`. Here is an example:
 
 ```http {linenos=false}
-GET /api/v4/clusters HTTP/1.1
+GET /apps/80a28d6e-c5fc-43d9-87c2-d7d56b07542e/environments/6b61f27c-dac9-48c5-b359-f861374ceb36/permissions HTTP/1.1
 Authorization: MxToken 7LJE…vk
 ```
 

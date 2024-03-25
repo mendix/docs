@@ -2,14 +2,14 @@
 title: "REST Services"
 url: /refguide/integration/rest-services/
 category: "Integration"
-weight: 51
+weight: 30
 description: "Introduces REST."
 tags: ["REST services"]
 ---
 
 ## 1 Introduction
 
-Representational state transfer (REST) is an approach to consuming or exposing resources. It has gained popularity because of its simplicity, because no extensive schemas or contracts are needed to transfer data between endpoints. It uses the following:
+Representational state transfer (REST) is an approach to consuming or exposing resources. It has gained popularity because of its simplicity, as no extensive schemas or contracts are needed to transfer data between endpoints. It uses the following:
 
 * HTTP URLs to locate resources
 * HTTP headers to authenticate and specify content types (such as XML or JSON)

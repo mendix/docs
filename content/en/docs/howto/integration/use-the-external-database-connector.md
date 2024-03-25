@@ -110,11 +110,11 @@ To call a stored procedure, do the following:
 
 1. Enter the following syntax: `Call latest_schema.InsertDataIntoTable1()`
 
-2. If the stored procedure returns result-set, click **Use Response** and **Save Query & Create Entity** to save the query and the newly-created entity in the domain model.
+2. If the stored procedure returns a result set, click U**se Response** > **Save Query & Create Entity** to save the query and the newly-created entity in the domain model.
 
 3. If the stored procedure contains DML Queries, **Number of affected rows** will be displayed as a response. Click **Save Query** to save the query.
 
-4. DML commands within a stored procedure are rolled back if they are not committed by a stored procedure, but DDL commands are not.
+    {{% alert color="info" %}}DML commands within a stored procedure are rolled back if they are not committed by a stored procedure, but DDL commands are not.{{% /alert %}}
 
 ## 6 Use the Query External Database Activity
 

@@ -10,12 +10,12 @@ weight: 112
 ---
 
 {{% alert color="warning" %}}
-User Identifiers API is available for Mendix Admins.
+The User Identifiers API is available for Mendix Admins.
 {{% /alert %}}
 
 ## 1 Introduction
 
-User Identifiers API allows Mendix Admins to perform operations related to user identifiers beloging to their company. Such as getting user UUID of certain emails.
+The User Identifiers API allows Mendix admins to perform operations related to user identifiers within their company, such as obtaining the user UUIDs of specific email addresses.
 
 ## 2 Authentication{#authentication}
 
@@ -23,11 +23,11 @@ Authentication for the User Identifiers API uses a personal access token (PAT).
 
 ### 2.1 Generating a PAT
 
-To generate a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section of *Mendix Profile*.
+To generate a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section of *User Settings*.
 
 Select the following as **User Identifiers API** scopes:
 
-* `mx:mxid3:user-identifiers:uuid:read` – to perform `GET` operations on user's UUIDs
+`mx:mxid3:user-identifiers:uuid:read` – to perform `GET` operations on user's UUIDs
 
 Store the generated value `{GENERATED_PAT}` somewhere safe so you can use it to authorize your User Identifiers API calls.
 
@@ -46,7 +46,7 @@ To authenticate calls when using the Open API specification below, click **Autho
 
 ### 3.1 Using the API to retrieve user's UUIDs
 
-{{% alert color="info" %}}Retrieval of user's UUIDs can only be performed by Mendix Admins of the company.{{% /alert %}}
+{{% alert color="info" %}}Only Mendix Admins from the company have the authority to retrieve user UUIDs.{{% /alert %}}
 
 The following steps lead to retrieval of user's UUIDs of the email addresses provided in {emailAddresses}.
 

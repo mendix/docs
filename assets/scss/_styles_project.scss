@@ -238,12 +238,13 @@ main a[href*="https://"]:not(.btn):not(.td-breadcrumbs a)::after {
     height: 1rem;
     margin-left: .2rem;
     vertical-align: sub;
-    content: url("/icons/external-unvisited.svg"); // Fill color is $link-color (blue-8 from PDS). Keep it updated with _variables_project.scss.
+    content: url("/mx-icons/external.svg");
+    filter: invert(14%) sepia(99%) saturate(4690%) hue-rotate(225deg) brightness(93%) contrast(95%); // Matches to $link-color (blue-8 from PDS). Keep updated with _variables_project.scss.
 }
 
-// Change external link icon (color) upon hover
+// Change external link icon color upon hover
 main a[href*="https://"]:hover:not(.btn):not(.td-breadcrumbs a)::after {
-          content: url("/icons/external-hover.svg"); // Fill color is $link-color (blue-8 from PDS). Keep it updated with _variables_project.scss.
+    filter: invert(15%) sepia(65%) saturate(5388%) hue-rotate(231deg) brightness(79%) contrast(121%); // Matches to $link-hover-color (blue-9 from PDS). Keep updated with _variables_project.scss.
 }
 
 .btn {

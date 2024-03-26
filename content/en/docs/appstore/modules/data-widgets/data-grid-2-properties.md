@@ -139,7 +139,7 @@ This property sets the action to be performed when the **Attribute** value is ch
 A list of filters that can be used in the header of the data grid. Each filter defines an attribute that is used as part of a joined query to select data from the data source.
 
 {{% alert color="info" %}}
-This property requires advanced knowledge of data grid widget. Please read [Filtering](/appstore/modules/data-grid-2/#filtering) and view its examples for additional guidance.
+This property requires advanced knowledge of data grid widget. Please read [Grid Wide Filtering](/appstore/modules/data-grid-2/#grid-wide-filtering) and view its examples for additional guidance.
 {{% /alert %}}
 
 ### 2.8 Aria Labels

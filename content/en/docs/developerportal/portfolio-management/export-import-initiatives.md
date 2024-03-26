@@ -25,24 +25,23 @@ Each time, you can only export initiatives from one portfolio. It is not possibl
 
 {{% /alert %}}
 
-1. In Portfolio Management, click the portfolio to open it. The portfolio opens. You can see the **Initiatives Overview** page.
+1. In Portfolio Management, click the portfolio to open the portfolio.
 
-2. If you only want to export a selection of initiatives, before you start exporting initiatives, use **Filters** on the upper-right corner of the **Initiatives Overview** page to filter the initiatives that you want to export.
+2. To export active initiatives, go to the **Initiatives Overview** page. To export archived initiatives, go to the **Archived** page.
 
-3. Click the {{% icon name="office-sheet" %}} icon on the upper-right corner to open a drop-down menu. For Archive page you can directly click on the Export Initiatives button.
+3. If you want to only export a selection of initiatives, use **Filters** on the upper-right corner of the page to filter the initiatives that you want to export.
 
-   {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/export-import-icon.png"  class="image-border" width="600"  >}}
+4. Click the button on the upper-right corner to export initiatives:
 
-4. On the drop-down menu, select **Export Initiatives**. The **Export Initiatives** dialog box opens:
+   * On the **Initiatives Overview** page, click the {{% icon name="office-sheet" %}} icon and then select **Export Initiatives**. 
+   * On the **Archive** page, click {{% icon name="office-sheet" %}} **Export Initiatives**.
+   
+   The **Export Initiatives** dialog box opens.
 
-   * Click **Export All** to export all initiatives of the portfolio.
-   * Click **Export Selection** to only export the selection of your currently-filtered initiatives.
+
+5. To export all initiatives of the portfolio, click **Export All**. To only export the selection of your initiatives, click **Export Selection**.
 
 The initiatives are exported to an Excel file.
-
-{{% alert color="info" %}}
-Exported columns may change as new fields are added to Portfolio Management.
-{{% /alert %}}
 
 {{% alert color="info" %}}
 All the details of an initiative are exported, except the data of the following fields:
@@ -56,6 +55,10 @@ All the details of an initiative are exported, except the data of the following 
 * **Additional Information** of the **Expected Value**
 * **Archived By**
   {{% /alert %}}
+
+{{% alert color="info" %}}
+Exported columns may change as new fields are added to Portfolio Management.
+{{% /alert %}}
 
 ### 3.2 Importing Initiatives {#import-initiatives}
 

@@ -15,11 +15,11 @@ tags:
 
 #### 2.1.1 Data Source
 
-Data source specifies the source of the data being presented in the data grid. You can select data from **Database**, **Microflow**, **Nanoflow** or **Association**.
+Data source specifies the source of the data being presented in the data grid. You can select data from **Database**, **Microflow**, **Nanoflow**, or **Association**.
 
-#### 2.1.2 Refresh time
+#### 2.1.2 Refresh Time
 
-The time, in milliseconds (thousandths of a second), the grid should wait between refreshing the data. Auto refreshing turned off when value is 0.
+The time (in milliseconds) the grid waits between refreshing the data. Auto-refreshing is turned off when the value is 0.
 
 #### 2.1.3 Selection
 
@@ -29,17 +29,19 @@ This property controls row selection capabilities. Selection is turned off by de
 * The **Multi** type support selecting several rows at the time
 
 {{% alert color="info" %}}
-Current versions of data grid support only “in-memory” selection. This implies some limitation which allows selecting only visible rows. If you change data grid page or reload browser window selection will be cleared.{{% /alert %}}
+Data grid currently supports only in-memory selection. This implies some limitation which allows selecting only visible rows. If you change a data grid page or reload the browser window, then selection will be cleared.{{% /alert %}}
 
-#### 2.1.4 Selection method
+#### 2.1.4 Selection Method
 
-This property specifies the method of selection. The “Checkbox” method adds a checkbox to the beginning of the row, which acts as the primary way to select the row. The “Row click” method, as it's name suggests, makes the whole row clickable and clicking on a row makes it selected.
+This property specifies the method of selection. The **Checkbox** method adds a checkbox to the beginning of the row, which acts as the primary way to select the row. The **Row click** method makes the whole row clickable; clicking on a row makes it selected.
 
-#### 2.1.5 Show (un)check all toggle
+#### 2.1.5 Show (Un)check All Toggle
 
-{{% alert color="info" %}}This property is available only when **Selection method** is set to “Checkbox” in combination with **Selection** “Multi”.{{% /alert %}}
+{{% alert color="info" %}}
+This property is available only when **Selection method** is set to **Checkbox** in combination with **Selection** > **Multi**.
+{{% /alert %}}
 
-When set to “Yes”, the data grid displays a checkbox in the header that, when checked, selects all visible rows. Unchecking it will clear the selection.
+When set to **Yes**, the data grid displays a checkbox in the header that, when selected, selects all visible rows. Clearing it will clear the selected rows.
 
 ### 2.2 Columns Tab
 

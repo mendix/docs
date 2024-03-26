@@ -55,28 +55,28 @@ The following script example demonstrates the process required to update your ap
 ```text {linenos=table}
 Import-Module '{<Mendix Service Console installation directory>}\Mendix.Service.Commands.dll'
 
-$MDA_PATH = '{Location of your Mendix Deployment Package}'
-$MDA_FILE = '{Name of your Mendix Deployment Package}' 
-$LITERAL_PATH = $MDA_PATH + "\" + $MDA_FILE
-$APP_NAME = '{Name of your app}'
+$mdaPath = '{Location of your Mendix Deployment Package}'
+$mdaFile = '{Name of your Mendix Deployment Package}' 
+$literalPath = $mdaPath + "\" + $mdaFile
+$appName = '{Name of your app}'
 
-"Deploying " + $MDA_PATH + " to app " + $APP_NAME
+"Deploying " + $mdaPath + " to app " + $appName
 
 # stop app
-Stop-MxApp $APP_NAME
+Stop-MxApp $appName
 
 # unpack app                                                    
-Update-MxApp $APP_NAME -LiteralPath $LITERAL_PATH
+Update-MxApp $appName -LiteralPath $literalPath
 
 # start app, update database                                     
-Start-MxApp $APP_NAME -SynchronizeDatabase
+Start-MxApp $appName -SynchronizeDatabase
 ```
 
 {{% alert color="info" %}}
 To start your app as a local process instead of a service, add a `-NoService` argument to the `Start-MxApp` cmdlet, as in the following example:
 
 ```
-Start-MxApp $APP_NAME -NoService -SynchronizeDatabase 
+Start-MxApp $appName -NoService -SynchronizeDatabase 
 ```
 
 {{% /alert %}}
@@ -119,26 +119,26 @@ Install-MxServer -LiteralPath {<target folder for the downloaded file>}\mendix-{
 
 ### 4.4 Sample Script - Create new Mendix app
 
-The following script example demonstrates how to create a new Mendix app with an app folder and basic Settings.yaml file. Below is the command to create new Mendix app.
+The following script example demonstrates how to create a new Mendix app with an app folder and basic Settings.yaml file. You still need to extend Settings.yaml file with database settings and a valid Java path before the app can really start.
 
 ```text {linenos=table}
-$APP_NAME = ‘Name of Mendix app’
+$appName = 'Name of Mendix app'
 
 # Create new Mendix app
-New-MxApp -Name $APP_NAME -Credential (Get-Credential)
+New-MxApp -Name $appName -Credential (Get-Credential)
 ```
 
 ### 4.5 Sample Script - Set Log Level for Mendix app
 
-The following script example demonstrates how to set log level for all nodes of a log subscriber at once. Below is the command to set log level for all log nodes.
+The following script example demonstrates how to set a log level for all log nodes of a log subscriber at once. This is only applicable when you have defined your own log subscribers in the Settings.yaml file.
 
 ```text {linenos=table}
-$APP_NAME = ‘Name of Mendix app’
-$SubscriberName = ‘Log subscriber name of the app’
-$Level = ‘Log level which needs to be assigned’
+$appName = 'Name of Mendix app'
+$subscriberName = 'Log subscriber name of the app'
+$level = 'Log level which needs to be assigned'
 
 # Set log level for all nodes of a log subscriber at once
-Set-MxLogLevel $APP_NAME -SubscriberName $SubscriberName -Level $Level
+Set-MxLogLevel $appName -SubscriberName $subscriberName -Level $level
 ```
 
 ## 5 Troubleshooting

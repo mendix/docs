@@ -27,7 +27,7 @@ To generate a PAT, see the [Personal Access Tokens](/community-tools/mendix-prof
 
 Select the following as **User Identifiers API** scopes:
 
-`mx:mxid3:user-identifiers:uuid:read` – to perform `GET` operations on user's UUIDs
+`mx:mxid3:user-identifiers:uuid:read` – to obtain the user's UUIDs
 
 Store the generated value `{GENERATED_PAT}` somewhere safe so you can use it to authorize your User Identifiers API calls.
 

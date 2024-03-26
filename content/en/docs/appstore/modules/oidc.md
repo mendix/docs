@@ -21,7 +21,7 @@ If you are using Mendix 9.20 and above, please use version 2.0.0 or above of the
 {{% /alert %}}
 
 {{% alert color="info" %}}
-The OIDC SSO module works with web/responsive applications only.
+The OIDC SSO module works with both web/responsive applications and progressive web apps (PWA).
 {{% /alert %}}
 
 Alternatives to using OIDC SSO for managing single sign-on are:
@@ -73,12 +73,11 @@ For readers with more knowledge of the OAuth and OIDC protocol.
 
 The OIDC SSO module does not yet support the following:
 
-* Requesting claims via the 'claims' query parameter, as per OIDC specs.
-* Other client authentication methods such as using asymmetric keys (“private_key_jwt”).
-* Delegating authorization using OAuth-scopes; this currently requires a custom microflow for parsing of Access Tokens.
-* Mobile apps.
-* PWA Apps.
-* Controlling the configuration using constants requires an app restart.
+* Requesting claims via the 'claims' query parameter, as per OIDC specs
+* Other client authentication methods such as using asymmetric keys (“private_key_jwt”)
+* Delegating authorization using OAuth-scopes; this currently requires a custom microflow for parsing of Access Tokens
+* Mobile apps
+* Controlling the configuration using constants requires an app restart
 
 The OIDC SSO module also has the following limitations:
 
@@ -187,7 +186,7 @@ In the **Anonymous** tab of the app security settings, do the following:
 
 The OIDC SSO module works without a specified sign-in page. Therefore, in the navigation section of your app, set **Sign-in page** (in the **Authentication** section) to *(none)*.
 
-To allow your end-users to choose from a number of different IdPs, or to have the option to log back into the app after they have logged out, set a **Role-based home page** for role **Anonymous** to **OIDC.Login_Web_Button**. See [Role-Based Home Pages](/refguide/navigation/#role-based) in *Navigation* for more information.
+If you are configuring navigation for web/responsive apps and want to allow your end-users to choose from a number of different IdPs, or to have the option to sign in back into the app after they have signed out, set a **Role-based home page** for role **Anonymous** to **OIDC.Login_Web_Button**. When you configure navigation for PWA apps, set a **Role-based home page** for role **Anonymous** to **OIDC.Login_PWA_Button**. For more information, see [Role-Based Home Pages](/refguide/navigation/#role-based) in *Navigation*.
 
 In addition, administrators will need to have access to configure OIDC and also manage end-users. You can do this by including the pages `Administration.Account_Overview` and `OIDC.OIDC_Client_Overview` into the app navigation, or a separate administration page.
 

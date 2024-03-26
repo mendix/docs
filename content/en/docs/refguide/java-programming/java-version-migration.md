@@ -14,7 +14,7 @@ New information will be added to this page as it is reported. Feel free to updat
 
 ## 2 From Java 11 to 17
 
-The following changes in behavior have been noticed when migrating from Java version 11 to Java versions 17.
+The following changes in behavior have been noticed when migrating from Java version 11 to Java version 17.
 
 ### 2.1 Changes in Date Formatting When Locale Is Dutch {#date-locale-dutch}
 
@@ -34,3 +34,11 @@ The following changes in behavior have been noticed when migrating from Java ver
 | ----------------------------------------------- | -------------------- | -------------------- |
 | `formatDate(dateTime(2006, 5, 4))`              | 04-05-06             | 04-05-2006           |
 | `formatDateTime(dateTime(2006, 5, 4, 3, 2, 1))` | 04-05-06 03:02       | 04-05-2006 03:02     |
+
+## 3 From Java 11 or 17 to 21
+
+The following changes in behavior have been noticed when migrating from Java version 11 or 17 to Java version 21.
+
+### 3.1 Changes in Date Formatting {#date-formatting-21}
+
+[Locale data was updated in Java version 20](https://www.oracle.com/java/technologies/javase/20-relnote-issues.html#JDK-8284840) in such a way that [date formatting microflow expression](/refguide/parse-and-format-date-function-calls/#3-formatdatetimeutc) have changed what they produce when the format string contains AM or PM. Before Java version 20 a space would be included before the AM/PM, but now it will be a Unicode non-breaking space (NBSP or NNBSP, \u202f). In a Microflow expression this non-breaking space can be included in a string using `urlDecode('%E2%80%AF')`, for example `'8:24' + urlDecode('%E2%80%AF') + 'AM'`.

@@ -2,8 +2,7 @@
 title: "Data Grid 2 Properties"
 url: /appstore/modules/data-grid-2-properties/
 description: "This document describes the properties of the Data Grid 2 and their configurations."
-tags:
-    [ "marketplace","marketplace component","data grid","platform support","external entities"]
+tags: [ "marketplace","marketplace component","data grid","platform support","external entities"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

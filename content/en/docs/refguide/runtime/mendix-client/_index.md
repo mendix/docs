@@ -275,13 +275,10 @@ The flow described below applies to production apps. During development, the flo
 When launching a native mobile app in production, the following occurs:
 
 1. The end-user opens the app on their device. This is a project specific shell app, which runs natively on iOS or Android. It is released to the app store appropriate for the device. If a new version of the app is downloaded to the device, the app will behave as if the end-user has opened it for the first time, even if it was already open on their device.
-2. The shell app loads a native bundle. This is the equivalent of the Mendix Client resources used by the Mendix Client running in a browser. It contains, for example, the Mendix Client code and page definitions. However, it is held locally on the device rather than centrally with the Runtime Server.
-3. If there is not a valid authentication token on the device, the Mendix Client contacts the Runtime Server and authenticates the end-user and gets any additional configuration required from the Runtime Server.
-4. If this is the first time the app has been started, or the first time after an update to the app, the Mendix Client performs a synchronization with the Runtime Server.
-5. The Mendix Client checks the resources stored in Visual Studio App Center for updates to the native bundle. This enables the app to keep up-to-date without needing to download new versions of the app from the app store.
+1. The app displays the splash screen defined in the [build process](/refguide/mobile/distributing-mobile-apps/building-native-apps/).
+1. The shell app loads a native bundle. This is the equivalent of the Mendix Client resources used by the Mendix Client running in a browser. It contains, for example, the Mendix Client code and page definitions. However, it is held locally on the device rather than centrally with the Runtime Server.
+1. If there is not a valid authentication token on the device, the Mendix Client contacts the Runtime Server and authenticates the end-user and gets any additional configuration required from the Runtime Server.
+1. If this is the first time the app has been started, or the first time after an update to the app, the Mendix Client performs a synchronization with the Runtime Server.
+1. If enabled, the Mendix Client checks if an updated bundle is available on the runtime. If it is, the updated bundle is downloaded and stored, and the app is restarted. This enables the app to keep up-to-date without needing to download new versions of the app from the app store. Please consider the limitations listed in the [When to Use OTA Updates](/refguide/mobile/distributing-mobile-apps/overtheair-updates/#when-to-use-ota) section of *Updating Native Apps* when updating native apps this way.
 
-    *The Mendix Client is now ready to start interacting with the end-user and will repeat the following steps for as long as the continues to run.*
-
-6. The Mendix Client prepares a page using the data on the device.
-7. The Mendix Client presents the page to the end-user.
-8. The Mendix Client reacts to the end-user input.
+*The Mendix Client is now ready to display the home screen and respond to user input.*

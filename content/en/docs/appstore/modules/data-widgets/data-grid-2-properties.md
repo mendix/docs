@@ -47,25 +47,25 @@ When set to **Yes**, the data grid displays a checkbox in the header that, when 
 
 #### 2.2.1 Columns
 
-A list of columns to display in the data grid. Each item in this list is a set of properties that define and control the appearance and behavior of the column. To read more about each property, go to the [Column properties](#column-properties) section.
+A list of columns displayed in the data grid. Each item in this list is a set of properties that define and control the appearance and behavior of the column. To read more about each property, see the [Column properties](#column-properties) section.
 
-#### 2.2.2 Show column filters
+#### 2.2.2 Show Column Filters
 
-If set to “No” all column filters will be hidden.
+If set to **No**, then all column filters will be hidden.
 
 ### 2.3 Rows Tab
 
-#### 2.3.1 Page size
+#### 2.3.1 Page Size
 
-The number of rows to display per page. When **Pagination** type is “Virtual scrolling” this number define how many rows added to the end when the grid is scrolled to the bottom.
+The number of rows to display per page. When **Pagination** type is **Virtual scrolling**, then this number defines how many rows added to the end when the grid is scrolled to the bottom.
 
 #### 2.3.2 Pagination
 
-#### 2.3.3 Position of pagination
+#### 2.3.3 Position of Pagination
 
-Defines the type of pagination. By default, the data grid groups rows into pages, and buttons used to navigate between pages.
+Defines the type of pagination. By default, the data grid groups rows into pages, and employs buttons to navigate between pages.
 
-When the property set to "Virtual scrolling", the navigation buttons are hidden and the data grid scrolling is used as a trigger to show next chunk of data.
+When the property is set to **Virtual scrolling**, then the navigation buttons are hidden and the data grid scrolling is used as a trigger to show the next chunk of data.
 
 #### 2.3.4 Show paging buttons
 

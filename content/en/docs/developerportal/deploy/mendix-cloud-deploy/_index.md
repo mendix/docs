@@ -23,7 +23,7 @@ Organizations can also have their own Mendix Cloud. This service is named [Mendi
  
 ### 1.1 Free App {#free-app} 
  
-If you are new to the Mendix community and would like to deploy and share your own app, you can do so for free on Mendix's public cloud offering. The Free App environment allows any Mendix developer to create and share their applications with their users. Note that a Free App does not support complex or large applications. 
+If you are new to the Mendix community and would like to deploy and share your own app, you can do so for free on Mendix's public cloud offering. A Free App environment allows any Mendix developer to create and share their applications with their users. Note that a Free App does not support complex or large applications. 
  
 {{% alert color="info" %}} 
 Free Apps are part of Mendix's Free Edition. 
@@ -66,7 +66,7 @@ As noted in the table above, a Free App goes into sleep mode after about an hour
  
 If, after a couple of minutes, your app does not wake up, contact [Mendix Support](http://support.mendix.com). 
  
-You can upgrade a Free App to a licensed node with a node in Mendix Cloud. For more information, see [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/). 
+You can upgrade a Free App to a licensed app running on a node in Mendix Cloud. For more information, see [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/). 
  
 #### 1.1.2 Free Apps Archiving {#free-apps-archival} 
  
@@ -117,7 +117,7 @@ The method for deploying an app to Mendix Cloud differs depending on whether you
  
 * For a licensed app, there are several deployment options: 
     * Manual deployment – Create a deployment package via Studio Pro or the Developer Portal, and then deploy the package to a node environment where you can run it. For details on how to do this, see [Deploying a Licensed App](#deploy-licensed-app), below. This is the simplest deployment method, especially if you are just getting started with Mendix. 
-    * Pipelines built with low code – If you want to automate your build and deployment process, you can use Pipelines in the Developer Portal to design and activate a pipeline with a set of configurable, low-code steps. For details, see [Pipelines (Beta)](/developerportal/deploy/pipelines/). The Pipelines feature is intended to make it quick and easy for teams to automate their CI/CD process, without requiring any third-party tools or DevOps expertise. 
+    * Pipelines built with low code – If you want to automate your build and deployment process, you can use  [Pipelines](/developerportal/deploy/pipelines/) in the Developer Portal to design and activate a pipeline with a set of configurable, low-code steps. The Pipelines feature makes it quick and easy for teams to automate their CI/CD process, without requiring any third-party tools or DevOps expertise. 
     * Pipelines built with APIs – If you use Jenkins, GitLab, or another CI/CD tool, you can use Mendix APIs to automate your build and deployment process. For details, see [Implement a Simple CI/CD Pipeline with Mendix APIs](/howto/integration/implement-cicd-pipeline/). This method is highly customizable but does require CI/CD tooling and DevOps expertise to set up. 
 * For a Free App, you deploy the app directly from Studio Pro. For details on how to do this, see [Deploying a Free App](#deploy-free-app), below. 
  
@@ -140,7 +140,7 @@ Before starting the process for deploying a licensed app, make sure to complete 
  
 #### 2.1.2 Creating a Deployment Package for a Licensed App 
  
-There are two methods for creating a deployment package on Mendix Cloud. You can create a deployment package directly via Studio Pro, or you can create a package via the Team Server through the Developer Portal. 
+There are two methods for creating a deployment package on Mendix Cloud. You can create it directly via Studio Pro, or through the Developer Portal, using a model committed to the Team Server. 
  
 ##### 2.1.2.1 Creating a Deployment Package via Studio Pro 
  
@@ -157,7 +157,7 @@ To create a deployment package directly from Studio Pro, follow these steps:
  
 ##### 2.1.2.2 Creating a Deployment Package via the Developer Portal {#package-from-team-server} 
  
-You can also create a deployment package from the Team Server in the Developer Portal. To do this, follow these steps: 
+You can also create a deployment package through the Developer Portal, using a model committed to the Team Server. To do this, follow these steps: 
  
 1. Go to the [Developer Portal](http://sprintr.home.mendix.com). 
 1. Open your app's **Environments** page. 
@@ -183,7 +183,7 @@ The previous steps explained how to deploy a deployment package to Mendix Cloud,
  
 7. If prompted, clean the environment. 
 8. Configure the [constants](/refguide/constants/) (if necessary) by clicking **Constants** and **Edit constants value**. This can also be done at a later stage in the settings. 
-9. Configure the [scheduled events](/refguide/scheduled-events/) (if necessary) by clicking **Scheduled Events**. 
+9. Configure any [scheduled events](/refguide/scheduled-events/) (if necessary) by clicking **Scheduled Events**. 
 10. Click **Continue**. 
 11. Click **Start application**.  
 12. If prompted, click **Synchronize database**. 

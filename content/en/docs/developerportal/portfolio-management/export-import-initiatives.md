@@ -56,10 +56,6 @@ All the details of an initiative are exported, except the data of the following 
 * **Archived By**
   {{% /alert %}}
 
-{{% alert color="info" %}}
-Exported columns may change as new fields are added to Portfolio Management.
-{{% /alert %}}
-
 ### 3.2 Importing Initiatives {#import-initiatives}
 
 1. In Portfolio Management, click the portfolio to open it. The portfolio opens. You can see the **Initiatives Overview** page.

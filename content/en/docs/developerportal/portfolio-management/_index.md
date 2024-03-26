@@ -446,7 +446,7 @@ On the **Initiatives Overview** page you can import and export initiatives. On t
 
 The **Archive** page shows all the initiatives that are archived. You can search for an initiative in the search bar. Clicking **Filters** enables you to filter initiatives. You can [export Initiatives](/developerportal/portfolio-management/export-import-initiatives/) by clicking the {{% icon name="office-sheet" %}} **Export Initiatives** button.
 
-{{< figure src="/attachments/developerportal/portfolio-management/archived-initiatives.png" >}}
+{{< figure src="/attachments/developerportal/portfolio-management/archived-initiatives.png" class="image-border" >}}
 
 The list contains the following information:
 

@@ -1,6 +1,6 @@
 ---
 title: "Data Grid 2 Properties"
-url: /appstore/modules/dg2-props/
+url: /appstore/modules/data-grid-2-properties/
 description: "This document describes the properties of the Data Grid 2 and their configurations."
 tags:
     [ "marketplace","marketplace component","data grid","platform support","external entities"]
@@ -17,9 +17,9 @@ tags:
 
 Data source specifies the source of the data being presented in the data grid. You can select data from **Database**, **Microflow**, **Nanoflow**, or **Association**.
 
-#### 2.1.2 Refresh Time
+#### 2.1.2 Refresh Time (in seconds)
 
-The time (in milliseconds) the grid waits between refreshing the data. Auto-refreshing is turned off when the value is 0.
+The time (in seconds) the grid waits between refreshing the data. Auto-refreshing is turned off when the value is 0.
 
 #### 2.1.3 Selection
 
@@ -33,7 +33,13 @@ Data grid currently supports only in-memory selection. This implies some limitat
 
 #### 2.1.4 Selection Method
 
-This property specifies the method of selection. The **Checkbox** method adds a checkbox to the beginning of the row, which acts as the primary way to select the row. The **Row click** method makes the whole row clickable; clicking on a row makes it selected.
+This property specifies the method of selection.
+
+{{% alert color="info" %}}
+This property is available only when **Selection method** is set to **Single** or **Multi**.
+{{% /alert %}}
+
+The **Checkbox** method adds a checkbox to the beginning of the row, which acts as the primary way to select the row. The **Row click** method makes the whole row clickable; clicking on a row makes it selected.
 
 #### 2.1.5 Show (Un)check All Toggle
 
@@ -152,6 +158,8 @@ Defines a string value that labels the cancel export button of the export dialog
 Defines a string value that labels the checkbox of the row when the selection is enabled. Used by assistive technologies and screen readers.
 
 ## 3 Column Properties {#column-properties}
+
+You can easily see these properties by opening up the property dialog box of Data Grid 2, then clicking **Columns** > **New**.
 
 ### 3.1 General Tab
 

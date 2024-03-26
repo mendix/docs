@@ -101,7 +101,7 @@ If you select feedback items, you can see the following items:
 
 * **Delete** – Clicking this deletes the selected feedback items permanently. The result is irreversible.
 
-## 2 Archive {#archive}
+## 3 Archive {#archive}
 
 On the **Archive** tab, everyone in your team can view all the archived feedback items.
 
@@ -121,17 +121,18 @@ To search by **Subject** and **ID**, type the keywords in the search bar.
 
 Clicking the filter bar will open the **Filter by** side panel. In this side panel, you can filter the feedback items using the **Environment**, **Closed date**, **Submission date**, and **Assignees**. The filters are saved until the page is refreshed.
 
-## 3 Opening a Feedback Item in Inbox or Archive{#feedback-details}
+## 4 Opening a Feedback Item in Inbox or Archive{#feedback-details}
 
 On the [Inbox](#inbox) and [Archive](#archive) tabs, you can open a feedback item by clicking it in the list. If you click the **ID** of a feedback item, the feedback details page will open. If you click a place other than the **ID** of a feedback item, a side panel will open. Either the feedback details page or the side panel contains two tabs: [Feedback](#feedback) and [Contact Reporter](#contact-reporter).
 
-### 3.1 Feedback Tab {#feedback}
+### 4.1 Feedback Tab {#feedback}
 
 {{% alert color="info" %}}If your [role](/developerportal/general/app-roles/) has the permission that **Can edit ‘Stories, Documents and Feedback'**, you can edit the feedback details on the **Feedback** tab.{{% /alert %}}
 
 The **Feedback** tab shows the following items: 
 
-* Buttons ({{% icon name="hyperlink" %}} {{% icon name="three-dots-menu-horizontal" %}}) on the upper-right corner
+* Buttons ({{% icon name="view-off" %}} {{% icon name="hyperlink" %}} {{% icon name="three-dots-menu-horizontal" %}}) on the upper-right corner
+    * **Watch feedback** {{% icon name="view-off" %}} - Clicking this button toggles receiving [notifications](#notifications) for this feedback.
     * **Copy Link** ({{% icon name="hyperlink" %}}) – Clicking this button copies the URL to the feedback item. You can send the URL to other people.
     * **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) – Clicking the button opens a menu with the following items:
         * **Move** – Clicking this button moves the items to any other app of which you are a member. Whenever you move feedback, you will also move all linked feedback. If you only want to move one item, you need to unlink the item from the group first.
@@ -181,15 +182,15 @@ The **Feedback** tab shows the following items:
 
 * **Attachments** – This contains attachments to this feedback item. To upload an attachment, click **Add** ({{% icon name="add" %}}) and select the file. The following formats are supported: .*peg*, *.png*, and *.gif*. Each attachment should be maximum 5 MB in size. Once an attachment is uploaded, only your team members can view, download, and delete the attachments.
 
-* **Communication** – This section shows all the comments on this feedback item from your team. You can leave comments here and attach attachments to each comment. Comments submitted to this section are only visible to your team members.
+* **Communication** – This section sh++ows all the comments on this feedback item from your team. You can leave comments here and attach attachments to each comment. Comments submitted to this section are only visible to your team members.
 
-### 3.2 Contact Reporter Tab {#contact-reporter}
+### 4.2 Contact Reporter Tab {#contact-reporter}
 
 The **Contact Reporter** tab allows you to read messages from the reporter and reply to them. Whenever the reporter sends a message, it will be shown in this section. Once you reply a message from the reporter, they will receive an email. When there are multiple feedback items linked, the system only sends an email to the reporter of this specific feedback item, not other associated items in the same group.
 
 For more information, see the [What Happens to a User After They Submit Feedback](#what-happens-to-user) section.
 
-#### 3.2.1 Managing Tags {#manage-tags}
+#### 4.2.1 Managing Tags {#manage-tags}
 
 From the [feedback details](#feedback-details) page, you can manage tags by clicking **Settings** ({{% icon name="cog" %}}) next to the **Tags** text box:
 
@@ -212,3 +213,13 @@ From the [feedback details](#feedback-details) page, you can manage tags by clic
   1. Hover over the row where the tag is listed. A **Delete** button ({{% icon name="trash-can" %}}) appears at the end of the row.
   2. Click **Delete**. The **Confirmation** dialog box opens.
   3. Click **Delete Tag**.
+
+## 5 Notifications {#notifications}
+
+You can receive a notification whenever new feedback lands in the inbox, or when a reporter replies on their feedback. If you can to receive these notifications you need to watch the project in the **developer portal**, then enable the notifications in the setting page. You can find this page in the feedback homepage.
+
+### 5.1 Watching individual feedback {#watching-feedback}
+
+{{< figure src="/attachments/developerportal/app-insights/feedback/watching-feedback.png" class="image-border" alt="watching feedback" >}}
+
+It is also possible to watch individual feedback instead. This will allow you to receive notifications only when the reporter of that feedback leaves a reply. From either the detail page or the sidepanel, you can enable watching the feedback item. You will automatically watch an item whenever you respond to a reporter or leave a comment in the team comment section.

@@ -64,11 +64,7 @@ Exported columns may change as new fields are added to Portfolio Management.
 
 1. In Portfolio Management, click the portfolio to open it. The portfolio opens. You can see the **Initiatives Overview** page.
 
-2. On the **Initiatives Overview** page, click the {{% icon name="office-sheet" %}} icon on the upper-right corner to open a drop-down menu:
-
-   {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/export-import-icon.png"  class="image-border" width="600"    >}}
-
-3. On the drop-down menu, select **Import Initiatives**. The **Import Initiatives** dialog box opens.
+2. On the **Initiatives Overview** page, click the {{% icon name="office-sheet" %}} icon on the upper-right corner and then select **Import Initiatives** in a drop-down menu. The **Import Initiatives** dialog box opens.
 
 4. To prevent any errors, download the Excel file template from the **Import Initiatives** dialog box, and use it as the template to import your initiatives. When you prepare your Excel file, make sure it meets the following requirements:
 

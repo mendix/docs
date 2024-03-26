@@ -550,8 +550,10 @@ To achieve this behavior, set the **On click trigger** to **Double click**. When
 
 Legend:
 
-1. Available only when selection is enabled.
-2. Available only when selection mode should be “Multi”.
+| Symbol    | Meaning   |
+| --- | --- |
+| 1 | Available only when selection is enabled. |
+| 2 | Available only when selection mode should be “Multi”. |
 
 ## 14 Resetting Filters
 

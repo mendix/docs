@@ -23,9 +23,13 @@ The time, in milliseconds (thousandths of a second), the grid should wait betwee
 
 #### 2.1.3 Selection
 
-This property controls row selection capabilities. Selection is turned off by default, but can be enabled by choosing ether “Single” or “Multi” option. The “Single” selection is selection type where only one row can be selected at the time. The “Multi” type support selecting several rows at the time.
+This property controls row selection capabilities. Selection is turned off by default, but can be enabled by choosing ether **Single** or **Multi**:
 
-{{% alert color="info" %}}Current versions of data grid support only “in-memory” selection. This implies some limitation which allows selecting only visible rows. If you change data grid page or reload browser window selection will be cleared.{{% /alert %}}
+* The **Single** selection is selection type where only one row can be selected at the time
+* The **Multi** type support selecting several rows at the time
+
+{{% alert color="info" %}}
+Current versions of data grid support only “in-memory” selection. This implies some limitation which allows selecting only visible rows. If you change data grid page or reload browser window selection will be cleared.{{% /alert %}}
 
 #### 2.1.4 Selection method
 

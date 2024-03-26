@@ -9,6 +9,10 @@ tags:
 
 ## 1 Introduction 
 
+This guide lists all the properties of the Data Grid 2 widget located inside the [Data Widgets](/appstore/modules/data-widgets/) module. Because data grids also contain columns and rows, properties for those [columns](#columns) and [rows](#rows) are also described below.
+
+For more information on using Data Grid 2 features, see [Data Grid 2](/appstore/modules/data-grid-2/).
+
 ## 2 Configuration {#data-grid2-properties}
 
 ### 2.1 General Tab
@@ -49,7 +53,7 @@ This property is available only when **Selection method** is set to **Checkbox**
 
 When set to **Yes**, the data grid displays a checkbox in the header that, when selected, selects all visible rows. Clearing it will clear the selected rows.
 
-### 2.2 Columns Tab
+### 2.2 Columns Tab {#columns}
 
 #### 2.2.1 Columns
 
@@ -59,7 +63,7 @@ A list of columns displayed in the data grid. Each item in this list is a set of
 
 If set to **No**, then all column filters will be hidden.
 
-### 2.3 Rows Tab
+### 2.3 Rows Tab {#rows}
 
 #### 2.3.1 Page Size
 

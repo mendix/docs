@@ -216,10 +216,10 @@ From the [feedback details](#feedback-details) page, you can manage tags by clic
 
 ## 5 Notifications {#notifications}
 
-You can receive a notification whenever new feedback lands in the inbox, or when a reporter replies on their feedback. If you can to receive these notifications you need to watch the project in the **developer portal**, then enable the notifications in the setting page. You can find this page in the feedback homepage.
+You can receive a notification whenever new feedback lands in the inbox, or when a reporter replies on their feedback. If you want to receive these notifications you need to watch the project in the **developer portal**, then enable the feedback notifications in the setting page. You can find the settings by clicking the gear icon on the feedback overview page.
 
 ### 5.1 Watching individual feedback {#watching-feedback}
 
 {{< figure src="/attachments/developerportal/app-insights/feedback/watching-feedback.png" class="image-border" alt="watching feedback" >}}
 
-It is also possible to watch individual feedback instead. This will allow you to receive notifications only when the reporter of that feedback leaves a reply. From either the detail page or the sidepanel, you can enable watching the feedback item. You will automatically watch an item whenever you respond to a reporter or leave a comment in the team comment section.
+It is possible to watch individual feedback. This will allow you to receive notifications only when the reporter of that feedback leaves a reply. From either the detail page or the sidepanel, you can enable watching the feedback. You will automatically watch an item whenever you respond to a reporter or leave a comment in the team comment section.

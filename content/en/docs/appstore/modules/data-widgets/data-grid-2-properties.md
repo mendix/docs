@@ -159,7 +159,7 @@ Defines a string value that labels the checkbox of the row when the selection is
 
 Controls the type of the data displayed in the column.
 
-The attribute displays the value of an entity attribute. The dynamic text uses the expression and can have multiple parameters, and the custom content allows for custom text and widgets.
+The attribute displays the value of an entity attribute. The dynamic text uses the expression and can have multiple parameters. The custom content allows for custom text and widgets.
 
 #### 3.1.2 Attribute
 
@@ -177,50 +177,56 @@ Text to display when hovering over column header.
 
 This property is used to select the reference entity that can be used for association filtering. Useful only in conjunction with the dropdown filter widget.
 
-#### 3.1.6 Data source
+#### 3.1.6 Data Source
 
 A data source that should return a list of entities selected in the reference property. All items in this list will be available in the dropdown filter.
 
-#### 3.1.7 Option caption
+#### 3.1.7 Option Caption
 
 An expression used to create a caption for each reference. This text is then visible as an option in the dropdown filter.
 
 #### 3.1.8 Visible
 
-A boolean expression that controls the visibility of columns in the data grid. If the expression returns false, the column is  hidden and remains hidden unless the expression value is changed to true.
+A Boolean expression that controls the visibility of columns in the data grid. If the expression returns **false**, then the column is hidden and remains hidden unless the expression value is changed to **true**.
 
-### 3.2 Column capabilities
+### 3.2 Column Capabilities
 
-#### 3.2.1 Can sort
+#### 3.2.1 Can Sort
 
-If set to yes, then rows can be sorted by the data in this column.
+If set to **Yes**, then rows can be sorted by the data in this column.
 
-#### 3.2.2 Can resize
+#### 3.2.2 Can Resize
 
-If set to yes, the column can be resized by dragging the edge of the column header.
+If set to **Yes**, then the column can be resized by dragging the edge of the column header.
 
-#### 3.2.3 Can reorder
+#### 3.2.3 Can Reorder
 
-If set to yes, the column position in the grid can be changed by the user.
+If set to **Yes**, then the column position in the grid can be changed by the user.
 
-#### 3.2.4 Can hide
+#### 3.2.4 Can Hide
 
-If set to yes, the column can be hidden in the view settings. If hidden by default, column is hidden on first render and can be shown using view settings. If set to no, column can't be hidden in view settings.
+If set to **Yes**, the column can be hidden in the view settings. 
+
+If hidden by default, column is hidden on first render and can be shown using view settings. 
+
+If set to **No**, column cannot be hidden in view settings.
 
 ### 3.3 Appearance
 
-#### 3.3.1 Column width
+#### 3.3.1 Column Width
 
-Property that controls how the column width is calculated. Auto-fill will fills the available space. Auto-fit content uses just enough space to display the column content. Manual is used to set the number for the flex-grow CSS property.
+This property controls how the column width is calculated.
+
+ **Auto-fill** fills the available space. **Auto-fit content** uses just enough space to display the column content. **Manual** is used to set the number for the flex-grow CSS property.
 
 #### 3.3.2 Alignment
 
 Sets the text alignment in the column.
 
-#### 3.3.3 Dynamic cell calss
+#### 3.3.3 Dynamic Cell CSS
 
 An expression used to compute the CSS class for the row using the data for the current entity and the list of selected items.
 
-#### 3.3.4 Wrap text
+#### 3.3.4 Wrap Text
 
-If set to yes, the column tries to wrap long text.
+If set to **Yes**, then the column tries to wrap long text.

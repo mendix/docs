@@ -67,49 +67,51 @@ Defines the type of pagination. By default, the data grid groups rows into pages
 
 When the property is set to **Virtual scrolling**, then the navigation buttons are hidden and the data grid scrolling is used as a trigger to show the next chunk of data.
 
-#### 2.3.4 Show paging buttons
+#### 2.3.4 Show Paging Buttons
 
 This property controls the visibility of navigation buttons. If set to "Auto", navigation buttons are only visible when the number of elements in the data source exceeds the page size.
 
-#### 2.3.5 Empty list message
+#### 2.3.5 Empty List Message
 
-A custom message to display when there is no data in the data source or the filter result is empty.
+Sets a custom message to be displayed when there is no data in the data source, or the filter result is empty.
 
-#### 2.3.6 Dynamic row class
+#### 2.3.6 Dynamic Row Class
 
 An expression that returns the CSS class for the row. The data source entity is available as `$currentObject` within the scope of the expression.
 
 ### 2.4 Events Tab
 
-#### 2.4.1 On click trigger
+#### 2.4.1 On Click Trigger
 
-This property determines how the click action is triggered. The default option is “Single click”, which triggers the action on a single click on a row. If set to “Double click”, the action is triggered when the row is double clicked.
+This property determines how the click action is triggered. 
 
-#### 2.4.2 On click action
+The default option is **Single click**, which triggers the action on a single click on a row. If set to **Double click**, the action is triggered when the row is double clicked.
+
+#### 2.4.2 On Click Action
 
 This property sets the action to be performed when the row is clicked.
 
-#### 2.4.3 On selection change
+#### 2.4.3 On Selection Change
 
 This property sets the action to be performed when the row is selected or unselected.
 
-### 2.5 Column capabilities Tab
+### 2.5 Column Capabilities Tab
 
 #### 2.5.1 Sorting
 
-This flag controls column sorting for the entire data grid. If set to “No” sorting is disabled for any column.
+This flag controls column sorting for the entire data grid. If set to **No**, then sorting is disabled for any column.
 
 #### 2.5.2 Resizing
 
-This flag controls column resizing for the entire data grid. If set to “No” resizing is disabled for any column.
+This flag controls column resizing for the entire data grid. If set to **No**, then resizing is disabled for any column.
 
 #### 2.5.3 Reordering
 
-This flag controls column reordering for the entire data grid. If set to “No” reordering is disabled for any column.
+This flag controls column reordering for the entire data grid. If set to **No**, then reordering is disabled for any column.
 
 #### 2.5.4 Hiding
 
-This flag controls column hiding for the entire data grid. If set to “No” hiding is disabled for any column.
+This flag controls column hiding for the entire data grid. If set to **No**, then hiding is disabled for any column.
 
 ### 2.6 Configuration Tab
 
@@ -117,33 +119,35 @@ This flag controls column hiding for the entire data grid. If set to “No” hi
 
 This property sets the entity attribute that is used to store custom visual settings for the data grid.
 
-#### 2.6.2 On change
+#### 2.6.2 On Change
 
 This property sets the action to be performed when the **Attribute** value is changed.
 
-### 2.7 Grid wide filtering
+### 2.7 Grid Wide Filtering
 
 #### 2.7.1 Filters
 
 A list of filters that can be used in the header of the data grid. Each filter defines an attribute that is used as part of a joined query to select data from the data source.
 
-{{% alert color="info" %}}This property require some advanced knowledge of data grid widget and, may cause some confusion for beginners. Please follow the documentation and examples to facilitate faster learning.{{% /alert %}}
+{{% alert color="info" %}}
+This property requires advanced knowledge of data grid widget. Please read [Filtering](/appstore/modules/data-grid-2/#filtering) and view its examples for additional guidance.
+{{% /alert %}}
 
-### 2.8 Aria labels
+### 2.8 Aria Labels
 
-#### 2.8.1 Filter section
+#### 2.8.1 Filter Section
 
 Defines a string value that labels the header area of the data grid. Used by assistive technologies and screen readers.
 
-#### 2.8.2 Export progress
+#### 2.8.2 Export Progress
 
 Defines a string value that labels the export dialog of the data grid. Used by assistive technologies and screen readers.
 
-#### 2.8.3 Cancel data export
+#### 2.8.3 Cancel Data Export
 
 Defines a string value that labels the cancel export button of the export dialog. Used by assistive technologies and screen readers.
 
-#### 2.8.4 Select row
+#### 2.8.4 Select Row
 
 Defines a string value that labels the checkbox of the row when the selection is enabled. Used by assistive technologies and screen readers.
 

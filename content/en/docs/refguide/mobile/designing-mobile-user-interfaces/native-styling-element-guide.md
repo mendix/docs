@@ -1054,6 +1054,9 @@ export const com_mendix_widget_native_floatingactionbutton_FloatingActionButton 
     size: null, // This is the radius of the button.
     rippleColor: null, // This is the color of the ripple on Android.
   },
+  buttonContainer: {
+    // This has all ViewStyle properties.
+  },
   buttonIcon: {
     // This has all ImageStyle properties.
   },

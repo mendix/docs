@@ -75,4 +75,4 @@ To help with migrating your old data, Mendix has developed a migration toolkit f
 The MigrationToolkit is designed for applications using PostgreSQL databases only.
 {{% /alert %}}
 
-For more details, contact [Mendix Support](http://support.mendix.com).
+For more details, contact [Mendix Support](https://support.mendix.com).

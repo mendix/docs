@@ -23,7 +23,7 @@ The implementation described in this how-to will not work when you have enabled 
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Have a [PhoneGap Build account](https://build.phonegap.com/)
+* Have a [PhoneGap Build account](https://helpx.adobe.com/experience-manager/kb/adobe-phonegap-end-of-service.html)
 * Be familiar with how the [SAML](/appstore/modules/saml/) module works
 * Read [How to Publish a Mendix Hybrid Mobile App in App Stores](/howto8/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores/)
 * Read [Building a Mobile App with Mendix](https://www.mendix.com/blog/building-mobile-app-mendix/)

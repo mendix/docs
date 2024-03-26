@@ -9,7 +9,7 @@ In this FAQ we'll answer some Frequently Asked Questions about DateTime.
 
 ## What is DateTime in terms of computer programs? (MUST READ)
 
-A DateTime is nothing more than a number to a computer. This number represents the amount of seconds (or milliseconds) since 1970-01-01 00:00:00 UTC. It's beyond the scope of this FAQ to explain why this date was universally chosen but you can find this by searching for Unix Epoch or reading [http://en.wikipedia.org/wiki/Unix_time](http://en.wikipedia.org/wiki/Unix_time).
+A DateTime is nothing more than a number to a computer. This number represents the amount of seconds (or milliseconds) since 1970-01-01 00:00:00 UTC. It's beyond the scope of this FAQ to explain why this date was universally chosen but you can find this by searching for Unix Epoch or reading [Unix Time](https://en.wikipedia.org/wiki/Unix_time).
 
 This also means there is NO time zone information stored in a DateTime itself. It is important to keep this in mind when reasoning about dates and times. For things such as comparing DateTime objects, nothing concerning localization or time zones is done. Only when formatting time, which means as much as making it readable to humans, or for operations such as getting the beginning of the day, time zones come into play.
 

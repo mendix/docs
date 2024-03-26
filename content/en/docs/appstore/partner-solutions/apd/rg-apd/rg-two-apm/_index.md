@@ -27,7 +27,7 @@ The sections below provide a short explanation of APM along with its features an
 
 ## 2 Definition of APM
 
-CLEVR APM is based on Wikipedia's definition of [Application Performance Management](http://en.wikipedia.org/wiki/Application_performance_management), with emphasis on these points:
+CLEVR APM is based on Wikipedia's definition of [Application Performance Management](https://en.wikipedia.org/wiki/Application_performance_management), with emphasis on these points:
 
 * APM is the "monitoring and management of performance and availability of software applications"
 * APM strives "to detect and diagnose complex application performance problems to maintain an expected level of service"

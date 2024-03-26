@@ -17,7 +17,15 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 ## 2024
 
-### March 06
+### March 21
+
+#### Fixes
+
+* We have fixed a bug in [Epics](/developerportal/project-management/epics/) that caused the cursor in text editors to jump to a different place unexpectedly. This problem happened in text editors for story descriptions, epic descriptions, and comments.
+
+  There is a small trade-off though, since we replaced the text editor widget completely, it will not be possible to link stories using a # anymore. Your existing links will become plain text that still contain story ID and title. Copying and pasting the link to the story can be used as a workaround in the meantime.
+
+### March 6
 
 #### Deprecations
 
@@ -454,7 +462,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Deprecations
 
-* We have deprecated **General Settings** > **Webhooks** for stories and Sprints. For more information, see the deprecation note in the [Webhooks](/developerportal/collaborate/general-settings/#webhooks) section of *General Settings*. You can now set webhooks for building and deploying your app. These are described in [Webhooks](/developerportal/deploy/webhooks/).
+* We have deprecated **General Settings** > **Webhooks** for stories and Sprints. You can now set webhooks for building and deploying your app. These are described in [Webhooks](/developerportal/deploy/webhooks/).
 
 ### March 9, 2023
 

@@ -28,7 +28,7 @@ If you are new to the Mendix community and would like to deploy and share your o
 {{% alert color="info" %}}
 Free Apps are part of Mendix's Free Edition.
 
-If you are not currently a customer but would prefer to use a licensed cloud node, you can find more information on the [Mendix Platform Pricing](http://www.mendix.com/pricing) page.
+If you are not currently a customer but would prefer to use a licensed cloud node, you can find more information on the [Mendix Platform Pricing](https://www.mendix.com/pricing) page.
 
 If you are an existing customer, you should deploy into your licensed cloud node.
 {{% /alert %}}
@@ -64,7 +64,7 @@ As noted in the table above, a Free App goes into sleep mode after about an hour
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/appresumed.png" alt="A Resuming app message" width=60% >}}
 
-If, after a couple of minutes, your app does not wake up, contact [Mendix Support](http://support.mendix.com).
+If, after a couple of minutes, your app does not wake up, contact [Mendix Support](https://support.mendix.com).
 
 You can upgrade a Free App to a licensed node with a node in Mendix Cloud. For more information, see [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/).
 
@@ -146,7 +146,7 @@ There are two methods for creating a deployment package on Mendix Cloud. You can
 
 To create a deployment package directly from Studio Pro, follow these steps:
 
-1. Open [Studio Pro](http://appstore.home.mendix.com/link/modeler/).
+1. Open [Studio Pro](https://appstore.home.mendix.com/link/modeler/).
 2. Open the licensed app.
 3. In the top menu bar, click **App** > **Deploy to Licensed Cloud Node**.
 
@@ -159,7 +159,7 @@ To create a deployment package directly from Studio Pro, follow these steps:
 
 You can also create a deployment package from the Team Server in the Developer Portal. To do this, follow these steps:
 
-1. Go to the [Developer Portal](http://sprintr.home.mendix.com).
+1. Go to the [Developer Portal](https://sprintr.home.mendix.com).
 1. Open your app's **Environments** page.
 1. Click **Create Deployment Package**.
 1. Select your desired branch and revision and click **Next**.
@@ -169,7 +169,7 @@ You can also create a deployment package from the Team Server in the Developer P
 
 The previous steps explained how to deploy a deployment package to Mendix Cloud, but the actual app is not running yet. To deploy a deployment package to a node environment where you can run your app, follow these steps:
 
-1. Go to the [Developer Portal](http://sprintr.home.mendix.com).
+1. Go to the [Developer Portal](https://sprintr.home.mendix.com).
 2. Open your app.
 3. Go to **Environments**.
 4. In the **Deployment Package Repository**, choose your preferred deployment package and click **Deploy** ({{% icon name="deploy" %}}).

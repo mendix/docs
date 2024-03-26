@@ -7,7 +7,7 @@ weight: 10
 no_list: false
 description_list: true
 cascade:
-    - space: "Studio Pro 10 Guide"
+    - space: "Studio Pro 10"
     - mendix_version: 10
     - sitemap:
         priority: 0.8

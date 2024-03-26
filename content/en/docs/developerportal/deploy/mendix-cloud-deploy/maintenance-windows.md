@@ -46,7 +46,7 @@ Maintenance windows and planned maintenance are defined in Coordinated Universal
 
 Follow the instructions below to configure a maintenance window.
 
-1. Go to the [Developer Portal](http://sprintr.home.mendix.com).
+1. Go to the [Developer Portal](https://sprintr.home.mendix.com).
 
 2. Go to the **Environments** page for your app.
 

@@ -18,7 +18,7 @@ This how-to teaches you how to do the following:
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Install a Basic, Professional, or Enterprise Mendix edition: [http://www.mendix.com/editions/](http://www.mendix.com/editions/)
+* Install a Basic, Professional, or Enterprise Mendix edition: [http://www.mendix.com/editions/](https://www.mendix.com/editions/)
 
 ## 3 The Basics
 
@@ -38,7 +38,7 @@ Debugging in production is not recommended. However, if you are debugging in the
 
 ### 3.1 Enabling Debugging in the Cloud {#EnablingDebuggingintheCloud}
 
-1. Open your browser, go to the [Developer Portal](http://sprintr.home.mendix.com), and log in with your Mendix ID.
+1. Open your browser, go to the [Developer Portal](https://sprintr.home.mendix.com), and log in with your Mendix ID.
 
 2. Click **Apps** and navigate to the project that you want to debug:
 
@@ -94,5 +94,5 @@ If you do not see an overview similar to the one below, then you do not have suf
 * [How to Debug Microflows](/howto7/monitoring-troubleshooting/debug-microflows/)
 * [How to Debug Java Actions](/howto7/monitoring-troubleshooting/debug-java-actions/)
 * [How to Handle Common Mendix SSO Errors](/howto7/monitoring-troubleshooting/handle-common-mendix-sso-errors/)
-* [The Ultimate Debugger](http://www.mendix.com/tech-blog/the-ultimate-debugger/) 
-* [Debug Live Apps in the Cloud](http://www.mendix.com/tech-blog/new-goodies-for-mendix-app-platform-users-mendix-business-modeler-4-3-release-today/)
+* [The Ultimate Debugger](https://www.mendix.com/tech-blog/the-ultimate-debugger/) 
+* [Debug Live Apps in the Cloud](https://www.mendix.com/tech-blog/new-goodies-for-mendix-app-platform-users-mendix-business-modeler-4-3-release-today/)

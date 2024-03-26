@@ -31,7 +31,7 @@ Before following the steps outlined on this page, make sure you meet the followi
 
 To scale your licensed app in Mendix Cloud, follow these steps:
 
-1. From the [Developer Portal](http://sprintr.home.mendix.com), go to the **Environments** page of your licensed app.
+1. From the [Developer Portal](https://sprintr.home.mendix.com), go to the **Environments** page of your licensed app.
 
 2. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the environment you want to scale.
 

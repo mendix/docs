@@ -261,4 +261,4 @@ To remove a module and user data from your app, follow these steps:
 
 * [Importing and Exporting Apps, Modules, Widgets, and Documents](/refguide/import-and-export/)
 * [Properties Common in the Page Editor](/refguide/common-widget-properties/)
-* [My Top 5 Mendix Widgets for Speeding Up Application Development](http://www.mendix.com/blog/top-5-mendix-widgets-speeding-application-development/)
+* [My Top 5 Mendix Widgets for Speeding Up Application Development](https://www.mendix.com/blog/top-5-mendix-widgets-speeding-application-development/)

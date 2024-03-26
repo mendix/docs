@@ -87,7 +87,7 @@ To create the mapping, follow these steps:
 
     {{% alert color="info" %}}This parameter might be added automatically, along with an **httpRequest** parameter. If an **httpRequest** parameter is added, remove it to avoid getting errors.
 
-    An **httpResponse** parameter may also be automatically added. If this happens and you follow the steps below in [Building an Export Mapping](#export-mapping), you must remove the parameter to avoid getting errors.{{% /alert %}}
+An **httpResponse** parameter may also be automatically added. If this happens and you follow the steps below in [Building an Export Mapping](#export-mapping), you must remove the parameter to avoid getting errors.{{% /alert %}}
 
 9. Add a **Create variable** activity to the microflow to convert the **OrderID** variable from data type **String** to **Integer/Long**. This makes it possible to search for the **OrderID** (an **AutoNumber** data type).
 

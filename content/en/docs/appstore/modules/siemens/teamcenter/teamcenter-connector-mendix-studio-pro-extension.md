@@ -89,6 +89,38 @@ You can select and deselect the properties, references, and relations depending 
 
 
 
+## 3.	[[Actions]]
+
+### 3.1.	Get ItemRevision
+
+[[note: let's discuss the level of detail we want to provide!]]
+
+The Get ItemRevision [[action]] allows you to configure and generate a microflow and domain model to search for and retrieve ItemRevisions from Teamcenter based on Item name, id and/or type. The action implements the Saved Query “Item Revision...” from Teamcenter.
+
+To configure the Get ItemRevision action:
+*	Start the Teamcenter extension
+*	Click on the Get ItemRevision tile
+*	Configure the import mapping (see above)
+*	Click on Generate
+
+The Get ItemRevision [[action]]:
+*	Creates/change the entities configured during the import mapping
+*	Creates a microflow to get ItemRevisions based on Item name, id and/or type
+* *	Input parameters:
+* * *	ItemName (String) query parameter 
+* * *	ItemId (String) query parameter 
+* * *	ItemRevisionType (String) query parameter 
+* * *	ConfigName (string) name of the Teamcenter configuration
+* *	Returns:
+* * *	List of (a specialization of) TcConnector.ItemRevision
+* *	Throws errors:
+* * *	IllegalArgumentException when one or more of the input parameters are invalid
+* * *	TeamcenterServiceException when the call to Teamcenter failed
+* * *	NoServiceDataException when the response from Teamcenter contains no data
+* * *	PartialErrorsExceptoin when the response from Teamcenter contains partial errors
+* * *	[[Cast errors?]]
+
+
 
 
 ## 2 {Title of the User Interface Element Being Described}

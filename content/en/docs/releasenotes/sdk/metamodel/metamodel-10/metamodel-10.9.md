@@ -1,6 +1,7 @@
 ---
 title: "10.9"
-parent: "metamodel-10"
+url: /releasenotes/sdk/metamodel-10.9/
+weight: 91
 ---
 
 ## 10.9.0
@@ -23,6 +24,4 @@ parent: "metamodel-10"
 * We introduced this element. 
 
 #### PrivateValue (Element)
-* We introduced this element. 
-
-This page has been generated automatically.
+* We introduced this element.

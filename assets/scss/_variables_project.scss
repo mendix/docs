@@ -8,29 +8,29 @@ $enable-shadows: true !default;
 // Changed almost all colors to better match Mendix palette
 // Codes taken mostly from PDS (https://designsystem.mendix.com)
 
-$primary: #146FF4 !default; // MX Blue (Blue-7 from PDS) YL - updated the Mendix Blue color to its latest version in MX 10
-$primary-light: #47A9FF !default; // DB - Blue-5 from PDS
-$secondary: #0A1325 !default; // Gray-10 from PDS (MxDock color)
-$success: #0D990D !default; // DB - Green-8 from PDS
-$info: #146FF4 !default; // MX Blue YL - updated the Mendix Blue color to its latest version in MX 10
-$warning: #C97800 !default; // DB - Yellow-8 from PDS
-$danger:  #D31E23 !default; // DB - Red-7 PDS
+$primary: #146FF4; // MX Blue (Blue-7 from PDS) YL - updated the Mendix Blue color to its latest version in MX 10
+$primary-light: #47A9FF; // DB - Blue-5 from PDS
+$secondary: #0A1325; // Gray-10 from PDS (MxDock color)
+$success: #0D990D; // DB - Green-8 from PDS
+$info: #146FF4; // MX Blue YL - updated the Mendix Blue color to its latest version in MX 10
+$warning: #C97800; // DB - Yellow-8 from PDS
+$danger:  #D31E23; // DB - Red-7 PDS
 $white: #fff; // YL - Override the default color defined in _variables_forward.scss
-$light: #99D0FF !default; // DB - Blue-3 from PDS
-$dark: #0A1325 !default; // Gray-10 from PDS (MxDock color)
+$light: #99D0FF; // DB - Blue-3 from PDS
+$dark: #0A1325; // Gray-10 from PDS (MxDock color)
 $blue: #146FF4; // YL - Mendix Blue in SP 10; Override the default color defined in _variables_forward.scss
-$gray-100: #f7f7f7 !default;
-$gray-200: #f2f2f3 !default;
-$gray-light: $gray-200 !default;
+$gray-100: #f7f7f7;
+$gray-200: #f2f2f3;
+$gray-light: $gray-200;
 $gray-300: #e7e7e9; // YL - Override the default color defined in _variables_forward.scss
-$gray-400: #d9dbdd !default;
-$gray-500: #c1c3c8 !default;
-$gray-border: $gray-500 !default;
+$gray-400: #d9dbdd;
+$gray-500: #c1c3c8;
+$gray-border: $gray-500;
 $gray-600: #9ea2a9; // YL - Override the default color defined in _variables_forward.scss
-$gray-700: #6b707b !default;
-$gray-800: #535965 !default;
-$gray-900: #2f3646 !default;
-$black: #000 !default; // YL - Override the default color defined in _variables_forward.scss
+$gray-700: #6b707b;
+$gray-800: #535965;
+$gray-900: #2f3646;
+$black: #000; // YL - Override the default color defined in _variables_forward.scss
 
 $info-1: #dceefe;
 $info-2: #c2e2ff;

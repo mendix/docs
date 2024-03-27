@@ -10,7 +10,8 @@ title: "Teamcenter Connector Mendix Studio Pro Extension"
 
 ## 1 Introduction
 
-The Teamcenter Mendix Studio Pro Extension or Teamcenter Connector Extension for short is built using the Mendix Extensibility Framework to provide you with an effortless means to harness the full capabilities of Teamcenter Connector for Mendix.
+The Teamcenter Connector Mendix Studio Pro Extension or Teamcenter Connector Extension for short is built using the Mendix Extensibility Framework to provide you with an effortless means to harness the full capabilities of Teamcenter Connector for Mendix.
+
 The Teamcenter Connector is a powerful tool that allows you to access, create and modify product data in Teamcenter. The Teamcenter Extension is layered atop it, providing a low-code experience to enhance the user friendliness and streamline the utilization of the connector.
 
 ### 1.1 Supported use-cases
@@ -27,7 +28,7 @@ More details and typical user journeys for each use case is provided in the [[Ac
 
 ### 1.2 Pre-requisites
 
-The Teamcenter Connector Extension requires Mendix version 10.xxx or higher. You also need to make sure you have the following installed from the Mendix Marketplace
+The Teamcenter Connector Extension requires Mendix version 10.6.5 or higher. You also need to make sure you have the following installed from the Mendix Marketplace
 1. [TcConnector](
 https://marketplace.mendix.com/link/component/111627)
 2. [CommunityCommons](https://marketplace.mendix.com/link/component/170)
@@ -38,17 +39,17 @@ https://marketplace.mendix.com/link/component/111627)
 
 ## 2 Import mapping
 
-Every [[action]] ends with import mapping. Here you can define what data you want to retrieve from Teamcenter and how to handle this data in Mendix. Depending on the [[action]] , the import mapping page starts with one or multiple empty boxes, one per business object that need to be configured. 
+Every [[action]] ends with import mapping. Here you can define what data you want to retrieve from Teamcenter and how to handle this data in Mendix. Depending on the [[action]], the import mapping page starts with one or multiple entities/objects to configure, one per business object that need to be configured. 
 
 [[Screenshot of empty object mapping page]]
 
-During configuration, the import mapping page will build up a preview of the Mendix domain model involved in the integration.
+During configuration, the import mapping page will build up a preview of the Mendix domain model involved in the integration. In addition, the import mapping page shows the corresponding business objects on the Teamcenter side. For this, the Teamcenter Connector Extension displays the display names of the objects and their properties, references and relations.
 
 [[Screenshot of completed object mapping page]]
 
 In the Teamcenter extension, the import mapping consists of two steps:
 1. Object mapping: As Teamcenter works with many layers of specializations of its business objects, in the import mapping page, you need to configure which object type you want to retrieve from Teamcenter and what Mendix objects need to be created, when retrieving these business objects. This is called Object mapping.
-2.	Selection of properties, references and relations: Configuration which properties, references and relations you want to retrieve from Teamcenter and include in your Mendix model.
+2.	Selection of properties, references and relations: Configuration which properties, references and relations you want to retrieve from Teamcenter and include in your Mendix model .
 
 Configuring the business objects starts with clicking on an empty box. This will open the object mapping dialog.
 
@@ -74,7 +75,7 @@ Once you click OK, you return to the import mapping tab with a sidebar opened to
 
 ### 2.2.	Selection of Teamcenter properties, references, and relations
 
-You can configure which Teamcenter properties, references, and relations to include when retrieving data from Teamcenter in the import mapping sidebar. The import mapping sidebar is launched automatically after completion of the object mapping. When you are on the import mapping page and the sidebar is closed, you can click on a previously configured entity to open the object mapping sidebar for that entity.
+In the import mapping sidebar, you can configure which Teamcenter properties, references, and relations to include when retrieving data from Teamcenter. The import mapping sidebar is launched automatically after completion of the object mapping. When you are on the import mapping page and the sidebar is closed, you can double-click on a previously configured entity to open the object mapping sidebar for that entity.
 
 The import mapping sidebar shows all properties, references, and relations for the configured Teamcenter object. Depending on the use case, each one of them is accompanied with checkboxes to configure which of these you want to include when retrieving data from or creating data in Teamcenter.
 
@@ -84,7 +85,7 @@ You will often see that checkboxes are checked by default and/or disabled. In ge
 
 For specific [[actions]] there may be additional rules. These are explained in the separate sections on those [[actions]].
 
-You can select and deselect the properties, references, and relations depending on the data you need from Teamcenter. When you select a reference or relation, a new placeholder entity will be added to the object mapping tree. You will need to perform the import mapping for these referenced/related objects in a subsequent step(business object mapping and selection of Teamcenter properties, references, and relations.
+You can select and deselect the properties, references, and relations depending on the data you need from Teamcenter. When you select a reference or relation, a new placeholder entity will be added to the object mapping tree. You will need to perform the import mapping for these referenced/related objects in a subsequent step (business object mapping and selection of Teamcenter properties, references, and relations).
 
 
 

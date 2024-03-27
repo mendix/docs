@@ -631,14 +631,14 @@ If your microflow is not correctly implemented you will be told that **Authentic
 
 {{% alert color="warning" %}}
 The OIDC module version 3.0.0 and above does not support the DeepLink module, as it has been deprecated from Studio Pro 10.6.0. It is replaced by [page URLs](/refguide/page-properties/#url) and [microflow URLs](/refguide/microflow/#url).
-For instructions on migrating to page and microflow URLs, see the [Using Page and Microflow URLs with OIDC SSO]() section below.
+For instructions on migrating to page and microflow URLs, see the [Using Page and Microflow URLs with OIDC SSO](#page-microflow-url) section below.
 {{% /alert %}}
 
 If end-users who use the deeplink do not yet have a session in your app, the deeplink can trigger the SSO process. If successful, the end-user will be automatically redirected back to the deeplink.
 
-For more information on using deep link module (with Mendix 8 and 9), see the [Using Deep Link Module]() section below.
+For more information on using deep link module (with Mendix 8 and 9), see the [Using Deep Link Module](#using-deep-link) section below.
 
-#### 8.3.1 Using Page and Microflow URLs with OIDC SSO
+#### 8.3.1 Using Page and Microflow URLs with OIDC SSO{#page-microflow-url}
 
 Page URLs and Microflow URLs are supported with OIDC SSO for Mendix version 10.6 and above. To do this, follow the steps below:
 
@@ -651,9 +651,9 @@ If you are building a new app using the OIDC SSO module (Mendix version 10.6 and
 
 For more information, see the [Migrating to Page and Microflow URLs](/appstore/modules/deep-link/#migrate-page-micro) section of the ***Deep Link***.
 
-#### 8.3.2 Using Deep Link Module
+#### 8.3.2 Using Deep Link Module{#using-deep-link}
 
-To use OIDC SSO module in conjunction with the DeepLink module (for Mendix 8 and 9), you can choose between the following methods of selecting an IdP:
+To use OIDC SSO module in conjunction with the Deep Link module (for Mendix 8 and 9), you can choose between the following methods of selecting an IdP:
 
 * You need to set the `LoginLocation` constant of the DeepLink module to the `/oauth/v2/login?cont=`.
 * You can also specify which IdP should be used by adding the alias (`MyIdPAlias`) to the `LoginLocation`: `/oauth/v2/login?idp={MyIdpAlias}&cont=`. For example, `/oauth/v2/login?idp=Google&cont=`. This setting will apply to all deeplinks in your app.

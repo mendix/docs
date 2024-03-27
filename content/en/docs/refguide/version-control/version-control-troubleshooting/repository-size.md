@@ -86,7 +86,7 @@ When planning the cleanup, note the following:
 
 * Changes made by other users after you made your local copy are lost after pushing the cleaned repository to the Git server.
 * All users need to get fresh clones from the server after the cleanup is completed. This means all changes that have not been committed and pushed to the server before you download the repository you will use for cleaning, will be lost.
-* The process can take up to several hours, so we recommend to align with your team before you start. First do a test run to get familiar with the tool before planning the actual cleanup.
+* The process can take up to an hour, so we recommend to align with your team before you start. First do a test run to get familiar with the tool before planning the actual cleanup.
 {{% /alert %}}
 
 #### 5.1.3 Backing Up the Full History

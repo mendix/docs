@@ -23,8 +23,8 @@ This how-to teaches you how to do the following:
 
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
-* Download and install [Eclipse](http://www.eclipse.org/downloads/)
-* Download the [Selenium Client and WebDriver](http://www.seleniumhq.org/download/) for Java
+* Download and install [Eclipse](https://www.eclipse.org/downloads/)
+* Download the [Selenium Client and WebDriver](https://www.selenium.dev/downloads/) for Java
 
 {{% alert color="warning" %}}
 This how-to uses the Company Expenses app template starting in the [Add the Third Test Method](#third) section for an example scenario. However, this app template is no longer platform-supported by Mendix. Therefore, sections using this app template can only be used as reference and not as sections that can be completed step-by-step.
@@ -400,7 +400,7 @@ Well done! You created your first TestNG Suite!
 The test you created is now run on Firefox only. If you want to make sure the functionality works as expected in other browsers, you need to perform multi-browser testing. With TestNG it is very easy to perform the same test on different browsers.
 
 1. Download the ChromeDriver here: [https://sites.google.com/a/chromium.org/chromedriver/downloads](https://sites.google.com/a/chromium.org/chromedriver/downloads).
-2. Download the IEDriver here: [http://selenium-release.storage.googleapis.com/index.html](http://selenium-release.storage.googleapis.com/index.html).
+2. Configure the IE Driver here: [https://www.selenium.dev/documentation/ie_driver_server/#installing](https://www.selenium.dev/documentation/ie_driver_server/#installing)
 3. In Eclipse, open **MyFirstTestNGFile** and change the following code:
 
     ```java

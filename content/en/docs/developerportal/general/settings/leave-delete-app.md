@@ -32,7 +32,7 @@ Before you delete or deactivate an app, make sure you have completed the followi
 
 If you want to leave and delete your app, follow these steps:
 
-1. Go to the [Developer Portal](http://sprintr.home.mendix.com) and select the app that you want to leave.
+1. Go to the [Developer Portal](https://sprintr.home.mendix.com) and select the app that you want to leave.
 
 2. In the navigation pane, select **Settings**.
 

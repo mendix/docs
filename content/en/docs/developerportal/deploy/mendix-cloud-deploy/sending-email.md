@@ -44,8 +44,8 @@ Here are some frequently used providers:
 
 |Provider|Settings|
 |---|---|
-|[Amazon Simple Email Service](https://aws.amazon.com/ses/)|[Settings](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-connect.html)|
-|[Gmail](https://mail.google.com/)|[Settings](https://support.google.com/a/answer/176600?hl=en), [common configuration problem](http://stackoverflow.com/questions/20337040/gmail-smtp-debug-error-please-log-in-via-your-web-browser)|
+|[Amazon Simple Email Service](https://aws.amazon.com/ses/)|[Settings](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-connect.html)|
+|[Gmail](https://mail.google.com/)|[Settings](https://support.google.com/a/answer/176600?hl=en), [common configuration problem](https://stackoverflow.com/questions/20337040/gmail-smtp-debug-error-please-log-in-via-your-web-browser)|
 |[Mailchimp Transactional Emails](https://mailchimp.com/features/transactional-email/)|[Settings](https://mailchimp.com/developer/transactional/docs/fundamentals/)|
 |[Mailgun](https://mailgun.com/)|[Settings](https://documentation.mailgun.com/en/latest/quickstart-sending.html#send-with-smtp-or-api)|
 |[SendGrid](https://sendgrid.com/)|[Settings](https://sendgrid.com/docs/ui/account-and-settings/mail/)|

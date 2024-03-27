@@ -9,7 +9,7 @@ tags: ["import", "excel", "integration"]
 
 ## 1 Introduction
 
-Adding large amounts of data to your application (for example, reference data or data from an external application) can be very time consuming. To save time and effort, this process can be automated using the [Excel Importer](/appstore/modules/excel-importer/) from the [Mendix Marketplace](http://marketplace.mendix.com). In this how-to, you learn how to set up import templates and import data into your app.
+Adding large amounts of data to your application (for example, reference data or data from an external application) can be very time consuming. To save time and effort, this process can be automated using the [Excel Importer](/appstore/modules/excel-importer/) from the [Mendix Marketplace](https://marketplace.mendix.com). In this how-to, you learn how to set up import templates and import data into your app.
 
 ## 2 Prerequisites
 

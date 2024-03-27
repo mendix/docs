@@ -226,6 +226,27 @@
     }
 }
 
+// Style visited links but exclude buttons and left sidebar
+a:not(.btn):not(.td-sidebar-link):visited {
+    color: $purple;
+}
+
+// Add icon after external links in main content (but exclude buttons and breadcrumb)
+main a[href*="https://"]:not(.btn):not(.td-breadcrumbs a)::after {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    margin-left: .2rem;
+    vertical-align: sub;
+    content: url("/mx-icons/external.svg");
+    filter: invert(14%) sepia(99%) saturate(4690%) hue-rotate(225deg) brightness(93%) contrast(95%); // Matches to $link-color (blue-8 from PDS). Keep updated with _variables_project.scss.
+}
+
+// Change external link icon color upon hover
+main a[href*="https://"]:hover:not(.btn):not(.td-breadcrumbs a)::after {
+    filter: invert(15%) sepia(65%) saturate(5388%) hue-rotate(231deg) brightness(79%) contrast(121%); // Matches to $link-hover-color (blue-9 from PDS). Keep updated with _variables_project.scss.
+}
+
 .btn {
     border-radius: 0.25rem;
 }
@@ -420,7 +441,7 @@ nav.foldable-nav {
     }
 
     .ul-1 .with-child > input:checked ~ label:before { 
-        color: $primary;
+        color: $link-color;
         transform: rotate(90deg);
         transition: transform 0s; // NK - disables animation transition time, now switch is instant
     }
@@ -431,13 +452,13 @@ nav.foldable-nav {
     nav.foldable-nav {
 
         .ul-1 .with-child > label:hover:before { 
-            color: $primary;
+            color: $link-color;
             transform: rotate(30deg);
             transition: transform 0s; // NK - disables animation transition time, now switch is instant
         }
 
         .ul-1 .with-child > input:checked ~ label:hover:before { 
-            color: $primary;
+            color: $link-color;
             transform: rotate(60deg) !important;
             transition: transform 0s; // NK - disables animation transition time, now switch is instant
         }
@@ -473,6 +494,11 @@ nav.foldable-nav {
     vertical-align: top;
 
 }
+
+.toc-title { // DB – added class for ToC title styling 
+    color: $gray-800 !important;
+}
+
 .td-toc {
 
     height: calc(100vh - 180px); // NK - added to allow scrolling
@@ -500,15 +526,15 @@ nav.foldable-nav {
             padding-top: .25rem;
 
             &:hover {
-                color: $blue;
-                text-decoration: none;
+                color: $link-hover-color;
+                text-decoration: underline;
             }
         }
         // NK - styling for ToC highlighting
         .activeToc {
             font-weight: $font-weight-bold;
-            color: $blue;
-            border-left-color: $blue;
+            color: $link-color;
+            border-left-color: $link-color;
         }
     }
 }
@@ -549,7 +575,10 @@ nav.foldable-nav {
         // NK - overrides special styling for pages with no children
         &__page {
             color: inherit;//$gray-700;
-            font-weight: inherit;//$font-weight-light;
+            font-weight: inherit;//$font-weight-light;`
+        }
+        :hover {
+            text-decoration: underline;
         }
     }
     
@@ -676,11 +705,11 @@ nav.foldable-nav {
          justify-content: center;
          gap: 0.5rem;
          flex-wrap: wrap;
-         background-color: #f7f7f7;
+         background-color: $gray-100;
          color: rgba(10, 19, 36, 0.7);
          font-size: 0.75rem;
          text-align: center;
-         border-top: 1px solid #e7e7e9;
+         border-top: 1px solid $gray-300;
          padding: 1rem;
          font-family: 'noto-sans', 'Noto Sans', sans-serif;
    }
@@ -708,13 +737,13 @@ nav.foldable-nav {
     
          > li::before {
                content: '';
-               border-left: 1px solid #e7e7e9;
+               border-left: 1px solid $gray-300;
                margin-right: 0.5rem;
          }
    }
     
    .mx-footer__link:hover {
-         color: #0123c6;
+         color: $link-hover-color;
          text-decoration: underline;
    }
     
@@ -723,7 +752,7 @@ nav.foldable-nav {
    }
     
    .mx-footer__link:focus-visible {
-         outline: 2px solid #298efb;
+         outline: 2px solid $info-6;
          outline-offset: 2px;
     }
 
@@ -735,8 +764,8 @@ nav.foldable-nav {
 //_badge.scss
 
 .badge-warning {
-    color: #fff;
-    background-color: #C97800;
+    color: $white;
+    background-color: $warning-8;
   }
 
 .badge-pill {
@@ -750,7 +779,7 @@ nav.foldable-nav {
 .swagger-ui .info .title,
 .swagger-ui .model-title {
     font-family: $font-family !important;
-    color: var(--bs-body-color);
+    color: $secondary;
 }
 
 .swagger-ui .info a {

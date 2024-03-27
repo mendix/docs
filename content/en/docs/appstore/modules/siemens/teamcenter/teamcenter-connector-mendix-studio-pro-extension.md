@@ -36,6 +36,60 @@ https://marketplace.mendix.com/link/component/111627)
 
 [[todo]]
 
+## 2 Import mapping
+
+Every [[action]] ends with import mapping. Here you can define what data you want to retrieve from Teamcenter and how to handle this data in Mendix. Depending on the [[action]] , the import mapping page starts with one or multiple empty boxes, one per business object that need to be configured. 
+
+[[Screenshot of empty object mapping page]]
+
+During configuration, the import mapping page will build up a preview of the Mendix domain model involved in the integration.
+
+[[Screenshot of completed object mapping page]]
+
+In the Teamcenter extension, the import mapping consists of two steps:
+1. Object mapping: As Teamcenter works with many layers of specializations of its business objects, in the import mapping page, you need to configure which object type you want to retrieve from Teamcenter and what Mendix objects need to be created, when retrieving these business objects. This is called Object mapping.
+2.	Selection of properties, references and relations: Configuration which properties, references and relations you want to retrieve from Teamcenter and include in your Mendix model.
+
+Configuring the business objects starts with clicking on an empty box. This will open the object mapping dialog.
+
+### 2.1 Object mapping
+
+The object mapping dialog shows, on the left side, a tree of all relevant business objects available in the configured Teamcenter instance. The right side shows a tree of all relevant entities in your Mendix app.
+
+Relevance is dependent on the [[action]] you are configuring. For example, for the [[action]] to get ItemRevisions from Teamcenter, the Teamcenter tree has an ItemRevision as its root object. That means that, for this action, you can only select ItemRevisions or specializations thereof. Similarly, in this example, the Mendix tree has the TcConnector.ItemRevision entity as its root entity.
+
+[[Screenshot of object mapping for ItemRevision]]
+
+When retrieving a tree of objects, relevance can also be based on the type of relation/reference. When working with typed relations/references, the type of Teamcenter business object is dictated by the relation/reference.
+
+By limiting the list of Teamcenter objects and Mendix entities to those that are relevant, the Teamcenter extension guides you to select Teamcenter business objects that make sense in the context of the [[action]] you want to perform.
+
+To configure which type of Teamcenter business object you are interested in and what type of Mendix entities this should be mapped to, you select a business object in the Teamcenter tree on the left and an entity on the Mendix tree on the right and click OK. 
+
+It is also possible to create new entities for your integrations. This new entity needs to be a specialization of the root entity in the Mendix tree or one of its specializations. When you want to use a new entity, click your generalization of choice, click the Create new specialization of selected entity checkbox and provide an entity name. Now, once finishing the configuration for the [[action]], the Teamcenter extension will create a new entity with the given name and the selected entity as its generalization.
+
+[[Screenshot of object mapping with new specialization]]
+
+Once you click OK, you return to the import mapping tab with a sidebar opened to configure which Teamcenter properties, references, and relations to include when retrieving data for this business object.
+
+### 2.2.	Selection of Teamcenter properties, references, and relations
+
+You can configure which Teamcenter properties, references, and relations to include when retrieving data from Teamcenter in the import mapping sidebar. The import mapping sidebar is launched automatically after completion of the object mapping. When you are on the import mapping page and the sidebar is closed, you can click on a previously configured entity to open the object mapping sidebar for that entity.
+
+The import mapping sidebar shows all properties, references, and relations for the configured Teamcenter object. Depending on the use case, each one of them is accompanied with checkboxes to configure which of these you want to include when retrieving data from or creating data in Teamcenter.
+
+You will often see that checkboxes are checked by default and/or disabled. In general, the following rules apply. 
+1.	Properties that are already available on the Mendix entity or one of its generalizations are checked by default and cannot be unchecked.
+2.	Properties, references, and relations for Marketplace entities are disabled by default as it is not good practice to change Mendix marketplace content.
+
+For specific [[actions]] there may be additional rules. These are explained in the separate sections on those [[actions]].
+
+You can select and deselect the properties, references, and relations depending on the data you need from Teamcenter. When you select a reference or relation, a new placeholder entity will be added to the object mapping tree. You will need to perform the import mapping for these referenced/related objects in a subsequent step(business object mapping and selection of Teamcenter properties, references, and relations.
+
+
+
+
+
 ## 2 {Title of the User Interface Element Being Described}
 
 {Describe the UI elements (for example, pages, widgets). Describe all the properties and features for each UI element.}

@@ -41,4 +41,6 @@ The following changes in behavior have been noticed when migrating from Java ver
 
 ### 3.1 Changes in Date Formatting {#date-formatting-21}
 
-[Locale data was updated in Java version 20](https://www.oracle.com/java/technologies/javase/20-relnote-issues.html#JDK-8284840) in such a way that [date formatting microflow expression](/refguide/parse-and-format-date-function-calls/#3-formatdatetimeutc) have changed what they produce when the format string contains AM or PM. Before Java version 20 a space would be included before the AM/PM, but now it will be a Unicode non-breaking space (NBSP or NNBSP, \u202f). In a Microflow expression this non-breaking space can be included in a string using `urlDecode('%E2%80%AF')`, for example `'8:24' + urlDecode('%E2%80%AF') + 'AM'`.
+[Locale data updates in Java version 20](https://www.oracle.com/java/technologies/javase/20-relnote-issues.html#JDK-8284840) mean that [date formatting microflow expressions](/refguide/parse-and-format-date-function-calls/#format-datetime-utc) return a different result when the format string contains AM or PM.
+
+Before Java version 20 a space would be included before the AM/PM, but now it will be a Unicode non-breaking space (NBSP or NNBSP, \u202f). In a microflow expression this non-breaking space can be included in a string using `urlDecode('%E2%80%AF')`, for example `'8:24' + urlDecode('%E2%80%AF') + 'AM'`.

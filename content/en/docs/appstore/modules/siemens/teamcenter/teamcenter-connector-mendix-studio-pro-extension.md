@@ -10,7 +10,31 @@ title: "Teamcenter Connector Mendix Studio Pro Extension"
 
 ## 1 Introduction
 
-{Describe what this page will cover and what the user will learn.}
+The Teamcenter Mendix Studio Pro Extension or Teamcenter Connector Extension for short is built using the Mendix Extensibility Framework to provide you with an effortless means to harness the full capabilities of Teamcenter Connector for Mendix.
+The Teamcenter Connector is a powerful tool that allows you to access, create and modify product data in Teamcenter. The Teamcenter Extension is layered atop it, providing a low-code experience to enhance the user friendliness and streamline the utilization of the connector.
+
+### 1.1 Supported use-cases
+
+In version 1.0.0, the extension will allow you to build Mendix artifacts for the following common use cases:
+1.	Retrieve Item Revisions from Teamcenter
+2.	Retrieve workspace objects from Teamcenter
+3.	Create Item and Item Revisions in Teamcenter
+4.	Update Item and Item Revisions in Teamcenter
+5.	Revise Item Revision in Teamcenter
+6.	Get BOM structures from Teamcenter
+
+More details and typical user journeys for each use case is provided in the [[Action]] section below.
+
+### 1.2 Pre-requisites
+
+The Teamcenter Connector Extension requires Mendix version 10.xxx or higher. You also need to make sure you have the following installed from the Mendix Marketplace
+1. [TcConnector](
+https://marketplace.mendix.com/link/component/111627)
+2. [CommunityCommons](https://marketplace.mendix.com/link/component/170)
+
+### 1.3 License
+
+[[todo]]
 
 ## 2 {Title of the User Interface Element Being Described}
 

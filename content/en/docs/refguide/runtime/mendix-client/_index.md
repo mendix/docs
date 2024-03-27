@@ -137,6 +137,8 @@ If an app is offline-first, data created and changed in the app is stored locall
 
 Session management ensures that any session with the runtime is kept alive and restored if necessary. It also acts as the authentication for all communications with the runtime which require it.
 
+For a description of the session and authentication tokens, see [Session Management](/refguide/session-management/).
+
 ### 2.13 Runtime Server
 
 The Runtime Server waits for requests from the Mendix Client, processes the request, and returns the requested data (plus any additional state information where appropriate). This is done through a private API called *xas*.
@@ -259,8 +261,11 @@ When the Mendix client is running, it sets a number of technical cookies to reco
 | **Profile** | Runtime | Holds the navigation profile that is being accessed within the session | `/` | until user closes their browser (session cookie) |  `true` | 
 | **SessionTimeZoneOffset** | Runtime | Holds the time zone offset for the session | `/` | until user closes their browser (session cookie) |  `true` | 
 | **xasid** | Runtime | Used for multi-instance fail-over | `/` | until user closes their browser (session cookie) |  `true` | 
-| **reloginReason** | Runtime | Used to let the client know that a relogin reason should be displayed on the sign in page | `/` | until user closes their browser (session cookie) |  `true` | 
+| **reloginReason** | Runtime | Used to let the client know that a relogin reason should be displayed on the sign in page—*not used by apps created in Mendix version 10.9.0 and above* | `/` | until user closes their browser (session cookie) |  `true` | 
 | **XASSESSIONID**<sup><small>2</small></sup> | Runtime | Holds the ID of the user's session | `/` | 1 year for offline sessions<sup><small>1</small></sup>, otherwise based on the session timeout |  `true` | 
+| **useAuthToken** | Runtime | Lets the runtime know whether to generate an authtoken or not—*introduced for apps created in Mendix version 10.9.0 and above* | `/` | until the end-user closes their browser (session cookie) |  `true` | 
+| **authtoken** | Runtime | Used to hold the authentication token—*introduced for apps created in Mendix version 10.9.0 and above* | `/` | until the authentication token expires |  `true` | 
+
 
 <sup><small>1</small></sup>*Offline sessions* are sessions created for users using an offline or native mobile [navigation profile](/refguide/navigation/#profiles).
 

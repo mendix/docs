@@ -7,7 +7,7 @@ tags: ["ATS", "testing", "Selenium hub"]
 
 ## 1 Introduction
 
-This how-to shows you an example of a simple setup of a Selenoid hub with a Chrome and Firefox node on a Linux machine with docker. This works on a Windows machine with docker as well, but the commands and configuration could be different. For the official project go to: [https://github.com/aerokube/selenoid](https://github.com/aerokube/selenoid). For the official documentation go to: [http://aerokube.com/selenoid/latest/](http://aerokube.com/selenoid/latest/).
+This how-to shows you an example of a simple setup of a Selenoid hub with a Chrome and Firefox node on a Linux machine with docker. This works on a Windows machine with docker as well, but the commands and configuration could be different. For the official project, go to [https://github.com/aerokube/selenoid](https://github.com/aerokube/selenoid). For the official documentation, go to [https://aerokube.com/selenoid/latest/](https://aerokube.com/selenoid/latest/).
 
 It is possible to run Selenoid without Docker, but that is outside of the scope of this how-to. Please check out the official documentation if you would like to achieve this.
 

@@ -3,7 +3,7 @@ title: "App Repository API"
 url: /apidocs-mxsdk/apidocs/app-repository-api/
 category: "API Documentation"
 description: "This API enables retrieving information (branches, commits) of application models stored in the Mendix Team Server."
-weight: 10
+weight: 5
 ---
 
 ## 1 Introduction
@@ -35,7 +35,7 @@ Authentication for the App Repository API uses a personal access token (PAT).
 
 ### 4.1 Generating a PAT
 
-To generate a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section in *Mendix Profile*. When you define the new PAT, you need to choose at least this scope: `mx:modelrepository:repo:read`.
+To generate a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section in *User Settings*. When you define the new PAT, you need to choose at least this scope: `mx:modelrepository:repo:read`.
 
 Store the generated value `{GENERATED_PAT}` somewhere safe so you can use it to authorize your Mendix Cloud App Repository API calls.
 

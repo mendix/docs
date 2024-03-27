@@ -8,6 +8,7 @@ description_list: true
 tags: ["marketplace", "marketplace component", "connector", "AWS"]
 aliases:
     - /appstore/aws-connectors/
+    - /appstore/connectors/
 ---
 
 ## 1 Introduction

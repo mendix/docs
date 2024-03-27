@@ -110,7 +110,7 @@ It is possible to prepare the prerequisite installers beforehand, so that the Me
 
 6. Run the installer as described in the [Installing Mendix Studio Pro](#install) section above.
 
-If the **AdoptOpenJDK 11 x64 failed; code 1639** error occurs during installation, try the following:
+If an error occurs during JDK installation, try the following:
 
 * Abort the installation process
 * Install the Adopt Open JDK dependency manually from the dependencies folder using Administrator privileges

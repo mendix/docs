@@ -44,7 +44,7 @@ Follow these prerequisites carefully to avoid connection errors. It is especiall
 
 Once you have imported the Database connector into your app, you will have the **Database connector** category available in the **Toolbox**. This connector supports five actions: **Execute query**, **Execute statement**, **Execute parameterized query**, **Execute parameterized statement**, and **Execute callable statement**.
 
-{{< figure src="/attachments/appstore/connectors/database-connector/database-connector-in-toolbox.png" >}}
+{{< figure src="/attachments/appstore/modules/database-connector/database-connector-in-toolbox.png" >}}
 
 ### 3.1 Executing Queries and Statements
 
@@ -79,11 +79,11 @@ These are the results of the actions:
 
 The **Execute callable statement** microflow action is used to execute stored procedures and functions in the database engine. In addition to **JDBC Url**, **Username**, and **Password**, this action expects an input object of type **DatabaseConnector.Statement**. This input object should define the contract to perform the execution and retrieve the results:
 
-{{< figure src="/attachments/appstore/connectors/database-connector/callable-statement-action.png" >}}
+{{< figure src="/attachments/appstore/modules/database-connector/callable-statement-action.png" >}}
 
 The **DatabaseConnector.Statement** type is a non-persistable entity defined as follows:
 
-{{< figure src="/attachments/appstore/connectors/database-connector/statement-parameter-diagram.png" >}}
+{{< figure src="/attachments/appstore/modules/database-connector/statement-parameter-diagram.png" >}}
 
 The **Content** attribute of the **DatabaseConnector.Statement** type should contain the statement body (the SQL content). If applicable, you can also define the input and output parameters that the stored procedure expects using an association with a **DatabaseConnector.Parameter** type. 
 
@@ -112,7 +112,7 @@ The following table outlines which specialization to use to refer to each SQL pr
 | Dates              | **DatabaseConnector.ParameterDateTime** |
 | Character types    | **DatabaseConnector.ParameterString**   |
 
-{{< figure src="/attachments/appstore/connectors/database-connector/primitive-types-parameters.png" >}}
+{{< figure src="/attachments/appstore/modules/database-connector/primitive-types-parameters.png" >}}
 
 The **Value** attribute defined in these specializations is handled differently depending on the parameter mode used. For input parameters, the attribute must hold the value to pass to the stored procedure. For output parameters, it is set to the output from the stored procedure.
 
@@ -120,7 +120,7 @@ The **Value** attribute defined in these specializations is handled differently 
 
 Some database vendors support creating complex SQL object types, which can be referred to using the **DatabaseConnector.ParameterObject**. The **SQLTypeName** attribute should be set to the underlying SQL object type name.
 
-{{< figure src="/attachments/appstore/connectors/database-connector/parameter-object-parameter.png" >}}
+{{< figure src="/attachments/appstore/modules/database-connector/parameter-object-parameter.png" >}}
 
 Attributes of the object can be represented by associated **DatabaseConnector.Parameter** objects using the **ParameterObject_Parameter** association. You can use any specialization of **DatabaseConnector.Parameter** for the associated parameter objects. This also allows for flexibility defining the nested object hierarchies (as in, objects with attributes of the object type).
 
@@ -132,7 +132,7 @@ Attributes within an object are identified by their position in the object and n
 
 List parameters are also supported and usable via the **DatabaseConnector.ParameterList** type. The **SQLTypeName** attribute should refer to the SQL list type:
 
-{{< figure src="/attachments/appstore/connectors/database-connector/parameter-list-parameter.png" >}}
+{{< figure src="/attachments/appstore/modules/database-connector/parameter-list-parameter.png" >}}
 
 List items can be represented by associated **DatabaseConnector.Parameter** objects using the **ParameterObject_Parameter** association. You can use any specialization of **DatabaseConnector.Parameter** for the list items.
 
@@ -140,7 +140,7 @@ List items can be represented by associated **DatabaseConnector.Parameter** obje
 
 To deal with **REF CURSOR** outputs, use the **DatabaseConnector.ParameterRefCursor** type:
 
-{{< figure src="/attachments/appstore/connectors/database-connector/parameter-ref-cursor-parameter.png" >}}
+{{< figure src="/attachments/appstore/modules/database-connector/parameter-ref-cursor-parameter.png" >}}
 
 The many-to-many-association with **DatabaseConnector.Parameter** is also used here for the same reasons mentioned in the [ParameterList Type](#parameterlist) section above.
 
@@ -154,9 +154,9 @@ When using the Database connector, keep these best practices in mind:
 ## 5 Common JDBC Drivers{#links}
 
 * [Amazon Redshift](https://docs.aws.amazon.com/redshift/latest/mgmt/configure-jdbc-connection.html#download-jdbc-driver)
-* [Apache Derby](http://db.apache.org/derby/derby_downloads.html)
-* [Firebird](http://www.firebirdsql.org/en/jdbc-driver/)
-* [H2 Database Engine](http://www.h2database.com/html/main.html)
+* [Apache Derby](https://db.apache.org/derby/derby_downloads.html)
+* [Firebird](https://www.firebirdsql.org/en/jdbc-driver/)
+* [H2 Database Engine](https://www.h2database.com/html/main.html)
 * [HSQLDB](https://sourceforge.net/projects/hsqldb/files/)
 * [IBM DB2](https://www.ibm.com/support/pages/download-initial-version-115-clients-and-drivers)
 * [IBM Informix](https://www.ibm.com/products/informix?mhsrc=ibmsearch_a&mhq=informix)

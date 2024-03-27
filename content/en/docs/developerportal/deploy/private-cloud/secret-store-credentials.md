@@ -66,6 +66,7 @@ The following table lists the properties used as keys for database and storage-r
 | Use configured CA trust for file storage | `storage-use-ca-certificates` | `true` |  |
 | Delete files from storage when deleted in the app | `storage-perform-delete` | `true` |  |
 | Mendix Admin Password | `mx-admin-password` | `Welc0me!` |  |
+| Mendix Debugger Password | `mx-debugger-password` | `Welc0me!` |  |
 | App constant `{name}` | `mx-const-{name}` | `mx-const-MyFirstModule.WelcomePageTitle` |  |
 | Runtime custom setting `{name}` | `mx-runtime-{name}` | `mx-runtime-com.mendix.storage.s3.EncryptionKeys` |  |
 
@@ -104,6 +105,10 @@ To use Azure Blob Storage (keys with the `storage-azure-` prefix), upgrade to Me
 
 {{% alert color="info" %}}
 To load app constants (`mx-const-*` keys) and Mendix Runtime custom settings (`mx-runtime-*`) from CSI Secrets Storage, upgrade to Mendix Operator version 2.10.0 or above.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+To load Mendix Debugger password (`mx-debugger-password`) from CSI Secrets Storage, upgrade to Mendix Operator version 2.15.0 or above.
 {{% /alert %}}
 
 ## 3 Sample Implementations
@@ -161,7 +166,7 @@ To enable your environment to use Vault as external secret storage, follow these
 9. Create an app environment configuration secret in Vault, as shown in the following example. Replace `<{env-configuration-secret}>` with a unique name, and set any additional parameters:
 
     ```shell
-    vault kv put secret/<{env-configuration-secret}> mx-admin-password="Welc0me!"
+    vault kv put secret/<{env-configuration-secret}> mx-admin-password="Welc0me!" mx-debugger-password="Welc0me!"
     ```
 
 10. Create the required Vault role, as shown in the following example. Replace `<{env-policy}>` with a unique name to identify the app environment, and update any paths to match the secrets you created in the previous steps:
@@ -253,6 +258,9 @@ To enable your environment to use Vault as external secret storage, follow these
           - secretKey: "mx-admin-password"
             objectName: "mx-admin-password"
             secretPath: "secret/data/<{env-configuration-secret}>"
+          - secretKey: "mx-debugger-password"
+            objectName: "mx-debugger-password"
+            secretPath: "secret/data/<{env-configuration-secret}>"  
           # Example: use MyFirstModule.MyConstant constant value from AWS Secrets Manager
           #- secretKey: "MyFirstModule.MyConstant"
           #  objectName: "mx-const-MyFirstModule.MyConstant"
@@ -426,6 +434,8 @@ To enable your environment to use [AWS Secrets Manager](https://aws.amazon.com/b
               objectAlias: "storage-use-ca-certificates"
             - path: '"mx-admin-password"'
               objectAlias: "mx-admin-password"
+            - path: '"mx-debugger-password"'
+              objectAlias: "mx-debugger-password"
             # Example: use MyFirstModule.MyConstant constant value from AWS Secrets Manager
             #- path: '"MyFirstModule.MyConstant"'
             #  objectAlias: "mx-const-MyFirstModule.MyConstant"

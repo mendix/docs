@@ -19,17 +19,6 @@ div.card-icon{
         color: $blue;
     }
 }
-div.link-title{
-    font-weight: $font-weight-bold;
-    font-size: 1.2rem;
-    padding: 0 0 5% 0;
-    a {
-        color: $secondary;
-        &:hover {
-            color: $blue;
-        }
-    }
-}
 ul.landing-list{
     padding-left: 0.5rem;
 }
@@ -43,13 +32,16 @@ li.link-list{
     font-size: 1rem;
     list-style-position: outside;
     list-style: none;
-    color: $blue;
+    color: $link-color;
     a {
+        text-decoration: none;
         &:hover {
-            color: darken($blue, 20%);
+            color: $link-hover-color;
+            text-decoration: underline;
         }
     }
 }
+
 p.rn-date{
     color: $gray-600;
     font-size: 0.85rem;
@@ -68,7 +60,7 @@ div.my-column{
         flex: 0 0 31%;
         max-width: 31%;
     }
-    @include media-breakpoint-down(lg){
+    @include media-breakpoint-down(xl){
         flex: 0 0 46%;
         max-width: 46%;
     }
@@ -84,11 +76,11 @@ div.w-50{
         flex: 0 0 44%;
         max-width: 44%;
     }
-    @include media-breakpoint-down(lg){
+    @include media-breakpoint-down(xl){
         flex: 0 0 90%;
         max-width: 90%;
     }
-    @include media-breakpoint-down(md){
+    @include media-breakpoint-down(lg){
         flex: 0 0 90%;
         max-width: 90%;
     }
@@ -134,7 +126,19 @@ div.cards-layout{
 img.my-icon{
     width: 1.75rem;
     height: 1.75rem;
-    margin: 0.5rem 0rem 0rem 1.5rem;
+    float:left;
+    margin: 0rem 0.5rem 0.5rem 0.5rem;
+}
+img.ToC-icon{
+    width: 2.5rem;
+    height: 2.5rem;
+    float:left;
+    margin: 0rem 0.5rem 0rem 0.5rem;
+    padding: 0.3rem;
+    border-radius: 4px;
+    &:hover {
+        background-color: $gray-light;
+    };
 }
 img.nav-icon{
     width: 24px;
@@ -152,16 +156,16 @@ h4.card-title-w-50{
     font-weight: $font-weight-medium; // NK - adjusted weight
     font-size: $h3-font-size; // NK - adjusted size
     margin: 0.5rem 0rem 0.5rem 1rem; // NK - bring title closer to icon
-
         &:hover {
-            color: $blue;
-            text-decoration: none;
+            color: $link-hover-color;
+            text-decoration: underline;
         }
 }
 div.card-body{
-    padding: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
 }
-p.card-text{
+ul.card-text{
     margin-top: 1rem;
     font-size: 1.125rem;
 }

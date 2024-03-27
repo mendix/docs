@@ -271,7 +271,7 @@ This connector contains functionality for sending and receiving emails, so durin
 
 On the [Azure portal](https://portal.azure.com/), ensure that you have the following permissions enabled under the **API permissions** tab on the sidebar:
 
-{{< figure src="/attachments/appstore/connectors/email-connector/app-permissions.png" alt="API permissions for authentication code flow" >}}
+{{< figure src="/attachments/appstore/modules/email-connector/app-permissions.png" alt="API permissions for authentication code flow" >}}
 
 #### 4.7.3 Settings in the Microsoft Azure Portal (Client Credentials Flow)
 
@@ -281,7 +281,7 @@ This connector contains functionality for sending and receiving emails, so APIs 
 
 On the [Azure portal](https://portal.azure.com/), ensure that you have the following permissions enabled under **API permissions** tab on the sidebar:
 
-{{< figure src="/attachments/appstore/connectors/email-connector/client-cred-api-permissions.png" alt="API permissions for client credentials flow" >}}
+{{< figure src="/attachments/appstore/modules/email-connector/client-cred-api-permissions.png" alt="API permissions for client credentials flow" >}}
 
 Admin status is given on the added API permissions. The tenant admin must register the Azure application's service principal in Exchange via Exchange Online PowerShell, as described in [Register service principals in Exchange](https://learn.microsoft.com/en-us/exchange/client-developer/legacy-protocols/how-to-authenticate-an-imap-pop-smtp-application-by-using-oauth#register-service-principals-in-exchange).
 

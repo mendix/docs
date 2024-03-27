@@ -170,4 +170,4 @@ As always, make sure you look at the retrieves and commits performed in your loo
 
 ## 6 Read More
 
-* [Expert Webinar Series: Performance](http://ww2.mendix.com/Expert-Webinar.Performance.html)
+* [Expert Webinar Series: Performance](https://youtu.be/xNR3BjJYt3U)

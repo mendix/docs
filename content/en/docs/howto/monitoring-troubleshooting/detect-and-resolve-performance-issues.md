@@ -177,4 +177,4 @@ For more information on best practices, see [Recommendations from MxAssist Best 
 
 ## 7 Read More
 
-* [Expert Webinar Series: Performance](http://ww2.mendix.com/Expert-Webinar.Performance.html)
+* [Expert Webinar Series: Performance](https://youtu.be/xNR3BjJYt3U)

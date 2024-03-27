@@ -36,7 +36,7 @@ Every widget has a unique class name, which means that you can use the name on i
 
 Some actions done by Selenium take time to complete, for example, animations or requesting data for a pop-up window. When clicking a search button in a grid, the search bar appears using an animation. This means that after clicking the button, the test needs to wait for the animation to complete before continuing.
 
-For more information, see the [Webdriver: Advanced Usage](http://docs.seleniumhq.org/docs/04_webdriver_advanced.jsp).
+For more information, see the WebDriver documentation on [Waiting Strategies](https://www.selenium.dev/documentation/webdriver/waits/).
 
 ## 4 Examples
 

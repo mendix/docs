@@ -19,8 +19,10 @@ The subjects covered in the *General* section are as follows:
 * [Licensing Apps](/developerportal/deploy/licensing-apps-outside-mxcloud/)
 * [Secure Outgoing Connections from your Application](/developerportal/deploy/securing-outgoing-connections-from-your-application/)
 * [Two-Factor Authentication](/developerportal/deploy/two-factor-authentication/)
-* [Version Downgrade Prevented](/developerportal/deploy/version-downgrade-prevention/)
+* [Version Downgrade Protection](/developerportal/deploy/version-downgrade-prevention/)
 * [Iframes and Running Apps](/developerportal/deploy/running-in-iframe/)
+* [Deployment Location](/developerportal/deploy/deployment-location/)
+* [Webhooks](/developerportal/deploy/webhooks/)
 
 ## 2 Building Your Model
 
@@ -45,7 +47,7 @@ For details on the **Environments** pages for Mendix Cloud, Mendix for Private C
 
 * Mendix Cloud deployments – [Environments](/developerportal/deploy/environments/)
 * Mendix for Private Cloud deployments – [Deploying a Mendix App to a Private Cloud Cluster](/developerportal/deploy/private-cloud-deploy/#environment-details)
-*SAP deployments – [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/#EnvironmentDetails)
+* SAP deployments – [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/#EnvironmentDetails)
 
 Other platforms are not currently supported on the Mendix **Environments** page; instead, you must go to the relevant platform portal to monitor and configure your environments.
 

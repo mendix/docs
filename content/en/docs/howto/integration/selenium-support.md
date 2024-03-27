@@ -18,7 +18,7 @@ This how-to teaches you how to do the following:
 
 ## 2 Naming Conventions
 
-Widgets can be given a name in Mendix Studio Pro. These names appear in the HTML document as class names prefixed by `mx-name-`. For instance, a grid named `ArtistGrid` will get the `mx-name-ArtistGrid` a CSS class. This is true for all widgets.
+Widgets can be given a name in Studio Pro. These names appear in the HTML document as class names prefixed by `mx-name-`. For instance, a grid named `ArtistGrid` will get the `mx-name-ArtistGrid` a CSS class. This is true for all widgets.
 
 More complex widgets, like a grid, can set more specific CSS classes to sub-elements, like columns or the paging bar buttons.
 
@@ -30,17 +30,17 @@ The easiest way to discover these names is to use a browser's developer tool.
 
 ### 3.1 Nested Widgets
 
-Every widget has a unique class name, which means that you can use the name on its own as a selector in Selenium. This makes them robust against changes in your page, like moving a button from one container to another. However, not all sub-elements in widgets are unique, like the buttons in a grid's paging bar. To select such an element, use a descendant selector like `.mx-name-artist-grid .mx-name-next`. This first selects the artist grid and then searches for the next page button on that grid.
+Every widget has a unique class name, which means that you can use the name on its own as a selector in Selenium. This makes them robust against changes in your page, like moving a button from one container to another. However, not all sub-elements in widgets are unique, like the buttons in a grid's paging bar. To select such an element, use a descendant selector like `.mx-name-artist-grid .mx-name-next`. This first selects the artist grid, then searches for the next page button on that grid.
 
 ### 3.2 Timing Issues
 
-Some actions done by Selenium take time to complete, for example, animations or requesting data for a pop-up window. When clicking a search button in a grid, the search bar appears using an animation. This means that after clicking the button, the test needs to wait for the animation to complete before continuing.
+Some actions done by Selenium take time to complete, such as animations or requesting data for a pop-up window. When clicking a search button in a grid, the search bar appears using an animation. This means that after clicking the button, the test needs to wait for the animation to complete before continuing.
 
-For more information, see the [Webdriver: Advanced Usage](http://docs.seleniumhq.org/docs/04_webdriver_advanced.jsp).
+For more information, see the WebDriver documentation on [Waiting Strategies](https://www.selenium.dev/documentation/webdriver/waits/).
 
 ## 4 Examples
 
-Select a Microflow button named `Execute` in a page:
+Select a microflow button named `Execute` in a page:
 
 ```javascript
 $('.mx-name-Execute')

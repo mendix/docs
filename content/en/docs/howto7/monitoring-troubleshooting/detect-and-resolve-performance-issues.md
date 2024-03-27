@@ -176,4 +176,4 @@ As always, make sure you look at retrieves and commits performed in your loops, 
 
 ## Read More
 
-[Expert Webinar Series: App Performance](http://ww2.mendix.com/Expert-Webinar.Performance.html)
+[Expert Webinar Series: App Performance](https://youtu.be/xNR3BjJYt3U)

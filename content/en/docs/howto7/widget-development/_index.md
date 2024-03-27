@@ -17,9 +17,9 @@ Custom widget development can be difficult at the beginning. The resources below
 
 In order to create widgets, you need a good understanding of how JavaScript works. These texts can help you get started:
 
-* [JavaScript: The Good Parts](http://shop.oreilly.com/product/9780596517748.do)
+* [JavaScript: The Good Parts](https://www.oreilly.com/library/view/javascript-the-good/9780596517748/)
 * [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS)
-* [Learning JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
+* [Learning JavaScript Design Patterns](https://patterns.addy.ie)
 
 ## 3 Specific Widget Topics
 
@@ -33,11 +33,11 @@ The sections below describe the Mendix resources that can help you understand ho
 
 Custom widgets are Dojo widgets. In order to understand how widgets are structured and what their lifecycle is, you need to know how Dojo widgets are built. You can consult this quick introduction:
 
-* [Dojo Documentation Tutorials](http://dojotoolkit.org/documentation/#tutorials)
+* [Dojo Documentation Tutorials](https://dojotoolkit.org/documentation/#tutorials)
 
 For details on the widget lifecycle, reference this documentation:
 
-* [Writing Your Own Widget](http://dojotoolkit.org/reference-guide/1.10/quickstart/writingWidgets.html)
+* [Writing Your Own Widget](https://dojotoolkit.org/reference-guide/1.10/quickstart/writingWidgets.html)
 * [dijit.\_WidgetBase](https://dojotoolkit.org/reference-guide/1.10/dijit/_WidgetBase.html)
 * [Tutorial: Widget Lifecycle](https://apidocs.rnd.mendix.com/6/client/tutorial-widget-lifecycle.html)
 
@@ -81,6 +81,6 @@ By debugging your widgets, you will quickly learn where you make mistakes and ho
 
 ### 4.3 Ask the Community
 
-Within the Mendix community of developers, there are plenty of widget developers. The [Mendix Forum](https://forum.mendixcloud.com) is the place to go to when you have questions.
+Within the Mendix community of developers, there are plenty of widget developers. The [Mendix Community](https://community.mendix.com/) is the place to go to when you have questions.
 
 ## 5 Documents in This Category

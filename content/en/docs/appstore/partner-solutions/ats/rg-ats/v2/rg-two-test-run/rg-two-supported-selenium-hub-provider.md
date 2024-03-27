@@ -9,8 +9,8 @@ This section presents an overview of the currently supported external Selenium h
 
 Currently, there are two Selenium providers supported:
 
-* [Sauce Labs](http://www.saucelabs.com/)
-* [BrowserStack](http://www.browserstack.com/)
+* [Sauce Labs](https://www.saucelabs.com/)
+* [BrowserStack](https://www.browserstack.com/)
 
 The following table shows the currently supported operating systems of each provider:
 

@@ -76,7 +76,7 @@ Where you need to supply the following parameters
 * `<tls-boolean>` – whether the database uses strict TLS, `true` or `false` *(default)*
 * `<ssl-root-certificate>` – the location of the SSL Root certificate file, if `<tls-boolean>` is `true`
 * `<docker-repo>` – location of the image repo, default: `private-cloud.registry.mendix.com/privatecloud-license-manager`
-* `<docker-tag>` – the docker image tag, default: `0.3.0`
+* `<docker-tag>` – the docker image tag, default: `0.4.0`
 * `<out-file>` – the name of the file where the yaml is written, for example `manifest.yaml`
 
 ### 3.2 Applying the Manifest

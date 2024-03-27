@@ -153,7 +153,9 @@ You can follow these steps:
 
 #### 5.1.8 Handling Local Copies
 
-After the results of the cleanup are pushed to the server all local clones need to be reset. This means that each developer of your team who has the project on disk and CI pipelines that have cached data need to get a fresh clone. For developers on your team this means they have to delete their local folders. 
+After the results of the cleanup are pushed to the server all local clones need to be reset. This means that each developer of your team who has the project on disk and CI pipelines that have cached data need to get a fresh clone. 
+
+For developers on your team this means they have to ensure Studio Pro can no longer find their local folders. The `sp-reset` tool, shipped along with the Cleanup tool, can be used. Alternatively they can rename their folders of the app to ...OLD.
 
 {{% alert color="warning" %}}
 Deleting local folders means that any uncommitted work is lost. To retain uncommitted work, move the app folder to a location not known to Studio Pro and manually merge the changes after you downloaded a fresh clone.

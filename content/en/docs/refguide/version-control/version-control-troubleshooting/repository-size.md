@@ -99,9 +99,11 @@ If you need easier access to the repository, for example from Studio Pro, you ca
 
 #### 5.1.4 Cleanup Strategy
 
-The public beta of the tool currently features a single mode to clean up your repository: EXTREME.
+The cleanup tool will reduce the size of the repository to a minimum, by only retaining the latest commit of the main branch. This means that all work on branches that have been merged to main branch will be kept, but the commits themselves (author, changes per commit, ...) will not.
 
-* EXTREME: retains the last commit of the main branch. There is maximum repository size reduction, but no history at all.
+{{% alert color="info" %}}
+Uncommitted work, or work committed to branches that have not been merged to the main branch, will be permanently removed from the repository.
+{{% /alert %}}
 
 {{< figure src="/attachments/refguide/version-control/troubleshoot-version-control-issues/git_fixer_mode.png" >}}
 

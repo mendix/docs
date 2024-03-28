@@ -53,12 +53,14 @@ Mendix has developed a cleanup tool to assist you in shrinking your repository. 
 
 Mendix has developed a cleanup tool called git-fixer. It is a Python-based command-line tool which copies a local Git repository to a new folder and removes the history, resulting in a small new repository that only contains the last commit of the main branch.
 
+After cleaning up and pushing the results to the server, team members can run the reset tool to unlink local copies from Studio Pro.
+
 {{% alert color="info" %}}
-This tool is currently in public beta and can be downloaded here.
+The tool is currently in public beta. The cleanup tool can be downloaded [here](https://artifacts.rnd.mendix.com/git-fixer/git-fixer-essentials.zip), the reset tool for team members can be found [here](https://artifacts.rnd.mendix.com/git-fixer/git-fixer-sp-reset.zip).
 {{% /alert %}}
 
 {{% alert color="info" %}}
-This tool is executed on a Git repository. If your app is still on SVN you will first have to migrate to Git. In case the Migrate button is not showing on the Team Server page in Developer Portal because of the size restrictions, you can reach out to your CSM to get your app whitelisted.
+This tool is executed on a Mendix Git repository. If your Mendix app is still on SVN you will first have to migrate to Git. In case the Migrate button is not showing on the Team Server page in Developer Portal because of the size restrictions, you can reach out to your CSM to get your app whitelisted.
 {{% /alert %}}
 
 ### 5.1 Cleanup Process

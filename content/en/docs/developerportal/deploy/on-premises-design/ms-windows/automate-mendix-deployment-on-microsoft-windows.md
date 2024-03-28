@@ -119,7 +119,7 @@ Install-MxServer -LiteralPath {<target folder for the downloaded file>}\mendix-{
 
 ### 4.4 Sample Script - Create new Mendix app
 
-The following script example demonstrates how to create a new Mendix app with an app folder and basic Settings.yaml file. You still need to extend Settings.yaml file with database settings and a valid Java path before the app can really start.
+The following script example demonstrates how to create a new Mendix app with its own folder and basic `Settings.yaml` file. You still need to extend the `Settings.yaml` file with database settings and a valid Java path before the app can really start.
 
 ```text {linenos=table}
 $appName = 'Name of Mendix app'

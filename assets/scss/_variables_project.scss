@@ -1,7 +1,7 @@
 // Bootstrap options
 
-$enable-gradients: true !default;
-$enable-shadows: true !default;
+$enable-gradients: true; // TODO: consider removing this duplicate variable from this custom file
+$enable-shadows: true; //TODO: consider removing this duplicate variable from this custom file
 
 // Theme colors
 

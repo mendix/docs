@@ -130,7 +130,7 @@ New-MxApp -Name $appName -Credential (Get-Credential)
 
 ### 4.5 Sample Script - Set Log Level for Mendix app
 
-The following script example demonstrates how to set a log level for all log nodes of a log subscriber at once. This is only applicable when you have defined your own log subscribers in the Settings.yaml file.
+The following script example demonstrates how to set a log level for all log nodes of a log subscriber at once. This is only applicable when you have defined your own log subscribers in the `Settings.yaml` file.
 
 ```text {linenos=table}
 $appName = 'Name of Mendix app'

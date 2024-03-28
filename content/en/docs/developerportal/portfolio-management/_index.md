@@ -9,7 +9,11 @@ tags: ["Portfolio Management"]
 
 ## 1 Introduction
 
-The [Portfolio Management](https://portfolio.mendix.com) tool is available to all Mendix customers. It enables staying informed about initiatives and managing them in the different development stages. It provides portfolio managers, business stakeholders, and developers with everything they need to collaborate effectively in one place and bring new initiatives to the Mendix Platform. To start the Portfolio Management app, go to the Developer Portal, open the [Switch to menu](/developerportal/), and select **Portfolio**.
+The [Portfolio Management](https://portfolio.mendix.com) tool is available to all Mendix customers. It enables staying informed about initiatives and managing them in the different development stages. It provides portfolio managers, business stakeholders, and developers with everything they need to collaborate effectively in one place and bring new initiatives to the Mendix Platform. 
+
+With the Portfolio Management tool, you can manage [active initiatives](#initiative-overview) and [archived initiatives](#archive) in a portfolio. If you are Portfolio Managers, you can also [manage access](#access-management) and configure [portfolio settings](#portfolio-settings) of a portfolio.
+
+To start the Portfolio Management app, go to the Developer Portal, open the [Global Navigation menu](/developerportal/) ({{% icon name="layout-rounded-1-filled" %}}), and select **Portfolio**.
 
 ## 2 Portfolio Landscape Overview {#portfolio-landscape}
 
@@ -33,15 +37,19 @@ On the **Portfolio Landscape Overview** page, each portfolio is presented in a c
 
 #### 2.2.1 Different Privacy Settings of a Portfolio {#privacy-settings}
 
+{{% alert color="info" %}}A Portfolio Manager change the **Privacy Settings** on the [Portfolio Settings](/developerportal/portfolio-management/#portfolio-settings) page.{{% /alert %}}
+
 Currently, the privacy settings of a portfolio can be private, restricted, or open. The table below shows their differences:
 
-| Portfolio type | Visible in the **Company Portfolios** section?            | How to access the portfolio?                                 |
-| -------------- | --------------------------------------------------------- | ------------------------------------------------------------ |
-| Private        | {{< icon name="remove-circle-filled" color="red" >}}      | A Portfolio Manager can [add users to the portfolio](#add-users). |
-| Restricted     | {{< icon name="checkmark-circle-filled" color="green" >}} | <ul><li>A Portfolio Manager can [add users to the portfolio](#add-users).</li><li>Users can also request to join by clicking **Request to Join** on the portfolio card. A Portfolio Manager needs to approve this [access request](#access-requests).</li></ul> |
-| Open           | {{< icon name="checkmark-circle-filled" color="green" >}} | <ul><li>All company members can access an open portfolio without being a portfolio member. They have the same access rights as the Viewer of the portfolio.</li><li>A Portfolio Manager can [add users to the portfolio](#add-users).</li><li>Users can also request to join by clicking **Request to Join** on the lower-left corner after opening the portfolio. A Portfolio Manager needs to approve this [access request](#access-requests).</li></ul> |
+| Portfolio type | Visible in the **Company Portfolios** section?         | Can users access the portfolio without joining the portfolio? | Can Portfolio Manager add users to the portfolio? * | Can users apply to join the portfolio? ** |
+|-|-|-|-|-|
+| Private        | {{< icon name="remove-circle-filled" color="red" >}}      | {{< icon name="remove-circle-filled" color="red" >}} |{{< icon name="checkmark-circle-filled" color="green" >}}|{{< icon name="remove-circle-filled" color="red" >}}|
+| Restricted     | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |{{< icon name="checkmark-circle-filled" color="green" >}}|{{< icon name="checkmark-circle-filled" color="green" >}}.|
+| Open           | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |{{< icon name="checkmark-circle-filled" color="green" >}}|{{< icon name="checkmark-circle-filled" color="green" >}}|
 
-A Portfolio Manager can change the **Privacy Settings** on the [Portfolio Settings](#portfolio-settings) page.
+\* A Portfolio Manager can [add users to the portfolio](/developerportal/portfolio-management/#add-users).
+
+** A user can apply to join the portfolio by clicking the **Request to Join** on the  portfolio card. A Portfolio Manager needs to approve this [access request](/developerportal/portfolio-management/#access-requests).
 
 ### 2.3 Opening a Portfolio 
 
@@ -86,13 +94,13 @@ The **Initiatives Overview** page gives an overview of all the initiatives in th
 
 In the search box on the top, you can search for an initiative by the initiative name.
 
-On the upper-right corner, you can use the drop-down list to [change the view](#change-view). Clicking **Filters** enables you to filter initiatives and the filters remain applied when you change to a new view. You can [export and import Initiatives](/developerportal/portfolio-management/export-import-initiatives/) by clicking the {{% icon name="office-sheet" %}} icon, and [create a new initiative](#create-new-initiative) by clicking the **Create Initiative** button.
+On the upper-right corner, you can use the drop-down list to [change the view](#change-view). Clicking **Filters** enables you to filter initiatives and the filters remain applied when you change to a new view. You can [export and import Initiatives](/developerportal/portfolio-management/export-import-initiatives/) by clicking the import or export {{% icon name="office-sheet" %}} icon, and [create a new initiative](#create-new-initiative) by clicking the **Create Initiative** button.
 
 ### 3.1 Creating a New Initiative {#create-new-initiative}
 
 {{% alert type="info" %}}Both Portfolio Managers and Contributors can create new initiatives. Only Viewers cannot do this action. For more information on roles and permissions, see the [Access Management](#access-management) section.{{% /alert %}}
 
-To create a new initiative and add details to it, do as follows:
+To create a new initiative and add details to it, following the steps below. (To see the details of a step, click the link.)
 
 1. [Create the initiative.](#create-initiative)
 2. [Add general information.](#add-general-information)

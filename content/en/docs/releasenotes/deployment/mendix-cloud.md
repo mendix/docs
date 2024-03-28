@@ -17,6 +17,18 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2024
 
+### March 26, 2024
+
+#### Improvements
+
+* All databases of environments on eligible plans in Mendix Cloud (as specified in the table below) have been migrated to gp3 storage instances. Compared to gp2, gp3 provides higher baseline storage performance. For more information, see [Database IOPS Burst Balance](/developerportal/operate/metrics/#Trends-dbmxdatabaseburstbalance) in the *Metrics* documentation.
+
+    | Mendix Plans      | Storage Instance Type | Storage Size         | Baseline Storage Performance | Provisioned IOPS Range | Provisioned Throughput Range |
+    |-------------------|-----------------------|----------------------|------------------------------|------------------------|------------------------------|
+    | S and M           | gp2                   | Less than 20 GiB     | 100IOPS (3000 Burst)         | 100 - 1197 IOPS        | 128-250 MiB/s                |
+    | L, XL, XXL, and XXXL | gp3                   | Between 20 and 400 GiB | 3000 IOPS / 125 MiB/s        | N/A                    | N/A                          |
+    | XXXL              | gp3                   | 400 GiB and higher   | 12000 IOPS / 500 MiB/s       | 12000 - 64000 IOPS     | 500 - 4000 MiB/s             |
+
 ### March 7, 2024
 
 #### Bug Fixes

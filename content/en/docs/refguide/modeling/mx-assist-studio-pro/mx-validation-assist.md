@@ -80,11 +80,11 @@ Your app also has a form where customers can schedule a hairdresser’s appointm
 To configure the **Save** button for the use case above, do the following:
 
 1. Open the page with the form called *Appointment_NewEdit* and right-click the **Save** button in it.
-2. In the drop-down list, select **Generate validation microflow**.
+2. In the drop-down list, select **Generate validation microflow**:
 
     {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-validation-assist/generate-validation-microflow-option.png" alt="Generate Validation Microflow Option" >}}
 
-3. In the **Generate Validation Microflow** dialog box, you can see the **Microflow Properties**, for example, a microflow name, and validations were configured for you. Three expressions were added to validations: to check if the name, treatment type, and date and time fields are filled in.
+3. In the **Generate Validation Microflow** dialog box, you can see the **Microflow Properties**, for example, a microflow name, and validations were configured for you. Three expressions were added to validations: to check if the name, treatment type, and date and time fields are filled in:
 
     {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-validation-assist/generate-validation-microflow-dialog.png" alt="Generate Validation Microflow Dialog Box" >}}
 
@@ -106,18 +106,18 @@ To configure the **Save** button for the use case above, do the following:
 
 6. You would like to save validations for the **Customer_Name** attribute (ensuring that the name is not empty and consists of alphabets only) as a sub-microflow to use them as a separate validation on a different page. Do the following:
 
-    1. In the **Generate Validation Microflow** dialog box, select two validations for *Customer_Name* and click **Extract submicroflow**.
+    1. In the **Generate Validation Microflow** dialog box, select two validations for *Customer_Name* and click **Extract submicroflow**:
 
         {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-validation-assist/extract-sub-microflow.png" alt="Extract Sub-Microflow" >}}
 
-    2. In the **Extract Validation Sub Microflow,** click **Extract Microflow**.
+    2. In the **Extract Validation Sub Microflow,** click **Extract Microflow**:
 
         {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-validation-assist/extract-sub-microflow-dialog.png" alt="Extract Sub-Microflow Dialog" >}}
 
         The microflow is saved separately containing selected validations.
 
 7. In the **Generate Validation Microflow** dialog box, click **Generate microflow**. 
-8. In the **Validation Assist** dialog box, click **Open the microflow** to view the configured microflow.
+8. In the **Validation Assist** dialog box, click **Open the microflow** to view the configured microflow:
 
     {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-validation-assist/validation-microflow.png" alt="Validation Microflow" >}}
 

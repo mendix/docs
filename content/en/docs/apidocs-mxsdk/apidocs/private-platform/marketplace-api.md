@@ -13,9 +13,11 @@ This document is about [Private Mendix Platform](/private-mendix-platform/) API.
 
 ## 1 Introduction
 
-The Private Mendix Platform Marketplace API allows you to manage the Marketplace in Private Mendix Platform. You can use the API to do the following:
+The Private Mendix Platform Marketplace API allows you to manage the Marketplace in Private Mendix Platform.
 
-* Retrieve all Marketplace content items
+You can use the API to do the following:
+
+* Retrieve all Marketplace content items, such as modules or demo apps
 * Create a new Marketplace content item
 * Get versions of an existing Marketplace content item
 * Create a new version of an existing content item

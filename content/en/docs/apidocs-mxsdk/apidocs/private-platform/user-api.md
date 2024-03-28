@@ -13,7 +13,9 @@ This document is about [Private Mendix Platform](/private-mendix-platform/) API.
 
 ## 1 Introduction
 
-The Private Mendix Platform User API allows you to manage users in Private Mendix Platform. You can use the API to do the following:
+The Private Mendix Platform User API allows you to manage users in Private Mendix Platform. For example, you can use it to reset a user's password.
+
+You can use the API to do the following:
 
 * Get a user by ID
 * Get a list of all users for the current organization

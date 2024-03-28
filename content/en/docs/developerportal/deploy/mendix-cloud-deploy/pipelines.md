@@ -217,7 +217,7 @@ Your pipeline runs will fail if these user settings are not configured. All team
 Your PAT should have the following scope:
 
 * Deployment Mendix Cloud – `mx:deployment:write`
-* Model Repository – `mx:modelrepository:read` and `mx:modelrepository:write`
+* Model Repository – `mx:modelrepository:repo:read` and `mx:modelrepository:write`
 * Webhook Portal – `mx:webhook:read` and `mx:webhook:write`
 
 If your PAT scope does not include all five of these, your pipeline runs may fail.

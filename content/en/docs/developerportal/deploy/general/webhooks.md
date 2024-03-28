@@ -41,7 +41,7 @@ To set up a webhook, do the following:
 
 You can edit or delete an existing webhook by clicking **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) in the **Action** column for the webhook you want to change, and then selecting **Edit Webhook** or **Delete Webhook**.
 
-### 2.2 Editing an Existing Webhook
+### 2.2 Editing or Removing an Existing Webhook
 
 If you select **Edit Webhook** from **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) in the **Action** column for a webhook you want to change, the following actions are available:
 
@@ -54,7 +54,21 @@ If you select **Edit Webhook** from **More Options** ({{% icon name="three-dots-
 * Click **(De)activate Webhook** to deactivate an active webhook or activate an inactive webhook.
 * Click **Delete Webhook*** to completely remove the webhook.
 
-## 3 Webhook Headers
+### 3 Outgoing IP Addresses for Webhooks {#webhook-ip-addresses}
+
+If you want a Mendix webhook to contact one of your firewalled servers, it is recommended to safe list the IP addresses from which the webhook requests will originate.
+
+Mendix webhooks use the following static IP addresses:
+
+* 18.194.214.35
+* 3.64.82.159
+* 52.59.169.126
+
+{{% alert color="info" %}}
+Mendix maintains the current outgoing IP addresses as much as possible. However, these addresses may occasionally change for operational reasons. Any changes are subject to a 48-hour notice period.
+{{% /alert %}}
+
+## 4 Webhook Headers
 
 Every `POST` payload contains the following delivery information as part of the header:
 
@@ -74,7 +88,7 @@ You can also add your own custom headers. For more information, see [Setting Up 
 The order of these headers is not guaranteed.
 {{% /alert %}}
 
-### 3.1 Verifying Your Webhook{#verify-webhook}
+### 4.1 Verifying Your Webhook{#verify-webhook}
 
 Once you set up a webhook, make sure to verify that your endpoint has received a payload from Mendix and that the request has not been generated or intercepted by a bad actor. 
 
@@ -104,7 +118,7 @@ When verifying your webhook signature, keep the following in mind:
 * To prevent timing attacks, use a constant-time string comparison method.
 * To protect against timestamp attacks, where old webhook payloads are sent to your endpoint, verify that **webhook-timestamp** is within your tolerance for the current system time.
 
-### 3.1.1 Verifying Your Webhook Using Mendix
+### 4.1.1 Verifying Your Webhook Using Mendix
 
 You can use Mendix to verify your webhook; the [Community Commons](/appstore/modules/community-commons-function-library/) module has functions that you can use for this. To make use of this functionality, follow the steps below:
 
@@ -118,7 +132,7 @@ You can use Mendix to verify your webhook; the [Community Commons](/appstore/mod
 
 {{< figure src="/attachments/developerportal/deploy/webhooks/validation-microflow.png" alt="Completed validation microflow" >}}
 
-## 4 Package Upload to Developer Portal
+## 5 Package Upload to the Developer Portal
 
 When you [upload a package to the Developer Portal](/developerportal/deploy/environments/#package-repository) (including creating a package from the Team Server), and the webhook responds to the event **On package upload**, request content is sent to the configured endpoint. The request content contains a payload with the following format:
 
@@ -140,7 +154,7 @@ If you need a specific package ID for an API call, use the **Retrieve Packages**
 Make sure to use the correct key names when using this payload information to call other Mendix APIs. The data may be labeled differently in the API.
 {{% /alert %}}
 
-## 5 Teamserver Push (Git)
+## 6 Teamserver Push (Git)
 
 When you push a model change to the [Git Team Server](/developerportal/general/team-server/), and the webhook responds to the event **Teamserver push (Git)**, request content is sent to the configured endpoint. The request content contains a payload with the following format:
 
@@ -176,7 +190,7 @@ The **after**, **before**, and **id** values are Git commit hashes. In most case
 Make sure to use the correct key names when using this payload information to call other Mendix APIs. The data may be labeled differently in the API.
 {{% /alert %}}
 
-## 6 Alerts Webhooks
+## 7 Alerts Webhooks
 
 When an alert is triggered for your Mendix app, a payload with the following format is sent to the configured endpoint.
 
@@ -196,7 +210,7 @@ When an alert is triggered for your Mendix app, a payload with the following for
 
 For details on receiving alerts, see [Receive Environment Status Alerts](/developerportal/operate/receive-alerts/).
 
-## 7 Logging
+## 8 Logging
 
 You can see [log messages](/developerportal/operate/logs/) in the Developer Portal indicating when your webhooks were created or updated.
 

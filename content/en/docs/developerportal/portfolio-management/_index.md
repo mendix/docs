@@ -100,7 +100,7 @@ On the upper-right corner, you can use the drop-down list to [change the view](#
 
 {{% alert type="info" %}}Both Portfolio Managers and Contributors can create new initiatives. Only Viewers cannot do this action. For more information on roles and permissions, see the [Access Management](#access-management) section.{{% /alert %}}
 
-To create a new initiative and add details to it, following the steps below. (To see the details of a step, click the link.)
+To create a new initiative and add details to it, follow the steps below. To check the details of a step, click the link to go to the corresponding section.
 
 1. [Create the initiative.](#create-initiative)
 2. [Add general information.](#add-general-information)

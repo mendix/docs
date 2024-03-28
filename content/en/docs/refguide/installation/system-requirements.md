@@ -20,20 +20,13 @@ Mendix Studio Pro has the requirements listed in the following sections.
 
 [Mendix Studio Pro](/refguide/modeling/) 10 is supported on 64-bit versions of Windows 10 release 1809 and above; this also includes Windows 11. 
 
-Studio Pro 10.7 and above can run in beta mode on an ARM Mac and Intel Mac running macOS Sonoma 14.0 and above. Studio Pro versions 10.0 and above can run on the M series Apple Silicon Mac using [Parallels 17](https://www.parallels.com/) and Windows 11. Earlier versions of Studio Pro can run on Apple Mac [using Parallels](/refguide/using-mendix-studio-pro-on-a-mac/).
+Studio Pro 10.7 and above can run in beta mode on an ARM Mac and Intel Mac running macOS Sonoma 14.0 and above. For information on known limitation, see the [Known Limitations for Mac](#mac-limitations) section below. 
+
+Studio Pro versions 10.0 and above can run on the M series Apple Silicon Mac using [Parallels 17](https://www.parallels.com/) and Windows 11. Earlier versions of Studio Pro can run on Apple Mac [using Parallels](/refguide/using-mendix-studio-pro-on-a-mac/).
 
 {{% alert color="info" %}}
-While Studio Pro on Mac is in [public beta](/releasenotes/beta-features/), Mendix can only verify support for the latest macOS version available. Support for earlier versions is not guaranteed and it is best to update macOS to the newest version when using Studio Pro.
+While Studio Pro on Mac is in [public beta](/releasenotes/beta-features/), Mendix can only verify support for the latest macOS version available. Support for earlier versions is not guaranteed and it is best to update macOS to the newest version when using Studio Pro. 
 {{% /alert %}}
-
-These are the known limitations for Mac:
-
-* No native mobile support.
-* No support for document templates.
-* No **Structure mode** for the page editor.
-* The search in the **App Explorer** does not work yet; you can use <kbd>CMD</kbd> + <kbd>G</kbd> to search for documents.
-* If you have already installed JDK previously, it may not be picked up properly during installation. You can either configure this manually or remove all references to JDK and run the installer again.
-* The installer is currently not notarized yet; you bypass the dialog box by using right-click > **Open**.
 
 {{% alert color="warning" %}}
 Administrator rights are required to install Mendix Studio Pro on Mac (Beta).
@@ -61,6 +54,19 @@ You can choose which JDK is used for building and running locally via the **Edit
 Please note the limitation that the database viewer built into Studio Pro (as described in [How to Share the Development Database](/howto/data-models/sharing-the-development-database/)) does not work with JDK 11.06 or 11.07.
 {{% /alert %}}
 
+#### 2.1.1 Known Limitations for Mac {#mac-limitations}
+
+These are the known limitations for Mac:
+
+* No native mobile support.
+* No support for document templates.
+* No **Structure mode** for the page editor.
+* The search in the **App Explorer** does not work yet; you can use <kbd>CMD</kbd> + <kbd>G</kbd> to search for documents.
+* If you have already installed JDK previously, it may not be picked up properly during installation. You can either configure this manually or remove all references to JDK and run the installer again.
+  * The limitation that the JDK did not get installed while installing Studio Pro on macOS was removed in [10.8.0](/releasenotes/studio-pro/10.8/).
+
+* The installer is currently not notarized yet; you bypass the dialog box by using right-click > **Open**.
+
 ### 2.2 Hardware Specifications {#hardware}
 
 Mendix Studio Pro will run on any machine which can run the [minimum requirements for running Windows 10 64-bit](https://www.microsoft.com/en-gb/windows/windows-10-specifications#primaryR2), with the following additional requirements:
@@ -78,6 +84,8 @@ Studio Pro needs access to the following URLs in order to work. If your firewall
 * `*.mendix.com`
 * `*.mendixcloud.com`
 * `*.teamserver.sprintr.com`
+
+If you have set up managed dependencies and are working behind a firewall or using a proxy, see the [Proxy Settings](/refguide/managed-dependencies/#proxy-settings) section of *Managed Dependencies* for advice on what you need to do to allow the managed dependencies to work.
 
 To run a Mendix app, Mendix Studio Pro uses the following ports by default. If your firewall is blocking these, you will need to open them:
 
@@ -193,7 +201,7 @@ The Mendix Docker buildpack supports the following Kubernetes versions:
 
 ### 6.3 Java {#java}
 
-When running Mendix on a server, you will need Java Runtime Environment (JRE) 11 or 17. To download an OpenJDK distribution from Adoptium, see [Adoptium Installation](https://adoptium.net/temurin/releases). To download a commercial Oracle distribution, see [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
+When running Mendix on a server, you will need Java Runtime Environment (JRE) 11 or 17. To download an OpenJDK distribution from Adoptium, see [Adoptium Installation](https://adoptium.net/temurin/releases). To download a commercial Oracle distribution, see [Java SE Downloads](https://www.oracle.com/technetwork/java/javase/downloads/index.html).
 
 {{% alert color="warning" %}}
 Compatibility with JDK 17 has been released with Studio Pro version 10.8. Compatibility with Java 21 is planned for Studio Pro version 10.10, to be released in April 2024. Mendix recommends switching to a Studio Pro version compatible with Java 21 once it is available.

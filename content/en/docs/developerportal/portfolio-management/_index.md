@@ -35,11 +35,11 @@ On the **Portfolio Landscape Overview** page, each portfolio is presented in a c
 
 Currently, the privacy settings of a portfolio can be private, restricted, or open. The table below shows their differences:
 
-| Portfolio type | Visible in the **Company Portfolios** section?               | How to access the portfolio                                 |
-| -------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Private        | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} | A Portfolio Manager can [add users to the portfolio](#add-users). |
-| Restricted     | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | <ul><li>A Portfolio Manager can [add users to the portfolio](#add-users).</li><li>Users can also request to join by clicking **Request to Join** on the portfolio card. A Portfolio Manager needs to approve this [access request](#access-requests).</li></ul> |
-| Open           | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | <ul><li>All company members can access an open portfolio without being a portfolio member. They have the same access rights as the Viewer of the portfolio.</li><li>A Portfolio Manager can [add users to the portfolio](#add-users).</li><li>Users can also request to join by clicking **Request to Join** on the lower-left corner after opening the portfolio. A Portfolio Manager needs to approve this [access request](#access-requests).</li></ul> |
+| Portfolio type | Visible in the **Company Portfolios** section?            | How to access the portfolio?                                 |
+| -------------- | --------------------------------------------------------- | ------------------------------------------------------------ |
+| Private        | {{< icon name="remove-circle-filled" color="red" >}}      | A Portfolio Manager can [add users to the portfolio](#add-users). |
+| Restricted     | {{< icon name="checkmark-circle-filled" color="green" >}} | <ul><li>A Portfolio Manager can [add users to the portfolio](#add-users).</li><li>Users can also request to join by clicking **Request to Join** on the portfolio card. A Portfolio Manager needs to approve this [access request](#access-requests).</li></ul> |
+| Open           | {{< icon name="checkmark-circle-filled" color="green" >}} | <ul><li>All company members can access an open portfolio without being a portfolio member. They have the same access rights as the Viewer of the portfolio.</li><li>A Portfolio Manager can [add users to the portfolio](#add-users).</li><li>Users can also request to join by clicking **Request to Join** on the lower-left corner after opening the portfolio. A Portfolio Manager needs to approve this [access request](#access-requests).</li></ul> |
 
 A Portfolio Manager can change the **Privacy Settings** on the [Portfolio Settings](#portfolio-settings) page.
 
@@ -86,7 +86,7 @@ The **Initiatives Overview** page gives an overview of all the initiatives in th
 
 In the search box on the top, you can search for an initiative by the initiative name.
 
-On the upper-right corner, you can use the drop-down list to [change the view](#change-view). Clicking **Filters** enables you to filter initiatives, and the results persist even after you change to a new view. You can [export and import initiatives](/developerportal/portfolio-management/export-import-initiatives/) by clicking the {{% icon name="office-sheet" %}} icon, and [create a new initiative](#create-new-initiative) by clicking the **Create Initiative** button.
+On the upper-right corner, you can use the drop-down list to [change the view](#change-view). Clicking **Filters** enables you to filter initiatives and the filters remain applied when you change to a new view. You can [export and import Initiatives](/developerportal/portfolio-management/export-import-initiatives/) by clicking the {{% icon name="office-sheet" %}} icon, and [create a new initiative](#create-new-initiative) by clicking the **Create Initiative** button.
 
 ### 3.1 Creating a New Initiative {#create-new-initiative}
 
@@ -138,9 +138,9 @@ To add general information to your initiative, follow these steps:
 
 5. Set the **Owner** for the initiative.
 
-6. Select the **Stage**, **Department**, **Country**, and **Use Case** for the initiative.
+6. Select the **Stage**, **Department**, **Location**, **Country**, and **Use Case** for the initiative.
 
-    {{% alert type="info" %}}A Portfolio Manager can customize the options for **Stage**, **Department**, **Country**, and **Use Case** on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
+    {{% alert type="info" %}}A Portfolio Manager can customize the options for **Stage**, **Department**, **Location**, **Country**, and **Use Case** on the [Portfolio Settings](#portfolio-settings) page.{{% /alert %}}
 
 7. If you want to add attachments, click **+** to add them. Once an attachment is added, all the users can open and download it.
 
@@ -440,13 +440,13 @@ A pop-up window opens and tells you that the initiative is successfully archived
 
 ### 3.6 Exporting and Importing Initiatives
 
-On the **Initiatives Overview** page, you can import and export initiatives. For details, see [Export and Import Initiatives](/developerportal/portfolio-management/export-import-initiatives/).
+On the **Initiatives Overview** page you can import and export initiatives. On the **Archive** page you can only export initiatives. For details, see [Export and Import Initiatives](/developerportal/portfolio-management/export-import-initiatives/).
 
 ## 4 Archive {#archived-initiatives}
 
-The **Archive** page shows all the initiatives that are archived. You can search for an initiative in the search bar. 
+The **Archive** page shows all the initiatives that are archived. You can search for an initiative in the search bar. Clicking **Filters** enables you to filter initiatives. You can [export Initiatives](/developerportal/portfolio-management/export-import-initiatives/) by clicking the {{% icon name="office-sheet" %}} **Export Initiatives** button.
 
-{{< figure src="/attachments/developerportal/portfolio-management/archived-initiatives.png" >}}
+{{< figure src="/attachments/developerportal/portfolio-management/archived-initiatives.png" class="image-border" >}}
 
 The list contains the following information:
 
@@ -459,6 +459,8 @@ The list contains the following information:
 * **Archiving Reason** – This shows the reason why the initiative was archived.
 * **Archived Date** – This shows the date when the initiative was archived.
 * **Archived By** – This shows the avatar of the user who archived the initiative.
+* Icon of the linked apps – If there is only one linked app, clicking the icon shows the information about the app. If there are multiple apps or no linked apps, the icon is not clickable.
+* Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
 * **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) – Clicking this opens a menu that enables you to [restore](#restore-delete-archived-initiative) or [delete](#restore-delete-archived-initiative) the archived initiative.
   
     {{% alert type="info" %}}Both Portfolio Managers and Contributors can restore or delete an archived initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Access Management](#access-management) section.{{% /alert %}}
@@ -504,27 +506,27 @@ The table below shows the permissions of Portfolio Managers, Contributors, and V
 
 | Action | Portfolio Manager | Contributor | Viewer\* |
 | --- | --- | --- | --- |
-| Invite users | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
-| Remove user permissions and roles | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
-| Update user permissions and roles | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
-| View user access information | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} |
-| Manage portfolio settings | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
-| Delete the portfolio | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
-| Create initiatives | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
-| Edit existing initiatives | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
-| Archive and restore initiatives | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
-| Delete initiatives | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
-| View initiative details | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} |
-| Create comment | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} |
+| Invite users | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
+| Remove user permissions and roles | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
+| Update user permissions and roles | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
+| View user access information | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
+| Manage portfolio settings | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
+| Delete the portfolio | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
+| Create initiatives | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
+| Edit existing initiatives | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
+| Archive and restore initiatives | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
+| Delete initiatives | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
+| View initiative details | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
+| Create comment | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
 | Edit comments | Own comments | Own comments | Own comments |
 | Delete comments | Own comments | Own comments | Own comments |
-| View comments | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} |
-| Add initiative attachments | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
-| Delete initiative attachments | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
-| View and download initiative attachments | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} |
-| Export and import initiatives | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
-| Link and unlink epics | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/cross-mark.svg" >}} |
-| View linked epics | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} | {{< figure src="/attachments/developerportal/portfolio-management/check-mark.svg" >}} |
+| View comments | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
+| Add initiative attachments | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
+| Delete initiative attachments | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
+| View and download initiative attachments | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
+| Export and import initiatives | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
+| Link and unlink epics | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
+| View linked epics | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
 
 \* For open portfolios, all company members (other than the portfolio members) have the same rights as the Viewer of the portfolio.
 
@@ -627,6 +629,8 @@ On the **Portfolio Settings** page, Portfolio Managers can change the following 
 * **Currency**
 
 * **Departments**
+
+* **Locations**
 
 * **Countries**
 

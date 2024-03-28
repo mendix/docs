@@ -35,8 +35,8 @@ If the transaction log space is depleted or there is a temporary increase in the
 
 In this case, the size of *LOGPRIMARY* must be increased. 
 
-For more detailed information, see [DB2 SQL error: SQLCODE: -964, SQLSTATE: 57011, SQLERRMC: null](http://www-01.ibm.com/support/docview.wss?uid=swg21298630) on the *IBM Support* pages and 
-[SQL0964C – The transaction log for the database is full](http://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.messages.sql.doc/doc/msql00964c.html) in the *SQL messages* section of the *IBM Knowledge Center*.
+For more detailed information, see [DB2 SQL error: SQLCODE: -964, SQLSTATE: 57011, SQLERRMC: null](https://www-01.ibm.com/support/docview.wss?uid=swg21298630) on the *IBM Support* pages and 
+[SQL0964C – The transaction log for the database is full](https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.messages.sql.doc/doc/msql00964c.html) in the *SQL messages* section of the *IBM Knowledge Center*.
 
 ## 4 Limitations
 

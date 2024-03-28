@@ -189,7 +189,7 @@ To make a colleague a profile editor, follow these steps:
 
 ## 10 Sorting on the Partners Overview Page
 
-The [Meet Our Partners page](https://developer.mendixcloud.com/openid/login?immediate=true&continuation=link/partneroverview) is an overview that presents all the partners in the Mendix community. The sorting is based on a combination of the following KPIs:
+The [Meet Our Partners page](https://developerprofiles.mendix.com/link/partneroverview) is an overview that presents all the partners in the Mendix community. The sorting is based on a combination of the following KPIs:
 
 * Whether your company is Expert (which will get the most weight in sorting), Professional, or Authorized (for more information, see the [Capability Tracks](#capability) section)
 * The total amount of certified developers (note that developers with multiple certifications count as one certified developer)

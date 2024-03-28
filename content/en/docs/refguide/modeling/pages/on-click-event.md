@@ -320,9 +320,7 @@ The following properties are specific for this event:
 
 **Show workflow admin page** opens a workflow overview page. This page is typically used by a workflow administrator role to inspect status of a workflow instance and to manage the instance, for example, abort a workflow if required.
 
-An element calling this event should be placed in a data container connected to the **System.WorkflowInstance** entity. 
-
-For more information on workflow-related entities in the System module, see the [Workflow Entities in the System Module](/refguide/workflows/#workflow-entities) section in *Workflows*. 
+An element calling this event should be placed in a data container connected to the [System.Workflow](/refguide/workflow-engine/#system-workflow) entity. For more information, see the [Instance-Related Entities](/refguide/workflow-engine/#instance) section in *Workflow Engine*. 
 
 ### 3.15 Show User Task Page {#show-user-task-page}
 
@@ -338,13 +336,13 @@ The following properties are specific for this event:
     * **Assigned user** *(default)* – Only the user who is currently assigned to the task is able to open the user task page. 
     * **Users with access**  – All users who have access to the [user task](/refguide/user-task/) can open the user task page. This option means that multiple users can open the page at the same time. Only the assigned user is able to complete the task, however, other users can make changes to the page, and the data will not be saved unless you add a Save button. This button saves data, but does not complete the task. Take into account that when two users have the task page open simultaneously, data from the user who saves changes the last is stored and this will overwrite data from the other user.
 
-For more information on workflow-related entities in the System module, see the [Workflow Entities in the System Module](/refguide/workflows/#workflow-entities) section in *Workflows*. 
+For more information, see the [Instance-Related Entities](/refguide/workflow-engine/#instance) section in *Workflow Engine*.
 
 ### 3.16  Complete User Task {#complete-task}
 
 The **Complete user task** event marks the specified user task in the workflow as completed.
 
-An element calling this event should be placed in a data container connected to the **System.WorkflowUserTask** entity. 
+An element calling this event should be placed in a data container connected to the [System.WorkflowUserTask](/refguide/workflow-engine/#system-workflow-user-task) entity. 
 
 The following properties are specific for this event:
 

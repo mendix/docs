@@ -108,7 +108,7 @@ The rule of thumb for web typography is to write no more than nine words per lin
 
 Consider the popular blogging platform [Medium.com](https://www.medium.com). Have you ever noticed how much screen real estate they "waste"? That is because what may be called "waste" is actually an investment. It presents the impression that if you can afford to invest that much space into a page, the text must be important (and if the text is not important, you should get rid of it anyway).
 
-For more information, see [A Typographic Approach to Email](http://blog.weare1910.com/post/78113100010/a-typographic-approach-to-email).
+For more information, see [A Typographic Approach to Email](https://blog.weare1910.com/post/78113100010/a-typographic-approach-to-email).
 
 ## 6 Do Not Double Up the Pop-Ups
 

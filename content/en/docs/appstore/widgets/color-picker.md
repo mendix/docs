@@ -104,4 +104,4 @@ Features
 * Execute an action after a color change via a microflow or nanoflow
 * Add a label and label width
 * Support the hex, RGB, or RGBA color formats
-* Supported color pickers are based on the [React Color](http://casesandberg.github.io/react-color/) library
+* Supported color pickers are based on the [React Color](https://casesandberg.github.io/react-color/) library

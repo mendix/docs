@@ -11,7 +11,7 @@ tags: ["Authenticator","Developer Portal","Cloud","Permissions", "Google", "Micr
 
 Mendix Cloud provides two-factor authentication (2FA) to help secure your account. 2FA requires you to identify yourself using your password as well as a second authentication mechanism.
 
-This extra layer of authentication is required when you perform sensitive activities on Mendix Cloud nodes, such as deploying packages and handling production data. Actions that require 2FA are indicated by a padlock ({{% icon name="lock" %}}) in the [Developer Portal](http://sprintr.home.mendix.com). For example, switching to the production environment requires 2FA.
+This extra layer of authentication is required when you perform sensitive activities on Mendix Cloud nodes, such as deploying packages and handling production data. Actions that require 2FA are indicated by a padlock ({{% icon name="lock" %}}) in the [Developer Portal](https://sprintr.home.mendix.com). For example, switching to the production environment requires 2FA.
 
 {{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/production.png" max-width=30% alt="" >}}
 

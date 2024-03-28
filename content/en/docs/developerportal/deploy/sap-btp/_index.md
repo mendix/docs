@@ -802,7 +802,7 @@ Starting from Mendix version 9.7, the support for the `statsd` is removed.
     * **Name** - select **NON_MENDIX_PUBLIC_CLOUD**
     * **Value** - select **true**
 
-2. Restart your application.
+2. Redeploy your application, and then restart it. Just restarting the app is not sufficient because additional dependencies need to be included.
 
 ## 11 Status of SAP BTP Deployment
 

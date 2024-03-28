@@ -1,0 +1,27 @@
+{{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<!-- Updated to exclude pages which have the front matter sitemapexclude: true - can then exclude all but the latest version see https://dereckcurry.com/posts/excluding-pages-from-the-sitemap/ -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  {{ range .Data.Pages }}
+    {{- if .Permalink -}}
+        {{- if or (eq (isset .Params "notsitemap") false) (ne .Params.notsitemap true) -}}
+  <url>
+    <loc>{{ .Permalink }}</loc>{{ if not .Lastmod.IsZero }}
+    <lastmod>{{ safeHTML ( .Lastmod.Format "2006-01-02T15:04:05-07:00" ) }}</lastmod>{{ end }}{{ with .Sitemap.ChangeFreq }}
+    <changefreq>{{ . }}</changefreq>{{ end }}{{ if ge .Sitemap.Priority 0.0 }}
+    <priority>{{ .Sitemap.Priority }}</priority>{{ end }}{{ if .IsTranslated }}{{ range .Translations }}
+    <xhtml:link
+                rel="alternate"
+                hreflang="{{ .Language.LanguageCode }}"
+                href="{{ .Permalink }}"
+                />{{ end }}
+    <xhtml:link
+                rel="alternate"
+                hreflang="{{ .Language.LanguageCode }}"
+                href="{{ .Permalink }}"
+                />{{ end }}
+  </url>
+        {{- end -}}
+    {{- end -}}
+  {{ end }}
+</urlset>

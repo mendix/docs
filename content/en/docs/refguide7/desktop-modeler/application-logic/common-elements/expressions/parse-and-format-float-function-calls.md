@@ -9,7 +9,7 @@ These functions are deprecated together with the Float type. Use the high-precis
 
 {{% /alert %}}
 
-See [http://docs.oracle.com/javase/7/docs/api/java/text/DecimalFormat.html](http://docs.oracle.com/javase/7/docs/api/java/text/DecimalFormat.html) for all pattern possibilities.
+See [Class DecimalFormat](https://docs.oracle.com/javase/7/docs/api/java/text/DecimalFormat.html) for all pattern possibilities.
 
 ## parseFloat
 

@@ -58,7 +58,7 @@ Characteristics of the Selenium solution are the following:
 
 ### 4.1 Official Website
 
-The official website of the Selenoid hub (Aerokude) is [http://aerokube.com/](http://aerokube.com/)
+The official website of the Selenoid hub (Aerokude) is [https://aerokube.com/](https://aerokube.com/)
 
 ### 4.2 Setting Up the Selenium Solution
 

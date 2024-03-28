@@ -58,7 +58,7 @@ This tool is currently in public beta and can be downloaded here.
 {{% /alert %}}
 
 {{% alert color="info" %}}
-This tool is executed on a Git repository. If your app is still on SVN you will first have to migrate to Git. In case the Migrate button is not showing on the Team Server page in Developer Portal because of the size restrictions, you can out to your CSM to get your app whitelisted.
+This tool is executed on a Git repository. If your app is still on SVN you will first have to migrate to Git. In case the Migrate button is not showing on the Team Server page in Developer Portal because of the size restrictions, you can reach out to your CSM to get your app whitelisted.
 {{% /alert %}}
 
 ### 5.1 Cleanup Process
@@ -86,7 +86,7 @@ When planning the cleanup, note the following:
 
 * Changes made by other users after you made your local copy are lost after pushing the cleaned repository to the Git server.
 * All users need to get fresh clones from the server after the cleanup is completed. This means all changes that have not been committed and pushed to the server before you download the repository you will use for cleaning, will be lost.
-* The process can take up to several hours, so we recommend to align with your team before you start. First do a test run to get familiar with the tool before planning the actual cleanup.
+* The process can take up to an hour, so we recommend to align with your team before you start. First do a test run to get familiar with the tool before planning the actual cleanup.
 {{% /alert %}}
 
 #### 5.1.3 Backing Up the Full History
@@ -99,9 +99,11 @@ If you need easier access to the repository, for example from Studio Pro, you ca
 
 #### 5.1.4 Cleanup Strategy
 
-The public beta of the tool currently features a single mode to clean up your repository: EXTREME.
+The cleanup tool will reduce the size of the repository to a minimum, by only retaining the latest commit of the main branch. This means that all work on branches that have been merged to main branch will be kept, but the commits themselves (author, changes per commit, ...) will not.
 
-* EXTREME: retains the last commit of the main branch. There is maximum repository size reduction, but no history at all.
+{{% alert color="info" %}}
+Uncommitted work, or work committed to branches that have not been merged to the main branch, will be permanently removed from the repository.
+{{% /alert %}}
 
 {{< figure src="/attachments/refguide/version-control/troubleshoot-version-control-issues/git_fixer_mode.png" >}}
 
@@ -153,7 +155,9 @@ You can follow these steps:
 
 #### 5.1.8 Handling Local Copies
 
-After the results of the cleanup are pushed to the server all local clones need to be reset. This means that each developer of your team who has the project on disk and CI pipelines that have cached data need to get a fresh clone. For developers on your team this means they have to delete their local folders. 
+After the results of the cleanup are pushed to the server all local clones need to be reset. This means that each developer of your team who has the project on disk and CI pipelines that have cached data need to get a fresh clone. 
+
+For developers on your team this means they have to ensure Studio Pro can no longer find their local folders. The `sp-reset` tool, shipped along with the Cleanup tool, can be used. Alternatively they can rename their folders of the app to ...OLD.
 
 {{% alert color="warning" %}}
 Deleting local folders means that any uncommitted work is lost. To retain uncommitted work, move the app folder to a location not known to Studio Pro and manually merge the changes after you downloaded a fresh clone.

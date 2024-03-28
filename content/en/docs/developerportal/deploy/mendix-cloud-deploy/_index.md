@@ -30,7 +30,7 @@ Free Apps are part of Mendix's Free Edition.
  
 If you are not currently a customer but would prefer to use a licensed cloud node, you can find more information on the [Mendix Platform Pricing](http://www.mendix.com/pricing) page. 
  
-If you are an existing customer, you should deploy into your licensed cloud node. 
+If you are an existing customer, you should deploy to your licensed cloud node. 
 {{% /alert %}} 
  
 A Free App has several limitations compared to a licensed app. The main limitations are summarized in the table below: 
@@ -117,7 +117,7 @@ The method for deploying an app to Mendix Cloud differs depending on whether you
  
 * For a licensed app, there are several deployment options: 
     * Manual deployment – Create a deployment package via Studio Pro or the Developer Portal, and then deploy the package to a node environment where you can run it. For details on how to do this, see [Deploying a Licensed App](#deploy-licensed-app), below. This is the simplest deployment method, especially if you are just getting started with Mendix. 
-    * Pipelines built with low code – If you want to automate your build and deployment process, you can use  [Pipelines](/developerportal/deploy/pipelines/) in the Developer Portal to design and activate a pipeline with a set of configurable, low-code steps. The Pipelines feature makes it quick and easy for teams to automate their CI/CD process, without requiring any third-party tools or DevOps expertise. 
+    * Pipelines built with low code – If you want to automate your build and deployment process, you can use [Pipelines](/developerportal/deploy/pipelines/) in the Developer Portal to design and activate a pipeline with a set of configurable, low-code steps. The Pipelines feature makes it quick and easy for teams to automate their CI/CD process, without requiring any third-party tools or DevOps expertise. 
     * Pipelines built with APIs – If you use Jenkins, GitLab, or another CI/CD tool, you can use Mendix APIs to automate your build and deployment process. For details, see [Implement a Simple CI/CD Pipeline with Mendix APIs](/howto/integration/implement-cicd-pipeline/). This method is highly customizable but does require CI/CD tooling and DevOps expertise to set up. 
 * For a Free App, you deploy the app directly from Studio Pro. For details on how to do this, see [Deploying a Free App](#deploy-free-app), below. 
  
@@ -127,6 +127,8 @@ For a hands-on introduction to the different deployment options for licensed app
  
 ### 2.1 Deploying a Licensed App{#deploy-licensed-app} 
  
+ Deploying a licensed app is a two-step process: First, create a deployment package. Second, deploy it to a node environment where you can run your app. The full process is described in detail below.
+
 #### 2.1.1 Prerequisites 
  
 Before starting the process for deploying a licensed app, make sure to complete these prerequisites: 
@@ -167,7 +169,7 @@ You can also create a deployment package through the Developer Portal, using a m
  
 #### 2.1.3 Deploying the App to an Environment {#deploy-the-app-to-an-environment} 
  
-The previous steps explained how to deploy a deployment package to Mendix Cloud, but the actual app is not running yet. To deploy a deployment package to a node environment where you can run your app, follow these steps: 
+The previous steps explained how to deploy a deployment package to Mendix Cloud, but the app is not running yet. To deploy a deployment package to a node environment where you can run your app, follow these steps: 
  
 1. Go to the [Developer Portal](http://sprintr.home.mendix.com). 
 2. Open your app. 
@@ -182,8 +184,8 @@ The previous steps explained how to deploy a deployment package to Mendix Cloud,
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/transport-to-flex.png" alt="The Transport menu" class="image-border" >}} 
  
 7. If prompted, clean the environment. 
-8. Configure the [constants](/refguide/constants/) (if necessary) by clicking **Constants** and **Edit constants value**. This can also be done at a later stage in the settings. 
-9. Configure any [scheduled events](/refguide/scheduled-events/) (if necessary) by clicking **Scheduled Events**. 
+8. Review the [constants](/refguide/constants/) in the **Constants** tab. Double-click any constant to view more details and edit the value if desired.
+9. Configure any [scheduled events](/refguide/scheduled-events/) using the **Scheduled Events** tab. 
 10. Click **Continue**. 
 11. Click **Start application**.  
 12. If prompted, click **Synchronize database**. 
@@ -191,6 +193,8 @@ The previous steps explained how to deploy a deployment package to Mendix Cloud,
 The app is now deployed. You can configure the administrative account. 
  
 ### 2.2 Deploying a Free App {#deploy-free-app} 
+
+Deploying a Free App is a single-stage process that is completed from Studio Pro. This process is described in detail below.
  
 #### 2.2.1 Prerequisites 
  
@@ -205,11 +209,11 @@ With a Free App, you can deploy your app to Mendix Cloud from Studio Pro by usin
  
 * In the top bar of Studio Pro, click **Run** > **Publish**. This automatically deploys your app to a Free App environment. 
  
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp2.png" alt="The Run menu with the Publish option selected"  width=60% >}} 
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp2.png" alt="The Run menu with the Publish option selected" max-width=60% >}} 
  
 * Alternatively, in the top bar of Studio Pro, click **Publish**. 
  
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp.png" alt="The Publish button" width=20% >}} 
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp.png" alt="The Publish button" max-width=20% >}} 
  
 ## 3 Status of Deployment 
  
@@ -282,7 +286,7 @@ You can have a pack using a fraction of a vCPU. This is because several environm
  
 ### 4.3 Additional Resources{#additional-resources} 
  
-For Premium customers using a Premium resource pack, there are additional features available for apps deployed to Mendix Cloud. There are also additional ways to deploy Mendix Apps. 
+For Premium customers using a Premium resource pack, there are additional features available for apps deployed to Mendix Cloud. There are also additional ways to deploy Mendix apps. 
  
 #### 4.3.1 High Availability and Fallback {#fallback} 
  

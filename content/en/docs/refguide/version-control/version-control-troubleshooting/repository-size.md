@@ -58,7 +58,7 @@ This tool is currently in public beta and can be downloaded here.
 {{% /alert %}}
 
 {{% alert color="info" %}}
-This tool is executed on a Git repository. If your app is still on SVN you will first have to migrate to Git. In case the Migrate button is not showing on the Team Server page in Developer Portal because of the size restrictions, you can out to your CSM to get your app whitelisted.
+This tool is executed on a Git repository. If your app is still on SVN you will first have to migrate to Git. In case the Migrate button is not showing on the Team Server page in Developer Portal because of the size restrictions, you can reach out to your CSM to get your app whitelisted.
 {{% /alert %}}
 
 ### 5.1 Cleanup Process

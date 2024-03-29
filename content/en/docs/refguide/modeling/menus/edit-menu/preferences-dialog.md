@@ -207,9 +207,9 @@ For more information, see [Defining Access Rules Using the New Editor](/refguide
 
 The expression editor is modernized since Studio Pro 10.6. This setting is enabled by default. The editor allows the user to write rich text statements and get instant feedback on their validity. In Studio Pro, it is often used to write an expression for a decision or to write an XPath expression for data filtering.
 
-### 9.3 X-Ray Mode (Page Editor)
+### 9.3 Page Editor
 
-In Studio Pro version 10.9, X-ray mode was introduced in Beta. Enable this option to view your app in X-ray mode, a more detailed version of Design mode. 
+In Studio Pro version 10.9, X-ray mode was introduced to the page editor in Beta. Enable this option to view your app in X-ray mode: a more detailed version of Design mode. 
 
 For more information, see [X-Ray Mode](/refguide/page/#x-ray-mode).
 

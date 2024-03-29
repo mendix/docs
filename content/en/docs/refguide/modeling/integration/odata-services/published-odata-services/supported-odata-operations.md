@@ -16,6 +16,11 @@ This is a list of supported operations for OData services.
 Mendix currently supports only the operations described here.
 {{% /alert %}}
 
+A published OData service is automatically documented. Studio Pro allows you to [export the OpenAPI specification](/refguide/published-odata-services/#openapi), which is a machine-readable file that is supported by most API tools, like Swagger UI and Postman.
+When running your app, you can [use Swagger UI](/refguide/build-odata-apis/#22-openapi-3-contract-and-test-page) to read this documentation and test your service. 
+
+Below follows a more descriptive explanation of the operations that your OData service will support.
+
 ## 2 Retrieving Objects
 
 ### 2.1 Retrieving All Objects

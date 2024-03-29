@@ -132,6 +132,8 @@ These are the nanoflow actions in the native network category:
 
 * **Is cellular connection** – checks if the device is connected to the cellular network
 * **Is connected** – checks if the device is connected to the internet
+     * Note: This JS will always return true if it's connected to a wifi network even if the network does not have access to the internet
+     * instead you can use the "`IsConnectedToServer`" JS action from the [Nanoflow Commons Module](https://marketplace.mendix.com/link/component/109515) 
 * **Is wifi connection** – checks if the device is connected to Wifi
 
 ### 3.7 Native Mobile Category

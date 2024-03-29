@@ -79,7 +79,7 @@ If your [role](/developerportal/general/app-roles/) has the permission that **Ca
 
 You can add new feedback manually yourself. 
 
-To manually add a feedback, click **Create new feedback** (if there is not any feedback yet on the **Inbox** tab) or click **Add feedback** (if there are already feedback on the **Inbox** tab), and then fill in the **Subject**, **Description**, and **Submitter Email** fields, and optionally **Upload Screenshots** in the **New Feedback** dialog box.
+To manually add feedback, click **Create new feedback** (if there is not any feedback yet on the **Inbox** tab) or click **Add feedback** (if there are already feedback on the **Inbox** tab), and then fill in the **Subject**, **Description**, and **Submitter Email** fields, and optionally **Upload Screenshots** in the **New Feedback** dialog box.
 
 If you select feedback, you can see the following items: 
 
@@ -168,7 +168,7 @@ The **Feedback** tab shows the following items:
     * **Submitter email** – This shows the email of the reporter
     * **Submission date** – This shows the date when the feedback was submitted
 
-* **Linked Feedback** – This shows which feedback are linked to this feedback.
+* **Linked Feedback** – This shows which feedback items are linked to this feedback.
 
   You can link a feedback by selecting a feedback from the drop-down list.
 
@@ -216,9 +216,9 @@ From the [feedback details](#feedback-details) page, you can manage tags by clic
 
 ## 5 Receiving Notifications {#notifications}
 
-You can receive a notification whenever new feedback lands in the inbox, or when a reporter replies to their feedback. To receive these notifications, do as follows:
+You can receive a notification whenever new feedback lands in the inbox or when a reporter replies to their feedback. To receive these notifications, do as follows:
 
-1. Watch the app on the [Settings](/developerportal/collaborate/general-settings/) page after you open your app in the Developer Portal.
+1. Watch the app on the [Settings](/developerportal/collaborate/general-settings/) page after you open it in the Developer Portal.
 2. Go to Feedback again.
 3.  Enable the feedback notifications as follows:
     1. In Feedback, click the ({{% icon name="cog" %}}) icon on the upper-right corner of the page.
@@ -226,5 +226,5 @@ You can receive a notification whenever new feedback lands in the inbox, or when
 
 ### 5.1 Receiving Notifications for Individual Feedback
 
-You can also just receive notifications for individual feedback. You can set this up by clicking the {{% icon name="view-off" %}} icon on the upper-right corner of the [Feedback](#feedback) tab when you open the feedback. You automatically start watching feedback whenever you respond to a reporter or leave a comment for your team in the **Communications** section.
+You can also just receive notifications for individual feedback. Set this up by clicking the {{% icon name="view-off" %}} icon on the upper-right corner of the [Feedback](#feedback) tab after opening the feedback. You automatically start watching individual feedback whenever you respond to the reporter or leave a comment for your team in the **Communications** section.
 

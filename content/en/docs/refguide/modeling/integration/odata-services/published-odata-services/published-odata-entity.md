@@ -113,7 +113,7 @@ This is the behavior when you choose the action **Write to database**.
 
 You can also choose the **Call a microflow** action to use your own logic. Specify a microflow that takes the entity as a parameter, and optionally a [System.HttpRequest](/refguide/http-request-and-response-entities/) parameter. In the microflow, you can use the [Commit](/refguide/committing-objects/) activity to commit the changes to the database. 
 
-In the publishing app, you can use a validation message action to report a validation error. The client app can include a custom error handler on the [Send External Object](/refguide/send-external-object/) activity to handle the error. If the microflow reports [validation feedback](/refguide/validation-feedback/), the runtime informs the client that the request has failed. For more information, see [OData query options](/refguide/odata-query-options/#updating-objects).
+In the publishing app, you can use a validation message action to report a validation error. The client app can include a custom error handler on the [Send External Object](/refguide/send-external-object/) activity to handle the error. If the microflow reports [validation feedback](/refguide/validation-feedback/), the runtime informs the client that the request has failed. For more information, see [Supported OData Operations](/refguide/supported-odata-operations/#updating-objects).
 
 ### 6.2 Readable {#readable}
 
@@ -158,7 +158,7 @@ This is the behavior when you choose the action **Write to database**.
 
 You can also choose the **Call a microflow** action to use your own logic. Specify a microflow that takes the entity as a parameter, and optionally a [System.HttpRequest](/refguide/http-request-and-response-entities/) parameter. In the microflow, you can use the [Commit](/refguide/committing-objects/) activity to commit the changes to the database. 
 
-In the publishing app, you can use a validation message action to report a validation error. The client app can include a custom error handler on the [Send External Object](/refguide/send-external-object/) activity to handle the error. If the microflow reports [validation feedback](/refguide/validation-feedback/), the runtime informs the client that the request has failed. For more information, see [OData query options](/refguide/odata-query-options/#updating-objects).
+In the publishing app, you can use a validation message action to report a validation error. The client app can include a custom error handler on the [Send External Object](/refguide/send-external-object/) activity to handle the error. If the microflow reports [validation feedback](/refguide/validation-feedback/), the runtime informs the client that the request has failed. For more information, see [Supported OData Operations](/refguide/supported-odata-operations/#updating-objects).
 
 ### 6.4 Deletable {#deletable}
 

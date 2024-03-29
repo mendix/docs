@@ -1,6 +1,6 @@
 ---
 title: "Supported OData Operations"
-url: /refguide/supported-odata-operations/
+url: /refguide/s/
 description: "Lists the supported operations for published OData services."
 weight: 20
 tags: ["OData", "filter", "count", "sort", "select", "page", "insert", "create", "update", "delete", "actions"]
@@ -31,7 +31,7 @@ To retrieve all objects, specify the URI (for example, `/odata/myservice/v1/Empl
 
 To retrieve a single object, pass the object identifier in the URI (for example, `/odata/myservice/v1/Employees(8444249301330581)`).
 
-### 2.3 Query Options
+### 2.3 Query Options {#query-options}
 
 #### 2.3.1 Retrieving Associated Objects
 
@@ -55,7 +55,7 @@ To find out how many objects there are, pass the `$count` query option (for exam
 
 You can also adjust your query so that the result includes a count of the number of items returned. To do this in OData v4, set the `$count` query option to `true` (like this: `?$count=true`). To do this in OData v3 (⚠ deprecated), set the `$inlinecount` query option to `allpages` (like this: `?$inlinecount=allpages`).
 
-#### 2.3.3 Filtering
+#### 2.3.3 Filtering {#filtering}
 
 To apply a filter, append a `$filter=...` parameter to the request, like this: `/Employees?$filter=Name eq 'John'`.
 

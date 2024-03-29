@@ -627,7 +627,7 @@ SELECT * FROM SalesOrderSet WHERE Category='Notepads'
 
 The `$inlinecount=allpages` clause asks OData to return a count of the number of objects returned in the list. This will be stored in SAPODataConnector.ResultInfo.totalCount.
 
-You can find more information about OData queries in [OData Query Options](/refguide/odata-query-options/).
+You can find more information about OData queries in [Supported OData Operations](/refguide/supported-odata-operations/).
 
 ##### 5.2.1.5 Url
 
@@ -864,4 +864,4 @@ This domain model is part of the OData Connector for SAP solutions module and ca
 * [SAP Cloud Connector](/developerportal/deploy/sap-cloud-platform/sap-cloud-connector/)
 * [SAP Help Portal](https://help.sap.com)
 * [SAP Data Models](/appstore/services/use-sap-model-creator/)
-* [OData Query Options](/refguide/odata-query-options/)
+* [Supported OData Operations](refguide/supported-odata-operations/)

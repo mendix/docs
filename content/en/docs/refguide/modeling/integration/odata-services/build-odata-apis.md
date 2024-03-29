@@ -108,10 +108,14 @@ OData standardizes how to specify which resources to consume. This provides the 
 
 The following URL parameters are available:
 
-* **$filter** – This defines [filter expressions](/refguide/odata-query-options/#4-filtering) for the resource attributes (equals, not equal, smaller, larger, contains, etc.).
+* **$filter** – This defines filter expressions for the resource attributes (equals, not equal, smaller, larger, contains, etc.).
 * **$top**, **$skip** – This indicates how many resources to skip and how many to return to help implement client-side pagination.
 * **$orderby** – This defines how to sort the resources in the response payload.
 * **$select** – This defines which attributes of the resource to return.
+* **$expand** – This defines which associated resources to include in the response payload. 
+* **$count** – This defines whether or not to return the count of the query result instead of the resources themselves. 
+
+For more information about these query options, see [Supported OData Operations](/refguide/supported-odata-operations/#query-options).
 
 The following example illustrates how you can combine filtering, sorting, pagination, and attribute selection:
 

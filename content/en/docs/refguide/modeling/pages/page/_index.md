@@ -192,23 +192,29 @@ It has the following features which are not available in **Structure mode**:
 
 * **X-ray mode** to visualize the structure of a page
 
-#### 3.2.1 X-ray mode (beta)
+#### 3.2.1 X-Ray Mode (Beta)
 
 {{% alert color="info" %}}
-**X-ray mode** is currently in beta. The feature is enabled by default on Mac and disabled by default on Windows. However, it can be enabled or disabled in the `Preferences...` menu, in the `New features` section.
+**X-ray mode** is currently in beta. The feature is enabled by default on Mac and disabled by default on Windows. It can be enabled or disabled in **Preferences** > **New features**.
 
 When the feature is disabled, the button to toggle **X-ray mode** is not shown in the top bar and the keyboard shortcuts do not work.
 {{% /alert %}}
 
-**X-ray mode** is a way to visualize certain structures of a page while in **Design mode**. When turned on, certain widgets appear bigger and have an extra outline, making them easier to see, select and work with. **X-ray mode** affects structures such as **Container**, **Layout Grid** and **Data View** widgets. These extra effects are removed when **X-ray mode** is turned off.
+Before this feature, you could either work in **Structure** mode and see a completely detailed view of your app in progress or **Design** mode which gave you a more simplified view of the app as your end-user might see it. 
 
-**X-ray mode** can be turned on or off by using the button in the top bar. It can also be turned on or off using the keyboard shortcut `ctrl + alt + x` (on Windows) or `cmd + alt + x` (on Mac.)
+**X-ray mode** is a way to visualize certain structures of a page while in **Design mode**. It offers you a similar experience as **Design** mode, but you get more detailed information on structures and page elements. 
 
-To illustrate, here is a page as shown in **Design mode** with **X-ray mode** turned off:
+When enabled, certain widgets appear bigger with an extra outline so they are easier to work with. **X-ray mode** affects structures such as **Container**, **Layout Grid**, and **Data View** widgets. These extra effects are removed when **X-ray mode** is turned off.
+
+**X-ray mode** can be enabled and disabled by clicking the button in the top bar from **Design** mode. It can also be enabled or disabled using these shortcuts:
+* Windows: <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>X</kbd>
+* Mac: <kbd>Cmd</kbd> + <kbd>Alt</kbd> + <kbd>X</kbd>
+
+Here is a page as shown in **Design mode** with **X-ray mode** disabled:
 
 {{< figure src="/attachments/refguide/modeling/pages/page/design-mode-no-x-ray.png" alt="Design mode with x-ray mode turned off" >}}
 
-Here is the same page, with **X-ray mode** turned on:
+Here is the same page with **X-ray mode** enabled:
 
 {{< figure src="/attachments/refguide/modeling/pages/page/design-mode-x-ray.png" alt="Design mode with x-ray mode turn on" >}}
 

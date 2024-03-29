@@ -180,13 +180,13 @@ The **Feedback** tab shows the following items:
 
   You can unlink a feedback by hovering over the feedback and clicking the **Remove** ({{% icon name="remove" %}}) button. Once the feedback is not linked anymore, it appears again in the list on the **Inbox** or **Archive** tab.
 
-* **Attachments** – This contains attachments to this feedback. To upload an attachment, click **Add** ({{% icon name="add" %}}) and select the file. The following formats are supported: .*peg*, *.png*, and *.gif*. Each attachment should be maximum 5 MB in size. Once an attachment is uploaded, only your team members can view, download, and delete the attachments.
+* **Attachments** – This contains attachments to this feedback. To upload an attachment, click **Add** ({{% icon name="add" %}}) and select the file. The following formats are supported: .*peg*, *.png*, and *.gif*. Each attachment can be a maximum of 5 MB in size. Once an attachment is uploaded, only your team members can view, download, and delete the attachment.
 
-* **Communication** – This section sh++ows all the comments on this feedback from your team. You can leave comments here and attach attachments to each comment. Comments submitted to this section are only visible to your team members.
+* **Communication** – This section shows all the comments on this feedback from your team. You can leave comments here and attach attachments to each comment. Comments submitted to this section are only visible to your team members.
 
 ### 4.2 Contact Reporter Tab {#contact-reporter}
 
-The **Contact Reporter** tab allows you to read messages from the reporter and reply to them. Whenever the reporter sends a message, it will be shown in this section. Once you reply a message from the reporter, they will receive an email. When there are multiple feedback linked, the system only sends an email to the reporter of this specific feedback, not other associated feedback in the same group.
+The **Contact Reporter** tab allows you to read messages from the reporter and reply to them. Whenever the reporter sends a message, it will be shown in this section. Once you reply to a message from the reporter, they will receive an email. When  multiple feedback is linked, the system only sends an email to the reporter of this specific feedback, not other associated feedback in the same group.
 
 For more information, see the [What Happens to a User After They Submit Feedback](#what-happens-to-user) section.
 
@@ -199,14 +199,14 @@ From the [feedback details](#feedback-details) page, you can manage tags by clic
   To create a new tag, do as follows:
 
   1. Click **Add Tag**. A text box appears, with a colored circle indicating the color of the new tag.
-  2. In the text box, enter the name for the new tag.
+  2. In the text box, enter the name of the new tag.
   3. If you want to change the color of the new tag, click the colored circle and select a different color.
   4. Click **Save** ({{% icon name="checkmark-circle" %}}) to save the new tag.
 
   To edit an existing tag, do as follows:
 
   1. To change the tag name, click the name of the tag. After the name becomes editable. Edit the name in the text box, and then click outside the text box to save the change.
-  2. To change the tag color, click the colored circle, and select a different color.
+  2. To change the tag color, click the colored circle and select a different color.
 
   To delete an existing tag, do as follows:
 
@@ -214,12 +214,19 @@ From the [feedback details](#feedback-details) page, you can manage tags by clic
   2. Click **Delete**. The **Confirmation** dialog box opens.
   3. Click **Delete Tag**.
 
-## 5 Notifications {#notifications}
+## 5 Receiving Notifications {#notifications}
 
-You can receive a notification whenever new feedback lands in the inbox, or when a reporter replies on their feedback. If you want to receive these notifications you need to watch the project in the **developer portal**, then enable the feedback notifications in the setting page. You can find the settings by clicking the gear icon on the feedback overview page.
+You can receive a notification whenever new feedback lands in the inbox, or when a reporter replies to their feedback. If you want to receive these notifications, do as follows:
+
+1. Watch the app on the [Settings](/developerportal/collaborate/general-settings/) page after you open your app in the Developer Portal.
+2. Go to Feedback again.
+3.  Enable the feedback notifications as follows:
+    1. In Feedback, click the ({{% icon name="cog" %}}) icon on the upper-right corner of the page.
+    2. Turn on the toggle for the notifications.
+
 
 ### 5.1 Watching individual feedback {#watching-feedback}
 
 {{< figure src="/attachments/developerportal/app-insights/feedback/watching-feedback.png" class="image-border" alt="watching feedback" >}}
 
-It is possible to watch individual feedback. This will allow you to receive notifications only when the reporter of that feedback leaves a reply. From either the detail page or the sidepanel, you can enable watching the feedback. You will automatically watch feedback whenever you respond to a reporter or leave a comment in the team comment section.
+It is possible to watch individual feedback. This allows you to receive notifications only when the reporter of that feedback leaves a reply. From either the detail page or the sidepanel, you can enable watching the feedback. You will automatically watch feedback whenever you respond to a reporter or leave a comment in the team comment section.

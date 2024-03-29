@@ -192,7 +192,7 @@ It has the following features which are not available in **Structure mode**:
 
 * **X-ray mode** to visualize the structure of a page
 
-#### 3.2.1 X-Ray Mode (Beta)
+#### 3.2.1 X-Ray Mode (Beta) {#x-ray-mode}
 
 {{% alert color="info" %}}
 **X-ray mode** is currently in beta. The feature is enabled by default on Mac and disabled by default on Windows. It can be enabled or disabled in **Preferences** > **New features**.

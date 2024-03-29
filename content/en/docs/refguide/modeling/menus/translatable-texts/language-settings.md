@@ -96,6 +96,7 @@ The list below is provided to enable you to quickly evaluate if Mendix supports 
 | Arabic | United Arab Emirates | ar_AE | 9.0.5 |
 | Arabic | Yemen | ar_YE | 9.0.5 |
 | Armenian | Armenia | hy_AM | 9.2.0 |
+| Azerbaijani | Azerbaijan | az_AZ | 10.10.0 |
 | Belarusian | Belarus | be_BY | 9.0.5 |
 | Bengali | Bangladesh | bn_BD | 9.3.0 |
 | Bengali | India | bn_IN | 9.3.0 |
@@ -157,6 +158,7 @@ The list below is provided to enable you to quickly evaluate if Mendix supports 
 | Macedonian | Macedonia | mk_MK | 9.0.5 |
 | Malay | Malaysia | ms_MY | 9.0.5 |
 | Maltese | Malta | mt_MT | 9.0.5 |
+| Marathi | India | mr_IN | 10.10.0 |
 | Mongolian | Mongolia | mn_MN | 9.2.0 |
 | Myanmar (Burmese) | Myanmar | my_MM | 9.0.5 |
 | Nepali | Nepal | ne_NP | 9.2.0 |

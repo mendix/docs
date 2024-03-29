@@ -48,8 +48,8 @@ The elements of this category are described in the table below:
 
 | Graphic                                                     | Element                           | Description                                                  |
 | ----------------------------------------------------------- | --------------------------------- | ------------------------------------------------------------ |
-| {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/call-microflow.png" alt="Call Microflow" >}} | [Call microflow](/refguide/call-microflow/) | Calls a selected microflow. |
-| {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/call-workflow.png" alt="Call Workflow" >}} | [Call workflow](/refguide/call-workflow/) | Calls a selected workflow. |
+| {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/user-task.png" width="50px" alt="User Task" >}} | [User task](/refguide/user-task/) | A central element in a workflow that allows you to assign a task to a certain user or a group of users using filters or microflows. |
+| {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/multi-user-task.png" width="50px" alt="Multi-user task" >}} | [Multi-user task](/refguide/multi-user-task/) | A central element in a workflow that allows you assign a task to multiple users. Each user performs the same task. The outcomes from all individual tasks will be aggregated into a single multi-user task outcome based on the [completion condition](/refguide/multi-user-task/#completion-condition).  |
 
 ## 5 Events {#events}
 

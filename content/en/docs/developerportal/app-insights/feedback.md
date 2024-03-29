@@ -132,7 +132,7 @@ On the [Inbox](#inbox) and [Archive](#archive) tabs, you can open feedback by cl
 The **Feedback** tab shows the following items: 
 
 * Buttons ({{% icon name="view-off" %}} {{% icon name="hyperlink" %}} {{% icon name="three-dots-menu-horizontal" %}}) on the upper-right corner
-    * **Watch feedback** {{% icon name="view-off" %}} - Clicking this button toggles receiving [notifications](#notifications) for this feedback.
+    * {{% icon name="view-off" %}} or {{% icon name="view" %}} – Clicking this button allows you to receive [notifications](#notifications) or stop receiving notifications for this feedback. You automatically start watching feedback whenever you respond to a reporter or leave a comment for your team in the **Communications** section.
     * **Copy Link** ({{% icon name="hyperlink" %}}) – Clicking this button copies the URL to the feedback. You can send the URL to other people.
     * **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) – Clicking the button opens a menu with the following items:
         * **Move** – Clicking this button moves the feedback to any other app of which you are a member. Whenever you move feedback, you will also move all linked feedback. If you only want to move one feedback, you need to unlink the feedback from the group first.
@@ -216,7 +216,7 @@ From the [feedback details](#feedback-details) page, you can manage tags by clic
 
 ## 5 Receiving Notifications {#notifications}
 
-You can receive a notification whenever new feedback lands in the inbox, or when a reporter replies to their feedback. If you want to receive these notifications, do as follows:
+You can receive a notification whenever new feedback lands in the inbox, or when a reporter replies to their feedback. To receive these notifications, do as follows:
 
 1. Watch the app on the [Settings](/developerportal/collaborate/general-settings/) page after you open your app in the Developer Portal.
 2. Go to Feedback again.
@@ -224,9 +224,7 @@ You can receive a notification whenever new feedback lands in the inbox, or when
     1. In Feedback, click the ({{% icon name="cog" %}}) icon on the upper-right corner of the page.
     2. Turn on the toggle for the notifications.
 
+### 5.1 Receiving Notifications for Individual Feedback
 
-### 5.1 Watching individual feedback {#watching-feedback}
+You can also just receive notifications for individual feedback. You can set this up by clicking the {{% icon name="view-off" %}} icon on the upper-right corner of the [Feedback](#feedback) tab when you open the feedback. You automatically start watching feedback whenever you respond to a reporter or leave a comment for your team in the **Communications** section.
 
-{{< figure src="/attachments/developerportal/app-insights/feedback/watching-feedback.png" class="image-border" alt="watching feedback" >}}
-
-It is possible to watch individual feedback. This allows you to receive notifications only when the reporter of that feedback leaves a reply. From either the detail page or the sidepanel, you can enable watching the feedback. You will automatically watch feedback whenever you respond to a reporter or leave a comment in the team comment section.

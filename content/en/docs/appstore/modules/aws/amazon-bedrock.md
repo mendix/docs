@@ -895,7 +895,7 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-- | `ENUM_Region (enumeration)`, `Credentials (object)`, `InvokeModelRequest (object)`, `ResponseHandlerMicroflow (microflow)`, `ErrorHandlerMicroflow (microflow)` | `none` |
+* | `ENUM_Region (enumeration)`, `Credentials (object)`, `InvokeModelRequest (object)`, `ResponseHandlerMicroflow (microflow)`, `ErrorHandlerMicroflow (microflow)` | `none` |
 
 ##### 4.2.8.1 Handling the asynchronous InvokeAgentResponse
 
@@ -917,7 +917,6 @@ The open source [EZ Websocket Module](https://marketplace.mendix.com/link/compon
 
 The platform-supported [Pusher Module](https://marketplace.mendix.com/link/component/107957) is built around the [Pusher Channels](https://pusher.com/channels/) offering. This module requires a Pusher account. Pusher Channels is a paid service, but it also has a [Free Sandbox Plan](https://pusher.com/channels/pricing/). This module allows you to trigger a Notify event on the server to immediately trigger an action in the client application.
 
-
 ##### 4.2.8.2 Working with action groups and lambda functions
 
 Without action groups, the agent will still access associated knowledge bases, but will not be able to perform tasks that make agents an extension of simply invoking a model. Action groups are what make agents so powerful.
@@ -925,7 +924,6 @@ Without action groups, the agent will still access associated knowledge bases, b
 For example, it might be beneficial for the agent to dynamically retrieve more information via a REST endpoint or other source, rather than storing all possible information in a knowledge base. To achieve this, a lambda function must first be specified for the REST request and then associated with the agent as part of an action group. 
 
 If you would like to add lambda functions to your agent, please refer to the [AWS documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-lambda.html).
-
 
 ## 5 Troubleshooting
 
@@ -1018,6 +1016,7 @@ The sync can take up to a few minutes and the calls to your knowledge base durin
 AWS has introduced safeguards for Bedrock (currently in preview). When available, there will be two features: Guardrails and Watermark detection. 
 
 The guardrail feature will allow you to: 
+
 * Filter harmful content with configurable thresholds based on your responsible AI policies.
 * Determine how to handle personally identifiable information (PII).
 * Deny topics.

@@ -38,7 +38,6 @@ Each time, you can only export initiatives from one portfolio. It is not possibl
    
    The **Export Initiatives** dialog box opens.
 
-
 5. To export all initiatives of the portfolio, click **Export All**. To only export the selection of your initiatives, click **Export Selection**.
 
 The initiatives are exported to an Excel file.

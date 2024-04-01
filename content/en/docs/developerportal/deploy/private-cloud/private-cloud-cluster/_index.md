@@ -186,7 +186,6 @@ If an app's MDA was built using a newer Java version, Mendix Operator 2.15.0 (an
 
 {{% /alert %}}
 
-
 ### 6.2 Endpoint (network) Configuration {#advanced-network-settings}
 
 The OperatorConfiguration contains the following user-editable options for network configuration:

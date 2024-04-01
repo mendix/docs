@@ -207,6 +207,7 @@ Before this feature, you could either work in **Structure** mode and see a compl
 When enabled, certain widgets appear bigger with an extra outline so they are easier to work with. **X-ray mode** affects structures such as **Container**, **Layout Grid**, and **Data View** widgets. These extra effects are removed when **X-ray mode** is turned off.
 
 **X-ray mode** can be enabled and disabled by clicking the button in the top bar from **Design** mode. It can also be enabled or disabled using these shortcuts:
+
 * Windows: <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>X</kbd>
 * Mac: <kbd>Cmd</kbd> + <kbd>Alt</kbd> + <kbd>X</kbd>
 

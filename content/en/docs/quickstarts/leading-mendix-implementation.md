@@ -130,8 +130,8 @@ Mendix is the platform that helps you turn ideas into outcomes. It contains all 
 
 Your journey to innovation will go through three major stages: **Start**, **Structure** and **Scale**. You are now in the **Start** stage, where the goal is to lay the foundations for your innovation factory. In Start, you want to develop applications that realize value quickly. The reason for this is two-fold:
 
-1.  You’ll be spending a lot of time building a team and putting the necessary prerequisites in place in terms of infrastructure and process. Because of that... 
-2.  You want quick wins. Quick wins are important because you’ll use these to prove the value of your new approach. Celebrating your first success will help you gain broader support around the company.
+1. You’ll be spending a lot of time building a team and putting the necessary prerequisites in place in terms of infrastructure and process. Because of that... 
+2. You want quick wins. Quick wins are important because you’ll use these to prove the value of your new approach. Celebrating your first success will help you gain broader support around the company.
 
 If the Start stage is about establishing and proving the benefits of rapid application development, then **Structure** is about building out predictability and continuity. Structure is about growing from your first set of apps to a portfolio with a diverse array of apps addressing multiple use cases, expanding your first team into multiple teams, and expanding your developer center. 
 
@@ -406,31 +406,30 @@ Now that you have your goals and challenges identified, consider milestones for 
 Here are some ideas:
 
 * Portfolio 
-  * First app identified 
-  * App value definition completed 
-  * First app live 
-  * Portfolio defined 
+    * First app identified 
+    * App value definition completed 
+    * First app live 
+    * Portfolio defined 
 
 * People 
-  * First team trained 
-  * Training and enablement plan defined 
-  * Team growth strategy defined 
+    * First team trained 
+    * Training and enablement plan defined 
+    * Team growth strategy defined 
 
 * Process 
-  * Governance strategy defined 
-  * Mendix support introduced 
-  * Stage retrospective executed 
+    * Governance strategy defined 
+    * Mendix support introduced 
+    * Stage retrospective executed 
 
 * Platform 
-  * Deployment strategy defined 
-  * Data and integration strategy defined 
-  * Architecture strategy defined 
+    * Deployment strategy defined 
+    * Data and integration strategy defined 
+    * Architecture strategy defined 
 
 * Promotion 
-  * Host a go-live celebration for first application 
-  * Gather relevant stakeholders to show progress 
-  * Share the success at company meeting or in newsletters
-
+    * Host a go-live celebration for first application 
+    * Gather relevant stakeholders to show progress 
+    * Share the success at company meeting or in newsletters
 
 The final step of your getting started plan involves capturing your 5 P milestones and building a timeline. Below are some examples that we use frequently with Mendix customers that you can take and make your own: Add details, and overlay dates appropriate for your organization, etc. Work independently or work with your customer success manager to think through what this might look like for you.
 
@@ -567,56 +566,43 @@ Even though you can build almost anything with Mendix, especially with the exten
 
 By thoroughly defining the application’s purpose and value, you provide a clear roadmap for development, aligning the project with organizational goals, and setting the stage for successful implementation and adoption. What will help you do that is trying to think along these lines:
 
-1.  **Business value proposition:**
+1. **Business value proposition:**
     * Clearly articulate the value proposition of the application. Ask yourself: What problem does this application solve? What specific business process or pain point does it address? How does it contribute to the organization's success? What benefits will it bring to the business, such as cost savings, revenue generation, or improved customer satisfaction?
-
 
 2. **User experience and satisfaction:**
 
    * Identify the target audience or users who will benefit from the application. Understanding the end-users helps in tailoring the application to their needs.
 
-
    * Consider the user experience as a critical aspect of the application's value. An intuitive and user-friendly interface enhances user satisfaction and adoption.
 
-
    * Value is often derived not just from functionalities but also from how easily and effectively users can accomplish their tasks.
-
 
 3. **Efficiency and productivity:**
 
    * Assess how the application improves operational efficiency and productivity. Identify areas where manual processes can be automated, reducing errors and saving time.
 
-
    * Highlight any potential cost savings or resource optimization achieved through the application.
-
 
 4. **Innovation and competitive advantage:**
 
    * If applicable, emphasize how the application introduces innovative solutions or features that set your organization apart from competitors.
 
-
    * Consider how the application positions the organization for future growth and adaptation to changing market conditions.
 
-
-5.  **Adaptability and scalability:**
+5. **Adaptability and scalability:**
     * Highlight the application's adaptability to changing business needs and its scalability to accommodate future growth. A valuable application is one that can evolve with the organization.
-
 
 6. **Measurable objectives:**
 
    * Establish measurable objectives to gauge the success of the application. Define key performance indicators (KPIs) that will help evaluate its impact on business processes, efficiency, or other relevant metrics.
 
-
    * Measurable objectives provide a basis for assessing the application's effectiveness and return on investment.
-
 
 7. **Alignment with organizational goals:**
 
    * Confirm that the application purpose aligns with the overall goals and vision of the organization. It should contribute positively to the strategic direction of the company.
 
-
    * Understand how the application fits into the larger ecosystem of organizational processes and systems.
-
 
 You can also try filling in a template such as this one (you can find this template attached in the Resources box at the top of this page):
 
@@ -683,10 +669,9 @@ With Mendix, you have multiple options to choose from for the development of you
 
       Choosing Expert Services is the right option if you plan on building out your internal team and need enablement and support alongside application development.  Expert Services can help prove the value of the Mendix internally while simultaneously coaching your team on how to continue with the application(s).
 
-4.  **Hybrid**
+4. **Hybrid**
     a.  You can simultaneously grow your in-house team and supplement with a Mendix partner and/or our Expert Services team.
     
-
 Regardless of which option you choose, we always recommend that at least one person internally has been trained on Mendix and is technically capable of directing the project.  Outsourcing every technical role creates a siloed development team that does not truly understand your business needs.
 
 ### 3.8 Summary 
@@ -704,6 +689,7 @@ You’ve done a great job so far and learned a lot along the way. By now you sho
 * Identified the most suitable deployment option for this first application.
 
 And 
+
 * Decided who will help you build this app.
 
 * Established the necessary components for your Program Kick-Off meeting with business & IT leadership
@@ -756,26 +742,26 @@ Getting all the required knowledge in each team might be difficult while keeping
 **Core Team:**
 
 * **Product Owner (PO):** responsible for defining the direction of a project. They have a clear understanding of what the business and users need from the product being developed and the value to be delivered. They translate these needs to the Scrum team. The PO:
-  * Is a liaison between the business and the development team to build, prioritize, and manage the backlog to drive production forward.
+    * Is a liaison between the business and the development team to build, prioritize, and manage the backlog to drive production forward.
 
-  * Ensures the product being developed delivers the required value for the business and users. 
+    * Ensures the product being developed delivers the required value for the business and users. 
 
-  * Accepts or rejects the completed work 
+    * Accepts or rejects the completed work 
     Ideal POs have these five key [skills & characteristics.](https://www.mendix.com/blog/5-important-product-owner-skills-for-rapid-app-dev/)
 
 * **Scrum Master (SM):** ensures that the team follows Agile best practices and ioversees addressing and removing any productivity blockers that may come up. Essentially, the Scrum master is the authority in Agile and Scrum to keep the team working together efficiently and effectively. SMs:
-  * Should be supportive leaders. 
+    * Should be supportive leaders. 
 
-  * Help POs define the product’s value, plan work, and manage the backlog. 
+    * Help POs define the product’s value, plan work, and manage the backlog. 
 
-  * Help developers self-organize.
+    * Help developers self-organize.
 
 * **Development Team:** consists of the people who actually build the app. They are responsible for turning the requirements into functionality, based on the input provided by the Product Owner. The development team:
-  * Is comprised of one or more people with the skills needed to build the product as envisioned by the PO.
+    * Is comprised of one or more people with the skills needed to build the product as envisioned by the PO.
 
-  * May be comprised of non-developers and traditional developers alike: architects, writers, technical BAs, designers, and other specialized roles can all be part of the development team. 
+    * May be comprised of non-developers and traditional developers alike: architects, writers, technical BAs, designers, and other specialized roles can all be part of the development team. 
 
-  * Work with the SM in the key Scrum activities of sprint planning, sprint review, retrospectives and daily standups to keep their assigned tasks on track with high-quality code during each sprint, while working towards continuous improvement as a team.
+    * Work with the SM in the key Scrum activities of sprint planning, sprint review, retrospectives and daily standups to keep their assigned tasks on track with high-quality code during each sprint, while working towards continuous improvement as a team.
 
 **Accelerators:**
 
@@ -858,15 +844,15 @@ A sample agenda of a successful program kickoff can include:
 * A round of introductions 
 * Why Mendix was chosen 
 * Business and IT alignment on:
-  * Organizational challenges and needs Mendix is solving (this is where your low-code vision will be very important — you always need to be able to tie Mendix work back to the larger business needs)
+    * Organizational challenges and needs Mendix is solving (this is where your low-code vision will be very important — you always need to be able to tie Mendix work back to the larger business needs)
 
-  * An overview of Mendix vision and strategy for your organization 
-    * Goals and success at both the organizational and project levels 
-    * Important milestones 
+    * An overview of Mendix vision and strategy for your organization 
+        * Goals and success at both the organizational and project levels 
+        * Important milestones 
 
-    * Value measurement and impact 
+        * Value measurement and impact 
 
-  * Identify initial concerns or challenges and build mitigation plans(s)
+    * Identify initial concerns or challenges and build mitigation plans(s)
 
 * Establish a cadence for this group to meet going forward for a business review - quarterly, every other month, monthly, etc.
 
@@ -971,7 +957,7 @@ Optionally, you may set up access rules in your IDP to control which of your emp
 
 If you don’t enable SSO, you will want to specify if the user passwords expire or not. If you do not want the passwords to expire, toggle **Passwords of company members never expire** to **On**.  
 
-###  5.3 Summary
+### 5.3 Summary
 
 Now that you know how Mendix can be tailored to your own governance needs, you are ready to get your first project started! You will find all the useful information to do this in the following section.
 
@@ -1230,16 +1216,14 @@ Yes, you absolutely need to celebrate. Here are some tips to maximize the impact
 * Captivate your audience by presenting the astonishing results of your project. Have the business show the demo.
 
 * Here’s who you can consider inviting to celebrate with you: 
-  * Project team 
-  * Business stakeholders 
+    * Project team 
+    * Business stakeholders 
 
-  * Stakeholders from other lines of business 
-  * IT leaders 
-  * Mendix Expert Services or the Partner that helped guide the team through the project 
-
+    * Stakeholders from other lines of business 
+    * IT leaders 
+    * Mendix Expert Services or the Partner that helped guide the team through the project 
 
 But it doesn’t stop there. You need to continue talking about your first success. This part might feel like shameless promotion, and it might not come naturally to you or your team, but trust us, it’s vital and it works. Some of our most successful customers went on to share their success story in the form of a blog for your company website or intranet, a video, a podcast or at the very least a value one-pager that can be shared across your organization. Trust us, it’s worth it.
-
 
 ### 7.5 After the Launch
 
@@ -1247,11 +1231,11 @@ But it doesn’t stop there. You need to continue talking about your first succe
 
 To achieve this milestone, it’s first important to establish the goals of a retrospective. The retrospective should look back on the project and review successes and lessons learned. 
 
-1.  Did the project achieve its business goal? 
+1. Did the project achieve its business goal? 
 
-2.  Did you have the right people on the team? 
+2. Did you have the right people on the team? 
 
-3.  How well was the business engaged in the process? 
+3. How well was the business engaged in the process? 
 
 Embrace all feedback, whether it’s perception or reality. Again, let the business know they have a voice and that their input is vital to improving future projects. Seek their advice on how to develop a more structured rapid application development approach that further enhances engagement and collaboration with other business units.
 

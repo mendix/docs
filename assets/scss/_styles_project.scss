@@ -764,14 +764,9 @@ nav.foldable-nav {
 //_badge.scss
 
 .badge-warning {
-    color: $white;
-    background-color: $warning-8;
-  }
-
-.badge-pill {
-    padding-right: 0.6em;
-    padding-left: 0.6em;
-    border-radius: 10rem;
+    color: inherit;
+    border: solid $warning-5;
+    background-color: $warning-2;
   }
 
 // Swagger styling

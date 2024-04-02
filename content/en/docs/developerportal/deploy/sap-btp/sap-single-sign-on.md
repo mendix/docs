@@ -29,6 +29,8 @@ Your password can be different in your Mendix credentials and your SAP credentia
 
 {{% /alert %}}
 
+{{% todo %}}Double-check the wording for the sentence in the warning above, because the username in Login page is called Email Address. Maybe worth checking what"username" is called now for SAP authentication. {{% /todo %}}
+
 ### 2.1 Signing in Using Mendix Credentials
 
 Enter your **Email Address** and Mendix **Password**. Click **Log in**. This will authenticate you with the credentials held by Mendix.

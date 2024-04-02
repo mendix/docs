@@ -769,6 +769,11 @@ nav.foldable-nav {
     background-color: $warning-2;
   }
 
+.badge-beta {
+    color: inherit;
+    background-color: $gray-400;
+}
+
 // Swagger styling
 
 .swagger-ui .info .title,

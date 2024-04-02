@@ -57,7 +57,7 @@
   <label for="{{ $mid }}-check"><a href="{{ $manualLink }}"{{ if ne $s.LinkTitle $manualLinkTitle }} title="{{ $manualLinkTitle }}"{{ end }}{{ with $s.Params.manualLinkTarget }} target="{{ . }}"{{ if eq . "_blank" }} rel="noopener"{{ end }}{{ end }} class="align-left pl-0 {{ if $active}} active{{ end }} td-sidebar-link {{ if $s.Params.old_content }}text-muted{{ end }}{{ if $s.IsPage }} td-sidebar-link__page{{ else }} td-sidebar-link__section{{ end }}{{ if $treeRoot }} tree-root{{ end }}" id="{{ $mid }}">
     {{ with $s.Params.Icon}}<i class="{{ . }}"></i>{{ end }}
     <span class="{{ if $active }}td-sidebar-nav-active-item{{ end }}">
-      {{ $s.LinkTitle }}
+      <span class="link-title">{{ $s.LinkTitle }}</span>
       {{ if $s.Draft }}<text class="badge badge-draft">DRAFT</text>{{ end }}
       {{ if $s.Params.beta }}<text class="badge badge-beta">BETA</text>{{ end }}
       {{ if $s.Params.lts }}<text class="badge badge-lts">LTS</text>{{ end }}
@@ -69,7 +69,7 @@
   <a href="{{ $manualLink }}"{{ if ne $s.LinkTitle $manualLinkTitle }} title="{{ $manualLinkTitle }}"{{ end }}{{ with $s.Params.manualLinkTarget }} target="{{ . }}"{{ if eq . "_blank" }} rel="noopener"{{ end }}{{ end }} class="align-left pl-0{{ if $active}} active{{ end }} td-sidebar-link {{ if $s.Params.old_content }}text-muted{{ end }}{{ if $s.IsPage }} td-sidebar-link__page{{ else }} td-sidebar-link__section{{ end }}{{ if $treeRoot }} tree-root{{ end }}" id="{{ $mid }}">
     {{ with $s.Params.Icon}}<i class="{{ . }}"></i>{{ end }}
     <span class="{{ if $active }}td-sidebar-nav-active-item{{ end }}">
-      {{ $s.LinkTitle }}
+      <span class="link-title">{{ $s.LinkTitle }}</span>
       {{ if $s.Draft }}<text class="badge badge-draft">DRAFT</text>{{ end }}
       {{ if $s.Params.beta }}<text class="badge badge-beta">BETA</text>{{ end }}
       {{ if $s.Params.lts }}<text class="badge badge-lts">LTS</text>{{ end }}

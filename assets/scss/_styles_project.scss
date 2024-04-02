@@ -577,7 +577,7 @@ nav.foldable-nav {
             color: inherit;//$gray-700;
             font-weight: inherit;//$font-weight-light;`
         }
-        :hover {
+        .link-title:hover {
             text-decoration: underline;
         }
     }

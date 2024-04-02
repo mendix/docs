@@ -13,7 +13,7 @@ aliases:
 
 Mendix has single sign-on for SAP users (for some SAP regions). This means that you are authenticated to Mendix using SAP credentials.
 
-One implication of this is that you must use the same username (in the form of an email address) for both SAP and Mendix.
+One implication of this is that you must use the same login email address for both SAP and Mendix.
 
 ## 2 Signing in to Mendix Using SSO
 
@@ -23,13 +23,11 @@ When you sign in to Mendix Studio Pro, you have the option to use SAP authentica
 
 {{% alert color="warning" %}}
 
-For SAP authentication, your SAP and Mendix username must be the same.
+For SAP authentication, your SAP and Mendix email address must be the same.
 
 Your password can be different in your Mendix credentials and your SAP credentials.
 
 {{% /alert %}}
-
-{{% todo %}}Double-check the wording for the sentence in the warning above, because the username in Login page is called Email Address. Maybe worth checking what"username" is called now for SAP authentication. {{% /todo %}}
 
 ### 2.1 Signing in Using Mendix Credentials
 
@@ -67,15 +65,15 @@ Enter the correct credentials and click **SIGN IN** to continue the creation of 
 
 {{< figure src="/attachments/developerportal/deploy/sap-single-sign-on/go-back.png" >}}
 
-This error occurs when you work with SAP environments from within the Mendix Developer Portal. As described on the error page, it occurs when you use different usernames for signing in to Mendix platform and SAP region which you are working on.
+This error occurs when you work with SAP environments from within the Mendix Developer Portal. As described on the error page, it occurs when you use different email addresses for signing in to Mendix platform and SAP region which you are working on.
 
 Click **Go back to where you originally came from**, and you will see another error message. Click **OK** to clear it.
 
 {{< figure src="/attachments/developerportal/deploy/sap-single-sign-on/server-error.png" >}}
 
-There are three possible solutions, depending on why the usernames are different. Some of these can be changed within Mendix itself, but you may also need to make changes directly on the SAP site.
+There are three possible solutions, depending on why the email addresses are different. Some of these can be changed within Mendix itself, but you may also need to make changes directly on the SAP site.
 
-### 4.1 Mendix username is correct but SAP username is incorrect
+### 4.1 Mendix Email Address Is Correct But SAP Email Address Is Incorrect
 
 In this case you cannot resolve the issue from within Mendix. You will continue to get the error each time you try to link your accounts.
 
@@ -88,17 +86,17 @@ For example:
 
 Choose the URL for the correct region.
 
-Select the down arrow next to your username, and this will give the option to **Sign Out**.
+Select the down arrow next to your email address, and this will give the option to **Sign Out**.
 
 {{< figure src="/attachments/developerportal/deploy/sap-single-sign-on/where-to.png" >}}
 
-Click **Sign Out** and you can then return to Mendix and sign in again with an account which has the same email address as the username you use for Mendix.
+Click **Sign Out** and you can then return to Mendix and sign in again with an account which has the same email address as the email address you use for Mendix.
 
-### 4.2. You are using the wrong region
+### 4.2 You Are Using the Wrong Region
 
 You may get this error if you have chosen the wrong region to deploy your app. Check that you have selected the right region. You can be signed in to several SAP regions and if you use different email addresses for these then this error can occur.
 
-### 4.3 You are using the wrong Mendix account
+### 4.3 You Are Using the Wrong Mendix Account
 
 If you have more than one account with Mendix, check that you have created your app using the correct Mendix account.
 

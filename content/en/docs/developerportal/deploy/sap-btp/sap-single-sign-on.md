@@ -31,7 +31,7 @@ Your password can be different in your Mendix credentials and your SAP credentia
 
 ### 2.1 Signing in Using Mendix Credentials
 
-Enter your **Username** and Mendix **Password**. Click **Sign in**. This will authenticate you with the credentials held by Mendix.
+Enter your **Email Address** and Mendix **Password**. Click **Log in**. This will authenticate you with the credentials held by Mendix.
 
 ### 2.2 Signing in Using SAP Credentials
 

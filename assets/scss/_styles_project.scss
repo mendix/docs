@@ -763,23 +763,26 @@ nav.foldable-nav {
 
 //_badge.scss
 
+.badge-pill {
+    border-radius: 4px;
+    padding: 4px 4px 3px 4px;
+    margin-left: 2px;
+}
+
 .badge-draft {
-    color: $white;
     background-color: $warning-9;
   }
 
 .badge-beta {
-    color: inherit;
+    color: $gray-900;
     background-color: $gray-500;
 }
 
 .badge-lts {
-    color: $white;
     background-color: $success-9;
 }
 
 .badge-mts {
-    color: $white;
     background-color: $info-8;
 }
 

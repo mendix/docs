@@ -763,15 +763,24 @@ nav.foldable-nav {
 
 //_badge.scss
 
-.badge-warning {
-    color: inherit;
-    border: solid $warning-5;
-    background-color: $warning-2;
+.badge-draft {
+    color: $white;
+    background-color: $warning-9;
   }
 
 .badge-beta {
     color: inherit;
-    background-color: $gray-400;
+    background-color: $gray-500;
+}
+
+.badge-lts {
+    color: $white;
+    background-color: $success-9;
+}
+
+.badge-mts {
+    color: $white;
+    background-color: $info-8;
 }
 
 // Swagger styling

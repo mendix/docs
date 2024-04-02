@@ -130,11 +130,13 @@ These are the nanoflow actions in the native clipboard category:
 
 These are the nanoflow actions in the native network category:
 
-* **Is cellular connection** – checks if the device is connected to the cellular network
-* **Is connected** – checks if the device is connected to the internet
-     * This JS action will always return **true** if it is connected to a WiFi network, even if the network does not have access to the internet
-     * If the bullet above is an issue, we recommend you use an action that only returns **true** if the app is connected to a working server: the **IsConnectedToServer** JS action from the [Nanoflow Commons Module](https://marketplace.mendix.com/link/component/109515) 
-* **Is wifi connection** – checks if the device is connected to Wifi
+* **Is cellular connection** – checks if the device is connected to a cellular network
+* **Is connected** – checks if the device is connected to a cellular network or a WiFi network
+* **Is wifi connection** – checks if the device is connected to a Wifi network
+
+{{% alert color="info" %}}
+These methods only check if the device is connected, not if Internet access is provided. If you want to check if the device is connected to the Internet, please use the **IsConnectedToServer** JS action from the [Nanoflow Commons Module](https://marketplace.mendix.com/link/component/109515)
+{{% /alert %}}
 
 ### 3.7 Native Mobile Category
 

@@ -58,7 +58,7 @@ Mendix Studio Pro needs to be installed on your computer before you can start bu
 
 ## 4 Troubleshooting {#troubleshooting}
 
-### 4.1 Installing Prerequisites Separately
+### 4.1 Installing Prerequisites Separately {#prerequisites}
 
 Sometimes you can run into problems when installing Studio Pro. One work-around is to restart your system and install the prerequisites separately if they are not installed yet. 
 
@@ -70,9 +70,11 @@ The prerequisites are the following:
 * [Mendix Native Mobile Builder one-click Installer](https://appdev-mx-cdn.s3.amazonaws.com/native-builders/latest.exe)
 * [Git for Windows (x64)](https://git-scm.com/download/win) using the following versions:
 
-    | 10.0.0 - 10.1.0 | 10.2.0 - onwards | 
-    | --- | --- |
-    | [2.37.1](https://github.com/git-for-windows/git/releases/tag/v2.37.1.windows.1) | [2.41.0](https://github.com/git-for-windows/git/releases/tag/v2.41.0.windows.3) |
+	These are the versions of Git that Studio Pro installer installs if the version installed on the system is lower.  
+	
+    | 10.0.0 - 10.1.0 | 10.2.0 - 10.9 | 10.10 - onwards |
+    | --- | --- | --- |
+    | [2.37.1](https://github.com/git-for-windows/git/releases/tag/v2.37.1.windows.1) | [2.41.0](https://github.com/git-for-windows/git/releases/tag/v2.41.0.windows.3) | [2.43.0](https://github.com/git-for-windows/git/releases/tag/v2.43.0.windows.1)
     
 * [Microsoft Edge WebView2 Evergreen Runtime (x64 or ARM64) (Evergreen Standalone Installer version)](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)
 * [Gradle 7.6 or above](https://gradle.org/install/#manually) with Gradle extracted to the parent directory of the folder where Studio Pro is installed (usually `C:\Program Files\Mendix`) instead of `C:\Gradle`.

@@ -58,7 +58,7 @@
     {{ with $s.Params.Icon}}<i class="{{ . }}"></i>{{ end }}
     <span class="{{ if $active }}td-sidebar-nav-active-item{{ end }}">
       {{ $s.LinkTitle }}
-      {{ if $s.Draft }}<text class="badge badge-warning">DRAFT</text>{{ end }}
+      {{ if $s.Draft }}<text class="badge badge-draft">DRAFT</text>{{ end }}
       {{ if $s.Params.beta }}<text class="badge badge-beta">BETA</text>{{ end }}
       {{ if $s.Params.lts }}<text class="badge badge-lts">LTS</text>{{ end }}
       {{ if $s.Params.mts }}<text class="badge badge-mts">MTS</text>{{ end }}

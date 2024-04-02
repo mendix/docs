@@ -61,7 +61,7 @@ All the details of an initiative are exported, except the data of the following 
 
 2. On the **Initiatives Overview** page, click the {{% icon name="office-sheet" %}} icon on the upper-right corner and then select **Import Initiatives** in a drop-down menu. The **Import Initiatives** dialog box opens.
 
-4. To prevent any errors, download the Excel file template from the **Import Initiatives** dialog box, and use it as the template to import your initiatives. When you prepare your Excel file, make sure it meets the following requirements:
+3. To prevent any errors, download the Excel file template from the **Import Initiatives** dialog box, and use it as the template to import your initiatives. When you prepare your Excel file, make sure it meets the following requirements:
 
    * There should be maximum 500 rows in the Excel file.
 
@@ -92,8 +92,8 @@ All the details of an initiative are exported, except the data of the following 
    | **WSJFRiskReduction** | {{< icon name="remove-circle-filled" color="red" >}} | String                       | The selectable options can be found in the [WSJF](/developerportal/portfolio-management/prioritization-models/#wsjf) section in *Prioritization Models*. |                                |`Medium`|
    | **WSJFJobSize**     | {{< icon name="remove-circle-filled" color="red" >}} | String                       | The selectable options can be found in the [WSJF](/developerportal/portfolio-management/prioritization-models/#wsjf) section in *Prioritization Models*. |                                    |`XS`|
 
-6. When your Excel file is ready to be imported, drag it to the **Import Initiatives** dialog box, or click **Upload** and select the file.
+4. When your Excel file is ready to be imported, drag it to the **Import Initiatives** dialog box, or click **Upload** and select the file.
 
-7. Click **Import**.
+5. Click **Import**.
 
 All the initiatives in the Excel file are imported successfully. You can see the initiatives on the **Initiatives Overview** page. 

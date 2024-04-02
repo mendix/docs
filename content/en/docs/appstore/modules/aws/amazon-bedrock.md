@@ -148,7 +148,7 @@ To invoke a Bedrock agent for your Mendix app, do the following steps:
     * Set 'EndSession' to specify whether or not you want to have the option of continuing the conversation in another request.
   
 5. Enter the desired region as a value of the **AWSAuthentication.ENUM_Region** type.
-6. Select a **Credentials** object. You can put it in scope with the **AWSAuthenication.GetStaticCredentials** or the **AWSAuthenication.GetTemporaryCredentials** microflow.
+6. Select a **Credentials** object. You can put it in scope with the **AWSAuthentication.GetStaticCredentials** or the **AWSAuthentication.GetTemporaryCredentials** microflow.
 7. Select a microflow that takes an **AmazonBedrockConnector.InvokeAgentResponse** object as an input and handles that response.
     This is necessary because InvokeAgent is an asynchronous operation which means that it will not necessarily finish when the process that it was invoked from finishes. By giving the operation a handler microflow, the response can be handled as soon as it arrives. For an example handler microflow, see **AmazonBedrockConnector.InvokeAgentResponse_Handle** in the connector module. This microflow logs the response, so you can also use it just to investigate the response.
 
@@ -887,7 +887,7 @@ The input and output for this service are shown in the table below:
 
 #### 4.2.8 InvokeAgent {#invoke-agent}
 
-The `InvokeAgent` activity allows you to invoke an agent from Amazon Bedrock, so that you can orchestrate tasks involving foundation models and enrich the process with organisational data and user input. It requires `ENUM_Region`, `Credentials`, `InvokeAgentRequest`, a `ResponseHandlerMicroflow` and a `ErrorHandlerMicroflow` as input parameters. The microflow parameters are necessary since `InvokeAgent` is an asynchronous operation. The `ResponseHandlerMicroflow` is required to have exactly one input parameter of the `InvokeAgentResponse` entity type. It is called in a background threat once the respose is available. The `ErrorHandlerMicroflow` is required to have exactly one input parameter of type String. It will be called when there is an error during the asynchronous process and the error type will be passed to it's string parameter. The Amazon Bedrock Connector includes sample response handler and error handler microflows to help you set up handlers for your implementation.
+The `InvokeAgent` activity allows you to invoke an agent from Amazon Bedrock, so that you can orchestrate tasks involving foundation models and enrich the process with organizational data and user input. It requires `ENUM_Region`, `Credentials`, `InvokeAgentRequest`, a `ResponseHandlerMicroflow` and a `ErrorHandlerMicroflow` as input parameters. The microflow parameters are necessary since `InvokeAgent` is an asynchronous operation. The `ResponseHandlerMicroflow` is required to have exactly one input parameter of the `InvokeAgentResponse` entity type. It is called in a background threat once the response is available. The `ErrorHandlerMicroflow` is required to have exactly one input parameter of type String. It will be called when there is an error during the asynchronous process and the error type will be passed to it's string parameter. The Amazon Bedrock Connector includes sample response handler and error handler microflows to help you set up handlers for your implementation.
 
 For more information, see [Agents for Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/agents.html)
 
@@ -895,7 +895,7 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-* | `ENUM_Region (enumeration)`, `Credentials (object)`, `InvokeModelRequest (object)`, `ResponseHandlerMicroflow (microflow)`, `ErrorHandlerMicroflow (microflow)` | `none` |
+| `ENUM_Region (enumeration)`, `Credentials (object)`, `InvokeModelRequest (object)`, `ResponseHandlerMicroflow (microflow)`, `ErrorHandlerMicroflow (microflow)` | `none` |
 
 ##### 4.2.8.1 Handling the asynchronous InvokeAgentResponse
 
@@ -978,7 +978,7 @@ Possible root causes for this error include the following:
 
 To solve this issue, verify the following:
 
-1. Ensure that you have selected an AWS Region where the targeted model exists. You can see an overview of the models accessible to you in the AWS Management Console, on the [Overiew page](https://us-west-2.console.aws.amazon.com/bedrock/home?#/overview) of your Amazon Bedrock environment. Make sure the region specified in the AWS Console matches the region you have configured in Mendix. 
+1. Ensure that you have selected an AWS Region where the targeted model exists. You can see an overview of the models accessible to you in the AWS Management Console, on the [Overview page](https://us-west-2.console.aws.amazon.com/bedrock/home?#/overview) of your Amazon Bedrock environment. Make sure the region specified in the AWS Console matches the region you have configured in Mendix. 
 2. Ensure that the model that you have selected is not deprecated and that the *model-id* is currently available in Amazon Bedrock.
 
 ## 6 Appendix

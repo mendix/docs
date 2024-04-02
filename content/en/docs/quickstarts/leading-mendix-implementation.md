@@ -110,7 +110,7 @@ Mendix is the platform that helps you turn ideas into outcomes. It contains all 
 
 **Here are some resources to help familiarize yourself with the Mendix platform:**
 
-* The [“Mendix Ecosystem”](https://academy.mendix.com/link/modules/78/lectures/504/1.3-Mendix-Ecosystem) lecture in our Rapid Developer courseoffers a short description of each of the elements of the platform relevant for developers together with useful links. 
+* The [“Mendix Ecosystem”](https://academy.mendix.com/link/modules/78/lectures/504/1.3-Mendix-Ecosystem) lecture in our Rapid Developer course offers a short description of each of the elements of the platform relevant for developers together with useful links. 
 * The [Developer Portal Guide](/developerportal/) will help you explore the Developer Portal: the central location to collaborate, deploy, and manage your Mendix apps.
 
 **Also, don’t forget to bookmark your “Favorites”!**
@@ -299,7 +299,7 @@ In this section, you learned more about the Mendix platform and explored the 3 S
 
 * Created your Mendix Portfolio Management board that will help you identify, track, and plan out your initiatives.
 * Started thinking about the people you want to include to establish a strong Mendix team.
-* Familiarized with the processes you ‘ll have to build to ensure long-term outcomes.
+* Familiarized with the processes you'll have to build to ensure long-term outcomes.
 * Outlined the benefits the Mendix Platform brings to your organization.
 * Identified best practices to promote the value of low-code within your organization.
 * Assigned your Mendix admin.
@@ -338,13 +338,13 @@ Low-code shouldn't (and frankly, doesn't) operate in its own universe, so the vi
 
 There is a wide variety of ideas and opinions regarding the length, form, structure, and scope of a vision. And your vision should reflect your company's culture. We have compiled **a set of guidelines and recommendations to help you in defining your vision**. Some are widely recognized as best practices, and others are based on our extensive experience. Your Mendix Transformation Manager, Digital Business Advisor, or Customer Success Manager will be able to support you in this endeavor. And if you have defined your low code vision already, now is the perfect time to revisit it and make sure you are happy with it. 
 
-1. **Preparation**
+#### 3.1.1 Preparation
 
 This step requires some analysis and time investment. Reference company documents and talk to your team and other key stakeholders on the business and technology side.
 
 It is key to ensuring alignment and contribution to other visions, values, strategies, and initiatives that are already in place in your organization. We have included a list of useful questions to consider in the supporting content for the preparation task (you can find this in the resources, at the top of this page).
 
-2. **First iteration: Mind map / brainstorm**
+#### 3.1.2. First iteration: Mind map / brainstorm
 
 Start exploring the areas that you want to transform. We recommend thinking along the lines of the 5 P’s—People, Process, Platform, Portfolio, Promotion—because these cover all the aspects you need when undergoing a transformation. This also ties well into other tools we use such as the Maturity Assessment, which is also grouped according to the 5 P’s.
 
@@ -352,13 +352,13 @@ Imagine how you want those areas to look like in 3-4 years. That timeframe is th
 More than that and it's too far in the future, too fuzzy, you can't know what the world will look like in 10 years. Too short and there's not enough time to do something impactful—it won't be inspirational.
 Add key words to a mind map for each of the five areas.
 
-3. **Second iteration: Prioritize and add details**
+#### 3.1.3. Second iteration: Prioritize and add details
 
 Select the most important ideas and create full sentences as bullet points, adding details so that anyone reading the sentence can understand what it means.
 
 You can also start adding key results or placeholders for them, such as, "Achieve an ROI of \[amount\] by \[date\]".
 
-4. **Third iteration: Evaluate and refine**
+#### 3.1.4. Third iteration: Evaluate and refine
 
 Review and refine your bullet points. You need to ensure that you can evaluate whether a particular point has been completed or achieved.
     
@@ -370,7 +370,7 @@ The objectives need to be achievable, but it also shouldn't be too easy. You nee
 
 More about that in the "Use your vision to steer your journey" objective.
 
-5. **Socialize your vision and gather feedback**
+#### 3.1.5. Socialize your vision and gather feedback
 
 Show your draft vision to key stakeholders and a selection of employees to get their feedback. When others read your vision, they need to experience a moment of awe and wonder. If their jaws don’t drop a little bit, you need to think bigger. Small, safe, calculated plans don’t inspire—a vision needs a wow factor. And don't be put off if there’s a small number—around 10%-15% or so—who don't like it.
 
@@ -379,13 +379,13 @@ What you don't want is indifference.
 Check during this refining stage that people understand the vision –
 and that it accurately represents what you want to achieve and what your organization needs.
 
-6. **Write your final version**
+#### 3.1.6. Write your final version
 
 In this final stage, you need to consider what feedback is relevant and what you want to incorporate.
 
 If you think it would be more efficient, you might want to get support from a writer to polish some of those sentences so they pop off the page and resonate with your team and stakeholders. However, balance the effort you invest—done is better than perfect!
 
-7. **Communicate your vision effectively**
+#### 3.1.7. Communicate your vision effectively
 
 Once you have your vision, you need to communicate it effectively to your team. You need to make sure that everyone understands it so that they are motivated to work towards it. 
 
@@ -749,7 +749,7 @@ Getting all the required knowledge in each team might be difficult while keeping
     * Accepts or rejects the completed work 
     Ideal POs have these five key [skills & characteristics.](https://www.mendix.com/blog/5-important-product-owner-skills-for-rapid-app-dev/)
 
-* **Scrum Master (SM):** ensures that the team follows Agile best practices and ioversees addressing and removing any productivity blockers that may come up. Essentially, the Scrum master is the authority in Agile and Scrum to keep the team working together efficiently and effectively. SMs:
+* **Scrum Master (SM):** ensures that the team follows Agile best practices and oversees addressing and removing any productivity blockers that may come up. Essentially, the Scrum master is the authority in Agile and Scrum to keep the team working together efficiently and effectively. SMs:
     * Should be supportive leaders. 
 
     * Help POs define the product’s value, plan work, and manage the backlog. 
@@ -872,7 +872,7 @@ You are now ready to move to the next phase. Good job! 
 
 ## 5 Governance and Control in Mendix
 
-In this section, you will get a quick view on the features we offer to incorporate governance in your process. We will show you in detail which of these you need to configure at the start, so the platform supports your organisation’s onboarding.
+In this section, you will get a quick view on the features we offer to incorporate governance in your process. We will show you in detail which of these you need to configure at the start, so the platform supports your organization’s onboarding.
 
 **Learning Objectives**
 

@@ -8,50 +8,52 @@ tags: ["AR", "VR", "XR", "WebXR"]
 
 ## 1 Introduction
 
-With the WebXR widgets you can build fully immersive XR (meaning both AR and VR) experiences. This module contains the following widgets:
+With the WebXR widgets you can build fully immersive XR (meaning both AR and VR) experiences. The [WebXR module](LINKHERE) contains the following widgets:
 
 Container widgets:
 
-- Container (XR)
-- Node (XR)
-- Repeater (XR)
+* Container (XR)
+* Node (XR)
+* Repeater (XR)
 
 3D Object widgets:
 
-- Text (XR)
-- 3D Object (XR)
-- Sphere (XR)
-- Cube (XR)
-- Square (XR)
+* Text (XR)
+* 3D Object (XR)
+* Sphere (XR)
+* Cube (XR)
+* Square (XR)
 
 ### 1.1 Features
 
-- Allows you to show 3D objects in either a VR or AR space, fully immersive or just in the browser.
-- Allows you to use Mendix microflow and nanoflows to model out interactions with these 3D objects.
+* Allows you to show 3D objects in either a VR or AR space, either in a fully immersive mode or just in the browser
+* Allows you to use Mendix microflows and nanoflows to model out interactions with these 3D objects
 
 ## 2 Configuration
 
-These widgets require a certain configuration to work, where all the widgets need to be contained in the **Container (XR)**. There can only be one Container (XR) per page. This then contains all the other widget you want to use.
-A very simple configuration could be:
+These widgets require a certain configuration to work; all the widgets need to be contained in the **Container (XR)** widget. There can only be one Container (XR) widget per page, which must contain all the other WebXR widgets you want to use.
+
+A very simple configuration could look like this:
 
 {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-webxr/container-with-cube.jpg" alt="Container (AR) with Cube (AR)"  width="400"  >}}
 
-### 2.1 Important prerequisite
+### 2.1 HTTPS Prerequisite
 
-The most important prerequisite is that you'll have to run the project through the HTTPS protocol for WebXR to work. The preview can still be seen through the normal HTTP protocol, but the button to start the XR session will be hidden. If you're not able to see this button, this is probably why.
+For WebXR to work, you will have to run the project through HTTPS protocol. The preview can still be seen through HTTP protocol, but the button to start the XR session will be hidden. If you are not able to see this button, this is probably why.
 
 Here is a simple scene without the button to start WebXR:
 
 {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-webxr/cube-no-webxr-button.jpg" alt="How the page appears without WebXR support"   width="400"  >}}
 
-Here is that same scene with that button:
+Here is that same scene with the button:
 
 {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-webxr/cube-webxr-button.jpg" alt="How the page appears with WebXR support"   width="400"  >}}
 
-Currently it's not possible to start the experience without the user clicking the button. This is due to the user needing to give permission to have their space taken over by this experience, and not being surprised by this happening.
-Depending on which browser you plan to use, you'll need to enable the WebXR feature flags.
+It is not possible to start the experience without the user clicking the button. This is due to the user needing to give permission to have their space taken over by this experience, and not being surprised by this happening.
 
-## 3 Container widgets
+Depending on which browser you plan to use, you will need to enable the WebXR feature flags.
+
+## 3 Container Widgets
 
 Container widgets are widgets which contain other widgets. Either to move multiple widgets as one, or to be able to repeat a certain configuration.
 
@@ -60,7 +62,7 @@ Container widgets are widgets which contain other widgets. Either to move multip
 This is the widget that contains all other AR widgets, it is what can start and stop the experience and has scene-wide properties. For example, the reflection map for the lighting in the scene can be set here. Only one of these widgets can be used per page.
 It has the following properties that can be set in Studio Pro:
 
-#### 3.1.1 General tab
+#### 3.1.1 General Tab
 
 - **Camera distance** - The distance in meters from the 3D model, this can be altered to make sure the entire scene is in view.
 - **Starting position** - This is the position which is at the center of the preview, changing this will change the point the camera is focussed on. **X** is the left to right axis, **Y** is the up and down axis and **Z** is the depth axis.

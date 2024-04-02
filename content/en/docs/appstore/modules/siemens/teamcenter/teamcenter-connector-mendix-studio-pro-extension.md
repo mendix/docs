@@ -10,9 +10,7 @@ title: "Teamcenter Connector Mendix Studio Pro Extension"
 
 ## 1 Introduction
 
-The Teamcenter Connector Mendix Studio Pro Extension or Teamcenter Connector Extension for short is built using the Mendix Extensibility Framework to provide you with an effortless means to harness the full capabilities of Teamcenter Connector for Mendix.
-
-The Teamcenter Connector is a powerful tool that allows you to access, create and modify product data in Teamcenter. The Teamcenter Extension is layered atop it, providing a low-code experience to enhance the user friendliness and streamline the utilization of the connector.
+The Teamcenter Extension is a Mendix Module built using the Mendix Extensibility Framework to provide you with an effortless means to harness the full capabilities of Teamcenter Connector for Mendix. As you may know, The Teamcenter Connector is a powerful tool that allows you to access, create and modify product data in Teamcenter. The Teamcenter Extension is layered atop it, providing a low-code experience to enhance the user friendliness and streamline the utilization of the connector.
 
 ### 1.1 Supported use-cases
 
@@ -28,14 +26,14 @@ More details and typical user journeys for each use case is provided in the [[Ac
 
 ### 1.2 Pre-requisites
 
-The Teamcenter Connector Extension requires Mendix version 10.6.5 or higher. You also need to make sure you have the following installed from the Mendix Marketplace
+The Teamcenter Extension requires Mendix version 10.6.5 or higher. You also need to make sure you have the following installed from the Mendix Marketplace
 1. [TcConnector](
 https://marketplace.mendix.com/link/component/111627)
 2. [CommunityCommons](https://marketplace.mendix.com/link/component/170)
 
 ### 1.3 License
 
-[[todo]]
+Like with Teamcenter Connector, the Teamcenter Extension is free to download and use as well. You may, however require a Mendix Studio Pro License to develop apps in Mendix and Teamcenter Author license to connect to Teamcenter.
 
 ## 2 Import mapping
 
@@ -86,7 +84,6 @@ You will often see that checkboxes are checked by default and/or disabled. In ge
 For specific [[actions]] there may be additional rules. These are explained in the separate sections on those [[actions]].
 
 You can select and deselect the properties, references, and relations depending on the data you need from Teamcenter. When you select a reference or relation, a new placeholder entity will be added to the object mapping tree. You will need to perform the import mapping for these referenced/related objects in a subsequent step (business object mapping and selection of Teamcenter properties, references, and relations).
-
 
 
 ## 3.	[[Actions]]

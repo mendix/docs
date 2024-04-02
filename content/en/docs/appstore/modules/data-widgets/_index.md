@@ -14,6 +14,7 @@ tags: ["marketplace", "marketplace component", "data grid", "gallery", "tree nod
 This module contains the following widgets:
 
 * [Data Grid 2](/appstore/modules/data-grid-2/)
+* [Data Grid 2 Properties](/appstore/modules/data-grid-2-properties/)
 * [Drop-Down Sort](/appstore/modules/gallery/#dropdown)
 * [Filters](/appstore/modules/data-grid-2/#filters)
 * [Gallery](/appstore/modules/gallery/)

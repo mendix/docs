@@ -949,32 +949,32 @@ To solve this issue, follow these steps:
 
 After the status of the models changes to **Access Granted**, you can use it with the Amazon Bedrock connector.
 
-### 5.3 Error code 403 - AccessDeniedException
+### 5.2 Error code 403 - AccessDeniedException
 
 When invoking a model, the error code *403 - Access denied* indicates that you do not have access to the targeted resource.
 
-#### 5.3.1 Cause
+#### 5.2.1 Cause
 
 Possible root causes for this error include the following:
 
 * You do not have access to the model in the specified AWS region.
 
-#### 5.3.2 Solution
+#### 5.2.2 Solution
 
 To solve this issue, ensure that you have selected an AWS Region where you have model access. You can see an overview of the models accessible to you in the AWS Management Console, in the [Model Access](https://us-west-2.console.aws.amazon.com/bedrock/home?#/modelaccess) section of your Amazon Bedrock environment.
 
-### 5.4 Error code 404 - ResourceNotFoundException
+### 5.3 Error code 404 - ResourceNotFoundException
 
 When invoking a model, the error code *404 - Resource not found* indicates that the targeted resource was not found.
 
-#### 5.4.1 Cause
+#### 5.3.1 Cause
 
 Possible root causes for this error include the following:
 
 * The model which you are trying to invoke is not available in your specified AWS region.
 * The model which you are trying to invoke is deprecated.
 
-#### 5.4.2 Solution
+#### 5.3.2 Solution
 
 To solve this issue, verify the following:
 
@@ -1011,7 +1011,7 @@ The sync can be done from the information page of your knowledge base in the Ama
 The sync can take up to a few minutes and the calls to your knowledge base during this process cannot be handled accurately. To make sure the sync process has ended, you can use the [GetIngestionJob](#get-ingestion-job) action in the Amazon Bedrock Connector to retrieve the status of the ingestion job, along with other details.
 {{% /alert %}}
 
-#### 6.2 Safeguards
+### 6.2 Safeguards
 
 AWS has introduced safeguards for Bedrock (currently in preview). When available, there will be two features: Guardrails and Watermark detection. 
 
@@ -1025,7 +1025,7 @@ The watermark detection feature will make it possible to tell if an image has be
 
 More information about guardrails can be found in this [AWS blogpost](https://aws.amazon.com/blogs/aws/guardrails-for-amazon-bedrock-helps-implement-safeguards-customized-to-your-use-cases-and-responsible-ai-policies-preview/) and in the [AWS documentation](https://aws.amazon.com/en/bedrock/guardrails/).
 
-#### 6.3 Advanced Prompts for Agents
+### 6.3 Advanced Prompts for Agents
 
 By default, an agent is configured with the following base prompt templates, one for each step in the agent sequence:
 

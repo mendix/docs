@@ -72,11 +72,12 @@ Container (XR) has the following properties that can be set in Studio Pro:
 ### 3.2 Node (XR)
 
 An empty container widget which can be used to group other widgets. This is useful for when you want to move multiple objects as one, or scale multiple objects as one. It also has a **Billboard rotation** feature, which can be used to have objects rotate to always face the user.
-It has the same properties as [3D Object widgets](#3dobject), with the following addition:
 
 #### 3.2.1 General tab
 
-- **Billboard rotation** - **None**, **Billboard**, **Billboard X** or **Billboard Y**. Sets wether billboarding should be enabled and on which axis it should occur
+Node (XR) has the same properties as [3D Object widgets](#3dobject), with the following additions:
+
+* **Billboard rotation** - **None**, **Billboard**, **Billboard X**, or **Billboard Y**. Sets if billboarding should be enabled and on which axis it should occur
 
 ### 3.3 Repeater (XR)
 
@@ -88,7 +89,7 @@ The Repeater (XR) widget allows the user to create one configuration and repeat 
 
 ## 4 3D Object widgets {#3dobject}
 
-These are widgets that show a 3D Object, either predetermained (like **Cube (XR)**, **Sphere (XR)** and **Square (XR)**) or based on input (**3D Object (XR)** and **Text (XR)**)
+These are widgets that show a 3D Object, either predetermined (like **Cube (XR)**, **Sphere (XR)** and **Square (XR)**) or based on input (**3D Object (XR)** and **Text (XR)**)
 
 ### 4.1 Shared properties
 
@@ -106,7 +107,7 @@ These properties exist for all 3D Object widgets (**Cube (XR)**, **Sphere (XR)**
   - **Object** - Only available for **3D Object (XR)**, selecting this will make the object use the material as present on the 3D Object.
   - **Texture** - Sets a Static or Dynamic image for this object. This image will then be mapped onto the 3D object.
   - **Color** - Sets a solid color on an object, this should be provided in the #rrggbb format.
-- **Opacity** - The transparency of the object, 0 is seethrough, 1 is opaque.
+- **Opacity** - The transparency of the object. 0 is transparent, while 1 is opaque.
 
 - **Lighting**
   - **Type** - The kind of lighting that should be used on this object. **Simple** lighting is more basic looking, but easier to render, leading to better framerates. **Realistic** lighting shows more complex reflections and adds options for the type of material this object is supposed to have:
@@ -119,14 +120,14 @@ All interactions are done through a mesh like interface around the object. The d
 
 - **Dragging**
 
-  - **Dragging** - **Yes** or **No** sets wether to activate the dragging interface
-  - **Enable dragging** - Sets wether the dragging interface should be active at this moment. This could for example be switched on and off when the user clicks a specific 3D object
-  - **Type** - **Fixed distance** or **Fixed to world**, sets wether the dragging should be at a fixed distance in front of the user (**Fixed distance**), or if the object should 'stick' to the world (**Fixed to world**).
+  - **Dragging** - **Yes** or **No** sets whether to activate the dragging interface
+  - **Enable dragging** - Sets whether the dragging interface should be active at this moment. This could for example be switched on and off when the user clicks a specific 3D object
+  - **Type** - **Fixed distance** or **Fixed to world**, sets whether the dragging should be at a fixed distance in front of the user (**Fixed distance**), or if the object should 'stick' to the world (**Fixed to world**).
   - **On drag** - An event called when the object is dragged.
 
 - **Pinching**
-  - **Scaling interaction** - **Yes** or **No**, wether this interface should be enabled at all.
-  - **Enable scaling interface** - **Yes** or **No**, wether this interface should be enabled at this moment. This can be connected to a clicking event, for example, when a user clicks on an object the interface could appear allowing a user to make changes to it.
+  - **Scaling interaction** - **Yes** or **No**, whether this interface should be enabled at all.
+  - **Enable scaling interface** - **Yes** or **No**, whether this interface should be enabled at this moment. This can be connected to a clicking event, for example, when a user clicks on an object the interface could appear allowing a user to make changes to it.
   - **Enabled rotation interface** - **Yes** or **No**, works the same as the scaling interface, but for rotation instead.
   - **Scaling interface color** - The color of that interface, should be provided in the #rrggbb format.
   - **Scaling interface size** - The size of the object in the interface in meters.

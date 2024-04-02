@@ -55,18 +55,19 @@ Depending on which browser you plan to use, you will need to enable the WebXR fe
 
 ## 3 Container Widgets
 
-Container widgets are widgets which contain other widgets. Either to move multiple widgets as one, or to be able to repeat a certain configuration.
+Container widgets are widgets which contain other widgets. They allow developers to move multiple widgets as one, as well as copy and paste favorite configurations.
 
 ### 3.1 Container (XR)
 
-This is the widget that contains all other AR widgets, it is what can start and stop the experience and has scene-wide properties. For example, the reflection map for the lighting in the scene can be set here. Only one of these widgets can be used per page.
-It has the following properties that can be set in Studio Pro:
+This is the widget that must contain all other AR widgets. It starts and stops the experience, and has scene-wide properties. For example, the reflection map for the lighting in the scene can be set here. Only one of these widgets can be used per page.
 
 #### 3.1.1 General Tab
 
-- **Camera distance** - The distance in meters from the 3D model, this can be altered to make sure the entire scene is in view.
-- **Starting position** - This is the position which is at the center of the preview, changing this will change the point the camera is focussed on. **X** is the left to right axis, **Y** is the up and down axis and **Z** is the depth axis.
-- **Realistic lighting** - When an object uses **Realistic Lighting**, an environment map can be added here. The environment map is what will be reflected on those objects.
+Container (XR) has the following properties that can be set in Studio Pro:
+
+* **Camera distance** - The distance in meters from the 3D model. This can be altered to make sure the entire scene is in view.
+* **Starting position** - This is the position which is at the center of the preview. Changing this will change the point the camera is focused on. **X** is the left to right axis, **Y** is the up and down axis, and **Z** is the depth axis.
+* **Realistic lighting** - When an object uses **Realistic Lighting**, an environment map can be added here. The environment map is what will be reflected on those objects.
 
 ### 3.2 Node (XR)
 

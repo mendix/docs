@@ -39,7 +39,7 @@ Mendix aims to introduce the new format for new apps in Q2 2024. Existing apps w
 
 ### 4.2 Working with a Large Repository Size
 
-When cloning an app, the default behavior of Git is to download the full history. As Mendix uses different folders on disk for different branches, downloading full history is done for each branch. To mitigate that, Mendix suggests using local cloning for subsequent branch downloads. When cloning a new branch, data from a local branch you already have is used to reduce data that needs to be downloaded. 
+When cloning an app, the default behavior of Git is to download the full history. As Mendix uses different folders on disk for different branches, downloading full history is done for each branch. To mitigate that, Mendix uses local cloning for subsequent branch downloads. When cloning a new branch, data from a local branch you already have is used to reduce data that needs to be downloaded. 
 
 Another improvement that is currently in development is partial cloning, which will instruct Git to only retrieve a part of the history from the server when cloning. In case you do need to access older history, for example, when merging an older branch, the data is retrieved from the server only when needed. Mendix expects to deliver this improvement in the summer of 2024 and intends to backport this to the 10.12 MTS release.
 

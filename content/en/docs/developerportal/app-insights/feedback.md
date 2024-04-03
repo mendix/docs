@@ -174,9 +174,9 @@ The **Feedback** tab shows the following items:
 
   {{< figure src="/attachments/developerportal/app-insights/feedback/linked-feedback.png" >}}
 
-  Once the feedback is linked, it disappears from the list on the **Inbox** or **Archive** tab. You can only access the linked feedback from its primary feedback feedback to which it is linked. If you change the status of the primary feedback, all the linked feedback will get the same status automatically.
+  Once the feedback is linked, it disappears from the list on the **Inbox** or **Archive** tab. You can only access the linked feedback from its primary feedback to which it is linked. If you change the status of the primary feedback, all the linked feedback will get the same status automatically.
 
-  {{% alert color="info" %}}When you open a linked feedback, you can click **Make [the linked feedback] the Primary feedback** to make this feedback the primary feedback of the feedback group instead.{{% /alert %}}
+  {{% alert color="info" %}}When you open a linked feedback item, you can click **Make [the linked feedback item] the Primary feedback** to make this feedback the primary feedback of the feedback group instead.{{% /alert %}}
 
   You can unlink a feedback item by hovering over the feedback and clicking the **Remove** ({{% icon name="remove" %}}) button. Once the feedback is not linked anymore, it appears again in the list on the **Inbox** or **Archive** tab.
 

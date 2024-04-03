@@ -1,0 +1,96 @@
+---
+title: "Insights Hub API calls only"
+url: /partners/siemens/mindsphere-api-only/
+weight: 5
+description: "A description of some extra considerations to be taken into account when developing for deployment to Insights Hub"
+tags: ["MindSphere", "Insights Hub", "Credentials", "Multi-Tenant", "Environment Variables", "Local", "Styling", "UI", "Icons", "Limitations", "Licensing", "Validation", "App Service", "IIoT"]
+---
+
+## 1 Introduction
+
+In case you like your own user management or SSO solution, but likes to gather insights via the Insights Hub API, this chapter is describing how you can achieve it. This chapter is describing how you can authenticate Insights Hub API REST calls with the help of a **Technical User** and the **Siemens Insights Hub API Authenticator**.
+Please note that this way is not a fully integration within Insights Hub and have the following limitations
+
+* You cannot make your app multi-tenant – see [Multi-tenancy](/partners/siemens/mindsphere-development-considerations/#multitenancy) in *Insights Hub Development Considerations* for more information on multi-tenancy
+* Your app cannot be deployed to the Insights Hub platform and cannot be added to the Insights Hub Developer Cockpit
+* End-users cannot use Insights Hub credentials to sign in to your app, so Insights Hub does not know anything about individual app end-users — you must design your app to handle any required security for each end-user
+* It is not possible to use the fine grain access control on asset level via SDS.
+
+If you prefer a full Insights Hub app, please see [Insights Hub Development Considerations](/partners/siemens/mindsphere-development-considerations/), [Insights Hub Module Details](/partners/siemens/mindsphere-module-details/) or execute on of the following learning paths:
+
+* [Build an Insights Hub app with Mendix](https://academy.mendix.com/link/path/80/Build-a-MindSphere-app-with-Mendix) - this learning path will teach you how to develop an app for Insights Hub with Mendix
+* [Build an Insights Hub App - Continued](https://academy.mendix.com/link/path/93/Build-a-MindSphere-App---Continued) - this learning path is for everyone who wants to dive more deeply into how to build an Insights Hub App with the Mendix Platform
+
+## 2 Technical User
+
+If your application is not fully integrated within Insights Hub and is using there own user management the signed in users has no *rights* to call Insights Hub APIs. For this scenario Insights Hub is providing so called **Technical Users**. An Insights Hub tenant administrator is granted to create a technical users in the **Insights Hub Settings** app.
+Please follow the steps described in [Technical Users](https://documentation.mindsphere.io/MindSphere/apps/settings/technical-users.html) to create a **Technical User**. Please make sure the Technical User has the role assignment needed to call the desired Insights Hub APIs.
+
+
+## 3 Authenticating Calls to Insights Hub APIs
+
+To extract data from Insights Hub, your calls to the Insights Hub APIs need to be authenticated. This is done through the [Siemens Insights Hub API Authenticator](https://marketplace.mendix.com/link/component/????).
+
+Download the **Siemens Insights Hub API Authenticator** by following the instructions [Downloading Content from the Marketplace](/appstore/overview/use-content/#downloading) in the document *Using Marketplace Content*.
+
+In the **_Use me** folder of the *SiemensInsightsHubAPIAuthenticator* module set the following constants:
+
+* **ClientID** – this is the *clientID* from the **Technical User** you generated
+* **ClientSecret** – this is the *clientSecret* from the **Technical User** you generated
+* **TokenURL** – this is the URL where to get the Insights Hub token from and is tenant specific.
+
+Calls to Insights Hub are made through REST calls which can be made using the standard Mendix [Call REST Service](/refguide/call-rest-action/) functionality. See [How To Consume a REST Service](/howto/integration/consume-a-rest-service/) for a full walkthrough on doing this. For calls to Insights Hub, these calls need to be authenticated.
+
+
+This is done by adding an **Access token** action before each **Call REST** action in your microflows. The **Access token** can be found within the toolbox on the right side.
+
+{{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-api-only/AccessTokenToolbox.png" alt="Authentication" >}}
+
+ The **Access token** action returns a string which contains an access token which can be used in the **Call REST** action. In the example below, the token string is given the name *Token*.
+
+{{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-api-only/AccessToken.png" alt="Authentication" >}}
+
+In the REST call, an HTTP Header is added called *Authorization* and this is given the value of the access token.
+
+{{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-api-only/CallRest.png" alt="Authentication" >}}
+
+However, authentication will only be successful if the correct credentials are provided to the **Access token** action. This requires the following to be set in the **_Use me** folder of the *InsightsHubIIotAuthenticator* module:
+
+* **ClientID** – this is the *clientID* from the **Technical User** you generated
+* **ClientSecret** – this is the *clientSecret* from the **Technical User** you generated
+* **TokenURL** – this is the *TokenURL* where to fetch the Insights Hub token from and is in the format:
+    
+    `https://{tenantName}.piam.{region}.{mindsphere-domain}/oauth/token?grant_type=client_credentials`
+
+    You have to replace the `tenantName`, `region` and `mindsphere-domain` to your personal needs e.g.
+
+    `https://demo.piam.eu1.mindsphere.io/oauth/token?grant_type=client_credentials`
+
+
+{{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-api-only/ModuleConfiguration.png" alt="Authentication" >}}
+
+## 4 Authentication Considerations
+
+### 4.1 Authenticating During Development
+
+When you are developing your app, you can set the **ClientID** and **ClientSecret** constants within the app. You can also override these by using different [Configurations](/refguide/configuration/) within your app settings.
+
+{{% alert color="info" %}}
+**Tip:** Use the autofill feature based on a local environment variable for the *Client Secret*.
+
+Storing the *Client Secret* inside the app is, from a security perspective, not a good idea. A better approach is to use a local environment variable. Create a user-specific environment variable with *Variable name* equal to your *Client ID* value and the *Variable value* equal to your *Client Secret* value.
+
+{{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/envvariables.png"   width="50%"  >}}
+
+Don't forget to restart Studio Pro after you change / add the environment variable.
+{{% /alert %}}
+
+For security, the values of the **ClientSecret** should not be included when you deploy the app.
+
+### 4.2 Authenticating for Deployment
+
+When you deploy your app, you should remove the values of **ClientID** and **ClientSecret** from the app model for security reasons. You should then set the correct value as a constant (Cloud Foundry / Kubernetes environment variable) during the deployment.
+
+For the Mendix Cloud, this can be done by setting the value of the constants on the [Model Options](/developerportal/deploy/environments-details/#model-options) tab of the **Environment Details**. See [Constants](/refguide/constants/) for information on how to set these values on other deployment platforms.
+
+

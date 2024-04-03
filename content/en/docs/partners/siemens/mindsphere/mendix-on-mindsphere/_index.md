@@ -8,12 +8,13 @@ tags: ["MindSphere", "Insights Hub", "Credentials", "Multi-Tenant", "Environment
 
 ## 1 Introduction
 
-If you want to have full integration with Insights Hub, incorporating your application into the Insights Hub Launchpad, managing the user access via the Insights Hub Settings app, supporting OEM based use cases via [subtenancy](https://developer.mindsphere.io/howto/howto-subtenant-management.html), or offering your Mendix application within the Insights Hub ecosystem to other Insights Hub customers (multitenancy), then **Mendix on Insights Hub** is the right choice.
+Mendix offers powerful integration options to incorporate IIoT data provided by Siemens Insights Hub into your Mendix Applications. There are two ways to leverage these integrations.
 
-## 2 Mendix on Insights Hub {#mendix-on-mindsphere}
+1. If you would like to have a standalone Mendix application and just want to incorporate IIoT Data coming from Insights Hub into your business logic, please see the chapter [Siemens Insights Hub – API calls only](/partners/siemens/mindsphere-api-only/)
 
-With Mendix on Insights Hub, a Mendix app can be fully integrated into Siemens Insights Hub's application lifecycle. This includes the capability to provide your app to third parties in the Insights Hub eco system. To find out how to develop and deploy your app to Siemens Insights Hub, see [Siemens Insights Hub – Deployment](/developerportal/deploy/deploying-to-mindsphere/) or have a look at the Mendix Academy learning paths:
+1. If you would like to have full integration within Insights Hub displaying your application on the Insights Hub Launchpad, manage the user access via the Insights Hub Settings app, achieve OEM based use cases via [subtenancy](https://developer.mindsphere.io/howto/howto-subtenant-management.html), or offer your Mendix application within the Insights Hub eco system to other Insights Hub customers (multitenancy), then see the rest of the following documentation.
 
+Within the Mendix Academy two learning paths are provided to show how to develop a full integrated Insights Hub application
 * [Build an Insights Hub app with Mendix](https://academy.mendix.com/link/path/80/Build-a-MindSphere-app-with-Mendix) - this learning path will teach you how to develop an app for Insights Hub with Mendix
 * [Build an Insights Hub App - Continued](https://academy.mendix.com/link/path/93/Build-a-MindSphere-App---Continued) - this learning path is for everyone who wants to dive more deeply into how to build an Insights Hub App with the Mendix Platform
 

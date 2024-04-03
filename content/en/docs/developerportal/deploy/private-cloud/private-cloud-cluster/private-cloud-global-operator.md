@@ -124,7 +124,7 @@ After everything is configured, you can deploy the application. For more informa
 Configure Private Cloud License Management (PCLM) in the Global Operator namespace. For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/).
 
 {{% alert color="info" %}}
-For Global Operator installation, execute the above command in both the Global Operator namespace and its managed namespaces where the license is intended to be applied. Please make sure that identical PCLM license details are configured for both the managed and global operator namespaces to avoid unexpected outcomes. Global Operator is still in beta, and it does not currently fully support PCLM.
+For Global Operator installations, execute the above command in both the Global Operator namespace and its managed namespaces where the license is intended to be applied. Make sure that identical PCLM license details are configured for both the Managed and Global Operator namespaces to avoid unexpected outcomes. Global Operator is in beta, and it does not currently fully support PCLM.
 {{% /alert %}}
 
 {{% alert color="warning" %}}

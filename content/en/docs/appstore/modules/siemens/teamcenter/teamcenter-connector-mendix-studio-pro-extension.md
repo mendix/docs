@@ -26,7 +26,7 @@ More details and typical user journeys for each use case is provided in the [[Us
 
 ### 1.2 Pre-requisites
 
-The Teamcenter Extension requires Mendix version 10.6.5 or higher. You also need to make sure you have the following installed from the Mendix Marketplace
+The Teamcenter Extension requires Mendix version 10.6.5 or higher. You also need to ensure the following modules installed from the Mendix Marketplace
 1. [TcConnector](
 https://marketplace.mendix.com/link/component/111627)
 2. [CommunityCommons](https://marketplace.mendix.com/link/component/170)
@@ -35,11 +35,17 @@ https://marketplace.mendix.com/link/component/111627)
 
 Like with Teamcenter Connector, the Teamcenter Extension is free to download and use as well. You may, however require a Mendix Studio Pro License to develop apps in Mendix and Teamcenter Author license to connect to Teamcenter.
 
-## 2 Teamcenter Instance
+## 2 Start Teamcenter Extension
+Open the Teamcenter Extension by clicking on menu option View -> Teamcenter. This will open the landing page. You will see two tabs: Menu and Settings. 
 
-## 3 Import mapping
+The Menu tab displays use cases or actions you can create artifacts for, using the extension. The Settings tab allows you to provide details of your Teamcenter instance to connect to, while using the extension.
 
-Every [[action]] ends with import mapping. Here you can define what data you want to retrieve from Teamcenter and how to handle this data in Mendix. Depending on the [[action]], the import mapping page starts with one or multiple entities/objects to configure, one per business object that need to be configured. 
+## 3 Teamcenter Configuration
+Provide your Teamcenter Instance details in the Teamcenter Configuration page. Click on Edit to open a panel to enter details. The certificate path should be relative to the App Directory
+
+## 4 Import mapping
+
+Clicking on any [[action]] opens th import mapping page. Here you can define what data you want to retrieve from Teamcenter and how to handle this data in Mendix. Depending on the [[action]], the import mapping page starts with one or multiple entities/objects to configure, one per business object that need to be configured. 
 
 [[Screenshot of empty object mapping page]]
 
@@ -90,7 +96,7 @@ You can select and deselect the properties, references, and relations depending 
 
 ## 4.	[[Use Cases]]
 
-### 4.1.	Retrieve Item Revisions from Teamcenter
+### 4.1.	Get Item Revisions from Teamcenter
 
 [[note: let's discuss the level of detail we want to provide!]]
 
@@ -127,7 +133,6 @@ The Get ItemRevision [[action]]:
 
 
 ### 4.4 Update Item and Item Revision
-
 
 
 ### 4.5 Revise Item Revision

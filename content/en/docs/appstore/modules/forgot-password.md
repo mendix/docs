@@ -19,7 +19,7 @@ Versions of the Forgot Password module below 4.1.0 (for Mendix 8) and 5.1.0 (for
 There is no alternative version for use with Mendix 7.
 {{% /alert %}}
 
-There are three versions of the Forgot Password module, depending on whether you are using Mendix Studio Pro 7, 8, or 9 and above. These all work in the same way, and require the same dependencies specified below.
+There are below versions of the Forgot Password module, depending on whether you are using Mendix Studio Pro 7, 8, or 9 and above. These all work in the same way, and require the dependencies specified below.
 
 | Mendix Version | Forgot Password Version |
 | --- | --- |

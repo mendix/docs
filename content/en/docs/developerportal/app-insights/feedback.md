@@ -123,7 +123,7 @@ Clicking the filter bar will open the **Filter by** side panel. In this side pan
 
 ## 4 Opening Feedback in Inbox or Archive{#feedback-details}
 
-On the [Inbox](#inbox) and [Archive](#archive) tabs, you can open feedback by clicking it in the list. If you click the **ID** of a feedback, the feedback details page will open. If you click a place other than the **ID** of a feedback, a side panel will open. Either the feedback details page or the side panel contains two tabs: [Feedback](#feedback) and [Contact Reporter](#contact-reporter).
+On the [Inbox](#inbox) and [Archive](#archive) tabs, you can open feedback by clicking it in the list. If you click the **ID** of the feedback, the feedback details page will open. If you click a place other than the **ID** of the feedback, a side panel will open. Either the feedback details page or the side panel contains two tabs: [Feedback](#feedback) and [Contact Reporter](#contact-reporter).
 
 ### 4.1 Feedback Tab {#feedback}
 
@@ -145,9 +145,9 @@ The **Feedback** tab shows the following items:
 
 * **Priority** – This shows the priority that the feedback has.
 
-* **Status** – This is the status of the feedback. There are two default statuses: **New** and **Closed**. Whenever a feedback arrives in the app, it is set to **New**. When you close a feedback, it is set to **Closed** and moved to the **Archived** page. You can also add custom statuses by clicking **Settings** ({{% icon name="cog" %}}) and adding the new statuses in the new dialog box. Custom statuses can only be used for feedback that are not archived. You can filter your feedback based on the status.
+* **Status** – This is the status of the feedback. There are two default statuses: **New** and **Closed**. Whenever feedback arrives in the app, it is set to **New**. When you close feedback, it is set to **Closed** and moved to the **Archived** page. You can also add custom statuses by clicking **Settings** ({{% icon name="cog" %}}) and adding the new statuses in the new dialog box. Custom statuses can only be used for feedback that are not archived. You can filter your feedback based on the status.
 
-* **Tags** – These are the tags assigned to the feedback. You can select a tag from the drop-down list or create new tags by typing the tag name inside the text box and then clicking **create [the tag name]**. A tag should contain maximum 50 characters. You can assign multiple tags to a feedback.
+* **Tags** – These are the tags assigned to the feedback. You can select a tag from the drop-down list or create new tags by typing the tag name inside the text box and then clicking **create [the tag name]**. A tag should contain maximum 50 characters. You can assign multiple tags.
 
     {{< figure src="/attachments/developerportal/app-insights/feedback/tags.png" >}}
 
@@ -170,15 +170,15 @@ The **Feedback** tab shows the following items:
 
 * **Linked Feedback** – This shows which feedback items are linked to this feedback.
 
-  You can link a feedback by selecting a feedback from the drop-down list.
+  You can link a feedback item by selecting it from the drop-down list.
 
   {{< figure src="/attachments/developerportal/app-insights/feedback/linked-feedback.png" >}}
 
-  Once a feedback is linked, it disappears from the list on the **Inbox** or **Archive** tab. You can only access the linked feedback from its primary feedback feedback to which it is linked. If you change the status of the primary feedback, all the linked feedback will get the same status automatically.
+  Once the feedback is linked, it disappears from the list on the **Inbox** or **Archive** tab. You can only access the linked feedback from its primary feedback feedback to which it is linked. If you change the status of the primary feedback, all the linked feedback will get the same status automatically.
 
   {{% alert color="info" %}}When you open a linked feedback, you can click **Make [the linked feedback] the Primary feedback** to make this feedback the primary feedback of the feedback group instead.{{% /alert %}}
 
-  You can unlink a feedback by hovering over the feedback and clicking the **Remove** ({{% icon name="remove" %}}) button. Once the feedback is not linked anymore, it appears again in the list on the **Inbox** or **Archive** tab.
+  You can unlink a feedback item by hovering over the feedback and clicking the **Remove** ({{% icon name="remove" %}}) button. Once the feedback is not linked anymore, it appears again in the list on the **Inbox** or **Archive** tab.
 
 * **Attachments** – This contains attachments to this feedback. To upload an attachment, click **Add** ({{% icon name="add" %}}) and select the file. The following formats are supported: .*peg*, *.png*, and *.gif*. Each attachment can be a maximum of 5 MB in size. Once an attachment is uploaded, only your team members can view, download, and delete the attachment.
 

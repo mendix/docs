@@ -12,7 +12,7 @@ aliases:
 
 ## 1 Introduction
 
-If your app uses the [Mendix Feedback](/appstore/modules/mendix-feedback/) module, users can report feedback to your team using the feedback widget in your app, and all their feedback will go to the **Feedback** page. **Feedback** enables your team to view all the feedback. It also allows team members with the right permissions to organize feedback, and add feedback manually. 
+If your app uses the [Mendix Feedback](/appstore/modules/mendix-feedback/) module, users can report feedback to your team using the feedback widget in your app, and all their feedback will go to the **Feedback** page. **Feedback** enables your team to view all the feedback. It also allows team members with the right permissions to organize feedback and add feedback manually. 
 
 You can access the **Feedback** page by selecting your app in the Developer Portal and then clicking **Feedback** in the navigation pane. 
 
@@ -30,15 +30,15 @@ Next to getting a notification in the Developer Portal, Scrum Masters of your te
 
 After a user reports feedback in the app using the feedback widget, the user will get an email with a link to their submitted feedback. When the user opens the link, a page opens and shows their feedback details. See the table below:
 
-| What a User Can See on the Page                             | What a User Cannot See on the Page                           |
-| ----------------------------------------------------------- | ------------------------------------------------------------ |
-| Name of the feedback they submitted                         | Metadata                                                     |
-| Description of the feedback they wrote                      | Summary of the feedback that your team wrote                 |
-| Screenshot (if they uploaded a screenshot for the feedback) | To which team member the feedback is assigned                |
-| Current status of the feedback                              | Tags that are assigned to the feedback                       |
-| Submission date                                             | Other feedback that are associated with this feedback        |
-| Last activity on the feedback                               | Attachments that you team uploaded for this feedback         |
-|                                                             | Team comments on this feedback                               |
+| What a User Can See on the Page                             | What a User Cannot See on the Page                          |
+| ----------------------------------------------------------- | ----------------------------------------------------------- |
+| Name of the feedback they submitted                         | Metadata                                                    |
+| Description of the feedback they wrote                      | Summary of the feedback that your team wrote                |
+| Screenshot (if they uploaded a screenshot for the feedback) | To which team member the feedback is assigned               |
+| Current status of the feedback                              | Tags that are assigned to the feedback                      |
+| Submission date                                             | Other feedback items that are associated with this feedback |
+| Last activity on the feedback                               | Attachments that you team uploaded for this feedback        |
+|                                                             | Team comments on this feedback                              |
 
 This page also has a message feature for the user to communicate with your team directly. Users can upload images in the messages. When the user posts a message, the assigned team member will receive an email. When there is a reply from your team, the user will get an email notification.
 
@@ -71,7 +71,7 @@ To export all feedback into one Excel file, click **Export**.
 
 To search by **Subject**, **Description**, **User Email** and **Tags**, type the keywords in the search bar.
 
-Clicking the filter bar will open the **Filter by** side panel. In this side panel, you can filter the feedback using the **Environment**, **Assignee**, **Priority**, **Status**, and **Submission date**. The filters are saved until the page is refreshed.
+Clicking the filter bar will open the **Filter by** side panel. In this side panel, you can filter feedback using the **Environment**, **Assignee**, **Priority**, **Status**, and **Submission date**. The filters are saved until the page is refreshed.
 
 ### 2.1 Organizing Feedback in Inbox
 
@@ -79,7 +79,7 @@ If your [role](/developerportal/general/app-roles/) has the permission that **Ca
 
 You can add new feedback manually yourself. 
 
-To manually add feedback, click **Create new feedback** (if there is not any feedback yet on the **Inbox** tab) or click **Add feedback** (if there are already feedback on the **Inbox** tab), and then fill in the **Subject**, **Description**, and **Submitter Email** fields, and optionally **Upload Screenshots** in the **New Feedback** dialog box.
+To manually add feedback, click **Create new feedback** (if there is not any feedback yet on the **Inbox** tab) or click **Add feedback** (if there is already feedback on the **Inbox** tab), and then fill in the **Subject**, **Description**, and **Submitter Email** fields, and optionally **Upload Screenshots** in the **New Feedback** dialog box.
 
 If you select feedback, you can see the following items: 
 
@@ -89,9 +89,9 @@ If you select feedback, you can see the following items:
 
   You need to choose which item is the primary item of the group. After the feedback items are linked, only the primary feedback item appears in the list. The feedback items that are linked to the primary item will disappear from the list. You can only access these linked feedback items from their primary item. If you change the status of the primary feedback item, all the linked items will get the same status automatically.
 
-  {{% alert color="info" %}}When you open a linked feedback, you can click **Make [the linked feedback] the Primary feedback** to make this feedback the primary of the feedback group instead.{{% /alert %}}
+  {{% alert color="info" %}}When you open a linked feedback, you can click **Make [the linked feedback] the Primary feedback** to make this feedback the primary feedback of the feedback group instead.{{% /alert %}}
 
-* **Move** – Clicking this moves the selected feedback to any other app of which you are a member. Whenever you move feedback, you will also move all linked feedback. If you only want to move one feedback, you need to unlink the feedback from the group first.
+* **Move** – Clicking this moves the selected feedback to any other app of which you are a member. Whenever you move feedback, you will also move all linked feedback. If you only want to move one feedback item, you need to unlink the feedback from the group first.
 
 * **Create Stories** – If your app is connected to [Epics](/developerportal/project-management/epics/) or [Jira](/developerportal/project-management/jira-connector/), clicking this button will convert the selected feedback to stories on the designated board in Epics or Jira.
 
@@ -131,21 +131,22 @@ On the [Inbox](#inbox) and [Archive](#archive) tabs, you can open feedback by cl
 
 The **Feedback** tab shows the following items: 
 
-* Buttons ({{% icon name="view-off" %}} {{% icon name="hyperlink" %}} {{% icon name="three-dots-menu-horizontal" %}}) on the upper-right corner
-    * {{% icon name="view-off" %}} or {{% icon name="view" %}} – Clicking this button allows you to receive [notifications](#notifications) or stop receiving notifications for this feedback. You automatically start watching feedback whenever you respond to a reporter or leave a comment for your team in the **Communications** section.
+* Buttons ({{% icon name="view-off" %}} {{% icon name="view" %}} {{% icon name="hyperlink" %}} {{% icon name="three-dots-menu-horizontal" %}}) on the upper-right corner
+    * {{% icon name="view-off" %}} – Clicking the button to start receiving [notifications](#notifications) related to this feedback. You also automatically start watching feedback whenever you respond to a reporter or leave a comment for your team in the **Communications** section.
+    * {{% icon name="view" %}} – Clicking the button to stop receiving notifications related to this feedback.
     * **Copy Link** ({{% icon name="hyperlink" %}}) – Clicking this button copies the URL to the feedback. You can send the URL to other people.
     * **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) – Clicking the button opens a menu with the following items:
-        * **Move** – Clicking this button moves the feedback to any other app of which you are a member. Whenever you move feedback, you will also move all linked feedback. If you only want to move one feedback, you need to unlink the feedback from the group first.
+        * **Move** – Clicking this button moves the feedback to any other app of which you are a member. Whenever you move feedback, you will also move all linked feedback. If you only want to move one feedback item, you need to unlink the feedback from the group first.
         * **Create Story** – If your app is connected to [Epics](/developerportal/project-management/epics/) or [Jira](/developerportal/project-management/jira-connector/), clicking this button will convert the feedback to a story on the designated board in Epics or Jira. Once the story is created, clicking this button brings you to the story on the board right away.
         * **Delete** – Clicking this button removes the feedback permanently from **Feedback**. The result is irreversible.
-
+    
 * **Last activity** – This shows when the last edit to the feedback was made.
 
 * **Assigned To** – This shows to whom the feedback is assigned. When you assign the feedback to someone, they will get an email notification.
 
 * **Priority** – This shows the priority that the feedback has.
 
-* **Status** – This is the status of the feedback. There are two default statuses: **New** and **Closed**. Whenever feedback arrives in the app, it is set to **New**. When you close feedback, it is set to **Closed** and moved to the **Archived** page. You can also add custom statuses by clicking **Settings** ({{% icon name="cog" %}}) and adding the new statuses in the new dialog box. Custom statuses can only be used for feedback that are not archived. You can filter your feedback based on the status.
+* **Status** – This is the status of the feedback. There are two default statuses: **New** and **Closed**. Whenever feedback arrives in the app, it is set to **New**. When you close feedback, it is set to **Closed** and moved to the **Archived** page. You can also add custom statuses by clicking **Settings** ({{% icon name="cog" %}}) and adding the new statuses in the new dialog box. Custom statuses can only be used for feedback items that are not archived. You can filter your feedback based on the status.
 
 * **Tags** – These are the tags assigned to the feedback. You can select a tag from the drop-down list or create new tags by typing the tag name inside the text box and then clicking **create [the tag name]**. A tag should contain maximum 50 characters. You can assign multiple tags.
 
@@ -186,7 +187,7 @@ The **Feedback** tab shows the following items:
 
 ### 4.2 Contact Reporter Tab {#contact-reporter}
 
-The **Contact Reporter** tab allows you to read messages from the reporter and reply to them. Whenever the reporter sends a message, it will be shown in this section. Once you reply to a message from the reporter, they will receive an email. When  multiple feedback is linked, the system only sends an email to the reporter of this specific feedback, not other associated feedback in the same group.
+The **Contact Reporter** tab allows you to read messages from the reporter and reply to them. Whenever the reporter sends a message, it is shown in this section. Once you reply to a message from the reporter, they receive an email. When multiple feedback items are linked, the system only sends an email to the reporter of this specific feedback, not other associated feedback in the same group.
 
 For more information, see the [What Happens to a User After They Submit Feedback](#what-happens-to-user) section.
 
@@ -216,15 +217,15 @@ From the [feedback details](#feedback-details) page, you can manage tags by clic
 
 ## 5 Receiving Notifications {#notifications}
 
-You can receive a notification whenever new feedback lands in the inbox or when a reporter replies to their feedback. To receive these notifications, do as follows:
+You can receive a notification when new feedback lands in the inbox or when a reporter replies to their feedback. To receive notifications, do as follows:
 
 1. Watch the app on the [Settings](/developerportal/collaborate/general-settings/) page after you open it in the Developer Portal.
 2. Go to Feedback again.
 3.  Enable the feedback notifications as follows:
-    1. In Feedback, click the ({{% icon name="cog" %}}) icon on the upper-right corner of the page.
-    2. Turn on the toggle for the notifications.
+    1. In Feedback, click the **Settings** {{% icon name="cog" %}} icon on the upper-right corner of the page.
+    2. Turn on the toggle to receive notifications.
 
-### 5.1 Receiving Notifications for Individual Feedback
+### 5.1 Receiving Notifications for Individual Feedback Item
 
-You can also just receive notifications for individual feedback. Set this up by clicking the {{% icon name="view-off" %}} icon on the upper-right corner of the [Feedback](#feedback) tab after opening the feedback. You automatically start watching individual feedback whenever you respond to the reporter or leave a comment for your team in the **Communications** section.
+You can also just receive notifications for individual feedback item. Set this up by clicking the {{% icon name="view-off" %}} icon on the upper-right corner of the [Feedback](#feedback) tab after opening the feedback. You also automatically start watching individual feedback item whenever you respond to the reporter of the feedback or leave a comment for your team in the **Communications** section within the feedback.
 

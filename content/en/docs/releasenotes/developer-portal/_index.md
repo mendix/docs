@@ -21,7 +21,7 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 #### New Features
 
-* In Feedback, you can now [receive notifications for feedback](/developerportal/app-insights/feedback/#notifications). 
+* In Feedback, you can now configure whether you [receive notifications for feedback](/developerportal/app-insights/feedback/#notifications) or not.
 
 ### March 21
 

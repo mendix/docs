@@ -16,7 +16,7 @@ aliases:
 ## 1 Introduction
 
 {{% alert color="warning" %}}
-This information is for apps which are deployed to Insights Hub. It does not apply to Insights Hub IIoT for Makers.
+This information is for full integrated apps to Insights Hub. It does not apply to apps which are only calling Insights APIs.
 {{% /alert %}}
 
 This page contains detailed information about the content of Insights Hub modules for Mendix apps and what they are used for. If you want to deploy a Mendix app to Insights Hub, the instructions are in [Deployment on Siemens Insights Hub](/developerportal/deploy/deploying-to-mindsphere/).
@@ -37,7 +37,7 @@ Please ensure that you also download the *latest version* of the Siemens Insight
 
 ### 2.1 Constants
 
-{{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-module-details/image2.png" alt="Folder structure of the SiemensInsightsHubSingleSignOn module" >}}
+{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-module-details/image2.png" alt="Folder structure of the SiemensInsightsHubSingleSignOn module" >}}
 
 #### 2.1.1 LocalDevelopment
 
@@ -65,19 +65,19 @@ The SiemensInsightsHubSingleSignOn module also provides microflows which are use
 
 The microflows *DS_AccessToken* and *DS_GetAccessTokenForScheduledEvents* can be used for getting the users access token / technical access token which are needed on REST calls to Insights Hub.
 
-{{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-module-details/image3.png" alt="Folder structure showing microflows in the SiemensInsightsHubSingleSignOn module" >}}
+{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-module-details/image3.png" alt="Folder structure showing microflows in the SiemensInsightsHubSingleSignOn module" >}}
 
 #### 2.2.1 RegisterSingleSignOn
 
 This microflow must be added as the *After startup* microflow or added as a sub-microflow to an existing after startup microflow. You can do this on the *Runtime* tab of the **App** > **Settings** dialog, accessed through the *App Explorer* dock.
 
-{{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-module-details/image4.png" alt="App settings dialog" >}}
+{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-module-details/image4.png" alt="App settings dialog" >}}
 
 #### 2.2.2 DS_AccessToken
 
 This microflow populates the *AccessToken* entity.
 
-{{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-module-details/image5.png" alt="Domain model showing Insights Hub Token entity" >}}
+{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-module-details/image5.png" alt="Domain model showing Insights Hub Token entity" >}}
 
 If the access token can be retrieved, then this is used. If a valid token cannot be retrieved, *and the app is running locally*, then the user is asked to sign on by providing their credentials manually. This enables the app to be tested locally, without having to be deployed to the Insights Hub environment after every change. You should check whether the access token has been successfully retrieved using the query `${AccessTokenName} != empty`. For example, `$AccessToken != empty` in the scenario shown in the image below.
 
@@ -93,13 +93,13 @@ The AccessToken has a short time before it expires, and therefore needs to be re
 To improve security of your app, it is recommended that you delete *AccessToken* before showing a page or reaching the end of the microflow.
 {{% /alert %}}
 
-{{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-module-details/image6.png" alt="Section of a microflow showing the Access token action and the Edit Custom HTTP Header dialog in the Call REST action" >}}
+{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-module-details/image6.png" alt="Section of a microflow showing the Access token action and the Edit Custom HTTP Header dialog in the Call REST action" >}}
 
 #### 2.2.3 DS_Account
 
 This microflow populates the *Name* attribute of the *Tenant* entity and the *Email* attribute of the *Account* entity from the Insights Hub account details of the user. These are extensions to the Mendix User Object which assist the creation of multi-tenant apps.
 
-{{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-module-details/image7.png" alt="Domain model showing Account, Tenant, and TenantObject." >}}
+{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-module-details/image7.png" alt="Domain model showing Account, Tenant, and TenantObject." >}}
 
 In addition, Insights Hub SSO will identify whether the current user is a subtenant using **IsSubTenantUser** and, if so, will populate the name of the subtenant in **SubtenantId**. More information about subtenants can be found in the Insights Hub documentation [Subtenants](https://developer.mindsphere.io/apis/core-tenantmanagement/api-tenantmanagement-overview.html#subtenants).
 
@@ -117,7 +117,7 @@ Insights Hub apps have up to five application roles. Each Insights Hub user is g
 
 During the login process, Insights Hub application scopes are mapped to Mendix roles automatically. The comparison ignores upper- and lower-case differences. If the roles match, then that Mendix role is assigned to the user.
 
-{{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-module-details/roles-and-scopes.png" alt="Diagram showing relationship between different roles and scopes in Mendix and Insights Hub" >}}
+{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-module-details/roles-and-scopes.png" alt="Diagram showing relationship between different roles and scopes in Mendix and Insights Hub" >}}
 
 The mapping in the app template is:
 
@@ -128,11 +128,11 @@ The mapping in the app template is:
 
 In Insights Hub, these roles will look like this:
 
-{{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-module-details/image8.png" alt="Insights Hub Authorization Management screen" >}}
+{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-module-details/image8.png" alt="Insights Hub Authorization Management screen" >}}
 
 And in the Mendix app they will be mapped to these roles:
 
-{{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-module-details/image9.png" alt="Mendix App Security dialog" >}}
+{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-module-details/image9.png" alt="Mendix App Security dialog" >}}
 
 ## 3 Insights Hub OS Bar {#msosbar}
 
@@ -152,11 +152,11 @@ The Insights Hub OS Bar Connector also needs the Siemens Insights Hub Web Conten
 
 Within the OS Bar you can see information about the app you are running.
 
-{{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-module-details/image10.png" alt="Example of the information in the OS Bar" >}}
+{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-module-details/image10.png" alt="Example of the information in the OS Bar" >}}
 
 This is configured as a JSON object held in the string constant **Config** in the *SiemensInsightsHubOSBarConfig* module.
 
-{{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-module-details/image11.png" alt="Dialog for setting the Config constant for the OS Bar" >}}
+{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-module-details/image11.png" alt="Dialog for setting the Config constant for the OS Bar" >}}
 
 The JSON should contain the following information:
 

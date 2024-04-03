@@ -8,6 +8,10 @@ tags: ["MindSphere", "Insights Hub", "Credentials", "Multi-Tenant", "Environment
 
 ## 1 Introduction
 
+{{% alert color="warning" %}}
+This information is not for full integrated apps to Insights Hub. It apply to apps which are only calling Insights APIs.
+{{% /alert %}}
+
 In case you like your own user management or SSO solution, but likes to gather insights via the Insights Hub API, this chapter is describing how you can achieve it. This chapter is describing how you can authenticate Insights Hub API REST calls with the help of a **Technical User** and the **Siemens Insights Hub API Authenticator**.
 Please note that this way is not a fully integration within Insights Hub and have the following limitations
 
@@ -44,15 +48,15 @@ Calls to Insights Hub are made through REST calls which can be made using the st
 
 This is done by adding an **Access token** action before each **Call REST** action in your microflows. The **Access token** can be found within the toolbox on the right side.
 
-{{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-api-only/AccessTokenToolbox.png" alt="Authentication" >}}
+{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-api-only/AccessTokenToolbox.png" alt="Authentication" >}}
 
  The **Access token** action returns a string which contains an access token which can be used in the **Call REST** action. In the example below, the token string is given the name *Token*.
 
-{{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-api-only/AccessToken.png" alt="Authentication" >}}
+{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-api-only/AccessToken.png" alt="Authentication" >}}
 
 In the REST call, an HTTP Header is added called *Authorization* and this is given the value of the access token.
 
-{{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-api-only/CallRest.png" alt="Authentication" >}}
+{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-api-only/CallRest.png" alt="Authentication" >}}
 
 However, authentication will only be successful if the correct credentials are provided to the **Access token** action. This requires the following to be set in the **_Use me** folder of the *InsightsHubIIotAuthenticator* module:
 
@@ -67,7 +71,7 @@ However, authentication will only be successful if the correct credentials are p
     `https://demo.piam.eu1.mindsphere.io/oauth/token?grant_type=client_credentials`
 
 
-{{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-api-only/ModuleConfiguration.png" alt="Authentication" >}}
+{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-api-only/ModuleConfiguration.png" alt="Authentication" >}}
 
 ## 4 Authentication Considerations
 
@@ -80,7 +84,7 @@ When you are developing your app, you can set the **ClientID** and **ClientSecre
 
 Storing the *Client Secret* inside the app is, from a security perspective, not a good idea. A better approach is to use a local environment variable. Create a user-specific environment variable with *Variable name* equal to your *Client ID* value and the *Variable value* equal to your *Client Secret* value.
 
-{{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/envvariables.png"   width="50%"  >}}
+{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-development-considerations/envvariables.png"   width="50%"  >}}
 
 Don't forget to restart Studio Pro after you change / add the environment variable.
 {{% /alert %}}

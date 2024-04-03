@@ -39,7 +39,7 @@ The **Siemens Insights Hub Mobile Starter Application** template provides the ab
 
 1. Open the **Developer Cockpit** via the Launchpad of your *Developer Tenant*.
 
-    {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-mobile-native/DeveloperCockpit_Launchpad.png" alt="DeveloperCockpit" >}}
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-mobile-native/DeveloperCockpit_Launchpad.png" alt="DeveloperCockpit" >}}
 
 1. Click **Add application** and fill in the following:
 
@@ -49,11 +49,11 @@ The **Siemens Insights Hub Mobile Starter Application** template provides the ab
     * ```Internal Name``` — give an internal name. We need this name later and will call it **internal_name**
     * ```Version = 1.0.0```
 
-    {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-mobile-native/DC_CreateApp.png" alt="DeveloperCockpit" >}}
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-mobile-native/DC_CreateApp.png" alt="DeveloperCockpit" >}}
 
 1. Open the tab **Configurations** and specify a value for the **custom-scheme** which is your Deep Link. Please copy the value, we will need it later again. Note: the value should be unique for your app. If another app installed on the phone is using the same value it might interfere with the authentication process. For example, use a combination of company and app name to ensure that it is unique.
 
-    {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-mobile-native/DC_DeepLink.png" alt="DeveloperCockpit" >}}
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-mobile-native/DC_DeepLink.png" alt="DeveloperCockpit" >}}
 
 1. Click **Save** to save your new app.
 
@@ -63,28 +63,28 @@ The **Siemens Insights Hub Mobile Starter Application** template provides the ab
 
 1. Click **Configure** to open the **Roles and Scopes Management**.
 
-    {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-mobile-native/DC_Configure.png" alt="DeveloperCockpit" >}}
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-mobile-native/DC_Configure.png" alt="DeveloperCockpit" >}}
 
 1. Extend the **Application Scopes** section and click **Create Scope**.
 1. Add a scope with name **admin** and assign it the role **admin**.
 1. Click **Create Scope** again and enter **user** as the scope name and assign it to the **admin** and **user** roles.
 1. The final result should look similar to:
 
-    {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-mobile-native/DC_ScopesRoles.png" alt="DeveloperCockpit" >}}
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-mobile-native/DC_ScopesRoles.png" alt="DeveloperCockpit" >}}
 
 1. Click **Back to App** and **Register** to finalize the registration on Insights Hub:
 
-    {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-mobile-native/DC_Register.png" alt="DeveloperCockpit" >}}
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-mobile-native/DC_Register.png" alt="DeveloperCockpit" >}}
 
 1. You will see the following popup after registration:
 
-    {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-mobile-native/DC_AppCred.png" alt="DeveloperCockpit" >}}
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-mobile-native/DC_AppCred.png" alt="DeveloperCockpit" >}}
 
     We will need the **Client ID** and the **Client Secret** later, so copy them somewhere – we will call these constants **client_id** and **client_secret**.
 
 1. The last step is to grant yourself the *user* or *admin* role in the app **Settings**.
 
-    {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-mobile-native/Settings_AppRole.png" alt="DeveloperCockpit" >}}
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-mobile-native/Settings_AppRole.png" alt="DeveloperCockpit" >}}
 
 You now have successfully registered your application within the Developer Cockpit.
 
@@ -102,7 +102,7 @@ Now, you need to make some configuration changes in the app itself.
 
 In the **App Explorer** open the configuration of the app store module **SiemensInsightsHubSingleSignOn**:
 
-{{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-mobile-native/StudioPro_SSO_configuration.png" alt="Studio Pro SSO configuration" >}}
+{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-mobile-native/StudioPro_SSO_configuration.png" alt="Studio Pro SSO configuration" >}}
 
 Change these constants:
 
@@ -125,7 +125,7 @@ In this section you will create your own custom development app and register a d
 
 In principle, you have to follow the description of how to create a [Custom Development App](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/), and install it on your device or emulator as described there. There is only one additional thing required for the Insights Hub integration. The **custom_scheme** specified in the Developer Cockpit app registration process needs to be provided as the **Deep link** in the **App capabilities** section.
 
-{{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-mobile-native/StudioPro_NativeBuilder.png" alt="Studio Pro SSO configuration" >}}
+{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-mobile-native/StudioPro_NativeBuilder.png" alt="Studio Pro SSO configuration" >}}
 
 ### 2.4 Try out your application
 
@@ -133,12 +133,12 @@ You should now be ready to start your application for the very first time on you
 
 When your application is running, you will see the login page of the Anonymous user role.
 
-{{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-mobile-native/MobileLoginPage.png" alt="Mobile" >}}
+{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-mobile-native/MobileLoginPage.png" alt="Mobile" >}}
 
 Please provide your developer tenant name and tap the **Login** button.
 The default browser of your phone will open and show you the Insights Hub credential page where you can sign in with your Insights Hub credentials.
 
-{{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-mobile-native/MobileCredentialPage.png" alt="Mobile" >}}
+{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-mobile-native/MobileCredentialPage.png" alt="Mobile" >}}
 
 After a successful login, your app will be restarted and a session created. Then your native home page is displayed.
 
@@ -159,7 +159,7 @@ When you enhance your application with Insights Hub API calls to use the IoT cap
 
 With each Insights Hub API call you have to ensure that the corresponding user token is part of the request. Do this by adding the **Access Token** action before your REST calls and set the **Authorization** header accordingly.
 
-{{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-development-considerations/delete-mindspheretoken.png" alt="Mobile" >}}
+{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-development-considerations/delete-mindspheretoken.png" alt="Mobile" >}}
 
 #### 2.5.2 Extend your application registration with Insights Hub API roles
 
@@ -167,20 +167,20 @@ As of now your application has the user roles **admin** and **user**, but none o
 
 1. Open the **Developer Cockpit** via the Launchpad of your *Developer Tenant*.
 
-    {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-mobile-native/DeveloperCockpit_Launchpad.png" alt="DeveloperCockpit" >}}
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-mobile-native/DeveloperCockpit_Launchpad.png" alt="DeveloperCockpit" >}}
 
 1. Select your application.
 1. Click the **Configure** button to open the roles tab.
 
-    {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-mobile-native/DC_Configure.png" alt="DeveloperCockpit" >}}
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-mobile-native/DC_Configure.png" alt="DeveloperCockpit" >}}
 
 1. Open the **API Roles section** and click the **Add API Role** button.
 
-    {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-mobile-native/DC_AddAPIRole.png" alt="DeveloperCockpit" >}}
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-mobile-native/DC_AddAPIRole.png" alt="DeveloperCockpit" >}}
 
 1. Select the corresponding role you need for your particular API call and assign it to your user roles. For example:
 
-    {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-mobile-native/DC_ChooseAPIRole.png" alt="DeveloperCockpit" >}}
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-mobile-native/DC_ChooseAPIRole.png" alt="DeveloperCockpit" >}}
 
     Your application has now been updated to be allowed to make API calls
 
@@ -198,11 +198,11 @@ The **Siemens Insights Hub SSO** module provides a couple of nanoflows which sho
 
 Authentication is based on the usage of **Anonymous** users and is enabled in the **App Security** dialog box.
 
-{{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-mobile-native/StudioPro_Security_Anonymous.png" alt="StudioPro" >}}
+{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-mobile-native/StudioPro_Security_Anonymous.png" alt="StudioPro" >}}
 
 When the application starts it will provide the **Login** page from the **Login** folder where the user can provide the tenant name they want to authenticate against. To get this to work, the **Login** page is registered as the default home page for the Anonymous role.
 
-{{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-mobile-native/StudioPro_Navigation_Anonymous_HomePage.png" alt="StudioPro" >}}
+{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-mobile-native/StudioPro_Navigation_Anonymous_HomePage.png" alt="StudioPro" >}}
 
 Clicking the **Sign in** button calls the nanoflow **ACT_Login** which opens the browser so that the user can provide their credentials.
 After a successful login, the deep link handler of the SSO module will fetch the Insights Hub Mobile Token and will start the user session accordingly.
@@ -214,7 +214,7 @@ If something went wrong during the authentication process, the corresponding err
 
 If you have already developed a Web application for Insights Hub, you will be aware that you need to use the included **Access Token** action with your REST calls.
 
-{{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-mobile-native/StarterMobileAccessToken.png" alt="StarterMobile" >}}
+{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-mobile-native/StarterMobileAccessToken.png" alt="StarterMobile" >}}
 
 The good news for native mobile is: this do not change. You can use the same microflows for Web apps and native apps to fetch Insights Hub APIs.
 
@@ -237,17 +237,17 @@ As you need a valid Insights Hub token to call Insights Hub APIs, it is very imp
 
 * Application startup: The standard mobile home page of the Native Mobile Application already has a Data view calling the nanoflow **OnSessionStartup**. OnSessionStartup will take care of the checks mentioned above.
 
-    {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-mobile-native/StarterMobile_OnSessionStartup.png" alt="StarterMobile" >}}
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-mobile-native/StarterMobile_OnSessionStartup.png" alt="StarterMobile" >}}
 
 * Application resume: an **App events** element is placed within the provided Data view which causes the **On resume** event to call the nanoflow `SiemensInsightsHubSingleSignOn.OnResume` which does the checks mentioned above.
 
-    {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-mobile-native/StarterMobile_OnResume.png" alt="StarterMobile" >}}
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-mobile-native/StarterMobile_OnResume.png" alt="StarterMobile" >}}
 
 * Application comes online: The same as on application resume but now the **On online** event of the App events will call the `OnResume` nanoflow.
 
 * Periodically your token needs to be checked while your app is running. Therefore the `SiemensInsightsHubSingleSignOn.OnRefresh` nanoflow is configured to be called every minute.
 
-    {{< figure src="/attachments/partners/siemens/mindsphere/mendix-on-mindsphere/mindsphere-mobile-native/StarterMobile_OnRefresh.png" alt="StarterMobile" >}}
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-mobile-native/StarterMobile_OnRefresh.png" alt="StarterMobile" >}}
 
 {{% alert color="warning" %}}
 You will want to change the home page to fit with the rest of your app. Please do this, but do not delete the initially provided Data view and App events.

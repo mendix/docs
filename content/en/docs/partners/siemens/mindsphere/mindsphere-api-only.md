@@ -9,10 +9,10 @@ tags: ["MindSphere", "Insights Hub", "Credentials", "Multi-Tenant", "Environment
 ## 1 Introduction
 
 {{% alert color="warning" %}}
-This information is not for full integrated apps to Insights Hub. It apply to apps which are only calling Insights APIs.
+This information is not for full integrated Insights Hub apps. It apply to apps which are only calling Insights APIs.
 {{% /alert %}}
 
-In case you like your own user management or SSO solution, but likes to gather insights via the Insights Hub API, this chapter is describing how you can achieve it. This chapter is describing how you can authenticate Insights Hub API REST calls with the help of a **Technical User** and the **Siemens Insights Hub API Authenticator**.
+In case you like your own user management or SSO solution, but likes to gather insights via the Insights Hub APIs, this chapter is describing how you can achieve it. This chapter is describing how you can authenticate Insights Hub API REST calls with the help of a **Technical User** and the **Siemens Insights Hub API Authenticator**.
 Please note that this way is not a fully integration within Insights Hub and have the following limitations
 
 * You cannot make your app multi-tenant – see [Multi-tenancy](/partners/siemens/mindsphere-development-considerations/#multitenancy) in *Insights Hub Development Considerations* for more information on multi-tenancy
@@ -66,7 +66,7 @@ However, authentication will only be successful if the correct credentials are p
     
     `https://{tenantName}.piam.{region}.{mindsphere-domain}/oauth/token?grant_type=client_credentials`
 
-    You have to replace the `tenantName`, `region` and `mindsphere-domain` to your personal needs e.g.
+    You have to replace `tenantName`, `region` and `mindsphere-domain` regarding your destination tenant e.g.
 
     `https://demo.piam.eu1.mindsphere.io/oauth/token?grant_type=client_credentials`
 

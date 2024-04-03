@@ -215,6 +215,16 @@ To force a query to the runtime, use microflows. For example, create a microflow
 
 Default: *Yes*
 
+### 3.15 Foreign Key Constraints {#database-fkc}
+
+If this option is enabled, database foreign key constraints will be used. An attempt to commit a dangling reference will throw a runtime exception.
+
+{{% alert color="info" %}}
+This option was added in Mendix 10.10.
+{{% /alert %}}
+
+Default: *Yes* (for projects created with Mendix 10.6.0 or later)
+
 ## 4 Languages Tab {#languages-tab}
 
 For more information about using different languages in your app, see [Language Menu](/refguide/translatable-texts/).

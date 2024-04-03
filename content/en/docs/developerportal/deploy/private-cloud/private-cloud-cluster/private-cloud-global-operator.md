@@ -131,7 +131,7 @@ For Global Operator installations, execute the above command in both the Global 
 It is crucial to maintain consistent Operator configuration for PCLM in both the Global Operator and managed namespaces. This requires uniformity in server URLs and credential secret names used both in managed and Global Operator namespaces. Any deviations from this practice may lead to unexpected and undesired outcomes.
 {{% /alert %}}
 
-Licenses imported in the PCLM Server will appear in the PCLM Statistics section of the Global Operator main namespace. You can see both **Runtime** and **Operator** license.
+Licenses imported in the PCLM Server appear in the PCLM Statistics section of the Global Operator main namespace. You can see both **Runtime** and **Operator** license.
 
 Claimed licenses will be visible in the PCLM Statistics section of the Managed namespace.
 

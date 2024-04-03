@@ -65,7 +65,7 @@ Should you consider using a connected environment, the following URLs should be 
 
 7. Enter the following information:
 
-    1. **Installation Type**  – Choose Global Installation if you want a single operator namespace to manage multiple namespaces or just a single operator namespace. For more information, see [Global Operator](/developerportal/deploy/global-operator/).
+    1. **Installation Type**  – Choose Global Installation if you want a single operator namespace to manage multiple namespaces or Namespace Installation if only one namespace is required to managed by an operator. For more information, see [Global Operator](/developerportal/deploy/global-operator/).
 
     2. **Cluster Name** – The name that you want to give the cluster which you are creating.
 
@@ -944,7 +944,7 @@ When you delete a namespace, this removes the namespace from the cluster in the 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image26.png" >}}
 
 {{% alert color="info" %}}
-In the case of a Global Operator managed namespace, the managed namespace will not be deleted from the cluster. You must delete it from the cluster manually.
+In the case of a Global Operator managed namespace, the managed namespace will not be deleted from the cluster. You must delete it from the cluster manually. Along with this you also need to delete the managed namespace from the Global Operator list of operator configuration of main namespace.
 {{% /alert %}}
 
 In order to delete the namespace from the cluster, perform the following steps:
@@ -1264,6 +1264,10 @@ Once you enable the **Use custom core resources plans** button, you cannot switc
 
 The **Installation** tab shows you the Configuration Tool which you used to create the namespace, together with the parameters which are used to configure the agent. You can use the Configuration Tool again to change the configuration of your namespace by pasting the command into a command line terminal as described in [Running the Configuration Tool](/developerportal/deploy/standard-operator/#running-the-tool), above. You can also download the Configuration Tool again, if you wish.
 
+{{% alert color="info" %}}
+In case of Global Operator Managed namespace, you will see Congfiguration tab instead of Installation section. For more information, see [Global Operator Namespace](/developerportal/deploy/global-operator/)
+{{% /alert %}}
+
 #### 7.2.7 Additional Information
 
 This tab shows information on the versions of the various components installed in your namespace.
@@ -1323,6 +1327,10 @@ If you want to use the Private Cloud License Manager, the Mendix Operator must b
 {{% /alert %}}
 
 For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/).
+
+{{% alert color="info" %}}
+If Global Operator is configured with [PCLM](developerportal/deploy/private-cloud/private-cloud-license-manager/), you will be able to view the **Runtime** and **Operator** list of licenses in the main namespace, and for the managed namespace (when configurd with PCLM), only list of **claims** will be visible.
+{{% /alert %}}
 
 ## 8 Current Limitations
 

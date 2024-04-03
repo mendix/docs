@@ -363,6 +363,10 @@ AWS IRSA allows a Kubernetes Service Account to assume an IAM role. For this to 
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/awsserviceaccountlinktorole.png" >}}
 
+{{% alert color="info" %}}
+In case of Global Operator, managed namespace needs to be provided in namespace field.
+{{% /alert %}}    
+
 2. For the second condition, copy and paste the `sts.amazonaws.com` line; replace `:aud` with `:sub` and set it to `system:serviceaccount:<Kubernetes namespace>:<Kubernetes serviceaccount name>`.
 
     See [Amazon EKS Pod Identity Webhook – EKS Walkthrough](https://github.com/aws/amazon-eks-pod-identity-webhook#eks-walkthrough) for more details.
@@ -977,6 +981,10 @@ AWS IRSA allows a Kubernetes Service Account to assume an IAM role. For this to 
 
 2. For the second condition, copy and paste the `sts.amazonaws.com` line; replace `:aud` with `:sub` and set it to `system:serviceaccount:<Kubernetes namespace>:<Kubernetes serviceaccount name>`.
 
+  {{% alert color="info" %}}
+  In case of Global Operator, managed namespace name should be provided in namespace.
+  {{% /alert %}}  
+
     See [Amazon EKS Pod Identity Webhook – EKS Walkthrough](https://github.com/aws/amazon-eks-pod-identity-webhook#eks-walkthrough) for more details.
 
     The role ARN is required, you can use the **Copy** button next to the ARN name in the role details.
@@ -1523,8 +1531,7 @@ To configure the required settings for an RDS database, do the following steps:
     {{% alert color="info" %}}The VPC and firewall must be configured to allow connections to the database from the Kubernetes cluster. When creating the RDS instance, as a best practice, make sure that it uses the same VPC as the Kubernetes cluster. Alternatively, you can also use a publicly accessible cluster. After an RDS instance has been created, it is not possible to modify its VPC.
     {{% /alert %}}
 
-    {{% alert color="info" %}}
-    In the case of Aurora DB, ensure that the `rds_iam` role is granted to the master database user.
+    {{% alert color="info" %}}In the case of Aurora DB, ensure that the `rds_iam` role is granted to the master database user.
     {{% /alert %}}
 
 2. Navigate to the RDS instance details, and write down the following information:
@@ -1539,6 +1546,10 @@ To configure the required settings for an RDS database, do the following steps:
 
 3. Download the [RDS TLS certificates](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.SSL.html#UsingWithRDS.SSL.CertificatesAllRegions)
 and save them into a Kubernetes secret (replace `{namespace}` with the namespace where the Mendix Operator is installed):
+
+    {{% alert color="info" %}}In the case of Global Operator, replace `{namespace}` with the managed namespace name)
+    {{% /alert %}}
+
 
 ```shell
 curl -L -o custom.crt https://truststore.pki.rds.amazonaws.com/global/global-bundle.pem
@@ -1645,6 +1656,11 @@ Create a new IAM role.
         {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/awsserviceaccountlinktorole.png" >}}
 
     2. For the second condition, copy and paste the `sts.amazonaws.com` line; replace `:aud` with `:sub` and set it to `system:serviceaccount:<Kubernetes namespace>:<Kubernetes serviceaccount name>`.
+
+    {{% alert color="info" %}}
+In case of Global Operator, replace <Kubernetes namespace> with the managed namespace name.
+{{% /alert %}}
+  
     See [Amazon EKS Pod Identity Webhook – EKS Walkthrough](https://github.com/aws/amazon-eks-pod-identity-webhook#eks-walkthrough) for more details.
     After this, the specified serviceaccount in the specified namespace will be able to assume this role.
 

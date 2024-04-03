@@ -210,9 +210,19 @@ A repository can contain a number of development lines. Each development line of
 
 It is often convenient to have more than one development line. For example, one development line is for fixing bugs in the currently deployed version of your app and another line is where you develop new functionality. If you then find a bug in the deployed version, you can fix it in the corresponding development line irrespective of the state of the development line where new functionality is developed. For more information about branches, see the [Branches](/refguide/version-control/#branches) section in *Version Control*. 
 
-### 7.1 When to Use a Branch
+### 7.1 Working with Branches in Studio Pro
 
-#### 7.1.1 Patching a Deployed Application
+#### 7.1.1 Branching
+
+Development lines other than the main line are called branch lines. You can consider developing new features in the main line and using branch lines for fixing bugs in versions that have been deployed. This is the scenario Studio Pro makes easy but other scenarios for more complex apps are supported as well.
+
+You can create branch lines from the **Branch Line Manager** which you can find at **Version Control > Manage Branch Lines...**.
+
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/create-branch-line.png" >}}
+
+The most common examples on using branch lines are [patching a deployed application](#patch) and [developing a new feature](#new-feature).
+
+##### 7.1.1.1 Patching a Deployed Application {#patch}
 
 If you want to add some functionality to a deployed application or you want to fix a bug in it, you can do so without interfering with other development.
 
@@ -231,7 +241,7 @@ We advise you to merge the fixed maintenance branch into the main line quickly, 
 Of course, not all maintenance fixes need to be merged to the main line. Sometimes, it is a fix of something that was completely redesigned or eliminated in the main line. In this case, merging is unnecessary.
 {{% /alert %}}
 
-#### 7.1.2 Developing a New Feature Independently
+##### 7.1.1.2 Developing a New Feature Independently {#new-feature}
 
 Another reason for creating a branch is to develop a big new feature without interfering with other development. This gives you the freedom to commit a half-implemented feature, possibly even with errors, while other people can still commit and update/pull on the main line. Without using a branch line, you would have to constantly make sure that your app is error free and does not break other parts of the system.
 
@@ -239,38 +249,20 @@ Firstly, select **Version Control > Manage Branch Lines...** and create a branch
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/create-branch-line-dialog.png" >}}
 
-Now work on the branch until the feature is done and commit the completed work.
-
-To merge the whole branch back to the main line to integrate the feature there, do the following:
-
-1. Open the main line.
-2. Choose **Version Control > Merge Changes Here**.
-3. Select **Merge feature branch** option.
-4. Click **Merge**.
-5. Resolve any conflicts and errors.
-6. Commit the new feature to the main line.
+Now work on the branch until the feature is done, commit the completed work and merge your branch back to the main line (for more information on merging, see the [Merging](#merge) section below). 
 
 You can delete the branch after merging it back, if you want.
 
-### 7.2 Working with Branches in Studio Pro
+#### 7.1.2 Merging {#merge}
 
-#### 7.2.1 Branching
-
-Development lines other than the main line are called branch lines. Our advice would be to develop new features in the main line and to use branch lines for fixing bugs in versions that have been deployed. This is the scenario Studio Pro makes easy but other scenarios for more complex apps are supported as well.
-
-You can create branch lines from the Branch Line Manager which you can find at **Version Control > Manage Branch Lines...**.
-
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/create-branch-line.png" >}}
-
-#### 7.2.2 Merging
-
-If you have multiple development lines, you sometimes want to port changes from one development line to another. For example, the fix that you made in a branch line for the production version should also be applied to the new 2.0 version you are developing in the main line. You can, of course, do this by hand but Studio Pro can also help you by merging changes from one development line to another.
+If you have multiple development lines, you sometimes want to merge changes from one development line to another. For example, the fix that you made in a branch line for the production version should also be applied to the new 2.0 version you are developing in the main line. You can, of course, do this by hand but Studio Pro can also help you by merging changes from one development line to another.
 
 Merging is always done while you have a working copy open. The merge will result in extra local changes in that working copy. It is advisable to commit local changes first before merging extra changes into a working copy. Otherwise, the uncommitted local changes and the changes caused by the merge will be combined and it is very hard to untangle them if you are unhappy with the merge. Studio Pro will warn you if you have uncommitted changes.
 
 Select **Version Control** > **Merge Changes Here**, after that you can select **Port fix** or **Merge feature branch** options. For more information on merge settings, see [Merge Dialog](/refguide/merge-dialog/).
 
-#### 7.2.3 Reverse Merging
+
+#### 7.1.3 Reverse Merging
 
 Reverting changes works for changes that have not been committed yet. Changes that have been committed can never be deleted. However, you can apply the changes 'in reverse' and commit that. This feature is called 'Reverse merging' in Studio Pro.
 
@@ -282,7 +274,7 @@ Reverting changes is done with one commit at a time. If you want to revert multi
 
 After a reverse merge the app will look like the changes never happened; if you 'reverse merge' the adding of a page, the page will be deleted locally. Just like when you are doing a normal merge, conflicts can arise. In the example, if later commits change the added page, the reverse merge will result in a conflict. After resolving any problems, you can commit the results to the repository.
 
-#### 7.2.4 Replacing the Main Line with a Branch Line
+#### 7.1.4 Replacing the Main Line with a Branch Line
 
 There are two methods for fully replacing your main line with a branch line.
 
@@ -298,7 +290,7 @@ The second method should be used if the first method is not possible for some re
 3. Commit your changes using Studio Pro. 
 4. Reopen the main line app in Studio Pro only after overwriting the files.
 
-#### 7.2.5 Merging Using Git in the Command Line
+#### 7.1.5 Merging Using Git in the Command Line
 
 For merging *.mpr* files using Git in the command line to work, it is necessary to attach *mx.exe* merge to Git as a driver.
 

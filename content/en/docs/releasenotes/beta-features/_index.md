@@ -31,6 +31,8 @@ An example is a new major version of Mendix Studio Pro. We release this product 
 
 The availability of beta/experimental features and products is documented in the release notes for the release. Other documentation may be provided by Mendix. Please consult the release notes and the documentation for details on how to enable and use these features and products.
 
+In the docs, pages about beta features are marked with a beta badge (<text class="badge badge-pill badge-beta" style="margin-left:0px">BETA</text>) on the left sidebar.
+
 ## 2 Testing Beta Releases
 
 If you would like to test a beta feature or product, consider the following:

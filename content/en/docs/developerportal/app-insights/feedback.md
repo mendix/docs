@@ -87,7 +87,7 @@ If you select feedback, you can see the following items:
 
 * **Link** – Clicking this links the feedback together into one feedback group.
 
-  You need to choose which feedback item is the primary feedback item of the group. After the feedback item is linked, only the primary feedback items appears in the list. The feedback items that are linked to the primary feedback item will disappear from the list. You can only access these linked feedback items from their primary feedback. If you change the status of the primary feedback item, all the linked feedback items will get the same status automatically.
+  You need to choose which item is the primary item of the group. After the feedback items are linked, only the primary feedback item appears in the list. The feedback items that are linked to the primary item will disappear from the list. You can only access these linked feedback items from their primary item. If you change the status of the primary feedback item, all the linked items will get the same status automatically.
 
   {{% alert color="info" %}}When you open a linked feedback, you can click **Make [the linked feedback] the Primary feedback** to make this feedback the primary of the feedback group instead.{{% /alert %}}
 

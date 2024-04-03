@@ -364,7 +364,7 @@ AWS IRSA allows a Kubernetes Service Account to assume an IAM role. For this to 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/awsserviceaccountlinktorole.png" >}}
 
 {{% alert color="info" %}}
-In case of Global Operator installation, the managed namespace needs to be provided in namespace field.
+For Global Operator installations, you must specify the managed namespace in the **Namespace** field.
 {{% /alert %}}    
 
 2. For the second condition, copy and paste the `sts.amazonaws.com` line; replace `:aud` with `:sub` and set it to `system:serviceaccount:<Kubernetes namespace>:<Kubernetes serviceaccount name>`.

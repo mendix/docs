@@ -132,8 +132,8 @@ On the [Inbox](#inbox) and [Archive](#archive) tabs, you can open feedback by cl
 The **Feedback** tab shows the following items: 
 
 * Buttons ({{% icon name="view-off" %}} {{% icon name="view" %}} {{% icon name="hyperlink" %}} {{% icon name="three-dots-menu-horizontal" %}}) on the upper-right corner
-    * {{% icon name="view-off" %}} – Clicking the button to start receiving [notifications](#notifications) related to this feedback. You also automatically start watching feedback whenever you respond to a reporter or leave a comment for your team in the **Communications** section.
-    * {{% icon name="view" %}} – Clicking the button to stop receiving notifications related to this feedback.
+    * {{% icon name="view-off" %}} – Clicking the button to start receiving [notifications](#notifications) for this feedback. You also automatically start receiving notifications for this feedback whenever you respond to the reporter of the feedback or leave a comment for your team in the **Communications** section within the feedback.
+    * {{% icon name="view" %}} – Clicking the button to stop receiving notifications for this feedback.
     * **Copy Link** ({{% icon name="hyperlink" %}}) – Clicking this button copies the URL to the feedback. You can send the URL to other people.
     * **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) – Clicking the button opens a menu with the following items:
         * **Move** – Clicking this button moves the feedback to any other app of which you are a member. Whenever you move feedback, you will also move all linked feedback. If you only want to move one feedback item, you need to unlink the feedback from the group first.
@@ -225,7 +225,7 @@ You can receive a notification when new feedback lands in the inbox or when a re
     1. In Feedback, click the **Settings** {{% icon name="cog" %}} icon on the upper-right corner of the page.
     2. Turn on the toggle to receive notifications.
 
-### 5.1 Receiving Notifications for Individual Feedback Item
+### 5.1 Receiving Notifications for an Individual Feedback Item
 
-You can also just receive notifications for individual feedback item. Set this up by clicking the {{% icon name="view-off" %}} icon on the upper-right corner of the [Feedback](#feedback) tab after opening the feedback. You also automatically start watching individual feedback item whenever you respond to the reporter of the feedback or leave a comment for your team in the **Communications** section within the feedback.
+You can also just receive notifications for an individual feedback item. Set this up by clicking the {{% icon name="view-off" %}} icon on the upper-right corner of the [Feedback](#feedback) tab after opening the feedback. You also automatically start receiving notifications for an individual feedback item whenever you respond to the reporter of the feedback or leave a comment for your team in the **Communications** section within the feedback.
 

@@ -82,7 +82,7 @@ Container (XR) has the following properties that can be set in Studio Pro:
 
 An empty container widget which can be used to group other widgets. This is useful for when you want to move multiple objects as one, or scale multiple objects as one. It also has a **Billboard rotation** feature, which can be used to have objects rotate to always face the user.
 
-#### 3.2.1 General tab
+#### 3.2.1 General Tab
 
 Node (XR) has the same properties as [3D Object widgets](#3dobject), with the following additions:
 
@@ -96,7 +96,7 @@ The Repeater (XR) widget allows the user to create one configuration and repeat 
 
 * **Data Source** - The datasource based on which the objects should be repeated. For example, this could have a list of 5 objects that have a hex color value. Based on this, while only modeling out 1 **Sphere (XR)** object where the color value could be tied to this. Creating 5 **Sphere (XR)** with different colors.
 
-## 4 3D Object widgets {#3dobject}
+## 4 3D Object Widgets {#3dobject}
 
 These are widgets that show a 3D Object, either predetermined (like **Cube (XR)**, **Sphere (XR)** and **Square (XR)**) or based on input (**3D Object (XR)** and **Text (XR)**)
 
@@ -104,55 +104,55 @@ These are widgets that show a 3D Object, either predetermined (like **Cube (XR)*
 
 These properties exist for all 3D Object widgets (**Cube (XR)**, **Sphere (XR)**, **Square (XR)**, **3D Object (XR)** ,**Text (XR)**) and the **Node (XR)** widget
 
-#### 4.1.1 General tab
+#### 4.1.1 General Tab
 
 * **Position** - Sets the position of the object in meters. Setting **X** to 1 means the object will be placed 1 meter to the right. **Y** controls the up and down axis. **Z** moves the object front to back.
 * **Rotation** - Sets the rotation of the object in degrees (from 0 degrees to 360 degrees) on three axis.
 * **Scale** - Sets the scale of the object, this multiplies the size of the object as it is. If the objects is 1 meter wide, setting the **X** to 2 will make the object 2 meters wide.
 
-#### 4.1.2 Material tab
+#### 4.1.2 Material Tab
 
 * **Type**
-  * **Object** - Only available for **3D Object (XR)**, selecting this will make the object use the material as present on the 3D Object.
-  * **Texture** - Sets a Static or Dynamic image for this object. This image will then be mapped onto the 3D object.
-  * **Color** - Sets a solid color on an object, this should be provided in the #rrggbb format.
+  * **Object** - Only available for **3D Object (XR)**. Selecting this will make the object use the material as present on the 3D Object.
+  * **Texture** - Sets a static or dynamic image for this object. This image will then be mapped onto the 3D object.
+  * **Color** - Sets a solid color on an object. This should be provided in the #rrggbb format.
 * **Opacity** - The transparency of the object. 0 is transparent, while 1 is opaque.
 
 * **Lighting**
   * **Type** - The kind of lighting that should be used on this object. **Simple** lighting is more basic looking, but easier to render, leading to better framerates. **Realistic** lighting shows more complex reflections and adds options for the type of material this object is supposed to have:
-    * **Roughness** - Takes a value from 0 - 1, where with 0 the object is smooth as glass, with higher values making it more matte.
-    * **Metalness** - Takes a value from 0 - 1, where 0 will make an object appear more like plastic, with 1 making an object appear metallic.
+    * **Roughness** - Takes a value from 0-1, where with 0 the object is smooth as glass, with higher values making it more matte.
+    * **Metalness** - Takes a value from 0-1, where 0 will make an object appear more like plastic, with 1 making an object appear metallic.
 
-#### 4.1.3 Interaction tab
+#### 4.1.3 Interaction Tab
 
-All interactions are done through a mesh like interface around the object. The different types of interaction (scaling, rotating and position) are all done with this one interface. The different options can be enabled or disabled independently.
+All interactions are done through a mesh-like interface around the object. The different types of interaction (scaling, rotating, and position) are all done using this one interface. The different options can be enabled or disabled independently.
 
 * **Dragging**
-
-  * **Dragging** - **Yes** or **No** sets whether to activate the dragging interface
-  * **Enable dragging** - Sets whether the dragging interface should be active at this moment. This could for example be switched on and off when the user clicks a specific 3D object
-  * **Type** - **Fixed distance** or **Fixed to world**, sets whether the dragging should be at a fixed distance in front of the user (**Fixed distance**), or if the object should 'stick' to the world (**Fixed to world**).
+  * **Dragging** - Determines if the dragging interface is enabled.
+  * **Enable dragging** - Controls if the dragging interface should be active at this moment. For example, this could be switched on and off when the user clicks a specific 3D object.
+  * **Type** - Sets whether the dragging should be at a fixed distance in front of the user (**Fixed distance**), or if the object should "stick" to the world (**Fixed to world**).
   * **On drag** - An event called when the object is dragged.
 
 * **Pinching**
-  * **Scaling interaction** - **Yes** or **No**, whether this interface should be enabled at all.
-  * **Enable scaling interface** - **Yes** or **No**, whether this interface should be enabled at this moment. This can be connected to a clicking event, for example, when a user clicks on an object the interface could appear allowing a user to make changes to it.
-  * **Enabled rotation interface** - **Yes** or **No**, works the same as the scaling interface, but for rotation instead.
-  * **Scaling interface color** - The color of that interface, should be provided in the #rrggbb format.
-  * **Scaling interface size** - The size of the object in the interface in meters.
+  * **Scaling interaction** - Determines if the pinching interface is enabled.
+  * **Enable scaling interface** - Controls if this interface should be enabled at this moment. This can be connected to a clicking event. For example when a user clicks on an object the interface, then could appear allowing a user to make changes to it.
+  * **Enable rotation interface** - Works the same as the scaling interface, but for rotation instead.
+  * **Scaling interface color** - The color of that interface. Should be provided in the #rrggbb format.
+  * **Scaling interface size** - The size of the object in the interface (in meters).
   * **On scale** - An event called when the object is scaled.
 
-#### 4.1.4 Events tab
+#### 4.1.4 Events Tab
 
-* **On click** - An event called when object is clicked
+* **On click** - An event called when object is clicked.
 * **On hover enter** - An event called when the user hovers over object, without clicking it.
 * **On hover exit** - An event called when the user stops hovering over an object.
 
-### 4.2 Each widget and their specific properties
+### 4.2 Specific Widget Properties
 
 #### 4.2.1 3D Object (XR)
 
 Shows 3D object, in gltf or glb formats. Requires a link to a 3D Object to show. 3D Objects can be shown in their original size and material by not altering the **Scale** and setting the **Material** to **Object**. The object will appear in the scale that it was made, meaning that 1 unit will be 1 meter. Units can differ between modeling programs (sometimes a unit is a meter, sometimes a unit is a centimeter, sometimes the modeler doesn't take actual size into account and only works relatively), so it's good to check that the model is of the size you expect it to be. If it's too large or too small, you can adjust it with the Scale property on this widget.
+
 Apart from the properties also found on the other AR widgets, the **3D Object (XR)** widget has a **URL** property:
 
 * **URL** - the **URL** to the 3D object that should be shown here. Has to be either of the glb or gltf format.

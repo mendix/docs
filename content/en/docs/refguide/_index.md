@@ -9,6 +9,7 @@ description_list: true
 cascade:
     - space: "Studio Pro 10"
     - mendix_version: 10
+    - isCanonical: true
     - sitemap:
         priority: 0.8
 ---

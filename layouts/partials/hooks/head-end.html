@@ -1,7 +1,14 @@
 <!-- Not using Docsy Algolia - nothing needs to go here-->
-{{ with .Site.Params.search.algolia }}
+{{- with .Site.Params.search.algolia -}}
 <!-- stylesheet for algolia docsearch -->
-{{ end }}
-
+{{- end -}}
+<!-- MvM: Set page as canonical (.Params.isCanonical) or add canonical (.Params.canonicalUrl) if these are set -->
+{{- if .Params.isCanonical -}}
+    <link rel="canonical" href="{{ .Permalink }}">
+    {{- else -}}
+    {{- with .Params.canonicalUrl -}}
+        <link rel="canonical" href="{{ . }}">
+    {{- end -}}
+{{- end -}}
   <!-- MvM: Add Javascript for Japanese translation -->
   <script src="https://d.shutto-translation.com/trans.js?id=1806"></script>

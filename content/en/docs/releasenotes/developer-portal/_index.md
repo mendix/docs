@@ -21,7 +21,7 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 #### New Features
 
-* In Feedback, everyone from the app team now can manage their own feedback notifications preferences by [turning on or off the notifications](/app-insights/feedback/#notifications) for all incoming feedback. You can also choose to [watch or unwatch one specific feedback item](/developerportal/app-insights/feedback/#notifications-individual-feedback), if you do not want to be notified for all incoming feedback.
+* In Feedback, everyone from the app team now can manage their own feedback notifications preferences by [turning on or off the notifications](/developerportal/app-insights/feedback/#notifications) for all incoming feedback. You can also choose to [watch or unwatch one specific feedback item](/developerportal/app-insights/feedback/#notifications-individual-feedback), if you do not want to be notified for all incoming feedback.
 
 #### Improvements
 

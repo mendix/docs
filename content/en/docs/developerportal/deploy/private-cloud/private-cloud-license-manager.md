@@ -45,7 +45,7 @@ The PCLM server will not create the database for the licenses, you need to creat
 ## 3 Installing the PCLM server
 
 {{% alert color="info" %}}
-In order to avoid any unexpected issues, we recommend to install PCLM server in a separate namespace.
+To prevent unexpected issues, as a best practice, install the PCLM server in a separate namespace.
 {{% /alert %}}
 
 You install the PCLM server by applying a manifest using `kubectl` or `oc`. This manifest can be created for you by the mx-pclm-cli tool. The mx-pclm-cli tool is available for download in the **Installation** tab of the **Namespace Details** page.

@@ -1,5 +1,6 @@
 ---
-title: "Mobile Device ⚠"
+title: "Mobile Device"
+deprecated: true
 url: /appstore/widgets/mobile-device/
 category: "Widgets"
 description: "Describes the configuration and usage of the Mobile Device widget, which is available in the Mendix Marketplace."

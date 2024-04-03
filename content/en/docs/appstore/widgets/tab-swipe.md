@@ -1,5 +1,6 @@
 ---
-title: "Tab Swipe ⚠"
+title: "Tab Swipe"
+deprecated: true
 url: /appstore/widgets/tab-swipe/
 category: "Widgets"
 description: "Describes the configuration and usage of the Tab Swipe widget, which is available in the Mendix Marketplace."

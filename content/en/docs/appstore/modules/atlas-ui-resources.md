@@ -1,5 +1,6 @@
 ---
-title: "Atlas UI Resources ⚠"
+title: "Atlas UI Resources"
+deprecated: true
 url: /appstore/modules/atlas-ui-resources/
 category: "Modules"
 description: "Describes the configuration and usage of the Atlas UI Resources module, which is available in the Mendix Marketplace."

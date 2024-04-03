@@ -1,5 +1,6 @@
 ---
-title: "Mobile Features ⚠"
+title: "Mobile Features"
+deprecated: true
 url: /appstore/widgets/mobile-features/
 category: "Widgets"
 description: "Describes the configuration and usage of the Mobile Features widget, which is available in the Mendix Marketplace."

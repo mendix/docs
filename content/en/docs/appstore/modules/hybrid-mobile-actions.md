@@ -1,5 +1,6 @@
 ---
-title: "Hybrid Mobile Actions ⚠"
+title: "Hybrid Mobile Actions"
+deprecated: true
 url: /appstore/modules/hybrid-mobile-actions/
 category: "Modules"
 description: "Describes the configuration and usage of the Hybrid Mobile Actions module, which is available in the Mendix Marketplace."

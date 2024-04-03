@@ -1,5 +1,6 @@
 ---
-title: "Process Queue ⚠"
+title: "Process Queue"
+deprecated: true
 url: /appstore/modules/process-queue/
 category: "Modules"
 description: "Describes the configuration and usage of the Process Queue module, which is available in the Mendix Marketplace."

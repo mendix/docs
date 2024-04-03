@@ -1,5 +1,6 @@
 ---
-title: "List View Swipe ⚠"
+title: "List View Swipe"
+deprecated: true
 url: /appstore/widgets/list-view-swipe/
 category: "Widgets"
 description: "Describes the configuration and usage of the List View Swipe widget, which is available in the Mendix Marketplace."

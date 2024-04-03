@@ -1,7 +1,8 @@
 ---
-title: "Old SDK Versions (Below 5.0) ⚠"
+title: "Old SDK Versions (Below 5.0)"
 url: /apidocs-mxsdk/mxsdk/sdk-old-versions-howtos/
 weight: 60
+deprecated: true
 ---
 
 {{% alert color="warning" %}}

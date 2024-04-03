@@ -17,6 +17,12 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 ## 2024
 
+### April 4
+
+#### New Features
+
+* In Feedback, you can now [receive notifications for feedback](/developerportal/app-insights/feedback/#notifications). 
+
 ### March 21
 
 #### Fixes

@@ -187,7 +187,7 @@ The **Feedback** tab shows the following items:
 
 ### 4.2 Contact Reporter Tab {#contact-reporter}
 
-The **Contact Reporter** tab allows you to read messages from the reporter and reply to them. Whenever the reporter sends a message, it is shown in this section. Once you reply to a message from the reporter, they receive an email. When multiple feedback items are linked, the system only sends an email to the reporter of this specific feedback, not other associated feedback in the same group.
+The **Contact Reporter** tab allows you to read messages from the reporter and reply to them. Whenever the reporter sends a message, it is shown in this section. Once you reply to a message from the reporter, they receive an email. When multiple feedback items are linked, the system only sends an email to the reporter of this specific feedback item, not other associated feedback items in the same group.
 
 For more information, see the [What Happens to a User After They Submit Feedback](#what-happens-to-user) section.
 
@@ -217,7 +217,7 @@ From the [feedback details](#feedback-details) page, you can manage tags by clic
 
 ## 5 Receiving Notifications {#notifications}
 
-You can receive a notification when new feedback lands in the inbox or when a reporter replies to their feedback. To receive notifications, do as follows:
+You can receive a notification when new feedback lands in **Inbox** or when a reporter replies to their feedback. To receive notifications, do as follows:
 
 1. Watch the app on the [Settings](/developerportal/collaborate/general-settings/) page after you open it in the Developer Portal.
 2. Go to Feedback again.
@@ -227,5 +227,4 @@ You can receive a notification when new feedback lands in the inbox or when a re
 
 ### 5.1 Receiving Notifications for an Individual Feedback Item
 
-You can also just receive notifications for an individual feedback item. Set this up by clicking the {{% icon name="view-off" %}} icon on the upper-right corner of the [Feedback](#feedback) tab after opening the feedback. You also automatically start receiving notifications for an individual feedback item whenever you respond to the reporter of the feedback or leave a comment for your team in the **Communications** section within the feedback.
-
+You can also just receive notifications for an individual feedback item. Set this up by clicking the {{% icon name="view-off" %}} icon on the upper-right corner of the [Feedback](#feedback) tab after you open the feedback. You also automatically start receiving notifications for an individual feedback item once you [respond to the reporter](#contact-reporter) of the feedback or leave a comment for your team in the **Communications** section within the feedback.

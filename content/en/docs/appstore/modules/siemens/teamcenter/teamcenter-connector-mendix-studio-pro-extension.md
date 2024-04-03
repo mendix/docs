@@ -31,6 +31,9 @@ The Teamcenter Extension requires Mendix version 10.6.5 or higher. You also need
 https://marketplace.mendix.com/link/component/111627)
 2. [CommunityCommons](https://marketplace.mendix.com/link/component/170)
 
+![image](https://github.com/mwbouwkamp-mendix/mendix-docs/assets/157635704/ff17d831-e5ac-414a-b095-e2389bd991d4)
+
+
 ### 1.3 License
 
 Like with Teamcenter Connector, the Teamcenter Extension is free to download and use as well. You may, however require a Mendix Studio Pro License to develop apps in Mendix and Teamcenter Author license to connect to Teamcenter.
@@ -118,6 +121,23 @@ The Get ItemRevision [[action]]:
 * * *	NoServiceDataException when the response from Teamcenter contains no data
 * * *	PartialErrorsExceptoin when the response from Teamcenter contains partial errors
 * * *	[[Cast errors?]]
+
+
+### 4.2 Get Workspace Objects
+
+
+### 4.3 Create Item and Item Revision
+
+
+### 4.4 Update Item and Item Revision
+
+
+
+### 4.5 Revise Item Revision
+
+
+
+
 
 
 

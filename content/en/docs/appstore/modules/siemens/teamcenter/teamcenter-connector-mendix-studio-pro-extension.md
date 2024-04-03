@@ -111,31 +111,34 @@ To configure the Get ItemRevision action:
 The Get ItemRevision [[action]]:
 *	Creates/change the entities configured during the import mapping
 *	Creates a microflow to get ItemRevisions based on Item name, id and/or type
-* *	Input parameters:
-* * *	ItemName (String) query parameter 
-* * *	ItemId (String) query parameter 
-* * *	ItemRevisionType (String) query parameter 
-* * *	ConfigName (string) name of the Teamcenter configuration
-* *	Returns:
-* * *	List of (a specialization of) TcConnector.ItemRevision
-* *	Throws errors:
-* * *	IllegalArgumentException when one or more of the input parameters are invalid
-* * *	TeamcenterServiceException when the call to Teamcenter failed
-* * *	NoServiceDataException when the response from Teamcenter contains no data
-* * *	PartialErrorsExceptoin when the response from Teamcenter contains partial errors
-* * *	[[Cast errors?]]
+  *	Input parameters:
+    * ItemName (String) query parameter 
+    *	ItemId (String) query parameter 
+    *	ItemRevisionType (String) query parameter 
+    *	ConfigName (string) name of the Teamcenter configuration
+  *	Returns:
+    *	List of (a specialization of) TcConnector.ItemRevision
+  *	Throws errors:
+    *	IllegalArgumentException when one or more of the input parameters are invalid
+    *	TeamcenterServiceException when the call to Teamcenter failed
+    *	NoServiceDataException when the response from Teamcenter contains no data
+    *	PartialErrorsExceptoin when the response from Teamcenter contains partial errors
+    *	[[Cast errors?]]
 
 
 ### 4.2 Get Workspace Objects
-
+The Get Workspace Objects [[action]] allows you to configure and generate a microflow and domain model to search for and retrieve Workspace Objects from Teamcenter based on 
 
 ### 4.3 Create Item and Item Revision
+The Create Item and Item Revision [[action]] allows you to configure and generate a microflow and domain model to create item and item revision objects in Teamcenter
 
 
 ### 4.4 Update Item and Item Revision
+The Update Item and Item Revision [[action]] allows you to configure and generate a microflow and domain model to update attributes of existing item and item revision objects in Teamcenter
 
 
 ### 4.5 Revise Item Revision
+The Revise Item and Item Revision [[action]] allows you to configure and generate a microflow and domain model to revise item revisions in Teamcenter
 
 
 

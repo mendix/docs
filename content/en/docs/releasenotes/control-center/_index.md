@@ -13,6 +13,13 @@ To see the current status of the Mendix Control Center, see [Mendix Status](http
 
 ## 2024
 
+### April 4, 2024
+
+#### Improvements
+
+* We added column based filter in the Apps page.
+* We added the ability to easily copy the application name, the app id, and the environment name.
+
 ### February 8, 2024
 
 #### Improvements

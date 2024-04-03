@@ -1652,12 +1652,9 @@ Create a new IAM role.
 
     2. For the second condition, copy and paste the `sts.amazonaws.com` line; replace `:aud` with `:sub` and set it to `system:serviceaccount:<Kubernetes namespace>:<Kubernetes serviceaccount name>`.
 
-    {{% alert color="info" %}}
-    In case of Global Operator installation, replace <Kubernetes namespace> with the managed namespace name.
-    {{% /alert %}}
-  
-    See [Amazon EKS Pod Identity Webhook – EKS Walkthrough](https://github.com/aws/amazon-eks-pod-identity-webhook#eks-walkthrough) for more details.
-    After this, the specified serviceaccount in the specified namespace will be able to assume this role.
+{{% alert color="info" %}}
+For Global Operator installation, replace `Kubernetes namespace` with the managed namespace name. For more information, see [Amazon EKS Pod Identity Webhook – EKS Walkthrough](https://github.com/aws/amazon-eks-pod-identity-webhook#eks-walkthrough).
+{{% /alert %}}
 
 5. Attach the following IAM policy to this Storage Provisioner admin IAM role:
 

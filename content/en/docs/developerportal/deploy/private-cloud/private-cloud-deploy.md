@@ -504,7 +504,7 @@ The **Model Options** tab allows you to change the configuration of scheduled ev
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image24.png" >}}
 
-To toggle any scheduled events, select the scheduled event you want to enable or disable and click **Toggle**. You also have the option to export the Scheduled events to an Excel file by selecting **Export Constants to Excel**.
+To toggle any scheduled events, select the scheduled event you want to enable or disable and click **Toggle**. You can also export the scheduled events to an Excel file by selecting **Export Constants to Excel**.
 
 To change any constants, select the constant you want to edit and then click **Edit**. You also have the option to export the app constants to an Excel file by selecting **Export Scheduled Events to Excel**.
 

@@ -17,6 +17,13 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2024
 
+### April 04, 2024
+
+#### Improvements
+
+* Update the text message that users see to `2FA` instead of `MFA` in the Metrics & Logs page to making it consistent across the entire platform.
+* Update the title of the the Logs & Metrics page to `Deployment - Metrics` & `Deployment - Logs` instead of `Developer portal`.
+
 ### March 26, 2024
 
 #### Improvements

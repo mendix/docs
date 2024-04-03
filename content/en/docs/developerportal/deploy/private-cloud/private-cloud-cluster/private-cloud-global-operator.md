@@ -133,7 +133,7 @@ It is crucial to maintain consistent Operator configuration for PCLM in both the
 
 Licenses imported in the PCLM Server appear in the PCLM Statistics section of the Global Operator main namespace. You can see both **Runtime** and **Operator** license.
 
-Claimed licenses will be visible in the PCLM Statistics section of the Managed namespace.
+Claimed licenses are visible in the PCLM Statistics section of the Managed namespace.
 
 ### 3.2 Licensing application via Subscription Secret and manual operator license
 

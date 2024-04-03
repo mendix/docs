@@ -12,7 +12,7 @@ aliases:
 
 ## 1 Introduction
 
-If your app uses the [Mendix Feedback](/appstore/modules/mendix-feedback/) module, users can report feedback to your team using the feedback widget in your app, and all their feedback will go to the **Feedback** page. **Feedback** enables your team to view all the feedback. It also allows team members with the right permissions to organize the feedback, and add feedback manually. 
+If your app uses the [Mendix Feedback](/appstore/modules/mendix-feedback/) module, users can report feedback to your team using the feedback widget in your app, and all their feedback will go to the **Feedback** page. **Feedback** enables your team to view all the feedback. It also allows team members with the right permissions to organize feedback, and add feedback manually. 
 
 You can access the **Feedback** page by selecting your app in the Developer Portal and then clicking **Feedback** in the navigation pane. 
 
@@ -50,7 +50,7 @@ If the user does not want to receive notifications anymore, they can clear the c
 
 ## 2 Inbox {#inbox}
 
-On the **Inbox** tab, everyone from your team can view all the unarchived feedback that have been sent from your app by users.  
+On the **Inbox** tab, everyone from your team can view all the unarchived feedback sent from your app by users.  
 
 {{< figure src="/attachments/developerportal/app-insights/feedback/feedback-items.png" class="image-border" alt="inbox tab" >}}
 
@@ -61,7 +61,7 @@ In the list on the **Inbox** tab, you can find the following information for eac
 * **Submitter** – the email address of the reporter
 * **Tags** – tags that your team has assigned to the feedback
 * **Status** – the status that your team has set to the feedback
-* **Linked** – the number of the feedback that are linked to this feedback
+* **Linked** – the number of the feedback items that are linked to this feedback
 * **Priority** – the priority that the feedback has
 * **Date** – the date when the feedback was submitted
 
@@ -87,7 +87,7 @@ If you select feedback, you can see the following items:
 
 * **Link** – Clicking this links the feedback together into one feedback group.
 
-  You need to choose which feedback is the primary feedback of the group. After the feedback is linked, only the primary feedback appears in the list. The feedback that are linked to the primary feedback will disappear from the list. You can only access these linked feedback from their primary feedback. If you change the status of the primary feedback, all the linked feedback will get the same status automatically.
+  You need to choose which feedback item is the primary feedback item of the group. After the feedback item is linked, only the primary feedback items appears in the list. The feedback items that are linked to the primary feedback item will disappear from the list. You can only access these linked feedback items from their primary feedback. If you change the status of the primary feedback item, all the linked feedback items will get the same status automatically.
 
   {{% alert color="info" %}}When you open a linked feedback, you can click **Make [the linked feedback] the Primary feedback** to make this feedback the primary of the feedback group instead.{{% /alert %}}
 

@@ -23,6 +23,7 @@ There are three versions of the Forgot Password module, depending on whether you
 
 | Mendix Version | Forgot Password Version |
 | --- | --- |
+| 10.6.0 and above | 6.0.0 |
 | 9.20.0 and above | 5.1.0 |
 | 9.12.7 and above | 5.x.x |
 | 8.18.x | 4.x.x |
@@ -30,16 +31,12 @@ There are three versions of the Forgot Password module, depending on whether you
 
 If you already use the Forgot Password module in your Mendix 8 app, you can find instructions on how to upgrade in [Upgrading from Mendix 8 to Mendix 9](#upgrade8-9) section below.
 
-{{% alert color="warning" %}}
-The Forgot Password module is not supported in the Mendix version 10.6.0 and above, as it relies on the deprecated [Deep Link](/appstore/modules/deep-link/) module. The Deep Link module has been replaced by [page URLs](/refguide/page-properties/#url) and [microflow URLs](/refguide/microflow/#url). Mendix is working on a solution to enable the Forgot password module (compatible with Mendix version 10.6.0 and above) to work with these URLs.
-{{% /alert %}}
-
 ### 1.1 Dependencies {#dependencies}
 
 The Forgot Password module has the following dependencies:
 
-* [Email Connector](/appstore/modules/email-connector/) - Versions of the Forgot Password module 3.x.x (for Mendix 7), below 4.1.0 (for Mendix 8), and 5.1.0 (for Mendix 9 and above) have a dependency on the deprecated [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module. If you are using Mendix 8 and above, Mendix recommends upgrading to the latest version using the instructions in the [Migrate from Email Module with Templates to Email Connector](#migrate-email) section below
-* [Deep Link](/appstore/modules/deep-link/)
+* [Email Connector](/appstore/modules/email-connector/) – Versions of the Forgot Password module 3.x.x (for Mendix 7), below 4.1.0 (for Mendix 8), and 5.1.0 (for Mendix 9 and above) have a dependency on the deprecated [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module. If you are using Mendix 8 and above, Mendix recommends upgrading to the latest version using the instructions in the [Migrate from Email Module with Templates to Email Connector](#migrate-email) section below.
+* [Deep Link](/appstore/modules/deep-link/) – Version of the Forgot Password module 6.0.0 (for Mendix 10.6.0 and above) does not require Deep Link module as a dependency.
 * [Encryption](/appstore/modules/encryption/)
 * [Mx Model Reflection](/appstore/modules/model-reflection/)
 
@@ -62,11 +59,14 @@ In these instructions, it is assumed that your main module is **MyFirstModule**.
     {{% alert color="info" %}}You can accept any warnings about files being overwritten.{{% /alert %}}
 
 1. Open the [App Settings](/refguide/app-settings/) and make the following changes:
-    * In the [Configurations](/refguide/configuration/) tab, edit the current configuration to add a 32-character string value for the constant **Encryption.EncryptionKey**
+    * In the [Configurations](/refguide/configuration/) tab, edit the current configuration to add a 32-character string value for the constant **Encryption.EncryptionKey**.
         {{< figure src="/attachments/appstore/modules/forgot-password/encryption-key.png" >}}
-    * In the **Runtime** tab, add the microflow **Deeplink.StartDeeplink** as the **After startup** microflow or as a sub-microflow to an existing after startup microflow
+    * In the **Runtime** tab, add the microflow **Deeplink.StartDeeplink** as the **After startup** microflow or as a sub-microflow to an existing after startup microflow.
+    {{% alert color="warning" %}}For the Forgot Password module version 6.0.0 (Mendix 10.6.0. and above), do not add the **Deeplink.StartDeeplink** microflow as the **After startup** microflow.{{% /alert %}}
+    * If you are changing the **URL prefix** value in the **Runtime** tab, ensure that you use the same value in the URLPrefix constant of the Forgot Password module. Otherwise, the signup and reset URLs will not work.
 1. Open [App Security](/refguide/app-security/) and do the following:
     * In the **User roles** tab, add a new role called *Guest* in **MyFirstModule**
+    {{% alert color="warning" %}}Do not set any Deep Link userroles in the **App security** for the version 6.0.0 (Mendix 10.6.0 and above).{{% /alert %}}
     * Set the following permissions for the user roles:
 
         * Administrator
@@ -122,6 +122,7 @@ To disable the sign up functionality and use the Forgot Password module only for
     {{% /alert %}}
 
 1. In the **Deeplink** tab, configure the deeplink to use the **ForgotPassword.Step3_DL_SetNewPassword** microflow.
+        {{% alert color="info" %}}The **Deeplink** tab is not available in version 6.0.0 (for Mendix 10.6.0 and above) as the Deep Link module has been deprecated.{{% /alert %}}
         {{< figure src="/attachments/appstore/modules/forgot-password/configure-deeplink.png" >}}
 
 ### 2.1 Using Email Aliases{#email-aliases}

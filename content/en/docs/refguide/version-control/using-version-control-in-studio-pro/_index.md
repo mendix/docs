@@ -56,7 +56,7 @@ You can also see a **history** of all the changes that have been committed, no m
 
 The status of your app is a summary of all the changes in your working copy when compared with the original. Studio Pro shows the status both in the **App Explorer** and in the **Changes** pane.
 
-The **App Explorer** shows an icon in front of each item (including each document, folder, and module) to present its status. The different icons indicate the different kinds of changes which have been made.
+The **App Explorer** shows an icon in front of items (such as documents, folders, and modules) to present that are changed in some way. The different icons indicate the different kinds of changes which have been made.
 
 | Icon | Meaning |
 | --- | --- |
@@ -71,9 +71,9 @@ The **App Explorer** shows an icon in front of each item (including each documen
 In the **App Explorer**, there is only room for one icon for each item. If an item is both modified and moved, it is shown as modified with a yellow icon.
 {{% /alert %}}
 
-For example, say that the microflow **ChangePassword** has been modified. Then, a new folder called **Flows** was added and all microflows, including the modified microflow, were moved into this folder. The new folder gets a green icon, and the module containing those changes is depicted with a yellow icon. The microflows which were moved but had not been modified get a blue icon. The modified microflow **ChangePassword** gets a yellow icon. This helps you to quickly see where in the app the changes are.
+For example, say that the microflow **ChangePassword** has been modified. Also a new folder called **Flows** was added and all microflows, including the modified microflow, were moved into this folder. The new folder gets a green icon, and the module containing those changes is depicted with a yellow icon. The microflows which were moved but had not been modified get a blue icon. The modified microflow **ChangePassword** gets a yellow icon. This helps you to quickly see where in the app the changes are.
 
-In the **Changes** pane, you can find more detailed information. There is an entry for each change to an item. If a document is both modified and moved, there are two lines for that document. The pane also shows items that were deleted, something the app explorer cannot do.
+In the **Changes** pane, you can find more detailed information. There is an entry for each change to an item. If a document is both modified and moved, there are two lines for that document. The pane also shows items that were deleted, something the app explorer cannot do. For more information, see [Changes Pane](/refguide/changes-pane/).
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/changes-pane.png" max-width=80% class="image-border">}}
 
@@ -83,7 +83,7 @@ When you successfully commit your app, this becomes the new original and all the
 
 ### 4.2 Committing
 
-Sending changes to the repository is called committing. The idea is that you commit small, consistent pieces of work to the repository. Mendix recommends committing your changes often. Preferably, the versions in the repository are always error-free. Studio Pro will warn against committing while there are errors in your app.
+Sending changes to the repository is called committing. The idea is that you commit small, consistent pieces of work to the repository. Mendix recommends committing your changes often. Preferably, the versions in the repository are always error-free. Studio Pro warns against committing while there are errors in your app.
 
 To commit your changes, click the **Commit** button in the **Changes** pane, or choose the **Version Control** > **Commit** menu item.
 
@@ -106,7 +106,7 @@ In general, it is a good idea to commit after implementing one feature or fixing
 Committing results in a new revision in the repository. You can add the following information in Studio Pro when you perform a commit, and this will be attached to the newly created revision:
 
 * A textual message – this should be a summary of the changes you made.
-* A list of Developer Portal stories that relate to the commit. A small commit probably relates to one story. Studio Pro shows stories that are in the current Sprint and do not have a status of **Done**. Adding the story to the commit does not change the state of the story in the Developer Portal. Setting the status to **Done** must be done manually and depends on how you define  'done'.
+* A list of Developer Portal stories that relate to the commit; for more information, see [Stories Pane](/refguide/stories-pane/).
 
     {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-dialog.png" >}}
 
@@ -137,11 +137,11 @@ The features described in this section were introduced in Mendix version 10.3.
 
 While you were working on your branch, somebody may have pushed their changes to the same branch on the server already. In this case, pushing is not possible and you will need to take further action first.
 
-In Studio Pro, [automatic fetching](/refguide/auto-fetch/) can be used to discover changes on the server. At the moment when you click **Commit**, if Studio Pro knows that there are remote changes, the commit dialog will contain a note about this, and **Also push changes to the remote server** will be set to **No** and disabled.
+In Studio Pro, [automatic fetching](/refguide/auto-fetch/) can be used to discover changes on the server. If at the moment when you click **Commit** Studio Pro knows that there are remote changes, the commit dialog will contain a note about this, and **Also push changes to the remote server** will be set to **No** and disabled.
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-dialog-incoming.png" >}}
 
-If the changes are discovered during the push, the following information dialog with instructions is shown:
+If the changes are discovered during the push, an information dialog with instructions is shown.
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-pull-first-dialog.png" >}}
 
@@ -168,9 +168,9 @@ To update the working copy of your app, click **Pull** in the **Changes** pane, 
 
 Changes you receive from the repository when pulling are combined with the changes you have made to your working copy (if any). Afterwards, your working copy will contain both your changes and the changes you received. As part of the pull, the original of your working copy is updated as well.
 
-For example, if the last time you pulled you received all changes up to and including revision N, this means that the original for your working copy is revision 40. Since you started making changes to your working copy, other people on your team have made another four commits (X, Y, and Z). If you now pull, you will receive those changes and Z will be the new *original* to which your changes are compared.
+For example, if the last time you pulled you received all changes up to and including revision N, this means that the original for your working copy is revision N. Since you started making changes to your working copy, other people on your team have made another three commits (X, Y, and Z). If you now pull, you will receive those changes and Z will be the new *original* to which your changes are compared.
 
-Usually, combining your changes with the latest revision from the repository is done automatically. For example, one person may add a page while you are changing a microflow. If the changes are too close, however, a conflict can arise. For example, if one of your team has changed the properties of the same data view that you have also changed, you will have to resolve such conflicts before you can commit. For information on how to do this, see the [Dealing With Conflicts](#conflicts) section below.
+Usually, combining your changes with the latest revision from the repository is done automatically. For example, one person may add a page while you are changing a microflow. If the changes are too close, however, a conflict can arise. For example, if one of your team has changed the properties of the same data view that you have also changed, you will have to resolve such conflicts before you can commit. For information on how to do this, see [Combining Changes and Conflict Resolution](/refguide/merge-algorithm/).
 
 If your team is committing often, you then should pull often. Frequent pulling has the benefit that you receive fewer changes with each pull so that integrating those changes with your work is easier.
 
@@ -204,11 +204,11 @@ For more information, see [Combining Changes and Conflict Resolution](/refguide/
 
 ## 7 Using Branches
 
-A repository can contain a number of development lines. Each development line offers independent development from the other development lines. A simple case is that there is just one development line called the main line. All development then happens inside that one line.
+A repository can contain a number of development lines. Each development line offers independent development from the other development lines. In the simple case there is just one development line called the main line. All development then happens inside that one line.
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/main-branch-line.png" >}}
 
-It is often convenient to have more than one development line. For example, one development line is for fixing bugs in the currently deployed version of your app and another line is where you develop new functionality. If you then find a bug in the deployed version, you can fix it in the corresponding development line irrespective of the state of the development line where new functionality is developed. For more information about branches, see [Version Control](/refguide/version-control/). 
+It is often convenient to have more than one development line. For example, one development line is for fixing bugs in the currently deployed version of your app and another line is where you develop new functionality. If you then find a bug in the deployed version, you can fix it in the corresponding development line irrespective of the state of the development line where new functionality is developed. For more information about branches, see the [Branches](/refguide/version-control/#branches) section in *Version Control*. 
 
 ### 7.1 When to Use a Branch
 
@@ -239,7 +239,7 @@ Firstly, select **Version Control > Manage Branch Lines...** and create a branch
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/create-branch-line-dialog.png" >}}
 
-Now, work on the branch until the feature is done and commit the completed work.
+Now work on the branch until the feature is done and commit the completed work.
 
 To merge the whole branch back to the main line to integrate the feature there, do the following:
 
@@ -391,25 +391,19 @@ To connect to Git, you need to use the following URL and credentials:
 * Username: your Mendix account username (alternatively, you can use the word *pat* as your username)
 * Password: the PAT you created – the PAT must include the scopes `mx:modelrepository:repo:write`, `mx:modelrepository:repo:read`, and/or `mx:modelrepository:write` under *Model Repository*
 
-### 9.3 Adding Files and Directories
+### 9.3 Adding and Deleting Files and Directories
 
-If you add or delete files (or directories) using Windows Explorer, Studio Pro automatically adds or deletes these from version control too.
+If you add or delete files (or directories) using Windows Explorer, Studio Pro automatically adds or deletes these from version control too. A folder is no longer tracked if all the files in the folder are removed.
 
 Make sure you use the **Export** feature of TortoiseGit if you are copying a directory that is already under version control in your app.
 
-### 9.4 Deleting Files and Directories
-
-If you delete a file from your app, Studio Pro automatically deletes it from the Team Server too.
-
-A folder is no longer be tracked if all the files in the folder are removed.
-
-### 9.5 Branching and Deploying
+### 9.4 Branching and Deploying
 
 If you perform branching outside of Studio Pro, you will not be able to immediately deploy to Mendix Cloud. That is because Studio Pro adds metadata about the Mendix version of your app to each revision when you commit or create a branch, which is needed by the Mendix Cloud deployment. Branching outside of Studio Pro means that metadata is missing from your branch, thus your app cannot successfully be deployed.
 
 To fix this, make a small commit on your branch in Studio Pro (for example, changing a documentation field). Studio Pro will then add the metadata that Mendix Cloud deployment requires, and you will be able to deploy your app.
 
-### 9.6 Reverting Accidental Studio Pro App Model Upgrade
+### 9.5 Reverting Accidental Studio Pro App Model Upgrade
 
 When working in different apps with different Studio Pro versions, you may one day find yourself with an app model upgraded and committed to a newer Studio Pro version, while the rest of your team is not yet ready to upgrade. 
 

@@ -40,9 +40,9 @@ To install and configure the Global Operator, perform the following steps:
 
 4. After the Global Operator cluster is created, click **Add Global Operator Main Namespace**.
 
-{{% alert color="warning" %}}Ensure that you do not use a namespace that is intended to be a managed namespace, that is, a namespace where you plan to deploy a Mendix app. The Global Operator namespace must be separate from managed namespaces, otherwise you may encounter unexpected results.{{% /alert %}}
+    {{% alert color="warning" %}}Ensure that you do not use a namespace that is intended to be a managed namespace, that is, a namespace where you plan to deploy a Mendix app. The Global Operator namespace must be separate from managed namespaces, otherwise you may encounter unexpected results.{{% /alert %}}
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/global-operator/global-operator4.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/global-operator/global-operator4.png" >}}
 
 5. Provide the Global Operator **Namespace name**, select the **Installation type**, and then click **Done**.
 
@@ -80,9 +80,7 @@ To install and configure the Global Operator, perform the following steps:
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/global-operator/global-operator9.png" >}}
 
-{{% alert color="warning" %}}
-Ensure that you use the same name for the managed namespace in the Portal and in the cluster. Using different names may result in unwanted issues.
-{{% /alert %}}
+    {{% alert color="warning" %}}Ensure that you use the same name for the managed namespace in the Portal and in the cluster. Using different names may result in unwanted issues.{{% /alert %}}
 
 12. Open the managed namespace and click **Done**.
 
@@ -90,16 +88,12 @@ Ensure that you use the same name for the managed namespace in the Portal and in
 
 14. On the **Configuration** page, select the **Operating system** and run the **Configuration** command under the **Configuration** section.
 
-{{% alert color="warning" %}}
-Ensure that you do not use a namespace that is already used as a Global Operator namespace. The Global Operator namespace must be separate from managed namespaces, otherwise you may encounter unexpected results.
-{{% /alert %}}
+    {{% alert color="warning" %}}Ensure that you do not use a namespace that is already used as a Global Operator namespace. The Global Operator namespace must be separate from managed namespaces, otherwise you may encounter unexpected results.{{% /alert %}}
 
 15. Click **Configure Namespace** and select the items which you want to configure.
 16. In the **Global Operator** section, enter the **Global Operator namespace name**.
 
-{{% alert color="warning" %}}
-Ensure that you do not the name of a managed namespace (that is, a namespace where you plan to deploy a Mendix app).
-{{% /alert %}}
+    {{% alert color="warning" %}}Ensure that you do not the name of a managed namespace (that is, a namespace where you plan to deploy a Mendix app).{{% /alert %}}
 
 17. [Configure any remaining namespace settings](/developerportal/deploy/standard-operator/#configure-namespace) and apply the configuration.
 

@@ -31,6 +31,15 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
   * We improved our error messages by providing more details.
 
 
+### March 28
+
+#### New Features
+
+* We made the following improvements to [Portfolio Management](/developerportal/portfolio-management/):
+    * On the **Archive** page, you can now filter and export the archived initiatives.
+    * We have extended the existing filters for initiatives.
+    * We added a new field **Location** to initiatives, which shows where the department of the requester is located. Now you can also see this field in the Excel file when you export initiatives.
+
 ### March 21
 
 #### Fixes

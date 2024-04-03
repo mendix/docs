@@ -18,7 +18,11 @@ The **Metrics** page contains detailed graphs about your app and its environment
 
 These statistics are displayed as trends over time. The data covers the past three months, and you can adjust the view to display data for the past day, week, month, or quarter.
 
-{{% alert color="info" %}}This page describes metrics for licensed apps deployed to Mendix Cloud. Metrics are not available for Free Apps deployed to Mendix Cloud.<br><br>If your app is deployed to SAP Business Technology Platform (SAP BTP) instead, the **Metrics** page displays links to the SAP BTP cockpit.{{% /alert %}}
+{{% alert color="info" %}}
+This page describes metrics for licensed apps deployed to Mendix Cloud. Metrics are not available for Free Apps deployed to Mendix Cloud.
+
+If your app is deployed to SAP Business Technology Platform (SAP BTP) instead, the **Metrics** page displays links to the SAP BTP cockpit.
+{{% /alert %}}
 
 ## 2 Accessing the Metrics Graphs
 
@@ -413,7 +417,7 @@ There are two sets of values:
 {{% alert color="info" %}}
 As of [October 25, 2023](/releasenotes/developer-portal/mendix-cloud/#october-25-2023), whenever you create a new DB instance, it will be provisioned with a gp3 storage instance if it meets the eligibility criteria defined in the table below. This also occurs if your database is recreated.
 
-All existing databases of environments on eligible plans in Mendix Cloud (as specified in the table below) will eventually be migrated to gp3 storage instances. As of March 6, 2024, the databases of non-production environments have been migrated; production environments will also be migrated soon.
+As of [March 26, 2024](/releasenotes/developer-portal/mendix-cloud/#march-26-2024), all existing databases of environments on eligible plans in Mendix Cloud (as specified in the table below) have also been migrated to gp3 storage instances.
 
 | Mendix Plans      | Storage Instance Type | Storage Size         | Baseline Storage Performance | Provisioned IOPS Range | Provisioned Throughput Range |
 |-------------------|-----------------------|----------------------|------------------------------|------------------------|------------------------------|

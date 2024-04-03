@@ -9,7 +9,10 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="warning" %}}The Static Image widget, which is not supported by the React client added to Mendix in [10.7](/releasenotes/studio-pro/10.7/#react-client), can be converted to an [Image widget](/appstore/widgets/image/) through the context menu of the widget when the React client is enabled.{{% /alert %}}
+{{% alert color="warning" %}}The Static Image widget, which is not supported by the React client added to Mendix in [10.7](/releasenotes/studio-pro/10.7/#react-client), can be converted to an [Image widget](/appstore/widgets/image/) through the context menu of the widget when the React client is enabled.
+
+For more information, see the Mendix React Client's [Migration Guide](/refguide/mendix-client/react/#migration-guide).
+{{% /alert %}}
 
 ## 1 Introduction
 

@@ -786,6 +786,12 @@ nav.foldable-nav {
     background-color: $info-8;
 }
 
+.badge-deprecated {
+    background-color: $warning-1;
+    border: solid 1px $warning-6;
+    color: $gray-900;
+}
+
 // Swagger styling
 
 .swagger-ui .info .title,

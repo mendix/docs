@@ -62,6 +62,7 @@
       {{ if $s.Params.beta }}<text class="badge badge-pill badge-beta">BETA</text>{{ end }}
       {{ if $s.Params.lts }}<text class="badge badge-pill badge-lts">LTS</text>{{ end }}
       {{ if $s.Params.mts }}<text class="badge badge-pill badge-mts">MTS</text>{{ end }}
+      {{ if $s.Params.deprecated }}<text class="badge badge-pill badge-deprecated">DEPRECATED</text>{{ end }}
     </span>
   </a></label>
   {{ else -}}
@@ -74,6 +75,7 @@
       {{ if $s.Params.beta }}<text class="badge badge-pill badge-beta">BETA</text>{{ end }}
       {{ if $s.Params.lts }}<text class="badge badge-pill badge-lts">LTS</text>{{ end }}
       {{ if $s.Params.mts }}<text class="badge badge-pill badge-mts">MTS</text>{{ end }}
+      {{ if $s.Params.deprecated }}<text class="badge badge-pill badge-deprecated">DEPRECATED</text>{{ end }}
     </span>
   </a>
   {{- end }}

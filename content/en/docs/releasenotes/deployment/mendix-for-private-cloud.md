@@ -17,13 +17,13 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 #### Portal Improvements
 
-* We resolved an issue where claimed licenses were occasionally not visible in the License Claim list under the Additional Information section.
-* You can now export Scheduled Events to an Excel file for easier management.
+* We resolved an issue where claimed licenses were occasionally not visible in the License Claim list under PCLM Statistics tab.
+* You can now export Scheduled Events to an Excel file.
 * Kubernetes server information is now displayed in the Additional Information section of namespaces, providing more context for administrators.
 * We fixed an issue where users encountered errors when pressing the Apply Changes button multiple times, ensuring smoother operations.
 * Users can now set the Studio Pro target in the environment overview page without encountering any issues. (Ticket [209652](https://mendixsupport.zendesk.com/agent/tickets/209652))
 * Disabling the Debugger will no longer display an incorrect loader message, enhancing user experience.
-* A new UUID is now generated every time a main namespace is created in a cluster, ensuring uniqueness and consistency.
+* For Global Operator, a new UUID is now generated every time a main namespace is created in a cluster, ensuring uniqueness and consistency.
 * We fixed an issue in the Global Operator where the status for the managed namespace was incorrect under certain conditions.
 * We removed the Standalone option when creating the main namespace in the Global Operator, streamlining the process for administrators.
 

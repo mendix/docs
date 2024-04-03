@@ -364,7 +364,7 @@ AWS IRSA allows a Kubernetes Service Account to assume an IAM role. For this to 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/awsserviceaccountlinktorole.png" >}}
 
 {{% alert color="info" %}}
-In case of Global Operator, managed namespace needs to be provided in namespace field.
+In case of Global Operator installation, the managed namespace needs to be provided in namespace field.
 {{% /alert %}}    
 
 2. For the second condition, copy and paste the `sts.amazonaws.com` line; replace `:aud` with `:sub` and set it to `system:serviceaccount:<Kubernetes namespace>:<Kubernetes serviceaccount name>`.
@@ -982,7 +982,7 @@ AWS IRSA allows a Kubernetes Service Account to assume an IAM role. For this to 
 2. For the second condition, copy and paste the `sts.amazonaws.com` line; replace `:aud` with `:sub` and set it to `system:serviceaccount:<Kubernetes namespace>:<Kubernetes serviceaccount name>`.
 
   {{% alert color="info" %}}
-  In case of Global Operator, managed namespace name should be provided in namespace.
+  In case of Global Operator installation, the managed namespace name should be provided in namespace.
   {{% /alert %}}  
 
     See [Amazon EKS Pod Identity Webhook – EKS Walkthrough](https://github.com/aws/amazon-eks-pod-identity-webhook#eks-walkthrough) for more details.
@@ -1658,8 +1658,8 @@ Create a new IAM role.
     2. For the second condition, copy and paste the `sts.amazonaws.com` line; replace `:aud` with `:sub` and set it to `system:serviceaccount:<Kubernetes namespace>:<Kubernetes serviceaccount name>`.
 
     {{% alert color="info" %}}
-In case of Global Operator, replace <Kubernetes namespace> with the managed namespace name.
-{{% /alert %}}
+    In case of Global Operator installation, replace <Kubernetes namespace> with the managed namespace name.
+    {{% /alert %}}
   
     See [Amazon EKS Pod Identity Webhook – EKS Walkthrough](https://github.com/aws/amazon-eks-pod-identity-webhook#eks-walkthrough) for more details.
     After this, the specified serviceaccount in the specified namespace will be able to assume this role.

@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   title: Mendix for Private Cloud Deploy API
-  version: 4.8.0
+  version: 4.7.0
   contact:
     name: Mendix Support
     url: 'https://support.mendix.com'
@@ -491,44 +491,6 @@ paths:
         - $ref: '#/components/parameters/architecture'
       tags:
         - cli
-  /apps:
-    get:
-      summary: Get Manifests of Multiple Applications
-      tags:
-        - apps
-      responses:
-        '200':
-          $ref: '#/components/responses/appsManifests'
-        '401':
-          $ref: '#/components/responses/error401'
-        '403':
-          $ref: '#/components/responses/error403'
-        '404':
-          $ref: '#/components/responses/error404'
-      operationId: get-apps-manifests
-      description: Retrieves all the applications for which the user has access.
-  '/apps/{appId}':
-    parameters:
-      - schema:
-          type: string
-        name: appId
-        in: path
-        required: true
-    get:
-      summary: Get App Manifest
-      tags:
-        - apps
-      responses:
-        '200':
-          $ref: '#/components/responses/appManifest'
-        '401':
-          $ref: '#/components/responses/error401'
-        '403':
-          $ref: '#/components/responses/error403'
-        '404':
-          $ref: '#/components/responses/error404'
-      operationId: get-app-manifest
-      description: Retrieves the manifest of an App.
 components:
   schemas:
     appId:
@@ -1376,42 +1338,6 @@ components:
       x-examples:
         example-ondemand: OnDemand
         example-dedicated: Dedicated
-    appManifest:
-      title: appManifest
-      x-stoplight:
-        id: 3dt82oarpy3z9
-      type: object
-      description: Model for the app manifest.
-      properties:
-        manifestVersion:
-          type: string
-          x-stoplight:
-            id: dkayg5pllafgh
-          example: 2.0.0
-        app:
-          type: object
-          x-stoplight:
-            id: 4zjx7kgtcrvx5
-          properties:
-            appId:
-              type: string
-              x-stoplight:
-                id: v9gjibgp77snk
-              format: uuid
-              example: 085a0e34-69ec-4c61-9c7d-5cd42554f9f2
-            appName:
-              type: string
-              x-stoplight:
-                id: ky0cb3n3f9b1a
-              example: my-app
-          required:
-            - appId
-            - appName
-      required:
-        - manifestVersion
-      x-examples:
-        example-app-manifest:
-          $ref: '#/components/examples/AppManifest'
   parameters:
     appId:
       name: appId
@@ -2067,36 +1993,6 @@ components:
                     cliVersion: 1.0.0
                     availableOperatingSystems: 'windows, linux, macos'
                     availableArchitectures: x86
-    appsManifests:
-      description: The apps manifests response returned by a get-apps-manifests request.
-      content:
-        application/json:
-          schema:
-            type: object
-            properties:
-              apps:
-                $ref: '#/components/schemas/appManifest'
-          examples:
-            example-app-manifests:
-              value:
-                apps:
-                  - manifestVersion: 2.0.0
-                    app:
-                      appId: 085a0e34-69ec-4c61-9c7d-5cd42554f9f2
-                      appName: my-app
-    appManifest:
-      description: The app manifest response returned by a get-app-manifest request.
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/appManifest'
-          examples:
-            example-app-manifest:
-              value:
-                manifestVersion: 2.0.0
-                app:
-                  appId: 085a0e34-69ec-4c61-9c7d-5cd42554f9f2
-                  appName: my-app
   securitySchemes:
     PersonalAccessToken:
       name: Authorization
@@ -2306,7 +2202,6 @@ components:
           appId: 085a0e34-69ec-4c61-9c7d-5cd42554f9f2
           appName: my-app
 tags:
-  - name: apps
   - name: cli
   - name: clusters
   - name: environments

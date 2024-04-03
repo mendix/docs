@@ -65,13 +65,10 @@ Should you consider using a connected environment, the following URLs should be 
 
 7. Enter the following information:
 
-    1. **Installation Type**  – Choose Global Installation if you want a single operator namespace to manage multiple namespaces or Namespace Installation if only one namespace is required to be managed by an operator. For more information, see [Global Operator](/developerportal/deploy/global-operator/).
-
-    2. **Cluster Name** – The name that you want to give the cluster which you are creating.
-
-    3. **Cluster Type** – Choose the correct type for your cluster. For more information, see [Supported Providers](/developerportal/deploy/private-cloud-supported-environments/).
-
-    4. **Description** – An optional description of the cluster which will be displayed under the cluster name in the Cluster Manager.
+    * **Installation Type**  – Choose **Global Installation** if you want a single Operator namespace to manage multiple namespaces, or **Namespace Installation** if you want the Operator to only manage one namespace. For more information, see [Global Operator](/developerportal/deploy/global-operator/).
+    * **Cluster Name** – The name that you want to give the cluster which you are creating.
+    * **Cluster Type** – Choose the correct type for your cluster. For more information, see [Supported Providers](/developerportal/deploy/private-cloud-supported-environments/).
+    * **Description** – An optional description of the cluster which will be displayed under the cluster name in the Cluster Manager.
 
 8. Click **Create**.
 

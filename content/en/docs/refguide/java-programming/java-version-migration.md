@@ -27,7 +27,6 @@ The following changes in behavior have been noticed when migrating from Java ver
 | `formatDate(dateTime(2006, 5, 4))`              | 4/05/06              | 4/05/2006            |
 | `formatDateTime(dateTime(2006, 5, 4, 3, 2, 1))` | 4/05/06 03:02        | 4/05/2006 03:02      |
 
-
 #### 2.1.2 Dutch, Netherlands (nl_NL)
 
 | Microflow expression                            | Output under Java 11 | Output under Java 17 |

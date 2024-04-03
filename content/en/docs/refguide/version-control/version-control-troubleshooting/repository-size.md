@@ -21,7 +21,7 @@ There are several reasons why your repository may be large. The most common reas
 
 ## 3 Issues with a Large Repository
 
-Issues with a large repository are typically observed when cloning an app or a branch from the repository. You may experience a long download or even a timeout. This problem is not new in Git, but surfaces as Git has different cloning/checkout behavior than SVN. In the centralized SVN system, a local checkout only contains a specific revision and the server needs to be contacted for each change. In the decentralized Git system, a local clone by default contains the full history of the repository.
+Issues with a large repository are typically observed when cloning an app or a branch from the repository. You may experience a long download or even a timeout. Having a large repository is not new in Git, but surfaces as Git has different cloning/checkout behavior than SVN. In the centralized SVN system, a local checkout only contains a specific revision and the server needs to be contacted for each change. In the decentralized Git system, a local clone by default contains the full history of the repository.
 
 Other places where you might encounter performance issues or timeouts are the following:
 
@@ -31,31 +31,47 @@ Other places where you might encounter performance issues or timeouts are the fo
 
 ## 4 Preventing and Mitigating a Large Repository Size
 
-### 4.1 Preventing a Large Repository Size
+### 4.1 Preventing a Large Repository Size in the Future
 
-The *.mpr* storage format will be changed in H1 2024 to reduce the rapid repository growth. This will reduce the repository size for new apps, but will not reduce the repository size for existing apps. Upgrading to a new storage format will happen automatically and will not affect functionality.
+The *.mpr* storage format will be changed to reduce the rapid repository growth. Switching to the new storage format will be done under the hood and does not result in functional changes.
 
-### 4.2 Mitigating Large Repository Size
+Mendix aims to introduce the new format for new apps in Q2 2024. Existing apps will be automatically converted in a later version, targeted for H2 2024.
 
-In cases where a repository has already grown to a significant size, Mendix recommends you to consider shrinking the repository by removing parts of the history, in case you are encountering performance issues. 
+### 4.2 Working with a Large Repository Size
 
-Mendix has developed a git-fixer – a cleanup tool to assist you in shrinking your repository. For more information, see the [Cleanup Tool](#cleanup-tool) section below.
+When cloning an app, the default behavior of Git is to download the full history. As Mendix uses different folders on disk for different branches, downloading full history is done for each branch. To mitigate that, Mendix uses local cloning for subsequent branch downloads. When cloning a new branch, data from a local branch you already have is used to reduce data that needs to be downloaded. 
+
+Another improvement that is currently in development is partial cloning, which will instruct Git to only retrieve a part of the history from the server when cloning. In case you do need to access older history, for example, when merging an older branch, the data is retrieved from the server only when needed. Mendix expects to deliver this improvement in the summer of 2024 and intends to backport this to the 10.12 MTS release.
+
+### 4.3 Mitigating Large Repository Size
+
+In cases when a repository has already grown to a significant size and you encounter performance issues, you can also consider starting with a clean slate. First, you receive a backup of your Git repository, which can be used locally, or you can restore it onto a Git server. The second step is wiping the history on the Git server, after which only the last commit of the main branch is available. Time for cloning is then reduced tremendously and you can continue working without performance issues.
+
+Mendix has developed a cleanup tool to assist you in shrinking your repository. For more information, see the [Cleanup Tool](#cleanup-tool) section below.
 
 ## 5  Cleanup Tool {#cleanup-tool}
 
-Mendix has developed a cleanup tool called git-fixer. It is a Python-based command-line tool which copies a local Git repository to a new folder and removes a part of the history, resulting in a new repository that is smaller than the original one.
+Mendix has developed a cleanup tool called git-fixer. It is a Python-based command-line tool which copies a local Git repository to a new folder and removes the history, resulting in a small new repository that only contains the last commit of the main branch.
 
-Through a wizard-like approach you can set various settings, such as the time period for which to retain history, and which branches to retain.
+After cleaning up and pushing the results to the server, team members can run the reset tool to unlink local copies from Studio Pro.
 
 {{% alert color="info" %}}
-This tool is currently in private beta and general availability is expected in Q2 2024. Please reach out to your CSM to join the beta program to get access to the tool.
+The tool is currently in public beta. The cleanup tool can be downloaded [here](https://artifacts.rnd.mendix.com/git-fixer/git-fixer-essentials.zip), the reset tool for team members can be found [here](https://artifacts.rnd.mendix.com/git-fixer/git-fixer-sp-reset.zip).
 {{% /alert %}}
 
 {{% alert color="info" %}}
-This tool is executed on a Git repository. If your app is still on SVN you will first have to migrate to Git. In case the Migrate button is not showing on the Team Server page in Developer Portal because of the size restrictions, you can out to your CSM to join the beta program to get your app whitelisted.
+This tool is executed on a Mendix Git repository. If your Mendix app is still on SVN you will first have to migrate to Git. In case the Migrate button is not showing on the Team Server page in Developer Portal because of the size restrictions, you can reach out to your CSM to get your app whitelisted.
 {{% /alert %}}
 
 ### 5.1 Cleanup Process
+
+The cleanup tool will reduce the size of the repository to a minimum, by only retaining the latest commit of the main branch. This means that all work on branches that have been merged to main branch are kept, but the commits themselves (author, changes per commit, ...) are not.
+
+{{< figure src="/attachments/refguide/version-control/troubleshoot-version-control-issues/git_fixer_mode.png" >}}
+
+{{% alert color="info" %}}
+Uncommitted work, or work committed to branches that have not been merged to the main branch, will be permanently removed from the repository.
+{{% /alert %}}
 
 #### 5.1.2 Deciding on the Cleanup
 
@@ -66,7 +82,6 @@ To conclude whether the situation is acceptable for you, follow these steps:
 * Ensure the Git app you are downloading is not yet on your machine
 * Download the branch through Studio Pro, while manually measuring how long the download takes
   
-
 The first download of a branch on a device is a good indication of the maximum waiting time you or your team member can experience. Subsequent branch downloads use data that is already available locally and will, therefore, be a lot faster.
 
 If the download time was acceptable, or if you have a process where team members do not change often and they do not have to download an app for the first time, you can skip the cleanup.
@@ -80,7 +95,7 @@ When planning the cleanup, note the following:
 
 * Changes made by other users after you made your local copy are lost after pushing the cleaned repository to the Git server.
 * All users need to get fresh clones from the server after the cleanup is completed. This means all changes that have not been committed and pushed to the server before you download the repository you will use for cleaning, will be lost.
-* The process can take up several hours, so we recommend to align with your team before you start. First do a test run to get familiar with the tool before planning the actual cleanup.
+* The process can take up to an hour, so we recommend to align with your team before you start. First do a test run to get familiar with the tool before planning the actual cleanup.
 {{% /alert %}}
 
 #### 5.1.3 Backing Up the Full History
@@ -91,19 +106,7 @@ To make a backup of your full repository, you can download a local clone, zip th
 
 If you need easier access to the repository, for example from Studio Pro, you can choose to push the full history to another (read-only) repository outside Mendix Team Server that can be used as an archive.
 
-#### 5.1.4 Choosing a Cleanup Strategy
-
-The tool allows you to choose how to clean up your repository. There are two modes: EXTREME and PRESERVE:
-
-* EXTREME: retains the last commit of the main branch. There is maximum repository size reduction, but no history at all.
-* PRESERVE: allows you to specify a date range for keeping all commits of selected branches, while throwing away unselected branches and archiving commits before the cut-off date. It is less effective for size reduction, but you can retain history.
-
-{{< figure src="/attachments/refguide/version-control/troubleshoot-version-control-issues/git_fixer_modes.png" >}}
-
-If you are not interested in easily accessing the history of your app in Studio Pro, we recommend you to use the EXTREME mode. 
-If you would like to retain some history, we recommend you to use PRESERVE mode with a three-month cut-off for a single branch.
-
-#### 5.1.5 Executing the Cleanup
+#### 5.1.4 Executing the Cleanup
 
 The tool itself is a multi-step command line script. Before the cleanup actually starts, the script asks for a confirmation of the settings.
 
@@ -111,14 +114,11 @@ The tool itself is a multi-step command line script. Before the cleanup actually
 The script only makes changes to a copy of the original repository. The original repository will not be modified so you can run the script multiple times until you are satisfied with the result. Pushing to the original repository is a separate step. For more information, see the [Pushing Your Results to the Server](#push) section below.
 {{% /alert %}}
 
-#### 5.1.6 Validating the Results
+#### 5.1.5 Validating the Results
 
-The cleanup tool automatically validates each retained branch. The contents of each branch is compared to the original repository to ensure the content is as expected.
+After cleaning up the tool does an initial check to validate the results. Once that is completed you need to open the app in Studio Pro to check the results manually. Open the *.mpr* file in Studio Pro to check whether the latest commit of the main branch is as expected.
 
-We recommend you to check the result in Studio Pro as well. Open the *.mpr* file in Studio Pro to check whether the latest commit of the main branch is as expected.
-To check other branches or commits, you will need to use an [external tool](/refguide/using-version-control-in-studio-pro/#external-tools) to switch branches. After switching branches, you can open the *.mpr* file in Studio Pro again.
-
-#### 5.1.7 Pushing Your Results to the Server {#push}
+#### 5.1.6 Pushing Your Results to the Server {#push}
 
 To store the results of the cleanup in your Git server, you need to push the cleaned repository to the server. To overwrite an existing repository, you need **Force push permissions** to be able to execute the `git push --force` command.
 
@@ -128,7 +128,7 @@ Before executing a force push, always ensure you have a backup of your repositor
 
 Force pushing your results to the server is a separate step, in a separate script. Until this step is executed, the results of the cleanup are only stored locally.
 
-##### 5.1.7.1 Mendix Team Server
+##### 5.1.6.1 Mendix Team Server
 
 If you are using Mendix Team Server as your Git version control server, you can follow the steps below:
 
@@ -138,7 +138,7 @@ If you are using Mendix Team Server as your Git version control server, you can 
     * Conduct the force push.
     * Force push will automatically be disabled again after the first push operation.
 
-##### 5.1.7.2 Other Git Platforms
+##### 5.1.6.2 Other Git Platforms
 
 When using another Git platform than Mendix Team Server, such as Github or Azure Devops, you can typically enable force pushing in a portal. 
 
@@ -152,19 +152,17 @@ You can follow these steps:
 * Run the second script and conduct the force push.
 * Disable force pushing again to prevent accidentally making destructive changes.
 
-#### 5.1.8 Handling Local Copies
+#### 5.1.7 Handling Local Copies
 
-After the results of the cleanup are pushed to the server all local clones need to be reset. This means that each developer of your team who has the project on disk and CI pipelines that have cached data need to get a fresh clone. For developers on your team this means they have to delete their local folders. 
+After the results of the cleanup are pushed to the server all local clones need to be reset. This means that each developer of your team who has the project on disk and CI pipelines that have cached data need to get a fresh clone. 
+
+For developers on your team this means they have to ensure Studio Pro can no longer find their local folders. The **sp-reset** tool, shipped together with the Cleanup tool, can be used. Alternatively, they can rename their folders of the app to *old*.
 
 {{% alert color="warning" %}}
 Deleting local folders means that any uncommitted work is lost. To retain uncommitted work, move the app folder to a location not known to Studio Pro and manually merge the changes after you downloaded a fresh clone.
 {{% /alert %}}
 
 When the local copies have been removed from a machine, Studio Pro can be used as usual to download a fresh clone of your app.
-
-{{% alert color="info" %}}
-Downloading the first branch of an app takes slightly longer than consecutive downloads, as Studio Pro leverages *local cloning* to speed up consecutive downloads.
-{{% /alert %}}
 
 ### 5.2 Troubleshooting
 
@@ -179,9 +177,8 @@ We recommend doing the following:
 * Check your git config settings, especially any setting that involves encoding or text conversions: run `git config --list --show-origin`.
 * Consider moving your local repo, so that its folder has a shorter name
   
-
 When reaching out to Mendix Support, please include:
 
 * App ID for your app
 * Log file (you can find its location in the command line output)
-* Version of the tool, for example, `git-fixer v1.11.2` (you can find the version number in the command line output)
+* Version of the tool, for example, `git-fixer v1.16.5.essentials` (you can find the version number in the command line output)

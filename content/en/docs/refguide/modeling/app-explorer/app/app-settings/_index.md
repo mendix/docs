@@ -56,14 +56,16 @@ Here you have the option to change the default URL prefix for all pages and micr
 The URL prefix must be alphanumeric. It cannot be empty, contain whitespace, or contain any of the following values: 
 
 * "api-doc"
+* "file"
 * "odata"
 * "odata-doc"
-* "pages"
 * "reload"
 * "rest-doc"
 * "ws"
 * "ws-doc"
 * "xas"
+
+Furthermore, static files are served on `/`. So any prefix that has the same name as a static folder located in `/deployment/web/` will cause an error.
 
 If the URL prefix breaks any of the rules mentioned above, then you will get a consistency error.
 

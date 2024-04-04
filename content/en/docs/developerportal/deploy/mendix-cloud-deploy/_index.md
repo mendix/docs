@@ -169,7 +169,7 @@ You can also create a deployment package through the Developer Portal, using a m
 
 #### 2.1.3 Deploying the App to an Environment {#deploy-the-app-to-an-environment}
 
-The previous steps explained how to deploy a deployment package to Mendix Cloud, but the app is not running yet. To deploy a deployment package to a node environment where you can run your app, follow these steps:
+The previous steps explained how to deploy a deployment package to Mendix Cloud, but the app based on the deployment package is not running yet. To deploy a deployment package to a node environment where you can run the app, follow these steps:
 
 1. Go to the [Developer Portal](https://sprintr.home.mendix.com).
 2. Open your app.

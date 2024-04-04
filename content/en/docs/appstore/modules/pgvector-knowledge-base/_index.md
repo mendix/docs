@@ -98,32 +98,57 @@ The domain model in Mendix is a data model that describes the information in you
 #### 4.1.1 Configuration {#configuration-domain-model}
 
 TODO: change image
-{{< figure src="/attachments/appstore/modules/openai-connector/domainModel-Configuration.png" class="image-border" >}}
+{{< figure src="/attachments/appstore/modules/pgvector-knowledge-base/domainModel-DatabaseConfiguration.png" class="image-border" >}}
 
 ##### 4.1.1.1 `DatabaseConfiguration` {#databaseconfiguration-entity} 
 
-...
+This is an entity to store the connection details to a PostgreSQL database. 
+
+| Attribute            | Description                                                                                   |
+| -------------------- | --------------------------------------------------------------------------------------------- |
+| `DisplayName`        | This is a human-readable name for the configuration, to be displayed in the frontend.         |
+| `JdbcURL`            | This is the URL of the database on the database server to which the JDBC driver connects.     |
+| `Password`           | This is the encrypted password that is used during the authentication to the database server. |
+| `Username`           | This is the username that is used during the authentication to the database server.           |
+
 
 ##### 4.1.1.2 `DatabasePassword` {#databasepassword}
 
-This entity is only used for editing the `DatabasePassword` to be stored in the [DatabaseConfiguration](#databaseconfiguration-entity) entity. 
+This non-persistent entity is only used for editing the `DatabasePassword`. It is stored encrypted in the [DatabaseConfiguration](#databaseconfiguration-entity) entity. 
 
 | Attribute | Description                                          |
 | --------- | ---------------------------------------------------- |
-| `Password`  | This is the password used by the runtime to authenticate towards your knowledge base database. 
+| `Password`  | This is the (unencrypted) password used by the runtime to authenticate towards your knowledge base database. |
 
 #### 4.1.2 Knowledge Base interaction {#knowledgebase-domain-model}
 
-TODO change image
-{{< figure src="/attachments/appstore/modules/openai-connector/domainModel-Generalizations.png" class="image-border" >}}
+{{< figure src="/attachments/appstore/modules/pgvector-knowledge-base/domainModel-KnowledgeBaseInteraction.png" class="image-border" >}}
 
 ##### 4.1.2.1 `Chunk` {#chunk}
 
-...
+This entity represents a discrete piece of knowledge that needs to go into or comes out of the knowledge base. 
+
+| Attribute            | Description                                                                                   |
+| -------------------- | --------------------------------------------------------------------------------------------- |
+| `ChunkID`            | This is a system-generated UUID for the chunk in the knowledge base.      |
+| `HumanReadableID`    | This is a front-end reference to the chunk so that users know what it refers to (e.g. URL, document location, human-readable record ID)     |
+| `Vector`             | This is the embedding vector that was generated for the knowledge for this chunk which is used in the vector database for similarity calculations. |
+| `ChunkType`          | This is the type of the chunk. See the enumeration [ChunkType](#enum-chunktype).           |
+| `Key`                | This is the original string that was used to generate the vector and can be used directly after retrieval.           |
+| `Value`              | This represents a value that has no effect on the vector or similarity search but is to be used directly after retrieval    |
+| `MxObjectID`         | If the chunk was based on a Mendix object during creation, this will contain the GUID of that object at the time of creation     |
+| `MxEntity`           | If the chunk was based on a Mendix object during creation, this will contain its full entity name at the time of creation.    |
+| `Similarity`         | In case the chunk was retrieved from the knowledge base as part of a similarity search (e.g top-N retrieval) this will contain the cosine similarity to the input vector for the retrieval that was executed. |
+
 
 ##### 4.1.2.2 `Label` {#label} 
 
-...
+This represents additional information that is to be stored with the chunks in the knowledge base. It can be used for custom filtering during retrieval. A chunk can be associated to multiple labels; labels in turn can be shared across multiple chunks.
+
+| Attribute            | Description                                                                                   |
+| -------------------- | --------------------------------------------------------------------------------------------- |
+| `Key`                | This is the name of the label and typically tells how the value should be interpreted.        |
+| `Value`              | This is the value of the label that provides additional information about the chunk in the context of the given key.          |
 
 ### 4.2 Enumerations {#enumerations} 
 
@@ -133,7 +158,14 @@ An enumeration is a predefined list of values that can be used as an attribute t
 
 ##### 4.2.1.1 `ENUM_ChunkType` {#enum-chunktype} 
 
-...
+This enumerration provides a list of possible chunk types. Currently two types are supported: 
+* `Knowledge` chunks, where only one single text (`Key` of [Chunk](#chunk)) is relevant for both the similarity search and the processing steps afterwards, versus
+* `KeyValue` chunks, where the functionally relevant information after retrieval is different (`Value` of [Chunk](#chunk)) from the text based on which the embedding was generated (`Key` of [Chunk](#chunk)).
+
+| Name         | Caption         |
+| ------------ | --------------- |
+| `Knowledge`  | **Knowledge**   |
+| `KeyValue`   | **KeyValue**    |
 
 ### 4.3 Activities {#activities} 
 

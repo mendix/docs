@@ -8,7 +8,7 @@ tags: ["AR", "VR", "XR", "WebXR"]
 
 ## 1 Introduction
 
-With the WebXR widgets you can build fully immersive XR (meaning both AR and VR) experiences. The [WebXR module](LINKHERE) contains the following widgets:
+Using WebXR widgets, you can build fully immersive extended reality (XR) experiences that combine both augmented reality (AR) and virtual reality (VR) technologies. The [WebXR module](LINKHERE) contains the following widgets:
 
 Container widgets:
 
@@ -31,7 +31,7 @@ Container widgets:
 
 ## 2 Configuration
 
-These widgets require a certain configuration to work; all the widgets need to be contained in the **Container (XR)** widget. There can only be one Container (XR) widget per page, which must contain all the other WebXR widgets you want to use.
+These widgets require a certain configuration to work; all the widgets need to be contained in the **Container (XR)** widget. There can only be one Container (XR) widget per page, which must contain all the other WebXR widgets on that page.
 
 A very simple configuration could look like this:
 
@@ -90,9 +90,9 @@ Node (XR) has the same properties as [3D Object widgets](#3dobject), with the fo
 
 ### 3.3 Repeater (XR)
 
-The Repeater (XR) widget allows the user to create one configuration and repeat that a number of times based on a datasource.
+The Repeater (XR) widget allows the user to create one configuration and repeat that a number of times based on a data source.
 
-#### 3.3.1 General tab
+#### 3.3.1 General Tab
 
 * **Data Source** – The data source based on which the objects should be repeated. For example, this could have a list of 5 objects that have a hex color value. Based on this, while only modeling out 1 **Sphere (XR)** object where the color value could be tied to this. Creating 5 **Sphere (XR)** with different colors.
 
@@ -100,7 +100,7 @@ The Repeater (XR) widget allows the user to create one configuration and repeat 
 
 These are widgets that show a 3D Object, either predetermined (like **Cube (XR)**, **Sphere (XR)** and **Square (XR)**) or based on input (**3D Object (XR)** and **Text (XR)**).
 
-### 4.1 Shared properties
+### 4.1 Shared Properties
 
 These properties exist for all 3D Object widgets (**Cube (XR)**, **Sphere (XR)**, **Square (XR)**, **3D Object (XR)** ,**Text (XR)**) as well as the **Node (XR)** widget.
 
@@ -116,7 +116,7 @@ These properties exist for all 3D Object widgets (**Cube (XR)**, **Sphere (XR)**
   * **Object** – Only available for **3D Object (XR)**. Selecting this will make the object use the material as present on the 3D Object.
   * **Texture** – Sets a static or dynamic image for this object. This image will then be mapped onto the 3D object.
   * **Color** – Sets a solid color on an object. This should be provided in the #rrggbb format.
-* **Opacity** – The transparency of the object. 0 is transparent, while 1 is opaque.
+* **Opacity** – The transparency of the object. 0 is transparent, while 1 is opaque. We recommend incrementing by .1 when testing to see gradual yet meaningful changes.
 
 * **Lighting**
   * **Type** – The kind of lighting that should be used on this object. **Simple** lighting is more basic looking, but easier to render, leading to better framerates. **Realistic** lighting shows more complex reflections and adds options for the type of material this object is supposed to have:
@@ -155,7 +155,7 @@ Shows 3D object, in gltf or glb formats. Requires a link to a 3D Object to show.
 
 Apart from the properties also found on the other AR widgets, the **3D Object (XR)** widget has a **URL** property:
 
-* **URL** – The **URL** to the 3D object that should be shown here. Has to be either of the glb or gltf format.
+* **URL** – The **URL** to the 3D object that should be shown here. Must be in *GLB* or *GLTF* format.
 
 #### 4.2.2 Cube (XR), Sphere (XR), Square (XR)
 
@@ -164,4 +164,5 @@ Shows a predetermined object, either a cube, sphere or square. These are quite s
 #### 4.2.3 Text (XR)
 
 Shows a 3D representation of the current set **Text**, which can be dynamically changed. Due to how this is implemented in the library we're using for these widgets, the object will be completely destroyed and recreated when changing the text so performance does take a hit during this.
+
 The properties of this widgets are the same as other AR widgets, with an extra **Text** property for the actual text this widget should show.

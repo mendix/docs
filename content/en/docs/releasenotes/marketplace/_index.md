@@ -17,7 +17,7 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 #### New Features
 
-We have introduced a Marketplace Content Curation feature for public components. Some organisations have established governance policies and guidelines including specific rules of use of marketplace components. To be able to translate those policies to Mendix Platform, we enable companies to specify such criteria for selected public Marketplace components and ensure that developers of a company know which content is recommended for usage by their Company Admin, through this recommended label.
+We have introduced a Marketplace Content Curation feature for public components. Some organisations have established governance policies and guidelines that include specific rules for using Marketplace components. Companies can now translate those policies to Mendix Platform by specifying such criteria for selected public Marketplace components. Through this recommended label, the developers of a company can know which content is recommended for usage by their Company Admin.
 
 ### March 7, 2024
 

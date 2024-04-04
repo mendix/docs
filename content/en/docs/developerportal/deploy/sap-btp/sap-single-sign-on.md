@@ -19,7 +19,7 @@ One implication of this is that you must use the same login email address for bo
 
 When you sign in to Mendix Studio Pro, you have the option to use SAP authentication or Mendix authentication.
 
-{{< figure src="/attachments/developerportal/deploy/sap-single-sign-on/sign-in.png" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-single-sign-on/mendix-login-page.png"  max-width=50% class="image-border"  >}}
 
 {{% alert color="warning" %}}
 

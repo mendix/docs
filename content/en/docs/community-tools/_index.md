@@ -8,7 +8,7 @@ description_list: true
 cascade:
     - space: "Community Tools Guide"
     - mendix_version: 10
-    - isCanonical: true
+    - is_canonical: true
 tags: ["community", "documentation", "profile", "partner", "forum", "mvp", "support"]
 aliases:
     - /developerportal/community-tools/

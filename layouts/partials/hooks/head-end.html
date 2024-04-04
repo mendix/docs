@@ -3,10 +3,10 @@
 <!-- stylesheet for algolia docsearch -->
 {{- end -}}
 <!-- MvM: Set page as canonical (.Params.isCanonical) or add canonical (.Params.canonicalUrl) if these are set -->
-{{- if .Params.isCanonical -}}
+{{- if .Params.is_canonical -}}
     <link rel="canonical" href="{{ .Permalink }}">
     {{- else -}}
-    {{- with .Params.canonicalUrl -}}
+    {{- with .Params.canonical_url -}}
         <link rel="canonical" href="{{ . }}">
     {{- end -}}
 {{- end -}}

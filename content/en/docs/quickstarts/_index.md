@@ -7,7 +7,7 @@ tags: ["hello world", "microflows", "widgets", "app", "nanoflow", "app developme
 cascade:
     - space: "Quick Starts"
     - mendix_version: 10
-    - isCanonical: true
+    - is_canonical: true
 aliases:
     - /refguide/quickstart-guide/
     - /refguide9/quickstart-guide/

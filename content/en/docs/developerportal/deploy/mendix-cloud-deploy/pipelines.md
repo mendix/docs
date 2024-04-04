@@ -1,10 +1,11 @@
 ---
-title: "Pipelines (Beta)"
+title: "Pipelines"
 url: /developerportal/deploy/pipelines/
 weight: 33
 description: "Describes how to design, implement, and review pipelines using the Pipelines feature in the Developer Portal"
 tags: ["Deploy","App","Developer Portal", "CI/CD"]
 status: "Public Beta"
+beta: true
 ---
 
 {{% alert color="warning" %}}

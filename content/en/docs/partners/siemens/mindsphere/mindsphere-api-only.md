@@ -13,7 +13,7 @@ This information is not for full integrated Insights Hub apps. It apply to apps 
 {{% /alert %}}
 
 In case you like your own user management or SSO solution, but likes to gather insights via the Insights Hub APIs, this chapter is describing how you can achieve it. This chapter is describing how you can authenticate Insights Hub API REST calls with the help of a **Technical User** and the **Siemens Insights Hub API Authenticator**.
-Please note that this way is not a fully integration within Insights Hub and have the following limitations
+Please note that this way is not a fully integration within Insights Hub and have the following limitations:
 
 * You cannot make your app multi-tenant – see [Multi-tenancy](/partners/siemens/mindsphere-development-considerations/#multitenancy) in *Insights Hub Development Considerations* for more information on multi-tenancy
 * Your app cannot be deployed to the Insights Hub platform and cannot be added to the Insights Hub Developer Cockpit
@@ -27,8 +27,8 @@ If you prefer a full Insights Hub app, please see [Insights Hub Development Cons
 
 ## 2 Technical User
 
-If your application is not fully integrated within Insights Hub and is using there own user management the signed in users has no *rights* to call Insights Hub APIs. For this scenario Insights Hub is providing so called **Technical Users**. An Insights Hub tenant administrator is granted to create a technical users in the **Insights Hub Settings** app.
-Please follow the steps described in [Technical Users](https://documentation.mindsphere.io/MindSphere/apps/settings/technical-users.html) to create a **Technical User**. Please make sure the Technical User has the role assignment needed to call the desired Insights Hub APIs.
+If your application is not fully integrated within Insights Hub and is using its own user management the signed in users has no *rights* to call Insights Hub APIs. For this scenario Insights Hub is providing so called **Technical Users**. An Insights Hub tenant administrator is able to create an technical user in the **Insights Hub Settings** app.
+Please follow the steps described in [Technical Users](https://documentation.mindsphere.io/MindSphere/apps/settings/technical-users.html) to create a **Technical User**. Please make sure the created Technical User has the role assignment needed to call the desired Insights Hub APIs.
 
 
 ## 3 Authenticating Calls to Insights Hub APIs
@@ -41,10 +41,9 @@ In the **_Use me** folder of the *SiemensInsightsHubAPIAuthenticator* module set
 
 * **ClientID** – this is the *clientID* from the **Technical User** you generated
 * **ClientSecret** – this is the *clientSecret* from the **Technical User** you generated
-* **TokenURL** – this is the URL where to get the Insights Hub token from and is tenant specific.
+* **TokenURL** – this is the URL where to get the Insights Hub token from and is tenant specific
 
 Calls to Insights Hub are made through REST calls which can be made using the standard Mendix [Call REST Service](/refguide/call-rest-action/) functionality. See [How To Consume a REST Service](/howto/integration/consume-a-rest-service/) for a full walkthrough on doing this. For calls to Insights Hub, these calls need to be authenticated.
-
 
 This is done by adding an **Access token** action before each **Call REST** action in your microflows. The **Access token** can be found within the toolbox on the right side.
 
@@ -63,7 +62,7 @@ However, authentication will only be successful if the correct credentials are p
 * **ClientID** – this is the *clientID* from the **Technical User** you generated
 * **ClientSecret** – this is the *clientSecret* from the **Technical User** you generated
 * **TokenURL** – this is the *TokenURL* where to fetch the Insights Hub token from and is in the format:
-    
+
     `https://{tenantName}.piam.{region}.{mindsphere-domain}/oauth/token?grant_type=client_credentials`
 
     You have to replace `tenantName`, `region` and `mindsphere-domain` regarding your destination tenant e.g.
@@ -89,7 +88,7 @@ Storing the *Client Secret* inside the app is, from a security perspective, not 
 Don't forget to restart Studio Pro after you change / add the environment variable.
 {{% /alert %}}
 
-For security, the values of the **ClientSecret** should not be included when you deploy the app.
+For security, the values of the **ClientSecret** should not be included when you deploy / commit the app.
 
 ### 4.2 Authenticating for Deployment
 

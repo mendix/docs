@@ -56,6 +56,7 @@ The **Source** option (required) is used is used to configure the datasource typ
 * [Static](#static)
 
 #### Context {#context}
+
 When Context source is selected, the **Data source** section (required) configures the type of the context. It supports the following data types via these properties:
 * [Association](/refguide/association-source/)
 * [Enumeration](/refguide/enumerations/)

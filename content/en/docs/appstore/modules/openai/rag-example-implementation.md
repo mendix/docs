@@ -52,7 +52,7 @@ You have access to a (remote) PostgreSQL database with the [pgvector](https://gi
 
 4. Go to **Step 3: Knowledge Base** and create embeddings from a text and store. You can use our default text about ornamental flowering plants, or paste your own content.
 
-5. Go to **Step 4: Embedding Vectors**. Verify the embedding vectors have been created in your new database. If you ever want to go back to load different content instead, Mendix recommends using the clear button here first.
+5. Go to **Step 4: Embedding Vectors**. Verify the embedding vectors have been created in your new database. If you ever want to go back to load different content instead, any existing records are replaced automatically.
 
 6. Go to **Step 5: User Prompt** and do as follows:
    1. Ask something about the entered text. The system prompt is automatically enriched with the chunks of text from the knowledge base that are most relevant for the user query. 
@@ -61,9 +61,14 @@ You have access to a (remote) PostgreSQL database with the [pgvector](https://gi
 
 {{% alert color="info" %}}
 
-The OpenAI showcase application uses the Mendix [Database Connector](https://marketplace.mendix.com/link/component/2888) to run queries and statements on your remote database. If you want to know more about this or if you are looking for certain technical details, see [Database Connector](/appstore/modules/database-connector/).
+The OpenAI showcase application uses the Mendix [PgVector Knowledge Base module](https://marketplace.mendix.com/link/component/2888) from the Marketplace to run queries and statements on your remote database. If you want to know more about this or if you are looking for certain technical details, see [PgVector Knowledge Base](/appstore/modules/pgvector-knowledge-base/). 
 
-The OpenAI showcase application takes care of creating the required tables in the remote vector database, including the open-source extension called pgvector. If you want to know more about the extension and how the tables look like in combination with this extension, see the [pgvector source code and documentation on GitHub](https://github.com/pgvector/pgvector).
+{::comment}
+TODO: insert links to the marketplace component and check link to docs
+{/comment}
+
+
+The OpenAI showcase application uses this module to take care of creating the required tables in the remote vector database, including the open-source extension called pgvector. If you want to know more about the extension and how the tables look like in combination with this extension, see the [pgvector source code and documentation on GitHub](https://github.com/pgvector/pgvector).
 
 If you want to know more about RAG, embeddings, or [vector databases](/appstore/modules/openai-connector/vector-database-setup/), make sure to review the links on the **Resources** page of the OpenAI showcase application or in the [Read More](#read-more) section.
 
@@ -77,8 +82,8 @@ If you would like to build your own RAG setup, feel free to learn from the OpenA
 
 * For RAG, you need a storage space for high-dimensional embedding vectors outside of your normal Mendix app database. Typically, this is a remote vector database. In order to connect to it, the OpenAI showcase application uses the Mendix database connector. See [Vector Database Setup](/appstore/modules/openai-connector/vector-database-setup/) for more details.
 
-* The OpenAI showcase application relies on a PostgreSQL database with the pgvector extension included. Even if you choose to use a different vector database, the database queries and statements, which you will have to perform, should cover at least the following:
-    * Include the vector extension if applicable (create extension).
+* The OpenAI showcase application relies on a PostgreSQL database with the pgvector extension included. In such a setup you can similarly rely on the PgVector Knowledge Base module to take care of creating and execution the right queries. If you choose to use a different type of vector database, the database queries and statements, which you will have to perform, should cover at least the following:
+    * Include the vector extension if applicable for the chosen database type (create extension).
     
     * Create tables to store the embedding vectors (create table).
     
@@ -88,7 +93,7 @@ If you would like to build your own RAG setup, feel free to learn from the OpenA
     
     * Remove individual records (delete) or tables (drop table).
 
-{{% alert color="info" %}}Example queries in the form of SQL statements are available for inspiration in the source code of the OpenAI showcase application.{{% /alert %}}
+{{% alert color="info" %}}Example queries in the form of SQL statements are available for inspiration in the source code of the PgVector Knowledge Base module which comes automatically with OpenAI showcase application.{{% /alert %}}
 
 ## 5 Read More {#read-more}
 

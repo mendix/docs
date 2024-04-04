@@ -18,25 +18,29 @@ For Android the process is still manual.
 
 The configuration for Fastlane resides in `/ios/fastlane/Fastlane`. Currently three lanes are configured internal, build and release. Internal should be used for internal test builds as in example detox. Beta pushes the resulting `ipa` to Test Flight. Release, creates a new release in App Store Connect; currently submitting it for review is a manual step but it might change.
 
-**For the Beta and the Release lane, before building, the VERSION_NUMBER in the `Fastlane` config file needs to be changed manually!**
+{{% alert color="warning" %}}
+For the **Beta** and **Release** lanes, before building, be sure to change the **VERSION_NUMBER** in the `Fastlane` config file manually.
+{{% /alert %}}
 
-#### 1.1.1 Installing Fastlane on your machine
+#### 1.1.1 Installing Fastlane 
 
-* Install fastlane by gem
-  `sudo gem install fastlane -NV`
-* Add this lines in ~/.bash_profile or ~/.zshrc (point the version to version installed)
+To install Fastlane on your machine, do the following:
 
-```bash
-export FASTLANE_PATH="/usr/local/lib/ruby/gems/2.6.0/gems/fastlane-2.134.0/bin"
-export PATH="$FASTLANE_PATH:$PATH"
-```
+1. Install Fastlane via gem:
+  * `sudo gem install fastlane -NV`
+1. Add these lines in ~/.bash_profile or ~/.zshrc (point the version to version installed):
+  ```bash
+  export FASTLANE_PATH="/usr/local/lib/ruby/gems/2.6.0/gems/fastlane-2.134.0/bin"
+  export PATH="$FASTLANE_PATH:$PATH"
+  ```
 
 #### 1.1.2 Build the app for internal testing
 
-* Change directory into `/developerapp/ios`
-* `fastlane internal`
+To build your app for internal testing, do the following:
 
-The output is in `/build/internal/output`
+1. Change directory into `/developerapp/ios`.
+1. Do something with the `fastlane internal` command @UrazAkgultan.
+1. The output will reside in `/build/internal/output`, so grab your files from that directory.
 
 #### 1.1.3 Releasing to Test Flight
 

@@ -19,7 +19,7 @@ aliases:
 
 Mendix Cloud is a public cloud service for Mendix applications; it is the default deployment option for Mendix applications. You can either deploy a limited [Free App](https://www.mendix.com/evaluation-guide/evaluation-learning/getting-started/#evaluate-before) or an app running on a licensed cloud node.
 
-Organizations can also have their own Mendix Cloud. This service is named [Mendix Cloud Dedicated](https://www.mendix.com/evaluation-guide/app-lifecycle/mendix-cloud-overview/#mendix-cloud-vpc). Mendix Cloud Dedicated is a single-tenant instance of the public Mendix Cloud, running apps of only one organization.
+Organizations can also have their own Mendix Cloud. This service is named [Mendix Cloud Dedicated](https://www.mendix.com/evaluation-guide/app-lifecycle/mendix-cloud-overview/#mendix-cloud-vpc). Mendix Cloud Dedicated is a single-tenant instance of the public Mendix Cloud, running the apps of only one organization.
 
 ### 1.1 Free App {#free-app}
 
@@ -215,11 +215,7 @@ With a Free App, you can deploy your app to Mendix Cloud from Studio Pro by usin
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp.png" alt="The Publish button" max-width=20% >}}
 
-## 3 Status of Deployment
-
-The [Mendix status page](https://status.mendix.com/) shows the current status of Mendix services. If you have issues with deployment, you can check the Mendix status page to see if deployment is operational (under **Mendix Services**) or if there are other Mendix issues that may be affecting your deployment.
-
-## 4 Mendix Pricing Plans {#plans}
+## 3 Mendix Pricing Plans {#plans}
 
 Mendix licenses are sold as part of plans. Plans consist of the following items:
 
@@ -227,7 +223,7 @@ Mendix licenses are sold as part of plans. Plans consist of the following items:
 * A cloud resource pack, which specifies the resources available to your app environment
 * Additional resources, such as fallback environments
 
-### 4.1 Plans
+### 3.1 Plans
 
 The following plans are available:
 
@@ -239,7 +235,7 @@ The following plans are available:
 
 For more information, see [Pricing](https://www.mendix.com/pricing/).
 
-### 4.2 Cloud Resource Packs {#resource-pack}
+### 3.2 Cloud Resource Packs {#resource-pack}
 
 Mendix environments are sized by reference to cloud resource packs. The table below shows the current cloud resource packs for Standard, Premium, and Premium Plus plans. Resources for the Basic plan are fixed as described in [Mendix Basic Package](/developerportal/deploy/basic-package/).
 
@@ -284,11 +280,11 @@ The legacy cloud resource packs listed below are still being used but are not av
 You can have a pack using a fraction of a vCPU. This is because several environments can run, completely isolated from each other, on a single virtual machine.
 {{% /alert %}}
 
-### 4.3 Additional Resources{#additional-resources}
+### 3.3 Additional Resources{#additional-resources}
 
 For Premium customers using a Premium resource pack, there are additional features available for apps deployed to Mendix Cloud. There are also additional ways to deploy Mendix apps.
 
-#### 4.3.1 High Availability and Fallback {#fallback}
+#### 3.3.1 High Availability and Fallback {#fallback}
 
 Premium plans come with High Availability and Fallback out of the box. This ensures that copies of your app are spread across multiple availability zones (AZs). If there is a problem with a specific AZ, copies of your app running on other AZs remain available.
 
@@ -298,7 +294,7 @@ Fallback ensures that the data in your database is automatically copied to a dat
 
 The connections between AZs are low latency. However, the implementation of these features means that your monitoring may indicate that apps deployed to Mendix Cloud under a Premium plan suffer an additional latency of a few milliseconds compared with apps deployed using a Standard plan. For a well-designed app, this difference is not noticeable to end-users. 
 
-#### 4.3.2 Regional Fallback{#regional-fallback}
+#### 3.3.2 Regional Fallback{#regional-fallback}
 
 You can also purchase a Premium Plus plan, which provides all the features of the Premium plan, with the addition of Regional Fallback.
 
@@ -306,9 +302,13 @@ With Regional Fallback, a copy of your database and FileDocuments is maintained 
 
 Because this is designed for a catastrophic regional failure, there are some limitations to your normal operations. For example, you cannot deploy a new version of the app while it is running in the secondary region. The decision to switch to the secondary region is completely under your control.
 
-#### 4.3.3 On-Premises and Private Cloud
+#### 3.3.3 On-Premises and Private Cloud
 
 If you want to deploy your Mendix apps to other environments, you can add these to your Mendix plan. For example, you can choose to deploy to [SAP BTP](/developerportal/deploy/sap-cloud-platform/). You can also choose to deploy to your own cloud using [Mendix for Private Cloud](/developerportal/deploy/private-cloud/).
+
+## 4 Deployment Status and Troubleshooting
+
+The [Mendix status page](https://status.mendix.com/) shows the current status of Mendix services. If you have issues with deployment, you can check the Mendix status page to see if deployment is operational (under **Mendix Services**) or if there are other Mendix issues that may be affecting your deployment.
 
 ## 5 Read More
 

@@ -1,18 +1,18 @@
 ---
 title: "Setting up a Vector Database"
-url: /appstore/modules/openai-connector/vector-database-setup/
-category: "Open AI"
+url: /appstore/modules/pgvector-knowledge-base/vector-database-setup/
+category: "PgVector Knowledge Base"
 linktitle: "Vector Database Setup"
 weight: 5
 description: "Describes how to setup a vector database to store and manage vector embeddings for a knowledge base"
-tags: ["OpenAI", "generative AI", "AI", "connector", "marketplace", "chatgpt", "genAI", "embeddings", "Retrieval augmented generation", "RAG", "showcase application", "Azure OpenAI", "vector embeddings", "vector database", "knowledge base"]
+tags: ["OpenAI", "generative AI", "AI", "connector", "marketplace", "chatgpt", "genAI", "embeddings", "Retrieval augmented generation", "RAG", "Azure OpenAI", "vector embeddings", "vector database", "knowledge base", "pgvector"]
 ---
 
 ## 1 Introduction {#introduction}
 
 Vector databases play an important role in embeddings-based AI use cases by facilitating efficient storage, retrieval, and manipulation of high-dimensional vectors representing textual or semantic information. A crucial step within those use cases like semantic search and Retrieval Augmented Generation (RAG) is to find the closest and thus most similar pieces of information to a given semantic input. Those similarity and distance calculations between high-dimensional vectors cannot be done on a normal database and thus a vector database is needed.
 
-This page describes how a PostgreSQL vector database can be set up to explore embeddings-based use cases with the [OpenAI Showcase App](https://marketplace.mendix.com/link/component/220475).
+This page describes how a PostgreSQL vector database can be set up to explore use cases with knowledge bases.
 
 {{% alert color="info" %}}
 This procedure describes a setup based on a PostgreSQL database with the pgvector extension to query embedding vectors. However, this is not the only possible solution. Other (vector) database types may better fit your use case.
@@ -76,15 +76,17 @@ You can use the values in the steps below for experimental purposes:
 
 If no action is taken, resources in AWS will stay around indefinitely. Make sure to think about deleting the resources when you are done experimenting. When using services from AWS, you are responsible for having the necessary resources and deleting the ones that are no longer needed, to prevent from being charged more than is required. This is especially relevant the moment resources fall outside of the free-tier after a certain time.
 
-## 4 Configuring the Database Connection Details in the Showcase Application {#configure-database-connection}
+## 4 Configuring the Database Connection Details in your application {#configure-database-connection}
 
-1. Download, run, and login to the [OpenAI Showcase App](https://marketplace.mendix.com/link/component/220475).
+1. Add the [PgVector Knowledge Base module](https://marketplace.mendix.com/link/component/2888) to your Mendix app and set it up correctly, see [PgVector Knowledge Base](/appstore/modules/pgvector-knowledge-base/). 
 
-2. Navigate to the **Retrieval Augmented Generation** or the **Semantic Search** Example.
+[comment]: # ( TODO: insert links to the marketplace component and check link to docs)
 
-3. Read **Step 1: Introduction**.
+2. Include the page **DatabaseConfiguration_Overview** in the navigation or use the snippet **Snippet_DatabaseConfigurations** on an existing page.
 
-4. Go to **Step 2: Vector Database Configuration**.
+3. Run the app, login as admin and navigate to the previously linked **Vector database configurations** page.
+
+4. Create a new configuration.
 
 5. Edit the configuration details as follows:
    1. Format the Jdbc URL in the following way:
@@ -106,10 +108,6 @@ If no action is taken, resources in AWS will stay around indefinitely. Make sure
 
    3. Save and test the configuration.
 
-   4. Proceed with the rest of the steps in the wizard.
-
-   {{% alert color="info" %}}For more details about Retrieval Augmented Generation, see [RAG Example Implementation](/appstore/modules/openai-connector/rag-example-implementation/).{{% /alert %}}
-
 ## 5 Setup Alternatives {#setup-alternatives}
 
 Setting up an AWS RDS database with the pgvector extension is one of the easiest options for using a vector database for our sample implementation. However, there are also alternatives and general considerations, which are described in this section.
@@ -126,7 +124,7 @@ Make sure that you meet the following prerequisites:
    2. Create a database, for example, myVectorDatabase. You will need this later.
 3. Have the pgvector extension installed. Depending on your hardware and operating system, the steps to install the pgvector extension can be different. Follow the [installation instructions](https://github.com/pgvector/pgvector?tab=readme-ov-file#installation) on GitHub carefully and make sure to check the [installation notes](https://github.com/pgvector/pgvector?tab=readme-ov-file#installation-notes).
 
-In this case, the configuration of the database connection details in the showcase application is similar to what was described in the [Configuring the Database Connection Details in the Showcase Application](#configure-database-connection) section. Your Jdbc URL will now look like `jdbc:postgresql://localhost:5432/{vectorDatabaseName}` where the value for `{vectorDatabaseName}` is the one you have chosen while creating the database.
+In this case, the configuration of the database connection details in your application is similar to what was described in the [Configuring the Database Connection Details in your application](#configure-database-connection) section. Your Jdbc URL will now look like `jdbc:postgresql://localhost:5432/{vectorDatabaseName}` where the value for `{vectorDatabaseName}` is the one you have chosen while creating the database.
 
 ## 6 Troubleshooting {#troubleshooting}
 

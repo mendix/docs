@@ -233,15 +233,90 @@ You will only have to make the changes below if you are configuring your existin
 
 Run your app locally, copy the *index.html* from the /deployment folder to /theme/web/public folder of your app and apply the changes described below.
 
-#### 5.1.1 XSRF
+#### 5.1.1 XSRF / Gatway session expired
 
 In index.html, in the header before the line `{{themecss}}`, the following script needs to be included in the file.
+
+The modification does two things:
+
+* add the x-xsrf-token header on each request. This is needed by the Insights Hub Gateway.
+* handle gateway session expired case. Show a popup in such a case and inform the user to reload the app. The message / title shown in the popup can be modified and localized via the "i18n" enumeration of the module "SiemensInsightsHubWebContent".
 
 ```javascript
 <script>
 	// Insights Hub specific part-1: We have to use the XSRF-TOKEN on fetch requests.
 	// This script should placed before "mxui.js" as this script makes the fetch requests
 	(function () {
+            const sessionExpiredReloadAppPopup = function () {
+                // get localized texts for popup from sessionstorage. In case of error use fallbackText.
+                const getTextFromSessionStorage = () => {
+                    const fallbackText = {
+                        title: "Session expired",
+                        message: "The session is expired. Please reload the app.",
+                        button: "Reload app",
+                    }
+                    try {
+                        const text = JSON.parse(sessionStorage.getItem('sessionExpired'));
+                        if (text.hasOwnProperty("title") && text.hasOwnProperty("message") && text.hasOwnProperty("button")) {
+                            return text;
+                        }
+                        return fallbackText;
+                    } catch (error) {
+                        return fallbackText;
+                    }
+                }
+                const text = getTextFromSessionStorage();
+                // div structure is copied from the "SessionExpired" page in the module SiemensInsightsHubWebContent
+                // As we can not load the page dynamically due to expiration of the gateway session.
+                // When user click the button location.reload() is triggered - which initiates an new session with gateway
+                const sessionExpiredPopup = `
+                <div role="dialog" class="modal-dialog mx-window  mx-window-active" aria-labelledby="mxui_widget_Window_0_caption"
+                    aria-modal="true" tabindex="-1" id="mxui_widget_Window_0" widgetid="mxui_widget_Window_0"
+                    style="opacity: 1; z-index: 1002; top: calc(50% - 116px); height: 232px; left: calc(50% - 300px);" data-focus-capturing="modal">
+                    <div class="modal-content mx-window-content">
+                        <div class="modal-header mx-window-header" style="user-select: none; cursor: none;">
+                            <h4 id="mxui_widget_Window_0_caption">${text.title}</h4>
+                        </div>
+                        <div data-focusindex="0" class="modal-body mx-window-body">
+                            <div data-mendix-id="24.Atlas_Core.PopupLayout.scrollContainer1"
+                                class="mx-scrollcontainer mx-scrollcontainer-horizontal mx-scrollcontainer-fixed"
+                                id="mxui_widget_HorizontalScrollContainer_1" widgetid="mxui_widget_HorizontalScrollContainer_1"
+                                style="">
+                                <div class="mx-scrollcontainer-center ">
+                                    <div class="mx-scrollcontainer-wrapper">
+                                        <div data-mx-placeholder="580b026c-02e6-46bd-ad21-62689eb3873d" class="mx-placeholder">
+                                            <div data-mendix-id="2.SiemensInsightsHubWebContent.SessionExpired.layoutGrid1"
+                                                data-widget-wrapper="true" class="" id="mxui_widget_Wrapper_21"
+                                                widgetid="mxui_widget_Wrapper_21" style="display: contents !important;">
+                                                <div class="mx-name-layoutGrid1 mx-layoutgrid mx-layoutgrid-fluid container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-lg-12 col-md-12 col-12">
+                                                            <h1 class="mx-title mx-name-pageTitle1">${text.title}</h1><label
+                                                                id="2.SiemensInsightsHubWebContent.SessionExpired.label1_oer_83"
+                                                                class="mx-name-label1">${text.message}</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-12 col-md-12 col-12">
+                                                            <button type="button" class="btn mx-button mx-name-actionButton1 pull-right btn-default"
+                                                                title="" data-button-id="2.SiemensInsightsHubWebContent.SessionExpired.actionButton1"
+                                                                data-disabled="false" onClick="location.reload()">${text.button}</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mx-underlay" id="mxui_widget_Underlay_0" widgetid="mxui_widget_Underlay_0" style="z-index: 101;"></div>`
+                const body = document.getElementsByTagName('body')[0];
+                body.insertAdjacentHTML('afterbegin', sessionExpiredPopup);
+            };
+
             // Read cookie below
             function getCookie(name) {
                 match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
@@ -271,7 +346,22 @@ In index.html, in the header before the line `{{themecss}}`, the following scrip
                             init.headers['x-xsrf-token'] = xrsfToken;
                         }
                     }
-                    return originalFetch(url, init);
+                    return new Promise((resolve, reject) => {
+                        // Change default redirect mode from "error" to "manual"
+                        // And handle "opaqueredirect" response type.
+                        init.redirect = "manual";
+                        originalFetch(url, init)
+                            .then(response => {
+                                if (response.type === "opaqueredirect") {
+                                    sessionExpiredReloadAppPopup();
+                                } else {
+                                    return resolve(response);
+                                }
+                            })
+                            .catch(e => {
+                                reject(e);
+                            });
+                    })
                 };
             }
             if (!window.fetch || (window.fetch && /Edge/.test(navigator.userAgent))) {
@@ -356,6 +446,24 @@ For the OS Bar to work correctly in your Mendix app, the following script has to
             (function (d2, script2) {
                 script2 = d2.createElement('script');
                 script2.src = 'mxclientsystem/mxui/mxui.js?{{cachebust}}';
+                script2.onload = function () {
+                    // Load localized texts for session expired popup and store them in the session context.
+                    // In case the session is expired we can not load the texts anymore.
+                    mx.addOnLoad(() => {
+                        mx.data.create({
+                            entity: "SiemensInsightsHubWebContent.SessionExpired",
+                            callback: function (obj) {
+                                const title = obj.getRawValue('Title');
+                                const message = obj.getRawValue('Message');
+                                const button = obj.getRawValue('Button');
+                                sessionStorage.setItem('sessionExpired', JSON.stringify({ title, message, button }));
+                            },
+                            error: function (e) {
+                                console.error(e);
+                            }
+                        });
+                    });
+                }
                 script2.async = true;
                 d2.getElementsByTagName('body')[0].appendChild(script2);
             })(document);

@@ -8,8 +8,10 @@ tags: ["distribution", "app store", "ios", "android", "make it native"]
 
 ## 1 Building
 
-We are using Fastlane for building the apps iOS apps. Fastlane is an all in one ci tool that automates the process
-of building and deploying.
+If you want to use the Make It Native app to test your native apps, you must choose a [MIN version](/releasenotes/mobile/make-it-native-parent/) compatible with your version of Studio Pro. If, however, you wish to use a ___@UrazAkgultan______ version of Studio Pro and still use the MIN, then you will have to manually build a version of the MIN that is compatible with your version of Studio Pro.
+
+Mendix uses Fastlane for building iOS apps. Fastlane is an all in one continuous integration tool that automates building and deploying.
+
 For Android the process is still manual.
 
 ### 1.1 iOS

@@ -350,7 +350,7 @@ components:
     Authorization:
       type: apiKey
       description: 'For more information about requesting and using a token see the [documentation](https://docs.mendix.com/developerportal/community-tools/mendix-profile/user-settings/#pat).<br/> The header must be set to `MxToken <Your PAT>`.'
-      name: MxToken 7LJE…vk
+      name: MxToken
       in: header
   responses:
     404-Not-Found:

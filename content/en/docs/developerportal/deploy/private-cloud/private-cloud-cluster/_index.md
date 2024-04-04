@@ -1325,7 +1325,7 @@ If you want to use the Private Cloud License Manager, the Mendix Operator must b
 For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/).
 
 {{% alert color="info" %}}
-If Global Operator is configured with [PCLM](developerportal/deploy/private-cloud/private-cloud-license-manager/), you can view the **Runtime** and **Operator** list of licenses for the main namespace, and only the list of **claims** for the managed namespace.
+If Global Operator is configured with [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/), you can view the **Runtime** and **Operator** list of licenses for the main namespace, and only the list of **claims** for the managed namespace.
 {{% /alert %}}
 
 ## 8 Current Limitations

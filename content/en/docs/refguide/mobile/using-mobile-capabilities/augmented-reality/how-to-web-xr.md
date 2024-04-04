@@ -1,6 +1,6 @@
 ---
 title: "Get Started with WebXR"
-url: /refguide/mobile/using-mobile-capabilities/augmented-reality/how-to-web-xr-quickstart/
+url: /refguide/mobile/using-mobile-capabilities/augmented-reality/get-started-with-web-xr/
 weight: 10
 description: "Tutorials for setting up and using XR in Mendix Studio Pro."
 tags: ["AR", "VR", "XR", "WebXR"]

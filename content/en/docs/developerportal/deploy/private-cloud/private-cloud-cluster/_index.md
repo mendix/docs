@@ -65,13 +65,10 @@ Should you consider using a connected environment, the following URLs should be 
 
 7. Enter the following information:
 
-    1. **Installation Type**  – Choose Global Installation if you want a single operator namespace to manage multiple namespaces or just a single operator namespace. For more information, see [Global Operator](/developerportal/deploy/global-operator/).
-
-    2. **Cluster Name** – The name that you want to give the cluster which you are creating.
-
-    3. **Cluster Type** – Choose the correct type for your cluster. For more information, see [Supported Providers](/developerportal/deploy/private-cloud-supported-environments/).
-
-    4. **Description** – An optional description of the cluster which will be displayed under the cluster name in the Cluster Manager.
+    * **Installation Type**  – Choose **Global Installation** if you want a single Operator namespace to manage multiple namespaces, or **Namespace Installation** if you want the Operator to only manage one namespace. For more information, see [Global Operator](/developerportal/deploy/global-operator/).
+    * **Cluster Name** – The name that you want to give the cluster which you are creating.
+    * **Cluster Type** – Choose the correct type for your cluster. For more information, see [Supported Providers](/developerportal/deploy/private-cloud-supported-environments/).
+    * **Description** – An optional description of the cluster which will be displayed under the cluster name in the Cluster Manager.
 
 8. Click **Create**.
 
@@ -943,7 +940,7 @@ When you delete a namespace, this removes the namespace from the cluster in the 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image26.png" >}}
 
 {{% alert color="info" %}}
-In the case of a Global Operator managed namespace, the managed namespace will not be deleted from the cluster. You must delete it from the cluster manually.
+In the case of a Global Operator managed namespace, the managed namespace will not be deleted from the cluster. You must delete it from the cluster manually. Additionally, you also need to remove the managed namespace from the list of managed namespaces in the Operator configuration of the main namespace. 
 {{% /alert %}}
 
 In order to delete the namespace from the cluster, perform the following steps:
@@ -1263,6 +1260,10 @@ Once you enable the **Use custom core resources plans** button, you cannot switc
 
 The **Installation** tab shows you the Configuration Tool which you used to create the namespace, together with the parameters which are used to configure the agent. You can use the Configuration Tool again to change the configuration of your namespace by pasting the command into a command line terminal as described in [Running the Configuration Tool](/developerportal/deploy/standard-operator/#running-the-tool), above. You can also download the Configuration Tool again, if you wish.
 
+{{% alert color="info" %}}
+In case of Global Operator Managed namespace, you will see the Configuration tab instead of the Installation tab. For more information, see [Global Operator Namespace](/developerportal/deploy/global-operator/)
+{{% /alert %}}
+
 #### 7.2.7 Additional Information
 
 This tab shows information on the versions of the various components installed in your namespace.
@@ -1322,6 +1323,10 @@ If you want to use the Private Cloud License Manager, the Mendix Operator must b
 {{% /alert %}}
 
 For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/).
+
+{{% alert color="info" %}}
+If Global Operator is configured with [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/), you can view the **Runtime** and **Operator** list of licenses for the main namespace, and only the list of **claims** for the managed namespace.
+{{% /alert %}}
 
 ## 8 Current Limitations
 

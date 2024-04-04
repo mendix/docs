@@ -504,9 +504,9 @@ The **Model Options** tab allows you to change the configuration of scheduled ev
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image24.png" >}}
 
-To toggle any scheduled events, select the scheduled event you want to enable or disable and click **Toggle**.
+To toggle any scheduled events, select the scheduled event you want to enable or disable and click **Toggle**. You can also export the scheduled events to an Excel file by selecting **Export Constants to Excel**.
 
-To change any constants, select the constant you want to edit and then click **Edit**. You also have the option to export the app constants to an Excel file by selecting **Export Constants to Excel**.
+To change any constants, select the constant you want to edit and then click **Edit**. You also have the option to export the app constants to an Excel file by selecting **Export Scheduled Events to Excel**.
 
 {{% alert color="info" %}}
 If the MxApp constants are configured in both the CSI Secrets Storage and another location (such as the Developer Portal or MendixApp CR), the secret storage configuration has a higher priority and overrides the value specified elsewhere.

@@ -93,7 +93,9 @@ To install and configure the Global Operator, perform the following steps:
 15. Click **Configure Namespace** and select the items which you want to configure.
 16. In the **Global Operator** section, enter the **Global Operator namespace name**.
 
-    {{% alert color="warning" %}}Ensure that you do not the name of a managed namespace (that is, a namespace where you plan to deploy a Mendix app).{{% /alert %}}
+{{% alert color="warning" %}}
+Ensure that you do not use the name of a managed namespace (that is, a namespace where you plan to deploy a Mendix app).
+{{% /alert %}}
 
 17. [Configure any remaining namespace settings](/developerportal/deploy/standard-operator/#configure-namespace) and apply the configuration.
 
@@ -108,20 +110,34 @@ After configuration, the status of managed namespace changes to **Configured**.
 Once the managed namespace is configured, you can find the list with all the namespaces managed by the globally installed operator in **Addition Information** section of Global Operator Namespace.
 
 {{% alert color="info" %}}
-If the managed namespaces are deleted from the portal, the namespaces will not be deleted from the cluster. The managed namespaces needs to be manually deleted from the cluster.
+If the managed namespaces are deleted from the portal, the namespaces will not be deleted from the cluster. The managed namespaces needs to be manually deleted from the cluster. Additionally, you also need to remove the managed namespace from the list of managed namespaces in the Operator configuration of the main namespace.
 {{% /alert %}}
 
 ### 2.2 Next Steps
 
 After everything is configured, you can deploy the application. For more information, see [Deploy Application](/developerportal/deploy/private-cloud-deploy/).
 
-## 3 Installing Private Cloud License Manager
+## 3 Licensing
+
+### 3.1 Installing Private Cloud License Manager
 
 Configure Private Cloud License Management (PCLM) in the Global Operator namespace. For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/).
+
+{{% alert color="info" %}}
+For Global Operator installations, execute the above command in both the Global Operator namespace and its managed namespaces where the license is intended to be applied. Make sure that identical PCLM license details are configured for both the Managed and Global Operator namespaces to avoid unexpected outcomes. Global Operator is in beta, and it does not currently fully support PCLM.
+{{% /alert %}}
 
 {{% alert color="warning" %}}
 It is crucial to maintain consistent Operator configuration for PCLM in both the Global Operator and managed namespaces. This requires uniformity in server URLs and credential secret names used both in managed and Global Operator namespaces. Any deviations from this practice may lead to unexpected and undesired outcomes.
 {{% /alert %}}
+
+Licenses imported in the PCLM Server appear in the PCLM Statistics section of the Global Operator main namespace. You can see both **Runtime** and **Operator** license.
+
+Claimed licenses are visible in the PCLM Statistics section of the Managed namespace.
+
+### 3.2 Licensing application via Subscription Secret and manual operator license
+
+If you wish to apply a Runtime license using a subscription secret, it must be applied manually for each managed namespace. The same process must be performed when applying an Operator license to all managed namespaces.
 
 ## 4 Upgrading Managed Namespaces
 

@@ -97,4 +97,13 @@ When you deploy your app, you should remove the values of **ClientID** and **Cli
 
 For the Mendix Cloud, this can be done by setting the value of the constants on the [Model Options](/developerportal/deploy/environments-details/#model-options) tab of the **Environment Details**. See [Constants](/refguide/constants/) for information on how to set these values on other deployment platforms.
 
+## 5 Insights Hub Widgets
 
+If you want to use the [Siemens Insights Hub Widgets](https://marketplace.mendix.com/link/component/110119) in your app, these will need to use the *Insights Hub API Reverse Proxy*.
+
+To enable this, you will have to do two things:
+
+1. Ensure that the constant **EnableMindSphereApiReverseProxy** is set to *true* to ensure this can happen.
+2. Add the microflow **Register ApiReverseProxy** to the [After Startup](/refguide/app-settings/#after-startup) microflow (or microflows) which are run when the app is started.
+
+{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-api-only/AfterStartup.png" alt="AfterStartup" >}}

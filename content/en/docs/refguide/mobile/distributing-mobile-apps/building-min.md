@@ -1,6 +1,6 @@
 ---
-title: "Use MiN With Older Versions of Studio Pro"
-url: /refguide/mobile/distributing-mobile-apps/building-min/
+title: "Use MIN With Older Studio Pro Versions"
+url: /refguide/mobile/distributing-mobile-apps/min-older-sp/
 weight: 20
 description: "This guide will help you build a Make it Native app."
 tags: ["distribution", "app store", "ios", "android", "make it native"]

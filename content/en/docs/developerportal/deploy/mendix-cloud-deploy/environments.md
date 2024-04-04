@@ -62,9 +62,7 @@ The **Environments** section has an overview of all the available environments. 
 
 #### 2.2.1 Standard Environments
 
-For standard plans, your node has production and acceptance environments. It can also include a test environment.
-
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deploy-environments.png" alt="The Environments section for standard environments" >}}
+For standard plans, your node has production and acceptance environments. It can also include an optional test environment.
 
 For standard plans, the **Environments** section shows the following information:
 
@@ -73,12 +71,11 @@ For standard plans, the **Environments** section shows the following information
     * {{% icon name="checkmark-circle-filled" color="green" %}} – the application in this environment is running
     * {{% icon name="subtract-circle-filled" color="gray" %}} – no application has been started yet in this environment, or it has been turned off
     * {{% icon name="remove-circle-filled" color="red" %}} – the application in this environment is unstable and probably not usable anymore
+    {{% alert color="info" %}}The environment status is cached; there can be a delay of up to five minutes before the status icon displays a change of status. For information on the details of any alerts, see [Alerts](/developerportal/operate/monitoring-application-health/).{{% /alert %}}
 * Name of the deployment package
 * Version of the deployment package
 * Runtime, the Studio Pro version with which the app was built
 * URL of the app
-    
-{{% alert color="info" %}}The environment status is cached; there can be a delay of up to five minutes before the status icon displays a change of status. For information on the details of any alerts, see [Alerts](/developerportal/operate/monitoring-application-health/).{{% /alert %}}
 
 You can perform the following actions in this section:
 
@@ -91,9 +88,9 @@ You can perform the following actions in this section:
 
 #### 2.2.2 Flexible Environments{#flexible-environments}
 
-If your Mendix license supports flexible environments, you can define the number and type of environments that you have. You must define at least two environments, one of which must be a production environment. The other environment (or environments) may be designated according to your requirements. For example, you can have a production environment and multiple staging environments if your deployment process requires it.
+If your Mendix license supports flexible environments, you can define the number and type of environments on your node. You must define at least two environments, one of which must be a production environment. The other environment (or environments) may be designated according to your requirements. For example, you can have a production environment and multiple staging environments if your deployment process requires it.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/deploy-flex-environments.png" alt="The Environments section with flexible environments" class="image-border" >}}
+To convert a node with standard environments into one with flexible environments, or to add new environments to your flexible node, submit a request to [Mendix Support](https://support.mendix.com/hc/en-us). To rename existing environments, see [Naming of Environments](/developerportal/deploy/environments-details/#naming) on the *Environment Details* page.
 
 For flexible environments, the **Environments** section shows the following information:
 
@@ -101,24 +98,23 @@ For flexible environments, the **Environments** section shows the following info
     * {{% icon name="checkmark-circle-filled" color="green" %}} – the application in this environment is running
     * {{% icon name="subtract-circle-filled" color="gray" %}} – no application has been started yet in this environment, or it has been turned off
     * {{% icon name="remove-circle-filled" color="red" %}} – the application in this environment is unstable and probably not usable anymore
+    {{% alert color="info" %}}The environment status is cached; there can be a delay of up to five minutes before the status icon displays a change of status. For information on the details of any alerts, see [Alerts](/developerportal/operate/monitoring-application-health/).{{% /alert %}}
 * Name of the environment
 * Version of the deployment package
 * Runtime, the Studio Pro version with which the app was built
 * Plan for the environment
 * URL of the app
 
-{{% alert color="info" %}}The environment status is cached; there can be a delay of up to five minutes before the status icon displays a change of status. For information on the details of any alerts, see [Alerts](/developerportal/operate/monitoring-application-health/).{{% /alert %}}
-
 You can perform the following actions in this section:
 
 * Search for an environment – Find a specific environment using the **Search** field.
 * View an environment's details – Go to the environment's [Details](/developerportal/deploy/environments-details/) page by clicking **Details** ({{% icon name="notes-paper-edit" %}}).
 * Set up deployment – If you are the [Technical Contact](/developerportal/general/app-roles/#technical-contact), you will see a **Setup Studio Pro Deployment** button. You can use this to set the target environment to which apps are deployed from Studio Pro; for more information, see [Studio Pro Deployment Settings](/developerportal/deploy/studio-deployment-settings/).
-* Reorder environments – If you are the [Technical Contact](/developerportal/general/app-roles/#technical-contact), you can reorder the environments by clicking **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) and selecting **Move Up** or **Move Down**.
+* Reorder environments – If you are the Technical Contact, you can reorder the environments by clicking **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) and selecting **Move Up** or **Move Down**.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments/reorder-environments.png" alt="Move Up and Move Down options" class="image-border" >}}
 
-    {{% alert color="info" %}}The button to transport an environment is not available when flexible environments are enabled. This is because you must choose your deployment target each time you deploy when you have flexible environments. To deploy, click **Deploy** ({{% icon name="deploy" %}}) in the [Deployment Package Repository](https://docs.mendix.com/developerportal/deploy/environments/#package-repository) section, as described above.{{% /alert %}}
+    {{% alert color="info" %}}The button to transport an environment is not available when flexible environments are enabled. This is because you must choose your deployment target each time you deploy when you have flexible environments. To deploy, click **Deploy** ({{% icon name="deploy" %}}) in the [Deployment Package Repository](/developerportal/deploy/environments/#package-repository) section, as described above.{{% /alert %}}
 
 ### 2.3 Activity
 

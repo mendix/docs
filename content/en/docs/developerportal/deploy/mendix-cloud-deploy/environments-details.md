@@ -101,7 +101,7 @@ To clear your environment, follow these steps:
 
 If you are the app's [Technical Contact](/developerportal/general/app-roles/#technical-contact), you can rename the environments.
 
-To rename the environment, follow these steps:
+To rename an environment, follow these steps:
 
 1. Click **Change** next to the name of the environment.
 2. Enter the new name, which must meet the following requirements:

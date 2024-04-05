@@ -270,45 +270,33 @@ The modification does two things:
                 // As we can not load the page dynamically due to expiration of the gateway session.
                 // When user click the button location.reload() is triggered - which initiates an new session with gateway
                 const sessionExpiredPopup = `
-                <div role="dialog" class="modal-dialog mx-window  mx-window-active" aria-labelledby="mxui_widget_Window_0_caption"
-                    aria-modal="true" tabindex="-1" id="mxui_widget_Window_0" widgetid="mxui_widget_Window_0"
-                    style="opacity: 1; z-index: 1002; top: calc(50% - 116px); height: 232px; left: calc(50% - 300px);" data-focus-capturing="modal">
+                <div role="dialog" class="modal-dialog mx-window  mx-window-active utx-session-expired"
+                    style="opacity: 1; z-index: 1002; top: calc(50% - 141px); left: calc(50% - 300px);" data-focus-capturing="modal">
                     <div class="modal-content mx-window-content">
-                        <div class="modal-header mx-window-header" style="user-select: none; cursor: none;">
-                            <h4 id="mxui_widget_Window_0_caption">${text.title}</h4>
+                        <div class="modal-header mx-window-header" style="user-select: none; cursor: auto;">
+                            <h4>${text.title}</h4>
                         </div>
                         <div data-focusindex="0" class="modal-body mx-window-body">
-                            <div data-mendix-id="24.Atlas_Core.PopupLayout.scrollContainer1"
-                                class="mx-scrollcontainer mx-scrollcontainer-horizontal mx-scrollcontainer-fixed"
-                                id="mxui_widget_HorizontalScrollContainer_1" widgetid="mxui_widget_HorizontalScrollContainer_1"
+                            <div class="mx-scrollcontainer mx-scrollcontainer-horizontal mx-scrollcontainer-fixed"
                                 style="">
-                                <div class="mx-scrollcontainer-center ">
-                                    <div class="mx-scrollcontainer-wrapper">
-                                        <div data-mx-placeholder="580b026c-02e6-46bd-ad21-62689eb3873d" class="mx-placeholder">
-                                            <div data-mendix-id="2.SiemensInsightsHubWebContent.SessionExpired.layoutGrid1"
-                                                data-widget-wrapper="true" class="" id="mxui_widget_Wrapper_21"
-                                                widgetid="mxui_widget_Wrapper_21" style="display: contents !important;">
-                                                <div class="mx-name-layoutGrid1 mx-layoutgrid mx-layoutgrid-fluid container-fluid">
-                                                    <div class="row">
-                                                        <div class="col-lg-12 col-md-12 col-12">
-                                                            <h1 class="mx-title mx-name-pageTitle1">${text.title}</h1><label
-                                                                id="2.SiemensInsightsHubWebContent.SessionExpired.label1_oer_83"
-                                                                class="mx-name-label1">${text.message}</label>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-lg-12 col-md-12 col-12">
-                                                            <button type="button" class="btn mx-button mx-name-actionButton1 pull-right btn-default"
-                                                                title="" data-button-id="2.SiemensInsightsHubWebContent.SessionExpired.actionButton1"
-                                                                data-disabled="false" onClick="location.reload()">${text.button}</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                <div class="mx-placeholder">
+                                    <div class="" id="mxui_widget_Wrapper_21" style="display: contents !important;">
+                                        <div class="mx-name-layoutGrid1 mx-layoutgrid mx-layoutgrid-fluid container-fluid">
+                                            <h1 class="mx-title mx-name-pageTitle1">
+                                                ${text.title}
+                                            </h1>
+                                            <div>
+                                                ${text.message}
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="modal-footer mx-dialog-footer">
+                            <button type="button" class="btn mx-button mx-name-actionButton1 pull-right btn-primary"
+                                title="" data-button-id="2.SiemensInsightsHubWebContent.SessionExpired.actionButton1"
+                                data-disabled="false" onClick="location.reload()">${text.button}</button>
                         </div>
                     </div>
                 </div>

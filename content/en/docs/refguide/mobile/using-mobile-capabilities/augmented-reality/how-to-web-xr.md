@@ -76,7 +76,10 @@ Container (XR) has the following properties that can be set in Studio Pro:
 
 * **Camera distance** – The distance in meters from the 3D model. This can be altered to make sure the entire scene is in view.
 * **Starting position** – This is the position which is at the center of the preview. Changing this will change the point the camera is focused on. **X** is the left to right axis, **Y** is the up and down axis, and **Z** is the depth axis.
-* **Realistic lighting** – When an object uses **Realistic Lighting**, an environment map can be added here. The environment map is what will be reflected on those objects.
+* **Realistic lighting** - 
+  * **Background color** - The color the background of the scene should have. 
+  * **Add realistic lighting** when this is set to **Yes**, an environment map can be added here. The environment map is what will be reflected on those objects. When **Add realistic lighting** is set to **No** and **Realistic lighting** is still used on objects they will appear black, since the object has nothing to reflect.
+
 
 ### 3.2 Node (XR)
 

@@ -290,7 +290,7 @@ The `DatabaseConfiguration` that is passed must contain the connection details t
 
 ## 5 Showcase Application {#showcase-application}
 
-For more inspiration or guidance on how to use those microflows in your logic and how to combine it with use cases in the context of generative AI, Mendix highly recommends downloading the [OpenAI showcase app](https://marketplace.mendix.com/link/component/220475) from the Marketplace. This application contains various examples in the context of generative AI, some of which use the PgVector Knowledge Base module for sstoring embedding vectors.
+For more inspiration or guidance on how to use those operations in your logic and how to combine it with use cases in the context of generative AI, Mendix highly recommends downloading the [OpenAI showcase app](https://marketplace.mendix.com/link/component/220475) from the Marketplace. This application contains various examples in the context of generative AI, some of which use the PgVector Knowledge Base module for sstoring embedding vectors.
 {{% alert color="info" %}}For more information on how to set up a vector database for retrieval augmented generation (RAG),  see [RAG Example Implementation in the OpenAI Showcase Application](/appstore/modules/openai-connector/rag-example-implementation/).{{% /alert %}}
 
 ## 6 Read More {#read-more}

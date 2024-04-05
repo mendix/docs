@@ -220,10 +220,13 @@ Default: *Yes*
 If this option is enabled, database [foreign key constraints](/refguide/data-storage/#fkc) will be used. An attempt to commit a dangling reference will throw a runtime exception.
 
 {{% alert color="info" %}}
-This option was added in Mendix version 10.10. From Mendix versions 10.6 to 10.9, foreign key constraints are always used. Mendix versions below 10.6 do not use foreign key constraints.
+This option was added in Mendix version 10.10.
 {{% /alert %}}
 
-Default: *Yes* (for projects created with Mendix versions 10.6.0 and above)
+Default: *depends on the version of Mendix used to create the app:*
+
+* *Yes* for apps created with Mendix versions 10.6.0 and above
+* *No* for apps created with Mendix versions below 10.6
 
 ## 4 Languages Tab {#languages-tab}
 

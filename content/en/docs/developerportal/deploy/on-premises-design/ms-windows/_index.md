@@ -339,6 +339,14 @@ Afterwards, the contents of the *web.config* file will be similar to the followi
                     <match url="^(debugger/)(.*)" />
                     <action type="Rewrite" url="http://localhost:8080/{R:1}{R:2}" />
                 </rule>
+                <rule name="oauth" stopProcessing="true">
+                    <match url="^(oauth/)(.*)" />
+                    <action type="Rewrite" url="http://localhost:8080/{R:1}{R:2}" />
+                </rule>
+                <rule name="p" stopProcessing="true">
+                    <match url="^(p/)(.*)" />
+                    <action type="Rewrite" url="http://localhost:8080/{R:1}{R:2}" />
+                </rule>
             </rules>
         </rewrite>
         <staticContent>

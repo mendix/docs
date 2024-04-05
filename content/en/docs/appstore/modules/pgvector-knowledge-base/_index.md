@@ -10,17 +10,19 @@ aliases:
 
 ## 1 Introduction {#introduction}
 
-...
+The PgVector Knowledge Base module contains operations to interact with a PostgreSQL database that has the [pgvector](https://github.com/pgvector/pgvector?tab=readme-ov-file#pgvector) extension installed. It allows you to easily store vectors and perform cosine similarity calculations from your Mendix app. This way you can leverage knowledge bases to make your apps smarter by performing operations based on (embedding) vectors and vector similarity. In the context of generative AI, Large Language Models (LLM) and embeddings, this is a key component in natural language processing (NLP) patterns such as Retrieval Augmented Generation (RAG), recommendation algorithms and similarity search operations.
 
 ### 1.1 Typical Use Cases {#use-cases}
 
-#### 1.1.1 Retrieval Augmented Generation {#use-cases-text}
+This module is typically powerful in scenarios in which Mendix apps leverage the capabilities of LLMs in the context of generative AI where private (company) data needs to be included in the app logic (e.g. when constructing prompts). In cases where there is a need for a separate private knowledge base outside of the LLM infrastructure, this module provides a low-code way to store data chunks in the private knowledge base, and execute on-demand retrieval of relevant information for end-user actions or app processes.
 
-...
+#### 1.1.1 Retrieval Augmented Generation {#use-cases-texragt}
 
-#### 1.1.2 Similarity search {#use-cases-images}
+A common NLP-pattern is Retrieval Augmented Generation (RAG), where the goal is to have Large Language Models construct answers to questions or provide on-demand information about private knowledge base data. In order to make this work, discrete pieces of information from the knowledge base are sent along with user questions to the LLM. The retrieval operation(s) from this module is made for this step in the use case.
 
-...
+#### 1.1.2 Semantic search {#use-cases-semmantic-search}
+
+Even without invoking LLMs directly with the retrieved information, the similarity search in the retrieval operation can be used in combination with embedding models to create a semantic search in a Mendix app. This can be used for fuzzy search capabilities, suggestions or simple recommendation systems.
 
 ### 1.2 Features {#features}
 

@@ -559,7 +559,7 @@ If your microflow is not correctly implemented you will be told that **Authentic
 ### 8.3 Using Deep Links
 
 {{% alert color="warning" %}}
-The OIDC module version 3.0.0 and above does not support the DeepLink module, as it has been deprecated from Studio Pro 10.6.0. It is replaced by [page URLs](/refguide/page-properties/#url) and [microflow URLs](/refguide/microflow/#url).
+The deep link module has been deprecated from Studio Pro 10.6 and replaced by [page URLs](/refguide/page-properties/#url) and [microflow URLs](/refguide/microflow/#url).
 For instructions on migrating to page and microflow URLs, see the [Using Page and Microflow URLs with OIDC SSO](#page-microflow-url) section below.
 {{% /alert %}}
 
@@ -571,12 +571,14 @@ For more information on using deep link module (with Mendix 8 and 9), see the [U
 
 Page URLs and Microflow URLs are supported with OIDC SSO for Mendix version 10.6 and above. To do this, follow the steps below:
 
-1. In the **Runtime** tab of the **App Settings**, configure the page **URL prefix** to **link** instead of the default **P**.
+1. In the **Runtime** tab of the **App Settings**, configure the page **URL prefix** to **link** instead of the default **P** to maintain compatibility with existing URLs, and ensure to remove the deep link module from your app to start the app successfully.
 1. Configure **OIDC.Login_Web_Button** as the **Sign-in page** in the **Authentication** section of the app **Navigation**.
 1. The user is redirected to the OIDC login page for authentication.
 1. After successful log in, the user is directed to the desired page using page URLs and microflow URLs within the application.
 
-If you are building a new app using the OIDC SSO module (Mendix version 10.6 and above) and you are using Page URLs and Microflow URLs, follow the same steps as above.
+If you are building a new app using the OIDC SSO module (Mendix version 10.6 and above) and you are using Page URLs and Microflow URLs, follow the same steps as above. 
+
+The Page and Microflow URLs fully support multiple IdPs, allowing users to trigger the login and choose the IdP on the OIDC login page.
 
 For more information, see the [Migrating to Page and Microflow URLs](/appstore/modules/deep-link/#migrate-page-micro) section of the ***Deep Link***.
 

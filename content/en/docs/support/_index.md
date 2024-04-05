@@ -9,7 +9,6 @@ tags: ["support", "sla", "standard", "premier", "platform", "extended support"]
 cascade:
     - space: "Mendix Support Guide"
     - mendix_version: 10
-    - is_canonical: true
 aliases:
     - /howtogeneral/support/index.html
     - /howtogeneral/support/

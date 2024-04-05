@@ -9,7 +9,6 @@ description_list: true
 cascade:
     - space: "Control Center Guide"
     - mendix_version: 10
-    - is_canonical: true
 aliases:
     - /developerportal/control-center
 ---

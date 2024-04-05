@@ -8,7 +8,6 @@ description_list: true
 cascade:
     - space: "Marketplace Guide"
     - mendix_version: 10
-    - is_canonical: true
 tags: ["marketplace",  "component", "app service", "widget", "connector", "module", "platform support"]
 ---
 

@@ -8,7 +8,6 @@ description_list: true
 cascade:
     - space: "Private Mendix Platform Guide"
     - mendix_version: 10
-    - is_canonical: true
 tags: ["private mendix platform",  "private platform", "private marketplace"]
 ---
 

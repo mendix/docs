@@ -242,7 +242,7 @@ The modification does two things:
 * add the x-xsrf-token header on each request. This is needed by the Insights Hub Gateway.
 * handle gateway session expired case. Show a popup in such a case and inform the user to reload the app. The message / title shown in the popup can be modified and localized via the "i18n" enumeration of the module "SiemensInsightsHubWebContent".
   {{% alert color="info" %}}
-  Please add the "Siemens Insights Hub Web Content" user role "User" to all your apps user roles to ensure that the localized session expired message / title can be loaded during app startup.
+  Please add the "Siemens Insights Hub Web Content" module role "User" to all your apps user roles to ensure that the localized session expired message / title can be loaded during app startup.
   {{% /alert %}}
 
 ```javascript

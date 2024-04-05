@@ -135,10 +135,10 @@ This entity represents a discrete piece of knowledge that needs to go into or co
 | `Vector`             | This is the embedding vector that was generated for the knowledge for this chunk which is used in the vector database for similarity calculations. |
 | `ChunkType`          | This is the type of the chunk. See the enumeration [ChunkType](#enum-chunktype).           |
 | `Key`                | This is the original string that was used to generate the vector and can be used directly after retrieval.           |
-| `Value`              | This represents a value that has no effect on the vector or similarity search but is to be used directly after retrieval    |
-| `MxObjectID`         | If the chunk was based on a Mendix object during creation, this will contain the GUID of that object at the time of creation     |
+| `Value`              | This represents a value that has no effect on the vector or similarity search but is to be used directly after retrieval.    |
+| `MxObjectID`         | If the chunk was based on a Mendix object during creation, this will contain the GUID of that object at the time of creation.     |
 | `MxEntity`           | If the chunk was based on a Mendix object during creation, this will contain its full entity name at the time of creation.    |
-| `Similarity`         | In case the chunk was retrieved from the knowledge base as part of a similarity search (e.g top-N retrieval) this will contain the cosine similarity to the input vector for the retrieval that was executed. |
+| `Similarity`         | In case the chunk was retrieved from the knowledge base as part of a similarity search (e.g nearest neighbors retrieval) this will contain the cosine similarity to the input vector for the retrieval that was executed. |
 
 
 ##### 4.1.2.2 `Label` {#label} 
@@ -176,29 +176,52 @@ Activities define the actions that are executed in a microflow, nanoflow or a ja
 ...
 
 ##### 4.3.1.1 Create label {#create-label-technical} 
+The `Create Label` activity is recommended for creating [Labels](#label). The given input parameters are assigned to a newly created label. The label is added to the provided `LabelList` which can be used afterwards for passing into [Create Chunk](#create-chunk-technical).
 
 **Input parameters**
 
 | Name             | Type                                                         | Mandatory                     | Description                                                  |
 | ---------------- | ------------------------------------------------------------ | ----------------------------- | ------------------------------------------------------------ |
-| `Input`          | String                                                       | mandatory                     | This is the input text to embed.                             |
-| `Configuration`  | [Configuration](#configuration-entity)                       | mandatory                     | This is an object that contains endpoint and API key.        |
-| `Model`          | String                                                       | only mandatory for **OpenAI** | This is the ID of the model to use. This is not considered for **Azure OpenAI** configurations. |
-| `EncodingFormat` | [ENUM_EncodingFormat_Embeddings](#enum-encodingformat-embeddings) | optional                      | This can be used to specify the format in which the generated vectors must be returned. |
+| `Key`          | String                                                       | mandatory                     | This is the input to assign the key.                           |
+| `Value`  | String                     | mandatory                     | This is the input to assign the value.             |
+| `LabelList`          | List of [Labels](#label)                                                    | mandatory | This is for adding the label to a list that can be used outside of the Activity. |
+
+
+#### 4.3.2 (Re)populate operations {#repopulate-operations-technical} 
+The `(Re)populate Knowledge Base` activity is used to populate a whole knowledge base at once. This operation handles a list of chunks with their labels in a single operation. By providing the KnowledgeBaseName parameter, you determine the knowledge base. It is used to later on to retrieve elements from the correct tables. This operation takes care of the creation of the actual tables. If there is already data from an earlier iteration for the provided KnowledgeBaseName, the data will be removed first. Use `Create Label`[#create-label-technical] and `Create Label`[#create-chunk-technical] to construct the input for this activity, which needs to be passed as ChunkList. The DatabaseConfiguration that is passed must contain the connection details to a PostgreSQL database server with the PgVector extension installed. This entity is typically configured at runtime or in after-startup logic.
+
+**Input parameters**
+
+| Name                | Type                                    | Mandatory | Description                                           |
+| ------------------- | --------------------------------------- | --------- | ----------------------------------------------------- |
+| `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the table name of the knowledge base in your database (to be created or for repopulating).
+| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is to connect and authenticate to the database.    |
+| `ChunkList`          | List of [Chunks](#chunk)                                                    | mandatory | This list is for inserting the [Chunks'](#chunks) data into the knowledge base. |
 
 **Return value**
 
-| Name              | Type   | Description                                                  |
-| ----------------- | ------ | ------------------------------------------------------------ |
-| `EmbeddingVector` | String | This is the string representation of a vector embedding for the input. |
-
-#### 4.3.2 (Re)populate operations {#repopulate-operations-technical} 
-
-...
+| Name                 | Type                                      | Description                                                  |
+| -------------------- | ----------------------------------------- | ------------------------------------------------------------ |
+| `Success` | Boolean | This boolean indicates if the populations of the knowledge base and label table were successful. Can be used for custom error-handling. |
 
 ##### 4.3.2.1 Create Chunk {#create-chunk-technical}
 
-...
+The `Create Chunk` activity is recommended for instantiating [Chunks](#chunk) to create the input for the knowledge base based on your own data structure. A ChunkList must be passed to which the new Chunk object will be added. Optionally, use [Create Label](#create-label-technical) to construct a list of Labels for custom filtering during the retrieval.
+
+**Input parameters**
+
+| Name             | Type                                                         | Mandatory                     | Description                                                  |
+| ---------------- | ------------------------------------------------------------ | ----------------------------- | ------------------------------------------------------------ |
+| `ChunkList`          | List of [Chunks](#chunk)                                                     | mandatory                     | This the (mandatory) list to which the Chunk will be added. This list is the input for other operations e.g. [(Re)populate](#repopulate-operations-technical).                          |
+| `Human readable ID`  | String                     | mandatory                     | This is a front-end identifier that can be used for showing or retrieving sources in a custom way. If it is not relevant, "empty" must be passed explicitly here.             |
+| `Vector`  | String                     | mandatory                     | This is the vector representation of the content of the chunk, based  on which the similarity search is executed as in the [Retrieve Nearest Neighbors](#retrieve-nearest-neighbors) operation.            |
+| `Key`  | String                     | mandatory                     | This is supposed to contain the string content of the chunk for which the embedding was created. In cases where the retrieval of the actual data happens in a different way (e.g. using an identifier or a Mendix object) this can be left empty if not used; in that case  "empty" must be passed explicitly here.             |
+| `Value`  | String                     | optional                     | In the KeyValue ChunkType scenario, the chunk content that is relevant for the similarity search is different from the value that is relevant in the custom processing afterwards. This field can be used to store this information directly in the PgVector Knowledge Base.             |
+| `LabelList`          | List of [Labels](#label)                                                    | optional | This is an optional list that contains extra information about the chunk. Any Key-Value pairs can be stored with the chunk. In the retrieval operations it is possible to filter on one or multiple labels. |
+| `Chunk type`  | Enumeration of [ENUM_ChunkType](#enum-chunktype)                   | mandatory                     | This mandatory value describes whether the chunk represents a piece of knowledge (key only) or a key-value pattern, where the key is embedded and used in the retrieval step, but the value is used in the logic after [Retrieve Nearest Neighbors](#retrieve-nearest-neighbors). If this is set to KeyValue, the Value string is ignored in this action.             |
+| `Mx object`  | Object                     | optional                    | This parameter is used to capture the Mendix object to which the chunk refers. This can be used for finding back the record in the Mendix database later on after the retrieval step.            |
+
+[comment]: # ( TODO: order of parameters is based on the structure when the JavaAction call activity is openend not on the order inside the editing of the JavaAction itself. What do you prefer? Normally, a developer would only look inside the call activity and not dive deeper into the JA itself I would say)
 
 ##### 4.3.2.2 (Re)populate Knowledge Base {#repopulate-knowledge-base-technical}
 
@@ -212,7 +235,7 @@ Activities define the actions that are executed in a microflow, nanoflow or a ja
 
 ...
 
-##### 4.3.3.2 Retrieve top N {#retrieve-top-n-technical}
+##### 4.3.3.2 Retrieve Nearest Neighbors {#retrieve-nearest-neighbors}
 
 ...
 

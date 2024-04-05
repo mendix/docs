@@ -26,11 +26,11 @@ Even without invoking LLMs directly with the retrieved information, the similari
 
 ### 1.2 Features {#features}
 
-...
+With the current version, Mendix supports inserting data chunks with their vectors into a knowledge base (population), and selecting those records afterwards (retrieval). Apart from cosine similarity search, custom filtering is possible using key/value labelling.
 
 ### 1.3 Limitations {#limitations}
 
-The current scope of the module is focused around (re)populating knowledge bases as a whole in one operation. Deleting, adding or updating individual knowledge base items is not yet supported.
+The current scope of the module is focused around (re)populating knowledge bases as a whole in one single operation. Deleting, adding or updating individual knowledge base items is not yet supported. Furthermore, connections that require drivers other than JDBC are not supported.
 
 ### 1.4 Prerequisites {#prerequisites}
 

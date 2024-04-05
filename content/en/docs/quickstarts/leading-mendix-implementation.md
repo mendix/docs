@@ -1162,7 +1162,7 @@ When the node permissions are set up, you can start configuring your cloud setti
 
 Things can you can customize for your applications in the Mendix Cloud include:
 
-* [Studio Pro deployment target](/developerportal/deploy/studio-deployment-settings/#2-selecting-the-target-environment)
+* [Studio Pro deployment target](/developerportal/deploy/studio-deployment-settings/#studio-pro-target)
 
 * [Custom domains](/developerportal/deploy/custom-domains/)
 

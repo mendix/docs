@@ -26,11 +26,11 @@ Even without invoking LLMs directly with the retrieved information, the similari
 
 ### 1.2 Features {#features}
 
-...
+With the current version, Mendix supports inserting data chunks with their vectors into a knowledge base (population), and selecting those records afterwards (retrieval). Apart from cosine similarity search, custom filtering is possible using key/value labelling.
 
 ### 1.3 Limitations {#limitations}
 
-The current scope of the module is focused around (re)populating knowledge bases as a whole in one operation. Deleting, adding or updating individual knowledge base items is not yet supported.
+The current scope of the module is focused around (re)populating knowledge bases as a whole in one single operation. Deleting, adding or updating individual knowledge base items is not yet supported. Furthermore, connections that require drivers other than JDBC are not supported.
 
 ### 1.4 Prerequisites {#prerequisites}
 
@@ -59,35 +59,36 @@ After you install the PgVector Knowledge Base module, you can find it in the **A
 
 ### 3.2 General operations {#general-operations-configuration} 
 
-
+After following the general setup above, you are all set to use the microflows in the **USE_ME > Operations** folder in your logic. Currently 5 operations (microflows and java actions) are exposed as microflow actions under the **PgVector Knowledge Base** category in the **Toolbox** in Mendix Studio Pro. They can be split into two categories, corresponding to the main functionalities: getting data chunks into the knowledge base, i.e. (re)populate, versus finding relevant data chunks in an existing knowledge base, i.e. retrieve. In both cases, Labels can be relevant and therefore we mention it separately here.
 
 #### 3.2.1 `Create label` {#create-label}
 
-...
+Labels are used to attach additional information to chunks, that can be used for custom filtering during the retrieval step. In the operations to create a knowledge base Chunk, a list of Labels can be passed as optional input. These have a key/value structure. During the retrieval,  if provided as input, all key/value pairs passed in the form of Label entities to the operation must match any previously attached labels to the chunk during population. 
 
 ### 3.3 (Re)populate operations {#repopulate-operations-configuration}
 
-...
+In order to add data to the knowledge base, you need to have discrete pieces of information and create chunks for those using the `Create Chunk` operation, after which they can be inserted into the knowledge base `(Re)populate Knowledge Base`. 
 
-#### 3.3.1 `Create Chunk` {#create-chunk}
+#### 3.3.1 `(Re)populate Knowledge Base` {#repopulate-knowledge-base}
 
-...
+This microflow takes care of the following:
+* creating the knowledge base if it does not exist
+* clearing the knowledge base if it does exist
+* inserting all provided chunks with their labels into the knowledge base
 
-#### 3.3.2 `(Re)populate Knowledge Base` {#repopulate-knowledge-base}
-
-...
+The construction of the ChunkList input should be done using the [Create Chunk](#create-chunk-technical) operation. This operation handles the whole list in a single operation. It is possible to have multiple knowledge bases in the same database in parallel by providing the name in combination with the [DatabaseConfiguration](#databaseconfiguration-entity)
 
 ### 3.4 Retrieve operations {#retrieve-operations}
 
-...
+Currently two operations are available for on-demand retrieval of data chunks from a knowlege base. Both operations work on a single knowledge base (specified by the name) on a single database server (specified by the [DatabaseConfiguration](#databaseconfiguration-entity)). Apart from a regular [Retrieve](#retrieve), an additional operation was exposed to [Retrieve Nearest Neighbors]($retrieve-nearest-neighbors), where the distance between records is calculated as cosine distance between the input vector and the vectors of the records in the knowledge base.
 
 #### 3.4.1 `Retrieve` {#retrieve}
 
-...
+Use this operation to retrieve chunks from the knowledge base. Additional selection and filtering can be done by specifying the optional input parameters for offset and a maximum number of results, as well as a list of labels. When provided, this operation only returns chunks that are conform with all of the labels in the list.
 
-#### 3.4.2 `Retrieve top N` {#retrieve-top-n}
+#### 3.4.2 `Retrieve Nearest Neighbors` {#retrieve-nearest-neighbors}
 
-...
+Use this operation to retrieve chunks from the knowledge base where the sorting is based on vector similarity with respect to a given input vector. Additional selection and filtering can be done by specifying the optional input parameters for minimum similarity (0.0-1.0) and a maximum number of results, as well as a list of labels. When provided, this operation only returns chunks that are conform with all of the labels in the list.
 
 ## 4 Technical Reference {#technical-reference}
 

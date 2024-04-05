@@ -9,17 +9,15 @@ tags: ["node","developer portal","deploy", "settings", "target", "Mendix Studio 
 
 ## 1 Introduction
 
-If you have a licensed app in Mendix Cloud that you want to deploy directly to an environment, you need to select a target environment where Mendix Studio Pro will deploy your app when you **Deploy to Licensed Cloud Node**. For more information on licensed apps and environments, see [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) and [Environments](/developerportal/deploy/environments/).
-
-{{% alert color="info" %}}
-By default, the target environment is set to **Build Only**. This means that your app will not be deployed directly to an environment from Studio Pro.
-
-When you deploy to a target environment from Studio Pro, the deployment will also restart the target environment.
-{{% /alert %}}
+If you have a licensed app in Mendix Cloud, you can deploy it directly to an environment from Studio Pro. To do this, designate a target environment in the Developer Portal, then click **App** > **Deploy to Licensed Cloud Node** in Studio Pro.
 
 ## 2 Selecting the Target Environment 
 
-To select the target environment, do the following:
+By default, the target environment is set to **Build Only**. If you have **Build Only** selected, clicking **App** > **Deploy to Licensed Cloud Node** places your MDA in the Developer Portal's [Deployment Package Repository](/developerportal/deploy/environments/#package-repository) rather than directly deploying it to an environment.
+
+If an environment is designated as the deployment target, you can see this on its [Environment Details](/developerportal/deploy/environments-details/) page; the **Studio Pro Target** will read **Yes**.
+
+To select a target environment for Studio Pro deployment, do the following:
 
 1. From the [navigation pane](/developerportal/#navigation-pane) in the Developer Portal, click **Environments**.
 
@@ -27,17 +25,22 @@ To select the target environment, do the following:
 
     {{% alert color="info" %}} Only a [Technical Contact](/developerportal/general/app-roles/#technical-contact) can see the **Setup Studio Pro Deployment** button and click it.{{% /alert %}}
 
-3. In the **Select target environment** dialog box, click the drop-down menu and select the environment.
+3. In the **Select target environment** dialog box, click the drop-down menu, and select your desired target environment.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/studio-deployment-settings/setup-studio-pro-deployment.png" alt="Select Studio Pro Target Dialog"   width="400"  >}}
-
-    {{% alert color="info" %}}If you do not want to deploy your app to an environment automatically from Studio Pro, choose the option **Build Only**. This will place your MDA in the **Deployment Package Repository**. Then you can deploy it from within the Developer Portal.<br /><br />If you choose **Build Only**, you will not be able to publish your app from Studio Pro; you will get a `No target selected` error.{{% /alert %}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/studio-deployment-settings/setup-studio-pro-deployment.png" alt="Select Studio Pro Target Dialog" class="image-border" max-width=80%  >}}
 
 4. Click **Save**.
 
-You have selected the target environment and can now deploy your app to that environment from Studio Pro.
+You have selected the target environment and can now deploy your app to that environment from Studio Pro. 
+
+## 3 Deploying from Studio Pro
+
+Once you have designated a target deployment environment, you can directly deploy your app from Studio Pro. To do so, click **App** > **Deploy to Licensed Cloud Node**. This uploads your MDA to the Developer Portal, deploys it to the target environment, and restarts the target environment.
+
+Alternatively, you can click **App** > **Create Deployment Package** if you want to upload your MDA to the **Deployment Package Repository** without directly deploying it to your target environment.
 
 ## 3 Read More
 
 * [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/)
 * [Environments](/developerportal/deploy/environments/)
+* [Using Version Control in Studio Pro](/refguide/using-version-control-in-studio-pro/)

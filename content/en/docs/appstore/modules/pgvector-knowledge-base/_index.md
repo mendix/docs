@@ -20,7 +20,7 @@ This module is typically powerful in scenarios in which Mendix apps leverage the
 Check out the [OpenAI showcase app](https://marketplace.mendix.com/link/component/220475) for example implementations that covers Retrieval Augmented Generation and Semantic Search with knowledge bases.
 {{% /alert %}}
 
-#### 1.1.1 Retrieval Augmented Generation {#use-cases-texragt}
+#### 1.1.1 Retrieval Augmented Generation {#use-cases-rag}
 
 A common NLP-pattern is Retrieval Augmented Generation (RAG), where the goal is to have Large Language Models construct answers to questions or provide on-demand information about private knowledge base data. In order to make this work, discrete pieces of information from the knowledge base are sent along with user questions to the LLM. The retrieval operation(s) from this module is made for this step in such a use case.
 
@@ -79,27 +79,27 @@ In order to add data to the knowledge base, you need to have discrete pieces of 
 #### 3.3.1 `(Re)populate Knowledge Base` {#repopulate-knowledge-base}
 
 This operation handles the following:
-* clearing the knowledge base if it does exist* 
+* clearing the knowledge base if it does exist 
 * creating the knowledge base if it does not exist
 * inserting all provided chunks with their labels into the knowledge base
 
-The population handles a whole list of Chunks at once which should be created by using the [Create Chunk](#create-chunk-technical) operation. It is possible to have multiple knowledge bases in the same database in parallel by providing the name in combination with the [DatabaseConfiguration](#databaseconfiguration-entity).
+The population handles a whole list of Chunks at once which should be created by using the `Create Chunk` operation. It is possible to have multiple knowledge bases in the same database in parallel by providing the name in combination with the [DatabaseConfiguration](#databaseconfiguration-entity).
 
 ### 3.4 Retrieve operations {#retrieve-operations}
 
-Currently, two operations are available for on-demand retrieval of data chunks from a knowlege base. Both operations work on a single knowledge base (specified by the name) on a single database server (specified by the [DatabaseConfiguration](#databaseconfiguration-entity)). Apart from a regular [Retrieve](#retrieve), an additional operation was exposed to [Retrieve Nearest Neighbors]($retrieve-nearest-neighbors), where the distance between records is calculated as cosine distance between the input vector and the vectors of the records in the knowledge base.
+Currently, two operations are available for on-demand retrieval of data chunks from a knowlege base. Both operations work on a single knowledge base (specified by the name) on a single database server (specified by the [DatabaseConfiguration](#databaseconfiguration-entity)). Apart from a regular [Retrieve](#retrieve), an additional operation was exposed to [Retrieve Nearest Neighbors]($retrieve-nearest-neighbors), where the cosine distance between the input vector and the vectors of the records in the knowledge base is calculated.
 
 #### 3.4.1 `Retrieve` {#retrieve}
 
-Use this operation to retrieve chunks from the knowledge base. Additional selection and filtering can be done by specifying the optional input parameters for offset and a maximum number of results, as well as a list of labels. When provided, this operation only returns chunks that are conform with all of the labels in the list.
+Use this operation to retrieve chunks from the knowledge base. Additional selection and filtering can be done by specifying the optional input parameters for offset and a maximum number of results, as well as a list of labels. If labels are provided, this operation only returns chunks that are conform with all of the labels in the list.
 
 #### 3.4.2 `Retrieve Nearest Neighbors` {#retrieve-nearest-neighbors}
 
-Use this operation to retrieve chunks from the knowledge base where the sorting is based on vector similarity with respect to a given input vector. Additional selection and filtering can be done by specifying the optional input parameters for minimum similarity (0 - 1.0) and a maximum number of results, as well as a list of labels. When provided, this operation only returns chunks that are conform with all of the labels in the list.
+Use this operation to retrieve chunks from the knowledge base where the sorting is based on vector similarity with regards to a given input vector. Additional selection and filtering can be done by specifying the optional input parameters for minimum similarity (0 - 1.0) and a maximum number of results, as well as a list of labels. If labels are provided, this operation only returns chunks that are conform with all of the labels in the list.
 
 ## 4 Technical Reference {#technical-reference}
 
-To help you work with the **OpenAI Connector**, the following sections list the available [entities](#domain-model), [enumerations](#enumerations), and [activities](#activities) that you can use in your application. 
+To help you use the **PgVector Knowledge Base** module, the following sections list the available [entities](#domain-model), [enumerations](#enumerations), and [activities](#activities) that you can use in your application. 
 
 ### 4.1 Domain Model {#domain-model} 
 
@@ -107,7 +107,6 @@ The domain model in Mendix is a data model that describes the information in you
 
 #### 4.1.1 Configuration {#configuration-domain-model}
 
-TODO: change image
 {{< figure src="/attachments/appstore/modules/pgvector-knowledge-base/domainModel-DatabaseConfiguration.png" class="image-border" >}}
 
 ##### 4.1.1.1 `DatabaseConfiguration` {#databaseconfiguration-entity} 
@@ -140,7 +139,7 @@ This entity represents a discrete piece of knowledge that needs to go into or co
 
 | Attribute            | Description                                                                                   |
 | -------------------- | --------------------------------------------------------------------------------------------- |
-| `ChunkID`            | This is a system-generated UUID for the chunk in the knowledge base.      |
+| `ChunkID`            | This is a system-generated GUID for the chunk in the knowledge base.      |
 | `HumanReadableID`    | This is a front-end reference to the chunk so that users know what it refers to (e.g. URL, document location, human-readable record ID)     |
 | `Vector`             | This is the embedding vector that was generated for the knowledge for this chunk which is used in the vector database for similarity calculations. |
 | `ChunkType`          | This is the type of the chunk. See the enumeration [ChunkType](#enum-chunktype).           |
@@ -222,7 +221,7 @@ The `Create Chunk` activity is recommended for instantiating [Chunks](#chunk) to
 
 ##### 4.3.2.2 (Re)populate Knowledge Base {#repopulate-knowledge-base-technical}
 
-The `(Re)populate Knowledge Base` activity is used to populate a whole knowledge base at once. This operation handles a list of chunks with their labels in a single operation. By providing the KnowledgeBaseName parameter, you determine the knowledge base. It is used to later on to retrieve elements from the correct tables. This operation takes care of the creation of the actual tables. If there is already data from an earlier iteration for the provided `KnowledgeBaseName`, the data will be removed first. Use [Create Label](#create-label-technical) and [Create Chunk](#create-chunk-technical) to construct the input for this activity, which needs to be passed as ChunkList. The `DatabaseConfiguration` that is passed must contain the connection details to a PostgreSQL database server with the PgVector extension installed. This entity is typically configured at runtime or in [after-startup](/refguide/app-settings/#after-startup) logic.
+The `(Re)populate Knowledge Base` activity is used to populate a whole knowledge base at once. This operation handles a list of chunks with their labels in a single operation. By providing the `KnowledgeBaseName` parameter, you determine the knowledge base. It is used to later on to retrieve elements from the correct tables. This operation takes care of the creation of the actual tables. If there is already data from an earlier iteration for the provided `KnowledgeBaseName`, the data will be removed first. Use [Create Label](#create-label-technical) and [Create Chunk](#create-chunk-technical) to construct the input for this activity, which needs to be passed as ChunkList. The `DatabaseConfiguration` that is passed must contain the connection details to a PostgreSQL database server with the PgVector extension installed. This entity is typically configured at runtime or in [after-startup](/refguide/app-settings/#after-startup) logic.
 
 **Input parameters**
 
@@ -246,7 +245,8 @@ Activities that support the retrieval of the knowledge from the knowledge base.
 
 The `Retrieve` activity is used to retrieve a subset of or the whole knowledge base. A list of chunks is returned which can be used for custom logic.  For additional filtering provide a list of [labels](#label), see [Create Label](#create-label-technical) activity. `Offset` and `MaxNumberOfResults` can be used for pagination or specific selection use cases.
 
-The `DatabaseConfiguration` that is passed must contain the connection details to a PostgreSQL database server with the PgVector extension installed. This entity is typically configured at runtime or in after-startup logic. By providing the `KnowledgeBaseName` parameter, you determine the knowledge base that was used for population earlier.
+The `DatabaseConfiguration` that is passed must contain the connection details to a PostgreSQL database server with the PgVector extension installed. This entity is typically configured at runtime or in [after-startup](/refguide/app-settings/#after-startup) logic. By providing the `KnowledgeBaseName` parameter, you determine the knowledge base that was used for population earlier.
+
 **Input parameters**
 
 | Name                | Type                                    | Mandatory | Description                                           |
@@ -267,7 +267,7 @@ The `DatabaseConfiguration` that is passed must contain the connection details t
 
 The `Retrieve Nearest Neighbors` activity is used to retrieve chunks from the knowledge base ordered by similarity based on the given vector. For additional filtering provide a list of [labels](#label), see [Create Label](#create-label-technical) activity. `MinimumSimilarity` (range 0 - 1.0) and `MaxNumberOfResults` can be used for optional filtering. 
 
-The `DatabaseConfiguration` that is passed must contain the connection details to a PostgreSQL database server with the PgVector extension installed. This entity is typically configured at runtime or in after-startup logic. By providing the `KnowledgeBaseName` parameter, you determine the knowledge base that was used for population earlier.
+The `DatabaseConfiguration` that is passed must contain the connection details to a PostgreSQL database server with the PgVector extension installed. This entity is typically configured at runtime or in [after-startup](/refguide/app-settings/#after-startup) logic. By providing the `KnowledgeBaseName` parameter, you determine the knowledge base that was used for population earlier.
 
 **Input parameters**
 
@@ -290,7 +290,8 @@ The `DatabaseConfiguration` that is passed must contain the connection details t
 
 ## 5 Showcase Application {#showcase-application}
 
-For more inspiration or guidance on how to use those microflows in your logic and how to combine it with use cases in the context of generative AI, Mendix highly recommends downloading the [OpenAI showcase app](https://marketplace.mendix.com/link/component/220475) from the Marketplace. This application contains various examples in the context of generative AI, some of which use the PgVector Knowledge Base module for sstoring embedding vectors.
+For more inspiration or guidance on how to use those microflows in your logic and how to combine it with use cases in the context of generative AI, Mendix highly recommends downloading the [OpenAI showcase app](https://marketplace.mendix.com/link/component/220475) from the Marketplace. This application contains various examples in the context of generative AI, some of which use the PgVector Knowledge Base module for storing embedding vectors in a knowledge base.
+
 {{% alert color="info" %}}For more information on how to set up a vector database for retrieval augmented generation (RAG),  see [RAG Example Implementation in the OpenAI Showcase Application](/appstore/modules/openai-connector/rag-example-implementation/).{{% /alert %}}
 
 ## 6 Read More {#read-more}

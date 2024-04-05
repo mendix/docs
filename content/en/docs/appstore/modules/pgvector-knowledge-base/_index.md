@@ -59,15 +59,15 @@ After you install the PgVector Knowledge Base module, you can find it in the **A
 
 ### 3.2 General operations {#general-operations-configuration} 
 
-
+After following the general setup above, you are all set to use the microflows in the **USE_ME > Operations** folder in your logic. Currently 5 operations (microflows and java actions) are exposed as microflow actions under the **PgVector Knowledge Base** category in the **Toolbox** in Mendix Studio Pro. They can be split into two categories, corresponding to the main functionalities: getting data chunks into the knowledge base, i.e. (re)populate, versus finding relevant data chunks in an existing knowledge base, i.e. retrieve. In both cases, Labels can be relevant and therefore we mention it separately here.
 
 #### 3.2.1 `Create label` {#create-label}
 
-...
+Labels are used to attach additional information to chunks, that can be used for custom filtering during the retrieval step. In the operations for (re)population and retrieval, a list of Labels can be passed as optional input. These have a key/value structure. During the retrieval,  if provided as input, all key/value pairs passed in the form of Label entities to the operation must match any previously attached labels to the chunk during population. 
 
 ### 3.3 (Re)populate operations {#repopulate-operations-configuration}
 
-...
+In order to add data to the knowledge base, you need to have discrete pieces of information and create chunks for those using the `Create Chunk` operation, after which they can be inserted into the knowledge base `(Re)populate Knowledge Base`. 
 
 #### 3.3.1 `Create Chunk` {#create-chunk}
 

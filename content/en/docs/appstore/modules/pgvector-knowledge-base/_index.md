@@ -32,7 +32,7 @@ The current scope of the module is focused around (re)populating knowledge bases
 
 ### 1.4 Prerequisites {#prerequisites}
 
-You should have access to your own (remote) postgreSQL database server(s) with the [pgvector](https://github.com/pgvector/pgvector) extension installed. For more information, see [Setting up a Vector Database](/appstore/modules/openai-connector/vector-database-setup/).
+You should have access to your own (remote) postgreSQL database server(s) with the [pgvector](https://github.com/pgvector/pgvector) extension installed. For more information, see [Setting up a Vector Database](/appstore/modules/pgvector-knowledge-base/vector-database-setup/).
 
 ### 1.5 Dependencies {#dependencies}
 
@@ -53,7 +53,7 @@ After you install the PgVector Knowledge Base module, you can find it in the **A
 
 1. Add the module role **PgVectorKnowledgeBase.Administrator** to your Administrator user role in the security settings of your app. 
 2. Add the **DatabaseConfiguration_Overview** page (**USE_ME > Configuration**) to your navigation or add the **Snippet_DatabaseConfigurations** to a page that is already part of your navigation. 
-3. Now you can setup your database configuration(s) at runtime. See [Configuring the database connection details](/appstore/modules/openai-connector/vector-database-setup/#configure-database-connection) for more information.
+3. Now you can setup your database configuration(s) at runtime. See [Configuring the database connection details](/appstore/modules/pgvector-knowledge-base/vector-database-setup/#configure-database-connection) for more information.
 
 ### 3.2 General operations {#general-operations-configuration} 
 
@@ -177,7 +177,20 @@ Activities define the actions that are executed in a microflow, nanoflow or a ja
 
 ##### 4.3.1.1 Create label {#create-label-technical} 
 
-...
+**Input parameters**
+
+| Name             | Type                                                         | Mandatory                     | Description                                                  |
+| ---------------- | ------------------------------------------------------------ | ----------------------------- | ------------------------------------------------------------ |
+| `Input`          | String                                                       | mandatory                     | This is the input text to embed.                             |
+| `Configuration`  | [Configuration](#configuration-entity)                       | mandatory                     | This is an object that contains endpoint and API key.        |
+| `Model`          | String                                                       | only mandatory for **OpenAI** | This is the ID of the model to use. This is not considered for **Azure OpenAI** configurations. |
+| `EncodingFormat` | [ENUM_EncodingFormat_Embeddings](#enum-encodingformat-embeddings) | optional                      | This can be used to specify the format in which the generated vectors must be returned. |
+
+**Return value**
+
+| Name              | Type   | Description                                                  |
+| ----------------- | ------ | ------------------------------------------------------------ |
+| `EmbeddingVector` | String | This is the string representation of a vector embedding for the input. |
 
 #### 4.3.2 (Re)populate operations {#repopulate-operations-technical} 
 

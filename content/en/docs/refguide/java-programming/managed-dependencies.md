@@ -19,7 +19,7 @@ In versions of Mendix below 10.3.0, Java dependencies were put into the `userlib
 
 ## 2 Adding or Updating Managed Dependencies
 
-You can specify Java dependencies through the module settings of each module. For each module, you can configure your dependencies on the **Java Dependencies** tab of [**Module settings**](/refguide/module-settings/).
+You can specify Java dependencies through the module settings of each module. For each module, you can configure your dependencies on the **Java Dependencies** tab of [Module settings](/refguide/module-settings/).
 
 {{< figure src="/attachments/refguide/java-programming/managed-dependencies/module-settings.png" >}}
 

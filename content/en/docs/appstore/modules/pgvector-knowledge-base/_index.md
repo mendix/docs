@@ -14,11 +14,15 @@ The PgVector Knowledge Base module contains operations to interact with a Postgr
 
 ### 1.1 Typical Use Cases {#use-cases}
 
-This module is typically powerful in scenarios in which Mendix apps leverage the capabilities of LLMs in the context of generative AI where private (company) data needs to be included in the app logic (e.g. when constructing prompts). In cases where there is a need for a separate private knowledge base outside of the LLM infrastructure, this module provides a low-code way to store data chunks in the private knowledge base, and execute on-demand retrieval of relevant information for end-user actions or app processes.
+This module is typically powerful in scenarios in which Mendix apps leverage the capabilities of LLMs in the context of generative AI where private (company) data needs to be included in the app logic (e.g., when constructing prompts). In cases where there is a need for a separate private knowledge base outside of the LLM infrastructure, this module provides a low-code way to store data chunks in the private knowledge base, and execute on-demand retrieval of relevant information for end-user actions or app processes.
+
+{{% alert color="info" %}}
+Check out the [OpenAI showcase app](https://marketplace.mendix.com/link/component/220475) for example implementations that covers Retrieval Augmented Generation and Semantic Search with knowledge bases.
+{{% /alert %}}
 
 #### 1.1.1 Retrieval Augmented Generation {#use-cases-texragt}
 
-A common NLP-pattern is Retrieval Augmented Generation (RAG), where the goal is to have Large Language Models construct answers to questions or provide on-demand information about private knowledge base data. In order to make this work, discrete pieces of information from the knowledge base are sent along with user questions to the LLM. The retrieval operation(s) from this module is made for this step in the use case.
+A common NLP-pattern is Retrieval Augmented Generation (RAG), where the goal is to have Large Language Models construct answers to questions or provide on-demand information about private knowledge base data. In order to make this work, discrete pieces of information from the knowledge base are sent along with user questions to the LLM. The retrieval operation(s) from this module is made for this step in such a use case.
 
 #### 1.1.2 Semantic search {#use-cases-semmantic-search}
 
@@ -49,7 +53,7 @@ Follow the instructions in [Using Marketplace Content](/appstore/overview/use-co
 
 ## 3 Configuration {#configuration}
 
-After you install the PgVector Knowledge Base module, you can find it in the **App Explorer**, in the **Marketplace modules** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to a database and let it function as a knowledge base. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to an external database, you must also [configure the Encryption module](https://docs.mendix.com/appstore/modules/encryption/#configuration). 
+After you install the PgVector Knowledge Base module, you can find it in the **App Explorer**, in the **Marketplace modules** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to a database and let it function as a knowledge base. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to an external database, you must also [configure the Encryption module](/appstore/modules/encryption/#configuration). 
 
 ### 3.1 General Configuration {#general-configuration}
 
@@ -59,28 +63,31 @@ After you install the PgVector Knowledge Base module, you can find it in the **A
 
 ### 3.2 General operations {#general-operations-configuration} 
 
-After following the general setup above, you are all set to use the microflows in the **USE_ME > Operations** folder in your logic. Currently 5 operations (microflows and java actions) are exposed as microflow actions under the **PgVector Knowledge Base** category in the **Toolbox** in Mendix Studio Pro. They can be split into two categories, corresponding to the main functionalities: getting data chunks into the knowledge base, i.e. (re)populate, versus finding relevant data chunks in an existing knowledge base, i.e. retrieve. In both cases, Labels can be relevant and therefore we mention it separately here.
+After following the general setup above, you are all set to use the microflows in the **USE_ME > Operations** folder in your logic. Currently five operations (microflows and java actions) are exposed as microflow actions under the **PgVector Knowledge Base** category in the **Toolbox** in Mendix Studio Pro. They can be split into two categories, corresponding to the main functionalities: inserting data chunks into the knowledge base, for instance [(re)populate](#repopulate-knowledge-base), and finding relevant data chunks in an existing knowledge base, for example [retrieve](#retrieve). In both steps, [Labels](#label) can be provided to apply additional filters.
 
 #### 3.2.1 `Create label` {#create-label}
 
-Labels are used to attach additional information to chunks, that can be used for custom filtering during the retrieval step. In the operations to create a knowledge base Chunk, a list of Labels can be passed as optional input. These have a key/value structure. During the retrieval,  if provided as input, all key/value pairs passed in the form of Label entities to the operation must match any previously attached labels to the chunk during population. 
+Labels are used to attach additional information to chunks, that can be used for custom filtering during the retrieval step. In the operations to create a knowledge base Chunk, a list of Labels can be passed as optional input. These have a key/value structure. During the retrieval, if provided as input, all key/value pairs passed in the form of Label objects to the operation must match any previously attached labels to the chunk during population. Examples for key/value pairs are:
+* Category: Bug, Feature
+* Status: Open, Closed, In Progress
+* Machine Type: MachineX, MachineY
 
 ### 3.3 (Re)populate operations {#repopulate-operations-configuration}
 
-In order to add data to the knowledge base, you need to have discrete pieces of information and create chunks for those using the `Create Chunk` operation, after which they can be inserted into the knowledge base `(Re)populate Knowledge Base`. 
+In order to add data to the knowledge base, you need to have discrete pieces of information and create chunks for those using the `Create Chunk` operation, after which they can be inserted into the knowledge base using the `(Re)populate Knowledge Base` operation. 
 
 #### 3.3.1 `(Re)populate Knowledge Base` {#repopulate-knowledge-base}
 
-This microflow takes care of the following:
+This operation handles the following:
+* clearing the knowledge base if it does exist* 
 * creating the knowledge base if it does not exist
-* clearing the knowledge base if it does exist
 * inserting all provided chunks with their labels into the knowledge base
 
-The construction of the ChunkList input should be done using the [Create Chunk](#create-chunk-technical) operation. This operation handles the whole list in a single operation. It is possible to have multiple knowledge bases in the same database in parallel by providing the name in combination with the [DatabaseConfiguration](#databaseconfiguration-entity)
+The population handles a whole list of Chunks at once which should be created by using the [Create Chunk](#create-chunk-technical) operation. It is possible to have multiple knowledge bases in the same database in parallel by providing the name in combination with the [DatabaseConfiguration](#databaseconfiguration-entity).
 
 ### 3.4 Retrieve operations {#retrieve-operations}
 
-Currently two operations are available for on-demand retrieval of data chunks from a knowlege base. Both operations work on a single knowledge base (specified by the name) on a single database server (specified by the [DatabaseConfiguration](#databaseconfiguration-entity)). Apart from a regular [Retrieve](#retrieve), an additional operation was exposed to [Retrieve Nearest Neighbors]($retrieve-nearest-neighbors), where the distance between records is calculated as cosine distance between the input vector and the vectors of the records in the knowledge base.
+Currently, two operations are available for on-demand retrieval of data chunks from a knowlege base. Both operations work on a single knowledge base (specified by the name) on a single database server (specified by the [DatabaseConfiguration](#databaseconfiguration-entity)). Apart from a regular [Retrieve](#retrieve), an additional operation was exposed to [Retrieve Nearest Neighbors]($retrieve-nearest-neighbors), where the distance between records is calculated as cosine distance between the input vector and the vectors of the records in the knowledge base.
 
 #### 3.4.1 `Retrieve` {#retrieve}
 
@@ -88,7 +95,7 @@ Use this operation to retrieve chunks from the knowledge base. Additional select
 
 #### 3.4.2 `Retrieve Nearest Neighbors` {#retrieve-nearest-neighbors}
 
-Use this operation to retrieve chunks from the knowledge base where the sorting is based on vector similarity with respect to a given input vector. Additional selection and filtering can be done by specifying the optional input parameters for minimum similarity (0.0-1.0) and a maximum number of results, as well as a list of labels. When provided, this operation only returns chunks that are conform with all of the labels in the list.
+Use this operation to retrieve chunks from the knowledge base where the sorting is based on vector similarity with respect to a given input vector. Additional selection and filtering can be done by specifying the optional input parameters for minimum similarity (0 - 1.0) and a maximum number of results, as well as a list of labels. When provided, this operation only returns chunks that are conform with all of the labels in the list.
 
 ## 4 Technical Reference {#technical-reference}
 

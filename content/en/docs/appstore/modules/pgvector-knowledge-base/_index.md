@@ -210,13 +210,13 @@ The `Create Chunk` activity is recommended for instantiating [Chunks](#chunk) to
 | Name             | Type                                                         | Mandatory                     | Description                                                  |
 | ---------------- | ------------------------------------------------------------ | ----------------------------- | ------------------------------------------------------------ |
 | `ChunkList`          | List of [Chunks](#chunk)                                                     | mandatory                     | This the (mandatory) list to which the Chunk will be added. This list is the input for other operations e.g. [(Re)populate](#repopulate-operations-technical).                          |
-| `Human readable ID`  | String                     | mandatory                     | This is a front-end identifier that can be used for showing or retrieving sources in a custom way. If it is not relevant, "empty" must be passed explicitly here.             |
+| `HumanReadableID`  | String                     | mandatory                     | This is a front-end identifier that can be used for showing or retrieving sources in a custom way. If it is not relevant, "empty" must be passed explicitly here.             |
 | `Vector`  | String                     | mandatory                     | This is the vector representation of the content of the chunk, based  on which the similarity search is executed as in the [Retrieve Nearest Neighbors](#retrieve-nearest-neighbors-technical) operation.            |
 | `Key`  | String                     | mandatory                     | This is supposed to contain the string content of the chunk for which the embedding was created. In cases where the retrieval of the actual data happens in a different way (e.g. using an identifier or a Mendix object) this can be left empty if not used; in that case  "empty" must be passed explicitly here.             |
 | `Value`  | String                     | optional                     | In the KeyValue ChunkType scenario, the chunk content that is relevant for the similarity search is different from the value that is relevant in the custom processing afterwards. This field can be used to store this information directly in the PgVector Knowledge Base.             |
 | `LabelList`          | List of [Labels](#label)                                                    | optional | This is an optional list that contains extra information about the chunk. Any Key-Value pairs can be stored with the chunk. In the retrieval operations it is possible to filter on one or multiple labels. |
-| `Chunk type`  | Enumeration of [ENUM_ChunkType](#enum-chunktype)                   | mandatory                     | This mandatory value describes whether the chunk represents a piece of knowledge (key only) or a key-value pattern, where the key is embedded and used in the retrieval step, but the value is used in the logic after [Retrieve Nearest Neighbors](#retrieve-nearest-neighbors-technical). If this is set to KeyValue, the Value string is ignored in this action.             |
-| `Mx object`  | Object                     | optional                    | This parameter is used to capture the Mendix object to which the chunk refers. This can be used for finding back the record in the Mendix database later on after the retrieval step.            |
+| `ChunkType`  | Enumeration of [ENUM_ChunkType](#enum-chunktype)                   | mandatory                     | This mandatory value describes whether the chunk represents a piece of knowledge (key only) or a key-value pattern, where the key is embedded and used in the retrieval step, but the value is used in the logic after [Retrieve Nearest Neighbors](#retrieve-nearest-neighbors-technical). If this is set to KeyValue, the Value string is ignored in this action.             |
+| `MxObject`  | Object                     | optional                    | This parameter is used to capture the Mendix object to which the chunk refers. This can be used for finding back the record in the Mendix database later on after the retrieval step.            |
 
 [comment]: # ( TODO: order of parameters is based on the structure when the JavaAction call activity is openend not on the order inside the editing of the JavaAction itself. What do you prefer? Normally, a developer would only look inside the call activity and not dive deeper into the JA itself I would say)
 
@@ -236,7 +236,7 @@ The `(Re)populate Knowledge Base` activity is used to populate a whole knowledge
 
 | Name                 | Type                                      | Description                                                  |
 | -------------------- | ----------------------------------------- | ------------------------------------------------------------ |
-| `Success` | Boolean | This boolean indicates if the populations of the knowledge base and label table were successful. This can be used for custom error-handling. |
+| `IsSuccess` | Boolean | This boolean indicates if the populations of the knowledge base and label table were successful. This can be used for custom error-handling. |
 
 #### 4.3.3 Retrieve operations (#retrieve-operations-technical)
 
@@ -252,10 +252,10 @@ The `DatabaseConfiguration` that is passed must contain the connection details t
 | Name                | Type                                    | Mandatory | Description                                           |
 | ------------------- | --------------------------------------- | --------- | ----------------------------------------------------- |
 | `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is to connect and authenticate to the database.    |
-| `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the table name of the knowledge base in your database which contains the data to retrieve.
-| `MaxNumberOfResults`          | Integer/Long                                                      | optional                    | This is to optionally limit the number of results that should be returned. If it is not relevant, "empty" must be passed explicitly here. 
-| `LabelList`          | List of [Labels](#label)                                                    | optional | This list is for additional filtering in the retrieve. Only chunks that comply with the labels will be returned. If it is not relevant, "empty" must be passed explicitly here.|
-| `Offset`          | Integer/Long                                                        | optional                     | This is for skipping a number of records in the retrieve. If it is not relevant, "empty" must be passed explicitly here. 
+| `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the name of the knowledge base in your database which contains the data to retrieve.
+| `MaxNumberOfResults`          | Integer/Long                                                      | optional                    | This is to optionally limit the number of results that should be returned. |
+| `LabelList`          | List of [Labels](#label)                                                    | optional | This list is for additional filtering in the retrieve. Only chunks that comply with the labels will be returned. |
+| `Offset`          | Integer/Long                                                        | optional                     | This is for skipping a number of records in the retrieve. |
 
 **Return value**
 
@@ -274,11 +274,11 @@ The `DatabaseConfiguration` that is passed must contain the connection details t
 | Name                | Type                                    | Mandatory | Description                                           |
 | ------------------- | --------------------------------------- | --------- | ----------------------------------------------------- |
 | `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is to connect and authenticate to the database.    |
-| `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the table name of the knowledge base in your database which contains the data to retrieve.
+| `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the name of the knowledge base in your database which contains the data to retrieve.
 | `Vector`          | String                                                       | mandatory                     | This is the vector representation of the data for which the nearest neigbhors should be calculated. The dimension needs to be the same as the vectors stored in the knowledge base.
-| `MinimumSimilarity`          | Decimal                                                        | optional                     | This is to filter the results, so that only Chunks are returned which similarity score is equal or greater than the value provided. The score ranges from 0 (not similar) to 1.0 (the same vector). If it is not relevant, "empty" must be passed explicitly here. 
-| `MaxNumberOfResults`          | Integer/Long                                                      | optional                    | This is to optionally limit the number of results that should be returned. If it is not relevant, "empty" must be passed explicitly here. 
-| `LabelList`          | List of [Labels](#label)                                                    | optional | This list is for additional filtering in the retrieve. Only chunks that comply with the labels will be returned. If it is not relevant, "empty" must be passed explicitly here.|
+| `MinimumSimilarity`          | Decimal                                                        | optional                     | This is to filter the results, so that only Chunks are returned which similarity score is equal or greater than the value provided. The score ranges from 0 (not similar) to 1.0 (the same vector). 
+| `MaxNumberOfResults`          | Integer/Long                                                      | optional                    | This can be used to limit the number of results that should be returned. 
+| `LabelList`          | List of [Labels](#label)                                                    | optional | This list is for additional filtering in the retrieve. Only chunks that comply with the labels will be returned. |
 
 
 **Return value**

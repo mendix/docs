@@ -175,7 +175,7 @@ Activities define the actions that are executed in a microflow, nanoflow or a ja
 
 #### 4.3.1 General operations {#general-operations-technical} 
 
-...
+Operations that can be used in various steps like [(Re)populating](#repopulate-operations-technical) or [Retrieval](#retrieve-operations-technical).
 
 ##### 4.3.1.1 Create label {#create-label-technical} 
 The `Create Label` activity is recommended for creating [Labels](#label). The given input parameters are assigned to a newly created label. The label is added to the provided `LabelList` which can be used afterwards for passing into [Create Chunk](#create-chunk-technical).
@@ -190,7 +190,31 @@ The `Create Label` activity is recommended for creating [Labels](#label). The gi
 
 
 #### 4.3.2 (Re)populate operations {#repopulate-operations-technical} 
-The `(Re)populate Knowledge Base` activity is used to populate a whole knowledge base at once. This operation handles a list of chunks with their labels in a single operation. By providing the KnowledgeBaseName parameter, you determine the knowledge base. It is used to later on to retrieve elements from the correct tables. This operation takes care of the creation of the actual tables. If there is already data from an earlier iteration for the provided KnowledgeBaseName, the data will be removed first. Use `Create Label`[#create-label-technical] and `Create Label`[#create-chunk-technical] to construct the input for this activity, which needs to be passed as ChunkList. The DatabaseConfiguration that is passed must contain the connection details to a PostgreSQL database server with the PgVector extension installed. This entity is typically configured at runtime or in after-startup logic.
+
+Operations that support the population of a knowledge base.
+
+##### 4.3.2.1 Create Chunk {#create-chunk-technical}
+
+The `Create Chunk` activity is recommended for instantiating [Chunks](#chunk) to create the input for the knowledge base based on your own data structure. A ChunkList must be passed to which the new Chunk object will be added. Optionally, use [Create Label](#create-label-technical) to construct a list of Labels for custom filtering during the retrieval.
+
+**Input parameters**
+
+| Name             | Type                                                         | Mandatory                     | Description                                                  |
+| ---------------- | ------------------------------------------------------------ | ----------------------------- | ------------------------------------------------------------ |
+| `ChunkList`          | List of [Chunks](#chunk)                                                     | mandatory                     | This the (mandatory) list to which the Chunk will be added. This list is the input for other operations e.g. [(Re)populate](#repopulate-operations-technical).                          |
+| `Human readable ID`  | String                     | mandatory                     | This is a front-end identifier that can be used for showing or retrieving sources in a custom way. If it is not relevant, "empty" must be passed explicitly here.             |
+| `Vector`  | String                     | mandatory                     | This is the vector representation of the content of the chunk, based  on which the similarity search is executed as in the [Retrieve Nearest Neighbors](#retrieve-nearest-neighbors-technical) operation.            |
+| `Key`  | String                     | mandatory                     | This is supposed to contain the string content of the chunk for which the embedding was created. In cases where the retrieval of the actual data happens in a different way (e.g. using an identifier or a Mendix object) this can be left empty if not used; in that case  "empty" must be passed explicitly here.             |
+| `Value`  | String                     | optional                     | In the KeyValue ChunkType scenario, the chunk content that is relevant for the similarity search is different from the value that is relevant in the custom processing afterwards. This field can be used to store this information directly in the PgVector Knowledge Base.             |
+| `LabelList`          | List of [Labels](#label)                                                    | optional | This is an optional list that contains extra information about the chunk. Any Key-Value pairs can be stored with the chunk. In the retrieval operations it is possible to filter on one or multiple labels. |
+| `Chunk type`  | Enumeration of [ENUM_ChunkType](#enum-chunktype)                   | mandatory                     | This mandatory value describes whether the chunk represents a piece of knowledge (key only) or a key-value pattern, where the key is embedded and used in the retrieval step, but the value is used in the logic after [Retrieve Nearest Neighbors](#retrieve-nearest-neighbors-technical). If this is set to KeyValue, the Value string is ignored in this action.             |
+| `Mx object`  | Object                     | optional                    | This parameter is used to capture the Mendix object to which the chunk refers. This can be used for finding back the record in the Mendix database later on after the retrieval step.            |
+
+[comment]: # ( TODO: order of parameters is based on the structure when the JavaAction call activity is openend not on the order inside the editing of the JavaAction itself. What do you prefer? Normally, a developer would only look inside the call activity and not dive deeper into the JA itself I would say)
+
+##### 4.3.2.2 (Re)populate Knowledge Base {#repopulate-knowledge-base-technical}
+
+The `(Re)populate Knowledge Base` activity is used to populate a whole knowledge base at once. This operation handles a list of chunks with their labels in a single operation. By providing the KnowledgeBaseName parameter, you determine the knowledge base. It is used to later on to retrieve elements from the correct tables. This operation takes care of the creation of the actual tables. If there is already data from an earlier iteration for the provided `KnowledgeBaseName`, the data will be removed first. Use [Create Label](#create-label-technical) and [Create Chunk](#create-chunk-technical) to construct the input for this activity, which needs to be passed as ChunkList. The `DatabaseConfiguration` that is passed must contain the connection details to a PostgreSQL database server with the PgVector extension installed. This entity is typically configured at runtime or in [after-startup](/refguide/app-settings/#after-startup) logic.
 
 **Input parameters**
 
@@ -204,42 +228,57 @@ The `(Re)populate Knowledge Base` activity is used to populate a whole knowledge
 
 | Name                 | Type                                      | Description                                                  |
 | -------------------- | ----------------------------------------- | ------------------------------------------------------------ |
-| `Success` | Boolean | This boolean indicates if the populations of the knowledge base and label table were successful. Can be used for custom error-handling. |
-
-##### 4.3.2.1 Create Chunk {#create-chunk-technical}
-
-The `Create Chunk` activity is recommended for instantiating [Chunks](#chunk) to create the input for the knowledge base based on your own data structure. A ChunkList must be passed to which the new Chunk object will be added. Optionally, use [Create Label](#create-label-technical) to construct a list of Labels for custom filtering during the retrieval.
-
-**Input parameters**
-
-| Name             | Type                                                         | Mandatory                     | Description                                                  |
-| ---------------- | ------------------------------------------------------------ | ----------------------------- | ------------------------------------------------------------ |
-| `ChunkList`          | List of [Chunks](#chunk)                                                     | mandatory                     | This the (mandatory) list to which the Chunk will be added. This list is the input for other operations e.g. [(Re)populate](#repopulate-operations-technical).                          |
-| `Human readable ID`  | String                     | mandatory                     | This is a front-end identifier that can be used for showing or retrieving sources in a custom way. If it is not relevant, "empty" must be passed explicitly here.             |
-| `Vector`  | String                     | mandatory                     | This is the vector representation of the content of the chunk, based  on which the similarity search is executed as in the [Retrieve Nearest Neighbors](#retrieve-nearest-neighbors) operation.            |
-| `Key`  | String                     | mandatory                     | This is supposed to contain the string content of the chunk for which the embedding was created. In cases where the retrieval of the actual data happens in a different way (e.g. using an identifier or a Mendix object) this can be left empty if not used; in that case  "empty" must be passed explicitly here.             |
-| `Value`  | String                     | optional                     | In the KeyValue ChunkType scenario, the chunk content that is relevant for the similarity search is different from the value that is relevant in the custom processing afterwards. This field can be used to store this information directly in the PgVector Knowledge Base.             |
-| `LabelList`          | List of [Labels](#label)                                                    | optional | This is an optional list that contains extra information about the chunk. Any Key-Value pairs can be stored with the chunk. In the retrieval operations it is possible to filter on one or multiple labels. |
-| `Chunk type`  | Enumeration of [ENUM_ChunkType](#enum-chunktype)                   | mandatory                     | This mandatory value describes whether the chunk represents a piece of knowledge (key only) or a key-value pattern, where the key is embedded and used in the retrieval step, but the value is used in the logic after [Retrieve Nearest Neighbors](#retrieve-nearest-neighbors). If this is set to KeyValue, the Value string is ignored in this action.             |
-| `Mx object`  | Object                     | optional                    | This parameter is used to capture the Mendix object to which the chunk refers. This can be used for finding back the record in the Mendix database later on after the retrieval step.            |
-
-[comment]: # ( TODO: order of parameters is based on the structure when the JavaAction call activity is openend not on the order inside the editing of the JavaAction itself. What do you prefer? Normally, a developer would only look inside the call activity and not dive deeper into the JA itself I would say)
-
-##### 4.3.2.2 (Re)populate Knowledge Base {#repopulate-knowledge-base-technical}
-
-...
+| `Success` | Boolean | This boolean indicates if the populations of the knowledge base and label table were successful. This can be used for custom error-handling. |
 
 #### 4.3.3 Retrieve operations (#retrieve-operations-technical)
 
-...
+Activities that support the retrieval of the knowledge from the knowledge base.
 
 ##### 4.3.3.1 Retrieve {#retrieve-technical} 
 
-...
+The `Retrieve` activity is used to retrieve a subset of or the whole knowledge base. A list of chunks is returned which can be used for custom logic.  For additional filtering provide a list of [labels](#label), see [Create Label](#create-label-technical) activity. `Offset` and `MaxNumberOfResults` can be used for pagination or specific selection use cases.
 
-##### 4.3.3.2 Retrieve Nearest Neighbors {#retrieve-nearest-neighbors}
+The `DatabaseConfiguration` that is passed must contain the connection details to a PostgreSQL database server with the PgVector extension installed. This entity is typically configured at runtime or in after-startup logic. By providing the `KnowledgeBaseName` parameter, you determine the knowledge base that was used for population earlier.
+**Input parameters**
 
-...
+| Name                | Type                                    | Mandatory | Description                                           |
+| ------------------- | --------------------------------------- | --------- | ----------------------------------------------------- |
+| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is to connect and authenticate to the database.    |
+| `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the table name of the knowledge base in your database which contains the data to retrieve.
+| `MaxNumberOfResults`          | Integer/Long                                                      | optional                    | This is to optionally limit the number of results that should be returned. If it is not relevant, "empty" must be passed explicitly here. 
+| `LabelList`          | List of [Labels](#label)                                                    | optional | This list is for additional filtering in the retrieve. Only chunks that comply with the labels will be returned. If it is not relevant, "empty" must be passed explicitly here.|
+| `Offset`          | Integer/Long                                                        | optional                     | This is for skipping a number of records in the retrieve. If it is not relevant, "empty" must be passed explicitly here. 
+
+**Return value**
+
+| Name                 | Type                                      | Description                                                  |
+| -------------------- | ----------------------------------------- | ------------------------------------------------------------ |
+| `ChunkList` | List of [Chunks](#chunk) | This list is the result of the retrieval. |
+
+##### 4.3.3.2 Retrieve Nearest Neighbors {#retrieve-nearest-neighbors-technical}
+
+The `Retrieve Nearest Neighbors` activity is used to retrieve chunks from the knowledge base ordered by similarity based on the given vector. For additional filtering provide a list of [labels](#label), see [Create Label](#create-label-technical) activity. `MinimumSimilarity` (range 0 - 1.0) and `MaxNumberOfResults` can be used for optional filtering. 
+
+The `DatabaseConfiguration` that is passed must contain the connection details to a PostgreSQL database server with the PgVector extension installed. This entity is typically configured at runtime or in after-startup logic. By providing the `KnowledgeBaseName` parameter, you determine the knowledge base that was used for population earlier.
+
+**Input parameters**
+
+| Name                | Type                                    | Mandatory | Description                                           |
+| ------------------- | --------------------------------------- | --------- | ----------------------------------------------------- |
+| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is to connect and authenticate to the database.    |
+| `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the table name of the knowledge base in your database which contains the data to retrieve.
+| `Vector`          | String                                                       | mandatory                     | This is the vector representation of the data for which the nearest neigbhors should be calculated. The dimension needs to be the same as the vectors stored in the knowledge base.
+| `MinimumSimilarity`          | Decimal                                                        | optional                     | This is to filter the results, so that only Chunks are returned which similarity score is equal or greater than the value provided. The score ranges from 0 (not similar) to 1.0 (the same vector). If it is not relevant, "empty" must be passed explicitly here. 
+| `MaxNumberOfResults`          | Integer/Long                                                      | optional                    | This is to optionally limit the number of results that should be returned. If it is not relevant, "empty" must be passed explicitly here. 
+| `LabelList`          | List of [Labels](#label)                                                    | optional | This list is for additional filtering in the retrieve. Only chunks that comply with the labels will be returned. If it is not relevant, "empty" must be passed explicitly here.|
+
+
+**Return value**
+
+| Name                 | Type                                      | Description                                                  |
+| -------------------- | ----------------------------------------- | ------------------------------------------------------------ |
+| `ChunkList` | List of [Chunks](#chunk) | This list is the result of the retrieval. |
+
 
 ## 5 Showcase Application {#showcase-application}
 

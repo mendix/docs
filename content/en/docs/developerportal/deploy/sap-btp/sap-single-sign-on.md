@@ -102,12 +102,6 @@ If you have more than one account with Mendix, check that you have created your 
 
 If you are using the wrong Mendix account, you will have to sign out of Mendix and sign in again with the correct account. You will then have to create the app again. Alternatively, you can be invited to join the app as another team member.
 
-{{% alert color="info" %}}
-
-You cannot solve this problem by changing your email address on Mendix. This does not change your Mendix username.
-
-{{% /alert %}}
-
 ## 5 Read More
 
 * [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/)

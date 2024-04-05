@@ -16,7 +16,7 @@ Located in the Developer Portal, Buzz lets you see Mendix app activity in your c
 
 App **Buzz** is for a specific app:
 
-{{< figure src="/attachments/developerportal/general/buzz/app-buzz.png" class="image-border" >}}
+{{< figure src="/attachments/developerportal/general/buzz/app-buzz.png" >}}
 
 You can see the size of your **Team** and your team members on the right side of the page. Up to 25 team members can be displayed here at a time.
 

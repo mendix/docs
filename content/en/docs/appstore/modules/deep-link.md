@@ -194,7 +194,7 @@ The functionality of the Deep Link module has been replaced by various built-in 
     * Within the runtime setting of your application you can configure the page URL prefix. Change this from the default `p` to `link` to keep you our existing URLs working. Note that after this you have to completely remove the Deep Link module from your app, or else your app will fail to start. 
 *  **Microflow URLs** – For cases not entirely covered by the page URL functionality, use [microflow URLs](/refguide/microflow/#url). Specifically, add a URL to the microflows you were using with the Deep Link module.
   
-    {{% alert color="info" %}}If your Studio Pro version is below 10.9, then the microflow URLs do not support query parameters (for example `?param1=foo&param2=bar`), and therefore, you can end up with a different URL than before. To avoid this issue, make sure that you use Studio version 10.9 or higher.{{% /alert %}}
+    {{% alert color="info" %}}If your Studio Pro version is below 10.9, then the microflow URLs do not support query parameters (for example `?param1=foo&param2=bar`), and therefore, you can end up with a different URL than before. To avoid this issue, make sure that you use Studio Pro version 10.9 or higher.{{% /alert %}}
 
 * **Miscellaneous** – Other features of the deep link module can be replaced by their dedicated built-in features:
     * `Do not force a login action` is replaced by the [built-in security features](/howto/security/set-up-anonymous-user-security/) for [anonymous users](/refguide/anonymous-users/). 

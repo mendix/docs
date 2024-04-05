@@ -103,10 +103,10 @@ Apps created before 10.6 are not affected. This means that if your app is create
 
 When a new app is created from a Starter App or an app package, it may already contain a data snapshot. Before FKC is enabled during synchronization, any dangling references are deleted from the database. This cleanup is performed only once and is not repeated on consequent runs for the same database.
 
-### 5.3 Setting Foreign Key Constraints ON/OFF
+### 5.3 Setting Foreign Key Constraints On and Off
 
-Starting with Mendix 10.10.0 it is possible to set Foreign Key Constraints for existing projects ON or OFF regardless of the version the project was originally created on by toggling the option in the [App's runtime settings](/refguide/modeling/app-explorer/app/app-settings/#database-fkc).
+In Mendix version 10.10.0 and above, it is possible to set Foreign Key Constraints for existing projects on or off regardless of which version the project was originally created in by toggling the option in the app's [runtime settings](/refguide/app-settings/#database-fkc).
 
 {{% alert color="info" %}}
-Depliying an existing application after enabling or disabling FKC will cause a synchronization step to be executed.
+Deploying an existing application after enabling or disabling FKC will cause a synchronization step to be executed.
 {{% /alert %}}

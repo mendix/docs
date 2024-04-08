@@ -17,13 +17,37 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2024
 
+### April 4, 2024
+
+#### Pipelines Fixes
+
+* We fixed an issue that was causing pipelines to fail at the Checkout step for selected pipeline runs. (Ticket 211117)
+* We fixed an issue preventing user settings from saving for select users.
+* We fixed an issue where the branches were not being fetched for the Checkout step when designing a pipeline. We also fixed an issue where the Checkout step was not dynamically changing upon the change of the trigger.
+
+#### Pipelines Improvements
+
+* We made a variety of user experience improvements, including improving the styling and implementing a pipeline name character limit of 40 characters.
+
+### March 26, 2024
+
+#### Improvements
+
+* All databases of environments on eligible plans in Mendix Cloud (as specified in the table below) have been migrated to gp3 storage instances. Compared to gp2, gp3 provides higher baseline storage performance. For more information, see [Database IOPS Burst Balance](/developerportal/operate/metrics/#Trends-dbmxdatabaseburstbalance) in the *Metrics* documentation.
+
+    | Mendix Plans      | Storage Instance Type | Storage Size         | Baseline Storage Performance | Provisioned IOPS Range | Provisioned Throughput Range |
+    |-------------------|-----------------------|----------------------|------------------------------|------------------------|------------------------------|
+    | S and M           | gp2                   | Less than 20 GiB     | 100IOPS (3000 Burst)         | 100 - 1197 IOPS        | 128-250 MiB/s                |
+    | L, XL, XXL, and XXXL | gp3                   | Between 20 and 400 GiB | 3000 IOPS / 125 MiB/s        | N/A                    | N/A                          |
+    | XXXL              | gp3                   | 400 GiB and higher   | 12000 IOPS / 500 MiB/s       | 12000 - 64000 IOPS     | 500 - 4000 MiB/s             |
+
 ### March 7, 2024
 
 #### Bug Fixes
 
 * We corrected some rendering issues in the **Metrics** graphs: 
-     * When there were some missing data points, all the existing data points used to shift to the left of the graph. Now all the data points display where they are supposed to.
-     * The scale of the graphs used to change when there were missing data points. The scale is fixed now.
+    * When there were some missing data points, all the existing data points used to shift to the left of the graph. Now all the data points display where they are supposed to.
+    * The scale of the graphs used to change when there were missing data points. The scale is fixed now.
 
 #### Improvements
 

@@ -285,7 +285,7 @@ The `kubectl cp` command can sometimes fail to copy files with a `.tar.gz` exten
 In that case, changing the file extension can fix the issue, for example by changing the file extension from `.tar.gz` to `.tar.gz.backup`.
 {{% /alert %}}
 
-## 3 Known Limitations
+## 4 Known Limitations
 
 * It is not possible to export/import only the database or only files. The import/export process will always export or import the database together with any files.
 * In version 0.0.1 of the tool, when exporting data, all files from the bucket will be included. This may include:

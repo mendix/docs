@@ -25,13 +25,13 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Read [How to Build a Connector](/appstore/creating-content/connector-guide-build/)
 * Read [Best Practices for Building Connectors](/appstore/creating-content/connector-guide-best-practices/)
 * Download, install, and register [Postman](https://getpostman.com/)
-* Install Mendix Studio Pro (9.12.1 or higher)
+* Install Mendix Studio Pro (9.18.0 or higher)
 * Prepare an AWS account
 * Know how to pass custom HTTP headers to a Call REST API activity
 
 ## 2 Advantages of REST API-based Development
 
-When developing AWS connectors, you can choose between integration by means of a REST API or an SDK. Although an SDK-based integration means that the implementation is alike across all AWS services, using a REST API is more suitable when the focus is on using standard platform capabilities. In addition, using a REST API does not require any Java-based development. Because of that, this how-to focuses on developing AWS connectors with the REST API.
+When developing AWS connectors, you can choose between integration by means of a REST API or an SDK. Although an SDK-based integration means that the implementation is alike across all AWS services, using a REST API is more suitable when the focus is on using standard Mendix capabilities. In addition, using a REST API does not require any Java-based development. Because of that, this how-to focuses on developing AWS connectors with the REST API.
 
 {{% alert color="info" %}}
 The platform-supported [Amazon Rekognition connector](/appstore/modules/aws/amazon-rekognition/) was built using the REST API. If required, you can use it as reference when building your own connector.
@@ -48,7 +48,7 @@ To start creating your connector, do the following steps:
 1. In Mendix Studio Pro, create a new module.
     
     For more information about the recommended naming convention for the module, see [Naming Conventions for Elements within the Connector](#naming).
-2. Install and configure the [AWS Authentication connector version 2.1 or higher](https://marketplace.mendix.com/link/component/120333).
+2. Install and configure the [AWS Authentication connector version 3.0 or higher](https://marketplace.mendix.com/link/component/120333).
 
     This connector is required to authenticate with Amazon Web Services (AWS). For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/modules/aws/aws-authentication/).
 3. In your connector module, create a folder structure similar to the following figure:
@@ -104,7 +104,11 @@ After you have obtained an API response, you can use it to model the service in 
 
 11. Rename the entities according to the [best-practice naming conventions](#naming).
 
-### 3.4 Creating a Microflow Action
+### 3.4 Modeling the Request
+
+Since the update of the AWS Authentication connector to version 3.0.0 it is a best practice to use a request entity that inherits from the AWSAuthentication.AbstractRequest entity even when there is no payload. The reason behind this is that it keeps all AWS connectors compatible. You can create it using an import mapping as explained in the section above and then export it with an export mapping to get the required JSON request body for the REST call. This might be relevant for you, when you intend to publish the connector on the marketplace. If you don't intend to do that, you can also just create the JSON request manually and hardcode the timeout value. 
+
+### 3.5 Creating a Microflow Action
 
 After modeling the API response, you can create the corresponding action to use in your microflows.
 
@@ -143,8 +147,9 @@ The following sections of this document contain additional suggestions and best 
 
 When building the domain model for your connector, keep the following considerations in mind:
 
-* Create a request entity if the action requires input other than the Credential object, a Region string, or a FileDocument object.
+* Always create a request entity that inherits from the AWSAuthentication.AbstractRequest even if there is no payload.
 * Create a response entity if the action returns anything other than a Boolean attribute, such as `IsSuccesful` or `IsCompleted`.
+* Implement timeout settings by adding and associating a BasicClientConfig object to the request and setting the timeout value in there.
 * Make sure that the entity metadata is as human-readable as possible, and includes information such as:
     * Generalization label
     * An association's multiplicity (`1-1`, `1-*`, or `*-*`)

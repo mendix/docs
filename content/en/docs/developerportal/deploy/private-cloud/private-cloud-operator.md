@@ -251,7 +251,6 @@ The app constants can be defined in two ways, one is through Custom Runtime Sett
 
 {{% /alert %}}
 
-
 #### 3.2.2 Configuring Scheduled Events{#configure-scheduled-events}
 
 To disable execution of all scheduled events, set the **scheduledEventExecution** value to `NONE` in **runtime**.

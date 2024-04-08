@@ -51,6 +51,7 @@ style-src 'self' 'unsafe-inline';
 ```
 
 For Rich text version 2.x and below, you will need to add the following directives:
+
 ```text
 script-src 'self' 'unsafe-inline';
 style-src 'self' 'unsafe-inline';

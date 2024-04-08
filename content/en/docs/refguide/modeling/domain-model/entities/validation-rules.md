@@ -63,7 +63,7 @@ The rule defines which condition an attribute should satisfy.
 | Maximum length | The attribute may have no more than the specified number of characters. |
 
 {{% alert color="info" %}}
-Date values should be entered in [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) format, for example 2015-07-26.
+Date values should be entered in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format, for example 2015-07-26.
 {{% /alert %}}
 
 #### 2.2.2 Rule Order

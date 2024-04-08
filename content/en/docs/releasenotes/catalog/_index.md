@@ -13,6 +13,18 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2024
 
+### March 21, 2024
+
+#### Improvement
+
+* We improved the accessibility for various pages on the app.
+
+### March 14, 2024
+
+#### Fixes
+
+* We fixed an issue where endpoints would get deleted and re-created when an application was converted from Mendix version 10.6 or below to  version 10.7 or above.
+
 ### February 29, 2024
 
 #### Fixes
@@ -1092,6 +1104,6 @@ No more! We are very proud to announce that [Mendix Data Hub](https://catalog.me
 
 Every organization has valuable data in different applications. With Mendix Data Hub, you can use the data from different sources in your app without having to deal with complex integrations. All you need to do is just search for the data, add it to your domain model, and use it.
 
-Want to know how it can help you? Check out the launch blog post: [Data Hub: The Low-Code Approach to Data Integration](http://www.mendix.com/blogs/data-hub-the-low-code-approach-to-data-integration).
+Want to know how it can help you? Check out the launch blog post: [Data Hub: The Low-Code Approach to Data Integration](https://www.mendix.com/blogs/data-hub-the-low-code-approach-to-data-integration).
 
 For even more information, please consult the [Data Hub Guide](/data-hub/).

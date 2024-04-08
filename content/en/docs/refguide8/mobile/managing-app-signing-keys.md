@@ -75,7 +75,7 @@ Once you have downloaded the signing certificate (a *.cer* file), you need to co
 
 1. Create from the signing certificate a PEM format: `"C:\OpenSSL\bin\openssl.exe" x509 -in "C:\ios.cer" -inform DER -out "C:\ios_pem.pem" -outform PEM`.
 2. Create from the PEM certificate a password secured. This action requires the PEM certificate, the private key that was created in step 3 earlier, and the password thas was given on the creation of the *ios.csr*: `"C:\OpenSSL\bin\openssl.exe" pkcs12 -export -out "C:\ios.p12" -inkey "C:\private.key" -in "C:\ios_pem.pem"`.
-3. You can upload the signing certificate (now a `.p12` file) and the distribution profile (a `.mobileprovision` file) to Adobe PhoneGap Build on your [account page](https://build.phonegap.com/people/edit). Go to the **Signing Keys** tab and click **Add a key** under **iOS**. Select the two files and give the key a name. Unlock the key by clicking the yellow lock icon on the right of the key and filling in the certificate passphrase. The key is now ready to be used by your build job.
+3. You can upload the signing certificate (now a `.p12` file) and the distribution profile (a `.mobileprovision` file) to Adobe PhoneGap Build on your [account page](https://helpx.adobe.com/experience-manager/kb/adobe-phonegap-end-of-service.html). Go to the **Signing Keys** tab and click **Add a key** under **iOS**. Select the two files and give the key a name. Unlock the key by clicking the yellow lock icon on the right of the key and filling in the certificate passphrase. The key is now ready to be used by your build job.
 
 ## 3 Android{#android}
 
@@ -109,7 +109,7 @@ To generate a keystore for Android, follow these steps:
 
 ### 3.2 Uploading Your Keystore to PhoneGap Build
 
-After creating the keystore file, upload it to Adobe PhoneGap Build on your [account page](https://build.phonegap.com/). Then, complete the following instructions:
+After creating the keystore file, upload it to Adobe PhoneGap Build on your [account page](https://helpx.adobe.com/experience-manager/kb/adobe-phonegap-end-of-service.html). Then, complete the following instructions:
 
 1. Go to the **Signing Keys** tab and click **Add a key** under **Android**. 
 2. Select the keystore file, fill in a title for the key, and fill in the alias that you noted down in the previous step. 

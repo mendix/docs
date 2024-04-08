@@ -23,46 +23,45 @@ In [Portfolio Management](/developerportal/portfolio-management/), you can impor
 {{% alert color="info" %}}
 Each time, you can only export initiatives from one portfolio. It is not possible to export all the portfolios in one go.
 
-You can only export the active initiatives, not the archived ones.
 {{% /alert %}}
 
-1. In Portfolio Management, click the portfolio to open it. The portfolio opens. You can see the **Initiatives Overview** page.
+1. In Portfolio Management, click the portfolio to open the portfolio.
 
-2. If you only want to export a selection of initiatives, before you start exporting initiatives, use **Filters** on the upper-right corner of the **Initiatives Overview** page to filter the initiatives that you want to export.
+2. To export active initiatives, go to the **Initiatives Overview** page. To export archived initiatives, go to the **Archived** page.
 
-3. Click the {{% icon name="office-sheet" %}} icon on the upper-right corner to open a drop-down menu:
+3. If you want to only export a selection of initiatives, use **Filters** on the upper-right corner of the page to filter the initiatives that you want to export.
 
-   {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/export-import-icon.png"  class="image-border" width="600"  >}}
+4. Click the button on the upper-right corner to export initiatives:
 
-4. On the drop-down menu, select **Export Initiatives**. The **Export Initiatives** dialog box opens:
+   * On the **Initiatives Overview** page, click the {{% icon name="office-sheet" %}} icon and then select **Export Initiatives**. 
+   * On the **Archive** page, click {{% icon name="office-sheet" %}} **Export Initiatives**.
+   
+   The **Export Initiatives** dialog box opens.
 
-   * Click **Export All** to export all initiatives of the portfolio.
-   * Click **Export Selection** to only export the selection of your currently-filtered initiatives.
+5. To export all initiatives of the portfolio, click **Export All**. To only export the selection of your initiatives, click **Export Selection**.
 
 The initiatives are exported to an Excel file.
 
 {{% alert color="info" %}}
 All the details of an initiative are exported, except the data of the following fields:
 
-* **Linked App**
+* **Linked Apps**
+* **Linked Epics**
 * **Owner**
 * **Created By**
 * **Comments**
 * **Attachments**
 * **Additional Information** of the **Expected Value**
+* **Archived By**
   {{% /alert %}}
 
 ### 3.2 Importing Initiatives {#import-initiatives}
 
 1. In Portfolio Management, click the portfolio to open it. The portfolio opens. You can see the **Initiatives Overview** page.
 
-2. On the **Initiatives Overview** page, click the {{% icon name="office-sheet" %}} icon on the upper-right corner to open a drop-down menu:
+2. On the **Initiatives Overview** page, click the {{% icon name="office-sheet" %}} icon on the upper-right corner and then select **Import Initiatives** in a drop-down menu. The **Import Initiatives** dialog box opens.
 
-   {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/export-import-icon.png"  class="image-border" width="600"    >}}
-
-3. On the drop-down menu, select **Import Initiatives**. The **Import Initiatives** dialog box opens.
-
-4. To prevent any errors, download the Excel file template from the **Import Initiatives** dialog box, and use it as the template to import your initiatives. When you prepare your Excel file, make sure it meets the following requirements:
+3. To prevent any errors, download the Excel file template from the **Import Initiatives** dialog box, and use it as the template to import your initiatives. When you prepare your Excel file, make sure it meets the following requirements:
 
    * There should be maximum 500 rows in the Excel file.
 
@@ -70,30 +69,31 @@ All the details of an initiative are exported, except the data of the following 
 
     {{% alert color="info" %}}If you import initiatives using an Excel file [exported from a portfolio](#export-initiatives), the Excel file contains the following additional columns: **RICEScore**, **WSJFScore**, **ExpectedValue**,  and **CreationDate**. You can import this Excel file as it is, but the data from these columns will not be imported.{{% /alert %}}
 
-    | Column | Required                                                     | Format                       | Additional Constraints | Remarks               | Example Value                          |
-    | --------------------- | ------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------------ |--| -------------------------------------- |
-    | **Name**              | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/check-mark.svg" >}} | String                       |  Character limit: 200                                                           | If an initiative with the same name already exists in the portfolio, a duplicate will be created. |`My first initiative`|
-    | **Stage**             | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/check-mark.svg" >}} | String                       |  Character limit: 200                                                            | If a stage does not exist in the portfolio, it will be created. |`Proposal`|
-    | **Status**             | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                      |  Only one of the three statuses can be filled in: `On Track`, `At Risk`, or `Off Track`.  |                                       |`On Track`|
-    | **Tags**              | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                       |  <ul><li>Character limit: 50 per tag.</li></ul> <ul><li>Multiple tags should be separated by commas.</li></ul>     | If a tag does not exist in the portfolio, it will be created. |`Important, Operational, Architecture`|
-    | **Description**       | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                       |                                                              |                               |`A description of the initiative.`|
-    | **Department**        | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                       |  Character limit: 200                                                              | If a department does not exist in the portfolio, it will be created. |`Finance`|
-    | **Country**           | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                       | Only countries that appear as options for **Countries** on the [Portfolio Settings](/developerportal/portfolio-management/#portfolio-settings) page can be filled in. |                           |`Netherlands`|
-    | **UseCase**          | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                       |  Character limit: 200                                                              |                            |`Innovation`|
-    | **IntakeDate**       | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | Date-Time                    | The year must be between 1900 and 9999.                      |                           |`28/Jul/2022`|
-    | **StartDate**        | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | Date-Time                    | <ul><li>The year must be between 1900 and 9999.</li></ul> <ul><li>Start Date has to be sooner than Go-Live Date.</li></ul> |                           |`30/Jul/2022`|
-    | **GoLiveDate**      | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | Date-Time                    | <ul><li>The year must be between 1900 and 9999.</li></ul> <ul><li>Go-Live Date has to be later than Start Date.</li></ul> |                           |`30/Jul/2023`|
-    | **RICEReach**        | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | Integer                      | Only a positive number is allowed.                           |                                    |`50`|
-    | **RICEImpact**       | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                       | The selectable options can be found in the [RICE](/developerportal/portfolio-management/prioritization-models/#rice) section in *Prioritization Models*. |                                |`Medium`|
-    | **RICEConfidence**   | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                       | The selectable options can be found in the [RICE](/developerportal/portfolio-management/prioritization-models/#rice) section in *Prioritization Models*. |                                  |`High`|
-    | **RICEEffort**       | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | Integer                      | Only a positive number is allowed.                           |                                    |`12`|
-    | **WSJFBusinessValue** | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                       | The selectable options can be found in the [WSJF](/developerportal/portfolio-management/prioritization-models/#wsjf) section in *Prioritization Models*. |                                |`Medium`|
-    | **WSJFTimeCriticality** | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                       | The selectable options can be found in the [WSJF](/developerportal/portfolio-management/prioritization-models/#wsjf) section in *Prioritization Models*. |                               |`Highest`|
-    | **WSJFRiskReduction** | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                       | The selectable options can be found in the [WSJF](/developerportal/portfolio-management/prioritization-models/#wsjf) section in *Prioritization Models*. |                                |`Medium`|
-    | **WSJFJobSize**     | {{< figure src="/attachments/developerportal/portfolio-management/export-import-initiatives/cross-mark.svg" >}} | String                       | The selectable options can be found in the [WSJF](/developerportal/portfolio-management/prioritization-models/#wsjf) section in *Prioritization Models*. |                                    |`XS`|
+   | Column | Required                                                     | Format                       | Additional Constraints | Remarks               | Example Value                          |
+   | --------------------- | ------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------------ |--| -------------------------------------- |
+   | **Name**              | {{< icon name="checkmark-circle-filled" color="green" >}} | String                       |  Character limit: 200                                                           | If an initiative with the same name already exists in the portfolio, a duplicate will be created. |`My first initiative`|
+   | **Stage**             | {{< icon name="checkmark-circle-filled" color="green" >}} | String                       |  Character limit: 200                                                            | If a stage does not exist in the portfolio, it will be created. |`Proposal`|
+   | **Status**             | {{< icon name="remove-circle-filled" color="red" >}} | String                      |  Only one of the three statuses can be filled in: `On Track`, `At Risk`, or `Off Track`.  |                                       |`On Track`|
+   | **Tags**              | {{< icon name="remove-circle-filled" color="red" >}} | String                       |  <ul><li>Character limit: 50 per tag.</li></ul> <ul><li>Multiple tags should be separated by commas.</li></ul>     | If a tag does not exist in the portfolio, it will be created. |`Important, Operational, Architecture`|
+   | **Description**       | {{< icon name="remove-circle-filled" color="red" >}} | String                       |                                                              |                               |`A description of the initiative.`|
+   | **Department**        | {{< icon name="remove-circle-filled" color="red" >}} | String                       |  Character limit: 200                                                              | If a department does not exist in the portfolio, it will be created. |`Finance`|
+   | **Location**        | {{< icon name="remove-circle-filled" color="red" >}} | String                       |  Character limit: 200                                                              | If a location does not exist in the portfolio, it will be created. |`Utrecht`|
+   | **Country**           | {{< icon name="remove-circle-filled" color="red" >}} | String                       | Only countries that appear as options for **Countries** on the [Portfolio Settings](/developerportal/portfolio-management/#portfolio-settings) page can be filled in. |                           |`Netherlands`|
+   | **UseCase**          | {{< icon name="remove-circle-filled" color="red" >}} | String                       |  Character limit: 200                                                              |                            |`Innovation`|
+   | **IntakeDate**       | {{< icon name="remove-circle-filled" color="red" >}} | Date-Time                    | The year must be between 1900 and 9999.                      |                           |`28/Jul/2022`|
+   | **StartDate**        | {{< icon name="remove-circle-filled" color="red" >}} | Date-Time                    | <ul><li>The year must be between 1900 and 9999.</li></ul> <ul><li>Start Date has to be sooner than Go-Live Date.</li></ul> |                           |`30/Jul/2022`|
+   | **GoLiveDate**      | {{< icon name="remove-circle-filled" color="red" >}} | Date-Time                    | <ul><li>The year must be between 1900 and 9999.</li></ul> <ul><li>Go-Live Date has to be later than Start Date.</li></ul> |                           |`30/Jul/2023`|
+   | **RICEReach**        | {{< icon name="remove-circle-filled" color="red" >}} | Integer                      | Only a positive number is allowed.                           |                                    |`50`|
+   | **RICEImpact**       | {{< icon name="remove-circle-filled" color="red" >}} | String                       | The selectable options can be found in the [RICE](/developerportal/portfolio-management/prioritization-models/#rice) section in *Prioritization Models*. |                                |`Medium`|
+   | **RICEConfidence**   | {{< icon name="remove-circle-filled" color="red" >}} | String                       | The selectable options can be found in the [RICE](/developerportal/portfolio-management/prioritization-models/#rice) section in *Prioritization Models*. |                                  |`High`|
+   | **RICEEffort**       | {{< icon name="remove-circle-filled" color="red" >}} | Integer                      | Only a positive number is allowed.                           |                                    |`12`|
+   | **WSJFBusinessValue** | {{< icon name="remove-circle-filled" color="red" >}} | String                       | The selectable options can be found in the [WSJF](/developerportal/portfolio-management/prioritization-models/#wsjf) section in *Prioritization Models*. |                                |`Medium`|
+   | **WSJFTimeCriticality** | {{< icon name="remove-circle-filled" color="red" >}} | String                       | The selectable options can be found in the [WSJF](/developerportal/portfolio-management/prioritization-models/#wsjf) section in *Prioritization Models*. |                               |`Highest`|
+   | **WSJFRiskReduction** | {{< icon name="remove-circle-filled" color="red" >}} | String                       | The selectable options can be found in the [WSJF](/developerportal/portfolio-management/prioritization-models/#wsjf) section in *Prioritization Models*. |                                |`Medium`|
+   | **WSJFJobSize**     | {{< icon name="remove-circle-filled" color="red" >}} | String                       | The selectable options can be found in the [WSJF](/developerportal/portfolio-management/prioritization-models/#wsjf) section in *Prioritization Models*. |                                    |`XS`|
 
-5. When your Excel file is ready to be imported, drag it to the **Import Initiatives** dialog box, or click **Upload** and select the file.
+4. When your Excel file is ready to be imported, drag it to the **Import Initiatives** dialog box, or click **Upload** and select the file.
 
-6. Click **Import**.
+5. Click **Import**.
 
 All the initiatives in the Excel file are imported successfully. You can see the initiatives on the **Initiatives Overview** page. 

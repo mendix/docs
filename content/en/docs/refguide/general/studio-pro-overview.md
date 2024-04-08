@@ -198,10 +198,11 @@ The following shortcut keys are available for the debugger:
 
 | Key | Description |
 | --- | --- |
-| <kbd>Alt</kbd>&nbsp;+&nbsp;<kbd>F5</kbd> | *Step into* – moves the debugger into the sub-microflow/sub-nanoflow or loop. |
-| <kbd>Alt</kbd> + <kbd>F6</kbd> | *Step over* – moves the debugger to the next step in the same workflow/microflow/nanoflow. |
-| <kbd>Alt</kbd> + <kbd>F7</kbd> | *Step out* – instructs the debugger to leave the sub-microflow/sub-nanoflow or loop. |
-| <kbd>Alt</kbd> + <kbd>F8</kbd> | *Continue* – instructs the debugger to continue until it reaches another breakpoint. |
+| <kbd>Alt</kbd>&nbsp;+&nbsp;<kbd>F5</kbd> | **Step into** – moves the debugger into the sub-microflow/sub-nanoflow or loop. |
+| <kbd>Alt</kbd> + <kbd>F6</kbd> | **Step over** – moves the debugger to the next step in the same workflow/microflow/nanoflow. |
+| <kbd>Alt</kbd> + <kbd>F7</kbd> | **Step out** – instructs the debugger to leave the sub-microflow/sub-nanoflow or loop. |
+| <kbd>Alt</kbd> + <kbd>F8</kbd> | **Continue** – instructs the debugger to continue until it reaches another breakpoint. |
+| <kbd>Alt</kbd> + <kbd>F9</kbd> | **Continue all** – instructs the debugger to continue all currently paused microflows/nanoflows until it reaches another breakpoint. |
 
 ### 7.6 Menu Shortcut Keys {#menu-shortcuts}
 

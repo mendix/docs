@@ -19,17 +19,6 @@ div.card-icon{
         color: $blue;
     }
 }
-div.link-title{
-    font-weight: $font-weight-bold;
-    font-size: 1.2rem;
-    padding: 0 0 5% 0;
-    a {
-        color: $secondary;
-        &:hover {
-            color: $blue;
-        }
-    }
-}
 ul.landing-list{
     padding-left: 0.5rem;
 }
@@ -43,13 +32,16 @@ li.link-list{
     font-size: 1rem;
     list-style-position: outside;
     list-style: none;
-    color: $blue;
+    color: $link-color;
     a {
+        text-decoration: none;
         &:hover {
-            color: darken($blue, 20%);
+            color: $link-hover-color;
+            text-decoration: underline;
         }
     }
 }
+
 p.rn-date{
     color: $gray-600;
     font-size: 0.85rem;
@@ -137,6 +129,22 @@ img.my-icon{
     float:left;
     margin: 0rem 0.5rem 0.5rem 0.5rem;
 }
+
+.icon-recolor{
+    filter: invert(17%) sepia(4%) saturate(3835%) hue-rotate(184deg) brightness(92%) contrast(85%);
+}
+
+img.ToC-icon{
+    width: 2.5rem;
+    height: 2.5rem;
+    float:left;
+    margin: 0rem 0.5rem 0rem 0.5rem;
+    padding: 0.3rem;
+    border-radius: 4px;
+    &:hover {
+        background-color: $gray-light;
+    };
+}
 img.nav-icon{
     width: 24px;
     height: 24px;
@@ -153,10 +161,9 @@ h4.card-title-w-50{
     font-weight: $font-weight-medium; // NK - adjusted weight
     font-size: $h3-font-size; // NK - adjusted size
     margin: 0.5rem 0rem 0.5rem 1rem; // NK - bring title closer to icon
-
         &:hover {
-            color: $blue;
-            text-decoration: none;
+            color: $link-hover-color;
+            text-decoration: underline;
         }
 }
 div.card-body{

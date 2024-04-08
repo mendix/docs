@@ -98,8 +98,8 @@ After you configure the authentication profile for Amazon Bedrock, you can imple
 
 To help users understand what needs to be done to invoke a specific model using the [Invoke Model](#invoke-model), we have included two example implementations in the Amazon Bedrock Connector:
 
-* An implementation for invoking the Claude v. 2.1 LLM that generates text
-* An implementation for the SDXL v. 1.0 LDM model that generates images from a text prompt.
+* An implementation for invoking the Claude 3 Sonnet foundation model that generates text.
+* An implementation for the TitanImageGeneratorG1 foundation model that generates images from a text prompt.
 
 These examples can be used as a reference together with the documentation found on this page, in the Bedrock console, and offered by the provider of the model. For more Example implementations, see [Amazon Bedrock Example Implementation](https://marketplace.mendix.com/link/component/215751).  
 
@@ -107,7 +107,7 @@ To invoke a specific model, perform the following steps:
 
 1. Choose the model with which you want to interact by using the [Invoke Model](#invoke-model) operation.
 2. In the [Model Parameters](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html) section of the Amazon Bedrock user guide, find the request and response JSON structures of the specific model that you want to invoke.
-3. Create your domain model inspired by the JSON structures that you found by using a tool to visualize Json structures, such as [JSON Crack](https://jsoncrack.com/editor).
+3. Create your domain model inspired by the JSON structures that you found. You can use a tool to visualize Json structures if needed, such as [JSON Crack](https://jsoncrack.com/editor).
 4. In Mendix Studio Pro, create a JSON structure by doing the following steps:
     1. Right-click on the target folder.
     2. Click **Add other** > **JSON structure**.
@@ -148,7 +148,7 @@ To invoke a Bedrock agent for your Mendix app, do the following steps:
     * Set 'EndSession' to specify whether or not you want to have the option of continuing the conversation in another request.
   
 5. Enter the desired region as a value of the **AWSAuthentication.ENUM_Region** type.
-6. Select a **Credentials** object. You can put it in scope with the **AWSAuthenication.GetStaticCredentials** or the **AWSAuthenication.GetTemporaryCredentials** microflow.
+6. Select a **Credentials** object. You can put it in scope with the **AWSAuthentication.GetStaticCredentials** or the **AWSAuthentication.GetTemporaryCredentials** microflow.
 7. Select a microflow that takes an **AmazonBedrockConnector.InvokeAgentResponse** object as an input and handles that response.
     This is necessary because InvokeAgent is an asynchronous operation which means that it will not necessarily finish when the process that it was invoked from finishes. By giving the operation a handler microflow, the response can be handled as soon as it arrives. For an example handler microflow, see **AmazonBedrockConnector.InvokeAgentResponse_Handle** in the connector module. This microflow logs the response, so you can also use it just to investigate the response.
 
@@ -887,7 +887,7 @@ The input and output for this service are shown in the table below:
 
 #### 4.2.8 InvokeAgent {#invoke-agent}
 
-The `InvokeAgent` activity allows you to invoke an agent from Amazon Bedrock, so that you can orchestrate tasks involving foundation models and enrich the process with organisational data and user input. It requires `ENUM_Region`, `Credentials`, `InvokeAgentRequest`, a `ResponseHandlerMicroflow` and a `ErrorHandlerMicroflow` as input parameters. The microflow parameters are necessary since `InvokeAgent` is an asynchronous operation. The `ResponseHandlerMicroflow` is required to have exactly one input parameter of the `InvokeAgentResponse` entity type. It is called in a background threat once the respose is available. The `ErrorHandlerMicroflow` is required to have exactly one input parameter of type String. It will be called when there is an error during the asynchronous process and the error type will be passed to it's string parameter. The Amazon Bedrock Connector includes sample response handler and error handler microflows to help you set up handlers for your implementation.
+The `InvokeAgent` activity allows you to invoke an agent from Amazon Bedrock, so that you can orchestrate tasks involving foundation models and enrich the process with organizational data and user input. It requires `ENUM_Region`, `Credentials`, `InvokeAgentRequest`, a `ResponseHandlerMicroflow` and a `ErrorHandlerMicroflow` as input parameters. The microflow parameters are necessary since `InvokeAgent` is an asynchronous operation. The `ResponseHandlerMicroflow` is required to have exactly one input parameter of the `InvokeAgentResponse` entity type. It is called in a background threat once the response is available. The `ErrorHandlerMicroflow` is required to have exactly one input parameter of type String. It will be called when there is an error during the asynchronous process and the error type will be passed to it's string parameter. The Amazon Bedrock Connector includes sample response handler and error handler microflows to help you set up handlers for your implementation.
 
 For more information, see [Agents for Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/agents.html)
 
@@ -895,7 +895,7 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-- | `ENUM_Region (enumeration)`, `Credentials (object)`, `InvokeModelRequest (object)`, `ResponseHandlerMicroflow (microflow)`, `ErrorHandlerMicroflow (microflow)` | `none` |
+| `ENUM_Region (enumeration)`, `Credentials (object)`, `InvokeModelRequest (object)`, `ResponseHandlerMicroflow (microflow)`, `ErrorHandlerMicroflow (microflow)` | `none` |
 
 ##### 4.2.8.1 Handling the asynchronous InvokeAgentResponse
 
@@ -917,7 +917,6 @@ The open source [EZ Websocket Module](https://marketplace.mendix.com/link/compon
 
 The platform-supported [Pusher Module](https://marketplace.mendix.com/link/component/107957) is built around the [Pusher Channels](https://pusher.com/channels/) offering. This module requires a Pusher account. Pusher Channels is a paid service, but it also has a [Free Sandbox Plan](https://pusher.com/channels/pricing/). This module allows you to trigger a Notify event on the server to immediately trigger an action in the client application.
 
-
 ##### 4.2.8.2 Working with action groups and lambda functions
 
 Without action groups, the agent will still access associated knowledge bases, but will not be able to perform tasks that make agents an extension of simply invoking a model. Action groups are what make agents so powerful.
@@ -925,7 +924,6 @@ Without action groups, the agent will still access associated knowledge bases, b
 For example, it might be beneficial for the agent to dynamically retrieve more information via a REST endpoint or other source, rather than storing all possible information in a knowledge base. To achieve this, a lambda function must first be specified for the REST request and then associated with the agent as part of an action group. 
 
 If you would like to add lambda functions to your agent, please refer to the [AWS documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-lambda.html).
-
 
 ## 5 Troubleshooting
 
@@ -951,22 +949,36 @@ To solve this issue, follow these steps:
 
 After the status of the models changes to **Access Granted**, you can use it with the Amazon Bedrock connector.
 
-### 5.2 Error code 404 - Resource Not Found
+### 5.2 Error code 403 - AccessDeniedException
 
-When invoking a model the error code *404 - Resource Not Found* indicates that the targeted resource was not found.
+When invoking a model, the error code *403 - Access denied* indicates that you do not have access to the targeted resource.
 
 #### 5.2.1 Cause
 
 Possible root causes for this error include the following:
 
 * You do not have access to the model in the specified AWS region.
-* The model which you are trying to invoke is deprecated.
 
 #### 5.2.2 Solution
 
+To solve this issue, ensure that you have selected an AWS Region where you have model access. You can see an overview of the models accessible to you in the AWS Management Console, in the [Model Access](https://us-west-2.console.aws.amazon.com/bedrock/home?#/modelaccess) section of your Amazon Bedrock environment.
+
+### 5.3 Error code 404 - ResourceNotFoundException
+
+When invoking a model, the error code *404 - Resource not found* indicates that the targeted resource was not found.
+
+#### 5.3.1 Cause
+
+Possible root causes for this error include the following:
+
+* The model which you are trying to invoke is not available in your specified AWS region.
+* The model which you are trying to invoke is deprecated.
+
+#### 5.3.2 Solution
+
 To solve this issue, verify the following:
 
-1. Ensure that you have selected an AWS Region where you have model access. You can see an overview of the models accessible to you in the AWS Management Console, in the [Model Access](https://us-west-2.console.aws.amazon.com/bedrock/home?region=us-west-2#/modelaccess) section of your Amazon Bedrock environment.
+1. Ensure that you have selected an AWS Region where the targeted model exists. You can see an overview of the models accessible to you in the AWS Management Console, on the [Overview page](https://us-west-2.console.aws.amazon.com/bedrock/home?#/overview) of your Amazon Bedrock environment. Make sure the region specified in the AWS Console matches the region you have configured in Mendix. 
 2. Ensure that the model that you have selected is not deprecated and that the *model-id* is currently available in Amazon Bedrock.
 
 ## 6 Appendix
@@ -999,11 +1011,12 @@ The sync can be done from the information page of your knowledge base in the Ama
 The sync can take up to a few minutes and the calls to your knowledge base during this process cannot be handled accurately. To make sure the sync process has ended, you can use the [GetIngestionJob](#get-ingestion-job) action in the Amazon Bedrock Connector to retrieve the status of the ingestion job, along with other details.
 {{% /alert %}}
 
-#### 6.2 Safeguards
+### 6.2 Safeguards
 
 AWS has introduced safeguards for Bedrock (currently in preview). When available, there will be two features: Guardrails and Watermark detection. 
 
 The guardrail feature will allow you to: 
+
 * Filter harmful content with configurable thresholds based on your responsible AI policies.
 * Determine how to handle personally identifiable information (PII).
 * Deny topics.
@@ -1011,3 +1024,16 @@ The guardrail feature will allow you to:
 The watermark detection feature will make it possible to tell if an image has been created using Amazon Titan.
 
 More information about guardrails can be found in this [AWS blogpost](https://aws.amazon.com/blogs/aws/guardrails-for-amazon-bedrock-helps-implement-safeguards-customized-to-your-use-cases-and-responsible-ai-policies-preview/) and in the [AWS documentation](https://aws.amazon.com/en/bedrock/guardrails/).
+
+### 6.3 Advanced Prompts for Agents
+
+By default, an agent is configured with the following base prompt templates, one for each step in the agent sequence:
+
+* Pre-processing
+* Orchestration 
+* Knowledge base response generation 
+* Post-processing
+  
+By customizing the prompt templates and modifying these configurations, you can fine-tune your agent's accuracy. Additionally, you can provide custom examples for a technique known as few-shot prompting. This involves providing labeled examples for specific tasks, which further enhances the model's performance in targeted areas. For more information about advanced prompts, see [Advanced prompts](https://docs.aws.amazon.com/bedrock/latest/userguide/advanced-prompts.html) in the AWS documentation.
+
+You can also use placeholder variables in agent prompt templates. For example, in the orchestration prompt template, the *$prompt_session_attributes$* placeholder variable can be used to ingest the information from the `PromptSessionAttribute` entity into the prompt, if it was specified as part of the `InvokeAgentRequest`. For more information about placeholder variables available in agent prompt templates, see [Prompt placeholders](https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-placeholders.html) in the AWS documentation.

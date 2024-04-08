@@ -32,7 +32,7 @@ With the current version, Mendix supports inserting data chunks with their vecto
 
 ### 1.3 Limitations {#limitations}
 
-The current scope of the module is focused around (re)populating knowledge bases as a whole in one single operation. Deleting, adding or updating individual knowledge base items is not yet supported. Furthermore, connections that require drivers other than JDBC are not supported by this module.
+The current scope of the module is focused around (re)populating knowledge bases as a whole in one single operation. Deleting, adding or updating individual knowledge base items is not yet supported. 
 
 ### 1.4 Prerequisites {#prerequisites}
 

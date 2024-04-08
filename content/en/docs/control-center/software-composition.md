@@ -22,11 +22,13 @@ To be able to see the software composition information, make sure that you meet 
 
 * You must make your apps with Mendix versions [9.24.14](/releasenotes/studio-pro/9.24/#92414) and above or Mendix versions [10.5.0](/releasenotes/studio-pro/10.5/#1050) and above. Make sure that you upgrade to one of these versions to see component information reflected on this page.
 
-  {{% alert color="info" %}}With Mendix versions 9.24.14 and above, only unmanaged java dependencies or jars are shown. With Mendix versions 10.5.0 and above, both managed and unmanaged java dependencies or jars will be shown.{{% /alert %}}
+  {{% alert color="info" %}}For apps made with Mendix versions 9.24.14 and above, only unmanaged java dependencies or jars are shown. For apps made with Mendix versions 10.5.0 and above, both managed and unmanaged java dependencies or jars are shown.{{% /alert %}}
 
 * You must deploy the deployment package to the free or licensed Mendix Cloud environment or Mendix Cloud Dedicated.
 
 * You must create a versioned deployment package via the team server. For more information, see [Create Deployment Package](/refguide/create-deployment-package-dialog/).
+
+* The package URL (PURL) must be available for components to parse the components of an SBOM.
 
 * If your deployment package was deployed before XXX, you must create and deploy a new deployment package in order to get the software composition information populated on this page. For more information, see the [How Components Are Identified](#how-components-are-identified) section.
 

@@ -1,7 +1,7 @@
 ---
 title: "Insights Hub API calls only"
 url: /partners/siemens/mindsphere-api-only/
-weight: 5
+weight: 300
 description: "A description of some extra considerations to be taken into account when developing for deployment to Insights Hub"
 tags: ["MindSphere", "Insights Hub", "Credentials", "Multi-Tenant", "Environment Variables", "Local", "Styling", "UI", "Icons", "Limitations", "Licensing", "Validation", "App Service", "IIoT"]
 ---

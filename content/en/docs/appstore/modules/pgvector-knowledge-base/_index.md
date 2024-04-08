@@ -4,8 +4,6 @@ url: /appstore/modules/pgvector-knowledge-base/
 linktitle: "PgVector Knowledge Base"
 description: "Describes the configuration and usage of the PgVector Knowledge Base module from the Mendix Marketplace that allows developers to integrate postgreSQL databases with pgvector installed as knowledge bases in into their Mendix app."
 tags: ["pgvector", "postgreSQL", "similarity search", "cosine similarity", "cosine distance", "AI", "connector", "marketplace", "chatgpt", "vector", "genAI", "embeddings", "RAG", "Azure OpenAI", "vector database", "Retrieval augmented generation", "similarity search"]
-aliases:
-    - /appstore/connectors/pgvector-knowledge-base/
 ---
 
 ## 1 Introduction {#introduction}
@@ -107,7 +105,7 @@ The domain model in Mendix is a data model that describes the information in you
 
 #### 4.1.1 Configuration {#configuration-domain-model}
 
-{{< figure src="/attachments/appstore/modules/pgvector-knowledge-base/domainModel-DatabaseConfiguration.png" class="image-border" >}}
+{{< figure src="/attachments/appstore/modules/pgvector-knowledge-base/domain-model-database-configuration.png" class="image-border" >}}
 
 ##### 4.1.1.1 `DatabaseConfiguration` {#databaseconfiguration-entity} 
 
@@ -131,7 +129,7 @@ This non-persistent entity is only used for editing the `DatabasePassword`. The 
 
 #### 4.1.2 Knowledge Base interaction {#knowledgebase-domain-model}
 
-{{< figure src="/attachments/appstore/modules/pgvector-knowledge-base/domainModel-KnowledgeBaseInteraction.png" class="image-border" >}}
+{{< figure src="/attachments/appstore/modules/pgvector-knowledge-base/domain-model-knowledge-base-interaction.png" class="image-border" >}}
 
 ##### 4.1.2.1 `Chunk` {#chunk}
 

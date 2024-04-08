@@ -34,7 +34,7 @@ Studio Pro versions 10.0 and above can run on the M series Apple Silicon Mac usi
 
 {{% alert color="info" %}}
 
-If you were using parallels, but then upgraded and would like to use Studio Pro on Mac, make sure to quit parallels to be able to sign in to Studio Pro. 
+If you were using parallels and enabled port forwarding, but then upgraded and would like to use Studio Pro on Mac, make sure to quit parallels to be able to sign in to Studio Pro. 
 
 {{% /alert %}}
 

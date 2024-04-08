@@ -78,7 +78,7 @@ If no action is taken, resources in AWS will stay around indefinitely. Make sure
 
 ## 4 Configuring the Database Connection Details in your application {#configure-database-connection}
 
-1. Add the [PgVector Knowledge Base module](https://marketplace.mendix.com/link/component/2888) to your Mendix app and set it up correctly, see [PgVector Knowledge Base](/appstore/modules/pgvector-knowledge-base/). 
+1. Add the [PgVector Knowledge Base module](https://marketplace.mendix.com/link/component/2888) and its dependencies to your Mendix app and set it up correctly, see [PgVector Knowledge Base](/appstore/modules/pgvector-knowledge-base/). 
 
 [comment]: # ( TODO: insert links to the marketplace component and check link to docs)
 

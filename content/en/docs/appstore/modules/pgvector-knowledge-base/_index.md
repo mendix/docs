@@ -149,7 +149,7 @@ This entity represents a discrete piece of knowledge that needs to go into or co
 | `MxEntity`           | If the chunk was based on a Mendix object during creation, this will contain its full entity name at the time of creation.    |
 | `Similarity`         | In case the chunk was retrieved from the knowledge base as part of a similarity search (e.g nearest neighbors retrieval) this will contain the cosine similarity to the input vector for the retrieval that was executed. |
 
-The **PgVectorKnowledgeBase.User** module role has read access directly to attributes the `Chunk` and `Label` entities, to facilitate easy implementation on pages where retrieved data is shown.
+The **PgVectorKnowledgeBase.User** module role has read access to all attributes of `Chunk` which facilitates easy implementation on pages where retrieved data is shown.
 
 
 ##### 4.1.2.2 `Label` {#label} 
@@ -161,7 +161,8 @@ This represents additional information that is to be stored with the chunks in t
 | `Key`                | This is the name of the label and typically tells how the value should be interpreted.        |
 | `Value`              | This is the value of the label that provides additional information about the chunk in the context of the given key.          |
 
-The **PgVectorKnowledgeBase.User** module role has read access directly to attributes the `Chunk` and `Label` entities, to facilitate easy implementation on pages where retrieved data is shown.
+The **PgVectorKnowledgeBase.User** module role has read access to all attributes of `Label` which facilitates easy implementation on pages where retrieved data is shown.
+
 
 ### 4.2 Enumerations {#enumerations} 
 
@@ -237,7 +238,7 @@ The `(Re)populate Knowledge Base` activity is used to populate a whole knowledge
 
 | Name                 | Type                                      | Description                                                  |
 | -------------------- | ----------------------------------------- | ------------------------------------------------------------ |
-| `IsSuccess` | Boolean | This boolean indicates if the populations of the knowledge base were successful. This can be used for custom error-handling. |
+| `IsSuccess` | Boolean | This boolean indicates if the population of the knowledge base was successful. This can be used for custom error-handling. |
 
 #### 4.3.3 Retrieve operations (#retrieve-operations-technical)
 

@@ -13,12 +13,17 @@ no_list: true
 
 From the **Software Composition** page in the Developer Portal, you can drill down and view the components of each app environment. Besides, you can view the usage of components across your deployed packages under [All Components](#all-components), where standard marketplace modules, widgets, java libraries, and Mendix runtime version are available. In the event when a security vulnerability is detected, [Component Usage](#component-usage) can help you assess the impact radius and take action accordingly.
 
-Make sure that you meet the following prerequisites:
+### 1.1 Prerequisites {#prerequisites}
 
-* Component details and related actions are only available for apps made with Mendix versions [9.24.14](/releasenotes/studio-pro/9.24/#92414) and above or Mendix versions [10.5.0](/releasenotes/studio-pro/10.5/#1050) and above when they are deployed to Mendix Cloud or Cloud Dedicated. Make sure that you upgrade to one of these versions to see component information reflected on this page.
-* You have to create and deploy new deployment packages in order to get the software composition information populated on this page. For more information, see the [How Components Are Identified](#how-components-are-identified) section.
+To be able to see the software composition information, make sure that you meet the following prerequisites:
 
-### 1.1 How Components Are Identified {#how-components-are-identified}
+* You must make your apps with Mendix versions [9.24.14](/releasenotes/studio-pro/9.24/#92414) and above or Mendix versions [10.5.0](/releasenotes/studio-pro/10.5/#1050) and above. Make sure that you upgrade to one of these versions to see component information reflected on this page.
+* You must deploy your to the free or licensed Mendix Cloud environment or Mendix Cloud Dedicated. 
+* If your app was deployed before XXX, you must create and deploy a new deployment package in order to get the software composition information populated on this page. For more information, see the [How Components Are Identified](#how-components-are-identified) section.
+
+{{% todo %}}Add the release date of the page above{{% /todo %}}
+
+### 1.2 How Components Are Identified {#how-components-are-identified}
 
 Components are identified in the following manner:
 
@@ -72,7 +77,7 @@ For details on the information in the list and how to search, filter, and export
 
 The **All Components** tab gives an overview of all the components used across your deployment packages. 
 
-{{% alert color="info" %}}This only includes the newly-created apps for which a deployment package and hence a software bill of materials is available.{{% /alert %}}
+{{% alert color="info" %}}To be able to see the software composition information, make sure that you meet the prerequisite. For more information, see the [Prerequisites](#prerequisites) section.{{% /alert %}}
 
 Above the list, you can use the search box to search for a component. Next to the search box, you can filter components by selecting the component type. You can click {{% icon name="office-sheet" %}}**Export all to Excel** on the right side above the list to export all the information in the list to an Excel file.
 

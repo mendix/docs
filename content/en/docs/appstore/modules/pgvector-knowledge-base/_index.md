@@ -74,6 +74,15 @@ Labels can optionally be used to attach additional information to chunks, that w
 
 In order to add data to the knowledge base, you need to have discrete pieces of information and create chunks for those using the `Create Chunk` operation. After creating the Chunks, the resulting list can be inserted into the knowledge base using the `(Re)populate Knowledge Base` operation. 
 
+A typical pattern for populating a knowledge base is:
+
+1. Create a new List of Chunk
+2. For each knowledge item:
+    * Create a new list of Label
+    * Use [Create label](#create-label-technical) as many times as needed to add the necessary labels
+    * With both lists, use [Create chunk](#create-chunk-technical) for the knowledge item
+3. With the list of Chunk, use [(Re)populate Knowledge Base](#repopulate-knowledge-base) to store the Chunks
+
 #### 3.3.1 `(Re)populate Knowledge Base` {#repopulate-knowledge-base}
 
 This operation handles the following:
@@ -83,9 +92,16 @@ This operation handles the following:
 
 The population handles a whole list of Chunks at once which should be created by using the `Create Chunk` operation. It is possible to have multiple knowledge bases in the same database in parallel by providing different knowledge base names in combination with the same [DatabaseConfiguration](#databaseconfiguration-entity).
 
+
 ### 3.4 Retrieve operations {#retrieve-operations}
 
 Currently, two operations are available for on-demand retrieval of data chunks from a knowlege base. Both operations work on a single knowledge base (specified by the name) on a single database server (specified by the [DatabaseConfiguration](#databaseconfiguration-entity)). Apart from a regular [Retrieve](#retrieve), an additional operation was exposed to [Retrieve Nearest Neighbors]($retrieve-nearest-neighbors), where the cosine distance between the input vector and the vectors of the records in the knowledge base is calculated. In both cases it is possible to filter on [Labels](#create-label).
+
+A typical pattern for retrieval from a knowledge base is:
+
+1. Create a list of label
+2. Use [Create Label](#create-label) as many times as needed to add the necessary labels
+3. Do the retrieve, e.g. use [`Retrieve Nearest Neighbors`](#retrieve-nearest-neighbors) to find Chunks based on vector similarity
 
 #### 3.4.1 `Retrieve` {#retrieve}
 

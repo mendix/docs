@@ -10,7 +10,7 @@ aliases:
 
 ## 1 Introduction {#introduction}
 
-The PgVector Knowledge Base module contains operations to interact with a PostgreSQL database that has the [pgvector](https://github.com/pgvector/pgvector?tab=readme-ov-file#pgvector) extension installed. It allows you to easily store vectors and perform cosine similarity calculations from your Mendix app. This way you can leverage knowledge bases to make your apps smarter by performing operations based on (embedding) vectors and vector similarity. In the context of generative AI, Large Language Models (LLM) and embeddings, this is a key component in natural language processing (NLP) patterns such as Retrieval Augmented Generation (RAG), recommendation algorithms and similarity search operations.
+The [PgVector Knowledge Base module](https://marketplace.mendix.com/link/component/225063) contains operations to interact with a PostgreSQL database that has the [pgvector](https://github.com/pgvector/pgvector?tab=readme-ov-file#pgvector) extension installed. It allows you to easily store vectors and perform cosine similarity calculations from your Mendix app. This way you can leverage knowledge bases to make your apps smarter by performing operations based on (embedding) vectors and vector similarity. In the context of generative AI, Large Language Models (LLM) and embeddings, this is a key component in natural language processing (NLP) patterns such as Retrieval Augmented Generation (RAG), recommendation algorithms and similarity search operations.
 
 ### 1.1 Typical Use Cases {#use-cases}
 

@@ -1,9 +1,9 @@
 ---
-title: "{CONNECTOR-NAME}"
-url: /appstore/connectors/snowflake/{CONNECTOR-NAME}/
-description: "Describes the configuration and usage of the {CONNECTOR NAME} connector from the Mendix Marketplace. {AWS SERVICE NAME} is {AWS SERVICE DESCRIBED IN 1 SENTENCE; PER CONFIRMATION FROM AWS, WE CAN USE THE SERVICE DESCRIPTION FROM THE AWS WEBSITE}."
+title: "Mendix-Snowflake Bulk Data Loader"
+url: /appstore/connectors/snowflake/data-loader/
+description: "Describes the configuration and usage of the Mendix-Snowflake bulk data loader module from the Mendix Marketplace."
 weight: 20
-tags: ["marketplace", "marketplace component", "snowflake", "{CONNECTOR NAME}", "connector"]
+tags: ["marketplace", "marketplace component", "snowflake", "data loader", "module"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
@@ -11,11 +11,11 @@ tags: ["marketplace", "marketplace component", "snowflake", "{CONNECTOR NAME}", 
 
 ## 1 Introduction
 
-{BRIEFLY DESCRIBE WHAT YOU CAN ACHIEVE BY USING THE CONNECTOR. INCLUDE LINKS TO THE CONNECTOR PAGE ON MARKETPLACE, AND TO THE SNOWFLAKE SERVICE WEBSITE.}
+The Mendix-Snowflake Bulk Data Loader is an application developed under the Snowflake Native App Framework, designed to easily load data from Mendix to Snowflake. This tool streamlines the process of transferring data from Mendix apps directly into Snowflake, enhancing data management, analytics, and reporting capabilities.
 
 ### 1.1 Typical Use Cases
 
-{DESCRIBE WHAT THE SNOWFLAKE SERVICE DOES. !!!TO BE DONE - CHECK WITH SNOWFLAKE IF WE CAN REUSE THE SERVICE DESCRIPTIONS FROM THEIR WEBSITE.}
+{DESCRIBE WHAT THE DATA LOADER IS TYPICALLY USED FOR.}
 
 ### 1.2 Prerequisites {#prerequisites}
 

@@ -6,8 +6,8 @@
 | Y | 1, 3..n | 2009 | Week year, use in combination with `w` for [week number](https://en.wikipedia.org/wiki/Week#Week_numbering) formatting |
 | Y | 2 | 09 | Week year, use in combination with `w` for [week number](https://en.wikipedia.org/wiki/Week#Week_numbering) formatting |
 | M | 1..2 | 09 | Month |
-| M | 3 | Sept |
-| M | 4 | September |
+| M | 3 | Sept | Month |
+| M | 4 | September | Month |
 | w | 1..2 | 27 | Week of year, use for [week number](https://en.wikipedia.org/wiki/Week#Week_numbering) formatting |
 | d | 1..2 | 12 | Day of month |
 | D | 1..3 | 93 | Day of year |

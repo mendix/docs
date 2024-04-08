@@ -23,7 +23,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Install the [Make It Native](/refguide8/getting-the-make-it-native-app/) app on your mobile device
 
 {{% alert color="info" %}}
-To use push notifications with apps created with the Native Builder, make sure you have completed [How To Deploy Your First Mendix Native Mobile App](/howto8/mobile/deploying-native-app/) and the how-to's described in [Use Notifications](/howto8/mobile/notifications/)
+To use push notifications with apps created with the Native Builder, make sure you have completed [How To Build a Mendix Native App in the Cloud](/howto8/mobile/deploying-native-app/) and the how-to's described in [Use Notifications](/howto8/mobile/notifications/)
 {{% /alert %}}
 
 ## 3 Creating a Project and Configuring Notifications

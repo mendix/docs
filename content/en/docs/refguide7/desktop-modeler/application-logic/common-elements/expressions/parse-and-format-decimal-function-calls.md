@@ -4,7 +4,7 @@ linktitle: "Parse and Format Decimal Function Calls"
 url: /refguide7/parse-and-format-decimal-function-calls/
 ---
 
-For details on all the pattern possibilities, see [Class DecimalFormat](http://docs.oracle.com/javase/7/docs/api/java/text/DecimalFormat.html).
+For details on all the pattern possibilities, see [Class DecimalFormat](https://docs.oracle.com/javase/7/docs/api/java/text/DecimalFormat.html).
 
 ## parseDecimal
 

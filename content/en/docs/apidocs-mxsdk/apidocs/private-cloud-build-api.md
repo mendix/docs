@@ -4,7 +4,7 @@ url: /apidocs-mxsdk/apidocs/private-cloud-build-api/
 type: swagger
 category: "API Documentation"
 description: "This API allows you to manage deployment packages which can later be used in the environments deployed in your private cloud."
-weight: 55
+weight: 70
 ---
 
 {{% alert color="info" %}}
@@ -35,7 +35,7 @@ Authentication for the API uses a personal access token (PAT).
 
 #### 2.1.1 Generating a PAT
 
-You can generate a PAT in the **Developer Settings** section of your Mendix Profile. For details, see the [Personal Access Tokens](/community-tools/mendix-profile/#pat) section of *Mendix Profile*.
+You can generate a PAT in the **Developer Settings** section of your Mendix Profile. For details, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section of *Mendix Profile*.
 
 Select the following as scopes:
 

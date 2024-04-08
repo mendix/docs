@@ -401,7 +401,7 @@ The following tools are part of the testing process of custom Java code in your 
 * [JaCoCo](https://www.jacoco.org/jacoco/trunk/index.html) (Java Code Coverage) — This helps you check how well your code is covered by tests.
 * Gradle — This pulls everything together to manage Java dependencies, and provides a way to work with JUnit and Mockito.
 
-Gradle can handle managing Java dependencies and running [JUnit](http://junit.org) tests. Read about setting up Gradle in [Extending App Setup for Building Connectors with Java](#extend-app-java). If you have a pipeline, Mendix recommends running your tests as part of it. 
+Gradle can handle managing Java dependencies and running [JUnit](https://junit.org) tests. Read about setting up Gradle in [Extending App Setup for Building Connectors with Java](#extend-app-java). If you have a pipeline, Mendix recommends running your tests as part of it. 
 
 #### 6.2.2 Using the Java Unit Test Reference
 

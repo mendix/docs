@@ -22,8 +22,8 @@ Use the following command pattern:
 
 These are the `OPTIONS`:
 
-| Option | Default Value | Result |
-| --- | --- | --- |
+| Option | Result |
+| --- | --- |
 | `-s, --include-snapshot` | Includes a snapshot in the app package. |
 | `-d, --package-dir` | Exports the package to the directory. |
 | `--help` | Displays the help screen. |
@@ -100,8 +100,8 @@ Use the following command pattern:
 
 These are the `OPTIONS`:
 
-| Option | Default Value | Result |
-| --- | --- | --- |
+| Option | Result |
+| --- | --- |
 | `-s, --include-snapshot` | Includes a snapshot in the app package. |
 | `-d, --package-dir` | Exports the package to the directory. |
 | `--help` | Displays the help screen. |

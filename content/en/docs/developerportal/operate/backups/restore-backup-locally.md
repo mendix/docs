@@ -29,7 +29,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
     {{% alert color="info" %}}This how-to was made with PostgreSQL version 9.6.5.{{% /alert %}}
 
-* When you are restoring a database hosted in Mendix Cloud, or when downloading a full backup, your local machine must have [7zip](http://www.7-zip.org/) or another utility that can extract files from *.gz* and *.tar* archives.
+* When you are restoring a database hosted in Mendix Cloud, or when downloading a full backup, your local machine must have [7zip](https://www.7-zip.org/) or another utility that can extract files from *.gz* and *.tar* archives.
 
 ## 3 Restoring the Backup to Postgres
 
@@ -84,7 +84,7 @@ After the backup has been restored as a local Postgres database, you have to lin
     * **Password**: *{password for database owner} (by default, this is the password you provided for Postgres when first setting up PostgreSQL)*
 
 5. Click **OK**.
-6. Run the app by clicking **Run Locally** ({{% icon name="controls-play" %}}) or choosing the menu option **Run** > **Run Locally**.
+6. Run the app by clicking **Run Locally** ({{% icon name="controls-play-filled" %}}) or choosing the menu option **Run** > **Run Locally**.
 
 ## 5 Restoring Files
 
@@ -107,7 +107,7 @@ If you also want to restore the **FileDocuments**, follow these steps:
 3. Navigate to the **deployment/data/files** folder within your app.
 4. Extract the *{backup name}.tar* file from the *.gz* archive using a program like **7-zip**.
 5. Extract the contents of your **tree** folder from the backup archive to the  **deployment/data/files** folder within your app.
-6. Run the app by clicking **Run Locally** ({{% icon name="controls-play" %}}) or choosing the menu option **Run > Run Locally**.
+6. Run the app by clicking **Run Locally** ({{% icon name="controls-play-filled" %}}) or choosing the menu option **Run > Run Locally**.
 
 ## 6 Read More
 

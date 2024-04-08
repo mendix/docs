@@ -5,10 +5,6 @@ weight: 15
 tags: ["studio pro", "data widgets", "data containers", "data view", "list view", "data grid"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/data-widgets.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 Data widgets display contents of one object or a list of objects. 

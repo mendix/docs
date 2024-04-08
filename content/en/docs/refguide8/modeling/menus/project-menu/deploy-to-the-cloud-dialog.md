@@ -4,10 +4,6 @@ url: /refguide8/deploy-to-the-cloud-dialog/
 tags: ["studio pro"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/deploy-to-the-cloud-dialog.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 This menu option dialog creates a versioned deployment package and deploys it to your environment in the Mendix Cloud.

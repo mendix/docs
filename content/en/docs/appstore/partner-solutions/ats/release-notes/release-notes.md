@@ -5,6 +5,14 @@ description: "The release notes for Mendix Application Test Suite (ATS) with det
 weight: 100
 ---
 
+## 2.29.3
+
+**Release date: March 26, 2024**
+
+### Fixes
+
+* We fixed an issue that resulted in the improper functioning of the **Assert value** action for Selenium 4 hubs.
+ 
 ## 2.29.2
 
 **Release date: January 16, 2024**
@@ -1248,7 +1256,7 @@ We accomplished this by providing a single, multi-tenant SaaS instance of ATS in
 
 ATS is now offered as a service. There is a single multi-tenant instance in the Mendix Cloud to serve all customers:
 
-[http://ats.mendix.com](http://ats.mendix.com)
+[https://ats.mendix.com](https://ats.mendix.com)
 
 This instance is operated and maintained by CLEVR and Mendix. As a customer, you can enjoy the typical SaaS benefits. CLEVR and Mendix deliver maintenance, updates, and fixes faster than ever. You can access new features as soon as we publish a new release.
 
@@ -1256,7 +1264,7 @@ All customers can use this instance without affecting each other's work. Data is
 
 #### SSO and App Synchronization
 
-You should not have to spend time on setting up and configuring an application before using it the first time. So, as soon as you open [http://ats.mendix.com](http://ats.mendix.com), you will automatically be signed in with your Mendix account.
+You should not have to spend time on setting up and configuring an application before using it the first time. So, as soon as you open [https://ats.mendix.com](https://ats.mendix.com), you will automatically be signed in with your Mendix account.
 
 After login, the ATS dashboard shows all your licensed apps. From there, you can select one of your apps and start testing.
 

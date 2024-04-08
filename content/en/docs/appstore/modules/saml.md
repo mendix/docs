@@ -380,7 +380,9 @@ If you are using a [hybrid mobile](/refguide9/mobile/introduction-to-mobile-tech
 
 #### 4.3.4 ⚠ Enable Delegated Authentication {#delegated-auth}
 
-⚠ This feature is deprecated.
+{{% alert color="warning" %}}
+This feature is deprecated.
+{{% /alert %}}
 
 When you use the SAML SSO module in your app, your app will typically be a front-end app that redirects the user to their IdP via the browser for login.
 Using SAML protocols to secure the APIs of your back-end app is more challenging. We advise you to use OAuth access tokens by installing the [OIDC SSO](https://marketplace.mendix.com/link/component/120371) module instead of the SAML module. This is a common, and a best, practice.

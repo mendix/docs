@@ -229,4 +229,4 @@ Now the test steps will have `mx-name-` CSS selectors rather than the Selenium d
 
 Learn more about this topic using the following helpful link:
 
-* [Selenium IDE Documentation](http://docs.seleniumhq.org/docs/02_selenium_ide.jsp)
+* [Selenium IDE Documentation](https://www.selenium.dev/selenium-ide/docs/en/introduction/getting-started)

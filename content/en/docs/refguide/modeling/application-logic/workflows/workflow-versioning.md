@@ -25,7 +25,7 @@ After deploying a new app version, the Workflow Engine detects which workflows a
 
 If a workflow instance has already been incompatible in a previous app version, deploying a new app version reruns the Workflow Versioning Conflict Detection. When this new app version introduces a change that resolves a conflict for the workflow instance, this workflow instance will be automatically upgraded to the latest app version and the workflow execution continues. When the same (or a different set of) conflicts are detected, the workflow instance remains incompatible (though with an updated description in the **Reason** attribute when applicable).
 
-### 3.1 Successful Upgrades to the Latest Workflow Definition 
+### 3.1 Successful Upgrades to the Latest Workflow Definition {#workflow-definition-upgrade}
 
 Any of the following changes are interpreted as non-conflicting:
 
@@ -47,7 +47,7 @@ Any of the following changes are interpreted as non-conflicting:
 * Adding outcomes in **Decision**, **Call microflow** or **User task** activities
 * Changing the context entity, referenced microflows, referenced pages, or referenced workflows
 
-### 3.2 Workflow Versioning Conflict Types
+### 3.2 Workflow Versioning Conflict Types {#conflict-types}
 
 The Workflow Versioning Conflict Detection system detects different types of conflicts. This section lists conflict types, explains the impact, and provides option to solve conflicts. When one or more of these conflict types is detected, a workflow instance becomes incompatible and the **Reason** field mentions the conflict types that are found in the workflow instance.
 

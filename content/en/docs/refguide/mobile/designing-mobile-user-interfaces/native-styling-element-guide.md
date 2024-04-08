@@ -146,6 +146,7 @@ export const Text = {
 | `container` | This has all ViewStyle properties. |                 |
 | `text`      | This has all TextStyle properties. |                 |
 | `text`     | `numberOfLines`                     | This is the maximum number of lines to wrap the label text. If the text is any longer, it will be cut off with an ellipsis (defaults to `0`). |
+
 The default class to style all texts is named `Text`.
 
 ### 4.2 Page Title 
@@ -169,6 +170,7 @@ export const PageTitle = {
 | `container` | This has all ViewStyle properties. |                 |
 | `text`      | This has all TextStyle properties. |                 |
 | `text`      | `numberOfLines`                     | This is the maximum number of lines to wrap the label text. If the text is any longer, it will be cut off with an ellipsis (defaults to `0`). |
+
 The default class to style all page titles is named `PageTitle`.
 
 ## 5 Structure Widgets
@@ -1831,19 +1833,19 @@ export const com_mendix_widget_native_signature_Signature = {
 
 | Element | Style Properties    | Description |
 | --- | --- | --- |
-| `container` | This has all ViewStyle properties.   |   |
+| `container` | | This has all ViewStyle properties.   |
 | `container` | `penColor` | This will change the color of the stroke. |
-| `buttonWrapper` | This has all ViewStyle properties. |
-| `buttonClearContainer` | This has all ViewStyle properties. |
+| `buttonWrapper` | | This has all ViewStyle properties. |
+| `buttonClearContainer` | | This has all ViewStyle properties. |
 | `buttonClearContainer` | `rippleColor` | This will change the color of the ripple on Android.  |
 | `buttonClearContainer` | `activeOpacity` | This will change the opacity when touch is active on iOS.  |
 | `buttonClearContainer` | `underlayColor` | This will change the underlay color when touch is active on iOS.  |
-| `buttonClearCaption` | This has all TextStyle properties. |
-| `buttonSaveContainer` | This has all ViewStyle properties. |
+| `buttonClearCaption` | | This has all TextStyle properties. |
+| `buttonSaveContainer` | | This has all ViewStyle properties. |
 | `buttonSaveContainer` | `rippleColor` | This will change the color of the ripple on Android.  |
 | `buttonSaveContainer` | `activeOpacity` | This will change the opacity when touch is active on iOS.  |
 | `buttonSaveContainer` | `underlayColor` | This will change the underlay color when touch is active on iOS.  |
-| `buttonSaveCaption` | This has all TextStyle properties. |
+| `buttonSaveCaption` | | This has all TextStyle properties. |
 
 The default class to style all text boxes is named `com_mendix_widget_native_signature_Signature`.
 
@@ -1957,7 +1959,7 @@ export const com_mendix_widget_native_linechart_LineChart = {
 | `xAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
 | `xAxis` > `label` | `relativePositionGrid` | Positions the axis label at the bottom or right side of the grid ("bottom" or "right"). |
 | `yAxis` | All `xAxis` element styles. | |
-| `yAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. |
+| `yAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
 | `yAxis` > `label` | `relativePositionGrid` | Positions the axis label at the top or left side of the grid ("top" or "left"). |
 | `legend` > `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
 | `legend` > `item` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
@@ -2091,7 +2093,7 @@ export const com_mendix_widget_native_barchart_BarChart = {
 | `xAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
 | `xAxis` > `label` | `relativePositionGrid` | Positions the axis label at the **bottom** or **right** side of the grid. |
 | `yAxis` | All `xAxis` element styles. | |
-| `yAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. |
+| `yAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
 | `yAxis` > `label` | `relativePositionGrid` | Positions the axis label at the **top** or **left** side of the grid. |
 | `legend` > `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
 | `legend` > `item` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
@@ -2375,7 +2377,7 @@ export const com_mendix_widget_native_columnchart_ColumnChart = {
 | `xAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
 | `xAxis` > `label` | `relativePositionGrid` | Positions the axis label at the **bottom** or **right** side of the grid. |
 | `yAxis` | All `xAxis` element styles. | |
-| `yAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. |
+| `yAxis` > `label` | All [TextStyle](https://reactnative.dev/docs/text-style-props) properties. | |
 | `yAxis` > `label` | `relativePositionGrid` | Positions the axis label at the **top** or **left** side of the grid. |
 | `legend` > `container` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |
 | `legend` > `item` | All [ViewStyle](https://reactnative.dev/docs/view-style-props) properties. | |

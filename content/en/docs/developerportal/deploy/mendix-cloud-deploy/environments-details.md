@@ -11,7 +11,7 @@ tags: ["Deploy","App","Environment","Developer Portal"]
 
 ## 1 Introduction
 
-To open the **Environment Details** page, go to the [Developer Portal](http://sprintr.home.mendix.com) and click **Environments** on your licensed app. Then click **Details** ({{% icon name="notes-paper-edit" %}}) by the environment you want to view.
+To open the **Environment Details** page, go to the [Developer Portal](https://sprintr.home.mendix.com) and click **Environments** on your licensed app. Then click **Details** ({{% icon name="notes-paper-edit" %}}) by the environment you want to view.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/environment-details.png" alt="The Details icon is on the right side of the row" class="image-border" >}}
 
@@ -24,17 +24,17 @@ The **Environment Details** page shows information about the selected environmen
 In the **General** tab, you can find the following information about your environment:
 
 * **Status**
-    * {{% icon name="checkmark-circle" color="green" %}} – the application in this environment is running
-    * {{% icon name="subtract-circle" color="gray" %}} – no application has been started yet in this environment, or it has been turned off
-    * {{% icon name="remove-circle" color="red" %}} – the application in this environment is unstable and probably not usable anymore
+    * {{% icon name="checkmark-circle-filled" color="green" %}} – the application in this environment is running
+    * {{% icon name="subtract-circle-filled" color="gray" %}} – no application has been started yet in this environment, or it has been turned off
+    * {{% icon name="remove-circle-filled" color="red" %}} – the application in this environment is unstable and probably not usable anymore
 * **Running since** – the date the app was started, if it is running
 * **Name** – the type of environment (Acceptance, Production, Test, or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments)); for more information, see the [Naming of Environments](#naming) section below
 * **Url** – the URL of the app
 * **Project ID** – the unique identifier of the app
 * **Environment ID** – the unique identifier of the environment
 * **Custom domains** – any [custom domains](/developerportal/deploy/custom-domains/) of the app
-* **Java Version** – Oracle version 1.8 or AdoptOpenJDK version 11
-* **Studio Pro Target**
+* **Java Version** – Oracle version 1.8, AdoptOpenJDK version 11, or Eclipse Temurin JDK 17
+* **Studio Pro Target** – a **Yes** or **No** value indicating whether the environment is the designated deployment target from Studio Pro; for more information, see [Studio Pro Deployment Settings](/developerportal/deploy/studio-deployment-settings/).
 * **Plan** – the type of plan covered by your license (for more information, see the [Overviews](/developerportal/deploy/environments-details/#overviews) section below)
 * **Instances** – a summary of the number and memory allocation of instances of the environment (for more information, see the [Scaling](#scaling) section below)
 * **Database Version** – the PostgreSQL version supporting the database
@@ -101,7 +101,7 @@ To clear your environment, follow these steps:
 
 If you are the app's [Technical Contact](/developerportal/general/app-roles/#technical-contact), you can rename the environments.
 
-To rename the environment, follow these steps:
+To rename an environment, follow these steps:
 
 1. Click **Change** next to the name of the environment.
 2. Enter the new name, which must meet the following requirements:
@@ -261,7 +261,7 @@ There are three types of values for these headers:
 
 The changes to the headers are implemented when the app is redeployed.
 
-For more information, see [HTTP Headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers).
+For more information about HTTP headers, see [MDN's HTTP headers overview](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers).
 
 #### 4.2.1 HTTP Response Headers Inserted Automatically
 
@@ -271,7 +271,7 @@ Mendix and the deployment environment automatically add some non-configurable re
 | --------------- | -------- |
 | `cache-control`| The buildpack for *index.html* and *login.html* – the Mendix Runtime for other pages |
 | `permissions-policy: interest-cohort=()` | Exclude from Federated Learning of Cohorts (FLoC) calculation |
-| `strict-transport-security` | TLS terminating webservers – set to `max-age=31536000` |
+| `strict-transport-security` | TLS terminating webservers – set to `max-age=31536000` (365 days, in seconds)|
 | `x-vcap-request-id` | Cloud Foundry to track requests through CF |
 
 #### 4.2.2 Running Your App in an Iframe {#iframe}
@@ -407,6 +407,7 @@ When using the **Log Levels** tab, bear in mind the following considerations:
 * If your app is not running, the tab only shows log nodes that are set to a level other than Info. Log nodes that are set to the Info level become visible when your app is restarted.
     * For custom nodes, log nodes become visible when your app is restarted and after messages have been logged to them.
 * If you change the log level, this level will continue to be used even if you later restart your app.
+* If you change the log level, the startup logs (the logs that are created while starting the runtime, including the logs that the after-startup microflow generates) are not affected. It is not possible to change the log level of the startup logs for apps hosted on Mendix Cloud. 
 * For an application running a single instance, any changes are applied immediately to the application.
 * For an application running more than one instance, the changes can only be applied after a restart of the app. This is because it is not possible to instruct the load balancer to set the log level for a specific running instance. 
 * Log levels may not persist across restarts if you change them outside the Developer Portal (for example, using an app module).
@@ -519,7 +520,7 @@ Tags serve two purposes:
 * Custom tags can be added to metrics for third-party metrics solutions
 * Tags can serve as selection criteria for grouping environments into a landscape management dashboard, which can be used for third-party logging solutions
 
-For example, you may wish to use tags when logging with Datadog. For more information, see [Getting Started with Tags](https://docs.datadoghq.com/tagging/).
+For example, you may wish to use tags when logging with Datadog. For more information, see Datadog's [Getting Started with Tags](https://docs.datadoghq.com/tagging/).
 
 ## 9 The Services Tab {#services}
 

@@ -11,7 +11,7 @@ tags: ["studio pro"]
 
 ## 1 Introduction
 
-Integration with other applications (other Mendix apps, or applications built with different technology) can be done using REST, OData, SOAP/Web Services, or Business Events. Mendix can also import and export data from XML and JSON, and supports integrating with machine learning models.
+Integration with other applications (other Mendix apps or applications built with different technology) can be done using REST, OData, SOAP/Web Services, or Business Events. Mendix can also import and export data from XML and JSON and supports integrating with machine learning models.
 
 Data integration capabilities in Studio pro is part of [Mendix Connect](#integration-mx-connect).
 
@@ -22,7 +22,7 @@ Data integration capabilities in Studio pro is part of [Mendix Connect](#integra
 * [OData services](/refguide/integration/odata-services/) (view and manage in your company's [Catalog](/catalog/))
 * [REST services](/refguide/integration/rest-services/)
 * [Web services](/refguide/integration/web-services/)
-* [Business event services](/refguide/business-event-services/)
+* [Business Event services](/refguide/business-event-services/)
 
 In addition to integration capabilities in Studio Pro [10](/releasenotes/studio-pro/10/), Mendix Connect functionalities include:
 

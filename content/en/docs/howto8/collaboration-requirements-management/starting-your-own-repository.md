@@ -23,9 +23,9 @@ The description should say what the item does. This description can also be used
 
 Add a *.gitignore* file to make sure you keep your repo clean.
 
-## 4 Widget Boilerplate
+## 4 Making a Widget
 
-When making a new widget, use the [Widget Boilerplate](https://github.com/mendix/AppStoreWidgetBoilerplate) from GitHub. This has everything you need to get started developing a Mendix widget.
+When making a new widget, Mendix suggests you [Build a Pluggable Web Widget](/howto8/extensibility/create-a-pluggable-widget-one/).
 
 ## 5 Releases
 

@@ -5,10 +5,6 @@ description: "This documentation will give you insight into creating documents w
 tags: ["Document", "Generate", "Word", "PDF", "studio pro"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/creating-your-own-documents.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 Have you been wondering how to create your own documents with Mendix? This reference will tell you how to do it!

@@ -14,6 +14,8 @@ Backup snapshots for apps running in Mendix Cloud are automatically created ever
 
 Backup snapshots contain both the database and file documents referred to in the database.
 
+{{% alert color="info" %}}This page describes backups for apps deployed to Mendix Cloud. If your app is deployed to SAP Business Technology Platform (SAP BTP) instead, the **Backups** page links to the SAP BTP cockpit.{{% /alert %}}
+
 ## 2 Creation and Retention Schedules
 
 Backups are created and retained as follows:
@@ -27,7 +29,7 @@ Backups are created and retained as follows:
 
 Each backup is automatically deleted when its retention period is over, but you can always manually delete it before then. By default, backups are retained for exactly the specified period; for example, a weekly backup created at 3:18 on December 3 expires at 3:18 on March 3. If you want to keep a backup for longer than scheduled, you can download the backup to your computer.
 
-{{% alert color="info" %}}Backups are only created when the app is deployed and running.{{% /alert %}}
+{{% alert color="info" %}}Automatic backups are only created when the app is deployed and running.{{% /alert %}}
 
 ### 2.1 Nightly Backups{#nightly-backups}
 
@@ -42,11 +44,14 @@ The **Estimated Duration** indicates the period during which backups are expecte
 | Cape Town   | Frankfurt          | 02:00            | 04:00      | 1 hour             |
 | Dublin      | Frankfurt          | 23:00            | 00:00      | 3 hours            |
 | Frankfurt   | Dublin             | 00:00            | 01:00      | 3 hours            |
+| Jakarta     | Singapore          | 00:00            | 07:00      | 1 hour             |
 | London      | Frankfurt          | 23:00            | 23:00      | 2 hours            |
 | Mumbai      | Hyderabad          | 19:30            | 01:00      | 1 hour             |
 | N. Virginia | N. California      | 05:00            | 00:00      | 4 hours            |
 | Oregon      | Ohio               | 07:00            | 00:00      | 1 hour             |
+| Osaka       | Tokyo              | 00:00            | 09:00      | 1 hour             |
 | São Paulo   | N. Virginia        | 00:00            | 21:00      | 1 hour             |
+| Seoul       | Singapore          | 00:00            | 09:00      | 1 hour             |
 | Singapore   | Sydney             | 17:00            | 01:00      | 1 hour             |
 | Sydney      | Melbourne          | 07:00            | 17:00      | 1 hour             |
 | Tokyo       | Osaka              | 16:00            | 01:00      | 1 hour             |

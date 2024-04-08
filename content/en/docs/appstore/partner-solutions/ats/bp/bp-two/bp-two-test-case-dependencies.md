@@ -89,7 +89,7 @@ This table presents the conclusions:
 | :------------ | :--------------------------------- |
 | No dependence between the test cases, they can run in any order and parallel. | Functional dependency, if you cannot create an expense you cannot delete it. |
 | Use of combined actions for better maintainability. | Execution time of TC.02 is raised, it has to perform extra steps. |
-| When the functionality of TC.01 is broken, the result of TC.02 is not Executed. |
+| When the functionality of TC.01 is broken, the result of TC.02 is not Executed. | |
 
 This table presents aspects against the good test case criteria:
 

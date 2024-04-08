@@ -11,9 +11,9 @@ no_list: true
 
 The **Private Marketplace** page gives you the governance capabilities to approve or decline a request for adding a new component or a new version of an existing component to your organization's private Marketplace. It gives you the following benefits:
 
-- Enhanced security: It allows you to mitigate security risks by ensuring that only vetted and approved components are added to the company’s Private Marketplace.
-- Company guidelines assurance: It enables you to meet regulatory requirements and internal policies by thoroughly reviewing components.
-- Efficient management: It offers a centralized approval process to save time and resources, preventing additional communication outside of the platform. 
+* Enhanced security: It allows you to mitigate security risks by ensuring that only vetted and approved components are added to the company’s Private Marketplace.
+* Company guidelines assurance: It enables you to meet regulatory requirements and internal policies by thoroughly reviewing components.
+* Efficient management: It offers a centralized approval process to save time and resources, preventing additional communication outside of the platform. 
 
 {{% alert color="info" %}}As a Mendix Admin, you can always unpublish content from the private Marketplace of your organization. This can help your organization keep its private Marketplace neat, with only relevant company content. To do so, go to [Company Content](/appstore/overview/my-marketplace/#company-content) in [My Marketplace](https://marketplace.mendix.com/link/mymarketplace), click the {{% icon name="three-dots-menu-horizontal" %}} icon on the component card, and then select **Unpublish all versions**. {{% /alert %}}
 
@@ -37,10 +37,10 @@ Under the **Approvals Requests** section, you can configure settings for the fol
 
   If you turn off this toggle, there will be the following consequences:
 
-  * The toggle **Mendix Admins must approve submissions of new component's versions** will be turned off automatically.
-  * All the pending requests will get approved automatically.
+    * The toggle **Mendix Admins must approve submissions of new component's versions** will be turned off automatically.
+    * All the pending requests will get approved automatically.
 
-  * Developers will be able to directly add component to the private Marketplace without an approval from a Mendix Admin.
+    * Developers will be able to directly add component to the private Marketplace without an approval from a Mendix Admin.
 
 * **Mendix Admins must approve submissions of new component's versions** – If you turn on this toggle, when a new version of a component is submitted to the private Marketplace, a Mendix Admin needs to approve the submission before the new version is added to the private Marketplace. The submission appears on the [Pending Approvals](#pending-approvals) list before it gets approved or declined.
 
@@ -69,21 +69,21 @@ If you click the component name in a request on the **Pending Approvals** list, 
 
 On the top, you can find following buttons:
 
-*  **Approval** – Click this button to approve the request. After you approve the request, the submitter will receive a notification, and the component will be published in the private Marketplace of your company.
-*  **Decline** – Click this button to reject the request. You can also add a reason. After you decline the request, the submitter will receive a notification.
+* **Approval** – Click this button to approve the request. After you approve the request, the submitter will receive a notification, and the component will be published in the private Marketplace of your company.
+* **Decline** – Click this button to reject the request. You can also add a reason. After you decline the request, the submitter will receive a notification.
 * **Download** – Click this button to download the *.mpk* file of the component.
 
 The request details page also has the following tabs:
 
-- **General** – This tab shows the general information about the component, such as content type, category, license, description, and cover image. The right side of the screen shows the submitter's name and email, the activity log, and the technical details of the component, such as the compatible Mendix version, component ID, and UUID.
+* **General** – This tab shows the general information about the component, such as content type, category, license, description, and cover image. The right side of the screen shows the submitter's name and email, the activity log, and the technical details of the component, such as the compatible Mendix version, component ID, and UUID.
 
-- **Package** – This tab shows the information and the version of the *.mpk* file and the release notes.
+* **Package** – This tab shows the information and the version of the *.mpk* file and the release notes.
 
   {{% alert color="info" %}}If the content type of the component is **Industry Template**, this tab is optional. If the content type of the component is **Solution Content type**, the tab is unavailable.{{% /alert %}}
 
-- **Documentation** – This tab shows the documentation and screenshots, as well as the link to the demo if there is a demo.
+* **Documentation** – This tab shows the documentation and screenshots, as well as the link to the demo if there is a demo.
 
-- **Capabilities** – This tab shows additional information about content types such as **Solution** and **Industry Template**. 
+* **Capabilities** – This tab shows additional information about content types such as **Solution** and **Industry Template**. 
 
 ## 3 Approval History {#approval-history}
 

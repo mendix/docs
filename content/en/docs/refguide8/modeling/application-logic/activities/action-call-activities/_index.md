@@ -5,10 +5,6 @@ weight: 30
 tags: ["studio pro", "action call", "action call activities"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/action-call-activities.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 The following are the action call activities you can use in your microflow or nanoflow:

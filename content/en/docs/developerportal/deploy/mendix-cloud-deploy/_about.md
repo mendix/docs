@@ -17,20 +17,23 @@ Apps deployed to Mendix Cloud run in Cloud Foundry clusters that are deployed on
 
 The primary hosting locations are as follows:
 
-* Mendix Cloud Africa: AWS Cape Town
-* Mendix Cloud Asia Pacific: AWS Mumbai
-* Mendix Cloud Asia Pacific: AWS Singapore
-* Mendix Cloud Asia Pacific: AWS Sydney
-* Mendix Cloud Asia Pacific: AWS Tokyo
-* Mendix Cloud Canada: AWS Canada
-* Mendix Cloud EU: AWS Dublin
-* Mendix Cloud EU: AWS Frankfurt
-* Mendix Cloud Middle East: AWS Bahrain
-* Mendix Cloud Middle East: AWS UAE
-* Mendix Cloud UK: AWS London
-* Mendix Cloud US: AWS North Virginia
-* Mendix Cloud US: AWS Oregon
-* Mendix Cloud SA: AWS São Paulo
+* Mendix Cloud Africa: Cape Town
+* Mendix Cloud Australia: Sydney
+* Mendix Cloud Asia Pacific: Mumbai
+* Mendix Cloud Asia Pacific: Singapore
+* Mendix Cloud Asia Pacific: Tokyo
+* Mendix Cloud Asia Pacific: Osaka
+* Mendix Cloud Asia Pacific: Seoul
+* Mendix Cloud Asia Pacific: Jakarta
+* Mendix Cloud Canada: Central
+* Mendix Cloud Europe: Ireland
+* Mendix Cloud Europe: Frankfurt
+* Mendix Cloud Middle East: Bahrain
+* Mendix Cloud Middle East: UAE
+* Mendix Cloud UK: London
+* Mendix Cloud US East: North Virginia
+* Mendix Cloud US West: Oregon
+* Mendix Cloud South America: São Paulo
 
 Backups are always stored in at least one secondary location, separate from the primary hosting location. Each individual backup is immutable; in other words, once it has been written to Mendix's storage location, it can no longer be modified or overwritten.
 
@@ -48,7 +51,7 @@ No, it does not. The Cloud Foundry API does not map one-to-one to Mendix's deplo
 
 ## 4 How Do You Access the Underlying AWS Resources? How Can You Deploy in Your AWS Account?
 
-Mendix Cloud runs in Mendix's own AWS account; you cannot interact with the AWS APIs directly via Mendix credentials. Mendix does not offer [VPC peering](http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide/Welcome.html) or VPC connections. All access to Mendix-hosted AWS resources (such as EC2, RDS, and S3) is done via Mendix APIs, such as the [Database API](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/core/Core.html#createXPathQuery(java.lang.String)) and [FileDocument API](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/core/Core.html#storeFileDocumentContent(com.mendix.systemwideinterfaces.core.IContext,com.mendix.systemwideinterfaces.core.IMendixObject,java.io.InputStream)) in Runtime and the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api/) for cloud resources.
+Mendix Cloud runs in Mendix's own AWS account; you cannot interact with the AWS APIs directly via Mendix credentials. Mendix does not offer [VPC peering](https://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide/Welcome.html) or VPC connections. All access to Mendix-hosted AWS resources (such as EC2, RDS, and S3) is done via Mendix APIs, such as the [Database API](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/core/Core.html#createXPathQuery(java.lang.String)) and [FileDocument API](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/core/Core.html#storeFileDocumentContent(com.mendix.systemwideinterfaces.core.IContext,com.mendix.systemwideinterfaces.core.IMendixObject,java.io.InputStream)) in Runtime and the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api/) for cloud resources.
 
 However, you can launch services on your own AWS account, in the same region to minimize latency. Then, you can access those services via connectors in your app.
 

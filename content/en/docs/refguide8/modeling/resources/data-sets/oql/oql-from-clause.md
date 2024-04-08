@@ -4,10 +4,6 @@ url: /refguide8/oql-from-clause/
 tags: ["studio pro"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/oql-from-clause.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 The `FROM` clause specifies the entities or other source from which the data must be retrieved. This clause starts with the `FROM` keyword, following by an entity name. To select data from other entities as well, add these entities via the `JOIN` keywords. This syntax is a little more strict than the official `SQL FROM` clause syntax.

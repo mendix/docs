@@ -134,7 +134,15 @@ For more information on the available properties in the web app manifest, read t
 
 ### 5.2 Sessions {#sessions}
 
-Offline-first PWAs use long-lived sessions, which keep users logged in for a longer period even after their apps are closed. By default, users will be logged out after 7 days of inactivity. This can be customized using the *LongLivedSessionTimeout* runtime setting.
+#### 5.2.1 Mendix Version 10.9.0 and Above
+
+Offline-first PWAs use an authentication token by default to keep the session active while users are not actively working in the app.
+
+For more information on the session and authentication tokens, see [Session Management](/refguide/session-management/)
+
+#### 5.2.2 Mendix Versions Below 10.9.0
+
+Offline-first PWAs use long-lived sessions, which keep users logged in for a longer period even after their apps are closed. By default, users will be logged out after 7 days of inactivity. This can be customized using the [LongLivedSessionTimeout](/refguide/custom-settings/#LongLivedSessionTimeout) runtime setting.
 
 For more information on sessions and how to customize the timeout, see the [Session Duration](/refguide/tricky-custom-runtime-settings/#session-duration) section of the *Advanced Custom Settings in Mendix Runtime Reference Guide*.
 
@@ -176,6 +184,10 @@ This table lists the most used device features and APIs, and also documents thei
 | [Connection](https://developer.mozilla.org/en-US/docs/Web/API/NetworkInformation) | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} |
 
 For more information on browser support for certain device features, see the third-party website [Can I Use](https://caniuse.com/).
+
+{{% alert color="warning" %}}
+In iOS, using the Camera feature (`MediaDevices` in [Mozilla's API](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia)) in any browser requires HTTPS.
+{{% /alert %}}
 
 {{% alert color="info" %}}
 In order to test the features requiring HTTPS protocol, use [ngrok](https://ngrok.com/) to enable features in your localhost.

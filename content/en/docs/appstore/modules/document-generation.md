@@ -22,7 +22,7 @@ The [PDF Document Generation](https://marketplace.mendix.com/link/component/2115
 ### 1.2 Limitations
 
 * Currently, PDF is the only supported document export format.
-* For deployment, currently we support [Mendix Public Cloud](/developerportal/deploy/mendix-cloud-deploy/), [Mendix for Private Cloud Connected](/developerportal/deploy/private-cloud/), and [On-Premises](/developerportal/deploy/on-premises-design/). Other deployment scenarios will be supported at a later stage.
+* For deployment, currently we support [Mendix Public Cloud](/developerportal/deploy/mendix-cloud-deploy/), [Mendix Cloud Dedicated](/developerportal/deploy/mendix-cloud-deploy/), [Mendix for Private Cloud Connected](/developerportal/deploy/private-cloud/), and [On-Premises](/developerportal/deploy/on-premises-design/). Other deployment scenarios will be supported at a later stage.
 
     {{% alert color="info" %}}For all deployment types except for on-premises, we only support apps that allow bi-directional communication with the PDF Service in the Mendix Public Cloud.{{% /alert %}}
 
@@ -47,6 +47,8 @@ The [PDF Document Generation](https://marketplace.mendix.com/link/component/2115
 
     {{% alert color="info" %}}This is only applicable for apps built in Mendix 9.24.5 and below and Mendix 10.0.0.{{% /alert %}}
 
+* The new React client that is introduced in [10.7.0](/releasenotes/studio-pro/10.7/#react-client) is not yet supported. Generating PDF documents does not work when setting the 'Use React client (Beta)' to 'Yes' in the runtime settings of your app. We will introduce support for the React client soon.
+
 ## 2 Installation {#installation}
 
 Follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the Documentation Generation module into your app.
@@ -64,6 +66,7 @@ Follow the instructions in [Using Marketplace Content](/appstore/overview/use-co
 
     1. [Running on Mendix Cloud](#run-on-mendix-cloud) using the PDF service in the Mendix Public Platform. This option is available for apps that are deployed to the following environments:
         * [Mendix Public Cloud](/developerportal/deploy/mendix-cloud-deploy/)
+        * [Mendix Cloud Dedicated](/developerportal/deploy/mendix-cloud-deploy/)
         * [Mendix for Private Cloud Connected](/developerportal/deploy/private-cloud/)
 
     2. [Running On-Premises](#run-on-premises) using a local version of the PDF service. This option is available for apps that are deployed to the following environments:
@@ -94,7 +97,7 @@ To allow the module to send and receive document generation requests on your Men
 
 1. Enable the DocGen request handler.
 
-   {{% alert color="info" %}}This step is only for licensed apps on the Mendix Public Cloud. If your app is deployed on [Mendix for Private Cloud Connected](/developerportal/deploy/private-cloud/), skip this step and make sure that the */docgen/* path is accessible.{{% /alert %}}
+   {{% alert color="info" %}}This step is only for licensed apps on the Mendix Public Cloud or Mendix Cloud Dedicated. If your app is deployed on [Mendix for Private Cloud Connected](/developerportal/deploy/private-cloud/), skip this step and make sure that the */docgen/* path is accessible.{{% /alert %}}
 
 2. Register your app environments.
 
@@ -106,7 +109,7 @@ The steps for each procedure are described in the sections below.
 
 1. Make sure that you have configured the **DocumentGeneration** module as described in the [Configuration](#configuration) section.
 
-2. Make sure that you have the application [deployed to Mendix Public Cloud](/developerportal/deploy/mendix-cloud-deploy/#deploy-app-mendix-cloud).
+2. Make sure that you have the application [deployed to the desired Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/#deploy-app-mendix-cloud).
 
 3. To allow the module to send and receive document generation requests in your Mendix Cloud environments, enable the DocGen request handler as follows:
 
@@ -137,6 +140,9 @@ The steps for each procedure are described in the sections below.
 
 1. Add the snippet **Snip_AppRegistration** to a page in your app that is accessible to users with the **Administrator** module role set in the **DocumentGeneration** module. The snippet can be found in the  **_UseMe** > **Admin** folder of the **DocumentGeneration** module.
 2. Enable the scheduled event **SE_AccessToken_Refresh** to automatically refresh the access token that is used to secure access to the Document Generation cloud service. The scheduled event can be found in the  **_UseMe** > **Scheduled events** folder of the **DocumentGeneration** module.
+
+    * In version 1.6.0 and above, for apps deployed on Mendix Free Cloud, a **Renew app registration** button will be visible in the **Snip_AppRegistration** snippet if your registration is going to expire within 24 hours or has already expired. You can use this button to manually refresh your token.
+
 3. Make sure that your changes are [deployed to your Mendix Cloud environment](/developerportal/deploy/mendix-cloud-deploy/#deploy-app-mendix-cloud).
 4. Sign in to the app environment you want to register.
 5. Navigate to the page that contains the **Snip_AppRegistration** snippet.
@@ -184,6 +190,8 @@ Rule | Name | Pattern | Rewrite URL
 ---- | ---- | ------- | -----------
 1 | p | `^(p/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
 2 | docgen | `^(docgen/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
+
+{{% alert color="info" %}}Rule 1 is based on the default URL prefix (`p`) for page/microflow URLs. In case you configured a different prefix in the runtime settings of your app, adjust the rule accordingly.{{% /alert %}}
 
 ## 4 Usage
 
@@ -326,6 +334,7 @@ We recommend you do not use the viewport width (`vw`) and viewport height (`vh`)
 ## 5 Architecture
 
 ### 5.1 Overview
+
 The Document Generation module uses the PDF document generation service running in the Mendix Public Platform to convert any regular web page in your app into a PDF document. The result is similar to what you would get when using the "Save as PDF" feature in the print dialog box of your browser.
 
 When using **Run locally** in Studio Pro, a local service is used to run the headless browser next to your app. The service and browser run only at the moment of generating a document, and are terminated when the document is finished.
@@ -353,6 +362,7 @@ In case you encounter any issues while [registering your app environment](#regis
 | **Invalid Developer Credentials** | "Invalid developer credentials" | The developer information as provided in the **Email** and **API key** fields is incorrect. | Verify that the provided email address in the **Email** field matches the username in your Mendix developer profile, and also that the API key that is being used is correct and still active. |
 | **Invalid App** | <ul><li>"Invalid app"</li></ul><ul><li>"App not found for the given user"</li></ul> | The provided apple ID is either incorrect or the developer (based on the **Email** and **API key** fields) does not have access to this app. | Verify that the **App ID** field is correct, and also that the developer account corresponding to the details entered in the **Email** and **API key** fields has access to the given app. |
 | **Invalid Application URL** | "Application URL does not match any of the environment URLs" | The app corresponding to the **App ID** field does not contain any environment that matches the URL given in the **Application URL** field. | Verify that the **App ID** and **Application URL** fields are correct. |
+| **Invalid Deployment Type** | <ul><li>"Application should be deployed on Mendix Public Cloud"</li></ul><ul><li>"Deployment type should be Mendix Public Cloud"</li></ul> | The provided **Application URL** is either incorrect or the chosen **Deployment type** is incorrect for this app. | Verify that the entered **Application URL** is correct and that you have chosen the correct **Deployment type**. |
 | **Unable to Reach App** | <ul><li>"Domain verification failed, unable to reach app"</li></ul><ul><li>"Domain verification failed, unable to reach verification endpoint"</li></ul><ul><li>"Domain verification failed, verification endpoint inactive" </li></ul>| The cloud service was unable to reach your app. | Verify that you enabled the `ASu_DocumentGeneration_Initialize` after startup microflow and also allowed access to the DocGen request handler. For more information, see [Enabling the DocGen Request Handler](#enable-docgen). |
 | **Invalid Token** | "Domain verification failed, invalid token" | The cloud service was able to reach your app, but could not verify that this app is currently trying to register. | Verify that the application URL matches the current environment. |
 | **Other Errors** |<ul><li>"Project verification failed"</li></ul><ul><li>"Domain verification failed, invalid response from verification endpoint"</li></ul><ul><li>"Domain verification failed for unknown reason"</li></ul> | An unexpected error occurred. | Verify that your app was not restarted by someone else during the registration process. If not, submit a ticket in the Mendix Support Portal. |
@@ -367,6 +377,8 @@ In general, we recommend that you perform the following steps in case of any iss
 #### 6.2.1 Rendering/Styling Issues
 
 In case of issues regarding styling, Mendix recommends temporarily adding the page microflow to your app navigation (for details, see step 2 in the [Module Usage and Runtime Issues](#module-usage-runtime-issues) section). This allows you to preview the page in your browser and inspect the applied styles. Mendix recommends using Chrome or Chromium and the [Chrome DevTools](https://developer.chrome.com/docs/devtools/css/) for this, since Chromium is the browser that is used by the document generation service.
+
+In case the resulting PDF document only contains a part of the expected content, verify that the layout used for the page does not include a scroll container. Layouts that do include a scroll container, such as **Atlas_Default**, will not work properly.
 
 {{% alert color="warning" %}}
 When testing the PDF Document Generation module locally using Chrome or Chromium version 117 or 118, the scaling of your PDF document might be different compared to the document generated from the PDF document generation service in Mendix Cloud. This issue has been fixed in Chrome version 119, we recommend that you update your Chrome version to the latest release if you run into this issue. To guarantee the same result locally as when using our PDF document generation service, we advise using the Chromium version cited in the [Chromium](#chromium) section above.
@@ -385,11 +397,10 @@ We recommend that you temporarily set the log level of the `DocumentGeneration` 
 
 #### 6.2.3 Cloud Service Errors
 
-In case you encounter the message "Unable to generate document, service response code: 401" in the logs of your cloud environment, the request was rejected by the document generation service. This could be caused by the following reasons:
+In case you encounter the message "Unable to generate document for request `<requestId>`, service response code: 401" in the logs of your cloud environment, the request was rejected by the document generation service. This could be caused by the following reasons:
 
 * The scheduled event **SE_AccessToken_Refresh** is not enabled, which caused the registration to expire. Enable the scheduled event and [register](#register-app) the affected app environment again.
 * The URL of the app environment does not match the URL that was provided during registration. This could be the case when you requested a change to the URL of your app, or after restoring a database backup from one environment to another. [Register](#register-app) the affected app environment (or environments) again.
-
 
 In case you encounter the message "Unable to generate PDF document. Failed to refresh expired access token", the app registration expired and the automatic attempt to refresh the tokens failed. Verify that the scheduled event **SE_AccessToken_Refresh** is enabled and make sure to [register](#register-app) the affected app environment(s) again.
 

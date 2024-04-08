@@ -54,7 +54,7 @@ Only the selenium server version that is delivered as part of the ATS installati
 
 ATS Version | Supported Selenium version | Download |Required Java version
 ---|---|---|---
-2.9 | 3.141.59 | [Download here](http://selenium-release.storage.googleapis.com/3.141/selenium-server-standalone-3.141.59.jar) | JRE 8
+2.9 | 3.141.59 | [Download here](https://selenium-release.storage.googleapis.com/3.141/selenium-server-standalone-3.141.59.jar) | JRE 8
 
 ### 3.6 Chrome Driver
 
@@ -78,7 +78,7 @@ Only the Internet Explorer driver version that is delivered as part of the ATS i
 
 ATS Version | Supported Gecko driver version | Download 
 ---|---|---
-2.9 | 2.53.1 | [Download here](http://selenium-release.storage.googleapis.com/index.html?path=2.53/)
+2.9 | 2.53.1 | [Download here](https://selenium-release.storage.googleapis.com/index.html?path=2.53/)
 
 ### 3.9 Browsers
 

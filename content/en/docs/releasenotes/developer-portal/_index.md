@@ -17,6 +17,85 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 ## 2024
 
+### April 4
+
+#### New Features
+
+* In Feedback, everyone from the app team now can manage their own feedback notifications preferences by [turning on or off the notifications](/developerportal/app-insights/feedback/#notifications) for all incoming feedback. You can also choose to [watch or unwatch one specific feedback item](/developerportal/app-insights/feedback/#notifications-individual-feedback), if you do not want to be notified for all incoming feedback.
+
+#### Improvements
+
+* In Feedback, we have fixed an issue where the reporter's name appeared empty on the **Contact Reporter** tab. Now if there is no reporter's name available, their email address will be shown instead. 
+* We released the following improvements for [Mini survey](/developerportal/app-insights/mini-surveys/):
+  * We improved your experience of copying the generated API key by implementing a new widget on the [Settings](/developerportal/app-insights/mini-surveys/#settings) tab of the **Survey Overview** page.
+  * We improved our error messages by providing more details.
+
+
+### March 28
+
+#### New Features
+
+* We made the following improvements to [Portfolio Management](/developerportal/portfolio-management/):
+    * On the **Archive** page, you can now filter and export the archived initiatives.
+    * We have extended the existing filters for initiatives.
+    * We added a new field **Location** to initiatives, which shows where the department of the requester is located. Now you can also see this field in the Excel file when you export initiatives.
+
+### March 21
+
+#### Fixes
+
+* We have fixed a bug in [Epics](/developerportal/project-management/epics/) that caused the cursor in text editors to jump to a different place unexpectedly. This problem happened in text editors for story descriptions, epic descriptions, and comments.
+
+  There is a small trade-off though, since we replaced the text editor widget completely, it will not be possible to link stories using a # anymore. Your existing links will become plain text that still contain story ID and title. Copying and pasting the link to the story can be used as a workaround in the meantime.
+
+### March 6
+
+#### Deprecations
+
+* Feedback API v1 is deprecated, and it will be turned off completely on September 30, 2024. To ensure a seamless transition, Mendix strongly recommends migrating to [Feedback API v2](/apidocs-mxsdk/apidocs/feedback-api-v2/) for all your feedback-related operations, including retrieval, creation, and updates.
+
+### February 29
+
+#### Improvements
+
+* The Feedback API has been improved. We are happy to release our new REST Feedback API. The new API will replace the existing SOAP API, but it also comes with extra functionality like being able to retrieve the screenshot for a feedback item. Check out the [docs](/apidocs-mxsdk/apidocs/feedback-api-v2/) for more information. The following changes have been made:
+    * We now send information on the priority status of a feedback item through various calls.
+    * We have optimized the GET call.
+    * We have better error logs for various calls.
+
+#### Fixes
+
+* We fixed a bug where the sidepanel would flicker upon loading either [Mini survey](/developerportal/app-insights/mini-surveys/) or [Feedback](/developerportal/app-insights/feedback/).
+* In Feedback, creating, archiving, and deleting feedback items should now show the correct pages.
+
+### February 8
+
+#### New Features
+
+* In [Portfolio Management](/developerportal/portfolio-management/), you can now assign a status to your initiatives.
+
+### February 1 
+
+#### New Features
+
+* In Feedback, you can now message the reporter on the **Contact Reporter** tab on the [side panel](/developerportal/app-insights/feedback/#feedback-details) after you open a feedback item.
+
+#### Improvements
+
+* Errors are now gracefully handled when a [mini survey](/developerportal/app-insights/mini-surveys/) submission is sent outside the boundaries of the survey runtime window.
+* We fixed an issue where some users were unable to close feedback items.
+* We fixed an issue where some users were encountering an error when navigating back to the Feedback home page.
+
+### January 25
+
+#### New Features
+
+* Besides the already existing private and restricted portfolios, we now introduced open portfolios. An open portfolio is discoverable within your [company portfolios](/developerportal/portfolio-management/#my-porfolios-vs-company-portfolios) and accessible for all company members.
+
+#### Fixes
+
+* We fixed an issue where under certain circumstances the **Manage Users** overview of the app [access management](/developerportal/collaborate/general-settings/#managing-app-users) would not show.
+
 ### January 18
 
 #### Improvements
@@ -30,10 +109,11 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 #### New Features
 
-We added the following new features in [Portfolio Management](/developerportal/portfolio-management/):
+* We added the following new features in [Portfolio Management](/developerportal/portfolio-management/):
 
-* You can now check initiatives in the [planning view](/developerportal/portfolio-management/#planning-view). In this view, the initiatives are shown on one timeline, with each timeline bar presenting an initiative.
-* You can now link multiple apps to an initiative. It is also possible to link epics from different apps to an initiative.
+    * You can now check initiatives in the [planning view](/developerportal/portfolio-management/#planning-view). In this view, the initiatives are shown on one timeline, with each timeline bar presenting an initiative.
+
+    * You can now link multiple apps to an initiative. It is also possible to link epics from different apps to an initiative.
 
 #### Improvements
 
@@ -47,10 +127,11 @@ We added the following new features in [Portfolio Management](/developerportal/p
 
 #### New Features
 
-We added the following new features in [Feedback](/developerportal/app-insights/feedback/):
+* We added the following new features in [Feedback](/developerportal/app-insights/feedback/):
 
-* App team members now can assign priority to feedback items and filter feedback items by their priority.
-*  It is now possible for the reporter of the feedback item and the assigned team member to upload images when they send each other messages.
+    * App team members now can assign priority to feedback items and filter feedback items by their priority.
+
+    * It is now possible for the reporter of the feedback item and the assigned team member to upload images when they send each other messages.
 
 #### Improvements
 
@@ -111,7 +192,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Improvements
 
-* When your company has connected its own [Identity Provider](/control-center/security/set-up-sso-byoidp/) to the Developer Portal, you should be using [personal access tokens](/community-tools/mendix-profile/#pat) to connect to the Team Server. To reflect this, we show a different URL on the [Team Server](/developerportal/general/team-server/) page.
+* When your company has connected its own [Identity Provider](/control-center/security/set-up-sso-byoidp/) to the Developer Portal, you should be using [personal access tokens](/community-tools/mendix-profile/user-settings/#pat) to connect to the Team Server. To reflect this, we show a different URL on the [Team Server](/developerportal/general/team-server/) page.
 
 #### Fixes
 
@@ -341,7 +422,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### New Features
 
-* You can now use a [Personal Access Token](/community-tools/mendix-profile/#pat) to access SVN repositories in [Team Server](/developerportal/general/team-server/) without using your personal Mendix credentials.
+* You can now use a [Personal Access Token](/community-tools/mendix-profile/user-settings/#pat) to access SVN repositories in [Team Server](/developerportal/general/team-server/) without using your personal Mendix credentials.
 
 ### May 4, 2023
 
@@ -404,7 +485,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Deprecations
 
-* We have deprecated **General Settings** > **Webhooks** for stories and Sprints. For more information, see the deprecation note in the [Webhooks](/developerportal/collaborate/general-settings/#webhooks) section of *General Settings*. You can now set webhooks for building and deploying your app. These are described in [Webhooks](/developerportal/deploy/webhooks/).
+* We have deprecated **General Settings** > **Webhooks** for stories and Sprints. You can now set webhooks for building and deploying your app. These are described in [Webhooks](/developerportal/deploy/webhooks/).
 
 ### March 9, 2023
 

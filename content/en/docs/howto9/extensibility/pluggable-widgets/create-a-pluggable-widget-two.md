@@ -153,13 +153,13 @@ This section teaches you how to add validation to your TextBox widget. Using mic
 3. To render the message, create a new component *components/Alert.tsx*:
 
     ```tsx
-    import { FunctionComponent, createElement } from "react";
+    import { FunctionComponent, PropsWithChildren, createElement } from "react";
     import classNames from "classnames";
     export interface AlertProps {
         alertStyle?: "default" | "primary" | "success" | "info" | "warning" | "danger";
         className?: string;
     }
-    export const Alert: FunctionComponent<AlertProps> = ({ alertStyle, className, children }) =>
+    export const Alert: FunctionComponent<PropsWithChildren<AlertProps>> = ({ alertStyle, className, children, id }) =>
         children ? (
             <div className={classNames(`alert alert-${alertStyle} mx-validation-message`, className)}>
                 {children}

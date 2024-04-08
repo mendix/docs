@@ -129,4 +129,3 @@ To [upgrade the versions of Mendix components in your namespace](/developerporta
 {{% alert color="info" %}}
 In case of Global Namespace installation, the upgrade procedure is not applicable for the managed namespace.
 {{% /alert %}}
-

@@ -127,7 +127,7 @@ To create a JavaScript action that can search for users on GitHub, follow the st
                         resolve(mxObject);
                     },
                     error: function(e) {
-                        reject("Could create object:" + error.message);
+                        reject("Could not create object:" + error.message);
                     }
                 });
             });
@@ -169,7 +169,7 @@ To create a JavaScript action that can search for users on GitHub, follow the st
                         resolve(mxObject);
                     },
                     error: function(error) {
-                        reject("Could create object:" + error.message);
+                        reject("Could not create object:" + error.message);
                     }
                 });
             });
@@ -247,7 +247,7 @@ To create a JavaScript action that can search for users on GitHub, follow the st
                         resolve(mxObject);
                     },
                     error: function(error) {
-                        reject("Could create object:" + error.message);
+                        reject("Could not create object:" + error.message);
                     }
                 });
             });

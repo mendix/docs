@@ -151,12 +151,13 @@ The attribute can be of one of the following [data types](/refguide/data-types/)
 
 The editable property indicates whether the end-user will be able to change the value displayed by the widget. The possible values are:
 
-| Value       | Description                                                  |
-| ----------- | ------------------------------------------------------------ |
-| Default     | The value is editable if security allows it such as if the user that is signed in has write access to the selected attribute (default value for widgets outside a snippet). |
-| Inherited from snippet call | Set to **Default** or **Never** by the containing data container of the snippet call (default value for widgets inside a snippet). |
-| Never       | The value is never editable.                                 |
-| Conditionally | The value is editable if the specified condition holds (see below). |
+| Value | Description  |
+|--------|------------|
+| Default      | The value is editable if the containing data container is editable and if security allows it. For example, if the user that is signed in has write access to the selected attribute (the default value for widgets outside a snippet). |
+| Inherited from snippet call    | Set to **Default** or **Never** by the containing data container of the snippet call (default value for widgets inside a snippet).                                                                                           |
+| Never     | The value is never editable.    |
+| Conditionally  | The value is editable if the specified condition holds (see below).  |
+| Conditionally (combined with inherited condition) | The value is editable if the specified condition holds and the conditions for all conditional editable data containers also hold.  |
 
 ### 5.2 Condition
 
@@ -196,7 +197,7 @@ This property determines how the widget is rendered if it is read-only.
 
 {{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/label-section.png" alt="Label Section" >}}
 
-A label can be used to described the purpose of the widget to the user. The label is shown next to the widget in the user interface. If a label is configured, the widget will be rendered in the browser wrapped in a form group. See [Bootstrap documentation](http://getbootstrap.com/css/#forms).
+A label can be used to described the purpose of the widget to the user. The label is shown next to the widget in the user interface. If a label is configured, the widget will be rendered in the browser wrapped in a form group. See [Bootstrap documentation](https://getbootstrap.com/css/#forms).
 
 {{% alert color="info" %}}
 The position of the label in relation to the widget is configured in the **Form orientation** and **Label width (weight)** properties of the data container.

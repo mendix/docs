@@ -5,10 +5,6 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/json-structures.pdf).
-{{% /alert %}}
-
 ## 1 General
 
 A JSON structure document stores a JSON snippet, and converts it into a schema structure that can be used in [Import Mappings](/refguide8/import-mappings/) and [Export Mappings](/refguide8/export-mappings/) to convert JSON content to Mendix objects and vice versa. 

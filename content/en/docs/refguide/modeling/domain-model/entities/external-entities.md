@@ -47,7 +47,7 @@ When a new version of a consumed service becomes available in the Catalog, this 
 You can make local changes to the properties of external entities that only affect how the data is used and presented in the consuming app. All other properties are defined in the originating app and cannot be changed. When multiple external entities from the same OData service are used in a module or app, associations between the entities (made in the originating app) will automatically be made in the local module.
 
 {{% alert color="info" %}}
-If you delete an external entity from the domain model, the service documents remain in the App Explorer list and the service aryA listed in the Integration pane. You can delete the two service documents if you are no longer going to use any entities from the consumed service.
+If you delete an external entity from the domain model, the service documents remain in the App Explorer list and the service remains listed in the Integration pane. You can delete the two service documents if you are no longer going to use any entities from the consumed service.
 {{% /alert %}}
 
 For more information on using published OData services and entities through the Catalog, see [Consume Registered Assets](/catalog/consume/consume-registered-assets/).
@@ -67,9 +67,11 @@ This group displays the general properties of the external entity. These values 
 {{< figure src="/attachments/refguide/modeling/domain-model/external-entities/external-entity-properties.png" alt="External Entity Properties" >}}
 
 * **Name** – the name of the entity in the local app
+* **From service** – shows the service from which this entity originates
 * **Original name** – shows the name of the entity as defined in the originating app
 * **Capabilities** - indicates whether the service supports creating, reading, updating, and/or deleting objects
 * **Create and change locally** - when switched off, the app can only create and update objects when the server supports it; when switched on, the app can create and update objects, but will not be able to [send](/refguide/send-external-object/) them to the server
+* **Persistable** – indicates if this a persistable external entity, which means the originating app allows retrieving (reading) objects
 * **Summary** – shows the description for the entity in the originating app (shown only when there is a description)
 
 ### 3.2 Attributes {#attributes}

@@ -57,7 +57,7 @@ This list is currently incomplete and is being updated.
 | Configuration | Logging related to the configuration of the Mendix app that is read in at startup. |
 | ConnectionBus | General logging related to database startup, synchronization and connections management for Mendix. |
 | ConnectionBus_Mapping | Information relating to the translations of XPath Queries and OQL text queries to OQL Queries. |
-| ConnectionBus_Queries | ⚠ Deprecated: This is a legacy node. |
+| ConnectionBus_Queries | If `LogMinDurationQuery` has been set, queries that take longer than `LogMinDurationQuery` milliseconds will be logged here. |
 | ConnectionBus_Retrieve | All information related to the retrieval of data, such as: Incoming requests from the application, the executed statement. Also logs issues encountered during the processing of the received data. |
 | ConnectionBus_Security | Information regarding access rights needed to access the database. |
 | ConnectionBus_Synchronize | ⚠ Deprecated: This is a legacy node. |

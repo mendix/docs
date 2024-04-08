@@ -6,10 +6,6 @@ description: "Describes special checks in expressions in Mendix."
 tags: ["studio pro", "special checks", "special check", "expressions"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/special-checks.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 This documents describes special checks in expressions, such as checking whether an object is empty, new, is synced. 

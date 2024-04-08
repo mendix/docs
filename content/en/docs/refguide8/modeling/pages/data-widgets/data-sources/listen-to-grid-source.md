@@ -5,10 +5,6 @@ tags: ["studio pro", "listen to widget", "data source"]
 weight: 70
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/listen-to-grid-source.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 The listen-to-widget data source is a data view specific source that allows a data view to display detailed information on an object selected in a data grid, template grid, or a list view on the same page. This is especially useful when displaying large amount of data, which limits the information available per object, as it allows the user to view details of an individual object without having to open a new page.

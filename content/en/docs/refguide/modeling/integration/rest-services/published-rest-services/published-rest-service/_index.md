@@ -16,13 +16,13 @@ This document describes the published REST service configuration options shown w
 
 ### 2.1 Service Name {#service-name}
 
-Service name uniquely identifies the service in the app. It is also displayed in [OpenAPI (Swagger) documentation page](/refguide/open-api/).
+The service name uniquely identifies the service in the app. It is also displayed in [OpenAPI (Swagger) documentation page](/refguide/open-api/).
 
 When service is initially created, service name is used in the creation of the default location for the service. If the service name contains any spaces or special characters, they will be replaced with the `_` character in the service location.
 
 ### 2.2 Version
 
-Version is used to display version information in [OpenAPI (Swagger) documentation page](/refguide/open-api/). You can set any string in the version field, but it is recomended to follow [semantic versioning](https://semver.org/) scheme.
+Version is used to display version information in [OpenAPI (Swagger) documentation page](/refguide/open-api/). You can set any string in the version field, but it is recommended to follow [semantic versioning](https://semver.org/) scheme.
 
 By default, version is set to "1.0.0".
 
@@ -30,7 +30,7 @@ By default, version is set to "1.0.0".
 
 Location shows URL on which a service can be reached.
 
-By default, location is built up by appending service name and "v1" to the "rest/" prefix. Service name will be stripped off of any invalid URL characters; like spaces and special characters.
+By default, location is built up by appending service name and "v1" to the `rest/` prefix. Service name will be stripped off of any invalid URL characters, such as spaces and special characters.
 
 Example:
 
@@ -38,21 +38,7 @@ Example:
 http://localhost:8080/rest/my_service_name/v1
 ```
 
-You can change the default location to almost any valid URL.
-
-#### 2.3.1 Reserved Prefixes
-
-Following URL prefixes are reserved and are not allowed to be used in location:
-
-* `ws/`
-* `ws-doc/`
-* `rest-doc/`
-* `odata/`
-* `odata-doc/`
-* `api-doc/`
-* `xas/`
-* `p/`
-* `reload/`
+The URL prefixes `api-doc/`, `xas/`, `p/`, and `reload/` are reserved and cannot be used at the start of the location. Otherwise, you can change the location to any valid URL.
 
 When your application is running, you can click the location to open the [interactive documentation page](/refguide/published-rest-services/#interactive-documentation).
 
@@ -62,9 +48,9 @@ The public documentation is used in the service's [OpenAPI (Swagger) Documentati
 
 ### 2.4 Export OpenAPI Documentation {#export-openapi-documentation}
 
-To save a service's [OpenAPI (Swagger) documentation](/refguide/open-api/) somewhere on your machine, simply right-click the service in the **App Explorer** and select **Export openapi.json** for the [OpenAPI 3.0 definition](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.1.md) of the REST service, or select **Export swagger.json** (or just click the **Export swagger.json** button, depending on your Studio Pro version) for the [OpenAPI 2.0 version](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/2.0.md). These are machine-readable files according to the OpenAPI Specification format. Most API tools support this format.
+To save a service's [OpenAPI (Swagger) documentation](/refguide/open-api/) somewhere on your machine, right-click the service in the **App Explorer** and select **Export openapi.json** for the [OpenAPI 3.0 definition](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/3.0.1.md) of the REST service, or select **Export swagger.json** (or just click the **Export swagger.json** button, depending on your Studio Pro version) for the [OpenAPI 2.0 version](https://github.com/OAI/OpenAPI-Specification/blob/main/versions/2.0.md). These are machine-readable files according to the OpenAPI Specification format. Most API tools support this format.
 
-When the app is running, these files are available under */rest-doc/{location}/openapi.json* and */rest-doc/{location}/swagger.json*, where *{location}* is the location of the REST service, for instance *rest/myservice/v1*.
+When the app is running, these files are available under */rest-doc/{location}/openapi.json* and */rest-doc/{location}/swagger.json*, where *{location}* is the location of the REST service (for instance, *rest/myservice/v1*).
 
 {{% alert color="info" %}}
 Exporting OpenAPI documentation in version 3.0 of the specification was introduced in Studio Pro [10.1.0](/releasenotes/studio-pro/10.1/).
@@ -78,7 +64,7 @@ Select whether clients need to authenticate or not.
 
 ### 3.2 Authentication Methods
 
-If authentication is required, you can select which authentication methods you would like to support
+If authentication is required, you can select which authentication methods to support.
 
 * Select **Username and password** to allow clients to authenticate themselves using a username and a password in the **Authorization** header (this is called "basic authentication")
 * Select **Active session** to allow access from JavaScript inside your current application
@@ -101,7 +87,7 @@ Check more than one authentication method to have the service try each of them. 
 
 Specify which microflow to use for custom authentication.
 
-Select **Parameters** to see the [list of parameters passed to the authentication microflow](/refguide/published-rest-authentication-parameter/). In that window you can indicate whether the authentication microflow's parameters come from request headers or from the query string.
+Select **Parameters** to see the [list of parameters passed to the authentication microflow](/refguide/published-rest-authentication-parameter/). In that window, you can indicate whether the authentication microflow's parameters come from request headers or from the query string.
 
 The microflow may take an [HttpRequest](/refguide/http-request-and-response-entities/#http-request) as a parameter, so it can inspect the incoming request.
 
@@ -111,9 +97,9 @@ The authentication microflow should return a User.
 
 There are three possible outcomes of the authentication microflow:
 
-* When the status code of the HttpResponse parameter is set to something other then **200**, then this value is returned and the operation will not be executed
-* Otherwise, when the resulting User is not empty, the operation is executed in the context of that user
-* Otherwise, when the resulting User is empty, the next authentication method is attempted. When there are no other authentication methods, the result is **404 Not Found**.
+* When the status code of the HttpResponse parameter is set to something other then **200**, this value is returned and the operation will not be executed
+* When the resulting User is not empty, the operation is executed in the context of that user
+* When the resulting User is empty, the next authentication method is attempted; when there are no other authentication methods, the result is **404 Not Found**
 
 ### 3.4 Allowed Roles{#allowed-roles}
 
@@ -127,11 +113,11 @@ Web service users cannot access REST services.
 
 Check this box when your service needs to be available on websites other than your own.
 
-Click the [Settings](/refguide/cors-settings/) button to specify this access in more detail (for instance, which websites are allowed to access the service).
+Click [Settings](/refguide/cors-settings/) to specify this access in more detail (for instance, which websites are allowed to access the service).
 
 ## 5 Resources
 
-A REST service exposes a number of [resources](/refguide/published-rest-resource/). On a resource you can define GET, PUT, POST, PATCH, DELETE, HEAD and OPTIONS operations.
+A REST service exposes a number of [resources](/refguide/published-rest-resource/). On a resource, you can define `GET`, `PUT`, `POST`, `PATCH`, `DELETE`, `HEAD` and `OPTIONS` operations.
 
 You can drag an entity or a message definition onto this list to [generate a complete resource](/refguide/generate-rest-resource/).
 
@@ -139,7 +125,7 @@ You can drag an entity or a message definition onto this list to [generate a com
 
 When you select a resource, you see the [operations](/refguide/published-rest-operation/) that are defined for that resource.
 
-Resources and Operations are appended to [Location](#location) to form a URL on which they can be accessed.
+Resources and operations are appended to [Location](#location) to form a URL on which they can be accessed.
 
 {{< figure src="/attachments/refguide/modeling/integration/published-rest-services/published-rest-service/example-location-url.png" >}}
 

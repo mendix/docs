@@ -17,7 +17,7 @@ The new features were divided into these major themes, which are described in th
 {{< figure src="/attachments/releasenotes/calendar/themes.png" alt="Themes are continuous collaboration, developer experience, composability, multi-cloud deployment, and governance and control." >}}
 
 {{% alert color="info" %}}
-"GA" means general availability for all users. A GA release is different than a beta or preview release. For more information, see [Beta and Experimental Releases](/releasenotes/beta-features/).
+"GA" means general availability for all users. A GA release is different than a beta or experimental release. For more information, see [Beta and Experimental Releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
 ## 2 Continuous Collaboration {#continuous}
@@ -46,10 +46,10 @@ The new features were divided into these major themes, which are described in th
 | Managed Java dependencies | Released for GA [Sep 26, 2023](/releasenotes/studio-pro/10.3/#java-dependency-management) |
 | Insights into commits by peers| Released for GA [Sep 26, 2023](/releasenotes/studio-pro/10.3/#commit) |
 | Rich design properties | Released for GA [Dec 21, 2023](/releasenotes/studio-pro/10.6/) |
-| Visual data filters (visual builder) | Released for public beta [Nov 28, 2023](/releasenotes/studio-pro/10.5/)<br>GA: Q1 2024 |
+| Visual data filters (visual builder) | Released for public beta [Nov 28, 2023](/releasenotes/studio-pro/10.5/)<br>GA: Q2 2024 |
 | MendixChat | Released for public beta [Dec 21, 2023](/releasenotes/studio-pro/10.6/)<br>GA: TBD |
 | Mixed online and offline data | GA: Q1 2024 |
-| Mac support | Preview: Q1 2024<br>Public beta: TBD<br>GA: TBD |
+| Mac support | Released for public beta [Jan 30, 2024](/releasenotes/studio-pro/10.7/) <br>GA: TBD |
 
 ## 4 Composability {#composability}
 
@@ -73,7 +73,7 @@ The new features were divided into these major themes, which are described in th
 | Webhooks (Mendix Cloud, Cloud Dedicated, Private Cloud, Private Mendix Platform) | Released for GA [Jun 15, 2023](/releasenotes/developer-portal/mendix-cloud/#june-15-2023) |
 | Private Mendix Platform | Released [Nov 15, 2023](/releasenotes/private-platform/)   |
 | Multi-region failover (Mendix Cloud, Cloud Dedicated) | Released for GA [Dec 28, 2023](/releasenotes/developer-portal/mendix-cloud/#december-28-2023) |
-| Pipelines (Mendix Cloud, Cloud Dedicated) | Public beta: Q1 2024<br>GA: TBD |
+| Pipelines (Mendix Cloud, Cloud Dedicated) | Released for public beta [February 29, 2024](/releasenotes/developer-portal/mendix-cloud/#february-29-2024)<br>GA: TBD |
 | Pipelines (Private Cloud) | GA: TBD |
 
 ## 6 Governance and Control {#governance}
@@ -83,5 +83,5 @@ The new features were divided into these major themes, which are described in th
 | BYO IDP (Mendix Cloud, Cloud Dedicated) | Released for GA [May 16, 2023](/releasenotes/developer-portal/#byoidp) |
 | Landscape overview (Mendix Cloud, Cloud Dedicated) | Released for public beta [Aug 28, 2023](/releasenotes/control-center/#august-28-2023)<br>GA: TBD |
 | Cloud self-service (Mendix Cloud) | Currently in private beta<br>GA: TBD |
-| Software composition (Mendix Cloud, Cloud Dedicated) | Public beta: Q1 2024<br>GA: TBD |
+| Software composition (Mendix Cloud, Cloud Dedicated) | Public beta: Q2 2024<br>GA: TBD |
 | Cloud self-service (Cloud Dedicated) | Private beta: Q2 2024<br>GA: TBD |

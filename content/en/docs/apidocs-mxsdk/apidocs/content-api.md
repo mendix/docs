@@ -3,7 +3,7 @@ title: "Content API"
 url: /apidocs-mxsdk/apidocs/content-api/
 type: swagger
 description: "This API allows you to access both public and company-specific Marketplace content information."
-weight: 27
+weight: 35
 tags: ["API", "content"]
 ---
 
@@ -23,7 +23,7 @@ Authentication for the Content API uses a personal access token (PAT).
 
 ### 2.1 Generating a PAT
 
-For details on how to generate a PAT, see the [Creating a PAT](/community-tools/mendix-profile/#create-pat) section in *Mendix Profile*.
+For details on how to generate a PAT, see the [Creating a PAT](/community-tools/mendix-profile/user-settings/#create-pat) section in *Mendix Profile*.
 
 Select the following : 
 
@@ -38,7 +38,7 @@ Each request must contain an `Authorization` header with the value `MxToken {GEN
 Here is an example:
 
 ```http {linenos=false}
-GET /api/v3/clusters HTTP/1.1
+GET /content HTTP/1.1
 Authorization: MxToken 7LJE…vk
 ```
 

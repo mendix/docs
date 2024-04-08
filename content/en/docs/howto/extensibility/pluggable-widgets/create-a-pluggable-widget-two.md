@@ -440,14 +440,14 @@ To make the input widget more accessible for people using screen readers, you wi
 2. In *components/Alert.tsx*, add the `id` and `alert`properties:
 
     ```tsx
-    import { FunctionComponent, createElement } from "react";
+    import { FunctionComponent, PropsWithChildren, createElement } from "react";
     import classNames from "classnames";
     export interface AlertProps {
         id?: string;
         alertStyle?: "default" | "primary" | "success" | "info" | "warning" | "danger";
         className?: string;
     }
-    export const Alert: FunctionComponent<AlertProps> = ({ alertStyle, className, children, id }) =>
+    export const Alert: FunctionComponent<PropsWithChildren<AlertProps>> = ({ alertStyle, className, children, id }) =>
         children ? (
             <div id={id} className={classNames(`alert alert-${alertStyle} mx-validation-message`, className)}>
                 {children}

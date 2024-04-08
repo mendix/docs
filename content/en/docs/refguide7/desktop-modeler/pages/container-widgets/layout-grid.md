@@ -5,7 +5,7 @@ url: /refguide7/layout-grid/
 ---
 
 
-The layout grid is a widget that gives structure to your pages. A layout grid contains one or more rows and each row contains one to twelve columns. Each column has a weight, a number from 1 to 12, and the weights of the columns in a row must add up to 12\. In the browser the layout grid is implemented by the Bootstrap grid system. Reading the official Bootstrap [documentation on the grid system](http://getbootstrap.com/css/#grid) can help you understand what you can build with this widget.
+The layout grid is a widget that gives structure to your pages. A layout grid contains one or more rows and each row contains one to twelve columns. Each column has a weight, a number from 1 to 12, and the weights of the columns in a row must add up to 12\. In the browser the layout grid is implemented by the Bootstrap grid system. Reading the official Bootstrap [documentation on the grid system](https://getbootstrap.com/css/#grid) can help you understand what you can build with this widget.
 
 ## {{< figure src="/attachments/refguide7/desktop-modeler/pages/container-widgets/layout-grid/layout-grid.png" >}}
 

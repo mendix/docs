@@ -6,17 +6,13 @@ tags: ["studio pro", "layout grid", "container widget", "column", "row", "grid",
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/layout-grid.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 The layout grid is a widget that gives structure to your pages.  
 
 A layout grid consists of [rows](#rows) and [columns](#columns): {{< figure src="/attachments/refguide8/modeling/pages/container-widgets/layout-grid/layout-grid.png" alt="Layout Grid Example" >}}
 
-In a browser, the layout grid is based on the Bootstrap grid system. For more information on the Bootstrap grid system, see the [official Bootstrap documentation](http://getbootstrap.com/css/#grid).
+In a browser, the layout grid is based on the Bootstrap grid system. For more information on the Bootstrap grid system, see the [official Bootstrap documentation](https://getbootstrap.com/css/#grid).
 
 {{% alert color="info" %}}
 Row and column properties described below are available if your project has [Mendix 8.5.1](/releasenotes/studio-pro/8.5/) or above  and [Atlas UI Resources](/appstore/modules/atlas-ui-resources/) version 2.4.0 or above. 

@@ -18,8 +18,8 @@ Studio Pro Guide | Model SDK API docs
 | --- | --- |
 | [App](/refguide/app/) | TypeScript module [projects](https://apidocs.rnd.mendix.com/modelsdk/latest/modules/projects.html) |
 | [Modules](/refguide/modules/) |[Project](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.project.html) |
-| |[Module](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.module.html) | |
-| |[ProjectDocument](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.projectdocument.html) | |
+| |[Module](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.module.html) |
+| |[ProjectDocument](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.projectdocument.html) |
 
 ### 1.2 Project Documents
 
@@ -32,7 +32,7 @@ Project-level documents describe app security, app settings, app navigation (for
 Studio Pro Guide | Model SDK API docs
 | --- | --- |
 |[App Settings](/refguide/app-settings/)| [ProjectSettings](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/settings.ProjectSettings.html) |
-| [App Security](/refguide/app-security/) | [ProjectSercurity](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/security.ProjectSecurity.html)|
+| [App Security](/refguide/app-security/) | [ProjectSecurity](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/security.ProjectSecurity.html)|
 | [Navigation](/refguide/navigation/) |[NavigationDocument](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/navigation.NavigationDocument.html)|
 | [System Texts](/refguide/system-texts/) |[SystemTextCollection](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/texts.SystemTextCollection.html) |
 

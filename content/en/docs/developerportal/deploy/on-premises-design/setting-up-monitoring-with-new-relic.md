@@ -29,7 +29,7 @@ The configuration section in *m2ee.yaml* should look like this:
 
 ```yml
  javaopts: [
- "-Dfile.encoding=UTF-8", "-XX:MaxPermSize=64M", "-Xmx256M", "-Xms256M",
+ "-Dfile.encoding=UTF-8", "-Xmx256M", "-Xms256M",
  "-Djava.io.tmpdir=/path/to/project/data/tmp",
  "-javaagent:/home/mendix-user/newrelic/newrelic.jar",
  ]

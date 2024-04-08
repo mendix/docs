@@ -145,7 +145,7 @@ If you do not want to publish a project right away, click **Save as draft** in t
 
 ## 7 Editing Team Members {#team}
 
-This section presents information on adding the most valuable assets of your company: your certified Mendix developers. Before you can add a developer to the Partner Profile, their Mendix Profile needs to be set to public (for details on how to do this, see the [Profile](/community-tools/mendix-profile/#profile) section of *Mendix Profile*.
+This section presents information on adding the most valuable assets of your company: your certified Mendix developers. Before you can add a developer to the Partner Profile, their Mendix Profile needs to be set to public (for details on how to do this, see the [Profile](/community-tools/mendix-profile/user-settings/#profile) section of *Mendix Profile*.
 
 To add developers to the Partner Profile, follow these steps:
 
@@ -189,7 +189,7 @@ To make a colleague a profile editor, follow these steps:
 
 ## 10 Sorting on the Partners Overview Page
 
-The [Meet Our Partners page](https://developer.mendixcloud.com/openid/login?immediate=true&continuation=link/partneroverview) is an overview that presents all the partners in the Mendix community. The sorting is based on a combination of the following KPIs:
+The [Meet Our Partners page](https://developerprofiles.mendix.com/link/partneroverview) is an overview that presents all the partners in the Mendix community. The sorting is based on a combination of the following KPIs:
 
 * Whether your company is Expert (which will get the most weight in sorting), Professional, or Authorized (for more information, see the [Capability Tracks](#capability) section)
 * The total amount of certified developers (note that developers with multiple certifications count as one certified developer)

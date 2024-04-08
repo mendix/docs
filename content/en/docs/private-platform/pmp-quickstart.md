@@ -47,10 +47,12 @@ To install and configure the Mendix Operator, perform the following steps:
 
 2. Unzip the release binary to a local folder on your Windows or Linux server. The release binary contains the following files:
 
-    * **Tools** - *mx-pclm-cli* tools which can be used to manage PCLM
+    * **Tools** - *mx-pclm-cli*, which can be used to manage PCLM
+    * **helm**, and **helmfile** tools, which are used to deploy and manage Private Mendix Platform charts and Svix charts
     * **images** - Private Mendix Platform image, PCLM image, Svix image, test application image
     * **Installer** - installer tools
-    * **mxpc-cli** - Installation tools which can be used to manage or configure the Mendix Operator
+    * **mxpc-cli** - installation tools which can be used to manage or configure the Mendix Operator
+    * **charts**  - charts, including Private Mendix Platform charts and Svix charts
     
     {{< figure src="/attachments/private-platform/pmp-binary.png" >}}
 

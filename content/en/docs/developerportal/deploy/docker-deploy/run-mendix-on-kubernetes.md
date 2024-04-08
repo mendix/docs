@@ -52,9 +52,9 @@ The deployment of your Mendix app needs the following Kubernetes components:
 
 * [StatefulSet](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/)
 * [Deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
-* [Services](https://kubernetes.io/docs/concepts/services-networking/service/)
-* [Volumes](https://kubernetes.io/docs/concepts/storage/volumes/)
-* [Pods](https://kubernetes.io/docs/concepts/workloads/pods/pod/)
+* [Service](https://kubernetes.io/docs/concepts/services-networking/service/)
+* [Volume](https://kubernetes.io/docs/concepts/storage/volumes/)
+* [Pod](https://kubernetes.io/docs/concepts/workloads/pods/pod/)
 
 The database is deployed as a **deployment**. Deployment covers control over the pods and the ReplicaSets for these pods. **Pods** are not bound to a specific node in the cluster unless set with selector labels. A deployment can scale pods on one or mode nodes, and it recovers pods when they crash.
 

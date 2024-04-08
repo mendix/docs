@@ -73,8 +73,7 @@ Gateways deal with making choices and merging different paths again..
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/917726.png" link="/refguide7/exclusive-split/" >}} | [Exclusive Split](/refguide7/exclusive-split/) | An exclusive split makes a decision based on a condition and follows one and only one of the outgoing flows.
-**Note**: There is no parallell execution in microflows. |
+| {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/917726.png" link="/refguide7/exclusive-split/" >}} | [Exclusive Split](/refguide7/exclusive-split/) | An exclusive split makes a decision based on a condition and follows one and only one of the outgoing flows. <br />**Note**: There is no parallel execution in microflows. |
 | {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/918122.png" link="/refguide7/inheritance-split/" >}} | [Inheritance Split](/refguide7/inheritance-split/) | An inheritance split is an element that makes a choice based on the [specialization](/refguide7/entities/) of the selected object. You can give the specialized object a name using a [Cast Object](/refguide7/cast-object/) action. |
 | {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/918116.png" link="/refguide7/merge/" >}} | [Merge](/refguide7/merge/) | A merge can be used to combine multiple sequence flows into one. If a choice is made in a microflow and afterwards some common work needs to be done, you can combine the two (or more) paths using a merge. |
 
@@ -155,7 +154,7 @@ The following table shows the attributes of System.Error and System.SoapFault.
 | System.SoapFault | Role | String | The Role element of the SOAP fault. |
 | System.SoapFault | Detail | String | The Detail element of the SOAP fault. |
 
-Click [here](http://www.w3.org/TR/soap12-part1/#soapfault) for more information on SOAP faults.
+Click [here](https://www.w3.org/TR/soap12-part1/#soapfault) for more information on SOAP faults.
 
 {{% alert color="warning" %}}
 

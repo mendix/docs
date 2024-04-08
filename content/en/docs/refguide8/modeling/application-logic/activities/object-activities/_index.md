@@ -6,10 +6,6 @@ tags: ["studio pro", "microflow", "object"]
 #To update screenshots of these microflows in Studio Pro, use the Microflow Screenshots app.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/object-activities.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 When working with the Mendix Platform, objects of entities are always being manipulated. This happens implicitly within [data widgets](/refguide8/data-widgets/) on a page, or explicitly using activities in microflows and nanoflows.

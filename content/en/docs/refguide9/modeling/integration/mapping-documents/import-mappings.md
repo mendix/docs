@@ -33,7 +33,7 @@ This is what will happen when you use an [Import with Mapping](/refguide9/import
 | --- | --- |
 | **Create an object** | Creates a new object.<br/>An error can be thrown if there are any [before create](/refguide9/event-handlers/#when) microflows that fail. |
 | **Find an object (by key)** | Searches for an object, using keys defined in the attributes list. The runtime searches for the object by taking all attributes marked as **Key** (in the **Value element to attribute mapping** section below) and converting them to an XPath query.<br/>If more than one object is returned by the XPath query, an error will be thrown. |
-| **Call a microflow** | Calls a microflow to obtain an object and return it. If the microflow expects any parameters, these need to be specified in the **Select...** window. Possible parameters are the input parameter (see above), any parent entity in the mapping and any attributes in the current XML element. The microflow must return an object of the correct entity type. If it returns a null object, the selected **If no object was found** action will be performed. ||
+| **Call a microflow** | Calls a microflow to obtain an object and return it. If the microflow expects any parameters, these need to be specified in the **Select...** window. Possible parameters are the input parameter (see above), any parent entity in the mapping and any attributes in the current XML element. The microflow must return an object of the correct entity type. If it returns a null object, the selected **If no object was found** action will be performed. |
 
 {{% alert color="info" %}}
 In each case, if the object is found or created, mapped attributes will be given the value from the XML or JSON input. Unmapped attributes will retain their current (default for a newly-created object) values. See [Mapping Attributes in Import Mappings](#mapping-attributes), below for more information.
@@ -95,3 +95,15 @@ Import mappings have the additional option to receive an incoming parameter. The
 To define a parameter for your mapping, click the parameter box and select the data type. You can also drag an entity into the parameter box. 
 
 You can use a parameter as a key or in a microflow to obtain objects. When you use an entity parameter, you can set associations to it. When you use a primitive parameter (string, integer, etc.), you can write the value to an attribute of an object that is being imported.
+
+## 4 Troubleshooting{#troubleshooting}
+
+If you are importing a very long JSON string, the underlying conversion library may not be able to handle it. In this case you will get a message similar to the following:
+
+`com.mendix.systemvideinterfaces.MendixRuntimeException: com.fasterxm1.jackson.core.exc.StreamConstraintsException: String value length (20051112) exceeds the maximum allowed (20000000, from 'StreamReadConstraints.getMaxStringLength()')`
+
+Mendix uses the Jackson Core XML library when performing the import mapping and this [has a limit of 20 million](https://javadoc.io/static/com.fasterxml.jackson.core/jackson-core/2.15.1/com/fasterxml/jackson/core/StreamReadConstraints.html#DEFAULT_MAX_STRING_LEN) characters (in earlier versions 5 million) in the JSON string.
+
+In Mendix version 9.24.17 and above, you can override this using the [mapping.import.MaxJsonReadingLength](/refguide/custom-settings/#mapping.import.MaxJsonReadingLength) custom setting.
+
+Mendix recommends that you only add this setting if you will be getting very long JSON strings as it may result in more memory usage.

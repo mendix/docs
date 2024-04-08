@@ -4,7 +4,7 @@ description: "Describes how to use Catalog and external entities for local deplo
 url: /catalog/register/data-sources-without-mendix-cloud/
 linktitle: "Private Cloud/On-Premises Registration"
 weight: 40
-tags: ["data hub", "entity", "external entities", "private cloud", "on prem", "local", "studio pro", "consumed OData Service", "Data Hub on prem", "private cloud", Tencent", "without mendix cloud"]
+tags: ["data hub", "entity", "external entities", "private cloud", "on prem", "local", "studio pro", "consumed OData Service", "Data Hub on prem", "private cloud", "without mendix cloud"]
 aliases:
     - /data-hub/data-hub-without-mendix-cloud/
     - /catalog/data-sources-without-mendix-cloud/
@@ -12,14 +12,14 @@ aliases:
 ---
 ## 1 Introduction
 
-This guide explains how to use [published OData services](/refguide/published-odata-services/) and [external entities](/refguide/external-entities/) with or without the [Catalog](/catalog/) when deploying locally, to a Private Cloud, the Tencent Cloud, or an On-Premises solution.
+This guide explains how to use [published OData services](/refguide/published-odata-services/) and [external entities](/refguide/external-entities/) with or without the [Catalog](/catalog/) when deploying locally, to a Private Cloud or an On-Premises solution.
 
 ## 1.1 Use Cases
 
 This document covers the following use cases:
 
 * You are developing both the service and the client on a local machine, without deploying to a cloud environment (deploying locally)
-* You are deploying to a [Private Cloud](/developerportal/deploy/private-cloud/) (including the [Tencent Cloud](/developerportal/deploy/tencent-deploy/)) or [On-Premises](/developerportal/deploy/on-premises-design/), rather than the Mendix Cloud
+* You are deploying to a [Private Cloud](/developerportal/deploy/private-cloud/) or [On-Premises](/developerportal/deploy/on-premises-design/), rather than the Mendix Cloud
 
 In these cases, you can still publish and consume external entities. This guide will explain how to work with the Catalog and external entities by taking a step back and distinguishing between design time (when you are modeling your app) and runtime (after it has been deployed to a development server).
 
@@ -74,7 +74,7 @@ To import a metadata contract file of a published OData service, do the followin
 
     Right-click the **App Explorer** where you would like to add the service, then click **Add other** > **Consumed OData Service**. Select the `$metadata.xml` file you exported.
 
-The service will now appear in the [Integration Pane](/refguide/integration-pane/).
+The service will now appear in the [Integration pane](/refguide/integration-pane/).
 
 #### 2.4.2 Importing from a URL
 
@@ -90,7 +90,7 @@ To import a published OData service URL, do the following:
 
 3. In the **Add Consumed OData Service** dialog box, make sure **From URL** is selected, and paste the copied URL into the field.
 
-The service will now appear in the [Integration Pane](/refguide/integration-pane/).
+The service will now appear in the [Integration pane](/refguide/integration-pane/).
 
 ### 2.5 Updating a Manually Registered Contract
 

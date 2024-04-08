@@ -7,10 +7,6 @@ tags: ["studio pro", "security", "project security"]
 #The anchor password-policy below is mapped, so it should not be removed or changed
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/project-security.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 In the **Project Security**, you can switch security on or off for the whole project. You can also configure security settings related to the project, such as user roles, administrator credentials, demo users, anonymous users, and password policy. To be able to configure, for example, [security per module](/refguide8/module-security/) or [access rule for entities](/refguide8/access-rules/), you need to switch the project security on first. 

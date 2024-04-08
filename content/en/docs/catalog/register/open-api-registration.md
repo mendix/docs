@@ -34,7 +34,7 @@ You can manage API discoverability on a per-API basis, either from the curation 
 
 This feature is currently in [beta](/releasenotes/beta-features/), which means we are actively testing and improving it to better meet your needs.
 
-We value your feedback, so don’t hesitate to share your thoughts with us on the [Mendix Forum](https://forum.mendix.com/link/space/catalog).
+We value your feedback, so don’t hesitate to share your thoughts with us in the [Mendix Community](https://community.mendix.com/link/space/catalog).
 
 ## 5 Read More
 

@@ -2,7 +2,7 @@
 title: "Retrieve Workflow Context"
 url: /refguide/retrieve-workflow-context/
 weight: 40
-tags: ["studio pro", "user task", "workflow", "task outcome", "complete task"]
+tags: ["studio pro", "workflow", "retrieve workflow context", "workflow context"]
 ---
 
 {{% alert color="info" %}}

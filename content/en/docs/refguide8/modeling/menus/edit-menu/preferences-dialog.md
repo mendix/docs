@@ -5,10 +5,6 @@ weight: 50
 tags: ["studio pro", "preferences", "settings", "edit menu"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/preferences-dialog.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 The **Preferences** option opens a dialog box where you can set user-specific preferences which apply to the whole of Studio Pro.

@@ -1,15 +1,19 @@
 ---
-title: "Deploy Your First Mendix Native Mobile App"
+title: "Build a Mendix Native App in the Cloud"
 linktitle: "Deploy Mendix Native Mobile App"
 url: /refguide/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/
-weight: 10
-description: Describes how to deploy your first Mendix native mobile app with the Mendix Native Mobile Builder.
+weight: 30
+description: Describes how to Build a Mendix native app in the cloud with the Mendix Native Mobile Builder.
 tags: ["native", "mobile", "deploy", "mendix native mobile builder", "builder", "appcenter"]
 aliases:
     - /howto/mobile/deploying-native-app/
 ---
 
 ## 1 Introduction
+
+{{% alert color="warn" %}}
+Microsoft announced that Visual Studio App Center will be retired on March 31, 2025 ([Find the announcement here](https://learn.microsoft.com/en-us/appcenter/retirement)). This guide relies on App Center to build the Mendix native app in the cloud and will no longer work after that date. We are currently working on a generic way to build Mendix native apps in the cloud, which will replace the approach described in this guide. Using the new approach, you will be able to build your Mendix native app in the cloud using a build service of your choice (including the alternatives recommended by Microsoft). Until then, you can safely keep using App Center.
+{{% /alert %}}
 
 This guide teaches you how to go from a blank slate to an app running on a device.
 

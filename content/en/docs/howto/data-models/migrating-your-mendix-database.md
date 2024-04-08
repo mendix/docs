@@ -101,7 +101,11 @@ Once you have configured the Mendix app, run the application locally—it will a
 
 ### 4.1 Exporting a PostgreSQL Database
 
-To export a PostgreSQL database, refer to either the [pg_dump](https://www.postgresql.org/docs/current/backup-dump.html) command-line tool or the [pgAdmin](https://www.pgadmin.org/docs/) visual tool documentation to understand how to create a backup of your new PostgreSQL database.
+To export a PostgreSQL database, use [pg_dump](https://www.postgresql.org/docs/current/app-pgdump.html) or [pgAdmin](https://www.pgadmin.org/docs/). For pg_dump, use the command `pg_dump -O -x -Fc`; for more information about pg_dump methods, see [SQL Dump](https://www.postgresql.org/docs/current/backup-dump.html).
+
+{{% alert color="warning" %}}
+As described in [Restoring a Backup](/developerportal/operate/restore-backup/#db-folder), the backup must be created using pg_dump version 1.14 or below, which is currently bundled with PostgreSQL 12, 13, 14, and 15. If it is created with a later version, then it will not be possible to upload the file to Mendix Cloud.
+{{% /alert %}}
 
 ### 4.2 Uploading an Exported PostgreSQL Database to a Mendix Cloud Database
 

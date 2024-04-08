@@ -5,10 +5,6 @@ tags: ["studio pro", "column", "grid column", "data grid"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/columns.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 Grid columns allow you to set properties for a [data grid](/refguide8/data-grid/) or [reference set selector](/refguide8/reference-set-selector/) column. 

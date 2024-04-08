@@ -6,10 +6,6 @@ tags: ["studio pro", "error event", "event"]
 ---
 
 {{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/error-event.pdf).
-{{% /alert %}}
-
-{{% alert color="info" %}}
 This event can only be used in **Microflows**.
 {{% /alert %}}
 
@@ -84,7 +80,7 @@ The following table shows the attributes of System.Error and System.SoapFault.
 | System.SoapFault | Role | String | The Role element of the SOAP fault. |
 | System.SoapFault | Detail | String | The Detail element of the SOAP fault. |
 
-Click [here](http://www.w3.org/TR/soap12-part1/#soapfault) for more information on SOAP faults.
+Click [here](https://www.w3.org/TR/soap12-part1/#soapfault) for more information on SOAP faults.
 
 {{% alert color="warning" %}}
 In microflows that apply entity access, it is not possible to inspect the attributes of error objects for security reasons. You can pass the error object to a sub-microflow that does not apply entity access and inspect the attributes there.

@@ -114,7 +114,7 @@ To target Android 13 (API level 33 or higher), you can update the `compileSdkVer
 
 ### Improvements
 
-* We improved the SQLite database life cycle on Android. This should remove the possibility of dead locks when an app is being restarted, for example after an over-the-air update.
+* We improved the SQLite database lifecycle on Android. This should remove the possibility of dead locks when an app is being restarted, for example after an over-the-air update.
 
 ## 5.2.4
 

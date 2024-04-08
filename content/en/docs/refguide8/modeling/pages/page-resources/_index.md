@@ -5,10 +5,6 @@ weight: 12
 tags: ["studio pro", "page resources"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/page-resources.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 The main difference between a page and page resources is that page is an independent document, while a page resource is a helping document that cannot function on its own. For example, a layout cannot function on its own, but it gives structure to a page. 

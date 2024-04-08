@@ -5,10 +5,6 @@ weight: 55
 tags: ["authentication", "widgets", "studio pro", "login", "password"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/authentication-widgets.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 Authentication widgets are used to sign users in and log them out. 

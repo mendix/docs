@@ -5,10 +5,6 @@ weight: 20
 tags: ["domain model", "entity", "persistability", "persistable", "non-persistable"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/persistability.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 The **Persistable** property of an entity in the domain model defines whether an object can be committed to the database.

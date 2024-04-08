@@ -7,7 +7,7 @@ tags: ["connectors", "data hub", "studio pro", "build", "API", "REST", "connecto
 
 ## 1 Introduction
 
-Companies with a large portfolio of custom-built REST APIs use a set of best practices to ensure these APIs function properly in a predictable way. Mendix Studio Pro gives you full control of all these aspects when creating a [published REST service](/refguide/published-rest-service/).
+Companies with a large portfolio of custom-built REST APIs use a set of best practices to ensure these APIs function properly and in a predictable way. Mendix Studio Pro gives you full control of all these aspects when creating a [published REST service](/refguide/published-rest-service/).
 
 If you plan to create a large number of APIs, implementing REST using published OData services can save you a lot of time and ensure consistency across your APIs. 
 
@@ -20,7 +20,7 @@ REST API best practices usually include some of the following:
 * **Use JSON** – JSON is easy to read, and libraries to process it are available in most languages. 
 * **Use nouns, not verbs (resource-first, no actions in path)** – APIs should be resource-based instead of action-based to improve decoupling; all interactions assume resources and a limited set of standardized operations.
 * **A resource has an ID** – Every resource has a unique path where it can be retrieved or updated. For more details, see the [Retrieving Data](#retrieving-data) section in this document.
-* **A resource has a uniform interface (for example, the correct use of an HTTP operation)** – Use the standardized set of HTTP operations to work with your resources: `GET` (retrieve), `POST` (create/insert), `PUT` (replace), `PATCH` (update), DELETE. For more details, see the [Creating and Changing Data with Full CRUD](#creating-changing-data) section in this document.
+* **A resource has a uniform interface (for example, the correct use of an HTTP operation)** – Use the standardized set of HTTP operations to work with your resources: `GET` (retrieve), `POST` (create/insert), `PUT` (replace), `PATCH` (update), `DELETE`. For more details, see the [Creating and Changing Data with Full CRUD](#creating-changing-data) section in this document.
 * **Name collections with plurals** – An endpoint that can return more than one resource should indicate that by naming the resource in plural.
 * **Use of standard HTTP status codes** – HTTP has standardized status codes for most situations. Status codes work the same way across applications. Application-specific errors should be handled in the payload. For more details, see the [Automatic Standard HTTP Error Codes](#http-codes) section in this document.
 * **Use filtering, sorting, and pagination** – These features enable clients to flexibly define what data they need to ensure the best possible performance and limit resource usage. They also help to decouple the client and the service, as not all clients have the same needs.  For more details, see the [Filtering, Sorting, Paginating, and Selecting Data](#filter-sort-page-select-data) section in this document.
@@ -37,7 +37,7 @@ REST APIs, and especially OData APIs, often provide access to data within the ap
 
 ## 2 Creating OData APIs {#creating-odata-apis}
 
-Create OData APIs by right clicking on an entity > **Publish in OData service** or right clicking on a module > **Add other** > **Published OData service**. 
+Create OData APIs by right-clicking on an entity > **Publish in OData service** or right clicking on a module > **Add other** > **Published OData service**. 
 
 ### 2.1 Published OData Service Document
 
@@ -262,11 +262,11 @@ The response is as follows:
 
 You can generate and reuse generated validation microflows. The following example shows a validation microflow for the customer entity. 
 
-1. On a save button, right click and select **Generate validation microflow**. The resulting validation microflow looks like this:
+1. On a save button, right-click and select **Generate validation microflow**. The resulting validation microflow looks like this:
 
      {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/validation-microflow.png" >}} 
 
-2. Use the *show validation message* activity to set the errors to be shown in the UI in this generated validation microflow. This microflow will be called in the insert microflow displayed below.
+2. Use the **Show validation message** activity to set the errors to be shown in the UI in this generated validation microflow. This microflow will be called in the insert microflow displayed below.
 
 3. Specify that you want to use a microflow to insert a new **Customer** resource via the OData API. This microflow will be called when you do a `POST` operation on the endpoint of the resource:
 
@@ -367,7 +367,7 @@ You may not want to directly publish APIs for your persistable entities because 
 
 There are two ways to take an API-first approach, as explained in [API-First vs. API Design-First: A Comprehensive Guide](https://blog.stoplight.io/api-first-vs.-api-design-first-a-comprehensive-guide):
 
-* Define a contract, like an OpenAPI document. This is not something supported by Mendix OData services unless the contract is also based on OData.
+* Define a contract, like an OpenAPI document. This is not supported by Mendix OData services unless the contract is also based on OData.
 * Set the use case and developer experience of using your APIs first. This is not tied to a specific tool. You can start by defining your APIs on a whiteboard, in a text document, or any other tool. The main challenge is to define a resource model that makes sense to your API users.
 
 ### 6.1 Defining a Resource Model
@@ -434,7 +434,7 @@ This example shows a **CustomerEmailRequest** entity that a client can create us
 
 ### 6.4 Running Operations Asynchronously 
 
-Consider running operations that take longer to complete [asynchronously](https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design#asynchronous-operations). This means you tell the client that the request has been received, that it is not yet completely processed, but that it will be done in the background. In Mendix Studio Pro, you can use a [task queue](/refguide/task-queue/) to schedule the logic to run in the background. In the meantime, the client can `GET` the resource to see what the status is.
+Consider running operations that take longer to complete [asynchronously](https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design#asynchronous-operations). This means you tell the client that the request has been received, that it is not yet completely processed, but that it will be done in the background. In Studio Pro, you can use a [task queue](/refguide/task-queue/) to schedule the logic to run in the background. In the meantime, the client can `GET` the resource to see what the status is.
 
 The last activity of the insert microflow calls the SendCustomerEmail microflow using the task queue:
 
@@ -456,7 +456,7 @@ The response is as follows:
 
 {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/call-send-email-logic.png" width="300" >}} 
 
-When you `GET` the resource from the location provided, the status has the value *Sent*, indicating that the logic has completed. See the following `GET` request:
+When you `GET` the resource from the location provided, the status has the value **Sent**, indicating that the logic has completed. See the following `GET` request:
 
 ```
 GET http://localhost:8080/odata/CustomerApi/v1/CustomerEmailRequests(12)
@@ -468,9 +468,9 @@ The response is as follows:
 
 ## 7 Versioning {#versioning}
 
-Reliable versioning is important for APIs. Client applications should trust your API to not make any incompatible changes that will cause the app to malfunction. Any change you make to an API should always be backwards-compatible, though backwards-incompatible changes can be made in a new major version. Breaking changes can only be introduced in a new major version, offering the end-user a period of time where they can migrate from the old version to the new version. This means you need to the ability to run two versions of the same API side by side.
+Reliable versioning is important for APIs. Client applications should trust your API to not make any incompatible changes that will cause the app to malfunction. Any change you make to an API should always be backwards-compatible, though backwards-incompatible changes can be made in a new major version. Breaking changes can only be introduced in a new major version, offering the end-user a period of time where they can migrate from the old version to the new version. This means you need to have the ability to run two versions of the same API side by side.
 
-With OData, similar to REST APIs in Mendix, you have full control over how you define your versions. By default, Mendix suggests using [semantic versioning](https://semver.org/), adding the major version number to the URL. 
+With OData, similar to REST APIs in Studio Pro, you have full control over how you define your versions. By default, it is suggested you use [semantic versioning](https://semver.org/), adding the major version number to the URL. 
 
 If you need to introduce breaking changes, duplicate the entire OData service and change the major version:
 

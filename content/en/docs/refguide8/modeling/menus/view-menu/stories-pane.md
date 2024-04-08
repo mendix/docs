@@ -6,10 +6,6 @@ description: "Describes the Stories pane in Mendix Studio Pro."
 tags: ["Studio Pro", "stories", "stories pane"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/stories-pane.pdf).
-{{% /alert %}}
-
 ## 1 Introduction 
 
 For version control enabled projects (projects with Team Server or other SVN servers), the **Stories** pane displays the stories and tasks of the current Sprint. Stories, tasks, and Sprint are created and managed in the Developer Portal. For more information on stories, see Stories. 

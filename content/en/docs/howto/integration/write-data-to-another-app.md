@@ -16,10 +16,10 @@ This how-to builds on the information provided in [How to Share Data Between App
 This how-to teaches you how to do the following:
 
 * Expose updatable OData entities, attributes, and associations in Mendix Studio Pro
-* See which capabilities a particular entity, attribute, or association has in the Catalog
+* See which capabilities a particular entity, attribute, or association has in the [Catalog](https://catalog.mendix.com/)
 * Consume an updatable OData resource in your Mendix app
 
-The OData protocol allows data to be read, created, updated, and deleted. Mendix Studio Pro takes advantage of some of these capabilities. The Catalog uses developer-familiar shorthand for these features, while Mendix Studio Pro uses the OData definitions.
+The OData protocol allows data to be read, created, updated, and deleted. Studio Pro takes advantage of some of these capabilities. The Catalog uses developer-familiar shorthand for these features, while Studio Pro uses the OData definitions.
 
 Note the following terminology differences described in the table below:
 
@@ -51,7 +51,7 @@ The updatable OData capability relates to the data in your app. The Catalog prov
 
 To see the capabilities of a particular OData entity, do the following: 
 
-1. Go to the Catalog and search for the name of an exposed OData service endpoint, entity, attribute, or association. For more information, see the [Using the Catalog and Curating Your Own Service](/howto/integration/share-data/#use-and-curate) section in *Share Data Between Apps*.
+1. Go to the [Catalog](https://catalog.mendix.com/) and search for the name of an exposed OData service endpoint, entity, attribute, or association. For more information, see the [Using the Catalog and Curating Your Own Service](/howto/integration/share-data/#use-and-curate) section in *Share Data Between Apps*.
 2. Select your entity from the left-side search results pane. If you do not see many results, try removing the **Production** filter on your search.
 
 Notice the highlighted **CRUD** letters next to the entity name in the search panel and in the detailed information in the center. The purple letters indicate which operations are supported, and the gray letters indicate which are not. Hover over the letters to see which operations are supported. You will also see any OData restrictions here.

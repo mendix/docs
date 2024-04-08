@@ -1,6 +1,6 @@
 # Readme
 
-Icons are from the Mendix Icon Set Line -Shape & Filled Variants (Non-Editable) category, available on Confluence at [The Mendix Icon Set](https://mendix.atlassian.net/l/cp/U89wu3oL).
+These SVG icons are from the Mendix Icon Set, available on Confluence at [The Mendix Icon Set](https://mendix.atlassian.net/wiki/spaces/MXICONS/overview).
 
 To use an icon in the docs content, use the shortcode syntax `{{% icon name="{icon-name}" %}}`. 
 

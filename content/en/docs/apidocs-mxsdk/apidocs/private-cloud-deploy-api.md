@@ -4,7 +4,7 @@ url: /apidocs-mxsdk/apidocs/private-cloud-deploy-api/
 type: swagger
 category: "API Documentation"
 description: "This API allows you to manage application environments deployed to your private cloud using the Mendix Operator."
-weight: 60
+weight: 72
 ---
 
 {{% alert color="info" %}}
@@ -29,7 +29,6 @@ The Mendix for Private Cloud Deploy API is for connected private cloud clusters 
 The Global Operator installation is not yet available in Deploy API.
 {{% /alert %}}
 
-
 ## 2 Using the API
 
 To help you work with the Mendix for Private Cloud Build API, the following sections of this document describe how to authenticate for the API, how to manage asynchronous API calls, and what to keep in mind when assigning unique IDs for the resources.
@@ -40,7 +39,7 @@ Authentication for the API uses a personal access token (PAT).
 
 #### 2.1.1 Generating a PAT
 
-To generate a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/#pat) section of *Mendix Profile*.
+To generate a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section of *Mendix Profile*.
 
 Select the following as scopes:
 
@@ -116,10 +115,6 @@ The following steps will create a cluster, register and install a namespace, add
 
 {{% alert color="info" %}}
 If required, the invitation for the cluster/namespace member can be auto-accepted by setting `autoAcceptInvite` to true in the update cluster/namespace API request.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-Configuration of License Product type via the deploy API is not yet supported.
 {{% /alert %}}
 
 ### 3.2 Using the API to Restart an App {#restart}

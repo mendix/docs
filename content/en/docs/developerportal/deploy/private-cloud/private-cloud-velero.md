@@ -50,7 +50,6 @@ To create a backup with Velero, follow these steps:
     
     {{% alert color="info" %}}In case of Global Operator, the `include-namespace` flag should be used for both the Global Operator namespace and the managed namespace.{{% /alert %}}
 
-
 3. Verify that the backup is complete by entering the following command:
 
     ```text {linenos=false}

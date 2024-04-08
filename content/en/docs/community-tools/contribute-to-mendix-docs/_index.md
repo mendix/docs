@@ -28,7 +28,7 @@ All documentation contributions may be edited to conform to our internal style g
 2. Make your changes.
 3. Create a pull request with our **development** branch as the base.
 
-For a details on how to fork a repo and create a pull request, watch [How to Contribute to Someone's GitHub Repository (Fork/Pull Request)](https://www.youtube.com/watch?v=yr6IzOGoMsQ).
+For details on how to fork a repo and create a pull request, watch [How to Contribute to Someone's GitHub Repository (Fork/Pull Request)](https://www.youtube.com/watch?v=yr6IzOGoMsQ).
 {{% /alert %}}
 
 This how-to teaches you how to do the following:
@@ -40,7 +40,7 @@ This how-to teaches you how to do the following:
 
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
-* Have a GitHub account (sign up [here](https://github.com/join))
+* Have a GitHub account (sign up at [Join GitHub](https://github.com/join))
 
 You can create and edit files online within GitHub. If you want to work outside GitHub, Mendix recommends using the following tools to contribute to the Mendix documentation:
 
@@ -61,7 +61,7 @@ If you need your pull request to be merged on a specific date (for example, for 
 
 ## 4 Leaving Feedback on the Documentation
 
-If you find an issue with the documentation – whether that is a typo, a missing step, or a specific technical problem – we want to know about it so we can improve!
+If you find an issue with the documentation—whether it is a typo, a missing step, or a specific technical problem—we want to know about it so we can improve!
 
 When you click the **Feedback** button on the right side of the screen, you will be brought to our GitHub repo's [Issues](https://github.com/mendix/docs/issues) page. Please include the following details in your feedback:
 
@@ -92,7 +92,7 @@ To submit a new how-to or *Studio Pro Guide* page to the Mendix documentation, s
 Follow these guidelines and conventions when writing:
 
 * Reference and use our [Documentation Writing Guidelines](/developerportal/community-tools/documentation-guidelines/)
-* Make sure the Markdown file name reflects the the title of the page (for example, if the page is titled "Create Your App," the file name should be *create-your-app.md*)
+* Make sure the Markdown file name reflects the title of the page (for example, if the page is titled "Create Your App," the file name should be *create-your-app.md*)
 * Name the Markdown and image files in lower-case with a hyphen (`-`) between each word, and do not use spaces or any other symbols in the file name (for example, `&`), as these will not be accepted
 * When creating screenshots:
     * Make sure the resolution of your screen is 100% (or a multiple thereof) so that your images are sharp
@@ -118,7 +118,7 @@ You may receive a response to your pull request asking for verification of speci
 
 The first time you make a contribution to the Mendix documentation (via a pull request), you need to sign the [Contributor License Agreement for mendix/docs](https://cla-assistant.io/mendix/docs).
 
-To access the license agreement, go to the **Checks** section of the pull request's **Conversation** tab and click **Details** for **license/cla** .
+To access the license agreement, go to the **Checks** section of the pull request's **Conversation** tab and click **Details** for **license/cla**.
 
 This only needs to be done once.
 

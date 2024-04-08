@@ -34,7 +34,7 @@ The sections below provide an introduction to APM. There is an explanation of wh
 
 ## 2 Definition of APM
 
-Wikipedia provides a good definition of [Application Performance Management](http://en.wikipedia.org/wiki/Application_performance_management).
+Wikipedia provides a good definition of [Application Performance Management](https://en.wikipedia.org/wiki/Application_performance_management).
 
 APM is the monitoring and management of performance and availability of software applications.
 APM strives to detect and diagnose application performance problems to maintain an expected level of service.

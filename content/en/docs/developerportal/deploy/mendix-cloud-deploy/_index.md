@@ -19,11 +19,19 @@ aliases:
 
 Mendix Cloud is a public cloud service for Mendix applications; it is the default deployment option for Mendix applications. You can either deploy a limited [Free App](https://www.mendix.com/evaluation-guide/evaluation-learning/getting-started/#evaluate-before) or an app running on a licensed cloud node.
 
-Organizations can also have their own Mendix Cloud. This service is named [Mendix Cloud Dedicated](https://www.mendix.com/evaluation-guide/app-lifecycle/mendix-cloud-overview/#mendix-cloud-vpc). Mendix Cloud Dedicated is a single-tenant instance of the public Mendix Cloud, running apps of only one organization.
+Organizations can also have their own Mendix Cloud. This service is named [Mendix Cloud Dedicated](https://www.mendix.com/evaluation-guide/app-lifecycle/mendix-cloud-overview/#mendix-cloud-vpc). Mendix Cloud Dedicated is a single-tenant instance of the public Mendix Cloud, running the apps of only one organization.
 
 ### 1.1 Free App {#free-app}
 
-If you are new to the Mendix community and would like to deploy and share your own app, you can do so for free on Mendix's public cloud offering. The Free App environment allows any Mendix developer to create and share their applications with their users. Note that a Free App does not support complex or large applications.
+If you are new to the Mendix community and would like to deploy and share your own app, you can do so for free on Mendix's public cloud offering. A Free App environment allows any Mendix developer to create and share their applications with their users. Note that a Free App does not support complex or large applications.
+
+{{% alert color="info" %}}
+Free Apps are part of Mendix's Free Edition.
+
+If you are not currently a customer but would prefer to use a licensed cloud node, you can find more information on the [Mendix Platform Pricing](https://www.mendix.com/pricing) page.
+
+If you are an existing customer, you should deploy to your licensed cloud node.
+{{% /alert %}}
 
 A Free App has several limitations compared to a licensed app. The main limitations are summarized in the table below:
 
@@ -48,10 +56,6 @@ A Free App has several limitations compared to a licensed app. The main limitati
 | Backups | Performed daily and cannot be triggered manually; stored for up to two weeks | Performed daily and can also be created manually; kept for up to one year, depending on your plan |
 | Support | No support | Depends on your license option |
 
-{{% alert color="info" %}}
-Free Apps are part of Mendix's Free Edition.<br><br>If you are not currently a customer but would prefer to use a licensed cloud node, you can find more information on the [Mendix Platform Pricing](http://www.mendix.com/pricing) page.<br><br>If you are an existing customer, you should deploy into your licensed cloud node.
-{{% /alert %}}
-
 ¹ End-users of your app are classified as either internal or external. You will need to report this for licensing purposes using either the [USAGE_METRICS_EMAIL_FIELDS custom variable](/developerportal/deploy/environments-details/#custom-environment-variables) (if you are using email domains to distinguish between them) or by [populating the user type](/howto/monitoring-troubleshooting/populate-user-type/) for each end-user of your app. Only end-users whose Mendix accounts are marked as **Active** are counted towards the number of end-users of the app.
 
 #### 1.1.1 Sleep Mode
@@ -60,9 +64,9 @@ As noted in the table above, a Free App goes into sleep mode after about an hour
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/appresumed.png" alt="A Resuming app message" width=60% >}}
 
-If, after a couple of minutes, your app does not wake up, contact [Mendix Support](http://support.mendix.com).
+If, after a couple of minutes, your app does not wake up, contact [Mendix Support](https://support.mendix.com).
 
-You can upgrade a Free App to a licensed node with a node in Mendix Cloud. For more information, see [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/).
+You can upgrade a Free App to a licensed app running on a node in Mendix Cloud. For more information, see [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/).
 
 #### 1.1.2 Free Apps Archiving {#free-apps-archival}
 
@@ -97,11 +101,11 @@ Apps that run on Mendix Cloud are automatically given their own URLs. The format
 
 | License Type | Environment | URL Format | Example URL |
 | ------------ | ----------- | ---------- | ----------- |
-| Licensed app | Production  | Depends on the region:<br /> `{app-name}.mendixcloud.com`¹<br />or<br />`{app-name}.apps.{region}.mendixcloud.com`¹ | `myappname.mendixcloud.com`, <br /> `myappname.apps.ap-3a.mendixcloud.com` |
-| Licensed app | Test, acceptance, flexible environments | Depends on the region:<br /> `{app-name}-{environment-type}.mendixcloud.com`¹<br />or<br />`{app-name}-{environment-type}.apps.{region}.mendixcloud.com`¹ | `myappname-accp.mendixcloud.com`, <br /> `myappname-accp.apps.ap-3a.mendixcloud.com` |
+| Licensed app | Production  | Depends on the region:<br /> `{app-name}.mendixcloud.com`<br />or<br />`{app-name}.apps.{region}.mendixcloud.com` | `myappname.mendixcloud.com`, <br /> `myappname.apps.ap-3a.mendixcloud.com` |
+| Licensed app | Test, acceptance, flexible environments | Depends on the region:<br /> `{app-name}-{environment-type}.mendixcloud.com`<br />or<br />`{app-name}-{environment-type}.apps.{region}.mendixcloud.com` | `myappname-accp.mendixcloud.com`, <br /> `myappname-accp.apps.ap-3a.mendixcloud.com` |
 | Free App     | N/A         | `{app-name}-sandbox.mxapps.io`<br />or<br />`{app-name}.mxapps.io` | `myfreeappname.mxapps.io` |
 
-{{% alert color="info" %}}¹The URL of an app on some clusters in a region contains `apps.{region}`. You can select the region only for your app, not for the cluster.{{% /alert %}}
+{{% alert color="info" %}}As shown in the table above, the URL of an app on some clusters in a region contains `apps.{region}`. You can select the region for only your app, not for the cluster.{{% /alert %}}
 
 You can customize a URL by adding [custom domains](/developerportal/deploy/custom-domains/).
 
@@ -111,10 +115,19 @@ Mendix apps cannot use custom ports. They communicate on the standard HTTP and H
 
 The method for deploying an app to Mendix Cloud differs depending on whether you have a licensed app or a Free App:
 
-* For a licensed app, you first create a deployment package via Studio Pro or the Developer Portal, and then you deploy it to a node environment where you can run it. For details on how to do this, see [Deploying a Licensed App](#deploy-licensed-app), below.
+* For a licensed app, there are several deployment options:
+    * Manual deployment – Create a deployment package via Studio Pro or the Developer Portal, and then deploy the package to a node environment where you can run it. For details on how to do this, see [Deploying a Licensed App](#deploy-licensed-app), below. This is the simplest deployment method, especially if you are just getting started with Mendix.
+    * Pipelines built with low code – If you want to automate your build and deployment process, you can use [Pipelines](/developerportal/deploy/pipelines/) in the Developer Portal to design and activate a pipeline with a set of configurable, low-code steps. The Pipelines feature makes it quick and easy for teams to automate their CI/CD process, without requiring any third-party tools or DevOps expertise.
+    * Pipelines built with APIs – If you use Jenkins, GitLab, or another CI/CD tool, you can use Mendix APIs to automate your build and deployment process. For details, see [Implement a Simple CI/CD Pipeline with Mendix APIs](/howto/integration/implement-cicd-pipeline/). This method is highly customizable but does require CI/CD tooling and DevOps expertise to set up.
 * For a Free App, you deploy the app directly from Studio Pro. For details on how to do this, see [Deploying a Free App](#deploy-free-app), below.
 
+{{% alert color="info" %}}
+For a hands-on introduction to the different deployment options for licensed apps, try the learning path [Choose the Right Software Delivery Approach](https://academy.mendix.com/link/paths/156/Choose-the-Right-Software-Delivery-Approach).
+{{% /alert %}}
+
 ### 2.1 Deploying a Licensed App{#deploy-licensed-app}
+
+ Deploying a licensed app is a two-step process: First, create a deployment package. Second, deploy it to a node environment where you can run your app. The full process is described in detail below.
 
 #### 2.1.1 Prerequisites
 
@@ -123,17 +136,19 @@ Before starting the process for deploying a licensed app, make sure to complete 
 * Your app is linked to a licensed cloud node
 * You have [transport rights](/developerportal/deploy/node-permissions/#transport-rights)
 * Your [two-factor authentication](/developerportal/deploy/two-factor-authentication/) is set up
-* The deployment package for your app is not bigger than 1 GB
+* The deployment package for your app is not bigger than 1 GB (uncompressed)
+
+{{% alert color="info" %}}You can verify that your app is under the 1 GB limit by creating a deployment package, as described below, and then viewing that package's size in the package details.{{% /alert %}}
 
 #### 2.1.2 Creating a Deployment Package for a Licensed App
 
-There are two methods for creating a deployment package on Mendix Cloud. You can create a deployment package directly via Studio Pro, or you can create a package via the Team Server through the Developer Portal.
+There are two methods for creating a deployment package on Mendix Cloud. You can create it directly via Studio Pro, or through the Developer Portal, using a model committed to the Team Server.
 
 ##### 2.1.2.1 Creating a Deployment Package via Studio Pro
 
 To create a deployment package directly from Studio Pro, follow these steps:
 
-1. Open [Studio Pro](http://appstore.home.mendix.com/link/modeler/).
+1. Open [Studio Pro](https://appstore.home.mendix.com/link/modeler/).
 2. Open the licensed app.
 3. In the top menu bar, click **App** > **Deploy to Licensed Cloud Node**.
 
@@ -144,9 +159,9 @@ To create a deployment package directly from Studio Pro, follow these steps:
 
 ##### 2.1.2.2 Creating a Deployment Package via the Developer Portal {#package-from-team-server}
 
-You can also create a deployment package from the Team Server in the Developer Portal. To do this, follow these steps:
+You can also create a deployment package through the Developer Portal, using a model committed to the Team Server. To do this, follow these steps:
 
-1. Go to the [Developer Portal](http://sprintr.home.mendix.com).
+1. Go to the [Developer Portal](https://sprintr.home.mendix.com).
 1. Open your app's **Environments** page.
 1. Click **Create Deployment Package**.
 1. Select your desired branch and revision and click **Next**.
@@ -154,9 +169,9 @@ You can also create a deployment package from the Team Server in the Developer P
 
 #### 2.1.3 Deploying the App to an Environment {#deploy-the-app-to-an-environment}
 
-The previous steps explained how to deploy a deployment package to Mendix Cloud, but the actual app is not running yet. To deploy a deployment package to a node environment where you can run your app, follow these steps:
+The previous steps explained how to deploy a deployment package to Mendix Cloud, but the app based on the deployment package is not running yet. To deploy a deployment package to a node environment where you can run the app, follow these steps:
 
-1. Go to the [Developer Portal](http://sprintr.home.mendix.com).
+1. Go to the [Developer Portal](https://sprintr.home.mendix.com).
 2. Open your app.
 3. Go to **Environments**.
 4. In the **Deployment Package Repository**, choose your preferred deployment package and click **Deploy** ({{% icon name="deploy" %}}).
@@ -169,8 +184,8 @@ The previous steps explained how to deploy a deployment package to Mendix Cloud,
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/transport-to-flex.png" alt="The Transport menu" class="image-border" >}}
 
 7. If prompted, clean the environment.
-8. Configure the [constants](/refguide/constants/) (if necessary) by clicking **Constants** and **Edit constants value**. This can also be done at a later stage in the settings.
-9. Configure the [scheduled events](/refguide/scheduled-events/) (if necessary) by clicking **Scheduled Events**.
+8. Review the [constants](/refguide/constants/) in the **Constants** tab. Double-click any constant to view more details and edit the value if desired.
+9. Configure any [scheduled events](/refguide/scheduled-events/) using the **Scheduled Events** tab.
 10. Click **Continue**.
 11. Click **Start application**. 
 12. If prompted, click **Synchronize database**.
@@ -179,12 +194,14 @@ The app is now deployed. You can configure the administrative account.
 
 ### 2.2 Deploying a Free App {#deploy-free-app}
 
+Deploying a Free App is a single-stage process that is completed from Studio Pro. This process is described in detail below.
+
 #### 2.2.1 Prerequisites
 
 Before starting the process for deploying a Free App, make sure to complete these prerequisites:
 
 * You have created an app
-* As with licensed apps, there is a size limit of 1 GB; you can verify that your app is under the limit by creating a deployment package (although you will not need to use that package for the deployment itself)
+* As with licensed apps, the uncompressed size of the deployment package must not exceed 1 GB
 
 #### 2.2.2 Deploying the App
 
@@ -192,17 +209,13 @@ With a Free App, you can deploy your app to Mendix Cloud from Studio Pro by usin
 
 * In the top bar of Studio Pro, click **Run** > **Publish**. This automatically deploys your app to a Free App environment.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp2.png" alt="The Run menu with the Publish option selected"  width=60% >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp2.png" alt="The Run menu with the Publish option selected" max-width=60% >}}
 
 * Alternatively, in the top bar of Studio Pro, click **Publish**.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp.png" alt="The Publish button" width=20% >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp.png" alt="The Publish button" max-width=20% >}}
 
-## 3 Status of Deployment
-
-The [Mendix status page](https://status.mendix.com/) shows the current status of Mendix services. If you have issues with deployment, you can check the Mendix status page to see if deployment is operational (under **Mendix Services**) or if there are other Mendix issues that may be affecting your deployment.
-
-## 4 Mendix Pricing Plans {#plans}
+## 3 Mendix Pricing Plans {#plans}
 
 Mendix licenses are sold as part of plans. Plans consist of the following items:
 
@@ -210,7 +223,7 @@ Mendix licenses are sold as part of plans. Plans consist of the following items:
 * A cloud resource pack, which specifies the resources available to your app environment
 * Additional resources, such as fallback environments
 
-### 4.1 Plans
+### 3.1 Plans
 
 The following plans are available:
 
@@ -222,7 +235,7 @@ The following plans are available:
 
 For more information, see [Pricing](https://www.mendix.com/pricing/).
 
-### 4.2 Cloud Resource Packs {#resource-pack}
+### 3.2 Cloud Resource Packs {#resource-pack}
 
 Mendix environments are sized by reference to cloud resource packs. The table below shows the current cloud resource packs for Standard, Premium, and Premium Plus plans. Resources for the Basic plan are fixed as described in [Mendix Basic Package](/developerportal/deploy/basic-package/).
 
@@ -267,11 +280,11 @@ The legacy cloud resource packs listed below are still being used but are not av
 You can have a pack using a fraction of a vCPU. This is because several environments can run, completely isolated from each other, on a single virtual machine.
 {{% /alert %}}
 
-### 4.3 Additional Resources{#additional-resources}
+### 3.3 Additional Resources{#additional-resources}
 
-For Premium customers using a Premium resource pack, there are additional features available for apps deployed to Mendix Cloud. There are also additional ways to deploy Mendix Apps.
+For Premium customers using a Premium resource pack, there are additional features available for apps deployed to Mendix Cloud. There are also additional ways to deploy Mendix apps.
 
-#### 4.3.1 High Availability and Fallback {#fallback}
+#### 3.3.1 High Availability and Fallback {#fallback}
 
 Premium plans come with High Availability and Fallback out of the box. This ensures that copies of your app are spread across multiple availability zones (AZs). If there is a problem with a specific AZ, copies of your app running on other AZs remain available.
 
@@ -281,7 +294,7 @@ Fallback ensures that the data in your database is automatically copied to a dat
 
 The connections between AZs are low latency. However, the implementation of these features means that your monitoring may indicate that apps deployed to Mendix Cloud under a Premium plan suffer an additional latency of a few milliseconds compared with apps deployed using a Standard plan. For a well-designed app, this difference is not noticeable to end-users. 
 
-#### 4.3.2 Regional Fallback{#regional-fallback}
+#### 3.3.2 Regional Fallback{#regional-fallback}
 
 You can also purchase a Premium Plus plan, which provides all the features of the Premium plan, with the addition of Regional Fallback.
 
@@ -289,9 +302,13 @@ With Regional Fallback, a copy of your database and FileDocuments is maintained 
 
 Because this is designed for a catastrophic regional failure, there are some limitations to your normal operations. For example, you cannot deploy a new version of the app while it is running in the secondary region. The decision to switch to the secondary region is completely under your control.
 
-#### 4.3.3 On-Premises and Private Cloud
+#### 3.3.3 On-Premises and Private Cloud
 
 If you want to deploy your Mendix apps to other environments, you can add these to your Mendix plan. For example, you can choose to deploy to [SAP BTP](/developerportal/deploy/sap-cloud-platform/). You can also choose to deploy to your own cloud using [Mendix for Private Cloud](/developerportal/deploy/private-cloud/).
+
+## 4 Deployment Status and Troubleshooting
+
+The [Mendix status page](https://status.mendix.com/) shows the current status of Mendix services. If you have issues with deployment, you can check the Mendix status page to see if deployment is operational (under **Mendix Services**) or if there are other Mendix issues that may be affecting your deployment.
 
 ## 5 Read More
 

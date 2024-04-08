@@ -35,7 +35,7 @@ An enumeration has the following properties:
 
 The following properties are only available when the enumeration is an external enumeration that is part of a [consumed Odata service](/refguide/consumed-odata-service/):
 
-* **From service** - This property shows the source of the enumeration and allows you to **Detach** the enumeration from the source. 
+* **From service** - This property shows the source of the enumeration and allows you to **Detach** the enumeration from the source if the source has been deleted. 
 * **Original name** - The original name of the enumeration from the source.
 
 ### 2.1 Enumeration Value Properties {#enum-value-properties}

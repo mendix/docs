@@ -62,4 +62,4 @@ With these three pieces of information, you should be able to find the cause of 
 * [Debug Microflows](/howto8/monitoring-troubleshooting/debug-microflows/)
 * [Debug Microflows Remotely](/howto8/monitoring-troubleshooting/debug-microflows-remotely/)
 * [Debug Java Actions](/howto8/monitoring-troubleshooting/debug-java-actions/)
-* [The Root Cause of Runtime Errors and Resolving the 2 Most Common Issues](http://www.mendix.com/blog/the-root-cause-of-runtime-errors-and-resolving-the-2-most-common-issues/)
+* [The Root Cause of Runtime Errors and Resolving the 2 Most Common Issues](https://www.mendix.com/blog/the-root-cause-of-runtime-errors-and-resolving-the-2-most-common-issues/)

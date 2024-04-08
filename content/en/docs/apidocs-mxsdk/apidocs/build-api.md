@@ -3,7 +3,7 @@ title: "Build API"
 url: /apidocs-mxsdk/apidocs/build-api/
 category: "API Documentation"
 description: "An API that enables triggering and managing deployment package builds and getting information about existing deployment packages." 
-weight: 15
+weight: 20
 tags: ["API", "Build Server", "Team Server", "Deployment package", "Mendix Cloud"]
 ---
 
@@ -212,7 +212,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ### 2.4 ⚠ Download Package{#download-package}
 
 {{% alert color="warning" %}}
-⚠ The **Download Package** call of the build API is deprecated. Please use [Retrieve Package](#retrieve-package) with the `url=true` parameter instead.
+The **Download Package** call of the build API is deprecated. Please use [Retrieve Package](#retrieve-package) with the `url=true` parameter instead.
 {{% /alert %}}
 
 Downloads a specific deployment package that is available for a specific app that the authenticated user has access to as a regular user. This package can be found if you click **Details** on an app in the **Nodes** screen in the Mendix Platform.

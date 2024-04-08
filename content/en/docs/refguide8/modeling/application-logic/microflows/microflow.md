@@ -4,10 +4,6 @@ url: /refguide8/microflow/
 tags: ["microflow", "entity access"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/microflow.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 This document describes the properties of a microflow. If you want to see what microflows are for and what kind of elements they contain, you can check [Microflows](/refguide8/microflows/).

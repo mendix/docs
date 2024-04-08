@@ -5,10 +5,6 @@ weight: 30
 tags: ["studio pro", "translation", "languages", "translatable text"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/batch-translate.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 **Batch translate** allows you to enter texts in one language which correspond to texts in another language.

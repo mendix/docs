@@ -6,7 +6,9 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="warning" %}}The **input reference set selector** widget is not supported on native mobile pages.{{% /alert %}}
+{{% alert color="warning" %}}The **input reference set selector** widget is not supported on native mobile pages. 
+
+To upgrade it to a React-compliant widget which works on a native page, see the Mendix React Client's [Migration Guide](/refguide/mendix-client/react/#migration-guide).{{% /alert %}}
 
 ## 1 Introduction
 
@@ -96,7 +98,7 @@ You can generate a new page to show by right-clicking the widget and selecting *
 
 The properties in the Selectable objects section determine the objects from which the end user can make a selection. As source, you can use **Database** or **XPath**. When using **XPath**, you can add an **XPath constraint**, or use a **Constrained by** path.
 
-For more information, see the [XPath](/refguide/reference-selector/#xpath-constraints) section of *Reference Selector*.
+For more information, see the [Selectable Objects](/refguide/reference-selector/#selectable-objects) section of *Reference Selector*.
 
 {{% alert color="info" %}}
 You cannot use a microflow to define selectable objects in an input reference set selector.

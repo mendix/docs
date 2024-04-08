@@ -24,11 +24,9 @@ Same as with the description. It should say what the App does, so it would be ea
 
 (Add the Mendix .gitignore to make sure you keep your repo clean.)
 
-## 4 Folder Structure
+## 4 Making a Widget
 
-When making a new widget, Mendix suggests you use the [App Store Widget Boilerplate](https://github.com/mendix/AppStoreWidgetBoilerplate), available on GitHub.
-
-It's a set-up with everything you need to get started developing a Mendix widget.
+When making a new widget, Mendix suggests you [Build a Pluggable Web Widget](/howto8/extensibility/create-a-pluggable-widget-one/).
 
 ## 5 Releases
 

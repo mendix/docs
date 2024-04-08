@@ -7,10 +7,6 @@ tags: ["Images", "Image Collections", "png", "Studio Pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/images.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 Images can be used to brighten up your application. [Navigation items](/refguide8/navigation-tree/) and the various kinds of [buttons](/refguide8/button-widgets/) have small images (icons) to left of their captions. Images can also be used in the image viewer widgets in [pages](/refguide8/pages/) and [document templates](/refguide8/document-templates/). Also, [enumeration values](/refguide8/enumerations/#enum-value-properties) can have images that can then be shown in data grid columns.

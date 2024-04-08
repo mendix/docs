@@ -14,13 +14,13 @@ When you click the **Parameters** button that is next to the authentication micr
 
 ## 2 Parameters
 
-The information below gives you an overview of the microflow parameters, and explains where their values are taken from. Click **Add** to add a parameter, and **Edit** to change a parameter.
+The information below gives an overview of the microflow parameters and explains where their values are taken from. Click **Add** to add a parameter, and **Edit** to change a parameter.
 
 Make sure that you add all microflow parameters here.
 
 ### 2.1 Parameter Type
 
-Specify where the parameter comes from. Possible values are
+Specify where the parameter comes from. Possible values are:
 
 * **Query** – when the request contains a query string such as `?name=John&age=42`, you can pass these to the microflow by adding query parameters. For more information, see [Published REST Query Parameters](/refguide/published-rest-query-parameters/).
 

@@ -2,10 +2,24 @@
     {{- $name := printf "static/mx-icons/%s.svg" (.Get "name") -}}
     {{- $content := readFile $name -}}
     {{- $fill := "<path fill=\"" -}}
-    {{- if ne (.Get "color") nil -}}
-        {{- $fill = print "<path fill=\"" (.Get "color") "\"" -}}
+    {{- $color := .Get "color" -}}
+
+    <!--Colors are from the PDS guidelines: https://designsystem.mendix.com. -->
+    {{- $colorDictionary := dict 
+        "green" "#0D990D"
+        "red" "#D31E23"
+        "yellow" "#C97800"
+        "purple" "#5b1bef"
+        "blue" "#146ff4"
+        "gray" "#9ea2a9"
+    -}}
+
+    {{- if ne $color nil -}}
+        {{- $fill = printf "<path fill=\"%s\"" (index $colorDictionary $color) -}}
     {{- else -}}
         {{- $fill = "<path fill=\"currentColor\"" -}}
     {{- end -}}
-    {{- replace $content "<path" $fill | safeHTML -}}
+
+    {{- $content := replace $content "<path" $fill | safeHTML -}}
+    {{- $content | safeHTML -}}
 </span>

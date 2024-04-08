@@ -10,10 +10,6 @@ aliases:
 #The anchor <menu-item> below is mapped, so it should not be removed or changed.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/menu.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 A menu document defines a navigation menu that can be used by a [menu widget](/refguide8/menu-widgets/). Typically the main menus for your application are defined in device types, while you use menu documents for auxiliary menus, for example, a side bar.

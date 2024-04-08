@@ -17,7 +17,7 @@ This guide only applies to native mobile apps.
 Before starting this guide, make sure you have completed the following prerequisites:
 
 * Install [Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/)
-* Complete the [Prerequisites](/refguide/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/#prerequisites) section of *Deploy Your First Mendix Native Mobile App*
+* Complete the [Prerequisites](/refguide/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/#prerequisites) section of *Build a Mendix Native App in the Cloud*
 * Make sure you are using [Make It Native 9 app](/releasenotes/mobile/make-it-native-parent/)
 
 ## 3 Setting Up Accessibility for Mendix Native Widgets

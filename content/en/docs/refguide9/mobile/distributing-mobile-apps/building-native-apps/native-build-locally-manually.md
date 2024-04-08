@@ -2,7 +2,7 @@
 title: "Build a Mendix Native App Locally Manually"
 linktitle: "Native App Local Manual Build"
 url: /refguide9/mobile/distributing-mobile-apps/building-native-apps/native-build-locally-manually/
-weight: 30
+weight: 20
 description: Describes how to build your first Mendix native mobile app locally, without using the Mendix Native Mobile Builder.
 aliases:
     - /howto9/mobile/native-build-locally-manually/
@@ -13,8 +13,6 @@ aliases:
 {{% alert color="info" %}}
 When the Mendix Native Mobile Builder identifies a Native Template version (v5.1.9 and above) that is Mobile Toolkit capable, it will not apply changes directly to the app. To apply the changes when building locally, check out your latest changes, run `npm install` (for NPM v7 and above run `npm install --legacy-peer-deps`), then make sure to run `npm run configure`.
 {{% /alert %}}
-
-By default when building your native mobile app binaries, Mendix uses [Visual Studio App Center](https://appcenter.ms/sign-in?original_url=%2Fapps) as a service so that users can build without having to install tools like XCode or Android Studio. However, there are cases when using App Center is not allowed or possible. In those situations, you can build your apps locally without an internet connection.
 
 Follow the sections below through [Building Your Native App](#building-app-project) to complete your builds. To go beyond those instructions, see [Adding Dependencies](#adding-dependencies) and [Removing Dependencies](#removing-dependencies) sections below. These sections will allow you to further customize your local builds.
 

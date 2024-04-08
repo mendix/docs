@@ -13,7 +13,7 @@ aliases:
 
 The Mendix Platform contains an identity provider (IdP) that allows platform users to sign in to:
 
-* Mendix Platform services such as the Developer Portal, the Marketplace, Control Center, and the Mendix Forum
+* Mendix Platform services such as the Developer Portal, the Marketplace, Control Center, and the Mendix Community
 * Studio Pro
 
 Platform users can have separate Mendix credentials, or you can provide them with an end-to-end SSO experience by setting up an identity federation between the Mendix Platform and your corporate IdP. 
@@ -153,7 +153,7 @@ When you have completed your IdP setup, you can perform a test sign-in before ac
 You can test in one of two ways:
 
 * Use the **Test Link** for your configuration. It will redirect you to the login page of your IdP. Enter the credentials of a user known to your IdP. If the test succeeds, the Developer Portal landing page opens.
-* Copy the ***Test Email Domain** of your configuration from the the overview page. Go to https://login.mendix.com/ and, in the **Username** field, paste the test email domain. The password field disappears. Click **Sign in with SSO**. This will redirect you to a login page of your IdP. Enter credentials known to your IdP. If the test succeeds, the Mendix Platform home page opens.
+* Copy the ***Test Email Domain** of your configuration from the overview page. Go to https://login.mendix.com/ and, in the **Username** field, paste the test email domain. The password field disappears. Click **Sign in with SSO**. This will redirect you to a login page of your IdP. Enter credentials known to your IdP. If the test succeeds, the Mendix Platform home page opens.
 
 For advice on where to look for issues if your test fails, see the [Troubleshooting](#troubleshooting) section.
 
@@ -233,7 +233,7 @@ Existing users of the Developer Portal can continue to use their accounts, but t
 
 ### 8.2 BYOIDP and Team Server {#team-server}
 
-Once BYOIDP is activated, direct access to Team Server is no longer possible. To access code repositories from a pipeline, you need to use a [PAT](/community-tools/mendix-profile/#pat).
+Once BYOIDP is activated, direct access to Team Server is no longer possible. To access code repositories from a pipeline, you need to use a [PAT](/community-tools/mendix-profile/user-settings/#pat).
 
 Before activating BYOIDP, your developers should set up PATs for direct access to repos (for example, from CI/CD pipelines and/or Tortoise SVN) instead of using usernames and passwords.
 

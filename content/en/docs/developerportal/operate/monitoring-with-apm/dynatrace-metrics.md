@@ -19,7 +19,7 @@ In addition to auto-instrumented built-in metrics collected by OneAgent, Mendix 
 
 To use Dynatrace and send data to Dynatrace from your Mendix app, you need the following:
 
-* Access to a Saas or Managed Dynatrace environment
+* Access to a Dynatrace SaaS or Dynatrace Managed environment
 * The following information about Dynatrace:
     * The Dynatrace environment URL
     * The [Dynatrace environment ID](https://www.dynatrace.com/support/help/get-started/monitoring-environment/environment-id)
@@ -40,7 +40,7 @@ To start sending your Mendix app's metrics to Dynatrace, you need to set some en
     | `DT_TENANT` | Yes | The Dynatrace Environment ID | For more information, see the [Environment ID](https://www.dynatrace.com/support/help/get-started/monitoring-environment/environment-id) Dynatrace documentation. |
     | `DT_PAAS_TOKEN` | Yes | The access token for integrating your Mendix app with Dynatrace | Create this on the Dynatrace environment. For more information, see [Generate an Access Token](https://www.dynatrace.com/support/help/get-started/access-tokens#create-api-token). The token must include the `PaaS integration - Installer download` and `Ingest metrics` scopes. |
     | `DT_IS_MANAGED` | No | Set this to `true` if you are using Dynatrace Managed. The default is assumed to be Dynatrace SaaS and set to `false`. | This variable is only needed for custom application metrics ingestion. |
-    | `DT_CLUSTER_ID` | No | You can use this to tag your cluster, process group, or deployment group. |
+    | `DT_CLUSTER_ID` | No | You can use this to tag your cluster, process group, or deployment group. | |
     | `DT_CUSTOM_PROP` | No | This can be used to provide metadata for your process group. | For more information, see [Define Your Own Process Group Metadata](https://www.dynatrace.com/support/help/platform-modules/infrastructure-monitoring/process-groups/configuration/define-your-own-process-group-metadata). |
 
 5. Return to the **General** tab and restart your environment.
@@ -69,7 +69,7 @@ You can set extra dimensions as tags in the Developer Portal. Mendix recommends 
 To set this tag, do the following:
 
 1. Go to the **Environments** page of your app in the *Developer Portal*.
-2. Click **Details** on an environment you are monitoring with Dynatrace. 
+2. Click **Details** ({{% icon name="notes-paper-edit" %}}) on an environment you are monitoring with Dynatrace. 
 3. Switch to the **Tags** tab.
 4. Click **Add** and type in a string to be sent to Dynatrace as a dimension. For more information, see the [**Tags** tab](/developerportal/deploy/environments-details/#tags) documentation in *Environment Details*.
 5. Restart the application.
@@ -78,7 +78,7 @@ Setting this value for your app causes all metrics from this environment of your
 
 ### 4.2 Dynatrace Issues
 
-If you have any issues related to accessing Dynatrace, contact their support at [Dynatrace Support](https://one.dynatrace.com/hc/en-us/requests). You will need a Dynatrace account to request support.
+If you have any issues related to accessing Dynatrace, contact their support at [Dynatrace Support](https://one.dynatrace.com/hc/en-us/requests). You need a Dynatrace account to request their support.
 
 ## 5 Read More
 

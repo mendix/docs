@@ -6,10 +6,6 @@ description: "Describes the Import Project Package process and Import Project Pa
 tags: ["studio pro", "import project package"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/import-project-package-dialog.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 To create a new app from a Mendix project package (*.mpk*) file, you need to import a project package. The new app can either be stored in a version control server or locally on disk.

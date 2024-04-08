@@ -4,10 +4,6 @@ url: /refguide8/published-odata-resource/
 tags: ["studio pro"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/published-odata-resource.pdf).
-{{% /alert %}}
-
 {{% alert color="warning" %}}
 
 This document describes the properties of a published OData resource. For an overview of OData services, see [Published OData Services](/refguide8/published-odata-services/).

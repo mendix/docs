@@ -5,10 +5,6 @@ weight: 40
 tags: ["studio pro", "anonymous users", "project security", "security"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/anonymous-users.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 You can use anonymous users to allow end-users access your application without having to sign in. You can restrict the data that anonymous users can view and access by assigning a specific user role to them. 

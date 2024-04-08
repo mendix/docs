@@ -172,14 +172,12 @@ An enumeration is a predefined list of values that can be used as an attribute t
 
 ##### 4.2.1.1 `ENUM_ChunkType` {#enum-chunktype} 
 
-This enumerration provides a list of possible chunk types. Currently two types are supported: 
-* `Knowledge` type chunks, where only one single text (`Key` of [Chunk](#chunk)) is relevant for both the similarity search and the processing steps afterwards, versus
-* `KeyValue` type chunks, where the functionally relevant information after retrieval is different (`Value` of [Chunk](#chunk)) from the text based on which the embedding was generated (`Key` of [Chunk](#chunk)).
+This enumerration provides a list of possible chunk types. Currently two types are supported. 
 
-| Name         | Caption         |
-| ------------ | --------------- |
-| `Knowledge`  | **Knowledge**   |
-| `KeyValue`   | **KeyValue**    |
+| Name         | Caption         | Description                |
+| ------------ | --------------- | -------------------------- |
+| `Knowledge`  | **Knowledge**   | Only one a single text (`Key` of [Chunk](#chunk)) is relevant for both the similarity search and the processing steps afterwards. |
+| `KeyValue`   | **KeyValue**    | The functionally relevant information after retrieval is different (`Value` of [Chunk](#chunk)) from the text based on which the embedding was generated (`Key` of [Chunk](#chunk)) |
 
 ### 4.3 Activities {#activities} 
 

@@ -48,12 +48,9 @@ Above the list, you can use the search box to search for information in the list
 The list contains the following information:
 
 * **Deployment Package**: This is the name of the deployment package.
-* **Technical Contact**: This shows the Technical Contact of the app.
 * **Environment**: This is the name of the environment.
-* **Production**: This shows whether the deployment package is deployed in the production environment.
 * **Runtime**: This shows the Mendix Runtime version.
 * **Version**: This shows the version of the deployment package on this app environment.
-* **Action**: Clicking the {{% icon name="download-bottom" %}} icon to download the software bill of materials (SBOM). For more information, see [Downloading the Software Bill of Materials](#download-software-bill-of-materials).
 * Column customization ({{% icon name="view" %}}): You can customize the columns of the list by clicking the {{% icon name="view" %}} icon and adjusting the selection of the check boxes.
 * **View details**: Click this opens the [Component Summary](#component-summary) page, if it is available.
 

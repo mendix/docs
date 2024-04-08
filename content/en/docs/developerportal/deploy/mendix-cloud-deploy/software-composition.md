@@ -47,18 +47,27 @@ Above the list, you can use the search box to search for information in the list
 
 The list contains the following information:
 
-* **Deployment Package**: This is the name of the deployment package. Click this opens the [Deployment Package Summary](#deployment-package-summary) page, if it is available.
+* **Deployment Package**: This is the name of the deployment package.
 * **Technical Contact**: This shows the Technical Contact of the app.
 * **Environment**: This is the name of the environment.
 * **Production**: This shows whether the deployment package is deployed in the production environment.
 * **Runtime**: This shows the Mendix Runtime version.
 * **Version**: This shows the version of the deployment package on this app environment.
 * **Action**: Clicking the {{% icon name="download-bottom" %}} icon to download the software bill of materials (SBOM). For more information, see [Downloading the Software Bill of Materials](#download-software-bill-of-materials).
-* {{% icon name="view" %}}: You can customize the columns of the list by clicking the {{% icon name="view" %}} icon and adjusting the selection of the check boxes.
+* Column customization ({{% icon name="view" %}}): You can customize the columns of the list by clicking the {{% icon name="view" %}} icon and adjusting the selection of the check boxes.
+* **View details**: Click this opens the [Deployment Package Summary](#deployment-package-summary) page, if it is available.
 
 To export the information of selected items in the list to an Excel file, select the check boxes of the items in the list, and then click {{% icon name="office-sheet" %}}**Selection Export to Excel** that appears at the bottom of the page.
 
-### 2.1 Downloading the Software Bill of Materials {#download-software-bill-of-materials}
+### 2.1 Deployment Package Summary {#deployment-package-summary}
+
+On the **Overview** tab, if you click **View Details** for a deployment package in the list, the **Deployment Package Summary** page opens. 
+
+On the top of the page, you can find the name of the deployment package, the environment name, the Mendix Runtime version, the Technical Contact, the Mendix Runtime version, the version of the deployment package, and whether the deployment package is deployed in a product environment.
+
+For details on the information in the list and how to search, filter, and export information in the list, see the [All Components](#all-components) section.
+
+#### 2.1.1 Downloading the Software Bill of Materials {#download-software-bill-of-materials}
 
 A software bill of materials is a vehicle to share information on the inventory of a software component. It contains a description about the Mendix app and the components (dependencies) put into it. 
 
@@ -73,14 +82,6 @@ Currently, the SBOM has the following known limitations:
 * The metadata of private Marketplace components and the metadata of widgets imported as a part of a module are limited.
 * No dependency information between components is available in the SBOM, except for the java dependencies available for SBOMs created from Studio Pro versions 10.5.0 and above.
 
-### 2.2 Deployment Package Summary {#deployment-package-summary}
-
-On the **Overview** tab, if you click **View Details** for a deployment package in the list, the **Deployment Package Summary** page opens. 
-
-On the top of the page, you can find the name of the deployment package, the environment name, the Mendix Runtime version, the Technical Contact, the Mendix Runtime version, the version of the deployment package, and whether the deployment package is deployed in a product environment.
-
-For details on the information in the list and how to search, filter, and export information in the list, see the [All Components](#all-components) section.
-
 ## 3 All Components {#all-components}
 
 The **All Components** tab gives an overview of all the components used across your deployment packages. 
@@ -94,7 +95,7 @@ The list shows the following information about the component:
 * **Component**: This is the name of the component.
 * **Version**: This is the component version.
 * **Type**: This shows the type of the component.
-* {{% icon name="view" %}}: You can customize the columns of the list by clicking the {{% icon name="view" %}} icon and adjusting the selection of the check boxes.
+* Column customization ({{% icon name="view" %}}): You can customize the columns of the list by clicking the {{% icon name="view" %}} icon and adjusting the selection of the check boxes.
 * **View details**: Click this opens the [Component Usage](#component-usage) page.
 
 To export the information of selected items in the list to an Excel file, select the check boxes of the items in the list, and then click {{% icon name="office-sheet" %}}**Selection Export to Excel** that appears at the bottom of the page.

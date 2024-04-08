@@ -55,7 +55,7 @@ The list contains the following information:
 * **Runtime**: This shows the Mendix Runtime version.
 * **Technical Contact**: This shows the Technical Contact of the app.
 * **Target Cloud**: This shows the type of the cloud where the deployment package is deployed. Currently, only Mendix Free Cloud, Mendix Cloud, and Mendix Cloud Dedicated are supported.
-* {{% icon name="view" %}}: You can customize the columns of the list by clicking the {{% icon name="view" %}} icon and adjusting the selection of the check boxes.
+* Column customization ({{% icon name="view" %}}): You can customize the columns of the list by clicking the {{% icon name="view" %}} icon and adjusting the selection of the check boxes.
 * **View details**: Click this opens the [Component Summary](#component-summary) page, if it is available.
 
 To export the information of selected items in the list to an Excel file, select the check boxes of the items in the list, and then click {{% icon name="office-sheet" %}}**Selection Export to Excel** that appears at the bottom of the page.
@@ -97,7 +97,7 @@ The list shows the following information about the component:
 * **Type**: This shows the type of the component. This could be modules, widgets, framework which refers to the Mendix Runtime version, and java libraries (JAR). In case a type is not recognized, it is shown as **Unknown**.
 * **Version**: This is the component version.
 * **Apps using component**: This shows the number of apps where the component is used.
-* {{% icon name="view" %}}: You can customize the columns of the list by clicking the {{% icon name="view" %}} icon and adjusting the selection of the check boxes.
+* Column customization ({{% icon name="view" %}}): You can customize the columns of the list by clicking the {{% icon name="view" %}} icon and adjusting the selection of the check boxes.
 * **View details**: Click this opens the [Component Usage](#component-usage) page.
 
 To export the information of selected items in the list to an Excel file, select the check boxes of the items in the list, and then click {{% icon name="office-sheet" %}}**Selection Export to Excel** that appears at the bottom of the page.

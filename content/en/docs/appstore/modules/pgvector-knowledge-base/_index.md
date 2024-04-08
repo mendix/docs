@@ -4,8 +4,6 @@ url: /appstore/modules/pgvector-knowledge-base/
 linktitle: "PgVector Knowledge Base"
 description: "Describes the configuration and usage of the PgVector Knowledge Base module from the Mendix Marketplace that allows developers to integrate postgreSQL databases with pgvector installed as knowledge bases in into their Mendix app."
 tags: ["pgvector", "postgreSQL", "similarity search", "cosine similarity", "cosine distance", "AI", "connector", "marketplace", "chatgpt", "vector", "genAI", "embeddings", "RAG", "Azure OpenAI", "vector database", "Retrieval augmented generation", "similarity search"]
-aliases:
-    - /appstore/connectors/pgvector-knowledge-base/
 ---
 
 ## 1 Introduction {#introduction}

@@ -16,7 +16,7 @@ aliases:
 ## 1 Introduction
 
 {{% alert color="warning" %}}
-This information is for full integrated apps to Insights Hub. It does not apply to apps which are only calling Insights APIs.
+This information is for apps which are fully integrated apps into Insights Hub. It does not apply to apps which are only calling Insights APIs.
 {{% /alert %}}
 
 This page contains detailed information about the content of Insights Hub modules for Mendix apps and what they are used for. If you want to deploy a Mendix app to Insights Hub, the instructions are in [Deployment on Siemens Insights Hub](/developerportal/deploy/deploying-to-mindsphere/).
@@ -237,154 +237,149 @@ Run your app locally, copy the *index.html* from the /deployment folder to /them
 
 In index.html, in the header before the line `{{themecss}}`, the following script needs to be included in the file.
 
-The modification does two things:
+This change does two things:
 
-* add the x-xsrf-token header on each request. This is needed by the Insights Hub Gateway.
-* handle gateway session expired case. Show a popup in such a case and inform the user to reload the app. The message / title shown in the popup can be modified and localized via the "i18n" enumeration of the module "SiemensInsightsHubWebContent".
-  {{% alert color="info" %}}
-  Please add the "Siemens Insights Hub Web Content" module role "User" to all your apps user roles to ensure that the localized session expired message / title can be loaded during app startup.
-  {{% /alert %}}
+* adds the `x-xsrf-token` header to each request. This is needed by the Insights Hub Gateway.
+* handles the gateway session expired case. If the session has expired, it shows a popup and asks the user to reload the app. The message / title shown in the popup can be modified and localized via the "i18n" enumeration of the module "SiemensInsightsHubWebContent".
+
+    {{% alert color="info" %}}Please add the "Siemens Insights Hub Web Content" module role "User" to all your apps user roles to ensure that the localized session expired message / title can be loaded during app startup.
+    {{% /alert %}}
 
 ```javascript
 <script>
 	// Insights Hub specific part-1: We have to use the XSRF-TOKEN on fetch requests.
 	// This script should placed before "mxui.js" as this script makes the fetch requests
 	(function () {
-            const sessionExpiredReloadAppPopup = function () {
-                // get localized texts for popup from sessionstorage. In case of error use fallbackText.
-                const getTextFromSessionStorage = () => {
-                    const fallbackText = {
-                        title: "Session expired",
-                        message: "The session is expired. Please reload the app.",
-                        button: "Reload app",
-                    }
-                    try {
-                        const text = JSON.parse(sessionStorage.getItem('sessionExpired'));
-                        if (text.hasOwnProperty("title") && text.hasOwnProperty("message") && text.hasOwnProperty("button")) {
-                            return text;
-                        }
-                        return fallbackText;
-                    } catch (error) {
-                        return fallbackText;
-                    }
+        const sessionExpiredReloadAppPopup = function () {
+            // get localized texts for popup from sessionstorage. In case of error use fallbackText.
+            const getTextFromSessionStorage = () => {
+                const fallbackText = {
+                    title: "Session expired",
+                    message: "The session is expired. Please reload the app.",
+                    button: "Reload app",
                 }
-                const text = getTextFromSessionStorage();
-                // div structure is copied from the "SessionExpired" page in the module SiemensInsightsHubWebContent
-                // As we can not load the page dynamically due to expiration of the gateway session.
-                // When user click the button location.reload() is triggered - which initiates an new session with gateway
-                const sessionExpiredPopup = `
-                <div role="dialog" class="modal-dialog mx-window  mx-window-active utx-session-expired"
-                    style="opacity: 1; z-index: 1002; top: calc(50% - 141px); left: calc(50% - 300px);" data-focus-capturing="modal">
-                    <div class="modal-content mx-window-content">
-                        <div class="modal-header mx-window-header" style="user-select: none; cursor: auto;">
-                            <h4>${text.title}</h4>
-                        </div>
-                        <div data-focusindex="0" class="modal-body mx-window-body">
-                            <div class="mx-scrollcontainer mx-scrollcontainer-horizontal mx-scrollcontainer-fixed"
-                                style="">
-                                <div class="mx-placeholder">
-                                    <div class="" id="mxui_widget_Wrapper_21" style="display: contents !important;">
-                                        <div class="mx-name-layoutGrid1 mx-layoutgrid mx-layoutgrid-fluid container-fluid">
-                                            <h1 class="mx-title mx-name-pageTitle1">
-                                                ${text.title}
-                                            </h1>
-                                            <div>
-                                                ${text.message}
-                                            </div>
+                try {
+                    const text = JSON.parse(sessionStorage.getItem('sessionExpired'));
+                    if (text.hasOwnProperty("title") && text.hasOwnProperty("message") && text.hasOwnProperty("button")) {
+                        return text;
+                    }
+                    return fallbackText;
+                } catch (error) {
+                    return fallbackText;
+                }
+            }
+            const text = getTextFromSessionStorage();
+            // div structure is copied from the "SessionExpired" page in the module SiemensInsightsHubWebContent
+            // As we can not load the page dynamically due to expiration of the gateway session.
+            // When user click the button location.reload() is triggered - which initiates an new session with gateway
+            const sessionExpiredPopup = `
+            <div role="dialog" class="modal-dialog mx-window  mx-window-active utx-session-expired"
+                style="opacity: 1; z-index: 1002; top: calc(50% - 141px); left: calc(50% - 300px);" data-focus-capturing="modal">
+                <div class="modal-content mx-window-content">
+                    <div class="modal-header mx-window-header" style="user-select: none; cursor: auto;">
+                        <h4>${text.title}</h4>
+                    </div>
+                    <div data-focusindex="0" class="modal-body mx-window-body">
+                        <div class="mx-scrollcontainer mx-scrollcontainer-horizontal mx-scrollcontainer-fixed"
+                            style="">
+                            <div class="mx-placeholder">
+                                <div class="" id="mxui_widget_Wrapper_21" style="display: contents !important;">
+                                    <div class="mx-name-layoutGrid1 mx-layoutgrid mx-layoutgrid-fluid container-fluid">
+                                        <h1 class="mx-title mx-name-pageTitle1">
+                                            ${text.title}
+                                        </h1>
+                                        <div>
+                                            ${text.message}
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="modal-footer mx-dialog-footer">
-                            <button type="button" class="btn mx-button mx-name-actionButton1 pull-right btn-primary"
-                                title="" data-button-id="2.SiemensInsightsHubWebContent.SessionExpired.actionButton1"
-                                data-disabled="false" onClick="location.reload()">${text.button}</button>
-                        </div>
+                    </div>
+                    <div class="modal-footer mx-dialog-footer">
+                        <button type="button" class="btn mx-button mx-name-actionButton1 pull-right btn-primary"
+                            title="" data-button-id="2.SiemensInsightsHubWebContent.SessionExpired.actionButton1"
+                            data-disabled="false" onClick="location.reload()">${text.button}</button>
                     </div>
                 </div>
-                <div class="mx-underlay" id="mxui_widget_Underlay_0" widgetid="mxui_widget_Underlay_0" style="z-index: 101;"></div>`
-                const body = document.getElementsByTagName('body')[0];
-                body.insertAdjacentHTML('afterbegin', sessionExpiredPopup);
-            };
+            </div>
+            <div class="mx-underlay" id="mxui_widget_Underlay_0" widgetid="mxui_widget_Underlay_0" style="z-index: 101;"></div>`
+            const body = document.getElementsByTagName('body')[0];
+            body.insertAdjacentHTML('afterbegin', sessionExpiredPopup);
+        };
 
-            // Read cookie below
-            function getCookie(name) {
-                match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
-                if (match) return match[2];
-                else return '';
-            }
-
-            var xrsfToken = getCookie('XSRF-TOKEN');
-            if (window.fetch) {
-                var originalFetch = window.fetch;
-                window.fetch = function (url, init) {
-                    if (!init) {
-                        init = {};
+        // Read cookie below
+        function getCookie(name) {
+            match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+            if (match) return match[2];
+            else return '';
+        }
+        var xrsfToken = getCookie('XSRF-TOKEN');
+        if (window.fetch) {
+            var originalFetch = window.fetch;
+            window.fetch = function (url, init) {
+                if (!init) {
+                    init = {};
+                }
+                if (!init.headers) {
+                    init.headers = new Headers();
+                }
+                var tokenAvailable =
+                    typeof init.headers.get === 'function'
+                        ? init.headers.get('x-xsrf-token')
+                        : init.headers.hasOwnProperty('x-xsrf-token');
+                if (!tokenAvailable) {
+                    if (typeof init.headers.set === 'function') {
+                        init.headers.set('x-xsrf-token', xrsfToken);
+                    } else {
+                        init.headers['x-xsrf-token'] = xrsfToken;
                     }
-                    if (!init.headers) {
-                        init.headers = new Headers();
-                    }
-                    var tokenAvailable =
-                        typeof init.headers.get === 'function'
-                            ? init.headers.get('x-xsrf-token')
-                            : init.headers.hasOwnProperty('x-xsrf-token');
-
-                    if (!tokenAvailable) {
-                        if (typeof init.headers.set === 'function') {
-                            init.headers.set('x-xsrf-token', xrsfToken);
-                        } else {
-                            init.headers['x-xsrf-token'] = xrsfToken;
-                        }
-                    }
-                    return new Promise((resolve, reject) => {
-                        // Change default redirect mode from "error" to "manual"
-                        // And handle "opaqueredirect" response type.
-                        init.redirect = "manual";
-                        originalFetch(url, init)
-                            .then(response => {
-                                if (response.type === "opaqueredirect") {
-                                    sessionExpiredReloadAppPopup();
-                                } else {
-                                    return resolve(response);
-                                }
-                            })
-                            .catch(e => {
-                                reject(e);
-                            });
-                    })
-                };
-            }
-            if (!window.fetch || (window.fetch && /Edge/.test(navigator.userAgent))) {
-                var originalXMLHttpRequest = window.XMLHttpRequest;
-                window.XMLHttpRequest = function () {
-                    var result = new originalXMLHttpRequest(arguments);
-
-                    // overwrite setRequestHeader function to make sure to set the x-xsrf-token only once
-                    result.setRequestHeader = function (header, value) {
-                        if (header) {
-                            if (header.toLowerCase().indexOf('x-xsrf-token') !== -1) {
-                                if (this.xsfrTokenSet === true) {
-                                    // token is already in place -> so do nothing
-                                    return;
-                                }
-                                this.xsfrTokenSet = true;
+                }
+                return new Promise((resolve, reject) => {
+                    // Change default redirect mode from "error" to "manual"
+                    // And handle "opaqueredirect" response type.
+                    init.redirect = "manual";
+                    originalFetch(url, init)
+                        .then(response => {
+                            if (response.type === "opaqueredirect") {
+                                sessionExpiredReloadAppPopup();
+                            } else {
+                                return resolve(response);
                             }
+                        })
+                        .catch(e => {
+                            reject(e);
+                        });
+                })
+            };
+        }
+        if (!window.fetch || (window.fetch && /Edge/.test(navigator.userAgent))) {
+            var originalXMLHttpRequest = window.XMLHttpRequest;
+            window.XMLHttpRequest = function () {
+                var result = new originalXMLHttpRequest(arguments);
+                // overwrite setRequestHeader function to make sure to set the x-xsrf-token only once
+                result.setRequestHeader = function (header, value) {
+                    if (header) {
+                        if (header.toLowerCase().indexOf('x-xsrf-token') !== -1) {
+                            if (this.xsfrTokenSet === true) {
+                                // token is already in place -> so do nothing
+                                return;
+                            }
+                            this.xsfrTokenSet = true;
                         }
-                        originalXMLHttpRequest.prototype.setRequestHeader.apply(this, arguments);
-                    };
-
-                    // overwrite open function to make sure to set the x-xsrf-token at least once
-                    result.open = function () {
-                        originalXMLHttpRequest.prototype.open.apply(this, arguments);
-
-                        this.setRequestHeader('x-xsrf-token', xrsfToken);
-                    };
-                    return result;
+                    }
+                    originalXMLHttpRequest.prototype.setRequestHeader.apply(this, arguments);
                 };
-            }
-        })();
-        // Insights Hub specific part-1: ends
+                // overwrite open function to make sure to set the x-xsrf-token at least once
+                result.open = function () {
+                    originalXMLHttpRequest.prototype.open.apply(this, arguments);
+                    this.setRequestHeader('x-xsrf-token', xrsfToken);
+                };
+                return result;
+            };
+        }
+    })();
+    // Insights Hub specific part-1: ends
 </script>
 ```
 

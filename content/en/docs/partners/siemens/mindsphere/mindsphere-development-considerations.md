@@ -9,7 +9,7 @@ tags: ["MindSphere", "Insights Hub", "Credentials", "Multi-Tenant", "Environment
 ## 1 Introduction
 
 {{% alert color="warning" %}}
-This information is for full integrated apps to Insights Hub. It does not apply to apps which are only calling Insights APIs.
+This information is for apps which are fully integrated apps into Insights Hub. It does not apply to apps which are only calling Insights APIs.
 {{% /alert %}}
 
 When developing a Mendix app which will be deployed to Insights Hub, there are a number of extra things you need to take into consideration. The following subjects are discussed below:

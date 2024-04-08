@@ -9,33 +9,33 @@ tags: ["MindSphere", "Insights Hub", "Credentials", "Multi-Tenant", "Environment
 ## 1 Introduction
 
 {{% alert color="warning" %}}
-This information is not for full integrated Insights Hub apps. It apply to apps which are only calling Insights APIs.
+This information is for apps which are fully integrated apps into Insights Hub. It does not apply to apps which are only calling Insights APIs.
 {{% /alert %}}
 
-In case you like your own user management or SSO solution, but likes to gather insights via the Insights Hub APIs, this chapter is describing how you can achieve it. This chapter is describing how you can authenticate Insights Hub API REST calls with the help of a **Technical User** and the **Siemens Insights Hub API Authenticator**.
-Please note that this way is not a fully integration within Insights Hub and have the following limitations:
+If you have your own user management or SSO solution, but want to gather insights via the Insights Hub APIs, this page explains how you can achieve it. It describes how you can authenticate Insights Hub API REST calls with the help of a **Technical User** and the **Siemens Insights Hub API Authenticator**.
+Please note that this way is not a full integration with Insights Hub and has the following limitations:
 
 * You cannot make your app multi-tenant – see [Multi-tenancy](/partners/siemens/mindsphere-development-considerations/#multitenancy) in *Insights Hub Development Considerations* for more information on multi-tenancy
 * Your app cannot be deployed to the Insights Hub platform and cannot be added to the Insights Hub Developer Cockpit
 * End-users cannot use Insights Hub credentials to sign in to your app, so Insights Hub does not know anything about individual app end-users — you must design your app to handle any required security for each end-user
-* It is not possible to use the fine grain access control on asset level via SDS.
+* You cannot use the fine grain access control on asset level via SDS.
 
-If you prefer a full Insights Hub app, please see [Insights Hub Development Considerations](/partners/siemens/mindsphere-development-considerations/), [Insights Hub Module Details](/partners/siemens/mindsphere-module-details/) or execute on of the following learning paths:
+If you prefer a full Insights Hub app, please see [Insights Hub Development Considerations](/partners/siemens/mindsphere-development-considerations/), [Insights Hub Module Details](/partners/siemens/mindsphere-module-details/) or follow the following learning paths:
 
 * [Build an Insights Hub app with Mendix](https://academy.mendix.com/link/path/80/Build-a-MindSphere-app-with-Mendix) - this learning path will teach you how to develop an app for Insights Hub with Mendix
 * [Build an Insights Hub App - Continued](https://academy.mendix.com/link/path/93/Build-a-MindSphere-App---Continued) - this learning path is for everyone who wants to dive more deeply into how to build an Insights Hub App with the Mendix Platform
 
 ## 2 Technical User
 
-If your application is not fully integrated within Insights Hub and is using its own user management the signed in users has no *rights* to call Insights Hub APIs. For this scenario Insights Hub is providing so called **Technical Users**. An Insights Hub tenant administrator is able to create an technical user in the **Insights Hub Settings** app.
-Please follow the steps described in [Technical Users](https://documentation.mindsphere.io/MindSphere/apps/settings/technical-users.html) to create a **Technical User**. Please make sure the created Technical User has the role assignment needed to call the desired Insights Hub APIs.
+If your application is not fully integrated with Insights Hub and is using its own user management the signed in users have no rights to call Insights Hub APIs. In this scenario, Insights Hub is providing so called **Technical Users**. An Insights Hub tenant administrator is able to create a technical user in the **Insights Hub Settings** app.
 
+Please follow the steps described in the Insights Hub documentation [Technical Users](https://documentation.mindsphere.io/MindSphere/apps/settings/technical-users.html) to create a **Technical User**. Please make sure the created Technical User has the role assignment needed to call the desired Insights Hub APIs.
 
 ## 3 Authenticating Calls to Insights Hub APIs
 
 To extract data from Insights Hub, your calls to the Insights Hub APIs need to be authenticated. This is done through the [Siemens Insights Hub API Authenticator](https://marketplace.mendix.com/link/component/????).
 
-Download the **Siemens Insights Hub API Authenticator** by following the instructions [Downloading Content from the Marketplace](/appstore/overview/use-content/#downloading) in the document *Using Marketplace Content*.
+Download the **Siemens Insights Hub API Authenticator** by following the instructions [Downloading Content from the Marketplace](/appstore/overview/use-content/#downloading) in *Using Marketplace Content*.
 
 In the **_Use me** folder of the *SiemensInsightsHubAPIAuthenticator* module set the following constants:
 
@@ -103,6 +103,6 @@ If you want to use the [Siemens Insights Hub Widgets](https://marketplace.mendix
 To enable this, you will have to do two things:
 
 1. Ensure that the constant **EnableMindSphereApiReverseProxy** is set to *true* to ensure this can happen.
-2. Add the microflow **Register ApiReverseProxy** to the [After Startup](/refguide/app-settings/#after-startup) microflow (or microflows) which are run when the app is started.
+2. Add the microflow **RegisterApiReverseProxy** to the [After Startup](/refguide/app-settings/#after-startup) microflow (or microflows) which are run when the app is started.
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-api-only/AfterStartup.png" alt="AfterStartup" >}}

@@ -11,28 +11,37 @@ no_list: true
 
 ## 1 Introduction
 
-The **Software Composition** page provides you with an overview of the composition of your deployment packages and helps you reduce the security vulnerabilities for them. On this page, you can see all the components that a deployment package contains and where a component is used.
+From the **Software Composition** page in the Developer Portal, you can drill down and view the components of each app environment. Besides, you can view the usage of components across your deployed packages under [All Components](#all-components), where standard marketplace modules, widgets, java libraries, and Mendix runtime version are available. In the event when a security vulnerability is detected, [Component Usage](#component-usage) can help you assess the impact radius and take action accordingly.
 
-{{% alert color="info" %}}Make sure you are on a compatible Mendix version. Component details and related actions are only available for deployment packages made with Mendix [10.5.0](/releasenotes/studio-pro/10.5/) or above when they are deployed to Mendix Cloud or Cloud Dedicated. Upgrade to one of these versions to see component information reflected on this page. {{% /alert %}}
+Make sure that you meet the following prerequisites:
 
-The page contains two tabs: [Overview](#overview) and [All Components](#all-components).
+* Component details and related actions are only available for apps made with Mendix versions [9.24.14](/releasenotes/studio-pro/9.24/#92414) and above or Mendix versions [10.5.0](/releasenotes/studio-pro/10.5/#1050) and above when they are deployed to Mendix Cloud or Cloud Dedicated. Make sure that you upgrade to one of these versions to see component information reflected on this page.
+* You have to create and deploy new deployment packages in order to get the software composition information populated on this page. For more information, see the [How Components Are Identified](#how-components-are-identified) section.
+
+### 1.1 How Components Are Identified {#how-components-are-identified}
+
+Components are identified in the following manner:
+
+First, when a new deployment package is created via the Developer Portal with the compatible Mendix Runtime version, a software bill of material (SBOM) is generated along with it. The log details can be viewed by clicking **View build output** in the deployment package details in the Developer Portal.
+
+Then, when this deployment package is deployed to an environment, the information about the components becomes available on the **Software Composition** page in the Developer Portal.
 
 ## 2 Overview {#overview}
 
-The **Overview** tab shows a list of all the deployment packages.
+On the **Overview** tab, you can see a list of all the deployed packages and their environments.
 
-Above the list, you can use the search box to search for a deployment package. Next to the search box, you can filter deployment packages by selecting the Mendix Runtime version. You can click {{% icon name="office-sheet" %}}**Export all to Excel** on the right side above the list to export all the information in the list to an Excel file.
+Above the list, you can use the search box to search for information in the list. Next to the search box, you can filter apps by selecting the environment type or the Mendix Runtime version. You can click {{% icon name="office-sheet" %}}**Export all** on the right side above the list to export all the information in the list to an Excel file.
 
 The list contains the following information:
 
-* **Deployment Package**: This is the name of the deployment package.
-* **Production**: This shows whether the deployment package is deployed in the production environment.
-* **Environment**: This is the name of the environment where the deployment package is deployed.
-* **Runtime**: This shows the Mendix Runtime version.
-* **Target Cloud**: This shows the type of the cloud where the deployment package is deployed.
+* **Deployment Package**: This is the name of the deployment package. Click this opens the [Deployment Package Summary](#deployment-package-summary) page, if it is available.
 * **Technical Contact**: This shows the Technical Contact of the app.
+* **Environment**: This is the name of the environment.
+* **Production**: This shows whether the deployment package is deployed in the production environment.
+* **Runtime**: This shows the Mendix Runtime version.
+* **Version**: This shows the version of the deployment package on this app environment.
+* **Action**: Clicking the {{% icon name="move-down" %}} icon to download the software bill of materials.
 * {{% icon name="view" %}}: You can customize the columns of the list by clicking the {{% icon name="view" %}} icon and adjusting the selection of the check boxes.
-* **View details**: Click this opens the [Deployment Package Summary](#deployment-package-summary) page.
 
 To export the information of selected items in the list to an Excel file, select the check boxes of the items in the list, and then click {{% icon name="office-sheet" %}}**Selection Export to Excel** that appears at the bottom of the page.
 
@@ -40,24 +49,15 @@ To export the information of selected items in the list to an Excel file, select
 
 On the **Overview** tab, if you click **View Details** for a deployment package in the list, the **Deployment Package Summary** page opens. 
 
-On the top of the page, you can find the name of the deployment package, whether the deployment package is deployed in the production environment, the environment name, the Mendix Runtime version, the name of the Technical Contact, the type of the cloud where the deployment package is deployed, and the version of the deployment package.
+On the top of the page, you can find the name of the deployment package, the environment name, the Mendix Runtime version, the Technical Contact, the Mendix Runtime version, the version of the deployment package, and whether the deployment package is deployed in a product environment.
 
-On the upper-right corner of the page, you can click {{% icon name="download-bottom" %}}**SBOM** to download the software bill of materials (SBOM).
-
-Above the list, you can use the search box to search for a component. Next to the search box, you can filter components by selecting the component type. You can click {{% icon name="office-sheet" %}}**Export all to Excel** on the right side above the list to export all the information in the list to an Excel file.
-
-The list shows all the components used in the deployment package, with the following information: 
-
-* **Component**: This is the component name.
-* **Version**: This is the version of the component used in the deployment package.
-* **Type**: This shows the type of the component.
-* {{% icon name="view" %}}: You can customize the columns of the list by clicking the {{% icon name="view" %}} icon and adjusting the selection of the check boxes.
-
-To export the information of selected items in the list to an Excel file, select the check boxes of the items in the list, and then click {{% icon name="office-sheet" %}}**Selection Export to Excel** that appears at the bottom of the page.
+For details on the information in the list and how to search, filter, and export information in the list, see the [All Components](#all-components) section.
 
 ## 3 All Components {#all-components}
 
 The **All Components** tab gives an overview of all the components used across your deployment packages. 
+
+{{% alert color="info" %}}This only includes the newly-created apps for which a deployment package and hence a software bill of materials is available.{{% /alert %}}
 
 Above the list, you can use the search box to search for a component. Next to the search box, you can filter components by selecting the component type. You can click {{% icon name="office-sheet" %}}**Export all to Excel** on the right side above the list to export all the information in the list to an Excel file.
 
@@ -73,18 +73,8 @@ To export the information of selected items in the list to an Excel file, select
 
 ### 3.1 Component Usage {#component-usage}
 
-On the **All Components** tab, if you click **View details** for an item, the **Component Usage** page opens.
+On the **All Components** tab, if you click **View details** for an item, the **Component Usage** page opens. This page lists the environments where the selected component is being used. If a security vulnerabilities is found in one of the components, then the component usage tab can be used to assess the impact radius. The relevant Technical Contacts can be informed to take the necessary remediation actions.
 
 On the top of the page, you can find the component name, the component version, and the component type. 
 
-Above the list, you can use the search box to search for an environment. You can click {{% icon name="office-sheet" %}}**Export all to Excel** on the right side above the list to export all the information in the list to an Excel file.
-
-The list shows all the environment where the deployment package containing the component is deployed, with the following information: 
-
-* **Environment**: This is the name of the environment where the deployment package is deployed.
-* **Production**: This shows whether the deployment package is deployed in the production environment.
-* **Runtime**: This shows the Mendix Runtime version.
-* **Version**: This shows the version of the component that is used.
-* {{% icon name="view" %}}:  You can customize the columns in the list by clicking the {{% icon name="view" %}} icon and adjusting the selection of the check boxes.
-
-To export the information of selected items in the list to an Excel file, select the check boxes of the items in the list, and then click {{% icon name="office-sheet" %}}**Selection Export to Excel** that appears at the bottom of the page.
+For details on the information in the list and how to search, filter, and export information in the list, see the [Overview](#overview) section.

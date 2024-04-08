@@ -176,7 +176,7 @@ This enumerration provides a list of possible chunk types. Currently two types a
 
 | Name         | Caption         | Description                |
 | ------------ | --------------- | -------------------------- |
-| `Knowledge`  | **Knowledge**   | Only one a single text (`Key` of [Chunk](#chunk)) is relevant for both the similarity search and the processing steps afterwards. |
+| `Knowledge`  | **Knowledge**   | One a single text (`Key` of [Chunk](#chunk)) is relevant for both the similarity search and the processing steps afterwards. |
 | `KeyValue`   | **KeyValue**    | The functionally relevant information after retrieval is different (`Value` of [Chunk](#chunk)) from the text based on which the embedding was generated (`Key` of [Chunk](#chunk)) |
 
 ### 4.3 Activities {#activities} 

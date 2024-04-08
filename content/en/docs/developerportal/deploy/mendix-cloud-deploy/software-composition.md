@@ -55,13 +55,13 @@ The list contains the following information:
 * **Version**: This shows the version of the deployment package on this app environment.
 * **Action**: Clicking the {{% icon name="download-bottom" %}} icon to download the software bill of materials (SBOM). For more information, see [Downloading the Software Bill of Materials](#download-software-bill-of-materials).
 * Column customization ({{% icon name="view" %}}): You can customize the columns of the list by clicking the {{% icon name="view" %}} icon and adjusting the selection of the check boxes.
-* **View details**: Click this opens the [Deployment Package Summary](#deployment-package-summary) page, if it is available.
+* **View details**: Click this opens the [Component Summary](#component-summary) page, if it is available.
 
 To export the information of selected items in the list to an Excel file, select the check boxes of the items in the list, and then click {{% icon name="office-sheet" %}}**Selection Export to Excel** that appears at the bottom of the page.
 
-### 2.1 Deployment Package Summary {#deployment-package-summary}
+### 2.1 Component Summary {#component-summary}
 
-On the **Overview** tab, if you click **View Details** for a deployment package in the list, the **Deployment Package Summary** page opens. 
+ the **Overview** tab, if you click **View Details** for a deployment package in the list, the **Component Summary** page opens. 
 
 On the top of the page, you can find the name of the deployment package, the environment name, the Mendix Runtime version, the Technical Contact, the Mendix Runtime version, the version of the deployment package, and whether the deployment package is deployed in a product environment.
 

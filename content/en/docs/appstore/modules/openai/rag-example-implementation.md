@@ -82,7 +82,7 @@ If you would like to build your own RAG setup, feel free to learn from the OpenA
 
 * For RAG, you need a storage space for high-dimensional embedding vectors outside of your normal Mendix app database. Typically, this is a remote vector database. In order to connect to it, the OpenAI showcase application uses the Mendix database connector. See [Vector Database Setup](/appstore/modules/pgvector-knowledge-base/vector-database-setup/) for more details.
 
-* The OpenAI showcase application relies on a PostgreSQL database with the pgvector extension included. In such a setup you can similarly rely on the PgVector Knowledge Base module to take care of creating and executing the right queries. If you choose to use a different type of vector database, the database queries and statements, which you will have to perform, should cover at least the following:
+* The OpenAI showcase application relies on a PostgreSQL database with the pgvector extension included. In such a setup you can similarly rely on the [PgVector Knowledge Base module](/appstore/modules/pgvector-knowledge-base/) to take care of creating and executing the right queries. If you choose to use a different type of vector database, the database queries and statements, which you will have to perform, should cover at least the following:
     * Include the vector extension if applicable for the chosen database type (create extension).
     
     * Create tables to store the embedding vectors (create table).
@@ -93,7 +93,7 @@ If you would like to build your own RAG setup, feel free to learn from the OpenA
     
     * Remove individual records (delete) or tables (drop table).
 
-{{% alert color="info" %}}Example queries in the form of SQL statements are available for inspiration in the source code of the PgVector Knowledge Base module which comes automatically with OpenAI showcase application.{{% /alert %}}
+{{% alert color="info" %}}Example queries in the form of SQL statements are available for inspiration in the source code of the [PgVector Knowledge Base module](/appstore/modules/pgvector-knowledge-base/) which comes automatically with OpenAI showcase application.{{% /alert %}}
 
 ## 5 Read More {#read-more}
 

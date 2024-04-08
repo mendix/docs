@@ -40,12 +40,27 @@ The list contains the following information:
 * **Production**: This shows whether the deployment package is deployed in the production environment.
 * **Runtime**: This shows the Mendix Runtime version.
 * **Version**: This shows the version of the deployment package on this app environment.
-* **Action**: Clicking the {{% icon name="move-down" %}} icon to download the software bill of materials.
+* **Action**: Clicking the {{% icon name="download-bottom" %}} icon to download the software bill of materials (SBOM). For more information, see [Downloading the Software Bill of Materials](#download-software-bill-of-materials).
 * {{% icon name="view" %}}: You can customize the columns of the list by clicking the {{% icon name="view" %}} icon and adjusting the selection of the check boxes.
 
 To export the information of selected items in the list to an Excel file, select the check boxes of the items in the list, and then click {{% icon name="office-sheet" %}}**Selection Export to Excel** that appears at the bottom of the page.
 
-### 2.1 Deployment Package Summary {#deployment-package-summary}
+### 2.1 Downloading the Software Bill of Materials {#download-software-bill-of-materials}
+
+A software bill of materials is a vehicle to share information on the inventory of a software component. It contains a description about the Mendix app and the components (dependencies) put into it. 
+
+{{% alert color="info" %}}The software bill of materials for all the components is stored in the `vendorlib-sbom.json` file in the `vendorlib` library in the app directory. For more information, see the [Dependency Synchronization](/refguide/managed-dependencies/#dependency-synchronization) section in *Managed Dependencies*.{{% /alert %}}
+
+In the list on the **Overview** tab, you can click {{% icon name="download-bottom" %}} icon in the **Action** column to download the software bill of materials (SBOM). The current version of the SBOM contains standard marketplace modules, widgets, java libraries, and the Mendix runtime version. The SBOM is a *.json* file in the CycloneDX format.
+
+Currently, the SBOM has the following known limitations:
+
+* Add-on modules, solution modules, solutions, and npms are not available as SBOM components currently. This will be improved in future versions.
+* Components which are not imported via the Marketplace are not visible in the SBOM.
+* The metadata of private Marketplace components and the metadata of widgets imported as a part of a module are limited.
+* No dependency information between components is available in the SBOM, except for the java dependencies available for SBOMs created from Studio Pro versions 10.5.0 and above.
+
+### 2.2 Deployment Package Summary {#deployment-package-summary}
 
 On the **Overview** tab, if you click **View Details** for a deployment package in the list, the **Deployment Package Summary** page opens. 
 

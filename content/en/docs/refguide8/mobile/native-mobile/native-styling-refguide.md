@@ -753,6 +753,7 @@ The floating action button widget lets you customize the appearance and function
 | `button` | This has all ViewStyle properties.  |  |
 | `button` | `size` | This is the radius of the button. |
 | `button` | `rippleColor` | This is the color of the ripple on Android. |
+| `buttonContainer` | This has all ViewStyle properties.  |  |
 | `buttonIcon` | This has all ImageStyle properties. |  |
 | `secondaryButton` | This has all ViewStyle properties.  |  |
 | `secondaryButton` | `size` | This is the radius of the secondary buttons. |

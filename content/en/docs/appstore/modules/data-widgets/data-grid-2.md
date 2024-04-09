@@ -103,6 +103,10 @@ You can configure pagination based on the following properties:
 
 The **Virtual Scrolling** option forces the data grid to show a fixed amount of items (defined in the page size option) within a scrollable container. When the end-user reaches the bottom of the scrollable container it fetches more items automatically.
 
+### 3.3 Load more
+
+This option functions similarly to the **Virtual Scrolling** feature, with the distinction that instead of automatically loading data as the end-user scrolls, a button is displayed at the end of the list of items. Clicking this button enables the end-user to fetch more items.
+
 ## 4 Columns
 
 In Data Grid you can choose what you want to render into columns. This can be an attribute, dynamic text, or even a combination of widgets (custom content). To choose what you want to render, open a column in the column list and select the appropriate option according to your needs.

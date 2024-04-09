@@ -88,6 +88,8 @@ In the import mapping sidebar, you can configure which Teamcenter properties, re
 
 The import mapping sidebar shows all properties, references, and relations for the configured Teamcenter object. Depending on the use case, each one of them is accompanied with checkboxes to configure which of these you want to include when retrieving data from or creating data in Teamcenter.
 
+![image](https://github.com/mwbouwkamp-mendix/mendix-docs/assets/157635704/9b1eb260-774b-4603-a18b-2b4faa6fb4f9)
+
 You will often see that checkboxes are checked by default and/or disabled. In general, the following rules apply. 
 1.	Properties that are already available on the Mendix entity or one of its generalizations are checked by default and cannot be unchecked.
 2.	Properties, references, and relations for Marketplace entities are disabled by default as it is not good practice to change Mendix marketplace content.
@@ -135,10 +137,8 @@ The Get Workspace Objects [[action]] allows you to configure and generate a micr
 ### 4.3 Create Item and Item Revision
 The Create Item and Item Revision [[action]] allows you to configure and generate a microflow and domain model to create item and item revision objects in Teamcenter
 
-
 ### 4.4 Update Item and Item Revision
 The Update Item and Item Revision [[action]] allows you to configure and generate a microflow and domain model to update attributes of existing item and item revision objects in Teamcenter
-
 
 ### 4.5 Revise Item Revision
 The Revise Item and Item Revision [[action]] allows you to configure and generate a microflow and domain model to revise item revisions in Teamcenter

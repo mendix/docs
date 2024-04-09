@@ -8,11 +8,11 @@ tags: ["pgvector", "postgreSQL", "similarity search", "cosine similarity", "cosi
 
 ## 1 Introduction {#introduction}
 
-The [PgVector Knowledge Base module](https://marketplace.mendix.com/link/component/225063) contains operations to interact with a PostgreSQL database that has the [pgvector](https://github.com/pgvector/pgvector?tab=readme-ov-file#pgvector) extension installed. It allows you to easily store vectors and perform cosine similarity calculations from your Mendix app. This way you can leverage knowledge bases to make your apps smarter by performing operations based on (embedding) vectors and vector similarity. In the context of generative AI, Large Language Models (LLM) and embeddings, this is a key component in natural language processing (NLP) patterns such as Retrieval Augmented Generation (RAG), recommendation algorithms and similarity search operations.
+The [PgVector Knowledge Base module](https://marketplace.mendix.com/link/component/225063) contains operations to interact with a PostgreSQL database that has the [pgvector](https://github.com/pgvector/pgvector?tab=readme-ov-file#pgvector) extension installed. It allows you to easily store vectors and perform cosine similarity calculations from your Mendix app. This way you can leverage knowledge bases to make your apps smarter by performing operations based on (embedding) vectors and vector similarity. In the context of generative AI, Large Language Models (LLM), and embeddings, this is a key component in natural language processing (NLP) patterns such as Retrieval Augmented Generation (RAG), recommendation algorithms, and similarity search operations.
 
 ### 1.1 Typical Use Cases {#use-cases}
 
-This module is typically powerful in scenarios in which Mendix apps leverage the capabilities of LLMs in the context of generative AI where private (company) data needs to be included in the app logic (e.g., when constructing prompts). In cases where there is a need for a separate private knowledge base outside of the LLM infrastructure, this module provides a low-code way to store data chunks in the private knowledge base, and execute on-demand retrieval of relevant information for end-user actions or app processes.
+This module is typically powerful in scenarios in which Mendix apps leverage the capabilities of LLMs in the context of generative AI where private (company) data needs to be included in the app logic (e.g., when constructing prompts). In cases where there is a need for a separate private knowledge base outside of the LLM infrastructure, this module provides a low-code way to store data chunks in the private knowledge base and execute on-demand retrieval of relevant information for end-user actions or app processes.
 
 {{% alert color="info" %}}
 Check out the [OpenAI showcase app](https://marketplace.mendix.com/link/component/220475) for example implementations that covers Retrieval Augmented Generation and Semantic Search with knowledge bases.
@@ -20,11 +20,11 @@ Check out the [OpenAI showcase app](https://marketplace.mendix.com/link/componen
 
 #### 1.1.1 Retrieval Augmented Generation {#use-cases-rag}
 
-A common NLP-pattern is Retrieval Augmented Generation (RAG), where the goal is to have Large Language Models construct answers to questions or provide on-demand information about private knowledge base data. In order to make this work, discrete pieces of information from the knowledge base are sent along with user questions to the LLM. The retrieval operations from this module are designed for this step in such use cases.
+A common NLP-pattern is Retrieval Augmented Generation (RAG), where the goal is to have LLMs construct answers to questions or provide on-demand information about private knowledge base data. In order to make this work, discrete pieces of information from the knowledge base are sent along with user questions to the LLM. The retrieval operations from this module are designed for this step in such use cases.
 
 #### 1.1.2 Semantic search {#use-cases-semmantic-search}
 
-Also without invoking LLMs directly with the retrieved information, the similarity search logic from the retrieval operation can be leveraged in combination with embedding models to create a semantic search in a Mendix app. This can be used for fuzzy search capabilities, suggestions or simple recommendation systems.
+Also without invoking LLMs directly with the retrieved information, the similarity search logic from the retrieval operation can be leveraged in combination with embedding models to create a semantic search in a Mendix app. This can be used for fuzzy search capabilities, suggestions, or simple recommendation systems.
 
 ### 1.2 Features {#features}
 
@@ -32,7 +32,7 @@ With the current version, Mendix supports inserting data chunks with their vecto
 
 ### 1.3 Limitations {#limitations}
 
-The current scope of the module is focused around (re)populating knowledge bases as a whole in one single operation. Deleting, adding or updating individual knowledge base items is not yet supported. 
+The current scope of the module is focused around (re)populating knowledge bases as a whole in one single operation. Deleting, adding, or updating individual knowledge base items is not yet supported. 
 
 ### 1.4 Prerequisites {#prerequisites}
 
@@ -55,7 +55,7 @@ After you install the PgVector Knowledge Base module, you can find it in the **A
 
 ### 3.1 General Configuration {#general-configuration}
 
-1. Add the module role **PgVectorKnowledgeBase.Administrator** to your Administrator user role in the security settings of your app. Optionally, map **PgVectorKnowledgeBase.User** to any user roles that need read access directly on retrieved entities, [Chunk](#4121-chunk-chunk) and [Label](#4122-label-label).
+1. Add the module role **PgVectorKnowledgeBase.Administrator** to your Administrator user role in the security settings of your app. Optionally, map **PgVectorKnowledgeBase.User** to any user roles that need read access directly on retrieved entities, [Chunk](#chunk) and [Label](#label).
 2. Add the **DatabaseConfiguration_Overview** page (**USE_ME > Configuration**) to your navigation or add the **Snippet_DatabaseConfigurations** to a page that is already part of your navigation. 
 3. Now you can set up your database configuration(s) at runtime. See [Configuring the database connection details](/appstore/modules/pgvector-knowledge-base/vector-database-setup/#configure-database-connection) for more information.
 
@@ -95,7 +95,7 @@ The population handles a whole list of Chunks at once which should be created by
 
 ### 3.4 Retrieve operations {#retrieve-operations}
 
-Currently, two operations are available for on-demand retrieval of data chunks from a knowlege base. Both operations work on a single knowledge base (specified by the name) on a single database server (specified by the [DatabaseConfiguration](#databaseconfiguration-entity)). Apart from a regular [Retrieve](#retrieve), an additional operation was exposed to [Retrieve Nearest Neighbors]($retrieve-nearest-neighbors), where the cosine distance between the input vector and the vectors of the records in the knowledge base is calculated. In both cases it is possible to filter on [Labels](#create-label).
+Currently, two operations are available for on-demand retrieval of data chunks from a knowlege base. Both operations work on a single knowledge base (specified by the name) on a single database server (specified by the [DatabaseConfiguration](#databaseconfiguration-entity)). Apart from a regular [Retrieve](#retrieve), an additional operation was exposed to [Retrieve Nearest Neighbors](#retrieve-nearest-neighbors), where the cosine distance between the input vector and the vectors of the records in the knowledge base is calculated. In both cases it is possible to filter on [Labels](#create-label).
 
 A typical pattern for retrieval from a knowledge base is:
 
@@ -242,9 +242,9 @@ The `(Re)populate Knowledge Base` activity is used to populate a whole knowledge
 
 | Name                | Type                                    | Mandatory | Description                                           |
 | ------------------- | --------------------------------------- | --------- | ----------------------------------------------------- |
-| `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the name of the knowledge base in your database.
+| `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the name of the knowledge base in your database.|
 | `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is to connect and authenticate to the database where the knowledge base is located.  |
-| `ChunkList`          | List of [Chunks](#chunk)                                                    | mandatory | This list is for inserting the [Chunks'](#chunks) data into the knowledge base. |
+| `ChunkList`          | List of [Chunks](#chunk)                                                    | mandatory | This list is for inserting the [Chunks'](#chunk) data into the knowledge base. |
 
 **Return value**
 

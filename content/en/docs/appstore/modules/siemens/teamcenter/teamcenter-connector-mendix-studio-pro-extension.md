@@ -20,7 +20,7 @@ In version 1.0.0, the extension will allow you to build Mendix artifacts for the
 3.	Create Item and Item Revisions in Teamcenter
 4.	Update Item and Item Revisions in Teamcenter
 5.	Revise Item Revision in Teamcenter
-6.	Get BOM structures from Teamcenter
+6.	Get BOM structures from Teamcenter (BETA?)
 
 More details and typical user journeys for each use case is provided in the [[Use Cases]] section below.
 
@@ -42,20 +42,18 @@ The Menu tab displays use cases or actions you can create artifacts for, using t
 
 ![image](https://github.com/mwbouwkamp-mendix/mendix-docs/assets/157635704/054f8938-44a7-43c0-a1ce-76e54cf2a813)
 
-![image](https://github.com/mwbouwkamp-mendix/mendix-docs/assets/157635704/67dc5e98-9596-4a2c-8699-1a3a71b61d19)
-
 ## 3 Teamcenter Configuration
 Provide your Teamcenter Instance details in the Teamcenter Configuration page. Click on Edit to open a panel to enter details. The certificate path should be relative to the App Directory
+
+![image](https://github.com/mwbouwkamp-mendix/mendix-docs/assets/157635704/67dc5e98-9596-4a2c-8699-1a3a71b61d19)
 
 ## 4 Import mapping
 
 Clicking on any [[action]] opens th import mapping page. Here you can define what data you want to retrieve from Teamcenter and how to handle this data in Mendix. Depending on the [[action]], the import mapping page starts with one or multiple entities/objects to configure, one per business object that need to be configured. 
 
-[[Screenshot of empty object mapping page]]
+![image](https://github.com/mwbouwkamp-mendix/mendix-docs/assets/157635704/c6613da8-177c-49e1-ae4f-f97edc1c7d6e)
 
-During configuration, the import mapping page will build up a preview of the Mendix domain model involved in the integration. In addition, the import mapping page shows the corresponding business objects on the Teamcenter side. For this, the Teamcenter Connector Extension displays the display names of the objects and their properties, references and relations.
-
-[[Screenshot of completed object mapping page]]
+During configuration, the import mapping page will build up a preview of the Mendix domain model involved in the integration. In addition, the import mapping page shows the corresponding business objects on the Teamcenter side. For this, the Teamcenter Extension displays the display names of the objects and their properties, references and relations.
 
 In the Teamcenter extension, the import mapping consists of two steps:
 1. Object mapping: As Teamcenter works with many layers of specializations of its business objects, in the import mapping page, you need to configure which object type you want to retrieve from Teamcenter and what Mendix objects need to be created, when retrieving these business objects. This is called Object mapping.
@@ -69,7 +67,8 @@ The object mapping dialog shows, on the left side, a tree of all relevant busine
 
 Relevance is dependent on the [[action]] you are configuring. For example, for the [[action]] to get ItemRevisions from Teamcenter, the Teamcenter tree has an ItemRevision as its root object. That means that, for this action, you can only select ItemRevisions or specializations thereof. Similarly, in this example, the Mendix tree has the TcConnector.ItemRevision entity as its root entity.
 
-[[Screenshot of object mapping for ItemRevision]]
+![image](https://github.com/mwbouwkamp-mendix/mendix-docs/assets/157635704/ea1e86ce-0a19-4c9c-8592-eddbe9b78d24)
+
 
 When retrieving a tree of objects, relevance can also be based on the type of relation/reference. When working with typed relations/references, the type of Teamcenter business object is dictated by the relation/reference.
 
@@ -79,7 +78,7 @@ To configure which type of Teamcenter business object you are interested in and 
 
 It is also possible to create new entities for your integrations. This new entity needs to be a specialization of the root entity in the Mendix tree or one of its specializations. When you want to use a new entity, click your generalization of choice, click the Create new specialization of selected entity checkbox and provide an entity name. Now, once finishing the configuration for the [[action]], the Teamcenter extension will create a new entity with the given name and the selected entity as its generalization.
 
-[[Screenshot of object mapping with new specialization]]
+![image](https://github.com/mwbouwkamp-mendix/mendix-docs/assets/157635704/e3783a0c-fbd8-474e-ba67-b1d6723f3927)
 
 Once you click OK, you return to the import mapping tab with a sidebar opened to configure which Teamcenter properties, references, and relations to include when retrieving data for this business object.
 

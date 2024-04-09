@@ -22,7 +22,7 @@ Check out the [OpenAI showcase app](https://marketplace.mendix.com/link/componen
 
 A common NLP-pattern is Retrieval Augmented Generation (RAG), where the goal is to have LLMs construct answers to questions or provide on-demand information about private knowledge base data. In order to make this work, discrete pieces of information from the knowledge base are sent along with user questions to the LLM. The retrieval operations from this module are designed for this step in such use cases.
 
-#### 1.1.2 Semantic search {#use-cases-semmantic-search}
+#### 1.1.2 Semantic Search {#use-cases-semmantic-search}
 
 Also without invoking LLMs directly with the retrieved information, the similarity search logic from the retrieval operation can be leveraged in combination with embedding models to create a semantic search in a Mendix app. This can be used for fuzzy search capabilities, suggestions, or simple recommendation systems.
 
@@ -59,7 +59,7 @@ After you install the PgVector Knowledge Base module, you can find it in the **A
 2. Add the **DatabaseConfiguration_Overview** page (**USE_ME > Configuration**) to your navigation or add the **Snippet_DatabaseConfigurations** to a page that is already part of your navigation. 
 3. Now you can set up your database configuration(s) at runtime. See [Configuring the database connection details](/appstore/modules/pgvector-knowledge-base/vector-database-setup/#configure-database-connection) for more information.
 
-### 3.2 General operations {#general-operations-configuration} 
+### 3.2 General Operations {#general-operations-configuration} 
 
 After following the general setup above, you are all set to use the microflows and java actions in the **USE_ME > Operations** folder in your logic. Currently five operations (microflows and java actions) are exposed as microflow actions under the **PgVector Knowledge Base** category in the **Toolbox** in Mendix Studio Pro. These can be split into two categories, corresponding to the main functionalities: inserting data chunks into the knowledge base, for instance [(re)populate](#repopulate-knowledge-base), and finding relevant data chunks in an existing knowledge base, for example [retrieve](#retrieve). In both steps, [Labels](#label) can be provided to enable additional filtering.
 
@@ -70,7 +70,7 @@ Labels can optionally be used to attach additional information to chunks, that w
 * Status: Open, Closed, In Progress
 * Machine Type: MachineX, MachineY
 
-### 3.3 (Re)populate operations {#repopulate-operations-configuration}
+### 3.3 (Re)populate Operations {#repopulate-operations-configuration}
 
 In order to add data to the knowledge base, you need to have discrete pieces of information and create chunks for those using the `Create Chunk` operation. After creating the Chunks, the resulting list can be inserted into the knowledge base using the `(Re)populate Knowledge Base` operation. 
 
@@ -93,7 +93,7 @@ This operation handles the following:
 The population handles a whole list of Chunks at once which should be created by using the `Create Chunk` operation. It is possible to have multiple knowledge bases in the same database in parallel by providing different knowledge base names in combination with the same [DatabaseConfiguration](#databaseconfiguration-entity).
 
 
-### 3.4 Retrieve operations {#retrieve-operations}
+### 3.4 Retrieve Operations {#retrieve-operations}
 
 Currently, two operations are available for on-demand retrieval of data chunks from a knowlege base. Both operations work on a single knowledge base (specified by the name) on a single database server (specified by the [DatabaseConfiguration](#databaseconfiguration-entity)). Apart from a regular [Retrieve](#retrieve), an additional operation was exposed to [Retrieve Nearest Neighbors](#retrieve-nearest-neighbors), where the cosine distance between the input vector and the vectors of the records in the knowledge base is calculated. In both cases it is possible to filter on [Labels](#create-label).
 
@@ -143,7 +143,7 @@ This non-persistent entity is only used for editing the `DatabasePassword`. The 
 | --------- | ---------------------------------------------------- |
 | `Password`  | This is the (unencrypted) password used by the runtime to authenticate towards your knowledge base database. |
 
-#### 4.1.2 Knowledge Base interaction {#knowledgebase-domain-model}
+#### 4.1.2 Knowledge Base Interaction {#knowledgebase-domain-model}
 
 {{< figure src="/attachments/appstore/modules/pgvector-knowledge-base/domain-model-knowledge-base-interaction.png" class="image-border" >}}
 
@@ -197,11 +197,11 @@ This enumerration provides a list of possible chunk types. Currently two types a
 
 Activities define the actions that are executed from a microflow or nanoflow. In this module activities can be found in the form of microflows or java actions in the **USE_ME > Operations** folder.
 
-#### 4.3.1 General operations {#general-operations-technical} 
+#### 4.3.1 General Operations {#general-operations-technical} 
 
 Operations that can be used in multiple knowledge base processes and do not fall into a specific category.
 
-##### 4.3.1.1 Create label {#create-label-technical} 
+##### 4.3.1.1 Create Label {#create-label-technical} 
 The `Create Label` activity is intended for creating [Labels](#label). The given input parameters are assigned to a newly created label. The label is added to the provided `LabelList` which is intended to be used afterwards for passing into [Create Chunk](#create-chunk-technical).
 
 **Input parameters**
@@ -213,7 +213,7 @@ The `Create Label` activity is intended for creating [Labels](#label). The given
 | `LabelList`          | List of [Labels](#label)                                                    | mandatory | This is for adding the label to a list that can be used outside of this Activity. |
 
 
-#### 4.3.2 (Re)populate operations {#repopulate-operations-technical} 
+#### 4.3.2 (Re)populate Operations {#repopulate-operations-technical} 
 
 Operations that support the (re)creation and population of a knowledge base.
 
@@ -252,7 +252,7 @@ The `(Re)populate Knowledge Base` activity is used to populate a whole knowledge
 | -------------------- | ----------------------------------------- | ------------------------------------------------------------ |
 | `IsSuccess` | Boolean | This boolean indicates if the population of the knowledge base was successful. This can be used for custom error-handling. |
 
-#### 4.3.3 Retrieve operations (#retrieve-operations-technical)
+#### 4.3.3 Retrieve Operations (#retrieve-operations-technical)
 
 Activities that support the retrieval of the knowledge from the knowledge base.
 

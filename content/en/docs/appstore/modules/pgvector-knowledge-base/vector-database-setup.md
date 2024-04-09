@@ -76,7 +76,7 @@ You can use the values in the steps below for experimental purposes:
 
 If no action is taken, resources in AWS will stay around indefinitely. Make sure to think about deleting the resources when you are done experimenting. When using services from AWS, you are responsible for having the necessary resources and deleting the ones that are no longer needed, to prevent from being charged more than is required. This is especially relevant the moment resources fall outside of the free-tier after a certain time.
 
-## 4 Configuring the Database Connection Details in your application {#configure-database-connection}
+## 4 Configuring the Database Connection Details in Your Application {#configure-database-connection}
 
 1. Add the [PgVector Knowledge Base module](https://marketplace.mendix.com/link/component/2888) and its dependencies to your Mendix app and set it up correctly, see [PgVector Knowledge Base](/appstore/modules/pgvector-knowledge-base/). 
 
@@ -138,7 +138,7 @@ When this occurs, do as follows:
 2. Close all browser tabs. 
 3. Shut down the app locally and run the app again.
 
-### 6.2 Error in Logs of the Mendix App about the Extension "Vector" {#extension-error}
+### 6.2 Error in Logs of the Mendix App About the Extension "Vector" {#extension-error}
 
 If there is an error in the logs of your Mendix app about the extension called “vector", it could be that your PostgreSQL version does not meet the requirement of pgvector, or you have not met the installation prerequisites.
 

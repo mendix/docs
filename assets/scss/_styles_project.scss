@@ -577,7 +577,7 @@ nav.foldable-nav {
             color: inherit;//$gray-700;
             font-weight: inherit;//$font-weight-light;`
         }
-        :hover {
+        .link-title:hover {
             text-decoration: underline;
         }
     }
@@ -763,16 +763,34 @@ nav.foldable-nav {
 
 //_badge.scss
 
-.badge-warning {
-    color: $white;
-    background-color: $warning-8;
+.badge-pill {
+    border-radius: 4px;
+    padding: 4px 4px 3px 4px;
+    margin-left: 2px;
+}
+
+.badge-draft {
+    background-color: $warning-9;
   }
 
-.badge-pill {
-    padding-right: 0.6em;
-    padding-left: 0.6em;
-    border-radius: 10rem;
-  }
+.badge-beta {
+    color: $gray-900;
+    background-color: $gray-500;
+}
+
+.badge-lts {
+    background-color: $success-9;
+}
+
+.badge-mts {
+    background-color: $info-8;
+}
+
+.badge-deprecated {
+    background-color: $gray-100;
+    border: solid 1px $gray-500;
+    color: $gray-900;
+}
 
 // Swagger styling
 

@@ -39,7 +39,7 @@ paths:
         '500':
           $ref: '#/components/responses/500-Something-went-wrong'
       security:
-        - Authorization: []
+        - Personal Access Token: []
       servers:
         - url: 'https://feedback-api.mendix.com/v2'
           description: Base URL
@@ -63,7 +63,7 @@ paths:
         '500':
           $ref: '#/components/responses/500-Something-went-wrong'
       security:
-        - Authorization: []
+        - Personal Access Token: []
       servers:
         - url: 'https://feedback-api.mendix.com/v2'
           description: Base URL
@@ -87,7 +87,7 @@ paths:
         '500':
           $ref: '#/components/responses/500-Something-went-wrong'
       security:
-        - Authorization: []
+        - Personal Access Token: []
       servers:
         - url: 'https://feedback-api.mendix.com/v2'
           description: Base URL
@@ -112,7 +112,7 @@ paths:
         '500':
           $ref: '#/components/responses/500-Something-went-wrong'
       security:
-        - Authorization: []
+        - Personal Access Token: []
       servers:
         - url: 'https://feedback-api.mendix.com/v2'
           description: Base URL
@@ -136,7 +136,7 @@ paths:
         '500':
           $ref: '#/components/responses/500-Something-went-wrong'
       security:
-        - Authorization: []
+        - Personal Access Token: []
       servers:
         - url: 'https://feedback-api.mendix.com/v2'
           description: Base URL
@@ -171,7 +171,7 @@ paths:
         '500':
           $ref: '#/components/responses/500-Something-went-wrong'
       security:
-        - Authorization: []
+        - Personal Access Token: []
       servers:
         - url: 'https://feedback-api.mendix.com/v2'
           description: Base URL
@@ -201,7 +201,7 @@ paths:
         '500':
           $ref: '#/components/responses/500-Something-went-wrong'
       security:
-        - Authorization: []
+        - Personal Access Token: []
       servers:
         - url: 'https://feedback-api.mendix.com/v2'
           description: Base URL
@@ -347,10 +347,10 @@ components:
               value:
                 status: Inbox
   securitySchemes:
-    Authorization:
+    Personal Access Token:
       type: apiKey
-      description: 'For more information about requesting and using a token see the [documentation](https://docs.mendix.com/developerportal/community-tools/mendix-profile/user-settings/#pat).<br/> The header must be set to `MxToken <Your PAT>`.'
-      name: MxToken 7LJE…vk
+      description: 'For more information about requesting and using a token see the [documentation](https://docs.mendix.com/developerportal/community-tools/mendix-profile/user-settings/#pat).<br/> The header value must be set to `MxToken <Your PAT>`.'
+      name: Authorization
       in: header
   responses:
     404-Not-Found:
@@ -927,3 +927,5 @@ components:
                   message: The status does not exist
                   code: 400
                   instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
+security:
+  - Personal Access Token: []

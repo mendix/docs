@@ -35,7 +35,7 @@ You can also add a **Recover Email** address, which is useful if you lose access
 
 ### 2.1 Merging Profiles {#merging-profiles}
 
-If you own two (or more) user accounts, Mendix recommendeds merging the profiles of these user accounts with each other. This saves you from having to maintain multiple profiles, and your community contributions will be stored with the one profile you actively use. As a result, you will have a stronger single Mendix Profile, and you will not have to keep track of your progress scattered in multiple profiles in the platform.
+If you own two (or more) user accounts, Mendix recommends merging the profiles of these user accounts with each other. This saves you from having to maintain multiple profiles, and your community contributions will be stored with the one profile you actively use. As a result, you will have a stronger single Mendix Profile, and you will not have to keep track of your progress scattered in multiple profiles in the platform.
 
 The **Merge Profile** process merges the information associated with the merged profiles, resulting in a single Mendix Profile with two (or more) user accounts related to it. For details on what information ends up in the resulting merged profile, see the [Results of Merge Process](#merge-profile-result) section below.
 
@@ -100,19 +100,36 @@ It is not possible to separate profiles after they have been merged. Double-chec
 
 The [Accounts](https://user-settings.mendix.com/link/account) page is an overview of all the accounts you own and that are linked to your Mendix Profile. You can see which account you are logged in with, the company associated with each user account, if single sign-on is enabled, and the status of each user account (**Active** or **Deactivated**).
 
-By default, you are requested to change your password every 90 days. A Mendix Admin can change this password policy setting in [Control Center](/control-center/security/).
+### 3.1 Managing Account Passwords
 
-You can update the password of your logged-in account via the [Change Password](https://login.mendix.com/mxid3/request-password-reset) button that is available by clicking **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) on the logged-in account. You can also reach this screen using the **Forgot password?** link on the login screen.
+If you are using [BYOIDP](/control-center/security/set-up-sso-byoidp/) to set up identity federation between your corporate IdP and Mendix, you will manage account credentials through the corporate IdP.
+
+If you are using the Mendix platform to manage credentials then your password has the following characteristics:
+
+* By default, you are requested to change your password every 90 days. A Mendix Admin can change this password policy setting in [Control Center](/control-center/security/).
+
+    You can update the password of your logged-in account via the [Change Password](https://login.mendix.com/mxid3/request-password-reset) button that is available by clicking **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) on the logged-in account. You can also reach this screen using the **Forgot password?** link on the login screen.
+
+* Passwords on the Mendix platform must fulfil the following criteria:
+
+    * The password must contain 
+        * at least one special character from `` `~!@#$%^&*()-_+=[]{};:'"\|,.<>/? ``
+        * at least one digit
+        * at least one uppercase letter
+        * at least one lowercase letter
+    * and it must be between 12 and 200 characters in length.
+
+### 3.2 Deleting an Account
 
 If you do not want to use an account anymore, you can remove it from this page. Click **More Options** for the logged-in account and select **Delete this account**. All of the account information is then removed and deleted from Mendix's servers. All the personal and identifiable information of your profile is deleted when you delete all of your accounts. 
 
 You can only remove the account with which you are logged in. If you do not have access to your account anymore, please reach out to [Mendix Support](https://support.mendix.com/hc/en-us) to delete your account.
 
-### 3.1 Creating an Account
+### 3.3 Creating an Account
 
-If you already have a profile and want to add a new account to this profile, you can create the new account on your profile's **Accounts** overview. This action combines signing up for a new Mendix Platform account and [merging your profiles](#merging-profiles). After succesfully completing the flow, the new account appears in the **Accounts** overview.
+If you already have a profile and want to add a new account to this profile, you can create the new account on your profile's **Accounts** overview. This action combines signing up for a new Mendix Platform account and [merging your profiles](#merging-profiles). After successfully completing the flow, the new account appears in the **Accounts** overview.
 
-Follow these steps to add a new account to your Mendix Pofile:
+Follow these steps to add a new account to your Mendix Profile:
 
 1. Click **Create Account**.
 2. In the dialog box that appears, enter the email address of the account you want to create, then click **Next**.
@@ -195,7 +212,7 @@ The following Mendix services support usage of PATs:
 
 #### 5.3.1 Creating a PAT {#create-pat}
 
-In the **Peronsal Access Tokens** section, you can create a new PAT. To do so, click **New Token**, and set the following characteristics of the PAT:
+In the **Personal Access Tokens** section, you can create a new PAT. To do so, click **New Token**, and set the following characteristics of the PAT:
 
 * **Name** – give the PAT a name that reflects where or why you intend to use it
 * **Defined Scopes** – the scopes (authorizations) that you want to delegate to your PAT

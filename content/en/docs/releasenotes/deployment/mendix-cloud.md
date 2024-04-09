@@ -17,6 +17,18 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2024
 
+### April 4, 2024
+
+#### Pipelines Fixes
+
+* We fixed an issue that was causing pipelines to fail at the Checkout step for selected pipeline runs. (Ticket 211117)
+* We fixed an issue preventing user settings from saving for select users.
+* We fixed an issue where the branches were not being fetched for the Checkout step when designing a pipeline. We also fixed an issue where the Checkout step was not dynamically changing upon the change of the trigger.
+
+#### Pipelines Improvements
+
+* We made a variety of user experience improvements, including improving the styling and implementing a pipeline name character limit of 40 characters.
+
 ### March 26, 2024
 
 #### Improvements

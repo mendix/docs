@@ -10,6 +10,8 @@ These release notes cover changes made to the [Private Mendix Platform](/private
 
 Release notes are available for the following versions of Private Mendix Platform:
 
+* [1.8](/releasenotes/private-platform/1-8/)
+* [1.7](/releasenotes/private-platform/1-7/)
 * [1.6](/releasenotes/private-platform/1-6/)
 * [1.5](/releasenotes/private-platform/1-5/)
 

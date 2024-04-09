@@ -17,9 +17,23 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 ## 2024
 
+### April 4
+
+#### New Features
+
+* In Feedback, everyone from the app team now can manage their own feedback notifications preferences by [turning on or off the notifications](/developerportal/app-insights/feedback/#notifications) for all incoming feedback. You can also choose to [watch or unwatch one specific feedback item](/developerportal/app-insights/feedback/#notifications-individual-feedback), if you do not want to be notified for all incoming feedback.
+
+#### Improvements
+
+* In Feedback, we have fixed an issue where the reporter's name appeared empty on the **Contact Reporter** tab. Now if there is no reporter's name available, their email address will be shown instead. 
+* We released the following improvements for [Mini survey](/developerportal/app-insights/mini-surveys/):
+  * We improved your experience of copying the generated API key by implementing a new widget on the [Settings](/developerportal/app-insights/mini-surveys/#settings) tab of the **Survey Overview** page.
+  * We improved our error messages by providing more details.
+
+
 ### March 28
 
-#### Features
+#### New Features
 
 * We made the following improvements to [Portfolio Management](/developerportal/portfolio-management/):
     * On the **Archive** page, you can now filter and export the archived initiatives.

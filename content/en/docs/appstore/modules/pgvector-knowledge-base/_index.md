@@ -57,7 +57,7 @@ After you install the PgVector Knowledge Base module, you can find it in the **A
 
 1. Add the module role **PgVectorKnowledgeBase.Administrator** to your Administrator user role in the security settings of your app. Optionally, map **PgVectorKnowledgeBase.User** to any user roles that need read access directly on retrieved entities, [Chunk](#chunk) and [Label](#label).
 2. Add the **DatabaseConfiguration_Overview** page (**USE_ME > Configuration**) to your navigation or add the **Snippet_DatabaseConfigurations** to a page that is already part of your navigation. 
-3. Now you can set up your database configuration(s) at runtime. See [Configuring the database connection details](/appstore/modules/pgvector-knowledge-base/vector-database-setup/#configure-database-connection) for more information.
+3. Now you can set up your database configuration(s) at runtime. For more information, see the [Configuring the Database Connection Details](/appstore/modules/pgvector-knowledge-base/vector-database-setup/#configure-database-connection) section in *Setting up a Vector Database*.
 
 ### 3.2 General Operations {#general-operations-configuration} 
 
@@ -77,11 +77,11 @@ In order to add data to the knowledge base, you need to have discrete pieces of 
 A typical pattern for populating a knowledge base is:
 
 1. Create a new List of Chunk
-2. For each knowledge item:
-    * Create a new list of Label
-    * Use [Create label](#create-label-technical) as many times as needed to add the necessary labels
-    * With both lists, use [Create chunk](#create-chunk-technical) for the knowledge item
-3. With the list of Chunk, use [(Re)populate Knowledge Base](#repopulate-knowledge-base) to store the Chunks
+2. For each knowledge item, do the following:
+    * Create a new list of Label.
+    * Use [Create label](#create-label-technical) as many times as needed to add the necessary labels.
+    * With both lists, use [Create chunk](#create-chunk-technical) for the knowledge item.
+3. With the list of Chunk, use [(Re)populate Knowledge Base](#repopulate-knowledge-base) to store the Chunks.
 
 #### 3.3.1 `(Re)populate Knowledge Base` {#repopulate-knowledge-base}
 

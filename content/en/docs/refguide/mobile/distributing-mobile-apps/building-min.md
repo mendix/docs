@@ -8,7 +8,7 @@ tags: ["distribution", "app store", "ios", "android", "make it native"]
 
 ## 1 Building
 
-If you want to use the Make It Native app to test your native apps, you must choose a [MIN version](/releasenotes/mobile/make-it-native-parent/) compatible with your version of Studio Pro. If, however, you wish to use a ___@UrazAkgultan______ version of Studio Pro and still use the MIN, then you will have to manually build a version of the MIN that is compatible with your version of Studio Pro.
+If you want to use the Make It Native app to test your native apps, you must choose a [MIN version](/releasenotes/mobile/make-it-native-parent/) compatible with your version of Studio Pro. If, however, you wish to use a version of Studio Pro that is not an LTS (Long Term Support) version and still use the MIN, then you will have to manually build a version of the MIN that is compatible with your version of Studio Pro.
 
 Mendix uses Fastlane for building iOS apps. Fastlane is an all in one continuous integration tool that automates building and deploying.
 
@@ -39,7 +39,7 @@ To install Fastlane on your machine, do the following:
 To build your app for internal testing, do the following:
 
 1. Change directory into `/developerapp/ios`.
-1. Do something with the `fastlane internal` command @UrazAkgultan.
+1. Run the `fastlane internal` command to build your app.
 1. The output will reside in `/build/internal/output`, so grab your files from that directory.
 
 #### 1.1.3 Releasing to Test Flight

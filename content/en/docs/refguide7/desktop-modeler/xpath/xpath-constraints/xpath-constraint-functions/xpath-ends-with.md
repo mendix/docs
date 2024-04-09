@@ -1,6 +1,7 @@
 ---
 title: "XPath ends-with"
 url: /refguide7/xpath-ends-with/
+canonical_url: "https://docs.mendix.com/refguide/xpath-ends-with/"
 ---
 
 ## 1 Overview

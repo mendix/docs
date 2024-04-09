@@ -56,7 +56,7 @@ A tab container contains one or more tab pages where you place widgets. For exam
 
 ### 5.1 Tab Page-Specific Properties
 
-#### 3.1.1 Default Tab Page
+#### 5.1.1 Default Tab Page
 
 **Default tab page** defines which tab is displayed when the page is opened. If no tab is set as the default one, the first tab page will be shown. 
 
@@ -72,7 +72,20 @@ Default: *True*
 This property is not supported on native mobile pages.
 {{% /alert %}}
 
-## 6 Read More
+## 6 Usage Details
+
+### 6.1 Common rules {#usage-common}
+
+Use a Tab Container as a **standalone widget**. This means there's no need to place it within a Container or other wrapper widgets, as doing so may disrupt the display of content.
+
+### 6.2 Usage with Scroll Container {#usage-with-scroll-container}
+
+Avoid nesting Tab Container inside of Scroll Container. It may break the way content of Tab Pages is displayed and, except of that, it will disable the rendering optimizations inside the TabView. 
+So avoid doing it if possible.
+
+{{% alert color="info" %}}However, to achieve scrollable behavior within a specific Tab, you can place the **Tab Content** inside a Scroll Container or display it in a List View.{{% /alert %}}
+
+## 7 Read More
 
 * [Page](/refguide/page/)
 * [Structure](/refguide/structure-widgets/)

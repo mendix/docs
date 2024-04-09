@@ -201,6 +201,7 @@ Rule | Name | Pattern | Rewrite URL
 7 | rest-doc | `^(rest-doc/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
 8 | debugger | `^(debugger/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
 9 | oauth | `^(oauth/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
+10 | p | `^(p/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
 
 Follow the instructions below and replace *[Name]* with the name of the rule in the table above, *[Pattern]* with the regular expression pattern, and *[Rewrite URL]* with the Rewrite URL. Note that some patterns contain a trailing slash, `/`, when they need to point to an exact path (for example, `/ws-doc/mydoc/1234`).
 
@@ -336,6 +337,14 @@ Afterwards, the contents of the *web.config* file will be similar to the followi
                 </rule>
                 <rule name="debugger" stopProcessing="true">
                     <match url="^(debugger/)(.*)" />
+                    <action type="Rewrite" url="http://localhost:8080/{R:1}{R:2}" />
+                </rule>
+                <rule name="oauth" stopProcessing="true">
+                    <match url="^(oauth/)(.*)" />
+                    <action type="Rewrite" url="http://localhost:8080/{R:1}{R:2}" />
+                </rule>
+                <rule name="p" stopProcessing="true">
+                    <match url="^(p/)(.*)" />
                     <action type="Rewrite" url="http://localhost:8080/{R:1}{R:2}" />
                 </rule>
             </rules>

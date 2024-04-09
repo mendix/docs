@@ -56,6 +56,8 @@ These are the current LTS versions of Studio Pro:
 * [9.24](/releasenotes/studio-pro/9.24/) (started in March, 2023)
 * [8.18](/releasenotes/studio-pro/8.18/) (started in March, 2021)
 
+Release notes for the current LTS versions are marked with an LTS badge (<text class="badge badge-pill badge-lts" style="margin-left:0px">LTS</text>) in the left sidebar.
+
 Mendix advises using LTS versions for all production apps, as LTS versions of Studio Pro enjoy the highest security and stability. LTS versions also have the longest support duration compared to other versions.
 
 {{% alert color="info" %}}
@@ -95,6 +97,8 @@ An MTS is a minor version released approximately every 6 months after a new majo
 This is the current MTS version of Studio Pro:
 
 * [10.6](/releasenotes/studio-pro/10.6/) (started in December, 2023)
+
+Release notes for the current MTS version are marked with an MTS badge (<text class="badge badge-pill badge-mts" style="margin-left:0px">MTS</text>) in the left sidebar.
 
 {{% alert color="info" %}}
 MTS versions (for example, 9.6) remain supported until the next major version has been released for general availability (for example, 10.0).

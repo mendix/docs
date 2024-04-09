@@ -12,7 +12,7 @@ title: "Teamcenter Extension"
 
 The [Teamcenter Extension](insert_link) is a Mendix Module built using the Mendix Extensibility Framework to provide you with an effortless means to harness the full capabilities of Teamcenter Connector for Mendix. As you may know, The Teamcenter Connector is a powerful tool that allows you to access, create and modify product data in Teamcenter. The Teamcenter Extension is layered atop it, providing a low-code experience to enhance the user friendliness and streamline the utilization of the connector.
 
-### 1.1 Supported use-cases
+### 1.1 Use Cases
 
 In version 1.0.0, the extension will allow you to build Mendix artifacts for the following common use cases:
 1.	Retrieve Item Revisions from Teamcenter
@@ -39,6 +39,10 @@ Like with Teamcenter Connector, the Teamcenter Extension is free to download and
 Open the Teamcenter Extension by clicking on menu option View -> Teamcenter. This will open the landing page. You will see two tabs: Menu and Settings. 
 
 The Menu tab displays use cases or actions you can create artifacts for, using the extension. The Settings tab allows you to provide details of your Teamcenter instance to connect to, while using the extension.
+
+![image](https://github.com/mwbouwkamp-mendix/mendix-docs/assets/157635704/054f8938-44a7-43c0-a1ce-76e54cf2a813)
+
+![image](https://github.com/mwbouwkamp-mendix/mendix-docs/assets/157635704/67dc5e98-9596-4a2c-8699-1a3a71b61d19)
 
 ## 3 Teamcenter Configuration
 Provide your Teamcenter Instance details in the Teamcenter Configuration page. Click on Edit to open a panel to enter details. The certificate path should be relative to the App Directory

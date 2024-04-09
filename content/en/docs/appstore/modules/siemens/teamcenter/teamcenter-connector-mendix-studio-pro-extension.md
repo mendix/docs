@@ -22,7 +22,7 @@ In version 1.0.0, the extension will allow you to build Mendix artifacts for the
 5.	Revise Item Revision in Teamcenter
 6.	Get BOM structures from Teamcenter (BETA?)
 
-More details and typical user journeys for each use case is provided in the [[Use Cases]] section below.
+More details and typical user journeys for each use case is provided in the [Actions](#actions) section below.
 
 ### 1.2 Pre-requisites
 
@@ -99,7 +99,7 @@ For specific [[actions]] there may be additional rules. These are explained in t
 You can select and deselect the properties, references, and relations depending on the data you need from Teamcenter. When you select a reference or relation, a new placeholder entity will be added to the object mapping tree. You will need to perform the import mapping for these referenced/related objects in a subsequent step (business object mapping and selection of Teamcenter properties, references, and relations).
 
 
-## 4.	[[Use Cases]]
+## 4.	Actions {#actions}
 
 ### 4.1.	Get Item Revisions from Teamcenter
 

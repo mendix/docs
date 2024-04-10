@@ -10,15 +10,15 @@ no_list: true
 ## 1 Introduction
 
 The **Marketplace Curation** feature is a governance capability within the Mendix Platform, allowing you to define company policies for the public Marketplace content. With such policies, you can label certain content as recommended so developers of your company know which public content can be used in app development. This functionality provides several key benefits:
-* Developer Guidance: Developers can easily identify Marketplace content suitable for their projects by filtering content in Studio Pro and Web by recommended label. This helps developers find content which is useful and relevant for app development in their company.
-* Enhanced Marketplace Exploration: By specifying criteria for recommended content, developers gain the ability to explore a wider array of public content, enabling them to leverage resources as needed for their projects.
-* Governance control: Centralized curation allows admins to translate the offline guidelines to in-platform experience establishing the efficient communication and time-saving processes between developers and admins.
+* Developer guidance: Developers can easily identify Marketplace content suitable for their projects by filtering content in Studio Pro and Web by recommended labels. This helps developers find content which is useful and relevant for app development in their company.
+* Enhanced marketplace exploration: By specifying criteria for recommended content, developers gain the ability to explore a wider array of public content, enabling them to leverage resources as needed for their projects.
+* Governance control: Centralized curation allows admins to translate the offline guidelines to in-platform experience, establishing the efficient communication and time-saving processes between developers and admins.
 
 The **Marketplace Curation** page contains two tabs: the [Curation Settings](#curation-settings) tab and the [Marketplace Content List](#marketplace-content-list) tab.
 
 ## 2 Curation Settings {#curation-settings}
 
-On this tab, you can configure company policies for public Marketplace content. You can specify which set of content will be recommended and that way Marketplace content is automatically labeled according to the Curation settings. For instance, in the following example, any content supported by the "Community" or "Platform" and licensed under "Apache v2" or "BSD 2.0" will be appropriately labeled as recommended.
+On the **Curation Settings** tab, you can configure company policies for public Marketplace content. You can specify which set of content will be recommended and that way Marketplace content is automatically labeled according to the curation settings. For instance, in the following example, any content supported by the "Community" or "Platform" and licensed under "Apache v2" or "BSD 2.0" will be appropriately labeled as recommended.
 
 {{< figure src="/attachments/control-center/marketplace-curation/curation-settings.png" max-width=100% class="image-border" alt=''curation-settings''  >}}
 
@@ -26,8 +26,8 @@ On this tab, you can configure company policies for public Marketplace content. 
 
 ## 3 Marketplace Content List {#marketplace-content-list}
 
-On this tab, you'll find the list of all public Marketplace content displayed in the table below. It includes information about whether they carry the Recommended label and the origin of that label, which could be either "Curation Setting" or "Manual".
-You also have the ability to manually add or remove labels after selecting items from the table as illustrated below. For content not recommended due to Curation Settings, you can add the label by clicking the "Add Label" button. Conversely, for content recommended by Curation Settings, you can manually remove the label and override the rule.
+On the **Marketplace Content List** tab, there is a list of all public Marketplace content in the table below. It includes information about whether they carry the recommended label and the origin of that label, which can be either **Curation Setting** or **Manual**.
+You also have the ability to manually add or remove labels after selecting items from the table as illustrated below. For content not recommended due to the curation settings, you can add the label by clicking the **Add Label** button. Conversely, for content recommended by the **curation settings**, you can manually remove the label and override the rule.
 
 {{< figure src="/attachments/control-center/marketplace-curation/marketplace-content-list.png" max-width=100% class="image-border" alt=''marketplace-content-list''  >}}
 

@@ -38,6 +38,8 @@ The current scope of the module is focused around (re)populating knowledge bases
 
 You should have access to your own (remote) postgreSQL database server with the [pgvector](https://github.com/pgvector/pgvector) extension installed. For more information, see [Setting up a Vector Database](/appstore/modules/pgvector-knowledge-base/vector-database-setup/).
 
+{{% alert color="info" %}}Note: this module cannot be used with the Mendix Cloud app database, but only works with your own database server or Amazon RDS.{{% /alert %}}
+
 ### 1.5 Dependencies {#dependencies}
 
 * Mendix Studio Pro version [9.24.0](/releasenotes/studio-pro/9.24/#9240) or higher 

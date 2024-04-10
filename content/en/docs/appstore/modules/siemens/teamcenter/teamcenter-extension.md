@@ -116,9 +116,7 @@ The Get ItemRevision [[action]]:
 *	Creates/change the entities configured during the import mapping
 *	Creates a microflow to get ItemRevisions based on Item name, id and/or type
   *	Input parameters:
-    * ItemName (String) query parameter 
-    *	ItemId (String) query parameter 
-    *	ItemRevisionType (String) query parameter 
+    * ItemRevisionSearchCriteria (object) which contains Name, ItemID and Type as string attributes
     *	ConfigName (string) name of the Teamcenter configuration
   *	Returns:
     *	List of (a specialization of) TcConnector.ItemRevision
@@ -131,7 +129,23 @@ The Get ItemRevision [[action]]:
 
 
 ### 4.2 Get Workspace Objects {#getworkspaceobjects}
-The Get Workspace Objects action allows you to configure and generate a microflow and domain model to search for and retrieve Workspace Objects from Teamcenter based on 
+The Get Workspace Objects action allows you to configure and generate a microflow and domain model to search for and retrieve Workspace Objects from Teamcenter based on multiple attributes. This action implements the Saved Query "General.." from Teamenter
+
+To configure the Get Workspace object action:
+*	Start the Teamcenter extension
+*	Click on the Get Workspace object tile
+*	Configure the import mapping (see above)
+*	Click on Generate
+
+The Get Workspace object [[action]]:
+*	Creates/change the entities configured during the import mapping
+*	Creates a microflow to get Workspace objects
+  *	Input parameters:
+    * SearchInput (object)
+    * GeneralQuery (Object)
+    *	ConfigName (string)
+  *	Returns:
+    *	
 
 ### 4.3 Create Item and Item Revision {#createitem-and-itemrevision}
 The Create Item and Item Revision action allows you to configure and generate a microflow and domain model to create item and item revision objects in Teamcenter

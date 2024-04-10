@@ -55,9 +55,9 @@ After you install the PgVector Knowledge Base module, you can find it in the **A
 
 ### 3.1 General Configuration {#general-configuration}
 
-1. Add the module role **PgVectorKnowledgeBase.Administrator** to your Administrator user role in the security settings of your app. Optionally, map **PgVectorKnowledgeBase.User** to any user roles that need read access directly on retrieved entities, [Chunk](#chunk) and [Label](#label).
+1. Add the module role **PgVectorKnowledgeBase.Administrator** to your Administrator user role in the security settings of your app. Optionally, map **PgVectorKnowledgeBase.User** to any user roles that need read access directly on retrieved entities, [Chunk](#chunk), and [Label](#label).
 2. Add the **DatabaseConfiguration_Overview** page (**USE_ME > Configuration**) to your navigation or add the **Snippet_DatabaseConfigurations** to a page that is already part of your navigation. 
-3. Now you can set up your database configuration(s) at runtime. For more information, see the [Configuring the Database Connection Details](/appstore/modules/pgvector-knowledge-base/vector-database-setup/#configure-database-connection) section in *Setting up a Vector Database*.
+3. Set up your database configuration(s) at runtime. For more information, see the [Configuring the Database Connection Details](/appstore/modules/pgvector-knowledge-base/vector-database-setup/#configure-database-connection) section in *Setting up a Vector Database*.
 
 ### 3.2 General Operations {#general-operations-configuration} 
 
@@ -99,9 +99,9 @@ Currently, two operations are available for on-demand retrieval of data chunks f
 
 A typical pattern for retrieval from a knowledge base is:
 
-1. Create a list of label
-2. Use [Create Label](#create-label) as many times as needed to add the necessary labels
-3. Do the retrieve, e.g. use [`Retrieve Nearest Neighbors`](#retrieve-nearest-neighbors) to find Chunks based on vector similarity
+1. Create a list of label.
+2. Use [Create Label](#create-label) as many times as needed to add the necessary labels.
+3. Do the retrieve, e.g. use [`Retrieve Nearest Neighbors`](#retrieve-nearest-neighbors) to find Chunks based on vector similarity.
 
 #### 3.4.1 `Retrieve` {#retrieve}
 

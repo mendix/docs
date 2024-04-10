@@ -44,7 +44,7 @@ You have access to a (remote) PostgreSQL database with the [pgvector](https://gi
 
 ### 3.2 Steps {#steps}
 
-1. Download, run and login to the [OpenAI Showcase App](https://marketplace.mendix.com/link/component/220475).
+1. Download, run, and login to the [OpenAI Showcase App](https://marketplace.mendix.com/link/component/220475).
 
 2. Go to the **Retrieval Augmented Generation** example and read **Step 1: Introduction**.
 

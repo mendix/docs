@@ -29,7 +29,7 @@ For detailed steps for creating a PostgreSQL Database with Amazon RDS, see [Crea
 
 You can use the values in the steps below for experimental purposes:
 
-1. Login to the AWS console. 
+1. Sign in to the AWS console. 
 
 2. Go to RDS using the search bar.
 
@@ -57,7 +57,7 @@ You can use the values in the steps below for experimental purposes:
 5. Wait for the database to be created. This can take some time.
 
 6. When the database is created, click the database name to view it.
-   1. On the **Connectivity & Security** tab, find the inbound security group rule. By default this will only accept incoming traffic from your current IPv4 address.
+   1. On the **Connectivity & Security** tab, find the inbound security group rule. By default this only accepts incoming traffic from your current IPv4 address.
    
    2. Optionally, if the database is required to be accessible from other locations as well, click the security group rule, go to the **Inbound rules** tab, then add a rule as follows:
       1. For **Type**, select *PostgreSQL*.
@@ -78,11 +78,11 @@ If no action is taken, resources in AWS will stay around indefinitely. Make sure
 
 ## 4 Configuring the Database Connection Details in Your Application {#configure-database-connection}
 
-1. Add the [PgVector Knowledge Base](https://marketplace.mendix.com/link/component/225063) and its dependencies to your Mendix app and set it up correctly, see [PgVector Knowledge Base](/appstore/modules/pgvector-knowledge-base/).
+1. Add the [PgVector Knowledge Base](https://marketplace.mendix.com/link/component/225063) module and its dependencies to your Mendix app and set it up correctly, see [PgVector Knowledge Base](/appstore/modules/pgvector-knowledge-base/).
 
 2. Include the page **DatabaseConfiguration_Overview** in the navigation or use the snippet **Snippet_DatabaseConfigurations** on an existing page.
 
-3. Run the app, login as admin and navigate to the previously linked **Vector database configurations** page.
+3. Run the app, sign in as admin and navigate to the previously linked **Vector database configurations** page.
 
 4. Create a new configuration.
 
@@ -122,7 +122,7 @@ Make sure that you meet the following prerequisites:
    2. Create a database, for example, myVectorDatabase. You will need this later.
 3. Have the pgvector extension installed. Depending on your hardware and operating system, the steps to install the pgvector extension can be different. Follow the [installation instructions](https://github.com/pgvector/pgvector?tab=readme-ov-file#installation) on GitHub carefully and make sure to check the [installation notes](https://github.com/pgvector/pgvector?tab=readme-ov-file#installation-notes).
 
-In this case, the configuration of the database connection details in your application is similar to what was described in the [Configuring the Database Connection Details in your application](#configure-database-connection) section. Your Jdbc URL will now look like `jdbc:postgresql://localhost:5432/{vectorDatabaseName}` where the value for `{vectorDatabaseName}` is the one you have chosen while creating the database.
+In this case, the configuration of the database connection details in your application is similar to what was described in the [Configuring the Database Connection Details in Your Application](#configure-database-connection) section. Your Jdbc URL will now look like `jdbc:postgresql://localhost:5432/{vectorDatabaseName}` where the value for `{vectorDatabaseName}` is the one you have chosen while creating the database.
 
 ## 6 Troubleshooting {#troubleshooting}
 

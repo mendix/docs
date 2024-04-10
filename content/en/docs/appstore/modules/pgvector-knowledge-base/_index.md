@@ -28,7 +28,7 @@ Also without invoking LLMs directly with the retrieved information, the similari
 
 ### 1.2 Features {#features}
 
-With the current version, Mendix supports inserting data chunks with their vectors into a knowledge base (population), and selecting those records from that moment onwards (retrieval). Apart from cosine similarity search, which is executed based on the vector only, custom filtering is possible using key/value labelling to support an additional traditional search component.
+With the current version, Mendix supports inserting data chunks with their vectors into a knowledge base (population), and selecting those records from that moment onwards (retrieval). Apart from cosine similarity search, which is executed based on the vector only, custom filtering is possible using key-value labelling to support an additional traditional search component.
 
 ### 1.3 Limitations {#limitations}
 
@@ -44,7 +44,7 @@ You should have access to your own (remote) postgreSQL database server with the 
 
 * Mendix Studio Pro version [9.24.0](/releasenotes/studio-pro/9.24/#9240) or higher 
 * [Encryption](https://marketplace.mendix.com/link/component/1011) module
-* [Community commons](https://marketplace.mendix.com/link/component/170) module
+* [Community Commons](https://marketplace.mendix.com/link/component/170) module
 * [Database Connector](https://marketplace.mendix.com/link/component/2888) module
 
 ## 2 Installation {#installation}
@@ -59,7 +59,7 @@ After you install the PgVector Knowledge Base module, you can find it in the **A
 
 1. Add the module role **PgVectorKnowledgeBase.Administrator** to your Administrator user role in the security settings of your app. Optionally, map **PgVectorKnowledgeBase.User** to any user roles that need read access directly on retrieved entities, [Chunk](#chunk), and [Label](#label).
 2. Add the **DatabaseConfiguration_Overview** page (**USE_ME > Configuration**) to your navigation or add the **Snippet_DatabaseConfigurations** to a page that is already part of your navigation. 
-3. Set up your database configuration(s) at runtime. For more information, see the [Configuring the Database Connection Details](/appstore/modules/pgvector-knowledge-base/vector-database-setup/#configure-database-connection) section in *Setting up a Vector Database*.
+3. Set up your database configurations at runtime. For more information, see the [Configuring the Database Connection Details](/appstore/modules/pgvector-knowledge-base/vector-database-setup/#configure-database-connection) section in *Setting up a Vector Database*.
 
 ### 3.2 General Operations {#general-operations-configuration} 
 
@@ -67,18 +67,18 @@ After following the general setup above, you are all set to use the microflows a
 
 #### 3.2.1 `Create label` {#create-label}
 
-Labels can optionally be used to attach additional information to chunks, that will be used for custom filtering during the retrieval step. Each Label stands for a single key/value combination. In the operations to create a knowledge base Chunk, a list of Labels can be passed as optional input. During the retrieval, if a list of Labels is provided as search input, all key/value pairs passed in the form of Label objects to the operation must match any previously attached labels to the chunk during population. Examples for typical key/value pairs are:
+Labels can optionally be used to attach additional information to chunks. That will be used for custom filtering during the retrieval step. Each Label stands for a single key-value combination. In the operations to create a knowledge base Chunk, a list of Labels can be passed as optional input. During the retrieval, if a list of Labels is provided as search input, all key-value pairs passed in the form of Label objects to the operation must match any previously-attached labels to the chunk during population. Examples for typical key-value pairs are:
 * Category: Bug, Feature
 * Status: Open, Closed, In Progress
 * Machine Type: MachineX, MachineY
 
 ### 3.3 (Re)populate Operations {#repopulate-operations-configuration}
 
-In order to add data to the knowledge base, you need to have discrete pieces of information and create chunks for those using the `Create Chunk` operation. After creating the Chunks, the resulting list can be inserted into the knowledge base using the `(Re)populate Knowledge Base` operation. 
+In order to add data to the knowledge base, you need to have discrete pieces of information and create chunks for those using the `Create Chunk` operation. After you create the Chunks, the resulting list can be inserted into the knowledge base using the `(Re)populate Knowledge Base` operation. 
 
-A typical pattern for populating a knowledge base is:
+A typical pattern for populating a knowledge base is as follows:
 
-1. Create a new List of Chunk
+1. Create a new List of Chunk.
 2. For each knowledge item, do the following:
     * Create a new list of Label.
     * Use [Create label](#create-label-technical) as many times as needed to add the necessary labels.
@@ -99,7 +99,7 @@ The population handles a whole list of Chunks at once which should be created by
 
 Currently, two operations are available for on-demand retrieval of data chunks from a knowlege base. Both operations work on a single knowledge base (specified by the name) on a single database server (specified by the [DatabaseConfiguration](#databaseconfiguration-entity)). Apart from a regular [Retrieve](#retrieve), an additional operation was exposed to [Retrieve Nearest Neighbors](#retrieve-nearest-neighbors), where the cosine distance between the input vector and the vectors of the records in the knowledge base is calculated. In both cases it is possible to filter on [Labels](#create-label).
 
-A typical pattern for retrieval from a knowledge base is:
+A typical pattern for retrieval from a knowledge base is as follows:
 
 1. Create a list of label.
 2. Use [Create Label](#create-label) as many times as needed to add the necessary labels.
@@ -111,11 +111,11 @@ Use this operation to retrieve chunks from the knowledge base. Additional select
 
 #### 3.4.2 `Retrieve Nearest Neighbors` {#retrieve-nearest-neighbors}
 
-Use this operation to retrieve chunks from the knowledge base where the sorting is based on vector similarity with regards to a given input vector. Additional selection and filtering can be done by specifying the optional input parameters: minimum (cosine) similarity (0 - 1.0), maximum number of results, as well as a list of labels. If labels are provided, this operation only returns chunks that are conform with all of the labels in the list.
+Use this operation to retrieve chunks from the knowledge base where the sorting is based on vector similarity with regards to a given input vector. Additional selection and filtering can be done by specifying the optional input parameters: minimum (cosine) similarity (0–1.0), maximum number of results, as well as a list of labels. If labels are provided, this operation only returns chunks that are conform with all of the labels in the list.
 
 ## 4 Technical Reference {#technical-reference}
 
-To help you use the **PgVector Knowledge Base** module, the following sections list the available [entities](#domain-model), [enumerations](#enumerations), and [activities](#activities) that you can use in your application. 
+To help you use the PgVector Knowledge Base module, the following sections list the available [entities](#domain-model), [enumerations](#enumerations), and [activities](#activities) that you can use in your application. 
 
 ### 4.1 Domain Model {#domain-model} 
 

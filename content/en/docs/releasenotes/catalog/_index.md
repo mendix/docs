@@ -15,7 +15,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ### April 11, 2024
 
-### Fixes
+#### Fixes
 
 * We addressed a potential security vulnerability ([CVE-2023-52428](https://nvd.nist.gov/vuln/detail/CVE-2023-52428)).
 

@@ -37,12 +37,6 @@ To extract data from Insights Hub, your calls to the Insights Hub APIs need to b
 
 Download the **Siemens Insights Hub API Authenticator** by following the instructions [Downloading Content from the Marketplace](/appstore/overview/use-content/#downloading) in *Using Marketplace Content*.
 
-In the **_Use me** folder of the *SiemensInsightsHubAPIAuthenticator* module set the following constants:
-
-* **ClientID** – this is the *clientID* from the **Technical User** you generated
-* **ClientSecret** – this is the *clientSecret* from the **Technical User** you generated
-* **TokenURL** – this is the URL where to get the Insights Hub token from and is tenant specific
-
 Calls to Insights Hub are made through REST calls which can be made using the standard Mendix [Call REST Service](/refguide/call-rest-action/) functionality. See [How To Consume a REST Service](/howto/integration/consume-a-rest-service/) for a full walkthrough on doing this. For calls to Insights Hub, these calls need to be authenticated.
 
 This is done by adding an **Access token** action before each **Call REST** action in your microflows. The **Access token** can be found within the toolbox on the right side.
@@ -71,6 +65,10 @@ However, authentication will only be successful if the correct credentials are p
 
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-api-only/ModuleConfiguration.png" alt="Authentication" >}}
+
+Please add the "Siemens Insights Hub API Authenticator* module role "User" to all your apps user roles to ensure that the localized session expired message / title can be loaded during app startup.
+
+{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-api-only/ModuleRole.png" alt="Authentication" >}}
 
 ## 4 Authentication Considerations
 

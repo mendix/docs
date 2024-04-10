@@ -37,8 +37,6 @@ This alert is indented to match the sub-list item.
 
 {{% button color="info" href="https://marketplace.mendix.com/link/studiopro/" text="Go to Marketplace" title="Download Studio Pro from the Marketplace" %}}
 
-{{% button color="outline-secondary" href="https://getbootstrap.com/docs/5.3/components/buttons/#variants/" text="Dark" title="What do you think of this button?" %}}
-
 ### Code Blocks
 
 ```json
@@ -58,11 +56,21 @@ GET /projects/d92064a5-b1fd-4be4-97db-53fc90201d1c/epics HTTP/1.1
 Authorization: MxToken 7LJE…vk
 ```
 
+```java {linenos=table, hl_lines=["4-6"], linenostart=33}
+@java.lang.Override
+public java.lang.String executeAction() throws Exception
+{
+    // BEGIN USER CODE
+    throw new com.mendix.systemwideinterfaces.MendixRuntimeException("Java action was not implemented");
+    // END USER CODE
+}
+```
+
 ### Images (Figures)
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/actions-v5.png" alt="Available actions when the app is running" max-width=40% >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/actions-v5.png" class="image-border" alt="Available actions when the app is running" max-width=40% >}}
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/parameter.png" link="/refguide/parameter/" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/parameter.png" alt="" link="/refguide/parameter/" >}}
 
 ### Icons
 
@@ -76,16 +84,16 @@ It's possible to use icons in tables as well:
 | --- | --- | --- | --- |
 | Invite users | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
 
-### Tabpanes
+### Tab panes
 
-{{< tabpane >}} 
-  {{% tab header="Tab Title" disabled=true /%}} 
-  {{< tab header="Tab One" lang="StudioPro" >}} 
-    Tab One Content 
-    {{% /tab %}} 
-  {{< tab header="Tab Two" lang="JavaQuery" >}} 
-    Tab Two Content 
-    {{% /tab %}} 
+{{< tabpane >}}
+  {{% tab header="Environments:" disabled=true /%}}
+  {{< tab header="Studio Pro" lang="StudioPro" >}}
+    [contains(Name, 'an')]
+    {{% /tab %}}
+  {{< tab header="Java" lang="JavaQuery" >}}
+     //Sales.Customer[contains(Name, 'an')]
+    {{% /tab %}}
 {{< /tabpane >}}
 
 ### Todos
@@ -106,7 +114,7 @@ This is a special kind of alert that only displays on development builds—it do
 
 For code examples in one line or individual words in a paragraph, use the `` ` `` symbol to enclose the code: `cacheBust`. For code snippets that should stand on their own or span multiple lines, use a code block instead.
 
-### Collapsible Content
+### Collapsible Content (Details)
 
 <details><summary>It cannot be a reserved word (click to see a list of reserved words)</summary>
 
@@ -177,5 +185,4 @@ For code examples in one line or individual words in a paragraph, use the `` ` `
 * `void`
 * `volatile`
 * `while`
-
 </details>

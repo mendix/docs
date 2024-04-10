@@ -67,7 +67,7 @@ When **Strict page URL checking** is enabled, pages that are only accessible thr
 Enabling **Strict page URL checking** works for pages with custom URLs, but it cannot be applied to [deep links](/appstore/modules/deep-link/). Studio Pro cannot determine which types of pages are used based on their deep links, as those are configured in the Mendix Runtime.
 
 ### 2.4 Strict Mode {#strict-page-url-checking}
-In React Client, Strict Mode mode will help making your app secure, even if the access rules are not set up right. For more information, check the [Strict Mode](/refguide/strict-mode/) page.
+In React Client, Strict Mode mode will help making your app secure, even if the access rules are not set up correctly. For more information, see the [Strict Mode](/refguide/strict-mode/) page.
 
 ### 2.5 App Status {#app-status}
 

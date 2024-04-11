@@ -15,6 +15,10 @@ To see the current status of the Mendix Control Center, see [Mendix Status](http
 
 ### April 4, 2024
 
+#### New Features
+
+* We have introduced a [Marketplace content curation feature](/control-center/marketplace-curation/) for public Marketplace components. If your organization has established governance policies and guidelines for using Marketplace components, you can now translate them to curation settings.  Components that meet these requirements will get a recommended label.
+
 #### Improvements
 
 *  We have improved the [Apps](/control-center/apps/) page as follows:

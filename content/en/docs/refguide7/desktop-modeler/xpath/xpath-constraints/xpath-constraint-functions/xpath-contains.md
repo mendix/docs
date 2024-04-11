@@ -1,6 +1,7 @@
 ---
 title: "XPath contains"
 url: /refguide7/xpath-contains/
+canonical_url: "https://docs.mendix.com/refguide/xpath-contains/"
 ---
 
 ## 1 Overview

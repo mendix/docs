@@ -151,11 +151,15 @@ You may have to configure an email alias on your SMTP server if you are using a 
 
     {{< figure src="/attachments/appstore/modules/forgot-password/reset-password-page.png" >}}
 
-## 4 Upgrading from Mendix 8 to Mendix 9 {#upgrade8-9}
+## 4 Upgrading to a Later Version
 
-To convert from Mendix 8.18.x to Mendix 9.12.5 or above, follow the steps below:
+Follow the sections below to upgrade your Mendix app to later version.
 
-1. Upgrade all the [dependencies](#dependencies) of the Forgot Password module to the latest version compatible with Mendix 8.
+### 4.1 Upgrading from Mendix 8 to Mendix 9 {#upgrade8-9}
+
+To convert the Mendix 8.18.x to Mendix 9.12.5 or above, follow the steps below:
+
+1. Upgrade all the [dependencies](#dependencies) of the Forgot Password module to the latest version compatible with Mendix 9.
 1. Open your app in Mendix 9.12.5 or above and allow it to be upgraded.
 1. Import the [Forgot Password](https://marketplace.mendix.com/link/component/1296/) module into your app.
 
@@ -171,6 +175,22 @@ To convert from Mendix 8.18.x to Mendix 9.12.5 or above, follow the steps below:
 1. Open the error page and again change the (primary) layout to **Atlas_TopBar(Atlas_UI_Resources)**.
 
 You have now successfully upgraded the Forgot Password Module to work with Mendix 9.
+
+### 4.2 Upgrading from Mendix 9 to Mendix 10 {#upgrade9-10}
+
+To convert the Mendix 9.24.2 to Mendix 10.6.0 or above, follow the steps below:
+
+1. Upgrade all the [dependencies](#dependencies) of the Forgot Password module to the latest version compatible with Mendix 10.
+1. Open your app in Mendix 10.6.0 or above and allow it to be upgraded.
+1. Import the [Forgot Password](https://marketplace.mendix.com/link/component/1296/) module into your app.
+
+    You will see four errors in the [Errors Pane](/refguide/errors-pane/).
+
+    {{< figure src="attachments/appstore/modules/forgot-password/mendix9-10-errors" max-width=80% class="image-border" >}}
+
+1. Click one of the errors and select the option **Remove property Spacing**. This will resolve all of the errors.
+
+You have now successfully upgraded the Forgot Password Module to work with Mendix 10.
 
 ## 5 Migrating from Email Module with Templates to Email Connector{#migrate-email}
 

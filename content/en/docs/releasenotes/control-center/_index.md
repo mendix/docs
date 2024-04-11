@@ -17,7 +17,7 @@ To see the current status of the Mendix Control Center, see [Mendix Status](http
 
 #### New Features
 
-* We have introduced a Marketplace content curation feature for public components. Some organizations have established governance policies and guidelines that include specific rules for using Marketplace components. Companies can now translate those policies to the Mendix Platform by specifying such criteria for selected public Marketplace components. Through this recommended label, the developers of a company can know which content is recommended for usage by the Mendix Admins of their company.
+* We have introduced a [Marketplace content curation feature](/control-center/marketplace-curation/) for Marketplace public components. If your organization has established governance policies and guidelines for using Marketplace components, you can now translate them to curation settings.  Components that meet these requirements will get a recommended label.
 
 #### Improvements
 

@@ -9,7 +9,7 @@ banner: "This is a draft and will not be rendered in the production website. Use
 
 ## Introduction
 
-This page provides examples of shortcodes, Markdown, and HTML in the docs. View the Markdown file for the source code, or check out the rendered page at [https://docs-development.mendix.com](https://docs-development.mendix.com/community-tools/md-shortcode-examples/) (or via a local build).
+This page provides examples of shortcodes, Markdown, and HTML in the docs. View the [Markdown file](https://github.com/mendix/docs/blob/development/content/en/docs/community-tools/contribute-to-mendix-docs/markdown-shortcodes.md) for the source code, or check out the rendered page at [https://docs-development.mendix.com](https://docs-development.mendix.com/community-tools/md-shortcode-examples/) (or via a local build).
 
 This page visualizes the technical guidelines and syntax outlined in the [Shortcodes, Markdown, and HTML](https://mendix.atlassian.net/wiki/x/PYASow) Confluence page.
 
@@ -20,7 +20,7 @@ This page visualizes the technical guidelines and syntax outlined in the [Shortc
 {{% alert color="info" %}}
 Most alerts are info alerts, like this one, or warning alerts. If needed, you can also create a danger alert or a success alert.
 
-Alerts can take up one or more lines. To add a second paragraph, make sure to include an empty line between the first and second paragraph.
+Alerts can take up one or more lines. To add a second paragraph, make sure to include an empty line between the first and second paragraphs.
 {{% /alert %}}
 
 {{% alert color="warning" %}}
@@ -113,7 +113,7 @@ If you don't specify any programming language, the code block looks a bit differ
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/clear-environment.png"
     alt="Clear Environment options and confirmation"
-    max-width=70%
+    max-width=60%
     class="image-border" >}}
 
 #### Image with a Link Value
@@ -154,7 +154,7 @@ Tab panes let you create code blocks with one or more tabs, with a different pro
 
 #### Tab Panes with Asterisks
 
-If the tab pane contains code with an asterisk (`*`) in it, the linter rule for bold text may change the formatting because it doesn’t see it as a code block. To prevent the linter working on the tab pane, add `markdownlint-disable no-space-in-emphasis` and `markdownlint-enable no-space-in-emphasis` as comments around your tab pane, like this:
+If the tab pane contains code with an asterisk (`*`) in it, the linter rule for bold text may change the formatting because it doesn’t see it as a code block. To prevent the linter from working on the tab pane, add `markdownlint-disable no-space-in-emphasis` and `markdownlint-enable no-space-in-emphasis` as comments around your tab pane, like this:
 
 [//]: # (<!-- markdownlint-disable no-space-in-emphasis -->)
 
@@ -190,7 +190,7 @@ A todo is a special kind of alert that only displays on development builds—it 
 
 ### Blank Lines 
 
-To make a new paragraph, or start an unordered list, press <kbd>Enter</kbd> twice to add a blank line between lines of text.
+To make a new paragraph, press <kbd>Enter</kbd> twice to add a blank line between lines of text.
 
 Adjacent lines (lines without a blank space between them) render on the site as the same paragraph.
 Notice, for example, that this sentence is on a different line in the Markdown file but it renders as part of the same paragraph as the preceding sentence.
@@ -312,21 +312,19 @@ Use HTML `<kbd>` tags to refer to keyboard keys:
 
 #### Internal Links {#internal-links}
 
-To link to an internal link (somewhere else on the Docs site), use a relative URL structured like this: "Within a module, you can define [module security](/refguide/module-security/) via module roles and specify the security settings of those module roles for pages, microflows, entities and datasets."
+To link to an internal link (somewhere else on the Docs site), use a relative URL structured like this: Within a module, you can define [module security](/refguide/module-security/) via module roles and specify the security settings of those module roles for pages, microflows, entities and datasets.
 
 ##### Anchors
 
 To add a cross-reference to a specific section of a document, add a custom anchor in curly brackets (`{}`) after the heading.
 
-To link to that anchor if it is on the same page, just include the anchor as the URL path in parentheses, like this: "[Internal Links](#internal-links)"
+To link to that anchor if it is on the same page, just include the anchor as the URL path in parentheses, like this: [Internal Links](#internal-links)
 
-Or, if it is on a different page, include the anchor at the end of the relative URL: "The service that you want to enable must have been enabled for the app by its [Technical Contact](/developerportal/general/app-roles/#technical-contact). For more information, see [Services](/developerportal/deploy/environments/#services)."
+Or, if it is on a different page, include the anchor at the end of the relative URL: The service that you want to enable must have been enabled for the app by its [Technical Contact](/developerportal/general/app-roles/#technical-contact). For more information, see [Services](/developerportal/deploy/environments/#services).
 
 #### External Links
 
-For external links, use the absolute URL, like this:
-
-Some modules are part of your app by default, while others you can download in the [Mendix Marketplace](https://marketplace.mendix.com/) to add functionality to your app.
+For external links, use the absolute URL, like this: Some modules are part of your app by default, while others you can download in the [Mendix Marketplace](https://marketplace.mendix.com/) to add functionality to your app.
 
 {{% alert color="info" %}}
 Make sure to use `https` instead of `http` whenever possible. This is a best practice for security, and the external link icon is only inserted after `https` links.
@@ -355,7 +353,7 @@ This is an ordered list (also called a numbered list):
     1. You can find this by opening the **Data containers** section, or by searching for this container.
 3. In Mendix, in order to display data from the domain model on a page element, the element needs to be within a context. Double-click the template grid to open its properties.
 
-You do not have to increment numbers for ordered list items, but the first list item must start with "1. ". For example, the Markdown for this list starts all four list items with "1. ".
+You do not have to increment numbers for ordered list items (Markdown takes care of that automatically), but the first list item must start with `1. `. For example, the Markdown for this list starts all four list items with `1. `.
 
 1. Open the **Home_Web** page from the **App Explorer**. 
 1. Drag a **Template Grid** from the **Toolbox** onto the page.

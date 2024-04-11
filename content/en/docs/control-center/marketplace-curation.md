@@ -47,5 +47,3 @@ The list shows the following details:
 
 ## 4 Displaying Recommended Marketplace Content in Studio Pro {#displaying-recommended-mp-content}
 In Studio Pro's Marketplace section, developers can view all recommended Marketplace content, as well as Marketplace content without a label. To exclusively list recommended content, simply select the **Show Recommended** check box and observe the results below. The label is also visible on the details page within the main panel. You can further refine your search results by utilizing additional filters in conjunction with this feature.
-
-{{< figure src="/attachments/control-center/marketplace-curation/displaying-recommended-mp-content.png" max-width=100% class="image-border" alt=''displaying-recommended-mp-content''  >}}

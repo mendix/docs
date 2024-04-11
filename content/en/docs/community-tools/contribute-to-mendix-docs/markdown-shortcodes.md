@@ -1,9 +1,9 @@
 ---
-title: "Shortcode, Markdown, and HTML Examples"
+title: "Shortcodes, Markdown, and HTML Examples"
 url: /community-tools/md-shortcode-examples/
 draft: true
 description: "Various test cases and examples for Markdown and shortcodes"
-banner: "This is a draft and will not be rendered in the production website. Use this page to see how various Markdown elements and shortcodes render. Linting has been disabled for this file."
+banner: "This is a draft and will not be rendered in the production website. Use this page to see how various shortcodes, Markdown, and HTML elements render."
 ---
 <!-- markdownlint-disable-file -->
 
@@ -42,16 +42,16 @@ This alert is indented to match the sub-list item.
 {{% /alert %}}
 
     {{% alert color="warning" %}}
-    Do not indent your alert by adding four spaces, like this. That messes up the formatting of the text, and it does not render properly. Only use the indentation method described above.
+    Do not try to indent your alert by adding four spaces, like this. That messes up the formatting of the text, and it does not render properly. Use only the indentation method described above.
     {{% /alert %}}
 
 ### Buttons
 
 {{% button color="info" href="https://marketplace.mendix.com/link/studiopro/" text="Go to Marketplace" title="Download Studio Pro from the Marketplace" %}}
 
-### Code Blocks
+### Code Blocks {#code-blocks}
 
-JSON code block:
+#### JSON Code Block
 
 ```json
 {
@@ -65,14 +65,14 @@ JSON code block:
 }
 ```
 
-HTTP code block with line numbers disabled:
+#### HTTP Code Block with Line Numbers Disabled
 
 ```http {linenos=false}
 GET /projects/d92064a5-b1fd-4be4-97db-53fc90201d1c/epics HTTP/1.1
 Authorization: MxToken 7LJE…vk
 ```
 
-Java code block with lines 4-6 highlighted, and line numbering starting at 33:
+#### Java Code Block with Lines 4-6 Highlighted, and Line Numbering Starting at 33
 
 ```java {hl_lines=["4-6"], linenostart=33}
 @java.lang.Override
@@ -84,33 +84,43 @@ public java.lang.String executeAction() throws Exception
 }
 ```
 
-Plain text code block:
+#### Plain Text Code Block
 
 ```text
 ALTER DATABASE [YourDatabase] SET READ_COMMITTED_SNAPSHOT ON;
 CREATE ASSEMBLY [Mendix.SqlServerExtensions] FROM [a dll file] WITH PERMISSION_SET = SAFE;
 ```
 
-Plain text code block missing the "text" parameter:
+#### Plain Text Code Block Missing the "text" Parameter
 
 ```
 If you don't specify any programming language, the code block looks a bit different. To keep the code blocks consistent throughout the docs, use "text" (as shown in the example above) if you aren't sure what programming language to specify.
 ```
 
+#### Code Block Indented in List
+
+1. First list item
+
+    ```text
+    Code block indented four spaces
+    ```
+
+2. Second list item
+
 ### Images (Figures)
 
-Image with alt text, max-width, and image-border class:
+#### Image with Alt Text, Max-Width, and Image-Border Class
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/clear-environment.png"
     alt="Clear Environment options and confirmation"
     max-width=70%
     class="image-border" >}}
 
-Image with a link value:
+#### Image with a Link Value
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/parameter.png" alt="" link="/refguide/parameter/" >}}
 
-Image indented in a list:
+#### Image Indented in a List
 
 1. Create a new microflow by right-clicking your module and selecting **Add** > **Microflow**.
 2. In the **Add Microflow** dialog box, in the **Name** field, enter *IVK_SetOrderToComplete*, and then click **OK**.
@@ -128,13 +138,7 @@ Icons match the color of the surrounding text unless a color parameter is specif
 * To remove it, click **Delete** ({{< icon name="trash-can" color="red" >}}).
 * Configure your preferences by clicking **Settings** ({{< icon name="cog" >}}).
 
-It's possible to use icons in tables as well:
-
-| Action | Portfolio Manager | Contributor | Viewer |
-| --- | --- | --- | --- |
-| Invite users | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
-
-### Tab panes
+### Tab Panes
 
 Tab panes let you create code blocks with one or more tabs, with a different programming language specified for each tab.
 
@@ -148,23 +152,23 @@ Tab panes let you create code blocks with one or more tabs, with a different pro
     {{% /tab %}}
 {{< /tabpane >}}
 
-If the tab pane contains code with an asterisk (*) in it, the linter rule for bold text may change the formatting because it doesn’t see it as a code block. To prevent the linter working on the tab pane, add `markdownlint-disable no-space-in-emphasis` `markdownlint-enable no-space-in-emphasis` as comments around your tab pane, like this:
+#### Tab Panes with Asterisks
 
-```text
-[//]: # (<!-- markdownlint-disable no-space-in-emphasis -->) 
- 
+If the tab pane contains code with an asterisk (`*`) in it, the linter rule for bold text may change the formatting because it doesn’t see it as a code block. To prevent the linter working on the tab pane, add `markdownlint-disable no-space-in-emphasis` and `markdownlint-enable no-space-in-emphasis` as comments around your tab pane, like this:
+
+[//]: # (<!-- markdownlint-disable no-space-in-emphasis -->)
+
 {{< tabpane >}}
   {{% tab header="Environments:" disabled=true /%}}
   {{< tab header="Studio Pro" lang="StudioPro" >}}
-    [contains(Name, 'an')]
+    [DateRegistered > '[%BeginOfCurrentDay%] - 3 * [%YearLength%]']
     {{% /tab %}}
   {{< tab header="Java" lang="JavaQuery" >}}
-     //Sales.Customer[contains(Name, 'an')]
+    //Sales.Customer[DateRegistered > '[%BeginOfCurrentDay%] - 3 * [%YearLength%]']
     {{% /tab %}}
 {{< /tabpane >}}
- 
+
 [//]: # (<!-- markdownlint-enable no-space-in-emphasis -->)
-```
 
 ### Todos
 
@@ -174,11 +178,11 @@ A todo is a special kind of alert that only displays on development builds—it 
 
 ### Videos
 
-Vidyard video:
+#### Vidyard Video
 
 {{< vidyard "GwE17mzGma5NAvDnXrVdFA" >}}
 
-YouTube video:
+#### YouTube Video
 
 {{% youtube 5tznw5ZUQgk %}}
 
@@ -195,11 +199,9 @@ Notice, for example, that this sentence is on a different line in the Markdown f
 
 Use two asterisks to enclose text that should appear in **bold**, and use one asterisk to enclose text that should appear in *italics*.
 
-### Code Snippets
-
-For code examples in one line or individual words in a paragraph, use the `` ` `` symbol to enclose the code: `cacheBust`. For code snippets that should stand on their own or span multiple lines, use a code block instead.
-
 ### Collapsible Content (Details)
+
+For collapsible content, use the HTML `<details>` and `<summary>` tags.
 
 <details><summary>It cannot be a reserved word (click to see a list of reserved words)</summary>
 
@@ -270,9 +272,12 @@ For code examples in one line or individual words in a paragraph, use the `` ` `
 * `void`
 * `volatile`
 * `while`
+
 </details>
 
 ### Footnotes
+
+For footnotes, use the HTML `<sup>` and `<small>` tags:
 
 | Mendix Data Type | Edm Type | Attribute Value | Atom XML Representation |
 | --- | --- | --- | --- |
@@ -288,31 +293,34 @@ For code examples in one line or individual words in a paragraph, use the `` ` `
 | Long <sup>1</sup> | Edm.Int64 | 3940649673954387 | 3940649673954387 |
 | String | Edm.String | John | John |
 
-<small><sup>1</sup> When using Excel to import an OData source, long numbers may seem cut off. This is due to a restriction in the data type Microsoft uses. For more information, see [Last digits are changed to zeroes when you type long numbers in cells of Excel](https://support.microsoft.com/en-us/kb/269370).
+<small><sup>1</sup> When using Excel to import an OData source, long numbers may seem cut off. This is due to a restriction in the data type Microsoft uses. For more information, see [Last digits are changed to zeroes when you type long numbers in cells of Excel](https://support.microsoft.com/en-us/kb/269370).</small>
+
+### Inline Code
+
+For inline code that is integrated into a sentence, use backticks (`` ` ``) to enclose the code: `cacheBust`. As demonstrated here, you can use double backticks if you need to render a backtick within a code snippet.
+
+For code snippets that are not part of a sentence or that span multiple lines, use a [code block](#code-blocks) instead.
 
 ### Keyboard Keys
 
-Press <kbd>Enter</kbd> to select the highlighted item.
+Use HTML `<kbd>` tags to refer to keyboard keys:
 
-Stop the log capturing in your command-line tool by pressing <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+* Press <kbd>Enter</kbd> to select the highlighted item.
+* Stop the log capturing in your command-line tool by pressing <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
 ### Links
 
 #### Internal Links {#internal-links}
 
-To link to an internal link (somewhere else on the Docs site), use a relative URL structured like this:
-
-Within a module, you can define [module security](/refguide/module-security/) via module roles and specify the security settings of those module roles for pages, microflows, entities and datasets.
+To link to an internal link (somewhere else on the Docs site), use a relative URL structured like this: "Within a module, you can define [module security](/refguide/module-security/) via module roles and specify the security settings of those module roles for pages, microflows, entities and datasets."
 
 ##### Anchors
 
-To add a cross-reference to a specific section of a document, add a custom anchor in curly brackets ({}) after the heading.
+To add a cross-reference to a specific section of a document, add a custom anchor in curly brackets (`{}`) after the heading.
 
-To link to that anchor if it's on the same page, just include the anchor as the URL path in parentheses, like this: [Internal Links](#internal-links)
+To link to that anchor if it is on the same page, just include the anchor as the URL path in parentheses, like this: "[Internal Links](#internal-links)"
 
-Or, if it's on a different page, include the anchor at the end of the relative URL:
-
-The service that you want to enable must have been enabled for the app by its [Technical Contact](/developerportal/general/app-roles/#technical-contact). For more information, see [Services](/developerportal/deploy/environments/#services).
+Or, if it is on a different page, include the anchor at the end of the relative URL: "The service that you want to enable must have been enabled for the app by its [Technical Contact](/developerportal/general/app-roles/#technical-contact). For more information, see [Services](/developerportal/deploy/environments/#services)."
 
 #### External Links
 
@@ -326,6 +334,8 @@ Make sure to use `https` instead of `http` whenever possible. This is a best pra
 
 ### Lists
 
+#### Unordered Lists
+
 This is an unordered list (also called a bulleted list):
 
 * You must fill out the following sections in order to submit your component:
@@ -336,6 +346,8 @@ This is an unordered list (also called a bulleted list):
     * Any **Dependencies** (for example, the required Studio Pro version, modules, images, and styles)
     * The **Installation** steps and details
 
+#### Ordered Lists
+
 This is an ordered list (also called a numbered list):
 
 1. Open the **Home_Web** page from the **App Explorer**. 
@@ -343,7 +355,7 @@ This is an ordered list (also called a numbered list):
     1. You can find this by opening the **Data containers** section, or by searching for this container.
 3. In Mendix, in order to display data from the domain model on a page element, the element needs to be within a context. Double-click the template grid to open its properties.
 
-You do not have to increment numbers for ordered list items, but the first list item must start with `1. `. For example, the Markdown for this list starts all four list items with `1. `.
+You do not have to increment numbers for ordered list items, but the first list item must start with "1. ". For example, the Markdown for this list starts all four list items with "1. ".
 
 1. Open the **Home_Web** page from the **App Explorer**. 
 1. Drag a **Template Grid** from the **Toolbox** onto the page.

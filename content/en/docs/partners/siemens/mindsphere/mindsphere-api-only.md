@@ -66,7 +66,7 @@ However, authentication will only be successful if the correct credentials are p
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-api-only/ModuleConfiguration.png" alt="Authentication" >}}
 
-Please add the "Siemens Insights Hub API Authenticator* module role "User" to all your apps user roles to ensure that the localized session expired message / title can be loaded during app startup.
+Add the **Siemens Insights Hub API Authenticator** module role **User** to all your apps user roles to ensure that the localized session expired message / title can be loaded during app startup.
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-api-only/ModuleRole.png" alt="Authentication" >}}
 

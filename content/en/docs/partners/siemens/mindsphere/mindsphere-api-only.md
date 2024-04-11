@@ -33,6 +33,8 @@ Please follow the steps described in the Insights Hub documentation [Technical U
 
 ## 3 Authenticating Calls to Insights Hub APIs
 
+{{% todo %}}Need the component number{{% /todo %}}
+
 To extract data from Insights Hub, your calls to the Insights Hub APIs need to be authenticated. This is done through the [Siemens Insights Hub API Authenticator](https://marketplace.mendix.com/link/component/????).
 
 Download the **Siemens Insights Hub API Authenticator** by following the instructions [Downloading Content from the Marketplace](/appstore/overview/use-content/#downloading) in *Using Marketplace Content*.

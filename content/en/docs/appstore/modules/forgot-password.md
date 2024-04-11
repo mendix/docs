@@ -186,7 +186,7 @@ To convert the Mendix 9.24.2 to Mendix 10.6.0 or above, follow the steps below:
 
     You will see four errors in the [Errors Pane](/refguide/errors-pane/).
 
-1. Click one of the errors and select the **Remove property Spacing** option. This will resolve all of the errors.
+1. Click one of the errors and select the **Remove Property Spacing** option. This will resolve all of the errors.
 
 You have now successfully upgraded the Forgot Password Module to work with Mendix 10.
 

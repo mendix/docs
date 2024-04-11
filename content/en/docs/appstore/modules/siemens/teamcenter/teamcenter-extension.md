@@ -10,7 +10,7 @@ title: "Teamcenter Extension"
 
 ## 1 Introduction {#introduction}
 
-The [Teamcenter Extension] is a Mendix Module built using the Mendix Extensibility Framework to provide you with an effortless means to harness the full capabilities of [Teamcenter Connector] (https://marketplace.mendix.com/link/component/111627) for Mendix. The Teamcenter Connector is a powerful tool that allows you to access, create and modify product data in Teamcenter. The Teamcenter Extension is layered atop it, providing a low-code experience to enhance the user friendliness and streamline the utilization of the connector.
+The [Teamcenter Extension] is a Mendix Module built using the Mendix Extensibility Framework to provide you with an effortless means to harness the full capabilities of [Teamcenter Connector](https://marketplace.mendix.com/link/component/111627) for Mendix. The Teamcenter Connector is a powerful tool that allows you to access, create and modify product data in Teamcenter. The Teamcenter Extension is layered atop it, providing a low-code experience to enhance the user friendliness and streamline the utilization of the connector.
 
 ### 1.1 Use Cases {#usecases}
 
@@ -32,7 +32,7 @@ https://marketplace.mendix.com/link/component/111627)
 2. [Community Commons](https://marketplace.mendix.com/link/component/170)
 3. Ensure you have the feature flag enabled - Right click on the Mendix Desktop icon shortcut and select Properties. In the "Target" box, add the keyword "--enable-extension-development" at the end.
 
-![image](https://github.com/mwbouwkamp-mendix/mendix-docs/assets/157635704/6a2ea4d4-bc34-476f-b2c6-4c9e2f471abb)
+![image](https://github.com/mwbouwkamp-mendix/mendix-docs/assets/157635704/d681ea41-784f-4b76-b959-fe7cf4e4c46c)
 
 ### 1.3 License {#license}
 
@@ -43,12 +43,12 @@ Open the Teamcenter Extension by clicking on menu option View -> Teamcenter insi
 
 The Menu tab displays use cases or actions you can create artifacts for, using the extension. The Settings tab allows you to provide details of your Teamcenter instance to connect to, while using the extension.
 
-![image](https://github.com/mwbouwkamp-mendix/mendix-docs/assets/157635704/054f8938-44a7-43c0-a1ce-76e54cf2a813)
+![image](https://github.com/mwbouwkamp-mendix/mendix-docs/assets/157635704/2d2908bb-7f4f-4957-9bee-6f2b5a9d2ad7)
 
 ## 3 Teamcenter Configuration {#teamcenter-configuration}
 The Settings tab displays Teamcenter configuration page. This is where you can provide your Teamcenter Instance details to connect to while building your app. Click on Edit to open a panel to enter details. Please note the certificate path should be relative to the App Directory
 
-![image](https://github.com/mwbouwkamp-mendix/mendix-docs/assets/157635704/67dc5e98-9596-4a2c-8699-1a3a71b61d19)
+![image](https://github.com/mwbouwkamp-mendix/mendix-docs/assets/157635704/252cd07f-3f6d-4f82-b9a6-9ea67d6c4916)
 
 ## 4 Import mapping {#importmapping}
 
@@ -88,15 +88,13 @@ In the import mapping sidebar, you can configure which Teamcenter properties, re
 
 The import mapping sidebar shows all properties, references, and relations for the configured Teamcenter object. Depending on the use case, each one of them is accompanied with checkboxes for reading and writing to configure which of these you want to include when retrieving data from or creating data in Teamcenter.
 
-![image](https://github.com/mwbouwkamp-mendix/mendix-docs/assets/157635704/9b1eb260-774b-4603-a18b-2b4faa6fb4f9)
-
 You will often see that checkboxes are checked by default and/or disabled. In general, the following rules apply. 
 1.	Properties that are already available on the Mendix entity or one of its generalizations are checked by default and cannot be unchecked.
 2.	Properties, references, and relations for Marketplace entities are disabled by default as it is not good practice to change Mendix marketplace content.
 
 As an example, if a read checkbox is checked and disabled, it means that the property already exists as an attribute on the selected object or one of its generalizations. Similarly, if a write checkbox is checked and disabled, it means the property is required during creation of the selected object.
 
-![image](https://github.com/mwbouwkamp-mendix/mendix-docs/assets/157635704/e151b84b-9e5e-4cfd-8554-f7045d556223)
+![image](https://github.com/mwbouwkamp-mendix/mendix-docs/assets/157635704/82cf072e-710f-4d20-8c18-2fcda5d5ee36)
 
 You can select and deselect the properties, references, and relations depending on the data you need from Teamcenter. When you select a reference or relation, a new placeholder entity will be added to the object mapping tree. You will need to perform the import mapping for these referenced/related objects in a subsequent step (business object mapping and selection of Teamcenter properties, references, and relations).
 

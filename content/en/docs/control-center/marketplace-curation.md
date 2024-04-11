@@ -9,16 +9,16 @@ no_list: true
 
 ## 1 Introduction
 
-The **Marketplace Curation** feature is a governance capability within the Mendix Platform, allowing you to define company policies for the public Marketplace content. With such policies, you can label certain content as recommended so developers of your company know which public content can be used in app development. This functionality provides several key benefits:
-* Developer guidance: Developers can easily identify Marketplace content suitable for their projects by filtering content in Studio Pro and Web by recommended labels. This helps developers find content which is useful and relevant for app development in their company.
-* Enhanced marketplace exploration: By specifying criteria for recommended content, developers gain the ability to explore a wider array of public content, enabling them to leverage resources as needed for their projects.
-* Governance control: Centralized curation allows admins to translate the offline guidelines to in-platform experience, establishing the efficient communication and time-saving processes between developers and admins.
+The **Marketplace Curation** feature is a governance capability within the Mendix Platform. This feature allows you to define company policies for the public Marketplace content. With such policies, you can label certain content as recommended so developers of your company know which public content can be used in app development. This functionality provides several key benefits:
+* Developer guidance: Developers can easily identify Marketplace content suitable for their apps by filtering Marketplace content in Studio Pro and on the Marketplace website by recommended labels. This helps developers find content which is useful and relevant for app development in their company.
+* Enhanced marketplace exploration: By specifying criteria for recommended content, developers gain the ability to explore a wider array of public content, enabling them to leverage resources as needed for their apps.
+* Governance control: Centralized curation allows Mendix Admins to translate the offline guidelines to in-platform experience, establishing the efficient communication and time-saving processes between developers and admins.
 
 The **Marketplace Curation** page contains two tabs: the [Curation Settings](#curation-settings) tab and the [Marketplace Content List](#marketplace-content-list) tab.
 
 ## 2 Curation Settings {#curation-settings}
 
-On the **Curation Settings** tab, you can configure company policies for public Marketplace content. You can specify which set of content will be recommended and that way Marketplace content is automatically labeled according to the curation settings. For instance, in the following example, any content supported by the "Community" or "Platform" and licensed under "Apache v2" or "BSD 2.0" will be appropriately labeled as recommended.
+On the **Curation Settings** tab, you can configure company policies for public Marketplace content. You can specify which set of content is recommended and that way Marketplace content is automatically labeled according to the curation settings. For instance, in the following example, any content supported by the **Community** or **Platform** and licensed under **Apache v2** or **BSD 2.0** will be labeled as recommended.
 
 {{< figure src="/attachments/control-center/marketplace-curation/curation-settings.png" max-width=100% class="image-border" alt=''curation-settings''  >}}
 
@@ -27,7 +27,7 @@ On the **Curation Settings** tab, you can configure company policies for public 
 ## 3 Marketplace Content List {#marketplace-content-list}
 
 On the **Marketplace Content List** tab, there is a list of all public Marketplace content in the table below. It includes information about whether they carry the recommended label and the origin of that label, which can be either **Curation Setting** or **Manual**.
-You also have the ability to manually add or remove labels after selecting items from the table as illustrated below. For content not recommended due to the curation settings, you can add the label by clicking the **Add Label** button. Conversely, for content recommended by the **curation settings**, you can manually remove the label and override the rule.
+You also have the ability to manually add or remove labels after selecting items from the table as illustrated below. For content not recommended due to the curation settings, you can add the label by clicking the **Add Label** button. Conversely, for content recommended by the curation settings, you can manually remove the label by clicking the **Remove Label** button to override the rule.
 
 {{< figure src="/attachments/control-center/marketplace-curation/marketplace-content-list.png" max-width=100% class="image-border" alt=''marketplace-content-list''  >}}
 
@@ -38,11 +38,14 @@ The list shows the following details:
 * **Updated on** – This shows the date when the content was most recently updated.
 * **License** – This shows the license of the content.
 * **Label** – This shows whether the content has a recommended label. 
-* **Source** – This indicates the origin of the label. It will display as 'Curation Setting' if the content is recommended due to the Curation Settings. Alternatively, it will appear as 'Manual' if added manually by a company admin.
+* **Source** – This indicates the origin of the label:
+  * **Curation Setting**  – The content is recommended automatically based on the curation settings.
+  * **Manual** – The recommended label is added manually by a Mendix Admin.
 
-{{% alert color="info" %}}Once you've added or removed labels from the desired Marketplace content, any labels you've added will be preserved even if you modify the rules in Curation Settings. However, labels that have been manually removed may reappear based on rules in the Curation Settings. {{% /alert %}}
 
-## 3 Displaying Recommended Marketplace Content in Studio Pro {#displaying-recommended-mp-content}
-In Studio Pro's Marketplace section, developers can view all recommended Marketplace content, as well as Marketplace content without a label. To exclusively list recommended content, simply check the "Show Recommended" checkbox and observe the results below. The label is also visible on the details page within the main panel. You can further refine your search results by utilizing additional filters in conjunction with this feature.
+{{% alert color="info" %}}If a Mendix Admin manually adds a recommended label to a Marketplace component, this Marketplace content will keep this label even if the curation settings are changed later. However, if a Mendix Admin manually removes a label from a Marketplace component, then the label can appear again if the curation settings are changed later. {{% /alert %}}
+
+## 4 Displaying Recommended Marketplace Content in Studio Pro {#displaying-recommended-mp-content}
+In Studio Pro's Marketplace section, developers can view all recommended Marketplace content, as well as Marketplace content without a label. To exclusively list recommended content, simply select the **Show Recommended** check box and observe the results below. The label is also visible on the details page within the main panel. You can further refine your search results by utilizing additional filters in conjunction with this feature.
 
 {{< figure src="/attachments/control-center/marketplace-curation/displaying-recommended-mp-content.png" max-width=100% class="image-border" alt=''displaying-recommended-mp-content''  >}}

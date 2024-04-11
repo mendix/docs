@@ -9,9 +9,9 @@ banner: "This is a draft and will not be rendered in the production website. Use
 
 ## Introduction
 
-This page provides examples of shortcodes, Markdown, and HTML in the docs.
+This page provides examples of shortcodes, Markdown, and HTML in the docs. View the Markdown file for the source code, or check out the rendered page at [https://docs-development.mendix.com](https://docs-development.mendix.com/community-tools/md-shortcode-examples/) (or via a local build).
 
-It provides rendered examples of the technical guidelines described in [Shortcodes, Markdown, and HTML](https://mendix.atlassian.net/wiki/x/PYASow).
+This page visualizes the technical guidelines and syntax outlined in the [Shortcodes, Markdown, and HTML](https://mendix.atlassian.net/wiki/x/PYASow) Confluence page.
 
 ## Shortcodes
 
@@ -148,8 +148,9 @@ Tab panes let you create code blocks with one or more tabs, with a different pro
     {{% /tab %}}
 {{< /tabpane >}}
 
-If the tab pane contains code with an asterisk (*) in it, the linter rule for bold text may change the formatting because it doesn’t see it as a code block. To prevent the linter working on the tab pane, add the following comment lines around your tab pane. 
+If the tab pane contains code with an asterisk (*) in it, the linter rule for bold text may change the formatting because it doesn’t see it as a code block. To prevent the linter working on the tab pane, add `markdownlint-disable no-space-in-emphasis` `markdownlint-enable no-space-in-emphasis` as comments around your tab pane, like this:
 
+```text
 [//]: # (<!-- markdownlint-disable no-space-in-emphasis -->) 
  
 {{< tabpane >}}
@@ -162,7 +163,8 @@ If the tab pane contains code with an asterisk (*) in it, the linter rule for bo
     {{% /tab %}}
 {{< /tabpane >}}
  
-[//]: # (<!-- markdownlint-enable no-space-in-emphasis -->) 
+[//]: # (<!-- markdownlint-enable no-space-in-emphasis -->)
+```
 
 ### Todos
 

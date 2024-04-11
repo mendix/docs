@@ -76,13 +76,14 @@ Private Mendix Platform must connect to services within your premises. Mandatory
 | Version control | GitHub | Latest | Required for projects and collaboration |
 | Version control | Bitbucket | Latest | Required for projects and collaboration |
 | Version control | Azure DevOps | Latest | Required for projects and collaboration |
-| CI/CD | Kubernetes | See [Supported Environments](/developerportal/deploy/private-cloud-supported-environments/) | Default for CI/CD |
+| CI/CD | Kubernetes | See [Supported Providers](/developerportal/deploy/private-cloud-supported-environments/) | Default for CI/CD |
 | CI/CD | Jenkins | 2.346.1 or newer, with support for the Docker agent | Required for CI/CD |
 | CI/CD | Tekton | Mendix Operator version 1.20 or newer, Kubernetes version 1.19 or newer, latest version of Tekton from Mendix for Private Cloud | Required for CI/CD |
 | CI/CD | Azure DevOps | Latest | Required for CI/CD |
 | Logging & Metrics | Prometheus | See [Supported Services](/developerportal/deploy/private-cloud-monitor/) | Required for Logging & Metrics |
 | Logging & Metrics | Grafana | See [Supported Services](/developerportal/deploy/private-cloud-monitor/) | Required for Logging & Metrics |
 | Logging & Metrics | Loki | See [Supported Services](/developerportal/deploy/private-cloud-monitor/) | Required for Logging & Metrics |
+| License management | Private Cloud License Manager | [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/) | Required for license management capabilities |
 
 ### 4.3 Customer Apps
 

@@ -379,6 +379,6 @@ To include lists in tables, use `<ol><li>...</li></ol>` or `<ul><li>...</li></ul
 | Parameter   | Value                                                        |
 | ----------- | ------------------------------------------------------------ |
 | DisplayName | This is the name identifier of a configuration (for example, *MyConfiguration*). |
-| API type    | Select `OpenAI`.<br/>For more information, see the [ENUM_ApiType](#enum-apitype) section. |
+| API type    | Select `OpenAI`.<br/>For more information, see the ENUM_ApiType section. |
 | Endpoint    | This is the API endpoint (for example, `https://api.openai.com/v1`)   |
 | API key     | This is the access token to authorize your API call. <br />To get an API, follow these steps:<ol><li>Create an account and log in at [OpenAI](https://platform.openai.com/).</li><li> Go to the [API key page](https://platform.openai.com/account/api-keys) to create a new secret key. </li><li>Copy the API key and save this somewhere safe.</li></ol> |

@@ -427,6 +427,8 @@ As of [March 26, 2024](/releasenotes/developer-portal/mendix-cloud/#march-26-202
 
 Compared to gp2, gp3 provides higher baseline storage performance and does not require any burst balance. For more information on gp2 and gp3 performance, see the [AWS gp3 storage](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#gp3-storage) page.
 
+For details on DB storage size for various plans, see [Cloud Resource Packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack).
+
 Burst balance metrics are not available for databases with the gp3 storage instance type.
 {{% /alert %}}
 

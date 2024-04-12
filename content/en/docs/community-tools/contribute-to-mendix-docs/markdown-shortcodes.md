@@ -3,6 +3,7 @@ title: "Shortcodes, Markdown, and HTML Examples"
 url: /community-tools/md-shortcode-examples/
 draft: true
 description: "Various test cases and examples for Markdown and shortcodes"
+linktitle: "Shortcodes, Markdown, and HTML"
 banner: "This is a draft and will not be rendered in the production website. Use this page to see how various shortcodes, Markdown, and HTML elements render."
 ---
 <!-- markdownlint-disable-file -->

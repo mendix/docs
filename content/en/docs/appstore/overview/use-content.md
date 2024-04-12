@@ -90,7 +90,7 @@ If you download a module, the **Import Module** dialog box opens, where you shou
    
 3. Wait until a pop-up window states that the module was successfully imported. Click **OK**. You can find the imported module in the **App Explorer**. 
 
-##### 2.1.1.4 Extensions {#extensions}
+##### 2.1.1.3 Extensions {#extensions}
 
 If you download an [extension](/appstore/modules/#extensions), a warning dialog box opens.
 

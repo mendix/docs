@@ -22,14 +22,20 @@ Mendix Studio Pro has the requirements listed in the following sections.
 
 Studio Pro 10.7 and above can run in beta mode on an ARM Mac and Intel Mac running macOS Sonoma 14.0 and above. For information on known limitation, see the [Known Limitations for Mac](#mac-limitations) section below. 
 
-Studio Pro versions 10.0 and above can run on the M series Apple Silicon Mac using [Parallels 17](https://www.parallels.com/) and Windows 11. Earlier versions of Studio Pro can run on Apple Mac [using Parallels](/refguide/using-mendix-studio-pro-on-a-mac/).
-
 {{% alert color="info" %}}
 While Studio Pro on Mac is in [public beta](/releasenotes/beta-features/), Mendix can only verify support for the latest macOS version available. Support for earlier versions is not guaranteed and it is best to update macOS to the newest version when using Studio Pro. 
 {{% /alert %}}
 
 {{% alert color="warning" %}}
 Administrator rights are required to install Mendix Studio Pro on Mac (Beta).
+{{% /alert %}}
+
+Studio Pro versions 10.0 and above can run on the M series Apple Silicon Mac using [Parallels 17](https://www.parallels.com/) and Windows 11. Earlier versions of Studio Pro can run on Apple Mac [using Parallels](/refguide/using-mendix-studio-pro-on-a-mac/). 
+
+{{% alert color="info" %}}
+
+If you were using parallels and enabled port forwarding, but then upgraded and would like to use Studio Pro on Mac, make sure to quit parallels to be able to sign in to Studio Pro. 
+
 {{% /alert %}}
 
 The following frameworks are required. They will be installed automatically by the Studio Pro installer, if necessary:

@@ -63,7 +63,7 @@ To download content in Studio Pro [9.19](/releasenotes/studio-pro/9.19/) and abo
 
 6. Click **Download** to download the component. The correct version of the component that is compatible with your Studio Pro version is integrated directly into your application (for widgets, version compatibility is not applicable). By default, the highest correct version of the component is downloaded. If you want to download an older component version, go to the **Releases** tab and click **Download** for the desired version.
 
-7. Depending on whether the component is a widget, a module, an [extension](/appstore/modules/#extensions), (which is a special type of module), or an app, go to one of the sections below:
+7. Depending on whether the component is a widget, a module, an [extension](/appstore/modules/#introduction), (which is a special type of module), or an app, go to one of the sections below:
 
     * [Widgets](#widgets)
     * [Modules](#modules)
@@ -122,11 +122,10 @@ To download content in Studio Pro [9.18](/releasenotes/studio-pro/9.18/) and bel
 4. Use the **Search** bar to find the component that you want to download. Note that results for Marketplace content searches within Studio Pro may differ from those in the online [Marketplace](/appstore/overview/) due to synchronization issue.
 5. Click the component (or the **Read more** button on the right side) to show the details of the component.
 6. Click **Download** to download the component. The correct version of the component that is compatible with your Studio Pro version is integrated directly into your application (for widgets, version compatibility is not applicable). By default, the highest correct version of the component is downloaded. If you want to download an older component version, go to the **Releases** tab and click **Download** for the desired version.
-7. Depending on whether the component is a widget, a module, an [extension](), (which is a special type of module), or an app, go to one of the sections above:
+7. Depending on whether the component is a widget, a module, or an app, go to one of the sections above:
 
    * [Widgets](#widgets)
    * [Modules](#modules)
-   * [Extensions](#extensions)
    * [Apps](#apps)
 
 ### 2.2 Importing Content from Studio Pro's App Explorer {#import}

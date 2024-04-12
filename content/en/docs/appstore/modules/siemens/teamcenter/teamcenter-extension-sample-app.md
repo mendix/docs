@@ -17,7 +17,7 @@ The Teamcenter Extension Sample App demonstrates capabilities of the [Teamcenter
 
 It serves as a good starting point to visualize what you can do with [Teamcenter Extension] and the [Teamcenter Connector] 
 
-## 2 How to use the app
+## 2 How to use the app {#how-to-use-the-app}
 1. Download the sample app from the marketplace to your Mendix session
 2. Run the App
 3. Login with your credentials
@@ -41,7 +41,7 @@ It serves as a good starting point to visualize what you can do with [Teamcenter
 
 ![image](https://github.com/mwbouwkamp-mendix/mendix-docs/assets/157635704/efa6e936-78f1-4f3e-8ea6-6b437330216f)
 
-Note: To Update, Revise or Configure BOM structures you should first search for the relevant Item Revision and you will see actions
+Note: To Update, Revise or Configure BOM structures you should first search for the relevant Item Revision to see the actions
 
 ![image](https://github.com/mwbouwkamp-mendix/mendix-docs/assets/157635704/91653459-ee0a-4b60-bb62-c4649647d5b2)
 

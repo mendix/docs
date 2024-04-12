@@ -77,7 +77,7 @@ A licensed app runs on a node with at least two environments: production and acc
 Each environment can only run a single version of an app. Additionally, all the environments of a node should be used to run versions of the same app that is linked to the node.
 {{% /alert %}}
 
-### 1.2.1 Flexible Environments {#flexible-environments}
+#### 1.2.1 Flexible Environments {#flexible-environments}
 
 If the standard environments that you get with a licensed app do not meet your requirements, you can request a Mendix Cloud node with Flexible Environments. With Flexible Environments, you can specify how many environments you want in your node. You can also decide what they should be called.
 

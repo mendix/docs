@@ -66,7 +66,7 @@ The [Catalog](/catalog/) is a hub for shared registered assets made available in
 
 ### 2.2 Getting Mendix Connectors
 
-Many existing Mendix [Connectors](/appstore/modules/#connectors) can be downloaded from the [Mendix Marketplace](https://marketplace.mendix.com/) directly into your app. Depending on your use case, your company's private Mendix Marketplace could also have a variety of Mendix connector modules available. For more information on the distinction between public and private Marketplace content, see the [Adding New Marketplace Content](/appstore/sharing-content/#adding) section of *Share Marketplace Content*.
+Many existing Mendix Connectors can be downloaded from the [Mendix Marketplace](https://marketplace.mendix.com/) directly into your app. Depending on your use case, your company's private Mendix Marketplace could also have a variety of Mendix connector modules available. For more information on the distinction between public and private Marketplace content, see the [Adding New Marketplace Content](/appstore/sharing-content/#adding) section of *Share Marketplace Content*.
 
 Because connectors expose data via custom microflow activities, you can find them in the Studio Pro [Toolbox](/refguide/view-menu/#toolbox) to implement when building your application logic. Then, you can drag them to where you want to use the connector functionality.
 

@@ -88,7 +88,8 @@ If you download a module, the **Import Module** dialog box opens, where you shou
 
 2. Click **Import**.
    
-2. Wait until a pop-up window states that the module was successfully imported. Click **OK**. You can find the imported module in the **App Explorer**.              
+3. Wait until a pop-up window states that the module was successfully imported. Click **OK**. You can find the imported module in the **App Explorer**. 
+
 ##### 2.1.1.4 Extensions {#extensions}
 
 If you download an [extension](/appstore/modules/#extensions), a warning dialog box opens.
@@ -102,7 +103,6 @@ Click **OK** in the confirmation pop-up window. Your extension is now installed 
 If you do not want to trust the extension and would prefer to remove the extension altogether, you can remove the add-on module that was added.
 
 {{< figure src="/attachments/appstore/overview/use-content/trust-extension.png" class="image-border" alt="trust extension" >}}
-
 
 ##### 2.1.1.4 Apps {#apps}
 

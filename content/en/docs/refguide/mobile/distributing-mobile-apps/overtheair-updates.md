@@ -53,7 +53,7 @@ Before starting this guide, make sure you have completed the following prerequis
 * Install your app on a test device or emulator.
 * Read the [Offline-First](/refguide/offline-first/) guide. Understand this document before issuing OTA updates or releasing new versions.
 
-## 4 When to Use OTA Updates
+## 4 When to Use OTA Updates{#when-to-use-ota}
 
 ### 4.1 Use Cases for OTA Updates {#safeToUpdate}
 

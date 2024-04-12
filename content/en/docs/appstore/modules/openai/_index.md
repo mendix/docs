@@ -106,7 +106,7 @@ The following inputs are required for the OpenAI configuration:
 | DisplayName | This is the name identifier of a configuration, e.g. *MyConfiguration*. |
 | API type    | Select `OpenAI`.<br />For more information, see the [ENUM_ApiType](#enum-apitype) section. |
 | Endpoint    | This is the API Endpoint, e.g. `https://api.openai.com/v1`   |
-| API key     | This is the access token to authorize your API call. <br />To get an API, follow these steps:<ol><li>Create an account and log in at [OpenAI](https://platform.openai.com/).</li><li> Go to the [API key page](https://platform.openai.com/account/api-keys) to create a new secret key. </li><li>Copy the API key and save this somewhere safe.</li></ol> |
+| API key     | This is the access token to authorize your API call. <br />To get an API, follow these steps:<ol><li>Create an account and sign in at [OpenAI](https://platform.openai.com/).</li><li> Go to the [API key page](https://platform.openai.com/account/api-keys) to create a new secret key. </li><li>Copy the API key and save this somewhere safe.</li></ol> |
 
 {{% alert color="info" %}}
 For more details, see the [OpenAI API reference](https://platform.openai.com/docs/api-reference).
@@ -132,7 +132,7 @@ For the Azure OpenAI configuration, each model needs a separate deployment so th
 
 ##### 3.1.2.1 Obtaining Azure OpenAI Resource Name {#azure-resource-name}
 
-1. Go to the [Azure OpenAI portal](https://oai.azure.com/) and log in.
+1. Go to the [Azure OpenAI portal](https://oai.azure.com/) and sign in.
 2. On the upper-right corner, click **Settings** ({{% icon name="cog" %}}). 
 3. Go to the **Resource** tab.
 4. Go to **Current resource** and click **JSON view**.
@@ -140,7 +140,7 @@ For the Azure OpenAI configuration, each model needs a separate deployment so th
 
 ##### 3.1.2.2 Obtaining Azure OpenAI API keys {#azure-api-keys}
 
-1. Go to the [Azure OpenAI portal](https://oai.azure.com/) and log in.
+1. Go to the [Azure OpenAI portal](https://oai.azure.com/) and sign in.
 2. On the upper-right corner, click **Settings** ({{% icon name="cog" %}}). 
 3. Go to the **Resource** tab.
 4. Go to **Current resource** and click **JSON view**.
@@ -267,7 +267,7 @@ This entity is used to store the API credentials and endpoints in the configurat
 | `DisplayName`    | This is the name identifier of a configuration.              |
 | `ApiType`        | The value can be `OpenAI` or `AzureOpenAI`.<br />For more information, see the [ENUM_ApiType](#enum-apitype) section. |
 | `Endpoint`       | This is the API Endpoint, e.g. `https://api.openai.com/v1` for OpenAI, or `https://your-resource-name.openai.azure.com/openai/deployments/`for Azure OpenAI. |
-| `DeploymentName` | This is the deployment name you chose when you deployed the model. This is only relevant for configurations of `ApiType` **AzureOpenAI**. Deployments provide endpoints to the Azure OpenAI base models, or your fine-tuned models.<br />To check the deployment name, follow these steps:<ol><li>Log in at [Azure OpenAI](https://oai.azure.com/).</li><li>Navigate to deployments in the sidebar.</li></ol> |
+| `DeploymentName` | This is the deployment name you chose when you deployed the model. This is only relevant for configurations of `ApiType` **AzureOpenAI**. Deployments provide endpoints to the Azure OpenAI base models, or your fine-tuned models.<br />To check the deployment name, follow these steps:<ol><li>Sign in at [Azure OpenAI](https://oai.azure.com/).</li><li>Navigate to deployments in the sidebar.</li></ol> |
 | `ApiVersion`     | This the API version used for this operation. This follows the `YYYY-MM-DD` format. Only relevant for configurations of `ApiType` **AzureOpenAI**. |
 | `ApiKey`        | This is the access token to authorize your API call. <br />For details, see the [OpenAI configuration](#openai-configuration) and [Azure OpenAI configuration](#azure-openai-configuration) sections. |
 | `KeyType`        | This is the type of token entered in the `ApiKey` field. This is only relevant for configurations of `ApiType` **AzureOpenAI**.<br />For more information, see the [ENUM_ApiType](#enum-keytype) section. |
@@ -811,6 +811,7 @@ We have seen the following two exceptions when using JDK version `jdk-11.0.3.7-h
 `javax.net.ssl.SSLException - Received fatal alert: record_overflow`.
 
 Follow these steps to check your JDK version and update if neccessary:
+
 1. Check your JDK version: In Studio Pro Go to **Edit** -> **Preferences** -> **Deployment**-> **JDK directory**. If the path points to `jdk-11.0.3.7-hotspot`, you need to update the JDK by following the next steps.
 2. Go to [Eclipse Temurin JDK 11](https://adoptium.net/en-GB/temurin/releases/?variant=openjdk11&os=windows&package=jdk) and download the `.msi` file of the latest release of **JDK 11**.
 3. Open the downloaded file and follow the installation steps. Remember the installation path. Usually this should be somethink like `C:/Program Files/Eclipse Adoptium/jdk-11.0.22.7-hotspot`.

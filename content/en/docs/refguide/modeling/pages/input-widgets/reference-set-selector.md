@@ -6,7 +6,9 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="warning" %}}The **reference set selector** widget is not supported on native mobile pages.{{% /alert %}}
+{{% alert color="warning" %}}The **reference set selector** widget is not supported on native mobile pages. 
+
+To upgrade it to a React-compliant widget which works on a native page, see the Mendix React Client's [Migration Guide](/refguide/mendix-client/react/#migration-guide).{{% /alert %}}
 
 ## 1 Introduction
 

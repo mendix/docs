@@ -1,5 +1,6 @@
 ---
-title: "Format String ⚠"
+title: "Format String"
+deprecated: true
 url: /appstore/widgets/format-string/
 category: "Widgets"
 description: "Describes the configuration and usage of the Format String widget, which is available in the Mendix Marketplace."
@@ -86,7 +87,7 @@ The widget has default values for **nl-nl**, **en-us**, and **en-gb**.
 
 ## 3 Example Scenario
 
-In this scenario, you have an attribute that contains a hyperlink to a website (for example, `http://mendix.com`). The attribute is called **Link**.
+In this scenario, you have an attribute that contains a hyperlink to a website (for example, `https://mendix.com`). The attribute is called **Link**.
 
 You want to show this link as a simple HTML link.
 

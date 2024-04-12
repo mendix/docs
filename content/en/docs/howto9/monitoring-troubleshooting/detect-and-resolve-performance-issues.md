@@ -177,4 +177,4 @@ For more information on performance best practices, see [Performance Best Practi
 
 ## 7 Read More
 
-* [Expert Webinar Series: Performance](http://ww2.mendix.com/Expert-Webinar.Performance.html)
+* [Expert Webinar Series: Performance](https://youtu.be/xNR3BjJYt3U)

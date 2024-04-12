@@ -140,6 +140,7 @@ Input Excel File
 {{% /alert %}}
 
 {{% alert color="warning" %}}
+
 * **Enum** is not supported as a target data type
 * Runtime exceptions can occur if the input data cannot be converted into desired the target data type for various reasons (for example, invalid data, data truncation, casting etc.)
 {{% /alert %}}

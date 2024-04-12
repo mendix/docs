@@ -106,4 +106,4 @@ We enforce this new stricter association on existing data in order to avoid easi
 
 ## 4 Help with Migration
 
-To help with migrating your old data, Mendix has developed a migration toolkit. For details on this, please contact [Mendix Support](http://support.mendix.com).
+To help with migrating your old data, Mendix has developed a migration toolkit. For details on this, please contact [Mendix Support](https://support.mendix.com).

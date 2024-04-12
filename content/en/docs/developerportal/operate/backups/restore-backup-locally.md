@@ -29,7 +29,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
     {{% alert color="info" %}}This how-to was made with PostgreSQL version 9.6.5.{{% /alert %}}
 
-* When you are restoring a database hosted in Mendix Cloud, or when downloading a full backup, your local machine must have [7zip](http://www.7-zip.org/) or another utility that can extract files from *.gz* and *.tar* archives.
+* When you are restoring a database hosted in Mendix Cloud, or when downloading a full backup, your local machine must have [7zip](https://www.7-zip.org/) or another utility that can extract files from *.gz* and *.tar* archives.
 
 ## 3 Restoring the Backup to Postgres
 

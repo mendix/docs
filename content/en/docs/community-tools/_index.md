@@ -5,6 +5,9 @@ description: "Describes the main tools that Mendix maintains to support the awes
 weight: 46
 no_list: false 
 description_list: true
+cascade:
+    - space: "Community Tools Guide"
+    - mendix_version: 10
 tags: ["community", "documentation", "profile", "partner", "forum", "mvp", "support"]
 aliases:
     - /developerportal/community-tools/

@@ -72,11 +72,11 @@ This is the server side of the Mendix runtime. It is described in [Runtime Serve
 ### 2.8 Load Balancer
 
 The load balancer takes incoming requests from the Mendix Client and forwards them to a Runtime Server instance. It balances the load by making sure that requests are distributed evenly to the different instances.
-The Mendix Client communicates with the load balancer using HTTPS. Communication on the server side of the load balancer, to environment instances and CDN, is performed using HTTP.
+The Mendix Client communicates with the load balancer using HTTPS. Communication on the server side of the load balancer, to environment instances, is performed using HTTP.
 
-### 2.9 CDN Static Config
+### 2.9 Static Content
 
-The CDN (Content Delivery Network) contains static configuration information which is needed by the client. These include the files needed to start the Mendix Client from a browser, Cascading Style Sheets (css files) which define the app’s theme, and JavaScript files which define client-side logic.
+Every Mendix app needs static content to be served in order to load the Mendix client in the browser. This includes the scripts needed to start the Mendix Client, CSS files which define the app's theme, and JavaScript files which define client-side logic.
 
 ### 2.10 Mendix Client
 

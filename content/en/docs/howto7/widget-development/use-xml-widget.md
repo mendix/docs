@@ -7,7 +7,7 @@ tags: ["xml", "widget"]
 
 ## 1 Requirements
 
-This document assumes you have a basic understanding of XML and the Mendix Modeler. For more information on XML, visit [W3 Schools - XML](http://w3schools.com/xml/).
+This document assumes you have a basic understanding of XML and the Mendix Modeler. For more information on XML, visit [W3 Schools - XML](https://www.w3schools.com/xml/).
 
 ## 2 Start of the Widget XML
 
@@ -32,7 +32,7 @@ Inside the widget element are 4 child elements.
 | --- | --- |
 | Name | The name property is what your widget will be called in the Mendix Modeler. It will also be used to name the different instances of your widget by adding a number to the end of it each time it is used in a form. |
 | Description | The description determines the mouse-over tooltip over your widget in the Custom Widgets toolbar. |
-| Icon | Every element or widget in the Modeler has its own icon. Your new widget's icon can be defined with this property. It is a [Base64](http://en.wikipedia.org/wiki/Base64) representation of the image, so that it can be used in an XML file. |
+| Icon | Every element or widget in the Modeler has its own icon. Your new widget's icon can be defined with this property. It is a [Base64](https://en.wikipedia.org/wiki/Base64) representation of the image, so that it can be used in an XML file. |
 | Properties | The individual property elements will be grouped inside the “properties” element as in the code snippet below. |
 
 ```xml
@@ -344,7 +344,7 @@ What it looks like in the Mendix Modeler:
 {{< figure src="/attachments/howto7/widget-development/use-xml-widget/16844045.png" >}}
 
 {{% alert color="info" %}}
-Remember to use the correct language notation according to the [Java supported locales](http://java.sun.com/javase/6/docs/technotes/guides/intl/locale.doc.html).
+Remember to use the correct language notation according to the [Java supported locales](https://www.oracle.com/java/technologies/javase/locales.html).
 {{% /alert %}}
 
 ## 6 Read More

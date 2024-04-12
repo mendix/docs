@@ -38,7 +38,7 @@ However, the default Appium Android driver (UIAutomator2) is unable to read the 
 To set up Appium Desktop for native iOS testing, do the following:
 
 1. Build a native iOS app for your Mendix app (see [Building Native Apps](/refguide/mobile/distributing-mobile-apps/building-native-apps/) for more information).
-1. Build the WebDriverAgent project that is shipped with your Appium Desktop installation as described [here](http://appium.io/docs/en/advanced-concepts/wda-custom-server/). For Appium Desktop, the WDA project can be found in */Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-webdriveragent*.
+1. Build the WebDriverAgent project that is shipped with your Appium Desktop installation as described [here](https://appium.readthedocs.io/en/stable/en/advanced-concepts/wda-custom-server/). For Appium Desktop, the WDA project can be found in */Applications/Appium.app/Contents/Resources/app/node_modules/appium/node_modules/appium-webdriveragent*.
 1. Start Appium Desktop
 1. Click **Start Server**.
 1. On the new screen, click the **Start Inspector Session** magnifier image in the top-right.
@@ -112,7 +112,7 @@ While using Espresso in combination with Mendix apps, there have been occasional
 
 ## 6 Automatically Testing Your Mendix Native App
 
-Once you have the capabilities you want that work with Appium Desktop, you can also use them with Appium CLI to run automated tests. Everything you need to create your first automated test can be found [here](http://appium.io/docs/en/about-appium/getting-started/?lang=en). You can use the Appium Desktop Inspector to find the right locators.
+Once you have the capabilities you want that work with Appium Desktop, you can also use them with Appium CLI to run automated tests. Everything you need to create your first automated test can be found [here](https://appium.io/docs/en/2.0/quickstart/). You can use the Appium Desktop Inspector to find the right locators.
 
 ## 7 Read More
 

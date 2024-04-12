@@ -37,6 +37,15 @@ Choose whether you want to merge just a single commit or a whole range of commit
 
 This merge scenario allows you to merge a complete feature branch line to the main line.
 
+To merge the whole branch back to the main line to integrate a new feature there, do the following:
+
+1. Open the main line.
+2. Choose **Version Control > Merge Changes Here**.
+3. Select **Merge feature branch** option.
+4. Click **Merge**.
+5. Resolve any conflicts and errors.
+6. Commit the new feature to the main line.
+
 ### 3.1 Branch Line
 
 Choose the branch line that you want to merge. It is not necessary to select individual revisions in this case, because all revisions of the branch line are merged automatically.

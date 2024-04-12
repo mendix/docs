@@ -1,46 +1,54 @@
-/*
-  * Copyright 2018 Google LLC
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
-     https://www.apache.org/licenses/LICENSE-2.0
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
- */
+'use strict';
 
- (function ($) {
-     'use strict';
+document.addEventListener('DOMContentLoaded', () => {
+    // Append anchor links to headings in Markdown
+    const article = document.getElementsByTagName('main')[0];
+    if (!article) {
+        return;
+    }
 
-     // Headers' anchor link that shows on hover
-     $(function () {
-         // append anchor links to headings in markdown.
-         var article = document.getElementsByTagName('main')[0];
-         if (!article) {
-             return;
-         }
-         var headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
-         headings.forEach(function (heading) {
-             if (heading.id) {
-                 var a = document.createElement('a');
-                 // set visibility: hidden, not display: none to avoid layout change
-                 a.style.visibility = 'hidden';
-                 // [a11y] hide this from screen readers, etc..
-                 a.setAttribute('aria-hidden', 'true');
-                 // material insert_link icon in svg format
-                 a.innerHTML = ' <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>';
-                 a.href = '#' + heading.id;
-                 heading.insertAdjacentElement('beforeend', a);
-                 heading.addEventListener('mouseenter', function () {
-                     a.style.visibility = 'initial';
-                 });
-                 heading.addEventListener('mouseleave', function () {
-                     a.style.visibility = 'hidden';
-                 });
-             }
-         });
-     });
+    // Select all headings in the article
+    const headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    headings.forEach((heading) => {
+        if (heading.id) {
+            const a = document.createElement('a');
+            a.setAttribute('aria-hidden', 'true');
+            a.classList.add('anchor-icon'); // Add anchor-icon class (_styles_project.scss)
+            a.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" fill="var(--bs-body-color)" width="20" height="20" viewBox="0 0 32 32"><path d="M18.9001 7.22C20.5201 5.6 23.1601 5.6 24.7801 7.22C26.4001 8.84 26.4001 11.48 24.7801 13.1L20.4001 17.48L21.8101 18.89L26.1901 14.51C28.5901 12.11 28.5901 8.2 26.1901 5.8C23.7901 3.4 19.8801 3.4 17.4801 5.8L13.1001 10.18L14.5101 11.59L18.8901 7.21L18.9001 7.22Z"/><path d="M10.16 28C11.74 28 13.32 27.4 14.52 26.2L18.9 21.82L17.49 20.41L13.11 24.79C11.49 26.41 8.85002 26.41 7.23002 24.79C5.61002 23.17 5.61002 20.53 7.23002 18.91L11.61 14.53L10.2 13.12L5.82002 17.5C3.42002 19.9 3.42002 23.81 5.82002 26.21C7.02002 27.41 8.60002 28.01 10.18 28.01L10.16 28Z"/><path d="M9.44971 21.1336L21.124 9.45927L22.5383 10.8735L10.8639 22.5478L9.44971 21.1336Z"/></svg>`;
+            a.href = '#' + heading.id;
 
- }(jQuery));
+            // Append anchor element to heading
+            heading.appendChild(a);
+
+            // Show icon when hovering over heading
+            heading.addEventListener('mouseenter', () => {
+                a.style.display = 'inline-block';
+            });
+
+            // Hide icon when mouse leaves heading
+            heading.addEventListener('mouseleave', () => {
+                a.style.display = 'none';
+            });
+
+            // Initialize Bootstrap tooltip
+            const tooltip = new bootstrap.Tooltip(a, {
+                title: 'Copy link to clipboard',
+                placement: 'right',
+                trigger: 'hover focus'
+            });
+
+            // Add on-click behavior
+            a.addEventListener('click', (event) => {
+                event.preventDefault(); // Prevent scrolling
+                const href = a.href;
+                navigator.clipboard.writeText(href); // Copy to clipboard
+                window.history.pushState({}, document.title, href); // Update URL
+                // Update tooltip text
+                const tooltipInner = document.querySelector('div.tooltip-inner');
+                if (tooltipInner) {
+                    tooltipInner.textContent = 'Copied!';
+                }
+            });
+        }
+    });
+});

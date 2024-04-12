@@ -10,7 +10,7 @@ tags: ["database connector", SQL", "database", "external database", "integration
 
 ## 1 Introduction
 
-The Mendix Platform offers many ways to integrate with external data, but integrating with external databases has not been a seamless experience until now. The [Database Connector](/appstore/modules/database-connector/) can be used to seamlessly connect to external databases without limiting you in your choice of database or SQL dialect, thus enabling you to incorporate external data directly in your Mendix application. Two actions are available via the connector: [Execute statement](#statement), as explained in this document, and [Execute query](/appstore/modules/database-connector/#execute-query), described in the [Database connector documentation](/appstore/modules/database-connector/). 
+The Mendix Platform offers many ways to integrate with external data, but integrating with external databases has not been a seamless experience until now. The [Database Connector](/appstore/modules/database-connector/) can be used to seamlessly connect to external databases without limiting you in your choice of database or SQL dialect, thus enabling you to incorporate external data directly in your Mendix application. Two actions are available via the connector: [Execute statement](#statement), as explained in this document, and **Execute query**, described in the [Database connector documentation](/appstore/connectors/database-connector/). 
 
 The **Execute statement** action provides a consistent environment for Mendix apps to perform an arbitrary SQL statement on relational external databases. A Java database connectivity (JDBC) API is used when this Java action attempts to connect with a relational database for which a JDBC driver exists.
 
@@ -39,15 +39,15 @@ This how-to teaches you how to do the following:
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Download the Database Connector from the Mendix Marketplace into your app
-* Have a database **URL** address that points to your database
-* Have the **username** and **password** for signing into the database (relative to the database URL address)
+* Download the [Database Connector](https://marketplace.mendix.com/link/component/2888) from the Mendix Marketplace into your app
+* Have a database URL address that points to your database
+* Have the user name and password for signing into the database (relative to the database URL address)
 * Have the SQL statement to execute (relative to the database type; note that the SQL dialect differs for different databases)
 * Have the JDBC driver *.jar* for the database to which you want to connect
 
 ## 3 Preparation
 
-You must place the JDBC driver *.jar* files for the databases to which you want to connect inside the **userlib** directory of your Mendix app. 
+You must place the JDBC driver *.jar* files for the databases to which you want to connect inside the userlib directory of your Mendix app. 
 
 For example, if you want to connect to an Amazon RDS PostgreSQL database (for example, `jdbc:postgresql://xyz-rds-instance.ccnapcvoeosh.eu-west-1.rds.amazonaws.com:5432/postgres`), you need to place the PostgreSQL Jdbc driver *.jar* file inside the userlib folder.
 
@@ -73,5 +73,5 @@ To use an **Execute statement** action in a microflow, follow these steps:
     The statement action's result is either an **Integer** or a **Long** value, which usually represents the amount of affected rows.
 
 {{% alert color="warning" %}}
-It is your responsibility to apply the proper security, as this action can allow for SQL injection into your Mendix application. Among others things, do not use user-supplied or environment-supplied variables in your SQL statement; if possible, you should prefer them to be static.
+It is your responsibility to apply the proper security, as this action can allow for SQL injection into your application. Do not use user-supplied or environment-supplied variables in your SQL statement; if possible, you should prefer them to be static.
 {{% /alert %}}

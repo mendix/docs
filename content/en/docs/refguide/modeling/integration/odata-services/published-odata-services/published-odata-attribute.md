@@ -46,7 +46,7 @@ Select **Sortable** to allow clients to sort results based on this attribute.
 
 Select **Filter** to allow clients to filter results based on this attribute.
 
-Note that these capabilities are not shown for attributes of entities without the __Readable__ capability.
+Note that these capabilities are not shown for attributes of entities without the **Readable** capability.
 
 ## 3 Public Documentation
 

@@ -1,6 +1,7 @@
 ---
 title: "Entities"
 url: /refguide7/entities/
+canonical_url: "https://docs.mendix.com/refguide/entities/"
 tags: ["domain model", "entity", "entities", "attribute", "validation rule", "even handler", "access rule"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

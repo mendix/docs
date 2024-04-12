@@ -5,7 +5,7 @@ url: /apidocs-mxsdk/apidocs/feedback-api-v2/
 category: "API Documentation"
 type: swagger
 description: "Describes how to use Feedback API version 2, which allows you to retrieve, add, and manage feedback for your Mendix apps."
-weight: 51
+weight: 62
 tags: ["Feedback", "Developer Portal", "API", "Version 2"]
 ---
 

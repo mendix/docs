@@ -49,7 +49,7 @@ Note that form groups are responsive and the labels may be placed above input wi
 
 ### 4.2 Label Width (Weight)
 
-If the form orientation is set to horizontal, this property can be used to specify the width of the input widget labels inside the data view. The width is specified using column weights from the [Bootstrap grid system](http://getbootstrap.com/css/#grid). For more details, see [Layout Grid](/refguide7/layout-grid/).
+If the form orientation is set to horizontal, this property can be used to specify the width of the input widget labels inside the data view. The width is specified using column weights from the [Bootstrap grid system](https://getbootstrap.com/css/#grid). For more details, see [Layout Grid](/refguide7/layout-grid/).
 
 *Default value:* 3
 

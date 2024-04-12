@@ -82,7 +82,7 @@ For the Windows Defender firewall, the most common firewall, do the following:
 1. Make sure that incoming connections are allowed by doing the following:<br />
     1. Open **Firewall & Network Protection** settings in Windows.<br />
     1. Go to **Advanced Settings**.<br />
-    1. Select the **Inbound Rules** and scroll to the **Node.js** entries.<br />
+    1. Select the **Inbound Rules** and scroll to the **Mendix Native Mobile** entries.<br />
     1. For each Node.js entry, note their values in the **Program** column. They should all have a green check mark in front of them.<br /> 
     1. If the **Program** column shows a Mendix installation directory, then there should be a green icon in front of the entry. If this is not the case, double-click the entry and select **Allow the connection**:
 

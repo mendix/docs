@@ -137,4 +137,4 @@ In this example scenario, you need to do the following:
 
 Learn more about this topic using the following helpful link:
 
-* [Selenium IDE Documentation](http://docs.seleniumhq.org/docs/02_selenium_ide.jsp)
+* [Selenium IDE Documentation](https://www.selenium.dev/selenium-ide/docs/en/introduction/getting-started)

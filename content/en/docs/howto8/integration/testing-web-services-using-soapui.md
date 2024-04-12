@@ -238,4 +238,4 @@ Congratulations! You have just created your first automated test with SoapUI.
 
 Learn more about this topic using the following helpful links:
 
-* [10 tips for the SoapUI beginner](http://www.soapui.org/getting-started/10-tips-for-the-soapui-beginner.html)
+* [10 tips for the SoapUI beginner](https://www.soapui.org/getting-started/10-tips-for-the-soapui-beginner.html)

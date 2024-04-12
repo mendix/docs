@@ -44,7 +44,7 @@ Attributes of type **Binary** cannot be exported through OData services except f
 
 {{% /alert %}}
 
-You cannot include associations to and from entities that are published without the __Readable__ capability. 
+You cannot include associations to and from entities that are published without the **Readable** capability. 
 
 ### 3.1 Required Validation Rules for Published Attributes
 
@@ -88,7 +88,7 @@ Having an [index](/refguide/indexes/) for the key attribute (or attributes) make
 
 You can set unique and required constraints using [validation rules](/refguide/validation-rules/).
 
-Selecting a key is required when the __Readable__ capability is enabled.
+Selecting a key is required when the **Readable** capability is enabled.
 
 {{% alert color="info" %}}
 Selecting more than one attribute as the key is only available for published OData services that use OData v4.
@@ -129,7 +129,7 @@ A published OData entity is readable by default. It is possible to disable this 
 When **Readable** is enabled, you can configure how data is queried in the [exposed data](#exposed-data) section. Note that **Readable** must be enabled in order to enable the other capabilities.
 
 {{% alert type="info" %}}
-Support for publishing entities without the __Readable__ capability was introduced in Studio Pro [10.8.0](/releasenotes/studio-pro/10.8/).
+Support for publishing entities without the **Readable** capability was introduced in Studio Pro [10.8.0](/releasenotes/studio-pro/10.8/).
 {{% /alert %}}
 
 ## 6.2.1 Query Options {#query-options}

@@ -110,13 +110,22 @@ To enable Mendix SSO in your app, follow these steps:
     4. Select the **Administrator** user role and click **Edit**.
     5. Click **Edit** next to **Module roles**.
     6. Select the **Administrator** module role for **Marketplace modules** > **MendixSSO**.
-        {{< figure src="/attachments/appstore/modules/mendix-sso/set-module-role.png" alt="Set Administrator module role" >}}
+        {{< figure src="/attachments/appstore/modules/mendix-sso/User_roles.png" alt="Set Administrator module role" >}}
     7. Click **OK** twice to return to app **Security**.
     8. Repeat the steps above to add the **MendixSSO.User** module role to the **User** User roles.
 
         The app **Security** settings now contains these two additional module roles:
 
         {{< figure src="/attachments/appstore/modules/mendix-sso/module-user-roles.png" alt="Confirmation of user roles" >}}
+
+    9. Optionally, you can configure the following **User Roles**: 
+
+       | User Role | Mendix SSO Module Role |
+       | --- | --- |
+       | AnonymousUser | MendixSSO.AnonymousUser |
+       | UserManager | MendixSSO.UserManager |
+   
+       If you do not link any of the module roles to your **User Roles**, they will not affect the security of the module.
 
 5. Change the page that Mendix uses to sign you in (`login.html`) to allow for signing in using SSO. To do this, perform the following steps:
 

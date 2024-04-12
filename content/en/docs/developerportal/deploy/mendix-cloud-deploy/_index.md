@@ -17,27 +17,21 @@ aliases:
 
 ## 1 Introduction
 
-Mendix Cloud is a public cloud service for Mendix applications; it is the default deployment option for Mendix applications. You can either deploy a limited [Free App](https://www.mendix.com/evaluation-guide/evaluation-learning/getting-started/#evaluate-before) or an app running on a licensed cloud node.
+Mendix Cloud is the default deployment option for Mendix applications. It is a public cloud service for Mendix applications, with infrastructure built and maintained by Mendix and built on top of Amazon Web Services (AWS). Mendix Cloud is optimized to run Mendix applications, is available in multiple regions around the globe, and comes with high availability options.
 
-Organizations can also have their own Mendix Cloud. This service is named [Mendix Cloud Dedicated](https://www.mendix.com/evaluation-guide/app-lifecycle/mendix-cloud-overview/#mendix-cloud-vpc). Mendix Cloud Dedicated is a single-tenant instance of the public Mendix Cloud, running the apps of only one organization.
+There are several options for deployment with Mendix Cloud:
+
+* [Mendix Free](https://www.mendix.com/pricing/start-for-free/) – If you are new to the Mendix community and would like to create, deploy, and share your own app, you can do so for free using Mendix's limited Free App environment. Note that Free Apps do not support complex or large applications, only run for a couple of hours before shutting down, cannot be scaled, and provide limited operational information.
+* [Mendix Cloud with licensed nodes](https://www.mendix.com/evaluation-guide/app-lifecycle/mendix-cloud-features/) — With a license, you can take advantage of Mendix Cloud's full features, including deep insights, alerting, high availability, and backups.
+* [Mendix Cloud Dedicated](https://www.mendix.com/evaluation-guide/app-lifecycle/mendix-cloud-overview/#mendix-cloud-vpc) – Organizations can also have their own Mendix Cloud. Mendix Cloud Dedicated is a single-tenant instance of the public Mendix Cloud, running the apps of only one organization.
 
 ### 1.1 Free App {#free-app}
 
-If you are new to the Mendix community and would like to deploy and share your own app, you can do so for free on Mendix's public cloud offering. A Free App environment allows any Mendix developer to create and share their applications with their users. Note that a Free App does not support complex or large applications.
-
-{{% alert color="info" %}}
-Free Apps are part of Mendix's Free Edition.
-
-If you are not currently a customer but would prefer to use a licensed cloud node, you can find more information on the [Mendix Platform Pricing](https://www.mendix.com/pricing) page.
-
-If you are an existing customer, you should deploy to your licensed cloud node.
-{{% /alert %}}
-
-A Free App has several limitations compared to a licensed app. The main limitations are summarized in the table below:
+Free Apps make it possible to start creating and deploying apps with Mendix for free. Free Apps have several limitations compared to licensed apps. The main limitations are summarized in the table below:
 
 | Feature | Free App | Licensed App |
 | ------- | -------- | ------------ |
-| Number of users | Unlimited users for regular Free Apps; six concurrent users for an unlicensed app running on another cloud platform (such as SAP BTP) | Depends on your [pricing plan](#plans)¹ |
+| Number of users | Unlimited users for regular Free Apps; six concurrent users for an unlicensed app running on another cloud platform (such as SAP BTP) | Depends on your [pricing plan](#plans) |
 | Sleep mode | Goes into sleep mode after about an hour of inactivity and automatically resumes when a user accesses it; all your data is retained while the app is in sleep mode | Does not have a sleep mode |
 | Disk storage | 0.5 GiB Database and 1 GiB Files | Depends on your pricing plan |
 | App vCPUs | 0.5 | Depends on your pricing plan |
@@ -55,8 +49,6 @@ A Free App has several limitations compared to a licensed app. The main limitati
 | Historic app logs | Not available; only live logs are available | Available |
 | Backups | Performed daily and cannot be triggered manually; stored for up to two weeks | Performed daily and can also be created manually; kept for up to one year, depending on your plan |
 | Support | No support | Depends on your license option |
-
-¹ End-users of your app are classified as either internal or external. You will need to report this for licensing purposes using either the [USAGE_METRICS_EMAIL_FIELDS custom variable](/developerportal/deploy/environments-details/#custom-environment-variables) (if you are using email domains to distinguish between them) or by [populating the user type](/howto/monitoring-troubleshooting/populate-user-type/) for each end-user of your app. Only end-users whose Mendix accounts are marked as **Active** are counted towards the number of end-users of the app.
 
 #### 1.1.1 Sleep Mode
 
@@ -85,19 +77,19 @@ A licensed app runs on a node with at least two environments: production and acc
 Each environment can only run a single version of an app. Additionally, all the environments of a node should be used to run versions of the same app that is linked to the node.
 {{% /alert %}}
 
-### 1.3 Flexible Environments {#flexible-environments}
+#### 1.2.1 Flexible Environments {#flexible-environments}
 
 If the standard environments that you get with a licensed app do not meet your requirements, you can request a Mendix Cloud node with Flexible Environments. With Flexible Environments, you can specify how many environments you want in your node. You can also decide what they should be called.
 
-### 1.4 Database
+### 1.3 Database
 
 Apps deployed to Mendix Cloud are configured to use a PostgreSQL database. It is not possible to configure your app to use an alternative database if it is deployed to Mendix Cloud.
 
 If you need to use a different database, consider deploying your app to a different platform. For more information, see [Deployment](/developerportal/deploy/).
 
-### 1.5 URLs and Ports
+### 1.4 URLs and Ports
 
-Apps that run on Mendix Cloud are automatically given their own URLs. The format of the URL depends on the license and environment type, and can be one of the following:
+Apps that run on Mendix Cloud are automatically assigned their own URLs. The format of the URL depends on the license and environment type, and can be one of the following:
 
 | License Type | Environment | URL Format | Example URL |
 | ------------ | ----------- | ---------- | ----------- |
@@ -105,11 +97,15 @@ Apps that run on Mendix Cloud are automatically given their own URLs. The format
 | Licensed app | Test, acceptance, flexible environments | Depends on the region:<br /> `{app-name}-{environment-type}.mendixcloud.com`<br />or<br />`{app-name}-{environment-type}.apps.{region}.mendixcloud.com` | `myappname-accp.mendixcloud.com`, <br /> `myappname-accp.apps.ap-3a.mendixcloud.com` |
 | Free App     | N/A         | `{app-name}-sandbox.mxapps.io`<br />or<br />`{app-name}.mxapps.io` | `myfreeappname.mxapps.io` |
 
-{{% alert color="info" %}}As shown in the table above, the URL of an app on some clusters in a region contains `apps.{region}`. You can select the region for only your app, not for the cluster.{{% /alert %}}
+{{% alert color="info" %}}Licensed apps run in Cloud Foundry clusters deployed on AWS. You can select the region for your app, but not for the cluster. Note that there can be multiple clusters in a region, and the URL of an app on some clusters in a region contains `apps.{region}`.{{% /alert %}}
 
-You can customize a URL by adding [custom domains](/developerportal/deploy/custom-domains/).
+For licensed apps, you can customize a URL by adding [custom domains](/developerportal/deploy/custom-domains/).
 
 Mendix apps cannot use custom ports. They communicate on the standard HTTP and HTTPS ports (`80` and `443`); connections to HTTP (`80`) are redirected to HTTPS (`443`).
+
+### 1.5 Number of End-Users for Licensed Apps
+
+The number of end-users supported for your licensed app depends on your [pricing plan](#plans). End-users of your app are classified as either internal or external. You need to report this for licensing purposes, using either the [USAGE_METRICS_EMAIL_FIELDS custom variable](/developerportal/deploy/environments-details/#custom-environment-variables) (if you are using email domains to distinguish between end-users) or by [populating the user type](/howto/monitoring-troubleshooting/populate-user-type/) for each end-user of your app. Only end-users whose Mendix accounts are marked as **Active** are counted towards the number of end-users of the app.
 
 ## 2 Deploying an App to Mendix Cloud {#deploy-app-mendix-cloud}
 
@@ -125,13 +121,23 @@ The method for deploying an app to Mendix Cloud differs depending on whether you
 For a hands-on introduction to the different deployment options for licensed apps, try the learning path [Choose the Right Software Delivery Approach](https://academy.mendix.com/link/paths/156/Choose-the-Right-Software-Delivery-Approach).
 {{% /alert %}}
 
+{{% alert color="info" %}}
+If you are not currently a customer but would prefer to use a licensed cloud node instead of a Free App, you can find more information on the [Mendix Platform Pricing](https://www.mendix.com/pricing) page.
+
+If you are an existing customer, you should deploy to your licensed cloud node.
+{{% /alert %}}
+
 ### 2.1 Deploying a Licensed App{#deploy-licensed-app}
 
- Deploying a licensed app is a two-step process: First, create a deployment package. Second, deploy it to a node environment where you can run your app. The full process is described in detail below.
+ Deploying a licensed app is usually a two-step process: First, create a deployment package. Second, deploy it to a node environment where you can run your app. The full process is described in detail below.
+
+{{% alert color="info" %}}
+It is also possible to deploy licensed apps directly from Studio Pro. For information on how to do this, see [Studio Pro Deployment Settings](/developerportal/deploy/studio-deployment-settings/).
+{{% /alert %}}
 
 #### 2.1.1 Prerequisites
 
-Before starting the process for deploying a licensed app, make sure to complete these prerequisites:
+Before starting the process of deploying a licensed app, make sure to complete these prerequisites:
 
 * Your app is linked to a licensed cloud node
 * You have [transport rights](/developerportal/deploy/node-permissions/#transport-rights)
@@ -146,16 +152,10 @@ There are two methods for creating a deployment package on Mendix Cloud. You can
 
 ##### 2.1.2.1 Creating a Deployment Package via Studio Pro
 
-To create a deployment package directly from Studio Pro, follow these steps:
+To create a deployment package via Studio Pro, follow these steps:
 
-1. Open [Studio Pro](https://appstore.home.mendix.com/link/modeler/).
-2. Open the licensed app.
-3. In the top menu bar, click **App** > **Deploy to Licensed Cloud Node**.
-
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/deploy-to-cloud-node.png" alt="The App menu with the Deploy to Licensed Cloud Node option selected" width=50% class="image-border" >}}
-
-4. In the **Deploy to the cloud** dialog box, click **Deploy**.
-5. You will see a dialog box with the following message: "Successfully started cloud deployment." To see the uploaded package, click **Show online** in the dialog box.
+1. Open the licensed app in [Studio Pro](https://marketplace.mendix.com/link/studiopro/).
+1. In the top menu bar, click **App** > **Create Deployment Package**.
 
 ##### 2.1.2.2 Creating a Deployment Package via the Developer Portal {#package-from-team-server}
 
@@ -198,7 +198,7 @@ Deploying a Free App is a single-stage process that is completed from Studio Pro
 
 #### 2.2.1 Prerequisites
 
-Before starting the process for deploying a Free App, make sure to complete these prerequisites:
+Before starting the process of deploying a Free App, make sure to complete these prerequisites:
 
 * You have created an app
 * As with licensed apps, the uncompressed size of the deployment package must not exceed 1 GB

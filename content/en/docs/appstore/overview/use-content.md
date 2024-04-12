@@ -110,7 +110,9 @@ If you download an app, the **Download Marketplace App** dialog box opens, where
 
 1. Select where the app should be stored: **New Mendix Team Server**, **Existing Mendix Team Server**, or **Locally on disk**. 
 2. Configure the necessary settings based on your storage choice.
-3. Click **OK**. After the app is downloaded, it opens automatically in Studio Pro.
+3. Click **OK**.
+
+    After the app is downloaded, it opens automatically in Studio Pro.
 
 #### 2.1.2 For Studio Pro 9.18 and Below
 

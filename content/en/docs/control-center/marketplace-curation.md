@@ -30,7 +30,7 @@ On the **Marketplace Content List** tab, you can find all public Marketplace con
 
 You can manually add or remove a label after selecting the content from the list. For content not recommended based on your curation settings, you can manually add the label by clicking the **Add Label** button. Conversely, for content recommended based on the curation settings, you can manually remove the label by clicking the **Remove Label** button.
 
-{{% alert color="info" %}}If you manually add a recommended label to a Marketplace component, this Marketplace component will always keep the recommended label even if the curation settings get changed later. However, if you manually removes a recommended label from a Marketplace component, then the recommended label can automatically appear again if the curation settings get changed later. {{% /alert %}}
+{{% alert color="info" %}}If you manually add a recommended label to a Marketplace component, this Marketplace component will always keep the recommended label even if the curation settings get changed later. However, if you manually remove a recommended label from a Marketplace component, then the recommended label will automatically appear again if the curation settings get changed later and the Marketplace component meets the new requirements again. {{% /alert %}}
 
 {{< figure src="/attachments/control-center/marketplace-curation/marketplace-content-list.png" max-width=100% class="image-border" alt=''marketplace-content-list''  >}}
 
@@ -48,3 +48,5 @@ The list shows the following details:
 
 ## 4 Displaying Recommended Marketplace Content in Studio Pro {#displaying-recommended-mp-content}
 In Studio Pro's Marketplace section, developers can view all the Marketplace components, no matter they have a recommended label or not. To only see recommended content, simply select the **Show Recommended** check box. The recommended label is also visible on the details page within the main panel.
+
+{{< figure src="/attachments/control-center/marketplace-curation/displaying-recommended-mp-content.png" max-width=100% class="image-border" alt=''displaying-recommended-mp-content'' >}}

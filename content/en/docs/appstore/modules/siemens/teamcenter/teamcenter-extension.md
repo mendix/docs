@@ -1,11 +1,11 @@
 ---
 title: "Teamcenter Extension"
-url: Sappstore/modules/siemens/teamcenter/teamcenter-extension
-linktitle: Enter a short title to be used in the left side menu; increases readability and navigation through the menu
-weight: Enter the position of the document compared to other 'child' documents at the same level; number by 10 (for first), 20, 30, etc. for easy ordering of other documents in the future if necessary; don't add brackets or quotation marks
+url: /appstore/modules/siemens/teamcenter/teamcenter-extension/
+category: "Teamcenter"
+linktitle: "Teamcenter Extension"
+#weight: 10
 description: "Describes the Teamcenter Extension from the Mendix Marketplace. The extension facilitates a low-code approach to integrating with Teamcenter"
-tags: ["Teamcenter, "Integration", "SOA connector"]
-#draft: true
+tags: ["Teamcenter", "Integration", "PLM", "SOA connector", "low-code"]
 ---
 
 ## 1 Introduction {#introduction}

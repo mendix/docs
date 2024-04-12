@@ -14,18 +14,18 @@ The [Teamcenter Extension](link) is a Mendix Extension built using the Mendix Ex
 
 ### 1.1. Pre-requisites {#prerequisities}
 
-The Teamcenter Extension requires Mendix version 10.6.5 or higher. You also need to ensure the following modules installed from the Mendix Marketplace
+The Teamcenter Extension requires Mendix version 10.6.5 or higher. You also need the following modules installed from the Mendix Marketplace
 1. [Teamcenter Connector](
 https://marketplace.mendix.com/link/component/111627)
 2. [Community Commons](https://marketplace.mendix.com/link/component/170)
 
-Additionally, you should ensure you have the correct feature flag enabled. Right click on the Mendix Desktop icon shortcut and select Properties. In the "Target" box, add the keyword "--enable-extension-development" at the end.
+Additionally, please ensure you have the correct feature flag enabled. Right click on the Mendix Desktop icon shortcut and select Properties. Add the keyword "--enable-extension-development" in the Target entry box.
 
 ![image](https://github.com/mwbouwkamp-mendix/mendix-docs/assets/157635704/d681ea41-784f-4b76-b959-fe7cf4e4c46c)
 
 ### 1.2. License {#license}
 
-Like with Teamcenter Connector, the Teamcenter Extension is free to download and use. You may, however require a Mendix Studio Pro License to develop apps in Mendix and Teamcenter Author license to connect to Teamcenter.
+The Teamcenter Extension is free to download and use. You may, however require a Mendix Studio Pro License to develop apps in Mendix and Teamcenter Author license to connect to Teamcenter.
 
 ## 2.	Use Cases {#usecases}
 
@@ -72,7 +72,7 @@ The Settings tab displays Teamcenter configuration page. This is where you can p
 
 ## 4 Import mapping {#importmapping}
 
-Clicking on any one of the [Actions](#actions) opens an empty import mapping page. Here you can define what data you want to retrieve from Teamcenter and how to handle this data in Mendix. Depending on the action, the import mapping page starts with one or multiple entities/objects to configure, one per business object that need to be configured. 
+Clicking on any one of the actions opens an empty import mapping page. Here you can define what data you want to retrieve from Teamcenter and how to handle this data in Mendix. Depending on the action, the import mapping page starts with one or multiple entities/objects to configure, one per business object that need to be configured. 
 
 During configuration, the import mapping page will build up a preview of the Mendix domain model involved in the integration. In addition, the import mapping page shows the corresponding business objects on the Teamcenter side. For this, the Teamcenter Extension displays the display names of the objects and their properties, references and relations.
 
@@ -84,17 +84,15 @@ In the Teamcenter extension, the import mapping consists of two steps:
 
 ### 4.1 Object mapping {#objectmapping}
 
-Clicking on any one of the empty box in import mapping page opens the object mapping dialog shows. On the left side of the dialog, a tree of all relevant business objects available from the configured Teamcenter instance is displayed. The right side shows a tree of all relevant entities in your Mendix app.
+Clicking on any one of the empty box in import mapping page opens the object mapping dialog shows. On the left side of the dialog, a tree with all relevant business objects available from the configured Teamcenter instance is displayed. If you have created any custom business objects in Teamcenter BMIDE, those objects will be shown as well. The right side shows a tree of all relevant entities in your Mendix app.
 
 Relevance is dependent on the actions you are configuring. For example, for the action to get ItemRevisions from Teamcenter, the Teamcenter tree has an ItemRevision as its root object. That means that, for this action, you can only select ItemRevisions or specializations thereof. Similarly, in this example, the Mendix tree has the TcConnector.ItemRevision entity as its root entity.
 
 ![image](https://github.com/mwbouwkamp-mendix/mendix-docs/assets/157635704/ea1e86ce-0a19-4c9c-8592-eddbe9b78d24)
 
-When retrieving a tree of objects, relevance can also be based on the type of relation/reference. When working with typed relations/references, the type of Teamcenter business object is dictated by the relation/reference.
+When retrieving a tree of objects, relevance can also be based on the type of relation/reference. When working with typed relations/references, the type of Teamcenter business object is dictated by the relation/reference. By limiting the list of Teamcenter objects and Mendix entities to those that are relevant, the Teamcenter extension guides you to select Teamcenter business objects that make sense in the context of the action you want to perform.
 
-By limiting the list of Teamcenter objects and Mendix entities to those that are relevant, the Teamcenter extension guides you to select Teamcenter business objects that make sense in the context of the action you want to perform.
-
-To configure which type of Teamcenter business object you are interested in and what type of Mendix entities this should be mapped to, you select a business object in the Teamcenter tree on the left and an entity on the Mendix tree on the right and click OK. 
+To configure which type of Teamcenter business object you are interested in and what type of Mendix entities this should be mapped to,  select a business object in the Teamcenter tree on the left and an entity on the Mendix tree on the right and click OK. 
 
 It is also possible to create new entities for your integrations. This new entity needs to be a specialization of the root entity in the Mendix tree or one of its specializations. When you want to use a new entity, click your generalization of choice, click the Create new specialization of selected entity checkbox and provide an entity name. Now, once finishing the configuration for the actions, the Teamcenter extension will create a new entity with the given name and the selected entity as its generalization.
 

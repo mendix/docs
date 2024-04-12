@@ -30,7 +30,7 @@ On the **Marketplace Content List** tab, you can find all public Marketplace con
 
 You can manually add or remove a label after selecting the content from the list. For content not recommended based on your curation settings, you can manually add the label by clicking the **Add Label** button. Conversely, for content recommended based on the curation settings, you can manually remove the label by clicking the **Remove Label** button.
 
-{{% alert color="info" %}}If you manually add a recommended label to a Marketplace component, this Marketplace component will always keep the recommended label even if the curation settings get changed later. However, if you manually removes a recommended label from a Marketplace component, then the recommended label can automatically appear again if the curation settings get changed later. {{% /alert %}}
+{{% alert color="info" %}}If you manually add a recommended label to a Marketplace component, this Marketplace component will always keep the recommended label even if the curation settings get changed later. However, if you manually remove a recommended label from a Marketplace component, then the recommended label can automatically appear again if the curation settings get changed later. {{% /alert %}}
 
 {{< figure src="/attachments/control-center/marketplace-curation/marketplace-content-list.png" max-width=100% class="image-border" alt=''marketplace-content-list''  >}}
 

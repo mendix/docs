@@ -13,6 +13,20 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2024
 
+### April ???, 2024
+
+#### Mendix Operator v2.16.0 {#2.16.0}
+
+* The `mendixRuntimeVersion` parameter no longer needs to specified in the MendixApp CR.
+* When creating a new app environment in AWS, the IAM region will be autodetected based on the bucket region. For AWS GovCloud and China, it's no longer necessary to manually specify the `--iam-region` argument.
+* We've addressed a few issues which affected environments that use PCLM with Global Operator:
+   * The MendixApp status will now correctly show if an environment is configured to use PCLM.
+   * License claims will now be correctly refreshed to ensure that licenses from running apps are not reassigned to other environments.
+* Global Operator is now available for use and no longer hidden behind a feature flag.
+* When upgrading Global Operator, `the `mxpc-cli` configuration tool will now also update all of its managed namespaces as well. To upgrade an entire cluster, the upgrade procedure only needs to run once - for the Global Operator.
+* We have updated components to use Go 1.22 and the latest dependency versions, in order to improve security score ratings for all container images.
+* Upgrading to Mendix Operator v2.16.0 from a previous version will restart environments managed by that version of the Operator.
+
 ### April 18th, 2024
 
 #### Documentation Updates

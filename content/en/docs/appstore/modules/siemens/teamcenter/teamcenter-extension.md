@@ -102,15 +102,15 @@ Once you click OK, you will return to the import mapping tab with a sidebar open
 
 ### 4.2.	Teamcenter properties, references, and relations {#tcprop}
 
-In the import mapping sidebar, you can configure which Teamcenter properties, references, and relations to include when retrieving data from Teamcenter. The import mapping sidebar is launched automatically after completion of the object mapping. When you are on the import mapping page and the sidebar is closed, you can double-click on a previously configured entity to open the object mapping sidebar for that entity.
+In the import mapping sidebar, you can configure which Teamcenter properties, references, and relations to include when retrieving data from Teamcenter. The import mapping sidebar is launched automatically after completion of object mapping. When you are on the import mapping page and the sidebar is closed, you can double-click on a previously configured entity to open the sidebar for that entity.
 
-The import mapping sidebar shows all properties, references, and relations for the configured Teamcenter object. Depending on the use case, each one of them is accompanied with checkboxes for reading and writing to configure which of these you want to include when retrieving data from or creating data in Teamcenter.
+The sidebar shows all properties, references, and relations for the configured Teamcenter object. Depending on the use case, each one of them is accompanied with checkboxes for reading and writing to configure which of these you want to include when retrieving data from or creating data in Teamcenter.
 
 You will often see that checkboxes are checked by default and/or disabled. In general, the following rules apply. 
 1.	Properties that are already available on the Mendix entity or one of its generalizations are checked by default and cannot be unchecked.
 2.	Properties, references, and relations for Marketplace entities are disabled by default as it is not good practice to change Mendix marketplace content.
 
-As an example, if a read checkbox is checked and disabled, it means that the property already exists as an attribute on the selected object or one of its generalizations. Similarly, if a write checkbox is checked and disabled, it means the property is required during creation of the selected object.
+As an example, if a read checkbox is checked and disabled, it means that property already exists as an attribute on the selected object or one of its generalizations. Similarly, if a write checkbox is checked and disabled, it means the property is required during creation or revision of the selected object.
 
 ![image](https://github.com/mwbouwkamp-mendix/mendix-docs/assets/157635704/82cf072e-710f-4d20-8c18-2fcda5d5ee36)
 

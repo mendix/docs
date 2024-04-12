@@ -23,7 +23,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
    * The MendixApp status will now correctly show if an environment is configured to use PCLM.
    * License claims will now be correctly refreshed to ensure that licenses from running apps are not reassigned to other environments.
 * Global Operator is now available for use and no longer hidden behind a feature flag.
-* When upgrading Global Operator, `the `mxpc-cli` configuration tool will now also update all of its managed namespaces as well. To upgrade an entire cluster, the upgrade procedure only needs to run once - for the Global Operator.
+* When upgrading Global Operator, the `mxpc-cli` installation and configuration tool will now also update all of its managed namespaces as well. To upgrade an entire cluster, the upgrade procedure only needs to run once - for the Global Operator.
 * We have updated components to use Go 1.22 and the latest dependency versions, in order to improve security score ratings for all container images.
 * Upgrading to Mendix Operator v2.16.0 from a previous version will restart environments managed by that version of the Operator.
 

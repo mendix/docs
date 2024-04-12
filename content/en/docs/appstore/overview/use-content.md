@@ -92,7 +92,7 @@ If you download a module, the **Import Module** dialog box opens, where you shou
 
 ##### 2.1.1.3 Extensions {#extensions}
 
-If you download an [extension](/appstore/modules/#extensions), a warning dialog box opens.
+If you download an [extension](/appstore/modules/#introduction), a warning dialog box opens.
 
 * If you trust the extension, click **Trust module and enable extension**.
 

@@ -98,7 +98,7 @@ If you download an [extension](/appstore/modules/#extensions), a warning dialog 
 
 * If you decide to not trust the extension, you will get asked whether or not to trust the extension every time you reload the application. 
 
-Click **OK** in the confirmation pop-up window. Your extension is now installed and is ready to use. Depending on the extension that you have installed, the functionality will appear in a certain location of your app. Read the extension specific documentation to get more information on how to use it.
+Click **OK** in the confirmation pop-up window. Your extension is now installed and is ready to use. Depending on the extension that you have installed, the functionality appears in a certain location of your app. Read the extension-specific documentation to get more information on how to use it.
 
 If you do not want to trust the extension and would prefer to remove the extension altogether, you can remove the add-on module that was added.
 

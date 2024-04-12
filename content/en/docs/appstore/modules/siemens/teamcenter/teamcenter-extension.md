@@ -10,7 +10,7 @@ tags: ["Teamcenter", "Integration", "PLM", "SOA connector", "low-code"]
 
 ## 1 Introduction {#introduction}
 
-The [Teamcenter Extension] is a Mendix Module built using the Mendix Extensibility Framework to provide you with an effortless means to harness the full capabilities of [Teamcenter Connector](https://marketplace.mendix.com/link/component/111627) for Mendix. The Teamcenter Connector is a powerful tool that allows you to access, create and modify product data in Teamcenter. The Teamcenter Extension is layered atop it, providing a low-code experience to enhance the user friendliness and streamline the utilization of the connector.
+The [Teamcenter Extension] is a Mendix Extension built using the Mendix Extensibility Framework to provide you with an effortless means to harness the full capabilities of [Teamcenter Connector](https://marketplace.mendix.com/link/component/111627) for Mendix. The Teamcenter Connector is a powerful tool that allows you to access, create and modify product data in Teamcenter. The Teamcenter Extension is layered atop it, providing a low-code experience to enhance the user friendliness and streamline the utilization of the connector.
 
 ### 1.1 Use Cases {#usecases}
 

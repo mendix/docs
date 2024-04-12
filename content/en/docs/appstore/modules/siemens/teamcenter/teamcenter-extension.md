@@ -116,7 +116,7 @@ As an example, if a read checkbox is checked and disabled, it means that propert
 
 You can select and deselect the properties, references, and relations depending on the data you need from Teamcenter. When you select a reference or relation, a new placeholder entity will be added to the object mapping tree. You will need to perform the import mapping for these referenced/related objects in a subsequent step (business object mapping and selection of Teamcenter properties, references, and relations).
 
-## 5 Microflows and Domain Model
+## 5. Microflows and Domain Model
 
 Once you've finished import mapping, click on Generate button to create microflows for the selected use case and its corresponding domain model. These artifacts can be used in your app logic.
 

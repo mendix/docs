@@ -173,7 +173,7 @@ To solve this problem, you can use one of the following solutions:
 
 * As an alternative to upgrading the module and Studio Pro, you can use a custom login page instead of the default login page. To do so, perform the steps as follows:
 
-  1. Set the **LoginLocation** constant to `“../..?cont=”`. This directs the user to the custom login page. If you use a page URL for the login page, then adjust the constant accordingly, for example, to `“../../p/login?cont=”`.
+  1. Set the **LoginLocation** constant to `../..?cont=`. This directs the user to the custom login page. If you use a page URL for the login page, then adjust the constant accordingly, for example, to `../../p/login?cont=`.
 
   2. Add the following JavaScript using the [HTML/JavaScript Snippet](/appstore/widgets/html-javascript-snippet/) widget from the Marketplace to your custom login page:
 

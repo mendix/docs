@@ -27,7 +27,7 @@ For performance reasons, Mendix recommends at least the following minimum hardwa
 | Type | Min. Spec. |
 | --- | --- |
 | CPU | 1 core |
-| Memory | 24 GB |
+| Memory | 2 GB |
 | Database HA | CPU: 1 core; Memory: 2x2 GB |
 
 [Additional services](/developerportal/deploy/private-cloud-monitor/) (Prometheus, Grafana, Loki) for observability are recommended.
@@ -58,8 +58,8 @@ Your Mendix app will be deployed with and run by the Mendix for Private Cloud Op
 | Type | Tool | Version | Notes |
 | --- | --- | --- | --- |
 | OS | Linux distribution | Any capable of supporting Kubernetes | |
-| Container orchestration | Kubernetes | See [Supported Environments](/developerportal/deploy/private-cloud-supported-environments/) | |
-| Database | PostgreSQL | Postgres 11 | |
+| Container orchestration | Kubernetes | See [Supported Providers](/developerportal/deploy/private-cloud-supported-environments/) | |
+| Database | PostgreSQL | Any version supported by Mendix 9.18 | |
 | Object storage | S3-type Bucket | S3 API compatible | |
 | Application management | Mendix for Private Cloud Operator | 2.x+ | Will be installed by Private Mendix Platform installer |
 | Runtime | Mendix | 9.14.1.46860 | Will be installed by Private Mendix Platform installer |
@@ -78,45 +78,22 @@ Private Mendix Platform must connect to services within your premises. Mandatory
 | Version control | Azure DevOps | Latest | Required for projects and collaboration |
 | CI/CD | Kubernetes | See [Supported Providers](/developerportal/deploy/private-cloud-supported-environments/) | Default for CI/CD |
 | CI/CD | Jenkins | 2.346.1 or newer, with support for the Docker agent | Required for CI/CD |
-| CI/CD | Tekton | Mendix Operator version 1.20 or newer, Kubernetes version 1.19 or newer, latest version of Tekton from Mendix for Private Cloud | Required for CI/CD |
+| CI/CD | Tekton | Mendix Operator version 2.12 or newer, Kubernetes version 1.19 or newer, latest version of Tekton from Mendix for Private Cloud | Required for CI/CD |
 | CI/CD | Azure DevOps | Latest | Required for CI/CD |
 | Logging & Metrics | Prometheus | See [Supported Services](/developerportal/deploy/private-cloud-monitor/) | Required for Logging & Metrics |
 | Logging & Metrics | Grafana | See [Supported Services](/developerportal/deploy/private-cloud-monitor/) | Required for Logging & Metrics |
 | Logging & Metrics | Loki | See [Supported Services](/developerportal/deploy/private-cloud-monitor/) | Required for Logging & Metrics |
-| License management | Private Cloud License Manager | [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/) | Required for license management capabilities |
 
 ### 4.3 Customer Apps
 
 | Type | Tool | Version |
 | --- | --- | --- |
-| Container orchestration | Kubernetes | See [Supported Environments](/developerportal/deploy/private-cloud-supported-environments/) |
-| Database | PostgreSQL | Postgres 11 |
+| Container orchestration | Kubernetes | See [Supported Providers](/developerportal/deploy/private-cloud-supported-environments/) |
+| Database | PostgreSQL | Any version supported by Mendix 9.18 |
 | Object storage | S3-type Bucket | S3 API compatible |
 | Application management | Mendix for Private Cloud Operator | 2.12+ |
 | Runtime | Mendix | 9.24+ |
 
 ## 5 Infrastructure Requirements
 
-A Kubernetes platform version from 1.13 through 1.20, where the target namespace has already been created
-
-* A database instance of one of the following types:
-
-    * PostgreSQL
-    * Ephemeral
-    * SQL Server
-    * Dedicated JDBC
-
-* An object storage of one of the following types:
-
-    * S3
-    * Minio
-    * Cos
-
-* A registry of one of the following types:
-
-    * ECR
-    * GCR
-    * Generic
-
-* A domain
-* A TLS certificate with HTTPS support
+For information about the infrastructure requirements, see [Supported Providers](/developerportal/deploy/private-cloud-supported-environments/).

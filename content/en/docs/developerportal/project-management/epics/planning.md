@@ -108,7 +108,7 @@ If your board type is Kanban, the stories are grouped in these categories: **To 
 
 {{< figure src="/attachments/developerportal/project-management/epics/planning/kanban-planning.png" >}}
 
-## 3 Importing Stories {#import-stories}å
+## 3 Importing Stories {#import-stories}
 
 You can import your stories using an Excel file to Epics as follows:
 

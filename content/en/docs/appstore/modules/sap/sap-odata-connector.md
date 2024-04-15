@@ -864,4 +864,4 @@ This domain model is part of the OData Connector for SAP solutions module and ca
 * [SAP Cloud Connector](/developerportal/deploy/sap-cloud-platform/sap-cloud-connector/)
 * [SAP Help Portal](https://help.sap.com)
 * [SAP Data Models](/appstore/services/use-sap-model-creator/)
-* [OData Query Options](refguide/supported-odata-operations/)
+* [OData Query Options](/refguide/supported-odata-operations/)

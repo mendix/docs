@@ -13,43 +13,38 @@ This feature is currently in beta. For more information, see [Beta Releases](/re
 
 ## 1 Introduction
 
-Use the new Consumed REST service document to send REST requests from Mendix Studio Pro. With this feature, you can build, test, and create data structures to store your requests. 
+Use the new Consumed REST Service document to send REST requests from Mendix Studio Pro. With this feature, you can build, test, and create data structures to store your requests. 
 
 This feature is supported for [Mendix Studio Pro 10.6](/releasenotes/studio-pro/10.6/) and above.
 
 ### 1.1 Use Cases
 
-You can use this Consumed REST service document to do the following:
+You can use this Consumed REST Service document to do the following:
 
-* Consume a REST service
+* Consume a REST Service
 * Configure `GET`, `POST`, `PUT`, `PATCH`, and `DELETE` requests
 * Create entities directly in the domain model
 * Send REST requests through a microflow
 
 ### 1.2 Limitations
 
-* This feature supports the following HTTP request methods:
-    * `GET`
-    * `POST`
-    * `PUT`
-    * `PATCH`
-    * `DELETE`
-
-  {{% alert color="info" %}} `PATCH` methods are only supported for [Mendix Studio Pro 10.7](/releasenotes/studio-pro/10.7/) and above. `PUT` methods are only supported for [Mendix Studio Pro 10.8](/releasenotes/studio-pro/10.8/) and above. `DELETE` methods are only supported for [Mendix Studio Pro 10.9](/releasenotes/studio-pro/10.9/) and above.{{% /alert %}} 
+* `PATCH` methods are only supported for [Mendix Studio Pro 10.7](/releasenotes/studio-pro/10.7/) and above. 
+* `PUT` methods are only supported for [Mendix Studio Pro 10.8](/releasenotes/studio-pro/10.8/) and above. 
+* `DELETE` methods are only supported for [Mendix Studio Pro 10.9](/releasenotes/studio-pro/10.9/) and above.
 
 * To use the request response to create a data structure in your domain model, the response data should be in JSON format. Other formats, such as XML, are currently not supported. 
-* If you are debugging a running Published REST service in the same app as your Consumed REST service document, a deadlock could occur when sending the request. Wait until the timeout occurs (default: 300 seconds) for Studio Pro to respond again.
+* If you are debugging a running Published REST Service in the same app as your Consumed REST Service document, a deadlock could occur when sending the request. Wait until the timeout occurs (default: 300 seconds) for Studio Pro to respond again.
 
 ### 1.3 Prerequisites 
 
 * [Studio Pro 10.6](/releasenotes/studio-pro/10.6/) and above
 * Familiarity with [HTTP request methods]( https://www.w3schools.com/tags/ref_httpmethods.asp)
 
-## 2 Installation {#installation}
+## 2 Add the Consumed REST Service Document {#installation}
 
-Download [Studio Pro]( https://marketplace.mendix.com/link/studiopro/) and add the Consumed REST service document to your app. To do this, 
+Download [Studio Pro]( https://marketplace.mendix.com/link/studiopro/) and add the Consumed REST Service document to your app. To do this, 
 
-1. Right-click the module you want to add the Consumed REST service document to.
+1. Right-click the module you want to add the Consumed REST Service document to.
 2. Select **Add other** > **Consumed REST service**. 
 3. Name the service and click **OK**.
 
@@ -57,7 +52,7 @@ Download [Studio Pro]( https://marketplace.mendix.com/link/studiopro/) and add t
 
 ## 3 Configuration {#configuration}
 
-Use the Consumed REST service to configure a `GET`, `POST`, `PUT`, `PATCH`, or `DELETE` request for your app. 
+Use the Consumed REST Service to configure a `GET`, `POST`, `PUT`, `PATCH`, or `DELETE` request for your app. 
 
 ### 3.1 Basic Configuration {#configure-a-request}
 
@@ -70,7 +65,7 @@ Create a `GET`, `POST`, `PUT`, `PATCH`, or `DELETE` request to send data to your
     {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/general-section.png" >}}
 
 4. Click **Configuration & authentication**.
-5. Add a **Base URL** to use the same URL across all requests in this consumed REST service document.
+5. Add a **Base URL** to use the same URL across all requests in this consumed REST Service document.
 
     {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/configuration-screen.png" >}}
 
@@ -106,7 +101,7 @@ To add a parameter, follow these steps:
 
     {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/parameter.png" >}}
 
-3. Click **Send** to test the parameters. 
+3. To test the parameters, click **Send**. 
 
 {{% alert color="info" %}}
 Parameters are not supported in the [configuration](#configuration), including authentication and Base URL.
@@ -138,7 +133,7 @@ You can add a header for any HTTP request you have specified in your document. T
 
     {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/json-example.png" >}}
 
-2. To validate the input, navigate to the **General** field and click **Send**.
+2. To validate the input, click **Send**.
 
 3. If you want to use the newly-created JSON string as an entity in your domain model, click **Use JSON Snippet**. The body string can be viewed in the **Body structure** tab.
 
@@ -156,7 +151,10 @@ If you want to use the response to create an entity in your domain model, naviga
 
 {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/response-structure.png" >}}
 
-The entity name is prefilled, but you can change it to a custom name. To create an entity, click **Create Entity** > **OK**. This creates an entity in your domain model, which you can see by clicking **Show**
+The entity name is prefilled, but you can change it to a custom name. To create an entity, do the following:
+
+1. Click **Create Entity** > **OK**. 
+2. To view the entity in your domain model, click **Show**.
 
 ### 3.7 Using a REST Request in a Microflow {#add-entity-to-microflow}
 

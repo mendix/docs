@@ -11,7 +11,7 @@ tags: ["portfolio management"]
 
 The [Portfolio Management](https://portfolio.mendix.com) tool is available to all Mendix customers. It enables staying informed about initiatives and managing them in the different development stages. It provides portfolio managers, business stakeholders, and developers with everything they need to collaborate effectively in one place and bring new initiatives to the Mendix Platform. 
 
-With the Portfolio Management tool, you can manage [active initiatives](#initiative-overview) and [archived initiatives](#archive) in a portfolio. If you are Portfolio Managers, you can also [manage access](#access-management) and configure [portfolio settings](#portfolio-settings) of a portfolio.
+With the Portfolio Management tool, you can manage [active initiatives](/developerportal/portfolio-management/initiatives-overview/) and [archived initiatives](/developerportal/portfolio-management/archive/) in a portfolio. If you are Portfolio Managers, you can also [manage access/developerportal/portfolio-management/access-management/) and configure [portfolio settings](/developerportal/portfolio-management/portfolio-settings/) of a portfolio.
 
 To start the Portfolio Management app, go to the Developer Portal, open the [Global Navigation menu](/developerportal/) ({{% icon name="layout-rounded-1-filled" %}}), and select **Portfolio**.
 
@@ -28,7 +28,7 @@ The **Portfolio Landscape Overview** page contains two sections: **My Portfolios
 * **My Portfolios** – This section shows all the portfolios where you are a portfolio member. Clicking a portfolio card opens the portfolio.
 
 * **Company Portfolios** – This section shows all the restricted and open portfolios in your company, for which you are not a portfolio member. 
-    * Restricted portfolios – Clicking the portfolio card shows more details about the restricted portfolio. To join a restricted portfolio, click **Request to Join** on the portfolio card. A Portfolio Manager needs to approve this [access request](#access-requests).
+    * Restricted portfolios – Clicking the portfolio card shows more details about the restricted portfolio. To join a restricted portfolio, click **Request to Join** on the portfolio card. A Portfolio Manager needs to approve this [access request](/developerportal/portfolio-management/acess-management#access-requests).
     * Open portfolios – You can directly access the open portfolio by clicking the portfolio card. You will have the same access rights as the Viewer of the portfolio. To join an open portfolio, click **Request to Join** on the lower-left corner after opening the portfolio. A Portfolio Manager needs to approve this [access request](#access-requests).
 
 ### 2.2 Portfolio Cards {#portfolio-card}
@@ -37,7 +37,7 @@ On the **Portfolio Landscape Overview** page, each portfolio is presented in a c
 
 #### 2.2.1 Different Privacy Settings of a Portfolio {#privacy-settings}
 
-{{% alert color="info" %}}A Portfolio Manager change the **Privacy Settings** on the [Portfolio Settings](/developerportal/portfolio-management/#portfolio-settings) page.{{% /alert %}}
+{{% alert color="info" %}}A Portfolio Manager change the **Privacy Settings** on the [Portfolio Settings](/developerportal/portfolio-management//developerportal/portfolio-management/portfolio-settings/) page.{{% /alert %}}
 
 Currently, the privacy settings of a portfolio can be private, restricted, or open. The table below shows their differences:
 
@@ -63,13 +63,13 @@ On the **Portfolio Landscape Overview** page, you can create a new portfolio as 
 
     {{% alert color="info" %}}If the toggle on the [Privacy Requests](/control-center/portfolios/#privacy-requests) tab is turned on in Control Center, a Mendix Admin needs to approve the creation of a restricted or open portfolio. In that case, a Mendix Admin will receive a notification about your request and can approve or reject your request from the [Control Center](/control-center/portfolios/#privacy-requests). The **Privacy Settings** of the portfolio will be **Private** until a Mendix Admin approves your request.{{% /alert %}}
 
-4. For **Prioritization Model**, select [WSJF Prioritization](/developerportal/portfolio-management/#wsjf) or [RICE Prioritization](/developerportal/portfolio-management/#rice).
+4. For **Prioritization Model**, select [WSJF Prioritization](/developerportal/portfolio-management/initiatives-overview/#wsjf) or [RICE Prioritization](/developerportal/portfolio-management/initiatives-overview/#rice).
 
 5. From the **Currency** drop-down list, select the default currency for this portfolio.
 
 6. Click **Create**.
 
-The portfolio is created. You are the first Portfolio Manager of this portfolio. You can start [inviting other people](#add-users) to the portfolio.
+The portfolio is created. You are the first Portfolio Manager of this portfolio. You can start [inviting other people](/developerportal/portfolio-management/access-management/#add-users) to the portfolio.
 
 ### 2.4 Opening a Portfolio 
 
@@ -79,63 +79,12 @@ When you click a portfolio card to which you have access, the portfolio opens wi
 
 Clicking a menu item opens the corresponding page:
 
-* [Initiatives Overview](#initiatives-overview)
-* [Archive](#archived-initiatives)
-* [Access Management](#access-management)
-* [Portfolio Settings](#portfolio-settings) (only available for Portfolio Managers)
+* [Initiatives Overview](/developerportal/portfolio-management/initiatives-overview/)
+* [Archive](/developerportal/portfolio-management/archived-initiatives/)
+* [Access Management](/developerportal/portfolio-management/access-management/)
+* [Portfolio Settings](/developerportal/portfolio-management/portfolio-settings/) (only available for Portfolio Managers)
 
-## 6 Portfolio Settings {#portfolio-settings}
-
-{{% alert color="info" %}}
-The **Portfolio Settings** page is only available for Portfolio Managers.
-{{% /alert %}}
-
-### 6.1 Changing Portfolio Settings
-
-On the **Portfolio Settings** page, Portfolio Managers can change the following settings:
-
-* **Portfolio Name** – Click **Edit Portfolio Details** to change the portfolio name.
-
-* **Portfolio Description** – Click **Edit Portfolio Details** to change the portfolio description.
-
-* **Privacy Settings** – You can set the settings to **Private**, **Restricted**, or **Open**. For details on privacy settings, see the [Different Privacy Settings of a Portfolio](#privacy-settings) section.
-
-    {{% alert color="info" %}}If the toggle on the [Privacy Requests](/control-center/portfolios/#privacy-requests) tab is turned on in Control Center, a Mendix Admin needs to approve any change of **Privacy Settings**. In that case, a Mendix Admin will receive a notification about your change request and can approve or reject your request from Control Center. You can cancel a pending request by clicking **Cancel Request**.{{% /alert %}}
-    
-* **Stages** – Click **Move Up** ({{% icon name="chevron-up" %}}) or **Move Down** ({{% icon name="chevron-down" %}}) to move a stage upwards or downwards.
-
-    {{< figure src="/attachments/developerportal/portfolio-management/move-upwards-downwards.png" >}}
-
-* **Prioritization Model**
-
-* **Currency**
-
-* **Departments**
-
-* **Locations**
-
-* **Countries**
-
-* **Scope Estimation - Use Cases**
-
-* **Expected Value - Types**
-
-To delete or edit an existing option for a setting, hover over the option to show the **Delete** button ({{% icon name="trash-can" %}}) or the **Edit** button ({{% icon name="pencil" %}}) at the end of the row, and then click the corresponding button.
-
-{{< figure src="/attachments/developerportal/portfolio-management/delete-edit-stage.png" >}}
-
-To add an option for a setting, click **Add Department**, **Add Country**, **Add Stage**, **Add Use Case**, or **Add Value Type** below the corresponding list.
-
-### 6.2 Deleting a Portfolio
-
-1. On the **Portfolio Settings** page, click **Delete** at the bottom of the page. The **Delete Portfolio** Dialog box opens.
-2. Read the warning carefully. Deleting a portfolio means that you permanently delete the portfolio, including all the data in it. This change cannot be reverted.
-3. If you decide to continue, type *DELETE* in the text box.
-4. Click **Delete**. The portfolio is permanently deleted.
-
-{{% alert color="info" %}}A Mendix Admin can also delete a portfolio in the [Portfolios](/control-center/portfolios/#delete-portfolio) section of Control Center.{{% /alert %}}
-
-## 7 Read More
+## 3 Read More
 
 * [Prioritization Models Supported by Portfolio Management](/developerportal/portfolio-management/prioritization-models/)
 * [Application Portfolio Management with Low-Code](https://www.mendix.com/application-portfolio-management/)

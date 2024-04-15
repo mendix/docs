@@ -40,7 +40,7 @@ The **Estimated Duration** indicates the period during which backups are expecte
 | Region      | Replication Region | Start Time (UTC) | Local Time | Estimated Duration |
 | ----------- | ------------------ | ---------------- | ---------- | ------------------ |
 | Bahrain     | Mumbai             | 03:00            | 06:00      | 1 hour             |
-| Canada      | Oregon             | 05:00            | 00:00      | 1 hour             |
+| Canada      | Canada West        | 05:00            | 00:00      | 1 hour             |
 | Cape Town   | Frankfurt          | 02:00            | 04:00      | 1 hour             |
 | Dublin      | Frankfurt          | 23:00            | 00:00      | 3 hours            |
 | Frankfurt   | Dublin             | 00:00            | 01:00      | 3 hours            |

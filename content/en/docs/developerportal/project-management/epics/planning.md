@@ -109,7 +109,9 @@ If your board type is Kanban, the stories are grouped in these categories: **To 
 
 {{< figure src="/attachments/developerportal/project-management/epics/planning/kanban-planning.png" >}}
 
-## 3 Importing Stories {#import-stories}å
+## 3 Importing Stories {#import-stories}
+
+{{% alert color="warning" %}}Importing stories is not the right way to migrate stories to Epics, since it only moves your story titles and descriptions, not comments, attachments, or tags. If you need the data of your stories in Epics, make sure to use the [migration tool](#data-migration).{{% /alert %}}
 
 You can import your stories using an Excel file to Epics as follows:
 

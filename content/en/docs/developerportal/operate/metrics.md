@@ -415,6 +415,31 @@ There are two sets of values:
 ### 5.11 Database IOPS Burst Balance {#Trends-dbmxdatabaseburstbalance}
 
 {{% alert color="info" %}}
+Burst balance metrics are not available for databases with the gp3 storage instance type. This applies to any databse with a storage size of 20 GiB or more. For details, see [Migration to gp3 Storage Instances](#gp3-migration), below.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+You will not see this graph if you are using the [Basic License](/developerportal/deploy/basic-package/) because you are using a private schema on a shared database server.
+{{% /alert %}}
+
+The **Database IOPS burst balance** graph shows the number of IOPS credits accrued to support burstable performance. The metric is expressed as a percentage; 100% means that the volume has accumulated the maximum number of credits.
+
+{{< figure src="/attachments/developerportal/operate/metrics/db-burst-balance.png" >}}
+
+Apps running on Mendix Cloud use AWS databases to store their data. These databases are burstable, which means that they have a specified performance baseline. Burstable performance means that if you use fewer IOPS than is required for baseline performance (such as when the app is idle), the unspent IOPS credits accrue until they reach a maximum. If a burstable performance instance needs to burst above the baseline performance level, it spends the accrued credits. The more credits that a burstable performance instance has accrued, the more time it can burst beyond its baseline when more performance is needed.
+
+For more information, see the AWS document [Overview of Monitoring Metrics in Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MonitoringOverview.html).
+
+If your database uses a high level of IOPS over a sustained period, this may impact your app's performance. If your database burst balance reduces consistently, you need to ensure that there are periods when there is less activity so that the database burst balance can be restored.
+
+Databases larger than 1,000 GiB have a base performance that is equal to or greater than the maximum burst performance. This means depleting the database IOPS burst balance does not affect their performance.
+
+For more information, see the AWS Database blog [Understanding Burst vs. Baseline Performance with Amazon RDS and GP2](https://aws.amazon.com/blogs/database/understanding-burst-vs-baseline-performance-with-amazon-rds-and-gp2/).
+
+#### 5.11.1 Migration to gp3 Storage Instances {#gp3-migration}
+
+Burst balance metrics are not available for databases with the gp3 storage instance type.
+
 As of [October 25, 2023](/releasenotes/developer-portal/mendix-cloud/#october-25-2023), whenever you create a new DB instance, it will be provisioned with a gp3 storage instance if it meets the eligibility criteria defined in the table below. This also occurs if your database is recreated.
 
 As of [March 26, 2024](/releasenotes/developer-portal/mendix-cloud/#march-26-2024), all existing databases of environments on eligible plans in Mendix Cloud (as specified in the table below) have also been migrated to gp3 storage instances.
@@ -428,29 +453,6 @@ As of [March 26, 2024](/releasenotes/developer-portal/mendix-cloud/#march-26-202
 Compared to gp2, gp3 provides higher baseline storage performance and does not require any burst balance. For more information on gp2 and gp3 performance, see the [AWS gp3 storage](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#gp3-storage) page.
 
 For details on DB storage size for various plans, see [Cloud Resource Packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack).
-
-Burst balance metrics are not available for databases with the gp3 storage instance type.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-You will not see this graph if you are using the [Basic License](/developerportal/deploy/basic-package/) because you are using a private schema on a shared database server.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-Databases larger than 1,000 GiB have a base performance that is equal to or greater than the maximum burst performance. This means depleting the Database IOPS Burst Balance does not affect their performance.
-{{% /alert %}}
-
-The **Database IOPS burst balance** graph shows the number of IOPS credits accrued to support burstable performance. The metric is expressed as a percentage; 100% means that the volume has accumulated the maximum number of credits.
-
-{{< figure src="/attachments/developerportal/operate/metrics/db-burst-balance.png" >}}
-
-Apps running on Mendix Cloud use AWS databases to store their data. These databases are burstable, which means that they have a specified performance baseline. Burstable performance means that if you use fewer IOPS than is required for baseline performance (such as when the app is idle), the unspent IOPS credits accrue until they reach a maximum. If a burstable performance instance needs to burst above the baseline performance level, it spends the accrued credits. The more credits that a burstable performance instance has accrued, the more time it can burst beyond its baseline when more performance is needed.
-
-For more information, see the AWS document [Overview of Monitoring Metrics in Amazon RDS](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MonitoringOverview.html).
-
-If your database uses a high level of IOPS over a sustained period, this may impact your app's performance. If your database burst balance reduces consistently, you need to ensure that there are periods when there is less activity so that the database burst balance can be restored.
-
-For more information, see the AWS Database blog [Understanding Burst vs. Baseline Performance with Amazon RDS and GP2](https://aws.amazon.com/blogs/database/understanding-burst-vs-baseline-performance-with-amazon-rds-and-gp2/).
 
 ## 6 Read More
 

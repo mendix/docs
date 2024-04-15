@@ -1,6 +1,6 @@
 ---
 title: "Supported OData Operations"
-url: /refguide/s/
+url: /refguide/supported-odata-operations/
 description: "Lists the supported operations for published OData services."
 weight: 20
 tags: ["OData", "filter", "count", "sort", "select", "page", "insert", "create", "update", "delete", "actions"]

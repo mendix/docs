@@ -408,4 +408,4 @@ A pop-up window opens and tells you that the initiative is successfully archived
 
 ## 7 Exporting and Importing Initiatives
 
-On the **Initiatives Overview** page you can import and export initiatives. On the **Archive** page you can only export initiatives. For details, see [Export and Import Initiatives](/developerportal/portfolio-management/export-import-initiatives/).
+On the **Initiatives Overview** page you can import and export initiatives. For details, see [Export and Import Initiatives](/developerportal/portfolio-management/export-import-initiatives/).

@@ -48,6 +48,12 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
   There is a small trade-off though, since we replaced the text editor widget completely, it will not be possible to link stories using a # anymore. Your existing links will become plain text that still contain story ID and title. Copying and pasting the link to the story can be used as a workaround in the meantime.
 
+### March 16
+
+#### Improvements
+
+* We added the **Contributor** access role in [Portfolio Management](/developerportal/portfolio-management/access-management/), and we renamed the **User** access role to **Viewer**.
+
 ### March 6
 
 #### Deprecations
@@ -151,13 +157,13 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 We have made the following improvements to the **Access Management** page in Portfolio Management:
 
 * On the [Members](/developerportal/portfolio-management/#members) tab, the **Status** column in the list now shows whether a user is active or deactivated. Moreover, you can remove all the deactivated users from a portfolio in one go.
-* All the pending invites now appear on the [Pending Invites](/developerportal/portfolio-management/#pending-invites) tab.
+* All the pending invites now appear on the [Pending Invites](/developerportal/portfolio-management/access-management/#pending-invites) tab.
 
 ### November 23, 2023
 
 #### New Features
 
-* In [Portfolio Management](/developerportal/portfolio-management/), you can now [link epics to an initiative](/developerportal/portfolio-management/#link-epics).
+* In [Portfolio Management](/developerportal/portfolio-management/), you can now [link epics to an initiative](/developerportal/portfolio-management/initiatives-overview/#link-epics).
 
 ### November 17, 2023
 

@@ -68,6 +68,14 @@ Depending on the configuration, microflows are generated to:
 
 To work with structures, such as BOMs, you need to first create a BOM window in Teamcenter. One can retrieve the root BOM Line from the BOM Window and from there start expanding the structure either line by line or all BOM Lines at the same time. The BOM Lines define the structure (based on the configuration you passed when generating the BOM Window). Each BOM Line is associated with a single Item Revision.
 
+Please be aware that this feature is designed specifically for generating microflows and domain models to retrieve and display simple BOM structures. For other scenarios, consider alternative solutions (suggested solutions provided in brackets):
+•	Working with large or complex BOM structures (use Active Workspace)
+•	For performance concerns (use Active Workspace)
+•	Transferring an entire BOM from Teamcenter to another system (use Active Integration Gateway)
+•	Comparing BOMs from different systems (use Active Integration Gateway)
+•	For BOM authoring (use Active Workspace)
+•	For creating BOM configurations (use Active Workspace)
+
 ## 3 Landing Page {#homepage}
 Open the Teamcenter Extension by clicking on menu option View -> Teamcenter inside Mendix Studio Pro. This will open the landing page. You will see two tabs: Menu and Settings. 
 

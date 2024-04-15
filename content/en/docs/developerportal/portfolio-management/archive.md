@@ -3,7 +3,7 @@ title: "Archive"
 url: /developerportal/portfolio-management/archive/
 weight: 10
 description: "Describes the Archive page in the Mendix Portfolio Management app."
-tags: ["Archive", Portfolio Management"]
+tags: ["archive", portfolio management"]
 ---
 
 ## 1 Introduction

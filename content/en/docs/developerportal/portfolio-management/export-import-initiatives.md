@@ -4,7 +4,7 @@ url: /developerportal/portfolio-management/export-import-initiatives/
 parent: "portfolio-management"
 weight: 200
 description: "Describes how to import and export the initiatives in the Mendix Portfolio Management app."
-tags: ["initiatives", "import", "export", "Portfolio Management"]
+tags: ["initiatives", "import", "export", "portfolio management"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

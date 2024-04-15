@@ -35,7 +35,7 @@ These widgets require a certain configuration to work; all the widgets need to b
 
 A very simple configuration could look like this:
 
-{{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-webxr/container-with-cube.jpg" alt="Container (AR) with Cube (AR)"  width="400"  >}}
+{{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-webxr/container-with-cube.jpg" alt="Container (AR) with Cube (AR)"  width="400" class="image-border" >}}
 
 ### 2.1 HTTPS Prerequisite
 
@@ -43,11 +43,11 @@ For WebXR to work, you will have to run the project through HTTPS protocol. The 
 
 Here is a simple scene without the button to start WebXR:
 
-{{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-webxr/cube-no-webxr-button.jpg" alt="How the page appears without WebXR support"   width="400"  >}}
+{{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-webxr/cube-no-webxr-button.jpg" alt="How the page appears without WebXR support"   width="400" class="image-border" >}}
 
 Here is that same scene with the button:
 
-{{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-webxr/cube-webxr-button.jpg" alt="How the page appears with WebXR support"   width="400"  >}}
+{{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-webxr/cube-webxr-button.jpg" alt="How the page appears with WebXR support"   width="400" class="image-border" >}}
 
 It is not possible to start the experience without the user clicking the button. This is due to the user needing to give permission to have their space taken over by this experience, and not being surprised by this happening.
 
@@ -76,10 +76,9 @@ Container (XR) has the following properties that can be set in Studio Pro:
 
 * **Camera distance** – The distance in meters from the 3D model. This can be altered to make sure the entire scene is in view.
 * **Starting position** – This is the position which is at the center of the preview. Changing this will change the point the camera is focused on. **X** is the left to right axis, **Y** is the up and down axis, and **Z** is the depth axis.
-* **Realistic lighting** - 
-  * **Background color** - The color the background of the scene should have. 
-  * **Add realistic lighting** when this is set to **Yes**, an environment map can be added here. The environment map is what will be reflected on those objects. When **Add realistic lighting** is set to **No** and **Realistic lighting** is still used on objects they will appear black, since the object has nothing to reflect.
-
+* **Realistic lighting**  
+  * **Background color** – Sets the color of the background of the scene. 
+  * **Add realistic lighting** – When set to **Yes**, an environment map can be added here. The environment map is what will be reflected on those objects. When set to **No** and **Realistic lighting** is still used on objects, then they will appear black (since the object has nothing to reflect).
 
 ### 3.2 Node (XR)
 
@@ -154,7 +153,7 @@ All interactions are done through a mesh-like interface around the object. The d
 
 #### 4.2.1 3D Object (XR)
 
-Shows 3D object, in gltf or glb formats. Requires a link to a 3D Object to show. 3D Objects can be shown in their original size and material by not altering the **Scale** and setting the **Material** to **Object**. The object will appear in the scale that it was made, meaning that 1 unit will be 1 meter. Units can differ between modeling programs (sometimes a unit is a meter, sometimes a unit is a centimeter, sometimes the modeler doesn't take actual size into account and only works relatively), so it's good to check that the model is of the size you expect it to be. If it's too large or too small, you can adjust it with the Scale property on this widget.
+Shows 3D object, in gltf or glb formats. Requires a link to a 3D Object to show. 3D Objects can be shown in their original size and material by not altering the **Scale** and setting the **Material** to **Object**. The object will appear in the scale that it was made, meaning that 1 unit will be 1 meter. Units can differ between modeling programs (sometimes a unit is a meter, sometimes a unit is a centimeter, sometimes the modeler does not take actual size into account and only works relatively), so it is good to check that the model is of the size you expect it to be. If it is too large or too small, you can adjust it with the Scale property on this widget.
 
 Apart from the properties also found on the other AR widgets, the **3D Object (XR)** widget has a **URL** property:
 
@@ -166,6 +165,6 @@ Shows a predetermined object, either a cube, sphere or square. These are quite s
 
 #### 4.2.3 Text (XR)
 
-Shows a 3D representation of the current set **Text**, which can be dynamically changed. Due to how this is implemented in the library we're using for these widgets, the object will be completely destroyed and recreated when changing the text so performance does take a hit during this.
+Shows a 3D representation of the current set **Text**, which can be dynamically changed. Due to how this is implemented in the library we are using for these widgets, the object will be completely destroyed and recreated when changing the text so performance does take a hit during this.
 
 The properties of this widgets are the same as other AR widgets, with an extra **Text** property for the actual text this widget should show.

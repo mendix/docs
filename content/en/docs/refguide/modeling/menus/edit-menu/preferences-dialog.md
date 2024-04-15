@@ -67,6 +67,10 @@ The JDK is necessary to run Mendix applications, because the Mendix Runtime is w
 
 Enable this setting to increase the speed at which a running application is updated after changes have been made in Studio Pro. When only pages, layouts or snippets have been changed, an entire restart of the application is skipped to decrease deployment time. Also, no Java compilation is performed when no relevant files have changed.
 
+#### 3.1.3 Optimize bundle
+
+This setting is visible and effective when the React client is enabled. By default, It's already enabled to reduce the size of the generated app bundle and speeds up the bundling process by diabling source maps generation. Source maps are files that map code from its transformed state back to its original form, facilitating debugging during development. If you want to generate source maps for debugging purposes, you can disable this setting.
+
 ### 3.2 Build
 
 #### 3.2.1 Gradle Directory

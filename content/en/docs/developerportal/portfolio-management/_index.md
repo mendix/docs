@@ -9,9 +9,9 @@ tags: ["portfolio management"]
 
 ## 1 Introduction
 
-The [Portfolio Management](https://portfolio.mendix.com) tool is available to all Mendix customers. It enables staying informed about initiatives and managing them in the different development stages. It provides portfolio managers, business stakeholders, and developers with everything they need to collaborate effectively in one place and bring new initiatives to the Mendix Platform. 
+The [Portfolio Management](https://portfolio.mendix.com) tool is available to all Mendix users. It enables staying informed about initiatives and managing them in the different development stages. It provides portfolio managers, business stakeholders, and developers with everything they need to collaborate effectively in one place and bring new initiatives to the Mendix Platform. 
 
-With the Portfolio Management tool, you can manage [active initiatives](/developerportal/portfolio-management/initiatives-overview/) and [archived initiatives](/developerportal/portfolio-management/archive/) in a portfolio. If you are Portfolio Managers, you can also [manage access/developerportal/portfolio-management/access-management/) and configure [portfolio settings](/developerportal/portfolio-management/portfolio-settings/) of a portfolio.
+With the Portfolio Management tool, you can manage [active initiatives](/developerportal/portfolio-management/initiatives-overview/) and [archived initiatives](/developerportal/portfolio-management/archive/) in a portfolio. If you are Portfolio Managers, you can [manage access](/developerportal/portfolio-management/access-management/) and configure [portfolio settings](/developerportal/portfolio-management/portfolio-settings/) of a portfolio.
 
 To start the Portfolio Management app, go to the Developer Portal, open the [Global Navigation menu](/developerportal/) ({{% icon name="layout-rounded-1-filled" %}}), and select **Portfolio**.
 
@@ -29,11 +29,11 @@ The **Portfolio Landscape Overview** page contains two sections: **My Portfolios
 
 * **Company Portfolios** – This section shows all the restricted and open portfolios in your company, for which you are not a portfolio member. 
     * Restricted portfolios – Clicking the portfolio card shows more details about the restricted portfolio. To join a restricted portfolio, click **Request to Join** on the portfolio card. A Portfolio Manager needs to approve this [access request](/developerportal/portfolio-management/access-management/#access-requests).
-    * Open portfolios – You can directly access the open portfolio by clicking the portfolio card. You will have the same access rights as the Viewer of the portfolio. To join an open portfolio, click **Request to Join** on the lower-left corner after opening the portfolio. A Portfolio Manager needs to approve this [access request](/developerportal/portfolio-management/access-management/#access-requests).
+    * Open portfolios – You can directly access the open portfolio by clicking the portfolio card. You will have the same access rights as the [Viewer](/developerportal/portfolio-management/access-management/#members) of the portfolio. To join an open portfolio, click **Request to Join** on the lower-left corner after opening the portfolio. A Portfolio Manager needs to approve this [access request](/developerportal/portfolio-management/access-management/#access-requests).
 
 ### 2.2 Portfolio Cards {#portfolio-card}
 
-On the **Portfolio Landscape Overview** page, each portfolio is presented in a card. On a portfolio card, you can see the name of the portfolio, the company to which it belongs, the [privacy settings](#privacy-settings), and the avatars of Portfolio Managers (up to avatars of four Portfolio Managers).
+On the **Portfolio Landscape Overview** page, each card represents a portfolio. On a portfolio card, you can see the name of the portfolio, the company to which it belongs, the [privacy settings](#privacy-settings), and the avatars of Portfolio Managers (up to avatars of four Portfolio Managers).
 
 #### 2.2.1 Different Privacy Settings of a Portfolio {#privacy-settings}
 
@@ -41,15 +41,19 @@ On the **Portfolio Landscape Overview** page, each portfolio is presented in a c
 
 Currently, the privacy settings of a portfolio can be private, restricted, or open. The table below shows their differences:
 
-| Portfolio type | Visible in the **Company Portfolios** section?         | Can users access the portfolio without joining the portfolio? | Can Portfolio Manager add users to the portfolio? * | Can users apply to join the portfolio? ** |
-|-|-|-|-|-|
-| Private        | {{< icon name="remove-circle-filled" color="red" >}}      | {{< icon name="remove-circle-filled" color="red" >}} |{{< icon name="checkmark-circle-filled" color="green" >}}|{{< icon name="remove-circle-filled" color="red" >}}|
-| Restricted     | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |{{< icon name="checkmark-circle-filled" color="green" >}}|{{< icon name="checkmark-circle-filled" color="green" >}}.|
-| Open           | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |{{< icon name="checkmark-circle-filled" color="green" >}}|{{< icon name="checkmark-circle-filled" color="green" >}}|
+| Portfolio type | Visible in the **Company Portfolios** section?         | Can users access the portfolio without joining the portfolio? | Can Portfolio Manager add users to the portfolio? * | Can users apply to join the portfolio? ** | Can Mendix Admins govern the creation of the portfolio? *** |
+|-|-|-|-|-|-|
+| Private        | {{< icon name="remove-circle-filled" color="red" >}}      | {{< icon name="remove-circle-filled" color="red" >}} |{{< icon name="checkmark-circle-filled" color="green" >}}|{{< icon name="remove-circle-filled" color="red" >}}|{{< icon name="remove-circle-filled" color="red" >}}|
+| Restricted     | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} |{{< icon name="checkmark-circle-filled" color="green" >}}|{{< icon name="checkmark-circle-filled" color="green" >}}|{{< icon name="remove-circle-filled" color="green" >}}|
+| Open           | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |{{< icon name="checkmark-circle-filled" color="green" >}}|{{< icon name="checkmark-circle-filled" color="green" >}}|{{< icon name="remove-circle-filled" color="green" >}}|
 
-\* A Portfolio Manager can [add users to the portfolio](/developerportal/portfolio-management/access-management/#add-users).
+\* A Portfolio Manager can add users to the portfolio on the [Access Management](/developerportal/portfolio-management/access-management/#add-users) page.
 
 ** A user can apply to join the portfolio by clicking the **Request to Join** on the  portfolio card. A Portfolio Manager needs to approve this [access request](/developerportal/portfolio-management/access-management/#access-requests).
+
+\*** If the toggle on the [Privacy Requests](/control-center/portfolios/#privacy-requests) tab is turned on in Control Center, a Mendix Admin needs to approve the creation of a restricted or open portfolio. In that case, a Mendix Admin will receive a notification about the request and can approve or reject the request from the [Control Center](/control-center/portfolios/#privacy-requests). The **Privacy Settings** of the portfolio will be **Private** until a Mendix Admin approves the request.
+
+***
 
 ### 2.3 Creating a New Portfolio {#create-portfolio}
 
@@ -60,8 +64,6 @@ On the **Portfolio Landscape Overview** page, you can create a new portfolio as 
 2. Enter **Portfolio Name** and **Description** for the new portfolio.
 
 3. For **Privacy Settings**, select **Private**, **Restricted**, or **Open**. For details on privacy settings, see the [Different Privacy Settings of a Portfolio](#privacy-settings) section, above.
-
-    {{% alert color="info" %}}If the toggle on the [Privacy Requests](/control-center/portfolios/#privacy-requests) tab is turned on in Control Center, a Mendix Admin needs to approve the creation of a restricted or open portfolio. In that case, a Mendix Admin will receive a notification about your request and can approve or reject your request from the [Control Center](/control-center/portfolios/#privacy-requests). The **Privacy Settings** of the portfolio will be **Private** until a Mendix Admin approves your request.{{% /alert %}}
 
 4. For **Prioritization Model**, select [WSJF Prioritization](/developerportal/portfolio-management/initiatives-overview/#wsjf) or [RICE Prioritization](/developerportal/portfolio-management/initiatives-overview/#rice).
 
@@ -86,7 +88,6 @@ Clicking a menu item opens the corresponding page:
 
 ## 3 Read More
 
-* [Prioritization Models Supported by Portfolio Management](/developerportal/portfolio-management/prioritization-models/)
 * [Application Portfolio Management with Low-Code](https://www.mendix.com/application-portfolio-management/)
 * [Make Strategic Decisions with Portfolio Management](https://academy.mendix.com/link/paths/145/Make-Strategic-Decisions-With-Portfolio-Management)
 * [Why Portfolio Management is Crucial to App Development at Scale](https://www.mendix.com/blog/why-portfolio-management-is-crucial-to-app-development-at-scale/)

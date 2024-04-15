@@ -171,12 +171,6 @@ If the tab pane contains code with an asterisk (`*`) in it, the linter rule for 
 
 [//]: # (<!-- markdownlint-enable no-space-in-emphasis -->)
 
-### Todos
-
-{{% todo %}} 
-A todo is a special kind of alert that only displays on development builds—it doesn't show up on production. It does also print as a warning in your console when you run a local build.
-{{% / todo %}}
-
 ### Videos
 
 #### Vidyard Video

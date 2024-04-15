@@ -55,9 +55,9 @@ Click **Save** to save the connection details, which are stored in 3 constants:
 
 For example: `*Database*_DBsource.`
 
-### 3.2 Explore Tables and Views of a Connected Database
+### 3.2 Explore Schemas of a Connected Database
 
-Once the connection is successful and saved, you can explore and search the **Tables & Views** of the external database.
+When the connection is successful and saved, you can search the **Browse database** tab for Tables, Views, Procedures, and Functions.
 
 {{< figure src="/attachments/howto/integration/use-the-external-database-connector/3.png" >}}
 
@@ -65,7 +65,7 @@ Once the connection is successful and saved, you can explore and search the **Ta
 
 1. Create a new query by entering an SQL query in the **SQL query** field.
 
-2. Click **Add Parameter** if you want to use constants or variables in your query during runtime. Use curly braces to include a parameter in the query. 
+2. Open the **Parameters** tab and click **Add Parameter** if you want to use constants or variables in your query during runtime. Use curly braces to include a parameter in the query. 
 
 3. Assign a Test Value to each parameter.
 
@@ -78,7 +78,7 @@ SQL Query:
 
 {{< figure src="/attachments/howto/integration/use-the-external-database-connector/4.png" >}}
 
-## 4. Save Query
+## 4 Save Query
 
 ### 4.1 Save Query to Retrieve Data
 
@@ -90,7 +90,7 @@ SQL Query:
 
 {{< figure src="/attachments/howto/integration/use-the-external-database-connector/5.png" >}}
 
-### 5 Save DML Query
+### 4.2 Save DML Query
 
 1. For DML queries, *Number of affected rows* will be displayed as a response.
    
@@ -102,7 +102,21 @@ SQL Query:
 
 {{% alert color="info" %}} For all DML Queries, changes made to database in the Mendix Design phase are automatically rolled back. {{% /alert %}}
 
-### 6 Use the Query External Database Activity
+## 5 Call Stored Procedure
+
+{{% alert color="info" %}} Calling stored procedures with no parameters is supported in Studio Pro 10.9 and above.  {{% /alert %}}
+
+To call a stored procedure, do the following: 
+
+1. Enter the following syntax: `Call latest_schema.InsertDataIntoTable1()`
+
+2. If the stored procedure returns a result set, click U**se Response** > **Save Query & Create Entity** to save the query and the newly-created entity in the domain model.
+
+3. If the stored procedure contains DML Queries, **Number of affected rows** will be displayed as a response. Click **Save Query** to save the query.
+
+    {{% alert color="info" %}}DML commands within a stored procedure are rolled back if they are not committed by a stored procedure, but DDL commands are not.{{% /alert %}}
+
+## 6 Use the Query External Database Activity
 
 1. Add the **Query external database** activity into your microflow.
 

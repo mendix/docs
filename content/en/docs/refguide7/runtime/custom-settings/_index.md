@@ -1,6 +1,7 @@
 ---
 title: "Runtime Customization"
 url: /refguide7/custom-settings/
+canonical_url: "https://docs.mendix.com/refguide/custom-settings/"
 category: "Mendix Runtime"
 description: "Describes custom settings for server, log file, database, Amazon S3 storage service, Microsoft Azure, IBM Bluemix object storage, web client, and proxy server in Mendix."
 tags: ["Runtime", "Customization", "Settings", "Configuration", "IBM Cloud", "Amazon S3", "Microsoft Azure", "Custom Settings", "Proxy"]
@@ -81,7 +82,7 @@ The settings below influence the behavior of the log files. These settings can o
 
 ### 4.2 Connection Pooling
 
-The settings below are used to define the database connection pooling behavior. The Runtime uses a pool of reusable database connections. You can for example define how many connections can be used. Connection pooling is implemented using the [Apache Commons Object-pooling API](http://commons.apache.org/pool/) .
+The settings below are used to define the database connection pooling behavior. The Runtime uses a pool of reusable database connections. You can for example define how many connections can be used. Connection pooling is implemented using the [Apache Commons Object-pooling API](https://commons.apache.org/pool/).
 
 These settings are configured *per runtime instance*. If you have [scaled your application](/developerportal/deploy/scale-environment/), the number of connections on the database side will be multiplied by the number of runtime instances. For example, if you set `ConnectionPoolingMaxIdle` to `50` and scale your app to 2 runtime instances, each runtime instance will create at most 50 connections, but on the database side this will lead to a maximum of 100 connections.
 
@@ -125,7 +126,7 @@ The following settings influence the behavior of the Amazon S3 Storage Service m
 | com.mendix.storage.s3.BucketName | Name of the bucket where the files are stored on S3. |   |
 | com.mendix.storage.s3.ResourceNameSuffix | Suffix for the keys under which objects are stored. This can be used when buckets are divided into different segments for different users with different credentials (for example, store objects as "[key].customer1" for customer1 and as "[key].customer2" for customer2) |   |
 | com.mendix.storage.s3.PerformDeleteFromStorage | Deprecated since version 7.19. Use `com.mendix.storage.PerformDeleteFromStorage`.<br/>Defines whether a delete of a Mendix File Document should result in an actual delete in the storage service. A reason to not perform an actual delete in the storage service can be when it's also used as a backup service. | true |
-| com.mendix.storage.s3.EndPoint | Overrides the default Amazon Web Services (AWS) endpoint. Use this setting when the storage service is on a non-AWS location. Both the endpoint (for example, 's3.example.com') or the full URL, including the protocol, are supported (for example, `https://s3.example.com`). Note that when setting a custom endpoint path style access will be enabled. For more information, see [Class S3ClientOptions](http://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/S3ClientOptions.html#withPathStyleAccess(boolean)). |   |
+| com.mendix.storage.s3.EndPoint | Overrides the default Amazon Web Services (AWS) endpoint. Use this setting when the storage service is on a non-AWS location. Both the endpoint (for example, 's3.example.com') or the full URL, including the protocol, are supported (for example, `https://s3.example.com`). Note that when setting a custom endpoint path style access will be enabled. For more information, see [Class S3ClientOptions](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/S3ClientOptions.html#withPathStyleAccess(boolean)). |   |
 | com.mendix.storage.s3.UseV2Auth | Let the authentication policy use 'Signature Version 2' instead of the default 'Signature Version 4'. Set this setting to 'true' when the endpoint does not support 'Signature Version 4'. | false |
 | com.mendix.storage.s3.EncryptionKeys | List of keys which can be used to encrypt and decrypt data at rest in S3\. The right key to decrypt the data with is automatically selected depending on with which key it was encrypted. Each encryption key consists of a key id, the encryption algorithm and the actual key (Base64 encoded). Example: {{< figure src="/attachments/refguide7/runtime/custom-settings/code_snippet_2.png" >}} |   |
 | com.mendix.storage.s3.MaxConnections | Overrides the default maximum connections limit in the Amazon S3 service. The default value is enough for most applications, so we do not recommend explicitly setting this to a custom value unless a larger maximum connections limit is absolutely necessary. | [DEFAULT_MAX_CONNECTIONS](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/ClientConfiguration.html#DEFAULT_MAX_CONNECTIONS) field of the ClientConfiguration interface in the AWS SDK for Java. |

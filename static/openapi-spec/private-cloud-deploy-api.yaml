@@ -1998,7 +1998,7 @@ components:
       name: Authorization
       type: apiKey
       in: header
-      description: 'For more information about requesting and using a token see the [documentation](https://docs.mendix.com/community-tools/mendix-profile/user-settings/#pat).<br/> The header must be set to `MxToken <Your PAT>`.'
+      description: 'For more information about requesting and using a token see the [documentation](https://docs.mendix.com/developerportal/community-tools/mendix-profile/#pat).<br/> The header must be set to `MxToken <Your PAT>`.'
   requestBodies:
     environmentManifest:
       content:
@@ -2195,6 +2195,12 @@ components:
             alertsUrl: 'https://www.exampleurl.com'
             logsUrl: 'https://www.exampleurl.com'
             backupsUrl: 'https://www.exampleurl.com'
+    AppManifest:
+      value:
+        manifestVersion: 2.0.0
+        app:
+          appId: 085a0e34-69ec-4c61-9c7d-5cd42554f9f2
+          appName: my-app
 tags:
   - name: cli
   - name: clusters

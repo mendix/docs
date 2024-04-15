@@ -32,7 +32,7 @@ The sections below provide a short explanation of APD along with its features an
 
 ## 2 Definition of the APD Tool
 
-APD is based on Wikipedia's definition of [application performance management](http://en.wikipedia.org/wiki/Application_performance_management). The goal of APD is to emphasize this point: "to detect and diagnose complex application performance problems to maintain an expected level of service."
+APD is based on Wikipedia's definition of [application performance management](https://en.wikipedia.org/wiki/Application_performance_management). The goal of APD is to emphasize this point: "to detect and diagnose complex application performance problems to maintain an expected level of service."
 
 You need the basic infrastructure probes to measure hardware parts like the CPU, memory, and disk as well as components like the database and web server. However, for higher quality support, you should also look at the application and how it is performing, and especially look to link this to the user’s business perspective.
 

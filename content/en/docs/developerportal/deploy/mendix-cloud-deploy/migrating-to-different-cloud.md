@@ -50,7 +50,7 @@ To manually migrate your app to a new node, follow the steps in the sections bel
 
 First, link one of the new temporary apps to the target node.
 
-1. In the [Developer Portal](http://sprintr.home.mendix.com), open one of your temporary apps.
+1. In the [Developer Portal](https://sprintr.home.mendix.com), open one of your temporary apps.
 
 2. From the navigation pane, go to the **Environments** page.
 
@@ -124,7 +124,7 @@ To learn how to do this, see [How to Deploy the App to an Environment](/develope
 
 It is not possible to directly unlink an app from a licensed node. The only way to unlink the app is to connect another app to the licensed node; this unlinks the existing app automatically. To unlink your app, follow these steps:
 
-1. In the [Developer Portal](http://sprintr.home.mendix.com), open the second blank app you created (not the one you have linked to the target node).
+1. In the [Developer Portal](https://sprintr.home.mendix.com), open the second blank app you created (not the one you have linked to the target node).
 
 2. Go to the app's **Environments** page.
 
@@ -142,7 +142,7 @@ Follow these steps to link the app you detached from the source node, above, to 
 Make sure you have downloaded the latest backup and deployment package before linking your app to the target node.
 {{% /alert %}}
 
-1. In the [Developer Portal](http://sprintr.home.mendix.com), open the app that you detached from the source node.
+1. In the [Developer Portal](https://sprintr.home.mendix.com), open the app that you detached from the source node.
 
 2. Go to the app's **Environments** page.
 

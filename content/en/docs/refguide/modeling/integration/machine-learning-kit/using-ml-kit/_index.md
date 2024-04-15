@@ -348,32 +348,37 @@ You can only call the ML model via the ML Kit from microflows.
 
 ## 7 FAQs {#FAQs}
 
-1. My model does not import properly. 
+### 7.1 My Model Does Not Import Properly
+
+This may indicate a corrupt model file. Studio Pro supports importing a wide variety of models, ranging from simple logistic regressors to [Whisper](https://github.com/zhuzilin/whisper-openvino), and a wide range of computer vision models. As long as the ML model is properly converted into the ONNX format and complies with the standard, Studio Pro is able to run it.
+
+Try re-downloading the ML model or verifying the conversion process. It is also advised to use the [netron.app](https://netron.app/) website to check whether your ONNX file is correct before importing it.
+
+### 7.2 The Outputs from My Model in the Training Environment Is Different from the Outputs in Studio Pro
    
-    This may indicate a corrupt model file. Studio Pro supports importing a wide variety of models, ranging from simple logistic regressors to [Whisper](https://github.com/zhuzilin/whisper-openvino), and a wide range of computer vision models. As long as the ML model is properly converted into the ONNX format and complies with the standard, Studio Pro is able to run it.
+When converting your model to ONNX, and especially if you use pre- and post-processors, type casting and conversion will occur.
 
-    Try re-downloading the ML model or verifying the conversion process. It is also advised to use the [netron.app](https://netron.app/) website to check whether your ONNX file is correct before importing it.
+Check that all the new types you use and that the mathematical operations you conduct in your Java actions (if you use pre- or post-processing) are suitable for the Types the ML model expect/uses (for example, a division is casted to float if a float is expected).
 
-2. The output from my model outputs in the training environment is different from the outputs in Studio Pro.
+### 7.3 My Model Crashes Studio Pro or Its Execution Is Too Slow
    
-    When converting your model to ONNX, and especially if you use pre- and post-processors, type casting and conversion will occur.
-    Check that all the new types you use and that the mathematical operations you conduct in your Java actions (if you use pre- or post-processing) are suitable for the Types the ML model expect/uses (for example, a division is casted to float if a float is expected).
+While the ML model file size is small, the outputs or inputs of it may be not so. Look at the output for the detection model for [EasyOCR](https://github.com/JaidedAI/EasyOCR).
 
-3. My model crashes Studio Pro or its execution is too slow. 
-   
-    While the ML model file size is small, the outputs or inputs of it may be not so. Look at the output for the detection model for [EasyOCR](https://github.com/JaidedAI/EasyOCR).
+There are two outputs with the `Rely281_dim` and `Transposeoutput_dim` labels, both of them of 4 bytes length, as they are float32. Assuming a standard 224x224 pixels image, we will receive a ~10 mb object. If it is a larger image of 986 pixels, the memory footprint of that output grows to 133 mb, and that is for a single inference. A parallel microflow that calls the ML model ten times will require obviously ten times more memory, probably crashing the JVM.
 
-    There are two outputs with the `Rely281_dim` and `Transposeoutput_dim` labels, both of them of 4 bytes length, as they are float32. Assuming a standard 224x224 pixels image, we will receive a ~10 mb object. If it is a larger image of 986 pixels, the memory footprint of that output grows to 133 mb, and that is for a single inference. A parallel microflow that calls the ML model ten times will require obviously ten times more memory, probably crashing the JVM.
+In short: mind the growth of memory usage with very complex model outputs. 
 
-    In short: mind the growth of memory usage with very complex model outputs. 
+Another potential cause of crashing is if there is an inconsistency between the architecture of the ML model and the data injected into it, especially with complex operations in models that accepts complex calculations such as neural networks. For example, if your model has a `Convolution` layer of shape `16x16x1`, injecting a tensor of a shape whose algebraic division results in an integer result smaller than 1 (such as an input of `[1,3,15,15]`), will have unpredictable consequences. This might include Studio Pro crashing. Verify that the implementation of your model in Studio Pro matches, in shape and type of the data being sent into the component, the ML model architecture, or the ML model documentation if you obtained from third-party sources such as the ONNX Model Zoo.
 
-    Another potential cause of crashing is if there is an inconsistency between the architecture of the ML model and the data injected into it, especially with complex operations in models that accepts complex calculations such as neural networks. For example, if your model has a `Convolution` layer of shape `16x16x1`, injecting a tensor of a shape whose algebraic division results in an integer result smaller than 1 (such as an input of `[1,3,15,15]` , will have unpredictable consequences. This might include Studio Pro crashing. Verify that the implementation of your model in Studio Pro matches, in shape and type of the data being sent into the component, the ML model architecture, or the ML model documentation if you obtained from third-party sources such as the ONNX Model Zoo.
-
-4. I have an exception when executing the ML model or running it. 
+### 7.4 I Have an Exception When Executing the ML Model or Running It 
   
-    This situation is the most difficult to solve as the causes may vary a lot, ranging from an incompatible Studio Pro version to a failure inside the ML model or a permission issues.
+This situation is the most difficult to solve as the causes may vary a lot, ranging from an incompatible Studio Pro version to a failure inside the ML model or a permission issues. 
 
-    Mendix recommends turning the logs to trace level, as the ML Engine provides a great deal of information on what is going on, and using this as a basis to decide next steps.
+Mendix recommends turning the logs to trace level, as the ML Engine provides a great deal of information on what is going on, and using this as a basis to decide next steps.
+
+### 7.5 My Model Runs Locally but Not in Production
+    
+The model you can run is limited to the maximum memory and storage space available in your environment.
 
 ## 8 Read More {#readmore}
 

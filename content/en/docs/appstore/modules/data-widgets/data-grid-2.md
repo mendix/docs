@@ -8,13 +8,13 @@ tags: ["marketplace", "marketplace component", "data grid", "platform support", 
 
 ## 1 Introduction {#introduction}
 
-[Data Grid 2](https://marketplace.mendix.com/link/component/116540) is the successor to the standard data grid widget for displaying content in a tabular form. It comes with many powerful new features and settings like support for widgets, row and cell coloring, responsive layout, accessibility, and paging options like virtual scrolling. 
+[Data Grid 2](https://marketplace.mendix.com/link/component/116540) is the successor to the standard data grid widget for displaying content in a tabular form. It comes with many powerful new features and settings like support for widgets, row and cell coloring, responsive layout, accessibility, and paging options like virtual scrolling. The Data Grid 2 widget offers personalization support so that end-users can show, hide, and re-order columns. Personalizations can be persisted in the database for flexibility and control. 
 
-The Data Grid 2 module offers personalization support so that end-users can show, hide, and re-order columns. Personalizations can be persisted in the database for flexibility and control. 
+This document focusing on explaining module features. For precise details on data grid 2 widget properties, see [Data Grid 2 Properties](/appstore/modules/data-grid-2-properties/).
 
-The data source determines which objects will be shown in a Data Grid 2 module. In v2.3.0 and above, selecting the entity of the data source will automatically fill the contents, create columns with filters, and create buttons. You can also select which columns to use for the content generation.
+The data source determines which objects will be shown in a Data Grid 2 widget. In v2.3.0 and above, selecting the entity of the data source will automatically fill the contents, create columns with filters, and create buttons. You can also select which columns to use for the content generation.
 
-The module also uses a flexible approach for filtering. You can drag data-grid-specific widgets into the header of the grid and tailor the behavior of the filters. There are filters for text, numbers, and dates, and there is an option to add drop-down filters for single or multiple selections.
+The widget also uses a flexible approach for filtering. You can drag data-grid-specific widgets into the header of the grid and tailor the behavior of the filters. There are filters for text, numbers, and dates, and there is an option to add drop-down filters for single or multiple selections.
 
 Here is an example of a data grid using filters:
 
@@ -102,6 +102,10 @@ You can configure pagination based on the following properties:
 ### 3.2 Virtual Scrolling 
 
 The **Virtual Scrolling** option forces the data grid to show a fixed amount of items (defined in the page size option) within a scrollable container. When the end-user reaches the bottom of the scrollable container it fetches more items automatically.
+
+### 3.3 Load More
+
+This option functions similarly to the **Virtual Scrolling** feature, but instead of automatically loading data as the end-user scrolls, a button is displayed at the end of the list of items. Clicking this button enables the end-user to fetch more items.
 
 ## 4 Columns
 
@@ -417,7 +421,7 @@ In this section you can select a **Saved attribute** in order to save the curren
 
 In this section you can select an action to be executed **On change** by the filter value. This means every time the user types or selects a value it will be executed.
 
-### 7.5 Grid Wide Filtering
+### 7.5 Grid Wide Filtering {#grid-wide-filtering}
 
 In order to enable filtering within the data grid header (outside the columns) you need to enable `Grid wide filters` and select the desired attributes to be filtered in the **Filtering** tab. You can select attributes of the following types:
 
@@ -484,3 +488,79 @@ If you are using Atlas v2.x and you cannot upgrade to Atlas 3 at the moment, ple
     "theme.compiled.css" 
 ],
 ```
+
+## 12 In-Memory Selection {#selection}
+
+{{% alert color="info" %}}
+In-memory selection was introduced in Data Widgets v2.7.0.
+{{% /alert %}}
+
+Enabling selection allows users to select a row by clicking the row or a checkbox. Selection is disabled by default, and can be activated by changing the **Selection** setting from **None** to either **Single** or **Multi**.
+
+Since the data grid widget keeps selected items in short-living memory that is cleared every time you change the data grid page, selecting items across multiple pages is not supported. This means that the end-user can  only select items that are currently visible.
+
+### 12.1 Selection Mode
+
+In **Single** selection mode, users are limited to selecting one row at a time. 
+
+In **Multi** mode, the user can select multiple rows.
+
+### 12.2 Selection Method
+
+When selection is enabled, you can choose a method for selecting rows. The **Checkbox** method adds a checkbox to the beginning of each row, and the end-user must click the checkbox to select the row. By contrast, the **Row** method does not add any additional controls to the row, and the end-user must click the row itself to select that row.
+
+### 12.3 Show (Un)check All Toggle
+
+If this setting is enabled, then the data grid widget shows a checkbox at the header. This checkbox controls the selection for all visible items. Clicking on this checkbox will select all visible items. If all items are already selected, clicking the checkbox clears the selection.
+
+### 12.4 Selection and Row Click Action
+
+{{% alert color="info" %}}
+The **On click trigger** setting was introduced in Data Widgets v2.13.0. Previous versions did not allow both selection and click actions at the same time.
+{{% /alert %}}
+
+The data grid settings support the case where it is possible to have both a selection and an on-click action at the same time.
+
+The setting for action triggers is related to the selection method and can sometimes be ambiguous. See the table below to see which combinations of selection method and trigger are supported.
+
+| Selection method | Action trigger          | Selection trigger                                | Supported |
+| ---------------- | ----------------------- | ------------------------------------------------ | --------- |
+| Checkbox         | Single click on the row | Click on the checkbox, Ctrl/Cmd+Click on the row | Yes       |
+| Checkbox         | Double click on the row | Click on the checkbox, Ctrl/Cmd+Click on the row | Yes       |
+| Row              | Single click on the row |                                                  | No        |
+| Row              | Double click on the row | Ctrl/Cmd + Click on the row                      | Yes       |
+
+To achieve this behavior, set the **On click trigger** to **Double click**. When a data grid is configured this way user may select a row by double clicking on it.
+
+## 13 Keyboard Support {#keyboard-support}
+
+| Key                      | Function                                                     |
+| ------------------------ | ------------------------------------------------------------ |
+| Right Arrow              | Moves focus one cell to the right.                           |
+| Left Arrow               | Moves focus one cell to the left.                            |
+| Down Arrow               | Moves focus one cell down.                                   |
+| Up Arrow                 | Moves focus one cell up.                                     |
+| Page Up                  | Moves focus one page up.                                     |
+| Page Down                | Moves focus once page down.                                  |
+| Home                     | Moves focus to the first cell in the row.                    |
+| End                      | Moves focus to the last cell in the row.                     |
+| Ctrl + Home              | Moves focus to the first cell in grid.                       |
+| Ctrl + End               | Moves focus to the last cell in grid.                        |
+| Shift + Space            | Selects current row. (1)                                     |
+| Ctrl/Cmd + A             | Select all visible rows. (1)(2)                              |
+| Shift + {Down, Up} Arrow | Moves focus and selects current and row above/below. (1)(2)  |
+| Shift + Page {Up, Down}  | Moves focus one page up/down and selects all rows between current and final row. (1)(2) |
+| Shift + Home/End         | Moves focus to the end/start of the grid and selects all rows between current and final row. (1)(2) |
+
+Legend:
+
+| Symbol    | Meaning   |
+| --- | --- |
+| 1 | Available only when selection is enabled. |
+| 2 | Available only when selection mode should be “Multi”. |
+
+## 14 Resetting Filters
+
+Resetting filters is possible using **Reset_Filter** and **Reset_All_Filters** actions available as part of the Data Widgets module. Setting up these actions is a manual process that requires creating a nanoflow and setting the name of the filter or data grid to be reset.
+
+The name of the filter or data grid can be found at **Properties** > **Common** > **Name**.

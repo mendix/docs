@@ -21,13 +21,19 @@ The **Entitlements** page is a self-service tool that displays the transactions 
 
 ## 2 What Are Cloud Credits? {#cloud-credits}
 
-Cloud credits are virtual credits that you can spend on the Mendix Platform to purchase [cloud resource packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack). If you want to top up the cloud credits, you can just purchase cloud resource packs. Your purchase will be converted into cloud credits and you can then spend the cloud credits on any cloud resource pack available to you.
+Cloud credits are virtual credits that you can spend on the Mendix Platform to purchase [cloud resource packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack). If you want to top up the cloud credits, you can just purchase standard, premium, or premium plus cloud resource packs. Your purchase will be converted into cloud credits and you can then spend the cloud credits on any cloud resource pack available to you.
 
 To use cloud credits, you need to enable self-service. If you want to enable self-service or have questions about cloud credits, contact your Customer Success Manager (CSM).
 
+{{% alert color="info" %}}
+From now on, you can only purchase and provision standard, premium, and premium plus cloud resource packs, not legacy resource packs. The cloud credits for legacy resource packs that you already purchased will be credited back to your account if you deprovision an environment.
+{{% /alert %}}
+
 ## 3 Cloud Resource Packs
 
-{{% alert color="info" %}}For the technical details of each cloud resource pack, see the [Cloud Resource Packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack) section in *Mendix Cloud*.{{% /alert %}}
+{{% alert color="info" %}}
+For the technical details of each cloud resource pack, see the [Cloud Resource Packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack) section in *Mendix Cloud*.
+{{% /alert %}}
 
 The tables below show how many cloud credits each cloud resource pack costs:
 

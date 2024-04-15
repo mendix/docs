@@ -11,7 +11,7 @@ tags: ["Deploy","App","Environment","Developer Portal"]
 
 ## 1 Introduction
 
-To open the **Environment Details** page, go to the [Developer Portal](http://sprintr.home.mendix.com) and click **Environments** on your licensed app. Then click **Details** ({{% icon name="notes-paper-edit" %}}) by the environment you want to view.
+To open the **Environment Details** page, go to the [Developer Portal](https://sprintr.home.mendix.com) and click **Environments** on your licensed app. Then click **Details** ({{% icon name="notes-paper-edit" %}}) by the environment you want to view.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/environment-details.png" alt="The Details icon is on the right side of the row" class="image-border" >}}
 
@@ -34,7 +34,7 @@ In the **General** tab, you can find the following information about your enviro
 * **Environment ID** – the unique identifier of the environment
 * **Custom domains** – any [custom domains](/developerportal/deploy/custom-domains/) of the app
 * **Java Version** – Oracle version 1.8, AdoptOpenJDK version 11, or Eclipse Temurin JDK 17
-* **Studio Pro Target**
+* **Studio Pro Target** – a **Yes** or **No** value indicating whether the environment is the designated deployment target from Studio Pro; for more information, see [Studio Pro Deployment Settings](/developerportal/deploy/studio-deployment-settings/).
 * **Plan** – the type of plan covered by your license (for more information, see the [Overviews](/developerportal/deploy/environments-details/#overviews) section below)
 * **Instances** – a summary of the number and memory allocation of instances of the environment (for more information, see the [Scaling](#scaling) section below)
 * **Database Version** – the PostgreSQL version supporting the database
@@ -101,7 +101,7 @@ To clear your environment, follow these steps:
 
 If you are the app's [Technical Contact](/developerportal/general/app-roles/#technical-contact), you can rename the environments.
 
-To rename the environment, follow these steps:
+To rename an environment, follow these steps:
 
 1. Click **Change** next to the name of the environment.
 2. Enter the new name, which must meet the following requirements:
@@ -261,7 +261,7 @@ There are three types of values for these headers:
 
 The changes to the headers are implemented when the app is redeployed.
 
-For more information, see [HTTP Headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers).
+For more information about HTTP headers, see [MDN's HTTP headers overview](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers).
 
 #### 4.2.1 HTTP Response Headers Inserted Automatically
 
@@ -520,7 +520,7 @@ Tags serve two purposes:
 * Custom tags can be added to metrics for third-party metrics solutions
 * Tags can serve as selection criteria for grouping environments into a landscape management dashboard, which can be used for third-party logging solutions
 
-For example, you may wish to use tags when logging with Datadog. For more information, see [Getting Started with Tags](https://docs.datadoghq.com/tagging/).
+For example, you may wish to use tags when logging with Datadog. For more information, see Datadog's [Getting Started with Tags](https://docs.datadoghq.com/tagging/).
 
 ## 9 The Services Tab {#services}
 

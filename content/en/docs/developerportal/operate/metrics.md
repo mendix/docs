@@ -18,7 +18,11 @@ The **Metrics** page contains detailed graphs about your app and its environment
 
 These statistics are displayed as trends over time. The data covers the past three months, and you can adjust the view to display data for the past day, week, month, or quarter.
 
-{{% alert color="info" %}}This page describes metrics for licensed apps deployed to Mendix Cloud. Metrics are not available for Free Apps deployed to Mendix Cloud.<br><br>If your app is deployed to SAP Business Technology Platform (SAP BTP) instead, the **Metrics** page displays links to the SAP BTP cockpit.{{% /alert %}}
+{{% alert color="info" %}}
+This page describes metrics for licensed apps deployed to Mendix Cloud. Metrics are not available for Free Apps deployed to Mendix Cloud.
+
+If your app is deployed to SAP Business Technology Platform (SAP BTP) instead, the **Metrics** page displays links to the SAP BTP cockpit.
+{{% /alert %}}
 
 ## 2 Accessing the Metrics Graphs
 
@@ -26,7 +30,7 @@ To access the graphs on the **Metrics** page, you must have **Access to Monitori
 
 If you meet the above conditions, you can find the graphs by following these steps:
 
-1. Open your app in the [Developer Portal](http://sprintr.home.mendix.com).
+1. Open your app in the [Developer Portal](https://sprintr.home.mendix.com).
 2. In the navigation panel, click **Metrics**.
 3. Use the drop-down menu in the upper-right corner to select the environment you want to monitor.
 4. Use the **Period** and **Group** drop-down menus to choose the time period (day, week, month, or quarter) and the group (application, database, or all) for the graphs that you want to view.
@@ -413,15 +417,17 @@ There are two sets of values:
 {{% alert color="info" %}}
 As of [October 25, 2023](/releasenotes/developer-portal/mendix-cloud/#october-25-2023), whenever you create a new DB instance, it will be provisioned with a gp3 storage instance if it meets the eligibility criteria defined in the table below. This also occurs if your database is recreated.
 
-All existing databases of environments on eligible plans in Mendix Cloud (as specified in the table below) will eventually be migrated to gp3 storage instances. As of March 6, 2024, the databases of non-production environments have been migrated; production environments will also be migrated soon.
+As of [March 26, 2024](/releasenotes/developer-portal/mendix-cloud/#march-26-2024), all existing databases of environments on eligible plans in Mendix Cloud (as specified in the table below) have also been migrated to gp3 storage instances.
 
-| Mendix Plans      | Storage Instance Type | Storage Size         | Baseline Storage Performance | Provisioned IOPS Range | Provisioned Throughput Range |
-|-------------------|-----------------------|----------------------|------------------------------|------------------------|------------------------------|
-| S and M           | gp2                   | Less than 20 GiB     | 100 IOPS (3000 Burst)         | 100 - 1197 IOPS        | 128-250 MiB/s                |
-| L, XL, XXL, and XXXL | gp3                   | Between 20 and 400 GiB | 3000 IOPS / 125 MiB/s        | N/A                    | N/A                          |
-| XXXL              | gp3                   | 400 GiB and higher   | 12000 IOPS / 500 MiB/s       | 12000 - 64000 IOPS     | 500 - 4000 MiB/s             |
+| Storage Size           | Storage Instance Type | Baseline Storage Performance | Provisioned IOPS Range | Provisioned Throughput Range |
+|------------------------|-----------------------|------------------------------|------------------------|------------------------------|
+| Less than 20 GiB       | gp2                   | 100 IOPS (3000 Burst) / 125 MiB/s | 100 - 1197 IOPS   | 128-250 MiB/s                |
+| Between 20 and 400 GiB | gp3                   | 3000 IOPS / 125 MiB/s        | N/A                    | N/A                          |
+| 400 GiB and higher     | gp3                   | 12000 IOPS / 500 MiB/s       | 12000 - 64000 IOPS     | 500 - 4000 MiB/s             |
 
 Compared to gp2, gp3 provides higher baseline storage performance and does not require any burst balance. For more information on gp2 and gp3 performance, see the [AWS gp3 storage](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#gp3-storage) page.
+
+For details on DB storage size for various plans, see [Cloud Resource Packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack).
 
 Burst balance metrics are not available for databases with the gp3 storage instance type.
 {{% /alert %}}

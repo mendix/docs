@@ -19,8 +19,10 @@ The subjects covered in the *General* section are as follows:
 * [Licensing Apps](/developerportal/deploy/licensing-apps-outside-mxcloud/)
 * [Secure Outgoing Connections from your Application](/developerportal/deploy/securing-outgoing-connections-from-your-application/)
 * [Two-Factor Authentication](/developerportal/deploy/two-factor-authentication/)
-* [Version Downgrade Prevented](/developerportal/deploy/version-downgrade-prevention/)
+* [Version Downgrade Protection](/developerportal/deploy/version-downgrade-prevention/)
 * [Iframes and Running Apps](/developerportal/deploy/running-in-iframe/)
+* [Deployment Location](/developerportal/deploy/deployment-location/)
+* [Webhooks](/developerportal/deploy/webhooks/)
 
 ## 2 Building Your Model
 

@@ -32,7 +32,7 @@ This how-to teaches you how to do the following:
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Have a Mendix app with mobile support running in the Mendix Cloud, either as a Free App or on a licensed cloud node
-* Have an account for Adobe PhoneGap Build (you can create one for free [here](https://build.phonegap.com/plans/free-adobeid))
+* Have an account for Adobe PhoneGap Build (you can create one for free [here](https://helpx.adobe.com/experience-manager/kb/adobe-phonegap-end-of-service.html))
 
 To publish your app in the Apple App Store, do the following:
 
@@ -89,7 +89,7 @@ For more context on building hybrid apps in the cloud, as well as other options 
 
 The **PhoneGap Build: Signing Key Required** page asks you to go to the PhoneGap Build website and set up the app signing keys. To set up the app signing keys, follow these steps:
 
-1. Click **Log in to PhoneGap Build**. A new page will be opened on PhoneGap's [apps tab](https://build.phonegap.com/apps). Here you can see the PhoneGap Build app that was created by the Mendix Developer Portal for your app. The app is named as you defined it in the **App Info** in the [Starting the Packaging Process](#starting-the-packaging-process) section above.
+1. Click **Log in to PhoneGap Build**. A new page will be opened on PhoneGap's [apps tab](https://helpx.adobe.com/experience-manager/kb/adobe-phonegap-end-of-service.html). Here you can see the PhoneGap Build app that was created by the Mendix Developer Portal for your app. The app is named as you defined it in the **App Info** in the [Starting the Packaging Process](#starting-the-packaging-process) section above.
 2. Set up the app signing key for your app in your account.
 3. Click the avatar icon on the upper-right side of the page, and then click **Edit account** to configure how your app will build:
 
@@ -174,7 +174,7 @@ Publish your app by following Apple's [Overview of publishing an app](https://he
 
 ## 7 Preparing and Publishing for Android{#publishing-for-android}
 
-If you plan on publishing an Android app, read Google's overview of [the Android app publishing process](http://developer.android.com/tools/publishing/publishing_overview.html). Before submitting your app to an app store, [review the launch checklist](http://developer.android.com/distribute/tools/launch-checklist.html).
+If you plan on publishing an Android app, read Google's overview of [the Android app publishing process](https://developer.android.com/tools/publishing/publishing_overview.html). Before submitting your app to an app store, [review the launch checklist](https://developer.android.com/distribute/tools/launch-checklist.html).
 
 If you are just testing your app, you do not need to create a keystore. You can continue with the next section [Enabling your Mobile Test Device for an Android Binary (APK)](#download-apk) below. 
 

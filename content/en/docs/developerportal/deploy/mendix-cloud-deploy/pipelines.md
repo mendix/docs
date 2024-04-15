@@ -1,10 +1,10 @@
 ---
-title: "Pipelines (Beta)"
+title: "Pipelines"
 url: /developerportal/deploy/pipelines/
 weight: 33
 description: "Describes how to design, implement, and review pipelines using the Pipelines feature in the Developer Portal"
 tags: ["Deploy","App","Developer Portal", "CI/CD"]
-status: "Public Beta"
+beta: true
 ---
 
 {{% alert color="warning" %}}
@@ -107,7 +107,7 @@ If you start from the template, you can still add, remove, and configure its ste
 1. Deploy
 {{% /alert %}}
 
-Give your pipeline a name, and click **Next** to go to your new pipeline design's **Details** page.
+Give your pipeline a name. You can use up to 40 alphanumeric characters in the name. Then click **Next** to go to your new pipeline design's **Details** page.
 
 ### 3.2 Editing a Pipeline Design{#edit-pipeline}
 
@@ -125,10 +125,10 @@ To add a step, launch the **Pipeline Steps** dialog box by clicking **Add Step**
 
 Your pipeline can include the following steps:
 
-* Start Pipeline – This is a mandatory step for each pipeline; you cannot delete this step. This step defines the conditions that will automatically trigger the pipeline to run. To configure this step, define the conditions on which the pipeline should start; you can set the pipeline to run in response to either of the following triggers:
+* Start Pipeline – This is a mandatory step for each pipeline; you cannot delete this step. This step defines the conditions that will automatically trigger the pipeline to run. To configure this step, define the conditions on which the pipeline should start. You can set the pipeline to run in response to either the **Teamserver push** trigger or the **Recurring schedule** trigger:
     * Teamserver push (Git) – The pipeline runs when a new push is made to Teamserver (Git) for the specified branch. For details on specifying the branch in the **Branch Expression** field, see [Branch Expression](#branch-expression), below.
     * Recurring schedule – The pipeline runs on a recurring weekly schedule, on the days and times you specify. This works for both Git and SVN repositories. Times are set in UTC.
-* Checkout – Check out a branch. To configure this step, use the drop-down menu to select the branch to check out; you will be able to select either the main branch or one of your most recently used branches.
+* Checkout – Check out a branch. To configure this step, use the drop-down menu to select the branch to check out. You can select either the main branch or one of your most recently used branches.
 * Build – Build a deployment package based on the latest major, minor, or patch version of the branch you checked out. The highest version is incremented based on the increment settings specified in this step.
 * Publish – Publish the newly built deployment package to a repository.
 * Stop Environment – Stop a selected environment.
@@ -217,7 +217,7 @@ Your pipeline runs will fail if these user settings are not configured. All team
 Your PAT should have the following scope:
 
 * Deployment Mendix Cloud – `mx:deployment:write`
-* Model Repository – `mx:modelrepository:read` and `mx:modelrepository:write`
+* Model Repository – `mx:modelrepository:repo:read` and `mx:modelrepository:write`
 * Webhook Portal – `mx:webhook:read` and `mx:webhook:write`
 
 If your PAT scope does not include all five of these, your pipeline runs may fail.

@@ -15,7 +15,7 @@ cascade:
 
 ## 1 What Is the Developer Portal?
 
-The [Developer Portal](http://sprintr.home.mendix.com) is one of the key components of the Mendix Platform. In the Developer Portal, Mendix users can collaborate, deploy, manage their apps. 
+The [Developer Portal](https://sprintr.home.mendix.com) is one of the key components of the Mendix Platform. In the Developer Portal, Mendix users can collaborate, deploy, manage their apps. 
 
 The Developer Portal also offers open, well-defined APIs, enabling third-party developers to integrate their own widgets and plugins. For more information, see [API Documentation](/apidocs-mxsdk/apidocs/).
 

@@ -24,7 +24,7 @@ Keep in mind that Google Chrome is the browser used in these documents.
 | [Stack Overflow](https://stackoverflow.com/) | A massive forum for developers. If you have a question regarding code, look for the answer here. |
 | [Guidelines for Creating a Custom Action](/appstore/partner-solutions/ats/ht-two-guidelines-custom-action/) | These are the guidelines to follow when creating custom actions. This is a prerequisite for each how-to. |
 | [ATS Selectors](/appstore/partner-solutions/ats/rg-one-selectors/) | This is documentation on the different selectors you can use within ATS. Most important are the ATS selectors, as these are pseudo-selectors and are not standard jQuery/CSS. This is a prerequisite for each how-to. |
-| [JavaScript Checker](http://www.jslint.com/) | This page checks your JavaScript for mistakes. |
+| [JavaScript Checker](https://www.jslint.com/) | This page checks your JavaScript for mistakes. |
 | [Custom Action Basics](/appstore/partner-solutions/ats/ht-two-custom-action-basics/) | This is a how-to for the basics of creating a custom action. |
 
 ## 3 Tools

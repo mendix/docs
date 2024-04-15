@@ -19,7 +19,7 @@ This how-to teaches you how to do the following:
 
 Before starting this how-to, make sure you have completed the following prerequisite:
 
-* Download Adobe Brackets [here](https://github.com/adobe/brackets/releases/tag/release-1.1) or [here](http://brackets.io/)
+* Download Adobe Brackets [here](https://github.com/adobe/brackets/releases/tag/release-1.1) or [here](https://brackets.io/)
 
 ## 3 Getting Started with Adobe Brackets and the Widget Development Plugin
 
@@ -53,7 +53,7 @@ To create a new widget, follow these steps:
 
     {{< figure src="/attachments/howto7/widget-development/use-the-widget-development-plugin-for-adobe-brackets/18579932.png" >}}
 
-    The name of the widget is very important, as this name is the name used in Mendix. Using the [UpperCamelCase](http://en.wikipedia.org/wiki/CamelCase) naming convention is strongly recommended. Each new widget should have an author, version number, copyright, license, package name, widget name, and path defined before you can click **OK**. The location directory must also exist.
+    The name of the widget is very important, as this name is the name used in Mendix. Using the [UpperCamelCase](https://en.wikipedia.org/wiki/CamelCase) naming convention is strongly recommended. Each new widget should have an author, version number, copyright, license, package name, widget name, and path defined before you can click **OK**. The location directory must also exist.
 
     These are some details on the settings:
 
@@ -145,5 +145,5 @@ These are some interesting books and articles you can read to dive into the sour
 
 * To communicate with Mendix, you need to use the Mendix JavaScript Client API – for more information, see the [Mendix Client API](/apidocs-mxsdk/apidocs/client-api/)
 * Custom Mendix widgets are based on DOJO widgets – for more information, see this blog post: 
-[Writing Your Own Widget](http://dojotoolkit.org/reference-guide/1.10/quickstart/writingWidgets.html)
-* This is a nice book that helps you understand what JavaScript is all about: [Learning JavaScript Design Patterns](http://addyosmani.com/resources/essentialjsdesignpatterns/book/)
+[Writing Your Own Widget](https://dojotoolkit.org/reference-guide/1.10/quickstart/writingWidgets.html)
+* This is a nice book that helps you understand what JavaScript is all about: [Learning JavaScript Design Patterns](https://patterns.addy.ie/)

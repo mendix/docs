@@ -5,7 +5,6 @@ weight: 20
 description: "Describes the Planning page in Epics. This page looks different, depending on whether you use the Scrum workflow or Kanban workflow."
 tags: ["Project Management", "Epics", "Sprint", "Planning", "Stories", Developer Portal"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
-#The anchor #data-migration below is mapped, so it should not be removed or changed.
 ---
 ## 1 Introduction
 
@@ -110,8 +109,6 @@ If your board type is Kanban, the stories are grouped in these categories: **To 
 {{< figure src="/attachments/developerportal/project-management/epics/planning/kanban-planning.png" >}}
 
 ## 3 Importing Stories {#import-stories}
-
-{{% alert color="warning" %}}Importing stories is not the right way to migrate stories to Epics, since it only moves your story titles and descriptions, not comments, attachments, or tags. If you need the data of your stories in Epics, make sure to use the [migration tool](#data-migration).{{% /alert %}}
 
 You can import your stories using an Excel file to Epics as follows:
 

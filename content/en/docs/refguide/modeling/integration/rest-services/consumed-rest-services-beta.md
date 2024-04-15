@@ -40,7 +40,7 @@ You can use this Consumed REST Service document to do the following:
 * [Studio Pro 10.6](/releasenotes/studio-pro/10.6/) and above
 * Familiarity with [HTTP request methods]( https://www.w3schools.com/tags/ref_httpmethods.asp)
 
-## 2 Installation {#installation}
+## 2 Add the Consumed REST Service Document {#installation}
 
 Download [Studio Pro]( https://marketplace.mendix.com/link/studiopro/) and add the Consumed REST Service document to your app. To do this, 
 
@@ -101,7 +101,7 @@ To add a parameter, follow these steps:
 
     {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/parameter.png" >}}
 
-3. Click **Send** to test the parameters. 
+3. To test the parameters, click **Send**. 
 
 {{% alert color="info" %}}
 Parameters are not supported in the [configuration](#configuration), including authentication and Base URL.
@@ -133,7 +133,7 @@ You can add a header for any HTTP request you have specified in your document. T
 
     {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/json-example.png" >}}
 
-2. To validate the input, navigate to the **General** field and click **Send**.
+2. To validate the input, click **Send**.
 
 3. If you want to use the newly-created JSON string as an entity in your domain model, click **Use JSON Snippet**. The body string can be viewed in the **Body structure** tab.
 
@@ -151,7 +151,10 @@ If you want to use the response to create an entity in your domain model, naviga
 
 {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/response-structure.png" >}}
 
-The entity name is prefilled, but you can change it to a custom name. To create an entity, click **Create Entity** > **OK**. This creates an entity in your domain model, which you can see by clicking **Show**
+The entity name is prefilled, but you can change it to a custom name. To create an entity, do the following:
+
+1. Click **Create Entity** > **OK**. 
+2. To view the entity in your domain model, click **Show**.
 
 ### 3.7 Using a REST Request in a Microflow {#add-entity-to-microflow}
 

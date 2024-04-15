@@ -117,7 +117,7 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 * We added the following new features in [Portfolio Management](/developerportal/portfolio-management/):
 
-    * You can now check initiatives in the [planning view](/developerportal/portfolio-management/#planning-view). In this view, the initiatives are shown on one timeline, with each timeline bar presenting an initiative.
+    * You can now check initiatives in the [planning view](/developerportal/portfolio-management/initiatives-overview/#planning-view). In this view, the initiatives are shown on one timeline, with each timeline bar presenting an initiative.
 
     * You can now link multiple apps to an initiative. It is also possible to link epics from different apps to an initiative.
 
@@ -156,7 +156,7 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 We have made the following improvements to the **Access Management** page in Portfolio Management:
 
-* On the [Members](/developerportal/portfolio-management/access-managements/#members) tab, the **Status** column in the list now shows whether a user is active or deactivated. Moreover, you can remove all the deactivated users from a portfolio in one go.
+* On the [Members](/developerportal/portfolio-management/access-management/#members) tab, the **Status** column in the list now shows whether a user is active or deactivated. Moreover, you can remove all the deactivated users from a portfolio in one go.
 * All the pending invites now appear on the [Pending Invites](/developerportal/portfolio-management/access-management/#pending-invites) tab.
 
 ### November 23, 2023

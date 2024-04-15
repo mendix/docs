@@ -404,7 +404,7 @@ To archive an initiative, perform the following steps:
 
    {{< figure src="/attachments/developerportal/portfolio-management/archive-dialog-box.png" >}}
 
-A pop-up window opens and tells you that the initiative is successfully archived. Once the initiative is archived, you can find it on the [Archive](#archived-initiatives) page.
+A pop-up window opens and tells you that the initiative is successfully archived. Once the initiative is archived, you can find it on the [Archive](/developerportal/portfolio-management/archive/) page.
 
 ## 7 Exporting and Importing Initiatives
 

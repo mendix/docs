@@ -49,7 +49,7 @@ Currently, the privacy settings of a portfolio can be private, restricted, or op
 
 \* A Portfolio Manager can [add users to the portfolio](/developerportal/portfolio-management/access-management/#add-users).
 
-** A user can apply to join the portfolio by clicking the **Request to Join** on the  portfolio card. A Portfolio Manager needs to approve this [access request](/developerportal/portfolio-management/#access-requests).
+** A user can apply to join the portfolio by clicking the **Request to Join** on the  portfolio card. A Portfolio Manager needs to approve this [access request](/developerportal/portfolio-management/access-management/#access-requests).
 
 ### 2.3 Creating a New Portfolio {#create-portfolio}
 

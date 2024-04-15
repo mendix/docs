@@ -792,6 +792,11 @@ nav.foldable-nav {
     color: $gray-900;
 }
 
+.badge-recommended {
+    border: solid 1px $success-9;
+    color: $success-9;
+}
+
 // Swagger styling
 
 .swagger-ui .info .title,

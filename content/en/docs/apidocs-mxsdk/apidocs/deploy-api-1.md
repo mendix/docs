@@ -15,7 +15,15 @@ The Deploy API only works for apps that are deployed to Mendix Cloud.
 
 ## 1 Introduction
 
-The Deploy API allows you to manage application environments in Mendix Cloud. You can retrieve the status of, and start and stop, applications. You can also configure new model versions and deploy them to application environments. To create and manage deployment packages, you also need the [Build API](/apidocs-mxsdk/apidocs/build-api/). For backup-related actions. refer to [Backups API](/apidocs-mxsdk/apidocs/backups-api/).
+The Deploy API allows you to manage application environments in Mendix Cloud. You can retrieve the status of, and start and stop, applications. You can also configure new model versions and deploy them to application environments. To create and manage deployment packages, you also need the [Build API](/apidocs-mxsdk/apidocs/build-api/). For backup-related actions, refer to the [Backups API](/apidocs-mxsdk/apidocs/backups-api/).
+
+{{% alert color="info" %}}
+The v1 Deploy API only supports the endpoints listed here. For all other deployment API calls, use the [v2 API](/apidocs-mxsdk/apidocs/deploy-api-2/) or [v4 API](/apidocs-mxsdk/apidocs/deploy-api-4/).
+{{% /alert %}}
+
+{{% alert color="info" %}}
+Mendix recommends using calls from the same version of the API where possible. This is because the naming varies across versions. For example, the `{appId}` in the version 4 API is retrieved as the `{ProjectId}` from the version 1 API.
+{{% /alert %}}
 
 You can use webhooks to trigger CI/CD pipelines that use this API. These are described in [Webhooks](/developerportal/deploy/webhooks/).
 
@@ -25,14 +33,14 @@ This image provides a domain model representation of the concepts discussed belo
 
 ## 2 Authentication{#authentication}
 
-The Deploy API requires authentication via API keys that are bound to your Mendix account (for more information, see [Authentication](/apidocs-mxsdk/apidocs/authentication/)).
+The Deploy API requires [authentication](/apidocs-mxsdk/apidocs/authentication/) via API keys that are bound to your Mendix account.
 
 Because APIs are designed for automated systems, the Deploy API does not require two-factor authentication, which is normally required to make changes to production environments. This is a potential security risk. Therefore, the Technical Contact of an application needs to allow API access explicitly for team members who want to use the Deploy API. This can be configured from the **Node Security** screen under **App Settings**. By default, API access is already enabled for test and acceptance environments for all team members. To perform an action via the Deploy API, such as transporting a new deployment package, both the **Transport** and **API Access** permissions need to be enabled.
 
 ## 3 API Calls
 
 {{% alert color="info" %}}
-Only *Retrieve apps*, *Create Free App Environment*, and *Retrieve app* API calls are supported for Free Apps. Please note that most API calls — with the exception of *Upload Package* — require that the *Content-Type* header be set to *application/json*.
+Only *Retrieve apps*, *Create Free App environment*, and *Retrieve app* API calls are supported for Free Apps. Please note that most API calls—with the exception of *Upload Package*—require that the *Content-Type* header be set to *application/json*.
 {{% /alert %}}
 
 ### 3.1 Retrieve Apps{#list-apps}

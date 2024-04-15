@@ -29,7 +29,7 @@ This is the most common scenario. The client app verifies the server certificate
 
 Using encryption, data sent and received over the connection cannot be decoded if it is intercepted by other parties, so to authenticate the client, a username/password or token can be used with, for example, HTTP headers. This can be used for services that natively support TLS.
 
-To connect to the service from Mendix Cloud, the service is exposed on an external IP address and port. If this service is owned by you, it can be firewalled to only allow Mendix Cloud to connect to it. To get the IP address ranges of your app in Mendix Cloud, you can file a ticket at Mendix Support.
+To connect to the service from Mendix Cloud, the service is exposed on an external IP address and port. If this service is owned by you, it can be firewalled to only allow Mendix Cloud to connect to it. For more information about the IP address ranges of your app in Mendix Cloud, see [Mendix IP Addresses: Outgoing IP](/developerportal/deploy/mendix-ip-addresses/#outgoing).
 
 {{< figure src="/attachments/developerportal/deploy/general/securing-outgoing-connections-from-your-application/19399047.png" >}}
 

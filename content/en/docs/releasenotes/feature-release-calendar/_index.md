@@ -46,7 +46,7 @@ The new features were divided into these major themes, which are described in th
 | Managed Java dependencies | Released for GA [Sep 26, 2023](/releasenotes/studio-pro/10.3/#java-dependency-management) |
 | Insights into commits by peers| Released for GA [Sep 26, 2023](/releasenotes/studio-pro/10.3/#commit) |
 | Rich design properties | Released for GA [Dec 21, 2023](/releasenotes/studio-pro/10.6/) |
-| Visual data filters (visual builder) | Released for public beta [Nov 28, 2023](/releasenotes/studio-pro/10.5/)<br>GA: Q1 2024 |
+| Visual data filters (visual builder) | Released for public beta [Nov 28, 2023](/releasenotes/studio-pro/10.5/)<br>GA: Q2 2024 |
 | MendixChat | Released for public beta [Dec 21, 2023](/releasenotes/studio-pro/10.6/)<br>GA: TBD |
 | Mixed online and offline data | GA: Q1 2024 |
 | Mac support | Released for public beta [Jan 30, 2024](/releasenotes/studio-pro/10.7/) <br>GA: TBD |
@@ -83,5 +83,5 @@ The new features were divided into these major themes, which are described in th
 | BYO IDP (Mendix Cloud, Cloud Dedicated) | Released for GA [May 16, 2023](/releasenotes/developer-portal/#byoidp) |
 | Landscape overview (Mendix Cloud, Cloud Dedicated) | Released for public beta [Aug 28, 2023](/releasenotes/control-center/#august-28-2023)<br>GA: TBD |
 | Cloud self-service (Mendix Cloud) | Currently in private beta<br>GA: TBD |
-| Software composition (Mendix Cloud, Cloud Dedicated) | Public beta: Q1 2024<br>GA: TBD |
+| Software composition (Mendix Cloud, Cloud Dedicated) | Public beta: Q2 2024<br>GA: TBD |
 | Cloud self-service (Cloud Dedicated) | Private beta: Q2 2024<br>GA: TBD |

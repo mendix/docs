@@ -135,8 +135,6 @@ To create a new app-specific API key, click **Create New API Key**  and follow t
 
 {{% alert color="warning" %}}For security reasons, the app API key will only be displayed once, during **Step 2 of 2**. It will not be displayed again.{{% /alert %}}
 
-You use these API keys to authenticate requests to the [Stories API](/apidocs-mxsdk/apidocs/stories-api/).
-
 To delete an app API key, click **Revoke**.
 
 ## 6 Project Management {#project-management}
@@ -146,8 +144,6 @@ Only users with the **App Settings** permission can manage these settings.
 {{% /alert %}}
 
 On the **Project Management** tab, you can select your team's planning tool for the app. By default, [Epics](/developerportal/project-management/epics/) is the selected tool.
-
-It is possible to migrate all or part of your content from Stories to Epics. For details, see the [How to Migrate Stories to Epics](/developerportal/project-management/epics/planning/#data-migration) section in *Planning*.
 
 If you manage your projects in Jira, you can connect your apps in the Developer Portal to Jira. For more information, see [Jira Connector](/developerportal/project-management/jira-connector/).
 

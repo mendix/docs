@@ -1,6 +1,7 @@
 ---
 title: "String Function Calls"
 url: /refguide7/string-function-calls/
+canonical_url: "https://docs.mendix.com/refguide/string-function-calls/"
 description: "Describes the functions for converting and inspecting strings in Mendix."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

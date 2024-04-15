@@ -266,7 +266,6 @@ When the Mendix client is running, it sets a number of technical cookies to reco
 | **useAuthToken** | Runtime | Lets the runtime know whether to generate an authtoken or not—*introduced for apps created in Mendix version 10.9.0 and above* | `/` | until the end-user closes their browser (session cookie) |  `true` | 
 | **authtoken** | Runtime | Used to hold the authentication token—*introduced for apps created in Mendix version 10.9.0 and above* | `/` | until the authentication token expires |  `true` | 
 
-
 <sup><small>1</small></sup>*Offline sessions* are sessions created for users using an offline or native mobile [navigation profile](/refguide/navigation/#profiles).
 
 <sup><small>2</small></sup>The name of the **XASSESSIONID** can be changed by changing the value of the **com.mendix.core.SessionIdCookieName** [custom setting](/refguide/custom-settings/).

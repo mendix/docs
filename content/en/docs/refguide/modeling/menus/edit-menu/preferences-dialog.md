@@ -203,17 +203,23 @@ In Studio Pro version 10.6 a new access rule editor was introduced in Beta. Enab
 
 For more information, see [Defining Access Rules Using the New Editor](/refguide/access-rules/#new-editor) section of *Access Rules*.
 
-### 9.2 Use the Modernized Expression Editor
+### 9.2 Expression Editor
 
-The expression editor is modernized since Studio Pro 10.6. This setting is enbaled by default. The editor allows the user to write rich text statements and get instant feedback on their validity. In Studio Pro, it is often used to write an expression for a decision or to write an XPath expression for data filtering.
+The expression editor is modernized since Studio Pro 10.6. This setting is enabled by default. The editor allows the user to write rich text statements and get instant feedback on their validity. In Studio Pro, it is often used to write an expression for a decision or to write an XPath expression for data filtering.
 
-### 9.3 Micro- And Nanoflow Editor
+### 9.3 Page Editor
+
+In Studio Pro version 10.9, X-ray mode was introduced to the page editor in Beta. Enable this option to view your app in X-ray mode: a more detailed version of Design mode. 
+
+For more information, see [X-Ray Mode](/refguide/page/#x-ray-mode).
+
+### 9.4 Micro- And Nanoflow Editor
 
 In Studio Pro 10.4 and 10.5, only the **Use the Beta version as the default editor** setting is shown. When this setting is enabled, the modern logic editors (as a beta feature) will become the default editors for all your microflows, nanoflows, and rules. 
 
 In Studio Pro 10.6, only the **Enable switching to the Classic version of the editor** setting is shown. When this setting is enabled, you will be able to see the toggle to switch between the **Classic** and **Modern** version in your logic editors.
 
-### 9.4 Visual Builder
+### 9.5 Visual Builder
 
 In Studio Pro version 10.5, a new, visual, way of constructing XPath constraints was introduced. This is called Visual Builder for database constraints. The default way to construct XPath constraints is to write XPath expressions, but you can change the default by checking **Enable the XPath Builder as the default XPath constraint editor**.
 

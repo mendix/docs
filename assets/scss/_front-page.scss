@@ -129,6 +129,11 @@ img.my-icon{
     float:left;
     margin: 0rem 0.5rem 0.5rem 0.5rem;
 }
+
+.icon-recolor{
+    filter: invert(17%) sepia(4%) saturate(3835%) hue-rotate(184deg) brightness(92%) contrast(85%);
+}
+
 img.ToC-icon{
     width: 2.5rem;
     height: 2.5rem;

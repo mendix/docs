@@ -5,6 +5,14 @@ description: "The release notes for Mendix Application Test Suite (ATS) with det
 weight: 100
 ---
 
+## 2.29.3
+
+**Release date: March 26, 2024**
+
+### Fixes
+
+* We fixed an issue that resulted in the improper functioning of the **Assert value** action for Selenium 4 hubs.
+ 
 ## 2.29.2
 
 **Release date: January 16, 2024**

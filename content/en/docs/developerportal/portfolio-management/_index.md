@@ -28,8 +28,8 @@ The **Portfolio Landscape Overview** page contains two sections: **My Portfolios
 * **My Portfolios** – This section shows all the portfolios where you are a portfolio member. Clicking a portfolio card opens the portfolio.
 
 * **Company Portfolios** – This section shows all the restricted and open portfolios in your company, for which you are not a portfolio member. 
-    * Restricted portfolios – Clicking the portfolio card shows more details about the restricted portfolio. To join a restricted portfolio, click **Request to Join** on the portfolio card. A Portfolio Manager needs to approve this [access request](/developerportal/portfolio-management/acess-management#access-requests).
-    * Open portfolios – You can directly access the open portfolio by clicking the portfolio card. You will have the same access rights as the Viewer of the portfolio. To join an open portfolio, click **Request to Join** on the lower-left corner after opening the portfolio. A Portfolio Manager needs to approve this [access request](#access-requests).
+    * Restricted portfolios – Clicking the portfolio card shows more details about the restricted portfolio. To join a restricted portfolio, click **Request to Join** on the portfolio card. A Portfolio Manager needs to approve this [access request](/developerportal/portfolio-management/access-management/#access-requests).
+    * Open portfolios – You can directly access the open portfolio by clicking the portfolio card. You will have the same access rights as the Viewer of the portfolio. To join an open portfolio, click **Request to Join** on the lower-left corner after opening the portfolio. A Portfolio Manager needs to approve this [access request](/developerportal/portfolio-management/access-management/#access-requests).
 
 ### 2.2 Portfolio Cards {#portfolio-card}
 
@@ -37,7 +37,7 @@ On the **Portfolio Landscape Overview** page, each portfolio is presented in a c
 
 #### 2.2.1 Different Privacy Settings of a Portfolio {#privacy-settings}
 
-{{% alert color="info" %}}A Portfolio Manager change the **Privacy Settings** on the [Portfolio Settings](/developerportal/portfolio-management//developerportal/portfolio-management/portfolio-settings/) page.{{% /alert %}}
+{{% alert color="info" %}}A Portfolio Manager change the **Privacy Settings** on the [Portfolio Settings](/developerportal/portfolio-management/portfolio-settings/) page.{{% /alert %}}
 
 Currently, the privacy settings of a portfolio can be private, restricted, or open. The table below shows their differences:
 
@@ -47,7 +47,7 @@ Currently, the privacy settings of a portfolio can be private, restricted, or op
 | Restricted     | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |{{< icon name="checkmark-circle-filled" color="green" >}}|{{< icon name="checkmark-circle-filled" color="green" >}}.|
 | Open           | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |{{< icon name="checkmark-circle-filled" color="green" >}}|{{< icon name="checkmark-circle-filled" color="green" >}}|
 
-\* A Portfolio Manager can [add users to the portfolio](/developerportal/portfolio-management/#add-users).
+\* A Portfolio Manager can [add users to the portfolio](/developerportal/portfolio-management/access-management/#add-users).
 
 ** A user can apply to join the portfolio by clicking the **Request to Join** on the  portfolio card. A Portfolio Manager needs to approve this [access request](/developerportal/portfolio-management/#access-requests).
 
@@ -80,7 +80,7 @@ When you click a portfolio card to which you have access, the portfolio opens wi
 Clicking a menu item opens the corresponding page:
 
 * [Initiatives Overview](/developerportal/portfolio-management/initiatives-overview/)
-* [Archive](/developerportal/portfolio-management/archived-initiatives/)
+* [Archive](/developerportal/portfolio-management/archive/)
 * [Access Management](/developerportal/portfolio-management/access-management/)
 * [Portfolio Settings](/developerportal/portfolio-management/portfolio-settings/) (only available for Portfolio Managers)
 

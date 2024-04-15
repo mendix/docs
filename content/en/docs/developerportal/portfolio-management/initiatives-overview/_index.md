@@ -20,7 +20,7 @@ On the upper-right corner, you can use the drop-down list to [change the view](#
 
 ## 2 Creating a New Initiative {#create-new-initiative}
 
-{{% alert type="info" %}}Both Portfolio Managers and Contributors can create new initiatives. Only Viewers cannot do this action. For more information on roles and permissions, see the [Access Management](#access-management) section.{{% /alert %}}
+{{% alert type="info" %}}Both Portfolio Managers and Contributors can create new initiatives. Only Viewers cannot do this action. For more information on roles and permissions, see the [Members](/developerportal/portfolio-management/access-management/#members) section.{{% /alert %}}
 
 To create a new initiative and add details to it, follow the steps below. To check the details of a step, click the link to go to the corresponding section.
 
@@ -223,7 +223,7 @@ Each initiative card shows the following information:
 
 * ③ **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
 
-  {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Access Management](#access-management) section.{{% /alert %}}
+  {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Members](/developerportal/portfolio-management/access-management/#members) section.{{% /alert %}}
 
 * ④ Tags for the initiative – These tags are used to classify the initiative (tags can be used, for example, to indicate the types of initiatives).
 
@@ -269,7 +269,7 @@ The list contains the following information:
 
 * **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
 
-  {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Access Management](#access-management) section.{{% /alert %}}
+  {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Members](/developerportal/portfolio-management/access-management/#members) section.{{% /alert %}}
 
 ### 3.3 WSJF Prioritization {#wsjf}
 
@@ -307,7 +307,7 @@ The list contains the following information:
 
 * **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
 
-  {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Access Management](#access-management) section.{{% /alert %}}
+  {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Members](/developerportal/portfolio-management/access-management/#members) section.{{% /alert %}}
 
 ### 3.4 RICE Prioritization {#rice}
 
@@ -345,7 +345,7 @@ The list contains the following information:
 
 * **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
 
-  {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Access Management](#access-management) section.{{% /alert %}}
+  {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Members](/developerportal/portfolio-management/access-management/#members) section.{{% /alert %}}
 
 ### 3.5 Planning View {#planning-view}
 
@@ -373,7 +373,7 @@ On the **Initiatives Overview** page, if you click an initiative, a side pane op
 On the upper-right corner of the pane, there is a **Copy link** ({{% icon name="hyperlink" %}}) button and **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) button. Clicking **Copy link** copies the link to the initiative. Clicking **More Options** opens a menu that allows you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
 
 {{% alert type="info" %}}
-Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Access Management](#access-management) section.
+Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Members](/developerportal/portfolio-management/access-management/#members) section.
 {{% /alert %}}
 
 {{< figure src="/attachments/developerportal/portfolio-management/side-pane.png" class="image-border" >}}
@@ -383,7 +383,7 @@ When you view initiative details, you can only post comments or link epics. You 
 ## 5 Editing or Deleting an initiative {#edit-delete-initiative}
 
 {{% alert type="info" %}}
-Both Portfolio Managers and Contributors can edit or delete an existing initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Access Management](#access-management) section.
+Both Portfolio Managers and Contributors can edit or delete an existing initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Members](/developerportal/portfolio-management/access-management/#members) section.
 {{% /alert %}}
 
 To edit or delete an initiative, go to the **Initiatives Overview** page, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) for that initiative, and then select **Edit** or **Delete**. Alternatively, you can also click **More Options** in the [side pane](#view-initiative) where you view initiative details, and then select **Edit** or **Delete**.
@@ -393,7 +393,7 @@ To edit or delete an initiative, go to the **Initiatives Overview** page, click 
 When an initiative is finished or the initiative is not relevant for the current time being, you can archive an initiative.
 
 {{% alert type="info" %}}
-Both Portfolio Managers and Contributors can archive an initiative. Only Viewers cannot do this action. For more information on roles and permissions, see the [Access Management](#access-management) section.
+Both Portfolio Managers and Contributors can archive an initiative. Only Viewers cannot do this action. For more information on roles and permissions, see the [Members](/developerportal/portfolio-management/access-management/#members) section.
 {{% /alert %}}
 
 To archive an initiative, perform the following steps:

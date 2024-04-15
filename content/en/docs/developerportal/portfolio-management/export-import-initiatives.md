@@ -14,7 +14,7 @@ In [Portfolio Management](/developerportal/portfolio-management/), you can impor
 
 ## 2 Prerequisites
 
-* You need to have at least the [Contributor](/developerportal/portfolio-management/#access-management) role for the portfolio.
+* You need to have at least the [Contributor](/developerportal/portfolio-management//developerportal/portfolio-management/access-management/#members) role for the portfolio.
 
 ## 3 Procedure
 
@@ -78,7 +78,7 @@ All the details of an initiative are exported, except the data of the following 
    | **Description**       | {{< icon name="remove-circle-filled" color="red" >}} | String                       |                                                              |                               |`A description of the initiative.`|
    | **Department**        | {{< icon name="remove-circle-filled" color="red" >}} | String                       |  Character limit: 200                                                              | If a department does not exist in the portfolio, it will be created. |`Finance`|
    | **Location**        | {{< icon name="remove-circle-filled" color="red" >}} | String                       |  Character limit: 200                                                              | If a location does not exist in the portfolio, it will be created. |`Utrecht`|
-   | **Country**           | {{< icon name="remove-circle-filled" color="red" >}} | String                       | Only countries that appear as options for **Countries** on the [Portfolio Settings](/developerportal/portfolio-management//developerportal/portfolio-management/portfolio-settings/) page can be filled in. |                           |`Netherlands`|
+   | **Country**           | {{< icon name="remove-circle-filled" color="red" >}} | String                       | Only countries that appear as options for **Countries** on the [Portfolio Settings](/developerportal/portfolio-management/portfolio-settings/) page can be filled in. |                           |`Netherlands`|
    | **UseCase**          | {{< icon name="remove-circle-filled" color="red" >}} | String                       |  Character limit: 200                                                              |                            |`Innovation`|
    | **IntakeDate**       | {{< icon name="remove-circle-filled" color="red" >}} | Date-Time                    | The year must be between 1900 and 9999.                      |                           |`28/Jul/2022`|
    | **StartDate**        | {{< icon name="remove-circle-filled" color="red" >}} | Date-Time                    | <ul><li>The year must be between 1900 and 9999.</li></ul> <ul><li>Start Date has to be sooner than Go-Live Date.</li></ul> |                           |`30/Jul/2022`|

@@ -34,14 +34,14 @@ The list contains the following information:
 
 * **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) – Clicking this opens a menu that enables you to [restore](#restore-delete-archived-initiative) or [delete](#restore-delete-archived-initiative) the archived initiative.
 
-  {{% alert type="info" %}}Both Portfolio Managers and Contributors can restore or delete an archived initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Access Management](#access-management) section.{{% /alert %}}
+  {{% alert type="info" %}}Both Portfolio Managers and Contributors can restore or delete an archived initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Members](/developerportal/portfolio-management/access-management/#members) section.{{% /alert %}}
 
 ### 2 Restoring or Deleting an Archived Initiative {#restore-delete-archived-initiative}
 
 {{% alert type="info" %}}
-Both Portfolio Managers and Contributors can restore or delete an archived initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Access Management](#access-management) section.
+Both Portfolio Managers and Contributors can restore or delete an archived initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Members](/developerportal/portfolio-management/access-management/#members) section.
 {{% /alert %}}
 
-To restore or delete an archived initiative, go to the **Archive** page, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) for that initiative, and then select **Restore** or **Delete**. After you restore an archived initiative, it goes back to the [Initiatives Overview](#initiatives-overview) page.
+To restore or delete an archived initiative, go to the **Archive** page, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) for that initiative, and then select **Restore** or **Delete**. After you restore an archived initiative, it goes back to the [Initiatives Overview](/developerportal/portfolio-management/initiatives-overview/) page.
 
 Alternatively, to delete an archived initiative, you can also click **More Options** in the side pane where you view the archived initiative details, and then select **Delete**.

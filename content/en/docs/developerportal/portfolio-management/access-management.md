@@ -73,7 +73,7 @@ If you are the only Portfolio Manager of the portfolio, when you click **Leave**
 
 ### 2.2 Adding New Users {#add-users}
 
-{{% alert color="info" %}}Only [Portfolio Managers](#access-management) can add new users.{{% /alert %}}
+{{% alert color="info" %}}Only [Portfolio Managers](#members) can add new users.{{% /alert %}}
 
 1. Go to **Access Management**.
 2. On the upper-right corner of the **Members** tab, click **Add Users**.
@@ -90,7 +90,7 @@ For users within your company, they do not need to accept their invitation. If t
 
 ### 2.3 Removing Deactivated Users
 
-{{% alert color="info" %}}Only [Portfolio Managers](#access-management) can remove a deactivated user.{{% /alert %}}
+{{% alert color="info" %}}Only [Portfolio Managers](#members) can remove a deactivated user.{{% /alert %}}
 
 When there are deactivated members in the portfolio, the **Remove Deactivated Users** button becomes available above the list on the right side. Clicking the button allows you to remove all deactivated users from this portfolio in one go. If a deactivated user that you will remove still owns initiatives, these initiatives will no longer have an owner after you remove the user from the portfolio.
 

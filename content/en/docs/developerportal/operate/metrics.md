@@ -421,7 +421,7 @@ As of [March 26, 2024](/releasenotes/developer-portal/mendix-cloud/#march-26-202
 
 | Storage Size           | Storage Instance Type | Baseline Storage Performance | Provisioned IOPS Range | Provisioned Throughput Range |
 |------------------------|-----------------------|------------------------------|------------------------|------------------------------|
-| Less than 20 GiB       | gp2                   | 100 IOPS (3000 Burst)        | 100 - 1197 IOPS        | 128-250 MiB/s                |
+| Less than 20 GiB       | gp2                   | 100 IOPS (3000 Burst) / 125 MiB/s | 100 - 1197 IOPS   | 128-250 MiB/s                |
 | Between 20 and 400 GiB | gp3                   | 3000 IOPS / 125 MiB/s        | N/A                    | N/A                          |
 | 400 GiB and higher     | gp3                   | 12000 IOPS / 500 MiB/s       | 12000 - 64000 IOPS     | 500 - 4000 MiB/s             |
 

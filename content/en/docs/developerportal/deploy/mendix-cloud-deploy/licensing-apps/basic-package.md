@@ -16,7 +16,7 @@ After you order the Mendix Basic package, it may take up to 48 hours before your
 {{% /alert %}}
 
 {{% alert color="info" %}}
-Without a license, you can still deploy and test your app, but the functionality is limited compared to the Basic Package. For more information, see [Mendix Cloud](https://docs.mendix.com/developerportal/deploy/mendix-cloud-deploy).
+Without a license, you can still deploy and test your app, but the functionality is limited compared to the Basic Package. For more information, see [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/).
 {{% /alert %}}
 
 ## 2 Features of the Basic Package

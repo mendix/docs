@@ -190,7 +190,7 @@ All files installed by Mendix SSO are marked with *.MendixSSO.RequiredLib*. Once
 ## 5 Customizing Mendix SSO {#customizing}
 
 {{% alert color="info" %}}
-In v2 of the [Mendix SSO module](/appstore/modules/mendix-sso/), there was a default implementation of end-user administration. This had dependencies on specific versions of [Atlas UI](https://docs.mendix.com/howto8/front-end/atlas-ui/) and was removed so that Mendix SSO v3.0 and above retains compatibility with all Mendix apps, whichever UI they are using.
+In v2 of the [Mendix SSO module](/appstore/modules/mendix-sso/), there was a default implementation of end-user administration. This had dependencies on specific versions of [Atlas UI](/howto8/front-end/atlas-ui/) and was removed so that Mendix SSO v3.0 and above retains compatibility with all Mendix apps, whichever UI they are using.
 {{% /alert %}}
 
 This section explains how to customize Mendix SSO in your apps and how to base your own user administration module on this section if you want to do things in a different way.

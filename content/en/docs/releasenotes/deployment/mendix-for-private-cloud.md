@@ -98,7 +98,7 @@ We recommend regularly updating apps to ensure that they contain the latest secu
 
 #### New Global Operator Installation Method
 
-* We have introduced a streamlined approach to installing the Operator within a namespace. With the [Global Operator installation](https://docs.mendix.com/developerportal/deploy/global-operator/), users only need to install a single Global Operator and Agent to efficiently manage applications across various namespaces. For more information, see the Global Operator installation documentation.
+* We have introduced a streamlined approach to installing the Operator within a namespace. With the [Global Operator installation](/developerportal/deploy/global-operator/), users only need to install a single Global Operator and Agent to efficiently manage applications across various namespaces. For more information, see the Global Operator installation documentation.
 
 {{% alert color="info" %}}
 This feature is currently in beta. For more information, see [Beta Releases](/releasenotes/beta-features/).

@@ -420,9 +420,9 @@ spec:
 # ...
 ```
 
-#### 6.4.1 Resource Definition via Operator Configuration Manifest
+#### 6.4.1 Resource Definition via Operator Configuration Manifest {#resource-definition-ocm}
 
-For a given namespace, all the resource information is aggregated in the `mendix-operator-configuration` manifest. This centralizes and overrides all the configuration explained above. For an example of the Operator configuration manifest, see below. Note that the below configuration is just for reference puropose.
+For a given namespace, all the resource information is aggregated in the `mendix-operator-configuration` manifest. This centralizes and overrides all the configuration explained above. For an example of the Operator configuration manifest, see below. Note that the below configuration is just for reference purpose.
 
 ```yaml
 apiVersion: privatecloud.mendix.com/v1alpha1
@@ -746,7 +746,7 @@ When an environment is scaled (manually or automatically), it will not be restar
 Scaling an environment up (increasing the number of replicas) adds more pods - without restarting any already running pods; once the additional pods become available, they will start receiving HTTP (or HTTPS) requests.
 Scaling an environment down (decreasing the number of replicas) removes some of the running pods - without restarting remaining pods; all HTTP (or HTTPS) traffic will be routed to the remaining pods.
 
-#### 6.7.3 Vertical Pod Autoscaling
+#### 6.7.3 Vertical Pod Autoscaling {#vertical-pod-autoscaling}
 
 [Vertical pod autoscaling](https://github.com/kubernetes/autoscaler/tree/master/vertical-pod-autoscaler) can automatically configure CPU and memory resources and requirements for a pod.
 
@@ -802,7 +802,7 @@ In the `json` format, newline characters will be sent as `\n` (as specified in t
 For example, to correctly display newline characters in Grafana, use the [Escape newlines](https://github.com/grafana/grafana/pull/31352) button.
 {{% /alert %}}
 
-### 6.9 Pod labels
+### 6.9 Pod labels {#pod-labels}
 
 #### 6.9.1 General pod labels
 
@@ -1097,7 +1097,7 @@ This is addressed in Mendix Operator version 2.15.0; if you need to remove an in
 
 You can configure the runtime metrics for the environment in the **Runtime** section. For more information, see [Customize Runtime Metrics](#customize-runtime-metrics).
 
-You can also configure the pod labels for the environment in the **Labels** section. For more information, see [App Pod Labels](https://docs.mendix.com/developerportal/deploy/private-cloud-cluster/#68-pod-labels).
+You can also configure the pod labels for the environment in the **Labels** section. For more information, see [App Pod Labels](#pod-labels).
 
 #### 7.2.2 Members
 

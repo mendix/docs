@@ -13,15 +13,15 @@ This feature is currently in beta. For more information, see [Beta Releases](/re
 
 ## 1 Introduction
 
-Use the new Consumed REST service document to send REST requests from Mendix Studio Pro. With this feature, you can build, test, and create data structures to store your requests. 
+Use the new Consumed REST Service document to send REST requests from Mendix Studio Pro. With this feature, you can build, test, and create data structures to store your requests. 
 
 This feature is supported for [Mendix Studio Pro 10.6](/releasenotes/studio-pro/10.6/) and above.
 
 ### 1.1 Use Cases
 
-You can use this Consumed REST service document to do the following:
+You can use this Consumed REST Service document to do the following:
 
-* Consume a REST service
+* Consume a REST Service
 * Configure `GET`, `POST`, `PUT`, `PATCH`, and `DELETE` requests
 * Create entities directly in the domain model
 * Send REST requests through a microflow
@@ -38,7 +38,7 @@ You can use this Consumed REST service document to do the following:
   {{% alert color="info" %}} `PATCH` methods are only supported for [Mendix Studio Pro 10.7](/releasenotes/studio-pro/10.7/) and above. `PUT` methods are only supported for [Mendix Studio Pro 10.8](/releasenotes/studio-pro/10.8/) and above. `DELETE` methods are only supported for [Mendix Studio Pro 10.9](/releasenotes/studio-pro/10.9/) and above.{{% /alert %}} 
 
 * To use the request response to create a data structure in your domain model, the response data should be in JSON format. Other formats, such as XML, are currently not supported. 
-* If you are debugging a running Published REST service in the same app as your Consumed REST service document, a deadlock could occur when sending the request. Wait until the timeout occurs (default: 300 seconds) for Studio Pro to respond again.
+* If you are debugging a running Published REST Service in the same app as your Consumed REST Service document, a deadlock could occur when sending the request. Wait until the timeout occurs (default: 300 seconds) for Studio Pro to respond again.
 
 ### 1.3 Prerequisites 
 
@@ -47,9 +47,9 @@ You can use this Consumed REST service document to do the following:
 
 ## 2 Installation {#installation}
 
-Download [Studio Pro]( https://marketplace.mendix.com/link/studiopro/) and add the Consumed REST service document to your app. To do this, 
+Download [Studio Pro]( https://marketplace.mendix.com/link/studiopro/) and add the Consumed REST Service document to your app. To do this, 
 
-1. Right-click the module you want to add the Consumed REST service document to.
+1. Right-click the module you want to add the Consumed REST Service document to.
 2. Select **Add other** > **Consumed REST service**. 
 3. Name the service and click **OK**.
 
@@ -57,7 +57,7 @@ Download [Studio Pro]( https://marketplace.mendix.com/link/studiopro/) and add t
 
 ## 3 Configuration {#configuration}
 
-Use the Consumed REST service to configure a `GET`, `POST`, `PUT`, `PATCH`, or `DELETE` request for your app. 
+Use the Consumed REST Service to configure a `GET`, `POST`, `PUT`, `PATCH`, or `DELETE` request for your app. 
 
 ### 3.1 Basic Configuration {#configure-a-request}
 
@@ -70,7 +70,7 @@ Create a `GET`, `POST`, `PUT`, `PATCH`, or `DELETE` request to send data to your
     {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/general-section.png" >}}
 
 4. Click **Configuration & authentication**.
-5. Add a **Base URL** to use the same URL across all requests in this consumed REST service document.
+5. Add a **Base URL** to use the same URL across all requests in this consumed REST Service document.
 
     {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/configuration-screen.png" >}}
 

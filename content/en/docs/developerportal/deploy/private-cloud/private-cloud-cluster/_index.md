@@ -1097,7 +1097,7 @@ This is addressed in Mendix Operator version 2.15.0; if you need to remove an in
 
 You can configure the runtime metrics for the environment in the **Runtime** section. For more information, see [Customize Runtime Metrics](#customize-runtime-metrics).
 
-You can also configure the pod labels for the environment in the **Labels** section. For more information, see [App Pod Labels](https://docs.mendix.com/developerportal/deploy/private-cloud-cluster/#68-pod-labels).
+You can also configure the pod labels for the environment in the **Labels** section. For more information, see [App Pod Labels](/developerportal/deploy/private-cloud-cluster/#68-pod-labels).
 
 #### 7.2.2 Members
 

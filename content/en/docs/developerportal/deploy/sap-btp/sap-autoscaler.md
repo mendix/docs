@@ -12,7 +12,7 @@ aliases:
 
 ## 1 Introduction
 
-The application autoscaler service for [SAP Business Technology Platform (SAP BTP)](https://docs.mendix.com/developerportal/deploy/sap-cloud-platform/) enables applications to automatically increase or decrease the number of instances of your app. These changes can be based on a schedule, or based on the value of a metric.
+The application autoscaler service for [SAP Business Technology Platform (SAP BTP)](/developerportal/deploy/sap-cloud-platform/) enables applications to automatically increase or decrease the number of instances of your app. These changes can be based on a schedule, or based on the value of a metric.
 
 For more information on the application autoscaler, see [Application Autoscaler Service](https://help.sap.com/docs/CSI/b651ed9a533d41339f05b12549d8d706/c5d349a5ea354971839b7922d13c04e4.html?q=application%20autoscaler%20service) document on the SAP Help Portal.
 
@@ -40,7 +40,7 @@ Click **Configurator** to start the **Autoscaler Configurator**.
 The **Autoscaler Configurator** provides a user-friendly interface to create the JSON file required to configure the application autoscaler.
 
 {{% alert color="info" %}}
-The **Configurator** only creates a JSON file from scratch. It does not have access to your existing autoscaler settings on [SAP BTP](https://docs.mendix.com/developerportal/deploy/sap-cloud-platform/), and you cannot import an existing JSON files.
+The **Configurator** only creates a JSON file from scratch. It does not have access to your existing autoscaler settings on [SAP BTP](/developerportal/deploy/sap-cloud-platform/), and you cannot import an existing JSON files.
 {{% /alert %}}
 
 There are three options available:
@@ -60,7 +60,7 @@ The metrics you can use to trigger dynamic scaling are as follows:
 The **Configurator** does not support adding custom metrics as triggers.
 {{% /alert %}}
 
-Open the **Autoscaler Configurator** by clicking the **Configurator** next to the autoscaler service in the [Services tab](https://docs.mendix.com/developerportal/deploy/sap-cloud-platform/) of the Environment Details.
+Open the **Autoscaler Configurator** by clicking the **Configurator** next to the autoscaler service in the [Services tab](/developerportal/deploy/sap-cloud-platform/) of the Environment Details.
 
 You first need to decide the sort of scaling you want to apply.
 

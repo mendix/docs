@@ -87,7 +87,7 @@ Follow the instructions in [Using Marketplace Content](/appstore/overview/use-co
 
 ## 3 Configuration {#configuration}
 
-After you install the OpenAI Connector, you can find it in the **App Explorer**, in the **Marketplace modules** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to OpenAI. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to OpenAI, you must also [configure the Encryption module](https://docs.mendix.com/appstore/modules/encryption/#configuration). 
+After you install the OpenAI Connector, you can find it in the **App Explorer**, in the **Marketplace modules** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to OpenAI. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to OpenAI, you must also [configure the Encryption module](/appstore/modules/encryption/#configuration). 
 
 ### 3.1 General Configuration {#general-configuration}
 
@@ -517,7 +517,7 @@ This entity represents a text string, usually a part of a larger base text or di
 
 ### 4.2 Enumerations {#enumerations} 
 
-An enumeration is a predefined list of values that can be used as an attribute type. For more information about enumerations in general, see [Enumerations](https://docs.mendix.com/refguide/enumerations/). 
+An enumeration is a predefined list of values that can be used as an attribute type. For more information about enumerations in general, see [Enumerations](/refguide/enumerations/). 
 
 #### 4.2.1 General {#general-enumerations}
 

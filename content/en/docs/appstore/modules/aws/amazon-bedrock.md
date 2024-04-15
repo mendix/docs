@@ -801,7 +801,7 @@ The `ObservationRetrievedReference` holds information about a sources cited for 
 
 ### 4.2 Activities {#activities}
 
-Activities define the actions that are executed in a microflow or a nanoflow. For more information, see [Activities](https://docs.mendix.com/refguide/activities/).
+Activities define the actions that are executed in a microflow or a nanoflow. For more information, see [Activities](/refguide/activities/).
 
 #### 4.2.1 ListFoundationModels {#list-foundation-models}
 

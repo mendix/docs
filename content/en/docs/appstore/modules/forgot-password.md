@@ -104,7 +104,7 @@ In these instructions, it is assumed that your main module is **MyFirstModule**.
 1. Run the application.
 1. Sign in as **demo_administrator** from [Demo Users](/refguide/demo-users/) and choose the **ForgotPasswordConfiguration** menu item.
 1. In the **Reset Password Email** tab, do the following:
-    * Click **SMTP settings** to configure or validate SMTP settings for the [Email Connector](https://docs.mendix.com/appstore/connectors/email-connector/) or [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module (depending on the version of the Forgot Password module). In version 5.4.0 and above this will create a SMTP configuration which you will need to select.
+    * Click **SMTP settings** to configure or validate SMTP settings for the [Email Connector](/appstore/connectors/email-connector/) or [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module (depending on the version of the Forgot Password module). In version 5.4.0 and above this will create a SMTP configuration which you will need to select.
     * In version 5.4.0 and above, select the SMTP configuration you want to use for sending reset password email.
     * From the drop-down menu, choose the **Reset email template** tab and provide the details for the email to be sent when an end-user has forgotten their password.
 
@@ -192,7 +192,7 @@ You have now successfully upgraded the Forgot Password Module to work with Mendi
 
 ## 5 Migrating from Email Module with Templates to Email Connector{#migrate-email}
 
-Below versions of the Forgot Password module use the [Email Connector](https://docs.mendix.com/appstore/connectors/email-connector/) module rather than the deprecated [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module.
+Below versions of the Forgot Password module use the [Email Connector](/appstore/connectors/email-connector/) module rather than the deprecated [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module.
 
 * Version 4.1.0 (for Mendix 8)
 * Version 5.1.0 (for Mendix 9 and above)
@@ -210,7 +210,7 @@ Migrating to Email Connector Module has the following dependencies:
 
 * An app that uses Mendix 8 or above.
 
-    [Email Connector](https://docs.mendix.com/appstore/connectors/email-connector/) Module is not compatible with Mendix 7 and thus the Forgot Password Module version compatible with mendix 7 (3.xx) continue to use the [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module.
+    [Email Connector](/appstore/connectors/email-connector/) Module is not compatible with Mendix 7 and thus the Forgot Password Module version compatible with mendix 7 (3.xx) continue to use the [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module.
 * The email templates must be set up as follows:
 
     * The reset password template must contain *_Reset* in the template name.
@@ -222,10 +222,10 @@ Migrating to Email Connector Module has the following dependencies:
 
 Import the modules which are needed for the migration process.
 
-1. Import the [Email Connector](https://docs.mendix.com/appstore/connectors/email-connector/) module.
+1. Import the [Email Connector](/appstore/connectors/email-connector/) module.
 2. Import the [Email Connector Migration Utility](https://marketplace.mendix.com/link/component/205008) module.
 
-Troubleshoot any Atlas UI issues related to the [Email Connector](https://docs.mendix.com/appstore/connectors/email-connector/) and [Email Connector Migration Utility](https://marketplace.mendix.com/link/component/205008) modules that may arise due to your Studio Pro version.
+Troubleshoot any Atlas UI issues related to the [Email Connector](/appstore/connectors/email-connector/) and [Email Connector Migration Utility](https://marketplace.mendix.com/link/component/205008) modules that may arise due to your Studio Pro version.
 
 See the documentation for the [Email Connector](/appstore/modules/email-connector/) and the [Email Connector Migration Utility](https://github.com/mendixlabs/EmailConnectorMigrationUtility) (on GitHub) for more information.
 

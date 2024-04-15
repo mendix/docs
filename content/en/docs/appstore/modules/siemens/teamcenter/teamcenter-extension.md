@@ -66,6 +66,8 @@ Depending on the configuration, microflows are generated to:
 * close the BOMWindow (implementing the Close BIM Windows action from the TcConnector)
 * get the root BOMLine for a BOMWindow.
 
+To work with structures, such as BOMs, you need to first create a BOM window in Teamcenter. One can retrieve the root BOM Line from the BOM Window and from there start expanding the structure either line by line or all BOM Lines at the same time. The BOM Lines define the structure (based on the configuration you passed when generating the BOM Window). Each BOM Line is associated with a single Item Revision.
+
 ## 3 Landing Page {#homepage}
 Open the Teamcenter Extension by clicking on menu option View -> Teamcenter inside Mendix Studio Pro. This will open the landing page. You will see two tabs: Menu and Settings. 
 
@@ -132,4 +134,4 @@ Once you've finished import mapping, click on Generate button to create microflo
 ![image](https://github.com/mwbouwkamp-mendix/mendix-docs/assets/157635704/6d3a7f29-5727-438b-8e4b-c3aa3ef83d7a)
 
 
-## 6. Sample App
+To see Teamcenter Extension in action, please download and play with the Teamcenter Extension Sample App, which is also available for free on the Mendix Marketplace.

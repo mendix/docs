@@ -73,6 +73,12 @@ If the URL prefix breaks any of the rules mentioned above, then you will get a c
 
 Here you can select which Java version to use for you application.
 
+{{% alert color="note" %}}
+
+For Studio Pro versions 10.6.7 and 10.8.0 and above, you can choose Java 17.
+
+{{% /alert %}}
+
 For local development the JDK configured in the [Studio Pro preferences](/refguide/preferences-dialog/#jdk-directory) has to be compatible with the Java version configured here.
 
 Applications deployed to the cloud will use this setting to select which Java version to use.

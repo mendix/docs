@@ -245,13 +245,13 @@ to update the Android developer app bundle and assets:
 1. Unzip `sampleapps.zip`.
 1. Find the folder for the sample app you want to update - reference `sample_apps.json`. 
 1. `cd` to this folder.
-1. In (A), replace `index.android.bundle` with the file located in section 7.3.1.
-1. In (A), delete all other folders (and any files) and replace with contents located in section 7.3.2.
+1. In (A), replace `index.android.bundle` with the file located in [Android Bundle](#android-bundle).
+1. In (A), delete all other folders (and any files) and replace with contents located in [Android Assets](#android-assets).
 1. The app thumbnail can be updated by substituting the existing *splash.png* file located in the app's root folder.
 11. Zip the app folders by selecting all of them and then zip all app folders (rather than zipping the parent directory). The zipped folder should be called `sampleapps.zip`. Make sure that the root content of the `.zip` is each sample app folder.
 1. In (A), open `sample_apps.json` and bump the version.
 
-See Section 7 for details on generating a project's bundles and assets.
+See [Generating iOS/Android Native Bundles and Assets](#generate-native-bundles) for details on generating a project's bundles and assets.
 
 #### 6.1.2 iOS
 
@@ -261,13 +261,13 @@ The folder name can be arbitrary. The `config.json` file describes each sample a
 
 1. Find the folder for the sample app you want to update - reference `config.json`. 
 1. `cd` to this folder
-1. Replace the `index.bundle` file with the updated one from 7.3.3. Note: make sure to rename the filename to *index.bundle*, as it is usually **index.ios.bundle**.
+1. Replace the `index.bundle` file with the updated one from [iOS Bundle](#ios-bundle). Note: make sure to rename the filename to *index.bundle*, as it is usually **index.ios.bundle**.
 1. Clean the contents of the `assets` folder.
-1. Copy all content from 7.3.4 into the `assets` folder.
+1. Copy all content from [iOS Assets](#ios-assets) into the `assets` folder.
 
-See Section 7 for details on generating a project's bundles and assets.
+See [Generating iOS/Android Native Bundles and Assets](#generate-native-bundles) for details on generating a project's bundles and assets.
 
-## 7 Generating iOS/Android Native Bundles and Assets
+## 7 Generating iOS/Android Native Bundles and Assets {#generate-native-bundles}
 
 ### 7.1 Using Native Builder UI (also creates native apps to use for testing)
 
@@ -303,18 +303,18 @@ In your Mendix Project directory, in **deployment** > **native** > **bundle** yo
 
 In your Mendix project folder you will find the files listed below depending on your platform.
 
-#### 7.3.1 Android Bundle
+#### 7.3.1 Android Bundle {#android-bundle}
 
 In **deployment** > **native** > **bundle** > **android** > **assets** > **index.android.bundle**
 
-#### 7.3.2 Android Assets
+#### 7.3.2 Android Assets {#android-assets}
 
 In **deployment** > **native** > **bundle** > **android** > **res** > **(all folders and files)**
 
-#### 7.3.3 iOS Bundle
+#### 7.3.3 iOS Bundle {#ios-bundle}
 
 In **deployment** > **native** > **bundle** > **iOS** > **index.ios.bundle**
 
-#### 7.3.4 iOS Assets
+#### 7.3.4 iOS Assets {#ios-assets}
 
 In **deployment** > **native** > **bundle** > **iOS** > **assets** > **(all folders and files)**

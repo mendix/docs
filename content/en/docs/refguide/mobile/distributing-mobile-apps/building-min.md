@@ -243,7 +243,7 @@ The file `sample_apps.json` file describes each sample app and contains informat
 to update the Android developer app bundle and assets:
 
 1. Unzip `sampleapps.zip`.
-1. Find the folder for the sample app you want to update - reference `sample_apps.json`. 
+1. Find the folder for the sample app you want to update — reference `sample_apps.json`. 
 1. `cd` to this folder.
 1. In (A), replace `index.android.bundle` with the file located in [Android Bundle](#android-bundle).
 1. In (A), delete all other folders (and any files) and replace with contents located in [Android Assets](#android-assets).
@@ -259,7 +259,7 @@ In `ios > DeveloperApp > SampleApps > Bundles` there are folders that represent 
 
 The folder name can be arbitrary. The `config.json` file describes each sample app, and each object's `id` property matches the folder name and provides details about the sample app. Follow the steps below to update the iOS developer app bundle and assets:
 
-1. Find the folder for the sample app you want to update - reference `config.json`. 
+1. Find the folder for the sample app you want to update — reference `config.json`. 
 1. `cd` to this folder
 1. Replace the `index.bundle` file with the updated one from [iOS Bundle](#ios-bundle). Note: make sure to rename the filename to *index.bundle*, as it is usually **index.ios.bundle**.
 1. Clean the contents of the `assets` folder.
@@ -283,7 +283,7 @@ If using Native Builder UI (which also creates native apps to use for testing), 
 1. (App capabilities) Disable all capabilities.
 1. (App capabilities) If your project contains a widget or action that requires a Google API key, add it.
 1. (Configure app locally) Enter in a version number.
-1. (Configure app locally) Enter in a runtime URL - if you want to test the native app, enter an appropriate runtime URL.
+1. (Configure app locally) Enter in a runtime URL — if you want to test the native app, enter an appropriate runtime URL.
 1. Click **Configure locally**.
 
 The native app's source code will be in the disk location selected in step 3. In your Mendix Project directory, in

@@ -27,7 +27,7 @@ The Teamcenter Extension is free to download and use. You may, however require a
 
 ## 2.	Use Cases {#usecases}
 
-The Teamcenter extension offers a list of use cases for which domain models and microflows can be created. After selecting a use case, it uses an import mapping approach similar to Mendix import mapping(https://docs.mendix.com/refguide/import-mappings/). Here, the Teamcenter extension allows you to select data from the business model of your Teamcenter instance. Based on the selected use case, the import mapping and, for some use cases, additional configurations, the Teamcenter extension generates/updates the domain model for your integration and generates one or more ready-to-use microflows that you can drag-and-drop into your application logic.
+The Teamcenter extension offers a list of use cases for which domain models and microflows can be created. After selecting a use case, it uses an import mapping approach similar to Mendix [import mapping](https://docs.mendix.com/refguide/import-mappings/). Here, the Teamcenter extension allows you to select data from the business model of your Teamcenter instance. Based on the selected use case, the import mapping and, for some use cases, additional configurations, the Teamcenter extension generates/updates the domain model for your integration and generates one or more ready-to-use microflows that you can drag-and-drop into your application logic.
 
 The extension offers the following integration options:
 * Get Item Revisions
@@ -51,7 +51,7 @@ The Create Item and Item Revision action allows you to configure and generate a 
 The Update Item and Item Revision action allows you to generate a microflow to update an Item with ItemRevision or specializations thereof in Teamcenter and the corresponding domain model. The resulting microflows implements the Update Properties action from the TcConnector. 
 
 ### 2.5. Revise Item Revision {#reviseitem-and-itemrevision}
-The Revise Item and Item Revision action allows you to generate a microflow to revise an ItemRevision or specializations thereof in Teamcenter and the corresponding domain model. The resulting microflow implements the Revise Object and Update Properties actions from the TcConnector. With the Revise Object action, a new ItemRevision is created, setting the Teamcenter properties that need to be set upon revising; with the Update Properties action, the remaining properties are updated in Teamcenter.
+The Revise Item and Item Revision action allows you to generate a microflow to revise an ItemRevision or specializations thereof in Teamcenter and the corresponding domain model. The resulting microflow implements the Revise Object and Update Properties actions from the Teamcenter Connector. With the Revise Object action, a new ItemRevision is created, setting the Teamcenter properties that need to be set upon revising; with the Update Properties action, the remaining properties are updated in Teamcenter.
 
 ### 2.6. Create BOM Window {#create-bom-window}
 The Create BOM Window action allows you to generate microflows and corresponding domain model to configure a BOM Window and retrieve structure data from Teamcenter. This feature supports the retrieval of structures with:

@@ -128,30 +128,31 @@ To enable remote debugging, do the following:
 #### 2.2.2 Build From Source
 
 Building from source is required to be able to debug React Native specific code.
-Building from source can be done as following:
 
-* Check out the react native repo `https://github.com/facebook/react-native.git`
-* Copy paste the Package folder into the developer app's `node_modules/react-native` folder
-* Toggle `BUILD_RN_FROM_SOURCE=true` in `gradle.properties`
-* Clean and build app.
+Building from source can be done as follows:
+
+1. Check out the React Native repo `https://github.com/facebook/react-native.git`.
+1. Paste the **Package** folder into the developer app's **node_modules/react-native** folder.
+1. Toggle `BUILD_RN_FROM_SOURCE=true` in `gradle.properties`.
+1. Clean and build app.
 
 #### 2.2.3 Remote Debugging on an Android Emulator
 
-You cannot use `localhost`, as it points to the Android simulator, instead of the host machine.
-To work around this either:
+You cannot use `localhost`, as it points to the Android simulator instead of the host machine.
+To work around this, you can do one of the following:
 
-* Use `10.0.2.2:8080` as the URL
-* Run `adb reverse tcp:8080 tcp:8080` and `adb reverse tcp:8083 tcp:8083` from your console
+* Use `10.0.2.2:8080` as the URL.
+* Run `adb reverse tcp:8080 tcp:8080` and `adb reverse tcp:8083 tcp:8083` from your console.
 
 ## 3 Google Maps Configuration
 
 ### 3.1 iOS
 
-* To run iOS fastlane script containing an API key please define the variable `GOOGLE_MAPS_API_KEY` before beta lane. If you run it manually in XCode, change the Api key in `ApiKeys.xcconfig` file.
+* To run iOS FastLane script containing an API key please define the variable `GOOGLE_MAPS_API_KEY` before beta lane. If you run it manually in XCode, change the API key in `ApiKeys.xcconfig` file.
 
 ### 3.2 Android
 
-* To run Android fastlane script containing an API key please define the variables `FIREBASE_API_KEY_1` and `FIREBASE_API_KEY_2` before internal lane. This values can be find in firebase file when downloading from the firebase website. If you run it manually in Android Studio, change the Api keys in `google-services.json` file.
+* To run Android FastLane script containing an API key please define the variables `FIREBASE_API_KEY_1` and `FIREBASE_API_KEY_2` before internal lane. This values can be find in firebase file when downloading from the firebase website. If you run it manually in Android Studio, change the Api keys in `google-services.json` file.
 
 ## 4 FAQ
 
@@ -159,14 +160,14 @@ To work around this either:
 
 There are a number of reasons why syncing would fail:
 
-#### 4.1.1 A dependency is missing or is falsly imported (developer error)
+#### 4.1.1 A Dependency is Missing or was Falsely Imported (developer error)
 
 We are trying to keep master working, but something might go wrong from time to time.
 The build logs should point exactly to the offending files, fix the issue and resync.
 
 #### 4.1.2 Android studio fails to load the NPM modules
 
-If the project explorer does not list any of the npm modules imported, two things might be ammiss:
+If the project explorer does not list any of the NPM modules imported, two things might be ammiss:
 
 * `npm i` has not been ran yet
 * Android studio caches are borked

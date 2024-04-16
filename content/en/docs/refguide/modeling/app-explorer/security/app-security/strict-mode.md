@@ -25,9 +25,7 @@ When Strict Mode is enabled, the following [Client APIs](/apidocs-mxsdk/apidocs/
 | data.rollback |                         |
 | data.get      | Except by GUID or GUIDs |
 
-This means that these APIs cannot be invoked via JavaScript actions or the browser's console. The APIs are also disabled on the Runtime. If any of these APIs are used in a JavaScript action, consider to use a nanoflow instead.
-
-For PWA and React Native, it is still possible to access the above Client APIs, even with Strict Mode enabled.
+The APIs will be disabled on the Runtime, which means that these APIs cannot be invoked in online apps via JavaScript actions or the browser's console. If any of these APIs are used in a JavaScript action, consider to use a nanoflow instead.
 
 ## 3 Disallowing Save button on Page Templates
 Additionally, Studio Pro will throw a consistency error when a save button is used on a layout. This will ensure that exclusively entities which are on the page with a save button can be commited to the runtime. 

@@ -16,7 +16,14 @@ For Android the process is still manual.
 
 ### 1.1 iOS
 
-The configuration for Fastlane resides in `/ios/fastlane/Fastlane`. Currently three lanes are configured internal, build and release. Internal should be used for internal test builds as in example detox. Beta pushes the resulting `ipa` to Test Flight. Release, creates a new release in App Store Connect; currently submitting it for review is a manual step but it might change.
+iOS builds are produced via Fastlane.
+
+The configuration for Fastlane resides in `/ios/fastlane/Fastlane`. Currently three lanes are configured internal, build, and release:
+* Internal should be used for internal test builds as in example detox 
+* Beta pushes the resulting `ipa` to Test Flight
+* Release creates a new release in App Store Connect
+
+Currently submitting the app for review is a manual step, but this might change.
 
 {{% alert color="warning" %}}
 For the **Beta** and **Release** lanes, before building, be sure to change the **VERSION_NUMBER** in the `Fastlane` config file manually.
@@ -34,7 +41,7 @@ To install Fastlane on your machine, do the following:
   export PATH="$FASTLANE_PATH:$PATH"
   ```
 
-#### 1.1.2 Build the app for internal testing
+#### 1.1.2 Build an App for Internal Testing
 
 To build your app for internal testing, do the following:
 
@@ -62,7 +69,7 @@ The script will take considerable amount of time as it also waits for processing
 
 ### 1.2 Android
 
-Android builds can be made via Android Studio:
+Android builds are made via Android Studio:
 
 1. Open Android Studio.
 1. Open `/app/build.gradle` and change the `versionName` to the new version and `versionCode` to an integer value higher than the last release build.
@@ -76,33 +83,40 @@ Android builds can be made via Android Studio:
 
 ### 2.1 iOS
 
-iOS applications require XCode, so we assume you have the latest version installed and ready to use. Mendix uses CocoaPods to manage the iOS dependencies, which you can set up as follows:
+iOS applications require XCode, so we assume you have the latest version installed and ready to use. 
+
+Mendix uses CocoaPods to manage the iOS dependencies, which you can set up as follows:
 
 1. To install CocoaPods on your system, run `sudo gem install cocoapods`.
 1. To install NPM dependencies, run `npm i`.
 1. Clean install the podfiles by running `npm run ios:clean-pod-install`
 1. Install provision profile and certificates by running `npm run ios:dev`, then enter your machine password.
-1. Open the project via the `*.xcworkspace` file (**not** the `xcodeproj`).
+1. Open the project via the `*.xcworkspace` file (not the `xcodeproj`).
 
 #### 2.1.1 When to Re-Install CocoaPods
 
 From to time you must update the native dependencies. Therefore, it is important to re-install the node modules and CocoaPods in the following cases:
+
 * After a branch switch
 * If the app exhibits erratic or odd behavior
 
 ### 2.2 Android
 
-* Install a recent Android Studio
-* Open the project in `developerapp/android` as existing project or import it as Gradle project
-* [Update or install a rescent SDK](https://developer.android.com/studio/intro/update#sdk-manager)
-* [Install a rescent NDK](https://developer.android.com/studio/projects/install-ndk)
-* Switch the Build Variant in Android Studio (on the bottom left side) to `developerappDebug` if it does not default to it
-* Start a gradle sync
-* If all goes well the green play button should be usable
+Set up your developer environment for Android as follows:
 
-#### Remote debugging
+* Install a recent Android Studio version.
+* Open the project in `developerapp/android` as existing project or import it as Gradle project.
+* [Update or install a recent SDK](https://developer.android.com/studio/intro/update#sdk-manager).
+* [Install a recent NDK](https://developer.android.com/studio/projects/install-ndk).
+* Switch the Build Variant in Android Studio (on the lower-left side) to `developerappDebug` unless it has been selected by default.
+* Start a Gradle sync.
+* If successful, the green play button should be usable.
 
-* Fill host with <your_ip>:8080 (you can use `localhost:8080` if you're running in an emulator/simulator)
+#### 2.2.1 Remote Debugging
+
+To enable remote debugging, do the following:
+
+* Fill host with <your_ip>:8080 (you can use `localhost:8080` if you are running in an emulator or simulartor)
 * Check the "Enable dev mode checkbox/switch
 * When the app loads, open the app menu:
     * If you are running on a physical device: 3-tap long press or shake
@@ -111,7 +125,7 @@ From to time you must update the native dependencies. Therefore, it is important
 * Press "Enable remote debugging" from the menu
 * After the Chrome screen pops up, change its url to `localhost:8083/debugger-ui/`.
 
-### 2.2.1 Build from source
+#### 2.2.2 Build From Source
 
 Building from source is required to be able to debug React Native specific code.
 Building from source can be done as following:
@@ -121,7 +135,7 @@ Building from source can be done as following:
 * Toggle `BUILD_RN_FROM_SOURCE=true` in `gradle.properties`
 * Clean and build app.
 
-#### Remote debugging on an Android emulator
+#### 2.2.3 Remote Debugging on an Android Emulator
 
 You cannot use `localhost`, as it points to the Android simulator, instead of the host machine.
 To work around this either:
@@ -129,9 +143,9 @@ To work around this either:
 * Use `10.0.2.2:8080` as the URL
 * Run `adb reverse tcp:8080 tcp:8080` and `adb reverse tcp:8083 tcp:8083` from your console
 
-## 3. Google Maps Configuration
+## 3 Google Maps Configuration
 
-### 3.1 IOS
+### 3.1 iOS
 
 * To run iOS fastlane script containing an API key please define the variable `GOOGLE_MAPS_API_KEY` before beta lane. If you run it manually in XCode, change the Api key in `ApiKeys.xcconfig` file.
 

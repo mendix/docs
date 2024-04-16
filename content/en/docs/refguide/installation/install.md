@@ -68,9 +68,7 @@ The prerequisites are the following:
 * [Eclipse Temurin JDK 11 (x64)](https://github.com/adoptium/temurin11-binaries/releases)
 * [Microsoft Visual C++ 2015 and 2019 Redistributable Package](https://aka.ms/vs/16/release/vc_redist.x64.exe)
 * [Mendix Native Mobile Builder one-click Installer](https://appdev-mx-cdn.s3.amazonaws.com/native-builders/latest.exe)
-* [Git for Windows (x64)](https://git-scm.com/download/win) using the following versions:
-
-	These are the versions of Git that Studio Pro installer installs if the version installed on the system is lower.  
+* [Git for Windows (x64)](https://git-scm.com/download/win) using the versions described below. These are the versions of Git that Studio Pro installs if the Git version installed on the system is below the suggested one.  
 	
     | 10.0.0 - 10.1.0 | 10.2.0 - 10.9 | 10.10 - onwards |
     | --- | --- | --- |

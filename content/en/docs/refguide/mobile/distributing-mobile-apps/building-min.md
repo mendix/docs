@@ -42,68 +42,53 @@ To build your app for internal testing, do the following:
 1. Run the `fastlane internal` command to build your app.
 1. The output will reside in `/build/internal/output`, so grab your files from that directory.
 
-#### 1.1.3 Releasing to Test Flight
+#### 1.1.3 Releasing to TestFlight
 
-Change the VERSION_NUMBER in the `Fastlane` config file to the new version to build.
+Change the VERSION_NUMBER in the `Fastlane` config file to your new version, then build:
 
-* Change directory into `/developerapp/ios`
-* `fastlane beta`
+1. Change directory into `/developerapp/ios`.
+1. Run the `fastlane beta` command.
 
-**The script will take considerable amount of time as it also waits for processing to finish, to release a Testflight beta test.**
+The script will take considerable amount of time as it also waits for processing to finish, to release a TestFlight beta test.
 
 #### 1.1.4 Releasing to App Store
 
-Change the VERSION_NUMBER in the `Fastlane` config file to the new version to build.
+Change the VERSION_NUMBER in the `Fastlane` config file to the new version, then build:
 
-* Change directory into `/developerapp/ios`
-* `fastlane release`
+1. Change directory into `/developerapp/ios`.
+1. Run the `fastlane release` command.
 
-**The script will take considerable amount of time as it also waits for processing to finish, to release a Testflight beta test.**
+The script will take considerable amount of time as it also waits for processing to finish, to release a TestFlight beta test.
 
 ### 1.2 Android
 
-Android builds can be done via Android Studio.
+Android builds can be made via Android Studio:
 
-* Use Android Studio
-* Open `/app/build.gradle` and change the `versionName` to the new version and `versionCode` to an integer value bigger than the last release build
-* Select `Build -> Generate Signed Bundle / APK`
-* Check the `APK` check box
-* In the next screen add the signing certificate
-* Select `developerappRelease` from the build varients and tick `V1` and `V2` Signatures
-* Build
+1. Open Android Studio.
+1. Open `/app/build.gradle` and change the `versionName` to the new version and `versionCode` to an integer value higher than the last release build.
+1. Select `Build -> Generate Signed Bundle / APK`.
+1. Select the `APK` check box.
+1. On the next screen add the signing certificate.
+1. Select `developerappRelease` from the build variants, and tick `V1` and `V2` Signatures.
+1. Build your Android app.
 
-## 2. Set-up Developer Environment
+## 2. Set Up Your Developer Environment
 
 ### 2.1 iOS
 
-iOS application require XCode, we assume you have the latest installed and ready to go.
-We are using Cocoapods to manage the iOS dependencies.
+iOS applications require XCode, so we assume you have the latest version installed and ready to use. Mendix uses CocoaPods to manage the iOS dependencies, which you can set up as follows:
 
-To install cocoapods on your system, if you have not already:
+1. To install CocoaPods on your system, run `sudo gem install cocoapods`.
+1. To install NPM dependencies, run `npm i`.
+1. Clean install the podfiles by running `npm run ios:clean-pod-install`
+1. Install provision profile and certificates by running `npm run ios:dev`, then enter your machine password.
+1. Open the project via the `*.xcworkspace` file (**not** the `xcodeproj`).
 
-* Run `sudo gem install cocoapods`
+#### 2.1.1 When to Re-Install CocoaPods
 
-Install npm dependencies:
-
-* Run `npm i`
-
-Clean install the podfiles:
-
-* Run `npm run ios:clean-pod-install`
-
-Install provision profile and certificates
-
-* Run `npm run ios:dev`
-* Enter your machine password
-
-Finally, open the project via the `*.xcworkspace` file **not** the `xcodeproj`.
-
-#### 2.1.1 When to re-install pods again
-
-From to time we are updating the native dependencies. It is therefore important to re-install the node modules and cocoapods from time to time.
-
-* Good practice, do it after a branch switch
-* Rule of thumb, if the app miss behaves.
+From to time you must update the native dependencies. Therefore, it is important to re-install the node modules and CocoaPods in the following cases:
+* After a branch switch
+* If the app exhibits erratic or odd behavior
 
 ### 2.2 Android
 

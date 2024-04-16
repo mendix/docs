@@ -11,14 +11,13 @@ aliases:
 
 ## 1 Introduction
 
-The [Email](https://marketplace.mendix.com/link/component/120739) connector allows you to send and receive emails on your own email server. It includes features such as sending emails using template, or sending signed and encrypted emails.
+The [Email](https://marketplace.mendix.com/link/component/120739) connector allows you to send and receive emails on your own email server. It includes features such as sending emails using a template, or sending signed and encrypted emails.
 
 ### 1.1 Features
 
 The Email connector includes the following features:
 
 * Configuration of multiple email accounts
-
     * Supports basic authentication and creating an account with OAuth 2.0 (via authorization code flow or client credentials flow) to configure Microsoft Entra ID (formerly known as Azure Active Directory) accounts
     * Supports shared mailboxes using basic and OAuth 2.0 authentication
 * Digital signatures and encryption
@@ -34,7 +33,7 @@ The Email connector supports the following protocols:
 ### 1.2 Prerequisites {#prerequisites}
 
 {{% alert color="warning" %}}
-Follow these prerequisites carefully. Missing a step might lead to errors.
+Follow these prerequisites carefully. Missing a step can lead to errors.
 {{% /alert %}}
 
 Before you use the Email connector in your app, do the following:
@@ -49,7 +48,7 @@ Before you use the Email connector in your app, do the following:
 
 If you are migrating to the Email connector from another email module, consider testing your settings in a new app first.
 
-Mendix recommends using the community-supported [Email Connector Migration Utility](https://marketplace.mendix.com/link/component/205008) module to migrate data from the [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) service.
+It is recommended to use the community-supported [Email Connector Migration Utility](https://marketplace.mendix.com/link/component/205008) module to migrate data from the [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) service.
 
 ### 1.3 Included Widgets {#included-widgets}
 
@@ -99,14 +98,14 @@ Based on the entered email address domain, the module will try to fetch configur
 You may need to adjust your Gmail settings before you can add a Gmail account. For more information, see [Gmail Accounts](#gmail-accounts).
 {{% /alert %}}
 
-In Studio Pro, it is also possible to use the **GetAutoConfig** Java action to get all supported email configurations for the provided username. This action returns results as **Email_Connector.EmailProvider**. Process the **Email_Connector.EmailProvider** records to get the desired configuration and create the **Email_Connector.EmailAccount**.
+In Studio Pro, it is also possible to use the **GetAutoConfig** Java action to get all supported email configurations for the provided user name. This action returns results as **Email_Connector.EmailProvider**. Process the **Email_Connector.EmailProvider** records to get the desired configuration and create the **Email_Connector.EmailAccount**.
 
 #### 3.1.2 Manual Configuration
 
 To manually configure the account for sending and receiving emails, enter the protocol, server host, and server port. Refer to the email server documentation to get this information.
 
 {{% alert color="info" %}}
-Even if you do not select *Use SSL* or *Use TLS** when you configure the **Email Protocol**, as long as your mail server allows secure connections, then a secure connection is initialized regardless your configuration. This means a higher priority is given to a secure connection than an unsecured one, if the underlying Email server infra supports secure connection.
+Even if you do not select **Use SSL** or **Use TLS** when you configure the **Email Protocol**, as long as your mail server allows secure connections, a secure connection is initialized regardless your configuration. This means a higher priority is given to a secure connection than an unsecured one, if the underlying Email server infra supports secure connection.
 {{% /alert %}}
 
 ### 3.2 Additional Account Settings {#other-account-settings}
@@ -114,8 +113,8 @@ Even if you do not select *Use SSL* or *Use TLS** when you configure the **Email
 You can choose to adjust the following account settings:
 
 * **Subscribe to incoming emails** – By default, this is turned off. Turn it on if you want to get notifications about new incoming emails. For modeling, use the **SubscribeToIncomingEmail** Java action. Note that this setting is only supported for IMAP protocols, and some servers may not support it at all. For more information, see the [Subscribing to Incoming Email](#subscribe-incoming-email) section below.
-* **Sanitize email to prevent XSS attacks** – By default, this is turned off, but Mendix strongly recommends turning it on. Turn it on if you want the connector to remove malicious scripts to prevent XSS attacks. To learn more about this option, see [Sanitize Untrusted HTML (To Prevent XSS)](https://jsoup.org/cookbook/cleaning-html/safelist-sanitizer).
-* **Replicate everything in 'Inbox' folder** – By default, this is turned off. When it is off, the connector will fetch the number of emails mentioned in the **Number of emails to retrieve from server** field, based on the selected **Fetch strategy**. Turn this setting on if you want the connector to instead fetch all the emails from the inbox (or another folder that you specify), in the batch size specified in the **Email batch size** field. The emails will be ordered from oldest to newest.
+* **Sanitize email to prevent XSS attacks** – By default, this is turned off, but it is strongly recommended to turn it on. Turn it on if you want the connector to remove malicious scripts to prevent XSS attacks. To learn more about this option, see [Sanitize Untrusted HTML (To Prevent XSS)](https://jsoup.org/cookbook/cleaning-html/safelist-sanitizer).
+* **Replicate everything in 'Inbox' folder** – By default, this is turned off. When it is off, the connector will fetch the number of emails mentioned in the **Number of emails to retrieve from server** field, based on the selected **Fetch strategy**. Turn this setting on if you want the connector to fetch all the emails from the inbox (or another folder that you specify), in the batch size specified in the **Email batch size** field. The emails will be ordered from oldest to newest.
 * **Connection Timeout (milliseconds)** – By default, this is set to **20000**. If you want to adjust the connection timeout duration for sending and receiving emails, you can change this value in the account settings or the **EmailAccount** object.
 
 ## 4 Usage
@@ -168,7 +167,7 @@ When modeling your app in Studio Pro, use the **CreateEmailFromTemplate** Java a
 
 The input parameters are the following:
 
-* **DataObject** – This is an entity object from which you want to extract the placeholder tokens. If you want to retrieve from multiple objects, then create a [non-persistable entity](/refguide/persistability/#non-persistable).
+* **DataObject** – This is an entity object from which you want to extract the placeholder tokens. If you want to retrieve from multiple objects, create a [non-persistable entity](/refguide/persistability/#non-persistable).
 * **EmailTemplate** – This is an email template from which an **EmailMessage** object is created and sent.
 * **Queued** – When **true**, the email message is stored in the **EmailMessage** entity with its status as **Queued**. In this case, you can send it later using a scheduled event. You can use the microflow **SE_SendQueuedEmails** to create scheduled events. You can also create a [task queue](/refguide/task-queue/) and run this microflow in that task queue to minimize system resource usage. Using a task queue, you can set the number of threads, node or cluster-wide scope, time intervals, and other parameters.
 
@@ -178,10 +177,10 @@ Refer to the sample microflow **Sample_ACT_CreateEmailFromTemplateAndThenSend**.
 
 When modeling your app in Studio Pro, use the **SendEmailWithTemplate** Java action to send an email from a template. The input parameters are the following:
 
-* **Data Object** – This is an entity object from which you want to extract the placeholder tokens. If you want to retrieve from multiple objects, then create a [non-persistable entity](/refguide/persistability/#non-persistable).
+* **Data Object** – This is an entity object from which you want to extract the placeholder tokens. If you want to retrieve from multiple objects, create a [non-persistable entity](/refguide/persistability/#non-persistable).
 * **EmailAccount** – This is an email account consisting of the outgoing email configuration.
 * **EmailTemplate** – This is an email template from which an **EmailMessage** object is created and sent.
-* **Queued** – When `true`, the email message is stored in the **EmailMessage** entity with its status as **QUEUED**. In this case, you can send it later using a scheduled event. You can use the **SE_SendQueuedEmails** microflow to create scheduled events. You can also create a [task queue](/refguide/task-queue/) and run this microflow in that task queue to minimize system resource usage. Using a task queue, you can set the number of threads, node or cluster-wide scope, time intervals, and other parameters.
+* **Queued** – When **true**, the email message is stored in the **EmailMessage** entity with its status as **Queued**. In this case, you can send it later using a scheduled event. You can use the **SE_SendQueuedEmails** microflow to create scheduled events. You can also create a [task queue](/refguide/task-queue/) and run the microflow in that task queue to minimize system resource usage. Using a task queue, you can set the number of threads, node or cluster-wide scope, time intervals, and other parameters.
 
 Refer to the sample microflow **Sample_ACT_SendEmailWithTemplate**. To use **To**, **CC**, or **BCC** during runtime, change the **EmailTemplate** object and set the desired values for the attributes, then pass the same **EmailTemplate** object as a parameter to the Java action.
 
@@ -213,7 +212,7 @@ The input parameters are the following:
 
     {{% alert color="warning" %}}If duplicating the **onNewEmailReceivedMicroflow** microflow, do not change the input parameter name or data type. To prevent errors, make sure you have **List of Email_Connector.EmailMessage** as a parameter to this microflow.{{% /alert %}}
 
-* **onSubscriptionStateChangedMicroflow** – This is a microflow that is triggered when the subscription state is changed; the state can be any of the following values:
+* **onSubscriptionStateChangedMicroflow** – This is a microflow that is triggered when the subscription state is changed. The state can be any of the following values:
     * `SUBSCRIPTIONFAILED`
     * `CONNECTIONTOSERVERLOST`
     * `CONNECTIONRETRYEXHAUSTED`
@@ -228,7 +227,7 @@ For some use cases, like triggering actions when a new email is received, you ne
 
 When subscribing to incoming email, keep the following additional considerations in mind:
 
-* Mendix recommends unsubscribing from any incoming email before subscribing to incoming email. This helps prevent the application from having duplicate subscriptions for a single email account. The complete subscription flow is shown in the **SUB_EmailAccount_SubscribeForEmailNotification** microflow.
+* It is recommended to unsubscribe from any incoming email before subscribing to incoming email. This helps prevent the application from having duplicate subscriptions for a single email account. The complete subscription flow is shown in the **SUB_EmailAccount_SubscribeForEmailNotification** microflow.
 
 * The subscription to new emails works only if the email account is configured with IMAP/S protocol and if the email server supports notifications. The subscription will end if the app is stopped. To subscribe again between app restarts, register the **Sample_ASU_SubscribeForEmailNotification** microflow in the **After Startup** option.
 
@@ -255,13 +254,13 @@ To configure an OAuth provider for the authentication code flow, provide the fol
 * **Callback Path** – enter any string, and the callback URL will be autogenerated based on this string
 * **Callback URL** – available on the Azure portal as the **Redirect URI**, which is the URL where the OAuth provider will redirect with the authorization code
 
-To configure an OAuth provider for the client credentials grant flow, provide the following details, which are available on the Azure portal once you have registered your app.
+To configure an OAuth provider for the client credentials grant flow, provide the following details, which are available on the Azure portal once you have registered your app:
 
 * **Client ID**
 * **Client Secret**
 * **Tenant ID**
 
-With Email Connector version 5.2.0 and newer, it is now possible to send emails using a client credentials flow.
+With Email Connector version 5.2.0 and newer, you can send emails using a client credentials flow.
 
 #### 4.7.2 Settings in the Microsoft Azure Portal (Authentication Code Flow)
 
@@ -269,7 +268,7 @@ To register your app on the Azure portal, follow Microsoft's tutorial [Register 
 
 This connector contains functionality for sending and receiving emails, so during the OAuth process, the connector will ask for permissions for sending and receiving emails.
 
-On the [Azure portal](https://portal.azure.com/), ensure that you have the following permissions enabled under the **API permissions** tab on the sidebar:
+On the [Azure portal](https://portal.azure.com/), ensure you have the following permissions enabled under the **API permissions** tab on the sidebar:
 
 {{< figure src="/attachments/appstore/modules/email-connector/app-permissions.png" alt="API permissions for authentication code flow" >}}
 
@@ -279,7 +278,7 @@ To register your app in the Azure portal, follow Microsoft's [Register an app wi
 
 This connector contains functionality for sending and receiving emails, so APIs related to Office 365 Exchange Online need to be given permission along with admin consent.
 
-On the [Azure portal](https://portal.azure.com/), ensure that you have the following permissions enabled under **API permissions** tab on the sidebar:
+On the [Azure portal](https://portal.azure.com/), ensure you have the following permissions enabled under **API permissions** tab on the sidebar:
 
 {{< figure src="/attachments/appstore/modules/email-connector/client-cred-api-permissions.png" alt="API permissions for client credentials flow" >}}
 
@@ -297,7 +296,7 @@ If you encounter any problems with sending or receiving emails, check the **Erro
 
 ### 5.1.1 Gmail Accounts {#gmail-accounts}
 
-Gmail no longer supports basic authentication (usernames and passwords), but you may still be able to set up an account in the Email connector by doing the following:
+Gmail no longer supports basic authentication (user names and passwords), but you may still be able to set up an account in the Email connector by doing the following:
 
 1. Read [Less secure apps & your Google Account](https://support.google.com/accounts/answer/6010255) and turn off the **Less secure app access** setting in your Google account.
 2. Set up an app password to sign in to the Email connector. For more information, see [Sign in with app passwords](https://support.google.com/accounts/answer/185833).
@@ -347,12 +346,12 @@ To add attachments to the email message, do the following:
 
 ### 5.6 Page Styling
 
-If the **Email connector** page styling is affected as you select and view email messages, that is likely due to errors in the email message CSS. To resolve the errors, turn on **Sanitize email to prevent XSS attacks** in [Account Settings](#other-account-settings).
+If the **Email connector** page styling is affected as you select and view email messages, it likely due to errors in the email message CSS. To resolve the errors, turn on **Sanitize email to prevent XSS attacks** in [Account Settings](#other-account-settings).
 
 ### 5.7 Importing Emails with Long Attachment Names
 
-Some email clients (for example Gmail) break down the name of attached files if it is longer than a specific value, and also add the file name in the **Content Type** for an attachment. This can cause an error while fetching or importing emails with long attachment names, for example, *"ERROR - Email_Connector: Attribute 'Email_Connector.Attachment.attachmentContentType' has a maximum length of 200, tried setting a value of length xxx."*. This issue is resolved in version 5.3.0 of the Email Connector.
+Some email clients (for example, Gmail) break down the name of attached files if it is longer than a specific value, and add the file name in the **Content Type** for an attachment. This can cause an error while fetching or importing emails with long attachment names. For example: *"ERROR - Email_Connector: Attribute 'Email_Connector.Attachment.attachmentContentType' has a maximum length of 200, tried setting a value of length xxx."*. This issue is resolved in version 5.3.0 of the Email Connector.
 
 ## 6 Known Errors
 
-If you already have the [included widgets](#included-widgets) in your app, and they are not up to date, you may get a "Some widgets can not be read" error when trying to run locally.
+If you already have the [included widgets](#included-widgets) in your app and they are not up to date, you may get a "Some widgets can not be read" error when trying to run locally.

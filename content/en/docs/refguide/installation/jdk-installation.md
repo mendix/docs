@@ -15,7 +15,7 @@ If you would like to use a different version of the JDK than the one installed d
 
 ## 2 Downloading and Installing the JDK
 
-You can download the Adoptium JDK from the [adoptium.net](https://adoptium.net/) website using one of the following links:
+You can download the Eclipse Temurin JDK from the [adoptium.net](https://adoptium.net/) website using one of the following links:
 
 * [JDK 11](https://adoptium.net/temurin/releases/?version=11)
 * [JDK 17](https://adoptium.net/temurin/releases/?version=17)

@@ -104,26 +104,26 @@ From to time you must update the native dependencies. Therefore, it is important
 
 Set up your developer environment for Android as follows:
 
-* Install a recent Android Studio version.
-* Open the project in `developerapp/android` as existing project or import it as Gradle project.
-* [Update or install a recent SDK](https://developer.android.com/studio/intro/update#sdk-manager).
-* [Install a recent NDK](https://developer.android.com/studio/projects/install-ndk).
-* Switch the Build Variant in Android Studio (on the lower-left side) to `developerappDebug` unless it has been selected by default.
-* Start a Gradle sync.
-* If successful, the green play button should be usable.
+1. Install a recent Android Studio version.
+1. Open the project in `developerapp/android` as existing project or import it as Gradle project.
+1. [Update or install a recent SDK](https://developer.android.com/studio/intro/update#sdk-manager).
+1. [Install a recent NDK](https://developer.android.com/studio/projects/install-ndk).
+1. Switch the Build Variant in Android Studio (on the lower-left side) to `developerappDebug` unless it has been selected by default.
+1. Start a Gradle sync.
+1. If successful, the green play button should be usable.
 
 #### 2.2.1 Remote Debugging
 
 To enable remote debugging, do the following:
 
-* Fill host with <your_ip>:8080 (you can use `localhost:8080` if you are running in an emulator or simulartor)
-* Check the "Enable dev mode checkbox/switch
-* When the app loads, open the app menu:
-    * If you are running on a physical device: 3-tap long press or shake
-    * If you are running on an iOS emulator: press ctrl+cmd+z
-    * If you are running on an Android emulator: press cmd+m (on Mac)
-* Press "Enable remote debugging" from the menu
-* After the Chrome screen pops up, change its url to `localhost:8083/debugger-ui/`.
+1. Fill in host with *<your_ip>:8080* (you can use *localhost:8080* if you are running in an emulator or simulator).
+1. Select **Enable dev mode checkbox/switch**.
+1. When the app loads, open the app menu:
+    * If you are running on a physical device: use a 3-tap long press or shake your device
+    * If you are running on an iOS emulator: press <kbd>{CTRL}</kbd> + <kbd>{CMD}</kbd> + <kbd>{Z}</kbd>
+    * If you are running on an Android emulator on Mac: press <kbd>{CMD}</kbd> + <kbd>{M}</kbd> 
+1. Select **Enable remote debugging** from the menu.
+1. After the Chrome screen pops up, change its URL to *localhost:8083/debugger-ui/*.
 
 #### 2.2.2 Build From Source
 

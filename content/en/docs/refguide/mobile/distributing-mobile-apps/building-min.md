@@ -148,43 +148,48 @@ To work around this, you can do one of the following:
 
 ### 3.1 iOS
 
-* To run iOS FastLane script containing an API key please define the variable `GOOGLE_MAPS_API_KEY` before beta lane. If you run it manually in XCode, change the API key in `ApiKeys.xcconfig` file.
+To configure Google Maps functionality, do the following:
+
+* To run a iOS FastLane script containing an API key, please define the variable `GOOGLE_MAPS_API_KEY` before beta lane. If you run it manually in XCode, change the API key in `ApiKeys.xcconfig` file.
 
 ### 3.2 Android
 
-* To run Android FastLane script containing an API key please define the variables `FIREBASE_API_KEY_1` and `FIREBASE_API_KEY_2` before internal lane. This values can be find in firebase file when downloading from the firebase website. If you run it manually in Android Studio, change the Api keys in `google-services.json` file.
+To configure Google Maps functionality, do the following:
+
+* To run Android a FastLane script containing an API key, please define the variables `FIREBASE_API_KEY_1` and `FIREBASE_API_KEY_2` before internal lane. This values can be find in the Firebase file when downloading it from the Firebase website. If you run it manually in Android Studio, change the API keys in the `google-services.json` file.
 
 ## 4 FAQ
 
-### 4.1. Android syncing breaks
+### 4.1. Android Syncing Breaks
 
-There are a number of reasons why syncing would fail:
+There are a number of reasons why syncing would fail. Please consult the sections below depending on your use case.
 
-#### 4.1.1 A Dependency is Missing or was Falsely Imported (developer error)
+#### 4.1.1 Dependency Missing or was Falsely Imported 
 
-We are trying to keep master working, but something might go wrong from time to time.
-The build logs should point exactly to the offending files, fix the issue and resync.
+We are trying to keep master working, but something might go wrong from time to time. If a dependency is missing or was falsely important due to developer error, we recommend consulting the build logs. The build logs should point exactly to the offending files, allowing you to fix the issue and resync.
 
-#### 4.1.2 Android studio fails to load the NPM modules
+#### 4.1.2 Android Studio Fails to Load NPM modules
 
-If the project explorer does not list any of the NPM modules imported, two things might be ammiss:
+If the project explorer does not list any of the NPM modules imported, check for both of the following situations:
 
-* `npm i` has not been ran yet
-* Android studio caches are borked
+* `npm i` has not been run yet
+* Android Studio caches are not functioning as intended
 
-First one is obvious, for the later, try:
+To solve in the first case, simply run `npm i` as directed above. 
+
+For the second case, do the following:
 
 * `File -> Invalidate Caches / Restart`
 * `Build -> Clean Project`
 
 As a last resort, delete the following folders relatively to the project's directory:
 
-1. Delete the `.gradle` folder
-2. Delete the `.idea` folder
-3. Delete both `build` folders in `/app` and `/mendixNative`
-4. Restart android studio and open the project
+1. Delete the `.gradle` folder.
+2. Delete the `.idea` folder.
+3. Delete both `build` folders in `/app` and `/mendixNative`.
+4. Restart android studio and open the project.
 
-#### 4.1.3 Windows long path limitation
+#### 4.1.3 Windows Long Path Limitation
 
 When building on windows, the NDK build step generates huge paths that might break the build.
 A possible indication is errors in the form of can't find directory or file in `c:\<huge path>`.

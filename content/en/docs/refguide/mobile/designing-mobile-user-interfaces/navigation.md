@@ -114,7 +114,24 @@ The **All** option can be used to close all pages in the current stack.
 
 In addition, you can configure the Open page action to **Clear history** when navigating to a page. This effectively resets the entire navigation system, not just the current stack, and the user will not be able to navigate back from the target page.
 
-### 4.3 Updating Data
+### 4.3 Navigation Transitions
+
+In order to add more flexibility, we offer different options of how the opening screen or popup animation looks like.
+
+You can find and customize them under [Navigation Profile](/refguide/navigation/#1-introduction) section.
+
+{{< figure src="/attachments/refguide/mobile/native-mobile/native-navigation/navigationtransition.png" >}}
+
+By default, all screens and popups will inherit the appropriate behaviour of their Operating System, either iOS or Android. 
+
+Among the available options for screen transitions, you can choose between **"Slide from right"** or **"Scale from center"**. For popups, we have **"Modal Presentation"** and **"Bottom Sheet"** as well. Once you select these options, they will apply to the native mobile app on both Operating Systems.
+
+For specific cases, we also offer an option **"Apply screen options also for popups"**. You can use it if you need your popups to look and behave the same as usual screens. 
+Once you select this option, any popups options will be disabled and dismissed.
+
+It is important to remember that whenever you make changes in this section, a new build of the native mobile app has to be created and distributed. 
+
+### 4.4 Updating Data
 
 It is important to remember that any changes you make to your data will be immediately reflected on all active screens. However, this does not mean that these changes are also committed to the database; that remains an explicit action. Another consequence of this is that your app is responsible for keeping track of (and possibly reverting) changes to data when the user decides to navigate back (for example by pressing the back button) without saving their changes. 
 

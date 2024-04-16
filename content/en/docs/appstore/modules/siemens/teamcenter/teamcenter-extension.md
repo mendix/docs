@@ -14,7 +14,9 @@ The [Teamcenter Extension](link) is a Mendix Extension built using the Mendix Ex
 
 ### 1.1. Pre-requisites {#prerequisities}
 
-The Teamcenter Extension will work with Mendix version 10.6.5 or higher. You also need the following modules installed from the Mendix Marketplace
+The Teamcenter Extension will work with any Mendix version between 10.6.5 to 10.8. Please note 10.6.7 is a Medium Term Release version so this version is recommended.
+
+You also need the following modules installed from the Mendix Marketplace
 1. [Teamcenter Connector](
 https://marketplace.mendix.com/link/component/111627)
 2. [Community Commons](https://marketplace.mendix.com/link/component/170)
@@ -68,13 +70,13 @@ Depending on the configuration, microflows are generated to:
 
 To work with structures, such as BOMs, you need to first create a BOM window in Teamcenter. One can retrieve the root BOM Line from the BOM Window and from there start expanding the structure either line by line or all BOM Lines at the same time. The BOM Lines define the structure (based on the configuration you passed when generating the BOM Window). Each BOM Line is associated with a single Item Revision.
 
-Please be aware that this feature is designed specifically for generating microflows and domain models to retrieve and display simple BOM structures. For other scenarios, consider alternative solutions (suggested solutions provided in brackets):
-•	Working with large or complex BOM structures (use Active Workspace)
-•	For performance concerns (use Active Workspace)
-•	Transferring an entire BOM from Teamcenter to another system (use Active Integration Gateway)
-•	Comparing BOMs from different systems (use Active Integration Gateway)
-•	For BOM authoring (use Active Workspace)
-•	For creating BOM configurations (use Active Workspace)
+Please be aware that this feature is designed specifically for generating microflows and domain models to retrieve and display simple BOM structures (unconfigured or configured). For other scenarios, consider alternative solutions (suggested solutions provided in brackets):
+* Working with large or complex BOM structures (use Active Workspace)
+* For performance concerns (use Active Workspace)
+* Transferring an entire BOM from Teamcenter to another system (use Active Integration Gateway)
+* Comparing BOMs from different systems (use Active Integration Gateway)
+* For BOM authoring (use Active Workspace)
+* For creating BOM configurations (use Active Workspace)
 
 ## 3 Landing Page {#homepage}
 Open the Teamcenter Extension by clicking on menu option View -> Teamcenter inside Mendix Studio Pro. This will open the landing page. You will see two tabs: Menu and Settings. 

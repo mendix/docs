@@ -14,7 +14,7 @@ The [Teamcenter Extension](link) is a Mendix Extension built using the Mendix Ex
 
 ### 1.1. Pre-requisites {#prerequisities}
 
-The Teamcenter Extension will work with any Mendix version between 10.6.5 to 10.8. Please note 10.6.7 is a Medium Term Release version so this version is recommended.
+The Teamcenter Extension will work with any Mendix version between 10.6.5 to 10.8. Please note 10.6.7 is recommended as its a [Medium Term Support Version](https://marketplace.mendix.com/link/studiopro/)
 
 You also need the following modules installed from the Mendix Marketplace
 1. [Teamcenter Connector](

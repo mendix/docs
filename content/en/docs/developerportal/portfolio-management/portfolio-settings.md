@@ -8,7 +8,7 @@ tags: ["portfolio settings", portfolio management"]
 
 ## 1 Introduction
 
-On the **Portfolio Settings** page, you can manage the portfolio settings, such as editing portfolio details and changing privacy settings, as well as delete portfolios.
+On the **Portfolio Settings** page, you can manage the portfolio settings, such as editing portfolio details and changing privacy settings, and you can also delete portfolios.
 
 {{% alert color="info" %}}
 The **Portfolio Settings** page is only available for Portfolio Managers.

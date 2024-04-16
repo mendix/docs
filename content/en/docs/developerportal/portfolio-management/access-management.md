@@ -97,7 +97,7 @@ When there are deactivated members in the portfolio, the **Remove Deactivated Us
 ## 3 Access Requests {#access-requests}
 
 {{% alert color="info" %}}
-This tab is only visible to Portfolio Managers.
+The **Access Requests** tab is only visible to Portfolio Managers.
 {{% /alert %}}
 
 Users from the same company can request to join a restricted or open portfolio.
@@ -117,7 +117,7 @@ The **Access Requests** tab shows all open access requests for the portfolio. Yo
 ## 4 Pending Invites {#pending-invites}
 
 {{% alert color="info" %}}
-This tab is only visible to Portfolio Managers.
+The **Pending Invites** tab is only visible to Portfolio Managers.
 {{% /alert %}}
 
 When a Portfolio Manager invites a user outside the company to join the portfolio, the user gets an invite via email. The user must first accept the invite; then they can access this portfolio. Until the user accepts or rejects the invite, the invite appears on the **Pending Invites** tab. After they accept the invitation, they will appear on the **Members** tab.

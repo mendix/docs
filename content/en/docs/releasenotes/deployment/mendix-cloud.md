@@ -35,11 +35,11 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 * All databases of environments on eligible plans in Mendix Cloud (as specified in the table below) have been migrated to gp3 storage instances. Compared to gp2, gp3 provides higher baseline storage performance. For more information, see [Database IOPS Burst Balance](/developerportal/operate/metrics/#Trends-dbmxdatabaseburstbalance) in the *Metrics* documentation.
 
-    | Mendix Plans      | Storage Instance Type | Storage Size         | Baseline Storage Performance | Provisioned IOPS Range | Provisioned Throughput Range |
-    |-------------------|-----------------------|----------------------|------------------------------|------------------------|------------------------------|
-    | S and M           | gp2                   | Less than 20 GiB     | 100IOPS (3000 Burst)         | 100 - 1197 IOPS        | 128-250 MiB/s                |
-    | L, XL, XXL, and XXXL | gp3                   | Between 20 and 400 GiB | 3000 IOPS / 125 MiB/s        | N/A                    | N/A                          |
-    | XXXL              | gp3                   | 400 GiB and higher   | 12000 IOPS / 500 MiB/s       | 12000 - 64000 IOPS     | 500 - 4000 MiB/s             |
+    | Storage Size           | Storage Instance Type | Baseline Storage Performance      | Provisioned IOPS Range | Provisioned Throughput Range |
+    | ---------------------- | --------------------- | --------------------------------- | ---------------------- | ---------------------------- |
+    | Less than 20 GiB       | gp2                   | 100 IOPS (3000 Burst) / 125 MiB/s | 100 - 1197 IOPS        | 128-250 MiB/s                |
+    | Between 20 and 400 GiB | gp3                   | 3000 IOPS / 125 MiB/s             | N/A                    | N/A                          |
+    | 400 GiB and higher     | gp3                   | 12000 IOPS / 500 MiB/s            | 12000 - 64000 IOPS     | 500 - 4000 MiB/s             |
 
 ### March 7, 2024
 
@@ -139,11 +139,11 @@ For information on the current status of deployment to Mendix Cloud and any plan
 * We added support for gp3 storage instances for databases; this provides higher baseline storage performance compared to gp2. IOPS and throughput performance will be upgraded according to the table below.
 
     * From October 25 onwards, when a customer creates a new DB instance, it is provisioned with a gp3 storage instance if it has a storage size of at least 20 GiB (as specified in the table below). This also occurs when the customer's database is recreated.
-    | Mendix Plans      | Storage Instance Type | Storage Size         | Baseline Storage Performance | Provisioned IOPS Range | Provisioned Throughput Range |
-    |-------------------|-----------------------|----------------------|------------------------------|------------------------|------------------------------|
-    | S and M           | gp2                   | Less than 20 GiB     | 100IOPS (3000 Burst)         | 100 - 1197 IOPS        | 128-250 MiB/s                |
-    | L, XL, XXL, and XXXL | gp3                   | Between 20 and 400 GiB | 3000 IOPS / 125 MiB/s        | N/A                    | N/A                          |
-    | XXXL              | gp3                   | 400 GiB and higher   | 12000 IOPS / 500 MiB/s       | 12000 - 64000 IOPS     | 500 - 4000 MiB/s             |
+    | Storage Size           | Storage Instance Type | Baseline Storage Performance      | Provisioned IOPS Range | Provisioned Throughput Range |
+    | ---------------------- | --------------------- | --------------------------------- | ---------------------- | ---------------------------- |
+    | Less than 20 GiB       | gp2                   | 100 IOPS (3000 Burst) / 125 MiB/s | 100 - 1197 IOPS        | 128-250 MiB/s                |
+    | Between 20 and 400 GiB | gp3                   | 3000 IOPS / 125 MiB/s             | N/A                    | N/A                          |
+    | 400 GiB and higher     | gp3                   | 12000 IOPS / 500 MiB/s            | 12000 - 64000 IOPS     | 500 - 4000 MiB/s             |
 
     * Existing databases eligible for this upgrade will be migrated later. More details will follow.
 

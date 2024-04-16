@@ -8,7 +8,7 @@ tags: ["AR", "VR", "XR", "WebXR"]
 
 ## 1 Introduction
 
-Using WebXR widgets, you can build fully immersive extended reality (XR) experiences that combine both augmented reality (AR) and virtual reality (VR) technologies. The [WebXR module](LINKHERE) contains the following widgets:
+Using WebXR widgets, you can build fully immersive extended reality (XR) experiences that combine both augmented reality (AR) and virtual reality (VR) technologies. The [WebXR module](https://marketplace.mendix.com/link/component/225425) contains the following widgets:
 
 Container widgets:
 

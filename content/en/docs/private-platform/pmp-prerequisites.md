@@ -59,11 +59,12 @@ Your Mendix app will be deployed with and run by the Mendix for Private Cloud Op
 | --- | --- | --- | --- |
 | OS | Linux distribution | Any capable of supporting Kubernetes | |
 | Container orchestration | Kubernetes | See [Supported Providers](/developerportal/deploy/private-cloud-supported-environments/) | |
-| Database | PostgreSQL | Any version supported by Mendix 9.18 | |
+| Container registry | Any supported registry | See [Supported Providers](/developerportal/deploy/private-cloud-supported-environments/) | |
+| Database | [Any supported database](/developerportal/deploy/private-cloud-supported-environments/#databases) | [Any version supported by Mendix 9.18](/developerportal/deploy/private-cloud-supported-environments/#databases) | |
 | Object storage | S3-type Bucket | S3 API compatible | |
-| Application management | Mendix for Private Cloud Operator | 2.x+ | Will be installed by Private Mendix Platform installer |
-| Runtime | Mendix | 9.14.1.46860 | Will be installed by Private Mendix Platform installer |
-| License | Mendix Runtime License | | Will be installed by Private Mendix Platform installer |
+| Application management | Mendix for Private Cloud Operator | 2.12 or above | Will be installed by Private Mendix Platform installer |
+| Runtime | Mendix | 9.18.3.58938 | Will be installed by Private Mendix Platform installer |
+| License | Private Cloud License Manager (PCLM) | Latest | Will be installed by Private Mendix Platform installer<br />Requires PostgreSQL 12 or MS SQL Server 19 or 22, see [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/#prerequisites) for more information |
 | TLS | TLS certificate | | Optional, needs to be provided by you |
 
 ### 4.2 Customer Landscape Integrations
@@ -89,7 +90,7 @@ Private Mendix Platform must connect to services within your premises. Mandatory
 | Type | Tool | Version |
 | --- | --- | --- |
 | Container orchestration | Kubernetes | See [Supported Providers](/developerportal/deploy/private-cloud-supported-environments/) |
-| Database | PostgreSQL | Any version supported by Mendix 9.18 |
+| Database | [Any supported database](/developerportal/deploy/private-cloud-supported-environments/#databases) | [Any version supported by Mendix 9.18](/developerportal/deploy/private-cloud-supported-environments/#databases) |
 | Object storage | S3-type Bucket | S3 API compatible |
 | Application management | Mendix for Private Cloud Operator | 2.12+ |
 | Runtime | Mendix | 9.24+ |

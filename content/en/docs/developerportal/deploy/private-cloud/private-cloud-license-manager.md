@@ -21,7 +21,7 @@ Rather than having to apply and update licenses for each environment individuall
 
 The PCLM runs as a Kubernetes service on your cluster. This means that it can be used by all your Mendix apps which run in namespaces within that cluster.
 
-## 2 Prerequisites
+## 2 Prerequisites{#prerequisites}
 
 To install and use the PCLM, you need the following prerequisites:
 

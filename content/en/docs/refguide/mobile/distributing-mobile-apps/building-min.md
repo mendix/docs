@@ -191,19 +191,19 @@ As a last resort, delete the following folders relatively to the project's direc
 
 #### 4.1.3 Windows Long Path Limitation
 
-When building on windows, the NDK build step generates huge paths that might break the build.
-A possible indication is errors in the form of can't find directory or file in `c:\<huge path>`.
-To fix this:
+When building on windows, the NDK build step generates extremely long paths that might break the build. A possible indication of this problem is errors in the form of "can't find directory or file in `c:\<extremely long path name>`".
 
-1. Open the top level `build.gradle` file
-2. Search for line `allProject { ... }`
-3. Add `buildDir = c:/tmp/${rootProject.name}/${project.name}` after the first `{`
+To fix this issue, do the following:
 
-From now on the output of the builds is being generated in the build dir provided. So if you are looking for the generated apks look there.
+1. Open the top level `build.gradle` file.
+2. Search for line `allProject { ... }`.
+3. Add `buildDir = c:/tmp/${rootProject.name}/${project.name}` after the first `{`.
 
-#### 4.1.4 Android NDK cannot be found
+From now on the output of the builds is being generated in the build directory provided. So if you are looking for the generated APKs, then look there.
 
-For errors that point to the React Native gradle files or native compilation, React Native can't probably find your NDK installation.
+#### 4.1.4 Android NDK Cannot be Found
+
+For errors that point to the React Native Gradle files or native compilation, React Native probably cannot find your NDK installation.
 The easiest way to fix it is to add the path to the NDK to your `PATH`:
 
 Open `~/.bash_profile` or `~/.zshrc`:
@@ -213,98 +213,108 @@ export ANDROID_NDK="~/Library/Android/sdk/ndk/*add-your-ndk-version-number*"
 export PATH=$PATH:$ANDROID_NDK
 ```
 
-## 5. Contribution guide
+## 5 Contribution Guide
+
+For deeper information on the best contributions, see the following:
 
 1. See general recommendation in [README](../README.md)
-2. If the merge request contains changes that impact users, then the merge request should include an update to `CHANGELOG.ios.txt` or `CHANGELOG.android.txt`
-   For example
+1. If the merge request contains changes that impact users, then the merge request should include an update to `CHANGELOG.ios.txt` or `CHANGELOG.android.txt`
+
+For example
 
 ```
 - We deprecated MxAgent. Use the Core.metrics() API instead.
 - We upgraded the embedded database HSQLDB to version 2.6.1.
 ```
 
-## 6. Sample Apps
+## 6 Sample Apps
 
-### 6.1 Updating sample app bundles and assets
+### 6.1 Updating Sample App Bundles and Assets
+
+To update sample app bundles and assets, see the sections below for instructions based on platform.
 
 #### 6.1.1 Android
 
-In `android > app > src > main > assets` (from here on referred to as "A"):
+In `android > app > src > main > assets` (from here on referred to as (A)) there is a `sampleapps.zip` file. 
 
-There is a `sampleapps.zip` file. Once decompressed you will find folders representing sample apps. Each folder's name
-can be arbitrary, but it must match up with an `id` from `sample_apps.json` in (A) folder. The file
-`sample_apps.json` file describes each sample app and has information about/for the sample app. Follow the steps below
-to update the Android developerapp bundle and assets:
+Once decompressed, you will find folders representing sample apps. Each folder's name can be arbitrary, but it must match up with an `id` from `sample_apps.json` in (A). 
 
-1. Unzip the `sampleapps.zip`
-2. Find the folder for the sample app you want to update - reference `sample_apps.json`. `cd` to this folder
-3. In `assets` folder, replace `index.android.bundle` with the file located in 7.3.1
-4. In `assets` folder, delete all other folders (and any files) and replace with contents located in 7.3.2
-5. App thumbnail can be updated by substituting the existing splash.png file located in the app's root folder.
-6. Zip the app folders by selecting all of them and then zip all app folders; rather than zipping the parent directory. Zipped folder should be called `sampleapps.zip`. Note: make sure that the root content of the `.zip` is each sample app folder
-7. In "A", open `sample_apps.json` and bump the version
+The file `sample_apps.json` file describes each sample app and contains information for those sample apps. Follow the steps below
+to update the Android developer app bundle and assets:
+
+1. Unzip `sampleapps.zip`.
+1. Find the folder for the sample app you want to update - reference `sample_apps.json`. 
+1. `cd` to this folder.
+1. In (A), replace `index.android.bundle` with the file located in section 7.3.1.
+1. In (A), delete all other folders (and any files) and replace with contents located in section 7.3.2.
+1. The app thumbnail can be updated by substituting the existing *splash.png* file located in the app's root folder.
+11. Zip the app folders by selecting all of them and then zip all app folders (rather than zipping the parent directory). The zipped folder should be called `sampleapps.zip`. Make sure that the root content of the `.zip` is each sample app folder.
+1. In (A), open `sample_apps.json` and bump the version.
 
 See Section 7 for details on generating a project's bundles and assets.
 
 #### 6.1.2 iOS
 
-In `ios > DeveloperApp > SampleApps > Bundles`:
+In `ios > DeveloperApp > SampleApps > Bundles` there are folders that represent each sample app. 
 
-There are folders that represent each sample app. The folder name can be arbitrary. The `config.json` file describes
-each sample app and each object's `id` property matches the folder name and details information about/for the sample app.
+The folder name can be arbitrary. The `config.json` file describes each sample app, and each object's `id` property matches the folder name and provides details about the sample app. Follow the steps below to update the iOS developer app bundle and assets:
 
-1. Find the folder for the sample app you want to update - reference `config.json`. `cd` to this folder
-2. Replace the `index.bundle` file with the updated one from 7.3.3. Note: make sure to rename the filename to "index.bundle" as it is usually "index.ios.bundle"
-3. Clean the contents of the `assets` folder
-4. Copy all content from 7.3.4 into the `assets` folder
+1. Find the folder for the sample app you want to update - reference `config.json`. 
+1. `cd` to this folder
+1. Replace the `index.bundle` file with the updated one from 7.3.3. Note: make sure to rename the filename to *index.bundle*, as it is usually **index.ios.bundle**.
+1. Clean the contents of the `assets` folder.
+1. Copy all content from 7.3.4 into the `assets` folder.
 
 See Section 7 for details on generating a project's bundles and assets.
 
-## 7. Generating iOS/Android native bundles and assets
+## 7 Generating iOS/Android Native Bundles and Assets
 
 ### 7.1 Using Native Builder UI (also creates native apps to use for testing)
 
-1. In Studio Pro, click `App > Build Native Mobile App`
-2. Click "Configure app for local building"
-3. (Build type) Select a disk location for the native app source code
-4. (Build type) Disable GitHub and App Center cloud services
-5. (Splash screens / App icon / Custom fonts) Use the default splash screen and app icons and no custom fonts (because we need the JavaScript bundle and project assets, this step isn't important but required)
-6. (App details) Select "Portrait" and "Landscape" for app's "orientation selection"
-7. (App details) Select "Phones" and "Tablets" for app's "Device targets selection"
-8. (App capabilities) Disable all capabilities
-9. (App capabilities) If your project contains a widget or action that requires a Google API key, add it.
-10. (Configure app locally) Enter in a version number
-11. (Configure app locally) Enter in a runtime URL - if you want to test the native app, enter an appropriate runtime URL
-12. Click "Configure locally"
+If using Native Builder UI (which also creates native apps to use for testing), do the following to generate iOS/Android native bundles and assets:
+
+1. In Studio Pro, click **App** > **Build Native Mobile App**.
+1. Click **Configure app for local building**.
+1. (Build type) Select a disk location for the native app source code.
+1. (Build type) Disable GitHub and App Center cloud services.
+1. (Splash screens / App icon / Custom fonts) Use the default splash screen and app icons and no custom fonts (because we need the JavaScript bundle and project assets, this step isn't important but required).
+1. (App details) Select **Portrait** and **Landscape** for app's **orientation selection**.
+1. (App details) Select **Phones** and **Tablets** for app's **Device targets selection**.
+1. (App capabilities) Disable all capabilities.
+1. (App capabilities) If your project contains a widget or action that requires a Google API key, add it.
+1. (Configure app locally) Enter in a version number.
+1. (Configure app locally) Enter in a runtime URL - if you want to test the native app, enter an appropriate runtime URL.
+1. Click **Configure locally**.
 
 The native app's source code will be in the disk location selected in step 3. In your Mendix Project directory, in
-`deployment > native > bundle` there will be both the android and iOS bundles and assets.
+**deployment** > **native** > **bundle** there will be both the Android and iOS bundles and assets.
 
 ### 7.2 Using Studio Pro in Dev Mode
 
-1. Add `--enable-dev-mode` in the launch options for Studio Pro executable
-2. In the DEV menu at the topbar, under `NativeUI`, click `Native Packager settings` then enable the native bundles to be created during deployment.
-3. Run the Mendix project
+To generate native bundles and assets while using Studio Pro in developer mode, do the following:
 
-In your Mendix Project directory, in `deployment > native > bundle` there will be both the Android and iOS bundles and assets.
+1. Add `--enable-dev-mode` in the launch options for Studio Pro executable.
+1. In the **DEV** menu in the topbar, under `NativeUI` click `Native Packager settings` then enable the native bundles to be created during deployment.
+1. Run the Mendix project.
 
-### 7.3 Bundle and asset location
+In your Mendix Project directory, in **deployment** > **native** > **bundle** you will find both the Android and iOS bundles and assets.
 
-In your Mendix project folder:
+### 7.3 Bundle and Asset Location
 
-#### 7.3.1 Android bundle
+In your Mendix project folder you will find the files listed below depending on your platform.
 
-In `deployment > native > bundle > android > assets > index.android.bundle`
+#### 7.3.1 Android Bundle
 
-#### 7.3.2 Android assets
+In **deployment** > **native** > **bundle** > **android** > **assets** > **index.android.bundle**
 
-In `deployment > native > bundle > android > res > (all folders and files)`
+#### 7.3.2 Android Assets
 
-#### 7.3.3 iOS bundle
+In **deployment** > **native** > **bundle** > **android** > **res** > **(all folders and files)**
 
-In `deployment > native > bundle > iOS > index.ios.bundle`
+#### 7.3.3 iOS Bundle
 
-#### 7.3.4 iOS assets
+In **deployment** > **native** > **bundle** > **iOS** > **index.ios.bundle**
 
-In `deployment > native > bundle > iOS > assets > (all folders and files)`
+#### 7.3.4 iOS Assets
+
+In **deployment** > **native** > **bundle** > **iOS** > **assets** > **(all folders and files)**

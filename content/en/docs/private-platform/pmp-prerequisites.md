@@ -90,7 +90,7 @@ Private Mendix Platform must connect to services within your premises. Mandatory
 | Type | Tool | Version |
 | --- | --- | --- |
 | Container orchestration | Kubernetes | See [Supported Providers](/developerportal/deploy/private-cloud-supported-environments/) |
-| Database | [Any supported database](/developerportal/deploy/private-cloud-supported-environments/#databases) | [Any version supported by Mendix 9.18](/developerportal/deploy/private-cloud-supported-environments/#databases) |
+| Database | [Any supported database](/developerportal/deploy/private-cloud-supported-environments/#databases) | [Any version supported by your version of Mendix](/developerportal/deploy/private-cloud-supported-environments/#databases) |
 | Object storage | S3-type Bucket | S3 API compatible |
 | Application management | Mendix for Private Cloud Operator | 2.12+ |
 | Runtime | Mendix | 9.24+ |

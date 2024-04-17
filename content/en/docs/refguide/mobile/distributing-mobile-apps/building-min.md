@@ -60,7 +60,7 @@ To build and run the native mobile app successfully, you must complete several s
 
 Follow the instructions provided by Google [here](https://developers.google.com/maps/documentation/android-sdk/get-api-key) to obtain an API key.
 
-##### 1.2.2.2 Integrate the API key into an Android Project
+##### 1.2.2.2 Integrate the API Key into an Android Project
 
 Open your *android/app/src/main/AndroidManifest.xml* file and find the section with the placeholder `{{GEO_API_KEY}}`. Replace `{{GEO_API_KEY}}` with your actual Google Maps API key:
 
@@ -69,7 +69,7 @@ Open your *android/app/src/main/AndroidManifest.xml* file and find the section w
          android:value="YOUR_API_KEY_HERE"/>
 ```
 
-##### 1.2.2.3 Integrate the API key into an iOS Project
+##### 1.2.2.3 Integrate the API Key into an iOS Project
 
 To run iOS Fastlane script containing an API key, define the variable `GOOGLE_MAPS_API_KEY` before beta lane. If you run it manually in XCode, change the API key in the *ApiKeys.xcconfig* file.
 
@@ -165,7 +165,7 @@ Android builds are made via Android Studio:
 1. Select `developerappRelease` from the build variants, and tick `V1` and `V2` Signatures.
 1. Build your Android app.
 
-## 3. Set Up Your Developer Environment
+## 3. Set Up your Developer Environment
 
 ### 3.1 iOS
 
@@ -183,8 +183,8 @@ Mendix uses CocoaPods to manage the iOS dependencies, which you can set up as fo
 
 From to time you must update the native dependencies. Therefore, it is important to re-install the node modules and CocoaPods in the following cases:
 
-- After a branch switch
-- If the app exhibits erratic or odd behavior
+* After a branch switch
+* If the app exhibits erratic or odd behavior
 
 ### 3.2 Android
 
@@ -211,7 +211,7 @@ To enable remote debugging, do the following:
 1. Select **Enable remote debugging** from the menu.
 1. After the Chrome screen pops up, change its URL to _localhost:8083/debugger-ui/_.
 
-#### 3.2.2 Build From Source
+#### 3.2.2 Build from Source
 
 Building from source is required to be able to debug React Native specific code.
 
@@ -337,7 +337,7 @@ to update the Android developer app bundle and assets:
 1. Zip the app folders by selecting all of them and then zip all app folders (rather than zipping the parent directory). The zipped folder should be called `sampleapps.zip`. Make sure that the root content of the `.zip` is each sample app folder.
 1. In (A), open `sample_apps.json` and bump the version.
 
-See [Generating iOS/Android Native Bundles and Assets](#generate-native-bundles) for details on generating a project's bundles and assets.
+See [Generating iOS & Android Native Bundles and Assets](#generate-native-bundles) for details on generating a project's bundles and assets.
 
 #### 7.1.2 iOS
 
@@ -351,13 +351,13 @@ The folder name can be arbitrary. The `config.json` file describes each sample a
 1. Clean the contents of the `assets` folder.
 1. Copy all content from [iOS Assets](#ios-assets) into the `assets` folder.
 
-See [Generating iOS/Android Native Bundles and Assets](#generate-native-bundles) for details on generating a project's bundles and assets.
+See [Generating iOS & Android Native Bundles and Assets](#generate-native-bundles) for details on generating a project's bundles and assets.
 
-## 8 Generating iOS/Android Native Bundles and Assets {#generate-native-bundles}
+## 8 Generating iOS & Android Native Bundles and Assets {#generate-native-bundles}
 
 ### 8.1 Using Native Builder UI (also creates native apps to use for testing)
 
-If using Native Builder UI (which also creates native apps to use for testing), do the following to generate iOS/Android native bundles and assets:
+If using Native Builder UI (which also creates native apps to use for testing), do the following to generate iOS & Android native bundles and assets:
 
 1. In Studio Pro, click **App** > **Build Native Mobile App**.
 1. Click **Configure app for local building**.

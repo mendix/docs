@@ -17,8 +17,8 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 #### Fixes
 
-* We fixed an issue where updating a service contract from the Search page results in OData services not getting parsed correctly.
-* We addressed an issue where clicking browse from the hub URL redirects to Home page instead of Search page.
+* We fixed an issue where updating a service contract from the **Search** page results in incorrectly parsed OData services.
+* We addressed an issue where clicking **Browse** from the hub URL redirects to the **Home** page instead of the **Search** page.
 
 ### April 11, 2024
 

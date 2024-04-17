@@ -5,6 +5,7 @@ weight: 20
 description: "This guide will help you build a MIN app compatible with a non-LTS Studio Pro version."
 tags: ["distribution", "app store", "ios", "android", "make it native"]
 draft: true
+banner: "This is a draft and will not be rendered in the production website."
 ---
 
 ## 1 Introduction 

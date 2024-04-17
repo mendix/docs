@@ -84,11 +84,10 @@ Fastlane is an all in one CI tool that automates the process of building and dep
 1. Install fastlane by gem
    * `sudo gem install fastlane -NV`
 1. Add these lines in `~/.bash_profile` or `~/.zshrc` (point the version to version installed):
-
-```bash
-export FASTLANE_PATH="/usr/local/lib/ruby/gems/2.6.0/gems/fastlane-2.134.0/bin"
-export PATH="$FASTLANE_PATH:$PATH"
-```
+   ```bash
+   export FASTLANE_PATH="/usr/local/lib/ruby/gems/2.6.0/gems/fastlane-2.134.0/bin"
+   export PATH="$FASTLANE_PATH:$PATH"
+   ```
 
 ## 2 Building
 
@@ -117,15 +116,12 @@ For the **Beta** and **Release** lanes, before building, be sure to change the *
 To install Fastlane on your machine, do the following:
 
 1. Install Fastlane via gem:
-
-- `sudo gem install fastlane -NV`
-
+   * `sudo gem install fastlane -NV`
 1. Add these lines in ~/.bash_profile or ~/.zshrc (point the version to version installed):
-
-```bash
-export FASTLANE_PATH="/usr/local/lib/ruby/gems/2.6.0/gems/fastlane-2.134.0/bin"
-export PATH="$FASTLANE_PATH:$PATH"
-```
+   ```bash
+   export FASTLANE_PATH="/usr/local/lib/ruby/gems/2.6.0/gems/fastlane-2.134.0/bin"
+   export PATH="$FASTLANE_PATH:$PATH"
+   ```
 
 #### 2.1.2 Build an App for Internal Testing
 

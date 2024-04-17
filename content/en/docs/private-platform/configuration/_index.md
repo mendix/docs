@@ -169,7 +169,7 @@ In this section, you can configure settings related to managing your app project
 
 ### 7.1 Version Control System
 
-To create applications and collaborate, configure the connection to your version control repository. GitHub, Gitlab and Bitbucket are supported as version control systems. For more information, see [Configuring the Version Control System for Private Mendix Platform](/private-mendix-platform-version-control/).
+To create applications and collaborate, configure the connection to your version control repository. GitHub, GitLab, and Bitbucket are supported as version control systems. For more information, see [Configuring the Version Control System for Private Mendix Platform](/private-mendix-platform-version-control/).
 
 ### 7.2 CI/CD
 

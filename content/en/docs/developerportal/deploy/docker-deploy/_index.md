@@ -12,7 +12,7 @@ tags: ["Docker", "Cloud", "container", "push image", "build image"]
 
 Docker is an open source container technology. With Mendix, you can use it for simple deployments, particularly when running local or development versions of your app. However, it lacks some scaling and integration features.
 
-The Docker Buildpack simplifies the creation of Docker images locally, yet it falls short in terms of running, managing, and operating them effectively compared to the capabilities offered by Mendix for Private Cloud. Leveraging Mendix for Private Cloud means entrusting the Mendix Operator to automate these essential tasks whenever Kubernetes handles your containers. The following diagram illustrates the disparity between Docker Buildpack and Mendix Operator:
+The Docker Buildpack simplifies the creation of Docker images locally, but it falls short in terms of running, managing, and operating them effectively compared to the capabilities offered by Mendix for Private Cloud. Leveraging Mendix for Private Cloud means entrusting the Mendix Operator to automate these essential tasks whenever Kubernetes handles your containers. The following diagram illustrates the disparity between Docker Buildpack and Mendix Operator:
 
 {{< figure src="/attachments/developerportal/deploy/docker-deploy/dockerbuildpack-vs-mxoperator.png" >}}
 

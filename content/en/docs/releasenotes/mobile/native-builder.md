@@ -16,7 +16,7 @@ The [Native Builder](/refguide8/native-builder/) is a command line input tool wh
 We are heavily invested in streamlining the experience of building your apps and are continuously improving upon the tool's capabilities. For more information on using the Native Builder, see [Build a Mendix Native App in the Cloud](/refguide9/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/).
 
 {{% alert color="warning" %}}
-Please update to Native Builder v3.2.1 or higher. Version 3.2.1 includes the fixes required to accommodate Github's transition of using **main** instead of **master** for naming the default branch for new repositories. 
+Please update to Native Builder v3.2.1 or higher. Version 3.2.1 includes the fixes required to accommodate GitHub's transition of using **main** instead of **master** for naming the default branch for new repositories. 
 {{% /alert %}}
 
 ## 3.2.2

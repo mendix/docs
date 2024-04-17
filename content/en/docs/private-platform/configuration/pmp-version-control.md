@@ -59,9 +59,9 @@ The user ID (integer number) of this GitLab user. It is not the user name. You c
 
 The access token of this GitLab user.
 
-## 3 Github
+## 3 GitHub
 
-This section describes the configuration of a Github repository.
+This section describes the configuration of a GitHub repository.
 
 ### 3.1 DevOps Settings
 

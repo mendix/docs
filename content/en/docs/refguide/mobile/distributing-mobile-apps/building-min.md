@@ -2,88 +2,88 @@
 title: "Use MIN With Older Studio Pro Versions"
 url: /refguide/mobile/distributing-mobile-apps/min-older-sp/
 weight: 20
-description: "This guide will help you build a Make it Native app."
+description: "This guide will help you build a MIN app compatible with a non-LTS Studio Pro version."
 tags: ["distribution", "app store", "ios", "android", "make it native"]
 ---
 
-## 1 Getting started
+## 1 Introduction 
 
-1. Clone the repository
+The Make It Native (MIN) app allows you to test native apps in development with ease. We have also made it open source, allowing you to change it depending on your needs. Depending on your Mendix version, you can use the MIN app in one of two ways:
 
-```bash
-git clone https://github.com/mendix/make-it-native.git
-```
+* **Long Term Support (LTS) Studio Pro Version** — If you want to use the Make It Native app to test your native apps, you must choose a [MIN version](/releasenotes/mobile/make-it-native-parent/) compatible with your LTS version of Studio Pro. 
+* **Non-LTS Studio Pro Version** — If you choose use a non-LTS version of Studio Pro and still wish to use the MIN app, then you will have to manually build a version of the MIN that is compatible with your version of Studio Pro.
 
-2. Navigate to the project directory
+This guide explains how to complete the second bullet's task: build a MIN app compatible with a non-LTS Studio Pro version.
 
-```bash
-cd make-it-native
-```
+### 1.1 Getting Started
 
-3. Install dependencies
+First things first, make sure you clone your repo and install necessary software:
 
-```bash
-npm install
-```
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/mendix/make-it-native.git
+   ```
+1. Navigate to the project directory:
+   ```bash
+   cd make-it-native
+   ```
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+1. Install pods:
+   ```bash
+   cd ios && pod install
+   ```
 
-4. Install pods
+### 1.2 Additional Setup Requirements
 
-```bash
-cd ios && pod install
-```
-
-### 1.2 Additional setup requirements
-
-To build and run the mobile application successfully, you must complete several setup steps related to external services like Firebase and Google Maps. Follow these instructions carefully:
+To build and run the native mobile app successfully, you must complete several setup steps related to external services like Firebase and Google Maps. Follow the instructions below carefully.
 
 #### 1.2.1 Setting up Firebase
 
 1. Create a Firebase Project:
-   * Go to the [Firebase Console](https://console.firebase.google.com/) and create a new project.
-2. Add Your App to the Firebase Project:
-   * For Android, add an Android application and follow the instructions.
-   * For iOS, add an iOS application and follow the instructions.
-3. Download Configuration Files:
-   * For Android, download the `google-services.json` file.
-   * For iOS, download the `GoogleService-Info.plist` file.
-4. Place Configuration Files in Your Project:
-   * For Android, move the `google-services.json` file to the `android/app` directory.
-   * For iOS, move the `GoogleService-Info.plist` file to the `ios/DeveloperApp` directory.
+   1. Go to the [Firebase Console](https://console.firebase.google.com/) and create a new project.
+1. Add your App to the Firebase Project:
+   1. For Android, add an Android application and follow the website's instructions.
+   1. For iOS, add an iOS application and follow the website's instructions.
+1. Download configuration files:
+   1. For Android, download the *google-services.json* file.
+   1. For iOS, download the *GoogleService-Info.plist* file.
+1. Place Configuration Files in Your Project:
+   1. For Android, move the *google-services.json* file to the **android/app** directory.
+   1. For iOS, move the *GoogleService-Info.plist* file to the **ios/DeveloperApp** directory.
 
 #### 1.2.2 Setting up Google Maps API
 
-##### 1.2.2.1 Get a Google Maps API key
+##### 1.2.2.1 Getting a Google Maps API key
 
 Follow the instructions provided by Google [here](https://developers.google.com/maps/documentation/android-sdk/get-api-key) to obtain an API key.
 
-##### 1.2.2.2 Integrate the API key into your Android project
+##### 1.2.2.2 Integrate the API key into an Android Project
 
-Open your `android/app/src/main/AndroidManifest.xml` file and find the section with the placeholder {{GEO_API_KEY}}. Replace {{GEO_API_KEY}} with your actual Google Maps API key:
+Open your *android/app/src/main/AndroidManifest.xml* file and find the section with the placeholder `{{GEO_API_KEY}}`. Replace `{{GEO_API_KEY}}` with your actual Google Maps API key:
 
 ```xml
 <meta-data android:name="com.google.android.geo.API_KEY"
          android:value="YOUR_API_KEY_HERE"/>
 ```
 
-##### 1.2.2.3 Integrate the API key into your iOS project
+##### 1.2.2.3 Integrate the API key into an iOS Project
 
-To run iOS fastlane script containing an API key please define the variable `GOOGLE_MAPS_API_KEY` before beta lane. If you run it manually in XCode, change the Api key in `ApiKeys.xcconfig` file.
+To run iOS Fastlane script containing an API key, define the variable `GOOGLE_MAPS_API_KEY` before beta lane. If you run it manually in XCode, change the API key in the *ApiKeys.xcconfig* file.
 
-## 2 Building Application
+## 2 Building your Application
 
-Once you have completed the additional setup requirements, you can proceed
-with building your application. You can use Fastlane for building the apps.
+Once you have completed the additional setup requirements, you can proceed with building your applications. You can use Fastlane to build the apps.
 
-### 2.1 Fastlane
+### 2.1 Installing Fastlane
 
-#### 2.1.1 How to install Fastlane?
+Fastlane is an all in one CI tool that automates the process of building and deploying apps. To install it, do the following:
 
-Fastlane is an all in one CI tool that automates the process
-of building and deploying.
-
-- Install fastlane by gem
-  `sudo gem install fastlane -NV`
-- Add this lines in ~/.bash_profile or ~/.zshrc (point the version to version installed)
+1. Install fastlane by gem
+   * `sudo gem install fastlane -NV`
+1. Add these lines in `~/.bash_profile` or `~/.zshrc` (point the version to version installed):
 
 ```bash
 export FASTLANE_PATH="/usr/local/lib/ruby/gems/2.6.0/gems/fastlane-2.134.0/bin"
@@ -92,11 +92,9 @@ export PATH="$FASTLANE_PATH:$PATH"
 
 ## 2 Building
 
-If you want to use the Make It Native app to test your native apps, you must choose a [MIN version](/releasenotes/mobile/make-it-native-parent/) compatible with your version of Studio Pro. If, however, you wish to use a version of Studio Pro that is not an LTS (Long Term Support) version and still use the MIN, then you will have to manually build a version of the MIN that is compatible with your version of Studio Pro.
+For building iOS apps, Mendix uses Fastlane. Fastlane is an all in one continuous integration tool that automates building and deploying.
 
-Mendix uses Fastlane for building iOS apps. Fastlane is an all in one continuous integration tool that automates building and deploying.
-
-For Android the process is still manual.
+For building Android apps, the process is still manual.
 
 ### 2.1 iOS
 
@@ -104,9 +102,9 @@ iOS builds are produced via Fastlane.
 
 The configuration for Fastlane resides in `/ios/fastlane/Fastlane`. Currently three lanes are configured internal, build, and release:
 
-- Internal should be used for internal test builds as in example detox
-- Beta pushes the resulting `ipa` to Test Flight
-- Release creates a new release in App Store Connect
+* Internal should be used for internal test builds as in example detox
+* Beta pushes the resulting `ipa` to Test Flight
+* Release creates a new release in App Store Connect
 
 Currently submitting the app for review is a manual step, but this might change.
 
@@ -207,9 +205,9 @@ To enable remote debugging, do the following:
 1. Fill in host with _<your_ip>:8080_ (you can use _localhost:8080_ if you are running in an emulator or simulator).
 1. Select **Enable dev mode checkbox/switch**.
 1. When the app loads, open the app menu:
-   - If you are running on a physical device: use a 3-tap long press or shake your device
-   - If you are running on an iOS emulator: press <kbd>{CTRL}</kbd> + <kbd>{CMD}</kbd> + <kbd>{Z}</kbd>
-   - If you are running on an Android emulator on Mac: press <kbd>{CMD}</kbd> + <kbd>{M}</kbd>
+   * If you are running on a physical device: use a 3-tap long press or shake your device.
+   * If you are running on an iOS emulator: press <kbd>{CTRL}</kbd> + <kbd>{CMD}</kbd> + <kbd>{Z}</kbd>.
+   * If you are running on an Android emulator on Mac: press <kbd>{CMD}</kbd> + <kbd>{M}</kbd>.
 1. Select **Enable remote debugging** from the menu.
 1. After the Chrome screen pops up, change its URL to _localhost:8083/debugger-ui/_.
 
@@ -227,10 +225,10 @@ Building from source can be done as follows:
 #### 3.2.3 Remote Debugging on an Android Emulator
 
 You cannot use `localhost`, as it points to the Android simulator instead of the host machine.
-To work around this, you can do one of the following:
+To work around this, do one of the following:
 
-- Use `10.0.2.2:8080` as the URL.
-- Run `adb reverse tcp:8080 tcp:8080` and `adb reverse tcp:8083 tcp:8083` from your console.
+* Use `10.0.2.2:8080` as the URL.
+* Run `adb reverse tcp:8080 tcp:8080` and `adb reverse tcp:8083 tcp:8083` from your console.
 
 ## 4 Google Maps Configuration
 
@@ -238,13 +236,13 @@ To work around this, you can do one of the following:
 
 To configure Google Maps functionality, do the following:
 
-- To run a iOS FastLane script containing an API key, please define the variable `GOOGLE_MAPS_API_KEY` before beta lane. If you run it manually in XCode, change the API key in `ApiKeys.xcconfig` file.
+* To run a iOS FastLane script containing an API key, please define the variable `GOOGLE_MAPS_API_KEY` before beta lane. If you run it manually in XCode, change the API key in `ApiKeys.xcconfig` file.
 
 ### 4.2 Android
 
 To configure Google Maps functionality, do the following:
 
-- To run Android a FastLane script containing an API key, please define the variables `FIREBASE_API_KEY_1` and `FIREBASE_API_KEY_2` before internal lane. This values can be find in the Firebase file when downloading it from the Firebase website. If you run it manually in Android Studio, change the API keys in the `google-services.json` file.
+* To run Android a FastLane script containing an API key, please define the variables `FIREBASE_API_KEY_1` and `FIREBASE_API_KEY_2` before internal lane. This values can be find in the Firebase file when downloading it from the Firebase website. If you run it manually in Android Studio, change the API keys in the `google-services.json` file.
 
 ## 5 FAQ
 
@@ -260,15 +258,15 @@ We are trying to keep master working, but something might go wrong from time to 
 
 If the project explorer does not list any of the NPM modules imported, check for both of the following situations:
 
-- `npm i` has not been run yet
-- Android Studio caches are not functioning as intended
+* `npm i` has not been run yet
+* Android Studio caches are not functioning as intended
 
 To solve in the first case, simply run `npm i` as directed above.
 
 For the second case, do the following:
 
-- `File -> Invalidate Caches / Restart`
-- `Build -> Clean Project`
+* `File -> Invalidate Caches / Restart`
+* `Build -> Clean Project`
 
 As a last resort, delete the following folders relatively to the project's directory:
 
@@ -284,8 +282,8 @@ When building on windows, the NDK build step generates extremely long paths that
 To fix this issue, do the following:
 
 1. Open the top level `build.gradle` file.
-2. Search for line `allProject { ... }`.
-3. Add `buildDir = c:/tmp/${rootProject.name}/${project.name}` after the first `{`.
+1. Search for line `allProject { ... }`.
+1. Add `buildDir = c:/tmp/${rootProject.name}/${project.name}` after the first `{`.
 
 From now on the output of the builds is being generated in the build directory provided. So if you are looking for the generated APKs, then look there.
 

@@ -135,21 +135,21 @@ In the import mapping sidebar, you can configure which Teamcenter properties, re
 
 The sidebar shows all properties, references, and relations for the configured Teamcenter object. Depending on the use case, each one of them is accompanied with check boxes for reading and writing for you to configure what to include when retrieving data from or creating data in Teamcenter.
 
-You often see that check boxes are selected by default or disabled. In general, the following rules apply.:
-1.	Properties that are already available on the Mendix entity or one of its generalizations are checked by default and cannot be unchecked.
-2.	Properties, references, and relations for Marketplace entities are disabled by default as it is not good practice to change Mendix marketplace content.
+You often see that check boxes are selected by default or grayed out. In general, the following rules apply:
+1.	Properties that are already available on the Mendix entity or one of its generalizations are selected by default and cannot be unchecked.
+2.	Properties, references, and relations for Marketplace entities are disabled by default, as it is not good practice to change Mendix marketplace content.
 
-As an example, if a read checkbox is checked and disabled, it means that property already exists as an attribute on the selected object or one of its generalizations. Similarly, if a write checkbox is checked and disabled, it means the property is required during creation or revision of the selected object.
+As an example, if a read ({{% icon name="view" %}}) checkbox is selected and grayed out, it means that property already exists as an attribute on the selected object or one of its generalizations. Similarly, if a write ({{% icon name="pencil" %}}) check box is selected and grayed out, it means the property is required during creation or revision of the selected object.
 
 {{< figure src="/attachments/appstore/modules/teamcenter-extension/attributes-associations.png" class="image-border" >}}
 
-You can select and deselect the properties, references, and relations depending on the data you need from Teamcenter. When you select a reference or relation, a new placeholder entity will be added to the object mapping tree. You will need to perform the import mapping for these referenced/related objects in a subsequent step (business object mapping and selection of Teamcenter properties, references, and relations).
+You can select and deselect the properties, references, and relations depending on the data you need from Teamcenter. When you select a reference or relation, a new placeholder entity will be added to the object mapping tree. You will need to perform the import mapping for these referenced or related objects in a subsequent step (business object mapping and selection of Teamcenter properties, references, and relations).
 
 ### 3.4 Microflows and Domain Model
 
-Once you've finished import mapping, click on Generate button to create microflows for the selected use case and its corresponding domain model. These artifacts can be used in your app logic.
+Once you finished import mapping, click **Generate** to create microflows for the selected use case and its corresponding domain model. These artifacts can be used in your app logic.
 
 {{< figure src="/attachments/appstore/modules/teamcenter-extension/microflow.png" class="image-border" >}}
 
 
-To see Teamcenter Extension in action, please download and play with the Teamcenter Extension Sample App, which is also available for free on the Mendix Marketplace.
+To see Teamcenter Extension in action, download and play with the Teamcenter Extension Sample App, which is available for free on the Mendix Marketplace.

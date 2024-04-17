@@ -36,35 +36,41 @@ The extension offers the following integration options:
 * Revise item revisions
 * Create BOM window
 
-### 2.1 Get Item Revisions from Teamcenter {#getitemrevision}
+## 3 Configuration
 
-The Get ItemRevision action allows you to generate a microflow to search for and retrieve ItemRevisions or specialization thereof from Teamcenter, and the corresponding domain model. The resulting microflow implements the Saved Query “Item Revision...” from Teamcenter.
+### 3.1 Actions
 
-### 2.2 Get Workspace Objects {#getworkspaceobjects}
-The Get Workspace Objects action allows you to configure and generate a microflow to search for and retrieve Workspace Objects or specialization thereof from Teamcenter, and the corresponding domain model. This action implements the Saved Query "General.." from Teamenter
+#### 3.1.1 Get Item Revisions from Teamcenter {#getitemrevision}
 
-### 2.3 Create Item and Item Revision {#createitem-and-itemrevision}
-The Create Item and Item Revision action allows you to configure and generate a microflow to create an Item with ItemRevision or specializations thereof in Teamcenter, and the corresponding domain model. The resulting microflow implements the Create Object and Update Properties actions from the Teamcenter Connector. With the Create Object action, the Item and ItemRevision get created in Teamcenter, setting the Teamcenter properties that need to be set upon creation; with the Update Properties action, the remaining properties are updated in Teamcenter.
+The `Get ItemRevision` action allows you to generate a microflow to search for and retrieve `ItemRevisions` or its specialization from Teamcenter and the corresponding domain model. The resulting microflow implements the saved query `Item Revision...` from Teamcenter.
 
-### 2.4 Update Item and Item Revision {#updateitem-and-itemrevision}
-The Update Item and Item Revision action allows you to generate a microflow to update an Item with ItemRevision or specializations thereof in Teamcenter and the corresponding domain model. The resulting microflows implements the Update Properties action from the TcConnector. 
+#### 3.1.2 Get Workspace Objects {#getworkspaceobjects}
+The `Get Workspace Objects` action allows you to configure and generate a microflow to search for and retrieve workspace objects or their specialization from Teamcenter and the corresponding domain model. This action implements the saved query `General..` from Teamenter
 
-### 2.5 Revise Item Revision {#reviseitem-and-itemrevision}
+#### 3.1.3 Create Item and Item Revision {#createitem-and-itemrevision}
+The `Create Item and Item Revision` action allows you to configure and generate a microflow to create an Item with `ItemRevision` or its specializations in Teamcenter and the corresponding domain model. The resulting microflow implements the `Create Object and Update Properties` actions from the Teamcenter Connector. With the `Create Object` action, the `Item` and `ItemRevision` get created in Teamcenter, setting the Teamcenter properties that need to be set upon creation. With the `Update Properties` action, the remaining properties are updated in Teamcenter.
+
+#### 3.1.4 Update Item and Item Revision {#updateitem-and-itemrevision}
+
+The `Update Item and Item Revision` action allows you to generate a microflow to update an `Item` with `ItemRevision` or their specializations in Teamcenter and the corresponding domain model. The resulting microflows implements the `Update Properties` action from the Teamcenter Connector. 
+
+#### 3.1.5 Revise Item Revision {#reviseitem-and-itemrevision}
+
 The Revise Item and Item Revision action allows you to generate a microflow to revise an ItemRevision or specializations thereof in Teamcenter and the corresponding domain model. The resulting microflow implements the Revise Object and Update Properties actions from the Teamcenter Connector. With the Revise Object action, a new ItemRevision is created, setting the Teamcenter properties that need to be set upon revising; with the Update Properties action, the remaining properties are updated in Teamcenter.
 
-### 2.6 Create BOM Window {#create-bom-window}
+#### 3.1.6 Create BOM Window {#create-bom-window}
 The Create BOM Window action allows you to generate microflows and corresponding domain model to configure a BOM Window and retrieve structure data from Teamcenter. This feature supports the retrieval of structures with:
 * RevisionRule (or default RevisionRule)
 * VariantRule
 * BOMWindow property flags
 
 Depending on the configuration, microflows are generated to:
-* create BOMWindow (implementing the Create BOM Windows2 action from the TcConnector)
-* retrieve RevisionRules (implementing the Get Revision Rules action from the TcConnector)
-* retrieve VariantRules (implementing the Get Variant Rule action from the TcConnector)
-* expand a single BOMLine (implementing the Expand One Level 2 action from the TcConnector)
-* expand all BOMLines (implementing the Expand All Levels action from the TcConnector)
-* close the BOMWindow (implementing the Close BIM Windows action from the TcConnector)
+* create BOMWindow (implementing the Create BOM Windows2 action from the Teamcenter Connector)
+* retrieve RevisionRules (implementing the Get Revision Rules action from the Teamcenter Connector)
+* retrieve VariantRules (implementing the Get Variant Rule action from the Teamcenter Connector)
+* expand a single BOMLine (implementing the Expand One Level 2 action from the Teamcenter Connector)
+* expand all BOMLines (implementing the Expand All Levels action from the Teamcenter Connector)
+* close the BOMWindow (implementing the Close BIM Windows action from the Teamcenter Connector)
 * get the root BOMLine for a BOMWindow.
 
 To work with structures, such as BOMs, you need to first create a BOM window in Teamcenter. One can retrieve the root BOM Line from the BOM Window and from there start expanding the structure either line by line or all BOM Lines at the same time. The BOM Lines define the structure (based on the configuration you passed when generating the BOM Window). Each BOM Line is associated with a single Item Revision.
@@ -77,7 +83,7 @@ Please be aware that this feature is designed specifically for generating microf
 * For BOM authoring (use Active Workspace)
 * For creating BOM configurations (use Active Workspace)
 
-## 3 Landing Page {#homepage}
+### 3.2 Landing Page {#homepage}
 Open the Teamcenter Extension by clicking on menu option View -> Teamcenter inside Mendix Studio Pro. This will open the landing page. You will see two tabs: Menu and Settings. 
 
 The Menu tab displays use cases or actions you can create artifacts for, using the extension. The Settings tab allows you to provide details of your Teamcenter instance to connect to, while using the extension.
@@ -90,7 +96,7 @@ The **Settings** tab displays Teamcenter configuration page. This is where you c
 
 The extension supports both http and https connections. Additionally, it supports certificates that have .crt and .pfx file extensions.
 
-## 4 Import mapping {#importmapping}
+### 3.3 Import mapping {#importmapping}
 
 Clicking on any one of the actions opens an empty [import mapping](https://docs.mendix.com/refguide/import-mappings/) page. Here you can define what data you want to retrieve from Teamcenter and how to handle this data in Mendix. Depending on the action, the import mapping page starts with one or multiple entities/objects to configure, one per business object that need to be configured. 
 
@@ -102,7 +108,7 @@ In the Teamcenter Extension, the import mapping consists of two steps:
 
 {{< figure src="/attachments/appstore/modules/teamcenter-extension/domain-model.png" class="image-border" >}}
 
-### 4.1 Object mapping {#objectmapping}
+#### 3.3.1 Object mapping {#objectmapping}
 
 Clicking on any one of the empty box in import mapping page opens the object mapping dialog. On the left side of the dialog, a tree with all relevant business objects available from the configured Teamcenter instance is displayed. If you have created any custom business objects in Teamcenter BMIDE, those objects will be shown as well. The right side shows a tree of all relevant entities in your Mendix app.
 
@@ -120,7 +126,7 @@ It is also possible to create new entities for your integrations. This new entit
 
 Once you click OK, you will return to the import mapping tab with a sidebar opened to configure which Teamcenter properties, references, and relations to include when retrieving data for this business object.
 
-### 4.2 Teamcenter properties, references, and relations {#tcprop}
+#### 3.3.2 Teamcenter properties, references, and relations {#tcprop}
 
 In the import mapping sidebar, you can configure which Teamcenter properties, references, and relations to include when retrieving data from Teamcenter. The import mapping sidebar is launched automatically after completion of object mapping. When you are on the import mapping page and the sidebar is closed, you can double-click on a previously configured entity to open the sidebar for that entity.
 
@@ -136,7 +142,7 @@ As an example, if a read checkbox is checked and disabled, it means that propert
 
 You can select and deselect the properties, references, and relations depending on the data you need from Teamcenter. When you select a reference or relation, a new placeholder entity will be added to the object mapping tree. You will need to perform the import mapping for these referenced/related objects in a subsequent step (business object mapping and selection of Teamcenter properties, references, and relations).
 
-## 5 Microflows and Domain Model
+### 3.4 Microflows and Domain Model
 
 Once you've finished import mapping, click on Generate button to create microflows for the selected use case and its corresponding domain model. These artifacts can be used in your app logic.
 

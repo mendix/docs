@@ -91,7 +91,7 @@ To open the Teamcenter Extension in Studio Pro, go to **View** > **Teamcenter**.
 
 The **Menu** tab displays use cases or actions you can create artifacts for using the extension.
 
-{{< figure src="/attachments/appstore/modules/teamcenter-extension/settings-tab.png" class="image-border" >}}
+{{< figure src="/attachments/appstore/modules/teamcenter-extension/settings-tab.png" max-width=50% class="image-border" >}}
 
 The **Settings** tab allows you to provide details of your Teamcenter instance to connect to, while using the extension. The **Settings** tab displays the Teamcenter configuration page. Here you can provide your Teamcenter Instance details to connect to while building your app. Click **Edit** to open a panel to enter details. The certificate path should be relative to the app directly.
 
@@ -109,7 +109,7 @@ In the Teamcenter Extension, the import mapping consists of the following steps:
 1. Object mapping: As Teamcenter works with many layers of specializations of its business objects, in the import mapping page, you need to configure which object type you want to retrieve from Teamcenter and what Mendix objects need to be created, when retrieving these business objects. This is called object mapping.
 2. Selection of properties, references, and relations: Configure  which properties, references, and relations you want to retrieve from Teamcenter and include in your Mendix model .
 
-{{< figure src="/attachments/appstore/modules/teamcenter-extension/domain-model.png" class="image-border" >}}
+{{< figure src="/attachments/appstore/modules/teamcenter-extension/domain-model.png" max-width=80% class="image-border" >}}
 
 #### 3.3.1 Object mapping {#objectmapping}
 
@@ -123,7 +123,7 @@ When retrieving a tree of objects, relevance can also be based on the type of th
 
 To configure which type of Teamcenter business object you are interested in and what type of Mendix entities this should be mapped to, select a business object in the Teamcenter tree on the left side and an entity on the Mendix tree on the right side and click **OK**. 
 
-It is also possible to create new entities for your integrations. This new entity needs to be a specialization of the root entity in the Mendix tree or one of its specializations. When you want to use a new entity, click your generalization of choice, click the **Create new specialization of selected entity** check box and provide an entity name. Once finishing the configuration for the actions, the Teamcenter Extension will create a new entity with the given name and the selected entity as its generalization. You can also reuse or create specialization of the generated entities in subsequent actions.
+It is also possible to create new entities for your integrations. This new entity needs to be a specialization of the root entity in the Mendix tree or one of its specializations. When you want to use a new entity, click your generalization of choice, click the **Create new specialization of selected entity** check box and provide an entity name. Once finishing the configuration for the actions, the Teamcenter Extension will create a new entity with the given name and the selected entity as its generalization. You can also reuse or create the specialization of the generated entities in subsequent actions.
 
 {{< figure src="/attachments/appstore/modules/teamcenter-extension/new-entity.png" class="image-border" >}}
 
@@ -133,15 +133,15 @@ Once you click **OK**, you will return to the import mapping tab with a sidebar 
 
 In the import mapping sidebar, you can configure which Teamcenter properties, references, and relations to include when retrieving data from Teamcenter. The import mapping sidebar is launched automatically after the completion of object mapping. When you are on the import mapping page and the sidebar is closed, you can double-click a previously configured entity to open the sidebar for that entity.
 
-The sidebar shows all properties, references, and relations for the configured Teamcenter object. Depending on the use case, each one of them is accompanied with check boxes for reading and writing for you to configure what to include when retrieving data from or creating data in Teamcenter.
+The sidebar shows all properties, references, and relations for the configured Teamcenter object. Depending on the use case, each one of them is accompanied with check boxes for reading ({{% icon name="view" %}}) and writing ({{% icon name="pencil" %}}) for you to configure what to include when retrieving data from or creating data in Teamcenter.
 
 You often see that check boxes are selected by default or grayed out. In general, the following rules apply:
 1.	Properties that are already available on the Mendix entity or one of its generalizations are selected by default and cannot be unchecked.
 2.	Properties, references, and relations for Marketplace entities are disabled by default, as it is not good practice to change Mendix marketplace content.
 
-As an example, if a read ({{% icon name="view" %}}) checkbox is selected and grayed out, it means that property already exists as an attribute on the selected object or one of its generalizations. Similarly, if a write ({{% icon name="pencil" %}}) check box is selected and grayed out, it means the property is required during creation or revision of the selected object.
+As an example, if a check box for reading ({{% icon name="view" %}}) is selected and grayed out, it means that property already exists as an attribute on the selected object or one of its generalizations. Similarly, if a check box for writing ({{% icon name="pencil" %}}) is selected and grayed out, it means the property is required during creation or revision of the selected object.
 
-{{< figure src="/attachments/appstore/modules/teamcenter-extension/attributes-associations.png" class="image-border" >}}
+{{< figure src="/attachments/appstore/modules/teamcenter-extension/attributes-associations.png" max-width=60% class="image-border" >}}
 
 You can select and deselect the properties, references, and relations depending on the data you need from Teamcenter. When you select a reference or relation, a new placeholder entity will be added to the object mapping tree. You will need to perform the import mapping for these referenced or related objects in a subsequent step (business object mapping and selection of Teamcenter properties, references, and relations).
 

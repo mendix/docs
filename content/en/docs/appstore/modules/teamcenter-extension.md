@@ -8,25 +8,11 @@ tags: ["Teamcenter", "Integration", "PLM", "SOA connector", "low-code"]
 
 ## 1 Introduction {#introduction}
 
-The [Teamcenter Extension](#needsURL) is a Mendix Extension built using the Mendix Extensibility Framework to provide you with an effortless means to harness the full capabilities of [Teamcenter Connector](https://marketplace.mendix.com/link/component/111627) for Mendix. The Teamcenter Extension is layered atop the Teamcenter Connector, providing a low-code experience by making it easier to visualize and access Teamcenter data model and automate creation of Mendix domain models and microflows.
+The [Teamcenter Extension](#needsURL) is a Mendix Extension built using the Mendix Extensibility Framework to provide you with an effortless means to harness the full capabilities of [Teamcenter Connector](https://marketplace.mendix.com/link/component/111627) for Mendix. The Teamcenter Extension is layered atop the Teamcenter Connector.It provides a low-code experience by making it easier to visualize and access Teamcenter data model and automate creation of Mendix domain models and microflows.
 
-### 1.1 Pre-requisites {#prerequisities}
+### 1.1 Typical Use Cases {#usecases}
 
-The Teamcenter Extension works with any Studio Pro version between 10.6.5 to 10.8. Mendix recommends using Studio Pro version [10.6.7](/releasenotes/studio-pro/10.6/#1067), as it is the medium-term support (MTS) version.
-
-You also need the following modules installed from the Mendix Marketplace:
-
-* [Teamcenter Connector](https://marketplace.mendix.com/link/component/111627)
-
-* [Community Commons](https://marketplace.mendix.com/link/component/170)
-
-### 1.2 License {#license}
-
-The Teamcenter Extension is free to download and use. You can, however, require a Teamcenter (Author/Consumer) license to connect to Teamcenter.
-
-## 2. Use Cases {#usecases}
-
-The Teamcenter Extension offers a list of use cases for which domain models and microflows can be created. After selecting a use case, it uses an import mapping approach similar to Mendix [import mapping](/refguide/import-mappings/). Here, the Teamcenter Extension allows you to select data from the business model of your Teamcenter instance. Based on the selected use case, the import mapping and, for some use cases, additional configurations, the Teamcenter Extension generates and updates the domain model for your integration and generates one or more ready-to-use microflows that you can drag and drop into your application logic.
+The Teamcenter Extension offers a list of use cases for which domain models and microflows can be created. After you select a use case, it uses an import mapping approach similar to Mendix [import mapping](/refguide/import-mappings/). Here, the Teamcenter Extension allows you to select data from the business model of your Teamcenter instance. Based on the selected use case, the import mapping and, for some use cases, additional configurations, the Teamcenter Extension generates and updates the domain model for your integration and generates one or more ready-to-use microflows that you can drag and drop into your application logic.
 
 The extension offers the following integration options:
 * Get item revisions
@@ -35,6 +21,30 @@ The extension offers the following integration options:
 * Update item and item revision
 * Revise item revisions
 * Create BOM window
+
+### 1.2 License {#license}
+
+The Teamcenter Extension is free to download and use. You can, however, require a Teamcenter (Author or Consumer) license to connect to Teamcenter.
+
+### 1.3 Pre-requisites {#prerequisities}
+
+You must use Teamcenter Extension with a Studio Pro version between 10.6.5 to 10.8. Mendix recommends using Studio Pro version [10.6.7](/releasenotes/studio-pro/10.6/#1067), as it is the medium-term support (MTS) version.
+
+### 1.4 Dependencies 
+
+You must have these Marketplace modules installed:
+
+* [Teamcenter Connector](https://marketplace.mendix.com/link/component/111627)
+
+* [Community Commons](https://marketplace.mendix.com/link/component/170)
+
+### 1.5 Demo App
+
+To see Teamcenter Extension in action, download and play with the Teamcenter Extension Sample App, which is available for free on the Mendix Marketplace.
+
+## 2 Installation
+
+Follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the Teamcenter Extension into your app.
 
 ## 3 Usage
 
@@ -150,6 +160,3 @@ You can select and deselect the properties, references, and relations depending 
 Once you finished import mapping, click **Generate** to create microflows for the selected use case and its corresponding domain model. These artifacts can be used in your app logic.
 
 {{< figure src="/attachments/appstore/modules/teamcenter-extension/microflow.png" class="image-border" >}}
-
-
-To see Teamcenter Extension in action, download and play with the Teamcenter Extension Sample App, which is available for free on the Mendix Marketplace.

@@ -45,9 +45,9 @@ For more information about Personal Access Tokens, as well as creating and using
 
 ### 2.4 Service Credentials {#service-credentials}
 
-In the **Service Credentials** tab, you can view and manage the credentials for various external systems that Private Mendix Platform can connect with. These services include Github, Gitlab, Bitbucket, and AzureDevOps, used for managing your app projects.
+In the **Service Credentials** tab, you can view and manage the credentials for various external systems that Private Mendix Platform can connect with. These services include GitHub, Gitlab, Bitbucket, and AzureDevOps, used for managing your app projects.
 
-To create or work on app projects in Private Mendix Platform, you must create an access token in Github, Gitlab, AzureDevOps, or Bitbucket, and then add it in the **Service Credentials** tab. The token must have read and write access to a repository where the app project is stored.
+To create or work on app projects in Private Mendix Platform, you must create an access token in GitHub, Gitlab, AzureDevOps, or Bitbucket, and then add it in the **Service Credentials** tab. The token must have read and write access to a repository where the app project is stored.
 
 ## 3 Installing Mendix Studio Pro
 
@@ -67,7 +67,7 @@ Before you can create your first app, you must first install Mendix Studio Pro b
 To create a new app, perform the following steps:
 
 1. Log in to Private Mendix Platform.
-2. If you have not already configured an access token for a Gitlab, Github, AzureDevOps, or Bitbucket repository, click the user icon in the top right corner of the screen, and then click **Manage My Account** > **Service Credentials**. 
+2. If you have not already configured an access token for a Gitlab, GitHub, AzureDevOps, or Bitbucket repository, click the user icon in the top right corner of the screen, and then click **Manage My Account** > **Service Credentials**. 
 
     For more information, see [Service Credentials](#service-credentials).
 

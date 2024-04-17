@@ -140,7 +140,7 @@ If you are using Mendix Team Server as your Git version control server, you can 
 
 ##### 5.1.6.2 Other Git Platforms
 
-When using another Git platform than Mendix Team Server, such as Github or Azure Devops, you can typically enable force pushing in a portal. 
+When using another Git platform than Mendix Team Server, such as GitHub or Azure Devops, you can typically enable force pushing in a portal. 
 
 {{% alert color="warning" %}}
 Force pushing allows to make destructive changes to the repository, which can easily lead to unrecoverable errors. We recommend you to give these permissions to as few users as strictly necessary.

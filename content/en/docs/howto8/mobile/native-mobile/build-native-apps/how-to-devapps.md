@@ -87,7 +87,7 @@ Builds with the Mendix Native Mobile Builder are stripped of simulator artifacts
 1. Navigate to your GitHub repo.
 2. Switch to your **developer** branch:
 
-    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-devapps-cli/github-branch-switching.png" alt="Switch branch on Github" >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-devapps-cli/github-branch-switching.png" alt="Switch branch on GitHub" >}}
 
 3. Click **Clone or Download** and then click **Download ZIP**:
 

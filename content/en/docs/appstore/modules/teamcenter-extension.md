@@ -82,11 +82,11 @@ Open the Teamcenter Extension by clicking on menu option View -> Teamcenter insi
 
 The Menu tab displays use cases or actions you can create artifacts for, using the extension. The Settings tab allows you to provide details of your Teamcenter instance to connect to, while using the extension.
 
-![image](https://github.com/mwbouwkamp-mendix/mendix-docs/assets/157635704/2d2908bb-7f4f-4957-9bee-6f2b5a9d2ad7)
+{{< figure src="/attachments/appstore/modules/teamcenter-extension/settings-tab.png" class="image-border" >}}
 
-The Settings tab displays Teamcenter configuration page. This is where you can provide your Teamcenter Instance details to connect to while building your app. Click on Edit to open a panel to enter details. Please note the certificate path should be relative to the App Directory
+The **Settings** tab displays Teamcenter configuration page. This is where you can provide your Teamcenter Instance details to connect to while building your app. Click on Edit to open a panel to enter details. Please note the certificate path should be relative to the App Directory
 
-![image](https://github.com/mwbouwkamp-mendix/mendix-docs/assets/157635704/3c5dde91-7da9-4ea8-a7eb-2aa283e6cb9b)
+{{< figure src="/attachments/appstore/modules/teamcenter-extension/teamcenter-configuration.png" class="image-border" >}}
 
 The extension supports both http and https connections. Additionally, it supports certificates that have .crt and .pfx file extensions.
 
@@ -100,7 +100,7 @@ In the Teamcenter Extension, the import mapping consists of two steps:
 1. Object mapping: As Teamcenter works with many layers of specializations of its business objects, in the import mapping page, you need to configure which object type you want to retrieve from Teamcenter and what Mendix objects need to be created, when retrieving these business objects. This is called Object mapping.
 2. Selection of properties, references and relations: Configuration which properties, references and relations you want to retrieve from Teamcenter and include in your Mendix model .
 
-![image](https://github.com/mwbouwkamp-mendix/mendix-docs/assets/157635704/3f1d9b37-d898-4d4e-ad9f-aee86274876a)
+{{< figure src="/attachments/appstore/modules/teamcenter-extension/domain-model.png" class="image-border" >}}
 
 ### 4.1 Object mapping {#objectmapping}
 
@@ -108,7 +108,7 @@ Clicking on any one of the empty box in import mapping page opens the object map
 
 The relevant objects and entities are dependent on the actions you are configuring. For example, for the action to get ItemRevisions from Teamcenter, the Teamcenter tree has an ItemRevision as its root object. That means that, for this action, you can only select ItemRevisions or specializations thereof. Similarly, in this example, the Mendix tree has the TcConnector.ItemRevision entity as its root entity.
 
-![image](https://github.com/mwbouwkamp-mendix/mendix-docs/assets/157635704/ea1e86ce-0a19-4c9c-8592-eddbe9b78d24)
+{{< figure src="/attachments/appstore/modules/teamcenter-extension/select-objects.png" class="image-border" >}}
 
 When retrieving a tree of objects, relevance can also be based on the type of relation/reference. When working with typed relations/references, the type of Teamcenter business object is dictated by the relation/reference. By limiting the list of Teamcenter objects and Mendix entities to those that are relevant, the Teamcenter Extension guides you to select Teamcenter business objects that make sense in the context of the action you want to perform.
 
@@ -116,7 +116,7 @@ To configure which type of Teamcenter business object you are interested in and 
 
 It is also possible to create new entities for your integrations. This new entity needs to be a specialization of the root entity in the Mendix tree or one of its specializations. When you want to use a new entity, click your generalization of choice, click the Create new specialization of selected entity checkbox and provide an entity name. Now, once finishing the configuration for the actions, the Teamcenter Extension will create a new entity with the given name and the selected entity as its generalization. You can also reuse or create specialization of the generated entities in subsequent actions.
 
-![image](https://github.com/mwbouwkamp-mendix/mendix-docs/assets/157635704/e3783a0c-fbd8-474e-ba67-b1d6723f3927)
+{{< figure src="/attachments/appstore/modules/teamcenter-extension/new-entity.png" class="image-border" >}}
 
 Once you click OK, you will return to the import mapping tab with a sidebar opened to configure which Teamcenter properties, references, and relations to include when retrieving data for this business object.
 
@@ -132,7 +132,7 @@ You will often see that checkboxes are checked by default and/or disabled. In ge
 
 As an example, if a read checkbox is checked and disabled, it means that property already exists as an attribute on the selected object or one of its generalizations. Similarly, if a write checkbox is checked and disabled, it means the property is required during creation or revision of the selected object.
 
-![image](https://github.com/mwbouwkamp-mendix/mendix-docs/assets/157635704/82cf072e-710f-4d20-8c18-2fcda5d5ee36)
+{{< figure src="/attachments/appstore/modules/teamcenter-extension/attributes-associations.png" class="image-border" >}}
 
 You can select and deselect the properties, references, and relations depending on the data you need from Teamcenter. When you select a reference or relation, a new placeholder entity will be added to the object mapping tree. You will need to perform the import mapping for these referenced/related objects in a subsequent step (business object mapping and selection of Teamcenter properties, references, and relations).
 
@@ -140,7 +140,7 @@ You can select and deselect the properties, references, and relations depending 
 
 Once you've finished import mapping, click on Generate button to create microflows for the selected use case and its corresponding domain model. These artifacts can be used in your app logic.
 
-![image](https://github.com/mwbouwkamp-mendix/mendix-docs/assets/157635704/6d3a7f29-5727-438b-8e4b-c3aa3ef83d7a)
+{{< figure src="/attachments/appstore/modules/teamcenter-extension/microflow.png" class="image-border" >}}
 
 
 To see Teamcenter Extension in action, please download and play with the Teamcenter Extension Sample App, which is also available for free on the Mendix Marketplace.

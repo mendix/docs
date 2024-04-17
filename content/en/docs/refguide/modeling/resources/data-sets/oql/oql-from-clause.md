@@ -69,7 +69,7 @@ Similar to `entity_name`, double quotes can be used.
 
 In the case of `entity_path`, using constraints is optional – the system will generate the appropriate `JOIN` condition based on the specified `entity_path`.
 
-In cases when an entity name or a subquery is used, `JOIN` condition (i.e. `ON` constranit) is mandatory to use.
+In cases when an entity name or a subquery is used, `JOIN` condition (i.e. `ON` constraint) is mandatory to use.
 
 #### 2.3.4 JOIN Types
 

@@ -299,7 +299,7 @@ export PATH=$PATH:$ANDROID_NDK
 
 For deeper information on the best contributions, see the following:
 
-1. See general recommendation in [README](../README.md)
+1. See general recommendations ocated in the [MIN repo's README.md](https://github.com/mendix/make-it-native).
 1. If the merge request contains changes that impact users, then the merge request should include an update to `CHANGELOG.ios.txt` or `CHANGELOG.android.txt`
 
 For example

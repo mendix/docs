@@ -29,7 +29,7 @@ To select a target environment for Studio Pro deployment, do the following:
 
 3. In the **Setup Studio Pro Deployment** dialog box, select your desired target environment from the **Select target environment** menu.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/studio-deployment-settings/setup-studio-pro-deployment.png" alt="Select Studio Pro Target Dialog" max-width=80%  >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/studio-deployment-settings/setup-studio-pro-deployment.png" alt="Select Studio Pro Target Dialog" class="image-border" max-width=80%  >}}
 
 4. Click **Save**.
 
@@ -42,7 +42,7 @@ Once the app has a target deployment environment, you can directly deploy your a
 1. Open the licensed app in [Studio Pro](https://marketplace.mendix.com/link/studiopro/).
 1. In the top menu bar, click **App** > **Deploy to Licensed Cloud Node**.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/deploy-to-cloud-node.png" alt="The App menu with the Deploy to Licensed Cloud Node option selected" width=50% >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/deploy-to-cloud-node.png" alt="The App menu with the Deploy to Licensed Cloud Node option selected" width=50% class="image-border" >}}
 
 1. In the **Deploy to the cloud** dialog box, click **Deploy**.
 1. You will see a dialog box with the following message: "Successfully started cloud deployment." It will automatically upload your MDA to the Developer Portal, deploy it to the target environment, and restart the target environment. 

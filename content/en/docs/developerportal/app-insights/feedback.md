@@ -52,7 +52,7 @@ If the user does not want to receive notifications anymore, they can clear the c
 
 On the **Inbox** tab, everyone from your team can view all the unarchived feedback sent from your app by users.  
 
-{{< figure src="/attachments/developerportal/app-insights/feedback/feedback-items.png" alt="inbox tab" >}}
+{{< figure src="/attachments/developerportal/app-insights/feedback/feedback-items.png" class="image-border" alt="inbox tab" >}}
 
 In the list on the **Inbox** tab, you can find the following information for each feedback:
 
@@ -83,7 +83,7 @@ To manually add feedback, click **Create new feedback** (if there is not any fee
 
 If you select feedback, you can see the following items: 
 
-{{< figure src="/attachments/developerportal/app-insights/feedback/bulk-actions-bar.png" alt="bulk-actions-bar" >}}
+{{< figure src="/attachments/developerportal/app-insights/feedback/bulk-actions-bar.png" class="image-border" alt="bulk-actions-bar" >}}
 
 * **Link** – Clicking this links the feedback together into one feedback group.
 
@@ -195,7 +195,7 @@ For more information, see the [What Happens to a User After They Submit Feedback
 
 From the [feedback details](#feedback-details) page, you can manage tags by clicking **Settings** ({{% icon name="cog" %}}) next to the **Tags** text box:
 
-  {{< figure src="/attachments/developerportal/app-insights/feedback/tag-management-settings.png" alt="tag management setting" >}}
+  {{< figure src="/attachments/developerportal/app-insights/feedback/tag-management-settings.png" class="image-border" alt="tag management setting" >}}
 
   To create a new tag, do as follows:
 

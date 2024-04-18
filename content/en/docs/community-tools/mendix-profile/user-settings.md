@@ -161,7 +161,7 @@ On the [Developer Settings](https://user-settings.mendix.com/link/developersetti
 
 In this section, you can view the status of your two-factor authentication (2FA). You can see if your 2FA is configured with SMS or an authenticator app, and you can also deactivate your 2FA.
 
-{{< figure src="/attachments/community-tools/mendix-profile/2fa.png" max-width=80%  >}}
+{{< figure src="/attachments/community-tools/mendix-profile/2fa.png" class="image-border" max-width=80%  >}}
 
 For more information, see [Two-Factor Authentication](/developerportal/deploy/two-factor-authentication/).
 

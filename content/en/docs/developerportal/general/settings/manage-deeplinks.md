@@ -32,7 +32,7 @@ To create a deep link, you need the app ID, story ID, or feedback item number or
 
 * For the feedback item number, under **App Insights** > **Feedback** – the number is next to the feedback item title:
 
-    {{< figure src="/attachments/developerportal/general/settings/manage-deeplinks/feedback-nr.png" width="500px" alt="Feedback item number on Feedback page" >}}
+    {{< figure src="/attachments/developerportal/general/settings/manage-deeplinks/feedback-nr.png" class="image-border" width="500px" alt="Feedback item number on Feedback page" >}}
 
 ## 3 Creating a Developer Portal Deep Link
 

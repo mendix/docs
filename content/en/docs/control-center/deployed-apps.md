@@ -19,11 +19,11 @@ The **Deployed Apps Overview** page is a self-service tool that enables you to p
 
 The **Deployed Apps Overview** page shows a list of all the apps within your company. You can use it to view an app's name, ID, Technical Contact, status, number of environments, and how many [cloud credits](/control-center/entitlements/#cloud-credits) are used. The page has separate tabs for **Mendix Cloud Apps** and **Free Apps**.
 
-{{< figure src="/attachments/control-center/deployed-apps/apps-overview.png"   alt="Deployed Apps - apps overview" >}}
+{{< figure src="/attachments/control-center/deployed-apps/apps-overview.png"  class="image-border"  alt="Deployed Apps - apps overview" >}}
 
 You can click the name of an app to see a list of environments available for the app.
 
-{{< figure src="/attachments/control-center/deployed-apps/cloud-provisioning.png"  alt="cloud provisioning page for an app" >}}
+{{< figure src="/attachments/control-center/deployed-apps/cloud-provisioning.png"  class="image-border" alt="cloud provisioning page for an app" >}}
 
 Click the icon in the top right corner to access the following pages that allow you to [make requests to Mendix Support](/support/submit-support-request/#submitting):
 
@@ -38,7 +38,7 @@ To add a new environment for your app, click the name of an app, and then click 
 * **Resource Pack** – Select the resources required for the new environment. The page displays the resources included in each resource pack, and their cost in cloud credits.
 * **Production Environment** – Indicate whether the environment will be used for production.
 
-{{< figure src="/attachments/control-center/deployed-apps/new-environment.png"   alt="adding a new environment" >}}
+{{< figure src="/attachments/control-center/deployed-apps/new-environment.png" class="image-border"   alt="adding a new environment" >}}
 
 ## 3 Offboarding an Environment
 
@@ -54,7 +54,7 @@ Offboarding an environment deletes it permanently. You are responsible for makin
 
 To quickly change the [Technical Contact](/developerportal/general/app-roles/#technical-contact) for your app, click **Edit** by the name of the contact, and then select the new contact from the list.
 
-{{< figure src="/attachments/control-center/deployed-apps/edit-technical-contact.png" max-width=100%  alt="changing the technical contact" >}}
+{{< figure src="/attachments/control-center/deployed-apps/edit-technical-contact.png" max-width=100% class="image-border"  alt="changing the technical contact" >}}
 
 {{% alert color="info" %}}
 You may only have one Technical Contact per app. When you change the Technical Contact, both the new and the old contact receive a notification email about the change.

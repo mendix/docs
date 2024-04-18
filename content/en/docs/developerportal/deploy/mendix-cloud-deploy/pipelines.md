@@ -27,7 +27,7 @@ If you need to configure your user settings so that you can run a pipeline for t
 
 ## 2 The Runs Tab{#runs-tab}
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/runs-tab.png" alt="" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/runs-tab.png" alt="" class="image-border" >}}
 
 For each run, you can view the following information:
 
@@ -50,7 +50,7 @@ The search and filter options allow you to review specific run types. You can do
 
 To see the results of a particular run, click **Results** ({{% icon name="paper-clipboard" %}}).
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/run-details.png" alt="" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/run-details.png" class="image-border" alt="" >}}
 
 From this page, you can view an overview of the run. You can also expand each executed step to see more information about it; this is especially useful for debugging when a pipeline run fails. When you expand a step, you can also see a **View Parameters** button, which you can use to view the input and output parameters as well as the values of the step.
 
@@ -72,7 +72,7 @@ If a system-level error occurs, the card in the upper-left corner of the **Resul
  
 ## 3 The Designs Tab{#designs-tab}
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/designs-tab.png" alt="" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/designs-tab.png" alt="" class="image-border" >}}
 
 On the **Designs** tab, you can see all existing pipeline designs.
 
@@ -113,7 +113,7 @@ Give your pipeline a name. You can use up to 40 alphanumeric characters in the n
 
 From your pipeline design's **Details** page, you can add, remove, and configure the steps in your pipeline. You can also click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) next to the pipeline name to edit the name.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/pipeline-design.png" alt="" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/pipeline-design.png" class="image-border" alt="" >}}
 
 {{% alert color="info" %}}
 Active pipelines cannot be edited; if you want to edit an existing pipeline, make sure it is deactivated.
@@ -194,7 +194,7 @@ The pipeline design's status (**Active** or **Inactive**) is displayed in the ov
 
 ## 4 The Settings Tab{#settings-tab}
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/settings-tab.png" alt="" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/settings-tab.png" alt="" class="image-border" >}}
 
 The **Settings** tab lets you configure user settings. You must add your API key and personal access token (PAT) before you can activate or run your first pipeline. If you still need to configure these user settings, the **Settings** tab is marked with an alert icon ({{% icon name="alert-circle-filled" color="red" %}}).
 

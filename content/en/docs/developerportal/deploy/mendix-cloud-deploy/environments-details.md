@@ -13,7 +13,7 @@ tags: ["Deploy","App","Environment","Developer Portal"]
 
 To open the **Environment Details** page, go to the [Developer Portal](https://sprintr.home.mendix.com) and click **Environments** on your licensed app. Then click **Details** ({{% icon name="notes-paper-edit" %}}) by the environment you want to view.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/environment-details.png" alt="The Details icon is on the right side of the row" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/environment-details.png" alt="The Details icon is on the right side of the row" class="image-border" >}}
 
 {{% alert color="info" %}}You must have permissions for **Transport Rights** or **Access to Monitoring** to view the **Environment Details** page. For details on configuring permissions, see [Node Permissions](/developerportal/deploy/node-permissions/).{{% /alert %}}
 
@@ -95,7 +95,7 @@ To clear your environment, follow these steps:
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/clear-environment.png"
     alt="Clear Environment options and confirmation"
     max-width=70%
-    >}}
+    class="image-border" >}}
 
 ### 2.2 Naming of Environments – Flexible Environments in Mendix Cloud {#naming}
 

@@ -66,7 +66,7 @@ At the bottom of the **Logs** page, there is an activity log. This section repor
 The activity log records access by team members as well as members of Mendix Support, who may view or download your app's logs in connection with any support tickets you have open. 
 {{% /alert %}}
 
-{{< figure src="/attachments/developerportal/operate/logs/activity-log.png" alt="Activity log" >}}
+{{< figure src="/attachments/developerportal/operate/logs/activity-log.png" alt="Activity log" class="image-border" >}}
 
 ## 3 Free App
 

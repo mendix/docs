@@ -51,7 +51,7 @@ To create the app, follow these steps:
 
     The Domain Model should look like this:
 
-    {{< figure src="/attachments/refguide/java-programming/extending-your-application-with-custom-java/domain-model.png" alt="description" >}}
+    {{< figure src="/attachments/refguide/java-programming/extending-your-application-with-custom-java/domain-model.png" alt="description" class="image-border" >}}
 
 4. Right-click one of the entities and **Generate overview pages** for all three entities.
 5. Add the `Product_Overview` page to the navigation or home page.
@@ -85,7 +85,7 @@ In this section, you will create a new Java action and deploy the app for Eclips
 4. Change the **Type** in the **Return** section of the Java action to **String**, change the **Variable name** to *ReversedName*.
 5. Click <kbd>ctrl</kbd> + <kbd>s</kbd> to save the Java action.
 
-    {{< figure src="/attachments/refguide/java-programming/extending-your-application-with-custom-java/return.png" width="500" >}}
+    {{< figure src="/attachments/refguide/java-programming/extending-your-application-with-custom-java/return.png" width="500" class="image-border" >}}
 
 6. Select **App** > **Deploy for Eclipse** from the Studio Pro menu.
 
@@ -112,7 +112,7 @@ To edit the Java action in Eclipse, open Eclipse and follow these steps:
 
 5. Search in Eclipse for **ReverseProductName.java** and open it. You can also find it in the **Package Explorer** pane.
 
-    {{< figure src="/attachments/refguide/java-programming/extending-your-application-with-custom-java/searchjavaclass.png" >}}
+    {{< figure src="/attachments/refguide/java-programming/extending-your-application-with-custom-java/searchjavaclass.png" class="image-border" >}}
 
     In the Java code, there is some placeholder code between the `//BEGIN USER CODE` and `//END USER CODE` comment statements. This is where you can add your own Java code.
 
@@ -162,7 +162,7 @@ Now you will add a button to the Product_NewEdit page which uses a microflow to 
 
 12. Click **OK** to save the **Show message** activity. The microflow will be similar to this this:
 
-    {{< figure src="/attachments/refguide/java-programming/extending-your-application-with-custom-java/microflow4.png"  >}}
+    {{< figure src="/attachments/refguide/java-programming/extending-your-application-with-custom-java/microflow4.png"  class="image-border" >}}
 
 ### 4.4 Deploying and Seeing the Results
 

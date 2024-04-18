@@ -183,12 +183,12 @@ It has the following features which are not available in **Structure mode**:
 * The widgets are shown as they will be on the page – for example two text widgets which are laid out vertically in structural mode may actually be laid out horizontally when the app is published, and this will be reflected in **Design mode**
 * The page layout can be seen for different device modes – for example phone or browser by clicking the appropriate device mode button:
 
-    {{< figure src="/attachments/refguide/modeling/pages/page/design-factor.png" alt="Show styles button" >}}
+    {{< figure src="/attachments/refguide/modeling/pages/page/design-factor.png" alt="Show styles button" class="image-border">}}
 
 * The widgets have design properties and CSS classes and styles applied to them so you can see what they will look like
 * Toggle showing conditionally-visible widgets in the top bar:
 
-    {{< figure src="/attachments/refguide/modeling/pages/page/conditional-visibility.jpg" alt="Show conditional visibility" >}}
+    {{< figure src="/attachments/refguide/modeling/pages/page/conditional-visibility.jpg" alt="Show conditional visibility" class="image-border">}}
 
 * **X-ray mode** to visualize the structure of a page
 

@@ -115,7 +115,7 @@ If you don't specify any programming language, the code block looks a bit differ
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/clear-environment.png"
     alt="Clear Environment options and confirmation"
     max-width=60%
-    >}}
+    class="image-border" >}}
 
 #### Image with No-Border Class
 

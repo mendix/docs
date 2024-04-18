@@ -230,8 +230,8 @@ Where:
 
 ## 6 Installing Licenses
 
-Licenses are supplied by Mendix as a **License Bundle**. A license bundle can contain both Mendix Runtime (app) licenses and Mendix Operator licenses.
-Runtime licenses are required for each Mendix runtime environment, and Operator licenses are required for each namespace where the Operator runs.
+Licenses are supplied by Mendix as a **License Bundle**. A license bundle can contain both Mendix Runtime (app) licenses and a Mendix Operator license.
+Runtime licenses are required for each Mendix runtime environment, and an Operator license is required for each namespace where the Operator runs.
 To purchase a license bundle, please contact [Mendix Support](https://support.mendix.com/). You will receive your license (or licenses) as a .zip file.
 The following command will import a license bundle into the PCLM server:
 

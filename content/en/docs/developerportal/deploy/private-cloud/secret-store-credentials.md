@@ -24,7 +24,7 @@ Mendix apps currently support the following secret stores:
 
 * AWS Secrets Manager
 * HashiCorp Vault
-* Azure Key vault
+* Azure Key Vault
 
 ## 2 Configuring Your Environment
 

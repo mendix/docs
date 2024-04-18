@@ -45,7 +45,7 @@ Alternatively, starting from Studio Pro 10.9.0, primitive parameters can be used
 
 In the **Edit Microflow URL** dialog box, the configured URL is shown together with an example URL with example values filled in for the parameters. It also shows how the parameter will be retrieved:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/microflow/microflow-url.png" alt="microflow url dialog" max-width=80% class="image-border" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/microflow/microflow-url.png" alt="microflow url dialog" max-width=80% >}}
 
 {{% alert color="warning" %}}
 URLs are not supported for microflows that have non-persistable entities or lists as parameters.

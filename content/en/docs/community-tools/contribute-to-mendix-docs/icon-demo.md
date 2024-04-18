@@ -25,7 +25,7 @@ This shortcode has two attributes:
 
 ## 3 Some Suggested Icons
 
-{{% figure src="/attachments/community-tools/contribute-to-mendix-docs/common-icons.png" class="image-border" %}}
+{{% figure src="/attachments/community-tools/contribute-to-mendix-docs/common-icons.png" %}}
 
 Here are some icons that might be particularly useful for the docs. In the list below, you can see the name of the icon file, a common tooltip associated with the icon, and the icon itself. A few of the icons are shown here with the optional color attributes.
 

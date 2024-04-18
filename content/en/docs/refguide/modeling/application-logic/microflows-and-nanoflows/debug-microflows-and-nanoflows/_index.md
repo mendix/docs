@@ -29,11 +29,11 @@ There are three debugging panes: **Breakpoints**, **Debugger**, and **Variables*
 
 The **Breakpoints** pane shows all the microflows/nanoflows that contain breakpoints, which makes it easier to find your breakpoints. The best practice is to remove any breakpoints after you are done troubleshooting your microflows/nanoflows. You can always delete them from the **Breakpoints** pane.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/debug-microflows-and-nanoflows/breakpoints-pane.png" class="image-border" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/debug-microflows-and-nanoflows/breakpoints-pane.png" >}}
 
 The **Debugger** pane is useful when you are debugging your microflow/nanoflow, as it will walk you through the microflow/nanoflow:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/debug-microflows-and-nanoflows/debugger-pane.png" class="image-border" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/debug-microflows-and-nanoflows/debugger-pane.png" >}}
 
 The **Variables** pane shows the variables, objects, and lists involved in your microflow/nanoflow and how they change as you step through the microflow/nanoflow via the **Debugger** pane:
 
@@ -57,7 +57,7 @@ Breakpoints are points in a microflow/nanoflow where the application will halt e
 
     In the **Breakpoints** pane, you can enable, disable, and delete breakpoints. You can also configure a breakpoint condition and open the microflow/nanoflow that contains that breakpoint:
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/debug-microflows-and-nanoflows/breakpoints-pane.png" class="image-border" >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/debug-microflows-and-nanoflows/breakpoints-pane.png" >}}
 
 ## 5 Debugging
 
@@ -75,7 +75,7 @@ Breakpoints are points in a microflow/nanoflow where the application will halt e
 
     The debugger can be used to go through the microflow/nanoflow step by step:
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/debug-microflows-and-nanoflows/debugger-pane.png" class="image-border" >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/debug-microflows-and-nanoflows/debugger-pane.png" >}}
 
 5. You have the following options on this pane:
     * Click **Step into** or **Step over** to move to the next step in the microflow/nanoflow (note that the difference between **Step into** and **Step over** is only noticeable if you run into a microflow/nanoflow call activity or a loop)

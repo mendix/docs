@@ -20,7 +20,7 @@ To obtain a Mendix API key, follow the instructions in the [API Keys](/community
 
 ### 2.2 Using Authentication Headers
 
-Use the following request headers to authenticate a call to the API:
+Use the following request headers to authenticate a API call:
 
 * `Mendix-Username` – the login name of the requesting user with the required privileges in the Mendix Platform
 * `Mendix-ApiKey` – the API key of this user
@@ -35,5 +35,5 @@ To generate a PAT, follow the instructions in the [Personal Access Tokens](http:
 
 ### 3.2  Using the PAT
 
-Include an `Authorization` header with the value `MxToken {GENERATED_PAT}` to authenticate a call to the API. For an example, see the [Using the PAT](/apidocs-mxsdk/apidocs/webhooks-api/#use-pat) section of the *Webhooks API*.
+Include an `Authorization` header with the value `MxToken {GENERATED_PAT}` to authenticate an API calI. For an example, see the [Using the PAT](/apidocs-mxsdk/apidocs/webhooks-api/#use-pat) section of the *Webhooks API*.
 

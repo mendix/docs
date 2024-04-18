@@ -110,12 +110,16 @@ If you don't specify any programming language, the code block looks a bit differ
 
 ### Images (Figures)
 
-#### Image with Alt Text, Max-Width, and Image-Border Class
+#### Image with Alt Text and Max-Width Class
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/clear-environment.png"
     alt="Clear Environment options and confirmation"
     max-width=60%
     >}}
+
+#### Image with No-Border Class
+
+{{< figure src="/attachments/developerportal/global-nav/navigation-menu.png/" alt="" max-width=35% class="no-border" >}}
 
 #### Image with a Link Value
 

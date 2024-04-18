@@ -1,7 +1,8 @@
 ---
 title: "OQL Order by Clause"
 url: /refguide/oql-order-by-clause/
-tags: ["studio pro"]
+weight: 50
+tags: ["oql", "studio pro"]
 ---
 
 ## 1 Description

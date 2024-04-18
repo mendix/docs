@@ -1,7 +1,8 @@
 ---
 title: "OQL Group by Clause"
 url: /refguide/oql-group-by-clause/
-tags: ["studio pro"]
+weight: 40
+tags: ["oql", "studio pro"]
 ---
 
 ## 1 Description

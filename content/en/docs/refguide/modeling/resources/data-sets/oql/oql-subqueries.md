@@ -1,7 +1,8 @@
 ---
 title: "OQL Subqueries"
 url: /refguide/oql-subqueries/
-tags: ["studio pro"]
+weight: 70
+tags: ["oql", "studio pro"]
 ---
 
 ## 1 Description

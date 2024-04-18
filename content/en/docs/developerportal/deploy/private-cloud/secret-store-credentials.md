@@ -527,32 +527,33 @@ To enable your environment to use [Azure Key Vault](https://learn.microsoft.com/
 
 1. Enable managed identities for your AKS cluster as [described in the Azure documentation](https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster#update-an-existing-aks-cluster). This only need to be done once per cluster.
 
-    Get the [Cluster OIDC Issuer URL](https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster#update-an-existing-aks-cluster), this will be required later.
+    Ensure that you have the [Cluster OIDC Issuer URL](https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster#update-an-existing-aks-cluster). You will need the URL to complete the configuration.
 
-2. Install the Key Vault CSI driver. The easiest way to install and enable this driver is to open the AKS cluster configuration, check the **Enable secret store CSI driver** option and press **Apply**:
+2. Install and enable the Key Vault CSI driver by doing the following steps:
+   
+    1. Open the AKS cluster configuration.
+    2. Select the **Enable secret store CSI driver** option.
+    3. Press **Apply**:
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-vault/aks-enable-csi-driver.png" >}}
 
-3. Create a new Azure Key vault using the Azure CLI or [Azure Portal](https://learn.microsoft.com/en-us/azure/key-vault/general/quick-create-portal).
+3. Create a new Azure Key vault by using the Azure CLI or [Azure Portal](https://learn.microsoft.com/en-us/azure/key-vault/general/quick-create-portal).
 
-    The default **Access configuration** (**Azure RBAC** and no additional **Resource access**) should work.
+    You can leave the **Access configuration** as default (**Azure RBAC** and no additional **Resource access**).
 
-    {{% alert color="info" %}}To keep this walkthough simple, keep the default network settings (allow all access).
-    Your organization might have instructions or policies that can be used to restrict public access to Key vaults.{{% /alert %}}
+{{% alert color="info" %}}This walkthough uses the default network settings (allow all access). Your organization might have additional instructions or policies that can be used to restrict public access to Key vaults.{{% /alert %}}
 
-    Write down the name of the new Key vault, and its **Directory ID** (Azure Tenant ID).
+4. Write down the name of the new Key vault and its **Directory ID** (Azure Tenant ID).
 
-4. By default, Key vaults are created with no administrators. Even account owners cannot access Key vaults by default.
+5. To create, edit or view secrets in Key vault, go to the **Access control (IAM)** tab, press **Add role assignment**, and follow the wizard to assign the **Key Vault Administrator** role to your user.
 
-    To create, edit or view secrets in Key vault, go to the **Access control (IAM)** tab, press **Add role assignment**, and follow the wizard to assign the **Key Vault Administrator** role to your user.
-
-5. Go to the **Secrets** tab, and for every key listed in the [SecretProviderClass Keys](#keys) section above, use the **Generate/Import** button to create a new key.
+6. Go to the **Secrets** tab, and for every key listed in the [SecretProviderClass Keys](#keys) section above, use the **Generate/Import** button to create a new key.
 
     After creating the keys, your Key vault should look like this:
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-vault/aks-keyvault-keys.png" >}}
 
-6. Create an app with the secret store enabled. If you are using connected mode, secret stores are enabled automatically if the **Enable Secrets Store** option is activated for the namespace where you create the app. For a standalone app, you must set the value of the setting `allowOverrideSecretsWithSecretStoreCSIDriver` to `true` in the Mendix app CRD.
+7. Create an app with the secret store enabled. If you are using connected mode, secret stores are enabled automatically if the **Enable Secrets Store** option is activated for the namespace where you create the app. For a standalone app, you must set the value of the setting `allowOverrideSecretsWithSecretStoreCSIDriver` to `true` in the Mendix app CRD.
 
     The following yaml shows an example Mendix app CRD:
 
@@ -584,14 +585,13 @@ To enable your environment to use [Azure Key Vault](https://learn.microsoft.com/
     EOF
     ```
 
-7. Create a **Managed identity** for your app environment by using the [az identity create](https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster#create-a-managed-identity) CLI command, or the [Create User Assigned Managed Identity](https://learn.microsoft.com/en-us/entra/identity/managed-identities-azure-resources/how-manage-user-assigned-managed-identities?pivots=identity-mi-methods-azp#create-a-user-assigned-managed-identity) wizard.
+8. Create a **Managed identity** for your app environment by using the [az identity create](https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster#create-a-managed-identity) CLI command, or the [Create User Assigned Managed Identity](https://learn.microsoft.com/en-us/entra/identity/managed-identities-azure-resources/how-manage-user-assigned-managed-identities?pivots=identity-mi-methods-azp#create-a-user-assigned-managed-identity) wizard.
 
-    Get the **Client ID** of this **Managed identity**, you will need it later.
+    Ensure that you have the **Client ID** of this **Managed identity**. You will need the ID to complete the configuration.
 
-8. Add a **Federated Credential** to the **Managed identity** from the previous step by using the [az identity federated-credential create](https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster#establish-federated-identity-credential) command, or by going to the **Federated credentials** tab and using the **Add Credential** wizard.
-   This will allow the Mendix app environment to be associated with this **Managed identity**.
-
-    Fill in the following details:
+9. Add a **Federated Credential** to the **Managed identity** from the previous step by using the [az identity federated-credential create](https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster#establish-federated-identity-credential) command, or by going to the **Federated credentials** tab and using the **Add Credential** wizard. This will allow the Mendix app environment to be associated with this **Managed identity**.
+    
+10. Fill in the following details:
 
       * **Federated credential scenario** - Kubernetes accessing Azure resources
       * **Cluster Issuer URL** - the Cluster OIDC URL from step 1
@@ -599,7 +599,7 @@ To enable your environment to use [Azure Key Vault](https://learn.microsoft.com/
       * **Service Account** - `MendixApp` CR name (environment internal name)
       * **Name** - any value
 
-9. Create a Kubernetes `ServiceAccount` for your environment, using the **Client ID** from step 7 as the value for `{managed identity client id}`:
+11. Create a Kubernetes `ServiceAccount` for your environment, using the **Client ID** from step 8 as the value for **{managed identity client id}**:
 
     ```shell
     kubectl -n <{Kubernetes namespace}> create serviceaccount <{environment name}>
@@ -607,10 +607,11 @@ To enable your environment to use [Azure Key Vault](https://learn.microsoft.com/
     kubectl -n <{Kubernetes namespace}> annotate serviceaccount <{environment name}> azure.workload.identity/client-id=<{managed identity client id}>
     ```
 
-10. To allow the app environment to access contents of the Key vault, open the Key vault created in step 3, go to the **Access control (IAM)** tab and press **Add role assignment**.
-   Follow the wizard to assign the **Key Vault Secrets User** role to the **Managed identity** created on step 7.
+12. To allow the app environment to access contents of the Key vault, open the Key vault created in step 3, go to the **Access control (IAM)** tab and press **Add role assignment**.
+    
+13. Follow the wizard to assign the **Key Vault Secrets User** role to the **Managed identity** created in step 8.
 
-11. Attach the secret to the environment by applying the following Kubernetes yaml:
+14. Attach the secret to the environment by applying the following Kubernetes yaml:
 
     ```yaml
     apiVersion: secrets-store.csi.x-k8s.io/v1
@@ -684,9 +685,10 @@ To enable your environment to use [Azure Key Vault](https://learn.microsoft.com/
     ```
 
     In the above example, `objectName` specifies the secret name from the original Key vault, and `objectAlias` specifies how it will be named when mounted into the sidecar.
-    For more information, please check the [Azure Key Vault Provider](https://azure.github.io/secrets-store-csi-driver-provider-azure/docs/getting-started/usage/#create-your-own-secretproviderclass-object) example.
 
-## 4 Additional considerations {#additional-considerations}
+For more information, see the [Azure Key Vault Provider](https://azure.github.io/secrets-store-csi-driver-provider-azure/docs/getting-started/usage/#create-your-own-secretproviderclass-object) example in the Azure Key Vault documentation.
+
+## 4 Additional Considerations {#additional-considerations}
 
 When implementing a secret store, keep in mind the following considerations:
 

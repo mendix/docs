@@ -87,14 +87,14 @@ To work with structures, such as BOMs, you need to first create a BOM window in 
 
 This feature is designed specifically for generating microflows and domain models to retrieve and display simple BOM structures (unconfigured or configured). For other scenarios, consider alternative solutions. See the table below:
 
-| Scenario                                                     | Suggested Solution                |
-| ------------------------------------------------------------ | --------------------------------- |
-| You work with large or complex BOM structures                | Use an active workspace           |
-| You have performance concerns                                | Use an active workspace           |
-| You transfer an entire BOM from Teamcenter to another system | Use an active integration gateway |
-| You compare BOMs from different systems                      | Use an active integration gateway |
-| You are doing BOM authoring                                  | Use an active workspace           |
-| You create BOM configurations                                | Use an active workspace           |
+| Scenario                                                 | Suggested Solution             |
+| -------------------------------------------------------- | ------------------------------ |
+| Work with large or complex BOM structures                | Use Active Workspace           |
+| Have performance concerns                                | Use Active Workspace           |
+| Transfer an entire BOM from Teamcenter to another system | Use Active Integration Gateway |
+| Compare BOMs from different systems                      | Use Active Integration Gateway |
+| Author BOMs                                              | Use Active Workspace           |
+| Create BOM configurations                                | Use Active Workspace           |
 
 ### 3.2 Landing Page {#homepage}
 To open the Teamcenter Extension in Studio Pro, go to **View** > **Teamcenter**. The landing page opens with two tabs: **Menu** and **Settings**.

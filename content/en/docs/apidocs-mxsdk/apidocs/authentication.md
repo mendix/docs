@@ -20,7 +20,7 @@ To obtain a Mendix API key, follow the instructions in the [API Keys](/community
 
 ### 2.2 Using Authentication Headers
 
-Use the following request headers to authenticate a API call:
+Use the following request headers to authenticate an API call:
 
 * `Mendix-Username` – the login name of the requesting user with the required privileges in the Mendix Platform
 * `Mendix-ApiKey` – the API key of this user

@@ -69,7 +69,7 @@ You can have more than one certificate for an application. For example, when you
 
 You can choose which certificate to use when you configure a custom domain for an environment (test, acceptance, or production).
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/app-env-certificates.png" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/app-env-certificates.png" class="no-border" >}}
 
 To manage custom domains, follow these steps:
 
@@ -79,7 +79,7 @@ To manage custom domains, follow these steps:
 
 3. Switch to the **Custom Domains** tab.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/custom-domains-tab.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/custom-domains-tab.png" class="no-border" >}}
 
 If you already have a signed SSL/TLS certificate, skip to [Uploading Your Own Custom Domain Certificate](#Uploading), below.
 
@@ -105,11 +105,11 @@ To create a CSR and an RSA (Rivest–Shamir–Adleman) encryption key, follow th
 
 4. Click **Generate**.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/generate-cert-req.png" width=60% >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/generate-cert-req.png" width=60% class="no-border" >}}
 
     An SSL/TLS private key and a certificate request is generated. The certificate request will be shown in PEM (Privacy-Enhanced Mail) format.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/pem-format.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/pem-format.png" class="no-border" >}}
 
     {{% alert color="info" %}}The SSL/TLS private key will be hidden after you upload it. To keep the key secure, it will be stored in Mendix Cloud's secure keystore; it will not be available for download, and it cannot be obtained by Mendix Support.{{% /alert %}}
 
@@ -123,7 +123,7 @@ Once you have a signed SSL/TLS certificate, you can upload it by following these
 
 2. Click **Upload Signed Certificate**. 
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/certificate.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/certificate.png" class="no-border" >}}
 
 3. Add a **Description** of your certificate.
 
@@ -131,7 +131,7 @@ Once you have a signed SSL/TLS certificate, you can upload it by following these
 
 5. Paste an **Intermediate Certificate Chain**. This is optional, but highly recommended. The intermediate certificate chain is provided by your certificate authority.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/signed-certificate.png" width=80% >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/signed-certificate.png" width=80% class="no-border" >}}
 
     {{% alert color="warning" %}}The intermediate certificates of the main certificate authorities are included in the built-in CA databases of modern browsers. Therefore, you do not need to include an intermediate certificate to serve your website through SSL/TLS to users of modern browsers. However, you cannot predict how your users will attempt to connect to your website; not including an intermediate certificate may result in connection issues for some users. Tools such as cURL do not recognize intermediate certificates automatically. Because of this, intermediate certificates are highly recommended but optional.{{% /alert %}}
 
@@ -161,7 +161,7 @@ To upload the custom domain certificate, follow these steps:
 
 6. Paste an **Intermediate Certificate Chain**. This is optional, but most browsers require it. The intermediate certificate chain is provided by your certificate authority.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/new-certificate.png" width=60% >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/new-certificate.png" width=60% class="no-border" >}}
 
 7. Click **Save** to save your new custom domain certificate. It will be uploaded to Mendix Cloud automatically.
 
@@ -171,7 +171,7 @@ You can now configure your custom domain. For details, see [Configuring a Custom
 
 You can add as many certificates as you need. Each certificate will be listed with the description you gave it. Make sure to give them meaningful names so that you can identify them easily.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/certificate-list.png" alt="List of certificates" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/certificate-list.png" alt="List of certificates" class="no-border" >}}
 
 ## 6 Renewing a Custom Domain Certificate
 
@@ -199,7 +199,7 @@ If you are rotating a certificate, you do not need to remove the current domain 
 
 You can also edit an existing custom domain certificate.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/certificate-edit.png" alt="Edit a certificate" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/certificate-edit.png" alt="Edit a certificate" class="no-border" >}}
 
 {{% alert color="warning" %}}
 For this, you need access to the certificate request that you created for the current certificate.
@@ -231,7 +231,7 @@ To configure a custom domain for your application environment, follow these step
 
 8. Click **Save** to save your custom domain. It will be configured for your application environment automatically.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/custom-domain.png" alt="" width=80% >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/custom-domain.png" alt="" width=80% class="no-border" >}}
     
 {{% alert color="info" %}}
 Make sure you have configured a CNAME record for your custom domain with your domain registrar/DNS provider (for details, see [Create and Configure a CNAME Record](#DNS)), above.

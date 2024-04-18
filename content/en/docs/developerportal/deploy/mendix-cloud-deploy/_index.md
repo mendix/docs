@@ -54,7 +54,7 @@ Free Apps make it possible to start creating and deploying apps with Mendix for 
 
 As noted in the table above, a Free App goes into sleep mode after about an hour of inactivity. If you access the app while it is inactive, it displays the following message: 
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/appresumed.png" alt="A Resuming app message" width=60% >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/appresumed.png" alt="A Resuming app message" width=60% class="no-border" >}}
 
 If, after a couple of minutes, your app does not wake up, contact [Mendix Support](https://support.mendix.com).
 
@@ -209,11 +209,11 @@ With a Free App, you can deploy your app to Mendix Cloud from Studio Pro by usin
 
 * In the top bar of Studio Pro, click **Run** > **Publish**. This automatically deploys your app to a Free App environment.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp2.png" alt="The Run menu with the Publish option selected" max-width=60% >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp2.png" alt="The Run menu with the Publish option selected" max-width=60% class="no-border" >}}
 
 * Alternatively, in the top bar of Studio Pro, click **Publish**.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp.png" alt="The Publish button" max-width=20% >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp.png" alt="The Publish button" max-width=20% class="no-border" >}}
 
 ## 3 Mendix Pricing Plans {#plans}
 

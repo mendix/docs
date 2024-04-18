@@ -50,7 +50,7 @@ Download the [Data Importer](https://marketplace.mendix.com/link/component/21983
 
 To import data, right-click on the module and click **Add other** > **Data Importer**.
 
-{{< figure src="/attachments/appstore/modules/data-importer-extension/data-importer-menu.png" >}}
+{{< figure src="/attachments/appstore/modules/data-importer-extension/data-importer-menu.png" class="no-border" >}}
 
 Name the document, click **OK**, and the new Data Importer document opens. 
 
@@ -58,7 +58,7 @@ Name the document, click **OK**, and the new Data Importer document opens.
 
 Once you have [created the Data Importer document](#create-document), click **Select a local file** to import an Excel file (*.xls* or *.xslx*) or CSV file (*.csv*).
 
-{{< figure src="/attachments/appstore/modules/data-importer-extension/select-file-for-preview.png" >}}
+{{< figure src="/attachments/appstore/modules/data-importer-extension/select-file-for-preview.png" class="no-border" >}}
 
 #### 2.2.1 Previewing Excel Data {#preview-data-excel}
 
@@ -68,7 +68,7 @@ Select or drop the file in the **Select Source File** window. You can choose whi
 * **Header Row No.** – row number of the file header; the default is 1
 * **Read Data From Row No.** – starting line for reading data; the default is 2
 
-{{< figure src="/attachments/appstore/modules/data-importer-extension/select-sheet-and-header-data-row.png" >}}
+{{< figure src="/attachments/appstore/modules/data-importer-extension/select-sheet-and-header-data-row.png" class="no-border" >}}
 
 Click **Preview Source Data & Entity** to view the data from the file. The first 10 rows from the source file are shown in the data preview section. The Sheet Name is used to create a NPE, but this can be edited. The column names correspond to the attribute names within the entity.
 
@@ -76,7 +76,7 @@ All the columns are selected (checked) by default. You can uncheck the columns y
 
 {{% alert color="warning" %}} Column names that do not adhere to Mendix naming conventions will be autocorrected. {{% /alert %}}
 
-{{< figure src="/attachments/appstore/modules/data-importer-extension/preview-data-and-entity.png" >}}
+{{< figure src="/attachments/appstore/modules/data-importer-extension/preview-data-and-entity.png" class="no-border" >}}
 
 #### 2.2.2 Previewing CSV Data {#preview-data-csv}
 
@@ -97,11 +97,11 @@ All the columns are selected (checked) by default. You can uncheck the columns y
 
 For example, for the following source data (CSV), the separator is specified as Comma. The Quote and Escape Characters are set to Double Quote, and Header is included in the input file.
 
-{{< figure src="/attachments/appstore/modules/data-importer-extension/source-csv-data.png" >}}
+{{< figure src="/attachments/appstore/modules/data-importer-extension/source-csv-data.png" class="no-border" >}}
 
 The data preview and resulting entity would be as seen below:
 
-{{< figure src="/attachments/appstore/modules/data-importer-extension/preview-csv-data-and-entity.png" >}}
+{{< figure src="/attachments/appstore/modules/data-importer-extension/preview-csv-data-and-entity.png" class="no-border" >}}
 
 ### 2.3 Editing an Entity {#edit-entity}
 
@@ -113,7 +113,7 @@ You can edit the entity in the **Entity Preview** section. The Data Importer sup
 
 Click **Edit** at top-right corner of **Entity Preview**. This will render a pop-up window where you can change the name of the entity. You can also change the name of the attribute; *Original Name* is the name of the column from the input file and *Attribute Name* is the new name you can assign to this column. You can also change the data type of this attribute by selecting a relevant value from the drop-down as shown below.
 
-{{< figure src="/attachments/appstore/modules/data-importer-extension/edit-csv-entity.png" >}}
+{{< figure src="/attachments/appstore/modules/data-importer-extension/edit-csv-entity.png" class="no-border" >}}
 
 Once you are satisfied with the changes, click **OK** to save or **Cancel** to discard your changes.
 
@@ -151,7 +151,7 @@ When you are done editing the entity, click **Create Entity** > **OK**. This wil
 
 When the entity is created, you can view the mapping of the source columns to the target entity attributes. 
 
-{{< figure src="/attachments/appstore/modules/data-importer-extension/source-to-target-mapping.png" >}}
+{{< figure src="/attachments/appstore/modules/data-importer-extension/source-to-target-mapping.png" class="no-border" >}}
 
 The Data Importer document creation is complete and can be used to [import data in a microflow](#import-microflow).
 
@@ -161,19 +161,19 @@ Use the previously created Data Importer document to import data from your input
 
 1. Create a new microflow and drag the **Import data from file** activity into it.
 
-   {{< figure src="/attachments/appstore/modules/data-importer-extension/custom-activity.png" >}}
+   {{< figure src="/attachments/appstore/modules/data-importer-extension/custom-activity.png" class="no-border" >}}
 
 2. Double-click the activity and in the **File** field, select an input file (Excel or CSV).
 3. In the **Data importer document** field, click **Select** and choose the Data Importer document you want to use. Choose an appropriate Data Importer document based on the input file.
 
-   {{< figure src="/attachments/appstore/modules/data-importer-extension/choose-data-importer-template.png" >}}
+   {{< figure src="/attachments/appstore/modules/data-importer-extension/choose-data-importer-template.png" class="no-border" >}}
 
 4. After selecting the Data Importer document, the **Return type** and **Variable name** will auto-populate. You can also change the name of the output variable.
 5. Click **OK**.
 
 The custom activity is configured and you can import data from input files.
 
-{{< figure src="/attachments/appstore/modules/data-importer-extension/example-microflow.png" >}}
+{{< figure src="/attachments/appstore/modules/data-importer-extension/example-microflow.png" class="no-border" >}}
 
 ## 4 Running Your App
 
@@ -183,7 +183,7 @@ To perform testing, you can do the following actions:
 * Deploy your app locally and browse and upload an input file that resembles the file used to create Data Importer document
 * View the message about x number of rows being imported into a list of entities
 
-{{< figure src="/attachments/appstore/modules/data-importer-extension/local-app-run.png" >}}
+{{< figure src="/attachments/appstore/modules/data-importer-extension/local-app-run.png" class="no-border" >}}
 
 ## 5 Known Issues
 

@@ -39,7 +39,7 @@ Most languages will be added with an empty dictionary, although some translation
 
 You can set each language in your app to have additional settings.
 
-{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/edit-language.png" width="550px" alt="Edit Language" >}}
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/edit-language.png" width="550px" alt="Edit Language" class="no-border" >}}
 
 ### 4.1 Check Completeness
 
@@ -59,7 +59,7 @@ Type a format string in the relevant box and you will see an example of how a da
 
 Click **Edit…** to open a dialog box which will provide a full reference for the format string:
 
-{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/date-format.png" width="550px" alt="Date edit dialog" >}}
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/date-format.png" width="550px" alt="Date edit dialog" class="no-border" >}}
 
 ## 5 List of Supported Languages {#supported-languages}
 

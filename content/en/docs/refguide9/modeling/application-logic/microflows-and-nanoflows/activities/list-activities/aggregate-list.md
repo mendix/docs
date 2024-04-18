@@ -24,7 +24,7 @@ The **Aggregate list** activity can be used to calculate aggregated values over 
 
 An example of **Aggregate list** properties is represented in the image below:
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/aggregate-list/aggregate-list-properties.png" alt="aggregate list properties" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/aggregate-list/aggregate-list-properties.png" alt="aggregate list properties" class="no-border" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
@@ -83,7 +83,7 @@ When a database **Retrieve** activity is only used once in one **Aggregate list*
 
 For instance, in this microflow, the Mendix Runtime merges the two activities into one single count query:
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/aggregate-list/one-single-retrieve-query.png" width="500px" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/aggregate-list/one-single-retrieve-query.png" width="500px" class="no-border" >}}
 
 ### 5.1 Examples for When Optimization is Not Applied
 
@@ -91,7 +91,7 @@ If you reuse the same list for multiple **Aggregates list** activities, an optim
 
 For instance, in this example, the same list is used multiple times, and hence the Mendix Runtime no longer merges the activities:
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/aggregate-list/not-merged-activities.png" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/aggregate-list/not-merged-activities.png" class="no-border" >}}
 
 If the list is not merged into a single query, all these records are kept in memory. Basically, this has the same effect as when you iterate over the list. If you iterate over the list, you have to think about the memory consumption, meaning that you cannot retrieve 10,000 objects with a single retrieve query. To prevent memory errors (for example, heap space or GC limit overhead), you should not use a list multiple times in a microflow unless you use a limit and offset.
 
@@ -99,7 +99,7 @@ If the list is not merged into a single query, all these records are kept in mem
 
 If you do want to use the list more than once and you also want the optimized query, do two separate retrieves. As shown in the following example, an optimized query is applied and you can use the second retrieve in your microflow.
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/aggregate-list/two-separate-retrieves.png" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/aggregate-list/two-separate-retrieves.png" class="no-border" >}}
 
 When an average is calculated within an optimized SQL query, the rounding mode configured in the app settings is not respected. The result that is returned is rounded by the database according to the database settings. If the rounding mode setting for the app is essential for the result, you can retrieve the sum and count separately and perform the division in the microflow.
 

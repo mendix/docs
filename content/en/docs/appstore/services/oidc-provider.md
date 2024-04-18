@@ -19,7 +19,7 @@ The idea is that you set up a single Mendix app which uses the [OIDC SSO](https:
 
 For more information on the concepts behind authorization, see [About Authorization](#about-authorization), below.
 
-{{< figure src="/attachments/appstore/services/oidc-provider/typical-usage.png" >}}
+{{< figure src="/attachments/appstore/services/oidc-provider/typical-usage.png" class="no-border" >}}
 
 You can also set up your users manually in your app, using the Mendix [Administration](/appstore/modules/administration/) module, rather than linking to your central IdP.
 

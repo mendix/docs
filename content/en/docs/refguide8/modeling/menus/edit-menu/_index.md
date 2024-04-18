@@ -10,7 +10,7 @@ tags: ["Studio Pro", "view menu", "top bar"]
 
 Via the **Edit** menu you can perform various actions, such cut/copy/paste or search where a particular document is used. You can also open the [Preferences](/refguide8/preferences-dialog/) dialog that contains user-specific settings. 
 
-{{< figure src="/attachments/refguide8/modeling/menus/edit-menu/edit-menu.png" alt="Edit Menu"   width="300"  >}}
+{{< figure src="/attachments/refguide8/modeling/menus/edit-menu/edit-menu.png" alt="Edit Menu"   width="300"  class="no-border" >}}
 
 ## 2 Menu Item Overview
 

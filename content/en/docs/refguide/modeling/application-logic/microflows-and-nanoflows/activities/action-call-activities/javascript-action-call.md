@@ -19,7 +19,7 @@ The JavaScript action call activity can be used to call a [JavaScript action](/r
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/javascript-action-call/javascript-action-call.png" alt="JavaScript Action Properties" width="700px" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/javascript-action-call/javascript-action-call.png" alt="JavaScript Action Properties" width="700px" class="no-border" >}}
 
 The **JavaScript action call** properties pane consists of the following sections:
 
@@ -50,7 +50,7 @@ An argument is the input data that you are passing to the JavaScript action. For
 
 The values of the arguments are defined using [expressions](/refguide/expressions/):
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/java-action-call/argument-edit.png" alt="argument" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/java-action-call/argument-edit.png" alt="argument" class="no-border" >}}
 
 ### 3.3 Return Type {#return-type}
 

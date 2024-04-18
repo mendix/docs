@@ -35,11 +35,11 @@ Mendix Cloud automatically monitors the health and status of apps that are deplo
 1. From the [Developer Portal](https://home.mendix.com), open the app that you want to monitor.
 2. In the [navigation pane](/developerportal/#navigation-pane), click **Alerts**. This displays the status of your app node in various categories.
 
-    {{< figure src="/attachments/developerportal/operate/monitoring-application-health/application-status.png" >}}
+    {{< figure src="/attachments/developerportal/operate/monitoring-application-health/application-status.png" class="no-border" >}}
 
 3. To view more details about a specific alert, click it. Detailed information about that alert will appear below the alert status table.
 
-    {{< figure src="/attachments/developerportal/operate/monitoring-application-health/alert-details.png" >}}
+    {{< figure src="/attachments/developerportal/operate/monitoring-application-health/alert-details.png" class="no-border" >}}
 
 You may be able to use this information to resolve the issue yourself; otherwise, include this information when submitting a support request to [Mendix Support](https://support.mendix.com). You can download a log of the alerts on the [Logs](/developerportal/operate/logs/) page.
 
@@ -169,7 +169,7 @@ To access the history of the alerts from your app, follow these steps:
 2. Select the environment that you wish to see alert history for.
 3. You will see an overview of all alerts that have been sent for this application.
 
-    {{< figure src="/attachments/developerportal/operate/monitoring-application-health/alerts-history.png" >}}
+    {{< figure src="/attachments/developerportal/operate/monitoring-application-health/alerts-history.png" class="no-border" >}}
 
     The overview shows alert types and details, including date and time. The alert types provide a broad indication of the type of error that occurred, such as critical log messages or failures of the health check microflow. Recovery notifications are also shown here.
 

@@ -48,7 +48,7 @@ To add a workflow to your app, do the following:
 2. In the **Add Workflow** dialog box, fill in the **Name** for the workflow.
 3. Select an **Entity** to use it as a [workflow parameter](/refguide/workflow-parameters/):
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/add-workflow-dialog.png" alt="Adding Workflow" >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/add-workflow-dialog.png" alt="Adding Workflow" class="no-border" >}}
 
 The workflow is created.
 

@@ -52,11 +52,11 @@ Follow the instructions below to configure a maintenance window.
 
 3. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the environment that you want to configure.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/maintenance-windows/environment-details.png" alt="" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/maintenance-windows/environment-details.png" alt="" class="no-border" >}}
 
 4. Go to the **Maintenance** tab.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/maintenance-windows/maintenance.png" alt="" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/maintenance-windows/maintenance.png" alt="" class="no-border" >}}
     
 5. Click **Change** to modify the preferred maintenance window of your environment. To modify the window, you must have [transport rights](/developerportal/deploy/node-permissions/#transport-rights) for the environment.
 

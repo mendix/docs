@@ -92,13 +92,13 @@ In the **Native mobile (tablet & phone)** tab, configure the **Role-based home p
 * Use `MobileSSO.Login_Native` when you do not want to automatically redirect to the Identity Provider (IdP) login page, especially when only one IdP is configured. This option allows end-users to sign in directly without redirection. 
 * Use `MobileSSO.Login_Native_Automatic` if you want end-users to redirect automatically to the IdP sign in page when only one IdP is configured. 
 
-{{< figure src="/attachments/appstore/modules/mobile-sso/configuring navigation.png" >}}
+{{< figure src="/attachments/appstore/modules/mobile-sso/configuring navigation.png" class="no-border" >}}
 
 ### 4.3 Configuring Custom Login Page
 
 If you want to customize the login page, make sure to add the **App events** widget in the page and call the `MobileSSO.OL_RegisterDeeplink` nanoflow. This step helps to integrate the custom login page with Mobile SSO module. 
 
-{{< figure src="/attachments/appstore/modules/mobile-sso/Custom login.png" >}}
+{{< figure src="/attachments/appstore/modules/mobile-sso/Custom login.png" class="no-border" >}}
 
 ### 4.4 Configuring Client Information {#client-info}
 
@@ -110,7 +110,7 @@ The following subsections show how to set up IdP for mobile or web and mobile pl
 
 {{% alert color="info" %}} Make sure to add a **Custom callback URL** in the client and IdP. This configuration is optional for web apps but mandatory for mobile apps. For Example, `<appname>://oauth/callback`, where `<appname>` is an application name which is used to create the application using **Build Native Mobile App** {{% /alert %}}
 
-{{< figure src="/attachments/appstore/modules/mobile-sso/Configure client information.png" >}}
+{{< figure src="/attachments/appstore/modules/mobile-sso/Configure client information.png" class="no-border" >}}
 
 When testing locally, add the `makeitnative://oauth/callback` URL in the **Custom callback URL** tab. This configuration also supports signing in with acr_values.
 

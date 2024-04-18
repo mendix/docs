@@ -142,7 +142,7 @@ You can select this option by right-clicking in the microflow editor and selecti
 
 It is also accessible by right-clicking in the microflow editor and selecting **Properties**.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/microflow/microflow-expose.jpg" alt="Expose as Microflow Action" width="550" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/microflow/microflow-expose.jpg" alt="Expose as Microflow Action" width="550" class="no-border" >}}
 
 By selecting the **Expose as microflow action**  option, you can expose the microflow as a microflow action and use the return type of the microflow to generate outcomes / paths in the workflow. Exposing the microflow will make it appear in the **Toolbox** when you are editing a microflow in the category of your choice. When this action is used in a microflow, it will show the provided caption and icon.
 
@@ -166,7 +166,7 @@ You can select this option by right-clicking in the microflow editor and selecti
 
 It is also accessible by right-clicking in the microflow editor and selecting **Properties**.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/microflow/workflow-expose.jpg" alt="Expose As Workflow Action" width="550" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/microflow/workflow-expose.jpg" alt="Expose As Workflow Action" width="550" class="no-border" >}}
 
 By selecting the **Expose as workflow action** option, you can expose the microflow as a [workflow](/refguide/workflows/) action. Exposing the workflow will make it appear in the **Toolbox** of a [workflow editor](/refguide/workflows/) in the category of your choice. When this action is used in a workflow, it will show the provided caption and icon.
 

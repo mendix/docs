@@ -56,7 +56,7 @@ This feature is currently in [Private Beta](/releasenotes/beta-features/). Conta
 
 Mendix Event Broker Bridges allow for the integration of the Mendix Event Broker with other technologies, such as AWS SQS, AWS S3, or Google Pub/Sub, to send and receive events between your Mendix Public Cloud landscape and technologies outside of your Mendix Public Cloud landscape.
 
-{{< figure src="/attachments/appstore/services/event-broker/event_broker_bridges.png" >}}
+{{< figure src="/attachments/appstore/services/event-broker/event_broker_bridges.png" class="no-border" >}}
 
 ### 3.1 Standard Message Format
 

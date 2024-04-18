@@ -32,7 +32,7 @@ The entity type defines how the data is handled and there are two types:
 * [Persistable entity](#persistable-entity) 
 * [Non-persistable entity](#non-persistable-entity)
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/type-of-entities.jpg" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/entities/type-of-entities.jpg" class="no-border" >}}
 
 {{% alert color="info" %}}
 You can also use data sources from other applications in your app through the [Integration pane](/refguide/integration-pane/). These data sources are represented in the domain model as *external entities* which are displayed as purple entity containers in the domain model.
@@ -52,7 +52,7 @@ Non-persistable entities are stored in the runtime memory and never get committe
 
 An example of the entity properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/entity-properties.png"   width="300"  >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/entities/entity-properties.png"   width="300"  class="no-border" >}}
 
 Entity properties consist of the following sections:
 
@@ -100,7 +100,7 @@ One important use of this feature is to derive functionality from the **System**
 
 For example, this property can be used in a situation where, you have a **Student** entity and a **Professor** entity, which have some generic properties. They both have a name, telephone number, and email address and can be a member of one or more courses. Both entities are *generalized* in the **Member** entity. Conversely, this means that the **Member** entity is *specialized* in the **Student** and **Professor** entities.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/917900.png" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/entities/917900.png" class="no-border" >}}
 
 For more information, and a discussion on the relative merits of using generalization or associations, see [Generalization vs 1-1 Associations](/refguide/generalization-and-association/).
 
@@ -182,7 +182,7 @@ This allows you to describe aspects of the entity which may be useful to you or 
 
 You can also edit an entity by opening the entity properties dialog box.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/example-entity.png" alt="Example of a CD entity" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/entities/example-entity.png" alt="Example of a CD entity" class="no-border" >}}
 
 In addition to the properties described above, there are also tabs which allow you to edit the following:
 

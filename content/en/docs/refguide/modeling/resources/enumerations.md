@@ -148,7 +148,7 @@ To create a new enumeration, do the following:
 
     1. Fill out **Name** and **Caption** for an enumeration value. You can set **Image** for it if necessary. For more information on enumeration properties, see the [Enumeration Properties](#enum-properties) section. <br />
 
-        {{< figure src="/attachments/refguide/modeling/resources/enumerations/add-enum-value.png" >}}
+        {{< figure src="/attachments/refguide/modeling/resources/enumerations/add-enum-value.png" class="no-border" >}}
 
     1. Click **OK** to save the enumeration value.
 

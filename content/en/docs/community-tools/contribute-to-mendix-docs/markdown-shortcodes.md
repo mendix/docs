@@ -119,7 +119,7 @@ If you don't specify any programming language, the code block looks a bit differ
 
 #### Image with a Link Value
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/parameter.png" alt="" link="/refguide/parameter/" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/parameter.png" alt="" link="/refguide/parameter/" class="no-border" >}}
 
 #### Image Indented in a List
 
@@ -127,7 +127,7 @@ If you don't specify any programming language, the code block looks a bit differ
 2. In the **Add Microflow** dialog box, in the **Name** field, enter *IVK_SetOrderToComplete*, and then click **OK**.
 3. On the **Orders** overview page, add an **Action** button to the toolbar.
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/working-with-lists-in-a-microflow/18581118.png" alt="Adding the Action button" >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/working-with-lists-in-a-microflow/18581118.png" alt="Adding the Action button" class="no-border" >}}
 
 4. Double-click the **Action** button and change the **Caption** to *Set Processing to Complete*.
 

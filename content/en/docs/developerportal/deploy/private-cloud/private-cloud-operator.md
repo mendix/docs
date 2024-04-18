@@ -38,7 +38,7 @@ You can obtain the deployment package in a number of ways:
 
 * within Studio Pro, by choosing the menu option **Project > Create Deployment Package…** – see [Create Deployment Package](/refguide/create-deployment-package-dialog/) for more information
 * from the **Environments** page of your app in the Developer Portal
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-operator/environments-create-mda.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-operator/environments-create-mda.png" class="no-border" >}}
 * through a CI/CD process, such as Jenkins.
 
 The deployment package must be available over the internet without requiring authorization credentials, as these cannot be provided in the CR.
@@ -230,7 +230,7 @@ You need to make the following changes:
 The constant name is equal to `{module-name}.{constant-name}` where {module-name} is the name of the Mendix app module containing the constant,
 and {constant-name} is the name of the constant. The constant name will also be visible in the constant properties (UnitTesting.RemoteApiEnabled in this example):
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-operator/constant-name.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-operator/constant-name.png" class="no-border" >}}
 
 Set the constant values in the **microflowConstants** value in **runtime**. For example:
 
@@ -319,12 +319,12 @@ To build and deploy your app using the OpenShift Console, do the following:
 2. Go to your project.
 3. Click the **Add** button, and select **Import YAML**.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-operator/image1.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-operator/image1.png" class="no-border" >}}
 
 4. In the **Import YAML** page, enter/paste the YML you prepared in [Editing the CR}(#edit-cr), above.
 5. Click the **Create** button.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-operator/image2.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-operator/image2.png" class="no-border" >}}
 
 Mendix Operator will now pick up the YAML and deploy your app.
 

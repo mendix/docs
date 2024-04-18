@@ -181,7 +181,7 @@ If you need more information, see [Native App Prerequisites and Troubleshooting]
 
 This is what we saw when we started testing our native mobile photo app:
 
-{{< figure src="/attachments/quickstarts/native-mobile-app/mobile-pic-1.png" width="200px" >}}
+{{< figure src="/attachments/quickstarts/native-mobile-app/mobile-pic-1.png" width="200px" class="no-border" >}}
 
 While we were testing, we were lucky to see a dinosaur nearby:
 

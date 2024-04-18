@@ -36,24 +36,24 @@ Mendix Studio Pro needs to be installed on your computer before you can start bu
 
 1. Open the downloaded Mendix Studio Pro executable. It is named like this: *Mendix-9.X.X-Setup*. Then click **Next**:
 
-    {{< figure src="/attachments/refguide9/general/install/setup-wizard.png"   width="400"  >}}
+    {{< figure src="/attachments/refguide9/general/install/setup-wizard.png"   width="400"  class="no-border" >}}
 
 2. Select **I accept the terms in the License Agreement** and click **Next**:
 
-    {{< figure src="/attachments/refguide9/general/install/terms-of-use.png"   width="400"  >}}
+    {{< figure src="/attachments/refguide9/general/install/terms-of-use.png"   width="400"  class="no-border" >}}
 
 3. Select the folder in which you want to install Studio Pro and click **Next**:
 
-    {{< figure src="/attachments/refguide9/general/install/select-folder.png"   width="400"  >}}
+    {{< figure src="/attachments/refguide9/general/install/select-folder.png"   width="400"  class="no-border" >}}
 
 4. Enter the start menu shortcuts folder you want to use and click **Next**:
 
-    {{< figure src="/attachments/refguide9/general/install/shortcut-folder.png"   width="400"  >}}
+    {{< figure src="/attachments/refguide9/general/install/shortcut-folder.png"   width="400"  class="no-border" >}}
 
 5. Check the desktop option to create a shortcut to Studio Pro on your desktop and click **Next**.
 6. Click **Install** to install Studio Pro on your computer:
 
-    {{< figure src="/attachments/refguide9/general/install/ready-to-install.png"   width="400"  >}}
+    {{< figure src="/attachments/refguide9/general/install/ready-to-install.png"   width="400"  class="no-border" >}}
 
 7. If you are asked to restart your computer, make a selection and click **Finish**. Otherwise, check **Launch Mendix 9.X.X** and click **Finish** to finish the installation and launch Studio Pro.
 
@@ -124,7 +124,7 @@ You can sign in with your Mendix account, or with your own company account if th
 
 In some situations, for example, when your network has a firewall or proxy server, a warning about an untrusted certificate may appear during the sign-in process:
 
-{{< figure src="/attachments/refguide9/general/install/untrusted-certificate.png" width="600px" >}}
+{{< figure src="/attachments/refguide9/general/install/untrusted-certificate.png" width="600px" class="no-border" >}}
 
 To continue, you may accept the certificate for the current session by clicking the **Accept for this session** button, or install it permanently by clicking the **View certificate information** button. 
 

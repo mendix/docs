@@ -18,7 +18,7 @@ While [Mendix best practices for development](/refguide/dev-best-practices/) app
 
 In an adaptable solution, up to 20% of the end solution can be adapted through customizations, extensions, integrations, or new customer-specific modules. Instead of being tied to a prescriptive software-as-a-service (SaaS) solution that only allows for configuration at runtime, adaptable solutions allow for design-time adaptation through model-level changes to cater to the needs of your specific implementation.
 
-{{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-adapt/sol-architecting/adaptable-solution-architecture.png" alt="Adaptable Solution architecture" >}}
+{{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-adapt/sol-architecting/adaptable-solution-architecture.png" alt="Adaptable Solution architecture" class="no-border" >}}
 
 ## 3 Use Cases
 
@@ -44,13 +44,13 @@ The solution value chain and lifecycle consists of three important phases:
 
 The solution lifecycle can be visualized in this diagram:
 
-{{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-adapt/solution-lifecycle.png" alt="Adaptable Solution Lifecycle" >}}
+{{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-adapt/solution-lifecycle.png" alt="Adaptable Solution Lifecycle" class="no-border" >}}
 
 ### 4.1 Implementation as a Separate Model Instance and Cloud Node
 
 The customer implementation is a separate upgradable model instance (fork) per customer that shares generic functionality from the original solution model and that is deployed to separate cloud resources.
 
-{{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-adapt/solution-deployment.png" alt="Adaptable Solution Deployment"  width="50%" >}}
+{{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-adapt/solution-deployment.png" alt="Adaptable Solution Deployment"  width="50%" class="no-border" >}}
 
 The separate model instance allows the implementation team to fully customize all [non-IP protected](#ip-protection) functionality. Not all customer implementations require changes to the model. In those cases, the original model can be deployed as is.
 

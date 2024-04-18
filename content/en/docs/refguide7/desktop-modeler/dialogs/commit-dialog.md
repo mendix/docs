@@ -7,7 +7,7 @@ url: /refguide7/commit-dialog/
 
 The **Commit** dialog box is used for committing changes to the Team Server. You can enter a message and—if applicable—select related stories.
 
-{{< figure src="/attachments/refguide7/desktop-modeler/dialogs/commit-dialog/commit-dialog-stories.png" alt=" " >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/dialogs/commit-dialog/commit-dialog-stories.png" alt=" " class="no-border" >}}
 
 ## 2 Branch
 
@@ -15,8 +15,8 @@ At the top of the dialog box you will see the branch which you are committing. T
 
 | Branch type | Description |
 | --- | --- |
-| {{< figure src="/attachments/refguide7/desktop-modeler/dialogs/commit-dialog/commit-main.png" >}} | You are committing the main line. |
-| {{< figure src="/attachments/refguide7/desktop-modeler/dialogs/commit-dialog/commit-branch.png" >}} | You are committing the specified branch. |
+| {{< figure src="/attachments/refguide7/desktop-modeler/dialogs/commit-dialog/commit-main.png" class="no-border" >}} | You are committing the main line. |
+| {{< figure src="/attachments/refguide7/desktop-modeler/dialogs/commit-dialog/commit-branch.png" class="no-border" >}} | You are committing the specified branch. |
 
 ## 3 Message
 

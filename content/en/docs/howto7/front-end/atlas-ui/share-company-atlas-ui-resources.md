@@ -18,7 +18,7 @@ This how-to teaches you how to do the following:
 
 When your custom resources are ready to be shared with multiple developers or apps, you can export the module from the **Project Explorer** in the Desktop Modeler. To do this, right-click the **UI Resources** module, export it, and save it:
 
-{{< figure src="/attachments/howto7/front-end/atlas-ui/share-company-atlas-ui-resources/sharing_export_uiresources.png" >}}
+{{< figure src="/attachments/howto7/front-end/atlas-ui/share-company-atlas-ui-resources/sharing_export_uiresources.png" class="no-border" >}}
 
 You are free to change the name of the module after it has been exported as a UI resource package.
 
@@ -35,7 +35,7 @@ There are two important options to keep in mind when uploading a UI resources mo
 * **Publish to** – this option lets you share the UI resources in a private Marketplace (company-only) or with the public audience (the entire Mendix community)
 * **Category** – choose the **UI Resources** category to make the module available as a UI resources module
 
-{{< figure src="/attachments/howto7/front-end/atlas-ui/share-company-atlas-ui-resources/sharing_appstore_addcontent.png" >}}
+{{< figure src="/attachments/howto7/front-end/atlas-ui/share-company-atlas-ui-resources/sharing_appstore_addcontent.png" class="no-border" >}}
 
 When you upload new UI resources to the public Mendix Marketplace, the content will need to be reviewed and approved by Mendix. However, when you publish UI resources to the private Marketplace, the content will not have to be reviewed, and it will be directly available in your company after publishing.
 
@@ -51,11 +51,11 @@ Let’s start with creating a new Mendix application in the Mendix Developer Por
 
 1. Select **Blank App** and open the new app in the Desktop Modeler.
 
-    {{< figure src="/attachments/howto7/front-end/atlas-ui/share-company-atlas-ui-resources/sharing_createnewapp.png" >}}
+    {{< figure src="/attachments/howto7/front-end/atlas-ui/share-company-atlas-ui-resources/sharing_createnewapp.png" class="no-border" >}}
 
 2. Expand at the **App Store modules** at the Mendix **Project** level and find the default **Atlas_UI_Resources** module. Right-click this module and delete it:
 
-    {{< figure src="/attachments/howto7/front-end/atlas-ui/share-company-atlas-ui-resources/sharing_delete_module.png" >}}
+    {{< figure src="/attachments/howto7/front-end/atlas-ui/share-company-atlas-ui-resources/sharing_delete_module.png" class="no-border" >}}
 
 3. Now it’s time to import your company UI resources (if you have not created the UI resources yet, see [How to Create Company UI Resources](/howto7/front-end/create-company-atlas-ui-resources/)). Import these resources by clicking **App Store** in the top toolbar of the Desktop Modeler, and then selecting **UI Resources** in the left sidebar **Categories** menu.
 4. Download the company UI resources module you have created.
@@ -74,11 +74,11 @@ There are four important options to keep in mind when uploading your company app
 * **Sub category** – select the **Starter Apps** sub-category to make the app available in the "create new app flow" for the Mendix Platform
 * **Impressions** – impressions contain the images that are shown when creating a new app in the Mendix Platform
 
-{{< figure src="/attachments/howto7/front-end/atlas-ui/share-company-atlas-ui-resources/sharing_appstore_addcontent_starterapp.png" >}}
+{{< figure src="/attachments/howto7/front-end/atlas-ui/share-company-atlas-ui-resources/sharing_appstore_addcontent_starterapp.png" class="no-border" >}}
 
 These are examples of app impression images:
 
-{{< figure src="/attachments/howto7/front-end/atlas-ui/share-company-atlas-ui-resources/sharing_createnewapp_detail.png" >}}
+{{< figure src="/attachments/howto7/front-end/atlas-ui/share-company-atlas-ui-resources/sharing_createnewapp_detail.png" class="no-border" >}}
 
 ### 4.2 Using the UI Resources Module from the Mendix Marketplace
 
@@ -88,13 +88,13 @@ To use the UI Resources module from teh Mendix Marketplace, follow these steps:
 
 1. Open the Mendix Marketplace in the Desktop Modeler and then select **UI Resources** in the left sidebar **Categories** menu:
 
-    {{< figure src="/attachments/howto7/front-end/atlas-ui/share-company-atlas-ui-resources/sharing_appstore_modeler.png" >}}
+    {{< figure src="/attachments/howto7/front-end/atlas-ui/share-company-atlas-ui-resources/sharing_appstore_modeler.png" class="no-border" >}}
 
     The available UI resources will appear in the middle section of the Marketplace. The **Private** label indicates that the UI resources are only available for your company.
 
 2. Select the UI resources that have been created by your company:
 
-    {{< figure src="/attachments/howto7/front-end/atlas-ui/share-company-atlas-ui-resources/sharing_appstoredetail_modeler.png" >}}
+    {{< figure src="/attachments/howto7/front-end/atlas-ui/share-company-atlas-ui-resources/sharing_appstoredetail_modeler.png" class="no-border" >}}
 
 3. To download the UI resources inside your app, click **Download**. After downloading your company's UI Resources module, it will appear under **App Store modules**. The module can always be updated by downloading a new version from the Mendix Marketplace when new resources are added.
 

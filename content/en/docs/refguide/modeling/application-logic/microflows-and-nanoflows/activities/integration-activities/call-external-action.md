@@ -19,7 +19,7 @@ The **Call external action** activity allows you to call an external action that
 There are two sets of properties for this activity, those in the properties pane on the right, and those that are displayed when opening the activity dialog.
 An example of call external action properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-external-action/properties.png" alt="call external action properties" width="400" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-external-action/properties.png" alt="call external action properties" width="400" class="no-border" >}}
 
 The **Action** section of the properties pane shows the toolbox action associated with this activity. You can open a dialog box to select a different toolbox action clicking the ellipsis (**…**) next to **Action**.
 
@@ -32,7 +32,7 @@ The properties dialog box consists of two tabs:
 
 ## 3 General Tab {#general}
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-external-action/general.png" alt="call external action general tab" width="700" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-external-action/general.png" alt="call external action general tab" width="700" class="no-border" >}}
 
 ### 3.1 Action
 

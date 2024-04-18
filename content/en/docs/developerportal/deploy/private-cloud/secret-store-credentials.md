@@ -30,7 +30,7 @@ Mendix apps currently support the following secret stores:
 
 To implement an external secret store, you must configure the required settings by following these steps:
 
-1. Set up and configure the secret storage provider, for example, HashiCorp Vault, AWS Secret Manager or Azure KeyVault.
+1. Set up and configure the secret storage provider, for example, HashiCorp Vault, AWS Secret Manager or Azure Key Vault.
     In most cases, this should only be done once for the entire cluster. For more information and support, contact the secret storage provider.
 2. Install and configure a [Kubernetes Secrets Store CSI driver](https://secrets-store-csi-driver.sigs.k8s.io/#supported-providers), for example, [AWS Secrets Manager CSI Secrets Store](https://github.com/aws/secrets-store-csi-driver-provider-aws).
     This driver is installed globally for the entire cluster. For more information, refer to documentation supplied by the secret storage provider.

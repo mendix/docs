@@ -68,7 +68,7 @@ Architecting a solution for adaptation requires an understanding of your custome
 * Common modules that can be adapted to a customer’s needs
 * Customer-specific extension modules
 
-{{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-adapt/solution-three-parts.png" alt="Three parts of the adaptable solution">}}
+{{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-adapt/solution-three-parts.png" alt="Three parts of the adaptable solution" class="no-border" >}}
 
 These different parts work together in the customer implementation. It is important to maintain these distinctions, because there is an inherent tradeoff: What is part of the common core and IP-protected cannot be adapted or modified, while what can be adapted can never be protected. This boundary can be created at a fine-grained level. All adaptation (both extensions and adaptable core) can make use of functionality from the common core. For more information, see the [Application Design](/appstore/creating-content/sol-architecting/#app-design) section of *How to Architect Adaptable Solutions*.
 

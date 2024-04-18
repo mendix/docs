@@ -11,7 +11,7 @@ User task allows you to assign a workflow task to a certain user or a group of u
 
 For example, you can add filters and assign a task to users with the Manager role:
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/workflows/workflow-elements/user-task/user-task.jpg" alt="User Task Example" width="200">}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/workflows/workflow-elements/user-task/user-task.jpg" alt="User Task Example" width="200" class="no-border" >}}
 
 When the workflow reaches the user task activity, the task is created and will be displayed in the Task inbox if you are using the **Workflow Commons** module:
 

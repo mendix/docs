@@ -170,7 +170,7 @@ Do not add a double-space between the number (or bullet point) and first letter 
 
 1. First list item
 2. Second list item
-    {{< figure src="/attachments/refguide9/general/moving-from-8-to-9/moving-from-atlas-2-to-3/set-hybrid-nav.png" width="250px">}}
+    {{< figure src="/attachments/refguide9/general/moving-from-8-to-9/moving-from-atlas-2-to-3/set-hybrid-nav.png" width="250px" class="no-border" >}}
     * Image indentation works with **4 spaces**.
     * Images don't need a line break to work.
 

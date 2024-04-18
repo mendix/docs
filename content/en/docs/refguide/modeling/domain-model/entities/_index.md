@@ -12,7 +12,7 @@ An entity usually represents a class of real-world objects, such as customers, i
 
 For example, the object representing the CD 'Exodus' could be an instance of the entity 'CD'.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/example-entity.png" alt="Example of a CD entity" width="650px">}} 
+{{< figure src="/attachments/refguide/modeling/domain-model/entities/example-entity.png" alt="Example of a CD entity" width="650px" class="no-border" >}} 
 
 The properties or features of an entity are described using [attributes](/refguide/attributes/). An attribute represents a small piece of information about an entity, such as the name or birth date of a person.
 

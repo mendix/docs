@@ -73,7 +73,7 @@ You should install the latest version of the Mendix Feedback module, as it will 
 1. Configure the **User roles** in the **App Security** for the Feedback module.
 2. In the **Toolbox**, find the **Feedback** widget in the **Feedback** category.
 
-    {{< figure src="/attachments/appstore/modules/mendix-feedback/Toolbox-feedback.png" width="250px">}} 
+    {{< figure src="/attachments/appstore/modules/mendix-feedback/Toolbox-feedback.png" width="250px" class="no-border" >}} 
 
 3. Drop the Feedback widget into a position in the layout:
 
@@ -133,7 +133,7 @@ To configure the Feedback widget, double-click it to open the **Edit Feedback** 
 
     See the screenshot below for an example:
 
-    {{< figure src="/attachments/appstore/modules/mendix-feedback/authentication-user-data-source.png" width="600px">}}
+    {{< figure src="/attachments/appstore/modules/mendix-feedback/authentication-user-data-source.png" width="600px" class="no-border" >}}
 
     * **Provided by user** – Select this if you prefer users fill in their information or you are using the widget for anonymous users. 
 
@@ -181,7 +181,7 @@ If you cannot see your feedback items on the Developer Portal's **Feedback** pag
 
 If you see the following error, click **close** and then go to your widget folder to remove the duplicate old widget. 
 
-{{< figure src="/attachments/appstore/modules/mendix-feedback/widget-error.png" width="600px">}}
+{{< figure src="/attachments/appstore/modules/mendix-feedback/widget-error.png" width="600px" class="no-border" >}}
 
 ## 6 Legacy Feedback Widget Docs {#legacy-feedback-docs}
 
@@ -197,7 +197,7 @@ If you are using the [Native Mobile Resources](/appstore/modules/native-mobile-r
 
 The [Mendix Feedback](https://marketplace.mendix.com/link/component/199/) widget allows end-users of your application to directly submit feedback into your app. The feedback widget is fully integrated with the [Feedback](/developerportal/app-insights/feedback/) page in the Developer Portal, where you can review feedback and convert it into [user stories](/developerportal/project-management/epics/planning/) to improve your app.
 
-{{< figure src="/attachments/appstore/widgets/mendix-feedback/feedback-in-app.png" width="350px">}}
+{{< figure src="/attachments/appstore/widgets/mendix-feedback/feedback-in-app.png" width="350px" class="no-border" >}}
 
 The Mendix Feedback widget is easy to set up and automatically attaches additional information to each submitted issue such as the user’s name, role, active form, browser version, and screen resolution.
 
@@ -268,11 +268,11 @@ You should use the latest version of the Mendix Feedback widget, as it will prov
 
 When you click the **Feedback icon**, the Mendix Platform first checks if you are signed in. If you are not signed in, you will need to either **Sign in to Mendix** or **Continue as a guest** to enter feedback mode:
 
-{{< figure src="/attachments/appstore/widgets/mendix-feedback/feedback-login.png" width="600px">}}
+{{< figure src="/attachments/appstore/widgets/mendix-feedback/feedback-login.png" width="600px" class="no-border" >}}
 
 Once you are in feedback mode, you can click anywhere on the screen to **leave a comment**:
 
-{{< figure src="/attachments/appstore/widgets/mendix-feedback/comment.png" width="600px">}}
+{{< figure src="/attachments/appstore/widgets/mendix-feedback/comment.png" width="600px" class="no-border" >}}
 
 And voila! A screenshot of the current page is created, which you can choose to attach to your feedback. After clicking **Submit**, your feedback will go straight to the [Feedback](/developerportal/app-insights/feedback/) page of the app in the Developer Portal.
 

@@ -53,7 +53,7 @@ To set required validation on input elements through the page editor, follow the
 
 An example of checking the input for the **Name** attribute of a **Customer** entity is shown below:
 
-{{< figure src="/attachments/refguide/modeling/domain-model/setting-up-data-validation/input-widget-validation.png" width="500px">}}
+{{< figure src="/attachments/refguide/modeling/domain-model/setting-up-data-validation/input-widget-validation.png" width="500px" class="no-border" >}}
 
 {{% alert color="info" %}}
 **Required** validation on **Input elements** in a page editor is always checked before the validation rule on the entity level. This means that if you set both as **Required** and have different error messages, the page error message is shown to the end-user.  

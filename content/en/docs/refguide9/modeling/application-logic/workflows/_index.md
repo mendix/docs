@@ -133,7 +133,7 @@ Do the following:
 5. Set **Workflow** to to the workflow you would like to trigger.
 6. Set **Context object** to the workflow context:
 
-    {{< figure src="/attachments/refguide9/modeling/application-logic/workflows/call-workflow-example.png" alt="Call Workflow Example" width="500">}}
+    {{< figure src="/attachments/refguide9/modeling/application-logic/workflows/call-workflow-example.png" alt="Call Workflow Example" width="500" class="no-border" >}}
 
 7. Click **OK**.
 

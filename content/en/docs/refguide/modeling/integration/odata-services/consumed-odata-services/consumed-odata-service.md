@@ -15,7 +15,7 @@ When an external entity or action is used in an app module through the [Integrat
 
 The **Consumed OData Service** document contains the following information:
 
-{{< figure src="/attachments/refguide/modeling/integration/consumed-odata-services/consumed-odata-service/consumed-odata-service-screen.png" alt="Connection Tab" width="850">}}
+{{< figure src="/attachments/refguide/modeling/integration/consumed-odata-services/consumed-odata-service/consumed-odata-service-screen.png" alt="Connection Tab" width="850" class="no-border" >}}
 
 * Service name and icon for the source application of the originating app
 * Version number of the consumed service

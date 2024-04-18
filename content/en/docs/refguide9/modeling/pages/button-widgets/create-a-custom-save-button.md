@@ -67,7 +67,7 @@ The button you just created calls a microflow that does not do anything yet. To 
 7. Open the **Toolbox**, and find the **Close page** activity there.
 8. Drag the **Close page** activity into the flow after the **Commit object(s)** activity:
 
-    {{< figure src="/attachments/refguide9/modeling/pages/button-widgets/create-a-custom-save-button/close-page-activity.png" width="400px ">}}
+    {{< figure src="/attachments/refguide9/modeling/pages/button-widgets/create-a-custom-save-button/close-page-activity.png" width="400px " class="no-border" >}}
 
 You have recreated the default **Save** button logic.
 

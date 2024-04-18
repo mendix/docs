@@ -318,7 +318,7 @@ Some examples of existing claims are:
 Consider a scenario, where you build an app using the [OIDC Provider](https://marketplace.mendix.com/link/component/214681) service. You can call this app an OIDC Provider app or Provider app. Other apps using the [OIDC SSO](https://marketplace.mendix.com/link/component/120371) module redirect end-users to your Provider app for authentication. You can choose how your Provider app handles the authentication process.
 The **LoginLocation** is a constant in the OIDC Provider service that controls where end-users are authenticated. The default value is a local sign in using a username and password as shown below:
 
-{{< figure src="/attachments/appstore/services/oidc-provider/Basic_Username_Password.png">}}
+{{< figure src="/attachments/appstore/services/oidc-provider/Basic_Username_Password.png" class="no-border" >}}
 
 However, if you want the Provider app to act as an IAM broker, you need to redirect the authorization request within your Provider app to the endpoint of the local SSO module you choose to use. To do so, perform the steps below:
 

@@ -394,7 +394,7 @@ In this example, you can publish a single REST resource that combines data from 
 
 3. Define a microflow that will fetch the correct data when a user does a `GET` on the **CustomerHomeAddress** resource:
 
-     {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/get-microflow.png" width="400">}} 
+     {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/get-microflow.png" width="400" class="no-border" >}} 
 
      The microflow uses a Java action to translate the OData query to an OQL expression using the OQL Dataset as the base query. This ensures that filtering, sorting, and paging work as expected.
 

@@ -60,7 +60,7 @@ In the **Documentation** tab, you can find a **Summary** and a **Description**. 
 
 ## 5 Edit External Action Parameter Mapping Dialog {#edit-parameter-mapping}
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-external-action/edit-parameter-mapping.png">}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-external-action/edit-parameter-mapping.png" class="no-border" >}}
 
 The **Edit External Action Parameter Mapping** dialog allows you to set the value of the parameter you pass to an external action. You can either select a **Variable** from the dropdown field, or write a custom [microflow expression](/refguide/expressions/) that returns a value of the expected type.
 

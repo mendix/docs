@@ -44,11 +44,11 @@ These are the available charts:
 
 The **Series** property makes it easy to configure, control, and modify a chart series:
 
-{{< figure src="/attachments/appstore/widgets/charts/data-source-example.png" width="450px">}}
+{{< figure src="/attachments/appstore/widgets/charts/data-source-example.png" width="450px" class="no-border" >}}
 
 You do not need to put a chart into a data view to feed data into a widget. When you click the **New** button on a series panel, the **Edit Series** dialog box will be shown:
 
-{{< figure src="/attachments/appstore/widgets/charts/series-item-example.png" width="450px">}}
+{{< figure src="/attachments/appstore/widgets/charts/series-item-example.png" width="450px" class="no-border" >}}
 
 In this dialog box you will find these properties:
 
@@ -282,7 +282,7 @@ The font color to display values for each dot.
 
 This property allows for an expression that when evaluated will return a unique name for a single series:
 
-{{< figure src="/attachments/appstore/widgets/charts/pie-chart-series-name-example.png" width="450px">}}
+{{< figure src="/attachments/appstore/widgets/charts/pie-chart-series-name-example.png" width="450px" class="no-border" >}}
 
 {{% alert color="warning" %}} 
 This property is required. 

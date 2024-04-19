@@ -67,7 +67,7 @@ In the list on the **Inbox** tab, you can find the following information for eac
 
 {{% alert color="info" %}}For more information about each bullet item above, see the list in the [Feedback Details](#feedback-details) section.{{% /alert %}}
 
-To export all feedback into one Excel file, click **Export**.
+To export all feedback into one CSV file, click **Export**.
 
 To search by **Subject**, **Description**, **User Email** and **Tags**, type the keywords in the search bar.
 
@@ -115,7 +115,7 @@ In the list on the **Archive** tab, you can find the following information for e
 * **Date** – the date when the feedback was submitted
 * **Archive Date** – the date when the feedback was archived
 
-To export all the archived feedback into one Excel file, click **Export**.
+To export all the archived feedback into one CSV file, click **Export**.
 
 To search by **Subject** and **ID**, type the keywords in the search bar.
 

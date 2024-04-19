@@ -10,7 +10,7 @@ tags: ["API", "API Key", "Authentication", "personal access token"]
 
 ## 1 Introduction
 
-Most Mendix Platform APIs require you to authenticate yourself. Currently, two different methods are used for Mendix API authentication: using an API key and using a personal access token (PAT). In the specific document of an API, you can find information about which authentication method you use.
+Most Mendix Platform APIs require you to authenticate yourself. Currently, two different methods are used for Mendix API authentication: using an API key and using a personal access token (PAT). In the specific API document, you can find information about the authentication method you use.
 
 ## 2 Authentication Using an API Key
 
@@ -35,5 +35,5 @@ To generate a PAT, follow the instructions in the [Personal Access Tokens](http:
 
 ### 3.2  Using the PAT
 
-Include an `Authorization` header with the value `MxToken {GENERATED_PAT}` to authenticate an API calI. For an example, see the [Using the PAT](/apidocs-mxsdk/apidocs/webhooks-api/#use-pat) section of the *Webhooks API*.
+Include an `Authorization` header with the value `MxToken {GENERATED_PAT}` to authenticate an API call. For an example, see the [Using the PAT](/apidocs-mxsdk/apidocs/webhooks-api/#use-pat) section of the *Webhooks API*.
 

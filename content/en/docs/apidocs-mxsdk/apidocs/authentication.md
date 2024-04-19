@@ -31,7 +31,7 @@ For an example, see one of the [Request](/apidocs-mxsdk/apidocs/deploy-api/#list
 
 ### 3.1 Generating a PAT
 
-To generate a PAT, follow the instructions in the [Personal Access Tokens](http://localhost:1313/community-tools/mendix-profile/user-settings/#pat) section of *Mendix Profile*. Make sure that you select the correct scopes for the PAT that you generate. You can find the correct scopes in the specific document of an API.
+To generate a PAT, follow the instructions in the [Personal Access Tokens](http://localhost:1313/community-tools/mendix-profile/user-settings/#pat) section of *Mendix Profile*. Make sure that you select the correct scopes for the PAT that you generate. You can find the correct scopes in the specific API document.
 
 ### 3.2  Using the PAT
 

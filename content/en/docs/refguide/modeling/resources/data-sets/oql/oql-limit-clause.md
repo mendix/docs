@@ -13,7 +13,7 @@ With the `LIMIT` clause a portion of the result of a query can be returned.
 
 The syntax is as follows:
 
-```sql {linenos=false}
+```sql {linenos=false} {linenos=false}
 [ LIMIT number ] [ OFFSET number ]
 ```
 
@@ -29,7 +29,7 @@ The syntax is as follows:
 
 This query retrieves the first ten customers, sorted by their last name:
 
-```sql
+```sql {linenos=false}
 SELECT FirstName FROM Sales.Customer
 ORDER BY LastName
 LIMIT 10
@@ -37,7 +37,7 @@ LIMIT 10
 
 This query retrieves all customers, except the first ten, sorted by their last name:
 
-```sql
+```sql {linenos=false}
 SELECT FirstName FROM Sales.Customer
 ORDER BY LastName
 OFFSET 10
@@ -45,7 +45,7 @@ OFFSET 10
 
 This query retrieves the 11th to 20th customer, sorted by their last name:
 
-```sql
+```sql {linenos=false}
 SELECT FirstName FROM Sales.Customer
 ORDER BY LastName
 LIMIT 10 OFFSET 10

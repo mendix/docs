@@ -13,7 +13,7 @@ The `GROUP BY` clause will condense all returned rows into a single row that sha
 
 The syntax is as follows:
 
-```sql
+```sql {linenos=false}
 GROUP BY
 	expression [ ,...n ]
 
@@ -32,7 +32,7 @@ GROUP BY
 
 This query returns the count of all customers per city:
 
-```sql
+```sql {linenos=false}
 SELECT COUNT(Sales.Customer/*)
 FROM Sales.Customer
 INNER JOIN Sales.Customer/Sales.Customer_Address/Sales.Address
@@ -41,7 +41,7 @@ GROUP BY Sales.Address/City
 
 This query returns the sum of the total prices of all orders per city:
 
-```sql
+```sql {linenos=false}
 SELECT SUM(Sales."Order"/TotalPrice)
 FROM Sales."Order"
 INNER JOIN Sales."Order"/Sales.Customer_Order/Sales.Customer/Sales.Customer_Address/Sales.Address
@@ -50,7 +50,7 @@ GROUP BY Sales.Address/City
 
 This query returns the sum of the total prices of all orders per city for which the sum is greater than 1000.00 or the City is Losdun:
 
-```sql
+```sql {linenos=false}
 SELECT SUM(Sales."Order"/TotalPrice)
 FROM Sales."Order"
 INNER JOIN Sales."Order"/Sales.Customer_Order/Sales.Customer/Sales.Customer_Address/Sales.Address

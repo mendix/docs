@@ -13,7 +13,7 @@ The `FROM` clause specifies the entities or other source from which the data mus
 
 This is an example of the full syntax:
 
-```sql
+```sql {linenos=false}
 FROM
 	{
 		entity_name | ( sub_oql_query )
@@ -46,7 +46,7 @@ There are four different `JOIN` types supported:
 
 The syntax is as follows:
 
-```sql
+```sql {linenos=false}
 	{ INNER | { { LEFT | RIGHT | FULL } [ OUTER ] } } JOIN
 	entity_path | entity_name | ( sub_oql_query ) [ [ AS ] from_alias ]
 	[ ON <constraint> ]
@@ -54,7 +54,7 @@ The syntax is as follows:
 
 #### 2.3.1 entity_path
 
-`entity_path` specifies the entity to join and the path from an earlier defined entity in the `FROM` clause to this entity.
+`entity_path` specifies the entity to join and the path from an earlier defined entity in the `FROM` clause to this entity. With `entity-path` the `ON` condition is optional.
 
 The example path `Crm.Customer/Crm.Customer_Address/Crm.Address` defines a path from the entity **Crm.Customer** to a new entity **Crm.Address**.
 
@@ -62,7 +62,7 @@ Similar to `entity_name`, double quotes can be used.
 
 #### 2.3.2 entity_name | ( sub_oql_query )
 
-`entity_name` or `( sub_oql_query )` can be used in `JOIN` statement the same way they can be used directly in `FROM`. In contrast with `entity_path`, `ON` condition is required.
+`entity_name` or `( sub_oql_query )` can be used in a `JOIN` statement in the same way they can be used directly in `FROM`. In contrast to `entity_path`, an `ON` condition is required.
 
 #### 2.3.3 \[ ON \<constraint\> \]
 
@@ -70,7 +70,7 @@ Similar to `entity_name`, double quotes can be used.
 
 In the case of `entity_path`, using constraints is optional – the system will generate the appropriate `JOIN` condition based on the specified `entity_path`.
 
-In cases when an entity name or a subquery is used, `JOIN` condition (i.e. `ON` constraint) is mandatory to use.
+In cases when an entity name or a subquery is used, the `JOIN` condition (i.e. `ON` constraint) is mandatory.
 
 #### 2.3.4 JOIN Types
 
@@ -80,7 +80,7 @@ An `INNER JOIN` is the most common join operation between entities and represent
 
 The syntax is as follows:
 
-```sql
+```sql {linenos=false}
 [ INNER ] JOIN entity_path [ ON <constraint> ]
 ```
 
@@ -92,7 +92,7 @@ However, in contrast to the `INNER JOIN` construction, the query will also retur
 
 The syntax is as follows:
 
-```sql
+```sql {linenos=false}
 LEFT [ OUTER ] JOIN entity_path [ ON <constraint> ]
 ```
 
@@ -104,7 +104,7 @@ However, in contrast to the `INNER JOIN` construction, rows from entity B that d
 
 The syntax is as follows:
 
-```sql
+```sql {linenos=false}
 RIGHT [ OUTER ] JOIN entity_path [ ON <constraint> ]
 ```
 
@@ -116,7 +116,7 @@ However, in contrast to the `INNER JOIN` construction, data from entities that d
 
 The syntax is as follows:
 
-```sql
+```sql {linenos=false}
 FULL [ OUTER ] JOIN entity_path [ ON <constraint> ]
 ```
 
@@ -126,7 +126,7 @@ In this scenario, you are using a `LEFT OUTER JOIN` to get the records in table 
 
 For example, you have the entities **Customer** and **Order**, where a customer can have an association to multiple orders. You want to retrieve all the customers that have no orders at all.
 
-```sql
+```sql {linenos=false}
 SELECT 
   Customer/Name as Name,
   Customer/<anyotherattribute> as <anyotherattribute>

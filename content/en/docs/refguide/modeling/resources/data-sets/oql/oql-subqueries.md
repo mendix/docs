@@ -7,13 +7,14 @@ tags: ["oql", "studio pro"]
 
 ## 1 Description
 
-A subquery is a nested SELECT query inside a SELECT query. Subqueries can be used in:
-- A `SELECT` clause
-- A `FROM` clause
-- A `WHERE` clause
-- A `HAVING` clause combined with `GROUP BY`
+A subquery is a nested SELECT query inside a SELECT query. Subqueries can be used in a:
 
-A subquery should always be placed in parentheses.
+* `SELECT` clause
+* `FROM` clause
+* `WHERE` clause
+* `HAVING` clause combined with `GROUP BY`
+
+A subquery must always be placed in parentheses.
 
 ## 2 Subquery in SELECT
 
@@ -28,10 +29,13 @@ FROM
     Module.ZipCode AS ZipCode
 ```
 
-If a subquery is used in a `SELECT` clause, it should return exactly one column and at most one row. Zero rows are allowed. In that case, the value is replaced with `NULL`.
+If a subquery is used in a `SELECT` clause, it should return exactly one column and at most one row. If it returns no rows, the value is replaced with `NULL`.
 
-The subquery can refer to attributes of the entities and subqueries in `FROM`. Those attributes can be referenced only by name, not by alias. Entities and subqueries in from, on the other hand, can only be referenced by alias, if there is one. They can be referenced by name only if there is no alias. 
-To avoid ambiguity, it is recommended to always refer to attributes with corresponding entity names in format `<ModuleName>.<EntityName>.<AttributeName>` if there is no alias or `<Alias>.<AttributeName>` if there is an alias.
+The subquery can refer to attributes of the entities and subqueries in the `FROM` clause. Those attributes can be referenced only by name, not by alias.
+
+Entities and subqueries in from, on the other hand, can only be referenced by alias, if there is one. They can be referenced by name only if there is no alias. 
+
+To avoid ambiguity, it is recommended to always refer to attributes with corresponding entity names in the format `<ModuleName>.<EntityName>.<AttributeName>` if there is no alias or `<Alias>.<AttributeName>` if there is an alias.
 
 ## 3 Subquery in FROM
 
@@ -57,17 +61,17 @@ FROM
     ON ZipCode.ZipCode = AddressStats.ZipCode
 ```
 
-A subquery can be used in `FROM` in the same manner as an entity name. Subquery in `FROM` can return multiple columns and multiple rows.
+A subquery can be used in a `FROM` clause in the same manner as an entity name. A subquery in a `FROM` clause can return multiple columns and multiple rows.
 
-In contrast with subquery in `SELECT`, it cannot contain references to other entities and subqueries in `FROM`.
+In contrast with subquery in a `SELECT` clause, a subquery in a `FROM` clause cannot contain references to other entities and subqueries in `FROM`.
 
 ## 4 Subquery in WHERE
 
-There are two ways to use a subquery in `WHERE`: as a value and as a collection.
+There are two ways to use a subquery in a `WHERE`clause—as a value and as a collection.
 
-### 4.1 Scalar subqueries
+### 4.1 Scalar Subqueries
 
-A Scalar subquery is a subquery that returns exactly one row and exactly one column. In that case, its result can be considered a value. It can be used in `WHERE` clause with comparison operators `=`, `!=`, `<`, `<=`, `>`, `>=`.
+A scalar subquery is a subquery that returns exactly one row and exactly one column. In that case, its result can be considered a value. It can be used in a `WHERE` clause with the comparison operators `=`, `!=`, `<`, `<=`, `>`, `>=`.
 
 Example:
 
@@ -80,9 +84,9 @@ WHERE
     House.Price < (SELECT AVG(Price) FROM Module.House)
 ```
 
-### 4.2 Multirow subqueries
+### 4.2 Multirow Subqueries
 
-A multirow subquery is a subquery that can have more than one row. If a subquery is used in `WHERE`, it should always contain one column. Such subquery can be referenced as a collection using `IN` and `EXISTS` keywords.
+A multirow subquery is a subquery that can have more than one row. If a subquery is used in a `WHERE` clause, it must always contain one column. Such a subquery can be referenced as a collection using the `IN` and `EXISTS` keywords.
 
 Examples:
 
@@ -120,9 +124,9 @@ WHERE
     )
 ```
 
-## 4 Subquery in HAVING
+## 5 Subquery in HAVING
 
-A subquery can also be used in a `HAVING` clause similarly to how it is used in `WHERE`. The difference is that only attributes and aggregates from the query can be referred in the `HAVING` subquery.
+A subquery can also be used in a `HAVING` clause similarly to how it is used in a `WHERE` clause. The difference is that only attributes and aggregates from the query can be referred to in the `HAVING` subquery.
 
 Example:
 

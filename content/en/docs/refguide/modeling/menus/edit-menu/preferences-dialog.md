@@ -69,7 +69,7 @@ Enable this setting to increase the speed at which a running application is upda
 
 #### 3.1.3 Optimize bundle
 
-This setting is visible and effective when the React client is enabled. By default, It's already enabled to reduce the size of the generated app bundle and speeds up the bundling process by diabling source maps generation. Source maps are files that map code from its transformed state back to its original form, facilitating debugging during development. If you want to generate source maps for debugging purposes, you can disable this setting.
+This setting is visible and effective when the React client is enabled. By default, It's already enabled to reduce the size of the generated app bundle and speeds up the bundling process by disabling source maps generation. Source maps are used for debugging the bundled code during development. If you want to generate source maps for debugging pluggable widgets, you can disable this setting.
 
 ### 3.2 Build
 

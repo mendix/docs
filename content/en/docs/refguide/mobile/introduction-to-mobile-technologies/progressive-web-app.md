@@ -9,7 +9,7 @@ aliases:
 ## 1 Introduction
 
 {{% alert color="info" %}}
-Due to a recent change in web browser, offline-first progressive web apps are only supported in the following versions of Mendix:
+Due to web browsers changing what they support, offline-first progressive web apps are only supported in the following versions of Mendix:
 * Mendix 9.24.18 or later patch versions
 * Mendix 10.6.6 or later patch versions
 * Mendix 10.9.0 or later

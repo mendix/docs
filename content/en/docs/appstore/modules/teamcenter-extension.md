@@ -20,7 +20,7 @@ The extension offers the following integration options:
 * Create item and item revision
 * Update item and item revision
 * Revise item revisions
-* Create BOM window
+* Get structures
 
 ### 1.2 License {#license}
 
@@ -68,7 +68,7 @@ The `Update Item and Item Revision` action allows you to generate a microflow to
 
 The `Revise Item and Item Revision` action allows you to generate a microflow to revise an `ItemRevision` or its specializations in Teamcenter and the corresponding domain model. The resulting microflow implements the `Revise Object and Update Properties` actions from the Teamcenter Connector. With the `Revise Object` action, a new `ItemRevision` is created, setting the Teamcenter properties that need to be set upon revising. With the `Update Properties` action, the remaining properties are updated in Teamcenter.
 
-#### 3.1.6 Create BOM Window {#create-bom-window}
+#### 3.1.6 Get Structures
 The `Create BOM Window` action allows you to generate microflows and corresponding domain model to configure a BOM window and retrieve structure data from Teamcenter. This feature supports the retrieval of structures with the following:
 * `RevisionRule` (or default `RevisionRule`)
 * `VariantRule`

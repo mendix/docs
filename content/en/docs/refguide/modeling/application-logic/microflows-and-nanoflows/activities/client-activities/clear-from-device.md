@@ -28,7 +28,7 @@ Objects with unsynchronized changes are also removed without synchronizing them.
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/clear-from-device/clear-from-device-properties.png" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/clear-from-device/clear-from-device-properties.png" class="no-border" >}}
 
 The **Clear from device** properties pane consists of the following sections:
 

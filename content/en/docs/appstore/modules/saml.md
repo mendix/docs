@@ -623,7 +623,7 @@ If it is not an option to have the IdP and the app in the same domain, set the v
 
 The following diagram gives an overview of all endpoints that the SAML SSO module exposes and consumes:
 
-{{< figure src="/attachments/appstore/modules/saml/saml-endpoints.png">}}
+{{< figure src="/attachments/appstore/modules/saml/saml-endpoints.png" class="no-border" >}}
 
 End-users can access your app through the following endpoints when using the SAML SSO module:
 

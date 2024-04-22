@@ -28,7 +28,7 @@ To start a new app with version control, do the following:
 
 The app is created on the Team Server, and a working copy is created in the **App directory**. This is opened in Studio Pro so that you can start working immediately.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/app-settings.png" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/app-settings.png" class="no-border" >}}
 
 ## 3 Joining an App
 
@@ -60,12 +60,12 @@ The **App Explorer** shows an icon in front of items (such as documents, folders
 
 | Icon | Meaning |
 | --- | --- |
-| {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/no-changes.png" >}} | Nothing happened to this item. It is unchanged with the respect to the original. |
-| {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/item-modified.png" >}} | You modified this item. |
-| {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/item-added.png" >}} | You added this item. |
-| {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/item-moved.png" >}} | You moved this item to another position in the app tree. |
-| {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/item-deleted.png" >}} | You deleted this item. |
-| {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/item-conflicting.png" >}} | You and somebody else made conflicting changes to this item. For more information, see the [Dealing With Conflicts](#conflicts) section below. |
+| {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/no-changes.png" class="no-border" >}} | Nothing happened to this item. It is unchanged with the respect to the original. |
+| {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/item-modified.png" class="no-border" >}} | You modified this item. |
+| {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/item-added.png" class="no-border" >}} | You added this item. |
+| {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/item-moved.png" class="no-border" >}} | You moved this item to another position in the app tree. |
+| {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/item-deleted.png" class="no-border" >}} | You deleted this item. |
+| {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/item-conflicting.png" class="no-border" >}} | You and somebody else made conflicting changes to this item. For more information, see the [Dealing With Conflicts](#conflicts) section below. |
 
 {{% alert color="info" %}}
 In the **App Explorer**, there is only room for one icon for each item. If an item is both modified and moved, it is shown as modified with a yellow icon.
@@ -91,11 +91,11 @@ To commit your changes, click the **Commit** button in the **Changes** pane, or 
 
 Git only creates a local commit. To submit your local commit (or commits) to the centralized server, you need to **push** your changes (pushing changes is selected by default in the **Commit** dialog box). As a result, your local changes are committed faster, and you can roll back to a previous state without having to contact the version control server.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/local-repo-and-team-server.png" alt="Local Repository and Team Server" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/local-repo-and-team-server.png" alt="Local Repository and Team Server" class="no-border" >}}
 
 For example, you are developing a feature together with another developer on the same branch. You both have the same starting point (3). When your colleague commits a change, you can choose to retrieve these changes and integrate them. To enable this, developers first need to commit existing changes locally (6), so that the changes can be automatically merged when they are retrieved by other developers. After this, you commit the merged result, and optionally push the merged result (7) to be used by your colleague. Because changes are already explicitly committed, you can always see what you changed and you cannot accidentally override your local changes when you are resolving conflicts.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/incoming-changes.png" alt="Incoming changes in Git" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/incoming-changes.png" alt="Incoming changes in Git" class="no-border" >}}
 
 In general, it is a good idea to commit after implementing one feature or fixing one bug. By committing often, your work is integrated with the work of others regularly. The benefits of committing include the following:
 
@@ -108,7 +108,7 @@ Committing results in a new revision in the repository. You can add the followin
 * A textual message – this should be a summary of the changes you made.
 * A list of Developer Portal stories that relate to the commit; for more information, see [Stories Pane](/refguide/stories-pane/).
 
-    {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-dialog.png" >}}
+    {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-dialog.png" class="no-border" >}}
 
 Studio Pro also attaches some information automatically:
 
@@ -127,7 +127,7 @@ Pushing is sending your local changes to the Team Server. After committing, you 
 
 To push changes, select **Version Control** > **Push** or make sure that the **Also push changes to the remote server** setting is set to **Yes** in the **Commit** dialog box. By doing so, changes are pushed automatically when you commit them:
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-git.png" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-git.png" class="no-border" >}}
 
 #### 4.3.1 Push Fast-Forward Only
 
@@ -139,19 +139,19 @@ While you were working on your branch, somebody may have pushed their changes to
 
 In Studio Pro, [automatic fetching](/refguide/auto-fetch/) can be used to discover changes on the server. If at the moment when you click **Commit** Studio Pro knows that there are remote changes, the commit dialog will contain a note about this, and **Also push changes to the remote server** will be set to **No** and disabled.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-dialog-incoming.png" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-dialog-incoming.png" class="no-border" >}}
 
 If the changes are discovered during the push, an information dialog with instructions is shown.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-pull-first-dialog.png" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-pull-first-dialog.png" class="no-border" >}}
 
 Git prevents you from pushing your changes if it sees your changes and the remote changes as potentially conflicting. In this diagram, you see that Git does not know how to combine commits #3 and #5.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/server-your-work.png" alt="The local changes consist of commits 1, 4, and 5 while the remote server has commits 1, 2, and 3 on the same branch.">}} 
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/server-your-work.png" alt="The local changes consist of commits 1, 4, and 5 while the remote server has commits 1, 2, and 3 on the same branch." class="no-border" >}} 
 
 When you pull the changes, Studio Pro will merge the changes from the branch on the server into your local copy of the branch. After solving any conflicts, you need to make a ‘merge commit’. This commit contains any changes that have happened during integration of remote changes into yours.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/merge-commit.png" alt="The local changes and the remote changes are combined into a merge commit which is pushed to the remote server.">}} 
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/merge-commit.png" alt="The local changes and the remote changes are combined into a merge commit which is pushed to the remote server." class="no-border" >}} 
 
 There are two possible scenarios when merging and needing to make a merge commit:
 
@@ -184,7 +184,7 @@ The revisions are shown in reverse chronological order (newest is at top of list
 
 Select a revision to see additional details, such as related Developer Portal stories, changed documents, Studio Pro version, and changes on disk. Icons summarize the kinds of changes that happened in the app.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/history-of-dialog.png" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/history-of-dialog.png" class="no-border" >}}
 
 ## 5 Reverting Changes
 
@@ -194,7 +194,7 @@ Deletes of documents, folders, and modules can also be reverted. This brings the
 
 You can revert changes in the **Changes** pane, from **Version Control** > **Revert All Changes**, or from the right-click menu on the document you want to revert.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/revertx2.png" alt="Two ways of reverting" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/revertx2.png" alt="Two ways of reverting" class="no-border" >}}
 
 ## 6 Dealing With Conflicts {#conflicts}
 
@@ -206,7 +206,7 @@ For more information, see [Combining Changes and Conflict Resolution](/refguide/
 
 A repository can contain a number of development lines. Each development line offers independent development from the other development lines. In the simple case there is just one development line called the main line. All development then happens inside that one line.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/main-branch-line.png" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/main-branch-line.png" class="no-border" >}}
 
 It is often convenient to have more than one development line. For example, one development line is for fixing bugs in the currently deployed version of your app and another line is where you develop new functionality. If you then find a bug in the deployed version, you can fix it in the corresponding development line irrespective of the state of the development line where new functionality is developed. For more information about branches, see the [Branches](/refguide/version-control/#branches) section in *Version Control*. 
 
@@ -218,7 +218,7 @@ Development lines other than the main line are called branch lines. You can cons
 
 You can create branch lines from the **Branch Line Manager** which you can find at **Version Control > Manage Branch Lines...**.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/create-branch-line.png" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/create-branch-line.png" class="no-border" >}}
 
 The most common examples on using branch lines are [patching a deployed application](#patch) and [developing a new feature](#new-feature).
 
@@ -229,7 +229,7 @@ If you want to add some functionality to a deployed application or you want to f
 1. Determine the version of the deployed application. This information is in the Developer Portal. Alternatively, you can find the version in the *metadata.json* file in the **model** subfolder of your deployment package (mda) archive, for example, `"ModelVersion": "1.0.0.16"`.
 2. Choose **Version Control > Manage Branch Lines...** and create a branch based on the tag with the version number as its name.
 
-    {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/create-from-tag.png" >}}
+    {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/create-from-tag.png" class="no-border" >}}
 
 3. Add the functionality or fix the bug in this newly created branch.
 4. Testing that things work as intended.
@@ -247,7 +247,7 @@ Another reason for creating a branch is to develop a big new feature without int
 
 Firstly, select **Version Control > Manage Branch Lines...** and create a branch from a revision of the main line.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/create-branch-line-dialog.png" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/create-branch-line-dialog.png" class="no-border" >}}
 
 Now work on the branch until the feature is done, commit the completed work and merge your branch back to the main line (for more information on merging, see the [Merging](#merge) section below). 
 
@@ -270,7 +270,7 @@ Choose **Version Control > Reverse Merge Changes...**.
 
 Reverting changes is done with one commit at a time. If you want to revert multiple commits, you can do that by reverting the latest commit, then the previous one, and so on.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/revert-changes-git.png" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/revert-changes-git.png" class="no-border" >}}
 
 After a reverse merge the app will look like the changes never happened; if you 'reverse merge' the adding of a page, the page will be deleted locally. Just like when you are doing a normal merge, conflicts can arise. In the example, if later commits change the added page, the reverse merge will result in a conflict. After resolving any problems, you can commit the results to the repository.
 
@@ -349,13 +349,13 @@ When it creates the package, Studio Pro will also create a tag representing this
 
 If you are using the Mendix Cloud, you can choose **App** > **Deploy to Licensed Cloud Node** to deploy a specific version.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/deploy-to-cloud.png" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/deploy-to-cloud.png" class="no-border" >}}
 
 #### 8.3.2 Creating a Deployment Package from a Specific Version
 
 If you are using a different hosting environment, you create a deployment package using the menu item **App** > **Create Deployment Package**.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/create-deployment-package.png" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/create-deployment-package.png" class="no-border" >}}
 
 ## 9 Working Outside Studio Pro {#working-outside-studio-pro}
 

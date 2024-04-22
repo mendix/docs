@@ -19,7 +19,7 @@ When you have created a Mendix app with no structural errors, you need run it by
 
 Below is a chart showing the processes involved in deploying your app. Each of the processes and components is described below the chart.
 
-{{< figure src="/attachments/refguide9/runtime/runtime-deployment/runtime-deployment.png" alt="How Mendix Runtime is deployed" >}}
+{{< figure src="/attachments/refguide9/runtime/runtime-deployment/runtime-deployment.png" alt="How Mendix Runtime is deployed" class="no-border" >}}
 
 ### 2.1 Deployer
 

@@ -14,13 +14,13 @@ This activity can only be used in **Microflows**.
 
 The **Complete task** activity can be used to define which outcome the [user task](/refguide9/user-task/) should follow. 
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/complete-task/complete-task.jpg" alt="Complete Task" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/complete-task/complete-task.jpg" alt="Complete Task" class="no-border" >}}
 
 ## 2 Properties
 
 An example of complete task properties is represented in the image below:
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/complete-task/complete-task-properties.jpg" alt="Complete Task Properties" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/complete-task/complete-task-properties.jpg" alt="Complete Task Properties" class="no-border" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

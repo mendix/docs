@@ -380,11 +380,17 @@ div.date-format{
   }
 
 // Images
-// DB – custom edit, class for adding borders around images
-.image-border {
+
+// DB – custom edit, add borders around images
+main img {
     border-color: #d7d7d7;
     border-width: 1px;
     border-style: solid;
+}
+
+// DB – custom edit, optional class for preventing borders around images
+.no-border{
+    border-style: none;
 }
 
 // _pageinfo.scss - Custom pageinfo styling, used on the banners (similar to the alert styling)

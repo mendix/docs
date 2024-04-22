@@ -26,7 +26,7 @@ Events specify actions which can be triggered when the end-user interacts with a
 
 An **On click** event specifies an event that is executed when a user clicks a widget. Often the **On click** property is a part of the **Events** section in properties. For example, you can specify that when a user clicks a customer's profile image, the page with this customer's details will open:
 
-{{< figure src="/attachments/refguide8/modeling/pages/on-click-event/on-click-event-example.png"   width="350"  >}}
+{{< figure src="/attachments/refguide8/modeling/pages/on-click-event/on-click-event-example.png"   width="350"  class="no-border" >}}
 
 An on-click event is common for many widgets (for example, image, buttons, list view). 
 
@@ -81,7 +81,7 @@ The **Show a page** event opens the specified page. Select the page which opens 
 
     This option is activated by checking the **Override page title** checkbox in the **Edit** dialog box:
 
-    {{< figure src="/attachments/refguide8/modeling/pages/on-click-event/page-title-property.png" alt="Page Title Property" >}}
+    {{< figure src="/attachments/refguide8/modeling/pages/on-click-event/page-title-property.png" alt="Page Title Property" class="no-border" >}}
 
 * **Page for specializations** – allows you to configure a different page for each specialization of the context object. If this action is placed inside a data view, it is possible to configure different page(s) for each specialization of the data view object. If this action is placed in a data grid, it is possible to configure different pages for each specialization of the data grid entity. This setting is not shown when there is not a context object or when the context object has no specializations.
 
@@ -104,7 +104,7 @@ The [microflow](/refguide8/microflow/) that should be executed.
 
 **Microflow settings** opens a dialog box enabling you to specify what parameters will be passed to the microflow and how the microflow will be run.
 
-{{< figure src="/attachments/refguide8/modeling/pages/on-click-event/microflow-settings.png" alt="Microflow settings dialog" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/on-click-event/microflow-settings.png" alt="Microflow settings dialog" class="no-border" >}}
 
 ##### 3.3.2.1 Microflow
 

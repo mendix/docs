@@ -13,7 +13,7 @@ This document describes page properties. For details on what pages are for and w
 
 An example of page properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/pages/page/page-properties/page-properties.png" alt="Page Properties"   width="250"  >}}
+{{< figure src="/attachments/refguide8/modeling/pages/page/page-properties/page-properties.png" alt="Page Properties"   width="250"  class="no-border" >}}
 
 Page properties consist of the following sections:
 

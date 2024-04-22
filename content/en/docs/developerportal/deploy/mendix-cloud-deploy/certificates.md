@@ -68,7 +68,7 @@ You can upload a PKCS12 file by following these steps:
 
 3. Below **Outgoing Connections Certificates**, click **Add Client Certificate**.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/certificates/certificate.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/certificates/certificate.png" class="no-border" >}}
 
 4. Upload the client certificate as a PKCS12 (pfx) container.
 
@@ -76,7 +76,7 @@ You can upload a PKCS12 file by following these steps:
 
 6. If you are using a custom certificate when setting your Client certificate in your [Call REST Service](/refguide/call-rest-action/#client-certificate) or [Call Web Service](/refguide/call-web-service-action/#client-certificate) action, set a **Web Service Call Name** and use it to pin the certificate by setting the call's **Client certificate identifier** to the **Web Service Call Name**.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/certificates/certificate-details.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/certificates/certificate-details.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 Changes to certificate settings do not go into effect until you restart the app.

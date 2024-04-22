@@ -26,7 +26,7 @@ Before starting this guide, make sure you have completed the following prerequis
 * Read the [Language Menu](/refguide/translatable-texts/) guide to understand the basics of the Mendix Language menu
 * Set up the required [languages](/refguide/language-settings/) in Studio Pro—this tutorial has been configured with three languages as below:
 
-    {{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/language-settings.png" alt="language settings"  width= "450" >}}
+    {{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/language-settings.png" alt="language settings"  width= "450" class="no-border" >}}
 
 ## 3 Setting up the Language Change Mechanism {#set-up}
 
@@ -53,7 +53,7 @@ You can either add a new module to your existing app, or create a new Studio Pro
         1. Name this retrieved object *SelectedLanguage*.
         1. Your microflow should look like this:
 
-            {{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/microflow-retrieve-object.png"  alt="microflow retrieve object" width= "450" >}}
+            {{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/microflow-retrieve-object.png"  alt="microflow retrieve object" width= "450" class="no-border" >}}
 
     1. To set the selected language, you need to change the language for the current user: 
         1. Call a **Change object** activity.
@@ -63,7 +63,7 @@ You can either add a new module to your existing app, or create a new Studio Pro
         1. For the value of that member, set it as the object retrieved earlier: `$SelectedLanguage`.
         1. Your microflow should look like this:
 
-            {{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/microflow-language-change.png"  alt="microflow language change"  width= "500" >}}
+            {{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/microflow-language-change.png"  alt="microflow language change"  width= "500" class="no-border" >}}
 
 Your microflow **ACT_Language_ChangeUserLangRuntime** is now ready to be called from a nanoflow which you will configure in the following section.
 
@@ -78,7 +78,7 @@ Add a new nanoflow *ACT_Language_ChangeUserLangDevice* to your module and config
 1. To load the new language, you must refresh the app. This can be done by calling a nanoflow action **Reload**.
 1. Your nanoflow should look like this:
 
-    {{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/nanoflow-language-change.png"  alt="nanoflow language change" width= "500" >}}
+    {{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/nanoflow-language-change.png"  alt="nanoflow language change" width= "500" class="no-border" >}}
 
 ### 3.3 Adding the Native Page
 
@@ -110,14 +110,14 @@ To test your native app, locally deploy and view the app on the **Make It Native
 1. Follow the steps in [Downloading and Installing the Make It Native App](/refguide/mobile/getting-started-with-mobile/#download-min) to view your app in Mendix's Make It Native testing app. 
 1. Once the app is running, you should be able to see the native **Language_Overview** page:
 
-    {{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/device-language-overview-en.png"  alt="language overview english" width= "250" >}}
+    {{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/device-language-overview-en.png"  alt="language overview english" width= "250" class="no-border" >}}
 
 1. To change the language, do the following:
     1. Tap **Dutch, Netherlands**.
     1. The app should be reloaded automatically.
     1. You should be able to see the title in the **Dutch** language:
 
-        {{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/device-language-overview-nl.png"  alt="language overview dutch" width= "250" >}}
+        {{< figure src="/attachments/refguide/mobile/native-mobile/native-language-change/device-language-overview-nl.png"  alt="language overview dutch" width= "250" class="no-border" >}}
 
 Congratulations, you just implemented internationalization in your native app! Your users will appreciate the power of multiple languages at their fingertips. For more information about languages and Mendix, see the Read More section below.
 

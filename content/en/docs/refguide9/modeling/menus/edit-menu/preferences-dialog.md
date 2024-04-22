@@ -9,7 +9,7 @@ tags: ["studio pro", "preferences", "settings", "edit menu"]
 
 The **Preferences** option in the menu opens a dialog box where you can set user-specific preferences which apply to the whole of Studio Pro:
 
-{{< figure src="/attachments/refguide9/modeling/menus/edit-menu/preferences-dialog/preferences.png" alt="Preferences" width="600" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/edit-menu/preferences-dialog/preferences.png" alt="Preferences" width="600" class="no-border" >}}
 
 ## 2 General Tab {#general}
 

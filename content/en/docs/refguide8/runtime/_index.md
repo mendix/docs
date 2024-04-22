@@ -37,7 +37,7 @@ Where there is more than one instance of an app, one of the instances will be th
 
 More information on multiple instances is in [Clustered Mendix Runtime](/refguide8/clustered-mendix-runtime/).
 
-{{< figure src="/attachments/refguide8/runtime/runtime-overview.png" alt="An overview of the Mendix Runtime" >}}
+{{< figure src="/attachments/refguide8/runtime/runtime-overview.png" alt="An overview of the Mendix Runtime" class="no-border" >}}
 
 Each of the components of the chart is described below:
 

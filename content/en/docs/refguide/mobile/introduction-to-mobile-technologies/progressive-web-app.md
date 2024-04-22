@@ -44,7 +44,7 @@ Offline-first progressive web apps have some restrictions to make sure they can 
 
 Within the navigation profiles the following PWA features can be configured:
 
-{{< figure src="/attachments/refguide/mobile/progressive-web-app/settings.png" alt="PWA settings"   width="350"  >}}
+{{< figure src="/attachments/refguide/mobile/progressive-web-app/settings.png" alt="PWA settings"   width="350"  class="no-border" >}}
 
 To be able to fully test PWA functionalities, the app needs to be deployed to the cloud. This is because the service worker is only enabled in the cloud over HTTPS.
 
@@ -68,11 +68,11 @@ Note that all pages and images reachable in the navigation profile are loaded by
 
 PWAs can be directly viewed and tested in the browser on your machine or device. Via the **View** menu you can directly open the PWA profiles in your browser:
 
-{{< figure src="/attachments/refguide/mobile/progressive-web-app/view-menu.png" alt="View menu" >}}
+{{< figure src="/attachments/refguide/mobile/progressive-web-app/view-menu.png" alt="View menu" class="no-border" >}}
 
 You can also open PWA profiles on your device via the **View on your device** option:
 
-{{< figure src="/attachments/refguide/mobile/progressive-web-app/view-dialog.png" alt="View menu"   width="350"  >}}
+{{< figure src="/attachments/refguide/mobile/progressive-web-app/view-dialog.png" alt="View menu"   width="350"  class="no-border" >}}
 
 Note that if you are running on a Mac with Parallels, make sure that port 8080 (or whichever port you have configured for your app) is forwarded and that you use your Mac IP instead of the Virtual Machine’s IP. For more information on Mendix and Parallels, see [Configuring Parallels](/refguide/using-mendix-studio-pro-on-a-mac/).
 
@@ -198,7 +198,7 @@ If you are experiencing unexpected issues, it is a good idea to clear the cache 
 1. Open the Mendix PWA in Google Chrome or Microsoft Edge.
 1. Open the developer tools by pressing <kbd>{F12}</kbd>: 
 
-    {{< figure src="/attachments/refguide/mobile/progressive-web-app/pwa-cache.png" alt="Full PWA Cache" width="350">}}
+    {{< figure src="/attachments/refguide/mobile/progressive-web-app/pwa-cache.png" alt="Full PWA Cache" width="350" class="no-border" >}}
 
 1. Open the **Application** tab and click on **Storage** in the left-side navigation.
 1. Configure which cached resources you want to reset in the **Storage** section (see below for guidance).

@@ -14,7 +14,7 @@ As a user with Administrator access rights, you can perform the business-as-usua
 
 On the **App Management** page, administrators can manage their apps.
 
-{{< figure src="/attachments/private-platform/pmp-admin1.png" >}}
+{{< figure src="/attachments/private-platform/pmp-admin1.png" class="no-border" >}}
 
 The page shows you a summary of your apps.
 
@@ -38,7 +38,7 @@ By clicking **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) in
 
 In the **Marketplace** section, administrators can manage various settings related to the content available on the Private Platform Marketplace. The Private Platform Marketplace is a local version of the [Mendix Marketplace](/appstore/overview/), enclosed entirely within the Private Platform. Developers in your organization can also create their own modules, connectors, and sample apps, and share them on the Private Platform Marketplace to make them available to other users.
 
-{{< figure src="/attachments/private-platform/pmp-admin2.png" >}}
+{{< figure src="/attachments/private-platform/pmp-admin2.png" class="no-border" >}}
 
 As the administrator, you can perform the following actions:
 
@@ -50,7 +50,7 @@ As the administrator, you can perform the following actions:
 
 In the **User Management** section, administrators can manage user accounts and user groups.
 
-{{< figure src="/attachments/private-platform/pmp-admin3.png" >}}
+{{< figure src="/attachments/private-platform/pmp-admin3.png" class="no-border" >}}
 
 As the administrator, you can perform the following actions:
 

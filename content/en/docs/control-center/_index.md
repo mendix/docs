@@ -23,7 +23,7 @@ If your company does not already have a Mendix Admin, you will see a page that o
 
 If your company already has a Mendix Admin but you yourself are not a Mendix Admin, you will see this page:
 
-{{< figure src="/attachments/control-center/admin-exists.jpg" >}}
+{{< figure src="/attachments/control-center/admin-exists.jpg" class="no-border" >}}
 
 If you are a Mendix Admin, you will immediately see the [Dashboard](/control-center/dashboard/) page and can navigate to the pages described below.
 

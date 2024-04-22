@@ -11,7 +11,7 @@ System texts are texts that are shown automatically to end-users by the server o
 
 For example, if an end-user enters a string into a search field that expects a number, the system will show the error message 'Invalid number' to the end-user:
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/app/system-texts/example-invalid-number.png" width="300px" >}}
+{{< figure src="/attachments/refguide/modeling/app-explorer/app/system-texts/example-invalid-number.png" width="300px" class="no-border" >}}
 
 You can change the system texts in the following way:
 

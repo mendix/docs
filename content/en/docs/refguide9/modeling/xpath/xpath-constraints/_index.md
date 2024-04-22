@@ -23,7 +23,7 @@ The syntax of XPath queries differs between Studio Pro and Java environments. In
 
 The following example shows how you should perform an XPath query in Studio Pro. You **Select** the entity `Sales.Customer` and then write the XPath constraint `[Name='Jansen']`:
 
-{{< figure src="/attachments/refguide9/modeling/xpath/XPath-constraint-example.png" alt="XPath constraint example in Studio Pro" width="400px" >}}
+{{< figure src="/attachments/refguide9/modeling/xpath/XPath-constraint-example.png" alt="XPath constraint example in Studio Pro" width="400px" class="no-border" >}}
 
 Multiple constraints can be added to a single query, this is true for all queries with the exception of the `id` query. This is most commonly done by the simple expedient of opening a new set of brackets after closing the first.
 

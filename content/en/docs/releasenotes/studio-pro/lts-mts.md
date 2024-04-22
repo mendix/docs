@@ -72,7 +72,7 @@ Support for an LTS version ends when a third consecutive major version is releas
 
 This diagram illustrates the LTS concept with version and [end of support](#end) examples:
 
-{{< figure src="/attachments/releasenotes/studio-pro/lts-mts/lts.png" >}}
+{{< figure src="/attachments/releasenotes/studio-pro/lts-mts/lts.png" class="no-border" >}}
 
 {{% alert color="info" %}}For details on extending support for an older major version, see the [Extended Support](/support/#extended-support) section in *Mendix Support*.{{% /alert %}}
 

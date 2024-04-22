@@ -28,6 +28,6 @@ Each available API has its own set of scopes that define the access level for th
 
 Copy the `{GENERATED_PAT}` and store it in a safe location, so you can use it to authorize your Private Mendix Platform API calls.
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/private-platform/copy-pat.png" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/private-platform/copy-pat.png" class="no-border" >}}
 
 ## 3 Documents in this Category

@@ -82,7 +82,7 @@ You can do one of the following:
 * The workflow can be aborted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
 * The app developer can create a Java action that uses the `void setWorkflowObject(contextObject: IMendixObject)` method on the `com.mendix.workflows.Workflow` interface to manually set the context object of the workflow parameter context for the right entity. See below a Java action example set up within Mendix. It sets a new `$History` object as the workflow context:
     
-    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-versioning-and-conflict-mitigation/Java-action-example.png" alt="Expose as Workflow Action Settings" >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-versioning-and-conflict-mitigation/Java-action-example.png" alt="Expose as Workflow Action Settings" class="no-border" >}}
 
     Here is the code of the Java action example:
 

@@ -14,7 +14,7 @@ At the Mendix 10 launch event on June 27, 2023, there were a number of announcem
 
 The new features were divided into these major themes, which are described in the sections below:
 
-{{< figure src="/attachments/releasenotes/calendar/themes.png" alt="Themes are continuous collaboration, developer experience, composability, multi-cloud deployment, and governance and control." >}}
+{{< figure src="/attachments/releasenotes/calendar/themes.png" alt="Themes are continuous collaboration, developer experience, composability, multi-cloud deployment, and governance and control." class="no-border" >}}
 
 {{% alert color="info" %}}
 "GA" means general availability for all users. A GA release is different than a beta or experimental release. For more information, see [Beta and Experimental Releases](/releasenotes/beta-features/).

@@ -16,7 +16,7 @@ Located in the Developer Portal, Buzz lets you see Mendix app activity in your c
 
 App **Buzz** is for a specific app:
 
-{{< figure src="/attachments/developerportal/general/buzz/app-buzz.png" >}}
+{{< figure src="/attachments/developerportal/general/buzz/app-buzz.png" class="no-border" >}}
 
 You can see the size of your **Team** and your team members on the right side of the page. Up to 25 team members can be displayed here at a time.
 
@@ -26,7 +26,7 @@ Click **Invite someone to your team** ({{% icon name="add-circle" %}}) to invite
 
 The **Company Buzz** is accessible via the top bar in the Developer Portal:
 
-{{< figure src="/attachments/developerportal/general/buzz/company-buzz.png" >}}
+{{< figure src="/attachments/developerportal/general/buzz/company-buzz.png" class="no-border" >}}
 
 The drop-down menu for the content you see in the Company Buzz is set to **All Channels** by default. This shows Buzz activity for all the apps for which you are a team member, as well as all Buzz activity for your company. In the menu, you can choose to see only Buzz for your company or for a specific app for which you are a team member. 
 
@@ -36,7 +36,7 @@ Clicking an app name in **Recent Apps** will take you to the [App Buzz](#app-buz
 
 The easiest way to communicate with others in your company and on your team is by leaving comments in Buzz. In the **Update status** box, add a comment and click **Share**. You can also attach an image or a document via **Add**. 
 
-{{< figure src="/attachments/developerportal/general/buzz/update-status.png" width="500px" alt="Update status on Buzz" >}}
+{{< figure src="/attachments/developerportal/general/buzz/update-status.png" width="500px" alt="Update status on Buzz" class="no-border" >}}
 
 Once you have posted a comment, you can click **Edit** to **Update Message** or **Delete**. You can also **Reply in Thread** to comments left by colleagues.
 

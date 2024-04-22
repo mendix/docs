@@ -40,7 +40,7 @@ To access MendixChat, follow these steps:
 
 MendixChat appears at the right side of Studio Pro under the **MendixChat** tab.
 
-{{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mendix-chat/mendix-chat-interface.png" width="300px" >}}
+{{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mendix-chat/mendix-chat-interface.png" width="300px" class="no-border" >}}
 
 ### 2.1 An Example of Interacting with MendixChat
 
@@ -72,7 +72,7 @@ The following steps present an example of how you can interact with MendixChat b
     * You can rate the **correctness**, **completeness**, and **readability** of the provided answer.
     * You can add additional explanation text in the **Additional feedback** text box if you want to. 
 
-        {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mendix-chat/feedback-section.png" width="300px" >}} 
+        {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mendix-chat/feedback-section.png" width="300px" class="no-border" >}} 
 
 5. Click the **Submit feedback** button to send your feedback. Afterwards, you will be brought back to the main chat interface where you can continue asking new questions.
 

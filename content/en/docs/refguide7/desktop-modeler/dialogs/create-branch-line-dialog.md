@@ -7,7 +7,7 @@ url: /refguide7/create-branch-line-dialog/
 
 Use this dialog box to create a new [branch line](/refguide7/version-control/) in your application.
 
-{{< figure src="/attachments/refguide7/desktop-modeler/dialogs/create-branch-line-dialog/create-branch-line-dialog.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/dialogs/create-branch-line-dialog/create-branch-line-dialog.png" class="no-border" >}}
 
 A branch line allows independent development from other development lines. There are two main reasons for creating a branch line:
 

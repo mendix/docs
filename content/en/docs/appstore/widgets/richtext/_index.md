@@ -19,7 +19,7 @@ Due to CKEditor 4 reaching end of life support status, we transitioned the rich 
 
 The [Rich Text](https://marketplace.mendix.com/link/component/74889/) widget provides the user with an WYSIWYG editor, where the user can enter and edit rich-text content. The widget automatically converts the rich-text content into a string in HTML format, which can be stored in an attribute of an entity.
 
-{{< figure src="/attachments/appstore/widgets/rich-text/example.png" alt="Example" >}}
+{{< figure src="/attachments/appstore/widgets/rich-text/example.png" alt="Example" class="no-border" >}}
 
 ### 1.1 Features
 
@@ -79,19 +79,19 @@ To configure this widget, follow these steps:
     * **Mode** - defines transition mode used for displaying out of screen toolbar when the three dots [...] button being clicked
         * **Sliding** – the toolbar appears as a fixed toolbar below the first toolbar when the overflow icon drawer is clicked:
 
-            {{< figure src="/attachments/appstore/widgets/rich-text/sliding.gif" alt="Example" >}}
+            {{< figure src="/attachments/appstore/widgets/rich-text/sliding.gif" alt="Example" class="no-border" >}}
         
         * **Floating** – the toolbar appears under the toolbar overflow icon in a floating shelf format when the overflow icon drawer is clicked:
        
-            {{< figure src="/attachments/appstore/widgets/rich-text/floating.png" alt="Example" >}}
+            {{< figure src="/attachments/appstore/widgets/rich-text/floating.png" alt="Example" class="no-border" >}}
         
         * **Scrolling** – the overflow toolbar buttons will remain on the toolbar. To access the overflow toolbar buttons, scroll the toolbar. This mode is usually better on touch screen devices:
         
-            {{< figure src="/attachments/appstore/widgets/rich-text/scroll.png" alt="Example" >}}
+            {{< figure src="/attachments/appstore/widgets/rich-text/scroll.png" alt="Example" class="no-border" >}}
         
         * **Wrap** – the overflow toolbar buttons will be shown on one or more toolbars below the primary toolbar:
         
-            {{< figure src="/attachments/appstore/widgets/rich-text/wrap.png" alt="Example" >}}
+            {{< figure src="/attachments/appstore/widgets/rich-text/wrap.png" alt="Example" class="no-border" >}}
     
     * **Location** 
 

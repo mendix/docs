@@ -268,7 +268,7 @@ You pass the configuration to the metrics agent by adding a custom runtime setti
 2. Click **Details** next to the environment you have configured for Datadog.
 3. In the **Custom Environment Variable** section, add a `METRICS_AGENT_CONFIG` variable with the value of the JSON required for your configuration.
 
-    {{< figure src="/attachments/developerportal/operate/metrics/metrics-agent-config.png" width=400 >}}
+    {{< figure src="/attachments/developerportal/operate/metrics/metrics-agent-config.png" width=400 class="no-border" >}}
 
 4. Click **Save**.
 5. Restart your app to apply the new settings if you have already connected your node to your data analytics. If you are in the process of connecting your node, you must redeploy your application to apply the changes.

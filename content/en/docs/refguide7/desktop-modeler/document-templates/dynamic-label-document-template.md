@@ -14,7 +14,7 @@ A dynamic label would be used for the same kind of attributes as a text box from
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide7/desktop-modeler/document-templates/918131.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/document-templates/918131.png" class="no-border" >}}
 A dynamic label linking to a customer name.
 
 {{% /alert %}}

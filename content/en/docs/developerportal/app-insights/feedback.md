@@ -46,7 +46,7 @@ This page also has a message feature for the user to communicate with your team 
 
 If the user does not want to receive notifications anymore, they can clear the checkbox for the notification on the page, as shown in the image below: 
 
-{{< figure src="/attachments/developerportal/app-insights/feedback/user-notification.png" >}}
+{{< figure src="/attachments/developerportal/app-insights/feedback/user-notification.png" class="no-border" >}}
 
 ## 2 Inbox {#inbox}
 
@@ -150,7 +150,7 @@ The **Feedback** tab shows the following items:
 
 * **Tags** – These are the tags assigned to the feedback. You can select a tag from the drop-down list or create new tags by typing the tag name inside the text box and then clicking **create [the tag name]**. A tag should contain maximum 50 characters. You can assign multiple tags.
 
-    {{< figure src="/attachments/developerportal/app-insights/feedback/tags.png" >}}
+    {{< figure src="/attachments/developerportal/app-insights/feedback/tags.png" class="no-border" >}}
 
     {{% alert color="info" %}}For more information about how to manage tags, see the [Managing Tags](#manage-tags) section.{{% /alert %}}
 
@@ -173,7 +173,7 @@ The **Feedback** tab shows the following items:
 
   You can link a feedback item by selecting it from the drop-down list.
 
-  {{< figure src="/attachments/developerportal/app-insights/feedback/linked-feedback.png" >}}
+  {{< figure src="/attachments/developerportal/app-insights/feedback/linked-feedback.png" class="no-border" >}}
 
   Once the feedback is linked, it disappears from the list on the **Inbox** or **Archive** tab. You can only access the linked feedback from its primary feedback to which it is linked. If you change the status of the primary feedback, all the linked feedback will get the same status automatically.
 

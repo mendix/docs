@@ -341,7 +341,7 @@ To enable your environment to use [AWS Secrets Manager](https://aws.amazon.com/b
 
     1. Open the role for editing and add an entry for the ServiceAccount (or ServiceAccounts) to the list of conditions:
 
-        {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/awsserviceaccountlinktorole.png" >}}
+        {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/awsserviceaccountlinktorole.png" class="no-border" >}}
 
     2. For the second condition, copy and paste the `sts.amazonaws.com` line; replace `:aud` with `:sub` and set it to `system:serviceaccount:<Kubernetes namespace>:<Kubernetes serviceaccount name>`.
 
@@ -535,13 +535,13 @@ To enable your environment to use [Azure Key Vault](https://learn.microsoft.com/
     2. Select the **Enable secret store CSI driver** option.
     3. Press **Apply**:
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-vault/aks-enable-csi-driver.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-vault/aks-enable-csi-driver.png" class="image-border" >}}
 
 3. Create a new Azure Key vault by using the Azure CLI or [Azure Portal](https://learn.microsoft.com/en-us/azure/key-vault/general/quick-create-portal).
 
     You can leave the **Access configuration** as default (**Azure RBAC** and no additional **Resource access**).
 
-{{% alert color="info" %}}This walkthough uses the default network settings (allow all access). Your organization might have additional instructions or policies that can be used to restrict public access to Key vaults.{{% /alert %}}
+{{% alert color="info" %}}This walkthrough uses the default network settings (allow all access). Your organization might have additional instructions or policies that can be used to restrict public access to Key vaults.{{% /alert %}}
 
 4. Write down the name of the new Key vault and its **Directory ID** (Azure Tenant ID).
 
@@ -551,7 +551,7 @@ To enable your environment to use [Azure Key Vault](https://learn.microsoft.com/
 
     After creating the keys, your Key vault should look like this:
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-vault/aks-keyvault-keys.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-vault/aks-keyvault-keys.png" class="image-border" >}}
 
 7. Create an app with the secret store enabled. If you are using connected mode, secret stores are enabled automatically if the **Enable Secrets Store** option is activated for the namespace where you create the app. For a standalone app, you must set the value of the setting `allowOverrideSecretsWithSecretStoreCSIDriver` to `true` in the Mendix app CRD.
 

@@ -34,7 +34,7 @@ If there are issues with the Mendix app you should see error messages in the Men
 
 ### 2.2 Critical Files Not Found
 
-{{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/troubleshooting-iis/18580723.png" >}}
+{{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/troubleshooting-iis/18580723.png" class="no-border" >}}
 
 You can get this sort of error in two circumstances:
 

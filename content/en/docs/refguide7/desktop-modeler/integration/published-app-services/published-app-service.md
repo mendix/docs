@@ -9,7 +9,7 @@ App services have been deprecated in version 7.23.4 and are marked for removal. 
 
 ## General
 
-{{< figure src="/attachments/refguide7/desktop-modeler/integration/published-app-services/published-app-service/16843916.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/integration/published-app-services/published-app-service/16843916.png" class="no-border" >}}
 
 ### Version
 
@@ -39,13 +39,13 @@ Can be used to describe what the app service is used for.
 
 ## Actions
 
-{{< figure src="/attachments/refguide7/desktop-modeler/integration/published-app-services/published-app-service/16843915.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/integration/published-app-services/published-app-service/16843915.png" class="no-border" >}}
 
 Provide the actual actions of which the app service is composed. Each of these actions is coupled to a microflow. See [Actions](/refguide7/actions/).
 
 ## Settings
 
-{{< figure src="/attachments/refguide7/desktop-modeler/integration/published-app-services/published-app-service/16843914.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/integration/published-app-services/published-app-service/16843914.png" class="no-border" >}}
 
 ### Authentication
 

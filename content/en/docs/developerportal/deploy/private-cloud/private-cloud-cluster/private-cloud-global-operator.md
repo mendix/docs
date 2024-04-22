@@ -28,25 +28,25 @@ To install and configure the Global Operator, perform the following steps:
 
 1. In the Private Cloud Portal, create a cluster and select **Global Installation** as the **Installation Type**.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/global-operator/global-operator1.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/global-operator/global-operator1.png" class="no-border" >}}
 
 2. Provide the **Cluster Name**, **Cluster Type** and **Description**.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/global-operator/global-operator2.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/global-operator/global-operator2.png" class="no-border" >}}
 
 3. Click **Create**.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/global-operator/global-operator3.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/global-operator/global-operator3.png" class="no-border" >}}
 
 4. After the Global Operator cluster is created, click **Add Global Operator Main Namespace**.
 
     {{% alert color="warning" %}}Ensure that you do not use a namespace that is intended to be a managed namespace, that is, a namespace where you plan to deploy a Mendix app. The Global Operator namespace must be separate from managed namespaces, otherwise you may encounter unexpected results.{{% /alert %}}
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/global-operator/global-operator4.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/global-operator/global-operator4.png" class="no-border" >}}
 
 5. Provide the Global Operator **Namespace name**, select the **Installation type**, and then click **Done**.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/global-operator/global-operator5.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/global-operator/global-operator5.png" class="no-border" >}}
 
 6. Select the **Operating system** and install the Mendix Operator by performing the following steps:
 
@@ -54,7 +54,7 @@ To install and configure the Global Operator, perform the following steps:
     2. [Sign into the Platform](/developerportal/deploy/standard-operator/#openshift-signin).
     3. Perform the [Base Installation](/developerportal/deploy/standard-operator/#base-installation).
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/global-operator/global-operator6.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/global-operator/global-operator6.png" class="no-border" >}}
 
 7. Verify that the installation was successful by using the following command: 
 
@@ -70,15 +70,15 @@ To install and configure the Global Operator, perform the following steps:
 
 9. In the Private Cloud Portal, verify that the status of the Global Operator namespace is *Connected*, as in the following figure:
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/global-operator/global-operator7.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/global-operator/global-operator7.png" class="no-border" >}}
 
 10. Click **Namespaces** to go to the **Namespaces Overview** page.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/global-operator/global-operator8.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/global-operator/global-operator8.png" class="no-border" >}}
 
 11. Install the managed namespace under the Global Operator namespace by clicking **Add Managed Namespace**.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/global-operator/global-operator9.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/global-operator/global-operator9.png" class="no-border" >}}
 
     {{% alert color="warning" %}}Ensure that you use the same name for the managed namespace in the Portal and in the cluster. Using different names may result in unwanted issues.{{% /alert %}}
 

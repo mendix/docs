@@ -21,7 +21,7 @@ In versions of Mendix below 10.3.0, Java dependencies were put into the `userlib
 
 You can specify Java dependencies through the module settings of each module. For each module, you can configure your dependencies on the **Java Dependencies** tab of [Module settings](/refguide/module-settings/).
 
-{{< figure src="/attachments/refguide/java-programming/managed-dependencies/module-settings.png" >}}
+{{< figure src="/attachments/refguide/java-programming/managed-dependencies/module-settings.png" class="no-border" >}}
 
 The tab shows a list of currently specified Java dependencies for this module. You can add **New** dependencies and **Edit** or **Delete** existing dependencies. Dependencies are identified through their Maven [Naming Convention](https://maven.apache.org/guides/mini/guide-naming-conventions.html).
 
@@ -29,7 +29,7 @@ To enter a dependency, do the following:
 
 1. Enter the **Group ID**, **Artifact ID**, and **Version**. For example, `org.apache.poi`, `poi`, and `5.2.3`.
 
-    {{< figure src="/attachments/refguide/java-programming/managed-dependencies/edit-java-dependencies.png" >}}
+    {{< figure src="/attachments/refguide/java-programming/managed-dependencies/edit-java-dependencies.png" class="no-border" >}}
 
 1. Click **OK** to confirm your changes.
 
@@ -43,7 +43,7 @@ Sonatype’s [Maven Central Repository](https://central.sonatype.com/) is a good
 
 After finding the package of your choice, locate the Snippets part, containing the identifier:
 
-{{< figure src="/attachments/refguide/java-programming/managed-dependencies/junit-notation-example.png" >}}
+{{< figure src="/attachments/refguide/java-programming/managed-dependencies/junit-notation-example.png" class="no-border" >}}
 
 ## 3 Dependency Synchronization
 
@@ -53,7 +53,7 @@ Dependency synchronization also occurs when you open your app in Studio Pro.
 
 You can trigger a manual synchronization in the menu **App** > **Synchronize dependencies**. You may want to do this, for example, when synchronization failed due to connectivity issues.
 
-{{< figure src="/attachments/refguide/java-programming/managed-dependencies/synchronize-app-dependencies.png" >}}
+{{< figure src="/attachments/refguide/java-programming/managed-dependencies/synchronize-app-dependencies.png" class="no-border" >}}
 
 Once Gradle has resolved and downloaded all dependencies successfully, it places them in the `vendorlib` directory. This directory is used to store `.jar` files of all the managed dependencies. Unlike the `userlib` folder, which needs to be updated manually, the `vendorlib` folder is completely managed by Studio Pro. Files here will automatically be added and removed based on the specified dependencies. The `vendorlib` folder will be committed to your version control just like the `userlib`.
 
@@ -90,7 +90,7 @@ mavenCentral()
 
 For more details, refer to the Gradle documentation on [Declaring repositories](https://docs.gradle.org/current/userguide/declaring_repositories.html).
 
-{{< figure src="/attachments/refguide/java-programming/managed-dependencies/custom-repository.png" >}}
+{{< figure src="/attachments/refguide/java-programming/managed-dependencies/custom-repository.png" class="no-border" >}}
 
 ### 6.1 Required Dependencies{#custom-repos-required-dependencies}
 

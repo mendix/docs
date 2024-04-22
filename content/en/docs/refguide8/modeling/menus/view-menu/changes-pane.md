@@ -20,7 +20,7 @@ This pane consists of the following:
 
 The top bar of the top level of the **Changes** pane consists of various buttons:
 
-{{< figure src="/attachments/refguide8/modeling/menus/view-menu/changes-pane/changes-top-bar.png" alt="Top Bar of the Changes Pane" >}}
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/changes-pane/changes-top-bar.png" alt="Top Bar of the Changes Pane" class="no-border" >}}
 
 Buttons allow you to perform the following actions:
 
@@ -37,7 +37,7 @@ The **Back** and **Go to** buttons are common throughout all the levels, while o
 
 The top level of the **Changes** pane is a grid listing changed documents, for example, a page or a nanoflow:
 
-{{< figure src="/attachments/refguide8/modeling/menus/view-menu/changes-pane/changes-top-level.png" alt="Top Level of the Changes Pane" >}}
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/changes-pane/changes-top-level.png" alt="Top Level of the Changes Pane" class="no-border" >}}
 
 The grid contains information on the following items:
 
@@ -71,7 +71,7 @@ Each of them contains their own set of buttons.
 
 The zoomed-in level for modified documents is split into two grids, with elements on the left and changed properties on the right. If no properties were changed for an element, for example, when an element was added or deleted, the right grid will be empty:
 
-{{< figure src="/attachments/refguide8/modeling/menus/view-menu/changes-pane/element-added.png" alt="No Properties to Show" >}}
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/changes-pane/element-added.png" alt="No Properties to Show" class="no-border" >}}
 
 The toolbar at this level contains the following buttons:
 
@@ -113,21 +113,21 @@ The left side of the grid contains the following columns when **Show Conflicts**
 * **Theirs** – the status of the incoming change on another development line
 * **Mine** – indicates the status of the change on the current development line
 
-    {{< figure src="/attachments/refguide8/modeling/menus/view-menu/changes-pane/conflict-grid.png" alt="Conflict Grid" >}}
+    {{< figure src="/attachments/refguide8/modeling/menus/view-menu/changes-pane/conflict-grid.png" alt="Conflict Grid" class="no-border" >}}
 
 The left side of the grid contains the following columns when **Show Changes in mine** toggle is enabled:
 
 * **Element** – the name of the modified element
 * **Mine** – indicates the status of the change on the current development line
 
-    {{< figure src="/attachments/refguide8/modeling/menus/view-menu/changes-pane/changes-in-mine-grid.png" alt="Conflict Grid" >}}
+    {{< figure src="/attachments/refguide8/modeling/menus/view-menu/changes-pane/changes-in-mine-grid.png" alt="Conflict Grid" class="no-border" >}}
 
 The left side of the grid contains the following columns when **Show Changes in theirs** toggle is enabled:
 
 * **Element** – the name of the modified element
 * **Theirs** – indicates the status of the change on the other development line
 
-    {{< figure src="/attachments/refguide8/modeling/menus/view-menu/changes-pane/changes-in-merge-end-grid.png" alt="Conflict Grid" >}}
+    {{< figure src="/attachments/refguide8/modeling/menus/view-menu/changes-pane/changes-in-merge-end-grid.png" alt="Conflict Grid" class="no-border" >}}
 
 The columns on the grid on the right will vary depending on what kind of conflicting element is selected on the left side.
 

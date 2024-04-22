@@ -69,7 +69,7 @@ The monthly backup occurs on the first Sunday of the month. If the first nightly
 
 The **Backups** page presents options for managing your backups. These are described below.
 
-{{< figure src="/attachments/developerportal/operate/backups/backup-controls.png" alt="" >}}
+{{< figure src="/attachments/developerportal/operate/backups/backup-controls.png" alt="" class="no-border" >}}
 
 ### 3.1 Create Backup
 
@@ -135,7 +135,7 @@ You can view details of a backup by clicking **More Options** ({{% icon name="th
 | **Snapshot Size Uncompressed (MB)** | The size of database dump and files of the snapshot in MB                                     |
 | **Comment**                         | A comment added to the backup                                                                 |
 
-{{< figure src="/attachments/developerportal/operate/backups/backup-details.png" alt="Backup Details" max-width=60% >}}
+{{< figure src="/attachments/developerportal/operate/backups/backup-details.png" alt="Backup Details" max-width=60% class="no-border" >}}
 
 ## 4 Limitations
 

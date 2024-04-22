@@ -9,7 +9,7 @@ tags: ["studio pro"]
 
 A JSON structure document stores a JSON snippet, and converts it into a schema structure that can be used in [Import Mappings](/refguide8/import-mappings/) and [Export Mappings](/refguide8/export-mappings/) to convert JSON content to Mendix objects and vice versa. 
 
-{{< figure src="/attachments/refguide8/modeling/integration/json-structures/19398772.png" >}}
+{{< figure src="/attachments/refguide8/modeling/integration/json-structures/19398772.png" class="no-border" >}}
 
 ### 1.1 JSON Snippet
 
@@ -19,7 +19,7 @@ Contains text of the JSON snippet. Usually it is pasted from API documentation, 
 
 When you paste or modify the JSON snippet, it is automatically checked for validity. If the snippet is not valid, an exclamation mark appears above the snippet:
 
-{{< figure src="/attachments/refguide8/modeling/integration/json-structures/19398781.png" >}}
+{{< figure src="/attachments/refguide8/modeling/integration/json-structures/19398781.png" class="no-border" >}}
 
 You cannot press "OK" without making the JSON valid.
 
@@ -48,7 +48,7 @@ Shows a tree structure with a schema that is parsed from the JSON snippet. The f
 {{% alert color="info" %}}
 When you modify the JSON snippet, you need to refresh the structure by clicking the 'Refresh' button. If you have not done so, an error will appear:
 
-{{< figure src="/attachments/refguide8/modeling/integration/json-structures/19399140.png" >}}
+{{< figure src="/attachments/refguide8/modeling/integration/json-structures/19399140.png" class="no-border" >}}
 
 You cannot press "OK" without updating the structure.
 {{% /alert %}}
@@ -63,7 +63,7 @@ Documentation that describes the snippet.
 
 A simple JSON object is contained in curly braces (between '{' and '}'). It contains a comma-separated list of JSON properties. See the following example.
 
-{{< figure src="/attachments/refguide8/modeling/integration/json-structures/19398772.png" >}}
+{{< figure src="/attachments/refguide8/modeling/integration/json-structures/19398772.png" class="no-border" >}}
 
 Each JSON property is composed of a key ("name") and a value ("John"). If the value is between double quotes ("  "), it is considered a string, otherwise the type is derived from the value. The following JSON values are supported:
 

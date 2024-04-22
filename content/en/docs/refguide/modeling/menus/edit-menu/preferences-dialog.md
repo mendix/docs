@@ -171,6 +171,14 @@ This setting was introduced in Mendix version 10.5.
 
 When [combining changes](/refguide/merge-algorithm/), for example when doing a Git pull, the user can choose between **Rebase** and **Merge** as the default action. This preference can be overridden for each merge which contains conflicts.
 
+### 6.3 Changes 
+
+Enable this setting to truncate long lines.
+
+### 6.4 Solution warning
+
+Select **Show warning on updating marketplace modules** to display a warning message when updating a Marketplace module. 
+
 ## 7 Work Environment Tab
 
 ### 7.1 Studio Pro Theme {#studio-pro-theme}

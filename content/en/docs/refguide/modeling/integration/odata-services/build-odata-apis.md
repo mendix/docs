@@ -404,7 +404,7 @@ In this example, you can publish a single REST resource that combines data from 
 
      {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/translate-to-odl-expression.png" >}} 
 
-1. Do a REST `GET` call and define which attributes you need, how you want it sorted, and how many objects you need:
+4. Do a REST `GET` call and define which attributes you need, how you want it sorted, and how many objects you need:
 
      ```
      GET http://localhost:8080/odata/CustomerApi/v1/CustomerHomeAddresses?$select=CustomerId,FullName,Street,City&$orderby=City+desc&$top=2
@@ -414,7 +414,7 @@ In this example, you can publish a single REST resource that combines data from 
 
      {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/get-call.png" >}} 
 
-2. You have decoupled your REST resource from your domain model persistent entities. You can change your entities and use the OQL query to ensure the published data remains backwards compatible.
+5. You have decoupled your REST resource from your domain model persistent entities. You can change your entities and use the OQL query to ensure the published data remains backwards compatible.
 
      The Java action used above adds the OData query to the original OQL query as follows:
 

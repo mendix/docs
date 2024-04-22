@@ -1,9 +1,11 @@
 ---
 title: "Configuring Private Mendix Platform"
-url: /private-mendix-platform-configuration/
+url: /private-mendix-platform/configuration/
 description: "Documents the initial configuration for the Private Mendix Platform."
 weight: 30
 tags: ["private mendix platform",  "private platform", "private marketplace", "initial configuration"]
+aliases:
+    - /private-mendix-platform-configuration/
 ---
 
 ## 1 Introduction
@@ -18,7 +20,7 @@ As a user with Administrator access rights, you can access the Private Mendix Pl
 2. Open the navigation menu by clicking the icon in the top left corner.
 3. Click **Settings**.
 
-Some of the settings that you configure here are initially set by the [Private Platform Configuration Wizard](/private-mendix-platform-quickstart/#wizard). Administrators can also update them at any time after the initial configuration.
+Some of the settings that you configure here are initially set by the [Private Platform Configuration Wizard](/private-mendix-platform/quickstart/#wizard). Administrators can also update them at any time after the initial configuration.
 
 ## 2 Configuring General Settings
 

@@ -1,9 +1,11 @@
 ---
 title: "Private Mendix Platform User Guide"
-url: /private-mendix-platform-user-guide/
+url: /private-mendix-platform/user-guide/
 description: "Documents the business-as-usual administrator tasks for the Private Mendix Platform."
 weight: 50
 tags: ["private mendix platform",  "private platform", "user guide", "create app", "marketplace"]
+aliases:
+    - /private-mendix-platform-user-guide/
 ---
 
 ## 1 Introduction

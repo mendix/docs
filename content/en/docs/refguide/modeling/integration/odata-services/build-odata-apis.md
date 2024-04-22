@@ -396,7 +396,11 @@ In this example, you can publish a single REST resource that combines data from 
 
      {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/get-microflow.png" width="400" class="no-border" >}} 
 
-     The microflow uses a Java action to translate the OData query to an OQL expression using the OQL Dataset as the base query. This ensures that filtering, sorting, and paging work as expected.
+ The microflow uses a Java action to translate the OData query to an OQL expression using the OQL Dataset as the base query. This ensures that filtering, sorting, and paging work as expected. 
+ 
+ {{% alert color="info" %}}
+ This action can be built using custom Java actions. This action will be updated in the second half of 2024. 
+{{% /alert %}}
 
      {{< figure src="/attachments/refguide/modeling/integration/build-odata-apis/translate-to-odl-expression.png" class="no-border" >}} 
 

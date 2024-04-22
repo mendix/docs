@@ -215,11 +215,11 @@ The consequences of deactivating and deleting an app are as below:
 
 |                                                             | Deactivating an App                                          | Deleting an App                                              |
 | ----------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| App code repository stays persistent                        | {{< figure src="/attachments/control-center/apps/check-mark.svg" class="no-border" >}} | {{< figure src="/attachments/control-center/apps/cross-mark.svg" class="no-border" >}} |
-| App team members can access the app code repository         | {{< figure src="/attachments/control-center/apps/cross-mark.svg" class="no-border" >}} | {{< figure src="/attachments/control-center/apps/cross-mark.svg" class="no-border" >}} |
-| App stays persistent                                        | {{< figure src="/attachments/control-center/apps/check-mark.svg" class="no-border" >}} | {{< figure src="/attachments/control-center/apps/cross-mark.svg" class="no-border" >}} |
-| App team members can access the app in the Developer Portal | {{< figure src="/attachments/control-center/apps/cross-mark.svg" class="no-border" >}} | {{< figure src="/attachments/control-center/apps/cross-mark.svg" class="no-border" >}} |
-| Cloud environment stays persistent                          | {{< figure src="/attachments/control-center/apps/cross-mark.svg" class="no-border" >}} | {{< figure src="/attachments/control-center/apps/cross-mark.svg" class="no-border" >}} |
+| App code repository stays persistent                        | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
+| App team members can access the app code repository         | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
+| App stays persistent                                        | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
+| App team members can access the app in the Developer Portal | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
+| Cloud environment stays persistent                          | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
 
 {{% alert color="info" %}}
 Deleting and deactivating apps is currently not supported for licensed apps or apps that are not running on Mendix Cloud. Therefore, you do not see these options on the **Mendix Cloud** tab; and you also do not see these options on the **Other Apps** tab if you select apps that are deployed on a private cloud.

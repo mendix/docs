@@ -62,13 +62,13 @@ Do not use OpenSSL version 3.x on Windows.<br><br>If you use OpenSSL version 3.x
 
 You can upload a PKCS12 file by following these steps:
 
-1. In the [Developer Portal](http://sprintr.home.mendix.com), go to the **Deploy** tab of your app's **Environments** page. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the desired environment.
+1. In the [Developer Portal](https://sprintr.home.mendix.com), go to the **Deploy** tab of your app's **Environments** page. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the desired environment.
 
 2. Select the **Network** tab of an application environment.
 
 3. Below **Outgoing Connections Certificates**, click **Add Client Certificate**.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/certificates/certificate.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/certificates/certificate.png" class="no-border" >}}
 
 4. Upload the client certificate as a PKCS12 (pfx) container.
 
@@ -76,7 +76,7 @@ You can upload a PKCS12 file by following these steps:
 
 6. If you are using a custom certificate when setting your Client certificate in your [Call REST Service](/refguide/call-rest-action/#client-certificate) or [Call Web Service](/refguide/call-web-service-action/#client-certificate) action, set a **Web Service Call Name** and use it to pin the certificate by setting the call's **Client certificate identifier** to the **Web Service Call Name**.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/certificates/certificate-details.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/certificates/certificate-details.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 Changes to certificate settings do not go into effect until you restart the app.
@@ -90,7 +90,7 @@ Loading certificate authorities works much the same way, although they do not re
 
 To upload a certificate authority, follow these steps:
 
-1. In the [Developer Portal](http://sprintr.home.mendix.com), go to the **Deploy** tab of the **Environments** page, and click **Details** ({{% icon name="notes-paper-edit" %}}) on the desired environment.
+1. In the [Developer Portal](https://sprintr.home.mendix.com), go to the **Deploy** tab of the **Environments** page, and click **Details** ({{% icon name="notes-paper-edit" %}}) on the desired environment.
 
 2. Select the **Network** tab of an application environment.
 
@@ -102,5 +102,5 @@ If you run into any problems installing a client certificate or certificate auth
 
 ## 5 Read More
 
-* [Transport Layer Security](http://en.wikipedia.org/wiki/Transport_Layer_Security)
-* [How Encryption Works](http://computer.howstuffworks.com/encryption.htm)
+* [Transport Layer Security](https://en.wikipedia.org/wiki/Transport_Layer_Security)
+* [How Encryption Works](https://computer.howstuffworks.com/encryption.htm)

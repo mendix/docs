@@ -57,7 +57,7 @@ You can define multiple workflow-specific event handlers. Even if a single event
 ### 2.4 ⚠ Events (Deprecated) {#events} 
 
 {{% alert color="warning" %}}
-⚠ State-change events are deprecated and replaced with the new [event handlers](#event-handlers) above that also contain events for state changes. It is suggested to migrate the microflows to the new event handlers.
+State-change events are deprecated and replaced with the new [event handlers](#event-handlers) above that also contain events for state changes. It is suggested to migrate the microflows to the new event handlers.
 {{% /alert %}}
 
 **Events** section properties allow you to override app-wide events in the **App Settings** and to set a workflow-specific microflow that will be triggered on a state change of the current workflow and its user tasks. For more information on app-wide events, see the [Events](/refguide/app-settings/#events) section in *App Settings*.
@@ -121,13 +121,13 @@ To add a parameter to the **Workflow name** or the **Workflow description**, do 
 
 3. In the **Template Parameter (String)** dialog box, specify the expression, and confirm your choice. 
 
-   {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-properties/specifying-attribute.png" alt="Specifying the Attribute" >}}
+   {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-properties/specifying-attribute.png" alt="Specifying the Attribute" class="no-border" >}}
 
    {{% alert color="info" %}}Make sure that the attribute you use in the expression is of the string type.{{% /alert %}}
 
 4. In the **Template** setting, write the text you would like to display and type **Index** of the parameter you would like to include. In the example below, to include a full name of the new hire being onboarded, you need to use {1} index:
 
-   {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-properties/edit-workflow-name.png" alt="Edit Workflow Name Dialog Box" >}}
+   {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-properties/edit-workflow-name.png" alt="Edit Workflow Name Dialog Box" class="no-border" >}}
 
 ##### 2.6.3.2 Performing Other Actions on Parameters
 

@@ -32,7 +32,7 @@ To add an external entity to your project, do the following:
 
 3. Drag the entity into the domain model. The entity and its attributes are then added to your app:
 
-    {{< figure src="/attachments/refguide8/modeling/domain-model/entities/virtual-entity-example.png" alt="Virtual Entity Example" >}}
+    {{< figure src="/attachments/refguide8/modeling/domain-model/entities/virtual-entity-example.png" alt="Virtual Entity Example" class="no-border" >}}
 
 {{% alert color="info" %}}
 If you drag an entity that is associated with an entity from the same service already in your domain model, the association will be established between the entities. For more information on associations between external entities, see [Associations](#properties).
@@ -62,7 +62,7 @@ Changes that are made to the properties of external entities are made only in th
 
 This tab displays the general properties of the external entity. The values that are defined in the originating app are displayed but but cannot be edited. The values that can be edited will only apply to the local project:
 
-{{< figure src="/attachments/refguide8/modeling/domain-model/external-entities/external-entity-properties.png" alt="External Entity Properties" >}}
+{{< figure src="/attachments/refguide8/modeling/domain-model/external-entities/external-entity-properties.png" alt="External Entity Properties" class="no-border" >}}
 
 * **Name** – the name of the entity in the local app
 * **Original name** – this is read-only and shows the name of the entity as defined in the consumed OData service
@@ -84,7 +84,7 @@ The following operations can be done on the displayed attribute list:
 
 The **Edit Attribute** box can be used for specifying a local name for the attribute and adding a local description.
 
-{{< figure src="/attachments/refguide8/modeling/domain-model/external-entities/edit-attributes.png" alt="Edit attributes" >}}
+{{< figure src="/attachments/refguide8/modeling/domain-model/external-entities/edit-attributes.png" alt="Edit attributes" class="no-border" >}}
 
 * **General Tab**
     * **Name** – a local name for the attribute
@@ -97,7 +97,7 @@ The **Edit Attribute** box can be used for specifying a local name for the attri
 
 This tab displays the associations that the external entity has with other entities that are exposed in the same service and also any associations that have been made with local entities. For further details on association properties in Studio Pro see [Association Tab Properties](/refguide8/association-member-properties/). 
 
-{{< figure src="/attachments/refguide8/modeling/domain-model/external-entities/external-entity-associations.png" alt="Edit attributes" >}}
+{{< figure src="/attachments/refguide8/modeling/domain-model/external-entities/external-entity-associations.png" alt="Edit attributes" class="no-border" >}}
 
 The following apply for all associations with the external entity:
 
@@ -123,7 +123,7 @@ If you want to connect two external entities that are not connected in the origi
 
 When you **Edit** an association that is included for two entities exposed in the same OData service, the following properties are displayed and the only local change that can be name is the local Name:
 
-{{< figure src="/attachments/refguide8/modeling/domain-model/external-entities/association-properties.png" alt="Edit external associations" >}}
+{{< figure src="/attachments/refguide8/modeling/domain-model/external-entities/association-properties.png" alt="Edit external associations" class="no-border" >}}
 
 * **Name** – local name of the association
 * **Original Name** – name of the association given to it in the originating app 

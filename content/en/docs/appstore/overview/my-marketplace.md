@@ -18,7 +18,7 @@ On this page, you can see and manage the drafts for all the Marketplace content 
 
 This page presents details on how many total drafts you have, which drafts are ready to publish or are awaiting approval, and which drafts have been declined.
 
-{{< figure src="/attachments/appstore/overview/my-marketplace/my-drafts.png" >}}
+{{< figure src="/attachments/appstore/overview/my-marketplace/my-drafts.png" class="no-border" >}}
 
 These are the possible **Status** entries for each item:
 
@@ -42,7 +42,7 @@ Click the name of the component to go its [component details page](/appstore/ove
 
 Click the context menu to access various options for managing your content:
 
-{{< figure src="/attachments/appstore/overview/my-marketplace/my-content.png"  width="400"  >}}
+{{< figure src="/attachments/appstore/overview/my-marketplace/my-content.png"  width="400"  class="no-border" >}}
 
 * **Manage Drafts** – click this to manage the drafts of the component
     * Only one draft version of a component can exist at a time, so when one draft version is in progress, another draft cannot be initiated
@@ -63,7 +63,7 @@ In addition, you may see a label on a component name for the [content group](#co
 
 You can see all the Marketplace app services you have trials for on this page:
 
-{{< figure src="/attachments/appstore/overview/my-marketplace/my-subscriptions.jpg" >}}
+{{< figure src="/attachments/appstore/overview/my-marketplace/my-subscriptions.jpg" class="no-border" >}}
 
 The table presents the **Names** of products you have trials for. Clicking a product name takes you to the [service management dashboard](#service-management-dashboard) for the component. 
 
@@ -81,7 +81,7 @@ Click the name of the component to go its [component details page](/appstore/ove
 
 Click the context menu to access various options for managing this content:
 
-{{< figure src="/attachments/appstore/overview/my-marketplace/saved.png"  width="400"  >}}
+{{< figure src="/attachments/appstore/overview/my-marketplace/saved.png"  width="400"  class="no-border" >}}
 
 * **Receive/Stop Email Notifications** – click this to start receiving email notifications or to stop the notifications if you already have them enabled
 * **Unsave** – click this to remove the component from your saved content
@@ -98,7 +98,7 @@ Click the name of the component to go its [component details page](/appstore/ove
 
 Click the context menu to access various options for managing this content:
 
-{{< figure src="/attachments/appstore/overview/my-marketplace/company-content.png"  width="400"  >}}
+{{< figure src="/attachments/appstore/overview/my-marketplace/company-content.png"  width="400"  class="no-border" >}}
 
 The options in this menu are the same as described for the context menu for the [My Content](#my-content) section above. However, the **Edit a Version** and **Unpublish a Version** options are only available for your own versions of company content.
 
@@ -106,7 +106,7 @@ The options in this menu are the same as described for the context menu for the 
 
 You can see all the Marketplace app services your company has subscribed to on this page:
 
-{{< figure src="/attachments/appstore/overview/my-marketplace/company-subscriptions.png" >}}
+{{< figure src="/attachments/appstore/overview/my-marketplace/company-subscriptions.png" class="no-border" >}}
 
 The table presents the **Names** of the products your company has subscribed to. Clicking a product name takes you to the [service management dashboard](#service-management-dashboard) for the component. 
 
@@ -128,7 +128,7 @@ Only a Technical Owner for the subscription can edit the instance name and manag
 
 This page presents the **Binding Key Names** that have been created as well as details on the user who created the binding keys (**Created By**) and when the binding keys were created (**Created At**). Click **Delete** to delete that group of binding keys.
 
-{{< figure src="/attachments/appstore/overview/my-marketplace/binding-keys.jpg" >}}
+{{< figure src="/attachments/appstore/overview/my-marketplace/binding-keys.jpg" class="no-border" >}}
 
 You can also select a group of binding keys and click **Manage Instance** to go to the component provider's configuration page, where you can do further configuration.
 
@@ -156,11 +156,7 @@ When you are developing your app, set the app service's binding keys as [constan
 
 Refer to the documentation on specific app services for how to use the binding keys (for example, see the [Authenticating Insights Hub REST Calls](/partners/siemens/mindsphere-app-service/#authenticating) section of *Insights Hub IIoT for Makers*).
 
-## 10 Company Reviews {#company-reviews}
-
-This page contains reviews of **Your company's content** as well as **Your company's reviews** that users from your company have written of other content.
-
-## 11 Content Groups {#content-groups}
+## 10 Content Groups {#content-groups}
 
 The **Content Groups** menu item and page are visible to all users. However, only [Mendix Admins](/control-center/company-settings/) can create and delete content groups. Both [Group Admins](#members) and Mendix Admins can manage content group members. 
 
@@ -176,11 +172,11 @@ This table breaks down the roles and permissions for content groups:
 | Organization member (not part of any group) | ✘ | ✘ | ✘ | ✘ | ✔ | ✔ |
 | Guest | ✘ | ✘ | ✘ | ✘ | ✔ | ✘ |
 
-### 11.1 Content Tab {#group-content}
+### 10.1 Content Tab {#group-content}
 
 On this tab, you can assign content to this content group that can only be managed by members of this group. To assign a component to a content group, click **Assign Content** and select a company Marketplace component from the dialog box:
 
-{{< figure src="/attachments/appstore/overview/my-marketplace/group-content.png"  width="400"  >}}
+{{< figure src="/attachments/appstore/overview/my-marketplace/group-content.png"  width="400"  class="no-border" >}}
 
 {{% alert color="info" %}}
 A component can only be assigned to one content group at a time. If a component is already assigned to another content group, it will not appear in this dialog box.
@@ -188,11 +184,11 @@ A component can only be assigned to one content group at a time. If a component 
 
 Click the context menu to access various options for managing this content:
 
-{{< figure src="/attachments/appstore/overview/my-marketplace/group-content-context.png" width="400" >}}
+{{< figure src="/attachments/appstore/overview/my-marketplace/group-content-context.png" width="400" class="no-border" >}}
 
 The options in this menu are the same as described for the context menu for the [My Content](#my-content) section above. The **Unassign from Group** button is only available for [Group Admins](#members) and can be used to remove content from the content group.
 
-### 11.2 Members Tab {#members}
+### 10.2 Members Tab {#members}
 
 On this tab, you can enter the email address of a Mendix Platform user from your company and click **Add Member** to add them as a content group member. Content group members can manage the [content](#group-content) assigned to the group.
 
@@ -200,7 +196,7 @@ Once a member is added, you can select their permission level: **Group Member** 
 
 To remove a member, click **Remove** next to their name.
 
-### 11.3 Guests Tab {#guests}
+### 10.3 Guests Tab {#guests}
 
 A guest is a Mendix Platform user from outside your organization who can download the selected private [Content](#group-content) of this group. To add a guest, enter their email address in the box and click **Add Guest**:
 
@@ -212,7 +208,7 @@ The guest must be a registered Mendix Platform user; otherwise, they will not be
 
 To remove a guest, click **Remove**.
 
-### 11.4 Settings Tab {#settings}
+### 10.4 Settings Tab {#settings}
 
 {{% alert color="info" %}}
 This tab is only accessible to [Group Admins](#members) and [Mendix Admins](/control-center/company-settings/).

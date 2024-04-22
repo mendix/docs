@@ -34,31 +34,31 @@ Mendix Studio Pro needs to be installed on your computer before you can start bu
 
 1. Open the downloaded Mendix Studio Pro executable. It is named like this: *Mendix-8.X.X-Setup*. Then click **Next**:
 
-    {{< figure src="/attachments/howto8/general/install/setup-wizard.png" >}}
+    {{< figure src="/attachments/howto8/general/install/setup-wizard.png" class="no-border" >}}
 
 2. Select **I accept the terms in the License Agreement** and click **Next**:
 
-    {{< figure src="/attachments/howto8/general/install/terms-of-use.png" >}}
+    {{< figure src="/attachments/howto8/general/install/terms-of-use.png" class="no-border" >}}
 
 3. Select the folder in which you want to install Studio Pro and click **Next**:
 
-    {{< figure src="/attachments/howto8/general/install/select-folder.png" >}}
+    {{< figure src="/attachments/howto8/general/install/select-folder.png" class="no-border" >}}
 
 4. Enter the start menu shortcuts folder you want to use and click **Next**:
 
-    {{< figure src="/attachments/howto8/general/install/shortcut-folder.png" >}}
+    {{< figure src="/attachments/howto8/general/install/shortcut-folder.png" class="no-border" >}}
 
 5. Check the **Desktop** option to create a shortcut to Studio Pro on your desktop and click **Next**:
 
-    {{< figure src="/attachments/howto8/general/install/location.png" >}}
+    {{< figure src="/attachments/howto8/general/install/location.png" class="no-border" >}}
 
 6. Click **Install** to install Studio Pro on your computer:
 
-    {{< figure src="/attachments/howto8/general/install/ready-to-install.png" >}}
+    {{< figure src="/attachments/howto8/general/install/ready-to-install.png" class="no-border" >}}
 
 7. Check **Launch Mendix 8.X.X** and click **Finish** to finish the installation and launch Studio Pro:
 
-    {{< figure src="/attachments/howto8/general/install/completing-setup.png" >}}
+    {{< figure src="/attachments/howto8/general/install/completing-setup.png" class="no-border" >}}
 
 ## 5 Troubleshooting {#troubleshooting}
 

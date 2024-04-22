@@ -12,14 +12,14 @@ tags: ["domain model", "entity", "attribute", "studio pro"]
 
 A **Customer**, for example, typically has attributes for the name of the customer (for example, **FullName**), an email address (for example, **EmailAddress**) and other personal information.
 
-{{< figure src="/attachments/refguide8/modeling/domain-model/entities/attributes/customer-entity.png" alt="Example customer entity" >}}
+{{< figure src="/attachments/refguide8/modeling/domain-model/entities/attributes/customer-entity.png" alt="Example customer entity" class="no-border" >}}
 
 The domain model editor uses the following symbols to help visualize attribute properties:
 
 | Symbol | Description |
 | --- | --- |
-| {{< figure src="/attachments/refguide8/modeling/domain-model/entities/attributes/917593.png" >}} | This attribute has one or more validation rules. |
-| {{< figure src="/attachments/refguide8/modeling/domain-model/entities/attributes/917592.png" >}} | This attribute has a microflow that calculates the value of the attribute. |
+| {{< figure src="/attachments/refguide8/modeling/domain-model/entities/attributes/917593.png" class="no-border" >}} | This attribute has one or more validation rules. |
+| {{< figure src="/attachments/refguide8/modeling/domain-model/entities/attributes/917592.png" class="no-border" >}} | This attribute has a microflow that calculates the value of the attribute. |
 
 {{% alert color="info" %}}
 Attributes for external entities are specified in the **External Entity Properties**. These attributes are defined in the originating app and the only local changes that can be applied to these entities is a local name and description. For further information see the [Attributes](/refguide8/external-entities/#attributes) section of *External Entities*.
@@ -35,7 +35,7 @@ You can **Add** new attributes to [external entities](/refguide8/external-entiti
 
 An example of the attribute properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/domain-model/entities/attributes/attribute-properties.png" >}}
+{{< figure src="/attachments/refguide8/modeling/domain-model/entities/attributes/attribute-properties.png" class="no-border" >}}
 
 Attribute properties consist of the following sections:
 
@@ -103,7 +103,7 @@ The **Password** itself should not be stored, but only its hash value, thus it i
 
 A customer can be active or inactive, which is stored in an attribute named **Active** of type **Boolean**.
 
-{{< figure src="/attachments/refguide8/modeling/domain-model/entities/attributes/customer-attribute-examples.png" >}}
+{{< figure src="/attachments/refguide8/modeling/domain-model/entities/attributes/customer-attribute-examples.png" class="no-border" >}}
 
 #### 2.2.2 Localize
 
@@ -168,7 +168,7 @@ If the value is a computation, the **Microflow** property defines which microflo
 
 For example, in a web shop, you want to show the total expenses for each customer. These are calculated by retrieving all orders associated with the customer and adding their totals.
 
-{{< figure src="/attachments/refguide8/modeling/domain-model/entities/attributes/917570.png" >}}
+{{< figure src="/attachments/refguide8/modeling/domain-model/entities/attributes/917570.png" class="no-border" >}}
 
 #### 2.3.3 Default Value
 

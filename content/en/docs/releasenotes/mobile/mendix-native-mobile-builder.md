@@ -11,13 +11,21 @@ The Mendix Native Mobile Builder is a UI-based tool, complimentary to Mendix Stu
 
 ## 2024
 
-### Release 1.0.130
+### Release 1.0.131
+
+**Release date: February 19, 2024**
+
+#### Fixes
+
+* We fixed a build regression introduced in [1.0.130](#10130).
+
+### Release 1.0.130 {#10130}
 
 **Release date: February 13, 2024**
 
 #### Fixes
 
-* Fixed an issue where the namespace in the `native-template` Gradle file was not updating correctly when building an application using Native Builder UI.
+* We fixed an issue where the namespace in the `native-template` Gradle file was not updating correctly when building an application using Native Builder UI.
 
 ### Release 1.0.129
 
@@ -211,7 +219,7 @@ App Center's CodePush OTA page improvements:
 #### Fixes
 
 * We identified and fixed a bug with AppCenter's CodePush OTA not respecting the user's platform of choice. If one of the platforms was missing an App Center build configuration, the OTA build button would remain falsely disabled.
-* We fixed an issue with missing asset files for newly-created Github projects when building in **Advanced** mode.
+* We fixed an issue with missing asset files for newly created GitHub projects when building in **Advanced** mode.
 * We identified and fixed a bug with Firebase configuration's validation when changes are made to the **App Identifier**.
 
 ### Release 1.0.90

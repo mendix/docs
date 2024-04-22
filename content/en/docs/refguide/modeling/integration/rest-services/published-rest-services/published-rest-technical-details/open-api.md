@@ -14,7 +14,7 @@ If you need to communicate with the service from another app, you can use the *o
 
 Many of the popular API tools support OpenAPI 3.0, including [Postman](https://www.getpostman.com/) and [Swagger UI](https://swagger.io/swagger-ui/) (for a longer list of supported tools, see [tools.openapis.org](https://tools.openapis.org/)). This means that you can easily test your published service from any of these tools.
 
-A technical description is presented below of which parts of the *openapi.json* file are generated.
+A technical description is presented below, of which parts of the *openapi.json* file are generated.
 
 {{% alert color="info" %}}
 Exporting OpenAPI documentation in version 3.0 of the specification was introduced in Studio Pro [10.1.0](/releasenotes/studio-pro/10.1/).
@@ -30,7 +30,7 @@ The main schema object documents the service.
 | `info.title` | The [name of the service](/refguide/published-rest-service/#service-name). |
 | `info.description` | The [public documentation of the service](/refguide/published-rest-service/#public-documentation). |
 | `info.version` | 1.0.0 |
-| `servers` | Contains the baseUrl on which the app is running. |
+| `servers` | Contains the baseURL on which the app is running. |
 | `paths` | Each group of operations generates a path object. See below for more information. |
 | `components.schemas` | Contains reusable schemas for the entities that are used in the requests or responses. |
 | `components.responses` | Contains the unauthorized response when security is enabled. |
@@ -51,7 +51,7 @@ Each operation generates an `Operation` object:
 | `tags` | The [name](/refguide/published-rest-resource/#name) of the resource. |
 | `summary` | The [public documentation summary](/refguide/published-rest-operation/#summary) of the operation. |
 | `description` | The [public documentation description](/refguide/published-rest-operation/#description) of the operation. |
-| `requestBody` | This property contains the type and schema information for form and body parameters, for POST, PUT, and PATCH methods. |
-| `parameters` | The path, query and header parameters and their location and type information. |
+| `requestBody` | Contains the type and schema information for form and body parameters for `POST`, `PUT`, and `PATCH` methods. |
+| `parameters` | The path, query, and header parameters and their location and type information. |
 | `responses` | The OK response. If security is enabled, this is also the unauthorized response. |
 | `deprecated` | Set to true when the operation is marked as deprecated. |

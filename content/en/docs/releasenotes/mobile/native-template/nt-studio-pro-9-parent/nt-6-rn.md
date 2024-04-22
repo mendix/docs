@@ -53,7 +53,7 @@ If you already have a project in AppCenter, then you must add the following envi
 
 In the end, your variable should be set up like this:
 
-{{< figure src="/attachments/releasenotes/mobile/native-template/environment-variable.png" alt="environment variable example" >}}
+{{< figure src="/attachments/releasenotes/mobile/native-template/environment-variable.png" alt="environment variable example" class="no-border" >}}
 
 ## 6.3.2
 

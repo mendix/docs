@@ -28,7 +28,7 @@ The entity and its attributes are then added to your app and two documents are a
 * A [Consumed OData Service](/refguide/consumed-odata-service/) document that contains details of the OData service and the metadata. The logo displayed identifies the originating app of the service.
 * A **Location** constant that specifies the URL of the service.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/external-entities/consumed-service-docs.png" alt=" Virtual Entity and OData Service files" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/external-entities/consumed-service-docs.png" alt=" Virtual Entity and OData Service files" class="no-border" >}}
 
 {{% alert color="info" %}}
 When you drag an entity that is associated with an entity from the same service already in your domain model, the association will be displayed and established between the entities. For more information on associations between external entities, see [Associations](#properties).
@@ -38,7 +38,7 @@ For more information, see [Consumed OData Service](/refguide/consumed-odata-serv
 
 The consumed entities of the current app are listed in the **Used in your App** section of the Integration pane:
 
-{{< figure src="/attachments/refguide/modeling/domain-model/external-entities/data-hub-app.png" alt=" Virtual Entity and OData Service files" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/external-entities/data-hub-app.png" alt=" Virtual Entity and OData Service files" class="no-border" >}}
 
 {{% alert color="info" %}}
 When a new version of a consumed service becomes available in the Catalog, this will be indicated in the Integration pane by an update arrow next to the service name. For more information, see the [Updating or Switching a Consumed OData Service](/refguide/consumed-odata-service/#updating) section in *Consumed OData Service*.
@@ -47,7 +47,7 @@ When a new version of a consumed service becomes available in the Catalog, this 
 You can make local changes to the properties of external entities that only affect how the data is used and presented in the consuming app. All other properties are defined in the originating app and cannot be changed. When multiple external entities from the same OData service are used in a module or app, associations between the entities (made in the originating app) will automatically be made in the local module.
 
 {{% alert color="info" %}}
-If you delete an external entity from the domain model, the service documents remain in the App Explorer list and the service aryA listed in the Integration pane. You can delete the two service documents if you are no longer going to use any entities from the consumed service.
+If you delete an external entity from the domain model, the service documents remain in the App Explorer list and the service remains listed in the Integration pane. You can delete the two service documents if you are no longer going to use any entities from the consumed service.
 {{% /alert %}}
 
 For more information on using published OData services and entities through the Catalog, see [Consume Registered Assets](/catalog/consume/consume-registered-assets/).
@@ -64,12 +64,14 @@ Changes that are made to the properties of external entities are made only in th
 
 This group displays the general properties of the external entity. These values are defined in the originating app, so you cannot edit them. The values that you can edit will only apply to the local app:
 
-{{< figure src="/attachments/refguide/modeling/domain-model/external-entities/external-entity-properties.png" alt="External Entity Properties" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/external-entities/external-entity-properties.png" alt="External Entity Properties" class="no-border" >}}
 
 * **Name** – the name of the entity in the local app
+* **From service** – shows the service from which this entity originates
 * **Original name** – shows the name of the entity as defined in the originating app
 * **Capabilities** - indicates whether the service supports creating, reading, updating, and/or deleting objects
 * **Create and change locally** - when switched off, the app can only create and update objects when the server supports it; when switched on, the app can create and update objects, but will not be able to [send](/refguide/send-external-object/) them to the server
+* **Persistable** – indicates if this a persistable external entity, which means the originating app allows retrieving (reading) objects
 * **Summary** – shows the description for the entity in the originating app (shown only when there is a description)
 
 ### 3.2 Attributes {#attributes}
@@ -88,7 +90,7 @@ The following operations can be done on the attribute list:
 
 The **Edit Attribute** dialog can be used to specify a local name and add a local description.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/external-entities/edit-attributes.png" alt="Edit attributes" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/external-entities/edit-attributes.png" alt="Edit attributes" class="no-border" >}}
 
 * **General**
     * **Name** – a local name for the attribute
@@ -106,7 +108,7 @@ This tab displays the associations the external entity has with other entities t
 
 If the entity contains [one-way navigable associations](/refguide/association-properties/#one-way-navigable), there is a note at the top of the dialog box. 
 
-{{< figure src="/attachments/refguide/modeling/domain-model/external-entities/external-entity-associations.png" alt="Edit attributes" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/external-entities/external-entity-associations.png" alt="Edit attributes" class="no-border" >}}
 
 The following apply for all associations with the external entity:
 
@@ -133,7 +135,7 @@ You cannot connect two external entities that are not connected in the originati
 
 When you **Edit** an association that is included in two entities exposed in the same OData service, the following properties are displayed and the only local change that can be made is the local name:
 
-{{< figure src="/attachments/refguide/modeling/domain-model/external-entities/association-properties.png" alt="Edit external associations" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/external-entities/association-properties.png" alt="Edit external associations" class="no-border" >}}
 
 * **Name** – local name of the association
 * **Original Name** – read-only name of the association given in the originating app
@@ -143,7 +145,7 @@ When you **Edit** an association that is included in two entities exposed in the
 
 If the association is [one-way navigable](/refguide/association-properties/#one-way-navigable), there is a note at the top of the dialog box.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/external-entities/association-properties-one-way-navigable.png" alt="Edit external associations one-way navigable" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/external-entities/association-properties-one-way-navigable.png" alt="Edit external associations one-way navigable" class="no-border" >}}
 
 ### 3.4 Documentation {#documentation}
 

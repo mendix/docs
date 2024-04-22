@@ -19,7 +19,7 @@ To open a project in Mendix Studio Pro, do one of the following:
 
 The **Open App** dialog box will open, where you can select the app location:
 
-{{< figure src="/attachments/refguide8/modeling/menus/file-menu/open-app-dialog/open-app.png" alt="Open App" >}}
+{{< figure src="/attachments/refguide8/modeling/menus/file-menu/open-app-dialog/open-app.png" alt="Open App" class="no-border" >}}
 
 For more information on the app location, see the [Where Is Your App Stored?](#location) section
 

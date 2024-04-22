@@ -16,6 +16,6 @@ These blog posts also present useful details on testing:
 
 * [Three Tools to Test Your Mendix Application](https://www.mendix.com/blog/three-tools-to-test-your-mendix-application/)
 * [8 Lightweight Quality Assurance Practices](https://www.mendix.com/blog/8-lightweight-quality-assurance-practices/)
-* [The Quality Assurance Mindset in Mendix](http://ww2.mendix.com/expert-webinar-quality-assurance.html)
+* [The Quality Assurance Mindset in Mendix](https://www.youtube.com/watch?v=hpJp-tAUn-g)
 
 ## 2 Documents in This Category

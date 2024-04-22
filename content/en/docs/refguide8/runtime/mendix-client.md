@@ -33,7 +33,7 @@ A **Hybrid application**, for most purposes, can be treated as an app running in
 
 Below is a chart showing the components of the Mendix Client. Each of the components is described below the chart.
 
-{{< figure src="/attachments/refguide8/runtime/mendix-client/mendix-client.png" alt="The makeup of the Mendix Client" >}}
+{{< figure src="/attachments/refguide8/runtime/mendix-client/mendix-client.png" alt="The makeup of the Mendix Client" class="no-border" >}}
 
 ### 2.1 Client Core
 
@@ -185,7 +185,7 @@ When the end-user launches an app in the browser, it triggers the following flow
 
 #### 4.1.2 Location of Mendix Client Resources
 
-When the app is deployed, the static resources are placed in a structure referred to as the CDN. This includes the following:
+When the app is deployed, the static resources are placed in a separate structure. This includes the following:
 
 * index.html – the initial HTML page which is loaded when the end-user starts the Mendix Client — this contains the client configuration and other static non-Mendix content (for example if Google analytics is added to the app)
 * mxui.js – the main Mendix Client code

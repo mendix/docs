@@ -37,7 +37,7 @@ Mendix Studio Pro needs to be installed on your computer before you can start bu
 
 1. Open the downloaded Mendix Studio Pro executable. It is named like this: *Mendix-10.X.X-Setup*. Then click **Next**:
 
-    {{< figure src="/attachments/refguide/installation/install/setup-wizard.png"  >}}
+    {{< figure src="/attachments/refguide/installation/install/setup-wizard.png"  class="no-border" >}}
 
      On a Mac, you may get a warning during installation. For more information on how to troubleshoot it, see the [Mac Warning](#mac-warning) section below.
 
@@ -45,11 +45,11 @@ Mendix Studio Pro needs to be installed on your computer before you can start bu
 
 3. Select the folder in which you want to install Studio Pro and click **Next**:
 
-    {{< figure src="/attachments/refguide/installation/install/select-folder.png"   >}}
+    {{< figure src="/attachments/refguide/installation/install/select-folder.png"   class="no-border" >}}
 
 4. Enter the start menu shortcuts folder you want to use and click **Next**:
 
-    {{< figure src="/attachments/refguide/installation/install/shortcut-folder.png"  >}}
+    {{< figure src="/attachments/refguide/installation/install/shortcut-folder.png"  class="no-border" >}}
 
 5. Check the desktop option to create a shortcut to Studio Pro on your desktop and click **Next**.
 6. Click **Install** to install Studio Pro on your computer.
@@ -85,7 +85,7 @@ After that you can retry installing Studio Pro.
 
 On a Mac, you may get the following warning during installation:
 
-{{< figure src="/attachments/refguide/installation/install/warning-mac.png"  >}}
+{{< figure src="/attachments/refguide/installation/install/warning-mac.png"  class="no-border" >}}
 
 To bypass it, right-click the installer, click **Open** and run the installer.
 
@@ -110,7 +110,7 @@ It is possible to prepare the prerequisite installers beforehand, so that the Me
 
 6. Run the installer as described in the [Installing Mendix Studio Pro](#install) section above.
 
-If the **AdoptOpenJDK 11 x64 failed; code 1639** error occurs during installation, try the following:
+If an error occurs during JDK installation, try the following:
 
 * Abort the installation process
 * Install the Adopt Open JDK dependency manually from the dependencies folder using Administrator privileges
@@ -130,7 +130,7 @@ The portable installer does not include all tools that come installed with Studi
 
 Mendix Studio Pro that is installed via the portable installer does not show up in the in the Mendix Version Selector where you can manage Mendix versions. However, you can manually add a Studio Pro version by clicking on the **Add custom version** button in the **Manage Mendix versions** and specifying the path to the executable file of the Studio Pro version:
 
-{{< figure src="/attachments/refguide/installation/install/version-selector.png"  alt="Version Selector" width="450">}}
+{{< figure src="/attachments/refguide/installation/install/version-selector.png"  alt="Version Selector" width="450" class="no-border" >}}
 
 ## 7 Signing In
 
@@ -140,7 +140,7 @@ You can sign in with your Mendix account, or with your own company account if th
 
 In some situations, for example, when your network has a firewall or proxy server, a warning about an untrusted certificate may appear during the sign-in process:
 
-{{< figure src="/attachments/refguide/installation/install/untrusted-certificate.png" width="600px" >}}
+{{< figure src="/attachments/refguide/installation/install/untrusted-certificate.png" width="600px" class="no-border" >}}
 
 To continue, you may accept the certificate for the current session by clicking the **Accept for this session** button, or install it permanently by clicking the **View certificate information** button. 
 

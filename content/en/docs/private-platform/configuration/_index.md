@@ -36,13 +36,13 @@ Changing your locale sets locale-dependent formats, such as date and time, to th
 
 The settings in this section allow you to configure custom branding for your Private Mendix Platform. You can customize the title of the Platform as shown in the top bar, upload your logo, or change the image on the login page.
 
-{{< figure src="/attachments/private-platform/pmp-wizard1.png" >}}
+{{< figure src="/attachments/private-platform/pmp-wizard1.png" class="no-border" >}}
 
 ### 2.3 Support
 
 In this section, you can provide your own help and support instructions for users of your Private Mendix Platform.
 
-{{< figure src="/attachments/private-platform/pmp-wizard1.png" >}}
+{{< figure src="/attachments/private-platform/pmp-wizard1.png" class="no-border" >}}
 
 Users can then see these instructions on the **Logs and Events** page for their app.
 
@@ -78,7 +78,7 @@ On this page, you can view the status of your Private Mendix Platform license, a
 
 Private Mendix Platform licenses are either **valid** or **not found**; when not found, the Platform operates in developer mode, where access to some features and capabilities is restricted.
 
-{{< figure src="/attachments/private-platform/pmp-wizard2.png" >}}
+{{< figure src="/attachments/private-platform/pmp-wizard2.png" class="no-border" >}}
 
 When valid, licenses can have the following statuses:
 
@@ -94,7 +94,7 @@ Email settings allow you to manage your the SMTP server settings used by Private
 
 In this tab, you can create and manage the templates for any standard notification emails that you want your app to send, such as automated reports, assigned tasks, or others. Templates created here can then be referenced in microflows.
 
-{{< figure src="/attachments/private-platform/pmp-wizard3.png" >}}
+{{< figure src="/attachments/private-platform/pmp-wizard3.png" class="no-border" >}}
 
 ### 3.2 Emails
 
@@ -109,7 +109,7 @@ In this tab, you can view the following details about the emails sent from your 
 
 In this tab, you can configure SMTP server settings for your email account.
 
-{{< figure src="/attachments/private-platform/pmp-wizard4.png" >}}
+{{< figure src="/attachments/private-platform/pmp-wizard4.png" class="no-border" >}}
 
 ### 3.4 Administrative Tasks
 
@@ -169,19 +169,19 @@ In this section, you can configure settings related to managing your app project
 
 ### 7.1 Version Control System
 
-To create applications and collaborate, configure the connection to your version control repository. GitHub, Gitlab and Bitbucket are supported as version control systems. For more information, see [Configuring the Version Control System for Private Mendix Platform](/private-mendix-platform-version-control/).
+To create applications and collaborate, configure the connection to your version control repository. GitHub, GitLab, and Bitbucket are supported as version control systems. For more information, see [Configuring the Version Control System for Private Mendix Platform](/private-mendix-platform-version-control/).
 
 ### 7.2 CI/CD
 
 Configure CI/CD capabilities for your app. If you enable this option, you must also specify your CI system, configure the necessary settings, and register a Kubernetes cluster. Tekton, Jenkins, and [Kubernetes](/private-mendix-platform-configure-k8s/) are supported. You can also configure a custom template for your CI/CD capabilities.
 
-{{< figure src="/attachments/private-platform/pmp-wizard5.png" >}}
+{{< figure src="/attachments/private-platform/pmp-wizard5.png" class="no-border" >}}
 
 #### 7.2.1 Configuring CI/CD Pipelines with Manual Approval
 
 If your production and development environments must be fully air-gapped and separated from each other, and you want to limit the ability to deploy packages to either selected users or an automated pipeline with manual approval, you can configure your cluster type to be **Upload MDA**.
 
-{{< figure src="/attachments/private-platform/pmp-wizard7.png" >}}
+{{< figure src="/attachments/private-platform/pmp-wizard7.png" class="no-border" >}}
 
 Selecting this option allows you to specify an S3 bucket. This bucket is then used as the destination where the deployment package is uploaded at the end of the pipeline, instead of being deployed to the production environment. Designated approvers can then retrieve the package from the S3 bucket and manually deploy it to the target environment.
 
@@ -228,4 +228,4 @@ To help ensure that any issues are promptly reported and resolved, you can speci
 
 This tab shows a list of all the scheduled tasks and actions in the system, together with start time, end time, and status.
 
-{{< figure src="/attachments/private-platform/pmp-wizard6.png" >}}
+{{< figure src="/attachments/private-platform/pmp-wizard6.png" class="no-border" >}}

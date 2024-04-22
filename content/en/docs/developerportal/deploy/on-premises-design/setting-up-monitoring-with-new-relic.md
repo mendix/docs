@@ -29,7 +29,7 @@ The configuration section in *m2ee.yaml* should look like this:
 
 ```yml
  javaopts: [
- "-Dfile.encoding=UTF-8", "-XX:MaxPermSize=64M", "-Xmx256M", "-Xms256M",
+ "-Dfile.encoding=UTF-8", "-Xmx256M", "-Xms256M",
  "-Djava.io.tmpdir=/path/to/project/data/tmp",
  "-javaagent:/home/mendix-user/newrelic/newrelic.jar",
  ]
@@ -39,7 +39,7 @@ The configuration section in *m2ee.yaml* should look like this:
 
 Add `-javaagent:/PATH/TO/NEWRELIC.JAR` to your Java arguments in the Windows Service Console:
 
-{{< figure src="/attachments/developerportal/deploy/on-premises-design/setting-up-monitoring-with-new-relic/18580677.png" >}}
+{{< figure src="/attachments/developerportal/deploy/on-premises-design/setting-up-monitoring-with-new-relic/18580677.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 After you restart the application, your data should show up in New Relic. This requires the application to send data to New Relic servers, so your firewalls should be configured to allow for this traffic.

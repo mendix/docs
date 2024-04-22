@@ -14,6 +14,8 @@ Backup snapshots for apps running in Mendix Cloud are automatically created ever
 
 Backup snapshots contain both the database and file documents referred to in the database.
 
+{{% alert color="info" %}}This page describes backups for apps deployed to Mendix Cloud. If your app is deployed to SAP Business Technology Platform (SAP BTP) instead, the **Backups** page links to the SAP BTP cockpit.{{% /alert %}}
+
 ## 2 Creation and Retention Schedules
 
 Backups are created and retained as follows:
@@ -27,7 +29,7 @@ Backups are created and retained as follows:
 
 Each backup is automatically deleted when its retention period is over, but you can always manually delete it before then. By default, backups are retained for exactly the specified period; for example, a weekly backup created at 3:18 on December 3 expires at 3:18 on March 3. If you want to keep a backup for longer than scheduled, you can download the backup to your computer.
 
-{{% alert color="info" %}}Backups are only created when the app is deployed and running.{{% /alert %}}
+{{% alert color="info" %}}Automatic backups are only created when the app is deployed and running.{{% /alert %}}
 
 ### 2.1 Nightly Backups{#nightly-backups}
 
@@ -38,7 +40,7 @@ The **Estimated Duration** indicates the period during which backups are expecte
 | Region      | Replication Region | Start Time (UTC) | Local Time | Estimated Duration |
 | ----------- | ------------------ | ---------------- | ---------- | ------------------ |
 | Bahrain     | Mumbai             | 03:00            | 06:00      | 1 hour             |
-| Canada      | Oregon             | 05:00            | 00:00      | 1 hour             |
+| Canada      | Canada West        | 05:00            | 00:00      | 1 hour             |
 | Cape Town   | Frankfurt          | 02:00            | 04:00      | 1 hour             |
 | Dublin      | Frankfurt          | 23:00            | 00:00      | 3 hours            |
 | Frankfurt   | Dublin             | 00:00            | 01:00      | 3 hours            |
@@ -67,7 +69,7 @@ The monthly backup occurs on the first Sunday of the month. If the first nightly
 
 The **Backups** page presents options for managing your backups. These are described below.
 
-{{< figure src="/attachments/developerportal/operate/backups/backup-controls.png" alt="" >}}
+{{< figure src="/attachments/developerportal/operate/backups/backup-controls.png" alt="" class="no-border" >}}
 
 ### 3.1 Create Backup
 
@@ -133,7 +135,7 @@ You can view details of a backup by clicking **More Options** ({{% icon name="th
 | **Snapshot Size Uncompressed (MB)** | The size of database dump and files of the snapshot in MB                                     |
 | **Comment**                         | A comment added to the backup                                                                 |
 
-{{< figure src="/attachments/developerportal/operate/backups/backup-details.png" alt="Backup Details" max-width=60% >}}
+{{< figure src="/attachments/developerportal/operate/backups/backup-details.png" alt="Backup Details" max-width=60% class="no-border" >}}
 
 ## 4 Limitations
 

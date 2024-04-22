@@ -34,7 +34,7 @@ All the widgets in this package (except for [EventTrackerButton](#eventtrackerbu
 * **Labe** – an optional string to provide additional dimensions to the event data
 * **Value** – an integer you can use to provide numerical data about the user event
 
-For more information, see [Event Tracking - Web Tracking (ga.js)](http://code.google.com/apis/analytics/docs/tracking/eventTrackerGuide.html).
+For more information, see [Event Tracking - Web Tracking (ga.js)](https://code.google.com/apis/analytics/docs/tracking/eventTrackerGuide.html).
 
 ### 3.2 EventTrackerButton {#eventtrackerbutton}
 

@@ -44,7 +44,7 @@ To add a new environment for your app, click the name of an app, and then click 
 
 To offboard an environment, click **Offboard**, which is available for stopped environments. After that, confirm that you have made any necessary backups, and type *Offboard* to confirm.
 
-{{< figure src="/attachments/control-center/deployed-apps/offboarding.png" width= 50% alt="confirming the offboarding" >}}
+{{< figure src="/attachments/control-center/deployed-apps/offboarding.png" width= 50% alt="confirming the offboarding" class="no-border" >}}
 
 {{% alert color="warning" %}}
 Offboarding an environment deletes it permanently. You are responsible for making a backup of the environment in case you need it in the future.

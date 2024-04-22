@@ -380,7 +380,9 @@ If you are using a [hybrid mobile](/refguide9/mobile/introduction-to-mobile-tech
 
 #### 4.3.4 ⚠ Enable Delegated Authentication {#delegated-auth}
 
-⚠ This feature is deprecated.
+{{% alert color="warning" %}}
+This feature is deprecated.
+{{% /alert %}}
 
 When you use the SAML SSO module in your app, your app will typically be a front-end app that redirects the user to their IdP via the browser for login.
 Using SAML protocols to secure the APIs of your back-end app is more challenging. We advise you to use OAuth access tokens by installing the [OIDC SSO](https://marketplace.mendix.com/link/component/120371) module instead of the SAML module. This is a common, and a best, practice.
@@ -621,7 +623,7 @@ If it is not an option to have the IdP and the app in the same domain, set the v
 
 The following diagram gives an overview of all endpoints that the SAML SSO module exposes and consumes:
 
-{{< figure src="/attachments/appstore/modules/saml/saml-endpoints.png">}}
+{{< figure src="/attachments/appstore/modules/saml/saml-endpoints.png" class="no-border" >}}
 
 End-users can access your app through the following endpoints when using the SAML SSO module:
 

@@ -36,8 +36,9 @@ For a step-by-step guide for setting up and operating your Industrial Edge envir
 
 The following documents give more information on Industrial Edge operations:
 
+* [Build Your Industrial Edge App](https://academy.mendix.com/link/paths/152/Build-Your-Industrial-Edge-App)
 * [Industrial Edge Homepage](https://www.siemens.com/global/en/products/automation/topic-areas/industrial-edge.html)
 * [Industrial Edge Documentation](https://docs.eu1.edge.siemens.cloud/index.html)
 * [Industrial Edge Marketplace](https://www.dex.siemens.com/?selected=edge)
 * [Mendix on Edge Device License](https://www.dex.siemens.com/edge/get-started/mendix-device-license)
-* [Industrial Edge space on the Mendix Forum](https://forum.mendix.com/link/space/industrial-edge)
+* [Industrial Edge space in the Mendix Community](https://community.mendix.com/link/space/industrial-edge)

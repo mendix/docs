@@ -13,12 +13,27 @@ To see the current status of the Mendix Control Center, see [Mendix Status](http
 
 ## 2024
 
+### April 4, 2024
+
+#### New Features
+
+* We have introduced a [Marketplace content curation feature](/control-center/marketplace-curation/) for public Marketplace components. If your organization has established governance policies and guidelines for using Marketplace components, you can now translate them to curation settings.  Components that meet these requirements will get a <text class="badge badge-pill badge-recommended" style="margin-left:0px">RECOMMENDED</text> label.
+
+#### Improvements
+
+*  We have improved the [Apps](/control-center/apps/) page as follows:
+    * We have implemented column-based filters that empower you to do complex filtering operations.
+    * We have made it easier for you to copy the application name, the app id, and the environment name.
+
+
 ### February 8, 2024
 
 #### Improvements
+
 * We added the [Roles & Permissions](/control-center/roles-and-permissions/) page to Control Center.
 
 #### Deprecations
+
 * We removed the **Default App Roles** tab in the [Apps](/control-center/apps/) page in Control Center.
 
 ### January 22, 2024

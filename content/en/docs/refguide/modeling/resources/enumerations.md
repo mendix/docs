@@ -35,7 +35,7 @@ An enumeration has the following properties:
 
 The following properties are only available when the enumeration is an external enumeration that is part of a [consumed Odata service](/refguide/consumed-odata-service/):
 
-* **From service** - This property shows the source of the enumeration and allows you to **Detach** the enumeration from the source. 
+* **From service** - This property shows the source of the enumeration and allows you to **Detach** the enumeration from the source if the source has been deleted. 
 * **Original name** - The original name of the enumeration from the source.
 
 ### 2.1 Enumeration Value Properties {#enum-value-properties}
@@ -148,7 +148,7 @@ To create a new enumeration, do the following:
 
     1. Fill out **Name** and **Caption** for an enumeration value. You can set **Image** for it if necessary. For more information on enumeration properties, see the [Enumeration Properties](#enum-properties) section. <br />
 
-        {{< figure src="/attachments/refguide/modeling/resources/enumerations/add-enum-value.png" >}}
+        {{< figure src="/attachments/refguide/modeling/resources/enumerations/add-enum-value.png" class="no-border" >}}
 
     1. Click **OK** to save the enumeration value.
 

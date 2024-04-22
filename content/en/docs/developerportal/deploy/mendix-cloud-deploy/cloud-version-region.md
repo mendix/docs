@@ -20,17 +20,17 @@ This information is only available if you have a licensed app running in Mendix 
 
 To view the Mendix Cloud region in which your app is hosted, follow these steps:
 
-1. Go to the [Developer Portal](http://sprintr.home.mendix.com).
+1. Go to the [Developer Portal](https://sprintr.home.mendix.com).
 
 2. Open the **Environments** page for your app.
 
 3. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the desired environment.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/cloud-version-region/environment-details.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/cloud-version-region/environment-details.png" class="no-border" >}}
 
 4. Scroll down to the **Region** row to see the region of the data center where your app is hosted.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/cloud-version-region/region-row.png" alt="" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/cloud-version-region/region-row.png" alt="" class="no-border" >}}
 
 ## 3 Read More
 

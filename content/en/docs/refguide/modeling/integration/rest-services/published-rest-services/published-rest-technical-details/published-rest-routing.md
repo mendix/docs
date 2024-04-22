@@ -8,7 +8,7 @@ tags: ["flow chart", "processing", "security", "service", "resource", "operation
 
 ## 1 Introduction
 
-When a REST HTTP request arrives at the server, the server needs to determine which [operation](/refguide/published-rest-operation/) to execute and what security to apply.
+When a REST HTTP request arrives at the server, the server needs to determine which [operation](/refguide/published-rest-operation/) to run and what security to apply.
 
 This flow chart shows an example request, how this will be processed, and what will be returned by the service under different circumstances.
 
@@ -26,4 +26,4 @@ Consult this flow chart to answer questions like:
 
 The example request is `GET /rest/petstore/pet/12`.
 
-{{< figure src="/attachments/refguide/modeling/integration/published-rest-services/published-rest-technical-details/published-rest-routing/determine-operation.png" >}}
+{{< figure src="/attachments/refguide/modeling/integration/published-rest-services/published-rest-technical-details/published-rest-routing/determine-operation.png" class="no-border" >}}

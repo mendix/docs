@@ -4,7 +4,7 @@ url: /apidocs-mxsdk/apidocs/private-cloud-build-api/
 type: swagger
 category: "API Documentation"
 description: "This API allows you to manage deployment packages which can later be used in the environments deployed in your private cloud."
-weight: 55
+weight: 70
 ---
 
 {{% alert color="info" %}}
@@ -60,7 +60,7 @@ Store the `{GENERATED_PAT}` in a safe location, so you can use it to authorize y
 
 Each request must contain an `Authorization` header with the value `MxToken {GENERATED_PAT}`.
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/private-cloud-deploy-api/authorization-header.png" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/private-cloud-deploy-api/authorization-header.png" class="no-border" >}}
 
 To authenticate calls when using the Open API specification below, click **Authorize** and use the value `MxToken {GENERATED_PAT}`.
 

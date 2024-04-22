@@ -11,9 +11,9 @@ tags: ["Authenticator","Developer Portal","Cloud","Permissions", "Google", "Micr
 
 Mendix Cloud provides two-factor authentication (2FA) to help secure your account. 2FA requires you to identify yourself using your password as well as a second authentication mechanism.
 
-This extra layer of authentication is required when you perform sensitive activities on Mendix Cloud nodes, such as deploying packages and handling production data. Actions that require 2FA are indicated by a padlock ({{% icon name="lock" %}}) in the [Developer Portal](http://sprintr.home.mendix.com). For example, switching to the production environment requires 2FA.
+This extra layer of authentication is required when you perform sensitive activities on Mendix Cloud nodes, such as deploying packages and handling production data. Actions that require 2FA are indicated by a padlock ({{% icon name="lock" %}}) in the [Developer Portal](https://sprintr.home.mendix.com). For example, switching to the production environment requires 2FA.
 
-{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/production.png" max-width=30% alt="" >}}
+{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/production.png" max-width=30% alt="" class="no-border" >}}
 
 To use 2FA, you need to have access to your mobile phone and an active session in the Mendix Developer Portal.
 
@@ -52,11 +52,11 @@ To set up 2FA with SMS, follow this process:
 
 Once you have 2FA configured to use SMS, you can use it to complete sensitive operations in the Developer Portal. When you perform an operation that requires 2FA, you can send an authentication code to your mobile phone.
 
-{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/authentication-sms.png" max-width=70%  alt="" >}}
+{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/authentication-sms.png" max-width=70%  alt="" class="no-border" >}}
 
 Then, authenticate yourself by entering the authentication code from the text message.
 
-{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/please-authenticate.png" max-width=70% alt="" >}}
+{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/please-authenticate.png" max-width=70% alt="" class="no-border" >}}
 
 ### 2.2 Authenticating with an Authenticator App{#app-authentication}
 

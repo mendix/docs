@@ -24,12 +24,13 @@ Mendix apps currently support the following secret stores:
 
 * AWS Secrets Manager
 * HashiCorp Vault
+* Azure Key Vault
 
 ## 2 Configuring Your Environment
 
 To implement an external secret store, you must configure the required settings by following these steps:
 
-1. Set up and configure the secret storage provider, for example, HashiCorp Vault, or AWS Secret Manager.
+1. Set up and configure the secret storage provider, for example, HashiCorp Vault, AWS Secret Manager or Azure Key Vault.
     In most cases, this should only be done once for the entire cluster. For more information and support, contact the secret storage provider.
 2. Install and configure a [Kubernetes Secrets Store CSI driver](https://secrets-store-csi-driver.sigs.k8s.io/#supported-providers), for example, [AWS Secrets Manager CSI Secrets Store](https://github.com/aws/secrets-store-csi-driver-provider-aws).
     This driver is installed globally for the entire cluster. For more information, refer to documentation supplied by the secret storage provider.
@@ -66,6 +67,7 @@ The following table lists the properties used as keys for database and storage-r
 | Use configured CA trust for file storage | `storage-use-ca-certificates` | `true` |  |
 | Delete files from storage when deleted in the app | `storage-perform-delete` | `true` |  |
 | Mendix Admin Password | `mx-admin-password` | `Welc0me!` |  |
+| Mendix Debugger Password | `mx-debugger-password` | `Welc0me!` |  |
 | App constant `{name}` | `mx-const-{name}` | `mx-const-MyFirstModule.WelcomePageTitle` |  |
 | Runtime custom setting `{name}` | `mx-runtime-{name}` | `mx-runtime-com.mendix.storage.s3.EncryptionKeys` |  |
 
@@ -104,6 +106,10 @@ To use Azure Blob Storage (keys with the `storage-azure-` prefix), upgrade to Me
 
 {{% alert color="info" %}}
 To load app constants (`mx-const-*` keys) and Mendix Runtime custom settings (`mx-runtime-*`) from CSI Secrets Storage, upgrade to Mendix Operator version 2.10.0 or above.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+To load Mendix Debugger password (`mx-debugger-password`) from CSI Secrets Storage, upgrade to Mendix Operator version 2.15.0 or above.
 {{% /alert %}}
 
 ## 3 Sample Implementations
@@ -161,7 +167,7 @@ To enable your environment to use Vault as external secret storage, follow these
 9. Create an app environment configuration secret in Vault, as shown in the following example. Replace `<{env-configuration-secret}>` with a unique name, and set any additional parameters:
 
     ```shell
-    vault kv put secret/<{env-configuration-secret}> mx-admin-password="Welc0me!"
+    vault kv put secret/<{env-configuration-secret}> mx-admin-password="Welc0me!" mx-debugger-password="Welc0me!"
     ```
 
 10. Create the required Vault role, as shown in the following example. Replace `<{env-policy}>` with a unique name to identify the app environment, and update any paths to match the secrets you created in the previous steps:
@@ -253,11 +259,14 @@ To enable your environment to use Vault as external secret storage, follow these
           - secretKey: "mx-admin-password"
             objectName: "mx-admin-password"
             secretPath: "secret/data/<{env-configuration-secret}>"
-          # Example: use MyFirstModule.MyConstant constant value from AWS Secrets Manager
-          #- secretKey: "MyFirstModule.MyConstant"
+          - secretKey: "mx-debugger-password"
+            objectName: "mx-debugger-password"
+            secretPath: "secret/data/<{env-configuration-secret}>"
+          # Example: use MyFirstModule.MyConstant constant value from HashiCorp Vault
+          #- secretKey: "mx-const-MyFirstModule.MyConstant"
           #  objectName: "mx-const-MyFirstModule.MyConstant"
           #  secretPath: "secret/data/<{env-configuration-secret}>"
-          # Example: use com.mendix.storage.s3.EncryptionKeys custom setting from AWS Secrets Manager
+          # Example: use com.mendix.storage.s3.EncryptionKeys custom setting from HashiCorp Vault
           #- secretKey: "com.mendix.storage.s3.EncryptionKeys"
           #  objectName: "mx-runtime-com.mendix.storage.s3.EncryptionKeys"
           #  secretPath: "secret/data/<{env-configuration-secret}>"
@@ -332,7 +341,7 @@ To enable your environment to use [AWS Secrets Manager](https://aws.amazon.com/b
 
     1. Open the role for editing and add an entry for the ServiceAccount (or ServiceAccounts) to the list of conditions:
 
-        {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/awsserviceaccountlinktorole.png" >}}
+        {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/awsserviceaccountlinktorole.png" class="no-border" >}}
 
     2. For the second condition, copy and paste the `sts.amazonaws.com` line; replace `:aud` with `:sub` and set it to `system:serviceaccount:<Kubernetes namespace>:<Kubernetes serviceaccount name>`.
 
@@ -426,8 +435,10 @@ To enable your environment to use [AWS Secrets Manager](https://aws.amazon.com/b
               objectAlias: "storage-use-ca-certificates"
             - path: '"mx-admin-password"'
               objectAlias: "mx-admin-password"
+            - path: '"mx-debugger-password"'
+              objectAlias: "mx-debugger-password"
             # Example: use MyFirstModule.MyConstant constant value from AWS Secrets Manager
-            #- path: '"MyFirstModule.MyConstant"'
+            #- path: '"mx-const-MyFirstModule.MyConstant"'
             #  objectAlias: "mx-const-MyFirstModule.MyConstant"
             # Example: use com.mendix.storage.s3.EncryptionKeys custom setting from AWS Secrets Manager
             #- path: '"com.mendix.storage.s3.EncryptionKeys"'
@@ -461,7 +472,7 @@ If your app is created in Mendix 9.20 or above, you can remove `storage-access-k
 
 This means that the app authenticates with the AWS S3 API using AWS IRSA instead of static credentials.
 
-### 3.3 Using IAM authentication for AWS RDS databases {#configure-using-rds-iam}
+#### 3.2.1 Using IAM authentication for AWS RDS databases {#configure-using-rds-iam}
 
 AWS RDS Postgres databases can use [IAM database authentication](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html) instead of regular passwords.
 
@@ -510,7 +521,174 @@ After completing the prerequisites, follow these steps to switch from password-b
 When using IAM authentication, the Mendix app's environment (`m2ee-sidecar` container) uses that app's attached IAM role to request a new Postgres password every 10 minutes from the [RDS API](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.Connecting.Go.html). These passwords expire after 15 minutes.
 Passwords are only checked when opening a new connection, so an expired password does not cancel any existing connections or interrupt any running database transactions and queries.
 
-## 4 Additional considerations {#additional-considerations}
+### 3.3 Configuring a Secret Store with Azure Key Vault {#configure-using-azure-key-vault}
+
+To enable your environment to use [Azure Key Vault](https://learn.microsoft.com/en-us/azure/aks/csi-secrets-store-driver) as external secret storage, follow these steps:
+
+1. Enable managed identities for your AKS cluster as [described in the Azure documentation](https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster#update-an-existing-aks-cluster). This only need to be done once per cluster.
+
+    Ensure that you have the [Cluster OIDC Issuer URL](https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster#update-an-existing-aks-cluster). You will need the URL to complete the configuration.
+
+2. Install and enable the Key Vault CSI driver by doing the following steps:
+   
+    1. Open the AKS cluster configuration.
+    2. Select the **Enable secret store CSI driver** option.
+    3. Press **Apply**:
+
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-vault/aks-enable-csi-driver.png" class="image-border" >}}
+
+3. Create a new Azure Key vault by using the Azure CLI or [Azure Portal](https://learn.microsoft.com/en-us/azure/key-vault/general/quick-create-portal).
+
+    You can leave the **Access configuration** as default (**Azure RBAC** and no additional **Resource access**).
+
+{{% alert color="info" %}}This walkthrough uses the default network settings (allow all access). Your organization might have additional instructions or policies that can be used to restrict public access to Key vaults.{{% /alert %}}
+
+4. Write down the name of the new Key vault and its **Directory ID** (Azure Tenant ID).
+
+5. To create, edit or view secrets in Key vault, go to the **Access control (IAM)** tab, press **Add role assignment**, and follow the wizard to assign the **Key Vault Administrator** role to your user.
+
+6. Go to the **Secrets** tab, and for every key listed in the [SecretProviderClass Keys](#keys) section above, use the **Generate/Import** button to create a new key.
+
+    After creating the keys, your Key vault should look like this:
+
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-vault/aks-keyvault-keys.png" class="image-border" >}}
+
+7. Create an app with the secret store enabled. If you are using connected mode, secret stores are enabled automatically if the **Enable Secrets Store** option is activated for the namespace where you create the app. For a standalone app, you must set the value of the setting `allowOverrideSecretsWithSecretStoreCSIDriver` to `true` in the Mendix app CRD.
+
+    The following yaml shows an example Mendix app CRD:
+
+    ```yaml
+    cat > mendixApp.yaml <<EOF
+    apiVersion: privatecloud.mendix.com/v1alpha1
+    kind: MendixApp
+    metadata:
+      name: <{Mendix App CR name}>
+    spec:
+      mendixRuntimeVersion: 9.4.0.24572
+      allowOverrideSecretsWithSecretStoreCSIDriver: true
+      replicas: 1
+      resources:
+        limits:
+          cpu: "1"
+          memory: 512Mi
+        requests:
+          cpu: 100m
+          memory: 512Mi
+      runtime:
+        customConfiguration: '{"ScheduledEventExecution":"NONE","MicroflowConstants":"{\"MyFirstModule.MyConstant\":\"Awesome\",\"RestClient.RestServiceUrl\":\"https://go-dummy-app.privatecloud-storage-tls.svc.cluster.local\",\"Atlas_Core.Atlas_Core_Version\":\"3.0.5\"}"}'
+        dtapMode: D
+        logAutosubscribeLevel: INFO
+        runtimeLicense: {}
+      runtimeMetricsConfiguration: {}
+      sourceURL: oci-image://<{image URL}>
+      sourceVersion: 0.0.0.87
+    EOF
+    ```
+
+8. Create a **Managed identity** for your app environment by using the [az identity create](https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster#create-a-managed-identity) CLI command, or the [Create User Assigned Managed Identity](https://learn.microsoft.com/en-us/entra/identity/managed-identities-azure-resources/how-manage-user-assigned-managed-identities?pivots=identity-mi-methods-azp#create-a-user-assigned-managed-identity) wizard.
+
+    Ensure that you have the **Client ID** of this **Managed identity**. You will need the ID to complete the configuration.
+
+9. Add a **Federated Credential** to the **Managed identity** from the previous step by using the [az identity federated-credential create](https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster#establish-federated-identity-credential) command, or by going to the **Federated credentials** tab and using the **Add Credential** wizard. This will allow the Mendix app environment to be associated with this **Managed identity**.
+    
+10. Fill in the following details:
+
+      * **Federated credential scenario** - Kubernetes accessing Azure resources
+      * **Cluster Issuer URL** - the Cluster OIDC URL from step 1
+      * **Namespace** - the Kubernetes namespace where the app environment is running
+      * **Service Account** - `MendixApp` CR name (environment internal name)
+      * **Name** - any value
+
+11. Create a Kubernetes `ServiceAccount` for your environment, using the **Client ID** from step 8 as the value for **{managed identity client id}**:
+
+    ```shell
+    kubectl -n <{Kubernetes namespace}> create serviceaccount <{environment name}>
+    kubectl -n <{Kubernetes namespace}> annotate serviceaccount <{environment name}> privatecloud.mendix.com/environment-account=true
+    kubectl -n <{Kubernetes namespace}> annotate serviceaccount <{environment name}> azure.workload.identity/client-id=<{managed identity client id}>
+    ```
+
+12. To allow the app environment to access contents of the Key vault, open the Key vault created in step 3, go to the **Access control (IAM)** tab and press **Add role assignment**.
+    
+13. Follow the wizard to assign the **Key Vault Secrets User** role to the **Managed identity** created in step 8.
+
+14. Attach the secret to the environment by applying the following Kubernetes yaml:
+
+    ```yaml
+    apiVersion: secrets-store.csi.x-k8s.io/v1
+    kind: SecretProviderClass
+    metadata:
+      name: <{MendixApp CR name}>
+      annotations:
+        privatecloud.mendix.com/environment-class: "true"
+    spec:
+      provider: azure
+      parameters:
+        keyvaultName: "<{The key vault name that you created in step 3 above}>"
+        clientID: "<{The Managed Identity Client ID copied in step 8 above}>"
+        tenantID: "<{The Tenant (Directory) ID copied in step 3 above}>"
+        objects: |
+          array:
+            - |
+              objectName: database-type
+              objectType: secret
+              objectAlias: database-type
+            - |
+              objectName: database-jdbc-url
+              objectType: secret
+              objectAlias: database-jdbc-url
+            - |
+              objectName: database-host
+              objectType: secret
+              objectAlias: database-host
+            - |
+              objectName: database-name
+              objectType: secret
+              objectAlias: database-name
+            - |
+              objectName: database-username
+              objectType: secret
+              objectAlias: database-username
+            - |
+              objectName: storage-service-name
+              objectType: secret
+              objectAlias: storage-service-name
+            - |
+              objectName: storage-azure-account-name
+              objectType: secret
+              objectAlias: storage-azure-account-name
+            - |
+              objectName: storage-azure-account-key
+              objectType: secret
+              objectAlias: storage-azure-account-key
+            - |
+              objectName: storage-azure-container
+              objectType: secret
+              objectAlias: storage-azure-container
+            - |
+              objectName: storage-perform-delete
+              objectType: secret
+              objectAlias: storage-perform-delete
+            - |
+              objectName: mx-admin-password
+              objectType: secret
+              objectAlias: mx-admin-password
+            # Example: use MyFirstModule.MyConstant constant value from Azure Key vault
+            #- |
+            #  objectName: mx-const-MyFirstModule-MyConstant
+            #  objectType: secret
+            #  objectAlias: "mx-const-MyFirstModule.MyConstant"
+            # Example: use com.mendix.storage.s3.EncryptionKeys custom setting from Azure Key vault
+            #- |
+            #  objectName: com-mendix-storage-s3-EncryptionKeys
+            #  objectType: secret
+            #  objectAlias: "mx-runtime-com.mendix.storage.s3.EncryptionKeys"
+    ```
+
+    In the above example, `objectName` specifies the secret name from the original Key vault, and `objectAlias` specifies how it will be named when mounted into the sidecar.
+
+For more information, see the [Azure Key Vault Provider](https://azure.github.io/secrets-store-csi-driver-provider-azure/docs/getting-started/usage/#create-your-own-secretproviderclass-object) example in the Azure Key Vault documentation.
+
+## 4 Additional Considerations {#additional-considerations}
 
 When implementing a secret store, keep in mind the following considerations:
 

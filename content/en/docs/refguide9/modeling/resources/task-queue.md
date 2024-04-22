@@ -168,7 +168,8 @@ The period for a graceful shutdown of queues can be configured as a [custom runt
 | Configuration option                       | Example value | Explanation                                                                             |
 |--------------------------------------------|---------------|-----------------------------------------------------------------------------------------|
 | `TaskQueue.ShutdownGracePeriod`            |          10000| Time in ms to wait for task to finish when shutting down.                               |
-| `com.mendix.core.ProcessedTasksCleanupAge` |       86400000| Time in ms after which `ProcessedQueueTask` are deleted automatically (no tasks are automatically deleted if this setting is not specified). <b/>*This setting was introduced in Mendix 9.9.0* |   
+| `com.mendix.core.ProcessedTasksCleanupAge` |       86400000| Time in ms after which `ProcessedQueueTask` are deleted automatically (no tasks are automatically deleted if this setting is not specified). <br />*This setting was introduced in Mendix 9.9.0* |
+| `com.mendix.core.ProcessedTasksCleanupBatchSize` |       10000| Specifies how many System.<wbr>ProcessedQueueTask objects will be removed from the database each time the ProcessedTask cleanup action runs. <br />*This setting was introduced in Mendix 9.24.17* |
 
 {{% alert color="info" %}}
 This grace period is applied twice during the [shutdown](#shutdown) (described below) so the maximum time that the runtime will wait for tasks to end is twice this value.
@@ -185,8 +186,7 @@ Tasks that have been processed, that is have completed or failed, are saved as o
 1. Verify that tasks have run successfully, or
 2. Debug the application in case of errors.
 
-`System.ProcessedQueueTasks` objects are by default never deleted. The user is free to delete them when desired.
-If you are using Mendix 9.9.0 or above, you can use the `com.mendix.core.ProcessedTasksCleanupAge` runtime setting if automatic cleanup is desired.
+See [Cleaning Up Old Processed Tasks](#cleanup) for details about the cleanup of `System.ProcessedQueueTask` objects in the database.
 
 ### 2.9 Execution Context {#context}
 
@@ -240,14 +240,14 @@ Interrupting task threads may cause them to fail. These tasks will be marked as 
 
 ### 2.13 Cleaning up old processed tasks {#cleanup}
 
-The execution of a task produces a `System.ProcessedQueueTask` row in the database. Over time these accumulate and the table can grow large.
+The execution of a task produces a `System.ProcessedQueueTask` object in the database. Over time these accumulate and the table can grow large.
 
-In Mendix 9.9 and above, the `System.ProcessedQueueTask` can be cleaned up automatically by specifying the `com.mendix.core.ProcessedTasksCleanupAge` runtime setting. This setting specifies (in milliseconds) how old rows in the table have to be before they are automatically cleaned up. Only rows with the "Completed" status are cleaned up.  The cleanup action will be run every [`ClusterManagerActionInterval`](/refguide9/custom-settings/#general), and does not produce any log messages.
+In Mendix 9.9 and above, the `System.ProcessedQueueTask` can be cleaned up automatically by specifying the `com.mendix.core.ProcessedTasksCleanupAge` runtime setting. This setting specifies (in milliseconds) how old objects in the table have to be before they are automatically cleaned up. Only objects with the "Completed" status are cleaned up.  The cleanup action will be run every [`ClusterManagerActionInterval`](/refguide9/custom-settings/#general), and does not produce any log messages. In Mendix version 9.24.17 and above, the cleanup action will remove a maximum of 10000 objects each time it runs. This can be configured with the [`com.mendix.core.ProcessedTasksCleanupBatchSize`](/refguide9/custom-settings/#commendixcoreProcessedTasksCleanupBatchSize) runtime setting. In versions below Mendix 9.24.17, the action will remove all matching objects.
 
 If `com.mendix.core.ProcessedTasksCleanupAge` is not specified, no cleanup is performed.
 
 {{% alert color="info" %}}
-When turning on the automatic cleanup after having used tasks for a long time, there might be many rows to clean up, which will be initiated when the runtime starts. This may cause additional load on the database, but will not block the startup. It is recommended not to do this during a busy period.
+When turning on the automatic cleanup after having used tasks for a long time, there might be many objects to clean up, which will be initiated when the runtime starts. This may cause additional load on the database, but will not block the startup. It is recommended not to do this during a busy period.
 {{% /alert %}}
 
 In versions of Mendix below 9.9.0, you can clean up old tasks by creating a microflow for administrators to use if the table gets too large.

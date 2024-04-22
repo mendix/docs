@@ -152,36 +152,30 @@ Browsers offer access to device features through APIs that can be leveraged in P
 
 This table lists the most used device features and APIs, and also documents their compatibility with common browsers:
 
-**Legend** — The symbols above correspond to the following definitions:
+**Legend** — The symbols below correspond to the following definitions:
 
-* Fully compatible:
+* Fully compatible: {{< icon name="checkmark-circle-filled" color="green" >}}
 
-    {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}}
+* Compatible only when using HTTPS protocol: {{< icon name="alert-triangle-filled" color="yellow" >}}
 
-* Compatible only when using HTTPS protocol:
-
-    {{< figure src="/attachments/refguide/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}}
-
-* Not compatible:
-
-    {{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}}
+* Not compatible: {{< icon name="remove-circle-filled" color="red" >}}
 
 | Feature | Chrome/Edge | Firefox | Safari |
 |---------|-----------|-------|------|
-| [Camera](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices) | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} |
-| [Payment](https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API) | {{< figure src="/attachments/refguide/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} |
-| [Credentials (Biometrics)](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/credentials) | {{< figure src="/attachments/refguide/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} |
-| [Push Notifications](https://developer.mozilla.org/en-US/docs/Web/API/Push_API) | {{< figure src="/attachments/refguide/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} |
-| [Permissions](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/permissions) | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} |
-| [Foreground Detection](https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API) | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} |
-| [Bluetooth](https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth) | {{< figure src="/attachments/refguide/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} |
-| [File Access](https://developer.mozilla.org/en-US/docs/Web/API/File) | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} |
-| [Geo Location](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/geolocation) | {{< figure src="/attachments/refguide/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} |
-| [Battery](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getBattery) | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} |
-| [Share](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share) | {{< figure src="/attachments/refguide/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/warning.svg" alt="Compatible when using HTTPS" >}} |
-| [Vibrate](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/vibrate) | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} |
-| [Memory](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/deviceMemory) | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} |
-| [Connection](https://developer.mozilla.org/en-US/docs/Web/API/NetworkInformation) | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/check-mark.svg" alt="Fully compatible" >}} | {{< figure src="/attachments/refguide/mobile/progressive-web-app/cross-mark.svg" alt="Not compatible" >}} |
+| [Camera](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices) | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="alert-triangle-filled" color="yellow" >}} |
+| [Payment](https://developer.mozilla.org/en-US/docs/Web/API/Payment_Request_API) | {{< icon name="alert-triangle-filled" color="yellow" >}} | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="alert-triangle-filled" color="yellow" >}} |
+| [Credentials (Biometrics)](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/credentials) | {{< icon name="alert-triangle-filled" color="yellow" >}} | {{< icon name="alert-triangle-filled" color="yellow" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
+| [Push Notifications](https://developer.mozilla.org/en-US/docs/Web/API/Push_API) | {{< icon name="alert-triangle-filled" color="yellow" >}} | {{< icon name="alert-triangle-filled" color="yellow" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
+| [Permissions](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/permissions) | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
+| [Foreground Detection](https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API) | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
+| [Bluetooth](https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth) | {{< icon name="alert-triangle-filled" color="yellow" >}} | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
+| [File Access](https://developer.mozilla.org/en-US/docs/Web/API/File) | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
+| [Geo Location](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/geolocation) | {{< icon name="alert-triangle-filled" color="yellow" >}} | {{< icon name="alert-triangle-filled" color="yellow" >}} | {{< icon name="alert-triangle-filled" color="yellow" >}} |
+| [Battery](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/getBattery) | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
+| [Share](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/share) | {{< icon name="alert-triangle-filled" color="yellow" >}} | {{< icon name="alert-triangle-filled" color="yellow" >}} | {{< icon name="alert-triangle-filled" color="yellow" >}} |
+| [Vibrate](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/vibrate) | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
+| [Memory](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/deviceMemory) | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
+| [Connection](https://developer.mozilla.org/en-US/docs/Web/API/NetworkInformation) | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
 
 For more information on browser support for certain device features, see the third-party website [Can I Use](https://caniuse.com/).
 

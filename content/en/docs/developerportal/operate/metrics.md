@@ -283,7 +283,7 @@ These are the values:
 
 ### 5.3 Database Transactions and Mutations{#Trends-dbpgstatdatabaseVERSIONmain}
 
-The **Database transactions and mutations** graph shows the number of database objects that were actually changed by database queries from the application. It is measured in operations per second.
+The **Database transactions and mutations** graph shows the number of database objects that were changed by database queries from the application. It is measured in operations per second.
 
 {{< figure src="/attachments/developerportal/operate/metrics/db-mutations.png" class="no-border" >}}
 
@@ -415,7 +415,7 @@ There are two sets of values:
 ### 5.11 Database IOPS Burst Balance {#Trends-dbmxdatabaseburstbalance}
 
 {{% alert color="info" %}}
-Burst balance metrics are not available for databases with the gp3 storage instance type. This applies to any databse with a storage size of 20 GiB or more. For details, see [Migration to gp3 Storage Instances](#gp3-migration), below.
+Burst balance metrics are not available for databases with the gp3 storage instance type. This applies to any database with a storage size of 20 GiB or more. For details, see [Migration to gp3 Storage Instances](#gp3-migration), below.
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -446,18 +446,18 @@ As of [March 26, 2024](/releasenotes/developer-portal/mendix-cloud/#march-26-202
 
 | Storage Size           | Storage Instance Type | Baseline Storage Performance | Provisioned IOPS Range | Provisioned Throughput Range |
 |------------------------|-----------------------|------------------------------|------------------------|------------------------------|
-| Less than 20 GiB       | gp2                   | 100 IOPS (3000 Burst) / 125 MiB/s | 100 - 1197 IOPS   | 128-250 MiB/s                |
-| Between 20 and 400 GiB | gp3                   | 3000 IOPS / 125 MiB/s        | N/A                    | N/A                          |
-| 400 GiB and higher     | gp3                   | 12000 IOPS / 500 MiB/s       | 12000 - 64000 IOPS     | 500 - 4000 MiB/s             |
+| Less than 20 GiB       | gp2                   | 100 IOPS (3000 burst) /<br>125 MiB/s | 100–1197 IOPS    | 128–250 MiB/s                |
+| Between 20 and 400 GiB | gp3                   | 3000 IOPS /<br>125 MiB/s       | N/A                    | N/A                          |
+| 400 GiB and higher     | gp3                   | 12000 IOPS /<br>500 MiB/s      | 12000–64000 IOPS       | 500–4000 MiB/s               |
 
 Compared to gp2, gp3 provides higher baseline storage performance and does not require any burst balance. For more information on gp2 and gp3 performance, see the [AWS gp3 storage](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#gp3-storage) page.
 
+{{% alert color="info" %}}
 For details on DB storage size for various plans, see [Cloud Resource Packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack).
+{{% /alert %}}
 
 ## 6 Read More
 
 * [Alerts](/developerportal/operate/monitoring-application-health/)
 * [Maintenance Windows](/developerportal/deploy/maintenance-windows/)
-* [How to Receive Environment Status Alerts](/developerportal/operate/receive-alerts/)
-* [Mendix Cloud Region](/developerportal/deploy/cloud-version-region/)
 * [About Mendix Cloud](/developerportal/deploy/mxcloudv4/)

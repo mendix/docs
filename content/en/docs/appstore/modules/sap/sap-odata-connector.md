@@ -18,7 +18,7 @@ aliases:
 The [OData Connector for SAP solutions](https://marketplace.mendix.com/link/component/74525) is an OData connector written specifically to integrate with SAP back-end systems like SAP Business Suite (SAP ERP 6.0), SAP S/4HANA, SAP S/4HANA Cloud, and SAP SuccessFactors. The OData Connector for SAP solutions can be used for all SAP back-end systems that have OData enabled, both in the cloud and on-premises. For ECC, SAP Gateway is used to expose the traditional BAPI interface as an OData service.
 
 {{% alert color="info" %}}
-The connector currently does not support execution from Task Queue.
+The connector currently does not support executing tasks from the SAP Task Queue.
 {{% /alert %}}
 
 ### 1.1 Typical Use Cases

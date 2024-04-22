@@ -126,7 +126,7 @@ WHERE
 
 ## 5 Subquery in HAVING
 
-A subquery can also be used in a `HAVING` clause similarly to how it is used in a `WHERE` clause. The difference is that only attributes and aggregates from the query can be referred to in the `HAVING` subquery.
+A subquery can also be used in a `HAVING` clause in a similar way to a `WHERE` clause. The difference is that only attributes and aggregates from the query can be referred to in the `HAVING` subquery.
 
 Example:
 

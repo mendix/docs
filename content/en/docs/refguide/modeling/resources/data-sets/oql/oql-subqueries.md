@@ -7,7 +7,7 @@ tags: ["oql", "studio pro"]
 
 ## 1 Description
 
-A subquery is a nested SELECT query inside a SELECT query. Subqueries can be used in a:
+A subquery is a nested SELECT query inside certain clauses of a SELECT query. Subqueries can be used in a:
 
 * `SELECT` clause
 * `FROM` clause

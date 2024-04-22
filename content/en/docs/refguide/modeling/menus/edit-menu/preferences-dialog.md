@@ -175,7 +175,7 @@ When [combining changes](/refguide/merge-algorithm/), for example when doing a G
 
 Enable this setting to truncate long lines.
 
-### 6.4 Solution warning
+### 6.4 Solution Warning
 
 Select **Show warning on updating marketplace modules** to display a warning message when updating a Marketplace module. 
 

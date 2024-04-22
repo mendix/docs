@@ -18,6 +18,13 @@ The following diagram gives an overview of architecture of the module:
 
 {{% alert color="info" %}} If you are building a Progressive Web Application (PWA), you need to use [OIDC SSO](https://marketplace.mendix.com/link/component/120371) module instead. {{% /alert %}}
 
+The versions of the Mobile SSO module listed below depend on the Mendix versions.
+
+| Mendix Version | Mobile SSO Version |
+| --- | --- |
+| 10.9.0 and above | 2.0.0 |
+| 9.24.2 and above | 1.0.0 |
+
 ### 1.1 Typical Usage Scenarios
 
 * **B2E app:** Your app is aimed at your company’s employees, and you want these employees to sign in to your app using corporate credentials hosted by your identity provider (IdP) that supports the OIDC protocol. In this case, your app may have its own logic to assign user roles, or you may use authorization information from your IdP as provided to your app using an access token.

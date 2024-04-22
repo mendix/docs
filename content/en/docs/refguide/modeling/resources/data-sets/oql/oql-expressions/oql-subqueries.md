@@ -22,17 +22,17 @@ Example:
 ```
 SELECT
     City,
-    ZipCode,
-    (SELECT COUNT(*) FROM Module.Address WHERE Module.Address.ZipCode = ZipCode.ZipCode) AS NumberOfAddresses
+    ZipCodeValue AS ZipCodeAlias,
+    (SELECT COUNT(*) FROM Module.Address WHERE Module.Address.ZipCode = ZipCodeEntity.ZipCodeValue) AS NumberOfAddresses
 FROM
-    Module.ZipCode AS ZipCode
+    Module.ZipCode AS ZipCodeEntity
 ```
 
 If a subquery is used in a `SELECT` clause, it should return exactly one column and at most one row. If it returns no rows, the value is replaced with `NULL`.
 
-The subquery can refer to attributes of the entities and subqueries in the `FROM` clause. Those attributes can be referenced only by name, not by alias.
+The subquery can refer to attributes of other entities and subqueries in the main query's `FROM` clause. Those attributes can be referenced only by name, not by alias (In the example above, attribute `ZipCodeValue` has an alias in the main query, bit it is referenced by name in the subquery).
 
-Entities and subqueries in from, on the other hand, can only be referenced by alias, if there is one. They can be referenced by name only if there is no alias. 
+Other entities and subqueries in the main query's `FROM` clause can only be referenced by alias, if there is one. If no alias is set, they can be referenced by name (In the example above, entity `Module.ZipCode` has an alias in the main query, and that alias is used in the subquery).
 
 To avoid ambiguity, it is recommended to always refer to attributes with corresponding entity names in the format `<ModuleName>.<EntityName>.<AttributeName>` if there is no alias or `<Alias>.<AttributeName>` if there is an alias.
 
@@ -60,17 +60,17 @@ FROM
     ON ZipCode.ZipCode = AddressStats.ZipCode
 ```
 
-A subquery can be used in a `FROM` clause in the same manner as an entity name. A subquery in a `FROM` clause can return multiple columns and multiple rows.
+A subquery can be used in the `FROM` clause of the main query in the same manner as an entity name. When used in a `FROM` clause, a subquery can return multiple columns and multiple rows.
 
-In contrast with subquery in a `SELECT` clause, a subquery in a `FROM` clause cannot contain references to other entities and subqueries in `FROM`.
+In contrast with subquery in a `SELECT` clause, a subquery in a `FROM` clause cannot contain references to other entities and subqueries declared in the main query's `FROM` clause.
 
 ## 4 Subquery in WHERE
 
 There are two ways to use a subquery in a `WHERE`clause—as a value and as a collection.
 
-### 4.1 Scalar Subqueries
+### 4.1 Value Subqueries
 
-A scalar subquery is a subquery that returns exactly one row and exactly one column. In that case, its result can be considered a value. It can be used in a `WHERE` clause with the comparison operators `=`, `!=`, `<`, `<=`, `>`, `>=`.
+A value subquery is a subquery that returns exactly one row and exactly one column. In that case, its result can be considered a value. It can be used in a `WHERE` clause with the comparison operators `=`, `!=`, `<`, `<=`, `>`, `>=`.
 
 Example:
 
@@ -83,9 +83,9 @@ WHERE
     House.Price < (SELECT AVG(Price) FROM Module.House)
 ```
 
-### 4.2 Multirow Subqueries
+### 4.2 Collection Subqueries
 
-A multirow subquery is a subquery that can have more than one row. If a subquery is used in a `WHERE` clause, it must always contain one column. Such a subquery can be referenced as a collection using the `IN` and `EXISTS` keywords.
+A collection subquery is a subquery that can have more than one row. If a subquery is used in a `WHERE` clause, it must always contain one column. Such a subquery can be referenced as a collection using the `IN` and `EXISTS` keywords.
 
 Examples:
 

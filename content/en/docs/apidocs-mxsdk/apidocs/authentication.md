@@ -10,7 +10,11 @@ tags: ["API", "API Key", "Authentication", "personal access token"]
 
 ## 1 Introduction
 
-Most Mendix Platform APIs require you to authenticate yourself. Currently, two different methods are used for Mendix API authentication: using an API key and using a personal access token (PAT). In the specific API document, you can find information about the authentication method you use.
+Mendix APIs are secured by either API keys or personal access tokens (PATs). Both mechanisms allow clients such as a CI/CD pipeline to consume the platform APIs on behalf of the platform user who created the token. The benefit of a PAT compared to an API key is that the platform user can restrict the scope of delegated access to specific APIs during creation of the PAT. In the specific API document, you can find information about the mechanism used for the API. 
+
+{{% alert color="info" %}}
+The same privilege restrictions apply as for the user who created an API key or PAT. If the user has been deactivated, then the API keys and PATs that they created can no longer be used.
+{{% /alert %}}
 
 ## 2 Authentication Using an API Key
 
@@ -28,6 +32,8 @@ Use the following request headers to authenticate an API call:
 For an example, see one of the [Request](/apidocs-mxsdk/apidocs/deploy-api/#list-environments-request) sections in *Deploy API – Version 1*.
 
 ## 3 Authentication Using a PAT
+
+The benefit of a PAT compared to API keys is that the platform user can restrict the scope of delegated access to specific APIs, by  selecting the correct scopes during creation of the PAT.
 
 ### 3.1 Generating a PAT
 

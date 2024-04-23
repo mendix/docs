@@ -7,7 +7,7 @@ tags: ["studio pro", "security"]
 
 ## 1 Introduction
 
-Security in Mendix has several aspects. If you are thinking of your app as a project to work on in the backend, develop it and collaborate on it with your colleagues as a team, yet you want to control what each team member can change in the backend, this is managed in the Developer Portal. For more information, see [Building an App as a Team](#team) section below. 
+Security in Mendix has several aspects. One aspect is that your app is a project to work on in the backend, develop it and collaborate on it with your colleagues as a team. Yet you may want to control what each team member can change in the backend and this is managed in the Developer Portal. For more information, see [Building an App as a Team](#team) section below. 
 
 If you want different end-users to see different parts of your running application and you want to prevent unauthorized access, these aspects are managed from Studio Pro. Access to forms, data and microflows can be limited to authorized users. For more information, see [Security in Studio Pro](#security-in-studio-pro) section below.
 

@@ -42,8 +42,6 @@ The [Team Server](/refguide7/team-server/) is implemented using Subversion, and 
 
 * Microsoft Windows Server 2008 SP2 and above
 * Debian 8 (Jessie) and above
-* Red Hat Enterprise Linux 6, Red Hat Enterprise Linux 7
-* CentOS 6, CentOS 7
 
 ### 4.2 Web Server
 

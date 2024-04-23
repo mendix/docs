@@ -27,7 +27,7 @@ Visual Builder for XPath constraints is beta in Mendix version 10.5 and above an
 
 You can use the Builder in all places where you can retrieve data from the database, for example a [Retrieve](/refguide/retrieve/) activity in a microflow or the [Data Source](/refguide/xpath-source/) of a widget. Select **(From) Database** and click **Edit…** next to **XPath constraint** to open a dialog box where you can build your constraint.
 
-Ensure the **Builder (beta)** option is selected to use the Builder—it is the default from Mendix version 10.10. You can switch between the Builder and the XPath expression editor to view them in different ways. You can also set the Builder as the default in your [preferences](/refguide/preferences-dialog/#visual-builder).
+Ensure the **Builder (beta)** option is selected to use the Builder—this is the default from Mendix version 10.10. You can switch between the Builder and the XPath expression editor to view them in different ways. You can also set the Builder as the default in your [preferences](/refguide/preferences-dialog/#visual-builder).
 
 #### 2.1.1 Constructing an XPath Constraint
 

@@ -207,9 +207,7 @@ When the **Send Studio Pro usage data to Mendix** setting is enabled, Studio Pro
 
 In Studio Pro version 10.5, a new, visual, way of constructing XPath constraints was introduced. This is called **visual Builder for XPath constraints** (Builder).
 
-From Mendix version 10.10, Builder is the default way to construct XPath constraints
-
-The default way to construct XPath constraints is to write XPath expressions, but you can change the default by checking **Enable the XPath Builder as the default XPath constraint editor**.
+From Mendix version 10.10, Builder is the default way to construct XPath constraints, but you can change the default by clearing **Enable the XPath Builder as the default XPath constraint editor**.
 
 {{% alert color="info" %}}
 For Mendix versions 10.5.0 through 10.9.0, this option is on the **New Features** tab.

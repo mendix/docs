@@ -203,6 +203,18 @@ Sometimes the computer running Studio Pro cannot access the internet directly, b
 
 When the **Send Studio Pro usage data to Mendix** setting is enabled, Studio Pro sends usage data to Mendix that allows Mendix to identify issues and improve the user experience. The usage data does not contain sensitive information. It is possible to disable this feature, but it may affect the behavior of some features, prevent Mendix from identifying issues reported by the user, or affect tracking issues that are not reported yet. This setting is machine-specific and changing this feature does not affect any existing installed version.
 
+### 8.3 Visual Builder for XPath Constraints{#visual-builder}
+
+In Studio Pro version 10.5, a new, visual, way of constructing XPath constraints was introduced. This is called **visual Builder for XPath constraints** (Builder).
+
+From Mendix version 10.10, Builder is the default way to construct XPath constraints
+
+The default way to construct XPath constraints is to write XPath expressions, but you can change the default by checking **Enable the XPath Builder as the default XPath constraint editor**.
+
+{{% alert color="info" %}}
+For Mendix versions 10.5.0 through 10.9.0, this option is on the **New Features** tab.
+{{% /alert %}}
+
 ## 9 New Features Tab {#new-features}
 
 ### 9.1 Access Rules Editor
@@ -226,10 +238,6 @@ For more information, see [X-Ray Mode](/refguide/page/#x-ray-mode).
 In Studio Pro 10.4 and 10.5, only the **Use the Beta version as the default editor** setting is shown. When this setting is enabled, the modern logic editors (as a beta feature) will become the default editors for all your microflows, nanoflows, and rules. 
 
 In Studio Pro 10.6, only the **Enable switching to the Classic version of the editor** setting is shown. When this setting is enabled, you will be able to see the toggle to switch between the **Classic** and **Modern** version in your logic editors.
-
-### 9.5 Visual Builder
-
-In Studio Pro version 10.5, a new, visual, way of constructing XPath constraints was introduced. This is called Visual Builder for database constraints. The default way to construct XPath constraints is to write XPath expressions, but you can change the default by checking **Enable the XPath Builder as the default XPath constraint editor**.
 
 ## 10 Read More
 

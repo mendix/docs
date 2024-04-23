@@ -18,9 +18,12 @@ A typical combo box can look like this:
 ### 1.1 Features
 
 * Supports different data sources:
-    * Association
-    * Enumeration
-    * Boolean
+    * Context:
+        * Association
+        * Enumeration
+        * Boolean
+    * Database lists
+    * Static values
 * Supports custom content rendering
 * Supports custom footers
 * Supports options filtering for quick selection
@@ -36,7 +39,7 @@ Properties:
 * [Accessibility](#accessibility)
 * [Common](#common)
 
-Styling
+Styling:
 
 * [Design Properties](#design-properties)
 * [Common](#common-styling)
@@ -47,11 +50,25 @@ The following sections will describe the different available widget properties a
 
 #### 2.1.1 Data Source Tab
 
-The **Data source** section (required) is used to configure the data for the widget. It has the supports the following data types via these properties:
+The **Source** option (required) is used is used to configure the datasource type for the widget. It supports the following data types via these properties:
+* [Context](#context)
+* [Database](#database)
+* [Static](#static)
 
+##### 2.1.1.1 Context {#context}
+
+When Context source is selected, the **Data source** section (required) configures the type of the context. It supports the following data types via these properties:
 * [Association](/refguide/association-source/)
 * [Enumeration](/refguide/enumerations/)
 * [Boolean](/refguide/boolean-expressions/)
+
+##### 2.1.1.2 Database List {#database}
+
+The database source type can be used to set the value of a string or interger attribute with options fetched from an attribute with the same type.
+
+##### 2.1.1.3 Static Values {#static}
+
+The static source type can be used to set the value of a string attribute with manually configured values.
 
 #### 2.1.2 General Tab
 

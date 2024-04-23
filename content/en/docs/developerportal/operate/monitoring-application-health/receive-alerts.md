@@ -23,14 +23,14 @@ Both options for setting up email alerts are described below.
 
 If you are the Technical Contact for an app, you can grant team members the **Receive Alerts** permission by following these steps:
 
-1. Go to the [Developer Portal](http://sprintr.home.mendix.com).
+1. Go to the [Developer Portal](https://sprintr.home.mendix.com).
 2. Open the [Global Navigation menu](/developerportal/global-navigation/) and click **Deployment** (or **Deployment** > **Public Cloud**).
 3. Open the node by clicking **Environments** under the app name.
 4. Click **Details** ({{% icon name="notes-paper-edit" %}}) for the environment for which you want to set up alerts. You can set alerts permissions separately for each environment.
 5. Switch to the **Permissions** tab.
 6. Select the checkbox below **Receive Alerts** for the user (or users) who should receive alerts. Your changes will save automatically.
 
-    {{< figure src="/attachments/developerportal/operate/monitoring-application-health/receive-alerts/receive-alerts.png" >}}
+    {{< figure src="/attachments/developerportal/operate/monitoring-application-health/receive-alerts/receive-alerts.png" class="no-border" >}}
 
 ### 2.2 Alerts Page
 
@@ -38,14 +38,14 @@ You can also manage the alerts by yourself. For this, you need an **Application 
 
 To enable email alerts, follow these steps:
 
-1. Go to the [Developer Portal](http://sprintr.home.mendix.com).
+1. Go to the [Developer Portal](https://sprintr.home.mendix.com).
 2. Open the [Global Navigation menu](/developerportal/global-navigation/) and click **Deployment**.
 3. Open the node by clicking **Environments** under the app name.
 4. Click **Alerts** in the navigation pane.
 5. Select the environment for which you want to set the alerts from the drop-down list at the top of the page. It is possible to set this option separately for each environment.
 6. Select the **Email Alerts** checkbox.  Your changes will save automatically.
 
-    {{< figure src="/attachments/developerportal/operate/monitoring-application-health/receive-alerts/email-alerts.png" alt="The Email Alerts checkbox" width="70%" >}}
+    {{< figure src="/attachments/developerportal/operate/monitoring-application-health/receive-alerts/email-alerts.png" alt="The Email Alerts checkbox" width="70%" class="no-border" >}}
 
 ## 3 Alerts Using Webhooks 
 

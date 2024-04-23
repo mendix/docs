@@ -32,7 +32,7 @@ The [Use Case Examples](/apidocs-mxsdk/mxsdk/sdk-use-cases/) provide examples fr
 
 This document provides the FAQs and troubleshooting information for common error messages.
 
-If you need help with the SDKs, check whether your question is answered in the [SDK FAQ](/apidocs-mxsdk/mxsdk/sdk-faq/). Otherwise, ask your question in the [Mendix Forum](https://forum.mendixcloud.com/). 
+If you need help with the SDKs, check whether your question is answered in the [SDK FAQ](/apidocs-mxsdk/mxsdk/sdk-faq/). Otherwise, ask your question in the [Mendix Community](https://community.mendix.com/). 
 
 ## 5 SDK Reference Guide
 

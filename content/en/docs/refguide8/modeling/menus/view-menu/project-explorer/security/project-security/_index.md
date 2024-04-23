@@ -13,7 +13,7 @@ In the **Project Security**, you can switch security on or off for the whole pro
 
 To configure the project security, open **Project Explorer** > **Project** > **Security**, and the dialog box will open:
 
-{{< figure src="/attachments/refguide8/modeling/menus/view-menu/project-explorer/security/project-security/project-security-dialog.png" >}}
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/project-explorer/security/project-security/project-security-dialog.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 For more general information on security, see [Security](/refguide8/security/).

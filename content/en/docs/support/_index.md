@@ -6,6 +6,9 @@ weight: 47
 no_list: false 
 description_list: true
 tags: ["support", "sla", "standard", "premier", "platform", "extended support"]
+cascade:
+    - space: "Mendix Support Guide"
+    - mendix_version: 10
 aliases:
     - /howtogeneral/support/index.html
     - /howtogeneral/support/
@@ -57,11 +60,11 @@ Please contact your Customer Success Manager or [Mendix Support](https://support
 
 ## 2 Finding Your Answers
 
-We expect that many questions and issues can be solved by reading the [Mendix Documentation](/) and by exploring the [Mendix Forum](https://forum.mendix.com/). If you cannot find the answer to your question in one of these locations, you can submit a question, incident, or change request to Mendix Support. We will act as the focal point for issues on Mendix Studio Pro, your applications, and the [Developer Portal](https://home.mendix.com/). We will forward the issue to the second- and third-line if necessary.
+We expect that many questions and issues can be solved by reading the [Mendix Documentation](/) and by exploring the [Mendix Community](https://community.mendix.com/). If you cannot find the answer to your question in one of these locations, you can submit a question, incident, or change request to Mendix Support. We will act as the focal point for issues on Mendix Studio Pro, your applications, and the [Developer Portal](https://home.mendix.com/). We will forward the issue to the second- and third-line if necessary.
 
 ### 2.1 Mendix Academy
 
-If you have questions about [Mendix Academy](https://academy.mendix.com/link/home) these will normally be handled by the Academy team.
+If you have questions about [Mendix Academy](https://academy.mendix.com/) these will normally be handled by the Academy team.
 
 You can contact Mendix Academy directly at [academy@mendix.com](mailto:academy@mendix.com). Mendix Academy may take 3-5 business days to reply to your inquiry.
 
@@ -69,9 +72,9 @@ If you have passed a Mendix certification, Mendix Academy will need 3-5 business
 
 ## 3 Feature Requests
 
-We would like to invite you to an important channel where you can provide feature requests to Mendix: the [Mendix Idea Forum](https://forum.mendix.com/link/ideas). Any customer can post a feature request that can be reviewed, expanded on, and voted on by other members of the Mendix community. Based on this feedback, every quarter we will determine which features have the most value according to our customers, and we will implement them.
+We would like to invite you to an important channel where you can provide feature requests to Mendix: the [Mendix Community](https://community.mendix.com/link/ideas). Any customer can post a feature request that can be reviewed, expanded on, and voted on by other members of the Mendix community. Based on this feedback, every quarter we will determine which features have the most value according to our customers, and we will implement them.
 
-For more details, see [Forum](/community-tools/mendix-forum/).
+For more details, see [Mendix Community](/community-tools/mendix-community/).
 
 ## 4 Accessing Mendix Support
 
@@ -111,7 +114,35 @@ If there is an issue with the Mendix Platform that affects multiple customers, o
 
 ## 7 Reach Out to Mendix Support
 
+### 7.1 Reporting Issues
+
 If, after your analysis, you suspect there is an issue with the Mendix Platform (or if you have questions about your analysis), you can reach out to Mendix Support. We will provide pointers on how to solve the issues yourself or redirect you to Expert Services for further assistance. If we suspect a platform issue, we will involve second- and third-line support for confirmation and, if it is a platform issue, we will fix it. If the issue is commercial (for example, because your app requires a larger app container or more file storage), we may refer you to your Customer Success Manager directly.
+
+### 7.2 Large-Scale Testing
+
+You may sometimes want to perform testing on your app which could impact cloud operations. This might include the following:
+
+* Load test
+* Performance test
+* Penetration (PEN) test 
+
+Your SLA contains the following clause:
+
+> Without first obtaining the prior written consent of Mendix, Customer may not intentionally perform any actions, such as load tests, performance tests, or similar tests that might interfere with or disrupt the integrity or performance of the App Platform or Cloud Services.
+
+If you are planning this sort of testing you must raise a ticket with Mendix Support and include as much information as possible, including:
+
+* type of test
+* IP addresses
+* environment IDs
+* exact timings
+* contact details of parties directly involved – including any third parties who are assisting
+
+Please provide this information as early as possible, at least two weeks in advance of the test date. Mendix may refuse permission to do some kinds of test if they break local laws or pose too high a risk to the Mendix infrastructure or other customers.
+
+If you want to perform penetration tests, your Customer Service Manager (CSM) can provide you with an indemnification agreement. This should be signed by all parties, confirming the information above, and agreeing that your tests are legal and do not impact other customers. If you don't know who your CSM is, Mendix Support can provide you with their contact details. 
+
+If Mendix is not aware of your tests, you may find that they are interrupted if they cause unexpected alerts to be generated for our Cloud Operations or Security teams. You may also be breaking your agreement with Mendix.
 
 ## 8 Product Support Period
 
@@ -145,21 +176,21 @@ The full stack is depicted in the table below. This indicates which components a
 
 In the diagrams below, the following colors are used:
 
-{{< figure src="/attachments/support/legend.png"   width="50%"  >}}
+{{< figure src="/attachments/support/legend.png"   width="50%"  class="no-border" >}}
 
 ### 9.1 Mendix Public and Dedicated Cloud
 
 The Mendix Public and Dedicated Clouds are an integrated part of the Mendix Platform and are therefore fully supported as described in the SLA.
 Mendix Support has access to app health, logs, graphs and monitoring.
 
-{{< figure src="/attachments/support/mendix-cloud.png"   width="75%"  >}}
+{{< figure src="/attachments/support/mendix-cloud.png"   width="75%"  class="no-border" >}}
 
 ### 9.2 Mendix for Private Cloud
 
 Mendix for Private Cloud is based on the Kubernetes-Native Operator Framework. You can check the supported Kubernetes platforms in our [Private Cloud](/developerportal/deploy/private-cloud/) documentation. Check our [System Requirements](/refguide/system-requirements/) for other supported components like database and storage. The Mendix Gateway Agent and Mendix Operator are supported by Mendix.
 Mendix Support does not have access to app health, logs, graphs and monitoring. If you run into issues or want to ask a question on these supported components, please always provide relevant logs, data, and your own analysis that explains why you suspect the issue is caused by one of our supported components.
 
-{{< figure src="/attachments/support/private-cloud.png"   width="75%"  >}}
+{{< figure src="/attachments/support/private-cloud.png"   width="75%"  class="no-border" >}}
 
 ### 9.3 Private Mendix Platform
 
@@ -172,7 +203,7 @@ This offering is delivered, managed and supported by Certified Partners (or Cert
 Mendix provides an integration with the SAP Cloud Foundry environment of SAP Business Technology Platform (SAP BTP). Mendix applications are built to run on SAP BTP using the Mendix Cloud Foundry buildpack. Please check out the supported components in [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/).
 Mendix Support does not have access to app health, logs, graphs and monitoring – for support on these components, please contact [SAP Support](https://launchpad.support.sap.com/#/incident/create/prefilled/comp_name=XX-PART-MDX-RAD). If you run into issues or want to ask a question on the supported components, please always provide relevant logs, data, and your own analysis that explains why you suspect the issue is caused by one of our supported components
 
-{{< figure src="/attachments/support/sap-cloud-platform.png"   width="40%"  >}}
+{{< figure src="/attachments/support/sap-cloud-platform.png"   width="40%"  class="no-border" >}}
 
 ### 9.5 Cloud Foundry / Docker and Kubernetes / Traditional Architectures
 
@@ -182,7 +213,7 @@ Check our [System Requirements](/refguide/system-requirements/) for the supporte
 
 Mendix Support does not have access to app health, logs, graphs and monitoring. If you run into issues or want to ask a question on these supported components, please always provide relevant logs, data and your own analysis that explains why you suspect the issue is caused by one of our supported components.
 
-{{< figure src="/attachments/support/on-premises.png"   width="75%"  >}}
+{{< figure src="/attachments/support/on-premises.png"   width="75%"  class="no-border" >}}
 
 ## 10 Components of the Mendix Stack {#components}
 

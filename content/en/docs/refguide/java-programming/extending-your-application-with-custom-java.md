@@ -80,7 +80,7 @@ In this section, you will create a new Java action and deploy the app for Eclips
     3. Click **Select** for **Entity** and select **Products.Product** as the object type.</br>
     4. Click **OK**.</br>
 
-    {{< figure src="/attachments/refguide/java-programming/extending-your-application-with-custom-java/add.png" width="500" >}}
+    {{< figure src="/attachments/refguide/java-programming/extending-your-application-with-custom-java/add.png" width="500" class="no-border" >}}
 
 4. Change the **Type** in the **Return** section of the Java action to **String**, change the **Variable name** to *ReversedName*.
 5. Click <kbd>ctrl</kbd> + <kbd>s</kbd> to save the Java action.
@@ -106,7 +106,7 @@ To edit the Java action in Eclipse, open Eclipse and follow these steps:
 3. In **Select root directory** browse to the root directory of your app.
 4. Click **Finish**.
 
-    {{< figure src="/attachments/refguide/java-programming/extending-your-application-with-custom-java/import3.png" width="400" >}}
+    {{< figure src="/attachments/refguide/java-programming/extending-your-application-with-custom-java/import3.png" width="400" class="no-border" >}}
 
     {{% alert color="info" %}}If you don't know what the app directory is, select **App** > **Show App Directory in Explorer** in Studio Pro.{{% /alert %}}
 
@@ -150,17 +150,17 @@ Now you will add a button to the Product_NewEdit page which uses a microflow to 
 5. Drag the **ReverseProductName** Java action from the **App Explorer** into the microflow.
 6. In the **Call Java Action** properties editor, select **$Product** from the **Product parameter** drop-down.
 
-    {{< figure src="/attachments/refguide/java-programming/extending-your-application-with-custom-java/product-parameter.png" >}}
+    {{< figure src="/attachments/refguide/java-programming/extending-your-application-with-custom-java/product-parameter.png" class="no-border" >}}
 
-13. Click **OK** to save the properties. 
+7. Click **OK** to save the properties. 
 8. Drag a **Show message** activity into the microflow.
-15. In the **Show Message** properties editor enter *Reversed name: {1}* for **Template**.
-16. In the **Parameters** section, add a **New** parameter with the value **$ReversedName**. This is the output variable of the Java action.
-18. Click **OK** to save the parameter. The **Show Message** properties should now look like this:
+9. In the **Show Message** properties editor enter *Reversed name: {1}* for **Template**.
+10. In the **Parameters** section, add a **New** parameter with the value **$ReversedName**. This is the output variable of the Java action.
+11. Click **OK** to save the parameter. The **Show Message** properties should now look like this:
 
-    {{< figure src="/attachments/refguide/java-programming/extending-your-application-with-custom-java/show-message.png" >}}
+    {{< figure src="/attachments/refguide/java-programming/extending-your-application-with-custom-java/show-message.png" class="no-border" >}}
 
-19. Click **OK** to save the **Show message** activity. The microflow will be similar to this this:
+12. Click **OK** to save the **Show message** activity. The microflow will be similar to this this:
 
     {{< figure src="/attachments/refguide/java-programming/extending-your-application-with-custom-java/microflow4.png"  class="image-border" >}}
 
@@ -172,7 +172,7 @@ Now you will add a button to the Product_NewEdit page which uses a microflow to 
 
     You will see the name of the product in the dialog box, but displayed in reverse.
 
-    {{< figure src="/attachments/refguide/java-programming/extending-your-application-with-custom-java/app2.png" width="400" >}}
+    {{< figure src="/attachments/refguide/java-programming/extending-your-application-with-custom-java/app2.png" width="400" class="no-border" >}}
 
 ## 5 XPath Retrieval in Java {#xpath}
 
@@ -245,7 +245,7 @@ To use this same XPath in a Java action called from a microflow, perform the fol
         * category -  an **Object** of type **Products.Category**
     * Return > Type – **List** of **Products.Product** with the **Variable name** *ProductList*
 
-    {{< figure src="/attachments/refguide/java-programming/extending-your-application-with-custom-java/java-action-2.png" width="400" >}}
+    {{< figure src="/attachments/refguide/java-programming/extending-your-application-with-custom-java/java-action-2.png" width="400" class="no-border" >}}
 
 2. Deploy the app for Eclipse using the menu item **App** > **Deploy for Eclipse**.
 3. Search in Eclipse for **findProductByNameAndCategory.java** and open it. If the package was already open in Eclipse, you may need to refresh the editor using <kbd>F5</kbd>.
@@ -298,7 +298,7 @@ To use this same XPath in a Java action called from a microflow, perform the fol
     * Name: a product name which exists in your data, for example 'The Lord of the Rings'
     * Category: $Category
 
-    {{< figure src="/attachments/refguide/java-programming/extending-your-application-with-custom-java/call-java-action.png" width="400" >}}
+    {{< figure src="/attachments/refguide/java-programming/extending-your-application-with-custom-java/call-java-action.png" width="400" class="no-border" >}}
 12. **Duplicate** the **MicroflowProductList** page and **Rename** it *JavaActionProductList*.
 13. Open the **JavaActionProductList** page.
 14. Set the **Data source** for the data grid to be to be the Microflow **Products.ListWithJavaAction**.

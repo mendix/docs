@@ -43,7 +43,7 @@ Scrum Masters can edit and create new team roles on the [Team](/developerportal/
 
 Every deployed app has a Technical Contact. When you view the [General Settings](/developerportal/collaborate/general-settings/#general) for a deployed app, you can see the app's Technical Contact. The Technical Contact is the user you can contact with questions related to the app. 
 
-{{< figure src="/attachments/developerportal/general/team/app-roles/technical-contact.png" alt="" >}}
+{{< figure src="/attachments/developerportal/general/team/app-roles/technical-contact.png" alt="" class="no-border" >}}
 
 {{% alert color="info" %}}
 Provide the Technical Contact with the Scrum Master role. Because the Technical Contact is the contact for regular users, they need to be able to perform app operations on behalf of all Scrum Masters.
@@ -73,7 +73,9 @@ When a Mendix app is on premises, it is running on the customer's own infrastruc
 ### 4.3 Changing the Technical Contact {#change-technical-contact}
 
 {{% alert color="info" %}}
-It is not possible to have more than one Technical Contact for an app. 
+It is not possible to have more than one Technical Contact for an app.
+
+You can only change the Technical Contact for licensed Mendix apps. You cannot change the Technical Contact for Free Apps or apps running outside the Mendix Cloud.
 {{% /alert %}}
 
 If you are the current Technical Contact for an app, you can transfer your Technical Contact role to another team member as follows:

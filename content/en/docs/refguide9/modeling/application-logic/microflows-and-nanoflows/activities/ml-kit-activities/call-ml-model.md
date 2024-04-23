@@ -17,7 +17,7 @@ Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above supports machine lea
 
 Use the **Call ML Model** [activity](/refguide9/activities/) in a microflow to call the ML model mapping document (see the [Using the Model in a Microflow](/refguide9/machine-learning-kit/using-ml-kit/#use-model-microflow) section of *Integrate Machine Learning Models*).
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/ml-kit-activities/call-ml-model.png" alt="The Call ML Model activity." >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/ml-kit-activities/call-ml-model.png" alt="The Call ML Model activity." class="no-border" >}}
 
 To get started with machine learning models, check out [Using ML Kit](/refguide9/machine-learning-kit/using-ml-kit/).
 

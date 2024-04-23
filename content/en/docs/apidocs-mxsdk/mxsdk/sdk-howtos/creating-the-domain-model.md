@@ -16,7 +16,7 @@ In this document, you will learn how to do the following:
 
 After completing this how-to, you will be able to generate apps with the following domain model:
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-howtos/creating-the-domain-model/16844083.png" >}}
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-howtos/creating-the-domain-model/16844083.png" class="no-border" >}}
 
 To be able to create such a domain model, there are several questions that you need an answer to:
 

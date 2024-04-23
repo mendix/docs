@@ -16,7 +16,7 @@ The global navigation is always accessible throughout the online Mendix Platform
 
 On the left side of the top bar, click **Open Global Navigation** ({{% icon name="layout-rounded-1" %}}) to access the main menu:
 
-{{< figure src="/attachments/developerportal/global-nav/navigation-menu.png" width="250" >}}
+{{< figure src="/attachments/developerportal/global-nav/navigation-menu.png" width="250" class="no-border" >}}
 
 Click the menu items to navigate to different parts of the Mendix Platform, or hover over the menu items to expand the sections for further access.
 
@@ -26,13 +26,13 @@ In the **Search** box, you can search the platform for **Docs**, **Forum** posts
 
 Use the various filters to refine your search results:
 
-{{< figure src="/attachments/developerportal/global-nav/search-menu.png" width="500" >}}
+{{< figure src="/attachments/developerportal/global-nav/search-menu.png" width="500" class="no-border" >}}
 
 ## 4 Support Menu
 
-Click **Open Support Menu** ({{% icon name="question-circle" color="color" %}}) to read up on [what's new](https://www.mendix.com/releases/) in the Mendix Platform, [ask a question](/community-tools/mendix-forum/#questions-tab) to the Mendix community, [share an idea](/community-tools/mendix-forum/#ideas-tab) with the community, explore more [Mendix documentation](/), or contact [Mendix Support](/support/).
+Click **Open Support Menu** ({{% icon name="question-circle" color="color" %}}) to read up on [what's new](https://www.mendix.com/releases/) in the Mendix Platform, [ask a question](/community-tools/mendix-community/#questions-tab) to the Mendix community, [share an idea](/community-tools/mendix-community/#ideas-tab) with the community, explore more [Mendix documentation](/), or contact [Mendix Support](/support/).
 
-{{< figure src="/attachments/developerportal/global-nav/help-menu.png" width="300" >}}
+{{< figure src="/attachments/developerportal/global-nav/help-menu.png" width="300" class="no-border" >}}
 
 {{% alert color="info" %}}
 If you see **Get Started with Mendix**, a red dot next to this menu item will remain there for 30 days after your signup.
@@ -44,7 +44,7 @@ Click **Open Notifications Menu** ({{% icon name="alarm-bell" %}}) to see the pl
 
 To configure what types of notifications you receive, click **Settings** ({{% icon name="cog" %}}) and update the options in the [Notification Settings](/community-tools/mendix-profile/user-settings/#notifications) page that opens. 
 
-{{< figure src="/attachments/developerportal/global-nav/notifications.png" width="300" >}}
+{{< figure src="/attachments/developerportal/global-nav/notifications.png" width="300" class="no-border" >}}
 
 {{% alert color="info" %}}
 To stop receiving notifications when new feedback is submitted for a specific app, go to the [General Settings](/developerportal/collaborate/general-settings/) page for that app and click **Stop Watching**. To disable notifications for multiple apps on one page, use the **Stop Watching** option on the [My Apps](/developerportal/#my-apps) page.

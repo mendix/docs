@@ -11,19 +11,19 @@ Images, videos and files allow end-users to upload, download, and display files,
 
 * [Static Image](/refguide9/image/) – displays static image:
 
-    {{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/image-design-mode-example.png" >}}
+    {{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/image-design-mode-example.png" class="no-border" >}}
 
 * [Dynamic Image](/refguide9/image-viewer/) – displays an image or its thumbnail:
 
-    {{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/image-viewer-example.png" alt="Dynamic Image Example" >}}
+    {{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/image-viewer-example.png" alt="Dynamic Image Example" class="no-border" >}}
 
 * [File manager](/refguide9/file-manager/) – allows end-users to upload and/or download files:
 
-    {{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/file-manager-example.png" alt="File Manager Example" >}}
+    {{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/file-manager-example.png" alt="File Manager Example" class="no-border" >}}
 
 * [Image uploader](/refguide9/image-uploader/) – allows end-users to upload images to the server:
 
-    {{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/image-uploader-example.png" alt="Image Uploader Example" >}}
+    {{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/image-uploader-example.png" alt="Image Uploader Example" class="no-border" >}}
 
 ## 2 Performing Basic Functions
 

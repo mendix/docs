@@ -13,7 +13,7 @@ The **Commit** activity can commit one or more objects. For persistable entities
 
 An example of commit object(s) properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/activities/object-activities/committing-objects/commit-properties.png" alt="commit object(s) properties" >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/object-activities/committing-objects/commit-properties.png" alt="commit object(s) properties" class="no-border" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
@@ -116,4 +116,4 @@ During commit the following will occur:
     * Depending on the object state, the platform will do an insert for objects with the state **Instantiated** and an update for all other states
 * Result: an object with the state Instantiated will be inserted into the database, and an object with any other state will be updated
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/activities/object-activities/committing-objects/18582172.png" >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/object-activities/committing-objects/18582172.png" class="no-border" >}}

@@ -13,7 +13,7 @@ On the **Roles & Permissions** page, you can view and manage app roles and permi
 
 ## 2 Default App Roles
 
-Default app roles are the default [team roles](https://docs.mendix.com/developerportal/general/app-roles/#team-roles) assigned for every new app created in your company.
+Default app roles are the default [team roles](/developerportal/general/app-roles/#team-roles) assigned for every new app created in your company.
 
 {{< figure src="/attachments/control-center/roles-permissions/roles-permissions.png"  class="image-border" alt="Roles & Permissions page">}}
 

@@ -36,11 +36,11 @@ Before starting this how-to, make sure you have completed the following prerequi
     3. Click **Select** for **Entity** and select **AssetManager.Asset** as the object type.</br>
     4. Click **OK**.</br>
 
-    {{< figure src="/attachments/howto8/logic-business-rules/extending-your-application-with-custom-java/add.png"   width="500"  >}}
+    {{< figure src="/attachments/howto8/logic-business-rules/extending-your-application-with-custom-java/add.png"   width="500"  class="no-border" >}}
 
 4. Back on the **Java Action** wizard, change the **Return type** of the Java action to **String** and click **OK** to save the Java action.
 
-    {{< figure src="/attachments/howto8/logic-business-rules/extending-your-application-with-custom-java/return.png"   width="500"  >}}
+    {{< figure src="/attachments/howto8/logic-business-rules/extending-your-application-with-custom-java/return.png"   width="500"  class="no-border" >}}
 
 5. Select **App** > **Deploy for Eclipse** from the top Studio Pro toolbar.
 
@@ -52,13 +52,13 @@ To edit the Java action in Eclipse, follow these steps:
 2. In the **Import** window, select **Existing Projects into Workspace** and click **Next**.
 3. Set the app directory as the root directory for this app and click **Finish**.
 
-    {{< figure src="/attachments/howto8/logic-business-rules/extending-your-application-with-custom-java/import3.png"   width="400"  >}}
+    {{< figure src="/attachments/howto8/logic-business-rules/extending-your-application-with-custom-java/import3.png"   width="400"  class="no-border" >}}
 
     {{% alert color="info" %}}If you don't know what the app directory is, select **App** > **Show App Directory in Explorer** in Studio Pro.{{% /alert %}}
 
 4. Double-click **ReverseAssetName.java** in the **Package Explorer** of Eclipse.
 
-    {{< figure src="/attachments/howto8/logic-business-rules/extending-your-application-with-custom-java/package-explorer.png"   width="300"  >}}
+    {{< figure src="/attachments/howto8/logic-business-rules/extending-your-application-with-custom-java/package-explorer.png"   width="300"  class="no-border" >}}
 
     In the Java code, there is a placeholder marked with `//BEGIN USER CODE` and `//END USER CODE` comment statements. This is where you can add your own Java code. Studio Pro will never overwrite the code between those two statements.
 
@@ -96,7 +96,7 @@ To edit the Java action in Eclipse, follow these steps:
 1. Back in Studio Pro, locate the **Home** page via **App Explorer**.
 2. Under **{AssetName}**, right-click and select **Add widget**.
 
-    {{< figure src="/attachments/howto8/logic-business-rules/extending-your-application-with-custom-java/add-widget.png"   width="300"  >}}
+    {{< figure src="/attachments/howto8/logic-business-rules/extending-your-application-with-custom-java/add-widget.png"   width="300"  class="no-border" >}}
 
 3. In the **Select widget** dialog box that appears, select **Button widgets** > **Call microflow button**.
 4. In the **Select Microflow** dialog box, click **New** to create a new microflow.
@@ -104,25 +104,25 @@ To edit the Java action in Eclipse, follow these steps:
 6. Right-click the **Reverse name** button you just created and select **Go to on click microflow** to open the new microflow.
 7. Drag the **ReverseAssetName** Java action from the **App Explorer** onto the line between the green start event and red end event. This generates a Java action activity.
 
-    {{< figure src="/attachments/howto8/logic-business-rules/extending-your-application-with-custom-java/microflow2.png"   width="500"  >}}
+    {{< figure src="/attachments/howto8/logic-business-rules/extending-your-application-with-custom-java/microflow2.png"   width="500"  class="no-border" >}}
 
 8. Double-click the generated activity to open the **Call Java Action** properties editor, and then click **Edit** for the first input to open the argument editor.
 
-    {{< figure src="/attachments/howto8/logic-business-rules/extending-your-application-with-custom-java/call1.png"   width="500"  >}}
+    {{< figure src="/attachments/howto8/logic-business-rules/extending-your-application-with-custom-java/call1.png"   width="500"  class="no-border" >}}
 
 9. Press and hold the <kbd>Ctrl</kbd> key and then press the <kbd>spacebar</kbd> to open the code completion editor.
 10. Select **$Asset (AssetManager.Asset)**.
 
-    {{< figure src="/attachments/howto8/logic-business-rules/extending-your-application-with-custom-java/argument.png"   width="500"  >}}
+    {{< figure src="/attachments/howto8/logic-business-rules/extending-your-application-with-custom-java/argument.png"   width="500"  class="no-border" >}}
 
 11. Click **OK** to save the expression.
 12. In the **Call Java Action** properties editor, change the output **Variable** to *ReversedName*.
 
-    {{< figure src="/attachments/howto8/logic-business-rules/extending-your-application-with-custom-java/call2.png"   width="500"  >}}
+    {{< figure src="/attachments/howto8/logic-business-rules/extending-your-application-with-custom-java/call2.png"   width="500"  class="no-border" >}}
 
 13. Click **OK** to save the properties. The microflow should now look like this:
 
-    {{< figure src="/attachments/howto8/logic-business-rules/extending-your-application-with-custom-java/microflow3.png"   width="500"  >}}
+    {{< figure src="/attachments/howto8/logic-business-rules/extending-your-application-with-custom-java/microflow3.png"   width="500"  class="no-border" >}}
 
 14. From the **Toolbox** (select **View** > **Toolbox** to open it, if necessary), drag a **Show message** activity into the microflow.
 15. Double-click the activity to open the **Show Message** properties editor and enter *Reversed name: {1}* for **Template**.
@@ -130,11 +130,11 @@ To edit the Java action in Eclipse, follow these steps:
 17. Select **$ReversedName (String)**, which is the output variable of the Java action.
 18. Click **OK** to save the parameter. The **Show Message** properties should now look like this:
 
-    {{< figure src="/attachments/howto8/logic-business-rules/extending-your-application-with-custom-java/show-message.png"   width="500"  >}}
+    {{< figure src="/attachments/howto8/logic-business-rules/extending-your-application-with-custom-java/show-message.png"   width="500"  class="no-border" >}}
 
 19. Click **OK** to save the show message activity. The microflow should now look like this:
 
-    {{< figure src="/attachments/howto8/logic-business-rules/extending-your-application-with-custom-java/microflow4.png"   width="500"  >}}
+    {{< figure src="/attachments/howto8/logic-business-rules/extending-your-application-with-custom-java/microflow4.png"   width="500"  class="no-border" >}}
 
 ## 6 Deploying and Seeing the Results
 
@@ -145,11 +145,11 @@ To edit the Java action in Eclipse, follow these steps:
 5. Select the new asset from the app's **Dashboard**.
 6. On the **Home** page, click **Reverse name** for the newly created asset:
 
-    {{< figure src="/attachments/howto8/logic-business-rules/extending-your-application-with-custom-java/app1.png"   width="200"  >}}
+    {{< figure src="/attachments/howto8/logic-business-rules/extending-your-application-with-custom-java/app1.png"   width="200"  class="no-border" >}}
 
 7. The reversed name of the asset appears in a dialog box.
 
-    {{< figure src="/attachments/howto8/logic-business-rules/extending-your-application-with-custom-java/app2.png"   width="400"  >}}
+    {{< figure src="/attachments/howto8/logic-business-rules/extending-your-application-with-custom-java/app2.png"   width="400"  class="no-border" >}}
 
 ## 7 Troubleshooting {#troubleshooting}
 

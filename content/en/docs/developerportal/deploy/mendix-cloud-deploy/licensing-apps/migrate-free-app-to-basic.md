@@ -42,7 +42,7 @@ To migrate your Free App and its database to your Mendix Basic environment, foll
 1. Make sure **Full Snapshot** is selected, then click **Start** to prepare the download.
 1. Once the backup is ready, click **Download**.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/migrate-free-app-to-basic/download-backup.png" alt="" width=75% >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/migrate-free-app-to-basic/download-backup.png" alt="" width=75% class="no-border" >}}
 
 1. Close the **Download Backup** dialog box.
 
@@ -52,15 +52,15 @@ To migrate your Free App and its database to your Mendix Basic environment, foll
 
 1. Click **Unlink your app**.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/migrate-free-app-to-basic/unlink-free-app.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/migrate-free-app-to-basic/unlink-free-app.png" class="no-border" >}}
 
     If you see the following message, your app has already been unlinked. In that case, you can skip ahead to [Link Your App to the New Node](#link-app-to-node).
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/migrate-free-app-to-basic/link-node.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/migrate-free-app-to-basic/link-node.png" class="no-border" >}}
 
 1. In the **Confirmation** pop-up, click **Yes, delete all data and unlink this app**.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/migrate-free-app-to-basic/confirm-unlink.png" alt="" width=75% >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/migrate-free-app-to-basic/confirm-unlink.png" alt="" width=75% class="no-border" >}}
 
     {{% alert color="info" %}}Before your environment is deleted, you may be asked to authenticate with two-factor authentication.{{% /alert %}}
 
@@ -68,7 +68,7 @@ To migrate your Free App and its database to your Mendix Basic environment, foll
 
 1. In the banner at the top of the **Environments** page, click **Select a node**.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/migrate-free-app-to-basic/link-node.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/migrate-free-app-to-basic/link-node.png" class="no-border" >}}
 
 2. Click **Use this node** for the node you just licensed. You may have to confirm and authenticate this with two-factor authentication again.
 
@@ -97,6 +97,6 @@ The final step is restoring your data. You must do this after you've deployed yo
 
 5. Confirm the restore by clicking **Restore Backup**.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/migrate-free-app-to-basic/restore-backup.png" alt="" width=75% >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/migrate-free-app-to-basic/restore-backup.png" alt="" width=75% class="no-border" >}}
 
 6. Go to the **Environments** page and start your app. Now it is ready for use.

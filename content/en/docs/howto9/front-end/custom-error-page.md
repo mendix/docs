@@ -7,9 +7,15 @@ description: "Describes how to create a custom error page for a more tailored us
 tags: ["theming", "UX", "Error page", "offline", "404", "403", "front end"]
 ---
 
+{{% alert color="info" %}}
+This document explains how to make custom error pages for web pages. Native mobile does not use custom error pages, as users cannot enter URLs which lead to them.
+
+To create customized error information for native pages, please create custom [system texts](/refguide9/system-texts/).
+{{% /alert %}}
+
 ## 1 Introduction
 
-Whenever your application is stopped, you are presented with the default Mendix error page. However, you can make a custom error page on *Mendix Cloud* for a more tailored user experience. 
+Whenever your application is stopped, you are presented with the default Mendix error page. However, you can make a custom error page on Mendix Cloud for a more tailored user experience. 
 
 Specifically, you can create an `offline.html` page, a `404.html` page, and a `403.html` page.
 
@@ -21,7 +27,7 @@ The different files serve different purposes:
 
 If you do not create these files, the default error page will be used for each scenario:
 
-{{< figure src="/attachments/howto9/front-end/custom-error-page/custom-error-page.png" >}}
+{{< figure src="/attachments/howto9/front-end/custom-error-page/custom-error-page.png" class="no-border" >}}
 
 This how-to teaches you how to do the following:
 
@@ -46,19 +52,19 @@ If you are using Atlas 3, do the following:
 1. Open the local folder of your app.
 2. Go to **theme**:
 
-    {{< figure src="/attachments/howto9/front-end/custom-error-page/theme.png" >}}
+    {{< figure src="/attachments/howto9/front-end/custom-error-page/theme.png" class="no-border" >}}
 
 3. Go to **web**:
 
-    {{< figure src="/attachments/howto9/front-end/custom-error-page/web.png" >}}
+    {{< figure src="/attachments/howto9/front-end/custom-error-page/web.png" class="no-border" >}}
 
 4. Create a new folder named *error_page*:
 
-    {{< figure src="/attachments/howto9/front-end/custom-error-page/error-page.png" >}}
+    {{< figure src="/attachments/howto9/front-end/custom-error-page/error-page.png" class="no-border" >}}
 
 5. In the **error_page** folder, place your *offline.html* file:
 
-    {{< figure src="/attachments/howto9/front-end/custom-error-page/offline.png" >}}
+    {{< figure src="/attachments/howto9/front-end/custom-error-page/offline.png" class="no-border" >}}
 
     Optionally, you can also create *404.html* and *403.html* pages.
 

@@ -30,7 +30,7 @@ If you want to configure more of your map (for example, end-user interactions an
 {{% alert color="info" %}}
 If you are using Google Maps, be sure to include an empty JSON array (specifically `{}`) in **Advanced** > **Map Styles** so your widget is successfully displayed in your app:
 
-{{< figure src="/attachments/appstore/widgets/maps/gmaps.png" >}}
+{{< figure src="/attachments/appstore/widgets/maps/gmaps.png" class="no-border" >}}
 
 {{% /alert %}}
 

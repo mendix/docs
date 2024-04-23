@@ -13,7 +13,7 @@ title: "Enter the title of the document"
 
 ### New Features
 
-[//]: # "Include links/references to Idea Forum ideas when available."
+[//]: # "Include links/references to the Mendix Community ideas when available."
 
 #### {Major new feature specifically named in heading}
 
@@ -21,7 +21,7 @@ title: "Enter the title of the document"
 
 ### Improvements
 
-[//]: # "Include links/references to Idea Forum ideas when available."
+[//]: # "Include links/references to the Mendix Community ideas when available."
 
 #### Performance Improvements
 

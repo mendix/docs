@@ -19,7 +19,7 @@ For example, if you have a *$Discount* variable that gives customers a 50% disco
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/variable-activities/change-variable/change-variable-properties.png" alt="Change Variable Properties" width="650px" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/variable-activities/change-variable/change-variable-properties.png" alt="Change Variable Properties" width="650px" class="no-border" >}}
 
 The **Change variable** properties pane consists of the following sections:
 

@@ -27,7 +27,7 @@ The following components are needed:
 The following steps describe how to download the Selenium server:
 
 1. Create a folder on your disk (for example, *C:\Selenium*).
-2. Download [Selenium Server stand-alone version 3.8.1](http://selenium-release.storage.googleapis.com/3.8/selenium-server-standalone-3.8.1.jar) and place it in the folder
+2. Download [Selenium Server stand-alone version 3.8.1](https://selenium-release.storage.googleapis.com/3.8/selenium-server-standalone-3.8.1.jar) and place it in the folder
 
 ## 4 Downloading the Latest Chrome and Gecko (Firefox) Drivers
 
@@ -69,7 +69,7 @@ The following steps describe how to start the Selenium hub:
 
 3. Check with the following link if the hub works: `http://localhost:4444/grid/console`.
 
-    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-setup-local-selenium-index/ht-two-setup-local-selenium-hub/grid_hub.png" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-setup-local-selenium-index/ht-two-setup-local-selenium-hub/grid_hub.png" class="no-border" >}}
 
     Congratulations, your local Selenium hub is running.
 
@@ -119,7 +119,7 @@ The following steps describe how to start the node with three Chrome and three F
 
 3. Check in the console whether your Selenium hub node is active `http://localhost:4444/grid/console`:
 
-    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-setup-local-selenium-index/ht-two-setup-local-selenium-hub/grid_nodes.png" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-setup-local-selenium-index/ht-two-setup-local-selenium-hub/grid_nodes.png" class="no-border" >}}
 
 ## 7 Starting Testing
 

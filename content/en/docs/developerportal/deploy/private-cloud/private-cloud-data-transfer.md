@@ -216,7 +216,7 @@ If you need to export or import data from an environment that uses AWS IRSA auth
 
     1. Open the role for editing and add an entry for the ServiceAccount (or ServiceAccounts) to the list of conditions:
 
-        {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/awsserviceaccountlinktorole.png" >}}
+        {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/awsserviceaccountlinktorole.png" class="no-border" >}}
 
     2. For the second condition, copy and paste the `sts.amazonaws.com` line; replace `:aud` with `:sub` and set it to `system:serviceaccount:<Kubernetes namespace>:<Kubernetes serviceaccount name>`.
 
@@ -285,7 +285,7 @@ The `kubectl cp` command can sometimes fail to copy files with a `.tar.gz` exten
 In that case, changing the file extension can fix the issue, for example by changing the file extension from `.tar.gz` to `.tar.gz.backup`.
 {{% /alert %}}
 
-## 3 Known Limitations
+## 4 Known Limitations
 
 * It is not possible to export/import only the database or only files. The import/export process will always export or import the database together with any files.
 * In version 0.0.1 of the tool, when exporting data, all files from the bucket will be included. This may include:

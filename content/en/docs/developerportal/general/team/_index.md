@@ -14,14 +14,14 @@ Your team can include all of your colleagues working on an app. As well as devel
 
 To view and manage your team members, follow these steps:
 
-1. In the [Developer Portal](http://sprintr.home.mendix.com), select the app you want to manage.
+1. In the [Developer Portal](https://sprintr.home.mendix.com), select the app you want to manage.
 2. In the navigation pane, click **Team**.
 
 ## 2 Managing the Team {#managing}
 
 Only team members with the [Scrum Master](/developerportal/general/app-roles/#team-roles) role can manage the app team.
 
-{{< figure src="/attachments/developerportal/general/team/team.png" >}}
+{{< figure src="/attachments/developerportal/general/team/team.png" class="no-border" >}}
 
 On the **Overview** tab, you can do the following:
 
@@ -31,7 +31,7 @@ On the **Overview** tab, you can do the following:
 
 Navigate to the **Role Settings** tab to view and edit permissions for the team roles as well as to **Add New Role**:
 
-{{< figure src="/attachments/developerportal/general/team/role-settings.png"   width="400"  >}}
+{{< figure src="/attachments/developerportal/general/team/role-settings.png"   width="400"  class="no-border" >}}
 
 Navigate to the **History** tab to view the history of changes for the team and [node permissions](/developerportal/deploy/node-permissions/).
 

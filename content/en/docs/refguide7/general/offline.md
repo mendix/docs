@@ -11,7 +11,7 @@ We define an offline application as the portion of a Mendix app that is accessib
 
 ## 2 Availability
 
-To access the offline application, you need to have a mobile device that runs a correctly configured [PhoneGap](http://phonegap.com/) hybrid application. The app will require an internet connection the first time it is opened in order to download the necessary resources from the server. After the initial synchronization, the data will remain available in the app, even without an internet connection. Please note that the offline profile will be used, even if there is an internet connection available.
+To access the offline application, you need to have a mobile device that runs a correctly configured [PhoneGap](https://helpx.adobe.com/experience-manager/kb/adobe-phonegap-end-of-service.html) hybrid application. The app will require an internet connection the first time it is opened in order to download the necessary resources from the server. After the initial synchronization, the data will remain available in the app, even without an internet connection. Please note that the offline profile will be used, even if there is an internet connection available.
 
 ## 3 Synchronization {#synchronization}
 

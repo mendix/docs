@@ -14,7 +14,7 @@ aliases:
 
 Tab containers are used to show information categorized into tabs. This can be very useful if the amount of information that has to be displayed is larger than the amount of space on the screen.
 
-{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/tab-container/tab-container.png" alt="Tab Container" >}}
+{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/tab-container/tab-container.png" alt="Tab Container" class="no-border" >}}
 
 ## 2 Properties Pane
 

@@ -13,37 +13,61 @@ tags: ["marketplace", "marketplace component", "snowflake", "data loader", "modu
 
 ## 1 Introduction
 
-The Mendix-Snowflake Bulk Data Loader is an application developed under the Snowflake Native App Framework, designed to easily load data from Mendix to Snowflake. This tool streamlines the process of transferring data from Mendix apps directly into Snowflake, enhancing data management, analytics, and reporting capabilities.
+The Snowflake REST SQL connector enables you to enrich your Mendix app with the capabilities of Snowflake.
 
 ### 1.1 Typical Use Cases
 
-{DESCRIBE WHAT THE DATA LOADER IS TYPICALLY USED FOR.}
+The Snowflake REST SQL connector provides a way to first setup key-pair authentication with a 2048-bit RSA key pair and then execute SQL statements on Snowflake via a REST call from within your Mendix application. These statements allow you to:
+
+- Read data from Snowflake
+- Write data to Snowflake
+- Trigger [Snowflake Cortex ML functions](https://docs.snowflake.com/en/guides-overview-ml-functions)
+- Use [Snowflake Cortex LLM functions](https://docs.snowflake.com/en/user-guide/snowflake-cortex/llm-functions)
+
+The current version of the connector supports:
+- authentication with a 2048-bit RSA key pair
+- execution of single SQL statements
+- synchronous execution of calls
 
 ### 1.2 Prerequisites {#prerequisites}
 
-The {CONNECTOR NAME} connector requires Mendix Studio Pro version {REQUIRED VERSION} or above.
+The Snowflake REST SQL connector requires Mendix Studio Pro version 9.18.0 or above.
 
-{OTHER PREREQUISITES AS REQUIRED.}
+To use the Snowflake REST SQL connector, you must also install and configure the following modules from the Mendix marketplace:
+
+-  [Community Commons](https://marketplace.mendix.com/link/component/170) - This module is a required dependency for the Snowflake REST SQL connector.
+-  [Encryption](https://marketplace.mendix.com/link/component/1011) - This module is a required dependency for the Snowflake REST SQL connector. The EncryptionKey constant must be set up in your application settings.
 
 ### 1.3 Licensing and Cost
 
-This connector is available as a free download from the Mendix Marketplace.
-
-{INFORMATION ABOUT SNOWFLAKE LICENSING REQUIREMENTS, IF ANY}
+This connector is available as a free download from the Mendix Marketplace, but the services in Snowflake to which is connects may incur a usage cost. For more information, refer to the [Snowflake documentation](https://www.snowflake.com/en/data-cloud/pricing-options/).
 
 Depending on your use case, your deployment environment, and the type of app that you want to build, you may also need a license for your Mendix app. For more information, refer to [Licensing Apps](/developerportal/deploy/licensing-apps-outside-mxcloud/).
 
 ## 2 Installation
 
-Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the {CONNECTOR NAME} connector into your app.
+Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the Snowflake REST SQL connector into your app.
 
 ## 3 Configuration
 
-After you install the connector, you can find it in the **App Explorer**, in the **{MODULENAME}** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to {AWS SERVICE NAME}. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
+After you install the connector, you can find it in the **App Explorer**, in the **SnowflakeRESTSQL** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use. 
 
 ### 3.1 Configuring Snowflake Authentication
 
-{INFORMATION ABOUT AUTHENTICATING IN SNOWFLAKE}
+In order to use the capabilities of Snowflake in a Mendix app with the Snowflake REST SQL connector, a 2048-bit RSA key pair authentication method must be used.
+
+### 3.1.1 Configuring key-pair authentication in Snowflake
+
+To configure 2048-bit RSA key pair authentication for you account in Snowflake, the following steps need to be taken:
+
+1. Generate the private key
+2. Generate a public key
+3. Assign the public key to a Snowflake user
+
+A more descriptive explanation of these steps can be found in the official [Snowflake documenantation](https://docs.snowflake.com/en/user-guide/key-pair-auth).
+
+### 3.1.2 Setting up the key-pair authentication in a Mendix app
+
 
 ### 3.2 Configuring a Microflow for the Service
 

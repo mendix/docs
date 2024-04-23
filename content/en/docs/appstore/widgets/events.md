@@ -9,42 +9,44 @@ tags: ["marketplace", "marketplace component", "widget", "events", "platform sup
 
 ## 1 Introduction
 
-The [Events](https://marketplace.mendix.com/link/component/224259) widget allows you to execute an **action** when a component loads or when the context changed.
+The [Events](https://marketplace.mendix.com/link/component/224259) widget allows you to execute an [action](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#action) when a component loads or when the context is changed.
 
-For example, you can show a welcome message on page load, execute custom JavaScript (using a NF) when your data grid finished loading, or trigger a validation Microflow when an attribute changed. It also supports triggering an action with a delay or executing repeatedly with an interval timer.
+For example, you can show a welcome message on page load, execute custom JavaScript (using a nanoflow) when your data grid has finished loading, or trigger a validation microflow when an attribute has been changed. This widget also supports triggering an action with a delay, or executing an action repeatedly using an interval timer.
 
 ### 1.1 Features
+
+The events widget offers the following features:
 
 * Configurable events:
     * Component load
     * Attribute change
-* Supports execution delay and repeat
+* Supports execution delay and repetition
 
 ## 2 Configurations
 
-With [Events](https://marketplace.mendix.com/link/component/224259) widget, you can execute [actions](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#action) based on selected event type.
+With  the [Events](https://marketplace.mendix.com/link/component/224259) widget, you can execute [actions](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#action) based on the selected event type.
 
 ### 2.1 Events Tab {#general}
 
-#### 2.1.1 Component load
+#### 2.1.1 Component Load
 
-In this section, you could configure action to be executed on when the events widget load.
-The placement of this widget in design mode will be taken into consideration for load event to be triggered. \
-For example:
--   placing the **Events** widget on the top of the page to triggered a page load event. 
--   you could also place the widget in a popup to trigger **action** each time the pop up loaded.
+Using this property, you can configure an action to be executed when the event widget loads. The placement of this widget in design mode will be taken into consideration for load event to be triggered. 
 
-Configurations:
-* Action - selected **action*** that will be executed
-* Delay - timer delay to the first executed **action**. the value is in milisecond. setting it up to 0 will execute the **action** immediately.
-* Repeat - Selecting *yes* will repeat the event execution based on the repeat delay timer.
-    * Delay - timer interval between repeated action execution. the value is in milisecond.
+Some common usage examples:
+* Place the events widget on the top of a page to trigger a page load event. 
+* Place the widget in a popup to trigger an action each time the pop up loads.
 
-#### 2.1.2 On change
+Property configurations:
+* **Action** – Specifies the selected action that will be executed.
+* **Delay** – Puts a timer delay on the first executed action. The value is in milliseconds. Setting it to **0** will execute the action immediately.
+* **Repeat** – Selecting **Yes** will repeat the event execution based on the repeat delay timer.
+    * **Delay** – Time interval between repeated action executions. The value is in milliseconds.
 
-In this section, you could configure action to be executed when the selected attribute changed. You could place the widget inside data view, datagrid, or any other placement to find the correct attribute that you need to listened into.
+#### 2.1.2 On Change
 
-Configurations:
-* Attribute - selected attribute that will be listened into. **Action** will be executed when this attribute value changed.
-* Action - selected **action** that will be executed.
-* Delay - timer delay to the first executed event. the value is in milisecond. setting it up to 0 will execute the action immediately
+Using this property, you can configure an action to be executed when a selected attribute is changed. You can place the widget inside a data view, datagrid, or another component to find the correct attribute you want the events widget to listen to.
+
+Property configurations:
+* **Attribute** - Specifies the attribute that will be listened into. The **action** will be executed when this attribute value changed.
+* **Action** - Specifies the **action** that will be executed.
+* **Delay** - Adds a timer delay to the first executed event. The value is in milliseconds. Setting it to **0** will execute the action immediately.

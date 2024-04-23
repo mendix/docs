@@ -8,6 +8,7 @@ description_list: true
 tags: ["support", "sla", "standard", "premier", "platform", "extended support"]
 cascade:
     - space: "Mendix Support Guide"
+    - content_type: "Mendix Support Guide"
     - mendix_version: 10
 aliases:
     - /howtogeneral/support/index.html

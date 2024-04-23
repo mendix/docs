@@ -7,6 +7,7 @@ no_list: false
 description_list: true
 cascade:
     - space: "Catalog Guide"
+    - content_type: "Catalog Guide"
     - mendix_version: 10
 tags: ["data hub", "Catalog", "landscape", "external entities", "external users"]
 aliases:

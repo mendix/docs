@@ -7,6 +7,7 @@ no_list: false
 description_list: true
 cascade:
     - space: "Community Tools Guide"
+    - content_type: "Community Tools Guide"
     - mendix_version: 10
 tags: ["community", "documentation", "profile", "partner", "forum", "mvp", "support"]
 aliases:

@@ -376,48 +376,48 @@ In general, we recommend that you perform the following steps in case of any iss
 
 #### 6.2.1 Exceptions
 
-{{% alert color="info" %}} For module version 1.8.0 and above, errors that occur during the document generation process in the cloud/local service are now sent back to the module. If any error is received, this will cause the module to throw Document Generation specific exceptions.{{% /alert %}}
+{{% alert color="info" %}}For module version 1.8.0 and above, errors that occur during the document generation process in the cloud and local service are now sent back to the module. If any error is received, this will cause the module to throw Document Generation specific exceptions.{{% /alert %}}
 
-The sections below contain the exceptions that could occur during the document generation process and the suggested steps to verify the reason.
+The sections below contain the exceptions that can possibly occur during the document generation process and the suggested steps to verify the reason.
 
-##### 6.2.1.1 Wait for content exception
+##### 6.2.1.1 Wait for Content Exception
 
 In case you encounter a `DocGenWaitForContentException` exception with error code `DOCGEN_WAIT_FOR_CONTENT_ERROR` while generating a document, refer to the table below for more details and suggestions on how to resolve them.
 
-| Error message | Potential reasons |
-| ------------- | ----------------- |
-| "Failed while waiting for page content." | <ul><li>The required **Enable PDF export** design property is not set to **Yes** for the page you are trying to export to PDF.</li></ul><ul><li>Loading the page failed or took too much time. When this occurs, verify that the page loads successfully within the fixed timeout of 30 seconds and does not trigger any client errors. To verify this, we recommend temporarily adding the page to, for example, the app navigation.</li></ul><ul><li>A widget or add-on is being used in the `index.html` file that performs long polling network requests. This is not supported, since the document generation service waits until there are no more pending network requests.</li></ul> |
+| Error message                            | Potential reasons                                            |
+| ---------------------------------------- | ------------------------------------------------------------ |
+| "Failed while waiting for page content." | <ul><li>The required `Enable PDF export` design property is not set to *Yes* for the page you are trying to export to PDF.</li></ul><ul><li>Loading the page failed or took too much time. When this occurs, verify that the page loads successfully within the fixed timeout of 30 seconds and does not trigger any client errors. To verify this, we recommend temporarily adding the page to, for example, the app navigation.</li></ul><ul><li>A widget or add-on is being used in the `index.html` file that performs long polling network requests. This is not supported, since the document generation service waits until there are no more pending network requests.</li></ul> |
 
-##### 6.2.1.2 Navigation exception
+##### 6.2.1.2 Navigation Exception
 
 In case you encounter a `DocGenNavigationException` exception wıth error code `DOCGEN_NAVIGATION_ERROR` while generating a document, refer to the table below for more details and suggestions on how to resolve them.
 
-| Error message | Potential reasons |
-| ------------- | ----------------- |
-| "Failed to generate document due to an external redirect to: `https://example.com`." | An external redirect implemented in the `index.html` or a redirect widget, for example for SSO purposes. Verify and change your implementation accordingly. |
-| "Failed to generate document. Access denied and redirected to login page." | A failure occured when logging into the application, make sure that the module role `User` is assigned to the user who is passed in the `Generate as user` property of the `Generate PDF from page` action. |
-| "Failed to generate document. Page microflow could not be executed, check if the configured document user has the applicable access rights." | The configured document user does not have the applicable access rights to run the page microflow. In this case, there should be a warning in the logs mentioning User `<username>` attempted to run the microflow with action name `<page microflow>`, but does not have the required permissions. |
-| "Failed to navigate to page due to an error: `<error message>`." | The service was unable to reach the app, for example because: <ul><li>Your app is configured to [restrict access for incoming requests](/developerportal/deploy/access-restrictions/). This is not supported, also refer to the [limitations](#limitations) section.</li><li>A timeout or network error occured, try again.</li></ul>  |
-| "Failed to navigate to page due to an invalid response code: `<code>`." | The module rejected the request from the service, verify the application logs. |
+| Error message                                                | Potential reasons                                            |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| "Failed to generate document due to an external redirect to: `https://example.com`." | An external redirect implemented in the `index.html` or a redirect widget, for example, for SSO purposes. Verify and change your implementation accordingly. |
+| "Failed to generate document. Access denied and redirected to login page." | A failure occured when a user logs into the application. Make sure that the module role `User` is assigned to the user who is passed in the `Generate as user` property of the `Generate PDF from page` action. |
+| "Failed to generate document. Page microflow could not be executed, check if the configured document user has the applicable access rights." | The configured document user does not have the applicable access rights to run the page microflow. In this case, you can find a warning in the logs mentioning User `<username>` attempted to run the microflow with action name `<page microflow>`, but does not have the required permissions. |
+| "Failed to navigate to page due to an error: `<error message>`." | The service was unable to reach the app, for example due to the following reasons: <ul><li>Your app is configured to [restrict access for incoming requests](/developerportal/deploy/access-restrictions/). This is not supported. Also refer to the [limitations](#limitations) section.</li><li>A timeout or network error occurred. Try again.</li></ul> |
+| "Failed to navigate to page due to an invalid response code: `<code>`." | The module rejected the request from the service. Verify the application logs. |
 
-##### 6.2.1.3 Runtime exception
+##### 6.2.1.3 Runtime Exception
 
 In case you encounter a `DocGenRuntimeException` exception with error code `DOCGEN_RUNTIME_ERROR` while generating a document, refer to the table below for more details and suggestions on how to resolve them.
 
-| Error message | Potential reasons |
-| ------------- | ----------------- |
+| Error message                                                | Potential reasons                                            |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
 | "Failed to export to PDF due to an error: `<error message>`." | The service was unable to export the PDF due to a timeout or memory limitation. This can happen for large or complex documents. Try to reduce the number of widgets inside repeatable widgets as much as possible. |
-| "Failed to send result back: `<error message>`." | The service was unable to send the resulting PDF, this can happen if your document exceeds the maximum file size limit. If this is the case, we recommend compressing high-resolution images to reduce their file size. |
+| "Failed to send result back: `<error message>`."             | The service was unable to send the resulting PDF. This can happen if your document exceeds the maximum file size limit. If this is the case, we recommend compressing high-resolution images to reduce their file size. |
 
-If you encounter a `DocGenRuntimeException` exception with a message that is not mentioned in the table above, we recommend to [submit a support request](/support/submit-support-request/).
+If you encounter a `DocGenRuntimeException` exception with a message that is not mentioned in the table above, we recommend you [submit a support request](/support/submit-support-request/).
 
-##### 6.2.1.4 Polling exception
+##### 6.2.1.4 Polling Exception
 
-In case you encounter a `DocGenPollingException` exception while generating a document, this means that the module timed out while waiting for the service to send the resulting PDF. Verify if the application logs contain any other errors and perform a retry. 
+In case you encounter a `DocGenPollingException` exception while generating a document, this means that the module timed out while waiting for the service to send the resulting PDF. Verify if the application logs contain any other errors and try again.
 
-##### 6.2.1.5 Default exception
+##### 6.2.1.5 Default Exception
 
-In case you encounter a `DocGenException` exception with error code `DOCGEN_UNKNOWN_ERROR` while generating a document, we recommend to [submit a support request](/support/submit-support-request/).
+In case you encounter a `DocGenException` exception with error code `DOCGEN_UNKNOWN_ERROR` while generating a document, we recommend you [submit a support request](/support/submit-support-request/).
 
 #### 6.2.2 Rendering/Styling Issues
 

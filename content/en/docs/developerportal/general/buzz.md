@@ -12,7 +12,7 @@ tags: ["Buzz","Developer Portal"]
 
 Located in the Developer Portal, Buzz lets you see your app activity as well as collaborate and share ideas with your team. 
 
-{{< figure src="/attachments/developerportal/general/buzz/app-buzz.png" class="no-border" >}}
+{{< figure src="/attachments/developerportal/general/buzz/app-buzz.png">}}
 
 You can see the size of your **Team** and your team members on the right side of the page. Up to 25 team members can be displayed here at a time.
 

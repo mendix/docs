@@ -53,7 +53,7 @@ To use the ML model in your app, import it to create an ML mapping document.
 
 This generates two non-persistable entities representing your ML Model input and outputs (see [Persistable and Non-Persistable Entities](#persist-nonpersist-entities) below). Below is an example of import mapping of a [sample XGBoost ML model](https://github.com/mendix/mlkit-example-app/tree/main/mlsource/titanic_xgboost):
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/ml-model-created-entities.png" alt="Two non-persistable entities generated when importing an ONNX file." >}}
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/ml-model-created-entities.png" alt="Two non-persistable entities generated when importing an ONNX file." class="no-border" >}}
 
 If error CE1790 appears, you need to [set dynamic tensor shapes](#set-dynamic-shapes).
 
@@ -75,7 +75,7 @@ Tensors inject and retrieve information from a machine learning model. A distinc
 
 Studio Pro detects models with static shapes automatically and displays them in the mapping. The image below is a [ResNet50 model mapping](https://github.com/mendix/mlkit-example-app/tree/main/mlsource/resnet50) with static dimensions that accepts 1 image of 3 channels (colors) with a size of 224x224 pixels:
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/mapping-static-dimensions.png" alt="ResNet50 mapping with static dimensions. Described in the paragraph above." >}}
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/mapping-static-dimensions.png" alt="ResNet50 mapping with static dimensions. Described in the paragraph above." class="no-border" >}}
 
 ##### 2.2.2.2 Dynamic Shapes {#dynamic-shapes}
 
@@ -85,21 +85,21 @@ Several models (for example, [Yolo](https://github.com/onnx/models/tree/main/vis
 
 When importing your model, you might encounter error CE1790 like in this [BERT](https://github.com/onnx/models/blob/main/text/machine_comprehension/bert-squad/model/bertsquad-12-int8.onnx) example:
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/model-input-errors.png" alt="Red dots indicating CE1790 error." >}} 
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/model-input-errors.png" alt="Red dots indicating CE1790 error." class="no-border" >}} 
 
 1. Go to the error and double-click on the affected mapping line to open the **Edit ML model input shapes** dialog box:
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/edit-model-input-shapes.png" alt="Edit ML model input shape dialog box." >}}
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/edit-model-input-shapes.png" alt="Edit ML model input shape dialog box." class="no-border" >}}
 
 In this case, configure the **?** dimensions before using the mapping in a [Call ML model](/refguide/call-ml-model/) activity. Once filled in, static tensor shapes of an output mapping will be automatically calculated based on configured dimensions of the input entity mappings, like in the [BERT](https://github.com/onnx/models/blob/main/text/machine_comprehension/bert-squad/model/bertsquad-12-int8.onnx) example below.
 
 The editor for the BERT model is below:
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/bert-model-input-shapes.png" >}} 
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/bert-model-input-shapes.png" class="no-border" >}} 
 
 The completed mapping for the BERT model is below:
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/bert-model-entities.png" >}} 
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/bert-model-entities.png" class="no-border" >}} 
 
 {{% alert color="info" %}}Some of these shapes should be handled in [Java Action pre- and post-processors](#java-pre-post) you may have.{{% /alert %}}
 
@@ -107,7 +107,7 @@ The completed mapping for the BERT model is below:
 
 After importing a model, two [non-persistable](/refguide/persistability/) entities are created using the ML model *input* and *output* like in this [sample XGBoost ML model](https://github.com/mendix/mlkit-example-app/tree/main/mlsource/titanic_xgboost):
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/entities-example-1.png" alt="Input and output entities in the mapping document." >}}
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/entities-example-1.png" alt="Input and output entities in the mapping document." class="no-border" >}}
 
 In the image above, the attributes are mapped as closely as possible to data types in Studio Pro. 
 
@@ -115,7 +115,7 @@ For non-structured data, such as most of the tensors for Neural Networks, the at
 
 In the image below from the [ResNet50 model mapping](https://github.com/mendix/mlkit-example-app/tree/main/mlsource/resnet50), the inputs and outputs are multidimensional and need to be encoded:
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/entities-example-2.png" alt="Multidimensional outputs that need to be encoded." >}}
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/entities-example-2.png" alt="Multidimensional outputs that need to be encoded." class="no-border" >}}
 
 See [Integrating Models with Pre-processors and Post-processors](#pre-post-processors).
 
@@ -140,7 +140,7 @@ Drag and drop the [Call ML model](/refguide/call-ml-model/) activity from the To
 
 In the microflow below, a [Create object](/refguide/create-object/) activity creates an object of input entity type, mapped to input tensors in the ML mapping document. The [Call ML model](/refguide/call-ml-model/) activity calls the ML model, and a [Change object](/refguide/change-object/) activity updates business object with predicted value.
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/drag-action-into-microflow.png" alt="Completed ML mapping. Described in the paragraph above." >}}
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/drag-action-into-microflow.png" alt="Completed ML mapping. Described in the paragraph above." class="no-border" >}}
 
 #### 2.3.2 Call ML Model Activity Details
 
@@ -150,7 +150,7 @@ The **Call ML model** activity is an **ML Kit** activity in the **Toolbox**. For
 
 Integrating machine learning models can sometimes require using a more complex structure. This includes having a pre-processor, the ML model itself, and a post-processor:
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/pre-post-processing-microflow.png" alt="Example of a microflow that includes a pre-processor and post-processor." >}}
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/pre-post-processing-microflow.png" alt="Example of a microflow that includes a pre-processor and post-processor." class="no-border" >}}
 
 ### 3.1 Pre-processing and Post-processing Using Java Actions {#java-pre-post}
 
@@ -294,9 +294,9 @@ The [Log Message](/refguide/log-message/) activity is very flexible and can be u
 
 For example, a log message after an inference call made by the **Call ML Model** activity helps to observe the classification result of a ResNet model on a provided image:
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/exploit-log-message.png" alt="Image of a microflow with a log message activity." >}}
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/exploit-log-message.png" alt="Image of a microflow with a log message activity." class="no-border" >}}
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/log-message.png" alt="Details of the log message in a microflow example." >}}
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/log-message.png" alt="Details of the log message in a microflow example." class="no-border" >}}
 
 When you run the application and provide an image to make an inference, the **Console** will be populated with the related log message.
 

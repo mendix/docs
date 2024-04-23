@@ -67,7 +67,7 @@ This tool is executed on a Mendix Git repository. If your Mendix app is still on
 
 The cleanup tool will reduce the size of the repository to a minimum, by only retaining the latest commit of the main branch. This means that all work on branches that have been merged to main branch are kept, but the commits themselves (author, changes per commit, ...) are not.
 
-{{< figure src="/attachments/refguide/version-control/troubleshoot-version-control-issues/git_fixer_mode.png" >}}
+{{< figure src="/attachments/refguide/version-control/troubleshoot-version-control-issues/git_fixer_mode.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 Uncommitted work, or work committed to branches that have not been merged to the main branch, will be permanently removed from the repository.

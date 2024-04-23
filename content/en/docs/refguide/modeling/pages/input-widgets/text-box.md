@@ -22,7 +22,7 @@ A text box must be placed in a [data container](/refguide/data-widgets/) and dis
 
 For example, the following text box allows the end-user to see, and set, the **Name** of a customer.
 
-{{< figure src="/attachments/refguide/modeling/pages/input-widgets/text-box/text-box.png" >}}
+{{< figure src="/attachments/refguide/modeling/pages/input-widgets/text-box/text-box.png" class="no-border" >}}
 
 ## 2 Properties Pane
 

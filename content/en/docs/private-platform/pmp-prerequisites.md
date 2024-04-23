@@ -1,9 +1,11 @@
 ---
 title: "Private Mendix Platform Prerequisites"
-url: /private-mendix-platform-prerequisites/
+url: /private-mendix-platform/prerequisites/
 description: "Documents the requirements for the Private Mendix Platform."
 weight: 10
 tags: ["private mendix platform",  "private platform", "private marketplace", "prerequisites", "requirements", "hardware requirements", "network requirements", "software resource requirements", "infrastructure requirements"]
+aliases:
+    - /private-mendix-platform-prerequisites/
 ---
 
 ## 1 Introduction

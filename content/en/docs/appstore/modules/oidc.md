@@ -114,15 +114,15 @@ Once the Mx Model Reflection module has been imported into your app, you need to
 
 1. In the **App Explorer**, add the page **MxObjects_Overview** from the **MxModelReflection** folder to the Navigation menu.
 
-    {{< figure src="/attachments/appstore/modules/oidc/add-model-reflection.png" >}}
+    {{< figure src="/attachments/appstore/modules/oidc/add-model-reflection.png" class="no-border" >}}
 
 2. Run the app and click the newly-added navigation link to use Mx Model Reflection.
 
-    {{< figure src="/attachments/appstore/modules/oidc/model-reflection-button.png" >}}
+    {{< figure src="/attachments/appstore/modules/oidc/model-reflection-button.png" class="no-border" >}}
 
 3. Select the modules **MxModelReflection** and **OIDC**  and click **Click to refresh** for both the modules and the entities.
 
-    {{< figure src="/attachments/appstore/modules/oidc/refresh-model.png" >}}
+    {{< figure src="/attachments/appstore/modules/oidc/refresh-model.png" class="no-border" >}}
 
 ### 3.2 Migrating from Community Edition to Platform Edition{#migration}
 
@@ -166,7 +166,7 @@ Ensure that you have allocated the following user roles to the OIDC module roles
 | Anonymous | OIDC.Anonymous |
 | User | OIDC.User |
 
-{{< figure src="/attachments/appstore/modules/oidc/user-roles.png" >}}
+{{< figure src="/attachments/appstore/modules/oidc/user-roles.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 You may have to add the *Anonymous* user role if it does not exist already.
@@ -181,7 +181,7 @@ In the **Anonymous** tab of the app security settings, do the following:
 1. Set **Allow anonymous users** to **Yes**
 2. Select *Anonymous* as the **Anonymous user role**
 
-{{< figure src="/attachments/appstore/modules/oidc/anonymous-user.png" >}}
+{{< figure src="/attachments/appstore/modules/oidc/anonymous-user.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 If a single Identity Provider (IdP) is configured in the OIDC SSO module, end-users can be authenticated via the URL `https://<your-app-url>/oauth/v2/login`.
@@ -494,7 +494,7 @@ This section is only relevant if you are a Mendix partner and you want to integr
 To parse of SAM access tokens you need to do the following when performing [OIDC Client Configuration](#client-configuration):
 
 1. Select *OIDC.Default_SAM_TokenProcessing_CustomATP* as the **custom AccessToken processing microflow**.
-    {{< figure src="/attachments/appstore/modules/oidc/enable-sam-parsing.png" >}}
+    {{< figure src="/attachments/appstore/modules/oidc/enable-sam-parsing.png" class="no-border" >}}
 1. Add the scopes `sam_account`, `samauth.role`, `samauth.tier`, and `samauth.ten` to the **Selected Scopes** in the OIDC Client Configuration.
 1. Configure the user roles in your app to match the roles returned by SAM. End-users will be given the matching role when they sign into the app. If the role in the SAM token is not found in the Mendix app the end-user will be given the role `User`.
 1. Save the configuration.
@@ -515,7 +515,7 @@ To parse the OIDC Provider access tokens you need to do the following when perfo
 
 1. Select `OIDC.Default_OIDCProvider_TokenProcessing_CustomATP` as the **custom AccessToken processing microflow**.
 
-    {{< figure src="/attachments/appstore/modules/oidc/enable-oidc-provider-parsing.png" >}}
+    {{< figure src="/attachments/appstore/modules/oidc/enable-oidc-provider-parsing.png" class="no-border" >}}
 
 2. Add the scopes `openid` and the ModelGUID or Name to the **Selected Scopes** in the OIDC Client Configuration. The ModelGUID will look something like `53f5d6fa-6da9-4a71-b011-454ec052cce8`.
 
@@ -602,7 +602,7 @@ A standard logout action will end an end-user's Mendix session, but will not end
 
 To do this, add a menu item or button for your end-users that calls the nanoflow `ACT_Logout`.
 
-### 8.5 Use ACR to Request Authentication Method
+### 8.5 Using ACR to Request Authentication Method
 
 By default, the OIDC SSO module does not care how users are signed in at your IdP, that is left to the discretion of the IdP. In some cases your IdP may support different methods for end-users to be authenticated and your app may want to indicate a preference.
 
@@ -626,7 +626,7 @@ To configure the ACR value (or values) in the OIDC SSO module, follow these step
 
 When you have configured multiple ACR values for your IdP, the OIDC module shows the ACR values as additional ways to sign in on the default login page.
 
-{{< figure src="/attachments/appstore/modules/oidc/login-acr-options.png" >}}
+{{< figure src="/attachments/appstore/modules/oidc/login-acr-options.png" class="no-border" >}}
 
 #### 8.5.3 Customizing the Login Page
 
@@ -703,7 +703,7 @@ If you have deployed your app on premises but did not configure a return URL for
 
 To resolve this, open the Mendix Service Console and ensure that the **Port number** for the **Public application root URL**, **Runtime server port**, and **Admin server port** match.
 
-{{< figure src="/attachments/appstore/modules/oidc/service-console-ports.png" >}}
+{{< figure src="/attachments/appstore/modules/oidc/service-console-ports.png" class="no-border" >}}
 
 ### 9.5 `CommunityCommons.RandomStrongPassword` microflow does not match the expected parameters
 
@@ -713,4 +713,4 @@ This error indicates that new parameters must be synced with the microflow.
 
 To resolve this issue, either open the microflow used for the OIDC SSO module or refresh it before deploying your Mendix app again.
 
-{{< figure src="/attachments/appstore/modules/oidc/Community Commons error.png" >}}
+{{< figure src="/attachments/appstore/modules/oidc/Community Commons error.png" class="no-border" >}}

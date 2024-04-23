@@ -45,19 +45,19 @@ If you have downloaded a full backup, this will also have been archived as a *.t
 2. Click the **+** in the **Browser** pane to open the **Servers > PostgreSQL 9.6** menu.
 3. Right-click **Databases** and **Create** a new database.
 
-    {{< figure src="/attachments/developerportal/operate/backups/restore-backup-locally/add-database.png" >}}
+    {{< figure src="/attachments/developerportal/operate/backups/restore-backup-locally/add-database.png" class="no-border" >}}
 
 4. Fill in the **Database** name.
 5. Select the correct owner (the default is **postgres**) and click **Save**.
 6. Right-click the newly created database and click **Restore**.
 
-    {{< figure src="/attachments/developerportal/operate/backups/restore-backup-locally/restore-database.png" >}}
+    {{< figure src="/attachments/developerportal/operate/backups/restore-backup-locally/restore-database.png" class="no-border" >}}
 
 7. Select the **.backup** file you downloaded from the Team Server.
 8. Click the **Restore options** tab.
 9. Under **Do not save**, set **Owner** to **Yes**.
 
-    {{< figure src="/attachments/developerportal/operate/backups/restore-backup-locally/restore-options.png" >}}
+    {{< figure src="/attachments/developerportal/operate/backups/restore-backup-locally/restore-options.png" class="no-border" >}}
 
 10. Click **Restore**.
 11. Wait until you see a message that the backup is "Successfully completed." This message appears in the right corner of the screen.
@@ -69,11 +69,11 @@ After the backup has been restored as a local Postgres database, you have to lin
 1. Open your app in **Studio Pro**.
 2. Open **App > Settings** from the **App Explorer**.
 
-    {{< figure src="/attachments/developerportal/operate/backups/restore-backup-locally/app-settings.png" >}}
+    {{< figure src="/attachments/developerportal/operate/backups/restore-backup-locally/app-settings.png" class="no-border" >}}
 
 3. Under the tab **Configurations**, click **New**.
 
-    {{< figure src="/attachments/developerportal/operate/backups/restore-backup-locally/add-configuration.png" >}}
+    {{< figure src="/attachments/developerportal/operate/backups/restore-backup-locally/add-configuration.png" class="no-border" >}}
 
 4. Fill in the database information:
     * **Name**: *{a unique name}*
@@ -98,11 +98,11 @@ If you also want to restore the **FileDocuments**, follow these steps:
 
 1. Download a **Full Snapshot**.
 
-    {{< figure src="/attachments/developerportal/operate/backups/restore-backup-locally/backup-choice.png" width=75% alt="" >}}
+    {{< figure src="/attachments/developerportal/operate/backups/restore-backup-locally/backup-choice.png" width=75% alt="" class="no-border" >}}
 
 2. Select **App** > **Show App Directory in Explorer** from the Studio Pro menu:
 
-    {{< figure src="/attachments/developerportal/operate/backups/restore-backup-locally/project-directory.png" >}}
+    {{< figure src="/attachments/developerportal/operate/backups/restore-backup-locally/project-directory.png" class="no-border" >}}
 
 3. Navigate to the **deployment/data/files** folder within your app.
 4. Extract the *{backup name}.tar* file from the *.gz* archive using a program like **7-zip**.

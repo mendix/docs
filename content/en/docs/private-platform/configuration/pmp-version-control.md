@@ -1,9 +1,11 @@
 ---
 title: "Configuring the Version Control System for Private Mendix Platform"
-url: /private-mendix-platform-version-control/
+url: /private-mendix-platform/version-control/
 description: "Documents the initial configuration for the Private Mendix Platform."
 weight: 30
 tags: ["private mendix platform",  "private platform", "private marketplace", "version control"]
+aliases:
+    - /private-mendix-platform-version-control/
 ---
 
 ## 1 Introduction
@@ -23,7 +25,7 @@ This section describes the configuration of a GitLab repository.
 
 ### 2.1 DevOps Settings
 
-{{< figure src="/attachments/private-platform/pmp-vc1.png" >}}
+{{< figure src="/attachments/private-platform/pmp-vc1.png" class="no-border" >}}
 
 #### 2.1.1 Host URL
 
@@ -33,7 +35,7 @@ This is the host URL of your GitLab server. The format should be `https://<HOST>
 
 All the apps on Private Mendix Platform are created under a GitLab group. You need to create a group in GitLab and then input the *Group ID* in this field.
 
-{{< figure src="/attachments/private-platform/pmp-vc2.png" >}}
+{{< figure src="/attachments/private-platform/pmp-vc2.png" class="no-border" >}}
 
 #### 2.1.3 Group owner PAT
 
@@ -65,7 +67,7 @@ This section describes the configuration of a GitHub repository.
 
 ### 3.1 DevOps Settings
 
-{{< figure src="/attachments/private-platform/pmp-vc3.png" >}}
+{{< figure src="/attachments/private-platform/pmp-vc3.png" class="no-border" >}}
 
 #### 3.1.1 Host URL
 
@@ -109,7 +111,7 @@ This section describes the configuration of a Bitbucket repository.
 
 ### 4.1 DevOps Settings
 
-{{< figure src="/attachments/private-platform/pmp-vc4.png" >}}
+{{< figure src="/attachments/private-platform/pmp-vc4.png" class="no-border" >}}
 
 #### 4.1.1 Host URL
 
@@ -173,7 +175,7 @@ In Azure DevOps, you must create an organization and a PAT for the admin user. Y
 
 ### 5.3 DevOps Settings
 
-{{< figure src="/attachments/private-platform/pmp-vc5.png" >}}
+{{< figure src="/attachments/private-platform/pmp-vc5.png" class="no-border" >}}
 
 #### 5.1.1 Host URL
 

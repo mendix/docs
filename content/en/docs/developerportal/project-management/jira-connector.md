@@ -58,7 +58,7 @@ To connect your app to Jira, perform the following steps:
 
 4. Click **Connect Jira**. The **Set Up Jira Configuration** dialog box opens.
 
-    {{< figure src="/attachments/developerportal/project-management/jira-connector/set-up-jira-configuration.png"   >}}
+    {{< figure src="/attachments/developerportal/project-management/jira-connector/set-up-jira-configuration.png"   class="no-border" >}}
 
     Fill in the information as follows:
 
@@ -71,7 +71,7 @@ To connect your app to Jira, perform the following steps:
 
 6. If your Jira project has several boards configured, from the drop-down list, select one of the Jira boards to connect. We support Scrum, simplified Scrum, and Kanban board types.
 
-    {{< figure src="/attachments/developerportal/project-management/jira-connector/connect-jira-board.png"   >}}
+    {{< figure src="/attachments/developerportal/project-management/jira-connector/connect-jira-board.png"   class="no-border" >}}
 
 7. Click **Activate** to activate the connection. 
 
@@ -89,13 +89,13 @@ Once the activation is completed, your app is connected to Jira. You can see the
 * After you commit your changes in Studio Pro, you can see the associated Jira stories in the details of the corresponding [revision](/developerportal/general/team-server/#revision-details) in the **Team Server** page of the Developer Portal.
 * You can see the link to your Jira board in the **Project Management** section of the Developer Portal.
 
-    {{< figure src="/attachments/developerportal/project-management/jira-connector/navigation-jira.png"   >}}
+    {{< figure src="/attachments/developerportal/project-management/jira-connector/navigation-jira.png"   class="no-border" >}}
 
 ## 6 View Settings
 
 After you activated the Jira connector, you can review the configuration details any time.
 
-{{< figure src="/attachments/developerportal/project-management/jira-connector/jira-configuration-details.png" >}}
+{{< figure src="/attachments/developerportal/project-management/jira-connector/jira-configuration-details.png" class="no-border" >}}
 
 If you need to connect to a different Jira environment, or need to rotate the API key used by the Jira connector, click **Edit Connection Details**. If you want to switch to a different Jira board within the same environment, click **Change Board**.
 

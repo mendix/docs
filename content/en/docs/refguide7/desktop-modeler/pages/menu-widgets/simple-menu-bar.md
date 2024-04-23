@@ -9,11 +9,11 @@ The simple menu bar widget shows a configured menu in the form of a horizontal o
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide7/desktop-modeler/pages/menu-widgets/simple-menu-bar/simple-menu-bar-horizontal.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/menu-widgets/simple-menu-bar/simple-menu-bar-horizontal.png" class="no-border" >}}
 
 {{% /alert %}}{{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide7/desktop-modeler/pages/menu-widgets/simple-menu-bar/simple-menu-bar-vertical.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/menu-widgets/simple-menu-bar/simple-menu-bar-vertical.png" class="no-border" >}}
 
 {{% /alert %}}
 

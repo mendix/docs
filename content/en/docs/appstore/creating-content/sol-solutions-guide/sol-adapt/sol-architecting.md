@@ -69,7 +69,7 @@ For design-time adaptations, Mendix recommends referencing [How to Set Up a Solu
 
 The customer model instances will run with [IP protection](/appstore/creating-content/sol-ip-protection/) enabled, meaning that parts of the original solution model can be hidden. Once the solution is published with the protected solution models, this implementation hiding cannot be undone by the consumer of the solution model.
 
-{{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-adapt/solution-deployment.png" alt="Development and deployment model for Solution Implementation"  width="50%" >}}
+{{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-adapt/solution-deployment.png" alt="Development and deployment model for Solution Implementation"  width="50%" class="no-border" >}}
 
 ### 3.4 Customers Without Adaptation
 

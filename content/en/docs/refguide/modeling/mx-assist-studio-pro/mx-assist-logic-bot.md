@@ -35,25 +35,25 @@ It is available for use when you are not signed in to Studio Pro, but you need t
 
 MxAssist Logic Bot is displayed as a blue dot in the flow. When you want to view recommendations on a particular flow, you can hover the mouse over that flow and click on the blue circle, or navigate to it with the keyboard and press <kbd>Enter</kbd>.
 
-{{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-assist-logic-bot/assist-bulb.png" >}}
+{{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-assist-logic-bot/assist-bulb.png" class="no-border" >}}
 
 A Logic Bot dialog box is shown with recommendations of objects or activities to insert. This list initially contains the top 10 contextual suggestions. You can select an element directly from the recommendation list:
 
-{{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-assist-logic-bot/initial-recommendations.png" >}}
+{{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-assist-logic-bot/initial-recommendations.png" class="no-border" >}}
 
 You can also type in the search box to search for the elements that you want to add to the flow. MxAssist Logic Bot works with fuzzy search, which means that it finds direct matches first and then any matches in the recommendations. For instance, you can use `cr ob`  to search for the recommendations that contain **Create Object**.
 
 The search is based on your microflow or nanoflow parameters, domain model entities, or the documents in your app. You can search for generic activities or elements from the toolbox:
 
-{{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-assist-logic-bot/search-toolbox.png" width="500px" >}}
+{{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-assist-logic-bot/search-toolbox.png" width="500px" class="no-border" >}}
 
 You can search for sub-actions of an aggregate list or list operation activity, such as sum, count, or average:
 
-{{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-assist-logic-bot/search-sub-actions.png" >}}
+{{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-assist-logic-bot/search-sub-actions.png" class="no-border" >}}
 
 You can also use the search to call microflows or nanoflows with a concrete document:
 
-{{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-assist-logic-bot/search-microflows-nanoflows.png" >}}
+{{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-assist-logic-bot/search-microflows-nanoflows.png" class="no-border" >}}
 
 Choose a suggestion with the arrow keys and press the <kbd>Enter</kbd> key to accept it. The suggested element will be added to the flow and the Logic Bot will open on the next flow so that you can continue adding activities.
 
@@ -71,7 +71,7 @@ To use this older version of MxAssist Logic Bot, do the following:
 
 1. Click the icon to see the next best action recommendations:
 
-    {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-assist-logic-bot/mx-assist-recommendations.png" alt="Logic Bot Recommendations" >}}
+    {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-assist-logic-bot/mx-assist-recommendations.png" alt="Logic Bot Recommendations" class="no-border" >}}
 
 2. Click one of the recommended activities to insert it into a microflow.
 

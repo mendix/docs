@@ -16,13 +16,13 @@ A checkbox must be placed in a [data widget](/refguide8/data-widgets/) and displ
 
 For example, this checkbox allows you to see, and set, whether someone is subscribed to your newsletter.
 
-{{< figure src="/attachments/refguide8/modeling/pages/input-widgets/check-box/check-box.png" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/input-widgets/check-box/check-box.png" class="no-border" >}}
 
 ## 2 Properties
 
 An example of checkbox properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/pages/input-widgets/check-box/check-box-properties.png"   width="250"  >}}
+{{< figure src="/attachments/refguide8/modeling/pages/input-widgets/check-box/check-box-properties.png"   width="250"  class="no-border" >}}
 
 Checkbox properties consist of the following sections:
 

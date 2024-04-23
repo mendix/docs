@@ -130,7 +130,7 @@ You can use Mendix to verify your webhook; the [Community Commons](/appstore/mod
 1. Prefix this hashed string with the prefix from the webhook signature (for example, `v1,`).
 1. Compare the string you have created (the hash and the prefix) with the `webhook-signature` you retrieved from the list of `System.HttpHeader` objects earlier. If the two strings match, then the webhook call is valid.
 
-{{< figure src="/attachments/developerportal/deploy/webhooks/validation-microflow.png" alt="Completed validation microflow" >}}
+{{< figure src="/attachments/developerportal/deploy/webhooks/validation-microflow.png" alt="Completed validation microflow" class="no-border" >}}
 
 ## 5 Package Upload to the Developer Portal
 

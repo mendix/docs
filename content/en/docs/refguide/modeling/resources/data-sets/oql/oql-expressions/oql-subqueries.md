@@ -30,7 +30,7 @@ FROM
 
 If a subquery is used in a `SELECT` clause, it should return exactly one column and at most one row. If it returns no rows, the value is replaced with `NULL`.
 
-The subquery can refer to attributes of other entities and subqueries in the main query's `FROM` clause. Those attributes can be referenced only by name, not by alias (In the example above, attribute `ZipCodeValue` has an alias in the main query, bit it is referenced by name in the subquery).
+The subquery can refer to attributes of other entities and subqueries in the main query's `FROM` clause. Those attributes can be referenced only by name, not by alias (In the example above, attribute `ZipCodeValue` has an alias in the main query, but it is referenced by name in the subquery).
 
 Other entities and subqueries in the main query's `FROM` clause can only be referenced by alias, if there is one. If no alias is set, they can be referenced by name (In the example above, entity `Module.ZipCode` has an alias in the main query, and that alias is used in the subquery).
 
@@ -62,7 +62,7 @@ FROM
 
 A subquery can be used in the `FROM` clause of the main query in the same manner as an entity name. When used in a `FROM` clause, a subquery can return multiple columns and multiple rows.
 
-In contrast with subquery in a `SELECT` clause, a subquery in a `FROM` clause cannot contain references to other entities and subqueries declared in the main query's `FROM` clause.
+In contrast with a subquery in a `SELECT` clause, a subquery in a `FROM` clause cannot contain references to other entities and subqueries declared in the main query's `FROM` clause.
 
 ## 4 Subquery in WHERE
 

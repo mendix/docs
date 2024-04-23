@@ -55,18 +55,20 @@ The **Source** option (required) is used is used to configure the datasource typ
 * [Database](#database)
 * [Static](#static)
 
-#### Context {#context}
+##### 2.1.1.1 Context {#context}
 
 When Context source is selected, the **Data source** section (required) configures the type of the context. It supports the following data types via these properties:
 * [Association](/refguide/association-source/)
 * [Enumeration](/refguide/enumerations/)
 * [Boolean](/refguide/boolean-expressions/)
 
-#### Database List {#database}
-Database source type can be used to set the value of a *String* or *Integer* attribute with options fetched from an attribute with the same type.
+##### 2.1.1.2 Database List {#database}
 
-#### Static Values {#static}
-Static source type can be used to set the value of a *String* attribute with manually configured values.
+The database source type can be used to set the value of a string or interger attribute with options fetched from an attribute with the same type.
+
+##### 2.1.1.3 Static Values {#static}
+
+The static source type can be used to set the value of a string attribute with manually configured values.
 
 #### 2.1.2 General Tab
 

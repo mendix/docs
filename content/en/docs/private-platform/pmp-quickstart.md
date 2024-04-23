@@ -232,13 +232,12 @@ The installer does not catch your pod's running status. In case of issues, verif
 If you have installed Private Mendix Platform before, you can upgrade it by doing the following steps:
 
 1. Ensure that your Mendix Operator version is 2.12 or newer.
-2. Reinstall PCLM as described in the [Installing Private Cloud License Manager](#install-pclm) section above.
-3. Run the command `./installer platform -n=<namespace name>`, where `-n` indicates the namespace where your Private Mendix Platform is installed.
-4. Click **Upgrade Namespace**.
+2. Run the command `./installer platform -n=<namespace name>`, where `-n` indicates the namespace where your Private Mendix Platform is installed.
+3. Click **Upgrade Namespace**.
 
     {{< figure src="/attachments/private-platform/pmp-upgrade1.png" class="no-border" >}}
 
-5. Verify the following settings:
+4. Verify the following settings:
     
     * **Persist Config** - When enabled, this setting locks the Private Mendix Platform configuration, so that it can no longer be modified from the user interface.
     * **Project Management** - Recommended. Enables you to create and manage your app projects. Enables app projects and related settings across the portal. Must be enabled for CI/CD capabilities.
@@ -248,7 +247,7 @@ If you have installed Private Mendix Platform before, you can upgrade it by doin
     * **IDP** - Optional. Enable users to login using SSO by configuring your IdP integration.
     * **Webhook** - Optional. Webhooks allow to send information between platform and external systems, and can be triggered by events around Apps, Users, Groups, Marketplace and CI/CD.
 
-6. Click **Run Upgrade**.
+5. Click **Run Upgrade**.
 
     {{< figure src="/attachments/private-platform/pmp-upgrade2.png" class="no-border" >}}
 

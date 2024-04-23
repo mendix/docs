@@ -8,6 +8,7 @@ no_list: false
 description_list: true
 cascade:
     - space: "Studio Pro 9"
+    - content_type: "Studio Pro 9"
     - mendix_version: 9
     - old_content: true
     - notsitemap: true

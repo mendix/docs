@@ -7,6 +7,7 @@ no_list: false
 description_list: true 
 cascade:
     - space: "Private Mendix Platform Guide"
+    - content_type: "Private Mendix Platform Guide"
     - mendix_version: 10
 tags: ["private mendix platform",  "private platform", "private marketplace"]
 ---

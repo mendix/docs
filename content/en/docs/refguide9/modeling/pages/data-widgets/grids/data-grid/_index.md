@@ -12,7 +12,7 @@ tags: ["studio pro", "data grid", "grid", "data widget"]
 
 A data grid shows a list of objects in a table format. For example, a data grid can show customer's name, grade, and all the orders a customer has placed:
 
-{{< figure src="/attachments/refguide9/modeling/pages/data-widgets/grids/data-grid/data-grid.png" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/data-widgets/grids/data-grid/data-grid.png" class="no-border" >}}
 Using controls provided by the data grid you can browse, search, and edit those objects.
 
 Any changes made to an object are visible in all widgets. This is because changes are stored globally in the client. See [Object Activities](/refguide9/object-activities/) for more information.
@@ -25,13 +25,13 @@ A data grid contains the following components:
 2. [Control bar](/refguide9/control-bar/) – allows you to control the objects displayed in the data grid by means of buttons
 3. [Sort bar](/refguide9/sort-bar/) – allows end-users to sort items in the data grid 
 4. [Grid Columns](/refguide9/columns/) – allows end-users to set properties for a data grid column
-    {{< figure src="/attachments/refguide9/modeling/pages/data-widgets/grids/data-grid/data-grid-components.png" >}}
+    {{< figure src="/attachments/refguide9/modeling/pages/data-widgets/grids/data-grid/data-grid-components.png" class="no-border" >}}
 
 ## 3 Properties
 
 An example of data grid properties is represented in the image below:
 
-{{< figure src="/attachments/refguide9/modeling/pages/data-widgets/grids/data-grid/data-grid-properties.png"   width="250"  >}}
+{{< figure src="/attachments/refguide9/modeling/pages/data-widgets/grids/data-grid/data-grid-properties.png"   width="250"  class="no-border" >}}
 
 Data grid properties consist of the following sections:
 

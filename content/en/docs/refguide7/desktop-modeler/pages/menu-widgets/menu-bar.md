@@ -8,7 +8,7 @@ url: /refguide7/menu-bar/
 
 The menu bar widget shows a configured menu in the form of a horizontal bar with items. Items can have subitems in which case the main item can be expanded. Subitems cannot have subitems again. In the end a [Menu Item](/refguide7/menu-item/) points to either the page or the microflow that will opened or started when the item is clicked.
 
-{{< figure src="/attachments/refguide7/desktop-modeler/pages/menu-widgets/menu-bar/menu-bar.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/menu-widgets/menu-bar/menu-bar.png" class="no-border" >}}
 
 ## 2 Common Properties
 

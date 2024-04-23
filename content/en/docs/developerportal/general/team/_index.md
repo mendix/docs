@@ -21,7 +21,7 @@ To view and manage your team members, follow these steps:
 
 Only team members with the [Scrum Master](/developerportal/general/app-roles/#team-roles) role can manage the app team.
 
-{{< figure src="/attachments/developerportal/general/team/team.png" >}}
+{{< figure src="/attachments/developerportal/general/team/team.png" class="no-border" >}}
 
 On the **Overview** tab, you can do the following:
 
@@ -31,7 +31,7 @@ On the **Overview** tab, you can do the following:
 
 Navigate to the **Role Settings** tab to view and edit permissions for the team roles as well as to **Add New Role**:
 
-{{< figure src="/attachments/developerportal/general/team/role-settings.png"   width="400"  >}}
+{{< figure src="/attachments/developerportal/general/team/role-settings.png"   width="400"  class="no-border" >}}
 
 Navigate to the **History** tab to view the history of changes for the team and [node permissions](/developerportal/deploy/node-permissions/).
 

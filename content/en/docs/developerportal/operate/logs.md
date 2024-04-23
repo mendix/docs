@@ -28,7 +28,7 @@ To view logs, you must have **Access to Monitoring** permission. For more inform
 
 When your app is deployed to Mendix Cloud, it automatically creates daily app and access logs. On the **Logs** page, you can view archived logs, view the live log, and view log access activity.
 
-{{< figure src="/attachments/developerportal/operate/logs/logs-archives.png" alt="Logs Page" >}}
+{{< figure src="/attachments/developerportal/operate/logs/logs-archives.png" alt="Logs Page" class="no-border" >}}
 
 For apps deployed to Mendix Cloud, you can select which environment you want logs for. Viewing production logs requires [two-factor authentication](/developerportal/deploy/two-factor-authentication/).
 
@@ -46,13 +46,13 @@ File sizes are displayed for archived logs, but in-progress logs show the label 
 
 By default, archived logs are sorted by date; the current log is the first one listed. You can manually click through the archived logs or use the search field to find logs for a specific date.
 
-{{< figure src="/attachments/developerportal/operate/logs/logs-filter.png" alt="" >}}
+{{< figure src="/attachments/developerportal/operate/logs/logs-filter.png" alt="" class="no-border" >}}
 
 ### 2.2 Live Log
 
 Click **View Live Log** to access your app's log in real time. You can use the drop-down menus to adjust the log sources and log levels that appear in the live log.
 
-{{< figure src="/attachments/developerportal/operate/logs/live-log.png" alt="" >}} 
+{{< figure src="/attachments/developerportal/operate/logs/live-log.png" alt="" class="no-border" >}} 
 
 {{% alert color="info" %}}
 The live log displays in the local time of the browser. All other logs have timestamps in UTC.
@@ -72,6 +72,6 @@ The activity log records access by team members as well as members of Mendix Sup
 
 Archived logs are not available for Free Apps. The **Logs** page displays sample data instead of archived data for your app.
 
-{{< figure src="/attachments/developerportal/operate/logs/free-app.png" alt="" >}}
+{{< figure src="/attachments/developerportal/operate/logs/free-app.png" alt="" class="no-border" >}}
 
 You can still interact with the sample data, and you can click **View Live Log** to access a live log of your deployed Free App.

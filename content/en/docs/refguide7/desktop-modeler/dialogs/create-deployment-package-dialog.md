@@ -9,7 +9,7 @@ With this dialog box, you can create a deployment package. A deployment package 
 
 To open the **Create Deployment Package** dialog box, go to **Project > Create Deployment Package**.
 
-{{< figure src="/attachments/refguide7/desktop-modeler/dialogs/create-deployment-package-dialog/create-deployment-package-dialog.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/dialogs/create-deployment-package-dialog/create-deployment-package-dialog.png" class="no-border" >}}
 
 ## 2 Versioned
 

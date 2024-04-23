@@ -21,7 +21,7 @@ A Mendix commit does not always behave like a database commit. See [How Commits 
 
 An example of **Commit object(s)** properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/committing-objects/commit-properties.png" alt="commit object(s) properties" width="650px" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/committing-objects/commit-properties.png" alt="commit object(s) properties" width="650px" class="no-border" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
@@ -135,4 +135,4 @@ During commits, the following occurs:
 * Result:
     * An object with the state **Instantiated** is inserted into the database, and an object with any other state is updated
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/committing-objects/during-commits.png" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/committing-objects/during-commits.png" class="no-border" >}}

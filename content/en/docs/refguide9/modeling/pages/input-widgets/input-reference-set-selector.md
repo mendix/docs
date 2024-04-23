@@ -18,25 +18,25 @@ For example, you could group customers into groups, and each customer could belo
 
 What you can do with an input reference set selector depends on the **Owner** of the association. In the example domain model below, **Owner** is set to **Default** (in the association properties **'Customer' objects refer to 'Group' objects**).
 
-{{< figure src="/attachments/refguide9/modeling/pages/input-widgets/input-reference-set-selector/domain-model-owner-default.png" alt="The domain model for an input reference set selector between Customer (parent) and Group where the owner is 'default' (as in, the Customer refers to the Group)" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/input-widgets/input-reference-set-selector/domain-model-owner-default.png" alt="The domain model for an input reference set selector between Customer (parent) and Group where the owner is 'default' (as in, the Customer refers to the Group)" class="no-border" >}}
 
 You can put an input reference set selector in a Customer data view to allow the user to select the Group(s) to which the customer belongs. However, because the Customer is the owner of the association, you cannot put an input reference set selector in a Group data view to select the Customer(s) in the Group.
 
 To allow you to both add a Group to a Customer, and add a Customer to a Group, you need to set ownership of the association to **Both**.
 
-{{< figure src="/attachments/refguide9/modeling/pages/input-widgets/input-reference-set-selector/domain-model-owner-both.png" alt="The domain model for an input reference set selector between Customer (parent) and Group where the owner is 'both' (as in, the Customer and Group refer to each other)" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/input-widgets/input-reference-set-selector/domain-model-owner-both.png" alt="The domain model for an input reference set selector between Customer (parent) and Group where the owner is 'both' (as in, the Customer and Group refer to each other)" class="no-border" >}}
 
 In the input reference set selector, the path to the attribute to be displayed (association, related entity, and attribute) is shown inside the input reference set selector, displayed between square brackets, and colored blue.
 
 For example, using the domain model above, the following input reference set selector allows the end-user to associate a Customer with one or more Groups by setting the association **Customer_Group**. This is done by selecting the **Name**(s) of the **Group**(s) associated with the current **Customer**.
 
-{{< figure src="/attachments/refguide9/modeling/pages/input-widgets/input-reference-set-selector/input-reference-set-selector.png" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/input-widgets/input-reference-set-selector/input-reference-set-selector.png" class="no-border" >}}
 
 ## 2 Properties
 
 An example of input reference set selector properties is represented in the image below:
 
-{{< figure src="/attachments/refguide9/modeling/pages/input-widgets/input-reference-set-selector/input-reference-set-selector-properties.png"   width="250"  >}}
+{{< figure src="/attachments/refguide9/modeling/pages/input-widgets/input-reference-set-selector/input-reference-set-selector-properties.png"   width="250"  class="no-border" >}}
 
 Reference set selector properties consist of the following sections:
 

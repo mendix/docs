@@ -17,7 +17,7 @@ The **Microflow call** activity can be used to call a [microflow](/refguide/micr
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/microflow-call/microflow-call-properties.png" alt="Microflow Call Properties" width="700px" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/microflow-call/microflow-call-properties.png" alt="Microflow Call Properties" width="700px" class="no-border" >}}
 
 The **Microflow call** properties pane consists of the following sections:
 

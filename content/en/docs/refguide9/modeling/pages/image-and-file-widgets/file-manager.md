@@ -12,7 +12,7 @@ tags: ["studio pro", "file manager", "file widget", "widget"]
 
 A file manager is used to upload and/or download files.
 
-{{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/file-manager/file-manager.png" alt="File Manager" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/file-manager/file-manager.png" alt="File Manager" class="no-border" >}}
 
 A file manager must be placed inside a data view connected to the entity that is either a **System.FileDocument** (or a specialization) or an [external entity](/refguide9/external-entities/) with a `Contents` binary attribute.
 
@@ -30,7 +30,7 @@ A form is submitted just before a microflow or nanoflow is called or when the pa
 
 An example of file manager properties is represented in the image below:
 
-{{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/file-manager/file-manager-properties.png" alt="File Manager Properties"   width="250"  >}}
+{{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/file-manager/file-manager-properties.png" alt="File Manager Properties"   width="250"  class="no-border" >}}
 
 File manager properties consist of the following sections:
 
@@ -126,7 +126,7 @@ Do the following:
 
 5. Click **OK**. Your entity now inherits all properties from the System.File entity you selected:
 
-   {{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/file-manager/entity-example.png" >}}
+   {{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/file-manager/entity-example.png" class="no-border" >}}
 
 6. Open a page or a snippet where you would like to place the file manager and add a data view there.
 
@@ -134,7 +134,7 @@ Do the following:
 
 8. Place the file manager inside the data view. You can reference the page example below:
 
-   {{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/file-manager/page-example.png" >}}
+   {{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/file-manager/page-example.png" class="no-border" >}}
 
 ## 4 Read More
 

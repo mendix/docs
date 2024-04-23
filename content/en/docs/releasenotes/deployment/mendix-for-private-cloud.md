@@ -13,6 +13,12 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2024
 
+### April 18th, 2024
+
+#### Documentation Updates
+
+* We have updated the [CSI Secrets Storage](/developerportal/deploy/secret-store-credentials/) documentation to include instructions on storing credentials and configuration in Azure Key vault.
+
 ### April 4th, 2024
 
 #### Portal Improvements
@@ -98,7 +104,7 @@ We recommend regularly updating apps to ensure that they contain the latest secu
 
 #### New Global Operator Installation Method
 
-* We have introduced a streamlined approach to installing the Operator within a namespace. With the [Global Operator installation](https://docs.mendix.com/developerportal/deploy/global-operator/), users only need to install a single Global Operator and Agent to efficiently manage applications across various namespaces. For more information, see the Global Operator installation documentation.
+* We have introduced a streamlined approach to installing the Operator within a namespace. With the [Global Operator installation](/developerportal/deploy/global-operator/), users only need to install a single Global Operator and Agent to efficiently manage applications across various namespaces. For more information, see the Global Operator installation documentation.
 
 {{% alert color="info" %}}
 This feature is currently in beta. For more information, see [Beta Releases](/releasenotes/beta-features/).

@@ -33,7 +33,7 @@ A **Hybrid application**, for most purposes, can be treated as an app running in
 
 Below is a chart showing the components of the Mendix Client. Each of the components is described below the chart.
 
-{{< figure src="/attachments/refguide9/runtime/mendix-client/mendix-client.png" alt="The makeup of the Mendix Client" >}}
+{{< figure src="/attachments/refguide9/runtime/mendix-client/mendix-client.png" alt="The makeup of the Mendix Client" class="no-border" >}}
 
 ### 2.1 Client Core
 

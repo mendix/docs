@@ -243,7 +243,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Improvements
 
-* We improved the migration flow to make it as easy as possible for you to [move your data from Stories to Epics](/developerportal/project-management/epics/planning/#data-migration).
+* We improved the migration flow to make it as easy as possible for you to move your data from Stories to Epics.
 
 #### Deprecations{#stories-deprecation}
 
@@ -371,7 +371,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Fixes
 
-* We fixed a bug where we accidentally tried to [migrate stories](/developerportal/project-management/epics/planning/#data-migration) that were marked for deletion from Mendix Stories to Epics. (They were not actually migrated, but they ended up as errors in the migration log.)
+* We fixed a bug where we accidentally tried to migrate stories that were marked for deletion from Mendix Stories to Epics. (They were not actually migrated, but they ended up as errors in the migration log.)
 
 ### June 29, 2023
 
@@ -562,7 +562,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 * We released a new version of [Epics](/developerportal/project-management/epics/), our brand new Agile planning tool, for general availability! We made the following improvements:
 
-    * It is possible to migrate all your data from Stories into Epics. For details, see the [Data Migration](/developerportal/project-management/epics/planning/#data-migration) section of *Epics*.
+    * It is possible to migrate all your data from Stories into Epics. For details, see the Data Migration section of *Epics*.
     * You can link a feedback item to a story in Epics. If you accept feedback, the story with the feedback ID and the link to the original issue will show up in your backlog.
     * If you type *#* and then start typing a story name, you can link a story in the description of another story. This is handy for showing dependencies or other relationships between stories.
     * Mentioning app team members with *@* is available in story and epic descriptions as well as in comments. If someone *@* mentions you, it triggers a notification on the Mendix Platform and/or an email, depending on your notification settings.

@@ -11,7 +11,7 @@ tags: ["Environments", "Private Cloud", "Cluster", "Best Practices"]
 
 With Mendix for Private Cloud, you have more control over where the environments you need for your Mendix app are created. You can decide whether a cluster contains one namespace or several, whether a namespace contains one environment or several, and whether those environments are all for the same app, or for several.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-environments/mx4pc-environments-minimal.png" alt="Example of distributing environments in different clusters" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-environments/mx4pc-environments-minimal.png" alt="Example of distributing environments in different clusters" class="no-border" >}}
 
 This document discusses the recommended ways of configuring environments for Private Cloud clusters and the licensing requirements.
 
@@ -43,7 +43,7 @@ There are two possible ways to set up your non-production (for example test and 
 
 In the minimal configuration, all non-production environments are put into a single namespace. This has the benefit of simplicity. As these are not production environments it is expected that they will not have a large volume of data or users, and that the test data does not require any special security.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-environments/mx4pc-environments-minimal.png" alt="Example of minimal configuration of environments where all non-production environments are created in a single namespace" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-environments/mx4pc-environments-minimal.png" alt="Example of minimal configuration of environments where all non-production environments are created in a single namespace" class="no-border" >}}
 
 This approach is not recommended if you are performing stress tests on your app as it will be affected by other apps running in the same namespace.
 
@@ -58,7 +58,7 @@ There are multiple ways you can do this, depending on your requirements. Example
 * Separate namespaces for each app
 * Separate namespaces for each business function
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-environments/mx4pc-environments-fine-grained.png" alt="Example of fine-grained configuration of environments" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-environments/mx4pc-environments-fine-grained.png" alt="Example of fine-grained configuration of environments" class="no-border" >}}
 
 The advantages of this approach are:
 

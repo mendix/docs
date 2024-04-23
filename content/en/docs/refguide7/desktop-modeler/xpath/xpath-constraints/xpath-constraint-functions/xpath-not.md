@@ -1,6 +1,7 @@
 ---
 title: "XPath not"
 url: /refguide7/xpath-not/
+canonical_url: "https://docs.mendix.com/refguide/xpath-not/"
 ---
 
 ## 1 Overview

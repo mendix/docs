@@ -8,6 +8,7 @@ no_list: false
 description_list: true
 cascade:
     - space: "Developer Portal Guide"
+    - content_type: "Developer Portal Guide"
     - mendix_version: 10
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
@@ -23,13 +24,13 @@ The Developer Portal also offers open, well-defined APIs, enabling third-party d
 
 To get started with building an app, click **Create App** to open a page where you can choose a starting point:
 
-{{< figure src="/attachments/developerportal/create-app.png" width="150" >}}
+{{< figure src="/attachments/developerportal/create-app.png" width="150" class="no-border" >}}
 
 ## 3 My Apps {#my-apps}
 
 When you open the Developer Portal, you are brought to the **My Apps** page, which shows you a summary of your current apps:
 
-{{< figure src="/attachments/developerportal/app-tiles.png" alt="Apps tiles" >}}
+{{< figure src="/attachments/developerportal/app-tiles.png" alt="Apps tiles" class="no-border" >}}
 
 The **All** tab displays all the apps for which you are a [Team](/developerportal/general/team/) member. 
 
@@ -45,7 +46,7 @@ Click an app tile to see the app [Buzz](/developerportal/general/buzz/).
 
 By clicking **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) in the app tile, you can quickly perform a number of actions:
 
-{{< figure src="/attachments/developerportal/quick-action-menu.png" alt="Quick actions menu for an app" width="50%" >}}
+{{< figure src="/attachments/developerportal/quick-action-menu.png" alt="Quick actions menu for an app" width="50%" class="no-border" >}}
 
 The actions available depend on the app selected. The default actions available are **Edit in Mendix Studio Pro** and **Leave App**.
 
@@ -64,7 +65,7 @@ The navigation pane is divided into four main categories, which correspond with 
 * [App Insights](/developerportal/app-insights/)
 * [Deployment](/developerportal/deploy/general/)
 
-{{< figure src="/attachments/developerportal/navigation-pane.png" alt="The navigation pane" width="45%" >}}
+{{< figure src="/attachments/developerportal/navigation-pane.png" alt="The navigation pane" width="45%" class="no-border" >}}
 
 ## 5 Company Buzz and Apps {#my-company-apps}
 

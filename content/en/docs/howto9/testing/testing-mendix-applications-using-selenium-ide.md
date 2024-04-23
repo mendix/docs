@@ -45,15 +45,15 @@ Follow these steps to install and run the Company Expenses app:
 1. Open Mendix Studio Pro.
 2. Click the Marketplace icon in the top toolbar:
 
-    {{< figure src="/attachments/howto9/testing/testing-mendix-applications-using-selenium-ide/app-store.png" >}}
+    {{< figure src="/attachments/howto9/testing/testing-mendix-applications-using-selenium-ide/app-store.png" class="no-border" >}}
 
 3. Search for *Company Expenses*, then select **Company Expenses**:
 
-    {{< figure src="/attachments/howto9/testing/testing-mendix-applications-using-selenium-ide/company-ex.png" >}}
+    {{< figure src="/attachments/howto9/testing/testing-mendix-applications-using-selenium-ide/company-ex.png" class="no-border" >}}
 
 4. Click **Download** and then **OK**. This will open the Company Expenses app in Studio Pro.
 
-    {{< figure src="/attachments/howto9/testing/testing-mendix-applications-using-selenium-ide/download.png" >}}
+    {{< figure src="/attachments/howto9/testing/testing-mendix-applications-using-selenium-ide/download.png" class="no-border" >}}
 
 5. Click **Run Locally** ({{% icon name="controls-play" %}}), then **View App**.
 
@@ -63,11 +63,11 @@ To create an automated test by using the record button in Selenium IDE, follow t
 
 1. Open **Firefox** and click the **Selenium IDE** icon in the browser toolbar:
 
-    {{< figure src="/attachments/howto9/testing/testing-mendix-applications-using-selenium-ide/icon.png" >}}
+    {{< figure src="/attachments/howto9/testing/testing-mendix-applications-using-selenium-ide/icon.png" class="no-border" >}}
 
 2. Select **Record a new test in a new project**:
 
-    {{< figure src="/attachments/howto9/testing/testing-mendix-applications-using-selenium-ide/sel-menu.png" >}}
+    {{< figure src="/attachments/howto9/testing/testing-mendix-applications-using-selenium-ide/sel-menu.png" class="no-border" >}}
 
 3. Enter a name for your new Selenium project (for example, *CompanyExpenses*).
 4. Enter the URL for your Company Expenses app's login screen (`http://localhost:8080/login.html`), then click **START RECORDING**. This will open up your app in a new browser window. The Selenium IDE is now recording.
@@ -77,23 +77,23 @@ To create an automated test by using the record button in Selenium IDE, follow t
 
 6. After you logged in, click **Sign out** on the right side of the app:
 
-    {{< figure src="/attachments/howto9/testing/testing-mendix-applications-using-selenium-ide/sign-out.png" >}}
+    {{< figure src="/attachments/howto9/testing/testing-mendix-applications-using-selenium-ide/sign-out.png" class="no-border" >}}
 
 7. In the Selenium IDE, click the record icon to stop recording: 
 
-    {{< figure src="/attachments/howto9/testing/testing-mendix-applications-using-selenium-ide/record.png" >}}
+    {{< figure src="/attachments/howto9/testing/testing-mendix-applications-using-selenium-ide/record.png" class="no-border" >}}
 
 8. Enter a name for your new test, (for example, *Test1*). The Selenium IDE should now look like this:
 
-    {{< figure src="/attachments/howto9/testing/testing-mendix-applications-using-selenium-ide/after-test.png" >}}
+    {{< figure src="/attachments/howto9/testing/testing-mendix-applications-using-selenium-ide/after-test.png" class="no-border" >}}
 
 9. Now that you have a test, click the **Run current test** icon:
 
-    {{< figure src="/attachments/howto9/testing/testing-mendix-applications-using-selenium-ide/run-current-test.png" >}}
+    {{< figure src="/attachments/howto9/testing/testing-mendix-applications-using-selenium-ide/run-current-test.png" class="no-border" >}}
 
     Every passed test step will be marked green:
 
-    {{< figure src="/attachments/howto9/testing/testing-mendix-applications-using-selenium-ide/green-test.png" >}}
+    {{< figure src="/attachments/howto9/testing/testing-mendix-applications-using-selenium-ide/green-test.png" class="no-border" >}}
 
 ## 5  Locating and Changing a Test Target
 
@@ -103,7 +103,7 @@ When necessary, you will need to find the right locators in order to tell Seleni
 
 In this example scenario, a running test has failed on the target `id=mxui_widget_Wrapper_23`:
 
-{{< figure src="/attachments/howto9/testing/testing-mendix-applications-using-selenium-ide/fail.png" >}}
+{{< figure src="/attachments/howto9/testing/testing-mendix-applications-using-selenium-ide/fail.png" class="no-border" >}}
 
 The element with this target does not exist on the page for Selenium IDE, because the number in the ID is not always the same. You need to find another target selector for the same element that Selenium IDE will pick up. Mendix uses CSS classes to identify page content like widgets and pop-up windows, so you can use these classes in Selenium IDE to manipulate pages and verify data. 
 
@@ -115,15 +115,15 @@ In this example scenario, you need to do the following:
 2. Highlight the element where the Selenium IDE test failed.
 3. The **Name** property for the **User name** field is **textBox10**. Every Mendix element automatically gets the CSS class `mx-name-[Name]`, so note that this field will have the CSS class `mx-name-textBox10`.
 
-    {{< figure src="/attachments/howto9/testing/testing-mendix-applications-using-selenium-ide/name.png" >}}
+    {{< figure src="/attachments/howto9/testing/testing-mendix-applications-using-selenium-ide/name.png" class="no-border" >}}
 
 4. Open the developer tools for your browser (with the app still open to where the Selenium IDE test failed) and search for `mx-name-textBox10`. There is a matching node, so you have now verified a unique selector for the **User name** field.
 
-    {{< figure src="/attachments/howto9/testing/testing-mendix-applications-using-selenium-ide/inspector.png" >}}
+    {{< figure src="/attachments/howto9/testing/testing-mendix-applications-using-selenium-ide/inspector.png" class="no-border" >}}
 
 5. In Selenium IDE, change the **Target** `id=mxui_widget_Wrapper_23` into `css=.mx-name-textBox6`: 
 
-    {{< figure src="/attachments/howto9/testing/testing-mendix-applications-using-selenium-ide/change.png" >}}
+    {{< figure src="/attachments/howto9/testing/testing-mendix-applications-using-selenium-ide/change.png" class="no-border" >}}
 
 6. Click the **Run current test** icon to see if your test passes. 
 

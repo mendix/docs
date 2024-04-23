@@ -291,6 +291,12 @@ Documents used to support integration should have the prefixes listed below.
 | JSON structure                            | JSON\_ |
 | Deeplink                                  | DL\_   |
 
+{{% alert color="warning" %}}
+The [Deep Link](/appstore/modules/deep-link/) module is deprecated from Studio Pro 10.6.0. It is replaced by [page URLs](/refguide/page-properties/#url) and [microflow URLs](/refguide/microflow/#url). For instructions on migrating to page and microflow URLs, see the [Migrating to Page and Microflow URLs](/appstore/modules/deep-link/#migrate-page-micro) section in *Deep Link*.
+
+We will continue to actively support this module for Mendix 9.
+{{% /alert %}}
+
 ### 3.6 Home Pages
 
 You can define the [home pages](/refguide/show-home-page/) per device and role in your navigation. The recommended page names are listed below:
@@ -354,11 +360,11 @@ Nested `IF` statements in a single microflow expression are not recommended. If 
 
 The example below shows a low-code approach that Mendix recommends, because it presents a clear picture of what is happening in the microflow:
 
-{{< figure src="/attachments/refguide/modeling/dev-best-practices/recommended-microflow.png" width="700px">}}
+{{< figure src="/attachments/refguide/modeling/dev-best-practices/recommended-microflow.png" width="700px" class="no-border" >}}
 
 The example below shows an approach that we do not recommend. You can rewrite the microflow expression in this example as `if ($currentDeviceType = System.DeviceType.Phone and $Parameter = true) then true else false` using the `AND` operator. However, it is still not clear enough and the low-code approach shown in the above example is preferable.
 
-{{< figure src="/attachments/refguide/modeling/dev-best-practices/not-recommended-microflow.png" width="450px">}}
+{{< figure src="/attachments/refguide/modeling/dev-best-practices/not-recommended-microflow.png" width="450px" class="no-border" >}}
 
 Event triggers on input fields must be kept as simple as possible, since they are potentially executed very often, depending on user behavior. Complex operations here will reduce performance.
 

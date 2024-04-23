@@ -22,7 +22,7 @@ The **Call workflow** activity in microflows can be used to call and trigger a [
 
 An example of Call workflow properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/workflow-call/workflow-call-properties.jpg" width="650px" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/workflow-call/workflow-call-properties.jpg" width="650px" class="no-border" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

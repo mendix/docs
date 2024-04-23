@@ -156,7 +156,7 @@ In the **Edit Initiative** side pane, click **Manage tags** ({{% icon name="cog"
 
 The **Manage Tags** dialog box opens.
 
-{{< figure src="/attachments/developerportal/portfolio-management/manage-tags-dialog-box.png" max-width="70%" >}}
+{{< figure src="/attachments/developerportal/portfolio-management/manage-tags-dialog-box.png" max-width="70%" class="no-border" >}}
 
 To create a new tag, do as follows:
 
@@ -212,11 +212,11 @@ Now you can proceed to [add planning information](#add-planning-information).
 
 An initiative is usually worked upon in several epics. Initiatives are bigger projects that could span across multiple apps, systems, and services, while epics are related to a single app only and bundle user stories together. To learn more about the differences among initiatives, epics, and user stories, check out our [learning path](https://academy.mendix.com/link/modules/599/lectures/4660/2.2-The-Role-of-Portfolio-Management-in-the-Application-Lifecycle) and the examples below:
 
-{{< figure src="/attachments/developerportal/portfolio-management/initiative-epic-user-story.png" >}}
+{{< figure src="/attachments/developerportal/portfolio-management/initiative-epic-user-story.png" class="no-border" >}}
 
 The following figure shows examples of three portfolios. The first portfolio is to add a feature to an app, the second example is a minimal viable product (MVP) of an app, and the last example is to build an integration between two apps.
 
-{{< figure src="/attachments/developerportal/portfolio-management/portfolios-initatives-apps-epics-stories.png" >}}
+{{< figure src="/attachments/developerportal/portfolio-management/portfolios-initatives-apps-epics-stories.png" class="no-border" >}}
 
 #### 3.1.4 Adding Planning Information {#add-planning-information}
 
@@ -268,7 +268,7 @@ At the bottom of the **Edit Initiative** side pane, click **Save**. Now all the 
 
 To change your view on the **Initiatives Overview** page, click the drop-down list on the upper-right corner, and then select one of the following views:
 
-{{< figure src="/attachments/developerportal/portfolio-management/switch-view.png" >}}
+{{< figure src="/attachments/developerportal/portfolio-management/switch-view.png" class="no-border" >}}
 
 * [Kanban view](#kanban-view)
 * [List view](#list-view)
@@ -434,7 +434,7 @@ To archive an initiative, perform the following steps:
 1. On the **Initiatives Overview** page, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) for that initiative, and then select **Archive**. Alternatively, you can also click **More Options** in the [side pane](#view-initiative) where you view initiative details, and then select **Archive**.
 2. In the dialog box that opens, select the reason why the initiative is archived: **Completed**, **Canceled**, **On Hold**, or **Other Reason**. Also, enter any information that other people should know about this change. Then click **Archive**.
 
-    {{< figure src="/attachments/developerportal/portfolio-management/archive-dialog-box.png" >}}
+    {{< figure src="/attachments/developerportal/portfolio-management/archive-dialog-box.png" class="no-border" >}}
 
 A pop-up window opens and tells you that the initiative is successfully archived. Once the initiative is archived, you can find it on the [Archive](#archived-initiatives) page.
 
@@ -573,7 +573,7 @@ Users from the same company can request to join a restricted or open portfolio.
 
 For restricted portfolios, you can request to join from the [Portfolio Landscape Overview](#portfolio-landscape) by clicking **Request to Join** on the portfolio card. For open portfolios, you can request to join by clicking **Request to Join** on the lower-left corner after opening the portfolio. Access requests need to be approved by a Portfolio Manager. Portfolio Managers automatically get a [notification](/developerportal/global-navigation/#notifications) for a new access request.
 
-{{< figure src="/attachments/developerportal/portfolio-management/access-requests.png" >}}
+{{< figure src="/attachments/developerportal/portfolio-management/access-requests.png" class="no-border" >}}
 
 The **Access Requests** tab shows all open access requests for the portfolio. You can search a user by their user name. You can also filter users by their role. The list contains the following items:
 
@@ -622,7 +622,7 @@ On the **Portfolio Settings** page, Portfolio Managers can change the following 
     
 * **Stages** – Click **Move Up** ({{% icon name="chevron-up" %}}) or **Move Down** ({{% icon name="chevron-down" %}}) to move a stage upwards or downwards.
 
-    {{< figure src="/attachments/developerportal/portfolio-management/move-upwards-downwards.png" >}}
+    {{< figure src="/attachments/developerportal/portfolio-management/move-upwards-downwards.png" class="no-border" >}}
 
 * **Prioritization Model**
 
@@ -640,7 +640,7 @@ On the **Portfolio Settings** page, Portfolio Managers can change the following 
 
 To delete or edit an existing option for a setting, hover over the option to show the **Delete** button ({{% icon name="trash-can" %}}) or the **Edit** button ({{% icon name="pencil" %}}) at the end of the row, and then click the corresponding button.
 
-{{< figure src="/attachments/developerportal/portfolio-management/delete-edit-stage.png" >}}
+{{< figure src="/attachments/developerportal/portfolio-management/delete-edit-stage.png" class="no-border" >}}
 
 To add an option for a setting, click **Add Department**, **Add Country**, **Add Stage**, **Add Use Case**, or **Add Value Type** below the corresponding list.
 

@@ -14,7 +14,7 @@ A dynamic image can be used to show a System.Image. If the image is not availabl
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide7/desktop-modeler/document-templates/918132.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/document-templates/918132.png" class="no-border" >}}
 A dynamic image inside a table cell, showing the preset default image.
 
 {{% /alert %}}

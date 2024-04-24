@@ -65,7 +65,7 @@ OTA updates are useful in the following app development cases:
 * Nanoflow changes
 * JavaScript action changes
 * Widgets added or removed
-* A new custom Javascript-only widget or module added
+* A new custom JavaScript-only widget or module added
 * Non-destructive model changes (for more information, see [Offline-First](/refguide9/offline-first/))
 
 ### 4.2 When a Full Release Is Required

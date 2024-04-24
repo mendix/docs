@@ -14,7 +14,7 @@ If you want to create data-driven enterprise applications, building Mendix on to
 
 ## 2 Documents in This Category
 
-### 2.1 Real time interaction with Snowflake  
+### 2.1 Interactive experiences  
 
 Mendix provides real time interaction with Snowflake through two different connectors on the Mendix marketplace. You can 
 * read/write and use data from snowflake in your application

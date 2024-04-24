@@ -7,7 +7,6 @@ tags: ["marketplace", "marketplace component", "snowflake", "data loader", "modu
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
-# !!IMPORTANT!! THIS TEMPLATE IS COPIED OVER FROM THE AWS TEMPLATE. PLEASE ADJUST IT AS NEEDED AND LET ME KNOW IF ANY PARTS ARE NOT APPLICABLE, OR IF ANYTHING SHOULD BE ADDED.
 
 # Snowflake REST SQL Connector
 
@@ -25,7 +24,7 @@ The Snowflake REST SQL connector provides a way to first setup key-pair authenti
 - Use [Snowflake Cortex LLM functions](https://docs.snowflake.com/en/user-guide/snowflake-cortex/llm-functions)
 
 The current version of the connector supports:
-- authentication with a 2048-bit RSA key pair
+- authentication with an RSA key pair according to PKCS #8 standard
 - execution of single SQL statements
 - synchronous execution of calls
 
@@ -54,9 +53,9 @@ After you install the connector, you can find it in the **App Explorer**, in the
 
 ### 3.1 Configuring Snowflake Authentication
 
-In order to use the capabilities of Snowflake in a Mendix app with the Snowflake REST SQL connector, a 2048-bit RSA key pair authentication method must be used.
+In order to use the capabilities of Snowflake in a Mendix app with the Snowflake REST SQL connector, an RSA key pair authentication method must be used.
 
-### 3.1.1 Configuring key-pair authentication in Snowflake
+### 3.1.1 Configuring key-pair authentication in Snowflake {#setup-key-pair-snowflake}
 
 To configure 2048-bit RSA key pair authentication for you account in Snowflake, the following steps need to be taken:
 
@@ -66,7 +65,25 @@ To configure 2048-bit RSA key pair authentication for you account in Snowflake, 
 
 A more descriptive explanation of these steps can be found in the official [Snowflake documenantation](https://docs.snowflake.com/en/user-guide/key-pair-auth).
 
-### 3.1.2 Setting up the key-pair authentication in a Mendix app
+### 3.1.2 Setting up the key-pair authentication in a Mendix app {#setup-key-pair-mendix}
+
+To make it easier for users to configure the key-pair authentication in a Mendix app, we have created pages and microflows that directly be used after drag and dropping them into their own modules.
+
+Please take the following steps:
+
+1. In the **App Explorer**, under the **SnowflakeRESTSQL** section, find the **SNIPPET_SnowflakeConfiguration** snippet and drag and drop it into a page in your module.
+
+{{< figure src="/attachments/appstore/modules/snowflake-rest-sql/drag_snippet_to_page.png" >}}
+
+2. Assign the module role **SnowflakeRESTSQL.Administrator** to the application role that will be used to set up the configuration so that the added logic will be usable.
+3. Run the application and go to the page the snippet was added in.
+4. Click on **New** and a page to fill out your connection details will open. 
+5. Fill out all fields with the details of your Snowflake account (or the details that have been given to you by the Snowflake Data Engineer). To learn more about what all the fields mean, go to the detailed explanation of the [ConnectionDetails](#connection-details) entity.
+6. Enter the passphrase and upload your private key file in .p8 format, that was created following the [previous section](#setup-key-pair-snowflake).
+
+{{< figure src="/attachments/appstore/modules/snowflake-rest-sql/connection_details.png" >}}
+
+7. You can then either **Save** the connection or click on **Save and test connection** to go to the second step to generate a JSON Web Token (JWT) and validate your connection to 
 
 
 ### 3.2 Configuring a Microflow for the Service
@@ -77,47 +94,71 @@ After you configure the authentication profile for {SERVICE NAME}, you can imple
 
 ## 4 Technical Reference
 
-To help you work with the {CONNECTOR NAME} connector, the following sections of this document list the available entities, enumerations, and activities that you can use in your application.
+To help you work with the Snowflake REST SQL connector, the following sections of this document list the available entities, enumerations, and activities that you can use in your application.
 
 ### 4.1 Domain Model {#domain-model}
 
 The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Domain Model](/refguide/domain-model/).
 
-The entities in the table below describe all generalizations. These are reused by the different models for the specific microflow activities or for storing connection details.
+#### 4.1.1 ConnectionDetails {#connection-details}
 
 | Name | Description |
 | --- | --- |
-| {ENTITY NAME} | {ENTITY DESCRIPTION} |
+| Name | Identifier of the connection inside of the Mendix app (has nothing to do with snowflake). |
+| AccountURL | The unique account URL of the Snowflake account within your organization to connect to the Snowflake API i.e. https://sdc-prd.snowflakecomputing.com. For more information, check out the Snowflake documentation about [account identifiers](https://docs.snowflake.com/en/user-guide/admin-account-identifier#finding-the-organization-and-account-name-for-an-account) |
+| ResourcePath | Path to a resource on Snowflake API i.e. /api/v2/statements |
+| AccountIdentifier | It is the unique account identifier that identifies a Snowflake account within your organization, as well as throughout the global network of Snowflake-supported cloud platforms and cloud regions. For example, <orgname>-<account_name>. For more information, check out the Snowflake documentation about [account identifiers](https://docs.snowflake.com/en/user-guide/admin-account-identifier#finding-the-organization-and-account-name-for-an-account) |
+| Username | The username with which you sign in to your Snowflake account. |
 
-### 4.2 Enumerations
+#### 4.1.2 PrivateKey {#private-key}
 
-An enumeration is a predefined list of values that can be used as an attribute type. For the {CONNECTOR NAME} connector, enumerations list values such as {AS REQUIRED}.
+| Name | Description |
+| --- | --- |
+| Passphrase | Passphrase which is used to encode/decode the private key file. |^
 
-#### 4.2.1 `{ENUMERATION NAME}`
+#### 4.1.3 JWT {#jwt}
 
-| Name | Caption | Description |
-| --- | --- | --- |
-| {ENUMERATION ELEMENT NAME} | {ENUMERATION ELEMENT VALUE} | {ENUMERATION ELEMENT DESCRIPTION} |
+| Name | Description |
+| --- | --- |
+| Token | Value of the JSON Web Token as a string. |
+| ExpirationDate | Expiration date of the JSON Web Token  |
 
-### 4.3 Activities {#activities}
+#### 4.1.4 Statement {#statement}
 
-Activities define the actions that are executed in a microflow or a nanoflow. For the {CONNECTOR NAME} connector, they {PURPOSE OF THE ACTIVITIES}.
+| Name | Description |
+| --- | --- |
+| SQLStatement | The SQL statement to execute. |
+| Timeout | The amount of seconds after which the connection will be closed. |
+| Database | The database to use. |
+| Schema | The database schema to use, for example 'PUBLIC'. |
+| Warehouse | The warehouse to use for computations. |
+| Role | The role to use to execute the SQL ttatement (preferably one with sufficient permissions). |
 
-#### 4.3.1 {ACTIVITY NAME}
+#### 4.1.5 ResultSet {#result-set}
 
-The `{ACTIVITYNAME}` {AWS SERVICE NAME} activity allows you to {ACTIVITY PURPOSE}. It requires {REQUIRED PARAMETERS}. {OPTIONAL, IF THE ACTIVITY HAS NO OUTPUT: "This activity has no return value.
-"}
+| Name | Description |
+| --- | --- |
+| Code | Code that is returned from Snowflake as a response to the executed statement. |
+| StatementHandle | Unique handle given to the statement that has been executed. It is saved as part of the ResultSet object. It can be used to retrieve the ResultSet object for each request. |
+| Message | Message that is returned from Snowflake as a response to the executed statement. |
+| NumRows | The amount of rows which will be returned by the executed statement (sum of all rows of partitions). |
+
+#### 4.1.6 PartitionInfo {#partition-infor}
+
+| Name | Description |
+| --- | --- |
+| RowCount | The number of rows within this partition. The sum of all PartitionInfo.RowCount corresponds to ResultSet.NumRows |
+
+### 4.2 Activities {#activities}
+
+Activities define the actions that are executed in a microflow or a nanoflow. 
+
+#### 4.2.1 ExecuteStatement {#execute-statement}
+
+The `ExecuteStatement` activity allows you to execute a command in Snowflake using the SQL statement and the configoration details given in a `Statement` object. It requires a `Statement` object and returns a list of `HttpResponse` objects.
 
 The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `{INPUT OBJECT}` | `{OUTPUT OBJECT}` |
-
-##### OPTIONAL, INCLUDE ONLY IF THE ACTIVITY RETURNS AN OUTPUT:
-
-This activity returns a `{OUTPUT OBJECT}` object with objects from the following entities, as shown in the table below:
-
-| Name |    Generalization |    Documentation |
-| --- | --- | --- |
-| `{ENTITY NAME}` | `{ENTITY GENERALIZATION}` | {ENTITY DESCRIPTION} |
+| `Statement` | `{HttpResponseList}` |

@@ -17,6 +17,17 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2024
 
+### April 25, 2024
+
+#### New Features
+
+* Save user preference on the metrics page with which metrics group should be opened by default when the metrics page is loaded,it can be either be all or application or DB only. It simply remembers the last metrics group that was selected on the metrics page by the User.
+
+#### Improvements
+
+* On the metrics page, load each graph in the async mode instead of loading the entire page at once. This improves the user experience with faster page loading time.
+* Add `scroll-to-top` icon near each graph in the metric page. This improves user experience to directly reach to the top of the page without doing the manual scroll
+
 ### April 4, 2024
 
 #### Pipelines Fixes

@@ -88,9 +88,9 @@ Please take the following steps:
 
 ### 3.2 Configuring a Microflow for the Service
 
-After you configure the authentication profile for {SERVICE NAME}, you can implement the functions of the connector by using the provided activities in microflows. For example, to {DESCRIBE A TASK}, implement the {ACTIVITY NAME, WITH LINK TO THE RELEVANT SECTION IN TECHNICAL REFERENCE BELOW} activity by doing the following steps:
+After you configure the authentication for Snowflake, you can implement the functions of the connector by using the provided activities in microflows. An extended microflow has been implemented and added to the Snowflake REST SQL connector as an example for users that would like to retrieve a list of objects from an existing table in Snowflake. In the **SnowflakeRESTSQL** module, please take a look at the the **ExampleImplementation** microflow and the **ExampleObject** entity in the domain model to see how the **TransformResponsesToMxObjects** operation can be used to easily convert the data received in **HttpResponse** objects into Mendix objects. 
 
-{A DETAILED STEP-BY-STEP CONFIGURATION PROCEDURE, WITH SCREENSHOTS. SEE THE DYNAMODB CONNECTOR DOC FOR THE LEVEL OF DETAIL THAT'S REQUIRED.}
+{{< figure src="/attachments/appstore/modules/snowflake-rest-sql/example_implementation.png" >}}
 
 ## 4 Technical Reference
 
@@ -105,9 +105,9 @@ The domain model is a data model that describes the information in your applicat
 | Name | Description |
 | --- | --- |
 | Name | Identifier of the connection inside of the Mendix app (has nothing to do with snowflake). |
-| AccountURL | The unique account URL of the Snowflake account within your organization to connect to the Snowflake API i.e. https://sdc-prd.snowflakecomputing.com. For more information, check out the Snowflake documentation about [account identifiers](https://docs.snowflake.com/en/user-guide/admin-account-identifier#finding-the-organization-and-account-name-for-an-account) |
+| AccountURL | The unique account URL of the Snowflake account within your organization to connect to the Snowflake API i.e. https://sdc-prd.snowflakecomputing.com. For more information, check out the Snowflake documentation about [account identifiers](https://docs.snowflake.com/en/user-guide/admin-account-identifier#finding-the-organization-and-account-name-for-an-account). |
 | ResourcePath | Path to a resource on Snowflake API i.e. /api/v2/statements |
-| AccountIdentifier | It is the unique account identifier that identifies a Snowflake account within your organization, as well as throughout the global network of Snowflake-supported cloud platforms and cloud regions. For example, <orgname>-<account_name>. For more information, check out the Snowflake documentation about [account identifiers](https://docs.snowflake.com/en/user-guide/admin-account-identifier#finding-the-organization-and-account-name-for-an-account) |
+| AccountIdentifier | It is the unique account identifier that identifies a Snowflake account within your organization, as well as throughout the global network of Snowflake-supported cloud platforms and cloud regions. For example, <orgname>-<account_name>. For more information, check out the Snowflake documentation about [account identifiers](https://docs.snowflake.com/en/user-guide/admin-account-identifier#finding-the-organization-and-account-name-for-an-account). |
 | Username | The username with which you sign in to your Snowflake account. |
 
 #### 4.1.2 PrivateKey {#private-key}
@@ -143,7 +143,7 @@ The domain model is a data model that describes the information in your applicat
 | Message | Message that is returned from Snowflake as a response to the executed statement. |
 | NumRows | The amount of rows which will be returned by the executed statement (sum of all rows of partitions). |
 
-#### 4.1.6 PartitionInfo {#partition-infor}
+#### 4.1.6 PartitionInfo {#partition-info}
 
 | Name | Description |
 | --- | --- |
@@ -155,7 +155,7 @@ Activities define the actions that are executed in a microflow or a nanoflow.
 
 #### 4.2.1 ExecuteStatement {#execute-statement}
 
-The `ExecuteStatement` activity allows you to execute a command in Snowflake using the SQL statement and the configoration details given in a `Statement` object. It requires a `Statement` object and returns a list of `HttpResponse` objects.
+The `ExecuteStatement` activity allows you to execute a command in Snowflake using the SQL statement and the configuration details given in a `Statement` object. It requires a `Statement` object and returns a list of `HttpResponse` objects.
 
 The input and output for this service are shown in the table below:
 

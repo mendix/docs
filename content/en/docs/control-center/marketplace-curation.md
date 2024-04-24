@@ -47,6 +47,6 @@ The list shows the following details:
 
 
 ## 4 Displaying Recommended Marketplace Content in Studio Pro {#display-recommended-marketplace-content}
-In Studio Pro's Marketplace section, developers can view all the Marketplace components, no matter they are recommended content or not. To only see recommended content, simply select the check box: **Show <text class="badge badge-pill badge-recommended" style="margin-left:0px">RECOMMENDED</text>**. The recommended label is also visible on the details page within the main panel.
+In Studio Pro's Marketplace section, developers can view all the Marketplace components, no matter they are recommended content or not. To only see recommended content, simply select the check box: **Show <text class="badge badge-pill badge-recommended" style="margin-left:0px">RECOMMENDED</text>**. The recommended label is also visible on the details page on the main panel.
 
 {{< figure src="/attachments/control-center/marketplace-curation/displaying-recommended-mp-content.png" max-width=100% class="image-border" alt=''displaying-recommended-mp-content'' >}}

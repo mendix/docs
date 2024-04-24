@@ -61,14 +61,6 @@ Warning Threshold | Not used.                                              |
 Critical Threshold | If the runtime heartbeat of the application has not been received for 5 minutes, a critical alert will be generated.
 First actions to take | Check the application logs for issues. Also check [Mendix Platform Status](https://status.mendix.com/) for any planned maintenance.                         |
 
-Application Container CPU Percentage | |
-:---|:---|
-Description | Track the CPU utilization of the application container |
-Example message | Application container 34234543-6543-6543-6543-153d247b6543 - Instance Index: 0 has high CPU usage: 90.5
-Warning Threshold | CPU utilization is between 75% and 85%. |
-Critical Threshold | CPU utilization is higher than 85%.
-First actions to take | Inspect the metrics for **CPU usage** combined with all **Application Statistics** for anomalies and correlate those with application behavior. |
-
 Application Container Disk Percentage | |
 :---|:---|
 Also called | Container disk overload |

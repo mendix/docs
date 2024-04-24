@@ -12,7 +12,7 @@ tags: ["marketplace", "marketplace component", "snowflake", "data loader", "modu
 
 ## 1 Introduction
 
-The Snowflake REST SQL connector enables you to enrich your Mendix app with the capabilities of Snowflake.
+The Snowflake REST SQL connector allows you to use data from Snowflake in your Mendix application. It can also enable you to enrich your app with the capabilities that Snowflake provides.
 
 ### 1.1 Typical Use Cases
 

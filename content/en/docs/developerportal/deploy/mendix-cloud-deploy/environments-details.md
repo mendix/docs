@@ -60,7 +60,7 @@ When your app is running, you can see the following action buttons:
 * **Change Admin Password** – This changes the password for the built-in [administrator](/refguide/administrator/) account. The new password is applied immediately, without the need for a restart, and forces the administrator to pick up any new [roles](/refguide/administrator/#user-role) assigned in the app deployment package.
 * **View Live Log** – This shows a live log for your application. It is identical to the **View Live Log** button on the [Logs](/developerportal/operate/logs/) page.
 * **Show Debugger Information** – This shows the settings needed to connect the debugger in Studio Pro to your app. For more information on debugging in the cloud, see [How To Debug Microflows Remotely](/refguide/debug-microflows-remotely/).
-* **Show Running Now** – You can use this to monitor all actions that are currently running in your environment.
+* **Show Running Now** – You can use this to monitor all actions that are currently running in your environment. For more information, see [Running Now](/developerportal/deploy/mxcloud-runningnow/).
 
 When your app is stopped, you see this set of action buttons instead:
 

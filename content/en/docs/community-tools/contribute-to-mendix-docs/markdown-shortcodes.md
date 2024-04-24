@@ -114,8 +114,7 @@ If you don't specify any programming language, the code block looks a bit differ
 
 {{< figure src="/attachments/community-tools/markdown-shortcodes/clear-environment.png"
     alt="Clear Environment options and confirmation"
-    max-width=60%
-    class="image-border" >}}
+    max-width=60% >}}
 
 #### Image Borders
 
@@ -212,7 +211,7 @@ Use two asterisks to enclose text that should appear in **bold**, and use one as
 
 ### Collapsible Content (Details)
 
-For collapsible content, use the HTML `<details>` and `<summary>` tags.
+For collapsible content, use the HTML `<details>` and `<summary>` tags:
 
 <details><summary>It cannot be a reserved word (click to see a list of reserved words)</summary>
 

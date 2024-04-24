@@ -102,7 +102,7 @@ Click **OK** in the confirmation pop-up window. Your extension is now installed 
 
 If you do not want to trust the extension and would prefer to remove the extension altogether, you can remove the add-on module that was added.
 
-{{< figure src="/attachments/appstore/overview/use-content/trust-extension.png" class="image-border" alt="trust extension" >}}
+{{< figure src="/attachments/appstore/overview/use-content/trust-extension.png" alt="trust extension" >}}
 
 ##### 2.1.1.4 Apps {#apps}
 

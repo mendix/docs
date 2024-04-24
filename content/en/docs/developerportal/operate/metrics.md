@@ -114,7 +114,7 @@ These are the user types:
 
 The **JVM Object Heap** graph shows the internal distribution of allocated memory inside the application process for Java objects. Java objects are created in Java actions, but they also include all objects that are used by microflows running in your app at runtime.
 
-{{< figure src="/attachments/developerportal/operate/metrics/jvm-heap.png" class="image-border" >}}
+{{< figure src="/attachments/developerportal/operate/metrics/jvm-heap.png" >}}
 
 Note that the JVM does not immediately clean up objects that are no longer in use. This graph shows unused memory as still in use until the garbage collector—which analyzes the memory to free up space—is run. So, before a garbage collection, you cannot see how much of the JVM memory will be available after the garbage collection cycle. This is because the garbage collection process only finds that out when it actually runs.
 

@@ -35,7 +35,7 @@ These widgets require a certain configuration to work; all the widgets need to b
 
 A very simple configuration could look like this:
 
-{{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-webxr/container-with-cube.jpg" alt="Container (AR) with Cube (AR)"  width="400" class="image-border" >}}
+{{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-webxr/container-with-cube.jpg" alt="Container (AR) with Cube (AR)"  width="400" >}}
 
 ### 2.1 HTTPS Prerequisite
 
@@ -43,11 +43,11 @@ For WebXR to work, you will have to run the project through HTTPS protocol. The 
 
 Here is a simple scene without the button to start WebXR:
 
-{{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-webxr/cube-no-webxr-button.jpg" alt="How the page appears without WebXR support"   width="400" class="image-border" >}}
+{{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-webxr/cube-no-webxr-button.jpg" alt="How the page appears without WebXR support"   width="400" >}}
 
 Here is that same scene with the button:
 
-{{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-webxr/cube-webxr-button.jpg" alt="How the page appears with WebXR support"   width="400" class="image-border" >}}
+{{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-webxr/cube-webxr-button.jpg" alt="How the page appears with WebXR support"   width="400" >}}
 
 It is not possible to start the experience without the user clicking the button. This is due to the user needing to give permission to have their space taken over by this experience, and not being surprised by this happening.
 

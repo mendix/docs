@@ -592,7 +592,7 @@ To allow the end users to navigate to the desired page:
 * If multiple IdPs configured, you can specify which IdP should be used by adding the alias (MyIdPAlias)
 `oauth/v2/login?idp={MyIdPAlias}&cont={page/Microflowurl}`
 
-    For Example, `http://localhost:8080/oauth/v2/login?idp=Okta&cont=link/pagepath` 
+    For example, `http://localhost:8080/oauth/v2/login?idp=Okta&cont=link/pagepath` 
     
 The Page and Microflow URLs fully support multiple IdPs, allowing users to trigger the login and choose the IdP on the OIDC login page.
 

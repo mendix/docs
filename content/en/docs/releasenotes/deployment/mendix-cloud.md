@@ -21,7 +21,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### New Features
 
-* Save user preference on the metrics page with which metrics group should be opened by default when the metrics page is loaded,it can be either be all or application or DB only. It simply remembers the last metrics group that was selected on the metrics page by the User.
+* Save user preference on the metrics page with which metrics group should be opened by default when the metrics page is loaded,it can be either be all or application or DB only. It simply remembers the last metrics group that was selected on the metrics page by the User. The user preference is not stored per environment or app, it's at the user level.
 
 #### Improvements
 

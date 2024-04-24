@@ -53,21 +53,21 @@ After you install the connector, you can find it in the **App Explorer**, in the
 
 ### 3.1 Configuring Snowflake Authentication
 
-In order to use the capabilities of Snowflake in a Mendix app with the Snowflake REST SQL connector, an RSA key pair authentication method must be used.
+In order to use the capabilities of Snowflake in a Mendix app with the Snowflake REST SQL connector, an RSA key-pair authentication method must be used.
 
 ### 3.1.1 Configuring key-pair authentication in Snowflake {#setup-key-pair-snowflake}
 
-To configure 2048-bit RSA key pair authentication for you account in Snowflake, the following steps need to be taken:
+To configure RSA key-pair authentication for your account in Snowflake, the following steps need to be taken:
 
 1. Generate the private key
 2. Generate a public key
 3. Assign the public key to a Snowflake user
 
-A more descriptive explanation of these steps can be found in the official [Snowflake documenantation](https://docs.snowflake.com/en/user-guide/key-pair-auth).
+A more descriptive explanation of these steps can be found in the official [Snowflake documentation](https://docs.snowflake.com/en/user-guide/key-pair-auth).
 
 ### 3.1.2 Setting up the key-pair authentication in a Mendix app {#setup-key-pair-mendix}
 
-To make it easier for users to configure the key-pair authentication in a Mendix app, we have created pages and microflows that directly be used after drag and dropping them into their own modules.
+To make it easier for users to configure the key-pair authentication in a Mendix app, we have created pages and microflows that can directly be used after drag and dropping them into their own modules.
 
 Please take the following steps:
 
@@ -78,7 +78,7 @@ Please take the following steps:
 2. Assign the module role **SnowflakeRESTSQL.Administrator** to the application role that will be used to set up the configuration so that the added logic will be usable.
 3. Run the application and go to the page the snippet was added in.
 4. Click on **New** and a page to fill out your connection details will open. 
-5. Fill out all fields with the details of your Snowflake account (or the details that have been given to you by the Snowflake Data Engineer). To learn more about what all the fields mean, go to the detailed explanation of the [ConnectionDetails](#connection-details) entity.
+5. Fill out all fields with the details of your Snowflake account. To learn more about what all the fields mean, go to the detailed explanation of the [ConnectionDetails](#connection-details) entity.
 6. Enter the passphrase and upload your private key file in .p8 format, that was created following the [previous section](#setup-key-pair-snowflake).
 
 {{< figure src="/attachments/appstore/modules/snowflake-rest-sql/connection_details.png" >}}
@@ -88,7 +88,7 @@ Please take the following steps:
 
 ### 3.2 Configuring a Microflow for the Service
 
-After you configure the authentication for Snowflake, you can implement the functions of the connector by using the provided activities in microflows. An extended microflow has been implemented and added to the Snowflake REST SQL connector as an example for users that would like to retrieve a list of objects from an existing table in Snowflake. In the **SnowflakeRESTSQL** module, please take a look at the the **ExampleImplementation** microflow and the **ExampleObject** entity in the domain model to see how the **TransformResponsesToMxObjects** operation can be used to easily convert the data received in **HttpResponse** objects into Mendix objects. 
+After you configure the authentication for Snowflake, you can implement the functions of the connector by using the provided activities in microflows. An extended microflow has been implemented and added to the Snowflake REST SQL connector as an example for users that would like to retrieve a list of objects from an existing table in Snowflake. In the **SnowflakeRESTSQL** module, please take a look at the **ExampleImplementation** microflow and the **ExampleObject** entity in the domain model to see how the **TransformResponsesToMxObjects** operation can be used to easily convert the data received in **HttpResponse** objects into Mendix objects. 
 
 {{< figure src="/attachments/appstore/modules/snowflake-rest-sql/example_implementation.png" >}}
 

@@ -24,7 +24,7 @@ This document describes the installation and configuration of Mendix software on
 
 To set up an environment to run Mendix applications, you will need to install the Mendix software. For each Mendix application that will be run, a separate user (service) account is required. This section presents an overview of the setup.
 
-{{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/18580733.png" class="image-border" >}}
+{{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/18580733.png" >}}
 
 Before starting this how-to, make sure you have the following prerequisites:
 
@@ -54,17 +54,17 @@ To download and install the Mendix Service Console, follow these steps:
 
 1. Download the latest version of the [Mendix Service Console](https://marketplace.mendix.com/link/component/223425) module from the Marketplace.
 
-    {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/service_console_download.png" class="image-border" >}}
+    {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/service_console_download.png" >}}
 
 2. Install the Mendix Service Console by following the installation wizard.
 
 3. Start the Mendix Service Console after completing the installation. The first time you launch the application, a popup will be shown (it will always be shown if no valid location is configured for the apps and server files):
 
-    {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/service_console_first_run.png" class="image-border" class="image-border" >}}
+    {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/service_console_first_run.png" >}}
 
 4. Click **Yes**. The **Preferences** dialog box will be shown:
 
-    {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/18580730.png" class="image-border" >}}
+    {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/18580730.png" >}}
 
 5. In the **Preferences** dialog box, enter a **Location of apps and server files**. This location is used for storing your app files and Mendix server files. Mendix recommends using a directory:
 
@@ -96,11 +96,11 @@ To deploy a Mendix app using the Mendix Service Console, follow these steps:
 
 4. Click **Next >**.
 
-    {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/18580728.png" class="image-border" >}}
+    {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/18580728.png" >}}
 
 5. On the **Project Files** screen, click **Select app…**.
 
-    {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/service_console_selectapp.png" class="image-border" >}}
+    {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/service_console_selectapp.png" >}}
 
 6. Now select the **MDA** file that was [created in Studio Pro](/refguide/create-deployment-package-dialog/) and contains your application logic. After the installation of your MDA file, you will see which Mendix server (Mendix Runtime) version is needed.
 
@@ -113,7 +113,7 @@ To deploy a Mendix app using the Mendix Service Console, follow these steps:
 
 8. Click **Next >**.
 
-    {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/18580726.png" class="image-border" >}}
+    {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/18580726.png" >}}
 
 9. On the **Common Configuration** screen, keep the default settings. These settings should only be changed if this is needed for your application setup.
 
@@ -159,7 +159,7 @@ To create a website, follow these steps:
 7. Select the certificate for the website either in the dropdown box or through the **Select...** dialog.
 8. Click **OK**.
 
-    {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/iis_add_https_binding.png" class="image-border" >}}
+    {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/iis_add_https_binding.png" >}}
 
 ### 5.4 Configuring the MIME Types
 
@@ -288,7 +288,7 @@ If HTTPS was configured at step 5.3 it is recommended to redirect all unencrypte
 4. Make sure the *Immediately* radio button is selected.
 5. Click **OK**.
 
-    {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/iis_response_headers.png" class="image-border" >}}
+    {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/iis_response_headers.png" >}}
 
 Afterwards, the contents of the *web.config* file will be similar to the following example:
 

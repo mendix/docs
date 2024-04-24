@@ -57,7 +57,7 @@ spec:
     servicePlan: dev
   storage: # Specification of Storage CR
     servicePlan: dev
-  mendixRuntimeVersion: 8.0.0 # Mendix version to use for placeholder runtime image.
+  mendixRuntimeVersion: 8.0.0 # Studio Pro version of the Mendix app
   sourceURL: https://example.com/example-app.mda # URL of App's source MDA or prebuilt OCI image
   appURL: example-mendixapp.k8s-cluster.example.com # URL to access the app
   tls: # Optional, can be omitted : set a custom TLS configuration, overriding the default operator configuration
@@ -174,7 +174,7 @@ You need to make the following changes:
 
 * **name**: – You can deploy multiple apps in one project/namespace — the app name in the CR doesn't have to match the app name in the mda and will have an **Environment UUID** added when it is deployed to ensure that it is unique in the project — see [Reserved Names for Mendix Apps](#reserved-names), below, for restrictions on naming your app
 * **database/storage** – ensure that these have the correct **Database Plan** and **Storage Plan** — they have to have the same names that you [registered in the namespace](/developerportal/deploy/standard-operator/#configure-namespace)
-* **mendixRuntimeVersion** – the full runtime version of the app. From Operator version 2.15.0 onwards, this field is not read (but needs to be specified).
+* **mendixRuntimeVersion** – the full runtime version of the app. In Operator versions 2.15.0 and 2.15.1, this field is not read (but needs to be specified). From Operator version 2.16.0 onwards, this field does not need to be specified.
 * **sourceURL** – an HTTP or HTTPS URL specifying the location of the deployment package (this must be accessible from your cluster without any authentication; use expiring URLs for security). Alternatively, to deploy an existing app image built by the Mendix Operator, specify it using an `oci-image://` schema.
 * **appURL** – the endpoint where you can connect to your running app — this is optional, and if it is supplied it must be a URL which is supported by your platform
 * **tls** – the TLS configuration — this is optional, and if it is supplied it will override the default Mendix Operator network configuration

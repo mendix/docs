@@ -458,22 +458,22 @@ If the environment cannot be deleted, you will receive a warning, but can go ahe
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/delete-environment.png" class="no-border" >}}
 
-For a *connected* cluster, the top level MendixApp​ CRD will be deleted from the namespace – this will cause the following environment resources set up by the Operator to be garbage collected:
+For a *connected* cluster, the top level MendixApp CRD will be deleted from the namespace – this will cause the following environment resources set up by the Operator to be garbage collected:
 
-* ​​The database will be dropped and the database user will be deleted from the database server — databases and users from other environments will remain untouched.
+* The database will be dropped and the database user will be deleted from the database server — databases and users from other environments will remain untouched.
 
     {{% alert color="info" %}}If the storage plan is using a JDBC plan (not Postgres or SQL Server), the database and the user will remain untouched).{{% /alert %}}
 
-* ​​Files related to that environment will be deleted from the S3/Minio storage bucket (or prefix if this is using a shared bucket).
+* Files related to that environment will be deleted from the S3/Minio storage bucket (or prefix if this is using a shared bucket).
 
     {{% alert color="info" %}}If you are using the S3 [create account with existing policy](/developerportal/deploy/standard-operator/#storage-plan) plan - the files remain untouched.{{% /alert %}}
 
-* ​​S3/Minio users and policies will be deleted (if there is a storage plan specified to create those objects).
+* S3/Minio users and policies will be deleted (if there is a storage plan specified to create those objects).
 
-* ​​Network resources: ingress, service will be removed. This might also garbage collect other resources (for example Load Balancers and TLS certificates), depending on how your network is set up,
+* Network resources: ingress, service will be removed. This might also garbage collect other resources (for example Load Balancers and TLS certificates), depending on how your network is set up,
 
 {{% alert color="info" %}}
-​​Images are not deleted from the container registry. You should delete those images manually.
+Images are not deleted from the container registry. You should delete those images manually.
 {{% /alert %}}
 
 {{% alert color="warning" %}}

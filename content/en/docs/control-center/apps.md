@@ -69,7 +69,7 @@ You can export apps to an Excel file. For details, see the [Exporting Apps to an
 
 ## 3 Mendix Free Cloud
 
-The **Mendix Free** Cloud tab shows all the free apps that are deployed on the Mendix Cloud.
+The **Mendix Free Cloud** tab shows all the free apps that are deployed on the Mendix Cloud.
 
 You can customize the columns of the table by clicking the column selector (the {{% icon name="view" %}} icon) on the upper-right corner of the table. The items selected are shown as columns in the table.
 

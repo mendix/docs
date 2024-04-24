@@ -17,7 +17,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 #### Fixes
 
-* We fixed an issue where in some rare cases when switching from the Landscape view of a datasource to its Data view, information from a different datasource would be shown.
+* We fixed an issue where in some rare cases when switching from the Landscape View of a data source to its Data View, information from a different data source would be shown.
 
 ### April 18, 2024
 

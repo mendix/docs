@@ -51,7 +51,7 @@ It is good practice to *always* redeploy your Mendix App before pushing a new ov
 * Nanoflow changes
 * JavaScript action changes
 * Widgets shipped with Mendix added or removed
-* A new custom Javascript-only widget or module was added
+* A new custom JavaScript-only widget or module was added
 * Non-destructive model changes (for more information, see the [Offline First Reference Guide](/refguide8/offline-first/))
 
 ### 3.2 When a Full Release Is Required

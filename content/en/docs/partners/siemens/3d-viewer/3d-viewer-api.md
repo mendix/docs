@@ -74,7 +74,7 @@ If you want to get properties of a selected part on the 3D Viewer, perform the f
 
 ### 3.2 Other Sample Code Snippets
 
-Starting from version 2.2.0, 3D Viewer module includes some out-of-box API actions. The module allows you to manipulate model parts via **RotatePart**, **ScalePart**, **SetPartColor**, and **TranslatePart** API actions. You can find these actions in the **Viewer3D** > **USE_ME** > **API Actions** folder in the **App Explorer** in Studio Pro. You can directly use them to create your custom logic for manipulating models. Check out the code implementation of these javascript actions, along with the 3D Viewer API Reference. This may give you some ideas about how you want to make use of the 3D Viewer API.
+Starting from version 2.2.0, 3D Viewer module includes some out-of-box API actions. The module allows you to manipulate model parts via **RotatePart**, **ScalePart**, **SetPartColor**, and **TranslatePart** API actions. You can find these actions in the **Viewer3D** > **USE_ME** > **API Actions** folder in the **App Explorer** in Studio Pro. You can directly use them to create your custom logic for manipulating models. Check out the code implementation of these JavaScript actions, along with the 3D Viewer API Reference. This may give you some ideas about how you want to make use of the 3D Viewer API.
 
 ## 4 Feedback
 

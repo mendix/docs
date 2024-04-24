@@ -48,7 +48,7 @@ Mendix apps do not modify the client core, all logic is held in the model. Howev
 
 These are the fundamental building blocks of the Mendix Client. All the actions which the client takes are controlled by widgets. They are responsible for what is displayed on pages, and how user input is managed. There is a more detailed description of widgets in [Widgets](#widgets), below.
 
-### 2.3 Javascript Actions
+### 2.3 JavaScript Actions
 
 This runs custom JavaScript, added by the app developer, which is held as JavaScript actions in the client config.
 

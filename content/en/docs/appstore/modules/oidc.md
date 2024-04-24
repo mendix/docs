@@ -583,6 +583,14 @@ Page URLs and Microflow URLs are supported with OIDC SSO for Mendix version 10.6
 
 If you are building a new app using the OIDC SSO module (Mendix version 10.6 and above) and you are using Page URLs and Microflow URLs, follow the same steps as above. 
 
+To allow the end users to navigate to the desired deeplink page in SAML application:
+
+* If single IdP configured, URL will be the base URL of your application followed by `SSO/login?cont={page/Microflowurl}`
+    For example, `http://localhost:8080/SSO/login?cont=link/pagepath`
+* If Multiple IdPs configured, you can specify which IdP should be used by adding the alias (MyIdPAlias)
+`SSO/login?_idp_id={MyIdPAlias}&cont={page/Microflowurl}`
+    For Example, `http://localhost:8080/SSO/login?_idp_id=Okta&cont=link/pagepath`
+
 The Page and Microflow URLs fully support multiple IdPs, allowing users to trigger the login and choose the IdP on the OIDC login page.
 
 For more information, see the [Migrating to Page and Microflow URLs](/appstore/modules/deep-link/#migrate-page-micro) section of the ***Deep Link***.

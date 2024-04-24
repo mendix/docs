@@ -18,7 +18,7 @@ The **Marketplace Curation** page contains two tabs: the [Curation Settings](#cu
 
 ## 2 Curation Settings {#curation-settings}
 
-On the **Curation Settings** tab, you can configure company policies and guidelines for public Marketplace content. Select the support types and license types. Public Marketplace components that meet your requirements will be automatically labeled with recommended. For instance, in the following example, any component supported by the **Community** or **Platform** and licensed under **Apache v2** or **BSD 2.0** will be labeled with recommended.
+On the **Curation Settings** tab, you can configure company policies and guidelines for public Marketplace content. Select the support types and license types. Public Marketplace components that meet your requirements will be automatically labeled as recommended. For instance, in the following example, any component supported by the **Community** or **Platform** and licensed under **Apache v2** or **BSD 2.0** will be labeled as recommended.
 
 {{< figure src="/attachments/control-center/marketplace-curation/curation-settings.png" max-width=100% class="image-border" alt=''curation-settings''  >}}
 
@@ -47,6 +47,6 @@ The list shows the following details:
 
 
 ## 4 Displaying Recommended Marketplace Content in Studio Pro {#display-recommended-marketplace-content}
-In Studio Pro's Marketplace section, developers can view all the Marketplace components, no matter they have a recommended label or not. To only see recommended content, simply select the check box: **Show recommended**. The recommended label is also visible on the details page within the main panel.
+In Studio Pro's Marketplace section, developers can view all the Marketplace components, no matter they have a recommended label or not. To only see recommended content, simply select the check box: **Show <text class="badge badge-pill badge-recommended" style="margin-left:0px">RECOMMENDED</text>**. The recommended label is also visible on the details page within the main panel.
 
 {{< figure src="/attachments/control-center/marketplace-curation/displaying-recommended-mp-content.png" max-width=100% class="image-border" alt=''displaying-recommended-mp-content'' >}}

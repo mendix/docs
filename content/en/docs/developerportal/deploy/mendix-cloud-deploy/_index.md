@@ -2,7 +2,7 @@
 title: "Mendix Cloud"
 url: /developerportal/deploy/mendix-cloud-deploy/
 category: "Deployment"
-weight: 20
+weight: 8
 description: "Describes how to deploy to Mendix Cloud."
 tags: ["Deploy","Mendix Cloud","Developer Portal", "Free App", "licensed", "limitations", "Mendix Cloud Dedicated"]
 aliases:

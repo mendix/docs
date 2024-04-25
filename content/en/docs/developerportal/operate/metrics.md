@@ -162,7 +162,7 @@ These are the types:
 
 ### 4.5 Memory Usage{#Trends-appmemory}
 
-The **Memory Usage** graph shows the distribution of operating system memory that is available for this server. It is measured in gibibytes.
+The **Memory usage** graph shows the distribution of operating system memory that is available for this server. It is measured in gibibytes.
 
 {{< figure src="/attachments/developerportal/operate/metrics/app-memory-usage.png" >}}
 

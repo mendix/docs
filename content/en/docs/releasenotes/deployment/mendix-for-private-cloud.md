@@ -13,11 +13,11 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2024
 
-### April 26th, 2024
+### April 25th, 2024
 
 #### Deploy API
 
-* We have introduced a new endpoint that enables users to access all applications they have permission to use.
+*  We've added new endpoints for customers to retrieve their applications via API.
 
 
 ### April 24th, 2024

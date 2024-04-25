@@ -13,6 +13,13 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2024
 
+### April 25th, 2024
+
+#### Deploy API
+
+*  We have added new endpoints for customers to retrieve their applications via API.
+
+
 ### April 24th, 2024
 
 #### Mendix Operator v2.16.0 {#2.16.0}

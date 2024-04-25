@@ -9,7 +9,7 @@ tags: ["studio pro", "strict mode", "strict", "app security", "security", "api"]
 
 Configuring [access rules](/refguide/access-rules/) is essential for the security of your app. However, accurately setting up these rules can be challenging. To help making your app secure, even when access rules are not configured correctly, you can enable Strict Mode. 
 
-Strict Mode ensures that entities are accessible only in the ways defined within your model — through microflows, nanoflows, widgets, or pages — by restricting certain Client APIs. 
+Strict Mode will help ensuring that entities are accessible only in the ways defined within your model — through microflows, nanoflows, widgets, or pages — by restricting certain Client APIs. 
 
 Please note, Strict Mode is exclusively available for the React Client.
 
@@ -29,7 +29,7 @@ The APIs will be disabled on the Runtime, which means that these APIs cannot be 
 
 This aids in following the guidelines outlined in the *OWASP Low-Code/No-Code Top 10*, addressing [LCNC-SEC-05: Security Misconfiguration](https://owasp.org/www-project-top-10-low-code-no-code-security-risks/content/2022/en/LCNC-SEC-05-Security-Misconfiguration).
 
-## 3 Disallowing Save button on Page Templates
+## 3 Disallowing Save button on Layouts
 Additionally, Studio Pro will throw a consistency error when a save button is used on a layout. This will ensure that exclusively entities which are on the page with a save button can be commited to the runtime. 
 
 

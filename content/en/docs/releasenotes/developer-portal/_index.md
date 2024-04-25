@@ -17,6 +17,14 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 ## 2024
 
+### April 25
+
+#### Improvements
+
+* The [Feedback API](/apidocs-mxsdk/apidocs/feedback-api-v2/) now returns the list of tags linked to a feedback.
+* It is now possible to retrieve all feedback through the Feedback API for a certain email address.
+* [Feedback](/developerportal/app-insights/feedback/) is now exported in a CSV file format.
+
 ### April 4
 
 #### New Features

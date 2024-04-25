@@ -37,6 +37,8 @@ If you meet the above conditions, you can find the graphs by following these ste
 
     {{< figure src="/attachments/developerportal/operate/metrics/metrics-selection.png" class="no-border" >}}
 
+5. To view more information about any of the metrics, click **Documentation** ({{% icon name="info-circle" %}}) next to the relevant graph. To quickly scroll to the top of the page, click **Scroll to top** ({{% icon name="arrow-circle-up" %}}).
+
 {{% alert color="info" %}}
 The **Metrics** page does not support multi-instance metrics. If you [horizontally scale](/developerportal/deploy/scale-environment/) your environment to multiple instances, you will be able to see metrics for only one of those instances. If you need data on multiple instances, consider using an [APM integration](/developerportal/operate/monitoring-with-apm/).
 {{% /alert %}}

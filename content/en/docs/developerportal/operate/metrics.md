@@ -460,6 +460,4 @@ For details on DB storage size for various plans, see [Cloud Resource Packs](/de
 
 ## 6 Read More
 
-* [Alerts](/developerportal/operate/monitoring-application-health/)
-* [Maintenance Windows](/developerportal/deploy/maintenance-windows/)
-* [About Mendix Cloud](/developerportal/deploy/mxcloudv4/)
+* [Monitoring Your Mendix Apps with an APM Tool](/developerportal/operate/monitoring-with-apm/) – Describes how to use application performance monitoring tools to provide additional monitoring for your Mendix Apps running on Mendix Cloud

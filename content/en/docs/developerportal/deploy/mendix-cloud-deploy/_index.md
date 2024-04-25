@@ -199,6 +199,7 @@ The [Mendix status page](https://status.mendix.com/) shows the current status of
 
 ## 4 Read More
 
+* [Deploying an App to Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/deploying-an-app/)
 * [Custom Domains](/developerportal/deploy/custom-domains/)
 * [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/)
 * [App Roles](/developerportal/general/app-roles/)

@@ -1178,7 +1178,7 @@ Things can you can customize for your applications in the Mendix Cloud include:
 
 Once you have linked and configured your Mendix Cloud node, which you only have to do once, you can start deploying your application to the Mendix Cloud. It is recommended that you deploy any new version of your application to the Test or Acceptance environment of your application first for testing, before deploying it to the Production environment.
 
-There are multiple ways to deploy your application to the Mendix Cloud, so there is always a deployment flow that fits your needs. You (or your team) can get a complete overview of those [in this docs page](/developerportal/deploy/mendix-cloud-deploy/#deploy-app-mendix-cloud).
+There are multiple ways to deploy your application to the Mendix Cloud, so there is always a deployment flow that fits your needs. You (or your team) can get a complete overview of those in [Deploying an App to Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/deploying-an-app/).
 
 ### 7.2 Test Your Application
 

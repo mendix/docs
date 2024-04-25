@@ -80,7 +80,7 @@ Before your app can be deployed live, you may need to configure your environment
 
 Now you need to deploy your app! To do so, you need a deployment package.
 
-1. Create a deployment package as described in the [Creating a Deployment Package](/developerportal/deploy/mendix-cloud-deploy/#package-from-team-server).
+1. Create a deployment package as described in the [Creating a Deployment Package](/developerportal/deploy/mendix-cloud-deploy/deploying-an-app/#package-from-team-server).
 2. On the deployment package you just created, click **Deploy** ({{% icon name="deploy" %}}) to publish your app to the production environment.
 
 ### 3.7 Upload and Restore the Backup

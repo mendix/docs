@@ -105,11 +105,11 @@ The steps for each procedure are described in the sections below.
 
 #### 3.2.1 Enabling the DocGen Request Handler for Licensed Apps {#enable-docgen}
 
-{{% alert color="info" %}}Skip this step if your app is [deployed as a Free app](/developerportal/deploy/mendix-cloud-deploy/#deploy-free-app) to Mendix Public Cloud. You can [register your app environment](#register-app) directly.{{% /alert %}}
+{{% alert color="info" %}}Skip this step if your app is [deployed as a Free app](/developerportal/deploy/mendix-cloud-deploy/deploying-an-app/#deploy-free-app) to Mendix Cloud. You can [register your app environment](#register-app) directly.{{% /alert %}}
 
 1. Make sure that you have configured the **DocumentGeneration** module as described in the [Configuration](#configuration) section.
 
-2. Make sure that you have the application [deployed to the desired Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/#deploy-app-mendix-cloud).
+2. Make sure that you have the application [deployed to the desired Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/deploying-an-app/).
 
 3. To allow the module to send and receive document generation requests in your Mendix Cloud environments, enable the DocGen request handler as follows:
 
@@ -143,7 +143,7 @@ The steps for each procedure are described in the sections below.
 
     * In version 1.6.0 and above, for apps deployed on Mendix Free Cloud, a **Renew app registration** button will be visible in the **Snip_AppRegistration** snippet if your registration is going to expire within 24 hours or has already expired. You can use this button to manually refresh your token.
 
-3. Make sure that your changes are [deployed to your Mendix Cloud environment](/developerportal/deploy/mendix-cloud-deploy/#deploy-app-mendix-cloud).
+3. Make sure that your changes are [deployed to your Mendix Cloud environment](/developerportal/deploy/mendix-cloud-deploy/deploying-an-app/).
 4. Sign in to the app environment you want to register.
 5. Navigate to the page that contains the **Snip_AppRegistration** snippet.
 6. Follow the steps on the page to register your app environment.

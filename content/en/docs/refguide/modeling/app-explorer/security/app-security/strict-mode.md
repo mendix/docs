@@ -30,7 +30,7 @@ The APIs will be disabled on the Runtime, which means that these APIs cannot be 
 This aids in following the guidelines outlined in the *OWASP Low-Code/No-Code Top 10*, addressing [LCNC-SEC-05: Security Misconfiguration](https://owasp.org/www-project-top-10-low-code-no-code-security-risks/content/2022/en/LCNC-SEC-05-Security-Misconfiguration).
 
 ## 3 Save Changes Action
-In Strict Mode, your model is analysed by Studio Pro to ensure that only entities within editable widgets can be saved during a save changes action. 
+In Strict Mode, your model is analyzed by Studio Pro to ensure that only entities within editable widgets can be saved during a save changes action. 
 
 Additionally, since Save Changes Actions are not analyzed for layouts, placing a save button within a layout triggers a consistency error. Instead, a save button within a snippet can be used.
 

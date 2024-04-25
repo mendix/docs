@@ -130,10 +130,11 @@ This section is generated based on options chosen while running the Mendix Plugg
 
 ### 4.2 Widget Description {#widget-description}
 
-After widget attributes, you will see a description of a widget that will be presented in Studio Pro. This description includes a widget name and its icon encoded as a base64 image:
+Inside the widget element, the first few elements affect how the widget is presented in Studio Pro. First the title element is used to provide a display name for the widget, next a short description can be given using the description element. 
 
 ```xml
 	<name>My Progress Card</name>
+    <description>Displays the progression of my tasks.</description>
 ```
 
 In Mendix Studio Pro, the widget described above would look like this:
@@ -141,6 +142,11 @@ In Mendix Studio Pro, the widget described above would look like this:
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/basic-widget.png" alt="basic widget" class="no-border" >}}
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/basic-widget-progress-card.png" alt="basic progress card" class="no-border" >}}
+
+
+{{% alert color="info" %}}
+The description is no longer displayed inside Studio Pro as of version 10.X.
+{{% /alert %}}
 
 #### 4.2.1 Help Page {#help}
 

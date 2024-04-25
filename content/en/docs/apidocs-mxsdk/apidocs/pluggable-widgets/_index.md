@@ -166,17 +166,16 @@ To provide more clarity for Studio Pro users you can specify a toolbox category 
 
 When an existing category is specified, then your widget is placed in it next to existing built-in widgets. When a new category is specified, then your widget placed in that new category. 
 
-A category can be provided through `studioCategory` and `studioProCategory` tags:
+A category can be provided through the `studioProCategory` tag:
 
 ```xml
    <studioProCategory>Open Street Maps</studioProCategory>
-   <studioCategory>Maps</studioCategory>
 ```
 
 In the example above, a widget would be placed under **Open Street Maps widgets** in Studio Pro. Note that **widgets** is added automatically in the Studio Pro UI.
 
 {{% alert color="info" %}}
-The `studioCategory` and `studioProCategory` tags should be placed right after the `description` tag.
+The `studioProCategory` tag should be placed right after the `description` tag.
 {{% /alert %}}
 
 {{% alert color="info" %}}

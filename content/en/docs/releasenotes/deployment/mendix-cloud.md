@@ -21,7 +21,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### Improvements
 
-* Previously, the **Metrics** page displayed the **Application** group of metrics when first opened. Now, the page opens to the last metrics group (**Application**, **Database**, or **All**) that the user selected. Note that the displayed group depends on the user history, not the environment or app history. As before, the user can then switch between the metrics groupings via the **Group** drop-down menu on the **Metrics** page.
+* Previously, the **Metrics** page displayed the **Day** period and the **Application** group of metrics when first opened. Now, the page opens to the last metrics period (**Day**, **Week**, **Month**, or **Quarter**) and group (**Application**, **Database**, or **All**) that the user selected. Note that the display depends on the user history, not the environment or app history. As before, the user can switch between the metrics periods and groups via the **Period** and **Group** drop-down menus on the **Metrics** page.
 * On the **Metrics** page, we now load each graph asynchronously instead of loading the entire page at once. This improves the user experience through faster page loading time.
 * We added a way to quickly scroll to the top of the **Metrics** page. Each graph now has a **Scroll to top** button ({{% icon name="arrow-circle-up" %}}) next to it, which the user can click to directly reach the top of the page.
 * We stopped supporting the *Application Container CPU Percentage* alert, because it triggered too often to be useful. The CPU usage data can still be seen on the **Metrics** page.

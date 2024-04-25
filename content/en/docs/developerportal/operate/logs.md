@@ -12,10 +12,12 @@ tags: ["Operate", "App", "Developer Portal", "Mendix Cloud"]
 
 From the **Logs** page, you can access the logs produced by your app. What you see depends on the environment to which your app is deployed.
 
-{{% alert color="info" %}}This page describes logs for apps deployed to Mendix Cloud; Mendix Cloud is the default Mendix deployment for a licensed app.<br><br>If your app is deployed to SAP Business Technology Platform (SAP BTP) instead, the **Logs** page displays links to the SAP BTP cockpit.<br><br>To configure logs if your app is running on a different cloud, go to the cloud management portal for the cloud to which your app is deployed. For more information, see the following topics:
+{{% alert color="info" %}}
+This page describes logs for licensed apps deployed to Mendix Cloud. Logs are not available for Free Apps deployed to Mendix Cloud.
+{{% /alert %}}
 
-* [Monitoring Environments in Mendix for Private Cloud](/developerportal/deploy/private-cloud-monitor/)
-* [Monitoring Environments in Mendix Apps on SAP BTP](/developerportal/deploy/sap-cloud-platform/sap-monitoring/)
+{{% alert color="info" %}}
+To configure logs if your app is running on a different cloud, go to the cloud management portal for the cloud to which your app is deployed. For more information, see [Monitoring Environments in Mendix for Private Cloud](/developerportal/deploy/private-cloud-monitor/) or [Monitoring Environments in Mendix Apps on SAP BTP](/developerportal/deploy/sap-cloud-platform/sap-monitoring/).
 {{% /alert %}}
 
 To access the **Logs** page, open your app in the [Developer Portal](https://sprintr.home.mendix.com/). Then select **Logs** in the navigation pane. Use the drop-down menu in the upper-right corner to select the environment you want to view logs for.

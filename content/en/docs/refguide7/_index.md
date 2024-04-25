@@ -10,6 +10,7 @@ cascade:
     - space: "Mendix 7"
     - content_type: "Mendix 7"
     - mendix_version: 7
+    - banner_7: true
     - old_content: true
     - hide_feedback: true
     - notsitemap: true

@@ -630,7 +630,7 @@ The DeepLink module does not have full support for multiple IdPs, so it can only
 
 If you are using version 6.1.0 or above of the Deep Link module, you should also set the `EnableLeadingSlash` constant to *False*. This prevents users from being redirected to an invalid deep link location.
 
-## 7 Debugging the Configuration
+## 7 Debugging the Configuration{#debugging-the-configuration}
 
 When testing and debugging the configuration, an option is to view the messages in the log files. A detailed cause of the failure will be printed in case something goes wrong.
 

@@ -22,23 +22,28 @@ In [Portfolio Management](/developerportal/portfolio-management/), you can impor
 
 {{% alert color="info" %}}
 Each time, you can only export initiatives from one portfolio. It is not possible to export all the portfolios in one go.
-
 {{% /alert %}}
 
 1. In Portfolio Management, click the portfolio to open the portfolio.
 
-2. To export active initiatives, go to the **Initiatives Overview** page. To export archived initiatives, go to the **Archived** page.
+2. Go to the page where the initiatives are listed:
 
-3. If you want to only export a selection of initiatives, use **Filters** on the upper-right corner of the page to filter the initiatives that you want to export.
+   * To export active initiatives, go to the **Initiatives Overview** page.
+   * To export archived initiatives, go to the **Archived** page.
+
+3. To export only specific initiatives, use the **Filters** option on the upper-right corner of the page. This tool allows you to narrow down your selection and export only the initiatives you need.
 
 4. Click the button on the upper-right corner to export initiatives:
 
    * On the **Initiatives Overview** page, click the {{% icon name="office-sheet" %}} icon and then select **Export Initiatives**. 
    * On the **Archive** page, click {{% icon name="office-sheet" %}} **Export Initiatives**.
-   
+
    The **Export Initiatives** dialog box opens.
 
-5. To export all initiatives of the portfolio, click **Export All**. To only export the selection of your initiatives, click **Export Selection**.
+5. Select how you want to export initiatives:
+
+   * To export all initiatives of the portfolio, click **Export All**. 
+   * To only export the selection of your initiatives, click **Export Selection**.
 
 The initiatives are exported to an Excel file.
 

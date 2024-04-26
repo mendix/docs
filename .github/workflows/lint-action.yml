@@ -53,6 +53,7 @@ jobs:
           body: |
             ${{ env.VER }}
           branch: lint-docs
+          committer: MarkvanMents <Mark.van.Ments@mendix.com>
           assignees: MarkvanMents
           reviewers: MarkvanMents
           labels: Internal WIP

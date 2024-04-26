@@ -9,7 +9,7 @@ The text widget shows text which can optionally contain parameters. Every parame
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide7/desktop-modeler/pages/common-widgets/text/text.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/common-widgets/text/text.png" class="no-border" >}}
 
 Text widget placed in a data view, showing a greeting message to the user.
 

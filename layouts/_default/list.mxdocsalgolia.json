@@ -128,6 +128,7 @@ Define Global variables
                         {{- $scratch.SetInMap $uniqueHit "time_stamp" $pageDot.Lastmod.UTC.Unix -}}
                         {{- $scratch.SetInMap $uniqueHit "weight.position" $sliceNumber -}}
                         {{- $scratch.SetInMap $uniqueHit "space" $pageDot.Params.space -}}
+                        {{- $scratch.SetInMap $uniqueHit "content_type" $pageDot.Params.content_type -}}
                         {{- $scratch.SetInMap $uniqueHit "type" $pageDot.Type -}}
                         {{- $scratch.SetInMap $uniqueHit "category" $pageDot.Params.category -}}
                         {{- $scratch.SetInMap $uniqueHit "menu_order" $pageDot.Weight -}}

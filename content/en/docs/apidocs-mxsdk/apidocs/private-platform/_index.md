@@ -22,12 +22,12 @@ For more information, see [API (Application Programming Interface)](https://www.
 
 ## 2 Prerequisites
 
-Authentication for the API uses a personal access token (PAT). You can generate a PAT in the **Personal Access Tokens** section of your [Private Mendix Platform Profile](/private-mendix-platform-user-guide/#profile).
+Authentication for the API uses a personal access token (PAT). You can generate a PAT in the **Personal Access Tokens** section of your [Private Mendix Platform Profile](/private-mendix-platform/user-guide/#profile).
 
 Each available API has its own set of scopes that define the access level for the token. As a best practice, consider restricting the token's scope to the lowest access level required to perform the necessary operations.
 
 Copy the `{GENERATED_PAT}` and store it in a safe location, so you can use it to authorize your Private Mendix Platform API calls.
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/private-platform/copy-pat.png" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/private-platform/copy-pat.png" class="no-border" >}}
 
 ## 3 Documents in this Category

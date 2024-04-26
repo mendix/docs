@@ -67,7 +67,7 @@ This tool is executed on a Mendix Git repository. If your Mendix app is still on
 
 The cleanup tool will reduce the size of the repository to a minimum, by only retaining the latest commit of the main branch. This means that all work on branches that have been merged to main branch are kept, but the commits themselves (author, changes per commit, ...) are not.
 
-{{< figure src="/attachments/refguide/version-control/troubleshoot-version-control-issues/git_fixer_mode.png" >}}
+{{< figure src="/attachments/refguide/version-control/troubleshoot-version-control-issues/git_fixer_mode.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 Uncommitted work, or work committed to branches that have not been merged to the main branch, will be permanently removed from the repository.
@@ -140,7 +140,7 @@ If you are using Mendix Team Server as your Git version control server, you can 
 
 ##### 5.1.6.2 Other Git Platforms
 
-When using another Git platform than Mendix Team Server, such as Github or Azure Devops, you can typically enable force pushing in a portal. 
+When using another Git platform than Mendix Team Server, such as GitHub or Azure Devops, you can typically enable force pushing in a portal. 
 
 {{% alert color="warning" %}}
 Force pushing allows to make destructive changes to the repository, which can easily lead to unrecoverable errors. We recommend you to give these permissions to as few users as strictly necessary.

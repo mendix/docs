@@ -19,6 +19,10 @@ This how-to teaches you how to do the following:
 * Configure to run locally
 * Configure in the Mendix Cloud
 
+{{% alert color="info" %}}
+This capability can also be described as Mutual Transport Layer Security (mTLS). Following this guide, the server certificate will be verified against any certificate authorities (CAs) in Mendix application's trust store. If you require true "zero trust" mTLS where standard internet CAs should not be trusted by default, please contact Mendix Expert Services for assistance.
+{{% /alert %}}
+
 ## 2 Prerequisites
 
 * A PKCS12 certificate file that contains a private key — these files typically have the *.pfx* or *.p12* file extension
@@ -46,7 +50,7 @@ This is an example:
 
 A complete configuration may look like this:
 
-{{< figure src="/attachments/howto/integration/use-a-client-certificate/example-custom-settings.png" >}}
+{{< figure src="/attachments/howto/integration/use-a-client-certificate/example-custom-settings.png" class="no-border" >}}
 
 You can use an empty path for `ClientCertificateUsages` to specify that you do not want to use a client certificate, even when the server accepts one. To do this, you need to add the **Value** `{"<endpoint>":""}` (replace `<endpoint>` with the actual endpoint).
 

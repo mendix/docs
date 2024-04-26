@@ -11,7 +11,7 @@ tags: ["marketplace", "marketplace component", "widget", "star rating", "rating"
 
 The [Rating](https://marketplace.mendix.com/link/component/54611) widget enables rating from 0 to a defined maximum amount using an attribute.
 
-{{< figure src="/attachments/appstore/widgets/rating/example.gif" alt="Example" >}}
+{{< figure src="/attachments/appstore/widgets/rating/example.gif" alt="Example" class="no-border" >}}
 
 ## 2 Usage
 

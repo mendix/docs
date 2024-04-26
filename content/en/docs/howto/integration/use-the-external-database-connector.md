@@ -41,11 +41,11 @@ If additional connection properties are required to connect, you can alternative
 
 2. Select the database you want to connect to and add the connection details the Database Connection wizard.
 
-    {{< figure src="/attachments/howto/integration/use-the-external-database-connector/1.png" >}}
+    {{< figure src="/attachments/howto/integration/use-the-external-database-connector/1.png" class="no-border" >}}
 
 3. Click **“Test Connection”** to validate the connection to the external database.
 
-{{< figure src="/attachments/howto/integration/use-the-external-database-connector/2.png" >}}
+{{< figure src="/attachments/howto/integration/use-the-external-database-connector/2.png" class="no-border" >}}
 
 Click **Save** to save the connection details, which are stored in 3 constants:
 
@@ -59,7 +59,7 @@ For example: `*Database*_DBsource.`
 
 When the connection is successful and saved, you can search the **Browse database** tab for Tables, Views, Procedures, and Functions.
 
-{{< figure src="/attachments/howto/integration/use-the-external-database-connector/3.png" >}}
+{{< figure src="/attachments/howto/integration/use-the-external-database-connector/3.png" class="no-border" >}}
 
 ### 3.3 Create and Validate SQL Queries with Parameters
 
@@ -76,7 +76,7 @@ For example, the query below retrieves a list of RequestedProductRequirement whe
 SQL Query:
 `Select requestedProductRequirement from productlines where productLine = {productLine}`
 
-{{< figure src="/attachments/howto/integration/use-the-external-database-connector/4.png" >}}
+{{< figure src="/attachments/howto/integration/use-the-external-database-connector/4.png" class="no-border" >}}
 
 ## 4 Save Query
 
@@ -88,7 +88,7 @@ SQL Query:
 
 3. Click **Save Query & Create Entity** to save the query and the newly created entity in the domain model. 
 
-{{< figure src="/attachments/howto/integration/use-the-external-database-connector/5.png" >}}
+{{< figure src="/attachments/howto/integration/use-the-external-database-connector/5.png" class="no-border" >}}
 
 ### 4.2 Save DML Query
 
@@ -98,7 +98,7 @@ SQL Query:
 
 2. Click **Save Query**.
 
-{{< figure src="/attachments/howto/integration/use-the-external-database-connector/6.png" >}}
+{{< figure src="/attachments/howto/integration/use-the-external-database-connector/6.png" class="no-border" >}}
 
 {{% alert color="info" %}} For all DML Queries, changes made to database in the Mendix Design phase are automatically rolled back. {{% /alert %}}
 
@@ -128,7 +128,7 @@ To call a stored procedure, do the following:
 
 5. Output details for the selected query auto-populate.
 
-{{< figure src="/attachments/howto/integration/use-the-external-database-connector/7.png" >}}
+{{< figure src="/attachments/howto/integration/use-the-external-database-connector/7.png" class="no-border" >}}
 
 You are now ready to use data from an external database in your Mendix App.
 

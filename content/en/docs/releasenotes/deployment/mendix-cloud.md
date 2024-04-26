@@ -17,6 +17,15 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2024
 
+### April 25, 2024
+
+#### Improvements
+
+* Previously, the **Metrics** page displayed the **Day** period and the **Application** group of metrics when first opened. Now, the page opens to the last metrics period (**Day**, **Week**, **Month**, or **Quarter**) and group (**Application**, **Database**, or **All**) that the user selected. Note that the display depends on the user history, not the environment or app history. As before, the user can switch between the metrics periods and groups via the **Period** and **Group** drop-down menus on the **Metrics** page.
+* On the **Metrics** page, we now load each graph asynchronously instead of loading the entire page at once. This improves the user experience through faster page loading time.
+* We added a way to quickly scroll to the top of the **Metrics** page. Each graph now has a **Scroll to top** button ({{% icon name="arrow-circle-up" %}}) next to it, which the user can click to directly reach the top of the page.
+* We stopped supporting the *Application Container CPU Percentage* alert, because it triggered too often to be useful. The CPU usage data can still be seen on the **Metrics** page.
+
 ### April 4, 2024
 
 #### Pipelines Fixes
@@ -35,11 +44,11 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 * All databases of environments on eligible plans in Mendix Cloud (as specified in the table below) have been migrated to gp3 storage instances. Compared to gp2, gp3 provides higher baseline storage performance. For more information, see [Database IOPS Burst Balance](/developerportal/operate/metrics/#Trends-dbmxdatabaseburstbalance) in the *Metrics* documentation.
 
-    | Mendix Plans      | Storage Instance Type | Storage Size         | Baseline Storage Performance | Provisioned IOPS Range | Provisioned Throughput Range |
-    |-------------------|-----------------------|----------------------|------------------------------|------------------------|------------------------------|
-    | S and M           | gp2                   | Less than 20 GiB     | 100IOPS (3000 Burst)         | 100 - 1197 IOPS        | 128-250 MiB/s                |
-    | L, XL, XXL, and XXXL | gp3                   | Between 20 and 400 GiB | 3000 IOPS / 125 MiB/s        | N/A                    | N/A                          |
-    | XXXL              | gp3                   | 400 GiB and higher   | 12000 IOPS / 500 MiB/s       | 12000 - 64000 IOPS     | 500 - 4000 MiB/s             |
+    | Storage Size           | Storage Instance Type | Baseline Storage Performance      | Provisioned IOPS Range | Provisioned Throughput Range |
+    | ---------------------- | --------------------- | --------------------------------- | ---------------------- | ---------------------------- |
+    | Less than 20 GiB       | gp2                   | 100 IOPS (3000 Burst) / 125 MiB/s | 100 - 1197 IOPS        | 128-250 MiB/s                |
+    | Between 20 and 400 GiB | gp3                   | 3000 IOPS / 125 MiB/s             | N/A                    | N/A                          |
+    | 400 GiB and higher     | gp3                   | 12000 IOPS / 500 MiB/s            | 12000 - 64000 IOPS     | 500 - 4000 MiB/s             |
 
 ### March 7, 2024
 
@@ -139,11 +148,11 @@ For information on the current status of deployment to Mendix Cloud and any plan
 * We added support for gp3 storage instances for databases; this provides higher baseline storage performance compared to gp2. IOPS and throughput performance will be upgraded according to the table below.
 
     * From October 25 onwards, when a customer creates a new DB instance, it is provisioned with a gp3 storage instance if it has a storage size of at least 20 GiB (as specified in the table below). This also occurs when the customer's database is recreated.
-    | Mendix Plans      | Storage Instance Type | Storage Size         | Baseline Storage Performance | Provisioned IOPS Range | Provisioned Throughput Range |
-    |-------------------|-----------------------|----------------------|------------------------------|------------------------|------------------------------|
-    | S and M           | gp2                   | Less than 20 GiB     | 100IOPS (3000 Burst)         | 100 - 1197 IOPS        | 128-250 MiB/s                |
-    | L, XL, XXL, and XXXL | gp3                   | Between 20 and 400 GiB | 3000 IOPS / 125 MiB/s        | N/A                    | N/A                          |
-    | XXXL              | gp3                   | 400 GiB and higher   | 12000 IOPS / 500 MiB/s       | 12000 - 64000 IOPS     | 500 - 4000 MiB/s             |
+    | Storage Size           | Storage Instance Type | Baseline Storage Performance      | Provisioned IOPS Range | Provisioned Throughput Range |
+    | ---------------------- | --------------------- | --------------------------------- | ---------------------- | ---------------------------- |
+    | Less than 20 GiB       | gp2                   | 100 IOPS (3000 Burst) / 125 MiB/s | 100 - 1197 IOPS        | 128-250 MiB/s                |
+    | Between 20 and 400 GiB | gp3                   | 3000 IOPS / 125 MiB/s             | N/A                    | N/A                          |
+    | 400 GiB and higher     | gp3                   | 12000 IOPS / 500 MiB/s            | 12000 - 64000 IOPS     | 500 - 4000 MiB/s             |
 
     * Existing databases eligible for this upgrade will be migrated later. More details will follow.
 
@@ -1340,7 +1349,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 * We have introduced scaling via API for Mendix Cloud v4. It is now possible to scale Mendix Cloud v4 applications via the Deploy API. For instructions, see the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api/).
 * We have aggregated the health icons for the acceptance and test environments in the **Nodes** dashboard and **Company Admin** screen.
 
-    {{< figure src="/attachments/releasenotes/deployment/mendix-cloud/CPHealthIcon.png"   width="300"  >}}
+    {{< figure src="/attachments/releasenotes/deployment/mendix-cloud/CPHealthIcon.png"   width="300"  class="no-border" >}}
 
 * The health icon will display the health status of the environment that is in the worst condition. This is to prepare for an upcoming release that will support more than three environments per application.
 

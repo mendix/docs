@@ -13,7 +13,7 @@ This page describes the **Call workflow** activity you can use in your [workflow
 
 To improve the maintainability of a workflow, you can split a larger process into smaller pieces and avoid having repeated tasks. You can use the **Call workflow** activity for this purpose and use another workflow as a sub-workflow for the current one. 
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/call-workflow/call-workflow-example.jpg" alt="Call Workflow Example" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/call-workflow/call-workflow-example.jpg" alt="Call Workflow Example" class="no-border" >}}
 
 You can drag the **Call workflow** activity into the flow, and then either select an existing workflow or create a new one. The called workflow is then used as a sub-workflow for the current calling workflow.   
 
@@ -44,7 +44,7 @@ This property indicates parameters of the selected workflow, parameters pass dat
 
 To change the parameter, either double-click the parameter from the list or select the parameter row and click the **Edit parameter value** button. When editing the parameter, you can define how the context entity of the calling workflow is mapped (related) to the context entity of the called workflow (sub-workflow). The context object of the called workflow can be selected by either using the calling  workflow context object or by using an expression: you can select a context object that is associated to the calling workflow's context object. The **Type** column shows the context object of the selected workflow. 
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/call-workflow/call-workflow-parameter-example.jpg" alt="Call Workflow Parameter Example" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/call-workflow/call-workflow-parameter-example.jpg" alt="Call Workflow Parameter Example" class="no-border" >}}
 
 ### 2.2 Common Section {#common}
 

@@ -87,7 +87,7 @@ Follow the instructions in [Using Marketplace Content](/appstore/overview/use-co
 
 ## 3 Configuration {#configuration}
 
-After you install the OpenAI Connector, you can find it in the **App Explorer**, in the **Marketplace modules** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to OpenAI. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to OpenAI, you must also [configure the Encryption module](https://docs.mendix.com/appstore/modules/encryption/#configuration). 
+After you install the OpenAI Connector, you can find it in the **App Explorer**, in the **Marketplace modules** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to OpenAI. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to OpenAI, you must also [configure the Encryption module](/appstore/modules/encryption/#configuration). 
 
 ### 3.1 General Configuration {#general-configuration}
 
@@ -256,7 +256,7 @@ The domain model in Mendix is a data model that describes the information in you
 
 #### 4.1.1 Configuration {#configuration-domain-model}
 
-{{< figure src="/attachments/appstore/modules/openai-connector/domainModel-Configuration.png" class="image-border" >}}
+{{< figure src="/attachments/appstore/modules/openai-connector/domainModel-Configuration.png" >}}
 
 ##### 4.1.1.1 `Configuration` {#configuration-entity} 
 
@@ -292,7 +292,7 @@ This entity is only used to send a simple [chat completions request](#chat-compl
 
 #### 4.1.2 Generalizations {#generalizations-domain-model}
 
-{{< figure src="/attachments/appstore/modules/openai-connector/domainModel-Generalizations.png" class="image-border" >}}
+{{< figure src="/attachments/appstore/modules/openai-connector/domainModel-Generalizations.png" >}}
 
 ##### 4.1.2.1 `AbstractUsage` {#abstractusage}
 
@@ -316,7 +316,7 @@ This is the abstract entity for `ChatCompletionsMessage`. Do not use this entity
 
 #### 4.1.3 Chat Completions {#chatcompletions-domain-model}
 
-{{< figure src="/attachments/appstore/modules/openai-connector/domainModel-ChatCompletionsWithSession.png" class="image-border" >}}
+{{< figure src="/attachments/appstore/modules/openai-connector/domainModel-ChatCompletionsWithSession.png" >}}
 
 ##### 4.1.3.1 `ChatCompletionsRequest` {#chatcompletionsrequest} 
 
@@ -394,7 +394,7 @@ This is a specialization of the [AbstractChatCompletionsMessage](#abstractchatco
 
 #### 4.1.4 Image Generations {#imagegenerations-domain-model}
 
-{{< figure src="/attachments/appstore/modules/openai-connector/domainModel-Images.png" class="image-border" >}}
+{{< figure src="/attachments/appstore/modules/openai-connector/domainModel-Images.png" >}}
 
 ##### 4.1.4.1 `ImageGenerationsRequest` {#imagegenerationsrequest} 
 
@@ -449,7 +449,7 @@ This is an entity that is used to map the [image](#image) data from the API resp
 
 #### 4.1.5 Embeddings {#embeddings-domain-model}
 
-{{< figure src="/attachments/appstore/modules/openai-connector/domainModel-EmbeddingsWithDataBatch.png" class="image-border" >}}
+{{< figure src="/attachments/appstore/modules/openai-connector/domainModel-EmbeddingsWithDataBatch.png" >}}
 
 ##### 4.1.5.1 `EmbeddingsRequest` {#embeddingsrequest} 
 
@@ -517,7 +517,7 @@ This entity represents a text string, usually a part of a larger base text or di
 
 ### 4.2 Enumerations {#enumerations} 
 
-An enumeration is a predefined list of values that can be used as an attribute type. For more information about enumerations in general, see [Enumerations](https://docs.mendix.com/refguide/enumerations/). 
+An enumeration is a predefined list of values that can be used as an attribute type. For more information about enumerations in general, see [Enumerations](/refguide/enumerations/). 
 
 #### 4.2.1 General {#general-enumerations}
 

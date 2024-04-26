@@ -16,7 +16,7 @@ When a column is used to display an attribute from an entity associated by a man
 
 Below is an example that uses the `Order` and `Product` entities, which have a mny-to-many association. The **Product Names** column in the data grid displays for each order the names of the products that are associated to it:
 
-{{< figure src="/attachments/refguide7/runtime/data-storage/ordering-behavior/sorting-reference-sets.png" >}}
+{{< figure src="/attachments/refguide7/runtime/data-storage/ordering-behavior/sorting-reference-sets.png" class="no-border" >}}
 
 Sorting the **Product Names** column will use the underlined values and not the displayed text. These values are the result of `MIN(productName)` for each order.
 

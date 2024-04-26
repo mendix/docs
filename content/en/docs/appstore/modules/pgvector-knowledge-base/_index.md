@@ -123,7 +123,7 @@ The domain model in Mendix is a data model that describes the information in you
 
 #### 4.1.1 Configuration {#configuration-domain-model}
 
-{{< figure src="/attachments/appstore/modules/pgvector-knowledge-base/domain-model-database-configuration.png" class="image-border" >}}
+{{< figure src="/attachments/appstore/modules/pgvector-knowledge-base/domain-model-database-configuration.png" >}}
 
 ##### 4.1.1.1 `DatabaseConfiguration` {#databaseconfiguration-entity} 
 
@@ -147,7 +147,7 @@ This non-persistent entity is only used for editing the `DatabasePassword`. The 
 
 #### 4.1.2 Knowledge Base Interaction {#knowledgebase-domain-model}
 
-{{< figure src="/attachments/appstore/modules/pgvector-knowledge-base/domain-model-knowledge-base-interaction.png" class="image-border" >}}
+{{< figure src="/attachments/appstore/modules/pgvector-knowledge-base/domain-model-knowledge-base-interaction.png" >}}
 
 ##### 4.1.2.1 `Chunk` {#chunk}
 
@@ -182,7 +182,7 @@ The **PgVectorKnowledgeBase.User** module role has read access to all attributes
 
 ### 4.2 Enumerations {#enumerations} 
 
-An enumeration is a predefined list of values that can be used as an attribute type. For more information about enumerations in general, see [Enumerations](https://docs.mendix.com/refguide/enumerations/). 
+An enumeration is a predefined list of values that can be used as an attribute type. For more information about enumerations in general, see [Enumerations](/refguide/enumerations/). 
 
 #### 4.2.1 General {#general-enumerations}
 

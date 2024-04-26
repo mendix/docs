@@ -10,13 +10,13 @@ tags: ["studio pro", "snippet call", "snippet", "common widget"]
 
 The **Snippet call** widget allows you to use a [snippet](/refguide9/snippet/) on a [page](/refguide9/page/), a [layout](/refguide9/layout/), or another snippet:
 
-{{< figure src="/attachments/refguide9/modeling/pages/structure-widgets/snippet-call/snippet-call-example.png" alt="Snippet Call Example" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/structure-widgets/snippet-call/snippet-call-example.png" alt="Snippet Call Example" class="no-border" >}}
 
 ## 2 Properties
 
 An example of snippet call properties is represented in the image below:
 
-{{< figure src="/attachments/refguide9/modeling/pages/structure-widgets/snippet-call/snippet-call-properties.png" alt="Snippet Call Properties"   width="300"  >}}
+{{< figure src="/attachments/refguide9/modeling/pages/structure-widgets/snippet-call/snippet-call-properties.png" alt="Snippet Call Properties"   width="300"  class="no-border" >}}
 
 Snippet call properties consist of the following sections:
 
@@ -64,7 +64,7 @@ After clicking **Inline snippet**, note that the snippet is not automatically de
 
 Not every snippet call can be inlined, because certain configurations cannot be represented correctly outside a snippet. Attempting to inline such a snippet call could result in a consistency error or produce inlined content which does not have the same behavior as the original snippet call. In this case, a warning dialog box is shown to ask whether you want to proceed:
 
-{{< figure src="/attachments/refguide9/modeling/pages/structure-widgets/snippet-call/inline-snippet-warning-dialog.png" alt="Warning dialog for Inline snippet" width="600" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/structure-widgets/snippet-call/inline-snippet-warning-dialog.png" alt="Warning dialog for Inline snippet" width="600" class="no-border" >}}
 
 ## 4 Limitations
 

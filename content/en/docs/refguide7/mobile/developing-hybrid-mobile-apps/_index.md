@@ -19,7 +19,7 @@ While developing a hybrid mobile app, you can quickly preview it in in the brows
 
 However, when you use native widgets on your hybrid pages, some of these widgets might not work in the browser. Some of these widgets will offer an alternative implementation for when they are running in an ordinary browser; others will not work at all. To see what your app will look like inside the PhoneGap wrapper, you can use the Mendix Developer App. In the Desktop Modeler, you can reach the hybrid mobile app dialog box via **View in the Mendix App** in the toolbar or through the **Run** menu. It shows a QR code that can be scanned with that app. This is a quick way to load your app into a PhoneGap compatible environment.
 
-{{< figure src="/attachments/refguide7/mobile/developing-hybrid-mobile-apps/View_Hybrid_Mobile_App_Popup.png" >}}
+{{< figure src="/attachments/refguide7/mobile/developing-hybrid-mobile-apps/View_Hybrid_Mobile_App_Popup.png" class="no-border" >}}
 
 For more information about how to download the Mendix Developer App, see [Getting the Mendix Developer App](/refguide7/getting-the-mendix-app/).
 

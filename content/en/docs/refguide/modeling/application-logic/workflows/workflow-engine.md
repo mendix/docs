@@ -13,7 +13,7 @@ The Mendix Workflow Engine is the Mendix Runtime engine to execute workflows. Th
 
 In the domain model of the System module, there are several Workflow Engine-related entities:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-engine/workflow-data.png" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-engine/workflow-data.png" class="no-border" >}}
 
 These entities are populated by the Workflow Engine, some on the start of the app, others – while running workflows. The entities can be divided into the following groups:
 
@@ -146,7 +146,7 @@ The [Jump activity](/refguide/jump-activity/) allows the workflow to jump to ano
 The workflow states are stored in the **State** attribute of the **System.Workflow** entity. This attribute uses the System.WorkflowState enumeration to have a fixed set of states. These states represent different technical states a workflow instance can have. 
 In the picture below, you see two yellow boxes with outgoing and incoming arrows. The yellow boxes are not concrete states, they mean that any state inside the box can transition following the outgoing arrow and can transition back into the previous state by following the incoming arrow.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-engine/workflow-states.png" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-engine/workflow-states.png" class="no-border" >}}
 
 In the table below, you can find description of these states and allowed actions for each state:
 
@@ -182,7 +182,7 @@ The **Show user task page** microflow activity can be used to open the user task
 
 The user task states are stored in the **State** attribute of the **System.WorkflowUserTask** entity. This attribute uses the System.WorkflowUserTaskState enumeration to have a fixed set of states. These states represent the different technical states a user task can have. 
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-engine/user-task-states.png" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-engine/user-task-states.png" class="no-border" >}}
 
 Note the following: 
 

@@ -2,7 +2,7 @@
 title: "Mendix Cloud"
 url: /developerportal/deploy/mendix-cloud-deploy/
 category: "Deployment"
-weight: 20
+weight: 8
 description: "Describes how to deploy to Mendix Cloud."
 tags: ["Deploy","Mendix Cloud","Developer Portal", "Free App", "licensed", "limitations", "Mendix Cloud Dedicated"]
 aliases:
@@ -54,7 +54,7 @@ Free Apps make it possible to start creating and deploying apps with Mendix for 
 
 As noted in the table above, a Free App goes into sleep mode after about an hour of inactivity. If you access the app while it is inactive, it displays the following message: 
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/appresumed.png" alt="A Resuming app message" width=60% >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/appresumed.png" alt="A Resuming app message" width=60% class="no-border" >}}
 
 If, after a couple of minutes, your app does not wake up, contact [Mendix Support](https://support.mendix.com).
 
@@ -176,12 +176,12 @@ The previous steps explained how to deploy a deployment package to Mendix Cloud,
 3. Go to **Environments**.
 4. In the **Deployment Package Repository**, choose your preferred deployment package and click **Deploy** ({{% icon name="deploy" %}}).
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/deploy-package.png" class="image-border" alt="" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/deploy-package.png" alt="" >}}
 
 5. Select the environment to which you want to deploy the package.
 6. Click **Transport**.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/transport-to-flex.png" alt="The Transport menu" class="image-border" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/transport-to-flex.png" alt="The Transport menu" >}}
 
 7. If prompted, clean the environment.
 8. Review the [constants](/refguide/constants/) in the **Constants** tab. Double-click any constant to view more details and edit the value if desired.
@@ -209,11 +209,11 @@ With a Free App, you can deploy your app to Mendix Cloud from Studio Pro by usin
 
 * In the top bar of Studio Pro, click **Run** > **Publish**. This automatically deploys your app to a Free App environment.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp2.png" alt="The Run menu with the Publish option selected" max-width=60% >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp2.png" alt="The Run menu with the Publish option selected" max-width=60% class="no-border" >}}
 
 * Alternatively, in the top bar of Studio Pro, click **Publish**.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp.png" alt="The Publish button" max-width=20% >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp.png" alt="The Publish button" max-width=20% class="no-border" >}}
 
 ## 3 Mendix Pricing Plans {#plans}
 

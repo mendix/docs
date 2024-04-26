@@ -40,7 +40,7 @@ To add a workflow to your app, do the following:
 1. In the [App Explorer](/refguide9/app-explorer/), right-click the module or a folder you want to create a page in and select **Add workflow**.
 2. In the **Add workflow** dialog box, fill in Name and click **OK**:
 
-    {{< figure src="/attachments/refguide9/modeling/application-logic/workflows/add-workflow-dialog.jpg" alt="Adding Workflow" >}}
+    {{< figure src="/attachments/refguide9/modeling/application-logic/workflows/add-workflow-dialog.jpg" alt="Adding Workflow" class="no-border" >}}
 
 The workflow is created and the **WorkflowInstance** entity is added to the domain model. For more information on the **WorkflowInstance** entity, see [Workflow Parameters](/refguide9/workflow-parameters/).
 
@@ -133,7 +133,7 @@ Do the following:
 5. Set **Workflow** to to the workflow you would like to trigger.
 6. Set **Context object** to the workflow context:
 
-    {{< figure src="/attachments/refguide9/modeling/application-logic/workflows/call-workflow-example.png" alt="Call Workflow Example" width="500">}}
+    {{< figure src="/attachments/refguide9/modeling/application-logic/workflows/call-workflow-example.png" alt="Call Workflow Example" width="500" class="no-border" >}}
 
 7. Click **OK**.
 

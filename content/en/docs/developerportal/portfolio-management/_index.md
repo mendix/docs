@@ -23,7 +23,7 @@ When you start the Portfolio Management app for the first time, an introduction 
 
 The **Portfolio Landscape Overview** page contains two sections: **My Portfolios** and **Company Portfolios**. A section only appears if there is at least one [portfolio card](#portfolio-card) in that section.
 
-{{< figure src="/attachments/developerportal/portfolio-management/portfolio-landscape-overview.png" class="image-border" alt="portfolio-landscape-overview" >}}
+{{< figure src="/attachments/developerportal/portfolio-management/portfolio-landscape-overview.png" alt="portfolio-landscape-overview" >}}
 
 * **My Portfolios** – This section shows all the portfolios where you are a portfolio member. Clicking a portfolio card opens the portfolio.
 
@@ -53,7 +53,7 @@ Currently, the privacy settings of a portfolio can be private, restricted, or op
 
 \*** If the toggle on the [Privacy Requests](/control-center/portfolios/#privacy-requests) tab is turned on in Control Center, a Mendix Admin needs to approve the creation of a restricted or open portfolio. In that case, a Mendix Admin will receive a notification about the request and can approve or reject the request from the [Control Center](/control-center/portfolios/#privacy-requests). The **Privacy Settings** of the portfolio will be **Private** until a Mendix Admin approves the request.
 
-***
+{{< figure src="/attachments/developerportal/portfolio-management/opened-portfolio.png"  >}}
 
 ### 2.3 Creating a New Portfolio {#create-portfolio}
 
@@ -77,7 +77,7 @@ The portfolio is created. You are the first Portfolio Manager of this portfolio.
 
 When you click a portfolio card to which you have access, the portfolio opens with a menu on the left side. 
 
-{{< figure src="/attachments/developerportal/portfolio-management/opened-portfolio.png"  class="image-border">}}
+{{< figure src="/attachments/developerportal/portfolio-management/opened-portfolio.png">}}
 
 Clicking a menu item opens the corresponding page:
 

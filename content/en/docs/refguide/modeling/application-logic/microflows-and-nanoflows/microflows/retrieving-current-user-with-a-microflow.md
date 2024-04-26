@@ -45,7 +45,7 @@ To retrieve the currently logged-in user using the **Account** entity from the *
 
 Now you have the microflow that retrieves the current user!
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/retrieving-current-user/retrieving-current-user.png" width="600px" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/retrieving-current-user/retrieving-current-user.png" width="600px" class="no-border" >}}
 
 ## 4 Read More
 

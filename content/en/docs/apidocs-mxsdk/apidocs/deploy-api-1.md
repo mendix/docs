@@ -29,7 +29,7 @@ You can use webhooks to trigger CI/CD pipelines that use this API. These are des
 
 This image provides a domain model representation of the concepts discussed below and how these are related:
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/build-api/api-model.png" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/build-api/api-model.png" class="no-border" >}}
 
 ## 2 Authentication{#authentication}
 

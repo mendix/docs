@@ -19,7 +19,7 @@ For information about generating PDF documents, see the [PDF Document Generation
 
 The **Generate document** activity is used to write a document to a file, based on a [document template](/refguide9/document-templates/). 
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/generate-document/generate-document.png" alt="Generate Document" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/generate-document/generate-document.png" alt="Generate Document" class="no-border" >}}
 
 For more information on which types of documents can be created, see [Document Type](#document-type).
 
@@ -27,7 +27,7 @@ For more information on which types of documents can be created, see [Document T
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/generate-document/generate-document-properties.png" alt="Generate Document Properties" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/generate-document/generate-document-properties.png" alt="Generate Document Properties" class="no-border" >}}
 
 The **Generate document** properties pane consists of the following sections:
 

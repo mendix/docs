@@ -46,9 +46,9 @@ To view details of a story, do one of the following:
 * Select the story in the table and click the **Details** button in the top bar 
 * Double-click it in the table
 
-An *angled bracket* next to a story means it has tasks assigned to it. Double-clicking a story that has tasks will show and hide the tasks instead of showing the details of the story.
+An angled bracket next to a story means it has tasks assigned to it. Double-clicking a story that has tasks will show and hide the tasks instead of showing the details of the story.
 
-When you view the details of a story, the **Story Details** pop-up window is opened with the following information:
+When you view the details of a story, the **Story Details** pop-up window opens with the following information:
 
 * The number of the story
 * **Title** – the title of the story
@@ -60,12 +60,12 @@ When you view the details of a story, the **Story Details** pop-up window is ope
 
 ### 2.5 Changing the Status of a Story or a Task {#changing-status}
 
-To change the status of a *story*, select the new status in the **Status** column. The list of statuses to choose from can be managed via [Epics](/developerportal/project-management/epics/) in the Developer Portal or the connected [Jira board](/developerportal/project-management/jira-connector/).
+To change the status of a story, select the new status in the **Status** column. The list of statuses to choose from can be managed via [Epics](/developerportal/project-management/epics/) in the Developer Portal or the connected [Jira board](/developerportal/project-management/jira-connector/).
 
-To change the status of a *task*, tick or clear the checkbox in the **Status** column:
+To change the status of a task, select or clear the checkbox in the **Status** column:
 
-* Clear the checkbox to set the done task in *To do*
-* Tick the checkbox to set the task to *Done*
+* Clear the checkbox to set the done task in **To do**
+* Tick the checkbox to set the task to **Done**
 
 ## 3 Read More
 

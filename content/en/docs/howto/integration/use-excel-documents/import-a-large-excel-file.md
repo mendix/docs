@@ -1,6 +1,6 @@
 ---
 title: "Import a Large Excel File"
-url: /howto/integration/import-a-large-excel-file/
+url: /howto/integration/use-excel-documents/import-a-large-excel-file/
 tags: ["excel", "excel  importer", "marketplace", "sheet"]
 ---
 

@@ -12,7 +12,7 @@ In the Portfolio Management app, the term "Initiative" represents a business obj
 
 The **Initiatives Overview** page gives an overview of all the initiatives in this portfolio.
 
-{{< figure src="/attachments/developerportal/portfolio-management/initiatives-overview.png" class="image-border" >}}
+{{< figure src="/attachments/developerportal/portfolio-management/initiatives-overview.png" >}}
 
 In the search box on the top, you can search for an initiative by the initiative name.
 
@@ -82,7 +82,7 @@ While you are in the process of [adding general information](#add-general-inform
 
 In the **Edit Initiative** side pane, click **Manage tags** ({{% icon name="cog" %}}) next to the **Tags** text box.
 
-{{< figure src="/attachments/developerportal/portfolio-management/manage-tags.png" class="image-border" max-width="80%" >}}
+{{< figure src="/attachments/developerportal/portfolio-management/manage-tags.png"max-width="80%" >}}
 
 The **Manage Tags** dialog box opens.
 
@@ -215,7 +215,7 @@ In Kanban view, all the initiatives are represented by initiative cards and are 
 
 Each initiative card shows the following information:
 
-{{< figure src="/attachments/developerportal/portfolio-management/initiative-card.png" class="image-border" max-width="60%" >}}
+{{< figure src="/attachments/developerportal/portfolio-management/initiative-card.png"max-width="60%" >}}
 
 * ① Initiative status – This shows the status of your initiative. It can be **On Track**, **At Risk**, or **Off Track**.
 
@@ -243,7 +243,7 @@ Each initiative card shows the following information:
 
 In the list view, initiatives are shown in a list. Clicking the header of a column sequences the initiatives using the values in that column.
 
-{{< figure src="/attachments/developerportal/portfolio-management/list-view.png" class="image-border">}}
+{{< figure src="/attachments/developerportal/portfolio-management/list-view.png" >}}
 
 The list contains the following information:
 
@@ -351,7 +351,7 @@ The list contains the following information:
 
 The planning view gives you a clear visual representation of initiatives on a timeline to assist you with planning, coordination, and decision-making. Initiatives in this view are sorted by their go-live date. You can see maximum one year back and two years ahead from the current date.
 
-{{< figure src="/attachments/developerportal/portfolio-management/planning-view.png" class="image-border">}}
+{{< figure src="/attachments/developerportal/portfolio-management/planning-view.png" >}}
 
 The view contains the following information:
 
@@ -376,7 +376,7 @@ On the upper-right corner of the pane, there is a **Copy link** ({{% icon name="
 Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Members](/developerportal/portfolio-management/access-management/#members) section in *Access Management*.
 {{% /alert %}}
 
-{{< figure src="/attachments/developerportal/portfolio-management/side-pane.png" class="image-border" >}}
+{{< figure src="/attachments/developerportal/portfolio-management/side-pane.png" >}}
 
 When you view initiative details, you can only post comments or link epics. You cannot change any other information. To change other information, you need to [edit the initiative](#edit-delete-initiative).
 

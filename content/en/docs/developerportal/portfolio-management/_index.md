@@ -77,7 +77,7 @@ The portfolio is created. You are the first Portfolio Manager of this portfolio.
 
 When you click a portfolio card to which you have access, the portfolio opens with a menu on the left side. 
 
-{{< figure src="/attachments/developerportal/portfolio-management/opened-portfolio.png">}}
+{{< figure src="/attachments/developerportal/portfolio-management/opened-portfolio.png" >}}
 
 Clicking a menu item opens the corresponding page:
 

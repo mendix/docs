@@ -10,7 +10,7 @@ tags: ["archive", portfolio management"]
 
 The **Archive** page shows all the initiatives that are archived. You can search for an initiative in the search bar. You can [export Initiatives](/developerportal/portfolio-management/export-import-initiatives/) by clicking the {{% icon name="office-sheet" %}} **Export Initiatives** button. Clicking **Filters** enables you to filter initiatives.
 
-{{< figure src="/attachments/developerportal/portfolio-management/archived-initiatives.png" class="image-border" >}}
+{{< figure src="/attachments/developerportal/portfolio-management/archived-initiatives.png" >}}
 
 The list contains the following information:
 

@@ -10,7 +10,7 @@ tags: ["access management", portfolio management"]
 
 The **Access Management** page allows you to view and manage user access to the portfolio.
 
-{{< figure src="/attachments/developerportal/portfolio-management/access-management.png" class="image-border" >}}
+{{< figure src="/attachments/developerportal/portfolio-management/access-management.png" >}}
 
 ## 2 Members {#members}
 

@@ -79,7 +79,7 @@ These operations takes a list and one or more members (attributes or association
 
 | Operation | Description | Result Type |
 | --- | --- | --- |
-| Sort | Allows you to sort a list based on a number of attributes. The attributes are ordered to determine their priority while sorting. You cannot use associations to sort a list. Sorting attributes from generalized entities is not allowed. For more information, see [the different sorting strategies in microflows and nanoflows.](#sort) | List |
+| Sort | Allows you to sort a list based on a number of attributes. The attributes are ordered to determine their priority while sorting. You cannot use associations to sort a list. Sorting attributes from generalized entities is not allowed. For more information, see the [Sort Strategies: Nanoflows vs. Microflows](#sort) section below. | List |
 | Find | Finds the first object of which the member has the given value. | Object |
 | Filter | Finds all objects of which the member has the given value. | List |
 
@@ -111,7 +111,7 @@ This operation takes a list and filters it based on two expressions: `offset` an
 
 ### 3.2 Sort Strategies: Nanoflows vs. Microflows {#sort}
 
-Microflows provide locale-sensitive string comparison for sort operation, ensuring strings are sorted according to the rules of a specific locale. On the other hand, nanoflows lack this capability. However, in version 10.10, nanoflows were updated to ignore case sensitivity during sorting.
+Microflows provide locale-sensitive string comparison for a sort operation, ensuring strings are sorted according the rules of a specific locale. Nanoflows do not have this capability. However, from Studio Pro version 10.10, nanoflows are updated to ignore case sensitivity during sorting.
 
 ### 3.3 List Name, Object Name, or Variable Name
 

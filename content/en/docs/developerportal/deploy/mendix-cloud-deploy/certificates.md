@@ -1,7 +1,7 @@
 ---
 title: "Certificates"
 url: /developerportal/deploy/certificates/
-weight: 30
+weight: 27
 tags: ["client certificate", "certification authority", "PKCS12", "connections"]
 aliases:
     - /refguide/certificates.html

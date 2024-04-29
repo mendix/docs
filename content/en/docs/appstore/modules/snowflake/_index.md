@@ -30,7 +30,7 @@ The External Database connector is currently in a public Beta version. It is ava
 
 ### 2.2 REST SQL Connector
 
-The [REST SQL connector](https://marketplace.mendix.com/link/component/225717) supports the 9.24 LTS version of Mendix. It offers key-pair authentication with a private key file according to PKCS #8 standard.
+The [REST SQL connector](https://marketplace.mendix.com/link/component/225717), available from the Mendix Marketplace, supports the 9.24 LTS version of Mendix. It offers key-pair authentication with a private key file according to PKCS #8 standard.
 
 The REST SQL connector requires an additional step to transform data rows received from the REST SQL API into Mendix objects. For more information, see [Snowflake REST SQL Connector](/appstore/connectors/snowflake/snowflake-rest-sql/).
 

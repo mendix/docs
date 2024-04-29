@@ -88,7 +88,7 @@ Please take the following steps:
 
 ### 3.2 Configuring a Microflow for the Service
 
-After you configure the authentication for Snowflake, you can implement the functions of the connector by using the provided activities in microflows. An extended microflow has been implemented and added to the Snowflake REST SQL connector as an example for users that would like to retrieve a list of objects from an existing table in Snowflake. In the **SnowflakeRESTSQL** module, please take a look at the **ExampleImplementation** microflow and the **ExampleObject** entity in the domain model to see how the **TransformResponsesToMxObjects** operation can be used to easily convert the data received in **HttpResponse** objects into Mendix objects. 
+After you configure the authentication for Snowflake, you can implement the functions of the connector by using the provided activities in microflows. An extended microflow has been implemented and added to the Snowflake REST SQL connector as an example for users that would like to retrieve a list of objects from an existing table in Snowflake. In the **SnowflakeRESTSQL** module, please take a look at the **ExampleImplementation** microflow and the **ExampleObject** entity in the domain model to see how the [**TransformResponsesToMxObjects** operation](#transform-response-to-mx-object) can be used to easily convert the data received in **HttpResponse** objects into Mendix objects. 
 
 {{< figure src="/attachments/appstore/modules/snowflake-rest-sql/example_implementation.png" >}}
 

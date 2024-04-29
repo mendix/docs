@@ -12,17 +12,27 @@ tags: ["marketplace", "marketplace component", "module", "Snowflake"]
 
 Mendix has several options available for users who want to integrate their app with Snowflake in order to create data-driven enterprise applications.
 
-## 2 Documents in This Category
+## 2 Snowflake Integration Options  
 
-### 2.1 Interactive experiences  
+Mendix provides real-time interaction with Snowflake through the [External Database connector](https://marketplace.mendix.com/link/component/219862) or the [REST SQL connector](https://marketplace.mendix.com/link/component/225717). Both of these connectors enable you to perform the following tasks:
 
-Mendix provides real time interaction with Snowflake through two different connectors on the Mendix marketplace. You can 
-* read/write and use data from snowflake in your application
-* execute Java [stored procedures](https://docs.snowflake.com/en/developer-guide/stored-procedure/stored-procedures-overview)
-* leverage [Cortex Machine Learning](https://docs.snowflake.com/en/guides-overview-ml-functions) and [Cortex Large Language Model](https://docs.snowflake.com/en/user-guide/snowflake-cortex/llm-functions) functions
+* Read, write, and use data from Snowflake in your application.
+* Execute Java [stored procedures](https://docs.snowflake.com/en/developer-guide/stored-procedure/stored-procedures-overview).
+* Leverage [Cortex Machine Learning](https://docs.snowflake.com/en/guides-overview-ml-functions) and [Cortex Large Language Model](https://docs.snowflake.com/en/user-guide/snowflake-cortex/llm-functions) functions.
 
-with both of these connectors. Below, we explain why the external database connector is the preferred approach and which differences you should still consider.
+For a comparison of the functions of both connectors, refer to the sections below.
 
-* The [External database connector](https://marketplace.mendix.com/link/component/219862) with Snowflake support offers a premium developer experience where you can test connections and queries during design time thanks to a view of all schemas and objects you can connect to. It makes use of the JDBC protocol, supports authentication with username and password and the usage of Python stored procedures in addition to Java. It currently finds itself in a public Beta version and is available in Mendix 10. 
+### 2.1 External Database Connector
 
-* The [REST SQL connector](https://marketplace.mendix.com/link/component/225717) has been developed to support 9.24 LTS and key-pair authentication with a private key file according to PKCS #8 standard. It requires an additional step to transform data rows received from the REST SQL API into Mendix objects.
+The [External Database connector](https://marketplace.mendix.com/link/component/219862) is the recommended option that you can use to integrate your Mendix app with Snowflake. It offers a premium developer experience where you can test connections and queries during design time by using a view of all schemas and objects to which you can connect. It makes use of the JDBC protocol, supports authentication with a username and password, and the usage of Python stored procedures in addition to Java. 
+
+The External Database connector is currently in a public Beta version. It is available only for Mendix 10.
+
+### 2.2 REST SQL Connector
+
+The [REST SQL connector](https://marketplace.mendix.com/link/component/225717) supports the 9.24 LTS version of Mendix. It offers key-pair authentication with a private key file according to PKCS #8 standard.
+
+The REST SQL connector requires an additional step to transform data rows received from the REST SQL API into Mendix objects. For more information, see [Snowflake REST SQL Connector](/appstore/connectors/snowflake/snowflake-rest-sql/).
+
+## 3 Documents in This Category
+

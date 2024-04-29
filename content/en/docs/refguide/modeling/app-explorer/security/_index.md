@@ -21,7 +21,7 @@ You can also set app authentication and add SSO modules to your app using module
 
 ### 2.1 Security Levels
 
-If you want full security, you need to explicitly give access to forms, entities, microflows, and workflows before someone can access them. By default, no one can access anything. To make it easier to create prototypes and demos there are security levels that require less security settings than are needed for a production system.
+If you want your app to be fully secure, you need to explicitly give access to forms, entities, microflows, and workflows before end-users can access them. When you turn production security on, the default is that no one can access anything. To make it easier to create prototypes and demos there are security levels that require less security than are needed for a production system.
 
 See [App Security](/refguide/app-security/) for a description of the security levels.
 

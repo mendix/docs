@@ -12,7 +12,7 @@ tags: ["marketplace", "marketplace component", "snowflake", "data loader", "modu
 
 ## 1 Introduction
 
-The Snowflake REST SQL connector allows you to use data from Snowflake in your Mendix application. It can also enable you to enrich your app with the capabilities that Snowflake provides.
+The [Snowflake REST SQL connector](https://marketplace.mendix.com/link/component/225717) allows you to use data from Snowflake in your Mendix application. It can also enable you to enrich your app with the capabilities that Snowflake provides.
 
 ### 1.1 Typical Use Cases
 
@@ -162,3 +162,52 @@ The input and output for this service are shown in the table below:
 | Input | Output |
 | --- | --- |
 | `Statement` | `{HttpResponseList}` |
+
+#### 4.2.1 ExecuteStatement {#execute-statement}
+
+The `ExecuteStatement` activity allows you to execute a command in Snowflake using the SQL statement and the configuration details given in a `Statement` object. It requires a `Statement` object and returns a list of `HttpResponse` objects.
+
+The input and output for this service are shown in the table below:
+
+| Input | Output |
+| --- | --- |
+| `Statement` | `HttpResponseList` |
+
+#### 4.2.2 TransformResponsesToMxObjects {#transform-response-to-mx-object}
+
+The `TransformResponsesToMxObjects` activity allows you to transform the list of `HttpResponse` objects into objects of the entity of your choice. 
+
+It requires a list of `HttpResponse` objects and the entity of the objects you would like to create with the received information and returns a list of Mx objects of the entity given in the input.
+
+| Input | Output |
+| --- | --- |
+| `HttpResponseList` `EntityType` | `{EntityType}ObjectList` |
+
+To showcase this, we have created an example entity in the domain model of the connector:
+
+| ExampleObject |
+| --- |
+| ATTR_TXT (string) |
+| ATTR_INT (integer) |
+| ATTR_LONG (long) |
+| ATTR_BOOL (boolean) |
+| ATTR_DECI (decimal) |
+| ATTR_ENUM (enumeration) |
+| ParsedDate (date and time)|
+
+This entity was only created as an example and how the attibutes are named, what datatypes they have or in which order they are added, these decisions are completely up to the user. However, these information are important after the entity has been decided on and the data will be received from a Snowflake account. The order in which you receive the columns from a Snowflake table, the name of these columns as well as the datatypes of these values **must** match the entity you have selected.
+
+Let's say I have a table in Snowflake with multiple columns named `column1, column2,.......,column8`. I would like to retrieve data from the column, create ExampleObject objects and display them on a page. In order to do this, I would need to execute an SQL statement that would retrieve the table columns with the name of my attributes and have the same datatypes. After making sure that the datatypes in Snowflake and Mendix match, a statement like this can be executed:
+
+```
+SELECT 
+     column1 as ATTR_TXT,
+     column2 as ATTR_INT,
+     column3 as ATTR_LONG,
+     column4 as ATTR_BOOL,
+     column5 as ATTR_DECI,
+     column6 as ATTR_ENUM
+FROM your_table 
+```
+
+This statement returns data from a Snowflake table with the columns named as specified with the "as **NewColumnName**" part in the lines. If the attribute names, datatypes and their order match, the `TransformResponsesToMxObjects` activity automatically converts the retrieved data into Mendix objects.

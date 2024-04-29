@@ -1,5 +1,5 @@
 ---
-title: “Use Excel Documents”
+title: Use Excel Documents
 url: /howto/integration/use-excel-documents/
 ---
 

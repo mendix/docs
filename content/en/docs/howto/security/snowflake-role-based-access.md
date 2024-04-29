@@ -19,6 +19,10 @@ tags: ["anonymous", "security", "Snowflake integration"]
 
 [DESCRIBE THE PROCESS STEP BY STEP]
 
+## 4 Next Steps
+
+[DESCRIBE ANY NEXT STEPS, IF REQUIRED]
+
 ## Read More
 
 [ADDITIONAL LINKS IF REQUIRED]

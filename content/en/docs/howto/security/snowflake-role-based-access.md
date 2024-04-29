@@ -9,7 +9,7 @@ tags: ["anonymous", "security", "Snowflake integration"]
 
 ## 1 Introduction
 
-[DESCRIBE WHAT WE WANT TO ACHIEVE]
+If your Mendix app is [integrated with Snowflake](/appstore/snowflake-modules/), you can set up your application in such a way that your end-users are able to access the same data in Mendix as in Snowflake without having to manually duplicate the Snowflake user role access in Mendix. In this way, you can help ensure that the data is not misused, make managing access roles easier and less error-prone, and make it easier to keep access roles up-to-date when changes are made in Snowflake.
 
 ## 2 Prerequisites
 

@@ -10,7 +10,7 @@ tags: ["marketplace", "marketplace component", "module", "Snowflake"]
 
 ## 1 Introduction
 
-If you want to create data-driven enterprise applications, building Mendix on top of Snowflake might just be the right thing for you. Mendix has several options available for users who want to integrate their app with Snowflake. 
+Mendix has several options available for users who want to integrate their app with Snowflake in order to create data-driven enterprise applications.
 
 ## 2 Documents in This Category
 

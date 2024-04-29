@@ -4,7 +4,6 @@ linktitle: "Icon Demos"
 url: /icons
 description: "Demo file for SVG icon shortcodes."
 draft: true
-banner: "This is a draft and will not be rendered in the production website. Use this page to test how icons will render. Linting has been disabled for this file."
 ---
 <!-- markdownlint-disable-file -->
 

@@ -12,7 +12,7 @@ Security in Mendix has several aspects. One aspect is that your app is a project
 If you want different end-users to see different parts of your running application and you want to prevent unauthorized access, these aspects are managed from Studio Pro. Access to forms, data and microflows can be limited to authorized users. For more information, see [Security in Studio Pro](#security-in-studio-pro) section below.
 
 {{% alert color="info" %}}
-Security in Studio Pro does not include scanning files that end-users upload or download from your application for viruses and malware. For more information, see the [Scanning Uploaded Files for Malicious Content](/howto/security/best-practices-security/#scanning-for-malicious-content) section in *How to Implement Best Practices for App Security*. 
+Security in Mendix apps does not include scanning files that end-users upload or download from your application for viruses and malware. For more information, see the [Scanning Uploaded Files for Malicious Content](/howto/security/best-practices-security/#scanning-for-malicious-content) section in *How to Implement Best Practices for App Security*. 
 {{% /alert %}}
 
 You can also set app authentication and add SSO modules to your app using Mendix Marketplace. For more information, see [App Authentication](#authentication) section below. 

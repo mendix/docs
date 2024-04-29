@@ -71,11 +71,11 @@ The following steps teach you how to build a pluggable input widget, and show yo
 
 The Pluggable Widget Generator is the quickest way to start developing a widget. It creates a widget’s recommended folder structure and files.
 
-Using a terminal or command line, navigate to your new Mendix app's folder, create a new folder named *CustomWidgets*, and start the generator using:
+Using a terminal or command line, navigate to your new Mendix app's folder, create a new folder named *myPluggableWidgets*, and start the generator using:
 
 ```powershell
-mkdir CustomWidgets
-cd CustomWidgets
+mkdir myPluggableWidgets
+cd myPluggableWidgets
 yo @mendix/widget TextBox
 ```
 
@@ -88,24 +88,26 @@ The generator will ask you a few questions during setup. Answer the questions by
 * License: *{Your license}*
 * Initial Version:*{Your initial version number}*
 * Author: *{Your author name}*
-* Mendix App path: *../../*
+* Mendix App path: **../../**
 * Programming language: **TypeScript**
-* Which type of components do you want to use? **Class Components** 
-* Widget type: **For web mobile apps**
+* Which type of components do you want to use? **Function Components** 
+* Widget type: **For web and hybrid mobile apps**
 * Widget template: **Empty widget (recommended for more experienced developers)**
 * Unit tests: **No**
 * End-to-end tests: **No**
 
     {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/generatorblack-new.png" alt="mx generator" class="no-border" >}}
 
-Note that whenever it is required to reinstall NPM package dependencies inside the scaffolded widget development app with an NPM version of 7 or higher, make sure to run the installation script with an extra flag: `npm install --legacy-peer-deps`.
+{{% alert color="info" %}}
+NPM version 7 changed the resolution behavior of peerDependencies. Try adding `--legacy-peer-deps` to your install command if it results in peer dependency resolution errors.
+{{% /alert %}}
 
 ### 3.3 Adding the Attribute
 
-Open the *(YourMendixApp)/CustomWidgets/TextBox* folder in your IDE of choice (any IDE is fine if it can execute commands) . From now on, all file references will be relative to this path. To set up your new widget, first you must use an attribute of the context object and display that attribute in an input field: 
+Open the *(YourMendixApp)/myPluggableWidgets/textBox* folder in your IDE of choice. From now on, all file references will be relative to this path. To set up your new widget, first you must use an attribute of the context object and display that attribute in an input field: 
 
-1. To prevent future errors, remove the file *src/components/HelloWorldSample.tsx*. Errors in *TextBox.editorPreview.tsx* will be dealt with in step 6 below.
-2. In *src/TextBox.xml*, the generator creates a sample property `sampleText`. Remove this property and add the new property `Text attribute`:
+1. Go ahead and remove the file *src/components/HelloWorldSample.tsx*. Errors in *TextBox.editorPreview.tsx* will be dealt with in step 6 below.
+2. The generator creates the widget definition file `src/TextBox.xml` with preset properties. Replace the `sampleText` property following this snippet:
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -134,40 +136,33 @@ Open the *(YourMendixApp)/CustomWidgets/TextBox* folder in your IDE of choice (a
     * The property `needsEntityContext=true` is set up to allow the attribute to be taken from context
     * The property of the [type attribute](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#attribute) only allows the selection of string attributes from the domain model
 
-3. The typescript typing based on the XML will be generated automatically. Start the development process with the following command: `npm start`.
+3. The generator includes scripts which assist with building and packaging your widget. Use `npm start` to run the watcher, it will generate updated Typescript types based on the widget definition file.
 
-    This process will bundle the widget and generate the properties into *typings/TextBoxProperties.d.ts*.
+    When done generating the types can be found in `typings/TextBoxProps.d.ts`
 
-    {{% alert color="info" %}}The console will show the error below, as we did not implement our `TextInput` component. We will solve the error in the [Labeling the Input](#label-input) of this how-to.{{% /alert %}}
+    {{% alert color="info" %}}
+    The console will display an expected error along the lines of "HelloWorldSample.tsx could not be found". We will address this in the section [Labeling the Input](#label-input) of this how-to. It can be ignored for now.
+    {{% /alert %}}
 
-    ```shell
-    ERROR in ./src/TextBox.tsx
-        Module not found: Error: Can't resolve './components/HelloWorldSample' in 'C:\Users\john.doe\textboxtest-main\CustomWidgets\TextBox\src'
-        @ ./src/TextBox.tsx 14:0-28:2
-    ```
+4. Create a new file, *src/components/TextInput.tsx*. This will be the display component. A display component is a regular React component and does not interact with Mendix APIs. It can be re-used in any React application.
 
-4. Create a new file, *components/TextInput.tsx*. This will be the display component. A display component does not interact with APIs and can be re-used in any React application. Paste the following code into *TextInput.tsx*:
+    Paste the following [React function component](https://react.dev/learn/your-first-component) into the newly create `TextInput.tsx` file.
 
     ```tsx
-    import { Component, ReactNode, createElement } from "react";
-    
-    export interface InputProps {
+    import { createElement, ReactNode } from "react";
+
+    export interface TextInputProps {
         value: string;
     }
-    
-    export class TextInput extends Component<InputProps> {
-        render(): ReactNode {
-            return <input type="text" value={this.props.value} />;
-        }
+
+    export function TextInput({ value }: TextInputProps): ReactNode {
+        return <input type="text" value={value} />;
     }
     ```
+    
+    In short the component receives an input object, called props, containing a string property named `value`. In turn the component returns a [React input element](https://react.dev/reference/react-dom/components/input) with its value set to what the `TextInput` component received in `props.value`. While the syntax looks like HTML, [it actually is Javascript](https://react.dev/learn/writing-markup-with-jsx).
 
-    Explaining the code:
-
-    * The interface defines the properties of the React components — the value is passed to the component and it will render an HTML input element with the given value
-    * The component is a class extending `Component` and should be exported to be used in other components
-    * The render method is the only required function in a component, and it will return the expected DOM for the browser (for more information, see React’s [component documentation](https://reactjs.org/docs/react-component.html))
-5. The container component *TextBox.tsx* receives the properties in the runtime, and forwards the data to the display component. The container works like glue between the Mendix application and the display component. In the *TextBox.tsx* overwrite the render function until they look like this:
+5. The container component *src/TextBox.tsx* receives the properties in the runtime, and forwards the data to the display component. The container works like glue between the Mendix application and the display component. In the *TextBox.tsx* overwrite the render function until they look like this:
 
     ```tsx
     import { Component, ReactNode, createElement } from "react"; 

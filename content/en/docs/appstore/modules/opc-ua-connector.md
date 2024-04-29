@@ -10,25 +10,67 @@ title: "OPC-UA connector"
 
 ## 1 Introduction
 
-{Describe what this page will cover and what the user will learn.}
+The OPC-UA connector is a Mendix Module to connect to your OPC-UA server.
 
-## 2 {Title of the User Interface Element Being Described}
+## 1.1 Typical Use Case
 
-{Describe the UI elements (for example, pages, widgets). Describe all the properties and features for each UI element.}
+The OPC-UA connector should be used ...
 
-{{< figure src="/attachments/rest-of-image-path/image-name-and-extension" >}}
+## 1.2 License
 
-### 2.1 {Title of Sub-Section}
+The OPC-UA connector is licensed under the GPL2.0 License.
 
-{Use sub-sections for more detail.}
+## Pre-requisites
+Mendix Studio Pro version 9.24.3+
 
-## 3 {Example Usage Scenarios}
+## 1.4 Dependencies {#dependencies}
 
-{Describe some example usage scenarios that can be referenced when using these features.}
+You must have these Marketplace modules installed:
+* [Community Commons](https://marketplace.mendix.com/link/component/170)
 
-## 4 Read More
+## 2 Installation
+* Install all dependencies.
+* Follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the OPC-UA connector into your app.
+* Add NAV_StartConfiguration to your navigation
+* Add the CanConfigure module role to a user role that will configure the connections to your server.
 
-* {Link 1}
-* {Link2} – {an explanation when necessary especially if this is a third-party link}
+## 3 Usage
 
-{Make sure this section contains a bulleted list only with explanations where necessary. Do not just repeat cross-references you used throughout the document, but list useful supplementary links here.}
+### 3.1 Discovery Services
+#### 3.1.1 Find Servers
+#### 3.1.2 Get Endpoints
+#### 3.1.3 Get Endpoints create certificate
+
+### 3.2 Session Services
+#### 3.2.1 Test Connection
+#### 3.2.2 Trust Server Certificate
+#### 3.2.3 Untrust Server Certificate
+
+### 3.3 View Services
+#### 3.3.1 Browse
+#### 3.3.2 Get Roots
+#### 3.3.3 Get Children
+#### 3.3.4 Get Parent
+
+### 3.4 Attribute Services
+#### 3.4.1 Get Node Details
+#### 3.4.2 Read Node
+#### 3.4.3 Read Single Node Value
+#### 3.4.4 Write Node
+#### 3.4.5 Write Single Node Value
+
+### 3.5 Subscriptions
+#### 3.5.1 Initialize Commit Subscription
+#### 3.5.2 De-Initialize Delete Subscription
+
+### 3.6 Monitored Items
+#### 3.6.1 Monitored Item Commit
+#### 3.6.2 Monitored Item List Commit
+#### 3.6.3 Monitored Item Delete
+#### 3.6.4 Monitored Item List Delete
+
+### 3.7 Mendix Specific
+#### 3.7.1 Update App Certificate
+#### 3.7.2 Force Refresh Connection
+#### 3.7.3 ASU Subscription
+#### 3.7.4 BSD Subscription

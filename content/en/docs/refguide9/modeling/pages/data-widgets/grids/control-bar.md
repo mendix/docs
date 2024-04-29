@@ -31,7 +31,7 @@ aliases:
 
 A control bar of a [template grid](/refguide9/template-grid/), [data grid](/refguide9/data-grid/), and [reference set selector](/refguide9/reference-set-selector/) allows you to manipulate the objects displayed by means of buttons. By default, both grids will be created with [Search](#search-button), [New](#create-button), [Edit](#grid-action-button), and [Delete](#grid-action-button) buttons in the control bar:
 
-{{< figure src="/attachments/refguide9/modeling/pages/data-widgets/grids/control-bar/control-bar-example.png" alt="Data Grid Control Bar" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/data-widgets/grids/control-bar/control-bar-example.png" alt="Data Grid Control Bar" class="no-border" >}}
 
 The control bar can also include a number of selection options and spreadsheet export buttons, as well as microflow buttons for custom actions. 
 
@@ -46,7 +46,7 @@ To add additional buttons to the control bar, do the following:
 1. Select the new type of button.
 1. Double click on the new button to customize.
 
-{{< figure src="/attachments/refguide9/modeling/pages/data-widgets/grids/control-bar/control-bar-add-button.png" alt="Add Button to Control Bar" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/data-widgets/grids/control-bar/control-bar-add-button.png" alt="Add Button to Control Bar" class="no-border" >}}
 
 {{% alert color="info" %}}
 It is not possible to add additional buttons by dragging them from the **Toolbox** into the control bar.

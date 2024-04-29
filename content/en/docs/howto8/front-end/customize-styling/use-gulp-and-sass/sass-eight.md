@@ -27,15 +27,15 @@ Before starting this how-to, make sure you have completed the following prerequi
 1. Install [Visual Studio Code (VSC)](https://code.visualstudio.com/).
 2. On the [Gulp for Mendix theming](https://github.com/mendix/ux-theming) GitHub project, click **Releases**:
 
-    {{< figure src="/attachments/howto8/front-end/customize-styling/use-gulp-and-sass/sass-eight/releases.png" >}}
+    {{< figure src="/attachments/howto8/front-end/customize-styling/use-gulp-and-sass/sass-eight/releases.png" class="no-border" >}}
 
 3. Download the **Gulp.zip** file:
 
-    {{< figure src="/attachments/howto8/front-end/customize-styling/use-gulp-and-sass/sass-eight/gulp.png" >}}
+    {{< figure src="/attachments/howto8/front-end/customize-styling/use-gulp-and-sass/sass-eight/gulp.png" class="no-border" >}}
 
 4. Install Node.js for task-running and automation through gulp. Install the latest LTS version from [Node.js](https://nodejs.org/en/):
 
-    {{< figure src="/attachments/howto8/front-end/customize-styling/use-gulp-and-sass/sass-eight/node.png" >}}
+    {{< figure src="/attachments/howto8/front-end/customize-styling/use-gulp-and-sass/sass-eight/node.png" class="no-border" >}}
 
 5. Install version **1.7.15** of [TortoiseSVN](https://osdn.net/projects/tortoisesvn/storage/Archive/1.7.15/Application/).
 
@@ -46,22 +46,22 @@ To prepare your app, follow these steps:
 1. Open the app directory (via **Project** > **Show Project Directory in Explorer** in Studio Pro).
 2. Unpack the *Gulp.zip* file into your main app folder. You will then see a *Gulpfile* and *package* file that look like this:
 
-    {{< figure src="/attachments/howto8/front-end/customize-styling/use-gulp-and-sass/sass-eight/unpack.png" >}}
+    {{< figure src="/attachments/howto8/front-end/customize-styling/use-gulp-and-sass/sass-eight/unpack.png" class="no-border" >}}
 
     After you have unpacked the *Gulp.zip* into your app folder, you can remove the *zip* file.
 3. Open **Windows PowerShell** as an administrator:
 
-    {{< figure src="/attachments/howto8/front-end/customize-styling/use-gulp-and-sass/sass-eight/powershell.png" >}}
+    {{< figure src="/attachments/howto8/front-end/customize-styling/use-gulp-and-sass/sass-eight/powershell.png" class="no-border" >}}
 
 4. Copy the address as text from your main project folder and paste it into Powershell (your project folder cannot contain spaces and should not be too long):
 
-    {{< figure src="/attachments/howto8/front-end/customize-styling/use-gulp-and-sass/sass-eight/copy.png" >}}
+    {{< figure src="/attachments/howto8/front-end/customize-styling/use-gulp-and-sass/sass-eight/copy.png" class="no-border" >}}
 
 5. Provide the directory for your app folder in PowerShell: `cd ‘directory for your app folder’`
 6. Adjust permissions by writing `Set-ExecutionPolicy -ExecutionPolicy ByPass -Scope CurrentUser` then pressing <kbd>Enter</kbd> .
 7. Write `npm install` or use `npm install gulp-cli -g` with your app running locally on Studio Pro:
 
-    {{< figure src="/attachments/howto8/front-end/customize-styling/use-gulp-and-sass/sass-eight/write-install.png" >}}
+    {{< figure src="/attachments/howto8/front-end/customize-styling/use-gulp-and-sass/sass-eight/write-install.png" class="no-border" >}}
 
     If you use `npm install`, you may receive an error. PowerShell will tell you to use `npm run dev` instead. If that does not work, use `npm install run`.
 
@@ -69,21 +69,21 @@ To prepare your app, follow these steps:
 
 8. Write `npm run dev`. Your screen should then look like this:
 
-    {{< figure src="/attachments/howto8/front-end/customize-styling/use-gulp-and-sass/sass-eight/gulp-dev.png" >}}
+    {{< figure src="/attachments/howto8/front-end/customize-styling/use-gulp-and-sass/sass-eight/gulp-dev.png" class="no-border" >}}
 
     At this point, you are ready to start working with Sass.
 
 9. You also need to add the following selected items into the ignore list of TortoiseSVN for each new app. If you do not, your app will take too long to commit a change. You will only have to do this *once* when you set it up for your project:
 
-    {{< figure src="/attachments/howto8/front-end/customize-styling/use-gulp-and-sass/sass-eight/selected-ignore.png" >}}
+    {{< figure src="/attachments/howto8/front-end/customize-styling/use-gulp-and-sass/sass-eight/selected-ignore.png" class="no-border" >}}
 
     To do that, right-click each item and select **TortoiseSVN** > **Add to ignore list**:
 
-    {{< figure src="/attachments/howto8/front-end/customize-styling/use-gulp-and-sass/sass-eight/add-ignore.png" >}}
+    {{< figure src="/attachments/howto8/front-end/customize-styling/use-gulp-and-sass/sass-eight/add-ignore.png" class="no-border" >}}
 
     You will receive a confirmation when the items have been added to the ignore list. You can also double-check via TortoiseSVN:
 
-    {{< figure src="/attachments/howto8/front-end/customize-styling/use-gulp-and-sass/sass-eight/check-ignore.png" >}}
+    {{< figure src="/attachments/howto8/front-end/customize-styling/use-gulp-and-sass/sass-eight/check-ignore.png" class="no-border" >}}
 
     If you need to remove an item from the ignore list, right-click it and select **TortoiseSVN** > **Remove from ignore list**.
 
@@ -96,19 +96,19 @@ Final steps! Read below to open and work with Sass:
 1. Open the main app folder and go to **theme** \> **styles** \> **sass** \> **custom**.
 2. Double-click either the *custom.scss* or *_custom-variables.scss* file, which will open in VSC:
 
-    {{< figure src="/attachments/howto8/front-end/customize-styling/use-gulp-and-sass/sass-eight/custom-variables.png" >}}
+    {{< figure src="/attachments/howto8/front-end/customize-styling/use-gulp-and-sass/sass-eight/custom-variables.png" class="no-border" >}}
 
     If you open the *custom* file, you will see the following screen:
 
-    {{< figure src="/attachments/howto8/front-end/customize-styling/use-gulp-and-sass/sass-eight/import.png" >}}
+    {{< figure src="/attachments/howto8/front-end/customize-styling/use-gulp-and-sass/sass-eight/import.png" class="no-border" >}}
 
 3. Click **Open Folder** in the **EXPLORER** and then select the **sass** folder:
 
-    {{< figure src="/attachments/howto8/front-end/customize-styling/use-gulp-and-sass/sass-eight/sass-folder.png" >}}
+    {{< figure src="/attachments/howto8/front-end/customize-styling/use-gulp-and-sass/sass-eight/sass-folder.png" class="no-border" >}}
 
 4. Remove the **Welcome**, since you will not need this:
 
-    {{< figure src="/attachments/howto8/front-end/customize-styling/use-gulp-and-sass/sass-eight/welcome.png" >}}
+    {{< figure src="/attachments/howto8/front-end/customize-styling/use-gulp-and-sass/sass-eight/welcome.png" class="no-border" >}}
 
 ### 4.1  Keeping Your Sass in the Custom Folder
 
@@ -118,7 +118,7 @@ You can now work on the Sass structure and organize everything neatly by creatin
 
 When you create a new Sass file, follow this naming guideline: *\_{namefilehere}.scss*. For example:
 
-{{< figure src="/attachments/howto8/front-end/customize-styling/use-gulp-and-sass/sass-eight/name-example.png" >}}
+{{< figure src="/attachments/howto8/front-end/customize-styling/use-gulp-and-sass/sass-eight/name-example.png" class="no-border" >}}
 
 ### 4.2 Importing New Sub-Folders and Files
 
@@ -152,7 +152,7 @@ Here is an example of custom Sass:
 
 To implement this in your app, open the project in Mendix Studio Pro. You can find the defined class names in almost every element (for example, titles and subtitles). In this example, double-click the title **Event App** in Studio Pro, and you can see that the name has the standard class name for Studio Pro.
 
-{{< figure src="/attachments/howto8/front-end/customize-styling/use-gulp-and-sass/sass-eight/class-name.png" >}}
+{{< figure src="/attachments/howto8/front-end/customize-styling/use-gulp-and-sass/sass-eight/class-name.png" class="no-border" >}}
 
 You can remove **spacing-outer-bottom-medium**, as that is a variable that contains defined styling code. If you do not remove this, you will probably have trouble later in the app if you, for example, want to position your title somewhere else.
 

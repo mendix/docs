@@ -19,7 +19,7 @@ The [Portfolio Management](/developerportal/portfolio-management/) tool supports
 
 The weighted shortest job first (WSJF) score is calculated as the cost of delay (CoD) divided by the job size of an initiative. The CoD is the sum of the initiative's business value, time criticality, and risk reduction. If an initiative can deliver the most CoD with the smallest job size, it has the highest WSJF score, and provides the best chance of return.
 
-{{< figure src="/attachments/developerportal/portfolio-management/prioritization-models/wsjf-score-calculation.png" >}}
+{{< figure src="/attachments/developerportal/portfolio-management/prioritization-models/wsjf-score-calculation.png" class="no-border" >}}
 
 ### 2.1 Calculating CoD
 
@@ -43,7 +43,7 @@ If the job size of an initiative is too big, Mendix recommends splitting it into
 
 You get the reach impact confident effort (RICE) score of an initiative by multiplying the Reach, Impact, and Confidence estimates and then dividing the result by the Effort estimate. An initiative with a higher RICE score has a better chance of return.
 
-{{< figure src="/attachments/developerportal/portfolio-management/prioritization-models/rice-score-calculation.png" >}}
+{{< figure src="/attachments/developerportal/portfolio-management/prioritization-models/rice-score-calculation.png" class="no-border" >}}
 
 * **Reach** – This is the estimated number of relevant users that the initiative may affect within a time period. You can define by yourself who the users are and how the reach is defined. You must enter an integer and this exact value is used during the calculation. 
 * **Impact** – This is the estimated amount of impact that the initiative may have on individual users. When you score the impact of an initiative, you can break down the impact into various factors, and use a combined weighted score that combines all these factors. In the Portfolio Management app, you can set it to **Massive**, **High**, **Medium**, **Low**, or **Minimal**. During the calculation, these translate to the numeric values 3, 2, 1, 0.5, and 0.25 respectively.

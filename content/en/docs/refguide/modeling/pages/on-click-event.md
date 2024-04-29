@@ -26,7 +26,7 @@ Events specify actions which can be triggered when the end-user interacts with a
 
 An **On click** event specifies an event that is executed when a user clicks a widget. Often the **On click** property is a part of the **Events** section in properties. For example, you can specify that when a user clicks a customer's profile image, the page with this customer's details will open:
 
-{{< figure src="/attachments/refguide/modeling/pages/on-click-event/on-click-event-example.png"   width="350"  >}}
+{{< figure src="/attachments/refguide/modeling/pages/on-click-event/on-click-event-example.png"   width="350"  class="no-border" >}}
 
 An on-click event is common for many widgets (for example, image, buttons, list view). 
 
@@ -120,17 +120,17 @@ You can either select an existing microflow or create a new microflow by clickin
 
 In Studio Pro 10.4.0 and above, when creating a new microflow, a dialog box is shown where you can set the name and select parameters for the new microflow. You can choose the data view, snippet, page parameter, or available selection from which the parameter must be created in the new microflow:
 
-{{< figure src="/attachments/refguide/modeling/pages/on-click-event/configure-new-microflow-with-parameter.png" width="650px" >}}
+{{< figure src="/attachments/refguide/modeling/pages/on-click-event/configure-new-microflow-with-parameter.png" width="650px" class="no-border" >}}
 
 If there is nothing to pass to the new microflow, then a dialog box is shown where you can only specify the name of the microflow:
 
-{{< figure src="/attachments/refguide/modeling/pages/on-click-event/configure-new-microflow-no-parameter.png" >}}
+{{< figure src="/attachments/refguide/modeling/pages/on-click-event/configure-new-microflow-no-parameter.png" class="no-border" >}}
 
 #### 3.3.2 Microflow Settings {#microflow-settings}
 
 **Microflow settings** opens a dialog box enabling you to specify what parameters will be passed to the microflow and how the microflow will be run.
 
-{{< figure src="/attachments/refguide/modeling/pages/on-click-event/microflow-settings.png" alt="Microflow settings dialog" width="550px" >}}
+{{< figure src="/attachments/refguide/modeling/pages/on-click-event/microflow-settings.png" alt="Microflow settings dialog" width="550px" class="no-border" >}}
 
 ##### 3.3.2.1 Microflow
 

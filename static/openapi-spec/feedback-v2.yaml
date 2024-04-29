@@ -20,11 +20,16 @@ paths:
       description: '> Returns a list of feedback items based on the query parameters. Using storyId or legacyId will always return a list containing a single item.'
       operationId: get-feedback-items
       parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
         - $ref: '#/components/parameters/projectId'
         - $ref: '#/components/parameters/storyId'
         - $ref: '#/components/parameters/legacyId'
         - $ref: '#/components/parameters/status'
         - $ref: '#/components/parameters/priority'
+        - $ref: '#/components/parameters/email'
         - $ref: '#/components/parameters/limit'
         - $ref: '#/components/parameters/offset'
       responses:
@@ -39,7 +44,7 @@ paths:
         '500':
           $ref: '#/components/responses/500-Something-went-wrong'
       security:
-        - Authorization: []
+        - Personal Access Token: []
       servers:
         - url: 'https://feedback-api.mendix.com/v2'
           description: Base URL
@@ -63,7 +68,7 @@ paths:
         '500':
           $ref: '#/components/responses/500-Something-went-wrong'
       security:
-        - Authorization: []
+        - Personal Access Token: []
       servers:
         - url: 'https://feedback-api.mendix.com/v2'
           description: Base URL
@@ -87,7 +92,7 @@ paths:
         '500':
           $ref: '#/components/responses/500-Something-went-wrong'
       security:
-        - Authorization: []
+        - Personal Access Token: []
       servers:
         - url: 'https://feedback-api.mendix.com/v2'
           description: Base URL
@@ -112,7 +117,7 @@ paths:
         '500':
           $ref: '#/components/responses/500-Something-went-wrong'
       security:
-        - Authorization: []
+        - Personal Access Token: []
       servers:
         - url: 'https://feedback-api.mendix.com/v2'
           description: Base URL
@@ -136,7 +141,7 @@ paths:
         '500':
           $ref: '#/components/responses/500-Something-went-wrong'
       security:
-        - Authorization: []
+        - Personal Access Token: []
       servers:
         - url: 'https://feedback-api.mendix.com/v2'
           description: Base URL
@@ -171,7 +176,7 @@ paths:
         '500':
           $ref: '#/components/responses/500-Something-went-wrong'
       security:
-        - Authorization: []
+        - Personal Access Token: []
       servers:
         - url: 'https://feedback-api.mendix.com/v2'
           description: Base URL
@@ -201,7 +206,7 @@ paths:
         '500':
           $ref: '#/components/responses/500-Something-went-wrong'
       security:
-        - Authorization: []
+        - Personal Access Token: []
       servers:
         - url: 'https://feedback-api.mendix.com/v2'
           description: Base URL
@@ -264,6 +269,13 @@ components:
       schema:
         type: string
         example: '22'
+    email:
+      name: email
+      in: query
+      description: The email address of the reporter
+      required: false
+      schema:
+        type: string
     feedback-item-uuid:
       name: feedback-item-uuid
       in: path
@@ -347,10 +359,10 @@ components:
               value:
                 status: Inbox
   securitySchemes:
-    Authorization:
+    Personal Access Token:
       type: apiKey
       description: 'For more information about requesting and using a token see the [documentation](https://docs.mendix.com/developerportal/community-tools/mendix-profile/user-settings/#pat).<br/> The header must be set to `MxToken <Your PAT>`.'
-      name: MxToken 7LJE…vk
+      name: Authorization
       in: header
   responses:
     404-Not-Found:
@@ -470,6 +482,13 @@ components:
                       properties:
                         label:
                           type: string
+              tags:
+                type: object
+                properties:
+                  label:
+                    type: string
+                  color:
+                    type: string
           examples:
             Response example:
               value:
@@ -559,6 +578,13 @@ components:
                 type: object
                 properties:
                   label:
+                    type: string
+              tags:
+                type: object
+                properties:
+                  label:
+                    type: string
+                  color:
                     type: string
           examples:
             Response example:
@@ -927,3 +953,5 @@ components:
                   message: The status does not exist
                   code: 400
                   instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
+security:
+  - Personal Access Token: []

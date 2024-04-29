@@ -8,7 +8,7 @@ With the **Preferences** dialog box you can set user-specific preferences which 
 
 To open the **Preferences** dialog box, go to **Edit > Preferences**.
 
-{{< figure src="/attachments/refguide7/desktop-modeler/dialogs/preferences-dialog/preferences-dialog-box.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/dialogs/preferences-dialog/preferences-dialog-box.png" class="no-border" >}}
 
 ## 2 General Tab
 

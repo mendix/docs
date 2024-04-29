@@ -48,7 +48,7 @@ To get the latest revision, use the [Retrieve Branch](/apidocs-mxsdk/apidocs/tea
 
 An example of how to do this call is below. Be aware that `<AppId>` is not a GUID, but the actual name of the cloud node. In the example below, the `<AppId>` is `ukservices`.
 
-{{< figure src="/attachments/howto/integration/implement-cicd-pipeline/02GetLatestRevision.png" >}}
+{{< figure src="/attachments/howto/integration/implement-cicd-pipeline/02GetLatestRevision.png" class="no-border" >}}
 
 #### 3.2.2 Building the Package{#BuildPackage}
 
@@ -56,11 +56,11 @@ After getting the version you want to build the package for, you need to build t
 
 This is a `POST` call, so you will need to pass the relevant fields in the body (as described in *Start Building a Deployment Package*).
 
-{{< figure src="/attachments/howto/integration/implement-cicd-pipeline/03StartBuildingPackage.png" >}}
+{{< figure src="/attachments/howto/integration/implement-cicd-pipeline/03StartBuildingPackage.png" class="no-border" >}}
 
 Before proceeding to the next step, you need to wait for the build of the deployment package to be successful. To do this, use the [Retrieve Package](/apidocs-mxsdk/apidocs/build-api/#retrieve-package) API call. This scenario needs to use the `PackageId` (output from the previous call) and check if the status is `Succeeded` (the other possible statuses are Queued, Building, Uploading, and Failed).
 
-{{< figure src="/attachments/howto/integration/implement-cicd-pipeline/04RetrievePackageStatus.png" >}}
+{{< figure src="/attachments/howto/integration/implement-cicd-pipeline/04RetrievePackageStatus.png" class="no-border" >}}
 
 ### 3.3 Deploying to the Next Environment {#deploying-to-the-next-environment}
 
@@ -70,7 +70,7 @@ After building the deployment package, you can deploy the new package to the nex
 
 First, check if the environment to which you want to deploy is running. To do this, use the [Retrieve Environment](/apidocs-mxsdk/apidocs/deploy-api/#retrieve-environment) API call and check the status.
 
-{{< figure src="/attachments/howto/integration/implement-cicd-pipeline/05GetEnvironment.png" >}}
+{{< figure src="/attachments/howto/integration/implement-cicd-pipeline/05GetEnvironment.png" class="no-border" >}}
 
 #### 3.3.2 Stopping the Environment
 
@@ -82,17 +82,17 @@ To deploy/transport a package to the environment, use the [Transport a Deploymen
 
 For this action, you need the `PackageId` from the [Building the Package](#BuildPackage) section.
 
-{{< figure src="/attachments/howto/integration/implement-cicd-pipeline/06TransportDeploymentPackageToEnvironment.png" >}}
+{{< figure src="/attachments/howto/integration/implement-cicd-pipeline/06TransportDeploymentPackageToEnvironment.png" class="no-border" >}}
 
 #### 3.3.4 Starting the Environment
 
 After a successful deployment, the next step is starting the environment. Use the [Start Environment](/apidocs-mxsdk/apidocs/deploy-api/#start-environment) API call to do this.
 
-{{< figure src="/attachments/howto/integration/implement-cicd-pipeline/07StartEnvironment.png" >}}
+{{< figure src="/attachments/howto/integration/implement-cicd-pipeline/07StartEnvironment.png" class="no-border" >}}
 
 Before proceeding to any next steps, confirm that the environment has started. To do that, use the [Get Environment Status](/apidocs-mxsdk/apidocs/deploy-api/#get-start-environment-status) API call with the `JobId` (output of the previous call). The environment is ready when the status is **Started**.
 
-{{< figure src="/attachments/howto/integration/implement-cicd-pipeline/08StartEnvironmentStatusStarting.png" >}}
+{{< figure src="/attachments/howto/integration/implement-cicd-pipeline/08StartEnvironmentStatusStarting.png" class="no-border" >}}
 
 ### 3.4 Running Tests
 
@@ -106,11 +106,11 @@ One way of doing unit tests in a Mendix app is by using the [Unit Testing](/apps
 
 First, start the tests.
 
-{{< figure src="/attachments/howto/integration/implement-cicd-pipeline/10StartUnitTests.png" >}}
+{{< figure src="/attachments/howto/integration/implement-cicd-pipeline/10StartUnitTests.png" class="no-border" >}}
 
 When the tests are completed (check the status for when completed is `true`), you can see how many tests ran, how long they took to run, how many failed, which ones failed, and what the reasons for failure were.
 
-{{< figure src="/attachments/howto/integration/implement-cicd-pipeline/11UnitTestsStatus.png" >}}
+{{< figure src="/attachments/howto/integration/implement-cicd-pipeline/11UnitTestsStatus.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 You can also (manually) create a web service that exposes the standard unit structure from the data available in the Unit Testing module.
@@ -134,7 +134,7 @@ To call a REST service with Jenkins (using a Groovy script), install the [HTTP R
 
 This code snippet example gets the latest revision number so it can be used when building the deployment package:
 
-{{< figure src="/attachments/howto/integration/implement-cicd-pipeline/12Jenkins.png" >}}
+{{< figure src="/attachments/howto/integration/implement-cicd-pipeline/12Jenkins.png" class="no-border" >}}
 
 ### 4.2 VSTS
 
@@ -142,4 +142,4 @@ To call a REST service with VSTS, use the [Invoke REST API task](https://docs.mi
 
 The example below checks the status of the acceptance environment. The task will succeed if the environment is running.
 
-{{< figure src="/attachments/howto/integration/implement-cicd-pipeline/13RestExampleVSTS_cut.png" >}}
+{{< figure src="/attachments/howto/integration/implement-cicd-pipeline/13RestExampleVSTS_cut.png" class="no-border" >}}

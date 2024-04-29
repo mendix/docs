@@ -591,13 +591,52 @@ The resources folder contains the *SAMLConfig.properties* file, and through this
 
 If you are using a custom URL, see [How Do I Get my SAML Metadata or CommunityCommons.GetApplicationUrl to Use the Custom URL?](/developerportal/deploy/custom-domains/#use-custom-url) in the *Custom Domains* documentation.
 
-## 6 Debugging the Configuration
+## 6 Using Deep Links
+
+{{% alert color="warning" %}}
+The Deep Link module has been deprecated from Studio Pro 10.6.0 and replaced by [page URLs](/refguide/page-properties/#url) and [microflow URLs](/refguide/microflow/#url).
+For instructions on migrating to page and microflow URLs, see the [Using Page and Microflow URLs with SAML](#page-microflow-url) section below.
+{{% /alert %}}
+
+If end-users who use the deeplink do not yet have a session in your app, the deeplink can trigger the SSO process. If successful, the end-user will be automatically redirected back to the deeplink.
+
+For more information on using Deep Link module (with Mendix 8 and 9), see the [Using Deep Link Module](#using-deep-link) section below.
+
+### 6.1 Using Page and Microflow URLs with SAML{#page-microflow-url}
+
+Page URLs and Microflow URLs are supported with SAML for Mendix version 10.6 and above. To do this, follow the steps below:
+
+1. In the **Runtime** tab of the **App Settings**, configure the page **URL prefix** to **link** instead of the default **P** to maintain compatibility with existing URLs and ensure to remove the Deep Link module from your app to start the app successfully.
+1. To allow the end users to navigate to the desired page:
+
+    * If single IdP configured, URL will be the base URL of your application followed by `SSO/login?cont={page/Microflowurl}`
+
+        For example, `http://localhost:8080/SSO/login?cont=link/pagepath`
+
+    * If Multiple IdPs configured, you can specify which IdP should be used by adding the alias (MyIdPAlias) `SSO/login?_idp_id={MyIdPAlias}&cont={page/Microflowurl}`
+
+        For example, `http://localhost:8080/SSO/login?_idp_id=Okta&cont=link/pagepath` 
+
+1. The user will be redirected to the IdP login page for authentication.
+1. After successful log in, the user will be directed to the desired page using page URLs and microflow URLs within the application.
+
+For more information, see the [Migrating to Page and Microflow URLs](/appstore/modules/deep-link/#migrate-page-micro) section of the *Deep Link*.
+
+### 6.2 Using Deep Link Module{#using-deep-link}
+
+When using the SAML module with the Deeplink Module (for Mendix 8 and 9), you need to set the `LoginLocation` constant of the Deeplink module to `/SSO/login?f=true&cont=` in order to redirect the user to the original deep link location after a successful login.
+
+The DeepLink module does not have full support for multiple IdPs, so it can only trigger logins at one IdP. You can specify which IdP should be used by adding the alias (`MyIdPAlias`) to the `LoginLocation`: `/SSO/login?_idp_id={MyIdPAlias}&cont=`.
+
+If you are using version 6.1.0 or above of the Deep Link module, you should also set the `EnableLeadingSlash` constant to *False*. This prevents users from being redirected to an invalid deep link location.
+
+## 7 Debugging the Configuration{#debugging-the-configuration}
 
 When testing and debugging the configuration, an option is to view the messages in the log files. A detailed cause of the failure will be printed in case something goes wrong.
 
 When enabling the log node SSO to show trace messages, you can find detailed information from every step in the process. This allows for an easy analysis of where potential configuration errors recite. Enabling trace messages for the SSO log node will also allow for detailed response messages to the user trying to sign in. By default, every failed login attempt always results in this message: "Unable to validate the SAML message!" After enabling trace logging, you can see the exact cause of the failure in the browser. In case of exceptions, you can even see the stack trace.  Obviously, you should not have this enabled in production, but it does allow for easier and faster testing of the configuration.
 
-### 6.1 Error Messages
+### 7.1 Error Messages
 
 * **"The application hasn't been properly configured to support single sign-on."** – This message indicates an incomplete IdP configuration. In more detailed error messages (via the log file), you are able to see which property in the IdP configuration has not been configured.
 * **"Unable to complete the request"** – A message has been received that does not have a RelayState/RequestID that matches any of the previously generated IDs (or the message has been answered already). If you get this message, you should validate the message communication and confirm that you are not using unsolicited requests. Or, you can enable that check the box to allow for IdP initiated authentication. 
@@ -611,7 +650,7 @@ When enabling the log node SSO to show trace messages, you can find detailed inf
 * **"Unable to validate Response, see SAMLRequest overview for detailed response. Error: An error occurred while committing user: p:'johndoe@company.com'/u:'JoHnDoE@CoMpAnY.CoM'"** – All user names passing through the SAML module are converted to lower-case, so make sure all the existing user names and new user names are also converted to lower-case. This is because certain systems are not case-sensitive (for example, Active Directory).
 * **“Could not create a session for the provided user principal.”** – This error can be shown if the IdP configuration does not contain any application attributes for the entity where the user (and user principal) is to be found (and stored).
 
-### 6.2 Troubleshooting an Endless Redirect Loop in Mendix 9 and 10
+### 7.2 Troubleshooting an Endless Redirect Loop in Mendix 9 and 10
 
 When using the [SAML](/appstore/modules/saml/) module for SSO in Mendix 9 and 10, you might get stuck in an endless redirect loop. This is because the default value for SameSite cookies is `"Strict"`, and the session cookies cannot be forwarded.
 
@@ -619,11 +658,11 @@ To avoid this issue, make sure your IdP (identity provider) and your app are in 
 
 If it is not an option to have the IdP and the app in the same domain, set the value for the SameSite cookies to `"None"` or`"Lax"` to solve the problem. See also [Runtime Customization](/refguide/custom-settings/).
 
-## 7 URLs{#urls}
+## 8 URLs{#urls}
 
 The following diagram gives an overview of all endpoints that the SAML SSO module exposes and consumes:
 
-{{< figure src="/attachments/appstore/modules/saml/saml-endpoints.png">}}
+{{< figure src="/attachments/appstore/modules/saml/saml-endpoints.png" class="no-border" >}}
 
 End-users can access your app through the following endpoints when using the SAML SSO module:
 
@@ -642,7 +681,7 @@ Your SAML IdP can consume the following endpoints at your app. Typically the SP-
 * **/SSO/attribute** – This is the endpoint where the SAML-IdP submits requested attributes about the authenticated user
 * **/SSO/logout** – This URL will trigger a single logout
 
-## 8 Read More
+## 9 Read More
 
 * Academy lecture [SSO Using SAML](https://academy.mendix.com/link/modules/115/lectures/938/2.3.1-SSO-using-SAML)
 

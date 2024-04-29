@@ -18,7 +18,7 @@ Each [patch version](/releasenotes/studio-pro/lts-mts/) of Mendix comes with its
 
 The Mendix Runtime consists of two parts: the [Runtime Server](/refguide9/runtime-server/) and the [Mendix Client](/refguide9/mendix-client/). The relationship between the two is shown in the diagram below.
 
-{{< figure src="/attachments/refguide9/runtime/runtime-overview.png" alt="An overview of the Mendix Runtime" >}}
+{{< figure src="/attachments/refguide9/runtime/runtime-overview.png" alt="An overview of the Mendix Runtime" class="no-border" >}}
 
 Each of the components of Mendix Runtime is described below.
 

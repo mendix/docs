@@ -29,7 +29,7 @@ The following parameters may be used in the commands:
 
 When using connected mode, you need to put namespace id and namespace secret as arguments. These parameters are used by the Mendix Gateway Agent to connect to the Private Cloud Portal. You can see these values in the installation command, as the -i and -s parameters, respectively.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/private-cloud-cli-non-interactive/installation-command.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/private-cloud-cli-non-interactive/installation-command.png" class="no-border" >}}
 
 ## 2 Base Installation
 

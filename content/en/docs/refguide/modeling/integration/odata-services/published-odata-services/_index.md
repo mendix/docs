@@ -235,7 +235,7 @@ Once your app is published, a list of the published OData services will be avail
 While the API documentation for published OData services is enabled by default, access to it may be restricted by the administrator for apps running in production.
 {{% /alert %}}
 
-For details on how to filter the OData response, refer to [OData Query Options](/refguide/odata-query-options/).
+For details on how to filter the OData response, refer to [Supported OData Operations](/refguide/supported-odata-operations/#filtering).
 
 For details on how Mendix attributes are represented in OData, refer to [OData Representation](/refguide/odata-representation/).
 

@@ -52,7 +52,7 @@ Before starting this how-to, make sure you have the following prerequisites:
 
 To download and install the Mendix Service Console, follow these steps:
 
-1. Download the latest version of the Mendix Service Console by following the **Related downloads** link from the [Studio Pro Download Page](https://marketplace.mendix.com/link/studiopro/) of the Marketplace.
+1. Download the latest version of the [Mendix Service Console](https://marketplace.mendix.com/link/component/223425) module from the Marketplace.
 
     {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/service_console_download.png" >}}
 
@@ -98,9 +98,9 @@ To deploy a Mendix app using the Mendix Service Console, follow these steps:
 
     {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/18580728.png" >}}
 
-5. On the **Project Files** screen, click **Select app...**.
+5. On the **Project Files** screen, click **Select app…**.
 
-    {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/18580727.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/service_console_selectapp.png" >}}
 
 6. Now select the **MDA** file that was [created in Studio Pro](/refguide/create-deployment-package-dialog/) and contains your application logic. After the installation of your MDA file, you will see which Mendix server (Mendix Runtime) version is needed.
 
@@ -201,6 +201,7 @@ Rule | Name | Pattern | Rewrite URL
 7 | rest-doc | `^(rest-doc/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
 8 | debugger | `^(debugger/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
 9 | oauth | `^(oauth/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
+10 | p | `^(p/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
 
 Follow the instructions below and replace *[Name]* with the name of the rule in the table above, *[Pattern]* with the regular expression pattern, and *[Rewrite URL]* with the Rewrite URL. Note that some patterns contain a trailing slash, `/`, when they need to point to an exact path (for example, `/ws-doc/mydoc/1234`).
 
@@ -336,6 +337,14 @@ Afterwards, the contents of the *web.config* file will be similar to the followi
                 </rule>
                 <rule name="debugger" stopProcessing="true">
                     <match url="^(debugger/)(.*)" />
+                    <action type="Rewrite" url="http://localhost:8080/{R:1}{R:2}" />
+                </rule>
+                <rule name="oauth" stopProcessing="true">
+                    <match url="^(oauth/)(.*)" />
+                    <action type="Rewrite" url="http://localhost:8080/{R:1}{R:2}" />
+                </rule>
+                <rule name="p" stopProcessing="true">
+                    <match url="^(p/)(.*)" />
                     <action type="Rewrite" url="http://localhost:8080/{R:1}{R:2}" />
                 </rule>
             </rules>

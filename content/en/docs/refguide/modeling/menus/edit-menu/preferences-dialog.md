@@ -9,7 +9,7 @@ tags: ["studio pro", "preferences", "settings", "edit menu"]
 
 The **Preferences** option in the menu opens a dialog box where you can set user-specific preferences which apply to the whole of Studio Pro:
 
-{{< figure src="/attachments/refguide/modeling/menus/edit-menu/preferences-dialog/preferences.png" alt="Preferences" width="600" >}}
+{{< figure src="/attachments/refguide/modeling/menus/edit-menu/preferences-dialog/preferences.png" alt="Preferences" width="600" class="no-border" >}}
 
 ## 2 General Tab {#general}
 
@@ -170,6 +170,14 @@ This setting was introduced in Mendix version 10.5.
 {{% /alert %}}
 
 When [combining changes](/refguide/merge-algorithm/), for example when doing a Git pull, the user can choose between **Rebase** and **Merge** as the default action. This preference can be overridden for each merge which contains conflicts.
+
+### 6.3 Changes 
+
+Enable this setting to truncate long lines.
+
+### 6.4 Solution Warning
+
+Select **Show warning on updating marketplace modules** to display a warning message when updating a Marketplace module. 
 
 ## 7 Work Environment Tab
 

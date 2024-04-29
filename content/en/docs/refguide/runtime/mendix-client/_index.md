@@ -43,7 +43,7 @@ The first two of these load a bundle dynamically, while the last one includes a 
 
 Here is a chart showing the components of the Mendix Client (for more information on the components, see the sections written beneath the chart):
 
-{{< figure src="/attachments/refguide/runtime/mendix-client/mendix-client.png" alt="The makeup of the Mendix Client" >}}
+{{< figure src="/attachments/refguide/runtime/mendix-client/mendix-client.png" alt="The makeup of the Mendix Client" class="no-border" >}}
 
 ### 2.1 Client Core
 
@@ -265,7 +265,6 @@ When the Mendix client is running, it sets a number of technical cookies to reco
 | **XASSESSIONID**<sup><small>2</small></sup> | Runtime | Holds the ID of the user's session | `/` | 1 year for offline sessions<sup><small>1</small></sup>, otherwise based on the session timeout |  `true` | 
 | **useAuthToken** | Runtime | Lets the runtime know whether to generate an authtoken or not—*introduced for apps created in Mendix version 10.9.0 and above* | `/` | until the end-user closes their browser (session cookie) |  `true` | 
 | **authtoken** | Runtime | Used to hold the authentication token—*introduced for apps created in Mendix version 10.9.0 and above* | `/` | until the authentication token expires |  `true` | 
-
 
 <sup><small>1</small></sup>*Offline sessions* are sessions created for users using an offline or native mobile [navigation profile](/refguide/navigation/#profiles).
 

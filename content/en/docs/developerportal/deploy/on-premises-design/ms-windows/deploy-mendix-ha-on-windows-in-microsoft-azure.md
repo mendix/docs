@@ -40,15 +40,15 @@ In a clustered environment there are some tasks (for example, cleaning up expire
 
 1. Select your app and click **Configuration**.
 
-    {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/deploy-mendix-ha-on-windows-in-microsoft-azure/slave_click_configuration.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/deploy-mendix-ha-on-windows-in-microsoft-azure/slave_click_configuration.png" class="no-border" >}}
 
 2. In the Configuration screen, click **Advanced...**.
 
-    {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/deploy-mendix-ha-on-windows-in-microsoft-azure/slave_click_advanced.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/deploy-mendix-ha-on-windows-in-microsoft-azure/slave_click_advanced.png" class="no-border" >}}
 
 3. In the Advanced screen add a line to Custom Mendix Settings with **Name** *com.mendix.core.isClusterSlave* and **Value** *true*.
 
-    {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/deploy-mendix-ha-on-windows-in-microsoft-azure/slave_add_setting.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/deploy-mendix-ha-on-windows-in-microsoft-azure/slave_add_setting.png" class="no-border" >}}
 
 4. Click **Close** on both screens to return to the Service Console.
 
@@ -63,7 +63,7 @@ More information regarding the configuration of Azure Load Balancers is availabl
 
 Go to the Azure Portal to retrieve the Azure Storage account name and an access key:
 
-{{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/deploy-mendix-ha-on-windows-in-microsoft-azure/azure_storage_keys.png" >}}
+{{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/deploy-mendix-ha-on-windows-in-microsoft-azure/azure_storage_keys.png" class="no-border" >}}
 
 Then select your application, click **Configuration** and then **Advanced...**. In the **Advanced Settings** screen, add the following **Custom Mendix settings**:
 
@@ -75,7 +75,7 @@ Then select your application, click **Configuration** and then **Advanced...**. 
 
 * **Name**: *com.mendix.storage.azure.Container*, **Value**: `<the Azure Storage blob container>`
 
-    {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/deploy-mendix-ha-on-windows-in-microsoft-azure/application_storage_settings.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/deploy-mendix-ha-on-windows-in-microsoft-azure/application_storage_settings.png" class="no-border" >}}
 
 By default, the container will be created in the blob storage if it does not yet exist. More information about the configuration options for Azure Blob Storage in the Mendix Runtime is available in the [Microsoft Azure Blob Storage Settings](/refguide/custom-settings/#azure-blob) section of *Runtime Customization*.
 

@@ -25,7 +25,7 @@ All the workflow objects this activity returns are of type **System.Workflow**, 
 
 An example of retrieve workflows properties is presented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/retrieve-workflows/properties.png" alt="Retrieve Workflows properties" width="950px" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/retrieve-workflows/properties.png" alt="Retrieve Workflows properties" width="950px" class="no-border" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

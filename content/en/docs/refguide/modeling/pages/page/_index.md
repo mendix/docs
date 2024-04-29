@@ -33,7 +33,7 @@ To open a page in Studio Pro, do the following:
 1. In the [App Explorer](/refguide/app-explorer/), open a module where this page is located. 
 2. Navigate to the page's location inside the module. A page can be listed as an individual element or be included in the **Pages** folder:
 
-    {{< figure src="/attachments/refguide/modeling/pages/page/app-explorer-pages.png" >}}
+    {{< figure src="/attachments/refguide/modeling/pages/page/app-explorer-pages.png" class="no-border" >}}
 
 3. Select a page you want to open and double-click it.
 
@@ -45,11 +45,11 @@ To create a new page, do the following:
 
 1. In the [App Explorer](/refguide/app-explorer/), right-click the module or a folder you want to create a page in and select **Add page**:
 
-    {{< figure src="/attachments/refguide/modeling/pages/page/add-page.png" >}}
+    {{< figure src="/attachments/refguide/modeling/pages/page/add-page.png" class="no-border" >}}
 
 2. In the **Create Page** dialog box, fill in the **Page name** and select a **Navigation layout**.
 
-    {{< figure src="/attachments/refguide/modeling/pages/page/create-page.png" >}}
+    {{< figure src="/attachments/refguide/modeling/pages/page/create-page.png" class="no-border" >}}
 
 3. Click **OK**. 
 
@@ -82,7 +82,7 @@ In **Structure mode**, there are several ways to add an element on a page:
         1. Select frequently-used widgets (a data view, a data grid, a template grid, or a list view).
         1. Click **Add widget**  or **Add building block**, find an element in a list and click **Select**.
 
-        {{< figure src="/attachments/refguide/modeling/pages/page/top-menu.png" >}}
+        {{< figure src="/attachments/refguide/modeling/pages/page/top-menu.png" class="no-border" >}}
 
     2. Click a drop-zone on a page to position an element.
 
@@ -91,7 +91,7 @@ In **Structure mode**, there are several ways to add an element on a page:
     1. Right-click a drop-zone you want to insert an element in.<br/>
     1. Select between adding a widget or a building block.<br/>
 
-        {{< figure src="/attachments/refguide/modeling/pages/page/adding-widget-in-drop-zone.png"   width="400"  >}}<br/>
+        {{< figure src="/attachments/refguide/modeling/pages/page/adding-widget-in-drop-zone.png"   width="400"  class="no-border" >}}<br/>
 
     1. Select an element you would like to add and confirm your choice by clicking **Select**.
 
@@ -134,7 +134,7 @@ There are two different ways to edit your page:
 
 You can toggle between the modes by clicking the **Design mode** or **Structure mode** button on the right of the top bar.
 
-{{< figure src="/attachments/refguide/modeling/pages/page/design-mode.png" alt="Design mode and Structure mode buttons" width="250" >}}
+{{< figure src="/attachments/refguide/modeling/pages/page/design-mode.png" alt="Design mode and Structure mode buttons" width="250" class="no-border" >}}
 
 By default, pages open in **Design mode**, but if you prefer **Structure mode**, this can be set as default in the **Preferences** (**Edit > Preferences > Work Environment > Default Page Editor**). For more information, see the [Default Page Editor](/refguide/preferences-dialog/#default-page-editor) section in *Preferences*.
 
@@ -154,17 +154,17 @@ In **Structure mode**, the page widgets are laid out so that it is easy to see t
 * You can zoom a page in or out using the **Zoom** drop-down menu in the upper-right corner of a page
 * Widgets are shown with additional information easily visible – for example, data sources for data grids and the width assigned to columns
 
-    {{< figure src="/attachments/refguide/modeling/pages/page/structure-mode-info.png" alt="Structure mode info" >}}
+    {{< figure src="/attachments/refguide/modeling/pages/page/structure-mode-info.png" alt="Structure mode info" class="no-border" >}}
 
 * Each widget has a drop-zone before/above and after/below it – this makes it easier to place widgets correctly when they appear close together in **Design mode**
 * Right-click a drop-zone allows you to insert a widget into it
 * The top bar of the page consists of icons representing the most frequently used widgets – these cannot be dragged, but are positioned by clicking a drop-zone after selecting the widget (the last two open a dialog box that lets you choose an element from a list of widgets/building blocks)
 
-    {{< figure src="/attachments/refguide/modeling/pages/page/frequently-used.png" alt="Frequently-used widgets"  width="300" >}}
+    {{< figure src="/attachments/refguide/modeling/pages/page/frequently-used.png" alt="Frequently-used widgets"  width="300" class="no-border" >}}
 
 * Widgets are shown without styling applied to them, but you can see which widgets do have styling applied via the class or style property by clicking the **Show styles** button (available for Web page templates and layouts only).
 
-    {{< figure src="/attachments/refguide/modeling/pages/page/show-styles.png" alt="Show styles button" width="400" >}}
+    {{< figure src="/attachments/refguide/modeling/pages/page/show-styles.png" alt="Show styles button" width="400" class="no-border" >}}
 
 ### 3.2 Design Mode {#design-mode}
 
@@ -176,19 +176,19 @@ It is recommended to use it in combination with the [Page Explorer](/refguide/pa
 
 For example, the example page shown in [Structure mode](#structure-mode), above, will look like this in **Design mode** for a desktop:
 
-{{< figure src="/attachments/refguide/modeling/pages/page/design-mode-example.png" alt="Design mode page as displayed on a tablet" >}}
+{{< figure src="/attachments/refguide/modeling/pages/page/design-mode-example.png" alt="Design mode page as displayed on a tablet" class="no-border" >}}
 
 It has the following features which are not available in **Structure mode**:
 
 * The widgets are shown as they will be on the page – for example two text widgets which are laid out vertically in structural mode may actually be laid out horizontally when the app is published, and this will be reflected in **Design mode**
 * The page layout can be seen for different device modes – for example phone or browser by clicking the appropriate device mode button:
 
-    {{< figure src="/attachments/refguide/modeling/pages/page/design-factor.png" alt="Show styles button" class="image-border">}}
+    {{< figure src="/attachments/refguide/modeling/pages/page/design-factor.png" alt="Show styles button" >}}
 
 * The widgets have design properties and CSS classes and styles applied to them so you can see what they will look like
 * Toggle showing conditionally-visible widgets in the top bar:
 
-    {{< figure src="/attachments/refguide/modeling/pages/page/conditional-visibility.jpg" alt="Show conditional visibility" class="image-border">}}
+    {{< figure src="/attachments/refguide/modeling/pages/page/conditional-visibility.jpg" alt="Show conditional visibility" >}}
 
 * **X-ray mode** to visualize the structure of a page
 
@@ -207,16 +207,17 @@ Before this feature, you could either work in **Structure** mode and see a compl
 When enabled, certain widgets appear bigger with an extra outline so they are easier to work with. **X-ray mode** affects structures such as **Container**, **Layout Grid**, and **Data View** widgets. These extra effects are removed when **X-ray mode** is turned off.
 
 **X-ray mode** can be enabled and disabled by clicking the button in the top bar from **Design** mode. It can also be enabled or disabled using these shortcuts:
+
 * Windows: <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>X</kbd>
 * Mac: <kbd>Cmd</kbd> + <kbd>Alt</kbd> + <kbd>X</kbd>
 
 Here is a page as shown in **Design mode** with **X-ray mode** disabled:
 
-{{< figure src="/attachments/refguide/modeling/pages/page/design-mode-no-x-ray.png" alt="Design mode with x-ray mode turned off" >}}
+{{< figure src="/attachments/refguide/modeling/pages/page/design-mode-no-x-ray.png" alt="Design mode with x-ray mode turned off" class="no-border" >}}
 
 Here is the same page with **X-ray mode** enabled:
 
-{{< figure src="/attachments/refguide/modeling/pages/page/design-mode-x-ray.png" alt="Design mode with x-ray mode turn on" >}}
+{{< figure src="/attachments/refguide/modeling/pages/page/design-mode-x-ray.png" alt="Design mode with x-ray mode turn on" class="no-border" >}}
 
 ## 4 Read More
 

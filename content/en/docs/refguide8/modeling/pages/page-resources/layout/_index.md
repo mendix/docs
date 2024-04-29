@@ -14,7 +14,7 @@ A layout consists of content and [placeholders](/refguide8/placeholder/). The co
 
 Layouts can be based on other layouts, in which case the generic layout is referred to as the primary layout. If a layout has a primary layout, it can use the placeholders defined in the primary layout to create a more specialized configuration. If a page is based on this specialized layout, it makes use of the placeholders defined in the new layout, ignoring those of the primary layout. 
 
-{{< figure src="/attachments/refguide8/modeling/pages/page-resources/layout/16843991.png" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/page-resources/layout/16843991.png" class="no-border" >}}
 
 This chain can be as long as is necessary, with a generic layout used throughout the project  as a primary layout for a more specific data input layout which is, in turn, used as a primary layout for a specialized edit user layout. 
 
@@ -26,7 +26,7 @@ Mendix will intelligently detect if pages share a layout, so no user input is re
 
 An example of layout properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/pages/page-resources/layout/layout-properties.png" alt="Example of the layout properties pane"   width="250"  >}}
+{{< figure src="/attachments/refguide8/modeling/pages/page-resources/layout/layout-properties.png" alt="Example of the layout properties pane"   width="250"  class="no-border" >}}
 
 Layout properties consist of the following sections:
 
@@ -58,7 +58,7 @@ Default value: *600*
 
 **Platform** can only be set when a layout is created.
 
-{{< figure src="/attachments/refguide8/modeling/pages/page-resources/layout/add-layout.png" alt="Dialog for adding a new layout" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/page-resources/layout/add-layout.png" alt="Dialog for adding a new layout" class="no-border" >}}
 
 The values for the platform property are:
 

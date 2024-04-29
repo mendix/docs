@@ -13,6 +13,25 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2024
 
+### April 25, 2024
+
+#### Fixes
+
+* We fixed an issue where in some rare cases when switching from the Landscape View of a data source to its Data View, information from a different data source would be shown.
+
+### April 18, 2024
+
+#### Fixes
+
+* We fixed an issue where updating a service contract from the **Search** page results in incorrectly parsed OData services.
+* We addressed an issue where clicking **Browse** from the hub URL redirects to the **Home** page instead of the **Search** page.
+
+### April 11, 2024
+
+#### Fixes
+
+* We addressed a potential security vulnerability ([CVE-2023-52428](https://nvd.nist.gov/vuln/detail/CVE-2023-52428)).
+
 ### March 21, 2024
 
 #### Improvement

@@ -1,6 +1,7 @@
 ---
 title: "Add date function calls"
 url: /refguide7/add-date-function-calls/
+canonical_url: "https://docs.mendix.com/refguide/add-date-function-calls/"
 ---
 
 

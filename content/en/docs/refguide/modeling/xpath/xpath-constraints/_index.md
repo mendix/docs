@@ -55,7 +55,7 @@ You can create groups of rules which should be applied in combination. Click **A
 
 `[(Name = 'Thomson' and Sales.Customer_Address/Sales.Address/City = 'New York') or (Name = 'Thompson' and Sales.Customer_Address/Sales.Address/City = 'London')]`
 
-{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/thomson-and-thompson.png" >}}
+{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/thomson-and-thompson.png" class="no-border" >}}
 
 You can change the order of rules, or move them from one group to another using the handles on each rule indicated by six dots (**⋮⋮**).
 
@@ -78,7 +78,7 @@ Visual Builder for database constraints is still in beta and you cannot use it t
 
 If you try to use an unsupported feature you will be warned and can choose to edit your XPath expression in the expression editor.
 
-{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/advanced-features.png" >}}
+{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/advanced-features.png" class="no-border" >}}
 
 ### 2.2 Writing XPath Expressions
 
@@ -90,21 +90,21 @@ Depending on the version, you may have to use a different option to add your XPa
 
 For all places where you can retrieve data from the database, for example a [Retrieve](/refguide/retrieve/) activity in a microflow or the [Data Source](/refguide/xpath-source/) of a widget, you select **(From) Database** and you will always have the option to add an **XPath constraint** by clicking **Edit…** to open a dialog box where you can enter your constraint.
 
-{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/from-database-xpath-10-5.png" >}}
+{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/from-database-xpath-10-5.png" class="no-border" >}}
 
 You can type your constraint by selecting the option **XPath expression**.
 
-{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/xpath-expression-10-5.png" >}}
+{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/xpath-expression-10-5.png" class="no-border" >}}
 
 #### 2.2.2 Mendix Versions Below 10.5
 
 For a **Retrieve** activity in a microflow, you choose **Source: From database** and you can enter your constraint under **XPath constraint**.
 
-{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/from-database-xpath-10-4.png" >}}
+{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/from-database-xpath-10-4.png" class="no-border" >}}
 
 For a **Data Source** of a page widget such as a [Data Grid](/refguide/data-grid/), you choose **Type: XPath**. You will then see an **XPath** field and click **Edit…** to open a dialog box where you can enter your constraint.
 
-{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/data-source-xpath-10-4.png" >}}
+{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/data-source-xpath-10-4.png" class="no-border" >}}
 
 ## 3 Constraints in Java
 
@@ -126,7 +126,7 @@ public getCustomersNameJansen(IContext context, ICore core, int value) {
 
 The following example shows how you should perform an XPath query in Studio Pro. You **Select** the **Entity** `Sales.Customer` and then write the XPath constraint `[Name='Jansen']`:
 
-{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/XPath-constraint-example.png" alt="XPath constraint example in Studio Pro" width="400px" >}}
+{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/XPath-constraint-example.png" alt="XPath constraint example in Studio Pro" width="400px" class="no-border" >}}
 
 ## 5 Multiple Constraints
 

@@ -12,7 +12,7 @@ A layout consists of content and [placeholders](/refguide7/placeholder/). The co
 
 Layouts can be based on other layouts, in which case the generic layout is referred to as the primary layout. If a layout has a primary layout, it can use the placeholders defined in the primary layout to create a more specialized configuration. If a page is based on this specialized layout, it makes use of the placeholders defined in the new layout, ignoring those of the primary layout. 
 
-{{< figure src="/attachments/refguide7/desktop-modeler/pages/layout/16843991.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/layout/16843991.png" class="no-border" >}}
 
 This chain can be as long as is necessary, with a generic layout used throughout the project  as a primary layout for a more specific data input layout which is, in turn, used as a primary layout for a specialized edit user layout. 
 

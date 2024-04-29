@@ -638,6 +638,7 @@ For [specific models](https://platform.openai.com/docs/guides/text-generation/js
 | `Configuration`  | [Configuration](#configuration-entity)                | mandatory                     | This is an object that contains endpoint and API key.        |
 | `Model`          | String                                                | only mandatory for **OpenAI** | This is the ID of the model to use; not considered for **Azure OpenAI** configurations. |
 | `ResponseFormat` | [ENUM_ResponseFormat_Chat](#enum-responseformat-chat) | optional                      | This can be used to specify the format that the model must output. |
+| `Temperature`     | Decimal                                                | optional                    | This can be used to control the randomness of the output: lower means more deterministic while higher means more creative. Note: high values for temperature (>1.7) may give unexpected results and even internal server errors. |
 
 **Return value**
 
@@ -657,6 +658,7 @@ Use the microflow `ChatCompletions_Execute_WithHistory` to execute a chat comple
 | `Configuration`          | [Configuration](#configuration-entity)                | mandatory                     | This is an object that contains endpoint and API key.        |
 | `Model`                  | String                                                | only mandatory for **OpenAI** | This is the ID of the model to use; not considered for **Azure OpenAI** configurations. |
 | `ResponseFormat`         | [ENUM_ResponseFormat_Chat](#enum-responseformat-chat) | optional                      | This can be used to specify the format that the model must output. |
+| `Temperature`            | Decimal                                               | optional                      | This can be used to control the randomness of the output: lower means more deterministic while higher means more creative. Note: high values for temperature (>1.7) may give unexpected results and even internal server errors. |
 
 **Return value**
 

@@ -27,7 +27,7 @@ See [App Security](/refguide/app-security/) for a description of the security le
 
 ### 2.2 App vs. Module Security
 
-At the level of an app some global settings can be specified: the security level, the administrator account and whether or not to allow anonymous access.
+At the level of an app some global settings can be specified: the security level, the administrator account, and whether or not to allow anonymous access.
 
 See [App Security](/refguide/app-security/).
 
@@ -37,7 +37,7 @@ See [Module Security](/refguide/module-security/).
 
 ### 2.3 User Roles vs. Module Roles {#user-role}
 
-An end-user in a Mendix application has one or more user roles. These roles can be assigned from within the client when creating or editing a user. User roles are at the level of an app and can be edited in [App Security](/refguide/app-security/).
+An end-user in a Mendix application has one or more user roles. These roles can be assigned from within the client when creating or editing an end-user. User roles are at the level of an app and can be edited in [App Security](/refguide/app-security/).
 
 See [User Roles](/refguide/user-roles/).
 
@@ -45,11 +45,11 @@ Each module defines its own set of module roles and you only have to specify sec
 
 See [Module Role](/refguide/module-security/#module-role).
 
-A user role is a combination of module roles. A user that signs into the system gets the access rights of all of their user roles and indirectly to the module roles that are contained by those user roles.
+A user role is a combination of module roles. An end-user that signs into the system gets the access rights of all of their user roles and indirectly to the module roles that are contained within those user roles.
 
-For example, you have an app with two modules: System and ProjectManagement (PM). The PM module has three module roles: TeamMember, TeamLeader and Administrator. And let us say that in this case, we only need two user roles because we do not need the distinction between team leaders and administrators. You define those two user roles and assign module roles to them. The table below shows which module roles are contained within the user roles. Note that you always need at least the User role in System.
+Say, for example, you have an app with two modules: System and ProjectManagement (PM). The PM module has three module roles: TeamMember, TeamLeader, and Administrator. In this case, you do not need to make a distinction between team leaders and administrators so you only need two user roles. You define those two user roles and assign module roles to them. The table below shows which module roles are contained within the user roles. Note that you always need at least the User role in the System module.
 
-| User Role 'TeamMember' | User Role 'TeamLeader' |
+| Module Roles for User Role 'TeamMember' | Module Roles for User Role 'TeamLeader' |
 | --- | --- |
 | System.User | System.User |
 | ProjectManagement.TeamMember | ProjectManagement.TeamLeader |
@@ -57,25 +57,23 @@ For example, you have an app with two modules: System and ProjectManagement (PM)
 
 ### 2.4 Entity Access vs. Page Access {#entity-vs-page-access}
 
-Per entity you can specify who can read or write what members (attributes and associations) under what circumstances. Using XPath constraints you can express powerful security behavior (for example, "an employee can only see orders created by the department they are a part of").
+You can specify for each entity who can read or write which members (attributes and associations) under what circumstances. Using XPath constraints you can express powerful security behavior (for example, "an employee can only see orders created by the department they are a part of").
 
 Per page you can specify who can open it from navigation. The menu bar is optimized so that only pages that the user has access to are visible. 
 
-A combination of entity access and a page access is necessary because entities can also be accessed from microflows and custom widgets. Furthermore, you can express more advanced security through entity access.
-
-See [Entity Access](/refguide/module-security/#entity-access).
+A combination of entity access and a page access is necessary because entities can also be accessed from microflows and custom widgets. Furthermore, you can express more advanced security through [entity access](/refguide/module-security/#entity-access).
 
 ## 3 Building an App as a Team {#team}
 
-If you would like to invite your colleagues to build the app, you can manage **Team** in Developer Portal. Only team members who are invited to your app can access your app (as a project to collaborate on). You can assign app roles to them, however, those are different from end-user roles. An end-user role defines what users can access in a running app while team member roles define what they can access and change in the app in the backend while developing this app. For more information, see [Team](/developerportal/general/team/) in the Developer Portal Guide.
+If you want to invite your colleagues to build your app, you can manage the **Team** in the Developer Portal. Only team members who are invited to your app can access it (as a project to collaborate on). You can assign app roles to them. These team member roles define what they can access and change in the app in the backend while developing the app and are different from end-user roles which define what users can access in a running app. For more information, see [Team](/developerportal/general/team/) in the *Developer Portal Guide*.
 
 ## 4 App Authentication {#authentication}
 
-The Mendix platform provides you with three approaches to the authentication of users of your app. Depending on your preference you can include modules in your app from the Mendix Marketplace for each of these approaches.
+The Mendix platform provides you with three approaches to the authentication of end-users of your app. Depending on your preference you can include modules in your app from the Mendix Marketplace for each of these approaches.
 
-The first approach is to have "local" authentication in your app. With this approach, the users of your app are managed by your app. Users are authenticated against their password that is also stored within the app. In this approach the app is self-supporting and independent of any existing IAM infrastructure. The Mendix Marketplace also provides modules to also add multi-factor authentication to the local login process.
+The first approach is to have "local" authentication in your app. With this approach, the end-users of your app are managed by your app. End-users are authenticated against their password that is also stored within the app. In this approach the app is self-supporting and independent of any existing IAM (Identity and Access Management) infrastructure. The Mendix Marketplace also provides modules to also add multi-factor authentication to the local login process.
 
-A second approach is to have users authenticate via the Mendix Identity Provider through single sign on ([SSO](/appstore/modules/mendix-sso/)) using their Mendix credentials. This is the default option for developers who deploy their application to the Mendix Cloud.
+A second approach is to have end-users authenticate via the Mendix Identity Provider through single sign on ([SSO](/appstore/modules/mendix-sso/)) using their Mendix credentials. This is the default option for developers who deploy their application to the Mendix Cloud.
 
 The third approach is to integrate your app with a third-party Identity Provider (IDP) external to your app.
 
@@ -85,4 +83,4 @@ Needless to say, the [SAML SSO](/appstore/modules/saml) module can be used with 
 
 Mendix also supports the OAuth protocol with the platform-supported [OIDC SSO](/appstore/modules/oidc/) module. OIDC/OAuth can be used in consumer facing applications to achieve single sign-on with identity providers such as Amazon Cognito, Google, Microsoft, LinkedIn, Twitter, or Facebook. It can also be used to authenticate to APIs, including APIs from Mendix ‘back-end’ apps which provide services to other apps. And, if your corporate IDP supports OIDC, you can use it to authenticate your employees and automatically grant them roles in your apps.
 
-Mendix applications that are deployed to SAP BTP can have SSO with SAP’s IDP. Mendix provides a platform supported XSUAA connector to implement this federation in your Mendix app. 
+Mendix applications that are deployed to SAP BTP can have SSO with SAP's IDP. Mendix provides a platform supported [XSUAA connector](/appstore/modules/sap/sap-xsuaa-connector/) to implement this federation in your Mendix app. 

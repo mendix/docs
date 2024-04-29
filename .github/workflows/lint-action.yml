@@ -20,10 +20,10 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       # Installs NodeJS v20 in runner environment (upgraded from v16 in Feb 2024)
       - name: Install NodeJS
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '20'
       # Installs linting tool via npm
@@ -53,6 +53,7 @@ jobs:
           body: |
             ${{ env.VER }}
           branch: lint-docs
+          committer: MarkvanMents <Mark.van.Ments@mendix.com>
           assignees: MarkvanMents
           reviewers: MarkvanMents
           labels: Internal WIP

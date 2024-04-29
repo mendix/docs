@@ -22,7 +22,7 @@ This module contains the following widgets:
 
 ## 2 Migration
 
-If you were previously using the Data Grid 2 module, you must follow these steps before updating it to the new Data Widgets module:
+If you were previously using the Data Grid 2 module, you must follow these steps before updating it to the new [Data Widgets](https://marketplace.mendix.com/link/component/116540) module:
 
 1. Rename the current **DataGrid** module (under **Marketplace** modules) to *DataWidgets* in Studio Pro.
 1. Open the Marketplace and search for **Data Widgets**.

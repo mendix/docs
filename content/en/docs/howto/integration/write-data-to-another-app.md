@@ -60,7 +60,7 @@ Notice the highlighted **CRUD** letters next to the entity name in the search pa
 
 Just like in the Catalog, you can see the **CRUD** capabilities of entities, attributes, and associations inside the [Integration pane](/refguide/integration-pane/) of Studio Pro.
 
-{{< figure src="/attachments/catalog/write-data/crud-capabilities.png" alt="crud capabilities" >}}
+{{< figure src="/attachments/catalog/write-data/crud-capabilities.png" alt="crud capabilities" class="no-border" >}}
 
 To consume an OData entity, do the following:
 
@@ -78,8 +78,8 @@ How does the published service know that that an insert fails? In the publishing
 
 The domain model for the publishing app's validation message looks like this:
 
-{{< figure src="/attachments/catalog/write-data/validate-data-publishing-app.png" alt="publishing app validation" >}}
+{{< figure src="/attachments/catalog/write-data/validate-data-publishing-app.png" alt="publishing app validation" class="no-border" >}}
 
 In the client app, the error handler would look like this:
 
-{{< figure src="/attachments/catalog/write-data/validate-data-client-app.png" alt="client app validation" >}}
+{{< figure src="/attachments/catalog/write-data/validate-data-client-app.png" alt="client app validation" class="no-border" >}}

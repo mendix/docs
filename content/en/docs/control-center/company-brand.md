@@ -14,4 +14,4 @@ On the **Company Brand** page, you can upload, edit, or remove a **Company Logo*
 
 You can upload, edit, or remove a **Cover image**. The cover image uploaded here will be available for usage in your company onboarding.
 
-{{< figure src="/attachments/control-center/company-branding/company-brand.png" >}}
+{{< figure src="/attachments/control-center/company-branding/company-brand.png" class="no-border" >}}

@@ -11,7 +11,7 @@ tags: ["project", "app", "configuration", "runtime", "Studio Pro", "languages", 
 
 In the **Project Settings** dialog box, you can alter the settings that are applicable to the whole project:
 
-{{< figure src="/attachments/refguide8/modeling/menus/view-menu/project-explorer/project/project-settings/project-settings-configuration.png" >}}
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/project-explorer/project/project-settings/project-settings-configuration.png" class="no-border" >}}
 
 The categories described below are available.
 

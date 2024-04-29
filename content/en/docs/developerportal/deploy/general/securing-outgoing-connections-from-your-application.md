@@ -21,7 +21,7 @@ There are various methods which are used for securing connections from *back end
 
 In some cases, encryption and authentication on connections is unnecessary. In this case unencrypted TCP/UDP based protocols can be used. This means that any data which is sent over this connection could be read if it is intercepted.
 
-{{< figure src="/attachments/developerportal/deploy/general/securing-outgoing-connections-from-your-application/19399049.png" >}}
+{{< figure src="/attachments/developerportal/deploy/general/securing-outgoing-connections-from-your-application/19399049.png" class="no-border" >}}
 
 ### Scenario 2 - TLS/HTTPS
 
@@ -29,9 +29,9 @@ This is the most common scenario. The client app verifies the server certificate
 
 Using encryption, data sent and received over the connection cannot be decoded if it is intercepted by other parties, so to authenticate the client, a username/password or token can be used with, for example, HTTP headers. This can be used for services that natively support TLS.
 
-To connect to the service from Mendix Cloud, the service is exposed on an external IP address and port. If this service is owned by you, it can be firewalled to only allow Mendix Cloud to connect to it. To get the IP address ranges of your app in Mendix Cloud, you can file a ticket at Mendix Support.
+To connect to the service from Mendix Cloud, the service is exposed on an external IP address and port. If this service is owned by you, it can be firewalled to only allow Mendix Cloud to connect to it. For more information about the IP address ranges of your app in Mendix Cloud, see [Mendix IP Addresses: Outgoing IP](/developerportal/deploy/mendix-ip-addresses/#outgoing).
 
-{{< figure src="/attachments/developerportal/deploy/general/securing-outgoing-connections-from-your-application/19399047.png" >}}
+{{< figure src="/attachments/developerportal/deploy/general/securing-outgoing-connections-from-your-application/19399047.png" class="no-border" >}}
 
 ### Scenario 3 - TLS/HTTPS *With Client Certificate Validation*
 
@@ -39,7 +39,7 @@ For additional security, the server can validate the client's identity by checki
 
 The rest of the security features of scenario 2 can also be applied.
 
-{{< figure src="/attachments/developerportal/deploy/general/securing-outgoing-connections-from-your-application/19399050.png" >}}
+{{< figure src="/attachments/developerportal/deploy/general/securing-outgoing-connections-from-your-application/19399050.png" class="no-border" >}}
 
 ### Scenario 4 - Proxy Server for TLS Offloading
 
@@ -47,13 +47,13 @@ If a back end service owned by you does not support HTTPS out of the box, you ca
 
 Migrations of back-end services within the same region can be done transparently by decoupling it from the public address of your service. The app in Mendix Cloud simply connects to an HTTPS endpoint.
 
-{{< figure src="/attachments/developerportal/deploy/general/securing-outgoing-connections-from-your-application/19399044.png" >}}
+{{< figure src="/attachments/developerportal/deploy/general/securing-outgoing-connections-from-your-application/19399044.png" class="no-border" >}}
 
 ### Scenario 5 - Proxy Server for TLS Offloading *With Client Certificate Validation*
 
 This scenario is identical to scenario 4, with one exception: your app includes a Client Certificate and the proxy server uses this to validate the identity of the app.
 
-{{< figure src="/attachments/developerportal/deploy/general/securing-outgoing-connections-from-your-application/19399045.png" >}}
+{{< figure src="/attachments/developerportal/deploy/general/securing-outgoing-connections-from-your-application/19399045.png" class="no-border" >}}
 
 ### Scenario 6 - VPN
 
@@ -72,7 +72,7 @@ The following disadvantages apply:
 * Connections are added to (virtual) machines, this makes deployment to multi-tenant public-cloud environments based on containerization a challenge
 * VPN gateways potentially add two more single points of failure
 
-{{< figure src="/attachments/developerportal/deploy/general/securing-outgoing-connections-from-your-application/19399048.png" >}}
+{{< figure src="/attachments/developerportal/deploy/general/securing-outgoing-connections-from-your-application/19399048.png" class="no-border" >}}
 
 ### Scenario 7 - SSH Server as a TCP Proxy
 
@@ -80,7 +80,7 @@ For certain deployments (for example, where non-HTTP protocols are used), you ca
 
 Setting up an SSH enabled server and setting up a public/private keypair is a trivial task for most system administrators, but it is not as simple and standardized as HTTPS (reverse) proxy servers. When HTTP based protocols are available, scenarios 2 to 5 are preferable.
 
-{{< figure src="/attachments/developerportal/deploy/general/securing-outgoing-connections-from-your-application/19399052.png" >}}
+{{< figure src="/attachments/developerportal/deploy/general/securing-outgoing-connections-from-your-application/19399052.png" class="no-border" >}}
 
 ## 3 Notes
 

@@ -25,7 +25,7 @@ To set up a solution, follow these steps:
 
 1. Open Studio Pro and [import](/refguide/import-and-export/) the *.mxsolution* package:
 
-    {{< figure src="/attachments/appstore/creating-content/sol-solutions-impl-guide/solution-import.png" alt="Import Solution" >}}
+    {{< figure src="/attachments/appstore/creating-content/sol-solutions-impl-guide/solution-import.png" alt="Import Solution" class="no-border" >}}
 
 2. Select the target directory for your solution and click **OK**.
 3. Once the solution is initialized, a special **solution-releases** branch is created. This branch contains the unchanged version of the solution (as provided by the ISV). You cannot make any changes in this branch, as that would render the solution incompatible with upgrades or lead to unpredictable errors during upgrades.

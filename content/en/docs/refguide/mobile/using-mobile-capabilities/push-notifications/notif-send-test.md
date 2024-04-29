@@ -26,7 +26,7 @@ To send your first test notification, do the following:
 1. Leave the remaining fields to the defaults.
 1. Click **Send**:
 
-    {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/notif-send-test/push-send-message.png" alt="test entity"   width="350"  >}}
+    {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/notif-send-test/push-send-message.png" alt="test entity"   width="350"  class="no-border" >}}
 
 You should now receive the notification on your device. If the application is already opened, the action will log a message (on log node **ExampleNotification**) and show a dialog box in the app.
 

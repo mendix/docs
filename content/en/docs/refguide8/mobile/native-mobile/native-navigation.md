@@ -43,7 +43,7 @@ A layout that has the header property enabled will always show a bar at the top 
 
 This is an example of the default header on iOS:
 
-{{< figure src="/attachments/refguide8/mobile/native-mobile/native-navigation/header.png" alt="An example of the default header on iOS."   width="250"  >}}
+{{< figure src="/attachments/refguide8/mobile/native-mobile/native-navigation/header.png" alt="An example of the default header on iOS."   width="250"  class="no-border" >}}
 
 ### 3.2 Bottom Bar
 
@@ -55,7 +55,7 @@ Every item in the bottom bar has its own navigation stack. This means that if yo
 Pages without a bottom bar are created in a separate stack. If you navigate from a page *without* a bottom bar to a page *with* a bottom bar, then all pages in that stack are closed.
 {{% /alert %}}
 
-{{< figure src="/attachments/refguide8/mobile/native-mobile/native-navigation/bottombar.png" alt="An example of the default bottom bar on iOS."   width="250"  >}}
+{{< figure src="/attachments/refguide8/mobile/native-mobile/native-navigation/bottombar.png" alt="An example of the default bottom bar on iOS."   width="250"  class="no-border" >}}
 
 ## 4 How does Mendix Native Navigation Work?
 
@@ -73,7 +73,7 @@ The first page on the stack is always the home page. When you tap a button that 
 
 When you close a page (via a back button, a close action, or swipe to go back (iOS)), only the current page is closed and the previous page becomes visible again.
 
-{{< figure src="/attachments/refguide8/mobile/native-mobile/native-navigation/singlestack.gif"   width="250"  >}}
+{{< figure src="/attachments/refguide8/mobile/native-mobile/native-navigation/singlestack.gif"   width="250"  class="no-border" >}}
 
 #### 4.1.2 Multiple Stacks
 
@@ -81,7 +81,7 @@ If an app has bottom bar items, every item in the bottom bar will have a separat
 
 If a bottom bar item is not focused, pressing it will focus that item. Switching to another bottom bar item will not close pages in the focused one. If the item is already focused, pressing it again will dismiss all pages from its stack.
 
-{{< figure src="/attachments/refguide8/mobile/native-mobile/native-navigation/multiplestacks.gif"   width="250"  >}}
+{{< figure src="/attachments/refguide8/mobile/native-mobile/native-navigation/multiplestacks.gif"   width="250"  class="no-border" >}}
 
 #### 4.1.3 Pop-Ups
 
@@ -89,7 +89,7 @@ When a page with a pop-up layout is opened, a new stack is created and all pages
 
 It is possible to open other pop-up pages inside the pop-up, and all of those together behave as a single stack. When opening a normal page from the pop-up, the pop-ups will be closed first.
 
-{{< figure src="/attachments/refguide8/mobile/native-mobile/native-navigation/popups.gif"   width="250"  >}}
+{{< figure src="/attachments/refguide8/mobile/native-mobile/native-navigation/popups.gif"   width="250"  class="no-border" >}}
 
 ### 4.2 Opening and Closing Pages
 

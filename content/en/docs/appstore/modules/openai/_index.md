@@ -87,7 +87,7 @@ Follow the instructions in [Using Marketplace Content](/appstore/overview/use-co
 
 ## 3 Configuration {#configuration}
 
-After you install the OpenAI Connector, you can find it in the **App Explorer**, in the **Marketplace modules** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to OpenAI. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to OpenAI, you must also [configure the Encryption module](https://docs.mendix.com/appstore/modules/encryption/#configuration). 
+After you install the OpenAI Connector, you can find it in the **App Explorer**, in the **Marketplace modules** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to OpenAI. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to OpenAI, you must also [configure the Encryption module](/appstore/modules/encryption/#configuration). 
 
 ### 3.1 General Configuration {#general-configuration}
 
@@ -106,7 +106,7 @@ The following inputs are required for the OpenAI configuration:
 | DisplayName | This is the name identifier of a configuration, e.g. *MyConfiguration*. |
 | API type    | Select `OpenAI`.<br />For more information, see the [ENUM_ApiType](#enum-apitype) section. |
 | Endpoint    | This is the API Endpoint, e.g. `https://api.openai.com/v1`   |
-| API key     | This is the access token to authorize your API call. <br />To get an API, follow these steps:<ol><li>Create an account and log in at [OpenAI](https://platform.openai.com/).</li><li> Go to the [API key page](https://platform.openai.com/account/api-keys) to create a new secret key. </li><li>Copy the API key and save this somewhere safe.</li></ol> |
+| API key     | This is the access token to authorize your API call. <br />To get an API, follow these steps:<ol><li>Create an account and sign in at [OpenAI](https://platform.openai.com/).</li><li> Go to the [API key page](https://platform.openai.com/account/api-keys) to create a new secret key. </li><li>Copy the API key and save this somewhere safe.</li></ol> |
 
 {{% alert color="info" %}}
 For more details, see the [OpenAI API reference](https://platform.openai.com/docs/api-reference).
@@ -132,7 +132,7 @@ For the Azure OpenAI configuration, each model needs a separate deployment so th
 
 ##### 3.1.2.1 Obtaining Azure OpenAI Resource Name {#azure-resource-name}
 
-1. Go to the [Azure OpenAI portal](https://oai.azure.com/) and log in.
+1. Go to the [Azure OpenAI portal](https://oai.azure.com/) and sign in.
 2. On the upper-right corner, click **Settings** ({{% icon name="cog" %}}). 
 3. Go to the **Resource** tab.
 4. Go to **Current resource** and click **JSON view**.
@@ -140,7 +140,7 @@ For the Azure OpenAI configuration, each model needs a separate deployment so th
 
 ##### 3.1.2.2 Obtaining Azure OpenAI API keys {#azure-api-keys}
 
-1. Go to the [Azure OpenAI portal](https://oai.azure.com/) and log in.
+1. Go to the [Azure OpenAI portal](https://oai.azure.com/) and sign in.
 2. On the upper-right corner, click **Settings** ({{% icon name="cog" %}}). 
 3. Go to the **Resource** tab.
 4. Go to **Current resource** and click **JSON view**.
@@ -256,7 +256,7 @@ The domain model in Mendix is a data model that describes the information in you
 
 #### 4.1.1 Configuration {#configuration-domain-model}
 
-{{< figure src="/attachments/appstore/modules/openai-connector/domainModel-Configuration.png" class="image-border" >}}
+{{< figure src="/attachments/appstore/modules/openai-connector/domainModel-Configuration.png" >}}
 
 ##### 4.1.1.1 `Configuration` {#configuration-entity} 
 
@@ -267,7 +267,7 @@ This entity is used to store the API credentials and endpoints in the configurat
 | `DisplayName`    | This is the name identifier of a configuration.              |
 | `ApiType`        | The value can be `OpenAI` or `AzureOpenAI`.<br />For more information, see the [ENUM_ApiType](#enum-apitype) section. |
 | `Endpoint`       | This is the API Endpoint, e.g. `https://api.openai.com/v1` for OpenAI, or `https://your-resource-name.openai.azure.com/openai/deployments/`for Azure OpenAI. |
-| `DeploymentName` | This is the deployment name you chose when you deployed the model. This is only relevant for configurations of `ApiType` **AzureOpenAI**. Deployments provide endpoints to the Azure OpenAI base models, or your fine-tuned models.<br />To check the deployment name, follow these steps:<ol><li>Log in at [Azure OpenAI](https://oai.azure.com/).</li><li>Navigate to deployments in the sidebar.</li></ol> |
+| `DeploymentName` | This is the deployment name you chose when you deployed the model. This is only relevant for configurations of `ApiType` **AzureOpenAI**. Deployments provide endpoints to the Azure OpenAI base models, or your fine-tuned models.<br />To check the deployment name, follow these steps:<ol><li>Sign in at [Azure OpenAI](https://oai.azure.com/).</li><li>Navigate to deployments in the sidebar.</li></ol> |
 | `ApiVersion`     | This the API version used for this operation. This follows the `YYYY-MM-DD` format. Only relevant for configurations of `ApiType` **AzureOpenAI**. |
 | `ApiKey`        | This is the access token to authorize your API call. <br />For details, see the [OpenAI configuration](#openai-configuration) and [Azure OpenAI configuration](#azure-openai-configuration) sections. |
 | `KeyType`        | This is the type of token entered in the `ApiKey` field. This is only relevant for configurations of `ApiType` **AzureOpenAI**.<br />For more information, see the [ENUM_ApiType](#enum-keytype) section. |
@@ -292,7 +292,7 @@ This entity is only used to send a simple [chat completions request](#chat-compl
 
 #### 4.1.2 Generalizations {#generalizations-domain-model}
 
-{{< figure src="/attachments/appstore/modules/openai-connector/domainModel-Generalizations.png" class="image-border" >}}
+{{< figure src="/attachments/appstore/modules/openai-connector/domainModel-Generalizations.png" >}}
 
 ##### 4.1.2.1 `AbstractUsage` {#abstractusage}
 
@@ -316,7 +316,7 @@ This is the abstract entity for `ChatCompletionsMessage`. Do not use this entity
 
 #### 4.1.3 Chat Completions {#chatcompletions-domain-model}
 
-{{< figure src="/attachments/appstore/modules/openai-connector/domainModel-ChatCompletionsWithSession.png" class="image-border" >}}
+{{< figure src="/attachments/appstore/modules/openai-connector/domainModel-ChatCompletionsWithSession.png" >}}
 
 ##### 4.1.3.1 `ChatCompletionsRequest` {#chatcompletionsrequest} 
 
@@ -394,7 +394,7 @@ This is a specialization of the [AbstractChatCompletionsMessage](#abstractchatco
 
 #### 4.1.4 Image Generations {#imagegenerations-domain-model}
 
-{{< figure src="/attachments/appstore/modules/openai-connector/domainModel-Images.png" class="image-border" >}}
+{{< figure src="/attachments/appstore/modules/openai-connector/domainModel-Images.png" >}}
 
 ##### 4.1.4.1 `ImageGenerationsRequest` {#imagegenerationsrequest} 
 
@@ -449,7 +449,7 @@ This is an entity that is used to map the [image](#image) data from the API resp
 
 #### 4.1.5 Embeddings {#embeddings-domain-model}
 
-{{< figure src="/attachments/appstore/modules/openai-connector/domainModel-EmbeddingsWithDataBatch.png" class="image-border" >}}
+{{< figure src="/attachments/appstore/modules/openai-connector/domainModel-EmbeddingsWithDataBatch.png" >}}
 
 ##### 4.1.5.1 `EmbeddingsRequest` {#embeddingsrequest} 
 
@@ -517,7 +517,7 @@ This entity represents a text string, usually a part of a larger base text or di
 
 ### 4.2 Enumerations {#enumerations} 
 
-An enumeration is a predefined list of values that can be used as an attribute type. For more information about enumerations in general, see [Enumerations](https://docs.mendix.com/refguide/enumerations/). 
+An enumeration is a predefined list of values that can be used as an attribute type. For more information about enumerations in general, see [Enumerations](/refguide/enumerations/). 
 
 #### 4.2.1 General {#general-enumerations}
 

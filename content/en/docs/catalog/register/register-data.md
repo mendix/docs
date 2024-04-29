@@ -362,4 +362,4 @@ The other documents in the ZIP file should be structured within a series of nest
 
 The following diagram shows examples of the ZIP contract structure for both URI types. The absolute folder structure is the same in each case, but the relative structure depends on the Document Base URL. Note that **odata**, **v1**, and **docs** are each separate folders, but in the absolute folder structure shown here, they are represented in a condensed format to save space.
 
-{{< figure src="/attachments/catalog/register-data/zip-file-structure.png" alt="Absolute and relative folder structures for two different base URLs.">}}
+{{< figure src="/attachments/catalog/register-data/zip-file-structure.png" alt="Absolute and relative folder structures for two different base URLs." class="no-border" >}}

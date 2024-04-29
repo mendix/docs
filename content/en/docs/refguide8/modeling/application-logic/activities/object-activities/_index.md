@@ -14,7 +14,7 @@ The activities in this section of the microflow and nanoflow toolbox generally w
 
 The activities described in this document are in the **Object Activities** section of the **Toolbox**:
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/activities/object-activities/object-activities-toolbox.png" alt="Object activities toolbox"   width="40%"  >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/object-activities/object-activities-toolbox.png" alt="Object activities toolbox"   width="40%"  class="no-border" >}}
 
 The following are the object activities you can use in your microflow or nanoflow:
 

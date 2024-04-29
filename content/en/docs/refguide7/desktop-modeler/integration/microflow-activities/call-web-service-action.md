@@ -14,7 +14,7 @@ The call-web-service activity can be used to call one of the [imported web servi
 
 ## 2 Operation
 
-{{< figure src="/attachments/refguide7/desktop-modeler/integration/microflow-activities/call-web-service-action/19399020.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/integration/microflow-activities/call-web-service-action/19399020.png" class="no-border" >}}
 
 ### 2.1 Operation
 
@@ -90,7 +90,7 @@ When you select **Override**, you can configure dynamically whether to use a pro
 
 ## 3 HTTP Headers
 
-{{< figure src="/attachments/refguide7/desktop-modeler/integration/microflow-activities/call-web-service-action/19399021.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/integration/microflow-activities/call-web-service-action/19399021.png" class="no-border" >}}
 
 ### 3.1 Use HTTP Authentication
 
@@ -110,7 +110,7 @@ These custom headers are added to the HTTP request header. Each custom header is
 
 ## 4 SOAP Request Header and SOAP Request Body
 
-{{< figure src="/attachments/refguide7/desktop-modeler/integration/microflow-activities/call-web-service-action/19399022.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/integration/microflow-activities/call-web-service-action/19399022.png" class="no-border" >}}
 
 The XML for the request parts (header and body) can be generated in several ways that are described in the following sections.
 
@@ -124,7 +124,7 @@ This option for request parts can be used when all children of the XML element o
 
 Using this option you need to supply an argument value for all elements of a primitive type (parameters). Argument values need to be entered using [expressions](/refguide7/expressions/) resulting in the same data type as the parameter.
 
-{{< figure src="/attachments/refguide7/desktop-modeler/integration/microflow-activities/call-web-service-action/requestParamOptNil.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/integration/microflow-activities/call-web-service-action/requestParamOptNil.png" class="no-border" >}}
 
 For primitive parameters (both optional and nillable) that do not have an export mapping, you can now choose to send empty values as shown above in the image.
 
@@ -148,7 +148,7 @@ For the request header, the Modeler provides some common XML structures in the d
 
 ## 5 SOAP Response
 
-{{< figure src="/attachments/refguide7/desktop-modeler/integration/microflow-activities/call-web-service-action/19399023.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/integration/microflow-activities/call-web-service-action/19399023.png" class="no-border" >}}
 
 If the data type is a complex XML structure it can be mapped to entities using a [Import Mapping](/refguide7/import-mappings/). If it is primitive data, it can be stored in a variable immediately. The response does not have to be used though; it can also be ignored if you are not interested in it.
 

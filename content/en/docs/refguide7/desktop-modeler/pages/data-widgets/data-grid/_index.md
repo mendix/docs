@@ -1,6 +1,7 @@
 ---
 title: "Data grid"
 url: /refguide7/data-grid/
+canonical_url: "https://docs.mendix.com/refguide/data-grid/"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -8,7 +9,7 @@ The data grid shows a list of objects in a grid. For example, a data grid can sh
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide7/desktop-modeler/pages/data-widgets/data-grid/data-grid.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/data-widgets/data-grid/data-grid.png" class="no-border" >}}
 A data grid showing accounts.
 
 {{% /alert %}}

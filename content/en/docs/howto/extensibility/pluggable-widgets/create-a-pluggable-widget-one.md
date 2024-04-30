@@ -67,13 +67,13 @@ The following steps teach you how to build a pluggable input widget, and show yo
 
     {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/microflowcreateentity.png" class="no-border" >}}
 
-### 3.2 Widget Scaffolding
+### 3.2 Scaffolding the Widget
 
 The Pluggable Widget Generator is the quickest way to start developing a widget. It creates a widget’s recommended folder structure and files.
 
 Using a terminal or command line, navigate to your new Mendix app's folder, create a new folder named *myPluggableWidgets*, and start the generator using:
 
-```powershell
+```shell {linenos=false}
 mkdir myPluggableWidgets
 cd myPluggableWidgets
 yo @mendix/widget TextBox
@@ -98,11 +98,29 @@ The generator will ask you a few questions during setup. Answer the questions by
 
     {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/generatorblack-new.png" alt="mx generator" class="no-border" >}}
 
+As part of the widget scaffolding, the generator builds the widget for the first time. You can do this yourself by running `npm run build`. There is also a watcher available that will rebuild your widget as you make changes to files.
+
+Start the watcher by running `npm start`.
+
 {{% alert color="info" %}}
 NPM version 7 changed the resolution behavior of peerDependencies. Try adding `--legacy-peer-deps` to your install command if it results in peer dependency resolution errors.
 {{% /alert %}}
 
-### 3.3 Adding the Attribute
+### 3.3 Using the Widget
+
+When the build script completes it will package your widget as a `.mpk` file and copy it to the `widgets/` directory in your Mendix project. Now that the generator has finished its job it is time to use the widget in Studio Pro.
+
+1. To find your widget for the first time you need to refresh from the files system. Use <kbd>F4</kbd> or select **App** > **Synchronize Project Directory** from the Studio Pro menu.<br />
+1. Open the **Home_Web** page in the page editor.
+1. Open the toolbox on the right of your screen and locate the newly created **Text Box** widget. It should be at the bottom of the list.
+1. Drag the Text Box widget to the Data View added in [section 3.1](#creating-a-test-project).
+1. Run your app locally and open it in the browser. The homepage should now display Hello World below the previously added text widget.
+
+The end result will be similar to the screenshot below:
+
+{{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/hello-world.png" class="no-border" >}}
+
+### 3.4 Adding the Attribute
 
 Open the *(YourMendixApp)/myPluggableWidgets/textBox* folder in your IDE of choice. From now on, all file references will be relative to this path. To set up your new widget, first you must use an attribute of the context object and display that attribute in an input field: 
 
@@ -140,91 +158,74 @@ Open the *(YourMendixApp)/myPluggableWidgets/textBox* folder in your IDE of choi
 
     When done generating the types can be found in `typings/TextBoxProps.d.ts`
 
-    {{% alert color="info" %}}
-    The console will display an expected error along the lines of "HelloWorldSample.tsx could not be found". We will address this in the section [Labeling the Input](#label-input) of this how-to. It can be ignored for now.
-    {{% /alert %}}
+    {{% alert color="info" %}}The console will display an error along the lines of _"HelloWorldSample.tsx could not be found"_. We will address this in the section [Labeling the Input](#label-input) of this how-to. It can be ignored for now.{{% /alert %}}
 
-4. Create a new file, *src/components/TextInput.tsx*. This will be the display component. A display component is a regular React component and does not interact with Mendix APIs. It can be re-used in any React application.
+4. Create a new file, `src/components/TextInput.tsx`. This will be the display component. A display component is a regular React component and does not interact with Mendix APIs. It can be re-used in any React application.
 
     Paste the following [React function component](https://react.dev/learn/your-first-component) into the newly create `TextInput.tsx` file.
 
     ```tsx
-    import { createElement, ReactNode } from "react";
+    import { createElement, ReactElement } from "react";
 
     export interface TextInputProps {
         value: string;
     }
 
-    export function TextInput({ value }: TextInputProps): ReactNode {
-        return <input type="text" value={value} />;
+    export function TextInput({ value }: TextInputProps): ReactElement {
+    return <input type="text" value={value} />;
     }
     ```
     
-    In short the component receives an input object, called props, containing a string property named `value`. In turn the component returns a [React input element](https://react.dev/reference/react-dom/components/input) with its value set to what the `TextInput` component received in `props.value`. While the syntax looks like HTML, [it actually is Javascript](https://react.dev/learn/writing-markup-with-jsx).
+    In short, the component receives an input object, called props, containing a string property named `value`. In turn the component returns a [React input element](https://react.dev/reference/react-dom/components/input) with its value set to what the `TextInput` component received in `props.value`. While the syntax looks like HTML, [it actually is Javascript](https://react.dev/learn/writing-markup-with-jsx).
 
-5. The container component *src/TextBox.tsx* receives the properties in the runtime, and forwards the data to the display component. The container works like glue between the Mendix application and the display component. In the *TextBox.tsx* overwrite the render function until they look like this:
+5. The container component *src/TextBox.tsx* receives the properties in the runtime, and forwards the data to the display component. The container works like glue between the Mendix application and the display component. In *TextBox.tsx* overwrite the render function until they look like this:
 
     ```tsx
-    import { Component, ReactNode, createElement } from "react"; 
-    import { hot } from "react-hot-loader/root";
-
+    import { createElement, ReactElement } from "react"; 
     import { TextBoxContainerProps } from "../typings/TextBoxProps";
     import { TextInput } from "./components/TextInput";
 
     import "./ui/TextBox.css";
 
-    class TextBox extends Component<TextBoxContainerProps> {
-        render(): ReactNode {
-            const value = this.props.textAttribute.value || "";
-            return <TextInput value={value} />;
-        }
+    export function TextBox({ textAttribute }: TextBoxContainerProps): ReactElement {
+        const value = textAttribute.value || "";
+        return <TextInput value={value} />;
     }
-
-    export default hot(TextBox);
     ```
-
-    Be sure all the imports are included before moving on from this step.
 
     Explaining the code:
 
-    * The `textAttribute` is an object that will automatically have the actual data stored in the attribute — when the data is changed, it will cause an update of the component, and the new data will be displayed in the input
+    * Line 2 imports the generated types for the widget. It was generated when we ran `npm start` in the previous section and its properties are based on the [widget definition file](/apidocs-mxsdk/apidocs/pluggable-widgets/#widget-definition).
+    * The `textAttribute` is a data access object provided by the Pluggable Widgets API. It not only provides the widget with the latest value of the attribute, but also offers methods for updating the value and performing validation. React will re-render the component when the props change.
+    * On line 8 we provide a fallback value for the textAttribute value. This is necessary, as its value may be `undefined` and our TextInput display component only accepts `string`. The OR operator offers [short-circuit evaluation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR#short-circuit_evaluation), which will return the value on the left if it evaluates to truthy. Otherwise it will return the value provided on the right side. 
 
-6. Alter *Textbox.editorPreview.tsx* by adding the `TextInput` import to *Textbox.editorPreview.tsx*:
+6. Pluggable Widgets also have a Preview component, which is used in the design mode of the Studio Pro page editor. Update `src/TextBox.editorPreview.tsx` such that the deleted `HelloWorldSample` component is replaced by our `TextInput` component. This will resolve the errors thrown by `npm start`.
 
     ```tsx
+    import { ReactElement, createElement } from "react";
+    import { TextBoxPreviewProps } from "../typings/TextBoxProps";
     import { TextInput } from "./components/TextInput";
-    ```
 
-    Then, override the class lines in *Textbox.editorPreview.tsx* until they look like this:
-
-    ```tsx
-    export class preview extends Component<TextBoxPreviewProps> {
-        render(): ReactNode {
-            return <TextInput value={this.props.textAttribute} />;
-        }
+    export function preview({ textAttribute }: TextBoxPreviewProps): ReactElement {
+        return <TextInput value={textAttribute} />;
     }
     ```
 
-    Before moving on from this step, you should remove the import lines concerning the **Hello World** sample text from *TextBox.editorPreview.tsx* and *TextBox.tsx*, as these lines are no longer in use.
+    Unlike the Container component, the Preview component receives mocked values for the the widget attributes. In this case `textAttribute` always receives a string. Thanks to this it is not necessary to deal with a possible `undefined` value.
 
-7. Add a test widget to the project home page:<br />
-    1. To find your widget for the first time you need to refresh from the files system. Use <kbd>F4</kbd> or select **App** > **Synchronize Project Directory** from the Studio Pro menu.<br />
-    2. Navigate to **Home > Add widget** in the editor menu.<br />
-    3. Select the newly-created **TextBox** widget at the bottom of the list.<br />
-    4. Place the widget below the standard text widget.<br />
-    5. Open the widget properties. In the **Data source** tab **select** the **Text attribute** from the attribute created in [Creating a Test App](#creating-a-test-project) above.
-
-    The end result will be similar to the screenshot below:
+7. Wait for the watcher to finish rebuilding your widget. If the watcher is not running, start it with `npm start` or build the widget manually with `npm run build`.
+8. In Studio Pro, refresh your project from the filesystem with <kbd>F4</kbd> or from the menu with **App** > **Synchronize Project Directory**. The widget should now have a red border indicating that it needs to be refreshed. Open the context menu and select **Update all widgets**.
 
     {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/updateallwidgets.png" class="no-border" >}}
 
-    {{% alert color="info" %}}The widgets Studio Pro are not automatically updated. First, run the `npm start` command again. To refresh your widgets, press F4 or select **App** > **Synchronize App Directory** from the Studio Pro menu to reload the widgets from the file system. Finally, right-click the widget and select Update all widgets to update the newly-changed properties in the widget.{{% /alert %}}
+1.  Open the widget properties. In the **Data source** tab **select** the **Text attribute** from the attribute created in [Creating a Test App](#creating-a-test-project) above.
+
 
 8. When running the app, the new widget is already functional. The first text box is a standard Text box widget and the second is your pluggable web widget. When data is changed in the first input and the cursor is moved to the next widget, the data of your widget is also updated: 
 
     {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/twotextwidgets.png" alt="two text widgets" class="no-border" >}}
 
-### 3.4 Adding Style
+### 3.5 Adding Style
 
 The input works, but the styling could be improved. In the next code snippets, you will add the default styling to make your TextBox widget look like a Mendix widget. Also, you need to pass the `Class`, `Style` and `Tab index` [standard properties](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#standard-properties) from the `Common` tab which originate from the **Edit Custom Widget** dialog box:
 
@@ -280,7 +281,7 @@ The input works, but the styling could be improved. In the next code snippets, y
 
     {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/styledinputwidgets.png" alt="styled widgets" class="no-border" >}}
 
-### 3.5 Labeling the Input{#label-input}
+### 3.6 Labeling the Input{#label-input}
 
 While the Mendix input elements come with labels, you will need to add one to TextBox manually. With the new API it is easy to [add a label](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#label) to any widget.
 

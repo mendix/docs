@@ -130,6 +130,14 @@ Use this operation to retrieve chunks from the knowledge base where the retrieva
 
 Use this operation to retrieve chunks from the knowledge base and set associations to the related Mendix objects (if applicable). In this operation the retrieval and sorting is based on vector similarity with regards to a given input vector. Additional selection and filtering can be done by specifying the optional input parameters: minimum (cosine) similarity (0–1.0), maximum number of results, as well as a list of labels. If labels are provided, this operation only returns chunks that are conform with all of the labels in the list.
 
+### 3.5 Delete Operations {#delete-operations-configuration}
+
+When a knowledge base is no longer needed, it can be deleted using a delete operation. If the knowledge base is needed, but the data needs to be replaced, please refer to the [(Re)populate Operations](#repopulate-operations-configuration) instead.
+
+#### 3.5.1 `Delete Knowledge Base` {#retrieve-nearest-neighbors}
+
+Use this operation to delete a complete knowledge base at once. After execution the knowledge base including its data will not exist anymore in the vector database.
+
 ## 4 Technical Reference {#technical-reference}
 
 To help you use the PgVector Knowledge Base module, the following sections list the available [entities](#domain-model), [enumerations](#enumerations), and [activities](#activities) that you can use in your application. 
@@ -361,13 +369,32 @@ The `DatabaseConfiguration` that is passed must contain the connection details t
 | `MinimumSimilarity`          | Decimal                                                        | optional                     | This is to filter the results, so that only Chunks are returned which similarity score is equal or greater than the value provided. The score ranges from 0 (not similar) to 1.0 (the same vector). 
 | `MaxNumberOfResults`          | Integer/Long                                                      | optional                    | This can be used to limit the number of results that should be returned. 
 
-
-
 **Return value**
 
 | Name                 | Type                                      | Description                                                  |
 | -------------------- | ----------------------------------------- | ------------------------------------------------------------ |
 | `TargetChunkList` | List of type parameter `TargetChunk` | This list is the result of the retrieval. |
+
+#### 4.3.4 Delete Operations (#delete-operations-technical)
+
+Activities that support the deletion of knowledge bases.
+
+#### 4.3.4.1 Delete Knowledge Base {#delete-technical}
+
+Use this operation to delete a complete knowledge base at once. This operation takes care of the deletion of the actual tables including all data for the specified knowledge base. If for the provided `KnowledgeBaseName` there is no table structure present, nothing will happen, the operation will finish successfully.
+
+**Input parameters**
+
+| Name                | Type                                    | Mandatory | Description                                           |
+| ------------------- | --------------------------------------- | --------- | ----------------------------------------------------- |
+| `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the name of the knowledge base that will be deleted.|
+| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is to connect and authenticate to the database where the knowledge base is located.  |
+
+**Return value**
+
+| Name                 | Type                                      | Description                                                  |
+| -------------------- | ----------------------------------------- | ------------------------------------------------------------ |
+| `IsSuccess` | Boolean | This boolean indicates if the deletion of the knowledge base was successful. This can be used for custom error-handling. Note that if the for the provided `KnowledgeBaseName` there is no table structure present, the operation will still finish successfully |
 
 ## 5 Showcase Application {#showcase-application}
 

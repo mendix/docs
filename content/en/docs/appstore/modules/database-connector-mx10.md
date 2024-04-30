@@ -11,7 +11,7 @@ aliases:
 
 ## 1 Introduction
 
-Connect to Microsoft SQL, MySQL, PostgreSQL, and Oracle databases with the [External Database Connector](https://marketplace.mendix.com/link/component/219862).
+Connect to Microsoft SQL, MySQL, PostgreSQL, and Oracle, Snowflake(beta support from Studio Pro 10.10) databases with the [External Database Connector](https://marketplace.mendix.com/link/component/219862).
 
 {{% alert color="info" %}}
 The External Database Connector is supported for [Studio Pro 10.6](/releasenotes/studio-pro/10.6/) and above.
@@ -31,6 +31,7 @@ This connector supports connections to the following database types:
 * MySQL
 * PostgreSQL
 * Oracle
+* Snowflake(beta support from Studio Pro 10.10)
 
 If you are looking for another database type, follow the prompt to request support your database when you open the database connection wizard.
 

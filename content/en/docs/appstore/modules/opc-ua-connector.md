@@ -93,6 +93,15 @@ For a given ServerConfiguration and NodeId, this microflow let's you read all re
 #### 3.4.2 Read Node
 For a given ServerConfiguration, this microflow lets you read values from the server.
 
+| Data type | exampl read response | example write request |
+| --------- | ------------- | -- |
+| Boolean | {value: True} | True | 
+| SByte <br> Byte <br> Int16 <br> Int32 <br> Int64   | {value: 1} |  1|
+| UInt16 <br> UInt32 <br> UInt64 | {value : { value : 1}} |  1 | 
+| Float <br> Double | {value : 1.0} | 1.0 | 
+| String | {value : "string" } | string |
+
+
 #### 3.4.3 Read Single Node Value
 This microflow is an example implementation of the ReadNode action.
 For a given ServerConfiguration and node id, the microflow will return the VALUE of this node in a single DavaValue object.
@@ -112,20 +121,43 @@ Not all default types are currently supported.
 
 The Default Variant type is the type of value you want to write (e.g. Boolean, INT16). This input parameter is recommended to use. If this parameter is left empty, the Write action will read the latest value and try to map the payload onto the data type of this read value.
 
-
-
 ### 3.5 Subscriptions
 #### 3.5.1 Initialize Commit Subscription
-#### 3.5.2 De-Initialize Delete Subscription
+For a given ServerConfiguration, this microflow lets you create a new subsription.
+
+#### 3.5.2 De-Initialize Delete Subscription\
+For a given ServerConfiguration, this microflow lets you remove a subscription.
 
 ### 3.6 Monitored Items
 #### 3.6.1 Monitored Item Commit
+This microflow lets you monitor data changes on the server.\r\nThe microflow may throw an exception when the connection is unsuccesful or the input is invalid.
+The microflow returns a status codes, that is associated to the monitored item in the input. The monitored item is committed if and only if the status code associated has status Good. If the status Code has no Good status, the description explains what went wrong.
+
 #### 3.6.2 Monitored Item List Commit
+This microflow lets you monitor data changes on the server.
+The microflow may throw an exception when the connection is unsuccesful or the input is invalid.
+The microflow returns a list of status codes, where each is associated to one of the monitored items in the input. A monitored item is committed if and only if there is a status code associated with it, that has status Good. If the status Code has no Good status, the description explains what went wrong.
+
 #### 3.6.3 Monitored Item Delete
+This microflow lets you stop listening to a monitoring item. 
+The microflow may throw an exception when the connection is unsuccesful or the input is invalid.
+The microflow returns a status code, where the _IsCommitted field will be set to true if and only if the initialization is successfull.
+If the initialization is not succesfull the status code will have an error message to explain why the initialization is not succesfull.
+
 #### 3.6.4 Monitored Item List Delete
+This microflow lets you stop listening to monitoring items.
+The microflow may throw an exception when the connection is unsuccesful or the input is invalid.\r\nThe microflow returns a list of status codes, where the _IsCommitted field will be set to true if and only if the initialization is successfull.
+If the initialization is not succesfull the status code will have an error message to explain why the initialization is not succesfull.
 
 ### 3.7 Mendix Specific
-#### 3.7.1 Update App Certificate
+#### 3.7.1 Update Client Certificate
+Update the client certificate with the supplied one. The client will try to reconnect to each of the servers afterwards.
+
 #### 3.7.2 Force Refresh Connection
+Deletes the server configuration from the client and then tried to reconnect with a new instance to the server. This can be particularly usefull when updating the certificate of the client.
+
 #### 3.7.3 ASU Subscription
+After start up microflow to reconnect to servers and initialize active subscriptions.
+
 #### 3.7.4 BSD Subscription
+Before shut down microflow to disconnec from servers and deactivate subscriptions.

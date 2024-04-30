@@ -67,15 +67,37 @@ You can filter the apps in the table. For details, see the [Filtering Apps in th
 
 You can export apps to an Excel file. For details, see the [Exporting Apps to an Excel File](#export-to-excel) section.
 
-## 3 Mendix Private Cloud (Connected)
+## 3 Private Cloud (Connected)
 
 The **Mendix Private Cloud** tab shows all the apps that are deployed on the Mendix Private Cloud Connected.
 
 You can customize the columns of the table by clicking the column selector (the {{% icon name="view" %}} icon) on the upper-right corner of the table. The items selected are shown as columns in the table.
 
-{{< figure src="/attachments/control-center/apps/column-selection" >}}
+{{< figure src="/attachments/control-center/apps/column-selection-mendix-private-cloud-connected.png" >}}
 
 The description of the items that you can select are as follows:
+
+* **AppID**: the unique identifier of the app
+
+* **App Name**: the name of the app
+
+  {{% alert color="info" %}}
+  You can view the [app details](#app-details) by clicking the app name in the table.
+  {{% /alert %}}
+
+* **Technical Contact**: the technical contact of the app. 
+
+  {{% alert color="info" %}}
+  You can edit the Technical Contact of an app by clicking **Edit** ({{% icon name="pencil" %}}) next to the current Technical Contact in the table.
+  {{% /alert %}}
+
+* **EnvID**: the unique identifier of the environment.
+
+* **Environment**: the name of the environment.
+
+* **Mainline Version**: the Mendix version of the app on the mainline in the repository
+
+* **Env Status**: the app deployment status on environment
 
 ## 4 Mendix Free Cloud
 

@@ -79,7 +79,7 @@ The third approach is to integrate your app with a third-party Identity Provider
 
 Customers with an on-premises Active Directory can use Microsoft’s Active Directory Federation Services (ADFS) to get SSO in their Mendix app. If you have this, you can include the platform-supported SAML SSO module in your app.
 
-Needless to say, the [SAML SSO](/appstore/modules/saml) module can be used with any IDP that supports the SAML 2.0 protocol. For example, this module module can be used with IDPs such as Okta, Microsoft Azure AD, Microsoft Active Directory Federation Service (ADFS), Shibboleth IdP’s, ForgeRock, and the Dutch eIDAS schemes DigiD and eHerkenning.
+Needless to say, the [SAML SSO](/appstore/modules/saml) module can be used with any IdP that supports the SAML 2.0 protocol. For example, this module can be used with IdPs such as Okta, Microsoft's Entra ID (formerly known as Azure AD), Microsoft Active Directory Federation Service (ADFS), Shibboleth IdP’s, ForgeRock, and the Dutch eIDAS schemes DigiD and eHerkenning.
 
 Mendix also supports the OAuth protocol with the platform-supported [OIDC SSO](/appstore/modules/oidc/) module. OIDC/OAuth can be used in consumer facing applications to achieve single sign-on with identity providers such as Amazon Cognito, Google, Microsoft, LinkedIn, Twitter, or Facebook. It can also be used to authenticate to APIs, including APIs from Mendix ‘back-end’ apps which provide services to other apps. And, if your corporate IDP supports OIDC, you can use it to authenticate your employees and automatically grant them roles in your apps.
 

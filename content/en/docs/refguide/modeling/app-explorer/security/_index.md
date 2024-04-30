@@ -9,13 +9,13 @@ tags: ["studio pro", "security"]
 
 Security in Mendix has several aspects. One aspect is that your app is a project to work on in the backend, develop it and collaborate on it with your colleagues as a team. Yet you may want to control what each team member can change in the backend and this is managed in the Developer Portal. For more information, see [Building an App as a Team](#team) section below. 
 
-If you want different end-users to see different parts of your running application and you want to prevent unauthorized access, these aspects are managed from Studio Pro. Access to forms, data and microflows can be limited to authorized users. For more information, see [Security in Studio Pro](#security-in-studio-pro) section below.
+Another aspect is controlling what end-users can access in the running app. If you want different end-users to see different parts of your running application and you want to prevent unauthorized access, these things are managed from Studio Pro. Access to forms, data and microflows can be limited to authorized users. For more information, see [App Security Set Up in Studio Pro](#security-in-studio-pro) section below.
 
 {{% alert color="info" %}}
 Security in Mendix apps does not include scanning files that end-users upload or download from your application for viruses and malware. For more information, see the [Scanning Uploaded Files for Malicious Content](/howto/security/best-practices-security/#scanning-for-malicious-content) section in *How to Implement Best Practices for App Security*. 
 {{% /alert %}}
 
-You can also set app authentication and add SSO modules to your app using modules from the Mendix Marketplace. For more information, see the [App Authentication](#authentication) section below. 
+The last aspect is that you can also set app authentication and add SSO modules to your app using modules from the Mendix Marketplace. For more information, see the [App Authentication](#authentication) section below. 
 
 ## 2 App Security Set Up in Studio Pro {#security-in-studio-pro}
 

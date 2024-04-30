@@ -97,7 +97,7 @@ The population handles a whole list of Chunks at once which should be created by
 
 ### 3.4 Retrieve Operations {#retrieve-operations}
 
-Currently, two operations are available for on-demand retrieval of data chunks from a knowlege base. Both operations work on a single knowledge base (specified by the name) on a single database server (specified by the [DatabaseConfiguration](#databaseconfiguration-entity)). Apart from a regular [Retrieve](#retrieve), an additional operation was exposed to [Retrieve Nearest Neighbors](#retrieve-nearest-neighbors), where the cosine distance between the input vector and the vectors of the records in the knowledge base is calculated. In both cases it is possible to filter on [Labels](#create-label).
+Currently, four operations are available for on-demand retrieval of data chunks from a knowlege base. All operations work on a single knowledge base (specified by the name) on a single database server (specified by the [DatabaseConfiguration](#databaseconfiguration-entity)). Apart from a regular [Retrieve](#retrieve), an additional operation was exposed to [Retrieve Nearest Neighbors](#retrieve-nearest-neighbors), where the cosine distance between the input vector and the vectors of the records in the knowledge base is calculated. In both cases it is possible to filter on [Labels](#create-label). 
 
 A typical pattern for retrieval from a knowledge base is as follows:
 
@@ -105,13 +105,31 @@ A typical pattern for retrieval from a knowledge base is as follows:
 2. Use [Create Label](#create-label) as many times as needed to add the necessary labels.
 3. Do the retrieve, e.g. use [`Retrieve Nearest Neighbors`](#retrieve-nearest-neighbors) to find Chunks based on vector similarity.
 
+For scenarios in which the chunks were created based on Mendix objects at the time of population, and these objects need to be used in logic after the retrieval step, two addditional operations operations are available. The Java Actions [Retrieve & Associate](#retrieve-associate) and [Retrieve Nearest Neighbors & Associate](#retrieve-neirest-neighbors-associate) take care of the chunk retrieval and set the association towards the original object, if applicable.
+
+A typical pattern for this retrieval is as follows:
+
+1. Create a list of label.
+2. Use [Create Label](#create-label) as many times as needed to add the necessary labels.
+3. Do the retrieve, e.g. use [`Retrieve Nearest Neighbors & Associate`](#retrieve-nearest-neighbors-associate) to find Chunks based on vector similarity.
+4. Per retrieved chunk, retrieve the original Mendix object and do custom logic.
+
+
 #### 3.4.1 `Retrieve` {#retrieve}
 
 Use this operation to retrieve chunks from the knowledge base. Additional selection and filtering can be done by specifying the optional input parameters for offset and a maximum number of results, as well as a list of labels. If labels are provided, this operation only returns chunks that are conform with all of the labels in the list.
 
-#### 3.4.2 `Retrieve Nearest Neighbors` {#retrieve-nearest-neighbors}
+#### 3.4.2 `Retrieve & Associate` {#retrieve-associate}
 
-Use this operation to retrieve chunks from the knowledge base where the sorting is based on vector similarity with regards to a given input vector. Additional selection and filtering can be done by specifying the optional input parameters: minimum (cosine) similarity (0–1.0), maximum number of results, as well as a list of labels. If labels are provided, this operation only returns chunks that are conform with all of the labels in the list.
+Use this operation to retrieve chunks from the knowledge base and set associations to the related mendix objects (if applicable). Additional selection and filtering can be done by specifying the optional input parameters for offset and a maximum number of results, as well as a list of labels. If labels are provided, this operation only returns chunks that are conform with all of the labels in the list.
+
+#### 3.4.3 `Retrieve Nearest Neighbors` {#retrieve-nearest-neighbors}
+
+Use this operation to retrieve chunks from the knowledge base where the retrieval and sorting is based on vector similarity with regards to a given input vector. Additional selection and filtering can be done by specifying the optional input parameters: minimum (cosine) similarity (0–1.0), maximum number of results, as well as a list of labels. If labels are provided, this operation only returns chunks that are conform with all of the labels in the list.
+
+#### 3.4.4 `Retrieve Nearest Neighbors & Associate` {#retrieve-nearest-neighbors-associate}
+
+Use this operation to retrieve chunks from the knowledge base and set associations to the related mendix objects (if applicable). In this operation the retrieval and sorting is based on vector similarity with regards to a given input vector. Additional selection and filtering can be done by specifying the optional input parameters: minimum (cosine) similarity (0–1.0), maximum number of results, as well as a list of labels. If labels are provided, this operation only returns chunks that are conform with all of the labels in the list.
 
 ## 4 Technical Reference {#technical-reference}
 

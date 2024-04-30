@@ -17,7 +17,7 @@ Security in Mendix apps does not include scanning files that end-users upload or
 
 You can also set app authentication and add SSO modules to your app using modules from the Mendix Marketplace. For more information, see the [App Authentication](#authentication) section below. 
 
-## 2 Security in Studio Pro {#security-in-studio-pro}
+## 2 App Security Set Up in Studio Pro {#security-in-studio-pro}
 
 ### 2.1 Security Levels
 
@@ -71,16 +71,20 @@ If you want to invite your colleagues to build your app, you can manage the **Te
 
 The Mendix platform provides you with three approaches to the authentication of end-users of your app. Depending on your preference you can include modules in your app from the Mendix Marketplace for each of these approaches.
 
-The first approach is to have "local" authentication in your app. With this approach, the end-users of your app are managed by your app. End-users are authenticated against their password that is also stored within the app. In this approach the app is self-supporting and independent of any existing IAM (Identity and Access Management) infrastructure. The Mendix Marketplace also provides modules to also add multi-factor authentication to the local login process.
+### 4.1 "Local" Authentication 
+
+The first approach is to have "local" authentication in your app. With this approach, the end-users of your app are managed by your app. End-users are authenticated against their password that is also stored within the app. In this approach the app is self-supporting and independent of any existing IAM (Identity and Access Management) infrastructure. The Mendix Marketplace also provides modules to also add multi-factor authentication (MFA) to the local login process.
+
+### 4.2 Authentication via the Mendix Identity Provider
 
 A second approach is to have end-users authenticate via the Mendix Identity Provider through single sign on ([SSO](/appstore/modules/mendix-sso/)) using their Mendix credentials. This is the default option for developers who deploy their application to the Mendix Cloud.
 
-The third approach is to integrate your app with a third-party Identity Provider (IDP) external to your app.
+### 4.3 Authentication via a Third-Party Identity Provider
 
-Customers with an on-premises Active Directory can use Microsoft’s Active Directory Federation Services (ADFS) to get SSO in their Mendix app. If you have this, you can include the platform-supported SAML SSO module in your app.
+The third approach is to integrate your app with a third-party Identity Provider (IdP) external to your app.
 
-Needless to say, the [SAML SSO](/appstore/modules/saml) module can be used with any IdP that supports the SAML 2.0 protocol. For example, this module can be used with IdPs such as Okta, Microsoft's Entra ID (formerly known as Azure AD), Microsoft Active Directory Federation Service (ADFS), Shibboleth IdP’s, ForgeRock, and the Dutch eIDAS schemes DigiD and eHerkenning.
+Customers with an on-premises Active Directory can use Microsoft’s Active Directory Federation Services (ADFS) to get SSO in their Mendix app. If you have this, you can include the platform-supported the [SAML](/appstore/modules/saml) module in your app. The SAML module can be used with any IdP that supports the SAML 2.0 protocol. 
 
-Mendix also supports the OAuth protocol with the platform-supported [OIDC SSO](/appstore/modules/oidc/) module. OIDC/OAuth can be used in consumer facing applications to achieve single sign-on with identity providers such as Amazon Cognito, Google, Microsoft, LinkedIn, Twitter, or Facebook. It can also be used to authenticate to APIs, including APIs from Mendix ‘back-end’ apps which provide services to other apps. And, if your corporate IDP supports OIDC, you can use it to authenticate your employees and automatically grant them roles in your apps.
+Mendix also supports the OAuth protocol with the platform-supported [OIDC SSO](/appstore/modules/oidc/) module. It can be used to authenticate to APIs, including APIs from Mendix "back-end" apps which provide services to other apps. And, if your corporate IdP supports OIDC, you can use it to authenticate your employees and automatically grant them roles in your apps.
 
-Mendix applications that are deployed to SAP BTP can have SSO with SAP's IDP. Mendix provides a platform supported [XSUAA connector](/appstore/modules/sap/sap-xsuaa-connector/) to implement this federation in your Mendix app. 
+Mendix applications that are deployed to SAP BTP can have SSO with SAP's IdP. Mendix provides a platform supported [XSUAA connector](/appstore/modules/sap/sap-xsuaa-connector/) to implement this federation in your Mendix app. 

@@ -73,7 +73,7 @@ The **Mendix Private Cloud** tab shows all the apps that are deployed on the Men
 
 You can customize the columns of the table by clicking the column selector (the {{% icon name="view" %}} icon) on the upper-right corner of the table. The items selected are shown as columns in the table.
 
-{{< figure src="/attachments/control-center/apps/column-selection-mendix-private-cloud-connected.png" >}}
+{{< figure src="/attachments/control-center/apps/column-selection-private-cloud-connected.png"  max-width=50% >}}
 
 The description of the items that you can select are as follows:
 
@@ -95,9 +95,13 @@ The description of the items that you can select are as follows:
 
 * **Environment**: the name of the environment.
 
+* **Env Status**: the app deployment status on environment
+
 * **Mainline Version**: the Mendix version of the app on the mainline in the repository
 
-* **Env Status**: the app deployment status on environment
+* **Deployed Version**: the Mendix version of the deployed app
+
+* **Last Commit**: the date of the last commit in the main line
 
 ## 4 Mendix Free Cloud
 

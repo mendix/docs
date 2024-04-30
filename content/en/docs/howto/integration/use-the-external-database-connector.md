@@ -17,7 +17,7 @@ The External Database Connector supports connections to the following databases:
 * MySQL
 * PostgreSQL
 * Oracle
-* Snowflake(beta support from Studio Pro 10.10)
+* Snowflake (Beta support from [Studio Pro 10.10](/releasenotes/studio-pro/10.10/))
 
 This how-to teaches you how to do the following:
 

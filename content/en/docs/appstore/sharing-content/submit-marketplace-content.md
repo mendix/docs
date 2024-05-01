@@ -1,5 +1,5 @@
 ---
-title: "Sharing Marketplace Content"
+title: "Submitting Marketplace Content"
 url: /appstore/sharing-content/
 weight: 4
 no_list: false
@@ -223,5 +223,3 @@ To update content that has already been published, follow these steps:
     * **Patch** – a small change (which will save the component from 6.1.0 to 6.1.1, for example)
 
 5. On the **Publish** page, you can review all the details of your component you entered so far and edit as necessary (via the **Edit Section** button) before clicking **Publish Content**.
-
-## 5 Documents in This Category

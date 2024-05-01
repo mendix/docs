@@ -1,5 +1,5 @@
 ---
-title: "Governing Marketplace Content"
+title: "Govern Marketplace Content"
 url: /appstore/sharing-content/governance-process/
 weight: 6
 description: "Describes the Mendix processes for approving and reviewing Marketplace content."

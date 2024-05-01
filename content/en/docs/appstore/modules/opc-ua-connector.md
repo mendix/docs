@@ -115,10 +115,10 @@ Expected Read and write formats for attribute services
 | DateTime | {"value" : {"utcTime" : 11335116845776939}} | "2007-12-03T10:15:30" | CommunityCommons.LongToDateTime |
 | Guid | {"value": "cd1fdbc3-1f45-4fe8-9bff-b4927d5401c4"} | "cd1fdbc3-1f45-4fe8-9bff-b4927d5401c4" | |
 | ByteString | {"value" : {"bytes":[-1]}} | "0xFF" | |
-| XMLElement | {"value" : { "fragment" : "string"}} || |
+| XMLElement | {"value" : { "fragment" : "\u003cprice\u003e29.99\u003c/price\u003e"}} | <price>30.00</price> | CommunityCommons.HTMLToPlainText |
 | NodeID | {"value" : {"namespaceIndex": {"value": 1}, "identifier":"1"}} | "ns=1;i=1000"|
-| ExpandedNodeID | not supported? || | 
-| QualifiedName | not supported? || |
+| ExpandedNodeID | || | 
+| QualifiedName | || |
 | LocalizedText | {"value" : {"locale" : "en", "text": "hello"}} | "hello"|  Currently always writes in "en" locale |
 
 

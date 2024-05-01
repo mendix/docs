@@ -31,36 +31,36 @@ To prepare the data structure, GUI, and example data, follow these steps:
 
 1. Create the following domain model:
 
-    {{< figure src="/attachments/refguide/modeling/xpath/define-access-rules-using-xpath/18581378.png" >}}
+    {{< figure src="/attachments/refguide/modeling/xpath/define-access-rules-using-xpath/18581378.png" class="no-border" >}}
 
     For more information on creating a domain model, see [Configuring a Domain Model](/refguide/configuring-a-domain-model/).
 2. Create overview and detail pages to manage the **Customer** and **Order** objects (for more information on creating these pages, see [How to Create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/)).
 3. Create menu items to access the **Order** and **Customer** overview pages (for more information on creating menu items, see [Setting Up Navigation](/refguide/setting-up-the-navigation-structure/)).
 4. Set the **Security level** of you application to **Production** (for more information, see [How to Create a Secure App](/howto/security/create-a-secure-app/)).
 
-    {{< figure src="/attachments/refguide/modeling/xpath/define-access-rules-using-xpath/18581008.png" >}}
+    {{< figure src="/attachments/refguide/modeling/xpath/define-access-rules-using-xpath/18581008.png" class="no-border" >}}
 
 5. Enter *FinancialAdministrator* for the **Name** of the new user role on the **User roles** tab (for more information on adding roles, see [How to Create a Secure App](/howto/security/create-a-secure-app/):
 
-    {{< figure src="/attachments/refguide/modeling/xpath/define-access-rules-using-xpath/18581005.png" >}}
+    {{< figure src="/attachments/refguide/modeling/xpath/define-access-rules-using-xpath/18581005.png" class="no-border" >}}
 
 6. Give both module roles access to all your created pages, and create separate read and write access rights to all your created entities (for more information on how to set the entity access, see [How to Create a Secure App](/howto/security/create-a-secure-app/)):
 
-    {{< figure src="/attachments/refguide/modeling/xpath/define-access-rules-using-xpath/18580997.png" >}}
+    {{< figure src="/attachments/refguide/modeling/xpath/define-access-rules-using-xpath/18580997.png" class="no-border" >}}
 
-    {{< figure src="/attachments/refguide/modeling/xpath/define-access-rules-using-xpath/18581003.png" >}}
+    {{< figure src="/attachments/refguide/modeling/xpath/define-access-rules-using-xpath/18581003.png" class="no-border" >}}
 
 7. Add the following customer data to your app:
 
-    {{< figure src="/attachments/refguide/modeling/xpath/define-access-rules-using-xpath/18581374.png" >}}
+    {{< figure src="/attachments/refguide/modeling/xpath/define-access-rules-using-xpath/18581374.png" class="no-border" >}}
 
 8. Add the following order data to your app:
 
-    {{< figure src="/attachments/refguide/modeling/xpath/define-access-rules-using-xpath/18581373.png" >}}
+    {{< figure src="/attachments/refguide/modeling/xpath/define-access-rules-using-xpath/18581373.png" class="no-border" >}}
 
 9. Add an account to your application with the user role *FinancialAdministrator*:
 
-    {{< figure src="/attachments/refguide/modeling/xpath/define-access-rules-using-xpath/18581002.png" >}}
+    {{< figure src="/attachments/refguide/modeling/xpath/define-access-rules-using-xpath/18581002.png" class="no-border" >}}
 
 ## 3 Defining the Access Rules on the Order Entity Using XPath
 
@@ -70,20 +70,20 @@ To define the access rules on the **Order** entity using XPath, follow these ste
 
 1. Open the **Access rules** tab for the **Order** entity:
 
-    {{< figure src="/attachments/refguide/modeling/xpath/define-access-rules-using-xpath/18580996.png" >}}
+    {{< figure src="/attachments/refguide/modeling/xpath/define-access-rules-using-xpath/18580996.png" class="no-border" >}}
 
 2. Double-click the **FinancialAdministrator** module role to open its properties and go to the **XPath constraint** tab:
 
-    {{< figure src="/attachments/refguide/modeling/xpath/define-access-rules-using-xpath/18581000.png" >}}
+    {{< figure src="/attachments/refguide/modeling/xpath/define-access-rules-using-xpath/18581000.png" class="no-border" >}}
 
 3. To constrain the access of the financial administrator to only **Complete** orders, add the following **XPath**:
 
-    {{< figure src="/attachments/refguide/modeling/xpath/define-access-rules-using-xpath/18580995.png" >}}
+    {{< figure src="/attachments/refguide/modeling/xpath/define-access-rules-using-xpath/18580995.png" class="no-border" >}}
 
 4. Click **OK** and re-deploy your application.
 5. When you sign in with the **Financial Administrator** account, you will see that only completed orders are shown in the orders overview:
 
-    {{< figure src="/attachments/refguide/modeling/xpath/define-access-rules-using-xpath/18580994.png" >}}
+    {{< figure src="/attachments/refguide/modeling/xpath/define-access-rules-using-xpath/18580994.png" class="no-border" >}}
 
 ## 4 Read More
 

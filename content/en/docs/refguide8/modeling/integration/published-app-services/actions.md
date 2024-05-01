@@ -18,7 +18,7 @@ An action page has the tabs below.
 
 ## 2 General
 
-{{< figure src="/attachments/refguide8/modeling/integration/published-app-services/actions/16843926.png" >}}
+{{< figure src="/attachments/refguide8/modeling/integration/published-app-services/actions/16843926.png" class="no-border" >}}
 
 ### 2.1 Name
 
@@ -38,7 +38,7 @@ This describes the action. The consumer will see this description in their overv
 
 ## 3 Parameters
 
-{{< figure src="/attachments/refguide8/modeling/integration/published-app-services/actions/16843923.png" >}}
+{{< figure src="/attachments/refguide8/modeling/integration/published-app-services/actions/16843923.png" class="no-border" >}}
 
 ### 3.1 Microflow Parameter
 
@@ -62,7 +62,7 @@ This defines the name of the parameter in the app service action call. This is i
 
 ### 3.5 Exposed Attributes and Associations
 
-{{< figure src="/attachments/refguide8/modeling/integration/published-app-services/actions/16843922.png" >}}
+{{< figure src="/attachments/refguide8/modeling/integration/published-app-services/actions/16843922.png" class="no-border" >}}
 
 A button is available for complex types (for example, an entity from your domain model) in order to define whether to include the attribute in an entity as well as to define whether an attribute can be empty as an input.
 
@@ -76,4 +76,4 @@ This defines whether the return value can be empty.
 
 For example, an **empty** ReturnObject is disallowed here:
 
-{{< figure src="/attachments/refguide8/modeling/integration/published-app-services/actions/16843921.png" >}}
+{{< figure src="/attachments/refguide8/modeling/integration/published-app-services/actions/16843921.png" class="no-border" >}}

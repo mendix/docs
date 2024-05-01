@@ -9,7 +9,10 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="warning" %}}The Static Image widget, which is not supported by the React client added to Mendix in [10.7](/releasenotes/studio-pro/10.7/#react-client), can be converted to an [Image widget](/appstore/widgets/image/) through the context menu of the widget when the React client is enabled.{{% /alert %}}
+{{% alert color="warning" %}}The Static Image widget, which is not supported by the React client added to Mendix in [10.7](/releasenotes/studio-pro/10.7/#react-client), can be converted to an [Image widget](/appstore/widgets/image/) through the context menu of the widget when the React client is enabled.
+
+For more information, see the Mendix React Client's [Migration Guide](/refguide/mendix-client/react/#migration-guide).
+{{% /alert %}}
 
 ## 1 Introduction
 
@@ -17,7 +20,7 @@ The **Static image** widget can be used to show a static image on a page, layout
 
 For example, you can configure an image clicking which a page with customer details opens:
 
-{{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/image/image-example.png" alt="Image Example" >}}
+{{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/image/image-example.png" alt="Image Example" class="no-border" >}}
 
 {{% alert color="info" %}}
 If you want to dynamically show different images based on data, you need to add [dynamic image](/refguide/image-viewer/) on your page.
@@ -27,7 +30,7 @@ If you want to dynamically show different images based on data, you need to add 
 
 An example of static image properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/image/image-properties.png" alt="Image Properties"   width="300"  >}}
+{{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/image/image-properties.png" alt="Image Properties"   width="300"  class="no-border" >}}
 
 Static image properties consist of the following sections:
 

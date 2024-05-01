@@ -13,7 +13,7 @@ aliases:
 
 In the **App Settings** dialog box, you can alter the settings that are applicable to the whole app:
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/app/app-settings/app-settings-configuration.png" width="300px" >}}
+{{< figure src="/attachments/refguide/modeling/app-explorer/app/app-settings/app-settings-configuration.png" width="300px" class="no-border" >}}
 
 The categories described below are available.
 
@@ -51,25 +51,33 @@ If you experience an issue while running your app in which objects seem to be lo
 
 Here you have the option to change the default URL prefix for all pages and microflows in your application. The default prefix value is `/p/`.
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/app/app-settings/url-prefix.png" width="300px" >}}
+{{< figure src="/attachments/refguide/modeling/app-explorer/app/app-settings/url-prefix.png" width="300px" class="no-border" >}}
 
 The URL prefix must be alphanumeric. It cannot be empty, contain whitespace, or contain any of the following values: 
 
 * "api-doc"
+* "file"
 * "odata"
 * "odata-doc"
-* "pages"
 * "reload"
 * "rest-doc"
 * "ws"
 * "ws-doc"
 * "xas"
 
+Furthermore, static files are served on `/`. So any prefix that has the same name as a static folder located in `/deployment/web/` will cause an error.
+
 If the URL prefix breaks any of the rules mentioned above, then you will get a consistency error.
 
 ### 3.5 Java Version{#java-version}
 
 Here you can select which Java version to use for you application.
+
+{{% alert color="info" %}}
+
+For Studio Pro versions 10.6.7 and 10.8.0 and above, you can choose Java 17.
+
+{{% /alert %}}
 
 For local development the JDK configured in the [Studio Pro preferences](/refguide/preferences-dialog/#jdk-directory) has to be compatible with the Java version configured here.
 
@@ -213,6 +221,19 @@ To force a query to the runtime, use microflows. For example, create a microflow
 
 Default: *Yes*
 
+### 3.15 Foreign Key Constraints {#database-fkc}
+
+If this option is enabled, database [foreign key constraints](/refguide/data-storage/#fkc) will be used. An attempt to commit a dangling reference will throw a runtime exception.
+
+{{% alert color="info" %}}
+This option was added in Mendix version 10.10.
+{{% /alert %}}
+
+Default: *depends on the version of Mendix used to create the app:*
+
+* *Yes* for apps created with Mendix versions 10.6.0 and above
+* *No* for apps created with Mendix versions below 10.6
+
 ## 4 Languages Tab {#languages-tab}
 
 For more information about using different languages in your app, see [Language Menu](/refguide/translatable-texts/).
@@ -255,7 +276,7 @@ Certificates can be installed in the Windows Certificate Store using the **Insta
 {{% /alert %}}
 {{% alert color="info" %}}
 
-When an SSLException occurs at runtime with the message `HelloRequest followed by an unexpected handshake message` or when a web service does not respond (Java 6 update 21 and above) when using the imported certificates, this is caused by either the client or server not being [RFC-5746](http://www.ietf.org/rfc/rfc5746.txt)-compatible.
+When an SSLException occurs at runtime with the message `HelloRequest followed by an unexpected handshake message` or when a web service does not respond (Java 6 update 21 and above) when using the imported certificates, this is caused by either the client or server not being [RFC-5746](https://www.ietf.org/rfc/rfc5746.txt)-compatible.
 
 If updating the client and server to be compatible with RFC-5746 is not feasible, the following should be added to **Extra JVM parameters** in the **Server** tab to avoid this exception:
 
@@ -265,7 +286,7 @@ Be warned that this does make the client-server communication vulnerable to an e
 
 When client and server are RFC-5746 compatible at a future point in time, this JVM parameter can be removed.
 
-For background information, see [Transport Layer Security (TLS) Renegotiation Issue Readme](http://www.oracle.com/technetwork/java/javase/documentation/tlsreadme2-176330.html).
+For background information, see [Transport Layer Security (TLS) Renegotiation Issue Readme](https://www.oracle.com/technetwork/java/javase/documentation/tlsreadme2-176330.html).
 
 {{% /alert %}}
 
@@ -299,7 +320,7 @@ Switching from a ZIP file to a UI resources package is straightforward:
 
 Modules that contain theme styling should be marked as UI resources modules. To do so, right-click the **Module {name}** in the App Explorer, then click **Mark as UI resources module**. This will give the modules a green icon, which makes it easy to distinguish theme modules from other modules, and also influences the order in which styling will be applied from those modules:
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/app/app-settings/green-module.png" alt="green module" >}}
+{{< figure src="/attachments/refguide/modeling/app-explorer/app/app-settings/green-module.png" alt="green module" class="no-border" >}}
 
 ### 6.4 Ordering UI Resource Modules
 
@@ -307,7 +328,7 @@ When a module contains styling (SCSS/CSS), be sure it is added to the compiled C
 
 You can set an explicit order in the theme settings (**App Settings** > **Theme**). This contains a list of all modules that are marked as UI resource modules, and allows you to set the explicit order in which they are added to the CSS file. Note that the lower a module is ordered in the list, the higher its precedence. For example, an app that uses a company theme module could be ordered as follows:
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/app/app-settings/app-theme-settings.png" alt="app theme settings" >}}
+{{< figure src="/attachments/refguide/modeling/app-explorer/app/app-settings/app-theme-settings.png" alt="app theme settings" class="no-border" >}}
 
 ## 7 Workflows Tab {#workflows}
 

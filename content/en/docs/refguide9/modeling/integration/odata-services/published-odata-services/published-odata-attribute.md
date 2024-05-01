@@ -10,7 +10,7 @@ tags: ["studio pro","OData","publish"]
 
 The **Edit published attribute** dialog allows you to edit the properties of an attribute published in an OData service.
 
-{{< figure src="/attachments/refguide9/modeling/integration/published-odata-attribute/edit-published-attribute.png" alt="Edit published attribute dialog box." >}}
+{{< figure src="/attachments/refguide9/modeling/integration/published-odata-attribute/edit-published-attribute.png" alt="Edit published attribute dialog box." class="no-border" >}}
 
 ## 2 General
 

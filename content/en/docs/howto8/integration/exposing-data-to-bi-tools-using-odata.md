@@ -13,7 +13,7 @@ Mendix apps encourage the application of a services-oriented architecture, with 
 
 One important aspect of services is that all access to data and logic is handled by the service operations. Direct access to databases used for storing the service data is discouraged, because this would bypass the business rules and security handled by the service. This creates a challenge for generic reporting, data warehousing, and ETL tooling.
 
-The OData standard is being adopted because it enables generic data access within a services-oriented architecture. [OData](http://www.odata.org) is “an open protocol to allow the creation and consumption of queryable and interoperable Restful APIs in a simple and standard way.". In other words, it enables tools to use any REST/OData service by providing metadata that describes the data being provided, and by standardizing the messages exchanged with the OData services.
+The OData standard is being adopted because it enables generic data access within a services-oriented architecture. [OData](https://www.odata.org) is “an open protocol to allow the creation and consumption of queryable and interoperable Restful APIs in a simple and standard way.". In other words, it enables tools to use any REST/OData service by providing metadata that describes the data being provided, and by standardizing the messages exchanged with the OData services.
 
 A reporting tool like Excel or Tableau can discover what data and functionality is available in an OData service, and provide a generic way for users to build new queries for the data.
 
@@ -65,7 +65,7 @@ In this section, we will outline the steps for adding more than one published en
 
 Imagine that you have an app that helps with asset management. You have a Published OData Service with persistable entities called **SmartTask** and **Employee** that expose information. The domain model looks like this:
 
-{{< figure src="/attachments/howto8/integration/exposing-data-to-bi-tools-using-odata/asset-manager-domain-model.png" >}}
+{{< figure src="/attachments/howto8/integration/exposing-data-to-bi-tools-using-odata/asset-manager-domain-model.png" class="no-border" >}}
 
 To visualize data from your app in Tableau, follow these steps:
 
@@ -73,7 +73,7 @@ To visualize data from your app in Tableau, follow these steps:
 2. Return to Studio Pro, and double-click the published OData service. Copy the link the **Location** field to the clipboard.
 3. On the **Server Connection** dialog box, enter the copied OData service **Location** link for the **Server**  address:
 
-    {{< figure src="/attachments/howto8/integration/exposing-data-to-bi-tools-using-odata/18582020.png" >}}
+    {{< figure src="/attachments/howto8/integration/exposing-data-to-bi-tools-using-odata/18582020.png" class="no-border" >}}
 
     Include authentication credentials if you set them up.
 
@@ -82,7 +82,7 @@ To visualize data from your app in Tableau, follow these steps:
 6. Click **Data** > **New Data Source** and repeat step 1–5 to add a server connection for other published OData services.
 7. Open **Sheet1**. Under **Data**, click the first entity and drag a desired entity **Attribute** from **Measures** to **Dimensions**. In this case, click **Engineers** and drag **ID** from **Measures** to **Dimensions**:
 
-    {{< figure src="/attachments/howto8/integration/exposing-data-to-bi-tools-using-odata/18582012.png" >}}
+    {{< figure src="/attachments/howto8/integration/exposing-data-to-bi-tools-using-odata/18582012.png" class="no-border" >}}
 
 8. Similarly, click and drag an attribute from the second entity from **Measures** to **Dimensions**. In this case, click **SmartTasks** and drag **SmartTask_Engineer** from **Measures** to **Dimensions**.
 9. Go to **Data** > **Edit Relationships...** to define the relationship between the different data sources.
@@ -93,25 +93,25 @@ To visualize data from your app in Tableau, follow these steps:
     1. Remove any default mappings.<br />
     1. Click **Add...** to configure a field mapping.
 
-    {{< figure src="/attachments/howto8/integration/exposing-data-to-bi-tools-using-odata/18582013.png" >}}
+    {{< figure src="/attachments/howto8/integration/exposing-data-to-bi-tools-using-odata/18582013.png" class="no-border" >}}
 
 11. In the **Add/Edit Field Mapping** window, select the attribute for the first entity for the **Primary data source field** and **Entity1_Entity2** for the **Secondary data source field**, then click **OK** to save the field mapping. In this case, select **ID** for the **Primary data source field** and **SmartTask_Engineer** for the **Secondary data source field**: 
 
-    {{< figure src="/attachments/howto8/integration/exposing-data-to-bi-tools-using-odata/18582011.png" >}}
+    {{< figure src="/attachments/howto8/integration/exposing-data-to-bi-tools-using-odata/18582011.png" class="no-border" >}}
 
 12. In the **Relationships** window, click **OK** to save the relationships:
 
-    {{< figure src="/attachments/howto8/integration/exposing-data-to-bi-tools-using-odata/18582007.png" >}}
+    {{< figure src="/attachments/howto8/integration/exposing-data-to-bi-tools-using-odata/18582007.png" class="no-border" >}}
 
 13. Select the second entity for the data source (in this case, **Engineers**) and drag the **Name** attribute from the **Dimensions** section to **Rows**:
 
-    {{< figure src="/attachments/howto8/integration/exposing-data-to-bi-tools-using-odata/18582006.png" >}}
+    {{< figure src="/attachments/howto8/integration/exposing-data-to-bi-tools-using-odata/18582006.png" class="no-border" >}}
 
 14. Select your first published entity (in this case, **SmartTasks**) for the data source and do the following:<br />
     1. Click the **SmartTask_Engineer** attribute to use it as the linking field.<br />
     1. Drag **Number of Records** from the **Measures** section to **Columns**.
 
-    {{< figure src="/attachments/howto8/integration/exposing-data-to-bi-tools-using-odata/18582005.png" >}}
+    {{< figure src="/attachments/howto8/integration/exposing-data-to-bi-tools-using-odata/18582005.png" class="no-border" >}}
 
 You should now see a bar chart of the data.
 
@@ -125,12 +125,12 @@ To filter data with query parameters, follow these steps:
 2. Click the OData URL to change the connection settings.
 3. Add *?$top=2* to the server URL (in order to only retrieve the first two values, engineers in this case) and click **Sign In**:
 
-    {{< figure src="/attachments/howto8/integration/exposing-data-to-bi-tools-using-odata/18581998.png" >}}
+    {{< figure src="/attachments/howto8/integration/exposing-data-to-bi-tools-using-odata/18581998.png" class="no-border" >}}
 
 4. On the warning indicating that the data being used was refreshed, click **OK**.
 5. Open **Sheet1** and drag **Name** to **Rows** again. Now you should now see a bar chart with only the data of the two engineers:
 
-    {{< figure src="/attachments/howto8/integration/exposing-data-to-bi-tools-using-odata/18581997.png" >}}
+    {{< figure src="/attachments/howto8/integration/exposing-data-to-bi-tools-using-odata/18581997.png" class="no-border" >}}
 
 6. You can combine filters by using the `&` character. Repeat steps 1–4, but now use `http://localhost:8080/odata/Expenses/Expenses?$skip=1` as the server URL. You should now see a bar chart showing the data of  2 and 3.
 

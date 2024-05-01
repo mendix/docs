@@ -52,4 +52,4 @@ PWAs have the following limitations on iOS:
 
 Use the following diagram to decide whether to build a PWA, a native mobile app, or both:
 
-{{< figure src="/attachments/refguide9/mobile/progressive-web-app/native-or-pwa.png" alt="Native app or PWA"   width="350"  >}}
+{{< figure src="/attachments/refguide9/mobile/progressive-web-app/native-or-pwa.png" alt="Native app or PWA"   width="350"  class="no-border" >}}

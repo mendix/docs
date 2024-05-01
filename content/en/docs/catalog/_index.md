@@ -7,6 +7,7 @@ no_list: false
 description_list: true
 cascade:
     - space: "Catalog Guide"
+    - content_type: "Catalog Guide"
     - mendix_version: 10
 tags: ["data hub", "Catalog", "landscape", "external entities", "external users"]
 aliases:
@@ -19,7 +20,7 @@ aliases:
 
 The [Catalog](https://catalog.mendix.com) is a development tool provided in the Mendix Cloud. 
 
-{{< figure src="/attachments/catalog/catalog-home.png" >}}
+{{< figure src="/attachments/catalog/catalog-home.png" class="no-border" >}}
 
 OData REST services provided by Mendix Apps running in the Mendix Cloud, [published OData services](/refguide/published-odata-services/), are automatically registered in your organization's Catalog upon deployment. This provides you with an up-to-date view of all the OData REST APIs published and consumed by your Mendix apps. These assets can be [curated](/catalog/manage/curate/) in the Catalog to ensure that they are exposed to the relevant users and can be found easily. 
 

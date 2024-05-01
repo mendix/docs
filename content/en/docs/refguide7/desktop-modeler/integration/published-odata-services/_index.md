@@ -13,7 +13,7 @@ In the Modeler, entities can be exposed as [OData resources](/refguide7/publishe
 
 ## 2 OData Version
 
-The standard used for OData in Mendix is [OData v3](http://www.odata.org/documentation/odata-version-3-0)) with the default representation set to Atom XML. Not all parts of the standard are implemented. If something is not documented here, it is has not yet been added.
+The standard used for OData in Mendix is [OData v3](https://www.odata.org/documentation/odata-version-3-0)) with the default representation set to Atom XML. Not all parts of the standard are implemented. If something is not documented here, it is has not yet been added.
 
 ## 3 Query Options
 
@@ -69,7 +69,7 @@ If project security is off, for debugging purposes you can retrieve all data wit
 
 If security is enabled, it is required to configure which users have access rights to a specific OData service document. This can be done by opening the specific Published OData service document, navigating to the Settings tab and changing the allowed roles in the Security section. By default, no allowed user roles are selected. The security settings are reflected in [Module Security](/refguide7/module-security/).
 
-{{< figure src="/attachments/refguide7/desktop-modeler/integration/published-odata-services/16843927.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/integration/published-odata-services/16843927.png" class="no-border" >}}
 
 ### 10.5 How Security Works
 

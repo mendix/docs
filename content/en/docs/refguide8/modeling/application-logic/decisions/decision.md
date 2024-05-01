@@ -17,7 +17,7 @@ A decision is an element that makes a choice based on a condition and follows on
 
 An example of decision properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/decisions/decision/decision-properties.png"   width="50%"  >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/decisions/decision/decision-properties.png"   width="50%"  class="no-border" >}}
 
 The decision properties pane consists of the following sections:
 
@@ -50,7 +50,7 @@ The number of conditions available for the enumeration type depends on the corre
 
 If you want to open a different order form per customer grade you can use a decision. The microflow parameter is *Customer*. Depending on what grade the customer has, a different sequence flow is followed and a different order form is opened. If an end-user needs to select a customer grade but does not do that, the flow labelled **(empty)** is followed and an error message is shown to the end-user.
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/decisions/decision/decision-example.png"   width="400"  >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/decisions/decision/decision-example.png"   width="400"  class="no-border" >}}
 
 Since you want to go in a different direction for each value of the enumeration, you only need to use the attribute containing the enumeration. So the expression in the example above is`$Customer/Grade`. 
 
@@ -64,7 +64,7 @@ The properties of the **Rule** decision type are the following ones:
 
 * **Parameter** – for each parameter of the rule an argument needs to be specified using [expressions](/refguide8/expressions/). For example, a rule that determines whether a customer deserves a certain status will have a customer object as a parameter.
 
-    {{< figure src="/attachments/refguide8/modeling/application-logic/decisions/decision/rule-properties.png"   width="350"  >}}
+    {{< figure src="/attachments/refguide8/modeling/application-logic/decisions/decision/rule-properties.png"   width="350"  class="no-border" >}}
 
 #### 2.1.3 Error Handling Type
 

@@ -1,6 +1,7 @@
 ---
 title: "XPath"
 url: /refguide7/xpath/
+canonical_url: "https://docs.mendix.com/refguide/xpath/"
 category: "Desktop Modeler"
 description: "Describes how the XPath query langauge is used in Mendix by presenting functions and examples."
 ---

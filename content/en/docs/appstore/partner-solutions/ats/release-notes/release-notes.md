@@ -5,6 +5,14 @@ description: "The release notes for Mendix Application Test Suite (ATS) with det
 weight: 100
 ---
 
+## 2.29.3
+
+**Release date: March 26, 2024**
+
+### Fixes
+
+* We fixed an issue that resulted in the improper functioning of the **Assert value** action for Selenium 4 hubs.
+ 
 ## 2.29.2
 
 **Release date: January 16, 2024**
@@ -703,14 +711,14 @@ These are the new features on Browserstack side:
 * Individual test case executions in Browserstack (meaning, **Sessions**) now correctly display the test case name instead of the job name. For test cases with an attached dataset, the test case name is suffixed with the index of the dataset record.
 * Test case executions in Browserstack now show the result from ATS.
 
-  {{< figure src="/attachments/releasenotes/add-ons/ats/ats-2/ats-2.10/browserstack.png" alt="Browserstack-ATS integration" >}}
+  {{< figure src="/attachments/releasenotes/add-ons/ats/ats-2/ats-2.10/browserstack.png" alt="Browserstack-ATS integration" class="no-border" >}}
 
 These are the new features on the ATS side:
 
 * We added a link to the Selenium session in Browserstack for each test case that was executed in Browserstack. You can use this in case the recording video does not load in ATS or if you want to see the Browserstack logs. You can find the link under the **Recording** tab.
 * To make it easier to navigate from Browserstack to ATS, we added options to look up jobs by the job GUID as well as individual test case logs by the Browserstack session ID. Both can be found on the **Test Runs** page under the **Jobs** tab.
 
-{{< figure src="/attachments/releasenotes/add-ons/ats/ats-2/ats-2.10/lookup.gif" alt="Browserstack-ATS integration" >}}
+{{< figure src="/attachments/releasenotes/add-ons/ats/ats-2/ats-2.10/lookup.gif" alt="Browserstack-ATS integration" class="no-border" >}}
 
 This table compares the nomenclature:
 
@@ -1248,7 +1256,7 @@ We accomplished this by providing a single, multi-tenant SaaS instance of ATS in
 
 ATS is now offered as a service. There is a single multi-tenant instance in the Mendix Cloud to serve all customers:
 
-[http://ats.mendix.com](http://ats.mendix.com)
+[https://ats.mendix.com](https://ats.mendix.com)
 
 This instance is operated and maintained by CLEVR and Mendix. As a customer, you can enjoy the typical SaaS benefits. CLEVR and Mendix deliver maintenance, updates, and fixes faster than ever. You can access new features as soon as we publish a new release.
 
@@ -1256,7 +1264,7 @@ All customers can use this instance without affecting each other's work. Data is
 
 #### SSO and App Synchronization
 
-You should not have to spend time on setting up and configuring an application before using it the first time. So, as soon as you open [http://ats.mendix.com](http://ats.mendix.com), you will automatically be signed in with your Mendix account.
+You should not have to spend time on setting up and configuring an application before using it the first time. So, as soon as you open [https://ats.mendix.com](https://ats.mendix.com), you will automatically be signed in with your Mendix account.
 
 After login, the ATS dashboard shows all your licensed apps. From there, you can select one of your apps and start testing.
 

@@ -14,7 +14,7 @@ A dynamic label would be used for the same kind of attributes as a text box from
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide7/desktop-modeler/document-templates/918131.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/document-templates/918131.png" class="no-border" >}}
 A dynamic label linking to a customer name.
 
 {{% /alert %}}
@@ -56,7 +56,7 @@ Possible values: 'Date', 'Time', 'Date and time' and in 2.5.3 'Custom'.
 ### Custom Date Format (Only for Attributes of the DateTime Type)
 
 If you choose 'Custom' as the date format (see above) the custom date format determines the way date and/or time are formatted. The custom date format is a string that follows the rules described in
-[http://download.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html](http://download.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html).
+[Class SimpleDateFormat](https://download.oracle.com/javase/6/docs/api/java/text/SimpleDateFormat.html).
 
 {{% alert color="info" %}}
 

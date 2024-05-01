@@ -23,7 +23,7 @@ For a [Database source](/refguide/database-source/), these operations are applie
 
 As these operations are applied by the Runtime Server, and only the requested objects are returned to the Mendix Client, this improves performance as the amount of data transferred over the network is minimal. When the user interacts with the widget and moves to a different page or changes the filter, Mendix Client issues a new request to the Runtime Server.
 
-{{< figure src="/attachments/refguide/runtime/mendix-client/data-source-server-paged.png" >}}
+{{< figure src="/attachments/refguide/runtime/mendix-client/data-source-server-paged.png" class="no-border" >}}
 
 ### 2.2 Microflow or Nanoflow Source
 
@@ -35,7 +35,7 @@ This means that, even if a limited set of objects is requested by paging or a fi
 
 An [Association source](/refguide/association-source/) works in the same way as a Microflow or Nanoflow source, but now the list of objects contains those which are linked by the specified association.
 
-{{< figure src="/attachments/refguide/runtime/mendix-client/data-source-client-paged.png" >}}
+{{< figure src="/attachments/refguide/runtime/mendix-client/data-source-client-paged.png" class="no-border" >}}
 
 ## 3 Network Optimization Modes
 

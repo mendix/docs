@@ -74,7 +74,7 @@ Store the `{GENERATED_PAT}` value in a safe location, so you can use it to autho
 
 Each request must contain an `Authorization` header with the value `MxToken {GENERATED_PAT}`.
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/private-cloud-deploy-api/authorization-header.png" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/private-cloud-deploy-api/authorization-header.png" class="no-border" >}}
 
 To authenticate calls when using the Open API specification below, click **Authorize** and use the value `MxToken {GENERATED_PAT}`.
 

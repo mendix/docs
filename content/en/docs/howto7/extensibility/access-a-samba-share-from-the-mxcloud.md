@@ -66,11 +66,11 @@ The cloud does not allow the properties to be specified using the system propert
 jcifs.Config.setProperty("jcifs.smb.client.dfs.disabled","false");
 ```
 
-For more details on all the properties, see here: [http://jcifs.samba.org/src/docs/api/overview-summary.html#scp](http://jcifs.samba.org/src/docs/api/overview-summary.html#scp).
+For more details on all the properties, see [Setting Client Properties](https://www.jcifs.org/src/docs/api/overview-summary.html#scp).
 
 ## 4 Further Documentation
 
-* [http://jcifs.samba.org/](http://jcifs.samba.org/)
+* [The Java CIFS Client Library](https://www.jcifs.org/)
 
 ## 5 Read More
 

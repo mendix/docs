@@ -1,7 +1,7 @@
 ---
 title: "External Database Connection"
 url: /refguide/external-database-connection/
-weight: 49
+weight: 80
 description: "Overview of the external database connection document in Studio Pro"
 tags: ["studio pro", "database connector", "mendix 10", "mendix connect", "connect to database"]
 ---
@@ -20,12 +20,12 @@ You must have the [External Database Connector](https://marketplace.mendix.com/l
 
 Right-click on your module and click **Add other > External database connection** to open the **Connect to Database** wizard:
 
-{{< figure src="/attachments/appstore/modules/external-database-connector/database-connection-wizard.png" >}}
+{{< figure src="/attachments/appstore/modules/external-database-connector/database-connection-wizard.png" class="no-border" >}}
 
 Once in the wizard, enter or select the following:
 
 * **Name** — name of your database connection
-* **Database Type** — Microsoft SQL, MySQL, Oracle, or PostgreSQL
+* **Database Type** — Microsoft SQL, MySQL, Oracle, PostgreSQL, Snowflake (Beta support from [Studio Pro 10.10](/releasenotes/studio-pro/10.10/))
 
 ### 2.1 Connecting Using Connection Details
 
@@ -48,6 +48,7 @@ If you select **Use connection string**, enter the following:
     * **MySQL** — `jdbc:mysql://myHostName:myPortNumber/myDatabaseName`
     * **Oracle** — `jdbc:oracle:thin:@//myHostName:myPortName/myDatabaseName`
     * **PostgresSQL** — `jdbc:postgresql://myHostName:myPortNumber/myDatabaseName`
+    * **Snowflake** — `jdbc:snowflake://my_account_identifier.snowflakecomputing.com/?db=myDatabaseName` 
 
 ## 3 External Database Connection Document {#external-database-document}
 
@@ -55,7 +56,7 @@ After entering your database information in the **Connect to Database** wizard, 
 
 The name of the document is the **Name** (not **Database name**) you provided when running the wizard:
 
-{{< figure src="/attachments/appstore/modules/external-database-connector/database-service-document.png" >}}
+{{< figure src="/attachments/appstore/modules/external-database-connector/database-service-document.png" class="no-border" >}}
 
 ### 3.1 Query Screen {#query-screen}
 

@@ -12,7 +12,7 @@ aliases:
 
 ## 1 Introduction
 
-The application autoscaler service for [SAP Business Technology Platform (SAP BTP)](https://docs.mendix.com/developerportal/deploy/sap-cloud-platform/) enables applications to automatically increase or decrease the number of instances of your app. These changes can be based on a schedule, or based on the value of a metric.
+The application autoscaler service for [SAP Business Technology Platform (SAP BTP)](/developerportal/deploy/sap-cloud-platform/) enables applications to automatically increase or decrease the number of instances of your app. These changes can be based on a schedule, or based on the value of a metric.
 
 For more information on the application autoscaler, see [Application Autoscaler Service](https://help.sap.com/docs/CSI/b651ed9a533d41339f05b12549d8d706/c5d349a5ea354971839b7922d13c04e4.html?q=application%20autoscaler%20service) document on the SAP Help Portal.
 
@@ -22,7 +22,7 @@ The **autoscaler** service can be found on the [Services Tab](/developerportal/d
 
 Selecting the **autoscaler** service expands the entry to allow you to enter more details about the service you wish to bind, namely the **Plan** and the **File** which contains the configuration.
 
-{{< figure src="/attachments/developerportal/deploy/sap-autoscaler/autoscaler-service.png" alt="Autoscaler service on the environment details page" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-autoscaler/autoscaler-service.png" alt="Autoscaler service on the environment details page" class="no-border" >}}
 
 You need to specify the following:
 
@@ -40,7 +40,7 @@ Click **Configurator** to start the **Autoscaler Configurator**.
 The **Autoscaler Configurator** provides a user-friendly interface to create the JSON file required to configure the application autoscaler.
 
 {{% alert color="info" %}}
-The **Configurator** only creates a JSON file from scratch. It does not have access to your existing autoscaler settings on [SAP BTP](https://docs.mendix.com/developerportal/deploy/sap-cloud-platform/), and you cannot import an existing JSON files.
+The **Configurator** only creates a JSON file from scratch. It does not have access to your existing autoscaler settings on [SAP BTP](/developerportal/deploy/sap-cloud-platform/), and you cannot import an existing JSON files.
 {{% /alert %}}
 
 There are three options available:
@@ -60,7 +60,7 @@ The metrics you can use to trigger dynamic scaling are as follows:
 The **Configurator** does not support adding custom metrics as triggers.
 {{% /alert %}}
 
-Open the **Autoscaler Configurator** by clicking the **Configurator** next to the autoscaler service in the [Services tab](https://docs.mendix.com/developerportal/deploy/sap-cloud-platform/) of the Environment Details.
+Open the **Autoscaler Configurator** by clicking the **Configurator** next to the autoscaler service in the [Services tab](/developerportal/deploy/sap-cloud-platform/) of the Environment Details.
 
 You first need to decide the sort of scaling you want to apply.
 
@@ -103,13 +103,13 @@ Click **Add rule** or **Add another rule** (if rules already exist) to add a new
 
 You need to enter the information requested on the following screen. A tooltip explains what needs to be entered for each value:
 
-{{< figure src="/attachments/developerportal/deploy/sap-autoscaler/add-specific-date.png" alt="Add specific date rule dialog" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-autoscaler/add-specific-date.png" alt="Add specific date rule dialog" class="no-border" >}}
 
 Click **Add Rule** to add this rule.
 
 The new rule, and any existing rules will be shown in the **Configurator** as shown below.
 
-{{< figure src="/attachments/developerportal/deploy/sap-autoscaler/specific-date.png" alt="Existing specific date rule" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-autoscaler/specific-date.png" alt="Existing specific date rule" class="no-border" >}}
 
 You can collapse the view of existing rule by clicking **-** and expand it again with the **+**.
 You can also edit an existing rule by clicking **Edit** and delete an existing rule by clicking **Delete**.
@@ -122,7 +122,7 @@ Select whether you want to add a rule for days of the week (for example, every M
 
 You need to enter the information requested on the following screen. A tooltip explains what needs to be entered for each value:
 
-{{< figure src="/attachments/developerportal/deploy/sap-autoscaler/add-recurring-date.png" alt="Add recurring date rule dialog" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-autoscaler/add-recurring-date.png" alt="Add recurring date rule dialog" class="no-border" >}}
 
 Click **Add Day** to add the days to which this recurring schedule applies. If it is a rule for days of the week, day one is always Monday irrespective of any local conventions. You can add several days by using **Add Day** multiple times.
 
@@ -130,7 +130,7 @@ Click **Add Rule** to add this rule.
 
 The new rule and any existing rules are shown in the configurator as shown below.
 
-{{< figure src="/attachments/developerportal/deploy/sap-autoscaler/recurring-date.png" alt="Existing recurring date rule" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-autoscaler/recurring-date.png" alt="Existing recurring date rule" class="no-border" >}}
 
 You can collapse the view of existing rule by clicking **-** and expand it again with the **+**.
 You can also edit an existing rule by clicking **Edit** and delete an existing rule by clicking **Delete**.
@@ -150,13 +150,13 @@ Click **Add rule** or **Add another rule** (if rules already exist) to add a new
 
 You need to enter the information requested on the following screen. A tooltip explains what needs to be entered for each value:
 
-{{< figure src="/attachments/developerportal/deploy/sap-autoscaler/add-dynamic.png" alt="Add recurring date rule dialog" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-autoscaler/add-dynamic.png" alt="Add recurring date rule dialog" class="no-border" >}}
 
 Click **Add Rule** to add this rule.
 
 The new rule, and any existing rules are shown in the configurator as shown below.
 
-{{< figure src="/attachments/developerportal/deploy/sap-autoscaler/dynamic.png" alt="Existing recurring date rule" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-autoscaler/dynamic.png" alt="Existing recurring date rule" class="no-border" >}}
 
 You can collapse the view of existing rule by clicking **-** and expand it again with the **+**.
 You can also edit an existing rule by clicking **Edit** and delete an existing rule by clicking **Delete**.

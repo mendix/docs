@@ -138,15 +138,15 @@ After widget attributes, you will see a description of a widget that will be pre
 
 In Mendix Studio Pro, the widget described above would look like this:
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/basic-widget.png" alt="basic widget" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/basic-widget.png" alt="basic widget" class="no-border" >}}
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/basic-widget-progress-card.png" alt="basic progress card" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/basic-widget-progress-card.png" alt="basic progress card" class="no-border" >}}
 
 #### 4.2.1 Help Page {#help}
 
 You can provide additional help information to widget users by using a help page. If you do so, a widget configuration screen will get a **Help** button, assigned to the <kbd>{F1}</kbd> shortcut key, that opens a specified page. This button is positioned in the lower-left corner of the popup dialog:
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/widget-dialog-help-button.png" alt="basic widget" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/widget-dialog-help-button.png" alt="basic widget" class="no-border" >}}
 
 A URL of a help page can be provided through the `helpUrl` property after the `description` tag:
 
@@ -260,11 +260,11 @@ Before examining properties themselves, it is useful to understand property grou
 
 This is how the property group structure is represented in Studio Pro:
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/edit-progress-card.png" alt="edit progress general" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/edit-progress-card.png" alt="edit progress general" class="no-border" >}}
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/edit-visual-tab.png" alt="edit progress visual" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/edit-visual-tab.png" alt="edit progress visual" class="no-border" >}}
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/properties-widget.png" alt="properties widget" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/properties-widget.png" alt="properties widget" class="no-border" >}}
 
 When properties are shown in a dialog box, first-level groups (**General** and **Visual**) are represented as tabs. Second-level groups (**Main**, **Action** and **Progress bar**) are represented as boxes. When properties are shown in a pane, first-level groups are ignored and second-level groups are shown as categories.
 
@@ -290,8 +290,8 @@ Some properties can or must have more attributes or tags. This depends on the `t
 
 Here is how a caption and description look in Studio Pro:
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/card-icon.png" alt="caption" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/card-icon.png" alt="caption" class="no-border" >}}
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/card-description.png" alt="description" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/card-description.png" alt="description" class="no-border" >}}
 
 ## 7 Documents in this Section

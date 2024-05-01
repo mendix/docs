@@ -272,7 +272,7 @@ The input works, but the styling could be improved. In the next code snippets, y
     * The questionmarks in the props indicate that [a property is optional](https://www.typescriptlang.org/docs/handbook/2/objects.html#optional-properties). This is why the unchanged usage of `TextInput` in *src/TextBox.editorPreview.tsx* is not causing type errors.
     * To ensure our input has basic input [styling from Bootstrap](https://getbootstrap.com/docs/5.3/forms/form-control/), we prepend the css class `form-control` to the `className` property. Similar to how you would add classes to an HTML `class` attribute. There is no need to include Bootstrap, as Mendix' Atlas UI is based on Bootstrap.
 
-3. **Synchronize** your project with <kbd>F4</kbd> and **re-run** your app. The result should be a well-styled input.
+3. **Synchronize** your project with <kbd>F4</kbd> and **rerun** your app. The result should be a well-styled input.
 
     {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/styledinputwidgets.png" alt="A live Mendix app with two text fields with a similar appearance." class="no-border" >}}
 
@@ -311,74 +311,62 @@ Comparing our widget to the Mendix text input widget we are still missing a labe
 
 ### 3.6 Handling Updates
 
-The value from the attribute can be displayed and updated using the other input, however you cannot change the value directly from within your widget. You can close the loop by following these steps. 
+Our widget now looks like a Mendix widget, but does not behave like one yet. While it is able to display the value of the text attribute, it is not able to update it yet. In this section we will close that loop.
 
-1. In *TextBox.tsx*, create a function that will update the attribute and pass it to the `TextInput` component:
+1. In *src/components/TextInput.tsx* add an `onChange` property to the `TextInputProps`. This will act as a callback, allowing our `TextInput` component to signal changes in the value. It does this by calling the function with the new value. This is the same mechanism by which the `TextInput` component receives updated values from the `input` component.
 
-    ```tsx
-    class TextBox extends Component<TextBoxContainerProps> {
-        private readonly onUpdateHandle = this.onUpdate.bind(this);
-        render(): ReactNode {
-            const value = this.props.textAttribute.value || "";
-            return <TextInput
-                value={value}
-                style={this.props.style}
-                className={this.props.class}
-                tabIndex={this.props.tabIndex}
-                onUpdate={this.onUpdateHandle}
-            />;
-        }
-        private onUpdate(value: string): void {
-            this.props.textAttribute.setValue(value);
-        }
-    }
-    ```
-
-    Explaining the code: 
-
-    * JavaScript can pass functions from one object to another — this way, the Mendix API stays in the container `TextBox component` and provides a function to the display component to pass updates back to the attribute
-    * When a function is passed to another component, the function might have a scoping issue — this can be solved by binding the context `this` to the function before passing it to the display component (for more information, see this [freeCodeCamp blog post](https://medium.freecodecamp.org/this-is-why-we-need-to-bind-event-handlers-in-class-components-in-react-f7ea1a6f93eb))
-
-2. In *components/TextInput.tsx*, handle the change events of the input and pass the new value to the `onUpdate` function of the container component:
-
-    ```tsx
-    import { CSSProperties, ChangeEvent, Component, ReactNode, createElement } from "react";
-    import classNames from "classnames";
-    export interface InputProps {
+    ```tsx {hl_lines=["6-6", "15-17"]}
+    export interface TextInputProps {
         value: string;
         className?: string;
-        index?: number;
         style?: CSSProperties;
         tabIndex?: number;
-        onUpdate?: (value: string) => void;
+        onChange?: (value: string) => void;
     }
-    export class TextInput extends Component<InputProps> {
-        private readonly handleChange = this.onChange.bind(this);
-        render(): ReactNode {
-            const className = classNames("form-control", this.props.className);
-            return <input
+
+    export function TextInput({ value, onChange, tabIndex, style, className }: TextInputProps): ReactElement {
+        return (
+            <input
                 type="text"
-                className={className}
-                style={this.props.style}
-                value={this.props.value}
-                tabIndex={this.props.tabIndex}
-                onChange={this.handleChange}
-            />;
-        }
-        private onChange(event: ChangeEvent<HTMLInputElement>): void {
-            if (this.props.onUpdate) {
-                this.props.onUpdate(event.target.value);
-            }
-        }
+                value={value}
+                onChange={event => {
+                    onChange?.(event.target.value);
+                }}
+                className={"form-control " + className}
+                style={style}
+                tabIndex={tabIndex}
+            />
+        );
     }
     ```
 
-    Explaining the code: 
+    Explaining the code:
 
-    * The input's `value` is set by the `this.props.value`, and this property is not changed directly; the update function will use the `setValue` to trigger a re-render with the updated property
-    * There are two ways of handling input changes in React: [controlled components](https://reactjs.org/docs/forms.html#controlled-components) or [uncontrolled components](https://reactjs.org/docs/uncontrolled-components.html)
-    * The `onUpdate` function is optional and it should be checked for availability before executing it
-    * The custom widget TextBox will still not pass text to the Text box widget after this step — it will gain this functionality in [Build a Text Box Pluggable Widget: Part 2 (Advanced)](/howto/extensibility/create-a-pluggable-widget-two/).
+    * Each time the input component has new data, it will trigger the `onChange` callback. In `TextInput` we tell the input component to execute the anonymous function written on lines 15-17. It receives an event object similar to the one provided by [event listeners](https://developer.mozilla.org/en-US/docs/Web/API/InputEvent). From the event object we extract the value of the input element, and call the onChange callback with that value.
+    * The [optional chaining operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) `?.`, allows us to call a function that may be `undefined`. In that case the rest of the expression does not evaluate, avoiding a runtime error. It is equivalent to writing a nullish check:
+
+        ```ts
+        if (onChange != null && onChange != undefined) {
+            onChange(event.target.value)
+        }
+        ```
+
+2. Now that `TextInput` is able to provide updates, we need to make sure that those updates are forwarded to the Mendix client. To do this open *src/TextBox.tsx* and pass the `setValue` method of `props.textAttribute` to the `onChange` prop of `TextInput`.
+
+    ```tsx {hl_lines=["5-5"]}
+    export function TextBox(props: TextBoxContainerProps): ReactElement {
+        const value = props.textAttribute.value || "";
+        return <TextInput 
+            value={value} 
+            onChange={props.textAttribute.setValue} 
+            tabIndex={props.tabIndex} 
+        />;
+    }
+    ```
+
+    Explaining the code:
+
+    * By defining a callback prop, a component advertises what data it is able to provide. Consumers of the callback get to decide how to respond to the availability of the new data. In this case we decided in `TextBox` that each time `TextInput` has new data, it is given to `props.textAttribute.setValue()`.
 
 Congratulations, you have now made a fully functional input widget!
 

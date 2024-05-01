@@ -187,8 +187,8 @@ Open the *(YourMendixApp)/myPluggableWidgets/textBox* folder in your IDE of choi
 
     import "./ui/TextBox.css";
 
-    export function TextBox({ textAttribute }: TextBoxContainerProps): ReactElement {
-        const value = textAttribute.value || "";
+    export function TextBox(props: TextBoxContainerProps): ReactElement {
+        const value = props.textAttribute.value || "";
         return <TextInput value={value} />;
     }
     ```
@@ -226,59 +226,56 @@ Open the *(YourMendixApp)/myPluggableWidgets/textBox* folder in your IDE of choi
 
 ### 3.5 Adding Style
 
-The input works, but the styling could be improved. In the next code snippets, you will add the default styling to make your TextBox widget look like a Mendix widget. Also, you need to pass the `Class`, `Style` and `Tab index` [standard properties](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#standard-properties) from the `Common` tab which originate from the **Edit Custom Widget** dialog box:
+The input works, but the styling could be improved. In the next code snippets, you will add the default styling to make your TextBox widget look like a Mendix widget. All pluggable widgets receive [standard properties](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#standard-properties). To allow users of your widget to style it like any other Mendix widget you will need to apply the `class`, `style` and `tabIndex` props. These receive their values from the properties side bar (in the **Common** section of the **Properties** and **Styling** tabs).
 
-{{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/customwidgetedit.png" alt="custom widget" class="no-border" >}}
-
-1. In *TextBox.tsx*, pass the properties from the runtime to the `TextInput` component:
+1. In *src/TextBox.tsx*, pass the properties from the runtime to the `TextInput` component:
 
     ```tsx
-    class TextBox extends Component<TextBoxContainerProps> {
-        render(): ReactNode {
-            const value = this.props.textAttribute.value || "";
-            return <TextInput
-                value={value}
-                style={this.props.style}
-                className={this.props.class}
-                tabIndex={this.props.tabIndex}
-            />;
-        }
+    export function TextBox(props: TextBoxContainerProps): ReactElement {
+        const value = props.textAttribute.value || "";
+        return <TextInput 
+            value={value} 
+            style={props.style} 
+            className={props.class} 
+            tabIndex={props.tabIndex} 
+        />;
     }
     ```
 
-2. In *components/TextInput.tsx*, add the attributes to the interface and render them in the input:
+    You may notice that we do not [destructure](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) the props object into variables for our Container component. The reason is that `class` [is a reserved keyword](https://developer.mozilla.org/en-US/docs/Web/API/Element/className#notes) in Javascript and cannot be used as a variable name. This is also why we use `className` in the JSX of our components.
+
+2. Until we update the type of our TextInputProps, Typescript will display errors in *TextBox.tsx*. In *src/components/TextInput.tsx*, add the missing properties to the interface and pass them to the `input` component:
 
     ```tsx
-    import { CSSProperties, Component, ReactNode, createElement } from "react";
-    import classNames from "classnames";
-    export interface InputProps {
+    import { createElement, CSSProperties, ReactElement } from "react";
+
+    export interface TextInputProps {
         value: string;
         className?: string;
-        index?: number;
         style?: CSSProperties;
         tabIndex?: number;
     }
-    export class TextInput extends Component<InputProps> {
-        render(): ReactNode {
-            const className = classNames("form-control", this.props.className);
-            return <input
-                type="text"
-                className={className}
-                style={this.props.style}
-                value={this.props.value}
-                tabIndex={this.props.tabIndex}
-            />;
-        }
+
+    export function TextInput({ value, tabIndex, style, className }: TextInputProps): ReactElement {
+        return <input 
+            type="text" 
+            value={value} 
+            className={"form-control " + className} 
+            style={style} 
+            tabIndex={tabIndex} 
+        />;
     }
     ```
 
     Explaining the code:
-    * The style property is a React style object which can be passed to an HTML element directly
-    * `classNames` is an external utility function which dynamically creates and combines class names; it must be imported before it can be used (for the full API, see the property’s [documentation](https://github.com/JedWatson/classnames))
-    * Each property with a question mark is optional
-3. Your efforts will result in a well-styled input widget:
+    * The `style` property is an object containing CSS properties which can be used to quickly add styling to a component. It is available on all [HTML components offered by React](https://react.dev/reference/react-dom/components/common#applying-css-styles).
+    * The questionmarks in the props indicate that [a property is optional](https://www.typescriptlang.org/docs/handbook/2/objects.html#optional-properties). This is why the unchanged usage of `TextInput` in *src/TextBox.editorPreview.tsx* is not causing type errors.
+    * To ensure our input has basic input [styling from Bootstrap](https://getbootstrap.com/docs/5.3/forms/form-control/), we prepend the css class `form-control` to the `className` property. Similar to how you would add classes to an HTML `class` attribute. There is no need to include Bootstrap, as Mendix' Atlas UI is based on Bootstrap.
+
+3. **Synchronize** your project with <kbd>F4</kbd> and **re-run** your app. The result should be a well-styled input.
 
     {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/styledinputwidgets.png" alt="styled widgets" class="no-border" >}}
+
 
 ### 3.6 Labeling the Input{#label-input}
 

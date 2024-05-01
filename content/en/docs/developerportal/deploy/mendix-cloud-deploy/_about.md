@@ -35,16 +35,6 @@ The primary hosting locations are as follows:
 * Mendix Cloud US West: Oregon
 * Mendix Cloud South America: São Paulo
 
-Backups are always stored in at least one secondary location, separate from the primary hosting location. Each individual backup is immutable; in other words, once it has been written to Mendix's storage location, it can no longer be modified or overwritten.
-
-For some regions, data is always stored in the same political region. This applies to the following regions:
-
-* Data in the EU, including backups, stays within the EU
-    * Data in the EU is not currently backed up in the UK
-    * Data in the UK is backed up in the EU
-* Data in the US, including backups, stays within the US
-* Data in Japan is backed up in Japan
-
 ## 3 Does Mendix Expose the Underlying Cloud Foundry API?
 
 No, it does not. The Cloud Foundry API does not map one-to-one to Mendix's deployment options, authorization model, or cloud resource usage. However, deployment to Mendix Cloud can be automated using the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api/).

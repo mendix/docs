@@ -9,7 +9,7 @@ tags: ["Snowflake", "External Database Connector"]
 
 ## 1 Introduction
 
-The [External Database connector](/appstore/modules/external-database-connector/) module allows you to connect to databases and select data to use in your app. You can use it to directly test connections and queries during configuration in Studio Pro (design time). For Mendix apps that use Snowflake as their database, the External Database connector is the recommended integration option for Mendix 10.
+The [External Database connector](/appstore/modules/external-database-connector/) allows you to connect to databases and select data to use in your app. You can use it to directly test connections and queries during configuration in Studio Pro (design time). For Mendix apps that use Snowflake as their database, the External Database connector is the recommended integration option for Mendix 10.
 
 This how-to describes the steps required to enable your app to use the External Database connector with Snowflake, and to configure several common use cases.
 
@@ -90,6 +90,12 @@ As shown in the above example, if your input parameters do no exactly match what
     {{< figure src="/attachments/appstore/modules/external-database-connector/sample-snowflake-query-result.png" >}}
 
 ## 4 Configuring a Filtered Query
+
+This section provides an example of a filtered query. Although you can filter, sort, and paginate data in your Mendix app by using the [Data Grid 2](/appstore/modules/data-grid-2/) widget, this widget operates mostly client-side, so as a best practice, you may want to pre-filter the data retrieved from Snowflake before using it in a grid. The following example shows how you can specify a filter based on the postal code and country in your SQL query. After running the query, you can then further limit the results with data grid filters, sorting, and pagination.
+
+To execute and test the query in Studio Pro, follow these steps:
+
+
 
 ## 5 Configuring a Query to Display Data as a Chart
 

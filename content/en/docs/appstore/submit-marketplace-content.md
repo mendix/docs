@@ -1,5 +1,5 @@
 ---
-title: "Submitting Marketplace Content"
+title: "Submitting Content"
 url: /appstore/sharing-content/
 weight: 5
 no_list: false

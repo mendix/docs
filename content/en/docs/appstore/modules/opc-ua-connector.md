@@ -18,7 +18,7 @@ The OPC-UA connector should be used ...
 
 ## 1.2 License
 
-The OPC-UA connector is licensed under the GPL2.0 License.
+The OPC-UA connector is licensed under the EPL2.0 License.
 
 ## Pre-requisites
 Mendix Studio Pro version 9.24.3+
@@ -31,8 +31,19 @@ You must have these Marketplace modules installed:
 ## 2 Installation
 * Install all dependencies.
 * Follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the OPC-UA connector into your app.
-* Add NAV_StartConfiguration to your navigation
-* Add the CanConfigure module role to a user role that will configure the connections to your server.
+
+## 2.1 Configuration
+* Add NAV Configuration to your navigation
+* Assign the CanConfigure module role to a user role that will configure the connections to your server.
+* Login as a user that can configure the connection and go to the configuration page
+* If you want to connect to a server with a Message security mode Sign or Sign&Encrypt, add your client certificate on the top right
+* Click on "New configuration" and follow the steps to set up your connection.
+* Once the configuration is saved, the APIs can be used in your application
+
+## 2.2 (optional) Brows the OPC-UA server
+* Assign the CanBrowse module role to a user role that will browse the OPC-UA server.
+* Follow the configuration menu item
+* Click on "Browse" and see what data is available on the server.
 
 ## 3 Usage
 

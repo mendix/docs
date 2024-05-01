@@ -117,9 +117,9 @@ Expected Read and write formats for attribute services
 | ByteString | {"value" : {"bytes":[-1]}} | "0xFF" | |
 | XMLElement | {"value" : { "fragment" : "\u003cprice\u003e29.99\u003c/price\u003e"}} | \<price\>30.00\</price\> | CommunityCommons.HTMLToPlainText |
 | NodeID | {"value" : {"namespaceIndex": {"value": 1}, "identifier":"1"}} | "ns=1;i=1000"|
-| ExpandedNodeID | || |
-| StatusCode | {"value" : {"value" : 0}} | "0" | Use the value attribute on StatusCode |
-| QualifiedName | {"value" : {"namespaceIndex" : {"value" : 1}, "name" : "string"}}| | |
+| ExpandedNodeID | {"value" : {"namespaceIndex": {"value": 1}, "identifier":"1"}, "serverIndex" : {"value" : 0}} | not supported | |
+| StatusCode | {"value" : {"value" : 0}} | "0" | Use the _Value attribute on StatusCode |
+| QualifiedName | {"value" : {"namespaceIndex" : {"value" : 1}, "name" : "string"}}| not supported | |
 | LocalizedText | {"value" : {"locale" : "en", "text": "hello"}} | "hello"|  Currently always writes in "en" locale |
 
 

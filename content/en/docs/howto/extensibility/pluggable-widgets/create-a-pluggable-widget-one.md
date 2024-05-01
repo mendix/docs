@@ -274,33 +274,40 @@ The input works, but the styling could be improved. In the next code snippets, y
 
 3. **Synchronize** your project with <kbd>F4</kbd> and **re-run** your app. The result should be a well-styled input.
 
-    {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/styledinputwidgets.png" alt="styled widgets" class="no-border" >}}
+    {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/styledinputwidgets.png" alt="A live Mendix app with two text fields with a similar appearance." class="no-border" >}}
 
 
 ### 3.6 Labeling the Input{#label-input}
 
-While the Mendix input elements come with labels, you will need to add one to TextBox manually. With the new API it is easy to [add a label](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#label) to any widget.
+Comparing our widget to the Mendix text input widget we are still missing a label. Luckily, it is very straightforward for any widget to add a label. [System properties](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#system-properties) are a special class of property types that allow for a unified approach to common problems. The properties `class`, `style`, and `tabIndex` from the previous section are other examples of system properties.
 
-1. In the *TextBox.xml* file, add an element `<propertyGroup caption="Label">` with a child element `<systemProperty />` above the existing `<propertyGroup caption="Data source">` element:
+1. In the widget definition file, add a new property group. The caption can be anything, but we will name it `"Label"`. To the property group, add a new `systemProperty` element with the key `"Label"`.
 
     ```xml
     <propertyGroup caption="Label">
         <systemProperty key="Label" />
     </propertyGroup>
     ```
+1. Open *src/TextBox.tsx* and remove the `style` and `className` props from `TextInput`. Now that the widget is a labeled input, it should no longer have the layout styling applied to it. In fact, the `pluggable-widget-tools` removed them from the type definition in *typings/TextBox.d.ts*.
 
-    This will add the **Show label** radio buttons in the widget properties tab **Label** (after synchronizing the app directory and updating the widget). When **Show label** is set to true, it will automatically render the label for you in the page editor and the browser:
+    ```tsx
+    return <TextInput value={value} tabIndex={props.tabIndex} />;
+    ```
 
-    {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/edittextboxtwo.png" alt="edit text box two" class="no-border" >}}
 
-2. In *TextBox.tsx* remove the usages of `{this.props.style}` and `{this.props.class}`, because labeled widgets do not have them and the styling is applied to the surrounding FormGroup.
-3. Preview the label in the page editor:
+1. **Synchronize** your project and **update** all widgets. Now open the widget **Properties** and open the **Label** tab.
 
-    {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/editdataviewone.png" alt="edit data view one" class="no-border" >}}
+    This will show the **Show label** radio buttons. When **Show label** is set to true, it will automatically render the label for you in the page editor and the browser:
 
-4. This will result in a label above or next to the input depending on the available space, data view `Form orientation`, and the `Label width (weight)`:
+    {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/edittextboxtwo.png" alt="The widget properties opened at the Label tab. The show label setting is set to true, which reveals a label caption field with the value TextBox." class="no-border" >}}
 
-    {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/inputwidgetswithlabel.png" alt="input elements with label" class="no-border" >}}
+    {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/editdataviewone.png" alt="The page editor showing the caption TextBox in front of the pluggable widget" class="no-border" >}}
+
+    {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/inputwidgetswithlabel.png" alt="A live Mendix app with two text fields with labels. The second text field has the label TextBox" class="no-border" >}}
+
+
+{{% alert color="info" %}}The labels will appear in front of, or above the inputs. This depends on the surrounding [data view's properties](/refguide/data-view/#411-form-orientation) (**form orientation** and **label width**) and the size of the screen.{{% /alert %}}
+
 
 ### 3.6 Handling Updates
 

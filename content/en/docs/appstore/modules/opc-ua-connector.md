@@ -105,21 +105,21 @@ For a given ServerConfiguration and NodeId, this microflow let's you read all re
 For a given ServerConfiguration, this microflow lets you read values from the server.
 
 Expected Read and write formats for attribute services
-| Data type | exampl read response | example write request |
-| --------- | ------------- | -- |
-| Boolean | {"value":true} | "true" | 
-| SByte <br> Int16 <br> Int32 <br> Int64   | {"value": 1} | "1" |
-| Byte <br> UInt16 <br> UInt32 <br> UInt64 | {"vbytebytealue" : { "value" : 1}} |  "1" | 
-| Float <br> Double | {"value" : 1.0} | "1.0" or "3.0E20" | 
-| String | {"value" : "string" } | "string" |
-| DateTime | {"value" : {"utcTime" : 11335116845776939}} | "2007-12-03T10:15:30" |
-| Guid | {"value": "cd1fdbc3-1f45-4fe8-9bff-b4927d5401c4"} | "cd1fdbc3-1f45-4fe8-9bff-b4927d5401c4" |
-| ByteString | {"value" : {"bytes":[-1]}} | "0xFF" |
-| XMLElement | {"value" : { "fragment" : "string"}} ||
-| NodeID | {"value" : {"namespaceIndex": {"value": 1}, "identifier":"1"}} ||
-| ExpandedNodeID | not supported? ||
-| QualifiedName | not supported? ||
-|LocalizedText | {"value" : {"locale" : "nl", "text": "string"}} ||
+| Data type | exampl read response | example write request | conversion | 
+| --------- | ------------- | -- | - |
+| Boolean | {"value":true} | "true" | |
+| SByte <br> Int16 <br> Int32 <br> Int64   | {"value": 1} | "1" ||
+| Byte <br> UInt16 <br> UInt32 <br> UInt64 | {"vbytebytealue" : { "value" : 1}} |  "1" | |
+| Float <br> Double | {"value" : 1.0} | "1.0" or "3.0E20" |  |
+| String | {"value" : "string" } | "string" | |
+| DateTime | {"value" : {"utcTime" : 11335116845776939}} | "2007-12-03T10:15:30" | CommunityCommons.LongToDateTime |
+| Guid | {"value": "cd1fdbc3-1f45-4fe8-9bff-b4927d5401c4"} | "cd1fdbc3-1f45-4fe8-9bff-b4927d5401c4" | |
+| ByteString | {"value" : {"bytes":[-1]}} | "0xFF" | |
+| XMLElement | {"value" : { "fragment" : "string"}} || |
+| NodeID | {"value" : {"namespaceIndex": {"value": 1}, "identifier":"1"}} | "ns=1;i=1000"|
+| ExpandedNodeID | not supported? || | 
+| QualifiedName | not supported? || |
+| LocalizedText | {"value" : {"locale" : "en", "text": "hello"}} | "hello"|  Currently always writes in "en" locale |
 
 
 #### 3.4.3 Read Single Node Value

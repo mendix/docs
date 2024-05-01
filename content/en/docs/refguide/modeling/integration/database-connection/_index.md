@@ -25,7 +25,7 @@ Right-click on your module and click **Add other > External database connection*
 Once in the wizard, enter or select the following:
 
 * **Name** — name of your database connection
-* **Database Type** — Microsoft SQL, MySQL, Oracle, or PostgreSQL
+* **Database Type** — Microsoft SQL, MySQL, Oracle, PostgreSQL, Snowflake (Beta support from [Studio Pro 10.10](/releasenotes/studio-pro/10.10/))
 
 ### 2.1 Connecting Using Connection Details
 
@@ -48,6 +48,7 @@ If you select **Use connection string**, enter the following:
     * **MySQL** — `jdbc:mysql://myHostName:myPortNumber/myDatabaseName`
     * **Oracle** — `jdbc:oracle:thin:@//myHostName:myPortName/myDatabaseName`
     * **PostgresSQL** — `jdbc:postgresql://myHostName:myPortNumber/myDatabaseName`
+    * **Snowflake** — `jdbc:snowflake://my_account_identifier.snowflakecomputing.com/?db=myDatabaseName` 
 
 ### 2.3 Password Security
 

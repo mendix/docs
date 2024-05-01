@@ -1,6 +1,7 @@
 ---
 title: "10.10"
-parent: "metamodel-10"
+url: /releasenotes/sdk/metamodel-10.10/
+weight: 90
 ---
 
 ## 10.10.0
@@ -57,5 +58,3 @@ parent: "metamodel-10"
 * We introduced the `expression` property. 
 * We made the `variable` property optional.
 * We changed the default value of the `variable` property.
-
-This page has been generated automatically.

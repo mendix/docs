@@ -8,6 +8,14 @@ title: "OPC-UA connector"
 #draft: Set to true if page should not appear in production
 ---
 
+---
+title: "OPC-UA connector"
+url: /appstore/modules/teamcenter-extension/
+category: "Modules"
+description: "Describes the Teamcenter Extension from the Mendix Marketplace. The extension facilitates a low-code approach to integrating with Teamcenter"
+tags: ["Teamcenter", "Integration", "PLM", "SOA connector", "low-code"]
+---
+
 ## 1 Introduction
 
 The OPC-UA connector is a Mendix Module to connect to your OPC-UA server.

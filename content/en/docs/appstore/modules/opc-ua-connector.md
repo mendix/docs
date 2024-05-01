@@ -38,7 +38,7 @@ You must have these Marketplace modules installed:
 * Click on "New configuration" and follow the steps to set up your connection.
 * Once the configuration is saved, the APIs can be used in your application
 
-## 2.2 (optional) Brows the OPC-UA server
+## 2.2 (optional) Browse the OPC-UA server
 * Assign the CanBrowse module role to a user role that will browse the OPC-UA server.
 * Follow the configuration menu item
 * Click on "Browse" and see what data is available on the server.

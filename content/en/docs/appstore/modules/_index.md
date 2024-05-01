@@ -2,7 +2,7 @@
 title: "Modules"
 url: /appstore/modules/
 description: "Presents details on the modules available in the Mendix Marketplace."
-weight: 5
+weight: 8
 no_list: false
 tags: ["marketplace", "marketplace component", "module"]
 ---

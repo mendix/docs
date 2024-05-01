@@ -1,7 +1,7 @@
 ---
 title: "Submitting Marketplace Content"
 url: /appstore/sharing-content/
-weight: 4
+weight: 5
 no_list: false
 description_list: true
 description: "Describes how to create and share Mendix Marketplace content."

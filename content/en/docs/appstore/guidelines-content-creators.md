@@ -2,7 +2,7 @@
 title: "Guidelines for Content Creators"
 url: /appstore/guidelines-content-creators/
 description: "Describes guidelines for Marketplace content creators."
-weight: 1
+weight: 3
 no_list: false
 description_list: true
 tags: ["marketplace", "content creation", "guidelines"]

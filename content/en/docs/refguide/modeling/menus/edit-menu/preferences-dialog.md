@@ -57,7 +57,7 @@ This is the directory where new apps are stored. It is used in the [App Settings
 
 ### 3.1 Deployment
 
-#### 3.1.1 JDK directory {#jdk-directory}
+#### 3.1.1 JDK Directory {#jdk-directory}
 
 This is the directory in which the Java Development Kit (JDK) is located on the computer on which you deploy the application. Usually, the correct directory is located automatically.
 
@@ -65,7 +65,11 @@ The JDK is necessary to run Mendix applications, because the Mendix Runtime is w
 
 #### 3.1.2 Enable Run Optimizations
 
-Enable this setting to increase the speed at which a running application is updated after changes have been made in Studio Pro. When only pages, layouts or snippets have been changed, an entire restart of the application is skipped to decrease deployment time. Also, no Java compilation is performed when no relevant files have changed.
+Enable this setting to increase the speed at which a running application is updated after changes have been made in Studio Pro. If only pages, layouts, or snippets have been changed, then an entire restart of the application is skipped to decrease deployment time. Also, no Java compilation is performed when no relevant files have changed.
+
+#### 3.1.3 Optimize Bundle {#bundle}
+
+This setting is visible and effective when the React client is enabled. By default, it is already enabled to reduce the size of the generated app bundle and speeds up the bundling process by disabling source maps generation. Source maps are used for debugging the bundled code during development. If you want to generate source maps for debugging pluggable widgets, you can disable this setting.
 
 ### 3.2 Build
 

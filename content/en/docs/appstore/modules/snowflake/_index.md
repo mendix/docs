@@ -34,5 +34,8 @@ The [REST SQL connector](https://marketplace.mendix.com/link/component/225717), 
 
 The REST SQL connector requires an additional step to transform data rows received from the REST SQL API into Mendix objects. For more information, see [Snowflake REST SQL Connector](/appstore/connectors/snowflake/snowflake-rest-sql/).
 
-## 3 Documents in This Category
+### 2.3 Mendix Data Loader
 
+The [Mendix Data Loader](https://app.snowflake.com/marketplace/listing/GZTDZHHIDJ/mendix-data-loader), available from the [Snowflake Marketplace](https://app.snowflake.com/marketplace), aids in ingesting Mendix data into Snowflake. The application is deployed in one's Snowflake environment and will interact with configured Mendix apps to ingest data that is exposed using an [Published OData Service](https://docs.mendix.com/refguide/published-odata-services/). 
+
+## 3 Documents in This Category

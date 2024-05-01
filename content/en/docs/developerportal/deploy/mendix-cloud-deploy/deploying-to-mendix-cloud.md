@@ -121,3 +121,8 @@ With a Free App, you can deploy your app to Mendix Cloud from Studio Pro by usin
 * Alternatively, in the top bar of Studio Pro, click **Publish**.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp.png" alt="The Publish button" max-width=20% class="no-border" >}}
+
+
+## 4 Deployment Status and Troubleshooting
+
+The [Mendix Platform Status page](https://status.mendix.com/) shows the current status of Mendix services. If you have issues with deployment, you can check the status page to see if deployment is operational (under **Mendix Services**) or if there are other Mendix issues that may be affecting your deployment. For more information, see [Mendix Cloud Status](/developerportal/deploy/mendix-cloud-status/).

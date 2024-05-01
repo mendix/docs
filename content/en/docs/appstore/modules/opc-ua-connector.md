@@ -105,21 +105,21 @@ For a given ServerConfiguration and NodeId, this microflow let's you read all re
 For a given ServerConfiguration, this microflow lets you read values from the server.
 
 Expected Read and write formats for attribute services
-| Data type | exampl read response | example write request | conversion | 
+| Data type | Example read response | Example write request | Conversion | 
 | --------- | ------------- | -- | - |
 | Boolean | {"value":true} | "true" | |
 | SByte <br> Int16 <br> Int32 <br> Int64   | {"value": 1} | "1" ||
-| Byte <br> UInt16 <br> UInt32 <br> UInt64 | {"vbytebytealue" : { "value" : 1}} |  "1" | |
+| Byte <br> UInt16 <br> UInt32 <br> UInt64 | {"value" : { "value" : 1}} |  "1" | |
 | Float <br> Double | {"value" : 1.0} | "1.0" or "3.0E20" |  |
 | String | {"value" : "string" } | "string" | |
 | DateTime | {"value" : {"utcTime" : 11335116845776939}} | "2007-12-03T10:15:30" | CommunityCommons.LongToDateTime |
 | Guid | {"value": "cd1fdbc3-1f45-4fe8-9bff-b4927d5401c4"} | "cd1fdbc3-1f45-4fe8-9bff-b4927d5401c4" | |
 | ByteString | {"value" : {"bytes":[-1]}} | "0xFF" | |
-| XMLElement | {"value" : { "fragment" : "\u003cprice\u003e29.99\u003c/price\u003e"}} | <price>30.00</price> | CommunityCommons.HTMLToPlainText |
+| XMLElement | {"value" : { "fragment" : "\u003cprice\u003e29.99\u003c/price\u003e"}} | \<price\>30.00\</price\> | CommunityCommons.HTMLToPlainText |
 | NodeID | {"value" : {"namespaceIndex": {"value": 1}, "identifier":"1"}} | "ns=1;i=1000"|
 | ExpandedNodeID | || |
 | StatusCode | {"value" : {"value" : 0}} | "0" | Use the value attribute on StatusCode |
-| QualifiedName | || |
+| QualifiedName | {"value" : {"namespaceIndex" : {"value" : 1}, "name" : "string"}}| | |
 | LocalizedText | {"value" : {"locale" : "en", "text": "hello"}} | "hello"|  Currently always writes in "en" locale |
 
 

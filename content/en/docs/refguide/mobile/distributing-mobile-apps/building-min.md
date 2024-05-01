@@ -21,18 +21,25 @@ This guide explains how to complete the second bullet's task: build a MIN app co
 First things first, make sure you clone your repo and install necessary software:
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/mendix/make-it-native.git
    ```
+
 1. Navigate to the project directory:
+
    ```bash
    cd make-it-native
    ```
+
 1. Install dependencies:
+
    ```bash
    npm install
    ```
+
 1. Install pods:
+
    ```bash
    cd ios && pod install
    ```
@@ -85,6 +92,7 @@ Fastlane is an all in one CI tool that automates the process of building and dep
 1. Install fastlane by gem
    * `sudo gem install fastlane -NV`
 1. Add these lines in `~/.bash_profile` or `~/.zshrc` (point the version to version installed):
+
    ```bash
    export FASTLANE_PATH="/usr/local/lib/ruby/gems/2.6.0/gems/fastlane-2.134.0/bin"
    export PATH="$FASTLANE_PATH:$PATH"
@@ -119,6 +127,7 @@ To install Fastlane on your machine, do the following:
 1. Install Fastlane via gem:
    * `sudo gem install fastlane -NV`
 1. Add these lines in ~/.bash_profile or ~/.zshrc (point the version to version installed):
+
    ```bash
    export FASTLANE_PATH="/usr/local/lib/ruby/gems/2.6.0/gems/fastlane-2.134.0/bin"
    export PATH="$FASTLANE_PATH:$PATH"
@@ -199,14 +208,14 @@ Set up your developer environment for Android as follows:
 
 To enable remote debugging, do the following:
 
-1. Fill in host with _<your_ip>:8080_ (you can use _localhost:8080_ if you are running in an emulator or simulator).
+1. Fill in host with *<your_ip>:8080* (you can use *localhost:8080* if you are running in an emulator or simulator).
 1. Select **Enable dev mode checkbox/switch**.
 1. When the app loads, open the app menu:
    * If you are running on a physical device: use a 3-tap long press or shake your device.
    * If you are running on an iOS emulator: press <kbd>{CTRL}</kbd> + <kbd>{CMD}</kbd> + <kbd>{Z}</kbd>.
    * If you are running on an Android emulator on Mac: press <kbd>{CMD}</kbd> + <kbd>{M}</kbd>.
 1. Select **Enable remote debugging** from the menu.
-1. After the Chrome screen pops up, change its URL to _localhost:8083/debugger-ui/_.
+1. After the Chrome screen pops up, change its URL to *localhost:8083/debugger-ui/*.
 
 #### 3.2.2 Build from Source
 
@@ -330,7 +339,7 @@ to update the Android developer app bundle and assets:
 1. `cd` to this folder.
 1. In (A), replace `index.android.bundle` with the file located in [Android Bundle](#android-bundle).
 1. In (A), delete all other folders (and any files) and replace with contents located in [Android Assets](#android-assets).
-1. The app thumbnail can be updated by substituting the existing _splash.png_ file located in the app's root folder.
+1. The app thumbnail can be updated by substituting the existing *splash.png* file located in the app's root folder.
 1. Zip the app folders by selecting all of them and then zip all app folders (rather than zipping the parent directory). The zipped folder should be called `sampleapps.zip`. Make sure that the root content of the `.zip` is each sample app folder.
 1. In (A), open `sample_apps.json` and bump the version.
 
@@ -344,7 +353,7 @@ The folder name can be arbitrary. The `config.json` file describes each sample a
 
 1. Find the folder for the sample app you want to update — reference `config.json`.
 1. `cd` to this folder
-1. Replace the `index.bundle` file with the updated one from [iOS Bundle](#ios-bundle). Note: make sure to rename the filename to _index.bundle_, as it is usually **index.ios.bundle**.
+1. Replace the `index.bundle` file with the updated one from [iOS Bundle](#ios-bundle). Note: make sure to rename the filename to *index.bundle*, as it is usually **index.ios.bundle**.
 1. Clean the contents of the `assets` folder.
 1. Copy all content from [iOS Assets](#ios-assets) into the `assets` folder.
 

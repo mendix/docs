@@ -68,6 +68,7 @@ After following the general setup above, you are all set to use the microflows a
 #### 3.2.1 `Create label` {#create-label}
 
 Labels can optionally be used to attach additional information to chunks. That will be used for custom filtering during the retrieval step. Each Label stands for a single key-value combination. In the operations to create a knowledge base Chunk, a list of Labels can be passed as optional input. During the retrieval, if a list of Labels is provided as search input, all key-value pairs passed in the form of Label objects to the operation must match any previously-attached labels to the chunk during population. Examples for typical key-value pairs are:
+
 * Category: Bug, Feature
 * Status: Open, Closed, In Progress
 * Machine Type: MachineX, MachineY
@@ -88,12 +89,12 @@ A typical pattern for populating a knowledge base is as follows:
 #### 3.3.1 `(Re)populate Knowledge Base` {#repopulate-knowledge-base}
 
 This operation handles the following:
+
 * clearing the knowledge base if it does exist 
 * creating the empty knowledge base if it does not exist
 * inserting all provided chunks with their labels into the knowledge base
 
 The population handles a whole list of Chunks at once which should be created by using the `Create Chunk` operation. It is possible to have multiple knowledge bases in the same database in parallel by providing different knowledge base names in combination with the same [DatabaseConfiguration](#databaseconfiguration-entity).
-
 
 ### 3.4 Retrieve Operations {#retrieve-operations}
 
@@ -136,7 +137,6 @@ This is an entity to store the connection details to a PostgreSQL database.
 | `Password`           | This is the encrypted password that is used during the authentication to the database server. |
 | `Username`           | This is the username that is used during the authentication to the database server.           |
 
-
 ##### 4.1.1.2 `DatabasePassword` {#databasepassword}
 
 This non-persistent entity is only used for editing the `DatabasePassword`. The database password is stored in the Mendix database as an encrypted string in the [DatabaseConfiguration](#databaseconfiguration-entity) entity. 
@@ -167,7 +167,6 @@ This entity represents a discrete piece of knowledge that needs to go into or co
 
 The **PgVectorKnowledgeBase.User** module role has read access to all attributes of `Chunk` which facilitates easy implementation on pages where retrieved data is shown.
 
-
 ##### 4.1.2.2 `Label` {#label} 
 
 This represents additional information that is to be stored with the chunks in the knowledge base. It can be used for custom filtering during retrieval. A chunk can be associated to multiple labels; labels in turn can be shared across multiple chunks.
@@ -178,7 +177,6 @@ This represents additional information that is to be stored with the chunks in t
 | `Value`              | This is the value of the label that provides additional information about the chunk in the context of the given key.          |
 
 The **PgVectorKnowledgeBase.User** module role has read access to all attributes of `Label` which facilitates easy implementation on pages where retrieved data is shown.
-
 
 ### 4.2 Enumerations {#enumerations} 
 
@@ -204,6 +202,7 @@ Activities define the actions that are executed from a microflow or nanoflow. In
 Operations that can be used in multiple knowledge base processes and do not fall into a specific category.
 
 ##### 4.3.1.1 Create Label {#create-label-technical} 
+
 The `Create Label` activity is intended for creating [Labels](#label). The given input parameters are assigned to a newly created label. The label is added to the provided `LabelList` which is intended to be used afterwards for passing into [Create Chunk](#create-chunk-technical).
 
 **Input parameters**
@@ -213,7 +212,6 @@ The `Create Label` activity is intended for creating [Labels](#label). The given
 | `Key`          | String                                                       | mandatory                     | This is the input to assign the key of the new label.                           |
 | `Value`  | String                     | mandatory                     | This is the input to assign the value of the new label.             |
 | `LabelList`          | List of [Labels](#label)                                                    | mandatory | This is for adding the label to a list that can be used outside of this Activity. |
-
 
 #### 4.3.2 (Re)populate Operations {#repopulate-operations-technical} 
 
@@ -297,13 +295,11 @@ The `DatabaseConfiguration` that is passed must contain the connection details t
 | `MaxNumberOfResults`          | Integer/Long                                                      | optional                    | This can be used to limit the number of results that should be returned. 
 | `LabelList`          | List of [Labels](#label)                                                    | optional | This list is for additional filtering in the retrieve. Only chunks that comply with the labels will be returned. |
 
-
 **Return value**
 
 | Name                 | Type                                      | Description                                                  |
 | -------------------- | ----------------------------------------- | ------------------------------------------------------------ |
 | `ChunkList` | List of [Chunks](#chunk) | This list is the result of the retrieval. |
-
 
 ## 5 Showcase Application {#showcase-application}
 

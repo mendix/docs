@@ -21,6 +21,7 @@ The Snowflake REST SQL connector provides a way to first setup key-pair authenti
 * Use [Snowflake Cortex LLM functions](https://docs.snowflake.com/en/user-guide/snowflake-cortex/llm-functions)
 
 The current version of the connector supports the following actions:
+
 * Authentication with an RSA key pair according to PKCS #8 standard
 * Execution of single SQL statements
 * Synchronous execution of calls
@@ -31,8 +32,8 @@ The Snowflake REST SQL connector requires Mendix Studio Pro version 9.18.0 or ab
 
 To use the Snowflake REST SQL connector, you must also install and configure the following modules from the Mendix marketplace:
 
-*  [Community Commons](https://marketplace.mendix.com/link/component/170) - This module is a required dependency for the Snowflake REST SQL connector.
-*  [Encryption](https://marketplace.mendix.com/link/component/1011) - This module is a required dependency for the Snowflake REST SQL connector. The EncryptionKey constant must be set up in your application settings.
+* [Community Commons](https://marketplace.mendix.com/link/component/170) - This module is a required dependency for the Snowflake REST SQL connector.
+* [Encryption](https://marketplace.mendix.com/link/component/1011) - This module is a required dependency for the Snowflake REST SQL connector. The EncryptionKey constant must be set up in your application settings.
 
 ### 1.3 Licensing and Cost
 

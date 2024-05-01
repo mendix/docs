@@ -10,6 +10,7 @@ no_list: true
 ## 1 Introduction
 
 The **Marketplace Curation** feature is a governance capability within the Mendix Platform. With this feature, you can translate the company's policies and guidelines for public Marketplace content to curation settings. Marketplace components that meet these requirements will get a recommended label: <text class="badge badge-pill badge-recommended" style="margin-left:0px">RECOMMENDED</text>. This way, developers from your company can easily see which public content is recommended according to your company policies and guidelines. This functionality provides several key benefits:
+
 * Developer guidance: Developers can easily identify Marketplace content suitable for their apps by filtering Marketplace content by the recommended label in Studio Pro's Marketplace section or on the Marketplace website. This helps developers find valuable and relevant content for app development in your company. For more information, see [Displaying Recommended Marketplace Content in Studio Pro](#display-recommended-marketplace-content)
 * Enhanced marketplace exploration: By specifying criteria for recommended content, developers can explore a wider array of public content, enabling them to leverage resources for their apps.
 * Governance control: Centralized curation allows Mendix Admins to translate the offline policies and guidelines to an in-platform experience, establishing efficient communication and time-saving processes between developers and Mendix Admins.
@@ -42,11 +43,11 @@ The list shows the following details:
 * **License** – This shows the license of the content.
 * **Label** – This shows whether the content has a recommended label.
 * **Source** – This indicates the origin of the label:
-  * **Curation Setting**  – The recommended label is added automatically based on the curation settings.
-  * **Manual** – The recommended label is added manually by a Mendix Admin.
-
+    * **Curation Setting**  – The recommended label is added automatically based on the curation settings.
+    * **Manual** – The recommended label is added manually by a Mendix Admin.
 
 ## 4 Displaying Recommended Marketplace Content in Studio Pro {#display-recommended-marketplace-content}
+
 In Studio Pro's Marketplace section, developers can view all the Marketplace components, no matter they are recommended content or not. To only see recommended content, simply select the check box: **Show <text class="badge badge-pill badge-recommended" style="margin-left:0px">RECOMMENDED</text>**. The recommended label is also visible on the details page on the main panel.
 
 {{< figure src="/attachments/control-center/marketplace-curation/displaying-recommended-mp-content.png" max-width=100% alt=''displaying-recommended-mp-content'' >}}

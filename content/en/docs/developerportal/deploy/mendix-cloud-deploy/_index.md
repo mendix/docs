@@ -17,7 +17,7 @@ Mendix Cloud is the default deployment option for Mendix applications. It is a p
 There are several options for deployment with Mendix Cloud:
 
 * [Mendix Free](https://www.mendix.com/pricing/start-for-free/) – If you are new to the Mendix community and would like to create, deploy, and share your own app, you can do so for free using Mendix's limited Free App environment. Note that Free Apps do not support complex or large applications, only run for a couple of hours before shutting down, cannot be scaled, and provide limited operational information.
-* [Mendix Cloud with licensed nodes](https://www.mendix.com/evaluation-guide/app-lifecycle/mendix-cloud-features/) — With a license, you can take advantage of Mendix Cloud's full features, including deep insights, alerting, high availability, and backups.
+* [Mendix Cloud with licensed nodes](https://www.mendix.com/evaluation-guide/app-lifecycle/mendix-cloud-features/) – With a license, you can take advantage of Mendix Cloud's full features, including deep insights, alerting, high availability, and backups.
 * [Mendix Cloud Dedicated](https://www.mendix.com/evaluation-guide/app-lifecycle/mendix-cloud-overview/#mendix-cloud-vpc) – Organizations can also have their own Mendix Cloud. Mendix Cloud Dedicated is a single-tenant instance of the public Mendix Cloud, running the apps of only one organization.
 
 ### 1.1 Free App {#free-app}

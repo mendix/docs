@@ -63,9 +63,9 @@ The following steps teach you how to build a pluggable input widget, and show yo
 5. Go back to the home page, open the **Add Widget** menu, and then add a **TextBox** widget inside the data view.
 6. Open the Textbox's properties and select the **Datasource Attribute (path)** string attribute you created above. Then click the **OK** button to close the dialog box. The end result should look like this:
 
-    {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/createtestobject.png" class="no-border" >}}
+    {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/createtestobject.png" alt="The page editor in Studio Pro in structure mode. The page contains a Data View that has a Microflow as its datasource. It contains a Text Input widget referencing the text attribute created in this section." class="no-border" >}}
 
-    {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/microflowcreateentity.png" class="no-border" >}}
+    {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/microflowcreateentity.png" alt="A Microflow with a single Create Entity Action. The Action creates an instance of the entity created in the steps above. The Microflow ends with returning the new entity." class="no-border" >}}
 
 ### 3.2 Scaffolding the Widget
 
@@ -96,7 +96,7 @@ The generator will ask you a few questions during setup. Answer the questions by
 * Unit tests: **No**
 * End-to-end tests: **No**
 
-    {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/generatorblack-new.png" alt="mx generator" class="no-border" >}}
+{{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/generatorblack-new.png" alt="The Mendix Widget generator with the prompts answered according to the list above." class="no-border" >}}
 
 As part of the widget scaffolding, the generator builds the widget for the first time. You can do this yourself by running `npm run build`. There is also a watcher available that will rebuild your widget as you make changes to files.
 
@@ -118,7 +118,7 @@ When the build script completes it will package your widget as a `.mpk` file and
 
 The end result will be similar to the screenshot below:
 
-{{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/hello-world.png" class="no-border" >}}
+{{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/hello-world.png" alt="A live mendix app displaying a text field and below it the pluggable widget with the text Hello World." class="no-border" >}}
 
 ### 3.4 Adding the Attribute
 
@@ -195,11 +195,11 @@ Open the *(YourMendixApp)/myPluggableWidgets/textBox* folder in your IDE of choi
 
     Explaining the code:
 
-    * Line 2 imports the generated types for the widget. It was generated when we ran `npm start` in the previous section and its properties are based on the [widget definition file](/apidocs-mxsdk/apidocs/pluggable-widgets/#widget-definition).
+    * Line 2 imports the generated types for the widget. The types were generated when we ran `npm start` in the previous section and its properties are based on the [widget definition file](/apidocs-mxsdk/apidocs/pluggable-widgets/#widget-definition).
     * The `textAttribute` is a data access object provided by the Pluggable Widgets API. It not only provides the widget with the latest value of the attribute, but also offers methods for updating the value and performing validation. React will re-render the component when the props change.
     * On line 8 we provide a fallback value for the textAttribute value. This is necessary, as its value may be `undefined` and our TextInput display component only accepts `string`. The OR operator offers [short-circuit evaluation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR#short-circuit_evaluation), which will return the value on the left if it evaluates to truthy. Otherwise it will return the value provided on the right side. 
 
-6. Pluggable Widgets also have a Preview component, which is used in the design mode of the Studio Pro page editor. Update `src/TextBox.editorPreview.tsx` such that the deleted `HelloWorldSample` component is replaced by our `TextInput` component. This will resolve the errors thrown by `npm start`.
+6. Pluggable Widgets also have a Preview component, which is used in the design mode of the Studio Pro page editor. Update *src/TextBox.editorPreview.tsx* such that the deleted `HelloWorldSample` component is replaced by our `TextInput` component. This will resolve the errors thrown by `npm start`.
 
     ```tsx
     import { ReactElement, createElement } from "react";
@@ -213,17 +213,16 @@ Open the *(YourMendixApp)/myPluggableWidgets/textBox* folder in your IDE of choi
 
     Unlike the Container component, the Preview component receives mocked values for the the widget attributes. In this case `textAttribute` always receives a string. Thanks to this it is not necessary to deal with a possible `undefined` value.
 
-7. Wait for the watcher to finish rebuilding your widget. If the watcher is not running, start it with `npm start` or build the widget manually with `npm run build`.
-8. In Studio Pro, refresh your project from the filesystem with <kbd>F4</kbd> or from the menu with **App** > **Synchronize Project Directory**. The widget should now have a red border indicating that it needs to be refreshed. Open the context menu and select **Update all widgets**.
+7. Once the watcher is done building your widget, go to Studio Pro and **synchronize** your project with <kbd>F4</kbd>. The widget now displays a red border indicating that it needs to be updated. Open its context menu with a right click and select **Update all widgets**.
 
-    {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/updateallwidgets.png" class="no-border" >}}
+    {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/updateallwidgets.png" alt="A demonstration of opening the context menu of a widget in the page editor to reveal the Update all widgets command." class="no-border" >}}
 
-1.  Open the widget properties. In the **Data source** tab **select** the **Text attribute** from the attribute created in [Creating a Test App](#creating-a-test-project) above.
+8.  Open the widget properties. In the **Data source** tab **select** the **text attribute** created in [section 3.1](#creating-a-test-project).
 
 
-8. When running the app, the new widget is already functional. The first text box is a standard Text box widget and the second is your pluggable web widget. When data is changed in the first input and the cursor is moved to the next widget, the data of your widget is also updated: 
+9. **Run** the app locally to see the results, the new widget is already functional. The first text box is a standard Text box widget and the second is your pluggable web widget. Select the first text box and enter some text, unfocus the text box and the pluggable widget will now display the same data.
 
-    {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/twotextwidgets.png" alt="two text widgets" class="no-border" >}}
+    {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/twotextwidgets.png" alt="A live Mendix App featuring two text fields displaying the identical text: test." class="no-border" >}}
 
 ### 3.5 Adding Style
 

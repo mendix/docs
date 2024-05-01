@@ -49,6 +49,12 @@ If you select **Use connection string**, enter the following:
     * **Oracle** — `jdbc:oracle:thin:@//myHostName:myPortName/myDatabaseName`
     * **PostgresSQL** — `jdbc:postgresql://myHostName:myPortNumber/myDatabaseName`
 
+### 2.3 Password Security
+
+The password that you provide when using one of the above connection methods will be stored in a constant, which can be altered upon deployment on a Cloud node. Starting with Mendix 10.9, you can indicate which constants contain private or sensitive information, to ensure that this information is saved locally, and is not shared on the TeamServer, or the Cloud Portal.
+
+{{< figure src="/attachments/appstore/modules/external-database-connector/database-connection-wizard-password.png" >}}
+
 ## 3 External Database Connection Document {#external-database-document}
 
 After entering your database information in the **Connect to Database** wizard, the external database connection document is open in Studio Pro. 

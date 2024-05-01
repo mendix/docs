@@ -9,8 +9,6 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
-{{% alert color="warning" %}}This feature is in beta. For more information, see [Beta Releases](/releasenotes/beta-features/). {{% /alert %}}
-
 ## 1 Introduction
 
 If you are a Scrum Master of a Mendix app, you can link your app to Jira if you manage your project there. Once your app is connected to Jira, you have the option to associate your commits in Studio Pro to one or more stories created in Jira. 

@@ -9,40 +9,28 @@ tags: ["marketplace", "marketplace component", "snowflake", "data loader"]
 
 ## 1 Introduction
 
-The [Snowflake REST SQL connector](https://marketplace.mendix.com/link/component/225717) allows you to use data from Snowflake in your Mendix application and enrich your app with the capabilities that Snowflake provides.
+The [Mendix Data Loader](https://app.snowflake.com/marketplace/listing/GZTDZHHIDJ/mendix-data-loader) allows for seamless data ingestion from operational Mendix applications into Snowflake, enhancing an organization's business intelligence and reporting capabilities.
 
 ### 1.1 Typical Use Cases
 
-The Snowflake REST SQL connector provides a way to first setup key-pair authentication with an RSA key pair according to PKCS #8 standard, and then execute SQL statements on Snowflake via a REST call from within your Mendix application. These statements allow you to perform the following tasks:
+The Mendix Data Loader supports a range of data ingestion tasks, enabling organizations to leverage their operational data within Snowflake for analytical purposes. Key functionalities include:
 
-* Read data from Snowflake
-* Write data to Snowflake
-* Trigger [Snowflake Cortex ML functions](https://docs.snowflake.com/en/guides-overview-ml-functions)
-* Use [Snowflake Cortex LLM functions](https://docs.snowflake.com/en/user-guide/snowflake-cortex/llm-functions)
-
-The current version of the connector supports the following actions:
-* Authentication with an RSA key pair according to PKCS #8 standard
-* Execution of single SQL statements
-* Synchronous execution of calls
+* Ingesting data from Mendix to Snowflake
 
 ### 1.2 Prerequisites {#prerequisites}
 
-The Snowflake REST SQL connector requires Mendix Studio Pro version 9.18.0 or above.
+To use the Mendix Data Loader, you must have:
 
-To use the Snowflake REST SQL connector, you must also install and configure the following modules from the Mendix marketplace:
-
-*  [Community Commons](https://marketplace.mendix.com/link/component/170) - This module is a required dependency for the Snowflake REST SQL connector.
-*  [Encryption](https://marketplace.mendix.com/link/component/1011) - This module is a required dependency for the Snowflake REST SQL connector. The EncryptionKey constant must be set up in your application settings.
+* A Mendix application with a [published OData service](https://docs.mendix.com/refguide/published-odata-services/) with exposed entities.
+* A Snowflake environment.
 
 ### 1.3 Licensing and Cost
 
-This connector is available as a free download from the Mendix Marketplace, but the services in Snowflake to which is connects may incur a usage cost. For more information, refer to the [Snowflake documentation](https://www.snowflake.com/en/data-cloud/pricing-options/).
-
-Depending on your use case, your deployment environment, and the type of app that you want to build, you may also need a license for your Mendix app. For more information, refer to [Licensing Apps](/developerportal/deploy/licensing-apps-outside-mxcloud/).
+The Mendix Data Loader is covered under the Mendix EULA. While the loader itself does not incur additional costs, operating within Snowflake may lead to usage-based fees. For detailed pricing, refer to the [Snowflake pricing documentation](https://www.snowflake.com/en/data-cloud/pricing-options/).
 
 ## 2 Installation
 
-Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the Snowflake REST SQL connector into your app.
+Follow the procedures for adding marketplace components to your Snowflake environment. For detailed instructions, see [Install an app from a listing](https://other-docs.snowflake.com/en/native-apps/consumer-installing).
 
 ## 3 Configuration
 

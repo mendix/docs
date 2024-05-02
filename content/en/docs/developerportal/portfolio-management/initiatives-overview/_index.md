@@ -217,27 +217,29 @@ Each initiative card shows the following information:
 
 {{< figure src="/attachments/developerportal/portfolio-management/initiative-card.png"max-width="60%" >}}
 
-* ① Initiative status – This shows the status of your initiative. It can be **On Track**, **At Risk**, or **Off Track**.
+1.  Initiative status – This shows the status of your initiative. It can be **On Track**, **At Risk**, or **Off Track**.
 
-* ② Initiative name – This is the name of the initiative. 
+2. Initiative name – This is the name of the initiative. 
 
-* ③ **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
+3.  **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
 
-  {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Members](/developerportal/portfolio-management/access-management/#members) section in *Access Management*.{{% /alert %}}
+{{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Members](/developerportal/portfolio-management/access-management/#members) section in *Access Management*.{{% /alert %}}
 
-* ④ Tags for the initiative – These tags are used to classify the initiative (tags can be used, for example, to indicate the types of initiatives).
+4. Tags for the initiative – These tags are used to classify the initiative (tags can be used, for example, to indicate the types of initiatives).
 
-* ⑤ Prioritization Score – This shows the prioritization score of the initiative.
+5. Prioritization Score – This shows the prioritization score of the initiative.
 
-* ⑥ **Dates** icon ({{% icon name="calendar" %}}) – Hovering over this icon shows the following defined dates of the initiative lifecycle:
+6. **Dates** icon ({{% icon name="calendar" %}}) – Hovering over this icon shows the following defined dates of the initiative lifecycle:
 
-  * **Intake** – This shows the date when the initiative is accepted based on business requirements.
-  * **Start** – This shows the date when the first actions are taken to start implementation.
-  * **Go-Live** – This shows the date when the initiative is expected to be delivered or implemented.
+7. **Intake** – This shows the date when the initiative is accepted based on business requirements.
 
-* ⑦ Icon of the linked apps – If there is only one linked app, clicking the icon shows the information about the app. If there are multiple apps or no linked apps, the icon is not clickable.
+8. **Start** – This shows the date when the first actions are taken to start implementation.
 
-* ⑧ Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
+9. **Go-Live** – This shows the date when the initiative is expected to be delivered or implemented.
+
+10. Icon of the linked apps – If there is only one linked app, clicking the icon shows the information about the app. If there are multiple apps or no linked apps, the icon is not clickable.
+
+11. Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
 
 ### 3.2 List View {#list-view}
 

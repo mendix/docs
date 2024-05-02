@@ -85,7 +85,8 @@ Browsing lets you navigate the content of the server. There are three implementa
 * Get Parent. Retrieve the parent node for a given node.
 
 #### ~2.1.1 The Browse action
-The browse action lets you traverse from one node to others. The input object for the action is a BrowseDescription. The BrowseDescription contains the following fields.
+The browse action lets you traverse from one node to others. 
+The request object for the action is a BrowseDescription. The BrowseDescription contains the following fields.
 * Node ID. The node ID of the node from where you want to browse.
 * Browse directions. In which direction to traverse.
 * Node ID reference type. Specifies the Node ID of the reference type to follow. If left empty, returns all references.
@@ -98,6 +99,9 @@ The browse action lets you traverse from one node to others. The input object fo
 * * Note that this fields must be supplied in decimal format, while the interpretation is in binary format.
   * The bits represent in order: ReferenceType, IsForward, NodeClass, BrowseName, DisplayName, TypeDefinition.
   * Example: Requesting only the field DisplayName is binary represented by [0,0,0,1,0,0] <br> which is in decimal representation 2<sup>3</sup> = 8.
+
+The response of the Browse action returns a browse response object. 
+There is a StatusCode is associated to the response,which represents the status of the call.
 
 
 

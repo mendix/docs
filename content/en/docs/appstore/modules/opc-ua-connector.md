@@ -45,7 +45,7 @@ You must have these Marketplace modules installed:
 
 
 ### ~2 How to Guide
-#### Custom Configuration
+#### Connection
 The connector provides a simple wizard to set up your own connection to an OPC-UA server, however if you wish to have your own custom business logic to connect to a server you are free to do so. To make the connection a ServerConfiguration, associated IdentityToken and (usually) ClientCertificate needs to be provided. In addition, the server certificate needs to be trusted.
 For each of these parts see the sections below.
 
@@ -78,7 +78,8 @@ A connection between an OPC-UA server and OPC-UA client (The Mendix Application)
 The association does not have to be set in the domain model but can be used to check what server certificate was used while establishing the connection.
 If you ever want to reject a certificate from the server, the "untrust certificate" action will remove the certificate from the list to trusted certificates.
 
-### 2.1 Browsing
+### ~2.1 Browsing
+Browsing lets you navigate the content of the server
 
 
 ## 3 Usage

@@ -2,8 +2,8 @@
 title: "OpenAI"
 url: /appstore/modules/openai-connector/
 linktitle: "OpenAI"
-description: "Describes the configuration and usage of the OpenAI Connector from the Mendix Marketplace that allows developers to integrate generative AI into your Mendix app."
-tags: ["OpenAI", "generative AI", "AI", "connector", "marketplace", "chatgpt", "dall-e", "genAI", "embeddings", "RAG", "Azure OpenAI"]
+description: "Describes the configuration and usage of the OpenAI Connector from the Mendix Marketplace that allows developers to integrate generative AI into their Mendix app."
+tags: ["OpenAI", "generative AI", "AI", "connector", "marketplace", "chatgpt", "dall-e", "genAI", "embeddings", "RAG", "Azure OpenAI", "functioncalling"]
 aliases:
     - /appstore/connectors/openai-connector/
 ---
@@ -71,6 +71,10 @@ With the current version, Mendix supports the Chat Completions API for [text gen
 
 The current scope of the connector is focused on text and image generation use cases, as well as embeddings. We try to release early and often, so keep your eyes open for new releases!
 
+#### 1.3.1 Function Calling Limitations
+
+Function microflows are currently limited to one input parameter of type string and must return a string. Furthermore, function microflows do not respect entity access of the current user. Make sure that you only return information that the user is allowed to view, otherwise confidential information may be visible to the current user in the assistant's response. See XYZ.
+
 ### 1.4 Prerequisites {#prerequisites}
 
 You should have [signed up](https://platform.openai.com/) for an OpenAI account, or have access to deployments at [Azure OpenAI](https://oai.azure.com/).
@@ -109,8 +113,7 @@ The following inputs are required for the OpenAI configuration:
 | API key     | This is the access token to authorize your API call. <br />To get an API, follow these steps:<ol><li>Create an account and sign in at [OpenAI](https://platform.openai.com/).</li><li> Go to the [API key page](https://platform.openai.com/account/api-keys) to create a new secret key. </li><li>Copy the API key and save this somewhere safe.</li></ol> |
 
 {{% alert color="info" %}}
-If you have signed up for an OpenAI account and are using free trial credits, please note that these are only valid for three months after the account has been created (not after the api-key has been created). To continue using the OpenAI API with an account that is older than three months, you will need to top up your account balance with credit and create a new api-key. <br />
-For more details, see the [OpenAI API reference](https://platform.openai.com/docs/api-reference/authentication).
+If you have signed up for an OpenAI account and are using free trial credits, please note that these are only valid for three months after the account has been created (not after the api-key has been created). To continue using the OpenAI API with an account that is older than three months, you will need to top up your account balance with credit and create a new api-key. <br />For more details, see the [OpenAI API reference](https://platform.openai.com/docs/api-reference/authentication).
 {{% /alert %}}
 
 #### 3.1.2 Azure OpenAI Configuration {#azure-openai-configuration} 
@@ -188,6 +191,10 @@ The microflow activity `Chat Completions (advanced)` can be used in cases where 
 The construction of the request and handling of the response must be implemented in a custom way.
 
 For technical details, see the [Technical reference](#chat-completions-advanced-technical) section.
+
+#### 3.2.4 Function Calling {#chatcompletions-functioncalling}
+
+Function calling enables the LLM to intelligently decide when to let the Mendix app call a predefined function microflow to gather additional information to include in the assistant's response. OpenAI does not call the function; instead, the model returns a tool call JSON structure that is used to build the input of the function so that it can be executed. Functions in Mendix are essentially microflows that can be registered as part of the request to the LLM​. Currently, function microflows are limited to one input parameter of type string and must return a string. Function calling is supported for all chat completions operations by adding the optional input parameter FunctionCollection.
 
 ### 3.3 Image Generations Configuration {#image-generations-configuration}
 
@@ -310,14 +317,32 @@ For more information on how to manage tokens for text generation, see [Managing 
 
 This is the abstract entity for `ChatCompletionsMessage`. Do not use this entity directly. Instead, use one of its specializations. 
 
+| Attribute     | Description                                                  |
+| --------------| ------------------------------------------------------------ |
+| `Content`     | This is the content of a message.                            |
+| `Role`        | This is the role of the message author.<br />For more information, see the [ENUM_Role](#enum-role) section. |
+| `ToolCallId`  | Tool call that this message is responding to. Only applicable for messages with role `tool`.                |
+
+
+##### 4.1.2.3 `AbstractTool` {#abstracttool}
+
+This is the abtract entity for `Tool` reused in the Chat Completions request and response. Do not use this entity directly. Instead, use one of its specializations. 
+
 | Attribute | Description                                                  |
 | --------- | ------------------------------------------------------------ |
-| `Content` | This is the content of a message.                            |
-| `Role`    | This is the role of the message author.<br />For more information, see the [ENUM_Role](#enum-role) section. |
+| `ToolType`| The type of the tool. Currently, only function is supported. <br />For more information, see the [ENUM_ToolType](#enum-tooltype) section. |
+
+##### 4.1.2.4 `AbstractFunction` {#abstractfunction}
+
+This is the abtract entity for `Function` reused in the Chat Completions request and response. Do not use this entity directly. Instead, use one of its specializations. 
+
+| Attribute | Description                                                  |
+| --------- | ------------------------------------------------------------ |
+| `Name`    | The name of the function to call.                            |
 
 #### 4.1.3 Chat Completions {#chatcompletions-domain-model}
 
-{{< figure src="/attachments/appstore/modules/openai-connector/domainModel-ChatCompletionsWithSession.png" >}}
+{{< figure src="/attachments/appstore/modules/openai-connector/domainModel-ChatCompletions.png" >}}
 
 ##### 4.1.3.1 `ChatCompletionsRequest` {#chatcompletionsrequest} 
 
@@ -331,6 +356,7 @@ A chat completions request that creates a model response for the given chat conv
 | `Temperature`       | This is the sampling temperature. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. This attribute is optional. The value should be a decimal between 0.0 and 2.0. The default value is 1.0. |
 | `Top_p`             | This is an alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with `Top_p` probability mass. 0.1 means only the tokens comprising the top 10% probability mass are considered. Mendix generally recommends altering `Top_p` or `Temperature` but not both. This attribute is optional. The value should be a decimal between 0.0 and 1.0. The default value is 1.0. |
 | `N`                 | This is the number of chat completions choices to generate for each input message. You will be charged based on the number of generated tokens across all choices. Keep `N` as 1 to minimize costs. This attribute is optional. The default value is 1. |
+| `ToolChoice`        | This optional attribute controls which (if any) function is called by the model. <br />For more information, see the [ENUM_ToolChoice](#enum-toolchoice) section. |
 
 {{% alert color="info" %}}The request and response parts of the domain model were designed to portray the [API reference of OpenAI](https://platform.openai.com/docs/api-reference/chat/create) as close as possible.{{% /alert %}}
 
@@ -350,7 +376,41 @@ This is a wrapper for a list of messages comprising the conversation so far.
 
 This is a specialization of the [AbstractChatCompletionsMessage](#abstractchatcompletionsmessage) entity. Each instance contains a text that needs to be taken into account by the model when processing the completion request. 
 
-##### 4.1.3.5 `ChatCompletionsResponse` {#chatcompletionsresponse} 
+##### 4.1.3.5 `ToolCall` {#toolcall}
+
+This is a specialization of the [AbstractTool](#abstracttool) entity and represents the tool calls generated by the model, such as function calls. The ToolCall entity is only applicable for messages with role `assistant`.
+
+| Attribute | Description                                    |
+| --------- | -----------------------------------------------|
+| `_id`     | The ID of the tool call, generated by the LLM. |
+
+##### 4.1.3.6 `ToolCallFunction` {#toolcallfunction}
+
+This is a specialization of the [AbstractFunction](#abstractfunction) entity and represents the function that the model called.
+The ToolCallFunction entity is only applicable for messages with role `assistant`.
+
+| Attribute  | Description                                    |
+| ---------- | -----------------------------------------------|
+| `Arguments`| The arguments to call the function with, as generated by the model in JSON format. Note that the model does not always generate valid JSON, and may hallucinate parameters not defined by your function schema. Validate the arguments in your code before calling your function. |
+
+##### 4.1.3.7 `Tools` {#tools}
+
+This is a wrapper for a list of tools the model may call. Currently, only functions are supported as as tools. A maximum of 128 functions are supported.
+
+##### 4.1.3.8 `ToolRequest` {#toolrequest}
+
+This is a specialization of the [AbstractTool](#abstracttool) entity and represents a tool the model may call.
+
+##### 4.1.3.9 `FunctionRequest` {#functionrequest}
+
+This is a specialization of the [AbstractFunction](#abstractfunction) entity and represents a function the model may call.
+
+| Attribute          | Description                                                  |
+| ------------------ | ------------------------------------------------------------ |
+| `Description`      | An description of what the function does, used by the model to choose when and how to call the function. This attribute is optional. |
+| `FunctionMicroflow`| The microflow that is called within this function. A function microflow can only have a single String input parameter and returns a String. Note that function microflows do not respect entity access of the current user. Make sure that you only return information that the user is allowed to view, otherwise confidential information may be visible to the current user in the assistant's response. |
+
+##### 4.1.3.10 `ChatCompletionsResponse` {#chatcompletionsresponse} 
 
 This represents a chat completion response returned by the model, based on the provided input. 
 
@@ -364,7 +424,7 @@ This represents a chat completion response returned by the model, based on the p
 
 {{% alert color="info" %}} The request and response parts of the domain model were designed to portray the [API reference of OpenAI](https://platform.openai.com/docs/api-reference/chat/create) as close as possible.{{% /alert %}}
 
-##### 4.1.3.6 `Choice` {#choicechat}
+##### 4.1.3.11 `Choice` {#choicechat}
 
 This is a list of chat completion choices which are part of the response. There can be more than one choice if `N` in the [request](#chatcompletionsrequest) is greater than 1, meaning that there was an explicit request for multiple alternative response texts. Each is used as a wrapper entity for the actual message content. 
 
@@ -373,11 +433,11 @@ This is a list of chat completion choices which are part of the response. There 
 | `Index`         | This is the index of the choice in the list of choices.      |
 | `Finish_reason` | This is the reason the model stopped generating tokens. This will be `stop` if the model hit a natural stop point or a provided stop sequence, `length` if the maximum number of tokens specified in the request was reached, `content_filter` if content was omitted due to a flag from our content filters, or `tool_calls` if the model called a tool. |
 
-##### 4.1.3.7 `ChatCompletionsMessageResponse` {#chatcompletionsmessageresponse}
+##### 4.1.3.12 `ChatCompletionsMessageResponse` {#chatcompletionsmessageresponse}
 
 This is a specialization of the [AbstractChatCompletionsMessage](#abstractchatcompletionsmessage) entity. It contains the response text (assistant prompt). 
 
-##### 4.1.3.8 `ChatCompletionsUsage` {#chatcompletionsusage}
+##### 4.1.3.13 `ChatCompletionsUsage` {#chatcompletionsusage}
 
 This is a specialization of the [AbstractUsage](#abstractusage). It contains the statistics for the completion request with an additional attribute:
 
@@ -385,11 +445,19 @@ This is a specialization of the [AbstractUsage](#abstractusage). It contains the
 | ------------------- | --------------------------------------------------------- |
 | `Completion_tokens` | This is the number of tokens in the generated completion. |
 
-##### 4.1.3.9 `ChatCompletionsSession` {#chatcompletionssession} 
+##### 4.1.3.14 `ChatCompletionsSession` {#chatcompletionssession} 
 
-This entity functions as a wrapper object for a chat completions session. It is associated with a list of (historical) messages comprising the conversation so far that can be mapped to the chat completions request. 
+This entity is a wrapper object for a chat completions session. It is associated with a list of (historical) messages comprising the conversation so far that can be mapped to the chat completions request. 
 
-##### 4.1.3.10 `ChatCompletionsSessionMessage` {#chatcompletionssessionmessage}
+##### 4.1.3.15 `FunctionCollection` {#functioncollection}
+
+This entity is a wrapper for a collection of functions to be sent along with the ChatCompletionsRequest as tools.
+
+##### 4.1.3.16 `Function` {#function} 
+
+This is a specialization of the [FunctionRequest](#functionrequest) entity and represents a function the model may call.
+
+##### 4.1.3.17 `ChatCompletionsSessionMessage` {#chatcompletionssessionmessage}
 
 This is a specialization of the [AbstractChatCompletionsMessage](#abstractchatcompletionsmessage) entity. 
 
@@ -540,6 +608,14 @@ This enumeration provides a list of key types that can be used during the connec
 | `Bearer_Token` | **Microsoft Entra token** |
 | `API_key`      | **API key**               |
 
+##### 4.2.1.3 `ENUM_ToolType` {#enum-tooltype}
+
+The type of the tool. Currently, only function is supported.
+
+| Name           | Caption                   |
+| -------------- | ------------------------- |
+| `Function`     | **Function**              |
+
 #### 4.2.2 Chat Completions {#chatcompletions-enumerations}
 
 ##### 4.2.2.1 `ENUM_Role` {#enum-role} 
@@ -551,24 +627,26 @@ This enumeration provides a list of message author roles.
 | `assistant` | **Assistant** | An assistant message was generated by the model as a response to a user message. |
 | `system`    | **System**    | A system message can be used to specify the assistant persona or give the model more guidance and context. This is typically specified by the developer to steer the model response. |
 | `user`      | **User**      | A user message is the input from a user.                     |
+| `tool`      | **Tool**      | A tool message contains the return value of a tool call as it's content. Additionally, a tool message has a ToolCallId that is used to map it to the corresponding previous assistant response which provided the tool call input. |
 
 ##### 4.2.2.2 `ENUM_ResponseFormat_Chat` {#enum-responseformat-chat} 
 
 This enumeration provides a list of supported response types for chat completions. Currently chat completions can be returned in normal text format (supported for all chat completions models available in the connector), as well as in JSON mode for [specific models](https://platform.openai.com/docs/guides/text-generation/json-mode).
 
-| Name          | Caption        |
-| ------------- | -------------- |
-| `json_object` | **JSONObject** |
-| `text`        | **Text**       |
+| Name          | Caption        | Description               |
+| ------------- | -------------- | ------------------------- |
+| `json_object` | **JSONObject** | Model should return json. |
+| `text`        | **Text**       | Model should return text. |
 
-##### 4.2.2.3 `ENUM_Quality` {#enum-quality} 
+##### 4.2.2.3 `ENUM_ToolChoice` {#enum-toolchoice} 
 
-This enumeration provides a list of quality levels for the images that are generated. 
+This enumeration controls which (if any) function is called by the model.
 
-| Name       | Caption      |
-| ---------- | ------------ |
-| `standard` | **Standard** |
-| `hd`       | **HD**       |
+| Name          | Caption        | Description                                                             |
+| ------------- | -------------- | ----------------------------------------------------------------------- |
+| `auto`        | **auto**       | The model can pick between generating a message or calling a function.  |
+| `none`        | **none**       | The model will not call a function and instead generates a message.     |
+| `function`    | **function**   | A particular function needs to be called, which is specified over association to the specific [Function](#function) or [ToolRequest](#toolrequest). |
 
 #### 4.2.3 Image Generations {#imagegenerations-enumerations}
 
@@ -603,6 +681,15 @@ This enumeration provides a list of supported visual styles for the generated im
 | --------- | ----------- |
 | `vivid`   | **Vivid**   |
 | `natural` | **Natural** |
+
+##### 4.2.3.4 `ENUM_Quality` {#enum-quality} 
+
+This enumeration provides a list of quality levels for the images that are generated. 
+
+| Name       | Caption      |
+| ---------- | ------------ |
+| `standard` | **Standard** |
+| `hd`       | **HD**       |
 
 #### 4.2.4 Embeddings {#embeddings-enumerations}
 

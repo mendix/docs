@@ -53,7 +53,7 @@ Configure each data ingestion job by specifying the endpoint, authentication det
 
 ### 3.3 Executing and Monitoring Ingestion
 
-1. **Ingest Data**: After setting up, use the `Ingest Data` button to start the data transfer. All ingested data will be stored in [transient tables](https://docs.snowflake.com/en/user-guide/tables-temp-transient#transient-tables).
+1. **Ingest Data**: After setting up, use the `Ingest Data` button to start the data transfer. All data exposed by the Odata service will be ingested and all ingested data will be stored in [transient tables](https://docs.snowflake.com/en/user-guide/tables-temp-transient#transient-tables).
 2. **View Results**: Check the job ID and verify the data in the specified target database.
 
 ## 4 Technical Reference
@@ -61,7 +61,7 @@ Configure each data ingestion job by specifying the endpoint, authentication det
 ### 4.1 Current Limitations
 
 1. At present the Mendix Data Loader supports username and password authentication so please make sure to use this setting when setting up your Odata service.
-2. We don't yet support associations (they are not handled using explicit foreign key columns yet).
+2. The recommended way (by Mendix) of exposing an association in an Odata service is as a link. This is not supported yet by the Mendix Data Loader. Please choose the "As an associated object id" option in your Odata settings. This option will store the associated object id in the table, but not explicitly as foreign key.
 
 ### 4.2 Troubleshooting
 

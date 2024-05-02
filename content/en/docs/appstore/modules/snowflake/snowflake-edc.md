@@ -95,7 +95,23 @@ This section provides an example of a filtered query. Although you can filter, s
 
 To execute and test the query in Studio Pro, follow these steps:
 
+1. In your Mendix app, in the **App Explorer**, find and open the external connection document that you created with the Connect to Database wizard.
+2. In the **Name** field, enter a name for your query, for example, *QueryHistoryDay*.
+3. Enter the following **SQL Query**:
 
+    ```text
+    select *
+    from STANDARD_TILE.HISTORY_DAY
+    where ( {filterPostalCode1} IS NULL
+    or (postal_code like '%' ||{filterPostalCode2}|| '%'))
+    and ( {filterCountry1} IS NULL
+    or ( country like '%' ||{filterCountry2}|| '%'))
+    ```
+
+4. Click **Run Query**.
+5. Verify that the results are correct, and then generate the required entity to collect the data in your Mendix application. For more information, see [External Database Connector: Creating an Entity from the Response](/appstore/modules/external-database-connector/#create-entity).
+
+[TBD]
 
 ## 5 Configuring a Query to Display Data as a Chart
 

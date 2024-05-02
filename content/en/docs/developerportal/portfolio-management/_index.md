@@ -292,7 +292,7 @@ Each initiative card shows the following information:
     {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Access Management](#access-management) section.{{% /alert %}}
   
 * ④ Tags for the initiative – These tags are used to classify the initiative (tags can be used, for example, to indicate the types of initiatives).
-* ⑤ Department – This shows the department to which the initiative belongs.
+* ⑤ Prioritization Score – This shows the prioritization score of the initiative.
 * ⑥ **Dates** icon ({{% icon name="calendar" %}}) – Hovering over this icon shows the following defined dates of the initiative lifecycle:
     * **Intake** – This shows the date when the initiative is accepted based on business requirements.
     * **Start** – This shows the date when the first actions are taken to start implementation.

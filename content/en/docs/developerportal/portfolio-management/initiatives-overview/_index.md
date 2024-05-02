@@ -227,7 +227,7 @@ Each initiative card shows the following information:
 
 * ④ Tags for the initiative – These tags are used to classify the initiative (tags can be used, for example, to indicate the types of initiatives).
 
-* ⑤ Department – This shows the department to which the initiative belongs.
+* ⑤ Prioritization Score – This shows the prioritization score of the initiative.
 
 * ⑥ **Dates** icon ({{% icon name="calendar" %}}) – Hovering over this icon shows the following defined dates of the initiative lifecycle:
 

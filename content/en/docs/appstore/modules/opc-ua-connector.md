@@ -101,9 +101,14 @@ The request object for the action is a BrowseDescription. The BrowseDescription 
   * Example: Requesting only the field DisplayName is binary represented by [0,0,0,1,0,0] <br> which is in decimal representation 2<sup>3</sup> = 8.
 
 The response of the Browse action returns a browse response object. 
-There is a StatusCode is associated to the response,which represents the status of the call.
-
-
+There is a StatusCode associated to the response,which represents the status of the call.
+The response may contain one or more BrowseNodes, these are the references from the response.
+A browse node contains the following fields.
+* Node ID. The Identifier of the referenced node.
+* Browse name. Browse name of the referenced node.
+* Display name. Display name of the referenced node.
+* Node class. Node class of the referenced node.
+If the server does not allow to return as many references as requested, the response will contain a continuation point that can be used in future calls to retrieve more references.
 
 ## 3 Usage
 

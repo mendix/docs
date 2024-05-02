@@ -15,7 +15,7 @@ paths:
     get:
       tags:
         - Projects
-      summary: GET Projects
+      summary: Get projects
       description: 'Returns a list of projects, according to the user’s authorisation within the Developer Portal.'
       operationId: get-projects
       parameters:
@@ -50,8 +50,8 @@ paths:
     post:
       tags:
         - Projects
-      summary: POST Project
-      description:  Schedules a job on the server to create a project. The job will be handled asynchronously; the operation returns a jobId that can be used to monitor the status of the process.'
+      summary: Post a project
+      description:  Schedules a job on the server to create a project. The job will be handled asynchronously; the operation returns a jobId that can be used to monitor the status of the process.
       operationId: post-project
       requestBody:
         $ref: '#/components/requestBodies/Project'
@@ -70,8 +70,8 @@ paths:
     delete:
       tags:
         - Projects
-      summary: DELETE Project
-      description: 'Deletes a project, its repository, cloud resources, and all collaboration data. A project can not be deleted if it is attached to a licensed node or if it is hosted in a non-public Mendix cloud.'
+      summary: Delete a project
+      description: 'Deletes a project, its repository, cloud resources, and all collaboration data. A project cannot be deleted if it is attached to a licensed node or if it is hosted in a non-public Mendix cloud.'
       operationId: delete-project
       parameters:
         - name: project-id
@@ -98,7 +98,7 @@ paths:
       tags:
         - Members
         - Projects
-      summary: GET Project Members
+      summary: Get project members
       description: 'Returns a list of team members of the project.'
       operationId: get-project-members
       parameters:
@@ -137,8 +137,8 @@ paths:
       tags:
         - Projects
         - Members
-      summary: POST Project Member
-      description: 'Adds a team member to the project with a specific role. The user must be an active member of the platform and belong to the same company as the user requesting the change. If the company is not yet using centralised platform roles, only the Scrum master role can be assigned.'
+      summary: Post a project member
+      description: 'Adds a team member to the project with a specific role. The user must be an active member of the platform and belong to the same company as the user requesting the change. If the company is not yet using centralised platform roles, only the Scrum Master role can be assigned.'
       operationId: post-project-member
       parameters:
         - name: project-id
@@ -169,8 +169,8 @@ paths:
       tags:
         - Projects
         - Members
-      summary: DELETE Project Member
-      description: 'Removes a user from a project. The user is not removed when they are the last Scrum master of the project, the last member of the project, or the technical contact of a licensed app.'
+      summary: Delete a project member
+      description: 'Removes a user from a project. The user is not removed when they are the last Scrum Master of the project, the last member of the project, or the Technical Contact of a licensed app.'
       operationId: delete-project-member
       parameters:
         - $ref: '#/components/parameters/project-id'
@@ -192,7 +192,7 @@ paths:
     get:
       tags:
         - Projects
-      summary: GET ProjectJob
+      summary: Get the status of a job
       description: 'Returns the status of a job.'
       operationId: get-project-job
       parameters:

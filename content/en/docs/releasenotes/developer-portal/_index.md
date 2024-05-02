@@ -17,6 +17,18 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 ## 2024
 
+### May 5
+
+#### New features
+
+* We have released a public beta version of a brand new Projects API. This API will help you automate managing your projects on the platform. Some of its key features are: creating and deleting projects, and managing your project's team. Full documentation can be found [here](/apidocs-mxsdk/apidocs/projects-api/). More features will be added in the coming months. In the meantime, all feedback is welcome and will help us improve this important self service feature of the Developer Portal
+
+#### Fixes
+
+* We fixed an issue where project team members were unable to download [documents](/developerportal/general/documents/) uploaded to the Developer Portal
+* We fixed an issue where the project administrator was not able to change the [logo of a project](/developerportal/collaborate/general-settings/#general)
+* We fixed an issue where under certain circumstances the [technical contact](/developerportal/general/app-roles/#technical-contact) of a project was not displayed correctly
+
 ### May 1 {#may-1-24}
 
 #### New Features

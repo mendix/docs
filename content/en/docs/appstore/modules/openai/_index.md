@@ -169,24 +169,32 @@ The microflow activity `Chat Completions (without history)` supports scenarios w
 
 Functionally, the prompt strings can be written in a specific way and can be tailored to get the desired result and behavior. For more information on prompt engineering, see the [Read More](#read-more) section.
 
+Two accompanying microflows are available to construct the input for the microflow:
+
+* `FunctionCollection_CreateAndAddFunction` can be used to initialize a new `FunctionCollection` and add a new `Function` to it in order to enable [function calling](#chatcompletions-functioncalling).
+* `FunctionCollection_AddFunction` can be used to add a new `Function` to an existing `FunctionCollection`.
+
+For technical details, see the [Technical reference](#chat-completions-without-history-technical) section.
+
 #### 3.2.2 `Chat Completions (with history)` {#chatcompletions-with-withory}
 
-The microflow activity `Chat completions with history` supports more complex use cases where a list of (historical) messages (e.g. comprising the conversation or context so far) is sent as part of the request to the language model. Two accompanying microflows are available to construct the input for the microflow:
+The microflow activity `Chat completions with history` supports more complex use cases where a list of (historical) messages (e.g. comprising the conversation or context so far) is sent as part of the request to the language model. Four accompanying microflows are available to construct the input for the microflow:
 
 * `ChatCompletionsSession_Create` is used to create the session wrapper that must be passed as input parameter. 
-* `ChatCompletionsSession_AddMessage` is used to attach the historical messages to the `ChatCompletionsSession`. 
-
-The content of such a message corresponds to a system, assistant, or user prompt. In the case of multiple historical messages the order is relevant.
+* `ChatCompletionsSession_AddMessage` is used to attach the historical messages to the `ChatCompletionsSession`. The content of such a message corresponds to a system, assistant, or user prompt. In the case of multiple historical messages the order is relevant.
+* `FunctionCollection_CreateAndAddFunction` can be used to initialize a new `FunctionCollection` and add a new `Function` to it in order to enable [function calling](#chatcompletions-functioncalling).
+* `FunctionCollection_AddFunction` can be used to add a new `Function` to an existing `FunctionCollection`.
 
 For technical details, see the [Technical reference](#chat-completions-with-history-technical) section.
 
 #### 3.2.3 `Chat Completions (advanced)` {#chatcompletions-advanced}
 
-The microflow activity `Chat Completions (advanced)` can be used in cases where the above-mentioned microflows do not provide enough support or flexibility. The interface of this operation resembles the API interface. The construction of the request and handling of the response must be implemented in a custom way. Three accompanying microflows are available to construct the input for the microflow:
+The microflow activity `Chat Completions (advanced)` can be used in cases where the above-mentioned microflows do not provide enough support or flexibility. The interface of this operation resembles the API interface. The construction of the request and handling of the response must be implemented in a custom way. Four accompanying microflows are available to construct the input for the microflow:
 
 * `ChatCompletionsRequest_Create` is used to create the request object.
 * `ChatCompletionsMessages_Create` is used to create the wrapper object for the `ChatCompletionsMessageRequest` objects.
 * `ChatCompletionsMessageRequest_Create` is used to create the message objects.
+* `ChatCompletionsRequest_AddFunctionCalling` can be used to add a list of functions to be sent along with the `ChatCompletionsRequest` as tools in order to enable [function calling](#chatcompletions-functioncalling).
 
 The construction of the request and handling of the response must be implemented in a custom way.
 
@@ -195,6 +203,12 @@ For technical details, see the [Technical reference](#chat-completions-advanced-
 #### 3.2.4 Function Calling {#chatcompletions-functioncalling}
 
 Function calling enables the LLM to intelligently decide when to let the Mendix app call a predefined function microflow to gather additional information to include in the assistant's response. OpenAI does not call the function; instead, the model returns a tool call JSON structure that is used to build the input of the function so that it can be executed. Functions in Mendix are essentially microflows that can be registered as part of the request to the LLM​. Currently, function microflows are limited to one input parameter of type string and must return a string. Function calling is supported for all chat completions operations by adding the optional input parameter FunctionCollection.
+Two helper microflow are available to construct the `FunctionCollection` with a list of `Functions`:
+
+* `FunctionCollection_CreateAndAddFunction` can be used to initialize a new `FunctionCollection` and add a new `Function` to it in order to enable [function calling](#chatcompletions-functioncalling).
+* `FunctionCollection_AddFunction` can be used to add a new `Function` to an existing `FunctionCollection`.
+
+For more information, see [Function Calling](https://platform.openai.com/docs/guides/function-calling).
 
 ### 3.3 Image Generations Configuration {#image-generations-configuration}
 
@@ -321,7 +335,7 @@ This is the abstract entity for `ChatCompletionsMessage`. Do not use this entity
 | --------------| ------------------------------------------------------------ |
 | `Content`     | This is the content of a message.                            |
 | `Role`        | This is the role of the message author.<br />For more information, see the [ENUM_Role](#enum-role) section. |
-| `ToolCallId`  | Tool call that this message is responding to. Only applicable for messages with role `tool`.                |
+| `ToolCallId`  | Tool call that this message is responding to. Only applicable and required for messages with role `tool`.                |
 
 
 ##### 4.1.2.3 `AbstractTool` {#abstracttool}
@@ -725,7 +739,8 @@ For [specific models](https://platform.openai.com/docs/guides/text-generation/js
 | `Configuration`  | [Configuration](#configuration-entity)                | mandatory                     | This is an object that contains endpoint and API key.        |
 | `Model`          | String                                                | only mandatory for **OpenAI** | This is the ID of the model to use; not considered for **Azure OpenAI** configurations. |
 | `ResponseFormat` | [ENUM_ResponseFormat_Chat](#enum-responseformat-chat) | optional                      | This can be used to specify the format that the model must output. |
-| `Temperature`     | Decimal                                                | optional                    | This can be used to control the randomness of the output: lower means more deterministic while higher means more creative. Note: high values for temperature (>1.7) may give unexpected results and even internal server errors. |
+| `Temperature`    | Decimal                                               | optional                      | This can be used to control the randomness of the output. The value should be a decimal between 0.0 and 2.0. The default value is 1.0. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. Note: high values for temperature (>1.7) may give unexpected results and even internal server errors. |
+| `FunctionCollection`    | Object                                          | optional                     | A collection of functions to be sent along with the ChatCompletionsRequest as tools. |
 
 **Return value**
 
@@ -745,7 +760,8 @@ Use the microflow `ChatCompletions_Execute_WithHistory` to execute a chat comple
 | `Configuration`          | [Configuration](#configuration-entity)                | mandatory                     | This is an object that contains endpoint and API key.        |
 | `Model`                  | String                                                | only mandatory for **OpenAI** | This is the ID of the model to use; not considered for **Azure OpenAI** configurations. |
 | `ResponseFormat`         | [ENUM_ResponseFormat_Chat](#enum-responseformat-chat) | optional                      | This can be used to specify the format that the model must output. |
-| `Temperature`            | Decimal                                               | optional                      | This can be used to control the randomness of the output: lower means more deterministic while higher means more creative. Note: high values for temperature (>1.7) may give unexpected results and even internal server errors. |
+| `Temperature`            | Decimal                                               | optional                      | This can be used to control the randomness of the output. The value should be a decimal between 0.0 and 2.0. The default value is 1.0. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. Note: high values for temperature (>1.7) may give unexpected results and even internal server errors. |
+| `FunctionCollection`     | Object                                                | optional                      | A collection of functions to be sent along with the ChatCompletionsRequest as tools. |
 
 **Return value**
 

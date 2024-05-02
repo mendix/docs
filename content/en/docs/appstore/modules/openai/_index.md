@@ -71,10 +71,6 @@ With the current version, Mendix supports the Chat Completions API for [text gen
 
 The current scope of the connector is focused on text and image generation use cases, as well as embeddings. We try to release early and often, so keep your eyes open for new releases!
 
-#### 1.3.1 Function Calling Limitations
-
-Function microflows are currently limited to one input parameter of type string and must return a string. Furthermore, function microflows do not respect entity access of the current user. Make sure that you only return information that the user is allowed to view, otherwise confidential information may be visible to the current user in the assistant's response. See XYZ.
-
 ### 1.4 Prerequisites {#prerequisites}
 
 You should have [signed up](https://platform.openai.com/) for an OpenAI account, or have access to deployments at [Azure OpenAI](https://oai.azure.com/).
@@ -202,7 +198,9 @@ For technical details, see the [Technical reference](#chat-completions-advanced-
 
 #### 3.2.4 Function Calling {#chatcompletions-functioncalling}
 
-Function calling enables the LLM to intelligently decide when to let the Mendix app call a predefined function microflow to gather additional information to include in the assistant's response. OpenAI does not call the function; instead, the model returns a tool call JSON structure that is used to build the input of the function so that it can be executed. Functions in Mendix are essentially microflows that can be registered as part of the request to the LLM​. Currently, function microflows are limited to one input parameter of type string and must return a string. Function calling is supported for all chat completions operations by adding the optional input parameter FunctionCollection.
+Function calling enables the LLM to intelligently decide when to let the Mendix app call a predefined function microflow to gather additional information to include in the assistant's response. OpenAI does not call the function; instead, the model returns a tool call JSON structure that is used to build the input of the function so that it can be executed. Functions in Mendix are essentially microflows that can be registered as part of the request to the LLM​. Currently, function microflows are limited to one input parameter of type string and must return a string. Furthermore, function microflows do not respect entity access of the current user. Make sure that you only return information that the user is allowed to view, otherwise confidential information may be visible to the current user in the assistant's response.
+
+Function calling is supported for all chat completions operations by adding the optional input parameter FunctionCollection.
 Two helper microflow are available to construct the `FunctionCollection` with a list of `Functions`:
 
 * `FunctionCollection_CreateAndAddFunction` can be used to initialize a new `FunctionCollection` and add a new `Function` to it in order to enable [function calling](#chatcompletions-functioncalling).

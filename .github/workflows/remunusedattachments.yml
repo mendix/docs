@@ -17,22 +17,26 @@ jobs:
     runs-on: ubuntu-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+
+      # Checks out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout repo
-        uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
+        uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.10' 
       - run: python _scripts/removeUnusedAttachments.py
+
+      # Creates pull request
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v4
+        uses: peter-evans/create-pull-request@v6
         with:
           commit-message: Run removeUnusedAttachments.py on docs
           title: '[Auto] Remove unused attachments'
           body: |
-            Pull Request to delete attachments shich are no longer used.
+            Pull Request to delete attachments that are no longer used.
             Check the htmltest output from the CI/CD pipeline to ensure that nothing has been removed accidentally.
           branch: rem-unused-attachments
+          committer: MarkvanMents <Mark.van.Ments@mendix.com>
           assignees: MarkvanMents
           reviewers: MarkvanMents
           labels: Internal WIP

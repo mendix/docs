@@ -17,6 +17,12 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 ## 2024
 
+### May 1 {#may-1-24}
+
+#### New Features
+
+* The [Jira connector](/developerportal/project-management/jira-connector/) is now released for GA.
+
 ### April 25
 
 #### Improvements
@@ -183,6 +189,10 @@ We have made the following improvements to the **Access Management** page in Por
 #### Improvements
 
 * We made some minor adjustments to the [Jira Connector](/developerportal/project-management/jira-connector/) based on your feedback. The list of Jira issues in Studio Pro is now ordered by the story key, instead of the Jira rank attribute. We also made the configuration pop-up window that appears when setting up your Jira connection more clear.
+
+#### Deprecations
+
+* We removed **Company Buzz**. 
 
 ### November 9, 2023
 

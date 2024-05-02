@@ -93,11 +93,11 @@ The browse action lets you traverse from one node to others. The input object fo
 * Node Class Mask. Specifies the NodeClasses of the TargetNodes. Only TargetNodes with the seleted NodeClasses are returned.
 * * Note that this fields must be supplied in decimal format, while the interpretation is in binary format.
   * The bits represent in order: Object, Variable, Method, ObjectType, VariableType, ReferenceType, DataType, View.
-  * Example: Browsing only Objects, ObjectTypes and View is binary represented by [1,1,0,0,0,0,0,1] <br> which is in decimal representation 2^0 + 2^1 + 2^7 = 131.
+  * Example: Browsing only Objects, ObjectTypes and View is binary represented by [1,1,0,0,0,0,0,1] <br> which is in decimal representation 2<sup>0</sup> + 2<sup>1</sup> + 2<sup>7</sup> = 131.
 * Result Mask. Specifies the fields in the reference description structure that should be returned. 
 * * Note that this fields must be supplied in decimal format, while the interpretation is in binary format.
   * The bits represent in order: ReferenceType, IsForward, NodeClass, BrowseName, DisplayName, TypeDefinition.
-  * Example: Requesting only the field DisplayName is binary represented by [0,0,0,1,0,0] <br> which is in decimal representation 2^3 = 8.
+  * Example: Requesting only the field DisplayName is binary represented by [0,0,0,1,0,0] <br> which is in decimal representation 2<sup>3</sup> = 8.
 
 
 

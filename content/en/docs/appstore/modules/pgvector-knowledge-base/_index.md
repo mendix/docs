@@ -381,7 +381,7 @@ Activities that support the deletion of knowledge bases.
 
 #### 4.3.4.1 Delete Knowledge Base {#delete-technical}
 
-Use this operation to delete a complete knowledge base at once. This operation takes care of the deletion of the actual tables including all data for the specified knowledge base. If for the provided `KnowledgeBaseName` there is no table structure present, nothing will happen, the operation will finish successfully.
+Use this operation to delete a complete knowledge base at once. This operation takes care of the deletion of the actual tables including all data for the specified knowledge base. The operation will finish successfully, even if there is no table structure present for the provided `KnowledgeBaseName`.
 
 **Input parameters**
 
@@ -394,7 +394,7 @@ Use this operation to delete a complete knowledge base at once. This operation t
 
 | Name                 | Type                                      | Description                                                  |
 | -------------------- | ----------------------------------------- | ------------------------------------------------------------ |
-| `IsSuccess` | Boolean | This boolean indicates if the deletion of the knowledge base was successful. This can be used for custom error-handling. Note that if the for the provided `KnowledgeBaseName` there is no table structure present, the operation will still finish successfully |
+| `IsSuccess` | Boolean | This boolean indicates if the deletion of the knowledge base was successful. This can be used for custom error-handling.|
 
 ## 5 Showcase Application {#showcase-application}
 

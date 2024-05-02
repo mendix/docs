@@ -10,7 +10,7 @@ tags: ["incoming requests", "IP Range", "security", "paths", "URL", "certificate
 
 ## 1 Introduction
 
-Your app is accessible over the internet – but you may not want everyone to be able to access it. For fine-grained control over external access to your application, configure the access restrictions.
+Your app is accessible over the internet—but you may not want everyone to be able to access it. For fine-grained control over external access to your application, configure the access restrictions.
 
 You can apply restrictions to the top level of the application URL (`/`). You can also apply restrictions to more specific paths (such as `/ws/` or `/odata/`). This allows you to, for example, open up web services without giving general users access to the app itself. Presets are available to simplify common requirements, such as allowing or denying all access. In addition, custom profiles can be created using IP range filters and client certificate authorities (CAs).
 

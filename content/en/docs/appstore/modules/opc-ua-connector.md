@@ -79,7 +79,21 @@ The association does not have to be set in the domain model but can be used to c
 If you ever want to reject a certificate from the server, the "untrust certificate" action will remove the certificate from the list to trusted certificates.
 
 ### ~2.1 Browsing
-Browsing lets you navigate the content of the server
+Browsing lets you navigate the content of the server. There are three implementations provided that will be sufficient for most use cases. These are 
+* Get Roots. Retrieves the top level nodes of the server
+* Get Children. Retrieves the sub level node for a given node.
+* Get Parent. Retrieve the parent node for a given node.
+
+#### ~2.1.1 The Browse action
+The browse action lets you traverse from one node to others. The input object for the action is a BrowseDescription. The BrowseDescription contains the following fields.
+* Node ID. The node ID of the node from where you want to browse.
+* Browse directions. In which direction to traverse.
+* Node ID reference type. Specifies the Node ID of the reference type to follow. If left empty, returns all references.
+* Include subtypes. Indicates whether subtypes of the ReferenceType should be included.
+* Node Class Mask. Specifies the NodeClasses of the TargetNodes. Only TargetNodes with the seleted NodeClasses are returned.
+* Result Mask. Specifies the fields in the reference description structure that should be returned
+
+
 
 
 ## 3 Usage

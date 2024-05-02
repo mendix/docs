@@ -91,7 +91,10 @@ The browse action lets you traverse from one node to others. The input object fo
 * Node ID reference type. Specifies the Node ID of the reference type to follow. If left empty, returns all references.
 * Include subtypes. Indicates whether subtypes of the ReferenceType should be included.
 * Node Class Mask. Specifies the NodeClasses of the TargetNodes. Only TargetNodes with the seleted NodeClasses are returned.
-* Result Mask. Specifies the fields in the reference description structure that should be returned
+* * Note that this fields must be supplied in decimal format, while the interpretation is in binary format.
+  * The bits represent in order: Object, Variable, Method, ObjectType, VariableType, ReferenceType, DataType, View.
+  * Example: Browsing only Objects, ObjectTypes and View is binary represented by [1,1,0,0,0,0,0,1] <br> which is in decimal representation 2^0 + 2^1 + 2^7 = 131.
+* Result Mask. Specifies the fields in the reference description structure that should be returned. 
 
 
 

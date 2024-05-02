@@ -48,20 +48,25 @@ Configure each data ingestion job by specifying the endpoint, authentication det
 1. **Endpoint**: URL to your Mendix application’s OData service.
 2. **Authentication**: Provide username and password for accessing the OData service.
 3. **Target Database Name**: Specify the Snowflake database target for the data ingestion.
-4. **Generate and Execute SQL Script**: This step needs to be executed for every data ingestion endpoint once. Click the `Generate Script` button to produce and execute the required SQL scripts with necessary privileges.
+4. **Target Schema Name**: Specify the target schema name where all the data will be ingested in to. Every time an ingestion is performed all data already present in the target schema will be removed/replaced.
+5. **Generate and Execute SQL Script**: This step needs to be executed for every data ingestion endpoint once. Click the `Generate Script` button to produce and execute the required SQL scripts with necessary privileges.
 
 ### 3.3 Executing and Monitoring Ingestion
 
-1. **Re-enter data ingestion configuration**: After executing the SQL script, granting the application with the privileges it needs to operate, you must re-enter the same details in the form.
-2. **Ingest Data**: After setting up, use the `Ingest Data` button to start the data transfer.
-3. **View Results**: Check the job ID and verify the data in the specified target database.
+1. **Ingest Data**: After setting up, use the `Ingest Data` button to start the data transfer. All ingested data will be stored in [transient tables](https://docs.snowflake.com/en/user-guide/tables-temp-transient#transient-tables).
+2. **View Results**: Check the job ID and verify the data in the specified target database.
 
 ## 4 Technical Reference
 
-### 4.1 Troubleshooting
+### 4.1 Current Limitations
+
+1. At present the Mendix Data Loader supports username and password authentication so please make sure to use this setting when setting up your Odata service.
+2. We don't yet support associations (they are not handled using explicit foreign key columns yet).
+
+### 4.2 Troubleshooting
 
 No known issues known at present. For any troubleshooting, contact the [development team](mailto:sa_dev_team@mendix.com).
 
-### 4.2 Contact Information
+### 4.3 Contact Information
 
 For support or queries regarding the Mendix Data Loader, please email the development team at [SA_Dev_Team@mendix.com](mailto:sa_dev_team@mendix.com).

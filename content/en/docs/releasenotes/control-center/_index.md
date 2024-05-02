@@ -13,6 +13,12 @@ To see the current status of the Mendix Control Center, see [Mendix Status](http
 
 ## 2024
 
+### May 9, 2024
+
+#### New Features
+
+* We have added a new tab on the **Apps** page: the Mendix Private Cloud tab. Here you get an overview of all the apps deployed on Mendix Private Cloud Connected.
+
 ### April 4, 2024
 
 #### New Features

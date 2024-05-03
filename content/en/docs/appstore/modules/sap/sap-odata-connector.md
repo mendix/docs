@@ -141,7 +141,7 @@ You can now run your app and see a list of the products available in the **GWBAS
 
 You can run OData actions asynchronously by using the [Mendix Task Queue](/refguide/task-queue/). To use any of the OData actions through the Task Queue, follow these steps:
 
-1. Edit the microflow where you want to use the Task Queue.
+1. Edit the microflow which you want to run as a task using the Task Queue.
 2. From the **Toolbox**, drag a **Set Task Queue Processing** action into your microflow, as show in the following figure:
 
     {{< figure src="/attachments/appstore/modules/sap-odata-connector/task-queue.png" class="no-border" >}}

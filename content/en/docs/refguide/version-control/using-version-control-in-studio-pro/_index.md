@@ -22,7 +22,7 @@ To start a new app with version control, do the following:
 1. Open Studio Pro.
 2. In the **Select App** dialog box, click **Create New App**. 
 3. Select the starting point – an app template.
-4. In the **App Settings** dialog box, make sure that **Enable online services** is set to *Yes*. This option creates a Team Server repository and an app in the Developer Portal.
+4. In the **App Settings** dialog box, make sure that **Enable online services** is set to *Yes*. This option creates a remote (Team Server) repository and an app in the Developer Portal.
 5. Optionally, change the default **App directory** set by Studio Pro.
 6. Click **Create app**.
 
@@ -46,7 +46,7 @@ The app will be downloaded from the Team Server and opened in Studio Pro.
 
 Let us say you have a working copy of an app on disk. You make changes to the app and save them. Saved changes are not immediately visible to others. The documents, folders, and modules that have been changed can be identified by looking at the **status**.
 
-When you are happy with a set of changes, you **commit** them to the repository. Others can then choose to update/pull and retrieve those changes.
+When you are happy with a set of changes, you **commit** them to the remote repository (Team Server). Others can then choose to update/pull and retrieve those changes.
 
 You can **update/pull** your working copy with changes committed by others.
 
@@ -54,7 +54,7 @@ You can also see a **history** of all the changes that have been committed, no m
 
 ### 4.1 Status
 
-The status of your app is a summary of all the changes in your working copy when compared with the original. Studio Pro shows the status both in the **App Explorer** and in the **Changes** pane.
+The status of your app is a summary of all the changes in your working copy when compared with the original ("original" in this document is used as a three-way compare: my changes, their changes, original). Studio Pro shows the status both in the **App Explorer** and in the **Changes** pane.
 
 The **App Explorer** shows an icon in front of items (such as documents, folders, and modules) to present that are changed in some way. The different icons indicate the different kinds of changes which have been made.
 
@@ -83,13 +83,13 @@ When you successfully commit your app, this becomes the new original and all the
 
 ### 4.2 Committing
 
-Sending changes to the repository is called committing. The idea is that you commit small, consistent pieces of work to the repository. Mendix recommends committing your changes often. Preferably, the versions in the repository are always error-free. Studio Pro warns against committing while there are errors in your app.
+Sending changes to the remote repository is called committing. The idea is that you commit small, consistent pieces of work to the repository. Mendix recommends committing your changes often. Preferably, the versions in the repository are always error-free. Studio Pro warns against committing while there are errors in your app.
 
 To commit your changes, click the **Commit** button in the **Changes** pane, or choose the **Version Control** > **Commit** menu item.
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-button.png" max-width=60% alt="Commit Button" >}}
 
-Git only creates a local commit. To submit your local commit (or commits) to the centralized server, you need to **push** your changes (pushing changes is selected by default in the **Commit** dialog box). As a result, your local changes are committed faster, and you can roll back to a previous state without having to contact the version control server.
+Git only creates a local commit. To submit your local commit (or commits) to the remote repository, you need to **push** your changes (pushing changes is selected by default in the **Commit** dialog box). As a result, your local changes are committed faster, and you can roll back to a previous state without having to contact the version control server.
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/local-repo-and-team-server.png" alt="Local Repository and Team Server" class="no-border" >}}
 
@@ -123,7 +123,7 @@ Committing is only allowed if your working copy is up to date with the repositor
 
 ### 4.3 Pushing {#pushing}
 
-Pushing is sending your local changes to the Team Server. After committing, you need to push the committed changes if you want them to be accessible to others. By default, this is done when committing, but it is possible to wait for this step until later.
+Pushing is sending local changes from your working copy to the Team Server. After committing, you need to push the committed changes if you want them to be accessible to others. By default, this is done when committing, but it is possible to wait for this step until later.
 
 To push changes, select **Version Control** > **Push** or make sure that the **Also push changes to the remote server** setting is set to **Yes** in the **Commit** dialog box. By doing so, changes are pushed automatically when you commit them:
 
@@ -149,7 +149,7 @@ Git prevents you from pushing your changes if it sees your changes and the remot
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/server-your-work.png" alt="The local changes consist of commits 1, 4, and 5 while the remote server has commits 1, 2, and 3 on the same branch." class="no-border" >}} 
 
-When you pull the changes, Studio Pro will merge the changes from the branch on the server into your local copy of the branch. After solving any conflicts, you need to make a ‘merge commit’. This commit contains any changes that have happened during integration of remote changes into yours.
+When you pull the changes, Studio Pro will merge the changes from the branch on the server into your working copy of the branch. After solving any conflicts, you need to make a ‘merge commit’. This commit contains any changes that have happened during integration of remote changes into yours.
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/merge-commit.png" alt="The local changes and the remote changes are combined into a merge commit which is pushed to the remote server." class="no-border" >}} 
 
@@ -160,13 +160,13 @@ There are two possible scenarios when merging and needing to make a merge commit
 
 ### 4.4 Pulling
 
-Pulling retrieves the latest changes from the repository. You need to do this to incorporate any changes made by others that are not yet in your working copy before you can commit your changes to the repository. It is advisable to frequently update so that the number of changes you retrieve is small.
+Pulling retrieves the latest changes from the remote repository. You need to do this to incorporate any changes made by others that are not yet in your working copy before you can commit your changes to the repository. It is advisable to frequently update so that the number of changes you retrieve is small.
 
 To update the working copy of your app, click **Pull** in the **Changes** pane, or choose the **Version Control** > **Pull** menu item.
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/pull-button.png" max-width=60% alt="Pull Button" >}}
 
-Changes you receive from the repository when pulling are combined with the changes you have made to your working copy (if any). Afterwards, your working copy will contain both your changes and the changes you received. As part of the pull, the original of your working copy is updated as well.
+Changes you receive from the remote repository when pulling are combined with the changes you have made to your working copy (if any). Afterwards, your working copy will contain both your changes and the changes you received. As part of the pull, the original of your working copy is updated as well.
 
 For example, if the last time you pulled you received all changes up to and including revision N, this means that the original for your working copy is revision N. Since you started making changes to your working copy, other people on your team have made another three commits (X, Y, and Z). If you now pull, you will receive those changes and Z will be the new *original* to which your changes are compared.
 
@@ -204,7 +204,7 @@ For more information, see [Combining Changes and Conflict Resolution](/refguide/
 
 ## 7 Using Branches
 
-A repository can contain a number of development lines. Each development line offers independent development from the other development lines. In the simple case there is just one development line called the main line. All development then happens inside that one line.
+A repository (remote or local) can contain a number of development lines. Each development line offers independent development from the other development lines. In the simple case there is just one development line called the main line. All development then happens inside that one line.
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/main-branch-line.png" class="no-border" >}}
 
@@ -272,7 +272,7 @@ Reverting changes is done with one commit at a time. If you want to revert multi
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/revert-changes-git.png" class="no-border" >}}
 
-After a reverse merge the app will look like the changes never happened; if you 'reverse merge' the adding of a page, the page will be deleted locally. Just like when you are doing a normal merge, conflicts can arise. In the example, if later commits change the added page, the reverse merge will result in a conflict. After resolving any problems, you can commit the results to the repository.
+After a reverse merge the app will look like the changes never happened; if you 'reverse merge' the adding of a page, the page will be deleted locally. Just like when you are doing a normal merge, conflicts can arise. In the example, if later commits change the added page, the reverse merge will result in a conflict. After resolving any problems, you can commit the results to the remote repository.
 
 #### 7.1.4 Replacing the Main Line with a Branch Line
 
@@ -331,13 +331,13 @@ While developing, you can deploy and run your app on your local machine by click
 
 ### 8.2 Deploying Your Working Copy
 
-When you deploy to the cloud, you can choose to use the version of the app stored on your local machine, the *working copy* and deploy that to the default environment. If you are using the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), or other partner cloud (SAP BTP, for example), click **Publish** to commit the version of the app stored on your local machine and deploy that to the default environment.
+When you deploy to the cloud, you can choose to use the version of the app stored on your local machine, the working copy and deploy that to the default environment. If you are using the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), or other partner cloud (SAP BTP, for example), click **Publish** to commit the version of the app stored on your local machine and deploy that to the default environment.
 
 ### 8.3 Choosing a Specific Development Line and Revision
 
 It is also possible to choose a specific development line and revision to deploy to the default environment, or to create a package from.
 
-In this case, Studio Pro will create a fresh checkout of the chosen revision. This means that any team member can always recreate this version of the deployment package. In other words, Studio Pro does *not* rely on your local files for creating a versioned deployment package.
+In this case, Studio Pro will create a fresh checkout of the chosen revision. This means that any team member can always recreate this version of the deployment package. In other words, Studio Pro does not rely on your local files for creating a versioned deployment package.
 
 {{% alert color="warning" %}}
 You can only create a versioned deployment package of changes that have been committed. If you have local changes that you want to deploy in a versioned deployment package, commit them first.

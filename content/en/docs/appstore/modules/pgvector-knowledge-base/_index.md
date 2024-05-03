@@ -105,7 +105,7 @@ A typical pattern for retrieval from a knowledge base is as follows:
 2. Use [Create Label](#create-label) as many times as needed to add the necessary labels.
 3. Do the retrieve, e.g. use [`Retrieve Nearest Neighbors`](#retrieve-nearest-neighbors) to find chunks based on vector similarity.
 
-For scenarios in which the chunks were created based on Mendix objects at the time of population, and these objects need to be used in logic after the retrieval step, two additional operations are available. The Java Actions [Retrieve & Associate](#retrieve-associate) and [Retrieve Nearest Neighbors & Associate](#retrieve-neirest-neighbors-associate) take care of the chunk retrieval and set the association towards the original object, if applicable.
+For scenarios in which the chunks were created based on Mendix objects at the time of population, and these objects need to be used in logic after the retrieval step, two additional operations are available. The Java Actions [Retrieve & Associate](#retrieve-associate) and [Retrieve Nearest Neighbors & Associate](#retrieve-nearest-neighbors-associate) take care of the chunk retrieval and set the association towards the original object, if applicable.
 
 A typical pattern for this retrieval is as follows:
 

@@ -5,8 +5,10 @@ category: "API Documentation"
 type: swagger
 description: "This API allows you to manage your projects and their teams."
 weight: 100
-deprecated: false
+beta: true
 ---
+
+{{% alert color="info" %}} This feature is currently in beta. For more information, see [Beta Releases](/releasenotes/beta-features). {{% /alert %}}
 
 ## 1 Introduction
 

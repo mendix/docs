@@ -334,7 +334,7 @@ In this case, the OIDC client is the app you are making.
 | Default Microflow | Use |
 | --- | --- |
 | OIDC_CustomUserParsing_Standard | It implements some standard OpenID claims to find/provision a user. |
-| OIDC_CustomUserParsing_UserInfo | It is similar as standard OIDC user provisioning flow, except it works with identity providers that use `opaque` tokens. |
+| OIDC_CustomUserParsing_UserInfo | It is similar as standard OIDC user parsing flow, except it works with identity providers that use `opaque` tokens. |
 | OIDC_CustomUserParsing_Salesforce | It offers an `id` endpoint that retrieves information about user. You can use OpenID token (`id_token`) to map user attributes. |
 
 In version below 3.0.0 of the OIDC SSO module, you can configure the timezone and language using the `OIDC_CustomUserParsing_Standard` and `OIDC_CustomUserParsing_UserInfo` microflow. However, in version 3.0.0 and above of the OIDC SSO module, you can set the timezone and language using any standard microflow.
@@ -388,10 +388,6 @@ Users who are part of the user pool you created in Amazon Cognito can now log in
 
 In version 2.3.0 and above, you can configure the OIDC SSO module using app [constants](/refguide/constants/) rather than using the app's administration pages. As the developer of an app using OIDC SSO, you can set default values. These values can be overridden using the app’s constants.
 
-{{% alert color="info" %}}
-When using OIDC version 3.0.0 and above, `preferred_username` is provided as default IdP principle attribute. However, it is mandatory to configure the `PrincipalIdPAttribute` constant as `sub` if you have created an IdP configuration using deploy-time constants feature in the version below 3.0.0 of the OIDC module.
-{{% /alert %}}
-
 To enable the use of app constants to configure the OIDC SSO module, configure your app to run the Startup microflow in the OIDC module (OIDC.Startup) as (part of) the [after startup](/refguide/app-settings/#after-startup) microflow.
 
 Use the following security best-practices when setting up your constants:
@@ -421,8 +417,8 @@ The following constants are mandatory when creating an OIDC SSO configuration an
 * **ClientSecret** – the client secret (see security best-practice, above)
 * **AutomaticConfigurationURL** – the URL of the well-known endpoint
 * **CustomUserEntity** – a custom user entity
-* **PrincipalAttribute** – the attribute holding the unique identifier of an authenticated user
-* **IdPAttribute** – the IdP claim which is the unique identifier of an authenticated user
+* **PrincipalEntityAttribute** – the attribute holding the unique identifier of an authenticated user
+* **PrincipalIdPAttribute** – the IdP claim which is the unique identifier of an authenticated user
 
 For more information, see the [Custom User Provisioning at Deploy Time](#custom-provisioning-dep) section.
 
@@ -450,9 +446,9 @@ The following constants are optional:
 
     Example: `openid profile email`
 
-* **UserProvisioningFlow** (*default: Standard OIDC*) – the custom user provisioning — the `caption` of OIDC.ENU_UserProvisioningFlows
+* **UserParsingFlow** (*default: OIDC_CustomUserParsing_Standard*) – the custom user provisioning — the `caption` of OIDC.ENU_UserProvisioningFlows
 
-    Example: `Standard OIDC`
+    Example: `OIDC_CustomUserParsing_Standard`
 
 * **SessionEndPoint** – the end session endpoint
 
@@ -478,10 +474,6 @@ By default, the `CUSTOM_UserProvisioning` microflow in the **USE_ME** > **1. Con
 
 {{% alert color="warning" %}}
 Do not change the `OIDC_CustomUserParsing_Standard` microflow. This may give problems if you upgrade to a newer version of the OIDC SSO module. Apply customizations to the `CUSTOM_UserProvisioning` microflow only.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-The previous versions of the OIDC module below version 3.0.0 use `sub` as the primary identifier. If you are using version 3.0.0 and above of the OIDC module, you need to use `preferred_username` as the primary identifier.
 {{% /alert %}}
 
 ### 6.2 Custom User Provisioning{#custom-provisioning}
@@ -514,8 +506,8 @@ You can set up custom user provisioning by setting the following constants. You 
 | Constant | Use | Notes | Example |
 | --- | --- | --- | --- |
 | CustomUserEntity | a custom user entity | in the form `modulename.entityname` – a specialization of `System.User` | `Administration.Account` |
-| PrincipalAttribute | the attribute holding the unique identifier of an authenticated user | | `Name` |
-| IdPAttribute | the IdP claim which is the unique identifier of an authenticated user | | `preferred_username` |
+| PrincipalidPAttribute | the attribute holding the unique identifier of an authenticated user | | `Name` |
+| IdPAttribute | the IdP claim which is the unique identifier of an authenticated user | | `sub` |
 | AllowcreateUsers | allow to create users in the application | *optional* | `True` |
 | Userrole | the role which will be assigned to newly created users | *optional* | `User` |
 | UserType | assign usertype to the created users | *optional* | `Internal` |
@@ -747,7 +739,7 @@ For versions of the OIDC SSO module below 2.0.0, the process is a bit more compl
 1. Use the access token to determine the roles the user has within your app when signed in using the OIDC module.
 1. Convert these roles to a list of objects containing the user role.
 1. Return a list of objects of type `System.UserRole`.
-1. Invoke the `BCO_Account_ProcessRolesToken` in the **SAM** folder of the OIDC module to associate the current user with the correct user roles in your app.
+1. Invoke the `SUB_Update_OIDCUserRole` in the **SAM** folder of the OIDC module to associate the current user with the correct user roles in your app.
 
 For all versions of the OIDC SSO module, once you have created the microflow (for example `CustomATP_xxx`), you must do the following:
 

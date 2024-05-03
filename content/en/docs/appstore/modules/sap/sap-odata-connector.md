@@ -135,9 +135,7 @@ To create a page to show the objects in a list, follow these steps:
 5. Drag a **open page button** on your home page.
 6. Select the page you have just created to be displayed.
 
-{{% alert color="success" %}}
-Congratulations! You can now run your app and see a list of the products available in the **GWBASIC_SAMPLE** application.
-{{% /alert %}}
+You can now run your app and see a list of the products available in the **GWBASIC_SAMPLE** application.
 
 #### 3.2.3 Running OData Actions with the Mendix Task Queue
 

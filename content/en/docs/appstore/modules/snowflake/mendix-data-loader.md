@@ -3,7 +3,7 @@ title: "Mendix Data Loader"
 url: /appstore/modules/snowflake/mendix-data-loader/
 description: "Describes the configuration and usage of the Mendix Data Loader application from the Snowflake Marketplace."
 weight: 20
-tags: ["marketplace", "marketplace component", "snowflake", "data loader"]
+tags: ["snowflake marketplace", "snowflake marketplace component", "snowflake", "data loader"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
@@ -30,7 +30,7 @@ Depending on your use case, your deployment environment, and the type of app tha
 
 ## 2 Installation
 
-Follow the procedures for adding marketplace components to your Snowflake environment. For detailed instructions, see [Install an app from a listing](https://other-docs.snowflake.com/en/native-apps/consumer-installing).
+Follow instructions in [Install an app from a listing](https://other-docs.snowflake.com/en/native-apps/consumer-installing) to add the component to your Snowflake environment.
 
 ## 3 Configuration
 

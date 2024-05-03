@@ -13,16 +13,14 @@ The [Mendix Data Loader](https://app.snowflake.com/marketplace/listing/GZTDZHHID
 
 ### 1.1 Typical Use Cases
 
-The Mendix Data Loader supports a range of data ingestion tasks, enabling organizations to leverage their operational data within Snowflake for analytical purposes. Key functionalities include:
-
-* Ingesting data from Mendix to Snowflake
+The Mendix Data Loader supports a range of data ingestion tasks, enabling organizations to leverage their operational data within Snowflake for analytical purposes. The key functionalities include ingesting data from Mendix to Snowflake.
 
 ### 1.2 Prerequisites {#prerequisites}
 
-To use the Mendix Data Loader, you must have:
+To use the Mendix Data Loader, you must have the following:
 
-* A Mendix application with a [published OData service](https://docs.mendix.com/refguide/published-odata-services/) with exposed entities.
-* A Snowflake environment.
+* A Mendix application with a [published OData service](https://docs.mendix.com/refguide/published-odata-services/) that includes exposed entities
+* A Snowflake environment
 
 ### 1.3 Licensing and Cost
 

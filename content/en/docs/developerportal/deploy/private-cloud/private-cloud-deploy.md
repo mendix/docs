@@ -444,8 +444,6 @@ This allows you to change the password for the [Mendix administration account](/
 
 Please make sure that the password set in the portal fulfills the password requirements set in Studio Pro. For security purpose, the password must have at least eight characters, including at least one special character, one capital letter, and one number.
 
-[Mendix for Private Cloud Deploy API](/apidocs-mxsdk/apidocs/private-cloud-deploy-api/).
-
 {{% alert color="info" %}}
 By default, there will be no admin password set for your environment. This means that the Mendix administration account will be inactive unless you set (change) a password.
 {{% /alert %}}

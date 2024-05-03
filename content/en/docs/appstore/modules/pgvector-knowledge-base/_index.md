@@ -67,23 +67,23 @@ After following the general setup above, you are all set to use the microflows a
 
 #### 3.2.1 `Create label` {#create-label}
 
-Labels can optionally be used to attach additional information to chunks. That will be used for custom filtering during the retrieval step. Each Label stands for a single key-value combination. In the operations to create a knowledge base Chunk, a list of Labels can be passed as optional input. During the retrieval, if a list of Labels is provided as search input, all key-value pairs passed in the form of Label objects to the operation must match any previously-attached labels to the chunk during population. Examples for typical key-value pairs are:
+Labels can optionally be used to attach additional information to chunks. That will be used for custom filtering during the retrieval step. Each Label stands for a single key-value combination. In the operations to create a knowledge base chunk, a list of Labels can be passed as optional input. During the retrieval, if a list of Labels is provided as search input, all key-value pairs passed in the form of Label objects to the operation must match any previously-attached labels to the chunk during population. Examples for typical key-value pairs are:
 * Category: Bug, Feature
 * Status: Open, Closed, In Progress
 * Machine Type: MachineX, MachineY
 
 ### 3.3 (Re)populate Operations {#repopulate-operations-configuration}
 
-In order to add data to the knowledge base, you need to have discrete pieces of information and create chunks for those using the `Create Chunk` operation. After you create the Chunks, the resulting list can be inserted into the knowledge base using the `(Re)populate Knowledge Base` operation. 
+In order to add data to the knowledge base, you need to have discrete pieces of information and create chunks for those using the `Create Chunk` operation. After you create the chunks, the resulting list can be inserted into the knowledge base using the `(Re)populate Knowledge Base` operation. 
 
 A typical pattern for populating a knowledge base is as follows:
 
-1. Create a new List of Chunk.
+1. Create a new list of `Chunk`.
 2. For each knowledge item, do the following:
-    * Create a new list of Label.
+    * Create a new list of `Label`.
     * Use [Create label](#create-label-technical) as many times as needed to add the necessary labels.
     * With both lists, use [Create chunk](#create-chunk-technical) for the knowledge item.
-3. With the list of Chunk, use [(Re)populate Knowledge Base](#repopulate-knowledge-base) to store the Chunks.
+3. With the list of `Chunk`, use [(Re)populate Knowledge Base](#repopulate-knowledge-base) to store the chunks.
 
 #### 3.3.1 `(Re)populate Knowledge Base` {#repopulate-knowledge-base}
 
@@ -92,7 +92,7 @@ This operation handles the following:
 * creating the empty knowledge base if it does not exist
 * inserting all provided chunks with their labels into the knowledge base
 
-The population handles a whole list of Chunks at once which should be created by using the `Create Chunk` operation. It is possible to have multiple knowledge bases in the same database in parallel by providing different knowledge base names in combination with the same [DatabaseConfiguration](#databaseconfiguration-entity).
+The population handles a whole list of chunks at once which should be created by using the `Create Chunk` operation. It is possible to have multiple knowledge bases in the same database in parallel by providing different knowledge base names in combination with the same [DatabaseConfiguration](#databaseconfiguration-entity).
 
 
 ### 3.4 Retrieve Operations {#retrieve-operations}
@@ -103,15 +103,15 @@ A typical pattern for retrieval from a knowledge base is as follows:
 
 1. Create a list of label.
 2. Use [Create Label](#create-label) as many times as needed to add the necessary labels.
-3. Do the retrieve, e.g. use [`Retrieve Nearest Neighbors`](#retrieve-nearest-neighbors) to find Chunks based on vector similarity.
+3. Do the retrieve, e.g. use [`Retrieve Nearest Neighbors`](#retrieve-nearest-neighbors) to find chunks based on vector similarity.
 
-For scenarios in which the Chunks were created based on Mendix objects at the time of population, and these objects need to be used in logic after the retrieval step, two additional operations are available. The Java Actions [Retrieve & Associate](#retrieve-associate) and [Retrieve Nearest Neighbors & Associate](#retrieve-neirest-neighbors-associate) take care of the chunk retrieval and set the association towards the original object, if applicable.
+For scenarios in which the chunks were created based on Mendix objects at the time of population, and these objects need to be used in logic after the retrieval step, two additional operations are available. The Java Actions [Retrieve & Associate](#retrieve-associate) and [Retrieve Nearest Neighbors & Associate](#retrieve-neirest-neighbors-associate) take care of the chunk retrieval and set the association towards the original object, if applicable.
 
 A typical pattern for this retrieval is as follows:
 
 1. Create a list of label.
 2. Use [Create Label](#create-label) as many times as needed to add the necessary labels.
-3. Do the retrieve, e.g. use [`Retrieve Nearest Neighbors & Associate`](#retrieve-nearest-neighbors-associate) to find Chunks based on vector similarity.
+3. Do the retrieve, e.g. use [`Retrieve Nearest Neighbors & Associate`](#retrieve-nearest-neighbors-associate) to find chunks based on vector similarity.
 4. Per retrieved chunk, retrieve the original Mendix object and do custom logic.
 
 #### 3.4.1 `Retrieve` {#retrieve}
@@ -178,17 +178,17 @@ This non-persistent entity is only used for editing the `DatabasePassword`. The 
 
 This entity represents a discrete piece of knowledge that needs to go into or comes out of the knowledge base. 
 
-| Attribute            | Description                                                                                   |
-| -------------------- | --------------------------------------------------------------------------------------------- |
-| `ChunkID`            | This is a system-generated GUID for the chunk in the knowledge base.      |
-| `HumanReadableID`    | This is a front-end reference to the chunk so that users know what it refers to (e.g. URL, document location, human-readable record ID)     |
-| `Vector`             | This is the embedding vector that was generated for the knowledge for this chunk which is used in the vector database for similarity calculations. |
-| `ChunkType`          | This is the type of the chunk. See the enumeration [ChunkType](#enum-chunktype).           |
-| `Key`                | This is the original string that was used to generate the vector and can be used directly after retrieval.           |
-| `Value`              | This represents a value that has no effect on the vector or similarity search but is to be used directly after retrieval.    |
-| `MxObjectID`         | If the chunk was based on a Mendix object during creation, this will contain the GUID of that object at the time of creation.     |
-| `MxEntity`           | If the chunk was based on a Mendix object during creation, this will contain its full entity name at the time of creation.    |
-| `Similarity`         | In case the chunk was retrieved from the knowledge base as part of a similarity search (e.g nearest neighbors retrieval) this will contain the cosine similarity to the input vector for the retrieval that was executed. |
+| Attribute         | Description                                                  |
+| ----------------- | ------------------------------------------------------------ |
+| `ChunkID`         | This is a system-generated GUID for the chunk in the knowledge base. |
+| `HumanReadableID` | This is a front-end reference to the chunk so that users know what it refers to (e.g. URL, document location, human-readable record ID) |
+| `Vector`          | This is the embedding vector that was generated for the knowledge for this chunk which is used in the vector database for similarity calculations. |
+| `ChunkType`       | This is the type of the chunk. See the enumeration [ChunkType](#enum-chunktype). |
+| `Key`             | This is the original string that was used to generate the vector and can be used directly after retrieval. |
+| `Value`           | This represents a value that has no effect on the vector or similarity search but is to be used directly after retrieval. |
+| `MxObjectID`      | If the chunk was based on a Mendix object during creation, this will contain the GUID of that object at the time of creation. |
+| `MxEntity`        | If the chunk was based on a Mendix object during creation, this will contain its full entity name at the time of creation. |
+| `Similarity`      | In case the chunk was retrieved from the knowledge base as part of a similarity search (e.g nearest neighbors retrieval) this will contain the cosine similarity to the input vector for the retrieval that was executed. |
 
 The **PgVectorKnowledgeBase.User** module role has read access to all attributes of `Chunk` which facilitates easy implementation on pages where retrieved data is shown.
 
@@ -246,24 +246,24 @@ Operations that support the (re)creation and population of a knowledge base.
 
 ##### 4.3.2.1 Create Chunk {#create-chunk-technical}
 
-The `Create Chunk` activity is intended for instantiating [Chunks](#chunk) to create the input for the knowledge base based on your own data structure. A ChunkList must be passed to which the new Chunk object will be added. Optionally, use [Create Label](#create-label-technical) to construct a list of Labels for custom filtering during the retrieval.
+The `Create Chunk` activity is intended for instantiating [chunks](#chunk) to create the input for the knowledge base based on your own data structure. A `ChunkList` must be passed to which the new chunk object will be added. Optionally, use [Create Label](#create-label-technical) to construct a list of Labels for custom filtering during the retrieval.
 
 **Input parameters**
 
 | Name             | Type                                                         | Mandatory                     | Description                                                  |
 | ---------------- | ------------------------------------------------------------ | ----------------------------- | ------------------------------------------------------------ |
-| `ChunkList`          | List of [Chunks](#chunk)                                                     | mandatory                     | This the (mandatory) list to which the Chunk will be added. This list is the input for other operations e.g. [(Re)populate](#repopulate-operations-technical).                          |
+| `ChunkList`          | List of [chunks](#chunk)                                                    | mandatory                     | This the (mandatory) list to which the chunk will be added. This list is the input for other operations e.g. [(Re)populate](#repopulate-operations-technical).                         |
 | `HumanReadableID`  | String                     | mandatory                     | This is a front-end identifier that can be used for showing or retrieving sources in a custom way. If it is not relevant, "empty" must be passed explicitly here.             |
 | `Vector`  | String                     | mandatory                     | This is the vector representation of the content of the chunk, based  on which the similarity search is executed as in the [Retrieve Nearest Neighbors](#retrieve-nearest-neighbors-technical) operation.            |
 | `Key`  | String                     | mandatory                     | This is supposed to contain the string content of the chunk for which the embedding was created. In cases where the retrieval of the actual data happens in a different way (e.g. using an identifier or a Mendix object) this can be left empty if not used; in that case  "empty" must be passed explicitly here.             |
-| `Value`  | String                     | optional                     | In the KeyValue ChunkType scenario, the chunk content that is relevant for the similarity search is different from the value that is relevant in the custom processing afterwards. This field can be used to store this information directly in the PgVector Knowledge Base.             |
+| `Value`  | String                     | optional                     | In the `KeyValue ChunkType` scenario, the chunk content that is relevant for the similarity search is different from the value that is relevant in the custom processing afterwards. This field can be used to store this information directly in the PgVector Knowledge Base.           |
 | `LabelList`          | List of [Labels](#label)                                                    | optional | This is an optional list that contains extra information about the chunk. Any Key-Value pairs can be stored with the chunk. In the retrieval operations it is possible to filter on one or multiple labels. |
 | `ChunkType`  | Enumeration of [ENUM_ChunkType](#enum-chunktype)                   | mandatory                     | This mandatory value describes whether the chunk represents a piece of knowledge (key only) or a key-value pattern, where the key is embedded and used in the retrieval step, but the value is used in the logic after [Retrieve Nearest Neighbors](#retrieve-nearest-neighbors-technical). If this is set to KeyValue, the Value string is ignored in this action.             |
 | `MxObject`  | Object                     | optional                    | This parameter is used to capture the Mendix object to which the chunk refers. This can be used to retrieve the record in the Mendix database later on.            |
 
 ##### 4.3.2.2 (Re)populate Knowledge Base {#repopulate-knowledge-base-technical}
 
-The `(Re)populate Knowledge Base` activity is used to populate a whole knowledge base at once. This operation handles a list of chunks with their labels in a single operation. By providing the `KnowledgeBaseName` parameter, you determine the knowledge base. It is used to later on to retrieve elements from the correct tables. This operation takes care of the creation of the actual tables. If there is already data from an earlier iteration for the provided `KnowledgeBaseName`, the data will be removed first. Use [Create Label](#create-label-technical) and [Create Chunk](#create-chunk-technical) to construct the input for this activity, which needs to be passed as ChunkList. The `DatabaseConfiguration` that is passed must contain the connection details to a PostgreSQL database server with the PgVector extension installed. This entity is typically configured at runtime or in [after-startup](/refguide/app-settings/#after-startup) logic.
+The `(Re)populate Knowledge Base` activity is used to populate a whole knowledge base at once. This operation handles a list of chunks with their labels in a single operation. By providing the `KnowledgeBaseName` parameter, you determine the knowledge base. It is used to later on to retrieve elements from the correct tables. This operation takes care of the creation of the actual tables. If there is already data from an earlier iteration for the provided `KnowledgeBaseName`, the data will be removed first. Use [Create Label](#create-label-technical) and [Create Chunk](#create-chunk-technical) to construct the input for this activity, which needs to be passed as `ChunkList`. The `DatabaseConfiguration` that is passed must contain the connection details to a PostgreSQL database server with the PgVector extension installed. This entity is typically configured at runtime or in [after-startup](/refguide/app-settings/#after-startup) logic.
 
 **Input parameters**
 
@@ -271,7 +271,7 @@ The `(Re)populate Knowledge Base` activity is used to populate a whole knowledge
 | ------------------- | --------------------------------------- | --------- | ----------------------------------------------------- |
 | `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the name of the knowledge base in your database.|
 | `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is to connect and authenticate to the database where the knowledge base is located.  |
-| `ChunkList`          | List of [Chunks](#chunk)                                                    | mandatory | This list is for inserting the [Chunks'](#chunk) data into the knowledge base. |
+| `ChunkList`          | List of [chunks](#chunk)                                                    | mandatory | This list is for inserting the [chunks'](#chunk) data into the knowledge base. |
 
 **Return value**
 
@@ -303,7 +303,7 @@ The `DatabaseConfiguration` that is passed must contain the connection details t
 
 | Name                 | Type                                      | Description                                                  |
 | -------------------- | ----------------------------------------- | ------------------------------------------------------------ |
-| `ChunkList` | List of [Chunks](#chunk) | This list is the result of the retrieval. |
+| `ChunkList` | List of [chunks](#chunk) | This list is the result of the retrieval. |
 
 ##### 4.3.3.2 Retrieve & Associate {#retrieve-associate-technical} 
 
@@ -339,17 +339,17 @@ The `DatabaseConfiguration` that is passed must contain the connection details t
 | Name                | Type                                    | Mandatory | Description                                           |
 | ------------------- | --------------------------------------- | --------- | ----------------------------------------------------- |
 | `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is to connect and authenticate to the database where the knowledge base is located.    |
-| `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the name of the knowledge base in your database which contains the data to retrieve.
-| `Vector`          | String                                                       | mandatory                     | This is the vector representation of the data for which the nearest neigbhors should be calculated. The dimension needs to be the same as the vectors stored in the knowledge base.
+| `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the name of the knowledge base in your database which contains the data to retrieve.|
+| `Vector`          | String                                                       | mandatory                     | This is the vector representation of the data for which the nearest neigbhors should be calculated. The dimension needs to be the same as the vectors stored in the knowledge base.|
 | `LabelList`          | List of [Labels](#label)                                                    | optional | This list is for additional filtering in the retrieve. Only chunks that comply with the labels will be returned. |
-| `MinimumSimilarity`          | Decimal                                                        | optional                     | This is to filter the results, so that only Chunks are returned which similarity score is equal or greater than the value provided. The score ranges from 0 (not similar) to 1.0 (the same vector). 
-| `MaxNumberOfResults`          | Integer/Long                                                      | optional                    | This can be used to limit the number of results that should be returned. 
+| `MinimumSimilarity`          | Decimal                                                        | optional                     | This is to filter the results, so that only chunks are returned which similarity score is equal or greater than the value provided. The score ranges from 0 (not similar) to 1.0 (the same vector). |
+| `MaxNumberOfResults`          | Integer/Long                                                      | optional                    | This can be used to limit the number of results that should be returned. |
 
 **Return value**
 
 | Name                 | Type                                      | Description                                                  |
 | -------------------- | ----------------------------------------- | ------------------------------------------------------------ |
-| `ChunkList` | List of [Chunks](#chunk) | This list is the result of the retrieval. |
+| `ChunkList` | List of [chunks](#chunk) | This list is the result of the retrieval. |
 
 ##### 4.3.3.4 Retrieve Nearest Neighbors & Associate {#retrieve-nearest-neighbors-associate-technical}
 
@@ -362,12 +362,12 @@ The `DatabaseConfiguration` that is passed must contain the connection details t
 | Name                | Type                                    | Mandatory | Description                                           |
 | ------------------- | --------------------------------------- | --------- | ----------------------------------------------------- |
 | `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is to connect and authenticate to the database where the knowledge base is located.    |
-| `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the name of the knowledge base in your database which contains the data to retrieve.
+| `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the name of the knowledge base in your database which contains the data to retrieve.|
 | `TargetChunk` | Entity parameter | mandatory | This must be a specialization of the [Chunk](#chunk) entity. If it contains associations to (specializations of) the related Mendix object for which the chunk was created, this will be set by this operation. This will also describe the type of the returned list. |
-| `Vector`          | String                                                       | mandatory                     | This is the vector representation of the data for which the nearest neigbhors should be calculated. The dimension needs to be the same as the vectors stored in the knowledge base.
+| `Vector`          | String                                                       | mandatory                     | This is the vector representation of the data for which the nearest neigbhors should be calculated. The dimension needs to be the same as the vectors stored in the knowledge base.|
 | `LabelList`          | List of [Labels](#label)                                                    | optional | This list is for additional filtering in the retrieve. Only chunks that comply with the labels will be returned. |
-| `MinimumSimilarity`          | Decimal                                                        | optional                     | This is to filter the results, so that only Chunks are returned which similarity score is equal or greater than the value provided. The score ranges from 0 (not similar) to 1.0 (the same vector). 
-| `MaxNumberOfResults`          | Integer/Long                                                      | optional                    | This can be used to limit the number of results that should be returned. 
+| `MinimumSimilarity`          | Decimal                                                        | optional                     | This is to filter the results, so that only chunks are returned which similarity score is equal or greater than the value provided. The score ranges from 0 (not similar) to 1.0 (the same vector). |
+| `MaxNumberOfResults`          | Integer/Long                                                      | optional                    | This can be used to limit the number of results that should be returned. |
 
 **Return value**
 

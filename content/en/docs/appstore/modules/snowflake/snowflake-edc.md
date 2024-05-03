@@ -200,6 +200,8 @@ The **group by** property is used to select the column that indicates the series
 
 ## 6 Implementing Data Replication
 
+[TBD]
+
 ## 7 Using Cortex AI functions
 
 Snowflake comes with built in AI functionality take you can leverage in your Mendix applications. This section provides an example of a query that calls the *sentiment* function to to analyze the sentiment of a piece of text.

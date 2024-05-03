@@ -15,10 +15,10 @@ Microflows run in the runtime server and can therefore not be used in offline ap
 Below presents a list of main differences between nanoflows and microflows:
 
 * When a nanoflow steps through its actions, client actions are directly executed. For example, an open page action immediately opens a page instead of at the end of the nanoflow. This is different from client actions in a microflow, which only run when the client receives the result from the microflow.
+* Nanoflows and microflows do not provide the same [activities](/refguide/activities/). Some activities available in microflows are not available in nanoflows, and vice versa.
+* Because nanoflows use JavaScript libraries and microflows use Java libraries, there can sometimes be slight differences in the way [expressions](/refguide/expressions/) are executed.
 * When used in nanoflow activities, expressions do not support the following objects and variables: `$latestSoapFault`, `$latestHttpResponse`, `$currentSession`, `$currentUser`, `$currentDeviceType`.
 * Nanoflows are not run inside a transaction. So, if an error occurs in a nanoflow, it will not roll back any previous changes.
-* Nanoflows and microflows do not provide the same activities. Some activities available in microflows are not available in nanoflows, and vice versa.
-* Because nanoflows use JavaScript libraries and microflows use Java libraries, there can sometimes be slight differences in the way expressions are executed.
 * Changes done to the lists in a sub-nanoflow are not reflected in the original nanoflow.
 
 ## 2 Classic and Modern Logic Editors {#new-editor}

@@ -3,7 +3,7 @@ title: "OpenAI"
 url: /appstore/modules/openai-connector/
 linktitle: "OpenAI"
 description: "Describes the configuration and usage of the OpenAI Connector from the Mendix Marketplace that allows developers to integrate generative AI into their Mendix app."
-tags: ["OpenAI", "generative AI", "AI", "connector", "marketplace", "chatgpt", "dall-e", "genAI", "embeddings", "RAG", "Azure OpenAI", "functioncalling"]
+tags: ["OpenAI", "generative AI", "AI", "connector", "marketplace", "chatgpt", "dall-e", "genAI", "embeddings", "RAG", "Azure OpenAI", "function calling", "tools"]
 aliases:
     - /appstore/connectors/openai-connector/
 ---
@@ -150,7 +150,7 @@ For the Azure OpenAI configuration, each model needs a separate deployment so th
 
 After following the general setup above, you are all set to use the microflows in the **USE_ME > Operations > ChatCompletions** folder in your logic. Currently, three microflows for chat completions are exposed as microflow actions under the **OpenAI Connector** category in the **Toolbox** in Mendix Studio Pro. 
 
-These microflows expect a [Configuration](#configuration-entity) entity, as well as the desired AI model that should be used for generating responses. 
+These microflows expect a [Configuration](#configuration-entity) object, as well as the desired AI model that should be used for generating responses. 
 
 * For the OpenAI API configuration, the desired model must be specified for every call.
 * For the Azure OpenAI configuration, the model is already determined by the deployment in the [Azure OpenAI portal](https://oai.azure.com/portal). Any model explicitly specified will be ignored and hence can be left empty. 
@@ -198,15 +198,24 @@ For technical details, see the [Technical reference](#chat-completions-advanced-
 
 #### 3.2.4 Function Calling {#chatcompletions-functioncalling}
 
-Function calling enables the LLM to intelligently decide when to let the Mendix app call a predefined function microflow to gather additional information to include in the assistant's response. OpenAI does not call the function; instead, the model returns a tool call JSON structure that is used to build the input of the function so that it can be executed. Functions in Mendix are essentially microflows that can be registered as part of the request to the LLM​. Currently, function microflows are limited to one input parameter of type string and must return a string. Furthermore, function microflows do not respect entity access of the current user. Make sure that you only return information that the user is allowed to view, otherwise confidential information may be visible to the current user in the assistant's response.
+Function calling enables the LLM to intelligently decide when to let the Mendix app call a predefined function microflow to gather additional information to include in the assistant's response. OpenAI does not call the function; instead, the model returns a tool call JSON structure that is used to build the input of the function(s) so that they can be executed as part of the chat completions operation. Functions in Mendix are essentially microflows that can be registered within the request to the LLM​. The OpenAI connector takes care of handling the the tool call response as well as executing the function microflow(s) until the API returns the final assistant's response.
 
-Function calling is supported for all chat completions operations by adding the optional input parameter FunctionCollection.
+{{% alert color="warning" %}}
+Currently, function microflows are limited to one input parameter of type string and must return a string. Furthermore, function microflows do not respect entity access of the current user. Make sure that you only return information that the user is allowed to view, otherwise confidential information may be visible to the current user in the assistant's response.
+{{% /alert %}}
+
+For an overview of how a simple chat completions operation with function calling might look like, see the following diagram. Note that depending on the user prompt and the available functions, the model may suggest multiple tool calls to the same or different functions or there might be multiple API calls followed by new tools calls until the model returns the final assistant's response. This whole process is handled inside the OpenAI connector.
+A way to steer the function calling process is the [ToolChoice](#enum-toolchoice) parameter. This optional attribute on the [FunctionCollection](#functioncollection) entity controls which (if any) function is called by the model.
+
+{{< figure src="/attachments/appstore/modules/openai-connector/FunctionCalling.png" >}}
+
+Function calling is supported for all chat completions operations by adding the optional input parameter [FunctionCollection](#functioncollection).
 Two helper microflow are available to construct the `FunctionCollection` with a list of `Functions`:
 
 * `FunctionCollection_CreateAndAddFunction` can be used to initialize a new `FunctionCollection` and add a new `Function` to it in order to enable [function calling](#chatcompletions-functioncalling).
 * `FunctionCollection_AddFunction` can be used to add a new `Function` to an existing `FunctionCollection`.
 
-For more information, see [Function Calling](https://platform.openai.com/docs/guides/function-calling).
+For more general information on this topic, see [Function Calling](https://platform.openai.com/docs/guides/function-calling).
 
 ### 3.3 Image Generations Configuration {#image-generations-configuration}
 

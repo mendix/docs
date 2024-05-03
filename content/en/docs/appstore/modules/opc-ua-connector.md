@@ -91,10 +91,10 @@ The request object for the action is a BrowseDescription. The BrowseDescription 
 * Browse directions. In which direction to traverse.
 * Node ID reference type. Specifies the Node ID of the reference type to follow. If left empty, returns all references.
 * Include subtypes. Indicates whether subtypes of the ReferenceType should be included.
-* Node Class Mask. Specifies the NodeClasses of the TargetNodes. Only TargetNodes with the seleted NodeClasses are returned.
-* * Note that this fields must be supplied in decimal format, while the interpretation is in binary format.
+* Node Class Mask. Specifies which NodeClasses will be returned. If no value is provided, no filter will be applied.
+* * Note that this is an integer attribute, while the interpretation is in binary format.
   * The bits represent in order: Object, Variable, Method, ObjectType, VariableType, ReferenceType, DataType, View.
-  * Example: Browsing only Objects, ObjectTypes and View is binary represented by [1,1,0,0,0,0,0,1] <br> which is in decimal representation 2<sup>0</sup> + 2<sup>1</sup> + 2<sup>7</sup> = 131.
+  * Example: Browsing only Objects, Variables and View is binary represented by [1,1,0,0,0,0,0,1] <br> which is 2<sup>0</sup> + 2<sup>1</sup> + 2<sup>7</sup> = 131.
 * Result Mask. Specifies the fields in the reference description structure that should be returned. 
 * * Note that this fields must be supplied in decimal format, while the interpretation is in binary format.
   * The bits represent in order: ReferenceType, IsForward, NodeClass, BrowseName, DisplayName, TypeDefinition.

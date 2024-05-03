@@ -82,7 +82,7 @@ As shown in the above example, if your input parameters do no exactly match what
         * **List name** - enter *CLIMATOLOGY_DAY*
     10. Click **OK**.
 
-    {{< figure src="/attachments/appstore/modules/external-database-connector/sample-snowflake-query-basic.png" >}}
+    {{< figure src="/attachments/appstore/modules/external-database-connector/sample-snowflake-query-basic-flow.png" >}}
 
 7. Configure a method for triggering the **ACT_RetrieveWeatherData** microflow. For example, you can trigger a microflow by associating it with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
 8. Run the **ACT_RetrieveWeatherData** microflow and verify the results.
@@ -205,3 +205,46 @@ The **group by** property is used to select the column that indicates the series
 Snowflake comes with built in AI functionality take you can leverage in your Mendix applications. This section provides an example of a query that calls the *sentiment* function to to analyze the sentiment of a piece of text.
 
 To execute and test the query in Studio Pro, follow these steps:
+
+1. In your Mendix app, in the **App Explorer**, find and open the external connection document that you created with the Connect to Database wizard.
+2. In the **Name** field, enter a name for your query, for example, *GetSentiment*.
+3. Enter the following **SQL Query**:
+
+    ```text
+    select snowflake.cortex.sentiment({text}) as "Sentiment"
+    from dual as sentiment_result
+    ```
+
+4. Click **Run Query**.
+
+    {{< figure src="/attachments/appstore/modules/external-database-connector/sample-snowflake-query-cortex.png" >}}
+
+5. Verify that the results are correct, and then generate the required entity to collect the data in your Mendix application. For more information, see [External Database Connector: Creating an Entity from the Response](/appstore/modules/external-database-connector/#create-entity).
+
+{{% alert color="info" %}}
+Mendix expects a table when generating the entity. As a workaround, you can use a dummy dual table.
+{{% /alert %}}
+
+6. Create a microflow that will run the query by doing the following steps:
+    1. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
+    2. Enter a name for your microflow, for example, *ACT_RetrieveSentiment*, and then click **OK**.
+    3. In your **Toolbox**, find the **Query External Database** activity and drag it onto the work area of your microflow.
+    4. Position the **Query External Database** activity between the start and end event of your microflow.
+    5. Double-click the **Query External Database** microflow activity to configure the required parameters.
+    6. In the **Database** section, select your Snowflake database.
+    7. In the **Query** list, select the query name that you entered in step 2.
+    8. In the **Parameters** section, add the following parameter:
+        * **Name** - *p_text*
+        * **Type** - **String**
+        * **Value** - *$SentimentForm/Text*
+    9. In the **Output** section, provide the following values:
+        * **Return type** - **List of *{your module name}*.SentimentResult**
+        * **Use return value** - set to **Yes**
+        * **List name** - enter *SentimentResult*
+    10. Click **OK**.
+    11. [TBD]
+
+    {{< figure src="/attachments/appstore/modules/external-database-connector/sample-snowflake-query-cortex-flow.png" >}}
+
+7. Configure a method for triggering the **ACT_RetrieveSentiment** microflow. For example, you can trigger a microflow by associating it with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
+8. Run the **ACT_RetrieveSentiment** microflow and verify the results.

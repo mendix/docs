@@ -105,7 +105,7 @@ A typical pattern for retrieval from a knowledge base is as follows:
 2. Use [Create Label](#create-label) as many times as needed to add the necessary labels.
 3. Do the retrieve, e.g. use [`Retrieve Nearest Neighbors`](#retrieve-nearest-neighbors) to find Chunks based on vector similarity.
 
-For scenarios in which the chunks were created based on Mendix objects at the time of population, and these objects need to be used in logic after the retrieval step, two addditional operations operations are available. The Java Actions [Retrieve & Associate](#retrieve-associate) and [Retrieve Nearest Neighbors & Associate](#retrieve-neirest-neighbors-associate) take care of the chunk retrieval and set the association towards the original object, if applicable.
+For scenarios in which the Chunks were created based on Mendix objects at the time of population, and these objects need to be used in logic after the retrieval step, two additional operations are available. The Java Actions [Retrieve & Associate](#retrieve-associate) and [Retrieve Nearest Neighbors & Associate](#retrieve-neirest-neighbors-associate) take care of the chunk retrieval and set the association towards the original object, if applicable.
 
 A typical pattern for this retrieval is as follows:
 
@@ -124,15 +124,15 @@ Use this operation to retrieve chunks from the knowledge base and set associatio
 
 #### 3.4.3 `Retrieve Nearest Neighbors` {#retrieve-nearest-neighbors}
 
-Use this operation to retrieve chunks from the knowledge base where the retrieval and sorting is based on vector similarity with regards to a given input vector. Additional selection and filtering can be done by specifying the optional input parameters: minimum (cosine) similarity (0–1.0), maximum number of results, as well as a list of labels. If labels are provided, this operation only returns chunks that are conform with all of the labels in the list.
+Use this operation to retrieve chunks from the knowledge base where the retrieval and sorting are based on vector similarity with regard to a given input vector. Additional selection and filtering can be done by specifying the optional input parameters: minimum (cosine) similarity (0–1.0), maximum number of results, as well as a list of labels. If labels are provided, this operation only returns chunks that are conform with all of the labels in the list.
 
 #### 3.4.4 `Retrieve Nearest Neighbors & Associate` {#retrieve-nearest-neighbors-associate}
 
-Use this operation to retrieve chunks from the knowledge base and set associations to the related Mendix objects (if applicable). In this operation the retrieval and sorting is based on vector similarity with regards to a given input vector. Additional selection and filtering can be done by specifying the optional input parameters: minimum (cosine) similarity (0–1.0), maximum number of results, as well as a list of labels. If labels are provided, this operation only returns chunks that are conform with all of the labels in the list.
+Use this operation to retrieve chunks from the knowledge base and set associations to the related Mendix objects (if applicable). In this operation the retrieval and sorting are based on vector similarity with regard to a given input vector. Additional selection and filtering can be done by specifying the optional input parameters: minimum (cosine) similarity (0–1.0), maximum number of results, as well as a list of labels. If labels are provided, this operation only returns chunks that are conform with all of the labels in the list.
 
 ### 3.5 Delete Operations {#delete-operations-configuration}
 
-When a knowledge base is no longer needed, it can be deleted using a delete operation. If the knowledge base is needed, but the data needs to be replaced, please refer to the [(Re)populate Operations](#repopulate-operations-configuration) instead.
+When a knowledge base is no longer needed, it can be deleted using a delete operation. If the knowledge base is needed, but the data needs to be replaced, refer to the [(Re)populate Operations](#repopulate-operations-configuration) instead.
 
 #### 3.5.1 `Delete Knowledge Base` {#retrieve-nearest-neighbors}
 
@@ -285,7 +285,7 @@ Activities that support the retrieval of the knowledge from the knowledge base.
 
 ##### 4.3.3.1 Retrieve {#retrieve-technical} 
 
-The `Retrieve` activity is used to retrieve a subset of or the whole knowledge base. A list of chunks is returned which can be used for custom logic.  For additional filtering provide a list of [Labels](#label), see [Create Label](#create-label-technical) activity. `Offset` and `MaxNumberOfResults` can be used for pagination or specific selection use cases.
+The `Retrieve` activity is used to retrieve a subset of or the whole knowledge base. A list of chunks is returned, which can be used for custom logic. For additional filtering, provide a list of [Labels](#label), see [Create Label](#create-label-technical) activity. `Offset` and `MaxNumberOfResults` can be used for pagination or specific selection use cases.
 
 The `DatabaseConfiguration` that is passed must contain the connection details to a PostgreSQL database server with the PgVector extension installed. This entity is typically configured at runtime or in [after-startup](/refguide/app-settings/#after-startup) logic. By providing the `KnowledgeBaseName` parameter, you determine the knowledge base that was used for population earlier.
 
@@ -294,7 +294,7 @@ The `DatabaseConfiguration` that is passed must contain the connection details t
 | Name                | Type                                    | Mandatory | Description                                           |
 | ------------------- | --------------------------------------- | --------- | ----------------------------------------------------- |
 | `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is to connect and authenticate to the database where the knowledge base is located.    |
-| `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the name of the knowledge base in your database which contains the data to retrieve.
+| `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the name of the knowledge base in your database that contains the data to retrieve. |
 | `LabelList`          | List of [Labels](#label)                                                    | optional | This list is for additional filtering in the retrieve. Only chunks that comply with the labels will be returned. |
 | `MaxNumberOfResults`          | Integer/Long                                                      | optional                    | This is to optionally limit the number of results that should be returned. |
 | `Offset`          | Integer/Long                                                        | optional                     | This is for skipping a number of records in the retrieve. |
@@ -307,7 +307,7 @@ The `DatabaseConfiguration` that is passed must contain the connection details t
 
 ##### 4.3.3.2 Retrieve & Associate {#retrieve-associate-technical} 
 
-The `Retrieve & Associate` activity is used to retrieve a subset of or the whole knowledge base. In addition to the [Retrieve](#retrieve-technical) operation, this operation also sets the associations to the Mendix objects for which the chunks were created. In order for this to work, it is necessary to create a custom specialization of the [Chunk](#chunk) entity in the domain model of the application and to make sure the necessary association(s) exist towards the Mendix objects which the chunks represent. This specialization must be passed as [Entity parameter](/refguide/java-actions/#221-entity-type) called `TargetChunk`. A list of this type is then returned which can be used for retrieval of the Mendix objects in custom logic. For additional filtering provide a list of [Labels](#label), see [Create Label](#create-label-technical) activity. `Offset` and `MaxNumberOfResults` can be used for pagination or specific selection use cases.
+The `Retrieve & Associate` activity is used to retrieve a subset of or the whole knowledge base. In addition to the [Retrieve](#retrieve-technical) operation, this operation also sets the associations to the Mendix objects for which the chunks were created. In order for this to work, it is necessary to create a custom specialization of the [Chunk](#chunk) entity in the domain model of the application and to make sure the necessary associations exist towards the Mendix objects which the chunks represent. This specialization must be passed as [Entity parameter](/refguide/java-actions/#221-entity-type) called `TargetChunk`. A list of this type is then returned, which can be used for retrieval of the Mendix objects in custom logic. For additional filtering, provide a list of [Labels](#label), see [Create Label](#create-label-technical) activity. `Offset` and `MaxNumberOfResults` can be used for pagination or specific selection use cases.
 
 The `DatabaseConfiguration` that is passed must contain the connection details to a PostgreSQL database server with the PgVector extension installed. This entity is typically configured at runtime or in [after-startup](/refguide/app-settings/#after-startup) logic. By providing the `KnowledgeBaseName` parameter, you determine the knowledge base that was used for population earlier.
 
@@ -316,7 +316,7 @@ The `DatabaseConfiguration` that is passed must contain the connection details t
 | Name                | Type                                    | Mandatory | Description                                           |
 | ------------------- | --------------------------------------- | --------- | ----------------------------------------------------- |
 | `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is to connect and authenticate to the database where the knowledge base is located.    |
-| `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the name of the knowledge base in your database which contains the data to retrieve. |
+| `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the name of the knowledge base in your database that contains the data to retrieve. |
 | `TargetChunk` | Entity parameter | mandatory | This must be a specialization of the [Chunk](#chunk) entity. If it contains associations to (specializations of) the related Mendix object for which the chunk was created, this will be set by this operation. This will also describe the type of the returned list. |
 | `LabelList`          | List of [Labels](#label)                                                    | optional | This list is for additional filtering in the retrieve. Only chunks that comply with the labels will be returned. |
 | `MaxNumberOfResults`          | Integer/Long                                                      | optional                    | This is to optionally limit the number of results that should be returned. |
@@ -330,7 +330,7 @@ The `DatabaseConfiguration` that is passed must contain the connection details t
 
 ##### 4.3.3.3 Retrieve Nearest Neighbors {#retrieve-nearest-neighbors-technical}
 
-The `Retrieve Nearest Neighbors` activity is used to retrieve chunks from the knowledge base ordered by similarity based on the given vector. For additional filtering provide a list of [Labels](#label), see [Create Label](#create-label-technical) activity. `MinimumSimilarity` (range 0 - 1.0) and `MaxNumberOfResults` can be used for optional filtering. 
+The `Retrieve Nearest Neighbors` activity is used to retrieve chunks from the knowledge base ordered by similarity based on the given vector. For additional filtering, provide a list of [Labels](#label), see [Create Label](#create-label-technical) activity. `MinimumSimilarity` (range 0 - 1.0) and `MaxNumberOfResults` can be used for optional filtering. 
 
 The `DatabaseConfiguration` that is passed must contain the connection details to a PostgreSQL database server with the PgVector extension installed. This entity is typically configured at runtime or in [after-startup](/refguide/app-settings/#after-startup) logic. By providing the `KnowledgeBaseName` parameter, you determine the knowledge base that was used for population earlier.
 
@@ -353,7 +353,7 @@ The `DatabaseConfiguration` that is passed must contain the connection details t
 
 ##### 4.3.3.4 Retrieve Nearest Neighbors & Associate {#retrieve-nearest-neighbors-associate-technical}
 
-The `Retrieve Nearest Neighbors & Associate` activity is used to retrieve chunks from the knowledge base ordered by similarity based on the given vector. In addition to the [Retrieve Nearest Neighbors](#retrieve-nearest-neighbors-technical) operation, this operation also sets the associations to the Mendix objects for which the chunks were created. In order for this to work, it is necessary to create a custom specialization of the [Chunk](#chunk) entity in the domain model of the application and to make sure the necessary association(s) exist towards the Mendix objects which the chunks represent. This specialization must be passed as [Entity parameter](/refguide/java-actions/#221-entity-type) called `TargetChunk`. A list of this type is then returned which can be used for retrieval of the Mendix objects in custom logic. For additional filtering provide a list of [Labels](#label), see [Create Label](#create-label-technical) activity. `MinimumSimilarity` (range 0 - 1.0) and `MaxNumberOfResults` can be used for optional filtering. 
+The `Retrieve Nearest Neighbors & Associate` activity is used to retrieve chunks from the knowledge base ordered by similarity based on the given vector. In addition to the [Retrieve Nearest Neighbors](#retrieve-nearest-neighbors-technical) operation, this operation also sets the associations to the Mendix objects for which the chunks were created. In order for this to work, it is necessary to create a custom specialization of the [Chunk](#chunk) entity in the domain model of the application and to make sure the necessary association(s) exist towards the Mendix objects which the chunks represent. This specialization must be passed as [Entity parameter](/refguide/java-actions/#221-entity-type) called `TargetChunk`. A list of this type is then returned which can be used for retrieval of the Mendix objects in custom logic. For additional filtering, provide a list of [Labels](#label), see [Create Label](#create-label-technical) activity. `MinimumSimilarity` (range 0 - 1.0) and `MaxNumberOfResults` can be used for optional filtering. 
 
 The `DatabaseConfiguration` that is passed must contain the connection details to a PostgreSQL database server with the PgVector extension installed. This entity is typically configured at runtime or in [after-startup](/refguide/app-settings/#after-startup) logic. By providing the `KnowledgeBaseName` parameter, you determine the knowledge base that was used for population earlier.
 

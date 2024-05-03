@@ -3,8 +3,6 @@ title: "Guidelines for Content Makers"
 url: /appstore/guidelines-content-creators/
 description: "Describes guidelines for Marketplace content creators."
 weight: 3
-no_list: false
-description_list: true
 tags: ["marketplace", "content creation", "guidelines"]
 ---
 

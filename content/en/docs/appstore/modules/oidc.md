@@ -446,7 +446,7 @@ The following constants are optional:
 
     Example: `openid profile email`
 
-* **UserParsingFlow** (*default: OIDC_CustomUserParsing_Standard*) – the custom user provisioning — the `caption` of OIDC.ENU_UserProvisioningFlows
+* **UserParsingFlow** (*default: OIDC_CustomUserParsing_Standard*) – the custom user provisioning
 
     Example: `OIDC_CustomUserParsing_Standard`
 
@@ -506,8 +506,8 @@ You can set up custom user provisioning by setting the following constants. You 
 | Constant | Use | Notes | Example |
 | --- | --- | --- | --- |
 | CustomUserEntity | a custom user entity | in the form `modulename.entityname` – a specialization of `System.User` | `Administration.Account` |
-| PrincipalidPAttribute | the attribute holding the unique identifier of an authenticated user | | `Name` |
-| IdPAttribute | the IdP claim which is the unique identifier of an authenticated user | | `sub` |
+| PrincipalEntityAttribute | the attribute holding the unique identifier of an authenticated user | | `Name` |
+| PrincipalIdPAttribute | the IdP claim which is the unique identifier of an authenticated user | | `sub` |
 | AllowcreateUsers | allow to create users in the application | *optional* | `True` |
 | Userrole | the role which will be assigned to newly created users | *optional* | `User` |
 | UserType | assign usertype to the created users | *optional* | `Internal` |

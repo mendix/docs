@@ -46,7 +46,7 @@ The app will be downloaded from the Team Server and opened in Studio Pro.
 
 Let us say you have a working copy of an app on disk. You make changes to the app and save them. Saved changes are not immediately visible to others. The documents, folders, and modules that have been changed can be identified by looking at the **status**.
 
-When you are happy with a set of changes, you **commit** them to the remote repository (Team Server). Others can then choose to update/pull and retrieve those changes.
+When you are happy with a set of changes, you commit and push them to the remote repository (Team Server). Others can then choose to update/pull and retrieve those changes.
 
 You can **update/pull** your working copy with changes committed by others.
 
@@ -54,7 +54,7 @@ You can also see a **history** of all the changes that have been committed, no m
 
 ### 4.1 Status
 
-The status of your app is a summary of all the changes in your working copy when compared with the original ("original" in this document is used as a three-way compare: my changes, their changes, original). Studio Pro shows the status both in the **App Explorer** and in the **Changes** pane.
+The status of your app is a summary of all the changes in your working copy when compared with the original ("original" version is either a version that no user has edited yet or it was edited by a user and pushed to the remote repository). Studio Pro shows the status both in the **App Explorer** and in the **Changes** pane.
 
 The **App Explorer** shows an icon in front of items (such as documents, folders, and modules) to present that are changed in some way. The different icons indicate the different kinds of changes which have been made.
 
@@ -83,13 +83,13 @@ When you successfully commit your app, this becomes the new original and all the
 
 ### 4.2 Committing
 
-Sending changes to the remote repository is called committing. The idea is that you commit small, consistent pieces of work to the repository. Mendix recommends committing your changes often. Preferably, the versions in the repository are always error-free. Studio Pro warns against committing while there are errors in your app.
+Sending changes to the local repository is called committing. The idea is that you commit small, consistent pieces of work to the repository. Mendix recommends committing your changes often. Preferably, the versions in the repository are always error-free. Studio Pro warns against committing while there are errors in your app.
 
 To commit your changes, click the **Commit** button in the **Changes** pane, or choose the **Version Control** > **Commit** menu item.
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-button.png" max-width=60% alt="Commit Button" >}}
 
-Git only creates a local commit. To submit your local commit (or commits) to the remote repository, you need to **push** your changes (pushing changes is selected by default in the **Commit** dialog box). As a result, your local changes are committed faster, and you can roll back to a previous state without having to contact the version control server.
+Git only creates a local commit. To submit your local commit (or commits) to the remote repository, you need to **push** your changes to the remore repository. You can choose between committing and pushing right away or committing locally. When you commit locally, your changes are committed faster and you can roll back to a previous state without having to contact the version control server.
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/local-repo-and-team-server.png" alt="Local Repository and Team Server" class="no-border" >}}
 
@@ -123,7 +123,7 @@ Committing is only allowed if your working copy is up to date with the repositor
 
 ### 4.3 Pushing {#pushing}
 
-Pushing is sending local changes from your working copy to the Team Server. After committing, you need to push the committed changes if you want them to be accessible to others. By default, this is done when committing, but it is possible to wait for this step until later.
+Pushing is sending local commits from your local repository to the remote repository (Team Server). After committing, you need to push the committed changes if you want them to be accessible to others. By default, this is done when committing, but it is possible to wait for this step until later.
 
 To push changes, select **Version Control** > **Push** or make sure that the **Also push changes to the remote server** setting is set to **Yes** in the **Commit** dialog box. By doing so, changes are pushed automatically when you commit them:
 
@@ -272,7 +272,7 @@ Reverting changes is done with one commit at a time. If you want to revert multi
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/revert-changes-git.png" class="no-border" >}}
 
-After a reverse merge the app will look like the changes never happened; if you 'reverse merge' the adding of a page, the page will be deleted locally. Just like when you are doing a normal merge, conflicts can arise. In the example, if later commits change the added page, the reverse merge will result in a conflict. After resolving any problems, you can commit the results to the remote repository.
+After a reverse merge the app will look like the changes never happened; if you 'reverse merge' the adding of a page, the page will be deleted locally. Just like when you are doing a normal merge, conflicts can arise. In the example, if later commits change the added page, the reverse merge will result in a conflict. After resolving any problems, you can commit and push the results to the remote repository.
 
 #### 7.1.4 Replacing the Main Line with a Branch Line
 
@@ -331,7 +331,7 @@ While developing, you can deploy and run your app on your local machine by click
 
 ### 8.2 Deploying Your Working Copy
 
-When you deploy to the cloud, you can choose to use the version of the app stored on your local machine, the working copy and deploy that to the default environment. If you are using the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), or other partner cloud (SAP BTP, for example), click **Publish** to commit the version of the app stored on your local machine and deploy that to the default environment.
+When you deploy to the cloud, you can choose to use the version of the app stored on your local machine, the working copy and deploy that to the default environment. If you are using the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), or other partner cloud (SAP BTP, for example), click **Publish** to commit and push the version of the app stored on your local machine and deploy that to the default environment.
 
 ### 8.3 Choosing a Specific Development Line and Revision
 

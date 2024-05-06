@@ -8,7 +8,7 @@ weight: 100
 beta: true
 ---
 
-{{% alert color="info" %}} This feature is currently in beta. For more information, see [Beta Releases](/releasenotes/beta-features). {{% /alert %}}
+{{% alert color="info" %}} This feature is currently in beta. For more information, see [Beta Releases](/releasenotes/beta-features/). {{% /alert %}}
 
 ## 1 Introduction
 
@@ -35,4 +35,4 @@ Authorization: MxToken 7LJE…vk
 
 ## 3 API Reference
 
-{{< swaggerui src="/openapi-spec/projects.yaml"  >}}
+{{< swaggerui src="/openapi-spec/projects-v2.yaml"  >}}

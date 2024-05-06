@@ -344,7 +344,7 @@ Content that was marked as **Protected** as well as content marked as **Shared w
 
 #### Improvements
 
-* We now display the UUID of an App Store component in the [Usage](/appstore/overview/#usage) section of its details page. This allows you to specify the `TemplateUUID` when calling the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api/#createnewapp) in the *Projects API*.
+* We now display the UUID of an App Store component in the [Usage](/appstore/overview/#usage) section of its details page.
 
 ### September 11, 2019
 

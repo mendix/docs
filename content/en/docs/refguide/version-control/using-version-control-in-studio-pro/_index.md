@@ -108,7 +108,7 @@ Committing results in a new revision in the repository. You can add the followin
 * A textual message – this should be a summary of the changes you made.
 * A list of Developer Portal stories that relate to the commit; for more information, see [Stories Pane](/refguide/stories-pane/).
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-dialog.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-dialog.png" >}}
 
 Studio Pro also attaches some information automatically:
 
@@ -127,7 +127,7 @@ Pushing is sending your local changes to the Team Server. After committing, you 
 
 To push changes, select **Version Control** > **Push** or simply use the **Commit and Push** button in the **Commit** dialog box. By doing so, changes are pushed automatically when you commit them:
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-git.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-git.png" >}}
 
 #### 4.3.1 Push Fast-Forward Only
 
@@ -135,7 +135,7 @@ While you were working on your branch, somebody may have pushed their changes to
 
 In Studio Pro, [automatic fetching](/refguide/auto-fetch/) can be used to discover changes on the server. If at the moment when you click **Commit** Studio Pro knows that there are remote changes, the commit dialog will contain a note about this, and the **Commit and Push** button will be replaced by **Commit and combine**. 
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-dialog-incoming.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-dialog-incoming.png" >}}
 
 If the changes are discovered during the push, an information dialog with instructions is shown.
 

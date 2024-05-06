@@ -108,7 +108,7 @@ Committing results in a new revision in the repository. You can add the followin
 * A textual message – this should be a summary of the changes you made.
 * A list of Developer Portal stories that relate to the commit; for more information, see [Stories Pane](/refguide/stories-pane/).
 
-    {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-dialog.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-dialog.png" class="no-border" >}}
 
 Studio Pro also attaches some information automatically:
 
@@ -125,19 +125,15 @@ Committing is only allowed if your working copy is up to date with the repositor
 
 Pushing is sending your local changes to the Team Server. After committing, you need to push the committed changes if you want them to be accessible to others. By default, this is done when committing, but it is possible to wait for this step until later.
 
-To push changes, select **Version Control** > **Push** or make sure that the **Also push changes to the remote server** setting is set to **Yes** in the **Commit** dialog box. By doing so, changes are pushed automatically when you commit them:
+To push changes, select **Version Control** > **Push** or simply use the **Commit and Push** button in the **Commit** dialog box. By doing so, changes are pushed automatically when you commit them:
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-git.png" class="no-border" >}}
 
 #### 4.3.1 Push Fast-Forward Only
 
-{{% alert color="info" %}}
-The features described in this section were introduced in Mendix version 10.3.
-{{% /alert %}}
-
 While you were working on your branch, somebody may have pushed their changes to the same branch on the server already. In this case, pushing is not possible and you will need to take further action first.
 
-In Studio Pro, [automatic fetching](/refguide/auto-fetch/) can be used to discover changes on the server. If at the moment when you click **Commit** Studio Pro knows that there are remote changes, the commit dialog will contain a note about this, and **Also push changes to the remote server** will be set to **No** and disabled.
+In Studio Pro, [automatic fetching](/refguide/auto-fetch/) can be used to discover changes on the server. If at the moment when you click **Commit** Studio Pro knows that there are remote changes, the commit dialog will contain a note about this, and the **Commit and Push** button will be replaced by **Commit and combine**. 
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-dialog-incoming.png" class="no-border" >}}
 
@@ -145,18 +141,11 @@ If the changes are discovered during the push, an information dialog with instru
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-pull-first-dialog.png" class="no-border" >}}
 
-Git prevents you from pushing your changes if it sees your changes and the remote changes as potentially conflicting. In this diagram, you see that Git does not know how to combine commits #3 and #5.
+Git prevents you from pushing your changes if it sees your changes and the remote changes as potentially conflicting. In this diagram, you see that Git does not know how to combine commits #3 and #4.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/server-your-work.png" alt="The local changes consist of commits 1, 4, and 5 while the remote server has commits 1, 2, and 3 on the same branch." class="no-border" >}} 
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/server-your-work.png" alt="The local changes consist of commits 1, 3, while the remote server has commits 1, 2, and 4 on the same branch." class="no-border" >}} 
 
-When you pull the changes, Studio Pro will merge the changes from the branch on the server into your local copy of the branch. After solving any conflicts, you need to make a ‘merge commit’. This commit contains any changes that have happened during integration of remote changes into yours.
-
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/merge-commit.png" alt="The local changes and the remote changes are combined into a merge commit which is pushed to the remote server." class="no-border" >}} 
-
-There are two possible scenarios when merging and needing to make a merge commit:
-
-* No conflicts (for example, you added a microflow and somebody else added a module on the server). In this case, Studio pro can automatically resolve this and there is nothing for you to do.
-* Conflicting changes (for example, the text on a button was changed locally by you and by another developer on the remote). In this case, you need to make some changes to resolve conflicts (for example, choose which of the two possible texts should be displayed on the button). The merge commit will contain these changes so that all the changes can be reviewed in history: what you did locally, what somebody else pushed to the server while you were working, and what you did to integrate their changes into yours.
+There are two ways for Studio Pro to combine the commits, namely Rebase (default) and Merge commit. On [this page](/refguide/merge-algorithm/#3-combining-changes) this is explained in detail.
 
 ### 4.4 Pulling
 
@@ -262,9 +251,9 @@ Merging is always done while you have a working copy open. The merge will result
 Select **Version Control** > **Merge Changes Here**, after that you can select **Port fix** or **Merge feature branch** options. For more information on merge settings, see [Merge Dialog](/refguide/merge-dialog/).
 
 
-#### 7.1.3 Reverse Merging
+#### 7.1.3 Reverting a commit
 
-Reverting changes works for changes that have not been committed yet. Changes that have been committed can never be deleted. However, you can apply the changes 'in reverse' and commit that. This feature is called 'Reverse merging' in Studio Pro.
+[Reverting changes](refguide/using-version-control-in-studio-pro/#5-reverting-changes) works for changes that have not been committed yet. Changes that have been committed and pushed to the server can never be deleted from the history. However, you can make another commit to revert the changes. This feature is called 'Reverse merging' in Studio Pro.
 
 Choose **Version Control > Reverse Merge Changes...**.
 

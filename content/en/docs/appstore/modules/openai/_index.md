@@ -3,7 +3,7 @@ title: "OpenAI"
 url: /appstore/modules/openai-connector/
 linktitle: "OpenAI"
 description: "Describes the configuration and usage of the OpenAI Connector from the Mendix Marketplace that allows developers to integrate generative AI into their Mendix app."
-tags: ["OpenAI", "generative AI", "AI", "connector", "marketplace", "chatgpt", "dall-e", "genAI", "embeddings", "RAG", "Azure OpenAI", "function calling", "tools", "LLM"]
+tags: ["OpenAI", "generative AI", "AI", "connector", "marketplace", "chatgpt", "dall-e", "genAI", "embeddings", "RAG", "Azure OpenAI", "function calling", "tools", "LLM", "ReAct"]
 aliases:
     - /appstore/connectors/openai-connector/
 ---
@@ -198,16 +198,11 @@ For technical details, see the [Technical reference](#chat-completions-advanced-
 
 #### 3.2.4 Function Calling {#chatcompletions-functioncalling}
 
-Function calling enables LLMs (Large Language Models) to connect with external tools to gather information, execute actions, convert natural language in structure data and much more. Thereby, function calling enables the model to intelligently decide when to let the Mendix app call a predefined function microflow to gather additional information to include in the assistant's response. OpenAI does not call the function; instead, the model returns a tool call JSON structure that is used to build the input of the function(s) so that they can be executed as part of the chat completions operation. Functions in Mendix are essentially microflows that can be registered within the request to the LLM​. The OpenAI connector takes care of handling the tool call response as well as executing the function microflow(s) until the API returns the final assistant's response. Currently, function microflows are limited to one input parameter of type string and must return a string.
+Function calling enables LLMs (Large Language Models) to connect with external tools to gather information, execute actions, convert natural language in structure data and much more. Thereby, function calling enables the model to intelligently decide when to let the Mendix app call one or more predefined function microflows to gather additional information to include in the assistant's response. OpenAI does not call the function; instead, the model returns a tool call JSON structure that is used to build the input of the function(s) so that they can be executed as part of the chat completions operation. Functions in Mendix are essentially microflows that can be registered within the request to the LLM​. The OpenAI connector takes care of handling the tool call response as well as executing the function microflow(s) until the API returns the final assistant's response. Currently, function microflows are limited to one input parameter of type string and must return a string.
 
 {{% alert color="warning" %}}
 Function calling is a very powerful capability, but this also introduces potential risks. Function microflows do not respect entity access of the current user. Make sure to only retrieve and return information that the user is allowed to view, otherwise confidential information may be visible to the current user in the assistant's response. Furthermore, we strongly advise developer to build user confirmation logic into function microflows that have a potential impact on the world on behalf of the user, such as sending an email, posting online, making a purchase, etc.
 {{% /alert %}}
-
-For an overview of how a simple chat completions operation with function calling might look like, see the following diagram. Note that depending on the user prompt and the available functions, the model may suggest multiple tool calls to the same or different functions or there might be multiple API calls followed by new tools calls until the model returns the final assistant's response. This whole process is handled inside the OpenAI connector.
-A way to steer the function calling process is the [ToolChoice](#enum-toolchoice) parameter. This optional attribute on the [FunctionCollection](#functioncollection) entity controls which (if any) function is called by the model.
-
-{{< figure src="/attachments/appstore/modules/openai-connector/FunctionCalling.png" >}}
 
 Function calling is supported for all chat completions operations by adding the optional input parameter [FunctionCollection](#functioncollection).
 Two helper microflow are available to construct the `FunctionCollection` with a list of `Functions`:
@@ -215,7 +210,7 @@ Two helper microflow are available to construct the `FunctionCollection` with a 
 * `FunctionCollection_CreateAndAddFunction` can be used to initialize a new `FunctionCollection` and add a new `Function` to it in order to enable [function calling](#chatcompletions-functioncalling).
 * `FunctionCollection_AddFunction` can be used to add a new `Function` to an existing `FunctionCollection`.
 
-For more general information on this topic, see [Function Calling](https://platform.openai.com/docs/guides/function-calling).
+See [function calling](/appstore/modules/openai-connector/function-calling/) for more information.
 
 ### 3.3 Image Generations Configuration {#image-generations-configuration}
 
@@ -755,6 +750,11 @@ For [specific models](https://platform.openai.com/docs/guides/text-generation/js
 | ----------------------- | ------ | ------------------------------------------------------------ |
 | `AssistantResponseText` | String | An assistant message was generated by the model as a response to a user message. |
 
+Two accompanying microflows are available to construct the input for the microflow:
+
+* `FunctionCollection_CreateAndAddFunction` can be used to initialize a new `FunctionCollection` and add a new `Function` to it in order to enable [function calling](#chatcompletions-functioncalling).
+* `FunctionCollection_AddFunction` can be used to add a new `Function` to an existing `FunctionCollection`.
+
 ##### 4.3.1.2 Chat Completions (with History) {#chat-completions-with-history-technical}
 
 Use the microflow `ChatCompletions_Execute_WithHistory` to execute a chat completions API call with a [ChatCompletionsSession](#chatcompletionssession) input and a string output of the assistant response. It is not required to provide a `SystemPrompt` string. The `Model` value is mandatory for OpenAI, but is ignored for Azure OpenAI type configurations where it is implicitly specified by the deployment already. For certain models it is possible to force the assistant response to be a valid JSON structure using the optional `ENUM_ResponseFormat_Chat` [parameter](#enum-responseformat-chat); if no value is specified, the default value as specified in the [OpenAI documentation](https://platform.openai.com/docs/api-reference/chat/create) will be assumed by the API.
@@ -776,6 +776,13 @@ Use the microflow `ChatCompletions_Execute_WithHistory` to execute a chat comple
 | ----------------------- | ------ | ------------------------------------------------------------ |
 | `AssistantResponseText` | String | Assistant message that was generated by the model as a response to a user message. |
 
+The following microflows may be used in order to construct and handle the required inputs: 
+
+* `ChatCompletionsSession_Create` is used to create the session wrapper that must be passed as input parameter. 
+* `ChatCompletionsSession_AddMessage` is used to attach the historical messages to the `ChatCompletionsSession`. The content of such a message corresponds to a system, assistant, or user prompt. In the case of multiple historical messages the order is relevant.
+* `FunctionCollection_CreateAndAddFunction` can be used to initialize a new `FunctionCollection` and add a new `Function` to it in order to enable [function calling](#chatcompletions-functioncalling).
+* `FunctionCollection_AddFunction` can be used to add a new `Function` to an existing `FunctionCollection`.
+
 ##### 4.3.1.3 Chat Completions (Advanced) {#chat-completions-advanced-technical}
 
 For developers who want to configure the [ChatCompletionsRequest](#chatcompletionsrequest) object themselves and adjust its attributes according to their needs, Mendix recommends using the `ChatCompletions_CallAPI` microflow. The inputs and output are shown in the table below: 
@@ -793,8 +800,14 @@ For developers who want to configure the [ChatCompletionsRequest](#chatcompletio
 | ------------------------- | --------------------------------------------------- | ------------------------------------------------------------ |
 | `ChatCompletionsResponse` | [ChatCompletionsResponse](#chatcompletionsresponse) | This is the response object containing the assistant message and other details about the request. |
 
-This option can be used if the default values of the `ChatCompletionsRequest` are insufficient and must be changed to work for your specific use case. It is also useful if you are interested in other [ChatCompletionsResponse](#chatcompletionsresponse) values apart from the assistant response like usage metrics or multiple choices. 
-The following flows may be used in order to construct and handle the required inputs: `ChatCompletionsRequest_Create`,  `ChatCompletionsMessages_Create` and `ChatCompletionsMessageRequest_Create`. 
+This option can be used if the default values of the `ChatCompletionsRequest` are insufficient and must be changed to work for your specific use case. It is also useful if you are interested in other [ChatCompletionsResponse](#chatcompletionsresponse) values apart from the assistant response like usage metrics or multiple choices.
+
+The following microflows may be used in order to construct and handle the required inputs:
+
+* `ChatCompletionsRequest_Create` is used to create the request object.
+* `ChatCompletionsMessages_Create` is used to create the wrapper object for the `ChatCompletionsMessageRequest` objects.
+* `ChatCompletionsMessageRequest_Create` is used to create the message objects.
+* `ChatCompletionsRequest_AddFunctionCalling` can be used to add a list of functions to be sent along with the `ChatCompletionsRequest` as tools in order to enable [function calling](#chatcompletions-functioncalling).
 
 #### 4.3.2 Image Generations {#image-generations-technical} 
 
@@ -936,7 +949,8 @@ Follow these steps to check your JDK version and update if neccessary:
 
 ## 7 Read More {#read-more}
 
-* [Prompt Engineering – Open AI Documentation](https://platform.openai.com/docs/guides/prompt-engineering)
+* [Prompt Engineering – OpenAI Documentation](https://platform.openai.com/docs/guides/prompt-engineering)
 * [Introduction to Prompt Engineering – Microsoft Azure Documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/prompt-engineering)
 * [Prompt Engineering Techniques – Microsoft Azure Documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/advanced-prompt-engineering?pivots=programming-language-chat-completions)
 * [ChatGPT Prompt Engineering for Developers - DeepLearning.AI](https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers)
+* [Function Calling - OpenAI Documentation](https://platform.openai.com/docs/guides/function-calling).

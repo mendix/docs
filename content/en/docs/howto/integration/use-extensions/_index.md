@@ -5,7 +5,7 @@ url: /howto/integration/use-extensions/
 
 ## 1 Introduction 
 
-Connect to and receive information from external sources by downloading extensions in Mendix Studio Pro.
+Connect to and receive information from external sources with extensions in Mendix Studio Pro.
 
 ## 2 Documents in this Category
 

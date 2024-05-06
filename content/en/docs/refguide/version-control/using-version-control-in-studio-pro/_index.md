@@ -125,7 +125,7 @@ Committing is only allowed if your working copy is up to date with the repositor
 
 Pushing is sending your local changes to the Team Server. After committing, you need to push the committed changes if you want them to be accessible to others. By default, this is done when committing, but it is possible to wait for this step until later.
 
-To push changes, select **Version Control** > **Push** or simply use the **Commit and Push** button in the **Commit** dialog box. By doing so, changes are pushed automatically when you commit them:
+To push changes, select **Version Control** > **Push** or simply use the **Commit and Push** button in the **Commit** dialog box. In this case changes are pushed automatically when you commit them:
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-git.png" >}}
 
@@ -145,7 +145,7 @@ Git prevents you from pushing your changes if it sees your changes and the remot
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/server-your-work.png" alt="The local changes consist of commits 1, 3, while the remote server has commits 1, 2, and 4 on the same branch." class="no-border" >}} 
 
-There are two ways for Studio Pro to combine the commits, namely Rebase (default) and Merge commit. On [this page](/refguide/merge-algorithm/#3-combining-changes) this is explained in detail.
+There are two ways for Studio Pro to combine the commits: **Rebase** (default) and **Merge**. For more information, see [Combining Changes and Conflict Resolution](/refguide/merge-algorithm/#combine-changes).
 
 ### 4.4 Pulling
 
@@ -175,7 +175,7 @@ Select a revision to see additional details, such as related Developer Portal st
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/history-of-dialog.png" class="no-border" >}}
 
-## 5 Reverting Changes
+## 5 Reverting Changes {#revert-changes}
 
 Changes that have not yet been committed can be reverted. Say, for example, that you have made a lot of changes to a page and you are not happy with the result. You can revert the page to the original state, that is, the state of the page before you started making changes.
 
@@ -251,17 +251,17 @@ Merging is always done while you have a working copy open. The merge will result
 Select **Version Control** > **Merge Changes Here**, after that you can select **Port fix** or **Merge feature branch** options. For more information on merge settings, see [Merge Dialog](/refguide/merge-dialog/).
 
 
-#### 7.1.3 Reverting a commit
+#### 7.1.3 Reverting a Commit
 
-[Reverting changes](refguide/using-version-control-in-studio-pro/#5-reverting-changes) works for changes that have not been committed yet. Changes that have been committed and pushed to the server can never be deleted from the history. However, you can make another commit to revert the changes. This feature is called 'Reverse merging' in Studio Pro.
+[Reverting changes](refguide/using-version-control-in-studio-pro/#revert-changes) works for changes that have not been committed yet. Changes that have been committed and pushed to the server can never be deleted from the history. However, you can make another commit to revert the changes. This feature is called **Reverse merging** in Studio Pro.
 
-Choose **Version Control > Reverse Merge Changes...**.
+Choose the **Version Control** menu > **Reverse Merge Changes...** to revert a commit.
 
-Reverting changes is done with one commit at a time. If you want to revert multiple commits, you can do that by reverting the latest commit, then the previous one, and so on.
+Reverting changes is done with one commit at a time. If you want to revert multiple commits, you can do that by reverting the latest commit, then the previous one, only one by one.
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/revert-changes-git.png" class="no-border" >}}
 
-After a reverse merge the app will look like the changes never happened; if you 'reverse merge' the adding of a page, the page will be deleted locally. Just like when you are doing a normal merge, conflicts can arise. In the example, if later commits change the added page, the reverse merge will result in a conflict. After resolving any problems, you can commit the results to the repository.
+After a reverse merge the app will look like the changes never happened; if you reverse merge adding a new page, the page will be deleted locally. Just like when you are doing a normal merge, conflicts can arise. For example, if later commits change the new page, the reverse merge will result in a conflict. After resolving the conflict, you can commit the results to the remote repository.
 
 #### 7.1.4 Replacing the Main Line with a Branch Line
 

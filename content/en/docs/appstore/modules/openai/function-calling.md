@@ -32,7 +32,7 @@ Two helper microflow are available to construct the `FunctionCollection` with a 
 * `FunctionCollection_AddFunction` can be used to add a new `Function` to an existing `FunctionCollection`.
 
 Note that depending on the user prompt and the available functions, the model may suggest multiple tool calls to the same or different functions or there might be multiple API calls followed by new tools calls until the model returns the final assistant's response.
-A way to steer the function calling process is the [ToolChoice](/appstore/modules/openai-connector/rag-example-implementation/#enum-toolchoice) parameter. This optional attribute on the [FunctionCollection](/appstore/modules/openai-connector/rag-example-implementation/#functioncollection) entity controls which (if any) function is called by the model.
+A way to steer the function calling process is the [ToolChoice](/appstore/modules/openai-connector/_index/#enum-toolchoice) parameter. This optional attribute on the [FunctionCollection](/appstore/modules/openai-connector/_index/#functioncollection) entity controls which (if any) function is called by the model.
 
 {{% alert color="warning" %}}
 Function calling is a very powerful capability, but this also introduces potential risks. Function microflows do not respect entity access of the current user. Make sure to only retrieve and return information that the user is allowed to view, otherwise confidential information may be visible to the current user in the assistant's response. Furthermore, we strongly advise developer to build user confirmation logic into function microflows that have a potential impact on the world on behalf of the user, such as sending an email, posting online, making a purchase, etc.

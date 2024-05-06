@@ -97,8 +97,9 @@ A simple widget XML file might look like this:
 
 ```xml
     <?xml version="1.0" encoding="utf-8" ?>
-    <widget [attibutes]>
+    <widget [attributes]>
         <name>{User friendly widget name}</name>
+        <description>{User friendly short description}</description>
         <properties>
             [properties]
         </properties>
@@ -130,10 +131,13 @@ This section is generated based on options chosen while running the Mendix Plugg
 
 ### 4.2 Widget Description {#widget-description}
 
-The first set of elements inside the widget determine how the widget is presented in Studio Pro. The order is important and starts with the name and description of the widget, these two descriptive tags are mandatory. All other tags are optional, but should maintain the same order as presented in this section.
+The presentation of the widget in Studio pro is determined by the first set of elements inside the widget tag. The order of these descriptive tags is important and is demonstrated in the list below. Only the name and description tags are mandatory, the others are optional. The description can be omitted with a self-closing tag: `<description />`. 
 
-- `name` — The displayname of the widget.
+- `name` — The display name of the widget.
 - `description` — A short written description of the widget.
+- `studioProCategory` — See [Toolbox Category](#toolbox-category)
+- `helpUrl` — See [Help Page](#help)
+- `icon` — See [Icon](#icon)
 
 ```xml
     <name>My Progress Card</name>
@@ -146,10 +150,6 @@ In Mendix Studio Pro, the widget described above would look like this:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/basic-widget-progress-card.png" alt="basic progress card in structure mode" class="no-border" >}}
 
-
-{{% alert color="info" %}}
-The description can be omitted with a self closing `<description />` tag.
-{{% /alert %}}
 
 #### 4.2.1 Toolbox Category {#toolbox-category}
 
@@ -189,9 +189,13 @@ For more complex help pages you can link to a markdown page. For security reason
 * If host name is *github.com* the full URL must end with *.md*
 
 
-#### 4.2.3 Icon
+#### 4.2.3 Icon {#icon}
 
 The `<icon>` element accepts a base64 encoded image that is displayed as the widget icon in Studio Pro. The element is optional and can be omitted. When no icon is provided, Studio Pro will display a fallback icon.
+
+```xml
+<icon>PHN2Zy...9zdmc+</icon>
+```
 
 {{% alert color="info" %}}
 Bundling the icon in the [widget package](#widget-package) is the recommended approach. The files are easier to work with and allow for more customization.

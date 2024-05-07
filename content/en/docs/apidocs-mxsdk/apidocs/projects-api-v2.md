@@ -1,7 +1,6 @@
 ---
 title: "Projects API"
 url: /apidocs-mxsdk/apidocs/projects-api/
-category: "API Documentation"
 type: swagger
 description: "This API allows you to manage your projects and their teams."
 weight: 100

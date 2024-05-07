@@ -1,7 +1,7 @@
 ---
 title: "Consume a REST Service"
 url: /howto7/integration/consume-a-rest-service/
-category: "Integration"
+
 weight: 9
 tags: ["integration", "rest service", "data model", "consume"]
 description: "Describes how to get information from a REST service."

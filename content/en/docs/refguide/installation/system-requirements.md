@@ -1,7 +1,7 @@
 ---
 title: "System Requirements"
 url: /refguide/system-requirements/
-category: "Installation"
+
 weight: 20
 description: "Presents the system requirements for using the Mendix Platform."
 tags: ["studio pro"]

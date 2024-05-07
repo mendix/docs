@@ -1,7 +1,7 @@
 ---
 title: "Insights Hub"
 url: /partners/siemens/mindsphere/
-category: "Siemens"
+
 description: "Presents reference content for using apps deployed to Insights Hub."
 weight: 10
 tags: ["Siemens", "MindSphere", "Insights Hub"]

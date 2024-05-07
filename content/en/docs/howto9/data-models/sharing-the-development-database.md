@@ -1,7 +1,7 @@
 ---
 title: "Share the Development Database"
 url: /howto9/data-models/sharing-the-development-database/
-category: "Data Models"
+
 weight: 9
 description: "Describes how to open and manage the data stored inside the built-in database that is supplied with Studio Pro."
 tags: ["studio pro", "database"]

@@ -1,7 +1,7 @@
 ---
 title: "Cloud"
 url: /control-center/cloud/
-category: "Control Center"
+
 description: "Describes the Cloud page in the Mendix Control Center."
 tags: ["control center", "mendix admin", "cloud"]
 weight: 45

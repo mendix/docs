@@ -1,7 +1,7 @@
 ---
 title: "Domain Model"
 url: /refguide/domain-model/
-category: "App Modeling"
+
 weight: 30
 description: "Introduces the domain model in Studio Pro."
 tags: ["domain model", "entity", "association", "annotation", "studio pro"]

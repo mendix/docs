@@ -1,7 +1,7 @@
 ---
 title: "Platform SDK"
 url: /releasenotes/sdk/platform-sdk/
-category: "SDKs"
+
 weight: 2
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---

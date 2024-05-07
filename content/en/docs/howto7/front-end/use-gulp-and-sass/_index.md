@@ -1,7 +1,7 @@
 ---
 title: "Use Gulp and Sass"
 url: /howto7/front-end/use-gulp-and-sass/
-category: "Front End"
+
 weight: 45
 tags: ["gulp", "sass", "ux", "front end"]
 ---

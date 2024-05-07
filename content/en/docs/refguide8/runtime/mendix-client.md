@@ -1,7 +1,7 @@
 ---
 title: "Mendix Client"
 url: /refguide8/mendix-client/
-category: "Mendix Runtime"
+
 description: "A description of the Mendix Client part of the runtime and how it functions"
 weight: 20
 tags: ["runtime", "mendix client", "offline-first", "browser", "javascript", "nanoflows", "widgets", "launch"]

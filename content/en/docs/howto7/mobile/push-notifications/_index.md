@@ -1,7 +1,7 @@
 ---
 title: "Include Push Notifications"
 url: /howto7/mobile/push-notifications/
-category: "Mobile Development"
+
 weight: 10
 no_list: false
 description_list: true 

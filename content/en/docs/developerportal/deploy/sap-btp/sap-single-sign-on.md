@@ -1,7 +1,7 @@
 ---
 title: "SAP Single Sign-On"
 url: /developerportal/deploy/sap-cloud-platform/sap-single-sign-on/
-category: "SAP"
+
 weight: 50
 description: "Reference information on SAP Single Sign-On"
 tags: ["SAP", "SSO", "Single Sign-On"]

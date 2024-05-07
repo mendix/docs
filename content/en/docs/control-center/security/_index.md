@@ -1,7 +1,7 @@
 ---
 title: "Security"
 url: /control-center/security/
-category: "Control Center"
+
 description: "Describes the Security page in the Mendix Control Center."
 tags: ["control center", "mendix admin", "security"]
 weight: 40

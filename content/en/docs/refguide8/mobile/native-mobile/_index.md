@@ -1,7 +1,7 @@
 ---
 title: "Native Mobile"
 url: /refguide8/native-mobile/
-category: "Mobile"
+
 weight: 1
 no_list: false
 description_list: true 

@@ -24,7 +24,7 @@ Explore the documentation for details on microflow and nanoflow definitions, pro
 * [Common Properties](/refguide/microflow-element-common-properties/)
 * [Debugging Microflows and Nanoflows](/refguide/debug-microflows-and-nanoflows/)
 
-## 2 Differences between Microflows and Nanoflows
+## 2 Differences between Microflows and Nanoflows {#differences}
 
 Microflows run in the runtime server and can therefore not be used in offline apps, while nanoflows run directly on the client side (that is, on the browser/device), and can be used in an offline app. Furthermore, most of the actions in nanoflows run directly on the device, so there is also a speed benefit for logic which does not need access to the server. 
 

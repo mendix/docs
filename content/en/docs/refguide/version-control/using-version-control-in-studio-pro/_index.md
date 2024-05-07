@@ -54,7 +54,7 @@ You can also see a **history** of all the changes that have been committed, no m
 
 ### 4.1 Status
 
-The status of your app is a summary of all the changes in your working copy when compared with the original ("original" version is either a version that no user has edited yet or it was edited by a user and pushed to the remote repository). Studio Pro shows the status both in the **App Explorer** and in the **Changes** pane.
+The status of your app is a summary of all the changes in your working copy when compared with the original (the original version is the version you pulled from the remote repository before making your changes (or the newly created app if you have not pulled anything yet). Studio Pro shows the status both in the **App Explorer** and in the **Changes** pane.
 
 The **App Explorer** shows an icon in front of items (such as documents, folders, and modules) to present that are changed in some way. The different icons indicate the different kinds of changes which have been made.
 

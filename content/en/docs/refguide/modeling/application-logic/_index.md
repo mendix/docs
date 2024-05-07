@@ -11,7 +11,7 @@ tags: ["studio pro", "logic", "microflow", "nanoflow"]
 
 While you can create a simple Mendix app using widgets on pages, you can unleash the full power of Mendix by adding application logic to your app.
 
-Application logic in Mendix can be implemented via [microflows](/refguide/microflows/), [nanoflows](/refguide/nanoflows/), and [workflows](/refguide/workflows/). These are visual ways of expressing what traditionally ends up in textual programming code. 
+Application logic in Mendix can be implemented via [microflows](/refguide/microflows/), [nanoflows](/refguide/nanoflows/), and [workflows](/refguide/workflows/). These are visual ways of expressing what traditionally ends up in a textual programming code. 
 
 {{< figure src="/attachments/refguide/modeling/application-logic/logic-comparison-diagram.png" class="no-border">}}
 

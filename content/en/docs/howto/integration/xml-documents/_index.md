@@ -5,9 +5,7 @@ url: /howto/integration/use-xml-documents/
 
 ## 1 Introduction 
 
-Use Mendix Studio Pro to integrate with other systems using XML. 
-
-## 2 Documents in this Category
+Use Mendix Studio Pro to integrate with other systems using XML. How-to's available for this topic include:
 
 * [Import XML Documents](/howto/integration/importing-xml-documents/)
 

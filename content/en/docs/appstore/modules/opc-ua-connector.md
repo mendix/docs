@@ -45,8 +45,8 @@ You must have these Marketplace modules installed:
 
 
 ### ~2 How to Guide
-#### Connection
-The connector provides a simple wizard to set up your own connection to an OPC-UA server, however if you wish to have your own custom business logic to connect to a server you are free to do so. To make the connection a ServerConfiguration, associated IdentityToken and (usually) ClientCertificate needs to be provided. In addition, the server certificate needs to be trusted.
+#### Connecting to an OPC-UA server (Session Services)
+The connector provides a simple wizard to set up your own connection to an OPC-UA server. However, if you wish to have your own custom business logic to connect to a server you are free to do so. To make the connection a ServerConfiguration, associated IdentityToken and (usually) ClientCertificate needs to be provided. In addition, the server certificate needs to be trusted.
 For each of these parts see the sections below.
 
 #### ~2.0.0 Server Configuration
@@ -78,7 +78,7 @@ A connection between an OPC-UA server and OPC-UA client (The Mendix Application)
 The association does not have to be set in the domain model but can be used to check what server certificate was used while establishing the connection.
 If you ever want to reject a certificate from the server, the "untrust certificate" action will remove the certificate from the list to trusted certificates.
 
-### ~2.1 Browsing
+### ~2.1 - View Services
 Browsing lets you navigate the content of the server. There are three implementations provided that will be sufficient for most use cases. These are 
 * Get Roots. Retrieves the top level nodes of the server
 * Get Children. Retrieves the sub level node for a given node.
@@ -109,6 +109,42 @@ A browse node contains the following fields.
 * Display name. Display name of the referenced node.
 * Node class. Node class of the referenced node.
 If the server does not allow to return as many references as requested, the response will contain a continuation point that can be used in future calls to retrieve more references.
+
+### ~2.2 Attribute services
+The attribute services let a client access data on a server. In particular, the OPC-UA connector lets you read data from and write data to the server.
+These exposed actions deserve some additional guidance as the data a client receives and the data the server requires can differ quite a bit between calls. This is all due to the highly flexible and customizable nature of an OPC-UA server. 
+The data model of an OPC-UA server consists of a set of Nodes. These nodes can have one of the following nodeClasses: DataType, Method, Object, ObjectType, ReferenceType, Variable, VariableType and View. Each of these has their own set of properties. For the purpose of each and the set of properties we refer to the documentation in the domain model of the specializations of Node entities.
+To make it easier to get the information on a node, there is a GetNodeDetails action provided that will read all properties of the node and put them in the correct specialization of the Node Entity. 
+
+#### ~2.2.1 Example 1: Reading a property of a Node
+In this section we give an example on how to Read specific attribute values of nodes by an example. For the specifics on how to read the value of a variable see section (). 
+Lets say we want to read the "AccessLevel" on variable nodes we just received from the Browse Response. Note that this is a property that is only on the VariableNode entity and is therefore specific to a Variable. Therefore we need to filter out all other types of Nodes. Then we Need to create a ReadNodeRequest. Since we are not interested when the last moment is the AccessLevel is changed, nor at what moment we read the value, we set the MaxAge attribute to 0 and the TimestampsToReturn attribute to Neither. Now we need to specify what values we want to read. Create for each BrowseNode object a ReadNodeReadValueID object, with the same NodeID as the BrowseNode, AttributeID set to AccessLevel and numeric range to empty and attach this list to the ReadNodeRequest. Supply the ServerConfiguration for the connection and use the ReadNode action to make the request. 
+The response consists of a list of DataValues that match the order of the requests. The DataValue object has a Value propery that contains as a string the integer that resembles the accessLevel. 
+
+#Note: Do we want to make it easier by providing a js action for the conversion?
+#Note: Needs images of the constructed microflow 
+
+#### ~2.2.2 Example 2. Reading the value of a Variable Node.
+Each variableNode has a dataType node as can be seen in the domain model. This associated DataTypeNode is a node that defines what type of value you will read from the VariableNode. To make reading the value of a Variable easier we included a default action that takes ony the node ID as an input. For the default variable types that must be supported by any OPC-UA server the responses will look like the Read column in the table below. 
+
+Expected Read and write formats for attribute services
+| Data type | Example read response | Example write request | Conversion | 
+| --------- | ------------- | -- | - |
+| Boolean | {"value":true} | "true" | |
+| SByte <br> Int16 <br> Int32 <br> Int64   | {"value": 1} | "1" ||
+| Byte <br> UInt16 <br> UInt32 <br> UInt64 | {"value" : { "value" : 1}} |  "1" | |
+| Float <br> Double | {"value" : 1.0} | "1.0" or "3.0E20" |  |
+| String | {"value" : "string" } | "string" | |
+| DateTime | {"value" : {"utcTime" : 11335116845776939}} | "2007-12-03T10:15:30" | CommunityCommons.LongToDateTime |
+| Guid | {"value": "cd1fdbc3-1f45-4fe8-9bff-b4927d5401c4"} | "cd1fdbc3-1f45-4fe8-9bff-b4927d5401c4" | |
+| ByteString | {"value" : {"bytes":[-1]}} | "0xFF" | |
+| XMLElement | {"value" : { "fragment" : "\u003cprice\u003e29.99\u003c/price\u003e"}} | \<price\>30.00\</price\> | CommunityCommons.HTMLToPlainText |
+| NodeID | {"value" : {"namespaceIndex": {"value": 1}, "identifier":"1"}} | "ns=1;i=1000"|
+| ExpandedNodeID | {"value" : {"namespaceIndex": {"value": 1}, "identifier":"1"}, "serverIndex" : {"value" : 0}} | not supported | |
+| StatusCode | {"value" : {"value" : 0}} | "0" | Use the _Value attribute on StatusCode |
+| QualifiedName | {"value" : {"namespaceIndex" : {"value" : 1}, "name" : "string"}}| not supported | |
+| LocalizedText | {"value" : {"locale" : "en", "text": "hello"}} | "hello"|  Currently always writes in "en" locale |
+
 
 ## 3 Usage
 

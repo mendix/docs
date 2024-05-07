@@ -241,7 +241,7 @@ To start, replace the static image with the image the app end-user uploads to th
 
 7. Repeat this process for the other label with the caption **Supporting text**, making sure to select the **Description** attribute this time.
 
-## 7 Defining Logic Using Microflows
+## 7 Defining Logic Using Microflows {#microflow-use-case}
 
 There is only one step left before you can run and test your photo album app. You have created a place for storing images and a page for displaying them. Most of the functionality for creating, editing, and deleting images has been handled automatically. 
 

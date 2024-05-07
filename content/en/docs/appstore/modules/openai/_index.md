@@ -792,7 +792,7 @@ For developers who want to configure the [ChatCompletionsRequest](#chatcompletio
 | Name                     | Type                                              | Mandatory | Description                                                  |
 | ------------------------ | ------------------------------------------------- | --------- | ------------------------------------------------------------ |
 | `ChatCompletionsRequest` | [ChatCompletionsRequest](#chatcompletionsrequest) | mandatory | This is the request object with associated messages as specified by the Chat Completions API. |
-| `Configuration`          | [Configuration](#configuration-entity)            | mandatory | This is the an object that contains endpoint and API key.    |
+| `Configuration`          | [Configuration](#configuration-entity)            | mandatory | This is an object that contains endpoint and API key.    |
 
 **Return value**
 

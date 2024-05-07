@@ -15,10 +15,10 @@ Function calling enables LLMs (Large Language Models) to connect with external t
 ### 1.1 High-level flow {#high-level}
 
 The basic process steps of function calling contain at least the following:
-1. Invoke the chat completions API with a user prompt and a list of available functions with expected input parameters
-2. Based on the user prompt and the available functions, the model can intelligently decide whether to call one ore more functions. If so, the content of the assistant's response will be a stringified JSON object containing the input parameters of the function as desceribed in the request. Note that the model may hallucinate parameters, so they should be validated before the function is actually called.
-3. Parse the string into JSON and call the function with it's input parameters
-4. Append the existing list of messages with the function response as a new tool message. Then, invoke the chat completions API again with and let the model answer your initial prompt with the new information provided by the function.
+1. Invoke the chat completions API with a user prompt and a list of available functions with expected input parameters.
+2. Based on the user prompt and the available functions, the model can intelligently decide whether to call one or more functions. If so, the content of the assistant's response will be a stringified JSON object containing the input parameters of the function as desceribed in the request. Note that the model may hallucinate parameters, so they should be validated before the function is actually called.
+3. Parse the string into JSON and call the function with its input parameters.
+4. Append the existing list of messages with the function response as a new tool message. Then, invoke the chat completions API again and let the model answer your initial prompt with the new information provided by the function.
 
 For more general information on this topic, see [Function Calling](https://platform.openai.com/docs/guides/function-calling).
 
@@ -42,14 +42,14 @@ Function calling is a very powerful capability, but this also introduces potenti
 
 Function calling can be used for a variety of usecases including
 
-* Create assisants that can answer questions about data from you Mendix database or a knowledge base
-    * e.g. getTicketById(String identifier) or findSimilarTickets(String description)
+* Create assisants that can answer questions about data from your Mendix database or a knowledge base
+    * e.g., getTicketById(String identifier) or findSimilarTickets(String description)
 * Create assistants that can get information from external APIs
-    * e.g. getCurrentWeather(String location)
+    * e.g., getCurrentWeather(String location)
 * Extract structured data from natural language
-    * e.g. extractBirthday(String birthday), or getSqlQuery(String query)
+    * e.g., extractBirthday(String birthday), or getSqlQuery(String query)
 * Execute action like creating objects
-    * e.g. createTicket(String subject)
+    * e.g., createTicket(String subject)
 
 ### 1.4 Examples {#examples}
 

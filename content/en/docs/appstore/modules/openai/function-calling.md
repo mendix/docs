@@ -10,14 +10,14 @@ tags: ["OpenAI", "generative AI", "AI", "connector", "marketplace", "chatgpt", "
 
 ## 1 Introduction {#introduction}
 
-Function calling enables LLMs (Large Language Models) to connect with external tools to gather information, execute actions, convert natural language in structure data and much more. Thereby, function calling enables the model to intelligently decide when to call one or more predefined functions to gather additional information to include in the assistant's response. OpenAI does not call the function; instead, the model returns a tool call JSON structure that is used to build the input of the function(s) so that they can be executed as part of the chat completions operation.
+Function calling enables LLMs (Large Language Models) to connect with external tools to gather information, execute actions, convert natural language in structure data and much more. Thereby, function calling enables the model to intelligently decide when to call one or more predefined functions (microflows) to gather additional information to include in the assistant's response. OpenAI does not call the function; instead, the model returns a tool call JSON structure that is used to build the input of the function(s) so that they can be executed as part of the chat completions operation.
 
 ### 1.1 High-level flow {#high-level}
 
 The basic process steps of function calling contain at least the following:
 1. Invoke the chat completions API with a user prompt and a list of available functions with expected input parameters.
-2. Based on the user prompt and the available functions, the model can intelligently decide whether to call one or more functions. If so, the content of the assistant's response will be a stringified JSON object containing the input parameters of the function as desceribed in the request. Note that the model may hallucinate parameters, so they should be validated before the function is actually called.
-3. Parse the string into JSON and call the function with its input parameters.
+2. Based on the user prompt and the available functions, the model can intelligently decide if it's needed to call one or more functions. If so, the content of the assistant's response will be a stringified JSON object containing the input parameters of the function as desceribed in the request. Note that the model may hallucinate parameters, so they should be validated before the function is actually called.
+3. Parse the string into JSON and call the function (microflow) with its input parameters. The microflow runs in the original user's session and `$currentUser` can for example be used to apply secruity constraints.
 4. Append the existing list of messages with the function response as a new tool message. Then, invoke the chat completions API again and let the model answer your initial prompt with the new information provided by the function.
 
 For more general information on this topic, see [Function Calling](https://platform.openai.com/docs/guides/function-calling).
@@ -47,9 +47,9 @@ Function calling can be used for a variety of usecases including
 * Create assistants that can get information from external APIs
     * e.g., getCurrentWeather(String location)
 * Extract structured data from natural language
-    * e.g., extractBirthday(String birthday), or getSqlQuery(String query)
+    * e.g., extractBirthday(String birthday)
 * Execute action like creating objects
-    * e.g., createTicket(String subject)
+    * e.g., createTicket(String subject); Note that we recommend building user confirmation logic for actions that manipulate data on behalf of the current user.
 
 ### 1.4 Examples {#examples}
 

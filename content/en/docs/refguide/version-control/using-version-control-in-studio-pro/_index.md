@@ -89,7 +89,7 @@ To commit your changes, click the **Commit** button in the **Changes** pane, or 
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-button.png" max-width=60% alt="Commit Button" >}}
 
-Git only creates a local commit. To submit your local commit (or commits) to the remote repository, you need to **push** your changes to the remore repository. You can choose between committing and pushing right away or committing locally. When you commit locally, your changes are committed faster and you can roll back to a previous state without having to contact the version control server.
+Git only creates a local commit. To submit your local commit (or commits) to the remote repository, you need to **push** your changes to the remote repository. You can choose between committing and pushing right away or committing locally. 
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/local-repo-and-team-server.png" alt="Local Repository and Team Server" class="no-border" >}}
 
@@ -149,14 +149,12 @@ Git prevents you from pushing your changes if it sees your changes and the remot
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/server-your-work.png" alt="The local changes consist of commits 1, 4, and 5 while the remote server has commits 1, 2, and 3 on the same branch." class="no-border" >}} 
 
-When you pull the changes, Studio Pro will merge the changes from the branch on the server into your working copy of the branch. After solving any conflicts, you need to make a ‘merge commit’. This commit contains any changes that have happened during integration of remote changes into yours.
-
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/merge-commit.png" alt="The local changes and the remote changes are combined into a merge commit which is pushed to the remote server." class="no-border" >}} 
+When you pull the changes, Studio Pro will merge the changes from the branch on the server into your working copy of the branch. 
 
 There are two possible scenarios when merging and needing to make a merge commit:
 
 * No conflicts (for example, you added a microflow and somebody else added a module on the server). In this case, Studio pro can automatically resolve this and there is nothing for you to do.
-* Conflicting changes (for example, the text on a button was changed locally by you and by another developer on the remote). In this case, you need to make some changes to resolve conflicts (for example, choose which of the two possible texts should be displayed on the button). The merge commit will contain these changes so that all the changes can be reviewed in history: what you did locally, what somebody else pushed to the server while you were working, and what you did to integrate their changes into yours.
+* Conflicting changes (for example, the text on a button was changed locally by you and by another developer on the remote). For more information on resolving conflicts, see [Combining Changes and Conflict Resolution](/refguide/merge-algorithm/).
 
 ### 4.4 Pulling
 

@@ -15,7 +15,7 @@ Function calling enables LLMs (Large Language Models) to connect with external t
 ### 1.1 High-level flow {#high-level}
 
 The basic process steps of function calling contain at least the following:
-1. Invoke the chat completions API with a user prompt and a list of available functions with expected input parameters.
+1. Invoke the chat completions API with a user prompt and a list of available functions (microflows) with expected input parameters.
 2. Based on the user prompt and the available functions, the model can intelligently decide if it's needed to call one or more functions. If so, the content of the assistant's response will be a stringified JSON object containing the input parameters of the function as desceribed in the request. Note that the model may hallucinate parameters, so they should be validated before the function is actually called.
 3. Parse the string into JSON and call the function (microflow) with its input parameters. The microflow runs in the original user's session and `$currentUser` can for example be used to apply secruity constraints.
 4. Append the existing list of messages with the function response as a new tool message. Then, invoke the chat completions API again and let the model answer your initial prompt with the new information provided by the function.

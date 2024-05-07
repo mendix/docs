@@ -12,6 +12,8 @@ tags: ["marketplace", "marketplace component", "module", "Snowflake"]
 
 Mendix has several options available for users who want to integrate their app with Snowflake in order to create data-driven enterprise applications.
 
+{{< figure src="/attachments/appstore/modules/snowflake-rest-sql/snowflake_architecture_setup.png" >}}
+
 ## 2 Snowflake Integration Options  
 
 Mendix provides real-time interaction with Snowflake through the [External Database connector](https://marketplace.mendix.com/link/component/219862) or the [REST SQL connector](https://marketplace.mendix.com/link/component/225717). Both of these connectors enable you to perform the following tasks:

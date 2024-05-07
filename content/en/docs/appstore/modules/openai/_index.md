@@ -2,7 +2,7 @@
 title: "OpenAI"
 url: /appstore/modules/openai-connector/
 linktitle: "OpenAI"
-description: "Describes the configuration and usage of the OpenAI Connector from the Mendix Marketplace that allows developers to integrate generative AI into their Mendix app."
+description: "Describes the configuration and usage of the OpenAI Connector from the Mendix Marketplace that allows you to integrate generative AI into your Mendix app."
 tags: ["OpenAI", "generative AI", "AI", "connector", "marketplace", "chatgpt", "dall-e", "genAI", "embeddings", "RAG", "Azure OpenAI", "function calling", "tools", "LLM", "ReAct"]
 aliases:
     - /appstore/connectors/openai-connector/
@@ -36,7 +36,7 @@ Image generations with the DALL-E models is currently supported only by OpenAI, 
 OpenAI provides market-leading large language model capabilities with GPT-4: 
 
 * Advanced reasoning: Follow complex instructions in natural language and solve difficult problems with accuracy. 
-* Creativity: Generate, edit, and iterate with users on creative and technical writing tasks, such as composing songs, writing screenplays, or learning a user’s writing style. 
+* Creativity: Generate, edit, and iterate with end-users on creative and technical writing tasks, such as composing songs, writing screenplays, or learning an end-user’s writing style. 
 * Longer context: GPT-4 is capable of handling over 25,000 words of text, allowing for use cases like long form content creation, extended conversations, and document search and analysis. 
 
 #### 1.1.2 Image Generation {#use-cases-images}
@@ -198,10 +198,16 @@ For technical details, see the [Technical reference](#chat-completions-advanced-
 
 #### 3.2.4 Function Calling {#chatcompletions-functioncalling}
 
-Function calling enables LLMs (Large Language Models) to connect with external tools to gather information, execute actions, convert natural language in structure data and much more. Thereby, function calling enables the model to intelligently decide when to let the Mendix app call one or more predefined function microflows to gather additional information to include in the assistant's response. OpenAI does not call the function; instead, the model returns a tool call JSON structure that is used to build the input of the function(s) so that they can be executed as part of the chat completions operation. Functions in Mendix are essentially microflows that can be registered within the request to the LLM​. The OpenAI connector takes care of handling the tool call response as well as executing the function microflow(s) until the API returns the final assistant's response. Currently, function microflows are limited to one input parameter of type string and must return a string.
+Function calling enables LLMs (Large Language Models) to connect with external tools to gather information, execute actions, convert natural language into structured data, and much more. Function calling thus enables the model to intelligently decide when to let the Mendix app call one or more predefined function microflows to gather additional information to include in the assistant's response.
+
+OpenAI does not call the function. The model returns a tool call JSON structure that is used to build the input of the function(s) so that they can be executed as part of the chat completions operation. Functions in Mendix are essentially microflows that can be registered within the request to the LLM​. The OpenAI connector takes care of handling the tool call response as well as executing the function microflow(s) until the API returns the final assistant's response.
+
+Function microflows take a single input parameter of type string and must return a string.
 
 {{% alert color="warning" %}}
-Function calling is a very powerful capability, but this also introduces potential risks. Function microflows do not respect entity access of the current user. Make sure to only retrieve and return information that the user is allowed to view, otherwise confidential information may be visible to the current user in the assistant's response. Furthermore, we strongly advise developer to build user confirmation logic into function microflows that have a potential impact on the world on behalf of the user, such as sending an email, posting online, making a purchase, etc.
+Function calling is a very powerful capability, but this also introduces potential risks. Function microflows do not respect any entity access rules for the current end-user. Make sure to retrieve and return only information that the end-user is allowed to view, otherwise confidential information may be visible to the current end-user in the assistant's response.
+
+Mendix also strongly advises that you build user confirmation logic into function microflows that have a potential impact on the world on behalf of the end-user, for example sending an email, posting online, or making a purchase.
 {{% /alert %}}
 
 Function calling is supported for all chat completions operations by adding the optional input parameter [FunctionCollection](#functioncollection).
@@ -339,10 +345,9 @@ This is the abstract entity for `ChatCompletionsMessage`. Do not use this entity
 | `Role`        | This is the role of the message author.<br />For more information, see the [ENUM_Role](#enum-role) section. |
 | `ToolCallId`  | Tool call that this message is responding to. Only applicable and required for messages with role `tool`.                |
 
-
 ##### 4.1.2.3 `AbstractTool` {#abstracttool}
 
-This is the abtract entity for `Tool` reused in the Chat Completions request and response. Do not use this entity directly. Instead, use one of its specializations. 
+This is the abstract entity for `Tool` reused in the Chat Completions request and response. Do not use this entity directly. Instead, use one of its specializations. 
 
 | Attribute | Description                                                  |
 | --------- | ------------------------------------------------------------ |
@@ -350,7 +355,7 @@ This is the abtract entity for `Tool` reused in the Chat Completions request and
 
 ##### 4.1.2.4 `AbstractFunction` {#abstractfunction}
 
-This is the abtract entity for `Function` reused in the Chat Completions request and response. Do not use this entity directly. Instead, use one of its specializations. 
+This is the abstract entity for `Function` reused in the Chat Completions request and response. Do not use this entity directly. Instead, use one of its specializations. 
 
 | Attribute | Description                                                  |
 | --------- | ------------------------------------------------------------ |
@@ -424,7 +429,7 @@ This is a specialization of the [AbstractFunction](#abstractfunction) entity and
 | Attribute          | Description                                                  |
 | ------------------ | ------------------------------------------------------------ |
 | `Description`      | A description of what the function does, used by the model to choose when and how to call the function. This attribute is optional. |
-| `FunctionMicroflow`| The microflow that is called within this function. A function microflow can only have a single String input parameter and returns a String. Note that function microflows do not respect entity access of the current user. Make sure that you only return information that the user is allowed to view, otherwise confidential information may be visible to the current user in the assistant's response. |
+| `FunctionMicroflow`| The microflow that is called within this function. A function microflow can only have a single String input parameter and returns a String. Note that function microflows do not respect the entity access rules for the current end-user. Make sure that you only return information that the end-user is allowed to view, otherwise confidential information may be visible to the current end-user in the assistant's response. |
 
 ##### 4.1.3.10 `ChatCompletionsResponse` {#chatcompletionsresponse} 
 
@@ -642,7 +647,7 @@ This enumeration provides a list of message author roles.
 | ----------- | ------------- | ------------------------------------------------------------ |
 | `assistant` | **Assistant** | An assistant message was generated by the model as a response to a user message. |
 | `system`    | **System**    | A system message can be used to specify the assistant persona or give the model more guidance and context. This is typically specified by the developer to steer the model response. |
-| `user`      | **User**      | A user message is the input from a user.                     |
+| `user`      | **User**      | A user message is the input from an end-user.                     |
 | `tool`      | **Tool**      | A tool message contains the return value of a tool call as it's content. Additionally, a tool message has a ToolCallId that is used to map it to the corresponding previous assistant response which provided the tool call input. |
 
 ##### 4.2.2.2 `ENUM_ResponseFormat_Chat` {#enum-responseformat-chat} 
@@ -776,7 +781,7 @@ Use the microflow `ChatCompletions_Execute_WithHistory` to execute a chat comple
 | ----------------------- | ------ | ------------------------------------------------------------ |
 | `AssistantResponseText` | String | Assistant message that was generated by the model as a response to a user message. |
 
-The following microflows may be used in order to construct and handle the required inputs: 
+The following microflows may be used to construct and handle the required inputs: 
 
 * `ChatCompletionsSession_Create` is used to create the session wrapper that must be passed as input parameter. 
 * `ChatCompletionsSession_AddMessage` is used to attach the historical messages to the `ChatCompletionsSession`. The content of such a message corresponds to a system, assistant, or user prompt. In the case of multiple historical messages the order is relevant.
@@ -802,7 +807,7 @@ For developers who want to configure the [ChatCompletionsRequest](#chatcompletio
 
 This option can be used if the default values of the `ChatCompletionsRequest` are insufficient and must be changed to work for your specific use case. It is also useful if you are interested in other [ChatCompletionsResponse](#chatcompletionsresponse) values apart from the assistant response like usage metrics or multiple choices.
 
-The following microflows may be used in order to construct and handle the required inputs:
+The following microflows may be used to construct and handle the required inputs:
 
 * `ChatCompletionsRequest_Create` is used to create the request object.
 * `ChatCompletionsMessages_Create` is used to create the wrapper object for the `ChatCompletionsMessageRequest` objects.
@@ -862,7 +867,7 @@ The embeddings API from OpenAI accepts a complex JSON structure that consists of
 
 ##### 4.3.3.1 Embeddings (single input) {#embeddings-single-technical} 
 
-Use the microflow `Embeddings_Execute_SingleInput` to execute a call to the embeddings API for a single string input. The output will be the string representation of a vector embedding for the input. See [ENUM_EncodingFormat_Embeddings](#enum-encodingformat-embeddings) for information of what is suported in terms of vector encoding formats. The encoding format can be left empty: if no value is specified, the default value as specified in the [OpenAI documentation](https://platform.openai.com/docs/api-reference/chat/create) will be assumed by the API. The `Model` value is mandatory for OpenAI, but is ignored for Azure OpenAI type configurations where it is implicitly specified by the deployment already.
+Use the microflow `Embeddings_Execute_SingleInput` to execute a call to the embeddings API for a single string input. The output will be the string representation of a vector embedding for the input. See [ENUM_EncodingFormat_Embeddings](#enum-encodingformat-embeddings) for information of what is supported in terms of vector encoding formats. The encoding format can be left empty: if no value is specified, the default value as specified in the [OpenAI documentation](https://platform.openai.com/docs/api-reference/chat/create) will be assumed by the API. The `Model` value is mandatory for OpenAI, but is ignored for Azure OpenAI type configurations where it is implicitly specified by the deployment already.
 
 **Input parameters**
 
@@ -930,21 +935,21 @@ For more inspiration or guidance on how to use those microflows in your logic, M
 
 ### 6.1 Outdated JDK Version Causing Errors while Calling the Embeddings API {#outdated-jdk-version}
 
-The Java Development Kit (JDK) is a framework needed by Mendix Studio Pro to deploy and run applications. For more infomation, see [Studio Pro System Requirements](/refguide/system-requirements/). Usually, the right JDK version is installed during the installation of Studio Pro, but in some cases it still may be outdated causing exceptions when calling the Embeddings API or other REST-based services with large data volumes.
+The Java Development Kit (JDK) is a framework needed by Mendix Studio Pro to deploy and run applications. For more information, see [Studio Pro System Requirements](/refguide/system-requirements/). Usually, the right JDK version is installed during the installation of Studio Pro, but in some cases it still may be outdated causing exceptions when calling the Embeddings API or other REST-based services with large data volumes.
 
 We have seen the following two exceptions when using JDK version `jdk-11.0.3.7-hotspot`:
 `java.net.SocketException - Connection reset` or
 `javax.net.ssl.SSLException - Received fatal alert: record_overflow`.
 
-Follow these steps to check your JDK version and update if neccessary:
+Follow these steps to check your JDK version and update if necessary:
 
 1. Check your JDK version: In Studio Pro Go to **Edit** -> **Preferences** -> **Deployment**-> **JDK directory**. If the path points to `jdk-11.0.3.7-hotspot`, you need to update the JDK by following the next steps.
 2. Go to [Eclipse Temurin JDK 11](https://adoptium.net/en-GB/temurin/releases/?variant=openjdk11&os=windows&package=jdk) and download the `.msi` file of the latest release of **JDK 11**.
-3. Open the downloaded file and follow the installation steps. Remember the installation path. Usually this should be somethink like `C:/Program Files/Eclipse Adoptium/jdk-11.0.22.7-hotspot`.
+3. Open the downloaded file and follow the installation steps. Remember the installation path. Usually this should be something like `C:/Program Files/Eclipse Adoptium/jdk-11.0.22.7-hotspot`.
 4. After the installation has finished, you might be asked to restart your computer.
 5. Open Studio Pro and go to **Edit** -> **Preferences** -> **Deployment** -> **JDK directory**. Click on **Browse** and select the folder with the new JDK version you just installed. This should be the folder containing the *bin* folder. Save your settings by clicking **OK**.
-6. Run the project and execute the action that threw the above mentioned execption earlier.
-    1. You might get an error saying `FAILURE: Build failed with an exception. The supplied javaHome seems to be invalid. I cannot find the java executable.`. Verify that you have selected the right JDK directory containing the updated JDK version. You may also need to updated Gradle. For this, go to **Edit** -> **Preferences** -> **Deployment** -> **Gradle directory**. Click **Browse** and select a newer gradle version from the Mendix folder. In this case we replaced `grade-7.6` with `gradle-7.6.3`. Save your settings by clicking **OK**.
+6. Run the project and execute the action that threw the above mentioned exception earlier.
+    1. You might get an error saying `FAILURE: Build failed with an exception. The supplied javaHome seems to be invalid. I cannot find the java executable.`. Verify that you have selected the right JDK directory containing the updated JDK version. You may also need to updated Gradle. For this, go to **Edit** -> **Preferences** -> **Deployment** -> **Gradle directory**. Click **Browse** and select a newer Gradle version from the Mendix folder. In this case we replaced `grade-7.6` with `gradle-7.6.3`. Save your settings by clicking **OK**.
     2. Rerun the project.
 
 ## 7 Read More {#read-more}

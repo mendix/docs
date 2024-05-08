@@ -155,8 +155,8 @@ The sidebar shows all properties, references, and relations for the configured T
 
 You often see that check boxes are selected by default or grayed out. In general, the following rules apply:
 
-1.    Properties that are already available on the Mendix entity or one of its generalizations are selected by default and cannot be unchecked.
-2.    Properties, references, and relations for Marketplace entities are disabled by default, as it is not good practice to change Mendix marketplace content.
+1. Properties that are already available on the Mendix entity or one of its generalizations are selected by default and cannot be unchecked.
+2. Properties, references, and relations for Marketplace entities are disabled by default, as it is not good practice to change Mendix marketplace content.
 
 As an example, if a check box for reading ({{% icon name="view" %}}) is selected and grayed out, it means that property already exists as an attribute on the selected object or one of its generalizations. Similarly, if a check box for writing ({{% icon name="pencil" %}}) is selected and grayed out, it means the property is required during creation or revision of the selected object.
 

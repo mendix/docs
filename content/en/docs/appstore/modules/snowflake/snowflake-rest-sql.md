@@ -71,7 +71,7 @@ To configure the authentication, perform the following steps:
 
 1. In the **App Explorer**, under the **SnowflakeRESTSQL** section, find the **SNIPPET_SnowflakeConfiguration** snippet and drag and drop it into a page in your module.
 
-{{< figure src="/attachments/appstore/modules/snowflake-rest-sql/drag_snippet_to_page.png" >}}
+    {{< figure src="/attachments/appstore/modules/snowflake-rest-sql/drag_snippet_to_page.png" >}}
 
 2. Assign the module role **SnowflakeRESTSQL.Administrator** to the application role that will be used to set up the configuration, so that the added logic will be usable.
 3. Run the application and go to the page where you added the snippet.
@@ -79,7 +79,7 @@ To configure the authentication, perform the following steps:
 5. On the **Connection details** page, fill out all fields with the details of your Snowflake account. For more information, see [ConnectionDetails](#connection-details).
 6. Enter the passphrase and upload [your private key file](#setup-key-pair-snowflake) in *.p8* format.
 
-{{< figure src="/attachments/appstore/modules/snowflake-rest-sql/connection_details.png" >}}
+    {{< figure src="/attachments/appstore/modules/snowflake-rest-sql/connection_details.png" >}}
 
 7. Click **Save** to save the connection, or click **Save and test connection** to generate a JSON Web Token (JWT) and validate your connection.
 
@@ -160,16 +160,6 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `Statement` | `{HttpResponseList}` |
 
-#### 4.2.1 ExecuteStatement {#execute-statement}
-
-The `ExecuteStatement` activity allows you to execute a command in Snowflake using the SQL statement and the configuration details given in a `Statement` object. It requires a `Statement` object and returns a list of `HttpResponse` objects.
-
-The input and output for this service are shown in the table below:
-
-| Input | Output |
-| --- | --- |
-| `Statement` | `HttpResponseList` |
-
 #### 4.2.2 TransformResponsesToMxObjects {#transform-response-to-mx-object}
 
 The `TransformResponsesToMxObjects` activity allows you to transform the list of `HttpResponse` objects into objects of the entity of your choice. 
@@ -192,7 +182,7 @@ To showcase this, we have created an example entity in the domain model of the c
 | `ATTR_ENUM` (enumeration) |
 | `ParsedDate` (date and time)|
 
-This entity is only an example. You must review properties such as the naming of the attributes, what datatypes they have or in which order they are added, and configure them according to your needs. These information are importants after the entity has been decided on and the data will be received from a Snowflake account. The order in which you receive the columns from a Snowflake table, the name of these columns as well as the datatypes of these values must match the entity that you have selected.
+This entity is only an example. You must review properties such as the naming of the attributes, what datatypes they have or in which order they are added, and configure them according to your needs. This information is important after the entity has been decided on and the data will be received from a Snowflake account. The order in which you receive the columns from a Snowflake table, the name of these columns as well as the datatypes of these values must match the entity that you have selected.
 
 For example, a table in Snowflake may contain multiple columns named `column1, column2,.......,column8`. To retrieve data from the column, create `ExampleObject` objects and display them on a page, you must execute an SQL statement that would retrieve the table columns with the name of my attributes and have the same datatypes. After making sure that the datatypes in Snowflake and Mendix match, you can execute a statement such as the one shown in the following example:
 

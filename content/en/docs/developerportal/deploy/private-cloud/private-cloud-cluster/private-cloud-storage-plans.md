@@ -363,9 +363,7 @@ AWS IRSA allows a Kubernetes Service Account to assume an IAM role. For this to 
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/awsserviceaccountlinktorole.png" class="no-border" >}}
 
-{{% alert color="info" %}}
-For Global Operator installations, you must specify the managed namespace in the **Namespace** field.
-{{% /alert %}}    
+    {{% alert color="info" %}}For Global Operator installations, you must specify the managed namespace in the **Namespace** field.{{% /alert %}}    
 
 2. For the second condition, copy and paste the `sts.amazonaws.com` line; replace `:aud` with `:sub` and set it to `system:serviceaccount:<Kubernetes namespace>:<Kubernetes serviceaccount name>`.
 
@@ -1652,9 +1650,7 @@ Create a new IAM role.
 
     2. For the second condition, copy and paste the `sts.amazonaws.com` line; replace `:aud` with `:sub` and set it to `system:serviceaccount:<Kubernetes namespace>:<Kubernetes serviceaccount name>`.
 
-{{% alert color="info" %}}
-For Global Operator installation, replace `Kubernetes namespace` with the managed namespace name. For more information, see [Amazon EKS Pod Identity Webhook – EKS Walkthrough](https://github.com/aws/amazon-eks-pod-identity-webhook#eks-walkthrough). After this, the specified service account in the specified namespace is able to assume this role.
-{{% /alert %}}
+    {{% alert color="info" %}}For Global Operator installation, replace `Kubernetes namespace` with the managed namespace name. For more information, see [Amazon EKS Pod Identity Webhook – EKS Walkthrough](https://github.com/aws/amazon-eks-pod-identity-webhook#eks-walkthrough). After this, the specified service account in the specified namespace is able to assume this role.{{% /alert %}}
 
 5. Attach the following IAM policy to this Storage Provisioner admin IAM role:
 

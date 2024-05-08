@@ -47,19 +47,18 @@ Communication between these components operates as follows:
 ## 3 Runtime Operations {#RO}
 Data-related communication between the Mendix Client and the Runtime Server is done with Runtime Operations over a REST-like protocol. 
 
-There are various types of Runtime Operations:
+For every data-related Client action, there is a corresponding Runtime Operation type:
 - Create - creates new objects or variables.
 - Retrieve - retrieves a list of entities or a single entity.
 - Rollback - undoes changes.
 - Commit - commits objects and updates an entity if there are changes.
 - CallMicroflow - executes a Microflow.
-- CallExternalAction - executes an external action.
 
 The above operations are requested from the Client and are executed on the Runtime.
 
-When building your application, Studio Pro analyses the domain model. Every data-related action that is used in pages, widgets, microflows or nanoflows is registered in a registry in the Runtime during building as a Runtime Operation.
+During building, Studio Pro analyses your application. All data-related Client actions used in pages, widgets, or nanoflows are registered in the Runtime registry as a Runtime Operation.
 
-A registration of the Runtime Operation exsists of the following properties:
+A registration of the Runtime Operation has the following properties:
 
 | Property             | Explanation                                                  |
 |----------------------|--------------------------------------------------------------|
@@ -134,6 +133,8 @@ Under the params section, parameters can be transmitted to the Runtime if requir
 As described, the majority of the information concerning the Runtime Operation is maintained internally within the Runtime. This approach minimizes the amount of data transmitted in the client's request, thereby enhancing security. However, this can also make in debugging the application more difficult.
 
 To assist with debugging, you can configure the `IDResolution` log node to 'debug'. This log node records each instance when a new Runtime Operation ID is resolved to its corresponding Runtime Operation. It includes the stored registration details and any parameter inputs received from the Client.
+
+Additionally, the Runtime Registry is stored in the app's deployment directory under `model/operations.json` for debugging purposes.
 
 For our retrieve operation, it looks as follows:
 

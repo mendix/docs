@@ -23,10 +23,10 @@ The basic steps of function calling are as follows:
     * The model decides whether to call one or more functions based on the user prompt and the available functions.
 
         * If it calls a function, the content of the assistant's response will be a stringified JSON object containing the input parameters of the function as described in the request. Note that the model may hallucinate parameters, so they should be validated before the function is actually called.
+        * Parse the string into JSON and call the function with its input parameters. The microflow runs in the original user's session and `$currentUser` can for example be used to apply security constraints.
+        * Append the existing list of messages with the function response as a new tool message.
 
-2. Parse the string into JSON and call the function with its input parameters. The microflow runs in the original user's session and `$currentUser` can for example be used to apply security constraints.
-3. Append the existing list of messages with the function response as a new tool message.
-4. Invoke the chat completions API again and let the model answer your initial prompt with the new information provided by the function.
+2. Invoke the chat completions API again and let the model answer your initial prompt with the new information provided by the function.
 
 For more general information on this topic, see [Function Calling](https://platform.openai.com/docs/guides/function-calling).
 

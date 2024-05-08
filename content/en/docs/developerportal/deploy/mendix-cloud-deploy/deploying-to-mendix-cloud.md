@@ -15,6 +15,8 @@ aliases:
 
 ## 1 Introduction
 
+This page describes how to deploy an app to Mendix Cloud.
+
 The method for deploying an app to Mendix Cloud differs depending on whether you have a licensed app or a Free App:
 
 * For a licensed app, there are several deployment options:
@@ -78,23 +80,22 @@ You can also create a deployment package through the Developer Portal, using a m
 The previous steps explained how to deploy a deployment package to Mendix Cloud, but the app based on the deployment package is not running yet. To deploy a deployment package to a node environment where you can run the app, follow these steps:
 
 1. Go to the [Developer Portal](https://sprintr.home.mendix.com).
-2. Open your app.
-3. Go to **Environments**.
-4. In the **Deployment Package Repository**, choose your preferred deployment package and click **Deploy** ({{% icon name="deploy" %}}).
+1. Open your app's **Environments** page.
+1. In the **Deployment Package Repository**, choose your preferred deployment package and click **Deploy** ({{% icon name="deploy" %}}).
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/deploy-package.png" alt="" >}}
 
-5. Select the environment to which you want to deploy the package.
-6. Click **Transport**.
+1. Select the environment to which you want to deploy the package.
+1. Click **Transport**.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/transport-to-flex.png" alt="The Transport menu" >}}
 
-7. If prompted, clean the environment.
-8. Review the [constants](/refguide/constants/) in the **Constants** tab. Double-click any constant to view more details and edit the value if desired.
-9. Configure any [scheduled events](/refguide/scheduled-events/) using the **Scheduled Events** tab.
-10. Click **Continue**.
-11. Click **Start application**. 
-12. If prompted, click **Synchronize database**.
+1. If prompted, clean the environment.
+1. Review the [constants](/refguide/constants/) in the **Constants** tab. Double-click any constant to view more details and edit the value if desired.
+1. Configure any [scheduled events](/refguide/scheduled-events/) using the **Scheduled Events** tab.
+1. Click **Continue**.
+1. Click **Start application**. 
+1. If prompted, click **Synchronize database**.
 
 The app is now deployed. You can configure the administrative account.
 
@@ -120,3 +121,7 @@ With a Free App, you can deploy your app to Mendix Cloud from Studio Pro by usin
 * Alternatively, in the top bar of Studio Pro, click **Publish**.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/runapp.png" alt="The Publish button" max-width=20% class="no-border" >}}
+
+## 4 Deployment Status and Troubleshooting
+
+The [Mendix Platform Status page](https://status.mendix.com/) shows the current status of Mendix services. If you have issues with deployment, you can check the status page to see if deployment is operational (under **Mendix Services**) or if there are other Mendix issues that may be affecting your deployment. For more information, see [Mendix Cloud Status](/developerportal/deploy/mendix-cloud-status/).

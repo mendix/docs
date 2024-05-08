@@ -902,7 +902,7 @@ If you prefer the individual to join as a cluster manager automatically, without
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/AutoAcceptClusterManager.png" class="no-border" >}}
 
 {{% alert color="info" %}}
-**Automatically accept invites** option is applicable only when the invited user(s) have the same email domain as yours.
+The **Automatically accept invites** option is applicable only when the invited users have the same email domain as yours.
 {{% /alert %}}
 
 {{% alert color="info" %}}

@@ -16,7 +16,7 @@ OpenAI does not call the function. The model returns a tool call JSON structure 
 
 ### 1.1 High-level flow {#high-level}
 
-If you use the `ChatCompletions_Execute_WithoutHistory` or `ChatCompletions_Execute_WithHistory` microflows to do your chat completions, you can use the OpenAI connector to function (microflow) calling for you in just two steps:
+If you use the `ChatCompletions_Execute_WithoutHistory` or `ChatCompletions_Execute_WithHistory` microflows to do your chat completions, you can use the OpenAI connector to do function (microflow) calling for you in just two steps:
 
 1. Invoke the chat completions API with a user prompt and a list of available functions (microflows) with expected input parameters.
 

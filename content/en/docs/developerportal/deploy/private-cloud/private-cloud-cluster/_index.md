@@ -1158,7 +1158,7 @@ You can invite additional members to the namespace, and configure their role dep
 4. If you prefer the individual to join as a namespace member automatically, without requiring them to manually accept the invitation, you can enable the **Automatically accept invites** option.
 
 {{% alert color="info" %}}
-**Automatically accept invites** option is applicable only when the invited user(s) have the same email domain as yours.
+The **Automatically accept invites** option is applicable only when the invited users have the same email domain as yours.
 {{% /alert %}}
 
 5. Give them the rights they need. This can be:

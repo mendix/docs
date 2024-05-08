@@ -52,7 +52,7 @@ If you select **Edit Webhook** from **More Options** ({{% icon name="three-dots-
 
 * Click **Test Webhook** to send a test payload to the endpoint specified under **URL**.
 * Click **(De)activate Webhook** to deactivate an active webhook or activate an inactive webhook.
-* Click **Delete Webhook*** to completely remove the webhook.
+* Click **Delete Webhook** to completely remove the webhook.
 
 ### 3 Outgoing IP Addresses for Webhooks {#webhook-ip-addresses}
 

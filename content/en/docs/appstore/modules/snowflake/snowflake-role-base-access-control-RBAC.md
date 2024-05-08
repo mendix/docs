@@ -55,9 +55,9 @@ To interact with Snowflake, SQL queries need to be executed. To execute the SQL 
 {{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/Pic.5 Create Statement Object.png" >}}
 * SQL Statement: this is the field that will contains your SQL Query for example, to select the item and region data from "Example_RBAC" table write the following in the SQL statement
 ```SQL
-'SELECT ITEM,
+SELECT ITEM,
        Region,  
-       FROM EXAMPLE_RBAC;'
+       FROM EXAMPLE_RBAC;
 ``` 
 ** Based on what is needed the Timeout,  Database , Schema, Warehouse, Role will need to be filled for example for the above statement if the Table "Example_RBAC"
 is in "Example_RBAC" Database, the "RBAC_Schema" and the "COMPUTE_WH" then the information will need to be added as below

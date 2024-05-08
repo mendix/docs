@@ -15,12 +15,13 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ### May 9th, 2024
 
-
 #### Deploy API
 
 * We've enhanced support for the Global Operator, allowing for smoother operations in creating, updating, and deleting clusters and namespaces.
-* Now, in case of a failed build, users can access build logs for debugging purposes.
 * We've resolved an issue where an incorrect error message appeared upon deletion of the default Studio Pro target environment.
+
+#### Build API
+* In case of a failed build, users can now access the build logs for debugging purposes by specifying the log query parameter to the GetJob endpoint.
 
 #### Portal Enhancements
 

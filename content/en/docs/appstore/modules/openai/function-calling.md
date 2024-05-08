@@ -24,7 +24,7 @@ If you use the `ChatCompletions_Execute_WithoutHistory` or `ChatCompletions_Exec
 
 2. Invoke the chat completions API again and let the model answer your initial prompt with the new information provided by the function.
 
-This automates the following process, which you can implement yourself using the `ChatCompletions_CallAPI` microflow, if you want to have more control over the process:
+This automates the following process, which you can implement yourself using the `ChatCompletions_CallAPI` microflow if you want to have more control over the process:
 
 1. Invoke the chat completions API with a user prompt and a list of available functions (microflows) with expected input parameters.
 2. The model decides whether to call one or more functions based on the user prompt and the available functions. If it calls a function, the content of the assistant's response will be a stringified JSON object containing the input parameters of the function as described in the request.  Note that the model may hallucinate parameters, so they should be validated before being used.

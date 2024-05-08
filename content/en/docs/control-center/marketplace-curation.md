@@ -43,6 +43,7 @@ The list shows the following details:
 * **License** – This shows the license of the content.
 * **Label** – This shows whether the content has a recommended label.
 * **Source** – This indicates the origin of the label:
+
     * **Curation Setting**  – The recommended label is added automatically based on the curation settings.
     * **Manual** – The recommended label is added manually by a Mendix Admin.
 

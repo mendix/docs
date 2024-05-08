@@ -58,7 +58,7 @@ Function calling can be used for a variety of use cases including:
     * for example, getCurrentWeather(String location)
 * Extracting structured data from natural language
     * for example, extractBirthday(String birthday), or getSqlQuery(String query)
-* Executing action like creating objects
+* Executing actions like creating objects
     * for example, createTicket(String subject)
 
 ### 1.4 Examples {#examples}

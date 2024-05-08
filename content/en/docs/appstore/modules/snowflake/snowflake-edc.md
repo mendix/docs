@@ -111,8 +111,31 @@ To execute and test the query in Studio Pro, follow these steps:
 
 4. Click **Run Query**.
 5. Verify that the results are correct, and then generate the required entity to collect the data in your Mendix application. For more information, see [External Database Connector: Creating an Entity from the Response](/appstore/modules/external-database-connector/#create-entity).
+6. [Add a **Data grid 2** widget](/refguide/page/#add-elements) to the page where you want to display the query results.
+7. Double-click the widget, and give it a data source microflow by selecting **Data source** > **Type** > **Microflow**.
+8. Next to the microflow field, click the **Select** button, and then click **New**.
+9. Configure the microflow that will run the query by doing the following steps:
+    1. Enter a name for your microflow, for example, *ACT_RetrievFilteredResults*, and then click **OK**.
+    3. In your **Toolbox**, find the **Query External Database** activity and drag it onto the work area of your microflow.
+    4. Position the **Query External Database** activity between the start and end event of your microflow.
+    5. Double-click the **Query External Database** microflow activity to configure the required parameters.
+    6. In the **Database** section, select your Snowflake database.
+    7. In the **Query** list, select the query name that you entered in step 2.
+    8. In the **Parameters** section, add the following parameters:
 
-[TBD]
+        | Name | Type | Value |
+        | --- | --- | --- |
+        | *filterPostalCode1* | **String** | *$HistoryDayFilter/PostalCode* |
+        | *filterPostalCode2* | **String** | *$HistoryDayFilter/PostalCode* |
+        | *filterCountry1* | **String** | *$HistoryDayFilter/Country* |
+        | *filterCountry2* | **String** | *$HistoryDayFilter/Country* |
+
+    9. In the **Output** section, provide the following values:
+        * **Return type** - **List of *{your module name}*.HISTORY_DAY**
+        * **Use return value** - set to **Yes**
+        * **List name** - enter *HISTORY_DAY*
+    10. Click **OK**.
+10. Configure a nanoflow with the [Refresh entity](/appstore/modules/nanoflow-commons/) action to refresh the data grid if a user changes one of the filter values.
 
 ## 5 Configuring a Query to Display Data as a Chart
 
@@ -244,8 +267,7 @@ Mendix expects a table when generating the entity. As a workaround, you can use 
         * **Use return value** - set to **Yes**
         * **List name** - enter *SentimentResult*
     10. Click **OK**.
-    11. [TBD]
-
+  
     {{< figure src="/attachments/appstore/modules/external-database-connector/sample-snowflake-query-cortex-flow.png" >}}
 
 7. Configure a method for triggering the **ACT_RetrieveSentiment** microflow. For example, you can trigger a microflow by associating it with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).

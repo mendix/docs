@@ -16,17 +16,20 @@ OpenAI does not call the function. The model returns a tool call JSON structure 
 
 ### 1.1 High-level flow {#high-level}
 
-The basic steps of function calling are as follows:
+If you use the `ChatCompletions_Execute_WithoutHistory` or `ChatCompletions_Execute_WithHistory` microflows to do your chat completions, you can use the OpenAI connector to function (microflow) calling for you in just two steps:
 
 1. Invoke the chat completions API with a user prompt and a list of available functions (microflows) with expected input parameters.
 
-    * The model decides whether to call one or more functions based on the user prompt and the available functions.
-
-        * If it calls a function, the content of the assistant's response will be a stringified JSON object containing the input parameters of the function as described in the request. Note that the model may hallucinate parameters, so they should be validated within the function before being used.
-        * Parse the string into JSON and call the function (microflow) with its input parameters. The microflow runs in the original user's session and `$currentUser` can for example be used to apply security constraints.
-        * Append the existing list of messages with the function response as a new tool message.
+    The model will decide which function (microflow) to call, if any, and will respond based on the information you provide and the response from any function (microflow) it calls.
 
 2. Invoke the chat completions API again and let the model answer your initial prompt with the new information provided by the function.
+
+This automates the following process, which you can implement yourself using the `ChatCompletions_CallAPI` microflow, if you want to have more control over the process:
+
+1. Invoke the chat completions API with a user prompt and a list of available functions (microflows) with expected input parameters.
+2. The model decides whether to call one or more functions based on the user prompt and the available functions. If it calls a function, the content of the assistant's response will be a stringified JSON object containing the input parameters of the function as described in the request.  Note that the model may hallucinate parameters, so they should be validated before being used.
+3. The OpenAI connector (or you if you are implementing the process yourself), parse the string into JSON and call the function with its input parameters. 
+4. Append the function response to the existing list of messages as a new tool message. Then, invoke the chat completions API again and let the model answer your initial prompt with the new information provided by the function.
 
 For more general information on this topic, see [Function Calling](https://platform.openai.com/docs/guides/function-calling).
 

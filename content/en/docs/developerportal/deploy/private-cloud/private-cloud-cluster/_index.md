@@ -897,6 +897,14 @@ Here you can perform the following actions on the entire cluster:
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-activity-logs.PNG" class="no-border" >}}
 
+If you prefer the individual to join as a cluster manager automatically, without requiring them to manually accept the invitation, you can enable the **Automatically accept invites** option.
+
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/AutoAcceptClusterManager.png" class="no-border" >}}
+
+{{% alert color="info" %}}
+**Automatically accept invites** option is applicable only when the invited user(s) have the same email domain as yours.
+{{% /alert %}}
+
 {{% alert color="info" %}}
 When you add a cluster manager, the user will have most of the access which the original cluster manager had, such as the abilities to add a namespace, add a member, change the permissions of the cluster member, and delete another cluster manager.
 
@@ -1147,7 +1155,13 @@ You can invite additional members to the namespace, and configure their role dep
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image28.png" class="no-border" >}}
 
 3. Enter the **Email** of the person you want to invite.
-4. Give them the rights they need. This can be:
+4. If you prefer the individual to join as a namespace member automatically, without requiring them to manually accept the invitation, you can enable the **Automatically accept invites** option.
+
+{{% alert color="info" %}}
+**Automatically accept invites** option is applicable only when the invited user(s) have the same email domain as yours.
+{{% /alert %}}
+
+5. Give them the rights they need. This can be:
 
     1. **Developer** – a standard set of rights needed by a developer, these are listed on the screen
     2. **Administrator** – a standard set of rights needed by an administrator, these are listed on the screen
@@ -1156,11 +1170,11 @@ You can invite additional members to the namespace, and configure their role dep
     With custom permissions, we have now decoupled the permissions for Scale, Start and Stop operations. If an application is in the Stopped state, the scaling does not come into effect until the application is Started. This means that you have to click **Start application** in order for the changes to be sent to the cluster.
     Along with this, we have also decoupled the permission for modifying the MxAdmin password and managing environments.
 
-5. Click **Send Invite** to send an invite to this person.
+6. Click **Send Invite** to send an invite to this person.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image29.png" class="no-border" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/AutoAcceptInvite.png" class="no-border" >}}
 
-6. The user will receive an email and will be required to follow a link to confirm that they want to join this namespace. They will need to be logged in to Mendix when they follow the confirmation link.
+7. If you have not enabled the **Automatically accept invites** option, the user will receive an email and will be required to follow a link to confirm that they want to join this namespace. They will need to be logged in to Mendix when they follow the confirmation link.
 
 ##### 7.2.2.2 Editing and Removing Members
 

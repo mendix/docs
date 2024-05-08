@@ -13,11 +13,29 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2024
 
+### May 9th, 2024
+
+
+#### Deploy API
+
+* We've enhanced support for the Global Operator, allowing for smoother operations in creating, updating, and deleting clusters and namespaces.
+* Now, in case of a failed build, users can access build logs for debugging purposes.
+* We've resolved an issue where an incorrect error message appeared upon deletion of the default Studio Pro target environment.
+
+#### Portal Enhancements
+
+* Users now have the option to automatically accept invitations for cluster and namespace memberships.
+* The License section within the Environment Details page now includes an additional field displaying the Runtime License ID applied in the environment. This feature is visible for applications deployed in Operator v2.16 and later versions.
+* A convenient button has been added next to the mxpc-cli download screen, enabling users to easily copy the download URL for mxpc-cli.
+* An error message related to incorrect email IDs for namespace member invitations has been rectified.
+* We've addressed an issue where the list of Claims wasn't displayed accurately when navigating back and forth between pages.
+
+
 ### April 25th, 2024
 
 #### Deploy API
 
-*  We have added new endpoints for customers to retrieve their applications via API.
+* We have added new endpoints for customers to retrieve their applications via API.
 
 
 ### April 24th, 2024

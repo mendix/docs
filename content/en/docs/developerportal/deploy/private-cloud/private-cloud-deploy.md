@@ -490,6 +490,14 @@ We have also released an alternate way of licensing your apps in the Private Clo
 
 For users of the Private Cloud License Manager who wish to set the product type for the Runtime license in a particular environment, it can be done by editing the Product type. This ensures that the associated environment obtains the license from the license bundle with the specified Product type. By default, the value is set to the one defined in the Namespace configuration page.
 
+When the namespace in which environment is deployed is configured with PCLM, then licenses information related to PCLM will be displayed under this section. If not configured with PCLM, this section will be empty. Below is the brief explanation of the fields under this section:
+
+1. **Subscription Secret**: When configured with PCLM, it will show a message **configured using Private Cloud License Manager**
+2. **Runtime License Id** : If the runtime license is successfully applied in the environment, then the license id will be displayed in this section, else it will show **unknown**
+3. **Product Type for PCLM** : Product type of the Runtime license to be configured for this environment. This fields can also be configured to other Product type.
+
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/LicensePCLM.png" class="no-border" >}}
+
 #### 5.1.4 Security
 
 Your environment will be created as a Production environment.

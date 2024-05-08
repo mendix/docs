@@ -110,7 +110,7 @@ NPM version 7 changed the resolution behavior of peerDependencies. Try adding `-
 
 When the build script completes it will package your widget as a `.mpk` file and copy it to the `widgets/` directory in your Mendix project. Now that the generator has finished its job it is time to use the widget in Studio Pro.
 
-1. To find your widget for the first time you need to refresh from the files system. Use <kbd>F4</kbd> or select **App** > **Synchronize Project Directory** from the Studio Pro menu.<br />
+1. To find your widget for the first time you need to refresh from the file system. Use <kbd>F4</kbd> or select **App** > **Synchronize Project Directory** from the Studio Pro menu bar.<br />
 1. Open the **Home_Web** page in the page editor.
 1. Open the toolbox on the right of your screen and locate the newly created **Text Box** widget. It should be at the bottom of the list.
 1. Drag the Text Box widget to the Data View added in [section 3.1](#creating-a-test-project).
@@ -172,7 +172,7 @@ Open the *(YourMendixApp)/myPluggableWidgets/textBox* folder in your IDE of choi
     }
 
     export function TextInput({ value }: TextInputProps): ReactElement {
-    return <input type="text" value={value} />;
+        return <input type="text" value={value} />;
     }
     ```
     
@@ -213,7 +213,9 @@ Open the *(YourMendixApp)/myPluggableWidgets/textBox* folder in your IDE of choi
 
     Unlike the Container component, the Preview component receives mocked values for the the widget attributes. In this case `textAttribute` always receives a string. Thanks to this it is not necessary to deal with a possible `undefined` value.
 
-7. Once the watcher is done building your widget, go to Studio Pro and **synchronize** your project with <kbd>F4</kbd>. The widget now displays a red border indicating that it needs to be updated. Open its context menu with a right click and select **Update all widgets**.
+7. Once the watcher is done building your widget, go to Studio Pro and **synchronize** your project with <kbd>F4</kbd>. Synchronizing from the file system is a required step after changing the widget definition file. For other changes this is not necessary.  
+
+    The widget now displays a red border indicating that it needs to be updated. Open its context menu with a right click and select **Update all widgets**.
 
     {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/updateallwidgets.png" alt="A demonstration of opening the context menu of a widget in the page editor to reveal the Update all widgets command." class="no-border" >}}
 
@@ -272,7 +274,7 @@ The input works, but the styling could be improved. In the next code snippets, y
     * The questionmarks in the props indicate that [a property is optional](https://www.typescriptlang.org/docs/handbook/2/objects.html#optional-properties). This is why the unchanged usage of `TextInput` in *src/TextBox.editorPreview.tsx* is not causing type errors.
     * To ensure our input has basic input [styling from Bootstrap](https://getbootstrap.com/docs/5.3/forms/form-control/), we prepend the css class `form-control` to the `className` property. Similar to how you would add classes to an HTML `class` attribute. There is no need to include Bootstrap, as Mendix' Atlas UI is based on Bootstrap.
 
-3. **Synchronize** your project with <kbd>F4</kbd> and **rerun** your app. The result should be a well-styled input.
+3. Refresh your Mendix app in the browser, the result should be a well-styled input widget. If the change does not appear immediately, open your browser's devtools and disable cache. This ensures you are loading your widget's latest assets.
 
     {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/styledinputwidgets.png" alt="A live Mendix app with two text fields with a similar appearance." class="no-border" >}}
 

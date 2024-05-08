@@ -825,6 +825,10 @@ To fix this issue, you can raise memory requests to match the memory limit by pe
     kubectl -n {namespace} edit mendixapp {environmentInternalId}
     ```
 
+  ### 7.8 App Restart/Unstable
+
+  Once your application keeps restarting unexpectedly, becomes unstable or even worse: crashes, the first thing to do is check your application log for hints on what could be causing this. If there are any FATAL or CRITICAL log lines in there, immediately start working on resolving them. If not resolved, **critical level** logs forces the app to restart by design.
+
 ## 8 How the Operator Deploys Your App {#how-operator-deploys}
 
 The Mendix Operator is another app within your private cloud namespace. It is triggered when you provide a CR file. This can either be through the Developer Portal, for a connected cluster, or through the command line, for a standalone cluster. The process looks like this:

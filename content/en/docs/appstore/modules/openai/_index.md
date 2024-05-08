@@ -428,7 +428,7 @@ This is a specialization of the [AbstractFunction](#abstractfunction) entity and
 
 | Attribute          | Description                                                  |
 | ------------------ | ------------------------------------------------------------ |
-| `Description`      | A description of what the function does, used by the model to choose when and how to call the function. This attribute is optional. |
+| `Description`      | A description of what the function does, used by the model to choose when and how to call the function. This attribute is optional, but Mendix suggests using it to help the model choose the correct function. |
 | `FunctionMicroflow`| The microflow that is called within this function. A function microflow can only have a single String input parameter and returns a String. Note that function microflows do not respect the entity access rules for the current end-user. Make sure that you only return information that the end-user is allowed to view, otherwise confidential information may be visible to the current end-user in the assistant's response. |
 
 ##### 4.1.3.10 `ChatCompletionsResponse` {#chatcompletionsresponse} 

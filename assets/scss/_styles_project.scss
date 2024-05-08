@@ -538,9 +538,11 @@ nav.foldable-nav {
         }
         // NK - styling for ToC highlighting
         .activeToc {
-            font-weight: $font-weight-bold;
-            color: $link-color;
             border-left-color: $link-color;
+        }
+        
+        .activeToc > a {
+            font-weight: $font-weight-bold;
         }
     }
 }

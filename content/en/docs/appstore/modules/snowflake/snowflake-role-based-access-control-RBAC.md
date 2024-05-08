@@ -1,6 +1,6 @@
 ---
-title: "Snowflake REST SQL Connector"
-description: "Describes in steps how to use the Role Based Access control of Snowflake in a Mendix application."
+title: "Snowflake Role-based Access Control"
+description: "Describes in steps how to use the Role-based Access control of Snowflake in a Mendix application."
 ---
 
 ## 1 Introduction
@@ -19,7 +19,7 @@ Remember, implementing RBAC is essential for maintaining security and managing a
 
 * Download the Rest SQL Connector for Mendix [Rest SQL Connector module](https://marketplace.mendix.com/link/component/225717 "https://marketplace.mendix.com/link/component/225717") from Mendix marketplace that supports Snowflake integration.
 * Ensure your Mendix app has the necessary domain model and entities.
-* For the Role Based access control the Connection Details is associated with the account
+* For the Role-based access control the Connection Details is associated with the account
 {{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/Pic.1 Domain model.png" >}}
 
 ### 2.2 Key-Pair Authentication Method

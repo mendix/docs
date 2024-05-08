@@ -23,7 +23,7 @@ The basic steps of function calling are as follows:
     * The model decides whether to call one or more functions based on the user prompt and the available functions.
 
         * If it calls a function, the content of the assistant's response will be a stringified JSON object containing the input parameters of the function as described in the request. Note that the model may hallucinate parameters, so they should be validated within the function before being used.
-        * Parse the string into JSON and call the function with its input parameters. The microflow runs in the original user's session and `$currentUser` can for example be used to apply security constraints.
+        * Parse the string into JSON and call the function (microflow) with its input parameters. The microflow runs in the original user's session and `$currentUser` can for example be used to apply security constraints.
         * Append the existing list of messages with the function response as a new tool message.
 
 2. Invoke the chat completions API again and let the model answer your initial prompt with the new information provided by the function.
@@ -43,7 +43,7 @@ Depending on the user prompt and the available functions, the model may suggest 
 A way to steer the function calling process is the [ToolChoice](/appstore/modules/openai-connector/#enum-toolchoice) parameter. This optional attribute on the [FunctionCollection](/appstore/modules/openai-connector/#functioncollection) entity controls which (if any) function is called by the model.
 
 {{% alert color="warning" %}}
-Function calling is a very powerful capability, but this also introduces potential risks. Function microflows do not respect any entity access rules for the current end-user. Make sure to retrieve and return only information that the end-user is allowed to view, otherwise confidential information may be visible to the current end-user in the assistant's response.
+Function calling is a very powerful capability, but this also introduces potential risks. Function microflows do not respect any entity access rules for the current end-user. You can use `$currentUser` to help you ensure you retrieve and return only information that the end-user is allowed to view, otherwise confidential information may be visible to the current end-user in the assistant's response.
 
 Mendix also strongly advises that you build user confirmation logic into function microflows that have a potential impact on the world on behalf of the end-user, for example sending an email, posting online, or making a purchase.
 {{% /alert %}}

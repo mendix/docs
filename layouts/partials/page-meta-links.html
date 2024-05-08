@@ -42,7 +42,7 @@
               {{ $newPageQS := querify "value" $newPageStub.Content "filename" "change-me.md" | safeURL -}}
               {{ $newPageURL := printf "%s/new/%s?%s"  $gh_repo $gh_repo_path $newPageQS -}}
               <!-- NK - changed icon properties -->
-              <a data-proofer-ignore href="{{ $editURL }}" target="_blank"><img class="ToC-icon" src="/icons/notes-paper-edit-1.svg" title="View on Github"></a>
+              <a data-proofer-ignore href="{{ $editURL }}" target="_blank"><img class="ToC-icon" src="/icons/github.svg" title="View on Github"></a>
           </div>
           <div class="col-3">
               <!-- NK - changed icon properties, added class name for feedback widget -->

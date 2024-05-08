@@ -15,7 +15,7 @@ Mendix provides webhooks to send project information when the following events h
 
 * Package upload – when a deployment package is available in the Developer Portal, including when a package is created from the Team Server
 * Team Server push – when a new commit is pushed to the Team Server (this will only be triggered if your app is stored in a Git repository)
-* Alerts - when an alert is triggered for your Mendix app
+* Alerts – when an alert is triggered for your Mendix app
 
 The webhooks contain a retry mechanism if an error response is received from the endpoint. This helps ensure that the trigger reaches the endpoint.
 

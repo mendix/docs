@@ -21,10 +21,9 @@ To see the current status of the Mendix Control Center, see [Mendix Status](http
 
 #### Improvements
 
-*  We have improved the [Apps](/control-center/apps/) page as follows:
+* We have improved the [Apps](/control-center/apps/) page as follows:
     * We have implemented column-based filters that empower you to do complex filtering operations.
     * We have made it easier for you to copy the application name, the app id, and the environment name.
-
 
 ### February 8, 2024
 

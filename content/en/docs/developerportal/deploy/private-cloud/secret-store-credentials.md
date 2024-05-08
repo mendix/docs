@@ -541,7 +541,7 @@ To enable your environment to use [Azure Key Vault](https://learn.microsoft.com/
 
     You can leave the **Access configuration** as default (**Azure RBAC** and no additional **Resource access**).
 
-{{% alert color="info" %}}This walkthrough uses the default network settings (allow all access). Your organization might have additional instructions or policies that can be used to restrict public access to Key vaults.{{% /alert %}}
+    {{% alert color="info" %}}This walkthrough uses the default network settings (allow all access). Your organization might have additional instructions or policies that can be used to restrict public access to Key vaults.{{% /alert %}}
 
 4. Write down the name of the new Key vault and its **Directory ID** (Azure Tenant ID).
 

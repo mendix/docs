@@ -7,7 +7,7 @@ url: /howto/integration/use-extensions/
 
 Connect to and receive information from external sources with extensions in Mendix Studio Pro.
 
-## 2 Documents in this Category
+How's available for this topic:
 
 * [Use the Data Importer](/howto/integration/use-the-data-importer/)
 

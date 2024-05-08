@@ -10,7 +10,7 @@ tags: ["OpenAI", "generative AI", "AI", "connector", "marketplace", "chatgpt", "
 
 ## 1 Introduction {#introduction}
 
-Function calling enables LLMs (Large Language Models) to connect with external tools to gather information, execute actions, convert natural language into structured data, and much more. Function calling thus enables the model to intelligently decide when to let the Mendix app call one or more predefined function microflows to gather additional information to include in the assistant's response.
+Function calling enables LLMs (Large Language Models) to connect with external tools to gather information, execute actions, convert natural language into structured data, and much more. Function calling thus enables the model to intelligently decide when to let the Mendix app call one or more predefined functions (microflows) to gather additional information to include in the assistant's response.
 
 OpenAI does not call the function. The model returns a tool call JSON structure that is used to build the input of the function(s) so that they can be executed as part of the chat completions operation.
 
@@ -18,13 +18,13 @@ OpenAI does not call the function. The model returns a tool call JSON structure 
 
 The basic steps of function calling are as follows:
 
-1. Invoke the chat completions API with a user prompt and a list of available functions with expected input parameters.
+1. Invoke the chat completions API with a user prompt and a list of available functions (microflows) with expected input parameters.
 
     * The model decides whether to call one or more functions based on the user prompt and the available functions.
 
         * If it calls a function, the content of the assistant's response will be a stringified JSON object containing the input parameters of the function as described in the request. Note that the model may hallucinate parameters, so they should be validated before the function is actually called.
 
-2. Parse the string into JSON and call the function with its input parameters.
+2. Parse the string into JSON and call the function with its input parameters. The microflow runs in the original user's session and `$currentUser` can for example be used to apply security constraints.
 3. Append the existing list of messages with the function response as a new tool message.
 4. Invoke the chat completions API again and let the model answer your initial prompt with the new information provided by the function.
 
@@ -57,9 +57,9 @@ Function calling can be used for a variety of use cases including:
 * Creating assistants that can get information from external APIs
     * for example, getCurrentWeather(String location)
 * Extracting structured data from natural language
-    * for example, extractBirthday(String birthday), or getSqlQuery(String query)
+    * for example, extractBirthday(String birthday)
 * Executing actions like creating objects
-    * for example, createTicket(String subject)
+    * for example, createTicket(String subject); Note that we recommend building user confirmation logic for actions that manipulate data on behalf of the current user.
 
 ### 1.4 Examples {#examples}
 

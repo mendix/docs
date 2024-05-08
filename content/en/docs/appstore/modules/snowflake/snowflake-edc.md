@@ -223,7 +223,64 @@ The **group by** property is used to select the column that indicates the series
 
 ## 6 Implementing Data Replication
 
-[TBD]
+Data replication involves copying the data that from Snowflake into the database of your app. This makes the data faster to access and easier to use in your app pages. To ensure that the data in your app is up to date, the data replication process must be recurrent. For example, you can configure a query that iterates over Snowflake data (for example, the list of your customers) at a preconfigured interval, in order to find any differences compared to the last iteration and copy them over to your app database. However, iterating over a list of objects can be a performance-heavy operation, and more complex data (such as a list of your customers together with their billing and shipping addresses) can require more complex queries with multiple *fetch* operations. Because of that, for complex nested data structures, it is better and more performant to use the JSON capabilities of Snowflake.
+
+This section provides an example of a query that builds a nested structure consisting of records from multiple tables or views, and returns the result as a single string or JSON value.
+
+To execute and test the query in Studio Pro, follow these steps:
+
+1. In your Mendix app, in the **App Explorer**, find and open the external connection document that you created with the Connect to Database wizard.
+2. In the **Name** field, enter a name for your query, for example, *GetSentiment*.
+3. Enter the following **SQL Query**:
+
+    ```text
+    with ftoday as (
+        select fd.postal_code as zipcode
+        ,      fd.country as country
+        ,      fd.DATE_VALID_STD as forecast_date
+        ,      round((fd.AVG_TEMPERATURE_AIR_2M_F -32) * (5/9),1) as avg_temp_c
+        ,      round((fd.MIN_TEMPERATURE_AIR_2M_F -32) * (5/9),1) as min_temp_c
+        ,      round((fd.MAX_TEMPERATURE_AIR_2M_F -32) * (5/9),1) as max_temp_c
+        from   STANDARD_TILE.FORECAST_DAY fd
+        where  fd.DATE_VALID_STD = current_date
+    ), ztoday as (
+        select f.zipcode || '-' || f.country as id
+        ,      f.zipcode, f.country
+        ,      object_construct(
+                    'ForecastId', f.zipcode || '-' || f.country || '-' || f.forecast_date
+                   ,'Date',f.forecast_date
+                   ,'AvgTempCelcius',f.avg_temp_c
+                   ,'MinTempCelcius',f.min_temp_c
+                   ,'MaxTempCelcius',f.max_temp_c
+               ) as forecast
+        from   ftoday f
+        order by 1,2
+    )
+    select array_agg(object_construct('LocationId',zt.id,'ZipCode',zt.zipcode,'Country',zt.country,'Forecast',zt.forecast)) as today_forecast_json
+    from   ztoday as zt
+    ```
+    
+    The resulting string is captured in a non-persistent entity (NPE) with a single attribute.
+
+    {{< figure src="/attachments/appstore/modules/external-database-connector/sample-snowflake-query-replication.png" >}}
+
+4. Use a JSON import mapping to directly import the data into multiple associated persistent entities by doing the following steps:
+
+    1. Define a [JSON structure](/refguide/json-structures/) for the data retrieved from Snowflake.
+
+        {{< figure src="/attachments/appstore/modules/external-database-connector/sample-snowflake-query-replication-json.png" >}}
+
+    2. Define an [import mapping](/refguide/import-mappings/) for the JSON structure.
+
+        {{< figure src="/attachments/appstore/modules/external-database-connector/sample-snowflake-query-replication-map.png" >}}
+
+5.  Execute the query in a microflow, take the resulting JSON string, and import it by using an **Import from JSON** microflow activity, as shown in the following figure:
+
+    {{< figure src="/attachments/appstore/modules/external-database-connector/sample-snowflake-query-replication-flow.png" >}}
+
+6. Optionally, to track the status of the replication jobs, create a page with a data grid showing data from the [System.ProcessedQueueTask](/refguide/task-queue/) database table.
+
+    {{< figure src="/attachments/appstore/modules/external-database-connector/sample-snowflake-query-replication-grid.png" >}}
 
 ## 7 Using Cortex AI functions
 

@@ -825,9 +825,9 @@ To fix this issue, you can raise memory requests to match the memory limit by pe
     kubectl -n {namespace} edit mendixapp {environmentInternalId}
     ```
 
-  ### 7.8 Unexpected App Restart
+### 7.8 Unexpected App Restart
 
-  If your application keeps restarting unexpectedly, the first thing to do is check your application log for hints on what could be causing this. If there are any  CRITICAL log lines in there, immediately start working on resolving them. 
+If your application keeps restarting unexpectedly, check your application log for hints on what could be causing this. If there are any *CRITICAL* lines in the log, immediately start working on resolving them. 
 
 ## 8 How the Operator Deploys Your App {#how-operator-deploys}
 

@@ -277,7 +277,7 @@ The `(Re)populate Knowledge Base` activity is used to populate a whole knowledge
 | -------------------- | ----------------------------------------- | ------------------------------------------------------------ |
 | `IsSuccess` | Boolean | This boolean indicates if the population of the knowledge base was successful. This can be used for custom error-handling. |
 
-#### 4.3.3 Retrieve Operations (#retrieve-operations-technical)
+#### 4.3.3 Retrieve Operations {#retrieve-operations-technical}
 
 Activities that support the retrieval of the knowledge from the knowledge base.
 
@@ -373,7 +373,7 @@ The `DatabaseConfiguration` that is passed must contain the connection details t
 | -------------------- | ----------------------------------------- | ------------------------------------------------------------ |
 | `TargetChunkList` | List of type parameter `TargetChunk` | This list is the result of the retrieval. |
 
-#### 4.3.4 Delete Operations (#delete-operations-technical)
+#### 4.3.4 Delete Operations {#delete-operations-technical}
 
 Activities that support the deletion of knowledge bases.
 

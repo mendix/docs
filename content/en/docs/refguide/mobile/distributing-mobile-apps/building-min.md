@@ -44,11 +44,46 @@ First things first, make sure you clone your repo and install necessary software
    cd ios && pod install
    ```
 
-### 1.2 Additional Setup Requirements
+### 1.2 Switching to the Compatible Mendix Studio Pro Branch
+
+To ensure that you can build and run the Make it Native (MiN) application successfully, you need to use a version of the application that is compatible with your Mendix Studio Pro version. Our repository includes multiple branches, each compatible with different versions of Mendix Studio Pro. Follow these steps to switch to the appropriate branch and build the application.
+
+#### 1.2.1 Identify Your Mendix Studio Pro Version
+
+First, confirm the version of Mendix Studio Pro you are currently using. You can find this information in the Mendix Studio Pro application under **Help** > **About Mendix Studio Pro**.
+
+#### 1.2.2 Switch to the Compatible Branch
+
+Based on your Mendix Studio Pro version, switch to the corresponding branch in our repository. 
+
+Here are the branches available for different versions:
+
+| Studio Pro Version         | Branch        |
+| -------------------------- | ------------- |
+| Mendix Studio Pro 10.10.0  | `mx/10.10.0`  |
+| Mendix Studio Pro 10.9.0   | `mx/10.9.0`   |
+| Mendix Studio Pro 10.8.0   | `mx/10.8.0`   |
+| Mendix Studio Pro 10.7.0   | `mx/10.7.0`   |
+| Mendix Studio Pro 10.6.0   | `mx/10.6.0`   |
+| Mendix Studio Pro 10.5.0   | `mx/10.5.0`   |
+| Mendix Studio Pro 10.4.1   | `mx/10.4.1`   |
+| Mendix Studio Pro 10.3.1   | `mx/10.3.1`   |
+| Mendix Studio Pro LTS/9.24 | `mx/lts/9.24` |
+| Mendix Studio Pro MTS/9.24 | `mx/mts/10.6` |
+
+Use the following Git command to switch branches:
+
+```bash
+git checkout <branch-name>
+```
+
+Replace `<branch-name>` with the branch corresponding to your version of Mendix Studio Pro.
+
+### 1.3 Additional Setup Requirements
 
 To build and run the native mobile app successfully, you must complete several setup steps related to external services like Firebase and Google Maps. Follow the instructions below carefully.
 
-#### 1.2.1 Setting up Firebase
+#### 1.3.1 Setting up Firebase
 
 1. Create a Firebase Project:
    1. Go to the [Firebase Console](https://console.firebase.google.com/) and create a new project.
@@ -62,13 +97,13 @@ To build and run the native mobile app successfully, you must complete several s
    1. For Android, move the *google-services.json* file to the **android/app** directory.
    1. For iOS, move the *GoogleService-Info.plist* file to the **ios/DeveloperApp** directory.
 
-#### 1.2.2 Setting up Google Maps API
+#### 1.3.2 Setting up Google Maps API
 
-##### 1.2.2.1 Getting a Google Maps API key
+##### 1.3.2.1 Getting a Google Maps API key
 
 Follow the instructions provided by Google [here](https://developers.google.com/maps/documentation/android-sdk/get-api-key) to obtain an API key.
 
-##### 1.2.2.2 Integrate the API Key into an Android Project
+##### 1.3.2.2 Integrate the API Key into an Android Project
 
 Open your *android/app/src/main/AndroidManifest.xml* file and find the section with the placeholder `{{GEO_API_KEY}}`. Replace `{{GEO_API_KEY}}` with your actual Google Maps API key:
 
@@ -77,7 +112,7 @@ Open your *android/app/src/main/AndroidManifest.xml* file and find the section w
          android:value="YOUR_API_KEY_HERE"/>
 ```
 
-##### 1.2.2.3 Integrate the API Key into an iOS Project
+##### 1.3.2.3 Integrate the API Key into an iOS Project
 
 To run iOS Fastlane script containing an API key, define the variable `GOOGLE_MAPS_API_KEY` before beta lane. If you run it manually in XCode, change the API key in the *ApiKeys.xcconfig* file.
 
@@ -120,20 +155,7 @@ Currently submitting the app for review is a manual step, but this might change.
 For the **Beta** and **Release** lanes, before building, be sure to change the **VERSION_NUMBER** in the `Fastlane` config file manually.
 {{% /alert %}}
 
-#### 2.1.1 Installing Fastlane 
-
-To install Fastlane on your machine, do the following:
-
-1. Install Fastlane via gem:
-   * `sudo gem install fastlane -NV`
-1. Add these lines in ~/.bash_profile or ~/.zshrc (point the version to version installed):
-
-   ```bash
-   export FASTLANE_PATH="/usr/local/lib/ruby/gems/2.6.0/gems/fastlane-2.134.0/bin"
-   export PATH="$FASTLANE_PATH:$PATH"
-   ```
-
-#### 2.1.2 Build an App for Internal Testing
+#### 2.1.1 Build an App for Internal Testing
 
 To build your app for internal testing, do the following:
 
@@ -141,7 +163,7 @@ To build your app for internal testing, do the following:
 1. Run the `fastlane internal` command to build your app.
 1. The output will reside in `/build/internal/output`, so grab your files from that directory.
 
-#### 2.1.3 Releasing to TestFlight
+#### 2.1.2 Releasing to TestFlight
 
 Change the VERSION_NUMBER in the `Fastlane` config file to your new version, then build:
 
@@ -150,7 +172,7 @@ Change the VERSION_NUMBER in the `Fastlane` config file to your new version, the
 
 The script will take considerable amount of time as it also waits for processing to finish, to release a TestFlight beta test.
 
-#### 2.1.4 Releasing to App Store
+#### 2.1.3 Releasing to App Store
 
 Change the VERSION_NUMBER in the `Fastlane` config file to the new version, then build:
 

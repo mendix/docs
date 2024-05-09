@@ -213,7 +213,9 @@ paths:
           $ref: '#/components/responses/error403'
         '404':
           $ref: '#/components/responses/error404'
-      description: Updates a specific namespace.
+      description: |-
+        Updates a specific namespace.<br/>
+        ***Please be aware that this endpoint cannot be used for the `Main` namespace of a Global Operator installation.***
       tags:
         - namespaces
       requestBody:
@@ -222,6 +224,42 @@ paths:
             schema:
               $ref: '#/components/schemas/updateNamespaceManifest'
         description: Manifest of a namespace.
+  /apps:
+    get:
+      summary: Get Manifests of Multiple Applications
+      tags:
+        - apps
+      responses:
+        '200':
+          $ref: '#/components/responses/appsManifests'
+        '401':
+          $ref: '#/components/responses/error401'
+        '403':
+          $ref: '#/components/responses/error403'
+        '404':
+          $ref: '#/components/responses/error404'
+      operationId: get-apps-manifests
+      description: Retrieves the manifests of all the applications for which the user has access.
+  '/apps/{appId}':
+    parameters:
+      - $ref: '#/components/parameters/appId'
+    get:
+      summary: Get App Manifest
+      tags:
+        - apps
+      responses:
+        '200':
+          $ref: '#/components/responses/appManifest'
+        '400':
+          $ref: '#/components/responses/error400'
+        '401':
+          $ref: '#/components/responses/error401'
+        '403':
+          $ref: '#/components/responses/error403'
+        '404':
+          $ref: '#/components/responses/error404'
+      operationId: get-app-manifest
+      description: Retrieves the manifest of an application.
   '/apps/{appId}/environments':
     parameters:
       - $ref: '#/components/parameters/appId'
@@ -491,46 +529,30 @@ paths:
         - $ref: '#/components/parameters/architecture'
       tags:
         - cli
-  /apps:
-    get:
-      summary: Get Manifests of Multiple Applications
-      tags:
-        - apps
-      responses:
-        '200':
-          $ref: '#/components/responses/appsManifests'
-        '401':
-          $ref: '#/components/responses/error401'
-        '403':
-          $ref: '#/components/responses/error403'
-        '404':
-          $ref: '#/components/responses/error404'
-      operationId: get-apps-manifests
-      description: Retrieves all the applications for which the user has access.
-  '/apps/{appId}':
-    parameters:
-      - schema:
-          type: string
-        name: appId
-        in: path
-        required: true
-    get:
-      summary: Get App Manifest
-      tags:
-        - apps
-      responses:
-        '200':
-          $ref: '#/components/responses/appManifest'
-        '401':
-          $ref: '#/components/responses/error401'
-        '403':
-          $ref: '#/components/responses/error403'
-        '404':
-          $ref: '#/components/responses/error404'
-      operationId: get-app-manifest
-      description: Retrieves the manifest of an App.
 components:
   schemas:
+    appManifest:
+      type: object
+      x-examples:
+        Example 1:
+          manifestVersion: 2.0.0
+          app:
+            appId: 085a0e34-69ec-4c61-9c7d-5cd42554f9f2
+            appName: my-app
+      description: Model for the app manifest.
+      properties:
+        manifestVersion:
+          type: string
+          example: 2.0.0
+        app:
+          type: object
+          properties:
+            appId:
+              $ref: '#/components/schemas/appId'
+            appName:
+              type: string
+              description: The name of a Mendix application.
+              example: my-app
     appId:
       type: string
       title: appId
@@ -774,6 +796,7 @@ components:
                 namespace:
                   type: string
                   example: my-namespace
+                  description: Be aware that you cannot deploy environments to `Main` namespaces of Global Operator Installations.
                 namespaceId:
                   $ref: '#/components/schemas/namespaceId'
             annotations:
@@ -1002,6 +1025,8 @@ components:
               example: new-cluster
             clusterType:
               $ref: '#/components/schemas/clusterType'
+            operatorType:
+              $ref: '#/components/schemas/operatorType'
             description:
               type: string
               example: This cluster is for testing purposes.
@@ -1050,6 +1075,8 @@ components:
             name:
               type: string
               example: my-namespace
+            namespaceType:
+              $ref: '#/components/schemas/namespaceType'
             installationType:
               $ref: '#/components/schemas/installationType'
             secret:
@@ -1123,6 +1150,8 @@ components:
             name:
               type: string
               example: my-namespace
+            namespaceType:
+              $ref: '#/components/schemas/namespaceType'
             installationType:
               $ref: '#/components/schemas/installationType'
             secret:
@@ -1376,42 +1405,36 @@ components:
       x-examples:
         example-ondemand: OnDemand
         example-dedicated: Dedicated
-    appManifest:
-      title: appManifest
+    operatorType:
+      title: Operator Installation Type
       x-stoplight:
-        id: 3dt82oarpy3z9
-      type: object
-      description: Model for the app manifest.
-      properties:
-        manifestVersion:
-          type: string
-          x-stoplight:
-            id: dkayg5pllafgh
-          example: 2.0.0
-        app:
-          type: object
-          x-stoplight:
-            id: 4zjx7kgtcrvx5
-          properties:
-            appId:
-              type: string
-              x-stoplight:
-                id: v9gjibgp77snk
-              format: uuid
-              example: 085a0e34-69ec-4c61-9c7d-5cd42554f9f2
-            appName:
-              type: string
-              x-stoplight:
-                id: ky0cb3n3f9b1a
-              example: my-app
-          required:
-            - appId
-            - appName
-      required:
-        - manifestVersion
+        id: 5dr1xnpfnmet8
+      type: string
+      description: '*This value cannot be changed after it has been set.*'
+      enum:
+        - global_operator
+        - standard_operator
       x-examples:
-        example-app-manifest:
-          $ref: '#/components/examples/AppManifest'
+        Example Global Installation: global_operator
+        Example Namespace Instalaltion: standard_operator
+      default: standard_operator
+    namespaceType:
+      title: Type of Namespace
+      x-stoplight:
+        id: acy4l42nog506
+      type: string
+      enum:
+        - standard
+        - main
+        - managed
+      x-examples:
+        Example Standard Namespace: standard
+        Example Main Namespace: main
+        Example Managed Namespace: managed
+      description: |-
+        *This value cannot be changed after it has been set.*
+        The namespace type is influenced by the type of operator installation.
+      default: standard
   parameters:
     appId:
       name: appId
@@ -1798,6 +1821,7 @@ components:
                   clusterId: 085a0e34-69ec-4c61-9c7d-5cd42554f9f2
                   name: new-cluster
                   clusterType: os
+                  operatorType: standard_operator
                   description: This cluster is for testing purposes.
                   totalNamespaces: 0
                   totalEnvironments: 0
@@ -1826,6 +1850,7 @@ components:
                       clusterId: 085a0e34-69ec-4c61-9c7d-5cd42554f9f2
                       name: new-cluster
                       clusterType: k8s
+                      operatorType: global_operator
                       description: This cluster is for testing purposes.
                       totalNamespaces: 0
                       totalEnvironments: 0
@@ -1847,6 +1872,7 @@ components:
                 namespace:
                   namespaceId: 9fab54b2-39f9-48e4-8ceb-5a7ecbba44e1
                   name: my-namespace
+                  namespaceType: standard
                   installationType: Connected
                   secret: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
                   productTypePCLM: standard
@@ -1925,6 +1951,7 @@ components:
                     namespace:
                       namespaceId: 9fab54b2-39f9-48e4-8ceb-5a7ecbba44e1
                       name: my-namespace
+                      namespaceType: standard
                       installationType: Connected
                       secret: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
                       productTypePCLM: standard
@@ -2067,6 +2094,12 @@ components:
                     cliVersion: 1.0.0
                     availableOperatingSystems: 'windows, linux, macos'
                     availableArchitectures: x86
+    appManifest:
+      description: The app manifest response returned by a get-app-manifest request.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/appManifest'
     appsManifests:
       description: The apps manifests response returned by a get-apps-manifests request.
       content:
@@ -2075,28 +2108,9 @@ components:
             type: object
             properties:
               apps:
-                $ref: '#/components/schemas/appManifest'
-          examples:
-            example-app-manifests:
-              value:
-                apps:
-                  - manifestVersion: 2.0.0
-                    app:
-                      appId: 085a0e34-69ec-4c61-9c7d-5cd42554f9f2
-                      appName: my-app
-    appManifest:
-      description: The app manifest response returned by a get-app-manifest request.
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/appManifest'
-          examples:
-            example-app-manifest:
-              value:
-                manifestVersion: 2.0.0
-                app:
-                  appId: 085a0e34-69ec-4c61-9c7d-5cd42554f9f2
-                  appName: my-app
+                type: array
+                items:
+                  $ref: '#/components/schemas/appManifest'
   securitySchemes:
     PersonalAccessToken:
       name: Authorization
@@ -2224,6 +2238,7 @@ components:
           clusterId: 085a0e34-69ec-4c61-9c7d-5cd42554f9f2
           name: new-cluster
           clusterType: os
+          operatorType: standard_operator
           description: This cluster is for testing purposes.
     NamespaceManifest:
       value:
@@ -2233,6 +2248,7 @@ components:
           name: my-namespace
           installationType: Connected
           secret: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
+          namespaceType: standard
     UpdateClusterManifest:
       value:
         manifestVersion: 2.0.0
@@ -2255,6 +2271,7 @@ components:
         namespace:
           namespaceId: 9fab54b2-39f9-48e4-8ceb-5a7ecbba44e1
           name: my-namespace
+          namespaceType: standard
           installationType: Connected
           secret: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
           productTypePCLM: standard

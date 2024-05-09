@@ -35,4 +35,3 @@ The [REST SQL connector](https://marketplace.mendix.com/link/component/225717), 
 The REST SQL connector requires an additional step to transform data rows received from the REST SQL API into Mendix objects. For more information, see [Snowflake REST SQL Connector](/appstore/connectors/snowflake/snowflake-rest-sql/).
 
 ## 3 Documents in This Category
-

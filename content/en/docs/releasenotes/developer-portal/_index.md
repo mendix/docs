@@ -53,9 +53,8 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 * In Feedback, we have fixed an issue where the reporter's name appeared empty on the **Contact Reporter** tab. Now if there is no reporter's name available, their email address will be shown instead. 
 * We released the following improvements for [Mini survey](/developerportal/app-insights/mini-surveys/):
-  * We improved your experience of copying the generated API key by implementing a new widget on the [Settings](/developerportal/app-insights/mini-surveys/#settings) tab of the **Survey Overview** page.
-  * We improved our error messages by providing more details.
-
+    * We improved your experience of copying the generated API key by implementing a new widget on the [Settings](/developerportal/app-insights/mini-surveys/#settings) tab of the **Survey Overview** page.
+    * We improved our error messages by providing more details.
 
 ### March 28
 

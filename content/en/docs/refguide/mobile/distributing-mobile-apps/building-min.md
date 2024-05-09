@@ -43,11 +43,13 @@ To ensure that you can build and run the Make it Native (MiN) application succes
 
 #### 1.2.1 Identify Your Mendix Studio Pro Version
 
-First, confirm the version of Mendix Studio Pro you are currently using. You can find this information in the Mendix Studio Pro application under Help > About Mendix Studio Pro.
+First, confirm the version of Mendix Studio Pro you are currently using. You can find this information in the Mendix Studio Pro application under **Help** > **About Mendix Studio Pro**.
 
 #### 1.2.2 Switch to the Compatible Branch
 
-Based on your Mendix Studio Pro version, switch to the corresponding branch in our repository. Here are the branches available for different versions:
+Based on your Mendix Studio Pro version, switch to the corresponding branch in our repository. 
+
+Here are the branches available for different versions:
 
 | Studio Pro Version         | Branch        |
 | -------------------------- | ------------- |

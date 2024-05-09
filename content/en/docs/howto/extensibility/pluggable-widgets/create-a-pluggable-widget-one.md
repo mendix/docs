@@ -98,9 +98,9 @@ The generator will ask you a few questions during setup. Answer the questions by
 
 {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/generatorblack-new.png" alt="The Mendix Widget generator with the prompts answered according to the list above." class="no-border" >}}
 
-As part of the widget scaffolding, the generator builds the widget for the first time. You can do this yourself by running `npm run build`. There is also a watcher available that will rebuild your widget as you make changes to files.
+As part of the widget scaffolding, the generator builds the widget for the first time. You can do this yourself by running `npm run build`. 
 
-Start the watcher by running `npm start`.
+There is also a watcher available that will rebuild your widget as you make changes to files. Start the watcher by running `npm start`.
 
 {{% alert color="info" %}}
 NPM version 7 changed the resolution behavior of peerDependencies. Try adding `--legacy-peer-deps` to your install command if it results in peer dependency resolution errors.
@@ -108,15 +108,13 @@ NPM version 7 changed the resolution behavior of peerDependencies. Try adding `-
 
 ### 3.3 Using the Widget
 
-When the build script completes it will package your widget as a `.mpk` file and copy it to the `widgets/` directory in your Mendix project. Now that the generator has finished its job it is time to use the widget in Studio Pro.
+When the build script completes it will package your widget as a `.mpk` file and copy it to the `widgets/` directory in your Mendix app. Now that the generator has finished its job it is time to use the widget in Studio Pro. To use the widget, do the following:
 
-1. To find your widget for the first time you need to refresh from the file system. Use <kbd>F4</kbd> or select **App** > **Synchronize Project Directory** from the Studio Pro menu bar.<br />
+1. To find your widget for the first time, you need to refresh the file system Studio Pro is looking at. Use <kbd>F4</kbd> or select **App** > **Synchronize Project Directory** from the Studio Pro menu bar.
 1. Open the **Home_Web** page in the page editor.
 1. Open the toolbox on the right of your screen and locate the newly created **Text Box** widget. It should be at the bottom of the list.
-1. Drag the Text Box widget to the Data View added in [section 3.1](#creating-a-test-project).
-1. Run your app locally and open it in the browser. The homepage should now display Hello World below the previously added text widget.
-
-The end result will be similar to the screenshot below:
+1. Drag the Text Box widget to the Data View added in [Creating a Test Project](#creating-a-test-project).
+1. Run your app locally and open it in the browser. The homepage should now display Hello World below the text widget:
 
 {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/hello-world.png" alt="A live mendix app displaying a text field and below it the pluggable widget with the text Hello World." class="no-border" >}}
 
@@ -124,7 +122,7 @@ The end result will be similar to the screenshot below:
 
 Open the *(YourMendixApp)/myPluggableWidgets/textBox* folder in your IDE of choice. From now on, all file references will be relative to this path. To set up your new widget, first you must use an attribute of the context object and display that attribute in an input field: 
 
-1. Go ahead and remove the file *src/components/HelloWorldSample.tsx*. Errors in *TextBox.editorPreview.tsx* will be dealt with in step 6 below.
+1. Remove the file *src/components/HelloWorldSample.tsx*. Errors in *TextBox.editorPreview.tsx* will be dealt with in step 6 below.
 2. The generator creates the widget definition file `src/TextBox.xml` with preset properties. Replace the `sampleText` property following this snippet:
 
     ```xml

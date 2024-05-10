@@ -9,7 +9,7 @@ tags: ["studio pro", "manage branch lines", "branch line manager"]
 
 The **Branch Line Manager** is used to manage the [branch lines](/refguide9/version-control/#branches) of an app that are stored on a version control server. You can create or delete branch lines for your app. 
 
-{{< figure src="/attachments/refguide9/modeling/menus/version-control-menu/branch-line-manager-dialog/branch-line-manager.png" alt="Team Server Branch Line Manager" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/version-control-menu/branch-line-manager-dialog/branch-line-manager.png" alt="Team Server Branch Line Manager" class="no-border" >}}
 
 To view the **Branch Line Manager** dialog box, open **Version Control** > **Manage Branch Lines**.
 

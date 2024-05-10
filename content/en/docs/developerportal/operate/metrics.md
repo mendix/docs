@@ -37,6 +37,8 @@ If you meet the above conditions, you can find the graphs by following these ste
 
     {{< figure src="/attachments/developerportal/operate/metrics/metrics-selection.png" >}}
 
+5. To view more information about any of the metrics, click **Documentation** ({{% icon name="info-circle" %}}) next to the relevant graph. To quickly scroll to the top of the page, click **Scroll to top** ({{% icon name="arrow-circle-up" %}}).
+
 {{% alert color="info" %}}
 The **Metrics** page does not support multi-instance metrics. If you [horizontally scale](/developerportal/deploy/scale-environment/) your environment to multiple instances, you will be able to see metrics for only one of those instances. If you need data on multiple instances, consider using an [APM integration](/developerportal/operate/monitoring-with-apm/).
 {{% /alert %}}
@@ -66,7 +68,7 @@ This section explains the metrics that represent the current status and statisti
 
 The **Number of handled external requests** graph shows the number of requests that are sent from the client and systems that integrate with your application using web services.
 
-{{< figure src="/attachments/developerportal/operate/metrics/no-ext-reqs.png" >}}
+{{< figure src="/attachments/developerportal/operate/metrics/app-ext-requests.png" >}}
 
 The number of requests per second is split up by request handlers. These are the key ones:
 
@@ -100,7 +102,7 @@ Additional information about request handlers is available on the following page
 
 The **User accounts and login sessions** graph shows the number of logged-in user sessions for your application. It includes both named and anonymous users accounts.
 
-{{< figure src="/attachments/developerportal/operate/metrics/user-accounts-logins.png" >}}
+{{< figure src="/attachments/developerportal/operate/metrics/app-accounts-logins.png" >}}
 
 These are the user types:
 
@@ -114,7 +116,7 @@ These are the user types:
 
 The **JVM Object Heap** graph shows the internal distribution of allocated memory inside the application process for Java objects. Java objects are created in Java actions, but they also include all objects that are used by microflows running in your app at runtime.
 
-{{< figure src="/attachments/developerportal/operate/metrics/jvm-heap.png" class="image-border" >}}
+{{< figure src="/attachments/developerportal/operate/metrics/app-jvm-heap.png" >}}
 
 Note that the JVM does not immediately clean up objects that are no longer in use. This graph shows unused memory as still in use until the garbage collector—which analyzes the memory to free up space—is run. So, before a garbage collection, you cannot see how much of the JVM memory will be available after the garbage collection cycle. This is because the garbage collection process only finds that out when it actually runs.
 
@@ -137,7 +139,7 @@ If a garbage collection is triggered when the percentage reaches two-thirds of t
 
 The **JVM Process Memory Usage** graph is similar to the [JVM Object Heap](#Trends-appmxruntimejvmheap) graph described above. It shows a more complete view of the actual size and composition of the operating system memory that is in use by the JVM process.
 
-{{< figure src="/attachments/developerportal/operate/metrics/jvm-process-memory.png" >}}
+{{< figure src="/attachments/developerportal/operate/metrics/app-jvm-memory.png" >}}
 
 This graph is included to provide more insight into situations where the part of the real used memory outside the JVM Object Heap is growing too much and causing problems with memory shortage in the operating system.
 
@@ -160,9 +162,9 @@ These are the types:
 
 ### 4.5 Memory Usage{#Trends-appmemory}
 
-The **Memory Usage** graph shows the distribution of operating system memory that is available for this server. It is measured in gibibytes.
+The **Memory usage** graph shows the distribution of operating system memory that is available for this server. It is measured in gibibytes.
 
-{{< figure src="/attachments/developerportal/operate/metrics/node-os-memory.png" >}}
+{{< figure src="/attachments/developerportal/operate/metrics/app-memory-usage.png" >}}
 
 Performance issues can arise if the app's memory takes up too much of the operating system memory.
 
@@ -173,7 +175,7 @@ The **Threadpool for handling external requests** graph shows the number of conc
 * When they are initiated by a remote API (the way the normal web-based client communicates)
 * When they are initiated by calling web services
 
-{{< figure src="/attachments/developerportal/operate/metrics/threadpool-external-reqs.png" >}}
+{{< figure src="/attachments/developerportal/operate/metrics/app-threadpool.png" >}}
 
 Creating a new thread that can concurrently process a request is an expensive operation. So, Mendix holds a pool of threads that can quickly start processing new incoming requests. This pool automatically grows and shrinks according to the number of requests that are flowing through the application.
 
@@ -190,7 +192,7 @@ The values shown by the graph are as follows:
 
 The **Total number of threads in the JVM process** graph shows the total number of threads that exist inside the running JVM process.
 
-{{< figure src="/attachments/developerportal/operate/metrics/jvm-thread-count.png" >}}
+{{< figure src="/attachments/developerportal/operate/metrics/app-jvm-thread-count.png" >}}
 
 In addition to the threadpool that is used for external HTTP requests (described above), this includes the threadpool used for the following:
 
@@ -202,7 +204,7 @@ In addition to the threadpool that is used for external HTTP requests (described
 
 The **CPU usage** graph shows the app's CPU utilization, as a percentage. The graph's y-axis scales dynamically based on the data, ranging from 0 to the maximum data point included in the request.
 
-{{< figure src="/attachments/developerportal/operate/metrics/app-cpu.png" >}}
+{{< figure src="/attachments/developerportal/operate/metrics/app-cpu-usage.png" >}}
 
 {{% alert color="info" %}}
 CPU usage of the database is shown in [Database Node CPU Usage](#Trends-dbcpu), below.
@@ -218,7 +220,7 @@ Your app can always access at least the amount of CPU specified for your contain
 
 The **Disk usage** graph shows the relative amounts of application node data stored on disk, displayed as a percentage. The graph's y-axis scales dynamically based on the data. If the app's disk usage is below 100%, then the y-axis ranges from 0 to the maximum data point included in the request.
 
-{{< figure src="/attachments/developerportal/operate/metrics/app-disk-usage-pct.png" >}}
+{{< figure src="/attachments/developerportal/operate/metrics/app-disk-usage.png" >}}
 
 Interpret this graph in combination with other graphs. For more information, see [Combining Information](#combine-info), above.
 
@@ -252,7 +254,7 @@ If you are using the [Basic License](/developerportal/deploy/basic-package/), yo
 
 The **Number of database queries being executed** graph shows the number of database queries per second that are executed by your Mendix application.
 
-{{< figure src="/attachments/developerportal/operate/metrics/no-db-queries.png" >}}
+{{< figure src="/attachments/developerportal/operate/metrics/db-queries-no.png" >}}
 
 The queries are broken down into queries that modify data (**insert**, **update**, and **delete**) and queries that fetch data (**select**). It also includes the number of SQL transactions per second.
 
@@ -283,7 +285,7 @@ These are the values:
 
 ### 5.3 Database Transactions and Mutations{#Trends-dbpgstatdatabaseVERSIONmain}
 
-The **Database transactions and mutations** graph shows the number of database objects that were actually changed by database queries from the application. It is measured in operations per second.
+The **Database transactions and mutations** graph shows the number of database objects that were changed by database queries from the application. It is measured in operations per second.
 
 {{< figure src="/attachments/developerportal/operate/metrics/db-mutations.png" >}}
 
@@ -311,7 +313,7 @@ The **Connections to the database** graph shows the number of connections to the
 You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package/) because you are using a private schema on a shared database server.
 {{% /alert %}}
 
-{{< figure src="/attachments/developerportal/operate/metrics/no-db-connections.png" >}}
+{{< figure src="/attachments/developerportal/operate/metrics/db-connections-no.png" >}}
 
 The number of connections goes up and down with the usage of the application. The database can reuse open connections and will not open more connections than it needs.
 
@@ -325,7 +327,7 @@ The **Database memory** graph shows the distribution of operating system memory,
 You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package/) because you are using a private schema on a shared database server.
 {{% /alert %}}
 
-{{< figure src="/attachments/developerportal/operate/metrics/db-os-memory.png" >}}
+{{< figure src="/attachments/developerportal/operate/metrics/db-memory.png" >}}
 
 Parts of the database data and indexes that are referenced frequently must always be available in the working memory of the server. This is crucial for application performance.
 
@@ -341,7 +343,7 @@ These are the types:
 
 ### 5.6 CPU Utilization of the Database{#Trends-dbcpu}
 
-The **CPU Utilization of the Database** graph shows the amount of CPU usage over time as a percentage.
+The **CPU Utilization of the database** graph shows the amount of CPU usage over time as a percentage.
 
 This graph is normalized so that 100% is the full capacity of the database node. This is the figure reported by the database node itself. So, however many CPUs the database node has, the graph will peak at 100%.
 
@@ -359,7 +361,7 @@ The **Database throughput** graph shows the amount of data that is being read fr
 You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package/) because you are using a private schema on a shared database server.
 {{% /alert %}}
 
-{{< figure src="/attachments/developerportal/operate/metrics/db-disk-throughput.png" >}}
+{{< figure src="/attachments/developerportal/operate/metrics/db-throughput.png" >}}
 
 If you see large values here that do not immediately drop back again, it may indicate that your app is continually swapping data to disk. This could be caused by inefficient queries; for example, it could be caused by queries that require sorting within the app.
 <a id="Trends-dbdf"></a>
@@ -374,7 +376,7 @@ The value for used storage also includes space that is used to store transaction
 You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package/) because you are using a private schema on a shared database server.
 {{% /alert %}}
 
-{{< figure src="/attachments/developerportal/operate/metrics/db-disk-usage-bytes.png" >}}
+{{< figure src="/attachments/developerportal/operate/metrics/db-disk-usage.png" >}}
 
 ### 5.9 Database IOPS {#Trends-dbdiskstatsiops}
 
@@ -384,7 +386,7 @@ The **Database IOPS** graph, also called the database input/output operations pe
 You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package/) because you are using a private schema on a shared database server.
 {{% /alert %}}
 
-{{< figure src="/attachments/developerportal/operate/metrics/db-disk-ios.png" >}}
+{{< figure src="/attachments/developerportal/operate/metrics/db-iops.png" >}}
 
 There are two sets of values:
 
@@ -401,7 +403,7 @@ The **Database IO latency** graph shows the average waiting times, in seconds, f
 You will not see this if you are using the [Basic License](/developerportal/deploy/basic-package/) because you are using a private schema on a shared database server.
 {{% /alert %}}
 
-{{< figure src="/attachments/developerportal/operate/metrics/db-disk-latency.png" >}}
+{{< figure src="/attachments/developerportal/operate/metrics/db-io-latency.png" >}}
 
 Interpret the values in this graph in combination with the other disk stats graphs and the type of requests that were made. Sequential or random reads and writes can create a different burden for disk storage.
 
@@ -415,32 +417,16 @@ There are two sets of values:
 ### 5.11 Database IOPS Burst Balance {#Trends-dbmxdatabaseburstbalance}
 
 {{% alert color="info" %}}
-As of [October 25, 2023](/releasenotes/developer-portal/mendix-cloud/#october-25-2023), whenever you create a new DB instance, it will be provisioned with a gp3 storage instance if it meets the eligibility criteria defined in the table below. This also occurs if your database is recreated.
-
-As of [March 26, 2024](/releasenotes/developer-portal/mendix-cloud/#march-26-2024), all existing databases of environments on eligible plans in Mendix Cloud (as specified in the table below) have also been migrated to gp3 storage instances.
-
-| Mendix Plans      | Storage Instance Type | Storage Size         | Baseline Storage Performance | Provisioned IOPS Range | Provisioned Throughput Range |
-|-------------------|-----------------------|----------------------|------------------------------|------------------------|------------------------------|
-| S and M           | gp2                   | Less than 20 GiB     | 100 IOPS (3000 Burst)         | 100 - 1197 IOPS        | 128-250 MiB/s                |
-| L, XL, XXL, and XXXL | gp3                   | Between 20 and 400 GiB | 3000 IOPS / 125 MiB/s        | N/A                    | N/A                          |
-| XXXL              | gp3                   | 400 GiB and higher   | 12000 IOPS / 500 MiB/s       | 12000 - 64000 IOPS     | 500 - 4000 MiB/s             |
-
-Compared to gp2, gp3 provides higher baseline storage performance and does not require any burst balance. For more information on gp2 and gp3 performance, see the [AWS gp3 storage](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#gp3-storage) page.
-
-Burst balance metrics are not available for databases with the gp3 storage instance type.
+Burst balance metrics are not available for databases with the gp3 storage instance type. This applies to any database with a storage size of 20 GiB or more. For details, see [Migration to gp3 Storage Instances](#gp3-migration), below.
 {{% /alert %}}
 
 {{% alert color="info" %}}
 You will not see this graph if you are using the [Basic License](/developerportal/deploy/basic-package/) because you are using a private schema on a shared database server.
 {{% /alert %}}
 
-{{% alert color="info" %}}
-Databases larger than 1,000 GiB have a base performance that is equal to or greater than the maximum burst performance. This means depleting the Database IOPS Burst Balance does not affect their performance.
-{{% /alert %}}
-
 The **Database IOPS burst balance** graph shows the number of IOPS credits accrued to support burstable performance. The metric is expressed as a percentage; 100% means that the volume has accumulated the maximum number of credits.
 
-{{< figure src="/attachments/developerportal/operate/metrics/db-burst-balance.png" >}}
+{{< figure src="/attachments/developerportal/operate/metrics/db-iops-burst-balance.png" >}}
 
 Apps running on Mendix Cloud use AWS databases to store their data. These databases are burstable, which means that they have a specified performance baseline. Burstable performance means that if you use fewer IOPS than is required for baseline performance (such as when the app is idle), the unspent IOPS credits accrue until they reach a maximum. If a burstable performance instance needs to burst above the baseline performance level, it spends the accrued credits. The more credits that a burstable performance instance has accrued, the more time it can burst beyond its baseline when more performance is needed.
 
@@ -448,12 +434,30 @@ For more information, see the AWS document [Overview of Monitoring Metrics in Am
 
 If your database uses a high level of IOPS over a sustained period, this may impact your app's performance. If your database burst balance reduces consistently, you need to ensure that there are periods when there is less activity so that the database burst balance can be restored.
 
+Databases larger than 1,000 GiB have a base performance that is equal to or greater than the maximum burst performance. This means depleting the database IOPS burst balance does not affect their performance.
+
 For more information, see the AWS Database blog [Understanding Burst vs. Baseline Performance with Amazon RDS and GP2](https://aws.amazon.com/blogs/database/understanding-burst-vs-baseline-performance-with-amazon-rds-and-gp2/).
+
+#### 5.11.1 Migration to gp3 Storage Instances {#gp3-migration}
+
+Burst balance metrics are not available for databases with the gp3 storage instance type.
+
+As of [October 25, 2023](/releasenotes/developer-portal/mendix-cloud/#october-25-2023), whenever you create a new DB instance, it will be provisioned with a gp3 storage instance if it meets the eligibility criteria defined in the table below. This also occurs if your database is recreated.
+
+As of [March 26, 2024](/releasenotes/developer-portal/mendix-cloud/#march-26-2024), all existing databases of environments on eligible plans in Mendix Cloud (as specified in the table below) have also been migrated to gp3 storage instances.
+
+| Storage Size           | Storage Instance Type | Baseline Storage Performance | Provisioned IOPS Range | Provisioned Throughput Range |
+|------------------------|-----------------------|------------------------------|------------------------|------------------------------|
+| Less than 20 GiB       | gp2                   | 100 IOPS (3000 burst) /<br>125 MiB/s | 100–1197 IOPS    | 128–250 MiB/s                |
+| Between 20 and 400 GiB | gp3                   | 3000 IOPS /<br>125 MiB/s       | N/A                    | N/A                          |
+| 400 GiB and higher     | gp3                   | 12000 IOPS /<br>500 MiB/s      | 12000–64000 IOPS       | 500–4000 MiB/s               |
+
+Compared to gp2, gp3 provides higher baseline storage performance and does not require any burst balance. For more information on gp2 and gp3 performance, see the [AWS gp3 storage](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html#gp3-storage) page.
+
+{{% alert color="info" %}}
+For details on DB storage size for various plans, see [Cloud Resource Packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack).
+{{% /alert %}}
 
 ## 6 Read More
 
-* [Alerts](/developerportal/operate/monitoring-application-health/)
-* [Maintenance Windows](/developerportal/deploy/maintenance-windows/)
-* [How to Receive Environment Status Alerts](/developerportal/operate/receive-alerts/)
-* [Mendix Cloud Region](/developerportal/deploy/cloud-version-region/)
-* [About Mendix Cloud](/developerportal/deploy/mxcloudv4/)
+* [Monitoring Your Mendix Apps with an APM Tool](/developerportal/operate/monitoring-with-apm/) – Describes how to use application performance monitoring tools to provide additional monitoring for your Mendix Apps running on Mendix Cloud

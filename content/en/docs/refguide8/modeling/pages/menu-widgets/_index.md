@@ -12,15 +12,15 @@ Menu widgets display menu items configured in the [Navigation](/refguide8/naviga
 
 * [Menu Bar](/refguide8/menu-bar/) – displays menu items of a [navigation profile](/refguide8/navigation/#profiles) or a [menu](/refguide8/menu/) document in a form of a horizontal bar
 
-    {{< figure src="/attachments/refguide8/modeling/pages/menu-widgets/menu-bar-example.png" alt="Menu Bar Example" >}}
+    {{< figure src="/attachments/refguide8/modeling/pages/menu-widgets/menu-bar-example.png" alt="Menu Bar Example" class="no-border" >}}
 
 * [Navigation Tree](/refguide8/navigation-tree/) – displays menu items of a [navigation profile](/refguide8/navigation/#profiles) or a [menu](/refguide8/menu/) document in a form of a tree
 
-    {{< figure src="/attachments/refguide8/modeling/pages/menu-widgets/navigation-tree-example.png" alt="Navigation Tree Example" >}}
+    {{< figure src="/attachments/refguide8/modeling/pages/menu-widgets/navigation-tree-example.png" alt="Navigation Tree Example" class="no-border" >}}
 
 * [Simple Menu Bar](/refguide8/simple-menu-bar/) – displays menu items of a [navigation profile](/refguide8/navigation/#profiles) or a [menu](/refguide8/menu/) document in a form a horizontal or vertical bar 
 
-    {{< figure src="/attachments/refguide8/modeling/pages/menu-widgets/simple-menu-bar-example.png" alt="Simple Menu Bar Example" >}}
+    {{< figure src="/attachments/refguide8/modeling/pages/menu-widgets/simple-menu-bar-example.png" alt="Simple Menu Bar Example" class="no-border" >}}
 
 ## 2 Performing Basic Functions
 

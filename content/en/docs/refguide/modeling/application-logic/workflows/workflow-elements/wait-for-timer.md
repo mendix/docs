@@ -12,7 +12,7 @@ The **Wait for timer** activity allows you to suspend a workflow path for a conf
 
 For example, when a new salary legislation is about to take effect, a timer can be set until the date of effect to actually adjust the values in the system.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/wait-for-timer/wait-for-timer-example.png" alt="Wait For Timer" width="250" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/wait-for-timer/wait-for-timer-example.png" alt="Wait For Timer" width="250" class="no-border" >}}
 
 ## 2 Properties
 

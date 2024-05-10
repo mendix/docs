@@ -47,7 +47,7 @@ Mendix applications consist of two parts: the Mendix Client, running in the end-
 
 The Mendix Client communicates with the Runtime Server using the Mendix Client API, making requests to the `/xas/` request handler on the Runtime Server. The Client API is built on the premise that requests from the client can't be trusted to be safe or secure. As the client is running on the end-user's device, outside of the control of the server, any data or action can be manipulated there. "Nothing that happens on the client can be considered secure" is a statement that applies to everything which is held on the client (for example, in a browser) not just to Mendix applications.
 
-Therefore, in Mendix, security is always taken care of in the back end, the Runtime Server, with entity access rules and allowed roles on microflows. The Runtime Server cannot be manipulated by the end-user. 
+Therefore, in Mendix, security is always taken care of in the back end, the Runtime Server, with properly-set entity access rules and allowed roles on microflows. The Runtime Server cannot be manipulated by the end-user. 
 
 That is why it is important to [implement correct access rules](/howto/security/best-practices-security/#access-rules) for end-user roles.
 

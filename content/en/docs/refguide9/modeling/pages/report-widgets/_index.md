@@ -16,19 +16,19 @@ The **Report widgets** category contains the following widgets:
 
 * [Report grid](/refguide9/report-grid/) – displays data in a form of a table; the data for the reports is provided by a [Data set](/refguide9/data-sets/)
 
-    {{< figure src="/attachments/refguide9/modeling/pages/report-widgets/report-grid-example.png" alt="Example report grid" >}}
+    {{< figure src="/attachments/refguide9/modeling/pages/report-widgets/report-grid-example.png" alt="Example report grid" class="no-border" >}}
 
 * [Report parameter](/refguide9/report-parameter/) – allows the end-user to specify a parameter of a [Data set](/refguide9/data-sets/) that is then used for filtering the data displayed in a report
 
-    {{< figure src="/attachments/refguide9/modeling/pages/report-widgets/report-parameter-example.png" alt="Example report parameter" >}}
+    {{< figure src="/attachments/refguide9/modeling/pages/report-widgets/report-parameter-example.png" alt="Example report parameter" class="no-border" >}}
 
 * [Report date parameter](/refguide9/report-date-parameter/) – allows the end-user to specify the DateTime parameter of a [data set](/refguide9/data-sets/), which is then used for filtering the data displayed in a report
 
-    {{< figure src="/attachments/refguide9/modeling/pages/report-widgets/report-date-parameter-example.png" alt="Example report date parameter" >}}
+    {{< figure src="/attachments/refguide9/modeling/pages/report-widgets/report-date-parameter-example.png" alt="Example report date parameter" class="no-border" >}}
 
 * [Generate report button](/refguide9/report-button/) – generates a report when the end-user clicks the button
 
-    {{< figure src="/attachments/refguide9/modeling/pages/report-widgets/generate-report-button-example.png" alt="Example generate report button" >}}
+    {{< figure src="/attachments/refguide9/modeling/pages/report-widgets/generate-report-button-example.png" alt="Example generate report button" class="no-border" >}}
 
 ## 2 Performing Basic Functions
 

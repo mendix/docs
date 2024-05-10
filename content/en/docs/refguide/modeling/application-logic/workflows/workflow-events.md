@@ -16,7 +16,7 @@ There are two ways in which you can configure workflow-related event handlers:
 * The events can be configured via the **Event handlers** setting in [workflow properties](/refguide/workflow-properties/#event-handlers).
 * The **Event handlers** setting can also be configured in [App Settings](/refguide/app-settings/#event-handlers):
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-events/event-handler-overview.png" max-width=80% class="image-border" >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-events/event-handler-overview.png" max-width=80% >}}
 
 {{% alert color="info" %}}
 The event handlers added in workflow properties override the app-wide event handlers in **App Settings**.
@@ -24,7 +24,7 @@ The event handlers added in workflow properties override the app-wide event hand
 
 The image below presents an example of how you can configure an event handler either in workflow properties or in **App Settings**:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-events/add-event-handler.png" max-width=80% class="image-border" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-events/add-event-handler.png" max-width=80% >}}
 
 ## 3 Event Mechanism
 
@@ -45,7 +45,7 @@ The **WorkflowActivityRecord** entity represents workflow activity data at a spe
 
 The **WorkflowRecord** entity represents workflow instance data at a specific execution moment. For example, a snapshot of a workflow instance at the moment when it was completed.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-events/workflow-event-entities.png" max-width=100% class="image-border" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-events/workflow-event-entities.png" max-width=100% >}}
 
 {{% alert color="warning" %}}
 All associations to the above-mentioned non-persistent entities (with the exception of a sub **WorkflowRecord**) are associations to "live" objects, whose state may have been updated since the event occurred.
@@ -53,7 +53,7 @@ All associations to the above-mentioned non-persistent entities (with the except
 
 These non-persistent entities are provided as the default input parameters to the microflow specified in the event handler configuration:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-events/event-handler-microflow-parameters.png" max-width=80% class="image-border" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-events/event-handler-microflow-parameters.png" max-width=80% >}}
 
 You can use the data from these input parameters to construct audit trails, for logging purposes, etc. For example, you can define an event handler that only collects data from user task events.
 

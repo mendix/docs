@@ -11,7 +11,7 @@ aliases:
 
 ## 1 Introduction
 
-Connect to Microsoft SQL, MySQL, PostgreSQL, and Oracle databases with the [External Database Connector](https://marketplace.mendix.com/link/component/219862).
+Connect to Microsoft SQL, MySQL, PostgreSQL, Oracle, and Snowflake (Beta support from [Studio Pro 10.10](/releasenotes/studio-pro/10.10/)) databases with the [External Database Connector](https://marketplace.mendix.com/link/component/219862).
 
 {{% alert color="info" %}}
 The External Database Connector is supported for [Studio Pro 10.6](/releasenotes/studio-pro/10.6/) and above.
@@ -31,6 +31,7 @@ This connector supports connections to the following database types:
 * MySQL
 * PostgreSQL
 * Oracle
+* Snowflake (Beta support from [Studio Pro 10.10](/releasenotes/studio-pro/10.10/))
 
 If you are looking for another database type, follow the prompt to request support your database when you open the database connection wizard.
 
@@ -72,7 +73,7 @@ After [installing](#installation) the connector, get started by doing the follow
 
 1. Right-click the module you would like to add the connection to and click **Add other** > **External database connection**. This opens the **Database Connection** wizard:
 
-    {{< figure src="/attachments/appstore/modules/external-database-connector/database-connection-wizard.png" >}}
+    {{< figure src="/attachments/appstore/modules/external-database-connector/database-connection-wizard.png" class="no-border" >}}
 
 2. Select the database to which you would like to connect and enter the required information.
 
@@ -80,7 +81,7 @@ After [installing](#installation) the connector, get started by doing the follow
 
 4. Click **Save** to open the external database document for this database.
 
-Now you can start [querying the database](#query-database) to select data for use in your app.
+Now you can start [querying the database](#query-database) to select data to use in your app.
 
 ### 3.2 Querying a Database {#query-database}
 
@@ -89,7 +90,7 @@ To query the database, do the following:
 1. Enter a query **Name** so you can access the same query later.
 2. Enter your **SQL Query** to select data from your database for use in your app. For example, the query `SELECT * from customers` selects all rows in the **Customers** table:
 
-    {{< figure src="/attachments/appstore/modules/external-database-connector/select-query-columns.png" >}}
+    {{< figure src="/attachments/appstore/modules/external-database-connector/select-query-columns.png" class="no-border" >}}
    
 3. Click **Run Query** to move to the **Response data** tab and view the queried data.
 
@@ -99,7 +100,7 @@ Click **Add Parameter** to add parameters to your SQL queries to pass dynamic va
 
 The example database in [Querying a Database](#query-database) is a table of customer details with information such as customer name, address, and phone number. Let's say you want to specify a specific customer while your app is running. You can add the following parameter:
 
-{{< figure src="/attachments/appstore/modules/external-database-connector/example-parameter.png" >}}
+{{< figure src="/attachments/appstore/modules/external-database-connector/example-parameter.png" class="no-border" >}}
 
 Then, use the parameter in the query:
 
@@ -111,38 +112,38 @@ After [querying the database](#query-database), you can view the response in the
 
 Click **Use Response** if you want to [create an entity from the response](#create-entity).
 
-{{< figure src="/attachments/appstore/modules/external-database-connector/execute-query.png" >}}
+{{< figure src="/attachments/appstore/modules/external-database-connector/execute-query.png" class="no-border" >}}
 
 ### 3.4 Creating an Entity from the Response {#create-entity}
 
 In the **Response Structure** tab, there is a preview of the queried data in an entity. You can adjust the entity name, though one is suggested for you:
 
-{{< figure src="/attachments/appstore/modules/external-database-connector/response-structure.png" >}}
+{{< figure src="/attachments/appstore/modules/external-database-connector/response-structure.png" class="no-border" >}}
 
 Click **Save Query & Create Entity** to create the entity and add it to your domain model:
 
-{{< figure src="/attachments/appstore/modules/external-database-connector/entity-created-from-database.png" >}}
+{{< figure src="/attachments/appstore/modules/external-database-connector/entity-created-from-database.png" class="no-border" >}}
 
 ### 3.5 Using the Entity in a Microflow {#entity-microflow}
 
-Use the Query External Database activity to call the database in a microflow. Do the following:
+Use the [Query External Database](/refguide/query-external-database/) activity to call the database in a microflow. Do the following:
 
 1. Create a new microflow and drag the **Query external database** activity into it.
 
-    {{< figure src="/attachments/appstore/modules/external-database-connector/query-external-database.png" >}}
+    {{< figure src="/attachments/appstore/modules/external-database-connector/query-external-database.png" class="no-border" >}}
 
 2. Double-click the activity and in the **Database** field, click **Select** to choose the database you want to query.
 3. Select the **Query** you want to include in the activity (that you saved while [querying the database](#query-database)).
 4. Include any [parameters](#parameters).
-5. In the Output field, select if you want to **Use return value**.
+5. In the **Output** field, choose if you want to **Use return value**.
 
-    {{< figure src="/attachments/appstore/modules/external-database-connector/return-type.png" >}}
+    {{< figure src="/attachments/appstore/modules/external-database-connector/return-type.png" class="no-border" >}}
 
 6. Click **OK**.
 7. Configure the end event (such as displaying a list, if you are selecting data to appear in a list). 
 
-You can now use the microflow in your app. Here is an example of a configured microflow:
+You can now use the microflow in your app. Below is an example of a configured microflow:
 
-{{< figure src="/attachments/appstore/modules/external-database-connector/example-microflow.png" >}}
+{{< figure src="/attachments/appstore/modules/external-database-connector/example-microflow.png" class="no-border" >}}
 
 See the [Integration Activities](/refguide/integration-activities/) entry in the Studio Pro guide for further explanation of the properties in this activity.

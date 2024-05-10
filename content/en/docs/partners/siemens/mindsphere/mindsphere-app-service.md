@@ -81,25 +81,25 @@ To access your IoT data using the OData technology provided by the Mendix Data H
 1. Go to the **Asset Manager** in the Insights Hub Launchpad.
 1. On the home page you find a card showing the numbers of already existing contracts.
 
-    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/asset_manager_contract_card.png" alt="asset-manager" >}}
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/asset_manager_contract_card.png" alt="asset-manager" class="no-border" >}}
 
 1. Click **View contracts**.
 1. You will now see the lists of your already existing contracts or an indication that no contracts are created yet.
 
-    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/asset_manager_contract_first.png" alt="asset-manager" >}}
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/asset_manager_contract_first.png" alt="asset-manager" class="no-border" >}}
 
     If no contracts are available, click **Create contract** to start your first one. If you have already some contracts, click **Add contracts** to add another one.
 
-    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/asset_manager_contract_add.png" alt="asset-manager" >}}
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/asset_manager_contract_add.png" alt="asset-manager" class="no-border" >}}
 
 1. On the left-hand side, you can select the asset types you want to share within this contract. On the right side you will see a preview of all selected types.
 
-    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/asset_manager_contract_wizard_step1.png" alt="asset-manager" >}}
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/asset_manager_contract_wizard_step1.png" alt="asset-manager" class="no-border" >}}
 
 1. Confirm your selection by clicking **Next**.
 1. In the **Meta Information** step of the wizard you can specify parameters like the name or the version of your contract. Note that the application name is already pre-filled with a combination of the prefix **mdsp_** and your tenant name. This will help you to find all contracts for your particular tenant within Mendix.
 
-    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/asset_manager_contract_wizard_step2.png" alt="asset-manager" >}}
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/asset_manager_contract_wizard_step2.png" alt="asset-manager" class="no-border" >}}
 
 1. Confirm your meta information by clicking **Next**.
 1. In the last step you can specify the following:
@@ -107,7 +107,7 @@ To access your IoT data using the OData technology provided by the Mendix Data H
     * Download your contract – if you want to store the contract yourself or you want to use it with an OData provider other than the Mendix Data Hub
     * Publish the contract to the Mendix Data Hub – you must do this if you want to use the asset information within your Mendix app; it is therefore preselected
 
-    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/asset_manager_contract_wizard_step3.png" alt="asset-manager" >}}
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/asset_manager_contract_wizard_step3.png" alt="asset-manager" class="no-border" >}}
 
 1. Click the **Submit** button to finalize the creation of your contract.
 
@@ -140,37 +140,37 @@ To access your data from Data Lake storage using the OData technology provided b
 1. Go to the **Integrated Data Lake Manager** in the Insights Hub Launchpad.
 1. On the left hand side, you find the tile **oData Contract**. Click on the tile to open contracts view.
 
-    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/idl_contract_tile.png" alt="data-lake-manager" >}}
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/idl_contract_tile.png" alt="data-lake-manager" class="no-border" >}}
 
 1. You will now see a list of your already existing contracts or an indication that no contracts are created yet.
 
     * If no contracts are available, click **Create contract** to start your first one.
     
-        {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/idl_contract_empty.png" alt="data-lake-manager" >}}
+        {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/idl_contract_empty.png" alt="data-lake-manager" class="no-border" >}}
     
     * If you have already some contracts, click **Add contracts** to add another one.
 
-        {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/idl_contract_add.png" alt="data-lake-manager" >}}
+        {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/idl_contract_add.png" alt="data-lake-manager" class="no-border" >}}
 
 1. In the **Meta Information** section of the wizard, you can specify parameters like the name or the version of your contract. Note that the application name is already pre-filled with a combination of the prefix **mdsp_** and your tenant name. This will help you to find all contracts for your particular tenant within Mendix.
 
-    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/idl_contract_metadata.png" alt="data-lake-manager" >}}
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/idl_contract_metadata.png" alt="data-lake-manager" class="no-border" >}}
 
 1. In the **Folder Selection** section, select the folder (or folders) to be published in the contract. In the right panel, the selected folders are listed.
 
-    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/idl_contract_folder_selection.png" alt="data-lake-manager" >}}
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/idl_contract_folder_selection.png" alt="data-lake-manager" class="no-border" >}}
 
 1. In the summary section, you can choose the following:
     * Download your contract – if you want to store the contract yourself or you want to use it with an OData provider other than the Mendix Data Hub
     * Publish the contract to the Mendix Data Hub – you must do this if you want to use the asset information within your Mendix app; it is therefore preselected
 
-    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/idl_contract_summary.png" alt="data-lake-manager" >}}
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/idl_contract_summary.png" alt="data-lake-manager" class="no-border" >}}
 
 1. By default, the contract is saved in the OData Contract Registry(ODCR) within Insights Hub.
 
 1. Click **Submit** to finalize the creation of your contract.
 
-    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/idl_contract_list.png" alt="data-lake-manager" >}}
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/idl_contract_list.png" alt="data-lake-manager" class="no-border" >}}
 
 {{% alert color="info" %}}
 In Mendix, every user is a member of (exactly) one company ([User Account](/apidocs-mxsdk/apidocs/user-management-api/#user-account)). All users with the same email domain (the part after the `@`) are part of the same [Company](/apidocs-mxsdk/apidocs/user-management-api/#company-account).
@@ -194,13 +194,13 @@ To authenticate your calls you will need to provide the Insights Hub IIoT Authen
 4. In **Provide a Name for Your App Connection** enter a name so that you can retrieve this pair of keys from the Developer Portal in future.
 5. Click **Create Keys**.
 
-    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/create-keys.png" alt="Binding" >}}
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/create-keys.png" alt="Binding" class="no-border" >}}
 
     You will see a pop-up containing three pieces of information: **clientID**, **TokenURL**, and **clientSecret**.
 
 6. Click **Copy** for each of these pieces of information and save them somewhere safe – you will not be able to access them again.
 
-    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/binding-keys.png" alt="Binding" >}}
+    {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/binding-keys.png" alt="Binding" class="no-border" >}}
 
 You can find more information about managing binding keys in the [My Subscriptions](/appstore/overview/my-marketplace/#my-subscriptions) and [Company Subscriptions](/appstore/overview/my-marketplace/#company-subscriptions) sections of *My Marketplace*.
 
@@ -228,11 +228,11 @@ In the **_Use me** folder of the *InsightsHubIIotAuthenticator* module set the f
 
 In the Consumed OData Service document associated with your Insights Hub service, set the **Headers from microflow** to be *InsightsHubIIoTAuthenticator.DH_AddAuthHeader*. This ensures that the values you have set in the **Use me** folder are used to authenticate each HTTP request to Insights Hub.
 
-{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/data-hub-authentication.png" alt="Binding" >}}
+{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/data-hub-authentication.png" alt="Binding" class="no-border" >}}
 
 Set the **Error handling microflow** to be *InsightsHubIIoTAuthenticator.DH_ErrorHandler*. This microflow is executed if there is an error. It logs the error and provides a human readable string of the error, which is shown to the user in an error message. See [Custom Error Handling](#ts-customerrorhandling), below, for further details.
 
-{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/data-hub-error-handling.png" alt="Binding" >}}
+{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/data-hub-error-handling.png" alt="Binding" class="no-border" >}}
 
 ## 5 Using Insights Hub IIoT for Makers Through REST Calls{#using-rest}
 
@@ -250,15 +250,15 @@ To extract data from Insights Hub, your calls to the Insights Hub API need to be
 
 This is done by adding an **Access token** action before each **Call REST** action in your microflows. The **Access token** can be found within the toolbox on the right side.
 
-{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/AccessTokenToolbox.png" alt="Authentication" >}}
+{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/AccessTokenToolbox.png" alt="Authentication" class="no-border" >}}
 
  The **Access token** action returns a string which contains an access token which can be used in the **Call REST** action. In the example below, the token string is given the name *Token*.
 
-{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/access-token.png" alt="Authentication" >}}
+{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/access-token.png" alt="Authentication" class="no-border" >}}
 
 In the REST call, an HTTP Header is added called *Authorization* and this is given the value of the access token.
 
-{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/call-rest.png" alt="Authentication" >}}
+{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/call-rest.png" alt="Authentication" class="no-border" >}}
 
 However, authentication will only be successful if the correct credentials are provided to the **Access token** action. This requires the following to be set in the **_Use me** folder of the *InsightsHubIIotAuthenticator* module:
 
@@ -266,7 +266,7 @@ However, authentication will only be successful if the correct credentials are p
 * **ClientID** – this is the *clientID* from the binding keys you generated
 * **ClientSecret** – this is the *clientSecret* from the binding keys you generated
 
-{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/mindsphereiotauthenticator.png" alt="Authentication" >}}
+{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/mindsphereiotauthenticator.png" alt="Authentication" class="no-border" >}}
 
 ## 6 Authentication Considerations
 
@@ -349,7 +349,7 @@ For example, Time Series can only be sorted using the timestamp attribute. If yo
 
 Custom Error Handling is possible when using OData in Microflows, for example on a retrieve action. On the error flow of the action you get a human-readable error string in the variable **$latestError/Message**. Use this variable as input to *InsightsHubIIoTAuthenticator.DH_ErrorFromString* to get a *Error* entity. Now implement your custom error handling, for example based on the **StatusCode** of the error.
 
-{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/data-hub-custom-error-handingScreenshot.png" alt="Binding" >}}
+{{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-app-service/data-hub-custom-error-handingScreenshot.png" alt="Binding" class="no-border" >}}
 
 ### 9.2 Internal Server Error and Long Names
 

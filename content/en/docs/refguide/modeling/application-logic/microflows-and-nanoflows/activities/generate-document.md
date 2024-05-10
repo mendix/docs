@@ -21,7 +21,7 @@ For more information on which types of documents can be created, see [Document T
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/generate-document/generate-document-properties.png" alt="Generate Document Properties" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/generate-document/generate-document-properties.png" alt="Generate Document Properties" class="no-border" >}}
 
 The **Generate document** properties pane consists of the following sections:
 

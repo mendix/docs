@@ -9,7 +9,7 @@ tags: ["Cloud Foundry", "Deploy", "studio pro"]
 
 The **Edit Cloud Foundry Settings** menu option allows you to specify the information necessary for deploying your app to a Cloud Foundry instance.
 
-{{< figure src="/attachments/refguide8/modeling/menus/run-menu/edit-cloud-foundry-settings-dialog/edit-cf-settings.png" alt="Edit Cloud Foundry Settings menu item" >}}
+{{< figure src="/attachments/refguide8/modeling/menus/run-menu/edit-cloud-foundry-settings-dialog/edit-cf-settings.png" alt="Edit Cloud Foundry Settings menu item" class="no-border" >}}
 
 {{% alert color="info" %}}
 More information on deploying to Cloud Foundry can be found in [Cloud Foundry: Deploy](/developerportal/deploy/cloud-foundry-deploy/).
@@ -19,7 +19,7 @@ More information on deploying to Cloud Foundry can be found in [Cloud Foundry: D
 
 The first step in configuring your app for Cloud Foundry deployment is to enter the account information of the Cloud Foundry account you wish to use.
 
-{{< figure src="/attachments/refguide8/modeling/menus/run-menu/edit-cloud-foundry-settings-dialog/cloud-foundry-credentials.png" alt="Enter Cloud Foundry Credentials" >}}
+{{< figure src="/attachments/refguide8/modeling/menus/run-menu/edit-cloud-foundry-settings-dialog/cloud-foundry-credentials.png" alt="Enter Cloud Foundry Credentials" class="no-border" >}}
 
 Enter the details on the screen, as described below, then click **Next** to validate the specified credentials and show the next configuration step.
 
@@ -39,7 +39,7 @@ The **Password** of your Cloud Foundry account.
 
 The second step allows you to select an existing app, or create a new app, in the Cloud Foundry organization. This is where your Mendix app will be deployed.
 
-{{< figure src="/attachments/refguide8/modeling/menus/run-menu/edit-cloud-foundry-settings-dialog/cloud-foundry-app-settings.png" alt="Enter Settings for Cloud Foundry App" >}}
+{{< figure src="/attachments/refguide8/modeling/menus/run-menu/edit-cloud-foundry-settings-dialog/cloud-foundry-app-settings.png" alt="Enter Settings for Cloud Foundry App" class="no-border" >}}
 
 ### 3.1 Organization
 

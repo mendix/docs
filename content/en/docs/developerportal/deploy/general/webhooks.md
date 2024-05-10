@@ -15,7 +15,7 @@ Mendix provides webhooks to send project information when the following events h
 
 * Package upload – when a deployment package is available in the Developer Portal, including when a package is created from the Team Server
 * Team Server push – when a new commit is pushed to the Team Server (this will only be triggered if your app is stored in a Git repository)
-* Alerts - when an alert is triggered for your Mendix app
+* Alerts – when an alert is triggered for your Mendix app
 
 The webhooks contain a retry mechanism if an error response is received from the endpoint. This helps ensure that the trigger reaches the endpoint.
 
@@ -52,7 +52,7 @@ If you select **Edit Webhook** from **More Options** ({{% icon name="three-dots-
 
 * Click **Test Webhook** to send a test payload to the endpoint specified under **URL**.
 * Click **(De)activate Webhook** to deactivate an active webhook or activate an inactive webhook.
-* Click **Delete Webhook*** to completely remove the webhook.
+* Click **Delete Webhook** to completely remove the webhook.
 
 ### 3 Outgoing IP Addresses for Webhooks {#webhook-ip-addresses}
 
@@ -130,7 +130,7 @@ You can use Mendix to verify your webhook; the [Community Commons](/appstore/mod
 1. Prefix this hashed string with the prefix from the webhook signature (for example, `v1,`).
 1. Compare the string you have created (the hash and the prefix) with the `webhook-signature` you retrieved from the list of `System.HttpHeader` objects earlier. If the two strings match, then the webhook call is valid.
 
-{{< figure src="/attachments/developerportal/deploy/webhooks/validation-microflow.png" alt="Completed validation microflow" >}}
+{{< figure src="/attachments/developerportal/deploy/webhooks/validation-microflow.png" alt="Completed validation microflow" class="no-border" >}}
 
 ## 5 Package Upload to the Developer Portal
 

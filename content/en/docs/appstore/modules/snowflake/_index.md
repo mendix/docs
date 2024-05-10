@@ -12,6 +12,8 @@ tags: ["marketplace", "marketplace component", "module", "Snowflake"]
 
 Mendix has several options available for users who want to integrate their app with Snowflake in order to create data-driven enterprise applications.
 
+{{< figure src="/attachments/appstore/modules/snowflake-rest-sql/snowflake_architecture_setup.png" >}}
+
 ## 2 Snowflake Integration Options  
 
 Mendix provides real-time interaction with Snowflake through the [External Database connector](https://marketplace.mendix.com/link/component/219862) or the [REST SQL connector](https://marketplace.mendix.com/link/component/225717). Both of these connectors enable you to perform the following tasks:
@@ -33,5 +35,9 @@ The External Database connector is currently in a public Beta version. It is ava
 The [REST SQL connector](https://marketplace.mendix.com/link/component/225717), available from the Mendix Marketplace, supports the 9.24 LTS version of Mendix. It offers key-pair authentication with a private key file according to PKCS #8 standard.
 
 The REST SQL connector requires an additional step to transform data rows received from the REST SQL API into Mendix objects. For more information, see [Snowflake REST SQL Connector](/appstore/connectors/snowflake/snowflake-rest-sql/).
+
+### 2.3 Role Base Access Control (RBAC)
+
+For information about using Snowflake's role-based access control in a Mendix application, see [Role-based Access Control](/appstore/connectors/snowflake/snowflake-role-based-access-control-RBAC/).
 
 ## 3 Documents in This Category

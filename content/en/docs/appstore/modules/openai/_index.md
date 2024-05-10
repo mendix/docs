@@ -216,7 +216,7 @@ Two helper microflow are available to construct the `FunctionCollection` with a 
 * `FunctionCollection_CreateAndAddFunction` can be used to initialize a new `FunctionCollection` and add a new `Function` to it in order to enable [function calling](#chatcompletions-functioncalling).
 * `FunctionCollection_AddFunction` can be used to add a new `Function` to an existing `FunctionCollection`.
 
-See [function calling](/appstore/modules/openai-connector/function-calling/) for more information.
+For more information, see [Function Calling](/appstore/modules/openai-connector/function-calling/).
 
 ### 3.3 Image Generations Configuration {#image-generations-configuration}
 
@@ -286,7 +286,7 @@ The domain model in Mendix is a data model that describes the information in you
 
 #### 4.1.1 Configuration {#configuration-domain-model}
 
-{{< figure src="/attachments/appstore/modules/openai-connector/domainModel-Configuration.png" >}}
+{{< figure src="/attachments/appstore/modules/openai-connector/domain-model-configuration.png" >}}
 
 ##### 4.1.1.1 `Configuration` {#configuration-entity} 
 
@@ -322,7 +322,7 @@ This entity is only used to send a simple [chat completions request](#chat-compl
 
 #### 4.1.2 Generalizations {#generalizations-domain-model}
 
-{{< figure src="/attachments/appstore/modules/openai-connector/domainModel-Generalizations.png" >}}
+{{< figure src="/attachments/appstore/modules/openai-connector/domain-model-generalizations.png" >}}
 
 ##### 4.1.2.1 `AbstractUsage` {#abstractusage}
 
@@ -363,7 +363,7 @@ This is the abstract entity for `Function` reused in the Chat Completions reques
 
 #### 4.1.3 Chat Completions {#chatcompletions-domain-model}
 
-{{< figure src="/attachments/appstore/modules/openai-connector/domainModel-ChatCompletions.png" >}}
+{{< figure src="/attachments/appstore/modules/openai-connector/domain-model-chat-completions.png" >}}
 
 ##### 4.1.3.1 `ChatCompletionsRequest` {#chatcompletionsrequest} 
 
@@ -484,7 +484,7 @@ This is a specialization of the [AbstractChatCompletionsMessage](#abstractchatco
 
 #### 4.1.4 Image Generations {#imagegenerations-domain-model}
 
-{{< figure src="/attachments/appstore/modules/openai-connector/domainModel-Images.png" >}}
+{{< figure src="/attachments/appstore/modules/openai-connector/domain-model-images.png" >}}
 
 ##### 4.1.4.1 `ImageGenerationsRequest` {#imagegenerationsrequest} 
 
@@ -539,7 +539,7 @@ This is an entity that is used to map the [image](#image) data from the API resp
 
 #### 4.1.5 Embeddings {#embeddings-domain-model}
 
-{{< figure src="/attachments/appstore/modules/openai-connector/domainModel-EmbeddingsWithDataBatch.png" >}}
+{{< figure src="/attachments/appstore/modules/openai-connector/domain-model-embeddings-with-data-batch.png" >}}
 
 ##### 4.1.5.1 `EmbeddingsRequest` {#embeddingsrequest} 
 

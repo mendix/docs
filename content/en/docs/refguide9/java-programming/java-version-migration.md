@@ -18,7 +18,7 @@ The following changes in behavior have been noticed when migrating from Java ver
 
 ### 2.1 Changes in Date Formatting When Locale Is Dutch {#date-locale-dutch}
 
-[Locale data was updated in Java version 13](https://www.oracle.com/java/technologies/javase/13-relnote-issues.html#JDK-8221432) in such a way that [date formatting microflow expressions](/refguide9/parse-and-format-date-function-calls/#3-formatdatetimeutc) have changed what they produce when the locale is Dutch and no format argument is given.
+[Locale data was updated in Java version 13](https://www.oracle.com/java/technologies/javase/13-relnote-issues.html#JDK-8221432) in such a way that [date formatting microflow expressions](/refguide9/parse-and-format-date-function-calls/#format-datetime-utc) have changed what they produce when the locale is Dutch and no format argument is given.
 
 #### 2.1.1 Dutch, Belgium (nl_BE)
 

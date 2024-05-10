@@ -102,7 +102,7 @@ In cases where additional records need to be added to existing knowledge bases, 
 
 #### 3.3.3 `Replace` {#replace}
 
-The `Replace` operation is intended to be used in scenarios in which the chunks in the knowledge base are related to Mendix entities (i.e. data in the Mendix database). It can be used to keep the knowledge base in sync when the Mendix data changes and this needs to be reflected in the knowledge base. The operation handles a list of chunks: it will remove the knowledge base data for the Mendix objects the chunks refer to, after wich the new data is inserted.
+The `Replace` operation is intended to be used in scenarios in which the chunks in the knowledge base are related to Mendix objects (i.e. data in the Mendix database). It can be used to keep the knowledge base in sync when the Mendix data changes and this needs to be reflected in the knowledge base. The operation handles a list of chunks: it will remove the knowledge base data for the Mendix objects the chunks refer to, after wich the new data is inserted.
 
 ### 3.4 Retrieve Operations {#retrieve-operations}
 
@@ -149,7 +149,7 @@ Use this operation to delete a complete knowledge base at once. After execution 
 
 #### 3.5.2 `Delete` {#delete}
 
-In scenarios in which the chunks in the knowledge base are related to Mendix entities (i.e. data in the Mendix database), deletion of Mendix data typically needs to result in removal of its related chunk(s) from the knowledge base. For this the `Delete` operation can be used, which accepts any kind of Mendix object. This results in the removal of all the chunks that were related to the provided Mendix object at the time of insertion.
+In scenarios in which the chunks in the knowledge base are related to Mendix objects (i.e. data in the Mendix database), deletion of Mendix data typically needs to result in removal of its related chunk(s) from the knowledge base. For this the `Delete` operation can be used, which accepts any kind of Mendix object. This results in the removal of all the chunks that were related to the provided Mendix object at the time of insertion.
 
 
 #### 3.5.3 `Delete List` {#delete-list}

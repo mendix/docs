@@ -36,32 +36,25 @@ Follow instructions in [Install an app from a listing](https://other-docs.snowfl
 
 Upon installation, configure the Mendix Data Loader as follows:
 
-### 3.1 Initial Setup
+1. Open the application by accessing the Mendix Data Loader from the **MENDIX_DATA_LOADER** tab inside your Snowflake environment.
+2. Ensure that the application has the `CREATE DATABASE` privilege in Snowflake. On first initialization, you will be prompted to grant the application this privilege.
+3. Configure each data ingestion job by providing the following information:
 
-1. **Open the Application**: Access the Mendix Data Loader via the `MENDIX_DATA_LOADER` tab inside your Snowflake environment.
-2. **Grant Required Privileges**: Ensure the application has the `CREATE DATABASE` privilege in Snowflake. On first initialization, you'll be prompted to grant the application this privilege.
+    * **Endpoint** - The URL to the OData service of your Mendix application.
+    * **Authentication** - The username and password for accessing the OData service.
+    * **Target Database Name** - The Snowflake database target for the data ingestion.
+    * **Target Schema Name** - The name of the target schema into which all the data will be ingested. Every time an ingestion is performed, all data already present in the target schema will be removed or replaced.
+    * **Generate and Execute SQL Script** - Required only once, when configuring the data ingestion endpoint for the first time. Click the **Generate Script** button to produce and execute the required SQL scripts with necessary privileges.
 
-### 3.2 Data Ingestion Configuration
-
-Configure each data ingestion job by specifying the endpoint, authentication details, and target database:
-
-1. **Endpoint**: URL to your Mendix application’s OData service.
-2. **Authentication**: Provide username and password for accessing the OData service.
-3. **Target Database Name**: Specify the Snowflake database target for the data ingestion.
-4. **Target Schema Name**: Specify the target schema name where all the data will be ingested in to. Every time an ingestion is performed all data already present in the target schema will be removed/replaced.
-5. **Generate and Execute SQL Script**: This step needs to be executed for every data ingestion endpoint once. Click the `Generate Script` button to produce and execute the required SQL scripts with necessary privileges.
-
-### 3.3 Executing and Monitoring Ingestion
-
-1. **Ingest Data**: After setting up, use the `Ingest Data` button to start the data transfer. All data exposed by the Odata service will be ingested and all ingested data will be stored in [transient tables](https://docs.snowflake.com/en/user-guide/tables-temp-transient#transient-tables).
-2. **View Results**: Check the job ID and verify the data in the specified target database.
+4. Click **Ingest Data** to start the data transfer. All data exposed by the Odata service will be ingested and all ingested data will be stored in [transient tables](https://docs.snowflake.com/en/user-guide/tables-temp-transient#transient-tables).
+5. To view the results, check the job ID and verify the data in the specified target database.
 
 ## 4 Technical Reference
 
 ### 4.1 Current Limitations
 
-1. At present the Mendix Data Loader supports username and password authentication so please make sure to use this setting when setting up your Odata service.
-2. The recommended way (by Mendix) of exposing an association in an Odata service is as a link. This is not supported yet by the Mendix Data Loader. Please choose the "As an associated object id" option in your Odata settings. This option will store the associated object id in the table, but not explicitly as foreign key.
+* At present, the Mendix Data Loader supports username and password authentication. Make sure to use username and password authentication when setting up your Odata service.
+* Exposing an association in an Odata service is as a link is not supported yet by the Mendix Data Loader. Instead, choose the **As an associated object id** option in your Odata settings. This option will store the associated object ID in the table, but not explicitly as foreign key.
 
 ### 4.2 Troubleshooting
 

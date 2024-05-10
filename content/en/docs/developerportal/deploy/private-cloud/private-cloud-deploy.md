@@ -436,11 +436,11 @@ If an application is in the Stopped state, the scaling does not come into effect
 
 ##### 5.1.3.4 Clear Admin Password
 
-This allows you to clear the password for the local admin user set in the Private Cloud environment. This means that there will be no password pushed to your environment when your app is deployed - any password currently set in the environment will be retained.
+This allows you to clear the password for the [Mendix administration account](/refguide/administrator/) set in the Private Cloud environment. This means that there will be no password pushed to your environment when your app is deployed - any password currently set in the environment will be retained.
 
 ##### 5.1.3.5 Change Admin Password
 
-This allows you to change the password for the local admin user in your app. The password you set here will be pushed to your app environment every time the app is deployed. However, if the MxAdmin password is configured in both the Developer Portal (or MendixApp CR) and CSI Secrets Storage, then the secret storage will have a higher priority and will override the value specified elsewhere.
+This allows you to change the password for the [Mendix administration account](/refguide/administrator/) in your app. The password you set here will be pushed to your app environment every time the app is deployed. However, if the Mendix administration account password is configured in both the Developer Portal (or MendixApp CR) and CSI Secrets Storage, then the secret storage will have a higher priority and will override the value specified elsewhere.
 
 Please make sure that the password set in the portal fulfills the password requirements set in Studio Pro. For security purpose, the password must have at least eight characters, including at least one special character, one capital letter, and one number.
 
@@ -489,6 +489,14 @@ Subscription secrets are obtained from [Mendix support](https://support.mendix.c
 We have also released an alternate way of licensing your apps in the Private Cloud by using PCLM. For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/).
 
 For users of the Private Cloud License Manager who wish to set the product type for the Runtime license in a particular environment, it can be done by editing the Product type. This ensures that the associated environment obtains the license from the license bundle with the specified Product type. By default, the value is set to the one defined in the Namespace configuration page.
+
+When the namespace in which the environment is deployed is configured with PCLM and the Operator version is 2.16.0 or higher, the license information related to PCLM is displayed under this section. If the environment is not configured with PCLM, this section will be empty. Below is a brief explanation of the fields under this section:
+
+* **Subscription Secret** - When configured with PCLM, this field shows the message *configured using Private Cloud License Manager*.
+* **Runtime License Id** - If the Runtime license is successfully applied in the environment, the license ID is displayed in this section. If the Runtime license is not applied, this field shows the message *unknown*.
+* **Product Type for PCLM** - The product type of the Runtime license to be configured for this environment. This field can also be configured to use another Product type.
+
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/LicensePCLM.png" class="no-border" >}}
 
 #### 5.1.4 Security
 
@@ -816,6 +824,10 @@ To fix this issue, you can raise memory requests to match the memory limit by pe
     ```shell
     kubectl -n {namespace} edit mendixapp {environmentInternalId}
     ```
+
+### 7.8 Unexpected App Restart
+
+If your application keeps restarting unexpectedly, check your application log for hints on what could be causing this. If there are any *CRITICAL* lines in the log, immediately start working on resolving them. 
 
 ## 8 How the Operator Deploys Your App {#how-operator-deploys}
 

@@ -165,6 +165,20 @@ The settings under this tab control the connection between Studio Pro and the pl
 
 If you have configured more than one authentication method (for example, SSO and local user), you can specify which method is used as the default one for the Studio Pro login.
 
+### 6.5 SCIM Provisioning
+
+System for Cross-Domain Identity Management (SCIM) is a protocol that simplifies user access management for applications. Private Mendix Platform uses the SCIM standard to pre-provision selected users onto your Platform without the users having to manually log in through SSO first.
+
+To enable SCIM provisioning, perform the following steps:
+
+1. Log in to Private Mendix Platform as an administrator.
+2. In the **Authentication** section, click the **IdP Integration (OIDC)** or the **IdP Integration (SAML)** tab.
+3. Edit your IdP configuration, and then click the **Provisioning** tab.
+4. In the **Just in time provisioning** section, map the IdP attributes to the matching Mendix object attributes.
+5. In the **Authentication** section, click the **SCIM Provisioning** tab, and then click **New**.
+6. In the **IDP Configuration Page** dialogue, enter a name for the connection, and obtain the token for your identity provider by clicking **Copy**.
+7. Enter the token in the configuration panel of your identity provider and verify that the connection is working. 
+
 ## 7 DevOps Settings
 
 In this section, you can configure settings related to managing your app projects and CI/CD capabilities.

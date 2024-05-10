@@ -17,6 +17,24 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 ## 2024
 
+### May 5
+
+#### New features
+
+* We have released a public beta version of a brand new [Projects API](/apidocs-mxsdk/apidocs/projects-api/). This API will help you automate managing your projects on the platform. Some of its key features are as follows: creating and deleting projects, and managing your project's team. We will add more features in the coming months. This is an important self-service feature. All feedback is welcome!
+
+#### Fixes
+
+* We fixed an issue where app team members were unable to download [documents](/developerportal/general/documents/) uploaded to the Developer Portal.
+* We fixed an issue where the app administrator was not able to change the [logo of an app](/developerportal/collaborate/general-settings/#general).
+* We fixed an issue where under certain circumstances the [Technical Contact](/developerportal/general/app-roles/#technical-contact) of an app was not displayed correctly.
+
+### May 1 {#may-1-24}
+
+#### New Features
+
+* The [Jira connector](/developerportal/project-management/jira-connector/) is now released for GA.
+
 ### April 25
 
 #### Improvements
@@ -35,9 +53,8 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 * In Feedback, we have fixed an issue where the reporter's name appeared empty on the **Contact Reporter** tab. Now if there is no reporter's name available, their email address will be shown instead. 
 * We released the following improvements for [Mini survey](/developerportal/app-insights/mini-surveys/):
-  * We improved your experience of copying the generated API key by implementing a new widget on the [Settings](/developerportal/app-insights/mini-surveys/#settings) tab of the **Survey Overview** page.
-  * We improved our error messages by providing more details.
-
+    * We improved your experience of copying the generated API key by implementing a new widget on the [Settings](/developerportal/app-insights/mini-surveys/#settings) tab of the **Survey Overview** page.
+    * We improved our error messages by providing more details.
 
 ### March 28
 
@@ -55,6 +72,12 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 * We have fixed a bug in [Epics](/developerportal/project-management/epics/) that caused the cursor in text editors to jump to a different place unexpectedly. This problem happened in text editors for story descriptions, epic descriptions, and comments.
 
   There is a small trade-off though, since we replaced the text editor widget completely, it will not be possible to link stories using a # anymore. Your existing links will become plain text that still contain story ID and title. Copying and pasting the link to the story can be used as a workaround in the meantime.
+
+### March 16
+
+#### Improvements
+
+* We added the **Contributor** access role in [Portfolio Management](/developerportal/portfolio-management/access-management/), and we renamed the **User** access role to **Viewer**.
 
 ### March 6
 
@@ -119,7 +142,7 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 * We added the following new features in [Portfolio Management](/developerportal/portfolio-management/):
 
-    * You can now check initiatives in the [planning view](/developerportal/portfolio-management/#planning-view). In this view, the initiatives are shown on one timeline, with each timeline bar presenting an initiative.
+    * You can now check initiatives in the [planning view](/developerportal/portfolio-management/initiatives-overview/#planning-view). In this view, the initiatives are shown on one timeline, with each timeline bar presenting an initiative.
 
     * You can now link multiple apps to an initiative. It is also possible to link epics from different apps to an initiative.
 
@@ -158,14 +181,14 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 We have made the following improvements to the **Access Management** page in Portfolio Management:
 
-* On the [Members](/developerportal/portfolio-management/#members) tab, the **Status** column in the list now shows whether a user is active or deactivated. Moreover, you can remove all the deactivated users from a portfolio in one go.
-* All the pending invites now appear on the [Pending Invites](/developerportal/portfolio-management/#pending-invites) tab.
+* On the [Members](/developerportal/portfolio-management/access-management/#members) tab, the **Status** column in the list now shows whether a user is active or deactivated. Moreover, you can remove all the deactivated users from a portfolio in one go.
+* All the pending invites now appear on the [Pending Invites](/developerportal/portfolio-management/access-management/#pending-invites) tab.
 
 ### November 23, 2023
 
 #### New Features
 
-* In [Portfolio Management](/developerportal/portfolio-management/), you can now [link epics to an initiative](/developerportal/portfolio-management/#link-epics).
+* In [Portfolio Management](/developerportal/portfolio-management/), you can now [link epics to an initiative](/developerportal/portfolio-management/initiatives-overview/#link-epics).
 
 ### November 17, 2023
 

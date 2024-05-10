@@ -46,7 +46,7 @@ For more details, click the **Help** button on the toolbar.
 
 To configure this widget, follow these steps:
 
-1. Place the rich text widget in a data biew, list view, or a template grid with a data source that has a string attribute to store the rich-text content.
+1. Place the rich text widget in a data view, list view, or a template grid with a data source that has a string attribute to store the rich-text content.
 1. Double-click the rich text  widget to open the **Edit Rich Text** dialog box.
 1. Configure the widget using the properties described in the sections below.
 

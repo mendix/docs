@@ -14,7 +14,7 @@ New information will be added to this page as it is reported. Feel free to updat
 
 ## 2 From Java 11 to 17
 
-The following changes in behavior have been noticed when migrating from Java version 11 to Java versions 17.
+The following changes in behavior have been noticed when migrating from Java version 11 to Java version 17.
 
 ### 2.1 Changes in Date Formatting When Locale Is Dutch {#date-locale-dutch}
 

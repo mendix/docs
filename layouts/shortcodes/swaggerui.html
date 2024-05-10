@@ -5,6 +5,7 @@
      const ui = SwaggerUIBundle({
        url: {{ $original | relURL }},
        dom_id: '#docsy_swagger_ui',
+       supportedSubmitMethods: [],
       presets: [
         SwaggerUIBundle.presets.apis,
         SwaggerUIStandalonePreset

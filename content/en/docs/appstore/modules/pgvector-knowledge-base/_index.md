@@ -145,7 +145,7 @@ Use this operation to delete a complete knowledge base at once. After execution 
 
 #### 3.5.2 `Delete` {#delete}
 
-In scenarios in which the chunks in the knowledge base are related to Mendix entities (i.e. data in the Mendix database), deletion of Mendix data typically needs to result in removal of its related chunk(s) from the knowledge base. For this the `Delete` operation can be used, which accepts any kind of Mendix object. This results in the removal of all the chunks that were related to the provided Mendix object at the time of insertion.
+In scenarios in which the chunks in the knowledge base are related to Mendix objects (i.e. data in the Mendix database), deletion of Mendix data typically needs to result in removal of its related chunk(s) from the knowledge base. For this the `Delete` operation can be used, which accepts any kind of Mendix object. This results in the removal of all the chunks that were related to the provided Mendix object at the time of insertion.
 
 
 #### 3.5.3 `Delete List` {#delete-list}

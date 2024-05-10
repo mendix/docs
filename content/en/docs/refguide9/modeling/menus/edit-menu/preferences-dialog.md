@@ -43,7 +43,7 @@ When **Highlight shown errors and warnings in the editor** is checked, the error
 
 ### 2.3 Deployment
 
-#### 2.3.1 JDK directory
+#### 2.3.1 JDK directory {#jdk-directory}
 
 This is the directory in which the Java Development Kit (JDK) is located on the computer on which you deploy the application. Usually, the correct directory is located automatically.
 

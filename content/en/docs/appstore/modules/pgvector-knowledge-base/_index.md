@@ -96,6 +96,14 @@ This operation handles the following:
 
 The population handles a whole list of chunks at once which should be created by using the `Create Chunk` operation. It is possible to have multiple knowledge bases in the same database in parallel by providing different knowledge base names in combination with the same [DatabaseConfiguration](#databaseconfiguration-entity).
 
+#### 3.3.2 `Insert` {#insert}
+
+In cases where additional records need to be added to existing knowledge bases, the `Insert` operation can be used. This operation handles a list of chunks that need to be inserted into the knowledge base. It has similar behaviour to the [(Re)populate](#repopulate-knowledge-base) operation, except for that it does not delete any data.
+
+#### 3.3.3 `Replace` {#replace}
+
+The `Replace` operation is intended to be used in scenarios in which the chunks in the knowledge base are related to Mendix entities (i.e. data in the Mendix database). It can be used to keep the knowledge base in sync when the Mendix data changes and this needs to be reflected in the knowledge base. The operation handles a list of chunks: it will remove the knowledge base data for the Mendix objects the chunks refer to, after wich the new data is inserted.
+
 ### 3.4 Retrieve Operations {#retrieve-operations}
 
 Currently, four operations are available for on-demand retrieval of data chunks from a knowlege base. All operations work on a single knowledge base (specified by the name) on a single database server (specified by the [DatabaseConfiguration](#databaseconfiguration-entity)). Apart from a regular [Retrieve](#retrieve), an additional operation was exposed to [Retrieve Nearest Neighbors](#retrieve-nearest-neighbors), where the cosine distance between the input vector and the vectors of the records in the knowledge base is calculated. In both cases it is possible to filter on [Labels](#create-label). 
@@ -133,11 +141,20 @@ Use this operation to retrieve chunks from the knowledge base and set associatio
 
 ### 3.5 Delete Operations {#delete-operations-configuration}
 
-When a knowledge base is no longer needed, it can be deleted using a delete operation. If the knowledge base is needed, but the data needs to be replaced, refer to the [(Re)populate Operations](#repopulate-operations-configuration) instead.
+When a whole knowledge base, or part of its data, is no longer needed, this can be handled by using a delete operation. If, however, the knowledge base is still needed, but the data needs to be replaced, refer to the [(Re)populate Operations](#repopulate-operations-configuration) or [Replace](#replace) operations instead.
 
 #### 3.5.1 `Delete Knowledge Base` {#retrieve-nearest-neighbors}
 
 Use this operation to delete a complete knowledge base at once. After execution the knowledge base including its data will not exist anymore in the vector database.
+
+#### 3.5.2 `Delete` {#delete}
+
+In scenarios in which the chunks in the knowledge base are related to Mendix entities (i.e. data in the Mendix database), deletion of Mendix data typically needs to result in removal of its related chunk(s) from the knowledge base. For this the `Delete` operation can be used, which accepts any kind of Mendix object. This results in the removal of all the chunks that were related to the provided Mendix object at the time of insertion.
+
+
+#### 3.5.3 `Delete List` {#delete-list}
+
+This operation is meant to be used in a similar scenario to the one described for the `Delete` operation, but handles a list of Mendix objects in a single operation. Executing this operation results in the removal of all the chunks that were related to the provided Mendix objects at the time of insertion.
 
 ## 4 Technical Reference {#technical-reference}
 

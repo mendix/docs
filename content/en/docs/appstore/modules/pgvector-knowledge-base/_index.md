@@ -30,17 +30,13 @@ Also without invoking LLMs directly with the retrieved information, the similari
 
 With the current version, Mendix supports inserting data chunks with their vectors into a knowledge base (population), and selecting those records from that moment onwards (retrieval). Apart from cosine similarity search, which is executed based on the vector only, custom filtering is possible using key-value labelling to support an additional traditional search component.
 
-### 1.3 Limitations {#limitations}
-
-The current scope of the module is focused around (re)populating knowledge bases as a whole in one single operation. Deleting, adding, or updating individual knowledge base items is not yet supported. 
-
-### 1.4 Prerequisites {#prerequisites}
+### 1.3 Prerequisites {#prerequisites}
 
 You should have access to your own (remote) postgreSQL database server with the [pgvector](https://github.com/pgvector/pgvector) extension installed. For more information, see [Setting up a Vector Database](/appstore/modules/pgvector-knowledge-base/vector-database-setup/).
 
 {{% alert color="info" %}}Note: this module cannot be used with the Mendix Cloud app database, but only works with your own database server or Amazon RDS.{{% /alert %}}
 
-### 1.5 Dependencies {#dependencies}
+### 1.4 Dependencies {#dependencies}
 
 * Mendix Studio Pro version [9.24.0](/releasenotes/studio-pro/9.24/#9240) or higher 
 * [Encryption](https://marketplace.mendix.com/link/component/1011) module
@@ -63,7 +59,7 @@ After you install the PgVector Knowledge Base module, you can find it in the **A
 
 ### 3.2 General Operations {#general-operations-configuration} 
 
-After following the general setup above, you are all set to use the microflows and java actions in the **USE_ME > Operations** folder in your logic. Currently five operations (microflows and java actions) are exposed as microflow actions under the **PgVector Knowledge Base** category in the **Toolbox** in Mendix Studio Pro. These can be split into two categories, corresponding to the main functionalities: inserting data chunks into the knowledge base, for instance [(re)populate](#repopulate-knowledge-base), and finding relevant data chunks in an existing knowledge base, for example [retrieve](#retrieve). In both steps, [Labels](#label) can be provided to enable additional filtering.
+After following the general setup above, you are all set to use the microflows and java actions in the **USE_ME > Operations** folder in your logic. Currently, ten operations (microflows and java actions) are exposed as microflow actions under the **PgVector Knowledge Base Operations** category in the **Toolbox** in Mendix Studio Pro. These can be split into two categories, corresponding to the main functionalities: managing data chunks in the knowledge base, for instance [(re)populate](#repopulate-knowledge-base), and finding relevant data chunks in an existing knowledge base, for example [retrieve](#retrieve). In both steps, [Labels](#label) can be provided to enable additional filtering.
 
 #### 3.2.1 `Create label` {#create-label}
 
@@ -98,21 +94,21 @@ The population handles a whole list of chunks at once which should be created by
 
 #### 3.3.2 `Insert` {#insert}
 
-In cases where additional records need to be added to existing knowledge bases, the `Insert` operation can be used. This operation handles a list of chunks that need to be inserted into the knowledge base. It has similar behaviour to the [(Re)populate](#repopulate-knowledge-base) operation, except for that it does not delete any data.
+In cases where additional records need to be added to existing knowledge bases, the `Insert` operation can be used. This operation handles a list of chunks that need to be inserted into the knowledge base. It has similar behaviour to the [(Re)populate](#repopulate-knowledge-base) operation, except for that it does not delete any data. This operation does not prevent the creation of duplicates in the knowledge base, if the chunks were already inserted before.
 
 #### 3.3.3 `Replace` {#replace}
 
-The `Replace` operation is intended to be used in scenarios in which the chunks in the knowledge base are related to Mendix entities (i.e. data in the Mendix database). It can be used to keep the knowledge base in sync when the Mendix data changes and this needs to be reflected in the knowledge base. The operation handles a list of chunks: it will remove the knowledge base data for the Mendix objects the chunks refer to, after wich the new data is inserted.
+The `Replace` operation is intended to be used in scenarios in which the chunks in the knowledge base are related to Mendix objects (i.e., data in the Mendix database). It can be used to keep the knowledge base in sync when the Mendix data changes which needs to be reflected in the knowledge base. The operation handles a list of chunks: it will remove the knowledge base data for the Mendix objects the chunks refer to, after wich the new data is inserted.
 
 ### 3.4 Retrieve Operations {#retrieve-operations}
 
-Currently, four operations are available for on-demand retrieval of data chunks from a knowlege base. All operations work on a single knowledge base (specified by the name) on a single database server (specified by the [DatabaseConfiguration](#databaseconfiguration-entity)). Apart from a regular [Retrieve](#retrieve), an additional operation was exposed to [Retrieve Nearest Neighbors](#retrieve-nearest-neighbors), where the cosine distance between the input vector and the vectors of the records in the knowledge base is calculated. In both cases it is possible to filter on [Labels](#create-label). 
+Currently, four operations are available for on-demand retrieval of data chunks from a knowledge base. All operations work on a single knowledge base (specified by the name) on a single database server (specified by the [DatabaseConfiguration](#databaseconfiguration-entity)). Apart from a regular [Retrieve](#retrieve), an additional operation was exposed to [Retrieve Nearest Neighbors](#retrieve-nearest-neighbors), where the cosine distance between the input vector and the vectors of the records in the knowledge base is calculated. In both cases it is possible to filter on [Labels](#create-label). 
 
 A typical pattern for retrieval from a knowledge base is as follows:
 
 1. Create a list of label.
 2. Use [Create Label](#create-label) as many times as needed to add the necessary labels.
-3. Do the retrieve, e.g. use [`Retrieve Nearest Neighbors`](#retrieve-nearest-neighbors) to find chunks based on vector similarity.
+3. Do the retrieve, e.g., use [`Retrieve Nearest Neighbors`](#retrieve-nearest-neighbors) to find chunks based on vector similarity.
 
 For scenarios in which the chunks were created based on Mendix objects at the time of population, and these objects need to be used in logic after the retrieval step, two additional operations are available. The Java Actions [Retrieve & Associate](#retrieve-associate) and [Retrieve Nearest Neighbors & Associate](#retrieve-nearest-neighbors-associate) take care of the chunk retrieval and set the association towards the original object, if applicable.
 
@@ -120,7 +116,7 @@ A typical pattern for this retrieval is as follows:
 
 1. Create a list of label.
 2. Use [Create Label](#create-label) as many times as needed to add the necessary labels.
-3. Do the retrieve, e.g. use [`Retrieve Nearest Neighbors & Associate`](#retrieve-nearest-neighbors-associate) to find chunks based on vector similarity.
+3. Do the retrieve, e.g., use [`Retrieve Nearest Neighbors & Associate`](#retrieve-nearest-neighbors-associate) to find chunks based on vector similarity.
 4. Per retrieved chunk, retrieve the original Mendix object and do custom logic.
 
 #### 3.4.1 `Retrieve` {#retrieve}

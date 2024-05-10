@@ -40,21 +40,23 @@ Communication between these components operates as follows:
 
 * The Mendix Client issues two types of requests:
     * Static resources like pages, stylesheets, widgets, images, etc.
-    * Application data-related communication, which includes CRUD commands on data and logic that may require data. These are executed using [Runtime Operations]{#RO}.
+    * Application data-related communication, which includes CRUD commands on data and logic that may require data. These are executed using [Runtime Operations](#RO).
 * The Runtime Server communicates with different (relational) databases using SQL statements handled by a JDBC library
     * Application data is stored in an ER-model in an database
 
 ## 3 Runtime Operations {#RO}
-Data-related communication between the Mendix Client and the Runtime Server is done with Runtime Operations over a REST-like protocol. 
+
+Data-related communication between the Mendix Client and the Runtime Server is controlled by Runtime Operations over a REST-like protocol. 
 
 For every data-related Client action, there is a corresponding Runtime Operation type:
-- Create - creates new objects or variables.
-- Retrieve - retrieves a list of entities or a single entity.
-- Rollback - undoes changes.
-- Commit - commits objects and updates an entity if there are changes.
-- CallMicroflow - executes a Microflow.
 
-The above operations are requested from the Client and are executed on the Runtime.
+* Create - creates new objects or variables.
+* Retrieve - retrieves an object or list of objects.
+* Rollback - undoes changes.
+* Commit - commits objects and updates them if there are changes.
+* CallMicroflow - executes a microflow.
+
+The above operations are requested by the Client and are executed by the Runtime.
 
 During building, Studio Pro analyses your application. All data-related Client actions used in pages, widgets, or nanoflows are registered in the Runtime registry as a Runtime Operation.
 
@@ -68,7 +70,6 @@ A registration of the Runtime Operation has the following properties:
 | Parameters           | Which parameters are expected and what should be their type, e.g. the attribute values of the entity for “create” |
 | Allowed module roles | Only these users with an allowed module is able to execute the operation, e.g. “User” and “Admin”. |
 
-
 After all Runtime Operations are registered, they are exported to the Client. Within the Client, the Runtime Operation ID and its parameters are stored at the locations where they are utilized.
 
 | Property             | Explanation                                                  |
@@ -76,7 +77,7 @@ After all Runtime Operations are registered, they are exported to the Client. Wi
 | Runtime Operation ID | The unique ID                                                |
 | Parameters           | The parameters that the Runtime Operation expects for its operation. |
 
-Because we are only exporting the ID and the parameters, it is harder for outsiders to understand which data is being requested. Additionally, only the CRUD commands registered as a Runtime Operation with the corresponding ID can be executed. This architecture enhances the security of your application.
+Because we are only exporting the ID and the parameters, it is harder for outsiders to understand what data is being requested. Additionally, only the CRUD commands registered as a Runtime Operation with the corresponding ID can be executed. This architecture enhances the security of your application.
 
 When a request is submitted from the Client to the Runtime, the Runtime Operation ID is matched to the corresponding Runtime Operation in the registry. The Runtime Operation is then executed, and its response is sent back to the Client.
 
@@ -106,7 +107,7 @@ A basic sequence diagram looks like this:
 
 {{< figure src="/attachments/refguide/runtime/communication-patterns/19399030.png" >}}
 
-The following example shows what a Runtime Operation  request to retrieve objects from the Employee entity looks like:
+The following example shows what a Runtime Operation request to retrieve objects from the Employee entity looks like:
 
 ```json
 {
@@ -124,15 +125,16 @@ The following example shows what a Runtime Operation  request to retrieve object
   "objects": [],
 }
 ```
-The action property indicates to the Runtime that the request pertains to a Runtime Operation, as specified by the `operationId` property.
+
+The action property indicates to the Runtime that the request is for a Runtime Operation, as specified by the `operationId` property.
 
 The Runtime queries its registry to locate any Runtime Operation associated with the ID `reyg/iaSXkaXmyztuaHbsA` In this instance, it identifies an operation type "Retrieve."
 
-Under the params section, parameters can be transmitted to the Runtime if required. For this particular operation, no parameters are necessary.
+Under the params section, parameters can be transmitted to the Runtime if required. In this example, no parameters are necessary.
 
-As described, the majority of the information concerning the Runtime Operation is maintained internally within the Runtime. This approach minimizes the amount of data transmitted in the client's request, thereby enhancing security. However, this can also make in debugging the application more difficult.
+As indicated, the majority of the information concerning the Runtime Operation is maintained internally within the Runtime. This approach minimizes the amount of data transmitted in the client's request, thereby enhancing security. However, this can also make in debugging the application more difficult.
 
-To assist with debugging, you can configure the `IDResolution` log node to 'debug'. This log node records each instance when a new Runtime Operation ID is resolved to its corresponding Runtime Operation. It includes the stored registration details and any parameter inputs received from the Client.
+To assist with debugging, you can set the `IDResolution` log node to 'debug'. This log node records every time a new Runtime Operation ID is resolved to its corresponding Runtime Operation. It includes the stored registration details and any parameter inputs received from the Client.
 
 Additionally, the Runtime Registry is stored in the app's deployment directory under `model/operations.json` for debugging purposes.
 
@@ -158,12 +160,13 @@ For our retrieve operation, it looks as follows:
     "type": "retrieve"
 }
 ```
+
 As seen above, the following constants are stored for the "Retrieve" operation: 
-- UsedAttributed - lists all the attributes retrieved from the entity.
-- XPath - specifies the XPath Constraint used for retrieving the data, in this instance targeting all "Employee" entities.
-- UsedAssociations - enumerates all associations of the entity, which are nonexistent in this case.
-- PageName - indicates the name of the page where the retrieve operation is utilized.
-- WidgetName - since the data retrieval is performed by a widget, the name of the widget is recorded.
+* UsedAttributed - lists all the attributes retrieved from the entity.
+* XPath - specifies the XPath Constraint used for retrieving the data, in this instance targeting all "Employee" entities.
+* UsedAssociations - enumerates all associations of the entity, which are nonexistent in this case.
+* PageName - indicates the name of the page where the retrieve operation is utilized.
+* WidgetName - since the data retrieval is performed by a widget, the name of the widget is recorded.
 
 Additionally, the ID of the Runtime Operation, the parameters (none are required for the retrieve operation), and the operation type are logged.
 
@@ -345,6 +348,7 @@ Change and commit the updates to the database:
 ```
 
 Which is resolved in the Runtime to:
+
 ```json
 {
     "constants": {},
@@ -358,7 +362,7 @@ Which is resolved in the Runtime to:
 }
 ```
 
-The commit will cause the Runtime Server to save the object to the database. Before the commit, the data is only kept in the Runtime Server to optimize performance and minimize impact on the database.
+The commit will cause the Runtime Server to save the object to the database. Before the commit, the data is only kept in the Runtime Server. This optimizes performance and minimizes the impact on the database.
 
 ```sql
  INSERT INTO "myfirstmodule$employee" ("id",
@@ -385,7 +389,7 @@ The typical edit-existing-object flow consists of these steps:
 4. Change and validate the changed attributes of the object in the Runtime Server.
 5. Retrieve the object from the database.
 6. Validate the object changes.
-7. Commit the changes in the database.
+7. Commit the changes to the database.
 
 {{< figure src="/attachments/refguide/runtime/communication-patterns/19399032.png" >}}
 
@@ -412,7 +416,9 @@ Change and validate the changed attributes of the object in the Runtime Server:
     "objects": [],
 }
 ```
+
 In the Runtime this resolves to:
+
 ```json
 {
     "constants": {},
@@ -487,6 +493,7 @@ Delete the object:
 ```
 
 In the Runtime:
+
 ```json
 {
     "constants": {},
@@ -521,6 +528,7 @@ WHERE "id" = ?
 ```
 
 Request from the client to refresh the data grid:
+
 ```json
 {
     "action": "runtimeOperation",
@@ -544,6 +552,7 @@ Request from the client to refresh the data grid:
 Which resolves to the following in the Runtime:
 
 Runtime:
+
 ```json
 {
     "constants": {
@@ -607,6 +616,7 @@ JSON action executed from Mendix Client to Runtime Server:
 ```
 
 In the Runtime:
+
 ```json
 {
     "constants": {

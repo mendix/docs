@@ -27,7 +27,7 @@ To perform a user migration, you need the following prerequisites:
 
 ## 3 Migrating Users
 
-To migrate your users, follow the instructions below. For the examples, assume that you are migrating users from the default Mendix user management module, `Administration` to the SAP module, `SapAuthentication`.
+To migrate your users, follow the instructions below. For the examples, assume that you are migrating users from the default Mendix user management module, **Administration** to the SAP module, **SapAuthentication**.
 
 {{% alert color="info" %}}
 You should migrate your users immediately after first deploying the app containing the new user management functionality. Until you do this, your existing users will not be able to sign in to the app.

@@ -17,6 +17,12 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 ## 2024
 
+### May 14
+
+#### New features
+
+* We now use Arm-based AWS Graviton2 processors for provisioning databases within newly created environments on all plans in Mendix Public Cloud for best performance. Graviton2 processors can provide significant performance improvements over previous generation instances. For database operations, this means faster processing of queries and better handling of concurrent requests.
+
 ### May 5
 
 #### New features

@@ -118,7 +118,7 @@ Before starting your app in the target node, make sure it has the same configura
 
 Now that the target node contains your data and is configured, deploy the deployment package to an environment and start your app.
 
-To learn how to do this, see [How to Deploy the App to an Environment](/developerportal/deploy/mendix-cloud-deploy/#deploy-the-app-to-an-environment).
+To learn how to do this, see [How to Deploy the App to an Environment](/developerportal/deploy/mendix-cloud-deploy/deploying-an-app/).
 
 ### 4.3 Unlinking the App from the Source Node
 

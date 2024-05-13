@@ -109,7 +109,6 @@ The component details page also presents the following tabs:
     * [Platform-supported components](/appstore/overview/#category) are documented according to content type or category in the [Marketplace Guide](/appstore/).
 * **Releases** – This tab lists all the versions of the component along with details like the **Framework version** and the **UUID**.
     * Each version can be downloaded by clicking **Download.**
-    * The **UUID** can be used in the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api/#createnewapp) in the *Projects API.*
 * **Reviews** – This tab shows user reviews of the component.
     * You can browse,  sort by review date, and filter by ratings for insights on the component.
     * You can select the **Only show my reviews** checkbox to check your own reviews.

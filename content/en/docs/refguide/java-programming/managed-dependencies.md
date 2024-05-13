@@ -176,6 +176,7 @@ There can be multiple reasons the dependencies cannot be resolved. See the follo
 
     * Check that you have a working internet connection.
     * If you are using a [custom repository](#custom-repos), confirm that the repository can be reached.
+    * If your company uses a proxy, ensure that you configured the [Gradle Proxy Settings](#proxy-settings).
 
 3. CE9806 – Unable to reach repository / mis-configuration of custom repository.
 

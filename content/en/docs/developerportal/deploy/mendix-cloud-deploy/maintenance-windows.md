@@ -12,11 +12,11 @@ aliases:
 
 ## 1 Introduction
 
-In Mendix Cloud Professional and Enterprise plans, you can set a preferred maintenance window. In other words, you can specify a weekly time range for system maintenance. Then, whenever Mendix has environment maintenance operations planned, they are run within your preferred maintenance window.
+If you have a licensed app deployed to Mendix Cloud, you can set a preferred maintenance window for each of your app's environments. In other words, you can specify a weekly time range for system maintenance. Then, whenever Mendix has environment maintenance operations planned, they run within your preferred maintenance window.
 
 ### 1.1 Preferred Maintenance Window
 
-The preferred maintenance window is a time range that you can set to specify what time and day of the week you prefer for system maintenance. For example, you could set the following maintenance window: Friday 12:00-15:00 UTC.
+The preferred maintenance window is a three-hour time range that you can set to specify what time and day of the week you prefer for system maintenance. For example, you could set the following maintenance window: Friday 12:00-15:00 UTC.
 
 {{% alert color="info" %}}The preferred maintenance window is always shown in Coordinated Universal Time (UTC); don't forget to convert it to your local time zone.{{% /alert %}}
 

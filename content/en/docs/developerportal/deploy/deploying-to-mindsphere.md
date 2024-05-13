@@ -12,10 +12,6 @@ tags: ["Insights Hub", "MindSphere", "deploy", "cloud foundry", "launchpad", "sc
 
 ## 1 Introduction
 
-{{% alert color="warning" %}}
-This information is for deploying apps to the Insights Hub platform. It does not apply to Insights Hub IIoT for Makers.
-{{% /alert %}}
-
 Insights Hub is the cloud-based, open IoT operating system from Siemens that lets you connect your machines and physical infrastructure to the digital world. It lets you harness big data from billions of intelligent devices, enabling you to uncover transformational insights across your entire business.
 
 This documentation is meant for Mendix developers who want to deploy, register and run a Mendix app on Insights Hub.

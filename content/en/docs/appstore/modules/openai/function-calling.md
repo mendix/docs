@@ -31,7 +31,7 @@ This automates the following process happening inside the OpenAI connector:
 
 For more general information on this topic, see [Function Calling](https://platform.openai.com/docs/guides/function-calling).
 
-## 2 Function calling with the OpenAI Connector {#openai-connector}
+## 3 Function calling with the OpenAI Connector {#openai-connector}
 
 Function calling is supported for all chat completions operations by adding the optional input parameter [FunctionCollection](/appstore/modules/openai-connector/#functioncollection). Functions in Mendix are essentially microflows that can be registered within the request to the LLM​. The OpenAI connector takes care of handling the tool call response as well as executing the function microflow(s) until the API returns the final assistant's response. Currently, function microflows are limited to one input parameter of type string and must return a string.
 
@@ -49,7 +49,7 @@ Function calling is a very powerful capability, but this also introduces potenti
 Mendix also strongly advises that you build user confirmation logic into function microflows that have a potential impact on the world on behalf of the end-user, for example sending an email, posting online, or making a purchase.
 {{% /alert %}}
 
-## 3 Use cases {#use-cases}
+## 4 Use cases {#use-cases}
 
 Function calling can be used for a variety of use cases including the following:
 
@@ -62,7 +62,7 @@ Function calling can be used for a variety of use cases including the following:
 * Executing actions like creating objects
     * for example, createTicket (string subject); Note that we recommend building user confirmation logic for actions that manipulate data on behalf of the current user.
 
-## 4 Examples {#examples}
+## 5 Examples {#examples}
 
 The [OpenAI Showcase Application](https://marketplace.mendix.com/link/component/220475) contains multiple examples that demonstrate function calling. Two scenarios are visualized in the diagrams below.
 

@@ -14,13 +14,13 @@ This activity can only be used in **Microflows**.
 
 The **Gauge** activity can be used to set a gauge to a specific value.
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/metrics-activities/metrics-gauge/gauge.png" alt="Gauge" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/metrics-activities/metrics-gauge/gauge.png" alt="Gauge" class="no-border" >}}
 
 ## 2 Properties
 
 An example of gauge properties is represented in the image below:
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/metrics-activities/metrics-gauge/gauge-properties.png" alt="Gauge Properties" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/metrics-activities/metrics-gauge/gauge-properties.png" alt="Gauge Properties" class="no-border" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

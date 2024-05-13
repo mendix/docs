@@ -27,7 +27,7 @@ In the mapping editor for import mappings, you can check elements that can occur
 
 ### 1.1 XSD Constraints
 
-* If the XSD contains any of the unsupported constructs, they will be highlighted in the mapping editor with this warning icon: {{< figure src="/attachments/refguide/modeling/integration/xml-schemas/xml-schema-support/16843903.png" >}}
+* If the XSD contains any of the unsupported constructs, they will be highlighted in the mapping editor with this warning icon: {{< figure src="/attachments/refguide/modeling/integration/xml-schemas/xml-schema-support/16843903.png" class="no-border" >}}
 
 * This will be next to each unsupported element or attribute. Checking any of such elements or attributes will result in consistency errors. 
 

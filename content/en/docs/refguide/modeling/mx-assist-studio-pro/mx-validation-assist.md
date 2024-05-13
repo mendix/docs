@@ -44,7 +44,7 @@ The page should contain at least one input widget, for the **Generate validation
 
 The **Generate Validation Microflow** dialog box allows you to configure all validations:
 
-{{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-validation-assist/generate-validation-microflow-dialog.png" alt="Generate Validation Microflow Dialog Box" >}}
+{{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-validation-assist/generate-validation-microflow-dialog.png" alt="Generate Validation Microflow Dialog Box" class="no-border" >}}
 
 The dialog box consists of two sections:
 
@@ -82,11 +82,11 @@ To configure the **Save** button for the use case above, do the following:
 1. Open the page with the form called *Appointment_NewEdit* and right-click the **Save** button in it.
 2. In the drop-down list, select **Generate validation microflow**:
 
-    {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-validation-assist/generate-validation-microflow-option.png" alt="Generate Validation Microflow Option" >}}
+    {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-validation-assist/generate-validation-microflow-option.png" alt="Generate Validation Microflow Option" class="no-border" >}}
 
 3. In the **Generate Validation Microflow** dialog box, you can see the **Microflow Properties**, for example, a microflow name, and validations were configured for you. Three expressions were added to validations: to check if the name, treatment type, and date and time fields are filled in:
 
-    {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-validation-assist/generate-validation-microflow-dialog.png" alt="Generate Validation Microflow Dialog Box" >}}
+    {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-validation-assist/generate-validation-microflow-dialog.png" alt="Generate Validation Microflow Dialog Box" class="no-border" >}}
 
 4. In your app, you already have a validation microflow that checks the selected date and time, you can call the microflow in the current validation. Do the following:
 
@@ -108,18 +108,18 @@ To configure the **Save** button for the use case above, do the following:
 
     1. In the **Generate Validation Microflow** dialog box, select two validations for *Customer_Name* and click **Extract submicroflow**:
 
-        {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-validation-assist/extract-sub-microflow.png" alt="Extract Sub-Microflow" >}}
+        {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-validation-assist/extract-sub-microflow.png" alt="Extract Sub-Microflow" class="no-border" >}}
 
     2. In the **Extract Validation Sub Microflow,** click **Extract Microflow**:
 
-        {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-validation-assist/extract-sub-microflow-dialog.png" alt="Extract Sub-Microflow Dialog" >}}
+        {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-validation-assist/extract-sub-microflow-dialog.png" alt="Extract Sub-Microflow Dialog" class="no-border" >}}
 
         The microflow is saved separately containing selected validations.
 
 7. In the **Generate Validation Microflow** dialog box, click **Generate microflow**. 
 8. In the **Validation Assist** dialog box, click **Open the microflow** to view the configured microflow:
 
-    {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-validation-assist/validation-microflow.png" alt="Validation Microflow" >}}
+    {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-validation-assist/validation-microflow.png" alt="Validation Microflow" class="no-border" >}}
 
 The created microflow is used for the **Save** button to validate all conditions. The sub-microflow can be used on a different page to validate the customer name.
 

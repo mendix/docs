@@ -32,7 +32,7 @@ When making a new widget, Mendix suggests you [Build a Pluggable Web Widget](/ho
 
 If you want to make a new release for the Marketplace, we advise you start off with a new tag on the appropriate commit on the production or release branch. From these tags, you can create a [new Release in GitHub](https://help.github.com/articles/creating-releases). In this release you can set your release notes (which you can then use for the Marketplace release as well) and give it a more official name. If you add the .mpk as a binary file to the release tag (see image blow) the Marketplace will automatically sync the .mpk to your new draft. Mendix suggests also linking this to the upcoming Marketplace release by mentioning that release number in the description.
 
-{{< figure src="/attachments/howto7/collaboration-requirements-management/starting-your-own-repository/18580533.png" >}}
+{{< figure src="/attachments/howto7/collaboration-requirements-management/starting-your-own-repository/18580533.png" class="no-border" >}}
 
 ## 6 Read More
 

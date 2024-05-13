@@ -1,5 +1,6 @@
 ---
-title: "Auto-Load More ⚠"
+title: "Auto-Load More"
+deprecated: true
 url: /appstore/widgets/auto-load-more/
 category: "Widgets"
 description: "Describes the configuration and usage of the Auto-Load More widget, which is available in the Mendix Marketplace."

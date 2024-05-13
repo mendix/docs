@@ -12,7 +12,7 @@ tags: ["Documents", "Developer Portal"]
 
 On the **Documents** page, you can upload files to your app and replace existing files with newer versions.
 
-{{< figure src="/attachments/developerportal/general/documents/documents.png" >}}
+{{< figure src="/attachments/developerportal/general/documents/documents.png" class="no-border" >}}
 
 ## 2 Actions
 
@@ -34,7 +34,7 @@ To download a document, click **Download** ({{% icon name="download-bottom" %}})
 
 Click **Show Details** for a document to see the description of the file, comments, and all the versions of the document:
 
-{{< figure src="/attachments/developerportal/general/documents/document-details.png" >}}
+{{< figure src="/attachments/developerportal/general/documents/document-details.png" class="no-border" >}}
 
 You can perform the following actions on this page:
 

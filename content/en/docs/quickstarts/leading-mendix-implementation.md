@@ -144,7 +144,7 @@ Your talent has been trained and activated in such a way that you can shift them
 
 Sounds great, right? But how do you get there? Step by step. There are five major areas you will need to focus on. We call these the **5 P’s of Digital Transformation** and aligning the P’s (Portfolio, People, Process, Platform, and Promotion) to your organization's digital strategy is crucial to your Mendix success. Let’s go over them one by one.
 
-{{< figure src="/attachments/quickstarts/leading-mendix-implementation/5-ps.png" class="image-border"  >}}
+{{< figure src="/attachments/quickstarts/leading-mendix-implementation/5-ps.png"  >}}
 
 #### 2.3.1 Portfolio: Choosing a Use Case That Is Equally Meaningful and Doable
 
@@ -156,7 +156,7 @@ Proving the value of a program—whether it’s through software that allows you
 
 And guess what? We have a tool to help you with that. Mendix Portfolio Management gives you a way to identify, track, and plan out your initiatives. So, let's get started by creating your Portfolio board [here](https://portfolio.mendix.com/index.html). All you need to do is click on *Get Started* and then *Create your first Portfolio*. 
 
-{{< figure src="/attachments/quickstarts/leading-mendix-implementation/portfolio-landscape-overview.png" class="image-border"  >}}
+{{< figure src="/attachments/quickstarts/leading-mendix-implementation/portfolio-landscape-overview.png"  >}}
 
 If you would like to learn more about how to manage your portfolio of ideas and applications, . You might also have done a portfolio workshop with Mendix experts before, in which case, you may already have an Excel file with your list of initiatives that you can easily import into your brand new board. If not, we discuss your first app selection in more detail in 3.
 
@@ -238,7 +238,7 @@ High-level positioning is about knowing how and where Mendix fits in with the re
 
 The Start stage is an excellent time to start exploring your cloud options, and use this knowledge as input for strategic choices in the future. You’re most likely going to deploy your application on the Mendix Cloud because it’s the most optimized cloud to run Mendix-built applications. Built on top of Cloud Foundry and AWS, the Mendix Cloud is the deployment solution in which Mendix provides hosting environments for you. It’s available globally and comes standard with deep insights, alerting capabilities, high availability options, and backups. 
 
-{{< figure src="/attachments/quickstarts/leading-mendix-implementation/cloud-options.png" class="image-border"  >}}
+{{< figure src="/attachments/quickstarts/leading-mendix-implementation/cloud-options.png"  >}}
 
 But as you expand your portfolio and move from Start to Structure, you will need to consider other deployment options and moving to a multi-cloud environment. Understanding the cloud environments to which you’ll deploy—for example, the security features and how they fit into your existing security framework—will help inform how you move to Structure. 
 
@@ -433,9 +433,9 @@ Here are some ideas:
 
 The final step of your getting started plan involves capturing your 5 P milestones and building a timeline. Below are some examples that we use frequently with Mendix customers that you can take and make your own: Add details, and overlay dates appropriate for your organization, etc. Work independently or work with your customer success manager to think through what this might look like for you.
 
-{{< figure src="/attachments/quickstarts/leading-mendix-implementation/start-journey.png" class="image-border"  >}}
+{{< figure src="/attachments/quickstarts/leading-mendix-implementation/start-journey.png"  >}}
 
-{{< figure src="/attachments/quickstarts/leading-mendix-implementation/your-journey.png" class="image-border"  >}}
+{{< figure src="/attachments/quickstarts/leading-mendix-implementation/your-journey.png"  >}}
 
 ### 3.3 Start Your Mendix Portfolio
 
@@ -445,7 +445,7 @@ To make sure that the strategy is reflected in the initiatives, you need to put 
 
 Portfolio Management starts at the company level, where strategy is defined. The company strategy leads to a Portfolio Vision, which is translated into a backlog and budget for all initiatives. 
 
-{{< figure src="/attachments/quickstarts/leading-mendix-implementation/strategy.png" class="image-border"  >}}
+{{< figure src="/attachments/quickstarts/leading-mendix-implementation/strategy.png"  >}}
 
 To start, think about the big picture: What is your organization striving to achieve? Jot down a few ideas that can help you get there. These could include solutions to migrate from legacy apps, improve customer experience or increase efficiency. And Mendix has a tool to help you do just that!
 
@@ -457,7 +457,7 @@ Portfolio management is a key activity that ensures you are always creating solu
 
 So, let’s add your initiatives. Click the *Create Initiative* button on the top right and start jotting down your ideas.
 
-{{< figure src="/attachments/quickstarts/leading-mendix-implementation/create-initiative.png" class="image-border"  >}}
+{{< figure src="/attachments/quickstarts/leading-mendix-implementation/create-initiative.png"  >}}
 
 ### 3.4 Finalize First Application Selection 
 
@@ -489,7 +489,7 @@ For instance, a Mendix customer initially failed to build an application that ca
 
 **Exposure** is the amount of usage or availability an application has. **Complexity** can be defined as how technically complex the application is; i.e., how many integrations does the application require? You want to start on the left-hand side of the quadrant, which represents your team learning and feeling comfortable with the new way of working. 
 
-{{< figure src="/attachments/quickstarts/leading-mendix-implementation/level-of-complexity.png" class="image-border"  >}}
+{{< figure src="/attachments/quickstarts/leading-mendix-implementation/level-of-complexity.png"  >}}
 
 **Which type of projects is Mendix a good fit for?**
 
@@ -606,7 +606,7 @@ By thoroughly defining the application’s purpose and value, you provide a clea
 
 You can also try filling in a template such as this one (you can find this template attached in the Resources box at the top of this page):
 
-{{< figure src="/attachments/quickstarts/leading-mendix-implementation/template.png" class="image-border"  >}}
+{{< figure src="/attachments/quickstarts/leading-mendix-implementation/template.png"  >}}
 
 ### 3.6 Set up Deployment Architecture and Resources
 
@@ -645,7 +645,7 @@ For Private deployment , **please be ready to start that process immediately in 
 
 See below for Private Cloud responsibility matrix:
 
-{{< figure src="/attachments/quickstarts/leading-mendix-implementation/responsibility-matrix.png" class="image-border"  >}}
+{{< figure src="/attachments/quickstarts/leading-mendix-implementation/responsibility-matrix.png"  >}}
 
 ### 3.7 Review Options for Development Resources (Who Will Build Your First App?) {#review-options-for-development-resources}
 
@@ -773,7 +773,7 @@ Getting all the required knowledge in each team might be difficult while keeping
 
 Your team does not have to fit this exact mold, but it is important that all the responsibilities outlined here are covered to ensure success in your low-code program. Here’s a typical team structure:
 
-{{< figure src="/attachments/quickstarts/leading-mendix-implementation/team-structure.png" class="image-border"  >}}
+{{< figure src="/attachments/quickstarts/leading-mendix-implementation/team-structure.png"  >}}
 
 **Additional Resources**
 
@@ -789,7 +789,7 @@ Take the time to familiarize yourself with the [Mendix Academy](https://academy.
 
 Here is a sample you can use as a template:
 
-{{< figure src="/attachments/quickstarts/leading-mendix-implementation/sample.png" class="image-border"  >}}
+{{< figure src="/attachments/quickstarts/leading-mendix-implementation/sample.png"  >}}
 
 This will vary based on the specific people taking each role. A Scrum Master who used to be a full-stack developer could take the *Crash Course* instead of the *Become a Rapid Developer* course. Your EA may need to add *Native Mobile* or *Configure Advanced Security* for your particular organization, project and team needs. Your Mendix team is happy to help create your training plan.
 
@@ -797,7 +797,7 @@ This will vary based on the specific people taking each role. A Scrum Master who
 
 Mendix provides four different certification levels to measure developer maturity, each with an increasing level of required skill and experience:
 
-{{< figure src="/attachments/quickstarts/leading-mendix-implementation/mendix-certificates.png" class="image-border"  >}}
+{{< figure src="/attachments/quickstarts/leading-mendix-implementation/mendix-certificates.png"  >}}
 
 **Rapid Developer Certification**
 
@@ -890,7 +890,7 @@ Knowing the broad strokes capabilities of the Mendix platform early on helps in 
 
 When you start, the governance responsibility will probably be in the hands of your Mendix admin, but as your Mendix landscape grows you may want to define a Center of Excellence. Admins can use Control Center, a dashboard that gives you an overview of various company activities on the Mendix platform, to manage many of the aspects of landscape governance. 
 
-{{< figure src="/attachments/quickstarts/leading-mendix-implementation/control-center.png" class="image-border"  >}}
+{{< figure src="/attachments/quickstarts/leading-mendix-implementation/control-center.png"  >}}
 
 There are several advanced capabilities in the Control Center to help you manage your app landscape as it grows.
 
@@ -910,7 +910,7 @@ New capabilities are released regularly, so exploring Control Center regularly i
 
 But as you can tell from the slide below, governance touches many aspects of the development cycle and it’s not just confined to control center.
 
-{{< figure src="/attachments/quickstarts/leading-mendix-implementation/governance-capability-highlights.png" class="image-border"  >}}
+{{< figure src="/attachments/quickstarts/leading-mendix-implementation/governance-capability-highlights.png"  >}}
 
 If you would like to learn more about our governance features, you can check out the [Control Center Guide,](/control-center/) [Control Center Learning Path](https://academy.mendix.com/link/paths/116/Govern-and-Scale-your-App-Landscape-with-Mendix-Control-Center), or the Mendix documentation. You probably already involved your subject matter experts while you were evaluating Mendix, so they might want to do a deeper dive.
 
@@ -922,7 +922,7 @@ The Mendix platform has a few options to tailor the platform to your specific go
 
 **Claim additional email domains**
 
-{{< figure src="/attachments/quickstarts/leading-mendix-implementation/company-email-domains.png" class="image-border"  >}}
+{{< figure src="/attachments/quickstarts/leading-mendix-implementation/company-email-domains.png"  >}}
 
 If your company has more than one email domain, all your email domains should be claimed, such as: MyCompany.com, MyCompany.nl, MyCompany-SpecialUnit.com etc. This is to ensure all users that do a signup with an email address on any of these domains all end-up in the same ‘company’ on the Mendix platform. If you don’t do this from the start, your users may create projects in different ‘companies’/tenants on the Mendix platform, which is hard to govern and may require cumbersome merging activities later.
 
@@ -930,7 +930,7 @@ If your company has more than one email domain, all your email domains should b
 
 **Assign a security contact**
 
-{{< figure src="/attachments/quickstarts/leading-mendix-implementation/security-contact.png" class="image-border"  >}}
+{{< figure src="/attachments/quickstarts/leading-mendix-implementation/security-contact.png"  >}}
 
 Provide a specific **Security Contact** who is informed if there are critical security issues with the Mendix platform and platform-supported Marketplace components. Mendix strongly recommends applying a team email address or a functional mailbox instead of a personal individual email address.
 
@@ -941,7 +941,7 @@ to get familiar with the process around security fixes.
 
 **Define company brand and description**
 
-{{< figure src="/attachments/quickstarts/leading-mendix-implementation/cutomize-your-brand.png" class="image-border"  >}}
+{{< figure src="/attachments/quickstarts/leading-mendix-implementation/cutomize-your-brand.png"  >}}
 
 On the **Company Brand** page, you can upload, edit, or remove a **Company Logo**. The company logo uploaded here will appear across the platform where it is used. For instance, it will be displayed on your published Marketplace content.
 
@@ -1014,11 +1014,11 @@ You may take one of the following approaches:
 And now that everyone has a Mendix account, this is the moment you’ve all been waiting for — it’s time to actually create your first app!
 Anyone from your team can click the Create App button on the Mendix platform, just make sure they are logged in with an email address from your company domain.
 
-{{< figure src="/attachments/quickstarts/leading-mendix-implementation/my-apps.png" class="image-border"  >}}
+{{< figure src="/attachments/quickstarts/leading-mendix-implementation/my-apps.png"  >}}
 
 Once the project is created, everyone from the team should get access to it as well as their appropriate role. This is the overview of the default project roles on the Mendix platform: 
 
-{{< figure src="/attachments/quickstarts/leading-mendix-implementation/default-project-roles.png" class="image-border"  >}}
+{{< figure src="/attachments/quickstarts/leading-mendix-implementation/default-project-roles.png"  >}}
 
 ### 6.3 Setting up the Agile Way of Working
 
@@ -1048,7 +1048,7 @@ Development teams can work most efficiently if requirements are clearly describe
 
 An organization that is familiar with the Agile way of working will likely already use related tools, such as JIRA. JIRA is often used for Scrum projects, which is why it is now possible to link JIRA to your Mendix Project. The Scrum Master of the project can choose between Epics or Jira in the Settings part of the project navigation, in the Project Management tab.
 
-{{< figure src="/attachments/quickstarts/leading-mendix-implementation/project-management.png" class="image-border"  >}}
+{{< figure src="/attachments/quickstarts/leading-mendix-implementation/project-management.png"  >}}
 
 Make sure that the tool and process you choose supports close collaboration between the product owner, developers, users, and other stakeholders. The tool should enable clear visibility and tracing between user stories, implementation, feedback, and deployments. Team members unfamiliar with your chosen tool may also need additional training to maximize use of the tool.
 
@@ -1081,17 +1081,17 @@ Low-code development may be fast, but using modules or content from the Marketpl
 
 One of the core values of the Mendix platform is continuous collaboration between business and IT. We have already shown you how that works in practice when it comes to aligning on wider strategic objectives (your low-code vision), program goals as well as your project goals. Now it’s time to see how it all works throughout the application development lifecycle. 
 
-{{< figure src="/attachments/quickstarts/leading-mendix-implementation/continuous-collaboration-suite.png" class="image-border"  >}}
+{{< figure src="/attachments/quickstarts/leading-mendix-implementation/continuous-collaboration-suite.png"  >}}
 
 It all starts with your portfolio. You have already added a couple of initiatives in it, but now that you have the MVP scope of your first application, add it in as a separate initiative and describe or link to documentation showing what needs to be delivered exactly and why. 
 
 You also have your application, so now you can link it to the initiative. To do this, you just need to select *Edit initiative* and start typing your app name to select it from the dropdown.
 
-{{< figure src="/attachments/quickstarts/leading-mendix-implementation/edit-initiative.png" class="image-border"  >}}
+{{< figure src="/attachments/quickstarts/leading-mendix-implementation/edit-initiative.png"  >}}
 
 If you are using Epics as your agile planning tool, you will be able to link the right epics to this initiative. This means that anyone who opens that initiative in Portfolio Management will be able to see development progress on the epic level.
 
-{{< figure src="/attachments/quickstarts/leading-mendix-implementation/development-progress.png" class="image-border"  >}}
+{{< figure src="/attachments/quickstarts/leading-mendix-implementation/development-progress.png"  >}}
 
 Another important part of collaboration in the application development lifecycle is the collaboration between the development team and their end users. Mendix makes that super easy using the feedback module. Your app users just need to click the *Feedback* button in your app and tell you what they like, need or miss, and your development team will be able to immediately respond. Once your app is live, the team will be able to set up a mini-survey to ask for user satisfaction, or get more targeted input by asking specific questions. Here you can read more on [the importance of user feedback for application development](https://www.mendix.com/blog/how-to-collect-and-analyze-user-feedback-in-your-app/).
 
@@ -1162,7 +1162,7 @@ When the node permissions are set up, you can start configuring your cloud setti
 
 Things can you can customize for your applications in the Mendix Cloud include:
 
-* [Studio Pro deployment target](/developerportal/deploy/studio-deployment-settings/#2-selecting-the-target-environment)
+* [Studio Pro deployment target](/developerportal/deploy/studio-deployment-settings/#studio-pro-target)
 
 * [Custom domains](/developerportal/deploy/custom-domains/)
 
@@ -1178,7 +1178,7 @@ Things can you can customize for your applications in the Mendix Cloud include:
 
 Once you have linked and configured your Mendix Cloud node, which you only have to do once, you can start deploying your application to the Mendix Cloud. It is recommended that you deploy any new version of your application to the Test or Acceptance environment of your application first for testing, before deploying it to the Production environment.
 
-There are multiple ways to deploy your application to the Mendix Cloud, so there is always a deployment flow that fits your needs. You (or your team) can get a complete overview of those [in this docs page](/developerportal/deploy/mendix-cloud-deploy/#deploy-app-mendix-cloud).
+There are multiple ways to deploy your application to the Mendix Cloud, so there is always a deployment flow that fits your needs. You (or your team) can get a complete overview of those in [Deploying an App to Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/deploying-an-app/).
 
 ### 7.2 Test Your Application
 

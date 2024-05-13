@@ -14,7 +14,7 @@ Examples of correct parameter names are `$weight_range`, `$age`.
 
 If a parameter value is not set in an OQL query, that part of the statement is ignored. For example, in the following query:
 
-```sql
+```sql {linenos=false}
 SELECT Name
 FROM Module.Person
 WHERE
@@ -25,7 +25,7 @@ WHERE
 
 If the value of `$param` is not provided, the query will be equivalent to:
 
-```sql
+```sql {linenos=false}
 SELECT Name
 FROM Module.Person
 WHERE
@@ -34,7 +34,7 @@ WHERE
 
 The example above is different from the case where the value of `$param` is provided, but is `NULL`. In that case, the query will be equivalent to:
 
-```sql
+```sql {linenos=false}
 SELECT Name
 FROM Module.Person
 WHERE

@@ -16,7 +16,7 @@ If you have this activity in one of the parallel split paths, then only the path
 However, the whole parallel split will still suspend on the merge of the split until the waiting activity is notified.
 {{% /alert %}}
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/wait-for-notification/wait-for-notification-example.jpg" alt="Wait For Notification" width="250" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/wait-for-notification/wait-for-notification-example.jpg" alt="Wait For Notification" width="250" class="no-border" >}}
 
 ## 2 Properties
 

@@ -10,7 +10,7 @@ tags: ["studio pro"]
 
 A dynamic image can be used to display an image or its thumbnail. For example, you can show a profile picture:
 
-{{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/image-viewer/image-viewer.png" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/image-viewer/image-viewer.png" class="no-border" >}}
 
 {{% alert type="info" %}}
 
@@ -30,23 +30,23 @@ Do the following:
 
 3. In the **Generalization** property, click **Select**.
 
-    {{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/image-viewer/generalization.png" >}}
+    {{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/image-viewer/generalization.png" class="no-border" >}}
 
 4. In the **Select Entity** dialog box, choose **System.Image** and click the **Select** button.
 
-    {{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/image-viewer/select-entity.png" >}}
+    {{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/image-viewer/select-entity.png" class="no-border" >}}
 
 5. Click **OK**. 
 
 Your entity now inherits all properties from the System.Image entity you selected:
 
-{{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/image-viewer/entity-example.png" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/image-viewer/entity-example.png" class="no-border" >}}
 
 ## 3 Properties
 
 An example of dynamic image properties is represented in the image below:
 
-{{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/image-viewer/image-viewer-properties.png" alt="Dynamic Image Properties"   width="250"  >}}
+{{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/image-viewer/image-viewer-properties.png" alt="Dynamic Image Properties"   width="250"  class="no-border" >}}
 
 Dynamic image properties consist of the following sections:
 

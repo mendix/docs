@@ -13,6 +13,70 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2024
 
+### May 9th, 2024
+
+#### Deploy API
+
+* We have enhanced support for the Global Operator, allowing for smoother operations in creating, updating, and deleting clusters and namespaces.
+* We have resolved an issue where an incorrect error message appeared upon deletion of the default Studio Pro target environment.
+
+#### Build API
+
+* In case of a failed build, users can now access the build logs for debugging purposes by specifying the log query parameter to the `GetJob` endpoint.
+
+#### Portal Enhancements
+
+* Users now have the option to automatically accept invitations for cluster and namespace memberships.
+* The **License** section of the **Environment Details** page now includes an additional field displaying the Runtime License ID applied in the environment. This feature is visible for applications deployed with Mendix Operator version 2.16 and later.
+* We have added a button next to the mxpc-cli download screen, enabling users to easily copy the download URL for mxpc-cli.
+* We have resolved an error related to incorrect email IDs for namespace member invitations.
+* We have addressed an issue where the list of Claims was not displayed accurately when navigating back and forth between pages.
+
+### April 25th, 2024
+
+#### Deploy API
+
+* We have added new endpoints for customers to retrieve their applications via API.
+
+### April 24th, 2024
+
+#### Mendix Operator v2.16.0 {#2.16.0}
+
+* The `mendixRuntimeVersion` parameter no longer needs to specified in the MendixApp CR.
+* When creating a new app environment in AWS, the IAM region is autodetected based on the bucket region. For AWS GovCloud and China, it is no longer necessary to manually specify the `--iam-region` argument.
+* We have completed the integration between Global Operator and PCLM and addressed the remaining issues:
+    * The MendixApp status will now correctly show if an environment is configured to use PCLM.
+    * License claims will now be correctly refreshed to ensure that licenses from running apps are not reassigned to other environments.
+    * License claims are now correctly reported.
+* The Global Operator is now available for use and no longer hidden behind a feature flag.
+* When upgrading the Global Operator, the `mxpc-cli` installation and configuration tool will now also update all of its managed namespaces as well. To upgrade an entire cluster, the upgrade procedure only needs to run once - for the Global Operator.
+* We have updated components to use Go 1.22 and the latest dependency versions, in order to improve security score ratings for all container images.
+* Upgrading to Mendix Operator v2.16.0 from a previous version will restart environments managed by that version of the Operator.
+
+### April 18th, 2024
+
+#### Documentation Updates
+
+* We have updated the [CSI Secrets Storage](/developerportal/deploy/secret-store-credentials/) documentation to include instructions on storing credentials and configuration in Azure Key vault.
+
+### April 4th, 2024
+
+#### Portal Improvements
+
+* We have resolved an issue where claimed licenses were occasionally not visible in the **License Claim** list under the **PCLM Statistics** tab.
+* You can now export scheduled events to an Excel file.
+* Kubernetes server information is now displayed in the **Additional Information** section of namespaces, providing more context for administrators.
+* We have fixed an issue where users encountered errors when pressing the **Apply Changes** button multiple times, ensuring smoother operations.
+* Users can now set the Studio Pro target in the **Environment Overview** page without encountering any issues. (Ticket [209652](https://mendixsupport.zendesk.com/agent/tickets/209652))
+* Disabling the Debugger will no longer display an incorrect loader message, enhancing user experience.
+* For Global Operator, a new UUID is now generated every time a main namespace is created in a cluster, ensuring uniqueness and consistency.
+* We fixed an issue in the Global Operator where the status for the managed namespace was incorrect under certain conditions.
+* We have removed the **Standalone** option when creating the main namespace in the Global Operator, streamlining the process for administrators.
+
+#### Deploy API Improvements
+
+* We have resolved an issue where users were unable to retrieve the environment manifest by using the Deploy API. (Ticket [210555](https://mendixsupport.zendesk.com/agent/tickets/210555))
+
 ### March 11th, 2024
 
 #### Mendix Operator v2.15.1 {#2.15.1}
@@ -42,7 +106,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 * When removing an ingress or service annotation in the Private Cloud Portal or MendixApp CR, the Operator will remove this annotation from the Kubernetes ingress, route or service resource.
 * We have fixed ARN validation in the `mxpc-cli` installation and configuration tool, and no longer mark ARNs from custom [AWS partition](https://docs.aws.amazon.com/whitepapers/latest/aws-fault-isolation-boundaries/partitions.html) as invalid. This should improve support for AWS China and GovCloud.
 * We fixed an issue where a StorageInstance from a deleted an environment would still show in the StoragePlan status.
-* Kubernetes server information is now included in the Mendix operator version data, and in the near future will be availailable in the Additional Information tab in the Private Cloud Portal.
+* Kubernetes server information is now included in the Mendix operator version data, and in the near future will be available in the Additional Information tab in the Private Cloud Portal.
 * We have updated components to use Go 1.21 and the latest dependency versions, in order to improve security score ratings for all container images.
 * Upgrading to Mendix Operator v2.15.0 from a previous version will restart environments managed by that version of the Operator.
 
@@ -80,7 +144,7 @@ We recommend regularly updating apps to ensure that they contain the latest secu
 
 #### New Global Operator Installation Method
 
-* We have introduced a streamlined approach to installing the Operator within a namespace. With the [Global Operator installation](https://docs.mendix.com/developerportal/deploy/global-operator/), users only need to install a single Global Operator and Agent to efficiently manage applications across various namespaces. For more information, see the Global Operator installation documentation.
+* We have introduced a streamlined approach to installing the Operator within a namespace. With the [Global Operator installation](/developerportal/deploy/global-operator/), users only need to install a single Global Operator and Agent to efficiently manage applications across various namespaces. For more information, see the Global Operator installation documentation.
 
 {{% alert color="info" %}}
 This feature is currently in beta. For more information, see [Beta Releases](/releasenotes/beta-features/).
@@ -1132,4 +1196,4 @@ To upgrade an existing installation of Private Cloud to the latest version, foll
 
 #### Improvements
 
-* On the **General** page of [App Buzz](/developerportal/general/buzz/#app-buzz), we added a **Private Cloud** target. This will currently take you to a closed beta test that allows you to connect your private cluster to Mendix. You can ask to join the beta program, but places are currently limited.
+* On the **General** page of [App Buzz](/developerportal/general/buzz/), we added a **Private Cloud** target. This will currently take you to a closed beta test that allows you to connect your private cluster to Mendix. You can ask to join the beta program, but places are currently limited.

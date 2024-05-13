@@ -2,8 +2,8 @@
 title: "OpenAI"
 url: /appstore/modules/openai-connector/
 linktitle: "OpenAI"
-description: "Describes the configuration and usage of the OpenAI Connector from the Mendix Marketplace that allows developers to integrate generative AI into your Mendix app."
-tags: ["OpenAI", "generative AI", "AI", "connector", "marketplace", "chatgpt", "dall-e", "genAI", "embeddings", "RAG", "Azure OpenAI"]
+description: "Describes the configuration and usage of the OpenAI Connector from the Mendix Marketplace that allows you to integrate generative AI into your Mendix app."
+tags: ["OpenAI", "generative AI", "AI", "connector", "marketplace", "chatgpt", "dall-e", "genAI", "embeddings", "RAG", "Azure OpenAI", "function calling", "tools", "LLM", "ReAct"]
 aliases:
     - /appstore/connectors/openai-connector/
 ---
@@ -36,7 +36,7 @@ Image generations with the DALL-E models is currently supported only by OpenAI, 
 OpenAI provides market-leading large language model capabilities with GPT-4: 
 
 * Advanced reasoning: Follow complex instructions in natural language and solve difficult problems with accuracy. 
-* Creativity: Generate, edit, and iterate with users on creative and technical writing tasks, such as composing songs, writing screenplays, or learning a user’s writing style. 
+* Creativity: Generate, edit, and iterate with end-users on creative and technical writing tasks, such as composing songs, writing screenplays, or learning an end-user’s writing style. 
 * Longer context: GPT-4 is capable of handling over 25,000 words of text, allowing for use cases like long form content creation, extended conversations, and document search and analysis. 
 
 #### 1.1.2 Image Generation {#use-cases-images}
@@ -87,7 +87,7 @@ Follow the instructions in [Using Marketplace Content](/appstore/overview/use-co
 
 ## 3 Configuration {#configuration}
 
-After you install the OpenAI Connector, you can find it in the **App Explorer**, in the **Marketplace modules** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to OpenAI. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to OpenAI, you must also [configure the Encryption module](https://docs.mendix.com/appstore/modules/encryption/#configuration). 
+After you install the OpenAI Connector, you can find it in the **App Explorer**, in the **Marketplace modules** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to OpenAI. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to OpenAI, you must also [configure the Encryption module](/appstore/modules/encryption/#configuration). 
 
 ### 3.1 General Configuration {#general-configuration}
 
@@ -106,10 +106,10 @@ The following inputs are required for the OpenAI configuration:
 | DisplayName | This is the name identifier of a configuration, e.g. *MyConfiguration*. |
 | API type    | Select `OpenAI`.<br />For more information, see the [ENUM_ApiType](#enum-apitype) section. |
 | Endpoint    | This is the API Endpoint, e.g. `https://api.openai.com/v1`   |
-| API key     | This is the access token to authorize your API call. <br />To get an API, follow these steps:<ol><li>Create an account and log in at [OpenAI](https://platform.openai.com/).</li><li> Go to the [API key page](https://platform.openai.com/account/api-keys) to create a new secret key. </li><li>Copy the API key and save this somewhere safe.</li></ol> |
+| API key     | This is the access token to authorize your API call. <br />To get an API, follow these steps:<ol><li>Create an account and sign in at [OpenAI](https://platform.openai.com/).</li><li> Go to the [API key page](https://platform.openai.com/account/api-keys) to create a new secret key. </li><li>Copy the API key and save this somewhere safe.</li></ol> |
 
 {{% alert color="info" %}}
-For more details, see the [OpenAI API reference](https://platform.openai.com/docs/api-reference).
+If you have signed up for an OpenAI account and are using free trial credits, note that these are only valid for three months after the account has been created (not after the API key has been created). To continue using the OpenAI API with an account that is older than three months, you will need to top up your account balance with credit and create a new API key. <br />For more details, see the [OpenAI API reference](https://platform.openai.com/docs/api-reference/authentication).
 {{% /alert %}}
 
 #### 3.1.2 Azure OpenAI Configuration {#azure-openai-configuration} 
@@ -122,7 +122,7 @@ The following inputs are required for the Azure OpenAI configuration:
 | API type       | Select `AzureOpenAI`.<br />For more information, see the [ENUM_ApiType](#enum-apitype) section. |
 | Endpoint       | This is the API Endpoint, e.g. `https://your-resource-name.openai.azure.com/openai/deployments/`.<br />For more information about how to obtain `your-resource-name`, see the [Obtaining Azure OpenAI Resource Name](#azure-resource-name) section below. |
 | DeploymentName | This is the deployment name you chose when you deployed the model. Deployments provide endpoints to the Azure OpenAI base models, or your fine-tuned models.<br />To check the deployment name, go to [Azure OpenAI](https://oai.azure.com/) and check the deployment name under **Deployments**. |
-| API version    | This is the API version to use for this operation. This follows the `yyyy-MM-dd` format. See [Azure OpenAI documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/reference) for supported versions. |
+| API version    | This is the API version to use for this operation. This follows the `yyyy-MM-dd` format. See [Azure OpenAI documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/reference) for supported versions. Note that the supported versions can vary depending on the type of model, so make sure to look for the right section on that page (e.g. Chat completions, Image generation or Embeddings). |
 | API key        | This is the access token to authorize your API call.         |
 | Key type       | This is the type of token that is entered in the API key field. For Azure OpenAI, two types of keys are currently supported: `Microsoft Entra token` and `API key`. <br />For more information about how to generate a Microsoft Entra access token, see [How to Configure Azure OpenAI Service with Managed Identities](https://learn.microsoft.com/en-gb/azure/ai-services/openai/how-to/managed-identity). Alternatively, if your organization allows it, you could use the Azure **api-key** authentication mechanism. For more information about how to obtain an `API key`, see the [Obtaining Azure OpenAI API keys](#azure-api-keys) section below. For more information, see the [ENUM_KeyType](#enum-keytype) section. |
 
@@ -132,7 +132,7 @@ For the Azure OpenAI configuration, each model needs a separate deployment so th
 
 ##### 3.1.2.1 Obtaining Azure OpenAI Resource Name {#azure-resource-name}
 
-1. Go to the [Azure OpenAI portal](https://oai.azure.com/) and log in.
+1. Go to the [Azure OpenAI portal](https://oai.azure.com/) and sign in.
 2. On the upper-right corner, click **Settings** ({{% icon name="cog" %}}). 
 3. Go to the **Resource** tab.
 4. Go to **Current resource** and click **JSON view**.
@@ -140,7 +140,7 @@ For the Azure OpenAI configuration, each model needs a separate deployment so th
 
 ##### 3.1.2.2 Obtaining Azure OpenAI API keys {#azure-api-keys}
 
-1. Go to the [Azure OpenAI portal](https://oai.azure.com/) and log in.
+1. Go to the [Azure OpenAI portal](https://oai.azure.com/) and sign in.
 2. On the upper-right corner, click **Settings** ({{% icon name="cog" %}}). 
 3. Go to the **Resource** tab.
 4. Go to **Current resource** and click **JSON view**.
@@ -150,7 +150,7 @@ For the Azure OpenAI configuration, each model needs a separate deployment so th
 
 After following the general setup above, you are all set to use the microflows in the **USE_ME > Operations > ChatCompletions** folder in your logic. Currently, three microflows for chat completions are exposed as microflow actions under the **OpenAI Connector** category in the **Toolbox** in Mendix Studio Pro. 
 
-These microflows expect a [Configuration](#configuration-entity) entity, as well as the desired AI model that should be used for generating responses. 
+These microflows expect a [Configuration](#configuration-entity) object, as well as the desired AI model that should be used for generating responses. 
 
 * For the OpenAI API configuration, the desired model must be specified for every call.
 * For the Azure OpenAI configuration, the model is already determined by the deployment in the [Azure OpenAI portal](https://oai.azure.com/portal). Any model explicitly specified will be ignored and hence can be left empty. 
@@ -165,28 +165,58 @@ The microflow activity `Chat Completions (without history)` supports scenarios w
 
 Functionally, the prompt strings can be written in a specific way and can be tailored to get the desired result and behavior. For more information on prompt engineering, see the [Read More](#read-more) section.
 
+Two accompanying microflows are available to construct the input for the microflow:
+
+* `FunctionCollection_CreateAndAddFunction` can be used to initialize a new `FunctionCollection` and add a new `Function` to it in order to enable [function calling](#chatcompletions-functioncalling).
+* `FunctionCollection_AddFunction` can be used to add a new `Function` to an existing `FunctionCollection`.
+
+For technical details, see the [Technical reference](#chat-completions-without-history-technical) section.
+
 #### 3.2.2 `Chat Completions (with history)` {#chatcompletions-with-withory}
 
-The microflow activity `Chat completions with history` supports more complex use cases where a list of (historical) messages (e.g. comprising the conversation or context so far) is sent as part of the request to the language model. Two accompanying microflows are available to construct the input for the microflow:
+The microflow activity `Chat completions with history` supports more complex use cases where a list of (historical) messages (e.g. comprising the conversation or context so far) is sent as part of the request to the language model. Four accompanying microflows are available to construct the input for the microflow:
 
 * `ChatCompletionsSession_Create` is used to create the session wrapper that must be passed as input parameter. 
-* `ChatCompletionsSession_AddMessage` is used to attach the historical messages to the `ChatCompletionsSession`. 
-
-The content of such a message corresponds to a system, assistant, or user prompt. In the case of multiple historical messages the order is relevant.
+* `ChatCompletionsSession_AddMessage` is used to attach the historical messages to the `ChatCompletionsSession`. The content of such a message corresponds to a system, assistant, or user prompt. In the case of multiple historical messages the order is relevant.
+* `FunctionCollection_CreateAndAddFunction` can be used to initialize a new `FunctionCollection` and add a new `Function` to it in order to enable [function calling](#chatcompletions-functioncalling).
+* `FunctionCollection_AddFunction` can be used to add a new `Function` to an existing `FunctionCollection`.
 
 For technical details, see the [Technical reference](#chat-completions-with-history-technical) section.
 
 #### 3.2.3 `Chat Completions (advanced)` {#chatcompletions-advanced}
 
-The microflow activity `Chat Completions (advanced)` can be used in cases where the above-mentioned microflows do not provide enough support or flexibility. The interface of this operation resembles the API interface. The construction of the request and handling of the response must be implemented in a custom way. Three accompanying microflows are available to construct the input for the microflow:
+The microflow activity `Chat Completions (advanced)` can be used in cases where the above-mentioned microflows do not provide enough support or flexibility. The interface of this operation resembles the API interface. The construction of the request and handling of the response must be implemented in a custom way. Four accompanying microflows are available to construct the input for the microflow:
 
 * `ChatCompletionsRequest_Create` is used to create the request object.
 * `ChatCompletionsMessages_Create` is used to create the wrapper object for the `ChatCompletionsMessageRequest` objects.
 * `ChatCompletionsMessageRequest_Create` is used to create the message objects.
+* `ChatCompletionsRequest_AddFunctionCalling` can be used to add a list of functions to be sent along with the `ChatCompletionsRequest` as tools in order to enable [function calling](#chatcompletions-functioncalling).
 
 The construction of the request and handling of the response must be implemented in a custom way.
 
 For technical details, see the [Technical reference](#chat-completions-advanced-technical) section.
+
+#### 3.2.4 Function Calling {#chatcompletions-functioncalling}
+
+Function calling enables LLMs (Large Language Models) to connect with external tools to gather information, execute actions, convert natural language into structured data, and much more. Function calling thus enables the model to intelligently decide when to let the Mendix app call one or more predefined function microflows to gather additional information to include in the assistant's response.
+
+OpenAI does not call the function. The model returns a tool call JSON structure that is used to build the input of the function(s) so that they can be executed as part of the chat completions operation. Functions in Mendix are essentially microflows that can be registered within the request to the LLM​. The OpenAI connector takes care of handling the tool call response as well as executing the function microflow(s) until the API returns the final assistant's response.
+
+Function microflows take a single input parameter of type string and must return a string.
+
+{{% alert color="warning" %}}
+Function calling is a very powerful capability, but this also introduces potential risks. Function microflows do not respect any entity access rules for the current end-user. Make sure to retrieve and return only information that the end-user is allowed to view, otherwise confidential information may be visible to the current end-user in the assistant's response.
+
+Mendix also strongly advises that you build user confirmation logic into function microflows that have a potential impact on the world on behalf of the end-user, for example sending an email, posting online, or making a purchase.
+{{% /alert %}}
+
+Function calling is supported for all chat completions operations by adding the optional input parameter [FunctionCollection](#functioncollection).
+Two helper microflow are available to construct the `FunctionCollection` with a list of `Functions`:
+
+* `FunctionCollection_CreateAndAddFunction` can be used to initialize a new `FunctionCollection` and add a new `Function` to it in order to enable [function calling](#chatcompletions-functioncalling).
+* `FunctionCollection_AddFunction` can be used to add a new `Function` to an existing `FunctionCollection`.
+
+For more information, see [Function Calling](/appstore/modules/openai-connector/function-calling/).
 
 ### 3.3 Image Generations Configuration {#image-generations-configuration}
 
@@ -256,7 +286,7 @@ The domain model in Mendix is a data model that describes the information in you
 
 #### 4.1.1 Configuration {#configuration-domain-model}
 
-{{< figure src="/attachments/appstore/modules/openai-connector/domainModel-Configuration.png" class="image-border" >}}
+{{< figure src="/attachments/appstore/modules/openai-connector/domain-model-configuration.png" >}}
 
 ##### 4.1.1.1 `Configuration` {#configuration-entity} 
 
@@ -267,7 +297,7 @@ This entity is used to store the API credentials and endpoints in the configurat
 | `DisplayName`    | This is the name identifier of a configuration.              |
 | `ApiType`        | The value can be `OpenAI` or `AzureOpenAI`.<br />For more information, see the [ENUM_ApiType](#enum-apitype) section. |
 | `Endpoint`       | This is the API Endpoint, e.g. `https://api.openai.com/v1` for OpenAI, or `https://your-resource-name.openai.azure.com/openai/deployments/`for Azure OpenAI. |
-| `DeploymentName` | This is the deployment name you chose when you deployed the model. This is only relevant for configurations of `ApiType` **AzureOpenAI**. Deployments provide endpoints to the Azure OpenAI base models, or your fine-tuned models.<br />To check the deployment name, follow these steps:<ol><li>Log in at [Azure OpenAI](https://oai.azure.com/).</li><li>Navigate to deployments in the sidebar.</li></ol> |
+| `DeploymentName` | This is the deployment name you chose when you deployed the model. This is only relevant for configurations of `ApiType` **AzureOpenAI**. Deployments provide endpoints to the Azure OpenAI base models, or your fine-tuned models.<br />To check the deployment name, follow these steps:<ol><li>Sign in at [Azure OpenAI](https://oai.azure.com/).</li><li>Navigate to deployments in the sidebar.</li></ol> |
 | `ApiVersion`     | This the API version used for this operation. This follows the `YYYY-MM-DD` format. Only relevant for configurations of `ApiType` **AzureOpenAI**. |
 | `ApiKey`        | This is the access token to authorize your API call. <br />For details, see the [OpenAI configuration](#openai-configuration) and [Azure OpenAI configuration](#azure-openai-configuration) sections. |
 | `KeyType`        | This is the type of token entered in the `ApiKey` field. This is only relevant for configurations of `ApiType` **AzureOpenAI**.<br />For more information, see the [ENUM_ApiType](#enum-keytype) section. |
@@ -292,7 +322,7 @@ This entity is only used to send a simple [chat completions request](#chat-compl
 
 #### 4.1.2 Generalizations {#generalizations-domain-model}
 
-{{< figure src="/attachments/appstore/modules/openai-connector/domainModel-Generalizations.png" class="image-border" >}}
+{{< figure src="/attachments/appstore/modules/openai-connector/domain-model-generalizations.png" >}}
 
 ##### 4.1.2.1 `AbstractUsage` {#abstractusage}
 
@@ -309,14 +339,31 @@ For more information on how to manage tokens for text generation, see [Managing 
 
 This is the abstract entity for `ChatCompletionsMessage`. Do not use this entity directly. Instead, use one of its specializations. 
 
+| Attribute     | Description                                                  |
+| --------------| ------------------------------------------------------------ |
+| `Content`     | This is the content of a message.                            |
+| `Role`        | This is the role of the message author.<br />For more information, see the [ENUM_Role](#enum-role) section. |
+| `ToolCallId`  | Tool call that this message is responding to. Only applicable and required for messages with role `tool`.                |
+
+##### 4.1.2.3 `AbstractTool` {#abstracttool}
+
+This is the abstract entity for `Tool` reused in the Chat Completions request and response. Do not use this entity directly. Instead, use one of its specializations. 
+
 | Attribute | Description                                                  |
 | --------- | ------------------------------------------------------------ |
-| `Content` | This is the content of a message.                            |
-| `Role`    | This is the role of the message author.<br />For more information, see the [ENUM_Role](#enum-role) section. |
+| `ToolType`| The type of the tool. Currently, only function is supported. <br />For more information, see the [ENUM_ToolType](#enum-tooltype) section. |
+
+##### 4.1.2.4 `AbstractFunction` {#abstractfunction}
+
+This is the abstract entity for `Function` reused in the Chat Completions request and response. Do not use this entity directly. Instead, use one of its specializations. 
+
+| Attribute | Description                                                  |
+| --------- | ------------------------------------------------------------ |
+| `Name`    | The name of the function to call.                            |
 
 #### 4.1.3 Chat Completions {#chatcompletions-domain-model}
 
-{{< figure src="/attachments/appstore/modules/openai-connector/domainModel-ChatCompletionsWithSession.png" class="image-border" >}}
+{{< figure src="/attachments/appstore/modules/openai-connector/domain-model-chat-completions.png" >}}
 
 ##### 4.1.3.1 `ChatCompletionsRequest` {#chatcompletionsrequest} 
 
@@ -330,6 +377,7 @@ A chat completions request that creates a model response for the given chat conv
 | `Temperature`       | This is the sampling temperature. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. This attribute is optional. The value should be a decimal between 0.0 and 2.0. The default value is 1.0. |
 | `Top_p`             | This is an alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with `Top_p` probability mass. 0.1 means only the tokens comprising the top 10% probability mass are considered. Mendix generally recommends altering `Top_p` or `Temperature` but not both. This attribute is optional. The value should be a decimal between 0.0 and 1.0. The default value is 1.0. |
 | `N`                 | This is the number of chat completions choices to generate for each input message. You will be charged based on the number of generated tokens across all choices. Keep `N` as 1 to minimize costs. This attribute is optional. The default value is 1. |
+| `ToolChoice`        | This optional attribute controls which (if any) function is called by the model. <br />For more information, see the [ENUM_ToolChoice](#enum-toolchoice) section. |
 
 {{% alert color="info" %}}The request and response parts of the domain model were designed to portray the [API reference of OpenAI](https://platform.openai.com/docs/api-reference/chat/create) as close as possible.{{% /alert %}}
 
@@ -349,7 +397,41 @@ This is a wrapper for a list of messages comprising the conversation so far.
 
 This is a specialization of the [AbstractChatCompletionsMessage](#abstractchatcompletionsmessage) entity. Each instance contains a text that needs to be taken into account by the model when processing the completion request. 
 
-##### 4.1.3.5 `ChatCompletionsResponse` {#chatcompletionsresponse} 
+##### 4.1.3.5 `ToolCall` {#toolcall}
+
+This is a specialization of the [AbstractTool](#abstracttool) entity and represents the tool calls generated by the model, such as function calls. The ToolCall entity is only applicable for messages with role `assistant`.
+
+| Attribute | Description                                    |
+| --------- | -----------------------------------------------|
+| `_id`     | The ID of the tool call, generated by the LLM. |
+
+##### 4.1.3.6 `ToolCallFunction` {#toolcallfunction}
+
+This is a specialization of the [AbstractFunction](#abstractfunction) entity and represents the function that the model called.
+The ToolCallFunction entity is only applicable for messages with role `assistant`.
+
+| Attribute  | Description                                    |
+| ---------- | -----------------------------------------------|
+| `Arguments`| The arguments to call the function with, as generated by the model in JSON format. Note that the model does not always generate valid JSON, and may hallucinate parameters not defined by your function schema. Validate the arguments before using them. |
+
+##### 4.1.3.7 `Tools` {#tools}
+
+This is a wrapper for a list of tools the model may call. Currently, only functions are supported as as tools. A maximum of 128 functions are supported.
+
+##### 4.1.3.8 `ToolRequest` {#toolrequest}
+
+This is a specialization of the [AbstractTool](#abstracttool) entity and represents a tool the model may call.
+
+##### 4.1.3.9 `FunctionRequest` {#functionrequest}
+
+This is a specialization of the [AbstractFunction](#abstractfunction) entity and represents a function the model may call.
+
+| Attribute          | Description                                                  |
+| ------------------ | ------------------------------------------------------------ |
+| `Description`      | A description of what the function does, used by the model to choose when and how to call the function. This attribute is optional, but Mendix suggests using it to help the model choose the correct function. |
+| `FunctionMicroflow`| The microflow that is called within this function. A function microflow can only have a single String input parameter and returns a String. Note that function microflows do not respect the entity access rules for the current end-user. Make sure that you only return information that the end-user is allowed to view, otherwise confidential information may be visible to the current end-user in the assistant's response. |
+
+##### 4.1.3.10 `ChatCompletionsResponse` {#chatcompletionsresponse} 
 
 This represents a chat completion response returned by the model, based on the provided input. 
 
@@ -363,7 +445,7 @@ This represents a chat completion response returned by the model, based on the p
 
 {{% alert color="info" %}} The request and response parts of the domain model were designed to portray the [API reference of OpenAI](https://platform.openai.com/docs/api-reference/chat/create) as close as possible.{{% /alert %}}
 
-##### 4.1.3.6 `Choice` {#choicechat}
+##### 4.1.3.11 `Choice` {#choicechat}
 
 This is a list of chat completion choices which are part of the response. There can be more than one choice if `N` in the [request](#chatcompletionsrequest) is greater than 1, meaning that there was an explicit request for multiple alternative response texts. Each is used as a wrapper entity for the actual message content. 
 
@@ -372,11 +454,11 @@ This is a list of chat completion choices which are part of the response. There 
 | `Index`         | This is the index of the choice in the list of choices.      |
 | `Finish_reason` | This is the reason the model stopped generating tokens. This will be `stop` if the model hit a natural stop point or a provided stop sequence, `length` if the maximum number of tokens specified in the request was reached, `content_filter` if content was omitted due to a flag from our content filters, or `tool_calls` if the model called a tool. |
 
-##### 4.1.3.7 `ChatCompletionsMessageResponse` {#chatcompletionsmessageresponse}
+##### 4.1.3.12 `ChatCompletionsMessageResponse` {#chatcompletionsmessageresponse}
 
 This is a specialization of the [AbstractChatCompletionsMessage](#abstractchatcompletionsmessage) entity. It contains the response text (assistant prompt). 
 
-##### 4.1.3.8 `ChatCompletionsUsage` {#chatcompletionsusage}
+##### 4.1.3.13 `ChatCompletionsUsage` {#chatcompletionsusage}
 
 This is a specialization of the [AbstractUsage](#abstractusage). It contains the statistics for the completion request with an additional attribute:
 
@@ -384,17 +466,25 @@ This is a specialization of the [AbstractUsage](#abstractusage). It contains the
 | ------------------- | --------------------------------------------------------- |
 | `Completion_tokens` | This is the number of tokens in the generated completion. |
 
-##### 4.1.3.9 `ChatCompletionsSession` {#chatcompletionssession} 
+##### 4.1.3.14 `ChatCompletionsSession` {#chatcompletionssession} 
 
-This entity functions as a wrapper object for a chat completions session. It is associated with a list of (historical) messages comprising the conversation so far that can be mapped to the chat completions request. 
+This entity is a wrapper object for a chat completions session. It is associated with a list of (historical) messages comprising the conversation so far that can be mapped to the chat completions request. 
 
-##### 4.1.3.10 `ChatCompletionsSessionMessage` {#chatcompletionssessionmessage}
+##### 4.1.3.15 `FunctionCollection` {#functioncollection}
+
+This entity is a wrapper for a collection of functions to be sent along with the ChatCompletionsRequest as tools.
+
+##### 4.1.3.16 `Function` {#function} 
+
+This is a specialization of the [FunctionRequest](#functionrequest) entity and represents a function the model may call.
+
+##### 4.1.3.17 `ChatCompletionsSessionMessage` {#chatcompletionssessionmessage}
 
 This is a specialization of the [AbstractChatCompletionsMessage](#abstractchatcompletionsmessage) entity. 
 
 #### 4.1.4 Image Generations {#imagegenerations-domain-model}
 
-{{< figure src="/attachments/appstore/modules/openai-connector/domainModel-Images.png" class="image-border" >}}
+{{< figure src="/attachments/appstore/modules/openai-connector/domain-model-images.png" >}}
 
 ##### 4.1.4.1 `ImageGenerationsRequest` {#imagegenerationsrequest} 
 
@@ -449,7 +539,7 @@ This is an entity that is used to map the [image](#image) data from the API resp
 
 #### 4.1.5 Embeddings {#embeddings-domain-model}
 
-{{< figure src="/attachments/appstore/modules/openai-connector/domainModel-EmbeddingsWithDataBatch.png" class="image-border" >}}
+{{< figure src="/attachments/appstore/modules/openai-connector/domain-model-embeddings-with-data-batch.png" >}}
 
 ##### 4.1.5.1 `EmbeddingsRequest` {#embeddingsrequest} 
 
@@ -517,7 +607,7 @@ This entity represents a text string, usually a part of a larger base text or di
 
 ### 4.2 Enumerations {#enumerations} 
 
-An enumeration is a predefined list of values that can be used as an attribute type. For more information about enumerations in general, see [Enumerations](https://docs.mendix.com/refguide/enumerations/). 
+An enumeration is a predefined list of values that can be used as an attribute type. For more information about enumerations in general, see [Enumerations](/refguide/enumerations/). 
 
 #### 4.2.1 General {#general-enumerations}
 
@@ -539,6 +629,14 @@ This enumeration provides a list of key types that can be used during the connec
 | `Bearer_Token` | **Microsoft Entra token** |
 | `API_key`      | **API key**               |
 
+##### 4.2.1.3 `ENUM_ToolType` {#enum-tooltype}
+
+The type of the tool. Currently, only function is supported.
+
+| Name           | Caption                   |
+| -------------- | ------------------------- |
+| `Function`     | **Function**              |
+
 #### 4.2.2 Chat Completions {#chatcompletions-enumerations}
 
 ##### 4.2.2.1 `ENUM_Role` {#enum-role} 
@@ -549,25 +647,27 @@ This enumeration provides a list of message author roles.
 | ----------- | ------------- | ------------------------------------------------------------ |
 | `assistant` | **Assistant** | An assistant message was generated by the model as a response to a user message. |
 | `system`    | **System**    | A system message can be used to specify the assistant persona or give the model more guidance and context. This is typically specified by the developer to steer the model response. |
-| `user`      | **User**      | A user message is the input from a user.                     |
+| `user`      | **User**      | A user message is the input from an end-user.                     |
+| `tool`      | **Tool**      | A tool message contains the return value of a tool call as it's content. Additionally, a tool message has a ToolCallId that is used to map it to the corresponding previous assistant response which provided the tool call input. |
 
 ##### 4.2.2.2 `ENUM_ResponseFormat_Chat` {#enum-responseformat-chat} 
 
 This enumeration provides a list of supported response types for chat completions. Currently chat completions can be returned in normal text format (supported for all chat completions models available in the connector), as well as in JSON mode for [specific models](https://platform.openai.com/docs/guides/text-generation/json-mode).
 
-| Name          | Caption        |
-| ------------- | -------------- |
-| `json_object` | **JSONObject** |
-| `text`        | **Text**       |
+| Name          | Caption        | Description               |
+| ------------- | -------------- | ------------------------- |
+| `json_object` | **JSONObject** | Model should return json. |
+| `text`        | **Text**       | Model should return text. |
 
-##### 4.2.2.3 `ENUM_Quality` {#enum-quality} 
+##### 4.2.2.3 `ENUM_ToolChoice` {#enum-toolchoice} 
 
-This enumeration provides a list of quality levels for the images that are generated. 
+This enumeration controls which (if any) function is called by the model.
 
-| Name       | Caption      |
-| ---------- | ------------ |
-| `standard` | **Standard** |
-| `hd`       | **HD**       |
+| Name          | Caption        | Description                                                             |
+| ------------- | -------------- | ----------------------------------------------------------------------- |
+| `auto`        | **auto**       | The model can pick between generating a message or calling a function.  |
+| `none`        | **none**       | The model will not call a function and instead generate a message.     |
+| `function`    | **function**   | A particular function needs to be called, which is specified over association to the specific [Function](#function) or [ToolRequest](#toolrequest). |
 
 #### 4.2.3 Image Generations {#imagegenerations-enumerations}
 
@@ -603,6 +703,15 @@ This enumeration provides a list of supported visual styles for the generated im
 | `vivid`   | **Vivid**   |
 | `natural` | **Natural** |
 
+##### 4.2.3.4 `ENUM_Quality` {#enum-quality} 
+
+This enumeration provides a list of quality levels for the images that are generated. 
+
+| Name       | Caption      |
+| ---------- | ------------ |
+| `standard` | **Standard** |
+| `hd`       | **HD**       |
+
 #### 4.2.4 Embeddings {#embeddings-enumerations}
 
 ##### 4.2.4.1 `ENUM_EncodingFormat_Embeddings` {#enum-encodingformat-embeddings}
@@ -637,12 +746,19 @@ For [specific models](https://platform.openai.com/docs/guides/text-generation/js
 | `Configuration`  | [Configuration](#configuration-entity)                | mandatory                     | This is an object that contains endpoint and API key.        |
 | `Model`          | String                                                | only mandatory for **OpenAI** | This is the ID of the model to use; not considered for **Azure OpenAI** configurations. |
 | `ResponseFormat` | [ENUM_ResponseFormat_Chat](#enum-responseformat-chat) | optional                      | This can be used to specify the format that the model must output. |
+| `Temperature`    | Decimal                                               | optional                      | This can be used to control the randomness of the output. The value should be a decimal between 0.0 and 2.0. The default value is 1.0. Higher values make the output more random, while lower values make it more focused and deterministic. Note: very high values for temperature (>1.7) may give unexpected results and even internal server errors. |
+| `FunctionCollection`    | Object                                          | optional                     | A collection of functions to be sent along with the ChatCompletionsRequest as tools. |
 
 **Return value**
 
 | Name                    | Type   | Description                                                  |
 | ----------------------- | ------ | ------------------------------------------------------------ |
 | `AssistantResponseText` | String | An assistant message was generated by the model as a response to a user message. |
+
+Two accompanying microflows are available to construct the input for the microflow:
+
+* `FunctionCollection_CreateAndAddFunction` can be used to initialize a new `FunctionCollection` and add a new `Function` to it in order to enable [function calling](#chatcompletions-functioncalling).
+* `FunctionCollection_AddFunction` can be used to add a new `Function` to an existing `FunctionCollection`.
 
 ##### 4.3.1.2 Chat Completions (with History) {#chat-completions-with-history-technical}
 
@@ -656,12 +772,21 @@ Use the microflow `ChatCompletions_Execute_WithHistory` to execute a chat comple
 | `Configuration`          | [Configuration](#configuration-entity)                | mandatory                     | This is an object that contains endpoint and API key.        |
 | `Model`                  | String                                                | only mandatory for **OpenAI** | This is the ID of the model to use; not considered for **Azure OpenAI** configurations. |
 | `ResponseFormat`         | [ENUM_ResponseFormat_Chat](#enum-responseformat-chat) | optional                      | This can be used to specify the format that the model must output. |
+| `Temperature` | Decimal | optional | This can be used to control the randomness of the output. The value should be a decimal between 0.0 and 2.0. The default value is 1.0. Higher values make the output more random, while lower values make it more focused and deterministic. Note: very high values for temperature (>1.7) may give unexpected results and even internal server errors. |
+| `FunctionCollection`     | Object                                                | optional                      | A collection of functions to be sent along with the ChatCompletionsRequest as tools. |
 
 **Return value**
 
 | Name                    | Type   | Description                                                  |
 | ----------------------- | ------ | ------------------------------------------------------------ |
 | `AssistantResponseText` | String | Assistant message that was generated by the model as a response to a user message. |
+
+The following microflows may be used to construct and handle the required inputs: 
+
+* `ChatCompletionsSession_Create` is used to create the session wrapper that must be passed as input parameter. 
+* `ChatCompletionsSession_AddMessage` is used to attach the historical messages to the `ChatCompletionsSession`. The content of such a message corresponds to a system, assistant, or user prompt. If multiple messages are present, they should be ordered chronologically.
+* `FunctionCollection_CreateAndAddFunction` can be used to initialize a new `FunctionCollection` and add a new `Function` to it in order to enable [function calling](#chatcompletions-functioncalling).
+* `FunctionCollection_AddFunction` can be used to add a new `Function` to an existing `FunctionCollection`.
 
 ##### 4.3.1.3 Chat Completions (Advanced) {#chat-completions-advanced-technical}
 
@@ -672,7 +797,7 @@ For developers who want to configure the [ChatCompletionsRequest](#chatcompletio
 | Name                     | Type                                              | Mandatory | Description                                                  |
 | ------------------------ | ------------------------------------------------- | --------- | ------------------------------------------------------------ |
 | `ChatCompletionsRequest` | [ChatCompletionsRequest](#chatcompletionsrequest) | mandatory | This is the request object with associated messages as specified by the Chat Completions API. |
-| `Configuration`          | [Configuration](#configuration-entity)            | mandatory | This is the an object that contains endpoint and API key.    |
+| `Configuration`          | [Configuration](#configuration-entity)            | mandatory | This is an object that contains endpoint and API key.    |
 
 **Return value**
 
@@ -680,8 +805,14 @@ For developers who want to configure the [ChatCompletionsRequest](#chatcompletio
 | ------------------------- | --------------------------------------------------- | ------------------------------------------------------------ |
 | `ChatCompletionsResponse` | [ChatCompletionsResponse](#chatcompletionsresponse) | This is the response object containing the assistant message and other details about the request. |
 
-This option can be used if the default values of the `ChatCompletionsRequest` are insufficient and must be changed to work for your specific use case. It is also useful if you are interested in other [ChatCompletionsResponse](#chatcompletionsresponse) values apart from the assistant response like usage metrics or multiple choices. 
-The following flows may be used in order to construct and handle the required inputs: `ChatCompletionsRequest_Create`,  `ChatCompletionsMessages_Create` and `ChatCompletionsMessageRequest_Create`. 
+This option can be used if the default values of the `ChatCompletionsRequest` are insufficient and must be changed to work for your specific use case. It is also useful if you are interested in other [ChatCompletionsResponse](#chatcompletionsresponse) values apart from the assistant response like usage metrics or multiple choices.
+
+The following microflows may be used to construct and handle the required inputs:
+
+* `ChatCompletionsRequest_Create` is used to create the request object.
+* `ChatCompletionsMessages_Create` is used to create the wrapper object for the `ChatCompletionsMessageRequest` objects.
+* `ChatCompletionsMessageRequest_Create` is used to create the message objects.
+* `ChatCompletionsRequest_AddFunctionCalling` can be used to add a list of functions to be sent along with the `ChatCompletionsRequest` as tools in order to enable [function calling](#chatcompletions-functioncalling).
 
 #### 4.3.2 Image Generations {#image-generations-technical} 
 
@@ -736,7 +867,7 @@ The embeddings API from OpenAI accepts a complex JSON structure that consists of
 
 ##### 4.3.3.1 Embeddings (single input) {#embeddings-single-technical} 
 
-Use the microflow `Embeddings_Execute_SingleInput` to execute a call to the embeddings API for a single string input. The output will be the string representation of a vector embedding for the input. See [ENUM_EncodingFormat_Embeddings](#enum-encodingformat-embeddings) for information of what is suported in terms of vector encoding formats. The encoding format can be left empty: if no value is specified, the default value as specified in the [OpenAI documentation](https://platform.openai.com/docs/api-reference/chat/create) will be assumed by the API. The `Model` value is mandatory for OpenAI, but is ignored for Azure OpenAI type configurations where it is implicitly specified by the deployment already.
+Use the microflow `Embeddings_Execute_SingleInput` to execute a call to the embeddings API for a single string input. The output will be the string representation of a vector embedding for the input. See [ENUM_EncodingFormat_Embeddings](#enum-encodingformat-embeddings) for information of what is supported in terms of vector encoding formats. The encoding format can be left empty: if no value is specified, the default value as specified in the [OpenAI documentation](https://platform.openai.com/docs/api-reference/chat/create) will be assumed by the API. The `Model` value is mandatory for OpenAI, but is ignored for Azure OpenAI type configurations where it is implicitly specified by the deployment already.
 
 **Input parameters**
 
@@ -804,26 +935,27 @@ For more inspiration or guidance on how to use those microflows in your logic, M
 
 ### 6.1 Outdated JDK Version Causing Errors while Calling the Embeddings API {#outdated-jdk-version}
 
-The Java Development Kit (JDK) is a framework needed by Mendix Studio Pro to deploy and run applications. For more infomation, see [Studio Pro System Requirements](/refguide/system-requirements/). Usually, the right JDK version is installed during the installation of Studio Pro, but in some cases it still may be outdated causing exceptions when calling the Embeddings API or other REST-based services with large data volumes.
+The Java Development Kit (JDK) is a framework needed by Mendix Studio Pro to deploy and run applications. For more information, see [Studio Pro System Requirements](/refguide/system-requirements/). Usually, the right JDK version is installed during the installation of Studio Pro, but in some cases it still may be outdated causing exceptions when calling the Embeddings API or other REST-based services with large data volumes.
 
 We have seen the following two exceptions when using JDK version `jdk-11.0.3.7-hotspot`:
 `java.net.SocketException - Connection reset` or
 `javax.net.ssl.SSLException - Received fatal alert: record_overflow`.
 
-Follow these steps to check your JDK version and update if neccessary:
+Follow these steps to check your JDK version and update if necessary:
 
 1. Check your JDK version: In Studio Pro Go to **Edit** -> **Preferences** -> **Deployment**-> **JDK directory**. If the path points to `jdk-11.0.3.7-hotspot`, you need to update the JDK by following the next steps.
 2. Go to [Eclipse Temurin JDK 11](https://adoptium.net/en-GB/temurin/releases/?variant=openjdk11&os=windows&package=jdk) and download the `.msi` file of the latest release of **JDK 11**.
-3. Open the downloaded file and follow the installation steps. Remember the installation path. Usually this should be somethink like `C:/Program Files/Eclipse Adoptium/jdk-11.0.22.7-hotspot`.
+3. Open the downloaded file and follow the installation steps. Remember the installation path. Usually this should be something like `C:/Program Files/Eclipse Adoptium/jdk-11.0.22.7-hotspot`.
 4. After the installation has finished, you might be asked to restart your computer.
 5. Open Studio Pro and go to **Edit** -> **Preferences** -> **Deployment** -> **JDK directory**. Click on **Browse** and select the folder with the new JDK version you just installed. This should be the folder containing the *bin* folder. Save your settings by clicking **OK**.
-6. Run the project and execute the action that threw the above mentioned execption earlier.
-    1. You might get an error saying `FAILURE: Build failed with an exception. The supplied javaHome seems to be invalid. I cannot find the java executable.`. Verify that you have selected the right JDK directory containing the updated JDK version. You may also need to updated Gradle. For this, go to **Edit** -> **Preferences** -> **Deployment** -> **Gradle directory**. Click **Browse** and select a newer gradle version from the Mendix folder. In this case we replaced `grade-7.6` with `gradle-7.6.3`. Save your settings by clicking **OK**.
+6. Run the project and execute the action that threw the above mentioned exception earlier.
+    1. You might get an error saying `FAILURE: Build failed with an exception. The supplied javaHome seems to be invalid. I cannot find the java executable.`. Verify that you have selected the right JDK directory containing the updated JDK version. You may also need to updated Gradle. For this, go to **Edit** -> **Preferences** -> **Deployment** -> **Gradle directory**. Click **Browse** and select a newer Gradle version from the Mendix folder. In this case we replaced `grade-7.6` with `gradle-7.6.3`. Save your settings by clicking **OK**.
     2. Rerun the project.
 
 ## 7 Read More {#read-more}
 
-* [Prompt Engineering – Open AI Documentation](https://platform.openai.com/docs/guides/prompt-engineering)
+* [Prompt Engineering – OpenAI Documentation](https://platform.openai.com/docs/guides/prompt-engineering)
 * [Introduction to Prompt Engineering – Microsoft Azure Documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/prompt-engineering)
 * [Prompt Engineering Techniques – Microsoft Azure Documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/advanced-prompt-engineering?pivots=programming-language-chat-completions)
 * [ChatGPT Prompt Engineering for Developers - DeepLearning.AI](https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers)
+* [Function Calling - OpenAI Documentation](https://platform.openai.com/docs/guides/function-calling).

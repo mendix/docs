@@ -13,7 +13,7 @@ Mendix Cloud provides two-factor authentication (2FA) to help secure your accoun
 
 This extra layer of authentication is required when you perform sensitive activities on Mendix Cloud nodes, such as deploying packages and handling production data. Actions that require 2FA are indicated by a padlock ({{% icon name="lock" %}}) in the [Developer Portal](https://sprintr.home.mendix.com). For example, switching to the production environment requires 2FA.
 
-{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/production.png" max-width=30% alt="" >}}
+{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/production.png" max-width=30% alt="" class="no-border" >}}
 
 To use 2FA, you need to have access to your mobile phone and an active session in the Mendix Developer Portal.
 
@@ -23,7 +23,7 @@ To set up 2FA, you first need to perform an action that requires 2FA. For exampl
 
 Then, choose one of the two authentication methods:
 
-{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/authenticator-choice.png"  class="image-border" max-width=70% alt="" >}}
+{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/authenticator-choice.png"  max-width=70% alt="" >}}
 
 You can set up either [authentication via SMS](#sms-authentication) or [authentication via an authenticator app](#app-authentication). Instructions for both authentication methods are provided below.
 
@@ -42,21 +42,21 @@ To set up 2FA with SMS, follow this process:
 1. Click **Use SMS** in the dialog box that opens the first time you perform an action that requires 2FA.
 2. Enter a phone number to which SMS messages can be sent. Click **Send text message**.
 
-    {{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/setup-sms.png" class="image-border" max-width=70% alt="" >}}
+    {{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/setup-sms.png" max-width=70% alt="" >}}
 
 3. Check your text messages to retrieve the verification code. Enter the code and click **Activate**.
 
-    {{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/enter-sms-code.png" class="image-border" max-width=70% alt="" >}}
+    {{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/enter-sms-code.png" max-width=70% alt="" >}}
 
 #### 2.1.2 SMS Authentication
 
 Once you have 2FA configured to use SMS, you can use it to complete sensitive operations in the Developer Portal. When you perform an operation that requires 2FA, you can send an authentication code to your mobile phone.
 
-{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/authentication-sms.png" max-width=70%  alt="" >}}
+{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/authentication-sms.png" max-width=70%  alt="" class="no-border" >}}
 
 Then, authenticate yourself by entering the authentication code from the text message.
 
-{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/please-authenticate.png" max-width=70% alt="" >}}
+{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/please-authenticate.png" max-width=70% alt="" class="no-border" >}}
 
 ### 2.2 Authenticating with an Authenticator App{#app-authentication}
 
@@ -69,7 +69,7 @@ To set up 2FA with an authenticator app, follow this process:
 1. Click **Use Authenticator** in the dialog box that opens when you use 2FA for the first time.
 2. Follow the setup steps outlined in the **Authenticator** dialog box:
     
-    {{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/authenticator-app-setup.png" max-width=70% alt="" class="image-border" alt="" >}}
+    {{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/authenticator-app-setup.png" max-width=70% alt="" alt="" >}}
 
     1. **Download a client** – Install and open an authenticator app on your mobile phone.
     2. **Set up your authenticator** – Add an account in your authenticator app, using the provided key or QR code.
@@ -82,7 +82,7 @@ Your account is now secured with 2FA and ready to use.
 
 Once you have 2FA configured to use an authenticator app, you can use it to complete sensitive operations in the Developer Portal. When you perform operations that require 2FA, you can use your authenticator app to get a six-digit code that is valid for 60 seconds. You will need to enter that code in the Developer Portal to authenticate yourself.
 
-{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/enter-authenticator-code.png" max-width=70% alt="" class="image-border" alt="" >}}
+{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/enter-authenticator-code.png" max-width=70% alt="" alt="" >}}
 
 ## 3 Changing Your Authentication Method{#change-2fa-method}
 
@@ -90,7 +90,7 @@ To change your 2FA method, phone number, or authenticator app, you need to deact
 
 To deactivate your 2FA, go to **User Settings** > [Developer Settings](/community-tools/mendix-profile/user-settings/#dev-settings). Then, in the **Two-Factor Authentication (2FA)** section, click **Deactivate**.
 
-{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/deactivate.png" alt="" class="image-border" alt="" >}}
+{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/deactivate.png" alt="" alt="" >}}
 
 In the dialog box that opens, confirm that you want to deactivate your 2FA. This sends a verification email to your registered email address; click the **Deactivate 2FA** link in the email to complete the deactivation process. The email link is valid for several minutes; if it expires before you use it, you can repeat this process to get a new link.
 
@@ -98,7 +98,7 @@ In the dialog box that opens, confirm that you want to deactivate your 2FA. This
 
 Once your 2FA is deactivated, your Developer Settings will show the following message:
 
-{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/not-configured.png" max-width=70% alt="" class="image-border" alt="" >}}
+{{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/not-configured.png" max-width=70% alt="" alt="" >}}
 
 You can reactivate your 2FA by triggering any action that requires 2FA. Then, set up your new authentication method using the setup steps outlined on this page.
 

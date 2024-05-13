@@ -19,7 +19,7 @@ The Runtime Server is [deployed](/refguide9/runtime-deployment/) and waits for r
 
 Below is a chart showing the components of the Runtime Server. Each of the components is described below the chart.
 
-{{< figure src="/attachments/refguide9/runtime/runtime-server/runtime-server.png" alt="The makeup of the Runtime Server" >}}
+{{< figure src="/attachments/refguide9/runtime/runtime-server/runtime-server.png" alt="The makeup of the Runtime Server" class="no-border" >}}
 
 ### 2.1 M2ee
 

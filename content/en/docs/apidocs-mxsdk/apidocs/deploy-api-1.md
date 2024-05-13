@@ -29,7 +29,7 @@ You can use webhooks to trigger CI/CD pipelines that use this API. These are des
 
 This image provides a domain model representation of the concepts discussed below and how these are related:
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/build-api/api-model.png" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/build-api/api-model.png" class="no-border" >}}
 
 ## 2 Authentication{#authentication}
 
@@ -738,7 +738,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 #### 3.13.1 Description
 
-Gets the current values of custom settings, constants, and scheduled events used by the target environment.
+Gets the current values of custom runtime settings, constants, and scheduled events used by the target environment.
 
 ```bash
 HTTP Method: GET
@@ -801,7 +801,11 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 #### 3.14.1 Description
 
-Changes the values of existing environment settings like custom settings, constants, and scheduled events. These changes are applied after restarting the environment.
+Changes the values of existing environment settings, such as custom runtime settings, constants, and scheduled events. These changes are applied after restarting the environment.
+
+{{% alert color="info" %}}
+This API cannot be used to set environment variables.
+{{% /alert %}}
 
 ```bash
 HTTP Method: POST

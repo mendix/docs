@@ -20,7 +20,7 @@ With the Mendix Platform SDK and Mendix Model SDK, you can do the following:
 For more information, see [Importing Legacy Code](/apidocs-mxsdk/mxsdk/sdk-use-cases/#importing) in *SDK Use Cases*.
 {{% /alert %}}
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-intro/sdk-diagram.png" >}} 
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-intro/sdk-diagram.png" class="no-border" >}} 
 
 ### 1.1 Mendix Platform SDK
 

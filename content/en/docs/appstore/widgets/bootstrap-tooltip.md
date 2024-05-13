@@ -1,5 +1,6 @@
 ---
-title: "Bootstrap Tooltip ⚠"
+title: "Bootstrap Tooltip"
+deprecated: true
 url: /appstore/widgets/bootstrap-tooltip/
 category: "Widgets"
 description: "Describes the configuration and usage of the Bootstrap Tooltip widget, which is available in the Mendix Marketplace."
@@ -29,7 +30,7 @@ To install, import the Bootstrap Tooltip widget into your app and add the widget
 
 When an element has a tooltip attached to it and needs to be conditionally visible, put both the element and the tooltip together in a container and apply the visibility conditions to the container instead of the element:
 
-{{< figure src="/attachments/appstore/widgets/bootstrap-tooltip/tooltip.png" >}}
+{{< figure src="/attachments/appstore/widgets/bootstrap-tooltip/tooltip.png" class="no-border" >}}
 
 ## 3 Configuration
 

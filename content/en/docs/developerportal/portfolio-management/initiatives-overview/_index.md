@@ -224,7 +224,7 @@ Each initiative card shows the following information:
 
 3. Tags for the initiative – These tags are used to classify the initiative (tags can be used, for example, to indicate the types of initiatives).
 
-4. Prioritization Score – This shows the prioritization score of the initiative.
+4. Prioritization score – This shows the prioritization score of the initiative.
 
 5.  **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
 

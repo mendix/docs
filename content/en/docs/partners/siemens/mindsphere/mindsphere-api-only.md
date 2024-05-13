@@ -31,7 +31,7 @@ If your application is not fully integrated with Insights Hub and is using its o
 
 Please follow the steps described in the Insights Hub documentation [Technical Users](https://documentation.mindsphere.io/MindSphere/apps/settings/technical-users.html) to create a **Technical User**. Please make sure the created Technical User has the role assignment needed to call the desired Insights Hub APIs.
 
-## 3 Authenticating Calls to Insights Hub APIs
+## 3 Authenticating Calls to Insights Hub APIs{#authenticating}
 
 To extract data from Insights Hub, your calls to the Insights Hub APIs need to be authenticated. This is done through the [Siemens Insights Hub API Authenticator](https://marketplace.mendix.com/link/component/226260).
 

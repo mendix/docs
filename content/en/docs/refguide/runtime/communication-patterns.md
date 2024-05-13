@@ -362,7 +362,7 @@ Which is resolved in the Runtime to:
 }
 ```
 
-The commit will cause the Runtime Server to save the object to the database. Before the commit, the data is only kept in the Runtime Server. This optimizes performance and minimizes the impact on the database.
+The commit will cause the Runtime Server to save the object to the database. Before the commit, the data is only kept in the client. This optimizes performance and minimizes the impact on the runtime and the database.
 
 ```sql
  INSERT INTO "myfirstmodule$employee" ("id",

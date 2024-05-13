@@ -221,25 +221,26 @@ Each initiative card shows the following information:
 
 2. Initiative name – This is the name of the initiative. 
 
-3.  **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
 
-{{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Members](/developerportal/portfolio-management/access-management/#members) section in *Access Management*.{{% /alert %}}
+3. Tags for the initiative – These tags are used to classify the initiative (tags can be used, for example, to indicate the types of initiatives).
 
-4. Tags for the initiative – These tags are used to classify the initiative (tags can be used, for example, to indicate the types of initiatives).
+4. Prioritization Score – This shows the prioritization score of the initiative.
 
-5. Prioritization Score – This shows the prioritization score of the initiative.
+5.  **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
+
+    {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Members](/developerportal/portfolio-management/access-management/#members) section in *Access Management*.{{% /alert %}}
 
 6. **Dates** icon ({{% icon name="calendar" %}}) – Hovering over this icon shows the following defined dates of the initiative lifecycle:
 
-7. **Intake** – This shows the date when the initiative is accepted based on business requirements.
+   * **Intake** – This shows the date when the initiative is accepted based on business requirements.
 
-8. **Start** – This shows the date when the first actions are taken to start implementation.
+   * **Start** – This shows the date when the first actions are taken to start implementation.
 
-9. **Go-Live** – This shows the date when the initiative is expected to be delivered or implemented.
+   * **Go-Live** – This shows the date when the initiative is expected to be delivered or implemented.
 
-10. Icon of the linked apps – If there is only one linked app, clicking the icon shows the information about the app. If there are multiple apps or no linked apps, the icon is not clickable.
+7. Icon of the linked apps – If there is only one linked app, clicking the icon shows the information about the app. If there are multiple apps or no linked apps, the icon is not clickable.
 
-11. Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
+8. Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
 
 ### 3.2 List View {#list-view}
 

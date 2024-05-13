@@ -145,6 +145,10 @@ Expected Read and write formats for attribute services
 | QualifiedName | {"value" : {"namespaceIndex" : {"value" : 1}, "name" : "string"}}| not supported | |
 | LocalizedText | {"value" : {"locale" : "en", "text": "hello"}} | "hello"|  Currently always writes in "en" locale |
 
+#### ~2.2.3. Writing a value to a Variable Node.
+Each variableNode has a dataType node as can be seen in the domain model. This associated DataTypeNode is a node that defines what type of value you can write to the VariableNode. To make writing the value to a Variable easier we included a default action that 
+takes the NodeID, a payload and a DefaultVariantType as an input. The latter is recommended to use. If it is not used, the write action will first read the latest value to determine the type before it can write to the node. Currently not all default types are supported and no custom type is supported. For example payloads see the table above.
+
 
 ## 3 Usage
 

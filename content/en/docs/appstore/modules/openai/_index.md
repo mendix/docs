@@ -3,7 +3,7 @@ title: "OpenAI"
 url: /appstore/modules/openai-connector/
 linktitle: "OpenAI"
 description: "Describes the configuration and usage of the OpenAI Connector from the Mendix Marketplace that allows you to integrate generative AI into your Mendix app."
-tags: ["OpenAI", "generative AI", "AI", "connector", "marketplace", "chatgpt", "dall-e", "genAI", "embeddings", "RAG", "Azure OpenAI", "function calling", "tools", "LLM", "ReAct"]
+tags: ["OpenAI", "generative AI", "AI", "connector", "marketplace", "chatgpt", "dall-e", "genAI", "embeddings", "RAG", "Azure OpenAI", "function calling", "tools", "LLM", "ReAct", "vision"]
 aliases:
     - /appstore/connectors/openai-connector/
 ---
@@ -31,7 +31,8 @@ Image generations with the DALL-E models is currently supported only by OpenAI, 
     * Give software a natural language interface 
     * Tutor in a range of subjects 
     * Translate languages 
-    * Simulate characters for games 
+    * Simulate characters for games
+    * Image to text
 
 OpenAI provides market-leading large language model capabilities with GPT-4: 
 
@@ -157,6 +158,8 @@ These microflows expect a [Configuration](#configuration-entity) object, as well
 
 In the context of chat completions, system prompts and user prompts are two key components that help guide the language model in generating relevant and contextually appropriate responses. For more information on prompt engineering, see the [Read More](#read-more) section. It varies per exposed microflow activity which prompts are required and how these must be passed, as described in the following sections. For more information, see the [ENUM_Role](#enum-role) section.
 
+All chat completions operations within the OpenAI connector support [JSON mode](#enum-responseformat-chat), [function calling](#chatcompletions-functioncalling) and [vision](#chatcompletions-vision).
+
 For more inspiration or guidance on how to use the above-mentioned microflows in your logic, Mendix highly recommends downloading our [showcase app](https://marketplace.mendix.com/link/component/220475) from the Marketplace that displays a variety of examples. 
 
 #### 3.2.1 `Chat Completions (without history)` {#chatcompletions-without-history}
@@ -165,34 +168,21 @@ The microflow activity `Chat Completions (without history)` supports scenarios w
 
 Functionally, the prompt strings can be written in a specific way and can be tailored to get the desired result and behavior. For more information on prompt engineering, see the [Read More](#read-more) section.
 
-Two accompanying microflows are available to construct the input for the microflow:
-
-* `FunctionCollection_CreateAndAddFunction` can be used to initialize a new `FunctionCollection` and add a new `Function` to it in order to enable [function calling](#chatcompletions-functioncalling).
-* `FunctionCollection_AddFunction` can be used to add a new `Function` to an existing `FunctionCollection`.
+Optionally, you can also make use of [function calling](#chatcompletions-functioncalling) by adding a [FunctionCollection](#functioncollection) or [send images](#chatcompletions-vision) along with the user prompt by adding a [ImageCollection](#imagecollection) as part of the request.
 
 For technical details, see the [Technical reference](#chat-completions-without-history-technical) section.
 
 #### 3.2.2 `Chat Completions (with history)` {#chatcompletions-with-withory}
 
-The microflow activity `Chat completions with history` supports more complex use cases where a list of (historical) messages (e.g. comprising the conversation or context so far) is sent as part of the request to the language model. Four accompanying microflows are available to construct the input for the microflow:
+The microflow activity `Chat completions with history` supports more complex use cases where a list of (historical) messages (e.g. comprising the conversation or context so far) is sent as part of the request to the language model.
 
-* `ChatCompletionsSession_Create` is used to create the session wrapper that must be passed as input parameter. 
-* `ChatCompletionsSession_AddMessage` is used to attach the historical messages to the `ChatCompletionsSession`. The content of such a message corresponds to a system, assistant, or user prompt. In the case of multiple historical messages the order is relevant.
-* `FunctionCollection_CreateAndAddFunction` can be used to initialize a new `FunctionCollection` and add a new `Function` to it in order to enable [function calling](#chatcompletions-functioncalling).
-* `FunctionCollection_AddFunction` can be used to add a new `Function` to an existing `FunctionCollection`.
+Optionally, you can also make use of [function calling](#chatcompletions-functioncalling) by adding a [FunctionCollection](#functioncollection) or [send images](#chatcompletions-vision) along with the user prompt by adding a [ImageCollection](#imagecollection) as part of the request.
 
 For technical details, see the [Technical reference](#chat-completions-with-history-technical) section.
 
 #### 3.2.3 `Chat Completions (advanced)` {#chatcompletions-advanced}
 
-The microflow activity `Chat Completions (advanced)` can be used in cases where the above-mentioned microflows do not provide enough support or flexibility. The interface of this operation resembles the API interface. The construction of the request and handling of the response must be implemented in a custom way. Four accompanying microflows are available to construct the input for the microflow:
-
-* `ChatCompletionsRequest_Create` is used to create the request object.
-* `ChatCompletionsMessages_Create` is used to create the wrapper object for the `ChatCompletionsMessageRequest` objects.
-* `ChatCompletionsMessageRequest_Create` is used to create the message objects.
-* `ChatCompletionsRequest_AddFunctionCalling` can be used to add a list of functions to be sent along with the `ChatCompletionsRequest` as tools in order to enable [function calling](#chatcompletions-functioncalling).
-
-The construction of the request and handling of the response must be implemented in a custom way.
+The microflow activity `Chat Completions (advanced)` can be used in cases where the above-mentioned microflows do not provide enough support or flexibility. The interface of this operation resembles the API interface. The construction of the request and handling of the response must be implemented in a custom way.
 
 For technical details, see the [Technical reference](#chat-completions-advanced-technical) section.
 
@@ -213,10 +203,29 @@ Mendix also strongly advises that you build user confirmation logic into functio
 Function calling is supported for all chat completions operations by adding the optional input parameter [FunctionCollection](#functioncollection).
 Two helper microflow are available to construct the `FunctionCollection` with a list of `Functions`:
 
-* `FunctionCollection_CreateAndAddFunction` can be used to initialize a new `FunctionCollection` and add a new `Function` to it in order to enable [function calling](#chatcompletions-functioncalling).
+* `FunctionCollection_CreateAndAddFunction` can be used to initialize a new `FunctionCollection` and add a new `Function` to it.
 * `FunctionCollection_AddFunction` can be used to add a new `Function` to an existing `FunctionCollection`.
 
 For more information, see [Function Calling](/appstore/modules/openai-connector/function-calling/).
+
+#### 3.2.5 Vision {#chatcompletions-vision}
+
+Vision enables models like GPT-4 Turbo to understand and analyze images, allowing them to answer questions and perform tasks related to visual content. This integration of computer vision and language processing enhances the model's comprehension and makes it valuable for tasks involving visual information. To make use of vision inside the OpenAI connector, an optional [ImageCollection](#imagecollection) containing one or multiple images can be send along with a single message.
+
+Vision is supported for all chat completions operations by adding the optional input parameter [ImageCollection](#imagecollection) to a user message.
+Two helper microflow are available to construct the `ImageCollection` with a list of `ChatCompletionImages`:
+
+* `ImageCollection_CreateAndAddImage` can be used to initialize a new `ImageCollection` and add a new `ChatCompletionImage` to it.
+* `ImageCollection_AddImage` can be used to add a new `ChatCompletionImage` to an existing `ImageCollection`.
+
+For `Chat Completions without History` the ImageCollection becomes is an optional input parmeter, while for `Chat Completions with History` the `ImageCollection` can optionally be added to individual user messages in `ChatCompletionsSession_AddMessage`.
+
+{{% alert color="info" %}}
+Please note that OpenAI and Azure OpenAI for Vision do not yet provide the identical functionality. Azure OpenAI currently does not support the use of JSON mode and function calling in combination with image (vision) input.
+Furthermore, when using Azure OpenAI, it is recommended to set the optional `MaxTokens` input parameter so that the response will not be cut off.
+{{% /alert %}}
+
+For more information on Vision, see [OpenAI](https://platform.openai.com/docs/guides/vision) and [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/gpt-with-vision) documentation.
 
 ### 3.3 Image Generations Configuration {#image-generations-configuration}
 
@@ -397,7 +406,20 @@ This is a wrapper for a list of messages comprising the conversation so far.
 
 This is a specialization of the [AbstractChatCompletionsMessage](#abstractchatcompletionsmessage) entity. Each instance contains a text that needs to be taken into account by the model when processing the completion request. 
 
-##### 4.1.3.5 `ToolCall` {#toolcall}
+##### 4.1.3.5 `ImageCollection` {#imagecollection}
+
+This is a wrapper for an optional list of images to be sent along with the ChatCompletionsMessageRequest to use Vision. ImageCollections can only be sent along messages with role `User`.
+
+##### 4.1.3.6 `ChatCompletionsImage` {#chatcompletionsimage}
+
+An image that is part of the `ChatCompletionsMessageRequest`. Only applicable for messages with role user.
+
+| Attribute          | Description                                                  |
+| ------------------ | ------------------------------------------------------------ |
+| `ImageContent`     | Image content is either a URL of the image or the base64 encoded image data. |
+| `Detail`           | This optional attribute specifies the detail level of the image. <br />For more information, see the [ENUM_ImageDetail](#enum-imagedetail) section. Defaults to `auto`. |
+
+##### 4.1.3.7 `ToolCall` {#toolcall}
 
 This is a specialization of the [AbstractTool](#abstracttool) entity and represents the tool calls generated by the model, such as function calls. The ToolCall entity is only applicable for messages with role `assistant`.
 
@@ -405,7 +427,7 @@ This is a specialization of the [AbstractTool](#abstracttool) entity and represe
 | --------- | -----------------------------------------------|
 | `_id`     | The ID of the tool call, generated by the LLM. |
 
-##### 4.1.3.6 `ToolCallFunction` {#toolcallfunction}
+##### 4.1.3.8 `ToolCallFunction` {#toolcallfunction}
 
 This is a specialization of the [AbstractFunction](#abstractfunction) entity and represents the function that the model called.
 The ToolCallFunction entity is only applicable for messages with role `assistant`.
@@ -414,15 +436,15 @@ The ToolCallFunction entity is only applicable for messages with role `assistant
 | ---------- | -----------------------------------------------|
 | `Arguments`| The arguments to call the function with, as generated by the model in JSON format. Note that the model does not always generate valid JSON, and may hallucinate parameters not defined by your function schema. Validate the arguments before using them. |
 
-##### 4.1.3.7 `Tools` {#tools}
+##### 4.1.3.9 `Tools` {#tools}
 
 This is a wrapper for a list of tools the model may call. Currently, only functions are supported as as tools. A maximum of 128 functions are supported.
 
-##### 4.1.3.8 `ToolRequest` {#toolrequest}
+##### 4.1.3.10 `ToolRequest` {#toolrequest}
 
 This is a specialization of the [AbstractTool](#abstracttool) entity and represents a tool the model may call.
 
-##### 4.1.3.9 `FunctionRequest` {#functionrequest}
+##### 4.1.3.11 `FunctionRequest` {#functionrequest}
 
 This is a specialization of the [AbstractFunction](#abstractfunction) entity and represents a function the model may call.
 
@@ -431,7 +453,7 @@ This is a specialization of the [AbstractFunction](#abstractfunction) entity and
 | `Description`      | A description of what the function does, used by the model to choose when and how to call the function. This attribute is optional, but Mendix suggests using it to help the model choose the correct function. |
 | `FunctionMicroflow`| The microflow that is called within this function. A function microflow can only have a single String input parameter and returns a String. Note that function microflows do not respect the entity access rules for the current end-user. Make sure that you only return information that the end-user is allowed to view, otherwise confidential information may be visible to the current end-user in the assistant's response. |
 
-##### 4.1.3.10 `ChatCompletionsResponse` {#chatcompletionsresponse} 
+##### 4.1.3.12 `ChatCompletionsResponse` {#chatcompletionsresponse} 
 
 This represents a chat completion response returned by the model, based on the provided input. 
 
@@ -445,7 +467,7 @@ This represents a chat completion response returned by the model, based on the p
 
 {{% alert color="info" %}} The request and response parts of the domain model were designed to portray the [API reference of OpenAI](https://platform.openai.com/docs/api-reference/chat/create) as close as possible.{{% /alert %}}
 
-##### 4.1.3.11 `Choice` {#choicechat}
+##### 4.1.3.13 `Choice` {#choicechat}
 
 This is a list of chat completion choices which are part of the response. There can be more than one choice if `N` in the [request](#chatcompletionsrequest) is greater than 1, meaning that there was an explicit request for multiple alternative response texts. Each is used as a wrapper entity for the actual message content. 
 
@@ -454,11 +476,11 @@ This is a list of chat completion choices which are part of the response. There 
 | `Index`         | This is the index of the choice in the list of choices.      |
 | `Finish_reason` | This is the reason the model stopped generating tokens. This will be `stop` if the model hit a natural stop point or a provided stop sequence, `length` if the maximum number of tokens specified in the request was reached, `content_filter` if content was omitted due to a flag from our content filters, or `tool_calls` if the model called a tool. |
 
-##### 4.1.3.12 `ChatCompletionsMessageResponse` {#chatcompletionsmessageresponse}
+##### 4.1.3.14 `ChatCompletionsMessageResponse` {#chatcompletionsmessageresponse}
 
 This is a specialization of the [AbstractChatCompletionsMessage](#abstractchatcompletionsmessage) entity. It contains the response text (assistant prompt). 
 
-##### 4.1.3.13 `ChatCompletionsUsage` {#chatcompletionsusage}
+##### 4.1.3.15 `ChatCompletionsUsage` {#chatcompletionsusage}
 
 This is a specialization of the [AbstractUsage](#abstractusage). It contains the statistics for the completion request with an additional attribute:
 
@@ -466,19 +488,19 @@ This is a specialization of the [AbstractUsage](#abstractusage). It contains the
 | ------------------- | --------------------------------------------------------- |
 | `Completion_tokens` | This is the number of tokens in the generated completion. |
 
-##### 4.1.3.14 `ChatCompletionsSession` {#chatcompletionssession} 
+##### 4.1.3.16 `ChatCompletionsSession` {#chatcompletionssession} 
 
 This entity is a wrapper object for a chat completions session. It is associated with a list of (historical) messages comprising the conversation so far that can be mapped to the chat completions request. 
 
-##### 4.1.3.15 `FunctionCollection` {#functioncollection}
+##### 4.1.3.17 `FunctionCollection` {#functioncollection}
 
 This entity is a wrapper for a collection of functions to be sent along with the ChatCompletionsRequest as tools.
 
-##### 4.1.3.16 `Function` {#function} 
+##### 4.1.3.18 `Function` {#function} 
 
 This is a specialization of the [FunctionRequest](#functionrequest) entity and represents a function the model may call.
 
-##### 4.1.3.17 `ChatCompletionsSessionMessage` {#chatcompletionssessionmessage}
+##### 4.1.3.19 `ChatCompletionsSessionMessage` {#chatcompletionssessionmessage}
 
 This is a specialization of the [AbstractChatCompletionsMessage](#abstractchatcompletionsmessage) entity. 
 
@@ -669,6 +691,16 @@ This enumeration controls which (if any) function is called by the model.
 | `none`        | **none**       | The model will not call a function and instead generate a message.     |
 | `function`    | **function**   | A particular function needs to be called, which is specified over association to the specific [Function](#function) or [ToolRequest](#toolrequest). |
 
+##### 4.2.2.4 `ENUM_ImageDetail` {#enum-imagedetail} 
+
+This enumeration specifies the detail level of the image. For more informations, see [low or high fidelity image understanding](https://platform.openai.com/docs/guides/vision/low-or-high-fidelity-image-understanding).
+
+| Name          | Caption        | Description                                                             |
+| ------------- | -------------- | ----------------------------------------------------------------------- |
+| `auto`        | **auto**       | By default, the model will use the auto setting which will look at the image input size and decide if it should use the `low` or `high` setting.  |
+| `low`         | **low**        | `low` will enable the "low res" mode. The model will receive a low-res 512px x 512px version of the image, and represent the image with a budget of 65 tokens. This allows the API to return faster responses and consume fewer input tokens for use cases that do not require high detail.   |
+| `high`        | **high**       | `high` will enable "high res" mode, which first allows the model to see the low res image and then creates detailed crops of input images as 512px squares based on the input image size. Each of the detailed crops uses twice the token budget (65 tokens) for a total of 129 tokens. |
+
 #### 4.2.3 Image Generations {#imagegenerations-enumerations}
 
 ##### 4.2.3.1 `ENUM_ResponseFormat_Image` {#enum-responseformat-image} 
@@ -730,7 +762,7 @@ Activities define the actions that are executed in a microflow or a nanoflow.
 
 #### 4.3.1 Chat Completions {#chatcompletions-technical}
 
-The chat completions API from OpenAI accepts a complex JSON structure that consists of a number of parameters plus one or more messages as input and generates a model-generated message structure as output. While the chat structure is designed for facilitating multi-turn conversations (with history), it is equally valuable for single-turn tasks that do not involve any prior conversation (without history). The exposed microflows in this connector are built to abstract away the complex message structure and are meant to facilitate easier implementation in certain use cases. 
+The chat completions API from OpenAI accepts a complex JSON structure that consists of a number of parameters plus one or more messages as input and generates a model-generated message structure as output. While the chat structure is designed for facilitating multi-turn conversations (with history), it is equally valuable for single-turn tasks that do not involve any prior conversation (without history). The exposed microflows in this connector are built to abstract away the complex message structure and are meant to facilitate easier implementation in certain use cases. All chat completions operations support [JSON mode](#enum-responseformat-chat), [function calling](#chatcompletions-functioncalling) and [vision](#chatcompletions-vision).
 
 ##### 4.3.1.1 Chat Completions (Without History) {#chat-completions-without-history-technical} 
 
@@ -747,7 +779,9 @@ For [specific models](https://platform.openai.com/docs/guides/text-generation/js
 | `Model`          | String                                                | only mandatory for **OpenAI** | This is the ID of the model to use; not considered for **Azure OpenAI** configurations. |
 | `ResponseFormat` | [ENUM_ResponseFormat_Chat](#enum-responseformat-chat) | optional                      | This can be used to specify the format that the model must output. |
 | `Temperature`    | Decimal                                               | optional                      | This can be used to control the randomness of the output. The value should be a decimal between 0.0 and 2.0. The default value is 1.0. Higher values make the output more random, while lower values make it more focused and deterministic. Note: very high values for temperature (>1.7) may give unexpected results and even internal server errors. |
-| `FunctionCollection`    | Object                                          | optional                     | A collection of functions to be sent along with the ChatCompletionsRequest as tools. |
+| `MaxTokens`      | Integer                                               | optional                      | The maximum number of tokens to generate in the chat completion. |
+| `FunctionCollection`    | Object                                         | optional                      | A collection of functions to be sent along with the ChatCompletionsRequest as tools to use Function Calling. |
+| `ImageCollection`| Object                                                | optional                      | A collection of images to be sent along with the UserPrompt to use Vision. |
 
 **Return value**
 
@@ -755,10 +789,15 @@ For [specific models](https://platform.openai.com/docs/guides/text-generation/js
 | ----------------------- | ------ | ------------------------------------------------------------ |
 | `AssistantResponseText` | String | An assistant message was generated by the model as a response to a user message. |
 
-Two accompanying microflows are available to construct the input for the microflow:
+Four accompanying microflows are available to construct the input for the microflow:
 
+Function calling:
 * `FunctionCollection_CreateAndAddFunction` can be used to initialize a new `FunctionCollection` and add a new `Function` to it in order to enable [function calling](#chatcompletions-functioncalling).
 * `FunctionCollection_AddFunction` can be used to add a new `Function` to an existing `FunctionCollection`.
+
+Vision:
+* `ImageCollection_CreateAndAddImage` can be used to initialize a new `ImageCollection` and add a new `ChatCompletionImage` to it in order to enable [vision](#chatcompletions-vision).
+* `ImageCollection_AddImage` can be used to add a new `ChatCompletionImage` to an existing `ImageCollection`.
 
 ##### 4.3.1.2 Chat Completions (with History) {#chat-completions-with-history-technical}
 
@@ -773,6 +812,7 @@ Use the microflow `ChatCompletions_Execute_WithHistory` to execute a chat comple
 | `Model`                  | String                                                | only mandatory for **OpenAI** | This is the ID of the model to use; not considered for **Azure OpenAI** configurations. |
 | `ResponseFormat`         | [ENUM_ResponseFormat_Chat](#enum-responseformat-chat) | optional                      | This can be used to specify the format that the model must output. |
 | `Temperature` | Decimal | optional | This can be used to control the randomness of the output. The value should be a decimal between 0.0 and 2.0. The default value is 1.0. Higher values make the output more random, while lower values make it more focused and deterministic. Note: very high values for temperature (>1.7) may give unexpected results and even internal server errors. |
+| `MaxTokens`              | Integer                                               | optional                      | The maximum number of tokens to generate in the chat completion. |
 | `FunctionCollection`     | Object                                                | optional                      | A collection of functions to be sent along with the ChatCompletionsRequest as tools. |
 
 **Return value**
@@ -784,7 +824,7 @@ Use the microflow `ChatCompletions_Execute_WithHistory` to execute a chat comple
 The following microflows may be used to construct and handle the required inputs: 
 
 * `ChatCompletionsSession_Create` is used to create the session wrapper that must be passed as input parameter. 
-* `ChatCompletionsSession_AddMessage` is used to attach the historical messages to the `ChatCompletionsSession`. The content of such a message corresponds to a system, assistant, or user prompt. If multiple messages are present, they should be ordered chronologically.
+* `ChatCompletionsSession_AddMessage` is used to attach the historical messages to the `ChatCompletionsSession`. If multiple messages are present, they should be ordered chronologically. `ImageCollection_CreateAndAddImage` and `ImageCollection_AddImage` can be used to create an image collection to be added to a user message in order to enable [vision](#chatcompletions-vision).
 * `FunctionCollection_CreateAndAddFunction` can be used to initialize a new `FunctionCollection` and add a new `Function` to it in order to enable [function calling](#chatcompletions-functioncalling).
 * `FunctionCollection_AddFunction` can be used to add a new `Function` to an existing `FunctionCollection`.
 
@@ -929,7 +969,9 @@ The following flows may be used in order to construct and handle the required in
 
 For more inspiration or guidance on how to use those microflows in your logic, Mendix highly recommends downloading the [showcase app](https://marketplace.mendix.com/link/component/220475) from the Marketplace that displays a variety of example use cases.
 
-{{% alert color="info" %}}For more information on how to set up a vector database for retrieval augmented generation (RAG),  see [RAG Example Implementation in the OpenAI Showcase Application](/appstore/modules/openai-connector/rag-example-implementation/).{{% /alert %}}
+{{% alert color="info" %}}
+For more information on how to set up a vector database for retrieval augmented generation (RAG),  see [RAG Example Implementation in the OpenAI Showcase Application](/appstore/modules/openai-connector/rag-example-implementation/).
+{{% /alert %}}
 
 ## 6 Troubleshooting {#troubleshooting}
 
@@ -952,10 +994,20 @@ Follow these steps to check your JDK version and update if necessary:
     1. You might get an error saying `FAILURE: Build failed with an exception. The supplied javaHome seems to be invalid. I cannot find the java executable.`. Verify that you have selected the right JDK directory containing the updated JDK version. You may also need to updated Gradle. For this, go to **Edit** -> **Preferences** -> **Deployment** -> **Gradle directory**. Click **Browse** and select a newer Gradle version from the Mendix folder. In this case we replaced `grade-7.6` with `gradle-7.6.3`. Save your settings by clicking **OK**.
     2. Rerun the project.
 
+### 6.2 Chat Completions with Vision and JSON mode (Azure OpenAI)
+
+Azure OpenAI currently does not support the use of JSON mode and function calling in combination with image (vision) input and will return a `400 - model error`. Please leave the optional input parameters `ResponseFormat` and `FunctionColletion` for all chat completions operations empty if you want to use vision with Azure OpenAI.
+
+### 6.3 Chat Completions with Vision Response is Cut Off (Azure OpenAI)
+
+When using Azure OpenAI, it is recommended to set the optional `MaxTokens` input parameter so that the response will not be cut off. See [Azure OpenAI Documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/gpt-with-vision?tabs=rest%2Csystem-assigned%2Cresource#call-the-chat-completion-apis) for more details.
+
 ## 7 Read More {#read-more}
 
 * [Prompt Engineering – OpenAI Documentation](https://platform.openai.com/docs/guides/prompt-engineering)
 * [Introduction to Prompt Engineering – Microsoft Azure Documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/prompt-engineering)
 * [Prompt Engineering Techniques – Microsoft Azure Documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/advanced-prompt-engineering?pivots=programming-language-chat-completions)
 * [ChatGPT Prompt Engineering for Developers - DeepLearning.AI](https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers)
-* [Function Calling - OpenAI Documentation](https://platform.openai.com/docs/guides/function-calling).
+* [Function Calling - OpenAI Documentation](https://platform.openai.com/docs/guides/function-calling)
+* [Vision - OpenAI Documentation](https://platform.openai.com/docs/guides/vision)
+* [Vision - Azure OpenAI Documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/gpt-with-vision)

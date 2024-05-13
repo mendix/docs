@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "User Migration", "System.User", 
 
 ## 1 Introduction
 
-Use the [User Migration](https://marketplace.mendix.com/link/component/118015) module to migrate users from any user entity (that have a generalization of System.User) to SapAuthentication.SapUser entity of [SAP XSUAA Connector](https://marketplace.mendix.com/link/component/78091). This allows you to use SAP XSUAA Connector as a user management module and migrate all the existing users of your app to it.
+Use the [User Migration](https://marketplace.mendix.com/link/component/118015) module to migrate users from any user entity (that uses a generalization of `System.User`) to the `SapAuthentication.SapUser` entity of [SAP XSUAA Connector](https://marketplace.mendix.com/link/component/78091). This allows you to use SAP XSUAA Connector as a user management module and migrate all the existing users of your app to it.
 
 This is a one-time admin activity required to be run just after deployment of the application.
 
@@ -27,7 +27,7 @@ To perform a user migration, you need the following prerequisites:
 
 ## 3 Migrating Users
 
-To migrate your users, you need to do the following. For the examples, assume that you are migrating users from the default Mendix user management module, `Administration` to the SAP module, `SapAuthentication`:
+To migrate your users, follow the instructions below. For the examples, assume that you are migrating users from the default Mendix user management module, `Administration` to the SAP module, `SapAuthentication`.
 
 {{% alert color="info" %}}
 You should migrate your users immediately after first deploying the app containing the new user management functionality. Until you do this, your existing users will not be able to sign in to the app.

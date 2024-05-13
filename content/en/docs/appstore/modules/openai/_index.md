@@ -210,22 +210,22 @@ For more information, see [Function Calling](/appstore/modules/openai-connector/
 
 #### 3.2.5 Vision {#chatcompletions-vision}
 
-Vision enables models like GPT-4 Turbo to understand and analyze images, allowing them to answer questions and perform tasks related to visual content. This integration of computer vision and language processing enhances the model's comprehension and makes it valuable for tasks involving visual information. To make use of vision inside the OpenAI connector, an optional [ImageCollection](#imagecollection) containing one or multiple images can be send along with a single message.
+Vision enables models like GPT-4 Turbo to interpret and analyze images, allowing them to answer questions and perform tasks related to visual content. This integration of computer vision and language processing enhances the model's comprehension and makes it valuable for tasks involving visual information. To make use of vision inside the OpenAI connector, an optional [ImageCollection](#imagecollection) containing one or multiple images must be sent along with a single message.
 
-Vision is supported for all chat completions operations by adding the optional input parameter [ImageCollection](#imagecollection) to a user message.
+Vision is supported for all chat completions operations by providing the optional input parameter [ImageCollection](#imagecollection).
 Two helper microflow are available to construct the `ImageCollection` with a list of `ChatCompletionImages`:
 
 * `ImageCollection_CreateAndAddImage` can be used to initialize a new `ImageCollection` and add a new `ChatCompletionImage` to it.
 * `ImageCollection_AddImage` can be used to add a new `ChatCompletionImage` to an existing `ImageCollection`.
 
-For `Chat Completions without History` the ImageCollection becomes is an optional input parmeter, while for `Chat Completions with History` the `ImageCollection` can optionally be added to individual user messages in `ChatCompletionsSession_AddMessage`.
+For `Chat Completions without History` the ImageCollection is an optional input parmeter, while for `Chat Completions with History` the `ImageCollection` can optionally be added to individual user messages in `ChatCompletionsSession_AddMessage`.
 
 {{% alert color="info" %}}
-Please note that OpenAI and Azure OpenAI for Vision do not yet provide the identical functionality. Azure OpenAI currently does not support the use of JSON mode and function calling in combination with image (vision) input.
+Please note that OpenAI and Azure OpenAI for vision do not yet provide feature parity when it comes to combining functionalities. I.e. Azure OpenAI currently does not support the use of JSON mode and function calling in combination with image (vision) input.
 Furthermore, when using Azure OpenAI, it is recommended to set the optional `MaxTokens` input parameter so that the response will not be cut off.
 {{% /alert %}}
 
-For more information on Vision, see [OpenAI](https://platform.openai.com/docs/guides/vision) and [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/gpt-with-vision) documentation.
+For more information on vision, see [OpenAI](https://platform.openai.com/docs/guides/vision) and [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/gpt-with-vision) documentation.
 
 ### 3.3 Image Generations Configuration {#image-generations-configuration}
 
@@ -408,7 +408,7 @@ This is a specialization of the [AbstractChatCompletionsMessage](#abstractchatco
 
 ##### 4.1.3.5 `ImageCollection` {#imagecollection}
 
-This is a wrapper for an optional list of images to be sent along with the ChatCompletionsMessageRequest to use Vision. ImageCollections can only be sent along messages with role `User`.
+This is a wrapper for an optional list of images to be sent along with the ChatCompletionsMessageRequest to use vision. ImageCollections can only be sent along messages with role `User`.
 
 ##### 4.1.3.6 `ChatCompletionsImage` {#chatcompletionsimage}
 
@@ -416,7 +416,7 @@ An image that is part of the `ChatCompletionsMessageRequest`. Only applicable fo
 
 | Attribute          | Description                                                  |
 | ------------------ | ------------------------------------------------------------ |
-| `ImageContent`     | Image content is either a URL of the image or the base64 encoded image data. |
+| `ImageContent`     | Image content is either a URL of the image or the base64-encoded image data. |
 | `Detail`           | This optional attribute specifies the detail level of the image. <br />For more information, see the [ENUM_ImageDetail](#enum-imagedetail) section. Defaults to `auto`. |
 
 ##### 4.1.3.7 `ToolCall` {#toolcall}
@@ -693,19 +693,19 @@ This enumeration controls which (if any) function is called by the model.
 
 ##### 4.2.2.4 `ENUM_ImageDetail` {#enum-imagedetail} 
 
-This enumeration specifies the detail level of the image. For more informations, see [low or high fidelity image understanding](https://platform.openai.com/docs/guides/vision/low-or-high-fidelity-image-understanding).
+This enumeration specifies the detail level of the image. For more information, see [low or high fidelity image understanding](https://platform.openai.com/docs/guides/vision/low-or-high-fidelity-image-understanding).
 
 | Name          | Caption        | Description                                                             |
 | ------------- | -------------- | ----------------------------------------------------------------------- |
-| `auto`        | **auto**       | By default, the model will use the auto setting which will look at the image input size and decide if it should use the `low` or `high` setting.  |
-| `low`         | **low**        | `low` will enable the "low res" mode. The model will receive a low-res 512px x 512px version of the image, and represent the image with a budget of 65 tokens. This allows the API to return faster responses and consume fewer input tokens for use cases that do not require high detail.   |
-| `high`        | **high**       | `high` will enable "high res" mode, which first allows the model to see the low res image and then creates detailed crops of input images as 512px squares based on the input image size. Each of the detailed crops uses twice the token budget (65 tokens) for a total of 129 tokens. |
+| `auto`        | **auto**       | By default, the model will use the "auto" setting which will consider the image input size and decide whether it should use the `low` or `high` setting.  |
+| `low`         | **low**        | `low` will enable the "low res" mode. The model will receive a low-resolution 512px x 512px version of the image, and represent the image with a budget of 65 tokens. This allows the API to return faster responses and consume fewer input tokens for use cases that do not require high detail.   |
+| `high`        | **high**       | `high` will enable "high res" mode, which first allows the model to see the low-resolution image and then creates detailed crops of input images as 512px squares based on the input image size. Each of the detailed crops uses twice the token budget (65 tokens) for a total of 129 tokens. |
 
 #### 4.2.3 Image Generations {#imagegenerations-enumerations}
 
 ##### 4.2.3.1 `ENUM_ResponseFormat_Image` {#enum-responseformat-image} 
 
-This enumeration provides a list of supported response types for generated images. Currently, images can be returned either as a URL to a PNG file, or a base64 encoded string representation of the image directly.
+This enumeration provides a list of supported response types for generated images. Currently, images can be returned either as a URL to a PNG file, or a base64-encoded string representation of the image directly.
 
 | Name       | Caption         |
 | ---------- | --------------- |
@@ -780,8 +780,8 @@ For [specific models](https://platform.openai.com/docs/guides/text-generation/js
 | `ResponseFormat` | [ENUM_ResponseFormat_Chat](#enum-responseformat-chat) | optional                      | This can be used to specify the format that the model must output. |
 | `Temperature`    | Decimal                                               | optional                      | This can be used to control the randomness of the output. The value should be a decimal between 0.0 and 2.0. The default value is 1.0. Higher values make the output more random, while lower values make it more focused and deterministic. Note: very high values for temperature (>1.7) may give unexpected results and even internal server errors. |
 | `MaxTokens`      | Integer                                               | optional                      | The maximum number of tokens to generate in the chat completion. |
-| `FunctionCollection`    | Object                                         | optional                      | A collection of functions to be sent along with the ChatCompletionsRequest as tools to use Function Calling. |
-| `ImageCollection`| Object                                                | optional                      | A collection of images to be sent along with the UserPrompt to use Vision. |
+| `FunctionCollection`    | Object                                         | optional                      | A collection of functions to be sent along with the ChatCompletionsRequest as tools to use function calling. |
+| `ImageCollection`| Object                                                | optional                      | A collection of images to be sent along with the UserPrompt to use vision. |
 
 **Return value**
 
@@ -824,7 +824,7 @@ Use the microflow `ChatCompletions_Execute_WithHistory` to execute a chat comple
 The following microflows may be used to construct and handle the required inputs: 
 
 * `ChatCompletionsSession_Create` is used to create the session wrapper that must be passed as input parameter. 
-* `ChatCompletionsSession_AddMessage` is used to attach the historical messages to the `ChatCompletionsSession`. If multiple messages are present, they should be ordered chronologically. `ImageCollection_CreateAndAddImage` and `ImageCollection_AddImage` can be used to create an image collection to be added to a user message in order to enable [vision](#chatcompletions-vision).
+* `ChatCompletionsSession_AddMessage` is used to attach the historical messages to the `ChatCompletionsSession`. If multiple messages are relevant, these should be added chronologically. `ImageCollection_CreateAndAddImage` and `ImageCollection_AddImage` can be used to create an `ImageCollection` which is in turn to be added to a user message in order to enable [vision](#chatcompletions-vision).
 * `FunctionCollection_CreateAndAddFunction` can be used to initialize a new `FunctionCollection` and add a new `Function` to it in order to enable [function calling](#chatcompletions-functioncalling).
 * `FunctionCollection_AddFunction` can be used to add a new `Function` to an existing `FunctionCollection`.
 
@@ -856,7 +856,7 @@ The following microflows may be used to construct and handle the required inputs
 
 #### 4.3.2 Image Generations {#image-generations-technical} 
 
-The image generations API from OpenAI accepts a JSON structure that consists of a number of parameters including the user prompt as input and generates a structure of one or many model-generated images as output. The image is returned as a URL or as a base64 string. Depending on the model used, the API can return one or many model-generated images based on the input prompt plus other optional parameters. The exposed microflows in this connector are built to abstract away part of the complexity of the input and output structures and are meant to facilitate easier implementation in certain use cases. Currently, only the OpenAI API provides support for images (not Azure OpenAI).
+The image generations API from OpenAI accepts a JSON structure that consists of a number of parameters including the user prompt as input and generates a structure of one or many model-generated images as output. The image is returned as a URL or as a base64-encoded string. Depending on the model used, the API can return one or many model-generated images based on the input prompt plus other optional parameters. The exposed microflows in this connector are built to abstract away part of the complexity of the input and output structures and are meant to facilitate easier implementation in certain use cases. Currently, only the OpenAI API provides support for images (not Azure OpenAI).
 
 ##### 4.3.2.1 Image Generations (Single Image) {#image-generations-single-technical} 
 
@@ -996,7 +996,7 @@ Follow these steps to check your JDK version and update if necessary:
 
 ### 6.2 Chat Completions with Vision and JSON mode (Azure OpenAI)
 
-Azure OpenAI currently does not support the use of JSON mode and function calling in combination with image (vision) input and will return a `400 - model error`. Please leave the optional input parameters `ResponseFormat` and `FunctionColletion` for all chat completions operations empty if you want to use vision with Azure OpenAI.
+At the time of writing this document, Azure OpenAI does not support the use of JSON mode and function calling in combination with image (vision) input and will return a `400 - model error`. Please make sure the optional input parameters `ResponseFormat` and `FunctionColletion` are set to `empty` for all chat completions operations if you want to use vision with Azure OpenAI.
 
 ### 6.3 Chat Completions with Vision Response is Cut Off (Azure OpenAI)
 

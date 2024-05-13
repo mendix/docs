@@ -46,7 +46,7 @@ If the application makes use of persistable FileDocument or FileImage entities, 
 
 This architecture overview shows all the components in the deployment:
 
-{{< figure src="/attachments/developerportal/deploy/docker-deploy/run-mendix-on-kubernetes/kubernetes.png" >}}
+{{< figure src="/attachments/developerportal/deploy/docker-deploy/run-mendix-on-kubernetes/kubernetes.png" class="no-border" >}}
 
 The deployment of your Mendix app needs the following Kubernetes components:
 

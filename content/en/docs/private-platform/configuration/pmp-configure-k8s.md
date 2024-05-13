@@ -1,9 +1,11 @@
 ---
 title: "Configuring CI/CD on Kubernetes"
-url: /private-mendix-platform-configure-k8s/
+url: /private-mendix-platform/configure-k8s/
 description: "Documents the initial configuration for the Private Mendix Platform."
 weight: 30
 tags: ["private mendix platform",  "private platform", "private marketplace", "kubernetes", "k8s"]
+aliases:
+    - /private-mendix-platform-configure-k8s/
 ---
 
 ## 1 Introduction
@@ -27,7 +29,7 @@ If you have a Kubernetes cluster, you can set Kubernetes as your CI System in **
 
 Finally, you must also [register your Kubernetes cluster](#register-cluster).
 
-{{< figure src="/attachments/private-platform/pmp-cicd1.png" >}}
+{{< figure src="/attachments/private-platform/pmp-cicd1.png" class="no-border" >}}
 
 ### 2.1 Obtaining and Configuring the CA Certificate {#ca-certificate}
 
@@ -249,95 +251,95 @@ Before creating any environments, you must register your Kubernetes clusters by 
 
 3. Optionally, enable the **Help Me** feature. For reference, see the following shell script:
 
-        ```text
-        # create ServiceAccount, ClusterRole, and ClusterRoleBinding
-        kubectl apply -f << EOF -
-        apiVersion: v1
-        kind: ServiceAccount
-        metadata:
-          name: mxplatform-cicd
-          namespace: kube-system
-        ---
-        apiVersion: v1
-        kind: Secret
-        metadata:
-          name: mxplatform-cicd
-          namespace: kube-system
-          annotations:
-            kubernetes.io/service-account.name: mxplatform-cicd
-        type: kubernetes.io/service-account-token
-        ---
-        apiVersion: rbac.authorization.k8s.io/v1
+    ```text
+    # create ServiceAccount, ClusterRole, and ClusterRoleBinding
+    kubectl apply -f << EOF -
+    apiVersion: v1
+    kind: ServiceAccount
+    metadata:
+      name: mxplatform-cicd
+      namespace: kube-system
+    ---
+    apiVersion: v1
+    kind: Secret
+    metadata:
+      name: mxplatform-cicd
+      namespace: kube-system
+      annotations:
+        kubernetes.io/service-account.name: mxplatform-cicd
+    type: kubernetes.io/service-account-token
+    ---
+    apiVersion: rbac.authorization.k8s.io/v1
+    kind: ClusterRole
+    metadata:
+        name: mxplatform-cicd
+    rules:
+    - apiGroups:
+        - ""
+        resources:
+        - namespaces
+        verbs:
+        - list
+    - apiGroups:
+        - ""
+        resources:
+        - deployments
+        verbs:
+        - get
+        - list
+        - watch
+    - apiGroups:
+        - ""
+        resources:
+        - pods
+        verbs:
+        - get
+        - list
+    - apiGroups:
+        - ""
+        resources:
+        - pods/log
+        verbs:
+        - get
+    - apiGroups:
+        - ""
+        resources:
+        - events
+        verbs:
+        - get
+        - list
+    - apiGroups:
+        - privatecloud.mendix.com
+        resources:
+        - storageplans
+        verbs:
+        - list
+    - apiGroups:
+        - privatecloud.mendix.com
+        resources:
+        - mendixapps
+        verbs:
+        - '*'
+    ---
+    apiVersion: rbac.authorization.k8s.io/v1
+    kind: ClusterRoleBinding
+    metadata:
+        name: mxplatform-cicd
+    subjects:
+    - kind: ServiceAccount
+        name: mxplatform-cicd
+        namespace: kube-system
+    roleRef:
         kind: ClusterRole
-        metadata:
-            name: mxplatform-cicd
-        rules:
-        - apiGroups:
-            - ""
-            resources:
-            - namespaces
-            verbs:
-            - list
-        - apiGroups:
-            - ""
-            resources:
-            - deployments
-            verbs:
-            - get
-            - list
-            - watch
-        - apiGroups:
-            - ""
-            resources:
-            - pods
-            verbs:
-            - get
-            - list
-        - apiGroups:
-            - ""
-            resources:
-            - pods/log
-            verbs:
-            - get
-        - apiGroups:
-            - ""
-            resources:
-            - events
-            verbs:
-            - get
-            - list
-        - apiGroups:
-            - privatecloud.mendix.com
-            resources:
-            - storageplans
-            verbs:
-            - list
-        - apiGroups:
-            - privatecloud.mendix.com
-            resources:
-            - mendixapps
-            verbs:
-            - '*'
-        ---
-        apiVersion: rbac.authorization.k8s.io/v1
-        kind: ClusterRoleBinding
-        metadata:
-            name: mxplatform-cicd
-        subjects:
-        - kind: ServiceAccount
-            name: mxplatform-cicd
-            namespace: kube-system
-        roleRef:
-            kind: ClusterRole
-            name: mxplatform-cicd
-            apiGroup: rbac.authorization.k8s.io
-        EOF
+        name: mxplatform-cicd
+        apiGroup: rbac.authorization.k8s.io
+    EOF
 
-        # get service account token:
-        kubectl get secret mxplatform-cicd -nkube-system -o jsonpath='{.data.token}'|base64 -d
-        # for openshift cluster
-        kubectl get secret mxplatform-cicd -nkube-system -o jsonpath='{.metadata.annotations.openshift\.io/token-secret\.value}'
-        ```
+    # get service account token:
+    kubectl get secret mxplatform-cicd -nkube-system -o jsonpath='{.data.token}'|base64 -d
+    # for openshift cluster
+    kubectl get secret mxplatform-cicd -nkube-system -o jsonpath='{.metadata.annotations.openshift\.io/token-secret\.value}'
+    ```
 
 4. Click **Save**.
 
@@ -355,10 +357,10 @@ The diagrams in this section present the architecture and components of the pipe
 
 The following diagram shows the architecture of the pipeline if you enable the **Auto Detect Mx Version** setting. For more information, see [Build Images Setting](#build-images) above.
 
-{{< figure src="/attachments/private-platform/pmp-cicd2.png" alt="Auto Detect Mx Runtime Version" >}}
+{{< figure src="/attachments/private-platform/pmp-cicd2.png" alt="Auto Detect Mx Runtime Version" class="no-border" >}}
 
 ### 3.2 Architecture with the Auto Detect Mx Version Setting Disabled
 
 The following diagram shows the architecture of the pipeline if you disable the **Auto Detect Mx Version** setting. For more information, see [Build Images Setting](#build-images) above.
 
-{{< figure src="/attachments/private-platform/pmp-cicd3.png" alt="User Input Mx Runtime Version" >}}
+{{< figure src="/attachments/private-platform/pmp-cicd3.png" alt="User Input Mx Runtime Version" class="no-border" >}}

@@ -1,9 +1,11 @@
 ---
 title: "Configuring Private Mendix Platform"
-url: /private-mendix-platform-configuration/
+url: /private-mendix-platform/configuration/
 description: "Documents the initial configuration for the Private Mendix Platform."
 weight: 30
 tags: ["private mendix platform",  "private platform", "private marketplace", "initial configuration"]
+aliases:
+    - /private-mendix-platform-configuration/
 ---
 
 ## 1 Introduction
@@ -18,11 +20,11 @@ As a user with Administrator access rights, you can access the Private Mendix Pl
 2. Open the navigation menu by clicking the icon in the top left corner.
 3. Click **Settings**.
 
-Some of the settings that you configure here are initially set by the [Private Platform Configuration Wizard](/private-mendix-platform-quickstart/#wizard). Administrators can also update them at any time after the initial configuration.
+Some of the settings that you configure here are initially set by the [Private Platform Configuration Wizard](/private-mendix-platform/quickstart/#wizard). Administrators can also update them at any time after the initial configuration.
 
 ## 2 Configuring General Settings
 
-General configuration settings allow you to manage the basic aspects of your Private Mendix Platform, such as the platform name and branding, toggling certain capabilities on or off, and viewing the licensing status.. The settings in this section are largely configured  when you run the initial configuration wizard, but you can still review and adjust them later during the implementation process.
+General configuration settings allow you to manage the basic aspects of your Private Mendix Platform, such as the platform name and branding, toggling certain capabilities on or off, and viewing the licensing status. The settings in this section are largely configured  when you run the initial configuration wizard, but you can still review and adjust them later during the implementation process.
 
 ### 2.1 General
 
@@ -36,13 +38,13 @@ Changing your locale sets locale-dependent formats, such as date and time, to th
 
 The settings in this section allow you to configure custom branding for your Private Mendix Platform. You can customize the title of the Platform as shown in the top bar, upload your logo, or change the image on the login page.
 
-{{< figure src="/attachments/private-platform/pmp-wizard1.png" >}}
+{{< figure src="/attachments/private-platform/pmp-wizard1.png" class="no-border" >}}
 
 ### 2.3 Support
 
 In this section, you can provide your own help and support instructions for users of your Private Mendix Platform.
 
-{{< figure src="/attachments/private-platform/pmp-wizard1.png" >}}
+{{< figure src="/attachments/private-platform/pmp-wizard1.png" class="no-border" >}}
 
 Users can then see these instructions on the **Logs and Events** page for their app.
 
@@ -78,7 +80,7 @@ On this page, you can view the status of your Private Mendix Platform license, a
 
 Private Mendix Platform licenses are either **valid** or **not found**; when not found, the Platform operates in developer mode, where access to some features and capabilities is restricted.
 
-{{< figure src="/attachments/private-platform/pmp-wizard2.png" >}}
+{{< figure src="/attachments/private-platform/pmp-wizard2.png" class="no-border" >}}
 
 When valid, licenses can have the following statuses:
 
@@ -94,7 +96,7 @@ Email settings allow you to manage your the SMTP server settings used by Private
 
 In this tab, you can create and manage the templates for any standard notification emails that you want your app to send, such as automated reports, assigned tasks, or others. Templates created here can then be referenced in microflows.
 
-{{< figure src="/attachments/private-platform/pmp-wizard3.png" >}}
+{{< figure src="/attachments/private-platform/pmp-wizard3.png" class="no-border" >}}
 
 ### 3.2 Emails
 
@@ -109,7 +111,7 @@ In this tab, you can view the following details about the emails sent from your 
 
 In this tab, you can configure SMTP server settings for your email account.
 
-{{< figure src="/attachments/private-platform/pmp-wizard4.png" >}}
+{{< figure src="/attachments/private-platform/pmp-wizard4.png" class="no-border" >}}
 
 ### 3.4 Administrative Tasks
 
@@ -153,7 +155,7 @@ You can configure SSO authentication with the OIDC protocol. For more informatio
 
 To configure SSO authentication with the SAML protocol, first [configure the service provider](/appstore/modules/saml/#configure-sp) in the **SP Configuration** tab, and then [create the IdP-specific settings](/appstore/modules/saml/#idp-specific-settings) in the **IdP Configuration** tab.
 
-To [debug the configuration](/appstore/modules/saml/#6-debugging-the-configuration), you can view the log files in the **Log** tab.
+To [debug the configuration](/appstore/modules/saml/#debugging-the-configuration), you can view the log files in the **Log** tab.
 
 ### 6.3 OIDC Provider
 
@@ -163,25 +165,39 @@ The settings under this tab control the connection between Studio Pro and the pl
 
 If you have configured more than one authentication method (for example, SSO and local user), you can specify which method is used as the default one for the Studio Pro login.
 
+### 6.5 SCIM Provisioning
+
+System for Cross-Domain Identity Management (SCIM) is a protocol that simplifies user access management for applications. Private Mendix Platform uses the SCIM standard to pre-provision selected users onto your Platform without the users having to manually log in through SSO first.
+
+To enable SCIM provisioning, perform the following steps:
+
+1. Log in to Private Mendix Platform as an administrator.
+2. In the **Authentication** section, click the **IdP Integration (OIDC)** or the **IdP Integration (SAML)** tab.
+3. Edit your IdP configuration, and then click the **Provisioning** tab.
+4. In the **Just in time provisioning** section, map the IdP attributes to the matching Mendix object attributes.
+5. In the **Authentication** section, click the **SCIM Provisioning** tab, and then click **New**.
+6. In the **IDP Configuration Page** dialogue, enter a name for the connection, and obtain the token for your identity provider by clicking **Copy**.
+7. Enter the token in the configuration panel of your identity provider and verify that the connection is working. 
+
 ## 7 DevOps Settings
 
 In this section, you can configure settings related to managing your app projects and CI/CD capabilities.
 
 ### 7.1 Version Control System
 
-To create applications and collaborate, configure the connection to your version control repository. GitHub, Gitlab and Bitbucket are supported as version control systems. For more information, see [Configuring the Version Control System for Private Mendix Platform](/private-mendix-platform-version-control/).
+To create applications and collaborate, configure the connection to your version control repository. GitHub, GitLab, and Bitbucket are supported as version control systems. For more information, see [Configuring the Version Control System for Private Mendix Platform](/private-mendix-platform-version-control/).
 
 ### 7.2 CI/CD
 
 Configure CI/CD capabilities for your app. If you enable this option, you must also specify your CI system, configure the necessary settings, and register a Kubernetes cluster. Tekton, Jenkins, and [Kubernetes](/private-mendix-platform-configure-k8s/) are supported. You can also configure a custom template for your CI/CD capabilities.
 
-{{< figure src="/attachments/private-platform/pmp-wizard5.png" >}}
+{{< figure src="/attachments/private-platform/pmp-wizard5.png" class="no-border" >}}
 
 #### 7.2.1 Configuring CI/CD Pipelines with Manual Approval
 
 If your production and development environments must be fully air-gapped and separated from each other, and you want to limit the ability to deploy packages to either selected users or an automated pipeline with manual approval, you can configure your cluster type to be **Upload MDA**.
 
-{{< figure src="/attachments/private-platform/pmp-wizard7.png" >}}
+{{< figure src="/attachments/private-platform/pmp-wizard7.png" class="no-border" >}}
 
 Selecting this option allows you to specify an S3 bucket. This bucket is then used as the destination where the deployment package is uploaded at the end of the pipeline, instead of being deployed to the production environment. Designated approvers can then retrieve the package from the S3 bucket and manually deploy it to the target environment.
 
@@ -228,4 +244,4 @@ To help ensure that any issues are promptly reported and resolved, you can speci
 
 This tab shows a list of all the scheduled tasks and actions in the system, together with start time, end time, and status.
 
-{{< figure src="/attachments/private-platform/pmp-wizard6.png" >}}
+{{< figure src="/attachments/private-platform/pmp-wizard6.png" class="no-border" >}}

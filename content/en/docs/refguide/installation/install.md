@@ -37,7 +37,7 @@ Mendix Studio Pro needs to be installed on your computer before you can start bu
 
 1. Open the downloaded Mendix Studio Pro executable. It is named like this: *Mendix-10.X.X-Setup*. Then click **Next**:
 
-    {{< figure src="/attachments/refguide/installation/install/setup-wizard.png"  >}}
+    {{< figure src="/attachments/refguide/installation/install/setup-wizard.png"  class="no-border" >}}
 
      On a Mac, you may get a warning during installation. For more information on how to troubleshoot it, see the [Mac Warning](#mac-warning) section below.
 
@@ -45,11 +45,11 @@ Mendix Studio Pro needs to be installed on your computer before you can start bu
 
 3. Select the folder in which you want to install Studio Pro and click **Next**:
 
-    {{< figure src="/attachments/refguide/installation/install/select-folder.png"   >}}
+    {{< figure src="/attachments/refguide/installation/install/select-folder.png"   class="no-border" >}}
 
 4. Enter the start menu shortcuts folder you want to use and click **Next**:
 
-    {{< figure src="/attachments/refguide/installation/install/shortcut-folder.png"  >}}
+    {{< figure src="/attachments/refguide/installation/install/shortcut-folder.png"  class="no-border" >}}
 
 5. Check the desktop option to create a shortcut to Studio Pro on your desktop and click **Next**.
 6. Click **Install** to install Studio Pro on your computer.
@@ -58,7 +58,7 @@ Mendix Studio Pro needs to be installed on your computer before you can start bu
 
 ## 4 Troubleshooting {#troubleshooting}
 
-### 4.1 Installing Prerequisites Separately
+### 4.1 Installing Prerequisites Separately {#prerequisites}
 
 Sometimes you can run into problems when installing Studio Pro. One work-around is to restart your system and install the prerequisites separately if they are not installed yet. 
 
@@ -68,11 +68,11 @@ The prerequisites are the following:
 * [Eclipse Temurin JDK 11 (x64)](https://github.com/adoptium/temurin11-binaries/releases)
 * [Microsoft Visual C++ 2015 and 2019 Redistributable Package](https://aka.ms/vs/16/release/vc_redist.x64.exe)
 * [Mendix Native Mobile Builder one-click Installer](https://appdev-mx-cdn.s3.amazonaws.com/native-builders/latest.exe)
-* [Git for Windows (x64)](https://git-scm.com/download/win) using the following versions:
+* [Git for Windows (x64)](https://git-scm.com/download/win) using the versions described below. These are the versions of Git that Studio Pro installs if the Git version installed on the system is below the suggested one.  
 
-    | 10.0.0 - 10.1.0 | 10.2.0 - onwards | 
-    | --- | --- |
-    | [2.37.1](https://github.com/git-for-windows/git/releases/tag/v2.37.1.windows.1) | [2.41.0](https://github.com/git-for-windows/git/releases/tag/v2.41.0.windows.3) |
+    | 10.0.0 - 10.1.0 | 10.2.0 - 10.9 | 10.10 - onwards |
+    | --- | --- | --- |
+    | [2.37.1](https://github.com/git-for-windows/git/releases/tag/v2.37.1.windows.1) | [2.41.0](https://github.com/git-for-windows/git/releases/tag/v2.41.0.windows.3) | [2.43.0](https://github.com/git-for-windows/git/releases/tag/v2.43.0.windows.1)
     
 * [Microsoft Edge WebView2 Evergreen Runtime (x64 or ARM64) (Evergreen Standalone Installer version)](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)
 * [Gradle 7.6 or above](https://gradle.org/install/#manually) with Gradle extracted to the parent directory of the folder where Studio Pro is installed (usually `C:\Program Files\Mendix`) instead of `C:\Gradle`.
@@ -85,7 +85,7 @@ After that you can retry installing Studio Pro.
 
 On a Mac, you may get the following warning during installation:
 
-{{< figure src="/attachments/refguide/installation/install/warning-mac.png"  >}}
+{{< figure src="/attachments/refguide/installation/install/warning-mac.png"  class="no-border" >}}
 
 To bypass it, right-click the installer, click **Open** and run the installer.
 
@@ -106,7 +106,8 @@ It is possible to prepare the prerequisite installers beforehand, so that the Me
     * The `latest` executable to *mendix_native_mobile_builder.exe*
     * The *Git-{version}-64-bit.exe* executable to *git_for_windows_installer.exe*
     * Do not rename the Microsoft Edge WebView2 Evergreen Runtime installer *MicrosoftEdgeWebview2Setup.exe*, keep it as is
-    * The Gradle zip file should be named *gradle-7.6.3-bin.zip*
+    * For Mendix 10.10.0 and above, the Gradle zip file should be named *gradle-8.5-bin.zip*
+    * For Mendix 10 versions below 10.10.0, the Gradle zip file should be named *gradle-7.6.3-bin.zip*
 
 6. Run the installer as described in the [Installing Mendix Studio Pro](#install) section above.
 
@@ -130,7 +131,7 @@ The portable installer does not include all tools that come installed with Studi
 
 Mendix Studio Pro that is installed via the portable installer does not show up in the in the Mendix Version Selector where you can manage Mendix versions. However, you can manually add a Studio Pro version by clicking on the **Add custom version** button in the **Manage Mendix versions** and specifying the path to the executable file of the Studio Pro version:
 
-{{< figure src="/attachments/refguide/installation/install/version-selector.png"  alt="Version Selector" width="450">}}
+{{< figure src="/attachments/refguide/installation/install/version-selector.png"  alt="Version Selector" width="450" class="no-border" >}}
 
 ## 7 Signing In
 
@@ -140,7 +141,7 @@ You can sign in with your Mendix account, or with your own company account if th
 
 In some situations, for example, when your network has a firewall or proxy server, a warning about an untrusted certificate may appear during the sign-in process:
 
-{{< figure src="/attachments/refguide/installation/install/untrusted-certificate.png" width="600px" >}}
+{{< figure src="/attachments/refguide/installation/install/untrusted-certificate.png" width="600px" class="no-border" >}}
 
 To continue, you may accept the certificate for the current session by clicking the **Accept for this session** button, or install it permanently by clicking the **View certificate information** button. 
 

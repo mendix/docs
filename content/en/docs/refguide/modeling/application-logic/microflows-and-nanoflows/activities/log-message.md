@@ -18,7 +18,7 @@ With the **Log message** activity you can create messages that appear in the log
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/log-message/log-message-properties.png" alt="Log Message Properties" width="900" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/log-message/log-message-properties.png" alt="Log Message Properties" width="900" class="no-border" >}}
 
 The **Log message** properties pane consists of the following sections:
 
@@ -42,9 +42,9 @@ The log level defines the severity of the log message. In the [Studio Pro Consol
 | Trace |   | Used for detailed execution traces. |
 | Debug |   | Used to debug execution. |
 | Info  *(default)*  |   | Used to log informative messages. |
-| Warning | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/log-message/warning.png" alt="Warning"   width="15%"  >}} | Used to log warnings. These messages appear in orange. |
-| Error | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/log-message/error.png" alt="Error" width="15%" >}} | Used to log error messages. These messages appear in red. |
-| Critical | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/log-message/critical-error.png" alt="Critical Error" width="15%" >}} | Used to log critical errors. These messages appear in white on red. |
+| Warning | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/log-message/warning.png" alt="Warning"   width="15%"  class="no-border" >}} | Used to log warnings. These messages appear in orange. |
+| Error | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/log-message/error.png" alt="Error" width="15%" class="no-border" >}} | Used to log error messages. These messages appear in red. |
+| Critical | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/log-message/critical-error.png" alt="Critical Error" width="15%" class="no-border" >}} | Used to log critical errors. These messages appear in white on red. |
 
 ### 3.2 Log Node Name {#log-node-name}
 

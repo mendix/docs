@@ -1,5 +1,6 @@
 ---
-title: "App Switcher ⚠"
+title: "App Switcher"
+deprecated: true
 url: /appstore/modules/app-switcher/
 category: "Modules"
 description: "Describes the configuration and troubleshooting of the App Switcher module, which is available in the Mendix Marketplace."

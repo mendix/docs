@@ -10,7 +10,7 @@ tags: ["studio pro", "layout widgets", "layout", "page template", "pages"]
 
 Layouts specify what comes where. Each [page](/refguide9/page/) is based on a layout. The layout contains widgets and structures that return on every page based on that layout. For example, it is common to put a menu bar widget in a layout so that the menu is visible on all pages.
 
-{{< figure src="/attachments/refguide9/modeling/pages/page-resources/layout/layout-example.png"   width="400"  >}}
+{{< figure src="/attachments/refguide9/modeling/pages/page-resources/layout/layout-example.png"   width="400"  class="no-border" >}}
 
 A layout consists of content and [placeholders](/refguide9/placeholder/). The content is everything that should be present in every page that uses the layout, from navigation bars to sign-out buttons. Placeholders are empty areas that later form the canvas for any pages that make use of the layout. The layout content remains the same in every page, but the placeholders cover what is unique to every individual page. 
 
@@ -26,7 +26,7 @@ Mendix will intelligently detect if pages share a layout, so no user input is re
 
 An example of layout properties is represented in the image below:
 
-{{< figure src="/attachments/refguide9/modeling/pages/page-resources/layout/layout-properties.png" alt="Example of the layout properties pane"   width="250"  >}}
+{{< figure src="/attachments/refguide9/modeling/pages/page-resources/layout/layout-properties.png" alt="Example of the layout properties pane"   width="250"  class="no-border" >}}
 
 Layout properties consist of the following sections:
 
@@ -58,7 +58,7 @@ Default value: *600*
 
 **Platform** can only be set when a layout is created.
 
-{{< figure src="/attachments/refguide9/modeling/pages/page-resources/layout/add-layout.png" alt="Dialog for adding a new layout" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/page-resources/layout/add-layout.png" alt="Dialog for adding a new layout" class="no-border" >}}
 
 The values for the platform property are:
 

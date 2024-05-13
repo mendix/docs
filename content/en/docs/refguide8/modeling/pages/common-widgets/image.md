@@ -15,7 +15,7 @@ The image widget can be used to show a static image on a page, layout, or snippe
 
 For example, you can configure an image clicking which a page with customer details opens:
 
-{{< figure src="/attachments/refguide8/modeling/pages/common-widgets/image/image-example.png" alt="Image Example" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/common-widgets/image/image-example.png" alt="Image Example" class="no-border" >}}
 
 {{% alert color="info" %}}
 If you want to dynamically show different images based on data, you need to add [image viewer](/refguide8/image-viewer/) on your page.
@@ -25,7 +25,7 @@ If you want to dynamically show different images based on data, you need to add 
 
 An example of image properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/pages/common-widgets/image/image-properties.png" alt="Image Properties"   width="300"  >}}
+{{< figure src="/attachments/refguide8/modeling/pages/common-widgets/image/image-properties.png" alt="Image Properties"   width="300"  class="no-border" >}}
 
 Image properties consist of the following sections:
 

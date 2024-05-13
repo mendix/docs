@@ -16,7 +16,7 @@ A navigation list can be used to attach an action to an entire row when a user c
 
 For example, clicking one row can open a page, clicking another one can execute a microflow. 
 
-{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/navigation-list/navigation-list.png" alt="Navigation List" >}}
+{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/navigation-list/navigation-list.png" alt="Navigation List" class="no-border" >}}
 
 ## 2 Properties Pane
 

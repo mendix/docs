@@ -9,7 +9,7 @@ tags: ["studio pro", "preferences", "settings", "edit menu"]
 
 The **Preferences** option in the menu opens a dialog box where you can set user-specific preferences which apply to the whole of Studio Pro:
 
-{{< figure src="/attachments/refguide/modeling/menus/edit-menu/preferences-dialog/preferences.png" alt="Preferences" width="600" >}}
+{{< figure src="/attachments/refguide/modeling/menus/edit-menu/preferences-dialog/preferences.png" alt="Preferences" width="600" class="no-border" >}}
 
 ## 2 General Tab {#general}
 
@@ -57,7 +57,7 @@ This is the directory where new apps are stored. It is used in the [App Settings
 
 ### 3.1 Deployment
 
-#### 3.1.1 JDK directory {#jdk-directory}
+#### 3.1.1 JDK Directory {#jdk-directory}
 
 This is the directory in which the Java Development Kit (JDK) is located on the computer on which you deploy the application. Usually, the correct directory is located automatically.
 
@@ -65,7 +65,11 @@ The JDK is necessary to run Mendix applications, because the Mendix Runtime is w
 
 #### 3.1.2 Enable Run Optimizations
 
-Enable this setting to increase the speed at which a running application is updated after changes have been made in Studio Pro. When only pages, layouts or snippets have been changed, an entire restart of the application is skipped to decrease deployment time. Also, no Java compilation is performed when no relevant files have changed.
+Enable this setting to increase the speed at which a running application is updated after changes have been made in Studio Pro. If only pages, layouts, or snippets have been changed, then an entire restart of the application is skipped to decrease deployment time. Also, no Java compilation is performed when no relevant files have changed.
+
+#### 3.1.3 Optimize Bundle {#bundle}
+
+This setting is visible and effective when the React client is enabled. By default, it is already enabled to reduce the size of the generated app bundle and speeds up the bundling process by disabling source maps generation. Source maps are used for debugging the bundled code during development. If you want to generate source maps for debugging pluggable widgets, you can disable this setting.
 
 ### 3.2 Build
 
@@ -171,6 +175,14 @@ This setting was introduced in Mendix version 10.5.
 
 When [combining changes](/refguide/merge-algorithm/), for example when doing a Git pull, the user can choose between **Rebase** and **Merge** as the default action. This preference can be overridden for each merge which contains conflicts.
 
+### 6.3 Changes 
+
+Enable this setting to truncate long lines.
+
+### 6.4 Solution Warning
+
+Select **Show warning on updating marketplace modules** to display a warning message when updating a Marketplace module. 
+
 ## 7 Work Environment Tab
 
 ### 7.1 Studio Pro Theme {#studio-pro-theme}
@@ -195,6 +207,16 @@ Sometimes the computer running Studio Pro cannot access the internet directly, b
 
 When the **Send Studio Pro usage data to Mendix** setting is enabled, Studio Pro sends usage data to Mendix that allows Mendix to identify issues and improve the user experience. The usage data does not contain sensitive information. It is possible to disable this feature, but it may affect the behavior of some features, prevent Mendix from identifying issues reported by the user, or affect tracking issues that are not reported yet. This setting is machine-specific and changing this feature does not affect any existing installed version.
 
+### 8.3 Visual Builder for XPath Constraints{#visual-builder}
+
+In Studio Pro version 10.5, a new, visual, way of constructing XPath constraints was introduced. This is called **visual Builder for XPath constraints** (Builder).
+
+From Mendix version 10.10, Builder is the default way to construct XPath constraints, but you can change the default by clearing **Enable the XPath Builder as the default XPath constraint editor**.
+
+{{% alert color="info" %}}
+For Mendix versions 10.5.0 through 10.9.0, this option is on the **New Features** tab.
+{{% /alert %}}
+
 ## 9 New Features Tab {#new-features}
 
 ### 9.1 Access Rules Editor
@@ -218,10 +240,6 @@ For more information, see [X-Ray Mode](/refguide/page/#x-ray-mode).
 In Studio Pro 10.4 and 10.5, only the **Use the Beta version as the default editor** setting is shown. When this setting is enabled, the modern logic editors (as a beta feature) will become the default editors for all your microflows, nanoflows, and rules. 
 
 In Studio Pro 10.6, only the **Enable switching to the Classic version of the editor** setting is shown. When this setting is enabled, you will be able to see the toggle to switch between the **Classic** and **Modern** version in your logic editors.
-
-### 9.5 Visual Builder
-
-In Studio Pro version 10.5, a new, visual, way of constructing XPath constraints was introduced. This is called Visual Builder for database constraints. The default way to construct XPath constraints is to write XPath expressions, but you can change the default by checking **Enable the XPath Builder as the default XPath constraint editor**.
 
 ## 10 Read More
 

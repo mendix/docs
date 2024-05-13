@@ -36,6 +36,7 @@ Alternatives to using OIDC SSO for managing single sign-on are:
 * **API consumption:** If your app makes calls to APIs of other services on behalf of your end-user, you can use the access token obtained via the “OIDC SSO” module. This scenario is not supported when using SAML SSO. This makes the OIDC SSO module suitable for Mendix customers using Mendix Catalog.
 * **Authorizing access to a Mendix back-end app:**  If you want to secure APIs in Mendix back-end apps using an access token, your API can use an access token passed by the calling app in the authorization header. If the access token is a JWT, your app can use the user and/or the user’s authorizations to assign user roles based on the claims in the access token JWT.
 * **Xcelerator apps:** Your Siemens Xcelerator app is designed to be integrated with Siemens' SAM IdP.  The Siemens SAM IdP supports the OIDC protocol and allows your app to delegate both authentication (login) and authorization (roles).
+* **Works with Responsive web app and PWA:** OIDC SSO module supports both responsive web app and progressive web app (PWA). If you are building a native mobile app, you need to use [Mobile SSO](https://marketplace.mendix.com/link/component/223516) module for your app. For more information, see [Building a Responsive Web App](/quickstarts/responsive-web-app/), [Progressive Web App](/refguide/mobile/introduction-to-mobile-technologies/progressive-web-app/), and [Native Mobile](/refguide/mobile/introduction-to-mobile-technologies/native-mobile/).
 
 ### 1.2 Features and Limitations
 
@@ -113,15 +114,15 @@ Once the Mx Model Reflection module has been imported into your app, you need to
 
 1. In the **App Explorer**, add the page **MxObjects_Overview** from the **MxModelReflection** folder to the Navigation menu.
 
-    {{< figure src="/attachments/appstore/modules/oidc/add-model-reflection.png" >}}
+    {{< figure src="/attachments/appstore/modules/oidc/add-model-reflection.png" class="no-border" >}}
 
 2. Run the app and click the newly-added navigation link to use Mx Model Reflection.
 
-    {{< figure src="/attachments/appstore/modules/oidc/model-reflection-button.png" >}}
+    {{< figure src="/attachments/appstore/modules/oidc/model-reflection-button.png" class="no-border" >}}
 
 3. Select the modules **MxModelReflection** and **OIDC**  and click **Click to refresh** for both the modules and the entities.
 
-    {{< figure src="/attachments/appstore/modules/oidc/refresh-model.png" >}}
+    {{< figure src="/attachments/appstore/modules/oidc/refresh-model.png" class="no-border" >}}
 
 ### 3.2 Migrating from Community Edition to Platform Edition{#migration}
 
@@ -165,28 +166,32 @@ Ensure that you have allocated the following user roles to the OIDC module roles
 | Anonymous | OIDC.Anonymous |
 | User | OIDC.User |
 
-{{< figure src="/attachments/appstore/modules/oidc/user-roles.png" >}}
+{{< figure src="/attachments/appstore/modules/oidc/user-roles.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 You may have to add the *Anonymous* user role if it does not exist already.
 {{% /alert %}}
 
-### 4.2 Allowing Anonymous Users
+### 4.2 Allowing Anonymous Users (Optional)
 
-The OIDC module supports multiple OIDC/OAuth-compatible IdPs. To allow your end-users to choose from a number of different IdPs, or to have the option to log back into the app after they have logged out, you will need to give them access to the app before they have signed in to the app. Therefore, you need to give anonymous users access to your app.
+The OIDC module supports multiple OIDC/OAuth-compatible IdPs. Optionally, if you allow your end-users to choose from multiple IdPs, or to have the option to log back into the app after they have logged out, you will need to give them access to the app before they have signed in to the app. Therefore, you need to give anonymous users access to your app.
 
 In the **Anonymous** tab of the app security settings, do the following:
 
 1. Set **Allow anonymous users** to **Yes**
 2. Select *Anonymous* as the **Anonymous user role**
 
-{{< figure src="/attachments/appstore/modules/oidc/anonymous-user.png" >}}
+{{< figure src="/attachments/appstore/modules/oidc/anonymous-user.png" class="no-border" >}}
+
+{{% alert color="info" %}}
+If a single Identity Provider (IdP) is configured in the OIDC SSO module, end-users can be authenticated via the URL `https://<your-app-url>/oauth/v2/login`.
+{{% /alert %}}
 
 ### 4.3 Configuring Navigation
 
 The OIDC SSO module works without a specified sign-in page. Therefore, in the navigation section of your app, set **Sign-in page** (in the **Authentication** section) to *(none)*.
 
-If you are configuring navigation for web/responsive apps and want to allow your end-users to choose from a number of different IdPs, or to have the option to sign in back into the app after they have signed out, set a **Role-based home page** for role **Anonymous** to **OIDC.Login_Web_Button**. When you configure navigation for PWA apps, set a **Role-based home page** for role **Anonymous** to **OIDC.Login_PWA_Button**. For more information, see [Role-Based Home Pages](/refguide/navigation/#role-based) in *Navigation*.
+To initiate the SSO process automatically when a user navigates to the app, create a **Role-based home page** for the **Anonymous** role and add the snippet `Snip_Login_Automatic` to it. If you are configuring navigation for web/responsive apps and want to allow your end-users to choose from a number of different IdPs, or to have the option to sign in back into the app after they have signed out, set a **Role-based home page** for role **Anonymous** to **OIDC.Login_Web_Button**. When you configure navigation for PWA apps, set a **Role-based home page** for role **Anonymous** to **OIDC.Login_PWA_Button**. For more information, see [Role-Based Home Pages](/refguide/navigation/#role-based) in *Navigation*.
 
 In addition, administrators will need to have access to configure OIDC and also manage end-users. You can do this by including the pages `Administration.Account_Overview` and `OIDC.OIDC_Client_Overview` into the app navigation, or a separate administration page.
 
@@ -489,7 +494,7 @@ This section is only relevant if you are a Mendix partner and you want to integr
 To parse of SAM access tokens you need to do the following when performing [OIDC Client Configuration](#client-configuration):
 
 1. Select *OIDC.Default_SAM_TokenProcessing_CustomATP* as the **custom AccessToken processing microflow**.
-    {{< figure src="/attachments/appstore/modules/oidc/enable-sam-parsing.png" >}}
+    {{< figure src="/attachments/appstore/modules/oidc/enable-sam-parsing.png" class="no-border" >}}
 1. Add the scopes `sam_account`, `samauth.role`, `samauth.tier`, and `samauth.ten` to the **Selected Scopes** in the OIDC Client Configuration.
 1. Configure the user roles in your app to match the roles returned by SAM. End-users will be given the matching role when they sign into the app. If the role in the SAM token is not found in the Mendix app the end-user will be given the role `User`.
 1. Save the configuration.
@@ -510,7 +515,7 @@ To parse the OIDC Provider access tokens you need to do the following when perfo
 
 1. Select `OIDC.Default_OIDCProvider_TokenProcessing_CustomATP` as the **custom AccessToken processing microflow**.
 
-    {{< figure src="/attachments/appstore/modules/oidc/enable-oidc-provider-parsing.png" >}}
+    {{< figure src="/attachments/appstore/modules/oidc/enable-oidc-provider-parsing.png" class="no-border" >}}
 
 2. Add the scopes `openid` and the ModelGUID or Name to the **Selected Scopes** in the OIDC Client Configuration. The ModelGUID will look something like `53f5d6fa-6da9-4a71-b011-454ec052cce8`.
 
@@ -559,35 +564,48 @@ If your microflow is not correctly implemented you will be told that **Authentic
 ### 8.3 Using Deep Links
 
 {{% alert color="warning" %}}
-The OIDC module version 3.0.0 and above does not support the DeepLink module, as it has been deprecated from Studio Pro 10.6.0. It is replaced by [page URLs](/refguide/page-properties/#url) and [microflow URLs](/refguide/microflow/#url).
+The Deep Link module has been deprecated from Studio Pro 10.6 and replaced by [page URLs](/refguide/page-properties/#url) and [microflow URLs](/refguide/microflow/#url).
 For instructions on migrating to page and microflow URLs, see the [Using Page and Microflow URLs with OIDC SSO](#page-microflow-url) section below.
 {{% /alert %}}
 
 If end-users who use the deeplink do not yet have a session in your app, the deeplink can trigger the SSO process. If successful, the end-user will be automatically redirected back to the deeplink.
 
-For more information on using deep link module (with Mendix 8 and 9), see the [Using Deep Link Module](#using-deep-link) section below.
+For more information on using Deep Link module (with Mendix 8 and 9), see the [Using Deep Link Module](#using-deep-link) section below.
 
 #### 8.3.1 Using Page and Microflow URLs with OIDC SSO{#page-microflow-url}
 
 Page URLs and Microflow URLs are supported with OIDC SSO for Mendix version 10.6 and above. To do this, follow the steps below:
 
-1. In the **Runtime** tab of the **App Settings**, configure the page **URL prefix** to **link** instead of the default **P**.
+1. In the **Runtime** tab of the **App Settings**, configure the page **URL prefix** to **link** instead of the default **P** to maintain compatibility with existing URLs, and ensure to remove the Deep Link module from your app to start the app successfully.
 1. Configure **OIDC.Login_Web_Button** as the **Sign-in page** in the **Authentication** section of the app **Navigation**.
 1. The user is redirected to the OIDC login page for authentication.
 1. After successful log in, the user is directed to the desired page using page URLs and microflow URLs within the application.
 
-If you are building a new app using the OIDC SSO module (Mendix version 10.6 and above) and you are using Page URLs and Microflow URLs, follow the same steps as above.
+If you are building a new app using the OIDC SSO module (Mendix version 10.6 and above) and you are using Page URLs and Microflow URLs, follow the same steps as above. 
 
-For more information, see the [Migrating to Page and Microflow URLs](/appstore/modules/deep-link/#migrate-page-micro) section of the ***Deep Link***.
+To allow the end users to navigate to the desired page:
+
+* If single IdP configured, URL will be the base URL of your application followed by `oauth/v2/login?cont={page/Microflowurl}`
+
+    For example, `http://localhost:8080/oauth/v2/login?cont=link/pagepath`
+
+* If multiple IdPs configured, you can specify which IdP should be used by adding the alias (MyIdPAlias)
+`oauth/v2/login?idp={MyIdPAlias}&cont={page/Microflowurl}`
+
+    For example, `http://localhost:8080/oauth/v2/login?idp=Okta&cont=link/pagepath` 
+    
+The Page and Microflow URLs fully support multiple IdPs, allowing users to trigger the login and choose the IdP on the OIDC login page.
+
+For more information, see the [Migrating to Page and Microflow URLs](/appstore/modules/deep-link/#migrate-page-micro) section of the *Deep Link*.
 
 #### 8.3.2 Using Deep Link Module{#using-deep-link}
 
 To use OIDC SSO module in conjunction with the Deep Link module (for Mendix 8 and 9), you can choose between the following methods of selecting an IdP:
 
-* You need to set the `LoginLocation` constant of the DeepLink module to the `/oauth/v2/login?cont=`.
+* You need to set the `LoginLocation` constant of the Deep Link module to the `/oauth/v2/login?cont=`.
 * You can also specify which IdP should be used by adding the alias (`MyIdPAlias`) to the `LoginLocation`: `/oauth/v2/login?idp={MyIdpAlias}&cont=`. For example, `/oauth/v2/login?idp=Google&cont=`. This setting will apply to all deeplinks in your app.
 
-The DeepLink module does not have full support for multiple IdPs, so it can only trigger logins at one IdP. If you do not specify which IdP you want the Deep Link module to use, it will use the default IdP.
+The Deep Link module does not have full support for multiple IdPs, so it can only trigger logins at one IdP. If you do not specify which IdP you want the Deep Link module to use, it will use the default IdP.
 
 ### 8.4 Logging Out
 
@@ -595,7 +613,7 @@ A standard logout action will end an end-user's Mendix session, but will not end
 
 To do this, add a menu item or button for your end-users that calls the nanoflow `ACT_Logout`.
 
-### 8.5 Use ACR to Request Authentication Method
+### 8.5 Using ACR to Request Authentication Method
 
 By default, the OIDC SSO module does not care how users are signed in at your IdP, that is left to the discretion of the IdP. In some cases your IdP may support different methods for end-users to be authenticated and your app may want to indicate a preference.
 
@@ -619,7 +637,7 @@ To configure the ACR value (or values) in the OIDC SSO module, follow these step
 
 When you have configured multiple ACR values for your IdP, the OIDC module shows the ACR values as additional ways to sign in on the default login page.
 
-{{< figure src="/attachments/appstore/modules/oidc/login-acr-options.png" >}}
+{{< figure src="/attachments/appstore/modules/oidc/login-acr-options.png" class="no-border" >}}
 
 #### 8.5.3 Customizing the Login Page
 
@@ -696,7 +714,7 @@ If you have deployed your app on premises but did not configure a return URL for
 
 To resolve this, open the Mendix Service Console and ensure that the **Port number** for the **Public application root URL**, **Runtime server port**, and **Admin server port** match.
 
-{{< figure src="/attachments/appstore/modules/oidc/service-console-ports.png" >}}
+{{< figure src="/attachments/appstore/modules/oidc/service-console-ports.png" class="no-border" >}}
 
 ### 9.5 `CommunityCommons.RandomStrongPassword` microflow does not match the expected parameters
 
@@ -706,4 +724,4 @@ This error indicates that new parameters must be synced with the microflow.
 
 To resolve this issue, either open the microflow used for the OIDC SSO module or refresh it before deploying your Mendix app again.
 
-{{< figure src="/attachments/appstore/modules/oidc/Community Commons error.png" >}}
+{{< figure src="/attachments/appstore/modules/oidc/Community Commons error.png" class="no-border" >}}

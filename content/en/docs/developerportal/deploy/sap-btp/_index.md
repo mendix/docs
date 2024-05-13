@@ -35,11 +35,11 @@ Before you can manage your SAP BTP using the Developer Portal, you will need to 
 
 In this scenario, you have an existing app which is running in another environment: for instance, on Mendix Cloud. To change this, go to **Settings** in the Developer Portal's navigation pane and switch to the **Cloud Settings** tab.
 
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/cloud-settings.png" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/cloud-settings.png" class="no-border" >}}
 
 Click **Set up SAP Cloud** to go to the SAP BTP welcome page.
 
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/cloud-settings-landing-page.png" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/cloud-settings-landing-page.png" class="no-border" >}}
 
 Click **Getting Started**, then continue with [Set Up Region](#SetUpRegion).
 
@@ -82,7 +82,7 @@ Make sure that you have enough quota in this region for your organization to run
 * Route
 * Binding to XSUAA
 
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/01-sap-select-region.png" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/01-sap-select-region.png" class="no-border" >}}
 
 If you have already logged on to SAP and your SAP session has not expired, you will only have to choose the region. If you do not have a current SAP session you will be asked for your SAP credentials as well. Providing your credentials will grant the Deployment Portal access to manage your SAP BTP account.
 
@@ -97,7 +97,7 @@ If you have issues using SAP authentication, please refer to the reference [SAP 
 
 You will now be asked to provide the final details for the SAP BTP development environment.
 
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/create-development.png" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/create-development.png" class="no-border" >}}
 
 You will be able to choose a Domain, Organization, and Space which is configured for you in this region.
 
@@ -113,7 +113,7 @@ You can create several environments for your app. For example, you may have crea
 
 This is done from the **Environments** page of the Developer Portal.
 
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/environments-page.png" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/environments-page.png" class="no-border" >}}
 
 Your Environments page will show you the following:
 
@@ -125,11 +125,11 @@ To create a new environment, perform the following steps:
 
 1. Click **Add Environment** to start the wizard.
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/add-environment.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/add-environment.png" class="no-border" >}}
 
 2. Select the region where you want your app to be deployed.
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/sap-env-0.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/sap-env-0.png" class="no-border" >}}
 
     If no session is active for that region, or the current session does not have access to that region, you will be asked for your SAP credentials for that region.
 
@@ -145,13 +145,13 @@ To create a new environment, perform the following steps:
     https://myapp-development.cfapps.eu10.ondemand.com
     ```
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/07-sap-env-1.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/07-sap-env-1.png" class="no-border" >}}
 
 4. Click **Next**.
 
 5. Enter the name of the environment. This can be anything you choose: for example Test, Acceptance, or Production.
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/08-sap-env-2.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/08-sap-env-2.png" class="no-border" >}}
 
 6. Set the size of the memory that the app needs in order to run. This can also be changed later.
 
@@ -161,7 +161,7 @@ To create a new environment, perform the following steps:
 
     If you choose **Custom database** you will need to enter a name for the database and the plan.
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/custom-database.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/custom-database.png" class="no-border" >}}
 
 9. Select **File Store Enabled** if your application makes use of FileDocument or Image objects. Other sorts of object do not need File Store to be enabled.
 
@@ -173,11 +173,11 @@ To create a new environment, perform the following steps:
 
 12. Click **Next** to create the environment and finish the setup.
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/09-sap-env-3.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/09-sap-env-3.png" class="no-border" >}}
 
 An environment is created; with more than one environment it is possible to transport your application between environments (see [Transport App Between Environments](#TransportApp), below).
 
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/10-sap-env-tap.png" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/10-sap-env-tap.png" class="no-border" >}}
 
 ## 4 Preparing Packages for Deployment
 
@@ -206,25 +206,25 @@ You will still have to deploy your app in the Developer Portal the very first ti
 
 1. Go to the **Environments** page of the Developer Portal.
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/environments-page.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/environments-page.png" class="no-border" >}}
 
 2. Click **Create package from Team Server** to start the wizard.
 
 3. Select the branch on the Team server which you want to use.
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/03-sap-select-branch.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/03-sap-select-branch.png" class="no-border" >}}
 
 4. Select the revision of the branch you want to build.
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/04-sap-select-revision.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/04-sap-select-revision.png" class="no-border" >}}
 
 5. Add a version number and Tag description as required. The revision number will be added to the version number automatically.
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/05-sap-define-tag.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/05-sap-define-tag.png" class="no-border" >}}
 
 6. Click **Build this revision** to build the package.
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/06-sap-build-revision.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/06-sap-build-revision.png" class="no-border" >}}
 
 When the package is ready to be deployed, a green tick will be shown next to the deployment package. To deploy your package, follow the instructions in the [Deploy Package](#DeployPackage) section, below.
 
@@ -238,7 +238,7 @@ Alternatively, you can upload an MDA which has already been created from the app
 
 3. Click **Upload** to upload the MDA.
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/upload-mda.png" alt="Upload button and dialog for uploading MDAs" >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/upload-mda.png" alt="Upload button and dialog for uploading MDAs" class="no-border" >}}
 
 The package will be added to the list of packages in the **Deployment Package Repository**. To deploy your package, follow the instructions in the [Deploy Package](#DeployPackage) section, below.
 
@@ -256,15 +256,15 @@ SAP BTP [has a limit of 1.5 GB](https://help.sap.com/viewer/65de2977205c403bbc10
 
 1. A green tick indicates that the build has finished. Click **Deploy** to deploy the package to SAP BTP.
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/sap-revision-built.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/sap-revision-built.png" class="no-border" >}}
 
 2. Change the deployment environment if required.
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/sap-transport.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/sap-transport.png" class="no-border" >}}
 
 3. The **Timeout** value indicates how long (in seconds) Cloud Foundry will wait between starting an app and the first healthy response from the app before deciding that the application has failed to start. For some apps, the default (60 seconds) is too short. If your app is failing to start you can try increasing this value using the **Change timeout** option.
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/sap-change-timeout.png"   width="60%"  >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/sap-change-timeout.png"   width="60%"  class="no-border" >}}
 
 4. Click **Transport** to deploy the package to the SAP environment. This will replace any current app deployed to this environment. If the app is already running, you will be asked to stop it so that your new app can be deployed.
 
@@ -272,19 +272,19 @@ SAP BTP [has a limit of 1.5 GB](https://help.sap.com/viewer/65de2977205c403bbc10
 
 1. You will see confirmation of the package which has been transported.
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/transport-deploy.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/transport-deploy.png" class="no-border" >}}
 
 2. Change any constants in the Constants tab: select the constant you want to edit and then click **Edit**.
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/transport-constants.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/transport-constants.png" class="no-border" >}}
 
 3. Toggle any scheduled events in the Scheduled Events tab: select the scheduled event you want to enable or disable and click **Toggle**.
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/transport-events.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/transport-events.png" class="no-border" >}}
 
 4. Select any additional services you need for your app. For more information see [Binding Services](#binding-services), below.
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/transport-services.png"   width="75%"  >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/transport-services.png"   width="75%"  class="no-border" >}}
 
     {{% alert color="warning" %}}In your initial deployment, do not remove any of the services with the status **Services To Be Bound**. For a new app, these services are all required for the correct deployment of the app.{{% /alert %}}
 
@@ -292,13 +292,13 @@ SAP BTP [has a limit of 1.5 GB](https://help.sap.com/viewer/65de2977205c403bbc10
 
 6. Click **Start Application** to start the application on SAP BTP.
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/start-application.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/start-application.png" class="no-border" >}}
 
     {{% alert color="info" %}}This will bind any services which are in the status **Services To Be Bound**.{{% /alert %}}
 
 7. When the application has been started you will receive a confirmation message. Click **OK** and you will be taken to the Environment Details page for the selected environment. See [Environment Details](#EnvironmentDetails), below.
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/application-started.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/application-started.png" class="no-border" >}}
 
 ### 5.3 Unbinding and Deleting Service Instances
 
@@ -306,7 +306,7 @@ If you want to remove a service instance from your environment, you can do it is
 
 1. Click the three-dot menu for the service and select **Unbind Service** or **Delete Service**.
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/unbind-service.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/unbind-service.png" class="no-border" >}}
 
     The options will do the following:
 
@@ -317,15 +317,15 @@ If you want to remove a service instance from your environment, you can do it is
 
 1. Click **Transport** on the source environment you want to transport to another environment. Environments without deployed apps will have the transport button grayed out and cannot be transported.
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/transport-environments.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/transport-environments.png" class="no-border" >}}
 
 2. Change the deployment environment if required by clicking **Change environment**.
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/transport-from-to.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/transport-from-to.png" class="no-border" >}}
 
 3. The **Timeout** value indicates how long (in seconds) Cloud Foundry will wait between starting an app and the first healthy response from the app before deciding that the application has failed to start. For some apps, the default (60 seconds) is too short. If your app is failing to start you can try increasing this value using the **Change timeout** option.
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/sap-change-timeout.png"   width="60%"  >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/sap-change-timeout.png"   width="60%"  class="no-border" >}}
 
 4. Click **Transport** to deploy the package to the SAP environment. This will replace any current app deployed to this environment. If the app is already running, you will be asked to stop it so that your new app can be deployed.
 
@@ -342,7 +342,7 @@ The environment details page contains the following four tabs:
 
 Open the environment details by clicking **Details** on an environment on the Environments page of the Development Portal. You will also be taken to this page when you successfully deploy or transport your app.
 
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/environment-details.png" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/environment-details.png" class="no-border" >}}
 
 {{% alert color="info" %}}If you make changes to your app which you want be applied next time the app is deployed you must make them here.
 
@@ -352,7 +352,7 @@ Changes made to the app in the SAP BTP cockpit are only temporary and can be ove
 
 This tab contains information on how the application is deployed on SAP BTP.
 
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/11-sap-env-details.png" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/11-sap-env-details.png" class="no-border" >}}
 
 Most of this page shows information about the app, but there are several options which allow you to change the app.
 
@@ -386,7 +386,7 @@ Click **View Recent Log** to see recent events written to the log.
 
 You will be asked to confirm that this environment should be removed. You will also be asked to confirm that the resources associated with the environment should also be removed. Note that the default is NOT to remove the resources.
 
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/delete-environment.png" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/delete-environment.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 If you do not select **Remove resources** in this dialog, the resources will be left in SAP BTP. This could be useful if you want to remove the environment but, for some reason, a resource cannot be removed. In this case, the resources can only be removed individually from within the SAP BTP cockpit.
@@ -428,7 +428,7 @@ Click **Change** to change the subscription secret which is the code which regis
 
 This tab displays the application constants and allows you to edit them. It also lets you enable or disable scheduled events.
 
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/12-sap-model-options.png" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/12-sap-model-options.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 You need to restart your app if you change any of these options.
@@ -450,7 +450,7 @@ To change a value, select the constant you want to change and click **Edit**.
 
 This tab displays Cloud Foundry services which are bound to the app, waiting to be bound to the app, or available to be bound to the app. These are the services which are available to you in SAP BTP and are the same services that you can see in the SAP BTP marketplace.
 
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/service-tab.png"   width="50%"  >}}
+{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/service-tab.png"   width="50%"  class="no-border" >}}
 
 {{% alert color="warning" %}}
 There are a number of services which your Mendix app requires. If you unbind any of these services, your app will probably stop working:
@@ -478,7 +478,7 @@ To connect a service in the **Available Services** section, do the following ste
 3. Select a JSON **File** to upload if you need to add extra configuration.
 4. Click **Connect Services**.
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/service-connect.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/service-connect.png" class="no-border" >}}
 
     The services you have selected will be added as **Services To Be Bound**. Now, you can upload JSON **File** with a configuration that will be applied to the service binding. 
 
@@ -517,7 +517,7 @@ If you no longer require a service, you can unbind it or remove it from your app
     * **Unbind Service** – unbind the service instance and move it to the **Services To Be Bound** section — the service will be bound again next time your app is restarted
     * **Delete Service** – unbind the service instance from the application and delete the service instance from your environment
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/service-unbind.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/service-unbind.png" class="no-border" >}}
 
 3. Confirm by clicking the appropriate button
 
@@ -526,7 +526,7 @@ If you no longer require a service, you can unbind it or remove it from your app
     * **Delete** – if you want to unbind more services or do not want the change to happen immediately, then you can choose *Delete*. However, this may leave the app in an unstable state as the service will be deleted from the environment
     * **Cancel** – do not delete or unbind this service
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/service-unbind-warning.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/service-unbind-warning.png" class="no-border" >}}
 
     Once the service is deleted, it is deleted from the app environment and returned to the list of **Available Services**. If the service is unbound but not deleted, it is returned to the list of **Services To Be Bound**, and will be rebound next time the app is restarted.
 
@@ -552,7 +552,7 @@ If you want to change the configuration of a service which is already bound, you
 
 3. You can either use the Configurator to create your configuration by clicking **Open Editor**, or click **Browse…** to upload an existing file as the configuration.
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/add-binding-configuration.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/add-binding-configuration.png" class="no-border" >}}
 
     See the documentation for the service you are configuring for more information.
 
@@ -585,7 +585,7 @@ You can choose to add supported variables by selecting them from a drop-down lis
 * **DT_TENANT** – the unique identifier of your Dynatrace environment
 * **NON_MENDIX_PUBLIC_CLOUD** - must be set to **true** when using Datadog, Dynatrace, or other similar tools
 
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/custom-environment-variables.png" alt="List of custom environment variables" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/custom-environment-variables.png" alt="List of custom environment variables" class="no-border" >}}
 
 The variables beginning **DT_** set up Dynatrace. Setting these variables means that the Dynatrace OneAgent is loaded into your environment. You will then receive all J2EE-related metrics from your app. See [Dynatrace OneAgent](https://www.dynatrace.com/support/help/setup-and-configuration/dynatrace-oneagent/) for more information.
 
@@ -593,7 +593,7 @@ The variables beginning **DT_** set up Dynatrace. Setting these variables means 
 
 You can also enter other environment variables which can be used to support Mendix features which are in beta. In this case, click **No** for **Supported** and enter the name of the variable as well as its value.
 
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/custom-environment-variables-unsupported.png" alt="List of custom environment variables" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/custom-environment-variables-unsupported.png" alt="List of custom environment variables" class="no-border" >}}
 
 {{% alert color="info" %}}
 Only use unsupported environment variables if you know exactly what you are doing. Incorrect values can prevent Mendix Runtime from starting.
@@ -611,7 +611,7 @@ SAP have removed some of the PostgreSQL databases available in their marketplace
 
 Select the **postgresql-db** (PostgreSQL, Hyperscaler Option) database service.
 
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/postgresql-service.png" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/postgresql-service.png" class="no-border" >}}
 
 You will need to upload a file which contains the configuration for this database – click **Browse…** to select your configuration file. You can use the [SAP Hyperscaler PostgreSQL Configurator](#postgresql-configurator) to help you create the configuration file and find more information in the *Parameters* section of [PostgreSQL on SAP Business Technology Platform, Hyperscaler Option](https://help.sap.com/viewer/b3fe3621fa4a4ed28d7bbe3d6d88f036/Cloud/en-US/0630e03aa45d479eaf806c564dc2447a.html) in the *SAP Help Portal*.
 
@@ -625,7 +625,7 @@ To get help to create the configuration file, click the **Configurator** button.
 
 On the new page which is displayed you can set the required values for your **SAP Hyperscaler PostgreSQL** database. Tooltips describe the values which you need to provide. 
 
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/postgresql-configurator.png" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/postgresql-configurator.png" class="no-border" >}}
 
 {{% alert color="warning" %}}
 There is no validation on the value of the **Source Instance ID** or **Restore Time** you enter for Standard or Premium plans. If you have issues, check that you entered the correct value here.
@@ -665,7 +665,7 @@ If you have issues with your app running on SAP HANA, you will need to use the S
 
 For new trial accounts, you can bind your Mendix app to a trial SAP HANA database. Just choose **hanatrial-securestore** from the drop-down of supported databases.
 
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/hanatrial-schema.png" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/hanatrial-schema.png" class="no-border" >}}
 
 Some older trial accounts do not include `hanatrial-securestore`. In this case you will get an error when you try to deploy your Mendix app saying that *provisioning has failed because service hanatrial with plan securestore is not found*.
 
@@ -680,7 +680,7 @@ If your SAP HANA database has performance issues, you may be able to improve per
     * Schema
     * Password
     * User
-        {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/binding-credentials.png" >}}
+        {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/binding-credentials.png" class="no-border" >}}
 2. Go to the [Runtime tab](#runtime-tab) of your app environment
 3. Enter the following unsupported environment variables with the associated values, using the values taken from the service binding credentials:
     | Variable | Value |
@@ -712,7 +712,7 @@ If you are the last person to leave a Mendix app you can delete the app. However
 
 If you are the last member of the app development team, you will be asked if you want to delete the app.
 
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/delete-app.png" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/delete-app.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 This will not stop the app and delete the deployment of the app in SAP BTP.
@@ -730,7 +730,7 @@ If you encounter any issues with your apps on SAP BTP, use the following trouble
 
 If you add an environment and it fails to be created it will be shown with a red symbol next to it on the Environments page:
 
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/failed-environment.png" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/failed-environment.png" class="no-border" >}}
 
 #### 10.1.1 Cause
 
@@ -738,15 +738,15 @@ This could be caused by exceeding your organization quota limit for a service wh
 
 1. Click **Details** next to the failed environment.
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/failed-details.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/failed-details.png" class="no-border" >}}
 
 2. Click **Details** on the error message at the top of the page.
 
-    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/failed-more-details.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/failed-more-details.png" class="no-border" >}}
 
 A more detailed description of the reason why the environment creation failed will be displayed.
 
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/failed-description.png" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/failed-description.png" class="no-border" >}}
 
 #### 10.1.2 Solution
 
@@ -756,7 +756,7 @@ Resolve the issue described in the error message.
 
 Under some circumstances an app with a service in the **Services To Be Bound** status will not restart. You will get an error with *Could not bind service...* in the details.
 
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/service-bind-error.png" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/service-bind-error.png" class="no-border" >}}
 
 #### 10.2.1 Cause
 
@@ -776,13 +776,13 @@ If an app is deployed to SAP using the Studio Pro **Run** or **Publish** button 
 
 The deployment fails because the marketplace services have not been bound.
 
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/error-desktop-modeler.png"   width="50%"  >}}
+{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/error-desktop-modeler.png"   width="50%"  class="no-border" >}}
 
 #### 10.3.1 Solution
 
 If you use the Developer Portal to look at the details of the environment to which you are deploying, you will see that the services are still waiting to be bound.
 
-{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/error-not-bound.png" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/error-not-bound.png" class="no-border" >}}
 
 Start the app from the Developer Portal to bind the services. Once they are bound, you can deploy your app from Studio Pro, as usual.
 

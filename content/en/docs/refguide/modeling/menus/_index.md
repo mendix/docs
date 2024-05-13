@@ -11,7 +11,7 @@ tags: ["Studio Pro", "menu", "top bar"]
 
 The top-bar of Studio Pro contains the following menus:
 
-{{< figure src="/attachments/refguide/modeling/menus/menu-bar.png" alt="Menu-bar" >}}
+{{< figure src="/attachments/refguide/modeling/menus/menu-bar.png" alt="Menu-bar" class="no-border" >}}
 
 * [Global Navigation Menu](#global-navigation-menu) – allows you to navigate to other parts of the platform
 * [File](#file) – allows you to manage documents and apps

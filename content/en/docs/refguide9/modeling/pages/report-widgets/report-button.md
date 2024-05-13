@@ -16,7 +16,7 @@ The reports are generated when the end-user clicks the generate report button.
 
 An example of generate report button properties is represented in the image below:
 
-{{< figure src="/attachments/refguide9/modeling/pages/report-widgets/report-button/generate-report-button-properties.png" alt="Report parameter in structure mode"   width="300"  >}}
+{{< figure src="/attachments/refguide9/modeling/pages/report-widgets/report-button/generate-report-button-properties.png" alt="Report parameter in structure mode"   width="300"  class="no-border" >}}
 
 Generate report button properties consist of the following sections:
 

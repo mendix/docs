@@ -2,7 +2,7 @@
 title: "External Database Connection"
 url: /refguide/external-database-connection/
 weight: 80
-description: "Overview of the external database connection document in Studio Pro"
+description: "Overview of the External Database Connection document in Studio Pro."
 tags: ["studio pro", "database connector", "mendix 10", "mendix connect", "connect to database"]
 ---
 

@@ -94,7 +94,7 @@ The population handles a whole list of chunks at once which should be created by
 
 #### 3.3.2 `Insert` {#insert}
 
-In cases where additional records need to be added to existing knowledge bases, the `Insert` operation can be used. This operation handles a list of chunks that need to be inserted into the knowledge base. It has similar behaviour to the [(Re)populate](#repopulate-knowledge-base) operation, except for that it does not delete any data. This operation does not prevent the creation of duplicates in the knowledge base, if the chunks were already inserted before.
+In cases where additional records need to be added to existing knowledge bases, the `Insert` operation can be used. This operation handles a list of chunks that need to be inserted into the knowledge base. It has similar behaviour to the [(Re)populate](#repopulate-knowledge-base) operation, except for that it does not delete any data. 
 
 #### 3.3.3 `Replace` {#replace}
 

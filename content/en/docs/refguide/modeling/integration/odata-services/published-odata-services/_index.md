@@ -211,7 +211,7 @@ In the **Public documentation** tab, you can write a summary and a description i
 
 ## 5 OpenAPI Documentation
 
-In the **OpenAPI Documentation** pane, you can see a preview of the API documentation for the published OData service. It lists the available operations and schemas that will become available when you run the app. This is similar to the [Swagger UI page](#api-documentation) that is available after publishing your app, with the exception that this preview is not interactive. 
+In the **OpenAPI Documentation** pane, you can see a preview of the API documentation for the published OData service. It lists the available operations and schemas that will become available when you run the app. This is similar to the [Swagger UI page](#api-documentation) that is available after publishing your app, with the exception that the preview is not interactive. 
 
 ## 6 Properties
 

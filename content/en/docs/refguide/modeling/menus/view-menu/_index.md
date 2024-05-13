@@ -97,7 +97,7 @@ For details on this intelligent virtual co-developer bot, see [MxAssist Best Pra
 
 ### 3.11 OpenAPI Documentation
 
-The **OpenAPI Documentation** pane displays the auto-generated OpenAPI documentation for your currently opened Published OData service. This helps you to preview the REST operations that will be available once your app is published.
+The **OpenAPI Documentation** pane displays the auto-generated OpenAPI documentation for the currently opened [Published OData service](/refguide/published-odata-services/). This helps you to preview the REST operations that will be available once your app is published.
 
 ### 3.12 Page Explorer
 

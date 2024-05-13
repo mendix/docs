@@ -123,7 +123,7 @@ The $metadata XML file contains the service's contract in OData's [CSDL](https:/
 
 The OpenAPI JSON file contains the service's REST contract in [OpenAPI 3.0](https://www.openapis.org/) format. This is a machine-readable file according to the OpenAPI Specification format. Most API tools support this format.
 
-When the app is running, this file can also downloaded from the [API documentation page](#api-documentation), under /odata-doc/{location}/openapi.json, where {location} is the location of the OData service (for instance, odata/myservice/v1).
+When the app is running, you can also download this file from the [API documentation page](#api-documentation), under /odata-doc/{location}/openapi.json, where {location} is the location of the OData service (for instance, odata/myservice/v1).
 
 ### 3.3 Security {#security}
 

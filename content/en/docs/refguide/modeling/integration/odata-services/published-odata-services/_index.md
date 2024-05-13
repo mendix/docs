@@ -15,7 +15,7 @@ A published OData service is a REST service with an OpenAPI contract, which mean
 The standard used for OData in Mendix is [OData v4](https://www.odata.org/documentation), which returns data in JSON format.
 
 {{% alert color="warning" %}}
-The option to publish [OData v3](https://www.odata.org/documentation/odata-version-3-0) services, which return data in Atom XML format, is deprecated and will be removed in a future version.
+The option to publish [OData v3](https://www.odata.org/documentation/odata-version-3-0) services, which returns data in Atom XML format, is deprecated and will be removed in a future version.
 {{% /alert %}}
 
 Not all parts of the standard are implemented. If something is not documented here, it has not yet been added.
@@ -123,7 +123,7 @@ The $metadata XML file contains the service's contract in OData's [CSDL](https:/
 
 The OpenAPI JSON file contains the service's REST contract in [OpenAPI 3.0](https://www.openapis.org/) format. This is a machine-readable file according to the OpenAPI Specification format. Most API tools support this format.
 
-When the app is running, you can also download this file from the [API documentation page](#api-documentation), under /odata-doc/{location}/openapi.json, where {location} is the location of the OData service (for instance, odata/myservice/v1).
+When the app is running, you can also download this file from the [API documentation page](#api-documentation), under `/odata-doc/{location}/openapi.json`, where `{location}` is the location of the OData service (for instance, `odata/myservice/v1)`.
 
 ### 3.3 Security {#security}
 

@@ -218,7 +218,7 @@ Two helper microflow are available to construct the `ImageCollection` with a lis
 * `ImageCollection_CreateAndAddImage` can be used to initialize a new `ImageCollection` and add a new `ChatCompletionImage` to it.
 * `ImageCollection_AddImage` can be used to add a new `ChatCompletionImage` to an existing `ImageCollection`.
 
-For `Chat Completions without History` the ImageCollection becomes is an optional input parmeter, while for `Chat Completions with History` the `ImageCollection` can optionally be added to individual user messages in `ChatCompletionsSession_AddMessage`.
+For `Chat Completions without History` the ImageCollection becomes is an optional input parameter, while for `Chat Completions with History` the `ImageCollection` can optionally be added to individual user messages in `ChatCompletionsSession_AddMessage`.
 
 {{% alert color="info" %}}
 Please note that OpenAI and Azure OpenAI for Vision do not yet provide the identical functionality. Azure OpenAI currently does not support the use of JSON mode and function calling in combination with image (vision) input.

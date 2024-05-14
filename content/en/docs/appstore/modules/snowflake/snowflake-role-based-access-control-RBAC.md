@@ -1,15 +1,15 @@
 ---
 title: "Snowflake Role-Based Access Control"
 url: /appstore/modules/snowflake/snowflake-role-based-access-control-RBAC/
-description: "Describes in steps how to use the Role-based Access control of Snowflake in a Mendix application."
+description: "Describes how to use the role-based access control of Snowflake in a Mendix application."
 weight: 20
-tags: ["snowflake", "rbac"]
+tags: ["snowflake", "rbac", "rest sql"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
 ## 1 Introduction
 
-[Snowflake’s Role-based access control (RBAC) (https://www.snowflake.com/trending/what-rbac/)]  approach allows you to assign privileges that define levels of access to data within Snowflake. To an object, to roles, which are then assigned to users or other roles. This model provides both control and flexibility, making it easier to manage access to data and resources within Snowflake. 
+Snowflake's [role-based access control (RBAC) (https://www.snowflake.com/trending/what-rbac/)] approach allows you to assign privileges that define levels of access to data within Snowflake. To an object, to roles, which are then assigned to users or other roles. This model provides both control and flexibility, making it easier to manage access to data and resources within Snowflake. 
 
 This is relevant when data is presented within Mendix applications, to ensure the data being exposed to a certain user or role within Snowflake is guaranteed to be the same as to when presented in a Mendix app to for the same user.
 
@@ -24,7 +24,7 @@ Remember, implementing RBAC is essential for maintaining security and managing a
 * Download the Rest SQL Connector for Mendix [Rest SQL Connector module](https://marketplace.mendix.com/link/component/225717 "https://marketplace.mendix.com/link/component/225717") from Mendix marketplace that supports Snowflake integration.
 * Ensure your Mendix app has the necessary domain model and entities.
 * For the Role-based access control the Connection Details is associated with the account
-{{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/Pic.1 Domain model.png" >}}
+{{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/domain-model.png" >}}
 
 ### 2.2 Key-Pair Authentication Method
 
@@ -36,12 +36,18 @@ Remember, implementing RBAC is essential for maintaining security and managing a
 * A new connection Details record is needed for every user that have access to Data at Snowflake. 
 * To apply Mendix best practices when it come to market place modules, and security, create a new account overview page where you can add the Connection details to the Users
 * When using the Key pair authentication a private key object is also needed to store the user's Private Key.
+  
   For more details about each step, refer to the official [Snowflake documentation](https://docs.snowflake.com/en/user-guide/key-pair-auth)
+
 * Below is an example of a microflow that gets a Connection details object associate with the account if it exist or creates one along with the private key object if it doesn’t.
-  {{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/Pic.2 Connection details get create microflow.png" >}}
-  {{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/Pic.3 Connection Details - Account.png" >}}
+  
+  {{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/connection-details-microflow.png" >}}
+  
+  {{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/connection-details-account.png" >}}
+
 * And a example of a microflow to redirect to the ConnectionDetails_NewEdit_Step1 page
-{{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/Pic.4 Open Connection Details_NewEdit_Step1.png" >}}
+
+{{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/connection-details-newedit.png" >}}
 
 ### 2.4 Connection Details at End User Level
 
@@ -56,7 +62,7 @@ To interact with Snowflake, SQL queries need to be executed. To execute the SQL 
 ### 3.1 Create a microflow or Nanoflow that performs the following steps:
 
 * In the microflow create an object "Statement" this object contains the necessary fields needed for a statement
-{{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/Pic.5 Create Statement Object.png" >}}
+{{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/create-statement-object.png" >}}
 * SQL Statement: this is the field that will contains your SQL Query for example, to select the item and region data from "Example_RBAC" table write the following in the SQL statement
 ```SQL
 SELECT ITEM,
@@ -72,16 +78,22 @@ is in "Example_RBAC" Database, the "RBAC_Schema" and the "COMPUTE_WH" then the i
 * In your statement entity, you can specify the Role (Snowflake user role) to be used for executing the query.
 * If the role is left empty, the statement will be executed with the user’s default user role in Snowflake. 
 * Remember that the user will only have access to the warehouse, schema, database, and data granted to their assigned user role.
+
 ### 3.3 Retrieve connection details
+
 Next in line action in the execute statement microflow should be the retrieve "Connection Details" action. 
 To apply the RBAC the connection details should be the ones associate with the current user account so that the user will be able to access the data that is allowed in Snowflake
 To retrieve the "Connection Details" associated with the "current user" use the XPath: [SnowflakeRESTSQL.ConnectionDetails_Account = $currentUser]
-{{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/Pic.6 Retrieve Current Account Connection details.png" >}}
+
+{{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/retrieve-details.png" >}}
+
 ### 3.4 Execute Statement
 * Execute the statement using the execute statement action provided by the [Rest SQL Connector (https://docs.mendix.com/appstore/connectors/snowflake/snowflake-rest-sql/)].
 * At Statement field add the Statement\s action outcome
 * At the Connection Details add the Connection details' action outcome
+
 {{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/Pic.7 Execute Statement.png" >}}
+
 ### 3.5 Map the HttpResponse List 
 
 The Http Response can be mapped if needed to Mx Objects 

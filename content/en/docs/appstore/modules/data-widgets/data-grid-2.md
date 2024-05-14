@@ -303,7 +303,9 @@ In this section you can select an action to be executed **On change** by the fil
 
 {{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/dropdown-filter-settings.png" alt="Example of settings for drop-down filter" class="no-border" >}}
 
+{{% alert color="info" %}}
 When a drop-down filter is used in conjunction with an Association Filter data grid configuration, only **Automatic options** are supported. Any custom options will be ignored. To enable association filtering, see the [Association Filter](#association-filter) section.
+{{% /alert %}}
 
 When adding a new option, the following properties are required:
 
@@ -331,6 +333,10 @@ If **Multiselect** is enabled you must select a String attribute containing `Unl
 #### 7.2.2 Events
 
 In this section you can select an action to be executed **On change** by the filter value. This means every time the user types or selects a value it will be executed.
+
+{{% alert color="warning" %}}
+Due to current limitations, **Saved attribute**, **Default value** and **On change** properties will be ignored when a drop-down filter is used in conjunction with an Association Filter data grid configuration.
+{{% /alert %}}
 
 ### 7.3 Number Filter
 

@@ -11,16 +11,16 @@ tags: ["build", "deploy", "deployment package", "command-line", "studio pro", "s
 When building a Mendix app, you make use of a lot of re-usable components such as Widgets, Appstore modules and more. These in turn make use of components such as java libraries, node modules, etc. You want to be aware of what you use in your app, what other components they are dependent on and what licenses they make use of. Also, over time these components may become outdated, or become vulnerable. To ensure you are following all the development practices you would like to adhere to with regards to components, you need to have this information in a ready-to-use and standard format. Studio Pro does this by generating a Software Bill of Materials (SBOM) based on the standardized CycloneDX format.
 
 ## 2 Generating an SBOM
-You can generate an SBOM by using [mxbuild](/refguide/general/mxbuild). This generates an `sbom.json` file as part of your deployment folder or your package `.mda`. Bundling the SBOM together with your deployment ensures that the components that were present during the build are clearly represented.
+You can generate an SBOM by using [mxbuild](/refguide/mxbuild/). This generates an `sbom.json` file as part of your deployment folder or your package `.mda`. Bundling the SBOM together with your deployment ensures that the components that were present during the build are clearly represented.
 
 ```bat
 mxbuild --java-home="C:\Program Files\Eclipse Adoptium\jdk-11.0.16.101-hotspot" --java-exe-path="C:\Program Files\Eclipse Adoptium\jdk-11.0.16.101-hotspot\bin\java.exe" --generate-sbom  "C:\Mendix\MyApp\MyApp.mpr"
 ```
 
-## 3 SBOM format
+## 3 SBOM Format
 The SBOM is based on the [CycloneDX 1.4 JSON format](https://cyclonedx.org/docs/1.4/json/). Required fields are delivered, and fields such as `version`, `description`. To identify the components from different package managers in a clear way, we use the `purl` field. The content follows the specification defined at: https://github.com/package-url/purl-spec. This includes Mendix modules, NPM packages and Java libraries. 
 
-## 4 Example output
+## 4 Example Output
 Since a full SBOM contains all project details, this is only a partial representation of a full example. To simplify we only show one of the java libraries that is packaged, but a full example would also contain all appstore modules, java libraries and javascript libraries under components. The field `dependencies` will contain the dependency relationship between the separate components.
 
 ```json
@@ -68,7 +68,7 @@ Since a full SBOM contains all project details, this is only a partial represent
 
 ```
 
-## 5 Supported features
+## 5 Supported Features
 This describes what components are currently covered in the generated SBOM, and from what version. We currently recommend you use version `10.10`, `9.24.22` or `10.6.9` and above.
 
 | Feature | Description | Version

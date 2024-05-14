@@ -409,16 +409,16 @@ For more information on how to manage tokens for text generation, see [Managing 
 
 ##### 4.1.3.5 `ImageCollection` {#imagecollection}
 
-`ImageCollection` is a wrapper for an optional list of images to be sent along with the ChatCompletionsMessageRequest to use vision. ImageCollections can only be sent along messages with role `User`.
+`ImageCollection` is a wrapper for an optional list of images to be sent along with the `ChatCompletionsMessageRequest` to use vision. `ImageCollections` can only be sent along messages with role `User`.
 
 ##### 4.1.3.6 `ChatCompletionsImage` {#chatcompletionsimage}
 
 `ChatCompletionsImage` is an image that is part of the `ChatCompletionsMessageRequest`. Only applicable for messages with role user.
 
-| Attribute          | Description                                                  |
-| ------------------ | ------------------------------------------------------------ |
-| `ImageContent`     | Image content is either a URL of the image or the base64-encoded image data. |
-| `Detail`           | This optional attribute specifies the detail level of the image. <br />For more information, see the [ENUM_ImageDetail](#enum-imagedetail) section. Defaults to `auto`. |
+| Attribute      | Description                                                  |
+| -------------- | ------------------------------------------------------------ |
+| `ImageContent` | Image content is either a URL of the image or the base64-encoded image data. |
+| `Detail`       | This optional attribute specifies the detail level of the image. <br />For more information, see the [ENUM_ImageDetail](#enum-imagedetail) section. Defaults to `auto`. |
 
 ##### 4.1.3.7 `ToolCall` {#toolcall}
 
@@ -696,11 +696,11 @@ An enumeration is a predefined list of values that can be used as an attribute t
 
 `ENUM_ImageDetail` specifies the detail level of the image. For more information, see [low or high fidelity image understanding](https://platform.openai.com/docs/guides/vision/low-or-high-fidelity-image-understanding).
 
-| Name          | Caption        | Description                                                             |
-| ------------- | -------------- | ----------------------------------------------------------------------- |
-| `auto`        | **auto**       | By default, the model will use the "auto" setting which will consider the image input size and decide whether it should use the `low` or `high` setting.  |
-| `low`         | **low**        | `low` will enable the "low res" mode. The model will receive a low-resolution 512px x 512px version of the image, and represent the image with a budget of 65 tokens. This allows the API to return faster responses and consume fewer input tokens for use cases that do not require high detail.   |
-| `high`        | **high**       | `high` will enable "high res" mode, which first allows the model to see the low-resolution image and then creates detailed crops of input images as 512px squares based on the input image size. Each of the detailed crops uses twice the token budget (65 tokens) for a total of 129 tokens. |
+| Name   | Caption  | Description                                                  |
+| ------ | -------- | ------------------------------------------------------------ |
+| `auto` | **auto** | By default, the model will use the `auto` setting which will consider the image input size and decide whether it should use the `low` or `high` setting. |
+| `low`  | **low**  | `low` will enable the "low res" mode. The model will receive a low-resolution 512 px x 512 px version of the image, and represent the image with a budget of 65 tokens. This allows the API to return faster responses and consume fewer input tokens for use cases that do not require high detail. |
+| `high` | **high** | `high` will enable the "high res" mode, which first allows the model to see the low-resolution image and then creates detailed crops of input images as 512 px squares based on the input image size. Each of the detailed crops uses twice the token budget (65 tokens) for a total of 129 tokens. |
 
 #### 4.2.3 Image Generations {#imagegenerations-enumerations}
 

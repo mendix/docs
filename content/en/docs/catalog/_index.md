@@ -79,4 +79,4 @@ The information that is registered for data sources and exposed datasets are as 
 
 Mendix Admins can assign and manage **Curators**, **Owners**, and **External Users**, and control discoverability settings. For more information, see [Catalog Administration](/control-center/catalog-admin/).
 
-## 5 Documents in This Category
+## 5 Guide Categories

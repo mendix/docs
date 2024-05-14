@@ -9,7 +9,7 @@ tags: ["snowflake", "rbac", "rest sql"]
 
 ## 1 Introduction
 
-Snowflake's [role-based access control (RBAC) (https://www.snowflake.com/trending/what-rbac/)] approach allows you to assign privileges that define levels of access to data within Snowflake. To an object, to roles, which are then assigned to users or other roles. This model provides both control and flexibility, making it easier to manage access to data and resources within Snowflake. 
+Snowflake's [role-based access control (RBAC)](https://www.snowflake.com/trending/what-rbac/) approach allows you to assign privileges that define levels of access to data within Snowflake. To an object, to roles, which are then assigned to users or other roles. This model provides both control and flexibility, making it easier to manage access to data and resources within Snowflake. 
 
 This is relevant when data is presented within Mendix applications, to ensure the data being exposed to a certain user or role within Snowflake is guaranteed to be the same as to when presented in a Mendix app to for the same user.
 
@@ -21,7 +21,7 @@ Remember, implementing RBAC is essential for maintaining security and managing a
 
 ### 2.1 Prerequisites
 
-* Download the Rest SQL Connector for Mendix [Rest SQL Connector module](https://marketplace.mendix.com/link/component/225717 "https://marketplace.mendix.com/link/component/225717") from Mendix marketplace that supports Snowflake integration.
+* Download the Rest SQL Connector for Mendix [Rest SQL Connector module](https://marketplace.mendix.com/link/component/225717) from Mendix marketplace that supports Snowflake integration.
 * Ensure your Mendix app has the necessary domain model and entities.
 * For the Role-based access control the Connection Details is associated with the account
 {{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/domain-model.png" >}}
@@ -29,7 +29,7 @@ Remember, implementing RBAC is essential for maintaining security and managing a
 ### 2.2 Key-Pair Authentication Method
 
 * Decide on the authentication method. Since we’re using Snowflake, consider using key-pair authentication.
-* Configure the necessary keys and credentials in your Snowflake account based on the [documentation(https://docs.snowflake.com/en/user-guide/key-pair-auth)] and make sure to assign the public Key to a Snowflake user.
+* Configure the necessary keys and credentials in your Snowflake account based on the [documentation](https://docs.snowflake.com/en/user-guide/key-pair-auth) and make sure to assign the public Key to a Snowflake user.
 
 ### 2.3 Create Connection Details object and Associate it with the Account
 
@@ -88,6 +88,7 @@ To retrieve the "Connection Details" associated with the "current user" use the 
 {{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/retrieve-details.png" >}}
 
 ### 3.4 Execute Statement
+
 * Execute the statement using the execute statement action provided by the [Rest SQL Connector (https://docs.mendix.com/appstore/connectors/snowflake/snowflake-rest-sql/)].
 * At Statement field add the Statement\s action outcome
 * At the Connection Details add the Connection details' action outcome
@@ -113,133 +114,146 @@ The Transform Responses action creates a single table with the HTTP Response dat
 
 The follow up is an example of how to set up Role-Based Access Control (RBAC) on Snowflake for two test users and view the same data in a Mendix app for the equivalent test users following the steps above.
 
-### 4.1 Prerequisites 
+### 4.1 Prerequisites
+
 * A user in Snowflake platform with account administrator privileges
 * A public key from ### 2.2 
 
 ### 4.2 Snowflake  
 
-For further details please check the Snowflake [documentation (https://docs.snowflake.com/sql-reference]
+For further details please check the Snowflake [documentation](https://docs.snowflake.com/sql-reference)
+
 * Create 2 roles in Snowflake Role Test A and Role Test B
-```SQL
-CREATE ROLE ROLETESTA;
-CREATE ROLE ROLETESTB;
-```
+
+    ```SQL
+    CREATE ROLE ROLETESTA;
+    CREATE ROLE ROLETESTB;
+    ```
 * Create Two users Test User 1 and Test User 2
 
-```SQL
-CREATE OR REPLACE USER TestUser1
-PASSWORD = 'TestPass1'
-LOGIN_NAME = 'TestUser1'
-FIRST_NAME = 'TestUser'
-LAST_NAME = 'Testuser'
-EMAIL = 'TestUser1@email.com'
-MUST_CHANGE_PASSWORD = false //only for testing 
-DEFAULT_WAREHOUSE = COMPUTE_WH;
+    ```SQL
+    CREATE OR REPLACE USER TestUser1
+    PASSWORD = 'TestPass1'
+    LOGIN_NAME = 'TestUser1'
+    FIRST_NAME = 'TestUser'
+    LAST_NAME = 'Testuser'
+    EMAIL = 'TestUser1@email.com'
+    MUST_CHANGE_PASSWORD = false //only for testing 
+    DEFAULT_WAREHOUSE = COMPUTE_WH;
 
-CREATE OR REPLACE USER TestUser2
-PASSWORD = 'TestPass2'
-LOGIN_NAME = 'TestUser2'
-FIRST_NAME = 'TestUser2'
-LAST_NAME = 'Testuser2'
-EMAIL = 'TestUser2@email.com'
-MUST_CHANGE_PASSWORD = false //only for testing 
-DEFAULT_WAREHOUSE = COMPUTE_WH;
-```
+    CREATE OR REPLACE USER TestUser2
+    PASSWORD = 'TestPass2'
+    LOGIN_NAME = 'TestUser2'
+    FIRST_NAME = 'TestUser2'
+    LAST_NAME = 'Testuser2'
+    EMAIL = 'TestUser2@email.com'
+    MUST_CHANGE_PASSWORD = false //only for testing 
+    DEFAULT_WAREHOUSE = COMPUTE_WH;
+    ```
+
 * Assign one role to each user
   
-```SQL
-GRANT ROLE ROLETESTA TO USER Testuser1; 
-GRANT ROLE ROLETESTB TO USER Testuser2;
-```
+    ```SQL
+    GRANT ROLE ROLETESTA TO USER Testuser1; 
+    GRANT ROLE ROLETESTB TO USER Testuser2;
+    ```
 * Make each user role default for each user
-```SQL 
-ALTER USER TESTUSER1 SET DEFAULT_ROLE = ROLETESTA;
-ALTER USER TESTUSER2 SET DEFAULT_ROLE = ROLETESTB;
-```
+
+    ```SQL 
+    ALTER USER TESTUSER1 SET DEFAULT_ROLE = ROLETESTA;
+    ALTER USER TESTUSER2 SET DEFAULT_ROLE = ROLETESTB;
+    ```
 
 * Create an example  database
 
-Use the following statement to create  a test database named Example_RBAC , schema named RBAC_Schema a table named Example RBAC and add data to the table
+    Use the following statement to create  a test database named Example_RBAC , schema named RBAC_Schema a table named Example RBAC and add data to the table
 
-```SQL
-Create Database Example_RBAC;
-CREATE SCHEMA Example_RBAC.RBAC_schema;
-USE SCHEMA Example_RBAC.RBAC_schema;
-CREATE OR REPLACE TABLE Example_RBAC (
-  store_id NUMBER, item VARCHAR, region VARCHAR);
-use warehouse COMPUTE_WH;
-INSERT INTO Example_RBAC VALUES
-  (1, 'jacket', 'EU'),
-  (1, 'PC', 'EU'),
-  (1, 'jacket', 'EU'),
-  (1, 'XBOX', 'EU'),
-  (1, 'jacket', 'EU'),
-  (1, 'XBOx', 'EU'),
-  (1, 'jacket', 'US'),
-  (1, 'jacket', 'US'),
-  (1, 'jacket', 'US'),
-  (1, 'jacket', 'US'),
-  (1, 'PC', 'US'),
-  (1, 'jacket', 'US'),
-  (1, 'jacket', 'US'),
-  (1, 'jacket', 'ASIA'),
-  (2, 'umbrella', 'EU'),
-  (2, 'umbrella','EU'),
-  (2, 'umbrella', 'EU'),
-  (2, 'umbrella', 'EU'),
-  (2, 'umbrella', 'EU'),
-  (2, 'umbrella', 'EU'),
-  (2, 'umbrella','EU'),
-  (2, 'umbrella', 'EU'),
-  (2, 'umbrella', 'US'),
-  (2, 'umbrella', 'US'),
-  (2, 'umbrella', 'US'),
-  (2, 'umbrella', 'US'),
-  (2, 'umbrella', 'ASIA'),
-  (2, 'umbrella', 'ASIA');
-```
+    ```SQL
+    Create Database Example_RBAC;
+    CREATE SCHEMA Example_RBAC.RBAC_schema;
+    USE SCHEMA Example_RBAC.RBAC_schema;
+    CREATE OR REPLACE TABLE Example_RBAC (
+      store_id NUMBER, item VARCHAR, region VARCHAR);
+    use warehouse COMPUTE_WH;
+    INSERT INTO Example_RBAC VALUES
+      (1, 'jacket', 'EU'),
+      (1, 'PC', 'EU'),
+      (1, 'jacket', 'EU'),
+      (1, 'XBOX', 'EU'),
+      (1, 'jacket', 'EU'),
+      (1, 'XBOx', 'EU'),
+      (1, 'jacket', 'US'),
+      (1, 'jacket', 'US'),
+      (1, 'jacket', 'US'),
+      (1, 'jacket', 'US'),
+      (1, 'PC', 'US'),
+      (1, 'jacket', 'US'),
+      (1, 'jacket', 'US'),
+      (1, 'jacket', 'ASIA'),
+      (2, 'umbrella', 'EU'),
+      (2, 'umbrella','EU'),
+      (2, 'umbrella', 'EU'),
+      (2, 'umbrella', 'EU'),
+      (2, 'umbrella', 'EU'),
+      (2, 'umbrella', 'EU'),
+      (2, 'umbrella','EU'),
+      (2, 'umbrella', 'EU'),
+      (2, 'umbrella', 'US'),
+      (2, 'umbrella', 'US'),
+      (2, 'umbrella', 'US'),
+      (2, 'umbrella', 'US'),
+      (2, 'umbrella', 'ASIA'),
+      (2, 'umbrella', 'ASIA');
+    ```
+
 * Grant Usage to the Warehouse, database, Schema and table for the user roles RoleTest A and Role Test B
-```SQL
-GRANT USAGE ON WAREHOUSE COMPUTE_WH to role ROLETESTA;
-GRANT USAGE ON WAREHOUSE COMPUTE_WH to role ROLETESTB;
-GRANT USAGE ON DATABASE EXAMPLE_RBAC to role ROLETESTA;
-GRANT USAGE ON DATABASE EXAMPLE_RBAC to role ROLETESTB;
-GRANT USAGE ON SCHEMA EXAMPLE_RBAC.RBAC_SCHEMA to role ROLETESTA;
-GRANT USAGE ON SCHEMA EXAMPLE_RBAC.RBAC_SCHEMA to role ROLETESTB;
-GRANT SELECT ON TABLE EXAMPLE_RBAC.RBAC_SCHEMA.EXAMPLE_RBAC to role ROLETESTA;
-GRANT SELECT ON table EXAMPLE_RBAC.RBAC_SCHEMA.EXAMPLE_RBAC to role ROLETESTB;
-```
+
+    ```SQL
+    GRANT USAGE ON WAREHOUSE COMPUTE_WH to role ROLETESTA;
+    GRANT USAGE ON WAREHOUSE COMPUTE_WH to role ROLETESTB;
+    GRANT USAGE ON DATABASE EXAMPLE_RBAC to role ROLETESTA;
+    GRANT USAGE ON DATABASE EXAMPLE_RBAC to role ROLETESTB;
+    GRANT USAGE ON SCHEMA EXAMPLE_RBAC.RBAC_SCHEMA to role ROLETESTA;
+    GRANT USAGE ON SCHEMA EXAMPLE_RBAC.RBAC_SCHEMA to role ROLETESTB;
+    GRANT SELECT ON TABLE EXAMPLE_RBAC.RBAC_SCHEMA.EXAMPLE_RBAC to role ROLETESTA;
+    GRANT SELECT ON table EXAMPLE_RBAC.RBAC_SCHEMA.EXAMPLE_RBAC to role ROLETESTB;
+    ```
+
 * Create a Row base access policy for that will limit the use of the data for RoleTestA only to EU region and 
 for the RoleTestB only to US
-```SQL
-CREATE OR REPLACE ROW ACCESS POLICY RegionRole
-AS (region varchar) RETURNS BOOLEAN -> case 
-when region = 'EU' and 'ROLETESTA' = current_role()  then true 
-when region = 'US' and 'ROLETESTB' = current_role()  then true else false end
-;
-```
+
+    ```SQL
+    CREATE OR REPLACE ROW ACCESS POLICY RegionRole
+    AS (region varchar) RETURNS BOOLEAN -> case 
+    when region = 'EU' and 'ROLETESTA' = current_role()  then true 
+    when region = 'US' and 'ROLETESTB' = current_role()  then true else false end
+    ;
+    ```
 
 * Assign Ownership of the role base policy to the accountadmin role, grant the apply action of the policy to the roles
-```SQL
-GRANT OWNERSHIP ON ROW ACCESS POLICY RegionRole TO AccountAdmin;
 
-GRANT APPLY ON ROW ACCESS POLICY RegionRole TO ROLE ROLETESTA;
-GRANT APPLY ON ROW ACCESS POLICY RegionRole TO ROLE ROLETESTB;
-```
+    ```SQL
+    GRANT OWNERSHIP ON ROW ACCESS POLICY RegionRole TO AccountAdmin;
+
+    GRANT APPLY ON ROW ACCESS POLICY RegionRole TO ROLE ROLETESTA;
+    GRANT APPLY ON ROW ACCESS POLICY RegionRole TO ROLE ROLETESTB;
+    ```
   
 * Assign the access policy to the example table
-```SQL
-ALTER TABLE EXAMPLE_RBAC ADD ROW ACCESS POLICY RegionRole ON (Region);
-```
+
+    ```SQL
+    ALTER TABLE EXAMPLE_RBAC ADD ROW ACCESS POLICY RegionRole ON (Region);
+    ```
  
 * Login with the Test user 1 
 * Execute the statement
-  ```SQL
-  SELECT ITEM,
-       Region, 
-  FROM EXAMPLE_RBAC;
-  ```
+
+    ```SQL
+    SELECT ITEM,
+        Region, 
+    FROM EXAMPLE_RBAC;
+    ```
+
 * Check the result
 
 {{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/test-user1-snowflake.png" >}}
@@ -254,7 +268,7 @@ ALTER TABLE EXAMPLE_RBAC ADD ROW ACCESS POLICY RegionRole ON (Region);
 
 * Create and assign the public key and the private key to the equivalent users in Snowflake   
 
-* Login with each user separately.
+* Log in with each user separately.
 *  Compare results with each user and also with the results from snowflake
 
 {{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/test-user2-snowflake.png" >}}

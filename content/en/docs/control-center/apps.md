@@ -27,7 +27,7 @@ By default you only see apps and their production environments. Turn off the **P
 
 You can customize the columns of the table by clicking the column selector (the {{% icon name="view" %}} icon) on the upper-right corner of the table. The items selected are shown as columns in the table.
 
-{{< figure src="/attachments/control-center/apps/column-selection-public-cloud.png" >}}
+{{< figure src="/attachments/control-center/apps/column-selection-public-cloud.png" class="no-border" >}}
 
 The description of the items that you can select are as follows:
 
@@ -69,11 +69,11 @@ You can export apps to an Excel file. For details, see the [Exporting Apps to an
 
 ## 3 Mendix Free Cloud
 
-The **Mendix Free** Cloud tab shows all the free apps that are deployed on the Mendix Cloud.
+The **Mendix Free Cloud** tab shows all the free apps that are deployed on the Mendix Cloud.
 
 You can customize the columns of the table by clicking the column selector (the {{% icon name="view" %}} icon) on the upper-right corner of the table. The items selected are shown as columns in the table.
 
-{{< figure src="/attachments/control-center/apps/column-selection-free-cloud.png" >}}
+{{< figure src="/attachments/control-center/apps/column-selection-free-cloud.png" class="no-border" >}}
 
 The description of the items that you can select are as follows:
 
@@ -123,7 +123,7 @@ We are working on giving private clouds a separate tab. Stay tuned.
 
 You can customize the columns of the table by clicking the column selector (the {{% icon name="view" %}} icon) on the upper-right corner of the table. The items selected are shown as columns in the table.
 
-{{< figure src="/attachments/control-center/apps/column-selection-other-apps.png" >}}
+{{< figure src="/attachments/control-center/apps/column-selection-other-apps.png" class="no-border" >}}
 
 The description of the items that you can select are as follows:
 
@@ -150,7 +150,7 @@ The **Deactivated Apps** tab shows all the deactivated apps that belong to your 
 
 You can customize the columns of the table by clicking the column selector (the {{% icon name="view" %}} icon) on the upper-right corner of the table. The items selected are shown as columns in the table.
 
-{{< figure src="/attachments/control-center/apps/column-selection-deactivated-apps.png" >}}
+{{< figure src="/attachments/control-center/apps/column-selection-deactivated-apps.png" class="no-border" >}}
 
 The description of the items that you can select are as follows:
 
@@ -178,15 +178,15 @@ On each tab with an table of apps, you can find filters on the top, which allows
 
 With the filter as shown below, you can search for string matches on any of the string fields in the table, for example, the app ID, app name, or environment name. Clicking the button on the left allows you to use comparisons and string operations, such as **Contains**, **Starts with**, and **Greater than**. (This filter is available on the **Mendix Cloud**, **Mendix Free Cloud**, and **Other Apps** tabs.)
 
-{{< figure src="/attachments/control-center/apps/filter-apps.png" >}}
+{{< figure src="/attachments/control-center/apps/filter-apps.png" class="no-border" >}}
 
 With the filter as shown below, you can filter apps by the date of the last commit. Clicking the button on the left allows you to use comparisons and string operations, such as **Between** and **Empty**. (This filter is available on the **Mendix Cloud**, **Mendix Free Cloud**, **Other Apps**, and **Deactivated Apps** tabs.)
 
-{{< figure src="/attachments/control-center/apps/filter-last-commit.png" >}}
+{{< figure src="/attachments/control-center/apps/filter-last-commit.png" class="no-border" >}}
 
 The filter shown as below allows you to filter apps by **Deployed Status**. (This filter is only available on the **Mendix Cloud** tab.)
 
-{{< figure src="/attachments/control-center/apps/filter-mendix-cloud.png" >}}
+{{< figure src="/attachments/control-center/apps/filter-mendix-cloud.png" class="no-border" >}}
 
 ## 7 Viewing App Details {#app-details}
 
@@ -215,11 +215,11 @@ The consequences of deactivating and deleting an app are as below:
 
 |                                                             | Deactivating an App                                          | Deleting an App                                              |
 | ----------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| App code repository stays persistent                        | {{< figure src="/attachments/control-center/apps/check-mark.svg" >}} | {{< figure src="/attachments/control-center/apps/cross-mark.svg" >}} |
-| App team members can access the app code repository         | {{< figure src="/attachments/control-center/apps/cross-mark.svg" >}} | {{< figure src="/attachments/control-center/apps/cross-mark.svg" >}} |
-| App stays persistent                                        | {{< figure src="/attachments/control-center/apps/check-mark.svg" >}} | {{< figure src="/attachments/control-center/apps/cross-mark.svg" >}} |
-| App team members can access the app in the Developer Portal | {{< figure src="/attachments/control-center/apps/cross-mark.svg" >}} | {{< figure src="/attachments/control-center/apps/cross-mark.svg" >}} |
-| Cloud environment stays persistent                          | {{< figure src="/attachments/control-center/apps/cross-mark.svg" >}} | {{< figure src="/attachments/control-center/apps/cross-mark.svg" >}} |
+| App code repository stays persistent                        | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
+| App team members can access the app code repository         | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
+| App stays persistent                                        | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
+| App team members can access the app in the Developer Portal | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
+| Cloud environment stays persistent                          | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
 
 {{% alert color="info" %}}
 Deleting and deactivating apps is currently not supported for licensed apps or apps that are not running on Mendix Cloud. Therefore, you do not see these options on the **Mendix Cloud** tab; and you also do not see these options on the **Other Apps** tab if you select apps that are deployed on a private cloud.

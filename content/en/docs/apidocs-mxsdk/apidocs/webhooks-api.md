@@ -35,7 +35,7 @@ Select the following as scopes:
 
 Store the generated value `{GENERATED_PAT}` somewhere safe so you can use it to authorize your Mendix Cloud Webhooks API calls.
 
-### 2.2 Using the PAT
+### 2.2 Using the PAT {#use-pat}
 
 Each request must contain an `Authorization` header with the value `MxToken {GENERATED_PAT}`. For example:
 

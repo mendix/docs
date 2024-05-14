@@ -30,7 +30,7 @@ To add an image collection, do the following.
 
 You can perform the following actions within image collections using the icons at the top of the image collection tab.
 
-{{< figure src="/attachments/refguide/modeling/pages/page-resources/image-collection/actions.png" alt="Image collection actions" >}}
+{{< figure src="/attachments/refguide/modeling/pages/page-resources/image-collection/actions.png" alt="Image collection actions" class="no-border" >}}
 
 Some of the actions can be applied to multiple images. You can select all images with <kbd>Ctrl</kbd>+<kbd>A</kbd>, or multiple images by combining your click with <kbd>Ctrl</kbd> or <kbd>Shift</kbd>.
 

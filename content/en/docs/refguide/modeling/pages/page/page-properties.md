@@ -70,7 +70,7 @@ For example, in the URL `product/{Product/Name}` the `Name` attribute of the pag
 
 Next to this, you can use `Id` as an attribute to include the identifier of the entity in the URL. This would appear as `product/{Product/Id}` for example. In the page URL dialog box, the configured URL is shown together with an example URL (with example values filled in for the parameters), and also shows which XPath queries the runtime will use to retrieve the page parameters. See this example URL in a dialog box:
 
-{{< figure src="/attachments/refguide/modeling/pages/page/page-url-dialog.png" alt="page url dialog" >}}
+{{< figure src="/attachments/refguide/modeling/pages/page/page-url-dialog.png" alt="page url dialog" class="no-border" >}}
 
 {{% alert color="warning" %}}
 Page URLs are not supported for pages that have non-persistable entities as parameters

@@ -69,7 +69,7 @@ You can find these log entries by looking for the following phrase in your appli
 
 ### 4.1 The Number of Database Connections{#num-connections}
 
-The settings below are used to define the database connection pooling behavior. The Runtime uses a pool of reusable database connections. You can, for example, define how many connections can be used. Connection pooling is implemented using the [Apache Commons Object-pooling API](http://commons.apache.org/pool/).
+The settings below are used to define the database connection pooling behavior. The Runtime uses a pool of reusable database connections. You can, for example, define how many connections can be used. Connection pooling is implemented using the [Apache Commons Object-pooling API](https://commons.apache.org/pool/).
 
 | Name | Value | Default value |
 | --- | --- | --- |

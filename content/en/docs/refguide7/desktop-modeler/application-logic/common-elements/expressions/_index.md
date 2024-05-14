@@ -1,6 +1,7 @@
 ---
 title: "Expressions"
 url: /refguide7/expressions/
+canonical_url: "https://docs.mendix.com/refguide/expressions/"
 description: "Describes the expressions that can be used in Mendix for a variety of purposes (for example, to change a member of an object based on logic)."
 aliases:
     - /refguide7/microflow-expressions.html

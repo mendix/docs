@@ -17,7 +17,69 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 ## 2024
 
-### March 06
+### May 5
+
+#### New features
+
+* We have released a public beta version of a brand new [Projects API](/apidocs-mxsdk/apidocs/projects-api/). This API will help you automate managing your projects on the platform. Some of its key features are as follows: creating and deleting projects, and managing your project's team. We will add more features in the coming months. This is an important self-service feature. All feedback is welcome!
+
+#### Fixes
+
+* We fixed an issue where app team members were unable to download [documents](/developerportal/general/documents/) uploaded to the Developer Portal.
+* We fixed an issue where the app administrator was not able to change the [logo of an app](/developerportal/collaborate/general-settings/#general).
+* We fixed an issue where under certain circumstances the [Technical Contact](/developerportal/general/app-roles/#technical-contact) of an app was not displayed correctly.
+
+### May 1 {#may-1-24}
+
+#### New Features
+
+* The [Jira connector](/developerportal/project-management/jira-connector/) is now released for GA.
+
+### April 25
+
+#### Improvements
+
+* The [Feedback API](/apidocs-mxsdk/apidocs/feedback-api-v2/) now returns the list of tags linked to a feedback.
+* It is now possible to retrieve all feedback through the Feedback API for a certain email address.
+* [Feedback](/developerportal/app-insights/feedback/) is now exported in a CSV file format.
+
+### April 4
+
+#### New Features
+
+* In Feedback, everyone from the app team now can manage their own feedback notifications preferences by [turning on or off the notifications](/developerportal/app-insights/feedback/#notifications) for all incoming feedback. You can also choose to [watch or unwatch one specific feedback item](/developerportal/app-insights/feedback/#notifications-individual-feedback), if you do not want to be notified for all incoming feedback.
+
+#### Improvements
+
+* In Feedback, we have fixed an issue where the reporter's name appeared empty on the **Contact Reporter** tab. Now if there is no reporter's name available, their email address will be shown instead. 
+* We released the following improvements for [Mini survey](/developerportal/app-insights/mini-surveys/):
+    * We improved your experience of copying the generated API key by implementing a new widget on the [Settings](/developerportal/app-insights/mini-surveys/#settings) tab of the **Survey Overview** page.
+    * We improved our error messages by providing more details.
+
+### March 28
+
+#### New Features
+
+* We made the following improvements to [Portfolio Management](/developerportal/portfolio-management/):
+    * On the **Archive** page, you can now filter and export the archived initiatives.
+    * We have extended the existing filters for initiatives.
+    * We added a new field **Location** to initiatives, which shows where the department of the requester is located. Now you can also see this field in the Excel file when you export initiatives.
+
+### March 21
+
+#### Fixes
+
+* We have fixed a bug in [Epics](/developerportal/project-management/epics/) that caused the cursor in text editors to jump to a different place unexpectedly. This problem happened in text editors for story descriptions, epic descriptions, and comments.
+
+  There is a small trade-off though, since we replaced the text editor widget completely, it will not be possible to link stories using a # anymore. Your existing links will become plain text that still contain story ID and title. Copying and pasting the link to the story can be used as a workaround in the meantime.
+
+### March 16
+
+#### Improvements
+
+* We added the **Contributor** access role in [Portfolio Management](/developerportal/portfolio-management/access-management/), and we renamed the **User** access role to **Viewer**.
+
+### March 6
 
 #### Deprecations
 
@@ -80,7 +142,7 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 * We added the following new features in [Portfolio Management](/developerportal/portfolio-management/):
 
-    * You can now check initiatives in the [planning view](/developerportal/portfolio-management/#planning-view). In this view, the initiatives are shown on one timeline, with each timeline bar presenting an initiative.
+    * You can now check initiatives in the [planning view](/developerportal/portfolio-management/initiatives-overview/#planning-view). In this view, the initiatives are shown on one timeline, with each timeline bar presenting an initiative.
 
     * You can now link multiple apps to an initiative. It is also possible to link epics from different apps to an initiative.
 
@@ -119,14 +181,14 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 We have made the following improvements to the **Access Management** page in Portfolio Management:
 
-* On the [Members](/developerportal/portfolio-management/#members) tab, the **Status** column in the list now shows whether a user is active or deactivated. Moreover, you can remove all the deactivated users from a portfolio in one go.
-* All the pending invites now appear on the [Pending Invites](/developerportal/portfolio-management/#pending-invites) tab.
+* On the [Members](/developerportal/portfolio-management/access-management/#members) tab, the **Status** column in the list now shows whether a user is active or deactivated. Moreover, you can remove all the deactivated users from a portfolio in one go.
+* All the pending invites now appear on the [Pending Invites](/developerportal/portfolio-management/access-management/#pending-invites) tab.
 
 ### November 23, 2023
 
 #### New Features
 
-* In [Portfolio Management](/developerportal/portfolio-management/), you can now [link epics to an initiative](/developerportal/portfolio-management/#link-epics).
+* In [Portfolio Management](/developerportal/portfolio-management/), you can now [link epics to an initiative](/developerportal/portfolio-management/initiatives-overview/#link-epics).
 
 ### November 17, 2023
 
@@ -144,6 +206,10 @@ We have made the following improvements to the **Access Management** page in Por
 #### Improvements
 
 * We made some minor adjustments to the [Jira Connector](/developerportal/project-management/jira-connector/) based on your feedback. The list of Jira issues in Studio Pro is now ordered by the story key, instead of the Jira rank attribute. We also made the configuration pop-up window that appears when setting up your Jira connection more clear.
+
+#### Deprecations
+
+* We removed **Company Buzz**. 
 
 ### November 9, 2023
 
@@ -212,7 +278,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Improvements
 
-* We improved the migration flow to make it as easy as possible for you to [move your data from Stories to Epics](/developerportal/project-management/epics/planning/#data-migration).
+* We improved the migration flow to make it as easy as possible for you to move your data from Stories to Epics.
 
 #### Deprecations{#stories-deprecation}
 
@@ -340,7 +406,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Fixes
 
-* We fixed a bug where we accidentally tried to [migrate stories](/developerportal/project-management/epics/planning/#data-migration) that were marked for deletion from Mendix Stories to Epics. (They were not actually migrated, but they ended up as errors in the migration log.)
+* We fixed a bug where we accidentally tried to migrate stories that were marked for deletion from Mendix Stories to Epics. (They were not actually migrated, but they ended up as errors in the migration log.)
 
 ### June 29, 2023
 
@@ -446,7 +512,7 @@ We have made the following improvements to the **Access Management** page in Por
 * In preparation for the [merging of Studio and Studio Pro](https://www.mendix.com/blog/coming-in-2023-the-merging-of-studio-and-studio-pro/), we removed the **Edit in Studio** button. You can still open your app in Studio via the **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) button in the [app tile](/developerportal/#my-apps) on the **My Apps** page.
 * After the big overhaul we released on [February 13th](#feb-13-23), our logging showed a decrease in the overall performance of Stories. We took some counter-measures and made performance improvements.
 * We made some minor improvements to the flow for [inviting app team members](/developerportal/general/team/#inviting). For example, when you invite someone new to your app, the default role will be **Business Engineer** (as long as this role exists in your app).
-* We made some improvements to the layout of the [App Buzz](/developerportal/general/buzz/#app-buzz) page so that it displays better on small screen resolutions.
+* We made some improvements to the layout of the [App Buzz](/developerportal/general/buzz/) page so that it displays better on small screen resolutions.
 * The navigation pane is now collapsible, which makes for a far better experience on small screen resolutions.
 * We are preparing the Developer Portal for a brand new feedback experience. Please stay tuned!
 
@@ -454,7 +520,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Deprecations
 
-* We have deprecated **General Settings** > **Webhooks** for stories and Sprints. For more information, see the deprecation note in the [Webhooks](/developerportal/collaborate/general-settings/#webhooks) section of *General Settings*. You can now set webhooks for building and deploying your app. These are described in [Webhooks](/developerportal/deploy/webhooks/).
+* We have deprecated **General Settings** > **Webhooks** for stories and Sprints. You can now set webhooks for building and deploying your app. These are described in [Webhooks](/developerportal/deploy/webhooks/).
 
 ### March 9, 2023
 
@@ -470,7 +536,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Fixes
 
-* We fixed a performance issue that occurred when opening an [App Buzz](/developerportal/general/buzz/#app-buzz) page for an app with a large team. We now show no more than 25 team members in the team list in the right corner at a time.
+* We fixed a performance issue that occurred when opening an [App Buzz](/developerportal/general/buzz/) page for an app with a large team. We now show no more than 25 team members in the team list in the right corner at a time.
 
 ### February 16, 2023
 
@@ -531,7 +597,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 * We released a new version of [Epics](/developerportal/project-management/epics/), our brand new Agile planning tool, for general availability! We made the following improvements:
 
-    * It is possible to migrate all your data from Stories into Epics. For details, see the [Data Migration](/developerportal/project-management/epics/planning/#data-migration) section of *Epics*.
+    * It is possible to migrate all your data from Stories into Epics. For details, see the Data Migration section of *Epics*.
     * You can link a feedback item to a story in Epics. If you accept feedback, the story with the feedback ID and the link to the original issue will show up in your backlog.
     * If you type *#* and then start typing a story name, you can link a story in the description of another story. This is handy for showing dependencies or other relationships between stories.
     * Mentioning app team members with *@* is available in story and epic descriptions as well as in comments. If someone *@* mentions you, it triggers a notification on the Mendix Platform and/or an email, depending on your notification settings.
@@ -595,7 +661,7 @@ We have made the following improvements to the **Access Management** page in Por
     * You can copy the link to a story or an epic on the upper-right corner of the [story details](/developerportal/project-management/epics/board/#story-details) dialog box or the [epic details](/developerportal/project-management/epics/epics/#epic-details) dialog box.
     * Story and epic details now appear in a dialog box instead of a side pane.
     * The widget styling is now slightly different.
-* We added a **Project Buzz** button on the [Board](/developerportal/project-management/epics/board/) page. Clicking the button brings you to the [Buzz](/developerportal/general/buzz/#app-buzz) page of the specific app in the Developer Portal.
+* We added a **Project Buzz** button on the [Board](/developerportal/project-management/epics/board/) page. Clicking the button brings you to the [Buzz](/developerportal/general/buzz/) page of the specific app in the Developer Portal.
 * We added an error page in case you access Epics with no apps enabled.
 * We made it possible for you to link commits from Studio Pro to stories in Epics.
 
@@ -936,7 +1002,7 @@ We have made the following improvements to the **Access Management** page in Por
 * We changed the [My Apps](/developerportal/#my-apps) page and moved your favorite apps to the **Pinned** tab. This will become the default tab on this page, making it easy to quickly access the apps you care about the most.
 * You asked and we listened: We added new label colors for labels in Stories. There are now 15 different colors to choose from, specifically selected with accessibility in mind.
 * We made some big changes to the look and feel of our Developer Portal:
-    * We reshuffled the navigation items in the [App Buzz](/developerportal/general/buzz/#app-buzz) to a more logical order, based on our research insights. Now, there are two main sections: **Collaborate** and **Deploy**.
+    * We reshuffled the navigation items in the [App Buzz](/developerportal/general/buzz/) to a more logical order, based on our research insights. Now, there are two main sections: **Collaborate** and **Deploy**.
     * We updated the look of various navigation items (**Feedback**, **Planning**, **Team Server**, **General**) to our new design.
     * We removed the grey background with white card content in all pages.
     * We replaced the breadcrumbs in the top left corner of the project navigation with the app name and icon.
@@ -1043,7 +1109,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Fixes
 
-* We fixed an issue where replies to Buzz notifications were not properly processed into comments on your [app Buzz](/developerportal/general/buzz/#app-buzz) page. (Ticket 111076)
+* We fixed an issue where replies to Buzz notifications were not properly processed into comments on your [app Buzz](/developerportal/general/buzz/) page. (Ticket 111076)
 
 ### December 2, 2020
 

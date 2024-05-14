@@ -38,7 +38,7 @@ Follow these steps to export the Mendix components and store them on your local 
 3. Select the **Main Components** and **Storage Provisioners** you want to export.
 4. Enter the version numbers of any Mendix Runtimes which you want to export. You can use wildcards and create a list of versions separated by commas. For example `8.12.*, 7.23.6.*` will export all patch versions of the Mendix 8.12 runtime and the published build of the Mendix 7.23.6 runtime.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/private-cloud-migrating/export.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/private-cloud-migrating/export.png" class="no-border" >}}
 
 5. Click the **Clear cache** button, which will trigger the deletion of local image cache, otherwise the cache is reused when redownloading the same images.   
 6. Click the **Check for updates** button, which is used to verify that the hash of your downloaded images matches with the latest remote images.  
@@ -72,7 +72,7 @@ Perform the following steps.
     {{% alert color="info" %}}You can only choose components which you exported in the previous section, [Export Mendix Components](#export).<br/><br/>
     **ALL** runtime versions you exported will be imported – you cannot choose which versions are imported{{% /alert %}}
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/private-cloud-migrating/import.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/private-cloud-migrating/import.png" class="no-border" >}}
 
 6. Click **Import components**.
 

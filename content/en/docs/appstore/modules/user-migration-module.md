@@ -9,7 +9,7 @@ tags: ["marketplace", "marketplace component", "User Migration", "System.User", 
 
 ## 1 Introduction
 
-Use the [User Migration](https://marketplace.mendix.com/link/component/118015) module to migrate users between any two User entities that have a generalization System.User. This allows you to implement a different user management module and migrate all the existing users of your app to it.
+Use the [User Migration](https://marketplace.mendix.com/link/component/118015) module to migrate users from any user entity (that uses a generalization of `System.User`) to the `SapAuthentication.SapUser` entity of [SAP XSUAA Connector](https://marketplace.mendix.com/link/component/78091). This allows you to use SAP XSUAA Connector as a user management module and migrate all the existing users of your app to it.
 
 This is a one-time admin activity required to be run just after deployment of the application.
 
@@ -23,11 +23,11 @@ To perform a user migration, you need the following prerequisites:
 * Add all attributes and associations that you want to migrate to the Domain Model of the new user management module
 * Add the microflow `StartMigrationWizard` in the **USE_ME** section of the **UserMigration** module to the navigation or pages which can be accessed by administrators of the app
 
-    {{< figure src="/attachments/appstore/modules/user-migration-module/start-migration-wizard-microflow.png" alt="Graphical user interface, text, application Description automatically generated" >}}
+    {{< figure src="/attachments/appstore/modules/user-migration-module/start-migration-wizard-microflow.png" alt="Graphical user interface, text, application Description automatically generated" class="no-border" >}}
 
 ## 3 Migrating Users
 
-To migrate your users, you need to do the following. For the examples, assume that you are migrating users from the default Mendix user management module, `Administration` to an SAP-specific module, `SapAuthentication`:
+To migrate your users, follow the instructions below. For the examples, assume that you are migrating users from the default Mendix user management module, **Administration** to the SAP module, **SapAuthentication**.
 
 {{% alert color="info" %}}
 You should migrate your users immediately after first deploying the app containing the new user management functionality. Until you do this, your existing users will not be able to sign in to the app.
@@ -41,13 +41,13 @@ If you have specializations of the user entities you are migrating, you must mig
 
 3. Select the user entity being used by the old user management module. The dropdown list will show only entities which have a generalization of `System.User`. In our example, this is `Authentication.Account`.
 
-    {{< figure src="/attachments/appstore/modules/user-migration-module/user-migration-step1.png" >}}
+    {{< figure src="/attachments/appstore/modules/user-migration-module/user-migration-step1.png" class="no-border" >}}
 
 4. Select the user entity being used by the new user management module. In our example, this is `SapAuthentication.SapUser`.
 
 5. Click **Map according to names** to map attributes with the same names. This means, for example, that data in the `Email` attribute in `Authentication.Account` will be migrated to the `Email` attribute in `SapAuthentication.SapUser`.
 
-    {{< figure src="/attachments/appstore/modules/user-migration-module/user-migration-step2.png" >}}
+    {{< figure src="/attachments/appstore/modules/user-migration-module/user-migration-step2.png" class="no-border" >}}
 
 6. Edit any mappings which are missing or incorrect using the **Edit** buttons.
 
@@ -59,7 +59,7 @@ If you have specializations of the user entities you are migrating, you must mig
 
     {{% alert color="info" %}}As with the new attributes, the new associations must already exist in the Domain Model for the new user management module and must have the same multiplicity and ownership as the association they are being mapped from.{{% /alert %}}
 
-    {{< figure src="/attachments/appstore/modules/user-migration-module/user-migration-step3.png" >}}
+    {{< figure src="/attachments/appstore/modules/user-migration-module/user-migration-step3.png" class="no-border" >}}
 
 9. Click **Next**.
 
@@ -67,7 +67,7 @@ If you have specializations of the user entities you are migrating, you must mig
 
     {{% alert color="info" %}}If you keep the old users after migration, the new user created will have the `_new` postfix for the *Name* attribute of `System.User`, since `System.User/Name` must be  unique.{{% /alert %}}
 
-    {{< figure src="/attachments/appstore/modules/user-migration-module/user-migration-step4.png" >}}
+    {{< figure src="/attachments/appstore/modules/user-migration-module/user-migration-step4.png" class="no-border" >}}
 
 11. Click **Migrate**.
 

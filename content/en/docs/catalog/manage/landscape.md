@@ -63,7 +63,7 @@ Data sources or the published services are depicted as a round node with the ico
 
 Apps are displayed as square icons with the application icon and the environment that the app is deployed to is given below the app name. The example below shows a non-Mendix app (**TeamcenterMfg**), a Mendix app (**CompanyCarDemo**) which are deployed to the Mendix Free App environment, **Sandbox**. The third example shows another Mendix app (**HRSample_App**) deployed to the production environment which has a custom icon. For further information on adding a custom icon to your app see [Changing the Application Icon](/catalog/manage/curate/#application-icon).
 
-{{< figure src="/attachments/catalog/landscape/node-apps.png" alt="different app logos" >}}
+{{< figure src="/attachments/catalog/landscape/node-apps.png" alt="different app logos" class="no-border" >}}
 
 ### 2.4 Dependencies
 

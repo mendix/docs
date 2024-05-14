@@ -134,7 +134,7 @@ This allows you to run the event every hour, or number of hours. It also allows 
 
 Example times will be shown in the dialog to illustrate the effects of the offset.
 
-{{< figure src="/attachments/refguide/modeling/resources/scheduled-events/hourly-event.png" >}}
+{{< figure src="/attachments/refguide/modeling/resources/scheduled-events/hourly-event.png" class="no-border" >}}
 
 ### 4.6 Minutes Properties {#minutes}
 

@@ -10,7 +10,7 @@ App services are deprecated and were removed in Studio Pro 9. Use a [published w
 
 ## 1 General Tab
 
-{{< figure src="/attachments/refguide8/modeling/integration/published-app-services/published-app-service/16843916.png" >}}
+{{< figure src="/attachments/refguide8/modeling/integration/published-app-services/published-app-service/16843916.png" class="no-border" >}}
 
 ### 1.1 Version
 
@@ -42,13 +42,13 @@ Can be used to describe what the app service is used for.
 
 ## 2 Actions
 
-{{< figure src="/attachments/refguide8/modeling/integration/published-app-services/published-app-service/16843915.png" >}}
+{{< figure src="/attachments/refguide8/modeling/integration/published-app-services/published-app-service/16843915.png" class="no-border" >}}
 
 Provide the actual actions of which the app service is composed. Each of these actions is coupled to a microflow. See [Actions](/refguide8/actions/).
 
 ## 3 Settings
 
-{{< figure src="/attachments/refguide8/modeling/integration/published-app-services/published-app-service/16843914.png" >}}
+{{< figure src="/attachments/refguide8/modeling/integration/published-app-services/published-app-service/16843914.png" class="no-border" >}}
 
 ### 3.1 Authentication
 

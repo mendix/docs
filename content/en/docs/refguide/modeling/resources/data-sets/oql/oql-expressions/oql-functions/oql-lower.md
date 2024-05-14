@@ -12,7 +12,7 @@ The `LOWER` function converts all uppercase characters in a given string to lowe
 
 The syntax is as follows:
 
-```sql
+```sql {linenos=false}
 LOWER ( expression )
 ```
 

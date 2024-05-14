@@ -12,10 +12,10 @@ In Studio Pro, [entities can be published](/refguide/published-odata-entity/) by
 
 A published OData service is a REST service with an OpenAPI contract, which means that OpenAPI compatible REST clients can easily interact with it. 
 
-The standard used for OData in Mendix is [OData v4](http://www.odata.org/documentation), which returns data in JSON format.
+The standard used for OData in Mendix is [OData v4](https://www.odata.org/documentation), which returns data in JSON format.
 
 {{% alert color="warning" %}}
-he option to publish [OData v3](http://www.odata.org/documentation/odata-version-3-0) services, which return data in Atom XML format, is deprecated and will be removed in a future version.
+he option to publish [OData v3](https://www.odata.org/documentation/odata-version-3-0) services, which return data in Atom XML format, is deprecated and will be removed in a future version.
 {{% /alert %}}
 
 Not all parts of the standard are implemented. If something is not documented here, it has not yet been added.
@@ -235,7 +235,7 @@ Once your app is published, a list of the published OData services will be avail
 While the API documentation for published OData services is enabled by default, access to it may be restricted by the administrator for apps running in production.
 {{% /alert %}}
 
-For details on how to filter the OData response, refer to [OData Query Options](/refguide/odata-query-options/).
+For details on how to filter the OData response, refer to [Supported OData Operations](/refguide/supported-odata-operations/#filtering).
 
 For details on how Mendix attributes are represented in OData, refer to [OData Representation](/refguide/odata-representation/).
 

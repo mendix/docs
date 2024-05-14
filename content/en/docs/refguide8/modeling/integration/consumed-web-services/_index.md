@@ -11,7 +11,7 @@ This document describes imported web services. For further information on the co
 
 ## 2 Web Services
 
-Web services (see also [Wikipedia](http://en.wikipedia.org/wiki/Web_service)) are a way of exposing or absorbing functions and data entities between systems. They can be used to enable applications to "talk" to each other through the network (or internet).
+Web services (see also [Wikipedia](https://en.wikipedia.org/wiki/Web_service)) are a way of exposing or absorbing functions and data entities between systems. They can be used to enable applications to "talk" to each other through the network (or internet).
 
 Mendix supports the interaction between servers using SOAP. This can either be Mendix-to-Mendix, Mendix-to-ThirdParty or ThirdParty-to-Mendix.
 
@@ -47,7 +47,7 @@ See  [Import Mappings](/refguide8/import-mappings/) for further information on m
 
 ## 4 SOAP
 
-In the enterprise market, SOAP (see also [Wikipedia](http://en.wikipedia.org/wiki/SOAP_(protocol))) is a common protocol for web services. It defines a standard way for systems to communicate with each other. XML is used as the message format.
+In the enterprise market, SOAP (see also [Wikipedia](https://en.wikipedia.org/wiki/SOAP_(protocol))) is a common protocol for web services. It defines a standard way for systems to communicate with each other. XML is used as the message format.
 
 ## 5 XSD
 
@@ -58,7 +58,7 @@ An XSD (XML Schema Definition) document is a document that describes how the XML
 A WSDL (Web Service Definition Language) document is a document that describes how a client can interact with the server that publishes it. It describes the types of messages (incoming and outgoing) and where the messages must be sent to (an endpoint URL).
 
 Using imported web services, you can import a web service from an external application to use in your own application. You can import web services from third parties (such as the
-[w3schools example service](http://www.w3schools.com/xml/tempconvert.asmx?WSDL)) or from other Mendix projects.
+[w3schools example service](https://www.w3schools.com/xml/tempconvert.asmx?WSDL)) or from other Mendix projects.
 
 To use these imported web services in a microflow, see [Call Web Service](/refguide8/call-web-service-action/).
 

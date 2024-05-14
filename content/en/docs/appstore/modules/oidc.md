@@ -95,7 +95,6 @@ The OIDC SSO module does not yet support the following:
 * Other client authentication methods such as using asymmetric keys (“private_key_jwt”)
 * Delegating authorization using OAuth-scopes; this currently requires a custom microflow for parsing of Access Tokens
 * Mobile apps
-* PWA Apps
 * Controlling the configuration using constants requires an app restart
 
 The OIDC SSO module also has the following limitations:
@@ -133,15 +132,15 @@ Once the Mx Model Reflection module has been imported into your app, you need to
 
 1. In the **App Explorer**, add the page **MxObjects_Overview** from the **MxModelReflection** folder to the Navigation menu.
 
-    {{< figure src="/attachments/appstore/modules/oidc/add-model-reflection.png" >}}
+    {{< figure src="/attachments/appstore/modules/oidc/add-model-reflection.png" class="no-border" >}}
 
 2. Run the app and click the newly-added navigation link to use Mx Model Reflection.
 
-    {{< figure src="/attachments/appstore/modules/oidc/model-reflection-button.png" >}}
+    {{< figure src="/attachments/appstore/modules/oidc/model-reflection-button.png" class="no-border" >}}
 
 3. Select the modules **MxModelReflection** and **OIDC**  and click **Click to refresh** for both the modules and the entities.
 
-    {{< figure src="/attachments/appstore/modules/oidc/refresh-model.png" >}}
+    {{< figure src="/attachments/appstore/modules/oidc/refresh-model.png" class="no-border" >}}
 
 ### 3.2 Migrating from Community Edition to Platform Edition{#migration}
 
@@ -189,22 +188,26 @@ Ensure that you have allocated the following user roles to the OIDC module and (
 | Anonymous | OIDC.Anonymous |
 | User | OIDC.User |
 
-{{< figure src="/attachments/appstore/modules/oidc/user_roles.png" >}}
+{{< figure src="/attachments/appstore/modules/oidc/user-roles.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 You may have to add the *Anonymous* user role if it does not exist already.
 {{% /alert %}}
 
-### 4.2 Allowing Anonymous Users
+### 4.2 Allowing Anonymous Users (Optional)
 
-The OIDC module supports multiple OIDC/OAuth-compatible IdPs. To allow your end-users to choose from a number of different IdPs, or to have the option to log back into the app after they have logged out, you will need to give them access to the app before they have signed in to the app. Therefore, you need to give anonymous users access to your app.
+The OIDC module supports multiple OIDC/OAuth-compatible IdPs. Optionally, if you allow your end-users to choose from multiple IdPs, or to have the option to log back into the app after they have logged out, you will need to give them access to the app before they have signed in to the app. Therefore, you need to give anonymous users access to your app.
 
 In the **Anonymous** tab of the app security settings, do the following:
 
 1. Set **Allow anonymous users** to **Yes**
 2. Select *Anonymous* as the **Anonymous user role**
 
-{{< figure src="/attachments/appstore/modules/oidc/anonymous-user.png" >}}
+{{< figure src="/attachments/appstore/modules/oidc/anonymous-user.png" class="no-border" >}}
+
+{{% alert color="info" %}}
+If a single Identity Provider (IdP) is configured in the OIDC SSO module, end-users can be authenticated via the URL `https://<your-app-url>/oauth/v2/login`.
+{{% /alert %}}
 
 ### 4.3 Configuring Navigation{#configure-nav}
 
@@ -248,61 +251,11 @@ By adding a custom claim to the App Registration’s Expose an API tab and reque
 
 #### 5.1.3 Amazon Cognito Provider Configuration
 
-To configure Amazon Cognito for the OIDC SSO module, follow these steps:
-
-1. Optional: If you are using the AWS test environment with Amazon Cognito set as the user pool, you must verify the email addresses by doing the following steps:
-    1. In Amazon SES, click **Configuration** > **Verified identities**.
-    2. On the **Verified identities** page, in the **Identities** section, click **Create identity**.
-    3. Verify the email address or addresses that you want to use for the user pool
-
-        {{< figure src="/attachments/appstore/modules/aws-cognito/verifyemail.png" alt="The Verified identities page in Amazon SES">}}
-
-2. Create a user pool for Amazon Cognito by doing the following steps:
-    1. In the Amazon Console, open the Amazon Cognito service.
-    2. Select the region where you want to create the user pool, and then click **Create user pool**.
-    3. Follow the **Create user pool** wizard to configure the sign-in and sign-up, security requirements, and message delivery.
-    4. In the **Integrate your app** step of the wizard, enter a name for your user pool and leave the other settings as default.
-
-        {{< figure src="/attachments/appstore/modules/aws-cognito/userpoolname.png" alt="The Integrate your app step in the Create user pool wizard">}}
-
-    5. Review and create the user pool.
-
-3. Add users to the user pool by doing the following steps:
-    1. In Amazon Cognito, on the **User pools** page, find and open the user pool that you created.
-    2. On the **Users** tab of the user pool, click **Create user**.
-    3. Specify a verified email and a password.
-
-        {{< figure src="/attachments/appstore/modules/aws-cognito/addusers.png" alt="The Users tab of a user pool">}}
-
-4. Configure the app integration by doing the following steps:
-    1. Go to the **App integration** tab of the user pool that you created.
-    2. In the **App clients and analytics** section, click **Create app client**.
-
-        {{< figure src="/attachments/appstore/modules/aws-cognito/createappclient.png" alt="The Create app client button on the App integration page">}}
-
-    3. On the **Create app client** page, configure the following settings:
-        * **App type** - **Public client**
-        * **App client name** - Enter a descriptive app client name
-        * **Client secret** - Select **Generate a client secret**
-        * **Authentication flows** - Select **ALLOW_USER_PASSWORD_AUTH**
-        * **Authentication flow session duration** - Enter a value from *3* to *15*
-        * **Allowed callback URLs** - Enter a URL in the following format: `https://<your-app-url>/oauth/v2/callback`
-        * **Allowed sign-out URLs** - This setting is optional, and you may leave it blank
-        * **Identity providers** - Select **Cognito user pool**
-        * **OAuth 2.0 grant types** - Select **Authorization code grant**
-              
-    4. Save your changes.
-    5. Open the app client that you created.
-    6. In the **App client information** section, copy the **Client ID** and the **Client secret**, and save them in a secure location.
-
-        {{< figure src="/attachments/appstore/modules/aws-cognito/idsecret.png" alt="The Client ID and Client secret on the App client information page">}}
-
-    7. Go back to the user pool that you created.
-    8. On the **App integration** tab, in the **Domain** section, copy the **Cognito domain** and save it in a secure location.
+For information about configuring Amazon Cognito for the OIDC SSO module, see [Amazon Cognito: Configuring Amazon Cognito](/appstore/modules/aws/amazon-cognito/#cognito-provider).
 
 ### 5.2 OIDC Client Configuration{#client-configuration}
 
-You can configure your OIDC client using the app pages – see [General OIDC Clients](#general-oidc), [Microsoft Entra ID Client Configuration](#azure), and [Amazon Cognito Client Configuration](#cognito), below. In version 2.3.0 and above, you can also use constants to configure your app at deployment time – see [Automated Deploy-time SSO Configuration](#deploy-time), below.
+You can configure your OIDC client using the app pages – see [General OIDC Clients](#general-oidc), [Microsoft Entra ID Client Configuration](#azure), and [Amazon Cognito](/appstore/modules/aws/amazon-cognito/). In version 2.3.0 and above, you can also use constants to configure your app at deployment time – see [Automated Deploy-time SSO Configuration](#deploy-time), below.
 
 #### 5.2.1 General OIDC Clients {#general-oidc}
 
@@ -358,31 +311,9 @@ For Entra ID access to APIs through an access token, in addition to the configur
 
 Now, you can acquire tokens which can be validated using JWKS URI.
 
-#### 5.2.3 Amazon Cognito Client Configuration {#cognito}
+#### 5.2.3 Amazon Cognito Client Configuration
 
-After you configure the necessary settings in Amazon Cognito, you must add the endpoint URLs to your Mendix app, and then add a button to sign in with Amazon Cognito.
-
-1. In your Mendix app, configure a new OIDC client, as described in [OIDC SSO: OIDC Client Configuration](/appstore/modules/oidc/#client-configuration). Make sure to configure the following settings:
-    * **Alias** - Enter a descriptive name to identify your app
-    * **Client ID** - Enter the app client ID that you obtained from the user pool in Amazon Cognito
-    * **Client secret** - Enter the client secret that you obtained from the user pool in Amazon Cognito
-    * **Client authentication method** - Select **client_secret_post**
-    * **Automatic Configuration URL** - Enter a URL in the following format: `https://cognito-idp.{the region where you created the user pool}.amazonaws.com/{your user pool ID}/.well-known/openid-configuration`
-
-    For more information, see [User pool OIDC and hosted UI API endpoints reference](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-userpools-server-contract-reference.html).
-
-2. Click **Import Configuration** to automatically fill the other endpoints.
-
-    {{< figure src="/attachments/appstore/modules/aws-cognito/filledendpoints.png" alt="Sample endpoint URLs">}}
-
-3. Click **Save**.
-4. Add an Amazon Cognito sign in button to a page in your app.
-
-    You can achieve this by adding the **ACT_StartWebSignIn_Default** nanoflow to the button. For more information about creating custom buttons, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
-
-    {{< figure src="/attachments/appstore/modules/aws-cognito/samplelogin.png" alt="Sample endpoint URLs">}}
-
-Users who are part of the user pool you created in Amazon Cognito can now log in with their Amazon Cognito user name and password.
+For more information about configuring your app for OIDC with Amazon Cognito, see [Amazon Cognito: Configuring the Required Settings in Your Mendix App](/appstore/modules/aws/amazon-cognito/#cognito).
 
 #### 5.2.4 Automated Deploy-time SSO Configuration{#deploy-time}
 
@@ -682,7 +613,7 @@ To parse of SAM access tokens you need to do the following when performing [OIDC
 
 1. Select *OIDC.Default_SAM_TokenProcessing_CustomATP* as the **custom AccessToken processing microflow**.
 
-    {{< figure src="/attachments/appstore/modules/oidc/parsing_sam_token.png" max-width=80% class="image-border" >}}
+    {{< figure src="/attachments/appstore/modules/oidc/enable-sam-parsing.png" class="no-border" >}}
 
 1. Add the scopes `sam_account`, `samauth.role`, `samauth.tier`, and `samauth.ten` to the **Selected Scopes** in the OIDC Client Configuration.
 1. Configure the user roles in your app to match the roles returned by SAM. End-users will be given the matching role when they sign into the app. If the role in the SAM token is not found in the Mendix app the end-user will be given the role `User`.
@@ -704,7 +635,7 @@ To parse the OIDC Provider access tokens you need to do the following when perfo
 
 1. Select `OIDC.Default_OIDCProvider_TokenProcessing_CustomATP` as the **custom AccessToken processing microflow**.
 
-    {{< figure src="/attachments/appstore/modules/oidc/oidcprovider_parsing.png" max-width=80% class="image-border" >}}
+    {{< figure src="/attachments/appstore/modules/oidc/enable-oidc-provider-parsing.png" class="no-border" >}}
 
 2. Add the scopes `openid` and the ModelGUID or Name to the **Selected Scopes** in the OIDC Client Configuration. The ModelGUID will look something like `53f5d6fa-6da9-4a71-b011-454ec052cce8`.
 
@@ -750,21 +681,50 @@ For all versions of the OIDC SSO module, once you have created the microflow (fo
 If your microflow is not correctly implemented you will be told that **Authentication failed!** and will see errors in the log under the OIDC log node.
 {{% /alert %}}
 
-### 8.3 Deep Links
+### 8.3 Using Deep Links
 
 {{% alert color="warning" %}}
-The OIDC module version 3.0.0 and above does not support the DeepLink module, as it has been deprecated from Studio Pro 10.6.0. It is replaced by [page URLs](/refguide/page-properties/#url) and [microflow URLs](/refguide/microflow/#url).
+The Deep Link module has been deprecated from Studio Pro 10.6 and replaced by [page URLs](/refguide/page-properties/#url) and [microflow URLs](/refguide/microflow/#url).
+For instructions on migrating to page and microflow URLs, see the [Using Page and Microflow URLs with OIDC SSO](#page-microflow-url) section below.
 {{% /alert %}}
 
-To use OIDC SSO module in conjunction with the DeepLink module, you will need to set the `LoginLocation` constant of the DeepLink module to `/oauth/v2/login?cont=`.
+If end-users who use the deeplink do not yet have a session in your app, the deeplink can trigger the SSO process. If successful, the end-user will be automatically redirected back to the deeplink.
 
-If end-users that use the deeplink do not yet have a session in your app, the deeplink can trigger the SSO process. If that is successful, the end-user will automatically be redirected back to the deeplink.
+For more information on using Deep Link module (with Mendix 8 and 9), see the [Using Deep Link Module](#using-deep-link) section below.
 
-The DeepLink module does not have full support for multiple IdPs, so it can only trigger logins at one IdP. If you do not specify which IdP you want the DeepLink module to use, it will use the default IdP.
+#### 8.3.1 Using Page and Microflow URLs with OIDC SSO{#page-microflow-url}
 
-You can also specify which IdP should be used by adding the alias (`MyIdPAlias`) to the `LoginLocation`: `/oauth/v2/login?idp={MyIdpAlias}&cont=`. For example, `/oauth/v2/login?idp=Google&cont=`. This setting will apply to all deeplinks in your app.
+Page URLs and Microflow URLs are supported with OIDC SSO for Mendix version 10.6 and above. To do this, follow the steps below:
 
-To use OIDC SSO module in conjunction with the DeepLink module, you can choose between the following methods of selecting an IdP:
+1. In the **Runtime** tab of the **App Settings**, configure the page **URL prefix** to **link** instead of the default **P** to maintain compatibility with existing URLs, and ensure to remove the Deep Link module from your app to start the app successfully.
+1. Configure **OIDC.Login_Web_Button** as the **Sign-in page** in the **Authentication** section of the app **Navigation**.
+1. The user is redirected to the OIDC login page for authentication.
+1. After successful log in, the user is directed to the desired page using page URLs and microflow URLs within the application.
+
+If you are building a new app using the OIDC SSO module (Mendix version 10.6 and above) and you are using Page URLs and Microflow URLs, follow the same steps as above. 
+
+To allow the end users to navigate to the desired page:
+
+* If single IdP configured, URL will be the base URL of your application followed by `oauth/v2/login?cont={page/Microflowurl}`
+
+    For example, `http://localhost:8080/oauth/v2/login?cont=link/pagepath`
+
+* If multiple IdPs configured, you can specify which IdP should be used by adding the alias (MyIdPAlias)
+`oauth/v2/login?idp={MyIdPAlias}&cont={page/Microflowurl}`
+
+    For example, `http://localhost:8080/oauth/v2/login?idp=Okta&cont=link/pagepath` 
+    
+The Page and Microflow URLs fully support multiple IdPs, allowing users to trigger the login and choose the IdP on the OIDC login page.
+For more information, see the [Migrating to Page and Microflow URLs](/appstore/modules/deep-link/#migrate-page-micro) section of the *Deep Link*.
+
+#### 8.3.2 Using Deep Link Module{#using-deep-link}
+
+To use OIDC SSO module in conjunction with the Deep Link module (for Mendix 8 and 9), you can choose between the following methods of selecting an IdP:
+
+* You need to set the `LoginLocation` constant of the Deep Link module to the `/oauth/v2/login?cont=`.
+* You can also specify which IdP should be used by adding the alias (`MyIdPAlias`) to the `LoginLocation`: `/oauth/v2/login?idp={MyIdpAlias}&cont=`. For example, `/oauth/v2/login?idp=Google&cont=`. This setting will apply to all deeplinks in your app.
+
+The Deep Link module does not have full support for multiple IdPs, so it can only trigger logins at one IdP. If you do not specify which IdP you want the Deep Link module to use, it will use the default IdP.
 
 ### 8.4 Logging Out
 
@@ -772,7 +732,7 @@ A standard logout action will end an end-user's Mendix session, but will not end
 
 To do this, add a menu item or button for your end-users that calls the nanoflow `ACT_Logout`.
 
-### 8.5 Use ACR to Request Authentication Method
+### 8.5 Using ACR to Request Authentication Method
 
 By default, the OIDC SSO module does not care how users are signed in at your IdP, that is left to the discretion of the IdP. In some cases your IdP may support different methods for end-users to be authenticated and your app may want to indicate a preference.
 
@@ -796,7 +756,7 @@ To configure the ACR value (or values) in the OIDC SSO module, follow these step
 
 When you have configured multiple ACR values for your IdP, the OIDC module shows the ACR values as additional ways to sign in on the default login page.
 
-{{< figure src="/attachments/appstore/modules/oidc/login-acr-options.png" >}}
+{{< figure src="/attachments/appstore/modules/oidc/login-acr-options.png" class="no-border" >}}
 
 #### 8.5.3 Customizing the Login Page
 
@@ -873,7 +833,7 @@ If you have deployed your app on premises but did not configure a return URL for
 
 To resolve this, open the Mendix Service Console and ensure that the **Port number** for the **Public application root URL**, **Runtime server port**, and **Admin server port** match.
 
-{{< figure src="/attachments/appstore/modules/oidc/service-console-ports.png" >}}
+{{< figure src="/attachments/appstore/modules/oidc/service-console-ports.png" class="no-border" >}}
 
 ### 9.5 `CommunityCommons.RandomStrongPassword` Microflow Does Not Match the Expected Parameters
 
@@ -883,4 +843,4 @@ This error indicates that new parameters must be synced with the microflow.
 
 To resolve this issue, either open the microflow used for the OIDC SSO module or refresh it before deploying your Mendix app again.
 
-{{< figure src="/attachments/appstore/modules/oidc/Community Commons error.png" >}}
+{{< figure src="/attachments/appstore/modules/oidc/Community Commons error.png" class="no-border" >}}

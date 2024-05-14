@@ -40,7 +40,7 @@ For more information, see [Data Grid (Document Template)](/refguide8/data-grid-d
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide8/modeling/resources/document-templates/data-grid-document-template/918138.png" >}}
+{{< figure src="/attachments/refguide8/modeling/resources/document-templates/data-grid-document-template/918138.png" class="no-border" >}}
 
 A data grid showing a list of orders with a description and the referenced customer name.
 {{% /alert %}}
@@ -53,7 +53,7 @@ For more information, see [Data View (Document Template)](/refguide8/data-view-d
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide8/modeling/resources/document-templates/data-view-document-template/918139.png" >}}
+{{< figure src="/attachments/refguide8/modeling/resources/document-templates/data-view-document-template/918139.png" class="no-border" >}}
 
 A data view showing order line information.
 {{% /alert %}}
@@ -66,7 +66,7 @@ For more information, see [Template Grid (Document Template)](/refguide8/templat
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide8/modeling/resources/document-templates/918137.png" >}}
+{{< figure src="/attachments/refguide8/modeling/resources/document-templates/918137.png" class="no-border" >}}
 
 A template grid showing products with name and description.
 {{% /alert %}}
@@ -84,7 +84,7 @@ For more information, see [Table (Document Template)](/refguide8/table-document-
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide8/modeling/resources/document-templates/918134.png" >}}
+{{< figure src="/attachments/refguide8/modeling/resources/document-templates/918134.png" class="no-border" >}}
 
 A table with four rows and three columns. Last row containing a data view with another table.
 {{% /alert %}}
@@ -97,7 +97,7 @@ For more information, see [Page Break (Document Template)](/refguide8/page-break
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide8/modeling/resources/document-templates/918135.png" >}}
+{{< figure src="/attachments/refguide8/modeling/resources/document-templates/918135.png" class="no-border" >}}
 
 A page break
 {{% /alert %}}
@@ -120,7 +120,7 @@ For more information, see [Dynamic Label (Document Template)](/refguide8/dynamic
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide8/modeling/resources/document-templates/918131.png" >}}
+{{< figure src="/attachments/refguide8/modeling/resources/document-templates/918131.png" class="no-border" >}}
 
 A dynamic label linking to a customer name.
 {{% /alert %}}
@@ -133,7 +133,7 @@ For more information, see [Dynamic Image (Document Template)](/refguide8/dynamic
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide8/modeling/resources/document-templates/918132.png" >}}
+{{< figure src="/attachments/refguide8/modeling/resources/document-templates/918132.png" class="no-border" >}}
 
 A dynamic image inside a table cell, showing the preset default image.
 {{% /alert %}}
@@ -150,7 +150,7 @@ For more information, see [Static Label (Document Template)](/refguide8/static-l
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide8/modeling/resources/document-templates/918130.png" >}}
+{{< figure src="/attachments/refguide8/modeling/resources/document-templates/918130.png" class="no-border" >}}
 
 A label with text 'Customer name'.
 {{% /alert %}}
@@ -169,7 +169,7 @@ For more information, see [Static Image (Document Template)](/refguide8/static-i
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide8/modeling/resources/document-templates/918133.png" >}}
+{{< figure src="/attachments/refguide8/modeling/resources/document-templates/918133.png" class="no-border" >}}
 
 A static image inside a table cell.
 {{% /alert %}}

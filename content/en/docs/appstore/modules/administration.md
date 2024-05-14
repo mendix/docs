@@ -16,7 +16,7 @@ The [Administration](https://marketplace.mendix.com/link/component/23513) module
 * Support managing user accounts
 * Provide a read-only overview to show the following information:
     * All active sessions
-    * All schedules events
+    * All scheduled events
     * All runtime instances
 * Support viewing runtime statistics
 

@@ -1,6 +1,7 @@
 ---
 title: "If expressions"
 url: /refguide7/if-expressions/
+canonical_url: "https://docs.mendix.com/refguide/if-expressions/"
 ---
 
 If expressions can be used to define conditional actions in expressions. The correct syntax is as follows:

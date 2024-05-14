@@ -11,7 +11,7 @@ The **Branch Line Manager** is used to manage the [branch lines](/refguide/versi
 
 To view the **Branch Line Manager** dialog box, open **Version Control** > **Manage Branch Lines**.
 
-{{< figure src="/attachments/refguide/modeling/menus/version-control-menu/branch-line-manager-dialog/branch-line-manager.png" alt="Team Server Branch Line Manager" >}}
+{{< figure src="/attachments/refguide/modeling/menus/version-control-menu/branch-line-manager-dialog/branch-line-manager.png" alt="Team Server Branch Line Manager" class="no-border" >}}
 
 A branch line allows independent development from other development lines. There are two main reasons for creating a branch line:
 

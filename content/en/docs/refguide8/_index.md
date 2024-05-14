@@ -7,10 +7,13 @@ weight: 70
 no_list: false
 description_list: true
 cascade:
-    - space: "Studio Pro 8 Guide"
+    - space: "Studio Pro 8"
+    - content_type: "Studio Pro 8"
     - mendix_version: 8
+    - banner_8: true
     - old_content: true
     - hide_feedback: true
+    - notsitemap: true
     - sitemap:
         priority: 0.3
 ---

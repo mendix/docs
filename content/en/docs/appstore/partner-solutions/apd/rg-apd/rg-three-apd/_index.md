@@ -26,13 +26,13 @@ This is the reference guide for CLEVR's APD 3 for Mendix. It has the following c
 * [Performance Recorder](/appstore/partner-solutions/apd/rg-three-recorder/)
 * [Settings](/appstore/partner-solutions/apd/rg-three-settings/)
 
-{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-three-apd/APD_Powered_logo.png" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-three-apd/APD_Powered_logo.png" class="no-border" >}}
 
 The sections below provide a short explanation of APD along with its features and possible uses.
 
 ## 2 Definition of the APD Tool
 
-APD is based on Wikipedia's definition of [application performance management](http://en.wikipedia.org/wiki/Application_performance_management). The goal of APD is to emphasize this point: "to detect and diagnose complex application performance problems to maintain an expected level of service."
+APD is based on Wikipedia's definition of [application performance management](https://en.wikipedia.org/wiki/Application_performance_management). The goal of APD is to emphasize this point: "to detect and diagnose complex application performance problems to maintain an expected level of service."
 
 You need the basic infrastructure probes to measure hardware parts like the CPU, memory, and disk as well as components like the database and web server. However, for higher quality support, you should also look at the application and how it is performing, and especially look to link this to the user’s business perspective.
 
@@ -48,7 +48,7 @@ Mendix APD collects statistical data about microflows, client API requests, and 
 
 In development, adding a check of APD to the generic definition of done is advised.
 
-{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-three-apd/statistics_history.png" >}}
+{{< figure src="/attachments/appstore/partner-solutions/apd/rg-apd/rg-three-apd/statistics_history.png" class="no-border" >}}
 
 ## 4 Performance Recorder for Collecting Individual Traces
 

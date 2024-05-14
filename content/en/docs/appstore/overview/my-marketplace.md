@@ -18,7 +18,7 @@ On this page, you can see and manage the drafts for all the Marketplace content 
 
 This page presents details on how many total drafts you have, which drafts are ready to publish or are awaiting approval, and which drafts have been declined.
 
-{{< figure src="/attachments/appstore/overview/my-marketplace/my-drafts.png" >}}
+{{< figure src="/attachments/appstore/overview/my-marketplace/my-drafts.png" class="no-border" >}}
 
 These are the possible **Status** entries for each item:
 
@@ -42,7 +42,7 @@ Click the name of the component to go its [component details page](/appstore/ove
 
 Click the context menu to access various options for managing your content:
 
-{{< figure src="/attachments/appstore/overview/my-marketplace/my-content.png"  width="400"  >}}
+{{< figure src="/attachments/appstore/overview/my-marketplace/my-content.png"  width="400"  class="no-border" >}}
 
 * **Manage Drafts** – click this to manage the drafts of the component
     * Only one draft version of a component can exist at a time, so when one draft version is in progress, another draft cannot be initiated
@@ -63,7 +63,7 @@ In addition, you may see a label on a component name for the [content group](#co
 
 You can see all the Marketplace app services you have trials for on this page:
 
-{{< figure src="/attachments/appstore/overview/my-marketplace/my-subscriptions.jpg" >}}
+{{< figure src="/attachments/appstore/overview/my-marketplace/my-subscriptions.jpg" class="no-border" >}}
 
 The table presents the **Names** of products you have trials for. Clicking a product name takes you to the [service management dashboard](#service-management-dashboard) for the component. 
 
@@ -81,7 +81,7 @@ Click the name of the component to go its [component details page](/appstore/ove
 
 Click the context menu to access various options for managing this content:
 
-{{< figure src="/attachments/appstore/overview/my-marketplace/saved.png"  width="400"  >}}
+{{< figure src="/attachments/appstore/overview/my-marketplace/saved.png"  width="400"  class="no-border" >}}
 
 * **Receive/Stop Email Notifications** – click this to start receiving email notifications or to stop the notifications if you already have them enabled
 * **Unsave** – click this to remove the component from your saved content
@@ -98,7 +98,7 @@ Click the name of the component to go its [component details page](/appstore/ove
 
 Click the context menu to access various options for managing this content:
 
-{{< figure src="/attachments/appstore/overview/my-marketplace/company-content.png"  width="400"  >}}
+{{< figure src="/attachments/appstore/overview/my-marketplace/company-content.png"  width="400"  class="no-border" >}}
 
 The options in this menu are the same as described for the context menu for the [My Content](#my-content) section above. However, the **Edit a Version** and **Unpublish a Version** options are only available for your own versions of company content.
 
@@ -106,7 +106,7 @@ The options in this menu are the same as described for the context menu for the 
 
 You can see all the Marketplace app services your company has subscribed to on this page:
 
-{{< figure src="/attachments/appstore/overview/my-marketplace/company-subscriptions.png" >}}
+{{< figure src="/attachments/appstore/overview/my-marketplace/company-subscriptions.png" class="no-border" >}}
 
 The table presents the **Names** of the products your company has subscribed to. Clicking a product name takes you to the [service management dashboard](#service-management-dashboard) for the component. 
 
@@ -128,7 +128,7 @@ Only a Technical Owner for the subscription can edit the instance name and manag
 
 This page presents the **Binding Key Names** that have been created as well as details on the user who created the binding keys (**Created By**) and when the binding keys were created (**Created At**). Click **Delete** to delete that group of binding keys.
 
-{{< figure src="/attachments/appstore/overview/my-marketplace/binding-keys.jpg" >}}
+{{< figure src="/attachments/appstore/overview/my-marketplace/binding-keys.jpg" class="no-border" >}}
 
 You can also select a group of binding keys and click **Manage Instance** to go to the component provider's configuration page, where you can do further configuration.
 
@@ -154,7 +154,7 @@ Click **Return to the overview** to go to the main page of the dashboard.
 
 When you are developing your app, set the app service's binding keys as [constants](/refguide/configuration/#constants) in the [App Settings](/refguide/app-settings/).
 
-Refer to the documentation on specific app services for how to use the binding keys (for example, see the [Authenticating Insights Hub REST Calls](/partners/siemens/mindsphere-app-service/#authenticating) section of *Insights Hub IIoT for Makers*).
+Refer to the documentation on specific app services for how to use the binding keys (for example, see the [Authenticating Insights Hub REST Calls](/partners/siemens/mindsphere-api-only/#authenticating) section of *Insights Hub API calls only*).
 
 ## 10 Content Groups {#content-groups}
 
@@ -176,7 +176,7 @@ This table breaks down the roles and permissions for content groups:
 
 On this tab, you can assign content to this content group that can only be managed by members of this group. To assign a component to a content group, click **Assign Content** and select a company Marketplace component from the dialog box:
 
-{{< figure src="/attachments/appstore/overview/my-marketplace/group-content.png"  width="400"  >}}
+{{< figure src="/attachments/appstore/overview/my-marketplace/group-content.png"  width="400"  class="no-border" >}}
 
 {{% alert color="info" %}}
 A component can only be assigned to one content group at a time. If a component is already assigned to another content group, it will not appear in this dialog box.
@@ -184,7 +184,7 @@ A component can only be assigned to one content group at a time. If a component 
 
 Click the context menu to access various options for managing this content:
 
-{{< figure src="/attachments/appstore/overview/my-marketplace/group-content-context.png" width="400" >}}
+{{< figure src="/attachments/appstore/overview/my-marketplace/group-content-context.png" width="400" class="no-border" >}}
 
 The options in this menu are the same as described for the context menu for the [My Content](#my-content) section above. The **Unassign from Group** button is only available for [Group Admins](#members) and can be used to remove content from the content group.
 

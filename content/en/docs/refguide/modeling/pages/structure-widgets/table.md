@@ -15,7 +15,7 @@ Tables can be used to give structure to a page. They contain [rows](/refguide/ta
 
 For example, you can create a table with text widgets, a logo, and a data view information as a customer report:
 
-{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/table/table.png" >}}
+{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/table/table.png" class="no-border" >}}
 
 ## 2 Components
 
@@ -92,7 +92,7 @@ You can perform the following actions:
 
 To merge cells to the right, left, up, or down, you can also click the corresponding icon:
 
-{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/table/merge-icons.png" alt="Merge Icons" >}}
+{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/table/merge-icons.png" alt="Merge Icons" class="no-border" >}}
 
 ## 3 Properties Pane
 
@@ -126,7 +126,7 @@ The **Width Unit** defines whether the [Column widths](#column-widths) property 
 
 The **Column widths** property defines the widths of each column as a list of numbers separated by semi-colons. The **Width unit** (described above) determines if these numbers mean percentages or pixels. 
 
-{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/table/width-unit-and-column-widths.png" alt="Width Unit and Column Widths" >}}
+{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/table/width-unit-and-column-widths.png" alt="Width Unit and Column Widths" class="no-border" >}}
 
 When **Width unit** is set to *Pixels*, you can set column width to the following:
 

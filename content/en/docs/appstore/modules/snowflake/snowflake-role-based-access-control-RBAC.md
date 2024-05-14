@@ -92,7 +92,7 @@ To retrieve the "Connection Details" associated with the "current user" use the 
 * At Statement field add the Statement\s action outcome
 * At the Connection Details add the Connection details' action outcome
 
-{{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/Pic.7 Execute Statement.png" >}}
+{{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/execute-statement.png" >}}
 
 ### 3.5 Map the HttpResponse List 
 
@@ -100,20 +100,25 @@ The Http Response can be mapped if needed to Mx Objects
 * By an [import mapping (https://docs.mendix.com/refguide/import-mappings/)]
 * With [‘Transform Responses to MxObjects’ (https://docs.mendix.com/appstore/connectors/snowflake/snowflake-rest-sql/#transform-response-to-mx-object)]
 The Transform Responses action creates a single table with the HTTP Response data. To do that a Domain model Entity is needed with the attributes named exactly as the returned response attributes, for example for the Query of the 3.1 the entity should look as follows
-{{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/Pic.8 Mapping Example entity.png" >}}
 
-{{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/Pic.9 Execute Statement and mapping example microflow.png" >}}
+{{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/mapping-entity.png" >}}
+
+{{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/execute-statement-microflow.png" >}}
+
 * The results then can be visualized in a page
-{{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/Pic.10 Example results list.png" >}}
 
+{{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/sample-results.png" >}}
 
 ## 4 Snowflake Test (optional)
+
 The follow up is an example of how to set up Role-Based Access Control (RBAC) on Snowflake for two test users and view the same data in a Mendix app for the equivalent test users following the steps above.
+
 ### 4.1 Prerequisites 
 * A user in Snowflake platform with account administrator privileges
 * A public key from ### 2.2 
 
 ### 4.2 Snowflake  
+
 For further details please check the Snowflake [documentation (https://docs.snowflake.com/sql-reference]
 * Create 2 roles in Snowflake Role Test A and Role Test B
 ```SQL
@@ -121,6 +126,7 @@ CREATE ROLE ROLETESTA;
 CREATE ROLE ROLETESTB;
 ```
 * Create Two users Test User 1 and Test User 2
+
 ```SQL
 CREATE OR REPLACE USER TestUser1
 PASSWORD = 'TestPass1'
@@ -235,9 +241,13 @@ ALTER TABLE EXAMPLE_RBAC ADD ROW ACCESS POLICY RegionRole ON (Region);
   FROM EXAMPLE_RBAC;
   ```
 * Check the result
-{{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/Pic.11 Snowflake Test User 1.png" >}}
+
+{{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/test-user1-snowflake.png" >}}
+
 * Logout and login with the TestUser 2 and execute the same statement
-{{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/Pic.12 Mendix Test user 1 .png" >}}
+
+{{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/test-user1-mendix.png" >}}
+
 * Compare the Results
   
 * Follow the instructions 2-5 so you can create two test users in the Mendix app with Connection details and also the Execute Statement microflow.
@@ -246,8 +256,10 @@ ALTER TABLE EXAMPLE_RBAC ADD ROW ACCESS POLICY RegionRole ON (Region);
 
 * Login with each user separately.
 *  Compare results with each user and also with the results from snowflake
-  {{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/Pic.13 Snowflake Test User 2.png" >}}
-{{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/Pic.14 Test User 2 Mendix.png" >}}
+
+{{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/test-user2-snowflake.png" >}}
+
+{{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/test-user2-mendix.png" >}}
 
 
 

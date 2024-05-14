@@ -28,4 +28,6 @@ If your company already has a Mendix Admin but you yourself are not a Mendix Adm
 
 If you are a Mendix Admin, you will immediately see the [Dashboard](/control-center/dashboard/) page and can navigate to the pages described below.
 
-## 2 Documents in This Category.
+## 2 Guide Categories
+
+The *Control Center Guide* is divided into the following categories:

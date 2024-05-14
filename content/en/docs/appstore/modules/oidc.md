@@ -612,9 +612,6 @@ This section is only relevant if you are a Mendix partner and you want to integr
 To parse of SAM access tokens you need to do the following when performing [OIDC Client Configuration](#client-configuration):
 
 1. Select *OIDC.Default_SAM_TokenProcessing_CustomATP* as the **custom AccessToken processing microflow**.
-
-    {{< figure src="/attachments/appstore/modules/oidc/enable-sam-parsing.png" class="no-border" >}}
-
 1. Add the scopes `sam_account`, `samauth.role`, `samauth.tier`, and `samauth.ten` to the **Selected Scopes** in the OIDC Client Configuration.
 1. Configure the user roles in your app to match the roles returned by SAM. End-users will be given the matching role when they sign into the app. If the role in the SAM token is not found in the Mendix app the end-user will be given the role `User`.
 1. Save the configuration.
@@ -634,8 +631,6 @@ The OIDC SSO module version 2.3.0 and above provides a default access token pars
 To parse the OIDC Provider access tokens you need to do the following when performing OIDC Client Configuration:
 
 1. Select `OIDC.Default_OIDCProvider_TokenProcessing_CustomATP` as the **custom AccessToken processing microflow**.
-
-    {{< figure src="/attachments/appstore/modules/oidc/enable-oidc-provider-parsing.png" class="no-border" >}}
 
 2. Add the scopes `openid` and the ModelGUID or Name to the **Selected Scopes** in the OIDC Client Configuration. The ModelGUID will look something like `53f5d6fa-6da9-4a71-b011-454ec052cce8`.
 

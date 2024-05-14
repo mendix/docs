@@ -56,7 +56,7 @@ The OIDC SSO module supports the following features:
 * Works with the Mendix DeepLink module.
 * Supports user provisioning to custom user entities; you can map claims onto attributes of an entity which is a specialization of the `System.User` entity.
 
-1. Configuration Experince Features:
+2. Configuration Experince Features:
 
 * Easy configuration, by leveraging the so-called well-known discovery endpoint at your IdP. The IdP's well-known endpoint also indicates which user claims the IdP may provide during single sign-on. The module reads this information, so the developer does not need to configure it. The available claims can be used in custom provisioning microflow, as decsribed in the section [Custom User Provisioning Using a Microflow](#custom-provisioning-mf)
     * For example, PKCE will be used automatically if it is detected.
@@ -64,7 +64,7 @@ The OIDC SSO module supports the following features:
 * Comes with default user provisioning microflow that works with Entra ID; there you may need to build a custom user provisioning flow.
 * User provisioning microflows can be used from any other modules in your app. They do not need to be exclusively a part of the oidc module.
 
-1. Developer Experience Features:
+3. Developer Experience Features:
 
 * Built primarily in standard Mendix components (minimal Java) to allow for easy customization and ongoing development.
 
@@ -188,7 +188,7 @@ Ensure that you have allocated the following user roles to the OIDC module and (
 | Anonymous | OIDC.Anonymous |
 | User | OIDC.User |
 
-{{< figure src="/attachments/appstore/modules/oidc/user-roles.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/modules/oidc/user_roles.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 You may have to add the *Anonymous* user role if it does not exist already.
@@ -282,7 +282,7 @@ In this case, the OIDC client is the app you are making.
 1. Select the scopes expected by your OIDC IdP. The standard scopes are `openid`, `profile`, and `email`, but some IdPs may use different ones.
     * If you need refresh tokens for your end-users, you also need the `offline_access` scope.
     * Add other scopes as needed.
-1. Select your user provisioning flow. By default, this module will use standard OpenID claims to provision end-users in your app. Also included is a flow that uses the standard UserInfo endpoint in OIDC, which is useful in the case that your IdP uses "thin tokens". You can set up user provisioning by setting the following standard flows:
+1. Select your user parsing. By default, this module will use standard OpenID claims to provision end-users in your app. Also included is a flow that uses the standard UserInfo endpoint in OIDC, which is useful in the case that your IdP uses "thin tokens". You can set up user provisioning by setting the following standard flows:
 
 | Default Microflow | Use |
 | --- | --- |
@@ -355,6 +355,12 @@ For more information, see the [Custom User Provisioning at Deploy Time](#custom-
 
 The following constants are optional:
 
+* **CustomUserEntity** (*default: Administration.Account*) – a custom user entity 
+
+* **PrincipalEntityAttribute** (*default: Name*) – the attribute holding the unique identifier of an authenticated user
+
+* **PrincipalIdPAttribute** (*default: sub*) – the IdP claim which is the unique identifier of an authenticated user
+
 * **ClientAuthenticationMethod** (*default: client_secret_basic*) – the client authentication method — the caption of OIDC.ENU_ClientAuthenticationMethod
 
     Examples: `client_secret_post` or `client_secret_basic`
@@ -365,7 +371,7 @@ The following constants are optional:
 
 * **CustomATP**: a custom access token processing microflow — the value of `CompleteName` in the mxmodelreflection$microflows table
 
-    Example: `OIDC.Default_PIB_TokenProcessing_CustomATP`
+    Example: `OIDC.Default_SAM_TokenProcessing_CustomATP`
 
 * **CustomCallbackURL** – the custom callback URL
 
@@ -377,7 +383,7 @@ The following constants are optional:
 
     Example: `openid profile email`
 
-* **UserParsingFlow** (*default: OIDC_CustomUserParsing_Standard*) – the custom user provisioning
+* **UserParsing** (*default: OIDC_CustomUserParsing_Standard*) – the custom user provisioning
 
     Example: `OIDC_CustomUserParsing_Standard`
 
@@ -397,7 +403,7 @@ By default, end-users are provisioned using the `Account` object in the Administ
 
 By default, the `CUSTOM_UserProvisioning` microflow in the **USE_ME** > **1. Configuration** folder of the OIDC module uses the `OIDC_CustomUserParsing_Standard` microflow. This applies the following mapping:
 
-| ID-token Provided by your IdP | Attribute of `Administration.Account` Object |
+| ID-token Provided by your IdP | Attribute of `CustomUserEntity` Object |
 | ----------------------------- | ----------------------------- |
 | sub                           | Name                          |
 | name                          | Fullname                      |
@@ -613,11 +619,11 @@ To parse of SAM access tokens you need to do the following when performing [OIDC
 
 1. Select *OIDC.Default_SAM_TokenProcessing_CustomATP* as the **custom AccessToken processing microflow**.
 
-    {{< figure src="/attachments/appstore/modules/oidc/enable-sam-parsing.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/modules/oidc/enable-sam.png" class="image-border" >}}
 
-1. Add the scopes `sam_account`, `samauth.role`, `samauth.tier`, and `samauth.ten` to the **Selected Scopes** in the OIDC Client Configuration.
-1. Configure the user roles in your app to match the roles returned by SAM. End-users will be given the matching role when they sign into the app. If the role in the SAM token is not found in the Mendix app the end-user will be given the role `User`.
-1. Save the configuration.
+2. Add the scopes `sam_account`, `samauth.role`, `samauth.tier`, and `samauth.ten` to the **Selected Scopes** in the OIDC Client Configuration.
+3. Configure the user roles in your app to match the roles returned by SAM. End-users will be given the matching role when they sign into the app. If the role in the SAM token is not found in the Mendix app the end-user will be given the role `User`.
+4. Save the configuration.
 
 #### 8.2.2 Parsing Microsoft Entra ID Access Tokens
 
@@ -635,7 +641,7 @@ To parse the OIDC Provider access tokens you need to do the following when perfo
 
 1. Select `OIDC.Default_OIDCProvider_TokenProcessing_CustomATP` as the **custom AccessToken processing microflow**.
 
-    {{< figure src="/attachments/appstore/modules/oidc/enable-oidc-provider-parsing.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/modules/oidc/oidc-provider-parsing.png" class="image-border" >}}
 
 2. Add the scopes `openid` and the ModelGUID or Name to the **Selected Scopes** in the OIDC Client Configuration. The ModelGUID will look something like `53f5d6fa-6da9-4a71-b011-454ec052cce8`.
 

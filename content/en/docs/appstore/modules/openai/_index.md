@@ -109,7 +109,7 @@ The following inputs are required for the OpenAI configuration:
 | API key     | This is the access token to authorize your API call. <br />To get an API, follow these steps:<ol><li>Create an account and sign in at [OpenAI](https://platform.openai.com/).</li><li> Go to the [API key page](https://platform.openai.com/account/api-keys) to create a new secret key. </li><li>Copy the API key and save this somewhere safe.</li></ol> |
 
 {{% alert color="info" %}}
-If you have signed up for an OpenAI account and are using free trial credits, please note that these are only valid for three months after the account has been created (not after the api-key has been created). To continue using the OpenAI API with an account that is older than three months, you will need to top up your account balance with credit and create a new api-key. <br />For more details, see the [OpenAI API reference](https://platform.openai.com/docs/api-reference/authentication).
+If you have signed up for an OpenAI account and are using free trial credits, note that these are only valid for three months after the account has been created (not after the API key has been created). To continue using the OpenAI API with an account that is older than three months, you will need to top up your account balance with credit and create a new API key. <br />For more details, see the [OpenAI API reference](https://platform.openai.com/docs/api-reference/authentication).
 {{% /alert %}}
 
 #### 3.1.2 Azure OpenAI Configuration {#azure-openai-configuration} 
@@ -216,7 +216,7 @@ Two helper microflow are available to construct the `FunctionCollection` with a 
 * `FunctionCollection_CreateAndAddFunction` can be used to initialize a new `FunctionCollection` and add a new `Function` to it in order to enable [function calling](#chatcompletions-functioncalling).
 * `FunctionCollection_AddFunction` can be used to add a new `Function` to an existing `FunctionCollection`.
 
-See [function calling](/appstore/modules/openai-connector/function-calling/) for more information.
+For more information, see [Function Calling](/appstore/modules/openai-connector/function-calling/).
 
 ### 3.3 Image Generations Configuration {#image-generations-configuration}
 
@@ -286,7 +286,7 @@ The domain model in Mendix is a data model that describes the information in you
 
 #### 4.1.1 Configuration {#configuration-domain-model}
 
-{{< figure src="/attachments/appstore/modules/openai-connector/domainModel-Configuration.png" >}}
+{{< figure src="/attachments/appstore/modules/openai-connector/domain-model-configuration.png" >}}
 
 ##### 4.1.1.1 `Configuration` {#configuration-entity} 
 
@@ -322,7 +322,7 @@ This entity is only used to send a simple [chat completions request](#chat-compl
 
 #### 4.1.2 Generalizations {#generalizations-domain-model}
 
-{{< figure src="/attachments/appstore/modules/openai-connector/domainModel-Generalizations.png" >}}
+{{< figure src="/attachments/appstore/modules/openai-connector/domain-model-generalizations.png" >}}
 
 ##### 4.1.2.1 `AbstractUsage` {#abstractusage}
 
@@ -363,7 +363,7 @@ This is the abstract entity for `Function` reused in the Chat Completions reques
 
 #### 4.1.3 Chat Completions {#chatcompletions-domain-model}
 
-{{< figure src="/attachments/appstore/modules/openai-connector/domainModel-ChatCompletions.png" >}}
+{{< figure src="/attachments/appstore/modules/openai-connector/domain-model-chat-completions.png" >}}
 
 ##### 4.1.3.1 `ChatCompletionsRequest` {#chatcompletionsrequest} 
 
@@ -484,7 +484,7 @@ This is a specialization of the [AbstractChatCompletionsMessage](#abstractchatco
 
 #### 4.1.4 Image Generations {#imagegenerations-domain-model}
 
-{{< figure src="/attachments/appstore/modules/openai-connector/domainModel-Images.png" >}}
+{{< figure src="/attachments/appstore/modules/openai-connector/domain-model-images.png" >}}
 
 ##### 4.1.4.1 `ImageGenerationsRequest` {#imagegenerationsrequest} 
 
@@ -539,7 +539,7 @@ This is an entity that is used to map the [image](#image) data from the API resp
 
 #### 4.1.5 Embeddings {#embeddings-domain-model}
 
-{{< figure src="/attachments/appstore/modules/openai-connector/domainModel-EmbeddingsWithDataBatch.png" >}}
+{{< figure src="/attachments/appstore/modules/openai-connector/domain-model-embeddings-with-data-batch.png" >}}
 
 ##### 4.1.5.1 `EmbeddingsRequest` {#embeddingsrequest} 
 

@@ -260,8 +260,3 @@ ALTER TABLE EXAMPLE_RBAC ADD ROW ACCESS POLICY RegionRole ON (Region);
 {{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/test-user2-snowflake.png" >}}
 
 {{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/test-user2-mendix.png" >}}
-
-
-
-
-  

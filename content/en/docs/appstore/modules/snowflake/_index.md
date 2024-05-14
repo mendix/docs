@@ -24,13 +24,17 @@ For a comparison of the functions of both connectors, refer to the sections belo
 
 ### 2.1 External Database Connector
 
-The [External Database connector](https://marketplace.mendix.com/link/component/219862) is the recommended option that you can use to integrate your Mendix app with Snowflake. It offers a premium developer experience where you can test connections and queries during design time by using a view of all schemas and objects to which you can connect. It makes use of the JDBC protocol, supports authentication with a username and password, and the usage of Python stored procedures in addition to Java. 
+The [External Database connector](https://marketplace.mendix.com/link/component/219862) is the recommended option that you can use to integrate your Mendix app with Snowflake. It offers a premium developer experience where you can test connections and queries during design time by using a view of all schemas and objects to which you can connect. It makes use of the JDBC protocol and the usage of Python stored procedures in addition to Java. 
 
-The External Database connector is currently in a public Beta version. It is available only for Mendix 10.
+The External Database connector only supports system-level authentication. That is, it authenticates in Snowflake by using the username and password of a single Snowflake user. Because of that, the connector does not support role-based access control (RBAC) per end user.
+
+The Snowflake support for the External Database connector is currently in a public Beta version. It is available only for Mendix 10.
 
 ### 2.2 REST SQL Connector
 
 The [REST SQL connector](https://marketplace.mendix.com/link/component/225717), available from the Mendix Marketplace, supports the 9.24 LTS version of Mendix. It offers key-pair authentication with a private key file according to PKCS #8 standard.
+
+With the REST SQL connector, authentication is done per end user, and the connector supports role-based access control (RBAC) per end user as well.
 
 The REST SQL connector requires an additional step to transform data rows received from the REST SQL API into Mendix objects. For more information, see [Snowflake REST SQL Connector](/appstore/connectors/snowflake/snowflake-rest-sql/).
 

@@ -200,7 +200,7 @@ Function calling is a very powerful capability, but this also introduces potenti
 Mendix also strongly advises that you build user confirmation logic into function microflows that have a potential impact on the world on behalf of the end-user, for example sending an email, posting online, or making a purchase.
 {{% /alert %}}
 
-Function calling is supported for all chat completions operations by adding the optional input parameter [FunctionCollection](#functioncollection).
+You can use function calling in all chat completions operations by providing the optional input parameter [FunctionCollection](#functioncollection).
 Two helper microflow are available to construct the `FunctionCollection` with a list of `Functions`:
 
 * `FunctionCollection_CreateAndAddFunction` can be used to initialize a new `FunctionCollection` and add a new `Function` to it.
@@ -212,7 +212,7 @@ For more information, see [Function Calling](/appstore/modules/openai-connector/
 
 Vision enables models like GPT-4 Turbo to interpret and analyze images, allowing them to answer questions and perform tasks related to visual content. This integration of computer vision and language processing enhances the model's comprehension and makes it valuable for tasks involving visual information. To make use of vision inside the OpenAI connector, an optional [ImageCollection](#imagecollection) containing one or multiple images must be sent along with a single message.
 
-Vision is supported for all chat completions operations by providing the optional input parameter [ImageCollection](#imagecollection). 
+You can use vision in all chat completions operations by providing the optional input parameter [ImageCollection](#imagecollection). 
 
 Two helper microflows are available to construct the `ImageCollection` with a list of `ChatCompletionImages`:
 
@@ -763,7 +763,7 @@ Activities define the actions that are executed in a microflow or a nanoflow.
 
 #### 4.3.1 Chat Completions {#chatcompletions-technical}
 
-The chat completions API from OpenAI accepts a complex JSON structure that consists of a number of parameters plus one or more messages as input and generates a model-generated message structure as output. While the chat structure is designed for facilitating multi-turn conversations (with history), it is equally valuable for single-turn tasks that do not involve any prior conversation (without history). The exposed microflows in this connector are built to abstract away the complex message structure and are meant to facilitate easier implementation in certain use cases. All chat completions operations support [JSON mode](#enum-responseformat-chat), [function calling](#chatcompletions-functioncalling) and [vision](#chatcompletions-vision).
+The chat completions API from OpenAI accepts a complex JSON structure that consists of a number of parameters plus one or more messages as input and generates a model-generated message structure as output. While the chat structure is designed for facilitating multi-turn conversations (with history), it is equally valuable for single-turn tasks that do not involve any prior conversation (without history). The exposed microflows in this connector are built to abstract away the complex message structure and are meant to facilitate easier implementation in certain use cases. All chat completions operations support [JSON mode](#enum-responseformat-chat), [function calling](#chatcompletions-functioncalling), and [vision](#chatcompletions-vision).
 
 ##### 4.3.1.1 Chat Completions (Without History) {#chat-completions-without-history-technical} 
 
@@ -780,9 +780,9 @@ For [specific models](https://platform.openai.com/docs/guides/text-generation/js
 | `Model`          | String                                                | only mandatory for **OpenAI** | This is the ID of the model to use; not considered for **Azure OpenAI** configurations. |
 | `ResponseFormat` | [ENUM_ResponseFormat_Chat](#enum-responseformat-chat) | optional                      | This can be used to specify the format that the model must output. |
 | `Temperature`    | Decimal                                               | optional                      | This can be used to control the randomness of the output. The value should be a decimal between 0.0 and 2.0. The default value is 1.0. Higher values make the output more random, while lower values make it more focused and deterministic. Note: very high values for temperature (>1.7) may give unexpected results and even internal server errors. |
-| `MaxTokens`      | Integer                                               | optional                      | The maximum number of tokens to generate in the chat completion. |
-| `FunctionCollection`    | Object                                         | optional                      | A collection of functions to be sent along with the ChatCompletionsRequest as tools to use function calling. |
-| `ImageCollection`| Object                                                | optional                      | A collection of images to be sent along with the UserPrompt to use vision. |
+| `MaxTokens`      | Integer                                               | optional                      | This is the maximum number of tokens to generate in the chat completion. |
+| `FunctionCollection`    | Object                                         | optional                      | This is a collection of functions to be sent along with the ChatCompletionsRequest as tools to use function calling. |
+| `ImageCollection`| Object                                                | optional                      | This is a collection of images to be sent along with the `UserPrompt` to use vision. |
 
 **Return value**
 
@@ -813,7 +813,7 @@ Use the microflow `ChatCompletions_Execute_WithHistory` to execute a chat comple
 | `Model`                  | String                                                | only mandatory for **OpenAI** | This is the ID of the model to use; not considered for **Azure OpenAI** configurations. |
 | `ResponseFormat`         | [ENUM_ResponseFormat_Chat](#enum-responseformat-chat) | optional                      | This can be used to specify the format that the model must output. |
 | `Temperature` | Decimal | optional | This can be used to control the randomness of the output. The value should be a decimal between 0.0 and 2.0. The default value is 1.0. Higher values make the output more random, while lower values make it more focused and deterministic. Note: very high values for temperature (>1.7) may give unexpected results and even internal server errors. |
-| `MaxTokens`              | Integer                                               | optional                      | The maximum number of tokens to generate in the chat completion. |
+| `MaxTokens`              | Integer                                               | optional                      | This is the maximum number of tokens to generate in the chat completion. |
 | `FunctionCollection`     | Object                                                | optional                      | A collection of functions to be sent along with the ChatCompletionsRequest as tools. |
 
 **Return value**
@@ -872,8 +872,8 @@ Use the microflow `ImageGenerations_Execute` to execute a single image generatio
 | `Configuration`  | [Configuration](#configuration-entity)                  | mandatory                     | This is an object that contains endpoint and API key.        |
 | `Model`          | String                                                  | only mandatory for **OpenAI** | This is the ID of the model to use. This is not considered for **Azure OpenAI** configurations. |
 | `Size`           | [ENUM_Size](#enum-size)                                 | optional                      | This can be used to request a specific image size. The default value is `1024x1024`. |
-| `Quality`        | [ENUM_Quality](#enum-quality)                           | optional                      | This is the quality of the image that will be generated. This param is only supported for dall-e-3. |
-| `Style`          | [ENUM_Style](#enum-style)                               | mandatory                     | This is the style of the generated images. This param is only supported for dall-e-3. |
+| `Quality`        | [ENUM_Quality](#enum-quality)                           | optional                      | This is the quality of the image that will be generated. This parameter is only supported for dall-e-3. |
+| `Style`          | [ENUM_Style](#enum-style)                               | mandatory                     | This is the style of the generated images. This parameter is only supported for dall-e-3. |
 | `ResponseFormat` | [ENUM_ResponseFormat_Image](#enum-responseformat-image) | mandatory                     | This is the format in which the generated images are returned. Must be one of url or b64_json. Defaults to url. |
 | `UserString`     | String                                                  | optional                      | This is a unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse. |
 
@@ -997,11 +997,11 @@ Follow these steps to check your JDK version and update if necessary:
 
 ### 6.2 Chat Completions with Vision and JSON mode (Azure OpenAI)
 
-At the time of writing this document, Azure OpenAI does not support the use of JSON mode and function calling in combination with image (vision) input and will return a `400 - model error`. Please make sure the optional input parameters `ResponseFormat` and `FunctionColletion` are set to `empty` for all chat completions operations if you want to use vision with Azure OpenAI.
+At this moment, Azure OpenAI does not support the use of JSON mode and function calling in combination with image (vision) input and will return a `400 - model error`. Make sure the optional input parameters `ResponseFormat` and `FunctionColletion` are set to `empty` for all chat completions operations if you want to use vision with Azure OpenAI.
 
 ### 6.3 Chat Completions with Vision Response is Cut Off (Azure OpenAI)
 
-When using Azure OpenAI, it is recommended to set the optional `MaxTokens` input parameter so that the response will not be cut off. See [Azure OpenAI Documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/gpt-with-vision?tabs=rest%2Csystem-assigned%2Cresource#call-the-chat-completion-apis) for more details.
+When you use Azure OpenAI, it is recommended to set the optional `MaxTokens` input parameter so that the response will not be cut off. See [Azure OpenAI Documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/gpt-with-vision?tabs=rest%2Csystem-assigned%2Cresource#call-the-chat-completion-apis) for more details.
 
 ## 7 Read More {#read-more}
 

@@ -318,7 +318,9 @@ Use [Create Label](#create-label-technical) and [Create Chunk](#create-chunk-tec
 ##### 4.3.2.4 Replace {#replace-technical}
 
 The `Replace` operation is used to replace existing chunks in a knowledge base based on the Mendix objects the chunks represent. This operation handles a list of chunks with their labels in a single operation.
-Use [Create Label](#create-label-technical) and [Create Chunk](#create-chunk-technical) to construct the input for this microflow, which needs to be passed as `ChunkList`. In order to replace the right data in the knowledge base, all chunks in `ChunkList` need to represent a Mendix object: this is set during chunk creation in [Create Chunk](#create-chunk-technical) by specifying the `MxObject` input parameter. Existing chunks related to those Mendix objects will be deleted from the knowledge base first, and then be inserted according to the new state as specified by the ChunkList (labels included). By providing the `KnowledgeBaseName` parameter, you determine the knowledge base. It is used to later on to retrieve elements from the right tables. 
+
+Use [Create Label](#create-label-technical) and [Create Chunk](#create-chunk-technical) to construct the input for this microflow, which needs to be passed as `ChunkList`. In order to replace the right data in the knowledge base, all chunks in `ChunkList` need to represent a Mendix object: this is set during chunk creation in [Create Chunk](#create-chunk-technical) by specifying the `MxObject` input parameter. Existing chunks related to those Mendix objects will be deleted from the knowledge base first, and then be inserted according to the new state as specified by the ChunkList (labels included). By providing the `KnowledgeBaseName` parameter, you determine the knowledge base. It is used to later on to retrieve elements from the right tables.
+
 The `DatabaseConfiguration` that is passed must contain the connection details to a PostgreSQL database server with the PgVector extension installed. This entity is typically configured at runtime or in [after-startup](/refguide/app-settings/#after-startup) logic.
 
 **Input parameters**

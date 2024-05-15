@@ -38,24 +38,18 @@ To enable role-based access control for your Snowflake-integrated Mendix app, pe
 
 2. Decide on the authentication method. For Snowflake, key-pair authentication is recommended.
 3. Configure the necessary keys and credentials in your Snowflake account and assign the public key to a Snowflake user. For more information, see [ey-pair authentication and key-pair rotation](https://docs.snowflake.com/en/user-guide/key-pair-auth) in the Snowflake documentation.
+4. In your Mendix app, create a new **Account Overview** page, were you can add the connection details to the users. A new **Connection Details** record is needed for every user that has access to data in Snowflake.
 
-### 2.3 Create Connection Details object and Associate it with the Account
+    {{< figure src="/attachments/appstore/modules/snowflake-rest-sql/connection-details-account.png" >}}
 
-* A new connection Details record is needed for every user that have access to Data at Snowflake. 
-* To apply Mendix best practices when it come to market place modules, and security, create a new account overview page where you can add the Connection details to the Users
-* When using the Key pair authentication a private key object is also needed to store the user's Private Key.
-  
-  For more details about each step, refer to the official [Snowflake documentation](https://docs.snowflake.com/en/user-guide/key-pair-auth)
+5. Optional: If using the [key-pair authentication method](https://docs.snowflake.com/en/user-guide/key-pair-auth), create a **Private Key** object to store each user's private key.
+6. Create a microflow that gets a **Connection Details** object associated with the account if it exists, or otherwise creates one along with a private key, as shown in the following figure:
 
-* Below is an example of a microflow that gets a Connection details object associate with the account if it exist or creates one along with the private key object if it doesn’t.
-  
-  {{< figure src="/attachments/appstore/modules/snowflake-rest-sql/connection-details-microflow.png" >}}
-  
-  {{< figure src="/attachments/appstore/modules/snowflake-rest-sql/connection-details-account.png" >}}
+    {{< figure src="/attachments/appstore/modules/snowflake-rest-sql/connection-details-microflow.png" >}}
 
-* And a example of a microflow to redirect to the ConnectionDetails_NewEdit_Step1 page
+7. Create a microflow to redirect the user to a page where they can create or edit their connection details, as shown in the following figure:
 
-{{< figure src="/attachments/appstore/modules/snowflake-rest-sql/connection-details-newedit.png" >}}
+    {{< figure src="/attachments/appstore/modules/snowflake-rest-sql/connection-details-newedit.png" >}}
 
 ### 2.4 Connection Details at End User Level
 

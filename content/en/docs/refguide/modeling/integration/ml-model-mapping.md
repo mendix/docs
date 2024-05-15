@@ -2,7 +2,6 @@
 title: "ML Model Mapping"
 url: /refguide/ml-model-mapping/
 weight: 25
-category: Mapping Documents
 tags: ["ML kit", "ML model mapping", "machine learning", "models"]
 ---
 

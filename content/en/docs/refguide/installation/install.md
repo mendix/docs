@@ -52,11 +52,11 @@ Mendix Studio Pro needs to be installed on your computer before you can start bu
 
 ### 4.1 Installing Prerequisites Separately {#prerequisites}
 
-Sometimes you can run into problems when installing Studio Pro. One work-around is to restart your system and install the prerequisites separately if they are not installed yet. 
+If you run into problems installing Studio Pro, one work-around is to restart your system and install the prerequisites separately if they are not installed yet. 
 
 The prerequisites are the following:
 
-* [Microsoft .NET Desktop Runtime 6.0.x](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) – Mendix recommends using version 6.0.6 or above
+* [Microsoft .NET Desktop Runtime 6.0.x](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) – It is recommended to use version 6.0.6 or above.
 * [Eclipse Temurin JDK 11 (x64)](https://github.com/adoptium/temurin11-binaries/releases)
 * [Microsoft Visual C++ 2015 and 2019 Redistributable Package](https://aka.ms/vs/16/release/vc_redist.x64.exe)
 * [Mendix Native Mobile Builder one-click Installer](https://appdev-mx-cdn.s3.amazonaws.com/native-builders/latest.exe)
@@ -69,9 +69,9 @@ The prerequisites are the following:
 * [Microsoft Edge WebView2 Evergreen Runtime (x64 or ARM64) (Evergreen Standalone Installer version)](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)
 * [Gradle 7.6 or above](https://gradle.org/install/#manually) with Gradle extracted to the parent directory of the folder where Studio Pro is installed (usually `C:\Program Files\Mendix`) instead of `C:\Gradle`.
 
-Based on the error message you get from the installer you can decide to install a single prerequisite, or you can try to manually install them all.
+Based on the error message you get from the installer, you can choose to install a single prerequisite, or you can try to manually install them all.
 
-After that you can retry installing Studio Pro.
+Then, you can retry installing Studio Pro.
 
 ### 4.2 Mac Warning {#mac-warning}
 
@@ -79,17 +79,17 @@ On a Mac, you may get the following warning during installation:
 
 {{< figure src="/attachments/refguide/installation/install/warning-mac.png"  class="no-border" >}}
 
-To bypass it, right-click the installer, click **Open** and run the installer.
+To bypass this warning, right-click the installer, click **Open**, and run the installer.
 
 ## 5 Installing Mendix Studio Pro Offline {#offline}
 
 The Mendix Studio Pro installation experience includes all the tools and frameworks required to run the application. If any of the prerequisites are not found at the moment of installation, the Studio Pro setup process will attempt to download and install the missing elements automatically. The Mendix Studio Pro installer does not include all dependencies and relies on internet connectivity to obtain them if any of the required pieces of software are missing. 
 
-It is possible to prepare the prerequisite installers beforehand, so that the Mendix Studio Pro setup process can pick them up instead of downloading from the remote location. Follow these steps to prepare the installers:
+It is possible to prepare the prerequisite installers beforehand so the setup process can pick them up instead of downloading from the remote location. Follow these steps to prepare the installers:
 
 1. Create a folder for the Mendix Studio Pro installer.
 2. Download the latest [Mendix Studio Pro installer](https://marketplace.mendix.com/link/studiopro/) and move it into folder you created.
-3. Create a folder with the name **Dependencies** in the same location where the Mendix Studio Pro installer was placed.
+3. Create a folder with the name *Dependencies* in the same location where the Mendix Studio Pro installer was placed.
 4. Download the prerequisites listed in the [Troubleshooting](#troubleshooting) section above and move them into the **Dependencies** folder.
 5. Rename the following dependencies:
     * The Microsoft .NET Desktop Runtime 6.0.x executable (*dotnet.exe*) to *windowsdesktop-runtime-6.0-x64.exe*
@@ -97,7 +97,7 @@ It is possible to prepare the prerequisite installers beforehand, so that the Me
     * The Visual C++ Redistributable for Visual Studio 2019 (x64) executable (for example, *VC_redist.x64.exe*) to *vcredist2019_x64.exe*
     * The `latest` executable to *mendix_native_mobile_builder.exe*
     * The *Git-{version}-64-bit.exe* executable to *git_for_windows_installer.exe*
-    * Do not rename the Microsoft Edge WebView2 Evergreen Runtime installer *MicrosoftEdgeWebview2Setup.exe*, keep it as is
+    * Do not rename the Microsoft Edge WebView2 Evergreen Runtime installer *MicrosoftEdgeWebview2Setup.exe*; keep it as is
     * For Mendix 10.10.0 and above, the Gradle zip file should be named *gradle-8.5-bin.zip*
     * For Mendix 10 versions below 10.10.0, the Gradle zip file should be named *gradle-7.6.3-bin.zip*
 
@@ -109,7 +109,7 @@ If an error occurs during JDK installation, try the following:
 * Install the Adopt Open JDK dependency manually from the dependencies folder using Administrator privileges
 * Try to install Studio Pro again
 
-If managed dependencies are used (in Mendix 10.3.0 and above) then you need to set up a custom repository that can resolve the dependencies.
+If managed dependencies are used (in Mendix 10.3.0 and above), you need to set up a custom repository that can resolve the dependencies.
 
 For more information on how to configure a custom repository, see the *Custom Repositories* section of [Managed Dependencies](/refguide/managed-dependencies/#custom-repos).
 

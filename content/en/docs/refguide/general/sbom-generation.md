@@ -8,17 +8,17 @@ tags: ["build", "deploy", "deployment package", "command-line", "studio pro", "s
 ---
 
 ## 1 Introduction
-When building a Mendix app, you use many reusable components such as Widgets and App Store modules, which make use of components such as java libraries and node modules. You should know what you use in your app, what other components they are dependent on, and what licenses they make use of. Over time, these components may become outdated or vulnerable, so it is important to have this information in a ready-to-use, standard format. Studio Pro does this by generating a Software Bill of Materials (SBOM) based on the standardized CycloneDX format.
+When building a Mendix app, you use many reusable components such as Widgets and App Store modules, which make use of components such as Java libraries and node modules. You should know what you use in your app, what other components they are dependent on, and what licenses they make use of. Over time, these components may become outdated or vulnerable, so it is important to have this information in a ready-to-use, standard format. Studio Pro does this by generating a Software Bill of Materials (SBOM) based on the standardized CycloneDX format.
 
 ## 2 Generating an SBOM
-You can generate an SBOM by using [mxbuild](/refguide/mxbuild/). This generates an `sbom.json` file as part of your deployment folder or your package `.mda`. Bundling the SBOM together with your deployment ensures that the components that were present during the build are clearly represented.
+You can generate an SBOM by using [MxBuild](/refguide/mxbuild/). This generates an `sbom.json` file as part of your deployment folder or your package `.mda`. Bundling the SBOM together with your deployment ensures the components that were present during the build are clearly represented.
 
 ```bat
 mxbuild --java-home="C:\Program Files\Eclipse Adoptium\jdk-11.0.16.101-hotspot" --java-exe-path="C:\Program Files\Eclipse Adoptium\jdk-11.0.16.101-hotspot\bin\java.exe" --generate-sbom  "C:\Mendix\MyApp\MyApp.mpr"
 ```
 
 ## 3 SBOM Format
-The SBOM is based on the [CycloneDX 1.4 JSON format](https://cyclonedx.org/docs/1.4/json/). Required fields are delivered, and fields such as `version`, `description`. To identify the components from different package managers in a clear way, we use the `purl` field. The content follows the specification defined at: https://github.com/package-url/purl-spec. This includes Mendix modules, NPM packages and Java libraries. 
+The SBOM is based on the [CycloneDX 1.4 JSON format](https://cyclonedx.org/docs/1.4/json/). This includes required fields, and information such as `version` and `description`. To identify the components from different package managers, we use the `purl` field. The content follows the specification defined at `https://github.com/package-url/purl-spec`. This includes Mendix modules, NPM packages, and Java libraries. 
 
 ## 4 Example Output
 Since a full SBOM contains all project details, this is only a partial representation of a full example. To simplify we only show one of the java libraries that is packaged, but a full example would also contain all appstore modules, java libraries and javascript libraries under components. The field `dependencies` will contain the dependency relationship between the separate components.

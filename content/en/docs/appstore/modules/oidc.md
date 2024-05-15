@@ -188,7 +188,7 @@ Ensure that you have allocated the following user roles to the OIDC module and U
 | Anonymous | OIDC.Anonymous |
 | User | OIDC.User |
 
-{{< figure src="/attachments/appstore/modules/oidc/user_roles.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/modules/oidc/user-roles.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 You may have to add the *Anonymous* user role if it does not exist already.

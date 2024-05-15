@@ -48,7 +48,9 @@ If you select **Edit Webhook** from **More Options** ({{% icon name="three-dots-
 * Update **Webhook Name**, **URL**, or **Validation Secret**, and click **Save** to save the changes.
 * Add or delete **Custom Headers**, and click **Save** to save the changes.
 
-    {{% alert color="info" %}}You cannot change the value of an existing custom header. If you want to change the value, delete the existing header and add a new one with the same key.{{% /alert %}}
+    {{% alert color="info" %}}
+    You cannot change the value of an existing custom header. If you want to change the value, delete the existing header and add a new one with the same key.
+    {{% /alert %}}
 
 * Click **Test Webhook** to send a test payload to the endpoint specified under **URL**.
 * Click **(De)activate Webhook** to deactivate an active webhook or activate an inactive webhook.
@@ -82,7 +84,7 @@ Every `POST` payload contains the following delivery information as part of the 
 * **accept** – `*/*`
 * **host** – the host part of the endpoint URL (for example, `gitlab.com`)
 
-You can also add your own custom headers. For more information, see [Setting Up a Webhook](#setting-up).
+You can also add your own custom headers. For more information, see [Configuring a Webhook](#setting-up).
 
 {{% alert color="info" %}}
 The order of these headers is not guaranteed.

@@ -190,7 +190,7 @@ This property is not available if you enable **Custom content** for the column
 * **Option caption** — the expression that will be used as caption for the option.
 
 {{% alert color="info" %}}
-This column configuration is intended to be used in conjunction with [Drop-down Filter](#drop-down-filter). Other filter types don't support association filtering.
+This column configuration is intended to be used in conjunction with [Drop-down Filter](#drop-down-filter). Other filter types do not support association filtering.
 {{% /alert %}}
 
 ### 4.10 Visible {#visible-filter}
@@ -335,7 +335,7 @@ If **Multiselect** is enabled you must select a String attribute containing `Unl
 In this section you can select an action to be executed **On change** by the filter value. This means every time the user types or selects a value it will be executed.
 
 {{% alert color="warning" %}}
-Due to current limitations, **Saved attribute**, **Default value** and **On change** properties will be ignored when a drop-down filter is used in conjunction with an Association Filter data grid configuration.
+Due to current limitations, **Saved attribute**, **Default value**, and **On change** properties will be ignored when a drop-down filter is used in conjunction with an [Association Filter](#association-filter) data grid configuration.
 {{% /alert %}}
 
 ### 7.3 Number Filter

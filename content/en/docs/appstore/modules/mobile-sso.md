@@ -1,7 +1,7 @@
 ---
 title: "Mobile SSO"
 url: /appstore/modules/mobile-sso/ 
-category: "Modules"
+
 description: "Describes the configuration and usage of the Mobile SSO module, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "Mobile SSO", "IdP", "single sign on", "platform support", "Azure","Okta"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

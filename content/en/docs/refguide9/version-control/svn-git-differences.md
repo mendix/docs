@@ -1,7 +1,7 @@
 ---
 title: "Differences Between Git and SVN"
 url: /refguide9/svn-git-differences/
-category: "Version Control"
+
 weight: 45
 tags: ["git", "svn", "subversion", "byo-git", "byo-svn"]
 aliases:

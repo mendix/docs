@@ -1,7 +1,7 @@
 ---
 title: "Use the Charts Widgets"
 url: /howto7/extensibility/charts-tutorials/
-category: "Extensibility"
+
 weight: 10
 description: "These how-to's will guide you in using charts in Mendix apps."
 tags: ["build", "app", "charts", "extensibility", "studio", "desktop modeler"]

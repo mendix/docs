@@ -1,7 +1,7 @@
 ---
 title: "Build Microflow Actions with Java"
 url: /howto9/extensibility/howto-connector-kit/
-category: "Extensibility"
+
 description: "Describes how to create custom microflow actions using Java."
 weight: 80
 tags: ["java", "connector kit", "microflow action", "parameter type", "generic actions", "type parameters", "mappings", "java action"]

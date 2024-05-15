@@ -1,7 +1,7 @@
 ---
 title: "Third-Party Licenses"
 url: /refguide/third-party-licenses/
-category: "General Info"
+
 weight: 50
 description: "Describes where to find the available third-party licenses in Mendix."
 tags: ["studio pro", "license", "library"]

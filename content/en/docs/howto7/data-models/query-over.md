@@ -1,7 +1,7 @@
 ---
 title: "Query Over Self-References"
 url: /howto7/data-models/query-over/
-category: "Data Models"
+
 weight: 5
 tags: ["query", "self-reference", "association", "domain model"]
 ---

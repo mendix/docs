@@ -1,7 +1,6 @@
 ---
 title: "Request Object"
 url: /refguide/mobile/best-practices/request-object/
-category: Mobile
 weight: 50
 description: "This pattern lets you capture changes as objects and apply them after synchronization making these changes more secure."
 tags: ["mobile", "best practices", "patterns", "offline-first", "synchronization"]

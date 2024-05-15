@@ -1,7 +1,7 @@
 ---
 title: "Build Custom Widgets"
 url: /howto8/extensibility/widget-development/
-category: "Extensibility"
+
 weight: 30
 no_list: false
 description_list: true 

@@ -5,7 +5,6 @@ weight: 25
 category: Mapping Documents
 description: "Introduces machine learning (ML) model integration used to deploy a ML model."
 tags: ["ML kit", "ML model mapping", "machine learning", "models"]
----
 
 ## 1 Introduction
 

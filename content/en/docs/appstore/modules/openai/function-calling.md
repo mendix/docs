@@ -1,7 +1,6 @@
 ---
 title: "Function Calling"
 url: /appstore/modules/openai-connector/function-calling/
-category: "Open AI"
 linktitle: "Function Calling"
 weight: 5
 description: "Describes function calling with OpenAI"

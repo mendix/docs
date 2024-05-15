@@ -1,7 +1,7 @@
 ---
 title: "Images"
 url: /refguide/images/
-category: "App Modeling"
+
 weight: 70
 description: "Introduces the image functionality in Studio Pro."
 tags: ["Images", "Image Collections", "png", "Studio Pro"]

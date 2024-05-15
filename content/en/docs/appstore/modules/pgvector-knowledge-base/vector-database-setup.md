@@ -1,7 +1,7 @@
 ---
 title: "Setting up a Vector Database"
 url: /appstore/modules/pgvector-knowledge-base/vector-database-setup/
-category: "PgVector Knowledge Base"
+
 linktitle: "Vector Database Setup"
 weight: 5
 description: "Describes how to setup a vector database to store and manage vector embeddings for a knowledge base"

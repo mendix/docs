@@ -1,7 +1,7 @@
 ---
 title: "General"
 url: /developerportal/deploy/general/
-category: "Deployment"
+
 weight: 5
 description: "Presents an overview of the Deployment section of the Developer Portal, focusing on topics that are relevant to more than one platform."
 tags: ["Deploy", "App", "Developer Portal", "Mendix Cloud", "Cloud Foundry", "Azure", "Docker", "SAP", "On-premises", "Kubernetes"]

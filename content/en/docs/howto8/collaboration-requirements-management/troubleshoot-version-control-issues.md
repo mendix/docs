@@ -1,7 +1,7 @@
 ---
 title: "Solve Known Version Control Issues"
 url: /howto8/collaboration-requirements-management/troubleshoot-version-control-issues/
-category: "Collaboration"
+
 weight: 7
 description: "This document presents a list of problems and fixes for version control issues."
 tags: ["version control", "troubleshoot", "Studio Pro", "Subversion", "TortoiseSVN"]

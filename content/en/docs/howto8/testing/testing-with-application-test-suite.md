@@ -1,7 +1,7 @@
 ---
 title: "Test with ATS"
 url: /howto8/testing/testing-with-application-test-suite/
-category: "Testing"
+
 weight: 20
 tags: ["test", "testing", "ats", "application test suite"]
 ---

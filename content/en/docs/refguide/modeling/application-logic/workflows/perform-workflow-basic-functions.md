@@ -8,9 +8,7 @@ tags: ["workflow", "workflows", "Studio Pro"]
 
 ## 1 Introduction
 
-A workflow is composed of elements that you can use in the workflow editor: you can either see them in the working area (start and end events, a parameter), or drag them from **Toolbox** to the flow.
-
-In this document, you will learn how to perform the following basic functions when working on workflows:
+A workflow is composed of [elements](/refguide/workflow-elements/) that you can use in the workflow editor. In this document, you will learn how to perform the following basic functions when working on workflows and on workflow elements:
 
 * [Add a workflow](#add-workflow)
 * [Open a workflow](#open-workflow)

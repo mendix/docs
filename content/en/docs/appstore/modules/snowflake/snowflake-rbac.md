@@ -28,7 +28,7 @@ Because of the above, implementing RBAC is essential for maintaining security an
 
 To enable RBAC for your Mendix app, you must first install and configure the [Snowflake REST SQL Connector](/appstore/connectors/snowflake/snowflake-rest-sql/).
 
-## 2 Configuration
+## 2 Configuring the Connection Details
 
 To enable role-based access control for your Snowflake-integrated Mendix app, perform the following steps:
 
@@ -38,7 +38,7 @@ To enable role-based access control for your Snowflake-integrated Mendix app, pe
 
 2. Decide on the authentication method. For Snowflake, key-pair authentication is recommended.
 3. Configure the necessary keys and credentials in your Snowflake account and assign the public key to a Snowflake user. For more information, see [ey-pair authentication and key-pair rotation](https://docs.snowflake.com/en/user-guide/key-pair-auth) in the Snowflake documentation.
-4. In your Mendix app, create a new **Account Overview** page, were you can add the connection details to the users. A new **Connection Details** record is needed for every user that has access to data in Snowflake.
+4. In your Mendix app, create a new **Account Overview** page, were you can add the connection details to the users. A new **Connection Details** record is needed for every user that has access to data in Snowflake. The Connection Details object should be filled in at the end-user level.
 
     {{< figure src="/attachments/appstore/modules/snowflake-rest-sql/connection-details-account.png" >}}
 
@@ -51,70 +51,51 @@ To enable role-based access control for your Snowflake-integrated Mendix app, pe
 
     {{< figure src="/attachments/appstore/modules/snowflake-rest-sql/connection-details-newedit.png" >}}
 
-### 2.4 Connection Details at End User Level
+## 3 Configuring the SQL Queries
 
-* The Connection Details object should be filled in at the end-user level.
-* To fill in the connection details (such as Snowflake credentials), test the connection and/or generate a JWT Token (if applicable), the ConnectionDetails_NewEdit_Step1 and Step2 pages can be used.
-* Read the documentation about the Snowflake REST SQL Connector to find out more about how to set up the Key-Pair authentication.
+To interact with Snowflake, you must configure your Mendix app to execute SQL queries by using the **Execute Statement** microflow action. 
 
-## 3 Execute Statement Action
+1. In your Mendix app, create a microflow that contains the **Statement** object. This object contains the fields required for a statement.
 
-To interact with Snowflake, SQL queries need to be executed. To execute the SQL queries the "Execute Statement" action is needed  
+    {{< figure src="/attachments/appstore/modules/snowflake-rest-sql/create-statement-object.png" >}}
 
-### 3.1 Create a microflow or Nanoflow that performs the following steps:
+2. In the **SQL Statement** field, enter your SQL query. For example, to select the item and region data from the `Example_RBAC` table in Snowflake, enter the following query:
 
-* In the microflow create an object "Statement" this object contains the necessary fields needed for a statement
-{{< figure src="/attachments/appstore/modules/snowflake-rest-sql/create-statement-object.png" >}}
-* SQL Statement: this is the field that will contains your SQL Query for example, to select the item and region data from "Example_RBAC" table write the following in the SQL statement
-```SQL
-SELECT ITEM,
-       Region,  
-       FROM EXAMPLE_RBAC;
-``` 
-** Based on what is needed the Timeout,  Database , Schema, Warehouse, Role will need to be filled for example for the above statement if the Table "Example_RBAC"
-is in "Example_RBAC" Database, the "RBAC_Schema" and the "COMPUTE_WH" then the information will need to be added as below
-{pic.4}
+    ```SQL
+    SELECT ITEM,
+           Region,  
+           FROM EXAMPLE_RBAC;
+    ```
 
-### 3.2 Snowflake Role (Role) attribute 
+3. Fill out the **Timeout**,  **Database**, **Schema**, and **Warehouse** fields as required.
+4. In the **Role** field, specify the Snowflake user role to be used for executing the query, or leave the field blank if you want the statement to be executed with the user's default role in Snowflake. Keep in mind that the user only has access to the warehouse, schema, database, and data granted to their assigned user role.
+5. Add a **Retrieve Objects** action after the **Statement** object.
+6. In the **XPath constraint** field, enter the following XPath: `[SnowflakeRESTSQL.ConnectionDetails_Account = $currentUser]`
 
-* In your statement entity, you can specify the Role (Snowflake user role) to be used for executing the query.
-* If the role is left empty, the statement will be executed with the user’s default user role in Snowflake. 
-* Remember that the user will only have access to the warehouse, schema, database, and data granted to their assigned user role.
+    {{< figure src="/attachments/appstore/modules/snowflake-rest-sql/retrieve-details.png" >}}
 
-### 3.3 Retrieve connection details
+    This ensures that the connection details are the ones associated with the current user account, so that the user can only access the data to which they have access in Snowflake.
 
-Next in line action in the execute statement microflow should be the retrieve "Connection Details" action. 
-To apply the RBAC the connection details should be the ones associate with the current user account so that the user will be able to access the data that is allowed in Snowflake
-To retrieve the "Connection Details" associated with the "current user" use the XPath: [SnowflakeRESTSQL.ConnectionDetails_Account = $currentUser]
+7. Add an **Execute Statement** action provided by the [Rest SQL Connector](/appstore/connectors/snowflake/snowflake-rest-sql/) after the **Retrieve Objects** action.
+8. Configure the **Statement** and **ConnectionDetails** parameters as shown in the following figure:
 
-{{< figure src="/attachments/appstore/modules/snowflake-rest-sql/retrieve-details.png" >}}
+    {{< figure src="/attachments/appstore/modules/snowflake-rest-sql/execute-statement.png" >}}
 
-### 3.4 Execute Statement
+9. If required, map the HTTP Response to an MxObject by using an [import mapping](/refguide/import-mappings/), or by adding a [Transform Responses to MxObjects](/appstore/connectors/snowflake/snowflake-rest-sql/#transform-response-to-mx-object) microflow action, as shown in the following figure:
 
-* Execute the statement using the execute statement action provided by the [Rest SQL Connector (/appstore/connectors/snowflake/snowflake-rest-sql/)].
-* At Statement field add the Statement\s action outcome
-* At the Connection Details add the Connection details' action outcome
+    {{< figure src="/attachments/appstore/modules/snowflake-rest-sql/execute-statement-microflow.png" >}}
 
-{{< figure src="/attachments/appstore/modules/snowflake-rest-sql/execute-statement.png" >}}
+    The **Transform Responses** action creates a single table with the HTTP Response data. To do that, it requires a domain model entity with the attributes names being exactly as the same the returned response attributes. For example, for the sample query used in step 2, you should configure the following domain model entity:
 
-### 3.5 Map the HttpResponse List 
+    {{< figure src="/attachments/appstore/modules/snowflake-rest-sql/mapping-entity.png" >}}
 
-The Http Response can be mapped if needed to Mx Objects 
-* By an [import mapping](/refguide/import-mappings/)
-* With [Transform Responses to MxObjects](/appstore/connectors/snowflake/snowflake-rest-sql/#transform-response-to-mx-object)
-The Transform Responses action creates a single table with the HTTP Response data. To do that a Domain model Entity is needed with the attributes named exactly as the returned response attributes, for example for the Query of the 3.1 the entity should look as follows
+10. Create a page in your app to display the results of the query.
 
-{{< figure src="/attachments/appstore/modules/snowflake-rest-sql/mapping-entity.png" >}}
+    {{< figure src="/attachments/appstore/modules/snowflake-rest-sql/sample-results.png" >}}
 
-{{< figure src="/attachments/appstore/modules/snowflake-rest-sql/execute-statement-microflow.png" >}}
+## 4 Sample Test Scenario
 
-* The results then can be visualized in a page
-
-{{< figure src="/attachments/appstore/modules/snowflake-rest-sql/sample-results.png" >}}
-
-## 4 Snowflake Test (optional)
-
-The follow up is an example of how to set up Role-Based Access Control (RBAC) on Snowflake for two test users and view the same data in a Mendix app for the equivalent test users following the steps above.
+This section provides an example of how to set up RBAC in Snowflake for two test users and view the same data for the same users in a Mendix app.
 
 ### 4.1 Prerequisites
 

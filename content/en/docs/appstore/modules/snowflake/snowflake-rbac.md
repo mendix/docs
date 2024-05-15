@@ -3,7 +3,7 @@ title: "Snowflake Role-Based Access Control"
 url: /appstore/modules/snowflake/snowflake-rbac/
 description: "Describes how to use the role-based access control of Snowflake in a Mendix application."
 weight: 20
-tags: ["snowflake", "rbac", "rest sql"]
+tags: ["snowflake", "role-based access control", "rbac", "rest sql"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
@@ -11,25 +11,33 @@ tags: ["snowflake", "rbac", "rest sql"]
 
 Snowflake's [role-based access control (RBAC)](https://www.snowflake.com/trending/what-rbac/) approach allows you to assign privileges that define levels of access to data within Snowflake. You can assign these privileges to roles, which are then assigned to users or other roles. This model provides both control and flexibility, making it easier to manage access to data and resources within Snowflake. 
 
-This is relevant when data is presented within Mendix applications, to ensure the data being exposed to a certain user or role within Snowflake is guaranteed to be the same as to when presented in a Mendix app to for the same user.
+In the context of integration between Snowflake and Mendix, RBAC helps ensure that the data being exposed to a certain user or role within Snowflake is the same as the data presented to the same user in a Mendix app.
 
-Role-Based Access Control (RBAC) is crucial for Snowflake integration due to several reasons. First, it adheres to the “Least Privilege” principle, ensuring that users have access only to the necessary information and functionalities based on their job roles. Note that the Least Privilege principle does not come by default, it needs to be followed by the person configuring the access in snowflake. Second, RBAC provides granularity and flexibility, allowing fine-grained control over access to securable objects. Third, the structured hierarchy in Snowflake ensures organized and manageable access control. Finally, RBAC mitigates risks by preventing unauthorized actions and reducing the likelihood of data breaches and insider threats.
+### 1.1 Features
 
-Remember, implementing RBAC is essential for maintaining security and managing access effectively in Snowflake link.
+RBAC has the following features:
 
-## 2 Set up 
+* It enables Snowflake administrators to adhere to the Least Privilege principle by giving them the tools to ensure that users have access only to the necessary information and functionalities based on their job roles.
+* It provides granularity and flexibility, allowing fine-grained control over access to securable objects. 
+* The structured hierarchy in Snowflake ensures organized and manageable access control. 
+* RBAC mitigates risks by preventing unauthorized actions and reducing the likelihood of data breaches and insider threats.
 
-### 2.1 Prerequisites
+Because of the above, implementing RBAC is essential for maintaining security and effectively managing data access in your Snowflake-integrated Mendix app.
 
-* Download the Rest SQL Connector for Mendix [Rest SQL Connector module](https://marketplace.mendix.com/link/component/225717) from Mendix marketplace that supports Snowflake integration.
-* Ensure your Mendix app has the necessary domain model and entities.
-* For the Role-based access control the Connection Details is associated with the account
-{{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/domain-model.png" >}}
+### 1.2 Prerequisites
 
-### 2.2 Key-Pair Authentication Method
+To enable RBAC for your Mendix app, you must first install and configure the [Snowflake REST SQL Connector](/appstore/connectors/snowflake/snowflake-rest-sql/).
 
-* Decide on the authentication method. Since we’re using Snowflake, consider using key-pair authentication.
-* Configure the necessary keys and credentials in your Snowflake account based on the [documentation](https://docs.snowflake.com/en/user-guide/key-pair-auth) and make sure to assign the public Key to a Snowflake user.
+## 2 Configuration
+
+To enable role-based access control for your Snowflake-integrated Mendix app, perform the following steps:
+
+1. Ensure your Mendix app has the necessary domain model and entities, as shown in the following figure:
+
+    {{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/domain-model.png" >}}
+
+2. Decide on the authentication method. For Snowflake, key-pair authentication is recommended.
+3. Configure the necessary keys and credentials in your Snowflake account and assign the public key to a Snowflake user. For more information, see [ey-pair authentication and key-pair rotation](https://docs.snowflake.com/en/user-guide/key-pair-auth) in the Snowflake documentation.
 
 ### 2.3 Create Connection Details object and Associate it with the Account
 

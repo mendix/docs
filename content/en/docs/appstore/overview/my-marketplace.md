@@ -154,7 +154,7 @@ Click **Return to the overview** to go to the main page of the dashboard.
 
 When you are developing your app, set the app service's binding keys as [constants](/refguide/configuration/#constants) in the [App Settings](/refguide/app-settings/).
 
-Refer to the documentation on specific app services for how to use the binding keys (for example, see the [Authenticating Insights Hub REST Calls](/partners/siemens/mindsphere-api-only/#authenticating) section of *Insights Hub API calls only*).
+Refer to the documentation on specific app services for how to use the binding keys (for example, see the [Configuring the License Token](/partners/siemens/3d-viewer/#configure-license-token) section of *3D Viewer*).
 
 ## 10 Content Groups {#content-groups}
 

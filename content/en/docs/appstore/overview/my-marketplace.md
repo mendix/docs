@@ -104,7 +104,7 @@ The options in this menu are the same as described for the context menu for the 
 
 ## 9 Company Subscriptions {#company-subscriptions}
 
-You can see all the Marketplace app services your company has subscribed to on this page:
+You can see all the shared within your organization on this page, which includes previously purchased products, trial subscriptions, paid subscriptions, or company-level services:
 
 {{< figure src="/attachments/appstore/overview/my-marketplace/company-subscriptions.png" class="no-border" >}}
 

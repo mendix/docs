@@ -1,7 +1,7 @@
 ---
 title: "Docker"
 url: /developerportal/deploy/docker-deploy/
-category: "Deployment"
+
 weight: 60
 description: "Describes how to deploy using a Docker image."
 tags: ["Docker", "Cloud", "container", "push image", "build image"]

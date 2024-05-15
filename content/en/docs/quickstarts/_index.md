@@ -5,7 +5,6 @@ weight: 7
 description: "Presents quick start tutorials on how to easily build apps in Studio Pro."
 tags: ["hello world", "microflows", "widgets", "app", "nanoflow", "app development"]
 cascade:
-    - space: "Quick Starts"
     - content_type: "Quick Starts"
     - mendix_version: 10
 aliases:

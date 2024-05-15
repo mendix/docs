@@ -1,7 +1,7 @@
 ---
 title: "User Settings"
 url: /community-tools/mendix-profile/user-settings/
-category: "Community Tools"
+
 weight: 2
 description: "Describes the user settings for the Mendix Developer Portal."
 tags: ["profile", "Developer Portal", "settings", "accounts", "notification settings", "developer settings", "API keys", "personal access tokens", "pat", "personal data"]

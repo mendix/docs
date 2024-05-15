@@ -1,7 +1,7 @@
 ---
 title: "Siemens Insights Hub"
 url: /developerportal/deploy/deploying-to-mindsphere/
-category: "Deployment"
+
 weight: 42
 description: "Describes how to deploy to Siemens Insights Hub by registering it with the Insights Hub Gateway and integrating it into the Insights Hub Launchpad."
 tags: ["Insights Hub", "MindSphere", "deploy", "cloud foundry", "launchpad", "scopes", "roles", "sso", "XSRF", "limitations", "Gateway"]
@@ -11,10 +11,6 @@ tags: ["Insights Hub", "MindSphere", "deploy", "cloud foundry", "launchpad", "sc
 ---
 
 ## 1 Introduction
-
-{{% alert color="warning" %}}
-This information is for deploying apps to the Insights Hub platform. It does not apply to Insights Hub IIoT for Makers.
-{{% /alert %}}
 
 Insights Hub is the cloud-based, open IoT operating system from Siemens that lets you connect your machines and physical infrastructure to the digital world. It lets you harness big data from billions of intelligent devices, enabling you to uncover transformational insights across your entire business.
 

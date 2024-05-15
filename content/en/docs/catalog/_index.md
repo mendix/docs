@@ -6,7 +6,6 @@ weight: 41
 no_list: false
 description_list: true
 cascade:
-    - space: "Catalog Guide"
     - content_type: "Catalog Guide"
     - mendix_version: 10
 tags: ["data hub", "Catalog", "landscape", "external entities", "external users"]
@@ -79,4 +78,4 @@ The information that is registered for data sources and exposed datasets are as 
 
 Mendix Admins can assign and manage **Curators**, **Owners**, and **External Users**, and control discoverability settings. For more information, see [Catalog Administration](/control-center/catalog-admin/).
 
-## 5 Documents in This Category
+## 5 Guide Categories

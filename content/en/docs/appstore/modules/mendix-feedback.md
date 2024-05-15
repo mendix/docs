@@ -1,7 +1,7 @@
 ---
 title: "Mendix Feedback"
 url: /appstore/modules/mendix-feedback/
-category: "Modules"
+
 description: "Describes the configuration and usage of the Mendix Feedback module, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "module", "feedback", "platform support"]
 aliases:

@@ -21,7 +21,19 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 #### Improvements
 
-* In Portfolio Management, you can see the prioritization score instead of the department name on an initiative card in the [Kanban view](/developerportal/portfolio-management/initiatives-overview/#kanban-view). 
+* In Portfolio Management, you can see the prioritization score instead of the department name on an initiative card in the [Kanban view](/developerportal/portfolio-management/initiatives-overview/#kanban-view).
+
+### May 5
+
+#### New features
+
+* We have released a public beta version of a brand new [Projects API](/apidocs-mxsdk/apidocs/projects-api/). This API will help you automate managing your projects on the platform. Some of its key features are as follows: creating and deleting projects, and managing your project's team. We will add more features in the coming months. This is an important self-service feature. All feedback is welcome!
+
+#### Fixes
+
+* We fixed an issue where app team members were unable to download [documents](/developerportal/general/documents/) uploaded to the Developer Portal.
+* We fixed an issue where the app administrator was not able to change the [logo of an app](/developerportal/collaborate/general-settings/#general).
+* We fixed an issue where under certain circumstances the [Technical Contact](/developerportal/general/app-roles/#technical-contact) of an app was not displayed correctly.
 
 ### May 1 {#may-1-24}
 
@@ -47,9 +59,8 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 * In Feedback, we have fixed an issue where the reporter's name appeared empty on the **Contact Reporter** tab. Now if there is no reporter's name available, their email address will be shown instead. 
 * We released the following improvements for [Mini survey](/developerportal/app-insights/mini-surveys/):
-  * We improved your experience of copying the generated API key by implementing a new widget on the [Settings](/developerportal/app-insights/mini-surveys/#settings) tab of the **Survey Overview** page.
-  * We improved our error messages by providing more details.
-
+    * We improved your experience of copying the generated API key by implementing a new widget on the [Settings](/developerportal/app-insights/mini-surveys/#settings) tab of the **Survey Overview** page.
+    * We improved our error messages by providing more details.
 
 ### March 28
 

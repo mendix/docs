@@ -1,7 +1,7 @@
 ---
 title: "Mendix Cloud"
 url: /releasenotes/developer-portal/mendix-cloud/
-category: "Deployment"
+
 weight: 10
 description: "Release notes for deployment to Mendix Cloud"
 tags: ["release notes", "deployment", "cloud environment", "Mendix Cloud", "free app"]
@@ -16,6 +16,14 @@ There are separate release notes for other deployment targets; for more informat
 For information on the current status of deployment to Mendix Cloud and any planned releases, see [Mendix Status](https://status.mendix.com/).
 
 ## 2024
+
+### May 14, 2024
+
+#### New features
+
+* We now use Arm-based AWS Graviton 2 processors for databases of new environments on all plans in Mendix Public Cloud for best performance. Graviton 2 processors can provide significant performance improvements over previous generation instances. For database operations, this means faster processing of queries and better handling of concurrent requests.
+
+    Existing environments will not automatically use Graviton 2 processors for their databases. Graviton 2 processors will be used for new environments and those which are cleared or downsized.
 
 ### April 25, 2024
 

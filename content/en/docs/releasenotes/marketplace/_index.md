@@ -215,7 +215,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 #### New Features
 
-* We released support for the subscription to an app service (like [MindSphere IIoT for Makers](/partners/siemens/mindsphere-app-service/)):
+* We released support for the subscription to an app service (like *MindSphere IIoT for Makers*):
     * Automatic provisioning of the app service on subscription.
     * The [Service Management Dashboard](/appstore/overview/my-marketplace/#company-subscriptions), where you can view the service instance to which you have subscribed and generate binding keys for your service instance.
 
@@ -344,7 +344,7 @@ Content that was marked as **Protected** as well as content marked as **Shared w
 
 #### Improvements
 
-* We now display the UUID of an App Store component in the [Usage](/appstore/overview/#usage) section of its details page. This allows you to specify the `TemplateUUID` when calling the [CreateNewApp operation](/apidocs-mxsdk/apidocs/projects-api/#createnewapp) in the *Projects API*.
+* We now display the UUID of an App Store component in the [Usage](/appstore/overview/#usage) section of its details page.
 
 ### September 11, 2019
 

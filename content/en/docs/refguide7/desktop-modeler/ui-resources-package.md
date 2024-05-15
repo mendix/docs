@@ -1,7 +1,7 @@
 ---
 title: "UI Resources Package"
 url: /refguide7/ui-resources-package/
-category: "Desktop Modeler"
+
 ---
 
 ## 1 Introduction

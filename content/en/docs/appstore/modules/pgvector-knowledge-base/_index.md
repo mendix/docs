@@ -94,11 +94,11 @@ The population handles a whole list of chunks at once which should be created by
 
 #### 3.3.2 `Insert` {#insert}
 
-In cases where additional records need to be added to existing knowledge bases, the `Insert` operation can be used. This operation handles a list of chunks that need to be inserted into the knowledge base. It has similar behaviour to the [(Re)populate](#repopulate-knowledge-base) operation, except for that it does not delete any data. 
+In cases where additional records need to be added to existing knowledge bases, the `Insert` operation can be used. This operation handles a list of chunks that need to be inserted into the knowledge base. It behaves similarly to the [(Re)populate](#repopulate-knowledge-base) operation, except that it does not delete any data. 
 
 #### 3.3.3 `Replace` {#replace}
 
-The `Replace` operation is intended to be used in scenarios in which the chunks in the knowledge base are related to Mendix objects (i.e., data in the Mendix database). It can be used to keep the knowledge base in sync when the Mendix data changes which needs to be reflected in the knowledge base. The operation handles a list of chunks: it will remove the knowledge base data for the Mendix objects the chunks refer to, after wich the new data is inserted.
+The `Replace` operation is intended to be used in scenarios in which the chunks in the knowledge base are related to Mendix objects (i.e., data in the Mendix database). It can be used to keep the knowledge base in sync when the Mendix data changes which needs to be reflected in the knowledge base. The operation handles a list of chunks: it will remove the knowledge base data for the Mendix objects the chunks refer to, after which the new data is inserted.
 
 ### 3.4 Retrieve Operations {#retrieve-operations}
 
@@ -145,12 +145,12 @@ Use this operation to delete a complete knowledge base at once. After execution 
 
 #### 3.5.2 `Delete` {#delete}
 
-In scenarios in which the chunks in the knowledge base are related to Mendix objects (i.e. data in the Mendix database), deletion of Mendix data typically needs to result in removal of its related chunk(s) from the knowledge base. For this the `Delete` operation can be used, which accepts any kind of Mendix object. This results in the removal of all the chunks that were related to the provided Mendix object at the time of insertion.
+In scenarios where the chunks in the knowledge base are related to Mendix objects (i.e., data in the Mendix database), deletion of Mendix data typically needs to result in the removal of its related chunks from the knowledge base. For this, the `Delete` operation can be used, which accepts any kind of Mendix object. This removes all the chunks related to the provided Mendix object at the time of insertion.
 
 
 #### 3.5.3 `Delete List` {#delete-list}
 
-This operation is meant to be used in a similar scenario to the one described for the `Delete` operation, but handles a list of Mendix objects in a single operation. Executing this operation results in the removal of all the chunks that were related to the provided Mendix objects at the time of insertion.
+This operation is meant to be used in a similar scenario to the one described for the `Delete` operation, but handles a list of Mendix objects in a single operation. Executing this operation removes all the chunks related to the provided Mendix objects at the time of insertion.
 
 ## 4 Technical Reference {#technical-reference}
 

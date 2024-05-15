@@ -107,9 +107,6 @@ The Workflow Engine is the Mendix Runtime engine for executing workflows. For in
 
 ## 11 Read More
 
+* [Performing Workflow Basic Functions](/refguide/perform-workflow-basic-functions/)
 * [Configuring a Workflow in Studio Pro for the Employee Onboarding Process](/refguide/workflow-how-to-configure/)
 * [Configuring Security for a Workflow Process](/refguide/workflow-security/)
-* [Jumping to Different Activities in a Workflow](/refguide/jump-to/)
-* [Workflow Events](/refguide/workflow-events/)
-* [Workflow Versioning and Conflict Mitigation](/refguide/workflow-versioning/)
-* [Adding a Custom Action to the Workflow Toolbox](/refguide/add-action-to-workflow-toolbox/)

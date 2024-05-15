@@ -147,7 +147,6 @@ Use this operation to delete a complete knowledge base at once. After execution 
 
 In scenarios where the chunks in the knowledge base are related to Mendix objects (i.e., data in the Mendix database), deletion of Mendix data typically needs to result in the removal of its related chunks from the knowledge base. For this, the `Delete` operation can be used, which accepts any kind of Mendix object. This removes all the chunks related to the provided Mendix object at the time of insertion.
 
-
 #### 3.5.3 `Delete List` {#delete-list}
 
 This operation is meant to be used in a similar scenario to the one described for the `Delete` operation, but handles a list of Mendix objects in a single operation. Executing this operation removes all the chunks related to the provided Mendix objects at the time of insertion.
@@ -274,7 +273,7 @@ The `Create Chunk` activity is intended for instantiating [chunks](#chunk) to cr
 
 ##### 4.3.2.2 (Re)populate Knowledge Base {#repopulate-knowledge-base-technical}
 
-The `(Re)populate Knowledge Base` activity is used to populate a whole knowledge base at once. This operation handles a list of chunks with their labels in a single operation. By providing the `KnowledgeBaseName` parameter, you determine the knowledge base. It is used to later on to retrieve elements from the correct tables. This operation takes care of the creation of the actual tables. If there is already data from an earlier iteration for the provided `KnowledgeBaseName`, the data will be removed first. Use [Create Label](#create-label-technical) and [Create Chunk](#create-chunk-technical) to construct the input for this activity, which needs to be passed as `ChunkList`. The `DatabaseConfiguration` that is passed must contain the connection details to a PostgreSQL database server with the PgVector extension installed. This entity is typically configured at runtime or in [after-startup](/refguide/app-settings/#after-startup) logic.
+The `(Re)populate Knowledge Base` activity is used to populate a whole knowledge base at once. This operation handles a list of chunks with their labels in a single operation. By providing the `KnowledgeBaseName` parameter, you determine the knowledge base. It is used later on to retrieve elements from the correct tables. This operation takes care of the creation of the actual tables. If there is already data from an earlier iteration for the provided `KnowledgeBaseName`, the data will be removed first. Use [Create Label](#create-label-technical) and [Create Chunk](#create-chunk-technical) to construct the input for this activity, which needs to be passed as `ChunkList`. The `DatabaseConfiguration` that is passed must contain the connection details to a PostgreSQL database server with the PgVector extension installed. This entity is typically configured at runtime or in [after-startup](/refguide/app-settings/#after-startup) logic.
 
 **Input parameters**
 
@@ -294,7 +293,7 @@ The `(Re)populate Knowledge Base` activity is used to populate a whole knowledge
 
 The `Insert` operation is used to add chunks to a knowledge base. This operation handles a list of chunks with their labels in a single operation.
 
-By providing the `KnowledgeBaseName` parameter, you determine the knowledge base. It is used to later on to retrieve elements from the right tables. 
+By providing the `KnowledgeBaseName` parameter, you determine the knowledge base. It is used later on to retrieve elements from the right tables. 
 
 This operation takes care of the creation of the actual tables if needed. If for the provided `KnowledgeBaseName` there is already data present from an earlier iteration with the same chunk ID, this operation will return false with an error logged.
 
@@ -319,7 +318,7 @@ Use [Create Label](#create-label-technical) and [Create Chunk](#create-chunk-tec
 
 The `Replace` operation is used to replace existing chunks in a knowledge base based on the Mendix objects the chunks represent. This operation handles a list of chunks with their labels in a single operation.
 
-Use [Create Label](#create-label-technical) and [Create Chunk](#create-chunk-technical) to construct the input for this microflow, which needs to be passed as `ChunkList`. In order to replace the right data in the knowledge base, all chunks in `ChunkList` need to represent a Mendix object: this is set during chunk creation in [Create Chunk](#create-chunk-technical) by specifying the `MxObject` input parameter. Existing chunks related to those Mendix objects will be deleted from the knowledge base first, and then be inserted according to the new state as specified by the ChunkList (labels included). By providing the `KnowledgeBaseName` parameter, you determine the knowledge base. It is used to later on to retrieve elements from the right tables.
+Use [Create Label](#create-label-technical) and [Create Chunk](#create-chunk-technical) to construct the input for this microflow, which needs to be passed as `ChunkList`. In order to replace the right data in the knowledge base, all chunks in `ChunkList` need to represent a Mendix object: this is set during chunk creation in [Create Chunk](#create-chunk-technical) by specifying the `MxObject` input parameter. Existing chunks related to those Mendix objects will be deleted from the knowledge base first, and then be inserted according to the new state as specified by the ChunkList (labels included). By providing the `KnowledgeBaseName` parameter, you determine the knowledge base. It is used later on to retrieve elements from the right tables.
 
 The `DatabaseConfiguration` that is passed must contain the connection details to a PostgreSQL database server with the PgVector extension installed. This entity is typically configured at runtime or in [after-startup](/refguide/app-settings/#after-startup) logic.
 

@@ -13,7 +13,7 @@ To see the current status of the Mendix Control Center, see [Mendix Status](http
 
 ## 2024
 
-### May 9, 2024
+### May 16, 2024
 
 #### New Features
 

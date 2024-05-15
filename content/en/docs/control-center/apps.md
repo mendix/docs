@@ -16,7 +16,7 @@ aliases:
 The **Apps** page gives an overview of all the apps belonging to your company. The page has the following tabs available: **Mendix Cloud**, **Mendix Free Cloud**, **Other Apps**, and **Deactivated Apps**.
 
 {{% alert color="info" %}}
-We are currently enhancing this page to provide information about apps deployed on standalone private clouds. Stay tuned.
+We will enhance this page to provide information about apps deployed on standalone private clouds. Stay tuned.
 {{% /alert %}}
 
 ## 2 Mendix Cloud

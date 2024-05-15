@@ -20,6 +20,6 @@ Click **Invite someone to your team** ({{% icon name="add-circle" %}}) to invite
 
 Once you have posted a comment, you can click **Edit** to **Update Message** or **Delete**. You can also **Reply in Thread** to comments left by colleagues.
 
-# 2 Read More
+## 2 Read More
 
 * [Team](/developerportal/general/team/)

@@ -317,7 +317,7 @@ Use [Create Label](#create-label-technical) and [Create Chunk](#create-chunk-tec
 
 ##### 4.3.2.4 Replace {#replace-technical}
 
-The `Replace` operation is used to replace existing chunks in a knowledge base based on the Mendix Objects the chunks represent. This operation handles a list of chunks with their labels in a single operation.
+The `Replace` operation is used to replace existing chunks in a knowledge base based on the Mendix objects the chunks represent. This operation handles a list of chunks with their labels in a single operation.
 Use [Create Label](#create-label-technical) and [Create Chunk](#create-chunk-technical) to construct the input for this microflow, which needs to be passed as `ChunkList`. In order to replace the right data in the knowledge base, all chunks in `ChunkList` need to represent a Mendix object: this is set during chunk creation in [Create Chunk](#create-chunk-technical) by specifying the `MxObject` input parameter. Existing chunks related to those Mendix objects will be deleted from the knowledge base first, and then be inserted according to the new state as specified by the ChunkList (labels included). By providing the `KnowledgeBaseName` parameter, you determine the knowledge base. It is used to later on to retrieve elements from the right tables. 
 The `DatabaseConfiguration` that is passed must contain the connection details to a PostgreSQL database server with the PgVector extension installed. This entity is typically configured at runtime or in [after-startup](/refguide/app-settings/#after-startup) logic.
 
@@ -464,7 +464,7 @@ By providing the `KnowledgeBaseName` parameter, you determine the knowledge base
 | ------------------- | --------------------------------------- | --------- | ----------------------------------------------------- |
 | `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the name of the knowledge base in your database.|
 | `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is used for connecting to and authenticating with the database where the knowledge base is located. |
-| `MxObject`          | Object                                                    | mandatory | This is the (original) Mendix object that the chunks in the knowledge base represent. Only chunks related to this Mendix object are deleted. |
+| `MxObject`          | Object                                                    | mandatory | This is the original Mendix object that the chunks in the knowledge base represent. Only chunks related to this Mendix object are deleted. |
 
 **Return value**
 
@@ -474,7 +474,8 @@ By providing the `KnowledgeBaseName` parameter, you determine the knowledge base
 
 #### 4.3.4.3 Delete List {#delete-list-technical}
 
-Use this operation to delete existing chunks and corresponding labels in a knowledge base based on the Mendix Objects provided: `MxObjectList` is the list of (original) Mendix objects that the chunks in the knowledge base represent. Only chunks related to these Mendix objects are deleted.
+Use this operation to delete existing chunks and corresponding labels in a knowledge base based on the Mendix objects provided: `MxObjectList` is the list of original Mendix objects that the chunks in the knowledge base represent. Only chunks related to these Mendix objects are deleted.
+
 By providing the `KnowledgeBaseName` parameter, you determine the knowledge base. The `DatabaseConfiguration` that is passed must contain the connection details to a PostgreSQL database server with the PgVector extension installed. This entity is typically configured at runtime or in [after-startup](/refguide/app-settings/#after-startup) logic.
 
 **Input parameters**
@@ -482,8 +483,8 @@ By providing the `KnowledgeBaseName` parameter, you determine the knowledge base
 | Name                | Type                                    | Mandatory | Description                                           |
 | ------------------- | --------------------------------------- | --------- | ----------------------------------------------------- |
 | `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the name of the knowledge base in your database.|
-| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is to connect and authenticate to the database where the knowledge base is located.  |
-| `MxObjectList`          | Object                                                    | mandatory | This is the (original) Mendix object that the chunks in the knowledge base represent. Only chunks related to this Mendix object are deleted. |
+| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is used for connecting to and authenticating with the database where the knowledge base is located. |
+| `MxObjectList`          | Object                                                    | mandatory | This is the original Mendix object that the chunks in the knowledge base represent. Only chunks related to this Mendix object are deleted. |
 
 **Return value**
 

@@ -42,7 +42,11 @@ Attributes of type **Binary** cannot be exported through OData services except f
 
 {{% /alert %}}
 
-You cannot include associations to and from entities that are published without the **Readable** capability. 
+Entities that are published with the **Readable** capability do not allow including associations to entities that _do not_ have the **Readable** capability. Associations from the other direction, from non-readable to readable entities, _are_ supported.
+
+{{% alert type="info" %}}
+Support for publishing associations to and from entities that don't have the **Readable** capability, was introduced in Studio Pro [10.11.0](/releasenotes/studio-pro/10.11/).
+{{% /alert %}}
 
 ### 3.1 Required Validation Rules for Published Attributes
 

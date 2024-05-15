@@ -1,7 +1,7 @@
 ---
 title: "Database"
 url: /appstore/modules/database-connector/
-category: "Connectors"
+
 description: "Describes the configuration and usage of the Database connector, which incorporates your external data directly in your Mendix app."
 tags: ["marketplace",  "marketplace component", "database connector", "jdbc", "hikari", "query" ]
 aliases:

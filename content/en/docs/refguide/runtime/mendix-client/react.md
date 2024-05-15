@@ -1,7 +1,7 @@
 ---
 title: "Mendix React Client"
 url: /refguide/mendix-client/react
-category: "Mendix Runtime"
+
 description: "Describes the React version of the Mendix Client."
 weight: 10
 tags: ["runtime", "mendix client", "react client"]

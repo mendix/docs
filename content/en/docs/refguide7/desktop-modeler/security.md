@@ -1,7 +1,7 @@
 ---
 title: "Security"
 url: /refguide7/security/
-category: "Desktop Modeler"
+
 ---
 
 

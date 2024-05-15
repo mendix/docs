@@ -1,7 +1,7 @@
 ---
 title: "Epics"
 url: /developerportal/project-management/epics/
-category: "Project Management"
+
 weight: 1
 description_list: false
 description: "Describes how to use Epics for your app development."

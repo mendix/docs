@@ -1,7 +1,7 @@
 ---
 title: "OAuth and Scopes"
 url: /community-tools/oauth-scopes/
-category: "Community Tools"
+
 weight: 7
 tags: ["oath", "profile", "login", "Developer Portal", "scopes"]  
 description: "Describes OAuth, authorizations, and scopes as used by Mendix."

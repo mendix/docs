@@ -1,7 +1,7 @@
 ---
 title: "Siemens Insights Hub"
 url: /developerportal/deploy/deploying-to-mindsphere/
-category: "Deployment"
+
 weight: 42
 description: "Describes how to deploy to Siemens Insights Hub by registering it with the Insights Hub Gateway and integrating it into the Insights Hub Launchpad."
 tags: ["Insights Hub", "MindSphere", "deploy", "cloud foundry", "launchpad", "scopes", "roles", "sso", "XSRF", "limitations", "Gateway"]

@@ -2,7 +2,7 @@
 title: "Combining Changes and Conflict Resolution"
 linktitle: "Combining Changes and Conflict Resolution"
 url: /refguide/merge-algorithm/
-category: "Version Control"
+
 weight: 10
 description: "Describes combining changes with conflict resolution flow."
 tags: ["rebase", "mine", "theirs", "merge", "conflict"]

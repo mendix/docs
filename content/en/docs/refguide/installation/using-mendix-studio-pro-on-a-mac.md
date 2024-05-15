@@ -2,7 +2,7 @@
 title: "Configuring Parallels"
 url: /refguide/using-mendix-studio-pro-on-a-mac/
 linktitle: "Configuring Parallels"
-category: "Installation"
+
 weight: 40
 description: "Describes how to start making Mendix apps on your Mac device."
 tags: ["Native", "Parallels", "Mac", "Mobile"]

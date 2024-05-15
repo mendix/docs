@@ -1,7 +1,7 @@
 ---
 title: "Integration"
 url: /refguide8/integration/
-category: "App Modeling"
+
 weight: 110
 no_list: false
 description_list: true 

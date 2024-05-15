@@ -403,3 +403,85 @@ The widget can be made visible to a specific of the user roles available in your
 | Applicable roles  | The widget is visible if access rules allow it (for example if the user that is signed in has a role for which the target is set to be visible/accessible). |
 | All roles         | The widget is always visible. |
 | Selected roles    | This setting will render the widget as invisible to all users that are not linked to one of the selected user roles. |
+
+## 10 Common Property Types
+
+This section details common types of inputs that share common behavior across different page properties.
+
+### 10.1 Text Template {#text-template}
+
+Properties using the Text template offer the ability to display dynamic text on pages. This is done by writing templates with placeholders and specifying parameters. During runtime the placeholders are substituted by the parameters. The template editor consists of a minimized view and a pop-up view.
+
+#### 10.1.1 Template
+
+The template supports both static and dynamic texts. It can be edited from the minimized view as well as the pop up. Open the pop-up with the **Edit ...** button for a full view of the template and its parameters.
+
+Placeholders are used to place parameters in the text. The placholder follows the format `{i}`, where _i_ is the index of a specific parameter from the [parameter list](#text-template-parameters). Parameters can be referenced multiple times and out of order.
+
+{{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/caption-edit-button.png" alt="Opening Parameters" width="450" >}} 
+
+#### 10.1.3 Parameters {#text-template-parameters}
+
+Parameters define what data is used to replace the placeholders in the template and how they are formatted. Editing parameters is done in the pop-up view, which can be opened in two ways:
+
+* From the properties sidebar: Double click the property (e.g. "Caption") or click the more button (...).
+* From the widget properties form: Click the **Edit ...** button next to the property's textbox.
+
+{{/* TODO: Add screenshot with one from the properties view, preferrably a different one using the template */}}
+
+Parameters have the following settings:
+
+* **Index** – an identification number of a parameter 
+* **Value** – an attribute or an expression value to be displayed
+* **Format** – a format in which the value will be displayed (only for attributes)
+
+{{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/parameter-settings.png" alt="Parameter Settings" width="450" >}}
+
+{{% alert color="info" %}}
+You can use the formatter functions in the expression editor when using expressions. For more information, see [this list](/refguide/expressions/#expressions-formatter-functions).
+{{% /alert %}}
+
+##### 10.1.3.1 Adding New Parameters
+
+To be able to use parameters, the widget must be in the context of an entity -- such as a [Data Widget](/refguide/data-view). Then to use them:
+
+1. Open the widget properties 
+1. Click the **Edit ...** of the template property to open the pop-up.
+1. In the **Parameters** section click **New**:
+
+    {{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/adding-parameter.png" alt="Adding New Parameter"  width="450" >}}
+
+1. In the **Edit Template Parameter** dialog box, click **Select**, choose an attribute and confirm your choice.
+1. Edit the template and add a placeholder that matches the index of your parameter, for example `{1}`.
+
+In the example below the *Caption* property of a [Text Widget](/refguide/text) is being edited. Three attributes have been added which are used in the template. The placeholder `{1}` corresponds to the *Title* attribute, `{2}` to *NrOfPages*, and `{3}` to *DatePublished*.
+
+{{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/parameters-example.png" alt="Parameter Example"  width="450" >}}
+
+
+##### 10.1.3.2 Performing Other Actions on Parameters
+
+In addition to adding new parameters, you can perform the following actions on parameters:
+
+* **Delete** – to delete a parameter click Delete or press <kbd>Delete</kbd> on your keyboard
+* **Edit** – double-click a parameter to edit it or click Edit
+* **Move up** – to move a parameter up in the list of parameters and also to change its index, click **Move up**
+* **Move down** – to move a parameter down in the list of parameters and also to change its index, click **Move down**
+
+{{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/parameter-actions.png" alt="Parameter Actions" width="450" >}}
+
+
+#### 10.1.4 Fallback Text
+
+The fallback text is shown when the datasource of the template is empty or unavailable. 
+
+Empty attributes used as parameters do not cause the fallback text to be shown. Instead the template is rendered as normal and the placeholders for the empty parameters are substituted by empty strings. 
+
+For example: The template `Hello, {1}!` with the fallback text _"Nobody to greet."_ would get rendered as follows:
+
+| Scenario         | Rendered text      |
+| ---------------- | ------------------ |
+| Filled attribute | "Hello, World!"    |
+| Empty attribute  | "Hello, !"         |
+| Missing object   | "Nobody to greet." |
+

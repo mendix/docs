@@ -69,14 +69,14 @@ Since a full SBOM contains all project details, this is only a partial represent
 ```
 
 ## 5 Supported Features
-This describes what components are currently covered in the generated SBOM, and from what version. We currently recommend you use version `10.10`, `9.24.22` or `10.6.9` and above.
+The table below describes what components are currently covered in the generated SBOM, and from what version. It is recommended to use version `10.10`, `9.24.22`, or `10.6.9` and above.
 
 | Feature | Description | Version
 | --- | --- | --- |
-| Mendix Modules | `9.24.14`, `10.4.0` | Mendix Modules in your projects and imported modules as for instance from the Appstore. This does not include Add-on Modules, Solutions or Extensions. |
-| [Java Dependencies](/refguide/managed-dependencies/) | `9.24.14`, `10.4.0` | Java libraries imported into your project using [Managed Dependencies](/refguide/managed-dependencies/), or those manually added in the `userlib` folder. Libraries added through managed dependencies will have access to information of the package manager and will include more details such as the used license |
-| [Widgets](/appstore/widgets/) | `10.9.0`, `10.6.6`, `10.10.0`, `9.24.18` | User interface elements downloaded from downloaded from the marketplace such as dropdowns, buttons, etc |
-| Javascript Actions(/refguide/javascript-actions/) | `10.10` | NPM libraries that are used in your javascript actions. |
+| Mendix Modules | `9.24.14`, `10.4.0` | Mendix Modules in your projects and imported modules as, for instance, from the App Store. This does not include Add-on Modules, Solutions, or Extensions. |
+| [Java Dependencies](/refguide/managed-dependencies/) | `9.24.14`, `10.4.0` | Java libraries imported into your project using [Managed Dependencies](/refguide/managed-dependencies/), or those manually added in the `userlib` folder. Libraries added through managed dependencies will have access to information of the package manager and will include more details, such as the used license. |
+| [Widgets](/appstore/widgets/) | `10.9.0`, `10.6.6`, `10.10.0`, `9.24.18` | User interface elements downloaded from the Marketplace, such as drop-downs or buttons. |
+| Javascript Actions(/refguide/javascript-actions/) | `10.10` | NPM libraries that are used in your JavaScript actions. |
 
 ## 6 Read More
 * [CycloneDX](https://cyclonedx.org/)

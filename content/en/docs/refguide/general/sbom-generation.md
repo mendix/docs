@@ -8,7 +8,7 @@ tags: ["build", "deploy", "deployment package", "command-line", "studio pro", "s
 ---
 
 ## 1 Introduction
-When building a Mendix app, you make use of a lot of re-usable components such as Widgets, Appstore modules and more. These in turn make use of components such as java libraries, node modules, etc. You want to be aware of what you use in your app, what other components they are dependent on and what licenses they make use of. Also, over time these components may become outdated, or become vulnerable. To ensure you are following all the development practices you would like to adhere to with regards to components, you need to have this information in a ready-to-use and standard format. Studio Pro does this by generating a Software Bill of Materials (SBOM) based on the standardized CycloneDX format.
+When building a Mendix app, you use many reusable components such as Widgets and App Store modules, which make use of components such as java libraries and node modules. You should know what you use in your app, what other components they are dependent on, and what licenses they make use of. Over time, these components may become outdated or vulnerable, so it is important to have this information in a ready-to-use, standard format. Studio Pro does this by generating a Software Bill of Materials (SBOM) based on the standardized CycloneDX format.
 
 ## 2 Generating an SBOM
 You can generate an SBOM by using [mxbuild](/refguide/mxbuild/). This generates an `sbom.json` file as part of your deployment folder or your package `.mda`. Bundling the SBOM together with your deployment ensures that the components that were present during the build are clearly represented.

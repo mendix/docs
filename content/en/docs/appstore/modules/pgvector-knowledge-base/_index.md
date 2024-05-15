@@ -288,7 +288,7 @@ The `(Re)populate Knowledge Base` activity is used to populate a whole knowledge
 
 | Name                 | Type                                      | Description                                                  |
 | -------------------- | ----------------------------------------- | ------------------------------------------------------------ |
-| `IsSuccess` | Boolean | This boolean indicates if the population of the knowledge base was successful. This can be used for custom error-handling. |
+| `IsSuccess` | Boolean | This Boolean indicates if the population of the knowledge base was successful. This can be used for custom error-handling. |
 
 ##### 4.3.2.3 Insert {insert-technical}
 
@@ -312,7 +312,7 @@ Use [Create Label](#create-label-technical) and [Create Chunk](#create-chunk-tec
 
 | Name                 | Type                                      | Description                                                  |
 | -------------------- | ----------------------------------------- | ------------------------------------------------------------ |
-| `IsSuccess` | Boolean | This boolean indicates if the addition of data to the knowledge base was successful. This can be used for custom error-handling. |
+| `IsSuccess` | Boolean | This Boolean indicates if the addition of data to the knowledge base was successful. This can be used for custom error-handling. |
 
 
 ##### 4.3.2.4 Replace {#replace-technical}
@@ -333,7 +333,7 @@ The `DatabaseConfiguration` that is passed must contain the connection details t
 
 | Name                 | Type                                      | Description                                                  |
 | -------------------- | ----------------------------------------- | ------------------------------------------------------------ |
-| `IsSuccess` | Boolean | This boolean indicates if the replacement of data in the knowledge base was successful. This can be used for custom error-handling. |
+| `IsSuccess` | Boolean | This Boolean indicates if the replacement of data in the knowledge base was successful. This can be used for custom error-handling. |
 
 #### 4.3.3 Retrieve Operations {#retrieve-operations-technical}
 
@@ -450,7 +450,7 @@ Use this operation to delete a complete knowledge base at once. This operation t
 
 | Name                 | Type                                      | Description                                                  |
 | -------------------- | ----------------------------------------- | ------------------------------------------------------------ |
-| `IsSuccess` | Boolean | This boolean indicates if the deletion of the knowledge base was successful. This can be used for custom error-handling.|
+| `IsSuccess` | Boolean | This Boolean indicates if the deletion of the knowledge base was successful. This can be used for custom error-handling.|
 
 #### 4.3.4.2 Delete {#delete-technical}
 
@@ -470,7 +470,7 @@ By providing the `KnowledgeBaseName` parameter, you determine the knowledge base
 
 | Name                 | Type                                      | Description                                                  |
 | -------------------- | ----------------------------------------- | ------------------------------------------------------------ |
-| `IsSuccess` | Boolean | This boolean indicates if the deletion of data in the knowledge base was successful. This can be used for custom error-handling. |
+| `IsSuccess` | Boolean | This Boolean indicates if the deletion of data in the knowledge base was successful. This can be used for custom error-handling. |
 
 #### 4.3.4.3 Delete List {#delete-list-technical}
 
@@ -489,7 +489,7 @@ By providing the `KnowledgeBaseName` parameter, you determine the knowledge base
 
 | Name                 | Type                                      | Description                                                  |
 | -------------------- | ----------------------------------------- | ------------------------------------------------------------ |
-| `IsSuccess` | Boolean | This boolean indicates if the deletion of data in the knowledge base was successful. This can be used for custom error-handling. |
+| `IsSuccess` | Boolean | This Boolean indicates if the deletion of data in the knowledge base was successful. This can be used for custom error-handling. |
 
 ## 5 Showcase Application {#showcase-application}
 

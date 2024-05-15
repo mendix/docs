@@ -281,7 +281,7 @@ The `(Re)populate Knowledge Base` activity is used to populate a whole knowledge
 | Name                | Type                                    | Mandatory | Description                                           |
 | ------------------- | --------------------------------------- | --------- | ----------------------------------------------------- |
 | `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the name of the knowledge base in your database.|
-| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is to connect and authenticate to the database where the knowledge base is located.  |
+| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is used for connecting to and authenticating with the database where the knowledge base is located. |
 | `ChunkList`          | List of [chunks](#chunk)                                                    | mandatory | This list is for inserting the [chunks'](#chunk) data into the knowledge base. |
 
 **Return value**
@@ -305,7 +305,7 @@ Use [Create Label](#create-label-technical) and [Create Chunk](#create-chunk-tec
 | Name                | Type                                    | Mandatory | Description                                           |
 | ------------------- | --------------------------------------- | --------- | ----------------------------------------------------- |
 | `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the name of the knowledge base in your database.|
-| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is to connect and authenticate to the database where the knowledge base is located.  |
+| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is used for connecting to and authenticating with the database where the knowledge base is located. |
 | `ChunkList`          | List of [chunks](#chunk)                                                    | mandatory | This list is for inserting the [chunks'](#chunk) data into the knowledge base. |
 
 **Return value**
@@ -326,7 +326,7 @@ The `DatabaseConfiguration` that is passed must contain the connection details t
 | Name                | Type                                    | Mandatory | Description                                           |
 | ------------------- | --------------------------------------- | --------- | ----------------------------------------------------- |
 | `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the name of the knowledge base in your database.|
-| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is to connect and authenticate to the database where the knowledge base is located.  |
+| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is used for connecting to and authenticating with the database where the knowledge base is located. |
 | `ChunkList`          | List of [chunks](#chunk)                                                    | mandatory | This list is for inserting the [chunks'](#chunk) data into the knowledge base. Based on the Mendix object they represent deletion of chunks will happen first. |
 
 **Return value**
@@ -349,7 +349,7 @@ The `DatabaseConfiguration` that is passed must contain the connection details t
 
 | Name                | Type                                    | Mandatory | Description                                           |
 | ------------------- | --------------------------------------- | --------- | ----------------------------------------------------- |
-| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is to connect and authenticate to the database where the knowledge base is located.    |
+| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is used for connecting to and authenticating with the database where the knowledge base is located. |
 | `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the name of the knowledge base in your database that contains the data to retrieve. |
 | `LabelList`          | List of [Labels](#label)                                                    | optional | This list is for additional filtering in the retrieve. Only chunks that comply with the labels will be returned. |
 | `MaxNumberOfResults`          | Integer/Long                                                      | optional                    | This is to optionally limit the number of results that should be returned. |
@@ -371,7 +371,7 @@ The `DatabaseConfiguration` that is passed must contain the connection details t
 
 | Name                | Type                                    | Mandatory | Description                                           |
 | ------------------- | --------------------------------------- | --------- | ----------------------------------------------------- |
-| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is to connect and authenticate to the database where the knowledge base is located.    |
+| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is used for connecting to and authenticating with the database where the knowledge base is located. |
 | `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the name of the knowledge base in your database that contains the data to retrieve. |
 | `TargetChunk` | Entity parameter | mandatory | This must be a specialization of the [Chunk](#chunk) entity. If it contains associations to (specializations of) the related Mendix object for which the chunk was created, this will be set by this operation. This will also describe the type of the returned list. |
 | `LabelList`          | List of [Labels](#label)                                                    | optional | This list is for additional filtering in the retrieve. Only chunks that comply with the labels will be returned. |
@@ -394,7 +394,7 @@ The `DatabaseConfiguration` that is passed must contain the connection details t
 
 | Name                | Type                                    | Mandatory | Description                                           |
 | ------------------- | --------------------------------------- | --------- | ----------------------------------------------------- |
-| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is to connect and authenticate to the database where the knowledge base is located.    |
+| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is used for connecting to and authenticating with the database where the knowledge base is located. |
 | `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the name of the knowledge base in your database which contains the data to retrieve.|
 | `Vector`          | String                                                       | mandatory                     | This is the vector representation of the data for which the nearest neigbhors should be calculated. The dimension needs to be the same as the vectors stored in the knowledge base.|
 | `LabelList`          | List of [Labels](#label)                                                    | optional | This list is for additional filtering in the retrieve. Only chunks that comply with the labels will be returned. |
@@ -417,7 +417,7 @@ The `DatabaseConfiguration` that is passed must contain the connection details t
 
 | Name                | Type                                    | Mandatory | Description                                           |
 | ------------------- | --------------------------------------- | --------- | ----------------------------------------------------- |
-| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is to connect and authenticate to the database where the knowledge base is located.    |
+| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is used for connecting to and authenticating with the database where the knowledge base is located. |
 | `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the name of the knowledge base in your database which contains the data to retrieve.|
 | `TargetChunk` | Entity parameter | mandatory | This must be a specialization of the [Chunk](#chunk) entity. If it contains associations to (specializations of) the related Mendix object for which the chunk was created, this will be set by this operation. This will also describe the type of the returned list. |
 | `Vector`          | String                                                       | mandatory                     | This is the vector representation of the data for which the nearest neigbhors should be calculated. The dimension needs to be the same as the vectors stored in the knowledge base.|

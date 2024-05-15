@@ -14,47 +14,39 @@ aliases:
 
 ## 1 Introduction
 
-Mendix Studio Pro enables you to build apps on the Mendix Platform. This document will guide you through the steps of [installing the latest version of Studio Pro](https://marketplace.mendix.com/link/studiopro/). For the full list of supported systems and required frameworks, see [System Requirements](/refguide/system-requirements/). 
+Mendix Studio Pro allows you to build apps on the Mendix Platform. This document will guide you through the steps of [installing the latest version of Studio Pro](https://marketplace.mendix.com/link/studiopro/). For the full list of supported systems and required frameworks, see [System Requirements](/refguide/system-requirements/). 
 
 If you use a Mac device and need to use a version of Mendix Studio Pro older than 10.7, see [Configuring Parallels](/refguide/using-mendix-studio-pro-on-a-mac/) to configure your Windows virtual machine. 
 
-For a deep-dive demonstration of how to install Studio Pro, follow along in this video:
+For a demonstration on how to install Studio Pro, follow along in the video below:
 
 {{< vidyard "WUp2tLi68nXFQd7xhPbDtt" >}}
 
 ## 2 Downloading Mendix Studio Pro
 
-Mendix Studio Pro can be installed on your Windows machine with a Windows executable file or on your Mac machine using a pkg file. This file can be downloaded from the Mendix Marketplace. 
+Mendix Studio Pro can be installed on your Windows machine with a Windows executable file or on your Mac machine using a .pkg file. This file can be downloaded from the Mendix Marketplace. 
 
 Follow these steps to download Mendix Studio Pro:
 
 1. Go to the Studio Pro download page in the [Mendix Marketplace](https://marketplace.mendix.com/link/studiopro/).
-2. Click the **Download** button in the upper-right corner to download the latest Mendix Studio Pro. Make sure to download the version for your operating system. 
+2. Click the **Download** button to download- Mendix Studio Pro. Make sure to download the correct version for your operating system. 
 
 ## 3 Installing Mendix Studio Pro {#install}
 
 Mendix Studio Pro needs to be installed on your computer before you can start building apps. Follow these steps to install Mendix Studio Pro:
 
-1. Open the downloaded Mendix Studio Pro executable. It is named like this: *Mendix-10.X.X-Setup*. Then click **Next**:
+1. Open the downloaded Mendix Studio Pro executable. It is named: *Mendix-10.X.X-Setup*. Then, click **Next**:
 
     {{< figure src="/attachments/refguide/installation/install/setup-wizard.png"  class="no-border" >}}
 
-     On a Mac, you may get a warning during installation. For more information on how to troubleshoot it, see the [Mac Warning](#mac-warning) section below.
+     On a Mac, you may get a warning during installation. For more information on how to troubleshoot this warning, see the [Mac Warning](#mac-warning) section below.
 
 2. Select **I accept the terms in the License Agreement** and click **Next**.
 
-3. Select the folder in which you want to install Studio Pro and click **Next**:
+3. Check the desktop option to create a shortcut to Studio Pro on your desktop and click **Next**.
+4. Click **Install** to install Studio Pro on your computer.
 
-    {{< figure src="/attachments/refguide/installation/install/select-folder.png"   class="no-border" >}}
-
-4. Enter the start menu shortcuts folder you want to use and click **Next**:
-
-    {{< figure src="/attachments/refguide/installation/install/shortcut-folder.png"  class="no-border" >}}
-
-5. Check the desktop option to create a shortcut to Studio Pro on your desktop and click **Next**.
-6. Click **Install** to install Studio Pro on your computer.
-
-7. If you are asked to restart your computer, make a selection and click **Finish**. Otherwise, check **Launch Mendix 10.X.X** and click **Finish** to finish the installation and launch Studio Pro.
+5. If you are asked to restart your computer, make a selection and click **Finish**. Otherwise, check **Launch Mendix 10.X.X** and click **Finish** to finish the installation and launch Studio Pro.
 
 ## 4 Troubleshooting {#troubleshooting}
 

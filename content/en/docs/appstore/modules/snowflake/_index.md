@@ -42,6 +42,6 @@ The REST SQL connector requires an additional step to transform data rows receiv
 
 ### 2.3 Role Base Access Control (RBAC)
 
-For information about using Snowflake's role-based access control in a Mendix application, see [Role-based Access Control](/appstore/connectors/snowflake/snowflake-role-based-access-control-RBAC/).
+For information about using Snowflake's role-based access control in a Mendix application, see [Role-based Access Control](/appstore/modules/snowflake/snowflake-rbac/).
 
 ## 3 Documents in This Category

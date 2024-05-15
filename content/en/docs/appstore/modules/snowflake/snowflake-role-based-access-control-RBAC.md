@@ -1,6 +1,6 @@
 ---
 title: "Snowflake Role-Based Access Control"
-url: /appstore/modules/snowflake/snowflake-role-based-access-control-RBAC/
+url: /appstore/modules/snowflake/snowflake-rbac/
 description: "Describes how to use the role-based access control of Snowflake in a Mendix application."
 weight: 20
 tags: ["snowflake", "rbac", "rest sql"]
@@ -9,7 +9,7 @@ tags: ["snowflake", "rbac", "rest sql"]
 
 ## 1 Introduction
 
-Snowflake's [role-based access control (RBAC)](https://www.snowflake.com/trending/what-rbac/) approach allows you to assign privileges that define levels of access to data within Snowflake. To an object, to roles, which are then assigned to users or other roles. This model provides both control and flexibility, making it easier to manage access to data and resources within Snowflake. 
+Snowflake's [role-based access control (RBAC)](https://www.snowflake.com/trending/what-rbac/) approach allows you to assign privileges that define levels of access to data within Snowflake. You can assign these privileges to roles, which are then assigned to users or other roles. This model provides both control and flexibility, making it easier to manage access to data and resources within Snowflake. 
 
 This is relevant when data is presented within Mendix applications, to ensure the data being exposed to a certain user or role within Snowflake is guaranteed to be the same as to when presented in a Mendix app to for the same user.
 

@@ -21,7 +21,7 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 #### Improvements
 
-* In Portfolio Management, you can see the prioritization score instead of the department name on an initiative card in the [Kanban view](/developerportal/portfolio-management/initiatives-overview/#kanban-view).
+* In Portfolio Management, you can now see the prioritization score instead of the department name on an initiative card in the [Kanban view](/developerportal/portfolio-management/initiatives-overview/#kanban-view).
 
 ### May 5
 

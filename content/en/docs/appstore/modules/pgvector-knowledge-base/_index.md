@@ -436,7 +436,7 @@ The `DatabaseConfiguration` that is passed must contain the connection details t
 
 Activities that support the deletion of knowledge bases.
 
-#### 4.3.4.1 Delete Knowledge Base {#delete-knowledge-base-technical}
+##### 4.3.4.1 Delete Knowledge Base {#delete-knowledge-base-technical}
 
 Use this operation to delete a complete knowledge base at once. This operation takes care of the deletion of the actual tables including all data for the specified knowledge base. The operation will finish successfully, even if there is no table structure present for the provided `KnowledgeBaseName`.
 
@@ -453,7 +453,7 @@ Use this operation to delete a complete knowledge base at once. This operation t
 | -------------------- | ----------------------------------------- | ------------------------------------------------------------ |
 | `IsSuccess` | Boolean | This Boolean indicates if the deletion of the knowledge base was successful. This can be used for custom error-handling.|
 
-#### 4.3.4.2 Delete {#delete-technical}
+##### 4.3.4.2 Delete {#delete-technical}
 
 Use this operation to delete existing chunks and corresponding labels in a knowledge base based on the Mendix object provided: `MxObject` is the original Mendix object that the chunks in the knowledge base represent. Only chunks related to this Mendix object are deleted.
 
@@ -473,7 +473,7 @@ By providing the `KnowledgeBaseName` parameter, you determine the knowledge base
 | -------------------- | ----------------------------------------- | ------------------------------------------------------------ |
 | `IsSuccess` | Boolean | This Boolean indicates if the deletion of data in the knowledge base was successful. This can be used for custom error-handling. |
 
-#### 4.3.4.3 Delete List {#delete-list-technical}
+##### 4.3.4.3 Delete List {#delete-list-technical}
 
 Use this operation to delete existing chunks and corresponding labels in a knowledge base based on the Mendix objects provided: `MxObjectList` is the list of original Mendix objects that the chunks in the knowledge base represent. Only chunks related to these Mendix objects are deleted.
 

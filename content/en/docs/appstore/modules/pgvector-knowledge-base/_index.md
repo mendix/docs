@@ -293,8 +293,11 @@ The `(Re)populate Knowledge Base` activity is used to populate a whole knowledge
 ##### 4.3.2.3 Insert {insert-technical}
 
 The `Insert` operation is used to add chunks to a knowledge base. This operation handles a list of chunks with their labels in a single operation.
+
 By providing the `KnowledgeBaseName` parameter, you determine the knowledge base. It is used to later on to retrieve elements from the right tables. 
-This operation takes care of the creation of the actual tables if needed. If for the provided `KnowledgeBaseName` there is already data present from an earlier iteration with the same chunk ID this operation will return false with an error logged.
+
+This operation takes care of the creation of the actual tables if needed. If for the provided `KnowledgeBaseName` there is already data present from an earlier iteration with the same chunk ID, this operation will return false with an error logged.
+
 Use [Create Label](#create-label-technical) and [Create Chunk](#create-chunk-technical) to construct the input for this microflow, which needs to be passed as `ChunkList`. The `DatabaseConfiguration` that is passed must contain the connection details to a PostgreSQL database server with the PgVector extension installed. This entity is typically configured at runtime or in [after-startup](/refguide/app-settings/#after-startup) logic.
 
 **Input parameters**
@@ -441,7 +444,7 @@ Use this operation to delete a complete knowledge base at once. This operation t
 | Name                | Type                                    | Mandatory | Description                                           |
 | ------------------- | --------------------------------------- | --------- | ----------------------------------------------------- |
 | `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the name of the knowledge base that will be deleted.|
-| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is to connect and authenticate to the database where the knowledge base is located.  |
+| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is used for connecting to and authenticating with the database where the knowledge base is located. |
 
 **Return value**
 
@@ -451,7 +454,8 @@ Use this operation to delete a complete knowledge base at once. This operation t
 
 #### 4.3.4.2 Delete {#delete-technical}
 
-Use this operation to delete existing chunks and corresponding labels in a knowledge base based on the Mendix Object provided: `MxObject` is the (original) Mendix object that the chunks in the knowledge base represent. Only chunks related to this Mendix object are deleted.
+Use this operation to delete existing chunks and corresponding labels in a knowledge base based on the Mendix object provided: `MxObject` is the original Mendix object that the chunks in the knowledge base represent. Only chunks related to this Mendix object are deleted.
+
 By providing the `KnowledgeBaseName` parameter, you determine the knowledge base. The `DatabaseConfiguration` that is passed must contain the connection details to a PostgreSQL database server with the PgVector extension installed. This entity is typically configured at runtime or in [after-startup](/refguide/app-settings/#after-startup) logic.
 
 **Input parameters**
@@ -459,7 +463,7 @@ By providing the `KnowledgeBaseName` parameter, you determine the knowledge base
 | Name                | Type                                    | Mandatory | Description                                           |
 | ------------------- | --------------------------------------- | --------- | ----------------------------------------------------- |
 | `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the name of the knowledge base in your database.|
-| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is to connect and authenticate to the database where the knowledge base is located.  |
+| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is used for connecting to and authenticating with the database where the knowledge base is located. |
 | `MxObject`          | Object                                                    | mandatory | This is the (original) Mendix object that the chunks in the knowledge base represent. Only chunks related to this Mendix object are deleted. |
 
 **Return value**

@@ -34,7 +34,7 @@ To enable role-based access control for your Snowflake-integrated Mendix app, pe
 
 1. Ensure your Mendix app has the necessary domain model and entities, as shown in the following figure:
 
-    {{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/domain-model.png" >}}
+    {{< figure src="/attachments/appstore/modules/snowflake-rest-sql/domain-model.png" >}}
 
 2. Decide on the authentication method. For Snowflake, key-pair authentication is recommended.
 3. Configure the necessary keys and credentials in your Snowflake account and assign the public key to a Snowflake user. For more information, see [ey-pair authentication and key-pair rotation](https://docs.snowflake.com/en/user-guide/key-pair-auth) in the Snowflake documentation.
@@ -49,13 +49,13 @@ To enable role-based access control for your Snowflake-integrated Mendix app, pe
 
 * Below is an example of a microflow that gets a Connection details object associate with the account if it exist or creates one along with the private key object if it doesn’t.
   
-  {{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/connection-details-microflow.png" >}}
+  {{< figure src="/attachments/appstore/modules/snowflake-rest-sql/connection-details-microflow.png" >}}
   
-  {{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/connection-details-account.png" >}}
+  {{< figure src="/attachments/appstore/modules/snowflake-rest-sql/connection-details-account.png" >}}
 
 * And a example of a microflow to redirect to the ConnectionDetails_NewEdit_Step1 page
 
-{{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/connection-details-newedit.png" >}}
+{{< figure src="/attachments/appstore/modules/snowflake-rest-sql/connection-details-newedit.png" >}}
 
 ### 2.4 Connection Details at End User Level
 
@@ -70,7 +70,7 @@ To interact with Snowflake, SQL queries need to be executed. To execute the SQL 
 ### 3.1 Create a microflow or Nanoflow that performs the following steps:
 
 * In the microflow create an object "Statement" this object contains the necessary fields needed for a statement
-{{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/create-statement-object.png" >}}
+{{< figure src="/attachments/appstore/modules/snowflake-rest-sql/create-statement-object.png" >}}
 * SQL Statement: this is the field that will contains your SQL Query for example, to select the item and region data from "Example_RBAC" table write the following in the SQL statement
 ```SQL
 SELECT ITEM,
@@ -93,30 +93,30 @@ Next in line action in the execute statement microflow should be the retrieve "C
 To apply the RBAC the connection details should be the ones associate with the current user account so that the user will be able to access the data that is allowed in Snowflake
 To retrieve the "Connection Details" associated with the "current user" use the XPath: [SnowflakeRESTSQL.ConnectionDetails_Account = $currentUser]
 
-{{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/retrieve-details.png" >}}
+{{< figure src="/attachments/appstore/modules/snowflake-rest-sql/retrieve-details.png" >}}
 
 ### 3.4 Execute Statement
 
-* Execute the statement using the execute statement action provided by the [Rest SQL Connector (https://docs.mendix.com/appstore/connectors/snowflake/snowflake-rest-sql/)].
+* Execute the statement using the execute statement action provided by the [Rest SQL Connector (/appstore/connectors/snowflake/snowflake-rest-sql/)].
 * At Statement field add the Statement\s action outcome
 * At the Connection Details add the Connection details' action outcome
 
-{{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/execute-statement.png" >}}
+{{< figure src="/attachments/appstore/modules/snowflake-rest-sql/execute-statement.png" >}}
 
 ### 3.5 Map the HttpResponse List 
 
 The Http Response can be mapped if needed to Mx Objects 
-* By an [import mapping (https://docs.mendix.com/refguide/import-mappings/)]
-* With [‘Transform Responses to MxObjects’ (https://docs.mendix.com/appstore/connectors/snowflake/snowflake-rest-sql/#transform-response-to-mx-object)]
+* By an [import mapping](/refguide/import-mappings/)
+* With [Transform Responses to MxObjects](/appstore/connectors/snowflake/snowflake-rest-sql/#transform-response-to-mx-object)
 The Transform Responses action creates a single table with the HTTP Response data. To do that a Domain model Entity is needed with the attributes named exactly as the returned response attributes, for example for the Query of the 3.1 the entity should look as follows
 
-{{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/mapping-entity.png" >}}
+{{< figure src="/attachments/appstore/modules/snowflake-rest-sql/mapping-entity.png" >}}
 
-{{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/execute-statement-microflow.png" >}}
+{{< figure src="/attachments/appstore/modules/snowflake-rest-sql/execute-statement-microflow.png" >}}
 
 * The results then can be visualized in a page
 
-{{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/sample-results.png" >}}
+{{< figure src="/attachments/appstore/modules/snowflake-rest-sql/sample-results.png" >}}
 
 ## 4 Snowflake Test (optional)
 
@@ -264,11 +264,11 @@ for the RoleTestB only to US
 
 * Check the result
 
-{{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/test-user1-snowflake.png" >}}
+{{< figure src="/attachments/appstore/modules/snowflake-rest-sql/test-user1-snowflake.png" >}}
 
 * Logout and login with the TestUser 2 and execute the same statement
 
-{{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/test-user1-mendix.png" >}}
+{{< figure src="/attachments/appstore/modules/snowflake-rest-sql/test-user1-mendix.png" >}}
 
 * Compare the Results
   
@@ -279,6 +279,6 @@ for the RoleTestB only to US
 * Log in with each user separately.
 *  Compare results with each user and also with the results from snowflake
 
-{{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/test-user2-snowflake.png" >}}
+{{< figure src="/attachments/appstore/modules/snowflake-rest-sql/test-user2-snowflake.png" >}}
 
-{{< figure src="static/attachments/appstore/modules/snowflake-rest-sql/test-user2-mendix.png" >}}
+{{< figure src="/attachments/appstore/modules/snowflake-rest-sql/test-user2-mendix.png" >}}

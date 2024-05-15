@@ -29,7 +29,7 @@ Mendix Studio Pro can be installed on your Windows machine with a Windows execut
 Follow these steps to download Mendix Studio Pro:
 
 1. Go to the Studio Pro download page in the [Mendix Marketplace](https://marketplace.mendix.com/link/studiopro/).
-2. Click the **Download** button to download- Mendix Studio Pro. Make sure to download the correct version for your operating system. 
+2. Click the **Download** button to download Mendix Studio Pro. Make sure to download the correct version for your operating system. 
 
 ## 3 Installing Mendix Studio Pro {#install}
 
@@ -115,27 +115,27 @@ For more information on how to configure a custom repository, see the *Custom Re
 
 ## 6 Installing Mendix Studio Pro Without Admin Rights
 
-Mendix also offers a Studio Pro installer called the **Portable** installer that does not require admin rights. The portable installer is available to download on the [Get Studio Pro](https://marketplace.mendix.com/link/studiopro/) page in the Mendix Marketplace. 
+Mendix offers a Studio Pro installer called the **Portable** installer that does not require admin rights. The portable installer is available to download on the [Get Studio Pro](https://marketplace.mendix.com/link/studiopro/) page in the Mendix Marketplace. 
 
-While the regular installer installs Mendix Studio Pro dependencies in system directories, the portable installer installs Mendix Studio Pro in a user-level directory together with all the dependencies. This means that dependencies are not shared between Studio Pro versions, which results in higher disk space usage. In return, you do not require admin rights to install Mendix Studio Pro, while you can still use all the functionalities.
+While the regular installer installs Mendix Studio Pro dependencies in system directories, the portable installer installs Studio Pro in a user-level directory together with all the dependencies. This means that dependencies are not shared between Studio Pro versions, which results in higher disk space usage. In return, you do not require admin rights to install Studio Pro and you can still use all the functionalities.
 
-The portable installer does not include all tools that come installed with Studio Pro or can be leveraged by Studio Pro, such as the MPR tool, mx, mxbuild, mxuit, or the Console Log. The portable installer only includes the tools that are necessary to be able to build with Studio Pro and to run apps locally. 
+The portable installer does not include all tools that come installed with Studio Pro or can be leveraged by Studio Pro, such as the MPR tool, mx, MxBuild, mxuit, or the Console Log. The portable installer only includes the tools that are necessary to be able to build with Studio Pro and to run apps locally. 
 
-Mendix Studio Pro that is installed via the portable installer does not show up in the in the Mendix Version Selector where you can manage Mendix versions. However, you can manually add a Studio Pro version by clicking on the **Add custom version** button in the **Manage Mendix versions** and specifying the path to the executable file of the Studio Pro version:
+Mendix Studio Pro that is installed via the portable installer does not show up in the in the Mendix Version Selector where you can manage Mendix versions. However, you can manually add a Studio Pro version by clicking **Add custom version** in the **Manage Mendix versions** and specifying the path to the executable file of the Studio Pro version:
 
 {{< figure src="/attachments/refguide/installation/install/version-selector.png"  alt="Version Selector" width="450" class="no-border" >}}
 
 ## 7 Signing In
 
-When starting Studio Pro for the first time after installation, it will ask you to sign in to the Mendix Platform. This allows you to get access to Mendix platform services from within Studio Pro, such as Team Server, Marketplace, and app deployment to the cloud.
+When starting Studio Pro for the first time after installation, it will ask you to sign in to the Mendix Platform. This gives you access to Mendix platform services from within Studio Pro, such as Team Server, Marketplace, and app deployment to the cloud.
 
-You can sign in with your Mendix account, or with your own company account if this has been set up as an Identify Provider in the Mendix platform.
+You can sign in with your Mendix account or with your own company account if this has been set up as an Identify Provider in the Mendix platform.
 
-In some situations, for example, when your network has a firewall or proxy server, a warning about an untrusted certificate may appear during the sign-in process:
+In some situations, (for example, when your network has a firewall or proxy server), a warning about an untrusted certificate may appear during the sign-in process:
 
 {{< figure src="/attachments/refguide/installation/install/untrusted-certificate.png" width="600px" class="no-border" >}}
 
-To continue, you may accept the certificate for the current session by clicking the **Accept for this session** button, or install it permanently by clicking the **View certificate information** button. 
+To continue, you may accept the certificate for the current session by clicking **Accept for this session**, or install it permanently by clicking **View certificate information**. 
 
 {{% alert color="warning" %}}
 Accepting untrusted certificates can bring security risks. You should only do so after having received confirmation from your network administrator.

@@ -28,7 +28,7 @@ Because of the above, implementing RBAC is essential for maintaining security an
 
 To enable RBAC for your Mendix app, you must first install and configure the [Snowflake REST SQL Connector](/appstore/connectors/snowflake/snowflake-rest-sql/).
 
-## 2 Configuring the Connection Details
+## 2 Configuring the Connection Details {#connection-details}
 
 To enable role-based access control for your Snowflake-integrated Mendix app, perform the following steps:
 
@@ -51,7 +51,7 @@ To enable role-based access control for your Snowflake-integrated Mendix app, pe
 
     {{< figure src="/attachments/appstore/modules/snowflake-rest-sql/connection-details-newedit.png" >}}
 
-## 3 Configuring the SQL Queries
+## 3 Configuring the SQL Queries {#queries}
 
 To interact with Snowflake, you must configure your Mendix app to execute SQL queries by using the **Execute Statement** microflow action. 
 
@@ -97,22 +97,14 @@ To interact with Snowflake, you must configure your Mendix app to execute SQL qu
 
 This section provides an example of how to set up RBAC in Snowflake for two test users and view the same data for the same users in a Mendix app.
 
-### 4.1 Prerequisites
-
-* A user in Snowflake platform with account administrator privileges
-* A public key from ### 2.2 
-
-### 4.2 Snowflake  
-
-For further details please check the Snowflake [documentation](https://docs.snowflake.com/sql-reference)
-
-* Create 2 roles in Snowflake Role Test A and Role Test B
+1. Log in to Snowflake as a user account administrator privileges.
+2. Create the following roles in Snowflake. For more information, refer to the [Snowflake documentation](https://docs.snowflake.com/sql-reference).
 
     ```SQL
     CREATE ROLE ROLETESTA;
     CREATE ROLE ROLETESTB;
     ```
-* Create Two users Test User 1 and Test User 2
+3. Create the following users in Snowflake:
 
     ```SQL
     CREATE OR REPLACE USER TestUser1
@@ -134,22 +126,20 @@ For further details please check the Snowflake [documentation](https://docs.snow
     DEFAULT_WAREHOUSE = COMPUTE_WH;
     ```
 
-* Assign one role to each user
+4. Assign one role to each user:
   
     ```SQL
     GRANT ROLE ROLETESTA TO USER Testuser1; 
     GRANT ROLE ROLETESTB TO USER Testuser2;
     ```
-* Make each user role default for each user
+5. Make each user role default for the user:
 
     ```SQL 
     ALTER USER TESTUSER1 SET DEFAULT_ROLE = ROLETESTA;
     ALTER USER TESTUSER2 SET DEFAULT_ROLE = ROLETESTB;
     ```
 
-* Create an example  database
-
-    Use the following statement to create  a test database named Example_RBAC , schema named RBAC_Schema a table named Example RBAC and add data to the table
+6. Create an example  database. The following statement creates  a test database named `Example_RBAC`, a schema named `RBAC_Schema`, and a table named `Example RBAC`. It also adds data to the table.
 
     ```SQL
     Create Database Example_RBAC;
@@ -189,7 +179,7 @@ For further details please check the Snowflake [documentation](https://docs.snow
       (2, 'umbrella', 'ASIA');
     ```
 
-* Grant Usage to the Warehouse, database, Schema and table for the user roles RoleTest A and Role Test B
+7. Grant `Usage` to the `Warehouse`, `Database`, `Schema` and `Table` for the user roles that you created.
 
     ```SQL
     GRANT USAGE ON WAREHOUSE COMPUTE_WH to role ROLETESTA;
@@ -202,8 +192,7 @@ For further details please check the Snowflake [documentation](https://docs.snow
     GRANT SELECT ON table EXAMPLE_RBAC.RBAC_SCHEMA.EXAMPLE_RBAC to role ROLETESTB;
     ```
 
-* Create a Row base access policy for that will limit the use of the data for RoleTestA only to EU region and 
-for the RoleTestB only to US
+8. Create a `Row` base access policy that will limit the use of the data for `RoleTestA` to the EU region, and for `RoleTestB` only to the US.
 
     ```SQL
     CREATE OR REPLACE ROW ACCESS POLICY RegionRole
@@ -213,7 +202,7 @@ for the RoleTestB only to US
     ;
     ```
 
-* Assign Ownership of the role base policy to the accountadmin role, grant the apply action of the policy to the roles
+9. Assign `Ownership` of the role base policy to the `AccountAdmin` role, and grant the `Apply` action of the policy to the roles.
 
     ```SQL
     GRANT OWNERSHIP ON ROW ACCESS POLICY RegionRole TO AccountAdmin;
@@ -222,14 +211,14 @@ for the RoleTestB only to US
     GRANT APPLY ON ROW ACCESS POLICY RegionRole TO ROLE ROLETESTB;
     ```
   
-* Assign the access policy to the example table
+10. Assign the access policy to the example table.
 
     ```SQL
     ALTER TABLE EXAMPLE_RBAC ADD ROW ACCESS POLICY RegionRole ON (Region);
     ```
  
-* Login with the Test user 1 
-* Execute the statement
+11. Log in to Snowflake with the **TestUser1** account. 
+12. Execute the following statement and view the results:
 
     ```SQL
     SELECT ITEM,
@@ -237,23 +226,20 @@ for the RoleTestB only to US
     FROM EXAMPLE_RBAC;
     ```
 
-* Check the result
+    {{< figure src="/attachments/appstore/modules/snowflake-rest-sql/test-user1-snowflake.png" >}}
 
-{{< figure src="/attachments/appstore/modules/snowflake-rest-sql/test-user1-snowflake.png" >}}
+13. Log in to Snowflake with the **TestUser2** account and execute the same statement.
 
-* Logout and login with the TestUser 2 and execute the same statement
+    {{< figure src="/attachments/appstore/modules/snowflake-rest-sql/test-user2-snowflake.png" >}}
 
-{{< figure src="/attachments/appstore/modules/snowflake-rest-sql/test-user1-mendix.png" >}}
+14. In your Mendix app, configure the [connection details for your test users](#connection-details), as well as the [Execute Statement microflow](#queries).
+15. Create and assign the public key and the private key to the equivalent users in Snowflake.
+16. Log in to your Mendix app as **TestUser1**.
+17. Verify that you can view the same data as in Snowflake.
 
-* Compare the Results
-  
-* Follow the instructions 2-5 so you can create two test users in the Mendix app with Connection details and also the Execute Statement microflow.
+    {{< figure src="/attachments/appstore/modules/snowflake-rest-sql/test-user1-mendix.png" >}}
 
-* Create and assign the public key and the private key to the equivalent users in Snowflake   
+18. Log in to your Mendix app as **TestUser2**.
+19. Verify that you can view the same data as in Snowflake.
 
-* Log in with each user separately.
-*  Compare results with each user and also with the results from snowflake
-
-{{< figure src="/attachments/appstore/modules/snowflake-rest-sql/test-user2-snowflake.png" >}}
-
-{{< figure src="/attachments/appstore/modules/snowflake-rest-sql/test-user2-mendix.png" >}}
+    {{< figure src="/attachments/appstore/modules/snowflake-rest-sql/test-user2-mendix.png" >}}

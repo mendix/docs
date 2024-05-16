@@ -13,6 +13,12 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2024
 
+### May 16, 2024
+
+#### Fixes
+
+* We fixed an issue in the Registration API where an unintended `400` response was returned if an owner that was not yet known in the Catalog was assigned to an application.
+
 ### April 25, 2024
 
 #### Fixes

@@ -54,7 +54,7 @@ For SVN, the command has the form `svn checkout --revision "{REVISION}" --userna
 
 ## 4 Revision History {#revision-history}
 
-{{% alert color="info" %}} For Git-based applications, revisions are sorted according to the commit history, which may not always reflect the chronological order due to Git's decentralized nature and local commits. In contrast, for SVN-based applications, revisions are sorted strictly in chronological order. {{% /alert %}}
+{{% alert color="info" %}}For Git-based applications, revisions are sorted according to the commit history, which sometimes do not reflect the chronological order due to Git's decentralized nature and local commits. In contrast, for SVN-based applications, revisions are sorted strictly in chronological order. {{% /alert %}}
 
 For each revision, you can see the following information:
 

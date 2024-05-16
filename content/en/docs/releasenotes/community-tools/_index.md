@@ -41,6 +41,12 @@ These release notes cover changes to the Mendix Profile, Mendix Community, and o
 
 * We changed the process for merging Mendix Profiles so that the profiles are truly merged and your user accounts stay connected to the resulting Mendix Profile. Previously, profile data was moved from one account to another.
 
+### March 30, 2023
+
+#### New Features
+
+* We releases Spaces in the Mendix Forum  for GA.
+
 ### March 23, 2023
 
 #### Improvements

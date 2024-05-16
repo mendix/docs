@@ -49,13 +49,13 @@ Your app is now ready to be upgraded to Mendix 10. You can now close the app in 
 
 ## 4 Upgrading to Studio Pro 10
 
-Open your app in Studio Pro 10 and allow Studio Pro to update and convert your app to version 10. Mendix will update your app for you automatically.
+Open your app in Studio Pro 10 and allow Studio Pro to update and convert your app to version 10. Mendix will update your app automatically.
 
-Review all error messages and messages about deprecated items, then make changes where necessary.
+Review all error messages and messages about deprecated items and make changes where necessary.
 
 ## 5 Upgrading Widgets, Modules, and Marketplace Components {#upgrade-widgets}
 
-To minimize the chance of problems, you should update all the widgets, modules, and other Marketplace components your app uses to the latest version.
+To minimize the chance of problems, update all the widgets, modules, and other Marketplace components your app uses to the latest version.
 
 Check if there is a newer version of your component available in the Marketplace. Read the version release notes in the Marketplace to see if you need to perform specific actions when upgrading.
 
@@ -66,29 +66,29 @@ Be sure to update these key widgets, resources, and actions:
 * [Data Widgets](https://marketplace.mendix.com/link/component/116540)
 * [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515)
 * [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513)
-* [MendixSSO](https://marketplace.mendix.com/link/component/111349)
+* [Mendix SSO](https://marketplace.mendix.com/link/component/111349)
 
 In general, you should not remove and re-import modules unless this is recommended in the component's release notes. If you do remove and re-import a component, you may lose data or configuration related to the component.
 
 ## 6 Reviewing and Testing Your App
 
-Finally, review the sections below and ensure that you have made all the changes necessary. Test the app for any unexpected results.
+Review the sections below and ensure you have made all the changes necessary. Test the app for any unexpected results.
 
 {{% alert color="success" %}}
-Congratulations! Your app has been successfully upgraded to Studio Pro 10 and you can continue working as normal.
+Congratulations! Your app has been successfully upgraded to Studio Pro 10.
 {{% /alert %}}
 
 ## 7 Notable and Breaking Changes
 
 ### 7.1 Legacy Scheduled Events
 
-Legacy scheduled events (namely, those that are non-repeating or have a start time) are no longer supported. These were already visible as a deprecation warning in Studio Pro 9, and this has now changed to an error. The error describes the issue and how to fix it. The Mendix Runtime will fail to start if legacy scheduled events exist.
+Legacy scheduled events (namely, those that are non-repeating or have a start time) are no longer supported. These were already visible as a deprecation warning in Studio Pro 9 and has now changed to an error. The error describes the issue and how to fix it. The Mendix Runtime will fail to start if legacy scheduled events exist.
 
 ### 7.2 Mendix Runtime API Changes
 
 Most of the Mendix Runtime Java API calls that were deprecated in Mendix 9 have been removed. If you were still using such methods in your Java actions, you must replace or delete them. To check which calls were deprecated, see the [Mendix 9 Runtime API](https://apidocs.rnd.mendix.com/9/runtime/index.html).
 
-Additionally, refer to the [Studio Pro 10 release notes](/releasenotes/studio-pro/10.0/) for more Mendix Runtime API change details.
+Refer to the [Studio Pro 10 release notes](/releasenotes/studio-pro/10.0/) for more Mendix Runtime API change details.
 
 ### 7.3 XPath Query Engine Updates{#query-engine}
 
@@ -97,8 +97,8 @@ With Studio Pro 9, we introduced a new query engine. During that introduction, s
 In Studio Pro 10, there are some improvements to consistency and behavior:
 
 * Ranges that are collections of ranges are handled correctly. Prior to Studio Pro 10, the processing stopped at a `NULL` value in a collection (and did not process any range after that).
-* In Studio Pro 9 and below, Long paths in the conditions of outer joins did not work correctly and yielded an incorrect result. This was because the predicate was moved from the `ON` clause to the `WHERE` clause. As of Studio Pro 10, it is prohibited to use associations in the `ON` clause of an outer `JOIN` (meaning, `LEFT JOIN`, `RIGHT JOIN`, or `FULL JOIN`).
-* Prior to Studio Pro 10, the operator in a binary expression with a collection or range as (right-hand) operand was ignored. Regardless of the operator, it was interpreted as `IN`. As of Studio Pro 10, this is no longer the case, and an exception is thrown for all operators other than `IN` or `=`. Please note this includes `!=`, which is not supported.
+* In Studio Pro 9 and below, long paths in the conditions of outer joins did not work correctly and yielded an incorrect result. This was because the predicate was moved from the `ON` clause to the `WHERE` clause. As of Studio Pro 10, it is prohibited to use associations in the `ON` clause of an outer `JOIN` (meaning, `LEFT JOIN`, `RIGHT JOIN`, or `FULL JOIN`).
+* Prior to Studio Pro 10, the operator in a binary expression with a collection or range as (right-hand) operand was ignored. Regardless of the operator, it was interpreted as `IN`. As of Studio Pro 10, this is no longer the case, and an exception is thrown for all operators other than `IN` or `=`. Note this includes `!=`, which is not supported.
 
 ### 7.4 Range Expressions
 

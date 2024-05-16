@@ -36,6 +36,7 @@ Alternatives to using OIDC SSO for managing single sign-on are:
 * **API consumption:** If your app makes calls to APIs of other services on behalf of your end-user, you can use the access token obtained via the OIDC SSO module. This scenario is not supported when using SAML SSO. This makes the OIDC SSO module suitable for Mendix customers using Mendix Catalog.
 * **Authorizing access to a Mendix back-end app:**  If you want to secure APIs in Mendix back-end apps using an access token, your API can use an access token passed by the calling app in the authorization header. If the access token is a JWT, your app can use the user and/or the user’s authorizations to assign user roles based on the claims in the access token JWT.
 * **Xcelerator apps:** Your Siemens Xcelerator app is designed to be integrated with Siemens' SAM IdP.  The Siemens SAM IdP supports the OIDC protocol and allows your app to delegate both authentication (login) and authorization (roles).
+* **Works with Responsive web app and PWA:** OIDC SSO module supports both responsive web app and progressive web app (PWA). If you are building a native mobile app, you need to use [Mobile SSO](https://marketplace.mendix.com/link/component/223516) module for your app. For more information, see [Building a Responsive Web App](/quickstarts/responsive-web-app/), [Progressive Web App](/refguide/mobile/introduction-to-mobile-technologies/progressive-web-app/), and [Native Mobile](/refguide/mobile/introduction-to-mobile-technologies/native-mobile/).
 
 ### 1.2 Features and Limitations
 
@@ -347,9 +348,6 @@ The following constants are mandatory when creating an OIDC SSO configuration an
 * **ClientAlias** – the client alias
 * **ClientSecret** – the client secret (see security best-practice, above)
 * **AutomaticConfigurationURL** – the URL of the well-known endpoint
-* **CustomUserEntity** – a custom user entity
-* **PrincipalEntityAttribute** – the attribute holding the unique identifier of an authenticated user
-* **PrincipalIdPAttribute** – the IdP claim which is the unique identifier of an authenticated user
 
 For more information, see the [Custom User Provisioning at Deploy Time](#custom-provisioning-dep) section.
 

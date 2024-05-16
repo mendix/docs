@@ -110,13 +110,13 @@ The following function invocations are always `True` or `False`:
 
 Prior to Studio Pro 10, these functions were removed from a predicate, which was not always correct. For example, `predicate OR` `attribute >` `RANGEBEGIN((NULL, 42))` is equivalent to `predicate OR True`, which is not the same as just `predicate` (with the range function removed).
 
-As of Studio Pro 10, the tautology range functions are no longer removed, but simply substituted by `True` or `False`. Subsequently, the expressions are optimized where possible (for example, `x OR True` becomes `True`, `x AND False` becomes `False`, and `NOT(True)` becomes `False`).
+As of Studio Pro 10, the tautology range functions are no longer removed, but are substituted by `True` or `False`. Subsequently, the expressions are optimized where possible (for example, `x OR True` becomes `True`, `x AND False` becomes `False`, and `NOT(True)` becomes `False`).
 
 ### 7.5 Workflow Domain Model Changes
 
-In Studio Pro 10, we added a new feature called [multi-user tasks](/refguide/multi-user-task/). This feature makes it possible for a user task to have multiple assignees. For that to be possible, we have renamed the `WorkflowUserTask_Assignee` association to `WorkflowUserTask_Assignees` to suggest that there can be multiple assignees now. Also, this association will now be a reference set.
+In Studio Pro 10, we added a new feature called [multi-user tasks](/refguide/multi-user-task/). This feature makes it possible for a user task to have multiple assignees. For that to be possible, we renamed the `WorkflowUserTask_Assignee` association to `WorkflowUserTask_Assignees` to suggest that there can be multiple assignees now. This association will now be a reference set.
 
-If you use the [Workflow Commons](/appstore/modules/workflow-commons/) module in your project, you will have to upgrade the module to v3.0.0 or later due to this change. Along with this, you need to execute the migration microflow `ACT_Assignee_Migration` (available from the `WorkflowAdminCenter` page) or add the `ASu_Assignee_Migrate` microflow to the after startup microflow of your project.
+If you use the [Workflow Commons](/appstore/modules/workflow-commons/) module in your project, you will have to upgrade the module to v3.0.0 or later due to this change. In addition, you need to execute the migration microflow `ACT_Assignee_Migration` (available from the `WorkflowAdminCenter` page) or add the `ASu_Assignee_Migrate` microflow to the after startup microflow of your project.
 
 User task pages that were generated in an earlier version of Studio Pro also need to be updated. The conditional visibility based on whether the current user is assigned is no longer supported. You will see a consistency error for any outcome button that is using the visibility expression. For each button, set the visibility to **Always**.
 
@@ -128,7 +128,7 @@ A `div[data-widget-wrapper]` element is placed around a React widget if its cont
 
 These changes may impact your current styling.
 
-If your application is currently using the Atlas theme, this is easily solved by upgrading [Atlas Core](https://marketplace.mendix.com/link/component/117187) to version 3.11 or above. Otherwise, please adjust your css selectors accordingly.
+If your application is currently using the Atlas theme, this is easily solved by upgrading [Atlas Core](https://marketplace.mendix.com/link/component/117187) to version 3.11 or above. Otherwise, adjust your css selectors accordingly.
 
 ### 7.7 Moving Away from Glyphicon
 

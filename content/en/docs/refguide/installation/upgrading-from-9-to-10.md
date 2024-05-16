@@ -14,25 +14,25 @@ Mendix Studio Pro 10 is a [major version](/releasenotes/studio-pro/lts-mts/#majo
 
 ### 1.1 Upgrading from Studio Pro 9 to 10 {#upgrade-prerecs}
 
-The sections below describe upgrading from Studio Pro 9 to Studio Pro 10.
+The sections below describe how to upgrade from Studio Pro 9 to Studio Pro 10.
 
-Mendix recommends reviewing the [Breaking Changes](/releasenotes/studio-pro/10.0/#breaking-changes) section of the *Studio Pro 10.0* release notes as well as the updated [System Requirements](/refguide/system-requirements/).
+It is recommended to review the [Breaking Changes](/releasenotes/studio-pro/10.0/#breaking-changes) section of the *Studio Pro 10.0* release notes as well as the updated [System Requirements](/refguide/system-requirements/).
 
-Before upgrading your app to Mendix 10, ensure that the app is successfully [migrated from your Team Server to Git](/developerportal/general/migrate-to-git/). Starting from Mendix 10, Git is the only supported Team Server. Mendix 10 will neither recognize nor open apps hosted on SVN Team Servers.
+Before upgrading your app to Mendix 10, ensure the app is successfully [migrated from your Team Server to Git](/developerportal/general/migrate-to-git/). Starting from Mendix 10, Git is the only supported Team Server. Mendix 10 will neither recognize nor open apps hosted on SVN Team Servers.
 
 ### 1.2 Upgrading from Older Versions of Studio Pro
 
-If your app is on a Studio Pro version below 9, you must upgrade sequentially. That means you must go from 7 to 8 (see details in [Moving from Desktop Modeler Version 7 to Studio Pro 8](/refguide8/moving-from-7-to-8/)), from 8 to 9 (see details in [Moving from Mendix Studio Pro 8 to 9](/refguide9/moving-from-8-to-9/)), and finally from 9 to 10. 
+If your app is on a Studio Pro version below 9, you must upgrade in order of version. This means you must go from 7 to 8 (see details in [Moving from Desktop Modeler Version 7 to Studio Pro 8](/refguide8/moving-from-7-to-8/)), 8 to 9 (see details in [Moving from Mendix Studio Pro 8 to 9](/refguide9/moving-from-8-to-9/)), then 9 to 10. 
 
 If your app is running on Mendix Cloud, you can check what version the app is currently on by referring to the [Control Center dashboard](/control-center/dashboard/). Alternatively, contact your Customer Success Manager to find out how to check the Mendix version of your app.
 
 ## 2 Backing Up Your App
 
-Make sure that you have either committed your latest changes to Team Server, or created a backup of your local app before you start the conversion.
+Make sure you have either committed your latest changes to Team Server, or created a backup of your local app before you start the conversion.
 
 ## 3 Preparing Your App in Studio Pro 9.24
 
-Mendix recommends preparing your app in Studio Pro [9.24](/releasenotes/studio-pro/9.24/) first to be able to upgrade it to Mendix 10.
+It is recommended to prepare your app in Studio Pro [9.24](/releasenotes/studio-pro/9.24/) first to be able to upgrade it to Mendix 10.
 
 To prepare your app in Studio Pro 9.24, follow these steps:
 
@@ -40,10 +40,10 @@ To prepare your app in Studio Pro 9.24, follow these steps:
 2. Open your app in Studio Pro 9.24.
 3. Allow Studio Pro to update and convert the app.
 4. Run your app, test all functionality, and ensure it works without error. 
-5. Fix any depreciation warnings you see both in development in Studio Pro as well as in the Mendix Runtime using your console and browser console.
+5. Fix any depreciation warnings you see in development in Studio Pro, as well as in the Mendix Runtime using your console and browser console.
 6. Review your app in combination with the sections below and assess if further action is needed before upgrading to Studio Pro 10.
-7. Before upgrading to Mendix 10, ensure your app's Team Server is migrated to Git as [explained above](#upgrade-prerecs).
-8. Back up or commit your 9.24 app so that you can return to it if necessary.
+7. Before upgrading to Mendix 10, ensure your app's Team Server is migrated to Git (as [explained above](#upgrade-prerecs)).
+8. Back up or commit your 9.24 app so you can return to it if necessary.
 
 Your app is now ready to be upgraded to Mendix 10. You can now close the app in Studio Pro 9.
 

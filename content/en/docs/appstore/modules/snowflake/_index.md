@@ -40,7 +40,11 @@ With the REST SQL connector, authentication can be done either on system or on e
 
 The REST SQL connector requires an additional step to transform data rows received from the REST SQL API into Mendix objects. For more information, see [Snowflake REST SQL Connector](/appstore/connectors/snowflake/snowflake-rest-sql/).
 
-### 2.3 Role Base Access Control (RBAC)
+### 2.3 Mendix Data Loader
+
+The [Mendix Data Loader](https://app.snowflake.com/marketplace/listing/GZTDZHHIDJ/mendix-data-loader), available from the [Snowflake Marketplace](https://app.snowflake.com/marketplace), aids in ingesting Mendix data into Snowflake. The application is deployed in your Snowflake environment and interacts with the configured Mendix apps to ingest data that is exposed using an [Published OData Service](refguide/published-odata-services/). 
+
+### 2.4 Role Base Access Control (RBAC)
 
 For information about using Snowflake's role-based access control in a Mendix application, see [Role-based Access Control](/appstore/modules/snowflake/snowflake-rbac/).
 

@@ -94,17 +94,17 @@ To configure this widget, follow these steps:
             {{< figure src="/attachments/appstore/widgets/rich-text/wrap.png" alt="Example" class="no-border" >}}
     
     * **Location**
-        * **Auto** – let the rich text decide which position is the best location for the toolbar.
+        * **Auto** – automatically determine the best position for the toolbar.
 
-        * **Top** – positioned the toolbar at the top of the editor.
+        * **Top** – position the toolbar at the top of the editor.
 
-        * **Bottom** – positioned the toolbar at the bottom of the editor.
+        * **Bottom** – position the toolbar at the bottom of the editor.
 
-        * **Inline** – positioned the toolbar floating at the current cursor location when editor is in focus. The toolbar will be hidden until the editable content is selected.
+        * **Inline** – position the toolbar floating at the current cursor location when editor is in focus. The toolbar will be hidden until the editable content is selected.
 
-        {{% alert color="info" %}}Inline toolbar does not wrap the editor within an iframe, but edits the content in place. Thus, styling that applies to the page, will directly applied to the editor's content.{{% /alert %}}
+        {{% alert color="info" %}}Inline toolbar does not wrap the editor within an iframe, but edits the content in place. Thus, styling that applies to the page will be directly applied to the editor's content.{{% /alert %}}
 
-    * **Enable quick toolbar** - If selected, quick toolbar will appear in when content is on focus.
+    * **Enable quick toolbar** - If selected, quick toolbar will appear when content is on focus.
 
      {{< figure src="/attachments/appstore/widgets/rich-text/rich_text_quickbars.png" alt="Example" class="no-border" >}}
 
@@ -206,9 +206,9 @@ The full configuration of the menubar groups are as follows:
 
 * **Enable spell checking** – configures to use the browser’s native spell checker. 
 * **Highlight on focus** - adds a blue outline to the editor when that editor is made the input focus
-* **Additional stylesheet** - allow user to add additional stylesheet that will be included inside editor's iframe.
-    * User can include additional stylesheet file in theme's folder, and add the filename inside the **Additional stylesheet** input. 
-    * It is also possible to use built-in stylesheet called "_Default_" and "_Dark_", or alternate between them using the expression editor.
+* **Additional stylesheet** - allow user to add an additional stylesheet that will be included inside the editor's iframe to apply custom styling.
+    * User can include an additional stylesheet file in the theme folder and add the filename inside the **Additional stylesheet** input.  
+    * It is also possible to use built-in stylesheets called "_Default_" and "_Dark_", or alternate between them using the expression editor.
         
     {{< figure src="/attachments/appstore/widgets/rich-text/rte_style_expression.png" alt="Example" class="no-border" >}}
 

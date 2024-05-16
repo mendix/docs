@@ -2,7 +2,7 @@
 title: "App Switcher"
 deprecated: true
 url: /appstore/modules/app-switcher/
-category: "Modules"
+
 description: "Describes the configuration and troubleshooting of the App Switcher module, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "app switcher", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 

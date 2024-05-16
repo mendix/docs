@@ -1,7 +1,7 @@
 ---
 title: "ATS How-tos"
 url: /appstore/partner-solutions/ats/ht/
-category: "ATS"
+
 weight: 3
 description: "Presents a list of ATS how-tos for each ATS version."
 ---

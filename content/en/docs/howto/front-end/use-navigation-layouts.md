@@ -1,7 +1,7 @@
 ---
 title: "Use Navigation Layouts"
 url: /howto/front-end/use-navigation-layouts/
-category: "Front End"
+
 weight: 12
 description: "Describes how to choose, design, and configure your navigation layouts."
 tags: ["Atlas UI", "User Experience", "Navigation", "Responsive Design", "Sidebar"]

@@ -1,7 +1,7 @@
 ---
 title: "Studio Pro Overview"
 url: /refguide8/studio-pro-overview/
-category: "App Modeling"
+
 description: "Describes Studio Pro in general: tabs, menus, shortcut keys."
 weight: 10
 tags: ["Studio Pro"]

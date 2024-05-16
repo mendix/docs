@@ -1,7 +1,7 @@
 ---
 title: "Publish a REST Service"
 url: /howto/integration/publish-rest-service/
-category: "Integration"
+
 weight: 10
 description: "Describes how to create a published REST service and return the results in JSON or XML."
 tags: ["rest", "rest service", "web service", "integration"]

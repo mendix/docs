@@ -1,7 +1,7 @@
 ---
 title: "Application Health Dashboard"
 url: /control-center/application-health-dashboard/
-category: "Control Center"
+
 description: "Describes the Application Health Dashboard page in the Mendix Control Center."
 tags: ["control center", "mendix admin", "application health dashboard"]
 weight: 10

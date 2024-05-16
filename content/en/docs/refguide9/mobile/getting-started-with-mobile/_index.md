@@ -1,7 +1,6 @@
 ---
 title: "Getting Started with Mobile"
 url: /refguide9/mobile/getting-started-with-mobile/
-category: Mobile
 weight: 10
 description: Create a native mobile Mendix app and view it on a mobile device using the Make It Native test app.
 aliases:

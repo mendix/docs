@@ -1,7 +1,7 @@
 ---
 title: "Teamcenter Extension"
 url: /appstore/modules/teamcenter-extension/
-category: "Modules"
+
 description: "Describes the Teamcenter Extension from the Mendix Marketplace. The extension facilitates a low-code approach to integrating with Teamcenter"
 tags: ["Teamcenter", "Integration", "PLM", "SOA connector", "low-code"]
 ---

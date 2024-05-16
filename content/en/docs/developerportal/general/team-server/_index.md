@@ -1,7 +1,7 @@
 ---
 title: "Team Server"
 url: /developerportal/general/team-server/
-category: "Collaboration"
+
 weight: 12
 description: "Describes the overview of Team Server revisions and commits."
 tags: ["Studio Pro", "Team Server", "Developer Portal", "commit", "branch"]

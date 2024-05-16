@@ -30,17 +30,13 @@ Also without invoking LLMs directly with the retrieved information, the similari
 
 With the current version, Mendix supports inserting data chunks with their vectors into a knowledge base (population), and selecting those records from that moment onwards (retrieval). Apart from cosine similarity search, which is executed based on the vector only, custom filtering is possible using key-value labelling to support an additional traditional search component.
 
-### 1.3 Limitations {#limitations}
-
-The current scope of the module is focused around (re)populating knowledge bases as a whole in one single operation. Deleting, adding, or updating individual knowledge base items is not yet supported. 
-
-### 1.4 Prerequisites {#prerequisites}
+### 1.3 Prerequisites {#prerequisites}
 
 You should have access to your own (remote) postgreSQL database server with the [pgvector](https://github.com/pgvector/pgvector) extension installed. For more information, see [Setting up a Vector Database](/appstore/modules/pgvector-knowledge-base/vector-database-setup/).
 
 {{% alert color="info" %}}Note: this module cannot be used with the Mendix Cloud app database, but only works with your own database server or Amazon RDS.{{% /alert %}}
 
-### 1.5 Dependencies {#dependencies}
+### 1.4 Dependencies {#dependencies}
 
 * Mendix Studio Pro version [9.24.0](/releasenotes/studio-pro/9.24/#9240) or higher 
 * [Encryption](https://marketplace.mendix.com/link/component/1011) module
@@ -63,7 +59,7 @@ After you install the PgVector Knowledge Base module, you can find it in the **A
 
 ### 3.2 General Operations {#general-operations-configuration} 
 
-After following the general setup above, you are all set to use the microflows and java actions in the **USE_ME > Operations** folder in your logic. Currently five operations (microflows and java actions) are exposed as microflow actions under the **PgVector Knowledge Base** category in the **Toolbox** in Mendix Studio Pro. These can be split into two categories, corresponding to the main functionalities: inserting data chunks into the knowledge base, for instance [(re)populate](#repopulate-knowledge-base), and finding relevant data chunks in an existing knowledge base, for example [retrieve](#retrieve). In both steps, [Labels](#label) can be provided to enable additional filtering.
+After following the general setup above, you are all set to use the microflows and java actions in the **USE_ME > Operations** folder in your logic. Currently, ten operations (microflows and java actions) are exposed as microflow actions under the **PgVector Knowledge Base Operations** category in the **Toolbox** in Mendix Studio Pro. These can be split into two categories, corresponding to the main functionalities: managing data chunks in the knowledge base, for instance [(re)populate](#repopulate-knowledge-base), and finding relevant data chunks in an existing knowledge base, for example [retrieve](#retrieve). In both steps, [Labels](#label) can be provided to enable additional filtering.
 
 #### 3.2.1 `Create label` {#create-label}
 
@@ -96,15 +92,23 @@ This operation handles the following:
 
 The population handles a whole list of chunks at once which should be created by using the `Create Chunk` operation. It is possible to have multiple knowledge bases in the same database in parallel by providing different knowledge base names in combination with the same [DatabaseConfiguration](#databaseconfiguration-entity).
 
+#### 3.3.2 `Insert` {#insert}
+
+In cases where additional records need to be added to existing knowledge bases, the `Insert` operation can be used. This operation handles a list of chunks that need to be inserted into the knowledge base. It behaves similarly to the [(Re)populate](#repopulate-knowledge-base) operation, except that it does not delete any data. 
+
+#### 3.3.3 `Replace` {#replace}
+
+The `Replace` operation is intended to be used in scenarios in which the chunks in the knowledge base are related to Mendix objects (i.e., data in the Mendix database). It can be used to keep the knowledge base in sync when the Mendix data changes which needs to be reflected in the knowledge base. The operation handles a list of chunks: it will remove the knowledge base data for the Mendix objects the chunks refer to, after which the new data is inserted.
+
 ### 3.4 Retrieve Operations {#retrieve-operations}
 
-Currently, four operations are available for on-demand retrieval of data chunks from a knowlege base. All operations work on a single knowledge base (specified by the name) on a single database server (specified by the [DatabaseConfiguration](#databaseconfiguration-entity)). Apart from a regular [Retrieve](#retrieve), an additional operation was exposed to [Retrieve Nearest Neighbors](#retrieve-nearest-neighbors), where the cosine distance between the input vector and the vectors of the records in the knowledge base is calculated. In both cases it is possible to filter on [Labels](#create-label). 
+Currently, four operations are available for on-demand retrieval of data chunks from a knowledge base. All operations work on a single knowledge base (specified by the name) on a single database server (specified by the [DatabaseConfiguration](#databaseconfiguration-entity)). Apart from a regular [Retrieve](#retrieve), an additional operation was exposed to [Retrieve Nearest Neighbors](#retrieve-nearest-neighbors), where the cosine distance between the input vector and the vectors of the records in the knowledge base is calculated. In both cases it is possible to filter on [Labels](#create-label). 
 
 A typical pattern for retrieval from a knowledge base is as follows:
 
 1. Create a list of label.
 2. Use [Create Label](#create-label) as many times as needed to add the necessary labels.
-3. Do the retrieve, e.g. use [`Retrieve Nearest Neighbors`](#retrieve-nearest-neighbors) to find chunks based on vector similarity.
+3. Do the retrieve, e.g., use [`Retrieve Nearest Neighbors`](#retrieve-nearest-neighbors) to find chunks based on vector similarity.
 
 For scenarios in which the chunks were created based on Mendix objects at the time of population, and these objects need to be used in logic after the retrieval step, two additional operations are available. The Java Actions [Retrieve & Associate](#retrieve-associate) and [Retrieve Nearest Neighbors & Associate](#retrieve-nearest-neighbors-associate) take care of the chunk retrieval and set the association towards the original object, if applicable.
 
@@ -112,7 +116,7 @@ A typical pattern for this retrieval is as follows:
 
 1. Create a list of label.
 2. Use [Create Label](#create-label) as many times as needed to add the necessary labels.
-3. Do the retrieve, e.g. use [`Retrieve Nearest Neighbors & Associate`](#retrieve-nearest-neighbors-associate) to find chunks based on vector similarity.
+3. Do the retrieve, e.g., use [`Retrieve Nearest Neighbors & Associate`](#retrieve-nearest-neighbors-associate) to find chunks based on vector similarity.
 4. Per retrieved chunk, retrieve the original Mendix object and do custom logic.
 
 #### 3.4.1 `Retrieve` {#retrieve}
@@ -133,11 +137,19 @@ Use this operation to retrieve chunks from the knowledge base and set associatio
 
 ### 3.5 Delete Operations {#delete-operations-configuration}
 
-When a knowledge base is no longer needed, it can be deleted using a delete operation. If the knowledge base is needed, but the data needs to be replaced, refer to the [(Re)populate Operations](#repopulate-operations-configuration) instead.
+When a whole knowledge base, or part of its data, is no longer needed, this can be handled by using a delete operation. If, however, the knowledge base is still needed, but the data needs to be replaced, refer to the [(Re)populate Operations](#repopulate-operations-configuration) or [Replace](#replace) operations instead.
 
-#### 3.5.1 `Delete Knowledge Base` {#retrieve-nearest-neighbors}
+#### 3.5.1 `Delete Knowledge Base` {#delete-knowledge-base}
 
 Use this operation to delete a complete knowledge base at once. After execution the knowledge base including its data will not exist anymore in the vector database.
+
+#### 3.5.2 `Delete` {#delete}
+
+In scenarios where the chunks in the knowledge base are related to Mendix objects (i.e., data in the Mendix database), deletion of Mendix data typically needs to result in the removal of its related chunks from the knowledge base. For this, the `Delete` operation can be used, which accepts any kind of Mendix object. This removes all the chunks related to the provided Mendix object at the time of insertion.
+
+#### 3.5.3 `Delete List` {#delete-list}
+
+This operation is meant to be used in a similar scenario to the one described for the `Delete` operation, but handles a list of Mendix objects in a single operation. Executing this operation removes all the chunks related to the provided Mendix objects at the time of insertion.
 
 ## 4 Technical Reference {#technical-reference}
 
@@ -261,23 +273,70 @@ The `Create Chunk` activity is intended for instantiating [chunks](#chunk) to cr
 
 ##### 4.3.2.2 (Re)populate Knowledge Base {#repopulate-knowledge-base-technical}
 
-The `(Re)populate Knowledge Base` activity is used to populate a whole knowledge base at once. This operation handles a list of chunks with their labels in a single operation. By providing the `KnowledgeBaseName` parameter, you determine the knowledge base. It is used to later on to retrieve elements from the correct tables. This operation takes care of the creation of the actual tables. If there is already data from an earlier iteration for the provided `KnowledgeBaseName`, the data will be removed first. Use [Create Label](#create-label-technical) and [Create Chunk](#create-chunk-technical) to construct the input for this activity, which needs to be passed as `ChunkList`. The `DatabaseConfiguration` that is passed must contain the connection details to a PostgreSQL database server with the PgVector extension installed. This entity is typically configured at runtime or in [after-startup](/refguide/app-settings/#after-startup) logic.
+The `(Re)populate Knowledge Base` activity is used to populate a whole knowledge base at once. This operation handles a list of chunks with their labels in a single operation. By providing the `KnowledgeBaseName` parameter, you determine the knowledge base. It is used later on to retrieve elements from the correct tables. This operation takes care of the creation of the actual tables. If there is already data from an earlier iteration for the provided `KnowledgeBaseName`, the data will be removed first. Use [Create Label](#create-label-technical) and [Create Chunk](#create-chunk-technical) to construct the input for this activity, which needs to be passed as `ChunkList`. The `DatabaseConfiguration` that is passed must contain the connection details to a PostgreSQL database server with the PgVector extension installed. This entity is typically configured at runtime or in [after-startup](/refguide/app-settings/#after-startup) logic.
 
 **Input parameters**
 
 | Name                | Type                                    | Mandatory | Description                                           |
 | ------------------- | --------------------------------------- | --------- | ----------------------------------------------------- |
 | `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the name of the knowledge base in your database.|
-| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is to connect and authenticate to the database where the knowledge base is located.  |
+| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is used for connecting to and authenticating with the database where the knowledge base is located. |
 | `ChunkList`          | List of [chunks](#chunk)                                                    | mandatory | This list is for inserting the [chunks'](#chunk) data into the knowledge base. |
 
 **Return value**
 
 | Name                 | Type                                      | Description                                                  |
 | -------------------- | ----------------------------------------- | ------------------------------------------------------------ |
-| `IsSuccess` | Boolean | This boolean indicates if the population of the knowledge base was successful. This can be used for custom error-handling. |
+| `IsSuccess` | Boolean | This Boolean indicates if the population of the knowledge base was successful. This can be used for custom error-handling. |
 
-#### 4.3.3 Retrieve Operations (#retrieve-operations-technical)
+##### 4.3.2.3 Insert {insert-technical}
+
+The `Insert` operation is used to add chunks to a knowledge base. This operation handles a list of chunks with their labels in a single operation.
+
+By providing the `KnowledgeBaseName` parameter, you determine the knowledge base. It is used later on to retrieve elements from the right tables. 
+
+This operation takes care of the creation of the actual tables if needed. If for the provided `KnowledgeBaseName` there is already data present from an earlier iteration with the same chunk ID, this operation will return false with an error logged.
+
+Use [Create Label](#create-label-technical) and [Create Chunk](#create-chunk-technical) to construct the input for this microflow, which needs to be passed as `ChunkList`. The `DatabaseConfiguration` that is passed must contain the connection details to a PostgreSQL database server with the PgVector extension installed. This entity is typically configured at runtime or in [after-startup](/refguide/app-settings/#after-startup) logic.
+
+**Input parameters**
+
+| Name                | Type                                    | Mandatory | Description                                           |
+| ------------------- | --------------------------------------- | --------- | ----------------------------------------------------- |
+| `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the name of the knowledge base in your database.|
+| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is used for connecting to and authenticating with the database where the knowledge base is located. |
+| `ChunkList`          | List of [chunks](#chunk)                                                    | mandatory | This list is for inserting the [chunks'](#chunk) data into the knowledge base. |
+
+**Return value**
+
+| Name                 | Type                                      | Description                                                  |
+| -------------------- | ----------------------------------------- | ------------------------------------------------------------ |
+| `IsSuccess` | Boolean | This Boolean indicates if the addition of data to the knowledge base was successful. This can be used for custom error-handling. |
+
+
+##### 4.3.2.4 Replace {#replace-technical}
+
+The `Replace` operation is used to replace existing chunks in a knowledge base based on the Mendix objects the chunks represent. This operation handles a list of chunks with their labels in a single operation.
+
+Use [Create Label](#create-label-technical) and [Create Chunk](#create-chunk-technical) to construct the input for this microflow, which needs to be passed as `ChunkList`. In order to replace the right data in the knowledge base, all chunks in `ChunkList` need to represent a Mendix object: this is set during chunk creation in [Create Chunk](#create-chunk-technical) by specifying the `MxObject` input parameter. Existing chunks related to those Mendix objects will be deleted from the knowledge base first, and then be inserted according to the new state as specified by the ChunkList (labels included). By providing the `KnowledgeBaseName` parameter, you determine the knowledge base. It is used later on to retrieve elements from the right tables.
+
+The `DatabaseConfiguration` that is passed must contain the connection details to a PostgreSQL database server with the PgVector extension installed. This entity is typically configured at runtime or in [after-startup](/refguide/app-settings/#after-startup) logic.
+
+**Input parameters**
+
+| Name                | Type                                    | Mandatory | Description                                           |
+| ------------------- | --------------------------------------- | --------- | ----------------------------------------------------- |
+| `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the name of the knowledge base in your database.|
+| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is used for connecting to and authenticating with the database where the knowledge base is located. |
+| `ChunkList`          | List of [chunks](#chunk)                                                    | mandatory | This list is for inserting the [chunks'](#chunk) data into the knowledge base. Based on the Mendix object they represent deletion of chunks will happen first. |
+
+**Return value**
+
+| Name                 | Type                                      | Description                                                  |
+| -------------------- | ----------------------------------------- | ------------------------------------------------------------ |
+| `IsSuccess` | Boolean | This Boolean indicates if the replacement of data in the knowledge base was successful. This can be used for custom error-handling. |
+
+#### 4.3.3 Retrieve Operations {#retrieve-operations-technical}
 
 Activities that support the retrieval of the knowledge from the knowledge base.
 
@@ -291,7 +350,7 @@ The `DatabaseConfiguration` that is passed must contain the connection details t
 
 | Name                | Type                                    | Mandatory | Description                                           |
 | ------------------- | --------------------------------------- | --------- | ----------------------------------------------------- |
-| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is to connect and authenticate to the database where the knowledge base is located.    |
+| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is used for connecting to and authenticating with the database where the knowledge base is located. |
 | `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the name of the knowledge base in your database that contains the data to retrieve. |
 | `LabelList`          | List of [Labels](#label)                                                    | optional | This list is for additional filtering in the retrieve. Only chunks that comply with the labels will be returned. |
 | `MaxNumberOfResults`          | Integer/Long                                                      | optional                    | This is to optionally limit the number of results that should be returned. |
@@ -313,7 +372,7 @@ The `DatabaseConfiguration` that is passed must contain the connection details t
 
 | Name                | Type                                    | Mandatory | Description                                           |
 | ------------------- | --------------------------------------- | --------- | ----------------------------------------------------- |
-| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is to connect and authenticate to the database where the knowledge base is located.    |
+| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is used for connecting to and authenticating with the database where the knowledge base is located. |
 | `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the name of the knowledge base in your database that contains the data to retrieve. |
 | `TargetChunk` | Entity parameter | mandatory | This must be a specialization of the [Chunk](#chunk) entity. If it contains associations to (specializations of) the related Mendix object for which the chunk was created, this will be set by this operation. This will also describe the type of the returned list. |
 | `LabelList`          | List of [Labels](#label)                                                    | optional | This list is for additional filtering in the retrieve. Only chunks that comply with the labels will be returned. |
@@ -336,7 +395,7 @@ The `DatabaseConfiguration` that is passed must contain the connection details t
 
 | Name                | Type                                    | Mandatory | Description                                           |
 | ------------------- | --------------------------------------- | --------- | ----------------------------------------------------- |
-| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is to connect and authenticate to the database where the knowledge base is located.    |
+| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is used for connecting to and authenticating with the database where the knowledge base is located. |
 | `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the name of the knowledge base in your database which contains the data to retrieve.|
 | `Vector`          | String                                                       | mandatory                     | This is the vector representation of the data for which the nearest neigbhors should be calculated. The dimension needs to be the same as the vectors stored in the knowledge base.|
 | `LabelList`          | List of [Labels](#label)                                                    | optional | This list is for additional filtering in the retrieve. Only chunks that comply with the labels will be returned. |
@@ -359,7 +418,7 @@ The `DatabaseConfiguration` that is passed must contain the connection details t
 
 | Name                | Type                                    | Mandatory | Description                                           |
 | ------------------- | --------------------------------------- | --------- | ----------------------------------------------------- |
-| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is to connect and authenticate to the database where the knowledge base is located.    |
+| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is used for connecting to and authenticating with the database where the knowledge base is located. |
 | `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the name of the knowledge base in your database which contains the data to retrieve.|
 | `TargetChunk` | Entity parameter | mandatory | This must be a specialization of the [Chunk](#chunk) entity. If it contains associations to (specializations of) the related Mendix object for which the chunk was created, this will be set by this operation. This will also describe the type of the returned list. |
 | `Vector`          | String                                                       | mandatory                     | This is the vector representation of the data for which the nearest neigbhors should be calculated. The dimension needs to be the same as the vectors stored in the knowledge base.|
@@ -373,11 +432,11 @@ The `DatabaseConfiguration` that is passed must contain the connection details t
 | -------------------- | ----------------------------------------- | ------------------------------------------------------------ |
 | `TargetChunkList` | List of type parameter `TargetChunk` | This list is the result of the retrieval. |
 
-#### 4.3.4 Delete Operations (#delete-operations-technical)
+#### 4.3.4 Delete Operations {#delete-operations-technical}
 
 Activities that support the deletion of knowledge bases.
 
-#### 4.3.4.1 Delete Knowledge Base {#delete-technical}
+##### 4.3.4.1 Delete Knowledge Base {#delete-knowledge-base-technical}
 
 Use this operation to delete a complete knowledge base at once. This operation takes care of the deletion of the actual tables including all data for the specified knowledge base. The operation will finish successfully, even if there is no table structure present for the provided `KnowledgeBaseName`.
 
@@ -386,13 +445,53 @@ Use this operation to delete a complete knowledge base at once. This operation t
 | Name                | Type                                    | Mandatory | Description                                           |
 | ------------------- | --------------------------------------- | --------- | ----------------------------------------------------- |
 | `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the name of the knowledge base that will be deleted.|
-| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is to connect and authenticate to the database where the knowledge base is located.  |
+| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is used for connecting to and authenticating with the database where the knowledge base is located. |
 
 **Return value**
 
 | Name                 | Type                                      | Description                                                  |
 | -------------------- | ----------------------------------------- | ------------------------------------------------------------ |
-| `IsSuccess` | Boolean | This boolean indicates if the deletion of the knowledge base was successful. This can be used for custom error-handling.|
+| `IsSuccess` | Boolean | This Boolean indicates if the deletion of the knowledge base was successful. This can be used for custom error-handling.|
+
+##### 4.3.4.2 Delete {#delete-technical}
+
+Use this operation to delete existing chunks and corresponding labels in a knowledge base based on the Mendix object provided: `MxObject` is the original Mendix object that the chunks in the knowledge base represent. Only chunks related to this Mendix object are deleted.
+
+By providing the `KnowledgeBaseName` parameter, you determine the knowledge base. The `DatabaseConfiguration` that is passed must contain the connection details to a PostgreSQL database server with the PgVector extension installed. This entity is typically configured at runtime or in [after-startup](/refguide/app-settings/#after-startup) logic.
+
+**Input parameters**
+
+| Name                | Type                                    | Mandatory | Description                                           |
+| ------------------- | --------------------------------------- | --------- | ----------------------------------------------------- |
+| `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the name of the knowledge base in your database.|
+| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is used for connecting to and authenticating with the database where the knowledge base is located. |
+| `MxObject`          | Object                                                    | mandatory | This is the original Mendix object that the chunks in the knowledge base represent. Only chunks related to this Mendix object are deleted. |
+
+**Return value**
+
+| Name                 | Type                                      | Description                                                  |
+| -------------------- | ----------------------------------------- | ------------------------------------------------------------ |
+| `IsSuccess` | Boolean | This Boolean indicates if the deletion of data in the knowledge base was successful. This can be used for custom error-handling. |
+
+##### 4.3.4.3 Delete List {#delete-list-technical}
+
+Use this operation to delete existing chunks and corresponding labels in a knowledge base based on the Mendix objects provided: `MxObjectList` is the list of original Mendix objects that the chunks in the knowledge base represent. Only chunks related to these Mendix objects are deleted.
+
+By providing the `KnowledgeBaseName` parameter, you determine the knowledge base. The `DatabaseConfiguration` that is passed must contain the connection details to a PostgreSQL database server with the PgVector extension installed. This entity is typically configured at runtime or in [after-startup](/refguide/app-settings/#after-startup) logic.
+
+**Input parameters**
+
+| Name                | Type                                    | Mandatory | Description                                           |
+| ------------------- | --------------------------------------- | --------- | ----------------------------------------------------- |
+| `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the name of the knowledge base in your database.|
+| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is used for connecting to and authenticating with the database where the knowledge base is located. |
+| `MxObjectList`          | Object                                                    | mandatory | This is the original Mendix object that the chunks in the knowledge base represent. Only chunks related to this Mendix object are deleted. |
+
+**Return value**
+
+| Name                 | Type                                      | Description                                                  |
+| -------------------- | ----------------------------------------- | ------------------------------------------------------------ |
+| `IsSuccess` | Boolean | This Boolean indicates if the deletion of data in the knowledge base was successful. This can be used for custom error-handling. |
 
 ## 5 Showcase Application {#showcase-application}
 

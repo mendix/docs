@@ -1,7 +1,7 @@
 ---
 title: "Logs"
 url: /developerportal/operate/logs/
-category: "Operations"
+
 weight: 30
 description: "Describes how to see the logs from your app."
 tags: ["Operate", "App", "Developer Portal", "Mendix Cloud"]

@@ -29,7 +29,7 @@ Mendix Studio Pro can be installed on your Windows machine with a Windows execut
 Follow these steps to download Mendix Studio Pro:
 
 1. Go to the Studio Pro download page in the [Mendix Marketplace](https://marketplace.mendix.com/link/studiopro/).
-2. Click the **Download** button to download Mendix Studio Pro. Make sure to download the correct version for your operating system. 
+2. Click **Download for Windows** or **Download for Mac**, depending on your operating system. 
 
 ## 3 Installing Mendix Studio Pro {#install}
 
@@ -145,6 +145,4 @@ Accepting untrusted certificates can bring security risks. You should only do so
 
 Congratulations on installing Mendix Studio Pro! Now you are ready to start modeling your apps. 
 
-You can start with the [Studio Pro Overview](/refguide/studio-pro-overview/) for details on Studio Pro's UI and shortcuts, or you can move straight to [App Modeling](/refguide/modeling/).
-
-Happy modeling!
+You can start with the [Studio Pro Overview](/refguide/studio-pro-overview/) for details on Studio Pro's UI and shortcuts, or you can move straight to [App Modeling](/refguide/modeling/). 

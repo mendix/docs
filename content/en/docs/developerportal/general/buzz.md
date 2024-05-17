@@ -1,7 +1,7 @@
 ---
 title: "Buzz"
 url: /developerportal/general/buzz/
-category: "General"
+
 weight: 1
 description: "Describes the Mendix Buzz, which is the landing page for working on a Mendix app."
 tags: ["Buzz","Developer Portal"]

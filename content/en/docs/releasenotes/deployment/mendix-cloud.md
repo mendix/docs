@@ -1,7 +1,7 @@
 ---
 title: "Mendix Cloud"
 url: /releasenotes/developer-portal/mendix-cloud/
-category: "Deployment"
+
 weight: 10
 description: "Release notes for deployment to Mendix Cloud"
 tags: ["release notes", "deployment", "cloud environment", "Mendix Cloud", "free app"]

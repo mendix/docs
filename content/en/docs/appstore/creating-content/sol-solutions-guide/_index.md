@@ -2,7 +2,7 @@
 title: "Create Solutions"
 url: /appstore/creating-content/sol-solutions-guide/
 linktitle: "Create Solutions"
-category: "Creating Content"
+
 weight: 3
 description: "Provides information and guidance on how to develop solutions you can sell both on and off the Mendix Marketplace."
 tags: ["solutions guide", "adaptable solutions", "solutions"]

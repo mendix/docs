@@ -1,7 +1,7 @@
 ---
 title: "Style Google Maps"
 url: /howto7/front-end/style-google-maps/
-category: "Front End"
+
 weight: 60
 tags: []
 ---

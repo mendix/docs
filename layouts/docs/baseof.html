@@ -51,5 +51,24 @@
       {{ partial "footer.html" . }}
     </div>
     {{ partial "scripts.html" . }}
+    <!-- Add bablic-exclude to code blocks -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+          const codeElements = document.querySelectorAll('code');
+          codeElements.forEach(codeElement => {
+              const wrapperDiv = document.createElement('div');
+              wrapperDiv.setAttribute('bablic-exclude', '');
+
+              // Clone the code element to maintain the inner content
+              const clonedCodeElement = codeElement.cloneNode(true);
+
+              // Append the cloned code element to the wrapper div
+              wrapperDiv.appendChild(clonedCodeElement);
+
+              // Replace the original code element with the wrapper div
+              codeElement.parentNode.replaceChild(wrapperDiv, codeElement);
+          });
+      });
+  </script>
   </body>
 </html>

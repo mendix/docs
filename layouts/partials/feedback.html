@@ -30,9 +30,21 @@
     font-size: 1rem;
   }
 
+@media screen and (max-width: 576px) {
+  .feedback--box {
+    width: 100%;
+    text-align: center;
+  }
+  .new-users {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 </style>
+
 <div class="d-print-none row feedback--box">
-  <div class="col-4">
+  <div class="col-12 col-sm-4">
     <h2 class="feedback--title">Feedback</h2>
     <p class="feedback--question">Was this page helpful?</p>
     <button class="btn btn-primary mb-4 feedback--answer feedback--answer-yes">Yes</button>
@@ -44,7 +56,7 @@
       Sorry to hear that. Please <a class="feedback--link" target="_blank" href="">tell us how we can improve</a>.
     </p>
   </div>
-  <div class="col-8" style="text-align: right;">
+  <div class="col-12 col-sm-8" style="text-align: right;">
     <span class="new-users">
       <div>Start building with Mendix</div>
       <a class="btn btn-primary" style="margin-left: 1rem" href="https://signup.mendix.com/index.html">Get started for free</a>

@@ -55,7 +55,7 @@ The rule defines which condition an attribute should satisfy.
 
 | Option | Description |
 | --- | --- |
-| Required *(default)*  | The attribute needs to have a value. It cannot be empty. Note that a string of whitespaces is also considered empty. |
+| Required *(default)*  | The attribute needs to have a value. It cannot be empty. Note that a string of whitespaces is considered empty. |
 | Unique | The value of this attribute must be different from the values of this attribute in all other objects of the same entity. See [Uniqueness Constraint](#uniqueness), below for more information. |
 | Equals | The attribute value needs to be equal to a specified value or equal to the value of another attribute of the same object. |
 | Range | The attribute value needs to be greater than or equal to, less than or equal to, or between two values. The values are either specified fixed values or values of other attributes of the same object. |

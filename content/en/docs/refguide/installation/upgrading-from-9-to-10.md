@@ -16,7 +16,7 @@ Mendix Studio Pro 10 is a [major version](/releasenotes/studio-pro/lts-mts/#majo
 
 The sections below describe how to upgrade from Studio Pro 9 to Studio Pro 10.
 
-It is recommended to review the [Breaking Changes](/releasenotes/studio-pro/10.0/#breaking-changes) section of the *Studio Pro 10.0* release notes as well as the updated [System Requirements](/refguide/system-requirements/).
+Mendix recommends reviewing the [Breaking Changes](/releasenotes/studio-pro/10.0/#breaking-changes) section of the *Studio Pro 10.0* release notes as well as the updated [System Requirements](/refguide/system-requirements/).
 
 Before upgrading your app to Mendix 10, ensure the app is successfully [migrated from your Team Server to Git](/developerportal/general/migrate-to-git/). Starting from Mendix 10, Git is the only supported Team Server. Mendix 10 will neither recognize nor open apps hosted on SVN Team Servers.
 

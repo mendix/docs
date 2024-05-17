@@ -19,19 +19,37 @@
   .feedback--response__visible {
     display: block;
   }
-</style>
+  .new-users {
+    background-color: #0a1324;
+    border-radius: 4px;
+    color: white;
+    padding: 1rem;
+    align-self: right;
+    align-items: center;
+    display: inline-flex;
+    font-size: 1rem;
+  }
 
-<div class="d-print-none feedback--box"><!-- NK - added class name for styling defined at top of file -->
-  <h2 class="feedback--title">Feedback</h2>
-  <p class="feedback--question">Was this page helpful?</p>
-  <button class="btn btn-primary mb-4 feedback--answer feedback--answer-yes">Yes</button>
-  <button class="btn btn-primary mb-4 feedback--answer feedback--answer-no">No</button>
-  <p class="feedback--response feedback--response-yes">
-    {{ .yes | safeHTML }}
-  </p>
-  <p class="feedback--response feedback--response-no">
-    Sorry to hear that. Please <a class="feedback--link" target="_blank" href="">tell us how we can improve</a>.
-  </p>
+</style>
+<div class="d-print-none row feedback--box">
+  <div class="col-4">
+    <h2 class="feedback--title">Feedback</h2>
+    <p class="feedback--question">Was this page helpful?</p>
+    <button class="btn btn-primary mb-4 feedback--answer feedback--answer-yes">Yes</button>
+    <button class="btn btn-primary mb-4 feedback--answer feedback--answer-no">No</button>
+    <p class="feedback--response feedback--response-yes">
+      {{ .yes | safeHTML }}
+    </p>
+    <p class="feedback--response feedback--response-no">
+      Sorry to hear that. Please <a class="feedback--link" target="_blank" href="">tell us how we can improve</a>.
+    </p>
+  </div>
+  <div class="col-8" style="text-align: right;">
+    <span class="new-users">
+      <div>Start building with Mendix</div>
+      <a class="btn btn-primary" style="margin-left: 1rem" href="https://signup.mendix.com/index.html">Get started for free</a>
+    </span>
+  </div>
 </div>
 
 <!-- NK - document.querySelector lines grab feedback issue link generated from page-meta-links.html -->

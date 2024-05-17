@@ -24,17 +24,17 @@
     border-radius: 4px;
     color: white;
     padding: 1rem;
-    align-self: right;
     align-items: center;
     display: inline-flex;
     font-size: 1rem;
   }
 
-@media screen and (max-width: 576px) {
-  .feedback--box {
-    width: 100%;
-    text-align: center;
+  .new-users a {
+    margin-left: 1rem;
   }
+
+@media (max-width: 576px) {
+  .feedback--box,
   .new-users {
     width: 100%;
     text-align: center;
@@ -57,10 +57,10 @@
     </p>
   </div>
   <div class="col-12 col-sm-8" style="text-align: right;">
-    <span class="new-users">
+    <div class="new-users">
       <div>Start building with Mendix</div>
-      <a class="btn btn-primary" style="margin-left: 1rem" href="https://signup.mendix.com/index.html">Get started for free</a>
-    </span>
+      <a class="btn btn-primary" href="https://signup.mendix.com/index.html">Get started for free</a>
+    </div>
   </div>
 </div>
 

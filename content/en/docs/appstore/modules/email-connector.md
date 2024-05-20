@@ -186,15 +186,15 @@ Refer to the sample microflow **Sample_ACT_SendEmailWithTemplate**. To use **To*
 
 #### 4.3.4 Exporting Email Template
 
-Email Connector now supports export and import of Email Templates. This feature can greatly reduce the manual work required to recreate Templates in various development and/or acceptance and/or production environments.
+Email connector now supports the export and import of email templates. This feature reduces the manual work required to recreate templates in various development, acceptance, and/or production environments.
 
-Select the Email Template that you want to export and click on the "**Export**" button. The exported XML file is named using the Email Temoplate name and datetime stamp and it is directly downloaded to your default download folder. The following picture shows the downloaded XML file after Email template's export.
+Select the email template that you want to export and click **Export**. The exported XML file is named with the email template name and a datetime stamp and is downloaded directly to your default download folder. The image below shows the downloaded XML file after the Email template export.
 
 {{< figure src="/attachments/appstore/modules/email-connector/export-email-template.png" alt="Export Email Template" class="no-border" >}}
 
 #### 4.3.5 Importing Email Template
 
-The exported Email Template can be imported into a different or same deployment environment. Click on the "**Import**" button to initiate the import of Email Template. A pop-up dialong will provide an option to browse the template file that needs to be imported (*.xml). Click on the "**Import Template**" button to finish importing the Email Template. You will be notified by a status message after successful import of Email template.
+You can import the exported email template into the same or a different deployment environment. Click **Import** to start importing the email template. A pop-up window will appear, allowing you to browse for the template file (.xml) to import. Click **Import Template** to complete the email template import process. After successfully importing the email template, you will receive a status message notification.
 
 {{< figure src="/attachments/appstore/modules/email-connector/import-email-template.png" alt="Import Email Template" class="no-border" >}}
 

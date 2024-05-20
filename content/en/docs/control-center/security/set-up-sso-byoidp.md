@@ -107,8 +107,11 @@ From here you can do the following:
 When adding a configuration, you will need to provide the information described below:
 
 * **Configuration Name** – A name for the IdP setup in the SSO configuration for your own reference.
-* **OpenID Connect Endpoint URL** – The well-known endpoint at your IdP from which the Mendix Platform can retrieve the configuration metadata, including all necessary endpoints and public key location information.
+* **OpenID Connect Endpoint URL** – The endpoint at your IdP from which the Mendix Platform can retrieve the configuration metadata, including all necessary endpoints and public key location information.
     If your IdP supports multiple protocols, make sure you enter the OIDC endpoint.
+
+    {{% alert color="info" %}}Enter the issuer endpoint URL without `/.well-known/openid-configuration` as it will be appended automatically to form the well-known URL. {{% /alert %}}
+
 * **Client ID** – The ID of the Developer Portal registration in your IdP.
 * **Client Secret** – The password or secret of the Developer Portal registration in your IdP. Enter this once. After saving your configuration, it will no longer be shown to you. For information about changing this value once your configuration is active, see the [Changing the Client Secret](#client-secret) section below.
 * **Select Scopes** – Selecting a scope to configure the data Mendix is allowed to read from your IdP. Mendix uses this data to map the user's identity in your IdP environment with a corresponding identity in the Developer Portal.

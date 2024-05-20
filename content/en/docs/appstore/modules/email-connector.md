@@ -188,15 +188,15 @@ Refer to the sample microflow **Sample_ACT_SendEmailWithTemplate**. To use **To*
 
 Email connector now supports the export and import of email templates. This feature reduces the manual work required to recreate templates in various development, acceptance, and/or production environments.
 
-Select the email template that you want to export and click **Export**. The exported XML file is named with the email template name and a datetime stamp and is downloaded directly to your default download folder. The image below shows the downloaded XML file after the Email template export.
+Select the email template that you want to export and click **Export**. The exported XML file is named with the email template name and a datetime stamp and is downloaded directly to your default download folder. The image below shows the downloaded XML file after the email template export.
 
-{{< figure src="/attachments/appstore/modules/email-connector/export-email-template.png" alt="Export Email Template" class="no-border" >}}
+{{< figure src="/attachments/appstore/modules/email-connector/export-email-template.png" class="no-border" >}}
 
 #### 4.3.5 Importing Email Template
 
 You can import the exported email template into the same or a different deployment environment. Click **Import** to start importing the email template. A pop-up window will appear, allowing you to browse for the template file (.xml) to import. Click **Import Template** to complete the email template import process. After successfully importing the email template, you will receive a status message notification.
 
-{{< figure src="/attachments/appstore/modules/email-connector/import-email-template.png" alt="Import Email Template" class="no-border" >}}
+{{< figure src="/attachments/appstore/modules/email-connector/import-email-template.png" class="no-border" >}}
 
 ### 4.4 Signed and Encrypted Emails
 

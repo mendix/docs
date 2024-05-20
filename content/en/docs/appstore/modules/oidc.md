@@ -350,7 +350,7 @@ The following constants are mandatory when creating an OIDC SSO configuration an
 * **ClientID** – the client id
 * **ClientAlias** – the client alias
 * **ClientSecret** – the client secret (see security best-practice, above)
-* **AutomaticConfigurationURL** – the URL of the well-known endpoint
+* **AutomaticConfigurationURL** – the URL of the well-known endpoint (ending with `/.well-known/openid-configuration`)
 
 For more information, see the [Custom User Provisioning at Deploy Time](#custom-provisioning-dep) section.
 

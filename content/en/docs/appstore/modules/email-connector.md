@@ -184,6 +184,20 @@ When modeling your app in Studio Pro, use the **SendEmailWithTemplate** Java act
 
 Refer to the sample microflow **Sample_ACT_SendEmailWithTemplate**. To use **To**, **CC**, or **BCC** during runtime, change the **EmailTemplate** object and set the desired values for the attributes, then pass the same **EmailTemplate** object as a parameter to the Java action.
 
+#### 4.3.4 Exporting Email Template
+
+Email Connector now supports export and import of Email Templates. This feature can greatly reduce the manual work required to recreate Templates in various development and/or acceptance and/or production environments.
+
+Select the Email Template that you want to export and click on the "**Export**" button. The exported XML file is named using the Email Temoplate name and datetime stamp and it is directly downloaded to your default download folder. The following picture shows the downloaded XML file after Email template's export.
+
+{{< figure src="/attachments/appstore/modules/email-connector/export-email-template.png" alt="Export Email Template" class="no-border" >}}
+
+#### 4.3.5 Importing Email Template
+
+The exported Email Template can be imported into a different or same deployment environment. Click on the "**Import**" button to initiate the import of Email Template. A pop-up dialong will provide an option to browse the template file that needs to be imported (*.xml). Click on the "**Import Template**" button to finish importing the Email Template. You will be notified by a status message after successful import of Email template.
+
+{{< figure src="/attachments/appstore/modules/email-connector/import-email-template.png" alt="Import Email Template" class="no-border" >}}
+
 ### 4.4 Signed and Encrypted Emails
 
 You can choose to configure a digital signature and email encryption when the module is running. Digital signatures help the receiver verify that you are the sender. Encryption scrambles the message and can only be deciphered with the correct key.  

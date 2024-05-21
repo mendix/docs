@@ -493,14 +493,13 @@ After completing the prerequisites, follow these steps to switch from password-b
    export PGDATABASE=postgres
    export PGUSER=<database-username>
    export PGHOST=<database-host>
-   export PGPASSWORD=""
+   export PGPASSWORD=<database-password>
    psql
 
    GRANT rds_iam TO <database-username>;
    ALTER ROLE <database-username> WITH PASSWORD NULL;
    ```
 
-   {{% alert color="info" %}}This step is not necessary if `database-username` is the default (primary) user.{{% /alert %}}
 3. Attach the following inline IAM policy to the environment's IAM role (created when [Configuring a Secret Store with AWS Secrets Manager](#configure-using-aws-secrets-manager)):
 
    ```json

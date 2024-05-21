@@ -107,7 +107,7 @@ From here you can do the following:
 When adding a configuration, you will need to provide the information described below:
 
 * **Configuration Name** – A name for the IdP setup in the SSO configuration for your own reference.
-* **OpenID Connect Endpoint URL** – The endpoint at your IdP from which the Mendix Platform can retrieve the configuration metadata, including all necessary endpoints and public key location information.
+* **OpenID Connect Endpoint URL** – This is the issuer URL at your IdP. For example, if you are using Entra ID the issuer URL is: `https://login.microsoftonline.com/550e8400-e29b-41d4-a716-446655440000/v2.0`. Mendix will extend this URL with `/.well-known/openid-configuration` to retrieve the configuration metadata, including all necessary endpoints and public key location information.
     If your IdP supports multiple protocols, make sure you enter the OIDC endpoint.
 
     {{% alert color="info" %}}Enter the issuer endpoint URL without `/.well-known/openid-configuration` as it will be appended automatically to form the well-known URL. {{% /alert %}}

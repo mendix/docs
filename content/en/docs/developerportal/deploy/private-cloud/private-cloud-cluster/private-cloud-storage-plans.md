@@ -1521,7 +1521,22 @@ For more details, see the [Postgres (IAM authentication](#database-postgres-iam)
 
 To configure the required settings for an RDS database, do the following steps:
 
-1. Create a Postgres RDS instance and enable **Password and IAM database authentication**, or enable **Password and IAM database authentication** for an existing instance. See the [RDS IAM documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.Enabling.html) for more details on enabling IAM authentication.
+1. Create a Postgres RDS instance and enable **Password and IAM database authentication**, or enable **Password and IAM database authentication** for an existing instance.
+Enable [IAM authentication](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.DBAccounts.html#UsingWithRDS.IAMDBAuth.DBAccounts.PostgreSQL) and grant `rds_iam` role to `database-username` role by using the below `psql` commandline to run the following jump pod commands (replacing `<database-username>` with the username specified in `database-username` and `<database-host>` with the database host):
+
+   ```sql {linenos=false}
+   kubectl run postgrestools docker.io/bitnami/postgresql:14 -ti --restart=Never --rm=true -- /bin/sh
+   export PGDATABASE=postgres
+   export PGUSER=<database-username>
+   export PGHOST=<database-host>
+   export PGPASSWORD=""
+   psql
+
+   GRANT rds_iam TO <database-username>;
+   ALTER ROLE <database-username> WITH PASSWORD NULL;
+   ```
+
+See the [RDS IAM documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.Enabling.html) for more details on enabling IAM authentication.
 
     {{% alert color="info" %}}The VPC and firewall must be configured to allow connections to the database from the Kubernetes cluster. When creating the RDS instance, as a best practice, make sure that it uses the same VPC as the Kubernetes cluster. Alternatively, you can also use a publicly accessible cluster. After an RDS instance has been created, it is not possible to modify its VPC.
     {{% /alert %}}
@@ -1548,6 +1563,13 @@ and save them into a Kubernetes secret (replace `{namespace}` with the namespace
 curl -L -o custom.crt https://truststore.pki.rds.amazonaws.com/global/global-bundle.pem
 kubectl -n {namespace} create secret generic mendix-custom-tls --from-file=custom.crt=custom.crt
 ```
+
+{{% alert color="info" %}}
+If IAM authentication is not working as expected, check the RDS database's logs.
+
+1. A password authentication failed for user error means that the user doesn't have IAM authentication enabled.
+2. A PAM authentication failed for user error means that IAM authentication is enabled, but the IAM policy doesn't allos the user to connect.
+{{% /alert %}}
 
 #### 4.1.2 S3 Bucket
 

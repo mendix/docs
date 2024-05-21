@@ -60,9 +60,21 @@ Upon installation, configure the Mendix Data Loader as follows:
 
 ### 4.2 Troubleshooting
 
-No known issues known at present. For any troubleshooting, contact the [development team](mailto:sa_dev_team@mendix.com).
+If you encounter any issues while using the Mendix Data Loader, use the following troubleshooting tips to help you solve them.
 
-For best performance, configure the exposed OData entities to have as little pagination as possible. At large enough amounts of data being ingested, the Mendix Data Loader may run into an error when the JSON file becomes too large to parse. When you run in to this problem you should introduce paging to the exposed OData entities. For the best performance make the pages as large as possible while still avoiding that the Json becomes to large to parse.
+For any additional troubleshooting, contact the [development team](mailto:sa_dev_team@mendix.com).
+
+#### 4.2.1 Error Parsing JSON: Document Is Too Large
+
+When ingesting data, the Mendix Data Loader shows an error similar to the following: `net.snowflake.client.jdbc.SnowflakeSQLException: Error parsing JSON: document is too large, max size 16777216 bytes`.
+
+##### 4.2.1.1 Cause
+
+The amount of data being ingested is so large that the JSON file has become too large to parse.
+
+##### 4.2.1.2 Solution
+
+To solve this issue, configure the exposed OData entities to have pagination. For the best performance, make the pages as large as possible while still ensuring that the JSON does not become too large to parse.
 
 ### 4.3 Contact Information
 

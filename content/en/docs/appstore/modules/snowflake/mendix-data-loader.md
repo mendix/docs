@@ -55,15 +55,15 @@ Upon installation, configure the Mendix Data Loader as follows:
 
 * At present, the Mendix Data Loader supports username and password authentication. Make sure to use username and password authentication when setting up your Odata service.
 * Exposing an association in an Odata service is as a link is not supported yet by the Mendix Data Loader. Instead, choose the **As an associated object id** option in your Odata settings. This option will store the associated object ID in the table, but not explicitly as foreign key.
-* We support single endpoint (OData) ingestion. If you want to ingest data from multiple endpoint you can do this one by one. Make sure to assign a different staging schema for every ingestion you do or previous ingestions will be overwritten. Functionality to be able to ingest multiple endpoints in one go is on the roadmap.
-* At the moment we don't support scheduling of ingestion jobs as a feature of the Mendix Data Loader. This can already be done however using a snowflake worksheet. We are planning to make this possible from within the application in the future.
+* The Mendix Data Loader supports single endpoint (OData) ingestion. If you want to ingest data from multiple endpoint, you can do this by ingesting the data from each endpoint separately one by one. Make sure to assign a different staging schema for every ingestion you do, or the previous ingestions will be overwritten. The ability to ingest data from multiple endpoints in one go will be added in a future release.
+* At the moment the Mendix Data Loader does not support the scheduling of ingestion jobs. However, you can still achieve this by using a Snowflake worksheet. The ability to schedule ingestion jobs in your Mendix application will be added in a future release.
 
 ### 4.2 Troubleshooting
 
 No known issues known at present. For any troubleshooting, contact the [development team](mailto:sa_dev_team@mendix.com).
 
-For the best performance configure the exposed OData entities to have as little pagination as possible. At large enough amounts of data being ingested the Mendix Data Loader will run into an error because it is unable to parse the Json since it has become to large. When you run in to this problem you should introduce paging to the exposed OData entities. For the best performance make the pages as large as possible while still avoiding that the Json becomes to large to parse.
+For best performance, configure the exposed OData entities to have as little pagination as possible. At large enough amounts of data being ingested, the Mendix Data Loader may run into an error when the JSON file becomes too large to parse. When you run in to this problem you should introduce paging to the exposed OData entities. For the best performance make the pages as large as possible while still avoiding that the Json becomes to large to parse.
 
 ### 4.3 Contact Information
 
-For support or queries regarding the Mendix Data Loader, please email the development team at [SA_Dev_Team@mendix.com](mailto:sa_dev_team@mendix.com).
+For support or queries regarding the Mendix Data Loader, email the development team at [SA_Dev_Team@mendix.com](mailto:sa_dev_team@mendix.com).

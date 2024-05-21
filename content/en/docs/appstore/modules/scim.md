@@ -77,23 +77,23 @@ This section provides clarity on the extent to which the SCIM module supports th
 
 Currently, the SCIM module does not support the following features of the SCIM protocol:
 
-* Sync password.
+* Sync password
 
-* Enhanced group push.
+* Enhanced group push
 
-* Import groups.
+* Import groups
 
-* User attributes other than a basic user profile. Mendix currently supports a limited set of user attributes from the SCIM user schema, including UserName, Email, FamilyName, GivenName, and Active status.
+* User attributes other than a basic user profile. Mendix currently supports a limited set of user attributes from the SCIM user schema, including UserName, Email, FamilyName, GivenName, and Active status
 
-* Multi-valued attributes.
+* Multi-valued attributes
 
-* User schema extensions.
+* User schema extensions
 
-* /Me endpoint.
+* /Me endpoint
 
-* Bulk operations.
+* Bulk operations
 
-* Multi-tenancy.
+* Multi-tenancy
 
 ### 1.5 Prerequisites
 
@@ -112,3 +112,40 @@ It is necessary to include the following Marketplace modules in your app:
 * [User Commons](https://marketplace.mendix.com/link/component/223053) module - Install and configure the User Commons module to support user provisioning and deactivation of user
 
 * [Mx Model Reflection](https://marketplace.mendix.com/link/component/69) module - Install and configure the [Mx Model Reflection](https://docs.mendix.com/appstore/modules/model-reflection/) module
+
+## 2 Configuration
+
+### 2.1 Design-time / Development Time Configuration
+
+Import the SCIM module from the marketplace and do the following configuration: 
+
+#### 2.1.1 Configuring Roles
+
+Configure the following module roles:
+
+* **Administrator**:  able to create/delete and read/write the app configuration.
+* **AdministratorReadOnly**:  only read the app configuration. You will probably never need this module role.
+
+The following is a typical example of how you may want to include the SCIM module’s **Module Roles** to the **User roles** of your app.
+
+| **User Role** | **SCIM Module Role** |
+| --- | --- |
+| Administrator | SCIM.Administrator |
+
+
+#### 2.1.2 After Startup Microflow
+
+In the **Runtime** tab, add the microflow **SCIM.StartUp** as the **After startup** microflow.
+
+#### 2.1.3 Navigation
+
+The SCIM module has some configuration pages targeted at the users with local administrator app rights.
+Add these pages to the **Navigation** tab and assign the **Administrator** user role.
+Open [Navigation](https://docs.mendix.com/refguide/navigation/) tab and do the following:
+
+* Add the **Menu** item **IdPConfiguration** to the app **Navigation**. Link this item to the **SCIM.IdPConfiguration_Overview** page and assign it to the **Administrator** user role.
+* Add the **Menu** item **MxObjects** to the app **Navigation**. Link this item to the **MxModelReflection.MxObjects_Overview** page and assign it to the **Administrator** user role.
+
+#### 2.1.4 Setting Encryption Key
+
+Set up the required configuration of the [Encryption](https://marketplace.mendix.com/link/component/1011) module as described in the [Encryption](https://docs.mendix.com/appstore/modules/encryption/) document. The encryption module is used to encrypt the API key (token) that a SCIM client needs to interact with the SCIM endpoint in your app. 

@@ -16,7 +16,7 @@ aliases:
 The **Apps** page gives an overview of all the apps belonging to your company. The page has the following tabs available: **Mendix Cloud**, **Mendix Free Cloud**, **Other Apps**, and **Deactivated Apps**.
 
 {{% alert color="info" %}}
-We are working on giving private clouds a separate tab. Stay tuned.
+We will enhance this page to provide information about apps deployed on standalone private clouds. Stay tuned.
 {{% /alert %}}
 
 ## 2 Mendix Cloud
@@ -27,7 +27,7 @@ By default you only see apps and their production environments. Turn off the **P
 
 You can customize the columns of the table by clicking the column selector (the {{% icon name="view" %}} icon) on the upper-right corner of the table. The items selected are shown as columns in the table.
 
-{{< figure src="/attachments/control-center/apps/column-selection-public-cloud.png" class="no-border" >}}
+{{< figure src="/attachments/control-center/apps/column-selection-public-cloud.png" >}}
 
 The description of the items that you can select are as follows:
 
@@ -67,13 +67,49 @@ You can filter the apps in the table. For details, see the [Filtering Apps in th
 
 You can export apps to an Excel file. For details, see the [Exporting Apps to an Excel File](#export-to-excel) section.
 
-## 3 Mendix Free Cloud
+## 3 Private Cloud (Connected)
+
+The **Mendix Private Cloud** tab shows all the apps that are deployed on the Mendix Private Cloud Connected.
+
+You can customize the columns of the table by clicking the column selector (the {{% icon name="view" %}} icon) on the upper-right corner of the table. The items selected are shown as columns in the table.
+
+{{< figure src="/attachments/control-center/apps/column-selection-private-cloud-connected.png"  max-width=50% >}}
+
+The description of the items that you can select are as follows:
+
+* **AppID**: the unique identifier of the app
+
+* **App Name**: the name of the app
+
+  {{% alert color="info" %}}
+  You can view the [app details](#app-details) by clicking the app name in the table.
+  {{% /alert %}}
+
+* **Technical Contact**: the technical contact of the app. 
+
+  {{% alert color="info" %}}
+  You can edit the Technical Contact of an app by clicking **Edit** ({{% icon name="pencil" %}}) next to the current Technical Contact in the table.
+  {{% /alert %}}
+
+* **EnvID**: the unique identifier of the environment.
+
+* **Environment**: the name of the environment.
+
+* **Env Status**: the app deployment status on environment
+
+* **Mainline Version**: the Mendix version of the app on the mainline in the repository
+
+* **Deployed Version**: the Mendix version of the deployed app
+
+* **Last Commit**: the date of the last commit in the main line
+
+## 4 Mendix Free Cloud
 
 The **Mendix Free Cloud** tab shows all the free apps that are deployed on the Mendix Cloud.
 
 You can customize the columns of the table by clicking the column selector (the {{% icon name="view" %}} icon) on the upper-right corner of the table. The items selected are shown as columns in the table.
 
-{{< figure src="/attachments/control-center/apps/column-selection-free-cloud.png" class="no-border" >}}
+{{< figure src="/attachments/control-center/apps/column-selection-free-cloud.png" >}}
 
 The description of the items that you can select are as follows:
 
@@ -113,17 +149,13 @@ When you select the apps via the checkboxes in the table, a context menu appears
 
 You can export apps to an Excel file. For details, see the [Exporting Apps to an Excel File](#export-to-excel) section.
 
-## 4 Other Apps
+## 5 Other Apps
 
-The **Other Apps** tab shows the unlicensed apps that are not deployed and the apps that are linked to  private clouds. 
-
-{{% alert color="info" %}}
-We are working on giving private clouds a separate tab. Stay tuned.
-{{% /alert %}}
+The **Other Apps** tab shows the unlicensed apps that are not deployed and the apps that are deployed on a private cloud unconnected.
 
 You can customize the columns of the table by clicking the column selector (the {{% icon name="view" %}} icon) on the upper-right corner of the table. The items selected are shown as columns in the table.
 
-{{< figure src="/attachments/control-center/apps/column-selection-other-apps.png" class="no-border" >}}
+{{< figure src="/attachments/control-center/apps/column-selection-other-apps.png" >}}
 
 The description of the items that you can select are as follows:
 
@@ -144,13 +176,13 @@ When you select the apps via the checkboxes in the table, a context menu appears
 
 You can export apps to an Excel file. For details, see the [Exporting Apps to an Excel File](#export-to-excel) section.
 
-## 5 Deactivated Apps
+## 6 Deactivated Apps
 
 The **Deactivated Apps** tab shows all the deactivated apps that belong to your company.
 
 You can customize the columns of the table by clicking the column selector (the {{% icon name="view" %}} icon) on the upper-right corner of the table. The items selected are shown as columns in the table.
 
-{{< figure src="/attachments/control-center/apps/column-selection-deactivated-apps.png" class="no-border" >}}
+{{< figure src="/attachments/control-center/apps/column-selection-deactivated-apps.png" >}}
 
 The description of the items that you can select are as follows:
 
@@ -172,23 +204,23 @@ When you select the apps via the checkboxes in the table, a context menu appears
 
 You can export apps to an Excel file. For details, see the [Exporting Apps to an Excel File](#export-to-excel) section.
 
-## 6 Filtering Apps in the Table {#filter-apps}
+## 7 Filtering Apps in the Table {#filter-apps}
 
 On each tab with an table of apps, you can find filters on the top, which allows you to filter apps using different criteria. 
 
 With the filter as shown below, you can search for string matches on any of the string fields in the table, for example, the app ID, app name, or environment name. Clicking the button on the left allows you to use comparisons and string operations, such as **Contains**, **Starts with**, and **Greater than**. (This filter is available on the **Mendix Cloud**, **Mendix Free Cloud**, and **Other Apps** tabs.)
 
-{{< figure src="/attachments/control-center/apps/filter-apps.png" class="no-border" >}}
+{{< figure src="/attachments/control-center/apps/filter-apps.png" >}}
 
 With the filter as shown below, you can filter apps by the date of the last commit. Clicking the button on the left allows you to use comparisons and string operations, such as **Between** and **Empty**. (This filter is available on the **Mendix Cloud**, **Mendix Free Cloud**, **Other Apps**, and **Deactivated Apps** tabs.)
 
-{{< figure src="/attachments/control-center/apps/filter-last-commit.png" class="no-border" >}}
+{{< figure src="/attachments/control-center/apps/filter-last-commit.png" >}}
 
 The filter shown as below allows you to filter apps by **Deployed Status**. (This filter is only available on the **Mendix Cloud** tab.)
 
-{{< figure src="/attachments/control-center/apps/filter-mendix-cloud.png" class="no-border" >}}
+{{< figure src="/attachments/control-center/apps/filter-mendix-cloud.png" >}}
 
-## 7 Viewing App Details {#app-details}
+## 8 Viewing App Details {#app-details}
 
 If you click the name of an app in the overview table, a page opens and shows the details of this app.
 
@@ -207,7 +239,7 @@ If the app is not a licensed app, you can see the action menu ({{% icon name="th
 Deleting and deactivating apps is currently not supported for licensed apps or apps that are not running on Mendix Cloud. For the consequences of these operations, see the table in the [Deactivating and Deleting Apps](#deactivate-delete-apps) section.
 {{% /alert %}} 
 
-## 8 Deactivating and Deleting Apps {#deactivate-delete-apps}
+## 9 Deactivating and Deleting Apps {#deactivate-delete-apps}
 
 You can delete or deactivate a single app, or deactive (or activate) mutilple apps in one go.
 
@@ -225,7 +257,7 @@ The consequences of deactivating and deleting an app are as below:
 Deleting and deactivating apps is currently not supported for licensed apps or apps that are not running on Mendix Cloud. Therefore, you do not see these options on the **Mendix Cloud** tab; and you also do not see these options on the **Other Apps** tab if you select apps that are deployed on a private cloud.
 {{% /alert %}}
 
-## 9 Exporting the Information About Apps to an Excel File {#export-to-excel}
+## 10 Exporting the Information About Apps to an Excel File {#export-to-excel}
 
 On each tab with an overview of apps, you can export information of apps to an Excel file. To do so, select the apps in the table, and click **Selection Export** below the table. 
 

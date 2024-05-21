@@ -3,7 +3,7 @@ title: "REST Services"
 url: /refguide/integration/rest-services/
 
 weight: 30
-description: "Introduces REST."
+description: "Introduces REST services."
 tags: ["REST services"]
 ---
 

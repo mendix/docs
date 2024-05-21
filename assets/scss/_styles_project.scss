@@ -536,11 +536,14 @@ nav.foldable-nav {
                 text-decoration: underline;
             }
         }
-        // NK - styling for ToC highlighting
+
+        // Styling for ToC highlighting
         .activeToc {
-            font-weight: $font-weight-bold;
-            color: $link-color;
             border-left-color: $link-color;
+        }
+
+        .activeToc > a {
+            font-weight: $font-weight-bold;
         }
     }
 }

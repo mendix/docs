@@ -73,9 +73,9 @@ The OIDC SSO module supports the following features:
 
 For readers with more knowledge of the OAuth and OIDC protocol:
 
-* Uses the Authorization Code Grant flow to sign the end-user in via the browser.
-* Uses the `nonce` parameter to defend against replay attacks.
-* Validates ID-token signatures.
+* Uses the Authorization Code Grant flow to sign the end-user in via the browser
+* Uses the `nonce` parameter to defend against replay attacks
+* Validates ID-token signatures
 * Uses the Proof Key for Code Exchange (PKCE – pronounced “pixie") security enhancement as per RFC 7636. If your IdP’s well-known endpoint indicates “S256” as value for “code_challenge_methods_supported”, the OIDC Module will automatically apply the PKCE feature. PKCE can be seen as a security add-on to the original OAuth protocol. It is generally recommended to use this feature to be better protected against hackers who try to get access to your app.
 * When authenticating APIs, it validates access tokens in one of two ways:
 
@@ -84,9 +84,10 @@ For readers with more knowledge of the OAuth and OIDC protocol:
 
     For signing into the app, the OIDC SSO module will not use token introspection and will always validate against the published jwks endpoint.
 
-* Stores an access token for each end-user that can be used to make API calls on their behalf.
-* Can be configured to use either client_secret_post or client_secret_basic as the client authentication method. Both make use of the client-id and client-secret as configured at the IdP.
-* Supports ACR in authorization requests. The ACR in OIDC protocol is used to indicate the desired level of assurance or strength of authentication during the authentication process. It allows the relying party (your application) to request a specific level of authentication assurance from the identity provider (IdP) (version 2.3.0 and above).
+* Stores an access token for each end-user that can be used to make API calls on their behalf
+* Can be configured to use either client_secret_post or client_secret_basic as the client authentication method. Both make use of the client-id and client-secret as configured at the IdP
+* Supports ACR in authorization requests. The ACR in OIDC protocol is used to indicate the desired level of assurance or strength of authentication during the authentication process. It allows the relying party (your application) to request a specific level of authentication assurance from the identity provider (IdP) (version 2.3.0 and above)
+* Supports response_mode=query and response_mode=form_post
 
 #### 1.2.3 Limitations
 

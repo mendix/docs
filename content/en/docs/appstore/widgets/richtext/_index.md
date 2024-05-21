@@ -94,13 +94,13 @@ To configure this widget, follow these steps:
             {{< figure src="/attachments/appstore/widgets/rich-text/wrap.png" alt="Example" class="no-border" >}}
     
     * **Location**
-        * **Auto** – automatically determine the best position for the toolbar.
+        * **Auto** – automatically determines the best position for the toolbar.
 
-        * **Top** – position the toolbar at the top of the editor.
+        * **Top** – positions the toolbar at the top of the editor.
 
-        * **Bottom** – position the toolbar at the bottom of the editor.
+        * **Bottom** – positions the toolbar at the bottom of the editor.
 
-        * **Inline** – position the toolbar floating at the current cursor location when editor is in focus. The toolbar will be hidden until the editable content is selected.
+        * **Inline** – positions the toolbar floating at the current cursor location when editor is in focus. The toolbar will be hidden until the editable content is selected.
 
         {{% alert color="info" %}}Inline toolbar does not wrap the editor within an iframe, but edits the content in place. Thus, styling that applies to the page will be directly applied to the editor's content.{{% /alert %}}
 
@@ -108,12 +108,12 @@ To configure this widget, follow these steps:
 
      {{< figure src="/attachments/appstore/widgets/rich-text/rich_text_quickbars.png" alt="Example" class="no-border" >}}
 
-    * **Context menu** - determine mouse right click behavior on the editor.
-        * **Native** – use browser native default right click behavior.
-        * **Rich Text** – use editor's predefined right click context menu.
+    * **Context menu** - determines mouse right click behavior on the editor.
+        * **Native** – uses a browser's native default right-click behavior.
+        * **Rich Text** – uses an editor's predefined right-click context menu.
 
 
-* **Editable** – determines when user can edit content in the editor and when it is read-only
+* **Editable** – determines when user can edit content in the editor and when it is read-only.
 
     {{% alert color="info" %}}For more information, see [Editability Section](/refguide/common-widget-properties/#editability) in the *Studio Pro Guide*.{{% /alert %}}
 
@@ -206,7 +206,7 @@ The full configuration of the menubar groups are as follows:
 
 * **Enable spell checking** – configures to use the browser’s native spell checker. 
 * **Highlight on focus** - adds a blue outline to the editor when that editor is made the input focus
-* **Additional stylesheet** - allow user to add an additional stylesheet that will be included inside the editor's iframe to apply custom styling.
+* **Additional stylesheet** - allows the user to add an additional stylesheet that will be included inside the editor's iframe to apply custom styling.
     * User can include an additional stylesheet file in the theme folder and add the filename inside the **Additional stylesheet** input.  
     * It is also possible to use built-in stylesheets called "_Default_" and "_Dark_", or alternate between them using the expression editor.
         

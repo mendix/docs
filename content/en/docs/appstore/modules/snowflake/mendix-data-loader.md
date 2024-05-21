@@ -9,7 +9,7 @@ tags: ["snowflake marketplace", "snowflake marketplace component", "snowflake", 
 
 ## 1 Introduction
 
-The [Mendix Data Loader](https://app.snowflake.com/marketplace/listing/GZTDZHHIDJ/mendix-data-loader) allows for seamless data ingestion from operational Mendix applications into Snowflake, enhancing an organization's business intelligence and reporting capabilities.
+The [Mendix Data Loader](https://app.snowflake.com/marketplace/listing/GZTDZHHIDJ/mendix-data-loader) allows for seamless data ingestion from operational Mendix applications via an exposed OData service into Snowflake, enhancing an organization's business intelligence and reporting capabilities.
 
 ### 1.1 Typical Use Cases
 
@@ -19,7 +19,7 @@ The Mendix Data Loader supports a range of data ingestion tasks, enabling organi
 
 To use the Mendix Data Loader, you must have the following:
 
-* A Mendix application with a [published OData service](https://docs.mendix.com/refguide/published-odata-services/) that includes exposed entities
+* A Mendix application with a [published OData service](https://docs.mendix.com/refguide/published-odata-services/) that includes exposed entities. 
 * A Snowflake environment
 
 ### 1.3 Licensing and Cost
@@ -62,8 +62,12 @@ Upon installation, configure the Mendix Data Loader as follows:
 
 No known issues known at present. For any troubleshooting, contact the [development team](mailto:sa_dev_team@mendix.com).
 
-For the best performance configure the exposed OData entities to have as little pagination as possible. At large enough amounts of data being ingested the Mendix Data Loader will run into an error because it is unable to parse the Json since it has become to large. When you run in to this problem you should introduce paging to the exposed OData entities. For the best performance make the pages as large as possible while still avoiding that the Json becomes to large to parse.
+For the best performance configure the exposed OData entities to have no paging. At large enough amounts of data being ingested the Mendix Data Loader will run into an error because it is unable to parse the Json since it has become to large. When you run in to this problem you should introduce paging to the exposed OData entities. The Mendix Data Loader performs best when the pages have as many records as possible while still avoiding that the Json becomes to large to parse.
+
+![ODataPagination](https://github.com/strategicalliances/docs/assets/139855197/e18d8cc6-b0d0-4039-9f5e-fcbfd99cc2e0)
+
 
 ### 4.3 Contact Information
+
 
 For support or queries regarding the Mendix Data Loader, please email the development team at [SA_Dev_Team@mendix.com](mailto:sa_dev_team@mendix.com).

@@ -1567,8 +1567,8 @@ kubectl -n {namespace} create secret generic mendix-custom-tls --from-file=custo
 {{% alert color="info" %}}
 If IAM authentication is not working as expected, check the RDS database's logs.
 
-1. A `password authentication` failed for user error means that the user doesn't have IAM authentication enabled.
-2. A `PAM authentication failed for user` error means that IAM authentication is enabled, but the IAM policy doesn't allos the user to connect.
+* A `password authentication` failed for user error means that the user does not have IAM authentication enabled.
+* A `PAM authentication failed for user` error means that IAM authentication is enabled, but the IAM policy does not allow the user to connect.
 {{% /alert %}}
 
 #### 4.1.2 S3 Bucket

@@ -37,8 +37,8 @@ If deploying to Red Hat OpenShift, you need to specify that specifically when cr
 
 Mendix for Private Cloud Operator `v2.*.*` is the latest version which officially supports:
 
-* Kubernetes versions 1.19 through 1.28
-* OpenShift 4.6 through 4.13
+* Kubernetes versions 1.19 through 1.30
+* OpenShift 4.6 through 4.15
 
 {{% alert color="warning" %}}
 Kubernetes 1.22 is a [new release](https://kubernetes.io/blog/2021/08/04/kubernetes-1-22-release-announcement/) which removes support for several deprecated APIs and features.
@@ -55,8 +55,8 @@ While EOLed components are expected to remain compatible, it is important to not
 
 Mendix for Private Cloud Operator `v1.12.*` is an LTS release which officially supports older Kubernetes versions:
 
-* Kubernetes versions 1.13 through 1.30
-* OpenShift 3.11 through 4.15
+* Kubernetes versions 1.13 through 1.21
+* OpenShift 3.11 through 4.7
 
 ### 2.2 Cluster Requirements
 

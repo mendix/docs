@@ -19,7 +19,7 @@ mxbuild --java-home="C:\Program Files\Eclipse Adoptium\jdk-11.0.16.101-hotspot" 
 ```
 
 ## 3 SBOM Format
-The SBOM is based on the [CycloneDX 1.4 JSON format](https://cyclonedx.org/docs/1.4/json/). This includes required fields, and information such as `version` and `description`. To identify the components from different package managers, the the `purl` field is used. The content follows the specification defined at `https://github.com/package-url/purl-spec`. This includes Mendix marketplace modules and widgets, NPM packages, and Java libraries. 
+The SBOM is based on the [CycloneDX 1.4 JSON format](https://cyclonedx.org/docs/1.4/json/). This includes required fields, and information such as `version` and `description`. To identify the components from different package managers, the `purl` field is used. The content follows the specification defined at `https://github.com/package-url/purl-spec`. This includes Mendix marketplace modules and widgets, NPM packages, and Java libraries. 
 
 ## 4 Example Output
 Since a full SBOM contains all project details, this is only a partial representation of a full example. To simplify, below is one of the Java libraries that is packaged. The `dependencies` field will contain the dependency relationship from Mendix Marketplace Modules to npm modules and java libraries.

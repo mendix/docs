@@ -57,6 +57,7 @@ Upon installation, configure the Mendix Data Loader as follows:
 * Exposing an association in an Odata service is as a link is not supported yet by the Mendix Data Loader. Instead, choose the **As an associated object id** option in your Odata settings. This option will store the associated object ID in the table, but not explicitly as foreign key.
 * We support single endpoint (OData) ingestion. If you want to ingest data from multiple endpoint you can do this one by one. Make sure to assign a different staging schema for every ingestion you do or previous ingestions will be overwritten. Functionality to be able to ingest multiple endpoints in one go is on the roadmap.
 * At the moment we don't support scheduling of ingestion jobs as a feature of the Mendix Data Loader. This can already be done however using a snowflake worksheet. We are planning to make this possible from within the application in the future.
+* The Mendix Data Loader always ingests all the data exposed by the OData published by your Mendix application. This means that if you do not want to ingest all of the data inside the exposed entities you have to do the filtering of the data at the Mendix/OData side. 
 
 ### 4.2 Troubleshooting
 

@@ -162,8 +162,9 @@ Support on content in this category is up to the user or organization providing 
 * Contribute 
 
 {{% alert color="warning" %}}
-Mendix Support is not responsible for any community-supported content. The level of support for the community-supported content totally depends on the availability and effort of the developer and the Mendix community. 
-{{% /alert %}}
+Mendix Support is not responsible for any community-supported content, since every Mendix user can create and publish community-supported content in the Mendix Marketplace, including developers who work or previously worked at Mendix.
+
+The level of support for the community-supported content totally depends on the availability and effort of the content developer and the Mendix community. {{% /alert %}}
 
 #### 4.2.4 Partner Category
 

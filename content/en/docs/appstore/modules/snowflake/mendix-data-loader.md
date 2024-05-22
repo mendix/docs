@@ -13,14 +13,14 @@ The [Mendix Data Loader](https://app.snowflake.com/marketplace/listing/GZTDZHHID
 
 ### 1.1 Typical Use Cases
 
-The Mendix Data Loader supports a range of data ingestion tasks, enabling organizations to leverage their operational data within Snowflake for analytical purposes. The key functionalities include ingesting data from Mendix to Snowflake.
+The Mendix Data Loader supports a range of data ingestion tasks, enabling organizations to leverage their operational data within Snowflake for analytical purposes. The key functionalities include ingesting data dynamically from Mendix applications (only needing an OData endpoint and credentials) to Snowflake. The ingested data is stored in the target schema of the target database specified by the user and created by the Mendix Data Loader application. This target schema in the target database serves as a staging area and as such the user should copy the tables of the target schema into a database and schema they want to use to store the ingested data. This should be done after every ingestion.
 
 ### 1.2 Prerequisites {#prerequisites}
 
 To use the Mendix Data Loader, you must have the following:
 
 * A Mendix application with a [published OData service](https://docs.mendix.com/refguide/published-odata-services/) that includes exposed entities. 
-* A Snowflake environment
+* A Snowflake environment and user with ACCOUNTADMIN role to run the access script that can be generated using the Mendix Data Loader. This access script has to be executed once by an ACCOUNDADMIN via a worksheet after which you can start using the application to ingest Mendix application data.
 
 ### 1.3 Licensing and Cost
 
@@ -60,14 +60,14 @@ Upon installation, configure the Mendix Data Loader as follows:
 
 ### 4.2 Troubleshooting
 
-No known issues known at present. For any troubleshooting, contact the [development team](mailto:sa_dev_team@mendix.com).
-
 For the best performance configure the exposed OData entities to have no paging. At large enough amounts of data being ingested the Mendix Data Loader will run into an error because it is unable to parse the Json since it has become to large. When you run in to this problem you should introduce paging to the exposed OData entities. The Mendix Data Loader performs best when the pages have as many records as possible while still avoiding that the Json becomes to large to parse.
+
+Note that in Mendix version 10.10.0 pagination of exposed entities via OData doesn't work. This is a known issue and will hopefully be solved soon. 
 
 ![ODataPagination](https://github.com/strategicalliances/docs/assets/139855197/e18d8cc6-b0d0-4039-9f5e-fcbfd99cc2e0)
 
+For any additional troubleshooting, contact the [development team](mailto:sa_dev_team@mendix.com).
 
 ### 4.3 Contact Information
-
 
 For support or queries regarding the Mendix Data Loader, please email the development team at [SA_Dev_Team@mendix.com](mailto:sa_dev_team@mendix.com).

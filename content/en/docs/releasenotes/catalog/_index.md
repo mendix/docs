@@ -17,7 +17,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 #### Fixes
 
-* We fixed an issue where Entity results were not appearing in the UI Search results.
+* We fixed an issue where entity results were not appearing in the UI search results.
 
 ### May 16, 2024
 

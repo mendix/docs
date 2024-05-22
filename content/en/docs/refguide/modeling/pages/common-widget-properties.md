@@ -209,15 +209,9 @@ This property determines whether the label is rendered and the widget is wrapped
 
 ### 6.2 Label Caption
 
-This property is shown only when Show label is Yes. It specifies what text is rendered within a label.
+This property is shown only when Show label is Yes. It specifies what text is rendered within a label using a Text template.
 
-#### 6.2.1 Text Template
-
-The template for the label can contain parameters that are written as a number between braces (for example, `{1}`). The first parameter has the number `1`, the second `2`, etc. Note that to use template parameters, the widget must be placed in the context of an entity (for example, inside a data container).
-
-#### 6.2.2 Parameters
-
-For each parameter in the template, you define an attribute of the context entity or an associated entity. The value of this attribute will be inserted at the position of the parameter.
+{{% snippet file="/static/_includes/refguide/text-template-link.md" %}}
 
 ## 7 Formatting Section{#numeric-formatting}
 
@@ -416,18 +410,16 @@ Properties using the Text template offer the ability to display dynamic text on 
 
 The template supports both static and dynamic texts. It can be edited from the minimized view as well as the pop up. Open the pop-up with the **Edit ...** button for a full view of the template and its parameters.
 
-Placeholders are used to place parameters in the text. The placholder follows the format `{i}`, where _i_ is the index of a specific parameter from the [parameter list](#text-template-parameters). Parameters can be referenced multiple times and out of order.
+Placeholders are used to place parameters in the text. The placeholder follows the format `{i}`, where _i_ is the index of a specific parameter from the [parameter list](#text-template-parameters). Parameters can be referenced multiple times and out of order.
 
 {{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/caption-edit-button.png" alt="Opening Parameters" width="450" >}} 
 
 #### 10.1.3 Parameters {#text-template-parameters}
 
-Parameters define what data is used to replace the placeholders in the template and how they are formatted. Editing parameters is done in the pop-up view, which can be opened in two ways:
+Parameters define what data is inserted into the template and how it is formatted. Parameters can refer to object attributes or expressions. Editing parameters is done in the pop-up view, which can be opened in two ways:
 
 * From the properties sidebar: Double click the property (e.g. "Caption") or click the more button (...).
-* From the widget properties form: Click the **Edit ...** button next to the property's textbox.
-
-{{/* TODO: Add screenshot with one from the properties view, preferrably a different one using the template */}}
+* From the widget properties pop-up: Click the **Edit ...** button next to the property's textbox.
 
 Parameters have the following settings:
 

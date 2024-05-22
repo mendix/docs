@@ -95,9 +95,7 @@ This property specifies the maximum number of characters that can be typed in th
 
 #### 3.1.4 Placeholder Text
 
-The placeholder text is shown when no text has been entered yet, or when a displayed attribute is empty.
-
-It can be used, for example, to give a hint to the end-user what kind of text should be entered.
+{{% snippet file="/static/_includes/refguide/placeholder-section-link.md" %}}
 
 #### 3.1.5 AutoFocus {#autofocus}
 

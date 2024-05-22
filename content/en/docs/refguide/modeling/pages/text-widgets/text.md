@@ -39,60 +39,10 @@ Styling:
 
 #### 3.1.1 Caption {#caption}
 
-**Caption** defines a text that will be shown. The caption can contain parameters that are written between braces, for example, {1}.  
+**Caption** defines a text that will be shown using a Text template. 
 
-For more information on using parameters, see the [Parameters](#parameters) section below. 
+{{% snippet file="/static/_includes/refguide/text-template-link.md" %}}
 
-#### 3.1.2 Parameters {#parameters}
-
-Parameters are attributes or expressions whose values will be displayed as part of the text defined in the **Caption** setting. To view **Parameters**, do one of the following:
-
-* Double-click the **Caption** setting in properties
-* Double-click the text widget on the page and click **Edit** in the **General** section > **Caption**:
-
-    {{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/caption-edit-button.png" alt="Opening Parameters"   width="450" class="no-border" >}} 
-
-Parameters have the following settings:
-
-* **Index** – an identification number of a parameter 
-* **Value** – an attribute or an expression value to be displayed
-* **Format** – a format in which the value will be displayed (only for attributes)
-
-    {{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/parameter-settings.png" alt="Parameter Settings"   width="450" class="no-border" >}}
-
-{{% alert color="info" %}}
-You can use the formatter functions in the expression editor when using expressions. For more information, see [this list](/refguide/expressions/#expressions-formatter-functions).
-{{% /alert %}}
-
-##### 3.1.1.1 Adding New Parameters
-
-To use parameters, do the following:
-
-1. Place the **Text** widget in a context of an entity, as in, inside a [data container](/refguide/data-widgets/).
-2. Double-click the **Caption** setting in the text widget properties.
-3. In the **Edit Caption** dialog box > **Parameters** section click **New**:
-
-    {{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/adding-parameter.png" alt="Adding New Parameter"   width="450" class="no-border" >}}
-
-4. In the **Edit Template Parameter** dialog box, click **Select**, choose an attribute and confirm your choice.
-5. In the **Caption** setting, write the text you would like to display and type the **Index** of the parameter you would like to include within braces. In the example below, to include the title of the book, amount of pages it has and the year it was published, you need to use indexes {1} for the *Title* attribute, {2} for the *NrOfPages* attribute and {3} for the *DatePublished* attribute:  
-
-    {{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/parameters-example.png" alt="Parameter Example"   width="450" class="no-border" >}}
-
-6. In the **Fallback text** setting, write the text you would like to display when no context object is available from the surrounding data widget:
-
-    {{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/fallback-text-example.png" alt="Fallback Text Example"   width="450" class="no-border" >}}
-
-##### 3.1.1.2 Performing Other Actions on Parameters
-
-In addition to adding new parameters, you can perform the following actions on parameters:
-
-* **Delete** – to delete a parameter click Delete or press <kbd>Delete</kbd> on your keyboard
-* **Edit** – double-click a parameter to edit it or click Edit
-* **Move up** – to move a parameter up in the list of parameters and also to change its index, click **Move up**
-* **Move down** – to move a parameter down in the list of parameters and also to change its index, click **Move down**
-
-    {{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/parameter-actions.png" alt="Parameter Actions"   width="450" class="no-border" >}}
 
 #### 3.1.3 Render Mode
 

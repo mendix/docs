@@ -66,7 +66,7 @@ Even though a date picker with a custom date format is editable, the calendar dr
 
 #### 3.1.3 Placeholder Text
 
-The placeholder text is shown if the date attribute is empty. It can be used to give the end-user a hint as to the expected format.
+{{% snippet file="/static/_includes/refguide/placeholder-section-link.md" %}}
 
 {{% alert color="warning" %}}
 Placeholder text will not be displayed if a native date picker is available (that is, for iOS and Android versions 4.0 and above).

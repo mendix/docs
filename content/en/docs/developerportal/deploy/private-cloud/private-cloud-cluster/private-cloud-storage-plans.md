@@ -1522,7 +1522,7 @@ For more details, see the [Postgres (IAM authentication](#database-postgres-iam)
 To configure the required settings for an RDS database, do the following steps:
 
 1. Create a Postgres RDS instance and enable **Password and IAM database authentication**, or enable **Password and IAM database authentication** for an existing instance.
-Enable [IAM authentication](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.DBAccounts.html#UsingWithRDS.IAMDBAuth.DBAccounts.PostgreSQL) and grant `rds_iam` role to `database-username` role by using the below `psql` commandline to run the following jump pod commands (replacing `<database-username>` with the username specified in `database-username` and `<database-host>` with the database host):
+2. Enable [IAM authentication](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.DBAccounts.html#UsingWithRDS.IAMDBAuth.DBAccounts.PostgreSQL) and grant `rds_iam` role to `database-username` role by using the below `psql` commandline to run the following jump pod commands (replacing `<database-username>` with the username specified in `database-username` and `<database-host>` with the database host):
 
    ```sql {linenos=false}
    kubectl run postgrestools docker.io/bitnami/postgresql:14 -ti --restart=Never --rm=true -- /bin/sh
@@ -1544,7 +1544,7 @@ See the [RDS IAM documentation](https://docs.aws.amazon.com/AmazonRDS/latest/Use
     {{% alert color="info" %}}In the case of Aurora DB, ensure that the `rds_iam` role is granted to the master database user.
     {{% /alert %}}
 
-2. Navigate to the RDS instance details, and write down the following information:
+3. Navigate to the RDS instance details, and write down the following information:
 
     * The database **Endpoint** from the **Connectivity & security** tab:
 
@@ -1554,7 +1554,7 @@ See the [RDS IAM documentation](https://docs.aws.amazon.com/AmazonRDS/latest/Use
 
        {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/private-cloud-storage-plans/RDS-Connection.png" class="no-border" >}}
 
-3. Download the [RDS TLS certificates](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.SSL.html#UsingWithRDS.SSL.CertificatesAllRegions)
+4. Download the [RDS TLS certificates](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.SSL.html#UsingWithRDS.SSL.CertificatesAllRegions)
 and save them into a Kubernetes secret (replace `{namespace}` with the namespace where the Mendix Operator is installed):
 
 {{% alert color="info" %}}For Global Operator, replace `{namespace}` with the managed namespace name.{{% /alert %}}

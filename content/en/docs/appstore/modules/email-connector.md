@@ -11,7 +11,7 @@ aliases:
 
 ## 1 Introduction
 
-The [Email](https://marketplace.mendix.com/link/component/120739) connector allows you to send and receive emails on your own email server. It includes features such as sending emails using a template, or sending signed and encrypted emails.
+The [Email Connector](https://marketplace.mendix.com/link/component/120739) allows you to send and receive emails on your own email server. It includes features such as sending emails using a template, or sending signed and encrypted emails.
 
 ### 1.1 Features
 
@@ -183,6 +183,20 @@ When modeling your app in Studio Pro, use the **SendEmailWithTemplate** Java act
 * **Queued** – When **true**, the email message is stored in the **EmailMessage** entity with its status as **Queued**. In this case, you can send it later using a scheduled event. You can use the **SE_SendQueuedEmails** microflow to create scheduled events. You can also create a [task queue](/refguide/task-queue/) and run the microflow in that task queue to minimize system resource usage. Using a task queue, you can set the number of threads, node or cluster-wide scope, time intervals, and other parameters.
 
 Refer to the sample microflow **Sample_ACT_SendEmailWithTemplate**. To use **To**, **CC**, or **BCC** during runtime, change the **EmailTemplate** object and set the desired values for the attributes, then pass the same **EmailTemplate** object as a parameter to the Java action.
+
+#### 4.3.4 Exporting Email Template
+
+Email connector now supports the export and import of email templates. This feature reduces the manual work required to recreate templates in various development, acceptance, and/or production environments.
+
+Select the email template that you want to export and click **Export**. The exported XML file is named with the email template name and a datetime stamp and is downloaded directly to your default download folder. The image below shows the downloaded XML file after the email template export.
+
+{{< figure src="/attachments/appstore/modules/email-connector/export-email-template.png" class="no-border" >}}
+
+#### 4.3.5 Importing Email Template
+
+You can import the exported email template into the same or a different deployment environment. Click **Import** to start importing the email template. A pop-up window will appear, allowing you to browse for the template file (.xml) to import. Click **Import Template** to complete the email template import process. After successfully importing the email template, you will receive a status message notification.
+
+{{< figure src="/attachments/appstore/modules/email-connector/import-email-template.png" class="no-border" >}}
 
 ### 4.4 Signed and Encrypted Emails
 

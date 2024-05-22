@@ -141,14 +141,16 @@ We are always curious about and grateful for your feedback. The way you communic
 The applicable level of service for Mendix-supported Marketplace content is equal to the Mendix SLA you have acquired. In other words, the same SLA conditions apply to support on Marketplace content. This means that equal response and resolve times are applicable, and the standard support process using the [Mendix Support Portal](https://support.mendix.com) has to be followed.
 
 {{% alert color="warning" %}}
-Content in this support category is supported as-is. When changing the content, the module will no longer be platform-supported.
+Content in this support category is supported as-is. If you change the content of the module, the module will no longer be platform-supported.
 {{% /alert %}}
 
 #### 4.2.2 Deprecated Category {#deprecated}
 
 Mendix moves platform-supported content into this category when the content is considered end-of-life. These decisions factor in popularity, the availability of improved alternatives, and industry standards.
 
+{{% alert color="info" %}}
 Support for content in this category is limited and is decided by Mendix on a case-by-case basis. You can still follow the standard support process using the [Mendix Support Portal](https://support.mendix.com). However, the Mendix SLA no longer applies. 
+{{% /alert %}}
 
 #### 4.2.3 Community Category {#community-category}
 
@@ -159,7 +161,11 @@ Support on content in this category is up to the user or organization providing 
 * Ask a question in the [Mendix Community](https://community.mendix.com/)
 * Contribute 
 
-The level of support depends on the availability and effort of the developer and/or the Mendix community.
+{{% alert color="warning" %}}
+Mendix Support is not responsible for any community-supported content, since every Mendix user can create and publish community-supported content in the Mendix Marketplace, including developers who work or previously worked at Mendix.
+
+The level of support for the community-supported content totally depends on the availability and effort of the content developer and the Mendix community.
+{{% /alert %}}
 
 #### 4.2.4 Partner Category
 

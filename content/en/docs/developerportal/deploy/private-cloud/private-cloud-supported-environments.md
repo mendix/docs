@@ -55,8 +55,8 @@ While EOLed components are expected to remain compatible, it is important to not
 
 Mendix for Private Cloud Operator `v1.12.*` is an LTS release which officially supports older Kubernetes versions:
 
-* Kubernetes versions 1.13 through 1.21
-* OpenShift 3.11 through 4.7
+* Kubernetes versions 1.13 through 1.30
+* OpenShift 3.11 through 4.15
 
 ### 2.2 Cluster Requirements
 

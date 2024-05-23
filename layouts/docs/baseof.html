@@ -51,5 +51,16 @@
       {{ partial "footer.html" . }}
     </div>
     {{ partial "scripts.html" . }}
+    <script>
+      // JavaScript code to add "bablic-exclude" to all the <code> elements
+      document.addEventListener('DOMContentLoaded', function() {
+          // Select all <code> elements
+          const codeElements = document.querySelectorAll('code');
+          // Loop through each <code> element and add the 'bablic-exclude' attribute
+          codeElements.forEach(codeElement => {
+              codeElement.setAttribute('bablic-exclude', '');
+          });
+      });
+  </script>  
   </body>
 </html>

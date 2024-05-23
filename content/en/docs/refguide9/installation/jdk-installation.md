@@ -25,4 +25,4 @@ After downloading execute the downloaded installation executable and follow the 
 
 ## 3 Configuring Studio Pro
 
-After the JDK is installed you can configure it in Studio Pro in the [Preferences](/refguide/preferences-dialog/#jdk).
+After the JDK is installed you can configure it in Studio Pro in the [Preferences](/refguide9/preferences-dialog/#jdk).

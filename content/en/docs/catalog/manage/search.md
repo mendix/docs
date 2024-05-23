@@ -292,7 +292,7 @@ Enter a search string in the **Search** area with a minimum of 3 alphanumeric ch
 You can filter search results by: 
 * Environment type (the **Production** environment filter is active by default)
 * Technology
-* [CRUD](/catalog/write-data/#view-capabilities) (Creatable, Readable, Updatable, or Deletable) capabilities
+* [CRUD](/howto/integration/write-data/) (Creatable, Readable, Updatable, or Deletable) capabilities
 * Ownership
 
 In the **Filter** dialog box, check the filters you want to include in your search, then click **Apply**. The search results will only display results in the selected filters.

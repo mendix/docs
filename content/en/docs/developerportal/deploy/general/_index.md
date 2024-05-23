@@ -30,6 +30,10 @@ To deploy an app to the cloud, you first have to build a project model (MDA). Th
 
 The time it takes to build your model depends on the complexity of the model and the number and size of the files held in the Team Server repository that is used to build the model.
 
+{{% alert color="info" %}}
+Starting September 1, 2024, your app will need to run Mendix version 8 or above to build a deployment package on the Mendix platform. This applies to all cloud deployment models, including Mendix Cloud, Mendix Cloud Dedicated, Private Cloud, and SAP Cloud. If your app runs on version 7 or below, you will still be able to build a local deployment package from Studio Pro.
+{{% /alert %}}
+
 ## 3 Managing Your Deployed Apps
 
 For many of the platforms to which a Mendix app can be deployed, the following pages in the Developer Portal let you deploy and manage your app:

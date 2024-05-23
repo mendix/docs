@@ -35,4 +35,8 @@ Authorization: MxToken 7LJE…vk
 
 ## 3 API Reference
 
+{{% alert color="warning" %}}
+You cannot call endpoints in the Swagger UI below on this page.
+{{% /alert %}}
+
 {{< swaggerui-disable-try-it-out src="/openapi-spec/projects-v2.yaml"  >}}

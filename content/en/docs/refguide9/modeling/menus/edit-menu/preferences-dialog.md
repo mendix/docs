@@ -43,11 +43,11 @@ When **Highlight shown errors and warnings in the editor** is checked, the error
 
 ### 2.3 Deployment
 
-#### 2.3.1 JDK directory {#jdk-directory}
+#### 2.3.1 JDK directory {#jdk}
 
-This is the directory in which the Java Development Kit (JDK) is located on the computer on which you deploy the application. Usually, the correct directory is located automatically.
+Here the directories of the Java Development Kit (JDK) for each supported Java version can be selected. These JDKs are used when you locally deploy an application. Usually, the correct directories are located automatically.
 
-The JDK is necessary to run Mendix applications, because the Mendix Runtime is written in Java.
+A JDK is necessary to run Mendix applications, because the Mendix Runtime runs on the Java Virtual Machine (JVM).
 
 #### 2.3.2 Enable Run Optimizations
 

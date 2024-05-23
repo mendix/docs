@@ -5,10 +5,6 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/published-app-services.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 {{% alert color="info" %}}
@@ -19,7 +15,7 @@ An app service can be created via **File** > **New Document**.
 
 Names of published app service documents must be unique (also with regard to published web service).
 
-{{< figure src="/attachments/refguide8/modeling/integration/published-app-services/16843911.png" >}}
+{{< figure src="/attachments/refguide8/modeling/integration/published-app-services/16843911.png" class="no-border" >}}
 
 ## 2 Create Version
 

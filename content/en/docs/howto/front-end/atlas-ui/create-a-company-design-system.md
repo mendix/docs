@@ -9,7 +9,9 @@ tags: ["Atlas", "UI", "UX", "user experience"]
 
 Mendix is all about enabling developers. Within apps developers can be enabled by using a design system that allows them to quickly build consistent and coherent interfaces in line with the company brand. Atlas 3 comes with a default design system which can be used to build your own design system. For more information, see the [Atlas Design System](https://atlasdesignsystem.mendixcloud.com/) website.
 
-Note that in this document we use the term design system, but one could also consider this a UI Kit, depending on how it is used and implemented.
+{{% alert color="info" %}}
+In this document, the term "design system" is used, but this can also be considered a UI Kit, depending on how it is used and implemented.
+{{% /alert %}}
 
 A design system is the single source of truth and contains all the elements that a team needs to design, realize and develop a product. The design system includes the styling (for example colors, fonts, spacing, images), principles, best practices, components and patterns (widgets, page templates, building blocks and design properties).
 
@@ -39,4 +41,4 @@ You can easily test your theme with the already defined pages. For new layouts, 
 
 ## 6 Sharing the Theme Module
 
-You can publish the theme module as a separate module in the private market place or create a new company starter app that contains the theme module as discussed. When there are changes to the theme module, we recommend updating both so that new apps get the latest version and the existing app can update its theme.
+You can publish the theme module as a separate module in the private market place or create a new company starter app that contains the theme module as discussed. When there are changes to the theme module, Mendix recommends updating both so that new apps get the latest version and the existing app can update its theme.

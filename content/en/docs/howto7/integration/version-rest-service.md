@@ -1,7 +1,7 @@
 ---
 title: "Version a REST Service"
 url: /howto7/integration/version-rest-service/
-category: "Integration"
+
 weight: 11
 description: "Describes the best practices for versioning REST services in Mendix"
 tags: ["rest", "rest service", "version", "integration"]
@@ -24,7 +24,7 @@ Give each service a version number following the `MAJOR.MINOR.PATCH` format:
 * A service should get a new `MINOR` version when you add functionality that is backwards-compatible (such as adding an operation)
 * A service may get a new `PATCH` version when you make a bug fix that is backwards compatible
 
-To make versioning more explicit in your model, we suggest creating a folder for each service. Call it *ServiceName_Version*. Store all microflows, mappings, and message definitions that are used in the service in that folder.
+To make versioning more explicit in your model, Mendix suggests creating a folder for each service. Call it *ServiceName_Version*. Store all microflows, mappings, and message definitions that are used in the service in that folder.
 
 After you have published a service and users are using it, it is not advisable to change it anymore. 
 

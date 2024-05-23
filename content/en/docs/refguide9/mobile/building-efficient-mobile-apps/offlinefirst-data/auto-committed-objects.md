@@ -19,11 +19,11 @@ Offline-first apps do not have an auto-commit logic. When you commit an object t
 
 Here is an example domain model that showcases this situation:
 
-{{< figure src="/attachments/refguide9/mobile/offline-first/example-domain-model.png" width="1242px" alt="Example domain model with an Customer and Order entity, connected by an one-to-many association which indicates a Customer can have multiple Orders">}}
+{{< figure src="/attachments/refguide9/mobile/offline-first/example-domain-model.png" width="1242px" alt="Example domain model with an Customer and Order entity, connected by an one-to-many association which indicates a Customer can have multiple Orders" class="no-border" >}}
 
 To continue the example, here is the related nanoflow:
 
-{{< figure src="/attachments/refguide9/mobile/offline-first/flow-creating-invalid-customer-reference.png" width="1508px" alt="A nanoflow creating a Customer and an Order, associating them, and only committing the Order instance">}}
+{{< figure src="/attachments/refguide9/mobile/offline-first/flow-creating-invalid-customer-reference.png" width="1508px" alt="A nanoflow creating a Customer and an Order, associating them, and only committing the Order instance" class="no-border" >}}
 
 The example above saves the `$NewOrder` object to the local database, including the association value referencing the uncommitted `$NewCustomer` object. Since the `$NewCustomer` is not yet committed, however, the reference is invalid. To solve this issue, the nanoflow must commit the `$NewCustomer` object.
 
@@ -51,7 +51,7 @@ Even though an offline-first app always works against the local database, it can
 
 An offline-first app can call microflows on the runtime, creating auto-committed objects. See the following example:
 
-{{< figure src="/attachments/refguide9/mobile/offline-first/flow-creating-invalid-customer-reference.png" width="1508px" alt="A microflow creating a Customer and an Order, associating them, and only committing the Order instance">}}
+{{< figure src="/attachments/refguide9/mobile/offline-first/flow-creating-invalid-customer-reference.png" width="1508px" alt="A microflow creating a Customer and an Order, associating them, and only committing the Order instance" class="no-border" >}}
 
 In the example microflow above, the commit action of the `$Order` object will auto-commit the `$Customer` object.
 
@@ -65,7 +65,7 @@ During synchronization, the Mendix Runtime may create new objects and commit/del
 
 A more complex way to create auto-committed objects is when the synchronization of an object fails due to an error, but others succeed. See this example nanoflow:
 
-{{< figure src="/attachments/refguide9/mobile/offline-first/nanoflow-causing-auto-committed-object.png" width="711px" alt="A nanoflow creating an invalid Customer object, creating a valid Order object associated with the new Customer object, and synchronizing them">}}
+{{< figure src="/attachments/refguide9/mobile/offline-first/nanoflow-causing-auto-committed-object.png" width="711px" alt="A nanoflow creating an invalid Customer object, creating a valid Order object associated with the new Customer object, and synchronizing them" class="no-border" >}}
 
 Assume the `$NewCustomer` object is invalid due to a missing required attribute value; therefore, the runtime cannot synchronize it. Here is what happens in the Mendix Runtime:
 
@@ -144,6 +144,6 @@ Auto-committed objects created inside microflows that are called from a nanoflow
 
 ## 6 Customizing the Auto-Commit Handling Behavior
 
-A custom runtime setting (`com.mendix.offline.DeleteAutoCommittedObjectsAfterSync`) is available to disable deleting the auto-committed objects created during synchronization. This setting can be used in apps from Mendix Studio Pro v9.18 and above.
+A custom runtime setting (`com.mendix.offline.DeleteAutoCommittedObjectsAfterSync`) is available to disable deleting the auto-committed objects created during synchronization. This setting can be used in apps from Mendix Studio Pro 9.18 and above.
 
 This setting is intended for offline-first apps created in Mendix 9.17 and below to keep the previous behavior. Disabling this setting for new applications is not recommended. For details on changing this setting, see [Advanced Custom Settings in Mendix Runtime](/refguide9/tricky-custom-runtime-settings/#general-settings)

@@ -27,7 +27,7 @@ In this section you will learn to show a page when a user taps a notification.
 
 1. Drag a **Notifications** widget onto your native home page. 
 
-    {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-action/notif-widget.png" alt="notifications widget"   width="400"  >}}
+    {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-action/notif-widget.png" alt="notifications widget"   width="400"  class="no-border" >}}
 
 2. Double-click the widget.
 3. Click **Actions** > **New**. 
@@ -40,11 +40,11 @@ In this section you will learn to show a page when a user taps a notification.
 10. Drag an **Open page button** widget onto **NotifPage**.
 11. When prompted, click your **Home_Native** page:
 
-    {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-action/home-native-select.png" alt="click home page"   width="400"  >}}
+    {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-action/home-native-select.png" alt="click home page"   width="400"  class="no-border" >}}
 
 12. Click **Select**. Now you have a button which will bring you back to your home screen when you are testing:
 
-    {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-action/nav-button.png" alt="click home page" >}}
+    {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-action/nav-button.png" alt="click home page" class="no-border" >}}
 
 13. Navigate back to your **ACT_CreateAndSendNotification** nanoflow. 
 
@@ -52,21 +52,21 @@ In **ACT_CreateAndSendNotification** you will set up the logic for tapping a not
 
 1. Double-click your **Display Notification** activity:
 
-    {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-action/set-action-name-display.png" alt="click display notification" >}}
+    {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-action/set-action-name-display.png" alt="click display notification" class="no-border" >}}
 
 2. Click **Action Name** > **Edit** 
 
-    {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-action/add-action-name.png" alt="edit action name"   width="500"  >}}
+    {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-action/add-action-name.png" alt="edit action name"   width="500"  class="no-border" >}}
 
 3. Type `'show_page'` into the expression field:
 
-    {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-action/show-page-exp.png" alt="show page expression"   width="400"  >}}
+    {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-action/show-page-exp.png" alt="show page expression"   width="400"  class="no-border" >}}
 
 4. Click the **OK** buttons until you are back at your nanoflow.
 
 Great job setting up your notification. Now you can test it:
 
-1. Click **Run Locally** to update your app.
+1. Click **Run Locally** ({{% icon name="controls-play" %}}) to update your app.
 2. Start the app on your mobile device.
 3. Tap your **Send notification** button.
 4. Tap the notification to navigate to the page you selected.

@@ -6,10 +6,6 @@ description: "The parameters which are passed to the custom authentication micro
 tags: ["published REST", "custom authentication", "microflow", "parameters", "arguments", "query", "header"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/published-rest-authentication-parameter.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 The custom authentication microflow of a published REST service is executed whenever a client calls one of the operation. The client's requests contains headers and may contain query parameters, which can be passed to the authentication microflow. 

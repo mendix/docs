@@ -9,13 +9,13 @@ With this dialog box, you can create a deployment package. A deployment package 
 
 To open the **Create Deployment Package** dialog box, go to **Project > Create Deployment Package**.
 
-{{< figure src="/attachments/refguide7/desktop-modeler/dialogs/create-deployment-package-dialog/create-deployment-package-dialog.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/dialogs/create-deployment-package-dialog/create-deployment-package-dialog.png" class="no-border" >}}
 
 ## 2 Versioned
 
 If you select **Yes** for **Versioned**, a versioned deployment package is built from a fresh download of a specific revision in the Team Server. This means that you can always trace its origin and recreate it.
 
-If you select **No** for **Versioned**, an unversioned deployment package will be built based on your local project on disk. An unversioned deployment package cannot be traced back to a specific revision. Therefore, we recommend that you create versioned deployment packages unless you have very good reasons.
+If you select **No** for **Versioned**, an unversioned deployment package will be built based on your local project on disk. An unversioned deployment package cannot be traced back to a specific revision. Therefore, Mendix recommends creating versioned deployment packages unless you have very good reasons.
 
 ## 3 Development Line (for Versioned)
 

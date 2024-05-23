@@ -5,10 +5,6 @@ weight: 10
 tags: ["studio pro", "page", "properties"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/page-properties.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 This document describes page properties. For details on what pages are for and what kind of widgets can be placed on them, see [Pages](/refguide8/pages/).
@@ -17,7 +13,7 @@ This document describes page properties. For details on what pages are for and w
 
 An example of page properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/pages/page/page-properties/page-properties.png" alt="Page Properties"   width="250"  >}}
+{{< figure src="/attachments/refguide8/modeling/pages/page/page-properties/page-properties.png" alt="Page Properties"   width="250"  class="no-border" >}}
 
 Page properties consist of the following sections:
 

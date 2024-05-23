@@ -1,7 +1,8 @@
 ---
 title: "OQL Select Clause"
 url: /refguide/oql-select-clause/
-tags: ["studio pro"]
+weight: 10
+tags: ["oql", "studio pro"]
 ---
 
 ## 1 Description
@@ -12,7 +13,7 @@ The `SELECT` clause specifies which entity attributes or other specified data mu
 
 The syntax is as follows:
 
-```sql
+```sql {linenos=false}
 SELECT [ DISTINCT ]
 	{
 			*
@@ -47,7 +48,7 @@ SELECT "Sales.Order".* FROM "Sales.Order"
 
 ### 2.4 expression
 
-`expression` is either a constant, a function or any combination of attribute names, constants, and functions connected by operator(s) or a subquery. When you add more expressions, place a comma between each expression.
+`expression` is either a constant, a function or any combination of attribute names, constants, and functions connected by operator (or operators) or a subquery. When you add more expressions, place a comma between each expression.
 
 ```sql {linenos=false}
 SELECT Name AS CustomerName, LastName AS CustomerLastName, Birthday, Category FROM Sales.Customer

@@ -1,6 +1,7 @@
 ---
 title: "Parse and Format Float Function Calls"
 url: /refguide7/parse-and-format-float-function-calls/
+canonical_url: "https://docs.mendix.com/refguide/parse-and-format-decimal-function-calls/"
 ---
 
 {{% alert color="warning" %}}
@@ -9,7 +10,7 @@ These functions are deprecated together with the Float type. Use the high-precis
 
 {{% /alert %}}
 
-See [http://docs.oracle.com/javase/7/docs/api/java/text/DecimalFormat.html](http://docs.oracle.com/javase/7/docs/api/java/text/DecimalFormat.html) for all pattern possibilities.
+See [Class DecimalFormat](https://docs.oracle.com/javase/7/docs/api/java/text/DecimalFormat.html) for all pattern possibilities.
 
 ## parseFloat
 

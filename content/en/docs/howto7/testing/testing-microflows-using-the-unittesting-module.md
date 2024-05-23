@@ -2,7 +2,7 @@
 title: "Test Microflows Using the Unit Testing Module"
 linktitle: "Test Microflows Using Unit Test Module"
 url: /howto7/testing/testing-microflows-using-the-unittesting-module/
-category: "Testing"
+
 weight: 10
 tags: ["test", "testing", "microflow", "unittesting"]
 ---
@@ -42,16 +42,16 @@ In this chapter you will set up the unit testing module and run the example test
 4. Download the [Object Handling](/appstore/modules/object-handling/) module.
 5. Open the **Settings** of the project.
 
-    {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/18580371.png" >}}
+    {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/18580371.png" class="no-border" >}}
 
 6. Click the **Runtime** tab.
 7. Click the **Select** button to select an after startup microflow.
 
-    {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/18580370.png" >}}
+    {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/18580370.png" class="no-border" >}}
 
 8. Select the microflow **Startup** which can be found in the **USE ME folder of the UnitTesting module**.
 
-    {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/18580369.png" >}}
+    {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/18580369.png" class="no-border" >}}
 
 9. Click **OK**.
 10. Open the **Navigation** of the project.
@@ -59,36 +59,36 @@ In this chapter you will set up the unit testing module and run the example test
 12. Enter *UnitTestOverview* in the **Caption** field.
 13. Select **Call a microflow** for the **On click** action, and then select the **UnitTestOverview** microflow:
 
-    {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/18580363.png" >}}
+    {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/18580363.png" class="no-border" >}}
 
 14. Click **OK**.
 
-    {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/18580362.png" >}}
+    {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/18580362.png" class="no-border" >}}
 
 15. Run the project locally.
 16. Go to `http://localhost:8080/index.html`.
 17. Click on **UnitTestOverview** in the navigation.
 
-    {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/18580341.png" >}}
+    {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/18580341.png" class="no-border" >}}
 
-    At the left side 2 buttons are shown. When you click the Run all button, all unit tests will be executed. When you click the Reset button, the status of all tests will change to not executed (question mark icon). Beneath the buttons all modules which contains unit tests are shown. In this case UnitTesting is the only module which contains unit tests. When you click UnitTesting, all unit tests of this module are shown.
+    At the left side 2 buttons are shown. When you click the **Run all** button, all unit tests will be executed. When you click the **Reset** button, the status of all tests will change to not executed (question mark icon). Beneath the buttons all modules which contains unit tests are shown. In this case UnitTesting is the only module which contains unit tests. When you click UnitTesting, all unit tests of this module are shown.
     If you want to save all changes made in the microflow to the database, you need to uncheck the checkbox 'Rollback microflow tests after execution'. Keep the checkbox checked if you want to rollback all changes.
-    At the right side the unit tests of the selected module are shown. In this example five unit tests are shown. When you click the Run all button, all unit tests of the selected module will be executed. When you click the play button next to a unit test, only that unit test will be executed.
-18. Click on the play button of **UnitTesting.Test_ValidUnitTest**.
+    At the right side the unit tests of the selected module are shown. In this example five unit tests are shown. When you click the **Run all** button, all unit tests of the selected module will be executed. When you click **Run** ({{% icon name="controls-play" %}}) next to a unit test, only that unit test will be executed.
+18. Click **Run** on **UnitTesting.Test_ValidUnitTest**.
 
-    {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/18580359.png" >}}
+    {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/18580359.png" class="no-border" >}}
 
     The color of the testcase will change to green if it passed.
 
-    {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/18580358.png" >}}
+    {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/18580358.png" class="no-border" >}}
 
     And to red if the test case fails.
 
-    {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/18580357.png" >}}
+    {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/18580357.png" class="no-border" >}}
 
 19. Double click **UnitTesting.TestValidUnitTest**.
 
-    {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/18580340.png" >}}
+    {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/18580340.png" class="no-border" >}}
 
     In this overview you will see the date and time of the last run, the result (success or failed), the latest, reported step and the result message.
 
@@ -100,16 +100,16 @@ In this chapter you will learn how to create a microflow test. To create a new m
 
 1. Create a new enumeration **Level** with three enumeration values; **Junior**, **Medior** and **Senior**.
 
-    {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/18580356.png" >}}
+    {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/18580356.png" class="no-border" >}}
 
 2. Open the Domain Model of **MyFirstModule**.
 3. Create an entity **Employee** with two attributes, **Name** (String(200)) and **Level** (Enumeration 'Level').
 
-    {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/18580355.png" >}}
+    {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/18580355.png" class="no-border" >}}
 
 4. Create a microflow called **Promote** that looks like this:
 
-    {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/promote.jpg" >}}
+    {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/promote.jpg" class="no-border" >}}
 
 ### 3.2 Creating a Unit Test
 
@@ -124,7 +124,7 @@ In this chapter you will learn how to create a microflow test. To create a new m
 
 7. Enter *John* for the **Value** of **Name**.
 
-    {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/18580353.png" >}}
+    {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/18580353.png" class="no-border" >}}
 
 8. Click **OK**.
 
@@ -132,7 +132,7 @@ In this chapter you will learn how to create a microflow test. To create a new m
 
 10. Select the **Promote** microflow.
 
-    {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/18580352.png" >}}
+    {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/18580352.png" class="no-border" >}}
 
 11. Click **OK**.
 
@@ -142,7 +142,7 @@ In this chapter you will learn how to create a microflow test. To create a new m
 
 14. Set the argument of parameter **ValueToAssert** to `$NewEmployee/Level = MyFirstModule.Level.Junior`.
 
-    {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/18580344.png" >}}
+    {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/18580344.png" class="no-border" >}}
 
 15. Click **OK**.
 
@@ -174,15 +174,15 @@ In this chapter you will learn how to create a microflow test. To create a new m
 
 29. The microflow should look like the model below:
 
-    {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/promotetojunior.jpg" >}}
+    {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/promotetojunior.jpg" class="no-border" >}}
 
 30. Create three more test microflows as shown below:
 
-    {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/promotetomedior.jpg" >}}
+    {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/promotetomedior.jpg" class="no-border" >}}
 
-    {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/promotetosenior.jpg" >}}
+    {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/promotetosenior.jpg" class="no-border" >}}
 
-    {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/stillsenior.jpg" >}}
+    {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/stillsenior.jpg" class="no-border" >}}
 
 31. Run the project locally.
 
@@ -190,17 +190,17 @@ In this chapter you will learn how to create a microflow test. To create a new m
 
 33. Click on **UnitTestOverview** in the navigation. **MyFirstModule** will be shown in the list with modules that contain one or more testcases.
 
-    {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/18580348.png" >}}
+    {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/18580348.png" class="no-border" >}}
 
 34. Click on **MyFirstModule**. All testcases of module MyFirstModule will be shown.
 
-    {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/18580347.png" >}}
+    {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/18580347.png" class="no-border" >}}
 
 35. Check the checkbox **Rollback microflow tests after execution**.
 
 36. Click on **Run all**. All test cases should pass.
 
-    {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/18580346.png" >}}
+    {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/18580346.png" class="no-border" >}}
 
 Congratulations! You created your first unit tests using the UnitTesting module.
 

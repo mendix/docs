@@ -1,6 +1,7 @@
 ---
 title: "String Function Calls"
 url: /refguide7/string-function-calls/
+canonical_url: "https://docs.mendix.com/refguide/string-function-calls/"
 description: "Describes the functions for converting and inspecting strings in Mendix."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -122,10 +123,10 @@ returns:
 'my'
 ```
 
-If this third parameter is too big, the function will throw an error saying it is out of range, so make sure to limit it. This is an example with use of the length function:
+If this third parameter is too big, the function will throw an error saying it is out of range. To prevent the value of the third parameter from getting out of range, you can set a limit to the third parameter, for instance, using the `min` and `length` functions:
 
-```java
-'substring('thisismystring', 0, min(length('thisismystring') - 1, 20))'
+```java {linenos=false}
+substring('thisismystring', 0, min(length('thisismystring'), 20))
 ```
 
 ## 6 find

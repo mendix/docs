@@ -1,7 +1,7 @@
 ---
 title: "Team Server"
 url: /developerportal/general/team-server/
-category: "Collaboration"
+
 weight: 12
 description: "Describes the overview of Team Server revisions and commits."
 tags: ["Studio Pro", "Team Server", "Developer Portal", "commit", "branch"]
@@ -27,22 +27,30 @@ In the **Versioning with Git** section, Scrum Masters can migrate apps from SVN 
 
 ## 3 Team Server URL
 
-The **Team Server URL** can be used to directly access your app content. On SVN you can see all the files and branches of your app. The URL can have the following form:
+The **Team Server URL** can be used to manually access the repo (using the Git/SVN command line). For SVN you can also browse URLs using the browser. 
+
+The URL can have the following form:
 
 * `https://git.api.mendix.com/<your AppID>.git` if it is a Git-enabled app
 * `https://teamserver.sprintr.com/<your AppID>/` if it is an SVN-enabled app that you access using your Mendix credentials
-* `https://svn.home.mendix.com/<your AppID>/` if it is an SVN-enabled app that you access using a personal access token (PAT) — this will be the case, for example, if your company has enabled [BYOIDP SSO](/developerportal/control-center/set-up-sso-byoidp/)
+* `https://svn.home.mendix.com/<your AppID>/` if it is an SVN-enabled app that you access using a personal access token (PAT) — this will be the case, for example, if your company has enabled [BYOIDP SSO](/control-center/security/set-up-sso-byoidp/)
 
-If you are connecting to Git, or connecting to SVN using a PAT, you need to create a PAT as described in the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section of *Mendix Profile*. The PAT must include the following scopes:
+{{% alert color="info" %}}
+You may have to add the final slash (`/`) manually to follow the link. You may also be asked to re-enter your Mendix credentials. Single sign-on (SSO) is not yet implemented for the Team Server. 
+{{% /alert %}}
+
+If you are connecting to Git, or connecting to SVN using a PAT, you need to create a PAT as described in the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section of *Mendix Profile*. The PAT must include the following scopes:
 
 * `mx:modelrepository:repo:write`, `mx:modelrepository:repo:read`, and/or `mx:modelrepository:write` under *Model Repository* – for accessing the Git Team Server
 * `mx:modelrepository:write` under *Model Repository* – for accessing the SVN Team Server
 
 When connecting, your username is your Mendix account username, and your password is the PAT you created. When connecting to Git, you can also use the word *pat* as your username.
 
-{{% alert color="info" %}}
-You may have to add the final slash (`/`) manually to follow the link. You may also be asked to re-enter your Mendix credentials. Single sign-on (SSO) is not yet implemented for the Team Server. 
-{{% /alert %}}
+To clone/checkout your repository using the command line, you must include your PAT as part of the command.
+
+For Git, the command has the form `git clone https://pat:{USERPAT}@git.api.mendix.com/{APPID}.git`, where `{USERPAT}` is your PAT.
+
+For SVN, the command has the form `svn checkout --revision "{REVISION}" --username "{USERNAME}" --password "{USERPAT}" https://svn.home.mendix.com/{APPID}/branches/{BRANCH}`
 
 ## 4 Revision History {#revision-history}
 
@@ -63,7 +71,7 @@ When you click **Details** for a revision, you can see the stories related to th
 
 Related stories will only appear if you select them in the **Commit** dialog box of Mendix Studio Pro when committing:
 
-{{< figure src="/attachments/developerportal/general/team-server/commit-story.png" >}}
+{{< figure src="/attachments/developerportal/general/team-server/commit-story.png" class="no-border" >}}
 
 ## 6 Read More
 

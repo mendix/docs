@@ -1,7 +1,7 @@
 ---
 title: "Database Replication"
 url: /appstore/modules/database-replication/
-category: "Modules"
+
 description: "Describes the configuration and usage of the Database Replication module, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "database replication", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -200,8 +200,8 @@ There are a number of settings that control the behavior of the table mapping as
 
 You can put a constraint on the rows that are imported from the database. Here, you can insert a custom SQL constraint that will be appended as a `WHERE` clause to all queries. This means that any database rows that do not satisfy this constraint will be ignored by the replication module.
 
-{{% alert color="info" %}}
-⚠ This feature is deprecated and might be removed in a future version. We recommend configuring constraints using [import calls](#import-call) instead.
+{{% alert color="warning" %}}
+This feature is deprecated and might be removed in a future version. Mendix recommends configuring constraints using [import calls](#import-call) instead.
 {{% /alert %}}
 
 ### 7.2 Print Statistics and Not Found Messages

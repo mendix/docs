@@ -6,10 +6,6 @@ tags: ["studio pro", "logging activity", "logging activities", "log message"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/log-message.pdf).
-{{% /alert %}}
-
 {{% alert color="warning" %}}
 This activity can be used in both **Microflows** and **Nanoflows**.
 {{% /alert %}}
@@ -18,13 +14,13 @@ This activity can be used in both **Microflows** and **Nanoflows**.
 
 With the **Log message** activity you can create messages that appear in the log of your Mendix application:
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/activities/log-message/log-message.png" alt="Log Message" >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/log-message/log-message.png" alt="Log Message" class="no-border" >}}
 
 ## 2 Properties
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/activities/log-message/log-message-properties.png" alt="Log Message Properties" >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/log-message/log-message-properties.png" alt="Log Message Properties" class="no-border" >}}
 
 The **Log message** properties pane consists of the following sections:
 
@@ -48,9 +44,9 @@ The log level defines the severity of the log message. In the [Studio Pro Consol
 | Trace |   | Used for detailed execution traces. |
 | Debug |   | Used to debug execution. |
 | Info  *(default)*  |   | Used to log informative messages. |
-| Warning | {{< figure src="/attachments/refguide8/modeling/application-logic/activities/log-message/warning.png" alt="Warning"   width="15%"  >}} | Used to log warnings. These messages appear in orange. |{{< figure src="/attachments/refguide8/modeling/application-logic/activities/log-message/warning.png" alt="Warning"   width="15%"  >}}{{< figure src="/attachments/refguide8/modeling/application-logic/activities/log-message/warning.png" alt="Warning"   width="15%"  >}}
-| Error | {{< figure src="/attachments/refguide8/modeling/application-logic/activities/log-message/error.png" alt="Error" width="15%" >}} | Used to log error messages. These messages appear in red. |
-| Critical | {{< figure src="/attachments/refguide8/modeling/application-logic/activities/log-message/critical-error.png" alt="Critical Error" width="15%" >}} | Used to log critical errors. These messages appear in white on red. |
+| Warning | {{< figure src="/attachments/refguide8/modeling/application-logic/activities/log-message/warning.png" alt="Warning"   width="15%"  class="no-border" >}} | Used to log warnings. These messages appear in orange. |
+| Error | {{< figure src="/attachments/refguide8/modeling/application-logic/activities/log-message/error.png" alt="Error" width="15%" class="no-border" >}} | Used to log error messages. These messages appear in red. |
+| Critical | {{< figure src="/attachments/refguide8/modeling/application-logic/activities/log-message/critical-error.png" alt="Critical Error" width="15%" class="no-border" >}} | Used to log critical errors. These messages appear in white on red. |
 
 ### 3.2 Log Node Name {#log-node-name}
 
@@ -82,7 +78,7 @@ With parameters you can customize your message with data specific to the situati
 
 ### 3.5 Include Latest Stack Trace
 
-Defines whether to include the stack trace of the latest error in this log message. In Studio Pro, log messages that include a stack trace are marked with a paperclip icon.
+Defines whether to include the stack trace of the latest error in this log message. In Studio Pro, log messages that include a stack trace are marked with a paperclip icon ({{% icon name="paperclip" %}}).
 
 Double-clicking these log messages shows the stack trace.
 

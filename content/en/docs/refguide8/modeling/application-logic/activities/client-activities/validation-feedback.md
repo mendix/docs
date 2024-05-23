@@ -9,10 +9,6 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/validation-feedback.pdf).
-{{% /alert %}}
-
 {{% alert color="warning" %}}
 This activity can be used in both **Microflows** and **Nanoflows**.
 {{% /alert %}}
@@ -25,13 +21,13 @@ This action is ignored and does not work when a microflow is called from an offl
 
 The **Validation feedback** activity does a validation check, and if this check fails, it shows a red message to the end-user below the widget that displays the attribute or association which failed the validation. For example, if the customer did not verify their email, a message will be displayed that the customer should verify it before they can log in:
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/activities/client-activities/validation-feedback/validation-feedback.png" alt="Validation Feedback"   width="200"  >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/client-activities/validation-feedback/validation-feedback.png" alt="Validation Feedback"   width="200"  class="no-border" >}}
 
 ## 2 Properties
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/activities/client-activities/validation-feedback/validation-feedback-properties.png" alt="Validation Feedback Properties" >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/client-activities/validation-feedback/validation-feedback-properties.png" alt="Validation Feedback Properties" class="no-border" >}}
 
 The **Validation feedback** properties pane consists of the following sections:
 

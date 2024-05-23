@@ -6,10 +6,6 @@ tags: ["studio pro", "regular expressions", "regular expression"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/regular-expressions.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 A regular expression resource document is used in the [validation rules](/refguide8/validation-rules/) of an entity to describe a set of criteria that a string must match.
@@ -96,4 +92,4 @@ The following quantifiers can be used:
 ## 4 Read More
 
 * [Class Pattern](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html#matches-java.lang.String-java.lang.CharSequence-) – information from the Oracle Java SE documentation
-* [Using Regular Expressions in Java](http://www.regular-expressions.info/java.html)  – information about regular expressions in Java from the *Regular-Expressions.info* website
+* [Using Regular Expressions in Java](https://www.regular-expressions.info/java.html)  – information about regular expressions in Java from the *Regular-Expressions.info* website

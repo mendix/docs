@@ -20,7 +20,7 @@ Version Control allows you to manage your app development in two ways:
 Version control in Mendix is built on top of either [Apache Subversion](https://subversion.apache.org/) or [Git](https://git-scm.com). The concepts will be familiar to seasoned users of these version control systems (VCS). Mendix simplifies the VCS commands by building them into Studio Pro and the Developer Portal.
 
 {{% alert color="info" %}}
-Team Server Git was released for GA in version [9.12.0](/releasenotes/studio-pro/9.12/#team-server-git). BYO (Bring Your Own) Git was in Beta from Mendix [9.6.0](/releasenotes/studio-pro/9.6/#960) and was GA in Mendix [9.24.0](/releasenotes/studio-pro/9.24/#private-git). For more details, see [Working with Git On-Premises Version Control Server](/refguide9/on-premises-git/) in the *Studio Pro Guide*. 
+Team Server Git was released for GA in version [9.12.0](/releasenotes/studio-pro/9.12/#team-server-git). BYO (Bring Your Own) Git was in beta from Mendix [9.6.0](/releasenotes/studio-pro/9.6/#960) and was GA in Mendix [9.24.0](/releasenotes/studio-pro/9.24/#private-git). For more details, see [Working with Git On-Premises Version Control Server](/refguide9/on-premises-git/) in the *Studio Pro Guide*. 
 {{% /alert %}}
 
 ## 2 Concepts {#concepts}
@@ -117,7 +117,7 @@ This is done using [Branch Lines](#branch-line).
 
 All apps are developed along the main line. Here you have all development happening along a single line, with all changes built upon the previous revision:
 
-{{< figure src="/attachments/refguide9/version-control/image7.png" >}}
+{{< figure src="/attachments/refguide9/version-control/image7.png" class="no-border" >}}
 
 ### 3.2 Branch Line
 
@@ -129,7 +129,7 @@ In Mendix each commit within a [repository](#repository) is given a unique ident
 In SVN, the unique identifiers are numbers. As each commit has a unique number in this case, version numbers given to revisions along any chosen branch line may not be consecutive.
 {{% /alert %}}
 
-{{< figure src="/attachments/refguide9/version-control/image8.png" >}}
+{{< figure src="/attachments/refguide9/version-control/image8.png" class="no-border" >}}
 
 ### 3.3 Merging Branches {#merging-branches}
 
@@ -142,7 +142,7 @@ On the other hand, you may want to add the features from one branch line into an
 
 You can merge a specific revision of a branch line into your current [working copy](#working-copy). If, for example, you were working on the main line updated to revision 6, you can [merge](#merge) revision 5 from another branch line into your working copy. Then you can commit the result to create revision 7. If you want to merge several different committed changes from a branch, you will need to select a range of revisions which includes all the changes.
 
-{{< figure src="/attachments/refguide9/version-control/image9.png" >}}
+{{< figure src="/attachments/refguide9/version-control/image9.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 

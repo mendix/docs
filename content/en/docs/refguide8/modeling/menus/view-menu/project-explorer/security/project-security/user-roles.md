@@ -9,10 +9,6 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/user-roles.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 A user role aggregates a number of access rights on data, forms, and microflows. An end-user of the application is assigned one or more user roles by an administrator, and gets all access rights that these user roles represent.
@@ -25,7 +21,7 @@ End-users of your application only see the user roles and not the module roles.
 
 To access user roles, open **Project Security** > **User roles** tab:
 
-{{< figure src="/attachments/refguide8/modeling/menus/view-menu/project-explorer/security/project-security/user-roles/user-roles-example.png" >}}
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/project-explorer/security/project-security/user-roles/user-roles-example.png" class="no-border" >}}
 
 ## 2 User Role Properties
 
@@ -36,7 +32,7 @@ The user role has the following properties:
 * [General properties](#general)
 * [User management properties](#user-management)
 
-{{< figure src="/attachments/refguide8/modeling/menus/view-menu/project-explorer/security/project-security/user-roles/user-role-properties.png" >}}
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/project-explorer/security/project-security/user-roles/user-role-properties.png" class="no-border" >}}
 
 ### 2.1 General Properties {#general}
 

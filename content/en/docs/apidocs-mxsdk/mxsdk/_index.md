@@ -7,7 +7,7 @@ description: "Presents documentation for Mendix SDKs, including Mendix Platform 
 ---
 
 {{% alert color="warning" %}}
-⚠ Mendix Platform SDK versions below 5.0 are deprecated. They depend on the [Projects API](/apidocs-mxsdk/apidocs/projects-api/) which will be removed early in 2024. A firm date will be communicated once a decision has been made.
+Mendix Platform SDK versions below 5.0 are deprecated. They depend on the [Projects API](/apidocs-mxsdk/apidocs/projects-api/) which will be removed early in 2024. A firm date will be communicated once a decision has been made.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -32,7 +32,7 @@ The [Use Case Examples](/apidocs-mxsdk/mxsdk/sdk-use-cases/) provide examples fr
 
 This document provides the FAQs and troubleshooting information for common error messages.
 
-If you need help with the SDKs, check whether your question is answered in the [SDK FAQ](/apidocs-mxsdk/mxsdk/sdk-faq/). Otherwise, ask your question in the [Mendix Forum](https://forum.mendixcloud.com/). 
+If you need help with the SDKs, check whether your question is answered in the [SDK FAQ](/apidocs-mxsdk/mxsdk/sdk-faq/). Otherwise, ask your question in the [Mendix Community](https://community.mendix.com/). 
 
 ## 5 SDK Reference Guide
 

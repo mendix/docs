@@ -1,7 +1,7 @@
 ---
 title: "Language Selector"
 url: /appstore/widgets/language-selector/
-category: "Widgets"
+
 description: "Describes the configuration and usage of the Language Selector widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "widget", "languageSelector", "group box", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -29,8 +29,8 @@ To configure this widget, follow these steps:
 
 #### 2.1.1 Languages Section
 
-* **Data source** (required) – select a language datasource (we recommend using the **System.Language** entity as your database data source).
-* **Language caption** (required) – add your expression to use for language items (we recommend using the expression *$currentObject/Description*).
+* **Data source** (required) – select a language data source (Mendix recommends using the **System.Language** entity as your database data source)
+* **Language caption** (required) – add your expression to use for language items (Mendix recommends using the expression `$currentObject/Description`)
 
 #### 2.1.2 General Section
 

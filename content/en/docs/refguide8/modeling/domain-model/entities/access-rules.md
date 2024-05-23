@@ -6,10 +6,6 @@ tags: ["domain model", "entity", "access rule", "xpath constraint", "module role
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/access-rules.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 The **access rules** of an entity define what a user is allowed to do with objects of the entity. Users can be allowed to create and/or delete objects, and to view and/or edit member values. A member is an attribute or an association of an entity. Furthermore, the set of objects available for viewing, editing, and removing can be limited by means of an [XPath constraint](/refguide8/xpath-constraints/).
@@ -26,9 +22,9 @@ If the entity has a generalization with access rules defining XPath constraints,
 
 Access rules are defined via entity's **Properties** > **Access rules**, or on the **Access rules** tab of the entity dialog. 
 
-{{< figure src="/attachments/refguide8/modeling/domain-model/entities/access-rules/access-rules-section.png" alt="Access Rules for Entities" >}}
+{{< figure src="/attachments/refguide8/modeling/domain-model/entities/access-rules/access-rules-section.png" alt="Access Rules for Entities" class="no-border" >}}
 
-{{< figure src="/attachments/refguide8/modeling/domain-model/entities/access-rules/access-rules-tab.png" alt="Access Rules for Entities" >}}
+{{< figure src="/attachments/refguide8/modeling/domain-model/entities/access-rules/access-rules-tab.png" alt="Access Rules for Entities" class="no-border" >}}
 
 {{% alert color="info" %}}
 The **Access rules** section is visible only if the [Project Security](/refguide8/project-security/) is set to **Production**.
@@ -36,7 +32,7 @@ The **Access rules** section is visible only if the [Project Security](/refguide
 
 An example of the access rules properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/domain-model/entities/access-rules/access-rules-properties.png" alt="Access Rules for Entities" >}}
+{{< figure src="/attachments/refguide8/modeling/domain-model/entities/access-rules/access-rules-properties.png" alt="Access Rules for Entities" class="no-border" >}}
 
 Access rules properties consist of the following sections:
 
@@ -95,13 +91,13 @@ You cannot set *write* access to attributes which are calculated. This includes 
 
 For example, a customer is allowed to view the discount, but is not allowed to edit it. The access rights for the discount attribute are **Read**.
 
-{{< figure src="/attachments/refguide8/modeling/domain-model/entities/access-rules/access-rule-discount-read.png" >}}
+{{< figure src="/attachments/refguide8/modeling/domain-model/entities/access-rules/access-rule-discount-read.png" class="no-border" >}}
 
 ### 2.4 XPath Constraint Tab {#xpath-constraint}
 
 An [XPath constraint](/refguide8/xpath-constraints/) can be used to constrain the set of objects to which the access rule applies. If the XPath constraint is empty, the rule applies to all objects of the entity.
 
-{{< figure src="/attachments/refguide8/modeling/domain-model/entities/access-rules/access-rule-xpath-tab.png" >}}
+{{< figure src="/attachments/refguide8/modeling/domain-model/entities/access-rules/access-rule-xpath-tab.png" class="no-border" >}}
 
 For example, the **Customer** entity is a specialization of the **User** entity. The **Order** entity is associated to the **Customer** entity.
 
@@ -111,7 +107,7 @@ A logged-in customer is allowed to view personal orders, but is not allowed to v
 [Module.Order_Customer = '[%CurrentUser%]']
 ```
 
-{{< figure src="/attachments/refguide8/modeling/domain-model/entities/access-rules/access-rule-order-xpath.png" >}}
+{{< figure src="/attachments/refguide8/modeling/domain-model/entities/access-rules/access-rule-order-xpath.png" class="no-border" >}}
 
 Because of this XPath constraint, the access rule only applies to orders for which the customer is the currently signed-in user.
 

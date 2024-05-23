@@ -30,7 +30,7 @@ To install APD 3, follow these steps:
 6. Click **Save and generate API key**, then use this key as the value for the **APDAgent.APIKey** constant in step 10 below.
 7. In Studio Pro with your app, import the [Mendix Application Performance Monitor](https://marketplace.mendix.com/link/component/6127/) module from the Mendix Marketplace.
 8. Add the **USE_ME/APDAfterStartup** microflow to your app's **After startup** microflow.
-9. Use the snippet **USE_ME/APDBrowserAgentWidget** in the layout(s) of your app. Please note that it will only be loaded once, regardless of how many times the user opens a page containing the widget.
+9. Use the snippet **USE_ME/APDBrowserAgentWidget** in the layout (or layouts) of your app. Please note that it will only be loaded once, regardless of how many times the user opens a page containing the widget.
 10. Set the value of the **USE_ME/APDAgent.APIKey** constant with the key you generated at step 6 above.
 
 ## 4 Upgrading

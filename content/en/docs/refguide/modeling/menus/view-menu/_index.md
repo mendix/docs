@@ -12,7 +12,7 @@ Studio Pro supports a number of dockable window panes, such as the **Changes** a
 
 Via this menu you can also enable or disable the [full screen mode](#full-screen) or [reset the layout](#reset-layout) of your app to the default.  
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/view-menu.png" alt="View Menu" >}}
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/view-menu.png" alt="View Menu" class="no-border" >}}
 
 ## 2 Layout of Panes {#layout-of-panes}
 
@@ -24,7 +24,7 @@ Note that this section describes the behavior of panes, not the behavior of docu
 
 When you drag a pane, you can see arrows that indicate where you can position this pane. You can position the pane either inside the current pane (arrows grouped together) or make it full-window height or width (individual arrows on the borders). Each position is labelled and explained below:
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/interaction-with-panes.png" >}}
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/interaction-with-panes.png" class="no-border" >}}
 
 1. Within the current *pane* you can position a pane in one of the following ways:
 
@@ -71,7 +71,7 @@ The **Console** pane displays the output of the [Mendix Runtime](/refguide/runti
 
 ### 3.5 Integration {#data-hub}
 
-The [Integration Pane](/refguide/integration-pane/) enables you to browse the [Catalog](/catalog/) and use registered data sources that are available for your organization in your app development. You can add [external entities](/refguide/external-entities/) and [external actions](/refguide/call-external-action/) to your app via this pane and see entities and data sources already consumed in your app. 
+The [Integration pane](/refguide/integration-pane/) enables you to browse the [Catalog](/catalog/) and use registered data sources that are available for your organization in your app development. You can add [external entities](/refguide/external-entities/) and [external actions](/refguide/call-external-action/) to your app via this pane and see entities and data sources already consumed in your app. 
 
 ### 3.6 Documentation
 
@@ -89,7 +89,7 @@ There are two **Find Results** panes. If you lock the results of the first pane,
 
 ### 3.9 Marketplace
 
-For details on using Mendix Marketplace components in your app modeling, see [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/).
+For details on using Mendix Marketplace components in your app modeling, see [Using Marketplace Content](/appstore/overview/use-content/).
 
 ### 3.10 MxAssist Best Practice Bot {#mx-bot}
 

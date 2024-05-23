@@ -11,7 +11,7 @@ Multi-user tasks are tasks that have to be executed by multiple users. Each user
 
 For example, you can assign a review task to multiple users:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/multi-user-task/multi-user-task.jpg" alt="Multi-user Task Example" width="200">}}
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/multi-user-task/multi-user-task.jpg" alt="Multi-user Task Example" width="200" class="no-border" >}}
 
 ## 2 Properties
 
@@ -40,7 +40,7 @@ The **Due date** section properties are described in the table below:
 | Property | Description |
 | --- | --- |
 | None | No due date is set. |
-| Duration | You can set the deadline for the multi-user task with the **Due in** option, which indicates the number of hours, days, or weeks the task is due in. Possible values of the property are the following ones:<br /><ul><li>Hour(s)</li><li>Day(s)</li><li>Week(s)</li> </ul> |
+| Duration | You can set the deadline for the multi-user task with the **Due in** option, which indicates the number of hours, days, or weeks the task is due in. Possible values of the property are the following ones:<br /><ul><li>Hours</li><li>Days</li><li>Weeks</li> </ul> |
 | Expression | You can set a due date for the multi-user task writing an expression. For example, to set a due date to tomorrow, you can use `addDays([%CurrentDateTime%], 1)`. |
 
 ### 2.3 Events Section {#events}
@@ -51,7 +51,7 @@ The **Due date** section properties are described in the table below:
 
 #### 2.4.1 Target Users Using {#target-users}
 
-**Target users using** allows you to manage what users will the task be assigned to. You can filter users using XPath or implement more flexible logic and add several checks using a microflow.
+**Target users using** allows you to manage what users will the task be assigned to. You can filter users using XPath, or implement more flexible logic and add several checks using a microflow.
 
 Possible options of this property are described in the table below:
 
@@ -65,7 +65,7 @@ In case **Target users using** (an XPath or a microflow) results in an empty lis
 
 #### 2.4.2 XPath Constraint
 
-Specifies the expression used to assign the multi-user task. This option is displayed only when the [Target users using](#target-users) is set to **XPath**.
+Specifies the expression used to assign the multi-user task. This option is displayed only when the [Target users using](#target-users) is set to **XPath**. Click **Edit** to edit the [XPath constraint](/refguide/xpath-constraints/).
 
 #### 2.4.3 Microflow
 
@@ -289,7 +289,7 @@ The multi-user task completes as soon as a non-empty outcome is returned, unless
 When all required participants (based on the [Completion condition](#completion-condition)) have completed their task and the microflow still returns an empty value, the workflow is marked as failed. To prevent this from happening, it is suggested to check this in the microflow. For example, when the number of selected outcomes equals to the number of required participants, then a fallback outcome is returned. 
 {{% /alert %}}
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/multi-user-task/microflow-decision-fallback.png" alt="Custom Microflow Decision Method" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/multi-user-task/microflow-decision-fallback.png" alt="Custom Microflow Decision Method" class="no-border" >}}
 
 {{% alert color="warning" %}}
 When a value is returned that is not defined in the [Outcomes](#outcomes), the multi-user task will be marked as failed.
@@ -303,7 +303,7 @@ If the microflow is changed in between deployments, it might return a different 
 
 As an example, consider the trivial case where the quickest participant decides, which basically means choosing the first outcome. This can be achieved using the following microflow:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/multi-user-task/microflow-decision.png" alt="Custom Microflow Decision Method" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/multi-user-task/microflow-decision.png" alt="Custom Microflow Decision Method" class="no-border" >}}
 
 #### 2.5.3 Completion Moment {#completion-moment}
 
@@ -357,7 +357,7 @@ For more information on using parameters, see the [Parameters](#parameters) sect
 
 **Task Description** is stored in the System module on the **UserTask** entity as an attribute and its data can be dynamically displayed in the running app. If you are using the **Workflow Commons** module, the **Task description** is used in page templates.
 
-The **Task description** can contain parameters that are written between braces, e.g. {1}.
+The **Task description** can contain parameters that are written between braces, for example, {1}.
 
 #### 2.8.3 Parameters {#parameters}
 
@@ -368,7 +368,7 @@ To view **Parameters**, click the ellipsis icon next to the **Task name** or **T
 Parameters have the following settings:
 
 * **Index** – an identification number of a parameter
-* **Expression** – an XPath expression that will be displayed
+* **Expression** – an attribute from the context that will be displayed
 
 ##### 2.8.3.1 Adding New Parameters
 
@@ -380,13 +380,13 @@ To add a parameter to the **Task name** or the **Task description**, do the foll
 
 3. In the **Template Parameter (String)** dialog box, specify the expression, and confirm your choice:
 
-   {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/user-task/parameter-example.jpg" alt="Parameter Example" >}}
+   {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/user-task/parameter-example.jpg" alt="Parameter Example" class="no-border" >}}
 
    {{% alert color="info" %}}Make sure that the attribute you use in the expression is of the string type.{{% /alert %}}
 
 4. In the **Template** setting, write the text you would like to display and type **Index** of the parameter you would like to include. For example, you can add a template for the **Task description** specifying the name of the workflow and what the workflow due date is :
 
-   {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/user-task/task-description-example.jpg" alt="Task Description Example" >}}
+   {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/user-task/task-description-example.jpg" alt="Task Description Example" class="no-border" >}}
 
 ##### 2.8.3.2 Performing Other Actions on Parameters
 

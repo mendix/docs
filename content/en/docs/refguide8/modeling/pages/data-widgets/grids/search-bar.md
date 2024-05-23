@@ -13,17 +13,13 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/search-bar.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 The search bar contains search fields that allow the end-user to quickly find the information they need in a [data grid](/refguide8/data-grid/) or [template grid](/refguide8/template-grid/).
 
 To add a search field to the search bar, right-click within the search bar in your data grid and choose **Add search field** > [Type of the search field](#search-field-type). 
 
-{{< figure src="/attachments/refguide8/modeling/pages/data-widgets/grids/search-bar/add-search-field.png" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/data-widgets/grids/search-bar/add-search-field.png" class="no-border" >}}
 
 ## 2 Search Field Types {#search-field-type}
 
@@ -43,7 +39,7 @@ Search field properties depend on the type of the search field.
 
 An example of drop-down search field properties properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/pages/data-widgets/grids/search-bar/search-field-properties.png" alt="Search Field Properties"   width="250"  >}}
+{{< figure src="/attachments/refguide8/modeling/pages/data-widgets/grids/search-bar/search-field-properties.png" alt="Search Field Properties"   width="250"  class="no-border" >}}
 
 Search field properties consist of the following sections:
 

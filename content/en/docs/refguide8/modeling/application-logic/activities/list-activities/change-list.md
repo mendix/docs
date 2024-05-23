@@ -6,10 +6,6 @@ tags: ["studio pro", "List"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/change-list.pdf).
-{{% /alert %}}
-
 {{% alert color="warning" %}}
 This activity can be used in both **Microflows** and **Nanoflows**.
 
@@ -24,7 +20,7 @@ The **Change list** activity allows you to change a list by adding objects to, a
 
 An example of change list properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/activities/list-activities/change-list/change-list-properties.png" alt="change list properties" >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/list-activities/change-list/change-list-properties.png" alt="change list properties" class="no-border" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

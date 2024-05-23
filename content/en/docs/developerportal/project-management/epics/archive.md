@@ -9,8 +9,8 @@ tags: ["Project Management", "Epics", "Sprint", "Archive", "Stories", "Developer
 
 Every time you complete a Sprint, all the stories that are **Done** are archived automatically. You can also archive a story and a swimlane manually by doing the following:
 
-* Click the **...** icon on the upper-right corner of a [story card](/developerportal/project-management/epics/board/#story-card) or the [swimlane](/developerportal/project-management/epics/board/#swimlane) on the **Board** page and then select **Archive**.
-* Click the **...** icon at the end of a [row](/developerportal/project-management/epics/planning/) on the **Planning** page and then select **Archive**.
+* Click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) on the upper-right corner of a [story card](/developerportal/project-management/epics/board/#story-card) or the [swimlane](/developerportal/project-management/epics/board/#swimlane) on the **Board** page and then select **Archive**.
+* Click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) at the end of a [row](/developerportal/project-management/epics/planning/) on the **Planning** page and then select **Archive**.
 
 All the archived stories are moved to the **Archived** page.
 
@@ -28,7 +28,7 @@ The **Archive** page shows all the archived stories.
 
 If a feedback item was linked to your archived story, you will see it with a purple icon:
 
-{{< figure src="/attachments/developerportal/project-management/epics/archive/archive.png" >}}
+{{< figure src="/attachments/developerportal/project-management/epics/archive/archive.png" class="no-border" >}}
 
 On the top of the page, you can search a story in the search box, based on story title, tags, epic name, and story ID.
 

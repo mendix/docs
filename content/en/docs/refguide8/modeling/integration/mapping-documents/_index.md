@@ -5,10 +5,6 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/mapping-documents.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 Mapping documents are used to define how Mendix objects can be converted to and from XML or JSON, according to a specific XML schema or JSON structure. There are two types of mappings: [Import Mappings](/refguide8/import-mappings/) and [Export Mappings](/refguide8/export-mappings/).
@@ -23,7 +19,7 @@ Import mappings are used to define how incoming XML or JSON is converted into Me
 
 This is an example of an import mapping document that maps an **Order** from a web service to a **ReceivedOrder** entity:
 
-{{< figure src="/attachments/refguide8/modeling/integration/mapping-documents/16843933.png" >}}
+{{< figure src="/attachments/refguide8/modeling/integration/mapping-documents/16843933.png" class="no-border" >}}
 
 For more details, see [Import Mappings](/refguide8/import-mappings/).
 
@@ -36,7 +32,7 @@ Export mappings are used to define how Mendix objects can be converted to XML ac
 
 This is an example of an export mapping document:
 
-{{< figure src="/attachments/refguide8/modeling/integration/mapping-documents/16843940.png" >}}
+{{< figure src="/attachments/refguide8/modeling/integration/mapping-documents/16843940.png" class="no-border" >}}
 
 In this example, a **Cheesecake** entity will be passed when the export mapping is called. Subsequently, the **Topping** entities will be fetched by following the **Topping_Cheesecake** association from the passed Cheesecake Mendix object. The result is passed to an XML document or sent to a web service.
 

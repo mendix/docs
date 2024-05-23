@@ -1,20 +1,20 @@
 ---
-title: "Permissions API ⚠"
+title: "Permissions API"
 url: /apidocs-mxsdk/apidocs/permissions-api/
-category: "API Documentation"
 description: "With this API, you can retrieve the user roles of your app users so that you can grant them specific access levels."
-weight: 75
+weight: 85
+deprecated: true
 ---
 
 ## 1 Introduction
 
 {{% alert color="warning" %}}
-⚠ The AppCloudServices module has now been removed from the Mendix Marketplace and this API is therefore deprecated.
+The AppCloudServices module has now been removed from the Mendix Marketplace and this API is therefore deprecated.
 {{% /alert %}}
 
 The Permissions API enables retrieving the [user roles](/refguide/user-roles/) a specific user has in your application. There are several ways in which the roles granted to a user in an application can be changed:
 
-* A user may be granted roles through a group policy for a [group](/developerportal/control-center/#groups) in which they are a member. Group policies define a specific set of user roles to be granted to members of the group to which the policy applies for a specific environment. Group membership can also be changed by the [User Management API](/apidocs-mxsdk/apidocs/user-management-api/) .
+* A user may be granted roles through a group policy for a [group](/control-center/groups/) in which they are a member. Group policies define a specific set of user roles to be granted to members of the group to which the policy applies for a specific environment. Group membership can also be changed by the [User Management API](/apidocs-mxsdk/apidocs/user-management-api/) .
 
 {{% alert color="info" %}}
 
@@ -54,7 +54,7 @@ API Version 1.
 
 List of PermissionsAPI.AppRole objects.
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/permissions-api/18582265.png" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/permissions-api/18582265.png" class="no-border" >}}
 
 ##### 2.1.4.1 AppRole
 

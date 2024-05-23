@@ -11,7 +11,7 @@ There are some minor differences in how Mendix behaves when using an Oracle data
 
 ## 2 Setting Up a User for Mendix
 
-When setting up an integration with an Oracle back end we recommend that you create a user/schema with the appropriate privileges. In Mendix, we use a single user to update the schema-structure (for example, tables and indices) and to execute DML statements. The former is done when Mendix is starting up and synchronizing the model with the storage structure, and the latter is done in normal runtime operations. 
+When setting up an integration with an Oracle back end, Mendix recommends creating a user/schema with the appropriate privileges. Mendix uses a single user to update the schema-structure (for example, tables and indices) and to execute DML statements. The former is done when Mendix is starting up and synchronizing the model with the storage structure, and the latter is done in normal runtime operations. 
 
 When setting-up perform the following steps:
 
@@ -60,4 +60,4 @@ If you run into this limitation, an exception like `Error Msg = ORA-02329: PL/SQ
 
 ## 4 DDL commands
 
-DDL (data definition language) commands in Oracle are not transactional and will not be rolled back in case of an error. This means that if your Oracle database needs to be synchronized with your model when you start your application and an error occurs during this synchronization, the changes that have made been made up until the point when the error occurs are *not* rolled back. This can leave the database in an inconsistent state which cannot be recovered automatically. We recommended that you create a backup of your database before deploying any new version of your app, so that you can restore the backup if the database synchronization fails.
+DDL (data definition language) commands in Oracle are not transactional and will not be rolled back in case of an error. This means that if your Oracle database needs to be synchronized with your model when you start your application and an error occurs during this synchronization, the changes that have made been made up until the point when the error occurs are *not* rolled back. This can leave the database in an inconsistent state which cannot be recovered automatically. Mendix recommends creating a backup of your database before deploying any new version of your app, so that you can restore the backup if the database synchronization fails.

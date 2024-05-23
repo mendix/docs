@@ -5,10 +5,6 @@ tags: ["studio pro", "context", "data source"]
 weight: 30
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/context-source.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 The **Context** source is a data source of a data view. Data views with this data source get their object from the context, which can be one of two things:
@@ -24,7 +20,7 @@ The **Entity (path)** property specifies the entity that will be shown in the da
 
 If you have a nested data view, you can select an entity that has associations with the entity of a surrounding data container, and the entity of the surrounding data container should be a parent of this association. For more information on associations, see [Associations](/refguide8/associations/). 
 
-{{< figure src="/attachments/refguide8/modeling/pages/data-widgets/data-sources/context-source/context-source-example.png" alt="Context Source"   width="400"  >}}
+{{< figure src="/attachments/refguide8/modeling/pages/data-widgets/data-sources/context-source/context-source-example.png" alt="Context Source"   width="400"  class="no-border" >}}
 
 ## 3 Read More
 

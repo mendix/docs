@@ -6,10 +6,6 @@ description: "Configuration options for a published REST service"
 tags: ["published REST", "service", "reserved URL prefixes", "swagger", "security", "CORS", "resources", "operation", "how-to", "studio pro"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/published-rest-service.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 Use a published REST service to expose your entities and microflows to other apps using the REST standard.
@@ -141,7 +137,7 @@ When you select a resource, you see the [operations](/refguide8/published-rest-o
 
 Resources and Operations are appended to [Location](#location) to form a URL on which they can be accessed.
 
-{{< figure src="/attachments/refguide8/modeling/integration/published-rest-services/published-rest-service/example-location-url.png" >}}
+{{< figure src="/attachments/refguide8/modeling/integration/published-rest-services/published-rest-service/example-location-url.png" class="no-border" >}}
 
 ## 7 Example
 

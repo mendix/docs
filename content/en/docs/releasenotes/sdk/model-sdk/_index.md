@@ -1,7 +1,7 @@
 ---
 title: "Model SDK"
 url: /releasenotes/sdk/model-sdk/
-category: "SDKs"
+
 weight: 1
 ---
 

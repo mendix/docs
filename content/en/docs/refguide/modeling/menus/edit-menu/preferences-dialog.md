@@ -9,41 +9,47 @@ tags: ["studio pro", "preferences", "settings", "edit menu"]
 
 The **Preferences** option in the menu opens a dialog box where you can set user-specific preferences which apply to the whole of Studio Pro:
 
-{{< figure src="/attachments/refguide/modeling/menus/edit-menu/preferences-dialog/preferences.png" alt="Preferences" width="600" >}}
+{{< figure src="/attachments/refguide/modeling/menus/edit-menu/preferences-dialog/preferences.png" alt="Preferences" width="600" class="no-border" >}}
 
 ## 2 General Tab {#general}
 
-### 2.1 Interface {#interface}
+### 2.1 Enable Autosave {#autosave}
 
-#### 2.1.1 Keep Active Document Selected in the App Explorer
+When enabled, this option automatically saves your changes on various actions, such as running and deploying your app, executing version control operations (for example, committing, merging, or reverting), closing files or apps, exporting modules, or exiting Studio Pro.
+
+Additionally, you have the option to enable autosave for any of these actions when you have unsaved changes. In such cases a dialogue box is opened, where you can choose to save or discard your changes. You can speed this process up by checking the **Do not ask me again** checkbox, which prevents further prompts and enables the autosave functionality.
+
+### 2.2 Interface {#interface}
+
+#### 2.2.1 Keep Active Document Selected in the App Explorer
 
 When enabled, **App Explorer** automatically highlights the document that is currently active. When this property is disabled, the selection in **App Explorer** remains unchanged when the active document changes.
 
-#### 2.1.2 Show Styling For
+#### 2.2.2 Show Styling For
 
 The **Show styling for** setting configures which styling files are shown in the App Explorer. 
 
 You can select one of the following options:
 
 * **App Only** – This option covers the most common case and lets you customize your app-specific styling. By choosing this, you can see all files from the **theme** folder in App Explorer > **App** > **Styling**.
-* **App and UI resources modules** (*Default*) – This option targets developers who would like to create or edit UI resources modules, e.g. to build or extend your design system/theme. This option also adds a **Styling** folder to modules that are marked as UI resources, containing the files from the corresponding **themesource** folder.
+* **App and UI resources modules** (*Default*) – This option targets developers who would like to create or edit UI resources modules, for example, to build or extend your design system/theme. This option also adds a **Styling** folder to modules that are marked as UI resources, containing the files from the corresponding **themesource** folder.
 * **App and all modules** – Additionally to the option above, this one adds a **Styling** folder to all modules, regardless of whether they are marked as UI resources or not.
 
 For more information about the styling editor, see the [Using the Styling Editor](/howto/front-end/customize-styling-new/#styling-editor) section in *How to Customize Styling*.
 
-### 2.2 Error List
+### 2.3 Error List
 
-#### 2.2.1 Auto-Check Delay
+#### 2.3.1 Auto-Check Delay
 
 The **Auto-check delay** is the number of milliseconds that Studio Pro waits after a change, before starting the consistency checks. Increase this setting for large apps if Studio Pro responses slowly after changes.
 
-#### 2.2.2 Highlight Shown Errors and Warnings in the Editor
+#### 2.3.2 Highlight Shown Errors and Warnings in the Editor
 
 When **Highlight shown errors and warnings in the editor** is checked, the errors and warnings which are currently shown in the Error List (as determined by the **Errors** and **Warnings** toggle buttons and the suppression rules) will be highlighted on the affected elements in the editor.
 
-### 2.3 Disk Location
+### 2.4 Disk Location
 
-#### 2.3.1 Default App Directory {#default-directory}
+#### 2.4.1 Default App Directory {#default-directory}
 
 This is the directory where new apps are stored. It is used in the [App Settings](/refguide/new-app/#app-settings) dialog box when you create a new app. If a different directory is selected in the **App Settings** dialog box, that directory is stored as the new default app directory.
 
@@ -51,7 +57,7 @@ This is the directory where new apps are stored. It is used in the [App Settings
 
 ### 3.1 Deployment
 
-#### 3.1.1 JDK directory
+#### 3.1.1 JDK Directory {#jdk-directory}
 
 This is the directory in which the Java Development Kit (JDK) is located on the computer on which you deploy the application. Usually, the correct directory is located automatically.
 
@@ -59,7 +65,11 @@ The JDK is necessary to run Mendix applications, because the Mendix Runtime is w
 
 #### 3.1.2 Enable Run Optimizations
 
-Enable this setting to increase the speed at which a running application is updated after changes have been made in Studio Pro. When only pages, layouts or snippets have been changed, an entire restart of the application is skipped to decrease deployment time. Also, no Java compilation is performed when no relevant files have changed.
+Enable this setting to increase the speed at which a running application is updated after changes have been made in Studio Pro. If only pages, layouts, or snippets have been changed, then an entire restart of the application is skipped to decrease deployment time. Also, no Java compilation is performed when no relevant files have changed.
+
+#### 3.1.3 Optimize Bundle {#bundle}
+
+This setting is visible and effective when the React client is enabled. By default, it is already enabled to reduce the size of the generated app bundle and speeds up the bundling process by disabling source maps generation. Source maps are used for debugging the bundled code during development. If you want to generate source maps for debugging pluggable widgets, you can disable this setting.
 
 ### 3.2 Build
 
@@ -77,12 +87,16 @@ Here you can specify which repositories to use for Gradle. The content of this f
 
 ## 4 Mendix Assist Tab
 
-### 4.1 Logic Bot
+### 4.1 Logic Bot {#logic-bot}
+
+{{% alert color="info" %}}
+These settings only apply to the **Classic** editor in Studio Pro 10.5 and below.
+{{% /alert %}}
 
 The **Logic Bot** tab contains the following settings:
 
-* **Enable MxAssist Logic Bot** – when enabled, [MxAssist Logic Bot](/refguide/mx-assist-logic-bot/) is activated and can give you suggestions for microflow activities. You can also switch MxAssist Logic Bot on and off in the top right corner of the microflow editor.
-* **Show suggestions for system variables** – when enabled, MxAssist Logic Bot will include system objects in its suggestions (for example, it can suggest that you change system objects like `currentUser` or `currentSession`).
+* **Enable MxAssist Logic Bot (Classic editor only)** – when enabled, [MxAssist Logic Bot](/refguide/mx-assist-logic-bot/) is activated and can give you suggestions for microflow activities. You can also switch MxAssist Logic Bot on and off in the top right corner of the microflow editor.
+* **Show suggestions for system variables (Classic editor only)** – when enabled, MxAssist Logic Bot will include system objects in its suggestions.
 
 ### 4.2 Best Practice Bot
 
@@ -119,7 +133,7 @@ This is the pattern from which the arguments are derived that are passed to the 
 * `{0}` – this is replaced with the name of the original file before the arguments are passed to the file comparison program
 * `{1}` – this is replaced with the name of the changed file before the arguments are passed to the file comparison program
 
-### 6.2 Git 
+### 6.2 Git{#git}
 
 #### 6.2.1 Name
 
@@ -153,6 +167,22 @@ Select **Enable automatic fetching from a remote repository** to enable the [Aut
 
 The number of minutes to wait after a fetch has started before performing another fetch. This must be between 1 and 120 minutes.
 
+#### 6.2.8 Combine Local and Remote Changes
+
+{{% alert color="info" %}}
+This setting was introduced in Mendix version 10.5.
+{{% /alert %}}
+
+When [combining changes](/refguide/merge-algorithm/), for example when doing a Git pull, the user can choose between **Rebase** and **Merge** as the default action. This preference can be overridden for each merge which contains conflicts.
+
+### 6.3 Changes 
+
+Enable this setting to truncate long lines.
+
+### 6.4 Solution Warning
+
+Select **Show warning on updating marketplace modules** to display a warning message when updating a Marketplace module. 
+
 ## 7 Work Environment Tab
 
 ### 7.1 Studio Pro Theme {#studio-pro-theme}
@@ -177,6 +207,40 @@ Sometimes the computer running Studio Pro cannot access the internet directly, b
 
 When the **Send Studio Pro usage data to Mendix** setting is enabled, Studio Pro sends usage data to Mendix that allows Mendix to identify issues and improve the user experience. The usage data does not contain sensitive information. It is possible to disable this feature, but it may affect the behavior of some features, prevent Mendix from identifying issues reported by the user, or affect tracking issues that are not reported yet. This setting is machine-specific and changing this feature does not affect any existing installed version.
 
-## 9 Read More
+### 8.3 Visual Builder for XPath Constraints{#visual-builder}
+
+In Studio Pro version 10.5, a new, visual, way of constructing XPath constraints was introduced. This is called **visual Builder for XPath constraints** (Builder).
+
+From Mendix version 10.10, Builder is the default way to construct XPath constraints, but you can change the default by clearing **Enable the XPath Builder as the default XPath constraint editor**.
+
+{{% alert color="info" %}}
+For Mendix versions 10.5.0 through 10.9.0, this option is on the **New Features** tab.
+{{% /alert %}}
+
+## 9 New Features Tab {#new-features}
+
+### 9.1 Access Rules Editor
+
+In Studio Pro version 10.6 a new access rule editor was introduced in Beta. Enable this option to use the new editor in the *Access rules* tab of the entity properties dialog.
+
+For more information, see [Defining Access Rules Using the New Editor](/refguide/access-rules/#new-editor) section of *Access Rules*.
+
+### 9.2 Expression Editor
+
+The expression editor is modernized since Studio Pro 10.6. This setting is enabled by default. The editor allows the user to write rich text statements and get instant feedback on their validity. In Studio Pro, it is often used to write an expression for a decision or to write an XPath expression for data filtering.
+
+### 9.3 Page Editor
+
+In Studio Pro version 10.9, X-ray mode was introduced to the page editor in Beta. Enable this option to view your app in X-ray mode: a more detailed version of Design mode. 
+
+For more information, see [X-Ray Mode](/refguide/page/#x-ray-mode).
+
+### 9.4 Micro- And Nanoflow Editor
+
+In Studio Pro 10.4 and 10.5, only the **Use the Beta version as the default editor** setting is shown. When this setting is enabled, the modern logic editors (as a beta feature) will become the default editors for all your microflows, nanoflows, and rules. 
+
+In Studio Pro 10.6, only the **Enable switching to the Classic version of the editor** setting is shown. When this setting is enabled, you will be able to see the toggle to switch between the **Classic** and **Modern** version in your logic editors.
+
+## 10 Read More
 
 * [Upload to Version Control Server](/refguide/upload-to-version-control-dialog/)

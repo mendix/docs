@@ -5,15 +5,11 @@ weight: 50
 tags: ["studio pro", "client activities", "activities"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/client-activities.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 **Client Activities** perform activities in the client, for example, opening a page or showing a message. The activities described in this document are in the **Client Activities** section of the **Toolbox** and can differ for microflows and nanoflows:
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/activities/client-activities/client-activities.png" alt="Client Activities" >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/client-activities/client-activities.png" alt="Client Activities" class="no-border" >}}
 
 The following are the client activities you can use in your microflow or nanoflow:
 

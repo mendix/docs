@@ -35,7 +35,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 For example, you have the Employee Onboarding process set up in your app. You have an integration with the SAP system and have a microflow called **ACT_SAP_INVENTORY_LAPTOP_CHECK** that checks if the employee has a laptop already assigned to them and returns `true` or `false` value. To be able to reuse the logic of this microflow in the **Employee_Onboarding** workflow, you can expose this microflow as a workflow action.
 
-However, as the best practice we recommend using a second microflow that will call the **ACT_SAP_INVENTORY_LAPTOP_CHECK** one. The benefits of using the second microflow are the following:
+However, as the best practice, Mendix recommends using a second microflow that will call the **ACT_SAP_INVENTORY_LAPTOP_CHECK** one. The benefits of using the second microflow are the following:
 
 * To make it easier to update parameters in **ACT_SAP_INVENTORY_LAPTOP_CHECK**. If you make changes in the parameters of the microflow that would mean that every task using this microflow will result in consistency errors. The calling microflow makes it possible to make changes to the parameters of the called microflow (**ACT_SAP_INVENTORY_LAPTOP_CHECK**) in the future, as you will have to modify only the calling microflow. 
 * The calling microflow allows for data and parameter changes that the called microflow requires, but the workflow is not able to provide. For example, **ACT_SAP_INVENTORY_LAPTOP_CHECK** requires Employee ID, but the workflow has only Employee Name. You can get the Employee ID through the Employee's record and pass this to the **ACT_SAP_INVENTORY_LAPTOP_CHECK**.
@@ -47,7 +47,7 @@ To create the calling microflow and add it as the custom action to the workflow 
 2. Make sure that the input parameters of the **WFS_MY_SYSTEM_TASK** microflow are mapped to the workflow definition. For the **Employee_Onboarding** workflow, add the EmployeeOnboarding parameter because the **EmployeeOnboarding** entity is set as the **Workflow entity**. 
 3. In **Toolbox**, select **Microflow call** and drag it to the flow:
 
-    {{< figure src="/attachments/refguide9/modeling/application-logic/workflows/add-action-to-workflow-toolbox/microflow-call.png" alt="Microflow call action" >}}
+    {{< figure src="/attachments/refguide9/modeling/application-logic/workflows/add-action-to-workflow-toolbox/microflow-call.png" alt="Microflow call action" class="no-border" >}}
 
 4. Double-click the **Microflow call** activity to open its properties and set **Microflow** to **ACT_SAP_INVENTORY_LAPTOP_CHECK**.
 5. Click the **End event** and navigate to the **Properties** pane.
@@ -56,7 +56,7 @@ To create the calling microflow and add it as the custom action to the workflow 
 8. In the **Microflow properties** dialog box, open the **Expose as workflow action** tab.
 9. Select the **Expose as workflow action** checkbox:
 
-    {{< figure src="/attachments/refguide9/modeling/application-logic/workflows/add-action-to-workflow-toolbox/expose-as-workflow-action.png" alt="Expose as Workflow Action" >}}
+    {{< figure src="/attachments/refguide9/modeling/application-logic/workflows/add-action-to-workflow-toolbox/expose-as-workflow-action.png" alt="Expose as Workflow Action" class="no-border" >}}
 
 10. The properties for the new workflow action appear. Do the following:
 
@@ -66,7 +66,7 @@ To create the calling microflow and add it as the custom action to the workflow 
 
     3. Select an icon and a toolbox image from a disk for **Icon** and **Image** properties. For more information on properties, see the [Expose as Workflow Action](/refguide9/microflow/#expose-as-workflow-action) section in *Microflow Properties*.
 
-        {{< figure src="/attachments/refguide9/modeling/application-logic/workflows/add-action-to-workflow-toolbox/expose-as-workflow-action-properties.png" alt="Expose as Workflow Action Settings" >}}
+        {{< figure src="/attachments/refguide9/modeling/application-logic/workflows/add-action-to-workflow-toolbox/expose-as-workflow-action-properties.png" alt="Expose as Workflow Action Settings" class="no-border" >}}
 
 11. Click **OK**.
 
@@ -79,7 +79,7 @@ Now that you have exposed the microflow as the custom workflow action, you can u
 1. Open the **Employee_Onboarding** workflow.
 2. Open the **Toolbox** and find the newly created **Integration** category there > the **Pass details to SAP** action:
 
-    {{< figure src="/attachments/refguide9/modeling/application-logic/workflows/add-action-to-workflow-toolbox/workflow-toolbox.png" alt="Workflow Toolbox" >}}
+    {{< figure src="/attachments/refguide9/modeling/application-logic/workflows/add-action-to-workflow-toolbox/workflow-toolbox.png" alt="Workflow Toolbox" class="no-border" >}}
 
 3. Drag the action into the workflow.
 

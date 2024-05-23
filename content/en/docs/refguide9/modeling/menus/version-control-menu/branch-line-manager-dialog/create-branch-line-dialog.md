@@ -9,7 +9,7 @@ tags: ["studio pro", "create branch line"]
 
 Use the **Create Branch Line** dialog box to create a new [branch line](/refguide9/version-control/#branches) via the **Branch Line Manager**:
 
-{{< figure src="/attachments/refguide9/modeling/menus/version-control-menu/branch-line-manager-dialog/create-branch-line-dialog/create-branch-line.png" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/version-control-menu/branch-line-manager-dialog/create-branch-line-dialog/create-branch-line.png" class="no-border" >}}
 
 To view the **Create Branch Line** dialog box,  do the following:
 
@@ -39,7 +39,7 @@ Select from which revision of the main line or a branch line you want to create 
 
 This setting is only available when you select [Branch line](#branch-line) in **Create branch from**. 
 
-Select from which branch line you want to create another branch line. We recommend that you make branch lines only from the main line but in some cases branching a branch line can be useful.
+Select from which branch line you want to create another branch line. Mendix recommends making branch lines only from the main line, but in some cases, branching a branch line can be useful.
 
 ## 5 Tagged Version
 

@@ -8,11 +8,11 @@ tags: ["studio pro", "parameter", "parameters", "microflow"]
 
 ## 1 Introduction
 
-A parameter is a special kind of variable that is used as input for the microflow. When a microflow is triggered, the parameters are filled with the current values.
+Parameters are the means by which you pass data to your logic. When a microflow is triggered, the parameters are filled with the current values.
 
 If you want to use an object of the **Customer** entity in a microflow, use the parameter. In the image below, the object name is **EnclosingCustomer** and is shown in black. The data type is object. Therefore, the entity name is shown underneath the object name in color blue.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/parameter/parameter.png" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/parameter/parameter.png" class="no-border" >}}
 
 ## 2 Common Section
 
@@ -34,4 +34,4 @@ Default: *Object*
 
 To set a parameter as the [return value](/refguide/end-event/#return-value) of your microflow, right-click the parameter and select **Set $Parameter as return value** via the context menu:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/parameter/set-parameter-as-return-value.png" width="300px" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/parameter/set-parameter-as-return-value.png" width="300px" class="no-border" >}}

@@ -5,17 +5,13 @@ tags: ["studio pro", "validation message", "authentication widget", "authenticat
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/validation-message.pdf).
-{{% /alert %}}
-
 {{% alert color="warning" %}}The validation message widget is not supported on native mobile pages.{{% /alert %}}
 
 ## 1 Introduction
 
 The **Validation message** widget displays an authentication failure message on a page:
 
-{{< figure src="/attachments/refguide8/modeling/pages/authentication-widgets/validation-message/validation-message.png" alt="Validation Message Widget" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/authentication-widgets/validation-message/validation-message.png" alt="Validation Message Widget" class="no-border" >}}
 
 It is only displayed to an end-user when both of the following conditions are met:
 
@@ -26,7 +22,7 @@ It is only displayed to an end-user when both of the following conditions are me
 
 An example of validation message properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/pages/authentication-widgets/validation-message/validation-message-properties.png" alt="Validation Message Properties"   width="300"  >}}
+{{< figure src="/attachments/refguide8/modeling/pages/authentication-widgets/validation-message/validation-message-properties.png" alt="Validation Message Properties"   width="300"  class="no-border" >}}
 
 Validation message properties consist of the following sections:
 

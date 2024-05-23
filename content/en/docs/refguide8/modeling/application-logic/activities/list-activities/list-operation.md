@@ -6,10 +6,6 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/list-operation.pdf).
-{{% /alert %}}
-
 {{% alert color="warning" %}}
 This activity can be used in both **Microflows** and **Nanoflows**.
 {{% /alert %}}
@@ -37,7 +33,7 @@ See below for details on these actions.
 
 An example of list operation properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/activities/list-activities/list-operation/list-operation-properties.png" alt="list operation properties" >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/list-activities/list-operation/list-operation-properties.png" alt="list operation properties" class="no-border" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

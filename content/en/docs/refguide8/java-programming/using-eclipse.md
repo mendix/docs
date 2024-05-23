@@ -1,7 +1,7 @@
 ---
 title: "Using Eclipse"
 url: /refguide8/using-eclipse/
-category: "Java Programming"
+
 tags: ["studio pro"]
 ---
 
@@ -11,7 +11,7 @@ In Mendix, all text is saved in UTF-8 encoding. First make sure your source code
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide8/java-programming/using-eclipse/918120.png" >}}
+{{< figure src="/attachments/refguide8/java-programming/using-eclipse/918120.png" class="no-border" >}}
 Settings UTF-8 encoding.
 
 {{% /alert %}}
@@ -20,7 +20,7 @@ You should also have a Java Development Kit (JDK) installed and selected.
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide8/java-programming/using-eclipse/918186.png" >}}
+{{< figure src="/attachments/refguide8/java-programming/using-eclipse/918186.png" class="no-border" >}}
 Selecting a default JDK.
 
 {{% /alert %}}
@@ -35,12 +35,12 @@ To add a Mendix project to Eclipse, you can perform these steps:
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide8/java-programming/using-eclipse/917580.png" >}}
+{{< figure src="/attachments/refguide8/java-programming/using-eclipse/917580.png" class="no-border" >}}
 Import existing project.
 
 {{% /alert %}}{{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide8/java-programming/using-eclipse/917527.png" >}}
+{{< figure src="/attachments/refguide8/java-programming/using-eclipse/917527.png" class="no-border" >}}
 Import existing project step 2.
 
 {{% /alert %}}
@@ -51,7 +51,7 @@ To actually launch the project, go to 'debug configurations' or 'run configurati
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide8/java-programming/using-eclipse/917586.png" >}}
+{{< figure src="/attachments/refguide8/java-programming/using-eclipse/917586.png" class="no-border" >}}
 Looking up your launch configuration.
 
 {{% /alert %}}
@@ -60,7 +60,7 @@ After you have launched the application, you will see the M2EE admin console pop
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide8/java-programming/using-eclipse/917582.png" >}}
+{{< figure src="/attachments/refguide8/java-programming/using-eclipse/917582.png" class="no-border" >}}
 The M2EE admin console.
 
 {{% /alert %}}

@@ -24,7 +24,7 @@ To use push notifications, make sure you have the following:
 
 * Mendix Studio Pro from the [Marketplace](https://marketplace.mendix.com/link/studiopro/)
 * The Mendix [Push Notifications Connector](/appstore/modules/push-notifications/)
-* A mobile device (to get started, we recommend an Android device connected to your development machine via a data cable)
+* A mobile device (to get started, Mendix recommends an Android device connected to your development machine via a data cable)
 
 ## 3 Supported Platforms
 

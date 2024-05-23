@@ -6,17 +6,13 @@ tags: ["domain model", "entity", "attribute", "index", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/indexes.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 **Indexes** are lists of attributes for which a database index is created on the underlying database table of the entity. Indexes improve the speed of retrieving objects if the indexed attributes are used in a search field, the XPath constraint of a data grid or template grid, or a `WHERE` clause of an OQL query. However, search fields where the `Comparison` property has value `Contains` do not take advantage of the improved performance.
 
 Indexes can be added and edited from the **Indexes** tab of the entity properties.
 
-{{< figure src="/attachments/refguide8/modeling/domain-model/entities/indexes/index-properties.png" alt="Example of index tab" >}}
+{{< figure src="/attachments/refguide8/modeling/domain-model/entities/indexes/index-properties.png" alt="Example of index tab" class="no-border" >}}
 
 {{% alert color="info" %}}
 Index properties are read-only for external entities. For further details, see [External Entities](/refguide8/external-entities/).
@@ -44,7 +40,7 @@ Changing and deleting objects of an entity with indexes takes longer, because th
 
 Customers are usually retrieved by a combination of ZIP code and house number. So, *one* index is set on the combination of the attributes:
 
-{{< figure src="/attachments/refguide8/modeling/domain-model/entities/indexes/customer-index-example.png" >}}
+{{< figure src="/attachments/refguide8/modeling/domain-model/entities/indexes/customer-index-example.png" class="no-border" >}}
 
 The objects are retrieved by the following OQL query – note that the order of the attributes in the `WHERE` clause is the same as the order of the attributes for the index:
 

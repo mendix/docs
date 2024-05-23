@@ -80,7 +80,7 @@ The tables below list all the built-in functions of ATS. There is one table per 
 
 | Function         | Supported Widgets | Description                              |
 | ---------------- | ----------------- | ---------------------------------------- |
-| Find/Assert DataGrid Row | DataGrid | Finds/asserts a data grid row by a certain column value(s). |
+| Find/Assert DataGrid Row | DataGrid | Finds/asserts a data grid row by a certain column value (or values). |
 | Find/Assert Dialog | Window, DialogMessage, ConfirmationDialog | Finds/asserts a dialog by Title or Type. |
 | Find/Assert Menu Item | NavigationTree, MenuBar, SimpleMenuBar | Finds/asserts a visible menu item in a navigation tree, menu bar, and simple menu bar. |
 | Find/Assert Widget | All widgets | Finds/asserts a Mendix widget by its given name. It is possible to use a sequence of names as a path (separated by spaces). |
@@ -104,7 +104,7 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Click Menu Item | NavigationTree, MenuBar, SimpleMenuBar | Clicks a menu item in a navigation tree, menu bar, and simple menu bar. |
 | Click Widget | All widgets | Clicks a Mendix widget (for example, button, link, image) by its name. |
 | Click Widget Button | ListView, ReferenceSelector | Clicks on one of the following special widget buttons: Refresh Button / Loadmore / ClearSearchField (ListView) Goto, / Adds (ReferenceSelector). |
-| Close Dialog | Window, DialogMessage, ConfirmationDialog | Clicks the **X** button on a Confirmation, Error, Warning, or Info dialog box. |
+| Close Dialog | Window, DialogMessage, ConfirmationDialog | Clicks the {{% icon name="remove" %}} button on a Confirmation, Error, Warning, or Info dialog box. |
 | Close GroupBox | GroupBox | Closes a group box. |
 | Confirm Dialog | ConfirmationDialog, DialogMessage | Clicks the **Proceed/OK** button on a Confirmation, Error, Warning, or Info dialog box. |
 | Open GroupBox | GroupBox | Opens a group box. |

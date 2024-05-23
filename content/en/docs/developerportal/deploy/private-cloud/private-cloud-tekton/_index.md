@@ -75,7 +75,7 @@ Each Mendix pipeline can be run independently. However, the **create-app-pipelin
 
 The Mendix pipelines work together as shown in the diagram below to create the app environment, build and push an app to the environment, and, finally, configure the app.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-tekton/build-pipeline.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-tekton/build-pipeline.png" class="no-border" >}}
 
 #### 3.3.1 Mendix Pipelines
 
@@ -103,7 +103,7 @@ You can read the official installation procedure on the [Tekton Dashboard](https
 
 Below is and example of the recommended architecture setup.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-tekton/tekton-architecture-example.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-tekton/tekton-architecture-example.png" class="no-border" >}}
 
 The example shows the following namespaces:
 
@@ -195,7 +195,7 @@ More details on how to activate a trigger using any HTTP client are [here](#auth
 #### 7.2.1 GitLab Configuration
 
 To set the GitLab Token in GitLab you specify it as the **Secret Token** when creating the webhook:
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-tekton/gitlab-webhook.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-tekton/gitlab-webhook.png" class="no-border" >}}
 
 #### 7.2.2 Other HTTP Clients {#auth-other-clients}
 
@@ -303,9 +303,9 @@ Make sure that an ingress controller already installed. You can use an [NGINX Co
 
 This service expects parameters in JSON/HTTP Header format. Examples of HTTP requests are provided in the [Triggering Pipelines](#triggering-pipelines) section.
 
-By exposing the service with the HTTP protocol all traffic might go unencrypted over the public internet. We recommend that you enable HTTPS/TLS protocols.
+By exposing the service with the HTTP protocol all traffic might go unencrypted over the public internet. Mendix recommends enabling HTTPS/TLS protocols.
 
-In this example and in the rest of this document, we use `pipeline.trigger.yourdomain.com` to refer to this trigger.
+In this example and in the rest of this document, Mendix uses `pipeline.trigger.yourdomain.com` to refer to this trigger.
 
 ## 8 Authentication to External Services
 
@@ -313,7 +313,7 @@ This needs to be configured before you trigger any pipelines.
 
 ### 8.1 Git Access
 
-Your Tekton pipeline needs to have access to the git repository. To provide access, you need to use a `basic-auth` type `Secret`. To do this, follow the [instruction in the tektoncd GitHub repo](https://github.com/tektoncd/pipeline/blob/main/docs/auth.md#configuring-basic-auth-authentication-for-git) and link that secret to the `tekton-triggers-mx-sa` service account.
+Your Tekton pipeline needs to have access to the Git repository. To provide access, you need to use a `basic-auth` type `Secret`. To do this, follow the [instruction in the tektoncd GitHub repo](https://github.com/tektoncd/pipeline/blob/main/docs/auth.md#configuring-basic-auth-authentication-for-git) and link that secret to the `tekton-triggers-mx-sa` service account.
 
 ### 8.2 Registry Push Access
 
@@ -577,8 +577,8 @@ curl -X POST \
 
 | Parameter | Explanation                                                                                                                                                                                                                                                         |
 | --- |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `repo.url` | URL of git repository that will be fetched                                                                                                                                                                                                                          |
-| `repo.revision` | a git revision (for example, branch, tag, or sha) that will be fetched                                                                                                                                                                                              |
+| `repo.url` | The URL of Git repository that will be fetched                                                                                                                                                                                                                          |
+| `repo.revision` | A Git revision (for example, branch, tag, or SHA) that will be fetched                                                                                                                                                                                              |
 | `namespace` | name of the Kubernetes namespace where Mendix Operator runs                                                                                                                                                                                                         |
 | `env-internal-name` | Mendix environment internal name. You can get all the internal environment names with the command `kubectl get mendixapps -n $namespace_name`                                                                                                                       |
 | `scheduledEventsMode` | `manual` – throws an error if scheduled events listed in `myScheduledEvents` in the MendixApp CR do not exist in the Mendix MPR<br/><br/>`auto` – removes scheduled events listed in `myScheduledEvents` in the MendixApp CR if they do not exist in the Mendix MPR |
@@ -591,7 +591,7 @@ You can set up a [GitLab Webhook Trigger](#gitlab-webhook) to generate the build
 
 Within GitLab, set up a webhook. Use the trigger URL of the trigger you installed in the [Installing Triggers](#installing-triggers) section, and choose which push events you want to trigger the build.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-tekton/gitlab-webhook.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-tekton/gitlab-webhook.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 To fill in the **Secret token** see the [Authentication](#authentication) section.

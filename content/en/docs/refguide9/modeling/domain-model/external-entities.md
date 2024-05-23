@@ -33,7 +33,7 @@ To add an external entity to your app model, follow these steps:
     * the **Consumed OData Service** document that contains details of the OData service and the metadata; the logo displayed identifies the originating app of the service
     * the **OData Location** that specifies the location constants for the service
 
-        {{< figure src="/attachments/refguide9/modeling/domain-model/external-entities/consumed-service-docs.png" alt=" Virtual Entity and OData Service files" >}}
+        {{< figure src="/attachments/refguide9/modeling/domain-model/external-entities/consumed-service-docs.png" alt=" Virtual Entity and OData Service files" class="no-border" >}}
 
 {{% alert color="info" %}}
 When you drag an entity that is associated with an entity from the same service already in your Domain Model, the association will be displayed and established between the entities. For more information on associations between external entities, see [Associations](#properties).
@@ -43,7 +43,7 @@ For further information, see [Consumed OData Service](/refguide9/consumed-odata-
 
 The consumed entities of the current app are listed in the **Used in your App** section of the **Data Hub** pane:
 
-{{< figure src="/attachments/refguide9/modeling/domain-model/external-entities/data-hub-app.png" alt=" Virtual Entity and OData Service files" >}}
+{{< figure src="/attachments/refguide9/modeling/domain-model/external-entities/data-hub-app.png" alt=" Virtual Entity and OData Service files" class="no-border" >}}
 
 {{% alert color="info" %}}
 When a new version of a consumed service becomes available in the Catalog, this will be indicated in the **Data Hub** pane by an update arrow next to the service name. For more information, see the [Updating or Switching a Consumed OData Service](/refguide9/consumed-odata-service/#updating) section in *Consumed OData Service*.
@@ -69,7 +69,7 @@ Changes that are made to the properties of external entities are made only in th
 
 This tab displays the general properties of the external entity. The values that are defined in the originating app are displayed but but cannot be edited. The values that can be edited will only apply to the local app:
 
-{{< figure src="/attachments/refguide9/modeling/domain-model/external-entities/external-entity-properties.png" alt="External Entity Properties" >}}
+{{< figure src="/attachments/refguide9/modeling/domain-model/external-entities/external-entity-properties.png" alt="External Entity Properties" class="no-border" >}}
 
 * **Name** – the name of the entity in the local app
 * **Original name** – this is read-only and shows the name of the entity as defined in the consumed OData service
@@ -91,7 +91,7 @@ The following operations can be done on the displayed attribute list:
 
 The **Edit Attribute** box can be used for specifying a local name for the attribute and adding a local description.
 
-{{< figure src="/attachments/refguide9/modeling/domain-model/external-entities/edit-attributes.png" alt="Edit attributes" >}}
+{{< figure src="/attachments/refguide9/modeling/domain-model/external-entities/edit-attributes.png" alt="Edit attributes" class="no-border" >}}
 
 * **General Tab**
     * **Name** – a local name for the attribute can be specified.
@@ -106,7 +106,7 @@ This tab displays the associations that the external entity has with other entit
 
 If the entity contains [one-way navigable associations](/refguide9/association-properties/#one-way-navigable), there is a note at the top of the dialog box. 
 
-{{< figure src="/attachments/refguide9/modeling/domain-model/external-entities/external-entity-associations.png" alt="Edit attributes" >}}
+{{< figure src="/attachments/refguide9/modeling/domain-model/external-entities/external-entity-associations.png" alt="Edit attributes" class="no-border" >}}
 
 The following apply for all associations with the external entity:
 
@@ -133,7 +133,7 @@ If you want to connect two external entities that are not connected in the origi
 
 When you **Edit** an association that is included for two entities exposed in the same OData service, the following properties are displayed and the only local change that can be made is the local Name:
 
-{{< figure src="/attachments/refguide9/modeling/domain-model/external-entities/association-properties.png" alt="Edit external associations" >}}
+{{< figure src="/attachments/refguide9/modeling/domain-model/external-entities/association-properties.png" alt="Edit external associations" class="no-border" >}}
 
 * **Name** – local name of the association
 * **Original Name** – read-only name of the association given to it in the originating app
@@ -143,7 +143,7 @@ When you **Edit** an association that is included for two entities exposed in th
 
 If the association is [one-way navigable](/refguide9/association-properties/#one-way-navigable), there is a note at the top of the dialog box.
 
-{{< figure src="/attachments/refguide9/modeling/domain-model/external-entities/association-properties-one-way-navigable.png" alt="Edit external associations one-way navigable" >}}
+{{< figure src="/attachments/refguide9/modeling/domain-model/external-entities/association-properties-one-way-navigable.png" alt="Edit external associations one-way navigable" class="no-border" >}}
 
 ### 2.3.2 Connecting Two External Entities
 
@@ -185,7 +185,11 @@ Learn more about adding authentication information to a consumed OData service:
 
 External entities are the endpoints that are defined in the published OData service from the originating app. The consumed OData service document displays the values from the service metadata when the external entity is used through the **Data Hub** pane. The datasets associated with the entities are maintained in the originating apps.
 
-External entities cannot be committed. Use the [Send External Object activity](/refguide9/send-external-object/) to persist changes to external entities. This means the following:
+{{% alert color="info" %}}
+Please note that external entities are not supported in native offline apps.
+{{% /alert %}}
+
+Furthermore, external entities cannot be committed. Use the [Send External Object activity](/refguide9/send-external-object/) to persist changes to external entities. This means the following:
 
 * The **Commit** activity does not work. Use **Send External Object** instead.
 * On pages, the [Save button](/refguide9/button-widgets/) and the [Save Changes event](/refguide9/on-click-event/#save-changes) do not work when the page contains widgets that update external entities. Call a microflow that persists the changes using **Send External Object** instead.

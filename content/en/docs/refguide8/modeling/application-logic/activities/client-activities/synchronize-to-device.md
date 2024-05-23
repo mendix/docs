@@ -6,10 +6,6 @@ weight: 60
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/synchronize-to-device.pdf).
-{{% /alert %}}
-
 {{% alert color="warning" %}}
 This activity can only be used in **Microflows**.
 {{% /alert %}}
@@ -18,13 +14,13 @@ This activity can only be used in **Microflows**.
 
 The **Synchronize to device** activity can be used to selectively synchronize one or more objects or lists to a device and store them in the offline database. It is meant to be used in offline apps and does nothing when used in online ones.
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/activities/client-activities/synchronize-to-device/synchronize-to-device-action.png" alt="Synchronize to device"   width="200"  >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/client-activities/synchronize-to-device/synchronize-to-device-action.png" alt="Synchronize to device"   width="200"  class="no-border" >}}
 
 ## 2 Properties
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/activities/client-activities/synchronize-to-device/synchronize-to-device-action-properties.png" alt="Synchronize to device Properties" >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/client-activities/synchronize-to-device/synchronize-to-device-action-properties.png" alt="Synchronize to device Properties" class="no-border" >}}
 
 The **Synchronize to device** activity properties consists of the following sections:
 

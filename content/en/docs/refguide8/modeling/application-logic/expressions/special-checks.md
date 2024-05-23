@@ -6,10 +6,6 @@ description: "Describes special checks in expressions in Mendix."
 tags: ["studio pro", "special checks", "special check", "expressions"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/special-checks.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 This documents describes special checks in expressions, such as checking whether an object is empty, new, is synced. 
@@ -111,7 +107,7 @@ isNew($object1)
 
 ## 5 Checking Whether an Object Is Synced {#synced}
 
-This function is available only in expressions for [conditional visibility or editability](/refguide8/common-widget-properties/), as only they are evaluated on client side.
+This function is available only in expressions for [conditional visibility or editability](/refguide8/common-widget-properties/) and [nanoflows](/refguide8/nanoflows/), as they are only evaluated on client side.
 
 ### 5.1 Input Parameters
 

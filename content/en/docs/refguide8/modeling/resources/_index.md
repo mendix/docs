@@ -1,15 +1,11 @@
 ---
 title: "Resources"
 url: /refguide8/resources/
-category: "App Modeling"
+
 weight: 50
 tags: ["studio pro", "resources"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/resources.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 
@@ -23,7 +19,7 @@ To add a resource document, do the following:
 
 1. In the [Project Explorer](/refguide8/project-explorer/), right-click the module or a folder you want to add a resource to and select **Add other**:
 
-    {{< figure src="/attachments/refguide8/modeling/resources/project-explorer-resources.png" >}}
+    {{< figure src="/attachments/refguide8/modeling/resources/project-explorer-resources.png" class="no-border" >}}
 
 2. In the **Resources** category, select the document you would like to add to your project.
 

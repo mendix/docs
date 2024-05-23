@@ -2,11 +2,11 @@
 title: "Catalog Guide"
 url: /catalog/
 description: "Describes the processes and properties of Catalog."
-weight: 40
+weight: 41
 no_list: false
 description_list: true
 cascade:
-    - space: "Catalog Guide"
+    - content_type: "Catalog Guide"
     - mendix_version: 10
 tags: ["data hub", "Catalog", "landscape", "external entities", "external users"]
 aliases:
@@ -19,7 +19,7 @@ aliases:
 
 The [Catalog](https://catalog.mendix.com) is a development tool provided in the Mendix Cloud. 
 
-{{< figure src="/attachments/catalog/catalog-home.png" >}}
+{{< figure src="/attachments/catalog/catalog-home.png" class="no-border" >}}
 
 REST services provided by Mendix Apps running in the Mendix Cloud (published [OData](/refguide/published-odata-services/) and OpenAPI REST Services) are automatically registered in your organization's Catalog upon deployment. This provides you with an up-to-date view of all the OData and OpenAPI REST APIs published and consumed by your Mendix apps. These assets can be [curated](/catalog/manage/curate/) in the Catalog to ensure that they are exposed to the relevant users and can be found easily. 
 
@@ -77,6 +77,6 @@ The information that is registered for data sources and exposed datasets are as 
 
     {{% alert color="info" %}}If significant changes are made in the service which would break any consuming apps, then good practice dictates that the service is deployed to a different endpoint with a major update in the version number. In this case the service will be listed twice for the two different endpoints. For more information see [Semantic numbering](/refguide/consumed-odata-service/#semantic) in *Consumed OData Service*. {{% /alert %}}
 
-Mendix Admins can assign and manage **Curators**, **Owners**, and **External Users**, and control discoverability settings. For more information, see [Catalog Administration](/developerportal/control-center/catalog-admin/).
+Mendix Admins can assign and manage **Curators**, **Owners**, and **External Users**, and control discoverability settings. For more information, see [Catalog Administration](/control-center/catalog-admin/).
 
-## 5 Documents in This Category
+## 5 Guide Categories

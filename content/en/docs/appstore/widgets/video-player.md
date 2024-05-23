@@ -1,7 +1,7 @@
 ---
 title: "Video Player"
 url: /appstore/widgets/video-player/
-category: "Widgets"
+
 description: "Describes the configuration and usage of the Video Player widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "platform support", "widget", "video player"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -34,11 +34,11 @@ inside a context, you need to provide a static URL; otherwise, the player will n
 
 Configure the following properties:
 
-{{< figure src="/attachments/appstore/widgets/video-player/general.jpg" >}}
+{{< figure src="/attachments/appstore/widgets/video-player/general.jpg" class="no-border" >}}
 
-{{< figure src="/attachments/appstore/widgets/video-player/behavior.jpg" >}}
+{{< figure src="/attachments/appstore/widgets/video-player/behavior.jpg" class="no-border" >}}
 
-{{< figure src="/attachments/appstore/widgets/video-player/dimensions.jpg" >}}
+{{< figure src="/attachments/appstore/widgets/video-player/dimensions.jpg" class="no-border" >}}
 
 ### 2.1 Cordova Configuration
 

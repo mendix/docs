@@ -2,14 +2,14 @@
 title: "Execute an SQL Statement on an External Database"
 linktitle: "Execute SQL on External Database"
 url: /howto8/integration/execute-an-sql-statement-on-an-external-database/
-category: "Integration"
+
 weight: 17
 tags: ["database connector", SQL", "database", "external database", "integration"]
 ---
 
 ## 1 Introduction
 
-The Mendix Platform offers many ways to integrate with external data, but integrating with external databases has not been a seamless experience until now. The [Database Connector](/appstore/connectors/database-connector/) can be used to seamlessly connect to external databases without limiting you in your choice of database or SQL dialect, thus enabling you to incorporate external data directly in your Mendix application. Two actions are available via the connector: [Execute statement](#statement) and **Execute query**.
+The Mendix Platform offers many ways to integrate with external data, but integrating with external databases has not been a seamless experience until now. The [Database Connector](/appstore/modules/database-connector/) can be used to seamlessly connect to external databases without limiting you in your choice of database or SQL dialect, thus enabling you to incorporate external data directly in your Mendix application. Two actions are available via the connector: [Execute statement](#statement) and **Execute query**.
 
 The **Execute statement** action provides a consistent environment for Mendix apps to perform an arbitrary SQL statement on relational external databases. A Java database connectivity (JDBC) API is used when this Java action attempts to connect with a relational database for which a JDBC driver exists.
 
@@ -56,11 +56,11 @@ To use an ExecuteStatement action in a microflow, follow these steps:
 
 1. Find the **Database Connector** in the **Toolbox**.
 
-    {{< figure src="/attachments/howto8/integration/execute-an-sql-statement-on-an-external-database/19399122.png" >}}
+    {{< figure src="/attachments/howto8/integration/execute-an-sql-statement-on-an-external-database/19399122.png" class="no-border" >}}
 
 2. Drag the **Execute statement** action into your microflow: 
 
-    {{< figure src="/attachments/howto8/integration/execute-an-sql-statement-on-an-external-database/19399123.png" >}}
+    {{< figure src="/attachments/howto8/integration/execute-an-sql-statement-on-an-external-database/19399123.png" class="no-border" >}}
 
 3. Configure the statement:
     * Provide all the valid arguments to the statement action
@@ -69,7 +69,7 @@ To use an ExecuteStatement action in a microflow, follow these steps:
     * Specify the **Output Variable name**
         * In the example below, the variable is **amountOfUpdatedRows**, which is the  output of the SQL statement; this is also the output of the SQL statement provided for the **Sql** argument within the connector
 
-    {{< figure src="/attachments/howto8/integration/execute-an-sql-statement-on-an-external-database/19399146.png" >}}
+    {{< figure src="/attachments/howto8/integration/execute-an-sql-statement-on-an-external-database/19399146.png" class="no-border" >}}
 
     The statement action's result is either an **Integer** or a **Long** value, which usually represents the amount of affected rows.
 

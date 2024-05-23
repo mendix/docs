@@ -5,15 +5,11 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/image-viewer.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 An image viewer can be used to display an image or its thumbnail. For example, you can show a profile picture:
 
-{{< figure src="/attachments/refguide8/modeling/pages/file-widgets/image-viewer/image-viewer.png" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/file-widgets/image-viewer/image-viewer.png" class="no-border" >}}
 
 An image viewer must be placed in a data view or a template grid.
 
@@ -21,7 +17,7 @@ An image viewer must be placed in a data view or a template grid.
 
 An example of image viewer properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/pages/file-widgets/image-viewer/image-viewer-properties.png" alt="Image Viewer Properties"   width="250"  >}}
+{{< figure src="/attachments/refguide8/modeling/pages/file-widgets/image-viewer/image-viewer-properties.png" alt="Image Viewer Properties"   width="250"  class="no-border" >}}
 
 Image viewer properties consist of the following sections:
 

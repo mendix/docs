@@ -1,14 +1,15 @@
 ---
-title: "Mobile Features ⚠"
+title: "Mobile Features"
+deprecated: true
 url: /appstore/widgets/mobile-features/
-category: "Widgets"
+
 description: "Describes the configuration and usage of the Mobile Features widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "widget", "mobile feature", "spinner", "transitions", "status bar", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 {{% alert color="warning" %}}
-⚠ This widget is deprecated.
+This widget is deprecated.
 {{% /alert %}}
 
 ## 1 Introduction

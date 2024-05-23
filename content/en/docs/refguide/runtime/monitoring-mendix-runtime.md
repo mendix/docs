@@ -1,7 +1,7 @@
 ---
 title: "Monitoring Mendix Runtime"
 url: /refguide/monitoring-mendix-runtime/
-category: "Mendix Runtime"
+
 description: "Describes the supported Mendix Runtime monitoring actions."
 tags: ["runtime", "json", "studio pro", "on-premises", "local"]
 #The anchor request-handlers below is mapped, so it should not be removed or changed.
@@ -14,13 +14,12 @@ For on-premises and local deployments of Mendix, the Mendix Runtime monitoring a
 {{% alert color="info" %}}
 This is only available for local and on-premises deployments of your app.
 
-For deployments to other platforms (for example Mendix for Private Cloud) you do not have access to the m2ee admin handler to make these requests.
+For deployments to other platforms (for example, Mendix for Private Cloud), you do not have access to the m2ee admin handler to make these requests.
 
-For deployments to the Mendix Cloud, you can get the same information from various pages in the Developer Portal. For more information see:
+For deployments to Mendix Cloud, you can get the same information from various pages in the Developer Portal. For more information, see:
 
 * [Metrics](/developerportal/operate/metrics/)
-* [Trends in the Mendix Cloud](/developerportal/operate/trends-v4/)
-* [Running Now Metrics](/developerportal/operate/troubleshooting-mxcloud-runningnow/)
+* [Running Now](/developerportal/deploy/mxcloud-runningnow/)
 {{% /alert %}}
 
 You can change the admin port from Studio Pro by navigating to **App** > **Settings** > **Configurations** > *your configuration* > **Server** > **Admin port**.

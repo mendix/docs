@@ -52,11 +52,11 @@ Events represent start and end points of a microflow and special operations in a
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/917902.png" link="/refguide7/start-event/" >}} | [Start Event](/refguide7/start-event/) | A start event is the starting point of the microflow. A microflow can only have one start event. |
-| {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/918113.png" link="/refguide7/end-event/" >}} | [End Event](/refguide7/end-event/) | An end event defines the location where the microflow will stop. Depending on the return type of the microflow in some cases a value must be specified. There can be more than one end event. |
-| {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/16843951.png" link="/refguide7/error-event/" >}}  | [Error Event](/refguide7/error-event/) | An error event defines a location where the microflow will stop and throw an error that occurred earlier. If you call a microflow, you may want to know whether any errors occurred within the microflow or not. |
-| {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/918115.png" link="/refguide7/continue-event/" >}} | [Continue Event](/refguide7/continue-event/) | A continue event is used to stop the current iteration of a loop and continue with the next iteration. Please note that continue events can only be used inside a [Loop](/refguide7/loop/). |
-| {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/918026.png" link="/refguide7/break-event/" >}} | [Break Event](/refguide7/break-event/) | A break event is used to stop iterating over the list of objects and continue with the rest of the flow after the loop. Please note that break events can only be used inside a [Loop](/refguide7/loop/). |
+| {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/917902.png" link="/refguide7/start-event/" class="no-border" >}} | [Start Event](/refguide7/start-event/) | A start event is the starting point of the microflow. A microflow can only have one start event. |
+| {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/918113.png" link="/refguide7/end-event/" class="no-border" >}} | [End Event](/refguide7/end-event/) | An end event defines the location where the microflow will stop. Depending on the return type of the microflow in some cases a value must be specified. There can be more than one end event. |
+| {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/16843951.png" link="/refguide7/error-event/" class="no-border" >}}  | [Error Event](/refguide7/error-event/) | An error event defines a location where the microflow will stop and throw an error that occurred earlier. If you call a microflow, you may want to know whether any errors occurred within the microflow or not. |
+| {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/918115.png" link="/refguide7/continue-event/" class="no-border" >}} | [Continue Event](/refguide7/continue-event/) | A continue event is used to stop the current iteration of a loop and continue with the next iteration. Please note that continue events can only be used inside a [Loop](/refguide7/loop/). |
+| {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/918026.png" link="/refguide7/break-event/" class="no-border" >}} | [Break Event](/refguide7/break-event/) | A break event is used to stop iterating over the list of objects and continue with the rest of the flow after the loop. Please note that break events can only be used inside a [Loop](/refguide7/loop/). |
 
 ## 5 Flows {#flows}
 
@@ -64,8 +64,8 @@ Flows form the connection between elements.
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/917883.png" link="/refguide7/sequence-flow/" >}} | [Sequence Flow](/refguide7/sequence-flow/) | A sequence flow is an arrow that links events, activities, splits and merges with each other. Together they defined the order of execution within a microflow. |
-| {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/917688.png" link="/refguide7/annotation-flow/" >}} | [Annotation flow](/refguide7/annotation-flow/) | An association is a connection that can be used to connect an annotation to another element. |
+| {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/917883.png" link="/refguide7/sequence-flow/" class="no-border" >}} | [Sequence Flow](/refguide7/sequence-flow/) | A sequence flow is an arrow that links events, activities, splits and merges with each other. Together they defined the order of execution within a microflow. |
+| {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/917688.png" link="/refguide7/annotation-flow/" class="no-border" >}} | [Annotation flow](/refguide7/annotation-flow/) | An association is a connection that can be used to connect an annotation to another element. |
 
 ## 6 Gateways {#gateways}
 
@@ -73,10 +73,9 @@ Gateways deal with making choices and merging different paths again..
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/917726.png" link="/refguide7/exclusive-split/" >}} | [Exclusive Split](/refguide7/exclusive-split/) | An exclusive split makes a decision based on a condition and follows one and only one of the outgoing flows.
-**Note**: There is no parallell execution in microflows. |
-| {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/918122.png" link="/refguide7/inheritance-split/" >}} | [Inheritance Split](/refguide7/inheritance-split/) | An inheritance split is an element that makes a choice based on the [specialization](/refguide7/entities/) of the selected object. You can give the specialized object a name using a [Cast Object](/refguide7/cast-object/) action. |
-| {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/918116.png" link="/refguide7/merge/" >}} | [Merge](/refguide7/merge/) | A merge can be used to combine multiple sequence flows into one. If a choice is made in a microflow and afterwards some common work needs to be done, you can combine the two (or more) paths using a merge. |
+| {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/917726.png" link="/refguide7/exclusive-split/" class="no-border" >}} | [Exclusive Split](/refguide7/exclusive-split/) | An exclusive split makes a decision based on a condition and follows one and only one of the outgoing flows. <br />**Note**: There is no parallel execution in microflows. |
+| {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/918122.png" link="/refguide7/inheritance-split/" class="no-border" >}} | [Inheritance Split](/refguide7/inheritance-split/) | An inheritance split is an element that makes a choice based on the [specialization](/refguide7/entities/) of the selected object. You can give the specialized object a name using a [Cast Object](/refguide7/cast-object/) action. |
+| {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/918116.png" link="/refguide7/merge/" class="no-border" >}} | [Merge](/refguide7/merge/) | A merge can be used to combine multiple sequence flows into one. If a choice is made in a microflow and afterwards some common work needs to be done, you can combine the two (or more) paths using a merge. |
 
 ## 7 Activities {#activities}
 
@@ -84,8 +83,8 @@ Activities are the actions that are executed in a microflow.
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/918096.png" link="/refguide7/activities/" >}} | [Activity](/refguide7/activities/) | An activity can be used to execute a specific action in a microflow. |
-| {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/917804.png" link="/refguide7/loop/" >}} | [Loop](/refguide7/loop/) | A looped activity is used to iterate over a list of objects. For every object the flow inside the looped activity is executed. A looped activity can contain all elements used in microflows, with the exception of start and stop events. The flow starts at the first element with no incoming flows. |
+| {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/918096.png" link="/refguide7/activities/" class="no-border" >}} | [Activity](/refguide7/activities/) | An activity can be used to execute a specific action in a microflow. |
+| {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/917804.png" link="/refguide7/loop/" class="no-border" >}} | [Loop](/refguide7/loop/) | A looped activity is used to iterate over a list of objects. For every object the flow inside the looped activity is executed. A looped activity can contain all elements used in microflows, with the exception of start and stop events. The flow starts at the first element with no incoming flows. |
 
 ## 8 Artifacts {#artifacts}
 
@@ -93,8 +92,8 @@ Artifacts provide the microflow with input and allow comments to be made.
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/918019.png" link="/refguide7/parameter/" >}} | [Parameter](/refguide7/parameter/) | A parameter is data that serves as input for the microflow. Parameters are filled at the location from where the microflow is triggered. |
-| {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/917689.png" link="/refguide7/annotation/" >}} | [Annotation](/refguide7/annotation/) | An annotation is an element that can be used to put comments in a microflow. |
+| {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/918019.png" link="/refguide7/parameter/" class="no-border" >}} | [Parameter](/refguide7/parameter/) | A parameter is data that serves as input for the microflow. Parameters are filled at the location from where the microflow is triggered. |
+| {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/917689.png" link="/refguide7/annotation/" class="no-border" >}} | [Annotation](/refguide7/annotation/) | An annotation is an element that can be used to put comments in a microflow. |
 
 ## 9 Variable Usages
 
@@ -102,7 +101,7 @@ The Modeler visualizes which variables are used by the selected object(s). It do
 
 In the example below, the parameter **AccountPasswordData** is highlighted because it is used in the selected activity. And the activity **Save password** has a usage label because it uses the variable defined by the selected activity.
 
-{{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/16843950.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/16843950.png" class="no-border" >}}
 
 ## 10 Errors
 
@@ -119,7 +118,7 @@ On an activity or gateway it gives you three options:
 
 For the latter two options you can draw an additional flow from the block and mark this flow as the error handler flow. When selecting 'Custom with rollback' it will trigger this path when the error occurs and still rollback your objects afterwards. The 'Custom without rollback' option does not rollback the objects. After you selected a flow as the error handler it will show this as in the following image.
 
-{{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/918247.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/918247.png" class="no-border" >}}
 
 On a loop you get two options:
 
@@ -128,7 +127,7 @@ On a loop you get two options:
 
 The continue option means that when an error occurs, the loop will simply continue to the next iteration. It will show as a continue icon on the exit flow of the loop.
 
-{{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/918246.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/918246.png" class="no-border" >}}
 
 ### 10.2 Inspecting Errors
 
@@ -155,7 +154,7 @@ The following table shows the attributes of System.Error and System.SoapFault.
 | System.SoapFault | Role | String | The Role element of the SOAP fault. |
 | System.SoapFault | Detail | String | The Detail element of the SOAP fault. |
 
-Click [here](http://www.w3.org/TR/soap12-part1/#soapfault) for more information on SOAP faults.
+Click [here](https://www.w3.org/TR/soap12-part1/#soapfault) for more information on SOAP faults.
 
 {{% alert color="warning" %}}
 

@@ -1,7 +1,7 @@
 ---
 title: "Clear Warning Messages"
 url: /howto/monitoring-troubleshooting/clear-warning-messages/
-category: "Monitoring and Troubleshooting"
+
 weight: 1
 description: "Describes how to eliminate design-time warnings by viewing and clearing warning messages."
 tags: ["monitoring", "troubleshooting", "warning", "error", "warning message"]
@@ -20,29 +20,25 @@ This how-to teaches you how to do the following:
 
 Warning messages can be seen in the **Error List** tab of Studio Pro (by default shown at the bottom of Studio Pro). Note that the **Warnings** box must be selected for them to display.
 
-{{< figure src="/attachments/howto/monitoring-troubleshooting/clear-warning-messages/18579992.png" >}}
+{{< figure src="/attachments/howto/monitoring-troubleshooting/clear-warning-messages/18579992.png" class="no-border" >}}
 
 If this tab is not visible, it can be displayed via the **View** menu by selecting the **Error List** option:
 
-{{< figure src="/attachments/howto/monitoring-troubleshooting/clear-warning-messages/18579991.png" >}}
+{{< figure src="/attachments/howto/monitoring-troubleshooting/clear-warning-messages/18579991.png" class="no-border" >}}
 
 To get more information, double-click or right-click the warning.
 
 ## 3 Common Warnings
 
 {{% alert color="warning" %}}
-
-⚠ Using the main placeholder contents for pop-ups is deprecated.  This option will be removed in a future version.  Please use a separate pop-up layout instead.
-
+Using the main placeholder contents for pop-ups is deprecated.  This option will be removed in a future version.  Please use a separate pop-up layout instead.
 {{% /alert %}}
 
 * This will not affect the app in this version of Studio Pro, but it may cause problems when upgrading
 * In this example, the pop-up layout must be adjusted in order to no longer use the main placeholder
 
 {{% alert color="warning" %}}
-
 A flow origination from an error handler should not return to the main flow.
-
 {{% /alert %}}
 
 * Once the microflow has split due to an error, the flow that executes due to the error should not merge with the flow that executes when no error occurs

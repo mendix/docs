@@ -1,7 +1,7 @@
 ---
 title: "Debug Java Actions Remotely"
 url: /howto7/monitoring-troubleshooting/debug-java-actions-remotely/
-category: "Monitoring and Troubleshooting"
+
 weight: 7
 tags: ["monitoring", "troubleshooting", "java action", "debug"]
 ---
@@ -25,7 +25,7 @@ To edit the server configuration with extra JVM parameters, follow these steps:
 2. Edit the configuration.
 3. Go to the **Server** tab on the **Edit Configuration** editor and add the following line to the **Extra JVM parameters** field: `-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005`
 
-    {{< figure src="/attachments/howto7/monitoring-troubleshooting/debug-java-actions-remotely/18580063.png" >}}
+    {{< figure src="/attachments/howto7/monitoring-troubleshooting/debug-java-actions-remotely/18580063.png" class="no-border" >}}
 
 4. Next, start your application in Mendix.
 
@@ -33,7 +33,7 @@ To edit the server configuration with extra JVM parameters, follow these steps:
 
 In your Java IDE, you need to configure remote debugging. This screenshot shows the configuration in IntelliJ:
 
-{{< figure src="/attachments/howto7/monitoring-troubleshooting/debug-java-actions-remotely/intellij_rundebug_configurations.png" alt="Mendix Intellij remote debugging" >}}
+{{< figure src="/attachments/howto7/monitoring-troubleshooting/debug-java-actions-remotely/intellij_rundebug_configurations.png" alt="Mendix Intellij remote debugging" class="no-border" >}}
 
 1. Start the debugger.
 2. Place some breakpoints in your Java code.
@@ -47,9 +47,6 @@ In your Java IDE, you need to configure remote debugging. This screenshot shows 
 * [Monitor Mendix using JMX](/howto7/monitoring-troubleshooting/monitoring-mendix-using-jmx/)
 * [Log Levels](/howto7/monitoring-troubleshooting/log-levels/)
 * [Debug Microflows](/howto7/monitoring-troubleshooting/debug-microflows/)
-* [Debug Java Actions](/howto7/monitoring-troubleshooting/debug-java-actions/)
-* [Common Mendix SSO Errors](/howto7/monitoring-troubleshooting/handle-common-mendix-sso-errors/)
-* [Debug Microflows Remotely](/howto7/monitoring-troubleshooting/debug-microflows-remotely/)
 * [Get Started with Nexus Maven Repository Manager](http://www.andrejkoelewijn.com/blog/2010/03/09/getting-started-with-nexus-maven-repository-manager/)
 * [Use Eclipse to Debug Your Tomcat Web Application](http://www.andrejkoelewijn.com/blog/2003/10/23/using-eclipse-to-debug-your-tomcat-web-application/)
 * [Profile Mendix Using JProfiler](http://www.andrejkoelewijn.com/blog/2014/01/15/profiling-mendix-using-jprofiler/)

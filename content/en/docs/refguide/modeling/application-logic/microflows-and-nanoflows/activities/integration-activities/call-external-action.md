@@ -6,8 +6,8 @@ weight: 5
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="warning" %}}
-This activity can only be used in **Microflows**.
+{{% alert color="info" %}}
+This activity can only be used in microflows.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -19,11 +19,11 @@ The **Call external action** activity allows you to call an external action that
 There are two sets of properties for this activity, those in the properties pane on the right, and those that are displayed when opening the activity dialog.
 An example of call external action properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-external-action/properties.png" alt="call external action properties" width="400" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-external-action/properties.png" alt="call external action properties" width="400" class="no-border" >}}
 
 The **Action** section of the properties pane shows the toolbox action associated with this activity. You can open a dialog box to select a different toolbox action clicking the ellipsis (**…**) next to **Action**.
 
-You can open the **Call External Action** properties dialog by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
+You can open the **Call External Action** properties dialog by double-clicking the activity, or right-clicking the activity and selecting **Properties**.
 
 The properties dialog box consists of two tabs:
 
@@ -32,7 +32,7 @@ The properties dialog box consists of two tabs:
 
 ## 3 General Tab {#general}
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-external-action/general.png" alt="call external action general tab" width="700" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-external-action/general.png" alt="call external action general tab" width="700" class="no-border" >}}
 
 ### 3.1 Action
 
@@ -60,7 +60,7 @@ In the **Documentation** tab, you can find a **Summary** and a **Description**. 
 
 ## 5 Edit External Action Parameter Mapping Dialog {#edit-parameter-mapping}
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-external-action/edit-parameter-mapping.png">}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/call-external-action/edit-parameter-mapping.png" class="no-border" >}}
 
 The **Edit External Action Parameter Mapping** dialog allows you to set the value of the parameter you pass to an external action. You can either select a **Variable** from the dropdown field, or write a custom [microflow expression](/refguide/expressions/) that returns a value of the expected type.
 

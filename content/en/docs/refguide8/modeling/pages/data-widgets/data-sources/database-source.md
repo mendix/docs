@@ -5,10 +5,6 @@ tags: ["studio pro", "database", "data source"]
 weight: 10
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/database-source.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 If **Database** is selected as the data source for a widget then an object or objects shown are retrieved directly from the database with a query. This data source is also supported in [offline](/refguide8/offline-first/) applications in which case the data will come from the database on the mobile device.
@@ -21,7 +17,7 @@ You can filter data shown with the help of database [constraints](#constraints).
 
 The **Entity (path)** property specifies the target of the database query. If you have a top-level data widget, **Entity (path)** will get objects of the selected entity directly. If you have a nested data widget, you can also select an entity of a parent data container. In this case objects are retrieved following the association path and the association is parsed as an extra constraint in the database query. 
 
-{{< figure src="/attachments/refguide8/modeling/pages/data-widgets/data-sources/database-source/data-source-example.png" alt="Data Source Example"   width="400"  >}}
+{{< figure src="/attachments/refguide8/modeling/pages/data-widgets/data-sources/database-source/data-source-example.png" alt="Data Source Example"   width="400"  class="no-border" >}}
 
 {{% alert color="info" %}}
 This differs from the [association data source](/refguide8/association-source/) when objects are retrieved from the memory, not database.
@@ -52,7 +48,7 @@ Constraints allow for custom, hard-coded limitations on the data displayed. This
 
 Each constraint consists of an **Attribute**, an **Operator**, and a **Value**:
 
-{{< figure src="/attachments/refguide8/modeling/pages/data-widgets/data-sources/database-source/constraint-example.png" alt="Constraint Example" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/data-widgets/data-sources/database-source/constraint-example.png" alt="Constraint Example" class="no-border" >}}
 
 Multiple constraints will limit the data even more (the logical operator **AND**). There is no way to use the logical operator **OR** in constraints, but you can switch to an [XPath data source](/refguide8/xpath-source/) and create an XPath constraint.
 

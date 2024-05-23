@@ -10,11 +10,11 @@ tags: ["page", "data view", "widget", "studio pro"]
 
 The data view is a starting point for showing the contents of exactly one object. For example, if you want to show the details of a single program item, you can use a data view to do this:
 
-{{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-view/data-view-example-structure-mode.png"    width="350"   >}}
+{{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-view/data-view-example-structure-mode.png"    width="350"   class="no-border" >}}
 
 In a more complex example, a data view can contain customer information and [tab containers](/refguide/tab-container/) per specific topic (for example, addresses and payment information) with nested data grids for related objects:
 
-{{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-view/data-view-complex-example.png"    width="350"   >}}
+{{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-view/data-view-complex-example.png"    width="350"   class="no-border" >}}
 
 ## 2 Data View Footer
 
@@ -51,7 +51,7 @@ Default: *Horizontal*
 
 #### 4.1.2 Label Width (Weight)
 
-If the form orientation is set to horizontal, this property can be used to specify the width of the input widget labels inside the data view. The width is specified using column weights from the [Bootstrap grid system](http://getbootstrap.com/css/#grid). For more details, see [Layout Grid](/refguide/layout-grid/).
+If the form orientation is set to horizontal, this property can be used to specify the width of the input widget labels inside the data view. The width is specified using column weights from the [Bootstrap grid system](https://getbootstrap.com/css/#grid). For more details, see [Layout Grid](/refguide/layout-grid/).
 
 Default: *3*
 
@@ -88,13 +88,32 @@ The data view supports the following types of data source: context, microflow, n
 
 The editable property indicates whether the data view as a whole is editable or not.
 
-| Value   | Description                                                  |
-| ------- | ------------------------------------------------------------ |
-| Yes     | The data view is editable: each widget is determined to be editable based on its own editable property (default value for data views outside a snippet). |
-| Inherited from snippet call | Set to **Yes** or **No** by the containing data container of the snippet call (default value for data views inside a snippet). |
-| No      | The data view is not editable: no widget inside the data view will be editable.|
+| Value   | Description   |
+|--------|---------|
+| Default  | The editability is the same as the editability of the containing data container. If there is no surrounding data container, then the data view will be editable by default.    |
+| Inherited from snippet call | The editability of the data view is the same as the editability of the containing data container of the snippet call (the default value for data views inside a snippet).    |
+| Never   | The data view is not editable; no widget inside the data view will be editable.  |
+| Conditionally  | The value is editable if the specified condition satisfies the specified criteria (see below). It will be combined with the conditions of the containing data containers. |
 
-#### 4.3.2 Read-Only Style
+{{% alert color="info" %}}
+The 'Conditionally' option was introduced in Mendix 10.7.0.
+{{% /alert %}}
+
+### 4.3.2 Condition
+
+If the editable property is set to **Conditionally**, the widgets inside the data view are made editable only if the object of the data view satisfies the specified criteria.
+
+#### 4.3.2.1 Based on Attribute Value
+
+When selected, this enables the widgets in the data view when a particular attribute has a certain value. Only Boolean and enumeration attributes can be used for this purpose.
+
+#### 4.3.2.2 Based on Expression
+
+When selected, this enables the widget when a provided [expression](/refguide/expressions/) evaluates to true. The object of the data view is available inside an expression as the `$currentObject` variable.
+
+The expression provided is evaluated in the browser. Currently it does not support all the functions that are available in microflows. The autocomplete function will only list those functions which are supported.
+
+#### 4.3.3 Read-Only Style
 
 This property determines how input elements are rendered if they are read-only. 
 

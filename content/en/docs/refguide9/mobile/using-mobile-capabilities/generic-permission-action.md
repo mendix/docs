@@ -13,7 +13,7 @@ Advanced features in mobile apps often require permission from users. Apps need 
 ## 2 Prerequisites
 
 * Complete the [Prerequisites](/refguide9/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/#prerequisites) section of *Deploy Your First Mendix Native Mobile App*.
-* Install Mendix Studio Pro v9.10.0 and above to use the Native Mobile App Builder and the latest Nanoflow Commons module.
+* Install Mendix Studio Pro 9.10.0 and above to use the Native Mobile App Builder and the latest Nanoflow Commons module.
 * Make sure your [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module is up to date.
 * Make sure you are using [Make It Native 9 app](/releasenotes/mobile/make-it-native-parent/), and it is up-to-date.
 
@@ -58,13 +58,13 @@ This an example for requesting contact access permission for Android and iOS dev
     1. For the Android branch, use a **Generic permission** action with a permission name like {READ_CONTACTS_ANDROID}.
     1. For the iOS branch, use a **Generic permission** action with a permission name like {CONTACTS_IOS}:
 
-        {{< figure src="/attachments/refguide9/mobile/native-mobile/generic-permission-action/fullExample.png" alt="use generic permission"   width="400"  >}}
+        {{< figure src="/attachments/refguide9/mobile/native-mobile/generic-permission-action/fullExample.png" alt="use generic permission"   width="400"  class="no-border" >}}
       
-        {{< figure src="/attachments/refguide9/mobile/native-mobile/generic-permission-action/decision.png" alt="decision"   width="400"  >}}
+        {{< figure src="/attachments/refguide9/mobile/native-mobile/generic-permission-action/decision.png" alt="decision"   width="400"  class="no-border" >}}
       
-        {{< figure src="/attachments/refguide9/mobile/native-mobile/generic-permission-action/android.png" alt="android permission"   width="400"  >}}
+        {{< figure src="/attachments/refguide9/mobile/native-mobile/generic-permission-action/android.png" alt="android permission"   width="400"  class="no-border" >}}
       
-        {{< figure src="/attachments/refguide9/mobile/native-mobile/generic-permission-action/ios.png" alt="ios permission"   width="400"  >}}
+        {{< figure src="/attachments/refguide9/mobile/native-mobile/generic-permission-action/ios.png" alt="ios permission"   width="400"  class="no-border" >}}
 
 ## 4 Building
 

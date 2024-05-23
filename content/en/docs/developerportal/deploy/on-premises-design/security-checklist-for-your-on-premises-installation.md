@@ -8,10 +8,6 @@ tags: ["security", "on-premises", "user account", "reverse proxy", "firewall", "
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/security-checklist-for-your-on-premises-installation.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 This how-to serves as a checklist for implementing security for your on-premises installation.
@@ -28,7 +24,7 @@ This how-to teaches you how to do the following:
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Use a Mendix version containing the latest security patches
-    * If your app runs in the Mendix Cloud, it will automatically comply with this checklist once it is deployed
+    * If your app runs in Mendix Cloud, it will automatically comply with this checklist once it is deployed
 
 ## 3 Using an Unprivileged Dedicated User Account for Every Application
 

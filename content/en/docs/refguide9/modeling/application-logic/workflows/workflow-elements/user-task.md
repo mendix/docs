@@ -11,11 +11,11 @@ User task allows you to assign a workflow task to a certain user or a group of u
 
 For example, you can add filters and assign a task to users with the Manager role:
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/workflows/workflow-elements/user-task/user-task.jpg" alt="User Task Example" width="200">}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/workflows/workflow-elements/user-task/user-task.jpg" alt="User Task Example" width="200" class="no-border" >}}
 
 When the workflow reaches the user task activity, the task is created and will be displayed in the Task inbox if you are using the **Workflow Commons** module:
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/workflows/workflow-elements/user-task/task-inbox.jpg" alt="Task Inbox" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/workflows/workflow-elements/user-task/task-inbox.jpg" alt="Task Inbox" class="no-border" >}}
 
 ## 2 Properties
 
@@ -46,7 +46,7 @@ For more information on using parameters, see the [Parameters](#parameters) sect
 
 **Task Description** is stored in the System module on the **UserTask** entity as an attribute and its data can be dynamically displayed in the running app. If you are using the **Workflow Commons** module, the **Task description** is used in page templates. 
 
-The **Task description** can contain parameters that are written between braces, e.g. {1}.
+The **Task description** can contain parameters that are written between braces, for example, {1}.
 
 #### 2.2.3 Parameters {#parameters}
 
@@ -69,13 +69,13 @@ To add a parameter to the **Task name** or the **Task description**, do the foll
 
 3. In the **Template Parameter (String)** dialog box, specify the expression, and confirm your choice:
 
-    {{< figure src="/attachments/refguide9/modeling/application-logic/workflows/workflow-elements/user-task/parameter-example.jpg" alt="Parameter Example" >}}
+    {{< figure src="/attachments/refguide9/modeling/application-logic/workflows/workflow-elements/user-task/parameter-example.jpg" alt="Parameter Example" class="no-border" >}}
 
     {{% alert color="info" %}}Make sure that the attribute you use in the expression is of the string type.{{% /alert %}}
 
 4. In the **Template** setting, write the text you would like to display and type **Index** of the parameter you would like to include. For example, you can add a template for the **Task description** specifying the name of the workflow and what the workflow due date is :
 
-    {{< figure src="/attachments/refguide9/modeling/application-logic/workflows/workflow-elements/user-task/task-description-example.jpg" alt="Task Description Example" >}} 
+    {{< figure src="/attachments/refguide9/modeling/application-logic/workflows/workflow-elements/user-task/task-description-example.jpg" alt="Task Description Example" class="no-border" >}} 
 
 ##### 2.2.3.2 Performing Other Actions on Parameters
 

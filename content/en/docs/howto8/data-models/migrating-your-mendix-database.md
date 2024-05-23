@@ -1,7 +1,7 @@
 ---
 title: "Migrate Your Mendix Database"
 url: /howto8/data-models/migrating-your-mendix-database/
-category: "Data Models"
+
 weight: 7
 tags: ["database", "migrate", "PostgreSQL", "export", "import"]
 ---
@@ -39,11 +39,11 @@ These settings can be configured as follows:
 
 * Studio Pro – in **Project Explorer**, expand **Project**, double-click **Settings**, edit a configuration, and go to the **Custom** tab:
 
-    {{< figure src="/attachments/howto8/data-models/migrating-your-mendix-database/19398970.png" >}} 
+    {{< figure src="/attachments/howto8/data-models/migrating-your-mendix-database/19398970.png" class="no-border" >}} 
 
 * Service Console – click an app in the left pane, click **Configuration**, click **Advanced**, then see **Custom Mendix settings**:
 
-    {{< figure src="/attachments/howto8/data-models/migrating-your-mendix-database/19398971.png" >}} 
+    {{< figure src="/attachments/howto8/data-models/migrating-your-mendix-database/19398971.png" class="no-border" >}} 
 
 * m2ee-tools – add the custom settings to the mxruntime section (for more information, see [Full Documented m2ee](https://github.com/mendix/m2ee-tools/blob/develop/examples/full-documented-m2ee.yaml))
 
@@ -75,7 +75,7 @@ To do this, perform the following steps:
     * **User name** – the user name of a database administrator in your local PostgreSQL
     * **Password** – the password for the user specified above
 
-    {{< figure src="/attachments/howto8/data-models/migrating-your-mendix-database/postgresql-config.png" >}}
+    {{< figure src="/attachments/howto8/data-models/migrating-your-mendix-database/postgresql-config.png" class="no-border" >}}
 
     Your new configuration will be set as the active configuration.
 5. Ensure that PostgreSQL is running locally on the correct port.
@@ -103,13 +103,18 @@ Use Developer Portal to upload the migrated, exported database backup to the Men
 
 ## 5 Exporting a Mendix Cloud Database
 
-The same procedure can be used to export an existing Mendix cloud database, import it into an on-premises PostgreSQL source database and migrate that to an on-premises non-PostgreSQL target database.
+The same procedure can be used to export an existing Mendix Cloud database, import it into an on-premises PostgreSQL source database and migrate that to an on-premises non-PostgreSQL target database.
 
-Export the Mendix cloud database via the Developer Portal. This can be accessed using the Nodes page in the Developer Portal: select your app and environment, click **Details**, click the **Backup** tab, select an existing Backup from the list, and click the **Download Backup** button to download the database to your local file system using the Database URL shown in the dialog. A fresh backup with recent data could also be created first using the **Create Backup** button.
+Export the Mendix Cloud database via the Developer Portal. This can be accessed using the Nodes page in the Developer Portal:
+
+1. Select your app and environment.
+2. Click **Backups**.
+3. Optionally, create a fresh backup with recent data by clicking **Create Backup**.
+4. On the backup you want to download, click **More Options** > **Download**. This downloads the database to your local file system using the database URL shown in the dialog box. 
 
 ### 5.1 Importing into an On-premises PostgreSQL Database
 
-To import a PostgreSQL database using the downloaded database file, refer to either the [pg_dump](https://www.postgresql.org/docs/current/backup-dump.html) command line tool or the [PG Admin](https://www.pgadmin.org/docs/) visual tool documentation to understand how to restore your downloaded database file.
+To import a PostgreSQL database using the downloaded database file, refer to either the [pg_dump](https://www.postgresql.org/docs/current/backup-dump.html) command line tool or the [pgAdmin](https://www.pgadmin.org/docs/) visual tool documentation to understand how to restore your downloaded database file.
 
 ### 5.2 Migrating a PostgreSQL Database To a Non-PostgreSQL Database
 
@@ -141,7 +146,7 @@ To do this, perform the following steps:
 
     as shown in the highlighted image below:
 
-    {{< figure src="/attachments/howto8/data-models/migrating-your-mendix-database/sap-postgres-config.png" >}}
+    {{< figure src="/attachments/howto8/data-models/migrating-your-mendix-database/sap-postgres-config.png" class="no-border" >}}
 
 4. Create an environment using the SAP HANA database service using Mendix Developer Portal.
 5. Deploy the mda, but **do not start the application**.

@@ -6,15 +6,11 @@ weight: 5
 tags: ["Studio Pro", "file menu", "file"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/file-menu.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 The **File** menu allows you to manage documents and projects, for example, to create a new project or save changes:
 
-{{< figure src="/attachments/refguide8/modeling/menus/file-menu/file-menu.png" alt="File Menu"   width="300"  >}}
+{{< figure src="/attachments/refguide8/modeling/menus/file-menu/file-menu.png" alt="File Menu"   width="300"  class="no-border" >}}
 
 ## 2 Menu Items Overview {#overview}
 

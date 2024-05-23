@@ -9,10 +9,6 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/show-message.pdf).
-{{% /alert %}}
-
 {{% alert color="warning" %}}
 This activity can be used in both **Microflows** and **Nanoflows**.
 {{% /alert %}}
@@ -25,13 +21,13 @@ This action is ignored and does not work when a microflow is called from an offl
 
 The **Show message** activity shows a blocking or non-blocking message to an end-user. For example, if the end-user did not select the customer grade in a form, you can show an error message telling them to select a grade to proceed:
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/activities/client-activities/show-message/show-message.png" alt="Show Message"   width="300"  >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/client-activities/show-message/show-message.png" alt="Show Message"   width="300"  class="no-border" >}}
 
 ## 2 Properties
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/activities/client-activities/show-message/show-message-properties.png" alt="Show Message Properties" >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/client-activities/show-message/show-message-properties.png" alt="Show Message Properties" class="no-border" >}}
 
 The **Show message** properties pane consists of the following sections:
 

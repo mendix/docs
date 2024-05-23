@@ -1,7 +1,7 @@
 ---
 title: "Team"
 url: /developerportal/general/team/
-category: "General"
+
 weight: 3
 description: "Describes the Team page of the Developer Portal."
 tags: ["Team", "Developer Portal"]
@@ -14,14 +14,14 @@ Your team can include all of your colleagues working on an app. As well as devel
 
 To view and manage your team members, follow these steps:
 
-1. Click **Apps** in the top navigation panel of the [Developer Portal](http://sprintr.home.mendix.com) and select the app you want to manage.
-2. Click **Team** under the **Collaborate** category.
+1. In the [Developer Portal](https://sprintr.home.mendix.com), select the app you want to manage.
+2. In the navigation pane, click **Team**.
 
 ## 2 Managing the Team {#managing}
 
 Only team members with the [Scrum Master](/developerportal/general/app-roles/#team-roles) role can manage the app team.
 
-{{< figure src="/attachments/developerportal/general/team/team.png" >}}
+{{< figure src="/attachments/developerportal/general/team/team.png" class="no-border" >}}
 
 On the **Overview** tab, you can do the following:
 
@@ -31,7 +31,7 @@ On the **Overview** tab, you can do the following:
 
 Navigate to the **Role Settings** tab to view and edit permissions for the team roles as well as to **Add New Role**:
 
-{{< figure src="/attachments/developerportal/general/team/role-settings.png"   width="400"  >}}
+{{< figure src="/attachments/developerportal/general/team/role-settings.png"   width="400"  class="no-border" >}}
 
 Navigate to the **History** tab to view the history of changes for the team and [node permissions](/developerportal/deploy/node-permissions/).
 
@@ -41,10 +41,10 @@ Navigate to the **Pending Invites** tab for an overview of all sent and unaccept
 
 To invite new team members, follow these steps:
 
-1. Click **Invite Member** on the **Team** page or the **+** icon next to the team in the [app Buzz](/developerportal/general/buzz/#app-buzz).
-2. Enter the email address for the Mendix user(s) you want to invite to the team.
+1. Click **Invite Member** on the **Team** page or **Invite someone to your team** ({{% icon name="add-circle" %}}) next to the team in the [app Buzz](/developerportal/general/buzz/).
+2. Enter the email address for the Mendix user (or users) you want to invite to the team.
 3. Select an **Access Role** for the new member and click **Add**.
-4. Send the invitation(s).
+4. Send the invitation.
 
 {{% alert color="info" %}}If you invite a Mendix user from your company to an app owned by your company, the invited user is added directly to the app's team.{{% /alert %}}
 

@@ -5,10 +5,6 @@ weight: 80
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/troubleshooting-sql-server.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 This document covers various errors you might encounter when using SQL Server, and offers suggestions on how to resolve them.

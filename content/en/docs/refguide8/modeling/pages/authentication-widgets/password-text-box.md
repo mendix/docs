@@ -5,17 +5,13 @@ tags: ["studio pro", "password text box", "authentication widget", "authenticati
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/password-text-box.pdf).
-{{% /alert %}}
-
 {{% alert color="warning" %}}The **Password text box** widget is not supported on native mobile pages.{{% /alert %}}
 
 ## 1 Introduction
 
 The **Password text box** is a widget that provides a password for authentication:
 
-{{< figure src="/attachments/refguide8/modeling/pages/authentication-widgets/password-text-box/password-text-box.png" alt="Password Text Box" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/authentication-widgets/password-text-box/password-text-box.png" alt="Password Text Box" class="no-border" >}}
 
 The **Password text box** should be placed on a page together with  with a [Login ID text box](/refguide8/login-id-text-box/) and a [Sign-in button](/refguide8/sign-in-button/).
 
@@ -23,7 +19,7 @@ The **Password text box** should be placed on a page together with  with a [Logi
 
 An example of password text box properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/pages/authentication-widgets/password-text-box/password-text-box-properties.png"   width="250"  >}}
+{{< figure src="/attachments/refguide8/modeling/pages/authentication-widgets/password-text-box/password-text-box-properties.png"   width="250"  class="no-border" >}}
 
 Password text box properties consist of the following sections:
 

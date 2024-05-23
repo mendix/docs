@@ -10,10 +10,6 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/open-app-dialog.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 To open a project in Mendix Studio Pro, do one of the following:
@@ -23,7 +19,7 @@ To open a project in Mendix Studio Pro, do one of the following:
 
 The **Open App** dialog box will open, where you can select the app location:
 
-{{< figure src="/attachments/refguide8/modeling/menus/file-menu/open-app-dialog/open-app.png" alt="Open App" >}}
+{{< figure src="/attachments/refguide8/modeling/menus/file-menu/open-app-dialog/open-app.png" alt="Open App" class="no-border" >}}
 
 For more information on the app location, see the [Where Is Your App Stored?](#location) section
 

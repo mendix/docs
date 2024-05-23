@@ -321,7 +321,7 @@ To configure the appearance of the custom widget in Studio Pro, export a `getPre
 
 Please note that the default colors will be automatically adjusted for dark mode (for example font color, border color, and more). However, the `isDarkMode` flag can be used when setting colors explicitly.
 
-To create a preview for different versions, you can use the third argument `version`. It contains the current Studio Pro version as an array of numbers in the format [`major`, `minor`, `build`], e.g. `[9, 18, 0]`.
+To create a preview for different versions, you can use the third argument `version`. It contains the current Studio Pro version as an array of numbers in the format [`major`, `minor`, `build`], for example, `[9, 18, 0]`.
 
 The following describes the API for the preview properties object that the `getPreview` should return.
 
@@ -379,7 +379,7 @@ export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean, _v
 };
 ```
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-image.png" alt="an svg image of a circle" width="200"  >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-image.png" alt="an svg image of a circle" width="200"  class="no-border" >}}
 
 ### 7.2 Container
 
@@ -411,7 +411,7 @@ export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean, _v
     });
 ```
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-container.png" alt="a bordered container with two texts" width="600"  >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-container.png" alt="a bordered container with two texts" width="600"  class="no-border" >}}
 
 ### 7.3 Row Layout {#row-layout}
 
@@ -448,7 +448,7 @@ export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean, _v
     });
 ```
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-row-layout-fixed.png" alt="a row layout with fixed column weights" width="1000"  >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-row-layout-fixed.png" alt="a row layout with fixed column weights" width="1000"  class="no-border" >}}
 
 ##### 7.3.1.2 Grow
 
@@ -495,7 +495,7 @@ export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean, _v
     });
 ```
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-row-layout-grow.png" alt="a row layout with different grow factors" width="1000"  >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-row-layout-grow.png" alt="a row layout with different grow factors" width="1000"  class="no-border" >}}
 
 ##### 7.3.1.3 Example
 
@@ -528,7 +528,7 @@ export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean, _v
     });
 ```
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-row-layout-grow-2.png" alt="structure mode preview of a bordered container with two texts" width="600"  >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-row-layout-grow-2.png" alt="structure mode preview of a bordered container with two texts" width="600"  class="no-border" >}}
 
 ### 7.4 Text
 
@@ -588,7 +588,7 @@ exports.getPreview = (values: WidgetPreviewProps, _isDarkMode: boolean, _version
 })
 ```
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-drop-zone.png" alt="a container with a dropzone" width="600"  >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-drop-zone.png" alt="a container with a dropzone" width="600"  class="no-border" >}}
 
 ### 7.6 Selectable
 
@@ -631,7 +631,7 @@ export function getPreview(values: WidgetPreviewProps, _isDarkMode: boolean, _ve
 }
 ```
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-selectable.png" alt="a list of selectable text elements" width="600"  >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-selectable.png" alt="a list of selectable text elements" width="600"  class="no-border" >}}
 
 ### 7.7 Datasource
 
@@ -658,4 +658,4 @@ The **datasource** preview type can be used when developing a widget with a data
 
 Here is a preview of a **datasource** component containing a drop-zone with two text boxes:
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-datasource.png" alt="a widget with a datasource" width="400"  >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-datasource.png" alt="a widget with a datasource" width="400"  class="no-border" >}}

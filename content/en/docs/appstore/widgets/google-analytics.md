@@ -1,14 +1,14 @@
 ---
 title: "Google Analytics"
 url: /appstore/widgets/google-analytics/
-category: "Widgets"
+
 description: "Describes the configuration and usage of the Google Analytics widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "widget", "google analytics", "eventtracker", "webmaster", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 {{% alert color="danger" %}}
-The Google Analytics widgets set has been removed from our Marketplace. These widgets were exclusively compatible with Universal Analytics. As of July 1, 2023, Universal Analytics has been discontinued and succeeded by Google Analytics 4. For guidance on transitioning to Google Analytics 4, we recommend referring to Google's official documentation. To integrate Google Analytics 4 with your Mendix applications, please use the [Google Tag](/appstore/modules/google-tag/) module.
+The Google Analytics widgets set has been removed from our Marketplace. These widgets were exclusively compatible with Universal Analytics. As of July 1, 2023, Universal Analytics has been discontinued and succeeded by Google Analytics 4. For guidance on transitioning to Google Analytics 4, Mendix recommends referring to Google's official documentation. To integrate Google Analytics 4 with your Mendix applications, please use the [Google Tag](/appstore/modules/google-tag/) module.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -34,7 +34,7 @@ All the widgets in this package (except for [EventTrackerButton](#eventtrackerbu
 * **Labe** – an optional string to provide additional dimensions to the event data
 * **Value** – an integer you can use to provide numerical data about the user event
 
-For more information, see [Event Tracking - Web Tracking (ga.js)](http://code.google.com/apis/analytics/docs/tracking/eventTrackerGuide.html).
+For more information, see [Event Tracking - Web Tracking (ga.js)](https://code.google.com/apis/analytics/docs/tracking/eventTrackerGuide.html).
 
 ### 3.2 EventTrackerButton {#eventtrackerbutton}
 

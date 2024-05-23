@@ -212,3 +212,18 @@ config:
 
   # MD053/link-image-reference-definitions - Link and image reference definitions should be needed
   MD053: false
+
+  # MD054 - Link and image style
+  MD054:
+    autolink: false
+    inline: true 
+    full: false
+    collapsed: false
+    shortcut: false
+
+  # MD055 - Table pipe style
+  # Turned off temporarily as too many files have issues to be recorded in PR description
+  MD055: false
+
+  # MD056 - Table column count
+  MD056: true

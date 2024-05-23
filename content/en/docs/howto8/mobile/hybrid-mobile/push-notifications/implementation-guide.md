@@ -21,11 +21,11 @@ This how-to teaches you how to do the following:
 
 The [Push Notifications Connector](/appstore/modules/push-notifications/) module is published in the Mendix Marketplace. To import it into your project, click the Marketplace icon in the top right of Mendix Studio Pro. Search for "Push Notifications Connector" and click the title of the result:
 
-{{< figure src="/attachments/howto8/mobile/hybrid-mobile/push-notifications/implementation-guide/20218020.png" >}}
+{{< figure src="/attachments/howto8/mobile/hybrid-mobile/push-notifications/implementation-guide/20218020.png" class="no-border" >}}
 
 On the resulting page, click the green **Download** button. Make sure that **Add as a new module** is selected, and then click **Import**:
 
-{{< figure src="/attachments/howto8/mobile/hybrid-mobile/push-notifications/implementation-guide/20217885.jpg" >}}
+{{< figure src="/attachments/howto8/mobile/hybrid-mobile/push-notifications/implementation-guide/20217885.jpg" class="no-border" >}}
 
 {{% alert color="warning" %}}
 The Push Notifications Connector assumes that the mobile app and the back-end part will reside in the same app.
@@ -46,7 +46,7 @@ To include these dependencies, download them from the Marketplace in a way simil
 
 If your project is using an older version of the [Encryption](/appstore/modules/encryption/) module, it might trigger an error for referencing a non-existent layout. You can fix this by assigning the primary layout of the **Encryption.ResponsiveLayout_Certificate** layout to another layout (please note that in this specific use case, it is not important which layout is used). This does not apply to version 1.3.1 and above.
 
-{{< figure src="/attachments/howto8/mobile/hybrid-mobile/push-notifications/implementation-guide/20217886.jpg" >}}
+{{< figure src="/attachments/howto8/mobile/hybrid-mobile/push-notifications/implementation-guide/20217886.jpg" class="no-border" >}}
 
 {{% /alert %}}
 
@@ -64,7 +64,7 @@ Please do not remove the button with the caption **Device Registration reference
 
 {{% /alert %}}
 
-{{< figure src="/attachments/howto8/mobile/hybrid-mobile/push-notifications/implementation-guide/20217888.jpg" >}}
+{{< figure src="/attachments/howto8/mobile/hybrid-mobile/push-notifications/implementation-guide/20217888.jpg" class="no-border" >}}
 
 ## 5 Starting Connectors from Your After-Startup Microflow
 
@@ -75,7 +75,7 @@ If your project already has an AfterStartup microflow configured, it is recommen
 * create a new microflow, from which you will call both the existing AfterStartup microflow and the AfterStartup_PushNotifications microflow, and then set this as the AfterStartup microflow for your app
 * add a new action to the existing AfterStartup microflow to run the AfterStartup_PushNotifications microflow
 
-{{< figure src="/attachments/howto8/mobile/hybrid-mobile/push-notifications/implementation-guide/on-app-startup.png" alt="On start push microflow" >}}
+{{< figure src="/attachments/howto8/mobile/hybrid-mobile/push-notifications/implementation-guide/on-app-startup.png" alt="On start push microflow" class="no-border" >}}
 
 ## 6 Setting Up the Administration Pages {#setting}
 
@@ -99,7 +99,7 @@ On the **User roles** tab of the **Project Security** dialog box, include the fo
 * The **PushNotifications.User** role as part of the main **User** role
 * The **PushNotifications.Anonymous** role role as part of the main **Anonymous** role (if your application allows anonymous users)
 
-{{< figure src="/attachments/howto8/mobile/hybrid-mobile/push-notifications/implementation-guide/21168173.png" >}}
+{{< figure src="/attachments/howto8/mobile/hybrid-mobile/push-notifications/implementation-guide/21168173.png" class="no-border" >}}
 
 ## 8 Deploying Your App
 
@@ -107,13 +107,13 @@ At this point, all the implementation steps are done and you can deploy your app
 
 {{% alert color="warning" %}}
 
-Make sure that the `Encryption.EncryptionKey` constant has a value before you start the application. If the value is not set, you will get a NullPointerException when you try to send a notification to APNs. If you are using a Free App, set a default value for the constant in the model. Otherwise, configure the constant value in the Mendix Developer Portal.
+Make sure that the `Encryption.EncryptionKey` constant has a value before you start the application. If the value is not set, you will get a `NullPointerException` when you try to send a notification to APNs. If you are using a Free App, set a default value for the constant in the model. Otherwise, configure the constant value in the Mendix Developer Portal.
 
 {{% /alert %}}
 
 ## 9 Setting Up Access to APNs or FCM
 
-Below are instructions for setting up access to APNs or FCM and configuring them in your application. We recommend starting with FCM, because it is significantly less complicated than setting up APNs. You can return to this section later to set up APNs.
+Below are instructions for setting up access to APNs or FCM and configuring them in your application. Mendix recommends starting with FCM, because it is significantly less complicated than setting up APNs. You can return to this section later to set up APNs.
 
 Open your Mendix app, sign in as an **Admin**, and open the **PushNotifications_Administration** page. Scroll to the **FCM** section and create or edit a configuration. 
 
@@ -125,7 +125,7 @@ Configure FCM as follows:
 4. Upload your private key (which you downloaded when you created a service account).
 
 {{% alert color="warning" %}}
-Make sure the **Encryption.EncryptionKey** constant has a valid value before you start the application. If the value is not set, the private key will not be stored correctly and you will get a **NullPointerException** error when you try to send a notification to FCM. If you get the **NullPointerException** error, please double-check the value of the **Encryption.EncryptionKey** constant, restart your app, and upload the private key again.
+Make sure the **Encryption.EncryptionKey** constant has a valid value before you start the application. If the value is not set, the private key will not be stored correctly and you will get a `NullPointerException` error when you try to send a notification to FCM. If you get the `NullPointerException` error, please double-check the value of the **Encryption.EncryptionKey** constant, restart your app, and upload the private key again.
 {{% /alert %}}
 
 For more details, see [How to Set Up the Apple Push Notification Server](/howto8/mobile/setting-up-apple-push-notification-server/) and [How to Set Up the Firebase Cloud Messaging Server](/howto8/mobile/setting-up-google-firebase-cloud-messaging-server/).

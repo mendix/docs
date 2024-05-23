@@ -5,6 +5,10 @@ weight: 82
 tags: ["studio pro"]
 ---
 
+{{% alert color="info" %}}
+These activities can only be used in microflows.
+{{% /alert %}}
+
 ## 1 Introduction
 
 The **ML Kit** section of the [Toolbox](/refguide/view-menu/#toolbox) contains activities you can use with a machine learning model.

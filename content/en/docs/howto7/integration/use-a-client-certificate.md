@@ -1,7 +1,7 @@
 ---
 title: "Use a Client Certificate"
 url: /howto7/integration/use-a-client-certificate/
-category: "Integration"
+
 tags: ["integration", "web service", "client certficate"]
 ---
 
@@ -49,7 +49,7 @@ This is an example:
 
 A complete configuration may look like this:
 
-{{< figure src="/attachments/howto7/integration/use-a-client-certificate/example-custom-settings.png" >}}
+{{< figure src="/attachments/howto7/integration/use-a-client-certificate/example-custom-settings.png" class="no-border" >}}
 
 You can use an empty path for `ClientCertficateUsages` to specify that you do not want to use a client certificate, even when the server accepts one. To do this, you need to add the **Value** `{"<endpoint>":""}` (replace `<endpoint>` with the actual endpoint).
 
@@ -82,7 +82,7 @@ You will only be able to follow the steps below if you have the correct access r
 To configure client certificates in the Mendix Cloud, follow these steps:
 
 1. Go to the [Mendix Developer Portal](https://home.mendix.com/) and go to the **Environments** page for your app.
-2. Each environment has its own configuration. Click **Details** next one of the environments.
+2. Each environment has its own configuration. Click **Details** next to one of the environments.
 3. Click **Network** and scroll down to **Certificates for outgoing connections**.
 4. Click **Add client certificate**. Upload the certificate files.
 5. Only follow these steps if you are using more than one client certificate in your app:

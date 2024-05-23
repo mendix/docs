@@ -5,10 +5,6 @@ weight: 40
 tags: ["studio pro"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/create-object.pdf).
-{{% /alert %}}
-
 {{% alert color="warning" %}}
 This activity can be used in both **Microflows** and **Nanoflows**.
 {{% /alert %}}
@@ -21,7 +17,7 @@ The create object activity can be used to create an object.
 
 An example of create object properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/activities/object-activities/create-object/create-properties.png" alt="create object properties" >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/object-activities/create-object/create-properties.png" alt="create object properties" class="no-border" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
@@ -101,4 +97,4 @@ Wherever an object is initialized, all the events are always executed. The defau
     * The object will have the **Instantiated** state
     * This influences the behavior in the other object actions
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/activities/object-activities/create-object/18582173.png" >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/object-activities/create-object/18582173.png" class="no-border" >}}

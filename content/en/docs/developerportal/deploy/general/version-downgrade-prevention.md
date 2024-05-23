@@ -7,10 +7,6 @@ tags: ["downgrade", "migration", "pre-analysis", "version", "database"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/version-downgrade-prevention.pdf).
-{{% /alert %}}
-
 ## 1 Scenario
 
 This issue applies when you are downgrading an app to a lower version of Mendix.

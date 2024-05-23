@@ -177,7 +177,7 @@ The flag `readOnly` indicates whether a value can actually be edited. It will be
 
 The value can be read from the `value` field and modified using the `setValue` function.  The `value` contains an `ObjectItem` or an `ObjectItem[]` based on the configured association. The `ObjectItem` can be passed to the `get` function of any [linked property value](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#linked-values) which is linked to the selectable object's datasource. 
 
-When setting a value, the `ObjectItem`(s) must be items from the selectable object's data source. Note that `setValue` returns nothing and does not guarantee that the value is changed synchronously. But when a change is propagated, a component receives a new prop reflecting the change.
+When setting a value, the `ObjectItem` must be items from the selectable object's data source. Note that `setValue` returns nothing and does not guarantee that the value is changed synchronously. But when a change is propagated, a component receives a new prop reflecting the change.
 
 It is possible for a component to extend the defined set of validation rules. A new validator — a function that checks a passed value and returns a validation message string if any — can be provided through the `setValidator` function. A component can have only a single custom validator. The Mendix Platform ensures that custom validators are run whenever necessary, for example when a page is being saved by an end-user. It is best practice to call `setValidator` early in a component's lifecycle — specifically in the [componentDidMount](https://en.reactjs.org/docs/react-component.html#componentdidmount) function.
 
@@ -243,6 +243,36 @@ export interface FileValue {
 ### 4.8 List values{#list-values}
 
 `ListValue` is used to represent a list of objects for the [datasource](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#datasource) property. See [List Values](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/) for more information about usage of `ListValue` and associated property values.
+
+### 4.9 SelectionValue {#selection-value}
+
+`SelectionValue` is used to represent selections. It is passed only to [selection properties](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#selection), and is defined as follows:
+
+```ts
+declare interface SelectionValue<T> {
+    readonly selection: T;
+    readonly setSelection: (value: T) => void;
+}
+```
+
+The type received by the component for the selection property depends on the allowed selection types:
+
+* If only single selection is allowed, the component receives a `SelectionSingleValue` defined as `SelectionValue<Option<ObjectItem>> & { type: "Single" };`.
+* If only multi selection is allowed, the client gets a `SelectionMultiValue` defined as `SelectionValue<ObjectItem[]> & { type: "Multi" };`.
+
+Finally, when both selection types are allowed, then the type is a union of `SelectionSingleValue` and `SelectionMultiValue` and the widget should check the `type` to determine if a single or multi selection is configured and act accordingly in the code. Checking the type will also [narrow](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#handbook-content) to the correct type in TypeScript:
+
+```ts
+if (selection?.selection === undefined) {
+    return "None";
+}
+
+if (selection.type === "Single") {
+    selection.setSelection(objectItem);
+} else {
+    selection.setSelection([objectItem]);
+}
+```
 
 ## 5 Exposed Modules
 

@@ -6,10 +6,6 @@ tags: ["domain model", "association", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/association-properties.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 There are two ways to edit the properties of an [association](/refguide8/associations/). This page describes the properties you can edit in the properties pane of the association in the domain model, or from opening the association properties dialog directly from the association or the association tab in the entity properties.
@@ -24,7 +20,7 @@ Attributes properties for associated external entities are defined in the origin
 
 An example of the association properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/domain-model/associations/association-properties/association-properties.png" alt="Association Properties" >}}
+{{< figure src="/attachments/refguide8/modeling/domain-model/associations/association-properties/association-properties.png" alt="Association Properties" class="no-border" >}}
 
 Associations have the following properties:
 
@@ -75,11 +71,11 @@ Despite it's name, navigability is usually only important when adding or changin
 
 <sup><small>[1]</small></sup> This delete behavior is used if you want to delete any associated **Profile** when a **Customer** is deleted:
 
-{{< figure src="/attachments/refguide8/modeling/domain-model/associations/association-properties/association-delete-both.png" >}}
+{{< figure src="/attachments/refguide8/modeling/domain-model/associations/association-properties/association-delete-both.png" class="no-border" >}}
 
 <sup><small>[2]</small></sup>This delete behavior is used if you want to be able to delete a **Customer** only if it is not associated with any **Order**. In this case you will be asked to enter an **Error message if 'Customer' object cannot be deleted** to inform the end user that this customer cannot be deleted and perhaps suggest a next course of action:
 
-{{< figure src="/attachments/refguide8/modeling/domain-model/associations/association-properties/association-prevent-delete.png" >}}
+{{< figure src="/attachments/refguide8/modeling/domain-model/associations/association-properties/association-prevent-delete.png" class="no-border" >}}
 
 ## 3 Read More
 

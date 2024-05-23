@@ -6,8 +6,8 @@ weight: 60
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="warning" %}}
-This activity can only be used in **Microflows** that run in an offline-first app (a native or offline PWA app).
+{{% alert color="info" %}}
+This activity can only be used in microflows that run in an offline-first app (a native or offline PWA app).
 {{% /alert %}}
 
 ## 1 Introduction
@@ -18,7 +18,7 @@ The **Synchronize to device** activity can be used to selectively synchronize on
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/synchronize-to-device/properties.png" alt="Synchronize to device Properties" width="650px" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/synchronize-to-device/properties.png" alt="Synchronize to device Properties" width="650px" class="no-border" >}}
 
 The **Synchronize to device** activity properties consists of the following sections:
 
@@ -31,7 +31,7 @@ The **Action** section of the properties pane shows the action associated with t
 
 You can open a dialog box to configure this action by clicking the ellipsis (…) next to the action.
 
-You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
+You can also open the dialog box by double-clicking the activity, or right-clicking the activity and selecting **Properties**.
 
 ### 3.1 Object or List
 

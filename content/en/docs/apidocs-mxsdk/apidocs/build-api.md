@@ -1,9 +1,8 @@
 ---
 title: "Build API"
 url: /apidocs-mxsdk/apidocs/build-api/
-category: "API Documentation"
 description: "An API that enables triggering and managing deployment package builds and getting information about existing deployment packages." 
-weight: 15
+weight: 20
 tags: ["API", "Build Server", "Team Server", "Deployment package", "Mendix Cloud"]
 ---
 
@@ -19,7 +18,7 @@ You can use webhooks to trigger CI/CD pipelines which use this API. These are de
 
 The image below provides a domain model representation of the concepts discussed below and how these are related:
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/build-api/api-model.png" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/build-api/api-model.png" class="no-border" >}}
 
 ## 2 API Calls
 
@@ -212,7 +211,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ### 2.4 ⚠ Download Package{#download-package}
 
 {{% alert color="warning" %}}
-⚠ The **Download Package** call of the build API is deprecated. Please use [Retrieve Package](#retrieve-package) with the `url=true` parameter instead.
+The **Download Package** call of the build API is deprecated. Please use [Retrieve Package](#retrieve-package) with the `url=true` parameter instead.
 {{% /alert %}}
 
 Downloads a specific deployment package that is available for a specific app that the authenticated user has access to as a regular user. This package can be found if you click **Details** on an app in the **Nodes** screen in the Mendix Platform.
@@ -264,16 +263,16 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages
 
 ##### 2.5.1.2 Payload
 
-The payload depends on whether the app is held in a [git repository or an SVN repository](/refguide/version-control-faq/#which-team-server).
+The payload depends on whether the app is held in a [Git repository or an SVN repository](/refguide/version-control-faq/#which-team-server).
 
 An object with the following key-value pairs:
 
 * *Branch* (String) : Name of the branch.
     * For SVN, this is 'trunk' for the main line or 'branches/*branch name*' for a specific branch.
-    * For git, this is 'main' for the main line or 'branches/*branch name*' for a specific branch.
+    * For Git, this is 'main' for the main line or 'branches/*branch name*' for a specific branch.
 * *Revision* (String) : Number of the revision to build a package from.
     * For SVN, this is an integer reflecting the revision number.
-    * For git, this is the commit hash. The API will accept either the short commit hash or the full commit hash.
+    * For Git, this is the commit hash. The API will accept either the short commit hash or the full commit hash.
 * *Version* (String) : Package version. This will also be the name of the tag on the project team server.
 * *Description* (String) : Description of the package.
 

@@ -95,7 +95,7 @@ These are the return codes:
 
 ## 4 mx convert Command {#convert}
 
-The `mx convert` command converts the *.mpk* file(s) of the app(s) to a specific Studio Pro version. For example, if you are using the mx command-line tool for Studio Pro 10.0.0,  `mx convert` will convert the app to that version. 
+The `mx convert` command converts the *.mpk* file (or files) of the app (or apps) to a specific Studio Pro version. For example, if you are using the mx command-line tool for Studio Pro 10.0.0,  `mx convert` will convert the app to that version. 
 
 The input can be a single file, directory, or multiple files.
 

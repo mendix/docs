@@ -1,7 +1,7 @@
 ---
 title: "Studio Pro Overview"
 url: /refguide/studio-pro-overview/
-category: "General Info"
+
 weight: 10
 description: "Describes Studio Pro in general, for example, tabs, menus, and shortcut keys."
 tags: ["Studio Pro"]
@@ -24,7 +24,7 @@ When Studio Pro is open, press <kbd>F1</kbd> to quickly jump to documentation.
 
 This document describes the user interface of Mendix Studio Pro:
 
-{{< figure src="/attachments/refguide/studio-pro-overview/studio-pro-diagram.png" alt="Studio Pro Diagram" >}}
+{{< figure src="/attachments/refguide/studio-pro-overview/studio-pro-diagram.png" alt="Studio Pro Diagram" class="no-border" >}}
 
 ## 2 Top Bar {#top-bar}
 
@@ -42,9 +42,9 @@ For more information on menus, see [Menus](/refguide/menus/).
 
 ### 2.2 Run and View App {#run-and-view}
 
-You can deploy your app by clicking the **Publish** or play (**Run locally**) buttons. To view your deployed app, click **View App**. 
+You can deploy your app by clicking the **Publish** or **Run Locally** ({{% icon name="controls-play" %}}) buttons. To view your deployed app, click **View App**. 
 
-{{< figure src="/attachments/refguide/studio-pro-overview/view-and-publish.png" alt="View and Publish buttons" >}}
+{{< figure src="/attachments/refguide/studio-pro-overview/view-and-publish.png" alt="View and Publish buttons" class="no-border" >}}
 
 For more information on deployment in Mendix, see [Deployment](/developerportal/deploy/).
 
@@ -80,7 +80,7 @@ Each document has its own save state, history, and future, so undo and redo acti
 
 Dockable panes can be positioned around the working area and contain various elements and settings:
 
-{{< figure src="/attachments/refguide/studio-pro-overview/pane-example.png" alt="Properties Pane Example" width="300" >}}
+{{< figure src="/attachments/refguide/studio-pro-overview/pane-example.png" alt="Properties Pane Example" width="300" class="no-border" >}}
 
 For example, you can view [list of errors](/refguide/errors-pane/) or run [MxAssist Best Practice bot](/refguide/mx-assist-performance-bot/), configure properties of a specific document or an element, view toolbox. For more information on panes and their layout, see [View Menu](/refguide/view-menu/).
 
@@ -88,7 +88,7 @@ For example, you can view [list of errors](/refguide/errors-pane/) or run [MxAss
 
 At the bottom of the Studio Pro main window pane is a status bar. On the left is the current status of Studio Pro:
 
-{{< figure src="/attachments/refguide/studio-pro-overview/status-bar.png" alt="Status Bar Example" >}}
+{{< figure src="/attachments/refguide/studio-pro-overview/status-bar.png" alt="Status Bar Example" class="no-border" >}}
 
 On the right is the currently selected language. If you have set up multiple languages in your app you can change the currently selected language by clicking here. For more information see [Language Menu](/refguide/translatable-texts/).
 
@@ -108,7 +108,7 @@ These keys are active within the [Dockable Panes](#panes) and editors, such as t
 
 You can navigate between Studio Pro panes (for example, the domain model editor or the **Errors** pane) using <kbd>Ctrl</kbd> + (<kbd>Shift</kbd>) + <kbd>Tab</kbd>. This opens a selection dialog where you can choose a pane using the mouse, <kbd>Ctrl</kbd> + arrow keys, or <kbd>Ctrl</kbd> + (<kbd>Shift</kbd>) + <kbd>Tab</kbd>. You are taken to the selected pane when you click the main mouse button or release the <kbd>Ctrl</kbd> key.
 
-{{< figure src="/attachments/refguide/studio-pro-overview/ctrl-tab-navigation.png" >}}
+{{< figure src="/attachments/refguide/studio-pro-overview/ctrl-tab-navigation.png" class="no-border" >}}
 
 There are alternative ways to navigate between tabs within panes: 
 
@@ -161,9 +161,9 @@ In most edit grids (such as the list of attributes in the entity properties), th
 | --- | --- |
 | <kbd>Ctrl</kbd> + <kbd>N</kbd> | Creates a new item. |
 | <kbd>Enter</kbd> | Edits the currently selected item. |
-| <kbd>Delete</kbd> | Deletes the currently selected item(s). |
+| <kbd>Delete</kbd> | Deletes the currently selected item (or items). |
 | <kbd>↑</kbd> / <kbd>↓</kbd> | Selects previous/next item. |
-| <kbd>Ctrl</kbd> + <kbd>↑</kbd> / <kbd>↓</kbd> | Moves selected item(s) up/down. |
+| <kbd>Ctrl</kbd> + <kbd>↑</kbd> / <kbd>↓</kbd> | Moves selected item (or items) up/down. |
 
 ### 7.2 Domain Model Editor Shortcut Keys
 
@@ -190,16 +190,7 @@ The following shortcut keys are available in the page editor:
 
 ### 7.4 Microflow and Nanoflow Editor Shortcut Keys
 
-The following shortcut keys are available in the microflow and nanoflow editors:
-
-| Key | Description |
-| --- | --- |
-| Arrow keys | Moves the selection box to the activity or element in the direction of the arrow key. For example, if currently a show page activity is selected and you press the right arrow key, the end event to the right of it becomes selected. |
-| <kbd>Ctrl</kbd>&nbsp;+&nbsp;arrow&nbsp;keys | Moves the currently selected item up/down or left/right. |
-| <kbd>Enter</kbd> | Edits the properties of the currently selected object in a dialog box. |
-| <kbd>F2</kbd> | Edits the name of the return value of the currently selected activity. This shortcut will not function on activities that do not return a result. |
-| <kbd>Shift</kbd>  | By holding <kbd>Shift</kbd> when resizing an activity, it will stay centered at its current position and expand equally in all directions. |
-| <kbd>Ctrl</kbd>  | When pressing the <kbd>Ctrl</kbd>, you can select additional activities. Clicking a selected component while holding <kbd>Ctrl</kbd> will deselect it. |
+For an overview of the supported shortcut keys in the microflow and nanoflow editors, see the [Keyboard Support](/refguide/microflows/#keyboard) section in *Microflows*. The supported shortcut keys are the same in the microflow, nanoflow, and rule editors. 
 
 ### 7.5 Debugger Shortcut Keys {#debugger-shortcuts}
 
@@ -207,10 +198,11 @@ The following shortcut keys are available for the debugger:
 
 | Key | Description |
 | --- | --- |
-| <kbd>Alt</kbd>&nbsp;+&nbsp;<kbd>F5</kbd> | *Step into* – moves the debugger into the sub-microflow/sub-nanoflow or loop. |
-| <kbd>Alt</kbd> + <kbd>F6</kbd> | *Step over* – moves the debugger to the next step in the same workflow/microflow/nanoflow. |
-| <kbd>Alt</kbd> + <kbd>F7</kbd> | *Step out* – instructs the debugger to leave the sub-microflow/sub-nanoflow or loop. |
-| <kbd>Alt</kbd> + <kbd>F8</kbd> | *Continue* – instructs the debugger to continue until it reaches another breakpoint. |
+| <kbd>Alt</kbd>&nbsp;+&nbsp;<kbd>F5</kbd> | **Step into** – moves the debugger into the sub-microflow/sub-nanoflow or loop. |
+| <kbd>Alt</kbd> + <kbd>F6</kbd> | **Step over** – moves the debugger to the next step in the same workflow/microflow/nanoflow. |
+| <kbd>Alt</kbd> + <kbd>F7</kbd> | **Step out** – instructs the debugger to leave the sub-microflow/sub-nanoflow or loop. |
+| <kbd>Alt</kbd> + <kbd>F8</kbd> | **Continue** – instructs the debugger to continue until it reaches another breakpoint. |
+| <kbd>Alt</kbd> + <kbd>F9</kbd> | **Continue all** – instructs the debugger to continue all currently paused microflows/nanoflows until it reaches another breakpoint. |
 
 ### 7.6 Menu Shortcut Keys {#menu-shortcuts}
 

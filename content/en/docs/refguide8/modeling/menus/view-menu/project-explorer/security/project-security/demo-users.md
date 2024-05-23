@@ -5,10 +5,6 @@ weight: 30
 tags: ["studio pro", "demo users", "demo-users", "project security"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/demo-users.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 Demo users are a demonstration of each [user role](/refguide8/user-roles/) existing in your app. You can use demo users to test what your app looks like for each user role or to demonstrate your app to other people (for more information, see the [Testing Your App via Demo Users](#test-your-app) section . 
@@ -19,7 +15,7 @@ The demo users are only created and shown when running your application locally 
 
 To access demo users and their properties, open **Project Security** > **Demo users**:
 
-{{< figure src="/attachments/refguide8/modeling/menus/view-menu/project-explorer/security/project-security/demo-users/demo-users-tab.png" >}}
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/project-explorer/security/project-security/demo-users/demo-users-tab.png" class="no-border" >}}
 
 ## 2 Enabling Demo Users
 
@@ -36,7 +32,7 @@ After they are created automatically, demo users do not differ in any way from o
 
 Double click the demo user to open its properties:
 
-{{< figure src="/attachments/refguide8/modeling/menus/view-menu/project-explorer/security/project-security/demo-users/demo-user-properties.png" >}}
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/project-explorer/security/project-security/demo-users/demo-user-properties.png" class="no-border" >}}
 
 Demo user properties are described in the table below:
 
@@ -55,7 +51,7 @@ You can use demo user to test what your application looks like to different user
 2. Sign in it as the [Administrator](/refguide8/administrator/).
 3. Click a user icon in the right side of the screen. The menu bar **Select user** will be displayed: 
 
-    {{< figure src="/attachments/refguide8/modeling/menus/view-menu/project-explorer/security/project-security/demo-users/demo-users-example.png" >}}
+    {{< figure src="/attachments/refguide8/modeling/menus/view-menu/project-explorer/security/project-security/demo-users/demo-users-example.png" class="no-border" >}}
 
 4. Selecting a user from the list to sign in to your application with the credentials of this user, thus allowing you to test or demo your application with the selected user role.
 

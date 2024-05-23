@@ -6,17 +6,13 @@ tags: ["studio pro", "grid", "template grid", "data widgets"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/template-grid.pdf).
-{{% /alert %}}
-
 {{% alert color="warning" %}}The template grid widget is not supported on native mobile pages.{{% /alert %}}
 
 ## 1 Introduction
 
 A template grid shows a list of objects in a tile view. For example, a template grid can show a list of employees with their profile pictures. Using controls provided by the template grid you can browse, search, and manipulate those objects:
 
-{{< figure src="/attachments/refguide8/modeling/pages/data-widgets/grids/template-grid/template-grid.png" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/data-widgets/grids/template-grid/template-grid.png" class="no-border" >}}
 
 The template grid has a lot in common with a [data grid](/refguide8/data-grid/). The main difference is that the objects are shown in templates instead of rows.
 
@@ -38,7 +34,7 @@ For more information, see [Control Bar](/refguide8/control-bar/).
 
 An example of template grid properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/pages/data-widgets/grids/template-grid/template-grid-properties.png"   width="250"  >}}
+{{< figure src="/attachments/refguide8/modeling/pages/data-widgets/grids/template-grid/template-grid-properties.png"   width="250"  class="no-border" >}}
 
 Template grid properties consist of the following sections:
 

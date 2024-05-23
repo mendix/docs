@@ -4,10 +4,6 @@ url: /refguide8/xpath-expressions/
 tags: ["studio pro"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/xpath-expressions.pdf).
-{{% /alert %}}
-
 ## 1 Overview
 
 Expressions are used within constraints to generate a value that is true.

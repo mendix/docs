@@ -5,23 +5,19 @@ tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/date-range-field.pdf)
-{{% /alert %}}
-
 ## 1 Introduction
 
 A **Date range field** can be placed inside a [Report date parameter](/refguide8/report-date-parameter/) to make it easier for an end-user to select a date range, rather than having to specify a from and to date. The report date parameter is then updated with the from and to dates of the selected period.
 
 To add a date range field, right-click the widget and choose **Add field** from the pop-up menu.
 
-{{< figure src="/attachments/refguide8/modeling/pages/report-widgets/report-date-parameter/date-range-field/add-field.png" alt="Add a date range field to a report date parameter" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/report-widgets/report-date-parameter/date-range-field/add-field.png" alt="Add a date range field to a report date parameter" class="no-border" >}}
 
 ## 2 Date Range Field Properties
 
 An example of date range field properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/pages/report-widgets/report-date-parameter/date-range-field/date-range-field-properties.png" alt="Date range field in structure mode"   width="300"  >}}
+{{< figure src="/attachments/refguide8/modeling/pages/report-widgets/report-date-parameter/date-range-field/date-range-field-properties.png" alt="Date range field in structure mode"   width="300"  class="no-border" >}}
 
 Date range field properties have only a [General](#general) section.
 

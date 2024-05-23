@@ -11,8 +11,8 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="warning" %}}
-This activity can be used in both **Microflows** and **Nanoflows**.
+{{% alert color="info" %}}
+This activity can be used in both microflows and nanoflows.
 {{% /alert %}}
 
 {{% alert color="warning" %}}
@@ -23,7 +23,7 @@ This action is ignored and does not work when a microflow is called from an offl
 
 The **Close page** activity closes the currently open page. For example, it can be used to close a pop-up page:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/close-page/close-page.png"   width="200"  >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/close-page/close-page.png"   width="200"  class="no-border" >}}
 
 ## 2 Properties
 
@@ -33,17 +33,13 @@ The **Close page** activity properties consists of the following sections:
 
 * [Common](#common)  
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/close-page/close-page-properties.png" alt="Close Page Properties" width="650px" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/close-page/close-page-properties.png" alt="Close Page Properties" width="650px" class="no-border" >}}
 
 ## 3 Action Section {#action}
 
 The **Action** section of the properties pane shows the action associated with this activity.
 
 ### 3.1 Number of Pages
-
-{{% alert color="info" %}}
-This option is only available for native mobile and was introduced with Mendix Studio Pro v8.14.
-{{% /alert %}}
 
 This property allows you to control how many pages should be closed.
 

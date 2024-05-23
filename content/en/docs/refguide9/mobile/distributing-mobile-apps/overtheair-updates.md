@@ -12,7 +12,7 @@ aliases:
 
 Native apps can be updated by building and releasing an updated version to the appropriate app stores. The app-users are then asked to update their app and once they choose so the updated app is installed.
 
-Using Mendix Studio Pro v9.7 and above, you can also update your Mendix native apps over-the-air (OTA). OTA updates are a fast and painless way of updating elements like layouts, pages, assets, or even your app's business logic (such as nanoflows and JavaScript actions) without going through the entire release process.
+Using Mendix Studio Pro 9.7 and above, you can also update your Mendix native apps over-the-air (OTA). OTA updates are a fast and painless way of updating elements like layouts, pages, assets, or even your app's business logic (such as nanoflows and JavaScript actions) without going through the entire release process.
 
 Native apps are separated into two parts: a wrapper that functions as a native iOS or Android app, and a bundle loaded dynamically by the wrapper. Elements like your business logic and static assets are part of this dynamically-loaded bundle. 
 
@@ -48,7 +48,7 @@ With these shortcomings in mind, we developed a Mendix OTA update mechanism whic
 
 Before starting this guide, make sure you have completed the following prerequisites:
 
-* Use Mendix Studio Pro v9.7 and above.
+* Use Mendix Studio Pro 9.7 and above.
 * Deploy your app by completing [Build a Mendix Native App Locally](/refguide9/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/).
 * Install your app on a test device or emulator.
 * Read the [Offline-First](/refguide9/offline-first/) guide. Understand this document before issuing OTA updates or releasing new versions.
@@ -65,7 +65,7 @@ OTA updates are useful in the following app development cases:
 * Nanoflow changes
 * JavaScript action changes
 * Widgets added or removed
-* A new custom Javascript-only widget or module added
+* A new custom JavaScript-only widget or module added
 * Non-destructive model changes (for more information, see [Offline-First](/refguide9/offline-first/))
 
 ### 4.2 When a Full Release Is Required
@@ -84,11 +84,11 @@ If you have made any changes directly to your iOS or Android app, you will have 
 
 By default OTA updates are disabled for your Native Mobile Profile. To enable them, do the following: 
 
-1. Open your app in Studio Pro v9.7 or above.
+1. Open your app in Studio Pro 9.7 or above.
 1. Navigate to the Native Mobile Profile.
 1. Select **Enable over-the-air updates**: 
 
-    {{< figure src="/attachments/howto9/mobile/native-mobile/distribution/how-to-ota/ota-profile-screen.png" alt="Startup option ota checkbox"   width="400"  >}}
+    {{< figure src="/attachments/howto9/mobile/native-mobile/distribution/how-to-ota/ota-profile-screen.png" alt="Startup option ota checkbox"   width="400"  class="no-border" >}}
 
 1. Deploy your app to the cloud.
 
@@ -103,7 +103,7 @@ To make the OTA update functionality available to your users, release the new bi
 
 OTA updates let you correct mistakes in your published apps without issuing a new release. For example, imagine you issued a new release and later found a spelling mistake on your welcome screen:
 
-{{< figure src="/attachments/howto9/mobile/native-mobile/distribution/how-to-ota-appcenter/phone-error-text.png" alt="Typo in welcome screen"   width="300"  >}}
+{{< figure src="/attachments/howto9/mobile/native-mobile/distribution/how-to-ota-appcenter/phone-error-text.png" alt="Typo in welcome screen"   width="300"  class="no-border" >}}
 
 Before OTA updates, you would have to make a new release and configure it in the app stores. But OTA updates make fixing such a mistake easy.
 

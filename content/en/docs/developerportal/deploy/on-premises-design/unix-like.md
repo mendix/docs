@@ -3,13 +3,9 @@ title: "Unix-Like Deployment"
 url: /developerportal/deploy/unix-like/
 description: "How to install and configure Mendix on a Unix-like system"
 weight: 99
-tags: ["Red Hat", "CentOS", "install", "deploy", "m2ee", "Debian", "GNU", "Linux", "Unix-like", "Unix", "U*ix", "*nix", "on-premises"]
+tags: ["install", "deploy", "m2ee", "Debian", "GNU", "Linux", "Unix-like", "Unix", "U*ix", "*nix", "on-premises"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/unix-like.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 

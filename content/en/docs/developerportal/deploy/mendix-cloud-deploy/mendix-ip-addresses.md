@@ -42,6 +42,9 @@ Mendix uses the following static IP addresses. If you need more information, fil
 | Mendix Cloud Asia Pacific | Sydney (ap-southeast-2) | `13.54.176.58` <br /> `13.54.220.143` <br /> `13.238.3.124` | `{app-name}.apps.au-1a.mendixcloud.com`<br/>or<br/>`{app-name}-{environment-type}.apps.au-1a.mendixcloud.com` |
 | Mendix Cloud Asia Pacific | Tokyo (ap-northeast-1) | `13.113.58.15` <br /> `52.193.228.1` <br /> `52.198.238.110` | `{app-name}.mendixcloud.com`<br/>or<br/>`{app-name}-{environment-type}.mendixcloud.com` |
 | Mendix Cloud Asia Pacific | Mumbai (ap-south-1) | `43.204.254.95` <br /> `43.205.31.32` <br /> `65.1.183.103`  | `{app-name}.apps.ap-3a.mendixcloud.com`<br/>or<br/>`{app-name}-{environment-type}.apps.ap-3a.mendixcloud.com` |
+| Mendix Cloud Asia Pacific  | Osaka (ap-northeast-3) | `15.168.59.120` <br /> `13.208.255.64` <br /> `15.152.172.188` | `{app-name}.apps.ja-2a.mendixcloud.com`<br/>or<br/>`{app-name}-{environment-type}.apps.ja-2a.mendixcloud.com` |
+| Mendix Cloud Asia Pacific  | Seoul (ap-northeast-2) | `3.35.61.175` <br /> `3.35.153.90` <br /> `43.200.98.224` | `{app-name}.apps.ap-4a.mendixcloud.com`<br/>or<br/>`{app-name}-{environment-type}.apps.ap-4a.mendixcloud.com` |
+| Mendix Cloud Asia Pacific  | Jakarta (ap-southeast-3) | `108.137.164.156` <br /> `43.218.102.86` <br /> `43.218.75.101` | `{app-name}.apps.ap-5a.mendixcloud.com`<br/>or<br/>`{app-name}-{environment-type}.apps.ap-5a.mendixcloud.com` |
 | Mendix Cloud Canada | Canada (ca-central-1) | `3.97.111.124` <br /> `3.98.194.54` <br /> `35.182.171.81` | `{app-name}.apps.ca-1a.mendixcloud.com`<br/>or<br/>`{app-name}-{environment-type}.apps.ca-1a.mendixcloud.com` |
 | Mendix Cloud EU | Frankfurt (eu-central-1) |  `35.156.112.28` <br /> `35.157.102.14` <br /> `52.58.42.15`| `{app-name}.mendixcloud.com`<br/>or<br/>`{app-name}-{environment-type}.mendixcloud.com` |
 | Mendix Cloud EU | Frankfurt-2 (eu-central-1) | `3.76.96.252` <br /> `3.125.228.151` <br /> `54.93.126.19` | `{app-name}.apps.eu-1c.mendixcloud.com`<br/>or<br/>`{app-name}-{environment-type}.apps.eu-1c.mendixcloud.com` |
@@ -68,9 +71,9 @@ key can be used in a policy to allow principals (Mendix apps and end-users) to m
 
 ## 3 Frequently Asked Questions
 
-### 3.1 Why Does the IP Address Need to Change?
+### 3.1 Why Does the Outgoing IP Address Need to Change?
 
-Because Mendix provides a platform, the infrastructure needs to remain flexible. As a result, even though Mendix servers use static IP addresses, those IP addresses are occasionally subject to change. These are manual changes. Mendix provides a 48-hour notice of these changes; providing a longer notice period would hinder operational capabilities.
+Because Mendix provides a platform, the infrastructure needs to remain flexible. Mendix maintains the current outgoing IP addresses as much as possible. However, the outgoing addresses may occasionally change for operational reasons. Any changes are subject to a 48-hour notice period.
 
 ### 3.2 In the Past, We Have Received the Same IP Address for Multiple Environments and Applications. How Is That Possible?
 

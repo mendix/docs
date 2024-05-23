@@ -9,11 +9,7 @@ tags: ["adaptable solutions", "ip protection"]
 
 ## 1 Introduction
 
-When selling solutions or components that are created in Mendix and the customer or partner will get access to the model, you as a publisher want to consider protecting the IP contained within the model that makes up the content you are selling. In addition, you want to ensure that developers use the implementation as intended and protect any custom usage metering so that customers cannot accidentally (or intentionally) disable usage metering. Therefore, it is a good idea to consider applying at least some intellectual property (IP) protection in your solutions and components.
-
-{{% alert color="info" %}}
-Access to this functionality is currently limited and can be gained through the [Mendix Component Partner Program](/appstore/creating-content/partner-program/) and the [Mendix Commercial Solution Partner Program](https://www.mendix.com/partners/become-a-partner/isv-program/).
-{{% /alert %}}
+When selling solutions or components that are created in Mendix and the customer or partner will get access to the model, you as a publisher want to consider protecting the intellectual property (IP) contained within the model that makes up the content you are selling. In addition, you want to ensure that developers use the implementation as intended and protect any custom usage metering so that customers cannot accidentally (or intentionally) disable usage metering. Therefore, it is a good idea to consider applying at least some IP protection in your solutions and components.
 
 ## 2 Why IP Protection?
 
@@ -76,7 +72,7 @@ Consumers of a solution with this kind of IP protection see only a well-designed
 
 Adaptable solutions that will be customized by your customer, by a third-party implementation partner, or even by your own professional services teams can benefit from IP protection. By protecting the common core that is shared across customers, maintenance efforts are brought under control and the core is protected from accidental (or intentional) changes.
 
-To protect your solutions, we recommend these steps:
+To protect your solutions, Mendix recommends these steps:
 
 1. Identify the shared [common core](/appstore/creating-content/sol-adapt/#three-parts) that will be unchanged across customers and protect it.
 2. Identify the parts that make up the flexible shell that customers might want to adapt.

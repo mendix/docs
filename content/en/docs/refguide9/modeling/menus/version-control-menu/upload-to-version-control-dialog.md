@@ -13,7 +13,7 @@ aliases:
 
 Use this dialog box to upload an app that is not yet stored in a version control server.
 
-{{< figure src="/attachments/refguide9/modeling/menus/version-control-menu/upload-to-version-control-dialog/upload-to-version-control-server.png" alt="Upload to Version Control Server menu option" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/version-control-menu/upload-to-version-control-dialog/upload-to-version-control-server.png" alt="Upload to Version Control Server menu option" class="no-border" >}}
 
 ## 2 Location
 
@@ -26,7 +26,7 @@ You can create a new app on [Mendix Team Server](/developerportal/general/team-s
 * Select **New Mendix Team Server**
 * Enter the name for the new Team Server app and repository in the **App name** field
 
-    {{< figure src="/attachments/refguide9/modeling/menus/version-control-menu/upload-to-version-control-dialog/new-team-server-app.png" alt="Enter App name for New Mendix Team Server" >}}
+    {{< figure src="/attachments/refguide9/modeling/menus/version-control-menu/upload-to-version-control-dialog/new-team-server-app.png" alt="Enter App name for New Mendix Team Server" class="no-border" >}}
 
 ### 2.2 Existing Mendix Team Server
 
@@ -37,17 +37,17 @@ You can only upload to an existing repository if the repository is currently emp
 * Select **Existing Mendix Team Server**
 * Select the **Team Server App** from the list
 
-    {{< figure src="/attachments/refguide9/modeling/menus/version-control-menu/upload-to-version-control-dialog/existing-team-server-app.png" alt="Select existing mendix Team Server" >}}
+    {{< figure src="/attachments/refguide9/modeling/menus/version-control-menu/upload-to-version-control-dialog/existing-team-server-app.png" alt="Select existing mendix Team Server" class="no-border" >}}
 
 ### 2.3 Private Server
 
 This option is only available when support for other servers is enabled in **Edit** > **Preferences** > **Advanced** > [Enable private version control](/refguide9/preferences-dialog/#enable).
 
-{{< figure src="/attachments/refguide9/modeling/menus/version-control-menu/upload-to-version-control-dialog/enable-private-version-control.png" alt="Enable private version control in advanced preferences" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/version-control-menu/upload-to-version-control-dialog/enable-private-version-control.png" alt="Enable private version control in advanced preferences" class="no-border" >}}
 
 If you select **Private server**, enter the address of the repository to which you want to upload your app in the **App repository address** field.
 
-{{< figure src="/attachments/refguide9/modeling/menus/version-control-menu/upload-to-version-control-dialog/private-server-app.png" alt="Enable private version control in advanced preferences" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/version-control-menu/upload-to-version-control-dialog/private-server-app.png" alt="Enable private version control in advanced preferences" class="no-border" >}}
 
 ## 3 Read More
 

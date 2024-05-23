@@ -29,9 +29,9 @@ The log level defines the severity of the log message. In the modeler console do
 | Trace |   | Used for detailed execution traces. |
 | Debug |   | Used to debug execution. |
 | Info |   | Used to log informative messages. |
-| Warning | {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/logging-activities/log-message/917893.png" >}} | Used to log warnings. These messages appear in orange. |
-| Error | {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/logging-activities/log-message/917894.png" >}} | Used to log error messages. These messages appear in red. |
-| Critical | {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/logging-activities/log-message/917895.png" >}} | Used to log critical errors. These messages appear in  white on red  . |
+| Warning | {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/logging-activities/log-message/917893.png" class="no-border" >}} | Used to log warnings. These messages appear in orange. |
+| Error | {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/logging-activities/log-message/917894.png" class="no-border" >}} | Used to log error messages. These messages appear in red. |
+| Critical | {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/logging-activities/log-message/917895.png" class="no-border" >}} | Used to log critical errors. These messages appear in  white on red  . |
 
 *Default value:* Info
 
@@ -61,10 +61,7 @@ With parameters you can customize your message with data specific to the situati
 
 ### 2.5 Include Latest Stack Trace
 
-Defines whether to include the stack trace of the latest error in this log message. In the modeler, log messages that include a stack trace are marked with a paperclip icon:
-
-{{< figure src="/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/logging-activities/log-message/917892.png" >}}
-
+Defines whether to include the stack trace of the latest error in this log message. In the modeler, log messages that include a stack trace are marked with a paperclip icon ({{% icon name="paperclip" %}}).
 Double-clicking these log messages shows the stack trace.
 
 This option also applies to `$latestSoapFault`. If you define an error handler for a web service call, and it catches a soap fault error, checking this box will add the stack trace to the logline in the modeler.

@@ -1,15 +1,11 @@
 ---
 title: "Application Logic"
 url: /refguide8/application-logic/
-category: "App Modeling"
+
 weight: 40
 description: "Presents an overview of documentation on microflows and nanoflows."
 tags: ["studio pro", "logic", "microflow", "nanoflow"]
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/application-logic.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 

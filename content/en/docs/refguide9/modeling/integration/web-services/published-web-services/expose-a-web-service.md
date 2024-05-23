@@ -1,7 +1,7 @@
 ---
 title: "Expose a Web Service"
 url: /refguide9/integration/expose-a-web-service/
-category: "Integration"
+
 weight: 12
 description: "Describes how Mendix supports exposing the functionality and data of your app using web services."
 tags: ["web service", "expose", "integration", "studio pro"]
@@ -32,7 +32,7 @@ This how-to was written based on Studio Pro 9.24. All the images, names, and ste
 
 1. Create the following **Customer** entity in your domain model (for details on how to create an entity, see [Create a Basic Data Layer](/refguide9/create-a-basic-data-layer/)):
 
-    {{< figure src="/attachments/refguide9/modeling/integration/expose-a-web-service/8945665.png" >}}
+    {{< figure src="/attachments/refguide9/modeling/integration/expose-a-web-service/8945665.png" class="no-border" >}}
 
 2. Create overview and detail pages to manage objects of the **Customer** type (for details on how to create overview and detail pages, see [How to Create Your First Two Overview and Detail Pages](/howto9/front-end/create-your-first-two-overview-and-detail-pages/).
 3. Create a menu item to access the customer overview page (for details on how to create menu items, see [Setting Up Navigation](/refguide9/setting-up-the-navigation-structure/).
@@ -46,16 +46,16 @@ To create a published web service, follow these steps:
 
 2. In the **Add Published Web Service** window, enter *CustomerWebService* for the **Name** and then click **OK**:
 
-    {{< figure src="/attachments/refguide9/modeling/integration/expose-a-web-service/18581728.png" >}}
+    {{< figure src="/attachments/refguide9/modeling/integration/expose-a-web-service/18581728.png" class="no-border" >}}
 
 3. You should now see the **Published Web Service** properties window. Take note of the following tab details:
     * On the **Operations** tab, you can see the available operations of the web service (currently the list is empty, so we'll add an operation in section [Publishing a Microflow](#publish-a-microflow)):
 
-        {{< figure src="/attachments/refguide9/modeling/integration/expose-a-web-service/18581713.png" >}}
+        {{< figure src="/attachments/refguide9/modeling/integration/expose-a-web-service/18581713.png" class="no-border" >}}
 
     * On the **Settings** tab, you can configure the other settings. Do change them before publishing your web service, especially the **Target namespace** (for details on these settings, see [Published Web Service](/refguide9/published-web-service/) in the *Studio Pro Guide*):
 
-        {{< figure src="/attachments/refguide9/modeling/integration/expose-a-web-service/18581712.png" >}}
+        {{< figure src="/attachments/refguide9/modeling/integration/expose-a-web-service/18581712.png" class="no-border" >}}
 
 4. Click **OK.**
 
@@ -66,11 +66,11 @@ To create the functionality to expose, follow these steps:
 1. Create a microflow that retrieves and returns a list of customers from the database (for details on how to create a microflow, see [Triggering a Microflow From a Menu Item](/refguide9/triggering-microflow-from-menu-item/)).
 2. To make the microflow more exciting, add two input parameters to dynamically set the range settings of the retrieve action. Configure the range options of the retrieve action like this:
 
-    {{< figure src="/attachments/refguide9/modeling/integration/expose-a-web-service/18581709.png" >}}
+    {{< figure src="/attachments/refguide9/modeling/integration/expose-a-web-service/18581709.png" class="no-border" >}}
 
     Reference this microflow:
 
-    {{< figure src="/attachments/refguide9/modeling/integration/expose-a-web-service/model.jpg" >}}
+    {{< figure src="/attachments/refguide9/modeling/integration/expose-a-web-service/model.jpg" class="no-border" >}}
 
 If you get any errors, you will need to mark the input parameters in the **Operations** > **Paremeters** section of the service document as **Optional** and **Nillable** (see the following section.)
 
@@ -80,11 +80,11 @@ To publish a microflow, follow these steps:
 
 1. Right-click somewhere in the background of the microflow and select **Publish as Web service operation**:
 
-    {{< figure src="/attachments/refguide9/modeling/integration/expose-a-web-service/18581708.png" >}}
+    {{< figure src="/attachments/refguide9/modeling/integration/expose-a-web-service/18581708.png" class="no-border" >}}
 
 2. Locate the web service created in [Creating a Published Web Service](#create-published-web-service) and click **Select**:
 
-    {{< figure src="/attachments/refguide9/modeling/integration/expose-a-web-service/18581723.png" >}}
+    {{< figure src="/attachments/refguide9/modeling/integration/expose-a-web-service/18581723.png" class="no-border" >}}
 
 3. You should now see the **Operation Operation** properties editor. Take note of the following tab details:
 
@@ -94,7 +94,7 @@ To publish a microflow, follow these steps:
 
 4. Click **Select...** to select which attributes and associations of the return object **Customer** you want to expose:
 
-    {{< figure src="/attachments/refguide9/modeling/integration/expose-a-web-service/18581704.png" >}}
+    {{< figure src="/attachments/refguide9/modeling/integration/expose-a-web-service/18581704.png" class="no-border" >}}
 
 5. Select the members you want to expose and click **OK**. Only the selected members will be returned by the web service.
 6. Click **OK** to save the operation.
@@ -111,7 +111,7 @@ To get a WSDL, follow these steps:
     * If you run the application in a Free App environment, the application URL should look like this: `https://myfirstapp.mendixcloud.com/index.html`
 3. In both of the above cases, you can replace `/index.html` with `/ws-doc/` to open the web service documentation page:
 
-    {{< figure src="/attachments/refguide9/modeling/integration/expose-a-web-service/18581703.png" >}}
+    {{< figure src="/attachments/refguide9/modeling/integration/expose-a-web-service/18581703.png" class="no-border" >}}
 
     You should see the name of your web service in the list.
 4. Click the "WSDL schema" URL to open the WSDL. This WSDL can be given to others so that they can interact with your web service.
@@ -123,7 +123,7 @@ To change the user authentication, follow these steps:
 1. Double-click the published web service in the **App Explorer** to open it.
 2. In the **Published Web Service** properties window, open the **Settings** tab. Because **No Authentication** is set, currently users of the web service do not need to authenticate:
 
-    {{< figure src="/attachments/refguide9/modeling/integration/expose-a-web-service/18581702.png" >}}
+    {{< figure src="/attachments/refguide9/modeling/integration/expose-a-web-service/18581702.png" class="no-border" >}}
 
 3. Change **Authentication** to **Username and password**.
 

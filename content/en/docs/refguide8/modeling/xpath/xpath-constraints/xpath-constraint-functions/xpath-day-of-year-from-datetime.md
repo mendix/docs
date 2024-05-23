@@ -4,10 +4,6 @@ url: /refguide8/xpath-day-of-year-from-datetime/
 tags: ["studio pro"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/xpath-day-of-year-from-datetime.pdf).
-{{% /alert %}}
-
 ## 1 Overview
 
 The `day-of-year-from-dateTime()` function extracts the day in the year from a **Date and time** attribute so it can be used to compare to a value. Values range from 1 (January 1) to 366 (due to leap years).

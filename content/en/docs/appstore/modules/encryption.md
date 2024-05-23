@@ -1,7 +1,7 @@
 ---
 title: "Encryption"
 url: /appstore/modules/encryption/
-category: "Modules"
+
 description: "Describes the configuration and usage of the Encryption module, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "encryption", "aes", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -12,7 +12,7 @@ tags: ["marketplace", "marketplace component", "encryption", "aes", "platform su
 The [Encryption](https://marketplace.mendix.com/link/component/1011/) module takes care of the following encryption needs:
 
 * Plain text encryption (for example, passwords)
-* FileDocument encryption (for example, files of photos)
+* FileDocument encryption (for example, files or photos)
 
 ## 2 Plain Text Encryption
 

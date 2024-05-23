@@ -1,7 +1,7 @@
 ---
 title: "On-Premises"
 url: /developerportal/deploy/on-premises-design/
-category: "Deployment"
+
 description: "Describes how to deploy to various on premises platforms."
 weight: 80
 tags: ["Deployment", "On premises", "Environment"]
@@ -11,15 +11,11 @@ aliases:
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/on-premises-design.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 When designing your server architecture, there are an infinite number of possibilities for how you can set up your environment. There is no right or wrong configuration, because it all depends on your security, availability, and performance requirements.
 
-The options below are just a few examples of the most commonly used architecture setups. The Mendix cloud uses a (more complex) architecture based on hosting with a separate database server (for details, see [Hosting with a Separate Database Server (Option 2)](#Option2)) without a separate file server and with a proxy server to redirect traffic to the correct environment.
+The options below are just a few examples of the most commonly used architecture setups. Mendix Cloud uses a (more complex) architecture based on hosting with a separate database server (for details, see [Hosting with a Separate Database Server (Option 2)](#Option2)) without a separate file server and with a proxy server to redirect traffic to the correct environment.
 
 This how-to teaches you how to do the following:
 
@@ -29,13 +25,13 @@ This how-to teaches you how to do the following:
 
 ### 2.1 Minimal Server Architecture (Option 1)
 
-This is the simplest solution with the fewest configuration and connection problems. This configuration is used in the Mendix cloud as well, except the cloud is Linux-based, with NGINX used instead of IIS and PostgreSQL used as the database server.
+This is the simplest solution with the fewest configuration and connection problems. This configuration is used in Mendix Cloud as well, except the cloud is Linux-based, with NGINX used instead of IIS and PostgreSQL used as the database server.
 
-{{< figure src="/attachments/developerportal/deploy/on-premises-design/18580719.jpg" >}}
+{{< figure src="/attachments/developerportal/deploy/on-premises-design/18580719.jpg" class="no-border" >}}
 
 ### 2.2 Hosting with a Separate Database Server (Option 2){#Option2}
 
-{{< figure src="/attachments/developerportal/deploy/on-premises-design/18580718.jpg" >}}
+{{< figure src="/attachments/developerportal/deploy/on-premises-design/18580718.jpg" class="no-border" >}}
 
 ### 2.3 Separate Database Server and a Separate Web Server (Option 3)
 
@@ -43,11 +39,11 @@ This option is the most difficult to maintain, and every update has to be perfor
 
 You should avoid using this option if possible.
 
-{{< figure src="/attachments/developerportal/deploy/on-premises-design/18580717.jpg" >}}
+{{< figure src="/attachments/developerportal/deploy/on-premises-design/18580717.jpg" class="no-border" >}}
 
 ### 2.4 Separate Mendix Web Server in a DMZ (Option 4)
 
-{{< figure src="/attachments/developerportal/deploy/on-premises-design/18580720.jpg" >}}
+{{< figure src="/attachments/developerportal/deploy/on-premises-design/18580720.jpg" class="no-border" >}}
 
 ## 3 Load Balancing Support and Configuration
 

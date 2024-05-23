@@ -3,8 +3,9 @@ title: "Send External Object"
 url: /refguide/send-external-object/
 tags: ["studio pro", "integration activity"]
 ---
-{{% alert color="warning" %}}
-These activities can only be used in **Microflows**.
+
+{{% alert color="info" %}}
+This activity can only be used in microflows.
 {{% /alert %}}
 
 ## 1 Introduction

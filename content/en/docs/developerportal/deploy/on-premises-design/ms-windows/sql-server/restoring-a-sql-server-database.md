@@ -5,10 +5,6 @@ weight: 70
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/restoring-a-sql-server-database.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 In certain situations (for example, unwanted database updates or data corruption), it might be necessary to restore the Mendix database from a backup. This document describes the actions needed to perform a complete database restore and defines the prerequisites for restoring backups.
@@ -46,7 +42,7 @@ To restore the database, follow these steps:
 3. Right-click the database, select **Tasks** > **Restore** > **Database**, which will open the **Restore Database** dialog box.
 4. In the **Source** section of the **General Settings** page, specify the source and the location of the backup sets to restore by selecting **Device** > **Add** and then locating the backup file:
 
-    {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/sql-server/restoring-a-sql-server-database/18580646.jpg" >}}
+    {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/sql-server/restoring-a-sql-server-database/18580646.jpg" class="no-border" >}}
 
 5. In the **Destination** section of the **General Settings** page, the **Database** field is automatically populated with the name of the database to be restored. To change the name of the database, enter the new name in this field.
 6. In the **Restore plan** section of the **General Settings** page, leave the default as **To the last backup taken** or click **Timeline** to access the **Backup Timeline** dialog box where you can manually select a point in time to stop the recovery action.

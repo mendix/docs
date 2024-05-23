@@ -52,7 +52,7 @@ These will be created for each user role in your app. Here is an example:
 
 Here is an example for retrieving that user role: 
 
-{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/xpath-keywords-and-system-variables/user-role.png" width="500px" >}}
+{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/xpath-keywords-and-system-variables/user-role.png" width="500px" class="no-border" >}}
 
 ### 3.3 Time-Related
 
@@ -142,15 +142,19 @@ This query returns only customers who have registered this week:
 
 This query returns only customers who have registered in the past three years:
 
+[//]: # (<!-- markdownlint-disable no-space-in-emphasis -->)
+
 {{< tabpane >}}
   {{% tab header="Environments:" disabled=true /%}}
   {{< tab header="Studio Pro" lang="StudioPro" >}}
-    [DateRegistered > '[%BeginOfCurrentDay%] - 3 *[%YearLength%]']
+    [DateRegistered > '[%BeginOfCurrentDay%] - 3 * [%YearLength%]']
     {{% /tab %}}
   {{< tab header="Java" lang="JavaQuery" >}}
-    //Sales.Customer[DateRegistered > '[%BeginOfCurrentDay%] - 3* [%YearLength%]']
+    //Sales.Customer[DateRegistered > '[%BeginOfCurrentDay%] - 3 * [%YearLength%]']
     {{% /tab %}}
 {{< /tabpane >}}
+
+[//]: # (<!-- markdownlint-enable no-space-in-emphasis -->)
 
 This query returns users with the role "Administrator":
 

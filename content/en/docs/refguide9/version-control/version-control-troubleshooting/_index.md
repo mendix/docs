@@ -25,7 +25,7 @@ Below is a list of known errors and the steps to fix them.
 
 ### 2.1 Getting an Error Containing `SharpSvn.SvnAuthenticationException: Proxy authentication failed`
 
-{{< figure src="/attachments/refguide9/version-control/troubleshoot-version-control-issues/oopsproxy.png" alt="Error dialog with proxy authentication failed" >}}
+{{< figure src="/attachments/refguide9/version-control/troubleshoot-version-control-issues/oopsproxy.png" alt="Error dialog with proxy authentication failed" class="no-border" >}}
 
 This error means that Studio Pro has problems reaching the version control server because of a proxy server.
 
@@ -35,7 +35,7 @@ Follow these steps:
 2. Go to the **Advanced** tab. 
 3. In the **Proxy server** section, change the **Proxy server** settings. Fill in the correct **User name** and **Password**.
 
-    {{< figure src="/attachments/refguide9/version-control/troubleshoot-version-control-issues/proxysettings.png" alt="Proxy settings" >}}
+    {{< figure src="/attachments/refguide9/version-control/troubleshoot-version-control-issues/proxysettings.png" alt="Proxy settings" class="no-border" >}}
 
 ### 2.2 Getting an Error Containing Another `SharpSvn.SvnAuthenticationException`
 
@@ -134,7 +134,7 @@ The first five lines are the same, and after that the lines in your list can be 
 
 Merging the branch to the main line will result in the following information message: 
 
-{{< figure src="/attachments/refguide9/version-control/troubleshoot-version-control-issues/mergesuccessfuldialog.png" >}}
+{{< figure src="/attachments/refguide9/version-control/troubleshoot-version-control-issues/mergesuccessfuldialog.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 A conflict is reported on the app *folder*. This usually means that there is a conflict on the `svn:ignore` property.
@@ -149,7 +149,7 @@ To resolve a conflict on the `svn:ignore` property, follow these steps:
 2. Open the app directory in Windows File Explorer.
 3. Right-click the background of the app folder and choose **TortoiseSVN** > **Edit Conflicts**. The following pop-up window will be shown (resize the window to display all the information):
 
-    {{< figure src="/attachments/refguide9/version-control/troubleshoot-version-control-issues/editconflictsdialog.png" >}}
+    {{< figure src="/attachments/refguide9/version-control/troubleshoot-version-control-issues/editconflictsdialog.png" class="no-border" >}}
 
 4. Copy all the lines starting with `modeler-merge-marker` to the clipboard. 
 5. Click **Manually edit property**.
@@ -157,7 +157,7 @@ To resolve a conflict on the `svn:ignore` property, follow these steps:
 7. Paste the previously copied lines via <kbd>Ctrl</kbd>+<kbd>A</kbd> followed by <kbd>Ctrl</kbd>+<kbd>V</kbd>.
 8. Remove the special lines that start with `<<<<<<<`, `=======`, and `>>>>>>>`. For this example, we end up with the following combined ignore list:
 
-    {{< figure src="/attachments/refguide9/version-control/troubleshoot-version-control-issues/combinedignorelist.png" >}}
+    {{< figure src="/attachments/refguide9/version-control/troubleshoot-version-control-issues/combinedignorelist.png" class="no-border" >}}
 
     {{% alert color="info" %}}This includes both the lines from the main line and from the branch. The order is not important.{{% /alert %}}
 
@@ -174,7 +174,7 @@ If you get this error, try the following options:
 * In the [Developer Portal](/developerportal/general/team/), check whether the user has access to the app:
     * If they do not have access, invite them to the app
     * If they do have access, remove them from the app and add them back – this will re-sync the access rules
-* If the above does not work, make sure the [WebDAV protocol](http://www.webdav.org/) is not blocked within your network. This protocol is [required](/refguide9/system-requirements/) by Studio Pro for [version control](/refguide9/version-control/) to work, but it might be blocked by your proxy server or other software like a firewall.
+* If the above does not work, make sure the [WebDAV protocol](https://en.wikipedia.org/wiki/WebDAV) is not blocked within your network. This protocol is [required](/refguide9/system-requirements/) by Studio Pro for [version control](/refguide9/version-control/) to work, but it might be blocked by your proxy server or other software like a firewall.
 
 ## 3 Other Problems
 
@@ -182,4 +182,4 @@ If the solutions here do not work for your version control problems, please subm
 
 ## 4 Read More
 
-* [Submit Support Requests](/developerportal/support/submit-support-request/)
+* [Submit Support Requests](/support/submit-support-request/)

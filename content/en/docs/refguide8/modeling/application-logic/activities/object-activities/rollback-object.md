@@ -5,10 +5,6 @@ weight: 70
 tags: ["studio pro"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/rollback-object.pdf).
-{{% /alert %}}
-
 {{% alert color="warning" %}}
 This activity can be used in both **Microflows** and **Nanoflows**.
 {{% /alert %}}
@@ -25,7 +21,7 @@ When the rollback object action is performed in a sub-microflow, it rolls back t
 
 An example of rollback object properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/activities/object-activities/rollback-object/rollback-properties.png" alt="rollback object properties" >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/object-activities/rollback-object/rollback-properties.png" alt="rollback object properties" class="no-border" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
@@ -90,4 +86,4 @@ Pressing a **Cancel** button or triggering a rollback activity will initiate the
 * Database: there is no database communication happening during this event unless it is specified in a before- or after-create event
 * Result: an object with the state **Instantiated** will be removed, and an object with any other state will be reverted back to the values it had during the last commit
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/activities/object-activities/rollback-object/18582170.png" >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/object-activities/rollback-object/18582170.png" class="no-border" >}}

@@ -27,7 +27,7 @@ Atlas UI has a philosophy based on the core principles described below. These pr
 
 Our UI library is fully integrated into Mendix Studio Pro. After creating a page and selecting a layout in Mendix Studio Pro, you can find building blocks, and widgets directly in your Toolbox. These UI elements form the foundation of your app.
 
-{{< figure src="/attachments/howto/front-end/atlas-ui/get-started/designelements.png" alt="Atlas UI design elements" >}}
+{{< figure src="/attachments/howto/front-end/atlas-ui/get-started/designelements.png" alt="Atlas UI design elements" class="no-border" >}}
 
 1. **Navigation Layouts** — When building a Mendix app, the first thing you do is choose a navigation layout. These layouts are the frame within which your dynamic pages are housed, and they provide consistent structure throughout your app.
 

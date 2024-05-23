@@ -6,10 +6,6 @@ tags: ["studio pro", "error event", "event"]
 ---
 
 {{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/error-event.pdf).
-{{% /alert %}}
-
-{{% alert color="info" %}}
 This event can only be used in **Microflows**.
 {{% /alert %}}
 
@@ -27,7 +23,7 @@ You can only use an error event if an error is in scope: Studio Pro does not acc
 
 In this example, an error occurs while committing an object to the database. It is caught, and the flow continues to the error event where the error is passed back to the caller of the microflow. So you can implement your error handling on multiple levels.
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/events/error-event/error-event.png" >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/events/error-event/error-event.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 When adding an error event, you need to add an [error handler](#errorhandlers) for an activity before the error event, and select **Set as error handler** for the sequence flow.
@@ -50,7 +46,7 @@ On an activity or decision, you have three options:
 For the latter two options you can draw an additional flow from the block and mark this flow as the error handler flow. When selecting 'Custom with rollback' it will trigger this path when the error occurs and still rollback your objects afterwards. The 'Custom without rollback' option does not rollback the objects. After you selected a flow as the error handler it will show this as in the following image.
 Error handling is only specified for an individual action. The "without rollback" in the **Custom without rollback** option is only targeted at the action itself, not the error handling. There is thus a slight difference between **Custom with rollback** and **Custom without rollback** throwing the same exception or another one in the error handler. In the latter case, you will still have access to the database objects you have created until the end of error handler.
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/events/error-event/custom-without-rollback-microflows.png" >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/events/error-event/custom-without-rollback-microflows.png" class="no-border" >}}
 
 On a loop you get two options:
 
@@ -59,7 +55,7 @@ On a loop you get two options:
 
 The continue option means that when an error occurs, the loop will simply continue to the next iteration. It will show as a continue icon on the exit flow of the loop.
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/events/error-event/error-event-loop.png" >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/events/error-event/error-event-loop.png" class="no-border" >}}
 
 ### 2.2 Inspecting Errors
 
@@ -84,7 +80,7 @@ The following table shows the attributes of System.Error and System.SoapFault.
 | System.SoapFault | Role | String | The Role element of the SOAP fault. |
 | System.SoapFault | Detail | String | The Detail element of the SOAP fault. |
 
-Click [here](http://www.w3.org/TR/soap12-part1/#soapfault) for more information on SOAP faults.
+Click [here](https://www.w3.org/TR/soap12-part1/#soapfault) for more information on SOAP faults.
 
 {{% alert color="warning" %}}
 In microflows that apply entity access, it is not possible to inspect the attributes of error objects for security reasons. You can pass the error object to a sub-microflow that does not apply entity access and inspect the attributes there.
@@ -103,7 +99,7 @@ Error handlers are supported on all nanoflow elements except for gateways and lo
 
 With the **Custom without rollback** option, you can draw an additional flow from the block and then mark this flow as the error handler flow. The **Custom without rollback** option does not roll back the objects. After you select a flow as the error handler it will appear this way:
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/events/error-event/custom-without-rollback-nanoflows.png" alt="selected error handler" >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/events/error-event/custom-without-rollback-nanoflows.png" alt="selected error handler" class="no-border" >}}
 
 ### 3.2 Error Inspection
 

@@ -1,7 +1,7 @@
 ---
 title: "Native Mobile AR"
 url: /appstore/modules/native-mobile-ar/
-category: "Modules"
+
 description: "Describes the Native Mobile AR module, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "native mobile resources", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
@@ -45,7 +45,7 @@ Structure widgets are the AR widgets that can contain other widgets. These widge
 every AR widget that is embedded in it. For example, if you use an **ImageTracker (AR)** to recognize an image, and put a
 **Cube (AR)** in it, the cube will start in the exact middle of your image:
 
-{{< figure src="/attachments/appstore/modules/native-mobile-ar/scale-one.jpg" alt="Cube"   width="300"  >}}
+{{< figure src="/attachments/appstore/modules/native-mobile-ar/scale-one.jpg" alt="Cube"   width="300"  class="no-border" >}}
 
 ### 3.3 Node (AR) {#node}
 
@@ -57,19 +57,19 @@ Visual widgets are widgets that add a virtual object to the scene.
 
 ### 4.1 Cube (AR) {#cube}
 
-{{< figure src="/attachments/appstore/modules/native-mobile-ar/Cube.gif" alt="Cube" >}}
+{{< figure src="/attachments/appstore/modules/native-mobile-ar/Cube.gif" alt="Cube" class="no-border" >}}
 
 ### 4.2 Sphere (AR) {#sphere}
 
-{{< figure src="/attachments/appstore/modules/native-mobile-ar/Sphere.gif" alt="Sphere" >}}
+{{< figure src="/attachments/appstore/modules/native-mobile-ar/Sphere.gif" alt="Sphere" class="no-border" >}}
 
 ### 4.3 Square (AR) {#square}
 
-{{< figure src="/attachments/appstore/modules/native-mobile-ar/Square.gif" alt="Square" >}}
+{{< figure src="/attachments/appstore/modules/native-mobile-ar/Square.gif" alt="Square" class="no-border" >}}
 
 ### 4.4 3D Object (AR) {#3d-object}
 
-{{< figure src="/attachments/appstore/modules/native-mobile-ar/3DObject.gif" alt="3DObject" >}}
+{{< figure src="/attachments/appstore/modules/native-mobile-ar/3DObject.gif" alt="3DObject" class="no-border" >}}
 
 Beyond using simple 3D objects, there are also ways to add more complex and custom objects to your scene. The 3D object widget takes a URL. There are currently 3 types supported: *.obj*, *.gltf*, and *.glb*. Each type has its own benefits. 
 

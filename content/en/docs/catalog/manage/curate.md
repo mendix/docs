@@ -21,14 +21,14 @@ Users who can curate assets in the Catalog are as follows:
 Owners and Curators can also get an overview of the registered assets they own and curate from the [Curate](#curatelist) page in the Catalog.
 
 {{% alert color="info" %}}
-Information that is added or changed during curation is stored in the Catalog for that item. It will not be added to the OData service contract or metadata files or affect any of the values in the metadata files associated with the service or the data associated with the exposed datasets.
+Information that is added or changed during curation is stored in the Catalog for that item. It will not be added to the service contract, metadata files, or affect any of the values in the metadata files associated with the service or the data associated with the exposed datasets.
 {{% /alert %}}
 
 ## 2 Curate List {#curatelist}
 
 Owners and curators of registered assets can click **Curate** from the Catalog home page to see the curation list screen. This page provides an overview of all the registered assets you can curate as an owner under the **My Assets** tab. Curators will also see the **Company Assets** tab that lists all the registered assets:
 
-{{< figure src="/attachments/catalog/curate/curate-list.png" alt="curate list" >}}
+{{< figure src="/attachments/catalog/curate/curate-list.png" alt="curate list" class="no-border" >}}
 
 These lists include registered data sources and also individual datasets that are exposed for the data source.
 
@@ -84,7 +84,7 @@ By default, the **Technical Owner** for a registered asset is the user who regis
 {{% alert color="info" %}}
 **Business Owners** and **Technical Owners** have curation rights for the registered data source in the Catalog only if they are registered users on the Mendix Platform. If a [custom owner](#custom-owner) is created using the process described in this section, the link to contact them will be displayed for the asset. It does not mean they are able to access or curate the asset in the Catalog .{{% /alert %}}
 
-{{% alert color="info" %}}
+{{% alert color="info" %}
 Curators and Mendix Admins can manage the lists of custom owners as part of their administration functions. For more information, see the [Owners](/developerportal/control-center/catalog-admin/#custom-owners) section of *Catalog Administration*.
 {{% /alert %}}
 
@@ -134,7 +134,7 @@ To **Upload a different icon** for the app, follow these steps:
 
 1. In the **Application** tab of the selected data source, click **Upload a different icon** to display the **Upload Application Icon** pop up:
 
-    {{< figure src="/attachments/catalog/curate/icon-upload-dialog.png" alt="upload icon"   width="300"  >}}
+    {{< figure src="/attachments/catalog/curate/icon-upload-dialog.png" alt="upload icon"   width="300"  class="no-border" >}}
 
 2. Drag the image file into the upload area or click **Upload** to browse and select a file from your file system. Click **Step 2: Crop image** to proceed.
 3. Move the wire-frame to select an area of the loaded image and change the size of the wire-frame to crop the image to the area that you want to use. When you are satisfied, click **Apply Changes**.
@@ -143,11 +143,11 @@ To **Upload a different icon** for the app, follow these steps:
 
 4. A preview of the application icon is shown. Click **Save** to upload the selected icon.
 
-    {{< figure src="/attachments/catalog/curate/icon-preview.png" alt="upload icon"   width="300"  >}}
+    {{< figure src="/attachments/catalog/curate/icon-preview.png" alt="upload icon"   width="300"  class="no-border" >}}
 
 5. The **Application** tab will now show the selected icon:
 
-    {{< figure src="/attachments/catalog/curate/asset-metadata-new-icon.png" alt="upload icon" >}}
+    {{< figure src="/attachments/catalog/curate/asset-metadata-new-icon.png" alt="upload icon" class="no-border" >}}
 
 6. Click **Save** to return to the Data Source details page. The custom icon will be stored in the **Icon Library**.
 
@@ -169,7 +169,7 @@ To edit the asset metadata, follow these steps:
 
 1. On the **Curate** page, click **Edit** to display the Edit Data Source box:
 
-    {{< figure src="/attachments/catalog/curate/service-metadata-box.png" alt="service metadata" >}}
+    {{< figure src="/attachments/catalog/curate/service-metadata-box.png" alt="service metadata" class="no-border" >}}
 
 2. The description from the service metadata is displayed in the **Description provided by the contract**. This cannot be changed, as it is part of the service definition. You can provide an alternative description in the **Description** box.
 
@@ -183,13 +183,13 @@ Add tags to categorize a registered service and provide additional means for fin
 1. On the Data Source details page of a selected service, click **Edit** to display the Edit Data Source screen.
 2. To add tags, click the empty **Tags** input area:
 
-    {{< figure src="/attachments/catalog/curate/service-metadata-tags.png" alt="tags" >}}
+    {{< figure src="/attachments/catalog/curate/service-metadata-tags.png" alt="tags" class="no-border" >}}
 
 3. To add or edit the tags, enter a tag string and press **Enter** or select one from the list of existing tags that are used in the Catalog. To separate multiple tags, use spaces.
 
     {{% alert color="info" %}}Tags can only contain lower-case letters, numbers, and underscores. They must have a minimum of 2 characters. If you use capital letters when typing the tag string, they will be converted to lower-case. {{% /alert %}}
 
-4. You can enter multiple tags separated by spaces. You can remove tags by clicking the **X**.
+4. You can enter multiple tags separated by spaces. You can remove tags by clicking the {{% icon name="remove" %}}.
 
 5. When you are finished specifying the tags, click **Save** to register the changes. The tags will be shown on the Data Source details page.
 
@@ -205,7 +205,7 @@ The discoverable and validated properties of registered assets can be set from t
 
 ### 6.1 Discoverable
 
-The discoverability is set at a data source level. When a data source is registered in the Catalog, **Discoverable** is set to the company's default value, which is configured by the Mendix Admin in [Control Center](/developerportal/control-center/catalog-admin/#settings). If **Discoverable** is on for a data source, all users can find the asset and see the details. The **Discoverable** setting will apply to all datasets that are exposed in the data source.
+The discoverability is set at a data source level. When a data source is registered in the Catalog, **Discoverable** is set to the company's default value, which is configured by the Mendix Admin in [Control Center](/control-center/catalog-admin/#settings). If **Discoverable** is on for a data source, all users can find the asset and see the details. The **Discoverable** setting will apply to all datasets that are exposed in the data source.
 
 When the **Discoverable** setting is turned off, it will only be visible to the owners of the service, curators, and the Mendix Admin. All other users of the Catalog (and through the Catalog integrations in Studio Pro) will not be able to see an asset whose discoverability is turned off.
 

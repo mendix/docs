@@ -5,17 +5,13 @@ weight: 20
 tags: ["domain model", "entity", "persistability", "persistable", "non-persistable"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/persistability.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 The **Persistable** property of an entity in the domain model defines whether an object can be committed to the database.
 
 Persistable entities are colored blue in the domain model. Non-persistable entities are colored orange. The **Customer** entity in the image below is persistable, while **ProductQueryResults** is non-persistable.
 
-{{< figure src="/attachments/refguide8/modeling/domain-model/entities/persistability/persistable-vs-non-persistable.png" alt="Picture of a persistable and a non-persistable entity" >}}
+{{< figure src="/attachments/refguide8/modeling/domain-model/entities/persistability/persistable-vs-non-persistable.png" alt="Picture of a persistable and a non-persistable entity" class="no-border" >}}
 
 ## 2 Persistable Entities {#persistable}
 

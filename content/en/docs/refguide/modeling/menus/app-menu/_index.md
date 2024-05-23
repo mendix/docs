@@ -10,7 +10,7 @@ tags: ["Studio Pro", "app menu", "top bar"]
 
 In the **App** menu, you can view and/or manipulate settings that are connected to your app and deployment. For example, you can create a deployment package.
 
-{{< figure src="/attachments/refguide/modeling/menus/app-menu/app-menu.png" alt="App Menu" >}}
+{{< figure src="/attachments/refguide/modeling/menus/app-menu/app-menu.png" alt="App Menu" class="no-border" >}}
 
 ## 2 Tools
 
@@ -52,7 +52,7 @@ The following directories in the app directory are useful for customizing the ap
 * **javasource** – stores the JavaScript actions
 * **widgets** – stores the widgets
 
-## 5 Deploy for Eclipse
+## 5 Deploy for Eclipse{#eclipse}
 
 The **Deploy for Eclipse** option deploys the app to the deployment directory. The Java stubs are generated so that you can start editing them in Eclipse. This action does not compile the Java actions. Use this if you are writing Java actions and you want to compile and debug them through Eclipse.
 

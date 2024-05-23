@@ -1,7 +1,7 @@
 ---
 title: "Slider"
 url: /appstore/widgets/slider/
-category: "Widgets"
+
 description: "Describes the configuration and usage of the Slider widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "widget", "slider", "bound", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -19,11 +19,11 @@ If the user needs to set a range, instead of one value, you should use the [Rang
 
 * Configure the maximum and minimum values, which define the limits of the slider's track, and then the user can set the slider value within these limits
 
-    {< figure src="/attachments/appstore/widgets/slider/slider1.png" >}}
+    {{< figure src="/attachments/appstore/widgets/slider/slider1.png" class="no-border" >}}
 
 * Set a step value, which is the difference between two adjacent values on the slider
 
-    {{< figure src="/attachments/appstore/widgets/slider/slider2.png" >}}
+    {{< figure src="/attachments/appstore/widgets/slider/slider2.png" class="no-border" >}}
 
 * Set a microflow that is executed when the user changes the slider value
 * Show a tooltip when the user clicks or moves the slider handle

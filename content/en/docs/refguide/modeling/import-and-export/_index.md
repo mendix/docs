@@ -2,7 +2,7 @@
 title: "Import and Export Apps, Modules, Widgets, and Documents"
 linktitle: "Importing and Exporting Elements"
 url: /refguide/import-and-export/
-category: "App Modeling"
+
 weight: 18
 description: "Gives an overview of the import and export functions in Studio Pro."
 tags: ["mpk", "import", "export", "document", "module", "widget", "app package"]
@@ -41,11 +41,11 @@ To import a complete app or solution package, follow these steps:
 
 1. Select **Import App Package…** from the **File** menu:
 
-    {{< figure src="/attachments/refguide/modeling/import-and-export/file-import-app-project.png" >}}
+    {{< figure src="/attachments/refguide/modeling/import-and-export/file-import-app-project.png" class="no-border" >}}
 
 2. Select your Mendix app package file and click **Open**. The **Import App Package** dialog box will appear:
 
-    {{< figure src="/attachments/refguide/modeling/import-and-export/import-app-package.png" >}}
+    {{< figure src="/attachments/refguide/modeling/import-and-export/import-app-package.png" class="no-border" >}}
 
     You have the following options in this dialog box:
 
@@ -72,15 +72,18 @@ To import module packages through the App Explorer in Studio Pro, follow these s
 2. Select your Mendix module package file and click **Open**. The **Import Module** dialog box will open.
 3. In the dialog box, choose a name for your module and select whether to create a new module or replace an existing one:
 
-    {{< figure src="/attachments/refguide/modeling/import-and-export/import-module.png" >}}
+    {{< figure src="/attachments/refguide/modeling/import-and-export/import-module.png" class="no-border" >}}
 
     {{% alert color="info" %}}If you replace the module with a new version, the existing user data will be retained based on the names of entities, attributes, and associations. If you delete a module and then add a newer version of it, all user data will be lost.{{% /alert %}}
 
 4. Click **Import**. You may see a **Warning** pop-up window that will inform you of any included module dependencies that will be overwritten in your app.
+
+    {{% alert color="info" %}}Widgets are only overwritten when an imported module contains a newer version of the widget.{{% /alert %}}
+
 5. Click **OK**. 
 
 If you are importing a module with the *.mxmodule* extension, a dialog informing you about the imported add-on module is displayed:
-{{< figure src="/attachments/refguide/modeling/import-and-export/mxmodule-notification.png" >}}
+{{< figure src="/attachments/refguide/modeling/import-and-export/mxmodule-notification.png" class="no-border" >}}
 
 You see a new or replaced module in the **App Explorer**. You also see your changes in the **Changes** pane. 
 
@@ -97,7 +100,7 @@ If you would like to import an add-on module (the *.mxmodule* file) to your app,
 3. In Studio Pro, go to **App** > **Synchronize App Directory** on the menu bar.
 
 A dialog informing you about the imported add-on module will be displayed.
-{{< figure src="/attachments/refguide/modeling/import-and-export/mxmodule-notification.png" >}}
+{{< figure src="/attachments/refguide/modeling/import-and-export/mxmodule-notification.png" class="no-border" >}}
 
 The add-on module is added to the **App Explorer**.
 
@@ -153,12 +156,12 @@ To import widgets, follow these steps:
 
 1. Click the **App** menu and select **Show App Directory in Explorer**:
 
-    {{< figure src="/attachments/refguide/modeling/import-and-export/show-app-directory.png" >}}
+    {{< figure src="/attachments/refguide/modeling/import-and-export/show-app-directory.png" class="no-border" >}}
 
 2. Open the **widgets** folder in your app directory and put your Mendix package file there.
 3. Open the **App** menu and select **Synchronize App Directory** to synchronize the changes in the app directory:
 
-    {{< figure src="/attachments/refguide/modeling/import-and-export/synchronize-app-directory.png" >}}
+    {{< figure src="/attachments/refguide/modeling/import-and-export/synchronize-app-directory.png" class="no-border" >}}
 
     {{% alert color="info" %}}You can also press **F4** to synchronize your app directory.{{% /alert %}}
 
@@ -166,7 +169,7 @@ To import widgets, follow these steps:
 
 ### 2.5 Importing Content from the Marketplace
 
-To learn more about importing content from the Marketplace, see [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/).
+To learn more about importing content from the Marketplace, see [Using Marketplace Content](/appstore/overview/use-content/).
 
 ## 3 Exporting Various Elements
 
@@ -176,11 +179,11 @@ To export an app, follow these steps:
 
 1. Select **Export App Package…** from the **File** menu:
 
-    {{< figure src="/attachments/refguide/modeling/import-and-export/file-export-package.png" >}}
+    {{< figure src="/attachments/refguide/modeling/import-and-export/file-export-package.png" class="no-border" >}}
 
 2. In the **Export App Package** dialog box, select the **Package Type**, the **Package destination**, and whether you want to export a snapshot of the data in the current development database:
 
-    {{< figure src="/attachments/refguide/modeling/import-and-export/export-app-package.png" >}}
+    {{< figure src="/attachments/refguide/modeling/import-and-export/export-app-package.png" class="no-border" >}}
 
     For more information on types of packages, see [Export App Package](/refguide/export-app-package-dialog/).
 
@@ -198,9 +201,9 @@ If your module refers to other modules in the app (that is, it is not self-conta
 
 Select **Find usages of other user modules** to view the references, or click **Continue exporting** and you will see the **Select Dependencies** dialog box:
 
-{{< figure src="/attachments/refguide/modeling/import-and-export/select-dependencies.png" >}}
+{{< figure src="/attachments/refguide/modeling/import-and-export/select-dependencies.png" class="no-border" >}}
 
-Here you can select files you would like to include in your package. This list includes any files in the **userlib** or **resources** folders in your app directory. If you do not want to include these files, you can uncheck the boxes.
+Here you can select files you would like to include in your package. This list includes any files in the **userlib** or **resources** folders in your app directory, as well as widgets that are used in the module you are exporting. If you do not want to include these files, you can uncheck the boxes.
 
 {{% alert color="info" %}}To uncheck all the files quickly, press **<kbd>Ctrl</kbd>+<kbd>A</kbd>** to select all of the items then press the <kbd>spacebar</kbd> to uncheck all the elements.
 {{% /alert %}}

@@ -1,7 +1,7 @@
 ---
 title: "Access a Samba Share"
 url: /howto7/extensibility/access-a-samba-share-from-the-mxcloud/
-category: "Extensibility"
+
 weight: 10
 tags: ["Samba", "share"]
 ---
@@ -52,7 +52,7 @@ If you choose to connect to a server based on the server name instead of the IP 
 | **jcifs.netbios.lmhosts** | The path to an LMHOSTS (LAN Manager Hosts) file containing a map of the IP addresses to hostnames. The format of this file is identical to that of the Windows LMHOSTS file format (with a few exceptions noted below.) |
 | **jcifs.netbios.scope** | This is rare, but NetBIOS provides for a "scope ID" to be used in an attempt to conceal groups of machines on the same network. Ask your network administrator if a scope ID is used. If so, it must be set using this property, or the name queries will fail. |
 
-However, the cloud edit library requires an additional property override. The DFS property is not supposed to be enabled in the Mendix cloud since the Mendix cloud cannot resolve the DFS server by default. If you choose to enable the DFS, you will need to make sure that the server will be able to resolve the DFS based on the domain name and DNS location.
+However, the cloud edit library requires an additional property override. The DFS property is not supposed to be enabled in the Mendix Cloud because Mendix Cloud cannot resolve the DFS server by default. If you choose to enable the DFS, you will need to make sure that the server will be able to resolve the DFS based on the domain name and DNS location.
 
 | Name | Resolution Properties |
 | --- | --- |
@@ -66,11 +66,11 @@ The cloud does not allow the properties to be specified using the system propert
 jcifs.Config.setProperty("jcifs.smb.client.dfs.disabled","false");
 ```
 
-For more details on all the properties, see here: [http://jcifs.samba.org/src/docs/api/overview-summary.html#scp](http://jcifs.samba.org/src/docs/api/overview-summary.html#scp).
+For more details on all the properties, see [Setting Client Properties](https://www.jcifs.org/src/docs/api/overview-summary.html#scp).
 
 ## 4 Further Documentation
 
-* [http://jcifs.samba.org/](http://jcifs.samba.org/)
+* [The Java CIFS Client Library](https://www.jcifs.org/)
 
 ## 5 Read More
 

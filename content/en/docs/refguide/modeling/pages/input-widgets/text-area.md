@@ -10,11 +10,11 @@ tags: ["studio pro"]
 
 A **text area** is used to display and, optionally, allow the end-user to edit the value of an attribute of [data type](/refguide/data-types/) *String*. It differs from a [text box](/refguide/text-box/) In that the value can be displayed over several lines.
 
-A text area must be placed in a [data container](/refguide/data-widgets/) and displays an attribute of the object(s) retrieved by that container. The name of the attribute to be displayed is shown inside the text area, between square brackets, and colored blue.
+A text area must be placed in a [data container](/refguide/data-widgets/) and displays an attribute of the object (or objects) retrieved by that container. The name of the attribute to be displayed is shown inside the text area, between square brackets, and colored blue.
 
 For example, the following text area allows the end-user to see, and set, the **Notes** about a contact.
 
-{{< figure src="/attachments/refguide/modeling/pages/input-widgets/text-area/text-area.png" >}}
+{{< figure src="/attachments/refguide/modeling/pages/input-widgets/text-area/text-area.png" class="no-border" >}}
 
 ## 2 Properties Pane
 
@@ -65,7 +65,7 @@ This is the text displayed when typing in the text area. This text has two [para
 
 For example, if you use the counter message `You've used {1} characters of the {2} characters that are allowed.` for your text area, the end-user will see this message displayed below the text area widget:
 
-{{< figure src="/attachments/refguide/modeling/pages/input-widgets/text-area/counter-message.png" >}}
+{{< figure src="/attachments/refguide/modeling/pages/input-widgets/text-area/counter-message.png" class="no-border" >}}
 
 #### 3.1.4 Text Too Long Message
 

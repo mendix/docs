@@ -1,0 +1,2412 @@
+openapi: 3.0.1
+info:
+  version: 1.0.0
+  title: Marketplace Service
+  description: 'Use Marketplace Service API to manage marketplace contents (Packages and Versions) creation and modification, access and share by user and groups.'
+servers:
+  - url: 'https://mpp.mendix-dev.tencent-cloud.com/marketplaceservice/v1'
+paths:
+  /packages:
+    get:
+      tags:
+        - packages
+      summary: Get packages (marketplace content items)
+      description: |-
+        ## Use this GET operation to retrieve all marketplace content items, the latest version will be retuned with the package.
+
+        ### Filtering:
+        Optionally you can filter the list with query parameters, all of them are optional.
+
+        - name = Package name.
+
+        - category and subcategory = category and subcategory name, if both parameters are used in the same request, subcategory must be associated to an existing category otherwise the request will fail.
+
+        - modelerMajorVersion = 7, 8, 9 or 10 for Studio Pro major version.
+
+        - ownerUserName = Package owner user name.
+
+        - visibility = All if retrive the packages visible to all users, Group if retrive the packages visible to users in the packge owner and sharing groups.
+
+
+        ### Paging:
+        Optionally you can get the big query list in a few pages.
+
+        - Limit = The maximum amount of packages to return. If Limit is not specified, default all are returned.
+
+        - Offset = Offset says to skip that many objects before beginning to return objects in the response. Usually used in combination with Limit.
+      operationId: GetPackages
+      parameters:
+        - name: name
+          in: query
+          schema:
+            type: string
+        - name: category
+          in: query
+          schema:
+            type: string
+        - name: subcategory
+          in: query
+          schema:
+            type: string
+        - name: modelerMajorVersion
+          in: query
+          schema:
+            type: integer
+        - name: ownerUserName
+          in: query
+          schema:
+            type: string
+        - name: visibility
+          in: query
+          schema:
+            enum:
+              - All
+              - Group
+        - name: status
+          in: query
+          schema:
+            enum:
+              - Draft
+              - WaitingForApproval
+              - Declined
+              - Published
+              - Retired
+        - name: limit
+          in: query
+          schema:
+            type: integer
+        - name: offset
+          in: query
+          schema:
+            type: integer
+      responses:
+        '200':
+          $ref: '#/components/responses/packages'
+        '201':
+          description: Created
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/packages'
+        '404':
+          $ref: '#/components/responses/error-404'
+      security:
+        - mxtoken: []
+      servers:
+        - url: 'https://mpp.mendix-dev.tencent-cloud.com/marketplaceservice/v1'
+    post:
+      tags:
+        - packages
+      summary: Create a new package (marketplace content item)
+      description: |
+        ### Use the POST method as a first step to create a new content item.
+
+        Note the following:
+        - This operation will create a new package in marketplace and an initial 1.0.0 version if no version specified.
+        - The Status of the initial version of package will be Draft.
+      operationId: CreatePackage
+      requestBody:
+        description: 'Input new package creation request:'
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PackageInput'
+            examples:
+              New package request:
+                value:
+                  name: Video Player
+                  description: 'Play you video, those things on youtube'
+                  categoryName: Widgets
+                  subcategoryName: Display Widgets
+                  studioProVersion: 9.24.3
+                  versionMajor: 1
+                  versionMinor: 0
+                  versionPatch: 0
+                  logoFile: base64EncodedContent string of logo jpeg/jpg/png file
+                  license: Apache V2
+                  visibility: All
+                  ownerGroupName: ''
+                  documentation: Video Player Documentation
+                  releaseNotes: Play you video v1.0.0
+                  sourceFileInput:
+                    base64EncodedContent: base64EncodedContent string of source mpk file
+                    fileName: VideoPlayer_1.0.1.mpk
+                  screenshotInputs:
+                    - base64EncodedContent: base64EncodedContent string of screenshot jpeg/jpg/png file
+                      fileName: VideoPlayer_ss1.jpg
+                    - base64EncodedContent: base64EncodedContent string of screenshot jpeg/jpg/png file
+                      fileName: VideoPlayer_ss2.jpg
+      responses:
+        '201':
+          $ref: '#/components/responses/package'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+      security:
+        - mxtoken: []
+      servers:
+        - url: 'https://mpp.mendix-dev.tencent-cloud.com/marketplaceservice/v1'
+      x-codegen-request-body-name: PackageInput
+  '/packages/{packageId}/versions':
+    get:
+      tags:
+        - packages
+      summary: Get versions of existing package
+      description: Get versions of the existing package (marketplace content item) by package id.
+      operationId: GetPackageVersion
+      parameters:
+        - name: packageId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          $ref: '#/components/responses/versions'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '404':
+          $ref: '#/components/responses/error-404'
+      security:
+        - mxtoken: []
+      servers:
+        - url: 'https://mpp.mendix-dev.tencent-cloud.com/marketplaceservice/v1'
+    post:
+      tags:
+        - packages
+      summary: Create a new version of existing package
+      description: |-
+        ### Use this POST operation to create a new version of an existing content item
+
+        Note:
+        - This operation will create a new Version of the existing package.
+        - The Status of the Version will be Draft.
+      operationId: CreateVersion
+      parameters:
+        - name: packageId
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        description: 'Input package new version creation request:'
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VersionInput'
+            examples:
+              Package new version request:
+                value:
+                  description: 'Play you video, those things on youtube'
+                  category: Widgets
+                  subcategory: Display Widgets
+                  studioProVersion: 9.24.3
+                  versionMajor: 1
+                  versionMinor: 0
+                  versionPatch: 1
+                  logoFile: base64EncodedContent string of logo jpeg/jpg/png file
+                  documentation: Video Player Documentation
+                  releaseNotes: Play you video v1.0.0
+                  sourceFileInput:
+                    base64EncodedContent: base64EncodedContent string of source mpk file
+                    fileName: VideoPlayer_1.0.1.mpk
+                  screenshotInputs:
+                    - base64EncodedContent: base64EncodedContent string of screenshot jpeg/jpg/png file
+                      fileName: VideoPlayer_ss1.jpg
+                    - base64EncodedContent: base64EncodedContent string of screenshot jpeg/jpg/png file
+                      fileName: VideoPlayer_ss2.jpg
+      responses:
+        '200':
+          $ref: '#/components/responses/version'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+      security:
+        - mxtoken: []
+      servers:
+        - url: 'https://mpp.mendix-dev.tencent-cloud.com/marketplaceservice/v1'
+      x-codegen-request-body-name: VersionInput
+  '/packages/{packageId}':
+    get:
+      tags:
+        - packages
+      summary: Get a single package (marketplace content item)
+      description: 'Get a package by package id, the latest version will be retuned with the package.'
+      operationId: Getpackage
+      parameters:
+        - name: packageId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          $ref: '#/components/responses/package'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '404':
+          $ref: '#/components/responses/error-404'
+      security:
+        - mxtoken: []
+      servers:
+        - url: 'https://mpp.mendix-dev.tencent-cloud.com/marketplaceservice/v1'
+    put:
+      tags:
+        - packages
+      summary: Update package (marketplace content item)
+      description: |
+        ### Use the PUT method to edit a newly posted package (content item).
+
+        Note the following:
+        - This operation applies only to newly created content items that have not been published yet.
+        - This operation cannot be used to edit new versions of already existing packages (content items).
+        - Only the creator of a package is able to edit it and thus use this operation.
+      operationId: ChangeDraftPackage
+      parameters:
+        - name: packageId
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        description: 'Input draft package data for update:'
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PackageInput'
+            examples:
+              Draft package for update:
+                value:
+                  name: Video Player
+                  description: 'Play you video, those things on youtube'
+                  categoryName: Widgets
+                  subcategoryName: Display Widgets
+                  studioProVersion: 9.24.3
+                  versionMajor: 1
+                  versionMinor: 0
+                  versionPatch: 0
+                  logoFile: base64EncodedContent string of logo jpeg/jpg/png file
+                  license: Apache V2
+                  visibility: All
+                  ownerGroupName: ''
+                  documentation: Video Player Documentation
+                  releaseNotes: Play you video v1.0.0
+                  sourceFileInput:
+                    base64EncodedContent: base64EncodedContent string of source mpk file
+                    fileName: VideoPlayer_1.0.1.mpk
+                  screenshotInputs:
+                    - base64EncodedContent: base64EncodedContent string of screenshot jpeg/jpg/png file
+                      fileName: VideoPlayer_ss1.jpg
+                    - base64EncodedContent: base64EncodedContent string of screenshot jpeg/jpg/png file
+                      fileName: VideoPlayer_ss2.jpg
+      responses:
+        '200':
+          $ref: '#/components/responses/package'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+      security:
+        - mxtoken: []
+      servers:
+        - url: 'https://mpp.mendix-dev.tencent-cloud.com/marketplaceservice/v1'
+      x-codegen-request-body-name: PackageInput
+    delete:
+      tags:
+        - packages
+      summary: Delete marketplace content that is not published
+      description: Delete marketplace content that is not published.
+      operationId: DeletePackage
+      parameters:
+        - name: packageId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '204':
+          description: Delete package successfully
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+      security:
+        - mxtoken: []
+      servers:
+        - url: 'https://mpp.mendix-dev.tencent-cloud.com/marketplaceservice/v1'
+  '/packages/{packageId}/groups':
+    get:
+      tags:
+        - packages
+      summary: Get share groups of package
+      description: Get share groups of package.
+      operationId: GetshareGroups
+      parameters:
+        - name: packageId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          $ref: '#/components/responses/objects'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '404':
+          $ref: '#/components/responses/error-404'
+      security:
+        - mxtoken: []
+      servers:
+        - url: 'https://mpp.mendix-dev.tencent-cloud.com/marketplaceservice/v1'
+  '/packages/{packageId}/requests':
+    post:
+      tags:
+        - packages
+      summary: Add or delete share groups of package
+      description: Add or delete share groups of package
+      operationId: UpdateShareGroups
+      parameters:
+        - name: type
+          in: query
+          schema:
+            enum:
+              - Add
+              - Delete
+        - name: objectType
+          in: query
+          schema:
+            enum:
+              - Group
+        - name: packageId
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        description: Input share group list of package
+        required: false
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: object
+                properties:
+                  name:
+                    type: string
+              x-examples:
+                Example 1:
+                  - name: string
+            examples:
+              Share group list of package:
+                value:
+                  - name: GroupX
+      responses:
+        '200':
+          $ref: '#/components/responses/objects'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+      security:
+        - mxtoken: []
+      servers:
+        - url: 'https://mpp.mendix-dev.tencent-cloud.com/marketplaceservice/v1'
+      x-codegen-request-body-name: ObjectInput
+  '/packages/{packageId}/owner':
+    put:
+      tags:
+        - packages
+      summary: Change owner of package
+      description: Change owner user and group of package
+      operationId: ChangePackageOwner
+      parameters:
+        - name: packageId
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        description: Input owner user and group of package
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OwnerInput'
+            examples:
+              Owner user and group of package:
+                value:
+                  userName: John
+                  groupName: Group A
+      responses:
+        '200':
+          $ref: '#/components/responses/package'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+      security:
+        - mxtoken: []
+      servers:
+        - url: 'https://mpp.mendix-dev.tencent-cloud.com/marketplaceservice/v1'
+      x-codegen-request-body-name: UserInput
+  '/packages/{packageId}/request':
+    put:
+      tags:
+        - packages
+      summary: Request to publish/approve/decline/retire/activate package
+      description: |-
+        ### Use this PUT method to publish/approve/decline/retire/activate a package (marketplace content item) that was created using the POST /package operation
+
+        Note the following:
+        - To publish package content will result in submitting the content for approval.
+        - Admin or owner user of package are able to publish/retire/activate package.
+        - Only Admin is able to approve/decline package for publishing.
+      operationId: RequestUpdatePackage
+      parameters:
+        - name: type
+          in: query
+          schema:
+            enum:
+              - Publish
+              - Approve
+              - Decline
+              - Retire
+              - Activate
+        - name: packageId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          $ref: '#/components/responses/package'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+      security:
+        - mxtoken: []
+      servers:
+        - url: 'https://mpp.mendix-dev.tencent-cloud.com/marketplaceservice/v1'
+  '/versions/{versionId}/download':
+    get:
+      tags:
+        - version
+      summary: Download a published content
+      description: Download a published content with version uuid
+      operationId: DownloadVersion
+      parameters:
+        - name: Source
+          in: query
+          schema:
+            type: string
+        - name: versionId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Downloads package version successfully
+          content:
+            '*/*':
+              schema:
+                type: string
+                contentMediaType: application/octet-stream
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '404':
+          $ref: '#/components/responses/error-404'
+      security:
+        - mxtoken: []
+      servers:
+        - url: 'https://mpp.mendix-dev.tencent-cloud.com/marketplaceservice/v1'
+  '/versions/{versionId}':
+    get:
+      tags:
+        - version
+      summary: Get a single version of an existing package
+      description: Get a single version of an existing package
+      operationId: GetVersion
+      parameters:
+        - name: versionId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/version'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '404':
+          $ref: '#/components/responses/error-404'
+      security:
+        - mxtoken: []
+      servers:
+        - url: 'https://mpp.mendix-dev.tencent-cloud.com/marketplaceservice/v1'
+    put:
+      tags:
+        - version
+      summary: Update a single version of an existing package
+      description: Update a single version of an existing package
+      operationId: UpdateVersion
+      parameters:
+        - name: versionId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: 'Input package version for update:'
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VersionInput'
+            examples:
+              'Input package version ':
+                value:
+                  description: 'Play you video, those things on youtube'
+                  studioProVersion: 9.24.3
+                  versionMajor: 1
+                  versionMinor: 0
+                  versionPatch: 1
+                  logoFile: base64EncodedContent string of logo jpeg/jpg/png file
+                  documentation: Video Player Documentation
+                  releaseNotes: Play you video v1.0.1
+                  sourceFileInput:
+                    base64EncodedContent: base64EncodedContent string of source mpk file
+                    fileName: VideoPlayer_1.0.1.mpk
+                  screenshotInputs:
+                    - base64EncodedContent: base64EncodedContent string of screenshot jpeg/jpg/png file
+                      fileName: VideoPlayer_ss1.jpg
+                    - base64EncodedContent: base64EncodedContent string of screenshot jpeg/jpg/png file
+                      fileName: VideoPlayer_ss2.jpg
+      responses:
+        '200':
+          $ref: '#/components/responses/version'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+      security:
+        - mxtoken: []
+      servers:
+        - url: 'https://mpp.mendix-dev.tencent-cloud.com/marketplaceservice/v1'
+      x-codegen-request-body-name: VersionInput
+    delete:
+      tags:
+        - version
+      summary: Delete a version of package
+      description: Delete a version of package
+      operationId: DeleteVersion
+      parameters:
+        - name: versionId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Delete package version uccessfully
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+      security:
+        - mxtoken: []
+      servers:
+        - url: 'https://mpp.mendix-dev.tencent-cloud.com/marketplaceservice/v1'
+  '/versions/{versionId}/request':
+    put:
+      tags:
+        - version
+      summary: Request to publish/retire/activate a version of package
+      description: |-
+        ### Use this PUT method to publish/retire/activate a version of an existing content item that was created using the POST /version operation
+
+        Note:
+        - Admin and owner of package can publish/retire/activate version of package.
+      operationId: RequestUpdateVersion
+      parameters:
+        - name: type
+          in: query
+          schema:
+            enum:
+              - Publish
+              - Retire
+              - Activate
+        - name: versionId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/version'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+      security:
+        - mxtoken: []
+      servers:
+        - url: 'https://mpp.mendix-dev.tencent-cloud.com/marketplaceservice/v1'
+  /categories:
+    get:
+      tags:
+        - category
+      summary: Query all categories
+      description: Query all categories
+      operationId: GetAllcategories
+      responses:
+        '200':
+          $ref: '#/components/responses/categories'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '404':
+          $ref: '#/components/responses/error-404'
+      security:
+        - mxtoken: []
+      servers:
+        - url: 'https://mpp.mendix-dev.tencent-cloud.com/marketplaceservice/v1'
+  '/subcategories/{subcategoryId}':
+    get:
+      tags:
+        - subcategory
+      summary: Get a single subcategory by id
+      description: Get a single subcategory by id
+      operationId: GetSubcategory
+      parameters:
+        - name: subcategoryId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          $ref: '#/components/responses/subcategory'
+        '201':
+          description: Created
+        '400':
+          description: Bad Request
+        '401':
+          description: Authentication information is missing or invalid
+          headers:
+            WWW-Authenticate:
+              schema:
+                type: string
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+      security:
+        - mxtoken: []
+      servers:
+        - url: 'https://mpp.mendix-dev.tencent-cloud.com/marketplaceservice/v1'
+    put:
+      tags:
+        - subcategory
+      summary: Update subcategory by id
+      description: Update subcategory by id
+      operationId: UpdateSubcategory
+      parameters:
+        - name: subcategoryId
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        description: Input subcategory
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SubcategoryInput'
+            examples:
+              Input subcategory:
+                value:
+                  parentCategoryId: 7
+                  subcategoryName: MyModules
+                  customized: true
+      responses:
+        '200':
+          $ref: '#/components/responses/subcategory'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+      security:
+        - mxtoken: []
+      servers:
+        - url: 'https://mpp.mendix-dev.tencent-cloud.com/marketplaceservice/v1'
+      x-codegen-request-body-name: SubcategoryInput
+    delete:
+      tags:
+        - subcategory
+      summary: Delete subcategory by id
+      description: Delete subcategory by id
+      operationId: DeleteSubcategory
+      parameters:
+        - name: subcategoryId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '204':
+          description: Delete subcategory successfully
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+      security:
+        - mxtoken: []
+      servers:
+        - url: 'https://mpp.mendix-dev.tencent-cloud.com/marketplaceservice/v1'
+  /subcategories:
+    post:
+      tags:
+        - subcategory
+      summary: Create a new subcategory
+      description: Create a new subcategory
+      operationId: CreateSubcategory
+      requestBody:
+        description: Input new subcategory
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SubcategoryInput'
+            examples:
+              Input new subcategory:
+                value:
+                  parentCategoryId: 7
+                  subcategoryName: MyNewSubcategoryName
+                  customized: true
+      responses:
+        '201':
+          $ref: '#/components/responses/subcategory'
+        '400':
+          $ref: '#/components/responses/error-400'
+        '401':
+          $ref: '#/components/responses/error-401'
+        '403':
+          $ref: '#/components/responses/error-403'
+        '404':
+          $ref: '#/components/responses/error-404'
+      security:
+        - mxtoken: []
+      servers:
+        - url: 'https://mpp.mendix-dev.tencent-cloud.com/marketplaceservice/v1'
+      x-codegen-request-body-name: SubcategoryInput
+tags:
+  - name: packages
+    description: ''
+  - name: version
+    description: ''
+  - name: category
+    description: ''
+  - name: subcategory
+    description: ''
+  - name: appstatus
+    description: ''
+components:
+  parameters:
+    packageId:
+      name: packageId
+      in: path
+      description: Package Id
+      required: true
+      schema:
+        type: number
+        minimum: 1
+        maximum: 65535
+        example: 123
+    versionId:
+      name: versionId
+      in: path
+      description: Version Id of Package
+      required: true
+      schema:
+        type: string
+        format: uuid
+        pattern: '^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-4[a-fA-F0-9]{3}-[89abAB][a-fA-F0-9]{3}-[a-fA-F0-9]{12}'
+        example: e48b3e22-d6ad-4c81-aa5e-603776d22b4d
+    subcategoryId:
+      name: subcategoryId
+      in: path
+      description: Subcategory Id
+      required: true
+      schema:
+        type: number
+        minimum: 1
+        maximum: 65535
+        example: 12
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+    mxtoken:
+      type: apiKey
+      name: Authorization
+      in: header
+  responses:
+    error-400:
+      description: Invalid input parameter or request body
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            400 - Invalid package name:
+              value:
+                status: 400
+                title: Bad Request
+                detail: Invalid parameters
+                invalid-params:
+                  - name: name
+                    reason: Invalid package name
+            400 - Invalid category and subcategory for package:
+              value:
+                status: 400
+                title: Bad Request
+                detail: Invalid parameters
+                invalid-params:
+                  - name: category
+                    reason: Invalid category for package
+                  - name: subcategory
+                    reason: Invalid subcategory for package
+            400 - Invalid license for package:
+              value:
+                status: 400
+                title: Bad Request
+                detail: Invalid parameters
+                invalid-params:
+                  - name: license
+                    reason: Invalid license for package
+            400 - Invalid package owner group name:
+              value:
+                status: 400
+                title: Bad Request
+                detail: Invalid parameters
+                invalid-params:
+                  - name: ownerGroupName
+                    reason: Invalid package owner group name
+            400 - Invalid version number:
+              value:
+                status: 400
+                title: Bad Request
+                detail: Invalid parameters
+                invalid-params:
+                  - name: versionMajor
+                    reason: Invalid version major number
+                  - name: versionMinor
+                    reason: Invalid version minor number
+                  - name: versionPatch
+                    reason: Invalid version patch number
+    error-401:
+      description: Authentication information missing or invalid
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            401 - Unauthorized:
+              value:
+                status: 401
+                title: Unauthorized
+                detail: Authentication information missing or invalid
+    error-403:
+      description: No permission for this operation
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            403 - Forbidden:
+              value:
+                status: 403
+                title: Forbidden
+                detail: User has no permission for this operation
+    error-404:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/error'
+          examples:
+            404 - Package not found:
+              value:
+                status: 404
+                title: Not Found
+                detail: Package not found
+            400 - Package version not found:
+              value:
+                status: 404
+                title: Not Found
+                detail: Package version not found
+            400 - Package share group not found:
+              value:
+                status: 404
+                title: Not Found
+                detail: Package share group not found
+    package:
+      description: Package response
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              id:
+                type: integer
+              name:
+                type: string
+              categoryName:
+                type: string
+              subcategoryName:
+                type: string
+              ownerUserName:
+                type: string
+              ownerGroupName:
+                type: string
+              status:
+                type: string
+              visibility:
+                type: string
+              downloads:
+                type: integer
+              version:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  name:
+                    type: string
+                  description:
+                    type: string
+                  versionNum:
+                    type: string
+                  versionMajor:
+                    type: integer
+                  versionMinor:
+                    type: integer
+                  versionPatch:
+                    type: integer
+                  supportedStudioPro:
+                    type: string
+                  defaultVersion:
+                    type: boolean
+                  versionStatus:
+                    type: string
+                  logoUrl:
+                    type: string
+                  appViewUrl:
+                    type: string
+                  appDownloadUrl:
+                    type: string
+                  fileName:
+                    type: string
+                  releaseNotes:
+                    type: string
+                  documentation:
+                    type: string
+                  license:
+                    type: string
+                  supportLevel:
+                    type: string
+                  organisationName:
+                    type: string
+            x-examples:
+              Example 1:
+                id: 448
+                name: Video Player
+                categoryName: Widgets
+                subcategoryName: Display Widgets
+                ownerUserName: John
+                ownerGroupName: BA
+                status: Published
+                visibility: All
+                downloads: 0
+                version:
+                  id: fdf3aacf-5593-4e05-8074-ff85943f4e18
+                  name: Video Player
+                  description: 'Play you video, those things on youtube'
+                  versionNum: 1.0.0
+                  versionMajor: 1
+                  versionMinor: 0
+                  versionPatch: 0
+                  supportedStudioPro: 9.24.3
+                  defaultVersion: true
+                  versionStatus: Published
+                  logoUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/packages/448/logo'
+                  appViewUrl: 'https://mpp.mendix-dev.tencent-cloud.com/link/component/448'
+                  appDownloadUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/version/fdf3aacf-5593-4e05-8074-ff85943f4e18/download'
+                  fileName: VideoPlayer_1.0.0.mpk
+                  releaseNotes: Play you video v1.0.0
+                  documentation: 'Play you video, those things on youtube'
+                  license: Apache V2
+                  supportLevel: Community
+                  organisationName: Mendix
+          examples:
+            Published package:
+              value:
+                id: 448
+                name: Video Player
+                categoryName: Widgets
+                subcategoryName: Display Widgets
+                ownerUserName: John
+                ownerGroupName: BA
+                status: Published
+                visibility: All
+                downloads: 0
+                version:
+                  id: fdf3aacf-5593-4e05-8074-ff85943f4e18
+                  name: Video Player
+                  description: 'Play you video, those things on youtube'
+                  versionNum: 1.0.0
+                  versionMajor: 1
+                  versionMinor: 0
+                  versionPatch: 0
+                  supportedStudioPro: 9.24.3
+                  defaultVersion: true
+                  versionStatus: Published
+                  logoUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/packages/448/logo'
+                  appViewUrl: 'https://mpp.mendix-dev.tencent-cloud.com/link/component/448'
+                  appDownloadUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/version/fdf3aacf-5593-4e05-8074-ff85943f4e18/download'
+                  fileName: VideoPlayer_1.0.0.mpk
+                  releaseNotes: Play you video v1.0.0
+                  documentation: 'Play you video, those things on youtube'
+                  license: Apache V2
+                  supportLevel: Community
+                  organisationName: Mendix
+            Draft package:
+              value:
+                id: 448
+                name: Video Player
+                categoryName: Widgets
+                subcategoryName: Display Widgets
+                ownerUserName: John
+                ownerGroupName: BA
+                status: Draft
+                visibility: All
+                downloads: 0
+                version:
+                  id: fdf3aacf-5593-4e05-8074-ff85943f4e18
+                  name: Video Player
+                  description: 'Play you video, those things on youtube'
+                  versionNum: 1.0.0
+                  versionMajor: 1
+                  versionMinor: 0
+                  versionPatch: 0
+                  supportedStudioPro: 9.24.3
+                  defaultVersion: true
+                  versionStatus: Draft
+                  logoUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/packages/448/logo'
+                  appViewUrl: 'https://mpp.mendix-dev.tencent-cloud.com/link/component/448'
+                  appDownloadUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/version/fdf3aacf-5593-4e05-8074-ff85943f4e18/download'
+                  fileName: VideoPlayer_1.0.0.mpk
+                  releaseNotes: Play you video v1.0.0
+                  documentation: 'Play you video, those things on youtube'
+                  license: Apache V2
+                  supportLevel: Community
+                  organisationName: Mendix
+            Pending package:
+              value:
+                id: 448
+                name: Video Player
+                categoryName: Widgets
+                subcategoryName: Display Widgets
+                ownerUserName: John
+                ownerGroupName: BA
+                status: WaitingForApproval
+                visibility: All
+                downloads: 0
+                version:
+                  id: fdf3aacf-5593-4e05-8074-ff85943f4e18
+                  name: Video Player
+                  description: 'Play you video, those things on youtube'
+                  versionNum: 1.0.0
+                  versionMajor: 1
+                  versionMinor: 0
+                  versionPatch: 0
+                  supportedStudioPro: 9.24.3
+                  defaultVersion: true
+                  versionStatus: WaitingForApproval
+                  logoUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/packages/448/logo'
+                  appViewUrl: 'https://mpp.mendix-dev.tencent-cloud.com/link/component/448'
+                  appDownloadUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/version/fdf3aacf-5593-4e05-8074-ff85943f4e18/download'
+                  fileName: VideoPlayer_1.0.0.mpk
+                  releaseNotes: Play you video v1.0.0
+                  documentation: 'Play you video, those things on youtube'
+                  license: Apache V2
+                  supportLevel: Community
+                  organisationName: Mendix
+            Declined package:
+              value:
+                id: 448
+                name: Video Player
+                categoryName: Widgets
+                subcategoryName: Display Widgets
+                ownerUserName: John
+                ownerGroupName: BA
+                status: Declined
+                visibility: All
+                downloads: 0
+                version:
+                  id: fdf3aacf-5593-4e05-8074-ff85943f4e18
+                  name: Video Player
+                  description: 'Play you video, those things on youtube'
+                  versionNum: 1.0.0
+                  versionMajor: 1
+                  versionMinor: 0
+                  versionPatch: 0
+                  supportedStudioPro: 9.24.3
+                  defaultVersion: true
+                  versionStatus: Declined
+                  logoUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/packages/448/logo'
+                  appViewUrl: 'https://mpp.mendix-dev.tencent-cloud.com/link/component/448'
+                  appDownloadUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/version/fdf3aacf-5593-4e05-8074-ff85943f4e18/download'
+                  fileName: VideoPlayer_1.0.0.mpk
+                  releaseNotes: Play you video v1.0.0
+                  documentation: 'Play you video, those things on youtube'
+                  license: Apache V2
+                  supportLevel: Community
+                  organisationName: Mendix
+            Retired package:
+              value:
+                id: 448
+                name: Video Player
+                categoryName: Widgets
+                subcategoryName: Display Widgets
+                ownerUserName: John
+                ownerGroupName: BA
+                status: Retired
+                visibility: All
+                downloads: 0
+                version:
+                  id: fdf3aacf-5593-4e05-8074-ff85943f4e18
+                  name: Video Player
+                  description: 'Play you video, those things on youtube'
+                  versionNum: 1.0.0
+                  versionMajor: 1
+                  versionMinor: 0
+                  versionPatch: 0
+                  supportedStudioPro: 9.24.3
+                  defaultVersion: true
+                  versionStatus: Retired
+                  logoUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/packages/448/logo'
+                  appViewUrl: 'https://mpp.mendix-dev.tencent-cloud.com/link/component/448'
+                  appDownloadUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/version/fdf3aacf-5593-4e05-8074-ff85943f4e18/download'
+                  fileName: VideoPlayer_1.0.0.mpk
+                  releaseNotes: Play you video v1.0.0
+                  documentation: 'Play you video, those things on youtube'
+                  license: Apache V2
+                  supportLevel: Community
+                  organisationName: Mendix
+    packages:
+      description: Package list response
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                id:
+                  type: integer
+                name:
+                  type: string
+                categoryName:
+                  type: string
+                subcategoryName:
+                  type: string
+                ownerUserName:
+                  type: string
+                ownerGroupName:
+                  type: string
+                status:
+                  type: string
+                visibility:
+                  type: string
+                downloads:
+                  type: integer
+                version:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                    name:
+                      type: string
+                    description:
+                      type: string
+                    versionNum:
+                      type: string
+                    versionMajor:
+                      type: integer
+                    versionMinor:
+                      type: integer
+                    versionPatch:
+                      type: integer
+                    supportedStudioPro:
+                      type: string
+                    defaultVersion:
+                      type: boolean
+                    versionStatus:
+                      type: string
+                    logoUrl:
+                      type: string
+                    appViewUrl:
+                      type: string
+                    appDownloadUrl:
+                      type: string
+                    fileName:
+                      type: string
+                    releaseNotes:
+                      type: string
+                    documentation:
+                      type: string
+                    license:
+                      type: string
+                    supportLevel:
+                      type: string
+                    organisationName:
+                      type: string
+            x-examples:
+              Example 1:
+                - id: 438
+                  name: Blank Web App
+                  categoryName: Create New App
+                  subcategoryName: Starter Apps
+                  ownerUserName: John
+                  ownerGroupName: BA
+                  status: Published
+                  visibility: All
+                  downloads: 0
+                  version:
+                    id: e2cf13c0-9596-4331-b814-c39d08db99a4
+                    name: Blank Web App
+                    description: Blank Web App 9.24.3 description
+                    versionNum: 1.0.0
+                    versionMajor: 1
+                    versionMinor: 0
+                    versionPatch: 0
+                    supportedStudioPro: 9.24.3
+                    defaultVersion: true
+                    versionStatus: Published
+                    logoUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/packages/438/logo'
+                    appViewUrl: 'https://mpp.mendix-dev.tencent-cloud.com/link/component/438'
+                    appDownloadUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/version/e2cf13c0-9596-4331-b814-c39d08db99a4/download'
+                    fileName: Blank_Web_App9_24_3.mpk
+                    releaseNotes: Blank Web App release notes
+                    documentation: Blank Web App documentation
+                    license: Apache V2
+                    supportLevel: Community
+                    organisationName: Mendix
+                - id: 448
+                  name: Video Player
+                  categoryName: Widgets
+                  subcategoryName: Display Widgets
+                  ownerUserName: John
+                  ownerGroupName: BA
+                  status: Published
+                  visibility: All
+                  downloads: 0
+                  version:
+                    id: fdf3aacf-5593-4e05-8074-ff85943f4e18
+                    name: Video Player
+                    description: 'Play you video, those things on youtube'
+                    versionNum: 1.0.0
+                    versionMajor: 1
+                    versionMinor: 0
+                    versionPatch: 0
+                    supportedStudioPro: 9.24.3
+                    defaultVersion: true
+                    versionStatus: Published
+                    logoUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/packages/448/logo'
+                    appViewUrl: 'https://mpp.mendix-dev.tencent-cloud.com/link/component/448'
+                    appDownloadUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/version/fdf3aacf-5593-4e05-8074-ff85943f4e18/download'
+                    fileName: VideoPlayer_1.0.0.mpk
+                    releaseNotes: Play you video v1.0.0
+                    documentation: 'Play you video, those things on youtube'
+                    license: Apache V2
+                    supportLevel: Community
+                    organisationName: Mendix
+          examples:
+            Package list:
+              value:
+                - id: 438
+                  name: Blank Web App
+                  categoryName: Create New App
+                  subcategoryName: Starter Apps
+                  ownerUserName: John
+                  ownerGroupName: BA
+                  status: Published
+                  visibility: All
+                  downloads: 0
+                  version:
+                    id: e2cf13c0-9596-4331-b814-c39d08db99a4
+                    name: Blank Web App
+                    description: Blank Web App 9.24.3 description
+                    versionNum: 1.0.0
+                    versionMajor: 1
+                    versionMinor: 0
+                    versionPatch: 0
+                    supportedStudioPro: 9.24.3
+                    defaultVersion: true
+                    versionStatus: Published
+                    logoUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/packages/438/logo'
+                    appViewUrl: 'https://mpp.mendix-dev.tencent-cloud.com/link/component/438'
+                    appDownloadUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/version/e2cf13c0-9596-4331-b814-c39d08db99a4/download'
+                    fileName: Blank_Web_App9_24_3.mpk
+                    releaseNotes: Blank Web App release notes
+                    documentation: Blank Web App documentation
+                    license: Apache V2
+                    supportLevel: Community
+                    organisationName: Mendix
+                - id: 448
+                  name: Video Player
+                  categoryName: Widgets
+                  subcategoryName: Display Widgets
+                  ownerUserName: John
+                  ownerGroupName: BA
+                  status: Published
+                  visibility: All
+                  downloads: 0
+                  version:
+                    id: fdf3aacf-5593-4e05-8074-ff85943f4e18
+                    name: Video Player
+                    description: 'Play you video, those things on youtube'
+                    versionNum: 1.0.0
+                    versionMajor: 1
+                    versionMinor: 0
+                    versionPatch: 0
+                    supportedStudioPro: 9.24.3
+                    defaultVersion: true
+                    versionStatus: Published
+                    logoUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/packages/448/logo'
+                    appViewUrl: 'https://mpp.mendix-dev.tencent-cloud.com/link/component/448'
+                    appDownloadUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/version/fdf3aacf-5593-4e05-8074-ff85943f4e18/download'
+                    fileName: VideoPlayer_1.0.0.mpk
+                    releaseNotes: Play you video v1.0.0
+                    documentation: 'Play you video, those things on youtube'
+                    license: Apache V2
+                    supportLevel: Community
+                    organisationName: Mendix
+    version:
+      description: Package version
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              id:
+                type: string
+              name:
+                type: string
+              description:
+                type: string
+              versionNum:
+                type: string
+              versionMajor:
+                type: integer
+              versionMinor:
+                type: integer
+              versionPatch:
+                type: integer
+              supportedStudioPro:
+                type: string
+              defaultVersion:
+                type: boolean
+              versionStatus:
+                type: string
+              logoUrl:
+                type: string
+              appViewUrl:
+                type: string
+              appDownloadUrl:
+                type: string
+              fileName:
+                type: string
+              releaseNotes:
+                type: string
+              documentation:
+                type: string
+              license:
+                type: string
+              supportLevel:
+                type: string
+              organisationName:
+                type: string
+            x-examples:
+              Example 1:
+                id: fdf3aacf-5593-4e05-8074-ff85943f4e18
+                name: Video Player
+                description: 'Play you video, those things on youtube'
+                versionNum: 1.0.0
+                versionMajor: 1
+                versionMinor: 0
+                versionPatch: 0
+                supportedStudioPro: 9.24.3
+                defaultVersion: true
+                versionStatus: Published
+                logoUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/packages/448/logo'
+                appViewUrl: 'https://mpp.mendix-dev.tencent-cloud.com/link/component/448'
+                appDownloadUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/version/fdf3aacf-5593-4e05-8074-ff85943f4e18/download'
+                fileName: VideoPlayer_1.0.1.mpk
+                releaseNotes: Play you video v1.0.0
+                documentation: 'Play you video, those things on youtube'
+                license: Apache V2
+                supportLevel: Community
+                organisationName: Mendix
+          examples:
+            Published version:
+              value:
+                id: fdf3aacf-5593-4e05-8074-ff85943f4e18
+                name: Video Player
+                description: 'Play you video, those things on youtube'
+                versionNum: 1.0.0
+                versionMajor: 1
+                versionMinor: 0
+                versionPatch: 0
+                supportedStudioPro: 9.24.3
+                defaultVersion: true
+                versionStatus: Published
+                logoUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/packages/448/logo'
+                appViewUrl: 'https://mpp.mendix-dev.tencent-cloud.com/link/component/448'
+                appDownloadUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/version/fdf3aacf-5593-4e05-8074-ff85943f4e18/download'
+                fileName: VideoPlayer_1.0.0.mpk
+                releaseNotes: Play you video v1.0.0
+                documentation: 'Play you video, those things on youtube'
+                license: Apache V2
+                supportLevel: Community
+                organisationName: Mendix
+            Draft version:
+              value:
+                id: fdf3aacf-5593-4e05-8074-ff85943f4e18
+                name: Video Player
+                description: 'Play you video, those things on youtube'
+                versionNum: 1.0.0
+                versionMajor: 1
+                versionMinor: 0
+                versionPatch: 0
+                supportedStudioPro: 9.24.3
+                defaultVersion: true
+                versionStatus: Draft
+                logoUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/packages/448/logo'
+                appViewUrl: 'https://mpp.mendix-dev.tencent-cloud.com/link/component/448'
+                appDownloadUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/version/fdf3aacf-5593-4e05-8074-ff85943f4e18/download'
+                fileName: VideoPlayer_1.0.0.mpk
+                releaseNotes: Play you video v1.0.0
+                documentation: 'Play you video, those things on youtube'
+                license: Apache V2
+                supportLevel: Community
+                organisationName: Mendix
+    versions:
+      description: Package version list response
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                id:
+                  type: string
+                name:
+                  type: string
+                description:
+                  type: string
+                versionNum:
+                  type: string
+                versionMajor:
+                  type: integer
+                versionMinor:
+                  type: integer
+                versionPatch:
+                  type: integer
+                supportedStudioPro:
+                  type: string
+                defaultVersion:
+                  type: boolean
+                versionStatus:
+                  type: string
+                logoUrl:
+                  type: string
+                appViewUrl:
+                  type: string
+                appDownloadUrl:
+                  type: string
+                fileName:
+                  type: string
+                releaseNotes:
+                  type: string
+                documentation:
+                  type: string
+                license:
+                  type: string
+                supportLevel:
+                  type: string
+                organisationName:
+                  type: string
+            x-examples:
+              Example 1:
+                - id: 36e42bda-3a18-4334-837e-8fa73f831578
+                  name: Video Player
+                  description: 'Play you video, those things on youtube'
+                  versionNum: 1.0.1
+                  versionMajor: 1
+                  versionMinor: 0
+                  versionPatch: 1
+                  supportedStudioPro: 9.24.3
+                  defaultVersion: true
+                  versionStatus: Published
+                  logoUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/packages/448/logo'
+                  appViewUrl: 'https://mpp.mendix-dev.tencent-cloud.com/link/component/448'
+                  appDownloadUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/version/fdf3aacf-5593-4e05-8074-ff85943f4e18/download'
+                  fileName: VideoPlayer_1.0.1.mpk
+                  releaseNotes: Play you video v1.0.1
+                  documentation: 'Play you video, those things on youtube'
+                  license: Apache V2
+                  supportLevel: Community
+                  organisationName: Mendix
+                - id: fdf3aacf-5593-4e05-8074-ff85943f4e18
+                  name: Video Player
+                  description: 'Play you video, those things on youtube'
+                  versionNum: 1.0.0
+                  versionMajor: 1
+                  versionMinor: 0
+                  versionPatch: 0
+                  supportedStudioPro: 9.19.1
+                  defaultVersion: true
+                  versionStatus: Published
+                  logoUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/packages/448/logo'
+                  appViewUrl: 'https://mpp.mendix-dev.tencent-cloud.com/link/component/448'
+                  appDownloadUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/version/fdf3aacf-5593-4e05-8074-ff85943f4e18/download'
+                  fileName: VideoPlayer_1.0.0.mpk
+                  releaseNotes: Play you video v1.0.0
+                  documentation: 'Play you video, those things on youtube'
+                  license: Apache V2
+                  supportLevel: Community
+                  organisationName: Mendix
+          examples:
+            Package version list:
+              value:
+                - id: 36e42bda-3a18-4334-837e-8fa73f831578
+                  name: Video Player
+                  description: 'Play you video, those things on youtube'
+                  versionNum: 1.0.1
+                  versionMajor: 1
+                  versionMinor: 0
+                  versionPatch: 1
+                  supportedStudioPro: 9.24.3
+                  defaultVersion: true
+                  versionStatus: Published
+                  logoUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/packages/448/logo'
+                  appViewUrl: 'https://mpp.mendix-dev.tencent-cloud.com/link/component/448'
+                  appDownloadUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/version/fdf3aacf-5593-4e05-8074-ff85943f4e18/download'
+                  fileName: VideoPlayer_1.0.1.mpk
+                  releaseNotes: Play you video v1.0.1
+                  documentation: 'Play you video, those things on youtube'
+                  license: Apache V2
+                  supportLevel: Community
+                  organisationName: Mendix
+                - id: fdf3aacf-5593-4e05-8074-ff85943f4e18
+                  name: Video Player
+                  description: 'Play you video, those things on youtube'
+                  versionNum: 1.0.0
+                  versionMajor: 1
+                  versionMinor: 0
+                  versionPatch: 0
+                  supportedStudioPro: 9.19.1
+                  defaultVersion: true
+                  versionStatus: Published
+                  logoUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/packages/448/logo'
+                  appViewUrl: 'https://mpp.mendix-dev.tencent-cloud.com/link/component/448'
+                  appDownloadUrl: 'https://mpp.mendix-dev.tencent-cloud.com/rest/packagesapi/v2/version/fdf3aacf-5593-4e05-8074-ff85943f4e18/download'
+                  fileName: VideoPlayer_1.0.0.mpk
+                  releaseNotes: Play you video v1.0.0
+                  documentation: 'Play you video, those things on youtube'
+                  license: Apache V2
+                  supportLevel: Community
+                  organisationName: Mendix
+    objects:
+      description: Share group list of package
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                id:
+                  type: string
+                name:
+                  type: string
+            x-examples:
+              Example 1:
+                - id: 24feba3c-8c41-41cc-82c9-6092767c9125
+                  name: E2ETest
+                - id: 27d01bee-6053-4006-b409-be1f30761d2f
+                  name: Group B
+          examples:
+            Share group list of package:
+              value:
+                - id: 24feba3c-8c41-41cc-82c9-6092767c9125
+                  name: E2ETest
+                - id: 27d01bee-6053-4006-b409-be1f30761d2f
+                  name: Group B
+    categories:
+      description: Category list
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                id:
+                  type: integer
+                name:
+                  type: string
+                subcategories:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                      name:
+                        type: string
+                      customized:
+                        type: boolean
+            x-examples:
+              Example 1:
+                - id: 1
+                  name: Widgets
+                  subcategories:
+                    - id: 18
+                      name: Input Widgets
+                      customized: false
+                    - id: 31
+                      name: Utility
+                      customized: false
+                    - id: 41
+                      name: Mobile
+                      customized: false
+                    - id: 42
+                      name: References
+                      customized: false
+                    - id: 1
+                      name: Buttons
+                      customized: false
+                    - id: 16
+                      name: Display Widgets
+                      customized: false
+                    - id: 17
+                      name: Images
+                      customized: false
+                - id: 2
+                  name: Connectors
+                  subcategories:
+                    - id: 19
+                      name: Connectors
+                      customized: false
+                    - id: 20
+                      name: Data
+                      customized: false
+                    - id: 21
+                      name: SAP
+                      customized: false
+                    - id: 22
+                      name: Machine Learning
+                      customized: false
+                    - id: 43
+                      name: Internet-of-Things
+                      customized: false
+                - id: 3
+                  name: Layouts
+                  subcategories:
+                    - id: 35
+                      name: Layouts
+                      customized: false
+                - id: 4
+                  name: Solutions
+                  subcategories:
+                    - id: 5
+                      name: Industry Solutions
+                      customized: false
+                    - id: 6
+                      name: Solutions
+                      customized: false
+                - id: 5
+                  name: UI Resources
+                  subcategories:
+                    - id: 33
+                      name: UI Resources
+                      customized: false
+                    - id: 38
+                      name: All
+                      customized: false
+                - id: 6
+                  name: App Services
+                  subcategories:
+                    - id: 24
+                      name: Cognitive AI Services
+                      customized: false
+                    - id: 25
+                      name: Communication Services
+                      customized: false
+                    - id: 26
+                      name: Document Data Capture Services
+                      customized: false
+                    - id: 27
+                      name: Industrial IoT
+                      customized: false
+                    - id: 28
+                      name: Visualization
+                      customized: false
+                    - id: 30
+                      name: All
+                      customized: false
+                - id: 7
+                  name: Modules
+                  subcategories:
+                    - id: 2
+                      name: Authentication
+                      customized: false
+                    - id: 3
+                      name: Import/Export
+                      customized: false
+                    - id: 4
+                      name: Messaging
+                      customized: false
+                    - id: 23
+                      name: Tracing
+                      customized: false
+                    - id: 29
+                      name: All
+                      customized: false
+                    - id: 39
+                      name: Scheduling
+                      customized: false
+                - id: 8
+                  name: Themes
+                  subcategories:
+                    - id: 32
+                      name: Themes
+                      customized: false
+                - id: 9
+                  name: Samples
+                  subcategories:
+                    - id: 7
+                      name: Examples
+                      customized: false
+                    - id: 36
+                      name: Samples
+                      customized: false
+                - id: 10
+                  name: Create New App
+                  subcategories:
+                    - id: 8
+                      name: Introduction Tour
+                      customized: false
+                    - id: 9
+                      name: MindSphere Apps
+                      customized: false
+                    - id: 10
+                      name: Samples
+                      customized: false
+                    - id: 11
+                      name: SAP
+                      customized: false
+                    - id: 12
+                      name: Starter Apps
+                      customized: false
+                    - id: 13
+                      name: Theme Starting Points
+                      customized: false
+                    - id: 14
+                      name: Tutorial Apps
+                      customized: false
+                    - id: 15
+                      name: University Program
+                      customized: false
+                - id: 11
+                  name: Solution Templates
+                  subcategories:
+                    - id: 34
+                      name: Solution Templates
+                      customized: false
+                - id: 12
+                  name: Platform Services
+                  subcategories:
+                    - id: 37
+                      name: Platform Services
+                      customized: false
+          examples:
+            Category list:
+              value:
+                - id: 1
+                  name: Widgets
+                  subcategories:
+                    - id: 18
+                      name: Input Widgets
+                      customized: false
+                    - id: 31
+                      name: Utility
+                      customized: false
+                    - id: 41
+                      name: Mobile
+                      customized: false
+                    - id: 42
+                      name: References
+                      customized: false
+                    - id: 1
+                      name: Buttons
+                      customized: false
+                    - id: 16
+                      name: Display Widgets
+                      customized: false
+                    - id: 17
+                      name: Images
+                      customized: false
+                - id: 2
+                  name: Connectors
+                  subcategories:
+                    - id: 19
+                      name: Connectors
+                      customized: false
+                    - id: 20
+                      name: Data
+                      customized: false
+                    - id: 21
+                      name: SAP
+                      customized: false
+                    - id: 22
+                      name: Machine Learning
+                      customized: false
+                    - id: 43
+                      name: Internet-of-Things
+                      customized: false
+                - id: 3
+                  name: Layouts
+                  subcategories:
+                    - id: 35
+                      name: Layouts
+                      customized: false
+                - id: 4
+                  name: Solutions
+                  subcategories:
+                    - id: 5
+                      name: Industry Solutions
+                      customized: false
+                    - id: 6
+                      name: Solutions
+                      customized: false
+                - id: 5
+                  name: UI Resources
+                  subcategories:
+                    - id: 33
+                      name: UI Resources
+                      customized: false
+                    - id: 38
+                      name: All
+                      customized: false
+                - id: 6
+                  name: App Services
+                  subcategories:
+                    - id: 24
+                      name: Cognitive AI Services
+                      customized: false
+                    - id: 25
+                      name: Communication Services
+                      customized: false
+                    - id: 26
+                      name: Document Data Capture Services
+                      customized: false
+                    - id: 27
+                      name: Industrial IoT
+                      customized: false
+                    - id: 28
+                      name: Visualization
+                      customized: false
+                    - id: 30
+                      name: All
+                      customized: false
+                - id: 7
+                  name: Modules
+                  subcategories:
+                    - id: 2
+                      name: Authentication
+                      customized: false
+                    - id: 3
+                      name: Import/Export
+                      customized: false
+                    - id: 4
+                      name: Messaging
+                      customized: false
+                    - id: 23
+                      name: Tracing
+                      customized: false
+                    - id: 29
+                      name: All
+                      customized: false
+                    - id: 39
+                      name: Scheduling
+                      customized: false
+                - id: 8
+                  name: Themes
+                  subcategories:
+                    - id: 32
+                      name: Themes
+                      customized: false
+                - id: 9
+                  name: Samples
+                  subcategories:
+                    - id: 7
+                      name: Examples
+                      customized: false
+                    - id: 36
+                      name: Samples
+                      customized: false
+                - id: 10
+                  name: Create New App
+                  subcategories:
+                    - id: 8
+                      name: Introduction Tour
+                      customized: false
+                    - id: 9
+                      name: MindSphere Apps
+                      customized: false
+                    - id: 10
+                      name: Samples
+                      customized: false
+                    - id: 11
+                      name: SAP
+                      customized: false
+                    - id: 12
+                      name: Starter Apps
+                      customized: false
+                    - id: 13
+                      name: Theme Starting Points
+                      customized: false
+                    - id: 14
+                      name: Tutorial Apps
+                      customized: false
+                    - id: 15
+                      name: University Program
+                      customized: false
+                - id: 11
+                  name: Solution Templates
+                  subcategories:
+                    - id: 34
+                      name: Solution Templates
+                      customized: false
+                - id: 12
+                  name: Platform Services
+                  subcategories:
+                    - id: 37
+                      name: Platform Services
+                      customized: false
+    subcategory:
+      description: Subcategory
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              id:
+                type: integer
+              name:
+                type: string
+              customized:
+                type: boolean
+            x-examples:
+              Example 1:
+                id: 2
+                name: Authentication
+                customized: false
+          examples:
+            Subcategory:
+              value:
+                id: 2
+                name: Authentication
+                customized: false
+  schemas:
+    PackageInput:
+      type: object
+      description: Package creation request
+      properties:
+        name:
+          type: string
+          description: Package name.
+        description:
+          type: string
+          description: Package description.
+        studioProVersion:
+          type: string
+          description: Studio pro version that package support.
+          minLength: 5
+          maxLength: 8
+          example: 9.24.3
+        categoryName:
+          type: string
+          description: Package category name.
+        subcategoryName:
+          type: string
+          description: Package subcategory name.
+        ownerGroupName:
+          type: string
+          description: Package owner group name.
+        license:
+          type: string
+          description: License name for package.
+        logoFile:
+          type: string
+          description: Base64EncodedContent string of package version logo file.
+        visibility:
+          type: string
+          description: Package is visible to all or only specific groups.
+        versionMajor:
+          type: integer
+          description: Package first version major number.
+          minimum: 0
+          maximum: 99
+          default: 1
+          example: 1
+        versionMinor:
+          type: integer
+          description: Package first version minor number.
+          minimum: 0
+          maximum: 99
+          default: 0
+          example: 0
+        versionPatch:
+          type: integer
+          description: Package first version patch number.
+          minimum: 0
+          maximum: 99
+          default: 0
+          example: 0
+        releaseNotes:
+          type: string
+          description: Package release note text.
+        documentation:
+          type: string
+          description: Package documentation text.
+        screenshotInputs:
+          type: array
+          description: Package screenshot file.
+          items:
+            type: object
+            properties:
+              base64EncodedContent:
+                type: string
+                description: Base64EncodedContent string of package screenshot file.
+              fileName:
+                type: string
+                description: Package screenshot file name.
+        sourceFileInput:
+          type: object
+          description: Package source mpk file.
+          properties:
+            base64EncodedContent:
+              type: string
+              description: Base64EncodedContent string of package source mpk file.
+            fileName:
+              type: string
+              description: Package source mpk file name.
+          required:
+            - base64EncodedContent
+            - fileName
+      required:
+        - name
+        - description
+        - studioProVersion
+        - categoryName
+        - subcategoryName
+        - license
+        - logoFile
+        - releaseNotes
+        - sourceFileInput
+      x-examples:
+        Example 1:
+          name: Package name
+          description: Package description
+          studioProVersion: 9.24.3
+          categoryName: category name
+          subcategoryName: subcategory name
+          visibility: All
+          ownerGroupName: Package owner group name
+          license: license for package
+          logoFile: <base64EncodedContent string of package logo file>
+          versionMajor: 1
+          versionMinor: 0
+          versionPatch: 0
+          releaseNotes: releaseNotes text
+          documentation: documentation text
+          screenshotInputs:
+            - base64EncodedContent: <base64EncodedContent string of package screenshot file>
+              fileName: Package screenshot file name
+          sourceFileInput:
+            base64EncodedContent: <base64EncodedContent string of package mpk file>
+            fileName: Package mpk file name
+    VersionInput:
+      type: object
+      title: VersionInput
+      description: Package version creation request
+      properties:
+        description:
+          type: string
+          description: Package version description.
+        studioProVersion:
+          type: string
+          description: Studio pro version that package version support.
+          minLength: 5
+          maxLength: 8
+          example: 9.24.3
+        license:
+          type: string
+          description: License name for package version.
+        logoFile:
+          type: string
+          description: Base64EncodedContent string of package version logo file.
+        versionMajor:
+          type: integer
+          description: Package version major number.
+          format: int32
+          minimum: 0
+          maximum: 99
+          default: 1
+          example: 1
+        versionMinor:
+          type: integer
+          description: Package version minor number.
+          format: int32
+          minimum: 0
+          maximum: 99
+          default: 0
+          example: 0
+        versionPatch:
+          type: integer
+          description: Package version patch number.
+          format: int32
+          minimum: 0
+          maximum: 99
+          default: 0
+          example: 0
+        releaseNotes:
+          type: string
+          description: Package version release note text.
+        documentation:
+          type: string
+          description: Package version documentation text.
+        sourceFileInput:
+          type: object
+          description: Package version source mpk file.
+          properties:
+            base64EncodedContent:
+              type: string
+              description: Base64EncodedContent string of package version source mpk file.
+            fileName:
+              type: string
+              description: Package version source mpk file name.
+          required:
+            - base64EncodedContent
+            - fileName
+        screenshotInputs:
+          type: array
+          description: Package version screenshot file.
+          items:
+            type: object
+            title: screenshotInput
+            properties:
+              base64EncodedContent:
+                type: string
+                description: Base64EncodedContent string of package version screenshot file.
+              fileName:
+                type: string
+                description: Package version screenshot file name.
+            xml:
+              name: screenshotInput
+      required:
+        - studioProVersion
+        - logoFile
+        - versionMajor
+        - versionMinor
+        - versionPatch
+        - releaseNotes
+        - sourceFileInput
+      x-examples:
+        Package version creation request:
+          description: Package description
+          studioProVersion: 9.24.3
+          logoFile: <base64EncodedContent string of package logo file>
+          versionMajor: 1
+          versionMinor: 0
+          versionPatch: 1
+          releaseNotes: releaseNotes text
+          documentation: documentation text
+          screenshotInputs:
+            - base64EncodedContent: <base64EncodedContent string of package screenshot file>
+              fileName: Package screenshot file name
+          sourceFileInput:
+            base64EncodedContent: <base64EncodedContent string of package mpk file>
+            fileName: Package mpk file name
+      xml:
+        name: VersionInput
+    OwnerInput:
+      type: object
+      title: OwnerInput
+      description: Package owner change request
+      properties:
+        userName:
+          type: string
+          description: Package owner user name.
+          minLength: 1
+          maxLength: 100
+        groupName:
+          type: string
+          description: Package owner group name.
+          minLength: 1
+          maxLength: 100
+      x-examples:
+        Package owner change request:
+          userName: Package owner user name
+          groupName: Package owner group name
+      xml:
+        name: OwnerInput
+    SubcategoryInput:
+      type: object
+      title: SubcategoryInput
+      description: Subcategory creation request
+      properties:
+        parentCategoryId:
+          type: integer
+          description: The parent category id of subcategory.
+          format: int32
+          minimum: 1
+          maximum: 255
+          default: 12
+          example: 12
+        subcategoryName:
+          type: string
+          description: Subcategory name.
+          minLength: 1
+          maxLength: 200
+      required:
+        - parentCategoryId
+        - subcategoryName
+      x-examples:
+        Subcategory creation request:
+          parentCategoryId: 7
+          subcategoryName: Subcategory name
+      xml:
+        name: SubcategoryInput
+    error:
+      type: object
+      description: Error response
+      properties:
+        status:
+          type: integer
+          description: Response status code.
+        title:
+          type: string
+          description: 'A short, human-readable summary of the problem type.'
+        detail:
+          type: string
+          description: A human-readable explanation specific to this occurrence of the problem.
+        invalid-params:
+          type: array
+          description: '(Optional) JSON list List of name, reason keys for invalid attribute values.'
+          items:
+            type: object
+            properties:
+              name:
+                type: string
+                description: "Parameter name.\r\n"
+              reason:
+                type: string
+                description: Reason for error
+      required:
+        - status
+        - title
+        - detail
+      x-examples:
+        Error response:
+          status: 400
+          title: Bad Request
+          detail: Please see invalid-params list
+          invalid-params:
+            - name: name
+              reason: Package name can not be empty
+security:
+  - mxtoken: []

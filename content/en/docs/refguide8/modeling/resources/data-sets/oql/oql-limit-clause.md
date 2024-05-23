@@ -4,10 +4,6 @@ url: /refguide8/oql-limit-clause/
 tags: ["studio pro"]
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/oql-limit-clause.pdf).
-{{% /alert %}}
-
 With the limit clause a portion of the result of a query can be returned.
 
 The syntax is as following:

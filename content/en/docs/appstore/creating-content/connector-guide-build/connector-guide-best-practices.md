@@ -29,7 +29,7 @@ Create a Mendix app in Studio Pro with the main connector module and a testing m
 
 #### 2.2.1 Main Connector Module Setup {#main-setup}
 
-We recommend that the *main module* for your connector include the following:
+Mendix recommends the *main module* for your connector include the following:
 
 * **_Docs** (folder) – contains documentation or a reference to documentation and a version indicator
     * **ReadMe** (snippet) – used to give a reference to documentation and/or some direct documentation on how to use the module
@@ -40,7 +40,7 @@ We recommend that the *main module* for your connector include the following:
 
 Your **App Explorer** should look like this after initial setup:
 
-{{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/app-initial-setup.png" >}}
+{{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/app-initial-setup.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 This app folder structure example is based on the **Blank Web App** starter app and contains Mendix Marketplace modules that your app might not have. The important Marketplace module that is shown is the [Unit Testing](/appstore/modules/unit-testing/) module for testing purposes.
@@ -48,14 +48,14 @@ This app folder structure example is based on the **Blank Web App** starter app 
 
 #### 2.2.2 App Root Setup {#root-setup}
 
-We recommend that you add additional folders to the root of your app (on disk). These include the following:
+Mendix recommends adding add additional folders to the root of your app (on disk). These include the following:
 
 * **DIST** – contains the releases of your module kept for reference
 * **MarketplaceResources** – contains all the assets used in the Mendix Marketplace (except for the release packages), including screenshots, videos, and reference documents
 
 The app root of your **App Explorer** should look like this after root setup:
 
-{{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/app-post-setup.png" >}}
+{{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/app-post-setup.png" class="no-border" >}}
 
 #### 2.2.3 Importing Dependency Modules
 
@@ -65,7 +65,7 @@ Use as few dependency modules as possible. When you must use one, make sure they
 
 Add the app to [Team Server](/refguide/version-control/#team-server) (or GitHub) version control, if you have not already done so when creating the app. 
 
-We recommend that you have a separate public Git repository next to your private Team Server Git repository, so that you can continue committing and applying changes while you only push to the public repository for a new release to the Marketplace. The automated integration with GitHub from the Marketplace makes this a good option for your public-facing Git repository.
+Mendix recommends having a separate public Git repository next to your private Team Server Git repository, so that you can continue committing and applying changes while you only push to the public repository for a new release to the Marketplace. The automated integration with GitHub from the Marketplace makes this a good option for your public-facing Git repository.
 
 ### 2.4 Working with Java-Intensive Apps
 
@@ -92,11 +92,11 @@ You can extend your app to work with Java and Gradle.
 
 1. Add an **Implementation** folder next to other app folders. 
 
-    {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/implementation-folder.png" >}}
+    {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/implementation-folder.png" class="no-border" >}}
 
 2. Set up an  **Implementation** folder as a Gradle `java-library` project. For details, see Gradle documentation on [Building Java Libraries Sample](https://docs.gradle.org/current/samples/sample_building_java_libraries.html#run_the_init_task). This is the expansion of the **Implementation** folder:
 
-    {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/gradle-library.png" >}}
+    {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/gradle-library.png" class="no-border" >}}
 
     The **Implementation** folder is now a self contained Gradle project which can be opened in any IDE which understands Gradle and expanded with any code you like.
 
@@ -127,7 +127,7 @@ To ensure that end-users can reuse your Mendix build logic as easily as possible
 
 Ensure that a microflow is visible in the **Toolbox** in the [Expose as microflow action](/refguide/java-actions/#expose-microflow-action) section of the microflow properties. You can do this by right-clicking in your microflow working area. Additionally, you can specify a caption for the action, a category for the **Toolbox**, and an icon. These will be used in the **Toolbox**, and also in the microflows, so these will be easy to read for the end-user:
 
-{{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/microflow-action.png" >}}
+{{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/microflow-action.png" class="no-border" >}}
 
 After you [expose as microflow action](/refguide/java-actions/#expose-microflow-action), this can be dragged and dropped inside another microflow.
 
@@ -204,7 +204,7 @@ Any dependencies your module has should be well documented including the minimum
 
 ### 3.11 IP Protection
 
-For members of the [Mendix Partner Program](/appstore/creating-content/partner-program/) and the [Mendix Commercial Solution Partner Program](https://www.mendix.com/partners/become-a-partner/isv-program/), protecting your intellectual property (IP) or preventing end-users from changing any logic that you ship in a module using Mendix tooling is possible. For details, see [How to Apply IP Protection](/appstore/creating-content/sol-ip-protection/).
+For members of the [Mendix Partner Program](/appstore/partner-program/) and the [Mendix Commercial Solution Partner Program](https://www.mendix.com/partners/become-a-partner/isv-program/), protecting your intellectual property (IP) or preventing end-users from changing any logic that you ship in a module using Mendix tooling is possible. For details, see [How to Apply IP Protection](/appstore/creating-content/sol-ip-protection/).
 
 If protecting your IP or preventing end-users from changing your logic is not a requirement, you can use all the tooling that Mendix provides to build a connector using available Mendix tools. If you want IP protection today, you need to implement the sensitive parts of the module in a hidden Java library. 
 
@@ -258,27 +258,27 @@ When using constants in combination with a Free App, you can use the settings pr
 
 1. Create a constant.
 
-    {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/simple-config-constant.png" >}}
+    {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/simple-config-constant.png" class="no-border" >}}
 
 2. Set the value of the constant to the value you want to use in your free cloud node.
 
-    {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/simple-config-value.png" >}}
+    {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/simple-config-value.png" class="no-border" >}}
 
 3. Open your application **Settings**. Click **Duplicate** or **New** to create a new configuration for your local usage.
 
-    {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/simple-config-settings.png" >}}
+    {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/simple-config-settings.png" class="no-border" >}}
 
 4. In your configuration, open the **Constants** tab and click **New**.
 
-    {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/simple-config-new-constants.png" >}}
+    {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/simple-config-new-constants.png" class="no-border" >}}
 
 5. Look up and select your constant.
 
-    {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/simple-config-select-constant.png" >}}
+    {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/simple-config-select-constant.png" class="no-border" >}}
 
 6. Change the configuration value of your constant to the value you want to use on your local environment.
 
-    {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/simple-config-change-value.png" >}}
+    {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/simple-config-change-value.png" class="no-border" >}}
 
 7. Save all configuration and publish your application to your free node. When you run locally, Studio Pro will now use the **Active** configuration, while the free cloud node will keep using the value you specified in the **App Explorer**.
 
@@ -310,17 +310,17 @@ The following steps walk you through complex configuration:
 
 1. Set up a **Configuration** entity.
 
-    {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/complex-config-entity.png" >}}
+    {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/complex-config-entity.png" class="no-border" >}}
 
 2. Create the microflow. Have a single microflow called **DS_GetOrCreateSettings** that is the only place in your application to acquire your settings. This microflow would retrieve your settings from the database and creates it if this does exist with appropriate default values.
 
-    {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/complex-config-create-microflow.png" >}}
+    {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/complex-config-create-microflow.png" class="no-border" >}}
 
 3. Set up security on the entity and the microflow.
 
-    {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/complex-config-security.png" >}}
+    {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/complex-config-security.png" class="no-border" >}}
 
-    {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/complex-config-security-2.png" >}}
+    {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/complex-config-security-2.png" class="no-border" >}}
 
 4. Set up the administrator page. Have an administration page to manage the configuration. For maximum reusability, have all configuration settings available in a single snippet so your consumer can combine all admin sections from all components into a single area in their application.
 
@@ -382,7 +382,7 @@ The [SAML](/appstore/modules/saml/) module, available on the Mendix Marketplace,
 
 You can test Mendix by calling microflows with the [Unit Testing](/appstore/modules/unit-testing/) module for whole pieces of functionality. Use unit tests for smaller, more targeted tests at the method-level of your Java code.
 
-As with any automated testing, it is a great supplement for capturing known, expected behavior. For capturing known unknowns and unknown unknowns, we recommend risk-based exploratory testing.
+As with any automated testing, it is a great supplement for capturing known, expected behavior. For capturing known unknowns and unknown unknowns, Mendix recommends risk-based exploratory testing.
 
 ### 6.1 Testing Microflows
 
@@ -401,7 +401,7 @@ The following tools are part of the testing process of custom Java code in your 
 * [JaCoCo](https://www.jacoco.org/jacoco/trunk/index.html) (Java Code Coverage) — This helps you check how well your code is covered by tests.
 * Gradle — This pulls everything together to manage Java dependencies, and provides a way to work with JUnit and Mockito.
 
-Gradle can handle managing Java dependencies and running [JUnit](http://junit.org) tests. Read about setting up Gradle in [Extending App Setup for Building Connectors with Java](#extend-app-java). If you have a pipeline, we recommend running your tests as part of it. 
+Gradle can handle managing Java dependencies and running [JUnit](https://junit.org) tests. Read about setting up Gradle in [Extending App Setup for Building Connectors with Java](#extend-app-java). If you have a pipeline, Mendix recommends running your tests as part of it. 
 
 #### 6.2.2 Using the Java Unit Test Reference
 
@@ -453,7 +453,7 @@ Ensure a new release includes the following:
 
 ### 8.2 Versioning {#versioning}
 
-The [Update Existing Marketplace Content](/appstore/general/share-app-store-content/#updating) section of *Share Marketplace Content* provides explanations of the recommended versioning system. The following points go into more detail on the versioning number system:
+The [Update Existing Marketplace Content](/appstore/sharing-content/#updating) section of *Share Marketplace Content* provides explanations of the recommended versioning system. The following points go into more detail on the versioning number system:
 
 * *Major version* — This is the first digit. This number goes up when you release major breaking changes, or at the very least a major new feature, as part of your connector. Determining what is major is up to you. You can deploy minor/patch versions for older major versions when you have bugs that need resolving.
 
@@ -463,4 +463,4 @@ The [Update Existing Marketplace Content](/appstore/general/share-app-store-cont
 
 ## 9 Licensing
 
-Follow your Java Libraries and default to Mendix EULA. Also, we recommend that you do not use copy-left licenses for commercially available connectors.
+Follow your Java Libraries and default to Mendix EULA. Also, Mendix recommends that you do not use copy-left licenses for commercially available connectors.

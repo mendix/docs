@@ -1,7 +1,7 @@
 ---
 title: "Project Management"
 url: /developerportal/project-management/
-category: "Project Management"
+
 weight: 7
 description_list: true
 description: "Describes the Project Management section of the Developer Portal."
@@ -10,7 +10,7 @@ tags: ["Epics", "Jira", "Sprint", "Project Management", "Developer Portal"]
 
 ## 1 Introduction
 
-The **Project Management** section provides you with fast access to the project management tool that you select for your app:
+The **Project Management** category in the Developer Portal’s [navigation pane](/developerportal/#navigation-pane) provides fast access to the project management tool that you select for your app:
 
 * [Epics](/developerportal/project-management/epics/)
 * [Jira](/developerportal/project-management/jira-connector/)

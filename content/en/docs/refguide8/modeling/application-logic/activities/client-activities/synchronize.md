@@ -6,10 +6,6 @@ tags: ["studio pro", "synchronize", "offline", "client activity"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/synchronize.pdf).
-{{% /alert %}}
-
 {{% alert color="warning" %}}
 This activity can only be used in **Nanoflows**.
 {{% /alert %}}
@@ -20,7 +16,7 @@ The **Synchronize** activity can be used to synchronize your data between your d
 
 ### 1.1 Synchronize All Objects
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/activities/client-activities/synchronize/synchronize.png" alt="Synchronize"   width="200"  >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/client-activities/synchronize/synchronize.png" alt="Synchronize"   width="200"  class="no-border" >}}
 
 This mode synchronizes the entire local database. The server database is updated with the changes from the local database. The local database is updated with the latest data from the server, including the file contents.
 
@@ -28,11 +24,11 @@ The behavior of this mode can be configured through [**Synchronization configura
 
 ### 1.2 Synchronize Selected Object(s)
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/activities/client-activities/synchronize/synchronize-objects.png" alt="Synchronize"   width="200"  >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/client-activities/synchronize/synchronize-objects.png" alt="Synchronize"   width="200"  class="no-border" >}}
 
 This mode synchronizes objects partially, based on a selection:
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/activities/client-activities/synchronize/synchronize-objects-selection.png" alt="Synchronize"   width="600"  >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/client-activities/synchronize/synchronize-objects-selection.png" alt="Synchronize"   width="600"  class="no-border" >}}
 
 With this mode, only the selected objects or lists are synchronized. The synchronization is bi-directional,
 meaning both the server database and the local database is updated for the selected objects.
@@ -55,7 +51,7 @@ The **Synchronize** activity properties consists of the following sections:
 * [Action](#action)
 * [Common](#common)
 
-    {{< figure src="/attachments/refguide8/modeling/application-logic/activities/client-activities/synchronize/synchronize-properties.png" alt="Synchronize Action Properties"   width="300"  >}}
+    {{< figure src="/attachments/refguide8/modeling/application-logic/activities/client-activities/synchronize/synchronize-properties.png" alt="Synchronize Action Properties"   width="300"  class="no-border" >}}
 
 ## 3 Action Section {#action}
 

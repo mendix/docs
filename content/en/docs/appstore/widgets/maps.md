@@ -1,7 +1,7 @@
 ---
 title: "Maps"
 url: /appstore/widgets/maps/
-category: "Widgets"
+
 description: "Describes the configuration and usage of the Maps widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "widget", "maps", "google maps", "openstreetmap", "mapbox", "here maps", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -26,6 +26,13 @@ For the easiest way to get started with a basic map in your application, follow 
 4. Create a new location marker based on either **Latitude and longitude** or an **Address**.
 
 If you want to configure more of your map (for example, end-user interactions and styling) or use a different map provider, see the [Settings](#settings) section below.
+
+{{% alert color="info" %}}
+If you are using Google Maps, be sure to include an empty JSON array (specifically `{}`) in **Advanced** > **Map Styles** so your widget is successfully displayed in your app:
+
+{{< figure src="/attachments/appstore/widgets/maps/gmaps.png" class="no-border" >}}
+
+{{% /alert %}}
 
 ## 3 Settings {#settings}
 
@@ -109,6 +116,8 @@ Under the **Dimensions** properties tab, you can adjust the following settings t
 ## 4 Strict CSP Compatibility
 
 This widget is not yet fully compliant with strict content security policy (CSP). If used with strict CSP, it will result in CSP errors in the console and potentially broken flows in the widget.
+
+Please refer to the [Maps CSP](/appstore/widgets/security/content-security-policy/maps-csp/) guide for more detail.
 
 ## 5 Widgets Below Version 2.0.0
 

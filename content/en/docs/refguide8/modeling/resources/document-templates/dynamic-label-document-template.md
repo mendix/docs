@@ -10,17 +10,13 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/dynamic-label-document-template.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 A dynamic label is used for the same kind of attributes as a text box from the page editor. It can be used to display a text value.
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide8/modeling/resources/document-templates/918131.png" >}}
+{{< figure src="/attachments/refguide8/modeling/resources/document-templates/918131.png" class="no-border" >}}
 
 A dynamic label linking to a customer name.
 

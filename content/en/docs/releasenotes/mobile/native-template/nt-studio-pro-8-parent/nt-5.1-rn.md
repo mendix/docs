@@ -223,7 +223,7 @@ We have decided to retract version 5.1.7 after we received reports that apps wou
 
 ### Disclaimer
 
-This release is required to use the **Capabilities** support introduced with the new Mendix Native Mobile Builder. You must update to this version or higher in order to use that tool's functionality. The Mendix Native Mobile Builder is included in Mendix Studio Pro v8.15 and above.
+This release is required to use the **Capabilities** support introduced with the new Mendix Native Mobile Builder. You must update to this version or higher in order to use that tool's functionality. The Mendix Native Mobile Builder is included in Mendix Studio Pro 8.15 and above.
 
 ### Capabilities Support
 

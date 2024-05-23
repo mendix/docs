@@ -5,17 +5,13 @@ tags: ["studio pro", "sign-in button", "sign in", "authentication widget", "auth
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/sign-in-button.pdf).
-{{% /alert %}}
-
 {{% alert color="warning" %}}The **Sign-in button** is not supported on native mobile pages.{{% /alert %}}
 
 ## 1 Introduction
 
 The **Sign-in button** sends a user's login ID and password to the server for authentication:
 
-{{< figure src="/attachments/refguide8/modeling/pages/authentication-widgets/sign-in-button/sign-in-button.png" alt="Sign-In Button" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/authentication-widgets/sign-in-button/sign-in-button.png" alt="Sign-In Button" class="no-border" >}}
 
 Any errors are displayed in a [validation message widget](#validation-message-widget) or in a pop-up window. 
 
@@ -25,7 +21,7 @@ The **Sign-in button** should be placed on a page together with a [Login ID text
 
 An example of sign-in button properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/pages/authentication-widgets/sign-in-button/sign-in-button-properties.png" alt="Sign-In Button Properties"   width="250"  >}}
+{{< figure src="/attachments/refguide8/modeling/pages/authentication-widgets/sign-in-button/sign-in-button-properties.png" alt="Sign-In Button Properties"   width="250"  class="no-border" >}}
 
 Sign-in button properties consist of the following sections:
 
@@ -49,7 +45,7 @@ Most properties of a sign-in button are the same as properties of button widgets
 #### 2.3.1 Validation Message Widget {#validation-message-widget}
 
 **Validation message widget** is a specific property of a sign-in button. It defines the [Validation message widget](/refguide8/validation-message/) that displays authentication failure messages on a page. If no widget is selected in this property, authentication failure messages will be displayed in a pop-up window:
-{{< figure src="/attachments/refguide8/modeling/pages/authentication-widgets/sign-in-button/validation-failure.png" alt="Validation Failure" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/authentication-widgets/sign-in-button/validation-failure.png" alt="Validation Failure" class="no-border" >}}
 
 Default: *None*
 

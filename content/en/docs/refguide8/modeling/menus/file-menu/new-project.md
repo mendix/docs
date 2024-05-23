@@ -10,10 +10,6 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/new-project.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 You can create a new project in Mendix Studio Pro. 
@@ -34,7 +30,7 @@ The new project is created and opened.
 
 When creating a new app, the **App Settings** dialog box is opened where you can specify an app name, whether or not to enable the online services provided by the Mendix Platform, the default language, and the location on disk where the project files for your app are stored:
 
-{{< figure src="/attachments/refguide8/modeling/menus/file-menu/new-project/app-settings-dialog.png" alt="App Settings" >}}
+{{< figure src="/attachments/refguide8/modeling/menus/file-menu/new-project/app-settings-dialog.png" alt="App Settings" class="no-border" >}}
 
 ### 2.1 Name
 

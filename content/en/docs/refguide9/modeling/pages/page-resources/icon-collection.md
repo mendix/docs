@@ -24,7 +24,7 @@ To add an icon collection, do the following:
 
 You can perform the following actions within icon collections using the buttons at the top of the icon collection tab:
 
-{{< figure src="/attachments/refguide9/modeling/pages/page-resources/icon-collection/actions.png" alt="Icon collection actions" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/page-resources/icon-collection/actions.png" alt="Icon collection actions" class="no-border" >}}
 
 Some of the actions can be applied to multiple icons. You can select all icons using <kbd>Ctrl</kbd>+<kbd>A</kbd>, or select multiple icons by combining your click with <kbd>Ctrl</kbd> or <kbd>Shift</kbd>
 
@@ -58,9 +58,9 @@ You can easily convert your font data into this format is by either using a text
 
 After loading the data from a file or your clipboard, you will see a preview of the data before it is applied. Make sure to check the list, as it will also mention any potential problems that might cause a specific line to be ignored:
 
-{{< figure src="/attachments/refguide9/modeling/pages/page-resources/icon-collection/excel.png" alt="Editing Icon Data in an Excel sheet" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/page-resources/icon-collection/excel.png" alt="Editing Icon Data in an Excel sheet" class="no-border" >}}
 
-{{< figure src="/attachments/refguide9/modeling/pages/page-resources/icon-collection/import-icon-data.png" alt="The imported Icon Data" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/page-resources/icon-collection/import-icon-data.png" alt="The imported Icon Data" class="no-border" >}}
 
 ### 3.3 Configure
 
@@ -120,6 +120,6 @@ In some cases the generated CSS classes of an icon changes and you will have to 
 * Changing the configured collection class or prefix of the icon collection, including removing either option (this affects all icons in the collection)
 * If the collection class or prefix is not explicitly configured, renaming the icon collection or moving it to a different module (this affects all icons in the collection)
 
-To prevent issues from occurring, we recommend configuring the icon collection and naming all icons before you start using them directly in your styling. Afterwards, do not make any further changes.
+To prevent issues from occurring, Mendix recommends configuring the icon collection and naming all icons before you start using them directly in your styling. Afterwards, do not make any further changes.
 
 Icon tags do not affect the generated CSS styling. Thus, you are always able to edit, remove, or update icon tags even after you have started using your icons in your styling.

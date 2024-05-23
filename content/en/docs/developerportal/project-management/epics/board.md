@@ -22,11 +22,11 @@ The two default swimlanes are **To Do** and **Done**.
 
 You can add more custom swimlanes, such as **In Progress**, **In Review**, and **Testing**. To add a new swimlane, hover over the border of the swimlane where the new swimlane should be added, and click the vertical line when it appears. Then enter the name of the swimlane and click **✓** to save the changes.
 
-{{< figure src="/attachments/developerportal/project-management/epics/board/add-swimlane.png" width="500px" >}}
+{{< figure src="/attachments/developerportal/project-management/epics/board/add-swimlane.png" width="500px" class="no-border" >}}
 
-You can rename, archive, or delete a swimlane as follows: click the **...** icon on the upper-right corner of the swimlane, and then select the corresponding option.
+You can rename, archive, or delete a swimlane as follows: click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) on the upper-right corner of the swimlane, and then select the corresponding option.
 
-{{< figure src="/attachments/developerportal/project-management/epics/board/rename-archive-delete-swimlane.png" >}}
+{{< figure src="/attachments/developerportal/project-management/epics/board/rename-archive-delete-swimlane.png" class="no-border" >}}
 
 However, it is not possible to do the following actions:
 
@@ -40,7 +40,7 @@ You can move a swimlane by dragging it to the new location.
 
 Each card in a swimlane represents a story:
 
-{{< figure src="/attachments/developerportal/project-management/epics/board/story-card.png" >}}
+{{< figure src="/attachments/developerportal/project-management/epics/board/story-card.png" class="no-border" >}}
 
 A story card shows the following details:
 
@@ -54,9 +54,9 @@ A story card shows the following details:
 * ⑧ Points of the story
 * ⑨ To whom the story is assigned
 
-You can [archive](/developerportal/project-management/epics/archive/) or delete a story as follows: click the **...** icon on the upper-right corner of the card, and then select the corresponding option:
+You can [archive](/developerportal/project-management/epics/archive/) or delete a story as follows: click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) on the upper-right corner of the card, and then select the corresponding option:
 
-{{< figure src="/attachments/developerportal/project-management/epics/board/archive-delete-story.png" >}}
+{{< figure src="/attachments/developerportal/project-management/epics/board/archive-delete-story.png" class="no-border" >}}
 
 You can move a card within a swimlane or across swimlanes. To do so, drag the card to the new location.
 
@@ -66,9 +66,9 @@ You can click a story card to view the [story details](#story-details).
 
 When you click the card of a story, the story details dialog box opens.
 
-On the upper-right corner, you can click the link icon to copy the link to the story. Click the  ellipsis (**...**) icon to open a pop-up menu that allows you to clone, archive, or delete the story.
+On the upper-right corner, you can click **Copy Link** ({{% icon name="hyperlink" %}}) to copy the link to the story. Click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) to open a menu that allows you to clone, archive, or delete the story.
 
-{{< figure src="/attachments/developerportal/project-management/epics/board/story-details-page-icons.png" >}}
+{{< figure src="/attachments/developerportal/project-management/epics/board/story-details-page-icons.png" class="no-border" >}}
 
 The story details dialog box shows the following items:
 
@@ -93,7 +93,7 @@ The story details dialog box shows the following items:
 
 * **Tags** – You can add or remove tags.
     * You can create a new tag by typing the tag in the text box and clicking **Create new "[tag name]"**.
-    * You can [manage tags](/developerportal/project-management/epics/planning/#manage-tags) by clicking the settings icon at the end.
+    * You can [manage tags](/developerportal/project-management/epics/planning/#manage-tags) by clicking **Settings** ({{% icon name="cog" %}}) at the end.
     
 * **Story Points** – You can set the story points to an integer.
 
@@ -120,9 +120,9 @@ The story details dialog box shows the following items:
     
     * Epic {epic name} unlinked
     
-    * Tag(s) {tag names} added
+    * Tag (or tags) {tag names} added
     
-    * Tag(s) {tag names} removed
+    * Tag (or tags) {tag names} removed
     
     * Story points changed to {story points}
     
@@ -136,7 +136,7 @@ The story details dialog box shows the following items:
     
     * Comment Edited
     
-    {{< figure src="/attachments/developerportal/project-management/epics/board/audit-trail.png" >}}
+    {{< figure src="/attachments/developerportal/project-management/epics/board/audit-trail.png" class="no-border" >}}
     
 * **Revision** – This shows the revision history of a story. This feature is only available for apps that use Git for version control.
 
@@ -157,16 +157,16 @@ If your board style is Scrum, you can find the features below which accommodate 
 
 The upper-left corner of the page shows the name of the current Sprint, when the Sprint ends, and how many stories and points it has, as well as the goal of the Sprint.
 
-{{< figure src="/attachments/developerportal/project-management/epics/board/scrum-board.png" >}}
+{{< figure src="/attachments/developerportal/project-management/epics/board/scrum-board.png" class="no-border" >}}
 
 The main area of the page gives an overview of all the stories in your current Sprint. When you commit changes in Studio Pro, you can link your commit to stories of the current Sprint in the [Commit](/refguide/commit-dialog/) dialog box.
 
-{{% alert color="info" %}}To edit or end the current Sprint, you should go to the [Planning](/developerportal/project-management/epics/planning/#scrum-planning) page, click the Ellipsis (**...**) button on the upper-right corner, and select the corresponding item{{% /alert %}}
+{{% alert color="info" %}}To edit or end the current Sprint, you should go to the [Planning](/developerportal/project-management/epics/planning/#scrum-planning) page, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) on the upper-right corner, and select the corresponding item.{{% /alert %}}
 
 ### 3.2 Kanban Board
 
 If your board type is Kanban, the upper-left corner of the page shows the number of stories and the total points. 
 
-{{< figure src="/attachments/developerportal/project-management/epics/board/kanban-stories-story-points.png" >}}
+{{< figure src="/attachments/developerportal/project-management/epics/board/kanban-stories-story-points.png" class="no-border" >}}
 
 The main area gives an overview of all the stories that your team is working on. 

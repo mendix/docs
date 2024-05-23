@@ -8,7 +8,7 @@ tags: ["Deploy", "Private Cloud", "Licensing", "PCLM", "License Server", "Licens
 ---
 
 {{% alert color="warning" %}}
-Private Cloud License Manager is currently in Beta. For more information about Beta releases and features, see [Beta Releases](/releasenotes/beta-features/).
+Private Cloud License Manager is currently in beta. For more information, see [Beta Releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
 ## 1 Introduction
@@ -21,7 +21,7 @@ Rather than having to apply and update licenses for each environment individuall
 
 The PCLM runs as a Kubernetes service on your cluster. This means that it can be used by all your Mendix apps which run in namespaces within that cluster.
 
-## 2 Prerequisites
+## 2 Prerequisites{#prerequisites}
 
 To install and use the PCLM, you need the following prerequisites:
 
@@ -30,9 +30,9 @@ To install and use the PCLM, you need the following prerequisites:
 * Administrative rights to a Kubernetes namespace to install PCLM server (a dedicated namespace is recommended). This can be within your Mendix for Private Cloud cluster, or in another cluster which is accessible over HTTP
 * A Postgres or SQLServer database server and within it:
     * A dedicated database with remote access which will be used to store your licenses, user authorization details, and usage information
-        * Public accessibility must be set to yes
-        * Database server must allow inbound connections
-        * Database must be called `mxlicenses`
+        * The database server should be accessible to the cluster where the application is deployed.
+        * The database server must allow inbound connections.
+        * The database must be called *mxlicenses*.
     * A dedicated administrator user role with all grants over this database (including the `Create Table` server role, and `Select`, `Insert`, `Update`, `Delete`, and `Truncate` database roles for the tables that are created)
 * Kubectl or the OpenShift CLI
 * The mx-pclm-cli tool
@@ -43,6 +43,10 @@ The PCLM server will not create the database for the licenses, you need to creat
 {{% /alert %}}
 
 ## 3 Installing the PCLM server
+
+{{% alert color="info" %}}
+To prevent unexpected issues, as a best practice, install the PCLM server in a separate namespace.
+{{% /alert %}}
 
 You install the PCLM server by applying a manifest using `kubectl` or `oc`. This manifest can be created for you by the mx-pclm-cli tool. The mx-pclm-cli tool is available for download in the **Installation** tab of the **Namespace Details** page.
 
@@ -76,7 +80,7 @@ Where you need to supply the following parameters
 * `<tls-boolean>` – whether the database uses strict TLS, `true` or `false` *(default)*
 * `<ssl-root-certificate>` – the location of the SSL Root certificate file, if `<tls-boolean>` is `true`
 * `<docker-repo>` – location of the image repo, default: `private-cloud.registry.mendix.com/privatecloud-license-manager`
-* `<docker-tag>` – the docker image tag, default: `0.3.0`
+* `<docker-tag>` – the docker image tag, default: `0.4.0`
 * `<out-file>` – the name of the file where the yaml is written, for example `manifest.yaml`
 
 ### 3.2 Applying the Manifest
@@ -116,7 +120,7 @@ metadata:
   namespace: my-pclm-1 
 spec:
   rules:
-    - host: pclm.<domain> # e.g. pclm.mydomain.io
+    - host: pclm.<domain> # for example, pclm.mydomain.io
       http:
         paths:
           - path: /
@@ -226,9 +230,9 @@ Where:
 
 ## 6 Installing Licenses
 
-Licenses are supplied by Mendix as a **License Bundle**. A license bundle can contain both Mendix Runtime (app) licenses and Mendix Operator licenses.
-Runtime licenses are required for each Mendix runtime environment, and Operator licenses are required for each namespace where the Operator runs.
-To purchase a license bundle, please contact [Mendix Support](https://support.mendix.com/). You will receive your license(s) as a .zip file.
+Licenses are supplied by Mendix as a **License Bundle**. A license bundle can contain both Mendix Runtime (app) licenses and a Mendix Operator license.
+Runtime licenses are required for each Mendix runtime environment, and an Operator license is required for each namespace where the Operator runs.
+To purchase a license bundle, please contact [Mendix Support](https://support.mendix.com/). You will receive your license (or licenses) as a .zip file.
 The following command will import a license bundle into the PCLM server:
 
 ```bash {linenos=false}
@@ -286,10 +290,9 @@ You will receive the result in the following format:
 | 5025defa-a442-47c3-ae2e-2ac6628926e3 | mx-runtime | 2024-05-02T14:38:39Z | 2023-05-02T14:38:39Z | standard |
 | c823eeb1-7eb2-471c-a818-7be132c9cdb1 | mx-runtime | 2024-05-02T14:38:39Z | 2023-05-02T14:38:39Z | standard |
 
-The **PRODUCTS** field represents the product type requested for the runtime license. If the requested license is any value other than standard, then this product type needs to be specified in the Mendix app CR for  which license is required. For more information, see how *runtimeLicenseProduct* is configured in [Edit MendixApp CR](/developerportal/deploy/private-cloud-operator/#edit-cr).
-
 {{% alert color="info" %}}
-In order to update the product type in the Mendix App CR, ensure that you are using Mendix Operator version 2.12 and newer.
+The **PRODUCTS** field represents the product type requested for the runtime license. If the requested license is any value other than standard, then this product type needs to be specified in the Mendix app CR. For more information, see how *runtimeLicenseProduct* is configured in [Edit MendixApp CR](/developerportal/deploy/private-cloud-operator/#edit-cr).
+In order to update the **product type** in the Mendix App CR, ensure that you are using Mendix Operator version 2.12 and newer.
 {{% /alert %}}
 
 ### 6.2 Listing the Operator License
@@ -309,7 +312,6 @@ You will receive the result in the following format:
 |--------------------------------------|------------|----------------------|----------------------|----------|
 | c97ecdae-0376-42ab-9d91-22a45a88a3e4 | mx-operator| 2024-05-02T14:38:39Z | 2023-05-02T14:38:39Z | standard |
 
-
 ## 7 Applying Licenses to Your Operator and Apps
 
 To use the licenses, you must add information to the operator configuration. For this, you need to have set up the operator in a namespace on your cluster. See [Installing and Configuring the Mendix Operator](/developerportal/deploy/private-cloud-cluster/#install-operator) in the *Private Cloud Cluster* documentation. Assume that the operator is running in the namespace `<operator-ns>`.
@@ -326,6 +328,10 @@ mx-pclm-cli config-namespace -n <operator-ns> \
 ```   
 
 The default secret name is `mendix-operator-pclm`. If PCLM was previously configured manually, the existing secret name is used. 
+
+{{% alert color="info" %}}
+For Global Operator installation, execute the above command in both the Global Operator namespace and its managed namespaces where the license is intended to be applied. Please make certain that identical PCLM license details are configured for both the managed and global operator namespaces to avoid unexpected outcomes. Global Operator is still in beta, and it does not currently fully supports PCLM.
+{{% /alert %}}
 
 #### 7.1.1 Sample Yaml Files
 

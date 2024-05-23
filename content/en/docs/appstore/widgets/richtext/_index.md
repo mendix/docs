@@ -93,9 +93,27 @@ To configure this widget, follow these steps:
         
             {{< figure src="/attachments/appstore/widgets/rich-text/wrap.png" alt="Example" class="no-border" >}}
     
-    * **Location** 
+    * **Location**
+        * **Auto** – automatically determines the best position for the toolbar.
 
-* **Editable** – determines when user can edit content in the editor and when it is read-only
+        * **Top** – positions the toolbar at the top of the editor.
+
+        * **Bottom** – positions the toolbar at the bottom of the editor.
+
+        * **Inline** – positions the toolbar floating at the current cursor location when editor is in focus. The toolbar will be hidden until the editable content is selected.
+
+        {{% alert color="info" %}}Inline toolbar does not wrap the editor within an iframe, but edits the content in place. Thus, styling that applies to the page will be directly applied to the editor's content.{{% /alert %}}
+
+    * **Enable quick toolbar** - If selected, quick toolbar will appear when content is on focus.
+
+     {{< figure src="/attachments/appstore/widgets/rich-text/rich_text_quickbars.png" alt="Example" class="no-border" >}}
+
+    * **Context menu** - determines mouse right click behavior on the editor.
+        * **Native** – uses a browser's native default right-click behavior.
+        * **Rich Text** – uses an editor's predefined right-click context menu.
+
+
+* **Editable** – determines when user can edit content in the editor and when it is read-only.
 
     {{% alert color="info" %}}For more information, see [Editability Section](/refguide/common-widget-properties/#editability) in the *Studio Pro Guide*.{{% /alert %}}
 
@@ -170,6 +188,8 @@ The full configuration of the menubar groups are as follows:
     * **Pixels** – specifies the height in pixels
     * **Percentage of parent** – specifies the width in relation to the rest of the elements on the page
 * **Height** – used as an appropriate CSS value
+* **Minimum Height** – used as an appropriate minimum editor's height.
+* **Editor resize** - allows the resize handle to be disabled or to set the resize handler to resize both horizontally and vertically
 
 ### 2.5 Events Tab
 
@@ -186,7 +206,13 @@ The full configuration of the menubar groups are as follows:
 
 * **Enable spell checking** – configures to use the browser’s native spell checker. 
 * **Highlight on focus** - adds a blue outline to the editor when that editor is made the input focus
-* **Editor resize** - allows the resize handle to be disabled or to set the resize handler to resize both horizontally and vertically
+* **Additional stylesheet** - allows the user to add an additional stylesheet that will be included inside the editor's iframe to apply custom styling.
+    * User can include an additional stylesheet file in the theme folder and add the filename inside the **Additional stylesheet** input.  
+    * It is also possible to use built-in stylesheets called "_Default_" and "_Dark_", or alternate between them using the expression editor.
+        
+    {{< figure src="/attachments/appstore/widgets/rich-text/rte_style_expression.png" alt="Example" class="no-border" >}}
+
+    {{% alert color="info" %}}If the toolbar location is inline, styling will not be sandboxed inside iframe, but will affect the whole page.{{% /alert %}}
 
 ### 2.7 Common Tab
 

@@ -17,7 +17,7 @@ To import an app package, do the following:
 2. Browse to the *.mpk* file you would like to import.
 3. Select the relevant options in the **Import App Package** dialog box and click **OK**. For more information on what options you can select, see the sections below. 
 
-    {{< figure src="/attachments/refguide/modeling/menus/file-menu/import-app-package-dialog/import-app-package.png" alt="Import App Package Dialog Window" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/menus/file-menu/import-app-package-dialog/import-app-package.png" alt="Import App Package Dialog Window" class="no-border" width="600" >}}
 
 App packages can be created using [Export App Package](/refguide/export-app-package-dialog/).
 

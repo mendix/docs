@@ -12,6 +12,8 @@ tags: ["marketplace", "marketplace component", "module", "Snowflake"]
 
 Mendix has several options available for users who want to integrate their app with Snowflake in order to create data-driven enterprise applications.
 
+{{< figure src="/attachments/appstore/modules/snowflake-rest-sql/snowflake_architecture_setup.png" >}}
+
 ## 2 Snowflake Integration Options  
 
 Mendix provides real-time interaction with Snowflake through the [External Database connector](https://marketplace.mendix.com/link/component/219862) or the [REST SQL connector](https://marketplace.mendix.com/link/component/225717). Both of these connectors enable you to perform the following tasks:
@@ -37,5 +39,13 @@ The [REST SQL connector](https://marketplace.mendix.com/link/component/225717), 
 With the REST SQL connector, authentication can be done either on system or on end-user level, and the connector supports role-based access control (RBAC) per end user as well.
 
 The REST SQL connector requires an additional step to transform data rows received from the REST SQL API into Mendix objects. For more information, see [Snowflake REST SQL Connector](/appstore/connectors/snowflake/snowflake-rest-sql/).
+
+### 2.3 Mendix Data Loader
+
+The [Mendix Data Loader](https://app.snowflake.com/marketplace/listing/GZTDZHHIDJ/mendix-data-loader), available from the [Snowflake Marketplace](https://app.snowflake.com/marketplace), aids in ingesting Mendix data into Snowflake. The application is deployed in your Snowflake environment and interacts with the configured Mendix apps to ingest data that is exposed using an [Published OData Service](/refguide/published-odata-services/). 
+
+### 2.4 Role Base Access Control (RBAC)
+
+For information about using Snowflake's role-based access control in a Mendix application, see [Role-based Access Control](/appstore/modules/snowflake/snowflake-rbac/).
 
 ## 3 Documents in This Category

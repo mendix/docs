@@ -84,7 +84,7 @@ By default, the **Technical Owner** for a registered asset is the user who regis
 {{% alert color="info" %}}
 **Business Owners** and **Technical Owners** have curation rights for the registered data source in the Catalog only if they are registered users on the Mendix Platform. If a [custom owner](#custom-owner) is created using the process described in this section, the link to contact them will be displayed for the asset. It does not mean they are able to access or curate the asset in the Catalog .{{% /alert %}}
 
-{{% alert color="info" %}
+{{% alert color="info" %}}
 Curators and Mendix Admins can manage the lists of custom owners as part of their administration functions. For more information, see the [Owners](/developerportal/control-center/catalog-admin/#custom-owners) section of *Catalog Administration*.
 {{% /alert %}}
 

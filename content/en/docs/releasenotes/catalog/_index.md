@@ -13,6 +13,18 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2024
 
+### May 23, 2024
+
+#### Fixes
+
+* We fixed an issue where entity results were not appearing in the UI search results.
+
+### May 16, 2024
+
+#### Fixes
+
+* We fixed an issue in the Registration API where an unintended `400` response was returned if an owner that was not yet known in the Catalog was assigned to an application.
+
 ### April 25, 2024
 
 #### Fixes
@@ -668,7 +680,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 #### New Features
 
-* We added an option to [delete a data source](/catalog/manage/curate/#delete-data-source), available for users with [curation](/catalog/manage/curate/) rights. To delete a data source, go to the [Curation Bar](/catalog/manage/curate/#curation-bar) for the data source and click **Edit**, then click **Delete Data Source**.
+* We added an option to [delete a data source](/catalog/manage/curate/#delete-data-source), available for users with [curation](/catalog/manage/curate/) rights. To delete a data source, go to the Curation Bar for the data source and click **Edit**, then click **Delete Data Source**.
 
 #### Fixes
 

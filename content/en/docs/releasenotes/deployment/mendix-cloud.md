@@ -31,6 +31,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 * We added a Feedback Widget to the Pipelines pages so that customers can directly provide feedback, enhancement requests, and other ideas.
 * We improved the performance of the **Runs** page's search and filtering.
+* We added a column selector to the table on the **Runs** page, so it is now possible to customize which columns appear in the table. We also added a new column: Pipeline ID.
 
 ### April 25, 2024
 

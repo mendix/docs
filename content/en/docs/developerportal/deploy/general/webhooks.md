@@ -48,13 +48,13 @@ If you select **Edit Webhook** from **More Options** ({{% icon name="three-dots-
 * Update **Webhook Name**, **URL**, or **Validation Secret**, and click **Save** to save the changes.
 * Add or delete custom headers, and click **Save** to save the changes.
 
-    {{% alert color="info" %}}
-    You cannot change the value of an existing custom header. If you want to change the value, delete the existing header and add a new one with the same key.
-    {{% /alert %}}
+  {{% alert color="info" %}}
+  You cannot change the value of an existing custom header. If you want to change the value, delete the existing header and add a new one with the same key.
+  {{% /alert %}}
 
-    {{% alert color="info" %}}
-    If your webhook has a custom header with the key "Authorization", this is considered sensitive and thus does not display in the **Custom Headers** section on the **Webhooks** page. However, it can be seen in the webhook response if you test that webhook.
-    {{% /alert %}}
+  {{% alert color="info" %}}
+  If your webhook has a custom header with the key "Authorization", this is considered sensitive and thus does not display in the **Custom Headers** section on the **Webhooks** page. However, it can be seen in the webhook response if you test that webhook.
+  {{% /alert %}}
 
 * Click **Test Webhook** to send a test payload to the endpoint specified under **URL**.
 * Click **(De)activate Webhook** to deactivate an active webhook or activate an inactive webhook.

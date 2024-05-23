@@ -20,7 +20,7 @@ The Mendix Data Loader supports a range of data ingestion tasks, enabling organi
 To use the Mendix Data Loader, you must have the following:
 
 * A Mendix application with a [published OData service](https://docs.mendix.com/refguide/published-odata-services/) that includes exposed entities. 
-* A Snowflake environment and user with ACCOUNTADMIN role to run the access script that can be generated using the Mendix Data Loader. This access script has to be executed once by an ACCOUNDADMIN via a worksheet after which you can start using the application to ingest Mendix application data.
+* A Snowflake environment.
 
 ### 1.3 Licensing and Cost
 

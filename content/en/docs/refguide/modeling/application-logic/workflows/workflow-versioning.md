@@ -141,7 +141,7 @@ You can do one of the following:
 
 #### 3.2.6 Current Parallel Split Removed
 
-When an app developer removes a **Parallel Split** activity from a workflow and deploys that change, workflow instances that were executing deleted activities can no longer continue executing the workflow as the Workflow Engine cannot determine what activity to continue with.
+When an app developer removes a **Parallel Split** from a workflow and deploys that change, workflow instances that were executing deleted activities can no longer continue executing the workflow as the Workflow Engine cannot determine what activity to continue with.
 
 You can do one of the following:
 

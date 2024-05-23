@@ -85,20 +85,20 @@ By default, the **Technical Owner** for a registered asset is the user who regis
 **Business Owners** and **Technical Owners** have curation rights for the registered data source in the Catalog only if they are registered users on the Mendix Platform. If a [custom owner](#custom-owner) is created using the process described in this section, the link to contact them will be displayed for the asset. It does not mean they are able to access or curate the asset in the Catalog .{{% /alert %}}
 
 {{% alert color="info" %}}
-Curators and Mendix Admins can manage the lists of custom owners as part of their administration functions. For more information, see the [Owners](/developerportal/control-center/catalog-admin/#custom-owners) section of *Catalog Administration*.
+Curators and Mendix Admins can manage the lists of custom owners as part of their administration functions. For more information, see the [Owners](/control-center/catalog-admin/#custom-owners) section of *Catalog Administration*.
 {{% /alert %}}
 
 #### 4.1.1 Changing the Business and Technical Owners of an App {#changing-owner}
 
 To change the **Business Owner** or **Technical Owner** from the **Application** tab, click in the name field of the **Business** or **Technical** owner. You can start typing or select a name from the drop-down list. Mendix Platform users will be displayed with their avatar and custom owners will be shown with an avatar that displays their initials.
 
-The **Technical Owner** can only be changed in **Control Center**, not within the Catalog. For more information, see the [Custom Owners](/developerportal/control-center/catalog-admin/#custom-owners) section of *Catalog Administration*.
+The **Technical Owner** can only be changed in **Control Center**, not within the Catalog. For more information, see the [Owners](/control-center/catalog-admin/#custom-owners) section of *Catalog*.
 
 #### 4.1.2 Adding a Custom Owner {#custom-owner}
 
 When curating the owners of an application, you can specify an owner who is not a registered Mendix user but is the technical contact point for the application (the **Technical Owner**) or the owner of the data that is made available in the app (the **Business Owner**). The name and the contact email must be provided.
 
-Curators can manage the lists of custom owners as an administration task. For more details, see the [Owners](/developerportal/control-center/catalog-admin/#custom-owners) section of *Catalog Administration*.
+Curators can manage the lists of custom owners as an administration task. For more information, see the [Owners](/control-center/catalog-admin/#custom-owners) section of *Catalog*.
 
 To add a custom **Business Owner**, follow these steps:
 

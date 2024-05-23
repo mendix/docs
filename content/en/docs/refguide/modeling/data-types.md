@@ -1,7 +1,7 @@
 ---
 title: "Data Types"
 url: /refguide/data-types/
-category: "App Modeling"
+
 weight: 60
 description: "Presents an overview of the data types that Studio Pro supports."
 tags: ["studio pro"]

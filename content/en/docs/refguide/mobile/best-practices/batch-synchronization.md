@@ -1,7 +1,6 @@
 ---
 title: "Batch Synchronization"
 url: /refguide/mobile/best-practices/batch-synchronization
-category: Mobile
 weight: 30
 description: "This pattern lets you spread long synchronizations to multiple actions and present a progress to your users."
 tags: ["mobile", "best practices", "patterns", "offline-first", "synchronization"]
@@ -34,11 +33,11 @@ To implement this best practice, do the following:
     1. Set the offset of the retrieve to the parameter and the amount to a fixed value (for example, `100`).
     1. Sort the results by **changedDate**.
 
-    {{< figure src="/attachments/refguide/mobile/best-practices/batch-synchronization-1.png" alt="Microflow that retrieves objects with offset" class="image-border">}}
+    {{< figure src="/attachments/refguide/mobile/best-practices/batch-synchronization-1.png" alt="Microflow that retrieves objects with offset" >}}
 
 1. Create a microflow that returns the count of changed objects for a given synchronization date:
 
-    {{< figure src="/attachments/refguide/mobile/best-practices/batch-synchronization-2.png" alt="Microflow that returns the count of changed objects for a given synchronization date" class="image-border">}}
+    {{< figure src="/attachments/refguide/mobile/best-practices/batch-synchronization-2.png" alt="Microflow that returns the count of changed objects for a given synchronization date" >}}
 
 1. Change the nanoflow that triggers the synchronization to use a loop to trigger the synchronization repeatedly and track its progress:
     1. Add a parameter of type `SyncProgress` to the nanoflow.
@@ -49,7 +48,7 @@ To implement this best practice, do the following:
     1. Add a **Change Variable** action after the synchronization Microflow call and set the `Offset` variable to `$Offset + 100` (adjust to your chosen batch size).
     1. Set **SyncProgress/Progress** to reflect the current progress: `round($Offset div $Count * 100)`
 
-    {{< figure src="/attachments/refguide/mobile/best-practices/batch-synchronization-3.png" alt="Nanoflow with a loop to trigger the synchronization" class="image-border">}}
+    {{< figure src="/attachments/refguide/mobile/best-practices/batch-synchronization-3.png" alt="Nanoflow with a loop to trigger the synchronization" >}}
 
 1. Create a nanoflow called *DS_SyncProgress* to create and return a new `SyncProgress` object.
 1. Add a data view around the button that triggers the synchronization and set its data source to the nanoflow **DS_SyncProgress**.

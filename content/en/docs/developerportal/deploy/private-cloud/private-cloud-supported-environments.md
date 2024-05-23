@@ -37,8 +37,8 @@ If deploying to Red Hat OpenShift, you need to specify that specifically when cr
 
 Mendix for Private Cloud Operator `v2.*.*` is the latest version which officially supports:
 
-* Kubernetes versions 1.19 through 1.28
-* OpenShift 4.6 through 4.13
+* Kubernetes versions 1.19 through 1.30
+* OpenShift 4.6 through 4.15
 
 {{% alert color="warning" %}}
 Kubernetes 1.22 is a [new release](https://kubernetes.io/blog/2021/08/04/kubernetes-1-22-release-announcement/) which removes support for several deprecated APIs and features.
@@ -156,7 +156,7 @@ The EKS cluster should be configured so that it can [pull images from ECR](https
 
 Mendix Operator supports registry authentication with [workload identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity). The Mendix Operator will need a kubernetes service account [bound](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity#authenticating_to) to a [google service account](https://cloud.google.com/iam/docs/service-accounts) with permissions to authenticate to a registry.
 
-## 4 Databases
+## 4 Databases{#databases}
 
 The following databases are supported, and provide the features listed.
 

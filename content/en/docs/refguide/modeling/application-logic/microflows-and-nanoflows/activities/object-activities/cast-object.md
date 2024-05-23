@@ -19,7 +19,7 @@ For more information about specialization and generalization, see [Entities](/re
 
 An example of cast object properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/cast-object/cast-properties.png" alt="cast object properties" width="650px" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/cast-object/cast-properties.png" alt="cast object properties" width="650px" class="no-border" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
@@ -48,4 +48,4 @@ This is the name for the result of the cast. It can be used by all activities th
 
 For example, there are three specializations of the **Question** object. Only an object of the specialized type **MultipleChoiceQuestion** needs to have some special actions performed on it. These will be done in a sub-microflow which has the input type as **MultipleChoiceQuestion**. Since an object of the type **Question** cannot get passed to the sub-microflow, the object first needs to be cast to the object type **MultipleChoiceQuestion**.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/cast-object/cast-example.png" alt="Example of cast in a microflow" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/cast-object/cast-example.png" alt="Example of cast in a microflow" class="no-border" >}}

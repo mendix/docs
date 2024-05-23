@@ -1,7 +1,7 @@
 ---
 title: "Build Custom Widgets"
 url: /howto8/extensibility/widget-development/
-category: "Extensibility"
+
 weight: 30
 no_list: false
 description_list: true 
@@ -70,7 +70,7 @@ This category of how-to's presents in-depth information on how to build your own
 
 Most of the widgets in the [Mendix Marketplace](https://marketplace.mendix.com/) are open-source and available on GitHub. You can find the **View on GitHub** link on the right side of the Marketplace screen:
 
-{{< figure src="/attachments/howto8/extensibility/widget-development/appstore-github-link.png" >}}
+{{< figure src="/attachments/howto8/extensibility/widget-development/appstore-github-link.png" class="no-border" >}}
 
 ### 4.2 Learn by Doing
 

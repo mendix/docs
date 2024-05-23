@@ -1,7 +1,7 @@
 ---
 title: "Mini Surveys"
 url: /developerportal/app-insights/mini-surveys/
-category: "App Insights"
+
 weight: 6
 description: "The app development team can utilize Mendix's user-friendly [Mini Surveys](/appstore/modules/mendix-mini-surveys/) module to integrate surveys into their applications. This empowers the Product Owner (PO), Scrum Master, or the development team to craft surveys with personalized customizations, including survey goals, duration, and questionnaire types. After configuring the survey, end-users can conveniently submit their responses. Subsequently, the Product Owner, Scrum Master, or the team can analyze the survey results, extracting valuable insights."
 tags: ["mini survey", "app insights", "sprint", "developer portal"]
@@ -31,7 +31,7 @@ On the upper-left corner of the page, you can see the name of the app currently 
 
 The tabs of the **Survey Overview** page are described below.
 
-{{< figure src="/attachments/developerportal/app-insights/mini-surveys/survey-overview.png" >}}
+{{< figure src="/attachments/developerportal/app-insights/mini-surveys/survey-overview.png" class="no-border" >}}
 
 #### 2.1.1 Active Tab {#active}
 
@@ -96,7 +96,7 @@ On the **Settings** tab of **Survey Overview**, you can enable the test mode, an
 
 When you click a mini survey on the [Survey Overview](#survey-overview) page, the survey details page of the mini survey opens.
 
-{{< figure src="/attachments/developerportal/app-insights/mini-surveys/survey-details.png" >}}
+{{< figure src="/attachments/developerportal/app-insights/mini-surveys/survey-details.png" class="no-border" >}}
 
 On the upper-right corner, you can find the following buttons:
 

@@ -1,7 +1,7 @@
 ---
 title: "Backups"
 url: /developerportal/operate/backups/
-category: "Operations"
+
 weight: 40
 description: "Describes the Backups page of the Developer Portal."
 tags: ["Operate", "App", "Developer Portal", "Backup"]
@@ -40,7 +40,7 @@ The **Estimated Duration** indicates the period during which backups are expecte
 | Region      | Replication Region | Start Time (UTC) | Local Time | Estimated Duration |
 | ----------- | ------------------ | ---------------- | ---------- | ------------------ |
 | Bahrain     | Mumbai             | 03:00            | 06:00      | 1 hour             |
-| Canada      | Oregon             | 05:00            | 00:00      | 1 hour             |
+| Canada      | Canada West        | 05:00            | 00:00      | 1 hour             |
 | Cape Town   | Frankfurt          | 02:00            | 04:00      | 1 hour             |
 | Dublin      | Frankfurt          | 23:00            | 00:00      | 3 hours            |
 | Frankfurt   | Dublin             | 00:00            | 01:00      | 3 hours            |
@@ -69,7 +69,7 @@ The monthly backup occurs on the first Sunday of the month. If the first nightly
 
 The **Backups** page presents options for managing your backups. These are described below.
 
-{{< figure src="/attachments/developerportal/operate/backups/backup-controls.png" alt="" >}}
+{{< figure src="/attachments/developerportal/operate/backups/backup-controls.png" alt="" class="no-border" >}}
 
 ### 3.1 Create Backup
 
@@ -135,19 +135,31 @@ You can view details of a backup by clicking **More Options** ({{% icon name="th
 | **Snapshot Size Uncompressed (MB)** | The size of database dump and files of the snapshot in MB                                     |
 | **Comment**                         | A comment added to the backup                                                                 |
 
-{{< figure src="/attachments/developerportal/operate/backups/backup-details.png" alt="Backup Details" max-width=60% >}}
+{{< figure src="/attachments/developerportal/operate/backups/backup-details.png" alt="Backup Details" max-width=60% class="no-border" >}}
 
-## 4 Limitations
+## 4 Data Location {#data-location}
 
-### 4.1 Performance {#limitations-performance}
+Backups are always stored in at least one secondary location, separate from the primary hosting location. Each individual backup is immutable; in other words, once it has been written to Mendix’s storage location, it can no longer be modified or overwritten.
+
+For some regions, data is always stored in the same political region. This applies to the following regions:
+
+* Data in the EU, including backups, stays within the EU
+    * Data in the EU is not backed up in the UK
+    * Data in the UK is backed up in the EU
+* Data in the US, including backups, stays within the US
+* Data in Japan is backed up in Japan
+
+## 5 Limitations
+
+### 5.1 Performance {#limitations-performance}
 
 Mendix Cloud backups that contain a very large number of files (that is, greater than about 50,000) experience slow performance for all backup operations (create, download, restore, and upload). This is because of the inherent overhead associated with each file. As the number of files increases, the overhead becomes quite significant and can add several hours to the duration.
 
-### 4.2 Customizations {#limitations-customizations}
+### 5.2 Customizations {#limitations-customizations}
 
 Customization of the databases of apps in Mendix Cloud is not supported. This includes, but is not limited to, installing extensions and enabling or disabling specific features. Mendix does not support uploading and restoring backups of customized databases to Mendix Cloud. If you attempt to restore a backup of a customized database, the restore will likely fail. Note that customizing the database of an app in Mendix Cloud breaks the support and SLA for the app.
 
-## 5 Read More
+## 6 Read More
 
 * [Creating a Backup](/developerportal/operate/create-backup/)
 * [Downloading a Backup](/developerportal/operate/download-backup/)

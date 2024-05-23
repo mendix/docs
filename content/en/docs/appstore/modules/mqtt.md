@@ -1,7 +1,7 @@
 ---
 title: "MQTT"
 url: /appstore/modules/mqtt/
-category: "Connectors"
+
 description: "Describes the configuration and usage of the MQTT connector, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "mqtt", "iot"]
 aliases:
@@ -11,95 +11,97 @@ aliases:
 
 ## 1 Introduction
 
-You can use the [MQTT](https://marketplace.mendix.com/link/component/119508) connector with your Mendix app to communicate with an MQTT broker. [MQTT](https://mqtt.org/) is a lightweight internet of things (IoT) messaging protocol. 
+[MQTT](https://mqtt.org/) is a lightweight Internet of Things (IoT) messaging protocol. You can use the [MQTT](https://marketplace.mendix.com/link/component/119508) connector with your Mendix app to communicate with an MQTT broker.
 
-### 1.1 Typical Use Cases
+### 1.1 Features
 
-The MQTT Connector consists of microflow actions that enable doing the following:
+The MQTT connector consists of microflow actions that enable you to do the following:
 
-* Publishing data to the MQTT broker
-* Subscribing to the MQTT broker 
-* Unsubscribing from the MQTT broker
-
-### 1.2 Features
-
-The MQTT connector allows you to publish to, subscribe to, and unsubscribe from an MQTT broker.
+* Publish data to the MQTT broker
+* Subscribe to the MQTT broker 
+* Unsubscribe from the MQTT broker
 
 ## 2 Broker Configuration {#configuration}
 
 ### 2.1 Configuring the Broker {#configure-broker}
 
-Configure your broker connection information by adding the **ConnectionAdministration** page to your app, then running locally and setting up in that page. The **Connection Name**, **Broker host**, and **Broker port** fields point to the MQTT broker. 
+Configure your broker connection information by adding the **ConnectionAdministration** page to your app. Input your broker information, then set up and run the app locally. Enter the **Connection Name**, **Broker host**, and **Broker port**. 
 
-If the broker needs basic authentication for connection, then you can set up a username and password that will be stored in the domain model. See the [Authentication](#auth) section below.
+If the broker needs basic authentication to connect, you can set up a user name and password that is stored in the domain model. See the [Authentication](#auth) section below for more information. 
 
 #### 2.1.1 Creating a Broker Connection in a Microflow {#broker-microflow}
 
-You can set up a broker connection in a microflow directly if you do not want it to be [stored in the domain model](#configuration). To do this, follow these steps:
+You can set up a broker connection directly in a microflow if you do not want it to be [stored in the domain model](#configuration). To do this, follow these steps:
 
-1. In your microflow, use the [Create object](/refguide/create-object/) activity to create the **ConnectonDetail** object by providing the required parameters.
+1. In your microflow, use the [Create object](/refguide/create-object/) activity to create the **ConnectionDetail** object and provide the required parameters.
 2. Use the created **ConnectionDetail** object for **Publish**, **Subscribe**, or **Unsubscribe** operations.
 
-#### 2.2 Setting Up Authentication {#auth}
+#### 2.1.2 Setting Up Authentication {#auth}
 
-If an MQTT broker needs a username and password for connection, set credentials on the **ConnectionAdministration** page. Set the **Authentication method** to **BASIC**, and then set the values for **UserName** and **Password**.
+If an MQTT broker needs a user name and password for connection, set credentials on the **ConnectionAdministration** page. Set the **Authentication method** to **BASIC**, then set the values for **UserName** and **Password**.
 
 Setting the **Authentication method** to **NONE** indicates that authentication is not required to connect to the MQTT broker. 
 
 The **Password** is encrypted using the **EncryptionKey** constant. For better security, it is advised to change the **EncryptionKey** constant after importing the MQTT connector.
 
-#### 2.1.2 Enabling SSL
+#### 2.1.3 Enabling SSL
 
-Enabling SSL will establish a secure connection to the broker. To input your SSL certificates, follow these steps:
+Enabling SSL establishes a secure connection to the broker. To input your SSL certificates, follow these steps:
 
 1. Open your certificates file in any text editor. 
-2. Copy all content of the file and paste it to the **CA Certificate** and **Client Certificate** fields. Certificates start with `-----BEGIN CERTIFICATE-----` and end with `-----END CERTIFICATE-----`. Client keys typically start with `-----BEGIN RSA PRIVATE KEY-----` or `-----BEGIN PKCS7-----`.
-3. Add the **Client Certificate Key** and the **Certificate password** if one was set.
+2. Open the **ConnectionAdministration** page and use the toggle to enable SSL.
+3. Copy all content of the file and paste it to the **CA Certificate** and **Client Certificate** fields. 
+   * Certificates start with `-----BEGIN CERTIFICATE-----` and end with `-----END CERTIFICATE-----`. 
+4. Add the **Client Certificate Key** and the **Certificate password** if one was set.
+    * Client keys typically start with `-----BEGIN RSA PRIVATE KEY-----` or `-----BEGIN PKCS7-----`.
     * Currently supported certificate types are X.509 format (*.crt*, *.cer*)
     * Currently supported key types are X.509 format (*.pem*, *.pkcs*)
 
 ## 3 Usage
 
-To use the MQTT Connector, make sure you have [configured the broker connection](#configure-broker), or [create a broker connection directly in a microflow](#broker-microflow). 
+To use the MQTT connector, make sure you have [configured the broker connection](#configure-broker), or [created a broker connection directly in a microflow](#broker-microflow). 
 
-Build microflows that use the connection details from the domain model to connect, and set up connection details using the domain model. Include microflows that first use the connection details from the domain model to connect, before the subscribe or publish actions can be performed.
+You can build microflows that use the connection details provided by the domain model, or set up connection details within the domain model itself. The microflows should use the connection details from the domain model to establish a connection with the broker before completing Subscribe or Publish actions.
 
-### 3.2 Microflow Actions
+### 3.1 Microflow Actions
 
-After you have set up the connection with the broker (in the [Configuration](#configuration) section or in a microflow), you can use the actions Publish, Subscribe, or Unsubscribe. These actions are used in microflows. The **SampleUses** microflow gives a sample setup for your reference.
+After you have set up the broker connection (in the [Configuration](#configuration) section or in a microflow), you can **Publish**, **Subscribe**, or **Unsubscribe** in a microflow. The **SampleUses** microflow displays a sample setup to reference.
 
-#### 3.2.1 Publish
+#### 3.1.1 Publish
 
 To publish data to the MQTT broker, follow these steps:
 
-1. Search for *Publish MQTT* in the **Toolbox**.
-2. Drag the *Publish MQTT* event into your microflow.
+1. Search for **Publish MQTT** in the **Toolbox**.
+2. Drag the **Publish MQTT** event into your microflow.
 3. Edit the event to include the following details:
-    * **Topic** – topic to which the payload is published
-    * **Payload** – string message to be published
-    * [QoS (Quality of Service)](https://www.eclipse.org/paho/files/mqttdoc/MQTTClient/html/qos.html) – an attribute of each message being published
-    * **Retained** – the retained setting serves two purposes depending on whether the message it is associated with is being published or received:
-        * **Retained** set to **Yes** – For messages being published, setting Retained to Yes indicates that the MQTT server should retain a copy of the message. The message will then be transmitted to new subscribers to a topic that matches the message topic. For subscribers registering a new subscription, the flag being true indicates that the received message is not a new one, but one that has been retained by the MQTT server.
-        * **Retained** set to **No** – For publishers, this indicates that this message should not be retained by the MQTT server. For subscribers, it indicates this is a normal message, received as a result of it being published to the server.
+    * **Connection detail** - Select the **ConnectionDetail** object to specify where to publish to.
+    * **Topic** – Define topic to which the payload is published.
+    * **Payload** – Choose a string message to be published.
+    * [Qo S (Quality of Service)](https://www.eclipse.org/paho/files/mqttdoc/MQTTClient/html/qos.html) – Choose an attribute of each message that is being published
+    * **Retained** – The retained setting serves two purposes depending on if the message it is associated with is being published or received:
+        * **true** – For messages being published, selecting **true** indicates the MQTT server should retain a copy of the message. The message is transmitted to new subscribers to a topic that matches the message topic. For subscribers registering a new subscription, if the flag is **true**, it indicates the received message has been retained by the MQTT server.
+        * **false** – For publishers, selecting **false** indicates the message should not be retained by the MQTT server. For subscribers, this indicates it is a normal message that was received as a result of it being published to the server.
 
-#### 3.2.2 Subscribe
+#### 3.1.2 Subscribe
 
 To subscribe to the MQTT broker, follow these steps:
 
-1. Search for *Subscribe MQTT* in the **Toolbox**.
-2. Drag the *Subscribe MQTT* event into your microflow.
+1. Search for **Subscribe to MQTT** in the **Toolbox**.
+2. Drag the **Subscribe to MQTT** event into your microflow.
 3. Edit the event to include the following details:
-    * **Topic** – topic to subscribe to
-    * **OnMessageMicroflow** – microflow to be executed when a message is received on subscribed topic
-    * [QoS (Quality of Service)](https://www.eclipse.org/paho/files/mqttdoc/MQTTClient/html/qos.html) – an attribute of each message being published
+    * **Connection detail** - Select the **ConnectionDetail** entity to subscribe to.
+    * **Topic** – Define the topic to subscribe to.
+    * **OnMessageMicroflow** – Identify the microflow to be executed when a message is received on subscribed topic.
+    * [QoS (Quality of Service)](https://www.eclipse.org/paho/files/mqttdoc/MQTTClient/html/qos.html) – Choose an attribute for each message that is being published.
 
 When subscribing to a topic, define in the subscribe action which microflow is triggered for each message, and that the topic and payload is passed on into that microflow.
 
-#### 3.2.3 Unsubscribe
+#### 3.1.3 Unsubscribe
 
 To unsubscribe from the MQTT broker, follow these steps:
 
-1. Search for *Unsubscribe MQTT* in the **Toolbox**.
-2. Drag the *Unsubscribe MQTT* event into your microflow.
+1. Search for **Unsubscribe from MQTT** in the **Toolbox**.
+2. Drag the **Unsubscribe from MQTT** event into your microflow.
 3. Edit the event to include the following details:
-    * **Topic** – topic to unsubscribe from
+    * **Connection detail** - Select the **ConnectionDetail** entity to unsubscribe from.
+    * **Topic** – Define topic to unsubscribe from.

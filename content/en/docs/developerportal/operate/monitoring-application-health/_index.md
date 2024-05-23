@@ -1,7 +1,7 @@
 ---
 title: "Alerts"
 url: /developerportal/operate/monitoring-application-health/
-category: "Operations"
+
 weight: 20
 description: "Describes how to monitor the health and status of your app."
 tags: ["Monitoring","Mendix Cloud","Developer Portal","Performance","Health", "Database IOPS Burst Balance", "Database Freeable Memory"]
@@ -35,11 +35,11 @@ Mendix Cloud automatically monitors the health and status of apps that are deplo
 1. From the [Developer Portal](https://home.mendix.com), open the app that you want to monitor.
 2. In the [navigation pane](/developerportal/#navigation-pane), click **Alerts**. This displays the status of your app node in various categories.
 
-    {{< figure src="/attachments/developerportal/operate/monitoring-application-health/application-status.png" >}}
+    {{< figure src="/attachments/developerportal/operate/monitoring-application-health/application-status.png" class="no-border" >}}
 
 3. To view more details about a specific alert, click it. Detailed information about that alert will appear below the alert status table.
 
-    {{< figure src="/attachments/developerportal/operate/monitoring-application-health/alert-details.png" >}}
+    {{< figure src="/attachments/developerportal/operate/monitoring-application-health/alert-details.png" class="no-border" >}}
 
 You may be able to use this information to resolve the issue yourself; otherwise, include this information when submitting a support request to [Mendix Support](https://support.mendix.com). You can download a log of the alerts on the [Logs](/developerportal/operate/logs/) page.
 
@@ -60,14 +60,6 @@ Example message | No runtime heartbeat received for 8m45s.
 Warning Threshold | Not used.                                              |
 Critical Threshold | If the runtime heartbeat of the application has not been received for 5 minutes, a critical alert will be generated.
 First actions to take | Check the application logs for issues. Also check [Mendix Platform Status](https://status.mendix.com/) for any planned maintenance.                         |
-
-Application Container CPU Percentage | |
-:---|:---|
-Description | Track the CPU utilization of the application container |
-Example message | Application container 34234543-6543-6543-6543-153d247b6543 - Instance Index: 0 has high CPU usage: 90.5
-Warning Threshold | CPU utilization is between 75% and 85%. |
-Critical Threshold | CPU utilization is higher than 85%.
-First actions to take | Inspect the metrics for **CPU usage** combined with all **Application Statistics** for anomalies and correlate those with application behavior. |
 
 Application Container Disk Percentage | |
 :---|:---|
@@ -169,7 +161,7 @@ To access the history of the alerts from your app, follow these steps:
 2. Select the environment that you wish to see alert history for.
 3. You will see an overview of all alerts that have been sent for this application.
 
-    {{< figure src="/attachments/developerportal/operate/monitoring-application-health/alerts-history.png" >}}
+    {{< figure src="/attachments/developerportal/operate/monitoring-application-health/alerts-history.png" class="no-border" >}}
 
     The overview shows alert types and details, including date and time. The alert types provide a broad indication of the type of error that occurred, such as critical log messages or failures of the health check microflow. Recovery notifications are also shown here.
 

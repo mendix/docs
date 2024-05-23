@@ -5,7 +5,7 @@ url: /appstore/partner-solutions/ats/rg-one-execute-javascript-webelement/
 
 ## 1 Description
 
-Executes the provided javascript snippet.
+Executes the provided JavaScript snippet.
 Runs asynchronous when Timeout is set.
 Returns a string.
 

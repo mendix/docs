@@ -1,7 +1,7 @@
 ---
 title: "Settings"
 url: /developerportal/collaborate/general-settings/
-category: "General"
+
 weight: 14
 description: "Describes general settings of your app."
 tags: ["Settings", "App", "Developer Portal"]
@@ -19,7 +19,7 @@ The **Settings** page presents an overview of your app.
 
 On the top of the page, you can see the image of the app, the app name, and the company that owns the app. You can also find the **Watch** / **Stop Watching** toggle, which enables or disables notifications for this app.
 
-{{< figure src="/attachments/developerportal/general/settings/general-information.png"  >}}
+{{< figure src="/attachments/developerportal/general/settings/general-information.png"  class="no-border" >}}
 
 {{% alert color="info" %}}
 Only users with the **App Settings** permission can edit the image and the app name.
@@ -126,7 +126,7 @@ In **API Keys**, there is an overview of the API keys created for your app with 
 * Date of **Creation**
 * Date **Last Used**
 
-{{< figure src="/attachments/developerportal/general/settings/keys.png"   width="800"  >}}
+{{< figure src="/attachments/developerportal/general/settings/keys.png"   width="800"  class="no-border" >}}
 
 To create a new app-specific API key, click **Create New API Key**  and follow these steps:
 
@@ -134,8 +134,6 @@ To create a new app-specific API key, click **Create New API Key**  and follow t
 2. Click **Generate API Key** to be able to use the app API key.
 
 {{% alert color="warning" %}}For security reasons, the app API key will only be displayed once, during **Step 2 of 2**. It will not be displayed again.{{% /alert %}}
-
-You use these API keys to authenticate requests to the [Stories API](/apidocs-mxsdk/apidocs/stories-api/).
 
 To delete an app API key, click **Revoke**.
 
@@ -147,11 +145,9 @@ Only users with the **App Settings** permission can manage these settings.
 
 On the **Project Management** tab, you can select your team's planning tool for the app. By default, [Epics](/developerportal/project-management/epics/) is the selected tool.
 
-It is possible to migrate all or part of your content from Stories to Epics. For details, see the [How to Migrate Stories to Epics](/developerportal/project-management/epics/planning/#data-migration) section in *Planning*.
-
 If you manage your projects in Jira, you can connect your apps in the Developer Portal to Jira. For more information, see [Jira Connector](/developerportal/project-management/jira-connector/).
 
-{{< figure src="/attachments/developerportal/general/settings/story-switcher.png" width="700"  >}}
+{{< figure src="/attachments/developerportal/general/settings/story-switcher.png" width="700"  class="no-border" >}}
 
 ## 7 History {#history}
 
@@ -161,7 +157,7 @@ Only users with the **App Settings** permission can view the history.
 
 The **History** tab presents the collaboration actions for the app. On this page, you can see what change was made, who performed it, and when it occurred:
 
-{{< figure src="/attachments/developerportal/general/settings/history.png"   width="700"  >}}
+{{< figure src="/attachments/developerportal/general/settings/history.png"   width="700"  class="no-border" >}}
 
 When you select a history item and click **Show item**, the details of the story, Sprint, or [feedback item](/developerportal/app-insights/feedback/) will be presented.
 
@@ -173,7 +169,7 @@ Once you have switched from Mendix Stories to Epics or Jira, Mendix archives any
 Mendix will keep this data until October 1, 2024. Until then, you will be able to export it to Excel in case you need an offline copy. Mendix strongly urges you to download your work before that date.
 {{% /alert %}}
 
-{{< figure src="/attachments/developerportal/general/settings/story-archive.png" width="700"  >}}
+{{< figure src="/attachments/developerportal/general/settings/story-archive.png" width="700"  class="no-border" >}}
 
 ## 9 Read More
 

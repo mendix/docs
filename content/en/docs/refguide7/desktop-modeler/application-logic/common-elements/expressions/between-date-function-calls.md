@@ -1,6 +1,7 @@
 ---
 title: "Between Date Function Calls"
 url: /refguide7/between-date-function-calls/
+canonical_url: "https://docs.mendix.com/refguide/between-date-function-calls/"
 ---
 
 Functions for calculating the differences between two dates.

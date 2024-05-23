@@ -43,7 +43,7 @@ To set up a new Datadog account and access your API key as a new Datadog user, f
 2. Complete the account setup steps: enter your desired account details, describe your stack, and install a Datadog agent. You must set up an agent to continue, so select one of the installation options presented on the *Install Your First Datadog Agent* page.
 3. Copy the value of the API key shown in the installation script. The key name varies depending on the agent you are installing, but it will be something like `api-key`, `datadog_api_key`, or `DD_API_KEY`.
 
-    {{< figure src="/attachments/developerportal/operate/metrics/datadog-metrics/dd-api-key.png" alt="Agent script shows your API key" >}}
+    {{< figure src="/attachments/developerportal/operate/metrics/datadog-metrics/dd-api-key.png" alt="Agent script shows your API key" class="no-border" >}}
 
 4. Follow the instructions in [Connecting Your Node to Datadog](#connect-node), below, to start using the API key with your app.
 
@@ -54,11 +54,11 @@ To find your existing API key or to request a new key for your app as an existin
 1. Log in to your Datadog account.
 2. In the navigation menu, click **Go to** to launch the search dialog box. Search for *API Keys*.
 
-    {{< figure src="/attachments/developerportal/operate/metrics/datadog-metrics/datadog-integrations-api.png" alt="API Keys search results" width=400 >}}
+    {{< figure src="/attachments/developerportal/operate/metrics/datadog-metrics/datadog-integrations-api.png" alt="API Keys search results" width=400 class="no-border" >}}
 
 3. Copy an existing API key or create a new one.
 
-    {{< figure src="/attachments/developerportal/operate/metrics/datadog-metrics/datadog-api-keys.png" alt="Datadog site: API Keys page" >}}
+    {{< figure src="/attachments/developerportal/operate/metrics/datadog-metrics/datadog-api-keys.png" alt="Datadog site: API Keys page" class="no-border" >}}
 
 4. Follow the instructions in [Connecting Your Node to Datadog](#connect-node), below, to start using the API key with your app.
 
@@ -72,7 +72,7 @@ To send your runtime information to Datadog, you need to provide the Datadog API
 4. Click **Add** in the **Custom Environment Variables** section.
 5. In the **Name** field, select **DD_API_KEY**.
 
-    {{< figure src="/attachments/developerportal/operate/metrics/datadog-metrics/environment-variable-dd-api-key.png" alt="Drop-down list containing custom environment variable names" width=400 >}}
+    {{< figure src="/attachments/developerportal/operate/metrics/datadog-metrics/environment-variable-dd-api-key.png" alt="Drop-down list containing custom environment variable names" width=400 class="no-border" >}}
 
 6. In the **Value** field, enter the Datadog API key that you obtained in the [Datadog API Key](#datadog-api-key) section, above.
 7. Click **Save**.
@@ -89,13 +89,13 @@ Once you have connected your node to Datadog, you can install the Mendix integra
 1. Sign in to your Datadog account.
 2. Go to **Integrations** and search for *Mendix*.
 
-    {{< figure src="/attachments/developerportal/operate/metrics/datadog-metrics/datadog-mendix-integration.png" alt="" >}}
+    {{< figure src="/attachments/developerportal/operate/metrics/datadog-metrics/datadog-mendix-integration.png" alt="" class="no-border" >}}
 
 3. Install the Mendix integration.
 4. Go to **Dashboards** > **Dashboard List** and open the **Mendix Application Overview** dashboard.
 5. To view data on the dashboard, use the drop-down lists to select a Mendix app, environment, and instance.
 
-    {{< figure src="/attachments/developerportal/operate/metrics/datadog-metrics/mendix-application-overview.png" alt="" >}}
+    {{< figure src="/attachments/developerportal/operate/metrics/datadog-metrics/mendix-application-overview.png" alt="" class="no-border" >}}
 
 If you want to customize the dashboard, clone it and modify the clone. Alternatively, you can build your own dashboard from scratch.
 
@@ -152,13 +152,13 @@ To set these tags, do the following:
 1. Go to the **Environments** page of your app in the Developer Portal.
 2. Click **Details** on an environment you are monitoring with Datadog. 
 3. Switch to the **Tags** tab.
-    {{< figure src="/attachments/developerportal/operate/metrics/datadog-metrics/set-tags.png" alt="Example metric showing tags in Datadog" >}}
+    {{< figure src="/attachments/developerportal/operate/metrics/datadog-metrics/set-tags.png" alt="Example metric showing tags in Datadog" class="no-border" >}}
 4. Click **Add** and type in a string to be sent to Datadog as a tag.
 5. Restart your app.
 
 Setting these values for your app causes all metrics from this environment of your app to have these tags. For example, the tags for `mx.microflow.time.avg` for this set of metrics include `app:customermanagement` and `env:accp`.
 
-{{< figure src="/attachments/developerportal/operate/metrics/datadog-metrics/datadog-summary-tags.png" alt="Example metric showing tags in Datadog" >}}
+{{< figure src="/attachments/developerportal/operate/metrics/datadog-metrics/datadog-summary-tags.png" alt="Example metric showing tags in Datadog" class="no-border" >}}
 
 {{% alert color="info" %}}
 You can add more tags if you want, but note that Datadog may charge for custom metrics. For more information, see [Custom Metrics Billing](https://docs.datadoghq.com/account_management/billing/custom_metrics) on the Datadog site.
@@ -173,7 +173,7 @@ To view metrics for multiple instances of an application on the Datadog dashboar
 3. In the **from** field, specify your desired app environment's **Environment ID**. Use the format `application_name:<environment id>`.
 4. In the **avg by** field, select **instance_index**.
 
-{{< figure src="/attachments/developerportal/operate/metrics/datadog-metrics/datadog-metrics-explorer.png" alt="Metrics Explorer search form" >}}
+{{< figure src="/attachments/developerportal/operate/metrics/datadog-metrics/datadog-metrics-explorer.png" alt="Metrics Explorer search form" class="no-border" >}}
 
 If the app has more than one instance, you will see lines on the graph for each instance.  
 

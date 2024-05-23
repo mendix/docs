@@ -1,7 +1,7 @@
 ---
 title: "Managing App Signing Keys"
 url: /refguide8/managing-app-signing-keys/
-category: "Mobile"
+
 weight: 21
 tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -89,7 +89,7 @@ To generate a keystore for Android, follow these steps:
 2. Open your **Command Prompt** and run your new *keytool.exe* located in your JDK’s bin folder.
 3. The *keytool.exe* program can be found in the bin directory of your Java installation (for example: *C:\Program Files\Java\jre1.8.0_20\bin*):
 
-    {{< figure src="/attachments/refguide8/mobile/managing-app-signing-keys/cmdjdkexe.png" alt="keytool location" >}}
+    {{< figure src="/attachments/refguide8/mobile/managing-app-signing-keys/cmdjdkexe.png" alt="keytool location" class="no-border" >}}
 
 4. Type in the following command line prompt while still pointing to the *keystore.exe*: 
 
@@ -99,11 +99,11 @@ To generate a keystore for Android, follow these steps:
 
     Be sure to replace `YOUR_ALIAS_NAME` and `YOUR_ALIAS_PWD` with your alias name and password:
 
-    {{< figure src="/attachments/refguide8/mobile/managing-app-signing-keys/ktoolsetup.png" alt="name and password" >}}
+    {{< figure src="/attachments/refguide8/mobile/managing-app-signing-keys/ktoolsetup.png" alt="name and password" class="no-border" >}}
 
 5. Answer the subsequent questions, click **Enter** after each question, and type *yes* when asked to confirm your information: 
 
-    {{< figure src="/attachments/refguide8/mobile/managing-app-signing-keys/qanda.png" alt="info questions" >}}
+    {{< figure src="/attachments/refguide8/mobile/managing-app-signing-keys/qanda.png" alt="info questions" class="no-border" >}}
 
 6. Finishing these questions generates a keystore which will be saved into a *file.keystore* file in your current working directory. 
 

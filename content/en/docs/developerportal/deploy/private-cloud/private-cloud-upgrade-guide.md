@@ -51,10 +51,10 @@ You must have the *OpenShift CLI* installed for upgrading Mendix for Private Clo
 
 1. Follow the instructions to [Run the Configuration Tool](/developerportal/deploy/standard-operator/#running-the-tool). You will see the initial screen:
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-upgrade-guide/mxpc-cli-welcome.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-upgrade-guide/mxpc-cli-welcome.png" class="no-border" >}}
 2. Click **Upgrade Namespace**. You will see the screen below:
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-upgrade-guide/upgrade-wizard.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-upgrade-guide/upgrade-wizard.png" class="no-border" >}}
 
 ### 3.1 Automatic Upgrade Mode
 

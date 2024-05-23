@@ -1,7 +1,6 @@
 ---
 title: "Getting Started with Mobile"
 url: /refguide/mobile/getting-started-with-mobile/
-category: Mobile
 weight: 10
 description: Create a native mobile Mendix app and view it on a mobile device using the Make It Native test app.
 aliases:
@@ -69,7 +68,7 @@ Viewing your app on a mobile device will allow you to test native features and o
 2. Start the Make It Native app by tapping its icon on your device.
 3. Tap the  **Scan a QR Code** button:
 
-    {{< figure src="/attachments/howto/mobile/native-mobile/get-started/getting-started-with-native-mobile/scan-qr.png" alt="Scan QR Code"   width="500"  >}}
+    {{< figure src="/attachments/howto/mobile/native-mobile/get-started/getting-started-with-native-mobile/scan-qr.png" alt="Scan QR Code"   width="500"  class="no-border" >}}
 
 4. If prompted, grant the app permission to access your device's camera.
 5. Point your mobile device's camera at the QR code. It will automatically launch your test app on your mobile device.
@@ -82,7 +81,7 @@ Now you can see your app on your device. While this is just a template app, when
 
 You may notice an **Enable dev mode** toggle on the Make It Native app home page. Turning this toggle on will give you more detailed warning messages during error screens, as well as additional functionality on the developer app menu:
 
-{{< figure src="/attachments/howto/mobile/native-mobile/get-started/getting-started-with-native-mobile/enable-dev-mode.png" alt="enable dev mode"   width="500"  >}}
+{{< figure src="/attachments/howto/mobile/native-mobile/get-started/getting-started-with-native-mobile/enable-dev-mode.png" alt="enable dev mode"   width="500"  class="no-border" >}}
 
 ### 3.4 Viewing Changes to Your App on Your Testing Device {#viewingchanges}
 
@@ -90,7 +89,7 @@ To see how changes made in Mendix Studio Pro are displayed live on your testing 
 
 1. Put a text widget on your app's home page. Then, write some text into it. In this example, "Native rules!" has been added: 
 
-    {{< figure src="/attachments/howto/mobile/native-mobile/get-started/getting-started-with-native-mobile/new-text-studiopro.png" alt="new studio pro text" >}}
+    {{< figure src="/attachments/howto/mobile/native-mobile/get-started/getting-started-with-native-mobile/new-text-studiopro.png" alt="new studio pro text" class="no-border" >}}
 
 2. Click **Run Locally** ({{% icon name="controls-play" %}}) to automatically update the running app on your device, and see your new text. When you click **Run Locally**, your app will automatically reload while keeping state. 
 

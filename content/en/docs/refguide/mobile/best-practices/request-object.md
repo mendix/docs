@@ -1,7 +1,6 @@
 ---
 title: "Request Object"
 url: /refguide/mobile/best-practices/request-object/
-category: Mobile
 weight: 50
 description: "This pattern lets you capture changes as objects and apply them after synchronization making these changes more secure."
 tags: ["mobile", "best practices", "patterns", "offline-first", "synchronization"]
@@ -25,18 +24,18 @@ To implement this pattern, do the following:
 
 1. Create one or more entities to store the changes that the offline client can make. The example below adds **TemplateOrder** and **TemplateOrderPosition** to allow creating orders with order positions while offline:
 
-    {{< figure src="/attachments/refguide/mobile/best-practices/request-object-1.png" alt="Example domain model with several entities and associations" class="image-border">}}
+    {{< figure src="/attachments/refguide/mobile/best-practices/request-object-1.png" alt="Example domain model with several entities and associations" >}}
 
 1. Enable **Store owner** for these entities and limit access to objects owned by the user.
 1. Change your offline client to create and edit only request objects.
 1. Create a microflow that applies the changes. 
 1. In the microflow, retrieve the request objects and apply the stored changes to your domain model. The example below creates **Order** and **OrderPosition** objects based on the request objects (and reduces **Stock** count):
 
-    {{< figure src="/attachments/refguide/mobile/best-practices/request-object-2.png" alt="Microflow that applies changes to multiple objects based on the instructions stored in a request object" class="image-border">}}
+    {{< figure src="/attachments/refguide/mobile/best-practices/request-object-2.png" alt="Microflow that applies changes to multiple objects based on the instructions stored in a request object" >}}
 
 1. Create a nanoflow that triggers the microflow listed above. Ensure that all request objects are synchronized before and (if changed in the process) after calling the microflow:
 
-    {{< figure src="/attachments/refguide/mobile/best-practices/request-object-3.png" alt="Nanoflow that synchronized the request object and then triggers the Microflow to apply it" class="image-border">}}
+    {{< figure src="/attachments/refguide/mobile/best-practices/request-object-3.png" alt="Nanoflow that synchronized the request object and then triggers the Microflow to apply it" >}}
 
 ## 5 Recommendations
 

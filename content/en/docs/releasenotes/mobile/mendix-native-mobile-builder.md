@@ -1,7 +1,7 @@
 ---
 title: "Mendix Native Mobile Builder"
 url: /releasenotes/mobile/mendix-native-mobile-builder/
-category: "Mobile"
+
 weight: 11
 description: "Mendix Native Mobile Builder release notes."
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
@@ -219,7 +219,7 @@ App Center's CodePush OTA page improvements:
 #### Fixes
 
 * We identified and fixed a bug with AppCenter's CodePush OTA not respecting the user's platform of choice. If one of the platforms was missing an App Center build configuration, the OTA build button would remain falsely disabled.
-* We fixed an issue with missing asset files for newly-created Github projects when building in **Advanced** mode.
+* We fixed an issue with missing asset files for newly created GitHub projects when building in **Advanced** mode.
 * We identified and fixed a bug with Firebase configuration's validation when changes are made to the **App Identifier**.
 
 ### Release 1.0.90

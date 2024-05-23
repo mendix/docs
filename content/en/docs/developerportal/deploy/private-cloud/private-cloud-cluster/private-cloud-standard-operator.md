@@ -24,22 +24,22 @@ If you are not already on the installation tab for your namespace, go to it by f
 
 1. Go to the Cluster Manager page by clicking **Cluster Manager** in the top menu of the **Clouds** page of the Developer Portal.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-manager.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-manager.png" class="no-border" >}}
 
 2. Click the **Details** icon next to the namespace you want to use.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-details.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-details.png" class="no-border" >}}
 
 3. Select **Installation** from the navigation bar to the left of the page.
 
 Now you can download the Configuration Tool by doing the following:
 
 1. Choose the **Operating System** for your local computer.
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/choose-operating-system.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/choose-operating-system.png" class="no-border" >}}
 
 2. Click **Download Executable**.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/download-executable.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/download-executable.png" class="no-border" >}}
 
 3. Choose the **Mendix Operator Version** that you would like to install. If you have already installed the Mendix Operator, your currently installed version will be highlighted.
 
@@ -51,7 +51,7 @@ Now you can download the Configuration Tool by doing the following:
 
     {{% alert color="info" %}}The installation and configuration tool only supports a limited range of Mendix Operator versions. If the Mendix Operator version in your namespace is too new or too old, the configuration tool will not be able to configure it. Download a version of the configuration tool that is compatible with the Mendix Operator you have installed. Both the ARM and AMD versions of the mxpc-cli tool are available to download.{{% /alert %}}
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/download-operator-version.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/download-operator-version.png" class="no-border" >}}
 
 4. Click the **Download** icon to download the installation and configuration tool. Make sure that it is stored somewhere on your path.
 
@@ -67,17 +67,17 @@ You can do this as follows:
 
 2. Click **Copy Login Command** in the user drop-down.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image9.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image9.png" class="no-border" >}}
 
 3. Choose your IdP (Identity Provider).
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image10.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image10.png" class="no-border" >}}
 
 4. Click **Display Token**.
 
 5. Copy the command under **Log in with this token**.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image11.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image11.png" class="no-border" >}}
 
 6. Paste the command into your command line terminal and press Enter.
 
@@ -89,7 +89,7 @@ To install in non-interactive mode please see: [Install and Configure Mendix for
 
 1. Copy the **Installation Command** by clicking **Copy to clipboard**.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/installation-command.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/installation-command.png" class="no-border" >}}
 
 2. Paste the command into your command line terminal and press <kbd>Enter</kbd>
 
@@ -97,7 +97,7 @@ To install in non-interactive mode please see: [Install and Configure Mendix for
 
     You will see the configuration options on the screen and will be guided through filling in the information needed.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/post-install-landing-page.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/post-install-landing-page.png" class="no-border" >}}
 
     {{% alert color="info" %}}Mendix recommends running the Configuration Tool in a fully-maximized terminal window to ensure that all options are visible.{{% /alert %}}
 
@@ -116,7 +116,7 @@ If the Mendix Operator and the Mendix Gateway Agent have not been installed in y
 4. Click **Run Installer** to install the Mendix Operator and Mendix Gateway Agent in your cluster.
     You will see the screen below.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/installer-options.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/installer-options.png" class="no-border" >}}
 
     {{% alert color="info" %}}The installation is successful if the **Installer output** ends with **Done**.{{% /alert %}}
 
@@ -147,7 +147,7 @@ For example, if you'd like to change the database hostname, or if you exited wit
 * Press **OK** to restore all filled forms to their valued values from the previous session.
 * Press **Cancel** to start with empty form fields (for example, to create an additional database plan).
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/configure-namespace.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/configure-namespace.png" class="no-border" >}}
 
 The options do the following:
 
@@ -164,7 +164,7 @@ The options do the following:
 
     You will be shown the **Installation wizard** landing page.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/installation-wizard.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/installation-wizard.png" class="no-border" >}}
 
 3. Click the appropriate button at the bottom of the page to navigate to the setup page for each resource which you need to configure. Alternatively, use the allocated function keys (for example <kbd>F2</kbd> for the **Database Plan**).
 
@@ -286,7 +286,7 @@ In order for the Mendix Operator to trust such certificates, you need to add the
 
 2. Paste the name of this `custom.crt` secret (the `{secret}` used in the commands above) into the **CA Certificates Secret Name** field (for example, `mendix-custom-ca`):
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/custom-tls-config.png" alt="Custom TLS configuration" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/custom-tls-config.png" alt="Custom TLS configuration" class="no-border" >}}
 
 These custom CAs will be trusted by:
 
@@ -313,23 +313,23 @@ When you have configured all the resources, do the following:
 
 1. Press <kbd>F7</kbd> to **Review and Apply**.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/review-and-apply.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/review-and-apply.png" class="no-border" >}}
 
 2. Click **Evaluate Configuration** to check the configuration.
 
     Resources which are correctly configured will have a status **Valid configuration**. If an resource is incorrectly configured, it will have a status **Invalid configuration: …** and an explanation of the issue.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/evaluate-configuration.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/evaluate-configuration.png" class="no-border" >}}
 
 3. Once you have evaluated the configuration, click **Write YAML** to save a copy of the configuration .yml files on your local machine.
 
     The **Installer output** panel will display the locations of the saved files.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/write-yaml.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/write-yaml.png" class="no-border" >}}
 
 4. Click **Apply Configuration** to apply the configuration to your namespace.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/apply-configuration.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/apply-configuration.png" class="no-border" >}}
 
     Once the configuration has been applied you will see the message **Successfully applied all the configuration!**.
 
@@ -339,4 +339,4 @@ When you have configured all the resources, do the following:
 
 When using a connected cluster, its status will be shown as **Connected** in the Developer Portal when the namespace is configured correctly. You may need to click the **Refresh** button if the screen does not update automatically.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image22.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image22.png" class="no-border" >}}

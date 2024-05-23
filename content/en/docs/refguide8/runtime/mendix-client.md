@@ -1,7 +1,7 @@
 ---
 title: "Mendix Client"
 url: /refguide8/mendix-client/
-category: "Mendix Runtime"
+
 description: "A description of the Mendix Client part of the runtime and how it functions"
 weight: 20
 tags: ["runtime", "mendix client", "offline-first", "browser", "javascript", "nanoflows", "widgets", "launch"]
@@ -33,7 +33,7 @@ A **Hybrid application**, for most purposes, can be treated as an app running in
 
 Below is a chart showing the components of the Mendix Client. Each of the components is described below the chart.
 
-{{< figure src="/attachments/refguide8/runtime/mendix-client/mendix-client.png" alt="The makeup of the Mendix Client" >}}
+{{< figure src="/attachments/refguide8/runtime/mendix-client/mendix-client.png" alt="The makeup of the Mendix Client" class="no-border" >}}
 
 ### 2.1 Client Core
 
@@ -48,7 +48,7 @@ Mendix apps do not modify the client core, all logic is held in the model. Howev
 
 These are the fundamental building blocks of the Mendix Client. All the actions which the client takes are controlled by widgets. They are responsible for what is displayed on pages, and how user input is managed. There is a more detailed description of widgets in [Widgets](#widgets), below.
 
-### 2.3 Javascript Actions
+### 2.3 JavaScript Actions
 
 This runs custom JavaScript, added by the app developer, which is held as JavaScript actions in the client config.
 

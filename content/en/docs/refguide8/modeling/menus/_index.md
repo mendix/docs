@@ -1,7 +1,7 @@
 ---
 title: "Menus"
 url: /refguide8/menus/
-category: "App Modeling"
+
 description: "Describes Studio Pro menus."
 weight: 12
 tags: ["Studio Pro", "menu", "top bar"]
@@ -11,7 +11,7 @@ tags: ["Studio Pro", "menu", "top bar"]
 
 The top-bar of Studio Pro contains the following menus:
 
-{{< figure src="/attachments/refguide8/modeling/menus/menu-bar.png" alt="Menu-bar" >}}
+{{< figure src="/attachments/refguide8/modeling/menus/menu-bar.png" alt="Menu-bar" class="no-border" >}}
 
 * [File](#file) – allows you to manage documents and projects
 * [Edit](#edit) – allows you to perform editing functions such as search or copy within Studio Pro

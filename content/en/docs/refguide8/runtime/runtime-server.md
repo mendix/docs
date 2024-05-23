@@ -1,7 +1,7 @@
 ---
 title: "Runtime Server"
 url: /refguide8/runtime-server/
-category: "Mendix Runtime"
+
 description: "A description of the Runtime Server and how it functions"
 weight: 10
 tags: ["runtime", "runtime server", "stateless", "database", "java", "microflows"]
@@ -19,7 +19,7 @@ The Runtime Server is deployed to the cloud (see [Runtime Deployment](/refguide8
 
 Below is a chart showing the components of the Runtime Server. Each of the components is described below the chart.
 
-{{< figure src="/attachments/refguide8/runtime/runtime-server/runtime-server.png" alt="The makeup of the Runtime Server" >}}
+{{< figure src="/attachments/refguide8/runtime/runtime-server/runtime-server.png" alt="The makeup of the Runtime Server" class="no-border" >}}
 
 ### 2.1 M2ee
 

@@ -17,7 +17,7 @@ You can filter data shown with the help of database [constraints](#constraints).
 
 The **Entity (path)** property specifies the target of the database query. If you have a top-level data widget, **Entity (path)** will get objects of the selected entity directly. If you have a nested data widget, you can also select an entity of a parent data container. In this case objects are retrieved following the association path and the association is parsed as an extra constraint in the database query. 
 
-{{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-sources/database-source/data-source-example.png" alt="Data Source Example"   width="400"  >}}
+{{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-sources/database-source/data-source-example.png" alt="Data Source Example"   width="400"  class="no-border" >}}
 
 {{% alert color="info" %}}
 This differs from the [association data source](/refguide/association-source/) when objects are retrieved from the memory, not database.
@@ -37,7 +37,7 @@ In Mendix version 10.5 and above, you can add a full XPath constraint to a Datab
 
 For Mendix versions below 10.5, each constraint consists of an **Attribute**, an **Operator**, and a **Value**:
 
-{{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-sources/database-source/constraint-example.png" alt="Constraint Example" >}}
+{{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-sources/database-source/constraint-example.png" alt="Constraint Example" class="no-border" >}}
 
 Multiple constraints will limit the data even more (the logical operator **AND**). There is no way to use the logical operator **OR** in database constraints in versions of Mendix below 10.5, but you can switch to an [XPath data source](/refguide/xpath-source/) and create an XPath constraint.
 

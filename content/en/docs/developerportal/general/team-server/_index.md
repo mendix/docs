@@ -1,7 +1,7 @@
 ---
 title: "Team Server"
 url: /developerportal/general/team-server/
-category: "Collaboration"
+
 weight: 12
 description: "Describes the overview of Team Server revisions and commits."
 tags: ["Studio Pro", "Team Server", "Developer Portal", "commit", "branch"]
@@ -71,7 +71,7 @@ When you click **Details** for a revision, you can see the stories related to th
 
 Related stories will only appear if you select them in the **Commit** dialog box of Mendix Studio Pro when committing:
 
-{{< figure src="/attachments/developerportal/general/team-server/commit-story.png" >}}
+{{< figure src="/attachments/developerportal/general/team-server/commit-story.png" class="no-border" >}}
 
 ## 6 Read More
 

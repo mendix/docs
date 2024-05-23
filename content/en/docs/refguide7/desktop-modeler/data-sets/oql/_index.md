@@ -1,6 +1,7 @@
 ---
 title: "OQL"
 url: /refguide7/oql/
+canonical_url: "https://docs.mendix.com/refguide/oql/"
 ---
 
 

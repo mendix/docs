@@ -15,7 +15,7 @@ Not every element in a microflow or a nanoflow has all of these properties.
 
 These are the common properties for microflows and nanoflows:
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflow-element-common-properties/microflow-element-common-properties.png" alt="Common properties in properties pane"   width="30%"  >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflow-element-common-properties/microflow-element-common-properties.png" alt="Common properties in properties pane"   width="30%"  class="no-border" >}}
 
 * [Caption](#caption)
 * [Auto-generate caption](#auto-generate-caption)

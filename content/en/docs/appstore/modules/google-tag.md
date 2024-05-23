@@ -1,7 +1,7 @@
 ---
 title: "Google Tag"
 url: /appstore/modules/google-tag/
-category: "Modules"
+
 description: "Describes the configuration and usage of the Google Tag module, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "google", "google tag", "google analytics", "google ads", "google tag manager", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -45,7 +45,7 @@ When the **Widget mode** is set to **Basic**, the widget only sends page-trackin
 
 Typically, the Google Tag widget in **Basic** mode is placed in the layout of your app. The widget automatically tracks when the end-user switches pages and sends page view events accordingly. 
 
-{{< figure src="/attachments/appstore/modules/google-tag/widget-basic-mode.png" >}}
+{{< figure src="/attachments/appstore/modules/google-tag/widget-basic-mode.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 Placing two widgets in **Basic** mode on a page and/or its layout is not supported.
@@ -55,7 +55,7 @@ Placing two widgets in **Basic** mode on a page and/or its layout is not support
 
 Switching the **Widget mode** to **Advanced** gives you full control over the interaction with `gtag.js`. When using this mode, it is advised to have a basic understanding of [gtag.js](https://developers.google.com/tag-platform/gtagjs).
 
-{{< figure src="/attachments/appstore/modules/google-tag/widget-advanced-event.png" >}}
+{{< figure src="/attachments/appstore/modules/google-tag/widget-advanced-event.png" class="no-border" >}}
 
 #### 2.2.1 Config Command {#widget-advanced-config}
 
@@ -79,7 +79,7 @@ One typical use case of the widget in this scenario is custom page view tracking
 
 The **Parameters** property allows for sending additional data along with the commands issued to `gtag.js`. Examples of parameters are **Page Name** and **Session ID** sent together with the page view event. The value of a parameter might be set as a custom value via an expression or chosen from a predefined set. 
 
-{{< figure src="/attachments/appstore/modules/google-tag/parameter-value-type.png" >}}
+{{< figure src="/attachments/appstore/modules/google-tag/parameter-value-type.png" class="no-border" >}}
 
 ## 3 Google Tag Command {#jsaction}
 

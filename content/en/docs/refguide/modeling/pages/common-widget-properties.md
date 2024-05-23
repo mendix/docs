@@ -404,11 +404,11 @@ This section details common types of inputs that share common behavior across di
 
 ### 10.1 Text Template {#text-template}
 
-Properties using the Text template offer the ability to display dynamic text on pages. This is done by writing templates with placeholders and specifying parameters. During runtime the placeholders are substituted by the parameters. The template editor consists of a minimized view and a pop-up view.
+Properties using the Text template offer the ability to display dynamic text on pages. This is done by writing templates with placeholders and specifying parameters. During runtime the placeholders are substituted by the parameters.
 
 #### 10.1.1 Template
 
-The template supports both static and dynamic texts. It can be edited from the minimized view as well as the pop up. Open the pop-up with the **Edit ...** button for a full view of the template and its parameters.
+The template supports both static and dynamic text. It can be edited from the properties pane as well as the pop up. Open the pop-up with the **Edit ...** button for a full view of the template and its parameters.
 
 Placeholders are used to place parameters in the text. The placeholder follows the format `{i}`, where _i_ is the index of a specific parameter from the [parameter list](#text-template-parameters). Parameters can be referenced multiple times and out of order.
 
@@ -435,7 +435,7 @@ You can use the formatter functions in the expression editor when using expressi
 
 ##### 10.1.3.1 Adding New Parameters
 
-To be able to use parameters, the widget must be in the context of an entity -- such as a [Data Widget](/refguide/data-view). Then to use them:
+To be able to use parameters, the widget must be in the context of an entity -- such as a [Data widget](/refguide/data-view), [Snippet parameter](http://localhost:1313/refguide/snippet/#parameters), or [Page parameter](/refguide/page-properties/#parameters). Then to use them:
 
 1. Open the widget properties 
 1. Click the **Edit ...** of the template property to open the pop-up.

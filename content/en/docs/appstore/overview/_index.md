@@ -128,7 +128,7 @@ Support for Marketplace content is determined by the content support category an
 | --- | --- |
 | **Platform** | Mendix supports all the content in this category as-is when you are equipped with an SLA (**Platform**, **Standard**, or **Premium**) with Mendix. Content in this category is proactively incorporated into Mendix R&D test cycles as part of our platform release management. Please note that this category replaces the former **Extended** category, which has been deprecated. |
 | **Deprecated** | The content in this category is considered end-of-life and will be dropped to the **Community support** status in the next major release of Mendix. Content is provided as-is by Mendix R&D, and support depends on the severity of the reported issue and the effort required to resolve it. |
-| **Community** | Content is provided as-is by members of the Mendix community, and support depends on the availability and effort of the owner. | 
+| **Community** | Content is provided as-is by members of the Mendix community, and support depends on the availability and effort of the owner. Mendix Support is not responsible for content in this cateogry, even if the content is owned by developers who work or previously worked at Mendix.| 
 | **Partner** | The content in this category is provided and supported by a partner. The partner supports this content as-is when you are equipped with an SLA with the partner. For more information, see [Mendix Component Partner Program](/appstore/partner-program/). | 
 | **Siemens** | The content in this category is provided and supported by the Siemens team. Siemens supports this content as-is when you are equipped with an SLA with Siemens. | 
 

@@ -259,14 +259,6 @@ When dealing with an Aurora PostgreSQL database, an additional procedural step i
 GRANT rds_iam TO db_userx;
 ```
 
-In some cases, regular (non-Aurora) databases also need the `GRANT rds_iam ...` command to be used, even if IAM authentication is enabled in the AWS Management Console.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-If IAM authentication is not working as expected, check the RDS database's logs.
-
-* A `password authentication failed for user` error meands that the user doesn't have IAM authentication enabled.
-* A `PAM authentication failed for user` error means that IAM authentication is enabled, but the IAM policy doesn't allos the user to connect.
 {{% /alert %}}
 
 ##### 2.3.2.1 Prerequisites
@@ -1548,7 +1540,7 @@ See the [RDS IAM documentation](https://docs.aws.amazon.com/AmazonRDS/latest/Use
     {{% alert color="info" %}}The VPC and firewall must be configured to allow connections to the database from the Kubernetes cluster. When creating the RDS instance, as a best practice, make sure that it uses the same VPC as the Kubernetes cluster. Alternatively, you can also use a publicly accessible cluster. After an RDS instance has been created, it is not possible to modify its VPC.
     {{% /alert %}}
 
-    {{% alert color="info" %}}Ensure that the `rds_iam` role is granted to the master database user.
+    {{% alert color="info" %}}In the case of Aurora DB, ensure that the `rds_iam` role is granted to the master database user.
     {{% /alert %}}
 
 3. Navigate to the RDS instance details, and write down the following information:

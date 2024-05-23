@@ -2,7 +2,7 @@
 title: "Google Maps"
 deprecated: true
 url: /appstore/widgets/google-maps/
-category: "Widgets"
+
 description: "Describes the configuration and usage of the Google Maps widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "widget", "google maps", "platform support"]
 aliases:

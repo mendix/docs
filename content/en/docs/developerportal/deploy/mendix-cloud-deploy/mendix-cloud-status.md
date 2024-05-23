@@ -41,7 +41,7 @@ You can elect to receive emails or subscribe to the RSS or Atom feeds.
 
 ## 6 Read More
 
-* [Maintenance Windows: Configuration](/developerportal/deploy/maintenance-windows/)
-* [Operate](/developerportal/operate/)
+* [Maintenance Windows](/developerportal/deploy/maintenance-windows/)
+* [Alerts](/developerportal/operate/monitoring-application-health/)
 * [How to Receive Environment Status Alerts](/developerportal/operate/receive-alerts/)
-* [Mendix Cloud Region](/developerportal/deploy/cloud-version-region/)
+* [Environment Details](/developerportal/deploy/environments-details/)

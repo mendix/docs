@@ -1,7 +1,7 @@
 ---
 title: "Mendix Community"
 url: /community-tools/mendix-community/
-category: "Community Tools"
+
 weight: 3
 description: "Describes the Mendix Community, where community members can ask and answer questions, exchange information, as well as post ideas for how to improve the Mendix Platform."
 aliases:

@@ -1,7 +1,7 @@
 ---
 title: "Accordion"
 url: /appstore/widgets/accordion/
-category: "Widgets"
+
 description: "Describes the configuration and usage of the Accordion widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "widget", "accordion", "group box", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

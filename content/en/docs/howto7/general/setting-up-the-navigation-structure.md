@@ -1,7 +1,7 @@
 ---
 title: "Set Up the Navigation Structure"
 url: /howto7/general/setting-up-the-navigation-structure/
-category: "General"
+
 weight: 30
 tags: []
 ---

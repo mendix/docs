@@ -2,7 +2,6 @@
 title: "Building, Testing, and Distributing Apps"
 linktitle: "Build, Test, Distribute Apps"
 url: /refguide/mobile/distributing-mobile-apps/
-category: Mobile
 weight: 50
 description: "Distribute native mobile apps."
 tags: ["distribution", "native", "app stores", "ios", "android"]
@@ -23,4 +22,3 @@ Guides in this section will help you build, test and distribute mobile apps. Whi
 {{% todo %}} 
 Add this link and description after doc goes live: Use MIN With Older Studio Pro Versions – Refer to our README documentation for detailed instructions on how to build the Make it Native app, ensuring compatibility with your specific version of Mendix Studio Pro.
 {{% /todo %}} 
-

@@ -24,9 +24,10 @@ The **Environment Details** page shows information about the selected environmen
 In the **General** tab, you can find the following information about your environment:
 
 * **Status**
-    * {{% icon name="checkmark-circle-filled" color="green" %}} – the application in this environment is running
-    * {{% icon name="subtract-circle-filled" color="gray" %}} – no application has been started yet in this environment, or it has been turned off
-    * {{% icon name="remove-circle-filled" color="red" %}} – the application in this environment is unstable and probably not usable anymore
+    * {{% icon name="checkmark-circle-filled" color="green" %}} – The application in this environment is running.
+    * {{% icon name="subtract-circle-filled" color="gray" %}} – No application has been started yet in this environment, or it has been turned off.
+    * {{% icon name="alert-circle-filled" color="yellow" %}} – The application in this environment is experiencing some difficulties; check the alerts page or logs for more information.
+    * {{% icon name="remove-circle-filled" color="red" %}} – The application in this environment is unstable and probably not usable anymore.
 * **Running since** – the date the app was started, if it is running
 * **Name** – the type of environment (Acceptance, Production, Test, or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments)); for more information, see the [Naming of Environments](#naming) section below
 * **Url** – the URL of the app
@@ -38,8 +39,8 @@ In the **General** tab, you can find the following information about your enviro
 * **Plan** – the type of plan covered by your license (for more information, see the [Overviews](/developerportal/deploy/environments-details/#overviews) section below)
 * **Instances** – a summary of the number and memory allocation of instances of the environment (for more information, see the [Scaling](#scaling) section below)
 * **Database Version** – the PostgreSQL version supporting the database
-* **Region** – the region where the app is hosted
-* **Secondary Backup Location** – the region where the backup is stored
+* **Region** – the region of the data center where the app is hosted (for the full list of Mendix Cloud regions, see [Outgoing IP](/developerportal/deploy/mendix-ip-addresses/#outgoing))
+* **Secondary Backup Location** – the region where the backup is stored (for more information, see [Data Location](/developerportal/operate/backups/#data-location) in the *Backups* documentation)
 * **Mendix Cloud Version** – the version of Mendix Cloud where the app is hosted
 
 At the bottom of the page, there are three overview grids showing the deployment package details, plan details, and license. These are described in detail below in the [Overviews](#overviews) section.

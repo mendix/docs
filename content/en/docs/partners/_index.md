@@ -6,7 +6,6 @@ weight: 50
 no_list: false
 description_list: true
 cascade:
-    - space: "Strategic Partners Guide"
     - content_type: "Strategic Partners Guide"
     - mendix_version: 10
 tags: ["strategic partners", "aws", "sap", "siemens"]

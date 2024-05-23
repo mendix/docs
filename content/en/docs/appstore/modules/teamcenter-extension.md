@@ -1,7 +1,7 @@
 ---
 title: "Teamcenter Extension"
 url: /appstore/modules/teamcenter-extension/
-category: "Modules"
+
 description: "Describes the Teamcenter Extension from the Mendix Marketplace. The extension facilitates a low-code approach to integrating with Teamcenter"
 tags: ["Teamcenter", "Integration", "PLM", "SOA connector", "low-code"]
 ---
@@ -15,6 +15,7 @@ The [Teamcenter Extension](https://marketplace.mendix.com/link/component/225544)
 The Teamcenter Extension offers a list of use cases for which domain models and microflows can be created. After you select a use case, it uses an import mapping approach similar to Mendix [import mapping](/refguide/import-mappings/). Here, the Teamcenter Extension allows you to select data from the business model of your Teamcenter instance. Based on the selected use case, the import mapping and, for some use cases, additional configurations, the Teamcenter Extension generates and updates the domain model for your integration and generates one or more ready-to-use microflows that you can drag and drop into your application logic.
 
 The extension offers the following integration options:
+
 * Get item revisions
 * Get workspace objects
 * Create item and item revision
@@ -55,9 +56,11 @@ Follow the instructions in [Using Marketplace Content](/appstore/overview/use-co
 The `Get ItemRevision` action allows you to generate a microflow to search for and retrieve `ItemRevisions` or its specialization from Teamcenter and the corresponding domain model. The resulting microflow implements the saved query `Item Revision...` from Teamcenter.
 
 #### 3.1.2 Get Workspace Objects {#getworkspaceobjects}
+
 The `Get Workspace Objects` action allows you to configure and generate a microflow to search for and retrieve workspace objects or their specialization from Teamcenter and the corresponding domain model. This action implements the saved query `General..` from Teamenter
 
 #### 3.1.3 Create Item and Item Revision {#createitem-and-itemrevision}
+
 The `Create Item and Item Revision` action allows you to configure and generate a microflow to create an Item with `ItemRevision` or its specializations in Teamcenter and the corresponding domain model. The resulting microflow implements the `Create Object and Update Properties` actions from the Teamcenter Connector. With the `Create Object` action, the `Item` and `ItemRevision` get created in Teamcenter, setting the Teamcenter properties that need to be set upon creation. With the `Update Properties` action, the remaining properties are updated in Teamcenter.
 
 #### 3.1.4 Update Item and Item Revision {#updateitem-and-itemrevision}
@@ -69,12 +72,15 @@ The `Update Item and Item Revision` action allows you to generate a microflow to
 The `Revise Item and Item Revision` action allows you to generate a microflow to revise an `ItemRevision` or its specializations in Teamcenter and the corresponding domain model. The resulting microflow implements the `Revise Object and Update Properties` actions from the Teamcenter Connector. With the `Revise Object` action, a new `ItemRevision` is created, setting the Teamcenter properties that need to be set upon revising. With the `Update Properties` action, the remaining properties are updated in Teamcenter.
 
 #### 3.1.6 Get Structures
+
 The `Get Structures` action allows you to generate microflows and corresponding domain model to configure a BOM window and retrieve structure data from Teamcenter. This feature supports the retrieval of structures with the following:
+
 * `RevisionRule` (or default `RevisionRule`)
 * `VariantRule`
 * `BOMWindow` property flags
 
 Depending on the configuration, microflows are generated to do the following:
+
 * Create `BOMWindow` (implementing the `Create BOM Windows2` action from the Teamcenter Connector)
 * Retrieve `RevisionRules` (implementing the `Get Revision Rules` action from the Teamcenter Connector)
 * Retrieve `VariantRules` (implementing the `Get Variant Rule` action from the Teamcenter Connector)
@@ -97,6 +103,7 @@ This feature is designed specifically for generating microflows and domain model
 | Create BOM configurations                                | Use Active Workspace           |
 
 ### 3.2 Landing Page {#homepage}
+
 To open the Teamcenter Extension in Studio Pro, go to **View** > **Teamcenter**. The landing page opens with two tabs: **Menu** and **Settings**.
 
 The **Menu** tab displays use cases or actions you can create artifacts for using the extension.
@@ -116,6 +123,7 @@ Clicking any one of the actions opens an empty [import mapping](/refguide/import
 During configuration, the import mapping page will build up a preview of the Mendix domain model involved in the integration. In addition, the import mapping page shows the corresponding business objects on the Teamcenter side. For this, the Teamcenter Extension displays both the display names of the objects and their properties, references, relations, and the corresponding technical names, as they will end up in the Mendix domain model.
 
 In the Teamcenter Extension, the import mapping consists of the following steps:
+
 1. Object mapping: As Teamcenter works with many layers of specializations of its business objects, in the import mapping page, you need to configure which object type you want to retrieve from Teamcenter and what Mendix objects need to be created, when retrieving these business objects. This is called object mapping.
 2. Selection of properties, references, and relations: Configure  which properties, references, and relations you want to retrieve from Teamcenter and include in your Mendix model .
 
@@ -146,8 +154,9 @@ In the import mapping sidebar, you can configure which Teamcenter properties, re
 The sidebar shows all properties, references, and relations for the configured Teamcenter object. Depending on the use case, each one of them is accompanied with check boxes for reading ({{% icon name="view" %}}) and writing ({{% icon name="pencil" %}}) for you to configure what to include when retrieving data from or creating data in Teamcenter.
 
 You often see that check boxes are selected by default or grayed out. In general, the following rules apply:
-1.	Properties that are already available on the Mendix entity or one of its generalizations are selected by default and cannot be unchecked.
-2.	Properties, references, and relations for Marketplace entities are disabled by default, as it is not good practice to change Mendix marketplace content.
+
+1. Properties that are already available on the Mendix entity or one of its generalizations are selected by default and cannot be unchecked.
+2. Properties, references, and relations for Marketplace entities are disabled by default, as it is not good practice to change Mendix marketplace content.
 
 As an example, if a check box for reading ({{% icon name="view" %}}) is selected and grayed out, it means that property already exists as an attribute on the selected object or one of its generalizations. Similarly, if a check box for writing ({{% icon name="pencil" %}}) is selected and grayed out, it means the property is required during creation or revision of the selected object.
 

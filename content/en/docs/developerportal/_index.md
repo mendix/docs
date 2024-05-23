@@ -7,7 +7,6 @@ weight: 30
 no_list: false
 description_list: true
 cascade:
-    - space: "Developer Portal Guide"
     - content_type: "Developer Portal Guide"
     - mendix_version: 10
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -71,7 +70,7 @@ The navigation pane is divided into four main categories, which correspond with 
 
 In the top bar of the Developer Portal, an additional menu item is available for **Company Apps**:
 
-{{< figure src="/attachments/developerportal/company-apps.png"  width=80%  alt="Company Apps in MxDock">}}
+{{< figure src="/attachments/developerportal/company-apps.png"  width=80%  alt="Company Apps in MxDock" >}}
 
 Click **Company Apps** to see a list of all the apps created by members of your [company](/control-center/company-settings/).
 

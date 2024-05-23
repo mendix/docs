@@ -1,7 +1,7 @@
 ---
 title: "MQTT"
 url: /appstore/modules/mqtt/
-category: "Connectors"
+
 description: "Describes the configuration and usage of the MQTT connector, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "mqtt", "iot"]
 aliases:

@@ -78,7 +78,7 @@ Visual Builder for XPath constraints is still in beta and you cannot use it to m
 
 If you try to use an unsupported feature you will be warned and can choose to edit your XPath expression in the expression editor.
 
-{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/advanced-features.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/advanced-features.png" >}}
 
 ### 2.2 Writing XPath Expressions
 

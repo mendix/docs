@@ -1,7 +1,7 @@
 ---
 title: "Events"
 url: /appstore/widgets/events/
-category: "Widgets"
+
 description: "Describes the configuration and usage of the events widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "widget", "events", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -33,10 +33,12 @@ With  the [Events](https://marketplace.mendix.com/link/component/224259) widget,
 Using this property, you can configure an action to be executed when the event widget loads. The placement of this widget in design mode will be taken into consideration for load event to be triggered. 
 
 Some common usage examples:
+
 * Place the events widget on the top of a page to trigger a page load event. 
 * Place the widget in a popup to trigger an action each time the pop up loads.
 
 Property configurations:
+
 * **Action** – Specifies the selected action that will be executed.
 * **Delay** – Puts a timer delay on the first executed action. The value is in milliseconds. Setting it to **0** will execute the action immediately.
 * **Repeat** – Selecting **Yes** will repeat the event execution based on the repeat delay timer.
@@ -47,6 +49,7 @@ Property configurations:
 Using this property, you can configure an action to be executed when a selected attribute is changed. You can place the widget inside a data view, datagrid, or another component to find the correct attribute you want the events widget to listen to.
 
 Property configurations:
+
 * **Attribute** - Specifies the attribute that will be listened into. The **action** will be executed when this attribute value changed.
 * **Action** - Specifies the **action** that will be executed.
 * **Delay** - Adds a timer delay to the first executed event. The value is in milliseconds. Setting it to **0** will execute the action immediately.

@@ -1,7 +1,7 @@
 ---
 title: "Pusher"
 url: /appstore/services/pusher/
-category: "Modules"
+
 description: "Describes the configuration and usage of the Pusher service, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "pusher", "platform support"]
 aliases:

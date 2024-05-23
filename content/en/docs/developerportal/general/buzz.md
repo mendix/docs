@@ -1,7 +1,7 @@
 ---
 title: "Buzz"
 url: /developerportal/general/buzz/
-category: "General"
+
 weight: 1
 description: "Describes the Mendix Buzz, which is the landing page for working on a Mendix app."
 tags: ["Buzz","Developer Portal"]
@@ -12,7 +12,7 @@ tags: ["Buzz","Developer Portal"]
 
 Located in the Developer Portal, Buzz lets you see your app activity as well as collaborate and share ideas with your team. 
 
-{{< figure src="/attachments/developerportal/general/buzz/app-buzz.png">}}
+{{< figure src="/attachments/developerportal/general/buzz/app-buzz.png" >}}
 
 You can see the size of your **Team** and your team members on the right side of the page. Up to 25 team members can be displayed here at a time.
 
@@ -20,6 +20,6 @@ Click **Invite someone to your team** ({{% icon name="add-circle" %}}) to invite
 
 Once you have posted a comment, you can click **Edit** to **Update Message** or **Delete**. You can also **Reply in Thread** to comments left by colleagues.
 
-# 2 Read More
+## 2 Read More
 
 * [Team](/developerportal/general/team/)

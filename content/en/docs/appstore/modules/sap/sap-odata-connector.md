@@ -1,7 +1,7 @@
 ---
 title: "OData Connector for SAP Solutions"
 url: /appstore/modules/sap/sap-odata-connector/
-category: "SAP"
+
 weight: 10
 description: "Presents reference information on the use of the OData Connector for SAP solutions."
 tags: ["SAP", "integration", "OData", "BAPI"]
@@ -16,10 +16,6 @@ aliases:
 ## 1 Introduction {#Introduction}
 
 The [OData Connector for SAP solutions](https://marketplace.mendix.com/link/component/74525) is an OData connector written specifically to integrate with SAP back-end systems like SAP Business Suite (SAP ERP 6.0), SAP S/4HANA, SAP S/4HANA Cloud, and SAP SuccessFactors. The OData Connector for SAP solutions can be used for all SAP back-end systems that have OData enabled, both in the cloud and on-premises. For ECC, SAP Gateway is used to expose the traditional BAPI interface as an OData service.
-
-{{% alert color="info" %}}
-The connector currently does not support executing tasks from the [Mendix Task Queue](/refguide/task-queue/).
-{{% /alert %}}
 
 ### 1.1 Typical Use Cases
 
@@ -91,7 +87,7 @@ In this section, you will learn how to implement the data connector in your Mend
 
 #### 3.2.1 Creating a Microflow {#microflow}
 
-To create the microflow for this retrieve, follow these steps:
+To create the microflow for this retrieval, follow these steps:
 
 1. Create a constant in **MyFirstModule** called ES5_Username and make the default value your ES5 Username credential.
 2. Create a second constant in **MyFirstModule** called ES5_Password and make the default value your ES5 Password credential.
@@ -100,10 +96,13 @@ To create the microflow for this retrieve, follow these steps:
 5. Open the properties and change the return variable name to *SAPRequestParams*.
 6. Drag an **Add basic authentication** action into your microflow.
 7. Open the properties and set the following:
+
     * **Request parameters** - `$SAPRequestParams`
     * **Username** - `@MyFirstModule.ES5_Username`
     * **Password** - `@MyFirstModule.ES5_Password`
-    * (You do not have to use the return variable)
+    
+    You do not need to use the return variable.
+
 8. Drag the **Get List** action into your microflow.
 9. Fill in the required fields of the Get List connector. For this example, you should use these settings:
     * **Response type** – `GWSAMPLE_BASIC.Product`
@@ -136,9 +135,17 @@ To create a page to show the objects in a list, follow these steps:
 5. Drag a **open page button** on your home page.
 6. Select the page you have just created to be displayed.
 
-{{% alert color="success" %}}
-Congratulations! You can now run your app and see a list of the products available in the **GWBASIC_SAMPLE** application.
-{{% /alert %}}
+You can now run your app and see a list of the products available in the **GWBASIC_SAMPLE** application.
+
+#### 3.2.3 Running OData Actions with the Mendix Task Queue
+
+You can run OData actions asynchronously by using the [Mendix Task Queue](/refguide/task-queue/). To use any of the OData actions through the Task Queue, follow these steps:
+
+1. Edit the microflow which you want to run as a task using the Task Queue.
+2. From the **Toolbox**, drag a **Set Task Queue Processing** action into your microflow.
+3. Position the **Set Task Queue Processing** action before any OData action calls, as show in the following figure. You only need one **Set Task Queue Processing** action per task, even if the task contains multiple OData action calls.
+
+    {{< figure src="/attachments/appstore/modules/sap-odata-connector/task-queue.png" class="no-border" >}}
 
 ## 4 Troubleshooting
 

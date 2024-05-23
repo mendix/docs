@@ -2,7 +2,7 @@
 title: "Implement a Simple CI/CD Pipeline with Mendix APIs"
 linktitle: "Implement CI/CD Pipeline"
 url: /howto8/integration/implement-cicd-pipeline/
-category: "Integration"
+
 tags: ["cicd", "continuous", "integration", "delivery", "deployment", "automation", "testing"]
 ---
 

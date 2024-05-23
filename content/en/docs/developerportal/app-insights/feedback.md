@@ -1,7 +1,7 @@
 ---
 title: "Feedback"
 url: /developerportal/app-insights/feedback/
-category: "App Insights"
+
 weight: 5
 description: "Mendix supports [feedback management](/developerportal/app-insights/feedback/) by enabling [Feedback](/appstore/modules/mendix-feedback/)  module in any application. App users can easily provide feedback through the feedback button integrated within the applications. This feedback is efficiently processed by the app development team using the Mendix Feedback UI. With the enhanced Mendix Feedback module, your app users gain the ability to capture pixel-perfect screenshots and annotate them, enabling them to clearly convey their specific points and preferences to you."
 tags: ["Feedback","Developer Portal", "feedback widget"]
@@ -221,7 +221,7 @@ You can receive a notification when new feedback lands in **Inbox** or when a re
 
 1. Watch the app on the [Settings](/developerportal/collaborate/general-settings/) page after you open it in the Developer Portal.
 2. Go to Feedback again.
-3.  Enable the feedback notifications as follows:
+3. Enable the feedback notifications as follows:
     1. In Feedback, click the **Settings** {{% icon name="cog" %}} icon on the upper-right corner of the page.
     2. Turn on the toggle to receive notifications.
 

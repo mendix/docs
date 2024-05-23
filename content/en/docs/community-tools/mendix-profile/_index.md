@@ -1,7 +1,7 @@
 ---
 title: "Mendix Profile"
 url: /community-tools/mendix-profile/
-category: "Community Tools"
+
 weight: 2
 description: "Describes the personal profile page of the Mendix Developer Portal."
 tags: ["profile", "Developer Portal", "settings", "badge", "point", "connection", "invite", "leaderboard", "edit", "daily digest"]

@@ -48,7 +48,7 @@ For Studio Pro versions 9.24.19 and above, you can choose Java 17.
 For Studio Pro versions 9.24.23 and above, you can choose Java 21.
 {{% /alert %}}
 
-For local development the Java version configured here needs to have a corresponding JDK configured in the [Studio Pro preferences](/refguide/preferences-dialog/#jdk).
+For local development the Java version configured here needs to have a corresponding JDK configured in the [Studio Pro preferences](/refguide9/preferences-dialog/#jdk).
 
 Applications deployed to the cloud will use this setting to select which Java version to use.
 

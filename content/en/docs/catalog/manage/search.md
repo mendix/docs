@@ -400,7 +400,7 @@ Technical owners can be [changed](/catalog/manage/curate/#changing-owners).
 
 When a data source is registered, by default, it is **Discoverable** in the Catalog. When this is set, all users in your company can find it, view the details, and consume it. The owners of an asset and curators can set a data source as **Non-discoverable**, which means it is not visible to users unless they are the owner or a curator.
 
-See the [Curation Bar](#curation-bar) section below for changing **Discoverability** as the owner of the data source or curator.
+See the [Curation Bar](#curation-option) section below for changing **Discoverability** as the owner of the data source or curator.
 
 The following discoverability values can be set:
 
@@ -409,7 +409,7 @@ The following discoverability values can be set:
 
 #### 3.6.5 Validated
 
-This indicates if the data source has been **Validated**. For details on changing **Validated** as an owner or curator, see the [Curation Bar](#curation-bar) section below. See the [Validated](/catalog/manage/curate/#validated) section of *Curate Registered Assets* to learn about what this means.
+This indicates if the data source has been **Validated**. For details on changing **Validated** as an owner or curator, see the [Curation Bar](#curation-option) section below. See the [Validated](/catalog/manage/curate/#validated) section of *Curate Registered Assets* to learn about what this means.
 
 #### 3.6.6 Application
 

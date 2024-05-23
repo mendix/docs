@@ -400,7 +400,7 @@ The widget can be made visible to a specific of the user roles available in your
 
 ## 10 Common Property Types
 
-This section details common types of inputs that share common behavior across different page properties.
+This section details common inputs that share behavior, found in the page editor.
 
 ### 10.1 Text Template {#text-template}
 

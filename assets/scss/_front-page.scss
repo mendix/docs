@@ -1,14 +1,15 @@
 h1.page-title{
     font-weight: $font-weight-normal; // NK - adjusted for use with multiple Noto Sans weights
     font-size: 2.5rem;
-    margin-left: 0.75rem;
-    color: $secondary;
-    opacity: 0.85; //#232B3B;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    color: $gray-light;
 }
 h5.lp{
-    margin-left: 0.75rem;
-    color: $secondary;
-    opacity: 0.7; //#474E5C;
+    margin-left: 2rem;
+    color: $gray-light;
+    margin-bottom: 2rem;
+    margin-top: -1rem;
 }
 div.card-icon{
     margin: auto; 

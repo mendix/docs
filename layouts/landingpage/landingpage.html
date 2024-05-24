@@ -11,7 +11,7 @@
                         <!-- NK - adjusted resizing for different screens -->
                         {{ partial "sidebar.html" . }}
                     </aside>
-                    <main class="col-12 col-lg-8 col-xl-6 lp" role="main">
+                    <main class="col-12 col-lg-8 col-xl-6 lp" role="main" style="padding-top:0rem;">
                         <!-- NK - adjusted resizing for different screens -->
                         <!-- MvM - Do a test for missing Title -->
                         {{ if not .Title }}
@@ -28,10 +28,7 @@
                         <!-- END of addition -->
                         <!-- Start of landing page cards -->
                         <div class="container my-container">
-                            <!-- MvM: Move breadcrumb above banner -->
-                            {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
-                            {{ partial "version-banner.html" . }}
-                            <div class="row" style="margin-top: 2rem;margin-left: 0.5rem;margin-bottom: 1rem;">
+                            <div class="row" style="background-color: #0a1324; padding-top: 5rem;">
                                 <!-- NK - addded more visual padding -->
                                 <div class="col-lg-6 col-xl-7">
                                     <h1 class="page-title">{{ .Page.Title}}</h1>
@@ -39,7 +36,7 @@
                                     <h5 class="lp">{{ .Page.Description}}</h5>
                                 </div>
                                 <div class="col-lg-4 col-xl-3">
-                                    <img src="/images/docs-extended-small.png">
+                                    <img src="/images/docs-extended-small.png" style="margin-top:1rem; margin-right:1rem">
                                 </div>
                             </div>
                             <div class="row my-row">

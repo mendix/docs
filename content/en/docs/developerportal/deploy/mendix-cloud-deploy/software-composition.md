@@ -3,7 +3,7 @@ title: "Software Composition"
 url: /developerportal/deploy/software-composition/
 description: "Describes the Software Composition page in the Developer Portal."
 tags: ["developer portal", "deployment", "software composition"]
-weight: 80
+weight: 9
 beta: true
 ---
 

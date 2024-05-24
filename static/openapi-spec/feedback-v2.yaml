@@ -444,7 +444,7 @@ components:
                       type: string
                     pageName:
                       type: string
-                    environmentUrl:
+                    environmentURL:
                       type: string
                     screenSize:
                       type: string
@@ -501,7 +501,7 @@ components:
                     summary: I have looked into the logic and I believe this error is related to the export template not being configured correctly
                     activeUserRoles: User
                     pageName: FeedbackManagement/Overview.page.xml
-                    environmentUrl: 'https://purchaserequest.company.com/link/feedback/overview'
+                    environmentURL: 'https://purchaserequest.company.com/link/feedback/overview'
                     screenSize: 1920 x 1080
                     browser: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)'
                     submissionDate: '2023-05-21T09:22:41.321Z'
@@ -541,7 +541,7 @@ components:
                 type: string
               pageName:
                 type: string
-              environmentUrl:
+              environmentURL:
                 type: string
               screenSize:
                 type: string
@@ -597,7 +597,7 @@ components:
                 summary: I have looked into the logic and I believe this error is related to the export template not being configured correctly
                 activeUserRoles: User
                 pageName: FeedbackManagement/Overview.page.xml
-                environmentUrl: 'https://purchaserequest.company.com/link/feedback/overview'
+                environmentURL: 'https://purchaserequest.company.com/link/feedback/overview'
                 screenSize: 1920 x 1080
                 browser: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)'
                 submissionDate: '2023-05-21T09:22:41.321Z'

@@ -398,7 +398,7 @@ The format of non-custom claims in the access token is as follows:
 ```json {linenos=false}
 {
     "aud": "DemoClient",
-    "sub": "3",
+    "sub": "T6hOS9jBEBMqk3Dk",
     "nbf": 1681969726,
     "scope": "",
     "iss": "http://localhost:8080/",
@@ -415,7 +415,7 @@ The format of non-custom claims in the ID-token is as follows:
 ```json {linenos=false}
 {
     "com.mendix.user.language": "en_US",
-    "sub": "3",
+    "sub": "T6hOS9jBEBMqk3Dk",
     "iss": "http://localhost:8080/",
     "com.mendix.user.entity": "Administration.Account",
     "nonce": "k5CDLkTE7Q61Q0cUTSgy",
@@ -443,6 +443,8 @@ In versions of OIDC Provider below 1.1.0, the following values are not included 
 * "email"
 * "name"
 * "username"
+
+In versions of the OIDC Provider below 2.0.0, the sub value was changed form an Autonumber to a UUID.
 
 ## 6 Troubleshooting
 

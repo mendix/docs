@@ -149,3 +149,23 @@ Open [Navigation](https://docs.mendix.com/refguide/navigation/) tab and do the f
 #### 2.1.4 Setting Encryption Key
 
 Set up the required configuration of the [Encryption](https://marketplace.mendix.com/link/component/1011) module as described in the [Encryption](https://docs.mendix.com/appstore/modules/encryption/) document. The encryption module is used to encrypt the API key (token) that a SCIM client needs to interact with the SCIM endpoint in your app. 
+
+#### 2.1.5 Default User Provisioning
+
+The SCIM module includes a default user provisioning microflow that maps user attributes from the SCIM payload to attributes in the common user objects within your Mendix app. For more details, see the [Attribute Mapping](#) section below.
+
+#### 2.1.6 Attribute Mapping
+
+For reference, the table below gives an overview of attribute mapping when using the defaults in both Entra ID and the default microflow in the SCIM module. This information may be helpful to see where a custom user provisioning flow differs from the defaults. If you wish to deviate from this default setting, you can create your own mapping. To do this, select an **IdP Attribute** (claim) and specify the **Configured Entity Attribute**. Ensure that the same configured entity attribute should not be mapped with another IdP attributes.
+
+| **SCIM payload** (IdP Attribute) | **Configured Entity Attribute** | **Typical value with Okta** (IdP Attribute) | **Typical value with EntraID** (IdP Attribute) |
+| --- | --- | --- | --- |
+| externalID | Name | 00ctc4pufr85d7 | `550e8400-e29b-41d4-a716-446655440000` |
+| familyName| (not mapped) | Doe | Doe John |
+| givenName| (not mapped) | John |  |
+| emails| Email | john.doe@companyA.com | johndoe@companyA.com |
+| userName| FullName | johndoe@companyA.com | johndoe@companyA.com |
+| active| Active | true | true |
+| locale| Timezone | Newyork/America | Newyork/America |
+| preferredLanguage| Language| English,United States | English,United States |
+

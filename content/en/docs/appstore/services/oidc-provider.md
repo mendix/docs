@@ -182,7 +182,7 @@ To check that this works, you will need a tool for testing APIs (such as [Postma
     "client_name" : "DemoClient",
     "client_secret" : "c46591bd-8fae-4f90-9efb-b5973bea04df",
     "grant_types": ["client_credentials" ],
-    "scope":  "openid" 
+    "scope": "openid" 
     }
     ```
 
@@ -205,12 +205,20 @@ To check that this works, you will need a tool for testing APIs (such as [Postma
 
 If you cannot use automatic registration, you can register the client manually.
 
-1. Select **Manual Registration**.
-1. Add the following information:
+1. Select **Manual Registration**. There are below two options **To support different types of grant-type**.
+
+    * Allow Client-Credentials grant type
+    * Allow Authorization-Code grant type
+
+2. Select any option and add the following information: 
+
     * **Client Name** – a name for this client so that it is easy to identify
     * **Client ID** – a unique string which identifies this client
     * **Alias** – usually the same as *Client Name* but can be different
     * **Client Secret** – the client password to allow the client to authenticate to the OIDC Provider service
+
+    Additionally, you need to add below information if you select **Allow Authorization-Code grant type**
+
     * **Post Logout redirect URI** – the fully qualified logout url, `<appurl>/logout` — for example, for testing a local OIDC SSO app on port `8081`, `http://localhost:8081/logout`
     * **Redirect URI** – for example, for testing a local OIDC SSO app on port `8081`, `http://localhost:8081/oauth/v2/callback`
     * **Back channel logout session support**

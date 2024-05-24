@@ -61,7 +61,7 @@ Error: "PKIX path building failed: sun.security.provider.certpath.SunCertPathBui
 ClientConnectionId:[...]", retrying...(1/4)
 ```
 
-Turn off connection encryption by setting the `DatabaseUseSsl` [custom setting](/refguide/runtime/custom-settings/#database-settings) to false. Since Mendix 10, the JDBC driver used in the database connection uses TLS encryption by default, while many on-premises SQL Server installations are not set up for this.
+Turn off connection encryption by setting the `DatabaseUseSsl` [custom setting](/refguide/custom-settings/#DatabaseUseSsl) to false. Since Mendix 10, the JDBC driver used in the database connection uses TLS encryption by default, while many on-premises SQL Server installations are not set up for this.
 
 ## 3 Read More
 

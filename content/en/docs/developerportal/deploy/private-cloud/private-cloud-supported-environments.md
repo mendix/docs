@@ -121,7 +121,6 @@ Externally hosted [OCI compliant](https://github.com/opencontainers/distribution
 
 * [Docker Hub](https://hub.docker.com/)
 * [quay.io](https://quay.io/)
-* [Azure Container Registry](https://azure.microsoft.com/en-us/services/container-registry/) (ACR)
 * [JFROG Artifactory](https://jfrog.com/artifactory/)
 * [Sonatype Nexus](https://www.sonatype.com/products/nexus-repository)
 * [Harbor](https://goharbor.io)
@@ -154,6 +153,12 @@ The EKS cluster should be configured so that it can [pull images from ECR](https
 [Google Cloud Platform](https://cloud.google.com/) provides the [artifact registry](https://cloud.google.com/artifact-registry).
 
 Mendix Operator supports registry authentication with [workload identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity). The Mendix Operator will need a kubernetes service account [bound](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity#authenticating_to) to a [google service account](https://cloud.google.com/iam/docs/service-accounts) with permissions to authenticate to a registry.
+
+### 3.6 Azure Container Registry
+
+[Azure Container Registry](https://azure.microsoft.com/en-us/services/container-registry/) can be used with any cluster (if static credential authentication is used).
+
+When used together with an  [Azure Kubernetes Service](https://azure.microsoft.com/en-us/products/kubernetes-service), Mendix Operator can use [managed identity authentication](https://learn.microsoft.com/en-us/azure/container-registry/container-registry-authentication-managed-identity) assigned to the Mendix Operator's kubernetes service account.
 
 ## 4 Databases{#databases}
 
@@ -214,6 +219,11 @@ Azure PostgreSQL databases require additional firewall configuration to allow co
 
 Some managed PostgreSQL databases might have restrictions or require additional configuration.
 
+As an alternative to static password authentication, Mendix Operator can use its Kubernetes Service Account to authenticate with:
+
+* AWS RDS databases using IAM roles
+* Azure Database for PostgreSQL (Flexible Server) databases using workload identities
+
 {{% alert color="info" %}}
 To use a PostgreSQL database, the Mendix Operator requires a Superuser account with root privileges and permissions to create new users and databases.
 
@@ -252,6 +262,8 @@ The following managed Microsoft SQL Server databases are supported:
 Amazon and Azure SQL servers require additional firewall configuration to allow connections from the Kubernetes cluster.
 
 Some managed SQL Server databases might have restrictions or require additional configuration.
+
+As an alternative to static password authentication, Mendix Operator can use its Kubernetes Service Account to authenticate with Azure SQL databases.
 
 {{% alert color="info" %}}
 To use a SQL Server database, the Mendix Operator requires Superuser account with permissions to create new users and databases.
@@ -318,9 +330,10 @@ configuration details.
 
 ### 5.4 Azure Blob Storage
 
-An existing [Azure Blob Storage](https://azure.microsoft.com/en-us/services/storage/blobs/) container can be attached to Mendix app environments.
+[Azure Blob Storage](https://azure.microsoft.com/en-us/services/storage/blobs/) is supported.
+Mendix Operator can either provide a static access key and other credentials directly to environments, or manage containers and provide access to environments through Azure Managed Identities.
 
-Unlike MinIO and S3, Mendix for Private Cloud doesn't manage Azure Blob Storage containers or accounts.
+A complete list of supported Azure Blob Storage modes and their required IAM permissions for each one is available in [storage plan](/developerportal/deploy/standard-operator/#storage-plan) configuration details.
 
 ### 5.5 Google Cloud Storage
 

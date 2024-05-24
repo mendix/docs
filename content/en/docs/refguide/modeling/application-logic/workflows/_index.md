@@ -16,7 +16,7 @@ Below are the key reasons why organizations adopt workflow processes:
 
 * Compliance management:
     * Ensuring adherence to local rules, regulations, and laws.
-    * Facilitating the documentation of actions taken, decisions made, and available data, providing a clear audit trail.
+    * Facilitating the documentation of actions, decisions, and available data to provide a clear audit trail.
 
 * Performance improvement:
     * Improving key performance indicators (KPIs) by identifying and addressing bottlenecks.

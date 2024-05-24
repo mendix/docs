@@ -32,7 +32,7 @@ For each environment for which you want to remove the restrictions placed on an 
 
 The app checks for a license each time it is started. If the license expires while the app is running, it will continue to run until the next time it is started, when the license will be checked again.
 
-## 2 Obtaining a Mendix License
+## 2 Obtaining a Mendix License{#get-license}
 
 You can obtain a Mendix license from Mendix support. 
 

@@ -277,7 +277,7 @@ In this case, the OIDC client is the app you are making.
 5. Add the **Client Secret**.
 6. If you have the **Automatic Configuration URL** (also known as the *well-known endpoint*), enter it and click **Import Configuration** to automatically fill the other endpoints.
 
-    {{% alert color="info" %}}If the endpoint URL does not end with `/.well-known/openid-configuration`, append it to the endpoint URL.{{% /alert %}}
+    {{% alert color="info" %}}If the endpoint URL does not already end with `/.well-known/openid-configuration`, include it at the end. According to the specifications, the URL you need to enter typically ends with `/.well-known/openid-configuration`.{{% /alert %}}
 
     * If you do not have an automatic configuration URL, you can fill in the other endpoints manually.
 7. Click **Save**

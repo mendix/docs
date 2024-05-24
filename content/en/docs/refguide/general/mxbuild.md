@@ -130,7 +130,7 @@ The errors are output as a JSON object that has one property: `problems`. The va
 }
 ```
 
-The following table describes the various properties of the *problems* JSON object:
+The following table describes the various properties of the `problems` JSON object:
 
 | Property | Description |
 | --- | --- |

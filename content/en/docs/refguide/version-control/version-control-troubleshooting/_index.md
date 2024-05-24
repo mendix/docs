@@ -50,9 +50,9 @@ The workaround corrects the issue for future commits. If you have other branches
 
 ### 2.2 Proxy Servers Are Not Supported
 
-Studio Pro communicates to Git repositories by two means: the LibGit2 library or the Git command line interface (Git CLI). LibGit2 provides a nice and clean repository object model that is in intensive use during local repository operations. However, it is not performant enough when it comes to communication with remote Git servers. This is when the Git CLI is used and Studio Pro switches to the client while performing fetch, pull, and push operations (that is why the Git for Windows package, which ships Git CLI to your computer, is an integral part of the Studio Pro installation). Therefore, any operation that requires transferring data to or from remote Git repositories, uses the Git CLI client.
+Studio Pro communicates with Git repositories by two means: the LibGit2 library and the Git command line interface (Git CLI). LibGit2 provides a nice and clean repository object model that is in intensive use during local repository operations. However, it is not performant enough when it comes to communication with remote Git servers. This is when the Git CLI is used and Studio Pro switches to this client while performing fetch, pull, and push operations (that is why the Git for Windows package, which ships Git CLI to your computer, is an integral part of the Studio Pro installation). Therefore, any operation that requires transferring data to or from remote Git repositories, uses the Git CLI client.
 
-Unfortunately, Git for Windows is not synchronized with the system proxy settings by default, which means it may be tricky to integrate them into Studio Pro seamlessly. We are trying our best to provide integration as soon as possible but, as a workaround, you can configure the proxy settings directly by either overriding **http_proxy**, **https_proxy**, and **all_proxy** (for more information, see the [Git documentation](https://git-scm.com/docs/git-config#Documentation/git-config.txt-httpproxy)), or by setting the proxy URL in your local **.git/config** using the following commands:
+Unfortunately, Git for Windows is not synchronized with the system proxy settings by default, which means it may be tricky to integrate it into Studio Pro seamlessly. We are trying our best to provide integration as soon as possible but, as a workaround, you can configure the proxy settings directly by either overriding **http_proxy**, **https_proxy**, and **all_proxy** (for more information, see the [Git documentation](https://git-scm.com/docs/git-config#Documentation/git-config.txt-httpproxy)), or by setting the proxy URL in your local **.git/config** using the following commands:
 
 * Configure the proxy settings:
 
@@ -62,7 +62,7 @@ Unfortunately, Git for Windows is not synchronized with the system proxy setting
 
   `git config --local http.proxy`
 
-You can also use the `--global` modifier to apply the changes system-wise, but this is not recommended if you are using Git not only for Mendix development.
+You can also use the `--global` modifier to apply the changes system-wise, but this is not recommended if you are using Git for things other than Mendix development.
 
 ### 2.3 Getting an "Oops" Pop-Up Menu
 
@@ -94,9 +94,9 @@ To fix this issue, take the following steps:
 
 If you face connection problems when cloning the Git repository using the **Open App** or **Download App** dialog box, the first thing to check is whether the URL of the remote Git repository is correct. It should not be copied from the browser address bar. Most Git services have a noticeable colored **Clone** button which provides the correct URL in a pop-up window. You should use this URL with Studio Pro.
 
-### 2.6 Customer-Facing Issues
+### 2.6 Reporting Issues
 
-For Studio Pro developers to be able to troubleshoot issues that the customers face with beta Git support, Studio Pro provides a logging mechanism.
+For the Studio Pro developers to be able to troubleshoot any issues that you face with beta Git support, Studio Pro provides a logging mechanism.
 
 When filing a Git support issue with Mendix Support, attach the log files by doing the following:
 
@@ -112,7 +112,7 @@ When filing a Git support issue with Mendix Support, attach the log files by doi
 The properties described below might contain personal information. We advise you to make sure that all the private information is removed before sharing them. 
 {{% /alert %}}
 
-There are properties of the Git repository that provide you with information useful for troubleshooting different issues. Execute the following in the command line in the app’s folder:
+There are properties of the Git repository that provide you with information useful for troubleshooting different issues. Execute the following using the command line in the app’s folder:
 
 `git status -b` — provides information on the current state of the repository
 
@@ -155,5 +155,5 @@ You can download and install a recent version of Git from [here](https://git-scm
 
 ### 2.10 The Index Is Locked
 
-Sometimes the Git process may crash while performing any operation on the repository. The reason for this can be a dead battery, a blue screen on Windows, or any other unexpected shutdown. As a result, there is a leftover in the form of the *index.lock* file, which blocks other Git operations.
+Sometimes the Git process may crash while performing any operation on the repository. The reason for this can be a dead battery, a blue screen on Windows, or any other unexpected shutdown. As a result, there is a leftover *index.lock* file, which blocks other Git operations.
 To fix this, go to `<directory of your app>/.git/` and delete the *index.lock* file.

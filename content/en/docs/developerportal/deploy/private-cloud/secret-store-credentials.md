@@ -758,7 +758,7 @@ After completing the prerequisites, follow these steps to switch from password-b
 1. Remove or comment out `database-password` from the `SecretProviderClass` and the associated Key vault Secret.
 2. Write down the value of `database-username` - this username will need to be removed on step 5.
 3. Edit the `database-jdbc-url` and add a `authentication=ActiveDirectoryManagedIdentity` parameter to the JDBC URL value: the URL should look like `jdbc:sqlserver://example.database.windows.net:1433;encrypt=true;trustServerCertificate=false;authentication=ActiveDirectoryMSI;`.
-4. Enable [Microsoft Entra authentication](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/how-to-configure-sign-in-azure-ad-authentication) and add yourself (or your Entra group) as an Entra Admin user in the Postgres database.
+4. Add yourself (or your Entra group) as an [Entra Admin user](https://learn.microsoft.com/en-us/azure/azure-sql/database/authentication-aad-configure?view=azuresql&tabs=azure-powershell#azure-portal-1) in the Azure SQL database.
    Azure SQL can only have one Entra Admin, and to add multiple users you'll need to do grant access through an Entra group.
 5. Connect to the database using [Azure Query Editor](https://learn.microsoft.com/en-us/azure/azure-sql/database/authentication-aad-configure?view=azuresql&tabs=azure-cli#use-microsoft-entra-identity-to-connect-using-azure-portal-query-editor-for-azure-sql-database) using Entra Authentication, and run the following query
    (replace `<workload-identity-name>` with  the **Name** of the environment's **Managed Identity**, and `<static-database-username>` with the `database-username` that was written down on step 2):
@@ -773,7 +773,7 @@ After completing the prerequisites, follow these steps to switch from password-b
 
 Azure SQL database drivers have built-in support for Managed Identity authentication and use their local environment's Managed Identity.
 
-#### 3.3.3 Using Managed Identity authentication for Azure SQL databases {#configure-using-azwi-blobstorage}
+#### 3.3.3 Using Managed Identity authentication for Azure Blob Storage {#configure-using-azwi-blobstorage}
 
 [Azure Blob Storage](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-overview) accounts can use [workload identity authentication](https://learn.microsoft.com/en-us/azure/storage/blobs/authorize-access-azure-active-directory) instead of static access keys.
 
@@ -793,7 +793,6 @@ After completing the prerequisites, follow these steps to switch from password-b
 3. Open the envionment's Blob Storage Account Container in the Azure portal, and [assign a Storage Blob Data Contributor role](https://learn.microsoft.com/en-us/azure/storage/blobs/assign-azure-role-data-access) to the environment's managed identity.
 4. Restart the Mendix app environment.
 
-Azure SQL database drivers have built-in support for Managed Identity authentication and use their local environment's Managed Identity.
 ## 4 Additional Considerations {#additional-considerations}
 
 When implementing a secret store, keep in mind the following considerations:

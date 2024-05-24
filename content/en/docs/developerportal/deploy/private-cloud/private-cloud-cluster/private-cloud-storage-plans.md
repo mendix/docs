@@ -94,6 +94,12 @@ When using IRSA, static passwords are replaced with short-lived tokens - which a
 IRSA removes any static passwords that might be used by the Mendix Operator or Mendix apps.
 {{% /alert %}}
 
+{{% alert color="info" %}}
+Mendix Operator version 2.17 and later versions can use [workload identity authentication](https://learn.microsoft.com/en-us/azure/aks/workload-identity-overview) instead of static credentials to authenticate with Azure SQL, Postgres (Flexible Server) and Blob Storage.
+When using workload identity authentication, static passwords are replaced with short-lived tokens - which are automatically maintained by AKS.
+Workload identity authentication removes any static passwords that might be used by the Mendix Operator or Mendix apps.
+{{% /alert %}}
+
 #### 1.3.3 Provisioner Pods Do Not Automatically Retry after Failing
 
 If a provisioner pod fails, it will attempt to roll back any changes it made, but will not automatically retry.
@@ -173,12 +179,14 @@ The following database types are supported:
 
 Postgres databases can be used with [static authentication](#database-postgres-static).
 If the Postgres instance is an AWS RDS database, you can use [IAM authentication](#database-postgres-iam) for additional security.
+If the Postgres instance is an Azure Postgres (Flexible Server) database, you can use [workload identity authentication](#database-postgres-azwi) for additional security.
 
 #### 2.3.1 Postgres (static credentials) {#database-postgres-static}
 
 The Postgres database is an automated, on-demand database. The Postgres plan offers a good balance between automation, ease of use, and security. It is the most versatile and portable option for production-grade databases.
 If you would like to have more control over database configuration, consider using the [JDBC plan](#database-jdbc) instead.
 If your provider is AWS, [Postgres IAM authentication](#database-postgres-iam) can be used instead - to increase security.
+If your provider is Azure, [Postgres workload identity authentication](#database-postgres-azwi) can be used instead - to increase security.
 
 ##### 2.3.1.1 Prerequisites
 
@@ -231,8 +239,8 @@ In the Postgres plan configuration, enter the following details:
     * Disabling this option will attempt to connect with TLS, but skip certificate validation. If TLS is not supported, it will fall back to an unencrypted connection.
 
 * **Database name** - login database for the admin/superuser; in most cases this is set to `postgres`.
-* **Username** - username of the admin/superuser, used by the Mendix Operator to create or delete tenants for app environments; typically, this is set to `postgres`.
 * **Authentication** - select `static` from the dropdown.
+* **Username** - username of the admin/superuser, used by the Mendix Operator to create or delete tenants for app environments; typically, this is set to `postgres`.
 * **Password** - username of the admin/superuser; used by the Mendix Operator to create or delete tenants for app environments.
 
 {{% alert color="info" %}}
@@ -340,8 +348,8 @@ In the Postgres plan configuration, enter the following details:
     * Enabling this option will enable full TLS certificate validation and require encryption when connecting to the PostgreSQL server. If the PostgreSQL server has a self-signed certificate, you will also need to configure custom TLS so that the self-signed certificate is accepted.
     * Disabling this option will attempt to connect with TLS, but skip certificate validation. If TLS is not supported, it will fall back to an unencrypted connection.
 * **Database name** - login database for the admin/superuser; in most cases this is set to `postgres`.
-* **Username** - username of the admin/superuser, used by the Mendix Operator to create or delete tenants for app environments; typically, this is set to `postgres`.
 * **Authentication** - select `aws-iam` from the dropdown.
+* **Username** - username of the admin/superuser, used by the Mendix Operator to create or delete tenants for app environments; typically, this is set to `postgres`.
 * **IAM Role ARN** - the *Postgres Admin* IAM role ARN.
     * Mendix recommends using the same IAM role to manage Postgres databases and S3 buckets, as this would be easier to set up and maintain.
 * **K8s Service Account** - the Kubernetes Service Account to create and attach to the IAM role.
@@ -369,6 +377,105 @@ AWS IRSA allows a Kubernetes Service Account to assume an IAM role. For this to 
     See [Amazon EKS Pod Identity Webhook – EKS Walkthrough](https://github.com/aws/amazon-eks-pod-identity-webhook#eks-walkthrough) for more details.
 
     The role ARN is required, you can use the **Copy** button next to the ARN name in the role details.
+
+#### 2.3.3 Postgres (Azure workload identity authentication){#database-postgres-azwi}
+
+The Postgres database is an automated, on-demand database. The Postgres plan offers a good balance between automation, ease of use, and security.
+[Workload identity authentication](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/how-to-connect-with-managed-identity) removes static passwords and instead uses IAM roles for authentication.
+
+{{% alert color="info" %}}
+This section provides technical details on how workload identity authentication works with Postgres. If you just need instructions to get started, the [Azure Workload Identity-based storage walkthrough](#walkthrough-azure-azwi) provides a quick start guide to set the Mendix Operator to manage a Postgres database, SQL Server and Blob Storage account using workload identity authenticaiton.
+{{% /alert %}}
+
+##### 2.3.3.1 Prerequisites
+
+* An Azure Postgres (Flexible Server) with Entra authentication enabled
+   {{% alert color="info" %}}
+   A Postgres server (cluster) can host multiple databases. Each database can be isolated from one another, this way one Postgres server can be used by multiple independent apps.
+   {{% /alert %}}
+* A *Postgres Admin* workload identity that the Mendix Operator would use to create/delete databases and workload identities for app environments.
+  This workload identity needs the following permissions:
+    * Entra Admin permissions in the Postgres database;
+    * A [Managed Identity Contributor](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#managed-identity-contributor) role in its resource group.
+
+##### 2.3.3.2 Environment Isolation
+
+* Unique user (Postgres role) for every environment.
+* Unique managed identity for every environment.
+* Unique database for every environment.
+* Environment has full access only to its own database, cannot access data from other environments.
+
+##### 2.3.3.3 Limitations
+
+* The Postgres server will be shared between environments, which could affect scalability.
+* To use this feature, your app needs to be upgraded to Mendix 9.22 (or later), and your namespace needs to use Mendix Operator version 2.17.0 (or later).
+
+##### 2.3.3.4 Create Workflow
+
+When a new environment is created, the Mendix Operator performs the following actions:
+
+* Create a Managed Identity for an environment. This Managed Identity will be created in the same resource group, subscription and region as the *Postgres Admin* workload identity.
+* Create a Kubernetes Service Account and attach it to the environment's Managed Identity. This Service Account acts as a replacement for static credentials, and can also be used to authenticate with Azure Postgres databases.
+* Generate a database name and username (Postgres role) for the new environment.
+* Create a new database in the provided Postgres server. This will be the environment's dedicated database.
+* Create a new user (Postgres role) for the new environment, and allow this user to access only the new environment's database. This will be the environment's user.
+* Link the environment's Postgres user (role) with the environment's Managed Identity by [adding a security label](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/how-to-manage-azure-ad-users#enable-microsoft-entra-authentication-for-an-existing-postgresql-role-using-sql) to the Postgres user (role).
+* Create a Kubernetes secret to provide connection details to the new app environment - to automatically configure the new environment.
+   Since the app environment will authenticate through a managed identity role, this secret will not contain any static passwords - only the database hostname, username and other non-sensitive connection details.
+
+##### 2.3.3.5 Delete Workflow
+
+When an existing environment is deleted, the Mendix Operator performs the following actions:
+
+* Delete that environment's user (role).
+* Delete that environment's database.
+* Delete that environment's Managed Identity.
+* Delete that environment's Kubernetes Service Account.
+* Delete that environment's Kubernetes database credentials secret.
+
+##### 2.3.3.6 Configuring a Postgres Plan
+
+In the Postgres plan configuration, enter the following details:
+
+* **Host** - Postgres server hostname, for example `postgres-shared-postgresql.privatecloud-storage.svc.cluster.local`.
+* **Port** - Postgres server port number; in most cases this should be set to `5432`.
+* **Strict TLS** - Set to **yes**, as Azure Postgres supports TLS without any extra configuration.
+* **Database name** - login database for the *Postgres Admin* workload identity; in most cases this is set to `postgres`.
+* **Authentication** - select `azure-wi` from the dropdown.
+* **Managed Identity Name** - name for the *Postgres Admin* workload identity, used by the Mendix Operator to create or delete tenants for app environments.
+* **Managed Identity Client ID** - the *Postgres Admin* workload identity Client ID.
+    * Mendix recommends using the same workload identity to manage Azure databases and blob storage containers, as this would be easier to set up and maintain.
+* **K8s Service Account** - the Kubernetes Service Account to create and attach to the *Postgres Admin* workload identity (will be created automatically by the `mxpc-cli` installation and configuration tool).
+  {{% alert color="warning" %}}
+  Do not use the name of an existing Service Account (environment name), or one of the reserved Kubernetes Service Account names:
+    * `mendix-operator`
+    * `mendix-agent`
+    * `mendix-storage-provisioner`
+  {{% /alert %}}
+
+{{% alert color="info" %}}
+To connect to an Azure Postgres database, the firewall must be configured to allow connections to the database from the Kubernetes cluster.
+{{% /alert %}}
+
+Azure workload identities allow a Kubernetes Service Account to authenticate itself as a specific Managed Identity. For this to work correctly, add a Federated Credential to the *Postgres Admin* workload identity:
+
+1. Enable managed identities for your AKS cluster as [described in the Azure documentation](https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster#update-an-existing-aks-cluster). This only need to be done once per cluster.
+
+    Ensure that you have the [Cluster OIDC Issuer URL](https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster#update-an-existing-aks-cluster). You will need the URL to complete the configuration.
+
+2. Use the [az identity federated-credential create](https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster#establish-federated-identity-credential) command, or by going to the **Federated credentials** tab and using the **Add Credential** wizard. This will allow the *Postgres Admin* Kubernetes Service Account to be associated with its **Managed identity**.
+
+3. Fill in the following details:
+
+  * **Federated credential scenario** - Kubernetes accessing Azure resources
+  * **Cluster Issuer URL** - the Cluster OIDC URL from step 1
+  * **Namespace** - the Kubernetes namespace where the Operator is installed; for Global Operator installations, you must specify the managed namespace in the **Namespace** field.
+  * **Service Account** - the **K8s Service Account** specified in the Postgres plan configuration
+  * **Name** - any value
+
+4. Assign this *Postgres Admin* Managed Identity a [Managed Identity Contributor](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#managed-identity-contributor) role in its resource group.
+
+5. Add this *Postgres Admin* Managed Identity as an Entra Admin in the Postgres database.
 
 ### 2.4 Ephemeral {#database-ephemeral}
 
@@ -402,9 +509,16 @@ When an existing environment is deleted, the Mendix Operator performs the follow
 
 ### 2.5 SQL Server {#database-sqlserver}
 
+SQL Server databases can be used with [static authentication](#database-sqlserver-static).
+If the SQL Server instance is an Azure SQL database, you can use [workload identity authentication](#database-sqlserver-azwi) for additional security.
+
+#### 2.5.1 SQL Server (static credentials){#database-sqlserver-static}
+
 SQL server databases are automated, on-demand databases. The **SQL Server** plan offers a good balance between automation, ease of use, and security when using Microsoft SQL Server or Azure SQL. If you would like to have more control over database configuration, consider using the [JDBC plan](#database-jdbc) instead.
 
-#### 2.5.1 Prerequisites
+If your app is using Mendix 10.10 (or a later version) consider using the [Azure workload identity authentication](#database-sqlserver-azwi) instead, for additional security.
+
+##### 2.5.1.1 Prerequisites
 
 * An SQL Server server - for example, an Azure SQL server, or a SQL Server installed from a Helm chart.
 
@@ -414,20 +528,20 @@ SQL server databases are automated, on-demand databases. The **SQL Server** plan
    
 * An admin user account.
 
-#### 2.5.2 Limitations
+##### 2.5.1.2 Limitations
 
 * Passwords can only be rotated manually.
 * A standalone SQL Server will be shared between environments, which could affect scalability. Azure SQL allows more flexibility, and is much better at scaling - each database can have reserved capacity and does not  affect performance of other databases on the same server.
 * NetBIOS names are not supported. It is only possible to connect using the server's FQDN.
 * Only username/password authentication is supported at the moment.
 
-#### 2.5.3 Environment Isolation
+##### 2.5.1.3 Environment Isolation
 
 * Unique user, login for every environment.
 * Unique database for every environment.
 * Environment has full access only to its own database, cannot access data from other environments.
 
-#### 2.5.4 Create Workflow
+##### 2.5.1.4 Create Workflow
 
 When a new environment is created, the Mendix Operator performs the following actions:
 
@@ -436,7 +550,7 @@ When a new environment is created, the Mendix Operator performs the following ac
 * Create a new user and login for the new environment, and allow this user to access only the new environment's database. This will be the environment's user.
 * Create a Kubernetes secret to provide connection details to the new app environment - to automatically configure the new environment.
 
-#### 2.5.5 Delete Workflow
+##### 2.5.1.5 Delete Workflow
 
 When an existing environment is deleted, the Mendix Operator performs the following actions:
 
@@ -444,17 +558,18 @@ When an existing environment is deleted, the Mendix Operator performs the follow
 * Delete that environment's database.
 * Delete that environment's Kubernetes database credentials secret.
 
-#### 2.5.6 Configuring an SQL Server Plan
+##### 2.5.1.6 Configuring an SQL Server Plan
 
 In the SQL Server plan configuration, enter the following details:
 
 * **Host** - SQL Server (Azure SQL) server hostname, for example `my-database.database.windows.net`
 * **Port** - SQL Server (Azure SQL) server port number, in most cases this should be set to `1433`.
-* **Username** - Username for the admin user, used by the Mendix Operator to create or delete tenants for app environments.
-* **Password** - Password for the admin user, used by the Mendix Operator to create or delete tenants for app environments.
 * **Strict TLS** - Specifies if TLS should always be validated.
     * Enabling this option will enable full TLS certificate validation and require encryption when connecting to SQL Server. If the SQL Server server has a self-signed certificate, you will also need to configure custom TLS so that the self-signed certificate is accepted. Azure SQL supports Strict TLS without any extra TLS configuration - no additional *custom TLS* configuration is required.
     * Disabling this option will attempt to connect with TLS, but skip certificate validation. If TLS is not supported, it will fall back to an unencrypted connection.
+* **Authentication** - select `static` from the dropdown.
+* **Username** - Username for the admin user, used by the Mendix Operator to create or delete tenants for app environments.
+* **Password** - Password for the admin user, used by the Mendix Operator to create or delete tenants for app environments.
 * **Is Azure SQL Server** - Opens additional options that are only available when using Azure SQL (instead of a standalone SQL Server):
     * **Elastic Pool** - Specifies an existing Elastic Pool to use (can be left empty if the new app's database should not be using an elastic pool)
     * **Edition** - Specifies the [database edition/tier](https://learn.microsoft.com/en-us/sql/t-sql/statements/create-database-transact-sql?view=azuresqldb-current&tabs=sqlpool#edition) to use, for example `Basic`. Can be left empty, in this case Azure SQL will use the default `GeneralPurpose` edition.
@@ -476,6 +591,135 @@ The smallest database tier available has the following parameters:
 {{% alert color="info" %}}
 To connect to an Azure SQL Server, the Kubernetes cluster must be added to the list of allowed hosts in the firewall.
 {{% /alert %}}
+
+#### 2.5.2 SQL Server (Azure workload identity authentication){#database-sqlserver-azwi}
+
+SQL server databases are automated, on-demand databases. The **SQL Server** plan offers a good balance between automation, ease of use, and security when using Microsoft SQL Server or Azure SQL. If you would like to have more control over database configuration, consider using the [JDBC plan](#database-jdbc) instead.
+
+{{% alert color="info" %}}
+This section provides technical details on how workload identity authentication works with Azure SQL. If you just need instructions to get started, the [Azure Workload Identity-based storage walkthrough](#walkthrough-azure-azwi) provides a quick start guide to set the Mendix Operator to manage a Postgres database, SQL Server and Blob Storage account using workload identity authenticaiton.
+{{% /alert %}}
+
+##### 2.5.2.1 Prerequisites
+
+* An Azure SQL Server with Entra authentication enabled.
+
+   {{% alert color="info" %}}
+   An SQL server can host multiple databases. Each database can be isolated from one another - in this way, one SQL Server can be used by multiple independent apps.
+   {{% /alert %}}
+
+* A *SQL Admin* workload identity that the Mendix Operator would use to create/delete databases and workload identities for app environments.
+  This workload identity needs the following permissions:
+    * Permissions to authenticate with Azure SQL using its workload identity;
+    * A `dbmanager` role in the master database;
+    * A [Managed Identity Contributor](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#managed-identity-contributor) role in its resource group.
+
+##### 2.5.2.2 Limitations
+
+* To use this feature, your app needs to be upgraded to Mendix 10.10 (or later), and your namespace needs to use Mendix Operator version 2.17.0 (or later).
+
+##### 2.5.2.3 Environment Isolation
+
+* Unique user for every environment.
+* Unique managed identity for every environment.
+* Unique database for every environment.
+* Environment has full access only to its own database, cannot access data from other environments.
+
+##### 2.5.2.4 Create Workflow
+
+When a new environment is created, the Mendix Operator performs the following actions:
+
+* Create a Managed Identity for an environment. This Managed Identity will be created in the same resource group, subscription and region as the *SQL Admin* workload identity.
+* Create a Kubernetes Service Account and attach it to the environment's Managed Identity. This Service Account acts as a replacement for static credentials, and can also be used to authenticate with Azure SQL databases.
+* Generate a database name for the new environment.
+* Create a new database in the provided SQL Server server. This will be the environment's dedicated database.
+* Generate a username for the new environment.
+* Create a new contained database user for the new environment. This will be the environment's user, which only exists in the environment's database. This user will be [linked with the environment's Managed Identity](https://learn.microsoft.com/en-us/azure/azure-sql/database/authentication-aad-configure?view=azuresql&tabs=azure-powershell#create-contained-users-mapped-to-microsoft-entra-identities).
+* Create a Kubernetes secret to provide connection details to the new app environment - to automatically configure the new environment.
+
+##### 2.5.2.5 Delete Workflow
+
+When an existing environment is deleted, the Mendix Operator performs the following actions:
+
+* Delete that environment's database (which also deletes the contained database user).
+* Delete that environment's Managed Identity.
+* Delete that environment's Kubernetes Service Account.
+* Delete that environment's Kubernetes database credentials secret.
+
+##### 2.5.2.6 Configuring an SQL Server Plan
+
+In the SQL Server plan configuration, enter the following details:
+
+* **Host** - SQL Server (Azure SQL) server hostname, for example `my-database.database.windows.net`
+* **Port** - SQL Server (Azure SQL) server port number, in most cases this should be set to `1433`.
+* **Strict TLS** - Set to **yes**, as Azure SQL supports TLS without any extra configuration.
+    * Enabling this option will enable full TLS certificate validation and require encryption when connecting to SQL Server. If the SQL Server server has a self-signed certificate, you will also need to configure custom TLS so that the self-signed certificate is accepted. Azure SQL supports Strict TLS without any extra TLS configuration - no additional *custom TLS* configuration is required.
+    * Disabling this option will attempt to connect with TLS, but skip certificate validation. If TLS is not supported, it will fall back to an unencrypted connection.
+* **Authentication** - select `azure-wi` from the dropdown.
+* **Managed Identity Client ID** - the *SQL Admin* workload identity Client ID.
+    * Mendix recommends using the same workload identity to manage Azure databases and blob storage containers, as this would be easier to set up and maintain.
+* **K8s Service Account** - the Kubernetes Service Account to create and attach to the *SQL Admin* workload identity (will be created automatically by the `mxpc-cli` installation and configuration tool).
+  {{% alert color="warning" %}}
+  Do not use the name of an existing Service Account (environment name), or one of the reserved Kubernetes Service Account names:
+    * `mendix-operator`
+    * `mendix-agent`
+    * `mendix-storage-provisioner`
+  {{% /alert %}}
+* **Is Azure SQL Server** - Opens additional options that are only available when using Azure SQL (instead of a standalone SQL Server):
+    * **Elastic Pool** - Specifies an existing Elastic Pool to use (can be left empty if the new app's database should not be using an elastic pool)
+    * **Edition** - Specifies the [database edition/tier](https://learn.microsoft.com/en-us/sql/t-sql/statements/create-database-transact-sql?view=azuresqldb-current&tabs=sqlpool#edition) to use, for example `Basic`. Can be left empty, in this case Azure SQL will use the default `GeneralPurpose` edition.
+    * **Service Objective** - Specifies the [database service objective](https://learn.microsoft.com/en-us/sql/t-sql/statements/create-database-transact-sql?view=azuresqldb-current&tabs=sqlpool#service_objective) (performance level), for example `Basic`. Can be left empty, in which case Azure SQL will use the default service objective (such as `GP_Gen5_2`).
+    * **Maximum Size** - Specifies the database maximum size, for example `1 GB`. Can be left empty, in this case the default size will be used.
+
+{{% alert color="warning" %}}
+By default, Azure SQL will create a production-grade database, which could be too costly for small apps. Azure SQL allows to change the database configuration parameters after a database was created.
+
+As a best practice, start with a small database plan by default, and adjust it through the Azure Portal if the database starts having performance issues.
+The smallest database tier available has the following parameters:
+
+* **Edition** - `Basic`
+* **Service Objective** - `Basic`
+* **Maximum Size** - `1 GB`
+* **Elastic Pool** - Leave blank
+{{% /alert %}}
+
+{{% alert color="info" %}}
+To connect to an Azure SQL Server, the Kubernetes cluster must be added to the list of allowed hosts in the firewall.
+{{% /alert %}}
+
+Azure workload identities allow a Kubernetes Service Account to authenticate itself as a specific Managed Identity. For this to work correctly, add a Federated Credential to the *SQL Admin* workload identity:
+
+1. Enable managed identities for your AKS cluster as [described in the Azure documentation](https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster#update-an-existing-aks-cluster). This only need to be done once per cluster.
+
+    Ensure that you have the [Cluster OIDC Issuer URL](https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster#update-an-existing-aks-cluster). You will need the URL to complete the configuration.
+
+2. Use the [az identity federated-credential create](https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster#establish-federated-identity-credential) command, or by going to the **Federated credentials** tab and using the **Add Credential** wizard. This will allow the *SQL Admin* Kubernetes Service Account to be associated with its **Managed identity**.
+
+3. Fill in the following details:
+
+  * **Federated credential scenario** - Kubernetes accessing Azure resources
+  * **Cluster Issuer URL** - the Cluster OIDC URL from step 1
+  * **Namespace** - the Kubernetes namespace where the Operator is installed; for Global Operator installations, you must specify the managed namespace in the **Namespace** field.
+  * **Service Account** - the **K8s Service Account** specified in the SQL Server plan configuration
+  * **Name** - any value
+
+4. Assign this *SQL Admin* Managed Identity a [Managed Identity Contributor](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#managed-identity-contributor) role in its resource group.
+
+5. Open a Bash-compatible shell (or Azure Console in Bash mode), and run the following command to connect to the Azure SQL master database using [sqlcmd managed identity authentication](https://learn.microsoft.com/en-us/sql/connect/odbc/linux-mac/connecting-with-sqlcmd?view=sql-server-ver16), replacing `<hostname>` with the SQL Server server hostname (e.g. `example.database.windows.net`):
+
+   ```shell {linenos=false}
+   az account get-access-token --resource https://database.windows.net --output tsv | cut -f 1 | tr -d '\n' | iconv -f ascii -t UTF-16LE > /tmp/token && sqlcmd -S <hostname> -G -P /tmp/token && rm /tmp/token
+   ```
+
+6. In the sqlcmd client, run the following commands (replace `<sql-admin-managed-identity>` with the *SQL Admin* Managed Identity name:
+
+   ```sql {linenos=false}
+   CREATE USER [<sql-admin-identity-name>] FROM EXTERNAL PROVIDER;
+   GO
+   ALTER ROLE dbmanager ADD MEMBER [<sql-admin-identity-name>];
+   GO
+   quit
+   ```
 
 ### 2.6 Dedicated JDBC {#database-jdbc}
 
@@ -642,7 +886,7 @@ When an existing environment is deleted, the Mendix Operator performs the follow
 
 Mendix for Private Cloud provides a variety of options for storing files in Amazon S3. Each option uses its own approach to isolation between environments, and to attaching a bucket (and IAM user/policy) to a new environment.
 
-If you would like to have Mendix Operator with automation, and have full isolation between environment, use the [Create account with existing policy](#s3-create-account-existing-policy) option. This option works with the least possible AWS privileges.
+If you would like to have Mendix Operator with automation, and have full isolation between environments, use the [Create account with existing policy](#s3-create-account-existing-policy) option. This option works with the least possible AWS privileges.
 For apps using Mendix 9.22 (or a later version), the [IRSA Mode](#s3-irsa-mode) option provides the same features and additional security.
 
 If you would like to simply share a bucket between environments, or to manually create a bucket and account per environment, use the [existing bucket and account](#s3-existing-bucket-account) option.
@@ -789,7 +1033,7 @@ This automated, on-demand option allows to share an existing bucket between envi
 It's similar to the [Create account with existing policy](#s3-create-account-existing-policy) option, but instead of static credentials, uses IAM roles for authentication.
 
 {{% alert color="info" %}}
-This section provides technical details how IAM authentication works with Postgres.
+This section provides technical details how IAM authentication works with S3.
 If you just need instructions how to get started, the [AWS IAM-based storage walkthrough](#walkthrough-aws-irsa) provides a quick start guide - to set the Mendix Operator to manage an RDS database and S3 bucket.
 {{% /alert %}}
 
@@ -1364,42 +1608,141 @@ In the Amazon S3 plan configuration, enter the following details:
 
 ### 3.4 Azure Blob Storage {#blob-azure}
 
+If you would like to have Mendix Operator with automation, and have full isolation between environments, use the [Azure workload identity authentication](#blob-azure-azwi) option. This option works with apps using Mendix 10.10 (or a later version).
+
+If you would like to simply share a container between environments, or to manually create a container and account per environment, use the [static credentials](#blob-azure-static) option.
+
+#### 3.4.1 Azure Blob Storage (Azure workload identity authentication){#blob-azure-azwi}
+
+This automated, on-demand option allows to use an existing blob storage accounts in multiple environments, and isolates environments from accessing each other's data.
+
+{{% alert color="info" %}}
+This section provides technical details on how workload identity authentication works with Azure Blob Storage. If you just need instructions to get started, the [Azure Workload Identity-based storage walkthrough](#walkthrough-azure-azwi) provides a quick start guide to set the Mendix Operator to manage a Postgres database, SQL Server and Blob Storage account using workload identity authenticaiton.
+{{% /alert %}}
+
+##### 3.4.1.1 Prerequisites
+
+* An Azure Blob storage account.
+* A *Blob Storage Admin* workload identity that the Mendix Operator would use to create/delete containers and workload identities for app environments.
+  This workload identity needs the following permissions:
+    * A [Storage Blob Data Contributor](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/storage#storage-blob-data-contributor) role scoped to the blob storage account.
+    * A [Role Based Access Control Administrator](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/general#role-based-access-control-administrator) role scoped to the blob storage account, and constrained to only have permissions to add the [Storage Blob Data Contributor](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/storage#storage-blob-data-contributor) role to Service principals.
+    * A [Managed Identity Contributor](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#managed-identity-contributor) role in its resource group.
+
+##### 3.4.1.2 Limitations
+
+* To use this feature, your app needs to be upgraded to Mendix 10.10 (or later), and your namespace needs to use Mendix Operator version 2.17.0 (or later).
+
+##### 3.4.1.3 Environment Isolation
+
+* Unique managed identity for every environment.
+* Unique container for every environment.
+* The storage account is shared.
+* Environment has full access only to its own container, cannot access data from other environments.
+
+##### 3.4.1.4 Create Workflow
+
+When a new environment is created, the Mendix Operator performs the following actions:
+
+* Create a Managed Identity for an environment. This Managed Identity will be created in the same resource group, subscription and region as the *Blob Storage Admin* workload identity.
+* Create a Kubernetes Service Account and attach it to the environment's Managed Identity. This Service Account acts as a replacement for static credentials, and can also be used to authenticate with the environment's Blob Storage Container.
+* Create a new container in the shared blob storage account. This will be the environment's dedicated container.
+* Add the [Storage Blob Data Contributor](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/storage#storage-blob-data-contributor) role to an envrionment's Managed Identity, scoped to its container.
+* Create a Kubernetes secret to provide connection details to the new app environment - to automatically configure the new environment.
+   Since the app environment will authenticate through a managed identity role, this secret will not contain any static passwords - only the database hostname, username and other non-sensitive connection details.
+
+##### 3.4.1.5 Delete Workflow
+
+When an existing environment is deleted, the Mendix Operator performs the following actions:
+
+* Delete that environment's role assignment.
+* Delete that environment's container.
+* Delete that environment's Managed Identity.
+* Delete that environment's Kubernetes Service Account.
+* Delete that environment's Kubernetes blob file storage credentials secret.
+
+##### 3.4.1.6 Configuring the Plan
+
+In the Azure Blob plan configuration, enter the following details:
+
+* **Account Name** - Blob Storage account name.
+* **Managed Identity authentication** - Set to **yes**.
+* **Account Subscription ID** - subscription ID of the blob storage account.
+* **Account Resource Group** - resource group of the blob storage account.
+* **Managed Identity Client ID** - the *Blob Storage Admin* workload identity Client ID.
+    * Mendix recommends using the same workload identity to manage Azure databases and blob storage containers, as this would be easier to set up and maintain.
+* **K8s Service Account** - the Kubernetes Service Account to create and attach to the *Blob Storage Admin* workload identity (will be created automatically by the `mxpc-cli` installation and configuration tool).
+  {{% alert color="warning" %}}
+  Do not use the name of an existing Service Account (environment name), or one of the reserved Kubernetes Service Account names:
+    * `mendix-operator`
+    * `mendix-agent`
+    * `mendix-storage-provisioner`
+  {{% /alert %}}
+
+Azure workload identities allow a Kubernetes Service Account to authenticate itself as a specific Managed Identity. For this to work correctly, add a Federated Credential to the *Blob Storage Admin* workload identity:
+
+1. Enable managed identities for your AKS cluster as [described in the Azure documentation](https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster#update-an-existing-aks-cluster). This only need to be done once per cluster.
+
+    Ensure that you have the [Cluster OIDC Issuer URL](https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster#update-an-existing-aks-cluster). You will need the URL to complete the configuration.
+
+2. Use the [az identity federated-credential create](https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster#establish-federated-identity-credential) command, or by going to the **Federated credentials** tab and using the **Add Credential** wizard. This will allow the *Blob Storage Admin* Kubernetes Service Account to be associated with its **Managed identity**.
+
+3. Fill in the following details:
+
+  * **Federated credential scenario** - Kubernetes accessing Azure resources
+  * **Cluster Issuer URL** - the Cluster OIDC URL from step 1
+  * **Namespace** - the Kubernetes namespace where the Operator is installed; for Global Operator installations, you must specify the managed namespace in the **Namespace** field.
+  * **Service Account** - the **K8s Service Account** specified in the Blob Storage plan configuration
+  * **Name** - any value
+
+4. Grant the *Blob Storage Admin* Managed Identity the following permissions:
+
+  * A [Storage Blob Data Contributor](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/storage#storage-blob-data-contributor) role scoped to the blob storage account.
+  * A [Role Based Access Control Administrator](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/general#role-based-access-control-administrator) role scoped to the blob storage account, and constrained to only have permissions to add the [Storage Blob Data Contributor](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/storage#storage-blob-data-contributor) role to Service principals.
+  * A [Managed Identity Contributor](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#managed-identity-contributor) role in its resource group.
+
+#### 3.4.2 Azure Blob Storage (static credentials){#blob-azure-static}
+
 This basic, on-demand option allows you to attach an existing Azure Blob Storage container and credentials (account name and secret key) to one or more environments. All apps (environments) will use the same Azure Blob Storage container and credentials.
 
-#### 3.4.1 Prerequisites
+If your app is using Mendix 10.10 (or a later version) consider using the [Azure workload identity authentication](#blob-azure-azwi) instead, for additional security.
+
+##### 3.4.2.1 Prerequisites
 
 * An Azure Blob storage container and credentials to access it.
 
-#### 3.4.2 Limitations
+##### 3.4.2.2 Limitations
 
 * Access/Secret keys used by existing environments can only be rotated manually.
 * No isolation between environments using this blob storage plan (if the plan **Type** is `On-Demand`).
 * Configuration parameters will not be validated and will be provided to the Mendix app as-is. If the arguments are not valid or there is an issue with permissions, the Mendix Runtime will fail to start the and deployment will appear to hang with **Replicas running** and **Runtime** showing a spinner.
 
-#### 3.4.3 Environment Isolation
+##### 3.4.2.3 Environment Isolation
 
 * The Azure Blob storage container and credentials are shared between all environments using this plan.
 * An environment can access data from other environments using this Storage Plan.
 * All environments will store their data in the root directory of the blob storage container.
 * By using the `Dedicated` **Type**, this plan switches into **Dedicated** mode - so that only one environment can use it.
 
-#### 3.4.4 Create Workflow
+##### 3.4.2.4 Create Workflow
 
 When a new environment is created, the Mendix Operator performs the following actions:
 
 * Create a Kubernetes secret to provide connection details to the new app environment - to automatically configure the new environment.
 
-#### 3.4.5 Delete Workflow
+##### 3.4.2.5 Delete Workflow
 
 When an existing environment is deleted, the Mendix Operator performs the following actions:
 
 * Delete that environment's Kubernetes blob file storage credentials secret.
 
-#### 3.4.6 Configuring the Plan
+##### 3.4.2.6 Configuring the Plan
 
 In the Azure Blob plan configuration, enter the following details:
 
-* **Account Name** and **Account Key** - Credentials for the blob storage container.
+* **Account Name** - Blob Storage account name.
+* **Managed Identity authentication** - Set to **yes**
+* **Account Key** - Access key for the blob storage container.
 * **Container name** - Name of the blob storage container.
 * **Type** - Specifies is the container can be shared between environments (create an on-demand storage plan); or that the container can only be used by one environment (create a dedicated storage plan). To increase security and prevent environments from being able to access each other's data, select `Dedicated`.
 

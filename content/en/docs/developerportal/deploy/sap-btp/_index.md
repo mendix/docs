@@ -167,7 +167,7 @@ To create a new environment, perform the following steps:
 
 10. Set a **Subscription Secret** (required). This secret is associated with your Mendix production license. By entering the subscription secret, your application will run in this environment as production. If the subscription secret is invalid, your app will still run, but will restart every 2-4 hours and have a limitation of six concurrent users.
 
-    {{% alert color="info" %}}If you do not have a subscription secret, refer to our documentation on [obtaining a Mendix license](/developerportal/deploy/licensing-apps-outside-mxcloud/#get-license) to submit a request for Mendix Support.{{% /alert %}}
+    {{% alert color="info" %}}If you do not have a subscription secret, refer to our documentation on [Obtaining a Mendix License](/developerportal/deploy/licensing-apps-outside-mxcloud/#get-license) in *Licensing Apps* for details on submitting a request to Mendix Support.{{% /alert %}}
 
 11. If you want the user to be redirected to a custom URL after they have logged in using XSUAA then, optionally, add **Redirect URLs**. 
 

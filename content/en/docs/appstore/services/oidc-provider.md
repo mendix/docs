@@ -162,7 +162,7 @@ To check that this works, you will need a tool for testing APIs (such as [Postma
     ```json {linenos=false}
     {
     "post_logout_redirect_uris": [ "http://localhost:8081/logout" ],
-    "grant_types": [ "authorization_code"],
+    "grant_types": [ "authorization_code" ],
     "client_secret_expires_at": 0,
     "scope": "User",
     "client_secret": "ClientSecret",
@@ -181,7 +181,7 @@ To check that this works, you will need a tool for testing APIs (such as [Postma
     "client_id" : "DemoClient",
     "client_name" : "DemoClient",
     "client_secret" : "c46591bd-8fae-4f90-9efb-b5973bea04df",
-    "grant_types": ["client_credentials" ],
+    "grant_types": [ "client_credentials" ],
     "scope": "openid" 
     }
     ```

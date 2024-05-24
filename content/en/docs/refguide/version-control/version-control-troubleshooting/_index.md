@@ -85,7 +85,7 @@ To fix this issue, take the following steps:
     `git config --global user.name "<Name>"`
     * Specify the email:
     `git config --global user.email "<Email>"` 
-2. Ensure the git version on you machine is 2.43.x or above:
+2. Ensure the git version on your machine is 2.43.x or above:
     * Check your installed git version by running the following command:
     `git version`.
     * If needed, install the correct version from the [git website](https://git-scm.com/download/win).

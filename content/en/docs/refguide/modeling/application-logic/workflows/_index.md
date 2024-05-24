@@ -8,7 +8,9 @@ tags: ["workflow", "workflows", "Studio Pro"]
 
 ## 1 Introduction
 
-Workflow is a visual language that allows you to build extendable processes. It is fully integrated with other visual languages, such as the microflow editor and page editor. Implementing workflow processes is vital for organizations to enhance operational efficiency, ensure compliance with regulations, and mitigate risks. 
+Workflow is a visual language that allows you to build extendable processes. In Mendix Studio Pro, it is fully integrated with other visual editors, such as the microflow editor and page editor. 
+
+Implementing workflow processes is vital for organizations to enhance operational efficiency, ensure compliance with regulations, and mitigate risks. 
 
 Below are the key reasons why organizations adopt workflow processes:
 
@@ -17,7 +19,7 @@ Below are the key reasons why organizations adopt workflow processes:
     * Facilitating the documentation of actions taken, decisions made, and available data, providing a clear audit trail.
 
 * Performance improvement:
-    * Enhancing Key Performance Indicators (KPIs) by identifying and addressing bottlenecks.
+    * Improving key performance indicators (KPIs) by identifying and addressing bottlenecks.
     * Reducing the time to complete tasks, thereby minimizing overdue penalties.
     * Enhancing the quality and efficiency of operations, leading to improved worker satisfaction.
 
@@ -28,15 +30,15 @@ Below are the key reasons why organizations adopt workflow processes:
 
 For more information on when and when not to use workflows, see the [When to Automate a Process with Workflows?](#when-to-use) and [When Not to Use Workflows?](#when-not) sections below.
 
-For information on workflow use cases, see the [Workflow Example Use Cases](#use-case) section below.
+For information on Mendix workflow use cases, see the [Mendix Workflow Use Cases](#use-case) section below.
 
-For instructions on how to perform workflow basic functions, see [Performing Workflow Basic Functions](/refguide/perform-workflow-basic-functions/).
+For instructions on how to perform Mendix workflow basic functions, see [Performing Workflow Basic Functions](/refguide/perform-workflow-basic-functions/).
 
 ## 2 When to Automate a Process with Workflows? {#when-to-use}
 
-Automating a process with workflow is most effective when the process meets specific criteria, ensuring smooth execution and optimization. By automating such processes, organizations can streamline operations, reduce errors, enhance efficiency, and free up human resources for more strategic tasks, ultimately driving productivity and achieving better outcomes. 
+Automating a process with workflows is the most effective when the process meets specific criteria, ensuring smooth execution and optimization. 
 
-Below are the criteria that a process should meet to be successfully automated:
+Below are the criteria that a process should meet to be successfully implemented with workflows:
 
 * Well-defined and known – the process is clearly understood and documented.
 * Repeatable nature – the process involves tasks that are performed regularly or in a cyclical manner.
@@ -45,7 +47,7 @@ Below are the criteria that a process should meet to be successfully automated:
 * Combination of human and automated tasks – the process involves a mix of activities that can be performed both by humans and automated systems.
 * Stability – the process remains relatively unchanged over time, with minimal variations.
 * Series of activities – it comprises a sequence of interconnected steps or actions.
-* Longer duration – the process spans a significant period, ranging from hours to months, without significant alterations.
+* Longer duration – the process spans a significant period, ranging from hours to months.
 
 ## 3 When Not to Use Workflows? {#when-not}
 
@@ -53,24 +55,26 @@ While workflow processes offer numerous benefits, they may not always be the ide
 
 Below are situations where the use of workflows might not be appropriate:
 
-* Lack of applicability – if not all the criteria outlined in the section above for automating a process are met, it may not be a suitable use case for workflow implementation.
+* Lack of applicability – if not MOST of the criteria outlined in the section above are met, it may not be a suitable use case for workflow implementation.
 * High degree of collaboration and interaction – processes characterized by extensive collaboration and interaction among individuals, where no clear path can be defined, may not align well with workflow structures.
 * Dynamic or unpredictable work – processes that involve dynamic or unknown elements, or where individuals require a high degree of freedom to decide their next actions, may not fit within the constraints of a workflow.
 * Outcome-driven processes – processes focused more on achieving specific outcomes rather than following a predefined series of steps may not be best suited for workflow implementation. It might be beneficial to consider alternative approaches, such as utilizing multiple smaller workflows that are loosely coupled with other logic.
 
-## 4 Workflow Example Use Cases {#use-case}
+## 4 Mendix Workflow Use Cases {#use-case}
 
-While many applications built on Mendix are data or transaction-centric, the integration of workflow capabilities varies based on specific requirements. Unlike dedicated BPM (Business Process Management) solutions where development revolves around process definitions, Mendix offers a versatile development paradigm with multiple editors, including the workflow editor, enabling seamless incorporation of workflows into broader application design.
+ Mendix offers a versatile development paradigm with multiple editors, enabling seamless incorporation of workflows into broader application design. This is different from dedicated business process management (BPM) solutions where development has to revolve around process definitions.
 
 The table below presents a few use cases that are a good fit for Mendix workflows:
 
 | Use case | Description |
 | --- | --- |
-| Supply chain management in a regulated industry | Companies in a highly regulated process industry can leverage Mendix workflows to manage supply chain information changes, such as changes in packaging, weight, and other conditions. The impact of supply changes at each stage of the process can be validated and assessed via workflows, ensuring seamless adaptation to evolving requirements |
-| Migration from dedicated BPM platforms | Customers transitioning from dedicated BPM platforms to Mendix for reasons such as cost reduction, simplified maintenance, enhanced user experience, and accelerated time-to-value. |
-| Maintenance plan approval | For customers who have migrated their industrial equipment maintenance plans from spreadsheets to Mendix, workflows facilitate to provide a structured review and approval process for instances requiring deviations. |
-| Dynamic business process support for a new product launch | For companies who require a rapid application development to support an end-to-end business process for a new product launch, Mendix workflows can be seamlessly integrated for the subsequent legal and financial review and approval process. |
-| Automated customer onboarding with orchestration | For organizations who need an application to streamline customer onboarding, involving orchestration across multiple systems, Mendix workflows can be utilized to prompt user intervention in cases of invalid situations, ensuring a smooth onboarding experience. |
+| Supply chain management in regulated industries | Companies in highly regulated process industries can use Mendix workflows to manage supply chain changes, such as changes in packaging, weight, and other conditions. Mendix workflows validate and assess the impact of these changes at each stage, ensuring smooth adaptation to evolving requirements. |
+| Migration from dedicated BPM platforms | Customers can transition from dedicated BPM platforms to Mendix to reduce cost, simplify maintenance, enhance user experience, and accelerate time-to-value. |
+| Maintenance plan approval | For customers who have migrated their industrial equipment maintenance plans from spreadsheets to Mendix, workflows facilitate to provide a structured review and approval process for changes of predefined maintenance plans. |
+| Dynamic business process support for a new product launch | For companies needing rapid application development to support end-to-end business processes for new product launches, Mendix workflows can be seamlessly integrated for the subsequent legal and financial review and approval. |
+| Automated customer onboarding process | Organizations that need to streamline customer onboarding can use Mendix workflows to automate process orchestration across multiple systems and prompt user intervention for invalid situations. This ensures a smooth and efficient onboarding experience. |
+
+To gain hands-on experience with Mendix workflow using a concrete use case, follow [Configuring a Workflow in Studio Pro for the Employee Onboarding Process](/refguide/workflow-how-to-configure/).
 
 ## 5 Workflow Elements
 

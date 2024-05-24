@@ -29,7 +29,7 @@ To learn how to create, configure, and use a JavaScript action, see these [Build
 
 After double-clicking a JavaScript action in your **App Explorer** you will see the JavaScript action's settings: 
 
-{{< figure src="/attachments/refguide/modeling/resources/javascript-actions/javascript-action-settings-no-para.png" alt="javascript settings"   width="400"  class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/resources/javascript-actions/javascript-action-settings-no-para.png" alt="javascript settings" width="600"  class="no-border" >}}
 
 The settings for JavaScript actions and their implications are detailed below.
 
@@ -43,7 +43,7 @@ Parameters pass data to JavaScript actions. For example, if you had a JavaScript
 
 {{< figure src="/attachments/refguide/modeling/resources/javascript-actions/parameter-naming.png" alt="parameter" class="no-border" >}}
 
-In a JavaScript action's **Code** tab, you can see its parameters' values and handle its implementation. Each parameter has a name (1), type (2), category, description (3), and return type (4):
+In a JavaScript action's **Code** tab, you can see its parameters' values and handle its implementation. Each parameter has a name (1), type (2), category, description (3),return type (4), and required (5):
 
 {{< figure src="/attachments/refguide/modeling/resources/javascript-actions/parameter-code.png" alt="parameter code" class="no-border" >}}
 
@@ -80,6 +80,12 @@ Use categories to keep parameters apart in a [JavaScript Action Call](/refguide/
 
 For apps with several parameters, descriptions serve as useful reminders of parameters' exact purposes. Descriptions also allow you to describe your parameters to app collaborators. Descriptions may contain both upper- and lower-case letters, numbers, and symbols.
 
+#### 2.2.4 Required
+
+If a parameter is set to required, a value should be selected for that parameter in every Javascript Action Call. In order to make a parameter optional, set 'required' to 'no'. This makes it possible to call the JavaScript Action without any value set for the parameter. This can be useful for flexibility and backward compatibility of JavaScript Actions by allowing new parameters to be added without breaking existing functionality. 
+
+If no argument is provided for an optional parameter, it defaults to undefined in the JavaScript Action. You can handle an optional parameter within the JavaScript Action by checking if it is undefined, allowing you to assign a default value or implement custom logic as needed. 
+
 ### 2.3 Return Type
 
 The return parameter type determines the type of data a JavaScript action returns. Because many APIs are asynchronous, you can also return a `Promise` object which resolves to this type. The return value of the JavaScript action can be given a name and stored so it can be used in the nanoflow where it is called. For all types which you can use for parameters, you can also use a return type. In addition, you can use the return type 'Nothing' if no data should return from the action.
@@ -104,7 +110,7 @@ A JavaScript action can have zero or more type parameters. Each type parameter s
 
 ## 4 Expose as Nanoflow Action
 
-In the **Expose as nanoflow action** tab, it is possible to expose a JavaScript action as a nanoflow action. This sample action has been given *Sample Action* caption text, assigned *Workshop* as its category, and given no icon or image:
+In the **Expose as nanoflow action** tab, it is possible to expose a JavaScript action as a nanoflow action. This example action has been given *Example Action* caption text, assigned *Workshop* as its category, and given no icon or image:
 
 {{< figure src="/attachments/refguide/modeling/resources/javascript-actions/expose-jsaction.png" alt="expose action" class="no-border" >}}
 

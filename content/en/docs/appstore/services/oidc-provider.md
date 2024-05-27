@@ -226,7 +226,7 @@ If you cannot use automatic registration, you can register the client manually.
 
 #### 3.3.3 Configuring Centralized Authorization{#configuring-authorization}
 
-There are two alternatives for [centralized authorization](#centralized-auth). You can use scopes, or a custom user claim.
+This section applies only when your client is using the authorization code grant. There are two alternatives for [centralized authorization](#centralized-auth). You can use scopes, or a custom user claim.
 
 Choose one of the two options, below.
 
@@ -344,6 +344,8 @@ Some examples of existing claims are:
 {{% /alert %}}
 
 ### 3.4 Configure Authentication with Login Location Constant
+
+This section applies only when your client is using the authorization code grant. 
 
 Consider a scenario, where you build an app using the [OIDC Provider](https://marketplace.mendix.com/link/component/214681) service. You can call this app an OIDC Provider app or Provider app. Other apps using the [OIDC SSO](https://marketplace.mendix.com/link/component/120371) module redirect end-users to your Provider app for authentication. You can choose how your Provider app handles the authentication process.
 The **LoginLocation** is a constant in the OIDC Provider service that controls where end-users are authenticated. The default value is a local sign in using a username and password as shown below:

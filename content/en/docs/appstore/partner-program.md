@@ -1,7 +1,7 @@
 ---
 title: "Mendix Component Partner Program"
 url: /appstore/partner-program/
-weight: 2
+weight: 4
 description: "Describes how to join the Mendix Component Partner Program to promote your content in the Mendix Marketplace."
 tags: ["marketplace", "partner", "partner program", "component partner program", "component"]
 aliases:

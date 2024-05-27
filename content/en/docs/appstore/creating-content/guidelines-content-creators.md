@@ -322,7 +322,9 @@ Once everything is ready, the offering is marked for production and will be publ
 
 ### 6.1 Product Support
 
-You must manage the accuracy of the offering on the Marketplace. Therefore, it is a requirement that the offering information is kept up to data e.g. in the event of new features or  benefits, with new releases. Our goal is to ensure that users and customers of the Mendix Marketplace have the most updated information about offerings.  It is a requirement, that if users or customers have additional questions about your product on Mendix Marketplace or want to engage to discuss a challenge, that they will be able to request a response using the **Contact Us** form on Mendix website or by clicking the link to your webpage available on your product offering page. If the **Contact Us** option is used, then you will be informed about these requests. You are expected to respond in a timely manner.  
+You must manage the accuracy of the offering on the Marketplace. Therefore, it is a requirement that the offering information is kept up to data e.g. in the event of new features or  benefits, with new releases. Our goal is to ensure that users and customers of the Mendix Marketplace have the most updated information about offerings.
+
+If users or customers have additional questions about your product on Mendix Marketplace or want to engage to discuss a challenge, they should always be able to request a response using the **Contact Us** form on Mendix website or by clicking the link to your webpage available on your product offering page. If the **Contact Us** option is used, then you will be informed about these requests. You are expected to respond in a timely manner.  
 
 Any products listed on Mendix Marketplace must meet the following requirements: 
 

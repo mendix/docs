@@ -9,18 +9,18 @@ tags: ["snowflake marketplace", "snowflake marketplace component", "snowflake", 
 
 ## 1 Introduction
 
-The [Mendix Data Loader](https://app.snowflake.com/marketplace/listing/GZTDZHHIDJ/mendix-data-loader) allows for seamless data ingestion from operational Mendix applications into Snowflake, enhancing an organization's business intelligence and reporting capabilities.
+The [Mendix Data Loader](https://app.snowflake.com/marketplace/listing/GZTDZHHIE0/mendix-mendix-data-loader) allows for seamless data ingestion from operational Mendix applications by using an exposed OData service into Snowflake, enhancing an organization's business intelligence and reporting capabilities.
 
 ### 1.1 Typical Use Cases
 
-The Mendix Data Loader supports a range of data ingestion tasks, enabling organizations to leverage their operational data within Snowflake for analytical purposes. The key functionalities include ingesting data from Mendix to Snowflake.
+The Mendix Data Loader supports a range of data ingestion tasks, enabling organizations to leverage their operational data within Snowflake for analytical purposes. The key functionalities include ingesting data dynamically from Mendix applications (only needing an OData endpoint and credentials) to Snowflake. The ingested data is stored in the target schema of the target database specified by the user and created by the Mendix Data Loader application. This target schema in the target database serves as a staging area. The user should copy the tables of the target schema into a database and schema where they want to store the ingested data. This should be done after every ingestion.
 
 ### 1.2 Prerequisites {#prerequisites}
 
 To use the Mendix Data Loader, you must have the following:
 
-* A Mendix application with a [published OData service](https://docs.mendix.com/refguide/published-odata-services/) that includes exposed entities
-* A Snowflake environment
+* A Mendix application with a [published OData service](https://docs.mendix.com/refguide/published-odata-services/) that includes exposed entities. 
+* A Snowflake environment.
 
 ### 1.3 Licensing and Cost
 
@@ -57,6 +57,7 @@ Upon installation, configure the Mendix Data Loader as follows:
 * Exposing an association in an Odata service is as a link is not supported yet by the Mendix Data Loader. Instead, choose the **As an associated object id** option in your Odata settings. This option will store the associated object ID in the table, but not explicitly as foreign key.
 * The Mendix Data Loader supports single endpoint (OData) ingestion. If you want to ingest data from multiple endpoint, you can do this by ingesting the data from each endpoint separately one by one. Make sure to assign a different staging schema for every ingestion you do, or the previous ingestions will be overwritten. The ability to ingest data from multiple endpoints in one go will be added in a future release.
 * At the moment the Mendix Data Loader does not support the scheduling of ingestion jobs. However, you can still achieve this by using a Snowflake worksheet. The ability to schedule ingestion jobs in your Mendix application will be added in a future release.
+* The Mendix Data Loader always ingests all the data exposed by the OData published by your Mendix application. If you do not want to ingest all of the data inside the exposed entities, you must filter the data at the Mendix/OData side. 
 
 ### 4.2 Troubleshooting
 
@@ -74,7 +75,11 @@ The amount of data being ingested is so large that the JSON file has become too 
 
 ##### 4.2.1.2 Solution
 
-To solve this issue, configure the exposed OData entities to have pagination. For the best performance, make the pages as large as possible while still ensuring that the JSON does not become too large to parse.
+To solve this issue, configure the exposed OData entities to have pagination. For the best performance, make the pages as large as possible while still ensuring that the JSON does not become too large to parse. 
+
+{{% alert color="info" %}}
+Pagination of exposed entities through OData is not availabl in Mendix version 10.10.0. This is a known issue that will be resolved in a future release.
+{{% /alert %}}
 
 ### 4.3 Contact Information
 

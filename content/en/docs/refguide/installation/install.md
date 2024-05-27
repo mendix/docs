@@ -66,7 +66,7 @@ The prerequisites are the following:
 
 * Microsoft .NET Desktop Runtime
 
-    | 10.0.0 - 10.10.0 | 10.11.0 - onwards |
+    | 10.0.0 - 10.10.0 | 10.11.0 and above |
     | --- | --- |
     | [.NET Desktop Runtime 6.0.x](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) <br/> Mendix recommends using version 6.0.6 or above | [.NET Desktop Runtime 8.0.x](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) |
 
@@ -75,9 +75,9 @@ The prerequisites are the following:
 * [Mendix Native Mobile Builder one-click Installer](https://appdev-mx-cdn.s3.amazonaws.com/native-builders/latest.exe)
 * [Git for Windows (x64)](https://git-scm.com/download/win) using the versions described below. These are the versions of Git that Studio Pro installs if the Git version installed on the system is below the suggested one.  
 	
-    | 10.0.0 - 10.1.0 | 10.2.0 - 10.9 | 10.10 - onwards |
+    | 10.0.0 - 10.1.0 | 10.2.0 - 10.9 | 10.10 and above |
     | --- | --- | --- |
-    | [2.37.1](https://github.com/git-for-windows/git/releases/tag/v2.37.1.windows.1) | [2.41.0](https://github.com/git-for-windows/git/releases/tag/v2.41.0.windows.3) | [2.43.0](https://github.com/git-for-windows/git/releases/tag/v2.43.0.windows.1)
+    | [2.37.1](https://github.com/git-for-windows/git/releases/tag/v2.37.1.windows.1) | [2.41.0](https://github.com/git-for-windows/git/releases/tag/v2.41.0.windows.3) | [2.43.0](https://github.com/git-for-windows/git/releases/tag/v2.43.0.windows.1)|
     
 * [Microsoft Edge WebView2 Evergreen Runtime (x64 or ARM64) (Evergreen Standalone Installer version)](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)
 * [Gradle 7.6 or above](https://gradle.org/install/#manually) with Gradle extracted to the parent directory of the folder where Studio Pro is installed (usually `C:\Program Files\Mendix`) instead of `C:\Gradle`.
@@ -105,18 +105,15 @@ It is possible to prepare the prerequisite installers beforehand, so that the Me
 3. Create a folder with the name **Dependencies** in the same location where the Mendix Studio Pro installer was placed.
 4. Download the prerequisites listed in the [Troubleshooting](#troubleshooting) section above and move them into the **Dependencies** folder.
 5. Rename the following dependencies:
-
-    | 10.0.0 - 10.10.0 | 10.11.0 - onwards |
-    | --- | --- |
-    | The Microsoft .NET Desktop Runtime 6.0.x executable (*dotnet.exe*) to *windowsdesktop-runtime-6.0-x64.exe* |The Microsoft .NET Desktop Runtime 8.0.x executable (*dotnet.exe*) to *windowsdesktop-runtime-8.0-x64.exe* |
-
-* The Java Development Kit 11 (x64) *msi* (for example, *OpenJDK11U-jdk_x64_windows_hotspot_11.0.3_7.msi*) to*adoptiumjdk_11_x64.msi*
-* The Visual C++ Redistributable for Visual Studio 2019 (x64) executable (for example, *VC_redist.x64.exe*) to*vcredist2019_x64.exe*
-* The `latest` executable to *mendix_native_mobile_builder.exe*
-* The *Git-{version}-64-bit.exe* executable to *git_for_windows_installer.exe*
-* Do not rename the Microsoft Edge WebView2 Evergreen Runtime installer *MicrosoftEdgeWebview2Setup.exe*, keepit as is
-* For Mendix 10.10.0 and above, the Gradle zip file should be named *gradle-8.5-bin.zip*
-* For Mendix 10 versions below 10.10.0, the Gradle zip file should be named *gradle-7.6.3-bin.zip*
+    * For Studio Pro versions 10.0.0 -10.10.0, The Microsoft .NET Desktop Runtime 6.0.x executable (*dotnet.exe*) to *windowsdesktop-runtime-6.0-x64.exe*
+    * For Studio Pro versions 10.11.0 and above, The Microsoft .NET Desktop Runtime 8.0.x executable (*dotnet.exe*) to *windowsdesktop-runtime-8.0-x64.exe*
+    * The Java Development Kit 11 (x64) *msi* (for example, *OpenJDK11U-jdk_x64_windows_hotspot_11.0.3_7.msi*) to*adoptiumjdk_11_x64.msi*
+    * The Visual C++ Redistributable for Visual Studio 2019 (x64) executable (for example, *VC_redist.x64.exe*) to*vcredist2019_x64.exe*
+    * The `latest` executable to *mendix_native_mobile_builder.exe*
+    * The *Git-{version}-64-bit.exe* executable to *git_for_windows_installer.exe*
+    * Do not rename the Microsoft Edge WebView2 Evergreen Runtime installer *MicrosoftEdgeWebview2Setup.exe*, keep it as is
+    * For Mendix 10.10.0 and above, the Gradle zip file should be named *gradle-8.5-bin.zip*
+    * For Mendix 10 versions below 10.10.0, the Gradle zip file should be named *gradle-7.6.3-bin.zip*
 
 6. Run the installer as described in the [Installing Mendix Studio Pro](#install) section above.
 

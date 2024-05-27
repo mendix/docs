@@ -65,7 +65,9 @@ The description of the items that you can select are as follows:
 
 * **Env Owner Id**:
 
-* **Cloud Resource Pack**: the resource pack for the cloud environment.                     {{% alert color="info" %}}For the technical details of each cloud resource pack, see the [Cloud Resource Packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack) section in *Mendix Cloud*.{{% /alert %}}
+* **Cloud Resource Pack**: the resource pack for the cloud environment.
+
+  {{% alert color="info" %}}For the technical details of each cloud resource pack, see the [Cloud Resource Packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack) section in *Mendix Cloud*.{{% /alert %}}
 
 * **Cloud Location**: the location of the environment
 

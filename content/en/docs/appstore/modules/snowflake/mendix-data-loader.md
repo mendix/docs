@@ -13,7 +13,7 @@ The [Mendix Data Loader](https://app.snowflake.com/marketplace/listing/GZTDZHHIE
 
 ### 1.1 Typical Use Cases
 
-The Mendix Data Loader supports a range of data ingestion tasks, enabling organizations to leverage their operational data within Snowflake for analytical purposes. The key functionalities include ingesting data dynamically from Mendix applications (only needing an OData endpoint and credentials) to Snowflake. The ingested data is stored in the target schema of the target database specified by the user and created by the Mendix Data Loader application. This target schema in the target database serves as a staging area and as such the user should copy the tables of the target schema into a database and schema they want to use to store the ingested data. This should be done after every ingestion.
+The Mendix Data Loader supports a range of data ingestion tasks, enabling organizations to leverage their operational data within Snowflake for analytical purposes. The key functionalities include ingesting data dynamically from Mendix applications (only needing an OData endpoint and credentials) to Snowflake. The ingested data is stored in the target schema of the target database specified by the user and created by the Mendix Data Loader application. This target schema in the target database serves as a staging area. The user should copy the tables of the target schema into a database and schema where they want to store the ingested data. This should be done after every ingestion.
 
 ### 1.2 Prerequisites {#prerequisites}
 

@@ -42,7 +42,7 @@ The following frameworks are required. They will be installed automatically by t
 
 * Microsoft .NET desktop runtime (x64) and all applicable Windows security patches
 
-    | 10.0.0 - 10.10.0 | 10.11.0 - onwards |
+    | Studio Pro 10.0.0 - 10.10.0 | Studio Pro 10.11.0 and above |
     | --- | --- |
     | .NET 6 Desktop Runtime | .NET 8 Desktop Runtime |
     
@@ -55,7 +55,7 @@ The following frameworks are required. They will be installed automatically by t
 When you are running Studio Pro on a Parallels virtual machine on an ARM64 device (for example, an M1 Mac), you need the following dependencies in addition to the x64 version listed above:
 
 * .NET Desktop Runtime (arm64)
-    | 10.0.0 - 10.10.0 | 10.11.0 - onwards |
+    | Studio Pro 10.0.0 - 10.10.0 | Studio Pro 10.11.0 and above |
     | --- | --- |
     | .NET 6 Desktop Runtime | .NET 8 Desktop Runtime |
 * Microsoft Edge WebView2 Evergreen Runtime (arm64)
@@ -298,7 +298,7 @@ MxBuild is a Windows and Linux command-line tool that can be used to build a Men
 
 * .NET
 
-    | 10.0.0 - 10.10.0 | 10.11.0 - onwards |
+    | Studio Pro 10.0.0 - 10.10.0 | Studio Pro 10.11.0 and above |
     | --- | --- |
     | .NET 6 | .NET 8 |
 

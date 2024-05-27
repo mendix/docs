@@ -277,7 +277,10 @@ In this case, the OIDC client is the app you are making.
 
 5. Add the **Client Secret**.
 6. If you have the **Automatic Configuration URL** (also known as the *well-known endpoint*), enter it and click **Import Configuration** to automatically fill the other endpoints.
-    * If you don not have an automatic configuration URL, you can fill in the other endpoints manually.
+
+    {{% alert color="info" %}}If the endpoint URL does not already end with `/.well-known/openid-configuration`, include it at the end. According to the specifications, the URL you need to enter typically ends with `/.well-known/openid-configuration`.{{% /alert %}}
+
+    * If you do not have an automatic configuration URL, you can fill in the other endpoints manually.
 7. Click **Save**
     {{% alert color="info" %}}Your client configuration is not yet complete, but you have to save at this point to allow you to set up the rest of the information.{{% /alert %}}
 8. Select your client configuration and click **Edit**.
@@ -348,7 +351,7 @@ The following constants are mandatory when creating an OIDC SSO configuration an
 * **ClientID** – the client id
 * **ClientAlias** – the client alias
 * **ClientSecret** – the client secret (see security best-practice, above)
-* **AutomaticConfigurationURL** – the URL of the well-known endpoint
+* **AutomaticConfigurationURL** – the URL of the well-known endpoint (ending with `/.well-known/openid-configuration`)
 
 For more information, see the [Custom User Provisioning at Deploy Time](#custom-provisioning-dep) section.
 

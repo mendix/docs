@@ -59,11 +59,29 @@ The description of the items that you can select are as follows:
 
 * **Members**: the number of the team members in the app development team
 
-* **Production**: Whether the environment is a production environment
-
 * **Created Date**: the date the app was created
 
-You can filter the apps in the table. For details, see the [Filtering Apps in the Table](#filter-apps)section.
+* **Env Owner**: the owner of the environment
+
+* **Env Owner Id**:
+
+* **Cloud Resource Pack**: the resource pack for the cloud environment.                     {{% alert color="info" %}}For the technical details of each cloud resource pack, see the [Cloud Resource Packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack) section in *Mendix Cloud*.{{% /alert %}}
+
+* **Cloud Location**: the location of the environment
+
+* **App RAM**:
+
+* **DB RAM**:
+
+* **DB Storage**: the storage of the database used by the app
+
+* **DB Storage Extra**:
+
+* **File Storage**:
+
+* **Fallback**: whether there is a fallback
+
+You can filter the apps in the table. For details, see the [Filtering Apps in the Table](#filter-apps) section.
 
 You can export apps to an Excel file. For details, see the [Exporting Apps to an Excel File](#export-to-excel) section.
 
@@ -103,6 +121,18 @@ The description of the items that you can select are as follows:
 
 * **Last Commit**: the date of the last commit in the main line
 
+* **Members**: the number of the team members in the app development team
+
+* **Created Date**: the date the app was created
+
+* **NamespaceID**: the ID of the name
+
+* **Namespace**: the namespace of the app
+
+* **Database Name**: the name of the database used by the app
+
+* **Storage Name**: the name of the storage used by the app
+
 ## 4 Mendix Free Cloud
 
 The **Mendix Free Cloud** tab shows all the free apps that are deployed on the Mendix Cloud.
@@ -140,6 +170,8 @@ The description of the items that you can select are as follows:
 * **Members**: the number of the team members in the app development team
 
 * **Created Date**: the date the app was created
+
+* **Cloud Location**: the location of the environment
 
 * **Actions**: adding the action menu ({{% icon name="three-dots-menu-horizontal" %}}) to enable you to **Deactivate App** and **Delete App** (For more information, see the [Deactivating and Deleting Apps](#deactivate-delete-apps) section.)
 
@@ -222,7 +254,7 @@ The filter shown as below allows you to filter apps by **Deployed Status**. (Thi
 
 ## 8 Viewing App Details {#app-details}
 
-If you click the name of an app in the overview table, a page opens and shows the details of this app.
+If you click an app name on a tab, a page opens and shows the details of this app.
 
 The app details page has the following tabs:
 

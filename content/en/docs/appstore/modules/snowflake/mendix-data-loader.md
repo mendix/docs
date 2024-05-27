@@ -9,7 +9,7 @@ tags: ["snowflake marketplace", "snowflake marketplace component", "snowflake", 
 
 ## 1 Introduction
 
-The [Mendix Data Loader](https://app.snowflake.com/marketplace/listing/GZTDZHHIDJ/mendix-data-loader) allows for seamless data ingestion from operational Mendix applications via an exposed OData service into Snowflake, enhancing an organization's business intelligence and reporting capabilities.
+The [Mendix Data Loader](https://app.snowflake.com/marketplace/listing/GZTDZHHIE0/mendix-mendix-data-loader) allows for seamless data ingestion from operational Mendix applications via an exposed OData service into Snowflake, enhancing an organization's business intelligence and reporting capabilities.
 
 ### 1.1 Typical Use Cases
 

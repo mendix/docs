@@ -132,7 +132,6 @@ The following is a typical example of how you may want to include the SCIM modul
 | --- | --- |
 | Administrator | SCIM.Administrator |
 
-
 #### 2.1.2 After Startup Microflow
 
 In the **Runtime** tab, add the microflow **SCIM.StartUp** as the **After startup** microflow.
@@ -152,9 +151,9 @@ Set up the required configuration of the [Encryption](https://marketplace.mendix
 
 #### 2.1.5 Default User Provisioning
 
-The SCIM module includes a default user provisioning microflow that maps user attributes from the SCIM payload to attributes in the common user objects within your Mendix app. For more details, see the [Attribute Mapping](#) section below.
+The SCIM module includes a default user provisioning microflow that maps user attributes from the SCIM payload to attributes in the common user objects within your Mendix app. For more details, see the [Attribute Mapping](#Attribute) section below.
 
-#### 2.1.6 Attribute Mapping
+#### 2.1.6 Attribute Mapping{#Attribute}
 
 For reference, the table below gives an overview of attribute mapping when using the defaults in both Entra ID and the default microflow in the SCIM module. This information may be helpful to see where a custom user provisioning flow differs from the defaults. If you wish to deviate from this default setting, you can create your own mapping. To do this, select an **IdP Attribute** (claim) and specify the **Configured Entity Attribute**. Ensure that the same configured entity attribute should not be mapped with another IdP attributes.
 
@@ -169,3 +168,84 @@ For reference, the table below gives an overview of attribute mapping when using
 | locale| Timezone | Newyork/America | Newyork/America |
 | preferredLanguage| Language| English,United States | English,United States |
 
+Ideally, both SCIM and SSO modules should utilize the same immutable user identifier for user identification. This approach enables the SCIM module to modify any attribute except the principal attribute without creating a new user. However, in practice, this may require attention, depending on your Identity Provider (IdP). You may need to create custom user provisioning microflows for either module. Mendix recommends disabling Just-In-Time user provisioning in your SSO module. This ensures that SCIM remains in control of user provisioning, preventing the creation of duplicate users.
+
+The table below describes the comparison of IdP claims (sub) values between SCIM and SSO modules.
+
+| **IdP** | **SSO Module** | **Remark** |
+| --- | --- | --- |
+| Okta | OIDC SSO | SCIM.externalID and OIDC.sub contains same value |
+| EntraID | OIDC SSO | SCIM.externalID and OIDC.oid contains same value |
+| Okta | SAML | SCIM.externalID and OIDC.Use Name ID contains same value *Note: Configure  Application username to Custom with user.getInternalProperty("id"). |
+| EntraID | SAML | SCIM.externalID and OIDC.Use Name ID contains same value *Note: Map Unique User Identifier as user.objectid in SSO Configuration. |
+
+### 2.2 Runtime Configuration
+
+#### 2.2.1 API Security{#api_security}
+
+Ensure that only legitimate SCIM clients can interact with your app via the SCIM module. You need to enable your SCIM client to authenticate itself with your app. The SCIM module currently supports usage of an **API Key** (token) for the authentication. You can either generate an API Key to download or upload one into your SCIM client during [Deploy Time Configuration](#deploy_time_config). This can be done by below two options:
+
+1. Using SCIM module to generate API-key
+
+To generate and download an API-key, click New in the IdPConfiguration page and configure below fields: 
+
+**Alias**: This is an alias name for your configuration. For Example, *Azure*.
+**API Key**: Used as a token for header-based authentication. IdP will send this as the authorization header parameter in the request. 
+
+{{< figure src="/attachments/appstore/modules/SCIM/Alias.png" "max-width=80%" class="image-border" >}}
+
+1. Configuring API-Key via Pipeline
+
+Another option is to generate an API key yourself and submit it to the SCIM module via a SCIM constant. To do this, set the constant `SCIM.Default_APIKey_Value` in the **Acceptance Environment Details** of the Mendix application environment. This approach enables you to manage API security without requiring a local administrator to log in to your application. It provides the flexibility to use the same API key for multiple applications using the SCIM module.
+
+#### 2.2.2 User Provisioning 
+
+In the **Provisioning** tab of the SCIM server configuration, you need to configure the following fields:
+
+* **Custom user Entity (extension of System.User)**: the entity in which you will store and look up the user account. If you are using the Administration module this would be `Administration.Account`.
+* **The attribute where the user principal is stored** (primary attribute): unique identifier associated with an authenticated user.
+* **User role**: the role which will be assigned to newly created users by default. Non-default roles can be assigned to users when they login, this requires proper configuration of SAML SSO or OIDC SSO or methods.
+* **Attribute Mapping**: under **Attribute Mapping**, select an **IdP Attribute** (claim) for each piece of information you want to add to your custom user entity. Specify the **Configured Entity Attribute** where you want to store the information.
+
+Note the following:
+
+* You cannot use the IdP claim which is the primary attribute identifying the user and you cannot use the attribute you set in **The attribute where the user principal is stored**.
+* You can map only one IdP claim to a **Custom user Entity** attribute.
+* The **IdP Attribute** is one of the fixed claims supported by the SCIM module.
+* **IdP attribute** (Claim) cannot be of type enum, autonumber, or an association.
+* Use Custom Logic in **User Provisioning** (Optional) – In **Custom UserProvisioning**, select a microflow you want to run for [Custom User Provisioning Using a Microflow](#cusom_userprovisioning_microflow).
+
+The custm microflow name must begin with the string `CustomUserProvisioning`. If you have added a new microflow, you need to refresh the module containing your microflow as described in [Mx Model Reflection](https://docs.mendix.com/appstore/modules/model-reflection/).
+
+{{< figure src="/attachments/appstore/modules/SCIM/user provisioning.png" "max-width=80%" class="image-border" >}}
+
+This selection can be blank if you do not want to add custom logic. Save this configuration. Double click on **Alias** name and you will be able to copy the generated **API Key**.
+
+### 2.3 Deploy Time Configuration
+
+Setting up connectivity with an IdP varies depending on the vendor. The following subsection shows the configuration for the Microsoft Entra ID.
+
+#### 2.3.1 Configuration with Entra ID
+
+1. On the Microsoft Entra ID tenant, select **Enterprise Application** and create SCIM client in it.
+1. Change the **Provisioning** Mode to **Automatic**.
+
+{{< figure src="/attachments/appstore/modules/SCIM/provisioning_revised.png" "max-width=80%" class="image-border" >}}
+
+1. Configure the SCIM server (Mendix SCIM Application) with the following details:
+
+* **Tenant URL**: `https://intranet.acme.com/scim/v2`. Replace `intranet.acme.com` with your intranet domain.
+* **Secret Token**: copy the **API Key** (token) from the **IdPConfiguration** page of User Commons, as described in the [API Security](#api_security) section above.
+* Click **Test Connection**.
+
+1. Configure **Mappings** and **Settings**.
+
+* **Mappings** allow you to define how data should be mapped between Entra ID and Mendix application.
+* Click **Settings** and you can change the scope to **Sync only assigned user and groups**.
+* **Save** the configuration.
+
+1. Click **Users and groups** to add and assign the required individual users or group (or groups) of users to the SCIM Client. The scheduled provisioning will sync these users.
+
+{{< figure src="/attachments/appstore/modules/SCIM/users and groups.png" "max-width=80%" class="image-border" >}}
+
+1. On the SCIM client app, click **Provisioning** to do the user provisioning.

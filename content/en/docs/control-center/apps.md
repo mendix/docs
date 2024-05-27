@@ -206,7 +206,7 @@ You can export apps to an Excel file. For details, see the [Exporting Apps to an
 
 ## 7 Filtering Apps in the Table {#filter-apps}
 
-On each tab with an table of apps, you can find filters on the top, which allows you to filter apps using different criteria. 
+On each tab with a table of apps, you can find filters on the top, which allows you to filter apps using different criteria. 
 
 With the filter as shown below, you can search for string matches on any of the string fields in the table, for example, the app ID, app name, or environment name. Clicking the button on the left allows you to use comparisons and string operations, such as **Contains**, **Starts with**, and **Greater than**. (This filter is available on the **Mendix Cloud**, **Mendix Free Cloud**, and **Other Apps** tabs.)
 

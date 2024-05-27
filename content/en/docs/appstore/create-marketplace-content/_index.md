@@ -1,6 +1,6 @@
 ---
-title: "Creating Marketplace Content"
-url: /appstore/creating-content/
+title: "Create Marketplace Content"
+url: /appstore/create-marketplace-content/
 description: "Present details on creating content for the Mendix Marketplace."
 weight: 2
 no_list: false

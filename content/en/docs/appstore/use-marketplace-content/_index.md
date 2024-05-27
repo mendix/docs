@@ -1,6 +1,6 @@
 ---
-title: "Using Marketplace Content"
-url: /appstore/using-content/
+title: "Use Marketplace Content"
+url: /appstore/use-marketplace-content/
 description: "Present details on using content for the Mendix Marketplace."
 weight: 3
 no_list: false

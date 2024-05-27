@@ -1,5 +1,5 @@
 ---
-title: "Guidelines for Creating Modules"
+title: "Create Modules"
 url: /appstore/guidelines-creating-modules/
 description: "Describes guidelines for creating modules in the Marketplace."
 weight: 3

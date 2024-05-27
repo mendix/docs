@@ -2,7 +2,7 @@
 title: "Implement a Solution"
 url: /appstore/creating-content/sol-solutions-impl/
 linktitle: "Implement Solutions"
-category: "Creating Content"
+category: "Create Solutions"
 weight: 7
 description: "Provides information and guidance on how to implement Mendix solutions."
 tags: ["solutions guide", "adaptable solutions", "solutions", "implement solution", "set up solution", "upgrade solution"]

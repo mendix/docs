@@ -1,5 +1,5 @@
 ---
-title: "Guidelines for Creating Widgets"
+title: "Create Widgets"
 url: /appstore/guidelines-creating-widgets/
 description: "Describes guidelines for creating widgets in the Marketplace."
 weight: 2

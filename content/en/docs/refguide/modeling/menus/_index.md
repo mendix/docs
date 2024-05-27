@@ -62,6 +62,7 @@ In the **Language** menu, you can add alternative languages to your app so that 
 | **Help** | Opens the documentation page about the currently selected element. If an entity is selected, for example, the documentation for entities will be shown. | <kbd>F1</kbd> |
 | **Help Contents** | Opens the home page of the documentation in the default web browser. |   |
 | **Ask a Question** | Opens the Mendix Community in the default web browser. |   |
+| **Support Tools** | Provides a variety of tools (such as: performance logging & profiling) that can be used to share with Mendix Support, especially when you encounter issues with performance or high memory consumption. see **Performance Logging** and **Profiling** sections on [Monitoring and Troubleshooting](/content/en/docs/howto/monitoring-troubleshooting/_index.md) page for more details. | |
 | **Open Log File Directory** | Opens the log files written by Studio Pro that can be used to see what might be the reason something went wrong in Studio Pro. Log files can also be used to share with Mendix Support when you submit a ticket. |   |
 | **About Mendix Studio Pro** | Shows information about the current version of Mendix Studio Pro. |   |
 

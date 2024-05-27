@@ -23,11 +23,15 @@ For projects developed with Mendix Studio Pro 8.18 (Long-Term Support), use [**M
 
 For projects developed with Mendix Studio Pro 9.24 (Long-Term Support), use [**Make It Native 9**](https://docs.mendix.com/releasenotes/mobile/make-it-native-9/). This version is tailored for the Mendix 9 series, providing the necessary features and updates.
 
-### Mendix Studio Pro 10.0 to 10.10
+### Mendix Studio Pro 10.6 (MTS)
 
-For projects developed with Mendix Studio Pro versions 10.0 through 10.10, use [**Make It Native 10**](https://docs.mendix.com/releasenotes/mobile/make-it-native-10/) available from the app stores. This ensures compatibility with the early releases of the Mendix 10 series.
+For projects developed with Mendix Studio Pro versions 10.6, use [**Make It Native 10**](https://docs.mendix.com/releasenotes/mobile/make-it-native-10/) available from the app stores. This ensures compatibility with the early releases of the Mendix 10 series.
 
-### Mendix Studio Pro 10.11
+{{% alert color="info" %}}
+This version is also compatible with 10.7 - 10.8 - 10.9 - 10.10 versions of Mendix Studio Pro
+{{% /alert %}}
+
+### Mendix Studio Pro 10.11 (Latest)
 
 For projects developed with Mendix Studio Pro 10.11, specific builds of **Make It Native 10** are available for Android and iOS. These builds can be accessed via the following URLs:
 
@@ -40,14 +44,20 @@ These builds are updated to support the latest features and improvements introdu
 
 Make It Native 10 will continue to support the latest Mendix Studio Pro minor version (MTS). This ensures ongoing compatibility and support for the newest updates and features.
 
+### Other Mendix Studio Pro versions
+
+For all other versions, [create a Custom Developer App](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/).
+
 ## 3 Summary
 
 To summarize, use the following Make It Native app versions for corresponding Mendix Studio Pro releases:
 
 - **Mendix 8.18 (LTS)**: Make It Native 8
 - **Mendix 9.24 (LTS)**: Make It Native 9
-- **Mendix 10.0 - 10.10**: Make It Native 10 from app stores
-- **Mendix 10.11+**: Specific builds of Make It Native 10 (TestFlight and Google OpenTesting)
+- **Mendix 10.6 - 10.10**: Make It Native 10 from app stores
+- **Mendix 10.11**: Specific builds of Make It Native 10 (TestFlight and Google OpenTesting)
+- **The app stores Make it native will keep support the latest MTS version.**
+- **Other versions**: [create a Custom Developer App](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/).
 
 By following this strategy, you ensure that your development environment is equipped with the appropriate tools, leading to a smoother and more efficient development process.
 

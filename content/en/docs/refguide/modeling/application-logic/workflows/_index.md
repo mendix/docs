@@ -16,7 +16,7 @@ Below are the key reasons why organizations adopt workflow processes:
 
 * Compliance management:
     * Ensuring adherence to local rules, regulations, and laws.
-    * Facilitating the documentation of taken actions, decisions, and available data to provide a clear audit trail.
+    * Facilitating the documentation of any available data, including actions taken and decisions made. This helps to provide a clear audit trail.
 
 * Performance improvement:
     * Improving key performance indicators (KPIs) by identifying and addressing bottlenecks.
@@ -62,7 +62,7 @@ Below are situations where the use of workflows might not be appropriate:
 
 ## 4 Mendix Workflow Use Cases {#use-case}
 
- Mendix offers a versatile development paradigm with multiple editors, enabling seamless incorporation of workflows into broader application design. This is different from dedicated business process management (BPM) solutions where development has to revolve around process definitions.
+Mendix offers a versatile development paradigm with multiple editors, enabling seamless incorporation of workflows into broader application design. With Mendix, you can keep workflows focused on representing your business processes, while using the other logic (such as microflows and nanoflows) for more technical implementations.
 
 The table below presents a few use cases that are a good fit for Mendix workflows:
 
@@ -72,7 +72,7 @@ The table below presents a few use cases that are a good fit for Mendix workflow
 | Migration from dedicated BPM platforms | Customers can transition from dedicated BPM platforms to Mendix to reduce cost, simplify maintenance, enhance user experience, and accelerate time-to-value. |
 | Maintenance plan approval | For customers who have migrated their industrial equipment maintenance plans from spreadsheets to Mendix, workflows facilitate to provide a structured review and approval process for changes of predefined maintenance plans. |
 | Dynamic business process support for a new product launch | For companies needing rapid application development to support end-to-end business processes for new product launches, Mendix workflows can be seamlessly integrated for the subsequent legal and financial review and approval. |
-| Automated customer onboarding process | Organizations that need to streamline customer onboarding can use Mendix workflows to automate process orchestration across multiple systems and prompt user intervention for invalid situations. This ensures a smooth and efficient onboarding experience. |
+| Automated customer onboarding process | Organizations that need to streamline customer onboarding can use Mendix workflows to automate process orchestration across multiple systems and involve user intervention for invalid situations. This ensures a smooth and efficient onboarding experience. |
 
 To gain hands-on experience with Mendix workflow using a concrete use case, follow [Configuring a Workflow in Studio Pro for the Employee Onboarding Process](/refguide/workflow-how-to-configure/).
 

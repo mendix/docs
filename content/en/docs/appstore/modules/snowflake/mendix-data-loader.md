@@ -61,8 +61,6 @@ Upon installation, configure the Mendix Data Loader as follows:
 
 ### 4.2 Troubleshooting
 
-### 4.2 Troubleshooting
-
 If you encounter any issues while using the Mendix Data Loader, use the following troubleshooting tips to help you solve them.
 
 For any additional troubleshooting, contact the [development team](mailto:sa_dev_team@mendix.com).
@@ -85,4 +83,4 @@ Pagination of exposed entities through OData is not availabl in Mendix version 1
 
 ### 4.3 Contact Information
 
-For support or queries regarding the Mendix Data Loader, please email the development team at [SA_Dev_Team@mendix.com](mailto:sa_dev_team@mendix.com).
+For support or queries regarding the Mendix Data Loader, email the development team at [SA_Dev_Team@mendix.com](mailto:sa_dev_team@mendix.com).

@@ -19,6 +19,10 @@ The [Web Actions](https://marketplace.mendix.com/link/component/114337/) module 
 | Set focus | Sets the focus to the element found with the selector. The element should be able to hold focus like a link, button, or input. For this action, you need to provide a target selector. This target could be an element containing a class (for example, `.mx-class-name`, `.my-class-name`), an HTML element (for example, `td`, `div`, `a`), or an element ID (for example, `#my-element-id`). |
 | Take picture | Allows users to take a picture from the back and front camera in a web or PWA app. |
 
+{{% alert color="warning" %}}
+When using Studio Pro on Mac, the **Take picture** action sometimes makes your device's screen turn black due to a bug. Fix this bug by upgrading to an iOS version above 17.3.1.
+{{% /alert %}}
+
 ## 2 Usage
 
 To take a picture, follow these steps:

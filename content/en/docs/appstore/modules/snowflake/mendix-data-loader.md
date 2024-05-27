@@ -55,19 +55,33 @@ Upon installation, configure the Mendix Data Loader as follows:
 
 * At present, the Mendix Data Loader supports username and password authentication. Make sure to use username and password authentication when setting up your Odata service.
 * Exposing an association in an Odata service is as a link is not supported yet by the Mendix Data Loader. Instead, choose the **As an associated object id** option in your Odata settings. This option will store the associated object ID in the table, but not explicitly as foreign key.
-* We support single endpoint (OData) ingestion. If you want to ingest data from multiple endpoint you can do this one by one. Make sure to assign a different staging schema for every ingestion you do or previous ingestions will be overwritten. Functionality to be able to ingest multiple endpoints in one go is on the roadmap.
-* At the moment we don't support scheduling of ingestion jobs as a feature of the Mendix Data Loader. This can already be done however using a snowflake worksheet. We are planning to make this possible from within the application in the future.
-* The Mendix Data Loader always ingests all the data exposed by the OData published by your Mendix application. This means that if you do not want to ingest all of the data inside the exposed entities you have to do the filtering of the data at the Mendix/OData side. 
+* The Mendix Data Loader supports single endpoint (OData) ingestion. If you want to ingest data from multiple endpoint, you can do this by ingesting the data from each endpoint separately one by one. Make sure to assign a different staging schema for every ingestion you do, or the previous ingestions will be overwritten. The ability to ingest data from multiple endpoints in one go will be added in a future release.
+* At the moment the Mendix Data Loader does not support the scheduling of ingestion jobs. However, you can still achieve this by using a Snowflake worksheet. The ability to schedule ingestion jobs in your Mendix application will be added in a future release.
+* The Mendix Data Loader always ingests all the data exposed by the OData published by your Mendix application. If you do not want to ingest all of the data inside the exposed entities, you must filter the data at the Mendix/OData side. 
 
 ### 4.2 Troubleshooting
 
-For the best performance configure the exposed OData entities to have no paging. At large enough amounts of data being ingested the Mendix Data Loader will run into an error because it is unable to parse the Json since it has become to large. When you run in to this problem you should introduce paging to the exposed OData entities. The Mendix Data Loader performs best when the pages have as many records as possible while still avoiding that the Json becomes to large to parse.
+### 4.2 Troubleshooting
 
-Note that in Mendix version 10.10.0 pagination of exposed entities via OData doesn't work. This is a known issue and will hopefully be solved soon. 
-
-![ODataPagination](https://github.com/strategicalliances/docs/assets/139855197/e18d8cc6-b0d0-4039-9f5e-fcbfd99cc2e0)
+If you encounter any issues while using the Mendix Data Loader, use the following troubleshooting tips to help you solve them.
 
 For any additional troubleshooting, contact the [development team](mailto:sa_dev_team@mendix.com).
+
+#### 4.2.1 Error Parsing JSON: Document Is Too Large
+
+When ingesting data, the Mendix Data Loader shows an error similar to the following: `net.snowflake.client.jdbc.SnowflakeSQLException: Error parsing JSON: document is too large, max size 16777216 bytes`.
+
+##### 4.2.1.1 Cause
+
+The amount of data being ingested is so large that the JSON file has become too large to parse.
+
+##### 4.2.1.2 Solution
+
+To solve this issue, configure the exposed OData entities to have pagination. For the best performance, make the pages as large as possible while still ensuring that the JSON does not become too large to parse. 
+
+{{% alert color="info" %}}
+Pagination of exposed entities through OData is not availabl in Mendix version 10.10.0. This is a known issue that will be resolved in a future release.
+{{% /alert %}}
 
 ### 4.3 Contact Information
 

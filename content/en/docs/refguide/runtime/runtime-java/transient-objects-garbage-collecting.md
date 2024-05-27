@@ -74,7 +74,7 @@ WARNING: Request state size of 551 objects exceeds the threshold of 500 objects.
  * AnotherModule.SomeEntity: 130 objects
 ```
 
-This threshold can be configured with the custom setting `com.mendix.webui.StateSizeWarningThreshold` (the value is a number that reflects the total number of objects in the request state).
+This threshold can be configured with the custom setting `com.mendix.webui.StateSizeWarningThreshold` in the [Runtime Customization](/refguide/custom-settings/) section of your environment.  (the value is a number that reflects the total number of objects in the request state).
 
 #### 4.2.1 Choosing a Correct Threshold Level
 

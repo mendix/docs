@@ -20,6 +20,7 @@ Many of these guides use the Mendix Native Mobile Builder UI tool included in Me
 * [Build a Mendix Native App in the Cloud](/refguide/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/) – Go from a blank slate to an app running on a device.
 * [Create a Custom Developer App](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/) – Create a custom developer app (a substitute for the Make It Native app) which accommodates custom dependencies such as native widgets or fonts.
 * [Native Template](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-template/) –  The Native Template describes the native dependencies your app needs, and it includes two native apps (one for iOS and one for Android) that can be independently built to create the finished apps.
+* [Make it Native versions](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-min-versions/) – Follow this guide to choose the correct Make It Native App Versions for different Mendix Studio Pro Releases.
 
 {{% alert color="info" %}}
 The Mendix Native Mobile Builder does not currently support connections behind proxy servers. Please make sure you are not behind a proxy server and that your security rules allow access to the required services.

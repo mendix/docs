@@ -1,7 +1,7 @@
 ---
-title: "Guidelines for Building Modules"
-url: /appstore/guidelines-building-modules/
-description: "Describes guidelines for building modules in the Marketplace."
+title: "Guidelines for Creating Modules"
+url: /appstore/guidelines-creating-modules/
+description: "Describes guidelines for creating modules in the Marketplace."
 weight: 3
 tags: ["marketplace", "content creation", "guidelines", "modules"]
 ---

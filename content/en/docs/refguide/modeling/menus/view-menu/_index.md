@@ -53,7 +53,11 @@ Menu items of the **View** menu are described in sections below.
 
 The [App Explorer](/refguide/app-explorer/) pane displays the complete structure of your app, including all the documents inside the modules. By default, the active document is always selected, so you can quickly see where the document you are editing is in the tree. You can change this behavior in **Edit** > [Preferences](/refguide/preferences-dialog/). 
 
-### 3.2 Changes
+### 3.2 Best Practice Bot {#mx-bot}
+
+For details on this intelligent virtual co-developer bot, see [Best Practice Bot](/refguide/mx-assist-performance-bot/).
+
+### 3.3 Changes
 
 For version control-enabled apps (meaning, those with [Team Server](/developerportal/general/team-server/) or other Git servers), the [Changes pane](/refguide/changes-pane/) shows the local changes to the app since the last commit. You can commit changes, update to the latest revision, and view the history from here. 
 
@@ -61,17 +65,13 @@ This pane has two levels, so when you zoom into a changed document, you can revi
 
 <video width="640" height="360" controls src="/attachments/refguide/view-menu/changes.mp4">VIDEO</video>
 
-### 3.3 Connector {#connector}
+### 3.4 Connector {#connector}
 
 The **Connector** pane displays elements that can be connected to the currently selected element. For example, when a button is a selected, the **Connector** shows microflows that you can drag onto the button to connect them.
 
-### 3.4 Console {#console}
+### 3.5 Console {#console}
 
 The **Console** pane displays the output of the [Mendix Runtime](/refguide/runtime/) while running an application.
-
-### 3.5 Integration {#data-hub}
-
-The [Integration pane](/refguide/integration-pane/) enables you to browse the [Catalog](/catalog/) and use registered data sources that are available for your organization in your app development. You can add [external entities](/refguide/external-entities/) and [external actions](/refguide/call-external-action/) to your app via this pane and see entities and data sources already consumed in your app. 
 
 ### 3.6 Documentation
 
@@ -87,13 +87,13 @@ This pane displays the results of the latest find action. You can search for tex
 
 There are two **Find Results** panes. If you lock the results of the first pane, the second one is used for subsequent find operations until you unlock the first one.
 
-### 3.9 Marketplace
+### 3.9 Integration {#data-hub}
+
+The [Integration pane](/refguide/integration-pane/) enables you to browse the [Catalog](/catalog/) and use registered data sources that are available for your organization in your app development. You can add [external entities](/refguide/external-entities/) and [external actions](/refguide/call-external-action/) to your app via this pane and see entities and data sources already consumed in your app. 
+
+### 3.10 Marketplace
 
 For details on using Mendix Marketplace components in your app modeling, see [Using Marketplace Content](/appstore/overview/use-content/).
-
-### 3.10 MxAssist Best Practice Bot {#mx-bot}
-
-For details on this intelligent virtual co-developer bot, see [MxAssist Best Practice Bot](/refguide/mx-assist-performance-bot/).
 
 ### 3.11 Page Explorer
 

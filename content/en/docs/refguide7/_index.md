@@ -7,7 +7,6 @@ weight: 85
 no_list: false
 description_list: true
 cascade:
-    - space: "Mendix 7"
     - content_type: "Mendix 7"
     - mendix_version: 7
     - banner_7: true

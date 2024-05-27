@@ -363,9 +363,7 @@ AWS IRSA allows a Kubernetes Service Account to assume an IAM role. For this to 
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/awsserviceaccountlinktorole.png" class="no-border" >}}
 
-{{% alert color="info" %}}
-For Global Operator installations, you must specify the managed namespace in the **Namespace** field.
-{{% /alert %}}    
+    {{% alert color="info" %}}For Global Operator installations, you must specify the managed namespace in the **Namespace** field.{{% /alert %}}    
 
 2. For the second condition, copy and paste the `sts.amazonaws.com` line; replace `:aud` with `:sub` and set it to `system:serviceaccount:<Kubernetes namespace>:<Kubernetes serviceaccount name>`.
 
@@ -1523,7 +1521,22 @@ For more details, see the [Postgres (IAM authentication](#database-postgres-iam)
 
 To configure the required settings for an RDS database, do the following steps:
 
-1. Create a Postgres RDS instance and enable **Password and IAM database authentication**, or enable **Password and IAM database authentication** for an existing instance. See the [RDS IAM documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.Enabling.html) for more details on enabling IAM authentication.
+1. Create a Postgres RDS instance and enable **Password and IAM database authentication**, or enable **Password and IAM database authentication** for an existing instance.
+2. Enable [IAM authentication](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.DBAccounts.html#UsingWithRDS.IAMDBAuth.DBAccounts.PostgreSQL) and grant `rds_iam` role to `database-username` role by using the below `psql` commandline to run the following jump pod commands (replacing `<database-username>` with the username specified in `database-username` and `<database-host>` with the database host):
+
+   ```sql {linenos=false}
+   kubectl run postgrestools docker.io/bitnami/postgresql:14 -ti --restart=Never --rm=true -- /bin/sh
+   export PGDATABASE=postgres
+   export PGUSER=<database-username>
+   export PGHOST=<database-host>
+   export PGPASSWORD=""
+   psql
+
+   GRANT rds_iam TO <database-username>;
+   ALTER ROLE <database-username> WITH PASSWORD NULL;
+   ```
+
+See the [RDS IAM documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.Enabling.html) for more details on enabling IAM authentication.
 
     {{% alert color="info" %}}The VPC and firewall must be configured to allow connections to the database from the Kubernetes cluster. When creating the RDS instance, as a best practice, make sure that it uses the same VPC as the Kubernetes cluster. Alternatively, you can also use a publicly accessible cluster. After an RDS instance has been created, it is not possible to modify its VPC.
     {{% /alert %}}
@@ -1531,7 +1544,7 @@ To configure the required settings for an RDS database, do the following steps:
     {{% alert color="info" %}}In the case of Aurora DB, ensure that the `rds_iam` role is granted to the master database user.
     {{% /alert %}}
 
-2. Navigate to the RDS instance details, and write down the following information:
+3. Navigate to the RDS instance details, and write down the following information:
 
     * The database **Endpoint** from the **Connectivity & security** tab:
 
@@ -1541,7 +1554,7 @@ To configure the required settings for an RDS database, do the following steps:
 
        {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/private-cloud-storage-plans/RDS-Connection.png" class="no-border" >}}
 
-3. Download the [RDS TLS certificates](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.SSL.html#UsingWithRDS.SSL.CertificatesAllRegions)
+4. Download the [RDS TLS certificates](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.SSL.html#UsingWithRDS.SSL.CertificatesAllRegions)
 and save them into a Kubernetes secret (replace `{namespace}` with the namespace where the Mendix Operator is installed):
 
 {{% alert color="info" %}}For Global Operator, replace `{namespace}` with the managed namespace name.{{% /alert %}}
@@ -1550,6 +1563,13 @@ and save them into a Kubernetes secret (replace `{namespace}` with the namespace
 curl -L -o custom.crt https://truststore.pki.rds.amazonaws.com/global/global-bundle.pem
 kubectl -n {namespace} create secret generic mendix-custom-tls --from-file=custom.crt=custom.crt
 ```
+
+{{% alert color="info" %}}
+If IAM authentication is not working as expected, check the RDS database's logs.
+
+* A `password authentication` failed for user error means that the user does not have IAM authentication enabled.
+* A `PAM authentication failed for user` error means that IAM authentication is enabled, but the IAM policy does not allow the user to connect.
+{{% /alert %}}
 
 #### 4.1.2 S3 Bucket
 
@@ -1652,9 +1672,7 @@ Create a new IAM role.
 
     2. For the second condition, copy and paste the `sts.amazonaws.com` line; replace `:aud` with `:sub` and set it to `system:serviceaccount:<Kubernetes namespace>:<Kubernetes serviceaccount name>`.
 
-{{% alert color="info" %}}
-For Global Operator installation, replace `Kubernetes namespace` with the managed namespace name. For more information, see [Amazon EKS Pod Identity Webhook – EKS Walkthrough](https://github.com/aws/amazon-eks-pod-identity-webhook#eks-walkthrough). After this, the specified service account in the specified namespace is able to assume this role.
-{{% /alert %}}
+    {{% alert color="info" %}}For Global Operator installation, replace `Kubernetes namespace` with the managed namespace name. For more information, see [Amazon EKS Pod Identity Webhook – EKS Walkthrough](https://github.com/aws/amazon-eks-pod-identity-webhook#eks-walkthrough). After this, the specified service account in the specified namespace is able to assume this role.{{% /alert %}}
 
 5. Attach the following IAM policy to this Storage Provisioner admin IAM role:
 

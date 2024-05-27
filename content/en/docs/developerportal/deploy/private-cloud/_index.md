@@ -1,7 +1,7 @@
 ---
 title: "Private Cloud"
 url: /developerportal/deploy/private-cloud/
-category: "Deployment"
+
 description: "Describes how to deploy to a Private Cloud."
 weight: 48
 tags: ["Deployment", "Private Cloud", "Environment"]

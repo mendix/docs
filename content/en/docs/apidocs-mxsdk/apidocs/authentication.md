@@ -1,9 +1,8 @@
 ---
 title: "Authentication"
 url: /apidocs-mxsdk/apidocs/authentication/
-category: "API Documentation"
 description: "Describes the two methods of Mendix API authentication: using API keys and using personal access tokens."
-weight: 10
+weight: 5
 tags: ["API", "API Key", "Authentication", "personal access token"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -42,4 +41,3 @@ To generate a PAT, follow the instructions in the [Personal Access Tokens](http:
 ### 3.2  Using the PAT
 
 Include an `Authorization` header with the value `MxToken {GENERATED_PAT}` to authenticate an API call. For an example, see the [Using the PAT](/apidocs-mxsdk/apidocs/webhooks-api/#use-pat) section of the *Webhooks API*.
-

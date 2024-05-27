@@ -1,7 +1,7 @@
 ---
 title: "Backups"
 url: /developerportal/operate/backups/
-category: "Operations"
+
 weight: 40
 description: "Describes the Backups page of the Developer Portal."
 tags: ["Operate", "App", "Developer Portal", "Backup"]

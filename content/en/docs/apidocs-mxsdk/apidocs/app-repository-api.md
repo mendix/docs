@@ -1,9 +1,8 @@
 ---
 title: "App Repository API"
 url: /apidocs-mxsdk/apidocs/app-repository-api/
-category: "API Documentation"
 description: "This API enables retrieving information (branches, commits) of application models stored in the Mendix Team Server."
-weight: 5
+weight: 10
 ---
 
 ## 1 Introduction

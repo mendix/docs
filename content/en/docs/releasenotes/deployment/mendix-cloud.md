@@ -1,7 +1,7 @@
 ---
 title: "Mendix Cloud"
 url: /releasenotes/developer-portal/mendix-cloud/
-category: "Deployment"
+
 weight: 10
 description: "Release notes for deployment to Mendix Cloud"
 tags: ["release notes", "deployment", "cloud environment", "Mendix Cloud", "free app"]
@@ -17,13 +17,32 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2024
 
+### May 14, 2024
+
+#### New Features
+
+* We now use Arm-based AWS Graviton 2 processors for databases of new environments on all plans in Mendix Public Cloud for best performance. Graviton 2 processors can provide significant performance improvements over previous generation instances. For database operations, this means faster processing of queries and better handling of concurrent requests.
+
+    Existing environments will not automatically use Graviton 2 processors for their databases. Graviton 2 processors will be used for new environments and those which are cleared or downsized.
+
+### May 9, 2024
+
+#### Pipelines Improvements
+
+* We added a Feedback Widget to the Pipelines pages so that customers can directly provide feedback, enhancement requests, and other ideas.
+* We improved the performance of the **Runs** page's search and filtering.
+* We added a column selector to the table on the **Runs** page, so it is now possible to customize which columns appear in the table. We also added a new column: Pipeline ID.
+
 ### April 25, 2024
 
-#### Improvements
+#### Metrics Improvements
 
 * Previously, the **Metrics** page displayed the **Day** period and the **Application** group of metrics when first opened. Now, the page opens to the last metrics period (**Day**, **Week**, **Month**, or **Quarter**) and group (**Application**, **Database**, or **All**) that the user selected. Note that the display depends on the user history, not the environment or app history. As before, the user can switch between the metrics periods and groups via the **Period** and **Group** drop-down menus on the **Metrics** page.
 * On the **Metrics** page, we now load each graph asynchronously instead of loading the entire page at once. This improves the user experience through faster page loading time.
 * We added a way to quickly scroll to the top of the **Metrics** page. Each graph now has a **Scroll to top** button ({{% icon name="arrow-circle-up" %}}) next to it, which the user can click to directly reach the top of the page.
+
+### Deprecations
+
 * We stopped supporting the *Application Container CPU Percentage* alert, because it triggered too often to be useful. The CPU usage data can still be seen on the **Metrics** page.
 
 ### April 4, 2024

@@ -1,7 +1,7 @@
 ---
 title: "Use a Client Certificate"
 url: /howto/integration/use-a-client-certificate/
-category: "Integration"
+
 description: "Describes how to configure your app to authenticate using a client certificate."
 tags: ["integration", "web service", "client certificate"]
 

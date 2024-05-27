@@ -1,7 +1,7 @@
 ---
 title: "Resources"
 url: /refguide9/resources/
-category: "App Modeling"
+
 weight: 50
 description: "Introduces the helping documents (resources) that can be used in Studio Pro."
 tags: ["studio pro", "resources"]

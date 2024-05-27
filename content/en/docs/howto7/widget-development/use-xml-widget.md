@@ -1,7 +1,7 @@
 ---
 title: "Use XML in Widget Development"
 url: /howto7/widget-development/use-xml-widget/
-category: "Widget Development"
+
 tags: ["xml", "widget"]
 ---
 

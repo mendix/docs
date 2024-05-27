@@ -93,9 +93,7 @@ To install and configure the Global Operator, perform the following steps:
 15. Click **Configure Namespace** and select the items which you want to configure.
 16. In the **Global Operator** section, enter the **Global Operator namespace name**.
 
-{{% alert color="warning" %}}
-Ensure that you do not use the name of a managed namespace (that is, a namespace where you plan to deploy a Mendix app).
-{{% /alert %}}
+    {{% alert color="warning" %}}Ensure that you do not use the name of a managed namespace (that is, a namespace where you plan to deploy a Mendix app).{{% /alert %}}
 
 17. [Configure any remaining namespace settings](/developerportal/deploy/standard-operator/#configure-namespace) and apply the configuration.
 

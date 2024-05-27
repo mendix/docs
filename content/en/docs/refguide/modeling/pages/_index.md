@@ -1,7 +1,7 @@
 ---
 title: "Pages"
 url: /refguide/pages/
-category: "App Modeling"
+
 weight: 30
 description: "Presents an overview of the features of pages and relevant page resources in Studio Pro."
 tags: ["Pages", "Widgets", "Studio Pro", "page structure"]

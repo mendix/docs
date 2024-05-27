@@ -1,5 +1,5 @@
 ---
-title: "Guidelines for Content Makers"
+title: "Guidelines for Content Creators"
 url: /appstore/guidelines-content-creators/
 description: "Describes guidelines for Marketplace content creators."
 weight: 3

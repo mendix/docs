@@ -78,7 +78,9 @@ div.w-50{
     border-radius: 4px;
     margin: 0.75rem 0.05rem 0.75rem 4.5%;
     padding: 0;
-    padding-bottom: 1.5rem;
+    @include media-breakpoint-up(xl) {
+        padding-bottom: 1.5rem;
+    }
     @include media-breakpoint-up(xl){
         flex: 0 0 44%;
         max-width: 44%;

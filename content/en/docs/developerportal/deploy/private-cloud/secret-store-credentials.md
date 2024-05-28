@@ -53,7 +53,7 @@ The following table lists the properties used as keys for database and storage-r
 | Database Host | `database-host` | `pg.example.com:5432` | ✓ |
 | Database Name | `database-name` | `my-app-1` | ✓ |
 | Database Username | `database-username` | `my-app-user-1` | ✓ |
-| Database Password | `database-password` | `Welc0me!` |  |
+| Database Password | `database-password` | `Welc0me!` | ✓ (only for password auth) |
 | Storage service name | `storage-service-name` | `com.mendix.storage.s3` | ✓ |
 | S3 Storage endpoint | `storage-endpoint` | `https://my-app-bucket.s3.eu-west-1.amazonaws.com` | ✓ (only for S3) |
 | S3 Storage access key id | `storage-access-key-id` | `AKIA################` |  |
@@ -707,9 +707,9 @@ For more information, see the [Azure Key Vault Provider](https://azure.github.io
 
 #### 3.3.1 Using Managed Identity authentication for Postgres databases {#configure-using-azwi-postgres}
 
-[Azure Postgres (Flexible Server)](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/service-overview) databases can use [workload identity authentication](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/how-to-connect-with-managed-identity) instead of regular passwords.
+[Azure Postgres (Flexible Server)](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/service-overview) databases can use [managed identity authentication](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/how-to-connect-with-managed-identity) instead of regular passwords.
 
-{{% alert color="warning" %}}Azure has a legacy Postgres (Single Server) database. The Mendix Operator doesn't support workload [identity authentication for Single Server databases](https://learn.microsoft.com/en-us/azure/postgresql/single-server/how-to-configure-sign-in-azure-ad-authentication), only the new Flexible Server is supported. This section only applies to Flexible Server databases.{{% /alert %}}
+{{% alert color="warning" %}}Azure has a legacy Postgres (Single Server) database. The Mendix Operator doesn't support [managed identity authentication for Single Server databases](https://learn.microsoft.com/en-us/azure/postgresql/single-server/how-to-configure-sign-in-azure-ad-authentication), only the new Flexible Server is supported. This section only applies to Flexible Server databases.{{% /alert %}}
 
 To use this feature, you need to:
 
@@ -718,7 +718,7 @@ To use this feature, you need to:
 * Use Mendix 9.22 and above.
 * Complete the steps described in [Configuring a Secret Store with AWS Secrets Manager](#configure-using-aws-secrets-manager).
 
-After completing the prerequisites, follow these steps to switch from password-based authentication to workload identity authentication:
+After completing the prerequisites, follow these steps to switch from password-based authentication to managed identity authentication:
 
 1. Remove or comment out `database-password` from the `SecretProviderClass` and the associated Key vault Secret.
 2. Enable [Microsoft Entra authentication](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/how-to-configure-sign-in-azure-ad-authentication) and add yourself as an Entra Admin user in the Postgres database.
@@ -729,22 +729,22 @@ After completing the prerequisites, follow these steps to switch from password-b
    psql "host=<hostname> port=5432 dbname=postgres user=<user-email> password=$(az account get-access-token --resource-type oss-rdbms --output tsv --query accessToken) sslmode=require"
    ```
 
-5. In the Postgres client, run the following commands (replace `<database-user>` with the environment's current `database-user` name, and `<workload-identity-uuid>` with the **Object (principal) ID** of the environment's **Managed Identity**:
+5. In the Postgres client, run the following commands (replace `<database-user>` with the environment's current `database-user` name, and `<managed-identity-uuid>` with the **Object (principal) ID** of the environment's **Managed Identity**:
 
    ```sql {linenos=false}
-   SECURITY LABEL for "pgaadauth" on role "<database-user>" is 'aadauth,oid=<workload-identity-uuid>,type=service';
+   SECURITY LABEL for "pgaadauth" on role "<database-user>" is 'aadauth,oid=<managed-identity-uuid>,type=service';
    ALTER ROLE <database-user> WITH PASSWORD NULL;
    \q
    ```
 
 6. Restart the Mendix app environment.
 
-When using workload identity authentication, the Mendix app's environment (`m2ee-sidecar` container) uses that app's attached Managed Identity role to request a new Postgres password a few minutes before it expires using the [identity API](https://learn.microsoft.com/en-us/azure/service-connector/tutorial-passwordless?tabs=user%2Cgo%2Csql-me-id-dotnet%2Cappservice&pivots=postgresql#connect-to-a-database-with-microsoft-entra-authentication). These password have an expiration time between a few minutes and a few hours.
+When using managed identity authentication, the Mendix app's environment (`m2ee-sidecar` container) uses that app's attached Managed Identity role to request a new Postgres password a few minutes before it expires using the [identity API](https://learn.microsoft.com/en-us/azure/service-connector/tutorial-passwordless?tabs=user%2Cgo%2Csql-me-id-dotnet%2Cappservice&pivots=postgresql#connect-to-a-database-with-microsoft-entra-authentication). These password have an expiration time between a few minutes and a few hours.
 Passwords are only checked when opening a new connection, so an expired password does not cancel any existing connections or interrupt any running database transactions and queries.
 
 #### 3.3.2 Using Managed Identity authentication for Azure SQL databases {#configure-using-azwi-sql}
 
-[Azure SQL](https://learn.microsoft.com/en-us/azure/azure-sql/database/) databases can use [workload identity authentication](https://learn.microsoft.com/en-us/azure/azure-sql/database/authentication-aad-overview) instead of regular passwords.
+[Azure SQL](https://learn.microsoft.com/en-us/azure/azure-sql/database/) databases can use [managed identity authentication](https://learn.microsoft.com/en-us/azure/azure-sql/database/authentication-aad-overview) instead of regular passwords.
 
 To use this feature, you need to:
 
@@ -753,7 +753,7 @@ To use this feature, you need to:
 * Use Mendix 10.10 and above.
 * Complete the steps described in [Configuring a Secret Store with AWS Secrets Manager](#configure-using-aws-secrets-manager).
 
-After completing the prerequisites, follow these steps to switch from password-based authentication to workload identity authentication:
+After completing the prerequisites, follow these steps to switch from password-based authentication to managed identity authentication:
 
 1. Remove or comment out `database-password` from the `SecretProviderClass` and the associated Key vault Secret.
 2. Write down the value of `database-username` - this username will need to be removed on step 5.
@@ -761,12 +761,12 @@ After completing the prerequisites, follow these steps to switch from password-b
 4. Add yourself (or your Entra group) as an [Entra Admin user](https://learn.microsoft.com/en-us/azure/azure-sql/database/authentication-aad-configure?view=azuresql&tabs=azure-powershell#azure-portal-1) in the Azure SQL database.
    Azure SQL can only have one Entra Admin, and to add multiple users you'll need to do grant access through an Entra group.
 5. Connect to the database using [Azure Query Editor](https://learn.microsoft.com/en-us/azure/azure-sql/database/authentication-aad-configure?view=azuresql&tabs=azure-cli#use-microsoft-entra-identity-to-connect-using-azure-portal-query-editor-for-azure-sql-database) using Entra Authentication, and run the following query
-   (replace `<workload-identity-name>` with  the **Name** of the environment's **Managed Identity**, and `<static-database-username>` with the `database-username` that was written down on step 2):
+   (replace `<managed-identity-name>` with  the **Name** of the environment's **Managed Identity**, and `<static-database-username>` with the `database-username` that was written down on step 2):
 
    ```sql {linenos=false}
    DROP USER [<static-database-username>];
-   CREATE USER [<workload-identity-name>] FROM EXTERNAL PROVIDER;
-   ALTER ROLE db_owner ADD MEMBER [<workload-identity-name>];
+   CREATE USER [<managed-identity-name>] FROM EXTERNAL PROVIDER;
+   ALTER ROLE db_owner ADD MEMBER [<managed-identity-name>];
    ```
 
 6. Restart the Mendix app environment.
@@ -775,7 +775,7 @@ Azure SQL database drivers have built-in support for Managed Identity authentica
 
 #### 3.3.3 Using Managed Identity authentication for Azure Blob Storage {#configure-using-azwi-blobstorage}
 
-[Azure Blob Storage](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-overview) accounts can use [workload identity authentication](https://learn.microsoft.com/en-us/azure/storage/blobs/authorize-access-azure-active-directory) instead of static access keys.
+[Azure Blob Storage](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-overview) accounts can use [managed identity authentication](https://learn.microsoft.com/en-us/azure/storage/blobs/authorize-access-azure-active-directory) instead of static access keys.
 
 To use this feature, you need to:
 
@@ -784,7 +784,7 @@ To use this feature, you need to:
 * Use Mendix 10.10 and above.
 * Complete the steps described in [Configuring a Secret Store with AWS Secrets Manager](#configure-using-aws-secrets-manager).
 
-After completing the prerequisites, follow these steps to switch from password-based authentication to workload identity authentication:
+After completing the prerequisites, follow these steps to switch from password-based authentication to managed identity authentication:
 
 1. Remove or comment out `storage-azure-account-key` and `storage-azure-account-name` from the `SecretProviderClass` and the associated Key vault Secret.
 2. Add the following keys to the `SecretProviderClass` and Azure Key vault:

@@ -95,9 +95,9 @@ IRSA removes any static passwords that might be used by the Mendix Operator or M
 {{% /alert %}}
 
 {{% alert color="info" %}}
-Mendix Operator version 2.17 and later versions can use [workload identity authentication](https://learn.microsoft.com/en-us/azure/aks/workload-identity-overview) instead of static credentials to authenticate with Azure SQL, Postgres (Flexible Server) and Blob Storage.
-When using workload identity authentication, static passwords are replaced with short-lived tokens - which are automatically maintained by AKS.
-Workload identity authentication removes any static passwords that might be used by the Mendix Operator or Mendix apps.
+Mendix Operator version 2.17 and later versions can use [managed identity authentication](https://learn.microsoft.com/en-us/azure/aks/workload-identity-overview) instead of static credentials to authenticate with Azure SQL, Postgres (Flexible Server) and Blob Storage.
+When using managd identity authentication, static passwords are replaced with short-lived tokens - which are automatically maintained by AKS.
+Managed identity authentication removes any static passwords that might be used by the Mendix Operator or Mendix apps.
 {{% /alert %}}
 
 #### 1.3.3 Provisioner Pods Do Not Automatically Retry after Failing
@@ -179,14 +179,14 @@ The following database types are supported:
 
 Postgres databases can be used with [static authentication](#database-postgres-static).
 If the Postgres instance is an AWS RDS database, you can use [IAM authentication](#database-postgres-iam) for additional security.
-If the Postgres instance is an Azure Postgres (Flexible Server) database, you can use [workload identity authentication](#database-postgres-azwi) for additional security.
+If the Postgres instance is an Azure Postgres (Flexible Server) database, you can use [managed identity authentication](#database-postgres-azwi) for additional security.
 
 #### 2.3.1 Postgres (static credentials) {#database-postgres-static}
 
 The Postgres database is an automated, on-demand database. The Postgres plan offers a good balance between automation, ease of use, and security. It is the most versatile and portable option for production-grade databases.
 If you would like to have more control over database configuration, consider using the [JDBC plan](#database-jdbc) instead.
 If your provider is AWS, [Postgres IAM authentication](#database-postgres-iam) can be used instead - to increase security.
-If your provider is Azure, [Postgres workload identity authentication](#database-postgres-azwi) can be used instead - to increase security.
+If your provider is Azure, [Postgres managed identity authentication](#database-postgres-azwi) can be used instead - to increase security.
 
 ##### 2.3.1.1 Prerequisites
 
@@ -378,13 +378,13 @@ AWS IRSA allows a Kubernetes Service Account to assume an IAM role. For this to 
 
     The role ARN is required, you can use the **Copy** button next to the ARN name in the role details.
 
-#### 2.3.3 Postgres (Azure workload identity authentication){#database-postgres-azwi}
+#### 2.3.3 Postgres (Azure managed identity authentication){#database-postgres-azwi}
 
 The Postgres database is an automated, on-demand database. The Postgres plan offers a good balance between automation, ease of use, and security.
-[Workload identity authentication](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/how-to-connect-with-managed-identity) removes static passwords and instead uses IAM roles for authentication.
+[Managed identity authentication](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/how-to-connect-with-managed-identity) removes static passwords and instead uses IAM roles for authentication.
 
 {{% alert color="info" %}}
-This section provides technical details on how workload identity authentication works with Postgres. If you just need instructions to get started, the [Azure Workload Identity-based storage walkthrough](#walkthrough-azure-azwi) provides a quick start guide to set the Mendix Operator to manage a Postgres database, SQL Server and Blob Storage account using workload identity authenticaiton.
+This section provides technical details on how managed identity authentication works with Postgres. If you just need instructions to get started, the [Azure Managed Identity-based storage walkthrough](#walkthrough-azure-azwi) provides a quick start guide to set the Mendix Operator to manage a Postgres database, SQL Server and Blob Storage account using managed identity authenticaiton.
 {{% /alert %}}
 
 ##### 2.3.3.1 Prerequisites
@@ -393,8 +393,8 @@ This section provides technical details on how workload identity authentication 
    {{% alert color="info" %}}
    A Postgres server (cluster) can host multiple databases. Each database can be isolated from one another, this way one Postgres server can be used by multiple independent apps.
    {{% /alert %}}
-* A *Postgres Admin* workload identity that the Mendix Operator would use to create/delete databases and workload identities for app environments.
-  This workload identity needs the following permissions:
+* A *Postgres Admin* managed identity that the Mendix Operator would use to create/delete databases and managed identities for app environments.
+  This managed identity needs the following permissions:
     * Entra Admin permissions in the Postgres database;
     * A [Managed Identity Contributor](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#managed-identity-contributor) role in its resource group.
 
@@ -414,7 +414,7 @@ This section provides technical details on how workload identity authentication 
 
 When a new environment is created, the Mendix Operator performs the following actions:
 
-* Create a Managed Identity for an environment. This Managed Identity will be created in the same resource group, subscription and region as the *Postgres Admin* workload identity.
+* Create a Managed Identity for an environment. This Managed Identity will be created in the same resource group, subscription and region as the *Postgres Admin* managed identity.
 * Create a Kubernetes Service Account and attach it to the environment's Managed Identity. This Service Account acts as a replacement for static credentials, and can also be used to authenticate with Azure Postgres databases.
 * Generate a database name and username (Postgres role) for the new environment.
 * Create a new database in the provided Postgres server. This will be the environment's dedicated database.
@@ -440,12 +440,12 @@ In the Postgres plan configuration, enter the following details:
 * **Host** - Postgres server hostname, for example `postgres-shared-postgresql.privatecloud-storage.svc.cluster.local`.
 * **Port** - Postgres server port number; in most cases this should be set to `5432`.
 * **Strict TLS** - Set to **yes**, as Azure Postgres supports TLS without any extra configuration.
-* **Database name** - login database for the *Postgres Admin* workload identity; in most cases this is set to `postgres`.
+* **Database name** - login database for the *Postgres Admin* managed identity; in most cases this is set to `postgres`.
 * **Authentication** - select `azure-wi` from the dropdown.
-* **Managed Identity Name** - name for the *Postgres Admin* workload identity, used by the Mendix Operator to create or delete tenants for app environments.
-* **Managed Identity Client ID** - the *Postgres Admin* workload identity Client ID.
-    * Mendix recommends using the same workload identity to manage Azure databases and blob storage containers, as this would be easier to set up and maintain.
-* **K8s Service Account** - the Kubernetes Service Account to create and attach to the *Postgres Admin* workload identity (will be created automatically by the `mxpc-cli` installation and configuration tool).
+* **Managed Identity Name** - name for the *Postgres Admin* managed identity, used by the Mendix Operator to create or delete tenants for app environments.
+* **Managed Identity Client ID** - the *Postgres Admin* managed identity Client ID.
+    * Mendix recommends using the same managed identity to manage Azure databases and blob storage containers, as this would be easier to set up and maintain.
+* **K8s Service Account** - the Kubernetes Service Account to create and attach to the *Postgres Admin* managed identity (will be created automatically by the `mxpc-cli` installation and configuration tool).
   {{% alert color="warning" %}}
   Do not use the name of an existing Service Account (environment name), or one of the reserved Kubernetes Service Account names:
     * `mendix-operator`
@@ -457,7 +457,7 @@ In the Postgres plan configuration, enter the following details:
 To connect to an Azure Postgres database, the firewall must be configured to allow connections to the database from the Kubernetes cluster.
 {{% /alert %}}
 
-Azure workload identities allow a Kubernetes Service Account to authenticate itself as a specific Managed Identity. For this to work correctly, add a Federated Credential to the *Postgres Admin* workload identity:
+Azure workload identities allow a Kubernetes Service Account to authenticate itself as a specific Managed Identity. For this to work correctly, add a Federated Credential to the *Postgres Admin* managed identity:
 
 1. Enable managed identities for your AKS cluster as [described in the Azure documentation](https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster#update-an-existing-aks-cluster). This only need to be done once per cluster.
 
@@ -510,13 +510,13 @@ When an existing environment is deleted, the Mendix Operator performs the follow
 ### 2.5 SQL Server {#database-sqlserver}
 
 SQL Server databases can be used with [static authentication](#database-sqlserver-static).
-If the SQL Server instance is an Azure SQL database, you can use [workload identity authentication](#database-sqlserver-azwi) for additional security.
+If the SQL Server instance is an Azure SQL database, you can use [managed identity authentication](#database-sqlserver-azwi) for additional security.
 
 #### 2.5.1 SQL Server (static credentials){#database-sqlserver-static}
 
 SQL server databases are automated, on-demand databases. The **SQL Server** plan offers a good balance between automation, ease of use, and security when using Microsoft SQL Server or Azure SQL. If you would like to have more control over database configuration, consider using the [JDBC plan](#database-jdbc) instead.
 
-If your app is using Mendix 10.10 (or a later version) consider using the [Azure workload identity authentication](#database-sqlserver-azwi) instead, for additional security.
+If your app is using Mendix 10.10 (or a later version) consider using the [Azure managed identity authentication](#database-sqlserver-azwi) instead, for additional security.
 
 ##### 2.5.1.1 Prerequisites
 
@@ -592,12 +592,12 @@ The smallest database tier available has the following parameters:
 To connect to an Azure SQL Server, the Kubernetes cluster must be added to the list of allowed hosts in the firewall.
 {{% /alert %}}
 
-#### 2.5.2 SQL Server (Azure workload identity authentication){#database-sqlserver-azwi}
+#### 2.5.2 SQL Server (Azure managed identity authentication){#database-sqlserver-azwi}
 
 SQL server databases are automated, on-demand databases. The **SQL Server** plan offers a good balance between automation, ease of use, and security when using Microsoft SQL Server or Azure SQL. If you would like to have more control over database configuration, consider using the [JDBC plan](#database-jdbc) instead.
 
 {{% alert color="info" %}}
-This section provides technical details on how workload identity authentication works with Azure SQL. If you just need instructions to get started, the [Azure Workload Identity-based storage walkthrough](#walkthrough-azure-azwi) provides a quick start guide to set the Mendix Operator to manage a Postgres database, SQL Server and Blob Storage account using workload identity authenticaiton.
+This section provides technical details on how managed identity authentication works with Azure SQL. If you just need instructions to get started, the [Azure managed Identity-based storage walkthrough](#walkthrough-azure-azwi) provides a quick start guide to set the Mendix Operator to manage a Postgres database, SQL Server and Blob Storage account using managed identity authenticaiton.
 {{% /alert %}}
 
 ##### 2.5.2.1 Prerequisites
@@ -608,9 +608,9 @@ This section provides technical details on how workload identity authentication 
    An SQL server can host multiple databases. Each database can be isolated from one another - in this way, one SQL Server can be used by multiple independent apps.
    {{% /alert %}}
 
-* A *SQL Admin* workload identity that the Mendix Operator would use to create/delete databases and workload identities for app environments.
-  This workload identity needs the following permissions:
-    * Permissions to authenticate with Azure SQL using its workload identity;
+* A *SQL Admin* managed identity that the Mendix Operator would use to create/delete databases and managed identities for app environments.
+  This managed identity needs the following permissions:
+    * Permissions to authenticate with Azure SQL using its managed identity;
     * A `dbmanager` role in the master database;
     * A [Managed Identity Contributor](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#managed-identity-contributor) role in its resource group.
 
@@ -629,7 +629,7 @@ This section provides technical details on how workload identity authentication 
 
 When a new environment is created, the Mendix Operator performs the following actions:
 
-* Create a Managed Identity for an environment. This Managed Identity will be created in the same resource group, subscription and region as the *SQL Admin* workload identity.
+* Create a Managed Identity for an environment. This Managed Identity will be created in the same resource group, subscription and region as the *SQL Admin* managed identity.
 * Create a Kubernetes Service Account and attach it to the environment's Managed Identity. This Service Account acts as a replacement for static credentials, and can also be used to authenticate with Azure SQL databases.
 * Generate a database name for the new environment.
 * Create a new database in the provided SQL Server server. This will be the environment's dedicated database.
@@ -656,9 +656,9 @@ In the SQL Server plan configuration, enter the following details:
     * Enabling this option will enable full TLS certificate validation and require encryption when connecting to SQL Server. If the SQL Server server has a self-signed certificate, you will also need to configure custom TLS so that the self-signed certificate is accepted. Azure SQL supports Strict TLS without any extra TLS configuration - no additional *custom TLS* configuration is required.
     * Disabling this option will attempt to connect with TLS, but skip certificate validation. If TLS is not supported, it will fall back to an unencrypted connection.
 * **Authentication** - select `azure-wi` from the dropdown.
-* **Managed Identity Client ID** - the *SQL Admin* workload identity Client ID.
-    * Mendix recommends using the same workload identity to manage Azure databases and blob storage containers, as this would be easier to set up and maintain.
-* **K8s Service Account** - the Kubernetes Service Account to create and attach to the *SQL Admin* workload identity (will be created automatically by the `mxpc-cli` installation and configuration tool).
+* **Managed Identity Client ID** - the *SQL Admin* managed identity Client ID.
+    * Mendix recommends using the same managed identity to manage Azure databases and blob storage containers, as this would be easier to set up and maintain.
+* **K8s Service Account** - the Kubernetes Service Account to create and attach to the *SQL Admin* managed identity (will be created automatically by the `mxpc-cli` installation and configuration tool).
   {{% alert color="warning" %}}
   Do not use the name of an existing Service Account (environment name), or one of the reserved Kubernetes Service Account names:
     * `mendix-operator`
@@ -687,7 +687,7 @@ The smallest database tier available has the following parameters:
 To connect to an Azure SQL Server, the Kubernetes cluster must be added to the list of allowed hosts in the firewall.
 {{% /alert %}}
 
-Azure workload identities allow a Kubernetes Service Account to authenticate itself as a specific Managed Identity. For this to work correctly, add a Federated Credential to the *SQL Admin* workload identity:
+Azure workload identities allow a Kubernetes Service Account to authenticate itself as a specific Managed Identity. For this to work correctly, add a Federated Credential to the *SQL Admin* managed identity:
 
 1. Enable managed identities for your AKS cluster as [described in the Azure documentation](https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster#update-an-existing-aks-cluster). This only need to be done once per cluster.
 
@@ -1608,23 +1608,23 @@ In the Amazon S3 plan configuration, enter the following details:
 
 ### 3.4 Azure Blob Storage {#blob-azure}
 
-If you would like to have Mendix Operator with automation, and have full isolation between environments, use the [Azure workload identity authentication](#blob-azure-azwi) option. This option works with apps using Mendix 10.10 (or a later version).
+If you would like to have Mendix Operator with automation, and have full isolation between environments, use the [Azure managed identity authentication](#blob-azure-azwi) option. This option works with apps using Mendix 10.10 (or a later version).
 
 If you would like to simply share a container between environments, or to manually create a container and account per environment, use the [static credentials](#blob-azure-static) option.
 
-#### 3.4.1 Azure Blob Storage (Azure workload identity authentication){#blob-azure-azwi}
+#### 3.4.1 Azure Blob Storage (Azure managed identity authentication){#blob-azure-azwi}
 
 This automated, on-demand option allows to use an existing blob storage accounts in multiple environments, and isolates environments from accessing each other's data.
 
 {{% alert color="info" %}}
-This section provides technical details on how workload identity authentication works with Azure Blob Storage. If you just need instructions to get started, the [Azure Workload Identity-based storage walkthrough](#walkthrough-azure-azwi) provides a quick start guide to set the Mendix Operator to manage a Postgres database, SQL Server and Blob Storage account using workload identity authenticaiton.
+This section provides technical details on how managed identity authentication works with Azure Blob Storage. If you just need instructions to get started, the [Azure Managed Identity-based storage walkthrough](#walkthrough-azure-azwi) provides a quick start guide to set the Mendix Operator to manage a Postgres database, SQL Server and Blob Storage account using managed identity authenticaiton.
 {{% /alert %}}
 
 ##### 3.4.1.1 Prerequisites
 
 * An Azure Blob storage account.
-* A *Blob Storage Admin* workload identity that the Mendix Operator would use to create/delete containers and workload identities for app environments.
-  This workload identity needs the following permissions:
+* A *Blob Storage Admin* managed identity that the Mendix Operator would use to create/delete containers and managed identities for app environments.
+  This managed identity needs the following permissions:
     * A [Storage Blob Data Contributor](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/storage#storage-blob-data-contributor) role scoped to the blob storage account.
     * A [Role Based Access Control Administrator](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/general#role-based-access-control-administrator) role scoped to the blob storage account, and constrained to only have permissions to add the [Storage Blob Data Contributor](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/storage#storage-blob-data-contributor) role to Service principals.
     * A [Managed Identity Contributor](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#managed-identity-contributor) role in its resource group.
@@ -1644,7 +1644,7 @@ This section provides technical details on how workload identity authentication 
 
 When a new environment is created, the Mendix Operator performs the following actions:
 
-* Create a Managed Identity for an environment. This Managed Identity will be created in the same resource group, subscription and region as the *Blob Storage Admin* workload identity.
+* Create a Managed Identity for an environment. This Managed Identity will be created in the same resource group, subscription and region as the *Blob Storage Admin* managed identity.
 * Create a Kubernetes Service Account and attach it to the environment's Managed Identity. This Service Account acts as a replacement for static credentials, and can also be used to authenticate with the environment's Blob Storage Container.
 * Create a new container in the shared blob storage account. This will be the environment's dedicated container.
 * Add the [Storage Blob Data Contributor](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/storage#storage-blob-data-contributor) role to an envrionment's Managed Identity, scoped to its container.
@@ -1669,9 +1669,9 @@ In the Azure Blob plan configuration, enter the following details:
 * **Managed Identity authentication** - Set to **yes**.
 * **Account Subscription ID** - subscription ID of the blob storage account.
 * **Account Resource Group** - resource group of the blob storage account.
-* **Managed Identity Client ID** - the *Blob Storage Admin* workload identity Client ID.
-    * Mendix recommends using the same workload identity to manage Azure databases and blob storage containers, as this would be easier to set up and maintain.
-* **K8s Service Account** - the Kubernetes Service Account to create and attach to the *Blob Storage Admin* workload identity (will be created automatically by the `mxpc-cli` installation and configuration tool).
+* **Managed Identity Client ID** - the *Blob Storage Admin* managed identity Client ID.
+    * Mendix recommends using the same managed identity to manage Azure databases and blob storage containers, as this would be easier to set up and maintain.
+* **K8s Service Account** - the Kubernetes Service Account to create and attach to the *Blob Storage Admin* managed identity (will be created automatically by the `mxpc-cli` installation and configuration tool).
   {{% alert color="warning" %}}
   Do not use the name of an existing Service Account (environment name), or one of the reserved Kubernetes Service Account names:
     * `mendix-operator`
@@ -1679,7 +1679,7 @@ In the Azure Blob plan configuration, enter the following details:
     * `mendix-storage-provisioner`
   {{% /alert %}}
 
-Azure workload identities allow a Kubernetes Service Account to authenticate itself as a specific Managed Identity. For this to work correctly, add a Federated Credential to the *Blob Storage Admin* workload identity:
+Azure workload identities allow a Kubernetes Service Account to authenticate itself as a specific Managed Identity. For this to work correctly, add a Federated Credential to the *Blob Storage Admin* managed identity:
 
 1. Enable managed identities for your AKS cluster as [described in the Azure documentation](https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster#update-an-existing-aks-cluster). This only need to be done once per cluster.
 
@@ -1705,7 +1705,7 @@ Azure workload identities allow a Kubernetes Service Account to authenticate its
 
 This basic, on-demand option allows you to attach an existing Azure Blob Storage container and credentials (account name and secret key) to one or more environments. All apps (environments) will use the same Azure Blob Storage container and credentials.
 
-If your app is using Mendix 10.10 (or a later version) consider using the [Azure workload identity authentication](#blob-azure-azwi) instead, for additional security.
+If your app is using Mendix 10.10 (or a later version) consider using the [Azure managed identity authentication](#blob-azure-azwi) instead, for additional security.
 
 ##### 3.4.2.1 Prerequisites
 
@@ -2127,7 +2127,7 @@ Do not remove or modify `privatecloud.mendix.com/s3-prefix` or `privatecloud.men
 
 ### 4.2 Azure Managed Identity-based Storage{#walkthrough-azure-azwi}
 
-Azure recommends using [workload identity authentication](https://learn.microsoft.com/en-us/azure/aks/workload-identity-overview) instead of static credentials.
+Azure recommends using [managed identity authentication](https://learn.microsoft.com/en-us/azure/aks/workload-identity-overview) instead of static credentials.
 This guide explains how to set up and use a database and blob file storage plan using Azure best practices.
 
 {{% alert color="warning" %}}
@@ -2168,9 +2168,9 @@ This walkthrough provides examples for two database types: Postgres and Azure SQ
 
 4. Assign this *storage admin* Managed Identity a [Managed Identity Contributor](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#managed-identity-contributor) role in its resource group.
 
-Workload Identity authentication uses the same Managed Identity and Kubernetes Service Account to authenticate with Azure services. It is not possible to assign more than one Kubernetes Service Account to a Mendix app environment. To avoid conflicts, the database and file storage provisioners will create the environment's tenant managed identity with the same parameters in parallel.
+Managed Identity authentication uses the same Managed Identity and Kubernetes Service Account to authenticate with Azure services. It is not possible to assign more than one Kubernetes Service Account to a Mendix app environment. To avoid conflicts, the database and file storage provisioners will create the environment's tenant managed identity with the same parameters in parallel.
 
-For more details, see the [Postgres (Azure workload identity authentication)](#database-postgres-azwi), [SQL Server (Azure workload identity authentication)](#database-sqlserver-azwi) and [Azure Blob Storage (Azure workload identity authentication)](#blob-azure-azwi) plan details.
+For more details, see the [Postgres (Azure managed identity authentication)](#database-postgres-azwi), [SQL Server (Azure managed identity authentication)](#database-sqlserver-azwi) and [Azure Blob Storage (Azure managed identity authentication)](#blob-azure-azwi) plan details.
 
 #### 4.2.1 Postgres (Flexible Server) Database
 

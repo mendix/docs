@@ -1,6 +1,7 @@
 ---
 title: "10.11"
-parent: "metamodel-10"
+url: /releasenotes/sdk/metamodel-10.11/
+weight: 89
 ---
 
 ## 10.11.0
@@ -37,5 +38,3 @@ parent: "metamodel-10"
 #### AttributeWidgetWithPlaceholder (Element)
 * We deleted the `placeholder` property. Info: "Use property 'placeholderTemplate' instead"
 * We introduced the `placeholderTemplate` property. 
-
-This page has been generated automatically.

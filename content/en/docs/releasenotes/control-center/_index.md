@@ -288,4 +288,4 @@ We made the following improvements to the [access management](/control-center/po
 
 #### Improvements
 
-* We moved the existing Company Admin features in the Mendix Portal to Control Center.
+* We moved the existing Company Admin features in the Developer Portal to Control Center.

@@ -280,7 +280,7 @@ This tool is available as a technical preview. For documentation and download li
 #### Portal Improvements
 
 * We have improved the user experience for the Cluster Manager pages by revamping the UI and adding sorting and searching.
-* We have changed the layout of the Environment pages in the Mendix Portal to a full-width view with the navigation pane in a sidebar to the left.
+* We have changed the layout of the Environment pages in the Developer Portal to a full-width view with the navigation pane in a sidebar to the left.
 
 #### Deploy API Improvements
 
@@ -611,7 +611,7 @@ Your build may fail if you try to deploy the same deployment package more than o
 
 #### Mendix Operator v2.5.1{#2.5.1}
 
-* We addressed a regression in Mendix Operator v2.5.0 where an error would show a spinner icon in the Mendix Portal (instead of an error icon)
+* We addressed a regression in Mendix Operator v2.5.0 where an error would show a spinner icon in the Developer Portal (instead of an error icon)
 * We addressed an issue with deleting Minio storage from [Minio RELEASE.2021-11-05T09-16-26Z](https://github.com/minio/minio/releases/tag/RELEASE.2021-11-05T09-16-26Z) and later versions
 
 ### May 19, 2022
@@ -639,7 +639,7 @@ Your build may fail if you try to deploy the same deployment package more than o
 
 This issue is fixed in Mendix Operator [version 2.5.1](#2.5.1).
 
-* If an error occurs in these scenarios, it will show a spinner icon in the Mendix Portal (instead of an error icon):
+* If an error occurs in these scenarios, it will show a spinner icon in the Developer Portal (instead of an error icon):
     * Building an app image
     * Requesting a database or file storage for a new environment
 
@@ -731,7 +731,7 @@ This issue is fixed in Mendix Operator [version 2.5.1](#2.5.1).
 * We have increased the deployment package size limit from 200 MB to 512 MB.
 * We have fixed an issue when the Runtime version was not visible on the transport package screen.
 * We have removed the restriction on the use of the `kubernetes.io/ingress.class` ingress annotation.
-* We have changed the navigation pane to match the rest of the Mendix Portal.
+* We have changed the navigation pane to match the rest of the Developer Portal.
 
 ### November 15, 2021
 
@@ -788,7 +788,7 @@ This tool is available as a technical preview. For documentation and download li
 * We have added some validation when you configure Pod/Service/Ingress annotations in the portal.
 * We have added the ability to select the default target environment for Studio deployment.
 * We have fixed an issue where you get duplicate scheduled events and constants after renaming them in a mendix app.
-* We have improved the page to configure annotations (ingress, service, and pod) from the Mendix Portal for connected clusters.
+* We have improved the page to configure annotations (ingress, service, and pod) from the Developer Portal for connected clusters.
 
 ### September 2, 2021{#20210902}
 
@@ -831,7 +831,7 @@ To upgrade an existing installation of Mendix for Private Cloud to Mendix Operat
 
 #### Portal Improvements
 
-* We added the ability to configure annotations (ingress, service, and pod) from the Mendix Portal for connected clusters.
+* We added the ability to configure annotations (ingress, service, and pod) from the Developer Portal for connected clusters.
 
 #### Portal Fixes
 
@@ -955,16 +955,16 @@ After upgrading the Mendix Operator, Mendix recommends downloading the latest ve
 
 #### Fixes
 
-* We fixed an error where opening the feedback widget on a Mendix for Private Cloud page in the Mendix Portal resulted in an error.
-* We upgraded the Mendix version used for Mendix for Private Cloud in the Mendix Portal to apply the latest security fix.
+* We fixed an error where opening the feedback widget on a Mendix for Private Cloud page in the Developer Portal resulted in an error.
+* We upgraded the Mendix version used for Mendix for Private Cloud in the Developer Portal to apply the latest security fix.
 
 ### December 14, 2020
 
 #### Portal Improvements
 
-* We have added support in the Mendix Portal to configure custom Certificate Authorities which should be trusted by the Mendix Operator and app environments.
+* We have added support in the Developer Portal to configure custom Certificate Authorities which should be trusted by the Mendix Operator and app environments.
 * We now add an environment UUID to environments deployed to Private Cloud namespaces so environment names no longer need to be unique.
-* As part of a Mendix Portal clean up, we removed the *Model* option from the *DEVELOP* section of the Mendix Portal menu when you are looking at environments on Mendix for Private Cloud. The functions of this page are still available via the **Edit in Studio Pro** button on the environments page.
+* As part of a Developer Portal clean up, we removed the *Model* option from the *DEVELOP* section of the Developer Portal menu when you are looking at environments on Mendix for Private Cloud. The functions of this page are still available via the **Edit in Studio Pro** button on the environments page.
 
 #### Fixes
 
@@ -1003,8 +1003,8 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 
 * We added the ability to configure TLS on an environment level.
 * We added the ability to link the Studio Pro debugger to an app running through Mendix for Private Cloud.
-* We added the ability to upload an MDA to the Mendix Portal.
-* We split the **Edit App** button into two separate buttons, **Edit in Studio** and **Edit in Studio Pro** on some of the Mendix Portal pages (Environments, App Services, Metrics, Alerts, Logs, Backups, and the Node Permissions tab of Security).
+* We added the ability to upload an MDA to the Developer Portal.
+* We split the **Edit App** button into two separate buttons, **Edit in Studio** and **Edit in Studio Pro** on some of the Developer Portal pages (Environments, App Services, Metrics, Alerts, Logs, Backups, and the Node Permissions tab of Security).
 * We updated the drop down for the **View App** button.
 
 #### Portal Fixes
@@ -1017,7 +1017,7 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 #### Mendix Operator v1.6.0 and Mendix Gateway Agent v1.5.0
 
 * We added support for debugging apps deployed to Mendix for Private Cloud.
-* We fixed a memory leak in Agent which occurred when it was restarted and the cluster was deleted from the Mendix Portal.
+* We fixed a memory leak in Agent which occurred when it was restarted and the cluster was deleted from the Developer Portal.
 * We fixed an issue where the Operator pod was crashlooping until the Operator was fully configured.
 
 To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide/).
@@ -1053,7 +1053,7 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 * We added [activity logs](/developerportal/deploy/private-cloud-cluster/#actvity-logs) at the cluster and namespace levels.
 * Email notifications will now be sent when a user is added/removed as a cluster manager.
 * We made changes to the [cluster overview](/developerportal/deploy/private-cloud-cluster/#overview) to accommodate the activity logs.
-* We updated security in the Mendix Portal. (Ticket 106263)
+* We updated security in the Developer Portal. (Ticket 106263)
 
 #### Fixes
 
@@ -1064,8 +1064,8 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 #### Portal Improvements
 
 * We now allow you to delete a namespace which contains environments. For a connected namespace, this will also delete the environments.
-* We now allow you to delete environment information from the Mendix Portal when the portal is unable to connect to the cluster via the Mendix Gateway Agent.
-* We now allow you to change log levels from the Mendix Portal for your apps' log nodes.
+* We now allow you to delete environment information from the Developer Portal when the portal is unable to connect to the cluster via the Mendix Gateway Agent.
+* We now allow you to change log levels from the Developer Portal for your apps' log nodes.
 * We now send an email to users when their permissions are changed, or when they are removed from a namespace.
 
 #### Fixes
@@ -1136,7 +1136,7 @@ To upgrade an existing installation of Private Cloud to this version, follow the
 * We have separated the creation of the namespace and the cluster in order to align with Kubernetes concepts. As a consequence, there is now an additional namespace details page. The Mendix Operator and Mendix Gateway Agent will be deployed to each namespace.
 * We now allow you to set Kubernetes resource *requirements* in addition to resource *limits*. Apps no longer require the maximum amount of CPU and memory, improving utilization of cluster resources.
 * We have replaced the **Tiny** plan with a **Small** plan in the core resources.
-* We have improved the reliability of updating the current environment status in the Mendix Portal.
+* We have improved the reliability of updating the current environment status in the Developer Portal.
 
 ### June 10, 2020
 
@@ -1170,12 +1170,12 @@ To upgrade an existing installation of Private Cloud to the latest version, foll
 
 #### Mendix Operator v1.0.1
 
-* We have added an additional field to the `MendixApp` CR which will allows the Mendix Portal to display the latest state of environments.
+* We have added an additional field to the `MendixApp` CR which will allows the Developer Portal to display the latest state of environments.
 * We have improved compatibility with popular container image registries (such as Azure Container Registry). The build process can now recognize that the container image already has the necessary base layers, and avoids downloading them again, saving time and network traffic.
 
 #### Mendix Gateway Agent v1.0.1
 
-* We have improved the reliability of sending environment statuses to the Mendix Portal.
+* We have improved the reliability of sending environment statuses to the Developer Portal.
 
 ### March 23, 2020
 

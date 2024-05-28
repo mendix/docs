@@ -17,7 +17,7 @@ description: "These are the release notes for the Mendix Mobile app."
 ### Limitations
 
 * The Mendix feedback widget does not always load properly on iOS.
-* Mendix hybrid apps (loaded using, for example, the QR scanner or the manual app loading screen) are not able to use the barcode scanning widget. Using the barcode scanning functionality from within an app-specific hybrid app (meaning, one built using the mobile app flow from the Mendix Portal) should not pose any problems.
+* Mendix hybrid apps (loaded using, for example, the QR scanner or the manual app loading screen) are not able to use the barcode scanning widget. Using the barcode scanning functionality from within an app-specific hybrid app (meaning, one built using the mobile app flow from the Developer Portal) should not pose any problems.
 
 ## Android 4.7.0 / iOS 4.7.0
 
@@ -38,7 +38,7 @@ description: "These are the release notes for the Mendix Mobile app."
 ### Limitations
 
 * The Mendix feedback widget does not always load properly on iOS.
-* Mendix hybrid apps (loaded using, for example, the QR scanner or the manual app loading screen) are not able to use the barcode scanning widget. Using the barcode scanning functionality from within an app-specific hybrid app (meaning, one built using the mobile app flow from the Mendix Portal) should not pose any problems.
+* Mendix hybrid apps (loaded using, for example, the QR scanner or the manual app loading screen) are not able to use the barcode scanning widget. Using the barcode scanning functionality from within an app-specific hybrid app (meaning, one built using the mobile app flow from the Developer Portal) should not pose any problems.
 
 ## Android 4.6.0 / iOS 4.6.0
 
@@ -50,7 +50,7 @@ description: "These are the release notes for the Mendix Mobile app."
 
 ### Limitation
 
-* Mendix hybrid apps (loaded using, for example, the QR scanner or the manual app loading screen) are not able to use the barcode scanning widget. Using the barcode scanning functionality from within an app-specific hybrid app (meaning, one built using the mobile app flow from the Mendix Portal) should not pose any problems.
+* Mendix hybrid apps (loaded using, for example, the QR scanner or the manual app loading screen) are not able to use the barcode scanning widget. Using the barcode scanning functionality from within an app-specific hybrid app (meaning, one built using the mobile app flow from the Developer Portal) should not pose any problems.
 
 ## Android 4.5.0 / iOS 4.5.0
 
@@ -69,7 +69,7 @@ description: "These are the release notes for the Mendix Mobile app."
 
 ### Limitation
 
-* Mendix hybrid apps (loaded using, for example, the QR scanner or the manual app loading screen) are not able to use the barcode scanning widget. Using the barcode scanning functionality from within an app-specific hybrid app (meaning, one built using the mobile app flow from the Mendix Portal) should not pose any problems.
+* Mendix hybrid apps (loaded using, for example, the QR scanner or the manual app loading screen) are not able to use the barcode scanning widget. Using the barcode scanning functionality from within an app-specific hybrid app (meaning, one built using the mobile app flow from the Developer Portal) should not pose any problems.
 
 ## iOS 4.4.1 {#RN441}
 
@@ -81,7 +81,7 @@ description: "These are the release notes for the Mendix Mobile app."
 
 ### Limitation
 
-* Mendix hybrid apps (loaded using, for example, the QR scanner or the manual app loading screen) are not able to use the barcode scanning widget. Using the barcode scanning functionality from within an app-specific hybrid app (meaning, one built using the mobile app flow from the Mendix Portal) should not pose any problems.
+* Mendix hybrid apps (loaded using, for example, the QR scanner or the manual app loading screen) are not able to use the barcode scanning widget. Using the barcode scanning functionality from within an app-specific hybrid app (meaning, one built using the mobile app flow from the Developer Portal) should not pose any problems.
 
 ## Android 4.4.0 / iOS 4.4.0
 

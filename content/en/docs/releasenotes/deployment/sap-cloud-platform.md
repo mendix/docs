@@ -96,7 +96,7 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 #### Improvements
 
-* We have added the ability to upload an MDA file to the Mendix Portal for deployment to SAP BTP.
+* We have added the ability to upload an MDA file to the Developer Portal for deployment to SAP BTP.
 
 ### May 27, 2021
 
@@ -138,13 +138,13 @@ For more information see [SAP Business Technology Platform - deploy](/developerp
 * We have added support for PostgreSQL on SAP Cloud Platform, Hyperscaler Option for Mendix apps deployed to SAP Cloud Platform.
     * this comes with a configurator to help you create the correct configuration.
     * see [Running Mendix on PostgreSQL on SAP Cloud Platform](/developerportal/deploy/sap-cloud-platform/#sap-hyperscaler) for more information.
-* As part of a Mendix Portal clean up, we removed the *Model* option from the *DEVELOP* section of the Mendix Portal menu when you are looking at environments on SAP Cloud Platform. The functions of this page are still available via the **Edit in Studio Pro** button on the environments page.
+* As part of a Developer Portal clean up, we removed the *Model* option from the *DEVELOP* section of the Developer Portal menu when you are looking at environments on SAP Cloud Platform. The functions of this page are still available via the **Edit in Studio Pro** button on the environments page.
 
 ### October 21, 2020
 
 #### Improvements
 
-* We split the **Edit App** button into two separate buttons, **Edit in Studio** and **Edit in Studio Pro** on some of the Mendix Portal pages (Environments, App Services, Metrics, Alerts, Logs, Backups, and the Node Permissions tab of Security).
+* We split the **Edit App** button into two separate buttons, **Edit in Studio** and **Edit in Studio Pro** on some of the Developer Portal pages (Environments, App Services, Metrics, Alerts, Logs, Backups, and the Node Permissions tab of Security).
 * We also updated the drop down for the **View App** button.
 
 ### April 24, 2020
@@ -187,23 +187,23 @@ For more information see [SAP Business Technology Platform - deploy](/developerp
 
 #### Fixes
 
-* We fixed an issue for users deploying to SAP Cloud Portal where newly-bound services were bound correctly but did not appear in the Mendix Portal. (Ticket 81418)
+* We fixed an issue for users deploying to SAP Cloud Portal where newly-bound services were bound correctly but did not appear in the Developer Portal. (Ticket 81418)
 
 ### March 29, 2019
 
 #### Improvements
 
-* We have changed Mendix deployment to **SAP Cloud Platform** so that the Cloud Foundry stack cflinuxfs3 is used. Previously, Mendix apps were using cflinuxfs2, which has been deprecated by SAP. See [Cloud Foundry Environment – Deprecation of cflinuxfs2](https://help.sap.com/doc/43b304f99a8145809c78f292bfc0bc58/Cloud/en-US/98bf747111574187a7c76f8ced51cfeb.html?from=2018-11-08&sel3=Announcement&sel1=Cloud%20Foundry%20Environment&to=2018-11-08) SAP release note from 8 November 2018, and [Rapid Application Development by Mendix – Stack Switch](https://help.sap.com/doc/43b304f99a8145809c78f292bfc0bc58/Cloud/en-US/98bf747111574187a7c76f8ced51cfeb.html?from=2019-03-29&to=2019-03-29&sel3=Announcement) SAP release note from 29 March 2019 for more information. The next time that you deploy a new, or existing, Mendix app to *SAP Cloud Platform* from the Mendix Portal, the new stack will be applied to your app.
+* We have changed Mendix deployment to **SAP Cloud Platform** so that the Cloud Foundry stack cflinuxfs3 is used. Previously, Mendix apps were using cflinuxfs2, which has been deprecated by SAP. See [Cloud Foundry Environment – Deprecation of cflinuxfs2](https://help.sap.com/doc/43b304f99a8145809c78f292bfc0bc58/Cloud/en-US/98bf747111574187a7c76f8ced51cfeb.html?from=2018-11-08&sel3=Announcement&sel1=Cloud%20Foundry%20Environment&to=2018-11-08) SAP release note from 8 November 2018, and [Rapid Application Development by Mendix – Stack Switch](https://help.sap.com/doc/43b304f99a8145809c78f292bfc0bc58/Cloud/en-US/98bf747111574187a7c76f8ced51cfeb.html?from=2019-03-29&to=2019-03-29&sel3=Announcement) SAP release note from 29 March 2019 for more information. The next time that you deploy a new, or existing, Mendix app to *SAP Cloud Platform* from the Developer Portal, the new stack will be applied to your app.
 
 ### March 21, 2019
 
 #### Improvements
 
-* We have added the ability to manage *SAP Cloud Platform* Cloud Foundry Marketplace services from within the Mendix Portal.
+* We have added the ability to manage *SAP Cloud Platform* Cloud Foundry Marketplace services from within the Developer Portal.
 
 #### Limitation
 
-* If an app is deployed to SAP from the Desktop Modeler *before it has been started from the Mendix Portal*, the deployment will fail because the marketplace services have not been bound. Please ensure that apps are first deployed from the Mendix Portal before trying to deploy them from the Desktop Modeler.
+* If an app is deployed to SAP from the Desktop Modeler *before it has been started from the Developer Portal*, the deployment will fail because the marketplace services have not been bound. Please ensure that apps are first deployed from the Developer Portal before trying to deploy them from the Desktop Modeler.
 
 ## 2018
 
@@ -211,8 +211,8 @@ For more information see [SAP Business Technology Platform - deploy](/developerp
 
 #### Improvements
 
-* Apps deployed to SAP Cloud Platform can be edited in the Web Modeler or Desktop Modeler by choosing the appropriate option on the **Edit App** button in the Mendix Portal. Older apps can have this functionality enabled using the **Enable Web Modeler** button on the **General** settings page.
-* Logs for apps deployed to SAP Cloud Platform can be viewed with Kibana from the **Logs** page of the Mendix Portal. See [Logs](/developerportal/operate/logs/) for more information.
+* Apps deployed to SAP Cloud Platform can be edited in the Web Modeler or Desktop Modeler by choosing the appropriate option on the **Edit App** button in the Developer Portal. Older apps can have this functionality enabled using the **Enable Web Modeler** button on the **General** settings page.
+* Logs for apps deployed to SAP Cloud Platform can be viewed with Kibana from the **Logs** page of the Developer Portal. See [Logs](/developerportal/operate/logs/) for more information.
 
 ### October 1, 2018
 

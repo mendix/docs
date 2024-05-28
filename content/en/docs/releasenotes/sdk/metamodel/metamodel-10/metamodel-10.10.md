@@ -1,5 +1,5 @@
 ---
-title: "10.11"
+title: "10.10"
 url: /releasenotes/sdk/metamodel-10.10/
 weight: 90
 ---

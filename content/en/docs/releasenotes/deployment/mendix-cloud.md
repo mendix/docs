@@ -100,7 +100,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 * We removed a blank line on the **Logs** page. 
 * On the **Metrics** page, when viewing both the application and the database metrics together, they are now separated instead of presented together. The **Logs** page now shows all the application metrics graphs first, followed by the database metrics graphs.
-* The **Environments** drop-down list maintains the same sorting order as on the **Environments** page in the Developer Portal.
+* The **Environments** drop-down list maintains the same sorting order as on the **Environments** page in the Mendix Portal.
 
 ### January 31, 2024 
 
@@ -158,7 +158,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### Improvements
 
-* We added support for an `Origin-Trials` HTTP header in the Developer Portal. To use this header, the customer must first deploy (or redeploy) their app sometime after 26 October, 12:00 PM. If the customer has deployed since this date, then they can simply set the header and restart their app to use the header. For more information, see [HTTP Headers](/developerportal/deploy/environments-details/#http-headers).
+* We added support for an `Origin-Trials` HTTP header in the Mendix Portal. To use this header, the customer must first deploy (or redeploy) their app sometime after 26 October, 12:00 PM. If the customer has deployed since this date, then they can simply set the header and restart their app to use the header. For more information, see [HTTP Headers](/developerportal/deploy/environments-details/#http-headers).
 
 ### October 25, 2023
 
@@ -243,7 +243,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### Improvements
 
-* In the Build and Deploy APIs, we have added a link to download packages from the Developer Portal. This is controlled by a parameter on the following API calls:
+* In the Build and Deploy APIs, we have added a link to download packages from the Mendix Portal. This is controlled by a parameter on the following API calls:
     * [Retrieve Package](/apidocs-mxsdk/apidocs/build-api/#retrieve-package) in the Build API
     * [Retrieve Environment Package](/apidocs-mxsdk/apidocs/deploy-api/#retrieve-environment-package) in the Deploy API
 * We have deprecated the [Download Package](/apidocs-mxsdk/apidocs/build-api/#download-package) call in the Build API.
@@ -350,7 +350,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### Fix
 
-* We improved the performance of the Developer Portal when selecting which revision to use to build a deployment package from an MDA. (Ticket 163959)
+* We improved the performance of the Mendix Portal when selecting which revision to use to build a deployment package from an MDA. (Ticket 163959)
 
 ### September 13, 2022
 
@@ -530,7 +530,7 @@ Mendix Cloud v4 now supports PostgreSQL 13. This adds significant performance im
 
 All newly-created applications will have a database running PostgreSQL 13.
 
-Existing applications will be updated in the next few weeks. Technical contacts of these applications will receive timely notifications and, additionally, maintenance information will be visible in the Developer Portal.
+Existing applications will be updated in the next few weeks. Technical contacts of these applications will receive timely notifications and, additionally, maintenance information will be visible in the Mendix Portal.
 
 ### October 7, 2021
 
@@ -554,7 +554,7 @@ Existing applications will be updated in the next few weeks. Technical contacts 
 
 * We added the ability to restore only a database, without restoring the other files in a backup.
     You can do this in one of two ways:
-    * Through the [Developer Portal](/developerportal/operate/restore-backup/#restore-cloud-backup)
+    * Through the [Mendix Portal](/developerportal/operate/restore-backup/#restore-cloud-backup)
     * Using the [Backups API v2](/apidocs-mxsdk/apidocs/backups-api/)
 
 ### August 6, 2021
@@ -605,7 +605,7 @@ Existing applications will be updated in the next few weeks. Technical contacts 
 
 #### Mendix Cloud v3 Archived Logs
 
-* We have deleted archived logs older than six months for all Mendix Cloud **v3** apps. This is in line with the warning given in the Developer Portal and the current commitment to keep logs for six months.
+* We have deleted archived logs older than six months for all Mendix Cloud **v3** apps. This is in line with the warning given in the Mendix Portal and the current commitment to keep logs for six months.
 
 ### June 8, 2021
 
@@ -665,7 +665,7 @@ Any clients that use IPv6 to connect to applications which have configured Acces
 
 ### March 30, 2021
 
-* We have implemented various visual changes to the user interface of the Developer Portal.
+* We have implemented various visual changes to the user interface of the Mendix Portal.
 
 ### March 18, 2021
 
@@ -731,7 +731,7 @@ If you encounter errors using APIs, please ensure that the format matches the do
 
     For more information on custom environment variables, see [Runtime Tab](/developerportal/deploy/environments-details/#custom-environment-variables) in the *Environment Details* documentation.
 
-* As part of a Developer Portal clean up, we removed the Model option from the DEVELOP section of the Developer Portal menu when you are looking at environments on Mendix Cloud. The functions of this page are still available via the **Edit in Studio Pro** button on the environments page.
+* As part of a Mendix Portal clean up, we removed the Model option from the DEVELOP section of the Mendix Portal menu when you are looking at environments on Mendix Cloud. The functions of this page are still available via the **Edit in Studio Pro** button on the environments page.
 
 ### December 8, 2020
 
@@ -761,7 +761,7 @@ If you encounter errors using APIs, please ensure that the format matches the do
 
 #### Fixes
 
-* We resolved an issue where an incorrect debugger password was sometimes shown for Mendix Cloud v4 apps in the Developer Portal. This meant that customers were not able to connect to the debugger. (Ticket 105317)
+* We resolved an issue where an incorrect debugger password was sometimes shown for Mendix Cloud v4 apps in the Mendix Portal. This meant that customers were not able to connect to the debugger. (Ticket 105317)
 
 ### October 26, 2020
 
@@ -793,14 +793,14 @@ If you encounter errors using APIs, please ensure that the format matches the do
 #### Improvements
 
 * We have added the ability for Technical Contacts to download the activity log from an environment.
-* On some of the Developer Portal pages (*Environments*, *Mobile App*, *App Services*, *Metrics*, *Alerts*, *Logs*, *Backups*, and the *Node Permissions* tab of *Security*), we have split the **Edit App** button into two separate buttons: **Edit in Studio** and **Edit in Studio Pro**.
-* We removed the ability to build PhoneGap hybrid applications through the Developer Portal. The PhoneGap Build service will be removed by Adobe on 1 October, so this action would have failed after this date. You can still build your hybrid app locally.
+* On some of the Mendix Portal pages (*Environments*, *Mobile App*, *App Services*, *Metrics*, *Alerts*, *Logs*, *Backups*, and the *Node Permissions* tab of *Security*), we have split the **Edit App** button into two separate buttons: **Edit in Studio** and **Edit in Studio Pro**.
+* We removed the ability to build PhoneGap hybrid applications through the Mendix Portal. The PhoneGap Build service will be removed by Adobe on 1 October, so this action would have failed after this date. You can still build your hybrid app locally.
 
 #### Fixes
 
 * We resolved an issue where transports which failed were not reported correctly to the customer. (Ticket 106033)
 * We resolved an issue where memory could not be scaled above 16GiB even though 32GiB was available. (Ticket 101035)
-* We resolved an issue where the documentation field was empty when editing a constant in the Developer Portal, even though there was documentation in the model. To see the documentation, you will need to redeploy your app. (Tickets 78758, 78958, 79212, 79359, 92954, 93107, and 100756)
+* We resolved an issue where the documentation field was empty when editing a constant in the Mendix Portal, even though there was documentation in the model. To see the documentation, you will need to redeploy your app. (Tickets 78758, 78958, 79212, 79359, 92954, 93107, and 100756)
 
 ### September 17, 2020
 
@@ -939,7 +939,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 
 #### Fixes
 
-* We fixed an issue where manual backups on Mendix Cloud v3 did not correctly update the status in the Developer Portal when they completed. (Tickets 97485, 97573, 97577, 97748, 97819, and 98313)
+* We fixed an issue where manual backups on Mendix Cloud v3 did not correctly update the status in the Mendix Portal when they completed. (Tickets 97485, 97573, 97577, 97748, 97819, and 98313)
 * We fixed an issue where some valid certificate authorities could not be uploaded. (Tickets 98150 and 100271)
 * We made some changes to the Mendix Cloud v3 Trends graphs.
 
@@ -959,7 +959,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 * In Mendix Cloud v4, we introduced changes to the Access Restriction Profile (ARP) Certificate Authorities (CAs). These changes allow you to:
     * Have stricter access restrictions by allowing the selection of intermediate certificates instead of the root
     * Use different root certificates for each path
-        {{% alert color="info" %}}Existing configurations will not be changed and environments can be restarted safely.<br/><br/>To migrate to the new ARPs, you must remove **all** existing ARPs and replace them with *clones* that you have edited using the latest Developer Portal.<br/>In other words, **Clone** the existing ARPs, **Edit** the CAs, and **Apply** the new ARPs to all paths.{{% /alert %}}
+        {{% alert color="info" %}}Existing configurations will not be changed and environments can be restarted safely.<br/><br/>To migrate to the new ARPs, you must remove **all** existing ARPs and replace them with *clones* that you have edited using the latest Mendix Portal.<br/>In other words, **Clone** the existing ARPs, **Edit** the CAs, and **Apply** the new ARPs to all paths.{{% /alert %}}
         For more information, see [How To Restrict Access for Incoming Requests](/developerportal/deploy/access-restrictions/).
 
     You will need to redeploy your app in order to apply the new ARP (or ARPs).
@@ -981,7 +981,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 #### Improvements
 
 * Restoring data on the Mendix Cloud now takes place asynchronously. This means the following:
-    * You can continue working in the Developer Portal while your backup is restored
+    * You can continue working in the Mendix Portal while your backup is restored
     * You will be unable to stop or start your app while the backup is being restored
     * Your environment details page will display a message while the backup is being restored
     * The environment activity log will indicate when the restore has completed
@@ -1004,7 +1004,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 
 #### Fixes
 
-* We fixed an issue where, if the data type of a constant was changed in the app model, it was not changed in the Developer Portal. This meant that validation sometimes failed and the app could not be started. (Ticket 88425)
+* We fixed an issue where, if the data type of a constant was changed in the app model, it was not changed in the Mendix Portal. This meant that validation sometimes failed and the app could not be started. (Ticket 88425)
 * We fixed an issue on the page where you select a node to deploy your app, where the app name and the link to the Environments page disappeared.
 * We corrected the text of the welcome email for new cloud environments which gave incorrect instructions for deploying your app. (Ticket 93145)
 
@@ -1044,7 +1044,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 
 * We have upgraded Mendix Cloud Deployment and Operation. It is now a Mendix 7 app.
 * You can now mask app constant values so that they cannot be seen in the **Model Options** tab of the **Environment Details**.
-* We now warn you on all **OPERATE** and **DEPLOY** pages if a maintenance window has been created to allow updating of the Mendix Developer Portal.
+* We now warn you on all **OPERATE** and **DEPLOY** pages if a maintenance window has been created to allow updating of the Mendix Mendix Portal.
 
 <a id="ki20201030"></a>**Known Issue**
 
@@ -1053,7 +1053,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
     * Workaround – Choose the **Details** for the **Production** environment again and you will be taken to the correct environment.
     * Resolved by release on [November 7](#20201107).
 
-* When you attempt to open an **OPERATE** or **DEPLOY** page in the Developer Portal, you may see a login page. You will need to force a refresh of your page, or clear your browser cache, in order to access the page.
+* When you attempt to open an **OPERATE** or **DEPLOY** page in the Mendix Portal, you may see a login page. You will need to force a refresh of your page, or clear your browser cache, in order to access the page.
 
     * Resolved by release on [November 7](#20201107).
 
@@ -1095,7 +1095,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 #### Fixes
 
-* We fixed an issue that caused the wrong Technical Contact information to be shown on the app's *General* page in the Developer Portal. (Ticket 84852)
+* We fixed an issue that caused the wrong Technical Contact information to be shown on the app's *General* page in the Mendix Portal. (Ticket 84852)
 * We added a feedback message when you try to restore a backup while the backup is still being created. (Ticket 85786)
 
 ### August 23, 2019
@@ -1143,7 +1143,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 #### Improvements
 
-* We redesigned the App User management page of the Developer Portal for Mendix Cloud environments that are enabled for single sign-on (SSO).
+* We redesigned the App User management page of the Mendix Portal for Mendix Cloud environments that are enabled for single sign-on (SSO).
 
 ### May 9, 2019
 
@@ -1155,10 +1155,10 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 
 #### Improvements
 
-* For Mendix Cloud v4, we have extended the range of HTTP Headers that are supported in the Developer Portal. Previously, only *X-Frame-Options* was supported. For more information, see [Environment Details](/developerportal/deploy/environments-details/#http-headers).
+* For Mendix Cloud v4, we have extended the range of HTTP Headers that are supported in the Mendix Portal. Previously, only *X-Frame-Options* was supported. For more information, see [Environment Details](/developerportal/deploy/environments-details/#http-headers).
     * If you add or change these settings, you will need to redeploy your app before the changes take effect.
 * For Mendix Cloud v4 deployments of Mendix apps version 7.23.1 and above, we now support AdoptOpenJDK, and the relevant Java version is displayed on the Environment Details page.
-* We clarified which logs can be downloaded from the Developer Portal by changing the button text from *Download Today's Log* to *Download Current Log*
+* We clarified which logs can be downloaded from the Mendix Portal by changing the button text from *Download Today's Log* to *Download Current Log*
 
 #### Fixes
 
@@ -1185,12 +1185,12 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
     * The Technical Contact can rename the environments
     * The Technical Contact can re-order the environments
 * As part of support for Flexible Environments, we have made the following changes:
-    * When deploying your application via the Developer Portal, you can choose the destination environment
+    * When deploying your application via the Mendix Portal, you can choose the destination environment
     * When viewing metrics, logs, backups, etc. you will have to choose the environment using a drop-down rather than clicking directly on the environment you want
 
 #### Other Improvements
 
-* We have added the ability to manage tags through the Developer Portal, in addition to the current method, which involved using the API.
+* We have added the ability to manage tags through the Mendix Portal, in addition to the current method, which involved using the API.
 
 ### March 7, 2019
 
@@ -1199,7 +1199,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 * We have fixed the issue where custom domains were not getting bound to environments if they were added before the environment was initialized. (Tickets 78324, 76159, 76439, 77366, 77504, 78324, 78484)
 * We have fixed the issue which caused the "Running Since" value in the Environment Details to be updated after transporting an MDA to an environment but where the process was canceled without restarting the environment. (Ticket 76893)
 * We have fixed the issue regarding unclear application version numbering when building an MDA package. The "App latest tag" and "Branch latest tag" have been replaced with "App highest tag" and "Branch highest tag", respectively, to represent the values more precisely. (Ticket 78699)
-* We have fixed the issue causing license information to be displayed incorrectly in the Developer Portal for some Mendix Cloud v3 production environments. (Ticket 78229, 80336)
+* We have fixed the issue causing license information to be displayed incorrectly in the Mendix Portal for some Mendix Cloud v3 production environments. (Ticket 78229, 80336)
 
 ### February 6, 2019
 
@@ -1279,15 +1279,15 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 #### Fixes
 
 * We improved the feedback messages in the case of a startup failure.
-* The status page link in alert emails now redirects you to the corresponding alerts page in the Developer Portal.
+* The status page link in alert emails now redirects you to the corresponding alerts page in the Mendix Portal.
 * We solved an issue that caused blank error messages during backup creation.
 
 #### Improvements
 
 * A new API call for accessing the logs of Mendix Cloud v4 applications is now available. Detailed information can be found in the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api/).
-* It is now possible to add custom environment variables via the Developer Portal to set up application metrics with Datadog and Telegraph.
-* All the log levels in the Developer Portal (as in, INFO, ERROR, TRACE, DEBUG, WARNING, CRITICAL) are now also available in Datadog.
-* The Postgres database size can also be observed in Datadog after enabling it in the Developer Portal.
+* It is now possible to add custom environment variables via the Mendix Portal to set up application metrics with Datadog and Telegraph.
+* All the log levels in the Mendix Portal (as in, INFO, ERROR, TRACE, DEBUG, WARNING, CRITICAL) are now also available in Datadog.
+* The Postgres database size can also be observed in Datadog after enabling it in the Mendix Portal.
 * The **Environments** breadcrumb in **Deploy** > **Environments** > environment is now a link that redirects you back to the **Environments** page.
 
 ### August 9, 2018
@@ -1322,7 +1322,7 @@ In some cases, you may still experience false positives for the runtime heartbea
 
 * We improved the deployment speed for the Asia region. The feature is not enabled by default, so you need to request it if necessary.
 * We implemented tags on environments for metrics in Datadog. It is now possible to add custom tags to metrics that will serve as selection criteria for grouping environments. Environment tags can be created, retrieved, and deleted using APIs. Detailed information can be found in the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api/).
-* We changed the yearly overview of trends to quarterly in the Developer Portal for v4 applications.
+* We changed the yearly overview of trends to quarterly in the Mendix Portal for v4 applications.
 * It is now possible for an Operations Manager to reorder environments.
 * Custom offline pages are now immediately active after the transport of a new deployment package.
 

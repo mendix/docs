@@ -35,9 +35,9 @@ To use AppDynamics and send data to AppDynamics from your Mendix app, you need t
 
 ## 3 Connecting Your Node to AppDynamics{#connect-node}
 
-To send your runtime information to AppDynamics, you must set it up using environment variables in the Developer Portal.
+To send your runtime information to AppDynamics, you must set it up using environment variables in the Mendix Portal.
 
-1. Go to the **Environments** page of your app in the Developer Portal.
+1. Go to the **Environments** page of your app in the Mendix Portal.
 2. Click **Details** on the environment you wish to monitor with AppDynamics. 
 3. Switch to the [**Runtime** tab](/developerportal/deploy/environments-details/#runtime-tab).
 4. Add the following **Custom Environment Variables**.

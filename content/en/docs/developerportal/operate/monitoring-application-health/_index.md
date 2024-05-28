@@ -4,7 +4,7 @@ url: /developerportal/operate/monitoring-application-health/
 
 weight: 20
 description: "Describes how to monitor the health and status of your app."
-tags: ["Monitoring","Mendix Cloud","Developer Portal","Performance","Health", "Database IOPS Burst Balance", "Database Freeable Memory"]
+tags: ["Monitoring","Mendix Cloud","Mendix Portal","Performance","Health", "Database IOPS Burst Balance", "Database Freeable Memory"]
 aliases:
     - /mendixcloud/monitoring-application-health.html
     - /howtogeneral/mendixcloud/monitoring-application-health.html
@@ -16,7 +16,7 @@ aliases:
 
 ## 1 Introduction
 
-When your application has reached production status, it is important to keep track of its status and health. When you click **Alerts** in the Developer Portal, you can inspect your application's health in Mendix Cloud. 
+When your application has reached production status, it is important to keep track of its status and health. When you click **Alerts** in the Mendix Portal, you can inspect your application's health in Mendix Cloud. 
 
 {{% alert color="info" %}}This page describes alerts for licensed apps deployed to Mendix Cloud. Alerts are not available for Free Apps deployed to Mendix Cloud.<br><br>If your app is deployed to SAP Business Technology Platform (SAP BTP) instead, the **Alerts** page links to the SAP BTP cockpit.{{% /alert %}}
 
@@ -32,7 +32,7 @@ This document explains how to access the application status page, what the infor
 
 Mendix Cloud automatically monitors the health and status of apps that are deployed on cloud nodes. To access the information gathered in this way, follow these steps:
 
-1. From the [Developer Portal](https://home.mendix.com), open the app that you want to monitor.
+1. From the [Mendix Portal](https://home.mendix.com), open the app that you want to monitor.
 2. In the [navigation pane](/developerportal/#navigation-pane), click **Alerts**. This displays the status of your app node in various categories.
 
     {{< figure src="/attachments/developerportal/operate/monitoring-application-health/application-status.png" class="no-border" >}}

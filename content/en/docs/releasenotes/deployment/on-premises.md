@@ -40,7 +40,7 @@ For information on the current status of Mendix deployment see [Mendix Status](h
 #### IBM Cloud Portal Deployment
 
 * We have updated the process for deploying to IBM Cloud Portal.
-* We have also added the ability to manage IBM Cloud Portal Cloud Foundry  services from within the Mendix Developer Portal.
+* We have also added the ability to manage IBM Cloud Portal Cloud Foundry  services from within the Mendix Mendix Portal.
 
 ## 2018
 
@@ -48,4 +48,4 @@ For information on the current status of Mendix deployment see [Mendix Status](h
 
 #### IBM Cloud Portal Deployment
 
-* Deploying to IBM Cloud is available from within Mendix. If you start with an app template, you will be taken through the process of creating a deployment environment on IBM Cloud. You can then deploy your app to IBM Cloud from within the Desktop Modeler or Mendix Developer Portal.
+* Deploying to IBM Cloud is available from within Mendix. If you start with an app template, you will be taken through the process of creating a deployment environment on IBM Cloud. You can then deploy your app to IBM Cloud from within the Desktop Modeler or Mendix Mendix Portal.

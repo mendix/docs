@@ -22,7 +22,7 @@ Before you can use the Mendix Operator in your namespace you need to install it 
 
 If you are not already on the installation tab for your namespace, go to it by following these instructions:
 
-1. Go to the Cluster Manager page by clicking **Cluster Manager** in the top menu of the **Clouds** page of the Developer Portal.
+1. Go to the Cluster Manager page by clicking **Cluster Manager** in the top menu of the **Clouds** page of the Mendix Portal.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-manager.png" class="no-border" >}}
 
@@ -293,7 +293,7 @@ These custom CAs will be trusted by:
 * The Mendix Operator when communicating with the database and file storage
 * The Mendix Operator when pushing app images to the container registry
 * Mendix apps when communicating with the database, file storage and external web services
-* The Mendix Agent when connecting to Mendix Developer portal
+* The Mendix Agent when connecting to Mendix Mendix Portal
 
 {{% alert color="info" %}}
 To prevent MITM attacks, enable **Strict TLS** for the database and use an HTTPS URL for MinIO. This will ensure that all communication with data storage is done over TLS, and that certificates are properly validated.
@@ -337,6 +337,6 @@ When you have configured all the resources, do the following:
 
 ## 5 Confirming Namespace Configuration
 
-When using a connected cluster, its status will be shown as **Connected** in the Developer Portal when the namespace is configured correctly. You may need to click the **Refresh** button if the screen does not update automatically.
+When using a connected cluster, its status will be shown as **Connected** in the Mendix Portal when the namespace is configured correctly. You may need to click the **Refresh** button if the screen does not update automatically.
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image22.png" class="no-border" >}}

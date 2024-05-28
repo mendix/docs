@@ -52,7 +52,7 @@ You can also manually refresh the whole landscape using the **Refresh Environmen
 
 If you click an environment from the list, you will see the **Environment details** of this specific production environment. This page shows all the alerts of this environment and the date and time the alerts have occurred. The **Environment details** and the Technical Contact of this environment are also displayed. With this information, you can directly get in contact with the responsible person.
 
-If you click **Go to Cloud Portal** on the upper-right corner of the page, you are taken to the [Environments](/developerportal/deploy/environments/) page of the application in the Developer Portal. If you have access, you can take action on the alerts here; otherwise you can look up the team members who manage this app and contact them.
+If you click **Go to Cloud Portal** on the upper-right corner of the page, you are taken to the [Environments](/developerportal/deploy/environments/) page of the application in the Mendix Portal. If you have access, you can take action on the alerts here; otherwise you can look up the team members who manage this app and contact them.
 
 The **Environment Details** page also lists the alert information of this specific production environment. In the list, you can see the following details:
 

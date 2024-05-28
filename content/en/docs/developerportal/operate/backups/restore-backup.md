@@ -3,7 +3,7 @@ title: "Restoring a Backup"
 url: /developerportal/operate/restore-backup/
 weight: 30
 description: "How to restore a backup."
-tags: ["Backup", "Restore", "Mendix Cloud", "Developer Portal", "backup file format"]
+tags: ["Backup", "Restore", "Mendix Cloud", "Mendix Portal", "backup file format"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
@@ -39,7 +39,7 @@ Mendix Cloud automatically performs backups every night, and you can also manual
 
 If you want to restore a backup to a different cloud node, or have your backup stored locally, then see [Restoring a Backup for a Different Licensed Cloud Node](#restore-local-backup), below.
 
-1. From the Developer Portal, go to your app's **Backups** page.
+1. From the Mendix Portal, go to your app's **Backups** page.
 2. In the upper-right corner of the screen, select the environment to which the backup should be restored (for example, **Acceptance**).
 
     {{< figure src="/attachments/developerportal/operate/backups/restore-backup/environment.png" width=25% class="no-border" >}}
@@ -68,7 +68,7 @@ To transfer backups between environments, you need a downloaded backup file (*.d
 You can only restore data to an existing database. This means that there must have been an app deployed to the licensed node before you attempt to restore data. If it is a new node environment, you must deploy an app to it before attempting to restore data to the node.<br><br>However, the app previously deployed to the node does not need to have had the same Domain Model as the data you are restoring.
 {{% /alert %}}
 
-1. Go to the **Backups** page of the Developer Portal for your app.
+1. Go to the **Backups** page of the Mendix Portal for your app.
 2. Select the environment to which the backup should be restored (for example, **Acceptance**).
 3. Click **Upload Archive**. The upload creates a new backup item in your backup list, which you can then restore via the regular restore process. This ensures less downtime for your application.
 4. Upload the *.db* or *.gz* backup file.
@@ -78,7 +78,7 @@ You can only restore data to an existing database. This means that there must ha
 
 {{% alert color="info" %}}For a Free App, you can only restore available backups that are made from the app and held in the cloud. It is not possible to upload a backup that was created or stored elsewhere. It also is not possible to manually create a backup.{{% /alert %}}
 
-1. In the Developer Portal, go to the **Backups** page for your app.
+1. In the Mendix Portal, go to the **Backups** page for your app.
 2. Select the environment to which the backup should be restored (for example, **Acceptance**).
 3. On the backup you want to restore, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) and select **Restore** from the drop-down list.
 4. Confirm the backup restore by clicking **Restore Backup**.
@@ -89,7 +89,7 @@ If the app is still running, you have to stop it by clicking **Stop Application*
 
 ## 6 Restoring After a Backup Fails{#restore-after-fail}
 
-If a backup restore fails, you will be notified via your app's **Backup Activity** log (in the **Backups** page of the Developer Portal). When this happens, all data that was restored until the point of failure will be present in your database. This will leave the database only partially restored; not all data from the backup file will be present in your database. 
+If a backup restore fails, you will be notified via your app's **Backup Activity** log (in the **Backups** page of the Mendix Portal). When this happens, all data that was restored until the point of failure will be present in your database. This will leave the database only partially restored; not all data from the backup file will be present in your database. 
 
 Your database must be large enough to hold the decompressed size of the database as stored in your backup file's [db folder](#db-folder), plus an overhead of 2.25 GB. This overhead is employed during the restoration process. 
 

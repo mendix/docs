@@ -4,7 +4,7 @@ linktitle: "Free App to Basic Package"
 url: /developerportal/deploy/migrate-free-app-to-basic/
 weight: 40
 description: "Moving an existing Mendix app deployed as a Free App to a Basic Package node"
-tags: ["App", "Node", "Developer Portal", "Licensed", "Free App", "Upgrade", "Basic Package"]
+tags: ["App", "Node", "Mendix Portal", "Licensed", "Free App", "Upgrade", "Basic Package"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
@@ -32,7 +32,7 @@ To migrate your Free App and its database to your Mendix Basic environment, foll
 
 ### 3.1 Open your Free App
 
-1. Go to the [Developer Portal](https://sprintr.home.mendix.com). Sign in if necessary.
+1. Go to the [Mendix Portal](https://sprintr.home.mendix.com). Sign in if necessary.
 2. Click the app that you want to migrate to a Basic Node.
 
 ### 3.2 Download a Backup{#download-backup}

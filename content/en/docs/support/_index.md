@@ -60,7 +60,7 @@ Please contact your Customer Success Manager or [Mendix Support](https://support
 
 ## 2 Finding Your Answers
 
-We expect that many questions and issues can be solved by reading the [Mendix Documentation](/) and by exploring the [Mendix Community](https://community.mendix.com/). If you cannot find the answer to your question in one of these locations, you can submit a question, incident, or change request to Mendix Support. We will act as the focal point for issues on Mendix Studio Pro, your applications, and the [Developer Portal](https://home.mendix.com/). We will forward the issue to the second- and third-line if necessary.
+We expect that many questions and issues can be solved by reading the [Mendix Documentation](/) and by exploring the [Mendix Community](https://community.mendix.com/). If you cannot find the answer to your question in one of these locations, you can submit a question, incident, or change request to Mendix Support. We will act as the focal point for issues on Mendix Studio Pro, your applications, and the [Mendix Portal](https://home.mendix.com/). We will forward the issue to the second- and third-line if necessary.
 
 ### 2.1 Mendix Academy
 
@@ -101,12 +101,12 @@ Please read more about this in [Control Center](/control-center/).
 
 ### 5.2 Technical Contacts
 
-You need to appoint a [Technical Contact](/developerportal/general/app-roles/#technical-contact) for each of your applications running in the Mendix Public Cloud or Cloud Dedicated. The Technical Contact checks the performance of the applications in the Developer Portal and receives alerts from the Mendix Developer Portal based on errors and warnings in the application. It is possible to have other team members receive these alerts as well.
+You need to appoint a [Technical Contact](/developerportal/general/app-roles/#technical-contact) for each of your applications running in the Mendix Public Cloud or Cloud Dedicated. The Technical Contact checks the performance of the applications in the Mendix Portal and receives alerts from the Mendix Mendix Portal based on errors and warnings in the application. It is possible to have other team members receive these alerts as well.
 Reading these alerts carefully and acting upon them is important, as they can affect the performance of your app. For more information on alerts, see [Alerts](/developerportal/operate/monitoring-application-health/).
 
 ### 5.3 Training
 
-We expect your support team to be trained and certified on Studio Pro and the Developer Portal so that they can interpret and analyze alerts, graphs, and logs in the Developer Portal. For more information, please check our available [classroom courses](https://academy.mendix.com/link/classroom) and [expert webinars](https://academy.mendix.com/link/webinar) or contact the Mendix Academy ([academy@mendix.com](mailto:academy@mendix.com)).
+We expect your support team to be trained and certified on Studio Pro and the Mendix Portal so that they can interpret and analyze alerts, graphs, and logs in the Mendix Portal. For more information, please check our available [classroom courses](https://academy.mendix.com/link/classroom) and [expert webinars](https://academy.mendix.com/link/webinar) or contact the Mendix Academy ([academy@mendix.com](mailto:academy@mendix.com)).
 
 ## 6 Platform Status
 
@@ -257,7 +257,7 @@ If you want additional features or some other change in the Windows Service, you
 
 The application operation component is used for stopping and starting environments and configuring constants, scheduled events, and runtime settings.
 
-Only when running on the Mendix Public Cloud, Cloud Dedicated, Private Cloud Connected or SAP BTP through the Developer Portal, can Mendix Support analyze this components.
+Only when running on the Mendix Public Cloud, Cloud Dedicated, Private Cloud Connected or SAP BTP through the Mendix Portal, can Mendix Support analyze this components.
 
 ### 10.6 Logs and Metrics
 
@@ -271,7 +271,7 @@ Only when running on the Mendix Public Cloud or Cloud Dedicated, can Mendix Supp
 The deployment pipeline takes care of creating and deploying deployment packages
 Please read all about the Deployment options in [Deployment](/developerportal/deploy/).
 
-Only when running on the Mendix Public Cloud, Cloud Dedicated, Private Cloud Connected or SAP BTP through the Developer Portal, can Mendix Support analyze this component.
+Only when running on the Mendix Public Cloud, Cloud Dedicated, Private Cloud Connected or SAP BTP through the Mendix Portal, can Mendix Support analyze this component.
 
 ### 10.8 Runtime
 

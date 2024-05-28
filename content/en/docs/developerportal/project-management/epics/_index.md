@@ -5,7 +5,7 @@ url: /developerportal/project-management/epics/
 weight: 1
 description_list: false
 description: "Describes how to use Epics for your app development."
-tags: ["Epics", "Sprint", "Developer Portal"]
+tags: ["Epics", "Sprint", "Mendix Portal"]
 aliases:
     -  /developerportal/general/epics/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
@@ -17,7 +17,7 @@ Epics is the default tool for you to manage the development process of new apps.
 
 ## 2 Opening an App in Epics
 
-Open the app in the [Developer Portal](https://sprintr.home.mendix.com/link/myapps) and then go to the [Project Management](/developerportal/project-management/) section. This sections shows all the pages of the Epics tool:
+Open the app in the [Mendix Portal](https://sprintr.home.mendix.com/link/myapps) and then go to the [Project Management](/developerportal/project-management/) section. This sections shows all the pages of the Epics tool:
 
 * [Board](/developerportal/project-management/epics/board/)
 * [Planning](/developerportal/project-management/epics/planning/)

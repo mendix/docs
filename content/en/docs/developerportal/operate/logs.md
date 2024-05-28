@@ -4,7 +4,7 @@ url: /developerportal/operate/logs/
 
 weight: 30
 description: "Describes how to see the logs from your app."
-tags: ["Operate", "App", "Developer Portal", "Mendix Cloud"]
+tags: ["Operate", "App", "Mendix Portal", "Mendix Cloud"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
@@ -20,7 +20,7 @@ This page describes logs for licensed apps deployed to Mendix Cloud. Logs are no
 To configure logs if your app is running on a different cloud, go to the cloud management portal for the cloud to which your app is deployed. For more information, see [Monitoring Environments in Mendix for Private Cloud](/developerportal/deploy/private-cloud-monitor/) or [Monitoring Environments in Mendix Apps on SAP BTP](/developerportal/deploy/sap-cloud-platform/sap-monitoring/).
 {{% /alert %}}
 
-To access the **Logs** page, open your app in the [Developer Portal](https://sprintr.home.mendix.com/). Then select **Logs** in the navigation pane. Use the drop-down menu in the upper-right corner to select the environment you want to view logs for.
+To access the **Logs** page, open your app in the [Mendix Portal](https://sprintr.home.mendix.com/). Then select **Logs** in the navigation pane. Use the drop-down menu in the upper-right corner to select the environment you want to view logs for.
 
 {{% alert color="info" %}}
 To view logs, you must have **Access to Monitoring** permission. For more information, see [Node Permissions](/developerportal/deploy/node-permissions/).

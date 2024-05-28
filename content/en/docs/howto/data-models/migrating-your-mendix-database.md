@@ -109,9 +109,9 @@ As described in [Restoring a Backup](/developerportal/operate/restore-backup/#db
 
 ### 4.2 Uploading an Exported PostgreSQL Database to a Mendix Cloud Database
 
-Use the Developer Portal to upload the migrated, exported database backup to Mendix Cloud. Follow these steps:
+Use the Mendix Portal to upload the migrated, exported database backup to Mendix Cloud. Follow these steps:
 
-1. Open your app from the Developer Portal.
+1. Open your app from the Mendix Portal.
 2. Click **Backups** in the navigation pane.
 3. Click **Upload Backup** to upload your database.
 4. In the **Upload Archive** dialog box, select the exported database file from your local file system.
@@ -123,9 +123,9 @@ Use the Developer Portal to upload the migrated, exported database backup to Men
 
 You can use the same procedure to export an existing Mendix Cloud database, import it into an on-premises PostgreSQL source database, and migrate that to an on-premises non-PostgreSQL target database.
 
-Export the Mendix Cloud database via the Developer Portal. Follow these steps:
+Export the Mendix Cloud database via the Mendix Portal. Follow these steps:
 
-1. Open your app from the Developer Portal.
+1. Open your app from the Mendix Portal.
 2. Click **Backups** in the navigation pane.
 3. Select your desired environment.
 4. Optionally, click **Create Backup** to create a fresh backup with recent data.
@@ -165,7 +165,7 @@ If you have a Mendix application running on SAP BTP with PostgreSQL as the datab
 
     {{< figure src="/attachments/howto/data-models/migrating-your-mendix-database/sap-postgres-config.png" class="no-border" >}}
 
-4. Create an environment using the SAP HANA database service using Mendix Developer Portal.
+4. Create an environment using the SAP HANA database service using Mendix Mendix Portal.
 5. Deploy the MDA, but do not start the application.
 6. Sign in to the SAP BTP, Cloud Foundry environment (containing the SAP HANA service) using the Cloud Foundry command line.
 7. Set the following runtime properties in the SAP HANA environment using the command line. Use the values from the PostgreSQL instance values you noted above.
@@ -178,7 +178,7 @@ If you have a Mendix application running on SAP BTP with PostgreSQL as the datab
     cf set-env {application-name}  MXRUNTIME_SourceDatabasePassword {password}
     ```
 
-8. Start the application either from the Developer Portal or the command line. 
+8. Start the application either from the Mendix Portal or the command line. 
 9. Once the application is started, verify the data in the application.
 
 #### 5.2.3 Migrating to SAP HANA on SAP BTP by using the SAP BTP Cockpit
@@ -219,7 +219,7 @@ If you have a Mendix application running on SAP BTP with PostgreSQL as the datab
     }
     ```
 
-6. Create an environment using the SAP HANA database service and the Mendix Developer Portal.
+6. Create an environment using the SAP HANA database service and the Mendix Mendix Portal.
 7. Deploy the MDA without starting the application.
 8. Sign in to the SAP BTP Cockpit.
 9. Navigate to the new application and go to **User-Provided Variables**.
@@ -233,5 +233,5 @@ If you have a Mendix application running on SAP BTP with PostgreSQL as the datab
     | `MXRUNTIME_SourceDatabaseUserName` | `{username}`        |
     | `MXRUNTIME_SourceDatabasePassword` | `{password}`        |
 
-11. Start the application either from the Developer Portal or from the SAP BTP Cockpit. 
+11. Start the application either from the Mendix Portal or from the SAP BTP Cockpit. 
 12. Once the application is started, verify the data in the application.

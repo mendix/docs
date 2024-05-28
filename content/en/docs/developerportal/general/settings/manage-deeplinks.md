@@ -2,8 +2,8 @@
 title: "Manage Deep Links"
 url: /developerportal/general/manage-deeplinks/
 weight: 2
-description: "Describes how to implement deep links to Developer Portal pages."
-tags: ["Developer Portal", "deep link"]
+description: "Describes how to implement deep links to Mendix Portal pages."
+tags: ["Mendix Portal", "deep link"]
 aliases:
     - /developerportal/settings/manage-deeplinks
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
@@ -11,7 +11,7 @@ aliases:
 
 ## 1 Introduction
 
-To go directly to the desired element of your app in the Developer Portal, you can use deep links.
+To go directly to the desired element of your app in the Mendix Portal, you can use deep links.
 
 This how-to teaches you how to do the following:
 
@@ -20,7 +20,7 @@ This how-to teaches you how to do the following:
 
 ## 2 Getting the AppID, storyID, and feedbackItemNr {#id}
 
-To create a deep link, you need the app ID, story ID, or feedback item number or the desired element in the Developer Portal:
+To create a deep link, you need the app ID, story ID, or feedback item number or the desired element in the Mendix Portal:
 
 * For the app ID, select the **General** tab of the **Settings** – you will find the ID at the bottom of the page:
 
@@ -34,9 +34,9 @@ To create a deep link, you need the app ID, story ID, or feedback item number or
 
     {{< figure src="/attachments/developerportal/general/settings/manage-deeplinks/feedback-nr.png" width="500px" alt="Feedback item number on Feedback page" >}}
 
-## 3 Creating a Developer Portal Deep Link
+## 3 Creating a Mendix Portal Deep Link
 
-If you want to provide links directly to a specific element in your app in the Developer Portal, follow these steps:
+If you want to provide links directly to a specific element in your app in the Mendix Portal, follow these steps:
 
 1. Paste the URL to the Developer in your browser's address bar (as in, `https://sprintr.home.mendix.com/` or `https://cloud.home.mendix.com/`).
 2. Paste the desired App ID, Environment ID, Story ID, or Feedback Item Number after the final slash.

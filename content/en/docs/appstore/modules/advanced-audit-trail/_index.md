@@ -165,7 +165,7 @@ Update the **AuditSnapshots_ResponsiveLayout** to update the layouts without cha
 
 You can deploy Advanced Audit Trail locally or in a Mendix Free App for free. However, to deploy Advanced Audit Trail in the Mendix Cloud, you need to start a subscription to [obtain a license key](#obtain-license-key) and then configure it.
 
-Before you deploy your app, configure the app **Constants** in the [deployment package](/developerportal/deploy/environments-details/) in the Developer Portal.
+Before you deploy your app, configure the app **Constants** in the [deployment package](/developerportal/deploy/environments-details/) in the Mendix Portal.
 
 If you have already deployed your app, change the existing **Licensekey** constant value on the **Model Options** tab and restart the app.
 

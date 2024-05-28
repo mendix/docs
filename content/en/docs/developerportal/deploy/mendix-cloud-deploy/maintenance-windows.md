@@ -3,7 +3,7 @@ title: "Maintenance Windows"
 url: /developerportal/deploy/maintenance-windows/
 weight: 33
 description: "How to configure the maintenance windows for your node environment."
-tags: ["Deploy","App","Developer Portal", "maintenance"]
+tags: ["Deploy","App","Mendix Portal", "maintenance"]
 aliases:
     - /mendixcloud/maintenance-windows.html
     - /mendixcloud/maintenance-windows
@@ -46,7 +46,7 @@ Maintenance windows and planned maintenance are defined in Coordinated Universal
 
 Follow the instructions below to configure a maintenance window.
 
-1. Go to the [Developer Portal](https://sprintr.home.mendix.com).
+1. Go to the [Mendix Portal](https://sprintr.home.mendix.com).
 
 2. Go to the **Environments** page for your app.
 

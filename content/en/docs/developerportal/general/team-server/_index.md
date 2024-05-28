@@ -4,7 +4,7 @@ url: /developerportal/general/team-server/
 
 weight: 12
 description: "Describes the overview of Team Server revisions and commits."
-tags: ["Studio Pro", "Team Server", "Developer Portal", "commit", "branch"]
+tags: ["Studio Pro", "Team Server", "Mendix Portal", "commit", "branch"]
 aliases:
     - /refguide/team-server.html
     - /developerportal/develop/team-server.html
@@ -19,7 +19,7 @@ Team Server is where all the committed versions of Mendix apps are stored. Mendi
 
 When you commit your app model changes to the Team Server in Studio Pro, you can select user stories that you have been working on. Team Server automatically creates links between user stories and the model changes, allowing you to navigate from commits to the associated requirements. 
 
-On the **Team Server** screen of the Developer Portal, you can see a URL to access you app, revision history, and revision details.
+On the **Team Server** screen of the Mendix Portal, you can see a URL to access you app, revision history, and revision details.
 
 ## 2 Versioning with Git
 

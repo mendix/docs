@@ -86,7 +86,7 @@ These release notes cover changes to the Mendix Profile, Mendix Community, and o
 
 #### New Features
 
-* We released [Notifications](/developerportal/global-navigation/#notifications) for beta usage, which allows you to receive updates from Academy, Data Hub, Developer Portal, Epics, and Forum. Additionally, you can manage what kind of updates you will receive in the [Notification Settings](https://user-settings.mendix.com/link/notifications) page.
+* We released [Notifications](/developerportal/global-navigation/#notifications) for beta usage, which allows you to receive updates from Academy, Data Hub, Mendix Portal, Epics, and Forum. Additionally, you can manage what kind of updates you will receive in the [Notification Settings](https://user-settings.mendix.com/link/notifications) page.
 
 ### July 14, 2022
 
@@ -177,5 +177,5 @@ These release notes cover changes to the Mendix Profile, Mendix Community, and o
 
 #### Improvements
 
-* The Mendix Profile in the Developer Portal has been merged with the Community Profile. For more information, see [Mendix Profile](/community-tools/mendix-profile/).
+* The Mendix Profile in the Mendix Portal has been merged with the Community Profile. For more information, see [Mendix Profile](/community-tools/mendix-profile/).
 * The [People](https://developer.mendixcloud.com/link/people) overview has been redesigned. The same view on Mendix community members is available in the [Connections tab](/community-tools/mendix-profile/#connections) of your Mendix Profile.

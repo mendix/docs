@@ -111,7 +111,7 @@ Mendix is the platform that helps you turn ideas into outcomes. It contains all 
 **Here are some resources to help familiarize yourself with the Mendix platform:**
 
 * The [“Mendix Ecosystem”](https://academy.mendix.com/link/modules/78/lectures/504/1.3-Mendix-Ecosystem) lecture in our Rapid Developer course offers a short description of each of the elements of the platform relevant for developers together with useful links. 
-* The [Developer Portal Guide](/developerportal/) will help you explore the Developer Portal: the central location to collaborate, deploy, and manage your Mendix apps.
+* The [Mendix Portal Guide](/developerportal/) will help you explore the Mendix Portal: the central location to collaborate, deploy, and manage your Mendix apps.
 
 **Also, don’t forget to bookmark your “Favorites”!**
 

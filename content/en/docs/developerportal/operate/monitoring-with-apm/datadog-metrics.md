@@ -66,7 +66,7 @@ To find your existing API key or to request a new key for your app as an existin
 
 To send your runtime information to Datadog, you need to provide the Datadog API key to your environment. To do so, follow these steps:
 
-1. Go to the **Environments** page of your app in the Developer Portal.
+1. Go to the **Environments** page of your app in the Mendix Portal.
 2. Click **Details** on the environment you wish to monitor with Datadog. 
 3. Switch to the **Runtime** tab.
 4. Click **Add** in the **Custom Environment Variables** section.
@@ -149,7 +149,7 @@ Mendix recommends using the following tags:
 
 To set these tags, do the following:
 
-1. Go to the **Environments** page of your app in the Developer Portal.
+1. Go to the **Environments** page of your app in the Mendix Portal.
 2. Click **Details** on an environment you are monitoring with Datadog. 
 3. Switch to the **Tags** tab.
     {{< figure src="/attachments/developerportal/operate/metrics/datadog-metrics/set-tags.png" alt="Example metric showing tags in Datadog" class="no-border" >}}

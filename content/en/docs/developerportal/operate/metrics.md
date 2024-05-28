@@ -4,12 +4,12 @@ url: /developerportal/operate/metrics/
 
 weight: 30
 description: "Describes how to monitor performance and interpret various graphs and trends in Mendix Cloud."
-tags: ["Operate","App","Trends","Cache","Metrics","Developer Portal"]
+tags: ["Operate","App","Trends","Cache","Metrics","Mendix Portal"]
 aliases:
     - /developerportal/operate/trends-v4/
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
-#Please do not rename the anchors in this document as they are used in links from the Developer Portal.
+#Please do not rename the anchors in this document as they are used in links from the Mendix Portal.
 ---
 
 ## 1 Introduction
@@ -30,7 +30,7 @@ To access the graphs on the **Metrics** page, you must have **Access to Monitori
 
 If you meet the above conditions, you can find the graphs by following these steps:
 
-1. Open your app in the [Developer Portal](https://sprintr.home.mendix.com).
+1. Open your app in the [Mendix Portal](https://sprintr.home.mendix.com).
 2. In the navigation panel, click **Metrics**.
 3. Use the drop-down menu in the upper-right corner to select the environment you want to monitor.
 4. Use the **Period** and **Group** drop-down menus to choose the time period (day, week, month, or quarter) and the group (application, database, or all) for the graphs that you want to view.

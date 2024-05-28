@@ -55,7 +55,7 @@ Before you can use the AWS Authentication connector, you must first configure th
 | Item | Required for | Notes |
 | --- | --- | --- |
 | [IAM access key ID, secret access key](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey) | Static credentials, signature version 4 headers | |
-| [IAM Roles Anywhere](https://docs.aws.amazon.com/rolesanywhere/latest/userguide/introduction.html) | Temporary credentials, signature version 4 headers | When configuring IAM Roles Anywhere, you must provide a certificate that acts as a trust anchor. The same certificate is later used as the client certificate in the Mendix Developer portal. The certificate must use either RSA or EC as the algorithm. The type of the certificate must be PKCS12. |
+| [IAM Roles Anywhere](https://docs.aws.amazon.com/rolesanywhere/latest/userguide/introduction.html) | Temporary credentials, signature version 4 headers | When configuring IAM Roles Anywhere, you must provide a certificate that acts as a trust anchor. The same certificate is later used as the client certificate in the Mendix Mendix Portal. The certificate must use either RSA or EC as the algorithm. The type of the certificate must be PKCS12. |
 
 {{% alert color="info" %}}
 To configure the above prerequisites, you must have an IAM user with specific permissions. Those permissions may vary depending on the connector with which you want to use AWS Authentication. In general, the user should have the minimum access required to perform the functions of the connector.
@@ -92,13 +92,13 @@ You can implement temporary credentials in one of the following ways:
 
 To generate temporary credentials for your app directly from Mendix Studio Pro, first add a client certificate in the Deployment Portal or to a local configuration, and then add the **GetTemporaryCredentials** microflow to a microflow in Studio Pro.
 
-##### 4.1.1.1  Adding a Client Certificate in the Developer Portal
+##### 4.1.1.1  Adding a Client Certificate in the Mendix Portal
 
-When creating a trust anchor in Amazon IAM Roles Anywhere, you must provide a [certificate](#prerequisites) that acts as the trust anchor. You must then add the same certificate as the client certificate in the Developer portal.
+When creating a trust anchor in Amazon IAM Roles Anywhere, you must provide a [certificate](#prerequisites) that acts as the trust anchor. You must then add the same certificate as the client certificate in the Mendix Portal.
 
 To add the certificate, perform the following steps:
 
-1. Log in to the Developer Portal, and then select your app.
+1. Log in to the Mendix Portal, and then select your app.
 2. Click **Environments**, and then click **Details** by the specific environment to open the [Environment Details](/developerportal/deploy/environments-details/#network-tab) page.
 3. In the **Network** tab, in the **Outgoing Connections Certificates** section, add the client certificate that you used to create a trust anchor in Roles Anywhere.
 4. From the list, select the certificate that you added, and then click **Details**.
@@ -114,9 +114,9 @@ The client certificate that you added now shows as **Currently enabled**.
 
 {{< figure src="/attachments/appstore/modules/aws-authentication/certificate-currently-enabled.png" class="no-border" >}}
 
-#### 4.1.1.2 Configuring the Temporary Credentials Connection Details in the Developer Portal {#configure-credentials}
+#### 4.1.1.2 Configuring the Temporary Credentials Connection Details in the Mendix Portal {#configure-credentials}
 
-1. Log in to the Developer Portal, and then select your app.
+1. Log in to the Mendix Portal, and then select your app.
 2. Click **Environments**, and then click **Details** by the specific environment to open the [Environment Details](/developerportal/deploy/environments-details/#network-tab) page.
 3. In the **Model Options** tab, in the **Constants** section, select the constant from the table below and click **Edit**.
    

@@ -2,7 +2,7 @@
 title: "App Roles"
 url: /developerportal/general/app-roles/
 description: "Describes the app team and App/Technical Contact roles and permissions within the Mendix Platform."
-tags: ["team", "technical contact", "developer portal", "role", "permissions"]
+tags: ["team", "technical contact", "Mendix Portal", "role", "permissions"]
 aliases:
     - /developerportal/settings/technical-contact.html
     - /developerportal/general/technical-contact.html
@@ -18,7 +18,7 @@ aliases:
 
 ## 1 Introduction
 
-The roles defined in Developer Portal for an [app](/developerportal/#my-apps) and [team](/developerportal/general/team/) are described below.
+The roles defined in Mendix Portal for an [app](/developerportal/#my-apps) and [team](/developerportal/general/team/) are described below.
 
 ## 2 Team Member
 
@@ -62,7 +62,7 @@ For apps in Mendix Cloud, the Technical Contact is the first point of contact fo
 * Receive alerts from the Mendix app when problems arise (for example, CPU load is high, running out of disk space)
 * Adjust environments (for example, resize and add new environments) 
 
-As the Technical Contact, you can perform all the regular operations on the Mendix Cloud node in the Developer Portal. Additionally, you can manage the access rights of your team members so that they can deploy, stop and start the app, and perform other actions. For more information, see [Node Permissions](/developerportal/deploy/node-permissions/).
+As the Technical Contact, you can perform all the regular operations on the Mendix Cloud node in the Mendix Portal. Additionally, you can manage the access rights of your team members so that they can deploy, stop and start the app, and perform other actions. For more information, see [Node Permissions](/developerportal/deploy/node-permissions/).
 
 The Technical Contact is also responsible for managing licenses (as in, renewals, activations, and upgrades) and is the first point of contact for the Mendix Support department. Note that Mendix is responsible for Mendix Cloud app renewals, and you can contact your Customer Success Manager (CSM) if you want to expand your license.
 

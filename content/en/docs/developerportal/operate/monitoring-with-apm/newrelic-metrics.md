@@ -39,7 +39,7 @@ To make use of New Relic, you need a New Relic API key. To find an existing key 
 
 To send your runtime information to New Relic, you must provide the New Relic API key to your environment.
 
-1. Go to the **Environments** page of your app in the Developer Portal.
+1. Go to the **Environments** page of your app in the Mendix Portal.
 2. Click **Details** on the environment you wish to monitor with New Relic. 
 3. Switch to the **Runtime** tab.
 4. Add the following **Custom Environment Variables**:
@@ -83,7 +83,7 @@ Mendix recommends using the following tags:
 
 To set these tags, do the following:
 
-1. Go to the **Environments** page of your app in the Developer Portal.
+1. Go to the **Environments** page of your app in the Mendix Portal.
 2. Click **Details** on an environment you are monitoring with New Relic. 
 3. On the **Tags** tab, add a tag. This is the string that is sent to New Relic as a tag.
 4. Restart the application.

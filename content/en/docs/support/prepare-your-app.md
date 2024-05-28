@@ -29,7 +29,7 @@ There are two ways to give team members access to submit tickets: by assigning t
 
 To add users to an app's team and give them access to submit tickets for a specific app, follow these steps:
 
-1. Go to the [Team](/developerportal/general/team/) page of your app in the Mendix Developer Portal.
+1. Go to the [Team](/developerportal/general/team/) page of your app in the Mendix Mendix Portal.
 2. Click **Invite Member** to invite the users who should be able to submit/view Support tickets concerning this app.
 3. Assign one of the following roles to users you want to give access to creating tickets for the app:
     * **Business Engineer**
@@ -44,7 +44,7 @@ To add users to an app's team and give them access to submit tickets for a speci
 
 To give existing app members access to submit tickets, follow these steps:
 
-1. Go to the **Security** page of your app in the Mendix Developer Portal.
+1. Go to the **Security** page of your app in the Mendix Mendix Portal.
 2. Change the **ROLE** for the user who needs access to one of the following:
     * **Business Engineer**
     * **Product Owner**

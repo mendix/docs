@@ -3,13 +3,13 @@ title: "Environments"
 url: /developerportal/deploy/environments/
 weight: 5
 description: "Lists the environments in which your app is deployed. Also the starting point for managing existing environments and further deployments."
-tags: ["Deploy","App","Developer Portal"]
+tags: ["Deploy","App","Mendix Portal"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
 
-You can use the **Environments** page to access information about your environments, deploy packages, manage certificates and access restrictions, and more. To access your app's **Environments** page, open your app in the Developer Portal and click **Environments** in the navigation pane.
+You can use the **Environments** page to access information about your environments, deploy packages, manage certificates and access restrictions, and more. To access your app's **Environments** page, open your app in the Mendix Portal and click **Environments** in the navigation pane.
 
 The **Environments** page has the following tabs:
 

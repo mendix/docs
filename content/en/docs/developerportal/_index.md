@@ -1,23 +1,23 @@
 ---
-title: "Developer Portal Guide"
+title: "Mendix Portal Guide"
 url: /developerportal/
-description: "Describes the sections of the Mendix Developer Portal and links to more detailed documents in the guide."
-tags: ["mendix", "developer portal", "platform services", "buzz", "apps", "community", "marketplace", "academy", "forum", "docs", "documentation"]
+description: "Describes the sections of the Mendix Mendix Portal and links to more detailed documents in the guide."
+tags: ["mendix", "Mendix Portal", "platform services", "buzz", "apps", "community", "marketplace", "academy", "forum", "docs", "documentation"]
 weight: 30
 no_list: false
 description_list: true
 cascade:
-    - content_type: "Developer Portal Guide"
+    - content_type: "Mendix Portal Guide"
     - mendix_version: 10
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-## 1 What Is the Developer Portal?
+## 1 What Is the Mendix Portal?
 
-The [Developer Portal](https://sprintr.home.mendix.com) is one of the key components of the Mendix Platform. In the Developer Portal, Mendix users can collaborate, deploy, manage their apps. 
+The [Mendix Portal](https://sprintr.home.mendix.com) is one of the key components of the Mendix Platform. In the Mendix Portal, Mendix users can collaborate, deploy, manage their apps. 
 
-The Developer Portal also offers open, well-defined APIs, enabling third-party developers to integrate their own widgets and plugins. For more information, see [API Documentation](/apidocs-mxsdk/apidocs/).
+The Mendix Portal also offers open, well-defined APIs, enabling third-party developers to integrate their own widgets and plugins. For more information, see [API Documentation](/apidocs-mxsdk/apidocs/).
 
 ## 2 Creating a New App
 
@@ -27,7 +27,7 @@ To get started with building an app, click **Create App** to open a page where y
 
 ## 3 My Apps {#my-apps}
 
-When you open the Developer Portal, you are brought to the **My Apps** page, which shows you a summary of your current apps:
+When you open the Mendix Portal, you are brought to the **My Apps** page, which shows you a summary of your current apps:
 
 {{< figure src="/attachments/developerportal/app-tiles.png" alt="Apps tiles" class="no-border" >}}
 
@@ -55,7 +55,7 @@ To go to the [licensed environments](/developerportal/deploy/environments/) of y
 
 ## 4 Navigation Pane {#navigation-pane}
 
-When you open an app in the Developer Portal, you can navigate between sections using the navigation pane on the left side of the screen. 
+When you open an app in the Mendix Portal, you can navigate between sections using the navigation pane on the left side of the screen. 
 
 The navigation pane is divided into four main categories, which correspond with the documentation in this guide:
 
@@ -68,7 +68,7 @@ The navigation pane is divided into four main categories, which correspond with 
 
 ## 5 Company Buzz and Apps {#my-company-apps}
 
-In the top bar of the Developer Portal, an additional menu item is available for **Company Apps**:
+In the top bar of the Mendix Portal, an additional menu item is available for **Company Apps**:
 
 {{< figure src="/attachments/developerportal/company-apps.png"  width=80%  alt="Company Apps in MxDock" >}}
 
@@ -80,4 +80,4 @@ You can also sort the order of the apps here by **Most Recent** or **App Name**.
 
 ## 6 Guide Categories
 
-The *Developer Portal Guide* is divided into the following categories:
+The *Mendix Portal Guide* is divided into the following categories:

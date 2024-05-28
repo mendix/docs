@@ -14,7 +14,7 @@ aliases:
 
 ## 1 Introduction
 
-There are a number of functions related to licensed app nodes which you need to request outside the Developer Portal.
+There are a number of functions related to licensed app nodes which you need to request outside the Mendix Portal.
 
 These functions, listed below, are described in this document.
 
@@ -50,7 +50,7 @@ If you no longer need an environment, you can offboard it. Alternatively, you ca
 
 You can offboard a single environment or an entire node (all three of the test, acceptance, and production environments for example) by filling in all the required details in the [Offboard Environment](https://offboard.mendix.com/index.html) app. Only the Technical Contact of the application can request (and confirm) the offboarding. Once the offboarding is confirmed, the process will take place automatically. If you cannot use the Offboard Environment app for any reason, please raise a ticket with [Mendix Support](https://support.mendix.com).
 
-Offboarding will remove access to everything related to the node. If you want to access any data or other information, then you will need to ensure this is backed up outside the Mendix Developer Portal. The following will be removed:
+Offboarding will remove access to everything related to the node. If you want to access any data or other information, then you will need to ensure this is backed up outside the Mendix Mendix Portal. The following will be removed:
 
 * Environments
 * Cloud Containers

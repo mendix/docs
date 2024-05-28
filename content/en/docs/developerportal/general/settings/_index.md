@@ -4,7 +4,7 @@ url: /developerportal/collaborate/general-settings/
 
 weight: 14
 description: "Describes general settings of your app."
-tags: ["Settings", "App", "Developer Portal"]
+tags: ["Settings", "App", "Mendix Portal"]
 aliases:
     - /developerportal/settings/general-settings
     - /developerportal/settings/api-key
@@ -145,7 +145,7 @@ Only users with the **App Settings** permission can manage these settings.
 
 On the **Project Management** tab, you can select your team's planning tool for the app. By default, [Epics](/developerportal/project-management/epics/) is the selected tool.
 
-If you manage your projects in Jira, you can connect your apps in the Developer Portal to Jira. For more information, see [Jira Connector](/developerportal/project-management/jira-connector/).
+If you manage your projects in Jira, you can connect your apps in the Mendix Portal to Jira. For more information, see [Jira Connector](/developerportal/project-management/jira-connector/).
 
 {{< figure src="/attachments/developerportal/general/settings/story-switcher.png" width="700"  class="no-border" >}}
 

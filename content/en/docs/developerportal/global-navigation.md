@@ -2,13 +2,13 @@
 title: "Global Navigation"
 url: /developerportal/global-navigation/
 description: "Describes the global navigation and top bar that is available throughout the online Mendix Platform."
-tags: ["mendix", "developer portal", "global navigation", "search", "support menu", "notifications", "account"]
+tags: ["mendix", "Mendix Portal", "global navigation", "search", "support menu", "notifications", "account"]
 weight: 1
 ---
 
 ## 1 Introduction
 
-The global navigation top bar and menu work the same in the Developer Portal as they do in other browser-based parts of the Mendix Platform (for example, [Mendix Marketplace](/appstore/) and [Mendix Catalog](/catalog/)). 
+The global navigation top bar and menu work the same in the Mendix Portal as they do in other browser-based parts of the Mendix Platform (for example, [Mendix Marketplace](/appstore/) and [Mendix Catalog](/catalog/)). 
 
 The global navigation is always accessible throughout the online Mendix Platform.
 

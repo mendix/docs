@@ -3,7 +3,7 @@ title: "Node Permissions"
 url: /developerportal/deploy/node-permissions/
 weight: 18
 description: "The permission settings for your node."
-tags: ["Node","Permission","Developer Portal"]
+tags: ["Node","Permission","Mendix Portal"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
@@ -109,7 +109,7 @@ Other permissions are needed in addition to **API Rights**. For example, to acce
 
 #### 3.3.6 Access to Monitoring
 
-Team members with **Access to Monitoring** permissions can view the application metrics, logs, and alerts in the [Developer Portal](https://sprintr.home.mendix.com). This allows them to successfully operate your Mendix Cloud environments.
+Team members with **Access to Monitoring** permissions can view the application metrics, logs, and alerts in the [Mendix Portal](https://sprintr.home.mendix.com). This allows them to successfully operate your Mendix Cloud environments.
 
 For more information, see [Metrics](/developerportal/operate/metrics/), [Logs](/developerportal/operate/logs/), and [Alerts](/developerportal/operate/monitoring-application-health/).
 

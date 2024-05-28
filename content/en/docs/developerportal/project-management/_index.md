@@ -4,13 +4,13 @@ url: /developerportal/project-management/
 
 weight: 7
 description_list: true
-description: "Describes the Project Management section of the Developer Portal."
-tags: ["Epics", "Jira", "Sprint", "Project Management", "Developer Portal"]
+description: "Describes the Project Management section of the Mendix Portal."
+tags: ["Epics", "Jira", "Sprint", "Project Management", "Mendix Portal"]
 ---
 
 ## 1 Introduction
 
-The **Project Management** category in the Developer Portal’s [navigation pane](/developerportal/#navigation-pane) provides fast access to the project management tool that you select for your app:
+The **Project Management** category in the Mendix Portal’s [navigation pane](/developerportal/#navigation-pane) provides fast access to the project management tool that you select for your app:
 
 * [Epics](/developerportal/project-management/epics/)
 * [Jira](/developerportal/project-management/jira-connector/)

@@ -2,8 +2,8 @@
 title: "Leave, Delete, or Deactivate an App"
 url: /developerportal/general/leave-delete-app/
 weight: 1
-description: "Describes how to leave, delete, and deactivate an app in the Developer Portal."
-tags: ["app", "delete", "deactivate", "Developer Portal", "Scrum Master"]
+description: "Describes how to leave, delete, and deactivate an app in the Mendix Portal."
+tags: ["app", "delete", "deactivate", "Mendix Portal", "Scrum Master"]
 linktitle: "Leave and Delete an App"
 aliases:
     - /developerportal/settings/leave-delete-app
@@ -32,7 +32,7 @@ Before you delete or deactivate an app, make sure you have completed the followi
 
 If you want to leave and delete your app, follow these steps:
 
-1. Go to the [Developer Portal](https://sprintr.home.mendix.com) and select the app that you want to leave.
+1. Go to the [Mendix Portal](https://sprintr.home.mendix.com) and select the app that you want to leave.
 
 2. In the navigation pane, select **Settings**.
 

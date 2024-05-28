@@ -3,7 +3,7 @@ title: "Restoring a Backup Locally"
 url: /developerportal/operate/restore-backup-locally/
 weight: 40
 description: "This page describes how to restore a backup."
-tags: ["Backup","Restore","Local","Developer Portal"]
+tags: ["Backup","Restore","Local","Mendix Portal"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 

@@ -3,7 +3,7 @@ title: "Mendix Basic Package"
 url: /developerportal/deploy/basic-package/
 weight: 20
 description: "Obtaining a Mendix Basic Package Node"
-tags: ["App", "Node", "Developer Portal", "Licensed", "Free App", "Upgrade", "Basic Package", "Basic license"]
+tags: ["App", "Node", "Mendix Portal", "Licensed", "Free App", "Upgrade", "Basic Package", "Basic license"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
@@ -37,7 +37,7 @@ The Basic Package has the following features:
 
 ## 3 Purchasing a Basic Package
 
-From the [Developer Portal](https://sprintr.home.mendix.com/link/myapps), go to the **Environments** page of the Free App you want to license.
+From the [Mendix Portal](https://sprintr.home.mendix.com/link/myapps), go to the **Environments** page of the Free App you want to license.
 
 When you view your Free App environment, you will see a banner showing that you are using a Free App.
 
@@ -76,7 +76,7 @@ To order your Mendix Basic package, do the following:
 
 9. Click **Purchase** to complete your order.
 
-10. Read the confirmation details and click **Done** to return to the Developer Portal. You will also receive a confirmation email at the email address entered in your order.
+10. Read the confirmation details and click **Done** to return to the Mendix Portal. You will also receive a confirmation email at the email address entered in your order.
 
 ## 4 Linking Your App to your Mendix Basic Node
 

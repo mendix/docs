@@ -1,21 +1,21 @@
 ---
 title: "Operations"
 url: /developerportal/operate/
-description: "Describes the day-to-day operation of an app from the Developer Portal. This is mainly useful for apps running in Mendix Cloud."
+description: "Describes the day-to-day operation of an app from the Mendix Portal. This is mainly useful for apps running in Mendix Cloud."
 weight: 15
 no_list: false 
 description_list: true
-tags: ["Operate", "App", "Developer Portal", "Metrics", "Alerts", "Logs", "Backups", "Mendix Cloud"]
+tags: ["Operate", "App", "Mendix Portal", "Metrics", "Alerts", "Logs", "Backups", "Mendix Cloud"]
 ---
 
 ## 1 Introduction
 
-When you have created your app, it is important to be able to manage it. There are several pages in the Developer Portal that allow you to look at the app's performance and to ensure that data is backed up and can be restored under your control.
+When you have created your app, it is important to be able to manage it. There are several pages in the Mendix Portal that allow you to look at the app's performance and to ensure that data is backed up and can be restored under your control.
 
 Access to operations information is divided into four pages: Metrics, Alerts, Logs, and Backups.
 
 {{% alert color="info" %}}
-This page describes the operations pages for apps deployed to Mendix Cloud. If your app is deployed to SAP Business Technology Platform (SAP BTP) instead, the **Metrics**, **Alerts**, **Logs**, and **Backups** pages in the Developer Portal link to the SAP BTP cockpit.
+This page describes the operations pages for apps deployed to Mendix Cloud. If your app is deployed to SAP Business Technology Platform (SAP BTP) instead, the **Metrics**, **Alerts**, **Logs**, and **Backups** pages in the Mendix Portal link to the SAP BTP cockpit.
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -24,7 +24,7 @@ Metrics, alerts, and logs are not available for Free Apps running in Mendix Clou
 
 ## 2 Operations Pages
 
-The operations pages that allow you to monitor your operations are described below. You can access these pages via the Developer Portal's [navigation pane](/developerportal/#navigation-pane).
+The operations pages that allow you to monitor your operations are described below. You can access these pages via the Mendix Portal's [navigation pane](/developerportal/#navigation-pane).
 
 ### 2.1 Metrics
 

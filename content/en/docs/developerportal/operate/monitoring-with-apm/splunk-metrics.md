@@ -28,11 +28,11 @@ To use the Splunk Cloud Platform and send data to Splunk Cloud Platform from you
 
 ## 3 Connecting Your Node to Splunk Cloud Platform{#connect-node}
 
-### 3.1 Set up Splunk Integration on the Developer Portal
+### 3.1 Set up Splunk Integration on the Mendix Portal
 
-To send your runtime information to Splunk Cloud Platform, you need to set it up using environment variables in the Developer Portal.
+To send your runtime information to Splunk Cloud Platform, you need to set it up using environment variables in the Mendix Portal.
 
-1. Go to the **Environments** page of your app in the Developer Portal.
+1. Go to the **Environments** page of your app in the Mendix Portal.
 2. Click **Details** on the environment you wish to monitor with Splunk Cloud Platform. 
 3. Switch to the [**Runtime** tab](/developerportal/deploy/environments-details/#runtime-tab).
 4. Add the following **Custom Environment Variables**.
@@ -69,7 +69,7 @@ You can also set up custom tags in the format `key:value`. Mendix recommends add
 
 To set these tags, do the following:
 
-1. Go to the **Environments** page of your app in the *Developer Portal*.
+1. Go to the **Environments** page of your app in the *Mendix Portal*.
 2. Click **Details** on an environment you are monitoring with Splunk. 
 3. Switch to the **Tags** tab.
 4. Click **Add** and type in the string to be sent to Splunk as a tag.

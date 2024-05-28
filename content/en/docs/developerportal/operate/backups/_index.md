@@ -3,8 +3,8 @@ title: "Backups"
 url: /developerportal/operate/backups/
 
 weight: 40
-description: "Describes the Backups page of the Developer Portal."
-tags: ["Operate", "App", "Developer Portal", "Backup"]
+description: "Describes the Backups page of the Mendix Portal."
+tags: ["Operate", "App", "Mendix Portal", "Backup"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 

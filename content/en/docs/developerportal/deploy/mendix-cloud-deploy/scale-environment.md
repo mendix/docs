@@ -4,7 +4,7 @@ linktitle: "Scaling in Mendix Cloud"
 url: /developerportal/deploy/scale-environment/
 weight: 9
 description: "Describes how to scale your environments in Mendix Cloud."
-tags: ["Scale","Environments","Mendix Cloud","Developer Portal"]
+tags: ["Scale","Environments","Mendix Cloud","Mendix Portal"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
@@ -31,7 +31,7 @@ Before following the steps outlined on this page, make sure you meet the followi
 
 To scale your licensed app in Mendix Cloud, follow these steps:
 
-1. From the [Developer Portal](https://sprintr.home.mendix.com), go to the **Environments** page of your licensed app.
+1. From the [Mendix Portal](https://sprintr.home.mendix.com), go to the **Environments** page of your licensed app.
 
 2. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the environment you want to scale.
 

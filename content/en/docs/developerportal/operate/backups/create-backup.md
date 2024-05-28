@@ -3,7 +3,7 @@ title: "Creating a Backup"
 url: /developerportal/operate/create-backup/
 weight: 10
 description: "This page describes how to create a backup."
-tags: ["Backup","Mendix Cloud","Developer Portal"]
+tags: ["Backup","Mendix Cloud","Mendix Portal"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
@@ -26,7 +26,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 To create a backup archive of a licensed app, follow these steps:
 
-1. Go to the [Developer Portal](https://sprintr.home.mendix.com) and select a licensed app.
+1. Go to the [Mendix Portal](https://sprintr.home.mendix.com) and select a licensed app.
 2. Click **Backups** in the navigation pane.
 3. Select the environment that you want to create a backup snapshot for.
 

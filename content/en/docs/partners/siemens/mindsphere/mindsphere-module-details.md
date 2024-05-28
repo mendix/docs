@@ -49,7 +49,7 @@ The constants in *Native Mobile* are only needed when developing native mobile a
 
 #### 2.1.3 CockpitApplicationName
 
-This is the name of your app as registered in the Insights Hub developer portal. See [Running a Cloud Foundry-Hosted Application](https://developer.mindsphere.io/howto/howto-cf-running-app.html#configure-the-application-via-the-developer-cockpit) for more information.
+This is the name of your app as registered in the Insights Hub Mendix Portal. See [Running a Cloud Foundry-Hosted Application](https://developer.mindsphere.io/howto/howto-cf-running-app.html#configure-the-application-via-the-developer-cockpit) for more information.
 
 #### 2.1.4 GatewayURL
 

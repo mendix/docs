@@ -49,11 +49,11 @@ Only *Retrieve apps*, *Create Free App environment*, and *Retrieve app* API call
 Retrieves all apps to which the authenticated user has access as a regular user that have environments created on Mendix Cloud. This includes all licensed apps and any Free Apps that have been deployed.
 
 {{% alert color="info" %}}
-This API call does not return the same results as you can see within the Developer Portal. It includes all licensed and free apps on Mendix Cloud. Free apps include all apps that have been created or edited in Studio Pro, even if they have then been deployed to a different cloud, such as Mendix for Private Cloud.
+This API call does not return the same results as you can see within the Mendix Portal. It includes all licensed and free apps on Mendix Cloud. Free apps include all apps that have been created or edited in Studio Pro, even if they have then been deployed to a different cloud, such as Mendix for Private Cloud.
 
-In the Developer Portal:
+In the Mendix Portal:
 
-* The [Nodes](/developerportal/deploy/node-permissions/#nodes) screen in the Developer Portal shows all the licensed apps which are returned by this request, but does not show any Free Apps.
+* The [Nodes](/developerportal/deploy/node-permissions/#nodes) screen in the Mendix Portal shows all the licensed apps which are returned by this request, but does not show any Free Apps.
 
 * The [My Apps](/developerportal/#my-apps) screen shows both licensed apps and Free Apps, but also includes apps that are deployed to other platforms (such as Mendix for Private Cloud or SAP BTP) and Free Apps that have not yet been deployed and therefore have no environments set up for them.
 {{% /alert %}}
@@ -81,7 +81,7 @@ List of objects with the following key-value pairs:
 
 * *AppId* (String): Sub-domain name of the app.
 * *Name* (String): Name of the app.
-* *ProjectId* (String): Developer Portal Project identifier.
+* *ProjectId* (String): Mendix Portal Project identifier.
 * *Url* (String): Production or Free App URL to access your app.
 
 **Example Output**
@@ -117,7 +117,7 @@ URL: https://deploy.mendix.com/api/1/apps
 
 An object with the following key-value pair:
 
-* *ProjectId* (String) : The Developer Portal project identifier that should be linked to the new Free App. This value can be found on the **General** tab of the **Settings** page of your app, and it is represented as **App ID**.
+* *ProjectId* (String) : The Mendix Portal project identifier that should be linked to the new Free App. This value can be found on the **General** tab of the **Settings** page of your app, and it is represented as **App ID**.
 
 **Example Request**
 
@@ -139,7 +139,7 @@ Response object with the following fields:
 
 * *AppId* (String): Sub-domain name of the app.
 * *Name* (String): Name of the app.
-* *ProjectId* (String): Developer Portal Project identifier.
+* *ProjectId* (String): Mendix Portal Project identifier.
 * *Url* (String): Production or Free App URL to access your app.
 
 **Error Codes**
@@ -192,7 +192,7 @@ Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6
 Object with the following key-value pairs:
 
 * *AppId* (String): Sub-domain name of the app.
-* *ProjectId* (String): Developer Portal Project identifier.
+* *ProjectId* (String): Mendix Portal Project identifier.
 * *Name* (String): Name of the app.
 * *Url* (String): Production or Free App URL to access your app.
 
@@ -954,7 +954,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 #### 3.16.1 Description
 
-Tags are arbitrary strings that are not interpreted by the Developer Portal. Users are able to set tags on environments. Tags serve two purposes:
+Tags are arbitrary strings that are not interpreted by the Mendix Portal. Users are able to set tags on environments. Tags serve two purposes:
 
 * Custom tags can be added to metrics (for Datadog)
 * Tags can serve as selection criteria for grouping environments into a landscape management dashboard

@@ -324,7 +324,7 @@ If you would like to enable Prometheus scraping only for a specific environment,
 
 #### 3.2.1 Enable Scraping in Connected Mode
 
-1. Go to the Cluster Manager page by clicking **Cluster Manager** in the top menu of the **Clouds** page of the Developer Portal.
+1. Go to the Cluster Manager page by clicking **Cluster Manager** in the top menu of the **Clouds** page of the Mendix Portal.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-manager.png" class="no-border" >}}
 
@@ -352,7 +352,7 @@ If you would like to enable Prometheus scraping only for a specific environment,
 
 #### 3.2.2 Enable Scraping in Standalone Mode
 
-{{% alert color="warning" %}}Do not use this approach in Connected mode - any annotations you set this way will be overridden by annotations set in the Private Cloud section of the Developer Portal.{{% /alert %}}
+{{% alert color="warning" %}}Do not use this approach in Connected mode - any annotations you set this way will be overridden by annotations set in the Private Cloud section of the Mendix Portal.{{% /alert %}}
 
 Open an environment's `MendixApp` CR [for editing](/developerportal/deploy/private-cloud-operator/#edit-cr) and add the following pod annotations:
 
@@ -432,7 +432,7 @@ You can use it to build a custom dashboard with details that are relevant for yo
 
 To provide Mendix app developers with quick access to the dashboard, you can set the **Metrics** and **Logs** links in the namespace configuration.
 
-The Developer Portal supports placeholder (template) variables in **Metrics** and **Logs** links:
+The Mendix Portal supports placeholder (template) variables in **Metrics** and **Logs** links:
 
 * `{namespace}` will be replaced with the environment namespace;
 * `{environment_name}` will be replaced with the environment internal name.
@@ -447,12 +447,12 @@ https://grafana.mendix.example.com/d/4csBnmWnk/mendix-app-dashboard?var-namespac
 
 (replace `grafana.mendix.example.com` with the Grafana domain name used in your cluster).
 
-When a Mendix app developer clicks a **Metrics** or **Logs** link in the Developer Portal, the `{namespace}` and `{environment_name}` placeholders
+When a Mendix app developer clicks a **Metrics** or **Logs** link in the Mendix Portal, the `{namespace}` and `{environment_name}` placeholders
 will be replaced with that environment's namespace and name, and the Mendix app developer will just need to select a **Pod name** in the Grafana dashboard dropdown.
 
 To set the **Metrics** and **Logs** links:
 
-1. Go to the Cluster Manager page by clicking **Cluster Manager** in the top menu of the **Clouds** page of the Developer Portal.
+1. Go to the Cluster Manager page by clicking **Cluster Manager** in the top menu of the **Clouds** page of the Mendix Portal.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-manager.png" class="no-border" >}}
 
@@ -519,7 +519,7 @@ In this mode, all other `runtimeMetricsConfiguration` attributes are ignored.
 
 #### 5.1.1 Enable Compability Metrics in Connected Mode
 
-1. Open the **Environments** page for your app in the Developer Portal and click **Details** next to the environment where compatibility mode should be used.
+1. Open the **Environments** page for your app in the Mendix Portal and click **Details** next to the environment where compatibility mode should be used.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-overview.png" class="no-border" >}}
 
@@ -541,7 +541,7 @@ In this mode, all other `runtimeMetricsConfiguration` attributes are ignored.
 
 #### 5.1.2 Enable Compatibility Metrics in Standalone Mode
 
-{{% alert color="warning" %}}Do not use this approach in Connected mode. Any configuration you set this way will be overridden by the configuration set in the Private Cloud section of the Developer Portal.{{% /alert %}}
+{{% alert color="warning" %}}Do not use this approach in Connected mode. Any configuration you set this way will be overridden by the configuration set in the Private Cloud section of the Mendix Portal.{{% /alert %}}
 
 Open an environment's `MendixApp` CR [for editing](/developerportal/deploy/private-cloud-operator/#edit-cr) and set the `mode` attribute in `runtimeMetricsConfiguration` to `compatibility`:
 
@@ -567,7 +567,7 @@ To completely disable metrics collection, delete the `runtimeMetricsConfiguratio
 
 #### 5.2.1 Disable Metrics in Connected Mode
 
-1. Open the **Environments** page for your app in the Developer Portal and click **Details** next to the environment where compatibility mode should be used.
+1. Open the **Environments** page for your app in the Mendix Portal and click **Details** next to the environment where compatibility mode should be used.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-overview.png" class="no-border" >}}
 
@@ -589,7 +589,7 @@ To completely disable metrics collection, delete the `runtimeMetricsConfiguratio
 
 #### 5.2.2 Disable Metrics in Standalone Mode
 
-{{% alert color="warning" %}}Do not use this approach in Connected mode. Any configuration you set this way will be overridden by the configuration set in the Private Cloud section of the Developer Portal.{{% /alert %}}
+{{% alert color="warning" %}}Do not use this approach in Connected mode. Any configuration you set this way will be overridden by the configuration set in the Private Cloud section of the Mendix Portal.{{% /alert %}}
 
 Open the environment's `MendixApp` CR [for editing](/developerportal/deploy/private-cloud-operator/#edit-cr) and delete the `runtimeMetricsConfiguration` block:
 
@@ -625,7 +625,7 @@ It is also possible to add extra tags (Prometheus labels) by specifying them in 
 
 #### 5.3.1 Enable Native Metrics in Connected Mode{#enable-native-metrics-connected-mode}
 
-1. Open the **Environments** page for your app in the Developer Portal and click **Details** next to the environment where compatibility mode should be used.
+1. Open the **Environments** page for your app in the Mendix Portal and click **Details** next to the environment where compatibility mode should be used.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-overview.png" class="no-border" >}}
 
@@ -658,7 +658,7 @@ It is also possible to add extra tags (Prometheus labels) by specifying them in 
 
 After an environment is [switched into native metrics mode](#enable-native-metrics-connected-mode), it is possible to configure additional options for that environment.
 
-1. Go to the Cluster Manager page by clicking **Cluster Manager** in the top menu of the **Clouds** page of the Developer Portal.
+1. Go to the Cluster Manager page by clicking **Cluster Manager** in the top menu of the **Clouds** page of the Mendix Portal.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-manager.png" class="no-border" >}}
 
@@ -687,7 +687,7 @@ After an environment is [switched into native metrics mode](#enable-native-metri
 
 #### 5.3.3 Enable Native Metrics in Standalone Mode
 
-{{% alert color="warning" %}}Do not use this approach in Connected mode. Any configuration you set this way will be overridden by the configuration set in the Private Cloud section of the Developer Portal.{{% /alert %}}
+{{% alert color="warning" %}}Do not use this approach in Connected mode. Any configuration you set this way will be overridden by the configuration set in the Private Cloud section of the Mendix Portal.{{% /alert %}}
 
 Open an environment's `MendixApp` CR [for editing](/developerportal/deploy/private-cloud-operator/#edit-cr) and set the `mode` attribute to `native`:
 

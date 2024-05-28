@@ -9,7 +9,7 @@ tags: ["ATS", "testing"]
 
 ## 1 Introduction
 
-Mendix ATS is a testing tool designed for automated testing of Mendix applications. With your automated tests, you want to test functionalities of the application. Descriptions of those functionalities are in your User Stories. As you want to test those functionalities, ATS has the ability to retrieve User Stories from the Mendix Developer Portal project. In ATS you can link the retrieved User Stories to test cases and test suites. This is useful for you and your team to see what can be tested automatically and which functionalities are covered by a test case. Additionally linking user stories to test cases and test suites is useful for stakeholders. By linking them, you can show that the functionalities build in the Sprint are tested.
+Mendix ATS is a testing tool designed for automated testing of Mendix applications. With your automated tests, you want to test functionalities of the application. Descriptions of those functionalities are in your User Stories. As you want to test those functionalities, ATS has the ability to retrieve User Stories from the Mendix Mendix Portal project. In ATS you can link the retrieved User Stories to test cases and test suites. This is useful for you and your team to see what can be tested automatically and which functionalities are covered by a test case. Additionally linking user stories to test cases and test suites is useful for stakeholders. By linking them, you can show that the functionalities build in the Sprint are tested.
 
 This how-to teaches you how to do the following
 
@@ -34,7 +34,7 @@ The following steps describe how you can set your Mendix API Key in ATS:
 2. Open the app where you want to add the Mendix API Key.
 3. Inside your app click the profile menu and click **Show App Settings**.
 
-   {{% alert color="info" %}} **Show App Settings** is only present if you have Scrum Master rights in the Mendix Developer Portal project {{% /alert %}}
+   {{% alert color="info" %}} **Show App Settings** is only present if you have Scrum Master rights in the Mendix Mendix Portal project {{% /alert %}}
 
     {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-configure-a-selenium-hub/show-test-settings.png" class="no-border" >}}
 
@@ -49,7 +49,7 @@ Clicking **Set API Key** opens this **Mendix API Key** dialog box:
 {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/mendix-api-key-dialog.png" class="no-border" >}}
 
 1. To integrate with Mendix stories, set **Use Epics ?** to **No**.
-2. To retrieve your Mendix API key, open the app in Developer Portal and click [API Keys](/developerportal/collaborate/general-settings/#general-settings-api-keys).
+2. To retrieve your Mendix API key, open the app in Mendix Portal and click [API Keys](/developerportal/collaborate/general-settings/#general-settings-api-keys).
 3. Click **Create API Key**.
 4. Enter a name in the **API key name** field and click **Generate API Key**.
 5. Copy the API key and paste it into the **Mendix API Key** field in ATS.
@@ -67,17 +67,17 @@ Clicking **Set API Key** opens this **Mendix API Key** dialog box:
 
 {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/mendix-api-key-filled-e.png" class="no-border" >}}
 
-You have now set the Mendix API key or personal access token (PAT). ATS can now retrieve the user stories from your Mendix Developer Portal app.
+You have now set the Mendix API key or personal access token (PAT). ATS can now retrieve the user stories from your Mendix Mendix Portal app.
 
 {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/set-mendix-api-key.png" class="no-border" >}}
 
 ## 4 Retrieve User Stories in ATS
 
-The following steps explain how to retrieve user stories from the Mendix Developer Portal project in ATS:
+The following steps explain how to retrieve user stories from the Mendix Mendix Portal project in ATS:
 
 1. Open your project in ATS and go to **Test Cases**.
 2. Click the **Stories** tab.
-3. Click the **Refresh button** to retrieve the User Stories from the Developer Portal:
+3. Click the **Refresh button** to retrieve the User Stories from the Mendix Portal:
 
     {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/go-to-stories-tab-e.png" class="no-border" >}}
 

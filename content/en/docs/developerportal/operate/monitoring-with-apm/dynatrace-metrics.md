@@ -28,9 +28,9 @@ To use Dynatrace and send data to Dynatrace from your Mendix app, you need the f
 
 ## 3 Connect Node to Dynatrace {#connect-node}
 
-To start sending your Mendix app's metrics to Dynatrace, you need to set some environment variables in the Developer Portal. Follow these steps:
+To start sending your Mendix app's metrics to Dynatrace, you need to set some environment variables in the Mendix Portal. Follow these steps:
 
-1. Go to the **Environments** page of your app in the Developer Portal.
+1. Go to the **Environments** page of your app in the Mendix Portal.
 2. Click **Details** on the environment you wish to monitor with Dynatrace. 
 3. Switch to the [**Runtime** tab](/developerportal/deploy/environments-details/#runtime-tab).
 4. Add the following **Custom Environment Variables**.
@@ -52,7 +52,7 @@ To start sending your Mendix app's metrics to Dynatrace, you need to set some en
 If you use Dynatrace to monitor more than one app and environment, you need some dimensions to be able to tell which app or environment these metrics apply to. To identify the metrics for your app and environment in Dynatrace, Mendix provides some default dimensions. You can also add extra dimensions.
 
 {{% alert color="info" %}}
-What Dynatrace calls "dimensions," other monitoring tools call "tags." The Mendix Developer Portal therefore refers to a "tag" when it is setting up a Dynatrace "dimension."
+What Dynatrace calls "dimensions," other monitoring tools call "tags." The Mendix Mendix Portal therefore refers to a "tag" when it is setting up a Dynatrace "dimension."
 {{% /alert %}}
 
 #### 4.1.1 Default Dimensions
@@ -64,11 +64,11 @@ For metrics that are pushed to Dynatrace, Mendix attaches these default dimensio
 
 #### 4.1.2 Extra Dimensions
 
-You can set extra dimensions as tags in the Developer Portal. Mendix recommends at least setting an `env:{environment_name}` tag (for example, `env:accp`). This tag enables you to identify metrics sent from a particular environment so you can separate out production metrics from test metrics. 
+You can set extra dimensions as tags in the Mendix Portal. Mendix recommends at least setting an `env:{environment_name}` tag (for example, `env:accp`). This tag enables you to identify metrics sent from a particular environment so you can separate out production metrics from test metrics. 
 
 To set this tag, do the following:
 
-1. Go to the **Environments** page of your app in the *Developer Portal*.
+1. Go to the **Environments** page of your app in the *Mendix Portal*.
 2. Click **Details** ({{% icon name="notes-paper-edit" %}}) on an environment you are monitoring with Dynatrace. 
 3. Switch to the **Tags** tab.
 4. Click **Add** and type in a string to be sent to Dynatrace as a dimension. For more information, see the [**Tags** tab](/developerportal/deploy/environments-details/#tags) documentation in *Environment Details*.

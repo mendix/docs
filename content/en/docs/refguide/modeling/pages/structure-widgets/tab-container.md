@@ -74,15 +74,17 @@ This property is not supported on native mobile pages.
 
 ## 6 Best Practices
 
-### 6.1 Common Rules {#usage-common}
+### 6.1 Stand-Alone (#stand-alone)
 
-Use a tab container as a stand-alone widget. This means there is no need to place it within a container or other wrapper widgets, as doing so may disrupt the display of content.
+You can use a tab container as a stand-alone widget for greater ease. This means there is no need to place it within a container or other wrapper widgets, as doing so may disrupt the display of content.
 
 ### 6.2 Usage with Scroll Container {#usage-with-scroll-container}
 
-Avoid nesting tab containers inside of scroll container. It may break the way tab page content is displayed, and furthermore it will disable rendering optimizations inside the TabView. 
+Avoid nesting tab containers inside of scroll container. It may break the way tab page content is displayed, and furthermore will disable rendering optimizations inside the tab view. 
 
-{{% alert color="info" %}}To enable scrollable behavior within a specific tab, place the **Tab Content** inside a scroll container or display it in a list view.{{% /alert %}}
+{{% alert color="info" %}}
+To enable scrollable behavior within a specific tab, place the **Tab Content** inside a scroll container or display it in a list view.
+{{% /alert %}}
 
 ## 7 Read More
 

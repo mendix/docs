@@ -52,5 +52,5 @@ If you are the only team member of an app, you can also leave and delete the app
 
 ## 5 Read More
 
-* [How to Manage General Settings](/developerportal/collaborate/general-settings/)
+* [Settings](/developerportal/collaborate/general-settings/)
 * [App Roles](/developerportal/general/app-roles/)

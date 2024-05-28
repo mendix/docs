@@ -3,7 +3,7 @@ title: "Settings"
 url: /developerportal/collaborate/general-settings/
 
 weight: 14
-description: "Describes general settings of your app."
+description: "Describes the Settings page of your app."
 tags: ["Settings", "App", "Mendix Portal"]
 aliases:
     - /developerportal/settings/general-settings

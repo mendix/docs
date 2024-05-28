@@ -10,17 +10,17 @@ tags: ["monitoring", "troubleshooting", "performance", "profiling"]
 
 To investigate performance issues that are reproduced on your local machine, you can run a performance profiler session from within Studio Pro without installing the actual profiler on your machine. This session generates a report written to disk, which you can then send to the Mendix Support teams. Mendix developers will load this report on their machines to investigate the performance issues you experienced locally. 
 
-This feature can be reached by clicking **Help** > **Support Tools** > **Profiling**:
+The profiling feature can be reached by clicking **Help** > **Support Tools** > **Profiling**:
 
-{{< figure src="/attachments/howto/monitoring-troubleshooting/profiling/profiling-menu.png" class="no-border" >}}
+{{< figure src="/attachments/howto/monitoring-troubleshooting/profiling/profiling-menu.png" class="no-border" width="500" >}}
 
-## 2 Run (start and stop) a performance profiler session
+## 2 Run a Performance Profiler Session
 
-Upon clicking on the 'Start profiling' menu item, you will be presented with a dialog that asks you to choose a location on the local disk to save the performance reports to. Please choose a local location on your disk and avoid selecting a network drive here.
+When you click **Start profiling**, you are presented with a dialog box that asks you to choose a location on the local disk to save the performance reports to. Choose a local spot on your disk and avoid selecting a network drive.
 
 Then, perform the operations that lead to a degrading performance or slowness. 
 
-When you are done, click on the 'Profiling → Stop profiling' menu item: Please zip up all the files you can find in the directory that is opened (the directory you chose when you've clicked on the 'Profiling → Start profiling' menu item).
+When you are done, click **Profiling** > **Stop profiling**. Zip all the files you can find in the directory that are opened (the directory you chose when clicking **Start profiling**).
 
 Then, send the archive to Mendix Support.
 

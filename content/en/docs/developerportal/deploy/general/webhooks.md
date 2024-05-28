@@ -29,7 +29,7 @@ Webhooks are only available for licensed Mendix apps that are deployed to Mendix
 
 To set up a webhook, do the following:
 
-1. Open your app in the Mendix Portal.
+1. Open your app in [Apps](https://sprintr.home.mendix.com/).
 1. From the navigation pane, open the **Webhooks** page. On this page, you can see any current webhooks. You can also see whether each webhook is active or inactive. An inactive webhook does not send any payloads to the endpoint.
 1. Click **New Webhook**.
 1. Enter the following information:

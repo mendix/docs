@@ -35,11 +35,11 @@ If it is unchecked, performance logging is disabled:
 
 ## 3 Start a New Session of Performance Logging
 
-Upon clicking on the 'Start New Session' menu item, we would get the following dialog:
+When you click **Start new session**, you will see the following dialog:
 
 {{< figure src="/attachments/howto/monitoring-troubleshooting/performance-logging/naming-new-session.png" class="no-border" width="650" >}}
 
-Within this dialog, we would get the chance to specify a name for a new performance logging session, that could be used later when comparing performance measurements in the 'Compare Performance Measurements' dialog (see more details in the 'Compare performance measurements' session below):
+You can specify a name for the new performance logging session that can be used later when comparing performance measurements:
 
 {{< figure src="/attachments/howto/monitoring-troubleshooting/performance-logging/compare-measurements.png" class="no-border" width="750" >}}
 

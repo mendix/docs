@@ -62,22 +62,19 @@ Pages without a bottom bar are created in a separate stack. If you navigate from
 
 ### 3.3 Sidebar
 
-As a part of navigation system, you can use the **Sidebar** in your native projects. It's a common pattern for mobile applications to use the Drawer from left side for navigating between screens, or to keep the useful links and application settings there.
+You can use the **Sidebar** in your native projects' navigation systems. It is a common pattern in mobile applications to use the **Drawer** from left side to navigate between screens IT is also common to keep  useful links and application settings there.
 
-There are only a few steps needed to be done to create a **Sidebar** in your native project. 
-
-First of all, you need to include **NativePhone_SideMenu**, which you can find under Phone Layouts in **Atlas Core**.
+There are only a few steps needed to be done to create a **Sidebar** in your native project. First of all, you need to include **NativePhone_SideMenu**, which you can find under **Phone Layouts** in **Atlas Core**:
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-navigation/includesidebar.png" alt="Include a sidebar" >}}
 
-Then decide which screen in your project will have a **Sidebar** and apply the appropriate layout - **NativePhone_SideMenu**, in our case.
+Then, decide which screen in your project will have a **Sidebar** and apply the appropriate layout — **NativePhone_SideMenu** in our case:
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-navigation/selectsidebarlayout.png" alt="Select a sidebar layout" >}}
 
-After that, you will see the **Sidebar** appear in your screen. You can place any content inside of it and see it using **Sidebar Toggle** button, which will appear in the left part of your [Header](/refguide/mobile/designing-mobile-user-interfaces/navigation/#31-header).
+After that, you will see the **Sidebar** appear on your screen. You can place any content inside of it, and you can see it using **Sidebar Toggle** button (which will appear in the left part of your [Header](/refguide/mobile/designing-mobile-user-interfaces/navigation/#31-header)):
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-navigation/sidebarlayout.png" alt="Sidebar layout" >}}
-
 
 ## 4 How does Mendix Native Navigation Work?
 

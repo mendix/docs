@@ -1044,7 +1044,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 
 * We have upgraded Mendix Cloud Deployment and Operation. It is now a Mendix 7 app.
 * You can now mask app constant values so that they cannot be seen in the **Model Options** tab of the **Environment Details**.
-* We now warn you on all **OPERATE** and **DEPLOY** pages if a maintenance window has been created to allow updating of the Developer Portal.
+* We now warn you on all **OPERATE** and **DEPLOY** pages if a maintenance window has been created to allow updating of the Mendix Developer Portal.
 
 <a id="ki20201030"></a>**Known Issue**
 

@@ -21,7 +21,7 @@ This tool enables you to do the following:
 * View performance measurements
 * Compare performance measurements
 
-## 2 Enable erformance logging
+## 2 Enable Performance Logging
 
 The first menu item ('Enable performance logging') is a checkable one: It can be checked or unchecked.
 
@@ -33,7 +33,7 @@ If it is unchecked, it means that performance logging is disabled:
 
 {{< figure src="/attachments/howto/monitoring-troubleshooting/performance-logging/logging-disabled.png" class="no-border" >}}
 
-## 3 Start a new session of performance logging
+## 3 Start a New Session of Performance Logging
 
 Upon clicking on the 'Start New Session' menu item, we would get the following dialog:
 
@@ -43,7 +43,7 @@ Within this dialog, we would get the chance to specify a name for a new performa
 
 {{< figure src="/attachments/howto/monitoring-troubleshooting/performance-logging/compare-measurements.png" class="no-border" >}}
 
-## 4 View performance measurements
+## 4 View Performance Measurements
 
 Upon clicking on the 'Show measurements' menu item, we would get the following dialog:
 
@@ -60,7 +60,7 @@ The main section in this dialog displays the data grid with the measurements:
 
 Lastly, the 'Generate Report' at the bottom allows to view the results in text editor documents (i.e. Notepad).
 
-## 5 Compare performance measurements
+## 5 Compare Performance Measurements
 
 Upon clicking on the 'Compare measurements' menu item, we would get the following dialog:
 

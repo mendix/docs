@@ -64,7 +64,7 @@ const app = client.getApp("33118fbf-7053-482a-8aff-7bf1c626a6d9");
 ```
 
 {{% alert color="info" %}}
-You can get the **App ID** in the app's [General Settings](/developerportal/collaborate/general-settings/) in the Mendix Portal.
+You can get the **App ID** in the app's [Settings](/developerportal/collaborate/general-settings/) in the Mendix Portal.
 {{% /alert %}}
 
 ## 5 Getting Information About the Repository of the App {#getting}

@@ -34,7 +34,19 @@ The Event Broker must be enabled on both the app and specific environment levels
 
 Technical Contacts with a license to the Mendix Event Broker can manage its features on the [Event Broker Manager](https://broker.mendix.com/) page.
 
-#### 2.2.1 Environments and Spaces
+#### 2.2.1 Users for Event Broker Manager
+
+Within the Event Broker Manager users within the company's email domain that have a Mendix login can participate in the administration of the Mendix Event Broker as either a View or Admin user, or can be blocked from participation.
+
+{{< figure src="/attachments/appstore/services/event-broker/event_broker_internal_user.png">}}
+
+{{< figure src="/attachments/appstore/services/event-broker/event_broker_internal.png">}}
+
+Users that are not part of the Customer organisation (not within the email domain of the customer) can be invited within the same levels of access.  Such users still require a standard Mendix login.
+
+{{< figure src="/attachments/appstore/services/event-broker/event_broker_external_user.png">}}
+
+#### 2.2.2 Environments and Spaces
 
 **Space** define which applications can exchange events with each other. When Business Events is enabled for an environment, it is placed in an Event Broker **Space** based on the environment name. This enables apps deployed under the same **Space** to publish and consume events. For example, apps in acceptance environment can only exchange events with other apps' acceptance environments. You can check the **Space** of an app's environment on the [Event Broker Manager](https://broker.mendix.com/) page.
 
@@ -42,11 +54,39 @@ Spaces are created and assigned based on the app environment name and allow isol
 
 See [Enabling the Mendix Event Broker Service](#enable-mx-event-broker) for more information.
 
-#### 2.2.2 Topics and Channels {#topics-channels}
+#### 2.2.3 Topics and Channels {#topics-channels}
 
 Events are placed in channels, sometimes called topics. Apps subscribed to a channel will receive events published to this channel.
 
 Events published by Free Apps are published to one shared company channel on a multi-tenant free Event Broker. Events published by apps running on licensed nodes are published to their own channels on the company Event Broker. These channels, implemented as topics on Kafka, are automatically created upon deployment of the app publishing the events.
+
+#### 2.2.4 Event Access Control {#access-control}
+
+Mendix Event Broker allows for access control to be applied down to the event level.  Each appliation can specifically be granted/denied access to events using the [Event Broker Manager](https://broker.mendix.com/).
+
+Within the overview page containing a list of applications by environment within the of the organisation's event landscape.  The table contains a columns that easily provides exception cases:
+
+* `Implemented but no access` - meaning an application has implemented an event that it is not allowed to access, guarenteeing a failure to subscribe to and/or publish the event
+* `Has access but not implemented` - meaning an application has been provided with more access than is required and thus can be secured more accurately.
+
+{{< figure src="/attachments/appstore/services/event-broker/event_broker_access_control_overview.png">}}
+
+Selecting the specific application will provide an overview of the application's implmented events with their associated access.
+
+{{< figure src="/attachments/appstore/services/event-broker/event_broker_access_control_overview_2.png">}}
+
+From this view access to the individual events can be configured.  Changes are applied immediatly on applying the changes.
+
+{{< figure src="/attachments/appstore/services/event-broker/event_broker_access_control_overview_3.png">}}
+
+From the main overview page an administrator can assign the default behaviour of applications when they deploy to an environment for the first time by changing the config in `Manage Default Access`.
+
+{{< figure src="/attachments/appstore/services/event-broker/event_broker_access_control_defaults.png">}}
+
+From here the settings that can be controlled are:
+
+* `An app can access events defined in it` which would allow newly deployed applications to always have access to any events defined within that application (see [Creating a New Business Event Service](/appstore/services/business-events/#two-way-be-create))
+* `For other events, in all environments, the app can:` which allows administrators to turn on or off the default assigning of access to events.
 
 ## 3 Mendix Event Broker Bridges {#manage-mx-broker-bridge}
 

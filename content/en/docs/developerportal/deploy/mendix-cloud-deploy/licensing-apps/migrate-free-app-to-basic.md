@@ -32,7 +32,7 @@ To migrate your Free App and its database to your Mendix Basic environment, foll
 
 ### 3.1 Open your Free App
 
-1. Go to the [Mendix Portal](https://sprintr.home.mendix.com). Sign in if necessary.
+1. Go to the [Apps](https://sprintr.home.mendix.com). Sign in if necessary.
 2. Click the app that you want to migrate to a Basic Node.
 
 ### 3.2 Download a Backup{#download-backup}

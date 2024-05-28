@@ -15,7 +15,7 @@ cascade:
 
 ## 1 What Is the Mendix Portal?
 
-The [Mendix Portal](https://sprintr.home.mendix.com) is one of the key components of the Mendix Platform. In the Mendix Portal, Mendix users can collaborate, deploy, manage their apps. 
+The [Apps](https://sprintr.home.mendix.com) is one of the key components of the Mendix Platform. In the Mendix Portal, Mendix users can collaborate, deploy, manage their apps. 
 
 The Mendix Portal also offers open, well-defined APIs, enabling third-party developers to integrate their own widgets and plugins. For more information, see [API Documentation](/apidocs-mxsdk/apidocs/).
 

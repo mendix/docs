@@ -73,11 +73,10 @@ You can choose which certificate to use when you configure a custom domain for a
 
 To manage custom domains, follow these steps:
 
-1. Go to the [Mendix Portal](https://sprintr.home.mendix.com).
-
-2. Open the **Environments** page for your app.
-
-3. Switch to the **Custom Domains** tab.
+1. Go to the [Apps](https://sprintr.home.mendix.com).
+2. Open your app.
+3. Go to the **Environments** page of your app.
+4. Switch to the **Custom Domains** tab.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/custom-domains-tab.png" class="no-border" >}}
 

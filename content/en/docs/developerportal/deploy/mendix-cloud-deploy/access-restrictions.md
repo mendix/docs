@@ -107,7 +107,7 @@ Consider this example scenario in which a basic IP range restriction could be us
 
 To restrict access to the app to an IP range, follow these steps:
 
-1. From the [Mendix Portal](https://sprintr.home.mendix.com), go to your app's **Environments** page.
+1. From the [Apps](https://sprintr.home.mendix.com), go to your app's **Environments** page.
 2. Switch to the **Access Restriction Profiles** tab.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/app-restriction.png" alt="The Access Restriction Profiles tab" class="no-border" >}}

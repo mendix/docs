@@ -62,19 +62,17 @@ Do not use OpenSSL version 3.x on Windows.<br><br>If you use OpenSSL version 3.x
 
 You can upload a PKCS12 file by following these steps:
 
-1. In the [Mendix Portal](https://sprintr.home.mendix.com), go to the **Deploy** tab of your app's **Environments** page. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the desired environment.
-
-2. Select the **Network** tab of an application environment.
-
-3. Below **Outgoing Connections Certificates**, click **Add Client Certificate**.
+1. In [Apps](https://sprintr.home.mendix.com), open your app.
+2. Go to the **Deploy** tab of your app's **Environments** page. 
+3. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the desired environment.
+4. Select the **Network** tab of an application environment.
+5. Below **Outgoing Connections Certificates**, click **Add Client Certificate**.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/certificates/certificate.png" class="no-border" >}}
 
-4. Upload the client certificate as a PKCS12 (pfx) container.
-
-5. Enter the password to unlock the certificate container.
-
-6. If you are using a custom certificate when setting your Client certificate in your [Call REST Service](/refguide/call-rest-action/#client-certificate) or [Call Web Service](/refguide/call-web-service-action/#client-certificate) action, set a **Web Service Call Name** and use it to pin the certificate by setting the call's **Client certificate identifier** to the **Web Service Call Name**.
+6. Upload the client certificate as a PKCS12 (pfx) container.
+7. Enter the password to unlock the certificate container.
+8. If you are using a custom certificate when setting your Client certificate in your [Call REST Service](/refguide/call-rest-action/#client-certificate) or [Call Web Service](/refguide/call-web-service-action/#client-certificate) action, set a **Web Service Call Name** and use it to pin the certificate by setting the call's **Client certificate identifier** to the **Web Service Call Name**.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/certificates/certificate-details.png" class="no-border" >}}
 
@@ -90,7 +88,7 @@ Loading certificate authorities works much the same way, although they do not re
 
 To upload a certificate authority, follow these steps:
 
-1. In the [Mendix Portal](https://sprintr.home.mendix.com), go to the **Deploy** tab of the **Environments** page, and click **Details** ({{% icon name="notes-paper-edit" %}}) on the desired environment.
+1. In [Apps](https://sprintr.home.mendix.com), go to the **Deploy** tab of the **Environments** page, and click **Details** ({{% icon name="notes-paper-edit" %}}) on the desired environment.
 
 2. Select the **Network** tab of an application environment.
 

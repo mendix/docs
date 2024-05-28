@@ -46,23 +46,25 @@ Maintenance windows and planned maintenance are defined in Coordinated Universal
 
 Follow the instructions below to configure a maintenance window.
 
-1. Go to the [Mendix Portal](https://sprintr.home.mendix.com).
+1. Go to the [Apps](https://sprintr.home.mendix.com).
 
-2. Go to the **Environments** page for your app.
+2. Open your app.
 
-3. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the environment that you want to configure.
+3. Go to the **Environments** page for your app.
+
+4. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the environment that you want to configure.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/maintenance-windows/environment-details.png" alt="" class="no-border" >}}
 
-4. Go to the **Maintenance** tab.
+5. Go to the **Maintenance** tab.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/maintenance-windows/maintenance.png" alt="" class="no-border" >}}
-    
-5. Click **Change** to modify the preferred maintenance window of your environment. To modify the window, you must have [transport rights](/developerportal/deploy/node-permissions/#transport-rights) for the environment.
 
-6. Choose one of the maintenance windows from the drop-down menu.
+6. Click **Change** to modify the preferred maintenance window of your environment. To modify the window, you must have [transport rights](/developerportal/deploy/node-permissions/#transport-rights) for the environment.
 
-7. Click **Save** to confirm your new preferred maintenance window.
+7. Choose one of the maintenance windows from the drop-down menu.
+
+8. Click **Save** to confirm your new preferred maintenance window.
 
 ### 3.1 Configuring Maintenance Window in a Week with Planned Maintenance
 

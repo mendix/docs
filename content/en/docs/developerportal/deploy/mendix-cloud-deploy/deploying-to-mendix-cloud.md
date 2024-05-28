@@ -69,8 +69,9 @@ To create a deployment package via Studio Pro, follow these steps:
 
 You can also create a deployment package through the Mendix Portal, using a model committed to the Team Server. To do this, follow these steps:
 
-1. Go to the [Mendix Portal](https://sprintr.home.mendix.com).
-1. Open your app's **Environments** page.
+1. Go to the [Apps](https://sprintr.home.mendix.com).
+1. Open your app.
+1. Go to the **Environments** page of your app.
 1. Click **Create Deployment Package**.
 1. Select your desired branch and revision and click **Next**.
 1. Give the build a version number and click **Build this revision**.
@@ -79,7 +80,7 @@ You can also create a deployment package through the Mendix Portal, using a mode
 
 The previous steps explained how to deploy a deployment package to Mendix Cloud, but the app based on the deployment package is not running yet. To deploy a deployment package to a node environment where you can run the app, follow these steps:
 
-1. Go to the [Mendix Portal](https://sprintr.home.mendix.com).
+1. Go to the [Apps](https://sprintr.home.mendix.com).
 1. Open your app's **Environments** page.
 1. In the **Deployment Package Repository**, choose your preferred deployment package and click **Deploy** ({{% icon name="deploy" %}}).
 

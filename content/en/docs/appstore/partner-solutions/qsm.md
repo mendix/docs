@@ -14,7 +14,7 @@ This product has been renamed from **Mendix Application Quality Monitor (AQM)** 
 
 ## 1 Introduction
 
-[Mendix Quality and Security Management (QSM)](https://www.softwareimprovementgroup.com/solutions/sigrid-for-mendix-quality-and-security-management/) is a cloud service developed by Mendix and the Software Improvement Group (SIG). Mendix QSM performs a static analysis of Mendix application models according the ISO 25010 standard for maintainability. Dashboards provide instant insight into the quality of the application models as they're built, including quality ratings based on benchmarks of thousands of projects.
+[Mendix Quality and Security Management (QSM)](https://www.softwareimprovementgroup.com/solutions/sigrid-for-mendix-quality-and-security-management/) is a cloud service developed by Mendix and the Software Improvement Group (SIG). Mendix QSM performs a static analysis of Mendix application models according the ISO 25010 standard for maintainability. Dashboards provide instant insight into the quality of the application models as they are built, presenting the quality measurements done on the Mendix application models and the quality ratings based on benchmarks of thousands of projects.
 
 By proactively monitoring quality on a daily basis customers can improve maintainability and reduce lifecycle costs.
 
@@ -29,12 +29,27 @@ To obtain or renew your purchased license, go to [this form](https://addon.mendi
 {{% /alert %}}
 
 * Mendix QSM is available for projects based on Mendix 6.0 and above
+
 * Mendix QSM supports self-service onboarding of new QSM apps for existing customers via Mendix Support
+
 * Mendix QSM is part of our Mendix pricelist – for more information or activation, please contact your Mendix Customer Success Manager or Sales
+
 * Detailed documentation is available via the complementary Sigrid Academy
+
 * Mendix QSM dashboard reports are generated every night based on the latest version in your Project Team Server
     * By default, the Mendix QSM reports are based on the main line in your app's Team Server
     * We are building CI support for Mendix that will allow you to run QSM in your Mendix CI pipeline (for more information, see [SigridCI](https://github.com/Software-Improvement-Group/sigridci))
+    
+* The measurement results of QSM are used by the R&D team of SIG to improve the measurement algorithms, to recalibrate the rating system, and to provide anonymized benchmarks to Licensees as follows:
+  
+    * Improve measurements: Make adjustments to the algorithms that extract basic measurement information from Mendix application models. These can be bug fixes, support for new model constructs, or extraction of additional information.
+    
+    * Recalibrate rating system: The thresholds employed by the rating system for mapping basic measurement results to star ratings are derived by data mining on past measurement results. For details, see the two publications in the note below. When new measurement results come available, recalibration is done to keep thresholds up to date.
+    
+        {{% alert color="info" %}}Tiago L. Alves, José Pedro Correia, and Joost Visser, Benchmark-based Aggregation of Metrics to Ratings, In Proceedings of the Joint Conference of the 21st International Workshop on Software Measurement (IWSM) and the 6th International Conference on Software Process and Product Measurement (Mensura), pp20-29, IEEE Computer Society, 2011.</br></br>Tiago Alves, Christiaan Ypma, and Joost Visser, Deriving Metric Thresholds from Benchmark Data, In proceedings of the 26th IEEE International Conference on Software Maintenance (ICSM 2010), September 12-18m 2010, Timisoara, Romania, IEEE Computer Society, 2010.{{% /alert %}}
+    
+    * Anonymized benchmarks: Overviews can be provided that show the rating results of one or more selected apps in relation to a group of anonymous peers.
+    
 
 ## 3 Implemented Checks for Best Practices
 

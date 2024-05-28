@@ -8,13 +8,11 @@ tags: ["monitoring", "troubleshooting", "performance", "profiling"]
 
 ## 1 Introduction
 
-To investigate performance issues that are reproduced on your local machine, it’s possible to run a performance profiler session from within Studio-Pro, without the need to install the actual profiler on your machine. A report of the session is written to disk, and you can ship this report to the Mendix Support teams, after which our developers can load it on their machines & investigate the performance issues you experience locally.
+To investigate performance issues that are reproduced on your local machine, you can run a performance profiler session from within Studio Pro without installing the actual profiler on your machine. This session generates a report written to disk, which you can then send to the Mendix Support teams. Mendix developers will load this report on their machines to investigate the performance issues you experienced locally. 
 
-This feature can be reached from the 'Help' menu -> 'Support Tools' -> 'Profiling':
+This feature can be reached by clicking **Help** > **Support Tools** > **Profiling**:
 
 {{< figure src="/attachments/howto/monitoring-troubleshooting/profiling/profiling-menu.png" class="no-border" >}}
-
-This how-to teaches you how to start and stop a performance profiler session.
 
 ## 2 Run (start and stop) a performance profiler session
 

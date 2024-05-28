@@ -1,6 +1,6 @@
 ---
 title: "Performance Logging"
-url: /howto/monitoring-troubleshooting/performance-logging/
+url: /refguide/performance-logging/
 
 description: "Describes how to enable, view and compare performance metrics to key functionalities in studio-pro."
 tags: ["monitoring", "troubleshooting", "performance", "performance logging"]

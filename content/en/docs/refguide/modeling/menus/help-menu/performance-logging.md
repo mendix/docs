@@ -53,10 +53,10 @@ The **Measurement Source** field allows you to choose the source for the perform
 
 The dialog displays the data grid with the measurements:
 
-* **ID**: displays a unique ID for the measurement that is being logged
-* **Category**: displays the category of the measurement, which are split to categories (such as measurements related to documents and UI)
-* **Description** : displays a description for the measurement that is being logged
-* **Duration**: displays the execution time (in milliseconds) of the currently logged operation
+* **ID** – displays a unique ID for the measurement that is being logged
+* **Category** – displays the category of the measurement, which are split to categories (such as measurements related to documents and UI)
+* **Description** – displays a description for the measurement that is being logged
+* **Duration** – displays the execution time (in milliseconds) of the currently logged operation
 
 The **Generate Report** button in the bottom-right corner allows you to view the results in text editor documents (such as Notepad).
 
@@ -70,8 +70,8 @@ This allows you to compare between two different performance measurements source
 
 The rows in the grid are colored according to the following indication:
 
-* Gray: there is no change in the execution time
-* Green: there was an improvement in the execution time
-* Red: there was a degradation in the execution time
+* Gray – there is no change in the execution time
+* Green – there was an improvement in the execution time
+* Red – there was a degradation in the execution time
 
 The **Generate Report** at the bottom-right corner allows you to view the results in text editor documents. 

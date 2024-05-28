@@ -104,7 +104,7 @@ Returns information about the version control repository for a Mendix app.
 
 |Name|Type|Required|Description|
 |---|---|---|---|
-|`AppId`|String|Yes|The App ID of the Mendix app for which the repository information should be returned. You can find this in the [General](/developerportal/collaborate/general-settings/) settings tab of your app in the Mendix Portal. |
+|`AppId`|String|Yes|The App ID of the Mendix app for which the repository information should be returned. You can find this in the [General](/developerportal/collaborate/general-settings/) tab of the **Settings** page of your app in Apps. |
 
 ##### 6.1.1.2 Example
 

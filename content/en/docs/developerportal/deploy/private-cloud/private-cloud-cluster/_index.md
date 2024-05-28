@@ -1,14 +1,14 @@
 ---
 title: "Creating a Private Cloud Cluster"
 url: /developerportal/deploy/private-cloud-cluster/
-description: "Describes the processes for creating a Private Cloud cluster in the Mendix Mendix Portal"
+description: "Describes the processes for creating a Private Cloud cluster in the Mendix Portal"
 weight: 10
 tags: ["Create", "Private Cloud", "Cluster", "Namespace"]
 ---
 
 ## 1 Introduction
 
-To allow you to manage the deployment of your apps to Red Hat OpenShift and Kubernetes, you first need to create a cluster and add at least one namespace in the Mendix Mendix Portal. This will provide you with the information you need to deploy the **Mendix Operator** and **Mendix Gateway Agent** in your OpenShift or Kubernetes context and create a link to the **Environments** pages of your Mendix app through the **Interactor**.
+To allow you to manage the deployment of your apps to Red Hat OpenShift and Kubernetes, you first need to create a cluster and add at least one namespace in the Mendix Portal. This will provide you with the information you need to deploy the **Mendix Operator** and **Mendix Gateway Agent** in your OpenShift or Kubernetes context and create a link to the **Environments** pages of your Mendix app through the **Interactor**.
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/mx4pc-architecture.png" class="no-border" >}}
 
@@ -92,7 +92,7 @@ To add a namespace, do the following:
 
 3. Enter the following details:
     * **Namespace** – this is the namespace in your platform; this must conform to the namespace naming conventions of the cluster: all lower-case with hyphens allowed within the name
-    * **Installation type** – if you want to create environments and deploy your app from the [Mendix Mendix Portal](/developerportal/deploy/private-cloud-deploy/), choose **Connected**, but if you only want to control your deployments through the Mendix Operator using the [CLI](/developerportal/deploy/private-cloud-operator/), choose **Standalone**
+    * **Installation type** – if you want to create environments and deploy your app from the [Mendix Portal](/developerportal/deploy/private-cloud-deploy/), choose **Connected**, but if you only want to control your deployments through the Mendix Operator using the [CLI](/developerportal/deploy/private-cloud-operator/), choose **Standalone**
 
 4. Click **Done** to create the namespace.
 

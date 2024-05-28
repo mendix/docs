@@ -54,7 +54,7 @@ In this how-to you will learn how to do the following using Studio Pro and brows
 
 ### 1.1 Cloud Foundry on SAP
 
-Cloud Foundry providers like SAP are made available within the Mendix Mendix Portal. It is recommended that you use the Mendix Portal for deploying your application to these clouds. See the detailed documentation for [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/).
+Cloud Foundry providers like SAP are made available within the Mendix Portal. It is recommended that you use the Mendix Portal for deploying your application to these clouds. See the detailed documentation for [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/).
 
 Only use the instructions in this document if you have specific requirements which the recommended method does not support.
 

@@ -173,7 +173,7 @@ This major release of APM deals with cloud, end-user measurements, and simplicit
 
 ### Cloud Multi-Tenant
 
-APM 2 is a multi-tenant cloud-based app that is integrated with the Mendix Mendix Portal for your project and SSO. 
+APM 2 is a multi-tenant cloud-based app that is integrated with the Mendix Portal for your project and SSO. 
 
 To use APM, you only need to install the **APMAgent2** module.
 

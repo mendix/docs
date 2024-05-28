@@ -1,7 +1,7 @@
 ---
 title: "General"
 url: /developerportal/general/
-description: "Describes the tools and settings available in the General category in the Mendix Mendix Portal's navigation pane."
+description: "Describes the tools and settings available in the General category in the Mendix Portal's navigation pane."
 weight: 5
 no_list: false
 description_list: true

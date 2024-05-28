@@ -165,7 +165,7 @@ If you have a Mendix application running on SAP BTP with PostgreSQL as the datab
 
     {{< figure src="/attachments/howto/data-models/migrating-your-mendix-database/sap-postgres-config.png" class="no-border" >}}
 
-4. Create an environment using the SAP HANA database service using Mendix Mendix Portal.
+4. Create an environment using the SAP HANA database service using Mendix Portal.
 5. Deploy the MDA, but do not start the application.
 6. Sign in to the SAP BTP, Cloud Foundry environment (containing the SAP HANA service) using the Cloud Foundry command line.
 7. Set the following runtime properties in the SAP HANA environment using the command line. Use the values from the PostgreSQL instance values you noted above.
@@ -219,7 +219,7 @@ If you have a Mendix application running on SAP BTP with PostgreSQL as the datab
     }
     ```
 
-6. Create an environment using the SAP HANA database service and the Mendix Mendix Portal.
+6. Create an environment using the SAP HANA database service and the Mendix Portal.
 7. Deploy the MDA without starting the application.
 8. Sign in to the SAP BTP Cockpit.
 9. Navigate to the new application and go to **User-Provided Variables**.

@@ -1,19 +1,19 @@
 ---
 title: "Mendix Portal"
 url: /releasenotes/developer-portal/
-description: "Release notes for all project management parts of the Mendix Mendix Portal"
+description: "Release notes for all project management parts of the Mendix Portal"
 tags: ["Mendix Portal", "buzz"]
 weight: 20
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-These release notes cover changes to the app management functionality and other features of the [Mendix Mendix Portal](/developerportal/).
+These release notes cover changes to the app management functionality and other features of the [Mendix Portal](/developerportal/).
 
 {{% alert color="info" %}}
 For release notes on Mendix Cloud and deployment options, see [Deployment](/releasenotes/developer-portal/deployment/).
 {{% /alert %}}
 
-To see the current status of the Mendix Mendix Portal, see [Mendix Status](https://status.mendix.com/). Here you can also see planned maintenance and past incidents.
+To see the current status of the Mendix Portal, see [Mendix Status](https://status.mendix.com/). Here you can also see planned maintenance and past incidents.
 
 ## 2024
 
@@ -977,7 +977,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Improvements
 
-* We made some minor changes to the look and feel over several pages, buttons, and UI components in line with the recent redesign of Mendix Mendix Portal.
+* We made some minor changes to the look and feel over several pages, buttons, and UI components in line with the recent redesign of Mendix Portal.
 
 #### Fixes
 

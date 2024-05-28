@@ -9,11 +9,11 @@ tags: ["Deploy", "Private Cloud", "Environment"]
 
 ## 1 Introduction
 
-To deploy apps to your private cloud cluster (for example to Red Hat OpenShift or AWS-EKS), the cluster needs to be registered in the Mendix Mendix Portal. This creates a link between the Mendix Mendix Portal and the cluster. See [Creating a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster/) for instructions on how to do this.
+To deploy apps to your private cloud cluster (for example to Red Hat OpenShift or AWS-EKS), the cluster needs to be registered in the Mendix Portal. This creates a link between the Mendix Portal and the cluster. See [Creating a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster/) for instructions on how to do this.
 
 Once the cluster has been registered, and a namespace created, team members with *Deploy App* rights can create environments and deploy an app.
 
-This document explains how to use the Mendix Mendix Portal to deploy your **connected** app.
+This document explains how to use the Mendix Portal to deploy your **connected** app.
 
 To deploy to a namespace in a **standalone** cluster, you provide the CRs through the console or command line. This is described in [Using Command Line to Deploy a Mendix App to a Private Cloud Cluster](/developerportal/deploy/private-cloud-operator/).
 

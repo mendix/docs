@@ -10,7 +10,7 @@ tags: ["Team", "Mendix Portal"]
 
 ## 1 Introduction
 
-Your team can include all of your colleagues working on an app. As well as developing, team members might have other roles such as ideating or reviewing. The Mendix Mendix Portal enables developers from both IT and business with mixed experience levels to collaborate.
+Your team can include all of your colleagues working on an app. As well as developing, team members might have other roles such as ideating or reviewing. The Mendix Portal enables developers from both IT and business with mixed experience levels to collaborate.
 
 To view and manage your team members, follow these steps:
 

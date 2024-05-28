@@ -41,7 +41,7 @@ When you deploy through the Mendix Portal, this can be done by any Mendix user w
 
 ## 2 Connected and Standalone Clusters{#connected-standalone}
 
-To allow you to manage the deployment of your apps to Red Hat OpenShift and Kubernetes, you first need to register a cluster in the Mendix Mendix Portal. This will provide you with the information you need to deploy the **Mendix Operator** in your cluster.
+To allow you to manage the deployment of your apps to Red Hat OpenShift and Kubernetes, you first need to register a cluster in the Mendix Portal. This will provide you with the information you need to deploy the **Mendix Operator** in your cluster.
 If you have chosen a *connected* cluster, the **Mendix Gateway Agent** will also be deployed.
 Once the Mendix Operator is deployed to your cluster, you can use it to configure the resources which will be used by your apps.
 
@@ -68,12 +68,12 @@ The table below shows the differences between the capabilities for apps deployed
 | Capability | Mendix Cloud | Mendix for Private Cloud Connected | Mendix for Private Cloud Standalone |
 | --- | --- | --- | --- |
 | Environment provisioning | Fully automated | Provisioned with database and blob storage provided by the customer | Provisioned with database and blob storage provided by the customer|
-| Environment configuration<br/>*For example, constants and scheduled event* | Mendix Mendix Portal | Mendix Mendix Portal | Custom Resources via Mendix Operator |
-| Mendix app/deployment package deployment | Mendix Mendix Portal and Studio Pro | Mendix Mendix Portal and Studio Pro | Custom Resources via Mendix Operator<br/>*normally combined in a CI/CD pipeline* |
-| Backup and restore | Mendix Mendix Portal | Services supplied by the database server and file storage used¹ | Services supplied by the database server and file storage used¹ |
-| Monitoring | Mendix Mendix Portal | App metrics sent to a Prometheus-compatible monitoring tool | App metrics sent to a Prometheus-compatible monitoring tool |
-| App logs | Mendix Mendix Portal | Prints app logs to `stdout` | Prints app logs to `stdout` |
-| Remote debugging | Mendix Mendix Portal + Studio Pro | Mendix Mendix Portal + Studio Pro | Not supported |
+| Environment configuration<br/>*For example, constants and scheduled event* | Mendix Portal | Mendix Portal | Custom Resources via Mendix Operator |
+| Mendix app/deployment package deployment | Mendix Portal and Studio Pro | Mendix Portal and Studio Pro | Custom Resources via Mendix Operator<br/>*normally combined in a CI/CD pipeline* |
+| Backup and restore | Mendix Portal | Services supplied by the database server and file storage used¹ | Services supplied by the database server and file storage used¹ |
+| Monitoring | Mendix Portal | App metrics sent to a Prometheus-compatible monitoring tool | App metrics sent to a Prometheus-compatible monitoring tool |
+| App logs | Mendix Portal | Prints app logs to `stdout` | Prints app logs to `stdout` |
+| Remote debugging | Mendix Portal + Studio Pro | Mendix Portal + Studio Pro | Not supported |
 
 {{% alert color="info" %}}
 ¹ No backup or restore functionality is installed automatically with Mendix for Private Cloud. You will need to choose and deploy your own  solution, dependent on your choice of database, file storage, and cloud platform.

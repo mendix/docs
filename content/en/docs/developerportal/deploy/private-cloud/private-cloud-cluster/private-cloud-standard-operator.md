@@ -293,7 +293,7 @@ These custom CAs will be trusted by:
 * The Mendix Operator when communicating with the database and file storage
 * The Mendix Operator when pushing app images to the container registry
 * Mendix apps when communicating with the database, file storage and external web services
-* The Mendix Agent when connecting to Mendix Mendix Portal
+* The Mendix Agent when connecting to Mendix Portal
 
 {{% alert color="info" %}}
 To prevent MITM attacks, enable **Strict TLS** for the database and use an HTTPS URL for MinIO. This will ensure that all communication with data storage is done over TLS, and that certificates are properly validated.

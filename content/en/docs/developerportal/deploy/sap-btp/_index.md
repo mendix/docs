@@ -12,7 +12,7 @@ tags: ["SAP", "Deployment", "Environment", "SAP BTP", "SAP Business Technology P
 
 ## 1 Introduction
 
-As an SAP developer, you want to deploy your Mendix app on the SAP Business Technology Platform (SAP BTP). This document explains how you can create environments, deploy to the SAP BTP, and manage these deployments using the Mendix Mendix Portal.
+As an SAP developer, you want to deploy your Mendix app on the SAP Business Technology Platform (SAP BTP). This document explains how you can create environments, deploy to the SAP BTP, and manage these deployments using the Mendix Portal.
 
 This document describes two ways of managing the SAP BTP:
 
@@ -346,7 +346,7 @@ Open the environment details by clicking **Details** on an environment on the En
 
 {{% alert color="info" %}}If you make changes to your app which you want be applied next time the app is deployed you must make them here.
 
-Changes made to the app in the SAP BTP cockpit are only temporary and can be overwritten by the values in the Mendix Mendix Portal next time the app is deployed.{{% /alert %}}
+Changes made to the app in the SAP BTP cockpit are only temporary and can be overwritten by the values in the Mendix Portal next time the app is deployed.{{% /alert %}}
 
 ### 7.1 General Tab {#general-tab}
 
@@ -460,7 +460,7 @@ There are a number of services which your Mendix app requires. If you unbind any
 * Database (PostgreSQL, Hyperscaler Option or SAP HANA schema)
 * Connectivity
 
-Services should be selected, bound, and unbound through this **Services** page. Changes made in the SAP BTP cockpit will not be reflected in the Mendix Mendix Portal.
+Services should be selected, bound, and unbound through this **Services** page. Changes made in the SAP BTP cockpit will not be reflected in the Mendix Portal.
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -542,7 +542,7 @@ If you no longer require a service, you can unbind it or remove it from your app
 
 #### 7.3.3 Add Binding Configuration
 
-When a service is in the **Services To Be Bound** section, you can add a new binding configuration, if this is supported by the service and the Mendix Mendix Portal.
+When a service is in the **Services To Be Bound** section, you can add a new binding configuration, if this is supported by the service and the Mendix Portal.
 
 If you want to change the configuration of a service which is already bound, you will need to unbind the service first, as described above.
 
@@ -558,7 +558,7 @@ If you want to change the configuration of a service which is already bound, you
 
 #### 7.3.4 Service Names
 
-The services which are created by the Mendix Mendix Portal will be named automatically. You will see these names in the SAP BTP cockpit. The name of the service will normally be **App name** + **_** + **Environment Name** + **_** + **a random 6-character suffix**. All spaces will be removed from the app and environment names. For example, `MyApp_Development_c7sd9q`.
+The services which are created by the Mendix Portal will be named automatically. You will see these names in the SAP BTP cockpit. The name of the service will normally be **App name** + **_** + **Environment Name** + **_** + **a random 6-character suffix**. All spaces will be removed from the app and environment names. For example, `MyApp_Development_c7sd9q`.
 
 However, the maximum length for the service name is 50 characters. If this limit would be exceeded by the name created above, an alternative service name will be used. The format of this is **Environment Name** + **_** + **a random 6-character suffix**. If the Environment name is longer than 43 characters, only the first 43 characters are used.
 
@@ -659,7 +659,7 @@ Please bear the following in mind when using SAP HANA as your Mendix database:
 * Do not use the **Services** tab or the SAP BTP Marketplace to add both a PostgreSQL, Hyperscaler Option database and an SAP HANA schema to your app. If you do this it is not possible to predict which database your Mendix app will choose to bind.
 {{% /alert %}}
 
-If you have issues with your app running on SAP HANA, you will need to use the SAP BTP cockpit to investigate. The Mendix Mendix Portal does not have information on the status or configuration of the SAP HANA service.
+If you have issues with your app running on SAP HANA, you will need to use the SAP BTP cockpit to investigate. The Mendix Portal does not have information on the status or configuration of the SAP HANA service.
 
 #### 8.2.2 SAP HANA Configuration for Trial Accounts
 
@@ -717,7 +717,7 @@ If you are the last member of the app development team, you will be asked if you
 {{% alert color="info" %}}
 This will not stop the app and delete the deployment of the app in SAP BTP.
 
-If you want to delete your app and all its resources, delete the environment and resources first before you leave the app via the Mendix Mendix Portal.
+If you want to delete your app and all its resources, delete the environment and resources first before you leave the app via the Mendix Portal.
 {{% /alert %}}
 
 You can still delete the app and its resources from the SAP BTP cockpit, but you will then have to remove all the resources individually.

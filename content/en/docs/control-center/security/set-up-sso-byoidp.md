@@ -85,7 +85,7 @@ To set up an IdP configuration for the Mendix Platform and your Mendix app, you 
     * a full list of compliant providers can be found in the [OpenID Certified OpenID Providers](https://openid.net/certification/)
 * The URL for the so-called "well-known endpoint" of your IdP, where configuration details can be retrieved
     * The IdP's well-known endpoint must have a URL for the JWKS endpoint
-* The Mendix Mendix Portal needs to be registered as a client in your IdP, and you need to know the corresponding client ID and secret
+* The Mendix Portal needs to be registered as a client in your IdP, and you need to know the corresponding client ID and secret
 
 ## 3 Configuring Your BYOIDP Setup
 
@@ -230,7 +230,7 @@ For Entra ID, you can create a mapping between Entra ID and Mendix as described 
 
 ### 8.1 Onboarding
 
-Users who do not currently have a Mendix account can sign in to the Mendix Platform via your own IdP. They are then taken through onboarding onto the Mendix Mendix Portal. They do not need to sign up explicitly.
+Users who do not currently have a Mendix account can sign in to the Mendix Platform via your own IdP. They are then taken through onboarding onto the Mendix Portal. They do not need to sign up explicitly.
 
 Existing users of the Mendix Portal can continue to use their accounts, but they will have to use the authentication provided by BYOIDP. They can no longer use the password they created on the Mendix Platform.
 

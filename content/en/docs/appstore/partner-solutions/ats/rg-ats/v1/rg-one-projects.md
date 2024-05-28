@@ -33,7 +33,7 @@ The name of the project/library.
 
 **Mendix Project ID**
 
-The project ID of the Mendix Mendix Portal project that you want to get your stories from.
+The project ID of the Mendix Portal project that you want to get your stories from.
 
 **Mendix API Key**
 
@@ -63,4 +63,4 @@ There are three sections on the dashboard. The upper-left section (1) shows you 
 
 ## 6 Mendix Portal integration
 
-Projects in ATS can be connected to Mendix Mendix Portal projects. If this is done, ATS will fetch all Sprints and user stories from the project. This allows you to connect your test cases to user stories.
+Projects in ATS can be connected to Mendix Portal projects. If this is done, ATS will fetch all Sprints and user stories from the project. This allows you to connect your test cases to user stories.

@@ -52,7 +52,7 @@ To start sending your Mendix app's metrics to Dynatrace, you need to set some en
 If you use Dynatrace to monitor more than one app and environment, you need some dimensions to be able to tell which app or environment these metrics apply to. To identify the metrics for your app and environment in Dynatrace, Mendix provides some default dimensions. You can also add extra dimensions.
 
 {{% alert color="info" %}}
-What Dynatrace calls "dimensions," other monitoring tools call "tags." The Mendix Mendix Portal therefore refers to a "tag" when it is setting up a Dynatrace "dimension."
+What Dynatrace calls "dimensions," other monitoring tools call "tags." The Mendix Portal therefore refers to a "tag" when it is setting up a Dynatrace "dimension."
 {{% /alert %}}
 
 #### 4.1.1 Default Dimensions

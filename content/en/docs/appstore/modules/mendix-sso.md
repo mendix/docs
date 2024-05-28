@@ -39,7 +39,7 @@ The Mendix SSO module has the following features:
 
 * Simple steps for adding the module to your app, no more configuration required
 * Single sign-on with your Mendix account for any application that implements this module
-* App end-user access management that is handled in the [Mendix Mendix Portal](/developerportal/)
+* App end-user access management that is handled in the [Mendix Portal](/developerportal/)
 
 {{% alert color="info" %}}
 [Mendix Admins](/control-center/company-settings/) can manage [groups](/control-center/groups/) that grant app permissions to groups of users.

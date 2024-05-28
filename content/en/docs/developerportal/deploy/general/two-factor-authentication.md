@@ -15,7 +15,7 @@ This extra layer of authentication is required when you perform sensitive activi
 
 {{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/production.png" max-width=30% alt="" class="no-border" >}}
 
-To use 2FA, you need to have access to your mobile phone and an active session in the Mendix Mendix Portal.
+To use 2FA, you need to have access to your mobile phone and an active session in the Mendix Portal.
 
 ## 2 Setting Up and Using 2FA
 

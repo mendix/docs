@@ -98,7 +98,7 @@ The diagram below shows the steps which you need to take to install Mendix for P
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-technical-appendix/private-cloud-technical-appendix-02/mx4pc-installation.png" class="no-border" >}}
 
-First, you create the namespace in the Mendix Mendix Portal.
+First, you create the namespace in the Mendix Portal.
 
 You can then download `mxpc-cli`, the configuration tool, which is used to install and configure Mendix for Private Cloud components and is customized for your Kubernetes namespace.
 

@@ -36,33 +36,33 @@ The Studio Pro top bar contains the following items:
 
 ### 2.1 Menus {#menus}
 
-In the Studio Pro top bar, you can see several menus, such as **Switch-to** menu, [Edit](/refguide/edit-menu/), [View](/refguide/view-menu/), and [Version Control](/refguide/version-control-menu/). Each menu contains menu items that allow you to perform various actions, for example, to [create a deployment package](/refguide/create-deployment-package-dialog/), set [preferences](/refguide/preferences-dialog/), or view the [**Errors**](/refguide/errors-pane/) pane. 
+In the Studio Pro top bar, you can see several menus, such as **Switch-to** menu, [Edit](/refguide/edit-menu/), [View](/refguide/view-menu/), and [Version Control](/refguide/version-control-menu/). Each menu contains menu items that allow you to perform various actions, such as to [create a deployment package](/refguide/create-deployment-package-dialog/), set [preferences](/refguide/preferences-dialog/), or view the [**Errors**](/refguide/errors-pane/) pane. 
 
 For more information on menus, see [Menus](/refguide/menus/). 
 
 ### 2.2 Run and View App {#run-and-view}
 
-You can deploy your app by clicking the **Publish** or **Run Locally** ({{% icon name="controls-play" %}}) buttons. To view your deployed app, click **View App**. 
+Deploy your app by clicking the **Publish** or **Run Locally** ({{% icon name="controls-play" %}}) buttons. To view your deployed app, click **View App**. 
 
 {{< figure src="/attachments/refguide/studio-pro-overview/view-and-publish.png" alt="View and Publish buttons" class="no-border" >}}
 
 For more information on deployment in Mendix, see [Deployment](/developerportal/deploy/).
 
-For more information on deploying your app and versioning it, see the [Versioning an App Deployed to the Cloud](/refguide/using-version-control-in-studio-pro/#versioning-app) section in *Using Version Control in Studio Pro*. 
+For more information on deploying and versioning your app, see the [Versioning an App Deployed to the Cloud](/refguide/using-version-control-in-studio-pro/#versioning-app) section in *Using Version Control in Studio Pro*. 
 
 ### 2.3 Links and User Profile Menu {#links}
 
 You can find links to the [Developer Portal](/developerportal/) and [Marketplace](/appstore/) in the upper-right corner of Studio Pro.
 
-Your profile picture is displayed next to them if you are signed in. When you click the profile picture, the drop-down menu is displayed with your full name and email, as well as links to your user profile, My Apps screen, and signing out option. 
+Your profile picture is displayed next to them if you are signed in. When you click the profile picture, the drop-down menu is displayed with your full name and email, as well as links to your user profile, My Apps screen, and the **Sign Out** option. 
 
 ## 3 App Structure (App Explorer)
 
-An app consists of individual files (*documents*) and settings that are grouped in folders and [modules](/refguide/modules/). The complete structure of your app can be viewed in the [App Explorer](/refguide/app-explorer/). 
+An app consists of individual files (documents) and settings that are grouped in folders and [modules](/refguide/modules/). The complete structure of your app can be viewed in the [App Explorer](/refguide/app-explorer/). 
 
 ## 4 Working Area {#working-area}
 
-A working area is a current document tab that you work in. The working area and its settings differs depending on the editor (for example, pages, microflows, domain model editors) and type of the document. 
+A working area is a current document tab that you work in. The working area and its settings differs depending on the editor (for example, pages, microflows, domain model editors) and the type of document. 
 
 ### 4.1 Document Tabs {#documents}
 
@@ -82,7 +82,7 @@ Dockable panes can be positioned around the working area and contain various ele
 
 {{< figure src="/attachments/refguide/studio-pro-overview/pane-example.png" alt="Properties Pane Example" width="300" class="no-border" >}}
 
-For example, you can view [list of errors](/refguide/errors-pane/) or run [MxAssist Best Practice bot](/refguide/mx-assist-performance-bot/), configure properties of a specific document or an element, view toolbox. For more information on panes and their layout, see [View Menu](/refguide/view-menu/).
+For example, you can view [list of errors](/refguide/errors-pane/), run [MxAssist Best Practice bot](/refguide/mx-assist-performance-bot/), configure properties of a specific document or an element, or view toolbox. For more information on panes and their layout, see [View Menu](/refguide/view-menu/).
 
 ## 6 Status Bar {#status-bar}
 
@@ -90,7 +90,7 @@ At the bottom of the Studio Pro main window pane is a status bar. On the left is
 
 {{< figure src="/attachments/refguide/studio-pro-overview/status-bar.png" alt="Status Bar Example" class="no-border" >}}
 
-On the right is the currently selected language. If you have set up multiple languages in your app you can change the currently selected language by clicking here. For more information see [Language Menu](/refguide/translatable-texts/).
+On the right is the currently selected language. If you have set up multiple languages in your app, you can change the currently selected language by clicking here. For more information, see [Language Menu](/refguide/translatable-texts/).
 
 ## 7 Shortcut Keys {#shortcuts}
 
@@ -117,7 +117,7 @@ There are alternative ways to navigate between tabs within panes:
 | <kbd>Ctrl</kbd> + <kbd>1</kbd> - <kbd>0</kbd> | Switch to tab at selected tab position in the current window. |
 | <kbd>Ctrl</kbd> + <kbd>PgUp</kbd> / <kbd>PgDn</kbd> | Switch to next/previous tab in active pane. |
 
-Most menu items also have shortcut keys assigned to them that can be used in all panes. These are shown in the menus, listed in the [Menu Shortcut Keys](#menu-shortcuts) section, below, and also listed on the documentation page for each menu under [Menus](/refguide/menus/).
+Most menu items also have shortcut keys assigned to them that can be used in all panes. These are shown in the menus, listed in the [Menu Shortcut Keys](#menu-shortcuts) section, below, and are listed on the documentation page for each menu under [Menus](/refguide/menus/).
 
 ##### 7.1.1.2 Editors Only {#editors-only}
 
@@ -130,7 +130,7 @@ The following key combinations work in the editors, such as the Domain Model, Pa
 | <kbd>Ctrl</kbd> + <kbd>X</kbd> | Move the selected element to the clipboard. |
 | <kbd>Ctrl</kbd> + <kbd>Y</kbd> | Redo the last undone action in an editor pane. |
 | <kbd>Ctrl</kbd> + <kbd>Z</kbd> | Undo the last action in an editor pane. |
-| <kbd>Alt</kbd>+(<kbd>Shift</kbd>)+&nbsp;<kbd>Tab</kbd> | Navigate between open editors (opens pane navigation dialog where editors are called *active files*). |
+| <kbd>Alt</kbd>+(<kbd>Shift</kbd>)+&nbsp;<kbd>Tab</kbd> | Navigate between open editors (opens pane navigation dialog where editors are called Active Files). |
 | <kbd>Ctrl</kbd> + Mouse scroll wheel | Zooms in or out. |
 | <kbd>Ctrl</kbd>+(<kbd>Shift</kbd>)+&nbsp;<kbd>-</kbd> | Zooms in or out. |
 | <kbd>Shift</kbd>&nbsp;+&nbsp;Mouse&nbsp;scroll&nbsp;wheel | Scrolls left or right. Works as if you were using the horizontal scroll bar. |
@@ -143,7 +143,7 @@ The following key combinations work in the panes of Studio Pro:
 
 | Key                                                    | Description                                                  |
 | ------------------------------------------------------ | ------------------------------------------------------------ |
-| <kbd>Ctrl</kbd>+(<kbd>Shift</kbd>)&nbsp;+<kbd>F7</kbd> | Navigate between panes (opens pane navigation dialog where panes are called *active tool windows*). |
+| <kbd>Ctrl</kbd>+(<kbd>Shift</kbd>)&nbsp;+<kbd>F7</kbd> | Navigate between panes (opens pane navigation dialog where panes are called Active Tool windows). |
 
 #### 7.1.2 Dialog Boxes
 
@@ -184,7 +184,7 @@ The following shortcut keys are available in the page editor:
 | Key | Description |
 | --- | --- |
 | Arrow keys | Moves the selection box to the widget or element in the direction of the arrow key. For example, if currently a label is selected and you press the right arrow key, the text box to the right of it becomes selected. |
-| <kbd>Ctrl</kbd>&nbsp;+&nbsp;arrow&nbsp;keys | Moves the currently selected item up/down or left/right. This works on table columns and rows, tab pages, data grid and data view buttons, search fields, etc. |
+| <kbd>Ctrl</kbd>&nbsp;+&nbsp;arrow&nbsp;keys | Moves the currently selected item up/down or left/right. This works on items such as table columns and rows, tab pages, data grid and data view buttons, and search fields. |
 | <kbd>Enter</kbd> | Edits the properties of the currently selected object in a dialog box. |
 | <kbd>F2</kbd> | Edits the caption of a label or button, or the contents of text, inline on the page. You can also just start typing a letter or a digit and the caption will be replaced by what you type. |
 
@@ -211,8 +211,8 @@ The following shortcut keys are assigned to menu actions that can be used in all
 | Key | Description |
 | --- | --- |
 | <kbd>F1</kbd> | Help. |
-| <kbd>F3</kbd> | Highlights the next find result in the **Find Results** pane and open it in an editor. |
-| <kbd>Shift</kbd> + <kbd>F3</kbd> | Highlights the previous find result in the **Find Results** pane and open it in an editor. |
+| <kbd>F3</kbd> | Highlights the next find result in the **Find Results** pane and opens it in an editor. |
+| <kbd>Shift</kbd> + <kbd>F3</kbd> | Highlights the previous find result in the **Find Results** pane and opens it in an editor. |
 | <kbd>F4</kbd> | Synchronizes the app directory. |
 | <kbd>Ctrl</kbd> + <kbd>F4</kbd> | Exits. |
 | <kbd>F5</kbd> | Runs the app locally so you can view the app. |
@@ -220,13 +220,13 @@ The following shortcut keys are assigned to menu actions that can be used in all
 | <kbd>Ctrl</kbd> + <kbd>F5</kbd> | Deploys to licensed cloud node. |
 | <kbd>F6</kbd> | Deploys for Eclipse. |
 | <kbd>F7</kbd> | Creates a deployment package. |
-| <kbd>F8</kbd> | Highlights the next error in the **Errors** pane and open it in an editor. |
-| <kbd>Shift</kbd> + <kbd>F8</kbd> | Highlights the previous error result in the **Errors** pane and open it in an editor. |
+| <kbd>F8</kbd> | Highlights the next error in the **Errors** pane and opens it in an editor. |
+| <kbd>Shift</kbd> + <kbd>F8</kbd> | Highlights the previous error result in the **Errors** pane and opens it in an editor. |
 | <kbd>F9</kbd> | Shows the currently running app in the browser (responsive). |
 | <kbd>Ctrl</kbd> + <kbd>F9</kbd> | Shows the currently running app in the browser (phone simulation). |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F9</kbd> | Shows the currently running app in the browser (tablet simulation). |
-| <kbd>F11</kbd> | Enables and disable full screen mode. |
-| <kbd>Shift</kbd> + <kbd>F11</kbd> | Enables and disable distraction free mode. |
+| <kbd>F11</kbd> | Enables and disables full screen mode. |
+| <kbd>Shift</kbd> + <kbd>F11</kbd> | Enables and disables distraction free mode. |
 | <kbd>Ctrl</kbd> + <kbd>F</kbd> | Opens search dialog box. |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd> | Opens advanced search dialog box. |
 | <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>F</kbd> | Displays usages of the selected object. |

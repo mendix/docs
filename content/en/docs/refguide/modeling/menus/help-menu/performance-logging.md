@@ -33,7 +33,7 @@ If it is unchecked, performance logging is disabled:
 
 {{< figure src="/attachments/howto/monitoring-troubleshooting/performance-logging/logging-disabled.png" class="no-border" >}}
 
-## 3 Start a New Session of Performance Logging
+## 3 Start a New Session of Performance Logging {#new-session}
 
 When you click **Start new session**, you will see the following dialog:
 
@@ -45,20 +45,20 @@ You can specify a name for the new performance logging session that can be used 
 
 ## 4 View Performance Measurements
 
-Upon clicking on the 'Show measurements' menu item, we would get the following dialog:
+When you click **Show measurements**, you will see the following dialog:
 
 {{< figure src="/attachments/howto/monitoring-troubleshooting/performance-logging/view-measurements.png" class="no-border" width="700" >}}
 
-The top section of the dialog, named 'Measurement Source' allows us to choose the source for the performance measurements we would like to view: It can be either a logging session we've created earlier (see 'Start new session of performance logging' section above) or a log file where the measurements were logged.
+The **Measurement Source** field allows you to choose the source for the performance measurements you want to view: a previously created logging session or a log file where the measurements were logged.
 
-The main section in this dialog displays the data grid with the measurements:
+The dialog displays the data grid with the measurements:
 
-* The 'Category' column: The measurements are logically splitted to categories (i.e. measurements related to 'Documents', 'UI' & etc.). This column displays the category of the measurement.
-* The 'ID' column displays a unique ID for the measurement that is being logged.
-* The 'Description' column displays a meaningful description for the measurement that is being logged.
-* The 'Duration' column displays the execution time (in milliseconds) of the currently logged operation (i.e. how long did it take to create a microflow editor).
+* **ID**: displays a unique ID for the measurement that is being logged
+* **Category**: displays the category of the measurement, which are split to categories (such as measurements related to documents and UI)
+* **Description** : displays a description for the measurement that is being logged
+* **Duration**: displays the execution time (in milliseconds) of the currently logged operation
 
-Lastly, the 'Generate Report' at the bottom allows to view the results in text editor documents (i.e. Notepad).
+The **Generate Report** button in the bottom-right corner allows you to view the results in text editor documents (such as Notepad).
 
 ## 5 Compare Performance Measurements
 

@@ -7,14 +7,19 @@ tags: ["studio pro", "strict mode", "strict", "app security", "security", "api"]
 
 ## 1 Introduction
 
-Configuring [access rules](/refguide/access-rules/) is essential for the security of your app. However, accurately setting up these rules can be challenging. To make your app more secure in case the access rules are not configured correctly, you can enable Strict Mode. 
+Configuring [access rules](/refguide/access-rules/) is essential for the security of your app. However, accurately setting up these rules can be challenging. In case you make any mistakes setting up access rules, you want a saftey net when you roll your app out to users. To make your app more secure in cases where access rules are not configured correctly, you can enable strict mode. 
 
-Strict Mode will help ensuring that entities are accessible only in the ways defined within your model — through microflows, nanoflows, widgets, or pages — by restricting certain Client APIs. 
+Strict mode will help ensure that entities are accessible only in the ways defined within your model — through microflows, nanoflows, widgets, or pages — by restricting certain Client APIs. 
 
-Please note, Strict Mode is exclusively available for the React Client.
+Empploying strict mode can be a major differentiator for app saftey. Strict mode is set up in keeping with the guidelines outlined in the *OWASP Low-Code/No-Code Top 10*, addressing [LCNC-SEC-05: Security Misconfiguration](https://owasp.org/www-project-top-10-low-code-no-code-security-risks/content/2022/en/LCNC-SEC-05-Security-Misconfiguration).
+
+{{% alert color="info" %}}
+Please note, strict mode is exclusively available for the React Client.
+{{% /alert %}}
 
 ## 2 Restricted Client APIs
-When Strict Mode is enabled, the following [Client APIs](/apidocs-mxsdk/apidocs/client-api/) will be restricted:
+
+When strict mode is enabled, the following [Client APIs](/apidocs-mxsdk/apidocs/client-api/) will be restricted:
 
 | API           | Remarks                 |
 |---------------|-------------------------|
@@ -25,14 +30,13 @@ When Strict Mode is enabled, the following [Client APIs](/apidocs-mxsdk/apidocs/
 | data.rollback |                         |
 | data.get      | Except by GUID or GUIDs |
 
-The APIs will be disabled on the Runtime, which means that these APIs cannot be invoked in online apps via JavaScript actions or the browser's console. If any of these APIs are used in a JavaScript action, consider to use a nanoflow instead.
-
-This aids in following the guidelines outlined in the *OWASP Low-Code/No-Code Top 10*, addressing [LCNC-SEC-05: Security Misconfiguration](https://owasp.org/www-project-top-10-low-code-no-code-security-risks/content/2022/en/LCNC-SEC-05-Security-Misconfiguration).
+The APIs will be disabled on the Runtime, which means that these APIs cannot be invoked in online apps via JavaScript actions or the browser's console. If any of these APIs are used in a JavaScript action, consider using a nanoflow instead.
 
 ## 3 Save Changes Action
+
 In Strict Mode, your model is analyzed by Studio Pro to ensure that only entities within editable widgets can be saved during a save changes action. 
 
-Additionally, since Save Changes Actions are not analyzed for layouts, placing a save button within a layout triggers a consistency error. Instead, a save button within a snippet can be used.
+Additionally, since **Save Changes Actions** are not analyzed for layouts, placing a save button within a layout triggers a consistency error. Instead, use a save button within a snippet.
 
 ## 4 Read More
 

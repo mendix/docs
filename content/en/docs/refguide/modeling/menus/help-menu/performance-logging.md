@@ -62,15 +62,16 @@ The **Generate Report** button in the bottom-right corner allows you to view the
 
 ## 5 Compare Performance Measurements
 
-Upon clicking on the 'Compare measurements' menu item, we would get the following dialog:
+When you click **Compare measurements**, you will see the following dialog:
 
 {{< figure src="/attachments/howto/monitoring-troubleshooting/performance-logging/compare-measurements-dialog.png" class="no-border" >}}
 
-This dialog allows us to compare between two different performance measurements sources (i.e. installed version, log file).
+This allows you to compare between two different performance measurements sources (for example, the installed version and log file).
 
-The rows in the grid are coloured according to the following indication:
-* Gray -> no change in the execution time.
-* Green -> there was an improvement in the execution time.
-* Red -> there was a degradation in the execution time.
+The rows in the grid are colored according to the following indication:
 
-Similarly to the 'View performance measurements', the 'Generate Report' at the bottom allows to view the results in text editor documents 
+* Gray: there is no change in the execution time
+* Green: there was an improvement in the execution time
+* Red: there was a degradation in the execution time
+
+The **Generate Report** at the bottom-right corner allows you to view the results in text editor documents. 

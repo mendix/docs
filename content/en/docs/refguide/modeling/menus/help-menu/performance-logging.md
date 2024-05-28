@@ -2,26 +2,26 @@
 title: "Performance Logging"
 url: /refguide/performance-logging/
 
-description: "Describes how to enable, view and compare performance metrics to key functionalities in studio-pro."
+description: "Describes how to enable, view and compare performance metrics to key functionalities in Studio Pro."
 tags: ["monitoring", "troubleshooting", "performance", "performance logging"]
 ---
 
 ## 1 Introduction
 
-Studio-pro can log performance measurements (when this feature is enabled) to key functionalities (such as: opening/closing microflow editors & moving items around in the app explorer), that can help in identifying performance degradations.
+Studio Pro can log performance measurements to key functionalities (such as opening and closing microflow editors and moving items around in the App Explorer) that can help identify performance degradations.
 
-This how-to explains how to enable, log, view and compare performance metrics to key functionalities in studio-pro. This feature can be reached from the 'Help' menu -> 'Support Tools' -> 'Performance logging':
+The performance logging feature can be reached by clicking **Help** > **Support Tools** > **Performance logging**:
 
 {{< figure src="/attachments/howto/monitoring-troubleshooting/performance-logging/performance-logging-menu.png" class="no-border" >}}
 
-This how-to teaches you how to do the following:
+This tool enables you to do the following:
 
 * Enable performance logging
 * Start a new session of performance logging
 * View performance measurements
 * Compare performance measurements
 
-## 2 Enable performance logging
+## 2 Enable erformance logging
 
 The first menu item ('Enable performance logging') is a checkable one: It can be checked or unchecked.
 

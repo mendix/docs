@@ -463,7 +463,7 @@ Azure workload identities allow a Kubernetes Service Account to authenticate its
 
     Ensure that you have the [Cluster OIDC Issuer URL](https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster#update-an-existing-aks-cluster). You will need the URL to complete the configuration.
 
-2. Use the [az identity federated-credential create](https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster#establish-federated-identity-credential) command, or by going to the **Federated credentials** tab and using the **Add Credential** wizard. This will allow the *Postgres Admin* Kubernetes Service Account to be associated with its **Managed identity**.
+2. Add a **Federated Credential** to the **Managed identity** by using [az identity federated-credential create](https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster#establish-federated-identity-credential) command, or going to the **Federated credentials** tab and using the **Add Credential** wizard. This will allow the *Postgres Admin* Kubernetes Service Account to be associated with its **Managed identity**.
 
 3. Fill in the following details:
 
@@ -693,7 +693,7 @@ Azure workload identities allow a Kubernetes Service Account to authenticate its
 
     Ensure that you have the [Cluster OIDC Issuer URL](https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster#update-an-existing-aks-cluster). You will need the URL to complete the configuration.
 
-2. Use the [az identity federated-credential create](https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster#establish-federated-identity-credential) command, or by going to the **Federated credentials** tab and using the **Add Credential** wizard. This will allow the *SQL Admin* Kubernetes Service Account to be associated with its **Managed identity**.
+2. Add a **Federated Credential** to the **Managed identity** by using [az identity federated-credential create](https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster#establish-federated-identity-credential) command, or going to the **Federated credentials** tab and using the **Add Credential** wizard. This will allow the *SQL Admin* Kubernetes Service Account to be associated with its **Managed identity**.
 
 3. Fill in the following details:
 
@@ -711,7 +711,7 @@ Azure workload identities allow a Kubernetes Service Account to authenticate its
    az account get-access-token --resource https://database.windows.net --output tsv | cut -f 1 | tr -d '\n' | iconv -f ascii -t UTF-16LE > /tmp/token && sqlcmd -S <hostname> -G -P /tmp/token && rm /tmp/token
    ```
 
-6. In the sqlcmd client, run the following commands (replace `<sql-admin-managed-identity>` with the *SQL Admin* Managed Identity name:
+6. In the sqlcmd client, run the following commands (replace `<sql-admin-managed-identity>` with the *SQL Admin* Managed Identity name):
 
    ```sql {linenos=false}
    CREATE USER [<sql-admin-identity-name>] FROM EXTERNAL PROVIDER;
@@ -1656,7 +1656,7 @@ When a new environment is created, the Mendix Operator performs the following ac
 When an existing environment is deleted, the Mendix Operator performs the following actions:
 
 * Delete that environment's role assignment.
-* Delete that environment's container.
+* Delete that environment's container and its files.
 * Delete that environment's Managed Identity.
 * Delete that environment's Kubernetes Service Account.
 * Delete that environment's Kubernetes blob file storage credentials secret.
@@ -1685,7 +1685,7 @@ Azure workload identities allow a Kubernetes Service Account to authenticate its
 
     Ensure that you have the [Cluster OIDC Issuer URL](https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster#update-an-existing-aks-cluster). You will need the URL to complete the configuration.
 
-2. Use the [az identity federated-credential create](https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster#establish-federated-identity-credential) command, or by going to the **Federated credentials** tab and using the **Add Credential** wizard. This will allow the *Blob Storage Admin* Kubernetes Service Account to be associated with its **Managed identity**.
+2. Add a **Federated Credential** to the **Managed identity** by using [az identity federated-credential create](https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster#establish-federated-identity-credential) command, or by going to the **Federated credentials** tab and using the **Add Credential** wizard. This will allow the *Blob Storage Admin* Kubernetes Service Account to be associated with its **Managed identity**.
 
 3. Fill in the following details:
 
@@ -1857,7 +1857,7 @@ The Postgres provisioner only creates a database and Postgres user (Postgres rol
 To prevent authentication or connectivity issues, create all AWS resources in the same account and region.
 {{% /alert %}}
 
-For more details, see the [Postgres (IAM authentication](#database-postgres-iam) and [S3 IRSA mode](#s3-irsa-mode) plan details.
+For more details, see the [Postgres (IAM authentication)](#database-postgres-iam) and [S3 IRSA mode](#s3-irsa-mode) plan details.
 
 #### 4.1.1 RDS Database
 
@@ -2103,8 +2103,8 @@ To create the required storage plans, do the following steps:
     * **Host** should be set to the **Endpoint** of the RDS database instance
     * **Port** should be set to `5432` (or custom port if the RDS instance is using a non-standard port)
     * **Database Name** should be set to `postgres` (or a custom login database if the default database is not available)
-    * **Username** should be set to the **Master username** of the RDS database instance
     * **Authentication** should be set to `aws-iam`
+    * **Username** should be set to the **Master username** of the RDS database instance
     * **IAM Role ARN** should be set to the *Storage Provisioner admin role* ARN
     * **K8s Service Account** should use the same Kubernetes Service Account that was specified in the *Storage Provisioner admin role* trust policy. If you used the recommended Service Account name, paste `mendix-storage-provisioner-iam` in this field.
 
@@ -2124,3 +2124,158 @@ To create the required storage plans, do the following steps:
 The Mendix Operator will create an IAM role for every new environment.
 Do not remove or modify `privatecloud.mendix.com/s3-prefix` or `privatecloud.mendix.com/database-user` tags from that role - those tags are used by the *environment template policy* to limit the environment's scope and prevent an environment from accessing data from other apps using the same S3 bucket or RDS instance.
 {{% /alert %}}
+
+### 4.2 Azure Managed Identity-based Storage{#walkthrough-azure-azwi}
+
+Azure recommends using [workload identity authentication](https://learn.microsoft.com/en-us/azure/aks/workload-identity-overview) instead of static credentials.
+This guide explains how to set up and use a database and blob file storage plan using Azure best practices.
+
+{{% alert color="warning" %}}
+This feature requires an Mendix app based on Mendix 10.10 (or later) and Mendix Operator version 2.17 (or later).
+{{% /alert %}}
+
+Before you begin, you need to create an AKS cluster and install Mendix for Private Cloud in that cluster.
+
+{{% alert color="warning" %}}
+This walkthrough provides examples for two database types: Postgres and Azure SQL, and you only need to create one of them.
+{{% /alert %}}
+
+1. Enable managed identities for your AKS cluster as [described in the Azure documentation](https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster#update-an-existing-aks-cluster). This only need to be done once per cluster.
+
+    Ensure that you have the [Cluster OIDC Issuer URL](https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster#update-an-existing-aks-cluster). You will need this URL to complete the configuration on Step 3.
+
+2. Create a new managed identity using the [az identity create](https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster#create-a-managed-identity) command, or by using the [Create a user-assigned managed identity](https://learn.microsoft.com/en-us/entra/identity/managed-identities-azure-resources/how-manage-user-assigned-managed-identities?pivots=identity-mi-methods-azp#create-a-user-assigned-managed-identity) wizard in the Azure Portal.
+
+    This Managed Identity would act as a *storage admin*. When a new environment is created, this **storage admin** will create that environment's tenant database, blob storage and an environment's Managed Identity (this environment-specific managed identity would only be able to access the environment's tenant database and file storage).
+
+    For every new environment, Mendix Operator will create an environment managed identity - in the same region and resource group as the *storage admin* managed identity.
+
+    Later, you'll need the following details of the *storage admin* managed identity:
+
+    * **Name**
+    * **Client ID**
+    * **Object (principal) ID**
+
+3. Add a **Federated Credential** to the **Managed identity** by using [az identity federated-credential create](https://learn.microsoft.com/en-us/azure/aks/workload-identity-deploy-cluster#establish-federated-identity-credential) command, or going to the **Federated credentials** tab and using the **Add Credential** wizard. This will allow the *storage admin* Kubernetes Service Account to be associated with its **Managed identity**.
+
+    Fill in the following details:
+
+    * **Federated credential scenario** - Kubernetes accessing Azure resources
+    * **Cluster Issuer URL** - the Cluster OIDC URL from step 1
+    * **Namespace** - the Kubernetes namespace where the Operator is installed; for Global Operator installations, you must specify the managed namespace in the **Namespace** field.
+    * **Service Account** - on the Kubernetes side, this would be a *storage admin* account assigned to the **Managed Identity** created on Step 2. To avoid conflicts with existing ServiceAccounts, as a best practice, use `mendix-storage-provisioner-wi` as the Kubernetes ServiceAccount name. You will this name later.
+    * **Name** - any value
+
+4. Assign this *storage admin* Managed Identity a [Managed Identity Contributor](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#managed-identity-contributor) role in its resource group.
+
+Workload Identity authentication uses the same Managed Identity and Kubernetes Service Account to authenticate with Azure services. It is not possible to assign more than one Kubernetes Service Account to a Mendix app environment. To avoid conflicts, the database and file storage provisioners will create the environment's tenant managed identity with the same parameters in parallel.
+
+For more details, see the [Postgres (Azure workload identity authentication)](#database-postgres-azwi), [SQL Server (Azure workload identity authentication)](#database-sqlserver-azwi) and [Azure Blob Storage (Azure workload identity authentication)](#blob-azure-azwi) plan details.
+
+#### 4.2.1 Postgres (Flexible Server) Database
+
+To configure the required settings for a Postgres database, do the following steps:
+
+1. Create a Postgres (Flexible Server) instance. Navigate to the **Overview** page, and write down the **Server name**.
+
+2. Navigate to the **Authentication** page. Set authentication to **Microsoft Entra authentication only** and press Save.
+
+3. Add the *storage admin* Managed Identity you've created [in the beginning of this walkthrough](#walkthrough-azure-azwi) as a Microsoft Entra Admin.
+
+{{% alert color="info" %}}To improve security, set the firewall to only allow connections to the database from the Kubernetes cluster.{{% /alert %}}
+
+#### 4.2.2 Azure SQL Database
+
+To configure the required settings for an Azure SQL, do the following steps:
+
+1. Create an Azure SQL Server instance. Navigate to the **Overview** page, and write down the **Server name**.
+
+2. Navigate to the **Microsoft Entra ID** page, and add yourself (or your Entra group) as an [Entra Admin user](https://learn.microsoft.com/en-us/azure/azure-sql/database/authentication-aad-configure?view=azuresql&tabs=azure-powershell#azure-portal-1) in the Azure SQL database.
+
+    Azure SQL can only have one Entra Admin, and to add multiple users you'll need to do grant access through an Entra group.
+
+3. Open Azure Cloud Shell (or a Bash-compatible terminal) and run `az login` to authenticate with Entra ID.
+
+4. Run the following command to [connect to the Azure SQL database](https://learn.microsoft.com/en-us/sql/connect/odbc/linux-mac/connecting-with-sqlcmd?view=azuresqldb-current), replacing `<hostname>` with the **Server name** from Step 1:
+
+   ```shell {linenos=false}
+   az account get-access-token --resource https://database.windows.net --output tsv | cut -f 1 | tr -d '\n' | iconv -f ascii -t UTF-16LE > /tmp/token && sqlcmd -S <hostname> -G -P /tmp/token && rm /tmp/token
+   ```
+
+5. In the sqlcmd client, run the following commands (replace `<storage-admin-identity-name>` with the **Name** of the *storage admin* Managed Identity you've created [in the beginning of this walkthrough](#walkthrough-azure-azwi):
+
+   ```sql {linenos=false}
+   CREATE USER [<storage-admin-identity-name>] FROM EXTERNAL PROVIDER;
+   GO
+   ALTER ROLE dbmanager ADD MEMBER [<storage-admin-identity-name>];
+   quit
+   ```
+
+{{% alert color="info" %}}To improve security, set the firewall to only allow connections to the database from the Kubernetes cluster.{{% /alert %}}
+
+#### 4.2.3 Azure Blob Storage
+
+To configure the required settings for an S3 bucket, do the following steps:
+
+1. Create an Azure Blob Storage account, and write down the following details from its **Overview** page:
+
+   * Name of the storage account
+   * **Resource group**
+   * **Subscription ID**
+
+2. Grant the *storage admin* Managed Identity (created [in the beginning of this walkthrough](#walkthrough-azure-azwi)) the following permissions:
+
+  * A [Storage Blob Data Contributor](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/storage#storage-blob-data-contributor) role scoped to the blob storage account.
+  * A [Role Based Access Control Administrator](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/general#role-based-access-control-administrator) role scoped to the blob storage account, and constrained to only have permissions to add the [Storage Blob Data Contributor](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/storage#storage-blob-data-contributor) role to Service principals.
+
+{{% alert color="info" %}}To improve security, set the firewall to only allow connections to the database from the Kubernetes cluster.{{% /alert %}}
+
+{{% alert color="info" %}}To allow recovery of deleted files, set up [Data protection](https://learn.microsoft.com/en-us/azure/storage/blobs/data-protection-overview) options such as **Container soft delete** and/or **Blob soft delete**.{{% /alert %}}
+
+#### 4.2.4 Creating the Storage Plans
+
+To create the required storage plans, do the following steps:
+
+1. Run the `mxpc-cli` configuration tool and select to configure the **Database Plan** and **Storage Plan**.
+
+2. If you created a Postgres database:
+
+    In the **Database** configuration tab, select `postgres` as the database type, and provide the following details:
+
+    * **Host** should be set to the **Server name** of the Postgres database server
+    * **Port** should be set to `5432` (or custom port if the Postgres server is using a non-standard port)
+    * **Strict TLS** should be set to *yes*
+    * **Database Name** should be set to `postgres` (or a custom login database if the default database is not available)
+    * **Authentication** should be set to `azure-wi`
+    * **Managed Identity name** should be set to the **Name** of the *storage admin* Managed Identity created [in the beginning of this walkthrough](#walkthrough-azure-azwi)
+    * **Managed Identity Client ID** should be set to the **Client ID** of the *storage admin* Managed Identity created [in the beginning of this walkthrough](#walkthrough-azure-azwi)
+    * **K8s Service Account** should use the same Kubernetes Service Account that was specified [in the beginning of this walkthrough](#walkthrough-azure-azwi). If you used the recommended Service Account name, paste `mendix-storage-provisioner-wi` in this field.
+
+3. If you created an Azure SQL database:
+
+   In the **Database** configuration tab, select `sqlserver` as the database type, and provide the following details:
+
+    * **Host** should be set to the **Server name** of the Azure SQL database server
+    * **Port** should be set to `1433` (or custom port if the SQL Server instance is using a non-standard port)
+    * **Strict TLS** should be set to *yes*
+    * **Authentication** should be set to `azure-wi`
+    * **Managed Identity Client ID** should be set to the **Client ID** of the *storage admin* Managed Identity created [in the beginning of this walkthrough](#walkthrough-azure-azwi)
+    * **K8s Service Account** should use the same Kubernetes Service Account that was specified [in the beginning of this walkthrough](#walkthrough-azure-azwi). If you used the recommended Service Account name, paste `mendix-storage-provisioner-wi` in this field.
+    * **Is Azure SQL Server** should be enabled to change default settings:
+      * **Elastic Pool** - Specifies an existing Elastic Pool to use (can be left empty if the new app's database should not be using an elastic pool)
+      * **Edition** - Specifies the [database edition/tier](https://learn.microsoft.com/en-us/sql/t-sql/statements/create-database-transact-sql?view=azuresqldb-current&tabs=sqlpool#edition) to use, for example `Basic` to use an entry-level tier. Can be left empty, in this case Azure SQL will use the default `GeneralPurpose` edition.
+      * **Service Objective** - Specifies the [database service objective](https://learn.microsoft.com/en-us/sql/t-sql/statements/create-database-transact-sql?view=azuresqldb-current&tabs=sqlpool#service_objective) (performance level), for example `Basic` to use an entry-level tier. Can be left empty, in which case Azure SQL will use the default service objective (such as `GP_Gen5_2`).
+      * **Maximum Size** - Specifies the database maximum size, for example `1 GB`.
+
+{{% alert color="warning" %}}To avoid unexpected costs associated with the default Azure SQL database tier, set **Edition** and **Service Objective** to `Basic`. If a higher database tier is needed later, the Azure Portal allows to change the database tier of any database.{{% /alert %}}
+
+4. In the **Storage Plan** configuration tab, select `azure-blob` as the storage type, and provide the following details:
+
+    * **Account name** should be set to the Blob Storage account name
+    * **Managed Identity authentication** should be set to *yes*
+    * **Account Subscription ID** should be set to the **Subscription ID** of the Blob Storage account
+    * **Account Resource Group** should be set to the **Resource Group** of the Blob Storage account
+    * **Managed Identity Client ID** should be set to the **Client ID** of the *storage admin* Managed Identity created [in the beginning of this walkthrough](#walkthrough-azure-azwi)
+    * **K8s Service Account** should use the same Kubernetes Service Account that was specified [in the beginning of this walkthrough](#walkthrough-azure-azwi). If you used the recommended Service Account name, paste `mendix-storage-provisioner-wi` in this field.
+
+5. Apply the changes - you can now use the new database and blob storage plans to create new environments with Managed Identity authentication.

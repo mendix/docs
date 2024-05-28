@@ -32,10 +32,11 @@ To use the Splunk Cloud Platform and send data to Splunk Cloud Platform from you
 
 To send your runtime information to Splunk Cloud Platform, you need to set it up using environment variables in the Mendix Portal.
 
-1. Go to the **Environments** page of your app in the Mendix Portal.
-2. Click **Details** on the environment you wish to monitor with Splunk Cloud Platform. 
-3. Switch to the [**Runtime** tab](/developerportal/deploy/environments-details/#runtime-tab).
-4. Add the following **Custom Environment Variables**.
+1. Open your app in [Apps](https://sprintr.home.mendix.com/).
+2. Go to the **Environments** page.
+3. Click **Details** on the environment you wish to monitor with Splunk Cloud Platform. 
+4. Switch to the [**Runtime** tab](/developerportal/deploy/environments-details/#runtime-tab).
+5. Add the following **Custom Environment Variables**.
     | Variable | Description | Default |
     | --- | --- | --- |
     | `SPLUNK_HOST` | The hostname or the IP address of the Splunk Cloud Platform Controller without the scheme (protocol). An example is `test.splunkcloud.com`. | |
@@ -43,7 +44,7 @@ To send your runtime information to Splunk Cloud Platform, you need to set it up
     | `SPLUNK_TOKEN` | An access token to the Splunk Cloud Platform. To create a new token on the Splunk Cloud dashboard, open the Splunk Cloud dashboard in a browser, go to **Settings** > **Data Input** > **HTTP Event Collector**, and click **New Token** (on the upper-right corner of the page). | |
     | `LOGS_REDACTION` | Email addresses are automatically redacted before log entries are sent to Splunk Cloud Platform. To disable this redaction, set `LOGS_REDACTION` to `false`. The environment variable `SPLUNK_LOGS_REDACTION` is still supported, but it is now deprecated and will be removed in a later version. Its use is not recommended. | `true` |
 
-5. Return to the **Environments** page for your app and **Deploy** or **Transport** your app into the selected environment.
+6. Return to the **Environments** page for your app and **Deploy** or **Transport** your app into the selected environment.
 
     {{% alert color="warning" %}}The first time you set up the Splunk Cloud Platform integration, you must redeploy your app and then restart it. Just restarting the app is not sufficient because additional dependencies need to be included.{{% /alert %}}
 
@@ -69,11 +70,12 @@ You can also set up custom tags in the format `key:value`. Mendix recommends add
 
 To set these tags, do the following:
 
-1. Go to the **Environments** page of your app in the *Mendix Portal*.
-2. Click **Details** on an environment you are monitoring with Splunk. 
-3. Switch to the **Tags** tab.
-4. Click **Add** and type in the string to be sent to Splunk as a tag.
-5. Restart the application.
+1. Open your app in [Apps](https://sprintr.home.mendix.com/).
+2. Go to the **Environments** page.
+3. Click **Details** on an environment you are monitoring with Splunk. 
+4. Switch to the **Tags** tab.
+5. Click **Add** and type in the string to be sent to Splunk as a tag.
+6. Restart the application.
 
 ## 4 Additional Information{#additional-info}
 

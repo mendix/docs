@@ -14,7 +14,7 @@ aliases:
 
 If your app uses the [Mendix Feedback](/appstore/modules/mendix-feedback/) module, users can report feedback to your team using the feedback widget in your app, and all their feedback will go to the **Feedback** page. **Feedback** enables your team to view all the feedback. It also allows team members with the right permissions to organize feedback and add feedback manually. 
 
-You can access the **Feedback** page by selecting your app in the Mendix Portal and then clicking **Feedback** in the navigation pane. 
+You can access the **Feedback** page by selecting your app in [Apps](https://sprintr.home.mendix.com/) and then clicking **Feedback** in the navigation pane. 
 
 The **Feedback** page contains two tabs: [Inbox](#inbox) and [Archive](#archive).
 

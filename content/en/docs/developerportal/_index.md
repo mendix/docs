@@ -55,7 +55,7 @@ To go to the [licensed environments](/developerportal/deploy/environments/) of y
 
 ## 4 Navigation Pane {#navigation-pane}
 
-When you open an app in the Mendix Portal, you can navigate between sections using the navigation pane on the left side of the screen. 
+When you open an app in [Apps](https://sprintr.home.mendix.com/), you can navigate between sections using the navigation pane on the left side of the screen. 
 
 The navigation pane is divided into four main categories, which correspond with the documentation in this guide:
 

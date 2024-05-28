@@ -9,7 +9,7 @@ tags: ["Deploy","App","Mendix Portal"]
 
 ## 1 Introduction
 
-You can use the **Environments** page to access information about your environments, deploy packages, manage certificates and access restrictions, and more. To access your app's **Environments** page, open your app in the Mendix Portal and click **Environments** in the navigation pane.
+You can use the **Environments** page to access information about your environments, deploy packages, manage certificates and access restrictions, and more. To access your app's **Environments** page, open your app in [Apps](https://sprintr.home.mendix.com/) and click **Environments** in the navigation pane.
 
 The **Environments** page has the following tabs:
 

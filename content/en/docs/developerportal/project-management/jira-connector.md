@@ -36,7 +36,7 @@ As we further develop this feature, we may lift these limitations with future re
 
 ## 4 Prerequisites
 
-* You need to be a [Scrum Master](/developerportal/general/app-roles/#team-roles) of the app in the Mendix Portal.
+* You need to be a [Scrum Master](/developerportal/general/app-roles/#team-roles) of the app in Apps.
 * You need to have an active subscription to Jira Software Cloud.
 * You need to have a project in Jira with a Scrum board, a Kanban board, or a team-managed board.
 * You need to have a user account and API token with administration rights to the project in Jira. For more information on how to get this API token, see [Manage API tokens for your Atlassian account](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/).

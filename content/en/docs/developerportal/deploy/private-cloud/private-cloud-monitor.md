@@ -519,23 +519,25 @@ In this mode, all other `runtimeMetricsConfiguration` attributes are ignored.
 
 #### 5.1.1 Enable Compability Metrics in Connected Mode
 
-1. Open the **Environments** page for your app in the Mendix Portal and click **Details** next to the environment where compatibility mode should be used.
+1. Open your app in [Apps](https://sprintr.home.mendix.com/).
+2. Go to the **Environments** page.
+3. Click **Details** next to the environment where compatibility mode should be used.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-overview.png" class="no-border" >}}
 
-2. Click the **Runtime** tab.
+4. Click the **Runtime** tab.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-details-general.png" class="no-border" >}}
 
-3. Click **Enable** next to the **Custom Configuration** of **Runtime Metrics Configuration**, then click **Save**.
+5. Click **Enable** next to the **Custom Configuration** of **Runtime Metrics Configuration**, then click **Save**.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-metrics-disabled.png" class="no-border" >}}
 
-4. Click **Edit** next to **Mode**.
+6. Click **Edit** next to **Mode**.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-metrics-default.png" class="no-border" >}}
 
-5. Set **Mode** to **compatibility** and click **Save and Apply**.
+7. Set **Mode** to **compatibility** and click **Save and Apply**.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-metrics-mode-compatibility.png" class="no-border" >}}
 
@@ -567,23 +569,25 @@ To completely disable metrics collection, delete the `runtimeMetricsConfiguratio
 
 #### 5.2.1 Disable Metrics in Connected Mode
 
-1. Open the **Environments** page for your app in the Mendix Portal and click **Details** next to the environment where compatibility mode should be used.
+1. Open your app in [Apps](https://sprintr.home.mendix.com/).
+2. Go to the **Environments** page.
+3. Click **Details** next to the environment where compatibility mode should be used.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-overview.png" class="no-border" >}}
 
-2. Click the **Runtime** tab.
+4. Click the **Runtime** tab.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-details-general.png" class="no-border" >}}
 
-3. Click **Enable** next to the **Custom Configuration** of **Runtime Metrics Configuration**, then click **Save**.
+5. Click **Enable** next to the **Custom Configuration** of **Runtime Metrics Configuration**, then click **Save**.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-metrics-disabled.png" class="no-border" >}}
 
-4. Click **Edit** next to **Mode**.
+6. Click **Edit** next to **Mode**.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-metrics-default.png" class="no-border" >}}
 
-5. Set **Mode** to **default** and click **Save and Apply**.
+7. Set **Mode** to **default** and click **Save and Apply**.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-metrics-mode-default.png" class="no-border" >}}
 
@@ -625,32 +629,34 @@ It is also possible to add extra tags (Prometheus labels) by specifying them in 
 
 #### 5.3.1 Enable Native Metrics in Connected Mode{#enable-native-metrics-connected-mode}
 
-1. Open the **Environments** page for your app in the Mendix Portal and click **Details** next to the environment where compatibility mode should be used.
+1. Open your app in [Apps](https://sprintr.home.mendix.com/).
+2. Go to the **Environments** page.
+3. Click **Details** next to the environment where compatibility mode should be used.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-overview.png" class="no-border" >}}
 
-2. Click the **Runtime** tab.
+4. Click the **Runtime** tab.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-details-general.png" class="no-border" >}}
 
-3. Click **Enable** next to the **Custom Configuration** of **Runtime Metrics Configuration**, then click **Save**.
+5. Click **Enable** next to the **Custom Configuration** of **Runtime Metrics Configuration**, then click **Save**.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-metrics-disabled.png" class="no-border" >}}
 
-4. Click **Edit** next to **Mode**.
+6. Click **Edit** next to **Mode**.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-metrics-default.png" class="no-border" >}}
 
-5. Set **Mode** to **default**, then click **Save**.
+7. Set **Mode** to **default**, then click **Save**.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-metrics-mode-native.png" class="no-border" >}}
 
-6. Set a custom value for **MxAgent Config**.
+8. Set a custom value for **MxAgent Config**.
 
     This parameter is optional and can be left empty.
     For more information about **MxAgent** see [Configuring the Java Instrumentation Agent](#configuring-mxagent), below.
 
-7. Click **Apply Changes**.
+9. Click **Apply Changes**.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-metrics-apply.png" class="no-border" >}}
 

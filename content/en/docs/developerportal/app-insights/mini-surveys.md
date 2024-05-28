@@ -139,7 +139,7 @@ You can collect test data using two methods:
 
 To create a mini survey, follow these steps:
 
-1. Open the app in the Mendix Portal and click **Mini Surveys** in the sidebar. What you see depends on whether there are existing mini surveys for the app:
+1. Open the app in [Apps](https://sprintr.home.mendix.com/) and click **Mini Surveys** in the sidebar. What you see depends on whether there are existing mini surveys for the app:
 
    * If there are existing mini surveys for the app, [Survey Overview](#survey-overview) opens, which lists all the existing mini surveys and shows the **Create New Survey** button
    * If there are no existing mini surveys for this app, you only see the **Create New Survey** button
@@ -170,7 +170,7 @@ Now you can [implement the mini survey](#implement-survey).
 
 To edit a mini survey, perform the following steps:
 
-1. Open the app in the Mendix Portal.
+1. Open the app in [Apps](https://sprintr.home.mendix.com/).
 2. Click **Mini Surveys** in the sidebar. The [Survey Overview](#survey-overview) page opens.
 3. On the **Active** tab, click the mini survey that you want to edit. The [survey details](#survey-details) page opens.
 4. Go to the **Settings** tab.
@@ -211,7 +211,7 @@ When the start time that you set for the mini survey is reached, the survey will
 
 To check the responses that have been collected, follow these steps::
 
-1. Open the app in the Mendix Portal.
+1. Open the app in [Apps](https://sprintr.home.mendix.com/).
 
 2. Click **Mini Surveys** in the sidebar. The [Survey Overview](#survey-overview) page opens.
 

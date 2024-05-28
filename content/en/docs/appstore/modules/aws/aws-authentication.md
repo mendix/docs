@@ -116,7 +116,7 @@ The client certificate that you added now shows as **Currently enabled**.
 
 #### 4.1.1.2 Configuring the Temporary Credentials Connection Details in the Mendix Portal {#configure-credentials}
 
-1. Log in to the Mendix Portal, and then select your app.
+1. Log in to [Apps](https://sprintr.home.mendix.com/), and then select your app.
 2. Click **Environments**, and then click **Details** by the specific environment to open the [Environment Details](/developerportal/deploy/environments-details/#network-tab) page.
 3. In the **Model Options** tab, in the **Constants** section, select the constant from the table below and click **Edit**.
    

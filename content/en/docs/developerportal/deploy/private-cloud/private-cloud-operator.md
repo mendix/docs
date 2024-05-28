@@ -37,7 +37,7 @@ Create a deployment package (.mda) file from your app. It is this which is picke
 You can obtain the deployment package in a number of ways:
 
 * within Studio Pro, by choosing the menu option **Project > Create Deployment Package…** – see [Create Deployment Package](/refguide/create-deployment-package-dialog/) for more information
-* from the **Environments** page of your app in the Mendix Portal
+* from the **Environments** page of your app in [Apps](https://sprintr.home.mendix.com/)
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-operator/environments-create-mda.png" class="no-border" >}}
 * through a CI/CD process, such as Jenkins.
 

@@ -153,7 +153,7 @@ The image is allowed up to 5MB in one of the following formats: JPG, JPEG, PNG, 
 
 {{< figure src="/attachments/appstore/modules/mendix-feedback/feedback-submit-button.png" width="500px" class="no-border" >}} 
 
-After clicking **Submit**, your feedback will go straight to the [Feedback](/developerportal/app-insights/feedback/) page of the app in the Mendix Portal. Once you see the final page, you have successfully submitted your feedback.
+After clicking **Submit**, your feedback will go straight to the [Feedback](/developerportal/app-insights/feedback/) page of the app in [Apps](https://sprintr.home.mendix.com/). Once you see the final page, you have successfully submitted your feedback.
 
 ## 4 Upgrading the Deprecated Feedback Widget to the Feedback Module {#upgrade}
 
@@ -274,7 +274,7 @@ Once you are in feedback mode, you can click anywhere on the screen to **leave a
 
 {{< figure src="/attachments/appstore/widgets/mendix-feedback/comment.png" width="600px" class="no-border" >}}
 
-And voila! A screenshot of the current page is created, which you can choose to attach to your feedback. After clicking **Submit**, your feedback will go straight to the [Feedback](/developerportal/app-insights/feedback/) page of the app in the Mendix Portal.
+And voila! A screenshot of the current page is created, which you can choose to attach to your feedback. After clicking **Submit**, your feedback will go straight to the [Feedback](/developerportal/app-insights/feedback/) page of the app in [Apps](https://sprintr.home.mendix.com/).
 
 When you have left your feedback, you need to exit the feedback mode by clicking **Exit Feedback Mode**:
 {{< figure src="/attachments/appstore/widgets/mendix-feedback/exit-feedback-mode.png" class="no-border" >}}

@@ -79,7 +79,7 @@ The story details dialog box shows the following items:
 
 * **Created by** – This shows the person who created the story.
 
-* **Assign to** – You can assign the story to anybody who can access the app in the Mendix Portal.
+* **Assign to** – You can assign the story to anybody who can access the app in [Apps](https://sprintr.home.mendix.com/).
 
 * **Status** – You can set the status to any of the category/swimlane names on the **Board** and **Planning** pages.
 

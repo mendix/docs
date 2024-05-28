@@ -22,7 +22,7 @@ To start a new app with version control, do the following:
 1. Open Studio Pro.
 2. In the **Select App** dialog box, click **Create New App**. 
 3. Select the starting point – an app template.
-4. In the **App Settings** dialog box, make sure that **Enable online services** is set to *Yes*. This option creates a remote (Team Server) repository and an app in the Mendix Portal.
+4. In the **App Settings** dialog box, make sure that **Enable online services** is set to *Yes*. This option creates a remote (Team Server) repository and an app in [Apps](https://sprintr.home.mendix.com/).
 5. Optionally, change the default **App directory** set by Studio Pro.
 6. Click **Create app**.
 

@@ -201,7 +201,7 @@ If you click **Run** or **Publish** in Studio Pro, this will automatically do th
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-You will still have to deploy your app in the Mendix Portal the very first time to ensure that all the services are bound correctly.
+You will still have to deploy your app in [Apps](https://sprintr.home.mendix.com/) the very first time to ensure that all the services are bound correctly.
 {{% /alert %}}
 
 1. Go to the **Environments** page of the Mendix Portal.

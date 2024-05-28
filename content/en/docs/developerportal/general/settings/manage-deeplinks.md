@@ -11,7 +11,7 @@ aliases:
 
 ## 1 Introduction
 
-To go directly to the desired element of your app in the Mendix Portal, you can use deep links.
+To go directly to the desired element of your app in [Apps](https://sprintr.home.mendix.com/), you can use deep links.
 
 This how-to teaches you how to do the following:
 
@@ -36,7 +36,7 @@ To create a deep link, you need the app ID, story ID, or feedback item number or
 
 ## 3 Creating a Mendix Portal Deep Link
 
-If you want to provide links directly to a specific element in your app in the Mendix Portal, follow these steps:
+If you want to provide links directly to a specific element in your app in [Apps](https://sprintr.home.mendix.com/), follow these steps:
 
 1. Paste the URL to the Developer in your browser's address bar (as in, `https://sprintr.home.mendix.com/` or `https://cloud.home.mendix.com/`).
 2. Paste the desired App ID, Environment ID, Story ID, or Feedback Item Number after the final slash.

@@ -42,13 +42,13 @@ To deploy an app to your private cloud platform, you need the following:
 
 When you first create your app, it will be set to deploy to the Mendix Cloud. You need to change the target to be private cloud.
 
-1. Open the **Settings** page for your app in the Mendix Portal.
+1. Open your app in [Apps](https://sprintr.home.mendix.com/).
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image2.png" class="no-border" >}}
 
-2. Click **Cloud Settings**.
-
-3. In the **Mendix for Private Cloud** section, click **Set up**.
+2. Open the **Settings** page.
+3. Click **Cloud Settings**.
+4. In the **Mendix for Private Cloud** section, click **Set up**.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/SetupButton.png" class="no-border" >}}
 
@@ -56,27 +56,28 @@ When you first create your app, it will be set to deploy to the Mendix Cloud. Yo
 
 Before you can create an environment, you will need to create a deployment package. Ensure that you have committed the version of the app you want to deploy before continuing.
 
-1. On the **Environments** page for your app in the Mendix Portal, click **Create Deployment Package**.
+1. Open your app in [Apps](https://sprintr.home.mendix.com/).
+2. Go to the **Environments** page and click **Create Deployment Package**.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image9.png" class="no-border" >}}
 
-2. Select the branch which contains the commit for which you want to create a deployment package and click **Next**.
+3. Select the branch which contains the commit for which you want to create a deployment package and click **Next**.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image10.png" class="no-border" >}}
 
-3. Select the revision/commit for which you want to create a deployment package and click **Next**.
+4. Select the revision/commit for which you want to create a deployment package and click **Next**.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image11.png" class="no-border" >}}
 
-4. Enter a **New version** and **Tag description** according to your own deployment procedure.
-5. Select an environment in **Autodeploy** if you want to deploy and start your package immediately. You need to make sure that the environment is ready using the techniques described in the [Deploying the Deployment Package](#deploy-package) section below, where you can also see how to deploy a deployment package manually.
-6. Click **Build this revision.**
+5. Enter a **New version** and **Tag description** according to your own deployment procedure.
+6. Select an environment in **Autodeploy** if you want to deploy and start your package immediately. You need to make sure that the environment is ready using the techniques described in the [Deploying the Deployment Package](#deploy-package) section below, where you can also see how to deploy a deployment package manually.
+7. Click **Build this revision.**
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image12.png" class="no-border" >}}
 
-7. Confirm the information message and you will be returned to the **Environments** page.
+8. Confirm the information message and you will be returned to the **Environments** page.
 
-8. Once the deployment package is created, an **Unlock** icon is displayed by the **Details** button. This indicates that the created deployment package is not deployed in any environment yet. If you want to save a deployment package for future use, you can lock the deployment package by clicking the **Lock** button. This ensures that the locked deployment packages cannot be deleted until unlocked again.
+9. Once the deployment package is created, an **Unlock** icon is displayed by the **Details** button. This indicates that the created deployment package is not deployed in any environment yet. If you want to save a deployment package for future use, you can lock the deployment package by clicking the **Lock** button. This ensures that the locked deployment packages cannot be deleted until unlocked again.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/lock.png" class="no-border" >}}
 
@@ -86,7 +87,7 @@ Alternatively, you can upload an existing MDA by clicking **Upload**.
 
 ### 3.3 Creating an Environment{#create-environment}
 
-When deploying your app for the first time, there will be no environments available. Before creating an environment, make sure that you have created/uploaded deployment package. The **Environments** page for your app in the Mendix Portal will show you the current status.
+When deploying your app for the first time, there will be no environments available. Before creating an environment, make sure that you have created/uploaded deployment package. The **Environments** page for your app in [Apps](https://sprintr.home.mendix.com/) will show you the current status.
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image5.png" class="no-border" >}}
 

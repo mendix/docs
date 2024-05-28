@@ -16,7 +16,7 @@ paths:
       tags:
         - Projects
       summary: Get projects
-      description: 'Returns a list of projects, according to the user’s authorisation within the Developer Portal.'
+      description: 'Returns a list of projects, according to the user’s authorisation within the Mendix Portal.'
       operationId: get-projects
       parameters:
         - name: limit

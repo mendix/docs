@@ -16,6 +16,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 #### Mendix Operator v2.17.0 {#2.17.0}
 
+* TBD
 * Upgrading to Mendix Operator v2.17.0 from a previous version will restart environments managed by that version of the Operator.
 
 ### May 30th, 2024

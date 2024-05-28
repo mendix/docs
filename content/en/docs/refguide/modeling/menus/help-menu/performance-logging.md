@@ -37,17 +37,17 @@ If it is unchecked, it means that performance logging is disabled:
 
 Upon clicking on the 'Start New Session' menu item, we would get the following dialog:
 
-{{< figure src="/attachments/howto/monitoring-troubleshooting/performance-logging/naming-new-session.png" class="no-border" >}}
+{{< figure src="/attachments/howto/monitoring-troubleshooting/performance-logging/naming-new-session.png" class="no-border" width="650" >}}
 
 Within this dialog, we would get the chance to specify a name for a new performance logging session, that could be used later when comparing performance measurements in the 'Compare Performance Measurements' dialog (see more details in the 'Compare performance measurements' session below):
 
-{{< figure src="/attachments/howto/monitoring-troubleshooting/performance-logging/compare-measurements.png" class="no-border" >}}
+{{< figure src="/attachments/howto/monitoring-troubleshooting/performance-logging/compare-measurements.png" class="no-border" width="750" >}}
 
 ## 4 View Performance Measurements
 
 Upon clicking on the 'Show measurements' menu item, we would get the following dialog:
 
-{{< figure src="/attachments/howto/monitoring-troubleshooting/performance-logging/view-measurements.png" class="no-border" >}}
+{{< figure src="/attachments/howto/monitoring-troubleshooting/performance-logging/view-measurements.png" class="no-border" width="700" >}}
 
 The top section of the dialog, named 'Measurement Source' allows us to choose the source for the performance measurements we would like to view: It can be either a logging session we've created earlier (see 'Start new session of performance logging' section above) or a log file where the measurements were logged.
 

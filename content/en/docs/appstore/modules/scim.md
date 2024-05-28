@@ -9,14 +9,14 @@ tags: ["marketplace", "marketplace component", "scim", "IdP", "platform support"
 
 ## 1 Introduction
 
-The [SCIM](add marketplace link here) module facilitates integration with Microsoft Entra ID (formerly known as Azure AD) to create (pre-provision) selected users in your application as soon as they are created in Entra ID, and deactivate them when removed from Entra ID or deactivated in Entra ID. 
+The SCIM module facilitates integration with Microsoft Entra ID (formerly known as Azure AD) to create (pre-provision) selected users in your application as soon as they are created in Entra ID, and deactivate them when removed from Entra ID or deactivated in Entra ID. 
 
 SCIM is an abbreviation for System for Cross-domain Identity Management; a protocol that is supported by most major IdP technologies, such as Entra ID, Okta, Auth0, etc. For more information, see the [SCIM protocol](https://scim.cloud/). 
 
 The SCIM module allows you to integrate your app with the Joiner, Mover, Leaver (JML) process in your organization. It enables the assignment of tasks to users before their first login to the app. Additionally, based on the information in Entra ID, the SCIM module automatically deactivates users in your app. This functionality helps you to control Mendix user licensing cost.
 
 {{% alert color="info" %}}
-Before you include the SCIM module in your app, you need to check if your IdP supports SCIM protocol. If you want to integrate with an on-premises AD or similar, you may need to use the [LDAP module](https://docs.mendix.com/appstore/modules/ldap/) instead.
+Before you include the SCIM module in your app, you need to check if your IdP supports SCIM protocol. If you want to integrate with an on-premises AD or similar, you may need to use the [LDAP module](/appstore/modules/ldap/) instead.
 {{% /alert %}}
 
 ### 1.1 Typical Use Cases
@@ -59,7 +59,7 @@ The SCIM module also has the following features:
 
 The SCIM module has the following limitations:
 
-* The SCIM module does not syncing of groups (or group memberships) to your app. This means you cannot use the SCIM module to assign user roles to your app’s users. Instead, you can assign user roles using the features offered by [SAML SSO](https://docs.mendix.com/appstore/modules/saml/) or [OIDC SSO](https://docs.mendix.com/appstore/modules/oidc/) modules.
+* The SCIM module does not syncing of groups (or group memberships) to your app. This means you cannot use the SCIM module to assign user roles to your app’s users. Instead, you can assign user roles using the features offered by [SAML SSO](/appstore/modules/saml/) or [OIDC SSO](/appstore/modules/oidc/) modules.
 
 * If you want to do **Provision on demand** from Entra ID to test the SCIM integration of your app you cannot trigger a partial sync based on a group. This will trigger Entra ID to invoke a /groups endpoint, which is not yet supported.
 
@@ -105,13 +105,13 @@ Currently, the SCIM module does not support the following features of the SCIM p
 
 It is necessary to include the following Marketplace modules in your app:
 
-* [Encryption](https://docs.mendix.com/appstore/modules/encryption/) module – this is required to encrypt the **API key** (Token)
+* [Encryption](/appstore/modules/encryption/) module – this is required to encrypt the **API key** (Token)
 
-* [Community Commons](https://marketplace.mendix.com/link/component/170) – see [Community Commons](https://docs.mendix.com/appstore/modules/community-commons-function-library/) documentation
+* [Community Commons](https://marketplace.mendix.com/link/component/170) – see [Community Commons](/appstore/modules/community-commons-function-library/) documentation
 
 * [User Commons](https://marketplace.mendix.com/link/component/223053) module - Install and configure the User Commons module to support user provisioning and deactivation of user
 
-* [Mx Model Reflection](https://marketplace.mendix.com/link/component/69) module - Install and configure the [Mx Model Reflection](https://docs.mendix.com/appstore/modules/model-reflection/) module
+* [Mx Model Reflection](https://marketplace.mendix.com/link/component/69) module - Install and configure the [Mx Model Reflection](/appstore/modules/model-reflection/) module
 
 ## 2 Configuration
 
@@ -132,6 +132,8 @@ The following is a typical example of how you may want to include the SCIM modul
 | --- | --- |
 | Administrator | SCIM.Administrator |
 
+{{< figure src="/attachments/appstore/modules/scim/user_roles.png" class="no-border" >}}
+
 #### 2.1.2 After Startup Microflow
 
 In the **Runtime** tab, add the microflow **SCIM.StartUp** as the **After startup** microflow.
@@ -140,20 +142,20 @@ In the **Runtime** tab, add the microflow **SCIM.StartUp** as the **After startu
 
 The SCIM module has some configuration pages targeted at the users with local administrator app rights.
 Add these pages to the **Navigation** tab and assign the **Administrator** user role.
-Open [Navigation](https://docs.mendix.com/refguide/navigation/) tab and do the following:
+Open [Navigation](/refguide/navigation/) tab and do the following:
 
 * Add the **Menu** item **IdPConfiguration** to the app **Navigation**. Link this item to the **SCIM.IdPConfiguration_Overview** page and assign it to the **Administrator** user role.
 * Add the **Menu** item **MxObjects** to the app **Navigation**. Link this item to the **MxModelReflection.MxObjects_Overview** page and assign it to the **Administrator** user role.
 
 #### 2.1.4 Setting Encryption Key
 
-Set up the required configuration of the [Encryption](https://marketplace.mendix.com/link/component/1011) module as described in the [Encryption](https://docs.mendix.com/appstore/modules/encryption/) document. The encryption module is used to encrypt the API key (token) that a SCIM client needs to interact with the SCIM endpoint in your app. 
+Set up the required configuration of the [Encryption](https://marketplace.mendix.com/link/component/1011) module as described in the [Encryption](/appstore/modules/encryption/) document. The encryption module is used to encrypt the API key (token) that a SCIM client needs to interact with the SCIM endpoint in your app. 
 
 #### 2.1.5 Default User Provisioning
 
 The SCIM module includes a default user provisioning microflow that maps user attributes from the SCIM payload to attributes in the common user objects within your Mendix app. For more details, see the [Attribute Mapping](#Attribute) section below.
 
-#### 2.1.6 Attribute Mapping{#Attribute}
+#### 2.1.6 Attribute Mapping {#Attribute}
 
 For reference, the table below gives an overview of attribute mapping when using the defaults in both Entra ID and the default microflow in the SCIM module. This information may be helpful to see where a custom user provisioning flow differs from the defaults. If you wish to deviate from this default setting, you can create your own mapping. To do this, select an **IdP Attribute** (claim) and specify the **Configured Entity Attribute**. Ensure that the same configured entity attribute should not be mapped with another IdP attributes.
 
@@ -181,20 +183,21 @@ The table below describes the comparison of IdP claims (sub) values between SCIM
 
 ### 2.2 Runtime Configuration
 
-#### 2.2.1 API Security{#api_security}
+#### 2.2.1 API Security {#api_security}
 
 Ensure that only legitimate SCIM clients can interact with your app via the SCIM module. You need to enable your SCIM client to authenticate itself with your app. The SCIM module currently supports usage of an **API Key** (token) for the authentication. You can either generate an API Key to download or upload one into your SCIM client during [Deploy Time Configuration](#deploy_time_config). This can be done by below two options:
 
 1. Using SCIM module to generate API-key
 
-To generate and download an API-key, click New in the IdPConfiguration page and configure below fields: 
+    To generate and download an API-key, click **New** in the **IdPConfiguration** page and configure below fields: 
 
-**Alias**: This is an alias name for your configuration. For Example, *Azure*.
-**API Key**: Used as a token for header-based authentication. IdP will send this as the authorization header parameter in the request. 
+    * **Alias**: This is an alias name for your configuration. For Example, *Azure*.
 
-{{< figure src="/attachments/appstore/modules/SCIM/Alias.png" "max-width=80%" class="image-border" >}}
+    * **API Key**: Used as a token for header-based authentication. IdP will send this as the authorization header parameter in the request. 
 
-1. Configuring API-Key via Pipeline
+    {{< figure src="/attachments/appstore/modules/scim/alias.png" class="no-border" >}}
+    
+2. Configuring API-Key via Pipeline
 
 Another option is to generate an API key yourself and submit it to the SCIM module via a SCIM constant. To do this, set the constant `SCIM.Default_APIKey_Value` in the **Acceptance Environment Details** of the Mendix application environment. This approach enables you to manage API security without requiring a local administrator to log in to your application. It provides the flexibility to use the same API key for multiple applications using the SCIM module.
 
@@ -215,9 +218,9 @@ Note the following:
 * **IdP attribute** (Claim) cannot be of type enum, autonumber, or an association.
 * Use Custom Logic in **User Provisioning** (Optional) – In **Custom UserProvisioning**, select a microflow you want to run for [Custom User Provisioning Using a Microflow](#cusom_userprovisioning_microflow).
 
-The custm microflow name must begin with the string `CustomUserProvisioning`. If you have added a new microflow, you need to refresh the module containing your microflow as described in [Mx Model Reflection](https://docs.mendix.com/appstore/modules/model-reflection/).
+The custm microflow name must begin with the string `CustomUserProvisioning`. If you have added a new microflow, you need to refresh the module containing your microflow as described in [Mx Model Reflection](/appstore/modules/model-reflection/).
 
-{{< figure src="/attachments/appstore/modules/SCIM/user provisioning.png" "max-width=80%" class="image-border" >}}
+{{< figure src="/attachments/appstore/modules/scim/user_provisioning.png" class="no-border" >}}
 
 This selection can be blank if you do not want to add custom logic. Save this configuration. Double click on **Alias** name and you will be able to copy the generated **API Key**.
 
@@ -228,24 +231,46 @@ Setting up connectivity with an IdP varies depending on the vendor. The followin
 #### 2.3.1 Configuration with Entra ID
 
 1. On the Microsoft Entra ID tenant, select **Enterprise Application** and create SCIM client in it.
-1. Change the **Provisioning** Mode to **Automatic**.
+2. Change the **Provisioning** Mode to **Automatic**.
 
-{{< figure src="/attachments/appstore/modules/SCIM/provisioning_revised.png" "max-width=80%" class="image-border" >}}
+    {{< figure src="/attachments/appstore/modules/scim/provisioning_revised.png" class="no-border" >}}
 
-1. Configure the SCIM server (Mendix SCIM Application) with the following details:
+3. Configure the SCIM server (Mendix SCIM Application) with the following details:
 
-* **Tenant URL**: `https://intranet.acme.com/scim/v2`. Replace `intranet.acme.com` with your intranet domain.
-* **Secret Token**: copy the **API Key** (token) from the **IdPConfiguration** page of User Commons, as described in the [API Security](#api_security) section above.
-* Click **Test Connection**.
+    * **Tenant URL**: `https://intranet.acme.com/scim/v2`. Replace `intranet.acme.com` with your intranet domain.
+    * **Secret Token**: copy the **API Key** (token) from the **IdPConfiguration** page of User Commons, as described in the [API Security](#api_security) section above.
+    * Click **Test Connection**.
 
-1. Configure **Mappings** and **Settings**.
+4. Configure **Mappings** and **Settings**.
 
-* **Mappings** allow you to define how data should be mapped between Entra ID and Mendix application.
-* Click **Settings** and you can change the scope to **Sync only assigned user and groups**.
-* **Save** the configuration.
+    * **Mappings** allow you to define how data should be mapped between Entra ID and Mendix application.
+    * Click **Settings** and you can change the scope to **Sync only assigned user and groups**.
+    * **Save** the configuration.
 
-1. Click **Users and groups** to add and assign the required individual users or group (or groups) of users to the SCIM Client. The scheduled provisioning will sync these users.
+5. Click **Users and groups** to add and assign the required individual users or group (or groups) of users to the SCIM Client. The scheduled provisioning will sync these users.
 
-{{< figure src="/attachments/appstore/modules/SCIM/users and groups.png" "max-width=80%" class="image-border" >}}
+    {{< figure src="/attachments/appstore/modules/scim/users_and_groups.png" class="no-border" >}}
 
-1. On the SCIM client app, click **Provisioning** to do the user provisioning.
+6. On the SCIM client app, click **Provisioning** to do the user provisioning.
+
+## 3 Testing and Troubleshooting
+
+Once you have your SCIM module configured, you can test it by creating, updating, and deleting the user. 
+
+### 3.1 Testing with Entra ID
+
+The test case below is defined for the scope of **Sync only assigned user and groups** and validation of provisioning status in the SCIM server.
+
+* Create a user with default `userPrincipalName`. Optionally, you may choose to change the user Mappings in the Microsoft Entra ID. You can change Entra ID attribute from `userPrincipalName` to another attribute. For example, `mailNickName`.
+* Update a user in the Microsoft Entra ID. For Example, add/update work email, last name etc. 
+* Delete a user in the Microsoft Entra ID.
+
+You may want to use **Provision on demand** while testing SCIM module integration for immediate provisioning. You can either select individual users or users in a group (or groups).
+Below options provide you the choice of user selection during on demand provisioning.
+
+* **View members only**: select users from the group
+* **View all users**: select users from the Entra ID
+
+{{% alert color="info" %}}
+Your app may have multiple tenants in the Entra ID. Users created from any of the Entra ID tenant will have same domain in their `user_principle_name`. This results in an active user in your app which you have not assigned in your application in Entra ID.
+{{% /alert %}}

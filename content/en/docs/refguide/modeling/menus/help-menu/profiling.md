@@ -8,6 +8,10 @@ tags: ["monitoring", "troubleshooting", "performance", "profiling"]
 
 ## 1 Introduction
 
+{{% alert color="info" %}}
+This feature is not yet supported on native MacOS machines.
+{{% /alert %}}
+
 To investigate performance issues that are reproduced on your local machine, you can run a performance profiler session from within Studio Pro without installing the actual profiler on your machine. This session generates a report written to disk, which you can then send to the Mendix Support teams. Mendix developers will load this report on their machines to investigate the performance issues you experienced locally. 
 
 The profiling feature can be reached by clicking **Help** > **Support Tools** > **Profiling**:
@@ -24,8 +28,7 @@ When you are done, click **Profiling** > **Stop profiling**. Zip all the files y
 
 Then, send the archive to Mendix Support.
 
-## 3 Important notes
+{{% alert color="info" %}}
+Profiling can be started at any time (when you start to see perofrmance issues) and does not need to start immediately after running Studio Pro.
+{{% /alert %}}
 
-* It is not necessary to start profiling immediately after running Studio Pro. It can be started when you start seeing the performance degradation (once you begin noticing the performance issues). The flow might be the following: you start profiling before an action you consider slow, and then stop after it.
-
-* This feature is not yet supported on native MacOS machines.

@@ -2,7 +2,6 @@
 title: "Action Call Activities"
 url: /refguide8/action-call-activities/
 weight: 30
-tags: ["studio pro", "action call", "action call activities"]
 ---
 
 ## 1 Introduction

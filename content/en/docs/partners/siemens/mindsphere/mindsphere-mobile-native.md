@@ -3,7 +3,6 @@ title: "Insights Hub Mobile Native"
 url: /partners/siemens/mindsphere-mobile-native/
 weight: 200
 description: "Explain how to create your own Native Mobile application for Insights Hub and what needs to be considered for development"
-tags: ["MindSphere", "Insights Hub", "Credentials", "Multi-Tenant", "Environment Variables", "Local", "Styling", "UI", "Icons", "Limitations", "Licensing", "Validation", "Mobile Native"]
 ---
 
 ## 1 Introduction

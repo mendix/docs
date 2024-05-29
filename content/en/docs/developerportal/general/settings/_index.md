@@ -4,7 +4,6 @@ url: /developerportal/collaborate/general-settings/
 
 weight: 14
 description: "Describes the Settings page of your app."
-tags: ["Settings", "App", "Mendix Portal"]
 aliases:
     - /developerportal/settings/general-settings
     - /developerportal/settings/api-key

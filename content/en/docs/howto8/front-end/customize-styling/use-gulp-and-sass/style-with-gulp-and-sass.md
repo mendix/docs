@@ -2,7 +2,6 @@
 title: "Start Styling with Gulp and Sass"
 url: /howto8/front-end/style-with-gulp-and-sass/
 weight: 2
-tags: ["gulp", "sass", "ux", "front end"]
 ---
 
 ## 1 Introduction

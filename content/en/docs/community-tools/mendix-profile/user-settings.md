@@ -3,8 +3,7 @@ title: "User Settings"
 url: /community-tools/mendix-profile/user-settings/
 
 weight: 2
-description: "Describes the user settings for the Mendix Portal."
-tags: ["profile", "Mendix Portal", "settings", "accounts", "notification settings", "developer settings", "API keys", "personal access tokens", "pat", "personal data"]
+description: "Describes the user settings for the Mendix Developer Portal."
 ---
 
 ## 1 Introduction {#settings}

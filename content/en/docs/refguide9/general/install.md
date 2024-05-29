@@ -5,7 +5,6 @@ linktitle: "Install Mendix Studio Pro"
 
 weight: 15
 description: "Describes how to install Mendix Studio Pro."
-tags: ["studio pro", "install", "install studio pro", "download"]
 aliases:
     - /howto9/general/install/
 ---

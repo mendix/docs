@@ -1,7 +1,6 @@
 ---
 title: "OQL COALESCE"
 url: /refguide8/oql-coalesce/
-tags: ["studio pro"]
 ---
 
 The COALESCE function returns the first of its arguments that is not null.

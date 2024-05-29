@@ -5,7 +5,6 @@ description: "Describes the tools and settings available in the General category
 weight: 5
 no_list: false
 description_list: true
-tags: ["Mendix Portal", "documents", "team server", "buzz", "team", "app"]
 aliases:
     - /developerportal/develop/
     - /developerportal/settings/

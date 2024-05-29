@@ -3,7 +3,6 @@ title: "Link Test Cases and Test Suites to User Stories"
 linktitle: "Link Test Cases and Suites to User Stories"
 url: /appstore/partner-solutions/ats/ht-two-connect-stories-to-testcases/
 description: "Describes the steps for linking Test Cases and Test Suites to User Stories."
-tags: ["ATS", "testing"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

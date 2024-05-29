@@ -3,7 +3,6 @@ title: "Portfolio Management"
 url: /developerportal/portfolio-management/
 weight: 25
 description: "Describes the Mendix Portfolio Management app."
-tags: ["portfolio management"]
 #The anchor #portfolios-settings and #privacy-settings below is mapped, so it should not be removed or changed. If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

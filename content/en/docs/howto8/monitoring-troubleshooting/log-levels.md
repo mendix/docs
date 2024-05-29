@@ -3,7 +3,6 @@ title: "Set Log Levels"
 url: /howto8/monitoring-troubleshooting/log-levels/
 
 weight: 9
-tags: ["monitoring", "troubleshooting", "log level", "logging", "log"]
 ---
 
 ## 1 Introduction

@@ -4,7 +4,6 @@ url: /refguide9/chart-widgets/
 weight: 70
 no_list: false
 description_list: true 
-tags: ["Charts", "Any Chart", "Studio Pro", "Pages"]
 ---
 
 ## 1 Introduction

@@ -4,7 +4,6 @@ url: /appstore/modules/sap/sap-logger/
 
 weight: 49
 description: "The connector which formats logs for the Kibana dashboard"
-tags: ["SAP", "Kibana", "Log", "json"]
 aliases:
     - /partners/sap/sap-logger/
     - /appstore/connectors/sap/sap-logger/

@@ -4,7 +4,6 @@ url: /developerportal/deploy/sap-cloud-platform/sap-single-sign-on/
 
 weight: 50
 description: "Reference information on SAP Single Sign-On"
-tags: ["SAP", "SSO", "Single Sign-On"]
 aliases:
     - /partners/sap/sap-single-sign-on/
 ---

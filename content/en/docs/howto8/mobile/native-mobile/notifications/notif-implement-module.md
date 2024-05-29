@@ -4,7 +4,6 @@ linktitle: "Push Notifications Module"
 url: /howto8/mobile/notif-implement-module/
 weight: 54
 description: Tutorial for implementing the push notification module.
-tags: ["mobile", "native", "push", "local", "firebase, ios, android"]
 ---
 
 ## 1 Introduction

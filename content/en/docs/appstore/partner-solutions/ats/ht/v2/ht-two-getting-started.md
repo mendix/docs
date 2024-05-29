@@ -2,7 +2,6 @@
 title: "Get Started"
 url: /appstore/partner-solutions/ats/ht-two-getting-started/
 description: "Describes the initial steps for automatically testing your apps using ATS."
-tags: ["ATS", "testing"]
 ---
 
 ## 1 Introduction

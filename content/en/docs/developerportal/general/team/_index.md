@@ -4,7 +4,6 @@ url: /developerportal/general/team/
 
 weight: 3
 description: "Describes the Team page of the Mendix Portal."
-tags: ["Team", "Mendix Portal"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 

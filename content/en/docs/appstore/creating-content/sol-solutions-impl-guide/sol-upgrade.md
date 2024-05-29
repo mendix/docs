@@ -4,7 +4,6 @@ url: /appstore/creating-content/sol-upgrade
 linktitle: "Upgrade a Solution"
 weight: 8
 description: "Describes how to upgrade a properly set up solution with a new version provided by the ISV."
-tags: ["solutions", "upgrade solution", "startup", "adaptable solutions", "prescriptive solutions"]
 ---
 
 ## 1 Introduction

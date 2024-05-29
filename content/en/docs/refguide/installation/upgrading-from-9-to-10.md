@@ -5,7 +5,6 @@ linktitle: "Upgrading from Studio Pro 9 to 10"
 
 weight: 30
 description: "Provides details on upgrading your app from Studio Pro 9 to Studio Pro 10, including sections on converting your app and deprecated features."
-tags: ["studio pro", "upgrade", "runtime", "xpath"]
 ---
 
 ## 1 Introduction

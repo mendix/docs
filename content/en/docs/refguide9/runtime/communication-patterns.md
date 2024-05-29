@@ -5,7 +5,6 @@ url: /refguide9/communication-patterns/
 
 weight: 50
 description: "Outlines the communication patterns used by the Mendix Runtime environment for some typical application use cases."
-tags: ["studio pro", "Mendix Runtime", "Communications", "Runtime Server", "Mendix Client"]
 ---
 
 ## 1 Introduction

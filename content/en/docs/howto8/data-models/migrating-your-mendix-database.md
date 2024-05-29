@@ -3,7 +3,6 @@ title: "Migrate Your Mendix Database"
 url: /howto8/data-models/migrating-your-mendix-database/
 
 weight: 7
-tags: ["database", "migrate", "PostgreSQL", "export", "import"]
 ---
 
 ## 1 Introduction

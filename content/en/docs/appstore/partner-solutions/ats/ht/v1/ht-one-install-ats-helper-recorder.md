@@ -4,7 +4,6 @@ linktitle: "Install ATS Helper and Recorder"
 url: /appstore/partner-solutions/ats/ht-one-install-ats-helper-recorder/
 weight: 2
 description: "Describes how to install the ATS Helper and the ATS Recorder tool."
-tags: ["ATS", "testing"]
 ---
 
 ## 1 Introduction

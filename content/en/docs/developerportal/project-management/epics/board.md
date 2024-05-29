@@ -3,7 +3,6 @@ title: "Board"
 url: /developerportal/project-management/epics/board/
 weight: 10
 description: "Describes the Board page in Epics. This page looks different, depending on whether you use the Scrum workflow or Kanban workflow. "
-tags: ["Project Management", "Epics", "Sprint", "Board", "Stories", "Mendix Portal"]
 ---
 ## 1 Introduction
 

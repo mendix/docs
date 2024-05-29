@@ -3,7 +3,6 @@ title: "About Mendix Cloud"
 url: /developerportal/deploy/mxcloudv4/
 weight: 1
 description: "Frequently asked questions about Mendix Cloud"
-tags: ["Cloud", "Mendix Cloud", "FAQ", "AWS", "Amazon Web Services", "Max file size"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 

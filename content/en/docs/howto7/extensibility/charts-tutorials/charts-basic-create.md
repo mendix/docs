@@ -3,7 +3,6 @@ title: "Create a Basic Chart"
 url: /howto7/extensibility/charts-basic-create/
 weight: 10
 description: "How to create a basic chart and configure the display options"
-tags: ["Charts", "Widgets", "Basic Chart", "Area Chart"]
 ---
 
 ## 1 Introduction

@@ -2,7 +2,6 @@
 title: "Administrator"
 url: /refguide/administrator/
 weight: 20
-tags: ["studio pro", "administrator", "app security", "security"]
 ---
 
 ## 1 Introduction

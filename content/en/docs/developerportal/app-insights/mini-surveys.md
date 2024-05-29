@@ -4,7 +4,6 @@ url: /developerportal/app-insights/mini-surveys/
 
 weight: 6
 description: "The app development team can utilize Mendix's user-friendly [Mini Surveys](/appstore/modules/mendix-mini-surveys/) module to integrate surveys into their applications. This empowers the Product Owner (PO), Scrum Master, or the development team to craft surveys with personalized customizations, including survey goals, duration, and questionnaire types. After configuring the survey, end-users can conveniently submit their responses. Subsequently, the Product Owner, Scrum Master, or the team can analyze the survey results, extracting valuable insights."
-tags: ["mini survey", "app insights", "sprint", "Mendix Portal"]
 ---
 
 ## 1 Introduction

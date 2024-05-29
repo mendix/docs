@@ -4,7 +4,6 @@ url: /howto/testing/create-automated-tests-with-testng/
 
 weight: 50
 description: "Describes how to create TestNG test files, run automated tests with TestNG, and generate reports with TestNG."
-tags: ["test", "testing", "testng"]
 ---
 
 ## 1 Introduction

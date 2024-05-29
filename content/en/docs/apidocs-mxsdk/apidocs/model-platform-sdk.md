@@ -3,7 +3,6 @@ title: "Model SDK and Platform SDK"
 url: /apidocs-mxsdk/apidocs/model-platform-sdk/
 description: "Describes how to use the Mendix SDKs to gain access to the inner-workings of a Mendix app."
 weight: 80
-tags: ["model sdk", "platform sdk", "sdk"]
 ---
 
 ## 1 Introduction

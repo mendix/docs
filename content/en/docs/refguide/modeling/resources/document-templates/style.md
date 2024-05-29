@@ -1,7 +1,6 @@
 ---
 title: "Style"
 url: /refguide/style/
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction

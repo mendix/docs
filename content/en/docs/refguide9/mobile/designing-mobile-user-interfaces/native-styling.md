@@ -3,7 +3,6 @@ title: "Native Styling"
 url: /refguide9/mobile/designing-mobile-user-interfaces/native-styling/
 weight: 40
 description: "General information for native styling in Mendix."
-tags: ["native", "styling"]
 aliases:
     - /howto9/mobile/native-styling/
     - /howto9/mobile/how-to-use-native-styling/

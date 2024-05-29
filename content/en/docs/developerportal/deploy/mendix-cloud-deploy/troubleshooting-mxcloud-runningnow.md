@@ -3,7 +3,6 @@ title: "Running Now"
 url: /developerportal/deploy/mxcloud-runningnow/
 weight: 20
 description: "Explains how to access, navigate, and troubleshoot Running Now in your node."
-tags: ["App","Troubleshoot","Mendix Portal","Running now","Mendix Cloud"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 

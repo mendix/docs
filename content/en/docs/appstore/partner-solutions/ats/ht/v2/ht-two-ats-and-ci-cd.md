@@ -2,7 +2,6 @@
 title: "Use ATS in Combination with CI/CD"
 url: /appstore/partner-solutions/ats/ht-two-ats-and-ci-cd/
 description: "Describes how you can use ATS 2.0 in your CI/CD pipeline."
-tags: ["ATS", "testing", "CI/CD"]
 ---
 
 ## 1 Introduction

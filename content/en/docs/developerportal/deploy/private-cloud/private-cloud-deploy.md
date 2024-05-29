@@ -4,7 +4,6 @@ linktitle: "Deploy Mendix App"
 url: /developerportal/deploy/private-cloud-deploy/
 description: "Describes the processes for deploying a Mendix app in the Private Cloud"
 weight: 20
-tags: ["Deploy", "Private Cloud", "Environment"]
 ---
 
 ## 1 Introduction

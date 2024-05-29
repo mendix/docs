@@ -3,7 +3,6 @@ title: "New Relic for Mendix Cloud"
 url: /developerportal/operate/newrelic-metrics/
 weight: 20
 description: "How to configure Mendix Cloud to enable monitoring and analysis with New Relic."
-tags: ["New Relic", "Mendix Cloud", "monitoring", "analysis"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 

@@ -3,7 +3,6 @@ title: "Submit a Support Request"
 url: /support/submit-support-request/
 weight: 20
 description: "Describes the details necessary for Mendix Support to process your request."
-tags: ["support", "incident", "standard change", "URL", "change URL", "license", "change" ]
 aliases:
     - /developerportal/support/submit-support-request/
     - /community-tools/support/submit-support-request/

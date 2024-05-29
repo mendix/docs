@@ -3,7 +3,6 @@ title: "OAuth and Scopes"
 url: /community-tools/oauth-scopes/
 
 weight: 7
-tags: ["oath", "profile", "login", "Mendix Portal", "scopes"]  
 description: "Describes OAuth, authorizations, and scopes as used by Mendix."
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 aliases:

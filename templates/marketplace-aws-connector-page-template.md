@@ -3,7 +3,6 @@ title: "{CONNECTOR-NAME}"
 url: /appstore/connectors/aws/{CONNECTOR-NAME}/
 description: "Describes the configuration and usage of the {CONNECTOR NAME} connector from the Mendix Marketplace. {AWS SERVICE NAME} is {AWS SERVICE DESCRIBED IN 1 SENTENCE; PER CONFIRMATION FROM AWS, WE CAN USE THE SERVICE DESCRIPTION FROM THE AWS WEBSITE}."
 weight: 20
-tags: ["marketplace", "marketplace component", "amazon", "{CONNECTOR NAME}", "connector"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 

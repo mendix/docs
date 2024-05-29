@@ -3,7 +3,6 @@ title: "Retrieve Environment-Sensitive Data from a Secret Store"
 url: /developerportal/deploy/secret-store-credentials/
 description: "Describes the process for using external secret stores for Kubernetes secrets"
 weight: 20
-tags: ["Deploy", "Private Cloud", "Secrets", "Secret Stores", "Vault", "Kubernetes", "AWS"]
 ---
 
 ## 1 Introduction

@@ -2,7 +2,6 @@
 title: "Change Object"
 url: /refguide9/change-object/
 weight: 20
-tags: ["studio pro", "change object", "activity"]
 ---
 
 {{% alert color="warning" %}}

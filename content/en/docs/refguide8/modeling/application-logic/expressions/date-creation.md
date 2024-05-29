@@ -2,7 +2,6 @@
 title: "Date Creation"
 url: /refguide8/date-creation/
 weight: 90
-tags: ["studio pro", "expression", "date creation", "expressions"]
 ---
 
 ## 1 Introduction

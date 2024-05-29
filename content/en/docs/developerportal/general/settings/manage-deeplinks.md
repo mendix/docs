@@ -3,7 +3,6 @@ title: "Manage Deep Links"
 url: /developerportal/general/manage-deeplinks/
 weight: 2
 description: "Describes how to implement deep links to Mendix Portal pages."
-tags: ["Mendix Portal", "deep link"]
 aliases:
     - /developerportal/settings/manage-deeplinks
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.

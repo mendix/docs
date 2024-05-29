@@ -5,7 +5,6 @@ url: /howto9/front-end/create-your-first-two-overview-and-detail-pages/
 
 weight: 25
 description: "Describes how to create overview and detail pages, and how to configure navigation and security."
-tags: ["front end"]
 ---
 
 ## 1 Introduction

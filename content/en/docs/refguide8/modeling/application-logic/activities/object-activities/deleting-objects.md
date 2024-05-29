@@ -2,7 +2,6 @@
 title: "Delete Object(s)"
 url: /refguide8/deleting-objects/
 weight: 50
-tags: ["studio pro"]
 ---
 
 {{% alert color="warning" %}}

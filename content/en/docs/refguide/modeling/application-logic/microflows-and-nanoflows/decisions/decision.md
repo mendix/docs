@@ -2,7 +2,6 @@
 title: "Decision"
 url: /refguide/decision/
 weight: 1
-tags: ["studio pro", "decision", "exclusive split"]
 aliases:
     - /refguide/exclusive-split.html
     - /refguide/exclusive-split

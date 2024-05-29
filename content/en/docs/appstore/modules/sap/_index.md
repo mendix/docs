@@ -5,7 +5,6 @@ description: "Presents details on the SAP-specific connectors available in the M
 weight: 40
 no_list: false
 description_list: true
-tags: ["marketplace", "marketplace component", "connector", "SAP"]
 aliases:
     - /appstore/sap-connectors/
 ---

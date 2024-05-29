@@ -5,7 +5,6 @@ url: /howto7/mobile/feedback-widget-ios/
 
 weight: 20
 description: "How to configure ios security settings to render the feedback widget's content"
-tags: ["mobile", "feedback", "widget", "ios"]
 ---
 
 ## 1 Introduction

@@ -5,7 +5,6 @@ description: "Describes the day-to-day operation of an app from the Mendix Porta
 weight: 15
 no_list: false 
 description_list: true
-tags: ["Operate", "App", "Mendix Portal", "Metrics", "Alerts", "Logs", "Backups", "Mendix Cloud"]
 ---
 
 ## 1 Introduction

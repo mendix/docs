@@ -5,7 +5,6 @@ description: "Provides information on how to obtain insights into your Mendix ap
 weight: 8
 no_list: false 
 description_list: true
-tags: ["app insights", "feedback", "mini surveys"]
 ---
 
 ## 1 Introduction

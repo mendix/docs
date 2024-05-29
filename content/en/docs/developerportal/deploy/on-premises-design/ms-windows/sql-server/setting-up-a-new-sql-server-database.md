@@ -2,7 +2,6 @@
 title: "New Database Setup on SQL Server"
 url: /developerportal/deploy/setting-up-a-new-sql-server-database/
 weight: 10
-tags: ["SQL Server", "Snapshot Isolation", "Transaction Isolation", "Database", "Extensions", "Role"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 

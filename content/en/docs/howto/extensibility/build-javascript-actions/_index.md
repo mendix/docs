@@ -4,7 +4,6 @@ url: /howto/extensibility/build-javascript-actions/
 
 weight: 40
 description: "Presents a series of how-tos to build JavaScript actions step by step."
-tags: ["widget", "pluggable", "JavaScript", "API", "JavaScript-API"]
 ---
 
 Nanoflows are even more powerful with pluggable nanoflow actions — called JavaScript actions. With JavaScript actions, the standard set of actions can be extended with new functionality. This how-to series teaches you to harness the power of JavaScript actions step by step: 

@@ -4,7 +4,6 @@ url: /refguide/mendix-client/marketplace-react-status/
 
 description: "Describes Mendix's React client."
 weight: 20
-tags: ["runtime", "mendix client", "react client"]
 ---
 
 ## 1 Introduction

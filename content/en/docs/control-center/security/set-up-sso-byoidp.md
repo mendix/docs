@@ -4,7 +4,6 @@ url: /control-center/security/set-up-sso-byoidp/
 
 weight: 5
 description: "Describes how you can use your company IdP to authenticate to Mendix."
-tags: ["BYOIDP", "IdP", "Bring Your Own IdP", "Microsoft Azure", "SSO", "Single Sign-on", "Azure AD", "Entra ID"]
 aliases:
     - /developerportal/control-center/set-up-sso-byoidp/
 ---

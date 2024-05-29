@@ -3,7 +3,6 @@ title: "Get Started"
 url: /appstore/partner-solutions/ats/ht-one-getting-started/
 weight: 1
 description: "Describes the initial steps for automatically testing your apps using ATS."
-tags: ["ATS", "testing"]
 ---
 
 ## 1 Introduction

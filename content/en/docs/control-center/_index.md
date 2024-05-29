@@ -2,7 +2,6 @@
 title: "Control Center Guide"
 url: /control-center/
 description: "Describes the Mendix Control Center, used for the governance of company members, apps, security, and cloud resources."
-tags: ["control center", "mendix admin", "role", "permissions", "fallback", "resource pack", "node", "offboard"]
 weight: 35
 no_list: false 
 description_list: true

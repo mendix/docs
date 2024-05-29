@@ -2,7 +2,6 @@
 title: "Oracle"
 url: /refguide/oracle/
 weight: 60
-tags: ["studio pro", "database", "oracle"]
 ---
 
 ## 1 Introduction

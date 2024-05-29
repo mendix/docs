@@ -4,7 +4,6 @@ linktitle: "Webhooks"
 url: /developerportal/deploy/webhooks/
 weight: 75
 description: "Creating a webhook to trigger actions from Mendix Cloud and Mendix for Private Cloud."
-tags: ["Mendix Cloud", "Mendix for Private Cloud", "Webhooks", "CI/CD", "Pipeline"]
 ---
 
 ## 1 Introduction

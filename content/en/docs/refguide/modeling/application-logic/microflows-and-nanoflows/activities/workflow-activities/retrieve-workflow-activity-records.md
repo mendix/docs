@@ -2,7 +2,6 @@
 title: "Retrieve Workflow Activity Records"
 url: /refguide/retrieve-workflow-activity-records/
 weight: 40
-tags: ["studio pro", "workflow", "retrieve", "retrieve workflow activity record", "activity records"]
 ---
 
 {{% alert color="info" %}}

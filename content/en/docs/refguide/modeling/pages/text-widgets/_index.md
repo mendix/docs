@@ -2,7 +2,6 @@
 title: "Text"
 url: /refguide/text-widgets/
 weight: 20
-tags: ["studio pro", "text widgets", "widget"]
 ---
 
 ## 1 Introduction

@@ -2,7 +2,6 @@
 title: "Administration"
 url: /appstore/partner-solutions/ats/rg-two-administration/
 description: "Describes a tenant administrator role in ATS."
-tags: ["ats", "administrator", "administration"]
 ---
 
 ## 1 Introduction

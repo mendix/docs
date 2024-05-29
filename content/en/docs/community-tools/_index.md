@@ -8,7 +8,6 @@ description_list: true
 cascade:
     - content_type: "Community Tools Guide"
     - mendix_version: 10
-tags: ["community", "documentation", "profile", "partner", "forum", "mvp", "support"]
 aliases:
     - /developerportal/community-tools/
 ---

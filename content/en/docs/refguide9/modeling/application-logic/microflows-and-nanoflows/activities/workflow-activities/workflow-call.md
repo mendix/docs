@@ -2,7 +2,6 @@
 title: "Workflow Call"
 url: /refguide9/workflow-call/
 weight: 10
-tags: ["studio pro", "call workflow", "workflow call"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

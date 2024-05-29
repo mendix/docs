@@ -2,7 +2,6 @@
 title: "App Roles"
 url: /developerportal/general/app-roles/
 description: "Describes the app team and App/Technical Contact roles and permissions within the Mendix Platform."
-tags: ["team", "technical contact", "Mendix Portal", "role", "permissions"]
 aliases:
     - /developerportal/settings/technical-contact.html
     - /developerportal/general/technical-contact.html

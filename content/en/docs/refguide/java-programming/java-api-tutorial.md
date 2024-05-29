@@ -4,7 +4,6 @@ url: /refguide/java-api-tutorial/
 
 weight: 40
 description: "Describes how to add a Java action, edit it in Eclipse, and call it from a microflow."
-tags: ["microflow", "logic", "java", "API"]
 ---
 
 ## 1 Introduction

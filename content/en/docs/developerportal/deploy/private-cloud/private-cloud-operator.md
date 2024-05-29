@@ -4,7 +4,6 @@ linktitle: "Use CLI to Deploy"
 url: /developerportal/deploy/private-cloud-operator/
 description: "Describes the processes for using the Mendix Operator directly to deploy a Mendix app in the Private Cloud"
 weight: 30
-tags: ["Deploy", "Private Cloud", "Environment", "Operator", "CI/CD", "CLI"]
 ---
 
 ## 1 Introduction

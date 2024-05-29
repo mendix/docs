@@ -2,7 +2,6 @@
 title: "Common Runtime and Java Errors"
 url: /refguide9/runtime-java-errors/
 weight: 3
-tags: ["runtime", "java"]
 ---
 
 ## 1 Introduction

@@ -1,7 +1,6 @@
 ---
 title: "Map Automatically"
 url: /refguide/map-automatically/
-tags: ["studio pro"]
 ---
 
 ## 1 Creating Entities, Attributes, and Associations from Import or Export Mappings

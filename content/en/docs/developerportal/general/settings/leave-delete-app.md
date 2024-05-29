@@ -3,7 +3,6 @@ title: "Leave, Delete, or Deactivate an App"
 url: /developerportal/general/leave-delete-app/
 weight: 1
 description: "Describes how to leave, delete, and deactivate an app in Apps."
-tags: ["app", "delete", "deactivate", "Mendix Portal", "Scrum Master"]
 linktitle: "Leave and Delete an App"
 aliases:
     - /developerportal/settings/leave-delete-app

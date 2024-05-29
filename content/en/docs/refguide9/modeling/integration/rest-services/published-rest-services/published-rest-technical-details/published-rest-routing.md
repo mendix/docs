@@ -3,7 +3,6 @@ title: "Published REST Request Routing"
 url: /refguide9/published-rest-routing/
 weight: 10
 description: "A flow chart which shows how an example request is processed, what security is applied, and what is returned by the service."
-tags: ["flow chart", "processing", "security", "service", "resource", "operation", "method", "authentication", "return code", "published REST", "studio pro"]
 ---
 
 When a REST HTTP request arrives at the server, the server needs to determine which [operation](/refguide9/published-rest-operation/) to execute and what security to apply.

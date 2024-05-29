@@ -5,7 +5,6 @@ url: /developerportal/project-management/
 weight: 7
 description_list: true
 description: "Describes the Project Management section of the Mendix Portal."
-tags: ["Epics", "Jira", "Sprint", "Project Management", "Mendix Portal"]
 ---
 
 ## 1 Introduction

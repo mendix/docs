@@ -4,7 +4,6 @@ linktitle: "Create Overview and Detail Pages"
 url: /howto8/front-end/create-your-first-two-overview-and-detail-pages/
 
 weight: 25
-tags: ["front end"]
 ---
 
 ## 1 Introduction

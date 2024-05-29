@@ -3,7 +3,6 @@ title: "Consume Registered Assets"
 url: /catalog/consume/consume-registered-assets/
 weight: 20
 description: "Describes how to use shared data sources and datasets through the Catalog."
-tags: ["data hub", "Catalog", "consume", "external entities", "asset", "entities", integration pane", "studio pro"]
 aliases:
     - /data-hub/data-hub-catalog/consume/
 ---

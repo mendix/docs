@@ -5,7 +5,6 @@ description: "Presents details on the Snowflake-specific modules available in th
 weight: 40
 no_list: false
 description_list: true
-tags: ["marketplace", "marketplace component", "module", "Snowflake"]
 ---
 
 ## 1 Introduction

@@ -3,7 +3,6 @@ title: "Show the Project Directory in Explorer"
 url: /howto7/general/show-project-directory/
 
 weight: 2
-tags: ["project directory", "directory", "explorer", "local", "windows"]
 ---
 
 ## 1 Introduction

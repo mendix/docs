@@ -11,7 +11,7 @@ Studio Pro can log performance measurements to key functionalities (such as open
 
 The performance logging feature can be reached by clicking **Help** > **Support Tools** > **Performance logging**:
 
-{{< figure src="/attachments/howto/monitoring-troubleshooting/performance-logging/performance-logging-menu.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/menus/help-menu/performance-logging/performance-logging-menu.png" class="no-border" >}}
 
 This tool enables you to do the following:
 
@@ -31,17 +31,17 @@ Check **Enable performance logging** to turn on performance logging.
 
 When you click **Start new session**, you will see the following dialog:
 
-{{< figure src="/attachments/howto/monitoring-troubleshooting/performance-logging/naming-new-session.png" class="no-border" width="650" >}}
+{{< figure src="/attachments/refguide/modeling/menus/help-menu/performance-logging/naming-new-session.png" class="no-border" width="650" >}}
 
 You can specify a name for the new performance logging session that can be used later when comparing performance measurements:
 
-{{< figure src="/attachments/howto/monitoring-troubleshooting/performance-logging/compare-measurements.png" class="no-border" width="750" >}}
+{{< figure src="/attachments/refguide/modeling/menus/help-menu/performance-logging/compare-measurements.png" class="no-border" width="750" >}}
 
 ## 4 View Performance Measurements
 
 When you click **Show measurements**, you will see the following dialog:
 
-{{< figure src="/attachments/howto/monitoring-troubleshooting/performance-logging/view-measurements.png" class="no-border" width="700" >}}
+{{< figure src="/attachments/refguide/modeling/menus/help-menu/performance-logging/view-measurements.png" class="no-border" width="700" >}}
 
 The **Measurement Source** field allows you to choose the source for the performance measurements you want to view: a previously created logging session or a log file where the measurements were logged.
 
@@ -58,7 +58,7 @@ The **Generate Report** button in the bottom-right corner allows you to view the
 
 When you click **Compare measurements**, you will see the following dialog:
 
-{{< figure src="/attachments/howto/monitoring-troubleshooting/performance-logging/compare-measurements-dialog.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/menus/help-menu/performance-logging/compare-measurements-dialog.png" class="no-border" >}}
 
 This allows you to compare between two different performance measurements sources (for example, the installed version and log file).
 

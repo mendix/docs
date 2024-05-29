@@ -49,7 +49,7 @@ Below are the criteria that a process should meet to be successfully implemented
 * Series of activities – it comprises a sequence of interconnected steps or actions.
 * Longer duration – the process spans a significant period, ranging from hours to months.
 
-## 3 When Not to Use Workflows? {#when-not}
+## 3 When Not to Use Workflows {#when-not}
 
 While workflow processes offer numerous benefits, they may not always be the ideal solution for every scenario. 
 

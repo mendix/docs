@@ -51,7 +51,7 @@ You can create and edit files online within GitHub. If you want to work outside 
 
 To edit existing documentation, follow these steps:
 
-1. Click **Edit** in the upper-right corner of the specific Mendix documentation page that you want to work on.
+1. Click **View in Github** in the upper-right corner of the specific Mendix documentation page that you want to work on.
 2. Make your changes in GitHub (make sure the changes align with our [Documentation Writing Guidelines](/developerportal/community-tools/documentation-guidelines/)).
 3. Create a pull request that specifies our **development** branch as the base. For more information, see [Creating a Pull Request](https://help.github.com/articles/creating-a-pull-request/) and [GitHub Standard Fork and Pull Request Workflow](https://gist.github.com/Chaser324/ce0505fbed06b947d962).
 

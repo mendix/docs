@@ -79,4 +79,4 @@ You can also sort the order of the apps here by **Most Recent** or **App Name**.
 
 ## 6 Guide Categories
 
-The *Mendix Portal for Developers* is divided into the following categories:
+*Mendix Portal for Developers* is divided into the following categories:

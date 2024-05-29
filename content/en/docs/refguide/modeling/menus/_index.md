@@ -24,7 +24,7 @@ The top-bar of Studio Pro contains the following menus:
 
 ## 2 Global Navigation Menu {#global-navigation-menu}
 
-The **Global Navigation Menu** menu is located at the upper left of Studio Pro and is represented as a nine-dots icon. It contains links to various parts of the platform that will open in a new browser window. For more information, see [Global Navigation](/developerportal/global-navigation/) in the *Mendix Portal for Developers*.
+The **Global Navigation Menu** menu is located at the upper left of Studio Pro and is represented as a nine-dots icon. It contains links to various parts of the platform that will open in a new browser window. For more information, see [Global Navigation](/developerportal/global-navigation/) in *Mendix Portal for Developers*.
 
 ## 3 File Menu {#file}
 

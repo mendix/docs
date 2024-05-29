@@ -494,7 +494,10 @@ When the namespace in which the environment is deployed is configured with PCLM 
 
 * **Subscription Secret** - When configured with PCLM, this field shows the message *configured using Private Cloud License Manager*.
 * **Runtime License Id** - If the Runtime license is successfully applied in the environment, the license ID is displayed in this section. If the Runtime license is not applied, this field shows the message *unknown*.
-* **Product Type for PCLM** - The product type of the Runtime license to be configured for this environment. This field can also be configured to use another Product type.
+* **Product Type for PCLM** - The product type of the Runtime license requested for this environment. This field can also be configured to use another Product type.
+* **Runtime Product Type** - The product type currently provisioned for Runtime license.
+* **License Provision Error** - If the licenses are not provisioned successfully for Runtime, then the error message would be displayed under this section. Example: When there are not enough Runtime license in the bundle or requested product type is not available in License bundle.
+
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/LicensePCLM.png" class="no-border" >}}
 

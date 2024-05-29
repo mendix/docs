@@ -70,7 +70,7 @@ The table below presents a few use cases that are a good fit for Mendix workflow
 | --- | --- |
 | Supply chain management in regulated industries | Companies in highly regulated process industries can use Mendix workflows to manage supply chain changes, such as changes in packaging, weight, and other conditions. Mendix workflows validate and assess the impact of these changes at each stage, ensuring smooth adaptation to evolving requirements. |
 | Migration from dedicated BPM platforms | Customers can transition from dedicated BPM platforms to Mendix to reduce cost, simplify maintenance, enhance user experience, and accelerate time-to-value. |
-| Maintenance plan approval | For customers who have migrated their industrial equipment maintenance plans from spreadsheets to Mendix, workflows facilitate to provide a structured review and approval process for changes of predefined maintenance plans. |
+| Maintenance plan approval | For customers who have migrated their industrial equipment maintenance plans from spreadsheets to Mendix, workflows provide a structured review and approval process for changes of predefined maintenance plans. |
 | Dynamic business process support for a new product launch | For companies needing rapid application development to support end-to-end business processes for new product launches, Mendix workflows can be seamlessly integrated for the subsequent legal and financial review and approval. |
 | Automated customer onboarding process | Organizations that need to streamline customer onboarding can use Mendix workflows to automate process orchestration across multiple systems and involve user intervention for invalid situations. This ensures a smooth and efficient onboarding experience. |
 

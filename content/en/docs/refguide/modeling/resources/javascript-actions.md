@@ -43,7 +43,7 @@ Parameters pass data to JavaScript actions. For example, if you had a JavaScript
 
 {{< figure src="/attachments/refguide/modeling/resources/javascript-actions/parameter-naming.png" alt="parameter" class="no-border" >}}
 
-In a JavaScript action's **Code** tab, you can see its parameters' values and handle its implementation. Each parameter has a name (1), type (2), category, description (3),return type (4), and required (5):
+In a JavaScript action's **Code** tab, you can see its parameters' values and handle its implementation. Each parameter has a name (1), type (2), category, description (3), return type (4), and required (5):
 
 {{< figure src="/attachments/refguide/modeling/resources/javascript-actions/parameter-code.png" alt="parameter code" class="no-border" >}}
 

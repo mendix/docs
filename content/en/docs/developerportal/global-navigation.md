@@ -7,7 +7,7 @@ weight: 1
 
 ## 1 Introduction
 
-The global navigation top bar and menu work the same in the Mendix Portal as they do in other browser-based parts of the Mendix Platform (for example, [Mendix Marketplace](/appstore/) and [Mendix Catalog](/catalog/)). 
+The global navigation top bar and menu work the same in Apps as they do in other browser-based parts of the Mendix Portal (for example, [Mendix Marketplace](/appstore/) and [Mendix Catalog](/catalog/)). 
 
 The global navigation is always accessible throughout the online Mendix Platform.
 

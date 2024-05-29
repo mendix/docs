@@ -1,22 +1,22 @@
 ---
-title: "Mendix Portal Guide"
+title: "Mendix Portal for Developers"
 url: /developerportal/
 description: "Describes the sections of the Mendix Developer Portal and links to more detailed documents in the guide."
 weight: 30
 no_list: false
 description_list: true
 cascade:
-    - content_type: "Mendix Portal Guide"
+    - content_type: "Mendix Portal for Developers"
     - mendix_version: 10
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-## 1 What Is the Mendix Portal?
+## 1 Introduction
 
-The [Apps](https://sprintr.home.mendix.com) is one of the key components of the Mendix Platform. In the Mendix Portal, Mendix users can collaborate, deploy, manage their apps. 
+On the Mendix Portal,  developers can create, deploy, and mange apps as well as collaborate with each other. To access these features, visit [Apps](https://sprintr.home.mendix.com).
 
-The Mendix Portal also offers open, well-defined APIs, enabling third-party developers to integrate their own widgets and plugins. For more information, see [API Documentation](/apidocs-mxsdk/apidocs/).
+{{% alert color="info" %}}The features in Apps can also be accessed via APIs, enabling third-party developers to integrate their own widgets and plugins. For more information, see [API Documentation](/apidocs-mxsdk/apidocs/).{{% /alert %}}
 
 ## 2 Creating a New App
 
@@ -79,4 +79,4 @@ You can also sort the order of the apps here by **Most Recent** or **App Name**.
 
 ## 6 Guide Categories
 
-The *Mendix Portal Guide* is divided into the following categories:
+The *Mendix Portal for Developers* is divided into the following categories:

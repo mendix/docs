@@ -207,7 +207,11 @@ In the **Provisioning** tab of the SCIM server configuration, you need to config
 
 * **Custom user Entity (extension of System.User)**: the entity in which you will store and look up the user account. If you are using the Administration module this would be `Administration.Account`.
 * **The attribute where the user principal is stored** (primary attribute): unique identifier associated with an authenticated user.
-* **User role**: the role which will be assigned to newly created users by default. Non-default roles can be assigned to users when they login, this requires proper configuration of SAML SSO or OIDC SSO or methods.
+* **Allow the module to create users**:this enables the module to create users based on user provisioning and attribute mapping configurations.
+    * By default, the value is set to ***Yes***.
+* **Default Userrole**: the role which will be assigned to newly created users by default. 
+* **User Type**: this allows you to configure end-users of your application as internal or external. 
+    * By default, the value is set to ***Internal***.
 * **Attribute Mapping**: under **Attribute Mapping**, select an **IdP Attribute** (claim) for each piece of information you want to add to your custom user entity. Specify the **Configured Entity Attribute** where you want to store the information.
 
 Note the following:

@@ -24,9 +24,7 @@ When you click **Start profiling**, you are presented with a dialog box that ask
 
 Then, perform the operations that lead to a degrading performance or slowness. 
 
-When you are done, click **Profiling** > **Stop profiling**. Zip all the files you can find in the directory that are opened (the directory you chose when clicking **Start profiling**).
-
-Then, send the archive to Mendix Support.
+When you are done, click **Profiling** > **Stop profiling**. Zip all the files you can find in the directory that are opened (the directory you chose when clicking **Start profiling**), then send the archive to Mendix Support.
 
 {{% alert color="info" %}}
 Profiling can be started at any time (when you start to see perofrmance issues) and does not need to start immediately after running Studio Pro.

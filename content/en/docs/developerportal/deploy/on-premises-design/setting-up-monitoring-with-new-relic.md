@@ -3,7 +3,6 @@ title: "Monitoring with New Relic"
 url: /developerportal/deploy/setting-up-monitoring-with-new-relic/
 description: "How to install Mendix behind a load balancer for high availability"
 weight: 30
-tags: ["new relic", "on-premises", "monitoring", "setup"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 

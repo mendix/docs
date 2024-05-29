@@ -3,7 +3,6 @@ title: "Storage Plans"
 url: /developerportal/deploy/private-cloud-storage-plans/
 description: "Describes how to configure storage plans in Mendix for Private Cloud."
 weight: 10
-tags: ["Private Cloud","Storage","Database","File","S3","Minio","Postgres","Azure"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 

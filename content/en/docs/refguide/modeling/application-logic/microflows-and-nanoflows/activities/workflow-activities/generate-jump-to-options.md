@@ -2,7 +2,6 @@
 title: Generate Jump-To Options
 url: /refguide/generate-jump-to-options/
 weight: 35
-tags: ["studio pro", "workflow", "generate jump-to options"]
 ---
 
 {{% alert color="info" %}}

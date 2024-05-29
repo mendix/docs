@@ -3,7 +3,6 @@ title: "Two-Factor Authentication"
 url: /developerportal/deploy/two-factor-authentication/
 weight: 20
 description: "Describes the purpose and functionality of 2FA in the Developer Portal."
-tags: ["Authenticator","Developer Portal","Cloud","Permissions", "Google", "Microsoft", "2FA", "SMS"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 

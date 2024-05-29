@@ -162,8 +162,8 @@ For reference, the table below gives an overview of attribute mapping when using
 | **SCIM payload** (IdP Attribute) | **Configured Entity Attribute** | **Typical value with Okta** (IdP Attribute) | **Typical value with EntraID** (IdP Attribute) |
 | --- | --- | --- | --- |
 | externalID | Name | 00ctc4pufr85d7 | `550e8400-e29b-41d4-a716-446655440000` |
-| familyName| (not mapped) | Doe | Doe John |
-| givenName| (not mapped) | John |  |
+| familyName| lastname | Doe | Doe John |
+| givenName| firstname | John |  |
 | emails| Email | john.doe@companyA.com | johndoe@companyA.com |
 | userName| FullName | johndoe@companyA.com | johndoe@companyA.com |
 | active| Active | true | true |
@@ -220,7 +220,7 @@ Note the following:
 
 The custm microflow name must begin with the string `CustomUserProvisioning`. If you have added a new microflow, you need to refresh the module containing your microflow as described in [Mx Model Reflection](/appstore/modules/model-reflection/).
 
-{{< figure src="/attachments/appstore/modules/scim/user_provisioning.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/modules/scim/user_commons.png" class="no-border" >}}
 
 This selection can be blank if you do not want to add custom logic. Save this configuration. Double click on **Alias** name and you will be able to copy the generated **API Key**.
 

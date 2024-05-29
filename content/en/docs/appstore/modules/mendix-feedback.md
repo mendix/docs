@@ -22,23 +22,23 @@ If you are using the deprecated Mendix Feedback widget (compatible with Studio P
 
 All [Mendix Feedback](https://marketplace.mendix.com/link/component/199/) widgets with versions lower than 8.4.0 are disabled as of October 1, 2022. If you are using one of these versions, [upgrade your current Mendix Feedback widget with the latest version of this module](#upgrade).
 
-The feedback provided via a widget version lower than 8.4.0 is no longer sent to the [Feedback](/developerportal/app-insights/feedback/) section of the Mendix Portal, but your app will keep working as usual.
+The feedback provided via a widget version lower than 8.4.0 is no longer sent to the [Feedback](/developerportal/app-insights/feedback/) section page for your app in [Apps](https://sprintr.home.mendix.com/), but your app will keep working as usual.
 
 If you are using the [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module (which includes another version of the Mendix Native Feedback widget), upgrade to version 3.5.1 or higher. 
 
-If you are using the old Mendix Native Feedback widget, you might face some issues to receive feedback. To make use of [Feedback](/developerportal/app-insights/feedback/) in the Mendix Portal, Mendix recommends removing the server location value within the widget and keep it empty.
+If you are using the old Mendix Native Feedback widget, you might face some issues to receive feedback. To make use of [Feedback](/developerportal/app-insights/feedback/) in [Apps](https://sprintr.home.mendix.com/), Mendix recommends removing the server location value within the widget and keep it empty.
 
 In case of any questions, contact [Mendix Support](https://support.mendix.com/hc/en-us).
 {{% /alert %}}
 
 ## 1 Introduction
 
-The [Mendix Feedback](https://marketplace.mendix.com/link/component/205506) module allows end-users of your application to directly submit feedback into your app. The module contains a feedback widget along with other files. The feedback module is fully integrated with the [Feedback](/developerportal/app-insights/feedback/) page in the Mendix Portal, where you can review feedback and convert it into [user stories](/developerportal/project-management/epics/planning/) to improve your app.
+The [Mendix Feedback](https://marketplace.mendix.com/link/component/205506) module allows end-users of your application to directly submit feedback into your app. The module contains a feedback widget along with other files. The feedback module is fully integrated with the [Feedback](/developerportal/app-insights/feedback/) page for your app in the [Apps](https://sprintr.home.mendix.com/), where you can review feedback and convert it into [user stories](/developerportal/project-management/epics/planning/) to improve your app.
 
 {{< figure src="/attachments/appstore/modules/mendix-feedback/feedback-in-app.png" class="no-border" >}}
 
 {{% alert color="info" %}}
-From 12 August, 2023 onwards, the way that feedback is presented in the Mendix Portal will become part of **App Insights**. For details the [Feedback](/developerportal/app-insights/feedback/) documentation for details.
+From 12 August, 2023 onwards, the way that feedback is presented in [Apps](https://sprintr.home.mendix.com/) will become part of **App Insights**. For details the [Feedback](/developerportal/app-insights/feedback/) documentation for details.
 
 Existing and new feedback items will continue to be available and you will not need to change the Mendix Feedback module in your app.
 {{% /alert %}}
@@ -102,12 +102,12 @@ To configure the Feedback widget, double-click it to open the **Edit Feedback** 
 
 * **Advanced** tab
 
-    * **App ID** – This is the unique identifier of your app. You can find it in your app’s [Settings](/developerportal/collaborate/general-settings/) in the Mendix Portal.
+    * **App ID** – This is the unique identifier of your app. You can find it in your app’s [Settings](/developerportal/collaborate/general-settings/) in [Apps](https://sprintr.home.mendix.com/).
 
     {{% alert color="info" %}}The original value of **App ID** is *1*, but this value should automatically change to your correct app ID. If it does not change automatically, see [Updating App ID](#update-app-id) below.
     {{% /alert %}}
 
-    * **Feedback server location** – This is the URL of the Mendix Portal server (usually `https://feedback-api.mendix.com`). You should only change it when you use a different environment.
+    * **Feedback server location** – This is the URL of the feedback server (usually `https://feedback-api.mendix.com`). You should only change it when you use a different environment.
 
     * **Screenshot Foreign Rendering**
 
@@ -170,11 +170,11 @@ If you are using MendixSSO3 for authentication, after upgrading to the module yo
 
 The value of the **App ID** on the **Project** tab will be changed to your correct app ID automatically from the original value 1. 
 
-If it did not change to your app ID because of an unexpected error, you can update the app ID manually. You can find the app ID in your app's [Settings](/developerportal/collaborate/general-settings/) in the Mendix Portal.
+If it did not change to your app ID because of an unexpected error, you can update the app ID manually. You can find the app ID in your app's [Settings](/developerportal/collaborate/general-settings/) in [Apps](https://sprintr.home.mendix.com/).
 
-### 5.2 Feedback Item Does Not Show in the Mendix Portal
+### 5.2 Feedback Item Does Not Show in Apps
 
-If you cannot see your feedback items on the Mendix Portal's **Feedback** page, it is possible that you have configured a wrong **App ID** or **Feedback server location**. Check if all the configurations are filled in per the [Configuring the Feedback Widget](#configuration) section above.
+If you cannot see your feedback items on the **Feedback** page after opening your app in [Apps](https://sprintr.home.mendix.com/), it is possible that you have configured a wrong **App ID** or **Feedback server location**. Check if all the configurations are filled in per the [Configuring the Feedback Widget](#configuration) section above.
 
 ### 5.3 Widget Cannot Be Read 
 
@@ -187,14 +187,14 @@ If you see the following error, click **close** and then go to your widget folde
 {{% alert color="warning" %}}
 **All Mendix Feedback widgets with versions lower than 8.4.0 are disabled as of October 1, 2022. If you are using one of these versions, download and replace your current [Mendix Feedback](https://marketplace.mendix.com/link/component/199/) widget with version 8.4.0 or higher.**
 
-The feedback provided via a widget version lower than 8.4.0 is no longer sent to the [Feedback](/developerportal/app-insights/feedback/) section of the Mendix Portal, but your app will keep working as usual.
+The feedback provided via a widget version lower than 8.4.0 is no longer sent to the [Feedback](/developerportal/app-insights/feedback/) page for your app in [Apps](https://sprintr.home.mendix.com/), but your app will keep working as usual.
 
 If you are using the [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module (which includes another version of the Mendix Native Feedback widget), upgrade to version 3.5.1 or higher.
 {{% /alert %}}
 
 ### 6.1 Introduction
 
-The [Mendix Feedback](https://marketplace.mendix.com/link/component/199/) widget allows end-users of your application to directly submit feedback into your app. The feedback widget is fully integrated with the [Feedback](/developerportal/app-insights/feedback/) page in the Mendix Portal, where you can review feedback and convert it into [user stories](/developerportal/project-management/epics/planning/) to improve your app.
+The [Mendix Feedback](https://marketplace.mendix.com/link/component/199/) widget allows end-users of your application to directly submit feedback into your app. The feedback widget is fully integrated with the [Feedback](/developerportal/app-insights/feedback/) page in [Apps](https://sprintr.home.mendix.com/), where you can review feedback and convert it into [user stories](/developerportal/project-management/epics/planning/) to improve your app.
 
 {{< figure src="/attachments/appstore/widgets/mendix-feedback/feedback-in-app.png" width="350px" class="no-border" >}}
 
@@ -219,14 +219,14 @@ The Mendix Feedback widget is easy to set up and automatically attaches addition
 You can configure the widget for certain actions in your app. All the configuration properties are explained on the various tabs of the properties dialog box for the widget. The feedback feature requires the following properties to be set:
 
 * **Project** tab
-    * **App ID** – the unique identifier of your app, which you can find in your app’s [Settings](/developerportal/collaborate/general-settings/) in the Mendix Portal
+    * **App ID** – the unique identifier of your app, which you can find in your app’s [Settings](/developerportal/collaborate/general-settings/) in [Apps](https://sprintr.home.mendix.com/)l
 
         {{% alert color="info" %}}The original value of **App ID** is 1, but this value should automatically change to your correct app ID. If it does not change automatically, see [Updating App ID](#legacy-update-app-id) below.
         {{% /alert %}}
 
         **Allow screenshots** – controls whether the app user can take a screenshot or not
 * **Advanced** tab
-    * **Feedback server location** – the URL of the Mendix Portal server (usually `https://feedback-api.mendix.com`), which you should only change when you are using a different environment
+    * **Feedback server location** – the URL of the feedback server (usually `https://feedback-api.mendix.com`), which you should only change when you are using a different environment
     * **Screenshot Foreign Rendering**
         * **No** (default)
         * **Yes** – only used when the page includes sensitive information
@@ -294,7 +294,7 @@ When this happens, right-click the error message, and choose **Update widget** o
 
 The value of the **App ID** on the **Project** tab will be changed to your correct app ID automatically from the original value 1. 
 
-If it did not change to your app ID because of an unexpected error, you can update the app ID manually. You can find the app ID in your app's [Settings](/developerportal/collaborate/general-settings/) in the Mendix Portal.
+If it did not change to your app ID because of an unexpected error, you can update the app ID manually. You can find the app ID in your app's [Settings](/developerportal/collaborate/general-settings/) in [Apps](https://sprintr.home.mendix.com/).
 
 #### 6.4.2 Page Does Not Scroll in the Screenshot Image
 
@@ -303,9 +303,9 @@ The Feedback widget uses the HTML2Canvas library which attempts to make an image
 * Turn off **Screenshot foreign rendering**
 * Change the **CSS selector** for a scrollable container - Some variations are difficult to spot for HTML2Canvas. This sometimes causes the image to render incorrectly. Fixing this requires significant CSS, HTML, and JS knowledge, but it is possible to fill in a CSS selector that will determine where the scrolling is happening.
 
-#### 6.4.3 Feedback Item Does Not Show in the Mendix Portal
+#### 6.4.3 Feedback Item Does Not Show in Apps
 
-If you cannot see your feedback items on the Mendix Portal's **Feedback** page, it is possible that you have configured a wrong **App ID** or **Feedback server location**. Check if all the configurations are filled in per the [Configuration](#legacy-configuration) section above.
+If you cannot see your feedback items on the **Feedback** page after opening your app in [Apps](https://sprintr.home.mendix.com/), it is possible that you have configured a wrong **App ID** or **Feedback server location**. Check if all the configurations are filled in per the [Configuration](#legacy-configuration) section above.
 
 #### 6.4.4 Creating a New Microflow to Retrieve DecryptedToken {#create-a-new-microflow-to-retrieve-decryptedtoken}
 

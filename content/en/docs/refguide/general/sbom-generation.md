@@ -4,7 +4,6 @@ url: /refguide/sbom-generation/
 category: "General Info"
 weight: 60
 description: "Describes how to create an SBOM from Studio Pro."
-tags: ["build", "deploy", "deployment package", "command-line", "studio pro", "sbom", "cyclonedx"]
 ---
 
 ## 1 Introduction

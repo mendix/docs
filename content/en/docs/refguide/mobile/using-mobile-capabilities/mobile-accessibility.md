@@ -3,7 +3,6 @@ title: "Mobile Accessibility"
 url: /refguide/mobile/using-mobile-capabilities/mobile-accessibility/
 weight: 87
 description: "This guide allows you to customize accessibility for native mobile applications."
-tags: ["accessibility", "JavaScript", "native", "mobile"]
 ---
 
 ## 1 Introduction

@@ -1,7 +1,6 @@
 ---
 title: "OQL Operators"
 url: /refguide8/oql-operators/
-tags: ["studio pro"]
 ---
 
 The following operators can be used in OQL expressions:

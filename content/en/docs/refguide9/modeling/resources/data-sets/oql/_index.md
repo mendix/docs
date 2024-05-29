@@ -1,7 +1,6 @@
 ---
 title: "OQL"
 url: /refguide9/oql/
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction

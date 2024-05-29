@@ -1,7 +1,6 @@
 ---
 title: "OQL LENGTH"
 url: /refguide8/oql-length/
-tags: ["studio pro"]
 ---
 
 The LENGTH function returns the length of a String value.

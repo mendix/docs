@@ -2,7 +2,6 @@
 title: "Security"
 url: /refguide/security/
 weight: 30
-tags: ["studio pro", "security"]
 ---
 
 ## 1 Introduction

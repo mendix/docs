@@ -2,7 +2,6 @@
 title: "Delete Object(s)"
 url: /refguide9/deleting-objects/
 weight: 50
-tags: ["studio pro", "delete object", "activity"]
 ---
 
 ## 1 Introduction

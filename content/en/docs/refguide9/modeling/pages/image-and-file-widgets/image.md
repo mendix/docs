@@ -2,7 +2,6 @@
 title: "Static Image"
 url: /refguide9/image/
 weight: 20
-tags: ["studio pro", "image", "image widget"]
 aliases:
     - /refguide9/image-property.html
     - /refguide9/image-property

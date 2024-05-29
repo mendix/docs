@@ -4,7 +4,6 @@ linktitle: "Minimize Objects in Session"
 url: /howto8/general/minimize-number/
 
 weight: 6
-tags: ["object", "session", "architecture", "stateless", "runtime"]
 ---
 
 ## 1 Introduction

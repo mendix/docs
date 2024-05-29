@@ -3,7 +3,6 @@ title: "Preview Appearance APIs – Mx9"
 linktitle: "Preview Appearance APIs"
 url: /apidocs-mxsdk/apidocs/pluggable-widgets-studio-apis-9/
 description: A guide for understanding the APIs which influence pluggable widget preview appearances.
-tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React", "Preview"]
 weight: 30
 ---
 

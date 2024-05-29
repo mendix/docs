@@ -3,7 +3,6 @@ title: "Denormalize Data to Improve Performance"
 url: /howto7/data-models/denormalize-data-to-improve-performance/
 
 weight: 6
-tags: []
 ---
 
 ## 1 Introduction

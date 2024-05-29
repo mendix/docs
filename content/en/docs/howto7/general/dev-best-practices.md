@@ -4,7 +4,6 @@ linktitle: "Best Practices for Development"
 url: /howto7/general/dev-best-practices/
 
 weight: 3
-tags: ["best practice", "development", "develop", "reusable", "prefix"]
 ---
 
 ## 1 Introduction

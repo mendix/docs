@@ -1,7 +1,6 @@
 ---
 title: "Operations"
 url: /refguide/operations/
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction

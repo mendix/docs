@@ -4,7 +4,6 @@ url: /howto/integration/publish-rest-service/
 
 weight: 10
 description: "Describes how to create a published REST service and return the results in JSON or XML."
-tags: ["rest", "rest service", "web service", "integration"]
 aliases:
     - /howto/integration/publish-rest-service/
 ---

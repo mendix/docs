@@ -2,7 +2,6 @@
 title: "CAB.05 - Reference Selector"
 url: /appstore/partner-solutions/ats/ht-two-cab-05-reference-selector/
 description: "This how-to explains step by step how to create an Unsupported Widget action for the Mendix Reference Selector widget."
-tags: ["ATS", "testing"]
 ---
 
 ## 1 Introduction

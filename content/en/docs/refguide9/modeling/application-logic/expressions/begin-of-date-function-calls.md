@@ -3,7 +3,6 @@ title: "Begin-of Date Function Calls"
 url: /refguide9/begin-of-date-function-calls/
 weight: 95
 description: Describes begin-of date function calls in Studio Pro expressions.
-tags: ["studio pro", "expressions", "begin-of date function"]
 ---
 
 {{% alert color="info" %}}

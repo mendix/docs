@@ -2,7 +2,6 @@
 title: "Error Event"
 url: /refguide9/error-event/
 weight: 3
-tags: ["studio pro", "error event", "event"]
 ---
 
 {{% alert color="info" %}}

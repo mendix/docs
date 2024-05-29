@@ -3,7 +3,6 @@ title: "Data Hub Pane"
 url: /refguide9/data-hub-pane/
 weight: 30
 description: "Describes the Data Hub pane in Mendix Studio Pro."
-tags: ["data hub", "studio Pro", "data hub pane", "Catalog"]
 
 ---
 

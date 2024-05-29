@@ -1,7 +1,6 @@
 ---
 title: "XPath Expressions"
 url: /refguide8/xpath-expressions/
-tags: ["studio pro"]
 ---
 
 ## 1 Overview

@@ -2,7 +2,6 @@
 title: "Catalog User Roles"
 url: /catalog/manage/user-roles/
 description: "Describes the user roles in the Catalog."
-tags: ["data hub", "Catalog", "curate", "user roles", "curator", "admin"]
 aliases:
     - /catalog/manage-data-sources/user-roles/
     - /data-hub/data-hub-catalog/user-roles/

@@ -4,7 +4,6 @@ linktitle: "Best Practices for Development"
 url: /howto8/general/dev-best-practices/
 
 weight: 7
-tags: ["best practice", "development", "develop", "reusable", "prefix"]
 #Academy are SMEs for verification, they discuss and link to this doc in training
 ---
 

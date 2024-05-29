@@ -4,7 +4,6 @@ url: /howto9/front-end/custom-error-page/
 
 weight: 55
 description: "Describes how to create a custom error page for a more tailored user experience."
-tags: ["theming", "UX", "Error page", "offline", "404", "403", "front end"]
 ---
 
 {{% alert color="info" %}}

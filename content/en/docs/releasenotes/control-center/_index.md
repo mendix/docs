@@ -2,7 +2,6 @@
 title: "Control Center"
 url: /releasenotes/control-center/
 description: "Release notes for Control Center"
-tags: ["control center", "release notes"]
 weight: 30
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---

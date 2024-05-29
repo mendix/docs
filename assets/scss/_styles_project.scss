@@ -231,8 +231,8 @@ a:not(.btn):not(.td-sidebar-link):visited {
     color: $purple;
 }
 
-// Add icon after external links in main content (but exclude buttons and breadcrumb)
-main a[href*="https://"]:not(.btn):not(.td-breadcrumbs a)::after {
+// Add icon after external links in main content (but exclude buttons and breadcrumb and get-started banner)
+main a[href*="https://"]:not(.btn):not(.td-breadcrumbs a):not(.get-started)::after {
     display: inline-block;
     width: 1rem;
     height: 1rem;
@@ -299,9 +299,7 @@ html {
             border-left: 1px solid $gray-border; // NK - moved from toc, to fully span height of screen
             border-right: 1px solid $gray-border; // NK - moved from left menu, to fully span height of screen
         }
-
-
-        padding-bottom: 2rem;
+    padding-bottom: 0rem;
     }
     // NK - custom addition
     main.lp{

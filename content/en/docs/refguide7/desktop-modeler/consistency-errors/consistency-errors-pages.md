@@ -2,7 +2,6 @@
 title: "Page Editor Consistency Errors"
 url: /refguide7/consistency-errors-pages/
 description: "Describes consistency errors in the Mendix Desktop Modeler and the way to fix them."
-tags: ["desktop modeler", "consistency errors", "checks", "errors", "pages"]
 ---
 
 ## 1 Introduction 

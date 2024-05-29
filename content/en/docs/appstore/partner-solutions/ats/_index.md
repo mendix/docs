@@ -4,7 +4,6 @@ url: /appstore/partner-solutions/ats/
 description: "Presents an overview of documents about the Mendix Application Test Suite,  which is built by CLEVR in Mendix on top of Selenium."
 no_list: false
 description_list: true
-tags: ["ats", "application test suite", "clevr"]
 aliases:
     - /addons/ats-addon/
     - /addons/ats-addon/index.html

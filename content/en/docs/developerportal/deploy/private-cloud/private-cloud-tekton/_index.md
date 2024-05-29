@@ -4,7 +4,6 @@ linktitle: "CI/CD with Tekton"
 url: /developerportal/deploy/private-cloud-tekton/
 description: "Describes how to use Tekton to create a CI/CD solution for Mendix environments in the Private Cloud"
 weight: 40
-tags: ["CI/CD", "Tekton", "Private Cloud", "Environment", "Standalone"]
 ---
 
 {{% alert color="info" %}}

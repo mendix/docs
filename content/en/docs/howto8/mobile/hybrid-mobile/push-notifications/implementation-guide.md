@@ -2,7 +2,6 @@
 title: "Implement Push Notifications"
 url: /howto8/mobile/implementation-guide/
 weight: 10
-tags: ["mobile", "push notification"]
 ---
 
 ## 1 Introduction

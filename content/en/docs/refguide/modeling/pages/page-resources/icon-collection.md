@@ -3,7 +3,6 @@ title: "Icon Collection"
 url: /refguide/icon-collection/
 weight: 7
 description: "This guide shows you why and how to create an icon collection."
-tags: ["Studio Pro", "Icons", "Icon Collection"]
 ---
 
 ## 1 Introduction

@@ -3,7 +3,6 @@ title: "Create a Secure App"
 url: /howto7/security/create-a-secure-app/
 
 weight: 10
-tags: ["security", "secure app"]
 ---
 
 ## 1 Introduction

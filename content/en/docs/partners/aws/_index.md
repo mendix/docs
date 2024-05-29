@@ -3,7 +3,6 @@ title: "AWS"
 url: /partners/aws/
 description: "Presents information about the strategic alliance between Mendix and AWS."
 weight: 20
-tags: ["AWS", "connectors"]
 ---
 
 ## 1 Introduction

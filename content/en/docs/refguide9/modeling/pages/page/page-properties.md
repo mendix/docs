@@ -2,7 +2,6 @@
 title: "Page Properties"
 url: /refguide9/page-properties/
 weight: 10
-tags: ["studio pro", "page", "properties"]
 ---
 
 ## 1 Introduction

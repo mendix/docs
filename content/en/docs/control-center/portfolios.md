@@ -2,7 +2,6 @@
 title: "Portfolios"
 url: /control-center/portfolios/
 description: "Describes the Portfolios page in the Mendix Control Center."
-tags: ["control center", "mendix admin", "portfolios"]
 weight: 65
 no_list: true
 ---

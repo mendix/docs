@@ -4,7 +4,6 @@ url: /howto8/data-models/
 weight: 50
 no_list: false
 description_list: true 
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction

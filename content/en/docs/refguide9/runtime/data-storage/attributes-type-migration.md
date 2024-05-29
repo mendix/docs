@@ -2,7 +2,6 @@
 title: "Attribute Type Migration"
 url: /refguide9/attributes-type-migration/
 weight: 10
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction

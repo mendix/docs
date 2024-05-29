@@ -3,7 +3,6 @@ title: "Authentication"
 url: /apidocs-mxsdk/apidocs/authentication/
 description: "Describes the two methods of Mendix API authentication: using API keys and using personal access tokens."
 weight: 5
-tags: ["API", "API Key", "Authentication", "personal access token"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

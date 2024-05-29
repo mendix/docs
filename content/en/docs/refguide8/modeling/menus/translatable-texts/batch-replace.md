@@ -2,7 +2,6 @@
 title: "Batch Replace"
 url: /refguide8/batch-replace/
 weight: 20
-tags: ["studio pro", "translation", "languages", "translatable text"]
 ---
 
 ## 1 Introduction

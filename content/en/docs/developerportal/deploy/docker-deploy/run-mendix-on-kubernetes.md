@@ -3,7 +3,6 @@ title: "Use Docker with Minikube"
 linktitle: "Run with Minikube"
 url: /developerportal/deploy/run-mendix-on-kubernetes/
 weight: 20
-tags: ["Minikube", "Docker", "deployment"]
 ---
 
 ## 1 Introduction

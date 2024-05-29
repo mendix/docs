@@ -1,7 +1,6 @@
 ---
 title: "Page Break (Document Template)"
 url: /refguide/page-break-document-template/
-tags: ["studio pro"]
 aliases:
     - /refguide/Page+Break+(document+template).html
     - /refguide/page-break-(document-template).html

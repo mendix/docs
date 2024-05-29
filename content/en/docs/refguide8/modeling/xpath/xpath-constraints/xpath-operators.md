@@ -1,7 +1,6 @@
 ---
 title: "XPath Operators"
 url: /refguide8/xpath-operators/
-tags: ["studio pro"]
 ---
 
 ## 1 For XPath Query Constraints

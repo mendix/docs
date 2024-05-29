@@ -1,7 +1,6 @@
 ---
 title: "Listen to Widget Source"
 url: /refguide9/listen-to-grid-source/
-tags: ["studio pro", "listen to widget", "data source"]
 weight: 70
 ---
 

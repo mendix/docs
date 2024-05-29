@@ -3,7 +3,6 @@ title: "Working with Lists in a Microflow"
 url: /refguide9/working-with-lists-in-a-microflow/
 weight: 60
 description: "Describes how to work with a list of objects in a microflow as well retrieve a filtered list of objects from the database."
-tags: ["microflow", "logic", "list"]
 ---
 
 ## 1 Introduction

@@ -2,7 +2,6 @@
 title: "Marketplace"
 url: /releasenotes/marketplace/
 description: "Release notes for updates to the Mendix Marketplace"
-tags: ["marketplace", "connector", "module", "add on", "widget"]
 weight: 35
 aliases:
     - /releasenotes/app-store/index.html

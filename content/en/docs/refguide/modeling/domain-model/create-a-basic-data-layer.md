@@ -3,7 +3,6 @@ title: "Configuring a Domain Model"
 url: /refguide/configuring-a-domain-model/
 weight: 60
 description: "Describes how to create entities and attributes, add enumerations, create associations, and configure the delete behavior for associations with Studio Pro."
-tags: ["data layer", "domain model", "entities", "enumerations", "associations"]
 aliases:
     - /howto/data-models/create-a-basic-data-layer/
     - /refguide/create-a-basic-data-layer/

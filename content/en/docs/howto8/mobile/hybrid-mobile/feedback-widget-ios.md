@@ -4,7 +4,6 @@ linktitle: "Configure iOS Mendix Feedback Widget"
 url: /howto8/mobile/feedback-widget-ios/
 weight: 20
 description: "How to configure ios security settings to render the feedback widget's content"
-tags: ["mobile", "feedback", "widget", "ios"]
 ---
 
 ## 1 Introduction

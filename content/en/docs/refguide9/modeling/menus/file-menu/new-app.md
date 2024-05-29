@@ -3,7 +3,6 @@ title: "New App"
 url: /refguide9/new-app/
 weight: 10
 description: "This document describes the New App flow and the App Settings dialog box."
-tags: ["studio pro", "create app", "new app", "creating new app"]
 aliases:
     - /refguide9/app-settings-dialog.html
     - /refguide9/app-settings-dialog

@@ -4,7 +4,6 @@ url: /howto8/front-end/charts-tutorials/
 
 weight: 20
 description: "These how-to's will guide you in using charts in Mendix apps."
-tags: ["build", "app", "studio pro", "charts", "extensibility"]
 ---
 
 The following how-to's are available here:

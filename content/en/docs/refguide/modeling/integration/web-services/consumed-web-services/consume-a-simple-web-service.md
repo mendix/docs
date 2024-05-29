@@ -4,7 +4,6 @@ url: /refguide/integration/consume-a-simple-web-service/
 
 weight: 7
 description: "Describes how to import a WSDL and create logic to call the web service."
-tags: ["integration", "wsdl", "web service", "consume"]
 aliases:
     - /howto/integration/consume-a-simple-web-service/
 ---

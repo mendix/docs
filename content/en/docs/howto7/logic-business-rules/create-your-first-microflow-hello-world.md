@@ -4,7 +4,6 @@ linktitle: "Your First Microflow"
 url: /howto7/logic-business-rules/create-your-first-microflow-hello-world/
 
 weight: 1
-tags: ["microflow"]
 ---
 
 ## 1 Introduction

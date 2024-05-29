@@ -4,7 +4,6 @@ url: /developerportal/deploy/sap-cloud-platform/sap-monitoring/
 
 weight: 19
 description: "Presents reference information on logging and monitoring for Mendix apps running on SAP BTO."
-tags: ["SAP", "on-premises", "logging", "monitoring", "SAP BTP", "SAP Business Technology Platform"]
 ---
 
 ## 1 Introduction

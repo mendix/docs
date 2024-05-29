@@ -2,7 +2,6 @@
 title: "Project Explorer"
 url: /refguide8/project-explorer/
 weight: 40
-tags: ["studio pro", "project explorer"]
 ---
 
 ## 1 Introduction

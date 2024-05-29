@@ -5,7 +5,6 @@ url: /howto8/extensibility/howto-connector-kit/
 
 description: "Describes creating custom Microflow actions using advanced Connector Kit options."
 weight: 80
-tags: ["java", "connector kit", "microflow action", "parameter type", "aws", "amazon web services"]
 #To update screenshots of these microflows in Studio Pro, use the SlackRekognition-main-master app, which is saved locally in Other Resources > Documentation Backups (No Update).
 ---
 

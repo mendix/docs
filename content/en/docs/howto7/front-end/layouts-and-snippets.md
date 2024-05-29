@@ -3,7 +3,6 @@ title: "Use Layouts and Snippets"
 url: /howto7/front-end/layouts-and-snippets/
 
 weight: 25
-tags: ["front end"]
 ---
 
 ## 1 Introduction

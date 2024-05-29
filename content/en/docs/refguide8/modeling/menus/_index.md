@@ -4,7 +4,6 @@ url: /refguide8/menus/
 
 description: "Describes Studio Pro menus."
 weight: 12
-tags: ["Studio Pro", "menu", "top bar"]
 ---
 
 ## 1 Introduction

@@ -2,7 +2,6 @@
 title: "Aggregate List"
 url: /refguide9/aggregate-list/
 weight: 1
-tags: ["studio pro", "aggregate", "sum", "average", "count", "minimum", "maximum", "microflow"]
 #To update screenshots of these microflows in Studio Pro, use the Microflow Screenshots app.
 ---
 

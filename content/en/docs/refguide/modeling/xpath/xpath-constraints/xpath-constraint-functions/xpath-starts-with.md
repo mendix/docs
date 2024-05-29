@@ -2,7 +2,6 @@
 title: "XPath starts-with"
 url: /refguide/xpath-starts-with/
 weight: 17
-tags: ["studio pro"]
 ---
 
 ## 1 Overview

@@ -5,7 +5,6 @@ url: /howto8/security/best-practices-security/
 
 weight: 20
 description: "A set of security aspects and checks to use when developing your Mendix application."
-tags: ["security", "best practices", "access rules", "authentication", "encryption", "password", "ssl", "identity provider", "mendix cloud"]
 #The anchor request-handlers below is mapped, so it should not be removed or changed.
 ---
 

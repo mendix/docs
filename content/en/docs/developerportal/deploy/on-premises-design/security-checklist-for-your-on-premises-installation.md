@@ -4,7 +4,6 @@ linktitle: "On-Premises Installation Security"
 url: /developerportal/deploy/security-checklist-for-your-on-premises-installation/
 description: "A checklist for implementing security when deploying Mendix on premises"
 weight: 10
-tags: ["security", "on-premises", "user account", "reverse proxy", "firewall", "file access", "admin port"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 

@@ -3,7 +3,6 @@ title: "External Database Connector"
 url: /appstore/modules/external-database-connector/
 
 description: "Describes the configuration and usage of the new Database connector, which incorporates your external data directly in your Mendix app."
-tags: ["marketplace",  "marketplace component", "database connector", "mendix 10", "studio pro 10", "query", "mssql", "mysql", "postgresql", "oracle", "new"]
 aliases:
     - /appstore/connectors/external-database-connector/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 

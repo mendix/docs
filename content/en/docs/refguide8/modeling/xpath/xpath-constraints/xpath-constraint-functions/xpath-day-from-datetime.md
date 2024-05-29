@@ -1,7 +1,6 @@
 ---
 title: "XPath Day-from-DateTime"
 url: /refguide8/xpath-day-from-datetime/
-tags: ["studio pro"]
 ---
 
 ## 1 Overview

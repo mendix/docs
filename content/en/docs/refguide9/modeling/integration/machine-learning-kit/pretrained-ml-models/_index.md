@@ -2,7 +2,6 @@
 title: "Pre-Trained ML Models"
 url: /refguide9/machine-learning-kit/pretrained-ml-models/
 weight: 20
-tags: ["studio pro", "machine learning", "ml kit", "models", "integration"]
 ---
 
 {{% alert color="info" %}}Machine learning model support is available in Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above.{{% /alert %}}

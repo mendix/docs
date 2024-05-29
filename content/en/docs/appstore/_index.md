@@ -8,7 +8,6 @@ description_list: true
 cascade:
     - content_type: "Marketplace Guide"
     - mendix_version: 10
-tags: ["marketplace",  "component", "app service", "widget", "connector", "module", "platform support"]
 ---
 
 ## 1 Introduction

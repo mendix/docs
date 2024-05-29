@@ -2,7 +2,6 @@
 title: "Events"
 url: /refguide8/events/
 weight: 90
-tags: ["studio pro", "event", "events"]
 ---
 
 ## 1 Introduction

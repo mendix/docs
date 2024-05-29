@@ -6,7 +6,6 @@ weight: 110
 no_list: false
 description_list: true
 description: "Introduces the services that Mendix uses for application integration, for instance, OData, REST, and SOAP/Web Services. Mendix can also import and export data from XML and JSON."
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction

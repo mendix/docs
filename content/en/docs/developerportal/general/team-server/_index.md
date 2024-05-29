@@ -4,7 +4,6 @@ url: /developerportal/general/team-server/
 
 weight: 12
 description: "Describes the overview of Team Server revisions and commits."
-tags: ["Studio Pro", "Team Server", "Developer Portal", "commit", "branch"]
 aliases:
     - /refguide/team-server.html
     - /developerportal/develop/team-server.html

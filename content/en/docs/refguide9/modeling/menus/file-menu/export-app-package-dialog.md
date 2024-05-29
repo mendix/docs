@@ -2,7 +2,6 @@
 title: "Export App Package"
 url: /refguide9/export-app-package-dialog/
 weight: 30
-tags: ["studio pro", "export app", "export app package"]
 aliases:
     - /refguide9/export-project-package-dialog/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

@@ -3,7 +3,6 @@ title: "Login Behavior"
 url: /refguide8/login-behavior/
 
 description: "Describes default and customized login behavior in Runtime."
-tags: ["Runtime", "login", "studio pro"]
 ---
 
 ## 1 Default Login Behavior

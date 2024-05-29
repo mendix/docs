@@ -3,7 +3,6 @@ title: "Sending Email"
 url: /developerportal/deploy/sending-email/
 weight: 40
 description: "How to use external email providers in Mendix"
-tags: ["email", "smtp", "sending policy framework", "SPF"]
 aliases:
     - /deployment/mendixcloud/sending-email.html
     - /deployment/mendixcloud/sending-email

@@ -3,7 +3,6 @@ title: "Planning"
 url: /developerportal/project-management/epics/planning/
 weight: 20
 description: "Describes the Planning page in Epics. This page looks different, depending on whether you use the Scrum workflow or Kanban workflow."
-tags: ["Project Management", "Epics", "Sprint", "Planning", "Stories", Developer Portal"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 ## 1 Introduction

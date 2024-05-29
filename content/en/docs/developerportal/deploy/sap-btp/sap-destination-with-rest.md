@@ -5,7 +5,6 @@ url: /developerportal/deploy/sap-cloud-platform/sap-destination-with-rest/
 
 weight: 25
 description: "How to configure Mendix native REST and SOAP calls to use the SAP Destination Service and the SAP Connectivity Service to reach on-premises services."
-tags: ["SAP", "Cloud Connector", "Connectivity Service", "Destination Service", "REST", "SOAP"]
 aliases:
     - /partners/sap/sap-destination-with-rest/
 ---

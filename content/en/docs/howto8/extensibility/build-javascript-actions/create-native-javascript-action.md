@@ -3,7 +3,6 @@ title: "Build JavaScript Actions for Native Mobile"
 url: /howto8/extensibility/create-native-javascript-action/
 weight: 30
 description: "This tutorial teaches you how to build a JavaScript action for native mobile apps."
-tags: ["NFC", "Near Field Communication", "JavaScript", "native", "mobile"]
 ---
 
 ## 1 Introduction

@@ -3,7 +3,6 @@ title: "Maintenance Windows"
 url: /developerportal/deploy/maintenance-windows/
 weight: 33
 description: "How to configure the maintenance windows for your node environment."
-tags: ["Deploy","App","Developer Portal", "maintenance"]
 aliases:
     - /mendixcloud/maintenance-windows.html
     - /mendixcloud/maintenance-windows

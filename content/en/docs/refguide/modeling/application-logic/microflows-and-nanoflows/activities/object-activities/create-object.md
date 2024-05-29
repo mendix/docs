@@ -2,7 +2,6 @@
 title: "Create Object"
 url: /refguide/create-object/
 weight: 40
-tags: ["studio pro", "create object", "activity"]
 ---
 
 {{% alert color="info" %}}

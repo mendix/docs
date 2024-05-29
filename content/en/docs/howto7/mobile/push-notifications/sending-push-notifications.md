@@ -2,7 +2,6 @@
 title: "Send Push Notifications"
 url: /howto7/mobile/sending-push-notifications/
 weight: 20
-tags: ["mobile", "push notifications", "microflow"]
 ---
 
 ## 1 Overview

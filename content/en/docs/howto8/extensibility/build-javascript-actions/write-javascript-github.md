@@ -4,7 +4,6 @@ linktitle: "2. Build JavaScript Actions"
 url: /howto8/extensibility/write-javascript-github/
 weight: 20
 description: "This advanced how-to teaches you how to make a JavaScript action which can search for GitHub users."
-tags: ["widget", "search", "GitHub", "JavaScript", "API", "JavaScript-API"]
 ---
 
 ## 1 Introduction

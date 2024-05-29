@@ -222,7 +222,7 @@ Some managed PostgreSQL databases might have restrictions or require additional 
 As an alternative to static password authentication, Mendix Operator can use its Kubernetes Service Account to authenticate with:
 
 * AWS RDS databases using IAM roles
-* Azure Database for PostgreSQL (Flexible Server) databases using workload identities
+* Azure Database for PostgreSQL (Flexible Server) databases using managed identities
 
 {{% alert color="info" %}}
 To use a PostgreSQL database, the Mendix Operator requires a Superuser account with root privileges and permissions to create new users and databases.
@@ -263,13 +263,12 @@ Amazon and Azure SQL servers require additional firewall configuration to allow 
 
 Some managed SQL Server databases might have restrictions or require additional configuration.
 
-As an alternative to static password authentication, Mendix Operator can use its Kubernetes Service Account to authenticate with Azure SQL databases.
+As an alternative to static password authentication, Mendix Operator can use its Kubernetes Service Account to authenticate with Azure SQL databases. The Kubernetes Service Account is linked with a Managed Identity, and the Managed Identity replaces a static username/password. This feature requires Mendix Operator version 2.17 (or later) and Mendix 10.10 (or later).
 
 {{% alert color="info" %}}
 To use a SQL Server database, the Mendix Operator requires Superuser account with permissions to create new users and databases.
 
 For every Mendix app environment, a new database, user and login will be created so that the app can only access its own data.
-
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -331,9 +330,12 @@ configuration details.
 ### 5.4 Azure Blob Storage
 
 [Azure Blob Storage](https://azure.microsoft.com/en-us/services/storage/blobs/) is supported.
-Mendix Operator can either provide a static access key and other credentials directly to environments, or manage containers and provide access to environments through Azure Managed Identities.
 
-A complete list of supported Azure Blob Storage modes and their required IAM permissions for each one is available in [storage plan](/developerportal/deploy/standard-operator/#storage-plan) configuration details.
+Mendix Operator can:
+* provide a static access key and other credentials to environments (a static config);
+* or handle the lifecycle of a storage container - by creating a dedicated container and Azure Managed Identity for every new environment, and ensuring that an environment can only access its dedicated container (through the environment's Managed Identity); this feature works with Mendix 10.10 (or later versions).
+
+A complete list of supported Azure Blob Storage modes and their required role assignments (permissions) for each one is available in [storage plan](/developerportal/deploy/standard-operator/#storage-plan) configuration details.
 
 ### 5.5 Google Cloud Storage
 

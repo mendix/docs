@@ -178,7 +178,9 @@ The following database types are supported:
 ### 2.3 Postgres {#database-postgres}
 
 Postgres databases can be used with [static authentication](#database-postgres-static).
+
 If the Postgres instance is an AWS RDS database, you can use [IAM authentication](#database-postgres-iam) for additional security.
+
 If the Postgres instance is an Azure Postgres (Flexible Server) database, you can use [managed identity authentication](#database-postgres-azwi) for additional security.
 
 #### 2.3.1 Postgres (static credentials) {#database-postgres-static}
@@ -636,6 +638,7 @@ When a new environment is created, the Mendix Operator performs the following ac
 * Generate a username for the new environment.
 * Create a new contained database user for the new environment. This will be the environment's user, which only exists in the environment's database. This user will be [linked with the environment's Managed Identity](https://learn.microsoft.com/en-us/azure/azure-sql/database/authentication-aad-configure?view=azuresql&tabs=azure-powershell#create-contained-users-mapped-to-microsoft-entra-identities).
 * Create a Kubernetes secret to provide connection details to the new app environment - to automatically configure the new environment.
+   Since the app environment will authenticate through a managed identity role, this secret will not contain any static passwords - only the database hostname, username and other non-sensitive connection details.
 
 ##### 2.5.2.5 Delete Workflow
 
@@ -1649,7 +1652,7 @@ When a new environment is created, the Mendix Operator performs the following ac
 * Create a new container in the shared blob storage account. This will be the environment's dedicated container.
 * Add the [Storage Blob Data Contributor](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/storage#storage-blob-data-contributor) role to an envrionment's Managed Identity, scoped to its container.
 * Create a Kubernetes secret to provide connection details to the new app environment - to automatically configure the new environment.
-   Since the app environment will authenticate through a managed identity role, this secret will not contain any static passwords - only the database hostname, username and other non-sensitive connection details.
+   Since the app environment will authenticate through a managed identity role, this secret will not contain any static passwords - only the blob storage endpoint, container name and other non-sensitive connection details.
 
 ##### 3.4.1.5 Delete Workflow
 
@@ -1741,7 +1744,7 @@ When an existing environment is deleted, the Mendix Operator performs the follow
 In the Azure Blob plan configuration, enter the following details:
 
 * **Account Name** - Blob Storage account name.
-* **Managed Identity authentication** - Set to **yes**
+* **Managed Identity authentication** - Set to **no**
 * **Account Key** - Access key for the blob storage container.
 * **Container name** - Name of the blob storage container.
 * **Type** - Specifies is the container can be shared between environments (create an on-demand storage plan); or that the container can only be used by one environment (create a dedicated storage plan). To increase security and prevent environments from being able to access each other's data, select `Dedicated`.
@@ -2228,7 +2231,7 @@ To configure the required settings for an S3 bucket, do the following steps:
   * A [Storage Blob Data Contributor](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/storage#storage-blob-data-contributor) role scoped to the blob storage account.
   * A [Role Based Access Control Administrator](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/general#role-based-access-control-administrator) role scoped to the blob storage account, and constrained to only have permissions to add the [Storage Blob Data Contributor](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/storage#storage-blob-data-contributor) role to Service principals.
 
-{{% alert color="info" %}}To improve security, set the firewall to only allow connections to the database from the Kubernetes cluster.{{% /alert %}}
+{{% alert color="info" %}}To improve security, set the firewall to only allow connections to the blob storage account from the Kubernetes cluster.{{% /alert %}}
 
 {{% alert color="info" %}}To allow recovery of deleted files, set up [Data protection](https://learn.microsoft.com/en-us/azure/storage/blobs/data-protection-overview) options such as **Container soft delete** and/or **Blob soft delete**.{{% /alert %}}
 

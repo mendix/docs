@@ -20,7 +20,7 @@ We will enhance this page to provide information about apps deployed on standalo
 
 ## 2 Mendix Cloud
 
-The **Mendix Cloud** tab gives an overview of all the licensed apps that can be published on the Mendix Public Cloud.
+The **Mendix Cloud** tab gives an overview of all the licensed apps that can be published on the Mendix Cloud.
 
 By default you only see apps and their production environments. Turn off the **Production** toggle on the right side above the table to see all the environments.
 

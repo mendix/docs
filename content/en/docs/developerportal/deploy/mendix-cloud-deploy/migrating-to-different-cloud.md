@@ -16,7 +16,7 @@ aliases:
 This document explains how to migrate your licensed app from one cloud node to another. There are a couple of reasons you may wish to move your app to a different node:
 
 * You want to change the region where your app is hosted. Mendix Cloud regularly opens [new regions](/developerportal/deploy/mxcloudv4/#cloud-data-regions), and you may find that another region is a better fit for your app. In this case, you can create a node in the region of your choosing and then migrate your app to this target node.
-* You want to switch from Mendix Public Cloud to Cloud Dedicated (or vice versa). In this case, you can create a node in the cluster of your choosing, and then migrate your app to this target node.
+* You want to switch from Mendix Cloud to Cloud Dedicated (or vice versa). In this case, you can create a node in the cluster of your choosing, and then migrate your app to this target node.
 
 ## 2 Migration Considerations
 

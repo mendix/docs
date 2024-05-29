@@ -23,7 +23,7 @@ Both options for setting up email alerts are described below.
 If you are the Technical Contact for an app, you can grant team members the **Receive Alerts** permission by following these steps:
 
 1. Go to the [Apps](https://sprintr.home.mendix.com).
-2. Open the [Global Navigation menu](/developerportal/global-navigation/) and click **Deployment** (or **Deployment** > **Public Cloud**).
+2. Open the [Global Navigation menu](/developerportal/global-navigation/) and click **Deployment** (or **Deployment** > **Mendix Cloud**).
 3. Open the node by clicking **Environments** under the app name.
 4. Click **Details** ({{% icon name="notes-paper-edit" %}}) for the environment for which you want to set up alerts. You can set alerts permissions separately for each environment.
 5. Switch to the **Permissions** tab.

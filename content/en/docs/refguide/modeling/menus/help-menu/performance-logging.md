@@ -1,7 +1,6 @@
 ---
 title: "Performance Logging"
 url: /refguide/performance-logging/
-
 description: "Describes how to enable, view and compare performance metrics to key functionalities in Studio Pro."
 tags: ["monitoring", "troubleshooting", "performance", "performance logging"]
 ---

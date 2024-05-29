@@ -14,7 +14,7 @@ aliases:
 
 Advanced Audit Trail employs a software stack on top of Kafka, Elasticsearch, and Kibana to leverage their utility. Kafka is used for long-term immutable data storage for audit data. Elasticserach and Kibana are used to index audit data. You can find an integration diagram below:
 
-{{< figure src="/attachments/appstore/modules/advanced-audit-trail/integration-diagram.png" >}}
+{{< figure src="/attachments/appstore/modules/advanced-audit-trail/integration-diagram.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 The Advanced Audit Trail solution is different from the [Audit Trail](/appstore/modules/audit-trail/) module, because the Advanced Audit Trail solution needs less work to implement and delivers a better search experience and better performance.
@@ -71,7 +71,7 @@ To install the component, click the **Contact Us** button on the [Advanced Audit
 2. Configure the right [constant values](#constants) for the right snapshots.
 3. Implement the **Before Commit** (**BCo**) and **Before Delete** (**Bde**) events. Use the events on the domain model settings (**BCo** / **BDe**). For example, the configuration in the image below is for the **Before Commit** handler, whereas for the **Before Delete** handler, the value of **Is delete** should be set to *true*.
 
-    {{< figure src="/attachments/appstore/modules/advanced-audit-trail/example.png" >}}
+    {{< figure src="/attachments/appstore/modules/advanced-audit-trail/example.png" class="no-border" >}}
 
     In case you need to follow a compliance that requires you never to delete an object, implement this outside the context of the audit trail module. 
 

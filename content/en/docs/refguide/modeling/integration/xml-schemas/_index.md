@@ -12,7 +12,7 @@ An XML schema is defined in an XML Schema Definition (XSD) file and can be impor
 
 ## 2 General Tab
 
-{{< figure src="/attachments/refguide/modeling/integration/xml-schemas/18582294.png" alt="Figure 1" >}}
+{{< figure src="/attachments/refguide/modeling/integration/xml-schemas/18582294.png" alt="Figure 1" class="no-border" >}}
 
 ### 2.1 XML Schema
 

@@ -10,3 +10,4 @@ An expression is either a constant, a function, or any combination of attribute 
 * [OQL Functions](/refguide/oql-functions/)
 * [OQL Operators](/refguide/oql-operators/)
 * [OQL Parameters](/refguide/oql-parameters/)
+* [OQL Subqueries](/refguide/oql-subqueries/)

@@ -38,7 +38,7 @@ You can obtain the deployment package in a number of ways:
 
 * within Studio Pro, by choosing the menu option **Project > Create Deployment Package…** – see [Create Deployment Package](/refguide/create-deployment-package-dialog/) for more information
 * from the **Environments** page of your app in the Developer Portal
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-operator/environments-create-mda.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-operator/environments-create-mda.png" class="no-border" >}}
 * through a CI/CD process, such as Jenkins.
 
 The deployment package must be available over the internet without requiring authorization credentials, as these cannot be provided in the CR.
@@ -57,7 +57,7 @@ spec:
     servicePlan: dev
   storage: # Specification of Storage CR
     servicePlan: dev
-  mendixRuntimeVersion: 8.0.0 # Mendix version to use for placeholder runtime image.
+  mendixRuntimeVersion: 8.0.0 # Studio Pro version of the Mendix app
   sourceURL: https://example.com/example-app.mda # URL of App's source MDA or prebuilt OCI image
   appURL: example-mendixapp.k8s-cluster.example.com # URL to access the app
   tls: # Optional, can be omitted : set a custom TLS configuration, overriding the default operator configuration
@@ -174,7 +174,7 @@ You need to make the following changes:
 
 * **name**: – You can deploy multiple apps in one project/namespace — the app name in the CR doesn't have to match the app name in the mda and will have an **Environment UUID** added when it is deployed to ensure that it is unique in the project — see [Reserved Names for Mendix Apps](#reserved-names), below, for restrictions on naming your app
 * **database/storage** – ensure that these have the correct **Database Plan** and **Storage Plan** — they have to have the same names that you [registered in the namespace](/developerportal/deploy/standard-operator/#configure-namespace)
-* **mendixRuntimeVersion** – the full runtime version of the app. From Operator version 2.15.0 onwards, this field is not read (but needs to be specified).
+* **mendixRuntimeVersion** – the full runtime version of the app. In Operator versions 2.15.0 and 2.15.1, this field is not read (but needs to be specified). From Operator version 2.16.0 onwards, this field does not need to be specified.
 * **sourceURL** – an HTTP or HTTPS URL specifying the location of the deployment package (this must be accessible from your cluster without any authentication; use expiring URLs for security). Alternatively, to deploy an existing app image built by the Mendix Operator, specify it using an `oci-image://` schema.
 * **appURL** – the endpoint where you can connect to your running app — this is optional, and if it is supplied it must be a URL which is supported by your platform
 * **tls** – the TLS configuration — this is optional, and if it is supplied it will override the default Mendix Operator network configuration
@@ -230,7 +230,7 @@ You need to make the following changes:
 The constant name is equal to `{module-name}.{constant-name}` where {module-name} is the name of the Mendix app module containing the constant,
 and {constant-name} is the name of the constant. The constant name will also be visible in the constant properties (UnitTesting.RemoteApiEnabled in this example):
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-operator/constant-name.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-operator/constant-name.png" class="no-border" >}}
 
 Set the constant values in the **microflowConstants** value in **runtime**. For example:
 
@@ -319,12 +319,12 @@ To build and deploy your app using the OpenShift Console, do the following:
 2. Go to your project.
 3. Click the **Add** button, and select **Import YAML**.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-operator/image1.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-operator/image1.png" class="no-border" >}}
 
 4. In the **Import YAML** page, enter/paste the YML you prepared in [Editing the CR}(#edit-cr), above.
 5. Click the **Create** button.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-operator/image2.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-operator/image2.png" class="no-border" >}}
 
 Mendix Operator will now pick up the YAML and deploy your app.
 

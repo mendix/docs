@@ -21,7 +21,7 @@ Rather than having to apply and update licenses for each environment individuall
 
 The PCLM runs as a Kubernetes service on your cluster. This means that it can be used by all your Mendix apps which run in namespaces within that cluster.
 
-## 2 Prerequisites
+## 2 Prerequisites{#prerequisites}
 
 To install and use the PCLM, you need the following prerequisites:
 
@@ -230,8 +230,8 @@ Where:
 
 ## 6 Installing Licenses
 
-Licenses are supplied by Mendix as a **License Bundle**. A license bundle can contain both Mendix Runtime (app) licenses and Mendix Operator licenses.
-Runtime licenses are required for each Mendix runtime environment, and Operator licenses are required for each namespace where the Operator runs.
+Licenses are supplied by Mendix as a **License Bundle**. A license bundle can contain both Mendix Runtime (app) licenses and a Mendix Operator license.
+Runtime licenses are required for each Mendix runtime environment, and an Operator license is required for each namespace where the Operator runs.
 To purchase a license bundle, please contact [Mendix Support](https://support.mendix.com/). You will receive your license (or licenses) as a .zip file.
 The following command will import a license bundle into the PCLM server:
 

@@ -6,7 +6,7 @@ weight: 55
 no_list: false
 description_list: true
 cascade:
-    - space: "APIs and SDK"
+    - content_type: "APIs and SDK"
     - mendix_version: 10
 ---
 

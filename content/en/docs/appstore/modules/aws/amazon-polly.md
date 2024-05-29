@@ -1,7 +1,7 @@
 ---
 title: "Amazon Polly"
 url: /appstore/modules/aws/amazon-polly/
-category: "Connectors"
+
 description: "Describes the configuration and usage of the Amazon Polly connector, which is available in the Mendix Marketplace. Amazon Polly uses deep learning technologies to synthesize natural-sounding human speech, so you can convert articles to speech."
 weight: 20
 tags: ["marketplace", "marketplace component", "aws", "polly", "connector", "amazon"]
@@ -175,6 +175,6 @@ The voices can be used in the `Synthesize Speech` activity to synthesize a piece
 
 The `DescribeVoices` activity returns a `DescribeVoicesResponse` entity containing a list of `DescribeVoice` entities. Examples of the returned `DescribeVoice` objects can be seen below. 
 
- {{< figure src="/attachments/appstore/modules/aws-polly/polly-example-voices.png" alt="Examples of available voices for Amazon Polly">}}
+ {{< figure src="/attachments/appstore/modules/aws-polly/polly-example-voices.png" alt="Examples of available voices for Amazon Polly" class="no-border" >}}
 
 For more Amazon Polly voices and their information, see [Voices in Amazon Polly](https://docs.aws.amazon.com/polly/latest/dg/voicelist.html).

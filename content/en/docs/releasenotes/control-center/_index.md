@@ -13,14 +13,23 @@ To see the current status of the Mendix Control Center, see [Mendix Status](http
 
 ## 2024
 
+### May 16, 2024
+
+#### New Features
+
+* We have added a new tab to the **Apps** page: the [Private Cloud](/control-center/apps/#3-private-cloud-connected) tab. Here you get an overview of all the apps deployed on Mendix Private Cloud Connected.
+
 ### April 4, 2024
+
+#### New Features
+
+* We have introduced a [Marketplace content curation feature](/control-center/marketplace-curation/) for public Marketplace components. If your organization has established governance policies and guidelines for using Marketplace components, you can now translate them to curation settings.  Components that meet these requirements will get a <text class="badge badge-pill badge-recommended" style="margin-left:0px">RECOMMENDED</text> label.
 
 #### Improvements
 
-*  We have improved the [Apps](/control-center/apps/) page as follows:
+* We have improved the [Apps](/control-center/apps/) page as follows:
     * We have implemented column-based filters that empower you to do complex filtering operations.
     * We have made it easier for you to copy the application name, the app id, and the environment name.
-
 
 ### February 8, 2024
 
@@ -134,7 +143,6 @@ We made the following improvements to the [access management](/control-center/po
 #### Improvements
 
 * On the **Apps** page, we increased the limit of apps you can activate or deactivate to 100.
-* We added the **Contributor** access role in [Portfolio Management](/developerportal/portfolio-management/#access-management), and we renamed the **User** access role to **Viewer**.
 
 ### February 23, 2023
 

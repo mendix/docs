@@ -16,7 +16,7 @@ To import a project package, do the following:
 2. Browse to the *.mpk* file you would like to import.
 3. Select the relevant options in the **Import Project Package** dialog box and click **OK**. For more information on what options you can select, see the sections below. 
 
-    {{< figure src="/attachments/refguide8/modeling/menus/file-menu/import-project-package-dialog/import-project-package.png" alt="Import Project Package Dialog Window" >}}
+    {{< figure src="/attachments/refguide8/modeling/menus/file-menu/import-project-package-dialog/import-project-package.png" alt="Import Project Package Dialog Window" class="no-border" >}}
 
 Project packages can be created using [Export Project Package](/refguide8/export-project-package-dialog/).
 

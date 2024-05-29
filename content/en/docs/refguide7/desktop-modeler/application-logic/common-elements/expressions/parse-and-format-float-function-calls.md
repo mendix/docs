@@ -1,6 +1,7 @@
 ---
 title: "Parse and Format Float Function Calls"
 url: /refguide7/parse-and-format-float-function-calls/
+canonical_url: "https://docs.mendix.com/refguide/parse-and-format-decimal-function-calls/"
 ---
 
 {{% alert color="warning" %}}

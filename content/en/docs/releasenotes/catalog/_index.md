@@ -13,6 +13,37 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2024
 
+### May 23, 2024
+
+#### Fixes
+
+* We fixed an issue where entity results were not appearing in the UI search results.
+
+### May 16, 2024
+
+#### Fixes
+
+* We fixed an issue in the Registration API where an unintended `400` response was returned if an owner that was not yet known in the Catalog was assigned to an application.
+
+### April 25, 2024
+
+#### Fixes
+
+* We fixed an issue where in some rare cases when switching from the Landscape View of a data source to its Data View, information from a different data source would be shown.
+
+### April 18, 2024
+
+#### Fixes
+
+* We fixed an issue where updating a service contract from the **Search** page results in incorrectly parsed OData services.
+* We addressed an issue where clicking **Browse** from the hub URL redirects to the **Home** page instead of the **Search** page.
+
+### April 11, 2024
+
+#### Fixes
+
+* We addressed a potential security vulnerability ([CVE-2023-52428](https://nvd.nist.gov/vuln/detail/CVE-2023-52428)).
+
 ### March 21, 2024
 
 #### Improvement
@@ -649,7 +680,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 #### New Features
 
-* We added an option to [delete a data source](/catalog/manage/curate/#delete-data-source), available for users with [curation](/catalog/manage/curate/) rights. To delete a data source, go to the [Curation Bar](/catalog/manage/curate/#curation-bar) for the data source and click **Edit**, then click **Delete Data Source**.
+* We added an option to [delete a data source](/catalog/manage/curate/#delete-data-source), available for users with [curation](/catalog/manage/curate/) rights. To delete a data source, go to the Curation Bar for the data source and click **Edit**, then click **Delete Data Source**.
 
 #### Fixes
 

@@ -1,7 +1,6 @@
 ---
 title: "Build API"
 url: /apidocs-mxsdk/apidocs/build-api/
-category: "API Documentation"
 description: "An API that enables triggering and managing deployment package builds and getting information about existing deployment packages." 
 weight: 20
 tags: ["API", "Build Server", "Team Server", "Deployment package", "Mendix Cloud"]
@@ -19,7 +18,7 @@ You can use webhooks to trigger CI/CD pipelines which use this API. These are de
 
 The image below provides a domain model representation of the concepts discussed below and how these are related:
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/build-api/api-model.png" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/build-api/api-model.png" class="no-border" >}}
 
 ## 2 API Calls
 

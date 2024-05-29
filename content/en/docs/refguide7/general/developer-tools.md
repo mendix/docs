@@ -1,7 +1,8 @@
 ---
 title: "Developer Tool Recommendations"
 url: /refguide7/developer-tools/
-category: "General"
+canonical_url: "https://docs.mendix.com/refguide/developer-tools/"
+
 weight: 60
 description: "Describes the best third-party tools to use when developing with Mendix."
 tags: ["Linux", "GNU", "Firefox", "devtools", "Selenium", "Eclipse", "SOAP", "REST", "Visual Studio Code"]

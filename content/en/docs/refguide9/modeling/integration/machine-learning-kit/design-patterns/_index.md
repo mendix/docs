@@ -1,7 +1,6 @@
 ---
 title: "Design Patterns"
 url: /refguide9/machine-learning-kit/design-patterns/
-category: Machine Learning Kit
 no_list: false
 description_list: true 
 weight: 35

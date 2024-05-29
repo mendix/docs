@@ -1,7 +1,7 @@
 ---
 title: "SDK Introduction"
 url: /apidocs-mxsdk/mxsdk/sdk-intro/
-category: "Mendix Platform SDK"
+
 weight: 1
 tags: ["SDK", "Mendix SDK", "Platform SDK", "Model SDK", "metadata"]
 #When content is updated here, it should also be updated on https://developers.mendix.com/sdk/, contact Ben.
@@ -20,7 +20,7 @@ With the Mendix Platform SDK and Mendix Model SDK, you can do the following:
 For more information, see [Importing Legacy Code](/apidocs-mxsdk/mxsdk/sdk-use-cases/#importing) in *SDK Use Cases*.
 {{% /alert %}}
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-intro/sdk-diagram.png" >}} 
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-intro/sdk-diagram.png" class="no-border" >}} 
 
 ### 1.1 Mendix Platform SDK
 

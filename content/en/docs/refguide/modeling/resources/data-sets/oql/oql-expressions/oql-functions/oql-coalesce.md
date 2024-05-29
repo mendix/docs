@@ -12,7 +12,7 @@ The `COALESCE` function returns the first of its arguments that is not NULL.
 
 The syntax is as follows:
 
-```sql
+```sql {linenos=false}
 COALESCE ( expression [ ,...n ] )
 ```
 

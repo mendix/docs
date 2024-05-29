@@ -1,7 +1,7 @@
 ---
 title: "Monitor Mendix Using JMX"
 url: /howto/monitoring-troubleshooting/monitoring-mendix-using-jmx/
-category: "Monitoring and Troubleshooting"
+
 weight: 10
 description: "Describes how to start the Mendix Runtime with JMX, and expose management information and app-specific statistics with an MBean."
 tags: ["monitoring", "troubleshooting", "jmx"]
@@ -143,7 +143,7 @@ import com.mendix.core.Core;
 
 Now you're able to see the result of the values exposed by this MBean in the JConsole:
 
-{{< figure src="/attachments/howto/monitoring-troubleshooting/monitoring-mendix-using-jmx/18580003.png" >}}
+{{< figure src="/attachments/howto/monitoring-troubleshooting/monitoring-mendix-using-jmx/18580003.png" class="no-border" >}}
 
 ## 5 MBean Exposing App-Specific Statistics
 

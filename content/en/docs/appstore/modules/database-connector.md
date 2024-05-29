@@ -1,7 +1,7 @@
 ---
 title: "Database"
 url: /appstore/modules/database-connector/
-category: "Connectors"
+
 description: "Describes the configuration and usage of the Database connector, which incorporates your external data directly in your Mendix app."
 tags: ["marketplace",  "marketplace component", "database connector", "jdbc", "hikari", "query" ]
 aliases:
@@ -25,7 +25,7 @@ This connector has one dependency: [HikariCP](https://github.com/brettwooldridge
 
 ## 2 Prerequisites{#prerequisites}
 
-These are the prerequisites for using this connector:
+To use the Database connector, you must have the following prerequisites:
 
 * A database URL address that points to your database
 * The username for logging into the database, relative to the database URL address
@@ -34,23 +34,29 @@ These are the prerequisites for using this connector:
     * For example, if you want to connect to the Amazon RDS PostgreSQL database (`jdbc:postgresql://xyz-rds-instance.ccnapcvoeosh.eu-west-1.rds.amazonaws.com:5432/postgres`), you need to place the PostgreSQL JDBC driver *.jar* inside the **userlib** folder
     * For more information, see the [Common JDBC Drivers](#links) section below
 * Specific to the `Execute` query action: an entity in the domain model that can be used for the results of the executed query
-    * For example, a query like `select name, number from stock` has two columns (of the string and integer type, respectively). So, to use the **Execute query** action, you have to add an entity in the domain model that has the same attributes as the columns in the query.
+    * For example, a query like `select name, number from stock` has two columns (of the string and integer type, respectively). To use the **Execute query** action, you have to add an entity in the domain model that has the same attributes as the columns in the query.
 
 {{% alert color="info" %}}
-Follow these prerequisites carefully to avoid connection errors. It is especially important to make sure that you add the *.jar* files for the database to which you want to connect into the *userlib* folder.
+Follow these prerequisites carefully to avoid connection errors. It is especially important to make sure you add the *.jar* files for the database to which you want to connect into the **userlib** folder.
 {{% /alert %}}
 
 ## 3 Getting Started
 
-Once you have imported the Database connector into your app, you will have the **Database connector** category available in the **Toolbox**. This connector supports five actions: **Execute query**, **Execute statement**, **Execute parameterized query**, **Execute parameterized statement**, and **Execute callable statement**.
+Once you have imported the Database connector into your app, you will have the **Database connector** category available in the **Toolbox**. This connector supports five actions: 
 
-{{< figure src="/attachments/appstore/modules/database-connector/database-connector-in-toolbox.png" >}}
+* **Execute query**
+* **Execute statement**
+* **Execute parameterized query**
+* **Execute parameterized statement**
+* **Execute callable statement**
+
+{{< figure src="/attachments/appstore/modules/database-connector/database-connector-in-toolbox.png" class="no-border" >}}
 
 ### 3.1 Executing Queries and Statements
 
 #### 3.1.1 Usage
 
-To use **Execute parameterized query**, **Execute parameterized statement**, **Execute query**, or **Execute statement** in your Mendix application, drag it into your microflow. Next, provide all the arguments for the selected action and choose the output result name.
+To use **Execute parameterized query**, **Execute parameterized statement**, **Execute query**, or **Execute statement** in your application, drag it into your microflow. Next, provide all the arguments for the selected action and choose the output result name.
 
 The **Execute query** and **Execute parameterized query** actions are used for querying objects with a `SELECT` SQL command. The **Execute statement** and **Execute parameterized statement** actions should be used for the other DML commands (for instance, `INSERT`, `UPDATE`, or `DELETE`).
 
@@ -66,11 +72,11 @@ To use the **Execute query** action, you need to create an actual object of the 
 
 ##### 3.1.1.2 Execute Statement Action
 
-See [Execute an SQL Statement on an External Database](/howto/integration/execute-an-sql-statement-on-an-external-database/) for detailed instructions on using this action.
+See [Execute an SQL Statement on an External Database](/howto/integration/execute-an-sql-statement-on-an-external-database/) for detailed instructions on how to use this action.
 
 #### 3.1.2 Results
 
-These are the results of the actions:
+The results of the actions are:
 
 * **Execute query** and **Execute parameterized query** – a list of objects of the row type, which is also the output of the `SELECT` SQL query
 * **Execute statement** and **Execute parameterized statement** – either an integer or a long value, which usually represents the number of affected rows
@@ -79,11 +85,11 @@ These are the results of the actions:
 
 The **Execute callable statement** microflow action is used to execute stored procedures and functions in the database engine. In addition to **JDBC Url**, **Username**, and **Password**, this action expects an input object of type **DatabaseConnector.Statement**. This input object should define the contract to perform the execution and retrieve the results:
 
-{{< figure src="/attachments/appstore/modules/database-connector/callable-statement-action.png" >}}
+{{< figure src="/attachments/appstore/modules/database-connector/callable-statement-action.png" class="no-border" >}}
 
 The **DatabaseConnector.Statement** type is a non-persistable entity defined as follows:
 
-{{< figure src="/attachments/appstore/modules/database-connector/statement-parameter-diagram.png" >}}
+{{< figure src="/attachments/appstore/modules/database-connector/statement-parameter-diagram.png" class="no-border" >}}
 
 The **Content** attribute of the **DatabaseConnector.Statement** type should contain the statement body (the SQL content). If applicable, you can also define the input and output parameters that the stored procedure expects using an association with a **DatabaseConnector.Parameter** type. 
 
@@ -112,7 +118,7 @@ The following table outlines which specialization to use to refer to each SQL pr
 | Dates              | **DatabaseConnector.ParameterDateTime** |
 | Character types    | **DatabaseConnector.ParameterString**   |
 
-{{< figure src="/attachments/appstore/modules/database-connector/primitive-types-parameters.png" >}}
+{{< figure src="/attachments/appstore/modules/database-connector/primitive-types-parameters.png" class="no-border" >}}
 
 The **Value** attribute defined in these specializations is handled differently depending on the parameter mode used. For input parameters, the attribute must hold the value to pass to the stored procedure. For output parameters, it is set to the output from the stored procedure.
 
@@ -120,7 +126,7 @@ The **Value** attribute defined in these specializations is handled differently 
 
 Some database vendors support creating complex SQL object types, which can be referred to using the **DatabaseConnector.ParameterObject**. The **SQLTypeName** attribute should be set to the underlying SQL object type name.
 
-{{< figure src="/attachments/appstore/modules/database-connector/parameter-object-parameter.png" >}}
+{{< figure src="/attachments/appstore/modules/database-connector/parameter-object-parameter.png" class="no-border" >}}
 
 Attributes of the object can be represented by associated **DatabaseConnector.Parameter** objects using the **ParameterObject_Parameter** association. You can use any specialization of **DatabaseConnector.Parameter** for the associated parameter objects. This also allows for flexibility defining the nested object hierarchies (as in, objects with attributes of the object type).
 
@@ -132,15 +138,15 @@ Attributes within an object are identified by their position in the object and n
 
 List parameters are also supported and usable via the **DatabaseConnector.ParameterList** type. The **SQLTypeName** attribute should refer to the SQL list type:
 
-{{< figure src="/attachments/appstore/modules/database-connector/parameter-list-parameter.png" >}}
+{{< figure src="/attachments/appstore/modules/database-connector/parameter-list-parameter.png" class="no-border" >}}
 
 List items can be represented by associated **DatabaseConnector.Parameter** objects using the **ParameterObject_Parameter** association. You can use any specialization of **DatabaseConnector.Parameter** for the list items.
 
 ##### 3.2.1.4 ParameterRefCursor Type
 
-To deal with **REF CURSOR** outputs, use the **DatabaseConnector.ParameterRefCursor** type:
+To manage **REF CURSOR** outputs, use the **DatabaseConnector.ParameterRefCursor** type:
 
-{{< figure src="/attachments/appstore/modules/database-connector/parameter-ref-cursor-parameter.png" >}}
+{{< figure src="/attachments/appstore/modules/database-connector/parameter-ref-cursor-parameter.png" class="no-border" >}}
 
 The many-to-many-association with **DatabaseConnector.Parameter** is also used here for the same reasons mentioned in the [ParameterList Type](#parameterlist) section above.
 
@@ -170,12 +176,12 @@ When using the Database connector, keep these best practices in mind:
 * [SQLite](https://www.sqlite.org/src/tree?ci=trunk)
 
 {{% alert color="info" %}}
-If you intend to connect to SQL Server using integrated security, be aware that the JDBC driver in the **userlib** folder needs to match the version supplied with the Mendix Platform (via the **runtime/bundles/** folder inside the Mendix installation directory).
+If you intend to connect to SQL Server using integrated security, be aware that the JDBC driver in the **userlib** folder needs to match the version supplied with Studio Pro (via the **runtime/bundles/** folder inside the Mendix installation directory).
 {{% /alert %}}
 
 ### 5.1 Errors
 
-Errors can often be resolved by adding missing *JAR* dependencies to the **userlib** folder in the module. For more information, see the [Prerequisites](#prerequisites) section.
+Errors can often be resolved by adding missing **JAR** dependencies to the **userlib** folder in the module. For more information, see the [Prerequisites](#prerequisites) section.
 
 ## 6 Developing This Marketplace Component
 
@@ -183,7 +189,7 @@ To develop this component, follow these steps:
 
 1. Clone [https://github.com/mendix/database-connector.git](https://github.com/mendix/database-connector.git).
 2. Open the *DatabaseConnector.mpr* in the Desktop Modeler or Studio Pro.
-3. Use the **Deploy for Eclipse** option (<kbd>F6</kbd>) and then import this connector as an Eclipse project to the Eclipse IDE.
+3. Use the **Deploy for Eclipse** option (<kbd>F6</kbd>), then import this connector as an Eclipse project to the Eclipse IDE.
 
 ## 7 Read More
 

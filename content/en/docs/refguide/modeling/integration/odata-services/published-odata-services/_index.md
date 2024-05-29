@@ -15,7 +15,7 @@ A published OData service is a REST service with an OpenAPI contract, which mean
 The standard used for OData in Mendix is [OData v4](https://www.odata.org/documentation), which returns data in JSON format.
 
 {{% alert color="warning" %}}
-he option to publish [OData v3](https://www.odata.org/documentation/odata-version-3-0) services, which return data in Atom XML format, is deprecated and will be removed in a future version.
+The option to publish [OData v3](https://www.odata.org/documentation/odata-version-3-0) services, which return data in Atom XML format, is deprecated and will be removed in a future version.
 {{% /alert %}}
 
 Not all parts of the standard are implemented. If something is not documented here, it has not yet been added.
@@ -101,7 +101,7 @@ You can select how you want to represent associations. For more information, see
 
 #### 3.1.3 Include metadata in response by default
 
-This checkbox allows you to choose if the service should include the metadata (for example, the `@context` property) in the response. This setting is enabled by default to conform to the OData specification. Disabling this setting has the same effect as including `metadata=none` in the `Accept` header of your HTTP request. Note that the value passed in the `Accept` header always takes precedences over this setting.
+This checkbox allows you to choose if the service should include the metadata (for example, the `@context` property) in the response. This setting is enabled by default to conform to the OData specification. Disabling this setting has the same effect as including `metadata=none` in the `Accept` header of your HTTP request. Note that the value passed in the `Accept` header always takes precedence over this setting.
 
 {{% alert color="info" %}}
 Disabling this setting could break integrations with this service, specifically integrations with Microsoft Excel and PowerBI. This setting must enabled to use these features.
@@ -235,7 +235,7 @@ Once your app is published, a list of the published OData services will be avail
 While the API documentation for published OData services is enabled by default, access to it may be restricted by the administrator for apps running in production.
 {{% /alert %}}
 
-For details on how to filter the OData response, refer to [OData Query Options](/refguide/odata-query-options/).
+For details on how to filter the OData response, refer to [Supported OData Operations](/refguide/supported-odata-operations/#filtering).
 
 For details on how Mendix attributes are represented in OData, refer to [OData Representation](/refguide/odata-representation/).
 

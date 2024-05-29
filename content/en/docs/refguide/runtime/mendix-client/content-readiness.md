@@ -1,7 +1,7 @@
 ---
 title: "Marketplace Component React Status"
 url: /refguide/mendix-client/marketplace-react-status/
-category: "Mendix Runtime"
+
 description: "Describes Mendix's React client."
 weight: 20
 tags: ["runtime", "mendix client", "react client"]

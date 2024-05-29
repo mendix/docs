@@ -1,7 +1,7 @@
 ---
 title: "Rating"
 url: /appstore/widgets/rating/
-category: "Widgets"
+
 description: "Describes the configuration and usage of the Star Rating widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "widget", "star rating", "rating", "glyphicon", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -11,7 +11,7 @@ tags: ["marketplace", "marketplace component", "widget", "star rating", "rating"
 
 The [Rating](https://marketplace.mendix.com/link/component/54611) widget enables rating from 0 to a defined maximum amount using an attribute.
 
-{{< figure src="/attachments/appstore/widgets/rating/example.gif" alt="Example" >}}
+{{< figure src="/attachments/appstore/widgets/rating/example.gif" alt="Example" class="no-border" >}}
 
 ## 2 Usage
 

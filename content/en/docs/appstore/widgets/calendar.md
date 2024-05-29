@@ -1,7 +1,7 @@
 ---
 title: "Calendar"
 url: /appstore/widgets/calendar/
-category: "Widgets"
+
 description: "Describes the configuration and usage of the Calendar widget, which is available in the Mendix Marketplace."
 tags: ["marketplace", "marketplace component", "widget", "calendar", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -138,7 +138,7 @@ Drag the widget into a data view which provides a calendar entity (containing ca
 * **Height unit** (default: **Pixels**) – determines whether the unit of the **Width** value is a pixel amount, a percentage of the width, or a percentage of the parent height
 * **Height** (default: **580**) – the height value of the calendar
 
-    {{< figure src="/attachments/appstore/widgets/calendar/calendar2.gif" >}}
+    {{< figure src="/attachments/appstore/widgets/calendar/calendar2.gif" class="no-border" >}}
 
 ## 3 Example Configuration
 

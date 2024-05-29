@@ -1,7 +1,7 @@
 ---
 title: "Collaborative Development"
 url: /refguide7/collaborative-development/
-category: "Version Control"
+
 description: "Describes the process of collaborative development"
 tags: ["desktop modeler", "collaborative development", "sync"]
 aliases:
@@ -30,7 +30,7 @@ To create a new branch line, do the following:
 
 2. In the **Branch Line Manager** dialog window, you see the list of existing development lines. Click **New** to create a branch line. <br/>
 
-    {{< figure src="/attachments/refguide7/version-control/collaborative-development/creating-new-branch.png" alt="Creating New Branch" >}}<br/>
+    {{< figure src="/attachments/refguide7/version-control/collaborative-development/creating-new-branch.png" alt="Creating New Branch" class="no-border" >}}<br/>
 
 3. In the **Create Branch Line** dialog window, set the following: <br/>
 
@@ -42,7 +42,7 @@ To create a new branch line, do the following:
 
 4. After you have configured all the settings, click **OK.** 
 
-    {{< figure src="/attachments/refguide7/version-control/collaborative-development/create-branch-dialog.png" alt="Create Branch Line Dialog" >}} 
+    {{< figure src="/attachments/refguide7/version-control/collaborative-development/create-branch-dialog.png" alt="Create Branch Line Dialog" class="no-border" >}} 
 
 You have created a new branch line.   
 
@@ -54,6 +54,6 @@ To delete a branch line, do the following:
 
 2. In the **Branch Line Manager** dialog window, select the branch you would like to delete, click **Delete** and confirm deletion. 
 
-    {{< figure src="/attachments/refguide7/version-control/collaborative-development/deleting-branch.png" alt="Deleting a Branch" >}}
+    {{< figure src="/attachments/refguide7/version-control/collaborative-development/deleting-branch.png" alt="Deleting a Branch" class="no-border" >}}
 
 You have deleted the branch.

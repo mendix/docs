@@ -79,9 +79,9 @@ Use categories to keep parameters apart in a [JavaScript Action Call](/refguide/
 
 For apps with several parameters, descriptions serve as useful reminders of parameters' exact purposes. Descriptions also allow you to describe your parameters to app collaborators. Descriptions may contain both upper- and lower-case letters, numbers, and symbols.
 
-#### 2.2.4 Required
+#### 2.2.5 Required
 
-If a parameter is set to required, a value should be selected for that parameter in every JavaScript Action Call. In order to make a parameter optional, set 'required' to 'no'. This makes it possible to call the JavaScript Action without any value set for the parameter. This can be useful for flexibility and backward compatibility of JavaScript Actions by allowing new parameters to be added without breaking existing functionality. 
+If a parameter is set to required, a value should be selected for that parameter in every JavaScript Action Call. In order to make a parameter optional, set 'required' to 'no'. This makes it possible to call the JavaScript Action without any value set for the parameter. This can be useful for flexibility and backward compatibility of JavaScript Action.
 
 If no argument is provided for an optional parameter, it defaults to `undefined` in the JavaScript Action. You can handle an optional parameter within the JavaScript Action by checking if it is `undefined`, allowing you to assign a default value or implement custom logic as needed. 
 

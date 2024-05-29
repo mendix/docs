@@ -2,7 +2,6 @@
 title: "Between Date Function Calls"
 url: /refguide/between-date-function-calls/
 weight: 100
-tags: ["studio pro", "between date function calls", "expression", "expressions"]
 ---
 
 ## 1 Introduction

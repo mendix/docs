@@ -3,7 +3,6 @@ title: "Java Version Migration"
 url: /refguide/java-version-migration/
 weight: 45
 description: "Describes consequences for a Mendix app when migrating from one Java version to another."
-tags: ["runtime", "java", "studio pro", "expressions", "formatting"]
 ---
 
 ## 1 Introduction

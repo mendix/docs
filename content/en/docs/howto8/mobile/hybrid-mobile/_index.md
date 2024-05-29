@@ -5,7 +5,6 @@ url: /howto8/mobile/hybrid-mobile/
 weight: 2
 no_list: false
 description_list: true
-tags: ["mobile", "hybrid"]
 ---
 
 ## 1 Introduction

@@ -3,7 +3,6 @@ title: "Performance Tips"
 url: /refguide/performance-tips/
 weight: 50
 description: "Presents performance tips for installing and using Studio Pro."
-tags: ["studio pro", "performance", "tip", "best practice"]
 ---
 
 ## 1 Introduction

@@ -1,7 +1,6 @@
 ---
 title: "Security"
 url: /refguide8/security/
-tags: ["studio pro", "security"]
 ---
 
 ## 1 Introduction

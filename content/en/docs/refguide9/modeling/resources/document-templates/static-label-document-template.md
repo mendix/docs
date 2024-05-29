@@ -1,7 +1,6 @@
 ---
 title: "Static Label (Document Template)"
 url: /refguide9/static-label-document-template/
-tags: ["studio pro"]
 aliases:
     - /refguide9/Static+label+(document+template).html
     - /refguide9/static-label-(document-template).html

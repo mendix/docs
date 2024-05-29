@@ -3,7 +3,6 @@ title: "Security"
 url: /control-center/security/
 
 description: "Describes the Security page in the Mendix Control Center."
-tags: ["control center", "mendix admin", "security"]
 weight: 40
 no_list: false
 description_list: true

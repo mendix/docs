@@ -1,7 +1,6 @@
 ---
 title: "Cell (Document Template)"
 url: /refguide9/cell-document-template/
-tags: ["studio pro"]
 aliases:
     - /refguide9/cell-(document-template).html
     - /refguide9/Cell+(document+template).html

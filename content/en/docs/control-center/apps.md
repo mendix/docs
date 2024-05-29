@@ -3,7 +3,6 @@ title: "Apps"
 url: /control-center/apps/
 
 description: "Describes the Apps page in the Mendix Control Center."
-tags: ["control center", "mendix admin", "apps"]
 weight: 15
 no_list: true
 aliases:

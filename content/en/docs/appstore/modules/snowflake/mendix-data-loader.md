@@ -3,7 +3,6 @@ title: "Mendix Data Loader"
 url: /appstore/modules/snowflake/mendix-data-loader/
 description: "Describes the configuration and usage of the Mendix Data Loader application from the Snowflake Marketplace."
 weight: 20
-tags: ["snowflake marketplace", "snowflake marketplace component", "snowflake", "data loader"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 

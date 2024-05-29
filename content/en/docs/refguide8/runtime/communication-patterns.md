@@ -3,7 +3,6 @@ title: "Communication Patterns in the Mendix Runtime"
 linktitle: "Communication Patterns"
 url: /refguide8/communication-patterns/
 
-tags: ["studio pro", "Mendix Runtime", "Communications", "Runtime Server", "Mendix Client"]
 ---
 
 ## 1 Introduction

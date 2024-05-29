@@ -5,7 +5,6 @@ url: /howto7/extensibility/howto-datastorage-api/
 
 weight: 5
 description: "Describes creating custom microflow actions using Data Storage APIs."
-tags: ["java", "connector kit", "microflow action", "parameter type", "sql", "xpath", "oql", "datastorage"]
 ---
 
 ## 1 Introduction

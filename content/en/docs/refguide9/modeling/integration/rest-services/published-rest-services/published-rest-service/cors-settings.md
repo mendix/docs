@@ -3,7 +3,6 @@ title: "CORS Settings for Published REST Services"
 url: /refguide9/cors-settings/
 weight: 60
 description: "Additional options for controlling access to a published REST service"
-tags: ["CORS", "security", "origin", "domain", "access", "studio pro"]
 # If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 # linked from DM: published rest > Enable CORS > Settings > Help (integration)
 ---

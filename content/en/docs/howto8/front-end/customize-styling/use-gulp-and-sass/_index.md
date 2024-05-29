@@ -2,7 +2,6 @@
 title: "Customize Styling Using Gulp"
 url: /howto8/front-end/use-gulp-and-sass/
 weight: 30
-tags: ["gulp", "sass", "ux", "front end"]
 ---
 
 {{% alert color="info" %}}

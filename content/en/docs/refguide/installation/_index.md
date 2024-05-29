@@ -5,7 +5,6 @@ weight: 10
 description: "Describes the system requirements and other important aspects of installing and using Studio Pro 10."
 no_list: false
 description_list: true
-tags: ["studio pro", "system requirements", "install"]
 ---
 
 ## 1 Introduction

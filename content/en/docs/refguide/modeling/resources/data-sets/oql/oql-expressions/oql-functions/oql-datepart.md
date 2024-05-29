@@ -1,7 +1,6 @@
 ---
 title: "OQL DATEPART"
 url: /refguide/oql-datepart/
-tags: ["studio pro"]
 ---
 
 ## 1 Description

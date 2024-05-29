@@ -2,7 +2,6 @@
 title: "Set Up a Local Selenoid Hub"
 url: /appstore/partner-solutions/ats/ht-two-setup-local-selenoid-hub/
 description: "Describes how to set up a local selenoid hub."
-tags: ["ATS", "testing", "Selenium hub"]
 ---
 
 ## 1 Introduction

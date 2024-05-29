@@ -5,7 +5,6 @@ url: /howto8/extensibility/widget-development/
 weight: 30
 no_list: false
 description_list: true 
-tags: ["widget", "develop widget", "customize"]
 ---
 
 ## 1 Introduction

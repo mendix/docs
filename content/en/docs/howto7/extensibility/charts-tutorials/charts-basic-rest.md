@@ -2,7 +2,6 @@
 title: "Use a Chart with a REST Data Source"
 url: /howto7/extensibility/charts-basic-rest/
 weight: 60
-tags: ["Charts", "Widgets", "REST", "Desktop Modeler"]
 ---
 
 ## 1 Introduction

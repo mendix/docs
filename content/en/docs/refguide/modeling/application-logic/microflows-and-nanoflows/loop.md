@@ -2,7 +2,6 @@
 title: "Loop"
 url: /refguide/loop/
 weight: 80
-tags: ["studio pro", "loop", "iterate over", "for each", "while"]
 ---
 
 ## 1 Introduction

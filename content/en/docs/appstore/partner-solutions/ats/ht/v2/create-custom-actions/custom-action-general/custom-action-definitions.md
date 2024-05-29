@@ -2,7 +2,6 @@
 title: "Definitions"
 url: /appstore/partner-solutions/ats/ht-two-custom-action-definitions/
 description: "Explains the different types of custom actions."
-tags: ["ATS", "testing"]
 ---
 
 ## 1 Introduction

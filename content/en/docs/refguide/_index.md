@@ -2,7 +2,6 @@
 title: "Studio Pro 10 Guide"
 url: /refguide/
 description: "The various sections of the Mendix Studio Pro Guide provide details on the features and functionality of the Mendix Platform."
-tags: ["studio pro"]
 weight: 10
 no_list: false
 description_list: true

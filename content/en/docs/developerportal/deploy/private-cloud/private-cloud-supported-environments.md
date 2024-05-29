@@ -3,7 +3,6 @@ title: "Supported Providers"
 url: /developerportal/deploy/private-cloud-supported-environments/
 description: "Describes which providers are supported by Mendix for Private Cloud"
 weight: 100
-tags: ["Private Cloud", "Cluster", "Operator", "Deploy", "Provider", "Registry", "Database"]
 ---
 
 ## 1 Introduction

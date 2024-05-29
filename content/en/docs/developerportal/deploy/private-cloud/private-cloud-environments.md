@@ -4,7 +4,6 @@ linktitle: "Environment Planning"
 url: /developerportal/deploy/private-cloud-environments/
 description: "Best Practices for Private Cloud Environments"
 weight: 70
-tags: ["Environments", "Private Cloud", "Cluster", "Best Practices"]
 ---
 
 ## 1 Introduction

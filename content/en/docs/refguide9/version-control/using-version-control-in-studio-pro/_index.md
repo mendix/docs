@@ -5,7 +5,6 @@ linktitle: "Using Version Control"
 
 weight: 10
 description: "Describes how to work with version control and how to resolve some issues which may arise."
-tags: ["Version Control", "Conflicts", "Resolve", "Merge", "Patch", "Branch", "Development"]
 # Renamed from version-control-scenarios
 ---
 

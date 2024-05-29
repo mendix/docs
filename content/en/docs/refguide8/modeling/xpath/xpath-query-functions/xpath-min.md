@@ -1,7 +1,6 @@
 ---
 title: "XPath Min"
 url: /refguide8/xpath-min/
-tags: ["studio pro"]
 ---
 
 ## 1 Overview

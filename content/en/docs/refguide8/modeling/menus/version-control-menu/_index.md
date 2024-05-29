@@ -3,7 +3,6 @@ title: "Version Control Menu"
 url: /refguide8/version-control-menu/
 description: "Describes the Project Menu in Studio Pro."
 weight: 40
-tags: ["Studio Pro", "project menu", "top bar"]
 ---
 
 ## 1 Introduction

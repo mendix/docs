@@ -3,7 +3,6 @@ title: "Consistency Errors"
 url: /refguide/consistency-errors/
 weight: 17
 description: "Describes consistency errors in Mendix Studio Pro and the way to fix them."
-tags: ["Studio Pro", "consistency errors", "checks", "errors"]
 ---
 
 ## 1 Introduction 

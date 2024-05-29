@@ -3,7 +3,6 @@ title: "Expressions"
 url: /refguide8/expressions/
 weight: 100
 description: "Describes the expressions that can be used in Mendix for a variety of purposes (for example, to change a member of an object based on logic)."
-tags: ["studio pro", "expressions", "microflow expressions"]
 aliases:
     - /refguide8/microflow-expressions.html
     - /refguide8/microflow-expressions

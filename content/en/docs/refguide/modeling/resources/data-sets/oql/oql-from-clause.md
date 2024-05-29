@@ -2,7 +2,6 @@
 title: "OQL From Clause"
 url: /refguide/oql-from-clause/
 weight: 20
-tags: ["oql", "studio pro"]
 ---
 
 ## 1 Description

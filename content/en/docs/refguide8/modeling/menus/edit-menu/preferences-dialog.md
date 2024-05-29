@@ -2,7 +2,6 @@
 title: "Preferences"
 url: /refguide8/preferences-dialog/
 weight: 50
-tags: ["studio pro", "preferences", "settings", "edit menu"]
 ---
 
 ## 1 Introduction

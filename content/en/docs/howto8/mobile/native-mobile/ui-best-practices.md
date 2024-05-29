@@ -4,7 +4,6 @@ linktitle: "Native Mobile App UI Best Practices"
 url: /howto8/mobile/ui-best-practices/
 weight: 35
 description: "This document teaches you how to build a native mobile app's UI."
-tags: ["ux", "native", "mobile", "ui"]
 ---
 
 ## 1 Introduction

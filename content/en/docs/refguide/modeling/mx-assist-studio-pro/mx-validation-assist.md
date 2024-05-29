@@ -3,7 +3,6 @@ title: "Validation Assist"
 url: /refguide/validation-assist/
 weight: 40
 description: "Describes Mendix Validation Assist on pages."
-tags: ["studio pro", "mendix assist", "validation assist", "bot", "validation bot", "validation", "data validations", "field validation", "form validation"]
 ---
 
 ## 1 Introduction 

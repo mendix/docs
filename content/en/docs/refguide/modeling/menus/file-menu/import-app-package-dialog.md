@@ -3,7 +3,6 @@ title: "Import App Package"
 url: /refguide/import-app-package-dialog/
 weight: 40
 description: "Describes the Import App Package process and Import App Package dialog box."
-tags: ["studio pro", "import app package"]
 aliases:
     - /refguide/import-project-package-dialog/
 ---

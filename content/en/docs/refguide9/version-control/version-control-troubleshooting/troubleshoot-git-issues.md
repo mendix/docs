@@ -3,7 +3,6 @@ title: "Solving Git Issues"
 url: /refguide9/troubleshoot-git-issues/
 weight: 20
 description: "Describes a list of problems and fixes for Git version control issues."
-tags: ["version control", "troubleshoot", "Studio Pro", "Git"]
 ---
 
 ## 1 Introduction

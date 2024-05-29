@@ -3,7 +3,6 @@ title: "OIDC SSO"
 url: /appstore/modules/oidc/
 
 description: "Describes the configuration and usage of the OIDC SSO module, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "OIDC", "IdP", "identity provider", "platform support", "Azure"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 # Linked from https://marketplace.mendix.com/link/component/120371
 ---
@@ -73,9 +72,9 @@ The OIDC SSO module supports the following features:
 
 For readers with more knowledge of the OAuth and OIDC protocol:
 
-* Uses the Authorization Code Grant flow to sign the end-user in via the browser.
-* Uses the `nonce` parameter to defend against replay attacks.
-* Validates ID-token signatures.
+* Uses the Authorization Code Grant flow to sign the end-user in via the browser
+* Uses the `nonce` parameter to defend against replay attacks
+* Validates ID-token signatures
 * Uses the Proof Key for Code Exchange (PKCE – pronounced “pixie") security enhancement as per RFC 7636. If your IdP’s well-known endpoint indicates “S256” as value for “code_challenge_methods_supported”, the OIDC Module will automatically apply the PKCE feature. PKCE can be seen as a security add-on to the original OAuth protocol. It is generally recommended to use this feature to be better protected against hackers who try to get access to your app.
 * When authenticating APIs, it validates access tokens in one of two ways:
 
@@ -84,9 +83,10 @@ For readers with more knowledge of the OAuth and OIDC protocol:
 
     For signing into the app, the OIDC SSO module will not use token introspection and will always validate against the published jwks endpoint.
 
-* Stores an access token for each end-user that can be used to make API calls on their behalf.
-* Can be configured to use either client_secret_post or client_secret_basic as the client authentication method. Both make use of the client-id and client-secret as configured at the IdP.
-* Supports ACR in authorization requests. The ACR in OIDC protocol is used to indicate the desired level of assurance or strength of authentication during the authentication process. It allows the relying party (your application) to request a specific level of authentication assurance from the identity provider (IdP) (version 2.3.0 and above).
+* Stores an access token for each end-user that can be used to make API calls on their behalf
+* Can be configured to use either client_secret_post or client_secret_basic as the client authentication method. Both make use of the client-id and client-secret as configured at the IdP
+* Supports ACR in authorization requests. The ACR in OIDC protocol is used to indicate the desired level of assurance or strength of authentication during the authentication process. It allows the relying party (your application) to request a specific level of authentication assurance from the identity provider (IdP) (version 2.3.0 and above)
+* Supports response_mode=query and response_mode=form_post
 
 #### 1.2.3 Limitations
 
@@ -113,7 +113,7 @@ It requires the following Marketplace modules to be included in your app:
 * [Community Commons](https://marketplace.mendix.com/link/component/170) – see [Community Commons](/appstore/modules/community-commons-function-library/) documentation
 * [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515) – see [Nanoflow Commons](/appstore/modules/nanoflow-commons/) documentation
 * [Mx Model reflection](https://marketplace.mendix.com/link/component/69) – see [Mx Model Reflection](/appstore/modules/model-reflection/) documentation
-* [User Commons](https://marketplace.mendix.com/link/component/223053) (for version 2.4.0 and above)
+* [User Commons](https://marketplace.mendix.com/link/component/223053) (for version 3.0.0 and above)
 
 Versions below 2.3.0 also require [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513) – see [Native Mobile Resources](/appstore/modules/native-mobile-resources/) documentation
 
@@ -276,7 +276,10 @@ In this case, the OIDC client is the app you are making.
 
 5. Add the **Client Secret**.
 6. If you have the **Automatic Configuration URL** (also known as the *well-known endpoint*), enter it and click **Import Configuration** to automatically fill the other endpoints.
-    * If you don not have an automatic configuration URL, you can fill in the other endpoints manually.
+
+    {{% alert color="info" %}}If the endpoint URL does not already end with `/.well-known/openid-configuration`, include it at the end. According to the specifications, the URL you need to enter typically ends with `/.well-known/openid-configuration`.{{% /alert %}}
+
+    * If you do not have an automatic configuration URL, you can fill in the other endpoints manually.
 7. Click **Save**
     {{% alert color="info" %}}Your client configuration is not yet complete, but you have to save at this point to allow you to set up the rest of the information.{{% /alert %}}
 8. Select your client configuration and click **Edit**.
@@ -347,7 +350,7 @@ The following constants are mandatory when creating an OIDC SSO configuration an
 * **ClientID** – the client id
 * **ClientAlias** – the client alias
 * **ClientSecret** – the client secret (see security best-practice, above)
-* **AutomaticConfigurationURL** – the URL of the well-known endpoint
+* **AutomaticConfigurationURL** – the URL of the well-known endpoint (ending with `/.well-known/openid-configuration`)
 
 For more information, see the [Custom User Provisioning at Deploy Time](#custom-provisioning-dep) section.
 

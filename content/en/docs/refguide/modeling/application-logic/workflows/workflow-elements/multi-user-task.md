@@ -2,7 +2,6 @@
 title: "Multi-User Task"
 url: /refguide/multi-user-task/
 weight: 30
-tags: ["workflow", "workflows", "multi-user task", "multi user task", "task", "Studio Pro"]
 ---
 
 ## 1 Introduction

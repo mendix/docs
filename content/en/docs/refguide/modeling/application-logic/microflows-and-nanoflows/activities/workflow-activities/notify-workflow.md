@@ -2,7 +2,6 @@
 title: "Notify Workflow"
 url: /refguide/notify-workflow/
 weight: 90
-tags: ["studio pro", "notify workflow", "workflow notify"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

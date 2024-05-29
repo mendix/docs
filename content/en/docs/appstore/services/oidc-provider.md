@@ -2,7 +2,6 @@
 title: "OIDC Provider"
 url: /appstore/services/oidc-provider/
 description: "Describes the configuration and usage of the OIDC Provider service, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "OIDC", "IdP", "identity provider", "platform support", "provider"]
 aliases:
     - /appstore/modules/oidc-provider/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

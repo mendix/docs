@@ -5,7 +5,6 @@ url: /appstore/modules/sap/sap-xsuaa-connector/
 
 weight: 40
 description: "Presents reference information on the XSUAA Connector for SAP Business Technology Platform."
-tags: ["SAP", "SSO", "XSUAA", "SAP BTP", "SAP Business Technology Platform"]
 aliases:
     - /partners/sap/sap-xsuaa-connector/
     - /partners/sap/use-sap-xsuaa-connector/

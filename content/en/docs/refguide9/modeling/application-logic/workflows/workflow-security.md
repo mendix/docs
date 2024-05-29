@@ -4,7 +4,6 @@ url: /refguide9/workflow-security/
 linktitle: "Configure Workflow Security"
 description: "Describes how to configure security for a workflow in Mendix Studio Pro."
 weight: 30
-tags: ["studio pro", "workflow", "task", "security", "workflow security"]
 ---
 
 ## 1 Introduction 

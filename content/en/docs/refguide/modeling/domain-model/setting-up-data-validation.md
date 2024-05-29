@@ -3,7 +3,6 @@ title: "Setting Up Data Validation"
 url: /refguide/setting-up-data-validation/
 weight: 70
 description: "Describes how to set up both required and advanced data validation with Studio Pro."
-tags: ["studio pro", "data validation"]
 aliases:
     - /howto/data-models/setting-up-data-validation/
 ---

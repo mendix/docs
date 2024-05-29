@@ -2,7 +2,6 @@
 title: "Object Activities"
 url: /refguide9/object-activities/
 weight: 10
-tags: ["studio pro", "microflow", "object"]
 #To update screenshots of these microflows in Studio Pro, use the Microflow Screenshots app.
 ---
 

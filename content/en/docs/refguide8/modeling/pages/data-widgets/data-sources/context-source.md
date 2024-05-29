@@ -1,7 +1,6 @@
 ---
 title: "Context Source"
 url: /refguide8/context-source/
-tags: ["studio pro", "context", "data source"]
 weight: 30
 ---
 

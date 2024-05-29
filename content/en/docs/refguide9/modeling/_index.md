@@ -5,7 +5,6 @@ description: "Describes the various features used for modeling in Studio Pro, in
 weight: 20
 no_list: false
 description_list: true
-tags: ["Mendix", "Studio Pro", "Documents"]
 aliases:
     - /refguide9/desktop-modeler.html
     - /refguide9/modeler.html

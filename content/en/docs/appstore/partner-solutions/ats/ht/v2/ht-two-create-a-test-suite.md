@@ -2,7 +2,6 @@
 title: "Create a Test Suite"
 url: /appstore/partner-solutions/ats/ht-two-create-a-test-suite/
 description: "Describes how to create a test suite and add test cases and test suites to your test suite."
-tags: ["ATS", "testing"]
 ---
 
 ## 1 Introduction

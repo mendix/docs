@@ -3,7 +3,6 @@ title: "Insights Hub Module Details"
 url: /partners/siemens/mindsphere-module-details/
 weight: 20
 description: "A detailed description of the modules which are required for deployment to Insights Hub"
-tags: ["MindSphere", "Insights Hub"]
 aliases:
     - /refguide/mindsphere/mindsphere-module-details.html
     - /refguide/siemens/mindsphere-module-details.html

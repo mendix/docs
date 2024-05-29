@@ -4,7 +4,6 @@ linktitle: "Drag App Documents into Microflow"
 url: /howto7/logic-business-rules/drag-microflows-and-pages-into-a-microflow/
 
 weight: 4
-tags: ["microflow", "logic", "page"]
 ---
 
 ## 1 Introduction

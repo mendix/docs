@@ -2,7 +2,6 @@
 title: "Create Maintainable Test Cases"
 url: /appstore/partner-solutions/ats/ht-two-create-extracted-actions/
 description: "Describes how to create maintainable test cases in ATS."
-tags: ["ATS", "testing", "maintainability"]
 ---
 
 ## 1 Introduction

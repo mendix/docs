@@ -3,7 +3,6 @@ title: "Import Project Package"
 url: /refguide8/import-project-package-dialog/
 weight: 40
 description: "Describes the Import Project Package process and Import Project Package dialog box."
-tags: ["studio pro", "import project package"]
 ---
 
 ## 1 Introduction

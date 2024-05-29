@@ -1,7 +1,6 @@
 ---
 title: "HttpRequest and HttpResponse System Entities"
 url: /refguide8/http-request-and-response-entities/
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction

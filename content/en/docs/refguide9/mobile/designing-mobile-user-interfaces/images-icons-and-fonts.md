@@ -3,7 +3,6 @@ title: "Images, Icons, and Fonts"
 url: /refguide9/mobile/designing-mobile-user-interfaces/images-icons-and-fonts/
 weight: 30
 description: "This how-to teaches you how to enrich the design of your native mobile app with images and custom fonts."
-tags: ["images", "svg", "custom fonts", "font"]
 aliases:
     - /refguide9/native-svg/
     - /howto9/mobile/native-custom-fonts/

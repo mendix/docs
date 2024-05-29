@@ -4,7 +4,6 @@ url: /howto7/collaboration-requirements-management/
 weight: 120
 no_list: false
 description_list: true 
-tags: ["collaboration", "requirements", "management"]
 ---
 
 ## 1 Introduction

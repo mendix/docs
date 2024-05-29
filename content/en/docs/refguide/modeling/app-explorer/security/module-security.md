@@ -2,7 +2,6 @@
 title: "Module Security"
 url: /refguide/module-security/
 weight: 20
-tags: ["studio pro", "module security", "security", "module"]
 aliases:
     - /refguide/module-role.html
     - /refguide/module-role

@@ -4,7 +4,6 @@ linktitle: "Troubleshooting IIS"
 url: /developerportal/deploy/troubleshooting-iis/
 description: "Help on fixing issues with Microsoft IIS, including the use of application logs and other troubleshooting features"
 weight: 40
-tags: ["IIS", "Windows", "Internet Information Services", "Mendix Service Console", "errors"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 

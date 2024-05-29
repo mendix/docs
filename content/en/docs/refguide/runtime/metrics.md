@@ -3,7 +3,6 @@ title: "Metrics"
 url: /refguide/metrics/
 
 description: "Describes how to configure and report metrics in Mendix."
-tags: ["studio pro", "metrics", "micrometer"]
 ---
 
 ## 1 Introduction

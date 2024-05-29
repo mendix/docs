@@ -2,7 +2,6 @@
 title: "Set Up a Local Selenium Hub"
 url: /appstore/partner-solutions/ats/ht-two-setup-local-selenium-hub/
 description: "Describes how to set up a local selenium hub."
-tags: ["ATS", "testing", "Selenium hub"]
 ---
 
 ## 1 Introduction

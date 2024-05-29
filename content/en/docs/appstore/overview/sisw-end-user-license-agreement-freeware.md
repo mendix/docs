@@ -3,7 +3,6 @@ title: "SISW End User License Agreement for Freeware"
 linktitle: "SISW EULA for Freeware"
 weight: 4
 description: "Describes SISW end user license agreement terms and conditions."
-tags: ["sisw", "siemens", "eula", "end user", "freeware", "license", "license agreement"]
 aliases:
     - /appstore/general/sisw-end-user-license-agreement-freeware/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

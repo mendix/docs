@@ -2,7 +2,6 @@
 title: "Close Page"
 url: /refguide/close-page/
 weight: 10
-tags: ["studio pro", "close page", "client activity"]
 aliases:
     - /refguide/Close+Form.html
     - /refguide/close-form.html

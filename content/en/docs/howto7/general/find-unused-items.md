@@ -3,7 +3,6 @@ title: "Find Unused App Items"
 url: /howto7/general/find-unused-items/
 
 weight: 7
-tags: ["unused", "item", "usage"]
 ---
 
 ## 1 Introduction

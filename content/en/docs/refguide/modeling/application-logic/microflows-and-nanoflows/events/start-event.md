@@ -2,7 +2,6 @@
 title: "Start Event"
 url: /refguide/start-event/
 weight: 1
-tags: ["studio pro", "start event", "event"]
 ---
 
 ## 1 Introduction

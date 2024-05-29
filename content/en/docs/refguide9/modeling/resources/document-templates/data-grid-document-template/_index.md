@@ -1,7 +1,6 @@
 ---
 title: "Data Grid (Document Template)"
 url: /refguide9/data-grid-document-template/
-tags: ["studio pro"]
 aliases:
     - /refguide9/Data+Grid+(document+template).html
     - /refguide9/data-grid-(document-template).html

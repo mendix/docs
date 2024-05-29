@@ -3,7 +3,6 @@ title: "Snowflake Role-Based Access Control"
 url: /appstore/modules/snowflake/snowflake-rbac/
 description: "Describes how to use the role-based access control of Snowflake in a Mendix application."
 weight: 20
-tags: ["snowflake", "role-based access control", "rbac", "rest sql"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 

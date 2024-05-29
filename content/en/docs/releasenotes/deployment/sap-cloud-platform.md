@@ -4,7 +4,6 @@ url: /releasenotes/developer-portal/sap-cloud-platform/
 
 weight: 30
 description: "Release notes for deployment to SAP Business Technology Platform"
-tags: ["release notes", "deployment", "cloud environment", "SAP", "SAP Cloud"]
 ---
 
 These release notes cover changes to deployment to [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/) (SAP BTP).

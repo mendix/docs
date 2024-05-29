@@ -5,7 +5,6 @@ linktitle: "Using Version Control"
 
 weight: 10
 description: "Describes how to work with version control and how to resolve some issues which may arise."
-tags: ["Version Control", "Conflicts", "Resolve", "Merge", "Patch", "Branch", "Development"]
 # Renamed from version-control-scenarios
 ---
 
@@ -169,7 +168,7 @@ The history of the app is a list of all revisions that have been committed. To v
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/history-button.png" max-width=60% alt="History Button" >}}
 
-The revisions are shown in reverse chronological order (newest is at top of list). The history dialog shows you revision number, date, time, author, and message of each revision.
+For Git-based applications, revisions are sorted according to the commit history, which sometimes does not reflect the chronological order due to Git's decentralized nature and local commits. The history dialog shows you revision number, date, time, author, and message of each revision.
 
 Select a revision to see additional details, such as related Developer Portal stories, changed documents, Studio Pro version, and changes on disk. Icons summarize the kinds of changes that happened in the app.
 

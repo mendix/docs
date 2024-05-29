@@ -3,7 +3,6 @@ title: "Advanced Custom Settings in Mendix Runtime"
 linktitle: "Advanced Custom Settings"
 url: /refguide7/tricky-custom-runtime-settings/
 description: "Describes advanced custom settings in Mendix Runtime and how to configure them."
-tags: ["Support", "custom settings"]
 ---
 
 ## 1 Introduction

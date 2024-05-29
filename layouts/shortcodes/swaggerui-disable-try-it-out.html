@@ -1,0 +1,16 @@
+{{ $original := .Get "src" }}
+ <div data-stt-ignore id="docsy_swagger_ui"></div>
+ <script>
+   window.onload = function () {
+     const ui = SwaggerUIBundle({
+       url: {{ $original | relURL }},
+       dom_id: '#docsy_swagger_ui',
+       supportedSubmitMethods: [],
+      presets: [
+        SwaggerUIBundle.presets.apis,
+        SwaggerUIStandalonePreset
+      ]
+    });
+    window.ui = ui;
+  };
+</script>

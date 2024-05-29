@@ -3,7 +3,6 @@ title: "Set Up Error Handling"
 url: /howto8/logic-business-rules/set-up-error-handling/
 
 weight: 8
-tags: ["error", "error handling", "rollback", "microflow", "logic"]
 #To update screenshots of these microflows in , use the Microflow Screenshots app.
 ---
 

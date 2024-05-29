@@ -82,7 +82,7 @@ Once the activation is completed, your app is connected to Jira. You can see the
     * The list of stories is ordered by the Jira story key.
 
 * After you commit your changes in Studio Pro, you can see the associated Jira stories in the details of the corresponding [revision](/developerportal/general/team-server/#revision-details) in the **Team Server** page after opening your app in Apps.
-* You can see the link to your Jira board in the **Project Management** section of the Mendix Portal.
+* You can see the link to your Jira board in the **Project Management** section in Apps' [navigation pane](/developerportal/#navigation-pane).
 
     {{< figure src="/attachments/developerportal/project-management/jira-connector/navigation-jira.png" >}}
 

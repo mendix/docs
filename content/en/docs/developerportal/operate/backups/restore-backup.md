@@ -67,11 +67,12 @@ To transfer backups between environments, you need a downloaded backup file (*.d
 You can only restore data to an existing database. This means that there must have been an app deployed to the licensed node before you attempt to restore data. If it is a new node environment, you must deploy an app to it before attempting to restore data to the node.<br><br>However, the app previously deployed to the node does not need to have had the same Domain Model as the data you are restoring.
 {{% /alert %}}
 
-1. Go to the **Backups** page of the Mendix Portal for your app.
-2. Select the environment to which the backup should be restored (for example, **Acceptance**).
-3. Click **Upload Archive**. The upload creates a new backup item in your backup list, which you can then restore via the regular restore process. This ensures less downtime for your application.
-4. Upload the *.db* or *.gz* backup file.
-5. You will now need to restore your backup that is held in Mendix Cloud, as described in [Restoring a Backup for the Same Licensed Cloud Node](#restore-cloud-backup), above.
+1. Open your app in [Apps](https://sprintr.home.mendix.com/).
+2. Go to the **Backups** page.
+3. Select the environment to which the backup should be restored (for example, **Acceptance**).
+4. Click **Upload Archive**. The upload creates a new backup item in your backup list, which you can then restore via the regular restore process. This ensures less downtime for your application.
+5. Upload the *.db* or *.gz* backup file.
+6. You will now need to restore your backup that is held in Mendix Cloud, as described in [Restoring a Backup for the Same Licensed Cloud Node](#restore-cloud-backup), above.
 
 ## 5 Restoring a Backup for a Free App
 

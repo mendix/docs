@@ -14,7 +14,7 @@ cascade:
 
 ## 1 Introduction
 
-On the Mendix Portal,  developers can create, deploy, and mange apps as well as collaborate with each other. To access these features, visit [Apps](https://sprintr.home.mendix.com).
+On the Mendix Portal, developers can create, deploy, and mange apps as well as collaborate with each other. To access these features, visit [Apps](https://sprintr.home.mendix.com).
 
 {{% alert color="info" %}}The features in Apps can also be accessed via APIs, enabling third-party developers to integrate their own widgets and plugins. For more information, see [API Documentation](/apidocs-mxsdk/apidocs/).{{% /alert %}}
 
@@ -67,7 +67,7 @@ The navigation pane is divided into four main categories, which correspond with 
 
 ## 5 Company Buzz and Apps {#my-company-apps}
 
-In the top bar of the Mendix Portal, an additional menu item is available for **Company Apps**:
+In the top bar of Apps, an additional menu item is available for **Company Apps**:
 
 {{< figure src="/attachments/developerportal/company-apps.png"  width=80%  alt="Company Apps in MxDock" >}}
 

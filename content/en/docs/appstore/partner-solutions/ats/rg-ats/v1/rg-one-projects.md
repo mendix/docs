@@ -33,7 +33,7 @@ The name of the project/library.
 
 **Mendix Project ID**
 
-The project ID of the Mendix Portal project that you want to get your stories from.
+The project ID of the project that you want to get your stories from.
 
 **Mendix API Key**
 

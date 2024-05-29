@@ -14,7 +14,7 @@ aliases:
 
 Your Mendix Profile is your main point of contact with members of the Mendix community. It displays your activities on the Mendix Platform and details about your background. To get more involved in the Mendix community, your profile is the best place to start. 
 
-You can access your Mendix profile by clicking your picture in the upper-right corner of the Mendix Portal and then selecting **See Your Profile**. 
+You can access your Mendix profile by clicking your picture in the upper-right corner of any page in the Mendix Portal (for example, [Apps](https://sprintr.home.mendix.com/), the [Mendix Marketplace](https://marketplace.mendix.com/),[Control Center](https://controlcenter.mendix.com/)) and then selecting **See Your Profile**. 
 
 {{% alert color="info" %}}
 By default, any newly created Mendix account comes with its own Mendix Profile.

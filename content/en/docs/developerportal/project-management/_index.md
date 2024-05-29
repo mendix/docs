@@ -4,7 +4,7 @@ url: /developerportal/project-management/
 
 weight: 7
 description_list: true
-description: "Describes the Project Management section of the Mendix Portal."
+description: "Describes the Project Management section of Apps' navigation pane."
 ---
 
 ## 1 Introduction

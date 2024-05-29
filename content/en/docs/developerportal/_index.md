@@ -65,7 +65,7 @@ The navigation pane is divided into four main categories, which correspond with 
 
 {{< figure src="/attachments/developerportal/navigation-pane.png" alt="The navigation pane" width="45%" class="no-border" >}}
 
-## 5 Company Buzz and Apps {#my-company-apps}
+## 5 Company Apps {#my-company-apps}
 
 In the top bar of Apps, an additional menu item is available for **Company Apps**:
 

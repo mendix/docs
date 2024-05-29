@@ -20,7 +20,7 @@ Each app can only be deployed to one type of target platform (such as Mendix Clo
 Some features that rely on the target platform can work differently depending on what is supported (for example, in Cloud Foundry, Kubernetes, or Windows server). If you want to use a particular feature, confirm that it is supported by your chosen target platform.
 {{% /alert %}}
 
-This section of the *Mendix Portal Guide* contains step-by-step instructions and additional reference material to help you deploy and manage your Mendix apps in the cloud or on premises. It is split into sections:
+This documentation category contains step-by-step instructions and additional reference material to help you deploy and manage your Mendix apps in the cloud or on premises. It is split into sections:
 
 * [General](/developerportal/deploy/general/) – contains information which applies to deployments in many different environments
 * Environment-specific sections – these contain instructions for the deployment and maintenance of apps in specific environments, such as [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) and [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/)

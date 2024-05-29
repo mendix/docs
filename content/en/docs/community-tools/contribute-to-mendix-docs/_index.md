@@ -3,7 +3,6 @@ title: "Contribute to Mendix Docs"
 url: /community-tools/contribute-to-mendix-docs/
 weight: 10
 description: "Describes how to add and edit Mendix documentation as a community member."
-tags: ["documentation", "community"]
 aliases:
     - /developerportal/community-tools/contribute-to-mendix-docs/
 #If moving or renaming this doc file, update the link in the site footer and links in the mendix/docs repo. See Mapping to Products for more details.

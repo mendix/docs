@@ -74,7 +74,7 @@ The table below presents a few use cases that are a good fit for Mendix workflow
 | Dynamic business process support for a new product launch | For companies needing rapid application development to support end-to-end business processes for new product launches, Mendix workflows can be seamlessly integrated for the subsequent legal and financial review and approval. |
 | Automated customer onboarding process | Organizations that need to streamline customer onboarding can use Mendix workflows to automate process orchestration across multiple systems and involve user intervention for invalid situations. This ensures a smooth and efficient onboarding experience. |
 
-To gain hands-on experience with Mendix workflow using a concrete use case, follow [Configuring a Workflow in Studio Pro for the Employee Onboarding Process](/refguide/workflow-how-to-configure/).
+For more information on a concrete use case, see [Configuring a Workflow in Studio Pro for the Employee Onboarding Process](/refguide/workflow-how-to-configure/).
 
 ## 5 Workflow Elements
 

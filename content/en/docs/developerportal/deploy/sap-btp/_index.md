@@ -203,25 +203,26 @@ If you click **Run** or **Publish** in Studio Pro, this will automatically do th
 You will still have to deploy your app in [Apps](https://sprintr.home.mendix.com/) the very first time to ensure that all the services are bound correctly.
 {{% /alert %}}
 
-1. Go to the **Environments** page of the Mendix Portal.
+1. Open the app in [Apps](https://sprintr.home.mendix.com/).
+2.  Go to the **Environments** page.
 
     {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/environments-page.png" class="no-border" >}}
 
-2. Click **Create package from Team Server** to start the wizard.
+3. Click **Create package from Team Server** to start the wizard.
 
-3. Select the branch on the Team server which you want to use.
+4. Select the branch on the Team server which you want to use.
 
     {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/03-sap-select-branch.png" class="no-border" >}}
 
-4. Select the revision of the branch you want to build.
+5. Select the revision of the branch you want to build.
 
     {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/04-sap-select-revision.png" class="no-border" >}}
 
-5. Add a version number and Tag description as required. The revision number will be added to the version number automatically.
+6. Add a version number and Tag description as required. The revision number will be added to the version number automatically.
 
     {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/05-sap-define-tag.png" class="no-border" >}}
 
-6. Click **Build this revision** to build the package.
+7. Click **Build this revision** to build the package.
 
     {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/06-sap-build-revision.png" class="no-border" >}}
 

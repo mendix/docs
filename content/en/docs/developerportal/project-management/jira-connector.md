@@ -81,7 +81,7 @@ Once the activation is completed, your app is connected to Jira. You can see the
     * If you do not wish to see backlog stories in Studio Pro, consider setting up your board without a backlog and use a separate board to manage your backlog.
     * The list of stories is ordered by the Jira story key.
 
-* After you commit your changes in Studio Pro, you can see the associated Jira stories in the details of the corresponding [revision](/developerportal/general/team-server/#revision-details) in the **Team Server** page of the Mendix Portal.
+* After you commit your changes in Studio Pro, you can see the associated Jira stories in the details of the corresponding [revision](/developerportal/general/team-server/#revision-details) in the **Team Server** page after opening your app in Apps.
 * You can see the link to your Jira board in the **Project Management** section of the Mendix Portal.
 
     {{< figure src="/attachments/developerportal/project-management/jira-connector/navigation-jira.png" >}}

@@ -21,7 +21,7 @@ Below are the key reasons why organizations adopt workflow processes:
 * Performance improvement:
     * Improving key performance indicators (KPIs) by identifying and addressing bottlenecks.
     * Reducing the time to complete tasks and minimizing overdue penalties.
-    * Enhancing the quality and efficiency of operations, leading to improved worker satisfaction.
+    * Enhancing the quality and efficiency of operations, which improves work satisfaction.
 
 * Risk reduction:
     * Preventing overdue penalties by streamlining processes.

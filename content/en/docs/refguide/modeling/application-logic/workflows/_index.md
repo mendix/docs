@@ -8,15 +8,15 @@ tags: ["workflow", "workflows", "Studio Pro"]
 
 ## 1 Introduction
 
-Workflow is a visual language that allows you to build extendable processes. In Mendix Studio Pro, it is fully integrated with other visual editors, such as the microflow editor and page editor. 
+This document provides a general introduction to workflows, including the reasons why organizations adopt workflow processes, when and when not to use workflows, and a few Mendix workflow business use cases. For instructions on how to perform Mendix workflow basic functions, see [Performing Workflow Basic Functions](/refguide/perform-workflow-basic-functions/).
 
-Implementing workflow processes is beneficial for organizations that would like to enhance operational efficiency, ensure compliance with regulations, and mitigate risks. 
+Workflow is a visual language that allows you to build extendable processes. In Mendix Studio Pro, it is fully integrated with other visual editors, such as the microflow editor and page editor. Implementing workflow processes is beneficial for organizations that would like to enhance operational efficiency, ensure compliance with regulations, and mitigate risks. 
 
 Below are the key reasons why organizations adopt workflow processes:
 
 * Compliance management:
     * Ensuring adherence to local rules, regulations, and laws.
-    * Facilitating the documentation of any available data, including actions taken and decisions made. This helps to provide a clear audit trail.
+    * Helping to document any available data, including actions taken and decisions made. This helps to provide a clear audit trail.
 
 * Performance improvement:
     * Improving key performance indicators (KPIs) by identifying and addressing bottlenecks.
@@ -28,13 +28,11 @@ Below are the key reasons why organizations adopt workflow processes:
     * Anticipating potential bottlenecks that could impact KPIs or introduce additional risks.
     * Avoiding overwork and stress among users and teams, thus maintaining compliance and productivity.
 
-For more information on when and when not to use workflows, see the [When to Automate a Process with Workflows?](#when-to-use) and [When Not to Use Workflows?](#when-not) sections below.
+For more information on when and when not to use workflows, see the [When to Use Workflows?](#when-to-use) and [When Not to Use Workflows](#when-not) sections below.
 
 For information on Mendix workflow use cases, see the [Mendix Workflow Use Cases](#use-case) section below.
 
-For instructions on how to perform Mendix workflow basic functions, see [Performing Workflow Basic Functions](/refguide/perform-workflow-basic-functions/).
-
-## 2 When to Automate a Process with Workflows? {#when-to-use}
+## 2 When to Use Workflows {#when-to-use}
 
 Automating a process with workflows is the most effective when the process meets specific criteria, ensuring smooth execution and optimization. 
 
@@ -62,7 +60,7 @@ Below are situations where the use of workflows might not be appropriate:
 
 ## 4 Mendix Workflow Use Cases {#use-case}
 
-Mendix offers a versatile development paradigm with multiple editors, enabling seamless incorporation of workflows into broader application design. With Mendix, you can keep workflows focused on representing your business processes, while using the other logic (such as microflows and nanoflows) for more technical implementations.
+Mendix provides a development platform which supports multiple editors. This enables the integration of workflows into broader application design. With Mendix, you can keep workflows focused on representing your business processes, while using the other logic (such as microflows and nanoflows) for more technical implementations.
 
 The table below presents a few use cases that are a good fit for Mendix workflows:
 

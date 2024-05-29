@@ -25,13 +25,8 @@ This tool enables you to do the following:
 
 Check **Enable performance logging** to turn on performance logging.
 
-If it is checked, performance logging is enabled and measurements are being logged:
-
-{{< figure src="/attachments/howto/monitoring-troubleshooting/performance-logging/logging-enabled.png" class="no-border" >}}
-
-If it is unchecked, performance logging is disabled:
-
-{{< figure src="/attachments/howto/monitoring-troubleshooting/performance-logging/logging-disabled.png" class="no-border" >}}
+* If it is checked, performance logging is enabled and measurements are being logged
+* If it is unchecked, performance logging is disabled
 
 ## 3 Start a New Session of Performance Logging {#new-session}
 

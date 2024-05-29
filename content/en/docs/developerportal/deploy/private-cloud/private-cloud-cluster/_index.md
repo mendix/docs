@@ -516,6 +516,20 @@ The liveness probe will begin returning valid responses just a few seconds after
 Starting from Mendix Operator 2.15.0, startup probes are no longer used, and changing their settings will have no effect.
 {{% /alert %}}
 
+{{% alert color="info" %}}
+Starting from Mendix Operator 2.17.0, the liveness probe healthcheck depends on the [runtime_status](/refguide/monitoring-mendix-runtime/#runtime-status) command to check if an app is running (starting or started) and in a healthy state.
+
+If a [check_health](/refguide/monitoring-mendix-runtime/#check-health) microflow is configured, its status will also be validated.
+
+An app will return a successful healthcheck status if all of these conditions are true:
+
+1. The Runtime replies to `ping` calls (any reply is accepted).
+    Mendix Operator versions 2.15 and 2.16 assumed an invalid `ping` reply to be an error, and failed the liveness probe. The Mendix Runtime will return a fail reply to `ping` calls if at any point a message was logged with a **critical** log level (which is [reserved for errors that require immediate attention](/refguide/logging/#21-critical), and that caused some apps to restart when running in Operator 2.15 or 2.16. Mendix Operator 2.17 ignores the `ping` reply and will no longer restart apps that have logged a **critical** log message.
+2. The Runtime's status is `created`, `starting`, `running` or `stopping`.
+3. If the Runtime is `running`, and a healthcheck microflow is configured, the healthcheck microflow needs to return a `healthy` state. If there's no `check_health` microflow configured, or the Runtime's state is not `running` this condition is ignored.
+
+{{% /alert %}}
+
 #### 6.4.2 Customize Liveness Probe to Resolve Crash Loopback Scenarios
 
 The `liveness probe` informs the cluster whether the pod is dead or alive. If the pod fails to respond to the liveness probe, the pod will be restarted (this is called a `crash loopback`).

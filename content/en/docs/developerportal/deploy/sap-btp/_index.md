@@ -110,7 +110,7 @@ After the environment has been created successfully, you will see a confirmation
 
 You can create several environments for your app. For example, you may have created a development environment, but you may want environments for test, acceptance, production, and so forth. Additionally, when you switch from another cloud you need to create at least one environment for your Mendix application.
 
-This is done from the **Environments** page of the Mendix Portal.
+You can do this in the **Environments** page after opening your app in [Apps](https://sprintr.home.mendix.com/).
 
 {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/environments-page.png" class="no-border" >}}
 

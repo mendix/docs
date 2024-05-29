@@ -312,4 +312,4 @@ If desired, you can adjust the log levels. If you configure your app's log level
 
 ## 7 Read More
 
-* [Metrics](/developerportal/operate/metrics/) – Describes the graphs that you can use to monitor the performance and health of your Mendix Cloud app on the **Metrics** page of the Mendix Portal
+* [Metrics](/developerportal/operate/metrics/) – Describes the graphs that you can use to monitor the performance and health of your Mendix Cloud app on the **Metrics** page in Apps

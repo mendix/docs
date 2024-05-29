@@ -88,7 +88,7 @@ If the app is still running, you have to stop it by clicking **Stop Application*
 
 ## 6 Restoring After a Backup Fails{#restore-after-fail}
 
-If a backup restore fails, you will be notified via your app's **Backup Activity** log (in the **Backups** page of the Mendix Portal). When this happens, all data that was restored until the point of failure will be present in your database. This will leave the database only partially restored; not all data from the backup file will be present in your database. 
+If a backup restore fails, you will be notified via your app's **Backup Activity** log (in the **Backups** page after you open your app in [Apps](https://sprintr.home.mendix.com/)). When this happens, all data that was restored until the point of failure will be present in your database. This will leave the database only partially restored; not all data from the backup file will be present in your database. 
 
 Your database must be large enough to hold the decompressed size of the database as stored in your backup file's [db folder](#db-folder), plus an overhead of 2.25 GB. This overhead is employed during the restoration process. 
 

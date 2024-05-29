@@ -205,7 +205,7 @@ You will be taken to the Environment Details page for the selected environment. 
 
 ## 4 Environments Page
 
-The **Environments** page of the Mendix Portal contains three sections:
+After opening your app in [Apps](https://sprintr.home.mendix.com/), you can find the **Environments** page, which contains three sections:
 
 * Deployment Package Repository
 * Environments

@@ -3,7 +3,7 @@ title: "Team"
 url: /developerportal/general/team/
 
 weight: 3
-description: "Describes the Team page of t."
+description: "Describes the Team page of Apps's navigation pane."
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 

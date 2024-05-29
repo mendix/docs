@@ -23,7 +23,7 @@ Metrics, alerts, and logs are not available for Free Apps running in Mendix Clou
 
 ## 2 Operations Pages
 
-The operations pages that allow you to monitor your operations are described below. You can access these pages via the Mendix Portal's [navigation pane](/developerportal/#navigation-pane).
+The operations pages that allow you to monitor your operations are described below. You can access these pages via the Apps' [navigation pane](/developerportal/#navigation-pane).
 
 ### 2.1 Metrics
 

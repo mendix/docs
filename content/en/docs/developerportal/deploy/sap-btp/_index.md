@@ -32,7 +32,7 @@ Before you can manage your SAP BTP using the Mendix Portal, you will need to set
 
 ### 2.1 Changing the Cloud Settings {#ChangeCloudSettings}
 
-In this scenario, you have an existing app which is running in another environment: for instance, on Mendix Cloud. To change this, go to **Settings** in the Mendix Portal's navigation pane and switch to the **Cloud Settings** tab.
+In this scenario, you have an existing app which is running in another environment: for instance, on Mendix Cloud. To change this, open your app in [Apps](https://sprintr.home.mendix.com/), go to **Settings**, and then switch to the **Cloud Settings** tab.
 
 {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/cloud-settings.png" class="no-border" >}}
 

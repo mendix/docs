@@ -109,16 +109,16 @@ If you would like to add a namespace to be added in the Standalone cluster, do t
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/ClusterDetails.png" class="no-border" >}}
 
-2. Click **Add Namespace**
+2. Click **Add Namespace**.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/namespace-details-standalone.png" class="no-border" >}}
 
 3. Enter the following details:
-    * **Namespace** – this is the namespace in your platform; this must conform to the namespace naming conventions of the cluster: all lower-case with hyphens allowed within the name
-    * **Installation type** – Choose **Standalone**
 
-4. Click **Next**
+    * **Namespace** – This is the namespace in your platform; this must conform to the namespace naming conventions of the cluster: all lower-case with hyphens allowed within the name.
+    * **Installation type** – Choose **Standalone**.
 
+4. Click **Next**.
 5. Once you click on **Next**, you will be redirected to the Installation pop up page from where you can download the mxpc-cli and get the command to install the namespace in the cluster.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/standalone_downloadcli.png" class="no-border" >}}  

@@ -19,7 +19,7 @@ The following diagram outlines the available integration options:
 
 {{< figure src="/attachments/appstore/modules/snowflake-rest-sql/snowflake_architecture_setup.png" >}}
 
-### 2.1 Using Snowflake Data in Your Mendix App
+### 2.1 Building Mendix Apps on Top of Snowflake
 
 Mendix provides real-time interaction with Snowflake through the [External Database connector](https://marketplace.mendix.com/link/component/219862) or the [REST SQL connector](https://marketplace.mendix.com/link/component/225717). Both of these connectors enable you to perform the following tasks:
 
@@ -49,7 +49,7 @@ The REST SQL connector requires an additional step to transform data rows receiv
 
 For information about using Snowflake's role-based access control in a Mendix application, see [Role-based Access Control](/appstore/modules/snowflake/snowflake-rbac/).
 
-### 2.2 Ingesting Mendix Data into Snowflake
+### 2.2 Loading Mendix Data into Snowflake
 
 The [Mendix Data Loader](https://app.snowflake.com/marketplace/listing/GZTDZHHIDJ/mendix-data-loader), available from the [Snowflake Marketplace](https://app.snowflake.com/marketplace), aids in ingesting Mendix data into Snowflake. The application is deployed in your Snowflake environment and interacts with the configured Mendix apps to ingest data that is exposed using an [Published OData Service](/refguide/published-odata-services/). 
 

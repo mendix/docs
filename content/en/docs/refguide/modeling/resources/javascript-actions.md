@@ -81,9 +81,9 @@ For apps with several parameters, descriptions serve as useful reminders of para
 
 #### 2.2.5 Required
 
-If a parameter is set to required, a value should be selected for that parameter in every JavaScript Action Call. In order to make a parameter optional, set 'required' to 'no'. This makes it possible to call the JavaScript Action without any value set for the parameter. This can be useful for flexibility and backward compatibility of JavaScript Action.
+If a parameter is set to required, a value should be selected for that parameter in every JavaScript Action Call. In order to make a parameter optional, set 'required' to 'no'. This makes it possible to call the JavaScript action without any value set for the parameter. This can be useful for flexibility and backward compatibility of JavaScript actions.
 
-If no argument is provided for an optional parameter, it defaults to `undefined` in the JavaScript Action. You can handle an optional parameter within the JavaScript Action by checking if it is `undefined`, allowing you to assign a default value or implement custom logic as needed. 
+If no argument is provided for an optional parameter, it defaults to `undefined` in the JavaScript action. You can handle an optional parameter within the JavaScript action by checking if it is `undefined`, allowing you to assign a default value or implement custom logic as needed. 
 
 ### 2.3 Return Type
 

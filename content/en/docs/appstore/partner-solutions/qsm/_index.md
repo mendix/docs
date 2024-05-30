@@ -9,7 +9,7 @@ aliases:
 ---
 
 {{% alert color="info" %}}
-This product has been renamed from **Mendix Application Quality Monitor (QSM)** to **Mendix Quality and Security Management (QSM)**.
+This product has been renamed from **Mendix Application Quality Monitor (AQM)** to **Mendix Quality and Security Management (QSM)**.
 {{% /alert %}}
 
 ## 1 Introduction

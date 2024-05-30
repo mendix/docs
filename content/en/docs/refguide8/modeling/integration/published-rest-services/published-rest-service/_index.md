@@ -142,7 +142,7 @@ Resources and Operations are appended to [Location](#location) to form a URL on 
 
 **How to publish REST in Studio Pro 8**
 
-{{% youtube Ff_P84NOcZk %}}
+{{< youtube Ff_P84NOcZk >}}
 
 ## 8 Read More
 

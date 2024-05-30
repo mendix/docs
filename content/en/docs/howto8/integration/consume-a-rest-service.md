@@ -176,7 +176,7 @@ For Studio Pro v 8.15 and above, the **Call REST** dialog box has changed from w
 
 {{< figure src="/attachments/howto8/integration/consume-a-rest-service/response.png" class="no-border" >}}
 
-{{% youtube OhzWTa1kZ00 %}}
+{{< youtube OhzWTa1kZ00 >}}
 
 ## 9 Read More
 

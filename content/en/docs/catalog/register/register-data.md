@@ -79,13 +79,13 @@ For more details on what can and cannot be provided in these fields, see the [AP
 You can see an example of a request below:
 
 ```curl
-curl --location --request PUT 'https://catalog.mendix.com/rest/registration/v5/applications/{AppUUID}' \
+curl --location --request POST 'https://catalog.mendix.com/rest/registration/v5/applications' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: MxToken <your_Personal_Access_Token>' \
---data-raw '{"Name": "My-Application"}'
+--data-raw '{"name": "My-Application"}'
 ```
 
-A successful `PUT` call results in a `201` status code and a JSON response body that includes the details you provided about the application, the location of an application icon, and a unique ID:
+A successful `POST` call results in a `201` status code and a JSON response body that includes the details you provided about the application, the location of an application icon, and a unique ID:
 
 ```json
 {
@@ -96,7 +96,7 @@ A successful `PUT` call results in a `201` status code and a JSON response body 
 }
 ```
 
-Use the application UUID to register your environment.
+Use the application_UUID to register your environment.
 
 #### 4.1.2 Registering an Environment Through the Catalog Registration API {#register-environment}
 
@@ -113,13 +113,13 @@ For more details on what can and cannot be provided in these fields, see the [AP
 You can see an example of a request below:
 
 ```curl
-curl --location --request PUT 'https://catalog.mendix.com/rest/registration/v5/applications/{application_UUID}/environments/{EnvironmentUUID}' \
+curl --location --request POST 'https://catalog.mendix.com/rest/registration/v5/applications/{application_UUID}/environments' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: MxToken <your_Personal_Access_Token>' \
---data-raw '{"Name": "My-Environment", "Location": "https://my-deployed-application-url.com", "Type": "Production"}'
+--data-raw '{"name": "My-Environment", "location": "https://my-deployed-application-url.com", "type": "Production"}'
 ```
 
-A successful `PUT` call results in a `201` status code and a JSON response body that includes the details you provided about the environment, along with a unique ID:
+A successful `POST` call results in a `201` status code and a JSON response body that includes the details you provided about the environment, along with a unique ID:
 
 ```json
 {
@@ -136,7 +136,7 @@ A successful `PUT` call results in a `201` status code and a JSON response body 
 }
 ```
 
-Use the application UUID and the environment UUID to register one or more services.
+Use the application_UUID and the environment_UUID to register one or more services.
 
 #### 4.1.3 Registering Services Through the Catalog Registration API {#register-services}
 
@@ -163,7 +163,7 @@ curl --location --request PUT 'https://catalog.mendix.com/rest/registration/v5/a
       "path": "/path/to/my/service/endpoint",
       "serviceVersion": {
         "version": "1.0",
-        "apiTechnology": "REST",
+        "type": "OData",
         "service": {
           "name": "My-Service-Name",
            "ContractType": "OData_3_0"
@@ -177,7 +177,7 @@ curl --location --request PUT 'https://catalog.mendix.com/rest/registration/v5/a
         },
         "contracts": [
           {
-            "protocol": "OData",
+            "type": "CSDL",
             "documentBaseURL": "https://hr.acmecorp.test/odata/test.acme.employeeinformation/v1/",
             "documents": [
               {
@@ -196,7 +196,7 @@ curl --location --request PUT 'https://catalog.mendix.com/rest/registration/v5/a
       }
     }
   ]
-}'
+}'''
 ```
 
 If you are receiving a `400` response because your contract metadata is getting rejected, use the [Transform API](#transform-api) to get it in the right format. If you want to register more than one service for the same application and environment at once, add another object to the `Endpoints` list in the request body.
@@ -244,7 +244,7 @@ A successful `PUT` call will result in a `200` status code and a JSON response b
                         }
                     ]
                 },
-                "apiTechnology": "REST"
+                "type": "OData"
             },
             "validated": false,
             "discoverable": true
@@ -283,7 +283,7 @@ For more details on what can and cannot be provided in these fields, see the [AP
 You can see an example of a request that converts a `dependencies.json` file below: 
 
 ```curl
-curl --location --request PUT 'https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v5.html#/Endpoints/post_transform_dependenciesjson' \
+curl --location --request POST 'https://catalog.mendix.com/rest/registration/v5/transform/dependenciesjson' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: MxToken <your_Personal_Access_Token>' \
 --data-raw '{
@@ -308,7 +308,7 @@ A successful `PUT` call results in a `200` status code and a JSON response body.
       "validated": true,
       "serviceVersion": {
         "version": "2.0",
-        "apiTechnology": "REST",
+        "type": "OData",
         "service": {
           "name": "test.acme.employeeinformation"
         },
@@ -335,7 +335,7 @@ A successful `PUT` call results in a `200` status code and a JSON response body.
           ],
           "contracts": [
             {
-              "protocol": "OData",
+              "type": "CSDL",
               "documentBaseURL": "https://hr.acmecorp.test/odata/test.acme.employeeinformation/v1/",
               "documents": [
                 {

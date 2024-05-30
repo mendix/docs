@@ -92,8 +92,6 @@ As shown in the above example, if your input parameters do no exactly match what
 7. Specify the microflow as the datasource for the gallery widget.
 8. Run the page, provide a valid postalcode, and validate the result of the page.
 
-    {{< figure src="/attachments/appstore/modules/external-database-connector/sample-snowflake-query-result.png" >}}
-
 ## 4 Configuring a Filtered Query
 
 This section provides an example of a filtered query. Although you can filter, sort, and paginate data in your Mendix app by using the [Data Grid 2](/appstore/modules/data-grid-2/) widget, this widget operates mostly client-side, so as a best practice, you may want to pre-filter the data retrieved from Snowflake before using it in a grid. The following example shows how you can specify a filter based on the postal code and country in your SQL query. After running the query, you can then further limit the results with data grid filters, sorting, and pagination.

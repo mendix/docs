@@ -15,7 +15,7 @@ To investigate performance issues that are reproduced on your local machine, you
 
 The profiling feature can be reached by clicking **Help** > **Support Tools** > **Profiling**:
 
-{{< figure src="/attachments/refguide/modeling/help-menu/profiling/profiling-menu.png" class="no-border" width="500" >}}
+{{< figure src="/attachments/refguide/modeling/menus/help-menu/profiling/profiling-menu.png" class="no-border" width="500" >}}
 
 ## 2 Run a Performance Profiler Session
 

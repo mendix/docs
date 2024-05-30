@@ -6,10 +6,6 @@ enableRobotsTXT = true
 # Hugo allows theme composition (and inheritance). The precedence is from left to right.
 theme = ["docsy"]
 themesDir = "node_modules"
-[module]
-replacements = "github.com/FortAwesome/Font-Awesome -> ., github.com/twbs/bootstrap -> ."
-[[module.imports]]
-path = "docsy"
 
 # NK - Changes default ERROR message when unable to resolve ref/relref links to WARNING
 # Are we going to use this?
@@ -60,6 +56,9 @@ disableKinds = ["taxonomy", "term"]
         endLevel = 6
         ordered = false
         startLevel = 2
+
+[module]
+replacements = "github.com/FortAwesome/Font-Awesome -> ., github.com/twbs/bootstrap -> ."
 
 # Comment out if you don't want the "print entire section" link enabled.
 [outputs]

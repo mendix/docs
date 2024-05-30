@@ -9,16 +9,16 @@ aliases:
 ---
 
 {{% alert color="info" %}}
-This product has been renamed from **Mendix Application Quality Monitor (AQM)** to **Mendix Quality and Security Management (QSM)**.
+This product has been renamed from **Mendix Application Quality Monitor (QSM)** to **Mendix Quality and Security Management (QSM)**.
 {{% /alert %}}
 
 ## 1 Introduction
 
-[Mendix Quality and Security Management (QSM)](https://www.softwareimprovementgroup.com/solutions/sigrid-for-mendix-quality-and-security-management/) is a cloud service developed by Mendix and the Software Improvement Group (SIG). Mendix AQM performs a static analysis of Mendix application models according the ISO 25010 standard for maintainability. Dashboards provide instant insight into the quality of the application models as they're built, including quality ratings based on benchmarks of thousands of projects.
+[Mendix Quality and Security Management (QSM)](https://www.softwareimprovementgroup.com/solutions/sigrid-for-mendix-quality-and-security-management/) is a cloud service developed by Mendix and the Software Improvement Group (SIG). Mendix QSM performs a static analysis of Mendix application models according the ISO 25010 standard for maintainability. Dashboards provide instant insight into the quality of the application models as they're built, including quality ratings based on benchmarks of thousands of projects.
 
 By proactively monitoring quality on a daily basis customers can improve maintainability and reduce lifecycle costs.
 
-The Mendix AQM quality model is based on the SIG/TÜViT Evaluation Criteria. These criteria provide standardized evaluation and certification of the technical quality of the source code of software products. The purpose of such evaluation and certification is to provide an instrument to developers for guiding improvement of the products they create and enhance.
+The Mendix QSM quality model is based on the SIG/TÜViT Evaluation Criteria. These criteria provide standardized evaluation and certification of the technical quality of the source code of software products. The purpose of such evaluation and certification is to provide an instrument to developers for guiding improvement of the products they create and enhance.
 
 The general notion of software quality embraces a variety of quality aspects, of which a taxonomy is available in the [ISO/IEC 25010](https://iso25000.com/index.php/en/iso-25000-standards/iso-25010) international standard on software product quality. The scope of the SIG/TÜViT **Evaluation Criteria** is limited to the internal quality characteristic of maintainability and its sub-characteristics of **analyzability, modifiability, testability, modularity and reusability**. The evaluation concerns the source code of a software product, not the behavior of the product in a test or production environment.
 
@@ -28,17 +28,17 @@ The general notion of software quality embraces a variety of quality aspects, of
 To obtain or renew your purchased license, go to [this form](https://addon.mendix.com/index.html).
 {{% /alert %}}
 
-* Mendix AQM is available for projects based on Mendix 6.0 and above
-* Mendix AQM supports self-service onboarding of new AQM apps for existing customers via Mendix Support
-* Mendix AQM is part of our Mendix pricelist – for more information or activation, please contact your Mendix Customer Success Manager or Sales
+* Mendix QSM is available for projects based on Mendix 6.0 and above
+* Mendix QSM supports self-service onboarding of new QSM apps for existing customers via Mendix Support
+* Mendix QSM is part of our Mendix pricelist – for more information or activation, please contact your Mendix Customer Success Manager or Sales
 * Detailed documentation is available via the complementary Sigrid Academy
-* Mendix AQM dashboard reports are generated every night based on the latest version in your Project Team Server
-    * By default, the Mendix AQM reports are based on the main line in your app's Team Server
-    * We are building CI support for Mendix that will allow you to run AQM in your Mendix CI pipeline (for more information, see [SigridCI](https://github.com/Software-Improvement-Group/sigridci))
+* Mendix QSM dashboard reports are generated every night based on the latest version in your Project Team Server
+    * By default, the Mendix QSM reports are based on the main line in your app's Team Server
+    * We are building CI support for Mendix that will allow you to run QSM in your Mendix CI pipeline (for more information, see [SigridCI](https://github.com/Software-Improvement-Group/sigridci))
 
 ## 3 Implemented Checks for Best Practices
 
-AQM includes automated checks for a subset of the [Mendix Development Best Practices](/refguide/dev-best-practices/). The following checks are currently implemented in AQM:
+QSM includes automated checks for a subset of the [Mendix Development Best Practices](/refguide/dev-best-practices/). The following checks are currently implemented in QSM:
 
 |Check Code|Check Name|
 |----------|----------|

@@ -294,8 +294,8 @@ html {
 }
 
 .td-main main {
+    padding-top: 4rem;  // DB - Moved out of breakpoint
         @include media-breakpoint-up(md) {
-            padding-top: 3.75rem;  // NK - made smaller
             border-left: 1px solid $gray-border; // NK - moved from toc, to fully span height of screen
             border-right: 1px solid $gray-border; // NK - moved from left menu, to fully span height of screen
         }

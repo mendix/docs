@@ -8,7 +8,7 @@ description: "Introduces Mendix Quality and Security Management, which is a clou
 
 The Software Improvement Group (SIG) and Mendix have entered in a partnership to deliver quality measurement support to Mendix Licensees. In particular, SIG has developed the Quality and Security Management (QSM) tool that performs quality measurements on Mendix application models, calculates quality ratings from the measurements, and presents both measurements and ratings on a quality dashboard. QSM is developed by SIG and hosted on the Mendix infrastructure.
 
-### 2 Usage of Measurement Results by SIG for Continuous Improvement
+## 2 Usage of Measurement Results by SIG for Continuous Improvement
 
 The measurement results of QSM are used by the R&D team of SIG to improve the measurement algorithms, to recalibrate the rating system, and to provide anonymized benchmarks to Licensees:
 

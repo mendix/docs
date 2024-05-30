@@ -43,7 +43,7 @@ For different security levels different settings are available. Find the list of
 |-------------------------------------------------------|--------------|-----------------------------------------------------------------|-----------------------------------------------------------------------------------|
 | [Check security](#check-security)                     | N/A          | N/A                                                             | Available, see the [Check Security](#check-security) section.                     |
 | [Strict page URL checking](#strict-page-url-checking) | N/A          | N/A                                                             | Available, see the [Strict Page URL Checking](#strict-page-url-checking) section. |
-| [Strict Mode](#strict-mode)                           | N/A          | N/A                                                             | Available for React Client, see the [Strict Mode](#strict-mode) section.          |
+| [Strict mode](#strict-mode)                           | N/A          | N/A                                                             | Available for the React client, see the [Strict Mode](#strict-mode) section.          |
 | [App status](#app-status)                             | N/A          | Available, see the [App Status](#app-status) section.           | Available, see the [App Status](#app-status) section.                             |
 | [Module status](#module-status)                       | N/A          | Available, see the [Module Status](#module-status) section.     | Available, see the [Module Status](#module-status) section.                       |
 | [User roles](#user-roles)                             | N/A          | Available, see the [User roles](#user-roles) section.           | Available, see the [User roles](#user-roles) section.                             |
@@ -68,7 +68,7 @@ Enabling **Strict page URL checking** works for pages with custom URLs, but it c
 
 ### 2.4 Strict Mode {#strict-mode}
 
-In the React Client, **Strict Mode** mode will make your app more secure when the access rules are not set up correctly. For more information, see [Strict Mode](/refguide/strict-mode/).
+In the React Client, **Strict mode** will make your app more secure when the access rules are not set up correctly. For more information, see [Strict Mode](/refguide/strict-mode/).
 
 ### 2.5 App Status {#app-status}
 

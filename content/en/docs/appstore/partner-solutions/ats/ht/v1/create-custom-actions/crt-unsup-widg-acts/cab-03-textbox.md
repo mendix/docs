@@ -2,7 +2,6 @@
 title: "CAB.03 - Textbox"
 url: /appstore/partner-solutions/ats/ht-one-cab-03-textbox/
 description: "Explains how to create an Unsupported Widget action for the Mendix text box widget."
-tags: ["ATS", "testing"]
 ---
 
 ## 1 Introduction

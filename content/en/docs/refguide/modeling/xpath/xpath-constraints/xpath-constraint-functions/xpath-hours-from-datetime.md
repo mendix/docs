@@ -2,7 +2,6 @@
 title: "XPath hours-from-dateTime"
 url: /refguide/xpath-hours-from-datetime/
 weight: 9
-tags: ["studio pro"]
 ---
 
 ## 1 Overview

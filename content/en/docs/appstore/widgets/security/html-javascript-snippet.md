@@ -3,7 +3,6 @@ title: "HTML/JavaScript Snippet CSP"
 url: /appstore/widgets/security/content-security-policy/html-javascript-snippet-csp/
 weight: 20
 description: "Describe the configuration for map widget content security policy"
-tags: ["security", "headers", "widgets", "marketplace", "marketplace component", "widget", "html", "javascript", "snippet", "maps", "platform support"]
 ---
 
 ## 1 Introduction

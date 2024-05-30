@@ -3,7 +3,6 @@ title: "Populate User Types"
 url: /howto9/monitoring-troubleshooting/populate-user-type/
 
 description: "Describes how to classify existing app end-users as either internal or external."
-tags: ["licensing", "Users", "Internal Users", "External Users"]
 ---
 
 ## 1 Introduction

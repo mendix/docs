@@ -2,7 +2,6 @@
 title: "Create Object"
 url: /refguide8/create-object/
 weight: 40
-tags: ["studio pro"]
 ---
 
 {{% alert color="warning" %}}

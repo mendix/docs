@@ -3,7 +3,6 @@ title: "Parse Integer"
 url: /refguide/parse-integer/
 weight: 140
 description: "Describes the function for parsing integer from strings in Mendix."
-tags: ["studio pro", "expressions", "parse", "integer", "long", "integer/long", "casting", "conversion", "type casting", "type conversion"]
 ---
 
 ## 1 Introduction

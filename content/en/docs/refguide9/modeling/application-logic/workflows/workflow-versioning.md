@@ -2,7 +2,6 @@
 title: "Workflow Versioning and Conflict Mitigation"
 url: /refguide9/workflow-versioning/
 weight: 60
-tags: ["workflow", "workflows", "versions", "update"]
 ---
 
 ## 1 Introduction

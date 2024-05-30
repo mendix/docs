@@ -1,7 +1,6 @@
 ---
 title: "Drop-Down"
 url: /refguide7/drop_down/
-tags: ["Drop-down", "input", "page", "widget", "enumeration"]
 aliases:
     - /refguide7/drop-down-widget.html
     - /refguide7/drop-down-widget

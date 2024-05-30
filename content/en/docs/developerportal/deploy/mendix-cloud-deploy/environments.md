@@ -3,7 +3,6 @@ title: "Environments"
 url: /developerportal/deploy/environments/
 weight: 5
 description: "Lists the environments in which your app is deployed. Also the starting point for managing existing environments and further deployments."
-tags: ["Deploy","App","Developer Portal"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 

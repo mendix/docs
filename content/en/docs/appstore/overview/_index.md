@@ -5,7 +5,6 @@ weight: 1
 no_list: false
 description_list: true
 description: "Presents overview information on the Mendix Marketplace."
-tags: ["marketplace",  "marketplace component", "marketplace content", "widget", "connector", "module", "partner", "support", "platform support", "community support", "deprecated"]
 aliases:
     - /appstore/general/
     - /appstore/general/app-store-overview/

@@ -4,7 +4,6 @@ linktitle: "Deploy Mendix Native Mobile App"
 url: /howto8/mobile/deploying-native-app/
 weight: 10
 description: Describes how to build a Mendix native app in the cloud with the Mendix Native Mobile Builder.
-tags: ["native", "mobile", "deploy", "mendix native mobile builder", "builder", "appcenter"]
 ---
 
 ## 1 Introduction

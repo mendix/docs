@@ -2,7 +2,6 @@
 title: "Break Event"
 url: /refguide9/break-event/
 weight: 5
-tags: ["studio pro", "break event", "event", "loop"]
 ---
 
 ## 1 Introduction

@@ -2,7 +2,6 @@
 title: "Declaring Native Dependencies"
 url: /apidocs-mxsdk/apidocs/pluggable-widgets-native-dependencies/
 description: A guide for understanding native dependencies for pluggable widgets and JavaScript actions in Mx10.
-tags: ["Widget", "Pluggable",  "JavaScript", "Native"]
 weight: 40
 aliases:
  - /apidocs-mxsdk/apidocs/native-dependencies

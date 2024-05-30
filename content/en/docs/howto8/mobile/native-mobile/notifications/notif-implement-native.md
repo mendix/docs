@@ -4,7 +4,6 @@ linktitle: "Push Notifications in Native App"
 url: /howto8/mobile/notif-implement-native/
 weight: 58
 description: Tutorial for implementing push notifications in a native app.
-tags: ["mobile", "native", "push", "local", "firebase"]
 ---
 
 ## 1 Introduction

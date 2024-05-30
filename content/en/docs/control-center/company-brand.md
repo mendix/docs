@@ -3,7 +3,6 @@ title: "Company Brand"
 url: /control-center/company-brand/
 
 description: "Describes the Company Brand page in the Mendix Control Center."
-tags: ["control center", "mendix admin", "company brand"]
 weight: 35
 no_list: list
 ---

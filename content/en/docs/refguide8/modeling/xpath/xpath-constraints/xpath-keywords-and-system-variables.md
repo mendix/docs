@@ -1,7 +1,6 @@
 ---
 title: "XPath Keywords and System Variables"
 url: /refguide8/xpath-keywords-and-system-variables/
-tags: ["studio pro"]
 ---
 
 ## 1 Overview

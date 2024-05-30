@@ -4,7 +4,6 @@ linktitle: "Test Apps Using Selenium IDE"
 url: /howto7/testing/testing-mendix-applications-using-selenium-ide/
 
 weight: 40
-tags: ["test", "testing", "selenium"]
 ---
 
 ## 1 Introduction

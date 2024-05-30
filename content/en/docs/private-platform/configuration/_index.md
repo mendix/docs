@@ -3,7 +3,6 @@ title: "Configuring Private Mendix Platform"
 url: /private-mendix-platform/configuration/
 description: "Documents the initial configuration for the Private Mendix Platform."
 weight: 30
-tags: ["private mendix platform",  "private platform", "private marketplace", "initial configuration"]
 aliases:
     - /private-mendix-platform-configuration/
 ---

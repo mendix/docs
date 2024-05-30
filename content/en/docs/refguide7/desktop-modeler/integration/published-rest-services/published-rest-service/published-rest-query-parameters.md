@@ -3,7 +3,6 @@ title: "Published REST Query Parameters"
 url: /refguide7/published-rest-query-parameters/
 weight: 40
 description: "Parameters for a published REST query"
-tags: ["published REST", "query", "parameters", "Date and Time format"]
 # Merge into published rest service document
 ---
 

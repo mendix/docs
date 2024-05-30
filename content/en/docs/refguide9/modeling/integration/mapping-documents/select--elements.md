@@ -1,7 +1,6 @@
 ---
 title: "Select Elements"
 url: /refguide9/select--elements/
-tags: ["studio pro"]
 aliases:
     - /refguide9/Select++Elements.html
     - /refguide9/Select++Elements

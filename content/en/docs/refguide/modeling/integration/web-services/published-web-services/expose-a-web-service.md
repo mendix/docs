@@ -4,7 +4,6 @@ url: /refguide/integration/expose-a-web-service/
 
 weight: 12
 description: "Describes how Mendix supports exposing the functionality and data of your app using web services."
-tags: ["web service", "expose", "integration", "studio pro"]
 aliases:
     - /howto/integration/expose-a-web-service/
 ---

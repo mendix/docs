@@ -5,7 +5,6 @@ description: "Describes the deployment section of the Developer Portal: how to d
 weight: 10
 no_list: false 
 description_list: true
-tags: ["Deploy","Manage", "Mendix Cloud", "SAP", "Cloud Foundry", "Kubernetes", "On-premises", "Environment", "Mendix Cloud Dedicated"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 

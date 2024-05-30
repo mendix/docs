@@ -2,7 +2,6 @@
 title: "Trim to Date"
 url: /refguide8/trim-to-date/
 weight: 120
-tags: ["studio pro", "trim to date", "expression", "expressions"]
 ---
 
 ## 1 Introduction

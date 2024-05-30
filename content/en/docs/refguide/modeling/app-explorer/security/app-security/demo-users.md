@@ -2,7 +2,6 @@
 title: "Demo Users"
 url: /refguide/demo-users/
 weight: 30
-tags: ["studio pro", "demo users", "demo-users", "app security"]
 ---
 
 ## 1 Introduction

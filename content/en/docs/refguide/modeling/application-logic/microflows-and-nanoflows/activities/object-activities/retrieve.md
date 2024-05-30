@@ -2,7 +2,6 @@
 title: "Retrieve"
 url: /refguide/retrieve/
 weight: 60
-tags: ["studio pro", "retrieve", "activity", "microflow"]
 #To update screenshots of these microflows in Studio Pro, use the Microflow Screenshots app.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

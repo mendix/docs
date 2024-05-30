@@ -4,7 +4,6 @@ linktitle: "Over the Air Updates with CodePush and CLI"
 url: /howto8/mobile/how-to-ota-cli/
 weight: 71
 description: A tutorial for pushing over the air updates (OTA).
-tags: ["native", "mobile", "ota", "native-builder", "over the air", "update"]
 ---
 
 ## 1 Introduction

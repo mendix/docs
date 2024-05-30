@@ -2,7 +2,6 @@
 title: "Clear from Device"
 url: /refguide/clear-from-device/
 weight: 70
-tags: ["studio pro", "clear from device", "offline", "client activity"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

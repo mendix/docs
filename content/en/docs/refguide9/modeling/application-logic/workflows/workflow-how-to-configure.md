@@ -4,7 +4,6 @@ linktitle: "Workflow for Employee Onboarding"
 url: /refguide9/workflow-how-to-configure/
 description: "Describes how to configure a workflow in Mendix Studio Pro."
 weight: 70
-tags: ["studio pro", "workflow", "task", "onboarding"]
 aliases:
     - /howto9/logic-business-rules/workflow-how-to-configure/
 ---

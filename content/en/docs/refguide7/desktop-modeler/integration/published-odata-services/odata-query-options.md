@@ -2,7 +2,6 @@
 title: "OData Query Options"
 url: /refguide7/odata-query-options/
 canonical_url: "https://docs.mendix.com/refguide/odata-query-options/"
-tags: ["OData", "filter", "count", "sort", "select", "page"]
 ---
 
 ## 1 Introduction

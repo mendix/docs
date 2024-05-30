@@ -4,7 +4,6 @@ url: /howto8/mobile/build-hybrid-apps/
 weight: 2
 no_list: false
 description_list: true 
-tags: ["mobile", "hybrid"]
 ---
 
 ## 1 Introduction

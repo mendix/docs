@@ -2,7 +2,6 @@
 title: "On-Premises Installation"
 url: /appstore/partner-solutions/ats/rg-two-on-prem-installation/
 description: "Describes installation requirements."
-tags: ["ats", "installation", "requirements"]
 ---
 
 ## 1 Introduction

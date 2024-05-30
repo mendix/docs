@@ -123,7 +123,6 @@ Define Global variables
                         {{- end -}}
                         {{- $text = trim (htmlUnescape ($processSlice | plainify)) " " -}}
                         {{- $scratch.SetInMap $uniqueHit "text" $text -}}
-                        {{- $scratch.SetInMap $uniqueHit "tags" $pageDot.Params.tags -}}
                         {{- $scratch.SetInMap $uniqueHit "mendix_version" $pageDot.Params.mendix_version -}}
                         {{- $scratch.SetInMap $uniqueHit "time_stamp" $pageDot.Lastmod.UTC.Unix -}}
                         {{- $scratch.SetInMap $uniqueHit "weight.position" $sliceNumber -}}

@@ -1,7 +1,6 @@
 ---
 title: "Beta and Experimental Releases"
 url: /releasenotes/beta-features/
-tags: ["beta", "experimental", "GA", "general availability", "feature", "feature flag", "product"]
 weight: 55
 #notoc: true
 #layout: wide

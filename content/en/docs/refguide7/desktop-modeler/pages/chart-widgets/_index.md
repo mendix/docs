@@ -1,7 +1,6 @@
 ---
 title: "Chart Widgets"
 url: /refguide7/chart-widgets/
-tags: ["Charts", "Any Chart", "Desktop Modeler", "Pages"]
 ---
 
 ## 1 Introduction

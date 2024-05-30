@@ -5,7 +5,6 @@ description: "Presents details on the partner solutions available in the Mendix 
 weight: 9
 no_list: false
 description_list: true
-tags: ["marketplace", "marketplace component", "partner solution", "qas", "ats", "apd", "qsm"]
 ---
 
 ## 1 Introduction

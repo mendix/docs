@@ -1,7 +1,6 @@
 ---
 title: "XML Schema Support"
 url: /refguide/xml-schema-support/
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction

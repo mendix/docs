@@ -2,7 +2,6 @@
 title: "Download File"
 url: /refguide8/download-file/
 weight: 20
-tags: ["studio pro", "download file", "client activities"]
 aliases:
     - /refguide8/Download+File.html
     - /refguide8/Download+File

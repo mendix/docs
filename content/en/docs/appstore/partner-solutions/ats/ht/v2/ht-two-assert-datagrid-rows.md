@@ -2,7 +2,6 @@
 title: "Assert Data Grid Rows"
 url: /appstore/partner-solutions/ats/ht-two-assert-datagrid-rows/
 description: "Describes how to assert data grid rows with the **Find/Assert DataGrid Row** action."
-tags: ["ATS", "testing"]
 ---
 
 ## 1 Introduction 

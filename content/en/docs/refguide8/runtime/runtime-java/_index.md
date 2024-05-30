@@ -2,7 +2,6 @@
 title: "Mendix Runtime and Java"
 url: /refguide8/runtime-java/
 
-tags: ["runtime", "java"]
 ---
 
 ## 1 Introduction

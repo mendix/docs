@@ -446,7 +446,7 @@ In the Postgres plan configuration, enter the following details:
 * **Authentication** - select `azure-wi` from the dropdown.
 * **Managed Identity Name** - name for the *Postgres Admin* managed identity, used by the Mendix Operator to create or delete tenants for app environments.
 * **Managed Identity Client ID** - the *Postgres Admin* managed identity Client ID.
-    * Mendix recommends using the same managed identity to manage Azure databases and blob storage containers, as this would be easier to set up and maintain.
+    * Mendix recommends using the same *storage admin* managed identity to manage Azure databases and blob storage containers, as this would be easier to set up and maintain. One *storage admin* Service Account can be used for multiple storage plans, and only one Federated Credential would be needed to link it with a *storage admin* Managed Identity.
 * **K8s Service Account** - the Kubernetes Service Account to create and attach to the *Postgres Admin* managed identity (will be created automatically by the `mxpc-cli` installation and configuration tool).
   {{% alert color="warning" %}}
   Do not use the name of an existing Service Account (environment name), or one of the reserved Kubernetes Service Account names:
@@ -660,7 +660,7 @@ In the SQL Server plan configuration, enter the following details:
     * Disabling this option will attempt to connect with TLS, but skip certificate validation. If TLS is not supported, it will fall back to an unencrypted connection.
 * **Authentication** - select `azure-wi` from the dropdown.
 * **Managed Identity Client ID** - the *SQL Admin* managed identity Client ID.
-    * Mendix recommends using the same managed identity to manage Azure databases and blob storage containers, as this would be easier to set up and maintain.
+    * Mendix recommends using the same *storage admin* managed identity to manage Azure databases and blob storage containers, as this would be easier to set up and maintain. One *storage admin* Service Account can be used for multiple storage plans, and only one Federated Credential would be needed to link it with a *storage admin* Managed Identity.
 * **K8s Service Account** - the Kubernetes Service Account to create and attach to the *SQL Admin* managed identity (will be created automatically by the `mxpc-cli` installation and configuration tool).
   {{% alert color="warning" %}}
   Do not use the name of an existing Service Account (environment name), or one of the reserved Kubernetes Service Account names:
@@ -1629,7 +1629,7 @@ This section provides technical details on how managed identity authentication w
 * A *Blob Storage Admin* managed identity that the Mendix Operator would use to create/delete containers and managed identities for app environments.
   This managed identity needs the following permissions:
     * A [Storage Blob Data Contributor](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/storage#storage-blob-data-contributor) role scoped to the blob storage account.
-    * A [Role Based Access Control Administrator](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/general#role-based-access-control-administrator) role scoped to the blob storage account, and constrained to only have permissions to add the [Storage Blob Data Contributor](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/storage#storage-blob-data-contributor) role to Service principals.
+    * A [Role Based Access Control Administrator](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/general#role-based-access-control-administrator) role scoped to the blob storage account, and constrained to only have permissions to add the [Storage Blob Data Contributor](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/storage#storage-blob-data-contributor) role to Service principals. This ensures that the *Blob Storage Admin* managed identity can only grant limited permissions to environment managed identities (service principals).
     * A [Managed Identity Contributor](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#managed-identity-contributor) role in its resource group.
 
 ##### 3.4.1.2 Limitations
@@ -1673,7 +1673,7 @@ In the Azure Blob plan configuration, enter the following details:
 * **Account Subscription ID** - subscription ID of the blob storage account.
 * **Account Resource Group** - resource group of the blob storage account.
 * **Managed Identity Client ID** - the *Blob Storage Admin* managed identity Client ID.
-    * Mendix recommends using the same managed identity to manage Azure databases and blob storage containers, as this would be easier to set up and maintain.
+    * Mendix recommends using the same *storage admin* managed identity to manage Azure databases and blob storage containers, as this would be easier to set up and maintain. One *storage admin* Service Account can be used for multiple storage plans, and only one Federated Credential would be needed to link it with a *storage admin* Managed Identity.
 * **K8s Service Account** - the Kubernetes Service Account to create and attach to the *Blob Storage Admin* managed identity (will be created automatically by the `mxpc-cli` installation and configuration tool).
   {{% alert color="warning" %}}
   Do not use the name of an existing Service Account (environment name), or one of the reserved Kubernetes Service Account names:

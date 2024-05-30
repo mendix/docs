@@ -643,14 +643,14 @@ nav.foldable-nav {
   
     thead th {
       vertical-align: bottom;
-      border-bottom: (2 * $table-border-width) solid $table-border-color;  // NK - added borders to tables
+      border-bottom: calc(#{$table-border-width} * 2) solid $table-border-color;  // NK - added borders to tables
       border-top: $table-border-width solid $table-border-color;
       border-left: $table-border-width solid $table-border-color;
       border-right: $table-border-width solid $table-border-color;
     }
   
     tbody + tbody {
-      border: (2 * $table-border-width) solid $table-border-color; // NK - added borders to tables
+      border: calc(#{$table-border-width} * 2) solid $table-border-color; // NK - added borders to tables
     }
   }
 

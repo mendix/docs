@@ -68,7 +68,7 @@ Enabling **Strict page URL checking** works for pages with custom URLs, but it c
 
 ### 2.4 Strict Mode {#strict-mode}
 
-In the React Client, **Strict mode** will make your app more secure when the access rules are not set up correctly. For more information, see [Strict Mode](/refguide/strict-mode/).
+In the React client, **strict mode** will make your app more secure when the access rules are not set up correctly. For more information, see [Strict Mode](/refguide/strict-mode/).
 
 ### 2.5 App Status {#app-status}
 

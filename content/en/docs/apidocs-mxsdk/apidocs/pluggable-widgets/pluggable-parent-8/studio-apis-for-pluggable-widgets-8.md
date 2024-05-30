@@ -4,7 +4,6 @@ linktitle: "Preview Appearance APIs"
 url: /apidocs-mxsdk/apidocs/studio-apis-for-pluggable-widgets-8/
 weight: 30
 description: A guide for understanding the APIs which influence pluggable widget preview appearances.
-tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React", "Preview"]
 ---
 
 ## 1 Introduction
@@ -263,7 +262,7 @@ export const preview: React.FC<TruckWidgetPreviewProps> = (props) => (
 
 When the widget is added to a page you can select a specific item and edit it:
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-parent-8/studio-apis-for-pluggable-widgets-8/selectable-component.png" alt="Example of the selectable component" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-parent-8/studio-apis-for-pluggable-widgets-8/selectable-component.png" alt="Example of the selectable component" class="no-border" >}}
 
 ### 3.3 The GetPreviewCss Export
 

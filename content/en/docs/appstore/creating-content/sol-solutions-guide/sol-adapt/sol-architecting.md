@@ -4,7 +4,6 @@ url: /appstore/creating-content/sol-architecting/
 linktitle: "Architect Solutions"
 weight: 1
 description: "Architect a solution for adaptation"
-tags: ["solutions", "adaptable solutions", "architecting solutions"]
 ---
 
 ## 1 Introduction
@@ -28,7 +27,7 @@ The customer implementation is a separate, upgradable model instance (fork) per 
 | Options | Dedicated App | Cloud Node per Customer | Customer Access to Developer Portal¹ | Model Access for Customer¹ |
 | --- | --- | --- | --- | --- |
 | ISV builds, no design-time adaptation needed | No | Optional | No | No |
-| ISV builds and adapts for customer as managed service | Yes | Yes | Optional for collaboration with [Feedback](/developerportal/general/feedback/) and [Epics](/developerportal/project-management/epics/) | No |
+| ISV builds and adapts for customer as managed service | Yes | Yes | Optional for collaboration with [Feedback](/developerportal/app-insights/feedback/) and [Epics](/developerportal/project-management/epics/) | No |
 | Customized by customer or implementation partner | Yes | Yes | Yes, including access to the customer model | Yes |
 
 ¹Including the partner that implements on behalf of the customer.
@@ -69,7 +68,7 @@ For design-time adaptations, Mendix recommends referencing [How to Set Up a Solu
 
 The customer model instances will run with [IP protection](/appstore/creating-content/sol-ip-protection/) enabled, meaning that parts of the original solution model can be hidden. Once the solution is published with the protected solution models, this implementation hiding cannot be undone by the consumer of the solution model.
 
-{{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-adapt/solution-deployment.png" alt="Development and deployment model for Solution Implementation"  width="50%" >}}
+{{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-adapt/solution-deployment.png" alt="Development and deployment model for Solution Implementation"  width="50%" class="no-border" >}}
 
 ### 3.4 Customers Without Adaptation
 

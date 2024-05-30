@@ -2,12 +2,7 @@
 title: "Between Date Function Calls"
 url: /refguide8/between-date-function-calls/
 weight: 100
-tags: ["studio pro", "between date function calls", "expression", "expressions"]
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/between-date-function-calls.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 
@@ -229,7 +224,7 @@ The output results in 8 days divided by 7 days in a week:
 
 ## 8 calendarMonthsBetween
 
-{{% alert color="warning" %}}This expression is only available in Mendix versions 8.15 and above.{{% /alert %}}
+{{% alert color="warning" %}}This expression is only available in Mendix 8.15 and above.{{% /alert %}}
 
 The `calendarMonthsBetween` function calculates the difference between the input values in months. Time will be ignored. The dates are assumed to be in the end-user's local time zone.
 
@@ -266,7 +261,7 @@ The output results in the amount of months between the two dates:
 
 ## 9 calendarYearsBetween
 
-{{% alert color="warning" %}}This expression is only available in Mendix versions 8.15 and above.{{% /alert %}}
+{{% alert color="warning" %}}This expression is only available in Mendix 8.15 and above.{{% /alert %}}
 
 The `calendarYearsBetween` function calculates the difference between the input values in years. Time will be ignored. The dates are assumed to be in the end-user's local time zone.
 

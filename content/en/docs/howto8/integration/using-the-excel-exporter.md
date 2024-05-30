@@ -1,9 +1,8 @@
 ---
 title: "Export to Excel"
 url: /howto8/integration/using-the-excel-exporter/
-category: "Integration"
+
 weight: 6
-tags: ["excel", "excel export", "excel exporter", "integration"]
 ---
 
 ## 1 Introduction
@@ -28,12 +27,12 @@ To download the modules, follow these steps:
 1. Open the **Mendix Marketplace** from within Studio Pro.
 2. Search for the keyword *reflection* and select **Mx Model reflection**:
 
-    {{< figure src="/attachments/howto8/integration/using-the-excel-exporter/18581166.png" >}}
+    {{< figure src="/attachments/howto8/integration/using-the-excel-exporter/18581166.png" class="no-border" >}}
 
 3. Click **Download** to include the module in your app. It will be imported into **Project** > **App Store modules** in the **Project Explorer**.
 4. Search for the keyword *Excel*, select **Excel exporter**, and download that module into your app:
 
-    {{< figure src="/attachments/howto8/integration/using-the-excel-exporter/exporter.png" >}}
+    {{< figure src="/attachments/howto8/integration/using-the-excel-exporter/exporter.png" class="no-border" >}}
 
 {{% alert color="warning" %}}
 Depending on the layout selected when the project was created, errors in Studio Pro may arise due to the new module's default layouts. To correct this, open each page that has an error and update the layout to the desired layout within the app.
@@ -46,15 +45,15 @@ In this section, you will learn how to add the required pages in the app's **Nav
 1. In Studio Pro, open **Project** > **Navigation**.
 2. Add a new item to the Navigation to open the page **MxModelReflection.MxObjects_Overview**:
 
-    {{< figure src="/attachments/howto8/integration/using-the-excel-exporter/18581165.png" >}}
+    {{< figure src="/attachments/howto8/integration/using-the-excel-exporter/18581165.png" class="no-border" >}}
 
 3. Add a new item to the Navigation to open the page **XLSReport.Excel_Document_Overview**:
 
-    {{< figure src="/attachments/howto8/integration/using-the-excel-exporter/18581909.png" >}}
+    {{< figure src="/attachments/howto8/integration/using-the-excel-exporter/18581909.png" class="no-border" >}}
 
 4. Open **Project Security** and assign these two modules to the Administrator user role:
 
-    {{< figure src="/attachments/howto8/integration/using-the-excel-exporter/security.png" >}}
+    {{< figure src="/attachments/howto8/integration/using-the-excel-exporter/security.png" class="no-border" >}}
 
 ## 4 Creating an Input Object Entity
 
@@ -63,7 +62,7 @@ In this section, you will create an entity which will be used to export the Exce
 1. Open the domain model for your app and add an entity to serve as a "primary export" entity that is a specialization of **FileDocument**.
 2. Create an association between the newly created entity and the entity (or entities) that you will want to serve as a base for the Excel export.
 
-    {{< figure src="/attachments/howto8/integration/using-the-excel-exporter/18581908.png" >}}
+    {{< figure src="/attachments/howto8/integration/using-the-excel-exporter/18581908.png" class="no-border" >}}
 
 ## 5 Configuring Mx Model Reflection
 
@@ -100,7 +99,7 @@ To set up a template, follow these steps:
 6. Configure the **Input Object** to be the file document entity that is associated to your entity to be exported.
 7. Provide a **Description** for identifying and documenting what this template is for:
 
-    {{< figure src="/attachments/howto8/integration/using-the-excel-exporter/new-excel-template.png" >}}
+    {{< figure src="/attachments/howto8/integration/using-the-excel-exporter/new-excel-template.png" class="no-border" >}}
 
 8. Specify the **Date time export format** which defines how the dates and times should appear in the Excel file once exported.
 
@@ -110,7 +109,7 @@ To create the worksheet layout, follow these steps:
 
 1. Under the **Worksheets** section for the template, select **New** to create a new sheet template:
 
-    {{< figure src="/attachments/howto8/integration/using-the-excel-exporter/18581907.png" >}}
+    {{< figure src="/attachments/howto8/integration/using-the-excel-exporter/18581907.png" class="no-border" >}}
 
 2. Specify the **Name** that will be given to the sheet when the file is exported.
 3. Configure the **Row Object** that you want to export and set the reference to the template input object (if input object is used). Each object of this entity type will be saved as a row in the worksheet.
@@ -135,7 +134,7 @@ To configure the dynamic column data, follow these steps:
 
 1. On the **Column Data tab**, select **New** to create a new export column:
 
-    {{< figure src="/attachments/howto8/integration/using-the-excel-exporter/18581905.png" >}}
+    {{< figure src="/attachments/howto8/integration/using-the-excel-exporter/18581905.png" class="no-border" >}}
 
 2. The **Column number** will be set automatically, but can be overwritten to the desired ordinal number.
 3. Define a **Name** for the column and specify if that **Name** should be the **Column Header** as well when exported.
@@ -149,7 +148,7 @@ To configure the static data in the sheet, follow these steps:
 
 1. Open the **Static Data tab** and select **New** to create a new export column.
 
-    {{< figure src="/attachments/howto8/integration/using-the-excel-exporter/18581903.png" >}}
+    {{< figure src="/attachments/howto8/integration/using-the-excel-exporter/18581903.png" class="no-border" >}}
 
 2. Specify the **Row** and **Column** that the static value should be placed.
 3. Enter a name for the cell in the **Name** field.
@@ -162,7 +161,7 @@ To configure the custom formatting and styling for the cells, follow these steps
 
 1. Back on the main page for your new template, click **New** in the **Styles** section to create a new style that can be applied to any of the data in the Excel export:
 
-    {{< figure src="/attachments/howto8/integration/using-the-excel-exporter/18581900.png" >}}
+    {{< figure src="/attachments/howto8/integration/using-the-excel-exporter/18581900.png" class="no-border" >}}
 
 2. Specify the properties of the style that will be applied to the cells. 
 3. Click **Save** to make the style available for dynamic columns, static columns, and headers.
@@ -174,17 +173,17 @@ In this section, you will learn how to call the newly created Excel export templ
 1. Create a microflow that either takes an inbound parameter of the object that needs to be exported, or retrieve that object into your microflow.
 2. In the microflow, retrieve a single object which is the template you set up earlier to use for the export.
 
-    {{< figure src="/attachments/howto8/integration/using-the-excel-exporter/retrieve-template.png" >}}
+    {{< figure src="/attachments/howto8/integration/using-the-excel-exporter/retrieve-template.png" class="no-border" >}}
 
 3. In your microflow, call the **XLSReport.GenerateExcelDoc** Java action (available from the module's **JavaActions** folder) to pass the required objects to the module.
 
-    {{< figure src="/attachments/howto8/integration/using-the-excel-exporter/java-action.png" >}}
+    {{< figure src="/attachments/howto8/integration/using-the-excel-exporter/java-action.png" class="no-border" >}}
 
 4. In your microflow, download the resulting FileDocument object.
 
 Your microflow should look similar to this:
 
-{{< figure src="/attachments/howto8/integration/using-the-excel-exporter/microflow-for-generate.png" >}}
+{{< figure src="/attachments/howto8/integration/using-the-excel-exporter/microflow-for-generate.png" class="no-border" >}}
 
 ## 8 Running the Microflow
 

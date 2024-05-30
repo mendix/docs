@@ -1,7 +1,6 @@
 ---
 title: "Document Template"
 url: /refguide9/document-template/
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction

@@ -7,7 +7,7 @@ url: /appstore/partner-solutions/ats/rg-two-app/
 
 The dashboard is where you find all information about the results of your tests. It is split into two parts: **Current Status and 7-Day History** infographics and the **Recent Tests** result tree.
 
-{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-app/dashboard.png" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-app/dashboard.png" class="no-border" >}}
 
 ### 1.1 Infographics
 
@@ -23,7 +23,7 @@ To generate a PDF report of the status of your tests, click **Download Report**.
 Adding a test suite or a folder will recursively add all nested test suites and test cases.
 {{% /alert %}}
 
-When you are happy with your selection (or you have just chosen **All**), you can proceed with the reporting process by clicking **Generate**. This will open a second dialog box where you will get a summary infographic, similar to the one that you see on the **Dashboard**. At this point, you can download the report by clicking **Download**. You can cancel the process at any point by clicking the **X** button.
+When you are happy with your selection (or you have just chosen **All**), you can proceed with the reporting process by clicking **Generate**. This will open a second dialog box where you will get a summary infographic, similar to the one that you see on the **Dashboard**. At this point, you can download the report by clicking **Download**. You can cancel the process at any point by clicking the {{% icon name="remove" %}} button.
 
 {{% alert color="info" %}}
 The **7-day history** infographic will only be included in the PDF report when you choose **All**.
@@ -47,9 +47,9 @@ The following three icons exist for test cases, test suites, and data-driven tes
 
 | Icon                                     | Meaning    |
 | ---------------------------------------- | ---------- |
-|{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-app/test-case-icon.png" >}} | Test case  |
-|{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-app/test-suite-icon.png" >}} | Test suite |
-|{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-app/ddt-icon.png" >}}| Data-driven test case |
+|{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-app/test-case-icon.png" class="no-border" >}} | Test case  |
+|{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-app/test-suite-icon.png" class="no-border" >}} | Test suite |
+|{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-app/ddt-icon.png" class="no-border" >}}| Data-driven test case |
 
 To open the latest execution log, click **Show Log**. When you click the **name of a test case/test suite**, the edit page opens.
 
@@ -73,7 +73,7 @@ Settings is the central point for configuring ATS. You can set the Mendix API Ke
 
 Only App Admins can access the settings. Testers can only use the available deployments and Selenium hubs.
 
-{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-app/settings.png" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-app/settings.png" class="no-border" >}}
 
 {{% /alert %}}
 
@@ -83,7 +83,7 @@ Under **Environments**, you add the different environment URLs that you use for 
 
 You edit, create, and delete the applications by clicking the buttons in the top bar:
 
-{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-app/deployments.png" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-app/deployments.png" class="no-border" >}}
 
 When you create a new application, set the following parameters:
 
@@ -96,7 +96,7 @@ When you create a new application, set the following parameters:
 
 Under **Selenium Hubs**, you add the different Selenium hubs that you use for the current app. The users run the tests on the listed hubs. To add a new Selenium hub, click **New** in the top menu:
 
-{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-app/selenium-hub.png" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-app/selenium-hub.png" class="no-border" >}}
 
 In the **Edit Selenium Hub** dialog box, set the following parameters:
 
@@ -116,17 +116,17 @@ Starting with ATS version 2.0, ATS capabilities override custom capabilities.
 
 Under **App Team**, you can specify which app members have what type of access rights for an app.
 
-By default, app members with the Scrum Master role in the Developer Portal will have administrative rights. All other members of the app will get the default role configured for that app. Please keep in mind that users still need to be a member of an app in the Developer Portal for them to be eligible to be app administrators for the corresponding app in ATS.
+By default, app members with the Scrum Master role in the Developer Portal will have administrative rights. All other members of the app will get **No access** for that app. Please keep in mind that users still need to be a member of an app in the Developer Portal for them to be eligible to be app administrators for the corresponding app in ATS.
 
-App member that the have a No access role will not see the app in their **My apps** page and will not be able to open or edit or run any test cases for this app.
+App members that have a **No access** role will not see the app in their **My apps** page and will not be able to open or edit or run any test cases for this app.
 
 {{% alert color="info" %}}
 For on-premises instances of ATS, all accounts created manually by the tenant administrator will be members of each project.
 {{% /alert %}}
 
-In order to make sure that the administration rights granted to users are not overwritten, administration rights are not automatically revoked when the project role for a user in the Developer Portal changes from administrator to non-administrator. Instead, revoking administration rights can be done manually from the **App Settings** page. Other existing users' access will be updated when they log in to ATS or when an administrator refreshes the app access rights by clicking on the corresponding button. New members of a project in the Developer Portal have to log in to ATS and accept the terms and conditions before they can become members of an app in ATS.
+In order to make sure that the administration rights granted to users are not overwritten, administration rights are not automatically revoked when the app role for a user in the Developer Portal changes from administrator to non-administrator. Instead, revoking administration rights can be done manually from the **App Settings** page. Other existing users' access will be updated when they log in to ATS or when an administrator refreshes the app access rights by clicking on the corresponding button. New members of a project in the Developer Portal have to log in to ATS and accept the terms and conditions before they can become members of an app in ATS.
 
-Finally, note that a user who has an administrative project role in the Developer Portal will always have administrative rights in ATS.
+Finally, note that a user who has an administrative app role in the Developer Portal will always have administrative rights in ATS.
 
 {{% alert color="info" %}}
 If an app lacks a Mendix app ID, the app roles will not be synced with the Developer Portal.

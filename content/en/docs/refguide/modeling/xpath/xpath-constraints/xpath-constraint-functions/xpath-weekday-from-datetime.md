@@ -2,7 +2,6 @@
 title: "XPath weekday-from-dateTime"
 url: /refguide/xpath-weekday-from-datetime/
 weight: 15
-tags: ["studio pro"]
 ---
 
 ## 1 Overview

@@ -1,14 +1,14 @@
 ---
 title: "Process Queue"
+deprecated: true
 url: /appstore/modules/process-queue/
-category: "Modules"
+
 description: "Describes the configuration and usage of the Process Queue module, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "process queue", "queue overview", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 {{% alert color="warning" %}}
-This module is deprecated from Studio Pro version 9.0.3. It is replaced by the [Task Queue](/refguide/task-queue/), which is part of Studio Pro and also supports horizontally-scaled environments.
+This module is deprecated from Studio Pro 9.0.3. It is replaced by the [Task Queue](/refguide/task-queue/), which is part of Studio Pro and also supports horizontally-scaled environments.
 {{% /alert %}}
 
 ## 1 Introduction

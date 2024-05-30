@@ -16,7 +16,7 @@ can use Snippets to have bits of reusable UI.
 Page Templates define starting points for creating new Pages, and Building Blocks are small bits of UI to quickly add structure
 to a page.
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/DocumentOverview.svg" >}}
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/DocumentOverview.svg" class="no-border" >}}
 
 | Studio Pro Guide                            | Model SDK API docs                                                                                |
 |---------------------------------------------|---------------------------------------------------------------------------------------------------|
@@ -44,7 +44,7 @@ to fill the placeholder with.
 In the same way, a web layout may also be based on a master layout by defining the LayoutCall inside the WebLayoutContents.
 If a layout has a master layout, it may not directly specify any widgets, but uses the LayoutCallArguments for that instead.
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/PagesAndLayouts.svg" >}}
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/PagesAndLayouts.svg" class="no-border" >}}
 
 | Studio Pro Guide                     | Model SDK API docs                                                                                           |
 |--------------------------------------|--------------------------------------------------------------------------------------------------------------|
@@ -70,7 +70,7 @@ has a SnippetCall which calls the Snippet and defines a SnippetParameterMapping 
 The SnippetParameterMapping points to the parameter of the snippet to provide data for, as well as a PageVariable that
 defines where this data comes from. A page variable can either point to a data widget, a page parameter, or a snippet parameter. 
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/Snippets.svg" >}}
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/Snippets.svg" class="no-border" >}}
 
 | Studio Pro Guide              | Model SDK API docs                                                                                                   |
 |-------------------------------|----------------------------------------------------------------------------------------------------------------------|
@@ -99,7 +99,7 @@ also be configured to have top, right, bottom, and left regions.
 TabContainer contains one or more TabPages, of which one may be set as the default tab page (which is shown initially when opening the page).
 Only one TabPage is visible at the same time, allowing to show a subset of widgets.
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/ContainerWidgets.svg" >}}
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/ContainerWidgets.svg" class="no-border" >}}
 
 | Studio Pro Guide                                | Model SDK API docs                                                                                               |
 |-------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
@@ -116,7 +116,7 @@ Only one TabPage is visible at the same time, allowing to show a subset of widge
 ## 5 Buttons
 
 Buttons perform an action when clicked. They can be rendered as a button or as a hyperlink through the RenderType enumeration.
-The ButtonStyle enumeration determines the visual cues for the type of button (e.g. Warning, Success).
+The ButtonStyle enumeration determines the visual cues for the type of button (for example, Warning, Success).
 
 Buttons can have a caption, which is translatable and can be templated through the ClientTemplate.
 Through the icon property, the button can refer to an icon from either an image collection (using ImageIcon) or to a
@@ -124,7 +124,7 @@ glyph icon (containing a UTF-8 code referring to a glyph from the [Bootstrap Hal
 
 The ActionButton implementation determines what to do based on the ClientAction configured.
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/ButtonWidgets.svg" >}}
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/ButtonWidgets.svg" class="no-border" >}}
 
 | Studio Pro Guide                                  | Model SDK API docs                                                                                 |
 |---------------------------------------------------|----------------------------------------------------------------------------------------------------|
@@ -148,7 +148,7 @@ There are also a couple of grid widgets, with [DataGrid](#63-datagrid) showing d
 [ReferenceSetSelector](#64-referencesetselector) allows displaying or selecting the values of many-to-many associations.
 [TemplateGrid](#65-templategrid) shows a list of objects in a tile view, where the number of columns can be configured.
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/DataWidgets.svg" >}}
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/DataWidgets.svg" class="no-border" >}}
 
 ### 6.1 DataView
 
@@ -221,7 +221,7 @@ The number of columns to show can be set with the `numberOfColumns` property, th
 
 Input widgets, such as a text box, will derive their content from their context.
 The data widgets themselves get this data from their configured data source.
-Depending on the data widget, different sources are applicable (e.g. a ListViewDatabaseSource is only applicable for
+Depending on the data widget, different sources are applicable (for example, a ListViewDatabaseSource is only applicable for
 a ListView widget).
 
 The data sources can be divided by how their retrieve their data:
@@ -237,7 +237,7 @@ Most data sources are configured with the target EntityRef. This reference can b
 of the given entity, or an IndirectEntityRef to fetch objects related to an object already in context
 (either a surrounding data widget, or a page parameter).
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/DataSources.svg" >}}
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/DataSources.svg" class="no-border" >}}
 
 | Studio Pro Guide                        | Model SDK API docs                                                                         |
 |-----------------------------------------|--------------------------------------------------------------------------------------------|
@@ -250,11 +250,11 @@ The reference selector and input reference set selector are input widgets that c
 Objects selectable for the association are determined by the SelectorSource, and can be queried from the database or
 retrieved from a microflow (only for the reference selector).
 
-Both widgets have a `selectPageSettings` that determines the page used to select the linked object(s). The reference selector
+Both widgets have a `selectPageSettings` that determines the page used to select the linked object (or objects). The reference selector
 optionally also has a `goToPageSettings` that determines the page used to display detailed information about the associated
 object.
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/AssociationWidgets.svg" >}}
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/AssociationWidgets.svg" class="no-border" >}}
 
 | Studio Pro Guide                                                        | Model SDK API docs                                                                                                       |
 |-------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|

@@ -2,11 +2,10 @@
 title: "Call ML Model"
 url: /refguide/call-ml-model/
 weight: 45
-tags: ["ml kit", "call model", "ML microflow", "machine learning", "models"]
 ---
 
-{{% alert color="warning" %}}
-These activities can only be used in **Microflows**.
+{{% alert color="info" %}}
+This activity can only be used in microflows.
 {{% /alert %}}
 
 ## 1 Introduction

@@ -1,12 +1,7 @@
 ---
 title: "XML Schema Support"
 url: /refguide8/xml-schema-support/
-tags: ["studio pro"]
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/xml-schema-support.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 
@@ -29,7 +24,7 @@ There are two kinds of XML mappings in Mendix: import mapping, which translates 
 
 In the mapping editor for import mappings, you can check elements that can occur in the XML according to the XSD and then define a mapping to Mendix objects for those elements. It does not matter much how often or in which order elements occur; whenever an element occurs, the corresponding mapping for that element is applied.
 
-If the XSD contains any of the unsupported constructs then they will be highlighted in the mapping editor with this warning icon: {{< figure src="/attachments/refguide8/modeling/integration/xml-schemas/xml-schema-support/16843903.png" >}}
+If the XSD contains any of the unsupported constructs then they will be highlighted in the mapping editor with this warning icon: {{< figure src="/attachments/refguide8/modeling/integration/xml-schemas/xml-schema-support/16843903.png" class="no-border" >}}
 
 This will be next to each unsupported element or attribute. Checking any of such elements or attributes will result in consistency errors. 
 

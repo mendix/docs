@@ -1,12 +1,11 @@
 ---
 title: "Change Variable"
 url: /refguide/change-variable/
-tags: ["studio pro", "change variable", "variable", "variable activities"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="warning" %}}
-This activity can be used in both **Microflows** and **Nanoflows**.
+{{% alert color="info" %}}
+This activity can be used in both microflows and nanoflows.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -19,7 +18,7 @@ For example, if you have a *$Discount* variable that gives customers a 50% disco
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/variable-activities/change-variable/change-variable-properties.png" alt="Change Variable Properties" width="650px" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/variable-activities/change-variable/change-variable-properties.png" alt="Change Variable Properties" width="650px" class="no-border" >}}
 
 The **Change variable** properties pane consists of the following sections:
 

@@ -1,10 +1,9 @@
 ---
 title: "MxBuild"
 url: /refguide/mxbuild/
-category: "General Info"
+
 weight: 30
 description: "Describes MxBuild, which is a command-line tool for building and deploying Mendix Apps."
-tags: ["build", "deploy", "deployment package", "command-line", "studio pro"]
 ---
 
 ## 1 Introduction
@@ -66,6 +65,8 @@ Command-line options are described in the table below:
 | <code>––target=[package&#124;deploy]</code> | `package`: default if option is omitted. Creates a deployment package (.mda file)<br/>`deploy`: deploys the app without making a deployment package. |
 | `--loose-version-check` | Creates a deployment package from an app which was created with a lower Mendix version.<br/>The app will be upgraded to the MxBuild version before the deployment package is created.<br /> Any changes included as a result of this upgrade will **not** be stored in your app. |
 | `--write-errors=FILENAME` | Writes all errors, warnings, and deprecations encountered during deployment of the app to the specified file in JSON format.<br />This file is only written when the app contains errors.<br />If the file already exists, it will be overwritten without a warning.<br />For a description of the format of this file, see the [App Errors](#app-errors) section below. |
+| `--generate-sbom` | Generate a [Software Bill of Materials](/refguide/sbom-generation/) (SBOM) in the CycloneDX format. |
+| `--sbom-output-path=VALUE` | File path to generate bill of material file (Default value: `deployment\sbom.json`). |
 
 ### 2.2 Options When Creating a Package
 
@@ -137,7 +138,7 @@ The following table describes the various properties of the *problems* JSON obje
 | `message` | The description of the problem. This is the same as the message in the [Errors pane](/refguide/errors-pane/) of Mendix Studio Pro. |
 | `locations` | Contains zero or more objects that describe the location in the Mendix app where the problem occurs (see the following table). |
 
-The location(s) associated with the problem have the following properties:
+The location (or locations) associated with the problem have the following properties:
 
 | Property | Description |
 | --- | --- |

@@ -1,7 +1,6 @@
 ---
 title: "Footer (Document Template)"
 url: /refguide/footer-document-template/
-tags: ["studio pro"]
 aliases:
     - /refguide/footer-(document-template).html
     - /refguide/Footer+(document+template).html
@@ -18,7 +17,7 @@ For inserting page numbers, see [Static Label](/refguide/static-label-document-t
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide/modeling/resources/document-templates/footer-document-template/918235.png" >}}
+{{< figure src="/attachments/refguide/modeling/resources/document-templates/footer-document-template/918235.png" class="no-border" >}}
 
 A footer.
 

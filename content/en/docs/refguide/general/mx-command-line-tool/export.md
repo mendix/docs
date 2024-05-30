@@ -3,7 +3,6 @@ title: "Export Package Commands"
 url: /refguide/mx-command-line-tool/export
 weight: 40
 description: "Describes the commands related to package export for the mx command-line tool."
-tags: ["mx", "command-line", "tool", "mx", "studio pro", "windows", "linux", "create-project-package", "create-module-package", "create-solution-package"]
 ---
 
 ## 1 Introduction
@@ -22,8 +21,8 @@ Use the following command pattern:
 
 These are the `OPTIONS`:
 
-| Option | Default Value | Result |
-| --- | --- | --- |
+| Option | Result |
+| --- | --- |
 | `-s, --include-snapshot` | Includes a snapshot in the app package. |
 | `-d, --package-dir` | Exports the package to the directory. |
 | `--help` | Displays the help screen. |
@@ -100,8 +99,8 @@ Use the following command pattern:
 
 These are the `OPTIONS`:
 
-| Option | Default Value | Result |
-| --- | --- | --- |
+| Option | Result |
+| --- | --- |
 | `-s, --include-snapshot` | Includes a snapshot in the app package. |
 | `-d, --package-dir` | Exports the package to the directory. |
 | `--help` | Displays the help screen. |

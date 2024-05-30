@@ -1,7 +1,6 @@
 ---
 title: "Introduction to Mobile Technologies"
 url: /refguide9/mobile/introduction-to-mobile-technologies/
-category: Mobile
 weight: 20
 ---
 
@@ -46,10 +45,10 @@ Mendix offers options to build both native mobile apps and PWAs. Depending on yo
 {{% alert color="warning" %}}
 PWAs have the following limitations on iOS:
 
-* Push notifications are not supported for PWAs on iOS
+* Push notifications are not supported for PWAs
 * Offline data is not supported for PWAs on iOS
 {{% /alert %}}
 
 Use the following diagram to decide whether to build a PWA, a native mobile app, or both:
 
-{{< figure src="/attachments/refguide9/mobile/progressive-web-app/native-or-pwa.png" alt="Native app or PWA"   width="350"  >}}
+{{< figure src="/attachments/refguide9/mobile/progressive-web-app/native-or-pwa.png" alt="Native app or PWA"   width="350"  class="no-border" >}}

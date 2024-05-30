@@ -2,7 +2,6 @@
 title: "Template Grid"
 url: /refguide9/template-grid/
 weight: 20
-tags: ["studio pro", "grid", "template grid", "data widgets"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -12,7 +11,7 @@ tags: ["studio pro", "grid", "template grid", "data widgets"]
 
 A template grid shows a list of objects in a tile view. For example, a template grid can show a list of employees with their profile pictures. Using controls provided by the template grid you can browse, search, and manipulate those objects:
 
-{{< figure src="/attachments/refguide9/modeling/pages/data-widgets/grids/template-grid/template-grid.png" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/data-widgets/grids/template-grid/template-grid.png" class="no-border" >}}
 
 The template grid has a lot in common with a [data grid](/refguide9/data-grid/). The main difference is that the objects are shown in templates instead of rows.
 
@@ -34,7 +33,7 @@ For more information, see [Control Bar](/refguide9/control-bar/).
 
 An example of template grid properties is represented in the image below:
 
-{{< figure src="/attachments/refguide9/modeling/pages/data-widgets/grids/template-grid/template-grid-properties.png"   width="250"  >}}
+{{< figure src="/attachments/refguide9/modeling/pages/data-widgets/grids/template-grid/template-grid-properties.png"   width="250"  class="no-border" >}}
 
 Template grid properties consist of the following sections:
 
@@ -54,7 +53,7 @@ The data source determines which objects will be shown in the template grid. For
 
 #### 3.2.1 Type
 
-The list view supports the following types of data sources: 
+The template grid supports the following types of data sources: 
 
 * [Database source](/refguide9/database-source/) – objects are retrieved directly form the database
 * [XPath source](/refguide9/xpath-source/) – objects are retrieved directly form the database

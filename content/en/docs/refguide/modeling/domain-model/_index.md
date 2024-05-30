@@ -1,10 +1,9 @@
 ---
 title: "Domain Model"
 url: /refguide/domain-model/
-category: "App Modeling"
+
 weight: 30
 description: "Introduces the domain model in Studio Pro."
-tags: ["domain model", "entity", "association", "annotation", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -16,15 +15,15 @@ A domain model consists of [entities](/refguide/entities/) with their relationsh
 
 Below is a domain model that defines customers and orders. The names of the entities are `Customer` and `Order`. The line between them is an association. `Order_Customer`. One customer can have many orders, but each order is for one customer. Within the boxes representing the entities you can see the [attributes](/refguide/attributes/) of the entities together with the [type](/refguide/attributes/#type) of data they hold. There is also a [non-persistable](/refguide/persistability/) entity, `ProductQueryResults`, which is used to record product information which is retrieved from a separate product system.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/annotated-domain-model.png" alt="Domain Model annotated with structure" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/annotated-domain-model.png" alt="Domain Model annotated with structure" class="no-border" >}}
 
 | Element | Displays |
 | --- | --- |
 | Annotation | A comment explaining an aspect of the domain model |
 | Entity Name | How the [entity](/refguide/entities/) will be referred to in the database |
-| Event Handler(s) | An indication that one or more [event handlers](/refguide/event-handlers/) have been set up for this entity |
+| Event Handler | An indication that one or more [event handlers](/refguide/event-handlers/) have been set up for this entity |
 | Image | An image which helps to identify the entity |
-| Validation Rule(s) | An indication that one or more [validation rules](/refguide/validation-rules/) have been set up for this attribute |
+| Validation Rule | An indication that one or more [validation rules](/refguide/validation-rules/) have been set up for this attribute |
 | Calculated Value | An indication that the value of this [attribute](/refguide/attributes/) is calculated |
 | One | Indicates that one of this entity relates to the quantity of the entity at the other end of the association |
 | Association Name | How the [association](/refguide/associations/) will be referred to in the database |
@@ -40,7 +39,7 @@ In the database every entity is stored in a separate table and has columns for t
 
 Take a look at the following domain model.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/customer-order.png" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/customer-order.png" class="no-border" >}}
 
 The entity 'Customer' is stored in the table 'module$customer' which is shown below. Take note of the 'system$owner' and 'system$changedby' columns which contain the IDs of the 'User' objects from the 'System' module.
 

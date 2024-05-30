@@ -2,7 +2,6 @@
 title: "Download from Version Control Server"
 url: /refguide/download-from-version-control-dialog/
 weight: 60
-tags: ["studio pro"]
 aliases:
     - /refguide/download-from-team-server-dialog.html
     - /refguide/download-from-team-server-dialog
@@ -19,11 +18,11 @@ If the downloaded app was created with a different version of Mendix, you will b
 You can also use the [Open App Dialog](/refguide/open-app-dialog/) to download and open an app from Team Server. However, you will need to use this option if you want to download a second copy of an app (and development line) you already have on disk.
 {{% /alert %}}
 
-{{< figure src="/attachments/refguide/modeling/menus/version-control-menu/download-from-version-control-dialog/download-from-version-control-server.png" alt="Download from Version Control Server dialog box" >}}
+{{< figure src="/attachments/refguide/modeling/menus/version-control-menu/download-from-version-control-dialog/download-from-version-control-server.png" alt="Download from Version Control Server dialog box" class="no-border" width="600" >}}
 
 ## 2 Where Is Your App Stored?
 
-If **Enable private version control with Git** is set in the app [Preferences](/refguide/preferences-dialog/#enable), you can choose between the **Mendix Team Server** or a **Private server**. If it is not enabled, you will only be able to choose an app from the Mendix Team Server.
+If **Enable private version control with Git** is set in the app [Preferences](/refguide/preferences-dialog/#enable-with-Git), you can choose between the **Mendix Team Server** or a **Private server**. If it is not enabled, you will only be able to choose an app from the Mendix Team Server.
 
 ### 2.1 Mendix Team Server
 
@@ -35,7 +34,7 @@ For more information about the Mendix Team Server, see [Team Server](/developerp
 
 Enter the URL of your private Git server in **App repository address** and click **Connect**.
 
-{{< figure src="/attachments/refguide/modeling/menus/version-control-menu/download-from-version-control-dialog/download-from-private-server.png" alt="Download from Version Control Server dialog box" >}}
+{{< figure src="/attachments/refguide/modeling/menus/version-control-menu/download-from-version-control-dialog/download-from-private-server.png" alt="Download from Version Control Server dialog box" class="no-border" width="600"  >}}
 
 ## 3 Development Line
 

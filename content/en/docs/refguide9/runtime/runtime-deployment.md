@@ -1,10 +1,9 @@
 ---
 title: "Runtime Deployment"
 url: /refguide9/runtime-deployment/
-category: "Mendix Runtime"
+
 description: "Describes how the Mendix Runtime is deployed."
 weight: 30
-tags: ["runtime", "deploy", "mxbuild", "runtime server", "m2ee"]
 ---
 
 ## 1 Introduction
@@ -19,7 +18,7 @@ When you have created a Mendix app with no structural errors, you need run it by
 
 Below is a chart showing the processes involved in deploying your app. Each of the processes and components is described below the chart.
 
-{{< figure src="/attachments/refguide9/runtime/runtime-deployment/runtime-deployment.png" alt="How Mendix Runtime is deployed" >}}
+{{< figure src="/attachments/refguide9/runtime/runtime-deployment/runtime-deployment.png" alt="How Mendix Runtime is deployed" class="no-border" >}}
 
 ### 2.1 Deployer
 
@@ -56,11 +55,11 @@ This is the Mendix app in mda format, which defines the app in a way which can b
 
 ### 2.8 CDN
 
-This data repository stores components of the deployment process such as versions of the Mendix Runtime and Mx Build.
+This data repository stores components of the deployment process such as versions of the Mendix Runtime and MxBuild.
 
 ### 2.9 Java RE
 
-This is the Java Runtime Environment (JRE) used to run the Runtime Server. The version of the JRE depends on the version of the Runtime Server. For example, Mendix 7 runs on JRE version 8, and Mendix 8 runs on JRE version 11.
+This is the Java Runtime Environment (JRE) used to run the Runtime Server. The version of the JRE depends on the version of the Runtime Server. For example, Mendix 7 runs on JRE version 8, and Mendix 8.18.29 runs on JRE version 17.
 
 ### 2.10 M2ee
 

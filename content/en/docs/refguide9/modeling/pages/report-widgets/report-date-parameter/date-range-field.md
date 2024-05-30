@@ -1,7 +1,6 @@
 ---
 title: "Date Range Field"
 url: /refguide9/date-range-field/
-tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -11,13 +10,13 @@ A **Date range field** can be placed inside a [Report date parameter](/refguide9
 
 To add a date range field, right-click the widget and choose **Add field** from the pop-up menu.
 
-{{< figure src="/attachments/refguide9/modeling/pages/report-widgets/report-date-parameter/date-range-field/add-field.png" alt="Add a date range field to a report date parameter" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/report-widgets/report-date-parameter/date-range-field/add-field.png" alt="Add a date range field to a report date parameter" class="no-border" >}}
 
 ## 2 Date Range Field Properties
 
 An example of date range field properties is represented in the image below:
 
-{{< figure src="/attachments/refguide9/modeling/pages/report-widgets/report-date-parameter/date-range-field/date-range-field-properties.png" alt="Date range field in structure mode"   width="300"  >}}
+{{< figure src="/attachments/refguide9/modeling/pages/report-widgets/report-date-parameter/date-range-field/date-range-field-properties.png" alt="Date range field in structure mode"   width="300"  class="no-border" >}}
 
 Date range field properties have only a [General](#general) section.
 

@@ -2,14 +2,13 @@
 title: "Preferences"
 url: /refguide9/preferences-dialog/
 weight: 50
-tags: ["studio pro", "preferences", "settings", "edit menu"]
 ---
 
 ## 1 Introduction
 
 The **Preferences** option in the menu opens a dialog box where you can set user-specific preferences which apply to the whole of Studio Pro:
 
-{{< figure src="/attachments/refguide9/modeling/menus/edit-menu/preferences-dialog/preferences.png" alt="Preferences" width="600" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/edit-menu/preferences-dialog/preferences.png" alt="Preferences" width="600" class="no-border" >}}
 
 ## 2 General Tab {#general}
 
@@ -26,7 +25,7 @@ The **Show styling for** setting configures, which styling files are shown in th
 You can select one of the following options:
 
 * **App Only** – This option covers the most common case and lets you customize your app-specific styling. By choosing this, you can see all files from the **theme** folder in App Explorer > **App** > **Styling**.
-* **App and UI resources modules** (*Default*) – This option targets developers who would like to create or edit UI resources modules, e.g. to build or extend your design system/theme. This option also adds a **Styling** folder to modules that are marked as UI resources, containing the files from the corresponding **themesource** folder.
+* **App and UI resources modules** (*Default*) – This option targets developers who would like to create or edit UI resources modules, for example, to build or extend your design system/theme. This option also adds a **Styling** folder to modules that are marked as UI resources, containing the files from the corresponding **themesource** folder.
 * **App and all modules** – Additionally to the option above, this one adds a **Styling** folder to all modules, regardless of whether they are marked as UI resources or not.
 
 For more information about the styling editor, see the [Using the Styling Editor](/howto9/front-end/customize-styling-new/#styling-editor) section in *How to Customize Styling*.
@@ -186,7 +185,7 @@ Default: *enabled*
 ### 8.2 Dark Mode Preview {#dark-mode}
 
 {{% alert color="info" %}}
-This functionality is currently in [Beta](/releasenotes/beta-features/).
+This functionality is currently in [beta](/releasenotes/beta-features/).
 {{% /alert %}}
 
 The **Dark mode** option allows you to preview to the dark mode of the Studio Pro user interface. 
@@ -206,7 +205,7 @@ Default: *enabled*
 ### 8.4 Properties Pane {#properties}
 
 {{% alert color="info" %}}
-This functionality is currently in [Beta](/releasenotes/beta-features/).
+This functionality is currently in [beta](/releasenotes/beta-features/).
 {{% /alert %}}
 
 The **New Properties pane preview** option allows you to enable the overhauled UI for viewing and changing properties in Studio Pro.

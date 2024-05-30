@@ -1,5 +1,5 @@
 {{- /*
-Algolia generation based on this blog: https://forestry.io/blog/search-with-algolia-in-hugo/
+Algolia generation based on this blog: https://web.archive.org/web/20201109041339/https://forestry.io/blog/search-with-algolia-in-hugo/
 Define Global variables
 */ -}}
 {{- $firstloop := true -}}
@@ -10,7 +10,7 @@ Define Global variables
      * headers, paragraph, table header, table data, list item, alert boxes, code blocks (should ignore <code> inside a paragraph)
      * Do we want to have headings separate? 
 */ -}}
-{{- $splitcharList := slice `<h2` `<h3` `<h4` `<h5` `<h6` `<p` `<th` `<td` `<li` `<div class="alert` `<code ` -}}
+{{- $splitcharList := slice `<h2` `<h3` `<h4` `<h5` `<h6` `<p>` `<th` `<td` `<li` `<div class="alert` `<code ` -}}
 {{- /* Include What Pages? */ -}}
 {{- /* range $i, $hit := .Site.AllPages */ -}}
 {{- $section := $.Site.GetPage "section" .Section }}
@@ -123,13 +123,11 @@ Define Global variables
                         {{- end -}}
                         {{- $text = trim (htmlUnescape ($processSlice | plainify)) " " -}}
                         {{- $scratch.SetInMap $uniqueHit "text" $text -}}
-                        {{- $scratch.SetInMap $uniqueHit "tags" $pageDot.Params.tags -}}
                         {{- $scratch.SetInMap $uniqueHit "mendix_version" $pageDot.Params.mendix_version -}}
                         {{- $scratch.SetInMap $uniqueHit "time_stamp" $pageDot.Lastmod.UTC.Unix -}}
                         {{- $scratch.SetInMap $uniqueHit "weight.position" $sliceNumber -}}
-                        {{- $scratch.SetInMap $uniqueHit "space" $pageDot.Params.space -}}
+                        {{- $scratch.SetInMap $uniqueHit "content_type" $pageDot.Params.content_type -}}
                         {{- $scratch.SetInMap $uniqueHit "type" $pageDot.Type -}}
-                        {{- $scratch.SetInMap $uniqueHit "category" $pageDot.Params.category -}}
                         {{- $scratch.SetInMap $uniqueHit "menu_order" $pageDot.Weight -}}
                         {{- $scratch.SetInMap $uniqueHit "description" $pageDot.Description -}}
                         {{- /* Set different tags depending on whether it is paragraph, list, table, code, or alert */ -}}

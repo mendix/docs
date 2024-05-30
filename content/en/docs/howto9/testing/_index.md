@@ -5,7 +5,6 @@ weight: 100
 description: "Presents test-related how-tos and blogs written by Mendix professionals."
 no_list: false
 description_list: true
-tags: ["test", "testing"]
 ---
 
 ## 1 Introduction
@@ -16,6 +15,6 @@ These blog posts also present useful details on testing:
 
 * [Three Tools to Test Your Mendix Application](https://www.mendix.com/blog/three-tools-to-test-your-mendix-application/)
 * [8 Lightweight Quality Assurance Practices](https://www.mendix.com/blog/8-lightweight-quality-assurance-practices/)
-* [The Quality Assurance Mindset in Mendix](http://ww2.mendix.com/expert-webinar-quality-assurance.html)
+* [The Quality Assurance Mindset in Mendix](https://www.youtube.com/watch?v=hpJp-tAUn-g)
 
-## 2 Main Documents in This Category
+## 2 Documents in This Category

@@ -2,7 +2,6 @@
 title: "Structure for How-tos"
 url: /appstore/partner-solutions/ats/ht-one-custom-action-howto-structure/
 description: "Explains the general structure of the how-to's for creating custom actions."
-tags: ["ATS", "testing"]
 ---
 
 ## 1 Introduction

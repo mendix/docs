@@ -2,23 +2,22 @@
 title: "Module Settings"
 url: /refguide9/module-settings/
 weight: 10
-tags: ["studio pro", "module settings", "module", "add-on", "solution"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 {{% alert color="warning" %}}
-Access to this functionality is currently limited and can be gained through the [Mendix Component Partner Program](/appstore/creating-content/partner-program/) and the [Mendix Commercial Solution Partner Program](https://www.mendix.com/partners/become-a-partner/isv-program/).
+In Studio Pro 9, add-on modules and solution modules were previously available in preview for select customers and partners as part of an early access program. In Studio Pro 10, this functionality is generally available for all users. For more information, see this page in the [Studio Pro 10 Guide](/refguide/module-settings/).
 {{% /alert %}}
 
 ## 1 Introduction
 
 Module settings allow you to choose the type of the module when you build your app and to set a version for certain module types:
 
-{{< figure src="/attachments/refguide9/modeling/app-explorer/modules/module-settings/module-settings-dialog.png" >}}
+{{< figure src="/attachments/refguide9/modeling/app-explorer/modules/module-settings/module-settings-dialog.png" class="no-border" >}}
 
 To open module settings, select the module in the App Explorer and double-click **Settings**:
 
-{{< figure src="/attachments/refguide9/modeling/app-explorer/modules/module-settings/settings.png" >}}
+{{< figure src="/attachments/refguide9/modeling/app-explorer/modules/module-settings/settings.png" class="no-border" >}}
 
 ## 2 Module Type {#module-type}
 
@@ -58,7 +57,7 @@ This setting is available for only add-on and solution module types.
 
 A version number of the module. The version should be a semantic version (i.e. consisting of at least three parts: major, minor, and patch version). For more information on semantic versions, see [Semantic Versioning](https://semver.org/).
 
-We recommend setting a new version every time changes are made to the module. 
+Mendix recommends setting a new version every time changes are made to the module. 
 
 ## 5 Read More
 

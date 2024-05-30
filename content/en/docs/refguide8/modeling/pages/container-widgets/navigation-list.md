@@ -2,13 +2,8 @@
 title: "Navigation List"
 url: /refguide8/navigation-list/
 weight: 70
-tags: ["studio pro", "navigation list", "container widget", "widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/navigation-list.pdf).
-{{% /alert %}}
 
 {{% alert color="warning" %}}
 The navigation list widget is not supported on native mobile pages.
@@ -20,13 +15,13 @@ A navigation list can be used to attach an action to an entire row when a user c
 
 For example, clicking one row can open a page, clicking another one can execute a microflow. 
 
-{{< figure src="/attachments/refguide8/modeling/pages/container-widgets/navigation-list/navigation-list.png" alt="Navigation List" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/container-widgets/navigation-list/navigation-list.png" alt="Navigation List" class="no-border" >}}
 
 ## 2 Properties
 
 An example of navigation list properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/pages/container-widgets/navigation-list/navigation-list-properties.png" alt="Navigation List Properties"   width="250"  >}}
+{{< figure src="/attachments/refguide8/modeling/pages/container-widgets/navigation-list/navigation-list-properties.png" alt="Navigation List Properties"   width="250"  class="no-border" >}}
 
 Navigation list properties consist of the following sections:
 

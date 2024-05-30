@@ -3,7 +3,6 @@ title: "Published REST Service"
 url: /refguide7/published-rest-service/
 weight: 10
 description: "Configuration options for a published REST service"
-tags: ["published REST", "service", "reserved URL prefixes", "swagger", "security", "CORS", "resources", "operation", "how-to"]
 ---
 
 {{% alert color="info" %}}
@@ -42,7 +41,7 @@ By default, version is set to "1.0.0".
 
 {{% alert color="info" %}}
 
-**Location** is editable in Mendix versions 7.12.0 and above.
+**Location** is editable in Mendix 7.12.0 and above.
 
 {{% /alert %}}
 
@@ -164,7 +163,7 @@ When you select a resource, you see the [operations](/refguide7/published-rest-o
 
 Resources and Operations are appended to [Location](#location) to form a URL on which they can be accessed.
 
-{{< figure src="/attachments/refguide7/desktop-modeler/integration/published-rest-services/published-rest-service/example-location-url.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/integration/published-rest-services/published-rest-service/example-location-url.png" class="no-border" >}}
 
 ## 7 Example
 

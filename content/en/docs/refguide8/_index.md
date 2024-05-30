@@ -2,15 +2,16 @@
 title: "Studio Pro 8 Guide"
 url: /refguide8/
 description: "The various sections of the Mendix Studio Pro Guide provide details on the features and functionality of the Mendix Platform."
-tags: ["studio pro"]
 weight: 70
 no_list: false
 description_list: true
 cascade:
-    - space: "Studio Pro 8 Guide"
+    - content_type: "Studio Pro 8"
     - mendix_version: 8
+    - banner_8: true
     - old_content: true
     - hide_feedback: true
+    - notsitemap: true
     - sitemap:
         priority: 0.3
 ---
@@ -21,7 +22,7 @@ The *Mendix Studio Pro 8 Guide* covers important topics concerning [Studio Pro](
 
 Before installing Studio Pro 8, please read [System Requirements](/refguide8/system-requirements/). For information on how to install Studio Pro, see [How to Install Mendix Studio Pro](/howto8/general/install/).
 
-If you have been using Desktop Modeler version 7, we recommend reading [Moving from Desktop Modeler Version 7 to Studio Pro Version 8](/refguide8/moving-from-7-to-8/).
+If you have been using Desktop Modeler version 7, Mendix recommends reading [Moving from Desktop Modeler 7 to Studio Pro 8](/refguide8/moving-from-7-to-8/).
 
 If you are looking for step-by-step guides on performing various Mendix actions, browse the [Studio Pro 8 How-tos](/howto8/).
 

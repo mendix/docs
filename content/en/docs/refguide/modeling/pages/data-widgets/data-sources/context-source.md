@@ -1,7 +1,6 @@
 ---
 title: "Context Source"
 url: /refguide/context-source/
-tags: ["studio pro", "context", "data source"]
 weight: 30
 ---
 
@@ -26,7 +25,7 @@ If you have a nested data view, you can select one of the following:
 
 For more information on associations, see [Associations](/refguide/associations/). 
 
-{{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-sources/context-source/context-source-example.png" alt="Context Source"   width="400"  >}}
+{{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-sources/context-source/context-source-example.png" alt="Context Source"   width="400"  class="no-border" >}}
 
 ## 3 Read More
 

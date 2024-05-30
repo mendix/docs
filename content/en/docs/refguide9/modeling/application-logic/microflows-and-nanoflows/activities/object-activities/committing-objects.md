@@ -2,7 +2,6 @@
 title: "Commit Object(s)"
 url: /refguide9/committing-objects/
 weight: 30
-tags: ["studio pro", "commit object", "activity"]
 ---
 
 {{% alert color="warning" %}}
@@ -21,7 +20,7 @@ A Mendix commit does not always behave like a database commit. See [How Commits 
 
 An example of commit object(s) properties is represented in the image below:
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/committing-objects/commit-properties.png" alt="commit object(s) properties" width="700px" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/committing-objects/commit-properties.png" alt="commit object(s) properties" width="700px" class="no-border" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
@@ -75,7 +74,7 @@ When testing your app, ensure that the desired data is being displayed by the wi
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-When committing a large number of objects, we recommend that you do not enable **Refresh in client** because it can slow things down.
+When committing a large number of objects, Mendix recommends not enabling **Refresh in client** because it can slow things down.
 {{% /alert %}}
 
 #### 3.3.1 Microflow is Called from the Client in an Online App
@@ -135,4 +134,4 @@ During commits, the following occurs:
 * Result:
     * An object with the state **Instantiated** is inserted into the database, and an object with any other state is updated
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/committing-objects/during-commits.png" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/committing-objects/during-commits.png" class="no-border" >}}

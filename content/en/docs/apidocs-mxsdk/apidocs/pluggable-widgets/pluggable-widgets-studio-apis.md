@@ -3,7 +3,6 @@ title: "Preview Appearance APIs"
 linktitle: "Preview Appearance APIs"
 url: /apidocs-mxsdk/apidocs/pluggable-widgets-studio-apis/
 description: A guide for understanding the APIs which influence pluggable widget preview appearances in Mx10.
-tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React", "Preview"]
 weight: 30
 aliases:
 - /apidocs-mxsdk/apidocs/studio-apis-for-pluggable-widgets
@@ -270,7 +269,7 @@ export const preview: React.FC<TruckWidgetPreviewProps> = (props) => (
 
 When the widget is added to a page you can select a specific item and edit it:
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-widgets-studio-apis/selectable-component.png" alt="Example of the selectable component" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-widgets-studio-apis/selectable-component.png" alt="Example of the selectable component" class="no-border" >}}
 
 ### 3.3 The GetPreviewCss Export
 

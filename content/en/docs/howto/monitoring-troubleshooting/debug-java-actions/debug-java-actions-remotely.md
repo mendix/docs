@@ -1,14 +1,17 @@
 ---
 title: "Debug Java Actions Remotely"
 url: /howto/monitoring-troubleshooting/debug-java-actions-remotely/
-tags: ["monitoring", "troubleshooting", "java action", "debug"]
 ---
 
 ## 1 Introduction
 
+{{% alert color = "warning" %}}
+It is not possible to debug Java actions remotely in Eclipse for applications that are hosted by Mendix Cloud.
+{{% /alert %}}
+
 To debug the Java actions used in a Mendix microflow, you need to make some configuration changes to the way you start the Mendix Runtime. This how-to will explain how to manage this.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Edit the server configuration
 * Configure remote debugging
@@ -25,7 +28,7 @@ To edit the server configuration with extra JVM parameters, follow these steps:
 
     `-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005`
 
-    {{< figure src="/attachments/howto/monitoring-troubleshooting/debug-java-actions/debug-java-actions-remotely/18580063.png" >}}
+    {{< figure src="/attachments/howto/monitoring-troubleshooting/debug-java-actions/debug-java-actions-remotely/18580063.png" class="no-border" >}}
 
 4. Run your application.
 
@@ -39,7 +42,7 @@ To configure IntelliJ, follow these steps:
 2. Place some breakpoints in your Java code.
 3. Start debugging.
 
-{{< figure src="/attachments/howto/monitoring-troubleshooting/debug-java-actions/debug-java-actions-remotely/intellij_rundebug_configurations.png" >}}
+{{< figure src="/attachments/howto/monitoring-troubleshooting/debug-java-actions/debug-java-actions-remotely/intellij_rundebug_configurations.png" class="no-border" >}}
 
 To configure Eclipse, follow these steps:
 

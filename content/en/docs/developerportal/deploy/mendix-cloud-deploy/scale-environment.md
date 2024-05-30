@@ -1,84 +1,75 @@
 ---
 title: "Scaling Your Environment in Mendix Cloud"
-linktitle: "Scaling in the Mendix Cloud"
+linktitle: "Scaling in Mendix Cloud"
 url: /developerportal/deploy/scale-environment/
-weight: 25
-description: "Describes how to scale your environments in the Mendix Cloud."
-tags: ["Scale","Environments","Mendix Cloud","Developer Portal"]
+weight: 9
+description: "Describes how to scale your environments in Mendix Cloud."
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
 
-Licensed apps in the Mendix Cloud can be scaled in various ways.
+This document explains how to scale an environment in Mendix Cloud. This can take the form of vertical or horizontal scaling:
 
-Memory can be added to the application container. This is called *vertical scaling*.
-
-Apps built using supported versions of Mendix can be run in multiple runtime containers (instances) simultaneously. Incoming traffic for your app is distributed over the running instances. This is called *horizontal scaling*.
+* Vertical scaling – You can add memory to the application container.
+* Horizontal scaling – You can configure apps built using supported versions of Mendix to be run in multiple runtime containers (instances) simultaneously. Incoming traffic for your app is distributed over the running instances.
 
 {{% alert color="info" %}}
-Before Mendix version 9.12.0, [Scheduled events](/refguide/scheduled-events/) are always run on the first instance if there are multiple instances.
+For versions below Mendix 9.12.0, [scheduled events](/refguide/scheduled-events/) are always run on the first instance if there are multiple instances.
 {{% /alert %}}
-
-This how-to will teach you how to do the following:
-
-* Scale your environment in the Mendix Cloud
 
 ## 2 Prerequisites
 
-Before starting this how-to, make sure you have completed the following prerequisites:
+Before following the steps outlined on this page, make sure you meet the following prerequisites:
 
-* Have a licensed app hosted in the Mendix Cloud
-* Have a plan which provides more than 1GiB of memory
-
-{{% alert color="info" %}}
-Details of your plan are displayed on the environment details page.
-{{% /alert %}}
+* Have a licensed app hosted in Mendix Cloud.
+* Have a standard or premium plan with a cloud resource pack that provides more than 1 GiB of memory. You can find this information on the [Environment Details](/developerportal/deploy/environments-details/) page. For details on the cloud resource packs that Mendix offers, see [Cloud Resource Packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack).
+* Have Transport Rights for the environment you want to scale. For details on configuring permissions, see [Node Permissions](/developerportal/deploy/node-permissions/).
 
 ## 3 Scaling Your Environment
 
-If you want to scale your licensed app in the Mendix Cloud, follow these steps:
+To scale your licensed app in Mendix Cloud, follow these steps:
 
-1. Go to the [Developer Portal](http://sprintr.home.mendix.com) and select your licensed app.
+1. From the [Developer Portal](https://sprintr.home.mendix.com), go to the **Environments** page of your licensed app.
 
-2. Click **Environments** to go to the environments page.
+2. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the environment you want to scale.
 
-3. Click **Details** for a selected environment.
+3. On the **General** tab, scroll down to the **Instances** row. Click **Change scaling**.
 
-4. Click **Change scaling** next to the current description of *Instances*.
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/scale-environment/change-scaling.png" alt="" >}}
 
-5. Set the number of **Instances** by dragging the indicator bar.
+4. To set the **Memory per instance** that you want to use, drag the **Memory per instance** indicator bar.
 
-6. Set the **Memory per instance** that you want to use.
+5. To set the number of **Instances** you want to use, drag the **Instances** indicator bar.
 
-    {{% alert color="warning" %}}You cannot exceed the total memory provided by your plan. This is shown as the lower number in **Total Allocated Memory**.<br/>If you try to use scaling values which exceed the memory provided by your plan you will get the message `You do not have sufficient resources to configure this allocation`.{{% /alert %}}    
+6. Click **Apply**. This restarts your environment to apply the changes.
 
-7. Click **Apply**. This will restart your environment to apply the changes.
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/scale-environment/scale.png" alt="Scaling dashboard" max-width=75% >}}
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/scale-environment/scale.png" >}}
+### 3.1 Scaling Notes
+
+* Restarting your environment to apply horizontal or vertical scaling changes causes brief downtime.
+* The number of available instances depends on the total memory provided by your cloud resource pack and the memory per instance that you have set. It is not possible to set scaling values that exceed the memory provided by your [cloud resource pack](/developerportal/deploy/mendix-cloud-deploy/#resource-pack).
+* It is not possible for a single instance to use more than 32 GiB of RAM. Some very large cloud resource packs, such as XXXL21 or XXXXL21, provide more than this 32 GiB maximum; to use the full RAM in this case, you need more than one instance. For example, to use 64 GiB of RAM, you must spread the RAM between two or more instances.
 
 ## 4 Examples
 
-The following examples assume that you have 16GiB memory available to you in your plan.
+The following examples assume that you have 8 GiB memory available in your cloud resource pack.
 
 ### 4.1 Scaling Example 1
 
-You can spread the 16GiB RAM across 4 instances. Create 4 instances, each with 4GiB memory (4 x 4GiB = 16GiB).
+You can spread the 8 GiB RAM across 4 instances. For example, you can create 4 instances, each with 2 GiB memory (4 x 2 GiB = 8 GiB).
 
 ### 4.2 Scaling Example 2
 
-You don't need to allocate all the plan memory at once. You can just allocate part of it and then use the rest of the memory later by allocating more memory per instance, or creating more instances.
+You do not need to allocate all the available memory at once. You can just allocate part of it and then use the rest of the memory later by allocating more memory per instance or creating more instances.
 
-For example, you can use one instance with 4GiB RAM. The remaining 12GiB in your plan will be unused.
+For example, you can use one instance with 2 GiB RAM. The remaining 6 GiB in your cloud resource pack will be unused.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/scale-environment/scaling.png" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/scale-environment/scaling-example.png" alt="Scaling dashboard with 2 out of 8 GB of total allocated memory used" max-width=75% >}}
 
 ## 5 Read More
 
-* [Trends in the Mendix Cloud](/developerportal/operate/trends-v4/)
 * [Deployment](/developerportal/deploy/)
-* [Environment Details](/developerportal/deploy/environments-details/)
 * [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/)
-* [About the Mendix Cloud](/developerportal/deploy/mxcloudv4/)
-* [App Roles](/developerportal/general/app-roles/)
-* [Node Permissions](/developerportal/deploy/node-permissions/)
+* [About Mendix Cloud](/developerportal/deploy/mxcloudv4/)

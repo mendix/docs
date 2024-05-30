@@ -1,9 +1,9 @@
 ---
 title: "Google Maps"
+deprecated: true
 url: /appstore/widgets/google-maps/
-category: "Widgets"
+
 description: "Describes the configuration and usage of the Google Maps widget, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "widget", "google maps", "platform support"]
 aliases:
     - /howto/front-end/style-google-maps/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -94,10 +94,10 @@ These instructions are for the Google Maps widget which you can download from th
 In this chapter you will learn how to add styling to the Google Maps widget.
 
 1. Open the properties of your Google Maps widget and go to the **Customisation** tab.
-    {{< figure src="/attachments/appstore/widgets/style-google-maps/customisation-tab.png" >}}
+    {{< figure src="/attachments/appstore/widgets/style-google-maps/customisation-tab.png" class="no-border" >}}
 
 2. Simply enter the style in the **Style Array** section and you're done!
-    {{< figure src="/attachments/appstore/widgets/style-google-maps/new-styling.png" >}}
+    {{< figure src="/attachments/appstore/widgets/style-google-maps/new-styling.png" class="no-border" >}}
 
     Here is the example styling:
 
@@ -106,7 +106,7 @@ In this chapter you will learn how to add styling to the Google Maps widget.
     ```
 
 3. The example style will give you this result:
-    {{< figure src="/attachments/appstore/widgets/style-google-maps/style-example.png" >}}
+    {{< figure src="/attachments/appstore/widgets/style-google-maps/style-example.png" class="no-border" >}}
 
 ### 6.2 Finding the Right Style
 
@@ -114,13 +114,13 @@ Choosing an existing style sheet from a large library that fits your application
 
 1. On the website click **Explore:**
 2. Explore the styles to find one that matches your application and click it:
-    {{< figure src="/attachments/appstore/widgets/style-google-maps/snazzymaps-style.png" >}}
+    {{< figure src="/attachments/appstore/widgets/style-google-maps/snazzymaps-style.png" class="no-border" >}}
 3. On the lefthand pane you will see the style array:
-    {{< figure src="/attachments/appstore/widgets/style-google-maps/snazzymaps-style-array.png" >}}
+    {{< figure src="/attachments/appstore/widgets/style-google-maps/snazzymaps-style-array.png" class="no-border" >}}
 4. Now simply press **Copy.** The style is copied to your clipboard.
 5. Open the **Customisation** tab of the Google Maps widget and paste the style array you just copied from snazzymaps:
 
-    {{< figure src="/attachments/appstore/widgets/style-google-maps/snazzymaps-styling.png" >}}
+    {{< figure src="/attachments/appstore/widgets/style-google-maps/snazzymaps-styling.png" class="no-border" >}}
 
     The style array:
 
@@ -129,15 +129,15 @@ Choosing an existing style sheet from a large library that fits your application
     ```
 
 6. And there it is:
-    {{< figure src="/attachments/appstore/widgets/style-google-maps/new-style-example.png" >}}
+    {{< figure src="/attachments/appstore/widgets/style-google-maps/new-style-example.png" class="no-border" >}}
 
 ### 6.3 Upload Your Own Style Array
 
 Using community tools, this is how you can upload your own custom style array to the website:
 
 1. Go-to Snazzymaps and click **Create.**
-    {{< figure src="/attachments/appstore/widgets/style-google-maps/snazzymaps.png" >}} 
+    {{< figure src="/attachments/appstore/widgets/style-google-maps/snazzymaps.png" class="no-border" >}} 
 2. Now you will see the same sort of handy quick style method that Mendix provides at the [Atlas 3](https://atlas.mendix.com/) site.
-    {{< figure src="/attachments/appstore/widgets/style-google-maps/custom-snazzymaps.png" >}} 
+    {{< figure src="/attachments/appstore/widgets/style-google-maps/custom-snazzymaps.png" class="no-border" >}} 
 
     Happy app building!

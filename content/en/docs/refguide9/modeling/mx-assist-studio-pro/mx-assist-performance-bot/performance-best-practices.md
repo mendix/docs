@@ -2,7 +2,6 @@
 title: "Performance Best Practices"
 url: /refguide9/performance-best-practices/
 description: "Describes Mendix best practices on optimizing an app performance."
-tags: ["studio pro", "performance", "performance bot", "mx assist", "mendix assist"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #The anchors <mxp001-mxpnnn> below are all mapped, so they should not be removed or changed.
 ---
@@ -184,7 +183,7 @@ Using duplicated access rules on entities can affect performance, especially whe
 
 ### 9.1 Steps to Fix
 
-To fix the issue, we recommend revisiting your security rules and avoid letting your security model drive your process rules (the security engine is not optimized for process task assignment). You can do the following:
+To fix the issue, Mendix recommends revisiting your security rules and avoid letting your security model drive your process rules (the security engine is not optimized for process task assignment). You can do the following:
 
 * Consolidate the variation you have in your rules, add additional checks in your microflows to validate state changes rather than having all variations in the access rules.
 * Consider splitting your entity in multiple entities with one-to-one associations. On these individual entities you can simplify the access profiles and potentially limit access to the entire entity rather than dozens of individual fields.

@@ -3,7 +3,6 @@ title: "Java Actions"
 url: /refguide/java-actions/
 weight: 10
 description: "Describes using Java Actions to extend the functionality of your Mendix app."
-tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -31,7 +30,7 @@ Each parameter has a name, type, category, and description.
 
 Use categories to keep the parameters apart in the [Java action call](/refguide/java-action-call/). If you do not specify a category, the parameter will appear in the **Input** group.
 
-See [Data Types](/refguide/data-types/) for the possible standard parameter types. When the type is an Object or List, you must also select its Entity type, which can be either a specific entity or a type parameter. The type parameter postpones the selection of the actual entity type until the Java action is used in a microflow. This allows your Java action to accept a (list of) Mendix object(s) of an arbitrary entity type.
+See [Data Types](/refguide/data-types/) for the possible standard parameter types. When the type is an Object or List, you must also select its Entity type, which can be either a specific entity or a type parameter. The type parameter postpones the selection of the actual entity type until the Java action is used in a microflow. This allows your Java action to accept a (list of) Mendix object (or objects) of an arbitrary entity type.
 
 The other types supported by Java actions are described below.
 

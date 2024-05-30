@@ -3,7 +3,6 @@ title: "Errors Pane"
 url: /refguide/errors-pane/
 weight: 40
 description: "Describes the Errors pane in Mendix Studio Pro."
-tags: ["Studio Pro", "errors", "error list", "errors pane"]
 ---
 
 ## 1 Introduction 
@@ -12,7 +11,7 @@ To make sure that your app is always consistent and properly built, Studio Pro d
 
 When a consistency check is not met, Studio Pro will notify you about this on the **Errors** pane. The errors and warnings in pages, microflows, domain models, and document templates will be highlighted: 
 
-{{< figure src="/attachments/refguide/modeling/consistency-errors/errors-pane.png" alt="Errors Pane" >}}
+{{< figure src="/attachments/refguide/modeling/consistency-errors/errors-pane.png" alt="Errors Pane" class="no-border" >}}
 
 To display the **Errors** pane, there are two options:
 
@@ -23,15 +22,15 @@ To display the **Errors** pane, there are two options:
 
 There are three types of messages, each having its own button and icon:
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/types-of-messages.png" alt="Types of Messages" >}}
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/types-of-messages.png" alt="Types of Messages" class="no-border" >}}
 
 The table below provides the details on each type of the message:
 
 | Type         | Icon                                              | Function                                                     |
 | ------------ | ------------------------------------------------- | ------------------------------------------------------------ |
-| Errors       | {{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/error-icon.png" >}}       | Consistency errors that prevent your app from functioning in a correct way and being deployed (for example, if you do not specify an entity for the data view, your app cannot function correctly). |
-| Deprecations | {{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/deprecation-icon.png" >}} | This type shows information on features that are deprecated and can be entirely removed in the future versions. This does not affect the app now, but may cause problems when upgrading to the next version. |
-| Warnings     | {{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/warning-icon.png" >}}     | Errors that are not critical, so you can publish your app having warnings. However, it is highly recommended to take action based on the warnings, because your app has logical gaps (for example, clicking a button does nothing). |
+| Errors       | {{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/error-icon.png" class="no-border" >}}       | Consistency errors that prevent your app from functioning in a correct way and being deployed (for example, if you do not specify an entity for the data view, your app cannot function correctly). |
+| Deprecations | {{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/deprecation-icon.png" class="no-border" >}} | This type shows information on features that are deprecated and can be entirely removed in the future versions. This does not affect the app now, but may cause problems when upgrading to the next version. |
+| Warnings     | {{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/warning-icon.png" class="no-border" >}}     | Errors that are not critical, so you can publish your app having warnings. However, it is highly recommended to take action based on the warnings, because your app has logical gaps (for example, clicking a button does nothing). |
 
 ## 3 Interacting with the Errors Pane
 
@@ -67,7 +66,7 @@ You can also sort the order which messages are displayed in by clicking the colu
 
 Right-clicking the message line opens a drop-down menu:
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/drop-down-menu.png" alt="Drop-Down Menu" >}}
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/errors-pane/drop-down-menu.png" alt="Drop-Down Menu" class="no-border" >}}
 
 The following actions are available in the drop-down menu:
 

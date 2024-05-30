@@ -2,7 +2,6 @@
 title: "App"
 url: /refguide/app/
 weight: 10
-tags: ["studio pro", "app", "settings", "navigation", "system texts", "export documentation"]
 aliases:
     - /refguide/project/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -36,7 +35,7 @@ For more information, see [Navigation](/refguide/navigation/).
 
 For more information, see [System Texts](/refguide/system-texts/).
 
-## 6 Export Documentation
+## 6 Export Documentation {#export}
 
 Right-clicking the **App** allows you to export documentation. This exports an HTML file with all the documents in your app and their documentation.
 

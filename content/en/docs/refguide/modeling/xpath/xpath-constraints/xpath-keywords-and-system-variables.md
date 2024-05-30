@@ -1,7 +1,6 @@
 ---
 title: "XPath Keywords and System Variables"
 url: /refguide/xpath-keywords-and-system-variables/
-tags: ["studio pro", "BeginOfCurrent", "system variables"]
 ---
 
 ## 1 Overview
@@ -31,7 +30,7 @@ This query returns all the customers whose name is not known to the system:
 
 These keywords can only be used in conjunction with attributes. The existence of associations cannot be confirmed in this manner. For more information on how to constrain on associations, see [XPath Constraint Functions](/refguide/xpath-constraint-functions/).
 
-## 3 System Variables
+## 3 System Variables {#system-variables}
 
 System variables can be used to obtain system or date related values. The available tokens are described below.
 
@@ -52,7 +51,7 @@ These will be created for each user role in your app. Here is an example:
 
 Here is an example for retrieving that user role: 
 
-{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/xpath-keywords-and-system-variables/user-role.png" width="500px" >}}
+{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/xpath-keywords-and-system-variables/user-role.png" width="500px" class="no-border" >}}
 
 ### 3.3 Time-Related
 
@@ -93,6 +92,10 @@ The following tokens can be used to obtain a date and time value:
 | `[%BeginOfCurrentYearUTC%]` | The date and time at the beginning of the current year in UTC. |
 | `[%EndOfCurrentYear%]` | The date and time at the end of the current year. |
 | `[%EndOfCurrentYearUTC%]` | The date and time at the end of the current year in UTC. |
+
+{{% alert color="info" %}}
+Do not use the UTC variants of these tokens (for example, `[%BeginOfCurrentDayUTC%]`) in client-side expressions if you want to assign the output to (or compare the output with) an attribute of type **Date and time** where **Localize** is disabled. In the client, the localization functionality is built into the attribute type itself, and using UTC functions causes the time zone conversion to be handled twice.
+{{% /alert %}}
 
 The following tokens can be used to add or subtract a period of time from a date and time token value:
 
@@ -138,6 +141,8 @@ This query returns only customers who have registered this week:
 
 This query returns only customers who have registered in the past three years:
 
+[//]: # (<!-- markdownlint-disable no-space-in-emphasis -->)
+
 {{< tabpane >}}
   {{% tab header="Environments:" disabled=true /%}}
   {{< tab header="Studio Pro" lang="StudioPro" >}}
@@ -147,6 +152,8 @@ This query returns only customers who have registered in the past three years:
     //Sales.Customer[DateRegistered > '[%BeginOfCurrentDay%] - 3 * [%YearLength%]']
     {{% /tab %}}
 {{< /tabpane >}}
+
+[//]: # (<!-- markdownlint-enable no-space-in-emphasis -->)
 
 This query returns users with the role "Administrator":
 

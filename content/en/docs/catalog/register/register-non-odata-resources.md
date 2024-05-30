@@ -4,7 +4,6 @@ linktitle: "Register Non-OData Resources"
 url: /catalog/register/register-non-odata-resources/
 description: "Describes how to convert non-OData resources into OData and then register them in the Catalog."
 weight: 30
-tags: ["Data Hub", "Catalog", "registration", "OData", "register data"]
 aliases:
     - /catalog/register-non-odata-resources/
 ---
@@ -15,8 +14,6 @@ The Catalog collects metadata from exposed services and currently supports all O
 
 * [Expose OData via a Mendix app](#use-mendix-app)
 * [Expose OData via a service wrapper (a custom solution)](#use-service-wrapper)
-
-For further details, see [Wrap Services, APIs, or Databases with OData](/refguide/wrap-services-odata/).
 
 ## 2 Expose OData via a Mendix App {#use-mendix-app}
 
@@ -32,7 +29,7 @@ There are certain limitations on consumed OData services. For more information o
 
 The diagram below represents how an OData API wrapper can be used to connect a custom app data source to a Mendix Studio Pro app:
 
-{{< figure src="/attachments/catalog/register-non-odata-resources/non-odata.png" alt="Catalog connecting to non-OData resources" >}}
+{{< figure src="/attachments/catalog/register-non-odata-resources/non-odata.png" alt="Catalog connecting to non-OData resources" class="no-border" >}}
 
 Once the OData service is available, find the generated *$metadata* file for your data, and use that to register your service in the Catalog via the connector on the home page. For more information on setting up the connection, see [Published OData Services](/refguide/published-odata-services/).
 
@@ -42,5 +39,3 @@ You can find the following examples of how to write an OData service in .NET:
 
 * [Work With OData in Web API: Create Your First OData Service](https://www.c-sharpcorner.com/UploadFile/dacca2/work-with-odata-in-web-api-create-your-first-odata-service/)
 * [Write a Simple OData V4 Service](https://docs.microsoft.com/en-us/odata/webapi/getting-started)
-
-For further details, see [Wrap Services, APIs, or Databases with OData](/refguide/wrap-services-odata/).

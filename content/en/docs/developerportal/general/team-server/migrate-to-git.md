@@ -3,7 +3,9 @@ title: "Migrate to Git"
 url: /developerportal/general/migrate-to-git/
 weight: 10
 description: "Describes how to migrate apps to Git."
-tags: ["Studio Pro", "Team Server", "migration", "Git", "migrate"]
+aliases:
+    - /developerportal/collaborate/migrate-to-git/
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
 ## 1 Introduction
@@ -16,8 +18,11 @@ Git is a more modern version control system that has several advantages over SVN
 
 To be able to migrate your app to Git, your app needs to meet the following criteria:
 
-* Mendix version of *all branches* in the app is 9.12 or above
+* The main line ('main') branch in the app is Mendix version 9.24.11 or above
+* All branches in the app are Mendix version 9.12 or above
 * Current version control is in Team Server SVN
+* The size of the `.mpr` file for the latest revision of your app is less than 125MB
+* The version control history consists of fewer than 1250 commits
 
 {{% alert type="info" %}}
 
@@ -25,17 +30,9 @@ Only a user with the Scrum Master role can migrate an app. For more information,
 
 {{% /alert %}}
 
-{{% alert color="warning" %}}
-
-At this moment we are limited in our ability to migrate large SVN repositories. If the full SVN repository including all history and branches exceeds approximately 80GB, migration will likely fail. We are working on solutions to both notify you when this issue applies to you and to extend our migration capabilities for large repositories.
-
-{{% /alert %}}
-
 ## 3 How Migration Works
 
-If your app is eligible for migration and your team role is Scrum Master, you see a notification on possible migration at the top of all pages within the **Collaborate** section. Click **Migrate to Git** to start migration:
-
-{{< figure src="/attachments/developerportal/general/team-server/migrate-to-git/migrate-to-git.jpg" >}}
+If your main line is Mendix version 9.24.11 or above, and your team role is Scrum Master, you see a notification on a possible migration at the top of the **Team Server** page for your app. Click **Migrate to Git** to check for migration eligibility and to start the migration.
 
 During migration all app history, including revisions for all branches, is copied from SVN to Git. 
 
@@ -72,13 +69,7 @@ After migration, existing local copies are no longer linked to a working version
 If the migration process failed, all changes are rolled back. This means access to SVN is restored and you can keep developing your app.
 You can check common causes of a failed migration below and resolve them. After that you can attempt to migrate your app again.
 
-The *most likely reason* your migration has failed is that you have branches that are invalid: they are below Mendix version 9.12. To resolve this, delete or upgrade these branches. 
-
-Migration failure may be also caused by the naming of your branches. You can resolve such migration failures by connecting to Tortoise SVN. For more information, see the [Working Outside Studio Pro](/refguide/using-version-control-in-studio-pro/#working-outside-studio-pro) section in *Using Version Control in Studio Pro*. Reasons can be one of the following:
-
-* There are no branches called *branches/trunk* or *branches/tags*.
-* There are branches with the same name but a different casing, such as *branch1* and *BRANCH1*.
-* There are branches with a name that is not valid in Git, for more information see [Git Documentation](https://git-scm.com/docs/git-check-ref-format).
+The *most likely reason* your migration has failed is that you have branches that are invalid: they are below Mendix 9.12. To resolve this, delete or upgrade these branches. 
 
 ## 6 Read More
 

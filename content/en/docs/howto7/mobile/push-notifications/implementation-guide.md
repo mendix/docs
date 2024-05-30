@@ -2,14 +2,13 @@
 title: "Implement Push Notifications"
 url: /howto7/mobile/implementation-guide/
 weight: 10
-tags: ["mobile", "push notification"]
 ---
 
 ## 1 Introduction
 
 This how-to will walk you through the steps needed to implement push notifications in your application.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Import the PushNotifications module
 * Add the push notification widget and administrator pages
@@ -27,11 +26,11 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 The [Push Notifications Connector module](/appstore/modules/push-notifications/) is published in the Mendix Marketplace. To import it into your app, click the Marketplace icon in the top right of Modeler, which will open the Marketplace in a new tab. Search for "Push Notifications Connector" and click the title of the result:
 
-{{< figure src="/attachments/howto7/mobile/push-notifications/implementation-guide/20218020.png" >}}
+{{< figure src="/attachments/howto7/mobile/push-notifications/implementation-guide/20218020.png" class="no-border" >}}
 
 On the resulting page, click the green **Download** button. Make sure that **Add as a new module** is selected, and then click **Import**:
 
-{{< figure src="/attachments/howto7/mobile/push-notifications/implementation-guide/20217885.jpg" >}}
+{{< figure src="/attachments/howto7/mobile/push-notifications/implementation-guide/20217885.jpg" class="no-border" >}}
 
 {{% alert color="warning" %}}
 The Push Notifications Connector assumes that the mobile app and the back-end part will reside in the same app.
@@ -50,7 +49,7 @@ To include these dependencies, download them from the Marketplace in a way simil
 
 If your app is using an older version of the [Encryption](/appstore/modules/encryption/) module, it might trigger an error for referencing a non-existent layout. You can fix this by assigning the primary layout of the **Encryption.ResponsiveLayout_Certificate** layout to another layout (please note that in this specific use case, it is not important which layout is used). This does not apply to version 1.3.1 and above.
 
-{{< figure src="/attachments/howto7/mobile/push-notifications/implementation-guide/20217886.jpg" >}}
+{{< figure src="/attachments/howto7/mobile/push-notifications/implementation-guide/20217886.jpg" class="no-border" >}}
 
 {{% /alert %}}
 
@@ -68,15 +67,15 @@ Please do not remove the button with the caption **Device Registration reference
 
 {{% /alert %}}
 
-{{< figure src="/attachments/howto7/mobile/push-notifications/implementation-guide/20217888.jpg" >}}
+{{< figure src="/attachments/howto7/mobile/push-notifications/implementation-guide/20217888.jpg" class="no-border" >}}
 
 ## 6 Starting Connectors from Your After-Startup Microflow
 
 The PushNotifications module contains a microflow named **AfterStartup_PushNotifications** that will start the APNs connector for you. Call this microflow from your **AfterStartup** microflow.
 
-If your app already has a microflow set to execute after startup, we suggest to change your startup microflow to a new microflow, from where you call both after startup microflows. Reference the microflow below:
+If your app already has a microflow set to execute after startup, Mendix suggests changing your startup microflow to a new microflow, from where you call both after startup microflows. Reference the microflow below:
 
-{{< figure src="/attachments/howto7/mobile/push-notifications/implementation-guide/after-startup-microflow.png" >}}
+{{< figure src="/attachments/howto7/mobile/push-notifications/implementation-guide/after-startup-microflow.png" class="no-border" >}}
 
 ## 7 Setting Up the Administration Pages {#setting}
 
@@ -100,7 +99,7 @@ On the **User roles** tab of the **Project Security** dialog box, include the fo
 * The **PushNotifications.User** role as part of the main **User** role
 * The **PushNotifications.Anonymous** role role as part of the main **Anonymous** role (if your application allows anonymous users)
 
-{{< figure src="/attachments/howto7/mobile/push-notifications/implementation-guide/21168173.png" >}}
+{{< figure src="/attachments/howto7/mobile/push-notifications/implementation-guide/21168173.png" class="no-border" >}}
 
 ## 9 Deploying Your App
 
@@ -108,7 +107,7 @@ At this point, all the implementation steps are done and you can deploy your app
 
 {{% alert color="warning" %}}
 
-Make sure that the `Encryption.EncryptionKey` constant has a value before you start the application. If the value is not set, you will get a NullPointerException when you try to send a notification to APNs. If you are using a Free App, set a default value for the constant in the model. Otherwise, configure the constant value in the Mendix Developer Portal.
+Make sure that the `Encryption.EncryptionKey` constant has a value before you start the application. If the value is not set, you will get a `NullPointerException` when you try to send a notification to APNs. If you are using a Free App, set a default value for the constant in the model. Otherwise, configure the constant value in the Mendix Developer Portal.
 
 {{% /alert %}}
 
@@ -122,6 +121,6 @@ For more details, see [How to Set Up the Apple Push Notification Server](/howto7
 
 You now need to build the hybrid mobile application. For an explanation on how to do this, see [How to Publish a Mendix Hybrid Mobile App](/howto7/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores/).
 
-For more information about the PhoneGap Build, refer to the [Adobe PhoneGap Build documentation](http://docs.phonegap.com/).
+For more information about the PhoneGap Build, refer to the [Adobe PhoneGap Build documentation](https://helpx.adobe.com/experience-manager/kb/adobe-phonegap-end-of-service.html).
 
 Please note that a free PhoneGap Build account is limited to a single application, whereas paid plans support multiple applications. As a consequence, you may need to delete an existing app from your PhoneGap Build environment in order to create a new one.

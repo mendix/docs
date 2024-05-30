@@ -1,7 +1,6 @@
 ---
 title: "Grid Columns"
 url: /refguide/columns/
-tags: ["studio pro", "column", "grid column", "data grid"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 ## 1 Introduction
@@ -12,7 +11,7 @@ Grid columns allow you to set properties for a [data grid](/refguide/data-grid/)
 
 An example of grid column properties is represented in the image below: 
 
-{{< figure src="/attachments/refguide/modeling/pages/data-widgets/grids/data-grid/columns/column-properties.png"   width="250"  >}}
+{{< figure src="/attachments/refguide/modeling/pages/data-widgets/grids/data-grid/columns/column-properties.png"   width="250"  class="no-border" >}}
 
 Grid column properties consist of the following sections:
 

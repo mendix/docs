@@ -1,9 +1,7 @@
 ---
 title: "Using ML Kit"
 url: /refguide/machine-learning-kit/using-ml-kit/
-category: Integration
 weight: 15
-tags: ["studio pro", "machine learning", "ml kit", "models", "integration"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -11,7 +9,13 @@ tags: ["studio pro", "machine learning", "ml kit", "models", "integration"]
 
 Studio Pro supports machine learning (ML) model integration in Mendix apps. Collectively called the *Machine Learning (ML) Kit*, this functionality allows Mendix developers to deploy an ML model built using common ML framework and language into the Mendix Runtime.
 
-{{% alert color="info" %}}Check out a demo app and Jupyter notebook examples in our [Demo for Mendix ML Kit](https://github.com/mendix/mlkit-example-app) repository for further information on working with machine learning models in Mendix.{{% /alert %}}
+{{% alert color="info" %}}
+For further information on working with ML models in Mendix, check out a demo app and Jupyter notebook examples in the [Demo for Mendix ML Kit](https://github.com/mendix/mlkit-example-app) repository.
+{{% /alert %}}
+
+For information on troubleshooting several general issues with importing and running your ML model, see the [FAQs](#FAQs) section below. 
+
+For information on ML Kit known issues, see the [Known Issues](#known-issues) section below. 
 
 ## 2 Usage {#usage}
 
@@ -35,6 +39,10 @@ Depending upon the frameworks and tools used to create the ML model, there are m
 
 ### 2.2 Importing an ML Model and Creating the ML Mapping Document {#import-model}
 
+{{% alert color="info" %}}
+It is advised to use the [netron.app](https://netron.app/) website to check whether your ONNX file is correct before importing it.
+{{% /alert %}}
+
 To use the ML model in your app, import it to create an ML mapping document.
 
 1. Right-click on the desired module and select **Add other > ML model mapping**.
@@ -43,7 +51,7 @@ To use the ML model in your app, import it to create an ML mapping document.
 
 This generates two non-persistable entities representing your ML Model input and outputs (see [Persistable and Non-Persistable Entities](#persist-nonpersist-entities) below). Below is an example of import mapping of a [sample XGBoost ML model](https://github.com/mendix/mlkit-example-app/tree/main/mlsource/titanic_xgboost):
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/ml-model-created-entities.png" alt="Two non-persistable entities generated when importing an ONNX file." >}}
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/ml-model-created-entities.png" alt="Two non-persistable entities generated when importing an ONNX file." class="no-border" >}}
 
 If error CE1790 appears, you need to [set dynamic tensor shapes](#set-dynamic-shapes).
 
@@ -65,7 +73,7 @@ Tensors inject and retrieve information from a machine learning model. A distinc
 
 Studio Pro detects models with static shapes automatically and displays them in the mapping. The image below is a [ResNet50 model mapping](https://github.com/mendix/mlkit-example-app/tree/main/mlsource/resnet50) with static dimensions that accepts 1 image of 3 channels (colors) with a size of 224x224 pixels:
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/mapping-static-dimensions.png" alt="ResNet50 mapping with static dimensions. Described in the paragraph above." >}}
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/mapping-static-dimensions.png" alt="ResNet50 mapping with static dimensions. Described in the paragraph above." class="no-border" >}}
 
 ##### 2.2.2.2 Dynamic Shapes {#dynamic-shapes}
 
@@ -75,21 +83,21 @@ Several models (for example, [Yolo](https://github.com/onnx/models/tree/main/vis
 
 When importing your model, you might encounter error CE1790 like in this [BERT](https://github.com/onnx/models/blob/main/text/machine_comprehension/bert-squad/model/bertsquad-12-int8.onnx) example:
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/model-input-errors.png" alt="Red dots indicating CE1790 error." >}} 
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/model-input-errors.png" alt="Red dots indicating CE1790 error." class="no-border" >}} 
 
 1. Go to the error and double-click on the affected mapping line to open the **Edit ML model input shapes** dialog box:
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/edit-model-input-shapes.png" alt="Edit ML model input shape dialog box." >}}
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/edit-model-input-shapes.png" alt="Edit ML model input shape dialog box." class="no-border" >}}
 
 In this case, configure the **?** dimensions before using the mapping in a [Call ML model](/refguide/call-ml-model/) activity. Once filled in, static tensor shapes of an output mapping will be automatically calculated based on configured dimensions of the input entity mappings, like in the [BERT](https://github.com/onnx/models/blob/main/text/machine_comprehension/bert-squad/model/bertsquad-12-int8.onnx) example below.
 
 The editor for the BERT model is below:
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/bert-model-input-shapes.png" >}} 
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/bert-model-input-shapes.png" class="no-border" >}} 
 
 The completed mapping for the BERT model is below:
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/bert-model-entities.png" >}} 
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/bert-model-entities.png" class="no-border" >}} 
 
 {{% alert color="info" %}}Some of these shapes should be handled in [Java Action pre- and post-processors](#java-pre-post) you may have.{{% /alert %}}
 
@@ -97,15 +105,15 @@ The completed mapping for the BERT model is below:
 
 After importing a model, two [non-persistable](/refguide/persistability/) entities are created using the ML model *input* and *output* like in this [sample XGBoost ML model](https://github.com/mendix/mlkit-example-app/tree/main/mlsource/titanic_xgboost):
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/entities-example-1.png" alt="Input and output entities in the mapping document." >}}
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/entities-example-1.png" alt="Input and output entities in the mapping document." class="no-border" >}}
 
 In the image above, the attributes are mapped as closely as possible to data types in Studio Pro. 
 
-For non-structured data, such as most of the tensors for Neural Networks, the attributes of a model with a multidimensional parameter will be represented as a string. This is because Base64 is used to to encode the tensors to and from *ML Kit*.
+For non-structured data, such as most of the tensors for Neural Networks, the attributes of a model with a multidimensional parameter will be represented as a string. This is because Base64 is used to encode the tensors to and from *ML Kit*.
 
 In the image below from the [ResNet50 model mapping](https://github.com/mendix/mlkit-example-app/tree/main/mlsource/resnet50), the inputs and outputs are multidimensional and need to be encoded:
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/entities-example-2.png" alt="Multidimensional outputs that need to be encoded." >}}
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/entities-example-2.png" alt="Multidimensional outputs that need to be encoded." class="no-border" >}}
 
 See [Integrating Models with Pre-processors and Post-processors](#pre-post-processors).
 
@@ -130,7 +138,7 @@ Drag and drop the [Call ML model](/refguide/call-ml-model/) activity from the To
 
 In the microflow below, a [Create object](/refguide/create-object/) activity creates an object of input entity type, mapped to input tensors in the ML mapping document. The [Call ML model](/refguide/call-ml-model/) activity calls the ML model, and a [Change object](/refguide/change-object/) activity updates business object with predicted value.
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/drag-action-into-microflow.png" alt="Completed ML mapping. Described in the paragraph above." >}}
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/drag-action-into-microflow.png" alt="Completed ML mapping. Described in the paragraph above." class="no-border" >}}
 
 #### 2.3.2 Call ML Model Activity Details
 
@@ -140,7 +148,7 @@ The **Call ML model** activity is an **ML Kit** activity in the **Toolbox**. For
 
 Integrating machine learning models can sometimes require using a more complex structure. This includes having a pre-processor, the ML model itself, and a post-processor:
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/pre-post-processing-microflow.png" alt="Example of a microflow that includes a pre-processor and post-processor." >}}
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/pre-post-processing-microflow.png" alt="Example of a microflow that includes a pre-processor and post-processor." class="no-border" >}}
 
 ### 3.1 Pre-processing and Post-processing Using Java Actions {#java-pre-post}
 
@@ -154,7 +162,7 @@ The *pre-processor* is the block of code that manipulates the data before being 
 
 The required pre-processing varies a lot with each model and implementation, and can even be part of the ONNX file itself (see [Pre and post processing](https://onnxruntime.ai/docs/reference/build-web-app.html#pre-and-post-processing) in the ONNX Runtime documentation). It is highly coupled with the ML model, its training process, and the domain of knowledge.
 
-This [Random Forest example](https://www.kaggle.com/code/prashant111/random-forest-classifier-tutorial) example is trained with the Iris/Setosa dataset. The output is a long value, representing a flower type. The input is a base64 encoded float array, as we use Base64 encoded strings for passing multidimensional data to the Call ML Model action at this stage of development.
+This [Random Forest example](https://www.kaggle.com/code/prashant111/random-forest-classifier-tutorial) example is trained with the Iris/Setosa dataset. The output is a long value, representing a flower type. The input is a base64 encoded float array, as Mendix uses Base64 encoded strings for passing multidimensional data to the Call ML Model action at this stage of development.
 
 The pre-processor is essentially a standard Java Action that creates the multidimensional input for your model and in this case, encodes the data into a string with Base64 (see line 14 below). Another important step is to convert the Decimal data type into float, as the ONNX format uses that data type. But this may vary along models and implementations.
 
@@ -233,7 +241,7 @@ The ONNX community develops and maintains the converters for many ML frameworks.
 
 {{% alert color="info" %}}Once you build a model, see examples of notebooks that show you how to export them to ONNX in our [Mendix ML Kit Demo Repository](https://github.com/mendix/mlkit-example-app/tree/main/notebooks).{{% /alert %}}
 
-### 4.3 Versioning {#versioning}
+### 4.2 Versioning {#versioning}
 
 Use [ONNX versioning schemes](https://github.com/onnx/onnx/blob/main/docs/Versioning.md) while creating and integrating ONNX computation graphs with Mendix apps. Mendix Studio Pro guides developers to comply with the suggested internal representation, and package OpSets.
 
@@ -243,7 +251,7 @@ The released versions of the *ML Kit* and supported ONNX Runtime versions can be
 
 | Mendix Studio Pro | ML Kit   | ONNX Runtime |
 | ----------------- | -------- | ------------ |
-| 9.23              | Public Beta | 1.11.0       |
+| 9.23              | Public beta | 1.11.0       |
 
 ## 5 Monitoring and Troubleshooting
 
@@ -284,9 +292,9 @@ The [Log Message](/refguide/log-message/) activity is very flexible and can be u
 
 For example, a log message after an inference call made by the **Call ML Model** activity helps to observe the classification result of a ResNet model on a provided image:
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/exploit-log-message.png" alt="Image of a microflow with a log message activity." >}}
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/exploit-log-message.png" alt="Image of a microflow with a log message activity." class="no-border" >}}
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/log-message.png" alt="Details of the log message in a microflow example." >}}
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/ml-kit/log-message.png" alt="Details of the log message in a microflow example." class="no-border" >}}
 
 When you run the application and provide an image to make an inference, the **Console** will be populated with the related log message.
 
@@ -298,7 +306,7 @@ In general, the transformation of the multidimensional arrays is subject to Java
 
 For more information, see [Debug Java Actions](/howto/monitoring-troubleshooting/debug-java-actions/).
  
-## 6 Known Issues
+## 6 Known Issues {#known-issues}
 
 ### 6.1 I/O Data Types
 
@@ -326,7 +334,7 @@ The following chart displays tensor element types that are currently unsupported
 | Complex Types          | complex64, complex128 |
 
 Similar to the data type restrictions, Studio Pro does not allow usage of the unsupported types in the input fields but having at least a single supported tensor type in the output fields is enough to load and integrate an ONNX model with MLKit. See the [ONNX IR documentation](https://github.com/onnx/onnx/blob/main/docs/IR.md) for all tensor types.
-To integrate a pre-trained model with an unsupported type from model repositories (e.g. ONNX Model Zoo), one can use graph editing tools (for example, [onnx.helper](https://onnx.ai/onnx/api/helper.html) and [graphsurgeon](https://github.com/NVIDIA/TensorRT/tree/master/tools/onnx-graphsurgeon)) to convert an unsupported type to a supported type like float16 → float32.
+To integrate a pre-trained model with an unsupported type from model repositories (for example, ONNX Model Zoo), one can use graph editing tools (for example, [onnx.helper](https://onnx.ai/onnx/api/helper.html) and [graphsurgeon](https://github.com/NVIDIA/TensorRT/tree/master/tools/onnx-graphsurgeon)) to convert an unsupported type to a supported type like float16 → float32.
 
 ### 6.3 GPU Inference
 
@@ -334,36 +342,41 @@ This is currently not supported.
 
 ### 6.4 ML Kit in Mendix Apps
 
-You can only call the ML model via the MLKit from Microflows.
+You can only call the ML model via the ML Kit from microflows.
 
-## 7 FAQs
+## 7 FAQs {#FAQs}
 
-1. My model does not import properly. 
+### 7.1 My Model Does Not Import Properly
+
+This may indicate a corrupt model file. Studio Pro supports importing a wide variety of models, ranging from simple logistic regressors to [Whisper](https://github.com/zhuzilin/whisper-openvino), and a wide range of computer vision models. As long as the ML model is properly converted into the ONNX format and complies with the standard, Studio Pro is able to run it.
+
+Try re-downloading the ML model or verifying the conversion process. It is also advised to use the [netron.app](https://netron.app/) website to check whether your ONNX file is correct before importing it.
+
+### 7.2 The Outputs from My Model in the Training Environment Is Different from the Outputs in Studio Pro
    
-    This may indicate a corrupt model file. Studio Pro supports importing a wide variety of models, ranging from simple logistic regressors to [Whisper](https://github.com/zhuzilin/whisper-openvino), and a wide range of computer vision models, so as far as the ML model is properly imported into ONNX and complies with the standard, Studio Pro will be able to run it.
+When converting your model to ONNX, and especially if you use pre- and post-processors, type casting and conversion will occur.
 
-    Try re-downloading the ML model or verifying the conversion process.
+Check that all the new types you use and that the mathematical operations you conduct in your Java actions (if you use pre- or post-processing) are suitable for the Types the ML model expect/uses (for example, a division is casted to float if a float is expected).
 
-2. The output from my model outputs in the training environment is different from the outputs in Studio Pro.
+### 7.3 My Model Crashes Studio Pro or Its Execution Is Too Slow
    
-    When converting your model to ONNX, and especially if you use pre- and post-processors, type casting and conversion will occur.
-    Check that all the new types you use and that the mathematical operations you conduct in your Java actions (if you use pre- or post-processing) are suitable for the Types the ML model expect/uses (for example, a division is casted to float if a float is expected).
+While the ML model file size is small, the outputs or inputs of it may be not so. Look at the output for the detection model for [EasyOCR](https://github.com/JaidedAI/EasyOCR).
 
-3. My model crashes Studio Pro or its execution is too slow. 
-   
-    While the ML model file size is small, the outputs or inputs of it may be not so. Look at the output for the detection model for [EasyOCR](https://github.com/JaidedAI/EasyOCR).
+There are two outputs with the `Rely281_dim` and `Transposeoutput_dim` labels, both of them of 4 bytes length, as they are float32. Assuming a standard 224x224 pixels image, we will receive a ~10 mb object. If it is a larger image of 986 pixels, the memory footprint of that output grows to 133 mb, and that is for a single inference. A parallel microflow that calls the ML model ten times will require obviously ten times more memory, probably crashing the JVM.
 
-    There are two outputs with the `Rely281_dim` and `Transposeoutput_dim` labels, both of them of 4 bytes length, as they are float32. Assuming a standard 224x224 pixels image, we will receive a ~10 mb object. If it is a larger image of 986 pixels, the memory footprint of that output grows to 133 mb, and that is for a single inference. A parallel microflow that calls the ML model ten times will require obviously ten times more memory, probably crashing the JVM.
+In short: mind the growth of memory usage with very complex model outputs. 
 
-    In short: mind the growth of memory usage with very complex model outputs. 
+Another potential cause of crashing is if there is an inconsistency between the architecture of the ML model and the data injected into it, especially with complex operations in models that accepts complex calculations such as neural networks. For example, if your model has a `Convolution` layer of shape `16x16x1`, injecting a tensor of a shape whose algebraic division results in an integer result smaller than 1 (such as an input of `[1,3,15,15]`), will have unpredictable consequences. This might include Studio Pro crashing. Verify that the implementation of your model in Studio Pro matches, in shape and type of the data being sent into the component, the ML model architecture, or the ML model documentation if you obtained from third-party sources such as the ONNX Model Zoo.
 
-    Another potential cause of crashing is if there is an inconsistency between the architecture of the ML model and the data injected into it, especially with complex operations in models that accepts complex calculations such as neural networks. For example, if your model has a `Convolution` layer of shape `16x16x1`, injecting a tensor of a shape whose algebraic division results in an integer result smaller than 1 (such as an input of `[1,3,15,15]` , will have unpredictable consequences. This might include Studio Pro crashing. Verify that the implementation of your model in Studio Pro matches, in shape and type of the data being sent into the component, the ML model architecture, or the ML model documentation if you obtained from third-party sources such as the ONNX Model Zoo.
-
-4. I have an exception when executing the ML model or running it. 
+### 7.4 I Have an Exception When Executing the ML Model or Running It 
   
-    This situation is the most difficult to solve as the causes may vary a lot, ranging from an incompatible Studio Pro version to a failure inside the ML model or a permission issues.
+This situation is the most difficult to solve as the causes may vary a lot, ranging from an incompatible Studio Pro version to a failure inside the ML model or a permission issues. 
 
-    We recommend turning the logs to trace level, as the ML Engine provides a great deal of information on what is going on, and using this as a basis to decide next steps.
+Mendix recommends turning the logs to trace level, as the ML Engine provides a great deal of information on what is going on, and using this as a basis to decide next steps.
+
+### 7.5 My Model Runs Locally but Not in Production
+    
+The model you can run is limited to the maximum memory and storage space available in your environment.
 
 ## 8 Read More {#readmore}
 

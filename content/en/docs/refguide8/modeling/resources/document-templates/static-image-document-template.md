@@ -1,7 +1,6 @@
 ---
 title: "Static Image (Document Template)"
 url: /refguide8/static-image-document-template/
-tags: ["studio pro"]
 aliases:
     - /refguide8/Static+Image+(document+template).html
     - /refguide8/static-image-(document-template).html
@@ -10,17 +9,13 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/static-image-document-template.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 A static image shows a predefined image. It can be put either inside or outside a data view or template grid.
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide8/modeling/resources/document-templates/918133.png" >}}
+{{< figure src="/attachments/refguide8/modeling/resources/document-templates/918133.png" class="no-border" >}}
 
 A static image inside a table cell.
 

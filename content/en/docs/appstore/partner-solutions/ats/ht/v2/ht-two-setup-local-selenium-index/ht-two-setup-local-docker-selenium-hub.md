@@ -2,7 +2,6 @@
 title: "Set Up a Local Docker Selenium Hub"
 url: /appstore/partner-solutions/ats/ht-two-setup-local-docker-selenium-hub/
 description: "Describes the options to setup a local selenium solution."
-tags: ["ATS", "testing", "Selenium hub"]
 ---
 
 ## 1 Introduction
@@ -20,7 +19,7 @@ The following components are needed:
 * Some basic docker and docker-compose knowledge
 * A machine with the latest versions of **docker** and **docker-compose** installed
 * Your machine should allow connections from ATS on port 4444
-* Since version 2.6, ATS uses the Selenium 3.8.1 API. That's why we recommend using this version of Selenium for the docker images as well
+* Since version 2.6, ATS uses the Selenium 3.8.1 API, which is why using this version of Selenium for the Docker images is recommended
 
 ## 3 Installing Your Hub and Nodes with Docker-Compose
 
@@ -81,7 +80,7 @@ The following steps describe how to install your hub and nodes with Docker-Compo
 
 5. Check with the following link if the hub works: `http://localhost:4444/grid/console`. Note: You can also replace localhost with the server name or IP-address of the Docker host.
 
-    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-setup-local-selenium-index/ht-two-setup-local-docker-selenium-hub/docker_grid.png" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-setup-local-selenium-index/ht-two-setup-local-docker-selenium-hub/docker_grid.png" class="no-border" >}}
 
     Congratulation, your local Selenium hub is running.
 

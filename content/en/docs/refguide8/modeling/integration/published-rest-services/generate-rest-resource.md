@@ -3,14 +3,9 @@ title: "Generate a Published REST Resource"
 url: /refguide8/generate-rest-resource/
 weight: 20
 description: "Generate a published REST resource from an entity"
-tags: ["published REST", "resource", "entity", "operations", "expose", "studio pro"]
 # If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 # linked from DM: domain model > entity (right-click) > Expose as REST resource > Help (integration)
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/generate-rest-resource.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 

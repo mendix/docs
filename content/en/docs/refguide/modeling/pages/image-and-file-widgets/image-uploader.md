@@ -2,7 +2,6 @@
 title: "Image Uploader"
 url: /refguide/image-uploader/
 weight: 50
-tags: ["studio pro", "image uploader", "file widget", "widget"] 
 weight: 50
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -15,13 +14,13 @@ An image uploader is used to upload images to the server. It also generates a th
 
 In the example below, an image uploader is placed in a nested data view (the *Profile* entity is a specialization of System.Image):
 
-{{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/image-uploader/image-uploader.png" alt="Image Uploader" >}}
+{{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/image-uploader/image-uploader.png" alt="Image Uploader" class="no-border" >}}
 
 ## 2 Properties
 
 An example of image uploader properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/image-uploader/image-uploader-properties.png" alt="Image Uploader Properties"   width="250"  >}}
+{{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/image-uploader/image-uploader-properties.png" alt="Image Uploader Properties"   width="250"  class="no-border" >}}
 
 Image uploader properties consist of the following sections:
 
@@ -92,15 +91,15 @@ Do the following:
 
 3. In the **Generalization** property, click **Select**.
 
-   {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/image-uploader/generalization.png" >}}
+   {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/image-uploader/generalization.png" class="no-border" >}}
 
 4. In the **Select Entity** dialog box, choose **System.Image** and click the **Select** button.
 
-   {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/image-uploader/select-entity.png" >}}
+   {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/image-uploader/select-entity.png" class="no-border" >}}
 
 5. Click **OK**. Your entity now inherits all properties from the System.Image entity you selected:
 
-   {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/image-uploader/entity-example.png" >}}
+   {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/image-uploader/entity-example.png" class="no-border" >}}
 
 6. Open a page or a snippet where you would like to place the image uploader and add a data view there.
 
@@ -108,7 +107,7 @@ Do the following:
 
 8. Place the image uploader inside the data view. You can reference the page example below:
 
-    {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/image-uploader/page-example.png" >}}
+    {{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/image-uploader/page-example.png" class="no-border" >}}
 
 ## 4 Read More
 

@@ -1,7 +1,6 @@
 ---
 title: "OQL Functions"
 url: /refguide9/oql-functions/
-tags: ["studio pro"]
 ---
 
 For more information on OQL functions, see the pages below.

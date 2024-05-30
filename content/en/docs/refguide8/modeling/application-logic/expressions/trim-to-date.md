@@ -2,12 +2,7 @@
 title: "Trim to Date"
 url: /refguide8/trim-to-date/
 weight: 120
-tags: ["studio pro", "trim to date", "expression", "expressions"]
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/trim-to-date.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 

@@ -2,12 +2,7 @@
 title: "Date Creation"
 url: /refguide8/date-creation/
 weight: 90
-tags: ["studio pro", "expression", "date creation", "expressions"]
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/date-creation.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 

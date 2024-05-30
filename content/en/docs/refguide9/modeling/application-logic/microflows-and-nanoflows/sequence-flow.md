@@ -2,7 +2,6 @@
 title: "Sequence Flow"
 url: /refguide9/sequence-flow/
 weight: 30
-tags: ["studio pro", "sequence flow", "microflow"]
 ---
 
 ## 1 Introduction
@@ -11,7 +10,7 @@ A sequence flow is a flow that is shown an arrow that links elements (events, ac
 
 When you have two activities that you want to link together a sequence flow is used.
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/sequence-flow/sequence-flow.png" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/sequence-flow/sequence-flow.png" class="no-border" >}}
 
 ## 2 Condition Value
 

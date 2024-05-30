@@ -2,16 +2,11 @@
 title: "Sort Bar"
 url: /refguide8/sort-bar/
 weight: 50
-tags: ["studio pro", "sort bar", "grid"]
 aliases:
     - /refguide8/Sort+Bar.html
     - /refguide8/Sort+Bar
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/sort-bar.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 

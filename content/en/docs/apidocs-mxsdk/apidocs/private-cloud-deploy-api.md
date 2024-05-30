@@ -2,10 +2,13 @@
 title: "Mendix for Private Cloud Deploy API"
 url: /apidocs-mxsdk/apidocs/private-cloud-deploy-api/
 type: swagger
-category: "API Documentation"
 description: "This API allows you to manage application environments deployed to your private cloud using the Mendix Operator."
-weight: 60
+weight: 72
 ---
+
+{{% alert color="info" %}}
+This document is about [Private Cloud](/developerportal/deploy/private-cloud/) API. For [Private Mendix Platform](/private-mendix-platform/) API, see [Private Mendix Platform API Documentation](/apidocs-mxsdk/apidocs/private-platform/).
+{{% /alert %}}
 
 ## 1 Introduction
 
@@ -21,6 +24,10 @@ The Mendix for Private Cloud Deploy API allows you to manage application environ
 The Mendix for Private Cloud Deploy API is for connected private cloud clusters only.
 {{% /alert %}}
 
+{{% alert color="info" %}}
+The Global Operator installation is not yet available in Deploy API.
+{{% /alert %}}
+
 ## 2 Using the API
 
 To help you work with the Mendix for Private Cloud Build API, the following sections of this document describe how to authenticate for the API, how to manage asynchronous API calls, and what to keep in mind when assigning unique IDs for the resources.
@@ -31,7 +38,7 @@ Authentication for the API uses a personal access token (PAT).
 
 #### 2.1.1 Generating a PAT
 
-To generate a PAT, see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section of *Mendix Profile*.
+To generate a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section of *Mendix Profile*.
 
 Select the following as scopes:
 
@@ -66,7 +73,7 @@ Store the `{GENERATED_PAT}` value in a safe location, so you can use it to autho
 
 Each request must contain an `Authorization` header with the value `MxToken {GENERATED_PAT}`.
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/private-cloud-deploy-api/authorization-header.png" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/private-cloud-deploy-api/authorization-header.png" class="no-border" >}}
 
 To authenticate calls when using the Open API specification below, click **Authorize** and use the value `MxToken {GENERATED_PAT}`.
 
@@ -104,6 +111,10 @@ The following steps will create a cluster, register and install a namespace, add
 11. Call `GET /clusters` to retrieve all the clusters that have been created. Copy the `clusterId` from the response of this call.
 12. Make an API call `POST /clusters/{clusterId}` to add/update the cluster member. You can get the manifest for this update request from `GET /clusters/{clusterId}`.
 13. Make an API call `POST /clusters/{namespaceId}` to update the namespace development mode and set `enableDevelopmentMode` to true . You can get the manifest for this update request from `GET /clusters/{namespaceId}`.
+
+{{% alert color="info" %}}
+If required, the invitation for the cluster/namespace member can be auto-accepted by setting `autoAcceptInvite` to true in the update cluster/namespace API request.
+{{% /alert %}}
 
 ### 3.2 Using the API to Restart an App {#restart}
 
@@ -150,5 +161,9 @@ Please note that there is a limited support for Custom permissions in Deploy API
 {{% /alert %}}
 
 ## 4 API Reference
+
+{{% alert color="info" %}}
+Please note that the fields marked as non-editable in the OpenAPI .yaml file are used for read-only purposes. Any modifications made to the values of these fields will be ignored.
+{{% /alert %}}
 
 {{< swaggerui src="/openapi-spec/private-cloud-deploy-api.yaml"  >}}

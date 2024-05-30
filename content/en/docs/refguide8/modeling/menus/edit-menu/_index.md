@@ -3,18 +3,13 @@ title: "Edit Menu"
 url: /refguide8/edit-menu/
 description: "Describes the Edit Menu in Studio Pro."
 weight: 10
-tags: ["Studio Pro", "view menu", "top bar"]
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/edit-menu.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 
 Via the **Edit** menu you can perform various actions, such cut/copy/paste or search where a particular document is used. You can also open the [Preferences](/refguide8/preferences-dialog/) dialog that contains user-specific settings. 
 
-{{< figure src="/attachments/refguide8/modeling/menus/edit-menu/edit-menu.png" alt="Edit Menu"   width="300"  >}}
+{{< figure src="/attachments/refguide8/modeling/menus/edit-menu/edit-menu.png" alt="Edit Menu"   width="300"  class="no-border" >}}
 
 ## 2 Menu Item Overview
 

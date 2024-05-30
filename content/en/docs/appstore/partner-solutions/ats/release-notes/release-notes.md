@@ -5,6 +5,43 @@ description: "The release notes for Mendix Application Test Suite (ATS) with det
 weight: 100
 ---
 
+## 2.29.3
+
+**Release date: March 26, 2024**
+
+### Fixes
+
+* We fixed an issue that resulted in the improper functioning of the **Assert value** action for Selenium 4 hubs.
+ 
+## 2.29.2
+
+**Release date: January 16, 2024**
+
+### Improvements
+
+* Apps built with Studio Pro [10.6](/releasenotes/studio-pro/10.6/) can now be tested using ATS.
+* We upgraded to Studio Pro [8.18.27](/releasenotes/studio-pro/8.18/#81827) for security fixes.
+* We addressed support for the MacOs versions (11, 12, 13) and resolutions (2K, 4K) for Selenium 4.
+* We added support for the [Accordion](/appstore/widgets/accordion/) widget.
+
+### Deprecations
+
+* Selenium version 3 is now deprecated and will be disabled after April 30, 2024.
+
+## 2.29.1
+
+**Release date: November 7, 2023**
+
+### Improvements
+
+* We added support for [Mendix Epics](/appstore/partner-solutions/ats/ht-two-connect-stories-to-testcases/#set).
+
+### Fixes
+
+* We fixed an issue that resulted in the improper functioning of the **Find element by sizzle** action.
+* We fixed an issue where **Assert Validation Message** failed when **Negate** was set to true.
+* We fixed an issue that caused the **Open Mendix application** action to fail with a rendering timeout for Selenium 4.
+
 ## 2.29.0
 
 **Release date: July 25, 2023**
@@ -12,7 +49,7 @@ weight: 100
 ### Improvements
 
 * We have added support for Mendix 10.
-* We have added support for Selenium version 4 (BETA).
+* We have added support for Selenium version 4 (beta).
 * We have added support for the latest compatible browser versions for Chrome, Firefox, and Edge for Selenium 4.
 * We have removed support for the Internet Explorer browser.
 
@@ -674,14 +711,14 @@ These are the new features on Browserstack side:
 * Individual test case executions in Browserstack (meaning, **Sessions**) now correctly display the test case name instead of the job name. For test cases with an attached dataset, the test case name is suffixed with the index of the dataset record.
 * Test case executions in Browserstack now show the result from ATS.
 
-  {{< figure src="/attachments/releasenotes/add-ons/ats/ats-2/ats-2.10/browserstack.png" alt="Browserstack-ATS integration" >}}
+  {{< figure src="/attachments/releasenotes/add-ons/ats/ats-2/ats-2.10/browserstack.png" alt="Browserstack-ATS integration" class="no-border" >}}
 
 These are the new features on the ATS side:
 
 * We added a link to the Selenium session in Browserstack for each test case that was executed in Browserstack. You can use this in case the recording video does not load in ATS or if you want to see the Browserstack logs. You can find the link under the **Recording** tab.
 * To make it easier to navigate from Browserstack to ATS, we added options to look up jobs by the job GUID as well as individual test case logs by the Browserstack session ID. Both can be found on the **Test Runs** page under the **Jobs** tab.
 
-{{< figure src="/attachments/releasenotes/add-ons/ats/ats-2/ats-2.10/lookup.gif" alt="Browserstack-ATS integration" >}}
+{{< figure src="/attachments/releasenotes/add-ons/ats/ats-2/ats-2.10/lookup.gif" alt="Browserstack-ATS integration" class="no-border" >}}
 
 This table compares the nomenclature:
 
@@ -706,7 +743,7 @@ This table compares the nomenclature:
 
 ### Support for Mendix 7.22.2
 
-Mendix applications that are based on [Mendix version 7.22.2](/releasenotes/studio-pro/7.22/) can now be recorded and tested with ATS.
+Mendix applications that are based on [Mendix 7.22.2](/releasenotes/studio-pro/7.22/) can now be recorded and tested with ATS.
 
 ### Improvements
 
@@ -715,7 +752,7 @@ Mendix applications that are based on [Mendix version 7.22.2](/releasenotes/stud
 
 ### Fixes
 
-* We fixed an issue where a click was not be recorded on some buttons in Mendix versions 7.18+.
+* We fixed an issue where a click was not be recorded on some buttons in Mendix 7.18 and above.
 * In rare cases under a very high testing load, jobs got stuck in the queued status. We have added additional checks to prevent this from happening.
 * In some scenarios, the **Recordings** tab was not available in ATS. We addressed this issue by changing the way recordings are retrieved.
 * We fixed a UI issue where double-clicking on an item in an ATS repository showed a generic error message.
@@ -761,7 +798,7 @@ We do not expect this change to cause any issues with existing tests. However, i
 
 ### Mendix 7.17
 
-Mendix applications that are based on Mendix version 7.17 can now be tested and recorded with ATS.
+Mendix applications that are based on Mendix 7.17 can now be tested and recorded with ATS.
 
 ### Fixes
 
@@ -813,16 +850,16 @@ For more details on tenant administration, see [Administration](/appstore/partne
 
 ### Mendix 7.16
 
-Mendix applications based on Mendix version 7.16 can now be tested and recorded with ATS.
+Mendix applications based on Mendix 7.16 can now be tested and recorded with ATS.
 
 ### Fixes
 
 * We fixed the issue where it was not possible to export documentation for test cases/suites with a description longer than 200 characters
-* We fixed the issue that occurred in version 2.8, where clicking a button that triggered an asynchronous microflows after a confirmation dialog would cause a *Timeout exception while waiting the application to be idle*
+* We fixed the issue that occurred in version 2.8, where clicking a button that triggered an asynchronous microflows after a confirmation dialog would cause a **Timeout exception while waiting the application to be idle**.
 
 ### Limitations
 
-* For Mendix versions 7.13 and above it is likely that test will not properly wait for the execution of asynchronous microflows. As a temporary workaround please manually add the **Sleep** step with a proper duration after triggering asynchronous microflows.
+* For Mendix 7.13 and above, it is likely that test will not properly wait for the execution of asynchronous microflows. As a temporary workaround please manually add the **Sleep** step with a proper duration after triggering asynchronous microflows.
 * We did not explicitly test the impact of nanoflows on ATS, but we have not yet received any issue reports related to them
 
 ## 2.8.0
@@ -833,11 +870,11 @@ Mendix applications based on Mendix version 7.16 can now be tested and recorded 
 
 It is now possible to give members of an ATS app, administration rights directly from the "App Settings" page in ATS. In other words it is no longer required for an app administrator in ATS to have an administrative role in the project in Mendix Sprintr. Please keep in mind that users still need to be a member of a project in Sprintr for them to be eligible to be app administrators for the corresponding app in ATS.
 
-In order to make sure that administration rights which have been granted to users are not overwritten, we no longer automatically revoke administration rights when the project role for a user in Sprintr changes from administrator to non-administrator. Instead, revoking administration rights can be done manually from the "App Settings" page. Finally, note that a user who has an administrative project role in Sprintr will always have administrative rights in ATS.
+In order to make sure that administration rights which have been granted to users are not overwritten, we no longer automatically revoke administration rights when the project role for a user in Developer Portal changes from administrator to non-administrator. Instead, revoking administration rights can be done manually from the "App Settings" page. Finally, note that a user who has an administrative project role in Developer Portal will always have administrative rights in ATS.
 
 ### Mendix 7.13, 7.14, and 7.15
 
-Mendix applications which are based on Mendix version 7.13, 7.14 or 7.15, can now be tested and recorded with ATS.
+Mendix applications which are based on Mendix 7.13, 7.14 or 7.15, can now be tested and recorded with ATS.
 
 ### Mobile Testing Improvements
 
@@ -860,21 +897,21 @@ It is now possible to see a video recording for test cases executed on Browserst
 
 ### Fixes
 
-* The built-in function *Assert Condition Fails* was not working due to a bug . It is now fixed.
-* The built-in function *Assert at least one not null* was not working due to a bug. It is now fixed.
+* The built-in function **Assert Condition Fails** was not working due to a bug . It is now fixed.
+* The built-in function **Assert at least one not null** was not working due to a bug. It is now fixed.
 * The **Click Widget** action didn't propagate failures properly. As a consequence, a test step that used this action was not marked as failed, even though the actual click was not successful. This has been fixed.
 * Coping a data-driven test case did not copy the association to the dataset. This is now fixed.
 * When using a dataset field as in an test step where the parameter type is "Any" this was falsely classified as incompatible type issue and shows up under the "Test data" tab. This is now fixed.
 
 ### Important Change
 
-The built-in function *Assert not null* behavior has been changed. Up to and including ATS 2.7 this function would pass if an object is null. This was the wrong behavior which directly contradicted the expected behavior based on the function's name. Therefore, we made changes to the function so that, when a null object is asserted the function fails. We updated the functions's description accordingly.
+The built-in function **Assert not null** behavior has been changed. Up to and including ATS 2.7 this function would pass if an object is null. This was the wrong behavior which directly contradicted the expected behavior based on the function's name. Therefore, we made changes to the function so that, when a null object is asserted the function fails. We updated the functions's description accordingly.
 
-**IMPORTANT:** To avoid breaking test cases which were already using this function with its past behavior, we decided to replace all past uses of the function *Assert not null* with *Assert null*. This change is done automatically and will not affect the behavior of your existing test cases.
+**IMPORTANT:** To avoid breaking test cases which were already using this function with its past behavior, we decided to replace all past uses of the function**Assert not null** with **Assert null**. This change is done automatically and will not affect the behavior of your existing test cases.
 
 ### Limitations
 
-* Regarding *Nanoflows*, we have not explicitly tested their impact on ATS, but so far we have not received issue reports related to them.
+* Regarding nanoflows, we have not explicitly tested their impact on ATS, but so far we have not received issue reports related to them.
 
 ## 2.7.1
 
@@ -889,7 +926,7 @@ We are happy to announce that ATS now supports mobile testing for web applicatio
 * You can use the ATS recorder even if you have different pages for desktop and mobile.
 
 {{% alert color="warning" %}}
-This Beta feature has been discontinued.
+This beta feature has been discontinued.
 {{% /alert %}}
 
 ### Option
@@ -946,7 +983,7 @@ The same holds for the function parameters.
 ### Fixes
 
 * Due to an artificial limitation only the first 20 fields were shown when editing a dataset. This limitation has been removed.
-* When a test step in the logs refers to a function it is not possible to open/edit this function. However, due to a bug the edit icon was still shown for such test steps. This has been fixed.
+* When a test step in the logs refers to a function it is not possible to open/edit this function. However, due to a bug the **Edit** icon ({{% icon name="pencil" %}}) was still shown for such test steps. This has been fixed.
 * When a test case with an empty test step in the middle was executed, the test case failed with a null pointer exception. This is now fixed and the empty test step is not interfering with the execution.
 * In some cases the tooltip for action/parameter documentation was not showing the full description. This is now fixed.
 * When pasting items in the repository it was possible to click the paste button multiple times. This is fixed by adding a progress bar to prevent pasting an item multiple times by accident.
@@ -1000,7 +1037,7 @@ You can now run ATS tests against Internet Explorer 11. We are happy to announce
 
 ### Mendix 7.11 and 7.12
 
-Mendix applications built on Mendix versions 7.11 or 7.12 can now be tested and recorded with ATS. We have not explicitly tested the impact of nanoflows (the newest feature added in Mendix 7.12) on ATS, but we do not expect any significant problems here.
+Mendix applications built on Mendix 7.11 or 7.12 can now be tested and recorded with ATS. We have not explicitly tested the impact of nanoflows (the newest feature added in Mendix 7.12) on ATS, but we do not expect any significant problems here.
 
 ### Improvements
 
@@ -1008,7 +1045,7 @@ Mendix applications built on Mendix versions 7.11 or 7.12 can now be tested and 
 * We added support for the Radiobutton List widget and for the Input Reference Set Selector widget. They can be recorded as well as tested with the standard ATS function.
 * We now support the newest macOS version: macOS High Sierra.
 * You can now select multiple items in the search dialog box by holding down <kbd>Ctrl</kbd> while clicking the items. This is possible when you are adding a test case/suite to a test suite, adding test cases/suites to a story, and adding stories to a test case/suite.
-* A parameter of the text type now also shows the edit icon when it is empty.
+* A parameter of the text type now also shows the **Edit** icon ({{% icon name="pencil" %}}) when it is empty.
 
 ### Fixes
 
@@ -1038,7 +1075,7 @@ Mendix applications built on Mendix versions 7.11 or 7.12 can now be tested and 
 
 Core actions lie at the heart of ATS. They enable testers to interact with Mendix widgets without having to worry about the internal structures and functions of the widgets. Naturally, we are constantly looking for ways to improve our core actions. In that regard, we are happy to announce that we designed and developed a completely new architecture for core actions. Because this new architecture is very different from the way actions were implemented in the past, we decided to rename core actions to **functions** to make the distinction clearer. The new function architecture will enable us to write functions that are smarter than their core action counterparts. This change is completely in the back end (meaning, "under the hood"), so you do not have to change anything in the way you are using ATS in order to benefit from the new architecture.
 
-This opens up a lot exciting possibilities for us as ATS developers. For example, we were able to write *context-aware* Get/Set Value functions. Previously, the corresponding core actions could only handle a few widgets. The new functions, on the contrary, support much more widgets, such as the Boolean slider widget, Bootstrap WYSIWYG editor, CKEditor, input reference selector, date picker, and radio button list. Furthermore, with the new architecture, functions should be more stable and more reliable. For a detailed list of the updated functions make sure to check the [ATS Reference Guide](/appstore/partner-solutions/ats/rg-two-ats/). In the future, we plan to utilize the new architecture to bring you even more improvements to the functions.
+This opens up a lot exciting possibilities for us as ATS developers. For example, we were able to write **context-aware** Get/Set Value functions. Previously, the corresponding core actions could only handle a few widgets. The new functions, on the contrary, support much more widgets, such as the Boolean slider widget, Bootstrap WYSIWYG editor, CKEditor, input reference selector, date picker, and radio button list. Furthermore, with the new architecture, functions should be more stable and more reliable. For a detailed list of the updated functions make sure to check the [ATS Reference Guide](/appstore/partner-solutions/ats/rg-two-ats/). In the future, we plan to utilize the new architecture to bring you even more improvements to the functions.
 
 ### Improvements
 
@@ -1050,7 +1087,7 @@ This opens up a lot exciting possibilities for us as ATS developers. For example
 * The PDF report still showed the result category **Unknown**, which was removed from the dashboard some time ago. To keep the reporting consistent between the dashboard and the PDF, we removed the category Unknown from the PDF report as well.
 * Under rare circumstances, the test suite results progress bar (shown on the dashboard) turned green, even though the percentage of passed test cases was below 100%. This is now fixed, and the progress bar will only be green if the percentage of past cases is exactly 100%.
 * When recording the **Click Widget button** action (which is used to click special list view, template grid, and data grid buttons such as search, clear, reset, etc.), the recorded action did not save the information about which button was clicked in the test step. This is now fixed.
-* Moving items from one project to another was not possible if the items' parent folder(s) still existed in another app. This is now possible. Please note that although importing items that already exist in another app is not allowed, you can circumvent this by, for example, copying a test case from app A, exporting the copy from app A, deleting the copy from app A, then importing the copy into app B.
+* Moving items from one project to another was not possible if the items' parent folder (or folders) still existed in another app. This is now possible. Please note that although importing items that already exist in another app is not allowed, you can circumvent this by, for example, copying a test case from app A, exporting the copy from app A, deleting the copy from app A, then importing the copy into app B.
 * In some rare circumstances, importing a complex test set failed due to an internal error. This is now fixed.
 * Exporting items that contained empty test steps (for example, a test step was added but no action was selected for the test step) was not possible. Items with empty test steps can now be exported.
 * A validation check was missing that allowed users to execute a test case with a dataset that has no records. This execution was followed by an error that did not provide much information to end-users. We added an extra validation check and improved the message that the user sees.
@@ -1219,7 +1256,7 @@ We accomplished this by providing a single, multi-tenant SaaS instance of ATS in
 
 ATS is now offered as a service. There is a single multi-tenant instance in the Mendix Cloud to serve all customers:
 
-[http://ats.mendix.com](http://ats.mendix.com)
+[https://ats.mendix.com](https://ats.mendix.com)
 
 This instance is operated and maintained by CLEVR and Mendix. As a customer, you can enjoy the typical SaaS benefits. CLEVR and Mendix deliver maintenance, updates, and fixes faster than ever. You can access new features as soon as we publish a new release.
 
@@ -1227,7 +1264,7 @@ All customers can use this instance without affecting each other's work. Data is
 
 #### SSO and App Synchronization
 
-You should not have to spend time on setting up and configuring an application before using it the first time. So, as soon as you open [http://ats.mendix.com](http://ats.mendix.com), you will automatically be signed in with your Mendix account.
+You should not have to spend time on setting up and configuring an application before using it the first time. So, as soon as you open [https://ats.mendix.com](https://ats.mendix.com), you will automatically be signed in with your Mendix account.
 
 After login, the ATS dashboard shows all your licensed apps. From there, you can select one of your apps and start testing.
 
@@ -1251,7 +1288,7 @@ You are able to browse all your folders, actions, test cases, and test suites vi
 
 #### Test Case Editing
 
-Editing test cases is one of the main tasks in ATS. We've listened to your feedback to improve this page. Test cases can become very large, so we use the same list-like view as in the repository to show all test steps. When you click a step, it will expand and expose all the details for you to edit. Click it again to collapse. Reordering of steps has been a pain, but it is now a joy. You can now drag and drop!
+Editing test cases is one of the main tasks in ATS. We've listened to your feedback to improve this page. Test cases can become very large, so Mendix uses the same list-like view as in the repository to show all test steps. When you click a step, it will expand and expose all the details for you to edit. Click it again to collapse. Reordering of steps has been a pain, but it is now a joy. You can now drag and drop!
 
 #### Results and Logs
 
@@ -1508,7 +1545,7 @@ Unfortunately recording for the Input Reference Selector, CKEditor, and Bootstra
 
 ## 1.6.0
 
-***Date: August 29, 2016***
+**Date: August 29, 2016**
 
 ### Data-Driven Testing
 
@@ -1524,14 +1561,14 @@ Check the documentation on how to [create/maintain test data](/appstore/partner-
 
 * Click Widget action now doesn’t try to click invisible widgets
 * Recorder now also records when there is no mxname class on the lowest element
-* Recorder now never returns the *NO_UNIQUE_PATH* message if there is any possible unique combination of mxnames to identify the widget
-* The actions *Get Value*, *Assert Value* and *Find Widget* (with *Value* parameter set) now also recognize all text widgets
+* Recorder now never returns the **NO_UNIQUE_PATH** message if there is any possible unique combination of mxnames to identify the widget
+* The actions **Get Value**, **Assert Value**, and **Find Widget** (with **Value** parameter set) now also recognize all text widgets
 * Improved layout and usability on import dialog and overview page
 * Several theme fixes
 
 ### Deprecations
 
-* The *Click Item/Row* action has been deprecated in favor of the generic *Click Widget* action. To click a certain listview/templategrid/datagrid item/row you simply use the index classes (index-0 for the first, index-1 for the second item/row etc.).
+* The **Click Item/Row** action has been deprecated in favor of the generic **Click Widget** action. To click a certain listview/templategrid/datagrid item/row you simply use the index classes (index-0 for the first, index-1 for the second item/row etc.).
 
 ### Notes
 
@@ -1539,7 +1576,7 @@ Check the documentation on how to [create/maintain test data](/appstore/partner-
 
 ## 1.5.0
 
-***Date: July 18, 2016***
+**Date: July 18, 2016**
 
 ### User Experience
 

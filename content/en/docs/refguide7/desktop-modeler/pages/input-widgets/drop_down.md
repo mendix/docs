@@ -1,7 +1,6 @@
 ---
 title: "Drop-Down"
 url: /refguide7/drop_down/
-tags: ["Drop-down", "input", "page", "widget", "enumeration"]
 aliases:
     - /refguide7/drop-down-widget.html
     - /refguide7/drop-down-widget
@@ -12,7 +11,7 @@ A drop-down is an [input widget](/refguide7/input-widgets/) that can be used to 
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide7/desktop-modeler/pages/input-widgets/drop_down/drop-down.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/input-widgets/drop_down/drop-down.png" class="no-border" >}}
 
 This drop-down widget allows the user to select their favorite color.
 {{% /alert %}}

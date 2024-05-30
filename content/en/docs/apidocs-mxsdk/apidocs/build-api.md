@@ -1,10 +1,8 @@
 ---
 title: "Build API"
 url: /apidocs-mxsdk/apidocs/build-api/
-category: "API Documentation"
 description: "An API that enables triggering and managing deployment package builds and getting information about existing deployment packages." 
-weight: 15
-tags: ["API", "Build Server", "Team Server", "Deployment package", "Mendix Cloud"]
+weight: 20
 ---
 
 {{% alert color="warning" %}}
@@ -19,7 +17,7 @@ You can use webhooks to trigger CI/CD pipelines which use this API. These are de
 
 The image below provides a domain model representation of the concepts discussed below and how these are related:
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/build-api/api-model.png" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/build-api/api-model.png" class="no-border" >}}
 
 ## 2 API Calls
 
@@ -29,7 +27,8 @@ The image below provides a domain model representation of the concepts discussed
 
 Retrieves all deployment packages that are available for a specific app that the authenticated user has access to as a regular user. These packages can be found if you click **Details** on an app in the **Nodes** screen in the Mendix Platform.
 
-```http
+```http {linenos=false}
+
 HTTP Method: GET
 URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages
 ```
@@ -42,7 +41,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages
 
 ##### 2.1.2.2 Example
 
-```http
+```http {linenos=false}
 GET /api/1/apps/calc/packages HTTP/1.1
 Host: deploy.mendix.com
 Accept: */*
@@ -73,7 +72,7 @@ List of objects with the following key-value pairs:
 
 ##### 2.1.3.2 Example
 
-```json
+```json {linenos=false}
 [{
      "Name" :  "Main line-1.1.5.9.mda" ,
      "Status" :  "Succeeded" ,
@@ -82,7 +81,7 @@ List of objects with the following key-value pairs:
      "CreationDate" :  1404739654045 ,
      "Version" :  "1.1.5.9" ,
      "PackageId" :  "4ee10492-6cfc-4582-b825-a9040c0988ad" ,
-     "Size" :  1.057138442993164
+     "Size" :  1999059
 },{
      "Name" :  "Main line-2.5.4.63.mda" ,
      "Status" :  "Succeeded" ,
@@ -91,7 +90,7 @@ List of objects with the following key-value pairs:
      "CreationDate" :  1404990271835 ,
      "Version" :  "2.5.4.63" ,
      "PackageId" :  "b3d14e53-2654-4534-b374-9179a69ef3cf" ,
-     "Size" :  3.0571174621582031
+     "Size" :  7731521
 }]
 ```
 
@@ -101,7 +100,7 @@ List of objects with the following key-value pairs:
 
 Retrieves a specific deployment package that is available for a specific app that the authenticated user has access to as a regular user. This package can be found if you click **Details** on an app in the **Nodes** screen in the Mendix Platform.
 
-```http
+```http {linenos=false}
 HTTP Method: GET
 URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId>?url=<Boolean>
 ```
@@ -116,7 +115,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId>?url=<Bool
 
 ##### 2.2.2.2 Example
 
-```http
+```http {linenos=false}
 GET /api/1/apps/calc/packages/b3d14e53-2654-4534-b374-9179a69ef3cf?url=true HTTP/1.1
 Host: deploy.mendix.com
 Accept: */*
@@ -144,8 +143,8 @@ An object with the following key-value pairs:
 * *Size* (Long) : Size of the package in bytes
 * *Url* (object): A json object containing the following:
 
-    * *Location*: The URL pointing to the package file.
-    * *TTL*: How long the URL is valid (in seconds).
+    * *Location* (String): The URL pointing to the package file.
+    * *TTL* (Long): How long the URL is valid (in seconds).
 
 ##### 2.2.3.1 Error Codes
 
@@ -156,7 +155,7 @@ An object with the following key-value pairs:
 
 ##### 2.2.3.2 Example
 
-```json
+```json {linenos=false}
 {
     "Name" :  "Main line-2.5.4.63.mda" ,
     "Status" :  "Succeeded" ,
@@ -179,7 +178,7 @@ An object with the following key-value pairs:
 
 Deletes a specific deployment package that is available for a specific app that the authenticated user has access to as a regular user. This package can be found if you click **Details** on an app in the **Nodes** screen in the Mendix Platform.
 
-```http
+```http {linenos=false}
 HTTP Method: DELETE
 URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId>
 ```
@@ -191,7 +190,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId>
 * *AppId* (String) : Subdomain name of an app
 * *PackageId* (String) : Id of the deployment package
 
-```http
+```http {linenos=false}
 DELETE /api/1/apps/calc/packages/b3d14e53-2654-4534-b374-9179a69ef3cf HTTP/1.1
 Host: deploy.mendix.com
 
@@ -208,7 +207,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 | 404 | PACKAGE_NOT_FOUND | Package or build job not found. |
 | 409 | PACKAGE_IN_USE | Package is still in use. |
 
-### 2.4 Download Package{#download-package}
+### 2.4 ⚠ Download Package{#download-package}
 
 {{% alert color="warning" %}}
 The **Download Package** call of the build API is deprecated. Please use [Retrieve Package](#retrieve-package) with the `url=true` parameter instead.
@@ -216,7 +215,7 @@ The **Download Package** call of the build API is deprecated. Please use [Retrie
 
 Downloads a specific deployment package that is available for a specific app that the authenticated user has access to as a regular user. This package can be found if you click **Details** on an app in the **Nodes** screen in the Mendix Platform.
 
-```http
+```http {linenos=false}
 HTTP Method: GET
 URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId>/download
 ```
@@ -228,7 +227,7 @@ Parameters
 * *AppId* (String) : Subdomain name of an app.
 * *PackageId* (String) : Id of the deployment package.
 
-```http
+```http {linenos=false}
 GET /api/1/apps/calc/packages/b3d14e53-2654-4534-b374-9179a69ef3cf/download HTTP/1.1
 Host: deploy.mendix.com
 Accept: */*
@@ -250,7 +249,7 @@ Error codes
 
 Start the process to build a deployment package, based on the team server project of a specific app that the authenticated user has access to as a regular user. This package can be found if you click **Details** on an app in the **Nodes** screen in the Mendix Platform. For a Free App, this will also trigger a deployment of the new package.
 
-```http
+```http {linenos=false}
 HTTP Method: POST
 URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages
 ```
@@ -263,22 +262,22 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages
 
 ##### 2.5.1.2 Payload
 
-The payload depends on whether the app is held in a [git repository or an SVN repository](/refguide/version-control-faq/#which-team-server).
+The payload depends on whether the app is held in a [Git repository or an SVN repository](/refguide/version-control-faq/#which-team-server).
 
 An object with the following key-value pairs:
 
 * *Branch* (String) : Name of the branch.
     * For SVN, this is 'trunk' for the main line or 'branches/*branch name*' for a specific branch.
-    * For git, this is 'main' for the main line or 'branches/*branch name*' for a specific branch.
+    * For Git, this is 'main' for the main line or 'branches/*branch name*' for a specific branch.
 * *Revision* (String) : Number of the revision to build a package from.
     * For SVN, this is an integer reflecting the revision number.
-    * For git, this is the commit hash. The API will accept either the short commit hash or the full commit hash.
+    * For Git, this is the commit hash. The API will accept either the short commit hash or the full commit hash.
 * *Version* (String) : Package version. This will also be the name of the tag on the project team server.
 * *Description* (String) : Description of the package.
 
 ##### 2.5.1.3 Example
 
-```http
+```http {linenos=false}
 POST /api/1/apps/calc/packages HTTP/1.1
 Host: deploy.mendix.com
 Accept: */*
@@ -287,7 +286,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 {
      "Branch" : "branches/feature" ,
-     "Revision" :  63 ,
+     "Revision" :  "63" ,
      "Version" :  "2.5.4" ,
      "Description" :  "Add scientific mode"
 }
@@ -317,7 +316,7 @@ Error codes
 
 ##### 2.5.2.1 Example
 
-```json
+```json {linenos=false}
 {
      "PackageId" :  "b3d14e53-2654-4534-b374-9179a69ef3cf"
 }

@@ -2,12 +2,7 @@
 title: "Grids"
 url: /refguide8/grids/
 weight: 20
-tags: ["studio pro", "grid", "data grid", "template grid"]
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/grids.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 

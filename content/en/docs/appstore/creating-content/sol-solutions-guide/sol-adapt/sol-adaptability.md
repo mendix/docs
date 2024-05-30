@@ -4,7 +4,6 @@ url: /appstore/creating-content/sol-adaptability-best-practices/
 linktitle: "Best Practices for Adaptability"
 weight: 3
 description: "Best practices for creating a solution for adaptation"
-tags: ["solutions", "adaptable solutions", "best practices", "adaptability"]
 ---
 
 ## 1 Domain Model
@@ -32,7 +31,7 @@ Alternatively, it is possible to use specializations. Mendix recommends consider
 
 Here is an example:
 
-{{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-adapt/sol-adaptability-best-practices/adaptability-domain-model-example.png" alt="Example of data model extensions"  >}}
+{{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-adapt/sol-adaptability-best-practices/adaptability-domain-model-example.png" alt="Example of data model extensions"  class="no-border" >}}
 
 In this example, the following details apply:
 
@@ -109,6 +108,12 @@ Only adaptable content can be translated, since protected content is locked down
 
 Variables cannot (easily) be translated, nor can text be changed in a protected microflow (since this is locked down). As a workaround for this, consider using an editable Enumeration as an “internationalization map” combined with the [getCaption](/refguide/enumerations-in-expressions/#get-caption) function. 
 
-## 6 Read More
+## 6 Java Source Code Protection
+
+Setting the export level to **Hidden** on a Java action prevents the unpacking of the action in the app directory in the same path as regular modules. Your Java code is put in a package, but no obfuscation or other security measures take place. This means that reverse engineering the package would reveal your source code.
+
+Mendix does not offer a facility to further protect intellectual property in your Java files. For further protection, Mendix recommends using other software (for example, to obfuscate your source code).
+
+## 7 Read More
 
 * [Using the Right Components](https://academy.mendix.com/link/modules/510/lectures/4050/2.1-Using-the-Right-Components)

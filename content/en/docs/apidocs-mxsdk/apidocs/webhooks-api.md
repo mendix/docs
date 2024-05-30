@@ -2,13 +2,9 @@
 title: "Webhooks API"
 url: /apidocs-mxsdk/apidocs/webhooks-api/
 type: swagger
-category: "API Documentation"
-weight: 97
+weight: 120
 description: "Use this API to manage webhooks."
-tags: ["API", "webhooks", "Mendix Cloud"]
 ---
-
-{{% alert color="warning" %}} This feature is in Beta. For more information on Beta products, see [Beta Releases](/releasenotes/beta-features/). {{% /alert %}}
 
 ## 1 Introduction
 
@@ -28,7 +24,7 @@ Authentication for the Webhooks API uses a personal access token (PAT).
 
 ### 2.1 Generating a PAT
 
-To generate a PAT, see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section in *Mendix Profile*.
+To generate a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section in *User Settings*.
 
 Select the following as scopes:
 
@@ -37,7 +33,7 @@ Select the following as scopes:
 
 Store the generated value `{GENERATED_PAT}` somewhere safe so you can use it to authorize your Mendix Cloud Webhooks API calls.
 
-### 2.2 Using the PAT
+### 2.2 Using the PAT {#use-pat}
 
 Each request must contain an `Authorization` header with the value `MxToken {GENERATED_PAT}`. For example:
 

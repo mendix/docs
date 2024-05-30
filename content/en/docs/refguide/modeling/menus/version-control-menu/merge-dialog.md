@@ -1,7 +1,6 @@
 ---
-title: "Merge Dialog"
+title: "Merge Dialog Box"
 url: /refguide/merge-dialog/
-tags: ["studio pro", "merge-dialog", "merge", "version control"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -15,7 +14,7 @@ Before continuing with the merge action, make sure you are currently working in 
 
 To access the **Merge** dialog box, open [Version Control](/refguide/version-control-menu/) > **Merge Changes Here**:
 
-{{< figure src="/attachments/refguide/modeling/menus/version-control-menu/merge-dialog/merge-dialog.png" alt="Merge Dialog" >}}
+{{< figure src="/attachments/refguide/modeling/menus/version-control-menu/merge-dialog/merge-dialog.png" alt="Merge Dialog" class="no-border" >}}
 
 Available scenarios are described in sections below.
 
@@ -36,6 +35,15 @@ Choose whether you want to merge just a single commit or a whole range of commit
 ## 3 Merge Feature Branch
 
 This merge scenario allows you to merge a complete feature branch line to the main line.
+
+To merge the whole branch back to the main line to integrate a new feature there, do the following:
+
+1. Open the main line.
+2. Choose **Version Control > Merge Changes Here**.
+3. Select **Merge feature branch** option.
+4. Click **Merge**.
+5. Resolve any conflicts and errors.
+6. Commit the new feature to the main line.
 
 ### 3.1 Branch Line
 

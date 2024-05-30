@@ -2,7 +2,6 @@
 title: "Data Accessibility and Security"
 url: /catalog/manage/security/
 description: "Describes security aspects around registered assets and access."
-tags: ["Catalog", "security", "entity security", "dataset security","odata service security"]
 aliases:
     - /data-hub/data-hub-catalog/security/
     - /data-hub/data-hub-catalog/manage-data-sources/security/
@@ -28,7 +27,7 @@ Registered data sources have the following classifications that apply to the vis
 
 The **Access Level** of the asset indicates the runtime security on the data source and what users can see and use when consuming datasets in their app development.
 
-The access level for a registered OData service is shown in the **Service Metadata** panel in the Catalog.
+The access level for a registered service is shown in the **Service Metadata** panel in the Catalog.
 
 ## 3 Read More
 

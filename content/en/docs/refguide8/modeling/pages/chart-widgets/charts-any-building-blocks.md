@@ -3,12 +3,7 @@ title: "Any Chart Building Blocks"
 url: /refguide8/charts-any-building-blocks/
 description: "A reference for the Any Chart building blocks which are provided as part of the Any Chart widget"
 weight: 40
-tags: ["Any Chart", "Charts", "Building Blocks", "Widget", "Studio Pro"]
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/charts-any-building-blocks.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 

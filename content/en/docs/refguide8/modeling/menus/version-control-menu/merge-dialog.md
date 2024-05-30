@@ -1,13 +1,8 @@
 ---
 title: "Merge Dialog"
 url: /refguide8/merge-dialog/
-tags: ["studio pro", "merge-dialog", "merge", "version control"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/merge-dialog.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 
@@ -15,7 +10,7 @@ With the **Merge** dialog you can [merge](/refguide8/version-control/#merge) cha
 
 To access the **Merge** dialog, open [Version Control menu](/refguide8/version-control-menu/) > **Merge Changes Here**:
 
-{{< figure src="/attachments/refguide8/modeling/menus/version-control-menu/merge-dialog/merge-dialog.png" alt="Merge Dialog" >}}
+{{< figure src="/attachments/refguide8/modeling/menus/version-control-menu/merge-dialog/merge-dialog.png" alt="Merge Dialog" class="no-border" >}}
 
 {{% alert color="warning" %}}
 Before continuing with the merge action, please make sure that you are currently working in the development line that you want to merge to.

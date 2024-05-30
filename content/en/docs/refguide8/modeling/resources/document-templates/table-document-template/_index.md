@@ -9,10 +9,6 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/table-document-template.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 Tables can be used to change the layout of the form. They contain a number of rows and columns and the intersection of the two is called a cell. Each cell can contain widgets. Cells can be merged horizontally and vertically to allow for asymmetric layouts.
@@ -21,7 +17,7 @@ Tables can be used both inside and outside the data view or templategrid widgets
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide8/modeling/resources/document-templates/918134.png" >}}
+{{< figure src="/attachments/refguide8/modeling/resources/document-templates/918134.png" class="no-border" >}}
 
 This table has four rows and three columns. The last row contains a data view with another table.
 

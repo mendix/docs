@@ -2,12 +2,7 @@
 title: "Variable Activities"
 url: /refguide8/variable-activities/
 weight: 40
-tags: ["studio pro", "variable activities", "variable", "variables"]
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/variable-actiities.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 
@@ -16,7 +11,7 @@ In a microflow or nanoflow you can add a variable, assign a value to it and then
 
 The activities described in this document are in the **Variable Activities** section of the **Toolbox**:
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/activities/variable-activities/variable-activities.png" alt="Variable Activities" >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/variable-activities/variable-activities.png" alt="Variable Activities" class="no-border" >}}
 
 The following are the client activities you can use in your microflow or nanoflow:
 

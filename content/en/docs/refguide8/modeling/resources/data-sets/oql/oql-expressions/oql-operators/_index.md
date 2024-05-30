@@ -1,12 +1,7 @@
 ---
 title: "OQL Operators"
 url: /refguide8/oql-operators/
-tags: ["studio pro"]
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/oql-operators.pdf).
-{{% /alert %}}
 
 The following operators can be used in OQL expressions:
 

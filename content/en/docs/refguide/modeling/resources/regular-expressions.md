@@ -2,7 +2,6 @@
 title: "Regular Expressions"
 url: /refguide/regular-expressions/
 weight: 70
-tags: ["studio pro", "regular expressions", "regular expression"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -51,7 +50,7 @@ A regular expression can contain the following types of subexpressions:
     * `[abc]` matches "*a*", "*b*", or "*c*"
     * `[a-z]` specifies a range which matches any lowercase letter from "*a*" to "*z*"
 
-    {{% alert color="info" %}}These forms can be mixed: `[abcx-z]` matches "*a*", "*b*", "*c*", "*x*", "*y*", or "*z*", and is equivalent to `[a-cx-z]`. The `-` character is treated as a literal character if it is the last or the first character within the brackets, or if it is escaped with a backslash (`\`).{{% /alert %}}
+    {{% alert color="info" %}}These forms can be mixed: `[abcx-z]` matches "*a*", "*b*", "*c*", "*x*", "*y*", or "*z*", and is equivalent to `[a-cx-z]`. The `-` character is treated as a literal character if it is the last or the first character within the brackets, or if it is escaped with a backslash.{{% /alert %}}
 
 * `[^ ]` – matches a single character that is NOT contained within the brackets, for example:
     * `[^abc]` matches any character other than "a", "b", or "c"
@@ -69,7 +68,7 @@ A regular expression can contain the following types of subexpressions:
 * A literal character – this is a character that does not have a special meaning in the regular expression language and it matches itself; this is effectively any character except `\[](){}^-$?*+|.`, for example:
     * The *`space`* in the Dutch post code example is a literal character that just matches itself
 
-    {{% alert color="info" %}}If you need to match one of the characters which is not a literal, prefix it with a backslash (`\`).{{% /alert %}}
+    {{% alert color="info" %}}If you need to match one of the characters which is not a literal, prefix it with a backslash.{{% /alert %}}
 
 * `\w` – a word: a letter, digit, or underscore; `\w` is an abbreviation for `[A-Za-z0-9_]`
 * `\d` – a digit" an abbreviation for `[0-9]`
@@ -90,4 +89,4 @@ The following quantifiers can be used:
 ## 4 Read More
 
 * [Class Pattern](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/regex/Pattern.html#matches(java.lang.String,java.lang.CharSequence)) – information from the Oracle Java SE documentation
-* [Using Regular Expressions in Java](http://www.regular-expressions.info/java.html)  – information about regular expressions in Java from the *Regular-Expressions.info* website
+* [Using Regular Expressions in Java](https://www.regular-expressions.info/java.html)  – information about regular expressions in Java from the *Regular-Expressions.info* website

@@ -3,12 +3,7 @@ title: "Technical Details of Published REST"
 url: /refguide8/published-rest-technical-details/
 weight: 40
 description: "Landing page for technical details about aspects of Published REST"
-tags: ["HTTP Request", "Published REST", "Request Routing", "JSON Schema", "Swagger", "OpenApi", "Documentation", "custom authentication"]
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/published-rest-technical-details.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 

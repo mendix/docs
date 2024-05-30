@@ -2,18 +2,13 @@
 title: "Branch Line Manager"
 url: /refguide8/branch-line-manager-dialog/
 weight: 80
-tags: ["studio pro", "manage branch lines", "branch line manager"]
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/branch-line-manager-dialog.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 
 The **Branch Line Manager** is used to manage [branch lines](/refguide8/version-control/#branches) of an app that is stored on a version control server:
 
-{{< figure src="/attachments/refguide8/modeling/menus/version-control-menu/branch-line-manager-dialog/branch-line-manager.png" alt="Branch Line Manager" >}}
+{{< figure src="/attachments/refguide8/modeling/menus/version-control-menu/branch-line-manager-dialog/branch-line-manager.png" alt="Branch Line Manager" class="no-border" >}}
 
 To view the **Branch Line Manager** dialog box, open **Version Control** > **Manage Branch Lines**.
 

@@ -2,7 +2,6 @@
 title: "Published OData Attribute"
 url: /refguide/published-odata-attribute/
 weight: 10
-tags: ["studio pro","OData","publish"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -10,7 +9,7 @@ tags: ["studio pro","OData","publish"]
 
 The **Edit published attribute** dialog allows you to edit the properties of an attribute published in an OData service.
 
-{{< figure src="/attachments/refguide/modeling/integration/published-odata-attribute/edit-published-attribute.png" alt="Edit published attribute dialog box." >}}
+{{< figure src="/attachments/refguide/modeling/integration/published-odata-attribute/edit-published-attribute.png" alt="Edit published attribute dialog box." class="no-border" >}}
 
 ## 2 General
 
@@ -38,7 +37,7 @@ The type of the attribute.
 
 ### 2.6 Exposed As
 
-This field is shown when the type is an enumeration that was previously exposed as a string, and only for OData version 4. Change the value to **Enumeration** to publish the enumeration. This informs clients of the possible values of this attribute.
+This field is shown when the type is an enumeration that was previously exposed as a string, and only for OData v4. Change the value to **Enumeration** to publish the enumeration. This informs clients of the possible values of this attribute.
 
 ### 2.7 Capabilities
 
@@ -46,6 +45,8 @@ Select **Sortable** to allow clients to sort results based on this attribute.
 
 Select **Filter** to allow clients to filter results based on this attribute.
 
+Note that these capabilities are not shown for attributes of entities without the **Readable** capability.
+
 ## 3 Public Documentation
 
-In the **Public documentation** tab, you can write a summary and a description intended for people using the service.
+In the **Public documentation** tab, you can write a summary and description intended for people using the service.

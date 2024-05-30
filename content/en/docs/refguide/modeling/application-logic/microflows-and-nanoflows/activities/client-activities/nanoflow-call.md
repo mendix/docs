@@ -2,15 +2,14 @@
 title: "Call Nanoflow"
 url: /refguide/nanoflow-call/
 weight: 2
-tags: ["studio pro", "nanoflow call", "call nanoflow"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
-
-{{% alert color="warning" %}}
-This activity can only be used in **Nanoflows**.
+{{% alert color="info" %}}
+This activity can only be used in nanoflows.
 {{% /alert %}}
+
+## 1 Introduction
 
 The **Call nanoflow** activity can be used to call another [nanoflow](/refguide/nanoflows/). Arguments can be passed to the nanoflow and the result can be stored in a variable.
 
@@ -18,7 +17,7 @@ The **Call nanoflow** activity can be used to call another [nanoflow](/refguide/
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/nanoflow-call/nanoflow-call-properties.png" alt="Nanoflow Call Properties" width="650px" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/nanoflow-call/nanoflow-call-properties.png" alt="Nanoflow Call Properties" width="650px" class="no-border" >}}
 
 The **Nanoflow call** properties pane consists of the following sections:
 
@@ -31,7 +30,7 @@ The **Action** section of the properties pane shows the action associated with t
 
 You can open a dialog box to configure this action by clicking the ellipsis (**…**) next to the action.
 
-You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
+You can also open the dialog box by double-clicking the activity, or right-clicking the activity and selecting **Properties**.
 
 ### 3.1 Nanoflow
 

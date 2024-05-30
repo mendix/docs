@@ -1,7 +1,6 @@
 ---
 title: "OQL UPPER"
 url: /refguide/oql-upper/
-tags: ["studio pro"]
 ---
 
 ## 1 Description
@@ -12,7 +11,7 @@ The `UPPER` function converts all lowercase characters in a given string to uppe
 
 The syntax is as follows:
 
-```sql
+```sql {linenos=false}
 UPPER ( expression )
 ```
 

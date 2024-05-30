@@ -1,10 +1,9 @@
 ---
 title: "Mobile App"
 url: /developerportal/deploy/mobileapp/
-category: "Deployment"
+
 weight: 90
 description: "Describes how to deploy to iOS or Android via the Apple App Store and Google Play Store."
-tags: ["Developer Portal", "Mobile", "Mobile App", "Deploy"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
@@ -23,7 +22,7 @@ Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Be
 
 To build a hybrid app and publish it, see [How to Build a Mendix Hybrid App Locally](/howto8/mobile/build-hybrid-locally/) for information on local building.
 
-To publish your app in an app store, we recommend you build native iOS apps instead. For more information, see [Build Native Apps](/refguide/mobile/distributing-mobile-apps/building-native-apps/).
+To publish your app in an app store, Mendix recommends building native iOS apps instead. For more information, see [Build Native Apps](/refguide/mobile/distributing-mobile-apps/building-native-apps/).
 {{% /alert %}}
 
 ## 2 App Info

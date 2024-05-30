@@ -3,10 +3,6 @@ title: "Using a Proxy to Call a Web Service"
 url: /refguide8/using-a-proxy-to-call-a-webservice/
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/using-a-proxy-to-call-a-webservice.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 In some cases, you're stuck behind a firewall, and thus unable to call a webservice directly. This document shows you how to configure the JVM to use a proxy to call such services.
@@ -41,8 +37,8 @@ Some proxies require authentication. To specify the user and password, simply pa
 
 ## 4 SSL
 
-You can also connect while using a secure sockets layer (ie https). To configure the proxy, you need to specify **different** proxy settings to connect. These settings are called https.proxyHost and https.proxyPort. In addition, you need to import the ssl certificate of the proxy server into your java keystore. More info can be found on the [Oracle website](http://download.oracle.com/javaee/1.4/tutorial/doc/Security6.html)
+You can also connect while using a secure sockets layer (ie https). To configure the proxy, you need to specify **different** proxy settings to connect. These settings are called https.proxyHost and https.proxyPort. In addition, you need to import the ssl certificate of the proxy server into your java keystore. More info can be found on the [Oracle website](https://download.oracle.com/javaee/1.4/tutorial/doc/Security6.html)
 
 ## 5 References
 
-[Oracle documentation on proxies](http://download.oracle.com/javase/6/docs/technotes/guides/net/proxies.html)
+[Oracle documentation on proxies](https://download.oracle.com/javase/6/docs/technotes/guides/net/proxies.html)

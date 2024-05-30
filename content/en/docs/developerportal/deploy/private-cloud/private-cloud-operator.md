@@ -4,7 +4,6 @@ linktitle: "Use CLI to Deploy"
 url: /developerportal/deploy/private-cloud-operator/
 description: "Describes the processes for using the Mendix Operator directly to deploy a Mendix app in the Private Cloud"
 weight: 30
-tags: ["Deploy", "Private Cloud", "Environment", "Operator", "CI/CD", "CLI"]
 ---
 
 ## 1 Introduction
@@ -22,7 +21,7 @@ Alternatively, you can create a connected cluster and use the Mendix Developer P
 * **OpenShift CLI** installation if you are deploying on OpenShift (see [Getting started with the CLI](https://docs.openshift.com/container-platform/4.1/cli_reference/getting-started-cli.html) on the Red Hat OpenShift website for more information)
 * **Kubectl** installation if you are deploying to another Kubernetes platform (see [Install and Set Up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) on the Kubernetes webside for more information)
 * A command line terminal. In Windows, this could be PowerShell or the Windows Command Prompt.
-* The **deployment package** of a Mendix app made with version 7.23.3 (build 48173) or above
+* The **deployment package** of a Mendix app made with version 8.0.0 (build 56467) or above
 
 ## 3 Deploying a Mendix App with an Operator
 
@@ -38,7 +37,7 @@ You can obtain the deployment package in a number of ways:
 
 * within Studio Pro, by choosing the menu option **Project > Create Deployment Package…** – see [Create Deployment Package](/refguide/create-deployment-package-dialog/) for more information
 * from the **Environments** page of your app in the Developer Portal
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-operator/environments-create-mda.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-operator/environments-create-mda.png" class="no-border" >}}
 * through a CI/CD process, such as Jenkins.
 
 The deployment package must be available over the internet without requiring authorization credentials, as these cannot be provided in the CR.
@@ -57,8 +56,8 @@ spec:
     servicePlan: dev
   storage: # Specification of Storage CR
     servicePlan: dev
-  mendixRuntimeVersion: 7.23.3.48173 # Mendix version to use for placeholder runtime image
-  sourceURL: https://example.com/example-app.mda # URL of App's source MDA
+  mendixRuntimeVersion: 8.0.0 # Studio Pro version of the Mendix app
+  sourceURL: https://example.com/example-app.mda # URL of App's source MDA or prebuilt OCI image
   appURL: example-mendixapp.k8s-cluster.example.com # URL to access the app
   tls: # Optional, can be omitted : set a custom TLS configuration, overriding the default operator configuration
     # Enable or disable TLS for the app
@@ -76,7 +75,7 @@ spec:
       [...]
       -----END PRIVATE KEY-----
   replicas: 1 # Number of replicas, set to 0 to stop all replicas
-  resources: # Optional, can be omitted : set resources for Mendix Runtime container 
+  resources: # Optional, can be omitted : set resources for Mendix Runtime container
     limits: # Upper limit - process will be stopped if it tries to use more
       cpu: 500m # 500 millicores - half of a vCPU
       memory: 512Mi # 512 megabytes - suitable for small-scale non-production apps
@@ -103,6 +102,13 @@ spec:
   ingressClassName: alb # Optional, can be omitted : specify the Ingress class
   ingressPath: "/" # Optional, can be omitted : specify the Ingress path. Anything other than "/" or "/*" will be ignored as Mendix applications don't support path based routing
   ingressPathType: ImplementationSpecific # Optional, can be omitted : specify the Ingress pathType
+  topologySpreadConstraints: # Optional, can be omitted : specify Kubernetes topology spread constraints
+    - maxSkew: 1
+      topologyKey: topology.kubernetes.io/zone
+      whenUnsatisfiable: DoNotSchedule
+      labelSelector:
+        matchLabels:
+          privatecloud.mendix.com/app: example-mendixapp
   runtime: # Configuration of the Mendix Runtime
     logAutosubscribeLevel: INFO # Default logging level
     mxAdminPassword: V2VsYzBtZSE= # base64 encoded password for MendixAdmin user. In this example, 'Welc0me!'; can be left empty keep password unchanged
@@ -157,14 +163,18 @@ spec:
         …
       }
   runtimeLeaderSelection: assigned # Optional, can be omitted : specify how the leader node will be selected
+  customPodLabels: # Optional: custom pod labels
+    general: # Optional: general pod labels (applied to all app-related pods)
+      azure.workload.identity/use: "true" # Example: enable Azure Workload Identity
+  runtimeLicenseProduct: # Optional: Specify the type of product required for the Runtime License. This is applicable when PCLM is used for licensing. By default, the value is set to Standard, if left empty
 ```
 
 You need to make the following changes:
 
 * **name**: – You can deploy multiple apps in one project/namespace — the app name in the CR doesn't have to match the app name in the mda and will have an **Environment UUID** added when it is deployed to ensure that it is unique in the project — see [Reserved Names for Mendix Apps](#reserved-names), below, for restrictions on naming your app
-* **database/storage** – ensure that these have the correct **Database Plan** and **Storage Plan** — they have to have the same names that you [registered in the namespace](/developerportal/deploy/private-cloud-cluster/#configure-namespace)
-* **mendixRuntimeVersion** – the full runtime version which matches the mda, including the build number
-* **sourceURL** – the location of the deployment package, this must be accessible from your cluster without any authentication
+* **database/storage** – ensure that these have the correct **Database Plan** and **Storage Plan** — they have to have the same names that you [registered in the namespace](/developerportal/deploy/standard-operator/#configure-namespace)
+* **mendixRuntimeVersion** – the full runtime version of the app. In Operator versions 2.15.0 and 2.15.1, this field is not read (but needs to be specified). From Operator version 2.16.0 onwards, this field does not need to be specified.
+* **sourceURL** – an HTTP or HTTPS URL specifying the location of the deployment package (this must be accessible from your cluster without any authentication; use expiring URLs for security). Alternatively, to deploy an existing app image built by the Mendix Operator, specify it using an `oci-image://` schema.
 * **appURL** – the endpoint where you can connect to your running app — this is optional, and if it is supplied it must be a URL which is supported by your platform
 * **tls** – the TLS configuration — this is optional, and if it is supplied it will override the default Mendix Operator network configuration
 * **enableTLS** – allows you to enable or disable TLS for the Mendix app's Ingress or OpenShift Route
@@ -176,10 +186,12 @@ You need to make the following changes:
 * **endpointAnnotations** – set custom annotations for Ingress (or OpenShift Route) objects; these annotations are applied on top of [default annotations](/developerportal/deploy/private-cloud-cluster/#advanced-network-settings) from `OperatorConfiguration`
 * **ingressPath** – specify a custom Ingress path; this overrides the [default ingress path](/developerportal/deploy/private-cloud-cluster/#advanced-network-settings) from `OperatorConfiguration`
 * **ingressPathType** – specify a custom Ingress class name; this overrides the [default ingress pathType](/developerportal/deploy/private-cloud-cluster/#advanced-network-settings) from `OperatorConfiguration`
+* **topologySpreadConstraints** – specify Kubernetes [topology spread constraints](https://kubernetes.io/docs/concepts/scheduling-eviction/topology-spread-constraints/) for the app's runtime pods; please specify only constraints that are supported by your cluster
 * **logAutosubscribeLevel** – change the default logging level for your app, the standard level is INFO — possibilities are: `TRACE`, `DEBUG`, `INFO`, `WARNING`, `ERROR`, and `CRITICAL`
 * **mxAdminPassword** – here you can change the password for the MxAdmin user — if you leave this empty, the password will be the one set in the Mendix model
 * **debuggerPassword** – here you can provide the password for the debugger — this is optional. Setting an empty `debuggerPassword` will disable the debugging features. In order to connect to the debugger in Studio Pro, enter the debugger URL as `<AppURL>/debugger/`. You can find further information in [Debugging Microflows Remotely](/refguide/debug-microflows-remotely/)
-* **dtapmode** – for development of the app, for example acceptance testing, choose **D**, for production deployment, select **P**
+* **dtapMode** – for development of the app, for example acceptance testing, choose **D**, for production deployment, select **P**
+* **runtimeLicenseProduct** - this setting is applicable to PCLM licenses. If the product type for the license is anything other than Standard, then the value of the Product type needs to be set here. For more information, see [PCLM Runtime License Product](/developerportal/deploy/private-cloud/private-cloud-license-manager/)
 
     {{% alert color="warning" %}}Your app can only be deployed to a production environment if [security in the app is set on](/refguide/app-security/). {{% /alert %}}
 
@@ -199,23 +211,25 @@ You need to make the following changes:
           key: LicenseKey # Offline LicenseKey value provided by Mendix Support
     ```
 
-* **logLevels**: – set custom logging levels for specific log nodes in your app — valid values are: `TRACE`, `DEBUG`, `INFO`, `WARNING`, `ERROR`, and `CRITICAL`
-* **logFormatType**: – allows to specify the log format of Mendix apps - valid values are `plain` (default) and `json`; for more information, see the [runtime log format](/developerportal/deploy/private-cloud-cluster/#runtime-log-format) documentation.
-* **microflowConstants**: – set values for microflow constants
-* **scheduledEventExecution**: – choose which scheduled events should be enabled – valid values are: `ALL`, `NONE` and `SPECIFIED`
-* **myScheduledEvents**: – list scheduled events which should be enabled – can only be used when **scheduledEventExecution** is set to `SPECIFIED`
-* **jettyOptions** and **customConfiguration**: – if you have any custom Mendix Runtime parameters, they need to be added to this section — options for the Mendix runtime have to be provided in JSON format — see the examples in the CR for the correct format and the information below for more information on [setting app constants](#set-app-constants) and [configuring scheduled events](#configure-scheduled-events)
-* **environmentVariables**: – set the environment variables for the Mendix app container, and JVM arguments through the `JAVA_TOOL_OPTIONS` environment variable
-* **clientCertificates**: – specify client certificates to be used for TLS calls to Web Services and REST services
-* **runtimeMetricsConfiguration**: – specify how metrics should be collected — any non-empty values will override [default values](/developerportal/deploy/private-cloud-cluster/#customize-runtime-metrics) from `OperatorConfiguration` — see [Monitoring Environments in Mendix for Private Cloud](/developerportal/deploy/private-cloud-monitor/) for details on how to monitor your environment
-* **runtimeLeaderSelection**: – specify how the leader replica should be selected - valid options are `assigned` (default mode: the `master` deployment will run one leader replica) and `none` (do not run any leader replicas, `master` deployment is scaled down to zero; this mode requires a specific infrastructure configuration, please consult with Mendix Expert Services before using this feature)
+* **logLevels** – set custom logging levels for specific log nodes in your app; valid values are: `TRACE`, `DEBUG`, `INFO`, `WARNING`, `ERROR`, and `CRITICAL`
+* **logFormatType** – allows to specify the log format of Mendix apps; valid values are `plain` (default) and `json`; for more information, see the [runtime log format](/developerportal/deploy/private-cloud-cluster/#runtime-log-format) documentation.
+* **microflowConstants** – set values for microflow constants. Mendix Operator 2.14.0 (and earlier versions) need all app constants to be specified if **dtapMode** is set to `P`; Operator 2.15.0 (and newer versions) will fallback to default values for any constants that are not specified here.
+* **scheduledEventExecution** – choose which scheduled events should be enabled; valid values are: `ALL`, `NONE` and `SPECIFIED`
+* **myScheduledEvents** – list scheduled events which should be enabled – can only be used when **scheduledEventExecution** is set to `SPECIFIED`
+* **jettyOptions** and **customConfiguration** – if you have any custom Mendix Runtime parameters, they need to be added to this section; options for the Mendix runtime have to be provided in JSON format; see the examples in the CR for the correct format and the information below for more information on [setting app constants](#set-app-constants) and [configuring scheduled events](#configure-scheduled-events)
+* **environmentVariables** – set the environment variables for the Mendix app container, and JVM arguments through the `JAVA_TOOL_OPTIONS` environment variable
+* **clientCertificates** – specify client certificates to be used for TLS calls to Web Services and REST services
+* **runtimeMetricsConfiguration** – specify how metrics should be collected; any non-empty values will override [default values](/developerportal/deploy/private-cloud-cluster/#customize-runtime-metrics) from `OperatorConfiguration`; see [Monitoring Environments in Mendix for Private Cloud](/developerportal/deploy/private-cloud-monitor/) for details on how to monitor your environment
+* **runtimeLeaderSelection** – specify how the leader replica should be selected - valid options are `assigned` (default mode: the `master` deployment will run one leader replica) and `none` (do not run any leader replicas, `master` deployment is scaled down to zero; this mode requires a specific infrastructure configuration, please consult with Mendix Expert Services before using this feature)
+* **customPodLabels** - specify additional pod labels (please avoid using labels that start with the `privatecloud.mendix.com/` prefix)
+    * **general** - specify additional labels for all pods of the app
 
 #### 3.2.1 Setting App Constants{#set-app-constants}
 
 The constant name is equal to `{module-name}.{constant-name}` where {module-name} is the name of the Mendix app module containing the constant,
 and {constant-name} is the name of the constant. The constant name will also be visible in the constant properties (UnitTesting.RemoteApiEnabled in this example):
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-operator/constant-name.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-operator/constant-name.png" class="no-border" >}}
 
 Set the constant values in the **microflowConstants** value in **runtime**. For example:
 
@@ -230,6 +244,11 @@ spec:
       MyFirstModule.Constant: "1234"
       MyModule.AnotherConstant: "true"
 ```
+
+{{% alert color="info" %}}
+The app constants can be defined in two ways, one is through Custom Runtime Settings, and other is through Microflow constants. If values are set in both, then the value from Microflow constants will always take precedence.
+
+{{% /alert %}}
 
 #### 3.2.2 Configuring Scheduled Events{#configure-scheduled-events}
 
@@ -283,7 +302,7 @@ kubectl apply -f {File containing the CR} -n {namespace where app is being deplo
 
 To build and deploy your app using the OpenShift CLI, do the following:
 
-1. Paste the OpenShift login command into your command line terminal as described in the first few steps of the [Signing in to Open Shift](/developerportal/deploy/private-cloud-cluster/#openshift-signin) section of *Creating a Private Cloud Cluster*.
+1. Paste the OpenShift login command into your command line terminal as described in the first few steps of the [Signing in to Open Shift](/developerportal/deploy/standard-operator/#openshift-signin) section of *Creating a Private Cloud Cluster*.
 2. Switch to the project where you've deployed the Mendix Operator using the command`oc project {my-project}` where {my-project} is the name of the project where the Mendix Operator is deployed.
 3. Paste the following command into your command line terminal:
 
@@ -299,12 +318,12 @@ To build and deploy your app using the OpenShift Console, do the following:
 2. Go to your project.
 3. Click the **Add** button, and select **Import YAML**.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-operator/image1.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-operator/image1.png" class="no-border" >}}
 
 4. In the **Import YAML** page, enter/paste the YML you prepared in [Editing the CR}(#edit-cr), above.
 5. Click the **Create** button.
-    
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-operator/image2.png" >}}
+
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-operator/image2.png" class="no-border" >}}
 
 Mendix Operator will now pick up the YAML and deploy your app.
 
@@ -346,7 +365,7 @@ All names beginning **openshift-** are reserved for use by OpenShift if you are 
 
 In some cases, your Mendix app will need to know its own URL – for example when using SSO or sending emails.
 
-For this to work properly, you need to set the [ApplicationRootUrl variable](/refguide/custom-settings/#general) in `customConfiguration` to the app's URL. For example: 
+For this to work properly, you need to set the [ApplicationRootUrl variable](/refguide/custom-settings/#general) in `customConfiguration` to the app's URL. For example:
 
 ```yaml
 apiVersion: privatecloud.mendix.com/v1alpha1

@@ -1,7 +1,6 @@
 ---
 title: "Developing Hybrid Mobile Apps"
 url: /refguide8/developing-hybrid-mobile-apps/
-tags: ["studio pro"]
 aliases:
     - /refguide8/Developing+Hybrid+Mobile+Apps.html
     - /refguide8/Developing+Hybrid+Mobile+Apps
@@ -9,7 +8,7 @@ aliases:
 
 ## 1 Introduction
 
-Hybrid Mendix apps can simply be viewed in mobile web browsers. However, mobile device features cannot be accessed through HTML and JavaScript. Also, if you want to publish your hybrid app on the Apple App Store, Google Play, or Microsoft Phone Store, you have to wrap your app in a native shell. We use [local builds](/howto8/mobile/build-hybrid-locally/) to accomplish this.
+Hybrid Mendix apps can simply be viewed in mobile web browsers. However, mobile device features cannot be accessed through HTML and JavaScript. Also, if you want to publish your hybrid app on the Apple App Store, Google Play, or Microsoft Phone Store, you have to wrap your app in a native shell. Mendix uses [local builds](/howto8/mobile/build-hybrid-locally/) to accomplish this.
 
 These apps are called "hybrid" apps because they are a hybrid of a web and a native app. Mendix facilitates the creation of hybrid mobile apps in a number of ways.
 
@@ -19,7 +18,7 @@ While developing a hybrid mobile app, you can quickly preview it in in the brows
 
 However, when you use native widgets on your hybrid pages, some of these widgets might not work in the browser. Some of these widgets will offer an alternative implementation for when they are running in an ordinary browser; others will not work at all. To see what your app will look like inside the wrapper, you can use the Mendix Developer App. In Studio Pro, you can reach the hybrid mobile app dialog box via **View in the Mendix App** in the toolbar or through the **Run** menu. It shows a QR code that can be scanned with that app. This is a quick way to load your app into a compatible environment.
 
-{{< figure src="/attachments/refguide8/mobile/hybrid-mobile/developing-hybrid-mobile-apps/View_Hybrid_Mobile_App_Popup.png" >}}
+{{< figure src="/attachments/refguide8/mobile/hybrid-mobile/developing-hybrid-mobile-apps/View_Hybrid_Mobile_App_Popup.png" class="no-border" >}}
 
 For more information about how to download the Mendix Developer App, see [Getting the Mendix Developer App](/refguide8/getting-the-mendix-app/).
 

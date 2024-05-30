@@ -2,6 +2,8 @@
 title: "Mendix Runtime"
 url: /refguide7/runtime/
 weight: 40
+no_list: false
+description_list: true 
 ---
 
 ## 1 Introduction
@@ -20,13 +22,4 @@ You can extend the functionality of the Runtime by writing Java actions. For mor
 Links to available API documentation such as WSDLs for published web services are available on the URL path `/api-doc` (for example: `http://localhost:8080/api-doc/`).
 {{% /alert %}}
 
-## 4 Main Documents in This Category
-
-* [Clustered Mendix Runtime](/refguide7/clustered-mendix-runtime/)
-* [Customization](/refguide7/custom-settings/)
-* [Data Storage](/refguide7/data-storage/)
-* [Date and Time Handling](/refguide7/datetime-handling-faq/)
-* [Logging](/refguide7/logging/)
-* [Monitoring Mendix Runtime](/refguide7/monitoring-mendix-runtime/)
-* [Objects and Caching](/refguide7/objects-and-caching/)
-* [Transient Objects and Garbage Collecting](/refguide7/transient-objects-garbage-collecting/)
+## 4 Documents in This Category

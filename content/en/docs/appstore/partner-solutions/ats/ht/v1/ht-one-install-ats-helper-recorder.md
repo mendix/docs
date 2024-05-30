@@ -4,14 +4,13 @@ linktitle: "Install ATS Helper and Recorder"
 url: /appstore/partner-solutions/ats/ht-one-install-ats-helper-recorder/
 weight: 2
 description: "Describes how to install the ATS Helper and the ATS Recorder tool."
-tags: ["ATS", "testing"]
 ---
 
 ## 1 Introduction
 
 ATS provides two different tools to help build test scripts: the ATS Helper and ATS Recorder. The ATS Helper identifies the mx-name of widgets on the application under test (AUT). The recorder is a function/plugin within ATS that records your manual test steps in the AUT and automatically selects the correct action for each step.
 
-**This how-to will teach you  how to do the following:**
+This how-to teaches you how to do the following:
 
 * Install the ATS Helper
 * Install the [ATS Recorder](/appstore/partner-solutions/ats/rg-one-recorder/)
@@ -34,21 +33,21 @@ Both the ATS Helper and the ATS Recorder only function in [Google Chrome](https:
 
 To install the ATS Helper, follow these steps:
 
-1. Open ATS and click the information icon in the upper-right corner of the screen:
+1. Open ATS and click **Information** ({{% icon name="info-circle" %}}) in the upper-right corner of the screen:
 
-    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v1/ht-one-install-ats-helper-recorder/information-icon.png" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v1/ht-one-install-ats-helper-recorder/information-icon.png" class="no-border" >}}
 
     This opens the **ATS Information** dialog box:
    
-    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v1/ht-one-install-ats-helper-recorder/ats-information-screen.png" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v1/ht-one-install-ats-helper-recorder/ats-information-screen.png" class="no-border" >}}
 
 2. Drag the ATS Helper into your bookmark bar to link it there:
 
-    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v1/ht-one-install-ats-helper-recorder/drag-drop-ats-helper.png" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v1/ht-one-install-ats-helper-recorder/drag-drop-ats-helper.png" class="no-border" >}}
 
 To use the ATS Helper, select the bookmark, press <kbd>Ctrl</kbd>, and hover over a widget. The ATS Helper will show the information of that widget.
 
-{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v1/ht-one-install-ats-helper-recorder/ats-helper-widget.png" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v1/ht-one-install-ats-helper-recorder/ats-helper-widget.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 The ATS Helper only works on standalone widgets.
@@ -60,18 +59,18 @@ See [How to Create a Test Case](/appstore/partner-solutions/ats/ht-one-create-a-
 
 To install the ATS Recorder, follow these steps:
 
-1. Open ATS and click the information icon in the upper-right corner of the screen:
+1. Open ATS and click **Information** ({{% icon name="info-circle" %}}) in the upper-right corner of the screen:
 
-    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v1/ht-one-install-ats-helper-recorder/information-icon.png" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v1/ht-one-install-ats-helper-recorder/information-icon.png" class="no-border" >}}
     
     This opens the **ATS Information** dialog box:
     
-    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v1/ht-one-install-ats-helper-recorder/ats-information-screen.png" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v1/ht-one-install-ats-helper-recorder/ats-information-screen.png" class="no-border" >}}
 
 2. Click the **ATS Recorder (Chrome Web Store)** link to go to the Chrome Web Store.
 3. Click **ADD TO CHROME** to add the ATS Recorder extension:
 
-    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v1/ht-one-install-ats-helper-recorder/add-ats-recorder.png" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v1/ht-one-install-ats-helper-recorder/add-ats-recorder.png" class="no-border" >}}
 
 See [How to Create a Test Case](/appstore/partner-solutions/ats/ht-one-create-a-test-case/) for more information on how to use the ATS Helper.
 

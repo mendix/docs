@@ -3,7 +3,6 @@ title: "Scheduled Events – Task Queue"
 url: /refguide9/scheduled-events-task-queue/
 weight: 10
 description: "Options for configuring scheduled events"
-tags: ["Scheduled Event", "Execution properties", "Timing", "intervals", "scheduling issues", "time zones", "daylight saving", "task queue"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -21,7 +20,7 @@ Scheduled events can be tested locally, but they will not be run if your app is 
 
 | Property | Description |
 | --- | --- |
-| Name | The name of the scheduled event. This name is recorded in the `System.ProcessedQueueTask` objects at runtime, so that you can identify when this scheduled event has been processed. For compatibility with legacy scheduled events, it is also stored in the `ScheduledEventInformation` objects but this is deprecated and will be removed in Mendix version 10. |
+| Name | The name of the scheduled event. This name is recorded in the `System.ProcessedQueueTask` objects at runtime, so that you can identify when this scheduled event has been processed. For compatibility with legacy scheduled events, it is also stored in the `ScheduledEventInformation` objects but this is deprecated and will be removed in Mendix 11. |
 | Documentation | This field is for documentation purposes in the app model only. Its value is not visible to end-users and doesn't influence the behavior of your application. |
 
 ## 3 Execution Properties
@@ -134,7 +133,7 @@ This allows you to run the event every hour, or number of hours. It also allows 
 
 Example times will be shown in the dialog to illustrate the effects of the offset.
 
-{{< figure src="/attachments/refguide9/modeling/resources/scheduled-events/hourly-event.png" >}}
+{{< figure src="/attachments/refguide9/modeling/resources/scheduled-events/hourly-event.png" class="no-border" >}}
 
 ### 4.6 Minutes Properties {#minutes}
 

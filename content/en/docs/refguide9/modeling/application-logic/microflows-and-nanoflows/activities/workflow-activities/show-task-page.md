@@ -2,7 +2,6 @@
 title: "Show User Task Page"
 url: /refguide9/show-task-page/
 weight: 50
-tags: ["studio pro", "user task", "workflow"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -14,13 +13,13 @@ This activity can only be used in **Microflows**.
 
 The **Show user task page** activity can be used to open a user task page defined in the user task properties. 
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/show-task-page/open-task-page.jpg" alt="Show user task page" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/show-task-page/open-task-page.jpg" alt="Show user task page" class="no-border" >}}
 
 ## 2 Properties
 
 An example of show user task page properties is represented in the image below:
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/show-task-page/open-task-page-properties.jpg" alt="Show user task page Properties" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/show-task-page/open-task-page-properties.jpg" alt="Show user task page Properties" class="no-border" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

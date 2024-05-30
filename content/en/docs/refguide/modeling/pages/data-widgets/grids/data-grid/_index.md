@@ -2,17 +2,18 @@
 title: "Data Grid"
 url: /refguide/data-grid/
 weight: 10
-tags: ["studio pro", "data grid", "grid", "data widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 {{% alert color="warning" %}}The data grid widget is not supported on native mobile pages.{{% /alert %}}
 
+{{% alert color="warning" %}}The data grid widget, which is not supported by the React client added to Mendix in [10.7](/releasenotes/studio-pro/10.7/#react-client), can be converted to a [data grid 2 widget](/appstore/modules/data-grid-2/) through the context menu of the widget **Convert to data grid 2** starting with Mendix [10.9](/releasenotes/studio-pro/10.9/#improvements).{{% /alert %}}
+
 ## 1 Introduction
 
 A data grid shows a list of objects in a table format. For example, a data grid can show customer's name, grade, and all the orders a customer has placed:
 
-{{< figure src="/attachments/refguide/modeling/pages/data-widgets/grids/data-grid/data-grid.png" >}}
+{{< figure src="/attachments/refguide/modeling/pages/data-widgets/grids/data-grid/data-grid.png" class="no-border" >}}
 Using controls provided by the data grid you can browse, search, and edit those objects.
 
 Any changes made to an object are visible in all widgets. This is because changes are stored globally in the client. See [Object Activities](/refguide/object-activities/) for more information.
@@ -23,15 +24,14 @@ A data grid contains the following components:
 
 1. [Search bar](/refguide/search-bar/) – allows end-users to search for objects in the data grid
 2. [Control bar](/refguide/control-bar/) – allows you to control the objects displayed in the data grid by means of buttons
-3. [Sort bar](/refguide/sort-bar/) – allows end-users to sort items in the data grid 
-4. [Grid Columns](/refguide/columns/) – allows end-users to set properties for a data grid column
-    {{< figure src="/attachments/refguide/modeling/pages/data-widgets/grids/data-grid/data-grid-components.png" >}}
+3. [Grid Columns](/refguide/columns/) – allows end-users to set properties for a data grid column
+    {{< figure src="/attachments/refguide/modeling/pages/data-widgets/grids/data-grid/data-grid-components.png" class="no-border" >}}
 
 ## 3 Properties
 
 An example of data grid properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/pages/data-widgets/grids/data-grid/data-grid-properties.png"   width="250"  >}}
+{{< figure src="/attachments/refguide/modeling/pages/data-widgets/grids/data-grid/data-grid-properties.png"   width="250"  class="no-border" >}}
 
 Data grid properties consist of the following sections:
 
@@ -43,22 +43,25 @@ Data grid properties consist of the following sections:
 
 ### 3.1 Common Section {#common}
 
+The rows of the data grid can be sorted using the `Sort order` property. It is only available for **Database** [data sources](#data-source). For more information on sorting, see [Sort Order](/refguide/sort-order/).
+
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
 ### 3.2 Data Source Section {#data-source}
 
-The data source determines which objects will be shown in a list view. For general information on data sources, see [Data Sources](/refguide/data-sources/).
+The data source determines which objects will be shown in a data grid. For general information on data sources, see [Data Sources](/refguide/data-sources/).
 
 #### 3.2.1 Type
 
-The list view supports the following types of data sources: 
+The data grid supports the following types of data sources: 
 
 * [Database source](/refguide/database-source/) – objects are retrieved directly from the database. The database source can be used in [offline](/refguide/offline-first/) applications. 
 * [XPath source](/refguide/xpath-source/) – objects are retrieved directly from the database
+    {{% alert color="info" %}}From Mendix version 10.5, the data grid widget does not have a separate XPath source, you can apply XPath constraints to the **Database** source.{{% /alert %}}
 * [Microflow source](/refguide/microflow-source/) – calculates the list of objects by executing a microflow
 * [Association source](/refguide/association-source/) – follows an association to get to objects
 
-The database and XPath sources retrieve objects from the database and supports searching and sorting. 
+The database and, below version 10.5, XPath sources retrieve objects from the database and supports searching and sorting. 
 
 ### 3.3 Design Properties Section {#design-properties}
 

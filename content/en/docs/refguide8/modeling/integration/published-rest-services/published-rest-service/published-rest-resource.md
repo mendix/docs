@@ -3,14 +3,9 @@ title: "Published REST Resource"
 url: /refguide8/published-rest-resource/
 weight: 50
 description: "The configurable options for a published REST resource"
-tags: ["published REST", "resource", "studio pro"]
 # If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 # linked from DM: published rest > add resource > help (integration)
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/published-rest-resource.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 

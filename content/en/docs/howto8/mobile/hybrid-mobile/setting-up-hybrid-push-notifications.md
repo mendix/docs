@@ -3,14 +3,13 @@ title: "Set Up Hybrid Push Notifications"
 url: /howto8/mobile/setting-up-hybrid-push-notifications/
 weight: 9
 description: "Learn how to set up hybrid push notifications with PhoneGap Build."
-tags: ["mobile", "push notification", "remote", "push", "notification"]
 ---
 
 ## 1 Introduction
 
 In this how to we will set up hybrid push notifications.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Customize your hybrid template to enable push notifications
 
@@ -28,15 +27,15 @@ As a result of this, Mendix hybrid apps that employ push notifications can no lo
 
 To build the hybrid app package, follow these steps:
 
-1. Open your app in the Developer Portal and under **DEPLOY** in the left sidebar menu, click **Mobile App**.
-2. Make sure the **Push Notifications** permission is checked under **Permissions**.
+1. Open your app in the Developer Portal. In the navigation pane on the left, click **Mobile App**.
+2. Make sure the **Push Notifications** permission is selected under **Permissions**.
 3. Click **Publish for Mobile App Stores**:
 
-    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/download-hybrid-app-package-step1.png" >}}
+    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/download-hybrid-app-package-step1.png" class="no-border" >}}
 
 4. Select **Do it yourself** and then click **Download Customizable Package**:
 
-    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/download-hybrid-app-package-step2.png" >}}
+    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/download-hybrid-app-package-step2.png" class="no-border" >}}
 
     This package you just downloaded is a customizable hybrid app package for your specific Mendix app. You can make changes to it, build a new PhoneGap Build package, and then upload it to PhoneGap Build to create the binaries (*.apk* for Android and *.ipa* for iOS). To better understand the structure of what you just downloaded, see the **Folder Structure** section in the [Mendix PhoneGap Build App Template documentation](https://github.com/mendix/hybrid-app-template#folder-structure).
 
@@ -49,7 +48,7 @@ To build the hybrid app package, follow these steps:
     1. In the same folder execute `npm run package`.<br />
 8. Create an APK or iOS package from the PhoneGap Build package. You can upload the new PhoneGap Build package (in the **dist** folder) to PhoneGap to build the APK or iOS binary.
 
-    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/build.phonegap.com.png" >}}
+    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/build.phonegap.com.png" class="no-border" >}}
 
 ## 4 Read More
 

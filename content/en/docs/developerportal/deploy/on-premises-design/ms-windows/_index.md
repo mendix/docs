@@ -3,16 +3,11 @@ title: "Microsoft Windows"
 url: /developerportal/deploy/deploy-mendix-on-microsoft-windows/
 description: "How to install and configure Mendix on a system running Microsoft Windows"
 weight: 50
-tags: ["deploy", "Windows", "On Premises", "Microsoft", "Mendix Service Console", "IIS", "URL Rewrite", "Client Cache", "Reverse Inbound Proxy", "Host Header"]
 aliases:
     - /deployment/on-premises/deploy-mendix-on-microsoft-windows.html
     - /deployment/on-premises/deploy-mendix-on-microsoft-windows
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/developerportal/deploy-mendix-on-microsoft-windows.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 
@@ -33,7 +28,7 @@ To set up an environment to run Mendix applications, you will need to install th
 Before starting this how-to, make sure you have the following prerequisites:
 
 * MS Windows Server 2012 or higher
-    * The Mendix Service Console will run and deploy a Mendix app on the [minimum hardware requirements for MS Windows Server 2012](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134246(v=ws.11)#system-requirements). However, you may need to increase the specifications depending on the functionality of your app. Although not directly comparable, see the [Cloud Resource Packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack) used when deploying to the Mendix Cloud for comparative information.
+    * The Mendix Service Console will run and deploy a Mendix app on the [minimum hardware requirements for MS Windows Server 2012](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134246(v=ws.11)#system-requirements). However, you may need to increase the specifications depending on the functionality of your app. Although not directly comparable, see the [Cloud Resource Packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack) used when deploying to Mendix Cloud for comparative information.
 * .NET Framework 4.6.2 or higher
 * IIS 8 or higher with the following service roles enabled:
 
@@ -56,7 +51,7 @@ Before starting this how-to, make sure you have the following prerequisites:
 
 To download and install the Mendix Service Console, follow these steps:
 
-1. Download the latest version of the Mendix Service Console by following the **Related downloads** link from the [Studio Pro Download Page](https://marketplace.mendix.com/link/studiopro/) of the Marketplace.
+1. Download the latest version of the [Mendix Service Console](https://marketplace.mendix.com/link/component/223425) module from the Marketplace.
 
     {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/service_console_download.png" >}}
 
@@ -102,9 +97,9 @@ To deploy a Mendix app using the Mendix Service Console, follow these steps:
 
     {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/18580728.png" >}}
 
-5. On the **Project Files** screen, click **Select app...**.
+5. On the **Project Files** screen, click **Select app…**.
 
-    {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/18580727.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/service_console_selectapp.png" >}}
 
 6. Now select the **MDA** file that was [created in Studio Pro](/refguide/create-deployment-package-dialog/) and contains your application logic. After the installation of your MDA file, you will see which Mendix server (Mendix Runtime) version is needed.
 
@@ -205,6 +200,7 @@ Rule | Name | Pattern | Rewrite URL
 7 | rest-doc | `^(rest-doc/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
 8 | debugger | `^(debugger/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
 9 | oauth | `^(oauth/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
+10 | p | `^(p/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
 
 Follow the instructions below and replace *[Name]* with the name of the rule in the table above, *[Pattern]* with the regular expression pattern, and *[Rewrite URL]* with the Rewrite URL. Note that some patterns contain a trailing slash, `/`, when they need to point to an exact path (for example, `/ws-doc/mydoc/1234`).
 
@@ -340,6 +336,14 @@ Afterwards, the contents of the *web.config* file will be similar to the followi
                 </rule>
                 <rule name="debugger" stopProcessing="true">
                     <match url="^(debugger/)(.*)" />
+                    <action type="Rewrite" url="http://localhost:8080/{R:1}{R:2}" />
+                </rule>
+                <rule name="oauth" stopProcessing="true">
+                    <match url="^(oauth/)(.*)" />
+                    <action type="Rewrite" url="http://localhost:8080/{R:1}{R:2}" />
+                </rule>
+                <rule name="p" stopProcessing="true">
+                    <match url="^(p/)(.*)" />
                     <action type="Rewrite" url="http://localhost:8080/{R:1}{R:2}" />
                 </rule>
             </rules>

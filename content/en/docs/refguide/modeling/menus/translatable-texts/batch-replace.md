@@ -2,7 +2,6 @@
 title: "Batch Replace"
 url: /refguide/batch-replace/
 weight: 20
-tags: ["studio pro", "translation", "languages", "translatable text"]
 ---
 
 ## 1 Introduction
@@ -15,7 +14,7 @@ There are a number of reasons that you may wish to do this:
 * If all occurrences of a piece of text are identical, you only need to enter the translation once — this saves time and improves consistency
 * If you find better wording for a common label or text, you can change them all at once with a single command
 
-{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/batch-replace/batch-replace.png" >}}
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/batch-replace/batch-replace.png" class="no-border" width="600" >}}
 
 ## 2 Using Batch Replace
 
@@ -27,20 +26,20 @@ You can select one or more modules you want to use for batch translate. For exam
 
 Click **Select…** and check the modules you want to work on.
 
-{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/batch-replace/batch-replace-modules.png" alt="Module selection screen" >}}
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/batch-replace/batch-replace-modules.png" alt="Module selection screen" class="no-border" width="400" >}}
 
 The default is to work on all modules in the app.
 
-### 2.2 Source Text Contains
+### 2.2 Search
 
 To search for phrases that are similar, type what you want to search for.
 
-{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/batch-replace/batch-replace-search.png" alt="Batch translate search" >}}
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/batch-replace/batch-replace-search.png" alt="Batch translate search" class="no-border" width="600" >}}
 
-By default, all the translatable text from the selected module(s) will be shown.
+By default, all the translatable text from the selected module (or modules) will be shown.
 
 Each found text will be displayed in the **Text** column.
-The **#** column shows the number of times it occurs in the selected module(s).
+The **#** column shows the number of times it occurs in the selected module (or modules).
 
 If you select a line, you can look in the **Show occurrence** section to see the **Object** containing the text and the **Document** it appears in. Double-clicking or clicking **Show occurrence** will open the document and select the object so you can easily see the context.
 
@@ -52,11 +51,11 @@ Tip: move the dialog box to one side to get a better look at the document.
 
 In **Replace with**, type new text that you want to use instead of the existing text. Click **Replace** to confirm the replacement.
 
-{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/batch-replace/batch-replace-replace.png" >}}
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/batch-replace/batch-replace-replace.png" class="no-border" width="600" >}}
 
 Identical replacement and original texts will be combined into a single entry.
 
-{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/batch-replace/batch-replace-replaced.png" alt="Show combined entries" >}}
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/batch-replace/batch-replace-replaced.png" alt="Show combined entries" class="no-border" width="600" >}}
 
 ## 3 Exporting and Importing Text
 
@@ -70,7 +69,7 @@ Click **Export to Excel…** to export the currently displayed text items to a M
 
 The file will be in the format shown below:
 
-{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/batch-replace/batch-replace-excel.png" alt="Sample Excel file" >}}
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/batch-replace/batch-replace-excel.png" alt="Sample Excel file" class="no-border" width="600" >}}
 
 **Row 1** – *Filter:* indicates the modules which are included in the exported file.
 
@@ -86,9 +85,9 @@ Click **Import from Excel…** to import a correctly-constructed Microsoft Excel
 
 This does the following:
 
-* The selected module(s) are set to the ones in the *Filter:* line of the file
+* The selected module (or modules) are set to the ones in the *Filter:* line of the file
 * Any texts which are empty in column B will be ignored
-* Any texts in column A which do not match translatable texts in the selected module(s) will be ignored
+* Any texts in column A which do not match translatable texts in the selected module (or modules) will be ignored
 * Any text in column B which is not ignored is entered into the **Replace with** column
 
 Changes will only be made if you click **Replace**.

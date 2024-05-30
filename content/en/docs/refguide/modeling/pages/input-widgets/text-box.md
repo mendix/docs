@@ -1,8 +1,8 @@
 ---
 title: "Text Box"
 url: /refguide/text-box/
+description: "A text box is used to display and, optionally, allow the end-user to edit the value of an attribute from an object in a textual form."
 weight: 10
-tags: ["studio pro", "data"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -17,11 +17,11 @@ A text box is used to display and, optionally, allow the end-user to edit the va
 * Long
 * String
 
-A text box must be placed in a [data container](/refguide/data-widgets/) and displays an attribute of the object(s) retrieved by that container. The name of the attribute to be displayed is shown inside the text box, between square brackets, and colored blue.
+A text box must be placed in a [data container](/refguide/data-widgets/) and displays an attribute of the object (or objects) retrieved by that container. The name of the attribute to be displayed is shown inside the text box, between square brackets, and colored blue.
 
 For example, the following text box allows the end-user to see, and set, the **Name** of a customer.
 
-{{< figure src="/attachments/refguide/modeling/pages/input-widgets/text-box/text-box.png" >}}
+{{< figure src="/attachments/refguide/modeling/pages/input-widgets/text-box/text-box.png" class="no-border" >}}
 
 ## 2 Properties Pane
 

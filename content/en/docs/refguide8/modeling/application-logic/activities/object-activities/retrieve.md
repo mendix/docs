@@ -2,13 +2,8 @@
 title: "Retrieve"
 url: /refguide8/retrieve/
 weight: 60
-tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/retrieve.pdf).
-{{% /alert %}}
 
 {{% alert color="warning" %}}
 This activity can be used in both **Microflows** and **Nanoflows**.
@@ -22,7 +17,7 @@ A **Retrieve** activity can be used to get one or more objects, either by direct
 
 An example of retrieve properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/activities/object-activities/retrieve/retrieve-properties.png" alt="retrieve properties" >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/object-activities/retrieve/retrieve-properties.png" alt="retrieve properties" class="no-border" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

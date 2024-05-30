@@ -1,6 +1,7 @@
 ---
 title: "Call REST Service Action"
 url: /refguide7/call-rest-action/
+canonical_url: "https://docs.mendix.com/refguide/call-rest-action/"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -14,7 +15,7 @@ The Call REST Service action can be used to call a REST endpoint. You can specif
 
 ## 2 General
 
-{{< figure src="/attachments/refguide7/desktop-modeler/integration/microflow-activities/call-rest-action/19399080.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/integration/microflow-activities/call-rest-action/19399080.png" class="no-border" >}}
 
 ### 2.1 Location
 
@@ -46,7 +47,7 @@ When you select **Override**, you can configure dynamically whether to use a pro
 
 ## 3 HTTP Headers
 
-{{< figure src="/attachments/refguide7/desktop-modeler/integration/microflow-activities/call-rest-action/19399093.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/integration/microflow-activities/call-rest-action/19399093.png" class="no-border" >}}
 
 ### 3.1 Authentication
 
@@ -62,7 +63,7 @@ These headers are added to the HTTP request header. Each custom header is a pair
 
 ## 4 Request
 
-{{< figure src="/attachments/refguide7/desktop-modeler/integration/microflow-activities/call-rest-action/19399114.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/integration/microflow-activities/call-rest-action/19399114.png" class="no-border" >}}
 
 The sections below describe the options in the drop-down menu for generating the request. Requests can only be generated for HTTP methods POST, PUT, PATCH, and OPTIONS.
 
@@ -96,7 +97,7 @@ This option allows you to generate the request using a string template. The temp
 
 ## 5 Response
 
-{{< figure src="/attachments/refguide7/desktop-modeler/integration/microflow-activities/call-rest-action/19399084.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/integration/microflow-activities/call-rest-action/19399084.png" class="no-border" >}}
 
 ### 5.1 Response Handling
 

@@ -143,41 +143,41 @@ To translate multiple occurrences and multiple texts from the default language, 
 
 Sometimes a single word in the source language does not have a single translation in the destination language.
 
-To deal with this situation, follow the steps below:
+To handle this, follow the steps below:
 
-1. Follow steps **1** through **6** in the [previous section](#translate-multiple-texts) again to see the list of texts in your module which can be translated from **English, United States** to **Russian, Russia**.
-2. In the **Source text contains** field, enter *Order*.
+1. Follow steps **1** through **6** in the [previous section](#translate-multiple-texts) to see the list of texts in your module which can be translated from **English, United States** to **(Chinese (Simplified), China**.
+2. In the **Searchs** field, enter *Order*.
 3. In the grid, click the translatable text **Order**. The **#** column shows that there are three places where this text is used. The locations are listed in the **Show occurrence** section.
 
     {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/batch-translate-order.png" alt="All source texts containing the word 'order' with the locations of the text 'order' shown" class="no-border" >}}
 
-4. In the **Show occurrence** section, the **Object** column shows that one of the locations of the text **Order** is the **Action button 'actionButton3'** on the **Product_NewEdit** page. This is the button we added to allow the end-user to order the product. To confirm this, double-click the row of **Action button 'actionButton3'**.
+4. In the **Show occurrence** section, the **Object** column shows that one of the locations of the text **Order** is the **Action button 'actionButton3'** on the **Product_NewEdit** page. This is the button added to allow the end-user to order the product. To confirm this, double-click the row of **Action button 'actionButton3'**.
 
     {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/product-new-edit-order.png" alt="Order button on Product New Edit page" class="no-border"  width="500" >}}
 
     In the background, the **Product_NewEdit** page opens with the button **Order** selected. This shows that this text is used on the button.
 
 5. If you made any translations, click **Translate** to save them.
-6. **Close** the dialog box.
-7. In our app, the text *Order* is used as the command to order a product, and also used to refer to the Order entity. However, in Russia the translations for these two scenarios are different. To solve this issue, open the **Product_NewEdit** page.
-8. Edit the text on the button to reflect the verb *to order*. In Russian this is *заказать*.
+6. Click **Close** to close the dialog box.
+7. In your app, the text *Order* is used as the command to order a product, and is used to refer to the Order entity. However, in Chinese, the translations for these two scenarios are different. To solve this issue, open the **Product_NewEdit** page.
+8. Edit the text on the button to reflect the verb *to order*. In Chinese, this is *заказать*.
 
     {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/product-new-edit-order-russian.png" alt="Order button on Product New Edit page translated into Russian" class="no-border" width="500" >}}
 
 9. Go to the **Language** > **Batch Translate** to open the dialog box and search for *Order* in the module **MyFirstModule**. 
 
-    Now in the grid **Order** has two rows: one row has the translation **заказать**, and the other row has no translation.
+    Now in the grid, **Order** has two rows: one row has the translation **заказать**, and the other row has no translation.
 
     {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/batch-translate-order-split.png" alt="All source texts containing the word 'order' showing that ones with different translations are shown separately. " class="no-border" width="500" >}}
 
-10. In the row where **Order** has no translation, enter *Заказ*. This is the Russian translation for *an order*.
+10. In the row where **Order** has no translation, enter *Заказ*. This is the Chinese translation for *an order*.
 
     {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/batch-translate-order-2-translations.png" alt="All source texts containing the word 'order' showing two different translations for Order. " class="no-border" >}}
 
 11. Click **Translate** to save the translation.
-12. **Close** the dialog box.
+12. Click **Close** to close the dialog box.
 
-You can now check that the correct translation has been applied to the other instances of *Order*, for example on the **Order_Overview** page.
+You can now check that the correct translation has been applied to the other instances of Order (for example, on the **Order_Overview** page).
 
 ## 7 Replacing Text in Current Language
 

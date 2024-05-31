@@ -1,7 +1,6 @@
 ---
 title: "Apps"
 url: /control-center/apps/
-
 description: "Describes the Apps page in the Mendix Control Center."
 tags: ["control center", "mendix admin", "apps"]
 weight: 15
@@ -47,7 +46,7 @@ The description of the items that you can select are as follows:
 
 * **EnvID**: the unique identifier of the environment.
 
-* **Environment**: the name of the environment.
+* **Environment**: the name of the environment
 
 * **Deployed Status**: whether the app has been deployed on this environment
 
@@ -61,27 +60,31 @@ The description of the items that you can select are as follows:
 
 * **Created Date**: the date the app was created
 
-* **Env Owner**: the owner of the environment
+*  **Env Owner**: the company that owns the environments of this app
 
-* **Env Owner Id**:
+    {{% alert color="info" %}}If the owner fo the environments is not your company, you have limited control over the deployment of your app. For information on how to resolve this, see [How to Resolve Shared Ownership of Apps](/control-center/resolve-shared-ownership-of-apps/).{{% /alert %}}
 
-* **Cloud Resource Pack**: the resource pack for the cloud environment.
+* **Env Owner Id**: the ID of the company that owns the environments of this app 
 
-  {{% alert color="info" %}}For the technical details of each cloud resource pack, see the [Cloud Resource Packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack) section in *Mendix Cloud*.{{% /alert %}}
+*  **Cloud Resource Pack**: the resource pack for the cloud environment where the app is deployed
+
+    {{% alert color="info" %}}For the technical details of each cloud resource pack, see the [Cloud Resource Packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack) section in *Mendix Cloud*.{{% /alert %}}
 
 * **Cloud Location**: the location of the environment
 
-* **App RAM**:
+* **App RAM**:  the size of the RAM allocated for running the app
 
-* **DB RAM**:
+* **DB RAM**:  the size the RAM allocation for database operations
 
-* **DB Storage**: the storage of the database used by the app
+* **DB Storage**: the size of the dabase storage
 
-* **DB Storage Extra**:
+* **DB Storage Extra**: the extra storage of the database
 
-* **File Storage**:
+* **File Storage**: the size of the storage allocated for storing files
 
-* **Fallback**: whether there is a fallback
+*  **Fallback**: whether the data in the database is automatically copied to a database in a second availability zone.
+
+    {{% alert color="info" %}}For more information, see the [High Availability and Fallback](/developerportal/deploy/mendix-cloud-deploy/#fallback) section in *Mendix Cloud*.{{% /alert %}}
 
 You can filter the apps in the table. For details, see the [Filtering Apps in the Table](#filter-apps) section.
 
@@ -101,19 +104,15 @@ The description of the items that you can select are as follows:
 
 * **App Name**: the name of the app
 
-  {{% alert color="info" %}}
-  You can view the [app details](#app-details) by clicking the app name in the table.
-  {{% /alert %}}
+  {{% alert color="info" %}}You can view the [app details](#app-details) by clicking the app name in the table.{{% /alert %}}
+  
+*  **Technical Contact**: the technical contact of the app
 
-* **Technical Contact**: the technical contact of the app. 
+    {{% alert color="info" %}}You can edit the Technical Contact of an app by clicking **Edit** ({{% icon name="pencil" %}}) next to the current Technical Contact in the table.{{% /alert %}}
+  
+* **EnvID**: the unique identifier of the environment
 
-  {{% alert color="info" %}}
-  You can edit the Technical Contact of an app by clicking **Edit** ({{% icon name="pencil" %}}) next to the current Technical Contact in the table.
-  {{% /alert %}}
-
-* **EnvID**: the unique identifier of the environment.
-
-* **Environment**: the name of the environment.
+* **Environment**: the name of the environment
 
 * **Env Status**: the app deployment status on environment
 
@@ -127,13 +126,15 @@ The description of the items that you can select are as follows:
 
 * **Created Date**: the date the app was created
 
-* **NamespaceID**: the ID of the name
+* **NamespaceID**: the ID of the namespace
 
-* **Namespace**: the namespace of the app
+*  **Namespace**: the Kubernets namespace
 
-* **Database Name**: the name of the database used by the app
+    {{% alert color="info" %}}For more information, see [How to Create a Cluster and Namespace](/developerportal/deploy/private-cloud-cluster/#3-creating-a-cluster-and-namespace) in *Creating a Private Cloud Cluster*.{{% /alert %}}
 
-* **Storage Name**: the name of the storage used by the app
+* **Database Name**: the name of the database
+
+* **Storage Name**: the name of the storage
 
 ## 4 Mendix Free Cloud
 
@@ -147,17 +148,13 @@ The description of the items that you can select are as follows:
 
 * **AppID**: the unique identifier of the app
 
-* **App Name**: the name of the app
+*  **App Name**: the name of the app
 
-  {{% alert color="info" %}}
-  You can view the [app details](#app-details) by clicking the app name in the table.
-  {{% /alert %}}
+    {{% alert color="info" %}}You can view the [app details](#app-details) by clicking the app name in the table.{{% /alert %}}
 
-* **Technical Contact**: the technical contact of the app. 
+*  **Technical Contact**: the technical contact of the app. 
 
-  {{% alert color="info" %}}
-  You can edit the Technical Contact of an app by clicking **Edit** ({{% icon name="pencil" %}}) next to the current Technical Contact in the table.
-  {{% /alert %}}
+    {{% alert color="info" %}}You can edit the Technical Contact of an app by clicking **Edit** ({{% icon name="pencil" %}}) next to the current Technical Contact in the table.{{% /alert %}}
 
 * **EnvID**: the unique identifier of the environment.
 
@@ -194,11 +191,9 @@ You can customize the columns of the table by clicking the column selector (the 
 The description of the items that you can select are as follows:
 
 * **AppID**: the unique identifier of the app
-* **App Name**: the name of the app
+*  **App Name**: the name of the app
 
-  {{% alert color="info" %}}
-  You can view the [app details](#app-details) by clicking the app name in the table.
-  {{% /alert %}}
+    {{% alert color="info" %}}You can view the [app details](#app-details) by clicking the app name in the table.{{% /alert %}}
 * **Last Commit**: the date of the last commit in the main line
 * **Members**: the number of the team members in the app development team
 * **Created Date**: the date the app was created
@@ -221,11 +216,9 @@ You can customize the columns of the table by clicking the column selector (the 
 The description of the items that you can select are as follows:
 
 * **AppID**: the unique identifier of the app
-* **App Name**: the name of the app
+*  **App Name**: the name of the app
 
-  {{% alert color="info" %}}
-  You can view the [app details](#app-details) by clicking the app name in the table.
-  {{% /alert %}}
+    {{% alert color="info" %}}You can view the [app details](#app-details) by clicking the app name in the table.{{% /alert %}}
 * **Created Date**: the date the app was created
 * **Mainline Version**: the Mendix version of the app on the mainline in the repository
 * **Last Commit**: the date of the last commit in the main line

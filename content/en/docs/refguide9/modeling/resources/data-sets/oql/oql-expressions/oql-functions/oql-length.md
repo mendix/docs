@@ -1,7 +1,6 @@
 ---
 title: "OQL LENGTH"
 url: /refguide9/oql-length/
-tags: ["studio pro"]
 ---
 
 ## 1 Description

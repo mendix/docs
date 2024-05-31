@@ -3,7 +3,6 @@ title: "Monitoring Mendix Runtime"
 url: /refguide7/monitoring-mendix-runtime/
 
 description: "Describes the supported Mendix Runtime monitoring actions."
-tags: ["runtime, json"]
 ---
 
 ## 1 Introduction

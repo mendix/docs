@@ -2,7 +2,6 @@
 title: "MySQL/MariaDB"
 url: /refguide8/mysql/
 weight: 50
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction

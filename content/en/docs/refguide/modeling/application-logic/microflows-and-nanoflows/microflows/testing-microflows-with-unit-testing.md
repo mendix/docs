@@ -3,7 +3,6 @@ title: "Testing Microflows with the Unit Testing Module"
 linktitle: "Testing Microflows with Unit Test Module"
 url: /refguide/testing-microflows-with-unit-testing-module/
 weight: 3
-tags: ["test", "testing", "microflow", "unit testing"]
 ---
 
 ## 1 Introduction

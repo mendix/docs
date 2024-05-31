@@ -4,7 +4,6 @@ linktitle: "Amazon SageMaker"
 url: /appstore/modules/aws/amazon-sagemaker-machine-learning/
 description: "Describes the steps required to add Amazon SageMaker machine learning capabilities to your Mendix app."
 weight: 20
-tags: ["AWS", "Amazon SageMaker", "machine learning", "ML", "Mendix Studio Pro"]
 aliases:
     - /appstore/connectors/aws/amazon-sagemaker-machine-learning/
 ---

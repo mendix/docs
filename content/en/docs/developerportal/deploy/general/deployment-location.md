@@ -3,7 +3,6 @@ title: "Deployment Location"
 url: /developerportal/deploy/deployment-location/
 weight: 45
 description: "URL considerations for deploying Mendix"
-tags: ["URL", "sub-domain", "folders", "subdirectories"]
 ---
 
 ## 1 Introduction

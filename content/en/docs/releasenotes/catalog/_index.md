@@ -2,7 +2,6 @@
 title: "Catalog"
 url: /releasenotes/catalog/
 description: "Release notes for updates to the Mendix Catalog"
-tags: ["data hub", "Catalog", "data hub Landscape"]
 weight: 36
 aliases:
     - /releasenotes/data-hub/
@@ -680,7 +679,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 #### New Features
 
-* We added an option to [delete a data source](/catalog/manage/curate/#delete-data-source), available for users with [curation](/catalog/manage/curate/) rights. To delete a data source, go to the [Curation Bar](/catalog/manage/curate/#curation-bar) for the data source and click **Edit**, then click **Delete Data Source**.
+* We added an option to [delete a data source](/catalog/manage/curate/#delete-data-source), available for users with [curation](/catalog/manage/curate/) rights. To delete a data source, go to the Curation Bar for the data source and click **Edit**, then click **Delete Data Source**.
 
 #### Fixes
 

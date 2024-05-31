@@ -2,7 +2,6 @@
 title: "Data View"
 url: /refguide8/data-view/
 weight: 10
-tags: ["page", "data view", "widget", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

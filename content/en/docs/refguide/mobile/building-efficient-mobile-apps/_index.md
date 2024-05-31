@@ -3,7 +3,6 @@ title: "Building Efficient Mobile Apps"
 url: /refguide/mobile/building-efficient-mobile-apps/
 weight: 31
 description: "These documents explain how to best arrange data syncing, startups, and improve other aspects of mobile apps."
-tags: ["optimize", "mobile", "performance", "speed"]
 ---
 
 ## 1 Introduction

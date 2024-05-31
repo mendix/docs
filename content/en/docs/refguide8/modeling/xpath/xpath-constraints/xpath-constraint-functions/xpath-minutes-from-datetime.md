@@ -1,7 +1,6 @@
 ---
 title: "XPath Minutes-from-DateTime"
 url: /refguide8/xpath-minutes-from-datetime/
-tags: ["studio pro"]
 ---
 
 ## 1 Overview

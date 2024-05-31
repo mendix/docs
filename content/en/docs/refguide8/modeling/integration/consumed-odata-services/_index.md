@@ -2,7 +2,6 @@
 title: "Consumed OData Services"
 url: /refguide8/consumed-odata-services/
 description: "Overview of consumed OData services for Studio Pro"
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction

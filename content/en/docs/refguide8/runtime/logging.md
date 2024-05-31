@@ -2,7 +2,6 @@
 title: "Logging"
 url: /refguide8/logging/
 
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction

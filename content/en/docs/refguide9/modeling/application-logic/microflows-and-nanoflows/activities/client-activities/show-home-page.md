@@ -2,7 +2,6 @@
 title: "Show Home Page"
 url: /refguide9/show-home-page/
 weight: 30
-tags: ["studio pro", "show home page", "home page", "client activities"]
 aliases:
     - /refguide9/Show+Home+Page.html
     - /refguide9/Show+Home+Page

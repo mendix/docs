@@ -5,7 +5,6 @@ url: /appstore/modules/openai-connector/rag-example-implementation/
 linktitle: "RAG Example Implementation"
 weight: 5
 description: "Describes the retrieval augmented generation (RAG) example implementation in the OpenAI showcase application"
-tags: ["OpenAI", "generative AI", "AI", "connector", "marketplace", "chatgpt", "genAI", "embeddings", "Retrieval augmented generation", "RAG", "showcase application", "Azure OpenAI"]
 ---
 
 ## 1 Introduction {#introduction}

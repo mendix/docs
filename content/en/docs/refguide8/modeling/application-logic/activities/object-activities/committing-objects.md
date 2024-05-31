@@ -2,7 +2,6 @@
 title: "Commit Object(s)"
 url: /refguide8/committing-objects/
 weight: 30
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction

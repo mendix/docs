@@ -1,7 +1,6 @@
 ---
 title: "Published OData Services"
 url: /refguide8/published-odata-services/
-tags: ["studio pro"]
 aliases:
     - /refguide8/published-odata-services.html
     - /refguide8/published-odata-services/

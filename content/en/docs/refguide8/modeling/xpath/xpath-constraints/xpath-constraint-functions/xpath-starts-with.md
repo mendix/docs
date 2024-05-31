@@ -1,7 +1,6 @@
 ---
 title: "XPath Starts-With"
 url: /refguide8/xpath-starts-with/
-tags: ["studio pro"]
 ---
 
 ## 1 Overview

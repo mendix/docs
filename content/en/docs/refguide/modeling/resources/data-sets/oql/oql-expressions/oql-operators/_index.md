@@ -1,7 +1,6 @@
 ---
 title: "OQL Operators"
 url: /refguide/oql-operators/
-tags: ["studio pro"]
 ---
 
 

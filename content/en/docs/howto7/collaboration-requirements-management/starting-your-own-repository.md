@@ -3,7 +3,6 @@ title: "Start Your Own Repository"
 url: /howto7/collaboration-requirements-management/starting-your-own-repository/
 
 weight: 30
-tags: []
 ---
 
 ## 1 Introduction

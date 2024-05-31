@@ -2,7 +2,6 @@
 title: "Configuration Module API"
 url: /apidocs-mxsdk/apidocs/pluggable-widgets-config-api/
 description: A guide for understanding the configuration module API which influences the behavior of pluggable widgets in Mx10.
-tags: ["Widget", "Pluggable", "Custom", "Preview", "Structure Mode", "Visibility", "editorConfig"]
 weight: 35
 aliases:
 - /apidocs-mxsdk/apidocs/config-api-for-pluggable-widgets

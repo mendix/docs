@@ -3,7 +3,6 @@ title: "Scheduled Events – Task Queue"
 url: /refguide9/scheduled-events-task-queue/
 weight: 10
 description: "Options for configuring scheduled events"
-tags: ["Scheduled Event", "Execution properties", "Timing", "intervals", "scheduling issues", "time zones", "daylight saving", "task queue"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

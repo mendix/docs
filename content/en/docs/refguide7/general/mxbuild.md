@@ -5,7 +5,6 @@ canonical_url: "https://docs.mendix.com/refguide/mxbuild/"
 
 weight: 50
 description: "Describes MxBuild which is a command-line tool for building and deploying Mendix Apps"
-tags: ["Build", "Deploy", "deployment package", "command-line"]
 ---
 
 ## 1 Introduction

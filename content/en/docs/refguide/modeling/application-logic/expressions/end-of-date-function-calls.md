@@ -3,7 +3,6 @@ title: "End-of Date Function Calls"
 url: /refguide/end-of-date-function-calls/
 weight: 98
 description: Describes end-of date function calls in Studio Pro expressions.
-tags: ["studio pro", "expressions", "end-of date function"]
 ---
 
 ## 1 Introduction

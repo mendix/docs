@@ -2,7 +2,6 @@
 title: "Governance Process"
 url: /appstore/sharing-content/governance-process/
 description: "Describes the Mendix processes for approving and reviewing Marketplace content."
-tags: ["marketplace", "public marketplace", "private marketplace", widget", "module"]
 ---
 
 ## 1 Approval Process

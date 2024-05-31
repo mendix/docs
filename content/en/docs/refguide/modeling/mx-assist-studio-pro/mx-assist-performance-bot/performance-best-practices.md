@@ -3,7 +3,6 @@ title: "Recommendations from MxAssist Best Practice Bot"
 linktitle: "Recommendations from Best Practice Bot"
 url: /refguide/performance-best-practices/
 description: "Describes Mendix best practices from MxAssist Best Practice Bot."
-tags: ["studio pro", "performance", "best practice", "mx assist", "mendix assist"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #The anchors <mxp001-mxpnnn> below are all mapped, so they should not be removed or changed.
 ---

@@ -1,7 +1,6 @@
 ---
 title: "OQL Select Clause"
 url: /refguide9/oql-select-clause/
-tags: ["studio pro"]
 ---
 
 ## 1 Description

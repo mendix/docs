@@ -2,7 +2,6 @@
 title: "OQL Where Clause"
 url: /refguide/oql-where-clause/
 weight: 30
-tags: ["oql", "studio pro", "queries", "where"]
 ---
 
 ## 1 Description

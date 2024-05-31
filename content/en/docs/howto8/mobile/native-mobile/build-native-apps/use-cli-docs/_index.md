@@ -4,7 +4,6 @@ linktitle: "Build Apps Using Native Builder CLI"
 url: /howto8/mobile/use-cli-docs/
 weight: 89
 description: Tutorials for building native mobile apps using the Native Builder CLI.
-tags: ["mobile", "native", "react", "ios", "android"]
 ---
 
 For most app building Mendix recommends using the Native Builder UI tool included in Mendix Studio Pro 8.15 and above. However, certain use cases require you use the Native Builder CLI tool. 

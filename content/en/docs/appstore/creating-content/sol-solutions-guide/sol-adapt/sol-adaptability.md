@@ -4,7 +4,6 @@ url: /appstore/creating-content/sol-adaptability-best-practices/
 linktitle: "Best Practices for Adaptability"
 weight: 3
 description: "Best practices for creating a solution for adaptation"
-tags: ["solutions", "adaptable solutions", "best practices", "adaptability"]
 ---
 
 ## 1 Domain Model

@@ -3,7 +3,6 @@ title: "Any Chart Building Blocks"
 url: /refguide7/charts-any-building-bocks/
 description: "A reference guide to the Any Chart building blocks which are provided as part of the Any Chart widget"
 weight: 40
-tags: ["Any Chart", "Charts", "Building Blocks", "Widget", "Desktop Modeler"]
 ---
 
 ## 1 Introduction

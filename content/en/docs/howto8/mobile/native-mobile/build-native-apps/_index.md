@@ -3,7 +3,6 @@ title: "Build Native Apps"
 url: /howto8/mobile/build-native-apps/
 weight: 8
 description: Tutorials for building native mobile apps.
-tags: ["mobile", "native", "react", "ios", "android"]
 ---
 
 These step-by-step guides teach you how to build native mobile applications and more. Many of these guides use the Native Builder UI tool included in Mendix Studio Pro 8.15 and above:

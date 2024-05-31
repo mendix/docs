@@ -3,7 +3,6 @@ title: "MendixChat"
 url: /refguide/mendix-chat/
 weight: 50
 description: "Describes the features in MendixChat."
-tags: ["studio pro", "MendixChat", "mendix chat", "chat", "bot", "chatbot"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

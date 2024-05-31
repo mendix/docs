@@ -4,7 +4,6 @@ url: /howto9/data-models/denormalize-data-to-improve-performance/
 
 weight: 6
 description: "Describes how to denormalize data and keep denormalized data in sync in Studio Pro."
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction

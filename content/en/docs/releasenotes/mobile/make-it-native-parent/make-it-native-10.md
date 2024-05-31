@@ -3,7 +3,6 @@ title: "Make It Native 10 App"
 url: /releasenotes/mobile/make-it-native-10/
 weight: 8
 description: "These release notes showcase each release of the iOS and Android Make It Native app versions."
-tags: ["Native", "Android", "iOS", "Apple", "Android"]
 #ki: "Augmented Reality (AR) Feature" - MOO-1312
 ---
 

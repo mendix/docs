@@ -2,7 +2,6 @@
 title: "DB2"
 url: /refguide8/db2/
 weight: 40
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction

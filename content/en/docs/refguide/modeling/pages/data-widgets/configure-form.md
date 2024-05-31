@@ -5,7 +5,6 @@ url: /refguide/configure-form/
 
 description: "Describes how to configure a form in Mendix Studio Pro."
 weight: 50
-tags: ["studio pro", "pages", "form", "how to"]
 ---
 
 ## 1 Introduction 

@@ -5,7 +5,6 @@ url: /howto7/mobile/push-notifications/
 weight: 10
 no_list: false
 description_list: true 
-tags: ["mobile", "push notification"]
 ---
 
 ## 1 Introduction

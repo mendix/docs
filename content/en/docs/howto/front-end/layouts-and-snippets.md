@@ -4,7 +4,6 @@ url: /howto/front-end/layouts-and-snippets/
 
 weight: 30
 description: "Describes how to create pages using layouts and snippets."
-tags: ["front end"]
 ---
 
 ## 1 Introduction

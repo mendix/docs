@@ -3,7 +3,6 @@ title: "Pusher"
 url: /appstore/services/pusher/
 
 description: "Describes the configuration and usage of the Pusher service, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "pusher", "platform support"]
 aliases:
     - /appstore/modules/pusher/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

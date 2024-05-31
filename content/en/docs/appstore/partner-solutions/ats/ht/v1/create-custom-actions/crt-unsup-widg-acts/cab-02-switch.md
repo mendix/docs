@@ -2,7 +2,6 @@
 title: "CAB.02 - Switch"
 url: /appstore/partner-solutions/ats/ht-one-cab-02-switch/
 description: "This how-to explains step by step how to create an Unsupported Widget action for the Mendix Switch widget."
-tags: ["ATS", "testing"]
 ---
 
 ## 1 Introduction

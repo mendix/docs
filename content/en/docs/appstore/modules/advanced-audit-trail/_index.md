@@ -7,7 +7,7 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
-## I Introduction
+## 1 Introduction
 
 [Advanced Audit Trail](https://marketplace.mendix.com/link/component/120943) allows you to trace changes and conduct infinitely scalable, fully indexed historical searches through your Mendix app data. Once configured, the solution automatically creates audit snapshots of selected entities. These snapshots are sent to centralized long-term data storage, supporting complex search queries without impacting regular app performance.
 
@@ -16,7 +16,7 @@ Advanced Audit Trail employs a managed software stack on top of Kafka and OpenSe
 {{< figure src="/attachments/appstore/modules/advanced-audit-trail/aat_integration_diagram.png" class="no-border" >}}
 
 {{% alert color="info" %}}
-The Advanced Audit Trail solution distinguishes itself from the [Audit Trail](/appstore/modules/audit-trail/) module by requiring less implementation effort, while delivering improved search experience and better performance. For a more comprehensive overview of the differences between the regular and Advanced Audit trail module, see the Advanced Audit Trail vs. Audit Trail section below.
+The Advanced Audit Trail solution distinguishes itself from the [Audit Trail](/appstore/modules/audit-trail/) module by requiring less implementation effort, while delivering improved search experience and better performance. For a more comprehensive overview of the differences between the regular and Advanced Audit trail module, see the [Advanced Audit Trail vs. Audit Trail](#comparison) section below.
 {{% /alert %}}
 
 ### 1.1 Typical Use Cases
@@ -94,8 +94,8 @@ To install the component, follow the instructions in the [Importing Content from
 ### 3.2 Configuring Constants {#constants}
 
 * Retention settings for the local cached data
-    * **SnapshotRetentionDays**: This is the days that the records should be kept in the local snapshot cache.
-    * **OnlyDeleteProcessedItems**: This indicates whether items should only be deleted if they are sent to the external data storage.
+    * **SnapshotRetentionDays**: This represents the number of days that records are kept in the local snapshot cache.
+    * **OnlyDeleteProcessedItems**: This indicates whether items should only be deleted if they have been sent to the external data storage.
         * If **OnlyDeleteProcessedItems** is set to **True**, **SnapshotRetentionDays** only applies to processed snapshots.
 
 * Snapshots
@@ -107,13 +107,13 @@ To install the component, follow the instructions in the [Importing Content from
         {{% alert color="info" %}}Manually-encrypted (for example, using the [Encryption](/appstore/modules/encryption/) module) strings are not the type of hashed string and will not be affected by this setting.{{% /alert %}}
 
 * Integration
-    * **EnvironmentName**: This is the name of the environment within Kibana, which should be unique in your audit data storage, for example, *myApp-prod*. Do not use any whitespace or tilde (~) for the environment name.
+    * **EnvironmentName**: This is the name of the environment, which should be unique in your audit data storage, for example, *myApp-prod*. Do not use any whitespace or tilde (~) for the environment name.
 
         {{% alert color="info" %}}If two applications use the same name, the audit trail will not be able to distinguish between the two, effectively breaking the audit trail for both applications irreversibly.{{% /alert %}}
 
     * **EnvironmentURL** (optional): This URL is used to identify the environment. If left empty, the application runtime URL is used instead. 
-    * **Kafka_Endpoint** / **Kafka_Username** and **Kafka_Password**: These are the credentials for the Kafka environment for sending the data into the long-term storage.
-    * **Kibana_Endpoint** / **Kibana_Username** and **Kibana_Password**: These are the credentials for the Kibana environment for receiving the data from the long-term storage.
+    * **Kafka_Endpoint**/**Kafka_Username** and **Kafka_Password**: These are the credentials for the Kafka environment for sending the data into the long-term storage.
+    * **Opensearch_Endpoint**/**Opensearch_Username** and **Opensearch_Password**: These are the credentials for the Opensearch environment for receiving the data from the long-term storage.
 
 ### 3.3 Configuring Scheduled Events {#scheduled-events}
 
@@ -160,14 +160,38 @@ Use **Get microflow stack trace** from the **Toolbox** (the **JA_GetMicroflowTra
 
 Update the **AuditSnapshots_ResponsiveLayout** to update the layouts without changing the pages.
 
-### 3.11 Configuring the License Key {#configure-license-key}
+## 4 Authentication
 
-You can deploy Advanced Audit Trail locally or in a Mendix Free App for free. However, to deploy Advanced Audit Trail in the Mendix Cloud, you need to start a subscription to [obtain a license key](#obtain-license-key) and then configure it.
+Advanced Audit Trail supports two authentication modes for the AAT backend service: basic authentication and OAuth-based authentication. Basic authentication uses a simple username/password credential set provided by Mendix. OAuth-based authentication, on the other hand, can be enabled on the AAT settings page by setting a flag. 
 
-Before you deploy your app, configure the app **Constants** in the [deployment package](/developerportal/deploy/environments-details/) in the Developer Portal.
+### 4.1 Basic Authentication
 
-If you have already deployed your app, change the existing **Licensekey** constant value on the **Model Options** tab and restart the app.
+When using basic authentication, a simple username/password credential set is used to directly authenticate to the AAT backend service. Mendix provides this credential set, which must be entered on the AAT settings page.
 
-## 4 Read More
+### 4.2 OAuth Authentication
+
+When using OAuth authentication, the app connects to an external identity provider (typically controlled by your organization) to retrieve an access token for authenticating to the AAT backend. To configure OAuth authentication, provide the identity provider's configuration information on the AAT settings page, including the client ID, client secret, client scope, and token endpoint URL.
+
+{{< figure src="/attachments/appstore/modules/advanced-audit-trail/OAuth.png" class="no-border" >}}
+
+## 5 Advanced Audit Trail vs. Audit Trail {#comparison}
+
+The table below provides a detailed comparison between the Advanced Audit Trail and the standard Audit Trail modules.
+
+| Feature | Advanced Audit Trail | Audit Trail |
+| --- | --- | --- |
+| Storage of audit trail events | Seperate Backend | Mendix Database |
+| Implementation in app model | Event Handler | Inheritance |
+| Data storage efficiency | High (1 serialized JSON per change) | Low (1 log object per changed attribute) |
+| List commit handling | Optimized | Not optimized |
+| Saving action stack upon change (e.g. showing related changes and triggering microflow)| Yes | No |
+| Standard overview screen searchable per entity | Yes | No |
+| Ability to show custom attribute value when viewing associations in an audit trail  napshot| Yes | No |
+| Developer can delete audit trail data unnoticed | No | Yes |
+| Guaranteed completeness of audit trail in case of disaster| Yes | No |
+| Additional custom data can be added to an audit trail snapshot (e.g."on behalf of" in case of REST service)| Yes | No |
+| Built-in features for username and hash (e.g. password) scrambling| Yes | No |
+
+## 6 Read More
 
 * [Consuming Add-on Modules and Solutions](/refguide/consume-add-on-modules-and-solutions/)

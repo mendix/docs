@@ -355,7 +355,7 @@ In the Postgres plan configuration, enter the following details:
     * Disabling this option will attempt to connect with TLS, but skip certificate validation. If TLS is not supported, it will fall back to an unencrypted connection.
 * **Database name** - login database for the admin/superuser; in most cases this is set to `postgres`.
 * **Authentication** - select `aws-iam` from the dropdown.
-* **Username** - username of the admin/superuser, used by the Mendix Operator to create or delete tenants for app environments; typically, this is set to `postgres`.
+* **Username** - username of the admin or superuser, used by the Mendix Operator to create or delete tenants for app environments; typically, this is set to `postgres`.
 * **IAM Role ARN** - the *Postgres Admin* IAM role ARN.
     * Mendix recommends using the same IAM role to manage Postgres databases and S3 buckets, as this would be easier to set up and maintain.
 * **K8s Service Account** - the Kubernetes Service Account to create and attach to the IAM role.
@@ -389,16 +389,16 @@ AWS IRSA allows a Kubernetes Service Account to assume an IAM role. For this to 
 The Postgres database is an automated, on-demand database. The Postgres plan offers a good balance between automation, ease of use, and security.
 [Managed identity authentication](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/how-to-connect-with-managed-identity) removes static passwords and instead uses IAM roles for authentication.
 
-{{% alert color="info" %}}
 This section provides technical details on how managed identity authentication works with Postgres. If you just need instructions to get started, the [Azure Managed Identity-based storage walkthrough](#walkthrough-azure-azwi) provides a quick start guide to set the Mendix Operator to manage a Postgres database, SQL Server and Blob Storage account using managed identity authenticaiton.
-{{% /alert %}}
 
 ##### 2.3.3.1 Prerequisites
 
 * An Azure Postgres (Flexible Server) with Entra authentication enabled
-   {{% alert color="info" %}}
-   A Postgres server (cluster) can host multiple databases. Each database can be isolated from one another, this way one Postgres server can be used by multiple independent apps.
-   {{% /alert %}}
+ 
+{{% alert color="info" %}}
+A Postgres server (cluster) can host multiple databases. Each database can be isolated from one another, this way one Postgres server can be used by multiple independent apps.
+{{% /alert %}}
+
 * A *Postgres Admin* managed identity that the Mendix Operator would use to create/delete databases and managed identities for app environments.
   This managed identity needs the following permissions:
     * Entra Admin permissions in the Postgres database;
@@ -452,12 +452,15 @@ In the Postgres plan configuration, enter the following details:
 * **Managed Identity Client ID** - the *Postgres Admin* managed identity Client ID.
     * Mendix recommends using the same *storage admin* managed identity to manage Azure databases and blob storage containers, as this would be easier to set up and maintain. One *storage admin* Service Account can be used for multiple storage plans, and only one Federated Credential would be needed to link it with a *storage admin* Managed Identity.
 * **K8s Service Account** - the Kubernetes Service Account to create and attach to the *Postgres Admin* managed identity (will be created automatically by the `mxpc-cli` installation and configuration tool).
-  {{% alert color="warning" %}}
-  Do not use the name of an existing Service Account (environment name), or one of the reserved Kubernetes Service Account names:
+
+{{% alert color="warning" %}}
+Do not use the name of an existing Service Account (environment name), or one of the reserved Kubernetes Service Account names:
+    
     * `mendix-operator`
     * `mendix-agent`
     * `mendix-storage-provisioner`
-  {{% /alert %}}
+
+{{% /alert %}}
 
 {{% alert color="info" %}}
 To connect to an Azure Postgres database, the firewall must be configured to allow connections to the database from the Kubernetes cluster.

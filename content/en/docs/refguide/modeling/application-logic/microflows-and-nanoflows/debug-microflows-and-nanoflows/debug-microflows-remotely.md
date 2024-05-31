@@ -46,7 +46,7 @@ The debugger supports only debugging of single-instance environments. Multi-inst
 
 When your application is in Mendix Cloud, follow these steps:
 
-1. Open your app in the [Mendix Portal](https://home.mendix.com).
+1. Open your app in [Apps](https://sprintr.home.mendix.com/).
 
 2. Click **Environments** in the navigation pane.
 

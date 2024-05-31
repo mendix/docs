@@ -82,7 +82,7 @@ To add an additional language, do the following:
 
 The current language is the language of the dictionary where any text you enter is stored. At the lower-right corner of the Studio Pro window, the language indicator shows which language is the current language.
 
-To change your current language to Chinese (Simplified), do the following:
+To change your current language to Chinese, do the following:
 
 1. Click the language indicator at the lower-right corner of the Studio Pro window.
 2. Select **Chinese (Simplified), China** to make that your current language.
@@ -93,7 +93,7 @@ To change your current language to Chinese (Simplified), do the following:
 
 ## 5 Translating an Individual Piece of Text
 
-Now that your current language is Russian, you can translate some of the texts into that language.
+Now that your current language is Chinese, you can translate some of the texts into that language.
 
 1. Open the **Home_Web** page in Studio Pro.
 
@@ -109,33 +109,33 @@ You have now added a translation for these two pieces of text.
 
 ## 6 Using Batch Translate
 
-You can translate each piece of text individually. However, there are texts which appear multiple times, for example **Cancel**, **Delete**, and **Edit**.
+You can translate each piece of text individually. However, there are texts which appear multiple times (for example **Cancel**, **Delete**, and **Edit**).
 
 Mendix offers you a way to add a translation for all occurrences of a text at once.
 
 ### 6.1 Translating Multiple Texts {#translate-multiple-texts}
 
-To translate multiple occurrences and multiple texts from the default language, English, to Russian in a single operation, do the following:
+To translate multiple occurrences and multiple texts from the default language, English, to Chinese in a single operation, do the following:
 
 1. Select the menu option **Language** > **Batch Translate**. The **Batch Translate** dialog box opens.
-2. Select **English, United States (default)** as the **Source language** and **Russian, Russia** as the **Destination language**.
+2. Select **English, United States (default)** as the **Source language** and **Chinese (Simplified), China** as the **Destination language**.
 3. Click **OK**.
-4. The **Documents/modules** field is set to **(all)**. You initially want to work just on your module, rather than everything. To change this, click **Select** next to **Documents/modules**. The **Select Documents/Modules** dialog box opens.
+4. The **Documents/modules** field is set to **(all)**. You initially want to work just on your module, rather than everything. To change this, click **Select** next to **Documents/modules**.
 5. Make sure only the module **MyFirstModule** is selected. This can restrict batch translation to this module.
 
     {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/batch-translate-myfirstmodule.png" alt="Select only MyFirstModule" class="no-border" >}}
 
-6. Click **OK**. You can now see all the translatable texts in your module. The **Translation (Russian, Russia)** column shows the individual translations you made in the previous section. The **#** column shows the number of times each text appears in the selected module (or modules).
+6. Click **OK**. You can now see all the translatable texts in your module. The **Translation (Chinese (Simplified), China)** column shows the individual translations you made in the previous section. The **#** column shows the number of times each text appears in the selected module (or modules).
 
     {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/batch-translate-initial.png" alt="Translatable texts in MyFirstModule" class="no-border" >}}
 
-7. Enter translations in the **Translation (Russian, Russia)** column for a few terms: **Cancel**, **Delete**, and **Edit**, for example.
+7. Enter translations in the **Translation (Chinese (Simplified), China)** column for a few terms: **Cancel**, **Delete**, and **Edit**.
 
     {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/batch-translate-cancel-delete-edit.png" alt="Translate Cancel, Delete, and Edit into Russian" class="no-border" >}}
 
 8. Click **Translate** to save the current translations.
-9. **Close** the dialog box.
-10. Open the **Product_NewEdit** page. The related terms now have Russian translations.
+9. Click **Close** to close the dialog box.
+10. Open the **Product_NewEdit** page. The related terms now have Chinese translations.
 
     {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/product-new-edit-partial-translation.png" alt="Product New Edit page showing the cancel button translated into Russian" class="no-border" >}}
 

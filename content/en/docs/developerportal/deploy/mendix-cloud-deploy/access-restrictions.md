@@ -75,7 +75,7 @@ For each IP range, you can specify a **Name** for the range and a range of addre
 
 To apply a restriction to a specific application environment, follow these steps:
 
-1. From the Mendix Portal, open the **Environments** page for your app.
+1. From [Apps](https://sprintr.home.mendix.com), go to the app's **Environments** page.
 2. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the desired environment.
 3. Go to the **Network** tab.
 4. The **Path Based Access Restrictions** section allows for applying access restrictions to a single environment.
@@ -106,7 +106,7 @@ Consider this example scenario in which a basic IP range restriction could be us
 
 To restrict access to the app to an IP range, follow these steps:
 
-1. From the [Apps](https://sprintr.home.mendix.com), go to your app's **Environments** page.
+1. From [Apps](https://sprintr.home.mendix.com), go to the app's **Environments** page.
 2. Switch to the **Access Restriction Profiles** tab.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/app-restriction.png" alt="The Access Restriction Profiles tab" class="no-border" >}}

@@ -61,7 +61,7 @@ The prerequisites are the following:
     | --- | --- |
     | [.NET Desktop Runtime 6.0.x](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) <br/> Mendix recommends using version 6.0.6 or above | [.NET Desktop Runtime 8.0.x](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) |
 
-* [Eclipse Temurin JDK 11 (x64)](https://github.com/adoptium/temurin11-binaries/releases)
+* [Eclipse Temurin JDK 11, 17, or 21 (x64)](https://adoptium.net/temurin/releases/?version=21) (see [JDK Installation](/refguide/jdk-installation) if you want to install another version of the JDK)
 * [Microsoft Visual C++ 2015 and 2019 Redistributable Package](https://aka.ms/vs/16/release/vc_redist.x64.exe)
 * [Mendix Native Mobile Builder one-click Installer](https://appdev-mx-cdn.s3.amazonaws.com/native-builders/latest.exe)
 * [Git for Windows (x64)](https://git-scm.com/download/win) using the versions described below. These are the versions of Git that Studio Pro installs if the Git version installed on the system is below the suggested one.  

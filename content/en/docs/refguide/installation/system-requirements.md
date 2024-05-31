@@ -46,7 +46,7 @@ The following frameworks are required. They will be installed automatically by t
     | .NET 6 Desktop Runtime | .NET 8 Desktop Runtime |
     
 * Microsoft Visual C++ 2019 Redistributable Package (x64)
-* A Java Developer Kit (JDK) version 11 or 17 - if not yet installed on your machine, Mendix will install 'Eclipse Temurin JDK 11 (x64)'
+* A Java Developer Kit (JDK) version 11, 17, or 21 - if not yet installed on your machine, Mendix will install 'Eclipse Temurin JDK 21 (x64)'
 * Git for Windows (x64) version 2.41.0 or above (for more information, see the [Prerequisites](/refguide/install/#prerequisites) section in *Installing Mendix Studio Pro*)
 * Mendix Native Mobile Builder
 * Microsoft Edge WebView2 Evergreen Runtime (x64)
@@ -211,10 +211,10 @@ The Mendix Docker buildpack supports the following Kubernetes versions:
 
 ### 6.3 Java {#java}
 
-When running Mendix on a server, you will need Java Runtime Environment (JRE) 11 or 17. To download an OpenJDK distribution from Adoptium, see [Adoptium Installation](https://adoptium.net/temurin/releases). To download a commercial Oracle distribution, see [Java SE Downloads](https://www.oracle.com/technetwork/java/javase/downloads/index.html).
+When running Mendix on a server, you will need Java Runtime Environment (JRE) 11, 17, or 21. To download an Eclipse Temurin OpenJDK distribution from Adoptium, see [Eclipse Temurin™ Latest Releases](https://adoptium.net/temurin/releases). To download a commercial Oracle distribution, see [Java SE Downloads](https://www.oracle.com/technetwork/java/javase/downloads/index.html).
 
 {{% alert color="warning" %}}
-Compatibility with JDK 17 has been released with Studio Pro version 10.8. Compatibility with Java 21 is planned for Studio Pro version 10.10, to be released in April 2024. Mendix recommends switching to a Studio Pro version compatible with Java 21 once it is available.
+Compatibility with JDK 17 has been released with Studio Pro version 10.8. Compatibility with Java 21 has been released with Studio Pro version 10.11. Mendix recommends switching to a Studio Pro version compatible with Java 21.
 {{% /alert %}}
 
 ## 7 Databases {#databases}

@@ -3,7 +3,6 @@ title: "Test the Push Notifications Implementation"
 linktitle: "Test Push Notifications"
 url: /howto8/mobile/testing-the-implementation/
 weight: 60
-tags: ["mobile", "push notification"]
 ---
 
 ## 1 Introduction

@@ -2,12 +2,10 @@
 title: "Developer Portal Guide"
 url: /developerportal/
 description: "Describes the sections of the Mendix Developer Portal and links to more detailed documents in the guide."
-tags: ["mendix", "developer portal", "platform services", "buzz", "apps", "community", "marketplace", "academy", "forum", "docs", "documentation"]
 weight: 30
 no_list: false
 description_list: true
 cascade:
-    - space: "Developer Portal Guide"
     - content_type: "Developer Portal Guide"
     - mendix_version: 10
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -67,7 +65,7 @@ The navigation pane is divided into four main categories, which correspond with 
 
 {{< figure src="/attachments/developerportal/navigation-pane.png" alt="The navigation pane" width="45%" class="no-border" >}}
 
-## 5 Company Buzz and Apps {#my-company-apps}
+## 5 Company Apps {#my-company-apps}
 
 In the top bar of the Developer Portal, an additional menu item is available for **Company Apps**:
 

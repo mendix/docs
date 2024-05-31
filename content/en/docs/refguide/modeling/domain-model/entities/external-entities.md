@@ -2,7 +2,6 @@
 title: "External Entities"
 url: /refguide/external-entities/
 weight: 15
-tags: ["domain model", "entity", "entities", "attribute", "external entities", "event handler", "access rule", "studio pro", "consumed OData Service"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 ## 1 Introduction

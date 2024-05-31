@@ -1,9 +1,8 @@
 ---
 title: "Create a Secure App"
 url: /howto8/security/create-a-secure-app/
-category: "Security"
+
 weight: 10
-tags: ["security", "secure app"]
 ---
 
 ## 1 Introduction

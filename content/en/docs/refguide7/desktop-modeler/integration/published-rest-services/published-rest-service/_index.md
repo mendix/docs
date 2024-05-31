@@ -3,7 +3,6 @@ title: "Published REST Service"
 url: /refguide7/published-rest-service/
 weight: 10
 description: "Configuration options for a published REST service"
-tags: ["published REST", "service", "reserved URL prefixes", "swagger", "security", "CORS", "resources", "operation", "how-to"]
 ---
 
 {{% alert color="info" %}}

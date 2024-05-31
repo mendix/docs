@@ -4,7 +4,6 @@ linktitle: "Amazon Cognito"
 url: /appstore/modules/aws/amazon-cognito/
 description: "Describes the steps required to use Amazon Cognito with the OIDC SSO module."
 weight: 20
-tags: ["AWS", "Amazon Cognito", "OIDC"]
 ---
 
 ## 1 Introduction

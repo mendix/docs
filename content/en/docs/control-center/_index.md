@@ -2,12 +2,10 @@
 title: "Control Center Guide"
 url: /control-center/
 description: "Describes the Mendix Control Center, used for the governance of company members, apps, security, and cloud resources."
-tags: ["control center", "mendix admin", "role", "permissions", "fallback", "resource pack", "node", "offboard"]
 weight: 35
 no_list: false 
 description_list: true
 cascade:
-    - space: "Control Center Guide"
     - content_type: "Control Center Guide"
     - mendix_version: 10
 aliases:
@@ -28,4 +26,6 @@ If your company already has a Mendix Admin but you yourself are not a Mendix Adm
 
 If you are a Mendix Admin, you will immediately see the [Dashboard](/control-center/dashboard/) page and can navigate to the pages described below.
 
-## 2 Documents in This Category.
+## 2 Guide Categories
+
+The *Control Center Guide* is divided into the following categories:

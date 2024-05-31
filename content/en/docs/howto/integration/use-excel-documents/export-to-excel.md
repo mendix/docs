@@ -1,10 +1,8 @@
 ---
 title: "Export to Excel"
 url: /howto/integration/using-the-excel-exporter/
-category: "Integration"
 weight: 20
 description: "Describes how to create custom Excel documents from your app based on configurable templates."
-tags: ["excel", "excel export", "excel exporter", "integration"]
 ---
 
 ## 1 Introduction

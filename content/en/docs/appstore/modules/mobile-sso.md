@@ -1,9 +1,8 @@
 ---
 title: "Mobile SSO"
 url: /appstore/modules/mobile-sso/ 
-category: "Modules"
+
 description: "Describes the configuration and usage of the Mobile SSO module, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "Mobile SSO", "IdP", "single sign on", "platform support", "Azure","Okta"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 # Linked from https://marketplace.mendix.com/link/component/223516
 ---
@@ -53,7 +52,7 @@ This module has the following limitations:
 
 This section clarifies to what extent a Mobile Mendix app using Mobile SSO module adheres to best practices for mobile SSO as per [RFC 8252](https://www.rfc-editor.org/rfc/rfc8252.txt):
 
-* The Mobile SSO module uses an embedded browser for sign in and does not utilize an external browser.
+* The Mobile SSO module uses an external browser for sign in and does not utilize an embedded  browser.
 * Native Mendix apps have a back-end counterpart that holds the credentials for client authentication, as shown in the diagram above. This makes the native app a confidential client instead of a public client.
 
 ## 2 Dependencies

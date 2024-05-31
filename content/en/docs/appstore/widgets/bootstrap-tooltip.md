@@ -2,9 +2,8 @@
 title: "Bootstrap Tooltip"
 deprecated: true
 url: /appstore/widgets/bootstrap-tooltip/
-category: "Widgets"
+
 description: "Describes the configuration and usage of the Bootstrap Tooltip widget, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "widget", "bootstrap tooltip", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 {{% alert color="warning" %}}

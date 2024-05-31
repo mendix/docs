@@ -2,7 +2,6 @@
 title: "Change Workflow State"
 url: /refguide9/change-workflow-state/
 weight: 20
-tags: ["studio pro", "user task", "workflow", "change workflow state", "workflow state"]
 ---
 
 {{% alert color="warning" %}}

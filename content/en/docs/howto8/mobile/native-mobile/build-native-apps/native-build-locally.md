@@ -4,7 +4,6 @@ linktitle: "Build Local Native Mobile App"
 url: /howto8/mobile/native-build-locally/
 weight: 30
 description: Describes how to build your first Mendix native mobile app locally using the Mendix Native Mobile Builder.
-tags: ["native", "mobile", "build", "local", "xcode", "android studio"]
 ---
 
 ## 1 Introduction

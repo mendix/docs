@@ -3,7 +3,6 @@ title: "Retrieve Environment-Sensitive Data from a Secret Store"
 url: /developerportal/deploy/secret-store-credentials/
 description: "Describes the process for using external secret stores for Kubernetes secrets"
 weight: 20
-tags: ["Deploy", "Private Cloud", "Secrets", "Secret Stores", "Vault", "Kubernetes", "AWS"]
 ---
 
 ## 1 Introduction
@@ -486,14 +485,20 @@ To use this feature, you need to:
 After completing the prerequisites, follow these steps to switch from password-based authentication to IAM authentication:
 
 1. Remove or comment out `database-password` from the `SecretProviderClass` and the associated AWS Secret.
-2. Enable [IAM authentication](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.DBAccounts.html#UsingWithRDS.IAMDBAuth.DBAccounts.PostgreSQL) for the `database-username` role by using the `psql` commandline to run the following commands (replacing `<database-username>` with the username specified in `database-username`):
+2. Enable [IAM authentication](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.DBAccounts.html#UsingWithRDS.IAMDBAuth.DBAccounts.PostgreSQL) and grant `rds_iam` role to `database-username` role by using the below `psql` commandline to run the following jump pod commands (replacing `<database-username>` with the username specified in `database-username` and `<database-host>` with the database host):
 
    ```sql {linenos=false}
+   kubectl run postgrestools docker.io/bitnami/postgresql:14 -ti --restart=Never --rm=true -- /bin/sh
+   export PGDATABASE=postgres
+   export PGUSER=<database-username>
+   export PGHOST=<database-host>
+   export PGPASSWORD=<database-password>
+   psql
+
    GRANT rds_iam TO <database-username>;
    ALTER ROLE <database-username> WITH PASSWORD NULL;
    ```
 
-   {{% alert color="info" %}}This step is not necessary if the RDS instance was created with only IAM authentication enabled, and if `database-username` is the default (primary) user.{{% /alert %}}
 3. Attach the following inline IAM policy to the environment's IAM role (created when [Configuring a Secret Store with AWS Secrets Manager](#configure-using-aws-secrets-manager)):
 
    ```json

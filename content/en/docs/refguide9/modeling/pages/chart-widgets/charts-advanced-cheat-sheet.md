@@ -2,7 +2,6 @@
 title: "Chart Advanced Cheat Sheet"
 url: /refguide9/charts-advanced-cheat-sheet/
 weight: 20
-tags: ["Charts", "Advanced", "Studio Pro", "Layout Controls", "Data Properties", "Series Properties", "studio pro"]
 ---
 
 ## 1 Introduction

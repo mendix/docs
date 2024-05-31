@@ -2,7 +2,6 @@
 title: "XPath Aggregate Functions"
 url: /refguide9/xpath-aggregate-functions/
 weight: 1
-tags: ["studio pro"]
 ---
 
 {{% alert color="warning" %}}

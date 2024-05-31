@@ -4,7 +4,6 @@ url: /howto8/testing/
 weight: 100
 no_list: false
 description_list: true 
-tags: ["test", "testing"]
 ---
 
 ## 1 Introduction

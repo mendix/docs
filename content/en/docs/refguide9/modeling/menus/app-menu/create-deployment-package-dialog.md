@@ -1,7 +1,6 @@
 ---
 title: "Create Deployment Package"
 url: /refguide9/create-deployment-package-dialog/
-tags: ["studio pro", "project menu", "deployment package"]
 ---
 
 ## 1 Introduction

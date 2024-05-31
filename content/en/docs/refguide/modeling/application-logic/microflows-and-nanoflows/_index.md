@@ -3,7 +3,6 @@ title: "Microflows and Nanoflows"
 url: /refguide/microflows-and-nanoflows/
 weight: 10
 description: "Presents an overview of microflows and nanoflows."
-tags: ["studio pro", "microflow", "nanoflow"]
 ---
 
 ## 1 Introduction

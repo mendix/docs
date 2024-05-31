@@ -52,6 +52,17 @@ Message: Login failed for user 'YourDatabaseUser'. Reason: The account is disabl
 
 Validate the ‘Status’ of the User. One of the login properties of the user is probably configured to be Deny or Disabled. Both permissions should be configured as Grant/Enabled.
 
+#### 2.3.3 Could not establish a secure connection
+
+```text
+Opening JDBC connection to yourServerAddress:1433\YourInstanceName failed with SQLState: 08S01 Error code: 0
+Message: "The driver could not establish a secure connection to SQL Server by using Secure Sockets Layer (SSL) encryption.
+Error: "PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target".
+ClientConnectionId:[...]", retrying...(1/4)
+```
+
+Turn off connection encryption by setting the `DatabaseUseSsl` [custom setting](/refguide/custom-settings/#DatabaseUseSsl) to false. Since Mendix 10, the JDBC driver used in the database connection uses TLS encryption by default, while many on-premises SQL Server installations are not set up for this.
+
 ## 3 Read More
 
 * [Setting Up the Database User](/developerportal/deploy/setting-up-the-database-user/)

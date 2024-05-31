@@ -4,7 +4,6 @@ url: /developerportal/deploy/licensing-apps/
 #New document which replaces four others
 weight: 15
 description: "Licensing apps for production by linking them to a licensed cloud node."
-tags: ["App", "Node", "Developer Portal", "Deploy", "Link", "Unlink", "Licensed", "Free App", "Upgrade", "Mendix Cloud"]
 aliases:
     - /developerportal/howto/how-to-link-a-different-app-to-a-node.html
     - /developerportal/howto/how-to-link-app-to-node.html

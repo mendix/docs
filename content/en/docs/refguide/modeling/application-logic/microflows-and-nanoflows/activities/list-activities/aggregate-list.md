@@ -2,7 +2,6 @@
 title: "Aggregate List"
 url: /refguide/aggregate-list/
 weight: 1
-tags: ["studio pro", "aggregate", "sum", "average", "count", "minimum", "maximum", "all", "any", "reduce","microflow"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #To update screenshots of these microflows in Studio Pro, use the Microflow Screenshots app.
 ---

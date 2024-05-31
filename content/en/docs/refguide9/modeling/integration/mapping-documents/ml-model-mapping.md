@@ -1,8 +1,6 @@
 ---
 title: "ML Model Mapping"
 url: /refguide9/ml-model-mapping/
-category: Mapping Documents
-tags: ["ML kit", "ML model mapping", "machine learning", "models"]
 ---
 
 {{% alert color="info" %}}[Machine learning model](/refguide9/machine-learning-kit/) support is currently in [beta](/releasenotes/beta-features/), and is available in Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above.{{% /alert %}}

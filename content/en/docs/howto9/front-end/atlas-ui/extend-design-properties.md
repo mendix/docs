@@ -2,7 +2,6 @@
 title: "Extend Design Properties"
 url: /howto9/front-end/extend-design-properties/
 weight: 60
-tags: ["Atlas", "UI", "UX", "user experience"]
 ---
 
 ## 1 Introduction

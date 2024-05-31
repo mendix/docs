@@ -1,9 +1,8 @@
 ---
 title: "Google Tag"
 url: /appstore/modules/google-tag/
-category: "Modules"
+
 description: "Describes the configuration and usage of the Google Tag module, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "google", "google tag", "google analytics", "google ads", "google tag manager", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

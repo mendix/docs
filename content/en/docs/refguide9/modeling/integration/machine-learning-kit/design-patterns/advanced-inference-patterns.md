@@ -1,9 +1,7 @@
 ---
 title: "Advanced Inference Design Patterns"
 url: /refguide9/machine-learning-kit/design-patterns/advanced-inference/
-category: Design Patterns
 weight: 35
-tags: ["studio pro", "machine learning", "ml kit", "models", "design patterns"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 {{% alert color="info" %}}[Machine learning model](/refguide9/machine-learning-kit/) support is available in Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above.{{% /alert %}}

@@ -2,7 +2,6 @@
 title: "Using a Proxy to Call a REST Service"
 url: /refguide/using-a-proxy-to-call-a-rest-service/
 weight: 1
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction

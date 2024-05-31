@@ -3,7 +3,6 @@ title: "View Menu"
 url: /refguide/view-menu/
 description: "Describes the View Menu in Studio Pro."
 weight: 20
-tags: ["view menu", "pane", "connector", "console", "find results", "widget developer console", "documentation pane", "full screen", "distraction free", "reset layout"]
 ---
 
 ## 1 Introduction
@@ -12,7 +11,7 @@ Studio Pro supports a number of dockable window panes, such as the **Changes** a
 
 Via this menu you can also enable or disable the [full screen mode](#full-screen) or [reset the layout](#reset-layout) of your app to the default.  
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/view-menu.png" alt="View Menu" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/view-menu.png" alt="View Menu" class="no-border" width="300" >}}
 
 ## 2 Layout of Panes {#layout-of-panes}
 

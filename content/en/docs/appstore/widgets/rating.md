@@ -1,9 +1,8 @@
 ---
 title: "Rating"
 url: /appstore/widgets/rating/
-category: "Widgets"
+
 description: "Describes the configuration and usage of the Star Rating widget, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "widget", "star rating", "rating", "glyphicon", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

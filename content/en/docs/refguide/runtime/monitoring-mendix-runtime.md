@@ -1,9 +1,8 @@
 ---
 title: "Monitoring Mendix Runtime"
 url: /refguide/monitoring-mendix-runtime/
-category: "Mendix Runtime"
+
 description: "Describes the supported Mendix Runtime monitoring actions."
-tags: ["runtime", "json", "studio pro", "on-premises", "local"]
 #The anchor request-handlers below is mapped, so it should not be removed or changed.
 ---
 

@@ -1,10 +1,9 @@
 ---
 title: "Metrics"
 url: /developerportal/operate/metrics/
-category: "Operations"
+
 weight: 30
 description: "Describes how to monitor performance and interpret various graphs and trends in Mendix Cloud."
-tags: ["Operate","App","Trends","Cache","Metrics","Developer Portal"]
 aliases:
     - /developerportal/operate/trends-v4/
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.

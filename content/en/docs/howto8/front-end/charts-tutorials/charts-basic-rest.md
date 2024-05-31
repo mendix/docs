@@ -2,7 +2,6 @@
 title: "Use a Chart with a REST Data Source"
 url: /howto8/front-end/charts-basic-rest/
 weight: 60
-tags: ["Charts", "Widgets", "REST", "Studio Pro"]
 ---
 
 ## 1 Introduction

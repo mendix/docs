@@ -2,8 +2,7 @@
 title: "External Database Connection"
 url: /refguide/external-database-connection/
 weight: 80
-description: "Overview of the external database connection document in Studio Pro"
-tags: ["studio pro", "database connector", "mendix 10", "mendix connect", "connect to database"]
+description: "Overview of the [External Database Connection document](https://marketplace.mendix.com/link/component/219862) in Studio Pro, downloaded from the Mendix Marketplace."
 ---
 
 ## 1 Introduction
@@ -49,6 +48,10 @@ If you select **Use connection string**, enter the following:
     * **Oracle** — `jdbc:oracle:thin:@//myHostName:myPortName/myDatabaseName`
     * **PostgresSQL** — `jdbc:postgresql://myHostName:myPortNumber/myDatabaseName`
     * **Snowflake** — `jdbc:snowflake://my_account_identifier.snowflakecomputing.com/?db=myDatabaseName` 
+
+### 2.3 Password Security
+
+The password that you provide when using one of the above connection methods will be stored in a constant, which can be altered upon deployment on a Cloud node. Starting with Mendix 10.9, you can indicate which constants contain private or sensitive information, to ensure that this information is saved locally, and is not shared on the TeamServer, or the Cloud Portal.
 
 ## 3 External Database Connection Document {#external-database-document}
 

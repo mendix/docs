@@ -1,9 +1,8 @@
 ---
 title: "Offline-First"
 url: /refguide8/offline-first/
-category: "Mobile"
+
 weight: 30
-tags: ["offline", "native", "mobile", "studio pro"]
 ---
 
 ## 1 Introduction

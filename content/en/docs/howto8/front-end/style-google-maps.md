@@ -1,9 +1,8 @@
 ---
 title: "Style Google Maps"
 url: /howto8/front-end/style-google-maps/
-category: "Front End"
+
 weight: 60
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction

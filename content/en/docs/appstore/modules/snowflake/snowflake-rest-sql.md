@@ -1,9 +1,8 @@
 ---
 title: "Snowflake REST SQL Connector"
 url: /appstore/connectors/snowflake/snowflake-rest-sql/
-description: "Describes the configuration and usage of the Mendix-Snowflake bulk data loader module from the Mendix Marketplace."
+description: "Describes the configuration and usage of the Mendix-Snowflake REST SQL connector from the Mendix Marketplace."
 weight: 20
-tags: ["marketplace", "marketplace component", "snowflake", "data loader", "module"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 

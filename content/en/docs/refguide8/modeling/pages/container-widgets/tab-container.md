@@ -2,7 +2,6 @@
 title: "Tab Container"
 url: /refguide8/tab-container/
 weight: 40
-tags: ["studio pro", "tab container", "tab page", "container widget", "widget"]
 aliases:
     - /refguide8/tab-page.html
     - /refguide8/tab-page

@@ -1,11 +1,9 @@
 ---
 title: "Design Patterns"
 url: /refguide9/machine-learning-kit/design-patterns/
-category: Machine Learning Kit
 no_list: false
 description_list: true 
 weight: 35
-tags: ["studio pro", "machine learning", "ml kit", "models"]
 ---
 {{% alert color="info" %}}[Machine learning model](/refguide9/machine-learning-kit/) support is available in Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above.{{% /alert %}}
 

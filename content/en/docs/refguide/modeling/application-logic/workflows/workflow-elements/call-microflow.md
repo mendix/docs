@@ -2,7 +2,6 @@
 title: "Call Microflow"
 url: /refguide/call-microflow/
 weight: 70
-tags: ["workflow", "workflows", "call microflow", "Studio Pro"]
 ---
 
 ## 1 Introduction

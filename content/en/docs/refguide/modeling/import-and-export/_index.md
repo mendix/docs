@@ -2,10 +2,9 @@
 title: "Import and Export Apps, Modules, Widgets, and Documents"
 linktitle: "Importing and Exporting Elements"
 url: /refguide/import-and-export/
-category: "App Modeling"
+
 weight: 18
 description: "Gives an overview of the import and export functions in Studio Pro."
-tags: ["mpk", "import", "export", "document", "module", "widget", "app package"]
 ---
 
 ## 1 Introduction

@@ -1,7 +1,6 @@
 ---
 title: "OQL Functions"
 url: /refguide8/oql-functions/
-tags: ["studio pro"]
 ---
 
 * [OQL CAST](/refguide8/oql-cast/)

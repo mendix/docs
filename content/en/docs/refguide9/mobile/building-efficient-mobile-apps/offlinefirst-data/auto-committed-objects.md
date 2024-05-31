@@ -3,7 +3,6 @@ title: "Synchronization & Auto-Committed Objects"
 url: /refguide9/mobile/building-efficient-mobile-apps/offlinefirst-data/auto-committed-objects/
 weight: 40
 description: "Describes when offline sync can create auto-committed objects and what to do when that occurs."
-tags: ["offline", "offline-first", "auto-committed", "autocommitted"]
 aliases:
     - /refguide9/mobile/using-mobile-capabilities/offlinefirst-data/auto-committed-objects/
 # If moving or renaming this doc file, implement a permanent redirect and let the respective team (R&D/AppDev/Frontend/Mobile Offline Team) update the URL in the product.

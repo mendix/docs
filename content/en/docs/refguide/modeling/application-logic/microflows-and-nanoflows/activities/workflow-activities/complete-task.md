@@ -2,7 +2,6 @@
 title: "Complete User Task"
 url: /refguide/complete-user-task/
 weight: 30
-tags: ["studio pro", "user task", "workflow", "task outcome", "complete task", "complete user task"]
 aliases:
     - /refguide/complete-task/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

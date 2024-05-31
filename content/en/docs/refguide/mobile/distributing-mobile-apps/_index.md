@@ -2,10 +2,8 @@
 title: "Building, Testing, and Distributing Apps"
 linktitle: "Build, Test, Distribute Apps"
 url: /refguide/mobile/distributing-mobile-apps/
-category: Mobile
 weight: 50
 description: "Distribute native mobile apps."
-tags: ["distribution", "native", "app stores", "ios", "android"]
 aliases:
     - /howto/mobile/distribution/
 ---

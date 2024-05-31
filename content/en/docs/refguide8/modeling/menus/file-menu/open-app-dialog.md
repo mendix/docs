@@ -3,7 +3,6 @@ title: "Open Project"
 url: /refguide8/open-app-dialog/
 weight: 20
 description: "Describes the Open Project (app) flow and the Open App dialog box"
-tags: ["studio pro", "open app", "open project"]
 aliases:
     - /refguide8/open-project-dialog.html
     - /refguide8/open-project-dialog

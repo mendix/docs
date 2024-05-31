@@ -3,14 +3,13 @@ title: "Run Menu"
 url: /refguide/run-menu/
 description: "Describes the Run menu in Mendix Studio Pro."
 weight: 35
-tags: ["Studio Pro", "run", "run menu"]
 ---
 
 ## 1 Introduction
 
 The **Run** menu allows you to deploy and monitor your app:
 
-{{< figure src="/attachments/refguide/modeling/menus/run-menu/run-menu.png" alt="Run Menu" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/menus/run-menu/run-menu.png" alt="Run Menu" class="no-border" width="400" >}}
 
 ## 2 Menu Items Overview 
 

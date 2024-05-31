@@ -2,7 +2,6 @@
 title: "Marketplace"
 url: /releasenotes/marketplace/
 description: "Release notes for updates to the Mendix Marketplace"
-tags: ["marketplace", "connector", "module", "add on", "widget"]
 weight: 35
 aliases:
     - /releasenotes/app-store/index.html
@@ -215,7 +214,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 #### New Features
 
-* We released support for the subscription to an app service (like [MindSphere IIoT for Makers](/partners/siemens/mindsphere-app-service/)):
+* We released support for the subscription to an app service (like *MindSphere IIoT for Makers*):
     * Automatic provisioning of the app service on subscription.
     * The [Service Management Dashboard](/appstore/overview/my-marketplace/#company-subscriptions), where you can view the service instance to which you have subscribed and generate binding keys for your service instance.
 

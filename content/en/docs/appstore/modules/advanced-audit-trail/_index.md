@@ -9,25 +9,25 @@ aliases:
 
 ## I Introduction
 
-[Advanced Audit Trail](https://marketplace.mendix.com/link/component/120943) allows you to trace changes and use infinitely-scalable and fully-indexed data search. Once configured, the system automatically creates audit snapshots of objects to store in the audit trail. The audit trail is centralized and sent to long-term data storage, therefore supporting complex search queries and keeping the operational database small and performant.
+[Advanced Audit Trail](https://marketplace.mendix.com/link/component/120943) allows you to trace changes and conduct infinitely scalable, fully indexed historical searches through your Mendix app data. Once configured, the solution automatically creates audit snapshots of selected entities. These snapshots are sent to centralized long-term data storage, supporting complex search queries without impacting regular app performance.
 
-Advanced Audit Trail employs a software stack on top of Kafka, Elasticsearch, and Kibana to leverage their utility. Kafka is used for long-term immutable data storage for audit data. Elasticserach and Kibana are used to index audit data. You can find an integration diagram below:
+Advanced Audit Trail employs a managed software stack on top of Kafka and OpenSearch to deliver the service. Kafka is used for long-term immutable data storage for audit data, and OpenSearch is used to index audit data. You can find an integration diagram below:
 
-{{< figure src="/attachments/appstore/modules/advanced-audit-trail/integration-diagram.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/modules/advanced-audit-trail/aat_integration_diagram.png" class="no-border" >}}
 
 {{% alert color="info" %}}
-The Advanced Audit Trail solution is different from the [Audit Trail](/appstore/modules/audit-trail/) module, because the Advanced Audit Trail solution needs less work to implement and delivers a better search experience and better performance.
+The Advanced Audit Trail solution distinguishes itself from the [Audit Trail](/appstore/modules/audit-trail/) module by requiring less implementation effort, while delivering improved search experience and better performance. For a more comprehensive overview of the differences between the regular and Advanced Audit trail module, see the Advanced Audit Trail vs. Audit Trail section below.
 {{% /alert %}}
 
 ### 1.1 Typical Use Cases
 
 * Tracks changes to data (who made what changes at what time in what context) to make your operation GxP and FDA CFR 21 Part 11 compliant, which is required for medical interaction platforms as well as for processes such as credit transactions and internal IT audits for user access
-* Allows the developer to easily configure tracking changes per entity, with no changes to domain models required
+* Allows the developer to easily configure tracking changes per entity, without requiring any changes to domain models
 * Helps the developer debug why an object is in a specific stage
 
 ### 1.2 Features
 
-* Records the timestamp, the old value, the changed value, the microflow that triggered the change, whether the object was created, modified, or deleted, the user who made the change, and their user role
+* Records the timestamp, the old value and the changed value, the microflow that triggered the change, whether the object was created, modified, or deleted, the user who made the change, and their user role
 * Supports viewing all changes that happened in the same microflow, which helps the auditor understand the context better
 * Captures the checksum, file size, and name of files that can be used for validation
 * Supports scheduled events that regularly send the stored snapshots to an external system
@@ -40,12 +40,11 @@ The Advanced Audit Trail solution is different from the [Audit Trail](/appstore/
 
 ### 1.3 Limitations 
 
-* Advanced Audit Trail contains an [add-on module](/refguide/consume-add-on-modules-and-solutions/). 
 * On Mendix Cloud XS [resource packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack), your app may run out of memory due to too many objects of the `ScheduledEventInformation` type being created.
 
 ### 1.4 Prerequisites
 
-* You need to use Advanced Audit Trail with Studio Pro versions starting with [9.12](/releasenotes/studio-pro/9.12/).
+* You need to use Advanced Audit Trail with Studio Pro versions starting with [9.24.18](/releasenotes/studio-pro/9.24/#92418).
 * You need to have a [subscription](#obtain-license-key) to the Advanced Audit Trail solution to store your data in an external data storage that runs in the Mendix Cloud.
 
 ### 1.5 Dependencies
@@ -56,19 +55,20 @@ The Advanced Audit Trail solution is different from the [Audit Trail](/appstore/
 
 ### 2.1 Starting a Subscription {#obtain-license-key}
 
-Advanced Audit Trail is a premium Mendix product that is subject to a purchase and subscription fee. You can deploy Advanced Audit Trail locally or in a Mendix Free App for free. However, to deploy Advanced Audit Trail on the cloud, you need to start a subscription to get a license token and [configure](#configure-license-key) it later. To start a subscription, contact your Customer Success Manager (CSM) or the Mendix Sales organization.
+Advanced Audit Trail is a premium Mendix product that requires a subscription fee. Although you can download the Advanced Audit Trail modules for free from the [Mendix Marketplace](https://marketplace.mendix.com/link/component/120943), you need to purchase a subscription to use the service. To start a subscription, contact your Customer Success Manager (CSM) or fill out the contact form on the [Marketplace](https://marketplace.mendix.com/link/component/120943).
 
 ### 2.2 Installing the Components in Your App
 
-To install the component, click the **Contact Us** button on the [Advanced Audit Trail](https://marketplace.mendix.com/link/component/120943) Marketplace page. Then follow the instructions in the [Importing Content from the App Explorer](/appstore/overview/use-content/#import) section in *Using Marketplace Content* to import the Advanced Audit Trail Core module and the Advanced Audit Trail UI module into your app.
+To install the component, follow the instructions in the [Importing Content from Studio Pro’s App Explorer](/appstore/overview/use-content/#import) section of *Using Marketplace Content* to import the [Advanced Audit Trail - Core](https://marketplace.mendix.com/link/component/120237) module and the [Advanced Audit Trail UI](https://marketplace.mendix.com/link/component/120204) module into your app.
 
-{{% alert color="info" %}}If you update the Advanced Audit Trail Core module, make sure that you update the Advanced Audit Trail UI module to the same version.{{% /alert %}}
+{{% alert color="info" %}}If you update the Advanced Audit Trail - Core module, make sure that you update the Advanced Audit Trail UI module to the same version.{{% /alert %}}
 
 ## 3 Configuration
 
-1. Set up your application roles to include the right [module roles](#module-roles).
-2. Configure the right [constant values](#constants) for the right snapshots.
-3. Implement the **Before Commit** (**BCo**) and **Before Delete** (**Bde**) events. Use the events on the domain model settings (**BCo** / **BDe**). For example, the configuration in the image below is for the **Before Commit** handler, whereas for the **Before Delete** handler, the value of **Is delete** should be set to *true*.
+1. Configure the **Startup** microflow in the Advanced Audit Trail module (`AdvancedAuditTrail.ConfigureAuditTrail`) to run as (part of) the [After Startup](/refguide/app-settings/#after-startup) microflow.
+2. Set up your application roles to include the right module roles. For more information, see the [Configuring Module Roles](#module-roles) section below.
+3. Configure the right constant values for the right snapshots. For more information, see the [Configuring Constants](#constants) section below.
+4. Implement the **Before Commit** (**BCo**) and **Before Delete** (**Bde**) events. Use the events on the domain model settings (**BCo** / **BDe**). For example, the configuration in the image below is for the **Before Commit** handler, whereas for the **Before Delete** handler, the value of **Is delete** should be set to *true*.
 
     {{< figure src="/attachments/appstore/modules/advanced-audit-trail/example.png" class="no-border" >}}
 
@@ -78,16 +78,16 @@ To install the component, click the **Contact Us** button on the [Advanced Audit
 
     {{% alert color="info" %}}When your Mendix application includes entities with inheritance, Mendix recommends only applying the event handler on the generalization of this entity. There are cases where it makes sense to apply the event handler on the specialization instead, but applying the event handler to both the generalization and specialization will lead to duplicate snapshots of the same action.</br></br>When there are multiple **Before Commit** (**BCo**) or **Before Delete** **(Bde)** events that may change the object, the order is not guaranteed. See [Event Handlers](/refguide/event-handlers/). This means that some changes could theoretically fall outside the context of an audit.{{% /alert %}}
 
-4. Add the open search page microflow **AdvancedAuditTrailUI.ACT_SnapshotQuery_CreateAndShowSearch** to the navigation.
-5. Make sure that the [scheduled events](#scheduled-events) are enabled in the cloud portal.
+5. Add the open search page microflow **AdvancedAuditTrailUI.ACT_SnapshotQuery_CreateAndShowSearch** to the navigation.
+6. Make sure that the scheduled events are enabled in the cloud portal. For more information, see the [Configuring Scheduled Events](#scheduled-events) section below.
 
-    {{% alert color="info" %}}Due to protected modules, we do not show scheduled events in Studio Pro.{{% /alert %}}
+    {{% alert color="info" %}}Due to protected modules, Mendix do not show scheduled events in Studio Pro.{{% /alert %}}
 
 ### 3.1 Configuring Module Roles {#module-roles}
 
 * **Admin**: The admin can query the entire database for the current application and can access the debug pages.
-* **_AddOn_CanChangeEnvironmentInQuery**: This is an additional role for the Admin, which allows the Admin to change the environment in search queries so that they can also search in other applications.
-* **DisplayOnly**: The display-only user can view queries that are prepared in microflows, but they cannot change any of them. This can restrict the user to seeing information they are allowed to see. The role is tested against cross-site scripting (XSS).
+* **_AddOn_CanChangeEnvironmentInQuery**: This is an additional role for the Admin, allowing them to change the environment in search queries, manage OAuth authentication, and set the visibility constraints. It provides secure application access without sharing direct credentials and backend settings manage the scope of accessible data and features.
+* **DisplayOnly**: The display-only user can view queries prepared in microflows but they cannot change any of them. This restriction ensures that users see only the information they are allowed to see. The role is tested against cross site scripting (XSS).
 
     {{% alert color="info" %}}Access from and to the long-term data storage is based on service accounts. This means that once a user can access the **Snippet_Settings**, they can access all data in the long-term storage, even if it belongs to other applications in the same environment. Any user-based authentication needs to be implemented in the runtime, for example, by using the **DisplayOnly** module role and the **Query Snapshots for object** setup.{{% /alert %}}
 

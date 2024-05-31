@@ -181,12 +181,12 @@ You can now check that the correct translation has been applied to the other ins
 
 ## 7 Replacing Text in Current Language
 
-Once you have made some translations, you may want to look at just the translations to check for spelling or consistency. To do this, use **Batch replace** as follows:
+Once you have made some translations, you may want to look at the translations to check for spelling or consistency. To do this, use **Batch Replace** as follows:
 
-1. Ensure that your current language is the language you want to review. Batch replace works only on the currently selected language.
-2. Select the menu item **Language** > **Batch replace**.
+1. Ensure your current language is the language you want to review. Batch replace works only on the currently selected language.
+2. Select the menu item **Language** > **Batch Replace**.
 
-    The **Documents/modules** field is set to **(all)**, so the dialog box shows all the translations in the current language dictionary. You can click **Select** next to this field and select only one module to reduce the scope. You can also search for a specific word in the **Source text contains** field. The **#** column shows the locations where the text is used. These locations are listed in the **Show occurrence** section.
+    The **Documents/modules** field is set to **(all)**, so the dialog box shows all the translations in the current language dictionary. You can click **Select** next to this field and select only one module to reduce the scope. You can also search for a specific word in the **Search** field. The **#** column shows the locations where the text is used. These locations are listed in the **Show occurrence** section.
 
     {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/batch-replace-russian-initial.png" alt="All texts which have been translated into Russian." class="no-border" >}}
 
@@ -197,7 +197,7 @@ Once you have made some translations, you may want to look at just the translati
     {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/batch-replace-russian-capitals.png" alt="All texts which have been translated into Russian." class="no-border" >}}
 
 4. Click **Replace** to update the translation dictionary.
-5. **Close** the dialog box.
+5. Click **Close** to close the dialog box.
 
 ## 8 Copying to a New Language
 

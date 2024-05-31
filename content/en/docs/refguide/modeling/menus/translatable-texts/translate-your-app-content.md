@@ -25,7 +25,7 @@ It is assumed that you know the basics of creating new apps and editing them.
 
 To demonstrate working with languages, you will create a new app from the blank app template. You will add some text to this app, as an example, but the app you create is to demonstrate the language features of Mendix and is not intended to be run.
 
-When you create an app from a Mendix template, there is one language available. This is **English, United States**, which you will usually set to be the **Default language**. This is the language which will be displayed when an end-user has no language selected, or when your app does not support their selected language.
+When you create an app from a Mendix template, there is one language available: **English, United States**. You usually set this to be the **Default language**. This is the language that is displayed when an end-user has no language selected, or when your app does not support their selected language.
 
 To create your app, do the following:
 
@@ -50,7 +50,7 @@ To create your app, do the following:
 
     {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/order-button.png" alt="Product New Edit page with an Order button" class="no-border" >}}
 
-8. Open the page **Home_Web** and put some text into the title and subtitle.
+8. Open the page **Home_Web** and add some text into the title and subtitle.
 
     {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/home-page-text.png" alt="Product New Edit page with an Order button" class="no-border" >}}
 
@@ -64,32 +64,32 @@ If you want to create the whole app in a language other than the current default
 
 To add an additional language, do the following:
 
-1. Select the menu item **Language** > **Language settings** to open the **App Settings** dialog box.
+1. Select the menu item **Language** > **Language Settings** to open the **App Settings** dialog box.
 2. Click **Add** to open the **Add Language** dialog box.  
-3. Select a **Language**. In this example, we select **Russian, Russia**, but you can use any language you like.
+3. Select a **Language**. In this example, we select **Chinese (Simplified), China**, but you can use any language you like.
 
-    {{% alert color="info" %}}Mendix recommends that you do *not* choose **Dutch, Netherlands**, as this already contains translations for many of the translatable texts.{{% /alert %}}
+    {{% alert color="info" %}}Mendix recommends that you do not choose **Dutch, Netherlands**, as this already contains translations for many of the translatable texts.{{% /alert %}}
 
-4. Click **OK** to save the changes. The **Add Language** dialog box closes.
+4. Click **OK** to save the changes. 
 
     In the **App Settings** window, the **default** language is still **English, United States**. This is the language that the end-user sees if they do not choose Russian as their language.
 
     {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/language-settings.png" alt="Language settings tab in the app settings dialog" class="no-border" >}}
 
-5. Click **OK**. The **App Settings** dialog box closes.
+5. Click **OK**. 
 
 ## 4 Changing the Current Language
 
 The current language is the language of the dictionary where any text you enter is stored. At the lower-right corner of the Studio Pro window, the language indicator shows which language is the current language.
 
-To change your current language to Russian, do the following:
+To change your current language to Chinese (Simplified), do the following:
 
 1. Click the language indicator at the lower-right corner of the Studio Pro window.
-2. Select **Russian, Russia** to make that your current language.
+2. Select **Chinese (Simplified), China** to make that your current language.
 
     {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/change-language.png" alt="Change the current language" class="no-border" >}}
 
-    {{% alert color="warning" %}}If you do further development later on, remember to change back to your default language so that any new text is recorded there and not in a translated dictionary.{{% /alert %}}
+    {{% alert color="warning" %}}If you do more development later on, remember to change back to your default language so that any new text is recorded there and not in a translated dictionary.{{% /alert %}}
 
 ## 5 Translating an Individual Piece of Text
 

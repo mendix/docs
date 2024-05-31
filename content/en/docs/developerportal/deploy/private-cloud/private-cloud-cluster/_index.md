@@ -1434,9 +1434,9 @@ When running the installation tool over SSH, make sure that the SSH client suppo
 
 `ssh.exe` in Windows doesn't support mouse click forwarding and another SSH client should be used instead, such as [MobaXterm](https://mobaxterm.mobatek.net/) or [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html).
 
-### 8.4 Configuration tool known issues
+### 8.4 Configuration Tool - Known Issues
 
-When restoring a previously saved session, some UI elements (dropdowns and checkboxes) will not use the saved session and will revert to their default values.
+When restoring a previously saved session, some UI elements (such as dropdowns and checkboxes) will not use the saved session and will revert to their default values.
 
 For example, the **Authentication** dropdown for Postgres will always switch to `static` authentication.
 

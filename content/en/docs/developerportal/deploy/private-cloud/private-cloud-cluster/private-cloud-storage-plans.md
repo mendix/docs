@@ -669,12 +669,16 @@ In the SQL Server plan configuration, enter the following details:
 * **Managed Identity Client ID** - the *SQL Admin* managed identity Client ID.
     * Mendix recommends using the same *storage admin* managed identity to manage Azure databases and blob storage containers, as this would be easier to set up and maintain. One *storage admin* Service Account can be used for multiple storage plans, and only one Federated Credential would be needed to link it with a *storage admin* Managed Identity.
 * **K8s Service Account** - the Kubernetes Service Account to create and attach to the *SQL Admin* managed identity (will be created automatically by the `mxpc-cli` installation and configuration tool).
-  {{% alert color="warning" %}}
-  Do not use the name of an existing Service Account (environment name), or one of the reserved Kubernetes Service Account names:
+
+{{% alert color="warning" %}}
+Do not use the name of an existing Service Account (environment name), or one of the reserved Kubernetes Service Account names:
+    
     * `mendix-operator`
     * `mendix-agent`
     * `mendix-storage-provisioner`
-  {{% /alert %}}
+
+{{% /alert %}}
+
 * **Is Azure SQL Server** - Opens additional options that are only available when using Azure SQL (instead of a standalone SQL Server):
     * **Elastic Pool** - Specifies an existing Elastic Pool to use (can be left empty if the new app's database should not be using an elastic pool)
     * **Edition** - Specifies the [database edition/tier](https://learn.microsoft.com/en-us/sql/t-sql/statements/create-database-transact-sql?view=azuresqldb-current&tabs=sqlpool#edition) to use, for example `Basic`. Can be left empty, in this case Azure SQL will use the default `GeneralPurpose` edition.

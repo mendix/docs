@@ -72,7 +72,7 @@ If your application is on a connected Private Cloud, you can get the credentials
 You can only remotely debug apps deployed to Private Cloud for Mendix if you are using Mendix Operator version 1.6.0 or above.
 {{% /alert %}}
 
-1. Open your app in the [Mendix Portal](https://home.mendix.com).
+1. Open your app in [Apps](https://sprintr.home.mendix.com/).
 
 2. Click **Environments** in the navigation pane.
 

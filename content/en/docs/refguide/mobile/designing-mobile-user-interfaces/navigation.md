@@ -129,7 +129,25 @@ The **All** option can be used to close all pages in the current stack.
 
 In addition, you can configure the Open page action to **Clear history** when navigating to a page. This effectively resets the entire navigation system, not just the current stack, and the user will not be able to navigate back from the target page.
 
-### 4.3 Updating Data
+### 4.3 Navigation Transitions
+
+In order to add more flexibility and customization to mobile apps, Mendix offers different options for how an app's opening screen or popup animation can look.
+
+You can find and customize these options in [Navigation Profile](/refguide/navigation/#1-introduction):
+
+{{< figure src="/attachments/refguide/mobile/native-mobile/native-navigation/navigationtransition.png" >}}
+
+By default, all screens and popups will inherit the appropriate behavior of their operating system (either iOS or Android). 
+
+Among the available options for screen transitions, you can choose between **"Slide from right"** or **"Scale from center"**. For popups, we have **"Modal Presentation"** and **"Bottom Sheet"** as well. Once you select these options, they will apply to the native mobile app on both sperating systems.
+
+For specific cases, we also offer an option **"Apply screen options also for popups"**. You can use it if you need your popups to look and behave the same as usual screens. Once you select this option, any popups options will be disabled and dismissed.
+
+{{% alert color="info" %}}
+Please remember; whenever you make changes in this section, a new build of the native mobile app has to be created and distributed. 
+{{% /alert %}}
+
+### 4.4 Updating Data
 
 It is important to remember that any changes you make to your data will be immediately reflected on all active screens. However, this does not mean that these changes are also committed to the database; that remains an explicit action. Another consequence of this is that your app is responsible for keeping track of (and possibly reverting) changes to data when the user decides to navigate back (for example by pressing the back button) without saving their changes. 
 

@@ -96,7 +96,7 @@ IRSA removes any static passwords that might be used by the Mendix Operator or M
 
 {{% alert color="info" %}}
 Mendix Operator version 2.17 and later versions can use [managed identity authentication](https://learn.microsoft.com/en-us/azure/aks/workload-identity-overview) instead of static credentials to authenticate with Azure SQL, Postgres (Flexible Server) and Blob Storage.
-When using managd identity authentication, static passwords are replaced with short-lived tokens - which are automatically maintained by AKS.
+When using managed identity authentication, static passwords are replaced with short-lived tokens - which are automatically maintained by AKS.
 Managed identity authentication removes any static passwords that might be used by the Mendix Operator or Mendix apps.
 {{% /alert %}}
 

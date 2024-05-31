@@ -1,5 +1,5 @@
 ---
-title: "Resolving Shared Ownership of Apps"
+title: "Resolve Shared Ownership of Apps"
 url: /control-center/resolve-shared-ownership-of-apps
 description: "Describe how to address the issue that you own an app together with another company.."
 tags: ["control center", "apps", "ownership"]
@@ -11,7 +11,9 @@ no_list: true
 
 To stimulate collaboration, Mendix allowed different companies to share the ownership of an app. Sometimes an app was created by one company, but the node where the app is deployed was provisioned by a different company and linked by the Technical Contact of that company. However, shared ownership can cause confusion about who is responsible for the app. Therefore, it is not a good practice.
 
+{{% alert color="info" %}}
 Mendix will stop allowing you to deploy an app on a node that is owned by a different company.
+{{% /alert %}}
 
 ## 2 Preventing Shared Ownership
 

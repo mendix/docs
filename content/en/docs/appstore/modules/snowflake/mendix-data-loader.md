@@ -45,7 +45,14 @@ Upon installation, configure the Mendix Data Loader as follows:
     * **Target Schema Name** - The name of the target schema into which all the data will be ingested. Every time an ingestion is performed, all data already present in the target schema will be removed or replaced.
     * **Generate and Execute SQL Script** - Required only once, when configuring the data ingestion endpoint for the first time. Click the **Generate Script** button to produce and execute the required SQL scripts with necessary privileges.
 
-4. Click **Ingest Data** to start the data transfer. All data exposed by the Odata service will be ingested and all ingested data will be stored in [transient tables](https://docs.snowflake.com/en/user-guide/tables-temp-transient#transient-tables).
+4. Ingest Data
+    * To ingest data manually, click **Ingest Data now** to start the data transfer. All data exposed by the OData service will be ingested and all ingested data will be stored in [transient tables](https://docs.snowflake.com/en/user-guide/tables-temp-transient#transient-tables).
+    * To schedule ingestion jobs, navigate to the **Schedule Task** tab. In this tab, additional scheduling configurations are displayed.
+        * **When should the ingestion task run?** - A required parameter that specifies the interval of the task execution. Select one of the preconfigured options or select the **Custom CRON expression** option to provide a custom CRON expression.
+        * **Custom CRON expression** - A required parameter if the `When should the ingestion task run?` parameter is set to `Custom CRON expression`. For more information about custom CRON expression, refer to the [CREATE TASK Snowflake Documentation](https://docs.snowflake.com/en/sql-reference/sql/create-task#optional-parameters).
+        * **Time out** - An optional parameter that specifies the time limit on a single execution of the task before it times out (in milliseconds). The default value for this parameter is 1 hour (3600000).
+        * **Number of retry attempts** - An optional parameter that specifies the number of automatic task retry attempts. The default value for this parameter is 0 retry attempts.
+        * **Suspend task after number of failures** - An optional parameter that specifies the number of consecutive failed task runs after which the current task is suspended automatically. The default value for this parameter is 10 failures.
 5. To view the results, check the job ID and verify the data in the specified target database.
 
 ## 4 Technical Reference

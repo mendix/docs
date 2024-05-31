@@ -59,6 +59,22 @@ Pages without a bottom bar are created in a separate stack. If you navigate from
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-navigation/bottombar.png" alt="An example of the default bottom bar on iOS."   width="250"  class="no-border" >}}
 
+### 3.3 Sidebar
+
+You can use the **Sidebar** in your native projects' navigation systems. It is a common pattern in mobile applications to use the **Drawer** from left side to navigate between screens IT is also common to keep  useful links and application settings there.
+
+There are only a few steps needed to be done to create a **Sidebar** in your native project. First of all, you need to include **NativePhone_SideMenu**, which you can find under **Phone Layouts** in **Atlas Core**:
+
+{{< figure src="/attachments/refguide/mobile/native-mobile/native-navigation/includesidebar.png" alt="Include a sidebar" >}}
+
+Then, decide which screen in your project will have a **Sidebar** and apply the appropriate layout — **NativePhone_SideMenu** in our case:
+
+{{< figure src="/attachments/refguide/mobile/native-mobile/native-navigation/selectsidebarlayout.png" alt="Select a sidebar layout" >}}
+
+After that, you will see the **Sidebar** appear on your screen. You can place any content inside of it, and you can see it using **Sidebar Toggle** button (which will appear in the left part of your [Header](/refguide/mobile/designing-mobile-user-interfaces/navigation/#31-header)):
+
+{{< figure src="/attachments/refguide/mobile/native-mobile/native-navigation/sidebarlayout.png" alt="Sidebar layout" >}}
+
 ## 4 How does Mendix Native Navigation Work?
 
 By default pages are kept open to provide a better user experience, but they must also be managed correctly for your app to have great performance and a logical flow through the app.

@@ -225,13 +225,13 @@ Now that you know how to make translations of translatable texts, there are a co
 
 ### 9.1 Completeness
 
-You probably want to check if you miss any text that should have been translated. It is a big task to go through your app manually and check every piece of text. Mendix provides you with a completeness check for your languages.
+To ensure all your text is properly translate, do a completeness check for your languages.
 
 To set up the completeness check, do the following:
 
-1. Go to **Language > Language Settings**. The **App Settings** dialog box opens.
-2. In the grid, double-click the language for which you want to set the completeness check. The **Edit Language** dialog box opens.
-3. Select the **Check completeness** checkbox.
+1. Go to **Language > Language Settings**. 
+2. In the grid, double-click the language for which you want to set the completeness check. 
+3. In the **Check** field, select the **Check completeness** checkbox.
 4. Click **OK** to close the **Edit Language** dialog box. 
 5. In the **App Settings** dialog box, click **OK** to save the changes and close the dialog box. You then receive warnings about all text which has not been translated into that language. There is always a completeness check for the default language.
 
@@ -239,11 +239,11 @@ For more information, see [Advanced Language Settings](/refguide/language-settin
 
 ### 9.2 Sharing Translations With Other Apps
 
-You have seen how you can create translations easily and even copy your new translation to a new language in the current app.
+You have seen how to create translations easily and copy your new translation to a new language in the current app.
 
-What if you have several apps and want to add Russian to all of them? Maybe you want to translate your own modules from scratch, but you will not want to translate the system module, administration module, and Atlas UI all over again, as they do not change and you already have perfect translations for these.
+What if you have several apps and want to add Chinese to all of them? Maybe you want to translate your own modules from scratch, but do not want to translate the system module, administration module, and Atlas UI all over again, as they do not change and you already have correct translations for these.
 
-Mendix allows you to export a translation to an Excel file, either for the whole app or just selected modules. You can then import this translation to another app and have your translation available to you.
+Mendix allows you to export a translation to an Excel file, either for the whole app or selected modules. You can then import this translation to another app and have your translation available to you.
 
 For more information, see [Exporting and Importing Text](/refguide/batch-translate/#export-import) in the *Batch Translate* reference guide.
 

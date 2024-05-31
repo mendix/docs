@@ -9,9 +9,9 @@ no_list: true
 
 ## 1 Introduction
 
-To stimulate collaboration, Mendix allowed different companies to share the ownership of an app. Sometimes an app was created by one company, but the node where the app is deployed was provisioned by another company and linked by the Technical Contact of that company. However, shared ownership can cause confusion about who is responsible for the app. Therefore, it is not a good practice.
+To stimulate collaboration, Mendix allowed different companies to share the ownership of an app. Sometimes an app was created by one company, but the node where the app is deployed was provisioned by a different company and linked by the Technical Contact of that company. However, shared ownership can cause confusion about who is responsible for the app. Therefore, it is not a good practice.
 
-Mendix will stop allowing you to deploy an app on a node that is not owned by your company.
+Mendix will stop allowing you to deploy an app on a node that is owned by a different company.
 
 ## 2 Preventing Shared Ownership
 

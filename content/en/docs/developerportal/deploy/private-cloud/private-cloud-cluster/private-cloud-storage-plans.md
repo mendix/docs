@@ -191,8 +191,8 @@ If the Postgres instance is an Azure Postgres (Flexible Server) database, you ca
 
 The Postgres database is an automated, on-demand database. The Postgres plan offers a good balance between automation, ease of use, and security. It is the most versatile and portable option for production-grade databases.
 If you would like to have more control over database configuration, consider using the [JDBC plan](#database-jdbc) instead.
-If your provider is AWS, [Postgres IAM authentication](#database-postgres-iam) can be used instead - to increase security.
-If your provider is Azure, [Postgres managed identity authentication](#database-postgres-azwi) can be used instead - to increase security.
+If your provider is AWS, [Postgres IAM authentication](#database-postgres-iam) can be used instead to increase security.
+If your provider is Azure, [Postgres managed identity authentication](#database-postgres-azwi) can be used instead to increase security.
 
 ##### 2.3.1.1 Prerequisites
 
@@ -246,8 +246,8 @@ In the Postgres plan configuration, enter the following details:
 
 * **Database name** - login database for the admin/superuser; in most cases this is set to `postgres`.
 * **Authentication** - select `static` from the dropdown.
-* **Username** - username of the admin/superuser, used by the Mendix Operator to create or delete tenants for app environments; typically, this is set to `postgres`.
-* **Password** - username of the admin/superuser; used by the Mendix Operator to create or delete tenants for app environments.
+* **Username** - username of the admin or superuser, used by the Mendix Operator to create or delete tenants for app environments; typically, this is set to `postgres`.
+* **Password** - username of the admin or superuser; used by the Mendix Operator to create or delete tenants for app environments.
 
 {{% alert color="info" %}}
 To connect to an Azure PostgreSQL server, the Kubernetes cluster must be added to the list of allowed hosts in the firewall. For the database name, use `postgres`.

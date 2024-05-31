@@ -35,10 +35,32 @@ This version is also compatible with 10.7 - 10.8 - 10.9 - 10.10 versions of Mend
 
 For projects developed with Mendix Studio Pro 10.11, specific builds of **Make It Native 10** are available for Android and iOS. These builds can be accessed via the following URLs:
 
-- **iOS (TestFlight URL)**: [TestFlight URL for Make It Native 10](https://testflight.apple.com/TESTFLIGHT_URL)
+- **iOS (TestFlight URL)**: [TestFlight URL for Make It Native 10](https://testflight.apple.com/join/bQfLf27w)
 - **Android (Google OpenTesting URL)**: [Google OpenTesting URL for Make It Native 10](https://play.google.com/apps/testing/com.mendix.developerapp.mx10)
 
-These builds are updated to support the latest features and improvements introduced in Mendix 10.11 and beyond.
+These builds are updated to support the latest features and improvements introduced in Mendix 10.11.
+
+### How to Join the Public Beta for Our iOS App
+
+Follow the steps below to participate in our beta testing program on iOS.
+
+#### Step-by-Step Guide
+
+1. Join the TestFlight Beta Program
+    1. Install the TestFlight app from the App Store on your iOS device.
+    2. Open the TestFlight app.
+    3. Visit the beta sign-up link provided by us (this link will be specific to our app).
+    4. Tap on "Accept" to join the beta testing program for our app.
+2. Install the Beta Version
+    1. After accepting the invitation, the app will appear in TestFlight.
+    2. Tap on "Install" to download and install the beta version of our app.
+    3. Once installed, you can open the app directly from TestFlight or your home screen.
+3. Leave the Beta Program (Optional)
+    1. Open the TestFlight app on your iOS device.
+    2. Select our app from the list of available apps.
+    3. Tap on "Stop Testing" to exit the beta program.
+    4. Uninstall and reinstall the app from the App Store if you want to return to the public version.
+
 
 ### How to Join the Public Beta for Our Android App
 
@@ -61,6 +83,7 @@ Follow the steps below to participate in our beta testing program
    2. Scroll down to the "Join the beta" section.
    3. Tap on "Leave" to exit the beta program.
    4. Uninstall and reinstall the app if you want to return to the public version.
+
 ### General Support for Make It Native 10
 
 Make It Native 10 will continue to support the latest Mendix Studio Pro minor version (MTS). This ensures ongoing compatibility and support for the newest updates and features.

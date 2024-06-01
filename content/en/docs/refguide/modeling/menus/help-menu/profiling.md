@@ -28,4 +28,3 @@ When you are done, click **Profiling** > **Stop profiling**. Zip all the files y
 {{% alert color="info" %}}
 Profiling can be started at any time (when you start to see perofrmance issues) and does not need to start immediately after running Studio Pro.
 {{% /alert %}}
-

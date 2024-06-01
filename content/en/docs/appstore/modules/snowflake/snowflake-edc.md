@@ -282,7 +282,7 @@ To execute and test the query in Studio Pro, follow these steps:
 
         {{< figure src="/attachments/appstore/modules/external-database-connector/sample-snowflake-query-replication-map.png" >}}
 
-5.  Execute the query in a microflow, take the resulting JSON string, and import it by using an **Import from JSON** microflow activity, as shown in the following figure:
+5. Execute the query in a microflow, take the resulting JSON string, and import it by using an **Import from JSON** microflow activity, as shown in the following figure:
 
     {{< figure src="/attachments/appstore/modules/external-database-connector/sample-snowflake-query-replication-flow.png" >}}
 

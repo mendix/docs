@@ -161,6 +161,7 @@ For our retrieve operation, it looks as follows:
 ```
 
 As seen above, the following constants are stored for the "Retrieve" operation: 
+
 * UsedAttributed - lists all the attributes retrieved from the entity.
 * XPath - specifies the XPath Constraint used for retrieving the data, in this instance targeting all "Employee" entities.
 * UsedAssociations - enumerates all associations of the entity, which are nonexistent in this case.

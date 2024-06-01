@@ -49,16 +49,15 @@ When a data source is selected, click **Edit** to do the following:
 
 * Add or edit the description of the data source
 * Set the data source as **Validated** and/or **Discoverable** 
-  * **Validated** – indicates the data source has been validated
-  * **Discoverable** – determines if the service is visible and can be found (and consumed) by users of the Catalog; if a service is set to **Not discoverable**, only the owners of the service (**Business** and **Technical**) and curators can find the registered data source
+    * **Validated** – indicates the data source has been validated
+    * **Discoverable** – determines if the service is visible and can be found (and consumed) by users of the Catalog; if a service is set to **Not discoverable**, only the owners of the service (**Business** and **Technical**) and curators can find the registered data source
 * Add new tags to your data source
 
-
 When a dataset is selected, click **Edit the dataset** to do the following:
+
 * Add or edit the description of the dataset
 * Set the dataset as **Validated**
 * Search for and add descriptions of the attributes
-
 
 ## 4 Editing the Metadata of an App {#curate-application}
 

@@ -1,7 +1,7 @@
 ---
 title: "Deployment"
 url: /developerportal/deploy/
-description: "Describes the deployment section of Apps's navigation pane: how to deploy Mendix apps to different environments and how to manage those deployments."
+description: "Describes the deployment section of Apps navigation pane pane: how to deploy Mendix apps to different environments and how to manage those deployments."
 weight: 10
 no_list: false 
 description_list: true

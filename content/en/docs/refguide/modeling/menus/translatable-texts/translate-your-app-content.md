@@ -201,12 +201,12 @@ Once you have made some translations, you may want to look at the translations t
 
 ## 8 Copying to a New Language
 
-Having translated your app, you may want to translate it into another related language (for example **Dutch, Netherlands** into **Dutch, Belgium**, **English, United States** into **English, United Kingdom**, or **Chinese (Simplified), China** into **Chinese (Mandarin), China**). Many of the translations will be the same, so you do not want to type them again.
+Having translated your app, you may want to translate it into another related language (for example **Dutch, Netherlands** into **Dutch, Belgium**, **English, United States** into **English, United Kingdom**, or **Chinese (Simplified), China** into **Chinese (Simplified), Singapore**). Many of the translations will be the same, so you do not want to type them again.
 
-To copy our Chinese (Simplified) translations into a Chinese (Mandarin) dictionary, you can do the following:
+To copy our Chinese (Simplified), China translations into a Chinese (Simplified), Singapore dictionary, you can do the following:
 
 1. Go to **Language**  > **Language Settings**. 
-2. Click **Add** to add **Chinese (Mandarin), China** as an app language.
+2. Click **Add** to add **Chinese (Simplified), Singapore** as an app language.
 
     {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/language-settings-belarusian.png" alt="Belarusian added to the app" class="no-border" >}}
 
@@ -215,8 +215,8 @@ To copy our Chinese (Simplified) translations into a Chinese (Mandarin) dictiona
 5. Select **MyFirstModule**. In the **Chinese (Simplified), China** column, it shows **11**. This means there are 11 translations in the Chinese (Simplified) dictionary.
 6. Select **Copy** for the **Operation**.
 7. Select **Chinese (Simplified), China** as the **Source language**.
-8. Select **Chinese (Mandarin), China** as the **Destination language**.
-9. Click **Apply**. Now in the **Chinese (Mandarin), China** column, it shows **11**, too. Your Chinese (Simplified) texts are copied to the Chinese (Mandarin) dictionary. You can go to **Language** > **Batch Replace** to review them or go to **Language** > **Batch Translate** to change any cases where the Chinese (Simplified) and Chinese (Mandarin) translations are different.
+8. Select **Chinese (Simplified), Singapore** as the **Destination language**.
+9. Click **Apply**. Now in the **Chinese (Simplified), Singapore** column, it shows **11**, too. Your Chinese (Simplified) texts are copied to the Chinese (Simplified), Singapore dictionary. You can go to **Language** > **Batch Replace** to review them or go to **Language** > **Batch Translate** to change any cases where the Chinese (Simplified), China and Chinese (Simplified), Singapore translations are different.
 10. Click **Close** to close the dialog box.
 
 ## 9 Other Considerations

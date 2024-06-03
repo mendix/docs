@@ -339,6 +339,7 @@ Enter a search string in the **Search** area with a minimum of 3 alphanumeric ch
 #### 3.4.2 Filters {#filter}
 
 You can filter search results by: 
+
 * Environment type (the **Production** environment filter is active by default)
 * Technology
 * [CRUD](/howto/integration/write-data/) (Creatable, Readable, Updatable, or Deletable) capabilities
@@ -433,7 +434,7 @@ The metadata panel at the right of the asset details screen displays details fro
 
 These are the tags that have been assigned to the data source in the Catalog (for more information, see the [Adding or Editing Tags to a Service](/catalog/manage/curate/#tags) section of *How to Curate Registered Assets*). Tags assigned at a data source-level propagate down to the datasets and attributes exposed in the service.
 
-#### 3.6.2 Business Owner {#busines-owner}
+#### 3.6.2 Business Owner {#business-owner}
 
 This is a link to the business owner of the data exposed in the data source. For more information, see the [Changing Owners of an App](/catalog/manage/curate/#changing-owners) section of *How to Curate Registered Assets*.
 

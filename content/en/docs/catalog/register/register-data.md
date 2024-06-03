@@ -154,7 +154,6 @@ This is because changes to a particular version of a published OData service are
 
 For more details on what can and cannot be provided in these fields, see the [API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v5.html#/Register/put_applications__AppUUID__environments__EnvironmentUUID__published_endpoints).
 
-
 You can see an example of a request below:
 
 ```curl
@@ -284,7 +283,6 @@ To call the Transform endpoint of the Registration API, you need the following:
 
     {{% alert color="info" %}}For more details on what can and cannot be provided in these fields, see the [API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v5.html#/Endpoints/post_transform_dependenciesjson).{{% /alert %}}
 
-
 You can see an example of a request that converts a *dependencies.json* file below:
 
 ```curl
@@ -385,7 +383,7 @@ Follow the steps below:
 
 1. Open the [Catalog home page](https://catalog.mendix.com).
 2. On the **Contract** screen, upload your XML or ZIP file. For more information on the contract, see the [Contract Structure](#contract-structure) section below.
-3. On the **Data Source** screen, select the type of service you want to reigster and specify the following Data Source details: **Data Source Name**, **Data Source Version**, and **Data Source Relative Path**. The **Data Source Relative Path** is the path of the service contract relative to the environment URL of the application. For more advice on versioning, see [Semantic numbering](/refguide/consumed-odata-service/#semantic). The other fields on the form are optional.
+3. On the **Data Source** screen, select the type of service you want to register and specify the following Data Source details: **Data Source Name**, **Data Source Version**, and **Data Source Relative Path**. The **Data Source Relative Path** is the path of the service contract relative to the environment URL of the application. For more advice on versioning, see [Semantic numbering](/refguide/consumed-odata-service/#semantic). The other fields on the form are optional.
 
     {{% alert color="warning" %}}Once a version is released to production, any updated contracts should be given a new version. This applies even if you are only registering for a non-production environment.<br/><br/>This is because changes to a particular version of a published service are reflected in the entities and attributes available through the Catalog for every environment for which the service is published. For example, if you have version 1.0.0 published to both non-production and production environments, any changes you make to version 1.0.0 of the service in the non-production environment are also reflected in the service in production.{{% /alert %}}
 

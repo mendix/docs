@@ -54,7 +54,7 @@ For details on webhooks, see the [Webhooks](/developerportal/deploy/webhooks/) p
 
 To set a new webhook in the Mendix Portal, follow these steps:
 
-1. Go to the Mendix Portal and open your app.
+1. From [Apps](https://sprintr.home.mendix.com), open your app.
 1. In the navigation pane, click **Webhooks**.
 1. Click **New Webhook**.
 1. Name your webhook and provide the webhook receiver URL and Validation Secret as described in the [Configuring a Webhook](/developerportal/deploy/webhooks/#setting-up) section of the *Webhooks* page.

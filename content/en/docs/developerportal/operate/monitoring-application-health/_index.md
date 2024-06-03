@@ -31,12 +31,12 @@ This document explains how to access the application status page, what the infor
 
 Mendix Cloud automatically monitors the health and status of apps that are deployed on cloud nodes. To access the information gathered in this way, follow these steps:
 
-1. From the [Mendix Portal](https://home.mendix.com), open the app that you want to monitor.
-2. In the [navigation pane](/developerportal/#navigation-pane), click **Alerts**. This displays the status of your app node in various categories.
+1. From [Apps](https://sprintr.home.mendix.com), open the app that you want to monitor.
+1. In the [navigation pane](/developerportal/#navigation-pane), click **Alerts**. This displays the status of your app node in various categories.
 
     {{< figure src="/attachments/developerportal/operate/monitoring-application-health/application-status.png" class="no-border" >}}
 
-3. To view more details about a specific alert, click it. Detailed information about that alert will appear below the alert status table.
+1. To view more details about a specific alert, click it. Detailed information about that alert will appear below the alert status table.
 
     {{< figure src="/attachments/developerportal/operate/monitoring-application-health/alert-details.png" class="no-border" >}}
 

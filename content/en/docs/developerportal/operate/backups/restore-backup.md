@@ -38,16 +38,17 @@ Mendix Cloud automatically performs backups every night, and you can also manual
 
 If you want to restore a backup to a different cloud node, or have your backup stored locally, then see [Restoring a Backup for a Different Licensed Cloud Node](#restore-local-backup), below.
 
-1. From the Mendix Portal, go to your app's **Backups** page.
-2. In the upper-right corner of the screen, select the environment to which the backup should be restored (for example, **Acceptance**).
+1. From [Apps](https://sprintr.home.mendix.com), open your licensed app.
+1. Use the navigation panel to go to your app's **Backups** page.
+1. In the upper-right corner of the screen, select the environment to which the backup should be restored (for example, **Acceptance**).
 
     {{< figure src="/attachments/developerportal/operate/backups/restore-backup/environment.png" width=25% class="no-border" >}}
 
-3. On the backup you want to restore, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) and select **Restore** from the drop-down list.
+1. On the backup you want to restore, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) and select **Restore** from the drop-down list.
 
     {{< figure src="/attachments/developerportal/operate/backups/restore-backup/backupoptions.png" class="no-border" >}}
 
-4. Confirm the backup restore by clicking **Restore Backup**.
+1. Confirm the backup restore by clicking **Restore Backup**.
 
     {{< figure src="/attachments/developerportal/operate/backups/restore-backup/restore-backup.png" alt="" width=60% class="no-border" >}}
 
@@ -64,24 +65,27 @@ You can choose to restore only the database by selecting **DB only restore**. Do
 To transfer backups between environments, you need a downloaded backup file (*.db* or *.gz*) stored locally on your computer. This could also be the case if you want to restore a backup that has expired and been deleted from Mendix Cloud.
 
 {{% alert color="warning" %}}
-You can only restore data to an existing database. This means that there must have been an app deployed to the licensed node before you attempt to restore data. If it is a new node environment, you must deploy an app to it before attempting to restore data to the node.<br><br>However, the app previously deployed to the node does not need to have had the same Domain Model as the data you are restoring.
+You can only restore data to an existing database. This means that there must have been an app deployed to the licensed node before you attempt to restore data. If it is a new node environment, you must deploy an app to it before attempting to restore data to the node.
+
+However, the app previously deployed to the node does not need to have had the same Domain Model as the data you are restoring.
 {{% /alert %}}
 
-1. Open your app in [Apps](https://sprintr.home.mendix.com/).
-2. Go to the **Backups** page.
-3. Select the environment to which the backup should be restored (for example, **Acceptance**).
-4. Click **Upload Archive**. The upload creates a new backup item in your backup list, which you can then restore via the regular restore process. This ensures less downtime for your application.
-5. Upload the *.db* or *.gz* backup file.
-6. You will now need to restore your backup that is held in Mendix Cloud, as described in [Restoring a Backup for the Same Licensed Cloud Node](#restore-cloud-backup), above.
+1. From [Apps](https://sprintr.home.mendix.com), open your app.
+1. Use the navigation panel to go to your app's **Backups** page.
+1. Select the environment to which the backup should be restored (for example, **Acceptance**).
+1. Click **Upload Archive**. The upload creates a new backup item in your backup list, which you can then restore via the regular restore process. This ensures less downtime for your application.
+1. Upload the *.db* or *.gz* backup file.
+1. You will now need to restore your backup that is held in Mendix Cloud, as described in [Restoring a Backup for the Same Licensed Cloud Node](#restore-cloud-backup), above.
 
 ## 5 Restoring a Backup for a Free App
 
 {{% alert color="info" %}}For a Free App, you can only restore available backups that are made from the app and held in the cloud. It is not possible to upload a backup that was created or stored elsewhere. It also is not possible to manually create a backup.{{% /alert %}}
 
-1. In the Mendix Portal, go to the **Backups** page for your app.
-2. Select the environment to which the backup should be restored (for example, **Acceptance**).
-3. On the backup you want to restore, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) and select **Restore** from the drop-down list.
-4. Confirm the backup restore by clicking **Restore Backup**.
+1. 1. From [Apps](https://sprintr.home.mendix.com), open your Free App.
+1. Use the navigation panel to go to your app's **Backups** page.
+1. Select the environment to which the backup should be restored (for example, **Acceptance**).
+1. On the backup you want to restore, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) and select **Restore** from the drop-down list.
+1. Confirm the backup restore by clicking **Restore Backup**.
 
 {{% alert color="info" %}}
 If the app is still running, you have to stop it by clicking **Stop Application**. Then click **Restore Backup** again.

@@ -36,7 +36,7 @@ The Basic Package has the following features:
 
 ## 3 Purchasing a Basic Package
 
-From the [Mendix Portal](https://sprintr.home.mendix.com/link/myapps), go to the **Environments** page of the Free App you want to license.
+From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of the Free App you want to license.
 
 When you view your Free App environment, you will see a banner showing that you are using a Free App.
 

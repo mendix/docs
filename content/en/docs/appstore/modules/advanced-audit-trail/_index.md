@@ -16,12 +16,12 @@ Advanced Audit Trail employs a managed software stack on top of Kafka and OpenSe
 {{< figure src="/attachments/appstore/modules/advanced-audit-trail/aat_integration_diagram.png" class="no-border" >}}
 
 {{% alert color="info" %}}
-The Advanced Audit Trail solution distinguishes itself from the [Audit Trail](/appstore/modules/audit-trail/) module by requiring less implementation effort, while delivering improved search experience and better performance. For a more comprehensive overview of the differences between the regular and Advanced Audit trail module, see the [Advanced Audit Trail vs. Audit Trail](#comparison) section below.
+The Advanced Audit Trail solution distinguishes itself from the [Audit Trail](/appstore/modules/audit-trail/) module by requiring less implementation effort, while delivering improved search experience and better performance. For a more comprehensive overview of the differences between the regular and the Advanced Audit trail module, see the [Advanced Audit Trail vs. Audit Trail](#comparison) section below.
 {{% /alert %}}
 
 ### 1.1 Typical Use Cases
 
-* Tracks changes to data (who made what changes at what time in what context) to make your operation GxP and FDA CFR 21 Part 11 compliant, which is required for medical interaction platforms as well as for processes such as credit transactions and internal IT audits for user access
+* Tracks changes to data (who made what changes, at what time, and in what context) to ensure your operation is GxP and FDA CFR 21 Part 11 compliant, which is required for medical interaction platforms as well as for processes such as credit transactions and internal IT audits for user access
 * Allows the developer to easily configure tracking changes per entity, without requiring any changes to domain models
 * Helps the developer debug why an object is in a specific stage
 
@@ -35,7 +35,7 @@ The Advanced Audit Trail solution distinguishes itself from the [Audit Trail](/a
 * Offers microflows and pages that open a generalized view to show users the trail of a specific object
 * Supports decoupling—when the external system cannot be reached, the snapshots will be stored in the local database, thus ensuring that the main system will keep on working without a dependency on the external database
 * Offers auditor interface to search through the external database (across entities)
-* Supports full-text search on data and search on changed data, and also export of data to the CSV format using Kibana
+* Supports full-text search on data and search on changed data
 * Support configuring different permissions for audit data for different users
 
 ### 1.3 Limitations 
@@ -76,7 +76,7 @@ To install the component, follow the instructions in the [Importing Content from
 
     You can create **CommitList** microflows that commit a list of objects without events, but use **Create Snapshot (List)** from the **Toolbox** (the **JA_Object_CreateSnapshot_List** action). This ensures that the snapshots are committed in a list as well, therefore minimizing the performance impact of the module. When an object is committed without events, this change is not audited unless you explicitly add **Create Snapshot** (the **JA_Object_CreateSnapshot** action) or **Create Snapshot (List)** (the **JA_Object_CreateSnapshot_List** action) before the commit.
 
-    {{% alert color="info" %}}When your Mendix application includes entities with inheritance, Mendix recommends only applying the event handler on the generalization of this entity. There are cases where it makes sense to apply the event handler on the specialization instead, but applying the event handler to both the generalization and specialization will lead to duplicate snapshots of the same action.</br></br>When there are multiple **Before Commit** (**BCo**) or **Before Delete** **(Bde)** events that may change the object, the order is not guaranteed. See [Event Handlers](/refguide/event-handlers/). This means that some changes could theoretically fall outside the context of an audit.{{% /alert %}}
+    {{% alert color="info" %}}When your Mendix application includes entities with inheritance, Mendix recommends only applying the event handler on the generalization of this entity. There are cases where it makes sense to apply the event handler on the specialization instead, but applying the event handler to both the generalization and specialization will lead to duplicate snapshots of the same action.</br></br>When there are multiple **Before Commit** (**BCo**) or **Before Delete** **(Bde)** events that may change the object, the order is not guaranteed. For more information, see the [Event Handlers](/refguide/event-handlers/). This means that some changes could theoretically fall outside the context of an audit.{{% /alert %}}
 
 5. Add the open search page microflow **AdvancedAuditTrailUI.ACT_SnapshotQuery_CreateAndShowSearch** to the navigation.
 6. Make sure that the scheduled events are enabled in the cloud portal. For more information, see the [Configuring Scheduled Events](#scheduled-events) section below.
@@ -186,10 +186,10 @@ The table below provides a detailed comparison between the Advanced Audit Trail 
 | List commit handling | Optimized | Not optimized |
 | Saving action stack upon change (e.g. showing related changes and triggering microflow)| Yes | No |
 | Standard overview screen searchable per entity | Yes | No |
-| Ability to show custom attribute value when viewing associations in an audit trail  napshot| Yes | No |
+| Ability to show custom attribute value when viewing associations in an audit trail  snapshot| Yes | No |
 | Developer can delete audit trail data unnoticed | No | Yes |
 | Guaranteed completeness of audit trail in case of disaster| Yes | No |
-| Additional custom data can be added to an audit trail snapshot (e.g."on behalf of" in case of REST service)| Yes | No |
+| Additional custom data can be added to an audit trail snapshot (e.g. "on behalf of" in case of REST service)| Yes | No |
 | Built-in features for username and hash (e.g. password) scrambling| Yes | No |
 
 ## 6 Read More

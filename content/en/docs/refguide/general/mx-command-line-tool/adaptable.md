@@ -8,7 +8,7 @@ tags: ["mx", "command-line", "tool", "mx", "studio pro", "windows", "linux", "so
 
 ## 1 Introduction
 
-The commands in this group are related to [adaptable solutions](/appstore/creating-content/sol-adapt/) . 
+The commands in this group are related to [adaptable solutions](/appstore/creating-content/sol-adapt/). 
 
 These commands use common format exit codes.
 
@@ -32,7 +32,7 @@ For exit code examples, refer to the specific commands below.
 
 ## 2 mx show-app-version Command {#show-app-version}
 
-The `mx show-app-version` command enables seeing the [publisher-side](/appstore/creating-content/sol-solutions-guide/) version of your solution (meaning, the version of the solution that you develop) and the [consumer-side](/appstore/creating-content/sol-solutions-impl/) version of the solution package that your app is based on (meaning, the version of the solution package when you consumed the solution).
+The `mx show-app-version` command enables seeing the [publisher-side](/appstore/creating-content/sol-solutions-guide/) version of your solution (the version of the solution that you develop) and the [consumer-side](/appstore/creating-content/sol-solutions-impl/) version of the solution package that your app is based on (the version of the solution package when you consumed the solution).
 
 ### 2.1 Usage
 

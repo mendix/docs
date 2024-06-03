@@ -29,13 +29,13 @@ To access the graphs on the **Metrics** page, you must have **Access to Monitori
 If you meet the above conditions, you can find the graphs by following these steps:
 
 1. Open your app in [Apps](https://sprintr.home.mendix.com).
-2. In the navigation panel, click **Metrics**.
-3. Use the drop-down menu in the upper-right corner to select the environment you want to monitor.
-4. Use the **Period** and **Group** drop-down menus to choose the time period (day, week, month, or quarter) and the group (application, database, or all) for the graphs that you want to view.
+1. In the navigation pane, click **Metrics**.
+1. Use the drop-down menu in the upper-right corner to select the environment you want to monitor.
+1. Use the **Period** and **Group** drop-down menus to choose the time period (day, week, month, or quarter) and the group (application, database, or all) for the graphs that you want to view.
 
     {{< figure src="/attachments/developerportal/operate/metrics/metrics-selection.png" >}}
 
-5. To view more information about any of the metrics, click **Documentation** ({{% icon name="info-circle" %}}) next to the relevant graph. To quickly scroll to the top of the page, click **Scroll to top** ({{% icon name="arrow-circle-up" %}}).
+1. To view more information about any of the metrics, click **Documentation** ({{% icon name="info-circle" %}}) next to the relevant graph. To quickly scroll to the top of the page, click **Scroll to top** ({{% icon name="arrow-circle-up" %}}).
 
 {{% alert color="info" %}}
 The **Metrics** page does not support multi-instance metrics. If you [horizontally scale](/developerportal/deploy/scale-environment/) your environment to multiple instances, you will be able to see metrics for only one of those instances. If you need data on multiple instances, consider using an [APM integration](/developerportal/operate/monitoring-with-apm/).

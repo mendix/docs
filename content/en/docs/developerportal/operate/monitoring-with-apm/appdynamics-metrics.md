@@ -36,11 +36,10 @@ To use AppDynamics and send data to AppDynamics from your Mendix app, you need t
 
 To send your runtime information to AppDynamics, you must set it up using environment variables in the Mendix Portal.
 
-1. Open your app in [Apps](https://sprintr.home.mendix.com/).
-2. Go to the **Environments** page.
-3. Click **Details** on the environment you wish to monitor with AppDynamics. 
-4. Switch to the [**Runtime** tab](/developerportal/deploy/environments-details/#runtime-tab).
-5. Add the following **Custom Environment Variables**.
+1. From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of your app.
+1. Click **Details** on the environment you wish to monitor with AppDynamics. 
+1. Switch to the [**Runtime** tab](/developerportal/deploy/environments-details/#runtime-tab).
+1. Add the following **Custom Environment Variables**.
 
     | Variable | Description | Default |
     | -------- | ----------- | ------- |
@@ -56,7 +55,7 @@ To send your runtime information to AppDynamics, you must set it up using enviro
 
     For more information on Nodes and Tiers in AppDynamics, see the [Overview of Application Monitoring](https://docs.appdynamics.com/appd/22.x/22.1/en/application-monitoring/overview-of-application-monitoring) in the AppDynamics documentation.
 
-6. Return to the **Environments** page for your app and **Deploy** or **Transport** your app into the selected environment.
+1. Return to the **Environments** page for your app and **Deploy** or **Transport** your app into the selected environment.
 
     {{% alert color="warning" %}}To start sending data to AppDynamics, you must redeploy your app and then restart it. Just restarting the app is not sufficient because additional dependencies need to be included.{{% /alert %}}
 

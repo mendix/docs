@@ -38,11 +38,10 @@ To make use of New Relic, you need a New Relic API key. To find an existing key 
 
 To send your runtime information to New Relic, you must provide the New Relic API key to your environment.
 
-1. Open your app in [Apps](https://sprintr.home.mendix.com/).
-2. Open the **Environments** page.
-3. Click **Details** on the environment you wish to monitor with New Relic. 
-4. Switch to the **Runtime** tab.
-5. Add the following **Custom Environment Variables**:
+1. From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of your app.
+1. Click **Details** on the environment you wish to monitor with New Relic. 
+1. Switch to the **Runtime** tab.
+1. Add the following **Custom Environment Variables**:
     | Variable | Description |
     | --- | --- |
     | `NEW_RELIC_LICENSE_KEY` | License key or API key from New Relic. Obtained in the [New Relic API Key](#newrelic-api-key) section.
@@ -51,7 +50,7 @@ To send your runtime information to New Relic, you must provide the New Relic AP
     | `NEW_RELIC_APP_NAME` (optional) | Mendix Application name shown on New Relic's APM & Services. Default: Domain host name. |
     | `LOGS_REDACTION` (optional) | Email addresses are automatically redacted before log entries are sent to New Relic. To disable this redaction, set `LOGS_REDACTION` to `false`. Default: `true`. |
 
-6. Return to the **Environments** page for your app and **Deploy** or **Transport** your app into the selected environment.
+1. Return to the **Environments** page for your app and **Deploy** or **Transport** your app into the selected environment.
 
     {{% alert color="warning" %}}To start sending data to New Relic, you must redeploy your app and then restart it. Just restarting the app is not sufficient because additional dependencies need to be included.{{% /alert %}}
     
@@ -83,11 +82,10 @@ Mendix recommends using the following tags:
 
 To set these tags, do the following:
 
-1. Open your app in [Apps](https://sprintr.home.mendix.com/).
-2. Go to the **Environments** page.
-3. Click **Details** on an environment you are monitoring with New Relic. 
-4. On the **Tags** tab, add a tag. This is the string that is sent to New Relic as a tag.
-5. Restart the application.
+1. From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of your app.
+1. Click **Details** on an environment you are monitoring with New Relic. 
+1. On the **Tags** tab, add a tag. This is the string that is sent to New Relic as a tag.
+1. Restart the app.
 
 Setting these values for your app causes all metrics from this environment of your app to have these tags. For example, the tags for `mx.microflow.time.avg` for this set of metrics include `app:customermanagement` and `env:accp`.
 

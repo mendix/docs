@@ -4,7 +4,6 @@ url: /refguide/runtime-server/
 
 description: "Describes the Runtime Server and how it functions."
 weight: 10
-tags: ["runtime", "runtime server", "stateless", "database", "java", "microflows"]
 ---
 
 ## 1 Introduction

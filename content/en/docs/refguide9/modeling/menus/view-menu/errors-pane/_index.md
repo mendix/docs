@@ -3,7 +3,6 @@ title: "Errors Pane"
 url: /refguide9/errors-pane/
 weight: 40
 description: "Describes the Errors pane in Mendix Studio Pro."
-tags: ["Studio Pro", "errors", "error list", "errors pane"]
 ---
 
 ## 1 Introduction 

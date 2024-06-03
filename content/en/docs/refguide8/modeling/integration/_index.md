@@ -5,7 +5,6 @@ url: /refguide8/integration/
 weight: 110
 no_list: false
 description_list: true 
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction

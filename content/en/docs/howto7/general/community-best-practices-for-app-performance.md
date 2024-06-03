@@ -4,7 +4,6 @@ linktitle: "Best Practices for App Performance"
 url: /howto7/general/community-best-practices-for-app-performance/
 
 weight: 4
-tags: ["best practice", "performance", "community"]
 ---
 
 ## 1 Introduction

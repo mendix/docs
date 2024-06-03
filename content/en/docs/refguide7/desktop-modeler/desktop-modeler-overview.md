@@ -4,7 +4,6 @@ url: /refguide7/desktop-modeler-overview/
 
 description: "Describes the Desktop Modeler in general: tabs, menus, shortcut keys."
 weight: 10
-tags: ["desktop modeler"]
 aliases:
     - /refguide7/modeler.html
     - /refguide7/Modeler.html

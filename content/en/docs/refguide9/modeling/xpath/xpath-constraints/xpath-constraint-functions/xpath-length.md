@@ -1,7 +1,6 @@
 ---
 title: "XPath length"
 url: /refguide9/xpath-length/
-tags: ["studio pro"]
 ---
 
 ## 1 Overview

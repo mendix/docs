@@ -5,7 +5,6 @@ url: /refguide/import-and-export/
 
 weight: 18
 description: "Gives an overview of the import and export functions in Studio Pro."
-tags: ["mpk", "import", "export", "document", "module", "widget", "app package"]
 ---
 
 ## 1 Introduction

@@ -4,7 +4,6 @@ url: /howto8/extensibility/build-native-widget/
 
 description: "Describes building a native widget, configuring it, and styling it in a Mendix app."
 weight: 10
-tags: ["native","widget","pluggable","react native","extensibility"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

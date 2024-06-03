@@ -2,7 +2,6 @@
 title: "Schedule a Test Suite/Test Case"
 url: /appstore/partner-solutions/ats/ht-two-schedule-testcase-testsuite/
 description: "Describes how to create a test suite and add test cases and test suites to your test suite."
-tags: ["ATS", "testing"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

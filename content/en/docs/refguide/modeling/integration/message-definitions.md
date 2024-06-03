@@ -3,7 +3,6 @@ title: "Message Definitions"
 url: /refguide/message-definitions/
 weight: 5
 description: "Describes how to use a message definition for JSON and XML to use on both single objects and lists of objects."
-tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

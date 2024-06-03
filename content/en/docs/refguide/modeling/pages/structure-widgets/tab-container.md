@@ -2,7 +2,6 @@
 title: "Tab Container"
 url: /refguide/tab-container/
 weight: 40
-tags: ["studio pro", "tab container", "tab page", "container widget", "widget"]
 aliases:
     - /refguide/tab-page.html
     - /refguide/tab-page
@@ -56,7 +55,7 @@ A tab container contains one or more tab pages where you place widgets. For exam
 
 ### 5.1 Tab Page-Specific Properties
 
-#### 3.1.1 Default Tab Page
+#### 5.1.1 Default Tab Page
 
 **Default tab page** defines which tab is displayed when the page is opened. If no tab is set as the default one, the first tab page will be shown. 
 
@@ -72,7 +71,21 @@ Default: *True*
 This property is not supported on native mobile pages.
 {{% /alert %}}
 
-## 6 Read More
+## 6 Best Practices
+
+### 6.1 Stand-Alone (#stand-alone)
+
+You can use a tab container as a stand-alone widget for greater ease. This means there is no need to place it within a container or other wrapper widgets, as doing so may disrupt the display of content.
+
+### 6.2 Usage with Scroll Container {#usage-with-scroll-container}
+
+Avoid nesting tab containers inside of scroll container. It may break the way tab page content is displayed, and furthermore will disable rendering optimizations inside the tab view. 
+
+{{% alert color="info" %}}
+To enable scrollable behavior within a specific tab, place the **Tab Content** inside a scroll container or display it in a list view.
+{{% /alert %}}
+
+## 7 Read More
 
 * [Page](/refguide/page/)
 * [Structure](/refguide/structure-widgets/)

@@ -4,7 +4,6 @@ url: /howto8/collaboration-requirements-management/troubleshoot-version-control-
 
 weight: 7
 description: "This document presents a list of problems and fixes for version control issues."
-tags: ["version control", "troubleshoot", "Studio Pro", "Subversion", "TortoiseSVN"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

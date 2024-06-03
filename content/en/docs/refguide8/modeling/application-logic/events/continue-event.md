@@ -2,7 +2,6 @@
 title: "Continue Event"
 url: /refguide8/continue-event/
 weight: 4
-tags: ["studio pro", "continue event", "event", "loop"]
 ---
 
 ## 1 Introduction

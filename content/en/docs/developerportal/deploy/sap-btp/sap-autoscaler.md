@@ -5,7 +5,6 @@ url: /developerportal/deploy/sap-cloud-platform/sap-autoscaler/
 
 weight: 47
 description: "How to set up the SAP Autoscaler"
-tags: ["SAP", "Autoscaler"]
 aliases:
     - /partners/sap/sap-autoscaler/
 ---

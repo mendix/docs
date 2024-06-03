@@ -1,7 +1,6 @@
 ---
 title: "XPath Tokens"
 url: /refguide8/xpath-tokens/
-tags: ["studio pro"]
 ---
 
 The following tokens are used in XPath queries:

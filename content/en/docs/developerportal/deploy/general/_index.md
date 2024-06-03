@@ -4,7 +4,6 @@ url: /developerportal/deploy/general/
 
 weight: 5
 description: "Presents an overview of the Deployment section of the Developer Portal, focusing on topics that are relevant to more than one platform."
-tags: ["Deploy", "App", "Developer Portal", "Mendix Cloud", "Cloud Foundry", "Azure", "Docker", "SAP", "On-premises", "Kubernetes"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
@@ -29,6 +28,10 @@ The subjects covered in the *General* section are as follows:
 To deploy an app to the cloud, you first have to build a project model (MDA). The runtime deployment is described in more detail in [Runtime Deployment](/refguide/runtime-deployment/). This can be done independently or as part of the deployment pipeline.
 
 The time it takes to build your model depends on the complexity of the model and the number and size of the files held in the Team Server repository that is used to build the model.
+
+{{% alert color="info" %}}
+Starting September 1, 2024, your app will need to run Mendix version 8 or above to build a deployment package on the Mendix platform. This applies to all cloud deployment models, including Mendix Cloud, Mendix Cloud Dedicated, Private Cloud, and SAP Cloud. If your app runs on version 7 or below, you will still be able to build a local deployment package from Studio Pro.
+{{% /alert %}}
 
 ## 3 Managing Your Deployed Apps
 

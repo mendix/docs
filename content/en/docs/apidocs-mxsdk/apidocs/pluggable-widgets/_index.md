@@ -5,7 +5,6 @@ description: "This API helps you to understand pluggable widgets, how they exten
 no_list: false
 description_list: true
 weight: 90
-tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React"]
 ---
 
 ## 1 Introduction

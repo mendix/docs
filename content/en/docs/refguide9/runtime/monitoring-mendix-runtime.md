@@ -3,7 +3,6 @@ title: "Monitoring Mendix Runtime"
 url: /refguide9/monitoring-mendix-runtime/
 
 description: "Describes the supported Mendix Runtime monitoring actions."
-tags: ["runtime", "json", "studio pro", "on-premises", "local"]
 #The anchor request-handlers below is mapped, so it should not be removed or changed.
 ---
 

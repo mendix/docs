@@ -2,7 +2,6 @@
 title: "Grids"
 url: /refguide8/grids/
 weight: 20
-tags: ["studio pro", "grid", "data grid", "template grid"]
 ---
 
 ## 1 Introduction

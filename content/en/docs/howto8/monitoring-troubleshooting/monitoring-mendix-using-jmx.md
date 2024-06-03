@@ -3,7 +3,6 @@ title: "Monitor Mendix Using JMX"
 url: /howto8/monitoring-troubleshooting/monitoring-mendix-using-jmx/
 
 weight: 10
-tags: ["monitoring", "troubleshooting", "jmx"]
 ---
 
 ## 1 Introduction

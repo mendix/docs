@@ -3,7 +3,6 @@ title: "Troubleshoot Common Native Mobile Issues"
 url: /howto8/mobile/common-issues/
 weight: 80
 description: Troubleshoot common issues associated with building and running native mobile apps.
-tags: ["native", "mobile", "developer", "troubleshoot", "app"]
 ---
 
 ## 1 Introduction

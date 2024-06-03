@@ -5,7 +5,6 @@ weight: 20
 no_list: false
 description_list: true
 description: "Presents introductory information on adpatable solutions."
-tags: ["solutions", "development", "adaptable solutions", "adaptable solutions"]
 ---
 
 ## 1 Introduction

@@ -3,7 +3,6 @@ title: "Publish and Retrieve Images and Files with REST"
 url: /refguide/send-receive-files-rest/
 linktitle: "Images and Files with REST"
 weight: 79
-tags: ["rest", "binary", "send files", "receive files", "OData", "expose", "published REST service", "consume"]
 ---
 
 ## 1 Introduction

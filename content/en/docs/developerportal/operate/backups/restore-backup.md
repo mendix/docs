@@ -3,7 +3,6 @@ title: "Restoring a Backup"
 url: /developerportal/operate/restore-backup/
 weight: 30
 description: "How to restore a backup."
-tags: ["Backup", "Restore", "Mendix Cloud", "Developer Portal", "backup file format"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 

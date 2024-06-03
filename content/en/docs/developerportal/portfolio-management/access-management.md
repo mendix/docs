@@ -3,7 +3,6 @@ title: "Access Management"
 url: /developerportal/portfolio-management/access-management/
 weight: 15
 description: "Describes the Access Management page in the Mendix Portfolio Management app."
-tags: ["access management", portfolio management"]
 ---
 
 ## 1 Introduction

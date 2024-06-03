@@ -4,7 +4,6 @@ url: /howto7/widget-development/
 weight: 90
 no_list: false
 description_list: true 
-tags: ["widget", "develop widget", "customize"]
 ---
 
 ## 1 Introduction

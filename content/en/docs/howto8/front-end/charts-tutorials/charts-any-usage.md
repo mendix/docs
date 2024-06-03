@@ -3,7 +3,6 @@ title: "Use Any Chart"
 url: /howto8/front-end/charts-any-usage/
 weight: 20
 description: "How to use the Any Chart widget to create advanced charts"
-tags: ["Any Chart", "Advanced Charts", "Charts", "Studio Pro", "Widgets"]
 ---
 
 ## 1 Introduction

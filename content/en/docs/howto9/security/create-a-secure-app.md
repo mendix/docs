@@ -4,7 +4,6 @@ url: /howto9/security/create-a-secure-app/
 
 weight: 10
 description: "Describes how to turn your application security on and how to configure it to secure the data."
-tags: ["security", "secure app"]
 ---
 
 ## 1 Introduction

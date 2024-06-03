@@ -2,7 +2,6 @@
 title: "ML Kit Activities"
 url: /refguide9/ml-kit-activities/
 weight: 45
-tags: ["studio pro"]
 ---
 {{% alert color="info" %}}[Machine learning model](/refguide9/machine-learning-kit/) support is available in Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above.{{% /alert %}}
 

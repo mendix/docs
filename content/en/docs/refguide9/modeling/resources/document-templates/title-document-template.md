@@ -1,7 +1,6 @@
 ---
 title: "Title (Document Template)"
 url: /refguide9/title-document-template/
-tags: ["studio pro"]
 aliases:
     - /refguide9/title-(document-template).html
     - /refguide9/Title+(document+template).html

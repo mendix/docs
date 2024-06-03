@@ -3,7 +3,6 @@ title: "App Permissions"
 url: /refguide9/mobile/using-mobile-capabilities/generic-permission-action/
 weight: 85
 description: "This guide teaches you how to use request generic permission actions for native mobile apps."
-tags: ["permissions", "JavaScript", "native", "mobile"]
 ---
 
 ## 1 Introduction

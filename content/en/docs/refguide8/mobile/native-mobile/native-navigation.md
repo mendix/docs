@@ -2,7 +2,6 @@
 title: "Native Navigation"
 url: /refguide8/native-navigation/
 weight: 11
-tags: ["mobile", "navigation", "native", "iOS", "Android"]
 ---
 
 ## 1 Introduction

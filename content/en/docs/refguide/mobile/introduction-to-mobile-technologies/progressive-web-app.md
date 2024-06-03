@@ -97,7 +97,9 @@ Google Chrome and Microsoft Edge (Chromium edition) fully support running offlin
 
 ### 4.1 Example of Profile Selection
 
-{{% alert color="info" %}} An offline profile represents the entrypoint for an offline-first app - it is not related to the connectivity of the user's device. Offline profiles will also be used when the user's device is online.{{% /alert %}}
+{{% alert color="info" %}} 
+An offline profile represents the entry point for an offline-first app. The term is not related to the connectivity of the user's device. Offline profiles will also be used when the user's device is online.
+{{% /alert %}}
 
 For example, when a Phone Web Offline profile is configured and the app is opened in the browser, the following scenarios can occur:
 

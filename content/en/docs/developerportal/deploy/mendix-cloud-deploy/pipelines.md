@@ -136,6 +136,7 @@ Your pipeline can include the following steps:
 * Stop Environment – Stop a selected environment.
 * Create Backup – Create and store a backup of an existing environment before deploying a new deployment package.
 * Deploy – Deploy to a selected environment. In this step's configuration, there is a **Use defaults for new constants** toggle that you can use to fetch the default values of new constants and scheduled events from Studio Pro and apply them to the environment. (To adjust an environment-specific configuration, see the [Environments](/developerportal/deploy/environments/) page.)
+* Promote Package – Promote a deployment package from a source environment to a target environment. To configure this step, specify a source environment and a target environment.
 
 Expand each step to configure it, delete it, or view its outputs. You can expand or collapse any step in your pipeline by clicking the step's name.
 

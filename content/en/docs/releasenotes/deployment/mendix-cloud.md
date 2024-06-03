@@ -16,6 +16,12 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2024
 
+### June 13, 2024
+
+#### New Features
+
+* We added a Promote Package step in Pipelines. You can use this step in your pipeline to move a deployment package from a specified source environment to a specified target environment.
+
 ### May 14, 2024
 
 #### New Features

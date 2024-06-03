@@ -112,7 +112,7 @@ You can navigate between Studio Pro panes (for example, the domain model editor 
 
 There are alternative ways to navigate between tabs within panes: 
 
-| Key (Windows) | Key (Mac) | Description |
+| Windows | Mac | Description |
 | --- | --- | --- |
 | <kbd>Ctrl</kbd> + <kbd>1</kbd> - <kbd>0</kbd> | Not available | Switch to tab at selected tab position in the current window. |
 | <kbd>Ctrl</kbd> + <kbd>PgUp</kbd> / <kbd>PgDn</kbd> | Not available | Switch to next/previous tab in active pane. |
@@ -123,7 +123,7 @@ Most menu items also have shortcut keys assigned to them that can be used in all
 
 The following key combinations work in the editors, such as the Domain Model, Pages, Workflows, Microflow, or Navigation editor.
 
-| Key (Windows) | Key (Mac) | Description |
+| Windows | Mac | Description |
 | --- | --- | --- |
 | <kbd>Ctrl</kbd> + <kbd>C</kbd> | <kbd>Cmd</kbd> + <kbd>C</kbd> | Copy the selected element to the clipboard. |
 | <kbd>Ctrl</kbd> + <kbd>V</kbd> | <kbd>Cmd</kbd> + <kbd>V</kbd> | Paste the contents of the clipboard in the current editor. |
@@ -141,7 +141,7 @@ The following key combinations work in the editors, such as the Domain Model, Pa
 
 The following key combinations work in the panes of Studio Pro:
 
-| Key (Windows) | Key (Mac) | Description |
+| Windows | Mac | Description |
 | --- | --- | --- |
 | <kbd>Ctrl</kbd>+(<kbd>Shift</kbd>)&nbsp;+<kbd>F7</kbd> | Not available | Navigate between panes (opens pane navigation dialog where panes are called *active tool windows*). |
 
@@ -149,7 +149,7 @@ The following key combinations work in the panes of Studio Pro:
 
 In most dialog boxes for editing properties, the following shortcut keys can be used:
 
-| Key (Windows) | Key (Mac) | Description |
+| Windows | Mac                               | Description |
 | --- | --- | --- |
 | <kbd>Ctrl</kbd> + <kbd>Enter</kbd> | <kbd>Cmd</kbd> + <kbd>Enter</kbd> | Confirms all changes and closes the dialog box. Works as if the **OK** button was clicked. This is especially useful if the focus is on a multi-line text box; otherwise, pressing <kbd>Enter</kbd> will have the same effect. |
 | <kbd>Esc</kbd> | Not available | Cancels all changes and closes the dialog box. Works as if the **Cancel** button was clicked. |
@@ -157,7 +157,7 @@ In most dialog boxes for editing properties, the following shortcut keys can be 
 
 In most edit grids (such as the list of attributes in the entity properties), the following shortcut keys can be used:
 
-| Key (Windows) | Key (Mac) | Description |
+| Windows | Mac                            | Description |
 | --- | --- | --- |
 | <kbd>Ctrl</kbd> + <kbd>N</kbd> | <kbd>Ctrl</kbd> + <kbd>N</kbd> | Creates a new item. |
 | <kbd>Enter</kbd> | <kbd>Enter</kbd> | Edits the currently selected item. |
@@ -169,7 +169,7 @@ In most edit grids (such as the list of attributes in the entity properties), th
 
 The following shortcut keys are available in the domain model editor:
 
-| Key (Windows) | Key (Mac) | Description |
+| Windows | Mac                                     | Description |
 | --- | --- | --- |
 | <kbd>F2</kbd> | <kbd>Fn</kbd> + <kbd>F2</kbd> | Edits the name of the selected entity, attribute, or association. |
 | <kbd>Ctrl</kbd>&nbsp;+&nbsp;<kbd>A</kbd> | <kbd>Cmd</kbd>&nbsp;+&nbsp;<kbd>A</kbd> | Selects all entities. |
@@ -181,7 +181,7 @@ The following shortcut keys are available in the domain model editor:
 
 The following shortcut keys are available in the page editor:
 
-| Key (Windows) | Key (Mac) | Description |
+| Windows | Mac | Description |
 | --- | --- | --- |
 | Arrow keys | Arrow keys| Moves the selection box to the widget or element in the direction of the arrow key. For example, if currently a label is selected and you press the right arrow key, the text box to the right of it becomes selected. |
 | <kbd>Ctrl</kbd>&nbsp;+&nbsp;arrow&nbsp;keys | Not available | Moves the currently selected item up/down or left/right. This works on table columns and rows, tab pages, data grid and data view buttons, search fields, etc. |
@@ -196,7 +196,7 @@ For an overview of the supported shortcut keys in the microflow and nanoflow edi
 
 The following shortcut keys are available for the debugger:
 
-| Key (Windows) | Key (Mac) | Description |
+| Windows | Mac | Description |
 | --- | --- | --- |
 | <kbd>Alt</kbd>&nbsp;+&nbsp;<kbd>F5</kbd> | <kbd>Option</kbd> + <kbd>Fn</kbd> + <kbd>F5</kbd> | **Step into** – moves the debugger into the sub-microflow/sub-nanoflow or loop. |
 | <kbd>Alt</kbd> + <kbd>F6</kbd> | <kbd>Option</kbd> + <kbd>Fn</kbd> + <kbd>F6</kbd> | **Step over** – moves the debugger to the next step in the same workflow/microflow/nanoflow. |
@@ -208,7 +208,7 @@ The following shortcut keys are available for the debugger:
 
 The following shortcut keys are assigned to menu actions that can be used in all panes. These are also shown in the menus and listed on the documentation page for each menu under [Menus](/refguide/menus/).
 
-| Key (Windows) | Key (Mac) | Description |
+| Windows | Mac                                                          | Description |
 | --- | --- | --- |
 | <kbd>F1</kbd> | <kbd>Fn</kbd> + <kbd>F1</kbd> | Help. |
 | <kbd>F3</kbd> | <kbd>Fn</kbd> + <kbd>F3</kbd> | Highlights the next find result in the **Find Results** pane and open it in an editor. |

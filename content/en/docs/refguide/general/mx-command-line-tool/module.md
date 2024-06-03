@@ -13,7 +13,7 @@ The commands in this group are related to Mendix modules.
 Typically, these commands require a path to the *.mpr* file and the module name as parameters.
 
 {{% alert color="info" %}}
-To see the command parameters for each command you can use the `--help` parameter. For example `mx show-module-version --help`.
+To see the command parameters for each command, use the `--help` parameter. For example, `mx show-module-version --help`.
 {{% /alert %}}
 
 ## 2 mx show-module-version Command {#show-module-version}
@@ -43,7 +43,7 @@ This table shows the return codes and their description:
 | Return Code | Description |
 | --- | --- |
 | `0` | No errors. |
-| `1` | The module does not have a version |
+| `1` | The module does not have a version. |
 
 The command will output the version of the module to the command line output.
 
@@ -76,7 +76,7 @@ This table shows the return codes and their description:
 | Return Code | Description |
 | --- | --- |
 | `0` | No errors. |
-| `1` | The module does not have a version |
+| `1` | The module does not have a version. |
 
 ## 4 mx module-import Command {#module-import}
 
@@ -102,7 +102,7 @@ Here is an example:
 
 The command returns 0 if it is successful.
 
-If there are errors, the exit code consists of three digits: XYZ where:
+In case of errors, the exit code consists of three digits `XYZ`:
 
 * X determines the error type:
 
@@ -114,14 +114,14 @@ If there are errors, the exit code consists of three digits: XYZ where:
 
 * Z indicates the error details:
 
-    * 1 – Module you are trying to import is protected and cannot be imported.
-    * 2 – Module you are trying to import is a Theme module and cannot be imported.
-    * 3 – Project already contains a module with the name as the module you are importing. Thus the module can't be imported.
-    * 4 – No module is found in the MPK package.
-    * 5 – Project Version is not supported by the current version of mx.exe
-    * 6 – Project can't be loaded
-    * 7 – Module can't be loaded
-    * 8 – Import of a module failed. Resulting project can't be saved.
+    * 1 – module you are trying to import is protected and cannot be imported
+    * 2 – module you are trying to import is a Theme module and cannot be imported
+    * 3 – project already contains a module with the name as the module you are importing, thus the module cannot be imported
+    * 4 – no module is found in the MPK package
+    * 5 – project version is not supported by the current version of `mx.exe`
+    * 6 – project cannot be loaded
+    * 7 – module cannot be loaded
+    * 8 – import of a module failed and resulting project cannot be saved
 
 For example:
 

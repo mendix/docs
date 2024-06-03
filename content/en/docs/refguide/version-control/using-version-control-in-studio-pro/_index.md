@@ -391,9 +391,9 @@ To revert this version upgrade of the app model, use the Git tool of your prefer
 
 ### 9.6 Integrating Git in a Build Pipeline
 
-When building deployment packages in a pipeline outside the Mendix platform you will need to retrieve a specific commit from the Git server. To prevent having to download the full repository every time you can use a clone with limited depth ('shallow clone'). With a minimal amount of data to retrieve, the operation is a lot faster and takes less toll on the version control server.
+When building deployment packages in a pipeline outside the Mendix platform, you will need to retrieve a specific commit from the Git server. To avoid downloading the full repository every time you can use a clone with limited depth (*shallow clone*). With a minimal amount of data to retrieve, the operation is a lot faster and takes less toll on the version control server.
 
-You can use these commands to download a shallow clone. Please note that this should only be used to download a single revision, as Studio Pro is not compatible with working on a shallow clone.
+You can use the commands below to download a shallow clone. Note that they should only be used to download a single revision, as Studio Pro is not compatible with working on a shallow clone.
 
 ```text {linenos=false}
 # make a new blank repository in the current directory

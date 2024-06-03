@@ -25,13 +25,13 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 To create a backup archive of a licensed app, follow these steps:
 
-1. Go to the [Apps](https://sprintr.home.mendix.com) and select a licensed app.
-2. Click **Backups** in the navigation pane.
-3. Select the environment that you want to create a backup snapshot for.
+1. Go to [Apps](https://sprintr.home.mendix.com) and select the app.
+1. Click **Backups** in the navigation pane.
+1. Select the environment for which you want to create a backup snapshot.
 
     {{< figure src="/attachments/developerportal/operate/backups/create-backup/environment.png" width=25% class="no-border" >}}
 
-4. Click **Create Backup**.
+1. Click **Create Backup**.
 
     {{< figure src="/attachments/developerportal/operate/backups/create-backup/backupoptions.png" class="no-border" >}}
 

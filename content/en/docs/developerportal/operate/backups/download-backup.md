@@ -22,36 +22,33 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 To download a backup of a Free App, follow these steps:
 
-1. Go to the [Apps](https://sprintr.home.mendix.com).
-2. Select the app from which you want to download the backup.
-3. In the [navigation pane](/developerportal/#navigation-pane), click **Backups**.
-4. On the backup you want to download, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}). Select **Download** from the drop-down list.
-5. Select the backup type: **Full snapshot**, **Database only**, or **Files only**. Then click **Start**.
+1. Go to [Apps](https://sprintr.home.mendix.com) and open your app.
+1. In the [navigation pane](/developerportal/#navigation-pane), click **Backups**.
+1. On the backup you want to download, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}). Select **Download** from the drop-down list.
+1. Select the backup type: **Full snapshot**, **Database only**, or **Files only**. Then click **Start**.
 
 ## 4 Downloading a Licensed Cloud Node Backup
 
 To download a backup of a licensed app, follow these steps:
 
-1. Go to the [Apps](https://sprintr.home.mendix.com).
-2. Open the [Global Navigation menu](/developerportal/global-navigation/) in the upper-left corner. Then click **Deployment** (or **Deployment** > **Mendix Cloud**).
-3. On the node that you want to download the backup from, click **Environments**.
-4. In the navigation pane, click **Backups**.
-5. Select the environment from which you want to download the backup.
+1. Go to [Apps](https://sprintr.home.mendix.com) and open your app.
+1. In the navigation pane, click **Backups**.
+1. Select the environment from which you want to download the backup.
 
     {{< figure src="/attachments/developerportal/operate/backups/download-backup/environment.png" width="25%" class="no-border" >}}
 
-6. If you want to create a backup first, click **Create Backup**.
-7. On the backup you want to download, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}). Select **Download** from the drop-down list.
+1. If you want to create a backup first, click **Create Backup**.
+1. On the backup you want to download, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}). Select **Download** from the drop-down list.
 
     {{< figure src="/attachments/developerportal/operate/backups/download-backup/backupoptions.png" class="no-border" >}}
 
-8. Select the backup type: **Full snapshot**, **Database only**, or **Files only**. Then click **Start**.
+1. Select the backup type: **Full snapshot**, **Database only**, or **Files only**. Then click **Start**.
 
     {{< figure src="/attachments/developerportal/operate/backups/download-backup/backup-choice.png" alt="" width=75% class="no-border" >}}
 
     {{% alert color="info" %}}If a backup archive has been prepared recently, the **Show URL** and **Download** buttons will be active. In this case, you can download the backup archive immediately.{{% /alert %}}
     
-9. Once the download archive has been prepared, you can do one of the following:
+1. Once the download archive has been prepared, you can do one of the following:
 
     * Click **Show URL** to see the URL of the backup
     * Click **Download** to immediately start downloading the archive using your browser.

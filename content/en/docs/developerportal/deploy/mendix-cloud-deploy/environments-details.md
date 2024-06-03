@@ -10,7 +10,7 @@ description: "Describes the environmental details of your app and how to manage 
 
 ## 1 Introduction
 
-To open the **Environment Details** page, go to the [Apps](https://sprintr.home.mendix.com) and open your app. Then click **Environments** on your licensed app, and then click **Details** ({{% icon name="notes-paper-edit" %}}) by the environment you want to view.
+To open the **Environment Details** page, go to [Apps](https://sprintr.home.mendix.com) and click **Environments** on your licensed app. Then click **Details** ({{% icon name="notes-paper-edit" %}}) by the environment you want to view.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/environment-details.png" alt="The Details icon is on the right side of the row" >}}
 

@@ -1,9 +1,8 @@
 ---
 title: "Use MIN With Older Studio Pro Versions"
 url: /refguide/mobile/distributing-mobile-apps/min-older-sp/
-weight: 20
+weight: 45
 description: "This guide will help you build a MIN app compatible with a non-LTS Studio Pro version."
-draft: true
 ---
 
 ## 1 Introduction 

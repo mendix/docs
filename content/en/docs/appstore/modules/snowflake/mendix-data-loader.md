@@ -83,9 +83,17 @@ The amount of data being ingested is so large that the JSON file has become too 
 
 To solve this issue, configure the exposed OData entities to have pagination. For the best performance, make the pages as large as possible while still ensuring that the JSON does not become too large to parse. 
 
-{{% alert color="info" %}}
-Pagination of exposed entities through OData is not availabl in Mendix version 10.10.0. This is a known issue that will be resolved in a future release.
-{{% /alert %}}
+#### 4.2.2 No response from my Mendix application when pagination is enabled on Mendix Studio Pro 10.10
+
+In the process of ingesting data, the Mendix application may not return any values if pagination is enabled for the published OData service and if the Mendix Studio Pro version is 10.10.
+
+##### 4.2.2.1 Cause
+
+A bug in the published OData service resource in Mendix Studio Pro 10.10 where the application root url is set incorrectly causes no data to be returned.
+
+##### 4.2.1.2 Solution
+
+This issue will be resolved in a future Mendix Studio Pro release. If you wish to work around this issue, you can set the ApplicationRootUrl of the application so that it has a trailing slash "/", e.g., **https://mymendixapp.mendixcloud.com/**. This resolution is the same as setting a custom domain as described in the [Custom Domains Mendix Documentation](https://docs.mendix.com/developerportal/deploy/custom-domains/#use-custom-url).
 
 ### 4.3 Contact Information
 

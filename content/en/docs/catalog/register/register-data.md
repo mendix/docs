@@ -92,7 +92,7 @@ A successful `POST` call results in a `201` status code and a JSON response body
 }
 ```
 
-Use the application_UUID to register your environment.
+Use the application `uuid` to register your environment.
 
 #### 4.1.2 Registering an Environment Through the Catalog Registration API {#register-environment}
 

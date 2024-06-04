@@ -132,7 +132,7 @@ A successful `POST` call results in a `201` status code and a JSON response body
 }
 ```
 
-Use the application_UUID and the environment_UUID to register one or more services.
+Use the application `uuid` and the environment `uuid` to register one or more services.
 
 #### 4.1.3 Registering Services Through the Catalog Registration API {#register-services}
 

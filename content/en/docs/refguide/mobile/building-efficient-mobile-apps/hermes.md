@@ -49,5 +49,5 @@ While Hermes offers numerous benefits, there are some potential challenges to be
 
 ## 6 Read More
   
-    * [Optimizing Native Startup](/refguide/mobile/building-efficient-mobile-apps/native-startup/)
-    * [Testing Native Apps](/refguide/mobile/distributing-mobile-apps/testing-mobile-apps/)
+* [Optimizing Native Startup](/refguide/mobile/building-efficient-mobile-apps/native-startup/)
+* [Testing Native Apps](/refguide/mobile/distributing-mobile-apps/testing-mobile-apps/)

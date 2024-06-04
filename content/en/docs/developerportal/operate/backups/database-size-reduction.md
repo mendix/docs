@@ -3,7 +3,6 @@ title: "Reducing Database Size"
 url: /developerportal/operate/database-size-reduction/
 weight: 50
 description: "Describes how to restore physical disk space by creating and restoring a database backup."
-tags: ["Mendix Cloud", "disk space", "disk size", "size reduction", "backup"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
@@ -11,7 +10,7 @@ tags: ["Mendix Cloud", "disk space", "disk size", "size reduction", "backup"]
 
 Usually, the database of a Mendix application in Mendix Cloud grows over time. Here is a typical example:
 
-{{< figure src="/attachments/developerportal/operate/backups/database-size-reduction/Untitled.png" >}}
+{{< figure src="/attachments/developerportal/operate/backups/database-size-reduction/Untitled.png" class="no-border" >}}
 
 The data grows in a steady fashion. If entities are removed in a major release, you may see a temporary decrease in the size of the database—but on average, the database size tends to increase over time.
 

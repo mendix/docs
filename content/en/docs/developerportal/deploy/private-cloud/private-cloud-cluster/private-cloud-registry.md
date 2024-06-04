@@ -3,7 +3,6 @@ title: "Registry Configuration"
 url: /developerportal/deploy/private-cloud-registry/
 description: "Describes how to configure the OCI image registry in Mendix for Private Cloud."
 weight: 11
-tags: ["Private Cloud","Registry","Container","ACR","ECR","GCR","quay.io","OpenShift"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
@@ -130,7 +129,7 @@ To use ECR with the Mendix Operator, you must do the following steps:
 
     1. Open the role for editing and add an entry for the ServiceAccount (or ServiceAccounts) to the list of conditions:
 
-       {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/awsserviceaccountlinktorole.png" >}}
+       {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/awsserviceaccountlinktorole.png" class="no-border" >}}
 
     2. For the second condition, copy and paste the `sts.amazonaws.com` line; replace `:aud` with `:sub` and set it to `system:serviceaccount:<Kubernetes namespace>:<Kubernetes serviceaccount name>`. You can specify any serviceaccount name here (for simplicity, Mendix recommends using `mendix-builder`). For example, if the Mendix Operator is installed into the `mynamespace` namespace, set the value to `system:serviceaccount:mynamespace:mendix-builder`.
 

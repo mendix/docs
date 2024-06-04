@@ -3,7 +3,6 @@ title: "Build an AWS Connector"
 url: /appstore/modules/aws/build-aws-connector/
 description: "Describes the basic steps for building new connectors for AWS services."
 weight: 25
-tags: ["connectors", "amazon", "aws", "build", "connector guide", "how to"]
 aliases:
     - /appstore/connectors/aws/build-aws-connector/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
@@ -53,7 +52,7 @@ To start creating your connector, do the following steps:
     This connector is required to authenticate with Amazon Web Services (AWS). For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/modules/aws/aws-authentication/).
 3. In your connector module, create a folder structure similar to the following figure:
 
-    {{< figure src="/attachments/appstore/modules/aws-create-new/samplefolders.png" alt="The folder structure for the platform-supported Amazon Polly connector">}}
+    {{< figure src="/attachments/appstore/modules/aws-create-new/samplefolders.png" alt="The folder structure for the platform-supported Amazon Polly connector" class="no-border" >}}
 
 ### 3.2 Retrieving a Sample API Response
 
@@ -100,7 +99,7 @@ After you have obtained an API response, you can use it to model the service in 
 
     Mendix Studio Pro now creates the entities into which the AWS service response will be mapped, as in the following example:
 
-    {{< figure src="/attachments/appstore/modules/aws-create-new/sampleentities.png" alt="The domain model for the platform-supported Amazon Polly connector">}}
+    {{< figure src="/attachments/appstore/modules/aws-create-new/sampleentities.png" alt="The domain model for the platform-supported Amazon Polly connector" class="no-border" >}}
 
 11. Rename the entities according to the [best-practice naming conventions](#naming).
 

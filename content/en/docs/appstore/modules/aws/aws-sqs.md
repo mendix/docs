@@ -2,7 +2,6 @@
 title: "Amazon SQS" 
 url: /appstore/modules/aws/amazon-sqs/
 description: "Describes the configuration and usage of the Amazon SQS connector from the Mendix Marketplace. Amazon SQS lets you send, store, and receive messages between software components at any volume, without losing messages or requiring other services to be available."
-tags: ["marketplace", "marketplace component", "amazon", "sqs", "connector"]
 aliases:
     - /appstore/connectors/amazon-sqs/
     - /appstore/connectors/aws/amazon-sqs/

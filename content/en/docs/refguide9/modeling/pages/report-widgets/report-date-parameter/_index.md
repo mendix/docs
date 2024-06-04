@@ -2,7 +2,6 @@
 title: "Report Date Parameter"
 url: /refguide9/report-date-parameter/
 weight: 30
-tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -18,7 +17,7 @@ You can add more fields to a report date parameter widget to make it easier for 
 
 The report date parameter is displayed in **Structure mode** with the data set parameter name shown between square brackets and colored blue. The **From** and **To** dates shown in blue are examples to indicate that these are date fields.
 
-{{< figure src="/attachments/refguide9/modeling/pages/report-widgets/report-date-parameter/report-date-parameter.png" alt="Report date parameter in structure mode" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/report-widgets/report-date-parameter/report-date-parameter.png" alt="Report date parameter in structure mode" class="no-border" >}}
 
 {{% alert color="info" %}}
 If you have a report date parameter widget on the page, you must also add a [Report Button](/refguide9/report-button/) widget so that it is possible for the end-user to regenerate the report after specifying the parameter.
@@ -28,7 +27,7 @@ If you have a report date parameter widget on the page, you must also add a [Rep
 
 An example of report date parameter properties is represented in the image below:
 
-{{< figure src="/attachments/refguide9/modeling/pages/report-widgets/report-date-parameter/report-date-parameter-properties.png" alt="Report date parameter in structure mode"   width="300"  >}}
+{{< figure src="/attachments/refguide9/modeling/pages/report-widgets/report-date-parameter/report-date-parameter-properties.png" alt="Report date parameter in structure mode"   width="300"  class="no-border" >}}
 
 Report date parameter properties consist of the following sections:
 

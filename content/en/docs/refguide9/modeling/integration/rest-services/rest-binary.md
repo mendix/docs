@@ -3,7 +3,6 @@ title: "Publish and Retrieve Images and Files with REST"
 url: /refguide9/send-receive-files-rest/
 linktitle: "Images and Files with REST"
 weight: 79
-tags: ["rest", "binary", "send files", "receive files", "OData", "expose", "published REST service", "consume"]
 ---
 
 ## 1 Introduction
@@ -44,7 +43,7 @@ To publish the **System.Image** or **System.Filedocument** entities as a [REST s
 
 3. Add a **System.Image** or **System.FileDocument** [generalization](/refguide9/entities/#generalization) to the *MyFile* entity
 
-     {{< figure src="/attachments/refguide9/modeling/integration/rest-binary/starting-entity.png" >}}
+     {{< figure src="/attachments/refguide9/modeling/integration/rest-binary/starting-entity.png" class="no-border" >}}
 
 4. Generate the overview pages for the file or image entity, then link them to the home page and navigation.
      * Right click on the **System.Image** or **System.FileDocument** entity that you want to publish, and click **Generate overview pages**. 
@@ -72,7 +71,7 @@ After you run your app, click the URL in the **Location** field to view the Open
 
 Open your published REST service, then double-click the **Get by** key, or single-click and click **Edit**, to open the **Get by** property details. By default, the **Get by** key will return a binary response. The **Export mapping** is blank because a binary object without an export mapping returns binary content.
 
-{{< figure src="/attachments/refguide9/modeling/integration/rest-binary/no-export-mapping.png" >}}
+{{< figure src="/attachments/refguide9/modeling/integration/rest-binary/no-export-mapping.png" class="no-border" >}}
 
 Click **Show** next to the **Microflow** field to view the **MyFirstModule.MyFile_Get_ByKey** microflow. The generated **Get by** key returns a file document.
 

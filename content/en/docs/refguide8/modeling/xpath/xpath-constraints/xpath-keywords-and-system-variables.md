@@ -1,7 +1,6 @@
 ---
 title: "XPath Keywords and System Variables"
 url: /refguide8/xpath-keywords-and-system-variables/
-tags: ["studio pro"]
 ---
 
 ## 1 Overview
@@ -46,7 +45,7 @@ These will be created for each user role in your app. Here is an example:
 
 Here is an example for retrieving that user role: 
 
-{{< figure src="/attachments/refguide8/modeling/xpath/xpath-constraints/xpath-keywords-and-system-variables/user-role.png" >}}
+{{< figure src="/attachments/refguide8/modeling/xpath/xpath-constraints/xpath-keywords-and-system-variables/user-role.png" class="no-border" >}}
 
 ### 3.3 Time-Related {#time-related}
 

@@ -2,7 +2,6 @@
 title: "Access Rules"
 url: /refguide/access-rules/
 weight: 70
-tags: ["domain model", "entity", "access rule", "xpath constraint", "module role", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -41,11 +40,11 @@ There are two ways to view access rules:
 
 * Via entity's **Properties** > **Access rules**: 
 
-    {{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rules-section.png" alt="Access Rules for Entities" width="250px" >}}
+    {{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rules-section.png" alt="Access Rules for Entities" width="250px" class="no-border" >}}
 
 * Via the **Access rules** tab of the entity dialog box:
 
-    {{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rules-tab.png" alt="Access Rules for Entities" width="550px" >}}
+    {{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rules-tab.png" alt="Access Rules for Entities" width="550px" class="no-border" >}}
 
 {{% alert color="info" %}}
 The **Access rules** section is visible only if the [App Security](/refguide/app-security/) is set to **Production**.
@@ -53,7 +52,7 @@ The **Access rules** section is visible only if the [App Security](/refguide/app
 
 An example of the access rules properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rules-properties.png" alt="Access Rules for Entities" width="700px" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rules-properties.png" alt="Access Rules for Entities" width="700px" class="no-border" >}}
 
 Access rules properties consist of the following sections:
 
@@ -84,7 +83,7 @@ All module roles are listed, and those to which this access rule applies are che
 
 You can easily select, or deselect, all module roles using this checkbox.
 
-### 2.3 Access Rights Tab {#access-rights}
+### 2.3 Access Rights {#access-rights}
 
 The **Access rights** tab allows you to assign rights to end-users with the selected module roles.
 
@@ -120,15 +119,17 @@ You cannot set *Write* access to attributes which are calculated. This includes 
 
 For example, a customer is allowed to view the discount, but is not allowed to edit it. The access rights for the discount attribute are **Read**.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rule-discount-read.png" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rule-discount-read.png" class="no-border" >}}
 
 See [Attribute Changes and Security Constraints](#attribute-changes), below, for important considerations about giving access to attributes.
 
-### 2.4 XPath Constraint Tab {#xpath-constraint}
+#### 2.3.3 XPath Constraint {#xpath-constraint}
 
 An [XPath constraint](/refguide/xpath-constraints/) can be used to constrain the set of objects to which the access rule applies. If the constraint rule is true, the rule applies to that object. If the XPath constraint is empty, the rule applies to all objects of the entity.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rule-xpath-tab.png" width="450px" >}}
+Click **Edit…** to edit the XPath constraint.
+
+{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rule-xpath-tab.png" width="450px" class="no-border" >}}
 
 {{% alert color="warning" %}}
 XPath constraints can only be applied to persistable entities as they are applied by the database. Defining XPath constraints for non-persistable entities results in consistency errors.
@@ -136,7 +137,7 @@ XPath constraints can only be applied to persistable entities as they are applie
 
 There are two constraints that can be appended easily with a single button click. 
 
-#### 2.4.1 Owner
+##### 2.3.3.1 Owner
 
 The **Owner** button adds an XPath constraint so the access rule is only applied if the object owner is the current end-user.
 
@@ -146,7 +147,7 @@ The **Owner** button adds an XPath constraint so the access rule is only applied
 
 This constraint is only valid when the [Store 'owner'](/refguide/entities/#store-owner) checkbox in the **System members** section of the entity properties is checked.
 
-#### 2.4.2 Path to User
+##### 2.3.3.2 Path to User
 
 The **Path to user...** button adds an XPath constraint so the access rule is only applied when a User object which is associated (directly or indirectly) with the current object is the current end-user. When you click **Path to user...**, you can select a path to an associated entity that is either a `System.User` or a specialization of `System.User`. This is then converted into an XPath constraint for the access rule.
 
@@ -161,7 +162,7 @@ The XPath constraint can be constructed easily using the **Path to user...** but
 [Module.Order_Customer = '[%CurrentUser%]']
 ```
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rule-order-xpath.png" width="1000px" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rule-order-xpath.png" width="1000px" class="no-border" >}}
 
 Because of this XPath constraint, access defined in the **Access rights** tab is only applied to orders for which the customer is the current end-user.
 
@@ -215,7 +216,7 @@ Each module role from the module of the entity will have a default column for it
 
 Each column has a three-dot [context menu](#context) ({{% icon name="three-dots-menu-vertical" %}}) which you can see when you hover over the column heading containing the module role.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/example-columns.png" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/example-columns.png" class="no-border" >}}
 
 ### 4.2 XPath
 
@@ -270,7 +271,7 @@ Toggle the **Create** setting, shown below, *on* or *off* to enable or disable C
 
 XPath constraints are not applied to create operations, meaning that if you enable create access for one column of a module role, any end-user with this module role can create objects of this entity.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/create.png" alt="This image indicates the position of the Create icons" width="550px" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/create.png" alt="This image indicates the position of the Create icons" width="550px" class="no-border" >}}
 
 #### 4.3.2 Delete Rights
 
@@ -278,7 +279,7 @@ Toggle the **Delete** setting, shown below, *on* or *off* to enable or disable D
 
 In contrast, to Create access, XPath constraints are applied to delete operations.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/delete.png" alt="This image indicates the position of the Delete icons" width="550px" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/delete.png" alt="This image indicates the position of the Delete icons" width="550px" class="no-border" >}}
 
 ### 4.4 Attribute and Association Rights
 
@@ -292,7 +293,7 @@ See [Attribute Changes and Security Constraints](#attribute-changes), above, for
 
 Toggle the **Read** setting, shown below, *on* or *off* to enable or disable Read rights for the attribute or association of that row. When disabling Read access, Write access is automatically disabled as well.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/read.png" alt="This image indicates the position of the Read icons" width="550px" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/read.png" alt="This image indicates the position of the Read icons" width="550px" class="no-border" >}}
 
 You can also click **Read** in the **Set all to** footer to enable or disable Read access for all attributes and associations in this column. Disabling Read access for all rows will also disable Write access for all of them.
 
@@ -300,7 +301,7 @@ You can also click **Read** in the **Set all to** footer to enable or disable Re
 
 Toggle the **Write** setting, shown below, on or off to enable or disable Write rights for the attribute or association of that row. When enabling Write access, Read access is automatically enabled as well.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/write.png" alt="This image indicates the position of the Write icons" width="550px" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/write.png" alt="This image indicates the position of the Write icons" width="550px" class="no-border" >}}
 
 You can also click **Write** in the **Set all to** footer to enable or disable Write access for all attributes and associations in this column. Enabling Write access for all rows will also enable Read access for all of them.
 
@@ -312,7 +313,7 @@ You cannot set *Write* access to attributes which are calculated. This includes 
 
 The context menu of a column can be opened by clicking on the three dot icon ({{% icon name="three-dots-menu-vertical" %}}) that is shown when hovering over a module role name in the header. Within the context menu, you will find options to easily reuse, add, or remove access rules.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/context-menu.png" width="550px" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/context-menu.png" width="550px" class="no-border" >}}
 
 #### 4.5.1 Copy To
 

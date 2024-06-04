@@ -2,14 +2,13 @@
 title: "Administrator"
 url: /refguide8/administrator/
 weight: 20
-tags: ["studio pro", "administrator", "project security", "security"]
 ---
 
 ## 1 Introduction
 
 In the **Administrator** tab of the **Project Security**, you can change the default credentials and a user role for the Administrator user:
 
-{{< figure src="/attachments/refguide8/modeling/menus/view-menu/project-explorer/security/project-security/administrator/project-security-administrator.png" >}}
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/project-explorer/security/project-security/administrator/project-security-administrator.png" class="no-border" >}}
 
 ## 2 Administrator Properties {#administrator-properties}
 

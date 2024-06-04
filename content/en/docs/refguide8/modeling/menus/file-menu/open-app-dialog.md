@@ -3,7 +3,6 @@ title: "Open Project"
 url: /refguide8/open-app-dialog/
 weight: 20
 description: "Describes the Open Project (app) flow and the Open App dialog box"
-tags: ["studio pro", "open app", "open project"]
 aliases:
     - /refguide8/open-project-dialog.html
     - /refguide8/open-project-dialog
@@ -19,7 +18,7 @@ To open a project in Mendix Studio Pro, do one of the following:
 
 The **Open App** dialog box will open, where you can select the app location:
 
-{{< figure src="/attachments/refguide8/modeling/menus/file-menu/open-app-dialog/open-app.png" alt="Open App" >}}
+{{< figure src="/attachments/refguide8/modeling/menus/file-menu/open-app-dialog/open-app.png" alt="Open App" class="no-border" >}}
 
 For more information on the app location, see the [Where Is Your App Stored?](#location) section
 

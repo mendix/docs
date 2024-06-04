@@ -1,10 +1,9 @@
 ---
 title: "Build a Connector"
 url: /appstore/creating-content/connector-guide-build/
-category: "Creating Content"
+
 weight: 5
 description: "Introduces the concept of connectors, how they work, and the basic steps for building and publishing connectors."
-tags: ["data hub", "connectors", "studio pro", "build", "connector guide", "how to"]
 ---
 
 ## 1 Introduction
@@ -87,7 +86,7 @@ To start setting up your app, open Studio Pro and do the following:
 1. Create a [New App](/refguide/new-app/) for your connector.
 2. Create a module to contain your connector. To do this, right-click anywhere in the **App Explorer** outside of existing modules and choose **Add Module**.
 
-    {{< figure src="/attachments/appstore/creating-content/connector-guide-build/add-module.png" >}}
+    {{< figure src="/attachments/appstore/creating-content/connector-guide-build/add-module.png" class="no-border" >}}
 
 3. Give your module a name fitting for the type of connector you are building.
 4. Create the basic folder structure at root level. 

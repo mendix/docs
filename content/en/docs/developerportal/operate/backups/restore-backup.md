@@ -3,7 +3,6 @@ title: "Restoring a Backup"
 url: /developerportal/operate/restore-backup/
 weight: 30
 description: "How to restore a backup."
-tags: ["Backup", "Restore", "Mendix Cloud", "Developer Portal", "backup file format"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
@@ -42,15 +41,15 @@ If you want to restore a backup to a different cloud node, or have your backup s
 1. From the Developer Portal, go to your app's **Backups** page.
 2. In the upper-right corner of the screen, select the environment to which the backup should be restored (for example, **Acceptance**).
 
-    {{< figure src="/attachments/developerportal/operate/backups/restore-backup/environment.png" width=25% >}}
+    {{< figure src="/attachments/developerportal/operate/backups/restore-backup/environment.png" width=25% class="no-border" >}}
 
 3. On the backup you want to restore, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) and select **Restore** from the drop-down list.
 
-    {{< figure src="/attachments/developerportal/operate/backups/restore-backup/backupoptions.png" >}}
+    {{< figure src="/attachments/developerportal/operate/backups/restore-backup/backupoptions.png" class="no-border" >}}
 
 4. Confirm the backup restore by clicking **Restore Backup**.
 
-    {{< figure src="/attachments/developerportal/operate/backups/restore-backup/restore-backup.png" alt="" width=60% >}}
+    {{< figure src="/attachments/developerportal/operate/backups/restore-backup/restore-backup.png" alt="" width=60% class="no-border" >}}
 
 {{% alert color="info" %}}
 If the app is still running, you have to stop it by clicking **Stop Application**. Then click **Restore Backup** again.
@@ -119,7 +118,7 @@ The *.tar* archive within the *.tar.gz* archive (for example, *files_and_databas
 
 Here is an example:
 
-{{< figure src="/attachments/developerportal/operate/backups/restore-backup/tar-gz-structure.png" >}}
+{{< figure src="/attachments/developerportal/operate/backups/restore-backup/tar-gz-structure.png" class="no-border" >}}
 
 This contains the following files:
 

@@ -2,7 +2,6 @@
 title: "Prerequisites for How-tos"
 url: /appstore/partner-solutions/ats/ht-one-custom-action-prerequisites/
 description: "Names and explains the different prerequisites for all the how-to's in this category."
-tags: ["ATS", "testing"]
 ---
 
 ## 1 Introduction

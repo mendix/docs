@@ -4,7 +4,6 @@ linktitle: "Over the Air Updates with CodePush and CLI"
 url: /howto8/mobile/how-to-ota-cli/
 weight: 71
 description: A tutorial for pushing over the air updates (OTA).
-tags: ["native", "mobile", "ota", "native-builder", "over the air", "update"]
 ---
 
 ## 1 Introduction
@@ -52,7 +51,7 @@ It is good practice to *always* redeploy your Mendix App before pushing a new ov
 * Nanoflow changes
 * JavaScript action changes
 * Widgets shipped with Mendix added or removed
-* A new custom Javascript-only widget or module was added
+* A new custom JavaScript-only widget or module was added
 * Non-destructive model changes (for more information, see the [Offline First Reference Guide](/refguide8/offline-first/))
 
 ### 3.2 When a Full Release is Required
@@ -71,7 +70,7 @@ If you have made any changes directly to your iOS or Android project, you will h
 
 Over the air updates let you correct mistakes in your published apps without issuing a new release. For example, imagine you issued a new release and later found a spelling mistake on your welcome screen:
 
-{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-ota-cli/phone-error-text.png" alt="Typo in welcome screen"   width="300"  >}}
+{{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-ota-cli/phone-error-text.png" alt="Typo in welcome screen"   width="300"  class="no-border" >}}
 
 Before OTA updates, you would have to make a new release and configure it in the app stores. But OTA updates make fixing such a mistake easy.
 
@@ -79,7 +78,7 @@ To release a new version OTA, follow these steps:
 
 1. Correct the title and message as follows:
 
-    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-ota-cli/modeller-correct.png" alt="Make some changes"   width="300"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-ota-cli/modeller-correct.png" alt="Make some changes"   width="300"  class="no-border" >}}
 
 2. Save your changes.
 3. Note the version and build number of the app build you want to update. This how-to assumes an app version of 1.0.0 and a build number of 1.
@@ -109,12 +108,12 @@ This command does the following:<br />
 1. Wait for the Native Builder to complete.
 2. Restart the app on your testing device. You should be greeted with the following message:
 
-    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-ota-cli/phone-update-prompt.png" alt="Update available prompt"   width="300"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-ota-cli/phone-update-prompt.png" alt="Update available prompt"   width="300"  class="no-border" >}}
 
 3. Tap **Confirm** to update your app.
 4. The app should reload and greet you with the following dialog box:
 
-    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-ota-cli/phone-success-prompt.png" alt="Update success prompt"   width="300"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-ota-cli/phone-success-prompt.png" alt="Update success prompt"   width="300"  class="no-border" >}}
 
 ## 5 Rolling Back Updates
 
@@ -128,7 +127,7 @@ Imagine you want to rollback an update. Maybe you released it too early or somet
     `native-builder.exe release list --project-name "CoolApp"`
     ```
 
-    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-ota-cli/release-list.png" alt="List of available release" >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-ota-cli/release-list.png" alt="List of available release" class="no-border" >}}
 
 2. To roll back from {v2} to {v1} type the following command:
 
@@ -136,7 +135,7 @@ Imagine you want to rollback an update. Maybe you released it too early or somet
     native-builder.exe release rollback-update --project-name "CoolApp" --label "v1"
     ```
 
-    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-ota-cli/rollback-result.png" alt="Output of rollback command"   width="300"  >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-ota-cli/rollback-result.png" alt="Output of rollback command"   width="300"  class="no-border" >}}
 
 3. Next time you open your app, you should be greeted with the **Update available** dialog box. Tap **Confirm** to roll your app back on your device.
 

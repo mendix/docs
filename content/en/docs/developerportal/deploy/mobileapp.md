@@ -1,10 +1,9 @@
 ---
 title: "Mobile App"
 url: /developerportal/deploy/mobileapp/
-category: "Deployment"
+
 weight: 90
 description: "Describes how to deploy to iOS or Android via the Apple App Store and Google Play Store."
-tags: ["Developer Portal", "Mobile", "Mobile App", "Deploy"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 

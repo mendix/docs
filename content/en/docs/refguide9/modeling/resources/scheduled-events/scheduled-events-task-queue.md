@@ -3,7 +3,6 @@ title: "Scheduled Events – Task Queue"
 url: /refguide9/scheduled-events-task-queue/
 weight: 10
 description: "Options for configuring scheduled events"
-tags: ["Scheduled Event", "Execution properties", "Timing", "intervals", "scheduling issues", "time zones", "daylight saving", "task queue"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -134,7 +133,7 @@ This allows you to run the event every hour, or number of hours. It also allows 
 
 Example times will be shown in the dialog to illustrate the effects of the offset.
 
-{{< figure src="/attachments/refguide9/modeling/resources/scheduled-events/hourly-event.png" >}}
+{{< figure src="/attachments/refguide9/modeling/resources/scheduled-events/hourly-event.png" class="no-border" >}}
 
 ### 4.6 Minutes Properties {#minutes}
 

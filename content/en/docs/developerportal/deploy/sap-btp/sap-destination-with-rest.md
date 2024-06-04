@@ -2,10 +2,9 @@
 title: "Use SAP Connectivity Service with REST and SOAP"
 linktitle: "Use SAP Connectivity Service with REST and SOAP"
 url: /developerportal/deploy/sap-cloud-platform/sap-destination-with-rest/
-category: "SAP"
+
 weight: 25
 description: "How to configure Mendix native REST and SOAP calls to use the SAP Destination Service and the SAP Connectivity Service to reach on-premises services."
-tags: ["SAP", "Cloud Connector", "Connectivity Service", "Destination Service", "REST", "SOAP"]
 aliases:
     - /partners/sap/sap-destination-with-rest/
 ---
@@ -28,13 +27,13 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 In your microflow which is making a REST or SOAP call, perform a **Get Destination** action before the REST or SOAP call. This needs to use the Destination Name which is configured in a Destination on SAP BTP.
 
-{{< figure src="/attachments/developerportal/deploy/sap-destination-with-rest/rest-microflow.png" alt="REST Microflow" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-destination-with-rest/rest-microflow.png" alt="REST Microflow" class="no-border" >}}
 
 The **Get Destination** action returns a **Destination** object. This is named as *DestinationObject* in the above example, and is used to configure the subsequent REST or SOAP call.
 
 The Destination object has the properties shown in the image below:
 
-{{< figure src="/attachments/developerportal/deploy/sap-destination-with-rest/destination-entity.png" alt="Destination entity" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-destination-with-rest/destination-entity.png" alt="Destination entity" class="no-border" >}}
 
 ### 3.1 Configuring a REST Call
 
@@ -54,7 +53,7 @@ The following entries are required in the **General** tab:
 |Username|$DestinationObject/SapConnectivityProxyCredentials|
 |Password|empty|
 
-{{< figure src="/attachments/developerportal/deploy/sap-destination-with-rest/rest-general.png" alt="REST general tab" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-destination-with-rest/rest-general.png" alt="REST general tab" class="no-border" >}}
 
 #### 3.1.2 HTTP Headers Tab
 
@@ -93,7 +92,7 @@ The following entries are required in the **Operation** tab:
 |Username|$DestinationObject/SapConnectivityProxyCredentials|
 |Password|empty|
 
-{{< figure src="/attachments/developerportal/deploy/sap-destination-with-rest/web-service-general.png" alt="SOAP web service general tab" >}}
+{{< figure src="/attachments/developerportal/deploy/sap-destination-with-rest/web-service-general.png" alt="SOAP web service general tab" class="no-border" >}}
 
 #### 3.2.2 HTTP Headers Tab
 

@@ -2,7 +2,6 @@
 title: "Label"
 url: /refguide8/label/
 weight: 30
-tags: ["studio pro", "label", "common widgets"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -22,7 +21,7 @@ A label shows static text, which describes the purpose of a specific widget to a
 
 An example of label properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/pages/common-widgets/label/label-properties.png" alt="Label Properties"   width="300"  >}}
+{{< figure src="/attachments/refguide8/modeling/pages/common-widgets/label/label-properties.png" alt="Label Properties"   width="300"  class="no-border" >}}
 
 Label properties consist of the following sections:
 

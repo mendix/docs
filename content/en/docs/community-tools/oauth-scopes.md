@@ -1,9 +1,8 @@
 ---
 title: "OAuth and Scopes"
 url: /community-tools/oauth-scopes/
-category: "Community Tools"
+
 weight: 7
-tags: ["oath", "profile", "login", "Developer Portal", "scopes"]  
 description: "Describes OAuth, authorizations, and scopes as used by Mendix."
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 aliases:
@@ -33,7 +32,7 @@ For example, if the user grants website/application A permission to send their p
 
 Here is an example page where a user is asked to accept scopes on their Mendix account so that Wikipedia can access their profile information and display their name:
 
-{{< figure src="/attachments/community-tools/oauth-scopes/authorize_page.png" alt="Authorize Page" >}} 
+{{< figure src="/attachments/community-tools/oauth-scopes/authorize_page.png" alt="Authorize Page" class="no-border" >}} 
 
 ## 4 Generated Scopes
 

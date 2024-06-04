@@ -1,7 +1,6 @@
 ---
 title: "Dynamic Image (Document Template)"
 url: /refguide8/dynamic-image-document-template/
-tags: ["studio pro"]
 aliases:
     - /refguide8/Dynamic+Image+(document+template).html
     - /refguide8/dynamic-image-(document-template).html
@@ -16,7 +15,7 @@ A dynamic image can be used to show a System.Image. If the image is not availabl
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide8/modeling/resources/document-templates/918132.png" >}}
+{{< figure src="/attachments/refguide8/modeling/resources/document-templates/918132.png" class="no-border" >}}
 A dynamic image inside a table cell, showing the preset default image.
 
 {{% /alert %}}

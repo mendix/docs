@@ -2,7 +2,6 @@
 title: "Unlock Workflow"
 url: /refguide9/unlock-workflow/
 weight: 80
-tags: ["studio pro", "unlock workflow", "workflow unlock"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -18,7 +17,7 @@ This activity was introduced in Studio Pro [9.23.0](/releasenotes/studio-pro/9.2
 The **Unlock workflow** activity can be used to unlock a [workflow](/refguide9/workflows/), i.e. a workflow definition. 
 If the workflow is unlocked, new instances of the workflow can be created.
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/unlock-workflow/unlock-workflow.jpg" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/unlock-workflow/unlock-workflow.jpg" class="no-border" >}}
 
 {{% alert color="warning" %}} 
 
@@ -32,7 +31,7 @@ For information on locking the workflow, see the [Lock Workflow](/refguide9/lock
 
 An example of Unlock workflow properties is represented in the image below:
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/unlock-workflow/unlock-workflow-properties.jpg" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/unlock-workflow/unlock-workflow-properties.jpg" class="no-border" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

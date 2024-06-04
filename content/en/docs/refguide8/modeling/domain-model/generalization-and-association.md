@@ -3,7 +3,6 @@ title: "Generalization vs One-to-One Associations"
 linktitle: "Generalization vs 1-to-1 Associations"
 url: /refguide8/generalization-and-association/
 weight: 50
-tags: ["domain model", "association", "inheritance", "one-to-one", "generalization"]
 ---
 
 ## 1 Introduction
@@ -18,7 +17,7 @@ When defining closely related structures, it can be difficult to decide on the b
 
 The Mendix domain model is based on the [class diagram](https://en.wikipedia.org/wiki/Class_diagram) in [UML](https://en.wikipedia.org/wiki/Unified_Modeling_Language), which allows the specification of the objects/entities and their attributes and associations. The concept of generalization in Mendix is exactly the same as in UML. However, the Mendix domain model uses a different notation to display the generalization. The UML class diagram uses associations with a hollow triangle (arrow) pointing to the super class (meaning, the generalization). In Mendix generalization is expressed with a blue label above the specialized entity, specifying the generalization entity name.
 
-{{< figure src="/attachments/refguide8/modeling/domain-model/generalization-and-association/generalization-indication.png" alt="example of generalization notation" >}}
+{{< figure src="/attachments/refguide8/modeling/domain-model/generalization-and-association/generalization-indication.png" alt="example of generalization notation" class="no-border" >}}
 
 UML also allows us to specify the types of associations, such as an [Aggregation](https://en.wikipedia.org/wiki/Aggregation_(object-oriented_programming)) or [Composition](https://en.wikipedia.org/wiki/Object_composition). The definition of these associations specify whether or not the objects can exist without each other. Unlike UML, we can not specify how strong a relationship is. Any dependencies between the two objects have to be specified using [event microflows](/refguide8/event-handlers/) or [delete behavior/prevention](/refguide8/association-properties/#delete-behavior).
 

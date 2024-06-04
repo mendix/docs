@@ -2,9 +2,8 @@
 title: "Drag Microflows and Pages into a Microflow"
 linktitle: "Drag App Documents into Microflow"
 url: /howto7/logic-business-rules/drag-microflows-and-pages-into-a-microflow/
-category: "Logic and Business Rules"
+
 weight: 4
-tags: ["microflow", "logic", "page"]
 ---
 
 ## 1 Introduction
@@ -24,19 +23,19 @@ None.
 
 If possible, re-using logic is an important procedure while developing apps. The actions that form the reusable logic can be selected and turned into a submicroflow. This just takes two clicks, as shown in this animation:
 
-{{< figure src="/attachments/howto7/logic-business-rules/drag-microflows-and-pages-into-a-microflow/18580993.gif" >}}
+{{< figure src="/attachments/howto7/logic-business-rules/drag-microflows-and-pages-into-a-microflow/18580993.gif" class="no-border" >}}
 
 ## 4 Dragging a Page into a Microflow
 
 Dragging an existing form from the Project Explorer reduces the amount of mouse clicks and mouse pointer hovering:
 
-{{< figure src="/attachments/howto7/logic-business-rules/drag-microflows-and-pages-into-a-microflow/18580992.gif" >}}
+{{< figure src="/attachments/howto7/logic-business-rules/drag-microflows-and-pages-into-a-microflow/18580992.gif" class="no-border" >}}
 
 ## 5 Dragging a Microflow into a Microflow
 
 Instead of creating a new submicroflow action, it can be easier to drag an existing microflow into the current one.
 
-{{< figure src="/attachments/howto7/logic-business-rules/drag-microflows-and-pages-into-a-microflow/18580991.gif" >}}
+{{< figure src="/attachments/howto7/logic-business-rules/drag-microflows-and-pages-into-a-microflow/18580991.gif" class="no-border" >}}
 
 ## 6 Read More
 

@@ -3,20 +3,19 @@ title: "Project Menu"
 url: /refguide8/project-menu/
 description: "Describes the Project Menu in Studio Pro."
 weight: 30
-tags: ["Studio Pro", "project menu", "top bar"]
 ---
 
 ## 1 Introduction
 
 In the **Project** menu, you can view and/or manipulate settings that are connected to your project and deployment. For example, you can create a deployment package.
 
-{{< figure src="/attachments/refguide8/modeling/menus/project-menu/project-menu.png" alt="Project Menu"   width="300"  >}}
+{{< figure src="/attachments/refguide8/modeling/menus/project-menu/project-menu.png" alt="Project Menu"   width="300"  class="no-border" >}}
 
 ## 2 Tools
 
 Under **Project** > **Tools**, you can find settings on updating widgets, button icons, and layouts, checking widgets, and converting your classes to **Design** properties.  
 
-{{< figure src="/attachments/refguide8/modeling/menus/project-menu/tools.png" alt="Tools" >}}
+{{< figure src="/attachments/refguide8/modeling/menus/project-menu/tools.png" alt="Tools" class="no-border" >}}
 
 ### 2.1 Batch Update Button Icons
 

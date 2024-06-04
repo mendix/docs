@@ -2,7 +2,6 @@
 title: "Retrieve"
 url: /refguide/retrieve/
 weight: 60
-tags: ["studio pro", "retrieve", "activity", "microflow"]
 #To update screenshots of these microflows in Studio Pro, use the Microflow Screenshots app.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -19,7 +18,7 @@ A **Retrieve** activity can be used to get one or more objects, either by direct
 
 An example of retrieve activity properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/retrieve/retrieve-properties.png" alt="retrieve properties" width="700px" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/retrieve/retrieve-properties.png" alt="retrieve properties" width="700px" class="no-border" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
@@ -111,11 +110,11 @@ This section presents an example for optimizing retrieve activities during the p
 
 A common example is shown below in which creating an order needs to be associated with the customer and their address. This example ends up with three different flows, and they cannot be merged back into the main flow because that causes the entities **OtherAddress** and **NewPrimaryAddress** to be unreachable.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/retrieve/example-create-order.png" width="550px" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/retrieve/example-create-order.png" width="550px" class="no-border" >}}
 
 One solution for this is to include the logic (partially) in a sub-microflow (as shown in the following image). However, this is not easy to read, and preventing creating the same object multiple times at different places also causes a lot of unnecessary maintenance.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/retrieve/example-solution-one.png" width="650px" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/retrieve/example-solution-one.png" width="650px" class="no-border" >}}
 
 ### 5.2 Optimization
 
@@ -123,11 +122,11 @@ You can easily work around the issue in the example above by using a sub-microfl
 
 The easiest way to implement this is to move all the logic for acquiring the customer's address into one sub-microflow (the **GetCustomerPrimaryAddress** sub-microflow). By doing so, all the logic acquired after getting the address only needs to be specified once, and the microflow is still easily readable. 
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/retrieve/example-solution-two.png" width="500px" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/retrieve/example-solution-two.png" width="500px" class="no-border" >}}
 
 As we can see in the example below, the **GetCustomerPrimaryAddress** sub-microflow contains the same logic as in the original example, except that there is only one result from this sub-microflow: the correct customer's address.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/retrieve/get-address-sub-microflow.png" width="550px" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/retrieve/get-address-sub-microflow.png" width="550px" class="no-border" >}}
 
 ### 5.3 Retrieving an Instance of an Object
 
@@ -135,7 +134,7 @@ Sometimes you only need to retrieve a specific instance of an object. Building a
 
 However, there is the risk of creating an infinite loop if the retrieve activity applies a constraint that is not set correctly during the create activity. So, always make sure to print a log message so that you can easily identify any problems in your design.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/retrieve/retrieve-one-object-instance.png" width="400px" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/retrieve/retrieve-one-object-instance.png" width="400px" class="no-border" >}}
 
 ## 6 Read More
 

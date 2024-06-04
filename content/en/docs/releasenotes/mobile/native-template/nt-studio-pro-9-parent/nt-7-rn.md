@@ -5,6 +5,22 @@ weight: 9
 description: "Native Template 7 release notes."
 ---
 
+## 7.0.11 {#710}
+
+**Release date: May 13, 2024**
+
+### Improvements
+
+* We switched to Xcode 15.1 for cloud builds (App Center) in response to the updated minimum iOS SDK requirements.
+
+## 7.0.10 {#709}
+
+**Release date: March 15, 2024**
+
+### Improvements
+
+* We updated the Android manifest file to support opening URLs with links to websites whose apps are installed on the device.
+
 ## 7.0.9 {#709}
 
 **Release date: October 13, 2023**

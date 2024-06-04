@@ -4,7 +4,6 @@ url: /appstore/modules/
 description: "Presents details on the modules available in the Mendix Marketplace."
 weight: 5
 no_list: false
-tags: ["marketplace", "marketplace component", "module"]
 ---
 
 ## 1 Introduction {#introduction}
@@ -17,4 +16,3 @@ The modules available in the Mendix Marketplace can be added to your app to prov
 When you download these modules, they will go into the **App** > **Marketplace modules** folder.
 
 ## 2 Documents in This Category
-

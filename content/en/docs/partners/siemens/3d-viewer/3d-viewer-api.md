@@ -2,7 +2,6 @@
 title: "Use the 3D Viewer API"
 url: /partners/siemens/3d-viewer-api/
 description: "Describes how to use the 3D Viewer API"
-tags: ["3d visualization", "3d viewer", "cad", "app store", "marketplace", "component", "platform support"]
 ---
 
 ## 1 Introduction
@@ -70,11 +69,11 @@ If you want to get properties of a selected part on the 3D Viewer, perform the f
 
 4. Call this JavaScript action in a nanoflow to get all available properties of a given part.
 5. Use a page to show all the properties returned :
-    {{< figure src="/attachments/partners/siemens/3d-viewer/3d-viewer-api/show-properties.jpg" alt="show-properties" >}}
+    {{< figure src="/attachments/partners/siemens/3d-viewer/3d-viewer-api/show-properties.jpg" alt="show-properties" class="no-border" >}}
 
 ### 3.2 Other Sample Code Snippets
 
-Starting from version 2.2.0, 3D Viewer module includes some out-of-box API actions. The module allows you to manipulate model parts via **RotatePart**, **ScalePart**, **SetPartColor**, and **TranslatePart** API actions. You can find these actions in the **Viewer3D** > **USE_ME** > **API Actions** folder in the **App Explorer** in Studio Pro. You can directly use them to create your custom logic for manipulating models. Check out the code implementation of these javascript actions, along with the 3D Viewer API Reference. This may give you some ideas about how you want to make use of the 3D Viewer API.
+Starting from version 2.2.0, 3D Viewer module includes some out-of-box API actions. The module allows you to manipulate model parts via **RotatePart**, **ScalePart**, **SetPartColor**, and **TranslatePart** API actions. You can find these actions in the **Viewer3D** > **USE_ME** > **API Actions** folder in the **App Explorer** in Studio Pro. You can directly use them to create your custom logic for manipulating models. Check out the code implementation of these JavaScript actions, along with the 3D Viewer API Reference. This may give you some ideas about how you want to make use of the 3D Viewer API.
 
 ## 4 Feedback
 

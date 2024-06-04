@@ -1,7 +1,6 @@
 ---
 title: "Export With Mapping"
 url: /refguide8/export-mapping-action/
-tags: ["studio pro", "integration activity", "export mapping action", "export to xml"]
 weight: 40
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -18,7 +17,7 @@ The **Export with mapping** activity allows you to export the data stored in [do
 
 An example of export with mapping properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/activities/integration-activities/export-mapping-action/export-with-mapping-properties.png" alt="export with mapping properties" >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/integration-activities/export-mapping-action/export-with-mapping-properties.png" alt="export with mapping properties" class="no-border" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

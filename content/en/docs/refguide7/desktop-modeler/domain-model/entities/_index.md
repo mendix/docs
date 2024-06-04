@@ -2,7 +2,6 @@
 title: "Entities"
 url: /refguide7/entities/
 canonical_url: "https://docs.mendix.com/refguide/entities/"
-tags: ["domain model", "entity", "entities", "attribute", "validation rule", "even handler", "access rule"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -14,7 +13,7 @@ The domain model editor uses the following symbols for visualization on entities
 
 | Symbol | Description |
 | --- | --- |
-| {{< figure src="/attachments/refguide7/desktop-modeler/domain-model/entities/917594.png" >}} | This entity has one or more event handlers. |
+| {{< figure src="/attachments/refguide7/desktop-modeler/domain-model/entities/917594.png" class="no-border" >}} | This entity has one or more event handlers. |
 
 {{% alert color="info" %}}
 
@@ -53,7 +52,7 @@ The generalization specifies the entity of which this entity derives its propert
 {{% alert color="info" %}}
 
 This property can be used in a situation where one has an entity 'Student' and an entity 'Professor' which have some generic properties. They both have a name, telephone number and email address and can be a member of one or more courses. Both entities are generalized in the entity 'Member'. Contrary this means that the entity 'Member' can be specialized in the entity 'Student' and the entity 'Professor'.
-{{< figure src="/attachments/refguide7/desktop-modeler/domain-model/entities/917900.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/domain-model/entities/917900.png" class="no-border" >}}
 
 {{% /alert %}}
 
@@ -67,7 +66,7 @@ Define whether instances of this entity can be stored in the database. See [pers
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide7/desktop-modeler/domain-model/entities/4325380.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/domain-model/entities/4325380.png" class="no-border" >}}
 
 {{% /alert %}}
 

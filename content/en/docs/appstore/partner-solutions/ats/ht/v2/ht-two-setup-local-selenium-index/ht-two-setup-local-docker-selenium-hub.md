@@ -2,7 +2,6 @@
 title: "Set Up a Local Docker Selenium Hub"
 url: /appstore/partner-solutions/ats/ht-two-setup-local-docker-selenium-hub/
 description: "Describes the options to setup a local selenium solution."
-tags: ["ATS", "testing", "Selenium hub"]
 ---
 
 ## 1 Introduction
@@ -81,7 +80,7 @@ The following steps describe how to install your hub and nodes with Docker-Compo
 
 5. Check with the following link if the hub works: `http://localhost:4444/grid/console`. Note: You can also replace localhost with the server name or IP-address of the Docker host.
 
-    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-setup-local-selenium-index/ht-two-setup-local-docker-selenium-hub/docker_grid.png" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-setup-local-selenium-index/ht-two-setup-local-docker-selenium-hub/docker_grid.png" class="no-border" >}}
 
     Congratulation, your local Selenium hub is running.
 

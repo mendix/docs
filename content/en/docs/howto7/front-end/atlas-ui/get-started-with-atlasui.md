@@ -2,7 +2,6 @@
 title: "Get Started with Atlas UI"
 url: /howto7/front-end/get-started-with-atlasui/
 weight: 10
-tags: ["Atlas", "UI", "UX", "user experience"]
 ---
 
 ## 1 Introduction
@@ -31,7 +30,7 @@ You can choose a page template when you create a new page.
 
 For example, **Dashboard Action Tiles**, **Dashboard Charts**, **Dashboard Expenses** are page templates. 
 
-{{< figure src="/attachments/howto7/front-end/atlas-ui/get-started-with-atlasui/start_choose_a_page_template.png" alt="Page Template" >}}
+{{< figure src="/attachments/howto7/front-end/atlas-ui/get-started-with-atlasui/start_choose_a_page_template.png" alt="Page Template" class="no-border" >}}
 
 Once the page is created, you can customize it.
 

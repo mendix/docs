@@ -5,7 +5,6 @@ weight: 4
 no_list: false
 description_list: true
 description: "Describes how to create and share Mendix Marketplace content."
-tags: ["marketplace", "public marketplace", "private marketplace", widget", "module"]
 aliases:
     - /appstore/overview/share-content/
     - /appstore/general/share-app-store-content/
@@ -83,7 +82,7 @@ To develop modules and submit them to the Marketplace, follow these guidelines:
 
         * When putting `.jar` files in the `userlib` folder, make sure the name includes a version number (for example, `org.apache.commons.io-2.3.0.jar`) and is accompanied by a blank `{jarfile-including-version}.{module_name}.RequiredLib` file so that users know where the .*jar* files come from (for example, for the module *MyModule*, `org.apache.commons.io-2.3.0.jar.MyModule.RequiredLib`)
 
-            {{< figure src="/attachments/appstore/sharing-content/userlibBlankFiles_boxed.jpg" width="400"  >}}
+            {{< figure src="/attachments/appstore/sharing-content/userlibBlankFiles_boxed.jpg" width="400"  class="no-border" >}}
 
 * Verify that the module's Java actions compile correctly (the easiest way to check is to create a deployment package, as it will clean the deployment folder and rebuild the app; for more information, see [Environments](/developerportal/deploy/environments/))
 * Reduce the use of layouts and use snippets instead, which will result in fewer module dependencies and will reduce the number of potential errors (for example, missing layouts)
@@ -112,7 +111,7 @@ To create a new component release for the Mendix Marketplace, follow these steps
 3. In this GitHub release, provide an official name, and write the release notes. You can use these for the Marketplace release as well.
 4. If you add the *.mpk* file as a binary file to the release tag, the Mendix Marketplace automatically syncs the *.mpk* to your new draft:
 
-    {{< figure src="/attachments/appstore/sharing-content/github-releases.png" >}}
+    {{< figure src="/attachments/appstore/sharing-content/github-releases.png" class="no-border" >}}
 
 5. Link this GitHub release to the upcoming Mendix Marketplace release by mentioning the GitHub release number in the description. For more details, see the [Package](#package) and [Updating Existing Marketplace Content](#updating) sections below.
 
@@ -169,11 +168,11 @@ These are the open-source software license options available and their requireme
 
 | | **Notes** | **Commercial use allowed?** | **Component code needs to be in public repo?** | **License text required with copyright info in code and distribution artifact?** | **Can modify?** (Mention modifications to code) | **Can consuming apps use without making their code public?** | **Notice files should be distributed with artifact?** | **Original component source code to be distributed with consuming app?** | **Can sub-license?** |
 | --- | --- | --- | --- | --- | --- | --- |  --- | --- | --- |
-| [MIT](https://opensource.org/licenses/MIT) | Add a specific *license.txt* file in your artifacts (meaning, in the *.mpk*). | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} |
-| **BSD 2.0, 3.0** | | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} |
-| **Apache 1.0** | | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} |
-| [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0) | Add a specific *license.txt* file in your artifacts (meaning, in the *.mpk*). | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}}  |
-| **Creative Commons CC0 1.0 Universal (CC-0)** (Public Domain) | | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/cross-mark.svg" >}} | {{< figure src="/attachments/appstore/sharing-content/check-mark.svg" >}} |
+| [MIT](https://opensource.org/licenses/MIT) | Add a specific *license.txt* file in your artifacts (meaning, in the *.mpk*). | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
+| **BSD 2.0, 3.0** | | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
+| **Apache 1.0** | | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
+| [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0) | Add a specific *license.txt* file in your artifacts (meaning, in the *.mpk*). | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="checkmark-circle-filled" color="green" >}}  |
+| **Creative Commons CC0 1.0 Universal (CC-0)** (Public Domain) | | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
 
 {{% alert color="info" %}}
 The [GNU General Public License (GPL), version 3](https://www.gnu.org/licenses/gpl-3.0.en.html)  is not available to use, as everything licensed under GNU GPL is public; GNU GPL has a strong copyleft effect; modification has a strong copyleft effect; and all consuming apps should make their code public.
@@ -216,7 +215,7 @@ In the **How would you like to receive information on new leads?** field, you mu
 
 To finish up configuring this page, click **Upload** to upload an icon for your component.
 
-{{< figure src="/attachments/appstore/sharing-content/general.png" >}}
+{{< figure src="/attachments/appstore/sharing-content/general.png" class="no-border" >}}
 
 ### 4.2 Package {#package}
 
@@ -259,7 +258,7 @@ The editor comes with a set of basic formatting tools, such as bold, bullet list
 
 <a id="screenshot"></a>Click **Upload Screenshot** to select images of the component (especially for configuration) from your computer and upload them (this is required for submitting a new component):
 
-{{< figure src="/attachments/appstore/sharing-content/enable.png"  >}}
+{{< figure src="/attachments/appstore/sharing-content/enable.png"  class="no-border" >}}
 
 You can optionally add a **YouTube URL** and a **Demo URL**.
 
@@ -273,13 +272,13 @@ On the **Capabilities** page, you can provide the following details about an ind
 * A **Use Case** relevant to the content (enter a **Header** and **CTA URL**)
 * **External Links** relevant to the content
 
-{{< figure src="/attachments/appstore/sharing-content/capabilities.png"  >}}
+{{< figure src="/attachments/appstore/sharing-content/capabilities.png"  class="no-border" >}}
 
 ### 4.5 Publish {#publish}
 
 Finally, on the **Publish** page, you can review all the details of your component you entered so far and edit as necessary (via the **Edit** button per section) before publishing.
 
-{{< figure src="/attachments/appstore/sharing-content/publish.png"   width="600"  >}}
+{{< figure src="/attachments/appstore/sharing-content/publish.png"   width="600"  class="no-border" >}}
 
 After you click **Publish Content**, your draft will be reviewed by Mendix before it is visible in the Marketplace. 
 

@@ -2,7 +2,6 @@
 title: "Delete Object(s)"
 url: /refguide/deleting-objects/
 weight: 50
-tags: ["studio pro", "delete object", "activity"]
 ---
 
 {{% alert color="info" %}}
@@ -17,7 +16,7 @@ The **Delete object(s)** activity can be used to delete one or more objects.
 
 An example of delete object properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/deleting-objects/delete-properties.png" alt="delete object properties" width="650px" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/deleting-objects/delete-properties.png" alt="delete object properties" width="650px" class="no-border" >}}
 
 This activity cannot be used to delete [external objects](/refguide/external-entities/). Use the [Delete External Object](/refguide/delete-external-object/) activity to delete external objects.
 
@@ -90,11 +89,11 @@ For more information on associations' delete behavior, see the [On Delete Behavi
 
 The following example shows that one **Customer** object is associated with multiple **Order** objects:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/deleting-objects/delete-limitations-example-0.png"   width="350"  >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/deleting-objects/delete-limitations-example-0.png"   width="350"  class="no-border" >}}
 
 The **On delete of 'Customer' object** option below should be set to **Keep 'Order' objects**:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/deleting-objects/delete-limitations-example-1.png"   width="350"  >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/deleting-objects/delete-limitations-example-1.png"   width="350"  class="no-border" >}}
 
 ## 5 Common Section{#common}
 
@@ -108,7 +107,7 @@ Clicking a **Delete** button or triggering a delete activity will initiate delet
 
 In detail, the following graph shows what happens during deletions:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/deleting-objects/during-deletes.png" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/deleting-objects/during-deletes.png" class="no-border" >}}
 
 {{% alert color="warning" %}}
 The **Committing** state of the **IMendixObject** is deprecated since Mendix Studio Pro 7.16.

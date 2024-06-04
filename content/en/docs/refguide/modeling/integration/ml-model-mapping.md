@@ -2,11 +2,8 @@
 title: "ML Model Mapping"
 url: /refguide/ml-model-mapping/
 weight: 25
-category: Mapping Documents
-tags: ["ML kit", "ML model mapping", "machine learning", "models"]
+description: "Introduces machine learning (ML) model integration used to deploy a ML model."
 ---
-
-{{% alert color="info" %}}[Machine learning model](/refguide/machine-learning-kit/) support is currently in [beta](/releasenotes/beta-features/).{{% /alert %}}
 
 ## 1 Introduction
 

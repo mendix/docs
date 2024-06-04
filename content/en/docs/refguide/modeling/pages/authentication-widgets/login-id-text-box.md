@@ -1,7 +1,6 @@
 ---
 title: "Login ID Text Box"
 url: /refguide/login-id-text-box/
-tags: ["studio pro", "login id", "authentication widget", "authentication"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -11,7 +10,7 @@ tags: ["studio pro", "login id", "authentication widget", "authentication"]
 
 The **Login ID text box** is a widget that can be used to provide a login id for authentication. A login id is a unique identifier of a user, for example, a username or an email address:
 
-{{< figure src="/attachments/refguide/modeling/pages/authentication-widgets/login-id-text-box/login-id.png" alt="Login ID Text Box" >}}
+{{< figure src="/attachments/refguide/modeling/pages/authentication-widgets/login-id-text-box/login-id.png" alt="Login ID Text Box" class="no-border" >}}
 
 The **Login ID text box** should be placed on a page together with a [Password text box](/refguide/password-text-box/) and a [Sign-in button](/refguide/sign-in-button/).
 
@@ -19,7 +18,7 @@ The **Login ID text box** should be placed on a page together with a [Password t
 
 An example of login ID text box properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/pages/authentication-widgets/login-id-text-box/logid-id-properties.png" alt="Login ID Text Box Properties"   width="250"  >}}
+{{< figure src="/attachments/refguide/modeling/pages/authentication-widgets/login-id-text-box/logid-id-properties.png" alt="Login ID Text Box Properties"   width="250"  class="no-border" >}}
 
 Login ID text box properties consist of the following sections:
 

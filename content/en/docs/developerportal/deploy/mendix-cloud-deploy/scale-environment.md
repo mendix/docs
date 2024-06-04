@@ -2,9 +2,8 @@
 title: "Scaling Your Environment in Mendix Cloud"
 linktitle: "Scaling in Mendix Cloud"
 url: /developerportal/deploy/scale-environment/
-weight: 25
+weight: 9
 description: "Describes how to scale your environments in Mendix Cloud."
-tags: ["Scale","Environments","Mendix Cloud","Developer Portal"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
@@ -37,7 +36,7 @@ To scale your licensed app in Mendix Cloud, follow these steps:
 
 3. On the **General** tab, scroll down to the **Instances** row. Click **Change scaling**.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/scale-environment/change-scaling.png" alt="" class="image-border" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/scale-environment/change-scaling.png" alt="" >}}
 
 4. To set the **Memory per instance** that you want to use, drag the **Memory per instance** indicator bar.
 
@@ -45,7 +44,7 @@ To scale your licensed app in Mendix Cloud, follow these steps:
 
 6. Click **Apply**. This restarts your environment to apply the changes.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/scale-environment/scale.png" class="image-border" alt="Scaling dashboard" max-width=75% >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/scale-environment/scale.png" alt="Scaling dashboard" max-width=75% >}}
 
 ### 3.1 Scaling Notes
 
@@ -67,7 +66,7 @@ You do not need to allocate all the available memory at once. You can just alloc
 
 For example, you can use one instance with 2 GiB RAM. The remaining 6 GiB in your cloud resource pack will be unused.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/scale-environment/scaling-example.png" alt="Scaling dashboard with 2 out of 8 GB of total allocated memory used" class="image-border" max-width=75% >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/scale-environment/scaling-example.png" alt="Scaling dashboard with 2 out of 8 GB of total allocated memory used" max-width=75% >}}
 
 ## 5 Read More
 

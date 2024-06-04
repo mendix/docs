@@ -1,10 +1,8 @@
 ---
 title: "Deleted Flag"
 url: /refguide/mobile/best-practices/deleted-flag
-category: Mobile
 weight: 10
 description: "This pattern lets you remove deleted objects from the offline database via Sync-to-device."
-tags: ["mobile", "best practices", "patterns", "offline-first", "synchronization"]
 ---
 
 ## 1 Introduction

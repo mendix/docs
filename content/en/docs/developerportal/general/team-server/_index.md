@@ -1,10 +1,9 @@
 ---
 title: "Team Server"
 url: /developerportal/general/team-server/
-category: "Collaboration"
+
 weight: 12
 description: "Describes the overview of Team Server revisions and commits."
-tags: ["Studio Pro", "Team Server", "Developer Portal", "commit", "branch"]
 aliases:
     - /refguide/team-server.html
     - /developerportal/develop/team-server.html
@@ -54,6 +53,8 @@ For SVN, the command has the form `svn checkout --revision "{REVISION}" --userna
 
 ## 4 Revision History {#revision-history}
 
+{{% alert color="info" %}}For Git-based applications, revisions are sorted according to the commit history, which sometimes does not reflect the chronological order due to Git's decentralized nature and local commits.{{% /alert %}}
+
 For each revision, you can see the following information:
 
 * The message in the revision commit
@@ -71,7 +72,7 @@ When you click **Details** for a revision, you can see the stories related to th
 
 Related stories will only appear if you select them in the **Commit** dialog box of Mendix Studio Pro when committing:
 
-{{< figure src="/attachments/developerportal/general/team-server/commit-story.png" >}}
+{{< figure src="/attachments/developerportal/general/team-server/commit-story.png" class="no-border" >}}
 
 ## 6 Read More
 

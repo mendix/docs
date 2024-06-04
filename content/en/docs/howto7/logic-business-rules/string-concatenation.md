@@ -1,9 +1,8 @@
 ---
 title: "Configure String Concatenation"
 url: /howto7/logic-business-rules/string-concatenation/
-category: "Logic and Business Rules"
+
 weight: 11
-tags: ["microflow", "logic", "string", "concatenation"]
 ---
 
 In every project, you will need to concatenate some text together. Common cases are when you want to assemble the full name of a person based on the first and last name.
@@ -25,7 +24,7 @@ Whenever you want to check if a string contains text it won't be sufficient to e
 An inefficient example on how to check for text and create a combined messages based on the outcome.
 Building out all combinations is a lot of work, and if something need to change it will be a lot of work to change and it is prone to errors.
 
-{{< figure src="/attachments/howto7/logic-business-rules/string-concatenation/bco_contactperson_createfullname_inefficient.jpg" >}}
+{{< figure src="/attachments/howto7/logic-business-rules/string-concatenation/bco_contactperson_createfullname_inefficient.jpg" class="no-border" >}}
 
 ## Example 2, a single expression:
 
@@ -48,7 +47,7 @@ else '')
 )
 ```
 
-{{< figure src="/attachments/howto7/logic-business-rules/string-concatenation/bco_contactperson_createfullname_hardtoread.jpg" >}}
+{{< figure src="/attachments/howto7/logic-business-rules/string-concatenation/bco_contactperson_createfullname_hardtoread.jpg" class="no-border" >}}
 
 ## Example 3, **BestPractice,**  expression break down:
 
@@ -59,4 +58,4 @@ In this example we went even one step further in the stability of the expression
 trim(  $ContactPerson/Fullname + ' ' + trim(  $ContactPerson/Firstname ) )
 ```
 
-{{< figure src="/attachments/howto7/logic-business-rules/string-concatenation/bco_contactperson_createfullname.jpg" >}}
+{{< figure src="/attachments/howto7/logic-business-rules/string-concatenation/bco_contactperson_createfullname.jpg" class="no-border" >}}

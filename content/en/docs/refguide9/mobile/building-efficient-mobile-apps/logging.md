@@ -3,7 +3,6 @@ title: "Logging in Native Apps"
 url: /refguide9/mobile/building-efficient-mobile-apps/logging/
 weight: 25
 description: "Describes using logging in native mobile apps"
-tags: ["native", "logging", "troubleshooting"]
 aliases:
     - /refguide9/mobile/logging/
 ---
@@ -25,7 +24,7 @@ Sending logs from native apps is disabled by default. However, sending logs can 
 Please note that after enabling or disabling sending logs to runtime, you must create and distribute a new build of the native mobile app for this change to take effect. For more information on creating and distributing builds, see [Building, Testing, and Distributing Apps](/refguide9/mobile/distributing-mobile-apps/).
 {{% /alert %}}
 
-{{< figure src="/attachments/refguide9/mobile/native-mobile/logging/enable-logging.png" >}}
+{{< figure src="/attachments/refguide9/mobile/native-mobile/logging/enable-logging.png" class="no-border" >}}
 
 ## 3 Log Levels
 

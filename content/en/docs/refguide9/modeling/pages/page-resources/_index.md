@@ -2,7 +2,6 @@
 title: "Page Resources"
 url: /refguide9/page-resources/
 weight: 12
-tags: ["studio pro", "page resources"]
 ---
 
 ## 1 Introduction
@@ -24,7 +23,7 @@ To add a resource document, do the following:
 
 1. In the [App Explorer](/refguide9/app-explorer/), right-click the module or a folder you want to add a resource to and select **Add other**:
 
-    {{< figure src="/attachments/refguide9/modeling/pages/page-resources/app-explorer-page-resources.png" >}}
+    {{< figure src="/attachments/refguide9/modeling/pages/page-resources/app-explorer-page-resources.png" class="no-border" >}}
 
 2. Select the document you would like to add to your app.
 

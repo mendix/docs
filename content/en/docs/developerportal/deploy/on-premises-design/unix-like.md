@@ -3,7 +3,6 @@ title: "Unix-Like Deployment"
 url: /developerportal/deploy/unix-like/
 description: "How to install and configure Mendix on a Unix-like system"
 weight: 99
-tags: ["Red Hat", "CentOS", "install", "deploy", "m2ee", "Debian", "GNU", "Linux", "Unix-like", "Unix", "U*ix", "*nix", "on-premises"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 

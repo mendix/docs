@@ -1,9 +1,8 @@
 ---
 title: "Company Settings"
 url: /control-center/company-settings/
-category: "Control Center"
+
 description: "Describes the Company Settings page in the Mendix Control Center."
-tags: ["control center", "mendix admin", "company settings"]
 weight: 30
 no_list: list
 ---
@@ -30,7 +29,7 @@ If you have [configured single sign-on using BYOIDP](/control-center/security/se
 
 To export all the email domains, use the **Export to Excel** button.
 
-{{< figure src="/attachments/control-center/company-settings/company-email-domains.png" width="650px" >}}
+{{< figure src="/attachments/control-center/company-settings/company-email-domains.png" width="650px" class="no-border" >}}
 
 {{% alert color="info" %}}In certain scenarios, you want to ask Mendix to merge two companies into one company on the Mendix Platform, for example, after your company purchases another company which also uses the Mendix Platform. 
 
@@ -44,7 +43,7 @@ After you click **Add security contact** and add the required **Name** and **Ema
 
 For an existing security contact, there are two menu options available:
 
-{{< figure src="/attachments/control-center/company-settings/security-contact.png" >}}
+{{< figure src="/attachments/control-center/company-settings/security-contact.png" class="no-border" >}}
 
 Click **Edit** to edit the Security Contact's **Name**.
 
@@ -58,7 +57,7 @@ The **Mendix Admins** tab lists all the current Mendix Admins in your company. A
 
 To add a new admin, click **Add Mendix Admin**. To remove an admin, hover over their name in the list and click **Remove**.
 
-{{< figure src="/attachments/control-center/company-settings/admin.jpg" >}}
+{{< figure src="/attachments/control-center/company-settings/admin.jpg" class="no-border" >}}
 
 {{% alert color="info" %}}
 It is not possible to remove yourself as a Mendix Admin.

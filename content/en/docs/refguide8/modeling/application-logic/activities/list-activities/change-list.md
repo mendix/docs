@@ -2,7 +2,6 @@
 title: "Change List"
 url: /refguide8/change-list/
 weight: 2
-tags: ["studio pro", "List"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -20,7 +19,7 @@ The **Change list** activity allows you to change a list by adding objects to, a
 
 An example of change list properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/activities/list-activities/change-list/change-list-properties.png" alt="change list properties" >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/list-activities/change-list/change-list-properties.png" alt="change list properties" class="no-border" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

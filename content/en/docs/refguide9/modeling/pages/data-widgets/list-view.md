@@ -2,7 +2,6 @@
 title: "List View"
 url: /refguide9/list-view/
 weight: 30
-tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -10,7 +9,7 @@ tags: ["studio pro"]
 
 A list view shows a list of objects. For example, you can display a list of all profiles:
 
-{{< figure src="/attachments/refguide9/modeling/pages/data-widgets/list-view/list-view-example-profile.png" >}} 
+{{< figure src="/attachments/refguide9/modeling/pages/data-widgets/list-view/list-view-example-profile.png" class="no-border" >}} 
 
 Each object is shown using a template. This template is defined by placing widgets inside the list view's drop-zone. The list of objects shown is determined by a [data source](#data-source).
 
@@ -24,7 +23,7 @@ To address this issue, you can use the repeater widget from [Native Mobile Resou
 
 An example of list view properties is represented in the image below:
 
-{{< figure src="/attachments/refguide9/modeling/pages/data-widgets/list-view/list-view-properties.png"   width="250"  >}}
+{{< figure src="/attachments/refguide9/modeling/pages/data-widgets/list-view/list-view-properties.png"   width="250"  class="no-border" >}}
 
 List view properties consist of the following sections:
 

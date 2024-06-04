@@ -4,7 +4,6 @@ linktitle: "Monitor Environments"
 url: /developerportal/deploy/private-cloud-monitor/
 description: "Describes the processes for setting up a monitoring solution for Mendix environments in the Private Cloud"
 weight: 50
-tags: ["Monitor", "Logging", "Private Cloud", "Environment"]
 ---
 
 ## 1 Introduction
@@ -326,27 +325,27 @@ If you would like to enable Prometheus scraping only for a specific environment,
 
 1. Go to the Cluster Manager page by clicking **Cluster Manager** in the top menu of the **Clouds** page of the Developer Portal.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-manager.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-manager.png" class="no-border" >}}
 
 2. Click **Details** next to the namespace where your environment is deployed.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-details.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-details.png" class="no-border" >}}
 
 3. Click **Configure** next to the environment name where Prometheus scraping should be enabled.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image27.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image27.png" class="no-border" >}}
 
 4. Click **Quick setup** within  **Pod annotations**:
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/private-cloud-prometheus-annotations.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/private-cloud-prometheus-annotations.png" class="no-border" >}}
 
 5. Check the **Prometheus Metrics** checkbox and click  **Close**:
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/private-cloud-quick-setup-prometheus.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/private-cloud-quick-setup-prometheus.png" class="no-border" >}}
 
 6. Click **Apply Changes**:
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/private-cloud-apply-annotations.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/private-cloud-apply-annotations.png" class="no-border" >}}
 
 <!-- Be careful - this documentation reuses some screenshots from other pages like private-cloud-cluster.md -->
 
@@ -398,25 +397,25 @@ There are two dashboards available at the moment. If necessary you can install b
 1. Open Grafana in a web browser using the domain name, admin username and password from [Section 2](#install-grafana-loki).
 2. Click **Create**, then **Import**:
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/grafana-import-button.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/grafana-import-button.png" class="no-border" >}}
 3. Then click **Upload JSON file** and select the dashboard JSON you downloaded earlier.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/grafana-import.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/grafana-import.png" class="no-border" >}}
 4. Select **Prometheus** from the *Prometheus data source* dropdown, and **Loki** from the *Loki data source* dropdown.
     If necessary, rename the dashboard and change its uid.
     Press **Import** to import the dashboard into Grafana.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/grafana-import-settings.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/grafana-import-settings.png" class="no-border" >}}
 
 ### 4.2 Using the Dashboard
 
 Click **Dashboards**, then **Manage** and click *Mendix app dashboard (native)* or *Mendix app dashboard (compatibility mode)* to open the dashboard:
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/grafana-open-dashboard.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/grafana-open-dashboard.png" class="no-border" >}}
 
 Select the **Namespace**, **Environment internal name** and **Pod name** from the dropdowns to see the metrics and logs for a specific Pod:
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/grafana-select-pod.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/grafana-select-pod.png" class="no-border" >}}
 
 {{% alert color="info" %}}If the dropdowns are empty, this means that no metrics are available for that date range.
 Select another date range in the top right corner, or check if Prometheus is set up correctly.{{% /alert %}}
@@ -454,15 +453,15 @@ To set the **Metrics** and **Logs** links:
 
 1. Go to the Cluster Manager page by clicking **Cluster Manager** in the top menu of the **Clouds** page of the Developer Portal.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-manager.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-manager.png" class="no-border" >}}
 
 2. Click **Details** next to the namespace where your environment is deployed.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-details.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-details.png" class="no-border" >}}
 
 3. Open the **Operate** tab, enter dashboard URL for the **Metrics** and **Logs** links, and click **Save** for each one.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image32.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image32.png" class="no-border" >}}
 
 <!-- Be careful - this documentation reuses some screenshots from other pages like private-cloud-cluster.md -->
 
@@ -521,23 +520,23 @@ In this mode, all other `runtimeMetricsConfiguration` attributes are ignored.
 
 1. Open the **Environments** page for your app in the Developer Portal and click **Details** next to the environment where compatibility mode should be used.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-overview.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-overview.png" class="no-border" >}}
 
 2. Click the **Runtime** tab.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-details-general.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-details-general.png" class="no-border" >}}
 
 3. Click **Enable** next to the **Custom Configuration** of **Runtime Metrics Configuration**, then click **Save**.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-metrics-disabled.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-metrics-disabled.png" class="no-border" >}}
 
 4. Click **Edit** next to **Mode**.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-metrics-default.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-metrics-default.png" class="no-border" >}}
 
 5. Set **Mode** to **compatibility** and click **Save and Apply**.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-metrics-mode-compatibility.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-metrics-mode-compatibility.png" class="no-border" >}}
 
 #### 5.1.2 Enable Compatibility Metrics in Standalone Mode
 
@@ -569,23 +568,23 @@ To completely disable metrics collection, delete the `runtimeMetricsConfiguratio
 
 1. Open the **Environments** page for your app in the Developer Portal and click **Details** next to the environment where compatibility mode should be used.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-overview.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-overview.png" class="no-border" >}}
 
 2. Click the **Runtime** tab.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-details-general.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-details-general.png" class="no-border" >}}
 
 3. Click **Enable** next to the **Custom Configuration** of **Runtime Metrics Configuration**, then click **Save**.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-metrics-disabled.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-metrics-disabled.png" class="no-border" >}}
 
 4. Click **Edit** next to **Mode**.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-metrics-default.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-metrics-default.png" class="no-border" >}}
 
 5. Set **Mode** to **default** and click **Save and Apply**.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-metrics-mode-default.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-metrics-mode-default.png" class="no-border" >}}
 
 #### 5.2.2 Disable Metrics in Standalone Mode
 
@@ -627,23 +626,23 @@ It is also possible to add extra tags (Prometheus labels) by specifying them in 
 
 1. Open the **Environments** page for your app in the Developer Portal and click **Details** next to the environment where compatibility mode should be used.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-overview.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-overview.png" class="no-border" >}}
 
 2. Click the **Runtime** tab.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-details-general.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-details-general.png" class="no-border" >}}
 
 3. Click **Enable** next to the **Custom Configuration** of **Runtime Metrics Configuration**, then click **Save**.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-metrics-disabled.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-metrics-disabled.png" class="no-border" >}}
 
 4. Click **Edit** next to **Mode**.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-metrics-default.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-metrics-default.png" class="no-border" >}}
 
 5. Set **Mode** to **default**, then click **Save**.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-metrics-mode-native.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-metrics-mode-native.png" class="no-border" >}}
 
 6. Set a custom value for **MxAgent Config**.
 
@@ -652,7 +651,7 @@ It is also possible to add extra tags (Prometheus labels) by specifying them in 
 
 7. Click **Apply Changes**.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-metrics-apply.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/environment-metrics-apply.png" class="no-border" >}}
 
 #### 5.3.2 Configure additional Native Metrics options in Connected Mode
 
@@ -660,30 +659,30 @@ After an environment is [switched into native metrics mode](#enable-native-metri
 
 1. Go to the Cluster Manager page by clicking **Cluster Manager** in the top menu of the **Clouds** page of the Developer Portal.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-manager.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-manager.png" class="no-border" >}}
 
 2. Click **Details** next to the namespace where your environment is deployed.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-details.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-details.png" class="no-border" >}}
 
 3. Click **Configure** next to the environment name where the native metrics mode should be used.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image27.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image27.png" class="no-border" >}}
 
 4. Click the **Runtime** tab.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/private-cloud-prometheus-annotations.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/private-cloud-prometheus-annotations.png" class="no-border" >}}
 
 5. Set custom values for **Interval** and **MxAgent Instrumentation Config** by clicking the **Edit** button.
 
     These parameters are optional and can be left empty.
     For more information about **MxAgent** see [Configuring the Java Instrumentation Agent](#configuring-mxagent), below.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/private-cloud-metrics-native.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/private-cloud-metrics-native.png" class="no-border" >}}
 
 6. Click **Apply Changes**
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/private-cloud-metrics-apply.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-monitor/private-cloud-metrics-apply.png" class="no-border" >}}
 
 #### 5.3.3 Enable Native Metrics in Standalone Mode
 
@@ -729,7 +728,7 @@ Save and apply the changes.
 By specifying a value for `mxAgentConfig`, you can enable the Mendix [Java instrumentation agent](https://github.com/mendix/mx-agent) and collect additional metrics such as the execution times of microflows, OData/SOAP/REST endpoints, and client activity.
 
 {{% alert color="warning" %}}
-MxAgent is a [Java instrumentation agent](https://docs.oracle.com/en/java/javase/11/docs/api/java.instrument/java/lang/instrument/Instrumentation.html) and is unrelated to the Mendix for Private Cloud Gateway Agent.
+MxAgent is a [Java instrumentation agent](https://docs.oracle.com/en/java/javase/21/docs/api/java.instrument/java/lang/instrument/Instrumentation.html) and is unrelated to the Mendix for Private Cloud Gateway Agent.
 {{% /alert %}}
 
 <!-- BEGIN snippet This should be kept in sync with Section 4.2.1 Format of Metrics Agent Configuration in /developerportal/operate/monitoring-with-apm/_index.md, updating relative links -->

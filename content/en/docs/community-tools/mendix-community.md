@@ -1,7 +1,7 @@
 ---
 title: "Mendix Community"
 url: /community-tools/mendix-community/
-category: "Community Tools"
+
 weight: 3
 description: "Describes the Mendix Community, where community members can ask and answer questions, exchange information, as well as post ideas for how to improve the Mendix Platform."
 aliases:
@@ -48,7 +48,7 @@ In **PERSONAL** > **Posts**, the following tabs are available:
 
 In **GENERAL** > **Questions**, you can see an overview of the questions that have been asked. Here is an example question:
 
-{{< figure src="/attachments/community-tools/mendix-community/question-example.png" >}}
+{{< figure src="/attachments/community-tools/mendix-community/question-example.png" class="no-border" >}}
 
 Each question has the following details:
 
@@ -85,7 +85,7 @@ To filter the searching results, you can use the following filters:
 
 Clicking the title of a question brings you to its details page:
 
-{{< figure src="/attachments/community-tools/mendix-community/question-details.png" >}}
+{{< figure src="/attachments/community-tools/mendix-community/question-details.png" class="no-border" >}}
 
 On this page, you do the following:
 
@@ -105,11 +105,11 @@ On this page, you do the following:
 
 Below the question details are the answers to the question. Click the **▲** or **▼** button to upvote or downvote the answer based on how it addresses the question. You can also click **Comment** to comment on an answer.
 
-{{< figure src="/attachments/community-tools/mendix-community/question-answer.png"   width="65%" >}}
+{{< figure src="/attachments/community-tools/mendix-community/question-answer.png"   width="65%" class="no-border" >}}
 
 In the **Your Answer** section, you can contribute to the Mendix Community by writing your answer in the editor and then clicking **Submit Answer**:
 
-{{< figure src="/attachments/community-tools/mendix-community/your-answer.png"  width="50%" >}}
+{{< figure src="/attachments/community-tools/mendix-community/your-answer.png"  width="50%" class="no-border" >}}
 
 {{% alert color="info" %}}
 The URL for each question is unique.
@@ -144,7 +144,7 @@ Once a question you have asked receives several answers, you can accept an answe
 
 In **GENERAL** > **Exchanges**, there is an overview of the exchanges that have been posted. Here is an example exchange:
 
-{{< figure src="/attachments/community-tools/mendix-community/exchange-example.png" >}}
+{{< figure src="/attachments/community-tools/mendix-community/exchange-example.png" class="no-border" >}}
 
 Each exchange has the following details:
 
@@ -174,7 +174,7 @@ To filter the searching results, you can use the following filters:
 
 Clicking the title of an exchange brings you to its details page:
 
-{{< figure src="/attachments/community-tools/mendix-community/exchange-details.png" >}}
+{{< figure src="/attachments/community-tools/mendix-community/exchange-details.png" class="no-border" >}}
 
 On this page, you do the following:
 
@@ -213,7 +213,7 @@ To ask your own question in the Mendix Community, follow these steps:
 
 In **GENERAL** > **Ideas**, you can see an overview of the ideas and feature requests for improving the Mendix Platform that have been submitted by Mendix community members. Here is an example idea:
 
-{{< figure src="/attachments/community-tools/mendix-community/idea-example.png" >}}
+{{< figure src="/attachments/community-tools/mendix-community/idea-example.png" class="no-border" >}}
 
 Each idea has the following details:
 
@@ -249,7 +249,7 @@ To filter the searching results, you can use the following filters:
 
 Clicking the title of an idea brings you to its details page:
 
-{{< figure src="/attachments/community-tools/mendix-community/idea-details.png" >}}
+{{< figure src="/attachments/community-tools/mendix-community/idea-details.png" class="no-border" >}}
 
 On this page, you do the following:
 

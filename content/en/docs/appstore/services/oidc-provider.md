@@ -2,7 +2,6 @@
 title: "OIDC Provider"
 url: /appstore/services/oidc-provider/
 description: "Describes the configuration and usage of the OIDC Provider service, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "OIDC", "IdP", "identity provider", "platform support", "provider"]
 aliases:
     - /appstore/modules/oidc-provider/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -19,7 +18,7 @@ The idea is that you set up a single Mendix app which uses the [OIDC SSO](https:
 
 For more information on the concepts behind authorization, see [About Authorization](#about-authorization), below.
 
-{{< figure src="/attachments/appstore/services/oidc-provider/typical-usage.png" >}}
+{{< figure src="/attachments/appstore/services/oidc-provider/typical-usage.png" class="no-border" >}}
 
 You can also set up your users manually in your app, using the Mendix [Administration](/appstore/modules/administration/) module, rather than linking to your central IdP.
 
@@ -318,7 +317,7 @@ Some examples of existing claims are:
 Consider a scenario, where you build an app using the [OIDC Provider](https://marketplace.mendix.com/link/component/214681) service. You can call this app an OIDC Provider app or Provider app. Other apps using the [OIDC SSO](https://marketplace.mendix.com/link/component/120371) module redirect end-users to your Provider app for authentication. You can choose how your Provider app handles the authentication process.
 The **LoginLocation** is a constant in the OIDC Provider service that controls where end-users are authenticated. The default value is a local sign in using a username and password as shown below:
 
-{{< figure src="/attachments/appstore/services/oidc-provider/Basic_Username_Password.png">}}
+{{< figure src="/attachments/appstore/services/oidc-provider/Basic_Username_Password.png" class="no-border" >}}
 
 However, if you want the Provider app to act as an IAM broker, you need to redirect the authorization request within your Provider app to the endpoint of the local SSO module you choose to use. To do so, perform the steps below:
 

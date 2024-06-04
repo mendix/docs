@@ -2,7 +2,6 @@
 title: "Event Handlers"
 url: /refguide8/event-handlers/
 weight: 50
-tags: ["domain model", "entity", "event handler", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -26,7 +25,7 @@ If your handler relies on the event having already been applied to another objec
 
 For example, say your **Customer** entity has a **Postcode** attribute and you want to check that this is always valid. If there are multiple places where this can be changed, you can add a *Before Commit* event which calls a microflow **BCo_Customer_Postcode** which checks that the postcode is valid every time a Customer object is committed and prevents the object being committed if the postcode is invalid.
 
-{{< figure src="/attachments/refguide8/modeling/domain-model/entities/event-handlers/customer-event-handlers.png" alt="Example of adding a before commit event handler to the Customer entity" >}}
+{{< figure src="/attachments/refguide8/modeling/domain-model/entities/event-handlers/customer-event-handlers.png" alt="Example of adding a before commit event handler to the Customer entity" class="no-border" >}}
 
 For more information on using event handlers for data validation, see [How To Set Up Data Validation](/howto8/data-models/setting-up-data-validation/).
 
@@ -36,7 +35,7 @@ You can add and edit event handlers for an entity from the [entity dialog box](/
 
 An example of the event handler properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/domain-model/entities/event-handlers/event-handler-properties.png" >}}
+{{< figure src="/attachments/refguide8/modeling/domain-model/entities/event-handlers/event-handler-properties.png" class="no-border" >}}
 
 Event handler properties consist of the following sections:
 

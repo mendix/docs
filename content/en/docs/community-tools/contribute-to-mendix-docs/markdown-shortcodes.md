@@ -2,9 +2,8 @@
 title: "Shortcodes, Markdown, and HTML Examples"
 url: /community-tools/md-shortcode-examples/
 draft: true
-description: "Various test cases and examples for Markdown and shortcodes"
+description: "Various test cases and examples for Markdown and shortcodes. Use this page to see how various shortcodes, Markdown, and HTML elements render."
 linktitle: "Shortcodes, Markdown, and HTML"
-banner: "This is a draft and will not be rendered in the production website. Use this page to see how various shortcodes, Markdown, and HTML elements render."
 ---
 <!-- markdownlint-disable-file -->
 
@@ -110,16 +109,31 @@ If you don't specify any programming language, the code block looks a bit differ
 
 ### Images (Figures)
 
-#### Image with Alt Text, Max-Width, and Image-Border Class
+#### Image with Alt Text and Max-Width Class
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/clear-environment.png"
+{{< figure src="/attachments/community-tools/markdown-shortcodes/clear-environment.png"
     alt="Clear Environment options and confirmation"
-    max-width=60%
-    class="image-border" >}}
+    max-width=60% >}}
+
+#### Image Borders
+
+##### No Class
+
+Image will have a border added automatically.
+
+{{< figure src="/attachments/community-tools/markdown-shortcodes/half-bordered.png" >}}
+
+##### class="no-border"
+
+Image border will be suppressed. This can be used, for example, with images which have a dark background, or those which already have a border from the UX.
+
+{{< figure src="/attachments/community-tools/markdown-shortcodes/half-bordered.png" class="no-border" >}}
+
+{{< figure src="/attachments/community-tools/markdown-shortcodes/navigation-menu.png" alt="" max-width=35% class="no-border" >}}
 
 #### Image with a Link Value
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/parameter.png" alt="" link="/refguide/parameter/" >}}
+{{< figure src="/attachments/community-tools/markdown-shortcodes/parameter.png" alt="" link="/refguide/parameter/" class="no-border" >}}
 
 #### Image Indented in a List
 
@@ -127,7 +141,7 @@ If you don't specify any programming language, the code block looks a bit differ
 2. In the **Add Microflow** dialog box, in the **Name** field, enter *IVK_SetOrderToComplete*, and then click **OK**.
 3. On the **Orders** overview page, add an **Action** button to the toolbar.
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/working-with-lists-in-a-microflow/18581118.png" alt="Adding the Action button" >}}
+    {{< figure src="/attachments/community-tools/markdown-shortcodes/18581118.png" alt="Adding the Action button" class="no-border" >}}
 
 4. Double-click the **Action** button and change the **Caption** to *Set Processing to Complete*.
 
@@ -196,7 +210,7 @@ Use two asterisks to enclose text that should appear in **bold**, and use one as
 
 ### Collapsible Content (Details)
 
-For collapsible content, use the HTML `<details>` and `<summary>` tags.
+For collapsible content, use the HTML `<details>` and `<summary>` tags:
 
 <details><summary>It cannot be a reserved word (click to see a list of reserved words)</summary>
 

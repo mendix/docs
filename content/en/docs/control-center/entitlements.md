@@ -1,10 +1,10 @@
 ---
 title: "Entitlements"
 url: /control-center/entitlements/
-category: "Control Center"
+
 description: "Describes the Entitlements page in the Mendix Control Center."
-tags: ["control center", "mendix admin", "entitlements"]
 weight: 50
+beta: true
 no_list: true 
 
 ---
@@ -17,7 +17,7 @@ This feature is currently in beta. For more information, see [Beta Releases](/re
 
 The **Entitlements** page is a self-service tool that displays the transactions using cloud credits. You can use the page to monitor your consumption of cloud credits.
 
-{{< figure src="/attachments/control-center/entitlements/entitlements.png" alt="entitlements page" >}}
+{{< figure src="/attachments/control-center/entitlements/entitlements.png" alt="entitlements page" class="no-border" >}}
 
 ## 2 What Are Cloud Credits? {#cloud-credits}
 

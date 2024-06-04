@@ -1,11 +1,10 @@
 ---
 title: "RAG Example Implementation in the OpenAI Showcase Application"
 url: /appstore/modules/openai-connector/rag-example-implementation/
-category: "Open AI"
+
 linktitle: "RAG Example Implementation"
 weight: 5
 description: "Describes the retrieval augmented generation (RAG) example implementation in the OpenAI showcase application"
-tags: ["OpenAI", "generative AI", "AI", "connector", "marketplace", "chatgpt", "genAI", "embeddings", "Retrieval augmented generation", "RAG", "showcase application", "Azure OpenAI"]
 ---
 
 ## 1 Introduction {#introduction}
@@ -62,7 +61,6 @@ You have access to a (remote) PostgreSQL database with the [pgvector](https://gi
 {{% alert color="info" %}}
 
 The OpenAI showcase application uses the Mendix [PgVector Knowledge Base](https://marketplace.mendix.com/link/component/225063) module from the Marketplace to run queries and statements on your remote database. If you want to know more about this or if you are looking for certain technical details, see [PgVector Knowledge Base](/appstore/modules/pgvector-knowledge-base/).
-
 
 The OpenAI showcase application uses this module to take care of creating the required tables in the remote vector database, including the open-source extension called pgvector. If you want to know more about the extension and how the tables look like in combination with this extension, see the [pgvector source code and documentation on GitHub](https://github.com/pgvector/pgvector).
 

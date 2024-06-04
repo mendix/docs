@@ -1,9 +1,8 @@
 ---
 title: "Pusher"
 url: /appstore/services/pusher/
-category: "Modules"
+
 description: "Describes the configuration and usage of the Pusher service, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "pusher", "platform support"]
 aliases:
     - /appstore/modules/pusher/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -73,7 +72,7 @@ To use this service after importing it from the Marketplace, follow these steps:
 
 This diagram describes updating an object via the Notify action:
 
-{{< figure src="/attachments/appstore/services/pusher/SequenceDiagramUpdateObject.png" alt="update object via notify listen" >}}
+{{< figure src="/attachments/appstore/services/pusher/SequenceDiagramUpdateObject.png" alt="update object via notify listen" class="no-border" >}}
 
 ### 3.1 Refresh Microflow
 
@@ -81,7 +80,7 @@ You can use a microflow to retrieve data that is changed by other users as long 
 
 The `$Message` variable contains the object in the session state. With the `[id = $Message]` XPath query, the object is retrieved from the database. The changes action only does a refresh in the client, which triggers a refresh update on the client page.
 
-{{< figure src="/attachments/appstore/services/pusher/RefreshMicroflowSample.png" alt="refresh microflow" >}}
+{{< figure src="/attachments/appstore/services/pusher/RefreshMicroflowSample.png" alt="refresh microflow" class="no-border" >}}
 
 ### 3.2  Security 
 

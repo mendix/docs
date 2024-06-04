@@ -4,7 +4,6 @@ linktitle: "CI/CD with Tekton"
 url: /developerportal/deploy/private-cloud-tekton/
 description: "Describes how to use Tekton to create a CI/CD solution for Mendix environments in the Private Cloud"
 weight: 40
-tags: ["CI/CD", "Tekton", "Private Cloud", "Environment", "Standalone"]
 ---
 
 {{% alert color="info" %}}
@@ -75,7 +74,7 @@ Each Mendix pipeline can be run independently. However, the **create-app-pipelin
 
 The Mendix pipelines work together as shown in the diagram below to create the app environment, build and push an app to the environment, and, finally, configure the app.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-tekton/build-pipeline.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-tekton/build-pipeline.png" class="no-border" >}}
 
 #### 3.3.1 Mendix Pipelines
 
@@ -103,7 +102,7 @@ You can read the official installation procedure on the [Tekton Dashboard](https
 
 Below is and example of the recommended architecture setup.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-tekton/tekton-architecture-example.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-tekton/tekton-architecture-example.png" class="no-border" >}}
 
 The example shows the following namespaces:
 
@@ -195,7 +194,7 @@ More details on how to activate a trigger using any HTTP client are [here](#auth
 #### 7.2.1 GitLab Configuration
 
 To set the GitLab Token in GitLab you specify it as the **Secret Token** when creating the webhook:
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-tekton/gitlab-webhook.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-tekton/gitlab-webhook.png" class="no-border" >}}
 
 #### 7.2.2 Other HTTP Clients {#auth-other-clients}
 
@@ -591,7 +590,7 @@ You can set up a [GitLab Webhook Trigger](#gitlab-webhook) to generate the build
 
 Within GitLab, set up a webhook. Use the trigger URL of the trigger you installed in the [Installing Triggers](#installing-triggers) section, and choose which push events you want to trigger the build.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-tekton/gitlab-webhook.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-tekton/gitlab-webhook.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 To fill in the **Secret token** see the [Authentication](#authentication) section.

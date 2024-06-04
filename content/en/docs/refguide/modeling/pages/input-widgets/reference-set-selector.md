@@ -2,7 +2,6 @@
 title: "Reference Set Selector"
 url: /refguide/reference-set-selector/
 weight: 80
-tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -20,19 +19,19 @@ For example, you could group customers into groups, and each customer could belo
 
 What you can do with a reference set selector depends on the **Owner** of the association. In the example domain model below, **Owner** is set to **Default** (in the association properties **'Customer' objects refer to 'Group' objects**).
 
-{{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-set-selector/domain-model-owner-default.png" alt="The domain model for a reference set selector between Customer (parent) and Group where the owner is 'default' (as in, the Customer refers to the Group)" >}}
+{{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-set-selector/domain-model-owner-default.png" alt="The domain model for a reference set selector between Customer (parent) and Group where the owner is 'default' (as in, the Customer refers to the Group)" class="no-border" >}}
 
 You can put a reference set selector in a Customer data view to allow the user to select the Group (or Groups) to which the customer belongs. However, because the Customer is the owner of the association, you cannot put a reference set selector in a Group data view to select the Customer (or Customers) in the Group.
 
 To allow you to both add a Group to a Customer, and add a Customer to a Group, you need to set ownership of the association to **Both**.
 
-{{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-set-selector/domain-model-owner-both.png" alt="The domain model for a reference set selector between Customer (parent) and Group where the owner is 'both' (as in, the Customer and Group refer to each other)" >}}
+{{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-set-selector/domain-model-owner-both.png" alt="The domain model for a reference set selector between Customer (parent) and Group where the owner is 'both' (as in, the Customer and Group refer to each other)" class="no-border" >}}
 
 In the reference set selector, the related entity and association used to connect it to the entity in the data view are displayed at the top of the reference set selector, and the names of the attributes of the associated objects which will be displayed are shown inside the reference set selector. Each attribute is displayed in a [grid column](/refguide/columns/). The association and related entity and attributes are displayed between square brackets, and colored blue.
 
 For example, using the domain model above, the following reference set selector allows the end-user to associate a Customer with one or more Groups by setting the association **Customer_Group**. This is done by selecting the **Name** of the **Group** associated with the current **Customer**.
 
-{{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-set-selector/reference-set-selector.png" >}}
+{{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-set-selector/reference-set-selector.png" class="no-border" >}}
 
 The reference set selector looks a lot like a [data grid](/refguide/data-grid/) and consequently shares many properties with it. The main differences are that the reference set selector lacks a search bar and that it has **Add** and **Remove** buttons instead of **New** and **Delete**. This is because they perform slightly different functions:
 

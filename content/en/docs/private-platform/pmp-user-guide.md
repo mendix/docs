@@ -1,9 +1,10 @@
 ---
 title: "Private Mendix Platform User Guide"
-url: /private-mendix-platform-user-guide/
+url: /private-mendix-platform/user-guide/
 description: "Documents the business-as-usual administrator tasks for the Private Mendix Platform."
 weight: 50
-tags: ["private mendix platform",  "private platform", "user guide", "create app", "marketplace"]
+aliases:
+    - /private-mendix-platform-user-guide/
 ---
 
 ## 1 Introduction
@@ -14,7 +15,7 @@ See the following articles for information about the business-as-usual use cases
 
 Your user account is created by the administrator of your Private Mendix Platform. After you log in for the first time, you can configure some of your profile settings by clicking the user icon in the top right corner of the screen, and then selecting **Manage My Account** from the drop-down.
 
-{{< figure src="/attachments/private-platform/pmp-ug1.png" >}}
+{{< figure src="/attachments/private-platform/pmp-ug1.png" class="no-border" >}}
 
 ### 2.1 Profile {#profile}
 
@@ -45,9 +46,9 @@ For more information about Personal Access Tokens, as well as creating and using
 
 ### 2.4 Service Credentials {#service-credentials}
 
-In the **Service Credentials** tab, you can view and manage the credentials for various external systems that Private Mendix Platform can connect with. These services include Github, Gitlab, Bitbucket, and AzureDevOps, used for managing your app projects.
+In the **Service Credentials** tab, you can view and manage the credentials for various external systems that Private Mendix Platform can connect with. These services include GitHub, GitLab, Bitbucket, and AzureDevOps, used for managing your app projects.
 
-To create or work on app projects in Private Mendix Platform, you must create an access token in Github, Gitlab, AzureDevOps, or Bitbucket, and then add it in the **Service Credentials** tab. The token must have read and write access to a repository where the app project is stored.
+To create or work on app projects in Private Mendix Platform, you must create an access token in GitHub, GitLab, AzureDevOps, or Bitbucket, and then add it in the **Service Credentials** tab. The token must have read and write access to a repository where the app project is stored.
 
 ## 3 Installing Mendix Studio Pro
 
@@ -56,7 +57,7 @@ Before you can create your first app, you must first install Mendix Studio Pro b
 1. Log in to Private Mendix Platform.
 2. On the home page, click **Download Studio Pro** and **Download Studio Pro Patch file**.
 
-    {{< figure src="/attachments/private-platform/pmp-ug2.png" >}}
+    {{< figure src="/attachments/private-platform/pmp-ug2.png" class="no-border" >}}
 
 3. Install Studio Pro. For more information, see [Installing Studio Pro](/refguide/install/#install).
 4. Extract the Studio Pro patch file to the *modeler* directory located in the Studio Pro installation directory, and let it patch the files inside.
@@ -67,13 +68,13 @@ Before you can create your first app, you must first install Mendix Studio Pro b
 To create a new app, perform the following steps:
 
 1. Log in to Private Mendix Platform.
-2. If you have not already configured an access token for a Gitlab, Github, AzureDevOps, or Bitbucket repository, click the user icon in the top right corner of the screen, and then click **Manage My Account** > **Service Credentials**. 
+2. If you have not already configured an access token for a GitLab, GitHub, AzureDevOps, or Bitbucket repository, click the user icon in the top right corner of the screen, and then click **Manage My Account** > **Service Credentials**. 
 
     For more information, see [Service Credentials](#service-credentials).
 
 3. On the home page, click **Create App Project**.
 
-    {{< figure src="/attachments/private-platform/pmp-ug3.png" >}}
+    {{< figure src="/attachments/private-platform/pmp-ug3.png" class="no-border" >}}
 
 4. Start the creation of your app by selecting a template. 
 
@@ -86,11 +87,11 @@ To create a new app, perform the following steps:
 
 As a user of Private Mendix Platform, you can view the apps that you own directly on the home page of Private Mendix Platform.
 
-{{< figure src="/attachments/private-platform/pmp-ug4.png" >}}
+{{< figure src="/attachments/private-platform/pmp-ug4.png" class="no-border" >}}
 
 This includes the apps that you created, as well as the apps that are shared with your user group. To view more details about an app, click on its tile.
 
-{{< figure src="/attachments/private-platform/pmp-ug5.png" >}}
+{{< figure src="/attachments/private-platform/pmp-ug5.png" class="no-border" >}}
 
 In the **Manage** section, you can you can quickly perform a number of actions:
 
@@ -107,7 +108,7 @@ In the **Deploy** section, you can configure the environment to which your app w
 
 1. Click **New Environment**.
 
-    {{< figure src="/attachments/private-platform/pmp-ug6.png" >}}
+    {{< figure src="/attachments/private-platform/pmp-ug6.png" class="no-border" >}}
 
 2. Specify the following details about the environment:
 
@@ -136,7 +137,7 @@ To share the connector that you built, perform the following steps:
 
 1. In Private Mendix Platform, click **My Content**.
 
-    {{< figure src="/attachments/private-platform/pmp-ug7.png" >}}
+    {{< figure src="/attachments/private-platform/pmp-ug7.png" class="no-border" >}}
 
 2. Select a **Content type** for your component.
 3. On the **General** page, enter a **Name** for your component.
@@ -150,12 +151,12 @@ To share the connector that you built, perform the following steps:
 11. Specify the **Version** of your component.
 12. Provide a **Release Note** to describe the contents of the version you are uploading.
 
-    {{< figure src="/attachments/private-platform/pmp-ug8.png" >}}
+    {{< figure src="/attachments/private-platform/pmp-ug8.png" class="no-border" >}}
 
 13. Click **Save & Continue**.
 14. On the **Additional Info** page, provide instructions for users of your component.
 
-    {{< figure src="/attachments/private-platform/pmp-ug9.png" >}}
+    {{< figure src="/attachments/private-platform/pmp-ug9.png" class="no-border" >}}
 
 15. Click **Save & Continue**.
 16. Review and publish your changes. 
@@ -168,12 +169,12 @@ On the **Manage Group Content** page, you can share components with the user gro
 
 1. In Private Mendix Platform, click **Group Content**.
 
-    {{< figure src="/attachments/private-platform/pmp-ug10.png" >}}
+    {{< figure src="/attachments/private-platform/pmp-ug10.png" class="no-border" >}}
 
 2. Select a Content type for your component.
 3. In the App Visibility section, select the group with which you want to share the component.
 
-    {{< figure src="/attachments/private-platform/pmp-ug11.png" >}}
+    {{< figure src="/attachments/private-platform/pmp-ug11.png" class="no-border" >}}
 
     If the group with which you want to share the content is not in the list, it means that you are not a member of that particular group. Contact your Private Mendix Platform administrator.
 

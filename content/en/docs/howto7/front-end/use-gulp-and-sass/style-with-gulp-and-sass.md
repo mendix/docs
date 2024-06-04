@@ -2,7 +2,6 @@
 title: "Start Styling with Gulp  Sass"
 url: /howto7/front-end/style-with-gulp-and-sass/
 weight: 2
-tags: ["gulp", "sass", "ux", "front end"]
 ---
 
 ## 1 Introduction
@@ -33,7 +32,7 @@ To set up the Gulp project, follow these steps:
 3. In your terminal, go to your app root folder by typing `cd`, then drag your root file into the terminal. Please note that if you do this on Windows and you encounter errors with installing the dependencies, open your CMD or PowerShell as Administrator.
 4. <a id="34"></a>Install the dependencies by typing `npm install`.
 
-{{< figure src="/attachments/howto7/front-end/use-gulp-and-sass/style-with-gulp-and-sass/cd.png" >}}
+{{< figure src="/attachments/howto7/front-end/use-gulp-and-sass/style-with-gulp-and-sass/cd.png" class="no-border" >}}
 
 ## 4 Running Gulp
 
@@ -43,7 +42,7 @@ To run Gulp, follow these steps:
 2. Make sure your Mendix app is running.
 3. For a quick test to see if everything is working, open *theme/styles/sass/custom/_custom-variables.scss* and type `body{ background-color: red; }`. Your background will then be a beautiful red.
 
-{{< figure src="/attachments/howto7/front-end/use-gulp-and-sass/style-with-gulp-and-sass/red.png" >}}
+{{< figure src="/attachments/howto7/front-end/use-gulp-and-sass/style-with-gulp-and-sass/red.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 If you are using Parallels on Mac, you can access your Mendix app on your Mac browser by going to your Parallels machine (for example, `http://10.211.55.3:30001` – this is different on each setup).
@@ -63,7 +62,7 @@ When you use this setup in a collaborative app, please note that you will need t
 
 If you have [TortoiseSVN](/refguide7/using-version-control-in-the-dm/#tortoisesvn-subclipse) installed, right-click the **node_modules** folder and select **TortoiseSVN** > **Add to ignore list**.
 
-{{< figure src="/attachments/howto7/front-end/use-gulp-and-sass/style-with-gulp-and-sass/svn-ignore.jpg" >}}
+{{< figure src="/attachments/howto7/front-end/use-gulp-and-sass/style-with-gulp-and-sass/svn-ignore.jpg" class="no-border" >}}
 
 {{% alert color="warning" %}}
 Always use the version of TortoiseSVN which matches your app model. If you open a local model from Mendix 7.x with the latest version of TortoiseSVN, **you will no longer be able to open it in Mendix**.

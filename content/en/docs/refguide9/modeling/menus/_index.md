@@ -1,17 +1,16 @@
 ---
 title: "Menus"
 url: /refguide9/menus/
-category: "App Modeling"
+
 description: "Describes Studio Pro menus."
 weight: 20
-tags: ["Studio Pro", "menu", "top bar"]
 ---
 
 ## 1 Introduction
 
 The top-bar of Studio Pro contains the following menus:
 
-{{< figure src="/attachments/refguide9/modeling/menus/menu-bar.png" alt="Menu-bar" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/menu-bar.png" alt="Menu-bar" class="no-border" >}}
 
 * [Global Navigation Menu](#global-navigation-menu) – allows you to navigate to other parts of the platform
 * [File](#file) – allows you to manage documents and apps

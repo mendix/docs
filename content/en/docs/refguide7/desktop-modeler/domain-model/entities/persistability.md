@@ -2,7 +2,6 @@
 title: "Persistability"
 url: /refguide7/persistability/
 weight: 10
-tags: ["domain model", "entity", "persistability", "persistable", "non-persistable", "transient"]
 ---
 
 The "persistable" property of an entity in the domain model defines whether an object can be stored in the database. This page describes what it means for an entity to be persistable and what the related term "transient" means.

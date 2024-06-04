@@ -2,7 +2,6 @@
 title: "Implement Push Notifications"
 url: /howto8/mobile/implementation-guide/
 weight: 10
-tags: ["mobile", "push notification"]
 ---
 
 ## 1 Introduction
@@ -21,11 +20,11 @@ This how-to teaches you how to do the following:
 
 The [Push Notifications Connector](/appstore/modules/push-notifications/) module is published in the Mendix Marketplace. To import it into your project, click the Marketplace icon in the top right of Mendix Studio Pro. Search for "Push Notifications Connector" and click the title of the result:
 
-{{< figure src="/attachments/howto8/mobile/hybrid-mobile/push-notifications/implementation-guide/20218020.png" >}}
+{{< figure src="/attachments/howto8/mobile/hybrid-mobile/push-notifications/implementation-guide/20218020.png" class="no-border" >}}
 
 On the resulting page, click the green **Download** button. Make sure that **Add as a new module** is selected, and then click **Import**:
 
-{{< figure src="/attachments/howto8/mobile/hybrid-mobile/push-notifications/implementation-guide/20217885.jpg" >}}
+{{< figure src="/attachments/howto8/mobile/hybrid-mobile/push-notifications/implementation-guide/20217885.jpg" class="no-border" >}}
 
 {{% alert color="warning" %}}
 The Push Notifications Connector assumes that the mobile app and the back-end part will reside in the same app.
@@ -46,7 +45,7 @@ To include these dependencies, download them from the Marketplace in a way simil
 
 If your project is using an older version of the [Encryption](/appstore/modules/encryption/) module, it might trigger an error for referencing a non-existent layout. You can fix this by assigning the primary layout of the **Encryption.ResponsiveLayout_Certificate** layout to another layout (please note that in this specific use case, it is not important which layout is used). This does not apply to version 1.3.1 and above.
 
-{{< figure src="/attachments/howto8/mobile/hybrid-mobile/push-notifications/implementation-guide/20217886.jpg" >}}
+{{< figure src="/attachments/howto8/mobile/hybrid-mobile/push-notifications/implementation-guide/20217886.jpg" class="no-border" >}}
 
 {{% /alert %}}
 
@@ -64,7 +63,7 @@ Please do not remove the button with the caption **Device Registration reference
 
 {{% /alert %}}
 
-{{< figure src="/attachments/howto8/mobile/hybrid-mobile/push-notifications/implementation-guide/20217888.jpg" >}}
+{{< figure src="/attachments/howto8/mobile/hybrid-mobile/push-notifications/implementation-guide/20217888.jpg" class="no-border" >}}
 
 ## 5 Starting Connectors from Your After-Startup Microflow
 
@@ -75,7 +74,7 @@ If your project already has an AfterStartup microflow configured, it is recommen
 * create a new microflow, from which you will call both the existing AfterStartup microflow and the AfterStartup_PushNotifications microflow, and then set this as the AfterStartup microflow for your app
 * add a new action to the existing AfterStartup microflow to run the AfterStartup_PushNotifications microflow
 
-{{< figure src="/attachments/howto8/mobile/hybrid-mobile/push-notifications/implementation-guide/on-app-startup.png" alt="On start push microflow" >}}
+{{< figure src="/attachments/howto8/mobile/hybrid-mobile/push-notifications/implementation-guide/on-app-startup.png" alt="On start push microflow" class="no-border" >}}
 
 ## 6 Setting Up the Administration Pages {#setting}
 
@@ -99,7 +98,7 @@ On the **User roles** tab of the **Project Security** dialog box, include the fo
 * The **PushNotifications.User** role as part of the main **User** role
 * The **PushNotifications.Anonymous** role role as part of the main **Anonymous** role (if your application allows anonymous users)
 
-{{< figure src="/attachments/howto8/mobile/hybrid-mobile/push-notifications/implementation-guide/21168173.png" >}}
+{{< figure src="/attachments/howto8/mobile/hybrid-mobile/push-notifications/implementation-guide/21168173.png" class="no-border" >}}
 
 ## 8 Deploying Your App
 

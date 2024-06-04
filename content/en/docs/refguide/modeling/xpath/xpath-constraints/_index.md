@@ -2,7 +2,6 @@
 title: "XPath Constraints"
 url: /refguide/xpath-constraints/
 weight: 2
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction
@@ -17,17 +16,17 @@ All the Studio Pro examples below assume that an entity `Sales.Customer` is sele
 
 ## 2 Constraints in Studio Pro
 
-### 2.1 Using Visual Builder
+### 2.1 Using Visual Builder for XPath Constraints
 
-In Studio Pro version 10.5, a new, visual, way of constructing XPath constraints was introduced. This is called Visual Builder for database constraints.
+In Studio Pro version 10.5, a new, visual, way of constructing XPath constraints was introduced. This is called **visual Builder for XPath constraints** (Builder).
 
 {{% alert color="warning" %}}
-Visual Builder for database constraints is beta in Mendix version 10.5 and has limitations which are listed in [Visual Builder Limitations](#limitations).
+Visual Builder for XPath constraints is beta in Mendix version 10.5 and above and has limitations which are listed in [Builder Limitations](#limitations).
 {{% /alert %}}
 
-You can use the Visual Builder in all places where you can retrieve data from the database, for example a [Retrieve](/refguide/retrieve/) activity in a microflow or the [Data Source](/refguide/xpath-source/) of a widget. Select **(From) Database** and click **Edit…** next to **XPath constraint** to open a dialog box where you can build your constraint.
+You can use the Builder in all places where you can retrieve data from the database, for example a [Retrieve](/refguide/retrieve/) activity in a microflow or the [Data Source](/refguide/xpath-source/) of a widget. Select **(From) Database** and click **Edit…** next to **XPath constraint** to open a dialog box where you can build your constraint.
 
-Ensure the **Builder (beta)** option is selected to use the Builder. You can switch between the Builder and the XPath expression to view them in different ways. You can also set the Builder as the default in your [preferences](/refguide/preferences-dialog/#new-features).
+Ensure the **Builder (beta)** option is selected to use the Builder—this is the default from Mendix version 10.10. You can switch between the Builder and the XPath expression editor to view them in different ways. You can also set the Builder as the default in your [preferences](/refguide/preferences-dialog/#visual-builder).
 
 #### 2.1.1 Constructing an XPath Constraint
 
@@ -37,7 +36,7 @@ You then see a clause beginning **Where** where you can enter one or more condit
 
 1. Entity, attribute, or association.
 
-    Click the down arrow (▼) and select from the list of options. You will only be shown options that fit the current context and are supported by Visual Builder for database constraints.
+    Click the down arrow (▼) and select from the list of options. You will only be shown options that fit the current context and are supported by visual Builder for XPath constraints.
 
 2. Relational [operator](/refguide/xpath-operators/) or function.
 
@@ -55,13 +54,13 @@ You can create groups of rules which should be applied in combination. Click **A
 
 `[(Name = 'Thomson' and Sales.Customer_Address/Sales.Address/City = 'New York') or (Name = 'Thompson' and Sales.Customer_Address/Sales.Address/City = 'London')]`
 
-{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/thomson-and-thompson.png" >}}
+{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/thomson-and-thompson.png" class="no-border" >}}
 
 You can change the order of rules, or move them from one group to another using the handles on each rule indicated by six dots (**⋮⋮**).
 
-#### 2.1.2 Visual Builder Limitations {#limitations}
+#### 2.1.2 Builder Limitations {#limitations}
 
-Visual Builder for database constraints is still in beta and you cannot use it to make arbitrarily complex XPath expressions. Builder has the following limitations:
+Visual Builder for XPath constraints is still in beta and you cannot use it to make arbitrarily complex XPath expressions. Builder has the following limitations:
 
 * It does not support all functions. It does support the following relational operators and functions:
 
@@ -90,21 +89,21 @@ Depending on the version, you may have to use a different option to add your XPa
 
 For all places where you can retrieve data from the database, for example a [Retrieve](/refguide/retrieve/) activity in a microflow or the [Data Source](/refguide/xpath-source/) of a widget, you select **(From) Database** and you will always have the option to add an **XPath constraint** by clicking **Edit…** to open a dialog box where you can enter your constraint.
 
-{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/from-database-xpath-10-5.png" >}}
+{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/from-database-xpath-10-5.png" class="no-border" >}}
 
 You can type your constraint by selecting the option **XPath expression**.
 
-{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/xpath-expression-10-5.png" >}}
+{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/xpath-expression-10-5.png" class="no-border" >}}
 
 #### 2.2.2 Mendix Versions Below 10.5
 
 For a **Retrieve** activity in a microflow, you choose **Source: From database** and you can enter your constraint under **XPath constraint**.
 
-{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/from-database-xpath-10-4.png" >}}
+{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/from-database-xpath-10-4.png" class="no-border" >}}
 
 For a **Data Source** of a page widget such as a [Data Grid](/refguide/data-grid/), you choose **Type: XPath**. You will then see an **XPath** field and click **Edit…** to open a dialog box where you can enter your constraint.
 
-{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/data-source-xpath-10-4.png" >}}
+{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/data-source-xpath-10-4.png" class="no-border" >}}
 
 ## 3 Constraints in Java
 
@@ -126,7 +125,7 @@ public getCustomersNameJansen(IContext context, ICore core, int value) {
 
 The following example shows how you should perform an XPath query in Studio Pro. You **Select** the **Entity** `Sales.Customer` and then write the XPath constraint `[Name='Jansen']`:
 
-{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/XPath-constraint-example.png" alt="XPath constraint example in Studio Pro" width="400px" >}}
+{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/XPath-constraint-example.png" alt="XPath constraint example in Studio Pro" width="400px" class="no-border" >}}
 
 ## 5 Multiple Constraints
 

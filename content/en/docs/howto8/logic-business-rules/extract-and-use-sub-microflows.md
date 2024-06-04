@@ -1,9 +1,8 @@
 ---
 title: "Extract and Use Sub-Microflows"
 url: /howto8/logic-business-rules/extract-and-use-sub-microflows/
-category: "Logic and Business Rules"
+
 weight: 5
-tags: ["microflow", "sub-microflow", "extract"]
 ---
 
 ## 1 Introduction
@@ -38,13 +37,13 @@ There are many other examples of when it is useful to create sub-microflows. The
 
 Instead of creating a new sub-microflow action, it may be easier to drag an existing microflow into the current one:
 
-{{< figure src="/attachments/howto8/logic-business-rules/extract-and-use-sub-microflows/18580991.gif" >}}
+{{< figure src="/attachments/howto8/logic-business-rules/extract-and-use-sub-microflows/18580991.gif" class="no-border" >}}
 
 ## 3 How to Use Sub-Microflows {#HowtoUseSubMicroflows}
 
 The following example microflow checks to see if a registration has a trainee assigned and a registration date. If the registration passes both of these checks, the registration is committed to the database.
 
-{{< figure src="/attachments/howto8/logic-business-rules/extract-and-use-sub-microflows/18581021.png" >}}
+{{< figure src="/attachments/howto8/logic-business-rules/extract-and-use-sub-microflows/18581021.png" class="no-border" >}}
 
 In this scenario, it makes sense to create a sub-microflow for the validation steps. If you do this, you can reuse this sub-microflow in other microflows where you need to validate a registration again.
 
@@ -52,24 +51,24 @@ To create a sub-microflow for the validation steps, follow these steps:
 
 1. Select the area you want to capture and use as a sub-microflow:
 
-    {{< figure src="/attachments/howto8/logic-business-rules/extract-and-use-sub-microflows/18581020.png" >}}
+    {{< figure src="/attachments/howto8/logic-business-rules/extract-and-use-sub-microflows/18581020.png" class="no-border" >}}
 
 2. Right-click an item in the selection and select **Extract submicroflow...**:
 
-    {{< figure src="/attachments/howto8/logic-business-rules/extract-and-use-sub-microflows/18581018.png" >}}
+    {{< figure src="/attachments/howto8/logic-business-rules/extract-and-use-sub-microflows/18581018.png" class="no-border" >}}
 
 3. Enter a name for the sub-microflow:
 
-    {{< figure src="/attachments/howto8/logic-business-rules/extract-and-use-sub-microflows/18581017.png" >}}
+    {{< figure src="/attachments/howto8/logic-business-rules/extract-and-use-sub-microflows/18581017.png" class="no-border" >}}
 
     {{% alert color="warning" %}} The best practice is to identify sub-microflows by their name. You can use "Sub_MicroflowDescriptionHere", "Subflow_MicroflowDescriptionHere", or any other notation you feel works best. The key is to be consistent when you name your microflows so that it is easy for other team members to understand and find the microflows they need.{{% /alert %}}
 4. Click **OK** to create your first sub-microflow:
 
-    {{< figure src="/attachments/howto8/logic-business-rules/extract-and-use-sub-microflows/18581016.png" >}}
+    {{< figure src="/attachments/howto8/logic-business-rules/extract-and-use-sub-microflows/18581016.png" class="no-border" >}}
 
 5. Open the sub-microflow by right-clicking the **Sub_RegistrationValidation** microflow and selecting **Go to microflow**:
 
-    {{< figure src="/attachments/howto8/logic-business-rules/extract-and-use-sub-microflows/18581015.png" >}}
+    {{< figure src="/attachments/howto8/logic-business-rules/extract-and-use-sub-microflows/18581015.png" class="no-border" >}}
 
 The new sub-microflow will do the registration validation. You can reuse this sub-microflow whenever you need to do a registration validation. 
 

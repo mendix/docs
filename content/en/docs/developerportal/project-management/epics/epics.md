@@ -3,7 +3,6 @@ title: "Epics"
 url: /developerportal/project-management/epics/epics/
 weight: 30
 description: "Describes the Epics page in Epics."
-tags: ["Project Management", "Epics", "Sprint", "Stories", "Developer Portal"]
 ---
 
 ## 1 Introduction
@@ -12,7 +11,7 @@ The **Epics** page gives an overview of all the epics for your current app. You 
 
 Each row represents an epic. 
 
-{{< figure src="/attachments/developerportal/project-management/epics/epics/epic.png" >}}
+{{< figure src="/attachments/developerportal/project-management/epics/epics/epic.png" class="no-border" >}}
 
 Each row shows the following details about an epic:
 
@@ -31,7 +30,7 @@ When you click an epic, the epic details dialog box opens.
 
 On the upper-right corner, there is a **Copy Link** icon ({{% icon name="hyperlink" %}}) and a **More Options** icon ({{% icon name="three-dots-menu-horizontal" %}}). Clicking **Copy Link** copies the link to the epic. Clicking **More Options** opens a pop-up menu that allows you to delete the epic.
 
-{{< figure src="/attachments/developerportal/project-management/epics/epics/epic-details-page-ellipsis.png" >}}
+{{< figure src="/attachments/developerportal/project-management/epics/epics/epic-details-page-ellipsis.png" class="no-border" >}}
 
 The epic details dialog box shows the following items:
 

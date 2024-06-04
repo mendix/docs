@@ -2,14 +2,13 @@
 title: "Call Microflow"
 url: /refguide9/call-microflow/
 weight: 70
-tags: ["workflow", "workflows", "call microflow", "Studio Pro"]
 ---
 
 ## 1 Introduction
 
 **Call microflow** is used to call a selected [microflow](/refguide9/microflow/). 
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/workflows/workflow-elements/call-microflow/call-microflow-example.jpg" alt="Call Microflow Example" width="250">}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/workflows/workflow-elements/call-microflow/call-microflow-example.jpg" alt="Call Microflow Example" width="250" class="no-border" >}}
 
 ## 2 Properties
 

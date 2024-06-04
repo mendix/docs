@@ -2,7 +2,6 @@
 title: "Object Type Decision"
 url: /refguide/object-type-decision/
 weight: 2
-tags: ["studio pro", "object type decision", "decisions"]
 aliases:
     - /refguide/inheritance-split.html
     - /refguide/inheritance-split
@@ -19,7 +18,7 @@ If you want to use the specialized type in the rest of the microflow or nanoflow
 
 An example of object type decision properties is presented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/decisions/object-type-decision/object-type-decision-properties.png"   width="250"  >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/decisions/object-type-decision/object-type-decision-properties.png"   width="250"  class="no-border" >}}
 
 The object type decision properties consists of the following sections:
 
@@ -44,4 +43,4 @@ For example, you have an entity **Student** and an entity **Professor** which ha
 In a nanoflow, only generalizations that are accessible by the user can be searched.
 {{% /alert %}}
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/decisions/object-type-decision.png" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/decisions/object-type-decision.png" class="no-border" >}}

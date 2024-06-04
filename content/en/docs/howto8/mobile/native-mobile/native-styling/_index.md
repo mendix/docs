@@ -3,7 +3,6 @@ title: "Implement Native Mobile Styling"
 url: /howto8/mobile/native-styling/
 weight: 30
 description: General information for native styling in Mendix.
-tags: ["styling", "design", "native"]
 ---
 
 ## 1 Introduction

@@ -2,7 +2,6 @@
 title: "Variable Activities"
 url: /refguide9/variable-activities/
 weight: 40
-tags: ["studio pro", "variable activities", "variable", "variables"]
 ---
 
 ## 1 Introduction

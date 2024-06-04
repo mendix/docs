@@ -1,7 +1,6 @@
 ---
 title: "Merge Dialog Box"
 url: /refguide/merge-dialog/
-tags: ["studio pro", "merge-dialog", "merge", "version control"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -15,7 +14,7 @@ Before continuing with the merge action, make sure you are currently working in 
 
 To access the **Merge** dialog box, open [Version Control](/refguide/version-control-menu/) > **Merge Changes Here**:
 
-{{< figure src="/attachments/refguide/modeling/menus/version-control-menu/merge-dialog/merge-dialog.png" alt="Merge Dialog" >}}
+{{< figure src="/attachments/refguide/modeling/menus/version-control-menu/merge-dialog/merge-dialog.png" alt="Merge Dialog" class="no-border" >}}
 
 Available scenarios are described in sections below.
 

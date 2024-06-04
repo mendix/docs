@@ -231,8 +231,8 @@ a:not(.btn):not(.td-sidebar-link):visited {
     color: $purple;
 }
 
-// Add icon after external links in main content (but exclude buttons and breadcrumb)
-main a[href*="https://"]:not(.btn):not(.td-breadcrumbs a)::after {
+// Add icon after external links in main content (but exclude buttons and breadcrumb and get-started banner)
+main a[href*="https://"]:not(.btn):not(.td-breadcrumbs a):not(.get-started)::after {
     display: inline-block;
     width: 1rem;
     height: 1rem;
@@ -299,9 +299,7 @@ html {
             border-left: 1px solid $gray-border; // NK - moved from toc, to fully span height of screen
             border-right: 1px solid $gray-border; // NK - moved from left menu, to fully span height of screen
         }
-
-
-        padding-bottom: 2rem;
+    padding-bottom: 0rem;
     }
     // NK - custom addition
     main.lp{
@@ -380,11 +378,17 @@ div.date-format{
   }
 
 // Images
-// DB – custom edit, class for adding borders around images
-.image-border {
+
+// DB – custom edit, add borders around images
+main img {
     border-color: #d7d7d7;
     border-width: 1px;
     border-style: solid;
+}
+
+// DB – custom edit, optional class for preventing borders around images
+.no-border{
+    border-style: none;
 }
 
 // _pageinfo.scss - Custom pageinfo styling, used on the banners (similar to the alert styling)
@@ -530,11 +534,14 @@ nav.foldable-nav {
                 text-decoration: underline;
             }
         }
-        // NK - styling for ToC highlighting
+
+        // Styling for ToC highlighting
         .activeToc {
-            font-weight: $font-weight-bold;
-            color: $link-color;
             border-left-color: $link-color;
+        }
+
+        .activeToc > a {
+            font-weight: $font-weight-bold;
         }
     }
 }

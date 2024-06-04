@@ -2,8 +2,7 @@
 title: "Use the Widget Development Plugin for Adobe Brackets"
 linktitle: "Adobe Brackets Widget Development Plugin"
 url: /howto7/widget-development/use-the-widget-development-plugin-for-adobe-brackets/
-category: "Widget Development"
-tags: ["widget", "develop widget", "plugin", "adobe", "brackets"]
+
 ---
 
 ## 1 Introduction
@@ -27,19 +26,19 @@ To get started with Adobe Brackets and the Widget Development Plugin, follow the
 
 1. Install Adobe Brackets on your computer and then open the editor. Your screen should look similar to this:
 
-    {{< figure src="/attachments/howto7/widget-development/use-the-widget-development-plugin-for-adobe-brackets/18579936.png" >}}
+    {{< figure src="/attachments/howto7/widget-development/use-the-widget-development-plugin-for-adobe-brackets/18579936.png" class="no-border" >}}
 
 2. Select **File** > **Extension manager...**:
 
-    {{< figure src="/attachments/howto7/widget-development/use-the-widget-development-plugin-for-adobe-brackets/18579913.png" >}}
+    {{< figure src="/attachments/howto7/widget-development/use-the-widget-development-plugin-for-adobe-brackets/18579913.png" class="no-border" >}}
 
 3. On the **Available** tab, search for *widget*:
 
-    {{< figure src="/attachments/howto7/widget-development/use-the-widget-development-plugin-for-adobe-brackets/18579912.png" >}}
+    {{< figure src="/attachments/howto7/widget-development/use-the-widget-development-plugin-for-adobe-brackets/18579912.png" class="no-border" >}}
 
 4. For the **Widget Development Plugin for Adobe Brackets** extension, click **Install**:
 
-    {{< figure src="/attachments/howto7/widget-development/use-the-widget-development-plugin-for-adobe-brackets/18579911.png" >}}
+    {{< figure src="/attachments/howto7/widget-development/use-the-widget-development-plugin-for-adobe-brackets/18579911.png" class="no-border" >}}
 
 The Widget Development Plugin will now be available in Adobe Brackets.
 
@@ -51,7 +50,7 @@ To create a new widget, follow these steps:
 
 1. Select **File** > **New Widget** from the menu:
 
-    {{< figure src="/attachments/howto7/widget-development/use-the-widget-development-plugin-for-adobe-brackets/18579932.png" >}}
+    {{< figure src="/attachments/howto7/widget-development/use-the-widget-development-plugin-for-adobe-brackets/18579932.png" class="no-border" >}}
 
     The name of the widget is very important, as this name is the name used in Mendix. Using the [UpperCamelCase](https://en.wikipedia.org/wiki/CamelCase) naming convention is strongly recommended. Each new widget should have an author, version number, copyright, license, package name, widget name, and path defined before you can click **OK**. The location directory must also exist.
 
@@ -77,15 +76,15 @@ To create a new widget, follow these steps:
     **Name**  | MyFirstWidget
     **Location**  | Select a folder on your local drive.
 
-    {{< figure src="/attachments/howto7/widget-development/use-the-widget-development-plugin-for-adobe-brackets/18579903.png" >}}
+    {{< figure src="/attachments/howto7/widget-development/use-the-widget-development-plugin-for-adobe-brackets/18579903.png" class="no-border" >}}
 
 3. Click **OK**. The plugin will get the latest version of the `AppStoreWidgetBoilerplate` from GitHub, unpack all the contents in the location directory, rename all the files and folders, and alter the content inside the files according to these settings.
 
-    {{< figure src="/attachments/howto7/widget-development/use-the-widget-development-plugin-for-adobe-brackets/18579928.png" >}}
+    {{< figure src="/attachments/howto7/widget-development/use-the-widget-development-plugin-for-adobe-brackets/18579928.png" class="no-border" >}}
 
     The location directory is now automatically opened inside Adobe Brackets:
     
-    {{< figure src="/attachments/howto7/widget-development/use-the-widget-development-plugin-for-adobe-brackets/18579926.png" >}}
+    {{< figure src="/attachments/howto7/widget-development/use-the-widget-development-plugin-for-adobe-brackets/18579926.png" class="no-border" >}}
 
 ## 5 Exploring the Widget Directory
 
@@ -99,25 +98,25 @@ Because the boilerplate is used, you will have a widget that is compliant with t
 
 The new widget source contains the following directories:
 
-{{< figure src="/attachments/howto7/widget-development/use-the-widget-development-plugin-for-adobe-brackets/18579910.png" >}}
+{{< figure src="/attachments/howto7/widget-development/use-the-widget-development-plugin-for-adobe-brackets/18579910.png" class="no-border" >}}
 
 ### 5.1 The Dist Directory
 
 The `dist` directory must eventually contain the *.mpk* file you create with the SDK:
 
-{{< figure src="/attachments/howto7/widget-development/use-the-widget-development-plugin-for-adobe-brackets/18579909.png" >}}
+{{< figure src="/attachments/howto7/widget-development/use-the-widget-development-plugin-for-adobe-brackets/18579909.png" class="no-border" >}}
 
 ### 5.2 The Src Directory
 
 The `src` directory contains the source files for your widget:
 
-{{< figure src="/attachments/howto7/widget-development/use-the-widget-development-plugin-for-adobe-brackets/18579922.png" >}}
+{{< figure src="/attachments/howto7/widget-development/use-the-widget-development-plugin-for-adobe-brackets/18579922.png" class="no-border" >}}
 
 ### 5.3 The Test Directory
 
 The `test` directory contains a fully prepared Mendix test app for testing your widget:
 
-{{< figure src="/attachments/howto7/widget-development/use-the-widget-development-plugin-for-adobe-brackets/18579921.png" >}}
+{{< figure src="/attachments/howto7/widget-development/use-the-widget-development-plugin-for-adobe-brackets/18579921.png" class="no-border" >}}
 
 ## 6 Building the Widget
 
@@ -125,15 +124,15 @@ To package the widget source into an *.mpk* file, follow these steps:
 
 1. Create an *.mpk* file by pressing **F4** or clicking the play button on the right side of the editor:
 
-    {{< figure src="/attachments/howto7/widget-development/use-the-widget-development-plugin-for-adobe-brackets/18579908.png" >}}
+    {{< figure src="/attachments/howto7/widget-development/use-the-widget-development-plugin-for-adobe-brackets/18579908.png" class="no-border" >}}
 
     You are then informed that the widget has been created:
 
-    {{< figure src="/attachments/howto7/widget-development/use-the-widget-development-plugin-for-adobe-brackets/18579907.png" >}}
+    {{< figure src="/attachments/howto7/widget-development/use-the-widget-development-plugin-for-adobe-brackets/18579907.png" class="no-border" >}}
 
 2. The newly created *.mpk* package is placed in the **test > widgets** directory:
 
-    {{< figure src="/attachments/howto7/widget-development/use-the-widget-development-plugin-for-adobe-brackets/18579918.png" >}}
+    {{< figure src="/attachments/howto7/widget-development/use-the-widget-development-plugin-for-adobe-brackets/18579918.png" class="no-border" >}}
 
 ## 7 Conclusion
 

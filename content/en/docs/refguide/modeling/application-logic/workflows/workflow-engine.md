@@ -2,7 +2,6 @@
 title: "Workflow Engine"
 url: /refguide/workflow-engine/
 weight: 35
-tags: ["workflow", "workflows", "workflow engine", "engine"]
 ---
 
 ## 1 Introduction
@@ -13,7 +12,7 @@ The Mendix Workflow Engine is the Mendix Runtime engine to execute workflows. Th
 
 In the domain model of the System module, there are several Workflow Engine-related entities:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-engine/workflow-data.png" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-engine/workflow-data.png" class="no-border" >}}
 
 These entities are populated by the Workflow Engine, some on the start of the app, others – while running workflows. The entities can be divided into the following groups:
 
@@ -146,7 +145,7 @@ The [Jump activity](/refguide/jump-activity/) allows the workflow to jump to ano
 The workflow states are stored in the **State** attribute of the **System.Workflow** entity. This attribute uses the System.WorkflowState enumeration to have a fixed set of states. These states represent different technical states a workflow instance can have. 
 In the picture below, you see two yellow boxes with outgoing and incoming arrows. The yellow boxes are not concrete states, they mean that any state inside the box can transition following the outgoing arrow and can transition back into the previous state by following the incoming arrow.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-engine/workflow-states.png" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-engine/workflow-states.png" class="no-border" >}}
 
 In the table below, you can find description of these states and allowed actions for each state:
 
@@ -154,7 +153,7 @@ In the table below, you can find description of these states and allowed actions
 | ------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | InProgress   | The state of the workflow instance when it starts. This state indicates that the workflow instance can be executed. | <ul><li>Abort&nbsp;workflow</li><li>Restart&nbsp;workflow</li><li>Generate&nbsp;jump&#8209;to&nbsp;options</li><li>Apply&nbsp;jump&#8209;to&nbsp;option</li><li>Pause&nbsp;workflow</li></ul> |
 | Paused       | This state prevents the workflow from being executed.        | <ul><li>Abort&nbsp;workflow</li><li>Restart&nbsp;workflow</li><li>Generate&nbsp;jump&#8209;to&nbsp;options</li><li>Apply&nbsp;jump&#8209;to&nbsp;option</li><li>Unpause&nbsp;workflow</li></ul> |
-| Incompatible | This state indicates that this workflow instance is not compatible with the current workflow in the model.<br><br>The attribute **CanBeRestarted** indicates whether the workflow can be restarted, the attribute **CanBeContinued** indicates whether the workflow can be marked as resolved.<br><br>Resolving the Incompatible state puts the workflow in either InProgress or Paused state depending on its previous state before it became Incompatible. | <ul><li>Abort&nbsp;workflow</li><li>Restart&nbsp;workflow</li><li>Generate&nbsp;jump&#8209;to&nbsp;options</li><li>Apply&nbsp;jump&#8209;to&nbsp;option</li><li>Mark&nbsp;as&nbsp;resolved</li></ul> |
+| Incompatible | This state indicates that this workflow instance is not compatible with the current workflow in the model.<br><br>The attribute **CanBeRestarted** indicates whether the workflow can be restarted, the attribute **CanBeContinued** indicates whether the workflow can be marked as resolved, the **CanApplyJumpTo** attribute indicates whether a jump-to option can be applied to the workflow.<br><br>Resolving the Incompatible state puts the workflow in either InProgress or Paused state depending on its previous state before it became Incompatible. | <ul><li>Abort&nbsp;workflow</li><li>Restart&nbsp;workflow</li><li>Generate&nbsp;jump&#8209;to&nbsp;options</li><li>Apply&nbsp;jump&#8209;to&nbsp;option</li><li>Mark&nbsp;as&nbsp;resolved</li></ul> |
 | Failed       | This state indicates that an exception has occurred during execution of the workflow or the workflow-initiated microflow. The exception details can be found in the **Reason** attribute.<br><br>{{% alert color="info" %}}Failed workflows should be either retried/restarted to fix the problem or aborted to clean up user tasks that are part of the failed workflows.{{% /alert %}} | <ul><li>Abort&nbsp;workflow</li><li>Restart&nbsp;workflow</li><li>Generate&nbsp;jump&#8209;to&nbsp;options</li><li>Apply&nbsp;jump&#8209;to&nbsp;option</li><li>Retry&nbsp;workflow</li></ul> |
 | Completed    | This state indicates that the workflow has successfully completed. |                                                              |
 | Aborted      | This state indicates that this workflow instance has been aborted by a user. The reason is stored in the **Reason** member. |                                                              |
@@ -182,7 +181,7 @@ The **Show user task page** microflow activity can be used to open the user task
 
 The user task states are stored in the **State** attribute of the **System.WorkflowUserTask** entity. This attribute uses the System.WorkflowUserTaskState enumeration to have a fixed set of states. These states represent the different technical states a user task can have. 
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-engine/user-task-states.png" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-engine/user-task-states.png" class="no-border" >}}
 
 Note the following: 
 

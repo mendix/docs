@@ -1,7 +1,6 @@
 ---
 title: "Debug Java Actions Remotely"
 url: /howto9/monitoring-troubleshooting/debug-java-actions-remotely/
-tags: ["monitoring", "troubleshooting", "java action", "debug"]
 ---
 
 ## 1 Introduction
@@ -25,7 +24,7 @@ To edit the server configuration with extra JVM parameters, follow these steps:
 
     `-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005`
 
-    {{< figure src="/attachments/howto9/monitoring-troubleshooting/debug-java-actions/debug-java-actions-remotely/18580063.png" >}}
+    {{< figure src="/attachments/howto9/monitoring-troubleshooting/debug-java-actions/debug-java-actions-remotely/18580063.png" class="no-border" >}}
 
 4. Run your application.
 
@@ -39,7 +38,7 @@ To configure IntelliJ, follow these steps:
 2. Place some breakpoints in your Java code.
 3. Start debugging.
 
-{{< figure src="/attachments/howto9/monitoring-troubleshooting/debug-java-actions/debug-java-actions-remotely/intellij_rundebug_configurations.png" >}}
+{{< figure src="/attachments/howto9/monitoring-troubleshooting/debug-java-actions/debug-java-actions-remotely/intellij_rundebug_configurations.png" class="no-border" >}}
 
 To configure Eclipse, follow these steps:
 

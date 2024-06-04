@@ -1,10 +1,9 @@
 ---
 title: "Studio Pro Overview"
 url: /refguide8/studio-pro-overview/
-category: "App Modeling"
+
 description: "Describes Studio Pro in general: tabs, menus, shortcut keys."
 weight: 10
-tags: ["Studio Pro"]
 aliases:
     - /refguide8/desktop-modeler-overview.html
     - /refguide8/desktop-modeler-overview
@@ -24,7 +23,7 @@ When Studio Pro is open, press <kbd>F1</kbd> to quickly jump to documentation.
 
 This document describes the user interface of Mendix Studio Pro:
 
-{{< figure src="/attachments/refguide8/modeling/studio-pro-overview/studio-pro-diagram.png" alt="Studio Pro Diagram" >}}
+{{< figure src="/attachments/refguide8/modeling/studio-pro-overview/studio-pro-diagram.png" alt="Studio Pro Diagram" class="no-border" >}}
 
 ## 2 Top Bar
 

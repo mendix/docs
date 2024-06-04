@@ -3,7 +3,6 @@ title: "Project Settings"
 url: /refguide8/project-settings/
 weight: 10
 description: "Settings which apply to the project app as a whole."
-tags: ["project", "app", "configuration", "runtime", "Studio Pro", "languages", "certificate", "theme", "hashing", "hashing algorithm"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -11,7 +10,7 @@ tags: ["project", "app", "configuration", "runtime", "Studio Pro", "languages", 
 
 In the **Project Settings** dialog box, you can alter the settings that are applicable to the whole project:
 
-{{< figure src="/attachments/refguide8/modeling/menus/view-menu/project-explorer/project/project-settings/project-settings-configuration.png" >}}
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/project-explorer/project/project-settings/project-settings-configuration.png" class="no-border" >}}
 
 The categories described below are available.
 

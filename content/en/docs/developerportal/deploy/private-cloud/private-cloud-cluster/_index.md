@@ -3,14 +3,13 @@ title: "Creating a Private Cloud Cluster"
 url: /developerportal/deploy/private-cloud-cluster/
 description: "Describes the processes for creating a Private Cloud cluster in the Mendix Developer Portal"
 weight: 10
-tags: ["Create", "Private Cloud", "Cluster", "Namespace"]
 ---
 
 ## 1 Introduction
 
 To allow you to manage the deployment of your apps to Red Hat OpenShift and Kubernetes, you first need to create a cluster and add at least one namespace in the Mendix Developer Portal. This will provide you with the information you need to deploy the **Mendix Operator** and **Mendix Gateway Agent** in your OpenShift or Kubernetes context and create a link to the **Environments** pages of your Mendix app through the **Interactor**.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/mx4pc-architecture.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/mx4pc-architecture.png" class="no-border" >}}
 
 This document explains how to set up the cluster in Mendix.
 
@@ -48,20 +47,20 @@ Should you consider using a connected environment, the following URLs should be 
 1. Click [Cloud Settings](/developerportal/collaborate/general-settings/#cloud-settings) on the **Settings** page of your Mendix app.
 2. Click **Mendix for Private Cloud**.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image3.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image3.png" class="no-border" >}}
 
 3. Click **Set up Mendix for Private Cloud**.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image4.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image4.png" class="no-border" >}}
 
 4. Open the [Global Navigation menu](/developerportal/global-navigation/) and select **Deployment**.
 5. Select **Mendix for Private Cloud** from the top menu bar in the Developer Portal.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-manager.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-manager.png" class="no-border" >}}
 
 6. Click **Register Cluster**.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image6.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image6.png" class="no-border" >}}
 
 7. Enter the following information:
 
@@ -72,9 +71,9 @@ Should you consider using a connected environment, the following URLs should be 
 
 8. Click **Create**.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/create-cluster.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/create-cluster.png" class="no-border" >}}
 
-### 3.2 Adding a Namespace {#add-namespace}
+### 3.2.1 Adding a Namespace for Connected Cluster {#add-namespace}
 
 You now need to add a namespace to your cluster. Your cluster can contain several namespaces, see [Containerized Mendix App Architecture](#containerized-architecture), below for more information.
 
@@ -82,13 +81,13 @@ To add a namespace, do the following:
 
 1. Click **Details** ({{% icon name="notes-paper-text" %}}) on the top right of the page:
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/empty-cluster.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/empty-cluster.png" class="no-border" >}}
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/ClusterDetails.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/ClusterDetails.png" class="no-border" >}}
 
 2. Click **Add Namespace**:
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/namespace-details.PNG" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/namespace-details.PNG" class="no-border" >}}
 
 3. Enter the following details:
     * **Namespace** – this is the namespace in your platform; this must conform to the namespace naming conventions of the cluster: all lower-case with hyphens allowed within the name
@@ -96,9 +95,37 @@ To add a namespace, do the following:
 
 4. Click **Done** to create the namespace.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/add-namespace.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/add-namespace.png" class="no-border" >}}
 
 {{% alert color="warning" %}} If you have selected a *Connected Installation Type* please verify that the [Connected Environment Pre-requisites](#prerequisites-connected) are configured. {{% /alert %}}
+
+### 3.2.2 Adding a Namespace for Standalone Cluster {#add-standalone-namespace}
+
+If you would like to add a namespace to be added in the Standalone cluster, do the following:
+
+1. Click **Details** ({{% icon name="notes-paper-text" %}}) on the top right of the page:
+
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/empty-cluster.png" class="no-border" >}}
+
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/ClusterDetails.png" class="no-border" >}}
+
+2. Click **Add Namespace**.
+
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/namespace-details-standalone.png" class="no-border" >}}
+
+3. Enter the following details:
+
+    * **Namespace** – This is the namespace in your platform; this must conform to the namespace naming conventions of the cluster: all lower-case with hyphens allowed within the name.
+    * **Installation type** – Choose **Standalone**.
+
+4. Click **Next**.
+5. Once you click on **Next**, you will be redirected to the Installation pop up page from where you can download the mxpc-cli and get the command to install the namespace in the cluster.
+
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/standalone_downloadcli.png" class="no-border" >}}  
+
+    For existing namespaces, if you would like to download the executables for mxpc-cli, you can go [here](https://privatecloud.mendixcloud.com/rest/internal/v1/mxpc-cli?operatorVersion=latest)
+
+    In above page, once you do a json format, you will get the links for mxpc-cli for different available versions.
 
 ## 4. Installing and Configuring the Mendix Operator {#install-operator}
 
@@ -111,7 +138,7 @@ You can install and run the Mendix Operator in either Global or Standard mode. I
 
 You can license the Operator and Runtime of your application by configuring the Operator configuration with License Manager details. In order to start using Private Cloud License Manager, you need to first download the PCLM executable available in the Installation page. For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/). The PCLM executable is available for download from this page.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/PCLMDownload.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/PCLMDownload.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 In order to configure PCLM, make sure that the Operator version is 2.11.0 and above.
@@ -670,7 +697,7 @@ You can set the following metrics configuration values:
 * `mxAgentInstrumentationConfig`: instrumentation configuration for the [Java instrumentation agent](https://github.com/mendix/mx-agent); collects additional metrics such as microflow execution times; can be left empty to use the default instrumentation config. This attribute is only applicable when `mode` is `native`, and `mxAgentConfig` is not empty.
 
 {{% alert color="warning" %}}
-MxAgent is a [Java instrumentation agent](https://docs.oracle.com/en/java/javase/11/docs/api/java.instrument/java/lang/instrument/Instrumentation.html) and is unrelated to the Mendix for Private Cloud Gateway Agent.
+MxAgent is a [Java instrumentation agent](https://docs.oracle.com/en/java/javase/21/docs/api/java.instrument/java/lang/instrument/Instrumentation.html) and is unrelated to the Mendix for Private Cloud Gateway Agent.
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -876,7 +903,7 @@ Once it is configured, you can manage your cluster and namespaces through the De
 
 Go to the Cluster Manager page by clicking **Cluster Manager** in the top menu of the **Clouds** page of the Developer Portal.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-manager.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-manager.png" class="no-border" >}}
 
 From this page you can see a summary of your clusters with all their namespaces and an indication of the namespace status and how long it has been running (runtime).
 
@@ -895,7 +922,15 @@ Here you can perform the following actions on the entire cluster:
 * When name of the cluster is changed
 * When cluster description is changed
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-activity-logs.PNG" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-activity-logs.PNG" class="no-border" >}}
+
+If you prefer the individual to join as a cluster manager automatically, without requiring them to manually accept the invitation, you can enable the **Automatically accept invites** option.
+
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/AutoAcceptClusterManager.png" class="no-border" >}}
+
+{{% alert color="info" %}}
+The **Automatically accept invites** option is applicable only when the invited users have the same email domain as yours.
+{{% /alert %}}
 
 {{% alert color="info" %}}
 When you add a cluster manager, the user will have most of the access which the original cluster manager had, such as the abilities to add a namespace, add a member, change the permissions of the cluster member, and delete another cluster manager.
@@ -931,13 +966,13 @@ See the sections below for more information.
 
 You can also delete your namespace from the cluster manager by clicking **Delete Namespace** ({{% icon name="trash-can" %}}) in the top right.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image25.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image25.png" class="no-border" >}}
 
 If there are any environments associated with the namespace, you cannot delete the namespace until the environments associated with it are deleted.
 
 When you delete a namespace, this removes the namespace from the cluster in the Developer Portal. However, it will not remove the namespace from your platform. You will need to explicitly delete the namespace using the tools provided by your platform.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image26.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image26.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 In the case of a Global Operator managed namespace, the managed namespace will not be deleted from the cluster. You must delete it from the cluster manually. Additionally, you also need to remove the managed namespace from the list of managed namespaces in the Operator configuration of the main namespace. 
@@ -1058,7 +1093,7 @@ You can also see an activity log containing the following information for all na
 
 The **Apps** tab of namespace details in the cluster manager page lists all the app environments which are deployed to this namespace.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image27.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image27.png" class="no-border" >}}
 
 If you are a team member of the app, click **Details** to go to the *Environment Details* page for that app.
 
@@ -1144,10 +1179,16 @@ You can invite additional members to the namespace, and configure their role dep
 1. The **Members** tab displays a list of current members (if any).
 2. Click **Invite Member**.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image28.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image28.png" class="no-border" >}}
 
 3. Enter the **Email** of the person you want to invite.
-4. Give them the rights they need. This can be:
+4. If you prefer the individual to join as a namespace member automatically, without requiring them to manually accept the invitation, you can enable the **Automatically accept invites** option.
+
+{{% alert color="info" %}}
+The **Automatically accept invites** option is applicable only when the invited users have the same email domain as yours.
+{{% /alert %}}
+
+5. Give them the rights they need. This can be:
 
     1. **Developer** – a standard set of rights needed by a developer, these are listed on the screen
     2. **Administrator** – a standard set of rights needed by an administrator, these are listed on the screen
@@ -1156,11 +1197,11 @@ You can invite additional members to the namespace, and configure their role dep
     With custom permissions, we have now decoupled the permissions for Scale, Start and Stop operations. If an application is in the Stopped state, the scaling does not come into effect until the application is Started. This means that you have to click **Start application** in order for the changes to be sent to the cluster.
     Along with this, we have also decoupled the permission for modifying the MxAdmin password and managing environments.
 
-5. Click **Send Invite** to send an invite to this person.
+6. Click **Send Invite** to send an invite to this person.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image29.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/AutoAcceptInvite.png" class="no-border" >}}
 
-6. The user will receive an email and will be required to follow a link to confirm that they want to join this namespace. They will need to be logged in to Mendix when they follow the confirmation link.
+7. If you have not enabled the **Automatically accept invites** option, the user will receive an email and will be required to follow a link to confirm that they want to join this namespace. They will need to be logged in to Mendix when they follow the confirmation link.
 
 ##### 7.2.2.2 Editing and Removing Members
 
@@ -1172,7 +1213,7 @@ You can change the access rights for, or completely remove, existing members.
     1. Make changes and click **Save**.
     2. Click **Remove member** to remove this member completely. You will be asked to confirm this action.
 
-        {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image30.png" >}}
+        {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image30.png" class="no-border" >}}
 
 #### 7.2.3 Operate {#operate}
 
@@ -1188,13 +1229,13 @@ The specification of these pages is optional.
 
 Open the **Operate** tab, enter the URLs relevant to your namespace, and click **Save** for each one.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image32.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image32.png" class="no-border" >}}
 
 #### 7.2.4 Plans
 
 The **Plans** tab shows you the database and storage plans which are currently configured for your namespace.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image33.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image33.png" class="no-border" >}}
 
 ##### 7.2.4.1 Deactivating a Plan
 
@@ -1234,19 +1275,19 @@ Here, you can create customized plan for your core resources.
 1. Click **Add New Plan**.
 2. Provide a name to the plan under **Plan Name**.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/customPlan.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/customPlan.png" class="no-border" >}}
 
 3. Provide the required **CPU Limits**, **CPU Request**, **Memory Limit**, **Memory Request**, **Ephemeral Storage Request** and **Ephemeral Storage Limit** based on your choice.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/customPlanDetails.png" >}}.
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/customPlanDetails.png" class="no-border" >}}.
 
 4. Click **OK** button to save the customized resource plan.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/savedCustomPlan.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/savedCustomPlan.png" class="no-border" >}}
 
 5. In order to make the customized plan available to the customer, make sure to enable the toggle button next **Use custom core resources plans**.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/customPlanEnable.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/customPlanEnable.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 Ephemeral Storage is a temporary storage attached to the lifecycle of a pod. Hence, with the deletion of pod, the data stored in the ephemeral storage is also lost.
@@ -1294,7 +1335,7 @@ The product type value to be entered is case-sensitive. Ensure that the value ma
 
 The selected product type will be applied to all environments within this namespace, and associated environments will adopt the license of this specific product type.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/Customization.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/Customization.png" class="no-border" >}}
 
 #### 7.2.9 PCLM Statistics
 
@@ -1302,21 +1343,21 @@ This tab shows information about claimed licenses, operator licenses and runtime
 
 Select **Claim** to view a list of licenses from the license bundle which are claimed in the namespace.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/LicenseClaim.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/LicenseClaim.png" class="no-border" >}}
 
 Select **Operator** to view a list of all the Operator licenses in the bundle.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/OperatorList.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/OperatorList.png" class="no-border" >}}
 
 Select **Runtime** to view a list of all the Runtime licenses in the bundle.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/RuntimeList.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/RuntimeList.png" class="no-border" >}}
 
 Select **Export in Excel** to export the above lists.
 
 If you would like to see the license payload, click **Show License Payload**.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/LicensePayload.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/LicensePayload.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 If you want to use the Private Cloud License Manager, the Mendix Operator must be in version 2.11.0 or later.
@@ -1396,21 +1437,21 @@ This section covers how to troubleshoot an issue you may find when running the i
 
 If you are unable to copy and paste in the installation tool, you may need to enable it from the Windows PowerShell Properties. Open the **Properties** menu by right clicking the header or by pressing <kbd>Alt</kbd> + <kbd>Space</kbd>.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image34.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image34.png" class="no-border" >}}
 
 Select the **Options** tab and enable **Use Ctrl+Shift+C/V as <u>C</u>opy/Paste**
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image35.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image35.png" class="no-border" >}}
 
 You can now copy and paste with <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> and <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>V</kbd> in the terminal.
 
 ### 9.2.2 Unable to Click a Button
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image36.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image36.png" class="no-border" >}}
 
 If you highlight a button instead of clicking the button, you may need to disable the **Quick Edit Mode** from the Windows PowerShell Properties.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image37.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image37.png" class="no-border" >}}
 
 After disabling the option you need to enable the new settings. You can do this by navigating to other page by pressing a shortcut key, or reopening the installer tool by closing it with **<kbd>Ctrl</kbd>+<kbd>C</kbd>** and reopening the tool with the installation command.
 
@@ -1418,6 +1459,6 @@ After disabling the option you need to enable the new settings. You can do this 
 
 Within your cluster you can run one, or several, Mendix apps. Each app runs in an environment, and each environment is in a namespace. You can see the relationship between the Mendix environments and the Kubernetes namespaces in the image below.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/mx4pc-containerized-architecture.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/mx4pc-containerized-architecture.png" class="no-border" >}}
 
 To ensure that every app deployed to a namespace has a unique name, the environment will have an **Environment UUID** added to the environment name when it is deployed to ensure that it is unique in the project. This also ensures the app cannot have the same name as the Mendix tools used to deploy the app. See [Deploying a Mendix App to a Private Cloud Cluster](/developerportal/deploy/private-cloud-deploy/) for more information.

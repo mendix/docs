@@ -5,7 +5,6 @@ url: /refguide8/moving-from-7-to-8/
 
 weight: 20
 description: "Provides details on updating your project from Desktop Modeler version 7 to Studio Pro 8 , including sections on converting your project and deprecated features."
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction

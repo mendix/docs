@@ -5,7 +5,6 @@ weight: 30
 description: "Presents a list of how-tos to create great user experiences and a user-friendly graphical user interface (GUI) for your app."
 no_list: false
 description_list: true
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction 

@@ -3,7 +3,6 @@ title: "Module Commands"
 url: /refguide/mx-command-line-tool/module
 weight: 30
 description: "Describes the module-related commands for the mx command-line tool."
-tags: ["mx", "command-line", "tool", "mx", "studio pro", "windows", "linux", "module", "show-module-version", "set-module-version"]
 ---
 
 ## 1 Introduction

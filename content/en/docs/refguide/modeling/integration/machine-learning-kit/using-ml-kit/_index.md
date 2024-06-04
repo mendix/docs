@@ -2,7 +2,6 @@
 title: "Using ML Kit"
 url: /refguide/machine-learning-kit/using-ml-kit/
 weight: 15
-tags: ["studio pro", "machine learning", "ml kit", "models", "integration"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

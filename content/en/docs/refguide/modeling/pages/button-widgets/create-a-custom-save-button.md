@@ -3,7 +3,6 @@ title: "Creating a Custom Save Button with a Microflow"
 linktitle: "Creating a Custom Save Button"
 url: /refguide/creating-a-custom-save-button/
 description: "Describes how to create a custom save button by utilizing microflows."
-tags: ["microflow", "logic", "save button"]
 aliases:
     - /howto/logic-business-rules/create-a-custom-save-button/
 ---
@@ -85,4 +84,6 @@ Congratulations! You have customized the **Save** button using a microflow:
 
 ## 5 Read More
 
+* [Microflows](/refguide/microflows/)
 * [Advanced Validation with a Custom Save Button](/refguide/setting-up-data-validation/#custom-validation-save-button)
+* [Using Validation Assist to Build Data Validations](/refguide/validation-assist/#data-validations)

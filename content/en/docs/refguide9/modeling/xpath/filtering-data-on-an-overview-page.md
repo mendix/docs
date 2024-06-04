@@ -4,7 +4,6 @@ linktitle: "Filter Data Using XPath"
 url: /refguide9/filtering-data-on-an-overview-page/
 weight: 5
 description: "Describes how to filter data using different XPath constraints."
-tags: ["filter", "xpath"]
 aliases:
     - /howto9/logic-business-rules/filtering-data-on-an-overview-page/
 ---

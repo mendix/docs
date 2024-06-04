@@ -4,7 +4,6 @@ url: /community-tools/contribute-to-a-github-repository/
 
 weight: 6
 description: "Describes how to contribute to a Mendix GitHub Repository according to Mendix guidelines."
-tags: ["GitHub", "contribute", "community"]
 aliases:
     - /developerportal/community-tools/contribute-to-a-github-repository/
 ---

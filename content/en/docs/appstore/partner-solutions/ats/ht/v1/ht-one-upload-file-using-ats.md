@@ -3,7 +3,6 @@ title: "Upload a File in Your App Using ATS"
 url: /appstore/partner-solutions/ats/ht-one-upload-file-using-ats/
 weight: 6
 description: "Describes how to upload a file in your app using ATS and the restrictions it has."
-tags: ["ATS", "testing"]
 ---
 
 ## 1 Introduction {#introduction}

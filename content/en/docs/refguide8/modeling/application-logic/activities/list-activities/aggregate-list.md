@@ -2,7 +2,6 @@
 title: "Aggregate List"
 url: /refguide8/aggregate-list/
 weight: 1
-tags: ["studio pro", "Aggregate", "Sum", "Average", "Count", "Minimum", "Maximum"]
 ---
 
 {{% alert color="warning" %}}

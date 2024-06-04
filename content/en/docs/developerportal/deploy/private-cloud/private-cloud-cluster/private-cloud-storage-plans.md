@@ -3,7 +3,6 @@ title: "Storage Plans"
 url: /developerportal/deploy/private-cloud-storage-plans/
 description: "Describes how to configure storage plans in Mendix for Private Cloud."
 weight: 10
-tags: ["Private Cloud","Storage","Database","File","S3","Minio","Postgres","Azure"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
@@ -1536,13 +1535,13 @@ To configure the required settings for an RDS database, do the following steps:
    ALTER ROLE <database-username> WITH PASSWORD NULL;
    ```
 
-See the [RDS IAM documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.Enabling.html) for more details on enabling IAM authentication.
+    See the [RDS IAM documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.Enabling.html) for more details on enabling IAM authentication.
 
-    {{% alert color="info" %}}The VPC and firewall must be configured to allow connections to the database from the Kubernetes cluster. When creating the RDS instance, as a best practice, make sure that it uses the same VPC as the Kubernetes cluster. Alternatively, you can also use a publicly accessible cluster. After an RDS instance has been created, it is not possible to modify its VPC.
-    {{% /alert %}}
+{{% alert color="info" %}}The VPC and firewall must be configured to allow connections to the database from the Kubernetes cluster. When creating the RDS instance, as a best practice, make sure that it uses the same VPC as the Kubernetes cluster. Alternatively, you can also use a publicly accessible cluster. After an RDS instance has been created, it is not possible to modify its VPC.
+{{% /alert %}}
 
-    {{% alert color="info" %}}In the case of Aurora DB, ensure that the `rds_iam` role is granted to the master database user.
-    {{% /alert %}}
+{{% alert color="info" %}}In the case of Aurora DB, ensure that the `rds_iam` role is granted to the master database user.
+{{% /alert %}}
 
 3. Navigate to the RDS instance details, and write down the following information:
 

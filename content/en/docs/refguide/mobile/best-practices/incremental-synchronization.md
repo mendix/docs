@@ -3,7 +3,6 @@ title: "Incremental Synchronization"
 url: /refguide/mobile/best-practices/incremental-synchronization
 weight: 20
 description: "This pattern makes it possible to incrementally sync objects from the server to the device based on changed dates."
-tags: ["mobile", "best practices", "patterns", "offline-first", "synchronization"]
 ---
 
 ## 1 Introduction

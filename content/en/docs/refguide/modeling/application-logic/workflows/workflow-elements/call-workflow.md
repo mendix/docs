@@ -2,7 +2,6 @@
 title: "Call Workflow"
 url: /refguide/call-workflow/
 weight: 70
-tags: ["workflow", "workflows", "call workflow", "Studio Pro"]
 ---
 
 {{% alert color="info" %}}

@@ -4,7 +4,6 @@ url: /developerportal/operate/monitoring-application-health/
 
 weight: 20
 description: "Describes how to monitor the health and status of your app."
-tags: ["Monitoring","Mendix Cloud","Developer Portal","Performance","Health", "Database IOPS Burst Balance", "Database Freeable Memory"]
 aliases:
     - /mendixcloud/monitoring-application-health.html
     - /howtogeneral/mendixcloud/monitoring-application-health.html

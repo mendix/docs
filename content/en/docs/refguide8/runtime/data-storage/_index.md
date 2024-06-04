@@ -2,7 +2,6 @@
 title: "Data Storage"
 url: /refguide8/data-storage/
 
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction

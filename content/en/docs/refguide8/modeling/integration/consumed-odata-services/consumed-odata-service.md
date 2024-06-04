@@ -2,7 +2,6 @@
 title: "Consumed OData Service"
 url: /refguide8/consumed-odata-service/
 weight: 10
-tags: ["studio pro", "odata service", "consumed odata service"]
 ---
 
 ## 1 Introduction

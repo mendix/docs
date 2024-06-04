@@ -2,7 +2,6 @@
 title: "CAB.10 - AutoComplete"
 url: /appstore/partner-solutions/ats/ht-two-cab-10-autocomplete/
 description: "This how-to explains step by step how to create an Unsupported Widget action for the AutoComplete widget."
-tags: ["ATS", "testing"]
 ---
 
 ## 1 Introduction

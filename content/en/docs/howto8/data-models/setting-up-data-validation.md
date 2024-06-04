@@ -3,7 +3,6 @@ title: "Set Up Data Validation"
 url: /howto8/data-models/setting-up-data-validation/
 
 weight: 2
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction

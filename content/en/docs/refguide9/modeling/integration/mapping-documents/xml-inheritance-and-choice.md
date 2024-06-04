@@ -1,7 +1,6 @@
 ---
 title: "XML Inheritance and Choice"
 url: /refguide9/xml-inheritance-and-choice/
-tags: ["studio pro"]
 ---
 
 ## 1 Obtaining an Object by Entity specialization

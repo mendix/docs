@@ -3,7 +3,6 @@ title: "Consistency Errors"
 url: /refguide7/consistency-errors/
 
 description: "Describes consistency errors in the Mendix Desktop Modeler and the way to fix them."
-tags: ["desktop modeler", "consistency errors", "checks", "errors"]
 ---
 
 ## 1 Introduction 

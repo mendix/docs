@@ -3,7 +3,6 @@ title: "Dashboard"
 url: /control-center/dashboard/
 
 description: "Describes the Dashboard page in the Mendix Control Center."
-tags: ["control center", "mendix admin", "dashboard"]
 weight: 5
 no_list: true 
 description_list: true

@@ -3,7 +3,6 @@ title: "Use the Plotly Images REST Service Endpoint"
 linktitle: "Plotly Images REST Endpoint"
 url: /howto8/front-end/charts-plotly-images-rest/
 weight: 70
-tags: ["Charts", "Plotly", "REST", "Studio Pro", "Widget"]
 ---
 
 ## 1 Introduction

@@ -5,7 +5,6 @@ url: /refguide8/hybrid-mobile/
 weight: 2
 no_list: false
 description_list: true 
-tags: ["mobile", "hybrid", "studio pro"]
 ---
 
 ## 1 Introduction

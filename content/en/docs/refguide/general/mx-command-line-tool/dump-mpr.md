@@ -3,7 +3,6 @@ title: "MPR dump"
 url: /refguide/mx-command-line-tool/dump-mpr
 weight: 60
 description: "Describes the command used to create a JSON description of the model of a Mendix App."
-tags: ["mx", "command-line", "tool", "mx", "studio pro", "windows", "linux", "mpr", "export"]
 ---
 
 ## 1 Introduction

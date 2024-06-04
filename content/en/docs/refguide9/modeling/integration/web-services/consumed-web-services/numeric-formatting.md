@@ -1,7 +1,6 @@
 ---
 title: "Numeric Formatting"
 url: /refguide9/numeric-formatting/
-tags: ["studio pro"]
 ---
 
 ## 1 Behavior in Your Mendix Application

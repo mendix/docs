@@ -2,7 +2,6 @@
 title: "Documentation Writing Guidelines"
 url: /community-tools/documentation-guidelines/
 description: "Describes some guidelines to follow when contributing to the Mendix documentation."
-tags: ["documentation", "community"]
 aliases:
     - /developerportal/community-tools/documentation-guidelines/
 ---

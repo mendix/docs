@@ -4,7 +4,6 @@ linktitle: "SVN On-Premises Version Control Server"
 url: /refguide9/on-premises-svn/
 weight: 50
 description: "Introduces how to work with SVN on-premises version control server."
-tags: ["on-premises", "svn", "version control"]
 aliases:
     - /howto9/collaboration-requirements-management/on-premises-svn-howto/
 ---

@@ -4,7 +4,6 @@ url: /appstore/modules/openai-connector/function-calling/
 linktitle: "Function Calling"
 weight: 5
 description: "Describes function calling with OpenAI"
-tags: ["OpenAI", "generative AI", "AI", "connector", "marketplace", "chatgpt", "genAI", "Azure OpenAI", "function calling", "tools", "ReAct", "chat completions", "text generation"]
 ---
 
 ## 1 Introduction {#introduction}

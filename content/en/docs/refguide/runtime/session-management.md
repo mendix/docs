@@ -3,7 +3,6 @@ title: "Session Management"
 url: /refguide/session-management/
 
 description: "Describes how sessions are established and managed."
-tags: ["Runtime", "Mendix Client", "Login", "Session", "authentication"]
 weight: 35
 ---
 

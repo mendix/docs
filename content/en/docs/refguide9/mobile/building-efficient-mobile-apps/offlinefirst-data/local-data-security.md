@@ -3,7 +3,6 @@ title: "Offline Data Security"
 url: /refguide9/mobile/building-efficient-mobile-apps/offlinefirst-data/local-data-security/
 weight: 85
 description: "This documentation describes best practices to keep your offline data secure."
-tags: ["offline-first", "database", "security", "encryption"]
 aliases:
     - /howto9/mobile/encryption-database/
 ---

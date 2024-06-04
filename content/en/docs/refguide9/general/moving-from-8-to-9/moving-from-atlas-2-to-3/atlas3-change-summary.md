@@ -2,7 +2,6 @@
 title: "Atlas 3 Change Summary"
 url: /refguide9/atlas3-change-summary/
 weight: 7
-tags: ["Atlas", "UI", "UX", "user experience", "design"]
 
 ---
 

@@ -4,7 +4,6 @@ url: /apidocs-mxsdk/apidocs/content-api/
 type: swagger
 description: "This API allows you to access both public and company-specific Marketplace content information."
 weight: 35
-tags: ["API", "content"]
 ---
 
 ## 1 Introduction

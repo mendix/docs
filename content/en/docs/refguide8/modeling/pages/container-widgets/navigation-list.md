@@ -2,7 +2,6 @@
 title: "Navigation List"
 url: /refguide8/navigation-list/
 weight: 70
-tags: ["studio pro", "navigation list", "container widget", "widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

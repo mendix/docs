@@ -2,7 +2,6 @@
 title: "Debugging Microflows and Nanoflows"
 url: /refguide/debug-microflows-and-nanoflows//
 weight: 120
-tags: ["monitoring", "troubleshooting", "debug", "microflow", "nanoflow"]
 ---
 
 ## 1 Introduction

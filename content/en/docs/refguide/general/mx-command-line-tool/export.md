@@ -3,7 +3,6 @@ title: "Export Package Commands"
 url: /refguide/mx-command-line-tool/export
 weight: 40
 description: "Describes the commands related to package export for the mx command-line tool."
-tags: ["mx", "command-line", "tool", "mx", "studio pro", "windows", "linux", "create-project-package", "create-module-package", "create-solution-package"]
 ---
 
 ## 1 Introduction

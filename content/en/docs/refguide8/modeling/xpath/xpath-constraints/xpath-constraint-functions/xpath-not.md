@@ -1,7 +1,6 @@
 ---
 title: "XPath Not"
 url: /refguide8/xpath-not/
-tags: ["studio pro"]
 ---
 
 ## 1 Overview

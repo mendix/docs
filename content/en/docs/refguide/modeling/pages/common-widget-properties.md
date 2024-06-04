@@ -455,8 +455,8 @@ In the example below, the **Caption** property of a [Text Widget](/refguide/text
 
 In addition to adding new parameters, you can perform the following actions on parameters:
 
-* **Delete** – to delete a parameter click Delete or press <kbd>Delete</kbd> on your keyboard
-* **Edit** – double-click a parameter to edit it or click Edit
+* **Delete** – to delete a parameter click **Delete** or press <kbd>Delete</kbd> on your keyboard
+* **Edit** – double-click a parameter to edit it or click **Edit**
 * **Move up** – to move a parameter up in the list of parameters and also to change its index, click **Move up**
 * **Move down** – to move a parameter down in the list of parameters and also to change its index, click **Move down**
 

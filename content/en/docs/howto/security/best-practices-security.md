@@ -23,7 +23,7 @@ The Mendix architecture includes the Mendix Client, which can compose its own qu
 
 {{< figure src="/attachments/howto/security/best-practices-security/mendix-runtime-architecture.png" alt="Mendix Runtime Architecture"   width="500"  class="no-border" >}}
 
-When designing an application, a developer can specify access rules on an entity (for more information, see [How to Create A Secure App](/howto/security/create-a-secure-app/)). These access rules are applied whenever a query (received from a client) should be executed, thus they constrain the data returned to the client. For example, users with the "Customer" role can only view orders that are associated to the customer of which this user is part.
+When designing an application, you can specify access rules on an entity (for more information, see [How to Create A Secure App](/howto/security/create-a-secure-app/)). These access rules are applied whenever a query (received from a client) should be executed, thus they constrain the data returned to the client. For example, users with the "Customer" role can only view orders that are associated to the customer of which this user is part.
 
 While the data that should be viewable and editable in which role is application-specific, the following best practices are key:
 
@@ -240,7 +240,7 @@ If you are running your Mendix app on Mendix for Private Cloud, you can configur
 
 The Mendix Cloud Foundry Buildpack and Mendix Docker Buildpack also provide [an option to configure HTTP headers](https://github.com/mendix/cf-mendix-buildpack#built-in-proxy-configuration).
 
-If you use a traditional deployment of your Mendix app, using Windows or Linux, you need to set up these headers on the web server in front of your Mendix application server, for example in Microsoft Internet Informations Services (IIS).
+If you use a traditional deployment of your Mendix app, using Windows or Linux, you need to set up these headers on the web server in front of your Mendix application server, for example in Microsoft Internet Information Services (IIS).
 
 ## 13 Maintaining a High Level of App Hygiene
 

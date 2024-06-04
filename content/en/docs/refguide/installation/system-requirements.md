@@ -39,16 +39,24 @@ If you were using parallels and enabled port forwarding, but then upgraded and w
 
 The following frameworks are required. They will be installed automatically by the Studio Pro installer, if necessary:
 
-* Microsoft .NET 6.0.x desktop runtime (x64) and all applicable Windows security patches
+* Microsoft .NET desktop runtime (x64) and all applicable Windows security patches
+
+    | Studio Pro 10.0.0 - 10.10.0 | Studio Pro 10.11.0 and above |
+    | --- | --- |
+    | .NET 6 Desktop Runtime | .NET 8 Desktop Runtime |
+    
 * Microsoft Visual C++ 2019 Redistributable Package (x64)
-* A Java Developer Kit (JDK) version 11 or 17 - if not yet installed on your machine, Mendix will install 'Eclipse Temurin JDK 11 (x64)'
+* A Java Developer Kit (JDK) version 11, 17, or 21 - if not yet installed on your machine, Mendix will install 'Eclipse Temurin JDK 21 (x64)'
 * Git for Windows (x64) version 2.41.0 or above (for more information, see the [Prerequisites](/refguide/install/#prerequisites) section in *Installing Mendix Studio Pro*)
 * Mendix Native Mobile Builder
 * Microsoft Edge WebView2 Evergreen Runtime (x64)
 
 When you are running Studio Pro on a Parallels virtual machine on an ARM64 device (for example, an M1 Mac), you need the following dependencies in addition to the x64 version listed above:
 
-* .NET 6 Desktop Runtime (arm64)
+* .NET Desktop Runtime (arm64)
+    | Studio Pro 10.0.0 - 10.10.0 | Studio Pro 10.11.0 and above |
+    | --- | --- |
+    | .NET 6 Desktop Runtime | .NET 8 Desktop Runtime |
 * Microsoft Edge WebView2 Evergreen Runtime (arm64)
 
 {{% alert color="info" %}}
@@ -203,10 +211,10 @@ The Mendix Docker buildpack supports the following Kubernetes versions:
 
 ### 6.3 Java {#java}
 
-When running Mendix on a server, you will need Java Runtime Environment (JRE) 11 or 17. To download an OpenJDK distribution from Adoptium, see [Adoptium Installation](https://adoptium.net/temurin/releases). To download a commercial Oracle distribution, see [Java SE Downloads](https://www.oracle.com/technetwork/java/javase/downloads/index.html).
+When running Mendix on a server, you will need Java Runtime Environment (JRE) 11, 17, or 21. To download an Eclipse Temurin OpenJDK distribution from Adoptium, see [Eclipse Temurin™ Latest Releases](https://adoptium.net/temurin/releases). To download a commercial Oracle distribution, see [Java SE Downloads](https://www.oracle.com/technetwork/java/javase/downloads/index.html).
 
 {{% alert color="warning" %}}
-Compatibility with JDK 17 has been released with Studio Pro version 10.8. Compatibility with Java 21 is planned for Studio Pro version 10.10, to be released in April 2024. Mendix recommends switching to a Studio Pro version compatible with Java 21 once it is available.
+Compatibility with JDK 17 has been released with Studio Pro version 10.8. Compatibility with Java 21 has been released with Studio Pro version 10.11. Mendix recommends switching to a Studio Pro version compatible with Java 21.
 {{% /alert %}}
 
 ## 7 Databases {#databases}
@@ -287,7 +295,12 @@ Depending on your app's complexity, these minimum hardware requirements might no
 
 MxBuild is a Windows and Linux command-line tool that can be used to build a Mendix Deployment Package. For more information, see [MxBuild](/refguide/mxbuild/).
 
-* .NET 6.0
+* .NET
+
+    | Studio Pro 10.0.0 - 10.10.0 | Studio Pro 10.11.0 and above |
+    | --- | --- |
+    | .NET 6 | .NET 8 |
+
 * JDK 11
 
 ## 12 mx Command-Line Tool {#mxtool}

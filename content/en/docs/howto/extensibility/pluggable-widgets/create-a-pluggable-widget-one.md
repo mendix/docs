@@ -155,7 +155,7 @@ Open the *(YourMendixApp)/myPluggableWidgets/textBox* folder in your IDE of choi
 
     When done generating the types can be found in `typings/TextBoxProps.d.ts`
 
-    {{% alert color="info" %}}The console will display an error along the lines of *"HelloWorldSample.tsx could not be found"*. We will address this in the section [Labeling the Input](#label-input) of this how-to. It can be ignored for now.{{% /alert %}}
+    {{% alert color="info" %}}The console will display an error along the lines of `HelloWorldSample.tsx could not be found`. We will address this in the section [Labeling the Input](#label-input) of this how-to. It can be ignored for now.{{% /alert %}}
 
 4. Create a new file, `src/components/TextInput.tsx`. This will be the display component. A display component is a regular React component and does not interact with Mendix APIs. It can be re-used in any React application.
 

@@ -400,26 +400,26 @@ The widget can be made visible to a specific of the user roles available in your
 
 ## 10 Common Property Types
 
-This section details common inputs that share behavior, found in the page editor.
+This section explains common inputs that share behavior, found in the page editor.
 
 ### 10.1 Text Template {#text-template}
 
-Properties using the Text template offer the ability to display dynamic text on pages. This is done by writing templates with placeholders and specifying parameters. During runtime the placeholders are substituted by the parameters.
+Properties using **Text Template** allows dynamic text to be displayed on pages. This is done by writing templates with placeholders and specifying parameters. During runtime, the placeholders are substituted by the parameters.
 
 #### 10.1.1 Template
 
-The template supports both static and dynamic text. It can be edited from the properties pane as well as the pop up. Open the pop-up with the **Edit ...** button for a full view of the template and its parameters.
+**Template** supports both static and dynamic text. It can be edited from the properties pane as well as the dialog box. Open the dialog box with the **Edit ...** button for a detailed view of the template and its parameters.
 
-Placeholders are used to place parameters in the text. The placeholder follows the format `{i}`, where _i_ is the index of a specific parameter from the [parameter list](#text-template-parameters). Parameters can be referenced multiple times and out of order.
+Use placeholders to place parameters in the text. Placeholders must follow the format `{i}`, where _i_ is the index of a specific parameter from the [parameter list](#text-template-parameters). Parameters can be referenced multiple times, and can be referenced out of order.
 
 {{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/caption-edit-button.png" alt="Opening Parameters" width="450" >}} 
 
 #### 10.1.3 Parameters {#text-template-parameters}
 
-Parameters define what data is inserted into the template and how it is formatted. Parameters can refer to object attributes or expressions. Editing parameters is done in the pop-up view, which can be opened in two ways:
+Parameters define what data is inserted into the template and how it is formatted. Parameters can refer to object attributes or expressions. Editing parameters is done in the dialog box view, which can be opened in two ways:
 
-* From the properties sidebar: Double click the property (e.g. "Caption") or click the more button (...).
-* From the widget properties pop-up: Click the **Edit ...** button next to the property's textbox.
+* From the properties sidebar: double-click the property (for example, "Caption") or click the "more" ellipsis (...)
+* From the widget properties dialog box: click the **Edit ...** button next to the property's textbox
 
 Parameters have the following settings:
 
@@ -435,18 +435,18 @@ You can use the formatter functions in the expression editor when using expressi
 
 ##### 10.1.3.1 Adding New Parameters
 
-To be able to use parameters, the widget must be in the context of an entity -- such as a [Data widget](/refguide/data-view), [Snippet parameter](http://localhost:1313/refguide/snippet/#parameters), or [Page parameter](/refguide/page-properties/#parameters). Then to use them:
+To be able to use parameters, the widget must be in the context of an entity such as a [Data widget](/refguide/data-view), [Snippet parameter](http://localhost:1313/refguide/snippet/#parameters), or [Page parameter](/refguide/page-properties/#parameters). To use parameters, do the following:
 
-1. Open the widget properties 
-1. Click the **Edit ...** of the template property to open the pop-up.
-1. In the **Parameters** section click **New**:
+1. Open the relavant widget's properties.
+1. Click the **Edit ...** of the template property to open the properties dialog box.
+1. In the **Parameters** section, click **New**:
 
     {{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/adding-parameter.png" alt="Adding New Parameter"  width="450" >}}
 
-1. In the **Edit Template Parameter** dialog box, click **Select**, choose an attribute and confirm your choice.
-1. Edit the template and add a placeholder that matches the index of your parameter, for example `{1}`.
+1. In the **Edit Template Parameter** dialog box, click **Select**, choose an attribute, and confirm your choice.
+1. Edit the template and add a placeholder that matches the index of your parameter (for example `{1}`).
 
-In the example below the *Caption* property of a [Text Widget](/refguide/text) is being edited. Three attributes have been added which are used in the template. The placeholder `{1}` corresponds to the *Title* attribute, `{2}` to *NrOfPages*, and `{3}` to *DatePublished*.
+In the example below, the **Caption** property of a [Text Widget](/refguide/text) is being edited. Three attributes have been added which are used in the template. The placeholder `{1}` corresponds to the **Title** attribute, `{2}` to **NrOfPages**, and `{3}` to **DatePublished**:
 
 {{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/parameters-example.png" alt="Parameter Example"  width="450" >}}
 

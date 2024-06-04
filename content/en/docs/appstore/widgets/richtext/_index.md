@@ -206,7 +206,7 @@ The full configuration of the menubar groups are as follows:
 * **Highlight on focus** - adds a blue outline to the editor when that editor is made the input focus
 * **Additional stylesheet** - allows the user to add an additional stylesheet that will be included inside the editor's iframe to apply custom styling.
     * User can include an additional stylesheet file in the theme folder and add the filename inside the **Additional stylesheet** input.  
-    * It is also possible to use built-in stylesheets called "*Default*" and "*Dark*", or alternate between them using the expression editor.
+    * It is also possible to use built-in stylesheets called `'Default'` and `'Dark'`, or alternate between them using the expression editor.
         
     {{< figure src="/attachments/appstore/widgets/rich-text/rte_style_expression.png" alt="Example" class="no-border" >}}
 

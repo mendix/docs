@@ -284,7 +284,7 @@ To call the Transform endpoint of the Registration API, you need the following:
 
 You can see an example of a request that converts a *dependencies.json* file below:
 
-```curl
+```bash
 curl --location --request POST 'https://catalog.mendix.com/rest/registration/v5/transform/dependenciesjson' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: MxToken <your_Personal_Access_Token>' \

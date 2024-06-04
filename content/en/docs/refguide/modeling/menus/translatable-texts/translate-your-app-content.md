@@ -146,12 +146,12 @@ Sometimes a single word in the source language does not have a single translatio
 To handle this, follow the steps below:
 
 1. Follow steps **1** through **6** in the [previous section](#translate-multiple-texts) to see the list of texts in your module which can be translated from **English, United States** to **(Chinese (Simplified), China**.
-2. In the **Searchs** field, enter *Order*.
-3. In the grid, click the translatable text **Order**. The **#** column shows that there are three places where this text is used. The locations are listed in the **Show occurrence** section.
+2. In the **Search** field, enter *Order*.
+3. In the grid, click the translatable text **Order**. The **#** column shows that there are three places where this text is used. The locations are listed in the **Show occurrence** field.
 
     {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/batch-translate-order.png" alt="All source texts containing the word 'order' with the locations of the text 'order' shown" class="no-border" width="600" >}}
 
-4. In the **Show occurrence** section, the **Object** column shows that one of the locations of the text **Order** is the **Action button 'actionButton3'** on the **Product_NewEdit** page. This is the button added to allow the end-user to order the product. To confirm this, double-click the row of **Action button 'actionButton3'**.
+4. In the **Show occurrence** field, the **Object** column shows that one of the locations of the text **Order** is the **Action button 'actionButton3'** on the **Product_NewEdit** page. This is the button added to allow the end-user to order the product. To confirm this, double-click the row of **Action button 'actionButton3'**.
 
     {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/product-new-edit-order.png" alt="Order button on Product New Edit page" class="no-border"  width="650" >}}
 
@@ -160,17 +160,17 @@ To handle this, follow the steps below:
 5. If you made any translations, click **Translate** to save them.
 6. Click **Close** to close the dialog box.
 7. In your app, the text *Order* is used as the command to order a product, and is used to refer to the Order entity. However, in Chinese, the translations for these two scenarios are different. To solve this issue, open the **Product_NewEdit** page.
-8. Edit the text on the button to reflect the verb *to order*. In Chinese, this is *заказать*.
+8. Edit the text on the button to reflect the verb *to order*. In Chinese, this is *下单*.
 
-    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/product-new-edit-order-russian.png" alt="Order button on Product New Edit page translated into Chinese" class="no-border" width="600" >}}
+    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/product-new-edit-order-chinese.png" alt="Order button on Product New Edit page translated into Chinese" class="no-border" width="300" >}}
 
 9. Go to the **Language** > **Batch Translate** to open the dialog box and search for *Order* in the module **MyFirstModule**. 
 
-    Now in the grid, **Order** has two rows: one row has the translation **заказать**, and the other row has no translation.
+    Now in the grid, **Order** has two rows: one row has the translation *下单*, and the other row has no translation.
 
     {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/batch-translate-order-split.png" alt="All source texts containing the word 'order' showing that ones with different translations are shown separately. " class="no-border" width="600" >}}
 
-10. In the row where **Order** has no translation, enter *Заказ*. This is the Chinese translation for *an order*.
+10. In the row where **Order** has no translation, enter *订单*. This is the Chinese translation for *an order*.
 
     {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/batch-translate-order-2-translations.png" alt="All source texts containing the word 'order' showing two different translations for Order. " class="no-border" >}}
 

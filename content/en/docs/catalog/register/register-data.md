@@ -145,7 +145,6 @@ To register services, you need the following:
 * Service version `Version` and `Security Scheme`
 * Service `Contract` with `Type` and `Value`
 
-
 {{% alert color="warning" %}}
 Once a version is released to production, any updated contracts should be given a new version. This applies even if you are only registering for a non-production environment.
 

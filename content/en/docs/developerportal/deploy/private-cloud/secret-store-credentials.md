@@ -705,11 +705,11 @@ To enable your environment to use [Azure Key Vault](https://learn.microsoft.com/
 
 For more information, see the [Azure Key Vault Provider](https://azure.github.io/secrets-store-csi-driver-provider-azure/docs/getting-started/usage/#create-your-own-secretproviderclass-object) example in the Azure Key Vault documentation.
 
-#### 3.3.1 Using Managed Identity authentication for Postgres databases {#configure-using-azwi-postgres}
+#### 3.3.1 Using Managed Identity Authentication for Postgres Databases {#configure-using-azwi-postgres}
 
 [Azure Postgres (Flexible Server)](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/service-overview) databases can use [managed identity authentication](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/how-to-connect-with-managed-identity) instead of regular passwords.
 
-{{% alert color="warning" %}}Azure has a legacy Postgres (Single Server) database. The Mendix Operator doesn't support [managed identity authentication for Single Server databases](https://learn.microsoft.com/en-us/azure/postgresql/single-server/how-to-configure-sign-in-azure-ad-authentication), only the new Flexible Server is supported. This section only applies to Flexible Server databases.{{% /alert %}}
+{{% alert color="warning" %}}Azure has a legacy Postgres (Single Server) database. The Mendix Operator does not support [managed identity authentication for Single Server databases](https://learn.microsoft.com/en-us/azure/postgresql/single-server/how-to-configure-sign-in-azure-ad-authentication), only the new Flexible Server is supported. This section only applies to Flexible Server databases.{{% /alert %}}
 
 To use this feature, you need to:
 
@@ -742,7 +742,7 @@ After completing the prerequisites, follow these steps to switch from password-b
 When using managed identity authentication, the Mendix app's environment (`m2ee-sidecar` container) uses that app's attached Managed Identity role to request a new Postgres password a few minutes before it expires using the [identity API](https://learn.microsoft.com/en-us/azure/service-connector/tutorial-passwordless?tabs=user%2Cgo%2Csql-me-id-dotnet%2Cappservice&pivots=postgresql#connect-to-a-database-with-microsoft-entra-authentication). These password have an expiration time between a few minutes and a few hours.
 Passwords are only checked when opening a new connection, so an expired password does not cancel any existing connections or interrupt any running database transactions and queries.
 
-#### 3.3.2 Using Managed Identity authentication for Azure SQL databases {#configure-using-azwi-sql}
+#### 3.3.2 Using Managed Identity Authentication for Azure SQL Databases {#configure-using-azwi-sql}
 
 [Azure SQL](https://learn.microsoft.com/en-us/azure/azure-sql/database/) databases can use [managed identity authentication](https://learn.microsoft.com/en-us/azure/azure-sql/database/authentication-aad-overview) instead of regular passwords.
 
@@ -773,7 +773,7 @@ After completing the prerequisites, follow these steps to switch from password-b
 
 Azure SQL database drivers have built-in support for Managed Identity authentication and use their local environment's Managed Identity.
 
-#### 3.3.3 Using Managed Identity authentication for Azure Blob Storage {#configure-using-azwi-blobstorage}
+#### 3.3.3 Using Managed Identity Authentication for Azure Blob Storage {#configure-using-azwi-blobstorage}
 
 [Azure Blob Storage](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-overview) accounts can use [managed identity authentication](https://learn.microsoft.com/en-us/azure/storage/blobs/authorize-access-azure-active-directory) instead of static access keys.
 

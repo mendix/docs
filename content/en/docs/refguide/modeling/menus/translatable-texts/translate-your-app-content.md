@@ -147,7 +147,7 @@ To handle this, follow the steps below:
 
 1. Follow steps **1** through **6** in the [previous section](#translate-multiple-texts) to see the list of texts in your module which can be translated from **English, United States** to **(Chinese (Simplified), China**.
 2. In the **Search** field, enter *Order*.
-3. In the grid, click the translatable text **Order**. The **#** column shows that there are three places where this text is used. The locations are listed in the **Show occurrence** field.
+3. In the grid, there are two lines for the text **Order**. The **#** column shows that there are three places where this text is used (one instance in the first line, and two in the second). The locations are listed in the **Show occurrence** field.
 
     {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/batch-translate-order.png" alt="All source texts containing the word 'order' with the locations of the text 'order' shown" class="no-border" width="600" >}}
 

@@ -155,7 +155,7 @@ For more details on what can and cannot be provided in these fields, see the [AP
 
 You can see an example of a request below:
 
-```curl
+```bash
 curl --location --request PUT 'https://catalog.mendix.com/rest/registration/v5/applications/{application_UUID}/environments/{environment_UUID}/published-endpoints' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: MxToken <your_Personal_Access_Token>'\

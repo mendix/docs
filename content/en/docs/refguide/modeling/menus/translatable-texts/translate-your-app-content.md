@@ -129,7 +129,7 @@ To translate multiple occurrences and multiple texts from the default language, 
 
     {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/batch-translate-initial.png" alt="Translatable texts in MyFirstModule" class="no-border" >}}
 
-7. Enter translations in the **Translation (Chinese (Simplified), China)** column for a few terms: **Cancel**, **Delete**, and **Edit**.
+7. Enter translations in the **Translation (Chinese (Simplified), China)** column for the terms **Cancel** and **Edit Order**.
 
     {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/batch-translate-cancel-edit.png" alt="Translate Cancel and Edit Order into Chinese" class="no-border" >}}
 

@@ -190,14 +190,7 @@ Once you have made some translations, you may want to look at the translations t
 
     {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/batch-replace-russian-initial.png" alt="All texts which have been translated into Russian." class="no-border" >}}
 
-    You can see that you have been inconsistent with use of capital letters. So you need to make it more consistent.
-
-3. Enter the new text in the **Replace with** column.
-
-    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/batch-replace-russian-capitals.png" alt="All texts which have been translated into Russian." class="no-border" >}}
-
-4. Click **Replace** to update the translation dictionary.
-5. Click **Close** to close the dialog box.
+3. Enter any translations that need to be replaced in the **Replace with** column, then click **Replace**.
 
 ## 8 Copying to a New Language
 

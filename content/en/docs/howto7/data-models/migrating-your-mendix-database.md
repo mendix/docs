@@ -1,9 +1,8 @@
 ---
 title: "Migrate Your Mendix Database"
 url: /howto7/data-models/migrating-your-mendix-database/
-category: "Data Models"
+
 weight: 7
-tags: ["database", "migrate", "postgresql", "export", "import"]
 ---
 
 ## 1 Introduction
@@ -37,11 +36,11 @@ See [Custom Settings](/refguide7/custom-settings/) for more information on the f
 
 * Modeler: in **Project Explorer**, expand **Project**, double-click **Settings**, edit a configuration, go to the right-most tab called **Custom**:
 
-    {{< figure src="/attachments/howto7/data-models/migrating-your-mendix-database/19398970.png" >}} 
+    {{< figure src="/attachments/howto7/data-models/migrating-your-mendix-database/19398970.png" class="no-border" >}} 
 
 * Service Console: click an app in the left pane, click **Configuration**, click **Advanced**, see Custom Mendix settings.
 
-    {{< figure src="/attachments/howto7/data-models/migrating-your-mendix-database/19398971.png" >}} 
+    {{< figure src="/attachments/howto7/data-models/migrating-your-mendix-database/19398971.png" class="no-border" >}} 
 
 * m2ee-tools: add the custom settings to the mxruntime section. See [https://github.com/mendix/m2ee-tools/blob/develop/examples/full-documented-m2ee.yaml](https://github.com/mendix/m2ee-tools/blob/develop/examples/full-documented-m2ee.yaml)
 

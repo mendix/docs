@@ -1,9 +1,8 @@
 ---
 title: "Company Brand"
 url: /control-center/company-brand/
-category: "Control Center"
+
 description: "Describes the Company Brand page in the Mendix Control Center."
-tags: ["control center", "mendix admin", "company brand"]
 weight: 35
 no_list: list
 ---
@@ -14,4 +13,4 @@ On the **Company Brand** page, you can upload, edit, or remove a **Company Logo*
 
 You can upload, edit, or remove a **Cover image**. The cover image uploaded here will be available for usage in your company onboarding.
 
-{{< figure src="/attachments/control-center/company-branding/company-brand.png" >}}
+{{< figure src="/attachments/control-center/company-branding/company-brand.png" class="no-border" >}}

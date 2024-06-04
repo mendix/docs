@@ -3,7 +3,6 @@ title: "Adaptable Solution Commands"
 url: /refguide/mx-command-line-tool/adaptable
 weight: 20
 description: "Describes the adaptable solution-related commands for the mx command-line tool."
-tags: ["mx", "command-line", "tool", "mx", "studio pro", "windows", "linux", "solution", "check"]
 ---
 
 ## 1 Introduction

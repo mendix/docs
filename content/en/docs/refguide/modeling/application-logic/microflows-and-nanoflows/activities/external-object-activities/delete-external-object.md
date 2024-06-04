@@ -1,7 +1,6 @@
 ---
 title: "Delete External Object"
 url: /refguide/delete-external-object/
-tags: ["studio pro", "integration activity", "delete external object"]
 ---
 
 {{% alert color="info" %}}

@@ -1,8 +1,7 @@
 ---
 title: "Logging"
 url: /refguide8/logging/
-category: "Mendix Runtime"
-tags: ["studio pro"]
+
 ---
 
 ## 1 Introduction

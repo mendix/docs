@@ -2,7 +2,6 @@
 title: "Layout"
 url: /refguide/layout/
 weight: 2
-tags: ["studio pro", "layout widgets", "layout", "page template", "pages"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -10,7 +9,7 @@ tags: ["studio pro", "layout widgets", "layout", "page template", "pages"]
 
 Layouts specify what comes where. Each [page](/refguide/page/) is based on a layout. The layout contains widgets and structures that return on every page based on that layout. For example, it is common to put a menu bar widget in a layout so that the menu is visible on all pages.
 
-{{< figure src="/attachments/refguide/modeling/pages/page-resources/layout/layout-example.png"   width="400"  >}}
+{{< figure src="/attachments/refguide/modeling/pages/page-resources/layout/layout-example.png"   width="400"  class="no-border" >}}
 
 A layout consists of content and [placeholders](/refguide/placeholder/). The content is everything that should be present in every page that uses the layout, from navigation bars to sign-out buttons. Placeholders are empty areas that later form the canvas for any pages that make use of the layout. The layout content remains the same in every page, but the placeholders cover what is unique to every individual page. 
 
@@ -44,7 +43,7 @@ Styling:
 
 **Platform** can only be set when a layout is created.
 
-{{< figure src="/attachments/refguide/modeling/pages/page-resources/layout/add-layout.png" alt="Dialog for adding a new layout" >}}
+{{< figure src="/attachments/refguide/modeling/pages/page-resources/layout/add-layout.png" alt="Dialog for adding a new layout" class="no-border" >}}
 
 The values for the platform property are:
 

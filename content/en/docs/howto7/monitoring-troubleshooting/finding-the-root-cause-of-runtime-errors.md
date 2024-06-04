@@ -1,9 +1,8 @@
 ---
 title: "Find the Root Cause of Runtime Errors"
 url: /howto7/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/
-category: "Monitoring and Troubleshooting"
+
 weight: 8
-tags: ["monitoring", "troubleshooting", "runtime error", "runtime", "error"]
 ---
 
 ## 1 Introduction
@@ -18,11 +17,11 @@ This how-to teaches you how to do the following:
 
 If the application is deployed from the Modeler, the information is located in the console:
 
-{{< figure src="/attachments/howto7/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/18580024.png" >}}
+{{< figure src="/attachments/howto7/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/18580024.png" class="no-border" >}}
 
 When an error occurs, a line with a red font will appear in the console.  Double-clicking on this line brings up the **VIew Log Line Details** pop-up window:
 
-{{< figure src="/attachments/howto7/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/18580023.png" >}}
+{{< figure src="/attachments/howto7/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/18580023.png" class="no-border" >}}
 
 There are three key pieces of information in this window:
 
@@ -42,7 +41,7 @@ You need to have the timestamp of when the error occurred. The logs can contain 
 
 {{% /alert %}}
 
-{{< figure src="/attachments/howto7/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/18580022.png" >}}
+{{< figure src="/attachments/howto7/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/18580022.png" class="no-border" >}}
 
 Go to the section of the log that corresponds to the time of the error. There will be a number of lines in that timeframe that have `ERROR –` after the timestamp. These are the lines of the log file that contain the necessary information. There are three key pieces of information here:
 

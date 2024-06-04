@@ -1,7 +1,6 @@
 ---
 title: "Data Grid (Document Template)"
 url: /refguide9/data-grid-document-template/
-tags: ["studio pro"]
 aliases:
     - /refguide9/Data+Grid+(document+template).html
     - /refguide9/data-grid-(document-template).html
@@ -16,7 +15,7 @@ The data grid shows a list of objects in a grid. For example, a data grid can sh
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide9/modeling/resources/document-templates/data-grid-document-template/918138.png" >}}
+{{< figure src="/attachments/refguide9/modeling/resources/document-templates/data-grid-document-template/918138.png" class="no-border" >}}
 
 A data grid showing a list of orders with a description and the referenced customer name.
 

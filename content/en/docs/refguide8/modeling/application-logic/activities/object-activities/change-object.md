@@ -2,7 +2,6 @@
 title: "Change Object"
 url: /refguide8/change-object/
 weight: 20
-tags: ["studio pro"]
 ---
 
 {{% alert color="warning" %}}
@@ -17,7 +16,7 @@ The change object activity can be used to change the members of an object. This 
 
 An example of change object properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/activities/object-activities/change-object/change-properties.png" alt="change object properties" >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/object-activities/change-object/change-properties.png" alt="change object properties" class="no-border" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

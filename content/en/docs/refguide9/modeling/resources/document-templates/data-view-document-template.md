@@ -1,7 +1,6 @@
 ---
 title: "Data View (Document Template)"
 url: /refguide9/data-view-document-template/
-tags: ["studio pro"]
 aliases:
     - /refguide9/Data+View+(document+template).html
     - /refguide9/data-view-(document-template).html
@@ -16,7 +15,7 @@ The data view is used for showing the contents of exactly one object. If, for ex
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide9/modeling/resources/document-templates/data-view-document-template/918139.png" >}}
+{{< figure src="/attachments/refguide9/modeling/resources/document-templates/data-view-document-template/918139.png" class="no-border" >}}
 
 A data view showing orderline information.
 

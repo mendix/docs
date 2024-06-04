@@ -4,7 +4,6 @@ linktitle: "Legacy Scheduled Events"
 url: /refguide9/scheduled-events-legacy/
 weight: 20
 description: "Options for configuring scheduled events"
-tags: ["Scheduled Event", "Execution properties", "Timing", "intervals", "scheduling issues", "time zones", "daylight saving"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -126,14 +125,15 @@ switch(scheduledEvent.getIntervalType())
 }
 ```
 
-{{% alert color="warning" %}}
-If it is absolutely critical to run a scheduled event on a specific day of the month, you should schedule the event to run daily and then check whether this is the right day of the month to run it. 
+#### 5.2.3 Running a Scheduled Event on a Specific Day
 
-In your microflow you should start with a decision using an expression such as:
+If it is absolutely critical to run a scheduled event on a specific day of the month, schedule the event to run daily and have it check whether it is the right day of the month to run it. 
+
+In your microflow, start with a decision using an expression similar to this:
 
 ```java {linenos=false}
 parseInteger( formatDateTime( [%CurrentDateTime%], 'dd') ) = 15
-// This will run the scheduled event on the 15th of the month
+// This runs the scheduled event on the 15th of the month
 ```
 
 To run it on the last day of the month, you can use this suggestion from [Herbert Vujik](https://community.mendix.com/link/questions/6934):
@@ -141,8 +141,6 @@ To run it on the last day of the month, you can use this suggestion from [Herber
 ```java {linenos=false}
 formatDateTime([%CurrentDateTime%], 'dd') = formatDateTime([%EndOfCurrentMonth%], 'dd') 
 ```
-
-{{% /alert %}}
 
 ### 5.3 Specifying the Time
 

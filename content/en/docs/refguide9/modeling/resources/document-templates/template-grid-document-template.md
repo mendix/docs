@@ -1,7 +1,6 @@
 ---
 title: "Template Grid (Document Template)"
 url: /refguide9/template-grid-document-template/
-tags: ["studio pro"]
 aliases:
     - /refguide9/Template+Grid+(document+template).html
     - /refguide9/template-grid-(document-template).html
@@ -16,7 +15,7 @@ The template grid shows a list of objects in a tile view. For example, a templat
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide9/modeling/resources/document-templates/918137.png" >}}
+{{< figure src="/attachments/refguide9/modeling/resources/document-templates/918137.png" class="no-border" >}}
 
 A template grid showing products with name, description, and image.
 

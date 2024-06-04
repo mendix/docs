@@ -2,7 +2,6 @@
 title: "Unary Expressions"
 url: /refguide8/unary-expressions/
 weight: 10
-tags: ["studio pro", "unary expression", "expression", "expressions"]
 ---
 
 ## 1 Introduction

@@ -1,9 +1,10 @@
 ---
 title: "Configuring CI/CD on Azure"
-url: /private-mendix-platform-configure-azure/
+url: /private-mendix-platform/configure-azure/
 description: "Documents the initial configuration for the Private Mendix Platform."
 weight: 30
-tags: ["private mendix platform",  "private platform", "private marketplace", "azure"]
+aliases:
+    - /private-mendix-platform-configure-azure/
 ---
 
 ## 1 Introduction
@@ -26,7 +27,7 @@ If you have an Azure organization, you can set Azure as your CI System in **Sett
 
 Finally, you must also [register your Kubernetes cluster](#register-cluster).
 
-{{< figure src="/attachments/private-platform/pmp-cicd4.png" >}}
+{{< figure src="/attachments/private-platform/pmp-cicd4.png" class="no-border" >}}
 
 ### 2.1 Obtaining a Personal Access Token {#pat}
 
@@ -227,12 +228,12 @@ The diagrams in this section present the architecture and components of the pipe
 
 ### 3.1 Architecture with the Auto Detect Mx Version Setting Enabled
 
-The following diagram shows the architecture of the pipeline if you enable the **Auto Detect Mx Version** setting. For more information, see [Build Images Setting](/private-mendix-platform-configure-k8s/#build-images).
+The following diagram shows the architecture of the pipeline if you enable the **Auto Detect Mx Version** setting. For more information, see [Build Images Setting](/private-mendix-platform/configure-k8s/#build-images).
 
-{{< figure src="/attachments/private-platform/pmp-cicd2.png" alt="Auto Detect Mx Runtime Version" >}}
+{{< figure src="/attachments/private-platform/pmp-cicd2.png" alt="Auto Detect Mx Runtime Version" class="no-border" >}}
 
 ### 3.2 Architecture with the Auto Detect Mx Version Setting Disabled
 
-The following diagram shows the architecture of the pipeline if you disable the **Auto Detect Mx Version** setting. For more information, see [Build Images Setting](/private-mendix-platform-configure-k8s/#build-images).
+The following diagram shows the architecture of the pipeline if you disable the **Auto Detect Mx Version** setting. For more information, see [Build Images Setting](/private-mendix-platform/configure-k8s/#build-images).
 
-{{< figure src="/attachments/private-platform/pmp-cicd3.png" alt="User Input Mx Runtime Version" >}}
+{{< figure src="/attachments/private-platform/pmp-cicd3.png" alt="User Input Mx Runtime Version" class="no-border" >}}

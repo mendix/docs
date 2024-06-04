@@ -2,7 +2,6 @@
 title: "Static Image"
 url: /refguide/image/
 weight: 20
-tags: ["studio pro", "image", "image widget"]
 aliases:
     - /refguide/image-property.html
     - /refguide/image-property
@@ -20,7 +19,7 @@ The **Static image** widget can be used to show a static image on a page, layout
 
 For example, you can configure an image clicking which a page with customer details opens:
 
-{{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/image/image-example.png" alt="Image Example" >}}
+{{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/image/image-example.png" alt="Image Example" class="no-border" >}}
 
 {{% alert color="info" %}}
 If you want to dynamically show different images based on data, you need to add [dynamic image](/refguide/image-viewer/) on your page.
@@ -30,7 +29,7 @@ If you want to dynamically show different images based on data, you need to add 
 
 An example of static image properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/image/image-properties.png" alt="Image Properties"   width="300"  >}}
+{{< figure src="/attachments/refguide/modeling/pages/image-and-file-widgets/image/image-properties.png" alt="Image Properties"   width="300"  class="no-border" >}}
 
 Static image properties consist of the following sections:
 

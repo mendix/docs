@@ -1,10 +1,9 @@
 ---
 title: "System Requirements"
 url: /refguide/system-requirements/
-category: "Installation"
+
 weight: 20
 description: "Presents the system requirements for using the Mendix Platform."
-tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -22,8 +21,6 @@ Mendix Studio Pro has the requirements listed in the following sections.
 
 Studio Pro 10.7 and above can run in beta mode on an ARM Mac and Intel Mac running macOS Sonoma 14.0 and above. For information on known limitation, see the [Known Limitations for Mac](#mac-limitations) section below. 
 
-Studio Pro versions 10.0 and above can run on the M series Apple Silicon Mac using [Parallels 17](https://www.parallels.com/) and Windows 11. Earlier versions of Studio Pro can run on Apple Mac [using Parallels](/refguide/using-mendix-studio-pro-on-a-mac/).
-
 {{% alert color="info" %}}
 While Studio Pro on Mac is in [public beta](/releasenotes/beta-features/), Mendix can only verify support for the latest macOS version available. Support for earlier versions is not guaranteed and it is best to update macOS to the newest version when using Studio Pro. 
 {{% /alert %}}
@@ -32,18 +29,34 @@ While Studio Pro on Mac is in [public beta](/releasenotes/beta-features/), Mendi
 Administrator rights are required to install Mendix Studio Pro on Mac (Beta).
 {{% /alert %}}
 
+Studio Pro versions 10.0 and above can run on the M series Apple Silicon Mac using [Parallels 17](https://www.parallels.com/) and Windows 11. Earlier versions of Studio Pro can run on Apple Mac [using Parallels](/refguide/using-mendix-studio-pro-on-a-mac/). 
+
+{{% alert color="info" %}}
+
+If you were using parallels and enabled port forwarding, but then upgraded and would like to use Studio Pro on Mac, make sure to quit parallels to be able to sign in to Studio Pro. 
+
+{{% /alert %}}
+
 The following frameworks are required. They will be installed automatically by the Studio Pro installer, if necessary:
 
-* Microsoft .NET 6.0.x desktop runtime (x64) and all applicable Windows security patches
+* Microsoft .NET desktop runtime (x64) and all applicable Windows security patches
+
+    | Studio Pro 10.0.0 - 10.10.0 | Studio Pro 10.11.0 and above |
+    | --- | --- |
+    | .NET 6 Desktop Runtime | .NET 8 Desktop Runtime |
+    
 * Microsoft Visual C++ 2019 Redistributable Package (x64)
-* A Java Developer Kit (JDK) version 11 or 17 - if not yet installed on your machine, Mendix will install 'Eclipse Temurin JDK 11 (x64)'
-* Git for Windows (x64) version 2.41.0 or above
+* A Java Developer Kit (JDK) version 11, 17, or 21 - if not yet installed on your machine, Mendix will install 'Eclipse Temurin JDK 21 (x64)'
+* Git for Windows (x64) version 2.41.0 or above (for more information, see the [Prerequisites](/refguide/install/#prerequisites) section in *Installing Mendix Studio Pro*)
 * Mendix Native Mobile Builder
 * Microsoft Edge WebView2 Evergreen Runtime (x64)
 
 When you are running Studio Pro on a Parallels virtual machine on an ARM64 device (for example, an M1 Mac), you need the following dependencies in addition to the x64 version listed above:
 
-* .NET 6 Desktop Runtime (arm64)
+* .NET Desktop Runtime (arm64)
+    | Studio Pro 10.0.0 - 10.10.0 | Studio Pro 10.11.0 and above |
+    | --- | --- |
+    | .NET 6 Desktop Runtime | .NET 8 Desktop Runtime |
 * Microsoft Edge WebView2 Evergreen Runtime (arm64)
 
 {{% alert color="info" %}}
@@ -189,9 +202,6 @@ The Mendix Docker buildpack supports the following Kubernetes versions:
 * Microsoft Windows Server 2012 and above
 * The following Unix-like operating systems:
     * [Debian OldOldStable (LTS)](https://wiki.debian.org/DebianOldOldStable), [Debian OldStable, Debian Stable](https://wiki.debian.org/DebianReleases#Current_Releases.2FRepositories)
-    * Red Hat Enterprise Linux 8 and later
-    * CentOS 7
-    * CentOS Stream 8 and later
 
 ### 6.2 Web Server
 
@@ -201,10 +211,10 @@ The Mendix Docker buildpack supports the following Kubernetes versions:
 
 ### 6.3 Java {#java}
 
-When running Mendix on a server, you will need Java Runtime Environment (JRE) 11 or 17. To download an OpenJDK distribution from Adoptium, see [Adoptium Installation](https://adoptium.net/temurin/releases). To download a commercial Oracle distribution, see [Java SE Downloads](https://www.oracle.com/technetwork/java/javase/downloads/index.html).
+When running Mendix on a server, you will need Java Runtime Environment (JRE) 11, 17, or 21. To download an Eclipse Temurin OpenJDK distribution from Adoptium, see [Eclipse Temurin™ Latest Releases](https://adoptium.net/temurin/releases). To download a commercial Oracle distribution, see [Java SE Downloads](https://www.oracle.com/technetwork/java/javase/downloads/index.html).
 
 {{% alert color="warning" %}}
-Compatibility with JDK 17 has been released with Studio Pro version 10.8. Compatibility with Java 21 is planned for Studio Pro version 10.10, to be released in April 2024. Mendix recommends switching to a Studio Pro version compatible with Java 21 once it is available.
+Compatibility with JDK 17 has been released with Studio Pro version 10.8. Compatibility with Java 21 has been released with Studio Pro version 10.11. Mendix recommends switching to a Studio Pro version compatible with Java 21.
 {{% /alert %}}
 
 ## 7 Databases {#databases}
@@ -285,7 +295,12 @@ Depending on your app's complexity, these minimum hardware requirements might no
 
 MxBuild is a Windows and Linux command-line tool that can be used to build a Mendix Deployment Package. For more information, see [MxBuild](/refguide/mxbuild/).
 
-* .NET 6.0
+* .NET
+
+    | Studio Pro 10.0.0 - 10.10.0 | Studio Pro 10.11.0 and above |
+    | --- | --- |
+    | .NET 6 | .NET 8 |
+
 * JDK 11
 
 ## 12 mx Command-Line Tool {#mxtool}

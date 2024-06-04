@@ -2,9 +2,8 @@
 title: "Pull to Refresh"
 deprecated: true
 url: /appstore/widgets/pull-to-refresh/
-category: "Widgets"
+
 description: "Describes the configuration and usage of the Pull to Refresh widget, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "widget", "pull to refresh", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -41,4 +40,4 @@ To use this widget, follow these steps:
     1. **Text when refreshing**
 3. In the client, pull down the page until the **Release to refresh text** appears in order to refresh the page.
 
-{{< figure src="/attachments/appstore/widgets/pull-to-refresh/demo.gif" >}}
+{{< figure src="/attachments/appstore/widgets/pull-to-refresh/demo.gif" class="no-border" >}}

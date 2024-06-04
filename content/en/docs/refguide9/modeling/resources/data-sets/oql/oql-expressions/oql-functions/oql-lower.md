@@ -1,7 +1,6 @@
 ---
 title: "OQL LOWER"
 url: /refguide9/oql-lower/
-tags: ["studio pro"]
 ---
 
 {{% alert color="info" %}}

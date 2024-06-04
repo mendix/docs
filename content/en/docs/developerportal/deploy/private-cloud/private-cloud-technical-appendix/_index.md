@@ -3,7 +3,6 @@ title: "Technical Appendix for Mendix Private Cloud"
 url: /developerportal/deploy/private-cloud-technical-appendix/
 description: "Landing page for the Private Cloud Technical Appendix"
 weight: 80
-tags: ["Private Cloud", "Technical Appendix"]
 ---
 
 ## 1 Introduction

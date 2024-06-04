@@ -4,7 +4,6 @@ linktitle: "Retrieving Current User with a Microflow"
 url: /refguide/retrieving-current-user-with-a-microflow/
 weight: 6
 description: "Describes how to retrieve the current user of your application in Studio Pro with a microflow."
-tags: ["microflow", "current user", "retrieve"]
 ---
 
 ## 1 Introduction
@@ -45,7 +44,7 @@ To retrieve the currently logged-in user using the **Account** entity from the *
 
 Now you have the microflow that retrieves the current user!
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/retrieving-current-user/retrieving-current-user.png" width="600px" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/retrieving-current-user/retrieving-current-user.png" width="600px" class="no-border" >}}
 
 ## 4 Read More
 

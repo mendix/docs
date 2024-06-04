@@ -3,7 +3,6 @@ title: "Microsoft Windows"
 url: /developerportal/deploy/deploy-mendix-on-microsoft-windows/
 description: "How to install and configure Mendix on a system running Microsoft Windows"
 weight: 50
-tags: ["deploy", "Windows", "On Premises", "Microsoft", "Mendix Service Console", "IIS", "URL Rewrite", "Client Cache", "Reverse Inbound Proxy", "Host Header"]
 aliases:
     - /deployment/on-premises/deploy-mendix-on-microsoft-windows.html
     - /deployment/on-premises/deploy-mendix-on-microsoft-windows
@@ -52,7 +51,7 @@ Before starting this how-to, make sure you have the following prerequisites:
 
 To download and install the Mendix Service Console, follow these steps:
 
-1. Download the latest version of the Mendix Service Console by following the **Related downloads** link from the [Studio Pro Download Page](https://marketplace.mendix.com/link/studiopro/) of the Marketplace.
+1. Download the latest version of the [Mendix Service Console](https://marketplace.mendix.com/link/component/223425) module from the Marketplace.
 
     {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/service_console_download.png" >}}
 
@@ -98,9 +97,9 @@ To deploy a Mendix app using the Mendix Service Console, follow these steps:
 
     {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/18580728.png" >}}
 
-5. On the **Project Files** screen, click **Select app...**.
+5. On the **Project Files** screen, click **Select app…**.
 
-    {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/18580727.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/service_console_selectapp.png" >}}
 
 6. Now select the **MDA** file that was [created in Studio Pro](/refguide/create-deployment-package-dialog/) and contains your application logic. After the installation of your MDA file, you will see which Mendix server (Mendix Runtime) version is needed.
 

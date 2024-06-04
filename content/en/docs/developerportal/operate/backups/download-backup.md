@@ -3,7 +3,6 @@ title: "Downloading a Backup"
 url: /developerportal/operate/download-backup/
 weight: 20
 description: "This page describes how to download a backup."
-tags: ["Backup","Download","Mendix Cloud","Developer Portal"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -39,16 +38,16 @@ To download a backup of a licensed app, follow these steps:
 4. In the navigation pane, click **Backups**.
 5. Select the environment from which you want to download the backup.
 
-    {{< figure src="/attachments/developerportal/operate/backups/download-backup/environment.png" width="25%" >}}
+    {{< figure src="/attachments/developerportal/operate/backups/download-backup/environment.png" width="25%" class="no-border" >}}
 
 6. If you want to create a backup first, click **Create Backup**.
 7. On the backup you want to download, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}). Select **Download** from the drop-down list.
 
-    {{< figure src="/attachments/developerportal/operate/backups/download-backup/backupoptions.png" >}}
+    {{< figure src="/attachments/developerportal/operate/backups/download-backup/backupoptions.png" class="no-border" >}}
 
 8. Select the backup type: **Full snapshot**, **Database only**, or **Files only**. Then click **Start**.
 
-    {{< figure src="/attachments/developerportal/operate/backups/download-backup/backup-choice.png" alt="" width=75% >}}
+    {{< figure src="/attachments/developerportal/operate/backups/download-backup/backup-choice.png" alt="" width=75% class="no-border" >}}
 
     {{% alert color="info" %}}If a backup archive has been prepared recently, the **Show URL** and **Download** buttons will be active. In this case, you can download the backup archive immediately.{{% /alert %}}
     

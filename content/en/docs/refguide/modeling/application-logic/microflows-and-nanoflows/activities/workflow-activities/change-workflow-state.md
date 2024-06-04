@@ -2,7 +2,6 @@
 title: "Change Workflow State"
 url: /refguide/change-workflow-state/
 weight: 20
-tags: ["studio pro", "user task", "workflow", "change workflow state", "workflow state"]
 ---
 
 {{% alert color="info" %}}
@@ -17,7 +16,7 @@ The **Change workflow state** activity can be used to add **Abort**, **Continue*
 
 An example of change workflow state properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/change-workflow-state/properties.png" alt="Change Workflow State Properties" width="650px" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/change-workflow-state/properties.png" alt="Change Workflow State Properties" width="650px" class="no-border" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

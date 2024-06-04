@@ -2,7 +2,6 @@
 title: "On Click Event and Events Section"
 url: /refguide9/on-click-event/
 weight: 130
-tags: ["studio pro", "events section", "properties", "widget", "on click", "action", "on click event"]
 aliases:
     - /refguide9/opening-pages.html
     - /refguide9/starting-microflows.html
@@ -26,7 +25,7 @@ Events specify actions which can be triggered when the end-user interacts with a
 
 An **On click** event specifies an event that is executed when a user clicks a widget. Often the **On click** property is a part of the **Events** section in properties. For example, you can specify that when a user clicks a customer's profile image, the page with this customer's details will open:
 
-{{< figure src="/attachments/refguide9/modeling/pages/on-click-event/on-click-event-example.png"   width="350"  >}}
+{{< figure src="/attachments/refguide9/modeling/pages/on-click-event/on-click-event-example.png"   width="350"  class="no-border" >}}
 
 An on-click event is common for many widgets (for example, image, buttons, list view). 
 
@@ -120,7 +119,7 @@ The [microflow](/refguide9/microflow/) that should be executed.
 
 **Microflow settings** opens a dialog box enabling you to specify what parameters will be passed to the microflow and how the microflow will be run.
 
-{{< figure src="/attachments/refguide9/modeling/pages/on-click-event/microflow-settings.png" alt="Microflow settings dialog" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/on-click-event/microflow-settings.png" alt="Microflow settings dialog" class="no-border" >}}
 
 ##### 3.3.2.1 Microflow
 

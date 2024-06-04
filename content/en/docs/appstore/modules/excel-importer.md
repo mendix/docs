@@ -1,9 +1,8 @@
 ---
 title: "Excel Importer"
 url: /appstore/modules/excel-importer/
-category: "Modules"
+
 description: "Describes the configuration and usage of the Excel Importer module, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "excel importer", "excel", "mapping", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

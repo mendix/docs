@@ -3,7 +3,6 @@ title: "Amazon Bedrock"
 url: /appstore/modules/aws/amazon-bedrock/
 description: "Describes the configuration and usage of the Amazon Bedrock connector from the Mendix Marketplace. Amazon Bedrock is a fully managed service that makes foundation models (FMs) from Amazon and leading AI startups available through an API."
 weight: 20
-tags: ["marketplace", "marketplace component", "amazon", "bedrock", "connector"]
 aliases:
     - /appstore/connectors/aws/amazon-bedrock/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
@@ -127,7 +126,7 @@ To invoke a specific model, perform the following steps:
     7. Map the relevant elements to the correct attributes by double-clicking the shown entities and choosing the correct entity attributes for the correct elements.
 6. Create a microflow that invokes a specific model using the [Invoke Model](#invoke-model) operation, such as in the following figure (for Claude v. 2.1):
 
-    {{< figure src="/attachments/appstore/modules/aws-bedrock/microflow.png" >}}
+    {{< figure src="/attachments/appstore/modules/aws-bedrock/microflow.png" class="no-border" >}}
 
 ### 3.5 Invoking an Agent with the InvokeAgent Operation
 
@@ -801,7 +800,7 @@ The `ObservationRetrievedReference` holds information about a sources cited for 
 
 ### 4.2 Activities {#activities}
 
-Activities define the actions that are executed in a microflow or a nanoflow. For more information, see [Activities](https://docs.mendix.com/refguide/activities/).
+Activities define the actions that are executed in a microflow or a nanoflow. For more information, see [Activities](/refguide/activities/).
 
 #### 4.2.1 ListFoundationModels {#list-foundation-models}
 

@@ -3,7 +3,6 @@ title: "Advanced Custom Settings in Mendix Runtime"
 linktitle: "Advanced Custom Settings"
 url: /refguide7/tricky-custom-runtime-settings/
 description: "Describes advanced custom settings in Mendix Runtime and how to configure them."
-tags: ["Support", "custom settings"]
 ---
 
 ## 1 Introduction
@@ -93,7 +92,7 @@ The most interesting setting is `ConnectionPoolingMaxActive`, as this caps the t
 
 And/or you get a DB connection pool graph that looks like this:
 
-{{< figure src="/attachments/refguide7/runtime/custom-settings/tricky-custom-runtime-settings/mendix-customsettings-tricky-img1.png" >}}
+{{< figure src="/attachments/refguide7/runtime/custom-settings/tricky-custom-runtime-settings/mendix-customsettings-tricky-img1.png" class="no-border" >}}
 
 It will be tempting to increase the `ConnectionPoolingMaxActive` value to a (much) higher number. But if any of the following are true, this is not the right action to take:
 

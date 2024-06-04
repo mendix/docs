@@ -4,7 +4,6 @@ linktitle: "Non-Interactive Mode"
 url: /developerportal/deploy/private-cloud-cli-non-interactive/
 description: "Describes how to install and configure Mendix for Private Cloud in non-interactive mode"
 weight: 5
-tags: ["Create", "Private Cloud", "Cluster", "Namespace"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
@@ -29,7 +28,7 @@ The following parameters may be used in the commands:
 
 When using connected mode, you need to put namespace id and namespace secret as arguments. These parameters are used by the Mendix Gateway Agent to connect to the Private Cloud Portal. You can see these values in the installation command, as the -i and -s parameters, respectively.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/private-cloud-cli-non-interactive/installation-command.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/private-cloud-cli-non-interactive/installation-command.png" class="no-border" >}}
 
 ## 2 Base Installation
 

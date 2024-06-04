@@ -1,10 +1,9 @@
 ---
 title: "Private Cloud"
 url: /developerportal/deploy/private-cloud/
-category: "Deployment"
+
 description: "Describes how to deploy to a Private Cloud."
 weight: 48
-tags: ["Deployment", "Private Cloud", "Environment"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
@@ -53,13 +52,13 @@ If you have chosen to register a connected cluster, the Mendix Gateway Agent wil
 
 Using this channel, any Mendix user who has been given the correct authority can pass instructions to the Mendix Operator and receive status information about the cluster. This includes instructions needed to deploy an app, or to configure the environment.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/mx4pc-architecture.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/mx4pc-architecture.png" class="no-border" >}}
 
 ### 2.2 Standalone Architecture
 
 If you have chosen to register a standalone cluster, then all communication with the Mendix Operator will be through instructions which are made directly through the Kubernetes API. These can be made manually, but are generally performed by your CI/CD pipeline. In this case, you will also have to have local source control of the Mendix app deployment packages to ensure that the deployment process can discover them.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/mx4pc-standalone-architecture.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/mx4pc-standalone-architecture.png" class="no-border" >}}
 
 ## 3 Product Capability Comparison
 
@@ -89,18 +88,18 @@ Each Mendix app or environment pod has the following containers:
 
 All of those containers, including the sidecar containers, have specific resource requests and limits, so each Mendix app pod will request a certain amount of CPU cores and memory.
 
-The Mendix container is specified per app in the portal. You can update the resource allocation in the [Mendix App CR](https://docs.mendix.com/developerportal/deploy/private-cloud-operator/#edit-cr).
-The m2ee-sidecar container's resources are specified in the [OperatorConfiguration CR](https://docs.mendix.com/developerportal/deploy/private-cloud-cluster/#635-resource-definition-via-operator-configuration-manifest).
+The Mendix container is specified per app in the portal. You can update the resource allocation in the [Mendix App CR](/developerportal/deploy/private-cloud-operator/#edit-cr).
+The m2ee-sidecar container's resources are specified in the [OperatorConfiguration CR](/developerportal/deploy/private-cloud-cluster/#resource-definition-ocm).
 
 {{% alert color="info" %}}
 If the app is running in Standalone mode and its MendixApp CR does not have any resources assigned in the MendixApp CR specification resources, the Mendix Operator will use the value of *OperatorConfiguration* CR's *spec.runtimeResources* instead.
 {{% /alert %}}
 
-If the customer decided to use a [Vertical Pod autoscaler](https://docs.mendix.com/developerportal/deploy/private-cloud-cluster/#663-vertical-pod-autoscaling), the autoscaler can override any pod or container resources.
+If the customer decided to use a [Vertical Pod autoscaler](/developerportal/deploy/private-cloud-cluster/#vertical-pod-autoscaling), the autoscaler can override any pod or container resources.
 
 When a user sets CPU and memory limits, the JVM (JRE 8u191+) will automatically detect the container requests and limits, and automatically set Java memory limits based on the container details.
 However, by default, the JVM will limit the heap memory to 25% of the container's memory limit. Mx4PC just sets the container limits, but does not go further into configuring the JVM. 
-This percentage can be adjusted by providing a custom value in Custom JVM Options in the [Runtime tab](https://docs.mendix.com/developerportal/deploy/private-cloud-deploy/#54-runtime-tab) in the Private Cloud Portal, for example: *-XX:MaxRAMPercentage=75.0*.
+This percentage can be adjusted by providing a custom value in Custom JVM Options in the [Runtime tab](/developerportal/deploy/private-cloud-deploy/#54-runtime-tab) in the Private Cloud Portal, for example: *-XX:MaxRAMPercentage=75.0*.
 
 ## 5 Licensing Mendix for Private Cloud{#licensing}
 

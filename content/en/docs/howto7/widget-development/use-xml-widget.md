@@ -1,8 +1,7 @@
 ---
 title: "Use XML in Widget Development"
 url: /howto7/widget-development/use-xml-widget/
-category: "Widget Development"
-tags: ["xml", "widget"]
+
 ---
 
 ## 1 Requirements
@@ -133,7 +132,7 @@ A property of type Boolean requires the attribute defaultValue.
 
 What it looks like in the Mendix Modeler:
 
-{{< figure src="/attachments/howto7/widget-development/use-xml-widget/16844049.png" >}}
+{{< figure src="/attachments/howto7/widget-development/use-xml-widget/16844049.png" class="no-border" >}}
 
 ### 5.2.1 Entity
 
@@ -182,7 +181,7 @@ It requires a default value to be set, which should correspond with one of the e
 
 What it looks like in the Mendix Modeler:
 
-{{< figure src="/attachments/howto7/widget-development/use-xml-widget/16844042.jpg" >}}
+{{< figure src="/attachments/howto7/widget-development/use-xml-widget/16844042.jpg" class="no-border" >}}
 
 ### 5.2.4 Form
 
@@ -309,7 +308,7 @@ The object property is an array of packaged sub-properties. It packages multiple
 
 What it looks like in the Mendix Modeler:
 
-{{< figure src="/attachments/howto7/widget-development/use-xml-widget/16844048.png" >}}
+{{< figure src="/attachments/howto7/widget-development/use-xml-widget/16844048.png" class="no-border" >}}
 
 ### 5.2.10 String
 
@@ -341,7 +340,7 @@ The translatableString property is similar to a normal string property, except y
 
 What it looks like in the Mendix Modeler:
 
-{{< figure src="/attachments/howto7/widget-development/use-xml-widget/16844045.png" >}}
+{{< figure src="/attachments/howto7/widget-development/use-xml-widget/16844045.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 Remember to use the correct language notation according to the [Java supported locales](https://www.oracle.com/java/technologies/javase/locales.html).

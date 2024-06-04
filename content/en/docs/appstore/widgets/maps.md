@@ -1,9 +1,8 @@
 ---
 title: "Maps"
 url: /appstore/widgets/maps/
-category: "Widgets"
+
 description: "Describes the configuration and usage of the Maps widget, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "widget", "maps", "google maps", "openstreetmap", "mapbox", "here maps", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -30,7 +29,7 @@ If you want to configure more of your map (for example, end-user interactions an
 {{% alert color="info" %}}
 If you are using Google Maps, be sure to include an empty JSON array (specifically `{}`) in **Advanced** > **Map Styles** so your widget is successfully displayed in your app:
 
-{{< figure src="/attachments/appstore/widgets/maps/gmaps.png" >}}
+{{< figure src="/attachments/appstore/widgets/maps/gmaps.png" class="no-border" >}}
 
 {{% /alert %}}
 

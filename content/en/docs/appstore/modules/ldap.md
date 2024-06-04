@@ -1,9 +1,8 @@
 ---
 title: "LDAP"
 url: /appstore/modules/ldap/
-category: "Modules"
+
 description: "Describes the configuration and usage of the LDAP module, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "ldap", "IdP", "identity provider", "platform support"]
 ##If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the marketplace.
 ---
 
@@ -81,7 +80,7 @@ The following instructions assume that you want the Administrator role in your a
 1. Add the **Ldap.OpenLdapServersOverview** microflow to your app's navigation. Only give access to administrators.
 1. Add the **Ldap.LdapAdmin** module role to your **Administrator** user role. This will grant end-users with the Administrator role access to the LDAP admin functionality.
 
-    {{< figure src="/attachments/appstore/modules/ldap/ldap-admin-user-role.png" width="33%" >}}
+    {{< figure src="/attachments/appstore/modules/ldap/ldap-admin-user-role.png" width="33%" class="no-border" >}}
 
 1. Set the constant **EncryptionKey** in the **Encryption** module to a 32-character string. This key is used when encrypting and decrypting communication with the LDAP server.
 1. Your application is now ready to deploy. Follow the [configuration](#configuration) instructions, below, to configure LDAP further.

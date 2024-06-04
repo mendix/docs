@@ -1,7 +1,6 @@
 ---
 title: "OQL Limit Clause"
 url: /refguide8/oql-limit-clause/
-tags: ["studio pro"]
 ---
 
 With the limit clause a portion of the result of a query can be returned.

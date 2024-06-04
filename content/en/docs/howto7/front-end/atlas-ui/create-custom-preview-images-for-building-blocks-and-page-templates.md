@@ -3,7 +3,6 @@ title: "Create Custom Preview Images for Building Blocks and Page Templates"
 linktitle: "Custom Preview Images"
 url: /howto7/front-end/create-custom-preview-images-for-building-blocks-and-page-templates/
 weight: 50
-tags: ["Atlas", "UI", "UX", "user experience"]
 ---
 
 ## 1 Introduction
@@ -17,7 +16,7 @@ This how-to teaches you how to do the following:
 
 ## 2 Creating Building Block Preview Images
 
-{{< figure src="/attachments/howto7/front-end/atlas-ui/create-custom-preview-images-for-building-blocks-and-page-templates/create_custom_image_bb.png" >}}
+{{< figure src="/attachments/howto7/front-end/atlas-ui/create-custom-preview-images-for-building-blocks-and-page-templates/create_custom_image_bb.png" class="no-border" >}}
 
 ### 2.1 Creating a Building Block Preview Image in Sketch
 
@@ -31,7 +30,7 @@ To create a building block preview image in Sketch, follow these steps:
     * **Size**: 1x
     * **Format**: PNG
 
-    {{< figure src="/attachments/howto7/front-end/atlas-ui/create-custom-preview-images-for-building-blocks-and-page-templates/create_custom_image_bb_sketch.png" >}}
+    {{< figure src="/attachments/howto7/front-end/atlas-ui/create-custom-preview-images-for-building-blocks-and-page-templates/create_custom_image_bb_sketch.png" class="no-border" >}}
 
 6. Export your image.
 
@@ -43,7 +42,7 @@ To create a building block preview image in Photoshop, follow these steps:
 2. Open the Photoshop file named **BB_previewimage.psd**.
 3. Double-click the smart object in the **Layers** panel.
 
-    {{< figure src="/attachments/howto7/front-end/atlas-ui/create-custom-preview-images-for-building-blocks-and-page-templates/create_custom_image_bb_photoshop.png" >}}
+    {{< figure src="/attachments/howto7/front-end/atlas-ui/create-custom-preview-images-for-building-blocks-and-page-templates/create_custom_image_bb_photoshop.png" class="no-border" >}}
 
 4. Replace the contents of the folder with your building block preview image.
 5. Save your changes and navigate back to your template file.
@@ -62,7 +61,7 @@ To create a building block preview image in Illustrator, follow these steps:
     * **Scale**: 1x
     * **Format**: PNG
 
-    {{< figure src="/attachments/howto7/front-end/atlas-ui/create-custom-preview-images-for-building-blocks-and-page-templates/create_custom_image_bb_illustrator.png" >}}
+    {{< figure src="/attachments/howto7/front-end/atlas-ui/create-custom-preview-images-for-building-blocks-and-page-templates/create_custom_image_bb_illustrator.png" class="no-border" >}}
 
 7. Export your image.
 
@@ -72,7 +71,7 @@ You can also create your building block preview image in a different image edito
 
 ## 3 Creating Page Template Preview Images
 
-{{< figure src="/attachments/howto7/front-end/atlas-ui/create-custom-preview-images-for-building-blocks-and-page-templates/create_custom_image_pt.png" >}}
+{{< figure src="/attachments/howto7/front-end/atlas-ui/create-custom-preview-images-for-building-blocks-and-page-templates/create_custom_image_pt.png" class="no-border" >}}
 
 ### 3.1 Creating a Page Template Preview Image in Sketch
 
@@ -86,7 +85,7 @@ To create a page template preview image in Sketch, follow these steps:
     * **Size**: 1x
     * **Format**: PNG
 
-    {{< figure src="/attachments/howto7/front-end/atlas-ui/create-custom-preview-images-for-building-blocks-and-page-templates/create_custom_image_pt_sketch.png" >}}
+    {{< figure src="/attachments/howto7/front-end/atlas-ui/create-custom-preview-images-for-building-blocks-and-page-templates/create_custom_image_pt_sketch.png" class="no-border" >}}
 
 6. Export your image.
 
@@ -98,7 +97,7 @@ To create a page template preview image in Photoshop, follow these steps:
 2. Open the Photoshop file named **PT_previewimage.psd**.
 3. Double-click the smart object in the **Layers** panel.
 
-    {{< figure src="/attachments/howto7/front-end/atlas-ui/create-custom-preview-images-for-building-blocks-and-page-templates/create_custom_image_pt_photoshop.png" >}}
+    {{< figure src="/attachments/howto7/front-end/atlas-ui/create-custom-preview-images-for-building-blocks-and-page-templates/create_custom_image_pt_photoshop.png" class="no-border" >}}
 
 4. Replace the contents of the folder with your page template preview image.
 5. Save your changes and navigate back to your template file. If you are happy with your image, export your file as a *.png* file.
@@ -116,7 +115,7 @@ To create a page template preview image in Illustrator, follow these steps:
     * **Scale**: 1x
     * **Format**: PNG
 
-    {{< figure src="/attachments/howto7/front-end/atlas-ui/create-custom-preview-images-for-building-blocks-and-page-templates/create_custom_image_bb_illustrator.png" >}}
+    {{< figure src="/attachments/howto7/front-end/atlas-ui/create-custom-preview-images-for-building-blocks-and-page-templates/create_custom_image_bb_illustrator.png" class="no-border" >}}
 
 7. Export your image.
 

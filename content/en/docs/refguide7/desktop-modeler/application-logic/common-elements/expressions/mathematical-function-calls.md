@@ -1,6 +1,7 @@
 ---
 title: "Mathematical function calls"
 url: /refguide7/mathematical-function-calls/
+canonical_url: "https://docs.mendix.com/refguide/mathematical-function-calls/"
 ---
 
 

@@ -3,7 +3,6 @@ title: "Merging and Diffing commands"
 url: /refguide/mx-command-line-tool/merge
 weight: 50
 description: "Describes the commands related to merging and diffing apps for the mx command-line tool."
-tags: ["mx", "command-line", "tool", "mx", "studio pro", "windows", "linux", "diff", "merge"]
 ---
 
 ## 1 Introduction
@@ -79,7 +78,7 @@ These are the `OPTIONS`:
 
 The image below illustrates the meaning of the parameters:
 
-{{< figure src="/attachments/refguide/general/mx-command-line-tool/merge.png" alt="mx merge" >}}
+{{< figure src="/attachments/refguide/general/mx-command-line-tool/merge.png" alt="mx merge" class="no-border" >}}
 
 In the diagram, note the following:
 

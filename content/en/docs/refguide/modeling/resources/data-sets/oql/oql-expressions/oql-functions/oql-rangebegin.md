@@ -1,7 +1,6 @@
 ---
 title: "OQL RANGEBEGIN"
 url: /refguide/oql-rangebegin/
-tags: ["studio pro"]
 ---
 
 ## 1 Description
@@ -14,7 +13,7 @@ The `RANGEBEGIN` function extracts the initial value of a range parameter.
 
 The syntax is as follows:
 
-```sql
+```sql {linenos=false}
 RANGEBEGIN ( $range )
 ```
 
@@ -24,14 +23,14 @@ RANGEBEGIN ( $range )
 
 This is an example of using a range in OQL, where `$range` is set to last week, which will give you all the customers born in the last week:
 
-```sql
+```sql {linenos=false}
 SELECT FirstName AS First, LastName AS Last, Name AS Name, Birthday AS BDay, CustomerType AS Type FROM Sales.Customer
 WHERE Birthday IN ($rangeLastWeek)
 ```
 
 This example uses the `RANGEBEGIN` function in the `WHERE` clause, which will give you all the customers born since the beginning of last week:
 
-```sql
+```sql {linenos=false}
 SELECT FirstName AS First, LastName AS Last, Name AS Name, Birthday AS BDay, CustomerType AS Type FROM Sales.Customer
 WHERE Birthday > RANGEBEGIN($rangeLastWeek)
 ```

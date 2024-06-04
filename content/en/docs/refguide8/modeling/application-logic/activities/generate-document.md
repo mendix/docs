@@ -3,7 +3,6 @@ title: "Generate Document"
 url: /refguide8/generate-document/
 weight: 80
 description: "Describes generating documents from a microflow. "
-tags: ["PDF", "document", "document template", "HTML", "Microsoft Word", "ODT", "studio pro", "generate document"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -15,7 +14,7 @@ This activity can only be used in **Microflows**.
 
 The **Generate document** activity is used to write a document to a file, based on a [document template](/refguide8/document-templates/). 
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/activities/generate-document/generate-document.png" alt="Generate Document" >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/generate-document/generate-document.png" alt="Generate Document" class="no-border" >}}
 
 For more information on which types of documents can be created, see [Document Type](#document-type).
 
@@ -23,7 +22,7 @@ For more information on which types of documents can be created, see [Document T
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/activities/generate-document/generate-document-properties.png" alt="Generate Document Properties" >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/generate-document/generate-document-properties.png" alt="Generate Document Properties" class="no-border" >}}
 
 The **Generate document** properties pane consists of the following sections:
 

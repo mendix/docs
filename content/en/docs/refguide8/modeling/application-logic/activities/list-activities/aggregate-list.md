@@ -2,7 +2,6 @@
 title: "Aggregate List"
 url: /refguide8/aggregate-list/
 weight: 1
-tags: ["studio pro", "Aggregate", "Sum", "Average", "Count", "Minimum", "Maximum"]
 ---
 
 {{% alert color="warning" %}}
@@ -23,7 +22,7 @@ The **Aggregate list** activity can be used to calculate aggregated values over 
 
 An example of aggregate list properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/activities/list-activities/aggregate-list/aggregate-list-properties.png" alt="aggregate list properties" >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/list-activities/aggregate-list/aggregate-list-properties.png" alt="aggregate list properties" class="no-border" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

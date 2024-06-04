@@ -1,10 +1,9 @@
 ---
 title: "Mendix Client"
 url: /refguide/mendix-client/
-category: "Mendix Runtime"
+
 description: "Describes the Mendix Client part of the Mendix Runtime and how it functions."
 weight: 20
-tags: ["runtime", "mendix client", "offline-first", "browser", "javascript", "nanoflows", "widgets", "launch"]
 ---
 
 ## 1 Introduction
@@ -43,7 +42,7 @@ The first two of these load a bundle dynamically, while the last one includes a 
 
 Here is a chart showing the components of the Mendix Client (for more information on the components, see the sections written beneath the chart):
 
-{{< figure src="/attachments/refguide/runtime/mendix-client/mendix-client.png" alt="The makeup of the Mendix Client" >}}
+{{< figure src="/attachments/refguide/runtime/mendix-client/mendix-client.png" alt="The makeup of the Mendix Client" class="no-border" >}}
 
 ### 2.1 Client Core
 

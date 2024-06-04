@@ -20,11 +20,16 @@ paths:
       description: '> Returns a list of feedback items based on the query parameters. Using storyId or legacyId will always return a list containing a single item.'
       operationId: get-feedback-items
       parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
         - $ref: '#/components/parameters/projectId'
         - $ref: '#/components/parameters/storyId'
         - $ref: '#/components/parameters/legacyId'
         - $ref: '#/components/parameters/status'
         - $ref: '#/components/parameters/priority'
+        - $ref: '#/components/parameters/email'
         - $ref: '#/components/parameters/limit'
         - $ref: '#/components/parameters/offset'
       responses:
@@ -264,6 +269,13 @@ components:
       schema:
         type: string
         example: '22'
+    email:
+      name: email
+      in: query
+      description: The email address of the reporter
+      required: false
+      schema:
+        type: string
     feedback-item-uuid:
       name: feedback-item-uuid
       in: path
@@ -349,7 +361,7 @@ components:
   securitySchemes:
     Personal Access Token:
       type: apiKey
-      description: 'For more information about requesting and using a token see the [documentation](https://docs.mendix.com/developerportal/community-tools/mendix-profile/user-settings/#pat).<br/> The header value must be set to `MxToken <Your PAT>`.'
+      description: 'For more information about requesting and using a token see the [documentation](https://docs.mendix.com/developerportal/community-tools/mendix-profile/user-settings/#pat).<br/> The header must be set to `MxToken <Your PAT>`.'
       name: Authorization
       in: header
   responses:
@@ -432,7 +444,7 @@ components:
                       type: string
                     pageName:
                       type: string
-                    environmentUrl:
+                    environmentURL:
                       type: string
                     screenSize:
                       type: string
@@ -470,6 +482,13 @@ components:
                       properties:
                         label:
                           type: string
+              tags:
+                type: object
+                properties:
+                  label:
+                    type: string
+                  color:
+                    type: string
           examples:
             Response example:
               value:
@@ -482,7 +501,7 @@ components:
                     summary: I have looked into the logic and I believe this error is related to the export template not being configured correctly
                     activeUserRoles: User
                     pageName: FeedbackManagement/Overview.page.xml
-                    environmentUrl: 'https://purchaserequest.company.com/link/feedback/overview'
+                    environmentURL: 'https://purchaserequest.company.com/link/feedback/overview'
                     screenSize: 1920 x 1080
                     browser: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)'
                     submissionDate: '2023-05-21T09:22:41.321Z'
@@ -522,7 +541,7 @@ components:
                 type: string
               pageName:
                 type: string
-              environmentUrl:
+              environmentURL:
                 type: string
               screenSize:
                 type: string
@@ -560,6 +579,13 @@ components:
                 properties:
                   label:
                     type: string
+              tags:
+                type: object
+                properties:
+                  label:
+                    type: string
+                  color:
+                    type: string
           examples:
             Response example:
               value:
@@ -571,7 +597,7 @@ components:
                 summary: I have looked into the logic and I believe this error is related to the export template not being configured correctly
                 activeUserRoles: User
                 pageName: FeedbackManagement/Overview.page.xml
-                environmentUrl: 'https://purchaserequest.company.com/link/feedback/overview'
+                environmentURL: 'https://purchaserequest.company.com/link/feedback/overview'
                 screenSize: 1920 x 1080
                 browser: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)'
                 submissionDate: '2023-05-21T09:22:41.321Z'

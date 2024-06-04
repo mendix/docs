@@ -2,7 +2,6 @@
 title: "Download File"
 url: /refguide/download-file/
 weight: 20
-tags: ["studio pro", "download file", "client activities"]
 aliases:
     - /refguide/Download+File.html
     - /refguide/Download+File
@@ -29,7 +28,7 @@ The **Download file** activity can be used to enable the browser to download a s
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/download-file/download-file-properties.png" alt="Download File Properties" width="650px" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/download-file/download-file-properties.png" alt="Download File Properties" width="650px" class="no-border" >}}
 
 The **Download file** properties pane consists of the following sections:
 

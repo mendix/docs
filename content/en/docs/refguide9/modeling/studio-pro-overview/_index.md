@@ -1,10 +1,9 @@
 ---
 title: "Studio Pro Overview"
 url: /refguide9/studio-pro-overview/
-category: "App Modeling"
+
 description: "Describes Studio Pro in general, for example, tabs, menus, and shortcut keys."
 weight: 10
-tags: ["Studio Pro"]
 aliases:
     - /refguide9/desktop-modeler-overview.html
     - /refguide9/desktop-modeler-overview
@@ -24,7 +23,7 @@ When Studio Pro is open, press <kbd>F1</kbd> to quickly jump to documentation.
 
 This document describes the user interface of Mendix Studio Pro:
 
-{{< figure src="/attachments/refguide9/modeling/studio-pro-overview/studio-pro-diagram.png" alt="Studio Pro Diagram" >}}
+{{< figure src="/attachments/refguide9/modeling/studio-pro-overview/studio-pro-diagram.png" alt="Studio Pro Diagram" class="no-border" >}}
 
 ## 2 Top Bar {#top-bar}
 
@@ -44,7 +43,7 @@ For more information on menus, see [Menus](/refguide9/menus/).
 
 You can deploy your app by clicking **Publish** or **Run Locally** ({{% icon name="controls-play" %}}). To view your deployed app, click **View App**. 
 
-{{< figure src="/attachments/refguide9/modeling/studio-pro-overview/view-and-publish.png" alt="View App, Publish, and Run Locally buttons" >}}
+{{< figure src="/attachments/refguide9/modeling/studio-pro-overview/view-and-publish.png" alt="View App, Publish, and Run Locally buttons" class="no-border" >}}
 
 For more information on deployment in Mendix, see [Deployment](/developerportal/deploy/).
 
@@ -80,7 +79,7 @@ Each document has its own save state, history, and future, so undo and redo acti
 
 Dockable panes can be positioned around the working area and contain various elements and settings:
 
-{{< figure src="/attachments/refguide9/modeling/studio-pro-overview/pane-example.png" alt="Properties Pane Example" width="300" >}}
+{{< figure src="/attachments/refguide9/modeling/studio-pro-overview/pane-example.png" alt="Properties Pane Example" width="300" class="no-border" >}}
 
 For example, you can view [list of errors](/refguide9/errors-pane/) or run [MxAssist Performance bot](/refguide9/mx-assist-performance-bot/), configure properties of a specific document or an element, view toolbox. For more information on panes and their layout, see [View Menu](/refguide9/view-menu/).
 
@@ -88,7 +87,7 @@ For example, you can view [list of errors](/refguide9/errors-pane/) or run [MxAs
 
 At the bottom of the Studio Pro main window pane is a status bar. On the left is the current status of Studio Pro:
 
-{{< figure src="/attachments/refguide9/modeling/studio-pro-overview/status-bar.png" alt="Status Bar Example" >}}
+{{< figure src="/attachments/refguide9/modeling/studio-pro-overview/status-bar.png" alt="Status Bar Example" class="no-border" >}}
 
 On the right is the currently selected language. If you have set up multiple languages in your app you can change the currently selected language by clicking here. For more information see [Language Menu](/refguide9/translatable-texts/).
 
@@ -108,7 +107,7 @@ These keys are active within the [Dockable Panes](#panes) and editors, such as t
 
 You can navigate between Studio Pro panes (for example, the domain model editor or the **Errors** pane) using <kbd>Ctrl</kbd> + (<kbd>Shift</kbd>) + <kbd>Tab</kbd>. This opens a selection dialog where you can choose a pane using the mouse, <kbd>Ctrl</kbd> + arrow keys, or <kbd>Ctrl</kbd> + (<kbd>Shift</kbd>) + <kbd>Tab</kbd>. You are taken to the selected pane when you click the main mouse button or release the <kbd>Ctrl</kbd> key.
 
-{{< figure src="/attachments/refguide9/modeling/studio-pro-overview/ctrl-tab-navigation.png" >}}
+{{< figure src="/attachments/refguide9/modeling/studio-pro-overview/ctrl-tab-navigation.png" class="no-border" >}}
 
 There are alternative ways to navigate between tabs within panes: 
 

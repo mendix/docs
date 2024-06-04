@@ -2,10 +2,9 @@
 title: "Mendix Best Practices for Development"
 linktitle: "Best Practices for Development"
 url: /refguide9/dev-best-practices/
-category: "General Info"
+
 weight: 12
 description: "Describes Mendix best practices for developing Mendix applications."
-tags: ["best practice", "development", "develop", "reusable", "prefix"]
 aliases:
     - /howto9/general/dev-best-practices/
 #Academy are SMEs for verification, they discuss and link to this doc in training
@@ -344,11 +343,11 @@ Nested `IF` statements in a single microflow expression are not recommended. If 
 
 The example below shows a low-code approach that Mendix recommends, because it presents a clear picture of what is happening in the microflow:
 
-{{< figure src="/attachments/refguide9/modeling/dev-best-practices/recommended-microflow.png" width="700px">}}
+{{< figure src="/attachments/refguide9/modeling/dev-best-practices/recommended-microflow.png" width="700px" class="no-border" >}}
 
 The example below shows an approach that we do not recommend. You can rewrite the microflow expression in this example as `if ($currentDeviceType = System.DeviceType.Phone and $Parameter = true) then true else false` using the `AND` operator. However, it is still not clear enough and the low-code approach shown in the above example is preferable.
 
-{{< figure src="/attachments/refguide9/modeling/dev-best-practices/not-recommended-microflow.png" width="450px">}}
+{{< figure src="/attachments/refguide9/modeling/dev-best-practices/not-recommended-microflow.png" width="450px" class="no-border" >}}
 
 Event triggers on input fields must be kept as simple as possible, since they are potentially executed very often, depending on user behavior. Complex operations here will reduce performance.
 

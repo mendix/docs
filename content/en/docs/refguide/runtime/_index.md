@@ -5,7 +5,6 @@ weight: 40
 description: "Gives an overview of the Mendix Runtime."
 no_list: false
 description_list: true
-tags: ["runtime", "runtime server", "mendix client", "cluster leader"]
 ---
 
 ## 1 Introduction
@@ -18,7 +17,7 @@ Each [patch version](/releasenotes/studio-pro/lts-mts/) of Mendix comes with its
 
 The Mendix Runtime consists of two parts: the [Runtime Server](/refguide/runtime-server/) and the [Mendix Client](/refguide/mendix-client/). The relationship between the two is shown in the diagram below.
 
-{{< figure src="/attachments/refguide/runtime/runtime-overview.png" alt="An overview of the Mendix Runtime" >}}
+{{< figure src="/attachments/refguide/runtime/runtime-overview.png" alt="An overview of the Mendix Runtime" class="no-border" >}}
 
 Each of the components of Mendix Runtime is described below.
 

@@ -4,7 +4,6 @@ linktitle: "Troubleshooting IIS"
 url: /developerportal/deploy/troubleshooting-iis/
 description: "Help on fixing issues with Microsoft IIS, including the use of application logs and other troubleshooting features"
 weight: 40
-tags: ["IIS", "Windows", "Internet Information Services", "Mendix Service Console", "errors"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
@@ -34,7 +33,7 @@ If there are issues with the Mendix app you should see error messages in the Men
 
 ### 2.2 Critical Files Not Found
 
-{{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/troubleshooting-iis/18580723.png" >}}
+{{< figure src="/attachments/developerportal/deploy/on-premises-design/ms-windows/troubleshooting-iis/18580723.png" class="no-border" >}}
 
 You can get this sort of error in two circumstances:
 

@@ -123,13 +123,11 @@ Define Global variables
                         {{- end -}}
                         {{- $text = trim (htmlUnescape ($processSlice | plainify)) " " -}}
                         {{- $scratch.SetInMap $uniqueHit "text" $text -}}
-                        {{- $scratch.SetInMap $uniqueHit "tags" $pageDot.Params.tags -}}
                         {{- $scratch.SetInMap $uniqueHit "mendix_version" $pageDot.Params.mendix_version -}}
                         {{- $scratch.SetInMap $uniqueHit "time_stamp" $pageDot.Lastmod.UTC.Unix -}}
                         {{- $scratch.SetInMap $uniqueHit "weight.position" $sliceNumber -}}
-                        {{- $scratch.SetInMap $uniqueHit "space" $pageDot.Params.space -}}
+                        {{- $scratch.SetInMap $uniqueHit "content_type" $pageDot.Params.content_type -}}
                         {{- $scratch.SetInMap $uniqueHit "type" $pageDot.Type -}}
-                        {{- $scratch.SetInMap $uniqueHit "category" $pageDot.Params.category -}}
                         {{- $scratch.SetInMap $uniqueHit "menu_order" $pageDot.Weight -}}
                         {{- $scratch.SetInMap $uniqueHit "description" $pageDot.Description -}}
                         {{- /* Set different tags depending on whether it is paragraph, list, table, code, or alert */ -}}

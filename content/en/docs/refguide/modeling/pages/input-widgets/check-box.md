@@ -2,7 +2,6 @@
 title: "Check Box"
 url: /refguide/check-box/
 weight: 40
-tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -16,7 +15,7 @@ A checkbox must be placed in a [data container](/refguide/data-widgets/) and dis
 
 For example, this checkbox allows you to see, and set, whether someone is subscribed to your newsletter.
 
-{{< figure src="/attachments/refguide/modeling/pages/input-widgets/check-box/check-box.png" >}}
+{{< figure src="/attachments/refguide/modeling/pages/input-widgets/check-box/check-box.png" class="no-border" >}}
 
 ## 2 Properties Pane
 

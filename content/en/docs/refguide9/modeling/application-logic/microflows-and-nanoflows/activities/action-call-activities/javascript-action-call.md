@@ -3,7 +3,6 @@ title: "JavaScript Action Call"
 url: /refguide9/javascript-action-call/
 weight: 20
 description: "This reference explains the properties of the JavaScript action call activity."
-tags: ["javascript", "return", "variable", "studio pro", "action call"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -15,13 +14,13 @@ This activity can only be used in **Nanoflows**.
 
 The JavaScript action call activity can be used to call a [JavaScript action](/refguide9/javascript-actions/). Arguments can be passed to the action, and the result can be stored.
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/javascript-action-call/javascript-call.png" alt="javascript action call properties"   width="200"  >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/javascript-action-call/javascript-call.png" alt="javascript action call properties"   width="200"  class="no-border" >}}
 
 ## 2 Properties
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/javascript-action-call/javascript-action-call.png" alt="JavaScript Action Properties" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/javascript-action-call/javascript-action-call.png" alt="JavaScript Action Properties" class="no-border" >}}
 
 The **JavaScript action call** properties pane consists of the following sections:
 
@@ -52,7 +51,7 @@ An argument is the input data that you are passing to the JavaScript action. For
 
 The values of the arguments are defined using [expressions](/refguide9/expressions/):
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/java-action-call/argument-edit.png" alt="argument" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/java-action-call/argument-edit.png" alt="argument" class="no-border" >}}
 
 ### 3.3 Return Type {#return-type}
 

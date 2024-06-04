@@ -1,7 +1,6 @@
 ---
 title: "Synchronize to Device"
 url: /refguide/synchronize-to-device/
-tags: ["studio pro", "synchronize to device", "client activities"]
 weight: 60
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -18,7 +17,7 @@ The **Synchronize to device** activity can be used to selectively synchronize on
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/synchronize-to-device/properties.png" alt="Synchronize to device Properties" width="650px" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/synchronize-to-device/properties.png" alt="Synchronize to device Properties" width="650px" class="no-border" >}}
 
 The **Synchronize to device** activity properties consists of the following sections:
 

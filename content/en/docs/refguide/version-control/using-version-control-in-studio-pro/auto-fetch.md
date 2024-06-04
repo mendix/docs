@@ -2,7 +2,6 @@
 title: "Automatic Fetching"
 url: /refguide/auto-fetch/
 weight: 20
-tags: ["git", "auto-fetch", "version-control", "automatic fetching"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -20,7 +19,7 @@ Being aware of what happened on the server allows Studio Pro to guide you during
 
 When automatic fetching is enabled, the repository state indicator is displayed at the bottom right of Studio Pro window.
 
-{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/repository-state-bar.png" >}}
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/repository-state-bar.png" class="no-border" >}}
 
 This indicator shows the following:
 

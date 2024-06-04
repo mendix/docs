@@ -2,13 +2,8 @@
 title: "Change List"
 url: /refguide/change-list/
 weight: 2
-tags: ["studio pro", "List"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-
-{{% alert color="info" %}}
-This activity can be used in both microflows and nanoflows. However, there are minor differences between the way it works in microflows and in nanoflows.
-{{% /alert %}}
 
 ## 1 Introduction
 
@@ -18,7 +13,7 @@ The **Change list** activity allows you to change a list by adding objects to, a
 
 An example of change list properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/change-list/change-list-properties.png" alt="change list properties" width="700px" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/list-activities/change-list/change-list-properties.png" alt="change list properties" width="700px" class="no-border" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
@@ -53,10 +48,6 @@ Defines the type of change that is applied to the list.
 #### 3.2.1 Notes When Using the Add Type{#notes}
 
 If you do not want duplicates in your (microflow) list, you can either remove the object (or objects) first, or use the **Contains** [list operation](/refguide/list-operation/) to examine the list before adding the object (or objects).
-
-{{% alert color="warning" %}}
-Currently, this works differently in **nanoflows** and **microflows**. In a **nanoflow** objects will *not* be added if they are already in the list whereas, in a **microflow**, the same object can be added multiple times.
-{{% /alert %}}
 
 ### 3.3 Value
 

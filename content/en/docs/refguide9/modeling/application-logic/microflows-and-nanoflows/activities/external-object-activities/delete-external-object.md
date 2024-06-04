@@ -1,7 +1,6 @@
 ---
 title: "Delete External Object"
 url: /refguide9/delete-external-object/
-tags: ["studio pro", "integration activity", "delete external object"]
 ---
 {{% alert color="warning" %}}
 These activities can only be used in **Microflows**.

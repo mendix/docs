@@ -3,7 +3,6 @@ title: "Jumping to Different Activities in a Workflow"
 url: /refguide9/jump-to/
 linktitle: "Jump to Different Activities"
 weight: 55
-tags: ["workflow", "workflows", "jump-to", "ad hoc jump-to"]
 ---
 ## 1 Introduction
 
@@ -19,7 +18,7 @@ This functionality is different from the [Jump activity](/refguide9/jump-activit
 
 The [Generate Jump-to Option](/refguide9/generate-jump-to-options/) microflow action generates a **System.WorkflowJumpToDetails** object with associated **System.WorkflowCurrentActivity** and **System.WorkflowActivityDetails** objects. The entity structure is shown in the image of the System domain model below:
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/workflows/jump-to/jump-to-entities.jpg" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/workflows/jump-to/jump-to-entities.jpg" class="no-border" >}}
 
 The **System.WorkflowJumpToDetails** object is associated with the **System.Workflow** through the **System.WorkflowJumpToDetails_Workflow** association, reflecting the workflow instance for which the information is generated. It also contains **System.WorkflowCurrentActivity** objects through the **System.WorkflowJumpToDetails_CurrentActivities** association. 
 

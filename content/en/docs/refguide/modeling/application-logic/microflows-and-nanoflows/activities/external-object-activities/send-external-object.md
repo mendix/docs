@@ -1,7 +1,6 @@
 ---
 title: "Send External Object"
 url: /refguide/send-external-object/
-tags: ["studio pro", "integration activity"]
 ---
 
 {{% alert color="info" %}}

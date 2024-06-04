@@ -2,7 +2,6 @@
 title: "Group Box"
 url: /refguide/group-box/
 weight: 30
-tags: ["studio pro", "group box", "container widget", "widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -12,7 +11,7 @@ tags: ["studio pro", "group box", "container widget", "widget"]
 
 A group box can be used to visually group related widgets together. Group boxes are displayed as a frame around nested widgets with an optional header. Group boxes can be configured to collapse and expand dynamically.
 
-{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/group-box/group-box.jpg" >}}
+{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/group-box/group-box.jpg" class="no-border" >}}
 
 ## 2 Properties Pane
 

@@ -2,7 +2,6 @@
 title: "App Roles"
 url: /developerportal/general/app-roles/
 description: "Describes the app team and App/Technical Contact roles and permissions within the Mendix Platform."
-tags: ["team", "technical contact", "developer portal", "role", "permissions"]
 aliases:
     - /developerportal/settings/technical-contact.html
     - /developerportal/general/technical-contact.html
@@ -43,7 +42,7 @@ Scrum Masters can edit and create new team roles on the [Team](/developerportal/
 
 Every deployed app has a Technical Contact. When you view the [General Settings](/developerportal/collaborate/general-settings/#general) for a deployed app, you can see the app's Technical Contact. The Technical Contact is the user you can contact with questions related to the app. 
 
-{{< figure src="/attachments/developerportal/general/team/app-roles/technical-contact.png" alt="" >}}
+{{< figure src="/attachments/developerportal/general/team/app-roles/technical-contact.png" alt="" class="no-border" >}}
 
 {{% alert color="info" %}}
 Provide the Technical Contact with the Scrum Master role. Because the Technical Contact is the contact for regular users, they need to be able to perform app operations on behalf of all Scrum Masters.

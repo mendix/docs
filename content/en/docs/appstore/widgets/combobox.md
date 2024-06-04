@@ -1,9 +1,8 @@
 ---
 title: "Combo Box"
 url: /appstore/widgets/combobox/
-category: "Widgets"
+
 description: "Describes the configuration and usage of the combo box widget, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "widget", "combo box", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -13,14 +12,17 @@ The [Combo Box](https://marketplace.mendix.com/link/component/219304) widget dis
 
 A typical combo box can look like this:
 
-{{< figure src="/attachments/appstore/widgets/combobox/combobox-demo.gif" width="300px" alt="Combo box example" >}}
+{{< figure src="/attachments/appstore/widgets/combobox/combobox-demo.gif" width="300px" alt="Combo box example" class="no-border" >}}
 
 ### 1.1 Features
 
 * Supports different data sources:
-    * Association
-    * Enumeration
-    * Boolean
+    * Context:
+        * Association
+        * Enumeration
+        * Boolean
+    * Database lists
+    * Static values
 * Supports custom content rendering
 * Supports custom footers
 * Supports options filtering for quick selection
@@ -36,7 +38,7 @@ Properties:
 * [Accessibility](#accessibility)
 * [Common](#common)
 
-Styling
+Styling:
 
 * [Design Properties](#design-properties)
 * [Common](#common-styling)
@@ -47,11 +49,27 @@ The following sections will describe the different available widget properties a
 
 #### 2.1.1 Data Source Tab
 
-The **Data source** section (required) is used to configure the data for the widget. It has the supports the following data types via these properties:
+The **Source** option (required) is used is used to configure the datasource type for the widget. It supports the following data types via these properties:
+
+* [Context](#context)
+* [Database](#database)
+* [Static](#static)
+
+##### 2.1.1.1 Context {#context}
+
+When Context source is selected, the **Data source** section (required) configures the type of the context. It supports the following data types via these properties:
 
 * [Association](/refguide/association-source/)
 * [Enumeration](/refguide/enumerations/)
 * [Boolean](/refguide/boolean-expressions/)
+
+##### 2.1.1.2 Database List {#database}
+
+The database source type can be used to set the value of a string or interger attribute with options fetched from an attribute with the same type.
+
+##### 2.1.1.3 Static Values {#static}
+
+The static source type can be used to set the value of a string attribute with manually configured values.
 
 #### 2.1.2 General Tab
 
@@ -63,7 +81,7 @@ The **General** section allows you to configure general behavior and captions fo
 * **Clearable** – if enabled, this allows selected data to be cleared all at once
 * **Custom content** – allows custom widgets to be displayed in the combo box instead of normal text values (only for association data source)
 * **Show footer** – if enabled, this allows custom widgets to be placed in a combo box's footer (as shown below). For example, you can include a link, button, or image in the footer. A popular choice is including a "new item" button in the footer:
-    {{< figure src="/attachments/appstore/widgets/combobox/show-footer.png" alt="Shows a footer which can house custom widgets." >}}
+    {{< figure src="/attachments/appstore/widgets/combobox/show-footer.png" alt="Shows a footer which can house custom widgets." class="no-border" >}}
 
 #### 2.1.3 Multi Selection (Reference Set)
 
@@ -74,12 +92,12 @@ The **Multi selection (reference set)** section allows you to configure combo bo
     * **Row click** – each selected item will be filtered out from the displayed options. Items can deselected by clicking the {{% icon name="remove" %}} on each of the displayed selected items.
 * **Show selected item as** – you can choose to display selected item as labels with {{% icon name="remove" %}} buttons which allow those items to be deselected (shown at the top of this screenshot), or as simple comma-separated text (shown at the bottom): 
 
-    {{< figure src="/attachments/appstore/widgets/combobox/combobox-showselected.png" alt="Show selected item as list or labels examples" >}}
+    {{< figure src="/attachments/appstore/widgets/combobox/combobox-showselected.png" alt="Show selected item as list or labels examples" class="no-border" >}}
     {{% alert color="info" %}}The **Show selected item as** property is only available for the **Checkbox** selection method without custom content.{{% /alert %}}
 
 * **Show Select All** – you can choose to enable a "Show select all" button that will be displayed on the top of the options list. It allows the end-user to click it and select or deselect all options at once:
 
-    {{< figure src="/attachments/appstore/widgets/combobox/select-all.png" alt="Show select or unselect button header" >}}
+    {{< figure src="/attachments/appstore/widgets/combobox/select-all.png" alt="Show select or unselect button header" class="no-border" >}}
 
 #### 2.1.4 Label
 

@@ -2,7 +2,6 @@
 title: "App Explorer"
 url: /refguide9/app-explorer/
 weight: 25
-tags: ["studio pro", "App Explorer"]
 aliases:
     - /refguide9/project-explorer/
 ---
@@ -11,7 +10,7 @@ aliases:
 
 The **App Explorer** shows the complete structure of your app including all documents inside the modules:
 
-{{< figure src="/attachments/refguide9/modeling/app-explorer/app-explorer.png" >}}
+{{< figure src="/attachments/refguide9/modeling/app-explorer/app-explorer.png" class="no-border" >}}
 
 The **App Explorer** consists of the following:
 

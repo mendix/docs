@@ -1,7 +1,6 @@
 ---
 title: "Import a Large Excel File"
 url: /howto8/integration/import-a-large-excel-file/
-tags: ["excel", "excel  importer", "marketplace", "sheet"]
 ---
 
 ## 1 Introduction
@@ -37,7 +36,7 @@ To modify your Excel sheet, follow these steps:
 1. Select the header row with all the country names.
 2. Copy and paste them in a new sheet using the transpose function:
 
-    {{< figure src="/attachments/howto8/integration/importing-excel-documents/import-a-large-excel-file/19398888.png" >}}
+    {{< figure src="/attachments/howto8/integration/importing-excel-documents/import-a-large-excel-file/19398888.png" class="no-border" >}}
 
     Your headers should be listed vertically and your sheet should look like this: [Countries Transposed](/attachments/howto8/integration/Excel/CountriesTransposed.xlsx).
 
@@ -52,7 +51,7 @@ To modify your Excel sheet, follow these steps:
 
 5. Drag it down all the way to the last country.
 
-    {{< figure src="/attachments/howto8/integration/importing-excel-documents/import-a-large-excel-file/19398889.png" >}}
+    {{< figure src="/attachments/howto8/integration/importing-excel-documents/import-a-large-excel-file/19398889.png" class="no-border" >}}
 
 6. In cell **C1**, enter the following string:
 
@@ -62,7 +61,7 @@ To modify your Excel sheet, follow these steps:
 
 7. Like you did with the previous string, drag it down to the last country. The Excel sheet should now look like this: [Countries with Tags](/attachments/howto8/integration/Excel/CountriesWithTags.xlsx).
 
-    {{< figure src="/attachments/howto8/integration/importing-excel-documents/import-a-large-excel-file/19398890.png" >}}
+    {{< figure src="/attachments/howto8/integration/importing-excel-documents/import-a-large-excel-file/19398890.png" class="no-border" >}}
 
     Now you have to get the three different columns into one column. This is necessary because later on, you want to copy the whole column into an XSD file.
 
@@ -111,29 +110,29 @@ The XSD file is ready to be imported into . To import it, follow these steps:
 
 1. Open your app and create a new XSD schema:
 
-    {{< figure src="/attachments/howto8/integration/importing-excel-documents/import-a-large-excel-file/19398893.png" >}}
+    {{< figure src="/attachments/howto8/integration/importing-excel-documents/import-a-large-excel-file/19398893.png" class="no-border" >}}
 
-    {{< figure src="/attachments/howto8/integration/importing-excel-documents/import-a-large-excel-file/create.png" >}}
+    {{< figure src="/attachments/howto8/integration/importing-excel-documents/import-a-large-excel-file/create.png" class="no-border" >}}
 
 2. With the new XSD schema created, it’s time to create the XML-to-domain mapping that will perform the trick for you and make your life a bit easier.
 
-    {{< figure src="/attachments/howto8/integration/importing-excel-documents/import-a-large-excel-file/19398895.png" >}}
+    {{< figure src="/attachments/howto8/integration/importing-excel-documents/import-a-large-excel-file/19398895.png" class="no-border" >}}
 
-    {{< figure src="/attachments/howto8/integration/importing-excel-documents/import-a-large-excel-file/19398896.png" >}}
+    {{< figure src="/attachments/howto8/integration/importing-excel-documents/import-a-large-excel-file/19398896.png" class="no-border" >}}
 
 3. Be sure to check all the attributes! After clicking **OK**, you should see a mapping entity with all your countries.
 
 4. You will now generate a real entity from it that you can use as an import table for your Excel sheet. Click **Map automatically**:
 
-    {{< figure src="/attachments/howto8/integration/importing-excel-documents/import-a-large-excel-file/19398897.png" >}}
+    {{< figure src="/attachments/howto8/integration/importing-excel-documents/import-a-large-excel-file/19398897.png" class="no-border" >}}
 
     There’s your entity!
 
-    {{< figure src="/attachments/howto8/integration/importing-excel-documents/import-a-large-excel-file/19398898.png" >}}
+    {{< figure src="/attachments/howto8/integration/importing-excel-documents/import-a-large-excel-file/19398898.png" class="no-border" >}}
 
 5. Go to your domain model, set the entity’s **Persistable** property to **Yes**, and the job is done!
 
-    {{< figure src="/attachments/howto8/integration/importing-excel-documents/import-a-large-excel-file/19398899.png" >}}
+    {{< figure src="/attachments/howto8/integration/importing-excel-documents/import-a-large-excel-file/19398899.png" class="no-border" >}}
 
 6. To keep your application clean, you can delete the XSD schema and XML-to-domain files from your project.
 

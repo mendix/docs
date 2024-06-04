@@ -1,10 +1,9 @@
 ---
 title: "User Settings"
 url: /community-tools/mendix-profile/user-settings/
-category: "Community Tools"
+
 weight: 2
 description: "Describes the user settings for the Mendix Developer Portal."
-tags: ["profile", "Developer Portal", "settings", "accounts", "notification settings", "developer settings", "API keys", "personal access tokens", "pat", "personal data"]
 ---
 
 ## 1 Introduction {#settings}
@@ -161,7 +160,7 @@ On the [Developer Settings](https://user-settings.mendix.com/link/developersetti
 
 In this section, you can view the status of your two-factor authentication (2FA). You can see if your 2FA is configured with SMS or an authenticator app, and you can also deactivate your 2FA.
 
-{{< figure src="/attachments/community-tools/mendix-profile/2fa.png" class="image-border" max-width=80%  >}}
+{{< figure src="/attachments/community-tools/mendix-profile/2fa.png" max-width=80%  >}}
 
 For more information, see [Two-Factor Authentication](/developerportal/deploy/two-factor-authentication/).
 
@@ -175,7 +174,7 @@ To get a Mendix API key, click **Configure API Keys** > **Create New API Key** a
 Make a note of the API key, as it will only be shown once. 
 {{% /alert %}}
 
-{{< figure src="/attachments/community-tools/mendix-profile/api-key.png" >}}
+{{< figure src="/attachments/community-tools/mendix-profile/api-key.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 We may cache your API key. This means that when you revoke an API key, it may take some time before the change takes effect.
@@ -217,13 +216,13 @@ In the **Personal Access Tokens** section, you can create a new PAT. To do so, c
 * **Name** – give the PAT a name that reflects where or why you intend to use it
 * **Defined Scopes** – the scopes (authorizations) that you want to delegate to your PAT
 
-{{< figure src="/attachments/community-tools/mendix-profile/create-pat.png" width="500px" alt="Dialog box for defining the PAT scopes" >}}
+{{< figure src="/attachments/community-tools/mendix-profile/create-pat.png" width="500px" alt="Dialog box for defining the PAT scopes" class="no-border" >}}
 
 Details about the scopes can be found in the documentation for specific services.
 
 After you click **Create**, a pop-up window shows your secret token, which is the PAT. You must copy the secret token via **Copy Token**.
 
-{{< figure src="/attachments/community-tools/mendix-profile/token-secret.png" width="500px" alt="Created PAT in pop-up window" >}}
+{{< figure src="/attachments/community-tools/mendix-profile/token-secret.png" width="500px" alt="Created PAT in pop-up window" class="no-border" >}}
 
 {{% alert color="warning" %}}
 Store the secret token in a safe location, because it will not be displayed again!
@@ -233,7 +232,7 @@ Store the secret token in a safe location, because it will not be displayed agai
 
 To see the scopes of a PAT you have created, click **View Details**.
 
-{{< figure src="/attachments/community-tools/mendix-profile/manage-pat.png" >}}
+{{< figure src="/attachments/community-tools/mendix-profile/manage-pat.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 You cannot see the secret token of a PAT here. You can only see that the PAT exists along with its scopes. 

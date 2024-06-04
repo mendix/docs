@@ -3,14 +3,13 @@ title: "Edit Menu"
 url: /refguide9/edit-menu/
 description: "Describes the Edit Menu in Studio Pro."
 weight: 10
-tags: ["Studio Pro", "view menu", "top bar"]
 ---
 
 ## 1 Introduction
 
 Via the **Edit** menu you can perform various actions, such cut/copy/paste or search where a particular document is used. You can also open the [Preferences](/refguide9/preferences-dialog/) dialog that contains user-specific settings. 
 
-{{< figure src="/attachments/refguide9/modeling/menus/edit-menu/edit-menu.png" alt="Edit Menu" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/edit-menu/edit-menu.png" alt="Edit Menu" class="no-border" >}}
 
 ## 2 Menu Item Overview
 

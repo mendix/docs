@@ -2,7 +2,6 @@
 title: "Data Sources"
 url: /refguide/data-sources/
 weight: 40
-tags: ["studio pro", "data source"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -60,7 +59,7 @@ If **Network load** is the default, you can change this to **Network round trips
 
 The optimization mode cannot be changed for [data grid](/refguide/data-grid/), [template grid](/refguide/template-grid/), and [list view](/refguide/list-view/) widgets. 
 
-{{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-sources/data-source-advanced.png" alt="data source advanced tabpage">}}
+{{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-sources/data-source-advanced.png" alt="data source advanced tabpage" class="no-border" >}}
 
 #### 3.2.1 Optimize for Network Round Trips {#optimize-for-network-round-trips}
 

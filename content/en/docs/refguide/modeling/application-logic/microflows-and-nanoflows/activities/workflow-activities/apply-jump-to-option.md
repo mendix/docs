@@ -2,7 +2,6 @@
 title: Apply Jump-To Option
 url: /refguide/apply-jump-to-option/
 weight: 5
-tags: ["studio pro", "workflow", "jump-to option", "apply jump-to option"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -26,7 +25,7 @@ This functionality is different from the [Jump activity](/refguide/jump-activity
 
 An example of **Apply jump-to option** properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/apply-jump-to-option/apply-jump-to-option-properties.jpg" width="650px" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/apply-jump-to-option/apply-jump-to-option-properties.jpg" width="650px" class="no-border" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

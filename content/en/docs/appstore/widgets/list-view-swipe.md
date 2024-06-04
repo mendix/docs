@@ -2,9 +2,8 @@
 title: "List View Swipe"
 deprecated: true
 url: /appstore/widgets/list-view-swipe/
-category: "Widgets"
+
 description: "Describes the configuration and usage of the List View Swipe widget, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "widget", "list view swipe", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

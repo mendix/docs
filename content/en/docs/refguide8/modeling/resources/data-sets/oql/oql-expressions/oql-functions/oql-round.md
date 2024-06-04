@@ -1,7 +1,6 @@
 ---
 title: "OQL ROUND"
 url: /refguide8/oql-round/
-tags: ["studio pro"]
 ---
 
 The ROUND function rounds a given numeric expression.

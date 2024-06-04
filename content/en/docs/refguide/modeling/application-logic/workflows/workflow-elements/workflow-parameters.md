@@ -2,7 +2,6 @@
 title: "Workflow Parameters"
 url: /refguide/workflow-parameters/
 weight: 20
-tags: ["workflow", "workflows", "parameters", "workflow parameters"]
 ---
 
 ## 1 Introduction
@@ -11,7 +10,7 @@ The **WorkflowContext** parameter provides the means by which you can pass busin
 
 In the workflow editor, you can see the **WorkflowContext** parameter in the upper-left corner. In the image below, the parameter type (the specified entity) is shown in color blue and the parameter name is shown in color black.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/workflow-parameters/workflow-parameters.png" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/workflow-parameters/workflow-parameters.png" class="no-border" >}}
 
 ## 2 Output Section
 

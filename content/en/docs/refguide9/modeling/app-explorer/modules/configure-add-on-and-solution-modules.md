@@ -3,7 +3,6 @@ title: "Configuring Add-on and Solution Modules for Publishing"
 linktitle: "Publish Add-on and Solution Modules"
 url: /refguide9/configure-add-on-and-solution-modules/
 weight: 20
-tags: ["studio pro", "add-on", "solution", "module", "modules"]
 ---
 
 {{% alert color="warning" %}}
@@ -41,7 +40,7 @@ To change the **Export level** and mark documents/elements as **Usable**, do the
 4. Navigate to its properties.
 5. Set the **Export level** property to **Usable**:
 
-    {{< figure src="/attachments/refguide9/modeling/app-explorer/modules/configure-add-on-and-solution-modules/export-level-property.png" >}}   
+    {{< figure src="/attachments/refguide9/modeling/app-explorer/modules/configure-add-on-and-solution-modules/export-level-property.png" class="no-border" >}}   
 
 You can see that documents/elements that are marked as usable have an eye icon ({{% icon name="view" %}}). This means the document is a part of the API. The domain model gets an eye icon if any entity is usable. 
 
@@ -74,11 +73,11 @@ Before exporting an add-on module or a solution to customers, note that for Stud
 
 To export the add-on module, right-click it in the App Explorer and select **Export add-on module package**: 
 
-{{< figure src="/attachments/refguide9/modeling/app-explorer/modules/configure-add-on-and-solution-modules/export-add-on.png" >}}
+{{< figure src="/attachments/refguide9/modeling/app-explorer/modules/configure-add-on-and-solution-modules/export-add-on.png" class="no-border" >}}
 
 It is possible to add files in an add-on module package, you can select them during export and they will be imported. 
 
-{{< figure src="/attachments/refguide9/modeling/app-explorer/modules/configure-add-on-and-solution-modules/select-depencencies-add-on-export.png" >}}
+{{< figure src="/attachments/refguide9/modeling/app-explorer/modules/configure-add-on-and-solution-modules/select-depencencies-add-on-export.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 Selection made above is not saved when exporting the module again, you need to select files for every subsequent export.

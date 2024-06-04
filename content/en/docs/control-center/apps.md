@@ -1,9 +1,8 @@
 ---
 title: "Apps"
 url: /control-center/apps/
-category: "Control Center"
+
 description: "Describes the Apps page in the Mendix Control Center."
-tags: ["control center", "mendix admin", "apps"]
 weight: 15
 no_list: true
 aliases:
@@ -16,7 +15,7 @@ aliases:
 The **Apps** page gives an overview of all the apps belonging to your company. The page has the following tabs available: **Mendix Cloud**, **Mendix Free Cloud**, **Other Apps**, and **Deactivated Apps**.
 
 {{% alert color="info" %}}
-We are working on giving private clouds a separate tab. Stay tuned.
+We will enhance this page to provide information about apps deployed on standalone private clouds. Stay tuned.
 {{% /alert %}}
 
 ## 2 Mendix Cloud
@@ -67,9 +66,45 @@ You can filter the apps in the table. For details, see the [Filtering Apps in th
 
 You can export apps to an Excel file. For details, see the [Exporting Apps to an Excel File](#export-to-excel) section.
 
-## 3 Mendix Free Cloud
+## 3 Private Cloud (Connected)
 
-The **Mendix Free** Cloud tab shows all the free apps that are deployed on the Mendix Cloud.
+The **Mendix Private Cloud** tab shows all the apps that are deployed on the Mendix Private Cloud Connected.
+
+You can customize the columns of the table by clicking the column selector (the {{% icon name="view" %}} icon) on the upper-right corner of the table. The items selected are shown as columns in the table.
+
+{{< figure src="/attachments/control-center/apps/column-selection-private-cloud-connected.png"  max-width=50% >}}
+
+The description of the items that you can select are as follows:
+
+* **AppID**: the unique identifier of the app
+
+* **App Name**: the name of the app
+
+  {{% alert color="info" %}}
+  You can view the [app details](#app-details) by clicking the app name in the table.
+  {{% /alert %}}
+
+* **Technical Contact**: the technical contact of the app. 
+
+  {{% alert color="info" %}}
+  You can edit the Technical Contact of an app by clicking **Edit** ({{% icon name="pencil" %}}) next to the current Technical Contact in the table.
+  {{% /alert %}}
+
+* **EnvID**: the unique identifier of the environment.
+
+* **Environment**: the name of the environment.
+
+* **Env Status**: the app deployment status on environment
+
+* **Mainline Version**: the Mendix version of the app on the mainline in the repository
+
+* **Deployed Version**: the Mendix version of the deployed app
+
+* **Last Commit**: the date of the last commit in the main line
+
+## 4 Mendix Free Cloud
+
+The **Mendix Free Cloud** tab shows all the free apps that are deployed on the Mendix Cloud.
 
 You can customize the columns of the table by clicking the column selector (the {{% icon name="view" %}} icon) on the upper-right corner of the table. The items selected are shown as columns in the table.
 
@@ -113,13 +148,9 @@ When you select the apps via the checkboxes in the table, a context menu appears
 
 You can export apps to an Excel file. For details, see the [Exporting Apps to an Excel File](#export-to-excel) section.
 
-## 4 Other Apps
+## 5 Other Apps
 
-The **Other Apps** tab shows the unlicensed apps that are not deployed and the apps that are linked to  private clouds. 
-
-{{% alert color="info" %}}
-We are working on giving private clouds a separate tab. Stay tuned.
-{{% /alert %}}
+The **Other Apps** tab shows the unlicensed apps that are not deployed and the apps that are deployed on a private cloud unconnected.
 
 You can customize the columns of the table by clicking the column selector (the {{% icon name="view" %}} icon) on the upper-right corner of the table. The items selected are shown as columns in the table.
 
@@ -144,7 +175,7 @@ When you select the apps via the checkboxes in the table, a context menu appears
 
 You can export apps to an Excel file. For details, see the [Exporting Apps to an Excel File](#export-to-excel) section.
 
-## 5 Deactivated Apps
+## 6 Deactivated Apps
 
 The **Deactivated Apps** tab shows all the deactivated apps that belong to your company.
 
@@ -172,7 +203,7 @@ When you select the apps via the checkboxes in the table, a context menu appears
 
 You can export apps to an Excel file. For details, see the [Exporting Apps to an Excel File](#export-to-excel) section.
 
-## 6 Filtering Apps in the Table {#filter-apps}
+## 7 Filtering Apps in the Table {#filter-apps}
 
 On each tab with an table of apps, you can find filters on the top, which allows you to filter apps using different criteria. 
 
@@ -188,7 +219,7 @@ The filter shown as below allows you to filter apps by **Deployed Status**. (Thi
 
 {{< figure src="/attachments/control-center/apps/filter-mendix-cloud.png" >}}
 
-## 7 Viewing App Details {#app-details}
+## 8 Viewing App Details {#app-details}
 
 If you click the name of an app in the overview table, a page opens and shows the details of this app.
 
@@ -197,7 +228,7 @@ The app details page has the following tabs:
 * **App Info** – This tab has the **Description** and **App ID** fields, which are also available on the [General Settings](/developerportal/collaborate/general-settings/) page for your app in the Developer Portal.
 * **Members** – This tab presents the team members in the app development team.
     * You can directly deactivate a team member from the app by clicking their name and selecting **Deactivate Member**.
-    * For other member management options, click **Manage Members**, which will open the **Security** > [Team](/developerportal/general/team/#managing) page. As a Mendix Admin, you can also add yourself to a team via this page.
+    * For other member management options, click **Manage Members**, which will open the [Team](/developerportal/general/team/#managing) page of the app. As a Mendix Admin, you can also add yourself to a team via this page.
 * **Environments** – This tab shows all Mendix Cloud environments. For the free Mendix Cloud environment, you can delete the environment on this tab. Once the free environment is deleted, all data will be removed. However, the app team members can still access the associated app repository in the Developer Portal.
 * **App Roles** – This tab presents the app team roles defined via the **Default App Roles** feature on the [Roles & Permissions](/control-center/roles-and-permissions/) page.
 
@@ -207,7 +238,7 @@ If the app is not a licensed app, you can see the action menu ({{% icon name="th
 Deleting and deactivating apps is currently not supported for licensed apps or apps that are not running on Mendix Cloud. For the consequences of these operations, see the table in the [Deactivating and Deleting Apps](#deactivate-delete-apps) section.
 {{% /alert %}} 
 
-## 8 Deactivating and Deleting Apps {#deactivate-delete-apps}
+## 9 Deactivating and Deleting Apps {#deactivate-delete-apps}
 
 You can delete or deactivate a single app, or deactive (or activate) mutilple apps in one go.
 
@@ -215,17 +246,17 @@ The consequences of deactivating and deleting an app are as below:
 
 |                                                             | Deactivating an App                                          | Deleting an App                                              |
 | ----------------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| App code repository stays persistent                        | {{< figure src="/attachments/control-center/apps/check-mark.svg" >}} | {{< figure src="/attachments/control-center/apps/cross-mark.svg" >}} |
-| App team members can access the app code repository         | {{< figure src="/attachments/control-center/apps/cross-mark.svg" >}} | {{< figure src="/attachments/control-center/apps/cross-mark.svg" >}} |
-| App stays persistent                                        | {{< figure src="/attachments/control-center/apps/check-mark.svg" >}} | {{< figure src="/attachments/control-center/apps/cross-mark.svg" >}} |
-| App team members can access the app in the Developer Portal | {{< figure src="/attachments/control-center/apps/cross-mark.svg" >}} | {{< figure src="/attachments/control-center/apps/cross-mark.svg" >}} |
-| Cloud environment stays persistent                          | {{< figure src="/attachments/control-center/apps/cross-mark.svg" >}} | {{< figure src="/attachments/control-center/apps/cross-mark.svg" >}} |
+| App code repository stays persistent                        | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
+| App team members can access the app code repository         | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
+| App stays persistent                                        | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
+| App team members can access the app in the Developer Portal | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
+| Cloud environment stays persistent                          | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
 
 {{% alert color="info" %}}
 Deleting and deactivating apps is currently not supported for licensed apps or apps that are not running on Mendix Cloud. Therefore, you do not see these options on the **Mendix Cloud** tab; and you also do not see these options on the **Other Apps** tab if you select apps that are deployed on a private cloud.
 {{% /alert %}}
 
-## 9 Exporting the Information About Apps to an Excel File {#export-to-excel}
+## 10 Exporting the Information About Apps to an Excel File {#export-to-excel}
 
 On each tab with an overview of apps, you can export information of apps to an Excel file. To do so, select the apps in the table, and click **Selection Export** below the table. 
 

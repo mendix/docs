@@ -2,7 +2,6 @@
 title: "Local Profile"
 url: /appstore/partner-solutions/ats/rg-two-profile/
 description: "Describes a local profile in ATS."
-tags: ["ats", "profile", "password"]
 ---
 
 ## 1 Introduction
@@ -21,7 +20,7 @@ To open the **Edit Profile** page, do the following:
 
 2. Click **Show Profile**.
 
-    {{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-profile/profile.png" alt="Edit profile page" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-profile/profile.png" alt="Edit profile page" class="no-border" >}}
 
 ### 2.2 Changing the Full Name 
 

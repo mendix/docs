@@ -2,7 +2,6 @@
 title: "Regular Expressions"
 url: /refguide/regular-expressions/
 weight: 70
-tags: ["studio pro", "regular expressions", "regular expression"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -24,7 +23,7 @@ This is for documentation purpose only; it is not visible in the end-user applic
 
 ## 3 Expression{#expression}
 
-The expression defines the criteria that a string should be checked against in a [formal, internationally standardized regular expression language](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/regex/Pattern.html).
+The expression defines the criteria that a string should be checked against in a [formal, internationally standardized regular expression language](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/regex/Pattern.html).
 
 {{% alert color="info" %}}
 For example, an expression for checking the Dutch post code could be: `[1-9][0-9][0-9][0-9] ?[A-Za-z][A-Za-z]`.
@@ -89,5 +88,5 @@ The following quantifiers can be used:
 
 ## 4 Read More
 
-* [Class Pattern](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/regex/Pattern.html#matches(java.lang.String,java.lang.CharSequence)) – information from the Oracle Java SE documentation
+* [Class Pattern](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/regex/Pattern.html#matches(java.lang.String,java.lang.CharSequence)) – information from the Oracle Java SE documentation
 * [Using Regular Expressions in Java](https://www.regular-expressions.info/java.html)  – information about regular expressions in Java from the *Regular-Expressions.info* website

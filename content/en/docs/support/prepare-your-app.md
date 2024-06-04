@@ -53,7 +53,7 @@ To give existing app members access to submit tickets, follow these steps:
 
     You can also click **Role settings** to create your own roles and customize the permissions for existing roles. For more information, see the [Team Roles](/developerportal/general/app-roles/#team-roles) section of **App Roles**.
 
-4. To finalize the setup, email [support@mendix.com](https://support.mendix.com/) with the **App name** and **App ID**.
+4. To finalize the setup, email [support@mendix.com](mailto:support@mendix.com) with the **App name** and **App ID**.
 
 ## 3 Read More
 

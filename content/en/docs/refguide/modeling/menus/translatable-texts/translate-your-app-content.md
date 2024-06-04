@@ -103,7 +103,7 @@ Now that your current language is Chinese, you can translate some of the texts i
 
 2. Enter your translation for the two text items on the page.
 
-    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/home-page-russian.png" alt="Home page with translated text" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/home-page-chinese.png" alt="Home page with translated text" class="no-border" width="400" >}}
 
 You have now added a translation for these two pieces of text.
 

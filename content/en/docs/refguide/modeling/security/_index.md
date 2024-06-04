@@ -41,13 +41,14 @@ Each module defines its own set of module roles and you only have to specify sec
 
 A user role is a combination of module roles. An end-user that signs into the system gets the access rights of all of their user roles and indirectly to the module roles that are contained within those user roles.
 
-Say, for example, you have an app with two modules: System and ProjectManagement (PM). The PM module has three module roles: TeamMember, TeamLeader, and Administrator. In this case, you do not need to make a distinction between team leaders and administrators so you only need two user roles. You define those two user roles and assign module roles to them. The table below shows which module roles are contained within the user roles. Note that you always need at least the User role in the System module.
+Say, for example, you have an app with two modules: ProjectManagement and System. The ProjectManagement module has two module roles: TeamLeader, TeamMember; and the System module contains User and Administrator module roles. In this case, you would like to to define two app user roles, the team leaders and team members so you only need two user roles. You define those two user roles at app level and assign module roles to them. The table below shows which module roles are contained within the user roles. Note that you always need at least the User role in the System module.
 
 | Module Roles for User Role 'TeamMember' | Module Roles for User Role 'TeamLeader' |
-| --- | --- |
-| System.User | System.User |
-| ProjectManagement.TeamMember | ProjectManagement.TeamLeader |
-|   | ProjectManagement.Administrator |
+| --------------------------------------- | --------------------------------------- |
+| ProjectManagement.TeamMember            | ProjectManagement.TeamMember            |
+|                                         | ProjectManagement.TeamLeader            |
+| System.User                             | System.User                             |
+|                                         | System.Administrator                    |
 
 ### 2.4 Entity Access vs. Document Access {#entity-vs-page-access}
 

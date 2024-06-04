@@ -72,7 +72,7 @@ To add an additional language, do the following:
 
 4. Click **OK** to save the changes. 
 
-    In the **App Settings** window, the **default** language is still **English, United States**. This is the language that the end-user sees if they do not choose Russian as their language.
+    In the **App Settings** window, the **default** language is still **English, United States**. This is the language that the end-user sees if they do not choose Chinese as their language.
 
     {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/language-settings.png" alt="Language settings tab in the app settings dialog" class="no-border" width="650" >}}
 
@@ -131,13 +131,13 @@ To translate multiple occurrences and multiple texts from the default language, 
 
 7. Enter translations in the **Translation (Chinese (Simplified), China)** column for a few terms: **Cancel**, **Delete**, and **Edit**.
 
-    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/batch-translate-cancel-delete-edit.png" alt="Translate Cancel, Delete, and Edit into Russian" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/batch-translate-cancel-delete-edit.png" alt="Translate Cancel and Edit Order into Chinese" class="no-border" >}}
 
 8. Click **Translate** to save the current translations.
 9. Click **Close** to close the dialog box.
 10. Open the **Product_NewEdit** page. The related terms now have Chinese translations.
 
-    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/product-new-edit-partial-translation.png" alt="Product New Edit page showing the cancel button translated into Russian" class="no-border" width="350" >}}
+    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/product-new-edit-partial-translation.png" alt="Product New Edit page showing the cancel button translated into Chinese" class="no-border" width="350" >}}
 
 ### 6.2 Dealing With More Complex Translations
 
@@ -162,7 +162,7 @@ To handle this, follow the steps below:
 7. In your app, the text *Order* is used as the command to order a product, and is used to refer to the Order entity. However, in Chinese, the translations for these two scenarios are different. To solve this issue, open the **Product_NewEdit** page.
 8. Edit the text on the button to reflect the verb *to order*. In Chinese, this is *заказать*.
 
-    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/product-new-edit-order-russian.png" alt="Order button on Product New Edit page translated into Russian" class="no-border" width="600" >}}
+    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/product-new-edit-order-russian.png" alt="Order button on Product New Edit page translated into Chinese" class="no-border" width="600" >}}
 
 9. Go to the **Language** > **Batch Translate** to open the dialog box and search for *Order* in the module **MyFirstModule**. 
 
@@ -188,7 +188,7 @@ Once you have made some translations, you may want to look at the translations t
 
     The **Documents/modules** field is set to **(all)**, so the dialog box shows all the translations in the current language dictionary. You can click **Select** next to this field and select only one module to reduce the scope. You can also search for a specific word in the **Search** field. The **#** column shows the locations where the text is used. These locations are listed in the **Show occurrence** section.
 
-    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/batch-replace-russian-initial.png" alt="All texts which have been translated into Russian." class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/batch-replace-russian-initial.png" alt="All texts which have been translated into Chinese." class="no-border" >}}
 
 3. Enter any translations that need to be replaced in the **Replace with** column, then click **Replace**.
 

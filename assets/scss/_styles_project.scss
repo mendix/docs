@@ -154,6 +154,7 @@
         padding: 0.5rem; // NK - changed
         line-height: 1.25; // NK - added to match code text
         font-size: $font-size-base; // NK - added to match code text
+        border:none;
 
         > code {
             background-color: inherit !important;

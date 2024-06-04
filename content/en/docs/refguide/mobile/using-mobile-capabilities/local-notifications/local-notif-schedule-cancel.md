@@ -86,9 +86,13 @@ Consider the default case for Android 14 devices; the ***SCHEDULE_EXACT_ALARM***
 
 {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-request-schedule/alarmandreminders.png" alt="Alarm and reminders" width="220" height="500" >}}
 
-After that step, you are ready to schedule notifications on user's device. Note, for properly ensure that a user allowed the permission, you can use **App Events** widget and call **check-** or **request-** permission actions again and again if needed (for example, when a user came back from application settings, but didn't set the permission enabled). Also, if you will still try to schedule a notification without having a **granted** permission, nothing will happen on user's device.
+After that step, you are ready to schedule notifications on an end-user's device!
 
-But what if you want to cancel a scheduled notification? Read on to learn more.
+Please note that to properly ensure that an end-user allowed the alarm permission, you can use an **App Events** widget and call **check-** or **request-** permission actions again and again if needed (for example, when an end-user has returned from application settings, but did not set the permission to **enabled**). 
+
+As you might expect, if you attempt to schedule a notification without the end-user giving a **granted** permission, nothing will happen on end-user's device.
+
+But what if you want to cancel a scheduled notification? Read on to learn just that.
 
 ## 4 Cancelling Scheduled Notifications
 

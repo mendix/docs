@@ -174,6 +174,7 @@ These are the nanoflow actions in the native mobile category:
 * **Hide keyboard** – hides the onscreen keyboard
 * **Open in app browser** – opens a specific URL in an in app web browser
 * **Play sound** – plays a sound from a file stored in the offline database
+* **Check generic permission** – checks a current status of specific permission
 * **Request generic permission** – requests a specific permission
 * **Vibrate** – vibrates the device for a specific duration
 

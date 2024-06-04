@@ -53,7 +53,7 @@ The following table lists the properties used as keys for database and storage-r
 | Database Host | `database-host` | `pg.example.com:5432` | ✓ |
 | Database Name | `database-name` | `my-app-1` | ✓ |
 | Database Username | `database-username` | `my-app-user-1` | ✓ |
-| Database Password | `database-password` | `Welc0me!` | ✓ (only for password auth) |
+| Database Password | `database-password` | `Welc0me!` | ✓ (only for password authentication) |
 | Storage service name | `storage-service-name` | `com.mendix.storage.s3` | ✓ |
 | S3 Storage endpoint | `storage-endpoint` | `https://my-app-bucket.s3.eu-west-1.amazonaws.com` | ✓ (only for S3) |
 | S3 Storage access key id | `storage-access-key-id` | `AKIA################` |  |

@@ -108,7 +108,7 @@ For more details on what can and cannot be provided in these fields, see the [AP
 
 You can see an example of a request below:
 
-```curl
+```bash
 curl --location --request POST 'https://catalog.mendix.com/rest/registration/v5/applications/{application_UUID}/environments' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: MxToken <your_Personal_Access_Token>' \

@@ -1,5 +1,5 @@
 ---
-title: "Control Center Guide"
+title: "Mendix Portal or Administrators"
 url: /control-center/
 description: "Describes the Mendix Control Center, used for the governance of company members, apps, security, and cloud resources."
 weight: 35

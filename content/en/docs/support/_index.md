@@ -1,5 +1,5 @@
 ---
-title: "Mendix Support Guide"
+title: "Mendix Support"
 url: /support/
 description: "Provides information on how to obtain support for your Mendix apps."
 weight: 47

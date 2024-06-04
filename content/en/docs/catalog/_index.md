@@ -1,5 +1,5 @@
 ---
-title: "Catalog Guide"
+title: "Catalog"
 url: /catalog/
 description: "Describes the processes and properties of Catalog."
 weight: 41

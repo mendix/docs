@@ -1,5 +1,5 @@
 ---
-title: "Strategic Partners Guide"
+title: "Strategic Partners"
 url: /partners/
 description: "Documentation for AWS, SAP, Siemens, and Snowflake widgets written and maintained by Mendix"
 weight: 50

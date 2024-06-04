@@ -1,5 +1,5 @@
 ---
-title: "Marketplace Guide"
+title: "Marketplace"
 url: /appstore/
 description: "Presents documentation on configuring and using the latest versions of platform-supported components."
 weight: 40

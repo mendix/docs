@@ -1,8 +1,8 @@
 ---
-title: "Community Tools Guide"
+title: "Mendix Portal for Community"
 url: /community-tools/
 description: "Describes the main tools that Mendix maintains to support the awesome Mendix community."
-weight: 46
+weight: 38
 no_list: false 
 description_list: true
 cascade:

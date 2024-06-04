@@ -1,5 +1,5 @@
 ---
-title: "Studio Pro 8 Guide"
+title: "Studio Pro 8"
 url: /refguide8/
 description: "The various sections of the Mendix Studio Pro Guide provide details on the features and functionality of the Mendix Platform."
 weight: 70

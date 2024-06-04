@@ -37,9 +37,9 @@ Most of the security settings take place at the module level. This has the advan
 
 An end-user in a Mendix application has one or more user roles. These roles can be assigned from within the client when creating or editing an end-user. User roles are at the level of an app and can be edited in [App Security](/refguide/app-security/). For more information, see [User Roles](/refguide/user-roles/).
 
-Each module defines its own set of module roles and you only have to specify security within a module in terms of those module roles. An email module maybe has two module roles, one for normal user and one for an administrator; other modules may have just one or more than two module roles depending on the requirements for those modules. For more information, see [Module Role](/refguide/module-security/#module-role).
+Next to this, each module defines its own set of module roles and you only have to specify security within a module in terms of those module roles. An email module maybe has two module roles, one for normal user and one for an administrator; other modules may have just one or more than two module roles depending on the requirements for those modules. For more information, see [Module Role](/refguide/module-security/#module-role).
 
-A user role is a combination of module roles. An end-user that signs into the system gets the access rights of all of their user roles and indirectly to the module roles that are contained within those user roles.
+A user role is a combination of module roles. An end-user that signs into the system gets the access rights of all of their user roles and indirectly to the module roles that are configured for those user roles.
 
 Say, for example, you have an app with two modules: ProjectManagement and System. The ProjectManagement module has two module roles: TeamLeader, TeamMember; and the System module contains User and Administrator module roles. In this case, you would like to to define two app user roles, the team leaders and team members so you only need two user roles. You define those two user roles at app level and assign module roles to them. The table below shows which module roles are contained within the user roles. Note that you always need at least the User role in the System module.
 

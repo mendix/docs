@@ -188,7 +188,7 @@ Once you have made some translations, you may want to look at the translations t
 
     The **Documents/modules** field is set to **(all)**, so the dialog box shows all the translations in the current language dictionary. You can click **Select** next to this field and select only one module to reduce the scope. You can also search for a specific word in the **Search** field. The **#** column shows the locations where the text is used. These locations are listed in the **Show occurrence** section.
 
-    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/batch-replace-russian-initial.png" alt="All texts which have been translated into Chinese." class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/batch-replace-initial.png" alt="All texts which have been translated into Chinese." class="no-border" >}}
 
 3. Enter any translations that need to be replaced in the **Replace with** column, then click **Replace**.
 
@@ -201,7 +201,7 @@ To copy our Chinese (Simplified), China translations into a Chinese (Simplified)
 1. Go to **Language**  > **Language Settings**. 
 2. Click **Add** to add **Chinese (Simplified), Singapore** as an app language.
 
-    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/language-settings-belarusian.png" alt="Belarusian added to the app" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/language-settings-singapore.png" alt="Belarusian added to the app" class="no-border" >}}
 
 3. Click **OK** to save the changes and close the **App Settings** dialog box.
 4. Go to **Language** > **Language Operations**. The **Language Operations** dialog box opens.

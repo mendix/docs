@@ -26,13 +26,13 @@ To get started with building an app, click **Create App** to open a page where y
 
 ## 3 My Apps {#my-apps}
 
-When you open the Mendix Portal, you are brought to the **My Apps** page, which shows you a summary of your current apps:
+When you open Apps, you are brought to the **My Apps** tab, which shows you a summary of your current apps:
 
 {{< figure src="/attachments/developerportal/app-tiles.png" alt="Apps tiles" class="no-border" >}}
 
 The **All** tab displays all the apps for which you are a [Team](/developerportal/general/team/) member. 
 
-Any app tile you pin by clicking **Pin** ({{% icon name="pin" %}}) will appear in the **Pinned** tab. 
+You can pin an app by clicking **Pin** ({{% icon name="pin" %}}). All the pinned apps are displayed at the top.
 
 Use the drop-down menu on the right side of the page to sort the apps by **Most Recent** or in alphabetical order of **App Name**.
 
@@ -52,7 +52,7 @@ To stop watching an app and disable notifications for that app, click the {{% ic
 
 To go to the [licensed environments](/developerportal/deploy/environments/) of your deployed app, click **Environments** at the bottom of the app tile.
 
-## 4 Navigation Pane {#navigation-pane}
+### 3.2 Navigation Pane {#navigation-pane}
 
 When you open an app in [Apps](https://sprintr.home.mendix.com/), you can navigate between sections using the navigation pane on the left side of the screen. 
 
@@ -65,15 +65,11 @@ The navigation pane is divided into four main categories, which correspond with 
 
 {{< figure src="/attachments/developerportal/navigation-pane.png" alt="The navigation pane" width="45%" class="no-border" >}}
 
-## 5 Company Apps {#my-company-apps}
+## 5 All Apps {#my-company-apps}
 
-In the top bar of Apps, an additional menu item is available for **Company Apps**:
+On the **All Apps** tab, you can find all the apps created by members of your [company](/control-center/company-settings/).
 
-{{< figure src="/attachments/developerportal/company-apps.png"  width=80%  alt="Company Apps in MxDock" >}}
-
-Click **Company Apps** to see a list of all the apps created by members of your [company](/control-center/company-settings/).
-
-There are also details on the app's [Target Cloud](/developerportal/deploy/), the [Total Members](/control-center/members/) who can view and/or edit the app, a **Summary** description of the app, and the [Technical Contact](/developerportal/general/app-roles/#technical-contact) for the app.
+There are also details on the app's [Target Cloud](/developerportal/deploy/), the [Total Members](/control-center/members/) who can view and edit the app, a **Summary** description of the app, and the [Technical Contact](/developerportal/general/app-roles/#technical-contact) for the app.
 
 You can also sort the order of the apps here by **Most Recent** or **App Name**.
 

@@ -62,9 +62,9 @@ If your app is open, it will not show the notification due to iOS and Android us
 
 ### 3.1 Additional Steps for Android 14 and Above
 
-If your app is targeting devices with Android 14 (API levels 34 and above), there are some required actions needed to be done before scheduling local notifications. Read below for guidance. 
+If your app is targeting devices with Android 14 (API levels 34 and above), you must complete some required actions before scheduling local notifications. Read below for guidance. 
 
-If you are familiar with setting precise alarms on Android devices, you might want to pay attention to recent changes introduced in Android 14. Specifically, the **SCHEDULE_EXACT_ALARM** permission, crucial for scheduling exact alarms, is no longer automatically granted to most newly installed apps targeting Android 13 and higher. 
+If you are familiar with setting precise alarms on Android devices, you might notice recent changes introduced in Android 14. Specifically, the **SCHEDULE_EXACT_ALARM** permission (crucial for scheduling exact alarms) is no longer automatically granted to most newly installed apps targeting Android 13 and higher. 
 
 This means that for scheduling notifications on such devices, the end-user must give an explicit approval to that permission. We have updated our [Native Mobile Resources](/appstore/modules/native-mobile-resources/#37-native-mobile-category), so that you can easily implement these permission exchanges. 
 
@@ -78,7 +78,7 @@ Using **Check generic permission** you can first check if a **SCHEDULE_EXACT_ALA
 
 As an output, you will receive either the ***granted*** or ***blocked*** status. With that information, you can proceed with further actions.
 
-Consider the default case for Android 14 devices; the ***SCHEDULE_EXACT_ALARM*** permission is not given by default. In that case, you need to use **Request generic permission** with selected permission to request it. Requesting of **SCHEDULE_EXACT_ALARM** permission assumes that user will be navigated into the app's **Alarm & Reminders** settings:
+Consider the default case for Android 14 devices; the **SCHEDULE_EXACT_ALARM** permission is not given by default. In that case, you need to use **Request generic permission** with selected permission to request it. Requesting of **SCHEDULE_EXACT_ALARM** permission assumes that user will be navigated into the app's **Alarm & Reminders** settings:
 
 {{< figure src="/attachments/howto9/mobile/native-mobile/implementation/notifications/local-notif-parent/local-notif-request-schedule/requestgenericpermission.png" alt="Request generic permission" width="320" height="350" >}}
 

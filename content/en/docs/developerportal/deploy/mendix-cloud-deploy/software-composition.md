@@ -13,7 +13,13 @@ This feature is in beta. For more information, see [Beta Releases](/releasenotes
 
 ## 1 Introduction
 
-From the **Software Composition** page in the Developer Portal, you can drill down and view the components of each app environment. Besides, you can view the usage of components across your deployed packages under [All Components](#all-components), where standard marketplace modules, widgets, java libraries, and Mendix runtime version are available. In the event when a security vulnerability is detected, [Component Usage](#component-usage) can help you assess the impact radius and take action accordingly.
+A Mendix app can consist of the Mendix Model (i.e. pages, domain model, microflows, etc.), custom java, and JavaScript. Additionally, it can use reusable components such as standard marketplace modules, widgets, java libraries, npm packages, and the runtime version. These reusable components are dependencies, i.e. components you are dependent on for your Mendix app to run.  
+
+Over time, these dependencies can become deprecated, outdated. or vulnerable. Enterprises also have policies on which of these reusable components can or cannot be used based on support, license, etc. Itm is important to have an easily accessible, clear view of component dependencies through the development lifecycle in order to address any security finding raised by your admins or security teams.  
+
+To enable this, visibility into these component dependencies will be available on the **Software Composition** page in Mendidx Portal. The components displayed here will be based on the Software Bill of Materials (SBOM) generated in Studio Pro.
+
+From the **Software Composition** page in the Mendix Portal, you can drill down and view the components of each app environment. Besides, you can view the usage of components across your deployed packages under [All Components](#all-components), where standard marketplace modules, widgets, java libraries, and Mendix runtime version are available. In the event when a security vulnerability is detected, [Component Usage](#component-usage) can help you assess the impact radius and take action accordingly.
 
 ### 1.1 Prerequisites {#prerequisites}
 

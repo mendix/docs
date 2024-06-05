@@ -105,7 +105,7 @@ In general, it is a good idea to commit after implementing one feature or fixing
 Committing results in a new revision in the repository. You can add the following information in Studio Pro when you perform a commit, and this will be attached to the newly created revision:
 
 * A textual message – this should be a summary of the changes you made.
-* A list of Mendix Portal stories that relate to the commit; for more information, see [Stories Pane](/refguide/stories-pane/).
+* A list of stories that relate to the commit; for more information, see [Stories Pane](/refguide/stories-pane/).
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-dialog.png" >}}
 
@@ -170,7 +170,7 @@ The history of the app is a list of all revisions that have been committed. To v
 
 For Git-based applications, revisions are sorted according to the commit history, which sometimes does not reflect the chronological order due to Git's decentralized nature and local commits. The history dialog shows you revision number, date, time, author, and message of each revision.
 
-Select a revision to see additional details, such as related Mendix Portal stories, changed documents, Studio Pro version, and changes on disk. Icons summarize the kinds of changes that happened in the app.
+Select a revision to see additional details, such as related stories, changed documents, Studio Pro version, and changes on disk. Icons summarize the kinds of changes that happened in the app.
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/history-of-dialog.png" class="no-border" >}}
 

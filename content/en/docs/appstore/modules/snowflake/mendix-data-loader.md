@@ -83,7 +83,7 @@ The amount of data being ingested is so large that the JSON file has become too 
 
 To solve this issue, configure the exposed OData entities to have pagination. For the best performance, make the pages as large as possible while still ensuring that the JSON does not become too large to parse. 
 
-#### 4.2.2 No response from my Mendix application when pagination is enabled on Mendix Studio Pro 10.10
+#### 4.2.2 No Response from my Mendix Application when Pagination is Enabled on Mendix Studio Pro 10.10
 
 In the process of ingesting data, the Mendix application may not return any values if pagination is enabled for the published OData service and if the Mendix Studio Pro version is 10.10.
 

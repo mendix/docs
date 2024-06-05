@@ -78,6 +78,8 @@ For more information on how to create a story on the basis of a feedback item an
 
 ### 2.5 Changing the Status of a Story or a Task {#changing-status}
 
+If you use Epics, you cannot change the status of the stories in the pane. 
+
 To change the status of a *story*, click its status in the **Status** column. The status will change in the following succession: *To do* > *Running* > *Done* > *To do*. 
 
 To change the status of a task, tick or clear the checkbox in the **Status** column:

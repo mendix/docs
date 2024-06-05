@@ -3,7 +3,6 @@ title: "Trigger a Microflow From a Menu Item"
 url: /howto8/logic-business-rules/trigger-microflow-from-menu-item/
 
 weight: 1
-tags: ["how-to", "microflow", "create microflow"]
 ---
 
 ## 1 Introduction

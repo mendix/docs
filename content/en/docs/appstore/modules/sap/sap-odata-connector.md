@@ -4,7 +4,6 @@ url: /appstore/modules/sap/sap-odata-connector/
 
 weight: 10
 description: "Presents reference information on the use of the OData Connector for SAP solutions."
-tags: ["SAP", "integration", "OData", "BAPI"]
 aliases:
     - /partners/sap/use-sap-odata-connector/
     - /partners/sap/sap-odata-connector/

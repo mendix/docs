@@ -3,7 +3,6 @@ title: "App Settings"
 url: /refguide/app-settings/
 weight: 10
 description: "Settings which apply to the app as a whole."
-tags: ["app", "configuration", "runtime", "Studio Pro", "languages", "certificate", "theme", "hashing", "hashing algorithm"]
 aliases:
     - /refguide/project-settings/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -79,7 +78,7 @@ For Studio Pro versions 10.6.7 and 10.8.0 and above, you can choose Java 17.
 
 {{% /alert %}}
 
-For local development the JDK configured in the [Studio Pro preferences](/refguide/preferences-dialog/#jdk-directory) has to be compatible with the Java version configured here.
+For local development the Java version configured here needs to have a corresponding JDK configured in the [Studio Pro preferences](/refguide/preferences-dialog/#jdk).
 
 Applications deployed to the cloud will use this setting to select which Java version to use.
 

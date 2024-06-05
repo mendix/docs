@@ -4,7 +4,6 @@ linktitle: "Scaling in Mendix Cloud"
 url: /developerportal/deploy/scale-environment/
 weight: 10
 description: "Describes how to scale your environments in Mendix Cloud."
-tags: ["Scale","Environments","Mendix Cloud","Developer Portal"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 

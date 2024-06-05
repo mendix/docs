@@ -4,7 +4,6 @@ linktitle: "Deploy Mobile App with Native Builder CLI"
 url: /howto8/mobile/deploying-native-app-cli/
 weight: 20
 description: Describes how to build a Mendix native app in the cloud with the Native Builder CLI.
-tags: ["native", "mobile", "deploy", "native-builder", "builder", "appcenter"]
 ---
 
 {{% alert color="warning" %}}

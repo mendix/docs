@@ -2,7 +2,6 @@
 title: "Password Policy"
 url: /refguide9/password-policy/
 weight: 50
-tags: ["studio pro", "password policy", "app security", "security"]
 ---
 
 ## 1 Introduction

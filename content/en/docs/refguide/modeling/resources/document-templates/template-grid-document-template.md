@@ -1,7 +1,6 @@
 ---
 title: "Template Grid (Document Template)"
 url: /refguide/template-grid-document-template/
-tags: ["studio pro"]
 aliases:
     - /refguide/Template+Grid+(document+template).html
     - /refguide/template-grid-(document-template).html

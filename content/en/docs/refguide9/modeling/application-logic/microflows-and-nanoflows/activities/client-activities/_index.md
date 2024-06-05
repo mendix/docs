@@ -2,7 +2,6 @@
 title: "Client Activities"
 url: /refguide9/client-activities/
 weight: 50
-tags: ["studio pro", "client activities", "activities"]
 ---
 
 ## 1 Introduction

@@ -2,7 +2,6 @@
 title: "Marketplace Curation"
 url: /control-center/marketplace-curation/
 description: "Describes the Marketplace Curation page in the Mendix Control Center."
-tags: ["control center", "mendix admin", "marketplace curation", "marketplace"]
 weight: 70
 no_list: true
 ---

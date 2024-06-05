@@ -3,7 +3,6 @@ title: "Configuring Add-on and Solution Modules for Publishing"
 linktitle: "Publish Add-on and Solution Modules"
 url: /refguide/configure-add-on-and-solution-modules/
 weight: 20
-tags: ["studio pro", "add-on", "solution", "module", "modules"]
 ---
 
 ## 1 Introduction

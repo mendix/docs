@@ -1,7 +1,6 @@
 ---
 title: "OQL Case Expression"
 url: /refguide8/oql-case-expression/
-tags: ["studio pro"]
 ---
 
 The CASE expression is a conditional expression, similar to if/else statements in other programming languages. Each condition is an expression that returns a Boolean result. If the condition's result is true, the value of the CASE expression is the result that follows the condition, and the remainder of the CASE expression is not processed. If the condition's result is not true, any subsequent WHEN clauses are examined in the same manner. If no WHEN condition yields true, the value of the CASE expression is the result of the ELSE clause. If the ELSE clause is omitted and no condition is true, the result is null.

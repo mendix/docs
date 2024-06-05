@@ -3,7 +3,6 @@ title: "Configure String Concatenation"
 url: /howto8/logic-business-rules/string-concatenation/
 
 weight: 11
-tags: ["microflow", "logic", "string", "concatenation"]
 ---
 
 ## 1 Introduction

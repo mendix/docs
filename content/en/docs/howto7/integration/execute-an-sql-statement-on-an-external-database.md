@@ -4,7 +4,6 @@ linktitle: "Execute SQL on External Database"
 url: /howto7/integration/execute-an-sql-statement-on-an-external-database/
 
 weight: 17
-tags: ["sql", "database", "external database", "integration"]
 ---
 
 ## 1 Introduction

@@ -5,7 +5,6 @@ url: /refguide8/native-mobile/
 weight: 1
 no_list: false
 description_list: true 
-tags: ["mobile", "native", "studio pro"]
 ---
 
 ## 1 Introduction

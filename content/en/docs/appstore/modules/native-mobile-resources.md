@@ -3,7 +3,6 @@ title: "Native Mobile Resources"
 url: /appstore/modules/native-mobile-resources/
 
 description: "Describes the configuration and usage of the Native Mobile Resources module, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "native mobile resources", "native widget", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -175,6 +174,7 @@ These are the nanoflow actions in the native mobile category:
 * **Hide keyboard** – hides the onscreen keyboard
 * **Open in app browser** – opens a specific URL in an in app web browser
 * **Play sound** – plays a sound from a file stored in the offline database
+* **Check generic permission** – checks a current status of specific permission
 * **Request generic permission** – requests a specific permission
 * **Vibrate** – vibrates the device for a specific duration
 

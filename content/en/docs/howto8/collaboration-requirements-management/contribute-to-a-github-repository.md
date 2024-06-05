@@ -3,7 +3,6 @@ title: "Contribute to a Mendix GitHub Repository"
 url: /howto8/collaboration-requirements-management/contribute-to-a-github-repository/
 
 weight: 20
-tags: ["GitHub"]
 aliases:
     - /howto8/collaboration-project-management/contribute-to-a-github-repository.html
     - /howto8/collaboration-project-management/contribute-to-a-github-repository

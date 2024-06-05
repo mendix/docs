@@ -3,7 +3,6 @@ title: "OIDC SSO"
 url: /appstore/modules/oidc/
 
 description: "Describes the configuration and usage of the OIDC SSO module, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "OIDC", "IdP", "identity provider", "platform support", "Azure"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 # Linked from https://marketplace.mendix.com/link/component/120371
 ---
@@ -277,7 +276,10 @@ In this case, the OIDC client is the app you are making.
 
 5. Add the **Client Secret**.
 6. If you have the **Automatic Configuration URL** (also known as the *well-known endpoint*), enter it and click **Import Configuration** to automatically fill the other endpoints.
-    * If you don not have an automatic configuration URL, you can fill in the other endpoints manually.
+
+    {{% alert color="info" %}}If the endpoint URL does not already end with `/.well-known/openid-configuration`, include it at the end. According to the specifications, the URL you need to enter typically ends with `/.well-known/openid-configuration`.{{% /alert %}}
+
+    * If you do not have an automatic configuration URL, you can fill in the other endpoints manually.
 7. Click **Save**
     {{% alert color="info" %}}Your client configuration is not yet complete, but you have to save at this point to allow you to set up the rest of the information.{{% /alert %}}
 8. Select your client configuration and click **Edit**.
@@ -348,7 +350,7 @@ The following constants are mandatory when creating an OIDC SSO configuration an
 * **ClientID** – the client id
 * **ClientAlias** – the client alias
 * **ClientSecret** – the client secret (see security best-practice, above)
-* **AutomaticConfigurationURL** – the URL of the well-known endpoint
+* **AutomaticConfigurationURL** – the URL of the well-known endpoint (ending with `/.well-known/openid-configuration`)
 
 For more information, see the [Custom User Provisioning at Deploy Time](#custom-provisioning-dep) section.
 

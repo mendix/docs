@@ -3,7 +3,6 @@ title: "Go to Option"
 url: /refguide9/go-to-option/
 description: "Describes the Go to option in Mendix Studio Pro."
 weight: 40
-tags: ["app", "go to", "navigation", "usage"]
 ---
 
 ## 1 Introduction

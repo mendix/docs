@@ -2,7 +2,6 @@
 title: "User Roles"
 url: /refguide8/user-roles/
 weight: 10
-tags: ["studio pro", "user role", "project security", "security"]
 aliases:
     - /refguide8/user-role.html
     - /refguide8/user-role

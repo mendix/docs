@@ -4,7 +4,6 @@ url: /howto8/general/
 description: "These introductory how-to's describe Mendix Studio Pro basics and best practices."
 no_list: false
 description_list: true 
-tags: ["studio pro", "how-to", "general"]
 ---
 
 ## 1 Introduction

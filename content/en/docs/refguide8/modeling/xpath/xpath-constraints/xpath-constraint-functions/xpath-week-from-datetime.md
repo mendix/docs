@@ -1,7 +1,6 @@
 ---
 title: "XPath Week-from-DateTime"
 url: /refguide8/xpath-week-from-datetime/
-tags: ["studio pro"]
 ---
 
 ## 1 Overview

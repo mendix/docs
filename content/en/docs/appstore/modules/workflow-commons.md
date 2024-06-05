@@ -3,7 +3,6 @@ title: "Workflow Commons"
 url: /appstore/modules/workflow-commons/
 
 description: "Describes usage and implementation of the Workflow Commons module that is used with workflows."
-tags: ["Workflow","Workflow Commons","Module","Workflow Commons Implementation"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 

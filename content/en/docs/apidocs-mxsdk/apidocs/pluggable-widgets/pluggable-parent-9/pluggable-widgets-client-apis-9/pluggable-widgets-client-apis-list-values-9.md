@@ -2,7 +2,6 @@
 title: "List Values – Mx9"
 url: /apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values-9/
 description: A guide to understanding the list of objects for the datasource property.
-tags: ["Pluggable", "Widget", "ListValue", "ListActionValue", "ListAttributeValue", "ListWidgetValue", "ListExpressionValue"]
 ---
 
 ## 1 Introduction

@@ -4,7 +4,6 @@ linktitle: "Amazon RDS"
 url: /appstore/modules/aws/amazon-rds-database-connector/
 description: "Describes the steps required to use the Amazon Relational Database Service (RDS) with the Mendix Database Connector."
 weight: 20
-tags: ["AWS", "Amazon Relational Database Service", "RDS", "database", "Mendix Database Connector"]
 aliases:
     - /appstore/connectors/aws/amazon-rds-database-connector/
 ---

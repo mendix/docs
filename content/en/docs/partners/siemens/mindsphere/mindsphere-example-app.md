@@ -3,7 +3,6 @@ title: "Use the Siemens Insights Hub Monitor Example "
 linktitle: "Insights Hub Monitor Example"
 url: /partners/siemens/mindsphere-example-app/
 weight: 110
-tags: ["Siemens", "MindSphere", "Insights Hub", "Example", "Operations Insight", "Time Series", "REST", "API"]
 ---
 
 ## 1 Introduction

@@ -3,7 +3,6 @@ title: "View Menu"
 url: /refguide8/view-menu/
 description: "Describes the View Menu in Studio Pro."
 weight: 20
-tags: ["Studio Pro", "view menu", "top bar"]
 ---
 
 ## 1 Introduction

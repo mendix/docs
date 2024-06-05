@@ -2,7 +2,6 @@
 title: "Create a Test Case"
 url: /appstore/partner-solutions/ats/ht-two-create-a-test-case/
 description: "Describes how to create a test case and add test steps."
-tags: ["ATS", "testing"]
 ---
 
 ## 1 Introduction

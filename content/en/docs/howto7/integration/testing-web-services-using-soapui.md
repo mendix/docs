@@ -3,7 +3,6 @@ title: "Test Web Services Using SoapUI"
 url: /howto7/integration/testing-web-services-using-soapui/
 
 weight: 30
-tags: ["test", "testing", "web service", "soapui"]
 aliases: 
     - /howto7/testing/testing-web-services-using-soapui/
 ---

@@ -3,7 +3,6 @@ title: "Sending Email"
 url: /developerportal/deploy/sending-email/
 weight: 40
 description: "How to use external email providers in Mendix"
-tags: ["email", "smtp", "sending policy framework", "SPF"]
 aliases:
     - /deployment/mendixcloud/sending-email.html
     - /deployment/mendixcloud/sending-email
@@ -15,14 +14,14 @@ aliases:
 
 You may want to send email from your apps running in Mendix Cloud via, for example, the [Email](/appstore/modules/email-connector/) connector. After you have installed this, you will need to configure an SMTP server in your application. There are several options:
 
-| Service                        | Mendix Cloud | Free App environment |
-| ------------------------------ | ------------ | -------------------- |
-| Amazon Simple Email Service    | &#x2713;     | &#x2713;             |
-| Gmail                          | &#x2713;     | &#x2713;             |
-| Mailgun                        | &#x2713;     | &#x2713;             |
-| SendGrid                       | &#x2713;     | &#x2713;             |
-| Other SMTP-compatible services | &#x2713;     | &#x2713;             |
-| Mendix Mail Servers            | &#x2717;     | &#x2717;             |
+| Service                        | Mendix Cloud                                              | Free App environment |
+| ------------------------------ | --------------------------------------------------------- | -------------------- |
+| Amazon Simple Email Service    | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
+| Gmail                          | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
+| Mailgun                        | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
+| SendGrid                       | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
+| Other SMTP-compatible services | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} |
+| Mendix Mail Servers            | {{< icon name="remove-circle-filled" color="red" >}}      | {{< icon name="remove-circle-filled" color="red" >}}      |
 
 For apps deployed to Mendix Cloud, you must set up a third-party mail provider to send emails from your app.
 

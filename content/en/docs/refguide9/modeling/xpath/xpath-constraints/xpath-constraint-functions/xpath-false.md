@@ -1,7 +1,6 @@
 ---
 title: "XPath false"
 url: /refguide9/xpath-false/
-tags: ["studio pro"]
 ---
 
 ## 1 Overview

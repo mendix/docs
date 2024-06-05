@@ -1,7 +1,6 @@
 ---
 title: "Dynamic Label (Document Template)"
 url: /refguide9/dynamic-label-document-template/
-tags: ["studio pro"]
 aliases:
     - /refguide9/Dynamic+label+(document+template).html
     - /refguide9/dynamic-label-(document-template).html

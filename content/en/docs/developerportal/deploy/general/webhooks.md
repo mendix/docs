@@ -4,7 +4,6 @@ linktitle: "Webhooks"
 url: /developerportal/deploy/webhooks/
 weight: 75
 description: "Creating a webhook to trigger actions from Mendix Cloud and Mendix for Private Cloud."
-tags: ["Mendix Cloud", "Mendix for Private Cloud", "Webhooks", "CI/CD", "Pipeline"]
 ---
 
 ## 1 Introduction
@@ -71,7 +70,7 @@ Mendix webhooks use the following static IP addresses:
 * 52.59.169.126
 
 {{% alert color="info" %}}
-Mendix maintains the current outgoing IP addresses as much as possible. However, these addresses may occasionally change for operational reasons. Any changes are subject to a 48-hour notice period.
+Mendix maintains the current outgoing IP addresses as much as possible. However, these addresses may occasionally change for operational reasons. At least 48 hours before any changes, Technical Contacts will be emailed and a notification will be listed on [Mendix Platform Status](https://status.mendix.com).
 {{% /alert %}}
 
 ## 4 Webhook Headers

@@ -1,7 +1,6 @@
 ---
 title: "Debugging Microflows Remotely"
 url: /refguide9/debug-microflows-remotely/
-tags: ["monitoring", "troubleshooting", "debug", "microflow", "remote"]
 aliases:
     - /howto9/monitoring-troubleshooting/debug-microflows-remotely
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

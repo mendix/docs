@@ -1,7 +1,6 @@
 ---
 title: "OData Representation"
 url: /refguide8/odata-representation/
-tags: ["studio pro"]
 ---
 
 This document describes how entities are represented in a published OData service.

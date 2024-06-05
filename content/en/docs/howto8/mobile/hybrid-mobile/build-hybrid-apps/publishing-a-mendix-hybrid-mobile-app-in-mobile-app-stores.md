@@ -3,7 +3,6 @@ title: "Publish a Mendix Hybrid Mobile App in Mobile App Stores"
 linktitle: "Publish Hybrid Mobile App in App Stores"
 url: /howto8/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores/
 weight: 20
-tags: ["mobile", "marketplace", "phonegap"]
 aliases:
     - /refguide8/publish-packages-to-mobile-stores.html
     - /refguide8/publish-packages-to-mobile-stores

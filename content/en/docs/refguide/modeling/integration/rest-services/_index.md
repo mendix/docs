@@ -4,7 +4,6 @@ url: /refguide/integration/rest-services/
 
 weight: 30
 description: "Introduces REST services."
-tags: ["REST services"]
 ---
 
 ## 1 Introduction

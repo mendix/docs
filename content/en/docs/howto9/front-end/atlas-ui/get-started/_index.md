@@ -2,7 +2,6 @@
 title: "Get Started"
 url: /howto9/front-end/get-started/
 weight: 10
-tags: ["Atlas", "UI", "UX", "user experience", "design"]
 ---
 
 ## 1 Introduction

@@ -4,7 +4,6 @@ url: /howto7/front-end/styles/
 
 description: "Presents details on using class names for text colors, buttons, and other style elements."
 weight: 40
-tags: ["style", "class name", "user interface", "front end"]
 ---
 
 ## 1 Introduction

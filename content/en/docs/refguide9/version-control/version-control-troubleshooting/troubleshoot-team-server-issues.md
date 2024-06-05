@@ -4,7 +4,6 @@ url: /refguide9/troubleshoot-team-server-issues/
 linktitle: "Team Server Issues"
 weight: 30
 description: "Presents a list of problems and fixes for Team Server issues."
-tags: ["version control", "troubleshoot", "team server"]
 ---
 
 ## 1 Introduction

@@ -4,7 +4,6 @@ linktitle: "Define Access Rules Using XPath"
 url: /refguide/define-access-rules-using-xpath/
 weight: 4
 description: "Describes how to define access rules for an entity using an XPath constraint."
-tags: ["microflow", "logic", "access rule", "xpath"]
 aliases:
     - /howto/logic-business-rules/define-access-rules-using-xpath/
 ---

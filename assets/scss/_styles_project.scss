@@ -598,6 +598,10 @@ nav.foldable-nav {
     }
 }
 
+.text-muted {
+    color: $gray-600 !important;
+}
+
 .td-sidebar {
     @include media-breakpoint-up(md) {
         padding-top: 4rem;

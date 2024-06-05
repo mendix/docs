@@ -404,7 +404,7 @@ Then the Studio Pro UI for the property appears like this:
 
 ### 4.2 TextTemplate{#texttemplate}
 
-The TextTemplate property allows a user to configure a translatable text template similar to the [Caption](/refguide/common-widget-properties#text-template) of a text widget.
+The TextTemplate property allows a user to configure a translatable text template similar to the [Caption](/refguide8/text#caption) of a text widget.
 
 If a `dataSource` attribute is not specified, or if a `dataSource` attribute is specified but the data source is not configured by the user, the interpolated string will be passed to the client component as `DynamicValue<string>`.
 

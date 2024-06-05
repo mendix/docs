@@ -25,7 +25,7 @@ From the **Software Composition** page in the Developer Portal, you can drill do
 
 To be able to see the software composition information, make sure that you meet the following prerequisites:
 
-* Component details and related actions are available for apps made with Studio Pro versions [9.24.22](/releasenotes/studio-pro/9.24/#92422) and above, [10.6.9](/releasenotes/studio-pro/10.6#1069) and above, and [10.10.0](/releasenotes/studio-pro/10.10/#10100) and above. 
+* Component details and related actions are available for apps made with Studio Pro versions [9.24.22](/releasenotes/studio-pro/9.24/#92422) and above, [10.6.9](/releasenotes/studio-pro/10.6/#1069) and above, and [10.10.0](/releasenotes/studio-pro/10.10/#10100) and above. 
 
   {{% alert color="info" %}}With Mendix versions 9.24.22 and above, only unmanaged Java dependencies or jars are shown. With Mendix versions 10.6.9 and above, both managed and unmanaged Java dependencies or jars will be shown.{{% /alert %}}
 

@@ -3,7 +3,6 @@ title: "PDF Document Generation"
 url: /appstore/modules/document-generation/
 
 description: "Describes the configuration and usage of the PDF Document Generation module, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "document generation", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -47,7 +46,9 @@ The [PDF Document Generation](https://marketplace.mendix.com/link/component/2115
 
     {{% alert color="info" %}}This is only applicable for apps built in Mendix 9.24.5 and below and Mendix 10.0.0.{{% /alert %}}
 
-* The new React client that is introduced in [10.7.0](/releasenotes/studio-pro/10.7/#react-client) is not yet supported. Generating PDF documents does not work when setting the 'Use React client (Beta)' to 'Yes' in the runtime settings of your app. We will introduce support for the React client soon.
+### 1.3 Dependencies
+
+* [Combo Box](https://marketplace.mendix.com/link/component/219304) widget
 
 ## 2 Installation {#installation}
 

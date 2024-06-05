@@ -3,7 +3,6 @@ title: "Configure Selenium Support"
 url: /howto8/integration/selenium-support/
 
 weight: 16
-tags: ["selenium", "integration"]
 ---
 
 ## 1 Introduction

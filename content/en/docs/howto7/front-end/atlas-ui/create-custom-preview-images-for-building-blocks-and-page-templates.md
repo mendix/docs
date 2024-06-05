@@ -3,7 +3,6 @@ title: "Create Custom Preview Images for Building Blocks and Page Templates"
 linktitle: "Custom Preview Images"
 url: /howto7/front-end/create-custom-preview-images-for-building-blocks-and-page-templates/
 weight: 50
-tags: ["Atlas", "UI", "UX", "user experience"]
 ---
 
 ## 1 Introduction

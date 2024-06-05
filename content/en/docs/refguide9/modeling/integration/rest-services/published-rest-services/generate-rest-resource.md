@@ -3,7 +3,6 @@ title: "Generating a Published REST Resource"
 url: /refguide9/generate-rest-resource/
 weight: 20
 description: "Generate a published REST resource from an entity"
-tags: ["published REST", "resource", "entity", "operations", "expose", "studio pro"]
 # If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 # linked from DM: domain model > entity (right-click) > Expose as REST resource > Help (integration)
 ---

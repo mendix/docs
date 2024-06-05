@@ -2,7 +2,6 @@
 title: "XPath day-from-dateTime"
 url: /refguide/xpath-day-from-datetime/
 weight: 8
-tags: ["studio pro"]
 ---
 
 ## 1 Overview

@@ -4,7 +4,6 @@ linktitle: "Behavior of Your App"
 url: /developerportal/deploy/behavior-of-app
 weight: 26
 description: "Describes the behaviors and limitations that apply to your app when running in Mendix Cloud."
-tags: ["Cloud", "Mendix Cloud", "FAQ", "Limitations", "Max file size"]
 ---
 
 ## 1 Introduction

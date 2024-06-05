@@ -2,7 +2,6 @@
 title: "Object Type Decision"
 url: /refguide8/object-type-decision/
 weight: 2
-tags: ["studio pro", "object type decision", "decisions"]
 aliases:
     - /refguide8/inheritance-split.html
     - /refguide8/inheritance-split

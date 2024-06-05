@@ -3,7 +3,6 @@ title: "Integration Pane"
 url: /refguide/integration-pane/
 weight: 30
 description: "Describes the Integration Pane in Mendix Studio Pro."
-tags: ["data hub", "studio Pro", "Integration Pane", "data hub catalog"]
 aliases:
     - /refguide/data-hub-pane/
 ---

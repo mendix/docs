@@ -2,7 +2,6 @@
 title: "Custom Action Expense App"
 url: /appstore/partner-solutions/ats/ht-two-custom-action-expense-app/
 description: "Explains how to find and use the Custom Action App that is used in the how-to's."
-tags: ["ATS", "testing"]
 ---
 
 ## 1 Introduction

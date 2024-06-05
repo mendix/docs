@@ -2,7 +2,6 @@
 title: "Configure a Selenium Hub"
 url: /appstore/partner-solutions/ats/ht-two-configure-a-selenium-hub/
 description: "Describes how to configure a selenium hub for the supported selenium providers and a custom selenium hub."
-tags: ["ATS", "testing"]
 ---
 
 ## 1 Introduction 

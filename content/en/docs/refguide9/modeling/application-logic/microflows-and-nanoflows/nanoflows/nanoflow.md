@@ -2,7 +2,6 @@
 title: "Nanoflow Properties"
 url: /refguide9/nanoflow/
 weight: 20
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction

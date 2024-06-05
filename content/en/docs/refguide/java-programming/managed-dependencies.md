@@ -4,7 +4,6 @@ url: /refguide/managed-dependencies/
 
 weight: 50
 description: "Describes how to use the managed dependencies feature in Studio Pro"
-tags: ["managed dependencies", "Gradle", "java", "maven", "custom repository", "maven central", "dependency synchronization", "vendorlib"]
 ---
 
 {{% alert color="info" %}}

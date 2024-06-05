@@ -2,7 +2,6 @@
 title: "Enumerations"
 url: /refguide9/enumerations/
 weight: 40
-tags: ["studio pro", "enumeration", "enumeration values", "enumeration value"]
 aliases:
     - /refguide9/enumeration-values.html
     - /refguide9/enumeration-values

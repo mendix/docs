@@ -1,7 +1,6 @@
 ---
 title: "Association Source"
 url: /refguide9/association-source/
-tags: ["studio pro", "association", "data source"]
 weight: 60
 ---
 

@@ -8,7 +8,6 @@ description_list: true
 cascade:
     - content_type: "Private Mendix Platform Guide"
     - mendix_version: 10
-tags: ["private mendix platform",  "private platform", "private marketplace"]
 ---
 
 ## 1 Introduction

@@ -3,7 +3,6 @@ title: "Initiatives Overview"
 url: /developerportal/portfolio-management/initiatives-overview/
 weight: 5
 description: "Describes the Initiatives Overview page in the Mendix Portfolio Management app."
-tags: ["initiatives overview", portfolio management"]
 ---
 
 ## 1 Introduction

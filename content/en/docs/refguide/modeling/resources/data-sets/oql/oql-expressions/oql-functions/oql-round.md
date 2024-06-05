@@ -1,7 +1,6 @@
 ---
 title: "OQL ROUND"
 url: /refguide/oql-round/
-tags: ["studio pro"]
 ---
 
 ## 1 Description

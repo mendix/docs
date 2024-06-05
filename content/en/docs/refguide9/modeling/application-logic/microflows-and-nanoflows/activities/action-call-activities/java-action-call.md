@@ -2,7 +2,6 @@
 title: "Java Action Call"
 url: /refguide9/java-action-call/
 weight: 10
-tags: ["studio pro", "Java", "java action call", "action call"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

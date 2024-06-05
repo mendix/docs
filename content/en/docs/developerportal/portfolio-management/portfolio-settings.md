@@ -3,7 +3,6 @@ title: "Portfolio Settings"
 url: /developerportal/portfolio-management/portfolio-settings/
 weight: 20
 description: "Describes the Portfolio Settings page in the Mendix Portfolio Management app."
-tags: ["portfolio settings", portfolio management"]
 ---
 
 ## 1 Introduction

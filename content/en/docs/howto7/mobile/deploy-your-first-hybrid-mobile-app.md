@@ -3,7 +3,6 @@ title: "Deploy Your First Hybrid Mobile App"
 url: /howto7/mobile/deploy-your-first-hybrid-mobile-app/
 
 weight: 50
-tags: ["mobile", "deploy"]
 ---
 
 ## 1 Introduction

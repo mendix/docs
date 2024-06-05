@@ -3,7 +3,6 @@ title: "Authenticating Users"
 url: /refguide/mobile/using-mobile-capabilities/auth-users/
 weight: 9
 description: "This guide explains how to authenticate users in a mobile app."
-tags: ["authentication", "mobile"]
 ---
 
 ## 1 Introduction

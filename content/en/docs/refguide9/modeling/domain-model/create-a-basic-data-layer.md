@@ -3,7 +3,6 @@ title: "Creating a Basic Data Layer"
 url: /refguide9/create-a-basic-data-layer/
 weight: 60
 description: "Describes how to create entities and attributes, add enumerations, create associations, and configure the delete behavior for associations with Studio Pro."
-tags: ["data layer", "domain model", "entities", "enumerations", "associations"]
 aliases:
     - /howto9/data-models/create-a-basic-data-layer/
 ---

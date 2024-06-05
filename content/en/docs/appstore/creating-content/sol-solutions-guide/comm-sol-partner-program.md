@@ -4,7 +4,6 @@ url: /appstore/creating-content/comm-sol-partner-program/
 linktitle: "Commercial Solution Partner Programs"
 weight: 10
 description: "Mendix supports solution developers through the Mendix Component Partner Program and Mendix Commercial Solution Partner Program."
-tags: [ "solutions", "commercial solution partner", "startup", "adaptable solutions", "prescriptive solutions" ]
 ---
 
 ## 1 Introduction

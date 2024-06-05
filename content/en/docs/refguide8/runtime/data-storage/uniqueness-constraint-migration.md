@@ -2,7 +2,6 @@
 title: "Uniqueness Constraint Migration"
 url: /refguide8/uniqueness-constraint-migration/
 weight: 30
-tags: ["studio pro"]
 aliases:
     - /refguide/uniqueness-constraint-migration.html
     - /refguide/uniqueness-constraint-migration

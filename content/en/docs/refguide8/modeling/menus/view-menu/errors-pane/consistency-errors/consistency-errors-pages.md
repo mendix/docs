@@ -2,7 +2,6 @@
 title: "Page Editor Consistency Errors"
 url: /refguide8/consistency-errors-pages/
 description: "Describes consistency errors in Mendix Studio Pro and the way to fix them."
-tags: ["Studio Pro", "consistency errors", "checks", "errors", "pages"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

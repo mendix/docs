@@ -4,7 +4,6 @@ url: /refguide9/xpath/
 
 weight: 90
 description: "Describes how the XPath query language is used in Mendix by presenting functions and examples."
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction
@@ -92,7 +91,7 @@ See below some frequently used XPath functions:
 This video was done with [Studio Pro 8](/refguide8/), but the concepts remain applicable.
 {{% /alert %}}
 
-{{% youtube sdabUY-w4ZU %}}
+{{< youtube sdabUY-w4ZU >}}
 
 ## 7 Read More
 

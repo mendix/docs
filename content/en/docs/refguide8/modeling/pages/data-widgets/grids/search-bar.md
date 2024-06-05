@@ -2,7 +2,6 @@
 title: "Search Bar"
 url: /refguide8/search-bar/
 weight: 40
-tags: ["studio pro", "search bar", "comparison search field", "drop down search field", "range search field", "grid"]
 aliases:
     - /refguide8/comparison-search-field.html
     - /refguide8/drop-down-search-field.html

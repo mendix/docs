@@ -2,7 +2,6 @@
 title: "Annotation"
 url: /refguide8/annotation/
 weight: 60
-tags: ["studio pro", "annotation", annotation flow]
 aliases:
     - /refguide8/annotation-flow.html
     - /refguide8/annotation-flow

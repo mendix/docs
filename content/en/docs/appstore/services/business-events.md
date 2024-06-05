@@ -2,7 +2,6 @@
 title: "Mendix Business Events"
 url: /appstore/services/business-events/
 description: "Describes the configuration and usage of the Mendix Business Events service, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "business events", "data broker", "event broker", "kafka", "platform support", "event driven"]
 aliases:
     - /appstore/modules/business-events/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

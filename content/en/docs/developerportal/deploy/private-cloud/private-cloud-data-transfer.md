@@ -4,7 +4,6 @@ linktitle: "Migrate Data (Preview)"
 url: /developerportal/deploy/private-cloud-data-transfer/
 description: "Describes how to migrate data between Private Cloud environments"
 weight: 60
-tags: ["Backup", "Restore", "Data transfer", "Migration", "Private Cloud", "Environment"]
 ---
 
 ## 1 Introduction

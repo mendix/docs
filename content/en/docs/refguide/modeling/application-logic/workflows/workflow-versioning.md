@@ -2,7 +2,6 @@
 title: "Workflow Versioning and Conflict Mitigation"
 url: /refguide/workflow-versioning/
 weight: 60
-tags: ["workflow", "workflows", "versions", "update"]
 ---
 
 ## 1 Introduction
@@ -63,6 +62,7 @@ Conflicts with the possible mitigations listed above can be summarized in the fo
 | Workflow Definition Deleted                         | {{< icon name="checkmark-circle-filled" color="green" >}} | N/A                                                          | N/A                                                          | N/A                                                          |
 | *Partially resolvable*:                             |                                                              |                                                              |                                                              |                                                              |
 | Current Activity Removed                            | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | N/A                                                          | {{< icon name="checkmark-circle-filled" color="green" >}} |
+| Current Parallel Split Removed                    | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | N/A                                                          | N/A                                                          |
 | Current Activity Moved out of Path                | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | N/A                                                          | N/A                                                          |
 | Parallel Split Introduced in Executed Path          | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="checkmark-circle-filled" color="green" >}} | N/A                                                          | N/A                                                          |
 | *Resolvable*:                                       |                                                              |                                                              |                                                              |                                                              |
@@ -138,7 +138,17 @@ You can do one of the following:
 * The Administrator can apply jumping to different activities. The Workflow Commons module has pages where the Administrator can decide which activity in the workflow to continue from (which activity to jump to). As a developer, you can also use microflow activities [Generate jump-to options](/refguide/generate-jump-to-options/) and [Apply jump-to option](/refguide/apply-jump-to-option/) to build custom pages and logic to migrate running workflow instances.
 * The app developer can revert the change (which adds the activities back) and deploy this version.
 
-#### 3.2.6 Current Activity Moved out of Path
+#### 3.2.6 Current Parallel Split Removed
+
+When an app developer removes a complete **Parallel Split** from a workflow and deploys that change, workflow instances that were executing deleted activities can no longer continue executing the workflow as the Workflow Engine cannot determine what activity to continue with.
+
+You can do one of the following:
+
+* The workflow can be aborted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
+* The workflow can be restarted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
+* The app developer can revert the change (which adds the activities back) and deploy this version.
+
+#### 3.2.7 Current Activity Moved out of Path
 
 When an app developer moves activities out of a **Parallel Split** path, currently running workflow instances that are executing the moved activity cannot complete the **Parallel Split**.
 
@@ -148,7 +158,7 @@ You can do one of the following:
 * The workflow can be restarted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
 * The app developer can revert the change (which moves the activity back) and deploy this version.
 
-#### 3.2.7 Parallel Split Introduced in Executing Path
+#### 3.2.8 Parallel Split Introduced in Executing Path
 
 When an app developer adds a **Parallel Split** with one or more paths and moves some activities inside a path of that **Parallel Split**, workflow instances executing the moved activities cannot complete the parallel split.
 
@@ -158,7 +168,7 @@ You can do one of the following:
 * The workflow can be restarted, for example, by using the **DefaultWorkflowAdmin** page in the Workflow Commons.
 * The app developer can revert the change (which moves the activities out of the **Parallel Split**) and deploy this version.
 
-#### 3.2.8 Parallel Path Introduced
+#### 3.2.9 Parallel Path Introduced
 
 When an app developer adds a path to a **Parallel Split** and deploys this change, workflow instances currently executing activities inside this **Parallel Split** cannot complete the parallel split.
 
@@ -169,7 +179,7 @@ You can do one of the following:
 * The Administrator can use **Mark-as-Resolved** to fix this issue (the first activity of the newly added path will be added to the executing activities of the workflow instance).
 * The app developer can revert the change (which moves the activity back) and deploy this version.
 
-#### 3.2.9 Selected Outcome Replaced
+#### 3.2.10 Selected Outcome Replaced
 
 When an app developer adds a new outcome to a user task, a microflow, or a decision and moves one or more activities to the new outcome, workflow instances that have executed or are executing these activities will now effectively move to another outcome than originally selected. 
 
@@ -180,7 +190,7 @@ You can do one of the following:
 * The Administrator can use **Mark-as-Resolved** to fix this issue.
 * The app developer can revert the change (which moves the activity back) and deploy this version.
 
-#### 3.2.10 Multi-User Task Outcome Changed
+#### 3.2.11 Multi-User Task Outcome Changed
 
 When an app developer changes the decision method of a multi-user task, or some of its settings, the multi-user task could have a different outcome from that before the change. This may not necessarily be a problem, but it might be and needs to be assessed.
 
@@ -191,7 +201,7 @@ You can do one of the following:
 * The Administrator can use **Mark-as-Resolved** to fix this issue.
 * The app developer can revert the change (which moves the activity back) and deploy this version.
 
-#### 3.2.11 Activities Introduced in the Executed Path
+#### 3.2.12 Activities Introduced in the Executed Path
 
 When an app developer adds one or more activities in a workflow (or moves one or more activities to an earlier position in the flow), workflow instances that have already passed that point in the flow will not execute these activities. This may not necessarily be a problem, but it is possible that activities that have not been executed yet depend on new activities.
 
@@ -202,7 +212,7 @@ You can do one of the following:
 * The Administrator can use **Mark-as-Resolved** to fix this issue.
 * The app developer can revert the change (which moves the activity back) and deploy this version.
 
-#### 3.2.12 Executed Activities Moved to a Re-executable Position
+#### 3.2.13 Executed Activities Moved to a Re-executable Position
 
 When an app developer moves activities within a workflow, workflow instances that have executed or are executing the moved activities may have to re-execute these activities. In this case user tasks or microflows may have to be re-executed. If actions are non-idempotent, changes may happen more than once (for example, object creation or sending data to external systems).
 
@@ -213,7 +223,7 @@ You can do one of the following:
 * The Administrator can use **Mark-as-Resolved** to fix this issue.
 * The app developer can revert the change (which moves the activity back) and deploy this version.
 
-#### 3.2.13 Parallel Split Path Removed
+#### 3.2.14 Parallel Split Path Removed
 
 When an app developer removes a path from a **Parallel Split** and deploys this change, the currently running workflow instances that are executing activities within that path cannot continue execution. 
 

@@ -4,7 +4,6 @@ url: /refguide/configure-files/
 linktitle: "Configure File Upload and Download"
 weight: 70
 description: "Describes how to configure file manager in Mendix Studio Pro."
-tags: ["studio pro", "pages", "file", "upload files", "attach", "file manager"]
 ---
 
 ## 1 Introduction 

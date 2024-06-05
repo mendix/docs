@@ -2,12 +2,11 @@
 title: "Parse and Format Decimal Function Calls"
 url: /refguide/parse-and-format-decimal-function-calls/
 weight: 150
-tags: ["studio pro", "expression", "parsing", "formatting"]
 ---
 
 ## 1 Introduction
 
-This document describes parsing and formatting decimal function calls. For details on all the pattern possibilities, see [Class DecimalFormat](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/text/DecimalFormat.html).
+This document describes parsing and formatting decimal function calls. For details on all the pattern possibilities, see [Class DecimalFormat](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/text/DecimalFormat.html).
 
 {{% alert color="warning" %}}
 In nanoflows, it is not possible to use parsing and formatting decimal function calls with optional format string (for example, `'#,###.##'`) within a text parameter on a page. The text parameter works the same way as a nanoflow and is restricted to only using the format appropriate to the locale from the language of the current user in Mendix apps.
@@ -28,7 +27,7 @@ The input parameters in microflows are described in the table below:
 | Value                                                        | Type             |
 | ------------------------------------------------------------ | ---------------- |
 | Value to parse                                               | String           |
-| Format for the input value based on the Java library `DecimalFormat` (for more information, see [Class DecimalFormat](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/text/DecimalFormat.html)) | String           |
+| Format for the input value based on the Java library `DecimalFormat` (for more information, see [Class DecimalFormat](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/text/DecimalFormat.html)) | String           |
 | Default value **(optional)**                                 | Decimal or empty |
 
 #### 2.1.2 Input Parameters in Nanoflows
@@ -81,8 +80,8 @@ The input parameters in microflows are described in the table below:
 | Value                                                        | Type    |
 | ------------------------------------------------------------ | ------- |
 | Value to convert                                             | Decimal |
-| Format for the result based on the Java library `DecimalFormat` (for details, see [Class DecimalFormat](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/text/DecimalFormat.html)) | String  |
-| Locale in which the results should be formatted **(optional)**. For the more information on supported values, see [forLanguageTag](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Locale.html#forLanguageTag(java.lang.String)). When omitted, the user configured locale is used. | String  |
+| Format for the result based on the Java library `DecimalFormat` (for details, see [Class DecimalFormat](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/text/DecimalFormat.html)) | String  |
+| Locale in which the results should be formatted **(optional)**. For the more information on supported values, see [forLanguageTag](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Locale.html#forLanguageTag(java.lang.String)). When omitted, the user configured locale is used. | String  |
 
 #### 3.1.2 Input Parameters in Nanoflows
 

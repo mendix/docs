@@ -2,7 +2,6 @@
 title: "Call ML Model"
 url: /refguide9/call-ml-model/
 weight: 45
-tags: ["ml kit", "call model", "ML microflow", "machine learning", "models"]
 ---
 
 {{% alert color="info" %}}[Machine learning model](/refguide9/machine-learning-kit/) support is available in Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above.{{% /alert %}}

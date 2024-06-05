@@ -2,7 +2,6 @@
 title: "Image"
 url: /refguide8/image/
 weight: 20
-tags: ["studio pro", "image", "image widget"]
 aliases:
     - /refguide8/image-property.html
     - /refguide8/image-property

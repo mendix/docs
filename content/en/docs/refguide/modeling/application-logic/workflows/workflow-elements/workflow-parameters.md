@@ -2,7 +2,6 @@
 title: "Workflow Parameters"
 url: /refguide/workflow-parameters/
 weight: 20
-tags: ["workflow", "workflows", "parameters", "workflow parameters"]
 ---
 
 ## 1 Introduction

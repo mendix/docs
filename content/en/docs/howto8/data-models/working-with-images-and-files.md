@@ -3,7 +3,6 @@ title: "Work with Images and Files"
 url: /howto8/data-models/working-with-images-and-files/
 
 weight: 4
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction

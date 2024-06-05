@@ -2,7 +2,6 @@
 title: "Catalog"
 url: /releasenotes/catalog/
 description: "Release notes for updates to the Mendix Catalog"
-tags: ["data hub", "Catalog", "data hub Landscape"]
 weight: 36
 aliases:
     - /releasenotes/data-hub/

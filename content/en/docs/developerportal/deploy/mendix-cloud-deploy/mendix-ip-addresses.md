@@ -3,7 +3,6 @@ title: "Mendix IP Addresses"
 url: /developerportal/deploy/mendix-ip-addresses/
 weight: 38
 description: "A list of static IP addresses used by Mendix Cloud"
-tags: ["Mendix Cloud", "IP address", "Cloud Portal"]
 ---
 
 ## 1 Introduction
@@ -17,7 +16,7 @@ Mendix uses one IP address when someone connects to your Mendix application (inc
 {{% alert color="warning" %}}
 Incoming IP addresses are liable to change without notice and should not be used to access the application.
 
-Mendix maintains the current outgoing IP addresses as much as possible. However, the outgoing addresses may change for operational reasons. Any changes are subject to a 48-hour notice period.
+Mendix maintains the current outgoing IP addresses as much as possible. However, the outgoing addresses may change for operational reasons. At least 48 hours before any changes, Technical Contacts will be emailed and a notification will be listed on [Mendix Platform Status](https://status.mendix.com).
 {{% /alert %}}
 
 ### 2.1 Incoming IP

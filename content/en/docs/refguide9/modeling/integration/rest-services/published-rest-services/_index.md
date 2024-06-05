@@ -3,7 +3,6 @@ title: "Published REST Services"
 url: /refguide9/published-rest-services/
 weight: 20
 description: "An overview of published REST services from Mendix apps"
-tags: ["publish", "REST service", "overview", "configuration"]
 # If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 # linked from integration - published rest > F1 help
 ---

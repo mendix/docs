@@ -3,7 +3,6 @@ title: "Translate Your App Content"
 url: /howto8/collaboration-requirements-management/translate-your-app-content/
 
 weight: 50
-tags: ["studio pro", "translate app", "batch translate", "translate"]
 ---
 
 ## 1 Introduction

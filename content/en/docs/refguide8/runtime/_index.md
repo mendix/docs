@@ -4,7 +4,6 @@ url: /refguide8/runtime/
 weight: 40
 no_list: false
 description_list: true 
-tags: ["runtime", "runtime server", "mendix client", "cluster leader"]
 ---
 
 ## 1 Introduction

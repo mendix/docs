@@ -3,7 +3,6 @@ title: "Special Checks"
 url: /refguide9/special-checks/
 weight: 40
 description: "Describes special checks in expressions in Mendix."
-tags: ["studio pro", "special checks", "special check", "expressions"]
 ---
 
 ## 1 Introduction

@@ -2,7 +2,6 @@
 title: "Upload to Version Control Server"
 url: /refguide/upload-to-version-control-dialog/
 weight: 70
-tags: ["studio pro"]
 aliases:
     - /refguide/upload-to-team-server-dialog.html
     - /refguide/upload-to-team-server-dialog

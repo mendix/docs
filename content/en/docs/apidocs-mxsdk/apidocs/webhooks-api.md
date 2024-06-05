@@ -4,7 +4,6 @@ url: /apidocs-mxsdk/apidocs/webhooks-api/
 type: swagger
 weight: 120
 description: "Use this API to manage webhooks."
-tags: ["API", "webhooks", "Mendix Cloud"]
 ---
 
 ## 1 Introduction

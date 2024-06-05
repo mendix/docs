@@ -5,7 +5,6 @@ url: /howto7/mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/
 
 weight: 30
 description: "Describes how to address the challenges of implementing SSO in hybrid mobile apps."
-tags: ["SAML", "SSO", "mobile", "hybrid app", "phonegap", "authentication"]
 ---
 
 ## 1 Introduction

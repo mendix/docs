@@ -3,7 +3,6 @@ title: "File Menu"
 url: /refguide8/file-menu/
 description: "Describes the File Menu in Studio Pro."
 weight: 5
-tags: ["Studio Pro", "file menu", "file"]
 ---
 
 ## 1 Introduction

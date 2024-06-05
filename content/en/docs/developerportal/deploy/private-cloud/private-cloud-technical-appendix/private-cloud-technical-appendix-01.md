@@ -4,7 +4,6 @@ linktitle: "1. Introduction to Operators"
 url: /developerportal/deploy/private-cloud-technical-appendix-01/
 description: "Describes which providers are supported by Mendix for Private Cloud"
 weight: 10
-tags: ["Private Cloud", "Technical Appendix"]
 ---
 
 ## 1 Introduction

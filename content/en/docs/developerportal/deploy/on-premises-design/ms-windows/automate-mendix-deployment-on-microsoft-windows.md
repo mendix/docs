@@ -4,7 +4,6 @@ url: /developerportal/deploy/automate-mendix-deployment-on-microsoft-windows/
 linktitle: "Automate Mendix Deployment"
 description: "How to automate Mendix deployment on servers running Windows"
 weight: 5
-tags: ["deploy", "Windows", "Mendix Service Console", "Microsoft", "CI/CD pipeline", "cmdlets"]
 ---
 
 ## 1 Introduction

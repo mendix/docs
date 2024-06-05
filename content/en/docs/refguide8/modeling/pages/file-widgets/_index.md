@@ -2,7 +2,6 @@
 title: "File Widgets"
 url: /refguide8/file-widgets/
 weight: 35
-tags: ["studio pro", "file widgets", "widget"]
 ---
 
 ## 1 Introduction

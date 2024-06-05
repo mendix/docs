@@ -3,7 +3,6 @@ title: "Navigation"
 url: /refguide9/navigation/
 weight: 20
 description: "Describes the concept of navigation in apps and the properties of a profile."
-tags: ["studio pro", "navigation"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

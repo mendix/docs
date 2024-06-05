@@ -4,7 +4,6 @@ url: /howto9/front-end/ux-best-practices/
 
 weight: 10
 description: "Describes best practices written by a UX Designer for contributing to the app development process."
-tags: ["ux", "ui", "ux designer", "user experience", "design", "menu", "button", "typography", "card", "front end"]
 aliases:
     - /howtogeneral/bestpractices/ux-best-practices.html
     - /howtogeneral/bestpractices/ux-best-practices

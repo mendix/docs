@@ -2,7 +2,6 @@
 title: "Set Up a Local Selenium Solution"
 url: /appstore/partner-solutions/ats/ht-two-setting-up-a-local-selenium-solution/
 description: "Describes the options to set up a local selenium solution."
-tags: ["ATS", "testing", "Selenium hub"]
 ---
 
 ## 1 Introduction

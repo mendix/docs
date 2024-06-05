@@ -2,7 +2,6 @@
 title: "Querying Over Self-References"
 url: /refguide8/query-over/
 weight: 20
-tags: ["query", "self-reference", "association", "domain model"]
 ---
 
 ## 1 Introduction

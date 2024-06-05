@@ -85,6 +85,8 @@ This property determines if the returned value from the called microflow should 
 
 The name of the variable, list, or object returned by the activity.
 
+If you specify a name for the returned value in the called microflow or nanoflow's end event, this field will utilise that name while ensuring it remains unique within the current scope.
+
 ## 4 Microflow Calls in Offline-First Apps
 
 It is possible to perform a microflow call from an offline-first app. However, it works a bit differently than in online applications. For more information, see the [Microflows](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/best-practices/#microflows) section of *Offline Best Practices*

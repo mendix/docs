@@ -24,6 +24,7 @@ The end event properties pane consists of the following sections:
 
 * [Return value](#return-value)
 * [Return type](#return-type)
+* [Return variable name](#return-variable-name)
 
 ### 2.1 Return Value {#return-value}
 
@@ -48,6 +49,15 @@ After you type an [expression](/refguide/expressions/) in the **End Event** dial
 {{% alert color="info" %}}
 If you are calling a microflow from another microflow, a *calling* microflow cannot control what is returned. It is controlled by the *called* microflow. 
 {{% /alert %}}
+
+### 2.3 Return Variable Name {#return-variable-name}
+
+The return value of a microflow or nanoflow will be given this name. 
+
+When you update the return type, a default variable name is set based on the return type whether it is a variable, object, or list. You can change the name of the returned variable which will be used later in the microflow or nanoflow call.
+
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/events/end-event/return-variable-name.png" width="500px" class="no-border" >}}
+
 
 ## 3 Read More
 

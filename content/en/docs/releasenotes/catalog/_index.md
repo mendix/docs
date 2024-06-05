@@ -12,6 +12,12 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2024
 
+### June 6, 2024
+
+#### Fixes
+
+* We fixed some minor aesthetics bugs that were present on the Registration, Curate and Home Pages.
+
 ### May 23, 2024
 
 #### Fixes

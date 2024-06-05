@@ -2,28 +2,16 @@
 {{ with .Parent -}}
   {{ $isSingle = .IsHome -}}
 {{ end -}}
-<nav aria-label="breadcrumb" style="margin-left:2rem" class="d-print-none td-breadcrumbs
+<nav aria-label="breadcrumb"  style="margin-left:2rem; margin-right: 2rem;" class="td-breadcrumbs
     {{- if $isSingle }} td-breadcrumbs__single {{- end }}">
-    <div class="row"> <!-- NK - added row and columns for layout -->
-		<div class="col-lg-8" style="padding-top: 0.5rem"> <!-- NK - adjusted column resizing for multiple screen sizes -->
 			<!-- NK - keeps breadcrumb out of landing page -->
 			{{ if (ne .Page.Type "landingpage")}}
-			<ol class="breadcrumb spb-1">
-				{{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
-			</ol>
-			{{end}}
-		</div>
-		<!-- NK - moved language dropdown here -->
-		<div class="col-lg-4 col-xl-3" style="text-align:right"> <!-- NK - adjusted column resizing for multiple screen sizes -->
-			{{ if  (gt (len .Site.Home.Translations) 0) }}
-				<li class="nav-item dropdown d-none d-md-block d-print-none">
-				{{ partial "navbar-lang-selector.html" . }}
-				</li>
-			{{ end }}
-			<!-- NK - end of move -->
-		</div>
-	</div>
+        <ol class="breadcrumb spb-1">
+          {{- template "breadcrumbnav" (dict "p1" . "p2" .) }}
+        </ol>
+      {{end}}
 </nav>
+
 {{- define "breadcrumbnav" -}}
   {{ if .p1.Parent -}}
     {{ if not .p1.Parent.IsHome -}}
@@ -35,10 +23,10 @@
   {{ $isActive :=  eq .p1 .p2 }}
   <li class="breadcrumb-item{{ if $isActive }} active{{ end }}"
       {{- if $isActive }} aria-current="page"{{ end }}>
-      {{ if $isActive -}}
+    {{ if $isActive -}}
       {{ .p1.LinkTitle -}}
     {{ else -}}
-      <a href="{{ .p1.Permalink }}">{{ .p1.LinkTitle }}</a>
+      <a href="{{ .p1.RelPermalink }}">{{ .p1.LinkTitle }}</a>
     {{- end -}}
   </li>
 {{- end -}}

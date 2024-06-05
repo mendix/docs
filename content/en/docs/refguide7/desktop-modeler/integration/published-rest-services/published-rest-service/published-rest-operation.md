@@ -173,4 +173,4 @@ The description provides a complete overview of what the operation does. You can
 
 **How to publish REST natively with Mendix**
 
-{{% youtube HzrFkv0U4n8 %}}
+{{< youtube HzrFkv0U4n8 >}}

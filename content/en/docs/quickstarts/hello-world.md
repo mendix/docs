@@ -8,7 +8,7 @@ description: "Learn how to create and deploy a Hello World app with Mendix in tw
 
 ## 1 Hello Mendix: Create, Run, and Deploy a Hello World App with Mendix
 
-{{% youtube 5kRDyHfkwoI %}}
+{{< youtube 5kRDyHfkwoI >}}
 
 ## 2 Continuing with the Next Tutorial
 

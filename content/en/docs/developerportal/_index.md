@@ -16,7 +16,7 @@ cascade:
 
 On the Mendix Portal, developers can create, deploy, and mange apps as well as collaborate with each other. To access these features, visit [Apps](https://sprintr.home.mendix.com).
 
-{{% alert color="info" %}}The features in Apps can also be accessed via APIs, enabling third-party developers to integrate their own widgets and plugins. For more information, see [API Documentation](/apidocs-mxsdk/apidocs/).{{% /alert %}}
+{{% alert color="info" %}}The features in **Apps** can also be accessed via APIs, enabling third-party developers to integrate their own widgets and plugins. For more information, see [API Documentation](/apidocs-mxsdk/apidocs/).{{% /alert %}}
 
 ## 2 Creating a New App
 
@@ -26,7 +26,7 @@ To get started with building an app, click **Create App** to open a page where y
 
 ## 3 My Apps {#my-apps}
 
-When you open Apps, you are brought to the **My Apps** tab, which shows you a summary of your current apps:
+When you open **Apps**, you are brought to the **My Apps** tab, which shows you a summary of your current apps:
 
 {{< figure src="/attachments/developerportal/app-tiles.png" alt="Apps tiles" class="no-border" >}}
 

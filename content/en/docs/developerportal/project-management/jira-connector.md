@@ -35,7 +35,7 @@ As we further develop this feature, we may lift these limitations with future re
 
 ## 4 Prerequisites
 
-* You need to be a [Scrum Master](/developerportal/general/app-roles/#team-roles) of the app in Apps.
+* You need to have the [Scrum Master](/developerportal/general/app-roles/#team-roles) role for the app.
 * You need to have an active subscription to Jira Software Cloud.
 * You need to have a project in Jira with a Scrum board, a Kanban board, or a team-managed board.
 * You need to have a user account and API token with administration rights to the project in Jira. For more information on how to get this API token, see [Manage API tokens for your Atlassian account](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/).
@@ -81,8 +81,8 @@ Once the activation is completed, your app is connected to Jira. You can see the
     * If you do not wish to see backlog stories in Studio Pro, consider setting up your board without a backlog and use a separate board to manage your backlog.
     * The list of stories is ordered by the Jira story key.
 
-* After you commit your changes in Studio Pro, you can see the associated Jira stories in the details of the corresponding [revision](/developerportal/general/team-server/#revision-details) in the **Team Server** page after opening your app in Apps.
-* You can see the link to your Jira board in the **Project Management** section in Apps' [navigation pane](/developerportal/#navigation-pane).
+* After you commit your changes in Studio Pro, you can see the associated Jira stories in the details of the corresponding [revision](/developerportal/general/team-server/#revision-details) in the **Team Server** page after opening your app in **Apps**.
+* You can see the link to your Jira board in the **Project Management** section in the **Apps** [navigation pane](/developerportal/#navigation-pane).
 
     {{< figure src="/attachments/developerportal/project-management/jira-connector/navigation-jira.png" >}}
 

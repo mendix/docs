@@ -41,7 +41,7 @@ Configure the following properties:
 
 ### 2.1 Cordova Configuration
 
-If your are building a hybrid mobile app, you need to add the following lines to enable access to YouTube, Vimeo, and Dailymotion videos as well as MP4 extensions through your Sprint in Apps > **Mobile App** > [Custom Cordova Configuration](/developerportal/deploy/mobileapp/#custom):
+If your are building a hybrid mobile app, you need to add the following lines to enable access to YouTube, Vimeo, and Dailymotion videos as well as MP4 extensions through your Sprint in **Apps** > **Mobile App** > [Custom Cordova Configuration](/developerportal/deploy/mobileapp/#custom):
 
 ```xml
 <allow-navigation href="*://*youtube.com/*" />

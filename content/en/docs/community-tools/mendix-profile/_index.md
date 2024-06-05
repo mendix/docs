@@ -3,7 +3,7 @@ title: "Mendix Profile"
 url: /community-tools/mendix-profile/
 
 weight: 2
-description: "Describes the personal profile page of the Mendix Developer Portal."
+description: "Describes the personal profile page of the Mendix Portal."
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 aliases:
     - /developerportal/community-tools/mendix-profile/

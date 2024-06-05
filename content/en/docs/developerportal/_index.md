@@ -1,7 +1,7 @@
 ---
 title: "Mendix Portal for Developers"
 url: /developerportal/
-description: "Describes the sections of the Mendix Developer Portal and links to more detailed documents in the guide."
+description: "Describes the Apps page and links to more detailed documents in the guide."
 weight: 30
 no_list: false
 description_list: true

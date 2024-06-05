@@ -27,7 +27,7 @@ As a result of this, Mendix hybrid apps that employ push notifications can no lo
 
 To build the hybrid app package, follow these steps:
 
-1. Open your app in the Developer Portal. In the navigation pane on the left, click **Mobile App**.
+1. Open your app in [Apps](https://sprintr.home.mendix.com/). In the navigation pane on the left, click **Mobile App**.
 2. Make sure the **Push Notifications** permission is selected under **Permissions**.
 3. Click **Publish for Mobile App Stores**:
 

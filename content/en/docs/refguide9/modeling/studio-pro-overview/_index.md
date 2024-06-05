@@ -31,7 +31,7 @@ The Studio Pro top bar contains the following items:
 
 * [Menus](#menus) 
 * [Buttons to run and view your app](#run-and-view)
-* [Links to the Developer Portal and Marketplace](#links) 
+* [Links to Apps and Marketplace](#links) 
 
 ### 2.1 Menus {#menus}
 

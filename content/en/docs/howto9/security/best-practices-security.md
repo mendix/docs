@@ -55,7 +55,7 @@ These are the common cases and best practices:
 
 A Mendix app offers various endpoints that can be used to obtain information about offered services. The paths used by these endpoints end in `-doc`. By default, access to these endpoints is disabled when deploying to a cloud node.
 
-Access restrictions can be configured within the Developer Portal. They can be found in the **Environment details** of your cloud node. This is an example of this overview showing the default settings after deploying to a new environment:
+Access restrictions can be configured within the Mendix Portal. They can be found in the **Environment details** of your cloud node. This is an example of this overview showing the default settings after deploying to a new environment:
 
 {{< figure src="/attachments/howto9/security/best-practices-security/default-access-restrictions.png" alt="Mendix Cloud Access Restrictions Overview" class="no-border" >}}
 

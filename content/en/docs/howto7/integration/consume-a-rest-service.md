@@ -158,7 +158,7 @@ Congratulations! You can now start your app and get summaries from Wikipedia.
 
 **How to consume REST natively with Mendix**
 
-{{% youtube waOlvSqdaP4 %}}
+{{< youtube waOlvSqdaP4 >}}
 
 ## 9 Read More
 

@@ -31,7 +31,7 @@ To authenticate with Amazon Web Service (AWS), you must also install and configu
 
 ### 1.3 Example
 
-{{% youtube h_R1mMtkfd8 %}}
+{{< youtube h_R1mMtkfd8 >}}
 
 ### 1.4 Licensing and Cost
 

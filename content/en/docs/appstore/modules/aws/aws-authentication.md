@@ -35,7 +35,7 @@ If you plan to use AWS Authentication with a [platform-supported AWS connector](
 
 ### 1.2 Example
 
-{{% youtube b3uQONB3yoY %}}
+{{< youtube b3uQONB3yoY >}}
 
 ### 1.3 Licensing and Cost
 

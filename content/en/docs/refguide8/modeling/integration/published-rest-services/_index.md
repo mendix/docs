@@ -48,4 +48,4 @@ To log detailed information about interaction with your published REST service, 
 
 **How to publish REST in Studio Pro 8**
 
-{{% youtube Ff_P84NOcZk %}}
+{{< youtube Ff_P84NOcZk >}}

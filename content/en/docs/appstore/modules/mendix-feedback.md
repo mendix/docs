@@ -33,7 +33,7 @@ In case of any questions, contact [Mendix Support](https://support.mendix.com/hc
 
 ## 1 Introduction
 
-The [Mendix Feedback](https://marketplace.mendix.com/link/component/205506) module allows end-users of your application to directly submit feedback into your app. The module contains a feedback widget along with other files. The feedback module is fully integrated with the [Feedback](/developerportal/app-insights/feedback/) page for your app in the [Apps](https://sprintr.home.mendix.com/), where you can review feedback and convert it into [user stories](/developerportal/project-management/epics/planning/) to improve your app.
+The [Mendix Feedback](https://marketplace.mendix.com/link/component/205506) module allows end-users of your application to directly submit feedback into your app. The module contains a feedback widget along with other files. The feedback module is fully integrated with the [Feedback](/developerportal/app-insights/feedback/) page for your app in [Apps](https://sprintr.home.mendix.com/), where you can review feedback and convert it into [user stories](/developerportal/project-management/epics/planning/) to improve your app.
 
 {{< figure src="/attachments/appstore/modules/mendix-feedback/feedback-in-app.png" class="no-border" >}}
 

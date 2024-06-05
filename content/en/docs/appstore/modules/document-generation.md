@@ -115,7 +115,7 @@ The steps for each procedure are described in the sections below.
     1. Go to the **Environments** page for the app as follows:
 
        * Go to the [Nodes](https://cloud.home.mendix.com/) page, then in the **My Nodes** list, find the desired app, and then click **Environments**.
-       * Alternatively, go to the [Apps](https://sprintr.home.mendix.com), then in the **My Apps** list, find the desired app, and then click **Environments**.
+       * Alternatively, go to [Apps](https://sprintr.home.mendix.com), then in the **My Apps** list, find the desired app, and then click **Environments**.
 
         The app’s environments page opens. The **Deploy** tab shows a list of available environments for your app.
     

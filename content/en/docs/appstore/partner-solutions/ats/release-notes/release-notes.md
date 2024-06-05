@@ -375,7 +375,7 @@ The main goal of ATS is to test your Mendix application. Therefore, with this re
 
 #### Fetch Environment Information from the Developer Portal
 
-ATS now fetches information such as the name and URL of existing app environments for an app from the [Apps](/developerportal/).
+ATS now fetches information such as the name and URL of existing app environments for an app from [Apps](/developerportal/).
 
 To distinguish these environments from ones that are manually managed, the name is suffixed with `(Sprintr)` and an additional flag is added.
 

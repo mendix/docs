@@ -23,7 +23,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 If your app supports push notifications, you are required to set up a Firebase account for your app and include Google service description files (*google-services.json* and *GoogleService-Info.plist*) in your hybrid app.
 
-As a result of this, Mendix hybrid apps that employ push notifications can no longer be built directly using the PhoneGap Build flow in the Mendix Developer Portal. Instead, you will need to prepare the hybrid app package locally. You can use the generated hybrid app package to build your Android and iOS apps locally, or upload them to PhoneGap Build manually.
+As a result of this, Mendix hybrid apps that employ push notifications can no longer be built directly using the PhoneGap Build flow in the Mendix Portal. Instead, you will need to prepare the hybrid app package locally. You can use the generated hybrid app package to build your Android and iOS apps locally, or upload them to PhoneGap Build manually.
 
 To build the hybrid app package, follow these steps:
 

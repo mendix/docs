@@ -76,7 +76,7 @@ Tools you can use to identify your slow microflow and the specific slow activiti
 
 ### 4.1 Server Monitoring
 
-The Mendix Server and [Developer Portal](/developerportal/operate/) offer a number of performance graphs and logs.
+The Mendix Server and [Apps](/developerportal/operate/) offer a number of performance graphs and logs.
 
 ### 4.2 Microflow Debugger
 

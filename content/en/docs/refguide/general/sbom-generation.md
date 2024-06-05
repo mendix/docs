@@ -69,7 +69,7 @@ Since a full SBOM contains all project details, this is only a partial represent
 
 ```
 
-## 5 Supported Features
+## 5 Supported Features {#supported-features}
 The table below describes what components are currently covered in the generated SBOM, and from what version. It is recommended to use version `10.10`, `9.24.22`, or `10.6.9` and above.
 
 | Feature | Description | Version

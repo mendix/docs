@@ -25,13 +25,13 @@ From the **Software Composition** page in the Developer Portal, you can drill do
 
 To be able to see the software composition information, make sure that you meet the following prerequisites:
 
-* Component details and related actions are available for apps made with Studio Pro versions [9.24.22](/releasenotes/studio-pro/9.24/#92422) and above, [10.6.9](/releasenotes/studio-pro/10.6#1069) and above and [10.10.0](/releasenotes/studio-pro/10.10/#10100) and above. 
+* Component details and related actions are available for apps made with Studio Pro versions [9.24.22](/releasenotes/studio-pro/9.24/#92422) and above, [10.6.9](/releasenotes/studio-pro/10.6#1069) and above, and [10.10.0](/releasenotes/studio-pro/10.10/#10100) and above. 
 
   {{% alert color="info" %}}With Mendix versions 9.24.22 and above, only unmanaged Java dependencies or jars are shown. With Mendix versions 10.6.9 and above, both managed and unmanaged Java dependencies or jars will be shown.{{% /alert %}}
 
 * You must be using free or licensed Mendix Cloud or Cloud Dedicated. It will be enabled for Private Cloud later. 
 
-* You must create a deployment package via the team server. Software bill of materials are created behind the scenes for each deployment package. For more information, see [Create Deployment Package](/refguide/create-deployment-package-dialog/).
+* You must create a deployment package via the team server. SBOMs are created behind the scenes for each deployment package. For more information, see [Create Deployment Package](/refguide/create-deployment-package-dialog/).
 
 * If your deployment package was deployed before June 14, 2024, you must create and deploy a new deployment package in order to get the software composition information populated on this page. For more information, see the [Software Composition Generation](#software-composition-generation) section.
 
@@ -68,9 +68,9 @@ For details on the information in the list and how to search, filter, and export
 
 #### 2.1.1 Downloading the Software Bill of Materials {#download-software-bill-of-materials}
 
-A software bill of materials is a *.json* file in the CycloneDX format. It contains a description about the Mendix app and the components (dependencies) put into it. For more information, see [SBOM Generation](/refguide/sbom-generation/).
+A software bill of materials (SBOM) is a *.json* file in the CycloneDX format. It contains a description about the Mendix app and the components (dependencies) put into it. For more information, see [SBOM Generation](/refguide/sbom-generation/).
 
-In the list on the **Overview** tab, you can click {{% icon name="download-bottom" %}} icon in the **Action** column to download the software bill of materials (SBOM). Different versions of Studio Pro support different component dependencies. For details on component dependencies supported per version, see the [Supported Features](/refguide/sbom-generation/#supported-features) section in *SBOM Generation*.
+In the list on the **Overview** tab, you can click {{% icon name="download-bottom" %}} icon in the **Action** column to download the SBOM. Different versions of Studio Pro support different component dependencies. For details on component dependencies supported per version, see the [Supported Features](/refguide/sbom-generation/#supported-features) section in *SBOM Generation*.
 
 ## 3 All Components {#all-components}
 

@@ -19,7 +19,7 @@ Over time, these dependencies can become deprecated, outdated. or vulnerable. En
 
 To enable this, visibility into these component dependencies will be available on the **Software Composition** page in Mendidx Portal. The components displayed here will be based on the Software Bill of Materials (SBOM) generated in Studio Pro.
 
-From the **Software Composition** page in the Mendix Portal, you can drill down and view the components of each app environment. Besides, you can view the usage of components across your deployed packages under [All Components](#all-components), where standard marketplace modules, widgets, java libraries, and Mendix runtime version are available. In the event when a security vulnerability is detected, [Component Usage](#component-usage) can help you assess the impact radius and take action accordingly.
+From the **Software Composition** page in the Mendix Portal, you can drill down and view the component dependencies of each deployment package. Besides, you can view the usage of components across your environments under [All Components](#all-components), where standard marketplace modules, widgets, java libraries, npm modules, and Mendix runtime version are available.
 
 ### 1.1 Prerequisites {#prerequisites}
 

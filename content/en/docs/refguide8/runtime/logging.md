@@ -1,7 +1,6 @@
 ---
 title: "Logging"
 url: /refguide8/logging/
-
 ---
 
 ## 1 Introduction

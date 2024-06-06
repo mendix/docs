@@ -2,7 +2,6 @@
 title: "Import and Export Apps, Modules, Widgets, and Documents"
 linktitle: "Importing and Exporting Elements"
 url: /refguide9/import-and-export/
-
 weight: 18
 description: "Gives an overview of the import and export functions in Studio Pro."
 ---

@@ -1,7 +1,6 @@
 ---
 title: "Consume a Complex Web Service"
 url: /howto8/integration/consume-a-complex-web-service/
-
 weight: 8
 ---
 

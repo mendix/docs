@@ -1,7 +1,6 @@
 ---
 title: "Offline-First"
 url: /refguide8/offline-first/
-
 weight: 30
 ---
 

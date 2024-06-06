@@ -1,7 +1,6 @@
 ---
 title: "Consume a Simple Web Service"
 url: /howto7/integration/consume-a-simple-web-service/
-
 weight: 7
 ---
 

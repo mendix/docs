@@ -1,7 +1,6 @@
 ---
 title: "Date and Time Handling"
 url: /refguide/date-and-time-handling/
-
 description: "Describes date and time handling for a Mendix application."
 ---
 

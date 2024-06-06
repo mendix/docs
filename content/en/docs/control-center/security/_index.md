@@ -1,7 +1,6 @@
 ---
 title: "Security"
 url: /control-center/security/
-
 description: "Describes the Security page in the Mendix Control Center."
 weight: 40
 no_list: false

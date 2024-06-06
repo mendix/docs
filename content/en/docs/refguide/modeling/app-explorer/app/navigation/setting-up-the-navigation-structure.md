@@ -2,7 +2,6 @@
 title: "Setting Up Navigation"
 linktitle: "Set Up Navigation"
 url: /refguide/setting-up-the-navigation-structure/
-
 description: "Describes how to configure the navigation structure in Studio Pro."
 aliases:
     - /howto/general/setting-up-the-navigation-structure/

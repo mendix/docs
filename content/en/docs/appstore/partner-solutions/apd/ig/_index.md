@@ -1,7 +1,6 @@
 ---
 title: "APD Installation Guides"
 url: /appstore/partner-solutions/apd/ig/
-
 weight: 10
 no_list: false
 description_list: true

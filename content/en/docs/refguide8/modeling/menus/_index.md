@@ -1,10 +1,8 @@
 ---
 title: "Menus"
 url: /refguide8/menus/
-category: "App Modeling"
 description: "Describes Studio Pro menus."
 weight: 12
-tags: ["Studio Pro", "menu", "top bar"]
 ---
 
 ## 1 Introduction

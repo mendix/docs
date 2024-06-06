@@ -1,7 +1,6 @@
 ---
 title: "Regular Expressions"
 url: /refguide7/regular-expressions/
-category: "Desktop Modeler"
 ---
 
 

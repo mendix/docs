@@ -2,7 +2,6 @@
 title: "Use Precondition in Test Cases"
 url: /appstore/partner-solutions/ats/ht-two-use-precondition-in-test-cases/
 description: "Describes how to use precondition in test cases in ATS"
-tags: ["ATS", "testing"]
 ---
 
 ## 1 Introduction

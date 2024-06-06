@@ -2,7 +2,6 @@
 title: "Workflow Elements"
 url: /refguide9/workflow-elements/
 weight: 10
-tags: ["workflow", "workflow elements", "Studio Pro"]
 ---
 
 ## 1 Introduction

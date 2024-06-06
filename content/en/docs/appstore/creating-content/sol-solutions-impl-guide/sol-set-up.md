@@ -4,7 +4,6 @@ url: /appstore/creating-content/sol-set-up
 linktitle: "Set Up a Solution"
 weight: 10
 description: "Describes properly initializing a Mendix solution to be compatible with future upgrades."
-tags: ["solutions", "set-up solution", "startup", "adaptable solutions", "prescriptive solutions" ]
 ---
 
 ## 1 Introduction

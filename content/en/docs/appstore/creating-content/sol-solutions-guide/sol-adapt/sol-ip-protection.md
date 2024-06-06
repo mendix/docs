@@ -4,7 +4,6 @@ linktitle: "Apply IP Protection"
 url: /appstore/creating-content/sol-ip-protection/
 weight: 2
 description: "Protect intellectual property in solutions, app services, and connectors"
-tags: ["adaptable solutions", "ip protection"]
 ---
 
 ## 1 Introduction

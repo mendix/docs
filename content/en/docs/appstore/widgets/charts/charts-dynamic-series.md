@@ -2,7 +2,6 @@
 title: "Create a Dynamic Series Chart"
 url: /appstore/widgets/charts-dynamic-series/
 weight: 50
-tags: ["Charts", "Dynamic Series", "Studio Pro", "Widgets"]
 aliases:
     - /howto/front-end/charts-dynamic-series/
 ---

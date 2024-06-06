@@ -2,7 +2,6 @@
 title: "Local Profile"
 url: /appstore/partner-solutions/ats/rg-two-profile/
 description: "Describes a local profile in ATS."
-tags: ["ats", "profile", "password"]
 ---
 
 ## 1 Introduction

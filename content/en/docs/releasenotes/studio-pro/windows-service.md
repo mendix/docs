@@ -1,7 +1,6 @@
 ---
 title: "Windows Service"
 url: /releasenotes/studio-pro/windows-service/
-category: "Studio Pro"
 weight: 40
 aliases:
     - /releasenotes/desktop-modeler/windows-service.html

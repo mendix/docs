@@ -1,9 +1,7 @@
 ---
 title: "Groups"
 url: /control-center/groups/
-category: "Control Center"
 description: "Describes the Groups page in the Mendix Control Center."
-tags: ["control center", "mendix admin", "groups"]
 weight: 25
 no_list: true 
 ---

@@ -2,7 +2,6 @@
 title: "Anonymous Users"
 url: /refguide9/anonymous-users/
 weight: 40
-tags: ["studio pro", "anonymous users", "app security", "security"]
 ---
 
 ## 1 Introduction

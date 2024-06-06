@@ -1,10 +1,8 @@
 ---
 title: "Backups"
 url: /developerportal/operate/backups/
-category: "Operations"
 weight: 40
 description: "Describes the Backups page of the Developer Portal."
-tags: ["Operate", "App", "Developer Portal", "Backup"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 

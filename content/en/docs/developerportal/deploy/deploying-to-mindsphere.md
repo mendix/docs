@@ -1,10 +1,8 @@
 ---
 title: "Siemens Insights Hub"
 url: /developerportal/deploy/deploying-to-mindsphere/
-category: "Deployment"
 weight: 42
 description: "Describes how to deploy to Siemens Insights Hub by registering it with the Insights Hub Gateway and integrating it into the Insights Hub Launchpad."
-tags: ["Insights Hub", "MindSphere", "deploy", "cloud foundry", "launchpad", "scopes", "roles", "sso", "XSRF", "limitations", "Gateway"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #The anchor #launchpad below is mapped from the Insights Hub themepack in the Marketplace, so it should not be removed or changed.

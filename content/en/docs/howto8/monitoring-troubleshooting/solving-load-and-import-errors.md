@@ -1,9 +1,7 @@
 ---
 title: "Solve Load and Import Errors"
 url: /howto8/monitoring-troubleshooting/solving-load-and-import-errors/
-category: "Monitoring and Troubleshooting"
 weight: 11
-tags: ["monitoring", "troubleshooting", "load", "import", "error"]
 aliases:
     - /howto8/solving-load-and-import-errors.html
     - /howto8/solving-load-and-import-errors

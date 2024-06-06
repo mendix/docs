@@ -2,7 +2,6 @@
 title: "Language Menu"
 url: /refguide/translatable-texts/
 weight: 50
-tags: ["studio pro", "translation", "languages", "translatable text"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -23,7 +22,7 @@ These *translatable texts* include the following:
 
 You can see the language you are currently working in at the bottom right of the screen.
 
-{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-status.png" alt="Language Status"   width="350"  class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-status.png" alt="Language Status" width="300"  class="no-border" >}}
 
 When you have multiple languages set up in your app, you can choose a language to work in by doing one of the following:
 
@@ -76,7 +75,7 @@ If the end-user is not associated with a language, for example they are an anony
 * for web apps – the first language which matches a language set in the app based on the browser's preferred order of languages
 * for mobile apps – the operating system language
 
-{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/user-language-domain-model.png" alt="System Domain Model for User and Language" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/user-language-domain-model.png" alt="System Domain Model for User and Language" class="no-border" width="750" >}}
 
 If you allow end-users to change their display language within the app, the changes will not be applied immediately. This is because the translatable texts for the app are already set to the end-users original language.
 
@@ -92,7 +91,7 @@ There are two options to ensure that the language is changed:
     4. Add the **JavaScript** content `mx.reloadWithState();` to the widget.
     5. Open your new pop-up page from a microflow when you want to switch the user's language.
 
-    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/reload-with-state.png" alt="System Domain Model for User and Language" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/reload-with-state.png" alt="System Domain Model for User and Language" class="no-border" width="600" >}}
 
     {{% alert color="warning" %}}When reloading the page, the language change must be made for the `$currentUser` object of entity type `User`. It will not change the language immediately if you use an association to a specialization of the `User` entity, such as `Administration.Account`.{{% /alert %}}
 

@@ -1,9 +1,7 @@
 ---
 title: "Debug Java Actions"
 url: /howto7/monitoring-troubleshooting/debug-java-actions/
-category: "Monitoring and Troubleshooting"
 weight: 6
-tags: ["monitoring", "troubleshooting", "debug", "java action"]
 ---
 
 ## 1 Introduction

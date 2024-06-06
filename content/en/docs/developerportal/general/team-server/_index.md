@@ -1,10 +1,8 @@
 ---
 title: "Team Server"
 url: /developerportal/general/team-server/
-category: "Collaboration"
 weight: 12
 description: "Describes the overview of Team Server revisions and commits."
-tags: ["Studio Pro", "Team Server", "Developer Portal", "commit", "branch"]
 aliases:
     - /refguide/team-server.html
     - /developerportal/develop/team-server.html
@@ -53,6 +51,8 @@ For Git, the command has the form `git clone https://pat:{USERPAT}@git.api.mendi
 For SVN, the command has the form `svn checkout --revision "{REVISION}" --username "{USERNAME}" --password "{USERPAT}" https://svn.home.mendix.com/{APPID}/branches/{BRANCH}`
 
 ## 4 Revision History {#revision-history}
+
+{{% alert color="info" %}}For Git-based applications, revisions are sorted according to the commit history, which sometimes does not reflect the chronological order due to Git's decentralized nature and local commits.{{% /alert %}}
 
 For each revision, you can see the following information:
 

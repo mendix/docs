@@ -2,7 +2,6 @@
 title: "Structure"
 url: /refguide/structure-widgets/
 weight: 25
-tags: ["studio pro", "container widget", "widget"]
 ---
 
 ## 1 Introduction

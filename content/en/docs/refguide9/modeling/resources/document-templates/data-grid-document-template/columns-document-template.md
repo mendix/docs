@@ -1,7 +1,6 @@
 ---
 title: "Columns (Document Template)"
 url: /refguide9/columns-document-template/
-tags: ["studio pro"]
 aliases:
     - /refguide9/columns-(document-template).html
     - /refguide9/Columns+(document+template).html

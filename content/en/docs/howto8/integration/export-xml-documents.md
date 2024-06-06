@@ -1,9 +1,7 @@
 ---
 title: "Export XML Documents"
 url: /howto8/integration/export-xml-documents/
-category: "Integration"
 weight: 4
-tags: ["export", "xml", "integration"]
 ---
 
 ## 1 Introduction

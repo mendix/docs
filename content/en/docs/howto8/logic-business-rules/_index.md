@@ -4,7 +4,6 @@ url: /howto8/logic-business-rules/
 weight: 60
 no_list: false
 description_list: true 
-tags: ["studio pro", "how-to"]
 ---
 
 ## 1 Introduction 

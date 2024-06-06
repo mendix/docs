@@ -3,7 +3,6 @@ title: "Pipelines"
 url: /developerportal/deploy/pipelines/
 weight: 8
 description: "Describes how to design, implement, and review pipelines using the Pipelines feature in the Developer Portal"
-tags: ["Deploy","App","Developer Portal", "CI/CD"]
 beta: true
 ---
 
@@ -33,12 +32,15 @@ For each run, you can view the following information:
 
 * Status
 * Run ID
+* Pipeline ID
 * Branch
 * Pipeline Name
 * Triggered by
 * Last Run
 * Duration
 * Trigger
+
+Use the Column Selector ({{% icon name="view" %}}) at the top of the **Runs** table to customize which of these columns appear in the table.
 
 The search and filter options allow you to review specific run types. You can do the following:
 

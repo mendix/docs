@@ -3,7 +3,6 @@ title: "Registry Configuration"
 url: /developerportal/deploy/private-cloud-registry/
 description: "Describes how to configure the OCI image registry in Mendix for Private Cloud."
 weight: 11
-tags: ["Private Cloud","Registry","Container","ACR","ECR","GCR","quay.io","OpenShift"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 

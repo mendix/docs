@@ -3,7 +3,6 @@ title: "Design Principles"
 url: /refguide9/mobile/designing-mobile-user-interfaces/design-principles/
 weight: 10
 description: "This document teaches you how to build a native mobile app's UI."
-tags: ["design", "styling"]
 aliases:
     - /howto9/mobile/ui-best-practices/
 ---

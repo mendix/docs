@@ -1,10 +1,8 @@
 ---
 title: "Web Services"
 url: /refguide9/integration/web-services/
-category: "Integration"
 weight: 60
 description: "Introduces web services (SOAP)."
-tags: ["Web services"]
 ---
 
 ## Introduction

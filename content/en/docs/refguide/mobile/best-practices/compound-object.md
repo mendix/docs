@@ -1,10 +1,8 @@
 ---
 title: "Compound Object"
 url: /refguide/mobile/best-practices/compound-object
-category: Mobile
 weight: 40
 description: "This pattern lets you combine multiple objects to improve synchronization performance."
-tags: ["mobile", "best practices", "patterns", "offline-first", "synchronization"]
 ---
 
 ## 1 Introduction

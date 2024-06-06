@@ -2,7 +2,6 @@
 title: "CAB.07 - Radio Buttons"
 url: /appstore/partner-solutions/ats/ht-two-cab-07-radiobuttons/
 description: "Explains step by step how to create an Unsupported Widget action for the Mendix Radio Buttons widget."
-tags: ["ATS", "testing"]
 ---
 
 ## 1 Introduction

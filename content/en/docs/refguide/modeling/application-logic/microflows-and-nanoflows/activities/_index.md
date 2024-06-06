@@ -2,7 +2,6 @@
 title: "Activities"
 url: /refguide/activities/
 weight: 40
-tags: ["studio pro", "microflows", "nanoflows", "activity"]
 ---
 
 ## 1 Introduction

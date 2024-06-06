@@ -3,9 +3,7 @@ title: "Extending Your Application with Custom Java"
 linktitle: "Extending App with Custom Java"
 url: /refguide/extending-your-application-with-custom-java/
 weight: 30
-category: "Java Programming"
 description: "Describes how to extend your application with custom Java code."
-tags: ["microflow", "logic", "java", "extend", "jdk", "custom", "UnsupportedClassVersionError"]
 # Linked from https://www.mendix.com/blog/easy-xpath-retrieval-in-java/ - please ask for this to be changed and redirect if moved
 ---
 

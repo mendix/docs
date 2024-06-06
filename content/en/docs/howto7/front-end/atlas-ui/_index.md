@@ -1,9 +1,7 @@
 ---
 title: "Atlas UI"
 url: /howto7/front-end/atlas-ui/
-category: "Front End"
 weight: 5
-tags: ["Atlas", "UI", "UX", "user experience"]
 ---
 
 ## 1 Introduction

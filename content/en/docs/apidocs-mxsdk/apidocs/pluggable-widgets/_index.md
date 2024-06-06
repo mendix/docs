@@ -1,12 +1,10 @@
 ---
 title: "Pluggable Widgets API"
 url: /apidocs-mxsdk/apidocs/pluggable-widgets/
-category: "API Documentation"
 description: "This API helps you to understand pluggable widgets, how they extend app  functionality, and how they can be built to interact with Mendix's APIs in Mx10."
 no_list: false
 description_list: true
 weight: 90
-tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React"]
 ---
 
 ## 1 Introduction
@@ -150,7 +148,6 @@ In Mendix Studio Pro, the widget described above would look like this:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/basic-widget-progress-card.png" alt="basic progress card in structure mode" >}}
 
-
 #### 4.2.1 Toolbox Category {#toolbox-category}
 
 To provide more clarity for Studio Pro users you can specify a toolbox category for your widgets. When provided, it determines a toolbox category for a widget in Studio Pro. It is possible to specify existing built-in categories such as **Data** or **Input** as well as new arbitrary categories like **Maps**. 
@@ -186,7 +183,6 @@ For more complex help pages you can link to a markdown page. For security reason
 * Must use HTTPS protocol
 * Host name must end with *.mendix.com* or *github.com*
 * If host name is *github.com* the full URL must end with *.md*
-
 
 #### 4.2.3 Icon {#icon}
 

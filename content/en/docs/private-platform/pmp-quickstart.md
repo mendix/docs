@@ -3,7 +3,6 @@ title: "Private Mendix Platform Quick Start Guide"
 url: /private-mendix-platform/quickstart/
 description: "Documents the installation and upgrade process for the Private Mendix Platform."
 weight: 20
-tags: ["private mendix platform",  "private platform", "private marketplace", "installation", "upgrade", "quick start", "configuration wizard"]
 aliases:
     - /private-mendix-platform-quickstart/
 ---

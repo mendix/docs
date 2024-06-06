@@ -1,9 +1,8 @@
 ---
 title: "Insights Hub"
 url: /partners/siemens/mindsphere/
-weight: 50
-description: "A description of some extra considerations to be taken into account when developing for deployment to Insights Hub"
-tags: ["MindSphere", "Insights Hub", "Credentials", "Multi-Tenant", "Environment Variables", "Local", "Styling", "UI", "Icons", "Limitations", "Licensing", "Validation", "App Service"]
+description: "Presents reference content for using apps deployed to Insights Hub."
+weight: 10
 ---
 
 ## 1 Introduction

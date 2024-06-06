@@ -2,7 +2,6 @@
 title: "Data Grid 2"
 url: /appstore/modules/data-grid-2/
 description: "Describes the configuration and usage of the Data Grid 2 widget, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "data grid", "platform support", "external entities"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -190,7 +189,7 @@ This property is not available if you enable **Custom content** for the column
 * **Option caption** — the expression that will be used as caption for the option.
 
 {{% alert color="info" %}}
-This column configuration is intended to be used in conjunction with [Drop-down Filter](#drop-down-filter). Other filter types don't support association filtering.
+This column configuration is intended to be used in conjunction with [Drop-down Filter](#drop-down-filter). Other filter types do not support association filtering.
 {{% /alert %}}
 
 ### 4.10 Visible {#visible-filter}
@@ -303,7 +302,9 @@ In this section you can select an action to be executed **On change** by the fil
 
 {{< figure src="/attachments/appstore/modules/data-widgets/data-grid-2/dropdown-filter-settings.png" alt="Example of settings for drop-down filter" class="no-border" >}}
 
+{{% alert color="info" %}}
 When a drop-down filter is used in conjunction with an Association Filter data grid configuration, only **Automatic options** are supported. Any custom options will be ignored. To enable association filtering, see the [Association Filter](#association-filter) section.
+{{% /alert %}}
 
 When adding a new option, the following properties are required:
 
@@ -331,6 +332,10 @@ If **Multiselect** is enabled you must select a String attribute containing `Unl
 #### 7.2.2 Events
 
 In this section you can select an action to be executed **On change** by the filter value. This means every time the user types or selects a value it will be executed.
+
+{{% alert color="warning" %}}
+Due to current limitations, **Saved attribute**, **Default value**, and **On change** properties will be ignored when a drop-down filter is used in conjunction with an [Association Filter](#association-filter) data grid configuration.
+{{% /alert %}}
 
 ### 7.3 Number Filter
 

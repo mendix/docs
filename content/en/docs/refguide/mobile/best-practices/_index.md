@@ -1,10 +1,8 @@
 ---
 title: "Best Practices for Mobile Apps"
 url: /refguide/mobile/best-practices/
-category: Mobile
 weight: 60
 description: "Best practices and patterns for building mobile apps with Mendix."
-tags: ["mobile", "best practices", "patterns"]
 ---
 
 ## 1 Introduction

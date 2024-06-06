@@ -1,7 +1,6 @@
 ---
 title: "Projects API"
 url: /apidocs-mxsdk/apidocs/projects-api/
-category: "API Documentation"
 type: swagger
 description: "This API allows you to manage your projects and their teams."
 weight: 100
@@ -35,4 +34,8 @@ Authorization: MxToken 7LJE…vk
 
 ## 3 API Reference
 
-{{< swaggerui src="/openapi-spec/projects-v2.yaml"  >}}
+{{% alert color="warning" %}}
+You cannot call endpoints in the Swagger UI below on this page.
+{{% /alert %}}
+
+{{< swaggerui-disable-try-it-out src="/openapi-spec/projects-v2.yaml"  >}}

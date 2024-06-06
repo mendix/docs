@@ -2,7 +2,6 @@
 title: "Translating Your App Content"
 url: /refguide/translate-your-app-content/
 weight: 50
-tags: ["studio pro", "translate app", "batch translate", "translate"]
 aliases:
   - /howto/collaboration-requirements-management/translate-your-app-content/
 ---
@@ -154,7 +153,7 @@ To deal with this situation, follow the steps below:
 
 4. In the **Show occurrence** section, the **Object** column shows that one of the locations of the text **Order** is the **Action button 'actionButton3'** on the **Product_NewEdit** page. This is the button we added to allow the end-user to order the product. To confirm this, double-click the row of **Action button 'actionButton3'**.
 
-    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/product-new-edit-order.png" alt="Order button on Product New Edit page" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/product-new-edit-order.png" alt="Order button on Product New Edit page" class="no-border"  width="500" >}}
 
     In the background, the **Product_NewEdit** page opens with the button **Order** selected. This shows that this text is used on the button.
 
@@ -163,13 +162,13 @@ To deal with this situation, follow the steps below:
 7. In our app, the text *Order* is used as the command to order a product, and also used to refer to the Order entity. However, in Russia the translations for these two scenarios are different. To solve this issue, open the **Product_NewEdit** page.
 8. Edit the text on the button to reflect the verb *to order*. In Russian this is *заказать*.
 
-    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/product-new-edit-order-russian.png" alt="Order button on Product New Edit page translated into Russian" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/product-new-edit-order-russian.png" alt="Order button on Product New Edit page translated into Russian" class="no-border" width="500" >}}
 
 9. Go to the **Language** > **Batch Translate** to open the dialog box and search for *Order* in the module **MyFirstModule**. 
 
     Now in the grid **Order** has two rows: one row has the translation **заказать**, and the other row has no translation.
 
-    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/batch-translate-order-split.png" alt="All source texts containing the word 'order' showing that ones with different translations are shown separately. " class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/batch-translate-order-split.png" alt="All source texts containing the word 'order' showing that ones with different translations are shown separately. " class="no-border" width="500" >}}
 
 10. In the row where **Order** has no translation, enter *Заказ*. This is the Russian translation for *an order*.
 

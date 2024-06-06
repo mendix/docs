@@ -1,7 +1,6 @@
 ---
 title: "OData Representation"
 url: /refguide/odata-representation/
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction

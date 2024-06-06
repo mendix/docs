@@ -2,10 +2,8 @@
 title: "Combining Changes and Conflict Resolution"
 linktitle: "Combining Changes and Conflict Resolution"
 url: /refguide/merge-algorithm/
-category: "Version Control"
 weight: 10
 description: "Describes combining changes with conflict resolution flow."
-tags: ["rebase", "mine", "theirs", "merge", "conflict"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 aliases:
     - /refguide/new-merge-algorithm

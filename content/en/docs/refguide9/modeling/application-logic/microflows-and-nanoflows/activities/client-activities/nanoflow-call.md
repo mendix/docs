@@ -2,7 +2,6 @@
 title: "Call Nanoflow"
 url: /refguide9/nanoflow-call/
 weight: 2
-tags: ["studio pro", "nanoflow call", "call nanoflow"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

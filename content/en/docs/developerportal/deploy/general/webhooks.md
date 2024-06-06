@@ -4,7 +4,6 @@ linktitle: "Webhooks"
 url: /developerportal/deploy/webhooks/
 weight: 75
 description: "Creating a webhook to trigger actions from Mendix Cloud and Mendix for Private Cloud."
-tags: ["Mendix Cloud", "Mendix for Private Cloud", "Webhooks", "CI/CD", "Pipeline"]
 ---
 
 ## 1 Introduction
@@ -46,9 +45,15 @@ You can edit or delete an existing webhook by clicking **More Options** ({{% ico
 If you select **Edit Webhook** from **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) in the **Action** column for a webhook you want to change, the following actions are available:
 
 * Update **Webhook Name**, **URL**, or **Validation Secret**, and click **Save** to save the changes.
-* Add or delete **Custom Headers**, and click **Save** to save the changes.
+* Add or delete custom headers, and click **Save** to save the changes.
 
-    {{% alert color="info" %}}You cannot change the value of an existing custom header. If you want to change the value, delete the existing header and add a new one with the same key.{{% /alert %}}
+  {{% alert color="info" %}}
+  You cannot change the value of an existing custom header. If you want to change the value, delete the existing header and add a new one with the same key.
+  {{% /alert %}}
+
+  {{% alert color="info" %}}
+  If your webhook has a custom header with the key "Authorization", this is considered sensitive and thus does not display in the **Custom Headers** section on the **Webhooks** page. However, it can be seen in the webhook response if you test that webhook.
+  {{% /alert %}}
 
 * Click **Test Webhook** to send a test payload to the endpoint specified under **URL**.
 * Click **(De)activate Webhook** to deactivate an active webhook or activate an inactive webhook.
@@ -65,7 +70,7 @@ Mendix webhooks use the following static IP addresses:
 * 52.59.169.126
 
 {{% alert color="info" %}}
-Mendix maintains the current outgoing IP addresses as much as possible. However, these addresses may occasionally change for operational reasons. Any changes are subject to a 48-hour notice period.
+Mendix maintains the current outgoing IP addresses as much as possible. However, these addresses may occasionally change for operational reasons. At least 48 hours before any changes, Technical Contacts will be emailed and a notification will be listed on [Mendix Platform Status](https://status.mendix.com).
 {{% /alert %}}
 
 ## 4 Webhook Headers
@@ -82,7 +87,7 @@ Every `POST` payload contains the following delivery information as part of the 
 * **accept** – `*/*`
 * **host** – the host part of the endpoint URL (for example, `gitlab.com`)
 
-You can also add your own custom headers. For more information, see [Setting Up a Webhook](#setting-up).
+You can also add your own custom headers. For more information, see [Configuring a Webhook](#setting-up).
 
 {{% alert color="info" %}}
 The order of these headers is not guaranteed.

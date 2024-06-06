@@ -3,13 +3,12 @@ title: "Insights Hub API calls only"
 url: /partners/siemens/mindsphere-api-only/
 weight: 300
 description: "A description of some extra considerations to be taken into account when developing for deployment to Insights Hub"
-tags: ["MindSphere", "Insights Hub", "Credentials", "Multi-Tenant", "Environment Variables", "Local", "Styling", "UI", "Icons", "Limitations", "Licensing", "Validation", "App Service", "IIoT"]
 ---
 
 ## 1 Introduction
 
 {{% alert color="warning" %}}
-This information is for apps which are fully integrated apps into Insights Hub. It does not apply to apps which are only calling Insights APIs.
+This information is for standalone Mendix application which are not fully integrated into Insights Hub but just want to incorporate IIoT Data coming from Insights Hub.
 {{% /alert %}}
 
 If you have your own user management or SSO solution, but want to gather insights via the Insights Hub APIs, this page explains how you can achieve it. It describes how you can authenticate Insights Hub API REST calls with the help of a **Technical User** and the **Siemens Insights Hub API Authenticator**.
@@ -62,7 +61,6 @@ However, authentication will only be successful if the correct credentials are p
     You have to replace `tenantName`, `region` and `mindsphere-domain` regarding your destination tenant e.g.
 
     `https://demo.piam.eu1.mindsphere.io/oauth/token?grant_type=client_credentials`
-
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-api-only/ModuleConfiguration.png" alt="Authentication" >}}
 

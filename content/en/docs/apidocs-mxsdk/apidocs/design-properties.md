@@ -1,10 +1,8 @@
 ---
 title: "Design Properties API"
 url: /apidocs-mxsdk/apidocs/design-properties/
-category: "API Documentation"
 description: "This API guide outlines how design properties work in Atlas UI and can help you create custom design properties."
 weight: 50
-tags: ["styling", "design", "classes", "design properties"]
 ---
 
 ## 1 Introduction

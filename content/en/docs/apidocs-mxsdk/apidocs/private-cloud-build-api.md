@@ -2,7 +2,6 @@
 title: "Mendix for Private Cloud Build API"
 url: /apidocs-mxsdk/apidocs/private-cloud-build-api/
 type: swagger
-category: "API Documentation"
 description: "This API allows you to manage deployment packages which can later be used in the environments deployed in your private cloud."
 weight: 70
 ---

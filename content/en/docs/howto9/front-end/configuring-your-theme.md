@@ -1,10 +1,8 @@
 ---
 title: "Configure Your Theme"
 url: /howto9/front-end/configuring-your-theme/
-category: "Front End"
 weight: 15
 description: "Describes how to configure the styling of your page in Studio Pro."
-tags: ["theming", "UX", "front end"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

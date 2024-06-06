@@ -1,7 +1,6 @@
 ---
 title: "OData Query Options"
 url: /refguide8/odata-query-options/
-tags: ["OData", "filter", "count", "sort", "select", "page", "studio pro"]
 ---
 
 ## 1 Introduction

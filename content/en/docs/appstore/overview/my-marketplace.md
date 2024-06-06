@@ -3,7 +3,6 @@ title: "My Marketplace"
 url: /appstore/overview/my-marketplace/
 weight: 1
 description: "Presents a reference for using the My Marketplace features of the Mendix Marketplace."
-tags: ["marketplace",  "my marketplace", "widget", "connector", "module", "partner"]
 ---
 
 ## 1 Introduction
@@ -61,7 +60,7 @@ In addition, you may see a label on a component name for the [content group](#co
 
 ## 4 My Subscriptions {#my-subscriptions}
 
-You can see all the Marketplace app services you have trials for on this page:
+You can see all the Marketplace content you have trials for on this page:
 
 {{< figure src="/attachments/appstore/overview/my-marketplace/my-subscriptions.jpg" class="no-border" >}}
 
@@ -104,7 +103,7 @@ The options in this menu are the same as described for the context menu for the 
 
 ## 9 Company Subscriptions {#company-subscriptions}
 
-You can see all the Marketplace app services your company has subscribed to on this page:
+You can see all the content shared within your organization on this page, which includes previously purchased products, trial subscriptions, paid subscriptions, or company-level services:
 
 {{< figure src="/attachments/appstore/overview/my-marketplace/company-subscriptions.png" class="no-border" >}}
 
@@ -116,7 +115,7 @@ Finally, the table presents the plan's **Status**, the subscription **Plan**, an
 
 ### 9.1 Service Management Dashboard {#service-management-dashboard}
 
-This dashboard presents an overview of your service instances and binding keys. A service instance is what Mendix creates when you subscribe to an app service. After the service instance has been created, you need binding keys to use the app service in your app.
+This dashboard presents an overview of your service instances and binding keys. A service instance is what Mendix creates when you subscribe to a commercial Marketplace product. After the service instance has been created, you need binding keys to use the commercial Marketplace product in your app.
 
 {{% alert color="info" %}}
 Only a Technical Owner for the subscription can create binding keys. When a user from your company wants to request a free trial (and there is already a Technical Owner), they will not have separate unique binding keys. The Technical Owner has to provide the binding keys to the user.
@@ -133,7 +132,7 @@ This page presents the **Binding Key Names** that have been created as well as d
 You can also select a group of binding keys and click **Manage Instance** to go to the component provider's configuration page, where you can do further configuration.
 
 {{% alert color="info" %}}
-This additional management option is only available for specific app services where necessary.
+This additional management option is only available for specific commercial Marketplace products where necessary.
 {{% /alert %}}
 
 #### 9.1.1 Creating Binding Keys {#creating-binding-keys}
@@ -152,9 +151,9 @@ Click **Return to the overview** to go to the main page of the dashboard.
 
 #### 9.1.2 Using the Binding Keys {#using}
 
-When you are developing your app, set the app service's binding keys as [constants](/refguide/configuration/#constants) in the [App Settings](/refguide/app-settings/).
+When you are developing your app, set the commercial Marketplace product's binding keys as [constants](/refguide/configuration/#constants) in the [App Settings](/refguide/app-settings/).
 
-Refer to the documentation on specific app services for how to use the binding keys (for example, see the [Authenticating Insights Hub REST Calls](/partners/siemens/mindsphere-api-only/#authenticating) section of *Insights Hub API calls only*).
+Refer to the documentation on specific commercial Marketplace products for how to use the binding keys (for example, see the [Configuring the License Token](/partners/siemens/3d-viewer/#configure-license-token) section of *3D Viewer*).
 
 ## 10 Content Groups {#content-groups}
 

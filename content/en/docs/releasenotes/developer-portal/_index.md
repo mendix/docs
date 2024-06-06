@@ -2,7 +2,6 @@
 title: "Developer Portal"
 url: /releasenotes/developer-portal/
 description: "Release notes for all project management parts of the Mendix Developer Portal"
-tags: ["developer portal", "buzz"]
 weight: 20
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
@@ -17,7 +16,13 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 ## 2024
 
-### May 5
+### May 16, 2024
+
+#### Improvements
+
+* In Portfolio Management, you can now see the prioritization score instead of the department name on an initiative card in the [Kanban view](/developerportal/portfolio-management/initiatives-overview/#kanban-view).
+
+### May 5, 2024
 
 #### New features
 
@@ -29,13 +34,13 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 * We fixed an issue where the app administrator was not able to change the [logo of an app](/developerportal/collaborate/general-settings/#general).
 * We fixed an issue where under certain circumstances the [Technical Contact](/developerportal/general/app-roles/#technical-contact) of an app was not displayed correctly.
 
-### May 1 {#may-1-24}
+### May 1, 2024
 
 #### New Features
 
 * The [Jira connector](/developerportal/project-management/jira-connector/) is now released for GA.
 
-### April 25
+### April 25, 2024
 
 #### Improvements
 
@@ -43,7 +48,7 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 * It is now possible to retrieve all feedback through the Feedback API for a certain email address.
 * [Feedback](/developerportal/app-insights/feedback/) is now exported in a CSV file format.
 
-### April 4
+### April 4, 2024
 
 #### New Features
 
@@ -56,7 +61,7 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
     * We improved your experience of copying the generated API key by implementing a new widget on the [Settings](/developerportal/app-insights/mini-surveys/#settings) tab of the **Survey Overview** page.
     * We improved our error messages by providing more details.
 
-### March 28
+### March 28, 2024
 
 #### New Features
 
@@ -65,7 +70,7 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
     * We have extended the existing filters for initiatives.
     * We added a new field **Location** to initiatives, which shows where the department of the requester is located. Now you can also see this field in the Excel file when you export initiatives.
 
-### March 21
+### March 21, 2024
 
 #### Fixes
 
@@ -73,19 +78,19 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
   There is a small trade-off though, since we replaced the text editor widget completely, it will not be possible to link stories using a # anymore. Your existing links will become plain text that still contain story ID and title. Copying and pasting the link to the story can be used as a workaround in the meantime.
 
-### March 16
+### March 16, 2024
 
 #### Improvements
 
 * We added the **Contributor** access role in [Portfolio Management](/developerportal/portfolio-management/access-management/), and we renamed the **User** access role to **Viewer**.
 
-### March 6
+### March 6, 2024
 
 #### Deprecations
 
 * Feedback API v1 is deprecated, and it will be turned off completely on September 30, 2024. To ensure a seamless transition, Mendix strongly recommends migrating to [Feedback API v2](/apidocs-mxsdk/apidocs/feedback-api-v2/) for all your feedback-related operations, including retrieval, creation, and updates.
 
-### February 29
+### February 29, 2024
 
 #### Improvements
 
@@ -99,13 +104,13 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 * We fixed a bug where the sidepanel would flicker upon loading either [Mini survey](/developerportal/app-insights/mini-surveys/) or [Feedback](/developerportal/app-insights/feedback/).
 * In Feedback, creating, archiving, and deleting feedback items should now show the correct pages.
 
-### February 8
+### February 8, 2024
 
 #### New Features
 
 * In [Portfolio Management](/developerportal/portfolio-management/), you can now assign a status to your initiatives.
 
-### February 1 
+### February 1, 2024
 
 #### New Features
 
@@ -117,7 +122,7 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 * We fixed an issue where some users were unable to close feedback items.
 * We fixed an issue where some users were encountering an error when navigating back to the Feedback home page.
 
-### January 25
+### January 25, 2024
 
 #### New Features
 
@@ -127,7 +132,7 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 * We fixed an issue where under certain circumstances the **Manage Users** overview of the app [access management](/developerportal/collaborate/general-settings/#managing-app-users) would not show.
 
-### January 18
+### January 18, 2024
 
 #### Improvements
 
@@ -136,7 +141,7 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
     * We introduced a bulk action bar where you can link, move, archive, and delete items as well as assign item status and create stories in bulk.
     * We now save your filters on **Inbox** and **Archive** tabs until the page is refreshed.
 
-### January 11
+### January 11, 2024
 
 #### New Features
 
@@ -154,7 +159,7 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 ## 2023
 
-### December 14
+### December 14, 2023
 
 #### New Features
 
@@ -175,7 +180,7 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 * We fixed an issue where the [invitation](/developerportal/general/team/#inviting) wizard would not give the inviter feedback that the invitee was invited already (and has not accepted yet).
 
-### December 7
+### December 7, 2023
 
 #### Improvements
 

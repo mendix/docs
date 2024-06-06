@@ -1,7 +1,6 @@
 ---
 title: "Integration"
 url: /refguide7/integration/
-category: "Desktop Modeler"
 ---
 
 

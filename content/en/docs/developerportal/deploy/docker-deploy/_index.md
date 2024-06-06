@@ -1,10 +1,8 @@
 ---
 title: "Docker"
 url: /developerportal/deploy/docker-deploy/
-category: "Deployment"
 weight: 60
 description: "Describes how to deploy using a Docker image."
-tags: ["Docker", "Cloud", "container", "push image", "build image"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

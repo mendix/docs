@@ -1,10 +1,8 @@
 ---
 title: "Find the Root Cause of Runtime Errors"
 url: /howto9/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/
-category: "Monitoring and Troubleshooting"
 weight: 8
 description: "Describes how to find the root cause of runtime errors via Studio Pro and via the application logs."
-tags: ["monitoring", "troubleshooting", "runtime error", "runtime", "error"]
 ---
 
 ## 1 Introduction

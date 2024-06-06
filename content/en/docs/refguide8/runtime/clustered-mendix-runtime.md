@@ -1,9 +1,7 @@
 ---
 title: "Clustered Mendix Runtime"
 url: /refguide8/clustered-mendix-runtime/
-category: "Mendix Runtime"
 description: "Using the cluster functionality, you can set up your Mendix application to run behind a load balancer to enable a failover and/or high availability architecture."
-tags: ["runtime", "cluster", "load balancer", "failover", "studio pro"]
 ---
 
 ## 1 Introduction

@@ -3,12 +3,11 @@ title: "App Commands"
 url: /refguide/mx-command-line-tool/app
 weight: 10
 description: "Describes the app-related commands for the mx command-line tool."
-tags: ["mx", "command-line", "tool", "mx", "studio pro", "windows", "linux", "create-project", "show-version", "convert"]
 ---
 
 ## 1 Introduction
 
-The commands in this group are related to Mendix app creation, checking, versioning and conversion.
+The commands in this group are related to Mendix app creation, checking, versioning, and conversion.
 
 Typically, these commands require a path to the *.mpr* file as a parameter.
 
@@ -174,7 +173,7 @@ Errors in the *.mpr* are always reported.
 
 For `INPUT`, enter a single *.mpr* file.
 
-You can optionally specify the path to an exported suppress-warnings  (JSON) file. This means that `mx check -w` will use the list of suppressed warnings in the JSON file, instead of the default behavior (which is to read from the *project-settings.user.json* file in the app directory).
+You can optionally specify the path to an exported suppress-warnings (JSON) file. This means `mx check -w` will use the list of suppressed warnings in the JSON file, instead of the default behavior (which is to read from the *project-settings.user.json* file in the app directory).
 
 ### 5.2 Examples
 

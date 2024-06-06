@@ -3,7 +3,6 @@ title: "Node Permissions"
 url: /developerportal/deploy/node-permissions/
 weight: 18
 description: "The permission settings for your node."
-tags: ["Node","Permission","Developer Portal"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 

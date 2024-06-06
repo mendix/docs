@@ -1,11 +1,9 @@
 ---
 title: "Native Mobile"
 url: /howto8/mobile/native-mobile/
-category: "Mobile"
 weight: 1
 no_list: false
 description_list: true 
-tags: ["mobile", "native", "iOS", "Android"]
 ---
 
 ## 1 Introduction

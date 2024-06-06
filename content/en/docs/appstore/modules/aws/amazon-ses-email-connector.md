@@ -4,7 +4,6 @@ linktitle: "Amazon SES"
 url: /appstore/modules/aws/amazon-ses-email-connector/
 description: "Describes the steps required to use Amazon Simple Email Service (SES) with the Mendix Email Connector."
 weight: 20
-tags: ["AWS", "Amazon Simple Email Service", "SES", "email", "Mendix Email Connector"]
 aliases:
     - /appstore/connectors/aws/amazon-ses-email-connector/
 ---

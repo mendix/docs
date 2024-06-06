@@ -2,7 +2,6 @@
 title: "XPath month-from-dateTime"
 url: /refguide/xpath-month-from-datetime/
 weight: 7
-tags: ["studio pro"]
 ---
 
 ## 1 Overview

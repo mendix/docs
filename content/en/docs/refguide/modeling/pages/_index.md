@@ -1,10 +1,8 @@
 ---
 title: "Pages"
 url: /refguide/pages/
-category: "App Modeling"
 weight: 30
 description: "Presents an overview of the features of pages and relevant page resources in Studio Pro."
-tags: ["Pages", "Widgets", "Studio Pro", "page structure"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #This document also has a redirect from opening-pages (which has been deleted)
 ---

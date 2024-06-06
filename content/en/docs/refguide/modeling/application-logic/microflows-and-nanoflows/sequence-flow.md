@@ -2,7 +2,6 @@
 title: "Sequence Flow"
 url: /refguide/sequence-flow/
 weight: 30
-tags: ["studio pro", "sequence flow", "microflow"]
 ---
 
 ## 1 Introduction

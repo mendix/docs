@@ -1,9 +1,7 @@
 ---
 title: "Excel Exporter"
 url: /appstore/modules/excel-exporter/
-category: "Modules"
 description: "Describes the configuration and usage of the Excel Exporter module, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "excel exporter", "excel", "filedocument", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

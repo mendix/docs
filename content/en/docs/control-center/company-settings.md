@@ -1,9 +1,7 @@
 ---
 title: "Company Settings"
 url: /control-center/company-settings/
-category: "Control Center"
 description: "Describes the Company Settings page in the Mendix Control Center."
-tags: ["control center", "mendix admin", "company settings"]
 weight: 30
 no_list: list
 ---

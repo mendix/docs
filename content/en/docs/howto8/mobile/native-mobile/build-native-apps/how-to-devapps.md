@@ -3,7 +3,6 @@ title: "Create a Custom Developer App"
 url: /howto8/mobile/how-to-devapps/
 weight: 50
 description: A tutorial for creating custom developer apps.
-tags: ["native", "mobile", "developer", "native-builder", "developer app", "make it native"]
 ---
 
 ## 1 Introduction

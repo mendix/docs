@@ -104,6 +104,9 @@ On the sheet details page, you can define sheets with the following items:
     {{% alert color="info" %}}The sheets in the exported Excel document are shown in the ascending sequence. If the sequence of a sheet is set to empty, this sheet will become the first sheet.{{% /alert %}}
 
 * **Row object**: the object data used for the rows
+
+  {{% alert color="info" %}}External Entities are NOT supported; so **Row object** and **Input object** (if specified) should be Persistent Entities from your Domain model.{{% /alert %}}
+
 * **Reference to template input object** (optional): the reference to the template input object (if **Input object** is used)
 * **Sheet input object**: the object that is the input for this sheet
 * **Start retrieved data at row**: the row where the header is

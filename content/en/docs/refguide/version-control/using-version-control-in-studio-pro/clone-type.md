@@ -47,7 +47,9 @@ In this case Studio Pro can see an image was changed in multiple commits, but yo
 
 ## 3 Preferences
 
-You can change the [Clone type](/refguide/preferences-dialog/#git) for future clone operations, such as downloading an app or checking out another branch of an app you already downloaded. Changing this setting will not affect apps that you have already downloaded.
+You can change the [Clone type](/refguide/preferences-dialog/#clone) for future clone operations, such as downloading an app or checking out another branch of an app you already downloaded. Changing this setting will not affect apps that you have already downloaded.
+
+You can also change this preference from the App launcher before opening an app, by selecting `Preferences` on the left.
 
 ## 4 Changing clone type
 

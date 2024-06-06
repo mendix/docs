@@ -152,9 +152,9 @@ Specify your name for Git to use it in commit messages and make them more inform
 
 Specify your email for Git to use it in commit messages and make them more informative.
 
-#### 6.2.4 Clone
+#### 6.2.4 Clone {#clone}
 
-Select a  [Clone type](/refguide/clone-type/). to use for future clone operations, such as downloading an app or checking out another branch of an app you already downloaded. Changing this setting will not affect apps that you have already downloaded.
+Select a  [Clone type](/refguide/clone-type/) to use for future clone operations, such as downloading an app or checking out another branch of an app you already downloaded. Changing this setting will not affect apps that you have already downloaded.
 
 #### 6.2.5 Combine Local and Remote Changes
 
@@ -170,25 +170,21 @@ Select **Do not show warning about Git version** to suppress a warning message w
 
 ### 6.3 Background tasks
 
-#### 6.3.1 Enable Automatic Repository Optimization {#optimization}
-
-Select **Enable automatic repository optimization** to run Git repository optimization automatically on a regular basis. This helps you maintain the storage structure providing benefits from both performance and repository size perspectives. 
-
-#### 6.3.2 Number of Commits
-
-This option is available when [Enable automatic repository optimization](#optimization) is on. Studio Pro keeps track of the number of commits made in the local repository. You can manually specify the minimum number of them to tell when to start background optimization. For more information, see [Git Storage Optimization](/refguide/git-storage-optimization-dialog/).
-
-#### 6.3.3 Enable Automatic Fetching from a Remote Repository{#enable-auto-fetch}
-
-{{% alert color="info" %}}
-This setting was introduced in Mendix version 10.2.
-{{% /alert %}}
+#### 6.3.1 Enable Automatic Fetching from a Remote Repository{#enable-auto-fetch}
 
 Select **Enable automatic fetching from a remote repository** to enable the [Automatic fetch mechanism](/refguide/auto-fetch/).
 
-#### 6.3.4 Fetch Interval, Minutes
+#### 6.3.2 Fetch Interval, Minutes
 
 The number of minutes to wait after a fetch has started before performing another fetch. This must be between 1 and 120 minutes.
+
+#### 6.3.3 Enable Automatic Repository Optimization {#optimization}
+
+Select **Enable automatic repository optimization** to run Git repository optimization automatically on a regular basis. This helps you maintain the storage structure providing benefits from both performance and repository size perspectives. 
+
+#### 6.3.4 Number of Commits
+
+This option is available when [Enable automatic repository optimization](#optimization) is on. Studio Pro keeps track of the number of commits made in the local repository. You can manually specify the minimum number of them to tell when to start background optimization. For more information, see [Git Storage Optimization](/refguide/git-storage-optimization-dialog/).
 
 ## 7 Work Environment Tab
 

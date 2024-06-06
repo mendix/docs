@@ -144,6 +144,6 @@ To configure your Mendix application, perform the following steps:
 
 11. Configure the **UserProvisioning** tab as shown in the following figure:
 
-    {{< figure src="/attachments/appstore/modules/snowflake-sso/provisoning.png" >}}
+    {{< figure src="/attachments/appstore/modules/snowflake-sso/provisioning.png" >}}
 
 12. Eun the application and log in with the user that you use in Snowflake and Azure.

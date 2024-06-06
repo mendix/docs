@@ -25,7 +25,7 @@ A full clone is the default behavior for Git. This downloads a full copy of the 
 
 **Advantages:**
 * On the commandline a full copy allows you to do some operations without contacting the server. As Git operations like a 'detached head' are not supported in Studio Pro, the benefits are limited. 
-* Operations like merging can be significantly faster when working with a full clone. Even though the latest changes still have to be downloaded from the server, your local repository already contains a part of it, which saves time.
+* Operations like [combining changes](/refguide/merge-algorithm/) can be significantly faster when working with a full clone. Even though the latest changes still have to be downloaded from the server, your local repository already contains a part of it, which saves time.
 
 **Disadvantages:**
 * Downloading a full clone can take significantly longer. A 2GB repository would need to be completely downloaded and unpacked, even though the use of having the full history locally is very limited.
@@ -43,7 +43,7 @@ In this case Studio Pro can see an image was changed in multiple commits, but yo
 * Limited disk space usage: your local repository will be much smaller compared to a full clone.
 
 **Disadvantages:**
-* Extra download moments: when conducting a merge with an older branch, more data will have to be downloaded compared to the full clone, which can take slightly longer. The same applies when interacting with your history.
+* Extra download moments: when [combining changes](/refguide/merge-algorithm/) from an older branch, more data will have to be downloaded compared to the full clone, which can take slightly longer. The same applies when interacting with your history.
 
 ## 3 Preferences
 

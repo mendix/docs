@@ -46,10 +46,11 @@ Version control systems such as Git do not store a full copy of a document for e
 
 #### 4.1.3 Format change
 
-Mendix 10.X introduced a new version of the *.mpr* format. The key difference is that all documents, such as microflows, are no longer stored as part of the *.mpr* file but as separate files. The *.mpr* file functions as an index-file pointing to all the different files on disk. 
-This means that when you change a single document, like a microflow, only one file on disk will change. This allows Git to calculate an efficient delta, which results in a more appropriate repository growth.
+Mendix will introduce a new version of the *.mpr* format. The key difference is that all documents, such as microflows, will no longer be stored as part of the *.mpr* file but as separate files in the *mprcontents* directory. The *.mpr* file will function as an index-file pointing to all the different files on disk. 
 
-Functionally there are no differences between the 'split' (v2) or the 'combined' (v1) format. As of Mendix 10.X new apps are created with the split-format (v2). Existing apps can be converted manually to the new format through `File -> Upgrade app to split MPR format (v2)`, which we intend to do automatically in a future version of Studio Pro.
+This means that when you change a single document, like a microflow, only one file on disk will change. This allows Git to calculate an efficient delta, which results in a more appropriate repository growth. Functionally there will be no differences between the 'split' (v2) or the 'combined' (v1) format. 
+
+As a first step we will ensure new apps are created with the split-format (v2). Converting existing apps will initially be a manual action through the File menu. In a later release we intend to do automatic conversions from the combined-format (v1) to the split-format (v2).
 
 ### 4.2 Working with a Large Repository Size
 

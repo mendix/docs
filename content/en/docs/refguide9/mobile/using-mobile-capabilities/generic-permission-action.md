@@ -93,6 +93,7 @@ The following permissions can be tested using the Android Make It Native app:
 * CAMERA
 * READ_EXTERNAL_STORAGE
 * WRITE_EXTERNAL_STORAGE
+* SCHEDULE_EXACT_ALARM
 
 To test the remaining permissions you can build a [native app](/refguide9/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/) and [update the native app](#update-android-native-permissions) with the required permissions.
 
@@ -206,6 +207,8 @@ Update the *android/app/src/main/AndroidManifest.xml* file with the needed permi
   <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
   <uses-permission android:name="android.permission.WRITE_CONTACTS" />
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    
 
   <!-- … -->
 

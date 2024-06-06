@@ -109,16 +109,16 @@ If you would like to add a namespace to be added in the Standalone cluster, do t
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/ClusterDetails.png" class="no-border" >}}
 
-2. Click **Add Namespace**
+2. Click **Add Namespace**.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/namespace-details-standalone.png" class="no-border" >}}
 
 3. Enter the following details:
-    * **Namespace** – this is the namespace in your platform; this must conform to the namespace naming conventions of the cluster: all lower-case with hyphens allowed within the name
-    * **Installation type** – Choose **Standalone**
 
-4. Click **Next**
+    * **Namespace** – This is the namespace in your platform; this must conform to the namespace naming conventions of the cluster: all lower-case with hyphens allowed within the name.
+    * **Installation type** – Choose **Standalone**.
 
+4. Click **Next**.
 5. Once you click on **Next**, you will be redirected to the Installation pop up page from where you can download the mxpc-cli and get the command to install the namespace in the cluster.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/standalone_downloadcli.png" class="no-border" >}}  
@@ -697,7 +697,7 @@ You can set the following metrics configuration values:
 * `mxAgentInstrumentationConfig`: instrumentation configuration for the [Java instrumentation agent](https://github.com/mendix/mx-agent); collects additional metrics such as microflow execution times; can be left empty to use the default instrumentation config. This attribute is only applicable when `mode` is `native`, and `mxAgentConfig` is not empty.
 
 {{% alert color="warning" %}}
-MxAgent is a [Java instrumentation agent](https://docs.oracle.com/en/java/javase/11/docs/api/java.instrument/java/lang/instrument/Instrumentation.html) and is unrelated to the Mendix for Private Cloud Gateway Agent.
+MxAgent is a [Java instrumentation agent](https://docs.oracle.com/en/java/javase/21/docs/api/java.instrument/java/lang/instrument/Instrumentation.html) and is unrelated to the Mendix for Private Cloud Gateway Agent.
 {{% /alert %}}
 
 {{% alert color="info" %}}

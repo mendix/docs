@@ -165,4 +165,4 @@ Enter a complete overview of what the operation does. You can use [GitHub-flavor
 
 **How to publish REST in Studio Pro 8**
 
-{{% youtube Ff_P84NOcZk %}}
+{{< youtube Ff_P84NOcZk >}}

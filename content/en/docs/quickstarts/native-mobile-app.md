@@ -86,7 +86,7 @@ Now, the existing images are displayed from the database.
 
 Next, you will develop functionality that allows the end-user to take new pictures with the app and then upload them to the server.
 
-## 4 Using a Nanoflow to Call a JavaScript Action
+## 4 Using a Nanoflow to Call a JavaScript Action {#nanoflow-use-case}
 
 Your app needs a button that allows the end-user to take a picture. Instead of a regular button, you can use a floating action button optimized for mobile users that calls a nanoflow: 
 

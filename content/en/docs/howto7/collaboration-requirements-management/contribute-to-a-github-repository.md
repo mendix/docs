@@ -1,7 +1,6 @@
 ---
 title: "Contribute to a GitHub Repository"
 url: /howto7/collaboration-requirements-management/contribute-to-a-github-repository/
-
 weight: 20
 ---
 ## 1 Introduction

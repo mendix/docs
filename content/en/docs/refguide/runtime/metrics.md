@@ -1,7 +1,6 @@
 ---
 title: "Metrics"
 url: /refguide/metrics/
-
 description: "Describes how to configure and report metrics in Mendix."
 ---
 

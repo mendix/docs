@@ -1,7 +1,6 @@
 ---
 title: "Debug Java Actions"
 url: /howto/monitoring-troubleshooting/debug-java-actions/
-
 weight: 4
 description: "Describes how to set breakpoints and debug Java actions in Eclipse."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the Evaluation Guide. See Mapping to Products for more details.

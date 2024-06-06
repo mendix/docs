@@ -2,7 +2,6 @@
 title: "Communication Patterns in the Mendix Runtime"
 linktitle: "Communication Patterns"
 url: /refguide8/communication-patterns/
-
 ---
 
 ## 1 Introduction

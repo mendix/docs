@@ -1,7 +1,6 @@
 ---
 title: "10"
 url: /releasenotes/studio-pro/10/
-
 description: "The release notes for version 10 of Mendix Studio Pro."
 weight: 9
 no_list: false

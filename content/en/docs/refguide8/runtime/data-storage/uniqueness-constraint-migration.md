@@ -7,7 +7,6 @@ aliases:
     - /refguide/uniqueness-constraint-migration
 # referred to in M2EE error message
 ---
-
 ## 1 Introduction
 
 The uniqueness validation constraint is usually handled in the database. This enables stateless clustering, a higher number of concurrent users, and above load applications to be handled efficiently.

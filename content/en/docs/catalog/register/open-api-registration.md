@@ -5,7 +5,6 @@ url: /catalog/register/openapi-automatic-registration
 description: "Provides explanation of OpenAPI beta functionality in Catalog"
 weight: 50
 aliases:
-
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 

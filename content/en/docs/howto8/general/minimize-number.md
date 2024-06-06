@@ -2,7 +2,6 @@
 title: "Minimize the Number of In-Use Objects in Your Session"
 linktitle: "Minimize Objects in Session"
 url: /howto8/general/minimize-number/
-
 weight: 6
 ---
 

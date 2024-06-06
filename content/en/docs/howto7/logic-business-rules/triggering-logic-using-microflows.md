@@ -1,7 +1,6 @@
 ---
 title: "Trigger Logic Using Microflows"
 url: /howto7/logic-business-rules/triggering-logic-using-microflows/
-
 weight: 2
 ---
 To add custom logic to your Mendix application you can use microflows. Microflows can be triggered in various ways, as in, buttons, input fields, scheduled events, and more. This how-to teaches you how to configure the properties and settings of a microflow button placed on a grid or reference set selector. You will start with adding the microflow button to the right widget. Next you will need to configure the right properties and settings of the microflow button. 

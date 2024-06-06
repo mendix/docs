@@ -1,7 +1,6 @@
 ---
 title: "Debug a Hybrid Mobile Application"
 url: /howto8/monitoring-troubleshooting/debug-a-hybrid-mobile-application/
-
 weight: 5
 ---
 

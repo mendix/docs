@@ -1,7 +1,6 @@
 ---
 title: "Style Google Maps"
 url: /howto7/front-end/style-google-maps/
-
 weight: 60
 ---
 

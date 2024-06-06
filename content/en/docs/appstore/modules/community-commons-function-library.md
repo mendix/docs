@@ -1,7 +1,6 @@
 ---
 title: "Community Commons"
 url: /appstore/modules/community-commons-function-library/
-
 description: "Describes the configuration and usage of the Community Commons Function Library module, which is available in the Mendix Marketplace."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

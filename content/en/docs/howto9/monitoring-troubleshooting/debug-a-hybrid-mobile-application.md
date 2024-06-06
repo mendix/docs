@@ -1,7 +1,6 @@
 ---
 title: "Debug a Hybrid Mobile Application"
 url: /howto9/monitoring-troubleshooting/debug-a-hybrid-mobile-application/
-
 weight: 5
 description: "Describes how to debug a Mendix app that is running in the Mendix Developer App on your mobile phone."
 ---

@@ -1,7 +1,6 @@
 ---
 title: "Mendix Mobile App"
 url: /releasenotes/mobile/mendix-mobile-app/
-
 weight: 20
 description: "These are the release notes for the Mendix Mobile app."
 ---

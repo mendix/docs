@@ -1,7 +1,6 @@
 ---
 title: "Build Pluggable Web Widgets"
 url: /howto/extensibility/pluggable-widgets/
-
 weight: 20
 description: "Describes how to use the new generation of custom-built Mendix widgets based on React."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the Evaluation Guide. See Mapping to Products for more details.

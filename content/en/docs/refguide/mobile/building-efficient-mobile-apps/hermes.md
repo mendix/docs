@@ -3,7 +3,6 @@ title: "Enable Hermes"
 url: /refguide/mobile/building-efficient-mobile-apps/enable-hermes/
 weight: 15
 description: "Improve native app performance by enable the Hermes engine."
-tags: ["native", "startup", "performance", "optimization", "js engine"]
 aliases:
     - /refguide/mobile/building-efficient-mobile-apps/hermes/
 ---

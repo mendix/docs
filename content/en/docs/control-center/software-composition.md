@@ -26,14 +26,13 @@ From the **Software Composition** page in Control Center, you can drill down and
 
 To be able to see the software composition information, make sure that you meet the following prerequisites:
 
-* Component details and related actions are available for apps made with Studio Pro versions [9.24.22](/releasenotes/studio-pro/9.24/#92422) and above, [10.6.9](/releasenotes/studio-pro/10.6/#1069) and above, and [10.10.0](/releasenotes/studio-pro/10.10/#10100) and above. 
+* Component details and related actions are available for apps made with Studio Pro versions [9.24.22](/releasenotes/studio-pro/9.24/#92422) and above, [10.6.9](/releasenotes/studio-pro/10.6/#1069) and above, and [10.10.0](/releasenotes/studio-pro/10.10/#10100) and above, therefore, not available for apps made with Studio Pro versions 10.7, 10.8, and 10.9.
 
   {{% alert color="info" %}}With Mendix versions 9.24.22 and above, only unmanaged Java dependencies or jars are shown. With Mendix versions 10.6.9 and above, both managed and unmanaged Java dependencies or jars will be shown.{{% /alert %}}
 
+* Software composition visibility is only possible for deployment packages created via the platform services. It is not available if you manually upload the locally-created deployment package.
 * You must be using free or licensed Mendix Cloud or Cloud Dedicated. It will be enabled for Private Cloud later. 
-
 * You must create a deployment package via the team server. SBOMs are created behind the scenes for each deployment package. For more information, see [Create Deployment Package](/refguide/create-deployment-package-dialog/).
-
 * If your deployment package was deployed before June 14, 2024, you must create and deploy a new deployment package in order to get the software composition information populated on this page. For more information, see the [Software Composition Generation](#software-composition-generation) section.
 
 ### 1.2 Software Composition Generation {#software-composition-generation}
@@ -59,8 +58,6 @@ The list contains the following information:
 * **Target Cloud**: This shows the type of the cloud where the deployment package is deployed. Currently, only Mendix Free Cloud, Mendix Cloud, and Mendix Cloud Dedicated are supported.
 * Column customization ({{% icon name="view" %}}): You can customize the columns of the list by clicking the {{% icon name="view" %}} icon and adjusting the selection of the check boxes.
 * **View details**: Click this opens the [Component Summary](#component-summary) page, if it is available. The **View details** button is grayed out if it is not applicable.
-
-To export the information of selected items in the list to an Excel file, select the check boxes of the items in the list, and then click {{% icon name="office-sheet" %}}**Selection Export to Excel** that appears at the bottom of the page.
 
 ### 2.1 Component Summary {#component-summary}
 

@@ -82,49 +82,49 @@ After setting up the authentication, to analyze a document, implement the [Analy
 12. In the App Explorer, right-click on the name of your module, and then click **Add microflow**.
 13. Enter a name for your microflow, for example, *ACT_AnalyzeDocument*, and then click **OK**.
 14. Add an input [parameter](/refguide/parameter/) of the Document entity to the ACT_AnalyzeDocument microflow.
-15. In the properties pane of ACT_AnalyzeDocument, under Security, assign a user role to Allow roles.
+15. In the properties pane of *ACT_AnalyzeDocument*, under **Security**, assign a user role to **Allow** roles.
 16. In the **App Explorer**, in the **AWSAuthentication** section, find the **GetStaticCredentials** and **GetTemporaryCredentials** microflows.
 17. Drag the one you would like to use to your microflow.
 18. In the **Toolbox** pane, search for the **Create object** activity and drag it onto the microflow area.
 19. Configure the  **Create object** activity by doing the following steps:
     1. Double-click the activity. 
     2. Select the **AnalyzeDocumentRequest** entity. 
-    3. Add another **Create object** activity, and select the **AnalyzeDocFeatureType** enitity.
-    4. Set it's Value attribute to **ENUM_FeatureType.FORMS** and the **AnalyzeDocFeatureType_AnalyzeDocumentRequest** association to the **AnalyzeDocumentRequest** object created in step 2.
-20. In the **Toolbox** pane, in the **AmazonTextractConnector** section, find the **AnalyzeDocument** activity.
-21. Drag the **AnalyzeDocument** activity onto the work area of your microflow between the **Create object** activities and the microflow end event.
-22. Configure the **AnalyzeDocument** activity by doing the following steps:
+20. Add another **Create object** activity, and select the **AnalyzeDocFeatureType** enitity.
+21 Set its **Value** attribute to **ENUM_FeatureType.FORMS** and the **AnalyzeDocFeatureType_AnalyzeDocumentRequest** association to the **AnalyzeDocumentRequest** object created in step 2.
+22. In the **Toolbox** pane, in the **AmazonTextractConnector** section, find the **AnalyzeDocument** activity.
+23. Drag the **AnalyzeDocument** activity onto the work area of your microflow between the **Create object** activities and the microflow end event.
+24. Configure the **AnalyzeDocument** activity by doing the following steps:
     1. Double-click the activity.
     2. Set the values for [AWS_Region](https://docs.aws.amazon.com/general/latest/gr/textract.html#textract_region), **AnalyzeDocumentRequest**, and the **FileDocument** parameter.
     3. Click **OK**.
 
     {{< figure src="/attachments/appstore/modules/aws-textract/analyze-document-properties.png" class="no-border" >}}
     
-23. In the **Toolbox** [pane](/refguide/view-menu/#layout-of-panes), search for the **AbstractDocumentAnalysisResponse_ProcessResults** microflow and drag it onto the microflow area.
-24. Position the **AbstractDocumentAnalysisResponse_ProcessResults** microflow between the **AnalyzeDocument** activity and the microflow end event.
-25. Configure the **AbstractDocumentAnalysisResponse_ProcessResults** microflow by doing the following steps:
+25. In the **Toolbox** [pane](/refguide/view-menu/#layout-of-panes), search for the **AbstractDocumentAnalysisResponse_ProcessResults** microflow and drag it onto the microflow area.
+26. Position the **AbstractDocumentAnalysisResponse_ProcessResults** microflow between the **AnalyzeDocument** activity and the microflow end event.
+27. Configure the **AbstractDocumentAnalysisResponse_ProcessResults** microflow by doing the following steps:
     1. Double-click the **AbstractDocumentAnalysisResponse_ProcessResults** microflow.
     2. Set the **AnalyzeDocumentResponse** parameter.
     3. Click **OK**.
-26. In the **Toolbox** pane, find the **List operation** activity.
-27. Drag the activity onto the microflow area between the **AbstractDocumentAnalysisResponse_ProcessResults** microflow and the end event.
-28. Configure the **List operation** activity by doing the following steps:
+28. In the **Toolbox** pane, find the **List operation** activity.
+29. Drag the activity onto the microflow area between the **AbstractDocumentAnalysisResponse_ProcessResults** microflow and the end event.
+30. Configure the **List operation** activity by doing the following steps:
     1. Double-click the activity.
     2. Select **Head** as the operation.
     3. Select the list that the **AbstractDocumentAnalysisResponse_ProcessResults** microflow returns.
-29. Create a page with a data view of the **Page** entity, and configure the page to display the specialized `BlockItem` model.
+31. Create a page with a data view of the **Page** entity, and configure the page to display the specialized `BlockItem` model.
 
     {{< figure src="/attachments/appstore/modules/aws-textract/block-item-page.png" class="no-border" >}}
 
-30. In the **Toolbox** pane, find the **Show page** activity.
-31. Drag the activity onto the microflow area between the **List* operation** activity and the end event.
-32. Configure the **Show page** activity by doing the following steps:
+32. In the **Toolbox** pane, find the **Show page** activity.
+33. Drag the activity onto the microflow area between the **List* operation** activity and the end event.
+34. Configure the **Show page** activity by doing the following steps:
     1. Double-click the activity
     2. Select the page with a data view of the Page entity.
     3. Set the **Page** parameter
     4. Click **OK**.
-33. On the **Document_Overview** page, right-click the **Delete** button and add an **Action** button.
-34. Right-click the **Action** button, and select the **ACT_AnalyzeDocument** microflow as the on-click action. 
+35. On the **Document_Overview** page, right-click the **Delete** button and add an **Action** button.
+36. Right-click the **Action** button, and select the **ACT_AnalyzeDocument** microflow as the on-click action. 
 
     {{< figure src="/attachments/appstore/modules/aws-textract/analyze-document-configure-microflow.png" class="no-border" >}}
 

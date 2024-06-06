@@ -2,10 +2,9 @@
 title: "Installing Mendix Studio Pro"
 url: /refguide9/install/
 linktitle: "Install Mendix Studio Pro"
-category: "General Info"
+
 weight: 15
 description: "Describes how to install Mendix Studio Pro."
-tags: ["studio pro", "install", "install studio pro", "download"]
 aliases:
     - /howto9/general/install/
 ---
@@ -36,24 +35,24 @@ Mendix Studio Pro needs to be installed on your computer before you can start bu
 
 1. Open the downloaded Mendix Studio Pro executable. It is named like this: *Mendix-9.X.X-Setup*. Then click **Next**:
 
-    {{< figure src="/attachments/refguide9/general/install/setup-wizard.png"   width="400"  >}}
+    {{< figure src="/attachments/refguide9/general/install/setup-wizard.png"   width="400"  class="no-border" >}}
 
 2. Select **I accept the terms in the License Agreement** and click **Next**:
 
-    {{< figure src="/attachments/refguide9/general/install/terms-of-use.png"   width="400"  >}}
+    {{< figure src="/attachments/refguide9/general/install/terms-of-use.png"   width="400"  class="no-border" >}}
 
 3. Select the folder in which you want to install Studio Pro and click **Next**:
 
-    {{< figure src="/attachments/refguide9/general/install/select-folder.png"   width="400"  >}}
+    {{< figure src="/attachments/refguide9/general/install/select-folder.png"   width="400"  class="no-border" >}}
 
 4. Enter the start menu shortcuts folder you want to use and click **Next**:
 
-    {{< figure src="/attachments/refguide9/general/install/shortcut-folder.png"   width="400"  >}}
+    {{< figure src="/attachments/refguide9/general/install/shortcut-folder.png"   width="400"  class="no-border" >}}
 
 5. Check the desktop option to create a shortcut to Studio Pro on your desktop and click **Next**.
 6. Click **Install** to install Studio Pro on your computer:
 
-    {{< figure src="/attachments/refguide9/general/install/ready-to-install.png"   width="400"  >}}
+    {{< figure src="/attachments/refguide9/general/install/ready-to-install.png"   width="400"  class="no-border" >}}
 
 7. If you are asked to restart your computer, make a selection and click **Finish**. Otherwise, check **Launch Mendix 9.X.X** and click **Finish** to finish the installation and launch Studio Pro.
 
@@ -63,12 +62,13 @@ Sometimes you can run into problems when installing Studio Pro. One work-around 
 
 The prerequisites are the following:
 
-* [Microsoft .NET Desktop Runtime 6.0.x](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) – we recommend using version 6.0.6 or above
+* [Microsoft .NET Desktop Runtime 6.0.x](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) – Mendix recommends using version 6.0.6 or above
 * Java JDK
-
-    * For Mendix Studio Pro version 9.18.0 and above – [Eclipse Temurin JDK 11 (x64)](https://github.com/adoptium/temurin11-binaries/releases)
-    * For Mendix Studio Pro versions above 9.14.0 but below 9.18.0 – [Adoptium Temurin Java SDK](https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.14.1%2B1/OpenJDK11U-jdk_x64_windows_hotspot_11.0.14.1_1.msi)
-    * For Mendix Studio Pro versions below 9.14.0 – [AdoptOpenJDK 11](https://cdn.mendix.com/installer/AdoptOpenJDK/OpenJDK11U-jdk_x64_windows_hotspot_11.0.3_7.msi)
+     
+    * For Mendix Studio Pro 9.24.16 and above – [Eclipse Temurin JDK 17 (x64)](https://github.com/adoptium/temurin17-binaries/releases)
+    * For Mendix Studio Pro 9.18.0 and 9.24.15 – [Eclipse Temurin JDK 11 (x64)](https://github.com/adoptium/temurin11-binaries/releases)
+    * For Mendix Studio Pro 9.14 to 9.17 – [Adoptium Temurin Java SDK](https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.14.1%2B1/OpenJDK11U-jdk_x64_windows_hotspot_11.0.14.1_1.msi)
+    * For Mendix Studio Pro 9.13 and below – [AdoptOpenJDK 11](https://cdn.mendix.com/installer/AdoptOpenJDK/OpenJDK11U-jdk_x64_windows_hotspot_11.0.3_7.msi)
 * [Microsoft Visual C++ 2015 and 2019 Redistributable Package](https://aka.ms/vs/16/release/vc_redist.x64.exe)
 * [Mendix Native Mobile Builder one-click Installer](https://appdev-mx-cdn.s3.amazonaws.com/native-builders/latest.exe)
 * [Git for Windows (x64)](https://git-scm.com/download/win) using the following versions:
@@ -78,7 +78,9 @@ The prerequisites are the following:
     | [2.37.1](https://github.com/git-for-windows/git/releases/tag/v2.37.1.windows.1) | [2.41.0](https://github.com/git-for-windows/git/releases/tag/v2.41.0.windows.3) |
 
 * [Microsoft Edge WebView2 Evergreen Runtime (x64 or ARM64) (Evergreen Standalone Installer version)](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)
-* For Mendix Studio Pro version 9.24.0 and above – [Gradle 7.6 or above](https://services.gradle.org/distributions/gradle-7.6-bin.zip)
+* Mendix Studio Pro version 9.24.0 and above require the following versions of [Gradle](https://gradle.org/install/#manually) with Gradle extracted to the parent directory of the folder where Studio Pro is installed (usually `C:\Program Files\Mendix`) instead of `C:\Gradle`.
+    * Mendix Studio Pro versions 9.24.0 to 9.24.10 require Gradle version 7.6 or above
+    * Mendix Studio Pro version 9.24.11 and above require Gradle version 7.6.3 or above
 
 Based on the error message you get from the installer you can decide to install a single prerequisite, or you can try to manually install them all.
 
@@ -96,14 +98,16 @@ It is possible to prepare the prerequisite installers beforehand, so that the Me
 4. Download the prerequisites listed in the [Troubleshooting](#troubleshooting) section above and move them into the **Dependencies** folder.
 5. Rename the following dependencies:
     * The Microsoft .NET Desktop Runtime 6.0.x executable (*dotnet.exe*) to *windowsdesktop-runtime-6.0-x64.exe*
-    * The Java Development Kit 11 (x64) *msi* (for example, *OpenJDK11U-jdk_x64_windows_hotspot_11.0.3_7.msi*) to one of the following, depending on the Studio Pro version:
-        * *adoptiumjdk_11_x64.msi* – for versions 9.14.0 and above
+    * The Java Development Kit 11 or 17 (x64) *msi* (for example, *OpenJDK17U-jdk_x64_windows_hotspot_17.0.10_7.msi*) to one of the following, depending on the Studio Pro version:
+        * *adoptiumjdk_17_x64.msi* – for versions 9.24.16 and above
+        * *adoptiumjdk_11_x64.msi* – for versions between 9.14.0 and 9.24.15 
         * *adoptopenjdk_11_x64.msi* – for versions 9.13.x and below
     * The Visual C++ Redistributable for Visual Studio 2019 (x64) executable (for example, *VC_redist.x64.exe*) to *vcredist2019_x64.exe*
     * The `latest` executable to *mendix_native_mobile_builder.exe*
     * The *Git-{version}-64-bit.exe* executable to *git_for_windows_installer.exe*
     * Do not rename the Microsoft Edge WebView2 Evergreen Runtime installer *MicrosoftEdgeWebview2Setup.exe*, keep it as is
-    * The Gradle zip file should be named *gradle-7.6-bin.zip*
+    * For Mendix 9 versions 9.24.11 and above, use Gradle version 7.6.3 in a zip file named *gradle-7.6.3-bin.zip*
+    * For Mendix versions 9.24.0 to 9.24.10, use Gradle version 7.6 in a zip file named *gradle-7.6-bin.zip*
 
 6. Run the installer as described in the [Installing Mendix Studio Pro](#install) section above.
 
@@ -121,7 +125,7 @@ You can sign in with your Mendix account, or with your own company account if th
 
 In some situations, for example, when your network has a firewall or proxy server, a warning about an untrusted certificate may appear during the sign-in process:
 
-{{< figure src="/attachments/refguide9/general/install/untrusted-certificate.png" width="600px" >}}
+{{< figure src="/attachments/refguide9/general/install/untrusted-certificate.png" width="600px" class="no-border" >}}
 
 To continue, you may accept the certificate for the current session by clicking the **Accept for this session** button, or install it permanently by clicking the **View certificate information** button. 
 

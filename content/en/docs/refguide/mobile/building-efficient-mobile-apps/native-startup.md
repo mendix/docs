@@ -3,7 +3,6 @@ title: "Optimizing Native Startup"
 url: /refguide/mobile/building-efficient-mobile-apps/native-startup/
 weight: 15
 description: "Describes optimizing native app startup times by tailoring the way your app syncs data."
-tags: ["native", "startup", "performance", "optimization"]
 ---
 
 ## 1 Introduction
@@ -49,4 +48,4 @@ If you need to synchronize files and images on startup, ensure their size is sma
 
 If you have configured a nanoflow as a startup nanoflow it may affect your app's startup performance—especially if the nanoflow performs additional data synchronization, excessive data operations on the local device, or microflow calls. 
 
-We recommend creating short-running startup nanoflows, because native apps keep showing their splash screen until your startup nanoflow executes a **Show page** action. If you must perform long operations in your startup nanoflow, you can show a page at the beginning to help the end-user understand the process. 
+Mendix recommends creating short-running startup nanoflows, because native apps keep showing their splash screen until your startup nanoflow executes a **Show page** action. If you must perform long operations in your startup nanoflow, you can show a page at the beginning to help the end-user understand the process. 

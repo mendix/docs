@@ -4,12 +4,11 @@ url: /appstore/creating-content/comm-sol-partner-program/
 linktitle: "Commercial Solution Partner Programs"
 weight: 10
 description: "Mendix supports solution developers through the Mendix Component Partner Program and Mendix Commercial Solution Partner Program."
-tags: [ "solutions", "commercial solution partner", "startup", "adaptable solutions", "prescriptive solutions" ]
 ---
 
 ## 1 Introduction
 
-Mendix supports aspiring solutions vendors, startups, and large enterprises in their adoption of Mendix as a development platform for their solutions. Along with the [Mendix Component Partner Program](/appstore/creating-content/partner-program/), Mendix can suport you via the [Mendix Commercial Solution Partner Program](https://www.mendix.com/partners/become-a-partner/isv-program/). These program teams are the point of contact for any inquiries, including requesting access to early adopter-stage technologies like intellectual property protection.
+Mendix supports aspiring solutions vendors, startups, and large enterprises in their adoption of Mendix as a development platform for their solutions. Along with the [Mendix Component Partner Program](/appstore/partner-program/), Mendix can support you via the [Mendix Commercial Solution Partner Program](https://www.mendix.com/partners/become-a-partner/isv-program/). These program teams are the point of contact for any inquiries, including requesting access to early adopter-stage technologies like intellectual property protection.
 
 ## 2 Mendix Commercial Solution Partner Program
 

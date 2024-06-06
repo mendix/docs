@@ -34,7 +34,7 @@ To determine which version of the Native Template you should use, do the followi
 
 The keys represent the Mendix Studio Pro version. The `min` and `max` values are the minimum and maximum Native Template versions supported: 
 
-{{< figure src="/attachments/refguide/mobile/native-mobile/native-template/mendix-version.png" alt="Mendix Versions"   width="200"  >}}
+{{< figure src="/attachments/refguide/mobile/native-mobile/native-template/mendix-version.png" alt="Mendix Versions"   width="200"  class="no-border" >}}
 
 So like in the example shown above, in the case of Mendix Studio Pro 8.9.x you could choose any Native Template version from 4.0.0 to the latest. Ideally, you should choose the most recent supported version.
 
@@ -578,7 +578,7 @@ native-mobile-toolkit configure --config-path='./<name of the configuration>.jso
 
 ## 6 Bundle Information
 
-Mendix Native apps are based on React Native. When building your Mendix app using the Mendix Native Mobile Builder, your app is first compiled to Javascript code and static assets. Using React Native's Metro Bundler, the client code and assets are then compiled to platform specific React Native Bundles. These are finally moved to the correct location in Native Template before compiling the final apps.
+Mendix Native apps are based on React Native. When building your Mendix app using the Mendix Native Mobile Builder, your app is first compiled to JavaScript code and static assets. Using React Native's Metro Bundler, the client code and assets are then compiled to platform specific React Native Bundles. These are finally moved to the correct location in Native Template before compiling the final apps.
 
 This whole process is unified using a tool called MXBuild that is included with every installation of Mendix Studio Pro. For more information, see the [MxBuild Reference Guide](/refguide/mxbuild/).
 
@@ -629,18 +629,18 @@ The created bundles need to be copied to the right place in the Native Template 
 
 ## 7 Deriving the App's Native Dependencies
 
-Mendix Studio Pro includes Native Dependency resolution for pluggable widgets and Javascript actions. For more information, see [Declaring Native Dependencies](/apidocs-mxsdk/apidocs/pluggable-widgets-native-dependencies/).
+Mendix Studio Pro includes Native Dependency resolution for pluggable widgets and JavaScript actions. For more information, see [Declaring Native Dependencies](/apidocs-mxsdk/apidocs/pluggable-widgets-native-dependencies/).
 
 As you develop, you may add more Mendix Studio Pro compatible modules, widgets, and actions to your app. This means and more dependencies will be added that will also need be declared in your app's Native Template prior to building the native apps. 
 
-As this dependency management is required for your app's initial setup, we suggest you use the Mendix Native Mobile Builder to configure your app. The Mendix Native Mobile builder is capable of deriving required dependencies and linking them with your app's Native Template. 
+As this dependency management is required for your app's initial setup, Mendix suggests you use the Mendix Native Mobile Builder to configure your app. The Mendix Native Mobile builder is capable of deriving required dependencies and linking them with your app's Native Template. 
 
 ## 8 Continuous Integration Testing Guidelines
 
 In some advanced cases you might consider setting up continuous integration (CI) testing. This could be useful if you have multiple environments and prefer testing
 any nightly changes in acceptance before pushing to production.
 
-We suggest you initially develop your app using the Mendix Native Mobile Builder until the native dependencies are stable. Having a CI in the early stages will lead to frustration, and flux dependencies will lead to unexpected crashes. 
+Mendix suggests you initially develop your app using the Mendix Native Mobile Builder until the native dependencies are stable. Having a CI in the early stages will lead to frustration, and flux dependencies will lead to unexpected crashes. 
 
 A CI environment needs to be able to do the following to successfully configure a Native Template for builds:
 

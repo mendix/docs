@@ -40,7 +40,7 @@ The arguments sent to the microflow are automatically configured based on the pa
 
 {{% alert color="info" %}}
 
-For Mendix version 7.19.0 and above, in addition to passing the object of the enclosing data view, objects from the data views above that one all the way up to the top of page can also be passed.
+For Mendix 7.19.0 and above, in addition to passing the object of the enclosing data view, objects from the data views above that one all the way up to the top of page can also be passed.
 
 {{% /alert %}}
 

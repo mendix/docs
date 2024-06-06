@@ -3,13 +3,12 @@ title: "Scheduled Events"
 url: /refguide/scheduled-events/
 weight: 80
 description: "Options for configuring scheduled events"
-tags: ["Scheduled Event", "Execution properties", "Timing", "intervals", "scheduling issues", "time zones", "daylight saving", "task queue"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-With scheduled events you can make the runtime execute a microflow repeatedly at specific intervals.
+With scheduled events you can make the runtime execute a microflow repeatedly at specific intervals. The microflow is run using the [task queue](/refguide/task-queue/) mechanism.
 
 A scheduled event is added to your module as a document (right-click your module and you will find it listed under *Add other*).
 
@@ -21,7 +20,7 @@ Scheduled events can be tested locally, but they will not be run if your app is 
 
 | Property | Description |
 | --- | --- |
-| Name | The name of the scheduled event. This name is recorded in the `System.ProcessedQueueTask` objects at runtime, so that you can identify when this scheduled event has been processed. For compatibility with legacy scheduled events, it is also stored in the `ScheduledEventInformation` objects but this is deprecated and will be removed in Mendix version 10. |
+| Name | The name of the scheduled event. This name is recorded in the `System.ProcessedQueueTask` objects at runtime, so that you can identify when this scheduled event has been processed. See [Task Queues](/refguide/task-queue/) for additional information about this object. ⚠ For compatibility with legacy scheduled events, it is also stored in the `ScheduledEventInformation` objects but this is deprecated and will be removed in Mendix 11. |
 | Documentation | This field is for documentation purposes in the app model only. Its value is not visible to end-users and doesn't influence the behavior of your application. |
 
 ## 3 Execution Properties
@@ -134,7 +133,7 @@ This allows you to run the event every hour, or number of hours. It also allows 
 
 Example times will be shown in the dialog to illustrate the effects of the offset.
 
-{{< figure src="/attachments/refguide/modeling/resources/scheduled-events/hourly-event.png" >}}
+{{< figure src="/attachments/refguide/modeling/resources/scheduled-events/hourly-event.png" class="no-border" >}}
 
 ### 4.6 Minutes Properties {#minutes}
 
@@ -177,3 +176,7 @@ This limit cannot be overridden.
 ### 5.3 Unsupported Intervals
 
 Hour- and minute-based intervals can only be integer divisors of 24 or 60, respectively. For example you cannot schedule an event to run every seven minutes as this does not divide precisely into sixty minutes. If it is absolutely critical that an unsupported interval is used, you should schedule the event with interval value of one (every hour or every minute) and decide within the microflow whether it should continue executing at that particular time.
+
+### 5.4 Cleaning Up Completed Runs of Scheduled Events
+
+Every time a scheduled event is run it produces an entry in the `System.ProcessedQueueTask` table in the database. Over time these accumulate and the table can grow large. Refer to the documentation on [Cleaning Up Old Processed Tasks](/refguide/task-queue/#cleanup) in *Task Queue* to learn how to remove processed entries.

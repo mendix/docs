@@ -1,10 +1,9 @@
 ---
 title: "Version Control FAQ"
 url: /refguide9/version-control-faq/
-category: "Version Control"
+
 weight: 30
 description: "Presents and explains several frequently asked questions about version control."
-tags: ["git", "svn", "subversion", "teamserver", "byo-git", "byo-svn" ]
 ---
 
 ## 1 Introduction
@@ -13,7 +12,7 @@ tags: ["git", "svn", "subversion", "teamserver", "byo-git", "byo-svn" ]
 
 ## 2 What Version Control System Is Team Server Built On? {#which-team-server}
 
-Mendix Team Server is based on proven technology. Initially it was based only on top of Subversion (SVN), also called Team Server SVN. Starting from Mendix version 9.12.0, the Team Server also supports storing apps using Git technology, referred to as Team Server Git. 
+Mendix Team Server is based on proven technology. Initially it was based only on top of Subversion (SVN), also called Team Server SVN. Starting from Mendix 9.12.0, the Team Server also supports storing apps using Git technology, referred to as Team Server Git. 
 
 Currently, SVN is the default version control system for the Team Server, but you can choose to use Git. In the future, Git will become the default system. 
 
@@ -70,11 +69,11 @@ Yes, it is possible to connect to a third-party Subversion or Git version contro
 However, in this case the following products and capabilities are not available:
 
 * Deployment using the Developer Portal directly from the Team Server
-* Integrated platform APIs such as the [App repository API](/apidocs-mxsdk/apidocs/app-repository-api/), [Build API](/apidocs-mxsdk/apidocs/build-api/), [Platform SDK](/apidocs-mxsdk/mxsdk/), [Permissions API](/apidocs-mxsdk/apidocs/permissions-api/), [Projects API](/apidocs-mxsdk/apidocs/projects-api/), [Stories API](/apidocs-mxsdk/apidocs/stories-api/), and [User management API](/apidocs-mxsdk/apidocs/user-management-api/)
+* Integrated platform APIs such as the [App repository API](/apidocs-mxsdk/apidocs/app-repository-api/), [Build API](/apidocs-mxsdk/apidocs/build-api/), [Platform SDK](/apidocs-mxsdk/mxsdk/), [Permissions API](/apidocs-mxsdk/apidocs/permissions-api/), [Projects API](/apidocs-mxsdk/apidocs/projects-api/), [Epics API](/apidocs-mxsdk/apidocs/epics-api/), and [User management API](/apidocs-mxsdk/apidocs/user-management-api/)
 * [AQM](/addons/aqm-addon/) 
 
 {{% alert color="info" %}}
-For Git, connecting to a third-party Git version control repository is in Beta. For more information about the supported Git repositories, see [Working with Git On-Premises Version Control Server](/refguide9/on-premises-git/#preparing-your-repo).
+For Git, connecting to a third-party Git version control repository is in beta. For more information about the supported Git repositories, see [Working with Git On-Premises Version Control Server](/refguide9/on-premises-git/#preparing-your-repo).
 {{% /alert %}}
 
 ## 12 Will Mendix 9 Support Pull Requests and Peer Reviews? 

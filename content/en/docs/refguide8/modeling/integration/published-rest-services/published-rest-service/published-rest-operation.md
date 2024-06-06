@@ -3,14 +3,9 @@ title: "Published REST Operation"
 url: /refguide8/published-rest-operation/
 weight: 10
 description: "Options to configure a published REST operation."
-tags: ["Published REST", "operation", "method", "path", "example location", "mapping", "operation parameters", "how to"]
 # If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 # linked from DM: published rest > select resource > add operation for resource > help (integration)
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/published-rest-operation.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 
@@ -18,13 +13,13 @@ A published REST operation is part of a [published REST resource](/refguide8/pub
 
 In the **Published REST Service** document you can add items to be included in the service as **Resources**:
 
-{{< figure src="/attachments/refguide8/modeling/integration/published-rest-services/published-rest-service/published-rest-operation/publshed-rest-service.png" alt="Published REST Service" >}}
+{{< figure src="/attachments/refguide8/modeling/integration/published-rest-services/published-rest-service/published-rest-operation/publshed-rest-service.png" alt="Published REST Service" class="no-border" >}}
 
 ## 2 Operation Definition
 
 When you **Add** or **Edit** a resource, you can define the resource in the **Operation** definition dialog box for the selected item as follows:
 
-{{< figure src="/attachments/refguide8/modeling/integration/published-rest-services/published-rest-service/published-rest-operation/operation-definition.png" alt="REST Operation" >}}
+{{< figure src="/attachments/refguide8/modeling/integration/published-rest-services/published-rest-service/published-rest-operation/operation-definition.png" alt="REST Operation" class="no-border" >}}
 
 ### 2.1 General
 
@@ -170,4 +165,4 @@ Enter a complete overview of what the operation does. You can use [GitHub-flavor
 
 **How to publish REST in Studio Pro 8**
 
-{{% youtube Ff_P84NOcZk %}}
+{{< youtube Ff_P84NOcZk >}}

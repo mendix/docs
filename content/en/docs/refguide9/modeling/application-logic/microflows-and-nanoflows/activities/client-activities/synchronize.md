@@ -2,7 +2,6 @@
 title: "Synchronize"
 url: /refguide9/synchronize/
 weight: 70
-tags: ["studio pro", "synchronize", "offline", "client activity"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -20,7 +19,7 @@ All three modes perform synchronization in two phases: upload and download. For 
 
 ### 2.1 All Objects {#all-objects}
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/synchronize/synchronize.png" alt="Synchronize"   width="200"  >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/synchronize/synchronize.png" alt="Synchronize"   width="200"  class="no-border" >}}
 
 The **All objects** mode synchronizes the entire local database. The server database is updated with the changes from the local database. The local database is updated with the latest data from the server, including the file contents.
 
@@ -28,17 +27,17 @@ The behavior of this mode can be configured through [synchronization configurati
 
 ### 2.2 Unsynchronized Objects {#unsynchronized-objects}
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/synchronize/synchronize-unsynchronized-objects.png" alt="Synchronize"   width="200"  >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/synchronize/synchronize-unsynchronized-objects.png" alt="Synchronize"   width="200"  class="no-border" >}}
 
 Using the **Unsynchronized objects** mode, all objects with changes committed to the offline database are synchronized. Information about objects deleted since the last synchronization is also sent to the server. For more information, see the [Synchronization Behavior](#synchronization-behavior) section below.
 
 ### 2.3 Selected Objects {#selected-objects}
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/synchronize/synchronize-objects.png" alt="Synchronize"   width="200"  >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/synchronize/synchronize-objects.png" alt="Synchronize"   width="200"  class="no-border" >}}
 
 The **Selected object(s)** mode synchronizes objects partially, based on a selection:
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/synchronize/synchronize-objects-selection.png" alt="Synchronize"   width="600"  >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/synchronize/synchronize-objects-selection.png" alt="Synchronize"   width="600"  class="no-border" >}}
 
 Using this mode, only the selected objects or lists are synchronized. Deleted objects cannot be synchronized using selective synchronization. 
 
@@ -68,7 +67,7 @@ The **Synchronize** activity properties consists of the following sections:
 * [Action](#action)
 * [Common](#common)
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/synchronize/synchronize-properties.png" alt="Synchronize Action Properties"   width="300"  >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/synchronize/synchronize-properties.png" alt="Synchronize Action Properties"   width="300"  class="no-border" >}}
 
 ## 5 Action Section {#action}
 

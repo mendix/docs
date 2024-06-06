@@ -2,12 +2,7 @@
 title: "Parse and Format Decimal Function Calls"
 url: /refguide8/parse-and-format-decimal-function-calls/
 weight: 150
-tags: ["studio pro", "expression", "parsing", "formatting"]
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/parse-and-format-decimal-function-calls.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 
@@ -77,6 +72,8 @@ The output is described in the table below:
 | Value                                                        | Type   |
 | ------------------------------------------------------------ | ------ |
 | A string representation of the decimal in the format specified by the `format` parameter. | String |
+
+Note that the exact output may depend on the Java version and user locale, depending on the passed format.
 
 ### 3.3 Microflow Examples
 

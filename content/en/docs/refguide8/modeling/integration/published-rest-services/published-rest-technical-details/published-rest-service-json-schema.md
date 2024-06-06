@@ -3,12 +3,7 @@ title: "JSON Schema for Published REST Operation"
 url: /refguide8/published-rest-service-json-schema/
 weight: 20
 description: "Describes the JSON schemas for operation request bodies and operation results"
-tags: ["published REST", "JSON", "Schema", "operation", "request body", "result", "message definition"]
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/published-rest-service-json-schema.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 

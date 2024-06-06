@@ -2,9 +2,8 @@
 title: "Work with an On-Premises Version Control Server"
 linktitle: "On-Premises Version Control Server"
 url: /howto8/collaboration-requirements-management/on-premises-svn-howto/
-category: "Collaboration"
+
 weight: 60
-tags: ["on-premises"]
 ---
 
 ## 1 Introduction
@@ -13,7 +12,7 @@ When developing Mendix applications, changes to these applications are stored in
 
 While this is the recommended way of working for almost all Mendix developers, you may prefer to store your application's files in a system that is controlled by your own organization.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Configure your Mendix apps to work with your own (on-premises) version control system
 
@@ -37,9 +36,9 @@ For the purposes of this how-to, there are two important points to know about re
 
 First, Mendix requires you to store each Mendix application in a separate repository. It is not possible to place multiple Mendix apps into a single repository.
 
-Second, when uploading an app to a repository, Mendix requires the repository to be empty (except for the recommended SVN layout, as described in [Recommended Repository Layout](http://svnbook.red-bean.com/en/1.7/svn.tour.importing.html#svn.tour.importing.layout)). Specifically, this means that the repository should contain only three empty folders, called **branches**, **tags**, and **trunk**.
+Second, when uploading an app to a repository, Mendix requires the repository to be empty (except for the recommended SVN layout, as described in [Recommended Repository Layout](https://svnbook.red-bean.com/en/1.7/svn.tour.importing.html#svn.tour.importing.layout)). Specifically, this means that the repository should contain only three empty folders, called **branches**, **tags**, and **trunk**.
 
-Usually, repositories are created and maintained by the administrator of your SVN server. For more details about repositories, see [Repository Administration](http://svnbook.red-bean.com/en/1.7/svn-book.html#svn.reposadmin).
+Usually, repositories are created and maintained by the administrator of your SVN server. For more details about repositories, see [Repository Administration](https://svnbook.red-bean.com/en/1.7/svn-book.html#svn.reposadmin).
 
 In the following sections of this how-to, it is assumed that you have a repository available for your application.
 
@@ -50,7 +49,7 @@ Mendix Studio Pro has a (built-in) Subversion client that uses version 1.9 of th
 {{% alert color="warning" %}}
 Mendix Studio Pro uses the Subversion 1.9 working copy. Previous versions of the Mendix Desktop Modeler used a Subversion 1.7 working copy. These working copy versions are NOT compatible.
 
-This means that, if you use a separate SVN client (for example [TortoiseSVN](https://tortoisesvn.net/)) to work on your Mendix app, you must always use the version which matches your app model. If you open a local model from Mendix version 7.x with the latest version of TortoiseSVN, **you will no longer be able to open it in Mendix**.{{% /alert %}}
+This means that, if you use a separate SVN client (for example [TortoiseSVN](https://tortoisesvn.net/)) to work on your Mendix app, you must always use the version which matches your app model. If you open a local model from Mendix 7.x with the latest version of TortoiseSVN, **you will no longer be able to open it in Mendix**.{{% /alert %}}
 
 ## 5 Creating a New App to Store in an On-Premises SVN Server
 

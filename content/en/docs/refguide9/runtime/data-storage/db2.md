@@ -2,11 +2,10 @@
 title: "DB2"
 url: /refguide9/db2/
 weight: 40
-tags: ["studio pro"]
 ---
 
 {{% alert color="warning" %}}
-Support for DB2 is deprecated and [will be removed in Mendix version 10](/releasenotes/studio-pro/9.12/#deprecations).
+Support for DB2 is deprecated and [was removed in Mendix 10](/releasenotes/studio-pro/9.12/#deprecations).
 {{% /alert %}}
 
 ## 1 Introduction
@@ -35,8 +34,8 @@ If the transaction log space is depleted or there is a temporary increase in the
 
 In this case, the size of *LOGPRIMARY* must be increased. 
 
-For more detailed information, see [DB2 SQL error: SQLCODE: -964, SQLSTATE: 57011, SQLERRMC: null](http://www-01.ibm.com/support/docview.wss?uid=swg21298630) on the *IBM Support* pages and 
-[SQL0964C – The transaction log for the database is full](http://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.messages.sql.doc/doc/msql00964c.html) in the *SQL messages* section of the *IBM Knowledge Center*.
+For more detailed information, see [DB2 SQL error: SQLCODE: -964, SQLSTATE: 57011, SQLERRMC: null](https://www-01.ibm.com/support/docview.wss?uid=swg21298630) on the *IBM Support* pages and 
+[SQL0964C – The transaction log for the database is full](https://www.ibm.com/support/knowledgecenter/SSEPGG_11.1.0/com.ibm.db2.luw.messages.sql.doc/doc/msql00964c.html) in the *SQL messages* section of the *IBM Knowledge Center*.
 
 ## 4 Limitations
 
@@ -57,7 +56,7 @@ According to the [order-by-clause](https://www.ibm.com/support/knowledgecenter/S
 Taking this limitation into account, ordering by the associated attribute is not supported when a Mendix application is backed by DB2. Therefore, any associated attribute that is used for ordering is filtered out from the query and the result set is returned as if ordering by the associated attribute had not been presented in the query.
 
 {{% alert color="info" %}}
-This limitation has been removed in Studio Pro version [9.8.0](/releasenotes/studio-pro/9.8/) and above, and also from MTS version [9.6.3](/releasenotes/studio-pro/9.6/#963) and above.
+This limitation was removed in Studio Pro [9.8.0](/releasenotes/studio-pro/9.8/) and above, and also from [9.6.3](/releasenotes/studio-pro/9.6/#963).
 {{% /alert %}}
 
 ### 4.4 Non-Blocking Read-Isolated Streaming with OData

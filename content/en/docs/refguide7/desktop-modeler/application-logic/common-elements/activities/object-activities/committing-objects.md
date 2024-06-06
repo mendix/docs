@@ -43,7 +43,7 @@ As of 7.19.0, all attribute values are reflected in the client, including virtua
 
 {{% alert color="warning" %}}
 
-When committing a large number of objects, we recommend that you do not enable 'Refresh in client' because it can slow things down.
+When committing a large number of objects, Mendix recommends not enabling **Refresh in client**, because it can slow things down.
 
 {{% /alert %}}
 

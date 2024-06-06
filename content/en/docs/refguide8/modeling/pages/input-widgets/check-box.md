@@ -2,13 +2,8 @@
 title: "Check Box"
 url: /refguide8/check-box/
 weight: 40
-tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/check-box.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 
@@ -20,13 +15,13 @@ A checkbox must be placed in a [data widget](/refguide8/data-widgets/) and displ
 
 For example, this checkbox allows you to see, and set, whether someone is subscribed to your newsletter.
 
-{{< figure src="/attachments/refguide8/modeling/pages/input-widgets/check-box/check-box.png" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/input-widgets/check-box/check-box.png" class="no-border" >}}
 
 ## 2 Properties
 
 An example of checkbox properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/pages/input-widgets/check-box/check-box-properties.png"   width="250"  >}}
+{{< figure src="/attachments/refguide8/modeling/pages/input-widgets/check-box/check-box-properties.png"   width="250"  class="no-border" >}}
 
 Checkbox properties consist of the following sections:
 

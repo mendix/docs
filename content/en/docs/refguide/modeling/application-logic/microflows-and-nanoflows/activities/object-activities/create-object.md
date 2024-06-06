@@ -2,11 +2,10 @@
 title: "Create Object"
 url: /refguide/create-object/
 weight: 40
-tags: ["studio pro", "create object", "activity"]
 ---
 
-{{% alert color="warning" %}}
-This activity can be used in both **Microflows** and **Nanoflows**.
+{{% alert color="info" %}}
+This activity can be used in both microflows and nanoflows.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -17,7 +16,7 @@ The **Create object** activity can be used to create an object.
 
 An example of create object properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/create-object/create-properties.png" alt="create object properties" width="700px" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/create-object/create-properties.png" alt="create object properties" width="700px" class="no-border" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
@@ -32,7 +31,7 @@ The **Action** section of the properties pane shows the action associated with t
 
 You can open a dialog box to configure this action by clicking the ellipsis (**…**) next to the action.
 
-You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
+You can also open the dialog box by double-clicking the activity, or right-clicking the activity and selecting **Properties**.
 
 ### 3.1 Entity
 
@@ -40,7 +39,7 @@ The entity of which you want to create an object.
 
 ### 3.2 Commit
 
-**Commit** defines the way the object is committed. For more information on committing, see the section [How Commits Work](/refguide/committing-objects/#how-commits-work) in Commit Object(s) .
+**Commit** defines the way the object is committed. For more information on committing, see the section [How Commits Work](/refguide/committing-objects/#how-commits-work) in *Commit Object(s)*.
 
 | Option | Description |
 | --- | --- |
@@ -100,7 +99,7 @@ Wherever an object is initialized, all the events are always executed. The defau
     * The object has the **Instantiated** state
     * This influences the behavior in the other object actions
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/create-object/during-creates.png" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/create-object/during-creates.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 Any changes made to an object are visible in all widgets. This is because changes are stored globally in the client.

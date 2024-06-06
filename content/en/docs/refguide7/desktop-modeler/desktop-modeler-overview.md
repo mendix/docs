@@ -1,10 +1,9 @@
 ---
 title: "Desktop Modeler Overview"
 url: /refguide7/desktop-modeler-overview/
-category: "Desktop Modeler"
+
 description: "Describes the Desktop Modeler in general: tabs, menus, shortcut keys."
 weight: 10
-tags: ["desktop modeler"]
 aliases:
     - /refguide7/modeler.html
     - /refguide7/Modeler.html
@@ -68,7 +67,7 @@ Using items in the menu bar of the Modeler, you can create new projects, deploy 
 | Save All | Saves the changes in all documents that are open. | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> |
 | Close | Closes the current document. You will be asked to save or discard changes when needed. | <kbd>Ctrl</kbd> + <kbd>W</kbd> |
 | Close All | Closes all document tabs. You will be asked to save or discard changes when needed. | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>W</kbd> |
-| Close Project | Closes the currently open project and return to the start page. |   |
+| Close Project | Closes the currently open project and return to the home page. |   |
 | Export as Image | Exports the current document as an image in the *.png* format. The following document types can be exported as images: microflows, nanoflows, domain models, document templates, and rules. |   |
 | Export Project Package | Exports the current app to a project package (*.mpk*) file. This is useful for example when you want to give someone the entire app, or when you need to provide a test app when submitting a ticket. |   |
 | Import Project Package | Imports a project package that was created with the **Export Project Package** menu item. |   |
@@ -176,8 +175,8 @@ Using items in the menu bar of the Modeler, you can create new projects, deploy 
 | Menu Item | Description | Shortcut Key |
 | --- | --- | --- |
 | Help | Opens the documentation page about the currently selected element. If an entity is selected, for example, the documentation for entities will be shown. | <kbd>F1</kbd> |
-| Help Contents | Opens the start page of the documentaton in the default web browser. |   |
-| Ask a Question | Opens the [Mendix Forum](https://forum.mendix.com/p/questions) in the default web browser. |   |
+| Help Contents | Opens the home page of the documentaton in the default web browser. |   |
+| Ask a Question | Opens the [Mendix Community](https://community.mendix.com/p/questions) in the default web browser. |   |
 | Open Log File Directory | Opens the log files for your app locally. |   |
 | About Mendix Modeler | Shows information about the current version of the Mendix Modeler. |   |
 

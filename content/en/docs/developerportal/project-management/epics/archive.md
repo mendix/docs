@@ -3,14 +3,13 @@ title: "Archive"
 url: /developerportal/project-management/epics/archive/
 weight: 40
 description: "Describes the Archive page in Epics."
-tags: ["Project Management", "Epics", "Sprint", "Archive", "Stories", "Developer Portal"]
 ---
 ## 1 Introduction
 
 Every time you complete a Sprint, all the stories that are **Done** are archived automatically. You can also archive a story and a swimlane manually by doing the following:
 
-* Click the **...** icon on the upper-right corner of a [story card](/developerportal/project-management/epics/board/#story-card) or the [swimlane](/developerportal/project-management/epics/board/#swimlane) on the **Board** page and then select **Archive**.
-* Click the **...** icon at the end of a [row](/developerportal/project-management/epics/planning/) on the **Planning** page and then select **Archive**.
+* Click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) on the upper-right corner of a [story card](/developerportal/project-management/epics/board/#story-card) or the [swimlane](/developerportal/project-management/epics/board/#swimlane) on the **Board** page and then select **Archive**.
+* Click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) at the end of a [row](/developerportal/project-management/epics/planning/) on the **Planning** page and then select **Archive**.
 
 All the archived stories are moved to the **Archived** page.
 
@@ -28,7 +27,7 @@ The **Archive** page shows all the archived stories.
 
 If a feedback item was linked to your archived story, you will see it with a purple icon:
 
-{{< figure src="/attachments/developerportal/project-management/epics/archive/archive.png" >}}
+{{< figure src="/attachments/developerportal/project-management/epics/archive/archive.png" class="no-border" >}}
 
 On the top of the page, you can search a story in the search box, based on story title, tags, epic name, and story ID.
 
@@ -64,6 +63,8 @@ To export archived stories, perform these steps:
    * **UUID** – This is a universally unique identifier automatically generated for the story.
    * **Story id** – This is the unique ID of the story in Epics.
    * **Title** – This is the title of the story.
+   * **Assigned to** – This shows the person to whom the story was assigned.
+   * **Archived by** – This shows the person who archived the story.
    * **Description** – This is the description of the story.
    * **Story type** – This specifies whether the story is a **Feature** or **Bug**. 
    * **Story points** – This shows the story points.

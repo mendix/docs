@@ -1,12 +1,7 @@
 ---
 title: "Numeric Formatting"
 url: /refguide8/numeric-formatting/
-tags: ["studio pro"]
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/numeric-formatting.pdf).
-{{% /alert %}}
 
 ## 1 Behavior in Your Mendix Application
 

@@ -11,7 +11,7 @@ When you create a new test case, it is empty by default. You must add test steps
 
 To see the details of a test step, click the name of the test step. The details will open below the test step.
 
-{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-test-step/test-step-details.png" >}}
+{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-test-step/test-step-details.png" class="no-border" >}}
 
 ## 2 Description
 
@@ -57,9 +57,7 @@ For primitive parameter types like Text or Number, you set the input value by ty
 Parameters of the Number type only allow digits as inputs.
 {{% /alert %}}
 
-Another way of setting the parameter value is to use the **Edit Input Value** dialog box. To open the dialog box, click this icon:
-
-{{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-test-step/input-value-dialog.png" >}}
+Another way of setting the parameter value is to use the **Edit Input Value** dialog box. To open the dialog box, click the ({{% icon name="search" %}}) icon.
 
 This dialog box shows you all the available input values for the parameter.
 

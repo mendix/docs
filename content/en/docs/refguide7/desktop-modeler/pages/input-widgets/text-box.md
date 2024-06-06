@@ -1,6 +1,7 @@
 ---
 title: "Text Box"
 url: /refguide7/text-box/
+canonical_url: "https://docs.mendix.com/refguide/text-box/"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -9,7 +10,7 @@ A text box can be used to display and/or edit a textual value.
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide7/desktop-modeler/pages/input-widgets/text-box/text-box.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/input-widgets/text-box/text-box.png" class="no-border" >}}
 This text box allows the end-user to set the name of the customer.
 
 {{% /alert %}}

@@ -3,20 +3,19 @@ title: "App Menu"
 url: /refguide9/app-menu/
 description: "Describes the App Menu in Studio Pro."
 weight: 30
-tags: ["Studio Pro", "app menu", "top bar"]
 ---
 
 ## 1 Introduction
 
 In the **App** menu, you can view and/or manipulate settings that are connected to your app and deployment. For example, you can create a deployment package.
 
-{{< figure src="/attachments/refguide9/modeling/menus/app-menu/app-menu.png" alt="App Menu" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/app-menu/app-menu.png" alt="App Menu" class="no-border" >}}
 
 ## 2 Tools
 
 Under **App** > **Tools**, you can find settings on updating widgets, button icons, and layouts, checking widgets, and converting your classes to **Design** properties.
 
-### 2.1 Batch Update Button Icons
+### 2.1 Batch Update Button Icons {#batch-update-button-icons}
 
 The **Batch Update Button Icons** option allows you to update many button icons in a single batch process.
 

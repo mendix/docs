@@ -1,7 +1,6 @@
 ---
 title: "OQL RANGEBEGIN"
 url: /refguide9/oql-rangebegin/
-tags: ["studio pro"]
 ---
 
 ## 1 Description

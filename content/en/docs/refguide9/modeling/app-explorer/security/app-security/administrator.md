@@ -2,14 +2,13 @@
 title: "Administrator"
 url: /refguide9/administrator/
 weight: 20
-tags: ["studio pro", "administrator", "app security", "security"]
 ---
 
 ## 1 Introduction
 
 In the **Administrator** tab of **App Security**, you can change the default credentials and a user role for the Administrator user:
 
-{{< figure src="/attachments/refguide9/modeling/app-explorer/security/app-security/administrator/app-security-administrator.png" >}}
+{{< figure src="/attachments/refguide9/modeling/app-explorer/security/app-security/administrator/app-security-administrator.png" class="no-border" >}}
 
 ## 2 Administrator Properties {#administrator-properties}
 

@@ -3,7 +3,6 @@ title: "String Function Calls"
 url: /refguide9/string-function-calls/
 weight: 80
 description: "Describes the functions for converting and inspecting strings in Mendix."
-tags: ["studio pro", "string function calls", "expression", "expressions"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -156,16 +155,22 @@ The output is the following:
 'mystring'
 ```
 
-Another example of an input is:
+If you use a third parameter to specify the desired length of the output:
 
 ```java {linenos=false}
-substring('funwithmendixapps', 7,6)
+substring('thisismystring', 6, 2)
 ```
 
 The output is the following:
 
 ```java {linenos=false}
-'mendix'
+'my'
+```
+
+To prevent the value of the third parameter from getting out of range, you can set a limit to the third parameter, for instance, using the `min` and `length` functions:
+
+```java {linenos=false}
+substring('thisismystring', 0, min(length('thisismystring'), 20))
 ```
 
 ## 6 find

@@ -2,7 +2,6 @@
 title: "Advanced Audit Trail UI"
 url: /appstore/modules/advanced-audit-trail-ui/
 description: "Describes the configuration and usage of the Advanced Audit Trail UI module, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "Advanced Audit Trail", "UI"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
@@ -18,7 +17,7 @@ The [Advanced Audit Trail UI](https://marketplace.mendix.com/link/component/1209
 
 To install the component, first click the **Contact Us** button on the [Advanced Audit Trail](https://marketplace.mendix.com/link/component/120943) Marketplace page. 
 
-Then follow the instructions in the [Importing Content from the App Explorer](/appstore/general/app-store-content/#import) section in *Use Marketplace Content in Studio Pro* to import the Advanced Audit Trail Core module and the Advanced Audit Trail UI module into your project.
+Then follow the instructions in the [Importing Content from the App Explorer](/appstore/overview/use-content/#import) section in *Using Marketplace Content* to import the Advanced Audit Trail Core module and the Advanced Audit Trail UI module into your project.
 
 {{% alert color="info" %}}If you update the Advanced Audit Trail Core module, make sure that you update the Advanced Audit Trail UI module to the same version.{{% /alert %}}
 

@@ -3,7 +3,6 @@ title: "Offline Data Security"
 url: /refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/local-data-security/
 weight: 85
 description: "This documentation describes best practices to keep your offline data secure."
-tags: ["offline-first", "database", "security", "encryption"]
 aliases:
     - /howto/mobile/encryption-database/
 ---
@@ -58,7 +57,7 @@ To learn more, see the [Encrypting User Files](#encrypting-user-files) section b
 
 Studio Pro allows you to encrypt the local databases of native apps. Database encryption can be enabled using the checkbox in the native mobile navigation profile screen:
 
-{{< figure src="/attachments/refguide/mobile/offline-first/enable-native-db-encryption.png" alt="Encrypt local database checkbox placed at the bottom of the native mobile navigation profile screen" width="450"  >}}
+{{< figure src="/attachments/refguide/mobile/offline-first/enable-native-db-encryption.png" alt="Encrypt local database checkbox placed at the bottom of the native mobile navigation profile screen" width="450"  class="no-border" >}}
 
 ### 4.1 Prerequisites {#encryption-prerequisites}
 
@@ -130,7 +129,7 @@ To locate the database file on iOS, do the following:
 
 Studio Pro allows you to encrypt the files and images stored in native apps. Enable file encryption by selecting the checkbox in the **Native mobile** navigation profile tab:
 
-{{< figure src="/attachments/refguide/mobile/offline-first/enable-native-file-encryption.png" alt="Encrypt native file encryption checkbox placed at the bottom of the native mobile navigation profile screen" width="450"  >}}
+{{< figure src="/attachments/refguide/mobile/offline-first/enable-native-file-encryption.png" alt="Encrypt native file encryption checkbox placed at the bottom of the native mobile navigation profile screen" width="450"  class="no-border" >}}
 
 ### 5.1 Prerequisites
 

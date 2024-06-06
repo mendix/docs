@@ -2,7 +2,6 @@
 title: "Date Picker"
 url: /refguide/date-picker/
 weight: 60
-tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -10,17 +9,18 @@ tags: ["studio pro"]
 
 A **date picker** is used to display and, optionally, allow the end-user to edit the value of an attribute of [data type](/refguide/data-types/) *Date and Time*. It uses the values set in the **Languages** tab of **App Settings** to display a correctly localized value to the end-user, using the **Language** object associated with the end-user.
 
-A date picker must be placed in a [data container](/refguide/data-widgets/) and displays an attribute of the object(s) retrieved by that container. The name of the attribute to be displayed is shown inside the date picker, between square brackets, and colored blue.
+A date picker must be placed in a [data container](/refguide/data-widgets/) and displays an attribute of the object (or objects) retrieved by that container. The name of the attribute to be displayed is shown inside the date picker, between square brackets, and colored blue.
 
 For example, the following date picker allows the end-user to see, and set, the **LastContacted** date of a customer.
 
-{{< figure src="/attachments/refguide/modeling/pages/input-widgets/date-picker/date-picker.png" >}}
+{{< figure src="/attachments/refguide/modeling/pages/input-widgets/date-picker/date-picker.png" class="no-border" >}}
 
 ## 2 Properties Pane
 
 The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Date picker properties consist of the following sections:
 
 Properties:
+
 * [General](#general)
 * [Data Source](#data-source)
 * [Label](#label)
@@ -32,6 +32,7 @@ Properties:
 * [Events](#events)
 
 Styling:
+
 * [Design Properties](#design-properties)
 * [Common](#common-styling)
 

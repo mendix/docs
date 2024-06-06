@@ -1,10 +1,9 @@
 ---
 title: "Manage App Performance"
 url: /howto9/monitoring-troubleshooting/manage-app-performance/
-category: "Monitoring and Troubleshooting"
+
 weight: 12
 description: "Describes how to manage app performance by using New Relic."
-tags: ["monitoring", "troubleshooting", "performance", "new relic"]
 ---
 
 ## 1 Introduction
@@ -13,7 +12,7 @@ There are a number of tools you can use to monitor and/or manage Mendix app perf
 
 ### 1.1 Mendix Cloud
 
-For apps deployed to the **Mendix Cloud** you can use the standard metrics as described in [Trends in the Mendix Cloud](/developerportal/operate/trends-v4/).
+For apps deployed to the **Mendix Cloud** you can use the standard metrics as described in [Metrics](/developerportal/operate/metrics/).
 
 You can also set up an integration to [Datadog](/developerportal/operate/datadog-metrics/), [AppDynamics](/developerportal/operate/appdynamics-metrics/), or [Dynatrace](/developerportal/operate/dynatrace-metrics/).
 

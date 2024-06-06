@@ -1,13 +1,8 @@
 ---
 title: "File Manager"
 url: /refguide8/file-manager/
-tags: ["studio pro", "file manager", "file widget", "widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/file-manager.pdf).
-{{% /alert %}}
 
 {{% alert color="warning" %}}The file manager widget is not supported on native mobile pages.{{% /alert %}}
 
@@ -15,7 +10,7 @@ tags: ["studio pro", "file manager", "file widget", "widget"]
 
 A file manager is used to upload and/or download files.
 
-{{< figure src="/attachments/refguide8/modeling/pages/file-widgets/file-manager/file-manager.png" alt="File Manager" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/file-widgets/file-manager/file-manager.png" alt="File Manager" class="no-border" >}}
 
 It must be placed inside a data view connected to the entity System.FileDocument or a specialization thereof.
 
@@ -27,7 +22,7 @@ When uploading a file through the file manager, the FileDocument object will be 
 
 An example of file manager properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/pages/file-widgets/file-manager/file-manager-properties.png" alt="File Manager Properties"   width="250"  >}}
+{{< figure src="/attachments/refguide8/modeling/pages/file-widgets/file-manager/file-manager-properties.png" alt="File Manager Properties"   width="250"  class="no-border" >}}
 
 File manager properties consist of the following sections:
 

@@ -2,7 +2,6 @@
 title: "Menu"
 url: /refguide/menu/
 weight: 3
-tags: ["studio pro", "menu", "menu item", "page resource"]
 aliases:
     - /refguide/menu-item.html
     - /refguide/menu-item

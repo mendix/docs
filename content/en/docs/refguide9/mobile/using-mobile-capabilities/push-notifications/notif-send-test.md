@@ -10,7 +10,7 @@ aliases:
 
 ## 1 Introduction
 
-After setting up your configuration on the server, and deploying your native app it is now time to send your first test push notification.
+After [configuring the Push Notifications module](/refguide9/mobile/using-mobile-capabilities/push-notifications/notif-config-push/) and [building your native app](/refguide9/mobile/using-mobile-capabilities/push-notifications/notif-build-native/) it is now time to send your first test push notification.
 
 ## 2 Sending the Test Notification
 
@@ -26,7 +26,7 @@ To send your first test notification, do the following:
 1. Leave the remaining fields to the defaults.
 1. Click **Send**:
 
-    {{< figure src="/attachments/howto9/mobile/native-mobile/implementation/notifications/notif-send-test/push-send-message.png" alt="test entity"   width="350"  >}}
+    {{< figure src="/attachments/howto9/mobile/native-mobile/implementation/notifications/notif-send-test/push-send-message.png" alt="test entity"   width="350"  class="no-border" >}}
 
 You should now receive the notification on your device. If the application is already opened, the action will log a message (on log node **ExampleNotification**) and show a dialog box in the app.
 

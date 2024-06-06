@@ -1,6 +1,7 @@
 ---
 title: "Reference Selector"
 url: /refguide7/reference-selector/
+canonical_url: "https://docs.mendix.com/refguide/reference-selector/"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -8,10 +9,10 @@ The reference selector is an [input widget](/refguide7/input-widgets/) that can 
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide7/desktop-modeler/pages/input-widgets/reference-selector/reference-selector.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/input-widgets/reference-selector/reference-selector.png" class="no-border" >}}
 This reference selector allows you to select a product for your orderline.
-{{< figure src="/attachments/refguide7/desktop-modeler/pages/input-widgets/reference-selector/reference-selector-domain-model.png" >}}
-To use a reference selector you need a many-to-one association in the domain model.
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/input-widgets/reference-selector/reference-selector-domain-model.png" class="no-border" >}}
+To use a reference selector you need a one-to-many association in the domain model.
 
 {{% /alert %}}
 
@@ -133,17 +134,17 @@ A reference selector can be constrained by one or more paths. This is typically 
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide7/desktop-modeler/pages/input-widgets/reference-selector/917938.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/input-widgets/reference-selector/917938.png" class="no-border" >}}
 *Domain model*
 
 In the domain model the order line has associations of type reference to both category and product. In this form, these can be edited with two reference selectors. The third association, from product to category, describes the relation between those two entities. Such a 'triangle' shaped part of the domain model is what makes constraining possible.
 
-{{< figure src="/attachments/refguide7/desktop-modeler/pages/input-widgets/reference-selector/16844014.jpg" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/input-widgets/reference-selector/16844014.jpg" class="no-border" >}}
 *Form*
 
 The page has two reference selectors, one for category and one for product. The one for product is constrained by the path through the domain model that forms the triangle.
 
-{{< figure src="/attachments/refguide7/desktop-modeler/pages/input-widgets/reference-selector/16844013.jpg" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/input-widgets/reference-selector/16844013.jpg" class="no-border" >}}
 
 {{% /alert %}}
 

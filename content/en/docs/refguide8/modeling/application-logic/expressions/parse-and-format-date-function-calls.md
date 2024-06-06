@@ -3,18 +3,13 @@ title: "Parse and Format Date Function Calls"
 url: /refguide8/parse-and-format-date-function-calls/
 weight: 160
 description: "Describes the functions for parsing Date and time values from strings using a specified pattern or producing a string from a Date and time value in Mendix."
-tags: ["studio pro", "expressions", "parsing", "formatting"]
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/parse-and-format-date-function-calls.pdf).
-{{% /alert %}}
 
 ## 1 Introduction 
 
 This document describes functions that are used to parse Date and time values from strings using a specified pattern, or to produce a string from a Date and time value.
 
-For details on all pattern possibilities, see [Class SimpleDateFormat](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/text/SimpleDateFormat.html). 
+For details on all pattern possibilities, see [Class SimpleDateFormat](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/text/SimpleDateFormat.html). 
 
 ## 2 parseDateTime[UTC] {#parsedatetime-utc}
 
@@ -68,7 +63,7 @@ The examples below illustrate which value the expression returns:
 
 ## 3 formatDateTime[UTC]
 
-Converts the Date and time value to a string, formatted according to the format parameter. Without the format parameter, a standard format is used. The function `formatDateTime` uses the users calendar and `formatDateTimeUTC` uses the UTC calendar.
+Converts the Date and time value to a string, formatted according to the format parameter. Without the format parameter, a standard format is used, which depends on the [Java version](/refguide/java-version-migration/#date-locale-dutch) and user locale. The function `formatDateTime` uses the users calendar and `formatDateTimeUTC` uses the UTC calendar.
 
 ### 3.1 Input Parameters
 
@@ -109,7 +104,7 @@ formatDateTime($object/Date1,'yyyy-MM-dd') + 'T' + formatDateTime($object/Date1,
 
 ## 4 formatTime[UTC]
 
-Converts the time part of Date and time value to a string in a standard format. `formatTime` uses the users calendar and `formatTimeUTC` uses the UTC calendar.
+Converts the time part of Date and time value to a string in a standard format, which depends on the Java version and user locale. `formatTime` uses the users calendar and `formatTimeUTC` uses the UTC calendar.
 
 ### 4.1 Input Parameters
 
@@ -143,7 +138,7 @@ the output is:
 
 ## 5 formatDate[UTC]
 
-Converts the date part of Date and time value to a string in a standard format. `formatDate` uses the users calendar and `formatDateUTC` uses the UTC calendar.
+Converts the date part of Date and time value to a string in a standard format, which depends on the [Java version](/refguide/java-version-migration/#date-locale-dutch) and user locale. `formatDate` uses the users calendar and `formatDateUTC` uses the UTC calendar.
 
 ### 5.1 Input Parameters
 
@@ -177,7 +172,7 @@ the output is:
 
 ## 6 dateTimeToEpoch
 
-{{% alert color="warning" %}}This expression is only available in Mendix versions 8.15 and above.{{% /alert %}}
+{{% alert color="warning" %}}This expression is only available in Mendix 8.15 and above.{{% /alert %}}
 
 Returns the number of milliseconds since January 1, 1970, 00:00:00 GMT to the date.
 
@@ -213,7 +208,7 @@ The output is:
 
 ## 7 epochToDateTime
 
-{{% alert color="warning" %}}This expression is only available in Mendix versions 8.15 and above.{{% /alert %}}
+{{% alert color="warning" %}}This expression is only available in Mendix 8.15 and above.{{% /alert %}}
 
 Creates a Datetime that represents the specified number of milliseconds since January 1, 1970, 00:00:00 GMT.
 

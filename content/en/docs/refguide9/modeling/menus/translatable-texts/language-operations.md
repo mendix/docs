@@ -2,7 +2,6 @@
 title: "Language Operations"
 url: /refguide9/language-operations/
 weight: 40
-tags: ["studio pro", "translation", "languages", "translatable text"]
 ---
 
 ## 1 Introduction
@@ -16,7 +15,7 @@ When creating an app in multiple languages, there are a number of tasks which yo
 * **Swap** texts between two language dictionaries
 * **Delete** texts from one language dictionary
 
-{{< figure src="/attachments/refguide9/modeling/menus/translatable-texts/language-operations/language_operations.png" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/translatable-texts/language-operations/language_operations.png" class="no-border" >}}
 
 ## 2 Selecting Modules
 

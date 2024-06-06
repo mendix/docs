@@ -1,7 +1,7 @@
 ---
 title: "Java Actions"
 url: /refguide7/java-actions/
-category: "Desktop Modeler"
+
 description: "Describes using Java Actions to extend the functionality of your Mendix app."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -64,9 +64,7 @@ The Import mapping parameter type was introduced in Mendix 7.2.0.
 The **Export mapping** parameter type allows users of Java Actions to pass an export mapping into a Java action. In the generated Java action template code, this type is represented as a string (the name of the export mapping).
 
 {{% alert color="info" %}}
-
 The Export mapping parameter type was introduced in version 7.2.0.
-
 {{% /alert %}}
 
 #### 2.2.5 Return Type

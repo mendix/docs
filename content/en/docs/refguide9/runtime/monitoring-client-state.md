@@ -1,9 +1,8 @@
 ---
 title: "Monitoring Client State"
 url: /refguide9/monitoring-client-state/
-category: "Mendix Runtime"
+
 description: "Describes the supported client state monitoring actions."
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction

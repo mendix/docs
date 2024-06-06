@@ -2,8 +2,7 @@
 title: "App Permissions"
 url: /refguide9/mobile/using-mobile-capabilities/generic-permission-action/
 weight: 85
-description: "This guide will teach you to use request generic permission actions for native mobile apps."
-tags: ["permissions", "JavaScript", "native", "mobile"]
+description: "This guide teaches you how to use request generic permission actions for native mobile apps."
 ---
 
 ## 1 Introduction
@@ -13,7 +12,7 @@ Advanced features in mobile apps often require permission from users. Apps need 
 ## 2 Prerequisites
 
 * Complete the [Prerequisites](/refguide9/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/#prerequisites) section of *Deploy Your First Mendix Native Mobile App*.
-* Install Mendix Studio Pro v9.10.0 and above to use the Native Mobile App Builder and the latest Nanoflow Commons module.
+* Install Mendix Studio Pro 9.10.0 and above to use the Native Mobile App Builder and the latest Nanoflow Commons module.
 * Make sure your [Native Mobile Resources](/appstore/modules/native-mobile-resources/) module is up to date.
 * Make sure you are using [Make It Native 9 app](/releasenotes/mobile/make-it-native-parent/), and it is up-to-date.
 
@@ -58,13 +57,13 @@ This an example for requesting contact access permission for Android and iOS dev
     1. For the Android branch, use a **Generic permission** action with a permission name like {READ_CONTACTS_ANDROID}.
     1. For the iOS branch, use a **Generic permission** action with a permission name like {CONTACTS_IOS}:
 
-        {{< figure src="/attachments/refguide9/mobile/native-mobile/generic-permission-action/fullExample.png" alt="use generic permission"   width="400"  >}}
+        {{< figure src="/attachments/refguide9/mobile/native-mobile/generic-permission-action/fullExample.png" alt="use generic permission"   width="400"  class="no-border" >}}
       
-        {{< figure src="/attachments/refguide9/mobile/native-mobile/generic-permission-action/decision.png" alt="decision"   width="400"  >}}
+        {{< figure src="/attachments/refguide9/mobile/native-mobile/generic-permission-action/decision.png" alt="decision"   width="400"  class="no-border" >}}
       
-        {{< figure src="/attachments/refguide9/mobile/native-mobile/generic-permission-action/android.png" alt="android permission"   width="400"  >}}
+        {{< figure src="/attachments/refguide9/mobile/native-mobile/generic-permission-action/android.png" alt="android permission"   width="400"  class="no-border" >}}
       
-        {{< figure src="/attachments/refguide9/mobile/native-mobile/generic-permission-action/ios.png" alt="ios permission"   width="400"  >}}
+        {{< figure src="/attachments/refguide9/mobile/native-mobile/generic-permission-action/ios.png" alt="ios permission"   width="400"  class="no-border" >}}
 
 ## 4 Building
 
@@ -94,6 +93,7 @@ The following permissions can be tested using the Android Make It Native app:
 * CAMERA
 * READ_EXTERNAL_STORAGE
 * WRITE_EXTERNAL_STORAGE
+* SCHEDULE_EXACT_ALARM
 
 To test the remaining permissions you can build a [native app](/refguide9/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/) and [update the native app](#update-android-native-permissions) with the required permissions.
 
@@ -102,7 +102,7 @@ To test the remaining permissions you can build a [native app](/refguide9/mobile
 During deployment you must specify the permissions that your application has used to be able to request them from the user on production. To do that you can navigate to **App permissions** while using Native Builder UI and add the permissions you are using in your application for iOS and Android.
 
 {{% alert color="info" %}}
-The permissions that you cannot find using the Native builder UI can be added manually per the [Update Native App Permissions](#update-native-permissions) section below.
+The permissions that you cannot find using the Native Builder UI can be added manually per the [Update Native App Permissions](#update-native-permissions) section below.
 {{% /alert %}}
 
 ## 5 Updating Native App Permissions {#update-native-permissions}
@@ -207,6 +207,8 @@ Update the *android/app/src/main/AndroidManifest.xml* file with the needed permi
   <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
   <uses-permission android:name="android.permission.WRITE_CONTACTS" />
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    
 
   <!-- … -->
 

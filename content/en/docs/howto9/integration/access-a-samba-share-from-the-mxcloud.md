@@ -1,17 +1,16 @@
 ---
 title: "Access a Samba Share"
 url: /howto9/integration/access-a-samba-share-from-the-mxcloud/
-category: "Integration"
+
 weight: 11
 description: "Describes how to access a Samba share from the MxCloud and use a server name."
-tags: ["Samba", "share"]
 ---
 
 ## 1 Introduction
 
 You can use a Samba connection to pull or push files to a Windows share. When doing this, you need to use a static IP address in the connection string. The library could support the usage of a servername, but that requires extensive configuration to specify the DNS server location, DFS address, etc. It is far more efficient to use the IP address.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Access a Samba share from the MxCloud
 * Use a servername instead of an IP address
@@ -67,8 +66,8 @@ The cloud does not allow the properties to be specified using the system propert
 jcifs.Config.setProperty("jcifs.smb.client.dfs.disabled","false");
 ```
 
-For more details on all the properties, see here: [http://jcifs.samba.org/src/docs/api/overview-summary.html#scp](http://jcifs.samba.org/src/docs/api/overview-summary.html#scp).
+For more details on all the properties, see [Setting Client Properties](https://www.jcifs.org/src/docs/api/overview-summary.html#scp).
 
 ## 4 Further Documentation
 
-* [http://jcifs.samba.org/](http://jcifs.samba.org/)
+* [The Java CIFS Client Library](https://www.jcifs.org/src/docs/api/)

@@ -233,7 +233,7 @@ This release is identical to 1.11.1, but it is for Mendix 7.0.2 and above.
 ### Other Fixes
 
 * When defining a **Create trap message** action in the trigger configuration, the trap was not created and linked to the triggered event. Both issues are fixed.
-* If the log tool is used, there is now protection in place to configure the 1.11**Max messages to store**. By default, this is set to 100,000 records. This protection is in place to protect from overloading the database with records. **Fallback level** protection is now also in place. When the log tool notices issues like too much data is being processed, the **Fallback level** will set the logging to **INFO** for all log levels. In exceptional cases, the application generates too much INFO logging, which consumes heap memory and eventually causes the application to run out of memory. In this release, this behaviour still consumes heap memory, but there is a fix in place to prevent the application from running out of heap memory. The following fix in Mendix version 7.7.1 is also needed: We improved the memory management of persistable entities that have been committed to the persistent storage.
+* If the log tool is used, there is now protection in place to configure the 1.11**Max messages to store**. By default, this is set to 100,000 records. This protection is in place to protect from overloading the database with records. **Fallback level** protection is now also in place. When the log tool notices issues like too much data is being processed, the **Fallback level** will set the logging to **INFO** for all log levels. In exceptional cases, the application generates too much INFO logging, which consumes heap memory and eventually causes the application to run out of memory. In this release, this behaviour still consumes heap memory, but there is a fix in place to prevent the application from running out of heap memory. The following fix in Mendix 7.7.1 is also needed: We improved the memory management of persistable entities that have been committed to the persistent storage.
 
 ## 1.12.0
 
@@ -335,7 +335,7 @@ A customer asked if it was possible to collect information when a certain messag
 
 Many customers have asked to receive notifications, so a new notify action on triggers has been introduced. This action will call a microflow with three string parameters: **To**, **Subject**, and **Message**. Several replaces can be done to ease the configuration of the strings. A sample microflow has been added that logs on this action.
 
-The idea is to call your own microflow that sends out an e-mail. The APMAgent module will not include an email facility itself, in order to prevent conflicts with existing e-mail, so this is the way to get notifications out.
+The idea is to call your own microflow that sends out an email. The APMAgent module will not include an email facility itself, in order to prevent conflicts with existing email, so this is the way to get notifications out.
 
 ### Trigger Log Action with Level
 
@@ -366,7 +366,7 @@ developer) and a page with test features from the APM tool.
 
 The theme for this version is further enhancement of UX. 
 
-{{< figure src="/attachments/releasenotes/add-ons/apd/apm-1/apm-1.9/Dashboard_1.9.0.png" >}}
+{{< figure src="/attachments/releasenotes/add-ons/apd/apm-1/apm-1.9/Dashboard_1.9.0.png" class="no-border" >}}
 
 The measurements tool has been enhanced to allow for calculated measurements. This allows for 
 measuring memory as a percentage and triggering on 70% instead of some large number. The measurements tool
@@ -473,7 +473,7 @@ The theme for this version is a tool summary on a dashboard and improved styling
 
 The new console is more about presenting information instead of more stop/start buttons and navigation.
 
-{{< figure src="/attachments/releasenotes/add-ons/apd/apm-1/apm-1.8/Console.png" >}}
+{{< figure src="/attachments/releasenotes/add-ons/apd/apm-1/apm-1.8/Console.png" class="no-border" >}}
 
 The new console has four parts:
 
@@ -486,9 +486,9 @@ The new console has four parts:
 
 The Trap tool separartes the trap and the messages, so that it is clearer which messages belong to which trap, and in order to show a list of traps without messages in the GUI.
 
-{{< figure src="/attachments/releasenotes/add-ons/apd/apm-1/apm-1.8/Trap_View.png" >}}
+{{< figure src="/attachments/releasenotes/add-ons/apd/apm-1/apm-1.8/Trap_View.png" class="no-border" >}}
 
-{{< figure src="/attachments/releasenotes/add-ons/apd/apm-1/apm-1.8/Statistics_Tool.png" >}}
+{{< figure src="/attachments/releasenotes/add-ons/apd/apm-1/apm-1.8/Statistics_Tool.png" class="no-border" >}}
 
 ### Gathering Statistics Over More Periods
 
@@ -501,7 +501,7 @@ The statistics tool now gathers statistics over different time periods:
 * For measurement triggers (between once and twice according to the console frequency, in order to prevent the statistics from just being reset when a trigger fires)
 * These statistics are saved in the stored statistics when a trigger fires and is configured to store statistics
 
-{{< figure src="/attachments/releasenotes/add-ons/apd/apm-1/apm-1.8/Traps.png" >}}
+{{< figure src="/attachments/releasenotes/add-ons/apd/apm-1/apm-1.8/Traps.png" class="no-border" >}}
 
 ### Bug Fixes and Minor Changes
 
@@ -522,7 +522,7 @@ The statistics tool now gathers statistics over different time periods:
 * The JDBC query and explain-plan functionality for the built-in database work only after starting the database viewer in the Mendix Modeler from the advanced menu of the console.
 * The performance tool can run out of memory when recording. The protection options advised for the performance tool still expect 1 GB of available memory, so for small implementations, the protection options should be stricter.
 * When the Before Shutdown microflow is not configured, and some tools are running, the shutdown of the Mendix application can hang for about a minute.
-* For Mendix versions 5 and above, the microflow names are taken from the action caption. So if the action caption is changed in the Mendix Modeler, the Call Microflow action in the performance tool does not drill down. In addition, the caption only contains the microflow name, not the module name, so if multiple microflows exist with the same name but they are in different modules, the performance tool cannot pick the right one.
+* For Mendix 5 and above, the microflow names are taken from the action caption. So if the action caption is changed in the Mendix Modeler, the Call Microflow action in the performance tool does not drill down. In addition, the caption only contains the microflow name, not the module name, so if multiple microflows exist with the same name but they are in different modules, the performance tool cannot pick the right one.
 * On load-balanced environments without sticky sessions, the APM tool is randomly connected to instances, and this does not work! For 1.6.1, you need access to specific servers to use the APM tool.
 * ChartJS sometimes is not responsive enough, and a refresh of the page might be needed.
 * When the runtime stops and the APM console is open, errors appear due to the auto-refresh of grids and ChartJS.
@@ -545,7 +545,7 @@ The installation has been simplified by removing the layout linking step and by 
 * Use button to send mail with license request
 * Upon receiving the license, copy-paste and save
 
-{{< figure src="/attachments/releasenotes/add-ons/apd/apm-1/apm-1.7/Welcome.png" >}}
+{{< figure src="/attachments/releasenotes/add-ons/apd/apm-1/apm-1.7/Welcome.png" class="no-border" >}}
 
 ### Upgrades
 
@@ -559,13 +559,13 @@ Upgrades have been simplified to:
 ### GUI
 
 The GUI is simplified by removing the configuration menu items and reducing this to 1 settings item. By removing the dependency of the enclosing App style, by removing counters, by adding tool info buttons.
-{{< figure src="/attachments/releasenotes/add-ons/apd/apm-1/apm-1.7/Console.png" >}}
+{{< figure src="/attachments/releasenotes/add-ons/apd/apm-1/apm-1.7/Console.png" class="no-border" >}}
 
 The GUI now uses it's own style and is no longer dependent on the style of the App/Project where it is placed in.
 
 All options dialogs are redesigned to show advised production/non-production settings besides the custom settings.
 
-{{< figure src="/attachments/releasenotes/add-ons/apd/apm-1/apm-1.7/Settings.png" >}}
+{{< figure src="/attachments/releasenotes/add-ons/apd/apm-1/apm-1.7/Settings.png" class="no-border" >}}
 
 ### Simplified Licensing
 
@@ -630,13 +630,13 @@ The theme for this version is Mendix 6 and a visual trend on microflow statistic
 
 To better visualize and show trends in the history of microflow statistics a graph has been added to show the last 100 statistics. A button called [History] in the statistics tool and called [Show History Graph] on the microflow history (under search menu) shows the graph (to visualize a trend) on microflow statistics.
 
-{{< figure src="/attachments/releasenotes/add-ons/apd/apm-1/apm-1.6/Microflow_Trend.png" >}}
+{{< figure src="/attachments/releasenotes/add-ons/apd/apm-1/apm-1.6/Microflow_Trend.png" class="no-border" >}}
 
 With this feature during a performance analysis you can see if a microflow is taking more time to execute after a certain period of time. This can indicate a database table getting populated.
 
 ### New Beta Feature: Trigger on Microflow Statistics
 
-Customers have asked to get a notification when a microflow runs longer than a certain amount of time. A quick (hence BETA) implementation was to gather microflow statistics in the query tool and use those as measurements. Then you can build a trigger on a measurement of a microflow statistic to for example send an e-mail.
+Customers have asked to get a notification when a microflow runs longer than a certain amount of time. A quick (beta) implementation was to gather microflow statistics in the query tool and use those as measurements. Then you can build a trigger on a measurement of a microflow statistic to for example send an email.
 This feature will change in the future.
 
 ### New feature: Reporting Support with OData
@@ -667,7 +667,7 @@ Per module it can be configured to remove data after a certain amount of days. D
 This version supports Mendix 6.2.0 and above only. Also only on java 8.
 
 * Statistics Tool gave a parse error on logout in the logging. Not really visible for users, but would create a trap if trapping on warnings. Now fixed, so logout is also in the statistics.
-* During installation there were sometimes errors on startup, because Mendix generates different parameter names in java in different Mendix versions. Sometimes 'FileName' was allowed, sometimes not and then it becomes 'FileNameParameter1' in java. The parameter names with 'FileName' have changed to 'FileNameParameter' in 3 import java actions to prevent these installation errors. Also parameter 'MicroflowName' in java action ExecuteMicroflowAsync is changed into 'MicroflowNameParameter'.
+* During installation there were sometimes errors on startup, because Mendix generates different parameter names in Java in different Mendix versions. Sometimes 'FileName' was allowed, sometimes not and then it becomes 'FileNameParameter1' in java. The parameter names with 'FileName' have changed to 'FileNameParameter' in 3 import java actions to prevent these installation errors. Also parameter 'MicroflowName' in java action ExecuteMicroflowAsync is changed into 'MicroflowNameParameter'.
 * A grid in the Mendix 6 version of the performance tool details was changed from to be able to sort on loop iterations.
 * When choosing sample data during install the explain plan sample data for MySQL is now also added.
 

@@ -1,9 +1,8 @@
 ---
 title: "Offline-First"
 url: /refguide8/offline-first/
-category: "Mobile"
+
 weight: 30
-tags: ["offline", "native", "mobile", "studio pro"]
 ---
 
 ## 1 Introduction
@@ -109,7 +108,7 @@ Depending on the use-case, more fine-grained synchronization controls might be r
 
 If you have custom widgets or JavaScript actions which use an entity that cannot be detected by Studio Pro in your offline-first profile (because its only used in the code), you can use customizable synchronization to include such entities.
 
-{{< figure src="/attachments/refguide8/mobile/offline-first/custom-sync.png" alt="custom synchronization"   width="450"  >}}
+{{< figure src="/attachments/refguide8/mobile/offline-first/custom-sync.png" alt="custom synchronization"   width="450"  class="no-border" >}}
 
 ### 2.5 Limitations
 
@@ -129,7 +128,7 @@ If a network error happens during the file upload (via [step 2 in the upload pha
 
 If a network error occurs while uploading the data (via [step 3 in the upload phase](#stepthree)), the data is kept on the local device and no changes are made on the server. Any files uploaded in [step 2](#steptwo) will be uploaded again during the next synchronization.
 
-If a network error occurs (such as a timeout) after uploading the data (at [step 3 in the upload phase](#stepthree)), the data is kept on the local device. However, since the server has already started working on the request it will complete the request and commit the changes to server database. The device can not distinguish whether the server processed the request or not, so the next synchronization attempt will contain the already-applied changes. In this case, the server will behave differently based on Mendix version. In Mendix Studio Pro v8.18 or below, the server will commit the same changes again, which might overwrite potential changes made by other users between the two synchronizations. From Studio Pro v8.18 and above this process is optimized and the server will not commit the same changes because they have been applied before.
+If a network error occurs (such as a timeout) after uploading the data (at [step 3 in the upload phase](#stepthree)), the data is kept on the local device. However, since the server has already started working on the request it will complete the request and commit the changes to server database. The device can not distinguish whether the server processed the request or not, so the next synchronization attempt will contain the already-applied changes. In this case, the server will behave differently based on Mendix version. In Mendix Studio Pro 8.18 or below, the server will commit the same changes again, which might overwrite potential changes made by other users between the two synchronizations. From Studio Pro 8.18 and above this process is optimized and the server will not commit the same changes because they have been applied before.
 
 If a network error occurs during the download phase, no data is updated on the device. Therefore the user can keep working or retry. The effects of the upload phase are not rolled back on the server.
 
@@ -169,7 +168,7 @@ To prevent data loss, an error object contains a JSON representation of the data
 
 ### 2.7 Preventing Synchronization Issues {#prevent-sync-issues}
 
-To avoid the problems mentioned above, we suggest following these best practices:
+To avoid the problems mentioned above, Mendix suggests following these best practices:
 
 * Do not remove, rename, or change the type of entities or their attributes in offline apps after your initial release — this may cause objects or values to be no longer accessible to offline users (if needed, you can do an "in-between" release that is still backwards-compatible, and then make the changes in the next release after all the apps are synchronized)
 * Do not delete objects which can be synced to offline users (this will result in lost changes on those objects when attempted to synchronize them)
@@ -241,7 +240,7 @@ To be able to switch the language of a Mendix app, a device must be online and h
 
 To make microflow calls work from offline-first apps, Mendix stores some microflow information in the offline app. That information is called from the app. This means that changes to microflows used from offline apps must be backwards-compatible, because there can be older apps which have not received an over the air update yet. All microflow calls from such a device will still contain the old microflow call configuration in nanoflows, which means that the request might fail. For more information on over-the-air updates, see [How to Use Over the Air Updates](/howto8/mobile/how-to-ota/).
 
-To avoid backwards-compatibility errors in offline microflow calls after the initial release, we suggest these best practices:
+To avoid backwards-compatibility errors in offline microflow calls after the initial release, Mendix suggests these best practices:
 
 * Do not rename microflows or move them to different modules
 * Do not rename modules that contain microflows called from offline apps

@@ -3,22 +3,17 @@ title: "Stories Pane"
 url: /refguide8/stories-pane/
 weight: 50
 description: "Describes the Stories pane in Mendix Studio Pro."
-tags: ["Studio Pro", "stories", "stories pane"]
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/stories-pane.pdf).
-{{% /alert %}}
 
 ## 1 Introduction 
 
-For version control enabled projects (projects with Team Server or other SVN servers), the **Stories** pane displays the stories and tasks of the current [Sprint](/developerportal/project-management/stories/). Stories, tasks, and Sprint are created and managed in the Developer Portal. For more information on stories, see [Stories](/developerportal/project-management/stories/). For more information on tasks, see the [Adding a Task to a Story](/developerportal/project-management/stories/#adding-task) section in *Stories*. 
+For version control enabled projects (projects with Team Server or other SVN servers), the **Stories** pane displays the stories and tasks of the current Sprint. Stories, tasks, and Sprint are created and managed in the Developer Portal. For more information on stories, see Stories. 
 
 In the **Stories** pane, you can view the stories and tasks of the current Sprint, show or hide done stories, open their details, change the status of the stories and tasks, and open documents connected to stories. 
 
 The **Stories** pane consists of the top bar with various buttons and a table:
 
-{{< figure src="/attachments/refguide8/modeling/menus/view-menu/stories-pane/stories-pane.png" alt="Stories Pane Example" >}}
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/stories-pane/stories-pane.png" alt="Stories Pane Example" class="no-border" >}}
 
 The table contains following columns:
 
@@ -61,7 +56,7 @@ When you view the details of a story or task, the **Story Details** pop-up windo
 * **Story points** – the story points assigned to the story/task 
 * **Description** – the description of the story/task
 
-    {{< figure src="/attachments/refguide8/modeling/menus/view-menu/stories-pane/story-details.png" alt="Story Details" >}}
+    {{< figure src="/attachments/refguide8/modeling/menus/view-menu/stories-pane/story-details.png" alt="Story Details" class="no-border" >}}
 
 ### 2.3 Showing Completed Stories {#show-completed-stories}
 
@@ -73,7 +68,7 @@ If the story is created from a feedback item, you can open a document which the 
 
 To open the document, either click the **Open document** button in the top bar or the corresponding icon in the table:
 
-{{< figure src="/attachments/refguide8/modeling/menus/view-menu/stories-pane/open-document-icon.png" alt="Open document icon" >}}
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/stories-pane/open-document-icon.png" alt="Open document icon" class="no-border" >}}
 
 For more information on how to create a story on the basis of a feedback item and add it to your board in [Epics](/developerportal/project-management/epics/) or [Jira](/developerportal/project-management/jira-connector/), see the [Feedback Details](/developerportal/app-insights/feedback/#feedback-details) section in *Feedback*.
 
@@ -90,6 +85,5 @@ To change the status of a task, tick or clear the checkbox in the **Status** col
 
 ## 3 Read More
 
-* [Stories](/developerportal/project-management/stories/)
 * [Feedback Management](/developerportal/app-insights/feedback/)
 * [View Menu](/refguide8/view-menu/)

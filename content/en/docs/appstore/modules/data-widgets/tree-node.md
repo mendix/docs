@@ -2,7 +2,6 @@
 title: "Tree Node"
 url: /appstore/modules/tree-node/
 description: "Describes the purpose, features, and configurations of the Tree Node widget which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "widget", "tree node", "bootstrap", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -10,7 +9,7 @@ tags: ["marketplace", "marketplace component", "widget", "tree node", "bootstrap
 
 The [Tree Node](https://marketplace.mendix.com/link/component/116540) widget displays a level of tree nodes.
 
-We recommend that you use multiple Tree Node widgets in a nested matter. In this way, you can map out your entire domain model in the form of a tree view. If you only need one tree node, then the [Accordion](/appstore/widgets/accordion/) widget is a better alternative.
+Mendix recommends using multiple Tree Node widgets in a nested matter. In this way, you can map out your entire domain model in the form of a tree view. If you only need one tree node, then the [Accordion](/appstore/widgets/accordion/) widget is a better alternative.
 
 ## 2 Features
 

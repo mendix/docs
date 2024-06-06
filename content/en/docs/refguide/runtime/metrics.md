@@ -1,9 +1,8 @@
 ---
 title: "Metrics"
 url: /refguide/metrics/
-category: "Mendix Runtime"
+
 description: "Describes how to configure and report metrics in Mendix."
-tags: ["studio pro", "metrics", "micrometer"]
 ---
 
 ## 1 Introduction
@@ -66,7 +65,7 @@ The following settings can be used, depending on the type of metrics being gener
 | `flavor` | *StatsdFlavor* | No | statsd | The variant of the StatsD protocol | DATADOG | ETSY, TELEGRAF, SYSDIG |
 | `host` | *String* | No | statsd | The host name of the StatsD agent | localhost | - |
 | `port` | *Int* | No | statsd | The port of the StatsD agent | 8125 | - |
-| `step` | *Duration* | No | all | The step size (reporting frequency) to use | 1m | `1ms`, `2s`, `3m`, `4h`, `5d` or [ISO8601](https://en.wikipedia.org/wiki/ISO_8601) -> `P3Y6M4DT12H30M5S` | |
+| `step` | *Duration* | No | all | The step size (reporting frequency) to use | 1m | `1ms`, `2s`, `3m`, `4h`, `5d` or [ISO8601](https://en.wikipedia.org/wiki/ISO_8601) -> `P3Y6M4DT12H30M5S` |
 | `filters` | *Json* | No | all | Custom setting from Mendix to filter metrics | - | [See below](#filters)    
 
 #### 2.1.1 Prometheus{#prometheus}
@@ -363,10 +362,10 @@ The name must adhere to the following rules:
 * The name is case-insensitive.
 
 {{% alert color="info" %}}
-It is recommended to use a common prefix that uniquely defines your organisation and application.
+It is recommended to use a common prefix that uniquely defines your organization and application.
 {{% /alert %}}
 
-### 5.2 Deprecated usages
+### 5.2 ⚠ Deprecated Usages
 
 The following deprecated usages will be removed in the future releases,
 
@@ -452,7 +451,7 @@ The additional Micrometer metrics are not under our control and might change una
 | `jvm.gc.concurrent.phase.time` | timer | `action`, `cause` | The time spent in the concurrent GC phase. |
 | `jvm.gc.overhead` | gauge | | An approximation of the percent of CPU time used by GC activities over the last lookback period or since monitoring began, whichever is shorter (in the range [0…1]). |
 
-Refer to the [Java Virtual Machine documentation](https://docs.oracle.com/en/java/javase/11/docs/api/java.management/java/lang/management/ManagementFactory.html) for more details.
+Refer to the [Java Virtual Machine documentation](https://docs.oracle.com/en/java/javase/21/docs/api/java.management/java/lang/management/ManagementFactory.html) for more details.
 
 #### 7.2.3 Jetty HTTP Server Metrics
 

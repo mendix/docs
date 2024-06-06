@@ -1,12 +1,7 @@
 ---
 title: "XPath Keywords and System Variables"
 url: /refguide8/xpath-keywords-and-system-variables/
-tags: ["studio pro"]
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/xpath-keywords-and-system-variables.pdf).
-{{% /alert %}}
 
 ## 1 Overview
 
@@ -50,7 +45,7 @@ These will be created for each user role in your app. Here is an example:
 
 Here is an example for retrieving that user role: 
 
-{{< figure src="/attachments/refguide8/modeling/xpath/xpath-constraints/xpath-keywords-and-system-variables/user-role.png" >}}
+{{< figure src="/attachments/refguide8/modeling/xpath/xpath-constraints/xpath-keywords-and-system-variables/user-role.png" class="no-border" >}}
 
 ### 3.3 Time-Related {#time-related}
 

@@ -2,7 +2,6 @@
 title: "Export App Package"
 url: /refguide9/export-app-package-dialog/
 weight: 30
-tags: ["studio pro", "export app", "export app package"]
 aliases:
     - /refguide9/export-project-package-dialog/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -16,7 +15,7 @@ App packages can be imported again into a new app using the [Import App Package]
 
 To export the package, open the **File** menu > **Export App Package** and select the relevant options in the **Export App Package** dialog box:
 
-{{< figure src="/attachments/refguide9/modeling/menus/file-menu/export-app-package-dialog/export-app-package.png" alt="Export App Package Dialog Window" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/file-menu/export-app-package-dialog/export-app-package.png" alt="Export App Package Dialog Window" class="no-border" >}}
 
 For more information on what options you can select, see the sections below. 
 
@@ -24,14 +23,14 @@ For more information on what options you can select, see the sections below.
 
 When you have access to publishing add-on modules and solutions, you can select to export you app as the **Solution** or **Source Package**. 
 
-{{< figure src="/attachments/refguide9/modeling/menus/file-menu/export-app-package-dialog/export-app-package-types.png" alt="Export App Package Dialog Window with Different Package Types" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/file-menu/export-app-package-dialog/export-app-package-types.png" alt="Export App Package Dialog Window with Different Package Types" class="no-border" >}}
 
-The access can be gained through the [Mendix Partner Program](/appstore/creating-content/partner-program/).
+The access can be gained through the [Mendix Partner Program](/appstore/partner-program/).
 
 ### 2.1 Solution Package
 
 {{% alert color="info" %}}
-You can only see the **Solution** and **Source Package** settings when you have access to publishing add-on modules and solutions. The access can be gained through the [Mendix Partner Program](/appstore/creating-content/partner-program/).
+You can only see the **Solution** and **Source Package** settings when you have access to publishing add-on modules and solutions. The access can be gained through the [Mendix Partner Program](/appstore/partner-program/).
 {{% /alert %}}
 
 Choose this type of package if you develop your app as a solution and it has certain documents/elements hidden from consumers. Your app will be exported as a *.mxsolution* file; add-on and solution modules will be converted to the *.mxmodule* format during export. For more information on add-on and solution modules, see [Configuring Add-on and Solution Modules for Publishing](/refguide9/configure-add-on-and-solution-modules/).
@@ -39,7 +38,7 @@ Choose this type of package if you develop your app as a solution and it has cer
 ### 2.2 Source Package
 
 {{% alert color="info" %}}
-You can only see the **Solution** and **Source Package** settings when you have access to publishing add-on modules and solutions. The access can be gained through the [Mendix Partner Program](/appstore/creating-content/partner-program/).
+You can only see the **Solution** and **Source Package** settings when you have access to publishing add-on modules and solutions. The access can be gained through the [Mendix Partner Program](/appstore/partner-program/).
 {{% /alert %}}
 
 A source package is used to distribute your app in the source format (i.e. all content is distributed with source code, which allows documents/elements to be changed on the consumer side). Your app is exported in the *.mpk* format. 

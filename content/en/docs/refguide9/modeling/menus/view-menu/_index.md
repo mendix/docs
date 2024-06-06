@@ -3,7 +3,6 @@ title: "View Menu"
 url: /refguide9/view-menu/
 description: "Describes the View Menu in Studio Pro."
 weight: 20
-tags: ["view menu", "pane", "connector", "console", "find results", "widget developer console", "documentation pane", "full screen", "distraction free", "reset layout"]
 ---
 
 ## 1 Introduction
@@ -12,7 +11,7 @@ Studio Pro supports a number of dockable window panes, such as the **Changes** a
 
 Via this menu you can also enable or disable the [full screen mode](#full-screen) or [reset the layout](#reset-layout) of your app to the default.  
 
-{{< figure src="/attachments/refguide9/modeling/menus/view-menu/view-menu.png" alt="View Menu" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/view-menu/view-menu.png" alt="View Menu" class="no-border" >}}
 
 ## 2 Layout of Panes {#layout-of-panes}
 
@@ -24,7 +23,7 @@ Note that this section describes the behavior of panes, not the behavior of docu
 
 When you drag a pane, you can see arrows that indicate where you can position this pane. You can position the pane either inside the current pane (arrows grouped together) or make it full-window height or width (individual arrows on the borders). Each position is labelled and explained below:
 
-{{< figure src="/attachments/refguide9/modeling/menus/view-menu/interaction-with-panes.png" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/view-menu/interaction-with-panes.png" class="no-border" >}}
 
 1. Within the current *pane* you can position a pane in one of the following ways:
 
@@ -89,7 +88,7 @@ There are two **Find Results** panes. If you lock the results of the first pane,
 
 ### 3.9 Marketplace
 
-For details on using Mendix Marketplace components in your app modeling, see [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/).
+For details on using Mendix Marketplace components in your app modeling, see [Using Marketplace Content](/appstore/overview/use-content/).
 
 ### 3.10 MxAssist Performance Bot {#mx-bot}
 
@@ -105,7 +104,7 @@ The **Properties** pane displays the properties of the currently selected elemen
 
 ### 3.13 Stories
 
-For [Team Server](/developerportal/general/team-server/) app, the **Stories** pane shows the [stories](/developerportal/project-management/stories/) of the current [Sprint](/developerportal/project-management/stories/). For more information on the **Stories** pane and how to interact with it, see [Stories Pane](/refguide9/stories-pane/). 
+For [Team Server](/developerportal/general/team-server/) app, the **Stories** pane shows the Stories of the current [Sprint](/developerportal/project-management/epics/planning/).
 
 ### 3.14 Toolbox {#toolbox}
 

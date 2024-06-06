@@ -7,4 +7,3 @@ description_list: true
 ---
 
 These are the documents in this section:
-

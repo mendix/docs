@@ -2,15 +2,14 @@
 title: "Moving from Desktop Modeler Version 7 to Studio Pro 8"
 linktitle: "Desktop Modeler 7 to Studio Pro 8"
 url: /refguide8/moving-from-7-to-8/
-category: "General Info"
+
 weight: 20
-description: "Provides details on updating your project from Desktop Modeler version 7 to Studio Pro version 8 , including sections on converting your project and deprecated features."
-tags: ["studio pro"]
+description: "Provides details on updating your project from Desktop Modeler version 7 to Studio Pro 8 , including sections on converting your project and deprecated features."
 ---
 
 ## 1 Introduction
 
-When converting your Mendix app from Desktop Modeler version 7 to Studio Pro version 8, there is a recommended series of steps you need to take. These are documented in [Converting Your App](#converting), below.
+When converting your Mendix app from Desktop Modeler version 7 to Studio Pro 8, there is a recommended series of steps you need to take. These are documented in [Converting Your App](#converting), below.
 
 For information about new features in Mendix 8, see [Studio Pro 8 release notes](/releasenotes/studio-pro/).
 
@@ -69,7 +68,7 @@ In particular, it is easier to fix deprecations in Java actions (see [Java Versi
 
 ### 3.4 Save Version 7 Project
 
-Your app is now ready to be upgraded to Mendix Version 8.
+Your app is now ready to be upgraded to Mendix 8.
 
 It is recommended that you backup/commit your project at this point so that you can return to it if necessary.
 
@@ -79,7 +78,7 @@ You can now close the project in Desktop Modeler version 7.
 
 Mendix will upgrade your app for you.
 
-Open the project in Mendix Studio Pro version 8 and allow Studio Pro to update your app to version 8.
+Open the project in Mendix Studio Pro 8 and allow Studio Pro to update your app to version 8.
 
 ### 3.6 Review Errors, Warnings, and Deprecations in Studio Pro
 
@@ -107,7 +106,7 @@ Congratulations! Your app has been successfully upgraded to Mendix 8 and you can
 
 ## 4 Elements of Type Float and Currency {#float-currency}
 
-The types Float and Currency were deprecated in Mendix version 7, and have now been removed from Mendix version 8. 
+The types Float and Currency were deprecated in Mendix 7, and have now been removed from Mendix 8. 
 
 The following elements of type Float or Currency will report errors in version 8:
 
@@ -123,22 +122,22 @@ It is possible to fix most of the deprecation errors in one single action. To ac
 
 1. In Studio Pro 8, find the error message which relates to the support of Currency and Float data types.
 
-    {{< figure src="/attachments/refguide8/general/moving-from-7-to-8/currency-float-error.png" alt="Error message: currency and float no longer supported" >}}
+    {{< figure src="/attachments/refguide8/general/moving-from-7-to-8/currency-float-error.png" alt="Error message: currency and float no longer supported" class="no-border" >}}
 
 2. Right-click the error message.
 
-    {{< figure src="/attachments/refguide8/general/moving-from-7-to-8/currency-float-change-options.png" alt="Change manually or automatically?" >}}
+    {{< figure src="/attachments/refguide8/general/moving-from-7-to-8/currency-float-change-options.png" alt="Change manually or automatically?" class="no-border" >}}
 
 3. Click **Convert all to Decimal** to convert all the attributes automatically.
 
-    {{< figure src="/attachments/refguide8/general/moving-from-7-to-8/convert-to-decimal-warning.png" alt="Warning when converting all Float and Currency to Decimal" >}}
+    {{< figure src="/attachments/refguide8/general/moving-from-7-to-8/convert-to-decimal-warning.png" alt="Warning when converting all Float and Currency to Decimal" class="no-border" >}}
 
 4. Click **Convert all to Decimal** to perform the conversion.
 
 {{% alert color="warning" %}}
 If any attributes have been converted during this process, the next time your app is run locally or deployed the database will be converted to support the new attribute types.
 
-**This database conversion could take a long time!** We suggest that you first test the data conversion on a representative dataset, so that you can estimate how long it will take to convert your production database.
+**This database conversion could take a long time!** Mendix suggests that you first test the data conversion on a representative dataset, so that you can estimate how long it will take to convert your production database.
 {{% /alert %}}
 
 ## 5 Using REST and Web Service Calls
@@ -155,7 +154,7 @@ Mendix Studio Pro is a 64-bit application which will **only** run on 64-bit vers
 
 ## 7 Java Code Generation {#java-code-generation}
 
-In Mendix Studio Pro version 8, we are changing the way we generate Java code for Java actions and datasets.
+In Mendix Studio Pro 8, we are changing the way we generate Java code for Java actions and datasets.
 
 Mendix Desktop Modeler version 7 sometimes appended a postfix (for example, `Parameter1`) to the names of parameters of Java actions and datasets. This behavior was necessary to prevent name conflicts in the generated code. In the minor releases of Mendix Desktop Modeler 7, we introduced a number of fixes to prevent those conflicts from happening, making this behavior redundant.
 
@@ -214,13 +213,13 @@ This code behaves as expected and works out of the box. However, if you previous
 
 Very rarely, you may receive a message similar to the one below when opening a project in Mendix Studio Pro 8 which needs to be upgraded from a previous version of Mendix.
 
-{{< figure src="/attachments/refguide8/general/moving-from-7-to-8/layout-import-message.png" alt="Layouts Error Message" >}}
+{{< figure src="/attachments/refguide8/general/moving-from-7-to-8/layout-import-message.png" alt="Layouts Error Message" class="no-border" >}}
 
 This happens when a layout has an invalid value for the **Layout type**. This will still cause an error, *even if the invalid layout has been excluded* from the project.
 
 See the image below for an indication of where you might find the error in your project.
 
-{{< figure src="/attachments/refguide8/general/moving-from-7-to-8/layout-error-location.png" alt="Location of Layouts Error" >}}
+{{< figure src="/attachments/refguide8/general/moving-from-7-to-8/layout-error-location.png" alt="Location of Layouts Error" class="no-border" >}}
 
 To resolve this issue, use the previous version of Mendix to change the invalid **Layout type** (in the example above, `Legacy`) to a valid value.
 

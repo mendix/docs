@@ -5,7 +5,6 @@ description: "Describes how to use the Mendix Java library and use Eclipse as an
 weight: 60
 no_list: false
 description_list: true
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction
@@ -30,7 +29,7 @@ Code outside the blocks is regenerated each time when you deploy your model, thu
 // - the code between BEGIN USER CODE and END USER CODE
 // - the code between BEGIN EXTRA CODE and END EXTRA CODE
 // Other code you write will be lost the next time you deploy the app.
-// Special characters, e.g., é, ö, à, etc. are supported in comments.
+// Special characters, for example, é, ö, à, etc. are supported in comments.
 
 package myfirstmodule.actions;
 

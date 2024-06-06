@@ -2,12 +2,7 @@
 title: "To String"
 url: /refguide8/to-string/
 weight: 130
-tags: ["studio pro", "to string", "expression", "expressions"]
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/to-string.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 

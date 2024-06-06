@@ -2,16 +2,11 @@
 title: "Download from Version Control Server"
 url: /refguide8/download-from-version-control-dialog/
 weight: 60
-tags: ["studio pro"]
 aliases:
     - /refguide8/download-from-team-server-dialog.html
     - /refguide8/download-from-team-server-dialog
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/download-from-version-control-dialog.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 
@@ -23,7 +18,7 @@ If the downloaded app was created with a different version of Mendix, you will b
 You can also use the [Open App Dialog](/refguide8/open-app-dialog/) to download and open an app from Team Server. However, you will need to use this option if you want to download a second copy of an app (and development line) you already have on disk.
 {{% /alert %}}
 
-{{< figure src="/attachments/refguide8/modeling/menus/version-control-menu/download-from-version-control-dialog/download-from-version-control-server.png" alt="Download from Version Control Server dialog box" >}}
+{{< figure src="/attachments/refguide8/modeling/menus/version-control-menu/download-from-version-control-dialog/download-from-version-control-server.png" alt="Download from Version Control Server dialog box" class="no-border" >}}
 
 ## 2 Where Is Your App Stored?
 
@@ -39,7 +34,7 @@ For more information about the Mendix Team Server, see [Team Server](/developerp
 
 Enter the URL of your private SVN server in **App repository address** and click **Connect**.
 
-{{< figure src="/attachments/refguide8/modeling/menus/version-control-menu/download-from-version-control-dialog/download-from-private-server.png" alt="Download from Version Control Server dialog box" >}}
+{{< figure src="/attachments/refguide8/modeling/menus/version-control-menu/download-from-version-control-dialog/download-from-private-server.png" alt="Download from Version Control Server dialog box" class="no-border" >}}
 
 ## 3 Development Line
 

@@ -1,7 +1,6 @@
 ---
 title: "Getting Started with Mobile"
 url: /refguide9/mobile/getting-started-with-mobile/
-category: Mobile
 weight: 10
 description: Create a native mobile Mendix app and view it on a mobile device using the Make It Native test app.
 aliases:
@@ -45,7 +44,7 @@ To start a new app based on a template, follow these steps:
 1. Open Mendix Studio Pro. Select **File** > **New App** , and then select the **Blank Native Mobile App**.
 2. Click **Use this starting point**.
 3. Click **Create app** to close the dialog box.
-4. Click the play button (**Run Locally**) to see the app in action. Please note that starting a native mobile app for the first time can take a bit longer (about one minute total) than subsequent instances.
+4. Click **Run Locally** ({{% icon name="controls-play" %}}) to see the app in action. Please note that starting a native mobile app for the first time can take a bit longer (about one minute total) than subsequent instances.
 5. After running your app, you may see a Windows Security Alert dialog box. Accept the permissions selected by default and click **Allow access** to close the dialog box.
 6. If asked to create database **'default'**, click **Yes**.
 
@@ -57,13 +56,13 @@ At this point you have a running native mobile app. To view your app on a mobile
 
 To view your app on an Android device (or emulator), you must download and install the Make It Native 9 app from the [Google Play store](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx9):
 
-{{< figure src="/attachments/howto9/mobile/native-mobile/get-started/getting-started-with-native-mobile/make-it-native-googleplay.png" alt="native app on googleplay"   width="500"  >}}
+{{< figure src="/attachments/howto9/mobile/native-mobile/get-started/getting-started-with-native-mobile/make-it-native-googleplay.png" alt="native app on googleplay"   width="500"  class="no-border" >}}
 
 #### 3.2.2 Downloading for iOS {#downloading-for-ios}
 
 To view your app on an iOS device, you must download and install the Make It Native 9 app from the [Apple App Store](https://apps.apple.com/us/app/make-it-native-9/id1542182000):
 
-{{< figure src="/attachments/howto9/mobile/native-mobile/get-started/getting-started-with-native-mobile/make-it-native-ios.png" alt="native app on app store"   width="500"  >}}
+{{< figure src="/attachments/howto9/mobile/native-mobile/get-started/getting-started-with-native-mobile/make-it-native-ios.png" alt="native app on app store"   width="500"  class="no-border" >}}
 
 ### 3.3 Viewing Your App on Your Testing Device
 
@@ -73,20 +72,20 @@ Viewing your app on a mobile device will allow you to test native features and o
 2. Start the Make It Native app by tapping its icon on your device.
 3. Tap the  **Scan a QR Code** button:
 
-    {{< figure src="/attachments/howto9/mobile/native-mobile/get-started/getting-started-with-native-mobile/scan-qr.png" alt="Scan QR Code"   width="500"  >}}
+    {{< figure src="/attachments/howto9/mobile/native-mobile/get-started/getting-started-with-native-mobile/scan-qr.png" alt="Scan QR Code"   width="500"  class="no-border" >}}
 
 4. If prompted, grant the app permission to access your device's camera.
 5. Point your mobile device's camera at the QR code. It will automatically launch your test app on your mobile device.
 
 {{% alert color="warning" %}}
-Your mobile device has to be on the same network as your development machine for the Make It Native app to work. If this is the case and the connection still fails, make sure that communication between devices is allowed in the Wi-Fi access point. Also, we recommend keeping the **Runtime port** in **App Settings** > **Edit** on **8080**. If you change it, do not change it to **8083**, because that is designated for app packaging.
+Your mobile device has to be on the same network as your development machine for the Make It Native app to work. If this is the case and the connection still fails, make sure that communication between devices is allowed in the Wi-Fi access point. Also, Mendix recommends keeping the **Runtime port** in **App Settings** > **Edit** on **8080**. If you change it, do not change it to **8083**, because that is designated for app packaging.
 {{% /alert %}}
 
 Now you can see your app on your device. While this is just a template app, whenever you make changes you will be able to view them live on your Make It Native app.
 
 You may notice an **Enable dev mode** toggle on the Make It Native app home page. Turning this toggle on will give you more detailed warning messages during error screens, as well as additional functionality on the developer app menu:
 
-{{< figure src="/attachments/howto9/mobile/native-mobile/get-started/getting-started-with-native-mobile/enable-dev-mode.png" alt="enable dev mode"   width="500"  >}}
+{{< figure src="/attachments/howto9/mobile/native-mobile/get-started/getting-started-with-native-mobile/enable-dev-mode.png" alt="enable dev mode"   width="500"  class="no-border" >}}
 
 ### 3.4 Viewing Changes to Your App on Your Testing Device {#viewingchanges}
 
@@ -94,9 +93,9 @@ To see how changes made in Mendix Studio Pro are displayed live on your testing 
 
 1. Put a text widget on your app's home page. Then, write some text into it. In this example, "Native rules!" has been added: 
 
-    {{< figure src="/attachments/howto9/mobile/native-mobile/get-started/getting-started-with-native-mobile/new-text-studiopro.png" alt="new studio pro text" >}}
+    {{< figure src="/attachments/howto9/mobile/native-mobile/get-started/getting-started-with-native-mobile/new-text-studiopro.png" alt="new studio pro text" class="no-border" >}}
 
-2. Click the play button (**Run Locally**) to automatically update the running app on your device, and see your new text. When you click the play button (**Run Locally**), your app will automatically reload while keeping state. 
+2. Click **Run Locally** ({{% icon name="controls-play" %}}) to automatically update the running app on your device, and see your new text. When you click **Run Locally**, your app will automatically reload while keeping state. 
 
 If you get an error screen while testing your app, there are easy ways to restart it: 
 

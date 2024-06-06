@@ -1,13 +1,8 @@
 ---
 title: "Image Uploader"
 url: /refguide8/image-uploader/
-tags: ["studio pro", "image uploader", "file widget", "widget"] 
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/image-uploader.pdf).
-{{% /alert %}}
 
 {{% alert color="warning" %}}The image uploader widget is not supported on native mobile pages.{{% /alert %}}
 
@@ -17,13 +12,13 @@ An image uploader is used to upload images to the server. It also generates a th
 
 In the example below, an image uploader is placed in a nested data view (the *Profile* entity is a specialization of System.Image):
 
-{{< figure src="/attachments/refguide8/modeling/pages/file-widgets/image-uploader/image-uploader.png" alt="Image Uploader" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/file-widgets/image-uploader/image-uploader.png" alt="Image Uploader" class="no-border" >}}
 
 ## 2 Properties
 
 An example of image uploader properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/pages/file-widgets/image-uploader/image-uploader-properties.png" alt="Image Uploader Properties"   width="250"  >}}
+{{< figure src="/attachments/refguide8/modeling/pages/file-widgets/image-uploader/image-uploader-properties.png" alt="Image Uploader Properties"   width="250"  class="no-border" >}}
 
 Image uploader properties consist of the following sections:
 

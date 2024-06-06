@@ -2,10 +2,9 @@
 title: "Create Solutions"
 url: /appstore/creating-content/sol-solutions-guide/
 linktitle: "Create Solutions"
-category: "Creating Content"
+
 weight: 3
 description: "Provides information and guidance on how to develop solutions you can sell both on and off the Mendix Marketplace."
-tags: ["solutions guide", "adaptable solutions", "solutions"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -23,7 +22,7 @@ For more details on how to combine out-of-the-box logic with customer adaptation
 
 ## 3 Read More
 
-If you are looking to publish premium components, take a look at the details of the [Mendix Component Partner Program](/appstore/creating-content/partner-program/).
+If you are looking to publish premium components, take a look at the details of the [Mendix Component Partner Program](/appstore/partner-program/).
 
 If you are looking to build and market commercial solutions, look into the [Mendix Commercial Solution Partner Program](/appstore/creating-content/comm-sol-partner-program/).
 

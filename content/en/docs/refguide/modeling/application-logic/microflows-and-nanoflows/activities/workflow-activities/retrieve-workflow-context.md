@@ -2,24 +2,23 @@
 title: "Retrieve Workflow Context"
 url: /refguide/retrieve-workflow-context/
 weight: 40
-tags: ["studio pro", "user task", "workflow", "task outcome", "complete task"]
 ---
 
-{{% alert color="warning" %}}
-This activity can only be used in **Microflows**.
+{{% alert color="info" %}}
+This activity can only be used in microflows.
 {{% /alert %}}
 
 ## 1 Introduction
 
-A **Retrieve workflow context** activity can be used to retrieve the selected Workflow Context entity.
+A **Retrieve workflow context** activity can be used to retrieve the selected [workflow context entity](/refguide/workflow-parameters/#entity).
 
-It needs the **System.Workflow** entity as its input. The action determines the return type based on the selected workflow (the configured Context entity of that workflow). It will break at Runtime if the passed workflow object is not of the right type.
+It needs the **System.Workflow** entity as its input. The action determines the return type based on the selected workflow (the configured Context entity of that workflow). A Runtime error occurs if the passed workflow object is not of the right type.
 
 ## 2 Properties
 
 An example of retrieve workflow context properties is presented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/retrieve-workflow-context/properties.png" alt="retrieve Workflow Context Properties" width="650px" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/retrieve-workflow-context/properties.png" alt="retrieve Workflow Context Properties" width="650px" class="no-border" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
@@ -34,7 +33,7 @@ The **Action** section of the properties pane shows the action associated with t
 
 You can open a dialog box to configure this action by clicking the ellipsis (**…**) next to the action.
 
-You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
+You can also open the dialog box by double-clicking the activity, or right-clicking the activity and selecting **Properties**.
 
 ### 3.1 Workflow
 

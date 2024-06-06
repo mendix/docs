@@ -3,7 +3,6 @@ title: "Make It Native 9 App"
 url: /releasenotes/mobile/make-it-native-9/
 weight: 9
 description: "These release notes showcase each release of the iOS and Android Make It Native app versions."
-tags: ["Native", "Android", "iOS", "Apple", "Android"]
 ---
 
 {{% alert color="info" %}}
@@ -18,13 +17,19 @@ You can download the Make It Native app for [iOS](https://apps.apple.com/app/mak
 In Studio Pro [9.18](/releasenotes/studio-pro/9.18/), scanning your Mendix app's QR Code to launch it in the Make It Native or a custom developer app on iOS does not work. Please type in the URL instead or migrate your app to the latest version of Studio Pro 9.24.
 {{% /alert %}}
 
+## Android 2.0.0.175
+
+**Release date: March 22, 2024**
+
+* We fixed an issue where the app crashed due to cookie decryption.
+
 ## Android 2.0.0 / iOS 2.0.0
 
 **Release date: March 28, 2023**
 
 ### Improvements
 
-* The Make It Native 9 app now uses React Native 0.70.7 to support Studio Pro [9.24.0](/releasenotes/studio-pro/9.24/). This means it is no longer compatible with older Studio Pro versions. We recommend upgrading your app to 9.24 or building a [custom developer app](/refguide9/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/). 
+* The Make It Native 9 app now uses React Native 0.70.7 to support Studio Pro [9.24.0](/releasenotes/studio-pro/9.24/). This means it is no longer compatible with older Studio Pro versions. Mendix recommends upgrading your app to 9.24 or building a [custom developer app](/refguide9/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/). 
 
 ### Fixes 
 

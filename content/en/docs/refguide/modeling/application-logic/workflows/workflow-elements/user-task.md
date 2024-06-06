@@ -2,7 +2,6 @@
 title: "User Task"
 url: /refguide/user-task/
 weight: 30
-tags: ["workflow", "workflows", "user task", "task", "Studio Pro"]
 ---
 
 ## 1 Introduction
@@ -11,11 +10,11 @@ User task allows you to assign a workflow task to a certain user or a group of u
 
 For example, you can add filters and assign a task to users with the Manager role:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/user-task/user-task.jpg" alt="User Task Example" width="200">}}
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/user-task/user-task.jpg" alt="User Task Example" width="200" class="no-border" >}}
 
 When the workflow reaches the user task activity, the task is created and will be displayed in the Task inbox if you are using the **Workflow Commons** module:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/user-task/task-inbox.jpg" alt="Task Inbox" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/user-task/task-inbox.jpg" alt="Task Inbox" class="no-border" >}}
 
 ## 2 Properties
 
@@ -43,7 +42,7 @@ The **Due date** section properties are described in the table below:
 | Property | Description |
 | --- | --- |
 | None | No due date is set. |
-| Duration | You can set the deadline for the user task with the **Due in** option, which indicates the number of hours, days, or weeks the task is due in. Possible values of the property are the following ones:<br /><ul><li>Hour(s)</li><li>Day(s)</li><li>Week(s)</li> </ul> |
+| Duration | You can set the deadline for the user task with the **Due in** option, which indicates the number of hours, days, or weeks the task is due in. Possible values of the property are the following ones:<br /><ul><li>Hours</li><li>Days</li><li>Weeks</li> </ul> |
 | Expression | You can set a due date for the user task writing an expression. For example, to set a due date to tomorrow, you can use `addDays([%CurrentDateTime%], 1)`. |
 
 ### 2.3 Events Section {#events}
@@ -54,7 +53,7 @@ The **Due date** section properties are described in the table below:
 
 #### 2.4.1 Target Users Using {#target-users}
 
-**Target users using** allows you to manage what users will the task be assigned to. You can filter users using XPath or implement more flexible logic and add several checks using a microflow.
+**Target users using** allows you to manage what users will the task be assigned to. You can filter users using XPath, or implement more flexible logic and add several checks using a microflow.
 
 Possible options of this property are described in the table below:
 
@@ -68,7 +67,7 @@ In case **Target users using** (an XPath or a microflow) results in an empty lis
 
 #### 2.4.2 XPath Constraint
 
-Specifies the expression used to assign the user task. This option is displayed only when the [Target users using](#target-users) is set to **XPath**.
+Specifies the expression used to assign the user task. This option is displayed only when the [Target users using](#target-users) is set to **XPath**. Click **Edit** to edit the [XPath constraint](/refguide/xpath-constraints/).
 
 #### 2.4.3 Microflow
 
@@ -100,7 +99,7 @@ For more information on using parameters, see the [Parameters](#parameters) sect
 
 **Task Description** is stored in the System module on the **UserTask** entity as an attribute and its data can be dynamically displayed in the running app. If you are using the **Workflow Commons** module, the **Task description** is used in page templates.
 
-The **Task description** can contain parameters that are written between braces, e.g. {1}.
+The **Task description** can contain parameters that are written between braces, for example, {1}.
 
 #### 2.7.3 Parameters {#parameters}
 
@@ -111,7 +110,7 @@ To view **Parameters**, click the ellipsis icon next to the **Task name** or **T
 Parameters have the following settings:
 
 * **Index** – an identification number of a parameter
-* **Expression** – an XPath expression that will be displayed
+* **Expression** – an attribute from the context that will be displayed
 
 ##### 2.7.3.1 Adding New Parameters
 
@@ -123,13 +122,13 @@ To add a parameter to the **Task name** or the **Task description**, do the foll
 
 3. In the **Template Parameter (String)** dialog box, specify the expression, and confirm your choice:
 
-   {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/user-task/parameter-example.jpg" alt="Parameter Example" >}}
+   {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/user-task/parameter-example.jpg" alt="Parameter Example" class="no-border" >}}
 
    {{% alert color="info" %}}Make sure that the attribute you use in the expression is of the string type.{{% /alert %}}
 
 4. In the **Template** setting, write the text you would like to display and type **Index** of the parameter you would like to include. For example, you can add a template for the **Task description** specifying the name of the workflow and what the workflow due date is :
 
-   {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/user-task/task-description-example.jpg" alt="Task Description Example" >}}
+   {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/user-task/task-description-example.jpg" alt="Task Description Example" class="no-border" >}}
 
 ##### 2.7.3.2 Performing Other Actions on Parameters
 

@@ -2,7 +2,6 @@
 title: "Buttons"
 url: /refguide9/button-widgets/
 weight: 40
-tags: ["studio pro", "button widgets", "buttons", "widget"]
 aliases:
     - /refguide9/action-button.html
     - /refguide9/drop-down-button.html
@@ -33,11 +32,11 @@ Buttons perform an action when clicked. They can be rendered as a button or as a
     * Show user task page button
     * Show workflow admin page button
     * Synchronize button
-    {{< figure src="/attachments/refguide9/modeling/pages/button-widgets/preconfigured-action-button.png" alt="Preconfigured Buttons" >}}
+    {{< figure src="/attachments/refguide9/modeling/pages/button-widgets/preconfigured-action-button.png" alt="Preconfigured Buttons" class="no-border" >}}
 
 * **Drop-Down Button** – shows a list of items, an action is performed when one of the items is clicked. A pop-up window with a list of possible actions appears when an end-user clicks a drop-down button:
 
-    {{< figure src="/attachments/refguide9/modeling/pages/button-widgets/drop-down-example.png" alt="Drop-Down Button Example" >}}
+    {{< figure src="/attachments/refguide9/modeling/pages/button-widgets/drop-down-example.png" alt="Drop-Down Button Example" class="no-border" >}}
 
 Different items can perform different actions. For more information on items and actions that can be assigned to them, see the [Item Section](/refguide9/button-properties/#items) in *Button Properties*.  
 

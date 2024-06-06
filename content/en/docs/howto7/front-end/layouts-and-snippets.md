@@ -1,16 +1,15 @@
 ---
 title: "Use Layouts and Snippets"
 url: /howto7/front-end/layouts-and-snippets/
-category: "Front End"
+
 weight: 25
-tags: ["front end"]
 ---
 
 ## 1 Introduction
 
 This document will cover the basics of how to create pages using layouts and snippets.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Create and style layouts
 * Create snippets
@@ -26,7 +25,7 @@ When you look at a page, you can see that a page consists of two important compo
 * Layout – the structure of the page (just like PowerPoint has one or more layout presets)
 * Content – what is displayed within the structure of the page
 
-While modeling the pages, you select a layout when a page is created.
+While modeling the pages, you can select a layout when a page is created.
 
 ### 2.2 The Value of Layouts
 
@@ -43,7 +42,7 @@ These are some available predefined layout structures:
 
 Most users start by creating an application interface for the desktop user, but it's easy to unlock the app for mobile and tablet users. For each device, you can create a set of layouts that fit the specific layout needs for the device. When device-specific layouts have been created, they can be used as templates for creating device-specific pages: 
 
-{{< figure src="/attachments/howto7/front-end/layouts-and-snippets/layout-compare.png" >}}
+{{< figure src="/attachments/howto7/front-end/layouts-and-snippets/layout-compare.png" class="no-border" >}}
 
 ## 3 Styling
 
@@ -69,7 +68,7 @@ With regions, you divide the layout container into sections in order to position
 
 A placeholder can be used in a layout to define an area that can be filled in in a page based on that layout or in another layout defining that layout as the primary layout.
 
-{{< figure src="/attachments/howto7/front-end/layouts-and-snippets/placeholders.png" >}} 
+{{< figure src="/attachments/howto7/front-end/layouts-and-snippets/placeholders.png" class="no-border" >}} 
 
 When the area is filled in a page, this will be the content area of that page, showing the dynamic data as specified in that page. When a layout inherits from another layout, the area can filled with a new layout container in order to define this specialized layout. It can also be kept empty, and then it will be filled in a page.
 
@@ -81,7 +80,7 @@ A layout can also be based on another layout, which is called the "primary layou
 
 All pages can be opened on all device types, because the generated HTML for the pages is HTML5.  However, each device has its own specific UI design needs. Therefore, it is logical for you to define a set of layouts per device type that serves the needs of that specific device type.
 
-By default, the desktop and phone layouts are available out-of-the-box, and the design of the layouts can be customized to your needs. You can change and extend the default layouts as wel as create new layouts as needed. 
+By default, the desktop and phone layouts are available out-of-the-box, and the design of the layouts can be customized to your needs. You can change and extend the default layouts as well as create new layouts as needed. 
 
 Be careful with how you design these layouts. For example, in the mobile apps, you do not want to have too many regions, or the design will look crowded and confusing to the end-user. On the other hand, a desktop application might require different regions that allow for more content to be shown and details to be displayed.
 
@@ -91,15 +90,15 @@ These are some layout examples:
 
 * Basic layout for responsive/desktop pages:
 
-    {{< figure src="/attachments/howto7/front-end/layouts-and-snippets/basic-desktop.png" >}}
+    {{< figure src="/attachments/howto7/front-end/layouts-and-snippets/basic-desktop.png" class="no-border" >}}
 
 * Basic layout for mobile pages:
 
-    {{< figure src="/attachments/howto7/front-end/layouts-and-snippets/basic-mobile.png" >}}
+    {{< figure src="/attachments/howto7/front-end/layouts-and-snippets/basic-mobile.png" class="no-border" >}}
 
 * Primary layout with added menu:
 
-    {{< figure src="/attachments/howto7/front-end/layouts-and-snippets/primary.png" >}}
+    {{< figure src="/attachments/howto7/front-end/layouts-and-snippets/primary.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 
@@ -117,19 +116,19 @@ Two of the most useful widget types are menu widgets and snippets. You will lear
 
 The menu bar widget shows a configured menu in the form of a horizontal bar with items. The items can have sub-items, and the main item in the menu can be expanded. Sub-items can go only one level deep (a sub-item cannot have its own sub-item). The menu item points to either the page or the microflow that will open or start when the item is clicked. 
 
-{{< figure src="/attachments/howto7/front-end/layouts-and-snippets/menu-bar.png" >}}
+{{< figure src="/attachments/howto7/front-end/layouts-and-snippets/menu-bar.png" class="no-border" >}}
 
 ### 5.2 Navigation Tree
 
 The navigation tree widget shows a configured menu in the form of a tree. Items can have sub-items when the main item is expanded. The menu structure of the navigation tree can have up to three levels. In the end, a menu item points to either the page or the microflow that will open or start when the item is clicked.
 
-{{< figure src="/attachments/howto7/front-end/layouts-and-snippets/nav-tree.png" >}}
+{{< figure src="/attachments/howto7/front-end/layouts-and-snippets/nav-tree.png" class="no-border" >}}
 
 ### 5.3 Simple Menu Bar
 
 The simple menu bar widget shows a configured menu in the form of a horizontal bar with images and captions. Items cannot have sub items (the menu structure can only have one level). The menu item points to either the page or the microflow that will open or start when the item is clicked.
 
-{{< figure src="/attachments/howto7/front-end/layouts-and-snippets/simple-menu.png" >}}
+{{< figure src="/attachments/howto7/front-end/layouts-and-snippets/simple-menu.png" class="no-border" >}}
 
 ### 5.4 Menu Source
 
@@ -140,7 +139,7 @@ The items that are shown in the menu widget are determined by the menu source. A
 
 When you have selected the project navigation as source, the device profile must be determined for the correct navigation menu:
 
-{{< figure src="/attachments/howto7/front-end/layouts-and-snippets/edit-menu-bar.png" >}}
+{{< figure src="/attachments/howto7/front-end/layouts-and-snippets/edit-menu-bar.png" class="no-border" >}}
 
 For the desktop, use the **Responsive** menu. 
 
@@ -161,22 +160,22 @@ At the heart of the navigation model in Mendix, are three device types: Desktop,
 * **Tablet browser**
 * **Phone browser**
 
-{{< figure src="/attachments/howto7/front-end/layouts-and-snippets/device-profiles.png" >}}
+{{< figure src="/attachments/howto7/front-end/layouts-and-snippets/device-profiles.png" class="no-border" >}}
 
 When a user visits a Mendix application, they are automatically redirected to the home page of the appropriate device type (for details, see the section [Redirection to Device Types](#RedirectiontoDeviceTypes)).
 
 For more information on navigation profiles, see the following for reference:
 
 * [Navigation in Mendix 7.4 and Above](/refguide7/navigation/)
-* [Navigation in Mendix Versions 7.2 and 7.3](/refguide7/navigation-in-72-and-73/)
-* [Navigation Before Mendix Version 7.2](/refguide7/navigation-before-72/)
+* [Navigation in Mendix 7.2 and 7.3](/refguide7/navigation-in-72-and-73/)
+* [Navigation Before Mendix 7.2](/refguide7/navigation-before-72/)
 * [Solving Issues with Navigation Profile Conversion to 7.4](/refguide7/navigation-conversion-to-74/)
 
 ### 5.7 Menu Document
 
 A menu document defines a navigation menu that can be used by a menu widget. Typically, the main menus for your application are defined in device types, while you use menu documents for auxiliary menus (for example, a side bar). A menu consists of a list of menu items, which optionally contain sub-items. Depending on the widget a number of levels are allowed.
 
-{{< figure src="/attachments/howto7/front-end/layouts-and-snippets/menu-document.png" >}}
+{{< figure src="/attachments/howto7/front-end/layouts-and-snippets/menu-document.png" class="no-border" >}}
 
 ### 5.8 Redirection to Device Types {#RedirectiontoDeviceTypes}
 
@@ -184,8 +183,8 @@ The Mendix Runtime automatically redirects users to the home page of the appropr
 
 | User-Agent String Regular Expression | Device Type |
 | ------------------------------------ | ----------- |
-| `Android.*Mobile|iPhone`             | Phone       |
-| `Android|iPad`                       | Tablet      |
+| `Android.*Mobile` or `iPhone`             | Phone       |
+| `Android` or `iPad`                       | Tablet      |
 | (Other)                              | Desktop     |
 
 The string for specific user interphases can also be configured within the server custom settings (this is more advanced and not covered here).
@@ -206,7 +205,7 @@ Snippets are reusable interface parts that can be used on pages and layouts. Usi
 
 In addition, a snippet can define an entity that serves as a context for the widgets placed in it. For example, if you set the *Course* entity for a snippet, you could place a text box that shows the *Course Title* on the snippet without having to define a data view first. When an entity is defined on a snippet, it needs to be placed inside a context for that entity in each place that you use the snippet (for example, a data view).
 
-{{< figure src="/attachments/howto7/front-end/layouts-and-snippets/snippet.png" >}}
+{{< figure src="/attachments/howto7/front-end/layouts-and-snippets/snippet.png" class="no-border" >}}
 
 ## 7 Read More
 

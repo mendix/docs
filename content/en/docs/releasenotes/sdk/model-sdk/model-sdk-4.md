@@ -2,8 +2,77 @@
 title: "4"
 url: /releasenotes/sdk/model-sdk-4/
 weight: 97
-#When updating, remember to update the Latest Mendix Releases file
 ---
+
+## 4.87.0 {#487}
+
+**Release date: May 28th, 2024**
+
+* We added support for Mendix [10.11.0](/releasenotes/studio-pro/10.11/).
+* We added support for Mendix Metamodel [10.11.0](/releasenotes/sdk/metamodel-10.11/).
+
+## 4.86.0 {#486}
+
+**Release date: April 24th, 2024**
+
+* We added support for Mendix [10.10.0](/releasenotes/studio-pro/10.10/).
+* We added support for Mendix Metamodel [10.10.0](/releasenotes/studio-pro/10.10/).
+
+## 4.85.0 {#485}
+
+**Release date: March 21st, 2024**
+
+* We added support for Mendix [10.9.0](/releasenotes/studio-pro/10.9/).
+* We added support for Mendix Metamodel [10.9.0](/releasenotes/sdk/metamodel-10.9/).
+
+## 4.84.0 {#484}
+
+**Release date: February 22nd, 2024**
+
+* We added support for Mendix [10.8.0](/releasenotes/studio-pro/10.8/).
+* We added support for Mendix Metamodel [10.8.0](/releasenotes/sdk/metamodel-10.8/).
+
+## 4.83.0 {#483}
+
+**Release date: January 23, 2024**
+
+* We added support for Mendix [10.7.0](/releasenotes/studio-pro/10.7/).
+* We added support for Mendix Metamodel [10.7.0](/releasenotes/sdk/metamodel-10.7/).
+
+## 4.82.0 {#482}
+
+**Release date: December 14, 2023**
+
+* We added support for Mendix [10.6.0](/releasenotes/studio-pro/10.6/).
+* We added support for Mendix Metamodel [10.6.0](/releasenotes/sdk/metamodel-10.6/).
+
+## 4.81.0 {#481}
+
+**Release date: November 22, 2023**
+
+* We added support for Mendix [10.5.0](/releasenotes/studio-pro/10.5/).
+* We added support for Mendix Metamodel [10.5.0](/releasenotes/sdk/metamodel-10.5/).
+
+## 4.80.0 {#480}
+
+**Release date: October 26, 2023**
+
+* We added support for Mendix [10.4.0](/releasenotes/studio-pro/10.4/).
+* We added support for Mendix Metamodel [10.4.0](/releasenotes/sdk/metamodel-10.4/).
+
+## 4.79.0 {#479}
+
+**Release date: September 20, 2023**
+
+* We added support for Mendix [10.3.0](/releasenotes/studio-pro/10.3/).
+* We added support for Mendix Metamodel [10.3.0](/releasenotes/sdk/metamodel-10.3/).
+
+## 4.78.0 {#478}
+
+**Release date: August 23, 2023**
+
+* We added support for Mendix [10.2.0](/releasenotes/studio-pro/10.2/).
+* We added support for Mendix Metamodel [10.2.0](/releasenotes/sdk/metamodel-10.2/).
 
 ## 4.77.0 {#477}
 
@@ -519,7 +588,7 @@ weight: 97
 | Story | Impact | Description |
 |------|-----|---|
 | MS-508 | None | Allow detaching elements contained by a required part property. An error is thrown if the required property is still empty after the current (synchronous) action. |
-| MS-433 | None | Added the `exportModuleMpk` method to allow users to export an MPK file for a specific module in the working copy. |
+| MS-433 | None | Added the `exportModuleMpk` method to allow users to export an *.mpk* file for a specific module in the working copy. |
 | MS-477 | None | Experimental classes and properties are now marked as such in the TypeScript documentation. |
 | MS-519 | None | Added support for Modeler version 7.8.0. |
 

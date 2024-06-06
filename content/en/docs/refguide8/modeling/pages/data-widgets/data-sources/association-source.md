@@ -1,13 +1,8 @@
 ---
 title: "Association Source"
 url: /refguide8/association-source/
-tags: ["studio pro", "association", "data source"]
 weight: 60
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/association-source.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 

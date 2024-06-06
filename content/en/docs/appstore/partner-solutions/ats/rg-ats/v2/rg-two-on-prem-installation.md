@@ -2,7 +2,6 @@
 title: "On-Premises Installation"
 url: /appstore/partner-solutions/ats/rg-two-on-prem-installation/
 description: "Describes installation requirements."
-tags: ["ats", "installation", "requirements"]
 ---
 
 ## 1 Introduction
@@ -19,7 +18,7 @@ A recent CPU (minimal dual core, minimal 2 GHz), 4 GB of memory, and 10 GB of fr
 
 A recent CPU (minimal dual core, minimal 2 GHz), 4 GB of memory, and 20 GB of free disk space are recommended.
 
-### 2.3 Selenium Server(s)
+### 2.3 Selenium Server (or Servers)
 
  &#xfeff; | Standalone Server | Grid Hub | Grid Node 
 -----|----|--------------|--------------
@@ -54,7 +53,7 @@ Only the selenium server version that is delivered as part of the ATS installati
 
 ATS Version | Supported Selenium version | Download |Required Java version
 ---|---|---|---
-2.9 | 3.141.59 | [Download here](http://selenium-release.storage.googleapis.com/3.141/selenium-server-standalone-3.141.59.jar) | JRE 8
+2.9 | 3.141.59 | [Download here](https://selenium-release.storage.googleapis.com/3.141/selenium-server-standalone-3.141.59.jar) | JRE 8
 
 ### 3.6 Chrome Driver
 
@@ -78,7 +77,7 @@ Only the Internet Explorer driver version that is delivered as part of the ATS i
 
 ATS Version | Supported Gecko driver version | Download 
 ---|---|---
-2.9 | 2.53.1 | [Download here](http://selenium-release.storage.googleapis.com/index.html?path=2.53/)
+2.9 | 2.53.1 | [Download here](https://selenium-release.storage.googleapis.com/index.html?path=2.53/)
 
 ### 3.9 Browsers
 
@@ -93,7 +92,7 @@ A web server can be used to serve static content and proxy the dynamic content. 
 
 CLEVR does not support web servers other than ad hoc assistance in getting the web server up and running and based on documented installations by Mendix. 
 
-When using Nginx, we recommend to change the following settings in the server section:
+When using Nginx, changing the following settings in the server section is recommended:
 
 * keepalive_timeout 65000
 * client_max_body_size 64M

@@ -3,7 +3,6 @@ title: "New App"
 url: /refguide/new-app/
 weight: 10
 description: "This document describes the New App flow and the App Settings dialog box."
-tags: ["studio pro", "create app", "new app", "creating new app"]
 aliases:
     - /refguide/app-settings-dialog.html
     - /refguide/app-settings-dialog
@@ -31,7 +30,7 @@ The new app is created and opened.
 
 When creating a new app, the **App Settings** dialog box is opened where you can specify an app name, whether or not to enable the online services provided by the Mendix Platform, the default language, and the location on disk where the app files for your app are stored:
 
-{{< figure src="/attachments/refguide/modeling/menus/file-menu/new-app/app-settings-dialog.png" alt="App Settings" >}}
+{{< figure src="/attachments/refguide/modeling/menus/file-menu/new-app/app-settings-dialog.png" alt="App Settings" class="no-border" width="600" >}}
 
 ### 2.1 App Name
 

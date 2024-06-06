@@ -18,7 +18,7 @@ While developing Mendix apps, you will need to test and iterate to make the best
 
 ## 2 Getting the Make It Native App {#get-min-app}
 
-The Make It Native app allows developers to preview, test, and debug native mobile apps in conjunction with Mendix Studio Pro. Use the **Make It Native 9 app** for Studio Pro v9.24.0 and above.
+The Make It Native app allows developers to preview, test, and debug native mobile apps in conjunction with Mendix Studio Pro. Use the **Make It Native 9 app** for Studio Pro 9.24.0 and above.
 
 This app is available for both Android and iOS devices.
 
@@ -30,7 +30,7 @@ For Make it Native 9 apps, download the following Android or iOS Make It Native 
 
 |                                  Android                                  |                                iOS                                |
 | :-----------------------------------------------------------------------: | :---------------------------------------------------------------: |
-| {{< figure src="/attachments/refguide9/mobile/native-mobile/getting-the-make-it-native-app/android-min-qr-code.png" alt="Android QR Code" >}} | {{< figure src="/attachments/refguide9/mobile/native-mobile/getting-the-make-it-native-app/ios-min-qr-code.png" alt="iOS QR Code" >}} |
+| {{< figure src="/attachments/refguide9/mobile/native-mobile/getting-the-make-it-native-app/android-min-qr-code.png" alt="Android QR Code" class="no-border" >}} | {{< figure src="/attachments/refguide9/mobile/native-mobile/getting-the-make-it-native-app/ios-min-qr-code.png" alt="iOS QR Code" class="no-border" >}} |
 |   [Link](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx9&hl=en_US&gl=US)    |        [Link](https://apps.apple.com/us/app/make-it-native-9/id1542182000)         |
 
 ## 3 Troubleshooting Common Mobile Issues {#troubleshooting}
@@ -43,7 +43,7 @@ To troubleshoot issues related to the Make it Native app, see the sections below
 
 #### 3.1.1 Port Issues
 
-We recommend keeping the **Runtime port** in your [configuration](/refguide9/configuration/#server) on **8080**. If you change it, do not change it to **8083**, because that is designated for app packaging.
+Mendix recommends keeping the **Runtime port** in your [configuration](/refguide9/configuration/#server) on **8080**. If you change it, do not change it to **8083**, because that is designated for app packaging.
 
 #### 3.1.2 Wifi Network Settings
 
@@ -55,13 +55,13 @@ Depending on your device settings and network characteristics, the Make it Nativ
 
 * **Unable to load script**:
 
-    {{< figure src="/attachments/howto9/mobile/native-mobile/get-started/common-issues/unabletoloadscript.png" alt="unable to load script"   width="250"  >}}
+    {{< figure src="/attachments/howto9/mobile/native-mobile/get-started/common-issues/unabletoloadscript.png" alt="unable to load script"   width="250"  class="no-border" >}}
 
 * **Cannot detect your runtime**:
 
-    {{< figure src="/attachments/howto9/mobile/native-mobile/get-started/common-issues/min-error-firewall.png" alt="cannot detect runtime"   width="250"  >}}
+    {{< figure src="/attachments/howto9/mobile/native-mobile/get-started/common-issues/min-error-firewall.png" alt="cannot detect runtime"   width="250"  class="no-border" >}}
 
-These failures are often caused by a firewall blocking your device from accessing your laptop. In such cases, attempts to open the runtime URL from a mobile browser will also fail. To mitigate these issues, please make sure your firewall allows incoming traffic to your laptop on the runtime and native packing ports (8080 and 8083 by default). Instructions on how to do this differ per firewall. We recommend you consult your firewall administrator.
+These failures are often caused by a firewall blocking your device from accessing your laptop. In such cases, attempts to open the runtime URL from a mobile browser will also fail. To mitigate these issues, please make sure your firewall allows incoming traffic to your laptop on the runtime and native packing ports (8080 and 8083 by default). Instructions on how to do this differ per firewall. Mendix recommends consulting your firewall administrator.
 
 For the Windows Defender firewall, the most common firewall, do the following:
 
@@ -69,11 +69,11 @@ For the Windows Defender firewall, the most common firewall, do the following:
 1. Make sure that incoming connections are allowed by doing the following:<br />
     1. Open **Firewall & Network Protection** settings in Windows.<br />
     1. Go to **Advanced Settings**.<br />
-    1. Select the **Inbound Rules** and scroll to the **Node.js** entries.<br />
+    1. Select the **Inbound Rules** and scroll to the **Mendix Native Mobile** entries.<br />
     1. For each Node.js entry, note their values in the **Program** column. They should all have a green check mark in front of them.<br /> 
     1. If the **Program** column shows a Mendix installation directory, then there should be a green icon in front of the entry. If this is not the case, double-click the entry and select **Allow the connection**:
 
-    {{< figure src="/attachments/howto9/mobile/native-mobile/get-started/common-issues/inboundrules.png" alt="inbound rules"   width="350"  >}}
+    {{< figure src="/attachments/howto9/mobile/native-mobile/get-started/common-issues/inboundrules.png" alt="inbound rules"   width="350"  class="no-border" >}}
 
 1. Windows distinguishes between two types of networks: private and public. Windows Defender Firewall applies stricter regulations for public networks. If, and only if, you are connected to a trusted network, configure the network as **Private** on your computer.
 

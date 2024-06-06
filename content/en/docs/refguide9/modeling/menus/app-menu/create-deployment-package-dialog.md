@@ -1,14 +1,13 @@
 ---
 title: "Create Deployment Package"
 url: /refguide9/create-deployment-package-dialog/
-tags: ["studio pro", "project menu", "deployment package"]
 ---
 
 ## 1 Introduction
 
 A deployment package can be deployed to the Mendix Cloud, another cloud provider (for example SAP BTP), or on a server that is configured to run Mendix software. While developing you can deploy and run on your local machine, but once you are ready to deploy your app elsewhere you will need to create a deployment package. For some platforms, this is done automatically as part of the deploy process but, for others, you will need to explicitly create the deployment package.
 
-{{< figure src="/attachments/refguide9/modeling/menus/app-menu/create-deployment-package-dialog/create-deployment-package.png" alt="Create Deployment Package dialog" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/app-menu/create-deployment-package-dialog/create-deployment-package.png" alt="Create Deployment Package dialog" class="no-border" >}}
 
 {{% alert color="warning" %}}
 Most deployment targets have a limit on the uncompressed size of deployment package you can deploy. For example:
@@ -28,7 +27,7 @@ Unfortunately, from the error shown on the log during deployment is not always c
 
 Here you can decide whether you will create a versioned deployment package or not.
 
-A versioned deployment package is built from a fresh download of a specific revision held in the Team Server. This means that you can always trace its origin and recreate it. We recommend that you create versioned deployment packages unless you have very good reasons.
+A versioned deployment package is built from a fresh download of a specific revision held in the Team Server. This means that you can always trace its origin and recreate it. Mendix recommends creating versioned deployment packages unless you have very good reasons.
 
 A non-versioned deployment package is based on your local app on disk and cannot be traced back to a specific revision.
 

@@ -2,7 +2,6 @@
 title: "Access Rules"
 url: /refguide9/access-rules/
 weight: 70
-tags: ["domain model", "entity", "access rule", "xpath constraint", "module role", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -26,11 +25,11 @@ There are two ways to view access rules:
 
 * Via entity's **Properties** > **Access rules**: 
 
-    {{< figure src="/attachments/refguide9/modeling/domain-model/entities/access-rules/access-rules-section.png" alt="Access Rules for Entities" width="250px" >}}
+    {{< figure src="/attachments/refguide9/modeling/domain-model/entities/access-rules/access-rules-section.png" alt="Access Rules for Entities" width="250px" class="no-border" >}}
 
 * Via the **Access rules** tab of the entity dialog box:
 
-    {{< figure src="/attachments/refguide9/modeling/domain-model/entities/access-rules/access-rules-tab.png" alt="Access Rules for Entities" width="550px" >}}
+    {{< figure src="/attachments/refguide9/modeling/domain-model/entities/access-rules/access-rules-tab.png" alt="Access Rules for Entities" width="550px" class="no-border" >}}
 
 {{% alert color="info" %}}
 The **Access rules** section is visible only if the [App Security](/refguide9/app-security/) is set to **Production**.
@@ -38,7 +37,7 @@ The **Access rules** section is visible only if the [App Security](/refguide9/ap
 
 An example of the access rules properties is represented in the image below:
 
-{{< figure src="/attachments/refguide9/modeling/domain-model/entities/access-rules/access-rules-properties.png" alt="Access Rules for Entities" width="700px" >}}
+{{< figure src="/attachments/refguide9/modeling/domain-model/entities/access-rules/access-rules-properties.png" alt="Access Rules for Entities" width="700px" class="no-border" >}}
 
 Access rules properties consist of the following sections:
 
@@ -105,7 +104,7 @@ You cannot set *write* access to attributes which are calculated. This includes 
 
 For example, a customer is allowed to view the discount, but is not allowed to edit it. The access rights for the discount attribute are **Read**.
 
-{{< figure src="/attachments/refguide9/modeling/domain-model/entities/access-rules/access-rule-discount-read.png" >}}
+{{< figure src="/attachments/refguide9/modeling/domain-model/entities/access-rules/access-rule-discount-read.png" class="no-border" >}}
 
 {{% alert color="warning" %}}
 If a user cannot view the value of an attribute because of security constraints, that attribute will never be sent to the Mendix Client. Because Mendix is stateless, this can lead to unexpected results (for example, loss of changes) if changes to the attribute in a microflow are not committed immediately. See [Basic CRUD Communication Pattern](/refguide9/communication-patterns/#crud) in *Communication Patterns in the Mendix Runtime* for more information on how data is passed between the Runtime Server and the Mendix Client and what cases may lead to a loss of changes.
@@ -115,7 +114,7 @@ If a user cannot view the value of an attribute because of security constraints,
 
 An [XPath constraint](/refguide9/xpath-constraints/) can be used to constrain the set of objects to which the access rule applies. If the constraint rule is true, the rule applies to that object. If the XPath constraint is empty, the rule applies to all objects of the entity.
 
-{{< figure src="/attachments/refguide9/modeling/domain-model/entities/access-rules/access-rule-xpath-tab.png" width="450px" >}}
+{{< figure src="/attachments/refguide9/modeling/domain-model/entities/access-rules/access-rule-xpath-tab.png" width="450px" class="no-border" >}}
 
 {{% alert color="warning" %}}
 XPath constraints can only be applied to persistable entities as they are applied by the database. Defining XPath constraints for non-persistable entities results in consistency errors.
@@ -147,7 +146,7 @@ As an example:
 2. Assume that a logged-in customer is only allowed to view their orders, but is not allowed to view the orders of other customers.
 The XPath constraint can be constructed easily using the **Path to user...** button by selecting the **Customer** entity in the **Order** entity access rule.
 
-{{< figure src="/attachments/refguide9/modeling/domain-model/entities/access-rules/access-rule-order-xpath.png" width="1000px" >}}
+{{< figure src="/attachments/refguide9/modeling/domain-model/entities/access-rules/access-rule-order-xpath.png" width="1000px" class="no-border" >}}
 
 Because of this XPath constraint, access defined in the **Access rights** tab is only applied to orders for which the customer is the current user.
 

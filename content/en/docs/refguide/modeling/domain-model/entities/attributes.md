@@ -2,7 +2,6 @@
 title: "Attributes"
 url: /refguide/attributes/
 weight: 30
-tags: ["domain model", "entity", "attribute", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -10,16 +9,16 @@ tags: ["domain model", "entity", "attribute", "studio pro"]
 
 **Attributes** are characteristics that describe and/or identify an entity. Each of these attributes is given a name.
 
-A **Customer**, for example, typically has attributes for the name of the customer (for example, **FullName**), an e-mail address (for example, **EmailAddress**) and other personal information.
+A **Customer**, for example, typically has attributes for the name of the customer (for example, **FullName**), an email address (for example, **EmailAddress**) and other personal information.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/attributes/customer-entity.png" alt="Example customer entity" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/entities/attributes/customer-entity.png" alt="Example customer entity" class="no-border" >}}
 
 The domain model editor uses the following symbols to help visualize attribute properties:
 
 | Symbol | Description |
 | --- | --- |
-| {{< figure src="/attachments/refguide/modeling/domain-model/entities/attributes/917593.png" >}} | This attribute has one or more validation rules. |
-| {{< figure src="/attachments/refguide/modeling/domain-model/entities/attributes/917592.png" >}} | This attribute has a microflow that calculates the value of the attribute. |
+| {{< figure src="/attachments/refguide/modeling/domain-model/entities/attributes/917593.png" class="no-border" >}} | This attribute has one or more validation rules. |
+| {{< figure src="/attachments/refguide/modeling/domain-model/entities/attributes/917592.png" class="no-border" >}} | This attribute has a microflow that calculates the value of the attribute. |
 
 {{% alert color="info" %}}
 Attributes for external entities are specified in the **External Entity Properties**. These attributes are defined in the originating app and the only local changes that can be applied to these entities is a local name and description. For further information see the [Attributes](/refguide/external-entities/#attributes) section of *External Entities*.
@@ -35,7 +34,7 @@ You can **Add** new attributes to [external entities](/refguide/external-entitie
 
 An example of the attribute properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/attributes/attribute-properties.png" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/entities/attributes/attribute-properties.png" class="no-border" >}}
 
 Attribute properties consist of the following sections:
 
@@ -122,19 +121,19 @@ The **Password** itself should not be stored, but only its hash value, thus it i
 
 A customer can be active or inactive, which is stored in an attribute named **Active** of type **Boolean**.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/attributes/customer-attribute-examples.png" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/entities/attributes/customer-attribute-examples.png" class="no-border" >}}
 
-#### 2.2.2 Localize
+#### 2.2.2 Localize {#localize}
 
 {{% alert color="info" %}}
 This property is shown if **Type** is set to **Date and time**.
 {{% /alert %}}
 
-This property indicates whether the date and time should be localized. By default localization is enabled. If you are *not* interested in the time component of a date (for example, a birthday), you should set this property to 'No'. Otherwise, the date can change because of time zone differences: a date and time early in the morning on April 2nd in Europe will be on April 1st in the U.S.A.
+This property indicates whether the date and time should be localized when displaying (or picking) their value. By default localization is enabled. If you are NOT interested in the time component of a date and you want the date to be exactly the same all over the world (for example, a birthday), you should toggle this property off. Otherwise, the date can change because of time zone differences: a date and time early in the morning on April 2 in Europe will be on April 1 in the U.S.A.
 
-In technical terms, this property indicates whether the client assumes that the date and time are in a local time zone (Yes) or in UTC (No). In the former case, the date is first converted to UTC before being sent to the server and converted from UTC before being displayed.
+In technical terms, this property indicates whether the client assumes that the date and time are in a local time zone (enabled) or in UTC (disabled). In the former case, the date is first converted to UTC before being sent to the server and converted from UTC before being displayed. To avoid this time zone conversion from happening twice, UTC functions and tokens like [dateTimeUTC](/refguide/date-creation/) should not be used in client-side expressions to assign values to **Date and time** attributes where localization is disabled.
 
-Default: *Yes*
+Default: *enabled*
 
 #### 2.2.3 Enumeration
 
@@ -187,7 +186,7 @@ If the value is a computation, the **Microflow** property defines which microflo
 
 For example, in a web shop, you want to show the total expenses for each customer. These are calculated by retrieving all orders associated with the customer and adding their totals.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/entities/attributes/917570.png" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/entities/attributes/917570.png" class="no-border" >}}
 
 #### 2.3.3 Default Value
 

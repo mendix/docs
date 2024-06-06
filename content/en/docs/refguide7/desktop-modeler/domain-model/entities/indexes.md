@@ -2,7 +2,6 @@
 title: "Indexes"
 url: /refguide7/indexes/
 weight: 60
-tags: ["domain model", "entity", "attribute", "index"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -23,7 +22,7 @@ Changing and deleting objects of an entity with indexes takes longer, because th
 
 Customers are usually retrieved by a combination of zipcode and housenumber, so *one* index is set on the combination of the attributes.
 
-{{< figure src="/attachments/refguide7/desktop-modeler/domain-model/entities/indexes/917548.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/domain-model/entities/indexes/917548.png" class="no-border" >}}
 
 The objects are retrieved by the following OQL query. Pay attention to the order of the attributes in the WHERE clause.
 

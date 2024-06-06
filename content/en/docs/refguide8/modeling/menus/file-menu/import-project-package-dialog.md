@@ -3,12 +3,7 @@ title: "Import Project Package"
 url: /refguide8/import-project-package-dialog/
 weight: 40
 description: "Describes the Import Project Package process and Import Project Package dialog box."
-tags: ["studio pro", "import project package"]
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/import-project-package-dialog.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 
@@ -20,7 +15,7 @@ To import a project package, do the following:
 2. Browse to the *.mpk* file you would like to import.
 3. Select the relevant options in the **Import Project Package** dialog box and click **OK**. For more information on what options you can select, see the sections below. 
 
-    {{< figure src="/attachments/refguide8/modeling/menus/file-menu/import-project-package-dialog/import-project-package.png" alt="Import Project Package Dialog Window" >}}
+    {{< figure src="/attachments/refguide8/modeling/menus/file-menu/import-project-package-dialog/import-project-package.png" alt="Import Project Package Dialog Window" class="no-border" >}}
 
 Project packages can be created using [Export Project Package](/refguide8/export-project-package-dialog/).
 

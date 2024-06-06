@@ -4,7 +4,6 @@ linktitle: "Retrieving Current User with a Microflow"
 url: /refguide/retrieving-current-user-with-a-microflow/
 weight: 6
 description: "Describes how to retrieve the current user of your application in Studio Pro with a microflow."
-tags: ["microflow", "current user", "retrieve"]
 ---
 
 ## 1 Introduction
@@ -41,9 +40,11 @@ To retrieve the currently logged-in user using the **Account** entity from the *
 8. Choose **First** as the **Range**. This is because what you are looking for is the currently logged-in user, which is always only one object.
 9. In the **XPath Constraint** box, type in `[id = $currentUser]` and click **OK**.
 
+    For Mendix version 10.5 and above, click **Edit…** next to **XPath constraint** to open a dialog box where you can enter your constraint in **XPath expression** mode.
+
 Now you have the microflow that retrieves the current user!
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/retrieving-current-user/retrieving-current-user.png" width="600px" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/retrieving-current-user/retrieving-current-user.png" width="600px" class="no-border" >}}
 
 ## 4 Read More
 

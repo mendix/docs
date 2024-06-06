@@ -3,7 +3,6 @@ title: "Parse and Format Date Function Calls"
 url: /refguide9/parse-and-format-date-function-calls/
 weight: 160
 description: "Describes the functions for parsing Date and time values from strings using a specified pattern or producing a string from a Date and time value in Mendix."
-tags: ["studio pro", "expressions", "parsing", "formatting"]
 ---
 
 ## 1 Introduction 
@@ -40,7 +39,7 @@ In microflows, both pattern letters `M` and `L` are supported and work completel
 
 However, in nanoflows, the pattern letter `M` usually should NOT be used, given that it is not properly supported in nanoflows currently. One exception is that you can use `MM` since it gives a numerical representation of a month name.
 
-In nanoflows, the pattern letter `L` works properly except when it is used for some languages where the month name changes depending on the context (languages with the genitive case). For those languages, we recommend that the character limit is `LL`, given that with more characters (for instance, `LLL` or `LLLL`), the pattern letter `L` might not work properly. For example, `LLL` does work for Russian but not for Catalan. `LLLL` is not recommended for any of those languages. 
+In nanoflows, the pattern letter `L` works properly except when it is used for some languages where the month name changes depending on the context (languages with the genitive case). For those languages, Mendix recommends that the character limit is `LL`, given that with more characters (for instance, `LLL` or `LLLL`), the pattern letter `L` might not work properly. For example, `LLL` does work for Russian but not for Catalan. `LLLL` is not recommended for any of those languages. 
 
 Here is a full collection of such languages that are available in Studio Pro: Armenian, Belarusian, Catalan, Croatian, Czech, Finnish, Greek, Lithuanian, Polish, Russian, Slovak, and Ukrainian.
 {{% /alert %}}
@@ -113,7 +112,7 @@ The examples below illustrate which value the expression returns:
 
 ## 3 formatDateTime[UTC]
 
-Converts the Date and time value to a string, formatted according to the format parameter. Without the format parameter, a standard format is used. The function `formatDateTime` uses the users calendar and `formatDateTimeUTC` uses the UTC calendar.
+Converts the Date and time value to a string, formatted according to the format parameter. Without the format parameter, a standard format is used, which depends on the [Java version](/refguide/java-version-migration/#date-locale-dutch) and user locale. The function `formatDateTime` uses the users calendar and `formatDateTimeUTC` uses the UTC calendar.
 
 ### 3.1 Input Parameters
 
@@ -154,7 +153,7 @@ formatDateTime($object/Date1,'yyyy-MM-dd') + 'T' + formatDateTime($object/Date1,
 
 ## 4 formatTime[UTC]
 
-Converts the time part of Date and time value to a string in a standard format. `formatTime` uses the users calendar and `formatTimeUTC` uses the UTC calendar.
+Converts the time part of Date and time value to a string in a standard format, which depends on the Java version and user locale. `formatTime` uses the users calendar and `formatTimeUTC` uses the UTC calendar.
 
 ### 4.1 Input Parameters
 
@@ -188,7 +187,7 @@ the output is:
 
 ## 5 formatDate[UTC]
 
-Converts the date part of Date and time value to a string in a standard format. `formatDate` uses the users calendar and `formatDateUTC` uses the UTC calendar.
+Converts the date part of Date and time value to a string in a standard format, which depends on the [Java version](/refguide/java-version-migration/#date-locale-dutch) and user locale. `formatDate` uses the users calendar and `formatDateUTC` uses the UTC calendar.
 
 ### 5.1 Input Parameters
 

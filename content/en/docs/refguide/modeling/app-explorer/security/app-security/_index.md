@@ -2,7 +2,6 @@
 title: "App Security"
 url: /refguide/app-security/
 weight: 10
-tags: ["studio pro", "security", "app security"]
 aliases:
     - /refguide/project-security/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -15,7 +14,7 @@ In **App Security**, you can switch security on or off for the whole app. You ca
 
 To configure the app security, open **App Explorer** > **App** > **Security**, and the dialog box will open:
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/security/app-security/app-security-dialog.png" >}}
+{{< figure src="/attachments/refguide/modeling/app-explorer/security/app-security/app-security-dialog.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 For more general information on security, see [Security](/refguide/security/).

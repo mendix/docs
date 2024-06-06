@@ -1,11 +1,10 @@
 ---
 title: "OQL Aggregation"
 url: /refguide/oql-aggregation/
-tags: ["studio pro"]
 ---
 
 
-Aggregations perform specific calculations on the values of the retrieved column(s). The following aggregate functions are possible:
+Aggregations perform specific calculations on the values of the retrieved column (or columns). The following aggregate functions are possible:
 
 | Expression | Description |
 | --- | --- |

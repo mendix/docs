@@ -5,7 +5,6 @@ description: "A selection of how-tos that explain how to use connectors and adap
 weight: 80
 no_list: false
 description_list: true 
-tags: ["widget", "marketplace", "connectors", "adapters"]
 ---
 
 ## 1 Introduction

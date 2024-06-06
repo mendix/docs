@@ -13,7 +13,7 @@ Mendix allows you to quickly build apps for mobile devices. This document gives 
 
 Every app starts at the home page. You can specify different home pages for phones and tablets in the [Navigation](/refguide7/navigation/) document. The mobile profiles can be added and removed separately. If you add a profile, you also have to provide its home page. Apart from the home page, different home page for different user roles can be specified. In addition, there is a default menu that can be used in [menu widgets](/refguide7/menu-widgets/).
 
-{{< figure src="/attachments/refguide7/mobile/18582284.png" >}}
+{{< figure src="/attachments/refguide7/mobile/18582284.png" class="no-border" >}}
 
 ## 3 Layout
 
@@ -23,7 +23,7 @@ For mobile devices, you might want to have a layout that hides the menu in a col
 
 You will need at least one layout per supported device type (desktop, tablet, phone) to optimize your app, but you can create as many as you like.
 
-{{< figure src="/attachments/refguide7/mobile/16844053.png" >}}
+{{< figure src="/attachments/refguide7/mobile/16844053.png" class="no-border" >}}
 
 ## 4 Widgets
 
@@ -33,13 +33,13 @@ Some widgets are more suitable to mobile use than others. For example, the [data
 
 Mendix apps can simply be viewed in mobile web browsers. However, some features of mobile devices cannot be accessed through HTML and JavaScript.
 
-If you want to publish your app in the Apple App Store or Google Play, you have to wrap the app in a native shell. We use [PhoneGap](http://phonegap.com/) to do this. PhoneGap creates a native wrapper around a web application and provides access to native functions through a Javascript API. These apps are also called "hybrid" apps, because they are a hybrid of a web and a native app. Mendix facilitates the creation of hybrid mobile apps in a number of ways.
+If you want to publish your app in the Apple App Store or Google Play, you have to wrap the app in a native shell. Mendix uses [PhoneGap](https://helpx.adobe.com/experience-manager/kb/adobe-phonegap-end-of-service.html) to do this. PhoneGap creates a native wrapper around a web application and provides access to native functions through a JavaScript API. These apps are also called "hybrid" apps, because they are a hybrid of a web and a native app. Mendix facilitates the creation of hybrid mobile apps in a number of ways.
 
 ### 5.1 Hybrid Mobile Widgets
 
 To access native functions of the device, we provide a number of PhoneGap widgets in the Mendix Marketplace. And, of course, you can build your own custom widgets that use native features. PhoneGap widgets can be recognized by their special icon. You can also search for them by via **Edit** > **Find Advanced** in the Mendix Desktop Modeler.
 
-{{< figure src="/attachments/refguide7/mobile/16844052.png" >}}
+{{< figure src="/attachments/refguide7/mobile/16844052.png" class="no-border" >}}
 
 ### 5.2 Offline Apps
 

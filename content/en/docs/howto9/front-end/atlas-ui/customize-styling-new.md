@@ -3,7 +3,6 @@ title: "Customize Styling"
 url: /howto9/front-end/customize-styling-new/
 weight: 20
 description: "This describes how developers can change apps styling and create re-usable styling."
-tags: ["build", "app", "studio pro", "style", "styling"]
 ---
 
 ## 1 Introduction
@@ -26,11 +25,11 @@ For more information on how changes can be quickly previewed, see the [Preview a
 
 The styling editor is based on the editor that powers Visual Studio Code and is also used for JavaScript actions. You can find the styling files (JS, SCSS) and theme settings (JSON) under App Explorer's **Styling** node. When you double click a styling file, it will be opened in the styling editor:
 
-{{< figure src="/attachments/howto9/front-end/atlas-ui/customize-styling-new/styling-editor.png" alt="styling editor" >}}
+{{< figure src="/attachments/howto9/front-end/atlas-ui/customize-styling-new/styling-editor.png" alt="styling editor" class="no-border" >}}
 
 By default, Studio Pro shows styling files on the app level and from UI resources modules, such as **Atlas_Core**. This can be changed in [preferences](/refguide9/preferences-dialog/) (Edit > **Preferences** > **General** > **Interface**) or by simply right-clicking **Styling** in the App Explorer:
 
-{{< figure src="/attachments/howto9/front-end/atlas-ui/customize-styling-new/styling-editor-settings.png" alt="styling editor settings" >}}
+{{< figure src="/attachments/howto9/front-end/atlas-ui/customize-styling-new/styling-editor-settings.png" alt="styling editor settings" class="no-border" >}}
 
 To learn more about the file and folder structure, see the [File and Folder Structure](#file-and-folder) section below.
 
@@ -126,7 +125,7 @@ See the examples below for more information on creating a re-usable theme module
 
 Modules that contain theme styling should be marked as UI resources modules. To do so, right-click the **Module {name}** in the App Explorer, then click **Mark as UI resources module**. This will give the modules a green icon, which makes it easy to distinguish theme modules from other modules, and also influences the order in which styling will be applied from those modules:
 
-{{< figure src="/attachments/howto9/front-end/atlas-ui/customize-styling-new/green-module.png" alt="green module" >}}
+{{< figure src="/attachments/howto9/front-end/atlas-ui/customize-styling-new/green-module.png" alt="green module" class="no-border" >}}
 
 #### 4.2 Ordering UI Resource Modules
 
@@ -134,7 +133,7 @@ When a module contains styling (SCSS/CSS), be sure it is added to the compiled C
 
 You can set an explicit order in the theme settings (**App Settings** > **Theme**). This contains a list of all modules that are marked as UI resource modules, and allows you to set the explicit order in which they are added to the CSS file. Note that the lower a module is ordered in the list, the higher its precedence. For example, an app that uses a company theme module could be ordered as follows:
 
-{{< figure src="/attachments/howto9/front-end/atlas-ui/customize-styling-new/app-theme-settings.png" alt="app theme settings" >}}
+{{< figure src="/attachments/howto9/front-end/atlas-ui/customize-styling-new/app-theme-settings.png" alt="app theme settings" class="no-border" >}}
 
 ### 4.3 Examples
 
@@ -184,7 +183,7 @@ $brand-warning: #eca51c;
 $brand-danger: #e33f4e;
 ```
 
-You can now export the **mytheme** module from Studio Pro to re-use in your apps. Note that you need to add the `@import …` line to *theme/web/custom-variables.scss* for every app that imports the module. Therefore, we recommend you create a company starter app containing this change.
+You can now export the **mytheme** module from Studio Pro to re-use in your apps. Note that you need to add the `@import …` line to *theme/web/custom-variables.scss* for every app that imports the module. Therefore, Mendix recommends creating a company starter app containing this change.
 
 To test the theme for all the widgets, page templates, and building blocks it can be helpful to use the Atlas Design System app as discussed in [Create a Company Design System](/howto9/front-end/create-a-company-design-system/).
 
@@ -249,7 +248,7 @@ export const brand = {
 If you get errors, double check if the imports point to valid files.
 
 {{% alert color="info" %}}
-When this approach is used we recommend you create a company starter app. Out-of-the-box this app will contain the theme module, and already contains this change in the theme folder that points to the module.
+When this approach is used Mendix recommends creating a company starter app. Out-of-the-box this app will contain the theme module, and already contains this change in the theme folder that points to the module.
 {{% /alert %}}
 
 ## 5 Previewing a Styling Change {#previewing-styling}
@@ -324,7 +323,7 @@ The *.scss* files compile in the following order:
 
 If SASS compilation fails, it will be shown in Studio Pro as a consistency error. This error gives information on what went wrong and what should be fixed:
 
-{{< figure src="/attachments/howto9/front-end/atlas-ui/customize-styling-new/compilation-error.png" alt="theme compilation error" >}}
+{{< figure src="/attachments/howto9/front-end/atlas-ui/customize-styling-new/compilation-error.png" alt="theme compilation error" class="no-border" >}}
 
 The content from the **public** folder will be copied to the same folder as the *theme.compiled.css* file when deployed. This allows you to reference those resources using a relative path in the theme module's *SCSS*. For example, to use the image *themesource/{module}/public/images/login-background.jpg* from *themesource/{module}/web/main.scss*, you can simply use `url("./images/login-background.jpg")`.
 
@@ -355,7 +354,7 @@ To disable the default styling of a web widget, open the *exclusion-variables.sc
 
 Pick the button widget as an example. The success button is by default styled as in **Figure 1**:
 
-{{< figure src="/attachments/howto9/front-end/atlas-ui/customize-styling-new/exclusion-vars-fig1.png" alt="Figure 1" >}}
+{{< figure src="/attachments/howto9/front-end/atlas-ui/customize-styling-new/exclusion-vars-fig1.png" alt="Figure 1" class="no-border" >}}
 
 **Figure 1 - All Styles Enabled**
 
@@ -367,7 +366,7 @@ $exclude-button-helpers: true;
 
 The resulting success button is visible in **Figure 2**:
 
-{{< figure src="/attachments/howto9/front-end/atlas-ui/customize-styling-new/exclusion-vars-fig2.png" alt="Figure 2" >}}
+{{< figure src="/attachments/howto9/front-end/atlas-ui/customize-styling-new/exclusion-vars-fig2.png" alt="Figure 2" class="no-border" >}}
 
 **Figure 2 - Helper Styles Disabled**
 
@@ -387,7 +386,7 @@ $exclude-button-helpers: false;
 
 The resulting success button is visible in **Figure 3**. Note that the underlying Bootstrap styles, the styles that the Atlas UI Framework is build upon, have become visible now.
 
-{{< figure src="/attachments/howto9/front-end/atlas-ui/customize-styling-new/exclusion-vars-fig3.png" alt="Figure 3" >}}
+{{< figure src="/attachments/howto9/front-end/atlas-ui/customize-styling-new/exclusion-vars-fig3.png" alt="Figure 3" class="no-border" >}}
 
 **Figure 3 - All Styles Disabled (visible Bootstrap styles)**
 
@@ -459,7 +458,7 @@ To disable the default styling of a native mobile widget, open the *exclusionVar
 
 Pick the button widget as an example again. The success button is by default styled as in **Figure 4**.
 
-{{< figure src="/attachments/howto9/front-end/atlas-ui/customize-styling-new/exclusion-vars-fig4.png" alt="Figure 4" >}}
+{{< figure src="/attachments/howto9/front-end/atlas-ui/customize-styling-new/exclusion-vars-fig4.png" alt="Figure 4" class="no-border" >}}
 
 **Figure 4 - All Styles Enabled**
 
@@ -471,7 +470,7 @@ export const excludeButtonsHelpers = true;
 
 The resulting success button is visible in **Figure 5**.
 
-{{< figure src="/attachments/howto9/front-end/atlas-ui/customize-styling-new/exclusion-vars-fig5.png" alt="Figure 5" >}}
+{{< figure src="/attachments/howto9/front-end/atlas-ui/customize-styling-new/exclusion-vars-fig5.png" alt="Figure 5" class="no-border" >}}
 
 **Figure 5 - Helper Styles Disabled**
 
@@ -491,7 +490,7 @@ export const excludeButtonsHelpers = false;
 
 The resulting success button is visible in **Figure 6**. Note that the button text is white and, thus, not visible.
 
-{{< figure src="/attachments/howto9/front-end/atlas-ui/customize-styling-new/exclusion-vars-fig6.png" alt="Figure 6" >}}
+{{< figure src="/attachments/howto9/front-end/atlas-ui/customize-styling-new/exclusion-vars-fig6.png" alt="Figure 6" class="no-border" >}}
 
 **Figure 6 - All Styles Disabled (Button Text is White)**
 
@@ -560,7 +559,7 @@ excludeHelpers
 
 ## 9 Customizing index.html (Web) {#custom-web}
 
-By default, Mendix generates the *index.html* (the page that is loaded to start the app) based on the app configuration. In some cases it may be needed to customize this HTML, which can be done by creating a file called *index.html* in the **theme/web** folder. To make sure that your file has the right structure, we recommend you copy *index-example.html* from the **deployment/web** folder to the **theme/web**, rename it to *index.html*, and then use it as a starting point. This file will be created after you have deployed your app locally at least once.
+By default, Mendix generates the *index.html* (the page that is loaded to start the app) based on the app configuration. In some cases it may be needed to customize this HTML, which can be done by creating a file called *index.html* in the **theme/web** folder. To make sure that your file has the right structure, Mendix recommends copying *index-example.html* from the **deployment/web** folder to the **theme/web**, rename it to *index.html*, and then use it as a starting point. This file will be created after you have deployed your app locally at least once.
 
 ### 9.1 Cache Busting in Mendix
 
@@ -586,7 +585,7 @@ When an end-user opens a Mendix app in an unsupported browser, a page is shown t
 
 By default, Atlas uses the font Open Sans, and the font files are loaded from the Google Fonts Content Delivery Network (CDN). While the Google Fonts CDN is convenient, you might need to change your font file service location.
 
-For example, you may need to change your font file service location in order to comply with stricter [CSP](/howto9/security/using-mobile-capabilities/csp/) policies, or if you cannot use Google Fonts CDN due to business requirements. Fortunately, you can serve fonts from your own local server instead of using the Google Fonts CDN using the sections below.
+For example, you may need to change your font file service location in order to comply with stricter [CSP](/howto9/security/csp/) policies, or if you cannot use Google Fonts CDN due to business requirements. Fortunately, you can serve fonts from your own local server instead of using the Google Fonts CDN using the sections below.
 
 ### 11.1 Downloading Font Files
 

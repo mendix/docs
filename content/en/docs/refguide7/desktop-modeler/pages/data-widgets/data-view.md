@@ -1,7 +1,6 @@
 ---
 title: "Data view"
 url: /refguide7/data-view/
-tags: ["Page", "Display", "widget", "object"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -11,7 +10,7 @@ The data view is a central component of Mendix applications. It is the starting 
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide7/desktop-modeler/pages/data-widgets/data-view/data-view.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/data-widgets/data-view/data-view.png" class="no-border" >}}
 
 A more advanced data view with a tab control and a data grid inside.
 
@@ -49,7 +48,7 @@ Note that form groups are responsive and the labels may be placed above input wi
 
 ### 4.2 Label Width (Weight)
 
-If the form orientation is set to horizontal, this property can be used to specify the width of the input widget labels inside the data view. The width is specified using column weights from the [Bootstrap grid system](http://getbootstrap.com/css/#grid). For more details, see [Layout Grid](/refguide7/layout-grid/).
+If the form orientation is set to horizontal, this property can be used to specify the width of the input widget labels inside the data view. The width is specified using column weights from the [Bootstrap grid system](https://getbootstrap.com/css/#grid). For more details, see [Layout Grid](/refguide7/layout-grid/).
 
 *Default value:* 3
 

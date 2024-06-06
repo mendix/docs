@@ -1,7 +1,6 @@
 ---
 title: "Page Break (Document Template)"
 url: /refguide9/page-break-document-template/
-tags: ["studio pro"]
 aliases:
     - /refguide9/Page+Break+(document+template).html
     - /refguide9/page-break-(document-template).html
@@ -16,7 +15,7 @@ When inserting a page break, the current page will be cut off after the break an
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide9/modeling/resources/document-templates/918135.png" >}}
+{{< figure src="/attachments/refguide9/modeling/resources/document-templates/918135.png" class="no-border" >}}
 
 A page break.
 

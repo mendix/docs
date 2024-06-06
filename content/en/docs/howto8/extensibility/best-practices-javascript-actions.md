@@ -2,17 +2,16 @@
 title: "Implement Best Practices for JavaScript Actions"
 linktitle: "JavaScript Actions Best Practices"
 url: /howto8/extensibility/best-practices-javascript-actions/
-category: "Extensibility"
+
 weight: 60
 description: "This set of best practices will help you get the most out of your JavaScript actions."
-tags: ["JavaScript", "API", "nanoflow"]
 ---
 
 ## 1 Introduction
 
 JavaScript actions can extend your app with several new functions. To implement JavaScript actions most effectively, be sure to follow these best practices.
 
-**This best practices will teach you how to do the following:**
+These best practices teach you how to do the following:
 
 * Create high-quality JavaScript actions
 * Learn common implementation patterns
@@ -178,7 +177,7 @@ If you know your JavaScript action does not require this extended precision (for
 var numberValue = Number(bigJsValue); // number
 ```
 
-For information on how to use *Big.js*, consult [big.js API](https://mikemcl.github.io/big.js/).
+For information on how to use *Big.js*, consult the [big.js API](https://mikemcl.github.io/big.js/).
 
 #### 2.2.3 Creating Objects
 
@@ -417,7 +416,7 @@ JavaScript Actions can be used in a nanoflow with a JavaScript action call activ
 
 Use **Category** to group actions, and **Icon** to give the exposed nanoflow action easy recognition inside the nanoflow:
 
-{{< figure src="/attachments/howto8/extensibility/best-practices-javascript-actions/narrow-expose.png" alt="exposed nanoflow with info" >}}
+{{< figure src="/attachments/howto8/extensibility/best-practices-javascript-actions/narrow-expose.png" alt="exposed nanoflow with info" class="no-border" >}}
 
 ### 3.3 Publishing JavaScript Actions
 
@@ -425,7 +424,7 @@ You can export a single action by right-clicking a JavaScript action in the Proj
 
 You can import a single action by right-clicking your module in the Project Explorer, and then selecting **Import document from file**. Next, select your JavaScript action file.
 
-A single nanoflow action cannot be published in the Mendix Marketplace. You may publish one as a module, but it is recommended to publish related nanoflow actions as a group within a module. For a module containing multiple nanoflow actions, group actions with a relevant data model like "entities" and provide relevant documentation for external dependencies. Export the module as a whole and upload it to the Mendix Marketplace. For further instructions, see [How to Share Marketplace Content](/appstore/general/share-app-store-content/).
+A single nanoflow action cannot be published in the Mendix Marketplace. You may publish one as a module, but it is recommended to publish related nanoflow actions as a group within a module. For a module containing multiple nanoflow actions, group actions with a relevant data model like "entities" and provide relevant documentation for external dependencies. Export the module as a whole and upload it to the Mendix Marketplace. For further instructions, see [How to Share Marketplace Content](/appstore/sharing-content/).
 
 ### 3.4 Documenting JavaScript Actions{#document}
 
@@ -461,7 +460,7 @@ Initially, JavaScript actions' source code is not loaded. Their source code will
 
 After the file is loaded, breakpoints can be set in the code by clicking the inline number (**A**, in the screenshot below). Alternatively, select **Pause on caught exceptions**  could be used to find issues (**B**). As a last resort, you could alter the source code by adding the line `debugger;` (**C**). This statement will start the debugging tools the first time the action is executed, and will apply a breakpoint:
 
-{{< figure src="/attachments/howto8/extensibility/best-practices-javascript-actions/debugging.png" alt="debugging"   width="500"  >}}
+{{< figure src="/attachments/howto8/extensibility/best-practices-javascript-actions/debugging.png" alt="debugging"   width="500"  class="no-border" >}}
 
 ## 6 Understanding Bad Practices {#badpractice}
 

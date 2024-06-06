@@ -1,7 +1,7 @@
 ---
 title: "Mendix Native Mobile Builder"
 url: /releasenotes/mobile/mendix-native-mobile-builder/
-category: "Mobile"
+
 weight: 11
 description: "Mendix Native Mobile Builder release notes."
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
@@ -9,11 +9,43 @@ description: "Mendix Native Mobile Builder release notes."
 
 The Mendix Native Mobile Builder is a UI-based tool, complimentary to Mendix Studio Pro, which helps you build your Mendix native mobile app. After the Mendix Native Mobile Builder simplifies your build process, you can do what you want most: test and publish your app. The Mendix Native Mobile Builder uses MxBuild, GitHub, and App Center to simplify the app building process and is directly accessible via Mendix Studio Pro. 
 
+## 2024
+
+### Release 1.0.131
+
+**Release date: February 19, 2024**
+
+#### Fixes
+
+* We fixed a build regression introduced in [1.0.130](#10130).
+
+### Release 1.0.130 {#10130}
+
+**Release date: February 13, 2024**
+
+#### Fixes
+
+* We fixed an issue where the namespace in the `native-template` Gradle file was not updating correctly when building an application using Native Builder UI.
+
+### Release 1.0.129
+
+**Release date: January 29, 2024**
+
+#### Improvements
+
+* We now recommend local building over using AppCenter and changed the Native Builder to reflect that.
+
+#### Fixes
+
+* We fixed an issue where iOS apps were containing push notifications entitlement code even after notifications were disabled in the Native Builder (Ticket #167685).
+
 ## 2022
 
-### Release 1.0.127
+### Release 1.0.128
 
 **Release date: October 6, 2022**
+
+This release was previously labeled as 1.0.127. Its release number has been corrected.
 
 #### Fixes
 
@@ -187,7 +219,7 @@ App Center's CodePush OTA page improvements:
 #### Fixes
 
 * We identified and fixed a bug with AppCenter's CodePush OTA not respecting the user's platform of choice. If one of the platforms was missing an App Center build configuration, the OTA build button would remain falsely disabled.
-* We fixed an issue with missing asset files for newly-created Github projects when building in **Advanced** mode.
+* We fixed an issue with missing asset files for newly created GitHub projects when building in **Advanced** mode.
 * We identified and fixed a bug with Firebase configuration's validation when changes are made to the **App Identifier**.
 
 ### Release 1.0.90
@@ -340,9 +372,9 @@ Dependency management and auto-linking are not included as part of the Native Mo
 
 **Release date: February 12, 2021**
 
-#### Native Dependency Management Beta (with Studio Pro v9.0.3 Beta)
+#### Native Dependency Management Beta (with Studio Pro 9.0.3 Beta)
 
-With the Mendix Studio Pro 9.0.3 Beta, we introduced native dependency management. Using native dependency management, widgets 
+With the Mendix Studio Pro 9.0.3 beta release, we introduced native dependency management. Using native dependency management, widgets 
 and JavaScript actions can now define their native dependency requirements and let the Mendix Native Mobile Builder link them in apps.
 The result is a lighter project template that only includes the dependencies it actually needs.
 
@@ -427,7 +459,7 @@ This release focuses mainly on quality of life bug fixes and features.
 
 **Release date: October 27, 2020**
 
-This marks the initial release of the Mendix Native Mobile Builder UI tool. It is included in [Mendix Studio Pro v8.15](/releasenotes/studio-pro/8.15/) and higher.
+This marks the initial release of the Mendix Native Mobile Builder UI tool. It is included in [Mendix Studio Pro 8.15](/releasenotes/studio-pro/8.15/) and higher.
 
 #### Features
 

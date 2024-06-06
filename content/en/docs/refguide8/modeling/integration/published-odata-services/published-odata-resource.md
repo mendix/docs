@@ -1,12 +1,7 @@
 ---
 title: "Published OData Resource"
 url: /refguide8/published-odata-resource/
-tags: ["studio pro"]
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/published-odata-resource.pdf).
-{{% /alert %}}
 
 {{% alert color="warning" %}}
 
@@ -20,11 +15,11 @@ This document describes the properties of a published OData resource. For an ove
 
 Click **Add** in the **Resources** pane of the **Published OData Service** window to open the **Select Entity** window. Select an entity to publish and click **Select**.
 
-{{< figure src="/attachments/refguide8/modeling/integration/published-odata-services/published-odata-resource/published-odata-service.png" alt="OData service page" >}}
+{{< figure src="/attachments/refguide8/modeling/integration/published-odata-services/published-odata-resource/published-odata-service.png" alt="OData service page" class="no-border" >}}
 
 An alternative way to add a resource is in the **Domain Model**: right-click an entity and select **Expose as OData resource**. 
 
-{{< figure src="/attachments/refguide8/modeling/integration/published-odata-services/published-odata-resource/create-odata-resource-from-domain-model.png" alt="Domain model dropdown menu" >}}
+{{< figure src="/attachments/refguide8/modeling/integration/published-odata-services/published-odata-resource/create-odata-resource-from-domain-model.png" alt="Domain model dropdown menu" class="no-border" >}}
 
 To add a resource, click the OData service name in the **Select Published Data Service** window, and click **Select**. 
 
@@ -34,7 +29,7 @@ To create a new OData service and add the entity to it, click **New**  and enter
 
 In the **Resources** pane of the **Published OData Service** window, select a resource and click **Edit** to display the **Edit published resource** window. 
 
-{{< figure src="/attachments/refguide8/modeling/integration/published-odata-services/published-odata-resource/published-resource-dialog-box.png" alt="Edit published OData dialog box" >}}
+{{< figure src="/attachments/refguide8/modeling/integration/published-odata-services/published-odata-resource/published-resource-dialog-box.png" alt="Edit published OData dialog box" class="no-border" >}}
 
 It is possible to select another **Entity** or view the entity in the domain model by clicking **Show**. The [exposed attributes and associations](#exatass) for the selected entity can be set in this window. 
 

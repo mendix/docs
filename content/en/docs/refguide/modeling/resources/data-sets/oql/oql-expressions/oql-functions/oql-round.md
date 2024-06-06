@@ -1,7 +1,6 @@
 ---
 title: "OQL ROUND"
 url: /refguide/oql-round/
-tags: ["studio pro"]
 ---
 
 ## 1 Description
@@ -12,7 +11,7 @@ The `ROUND` function rounds a given numeric expression.
 
 The syntax is as follows:
 
-```sql
+```sql {linenos=false}
 ROUND ( numeric_expression , length )
 ```
 

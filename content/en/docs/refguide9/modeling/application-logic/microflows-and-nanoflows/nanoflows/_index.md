@@ -3,7 +3,6 @@ title: "Nanoflows"
 url: /refguide9/nanoflows/
 weight: 20
 description: "Presents an overview of all the elements that can be used in a nanoflow."
-tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -73,10 +72,10 @@ Events represent the start and endpoints of a nanoflow and special operations in
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/start-event.png" alt="start event" link="/refguide9/start-event/" >}} | [Start event](/refguide9/start-event/) | The starting point of the nanoflow. A nanoflow can only have one start event. |
-| {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/end-event.png" alt="end event" link="/refguide9/end-event/" >}} | [End event](/refguide9/end-event/) | Defines the location where the nanoflow will stop. Depending on the return type of the nanoflow, in some cases a value must be specified. There can be more than one end event. |
-| {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/continue-event.png" alt="continue event" link="/refguide9/continue-event/" >}} | [Continue event](/refguide9/continue-event/) | Used to stop the current iteration of a loop and continue with the next iteration. Continue events can only be used inside a [loop](/refguide9/loop/). |
-| {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/break-event.png" alt="break event" link="/refguide9/break-event/" >}} | [Break Event](/refguide9/break-event/) | Used to stop iterating over the list of objects and to continue with the rest of the flow after the loop. Break events can only be used inside a [loop](/refguide9/loop/). |
+| {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/start-event.png" alt="start event" link="/refguide9/start-event/" class="no-border" >}} | [Start event](/refguide9/start-event/) | The starting point of the nanoflow. A nanoflow can only have one start event. |
+| {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/end-event.png" alt="end event" link="/refguide9/end-event/" class="no-border" >}} | [End event](/refguide9/end-event/) | Defines the location where the nanoflow will stop. Depending on the return type of the nanoflow, in some cases a value must be specified. There can be more than one end event. |
+| {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/continue-event.png" alt="continue event" link="/refguide9/continue-event/" class="no-border" >}} | [Continue event](/refguide9/continue-event/) | Used to stop the current iteration of a loop and continue with the next iteration. Continue events can only be used inside a [loop](/refguide9/loop/). |
+| {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/break-event.png" alt="break event" link="/refguide9/break-event/" class="no-border" >}} | [Break Event](/refguide9/break-event/) | Used to stop iterating over the list of objects and to continue with the rest of the flow after the loop. Break events can only be used inside a [loop](/refguide9/loop/). |
 
 ### 4.2 Flows {#flows}
 
@@ -84,8 +83,8 @@ Flows form the connection between elements.
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/sequence-flow.png" link="/refguide9/sequence-flow/" >}} | [Sequence flow](/refguide9/sequence-flow/) | An arrow that links events, activities, decisions, and merges with each other. Together they define the order of execution within a nanoflow. |
-| {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/annotation-flow.png" link="/refguide9/annotation/#annotation-flow" >}} | [Annotation flow](/refguide9/annotation/#annotation-flow) | A connection that can be used to connect an annotation to another element. |
+| {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/sequence-flow.png" link="/refguide9/sequence-flow/" class="no-border" >}} | [Sequence flow](/refguide9/sequence-flow/) | An arrow that links events, activities, decisions, and merges with each other. Together they define the order of execution within a nanoflow. |
+| {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/annotation-flow.png" link="/refguide9/annotation/#annotation-flow" class="no-border" >}} | [Annotation flow](/refguide9/annotation/#annotation-flow) | A connection that can be used to connect an annotation to another element. |
 
 ### 4.3 Decisions {#decisions}
 
@@ -93,20 +92,20 @@ Decisions deal with making choices and merging different paths.
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/decision.png" alt="decision" link="/refguide9/decision/" >}} | [Decision](/refguide9/decision/) | Makes a decision based on a condition and follows one and only one of the outgoing flows. **Note**: there is no parallel execution in nanoflows. |
-| {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/merge.png" alt="merge" link="/refguide9/merge/" >}} | [Merge](/refguide9/merge/) | Can be used to combine multiple sequence flows into one. If a choice is made in a nanoflow and afterwards some common work needs to be done, you can combine the two (or more) paths using a merge. |
+| {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/decision.png" alt="decision" link="/refguide9/decision/" class="no-border" >}} | [Decision](/refguide9/decision/) | Makes a decision based on a condition and follows one and only one of the outgoing flows. **Note**: there is no parallel execution in nanoflows. |
+| {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/merge.png" alt="merge" link="/refguide9/merge/" class="no-border" >}} | [Merge](/refguide9/merge/) | Can be used to combine multiple sequence flows into one. If a choice is made in a nanoflow and afterwards some common work needs to be done, you can combine the two (or more) paths using a merge. |
 
 ### 4.4 Activities{#activities}
 
 [Activities](/refguide9/activities/) are the actions that are executed in a nanoflow:
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/activity.png" alt="Activity" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/activity.png" alt="Activity" class="no-border" >}}
 
 ### 4.5 Loop {#loop}
 
 A [loop](/refguide9/loop/) is used to iterate over a list of objects:
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/loop.png" alt="Loop" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/loop.png" alt="Loop" class="no-border" >}}
 
 For every object the flow inside the loop is executed. A loop activity can contain all elements used in nanoflow, with the exception of start and end events. 
 
@@ -114,7 +113,7 @@ For every object the flow inside the loop is executed. A loop activity can conta
 
 A [parameter](/refguide9/parameter/) is data that serves as input for the nanoflow. 
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/parameter.png" alt="Parameter" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/parameter.png" alt="Parameter" class="no-border" >}}
 
 Parameters are filled at the location from where the nanoflow is triggered.
 
@@ -122,7 +121,7 @@ Parameters are filled at the location from where the nanoflow is triggered.
 
 An [annotation](/refguide9/annotation/) is an element that can be used to put comments in a nanoflow:
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/annotation.png" alt="Annotation" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/annotation.png" alt="Annotation" class="no-border" >}}
 
 ### 4.8 Item Usages
 
@@ -130,7 +129,7 @@ Studio Pro visualizes which items are used by the selected element(s). It does t
 
 In the example below, the parameter **AccountPasswordData** is highlighted because it is used in the selected activity (**Retrieve Account**). And the activity **Save password** has a **Usage** label because it uses the object returned by **Retrieve Account**.
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/microflow-nanoflow-example.png" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/microflow-nanoflow-example.png" class="no-border" >}}
 
 ## 5 Keyboard Support
 
@@ -161,6 +160,6 @@ This feature was introduced in Studio Pro [9.24.0](/releasenotes/studio-pro/9.24
 
 To convert a nanoflow to a microflow, you have two options. The first option is to right-click anywhere in the nanoflow editor and select **Convert to microflow**. Alternatively, in the **App Explorer**, right-click on the name of the nanoflow you want to convert, and select **Convert to microflow**.
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/nanoflows/convert-to-microflow.PNG" alt="Convert to microflow" width="550px" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/nanoflows/convert-to-microflow.PNG" alt="Convert to microflow" width="550px" class="no-border" >}}
 
 A new microflow is created and added to the same directory, and you can get consistency errors if there are actions that are not supported by microflows.

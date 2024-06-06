@@ -2,12 +2,7 @@
 title: "Preferences"
 url: /refguide8/preferences-dialog/
 weight: 50
-tags: ["studio pro", "preferences", "settings", "edit menu"]
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/preferences-dialog.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 
@@ -25,7 +20,7 @@ When enabled, **Project Explorer** automatically highlights the document that is
 
 #### 2.2.1 Enable MxAssist Logic Bot
 
-If **Enable MxAssist Logic Bot** is checked, then [Mx Assist Logic Bot](/refguide8/mx-assist-studio-pro/) is activated and can offer suggestions for activities in your microflows.
+If **Enable MxAssist Logic Bot** is checked, then [MxAssist Logic Bot](/refguide8/mx-assist-studio-pro/) is activated and can offer suggestions for activities in your microflows.
 
 #### 2.2.2 Show Suggestions for System Variables
 

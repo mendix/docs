@@ -3,7 +3,6 @@ title: "App Settings"
 url: /refguide9/app-settings/
 weight: 10
 description: "Settings which apply to the app as a whole."
-tags: ["app", "configuration", "runtime", "Studio Pro", "languages", "certificate", "theme", "hashing", "hashing algorithm"]
 aliases:
     - /refguide9/project-settings/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -13,7 +12,7 @@ aliases:
 
 In the **App Settings** dialog box, you can alter the settings that are applicable to the whole app:
 
-{{< figure src="/attachments/refguide9/modeling/app-explorer/app/app-settings/app-settings-configuration.png" >}}
+{{< figure src="/attachments/refguide9/modeling/app-explorer/app/app-settings/app-settings-configuration.png" class="no-border" >}}
 
 The categories described below are available.
 
@@ -219,7 +218,7 @@ Certificates can be installed in the Windows Certificate Store using the **Insta
 {{% /alert %}}
 {{% alert color="info" %}}
 
-When an SSLException occurs at runtime with the message `HelloRequest followed by an unexpected handshake message` or when a web service does not respond (Java 6 update 21 and above) when using the imported certificates, this is caused by either the client or server not being [RFC-5746](http://www.ietf.org/rfc/rfc5746.txt)-compatible.
+When an SSLException occurs at runtime with the message `HelloRequest followed by an unexpected handshake message` or when a web service does not respond (Java 6 update 21 and above) when using the imported certificates, this is caused by either the client or server not being [RFC-5746](https://www.ietf.org/rfc/rfc5746.txt)-compatible.
 
 If updating the client and server to be compatible with RFC-5746 is not feasible, the following should be added to **Extra JVM parameters** in the **Server** tab to avoid this exception:
 
@@ -229,7 +228,7 @@ Be warned that this does make the client-server communication vulnerable to an e
 
 When client and server are RFC-5746 compatible at a future point in time, this JVM parameter can be removed.
 
-For background information, see [Transport Layer Security (TLS) Renegotiation Issue Readme](http://www.oracle.com/technetwork/java/javase/documentation/tlsreadme2-176330.html).
+For background information, see [Transport Layer Security (TLS) Renegotiation Issue Readme](https://www.oracle.com/technetwork/java/javase/documentation/tlsreadme2-176330.html).
 
 {{% /alert %}}
 
@@ -261,7 +260,7 @@ Switching from a ZIP file to a UI resources package is straightforward:
 
 Modules that contain theme styling should be marked as UI resources modules. To do so, right-click the **Module {name}** in the App Explorer, then click **Mark as UI resources module**. This will give the modules a green icon, which makes it easy to distinguish theme modules from other modules, and also influences the order in which styling will be applied from those modules:
 
-{{< figure src="/attachments/refguide9/modeling/app-explorer/app/app-settings/green-module.png" alt="green module" >}}
+{{< figure src="/attachments/refguide9/modeling/app-explorer/app/app-settings/green-module.png" alt="green module" class="no-border" >}}
 
 ### 6.4 Ordering UI Resource Modules
 
@@ -269,7 +268,7 @@ When a module contains styling (SCSS/CSS), be sure it is added to the compiled C
 
 You can set an explicit order in the theme settings (**App Settings** > **Theme**). This contains a list of all modules that are marked as UI resource modules, and allows you to set the explicit order in which they are added to the CSS file. Note that the lower a module is ordered in the list, the higher its precedence. For example, an app that uses a company theme module could be ordered as follows:
 
-{{< figure src="/attachments/refguide9/modeling/app-explorer/app/app-settings/app-theme-settings.png" alt="app theme settings" >}}
+{{< figure src="/attachments/refguide9/modeling/app-explorer/app/app-settings/app-theme-settings.png" alt="app theme settings" class="no-border" >}}
 
 ## 7 Workflows Tab {#workflows}
 
@@ -309,11 +308,11 @@ Security settings of workflows and user tasks allow you to access workflow or us
 
 #### 7.3.1 Workflow State Change {#workflow-state-change}
 
-A microflow selected for this setting will start every time a workflow changes its state, for example, when the workflow is completed or has failed. This setting is app-wide, you can override it by setting a workflow-specific microflow in the [workflow properties](/refguide9/workflow-properties/#events).
+A microflow selected for this setting will start every time a workflow changes its state, for example, when the workflow is completed or has failed. This setting is app-wide, you can override it by setting a workflow-specific microflow in [workflow properties](/refguide9/workflow-properties/#events).
 
 #### 7.3.2 User Task State Change {#user-task-state-change}
 
-A microflow selected for this setting will start every time a user task changes its state, for example, when a user task is completed or paused. This setting is app-wide, you can override it by setting a workflow-specific microflow in the [workflow properties](/refguide9/workflow-properties/#events).
+A microflow selected for this setting will start every time a user task changes its state, for example, when a user task is completed or paused. This setting is app-wide, you can override it by setting a workflow-specific microflow in [workflow properties](/refguide9/workflow-properties/#events).
 
 ## 8 Deployment Tab {#deployment}
 

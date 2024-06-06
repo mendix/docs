@@ -1,10 +1,9 @@
 ---
 title: "Runtime Deployment"
 url: /refguide/runtime-deployment/
-category: "Mendix Runtime"
+
 description: "Describes how the Mendix Runtime is deployed."
 weight: 30
-tags: ["runtime", "deploy", "mxbuild", "runtime server", "m2ee"]
 ---
 
 ## 1 Introduction
@@ -19,7 +18,7 @@ When you have created a Mendix app with no structural errors, you need run it by
 
 Below is a chart showing the processes involved in deploying your app. Each of the processes and components is described below the chart.
 
-{{< figure src="/attachments/refguide/runtime/runtime-deployment/runtime-deployment.png" alt="How Mendix Runtime is deployed" >}}
+{{< figure src="/attachments/refguide/runtime/runtime-deployment/runtime-deployment.png" alt="How Mendix Runtime is deployed" class="no-border" >}}
 
 ### 2.1 Deployer
 
@@ -35,7 +34,7 @@ This is the app model as created by Studio Pro. It cannot be directly interprete
 
 ### 2.4 MX Build
 
-This converts an app in mpk format to the mda format which can be interpreted by the Mendix Runtime.
+This converts an app in the *.mpk* format to the mda format which can be interpreted by the Mendix Runtime.
 
 ### 2.5 Cloud Foundry
 
@@ -56,7 +55,7 @@ This is the Mendix app in mda format, which defines the app in a way which can b
 
 ### 2.8 CDN
 
-This data repository stores components of the deployment process such as versions of the Mendix Runtime and Mx Build.
+This data repository stores components of the deployment process such as versions of the Mendix Runtime and MxBuild.
 
 ### 2.9 Java RE
 

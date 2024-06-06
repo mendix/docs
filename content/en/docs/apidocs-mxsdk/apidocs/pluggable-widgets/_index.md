@@ -1,12 +1,10 @@
 ---
 title: "Pluggable Widgets API"
 url: /apidocs-mxsdk/apidocs/pluggable-widgets/
-category: "API Documentation"
 description: "This API helps you to understand pluggable widgets, how they extend app  functionality, and how they can be built to interact with Mendix's APIs in Mx10."
 no_list: false
 description_list: true
-weight: 80
-tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React"]
+weight: 90
 ---
 
 ## 1 Introduction
@@ -26,13 +24,15 @@ Pluggable widgets can also include a preview component for when they are preview
 
 For information on which libraries Mendix supports when developing pluggable widgets, see the [Pluggable Widgets](/refguide/mendix-client/#pluggable-widgets) section of *Mendix Client*.
 
+For information on how to update Pluggable Widgets Tools to a newer version, see [Updating Pluggable Widgets Tools](/howto/extensibility/update-pluggable-widgets-tools/)
+
 {{% alert color="info" %}}
 Using [System Texts](/refguide/system-texts/) to translate languages is not available for use with the Pluggable Widgets API.
 {{% /alert %}}
 
 ## 2 Client Component {#client-component}
 
-The essential part of a pluggable widget is its client component: a React component rendered inside the end-user’s app. Creating this component requires some basic React knowledge. Read React's [tutorial](https://reactjs.org/tutorial/tutorial.html) if you have not worked with React before. Note that if you are building a widget for [native mobile](/refguide/mobile/) apps, you should use [React Native](https://facebook.github.io/react-native/) instead of React.
+The essential part of a pluggable widget is its client component: a React component rendered inside the end-user’s app. Creating this component requires some basic React knowledge. Read [React's tutorial](https://reactjs.org/tutorial/tutorial.html) if you have not worked with React before. Note that if you are building a widget for [native mobile](/refguide/mobile/) apps, you should use [React Native](https://facebook.github.io/react-native/) instead of React.
 
 The client component is mainly focused on presentation and interaction with an end-user, while data fetching, validation, and updating are handled by the Mendix Platform. Mendix provides your component with APIs which follow a [unidirectional data flow pattern](https://www.geeksforgeeks.org/unidirectional-data-flow/), much like the [Redux](https://redux.js.org/basics/data-flow) and [Flux](https://facebook.github.io/flux/docs/in-depth-overview#structure-and-data-flow) APIs. Mendix follows the “batteries included but removable” motto. You do not have to care about nuances if standard behavior suffices for you, but you can adjust behaviors when required.
 
@@ -50,7 +50,7 @@ A prop value is often not just a primitive value, but an object whose structure 
 
 The above interface could be used this way: a component uses a `canExecute` flag to decide whether it should be enabled, uses an `isExecuting`  flag to show an inline progress indicator, and triggers `execute()` method in a reaction to user click. Normally, after `execute()` has been triggered, the component will be re-rendered with a new value that has the `isExecuting` flag set, and when an action, for example a microflow, completes, the component is re-rendered again without `isExecuting`.
 
-## 3 Widget Package
+## 3 Widget Package {#widget-package}
 
 A pluggable widget is distributed as single widget package file with an *.mpk* extension. This file should be placed in your app's `widgets` directory. Mendix Studio Pro discovers all widgets in your app when you open your app, add a widget through the Marketplace, or  click **App** > **Synchronize App Directory**.
 
@@ -95,8 +95,9 @@ A simple widget XML file might look like this:
 
 ```xml
     <?xml version="1.0" encoding="utf-8" ?>
-    <widget [attibutes]>
+    <widget [attributes]>
         <name>{User friendly widget name}</name>
+        <description>{User friendly short description}</description>
         <properties>
             [properties]
         </properties>
@@ -128,23 +129,49 @@ This section is generated based on options chosen while running the Mendix Plugg
 
 ### 4.2 Widget Description {#widget-description}
 
-After widget attributes, you will see a description of a widget that will be presented in Studio Pro. This description includes a widget name and its icon encoded as a base64 image:
+The presentation of the widget in Studio pro is determined by the first set of elements inside the widget tag. The order of these descriptive tags is important, and is demonstrated in the list below. Only the name and description tags are mandatory — the others are optional. The description can be omitted with a self-closing tag: `<description />`: 
+
+* `name` — The display name of the widget.
+* `description` — A short written description of the widget.
+* `studioProCategory` — See [Toolbox Category](#toolbox-category).
+* `helpUrl` — See [Help Page](#help).
+* `icon` — See [Icon](#icon).
 
 ```xml
-	<name>My Progress Card</name>
+    <name>My Progress Card</name>
+    <description>Displays my progress.</description>
 ```
 
 In Mendix Studio Pro, the widget described above would look like this:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/basic-widget.png" alt="basic widget" >}}
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/basic-widget-progress-card.png" alt="basic progress card" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/basic-widget-progress-card.png" alt="basic progress card in structure mode" >}}
 
-#### 4.2.1 Help Page {#help}
 
-You can provide additional help information to widget users by using a help page. If you do so, a widget configuration screen will get a **Help** button, assigned to the <kbd>{F1}</kbd> shortcut key, that opens a specified page. This button is positioned in the left-bottom corner of the popup dialog:
+#### 4.2.1 Toolbox Category {#toolbox-category}
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/widget-dialog-help-button.png" alt="basic widget" >}}
+To provide more clarity for Studio Pro users you can specify a toolbox category for your widgets. When provided, it determines a toolbox category for a widget in Studio Pro. It is possible to specify existing built-in categories such as **Data** or **Input** as well as new arbitrary categories like **Maps**. 
+
+When an existing category is specified, then your widget is placed in it next to existing built-in widgets. When a new category is specified, then your widget placed in that new category. 
+
+A category can be provided through the `studioProCategory` tag:
+
+```xml
+   <studioProCategory>Open Street Maps</studioProCategory>
+```
+
+In the example above, a widget would be placed under **Open Street Maps widgets** in Studio Pro. Note that **widgets** is added automatically in the Studio Pro UI.
+
+{{% alert color="info" %}}
+When your widget is published in Marketplace and is assigned a special toolbox category by the Marketplace team, that special toolbox category always takes precedence over a developer-configured category.
+{{% /alert %}}
+
+#### 4.2.2 Help Page {#help}
+
+You can provide additional help information to widget users by using a help page. If you do so, a widgets configuration screen will get a **Help** button, assigned to the <kbd>{F1}</kbd> shortcut key, that opens a specified page. This button is positioned in the lower-left corner of the popup dialog:
+
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/widget-dialog-help-button.png" alt="basic widget" class="no-border" >}}
 
 A URL of a help page can be provided through the `helpUrl` property after the `description` tag:
 
@@ -158,27 +185,17 @@ For more complex help pages you can link to a markdown page. For security reason
 * Host name must end with *.mendix.com* or *github.com*
 * If host name is *github.com* the full URL must end with *.md*
 
-#### 4.2.2 Toolbox Category {#toolbox-category}
 
-To provide more clarity for Studio Pro users you can specify a toolbox category for your widgets. When provided, it determines a toolbox category for a widget in Studio Pro. It is possible to specify existing built-in categories such as **Data** or **Input** as well as new arbitrary categories like **Maps**. 
+#### 4.2.3 Icon {#icon}
 
-When an existing category is specified, then your widget is placed in it next to existing built-in widgets. When a new category is specified, then your widget placed in that new category. 
-
-A category can be provided through `studioCategory` and `studioProCategory` tags:
+The `<icon>` element accepts a base64 encoded image that is displayed as the widget icon in Studio Pro. The element is optional and can be omitted. When no icon is provided, Studio Pro will display a fallback icon.
 
 ```xml
-   <studioProCategory>Open Street Maps</studioProCategory>
-   <studioCategory>Maps</studioCategory>
+<icon>PHN2Zy...9zdmc+</icon>
 ```
 
-In the example above, a widget would be placed under **Open Street Maps widgets** in Studio Pro. Note that **widgets** is added automatically in the Studio Pro UI.
-
 {{% alert color="info" %}}
-The `studioCategory` and `studioProCategory` tags should be placed right after the `description` tag.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-When your widget is published in Marketplace and is assigned a special toolbox category by the Marketplace team, that special toolbox category always takes precedence over a developer-configured category.
+Bundling the icon in the [widget package](#widget-package) is our recommended approach. The files are easier to work with and allow for more customization.
 {{% /alert %}}
 
 ### 4.3 Widget Properties Definition {#properties-definition}
@@ -258,11 +275,11 @@ Before examining properties themselves, it is useful to understand property grou
 
 This is how the property group structure is represented in Studio Pro:
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/edit-progress-card.png" alt="edit progress general" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/edit-progress-card.png" alt="edit progress general" class="no-border" >}}
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/edit-visual-tab.png" alt="edit progress visual" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/edit-visual-tab.png" alt="edit progress visual" class="no-border" >}}
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/properties-widget.png" alt="properties widget" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/properties-widget.png" alt="properties widget" class="no-border" >}}
 
 When properties are shown in a dialog box, first-level groups (**General** and **Visual**) are represented as tabs. Second-level groups (**Main**, **Action** and **Progress bar**) are represented as boxes. When properties are shown in a pane, first-level groups are ignored and second-level groups are shown as categories.
 
@@ -288,8 +305,8 @@ Some properties can or must have more attributes or tags. This depends on the `t
 
 Here is how a caption and description look in Studio Pro:
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/card-icon.png" alt="caption" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/card-icon.png" alt="caption" class="no-border" >}}
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/card-description.png" alt="description" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/card-description.png" alt="description" class="no-border" >}}
 
 ## 7 Documents in this Section

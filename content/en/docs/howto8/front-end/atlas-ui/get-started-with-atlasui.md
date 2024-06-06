@@ -2,12 +2,11 @@
 title: "Get Started with Atlas UI"
 url: /howto8/front-end/get-started-with-atlasui/
 weight: 10
-tags: ["Atlas", "UI", "UX", "user experience"]
 ---
 
 ## 1 Introduction
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Choose an app template
 * Choose a page template
@@ -21,9 +20,9 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Choosing Your App Template
 
-In the [Mendix Developer Portal](https://sprintr.home.mendix.com/index.html), click **Create App**.You will see a number of apps marked with **ATLAS UI**, which are Atlas UI-based app templates. You can select one to get started.
+In the [Mendix Developer Portal](https://sprintr.home.mendix.com/index.html), click **Create App**. You will see a number of apps marked with **ATLAS UI**, which are Atlas UI-based app templates. You can select one to get started.
 
-{{< figure src="/attachments/howto8/front-end/atlas-ui/get-started-with-atlasui/start_choose_your_starter_app.png" alt="App template in Developer Portal" >}}
+{{< figure src="/attachments/howto8/front-end/atlas-ui/get-started-with-atlasui/start_choose_your_starter_app.png" alt="App template in Developer Portal" class="no-border" >}}
 
 For more information about Atlas UI, see [Atlas UI](/howto8/front-end/atlas-ui/). 
 
@@ -33,7 +32,7 @@ You can choose a page template when you create a new page.
 
 For example, **Dashboard Action Tiles**, **Dashboard Charts**, **Dashboard Expenses** are page templates. 
 
-{{< figure src="/attachments/howto8/front-end/atlas-ui/get-started-with-atlasui/start_choose_a_page_template.png" alt="Page Template" >}}
+{{< figure src="/attachments/howto8/front-end/atlas-ui/get-started-with-atlasui/start_choose_a_page_template.png" alt="Page Template" class="no-border" >}}
 
 Once the page is created, you can customize it.
 

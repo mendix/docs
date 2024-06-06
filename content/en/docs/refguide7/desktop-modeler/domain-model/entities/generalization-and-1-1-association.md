@@ -3,7 +3,6 @@ title: "Generalization and One-to-One Associations"
 linktitle: "Generalization and 1-to-1 Associations"
 url: /refguide7/generalization-and-1-1-association/
 weight: 5
-#tags: ["domain model", "association", "inheritance", "one-to-one", "generalization"]
 ---
 Mendix developers have to choose on a daily basis whether or not they want to use inheritance. It starts the moment you initiate a new project; how do you want to setup your users? Are you going to keep using the already available Account entity in the Administration module? Or are you going to work with separate entities with a one-to-one association to the user account? Or are you going to add (multiple) entities that inherit from **System.User**?
 
@@ -11,15 +10,15 @@ When defining closely related structures, it can be difficult to decide on the b
 
 ## Generalization, Specialization, and Inheritance in Mendix
 
-The Mendix domain model is based on the [UML](http://en.wikipedia.org/wiki/Unified_Modeling_Language) [class diagram](http://en.wikipedia.org/wiki/Class_diagram), which allows us to specify the objects/entities, their attributes and associations. The concept of generalization in UML is exactly the same in Mendix, however, the Mendix Domain model uses a different notation to display the Generalization. The UML class diagram uses associations with a hollow triangle (arrow) pointing to the super class. In Mendix generalization is expressed with a blue label above the entity, specifying the entity name.
+The Mendix domain model is based on the [UML](https://en.wikipedia.org/wiki/Unified_Modeling_Language) [class diagram](https://en.wikipedia.org/wiki/Class_diagram), which allows us to specify the objects/entities, their attributes and associations. The concept of generalization in UML is exactly the same in Mendix, however, the Mendix Domain model uses a different notation to display the Generalization. The UML class diagram uses associations with a hollow triangle (arrow) pointing to the super class. In Mendix generalization is expressed with a blue label above the entity, specifying the entity name.
 
-UML also allows us to specify the types of associations, such as an [Aggregation](http://en.wikipedia.org/wiki/Aggregation_(object-oriented_programming)) or [Composition](http://en.wikipedia.org/wiki/Object_composition). The definition of these associations specify whether or not the objects can exist without each other. Unlike UML we can not specify how strong a relation ship is. Any dependencies between the two objects have to be specified using [event microflows](/refguide7/event-handlers/) or [delete behavior/prevention](/refguide7/associations/).
+UML also allows us to specify the types of associations, such as an [Aggregation](https://en.wikipedia.org/wiki/Aggregation_(object-oriented_programming)) or [Composition](https://en.wikipedia.org/wiki/Object_composition). The definition of these associations specify whether or not the objects can exist without each other. Unlike UML we can not specify how strong a relation ship is. Any dependencies between the two objects have to be specified using [event microflows](/refguide7/event-handlers/) or [delete behavior/prevention](/refguide7/associations/).
 
 ### Performance
 
-In order to understand the impact and behavior of the application, you need to understand the basic concepts of [Transactions](http://en.wikipedia.org/wiki/Database_transaction) and [(Database) Isolation Levels](http://en.wikipedia.org/wiki/Isolation_(database_systems)#Read_committed). The Mendix Platform uses Transactions, which means that every microflow, commit, and delete will happen in a (database) transaction. The transaction is initialized as soon as the microflow executes its first write to the database. Retrieve activities will never start a transaction.
+In order to understand the impact and behavior of the application, you need to understand the basic concepts of [Transactions](https://en.wikipedia.org/wiki/Database_transaction) and [(Database) Isolation Levels](https://en.wikipedia.org/wiki/Isolation_(database_systems)#Read_committed). The Mendix Platform uses Transactions, which means that every microflow, commit, and delete will happen in a (database) transaction. The transaction is initialized as soon as the microflow executes its first write to the database. Retrieve activities will never start a transaction.
 
-The Mendix Platform uses the transaction level [Read Committed](http://en.wikipedia.org/wiki/Isolation_(database_systems)#Read_committed), which means, as the name suggests, that only committed objects are visible outside the transaction. Any other microflows trying to access an object that is being changed at the same time, will have to wait until the transaction has completed. This is important to know, since this has significant impact on your choice between inheritance or associated objects.
+The Mendix Platform uses the transaction level [Read Committed](https://en.wikipedia.org/wiki/Isolation_(database_systems)#Read_committed), which means, as the name suggests, that only committed objects are visible outside the transaction. Any other microflows trying to access an object that is being changed at the same time, will have to wait until the transaction has completed. This is important to know, since this has significant impact on your choice between inheritance or associated objects.
 
 ### Creating and Changing Objects
 

@@ -3,13 +3,8 @@ title: "Nanoflows"
 url: /refguide8/nanoflows/
 weight: 20
 description: "Presents an overview of all the elements that can be used in a nanoflow."
-tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/nanoflows.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 
@@ -76,11 +71,11 @@ Events represent the start and endpoints of a nanoflow and special operations in
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| {{< figure src="/attachments/refguide8/modeling/application-logic/microflows/start-event.png" alt="start event" link="/refguide8/start-event/" >}} | [Start event](/refguide8/start-event/) | The starting point of the nanoflow. A nanoflow can only have one start event. |
-| {{< figure src="/attachments/refguide8/modeling/application-logic/microflows/end-event.png" alt="end event" link="/refguide8/end-event/" >}} | [End event](/refguide8/end-event/) | Defines the location where the nanoflow will stop. Depending on the return type of the nanoflow, in some cases a value must be specified. There can be more than one end event. |
-| {{< figure src="/attachments/refguide8/modeling/application-logic/microflows/error-event.png" link="/refguide8/error-event/" >}} | [Error Event](/refguide8/error-event/) | An error event defines a location where the nanoflow will stop and throw an error that occurred earlier. If you call a nanoflow, you may want to know whether any errors occurred within the nanoflow or not. |
-| {{< figure src="/attachments/refguide8/modeling/application-logic/microflows/continue-event.png" alt="continue event" link="/refguide8/continue-event/" >}} | [Continue event](/refguide8/continue-event/) | Used to stop the current iteration of a loop and continue with the next iteration. Continue events can only be used inside a [loop](/refguide8/loop/). |
-| {{< figure src="/attachments/refguide8/modeling/application-logic/microflows/break-event.png" alt="break event" link="/refguide8/break-event/" >}} | [Break Event](/refguide8/break-event/) | Used to stop iterating over the list of objects and to continue with the rest of the flow after the loop. Break events can only be used inside a [loop](/refguide8/loop/). |
+| {{< figure src="/attachments/refguide8/modeling/application-logic/microflows/start-event.png" alt="start event" link="/refguide8/start-event/" class="no-border" >}} | [Start event](/refguide8/start-event/) | The starting point of the nanoflow. A nanoflow can only have one start event. |
+| {{< figure src="/attachments/refguide8/modeling/application-logic/microflows/end-event.png" alt="end event" link="/refguide8/end-event/" class="no-border" >}} | [End event](/refguide8/end-event/) | Defines the location where the nanoflow will stop. Depending on the return type of the nanoflow, in some cases a value must be specified. There can be more than one end event. |
+| {{< figure src="/attachments/refguide8/modeling/application-logic/microflows/error-event.png" link="/refguide8/error-event/" class="no-border" >}} | [Error Event](/refguide8/error-event/) | An error event defines a location where the nanoflow will stop and throw an error that occurred earlier. If you call a nanoflow, you may want to know whether any errors occurred within the nanoflow or not. |
+| {{< figure src="/attachments/refguide8/modeling/application-logic/microflows/continue-event.png" alt="continue event" link="/refguide8/continue-event/" class="no-border" >}} | [Continue event](/refguide8/continue-event/) | Used to stop the current iteration of a loop and continue with the next iteration. Continue events can only be used inside a [loop](/refguide8/loop/). |
+| {{< figure src="/attachments/refguide8/modeling/application-logic/microflows/break-event.png" alt="break event" link="/refguide8/break-event/" class="no-border" >}} | [Break Event](/refguide8/break-event/) | Used to stop iterating over the list of objects and to continue with the rest of the flow after the loop. Break events can only be used inside a [loop](/refguide8/loop/). |
 
 ### 4.2 Flows {#flows}
 
@@ -88,8 +83,8 @@ Flows form the connection between elements.
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| {{< figure src="/attachments/refguide8/modeling/application-logic/microflows/sequence-flow.png" link="/refguide8/sequence-flow/" >}} | [Sequence flow](/refguide8/sequence-flow/) | An arrow that links events, activities, decisions, and merges with each other. Together they define the order of execution within a nanoflow. |
-| {{< figure src="/attachments/refguide8/modeling/application-logic/microflows/annotation-flow.png" link="/refguide8/annotation/#annotation-flow" >}} | [Annotation flow](/refguide8/annotation/#annotation-flow) | A connection that can be used to connect an annotation to another element. |
+| {{< figure src="/attachments/refguide8/modeling/application-logic/microflows/sequence-flow.png" link="/refguide8/sequence-flow/" class="no-border" >}} | [Sequence flow](/refguide8/sequence-flow/) | An arrow that links events, activities, decisions, and merges with each other. Together they define the order of execution within a nanoflow. |
+| {{< figure src="/attachments/refguide8/modeling/application-logic/microflows/annotation-flow.png" link="/refguide8/annotation/#annotation-flow" class="no-border" >}} | [Annotation flow](/refguide8/annotation/#annotation-flow) | A connection that can be used to connect an annotation to another element. |
 
 ### 4.3 Decisions {#decisions}
 
@@ -97,20 +92,20 @@ Decisions deal with making choices and merging different paths.
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| {{< figure src="/attachments/refguide8/modeling/application-logic/microflows/decision.png" alt="decision" link="/refguide8/decision/" >}} | [Decision](/refguide8/decision/) | Makes a decision based on a condition and follows one and only one of the outgoing flows. **Note**: there is no parallel execution in nanoflows. |
-| {{< figure src="/attachments/refguide8/modeling/application-logic/microflows/merge.png" alt="merge" link="/refguide8/merge/" >}} | [Merge](/refguide8/merge/) | Can be used to combine multiple sequence flows into one. If a choice is made in a nanoflow and afterwards some common work needs to be done, you can combine the two (or more) paths using a merge. |
+| {{< figure src="/attachments/refguide8/modeling/application-logic/microflows/decision.png" alt="decision" link="/refguide8/decision/" class="no-border" >}} | [Decision](/refguide8/decision/) | Makes a decision based on a condition and follows one and only one of the outgoing flows. **Note**: there is no parallel execution in nanoflows. |
+| {{< figure src="/attachments/refguide8/modeling/application-logic/microflows/merge.png" alt="merge" link="/refguide8/merge/" class="no-border" >}} | [Merge](/refguide8/merge/) | Can be used to combine multiple sequence flows into one. If a choice is made in a nanoflow and afterwards some common work needs to be done, you can combine the two (or more) paths using a merge. |
 
 ### 4.4 Activities{#activities}
 
 [Activities](/refguide8/activities/) are the actions that are executed in a nanoflow:
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/microflows/activity.png" alt="Activity" >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/microflows/activity.png" alt="Activity" class="no-border" >}}
 
 ### 4.5 Loop {#loop}
 
 A [loop](/refguide8/loop/) is used to iterate over a list of objects:
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/microflows/loop.png" alt="Loop" >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/microflows/loop.png" alt="Loop" class="no-border" >}}
 
 For every object the flow inside the loop is executed. A loop activity can contain all elements used in nanoflow, with the exception of start and end events. 
 
@@ -118,7 +113,7 @@ For every object the flow inside the loop is executed. A loop activity can conta
 
 A [parameter](/refguide8/parameter/) is data that serves as input for the nanoflow. 
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/microflows/parameter.png" alt="Parameter" >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/microflows/parameter.png" alt="Parameter" class="no-border" >}}
 
 Parameters are filled at the location from where the nanoflow is triggered.
 
@@ -126,7 +121,7 @@ Parameters are filled at the location from where the nanoflow is triggered.
 
 An [annotation](/refguide8/annotation/) is an element that can be used to put comments in a microflow:
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/microflows/annotation.png" alt="Annotation" >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/microflows/annotation.png" alt="Annotation" class="no-border" >}}
 
 ### 4.8 Item Usages
 
@@ -134,7 +129,7 @@ Studio Pro visualizes which items are used by the selected element(s). It does t
 
 In the example below, the parameter **AccountPasswordData** is highlighted because it is used in the selected activity (**Retrieve Account**). And the activity **Save password** has a **Usage** label because it uses the object returned by **Retrieve Account**.
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/microflows/microflow-nanoflow-example.png" >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/microflows/microflow-nanoflow-example.png" class="no-border" >}}
 
 ## 5 Keyboard Support
 
@@ -155,7 +150,7 @@ The nanoflow editor offers keyboard support for navigating and manipulating the 
 
 ## 6 Nanoflow Debugging
 
-Step-by-step debugging is not supported yet. For now, we recommend using a log message activity, which is shown in the console log of Studio Pro.
+Step-by-step debugging is not supported yet. For now, Mendix recommends using a log message activity, which is shown in the console log of Studio Pro.
 
 ## 7 Security
 

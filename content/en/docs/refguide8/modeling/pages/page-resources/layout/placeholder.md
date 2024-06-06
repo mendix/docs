@@ -5,10 +5,6 @@ weight: 10
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/placeholder.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 A **placeholder** can be used in two ways:
@@ -20,13 +16,13 @@ Each placeholder is colored blue with its name displayed in the middle of it. Th
 
 For example, the image below shows two placeholders, **Main** and **Other** positioned within a layout grid. 
 
-{{< figure src="/attachments/refguide8/modeling/pages/page-resources/layout/placeholder/placeholder.png" alt="Two placeholders in a layout grid. One is labeled 'Main', and one is labeled 'Other'" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/page-resources/layout/placeholder/placeholder.png" alt="Two placeholders in a layout grid. One is labeled 'Main', and one is labeled 'Other'" class="no-border" >}}
 
 ## 2 Properties
 
 An example of placeholder properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/pages/page-resources/layout/placeholder/placeholder-properties.png" alt="Properties pane for a placeholder"   width="250"  >}}
+{{< figure src="/attachments/refguide8/modeling/pages/page-resources/layout/placeholder/placeholder-properties.png" alt="Properties pane for a placeholder"   width="250"  class="no-border" >}}
 
 A placeholder has a single section, **Misc** and a single property, **Name**.
 

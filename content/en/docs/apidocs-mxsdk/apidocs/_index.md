@@ -15,4 +15,6 @@ aliases:
 
 The API documentation is divided into the sections described below.
 
+For more information, see [API (Application Programming Interface)](https://www.mendix.com/glossary/api/) in the *Technology Glossary*.
+
 ## 2 Documents in this Category

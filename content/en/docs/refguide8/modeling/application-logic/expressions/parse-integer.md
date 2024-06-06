@@ -3,12 +3,7 @@ title: "Parse Integer"
 url: /refguide8/parse-integer/
 weight: 140
 description: "Describes the function for parsing integer from strings in Mendix."
-tags: ["studio pro", "expressions", "parse", "integer"]
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/parse-integer.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 

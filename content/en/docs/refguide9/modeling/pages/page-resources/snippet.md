@@ -2,7 +2,6 @@
 title: "Snippet"
 url: /refguide9/snippet/
 weight: 30
-tags: ["studio pro", "snippet", "page resources"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -19,13 +18,13 @@ A snippet expects zero or more parameters. To change the parameters of the snipp
 
 In the example below, the snippet defines a single parameter with name **Order** and type **MyFirstModule.Order**.
 
-{{< figure src="/attachments/refguide9/modeling/pages/page-resources/snippet/snippet.png" alt="Example of a snippet"   width="400"  >}}
+{{< figure src="/attachments/refguide9/modeling/pages/page-resources/snippet/snippet.png" alt="Example of a snippet"   width="400"  class="no-border" >}}
 
 ## 2 Properties
 
 An example of snippet properties is represented in the image below:
 
-{{< figure src="/attachments/refguide9/modeling/pages/page-resources/snippet/snippet-properties.png" alt="Example of the snippet properties pane"   width="250"  >}}
+{{< figure src="/attachments/refguide9/modeling/pages/page-resources/snippet/snippet-properties.png" alt="Example of the snippet properties pane"   width="250"  class="no-border" >}}
 
 Snippet properties consist of the following sections:
 
@@ -71,7 +70,7 @@ The values for the platform property are:
 
 To extract a snippet from an existing widget, right-click the widget and select **Extract snippet**:
 
-{{< figure src="/attachments/refguide9/modeling/pages/page-resources/snippet/extract-snippet-contextmenu.png" alt="Example of a widget about to be extracted to a snippet" width="800" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/page-resources/snippet/extract-snippet-contextmenu.png" alt="Example of a widget about to be extracted to a snippet" width="800" class="no-border" >}}
 
 To determine which snippet parameters are needed, Studio Pro analyzes which objects from the surrounding widgets are used inside the selected widget. There are various ways a widget can refer to a surrounding object:
 
@@ -86,7 +85,7 @@ To determine which snippet parameters are needed, Studio Pro analyzes which obje
 
 After selecting **Extract snippet**, a dialog box shows an overview of the snippet parameters required for the extracted widget. You can also enter the new snippet's **Name** here:
 
-{{< figure src="/attachments/refguide9/modeling/pages/page-resources/snippet/extract-snippet-dialog.png" alt="Example of the Extract Snippet dialog" width="640" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/page-resources/snippet/extract-snippet-dialog.png" alt="Example of the Extract Snippet dialog" width="640" class="no-border" >}}
 
 The table showing the snippet parameters has the following columns:
 
@@ -98,7 +97,7 @@ The names of the snippet parameters can be changed only if they are unique and n
 
 Clicking **OK** will create the new snippet and replace the extracted widget in the original document with a snippet call. The **Snippet settings** of the call are automatically configured to pass the correct object to each snippet parameter. In the extracted snippet, references to the original objects are rewritten to refer to a snippet parameter instead. For example, a conditional visibility expression could be rewritten as shown in the following side-by-side comparison:
 
-{{< figure src="/attachments/refguide9/modeling/pages/page-resources/snippet/extract-snippet-expression-rewrite.png" alt="Example of an expression rewritten by Extract snippet" width="580" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/page-resources/snippet/extract-snippet-expression-rewrite.png" alt="Example of an expression rewritten by Extract snippet" width="580" class="no-border" >}}
 
 {{% alert color="info" %}}
 Not every widget can be successfully extracted to a snippet if the result requires multiple snippet parameters. For example, a Data view with an *Association* data source must be surrounded by a single context object, which is not the case in a snippet with multiple parameters. 

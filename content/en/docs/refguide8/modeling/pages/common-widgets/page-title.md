@@ -2,19 +2,14 @@
 title: "Page Title"
 url: /refguide8/page-title/
 weight: 50
-tags: ["studio pro", "page title", "common widgets"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/page-title.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 
 This widget displays a page title of the current page that is set in [page properties](/refguide8/page-properties/#title).
 
-{{< figure src="/attachments/refguide8/modeling/pages/common-widgets/page-title/page-title-example.png" alt="Page Title Example" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/common-widgets/page-title/page-title-example.png" alt="Page Title Example" class="no-border" >}}
 
 {{% alert color="info" %}}
 The page title widget makes it possible to embed the page title in a [layout](/refguide8/layout/), as it will show the title of the page that uses the layout.
@@ -24,7 +19,7 @@ The page title widget makes it possible to embed the page title in a [layout](/r
 
 An example of page title properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/pages/common-widgets/page-title/page-title-properties.png" alt="Page Title Properties"   width="300"  >}}
+{{< figure src="/attachments/refguide8/modeling/pages/common-widgets/page-title/page-title-properties.png" alt="Page Title Properties"   width="300"  class="no-border" >}}
 
 Page title properties consist of the following sections:
 

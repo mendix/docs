@@ -2,9 +2,8 @@
 title: "Work with an On-Premises Version Control Server"
 linktitle: "On-Premises Version Control Server"
 url: /howto7/collaboration-requirements-management/on-premises-svn-howto/
-category: "Collaboration and Requirements Management"
+
 weight: 60
-tags: ["on-premises"]
 ---
 
 ## 1 Introduction
@@ -13,7 +12,7 @@ When developing Mendix applications, changes to these applications are stored in
 
 While this is the recommended way of working for almost all Mendix developers, you may prefer to store your application's files in a system that is controlled by your own organization.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Configure your Mendix apps to work with your own (on-premises) version control system
 
@@ -38,7 +37,7 @@ For the purposes of this how-to, there are two important points to know about re
 
 Firstly, Mendix requires you to store each Mendix application in a separate repository. It is not possible to place multiple Mendix apps into a single repository.
 
-Usually, repositories are created and maintained by the administrator of your SVN server. For more details about repositories, see [Repository Administration](http://svnbook.red-bean.com/en/1.7/svn-book.html#svn.reposadmin) in *Version Control with Subversion*.
+Usually, repositories are created and maintained by the administrator of your SVN server. For more details about repositories, see [Repository Administration](https://svnbook.red-bean.com/en/1.7/svn-book.html#svn.reposadmin) in *Version Control with Subversion*.
 
 In the following sections of this how-to, it is assumed that you have a repository available for your application.
 

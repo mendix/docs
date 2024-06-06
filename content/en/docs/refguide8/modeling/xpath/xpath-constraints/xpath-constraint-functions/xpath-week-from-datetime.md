@@ -1,12 +1,7 @@
 ---
 title: "XPath Week-from-DateTime"
 url: /refguide8/xpath-week-from-datetime/
-tags: ["studio pro"]
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/xpath-week-from-datetime.pdf).
-{{% /alert %}}
 
 ## 1 Overview
 
@@ -30,7 +25,7 @@ This query returns all the logs where the date `DateAttribute` falls in the seco
 
 The following links are for the relevant documentation on how week number is calculated for a specific date for many of the databases used with Mendix.
 
-The HSQLDB database used for testing locally uses JVM's [Calendar.WEEK_OF_YEAR](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Calendar.html).
+The HSQLDB database used for testing locally uses JVM's [Calendar.WEEK_OF_YEAR](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Calendar.html).
 
 PostgreSQL, Oracle, and MySQL follow [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601):
 

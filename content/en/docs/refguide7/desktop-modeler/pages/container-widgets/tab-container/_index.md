@@ -9,7 +9,7 @@ Tab containers are used to show information categorized into multiple tab pages.
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide7/desktop-modeler/pages/container-widgets/tab-container/tab-container.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/container-widgets/tab-container/tab-container.png" class="no-border" >}}
 A tab control with two tab pages (Address, Orders).
 
 {{% /alert %}}

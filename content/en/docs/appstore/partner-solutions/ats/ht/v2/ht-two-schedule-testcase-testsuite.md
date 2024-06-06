@@ -2,7 +2,6 @@
 title: "Schedule a Test Suite/Test Case"
 url: /appstore/partner-solutions/ats/ht-two-schedule-testcase-testsuite/
 description: "Describes how to create a test suite and add test cases and test suites to your test suite."
-tags: ["ATS", "testing"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -15,7 +14,7 @@ Scheduling tests can be useful for the following:
 * Investigate when the software runs slower 
 * Constant reassurance that some feature works 
 
-**This how-to will teach you  how to do the following**
+This how-to teaches you how to do the following:
 
 * Schedule test cases
 * Schedule test suites
@@ -33,16 +32,16 @@ The following steps explain how to schedule test cases:
 1. Open your project in ATS and go to the **Schedules** tab in **Test Run**.
 2. Click **Schedule test case** to schedule a test case:
 
-    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-schedule-testcase-testsuite/Schedules-tab-TC.png" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-schedule-testcase-testsuite/Schedules-tab-TC.png" class="no-border" >}}
 
     Clicking **Schedule test case** opens the **Select Test Case** dialog box:
 
-    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-schedule-testcase-testsuite/select-testcase-dialog.png" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-schedule-testcase-testsuite/select-testcase-dialog.png" class="no-border" >}}
 
 3. Click the test case you want to schedule. To search for the test case, you can use the **Search** button.
 4. Click **Select**. Selecting a test case opens the **New Schedule** dialog box:
 
-    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-schedule-testcase-testsuite/new-schedule-dialog.png" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-schedule-testcase-testsuite/new-schedule-dialog.png" class="no-border" >}}
 
 5. Set the desired **Schedule Test Settings**: 
 
@@ -62,15 +61,14 @@ The following steps explain how to schedule test cases:
     * **Platform** - Set platform on which to run the test
     * **Resolution** - Set resolution with which the test is run
 
-    {{% alert color="info" %}}Note: Platform Settings are not visible for all Selenium hubs.
-    {{% /alert %}}
+    {{% alert color="info" %}}Platform Settings are not visible for all Selenium hubs.{{% /alert %}}
 
 8. Click **Save**:
 
-    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-schedule-testcase-testsuite/new-schedule-filled.png" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-schedule-testcase-testsuite/new-schedule-filled.png" class="no-border" >}}
 
-Clicking **Save** adds the test case to the list of scheduled items. Click the **Edit icon** to change the settings (1). Click the **Delete icon** to delete the scheduled test case(2):
-{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-schedule-testcase-testsuite/scheduled-testcase.png" >}}
+Clicking **Save** adds the test case to the list of scheduled items. Click **Edit** ({{% icon name="pencil" %}}) to change the settings (1). Click **Delete** ({{% icon name="remove" %}}) to delete the scheduled test case (2):
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-schedule-testcase-testsuite/scheduled-testcase.png" class="no-border" >}}
 
 ## 4 Scheduling Test Suites
 
@@ -79,16 +77,16 @@ The following steps explain how to schedule test suites:
 1. Open your project in ATS and go to the **Schedules** tab in **Test Run**.
 2. Click **Schedule test suite** to schedule a test suite:
   
-    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-schedule-testcase-testsuite/Schedules-tab-TS.png" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-schedule-testcase-testsuite/Schedules-tab-TS.png" class="no-border" >}}
 
     Clicking **Schedule test suite** opens the **Select Test Suite** dialog box:
 
-    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-schedule-testcase-testsuite/select-testsuite-dialog.png" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-schedule-testcase-testsuite/select-testsuite-dialog.png" class="no-border" >}}
 
 3. Click the test suite you want to schedule. To search for the test suite, you can use the **Search** button.
 4. Click **Select**. Selecting a test suite opens the **New Schedule** dialog box:
 
-    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-schedule-testcase-testsuite/new-schedule-dialog.png" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-schedule-testcase-testsuite/new-schedule-dialog.png" class="no-border" >}}
 
 5. Set the desired **Schedule Test Settings**:
 
@@ -114,10 +112,11 @@ The following steps explain how to schedule test suites:
 
 8. Click **Save**:
 
-    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-schedule-testcase-testsuite/new-schedule-filled.png" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-schedule-testcase-testsuite/new-schedule-filled.png" class="no-border" >}}
 
-Clicking **Save** adds the test suite to the list of scheduled items. Click the **Edit icon** to change the settings (1). Click the **Delete icon** to delete the scheduled test case(2):
-{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-schedule-testcase-testsuite/scheduled-testsuite-g.png" >}}
+Clicking **Save** adds the test suite to the list of scheduled items. Click **Edit** ({{% icon name="pencil" %}}) to change the settings (1). Click **Delete** ({{% icon name="remove" %}}) to delete the scheduled test case (2):
+
+{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-schedule-testcase-testsuite/scheduled-testsuite-g.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 In case repeat is set to **Yes**, ATS will run the test until you mark it as inactive or remove the repeat settings. An active test is marked green and an inactive test is marked grey. An example can can be seen in the image above.

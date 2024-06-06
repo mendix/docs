@@ -1,7 +1,6 @@
 ---
 title: "Microflow Call"
 url: /refguide9/microflow-call/
-tags: ["studio pro", "microflow call", "call microflow", "action call activities"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -13,7 +12,7 @@ This activity can be used in both **Microflows** and **Nanoflows**.
 
 The **Microflow call** activity can be used to call a [microflow](/refguide9/microflows/). 
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/microflow-call/microflow-call.png" alt="Call Microflow"   width="200"  >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/microflow-call/microflow-call.png" alt="Call Microflow"   width="200"  class="no-border" >}}
 
 Arguments can be passed to the microflow and the result can be stored.
 
@@ -21,7 +20,7 @@ Arguments can be passed to the microflow and the result can be stored.
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/microflow-call/microflow-call-properties.png" alt="Microflow Call Properties" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/microflow-call/microflow-call-properties.png" alt="Microflow Call Properties" class="no-border" >}}
 
 The **Microflow call** properties pane consists of the following sections:
 
@@ -73,7 +72,7 @@ If you want a microflow to call a microflow to run in the background using a tas
 
 1. Check **Execute this microflow in a Task Queue**.
 2. Identify which task queue it should run in in **Select Task Queue**.
-3. (optionally – in Mendix version 9.10.0 and above) Select an automatic retry strategy.
+3. (optionally – in Mendix 9.10.0 and above) Select an automatic retry strategy.
 
 For more information about task queues, see [Task Queue](/refguide9/task-queue/).
 

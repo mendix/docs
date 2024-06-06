@@ -4,7 +4,6 @@ linktitle: "Best Practices for App Performance"
 url: /refguide/community-best-practices-for-app-performance/
 weight: 15
 description: "Describes some best practices to apply during development to get a better performing app. This document is created by and for the Mendix community."
-tags: ["best practice", "performance", "community"]
 aliases:
     - /howtogeneral/bestpractices/best-practices-for-app-performance-in-mendix-7.html
     - /howtogeneral/bestpractices/best-practices-for-app-performance-in-mendix-7
@@ -19,7 +18,7 @@ This document is created by and for the Mendix community. It collects performanc
 
 {{% /alert %}}
 
-A must-have for your app is that it performs well. Your users will not accept anything else, and they will choose alternatives if the performance is not good. This document describes some best practices to apply during development to in order to get a better performing app.
+A must-have for your app is that it performs well. Your users will not accept anything else, and they will choose alternatives if the performance is not good. This document outlines various best practices that should be used throughout development to produce an app that performs better.
 
 To put the best practices in perspective, let us quote some of the giants. First, Einstein's "Everything should be made as simple as possible, but no simpler." And next, programming giant Donald Knuth's "Premature optimization is the root of all evil." Both of these quotes suggest refraining from difficult constructs for the sake of performance unless you really need them and have already investigated simpler alternatives. You might need a load test and good measurement tooling, but that is out of the scope of this document.
 
@@ -81,7 +80,7 @@ Indexes is a topic with a long history of best practices from the database world
     * If loops contain decisions, consider if the decision logic can be a query before the loop to minimize iterations.
 * Prevent unnecessary retrieves if objects or lists can be passed as parameters.
 * Know and use the retrieve + aggregate optimization. If you retrieve a list and count the list, Mendix will optimize this to one query. If you need the list later in the microflow, after some decisions, it is wise to retrieve the list again so that you only retrieve the data when needed. This also works in batches where you can retrieve the total count optimized and retrieve chunks in a separate query.
-* Use the retrieve over association if possible. This uses caching, it is more readable, and it uses an index. If business logic requires the database value (because the value over association might be changed), then of course a database retrieve is needed.
+* Use retrieve over association if possible. This ensures that you have the latest version of your objects, including any changes which are not yet committed which the runtime will [take from memory](/refguide/mendix-client/#object-cache). If business logic requires the database value (because you want to ignore changes to the value over association), then you will need to make a database retrieve.
 * Commit as late as possible. A commit locks that record (or list of records). This means that any other user/logic that wants to commit the same object has to wait until the first transaction is finished.
 * To prevent locking, do scheduled events that commit data in small chunks. This is so the data does not get locked over a longer period of time.
 
@@ -101,7 +100,7 @@ For OQL, many of the same best practices apply as for XPath.
 
 ## 9 Web Services and XML 
 
-* Use SSHA256 instead of BCrypt.
+* Use SSHA256 instead of BCrypt (except for [password hashing](/refguide/app-settings/#hash-algorithm)).
 * Validating against schema slows down the processing.
 * Using sub-transactions for microflows slows down processing.
 

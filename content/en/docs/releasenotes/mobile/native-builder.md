@@ -1,7 +1,7 @@
 ---
 title: "Native Builder"
 url: /releasenotes/mobile/native-builder/
-category: "Mobile"
+
 weight: 11
 description: "Native Builder release notes."
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
@@ -13,10 +13,10 @@ The Native Builder, a CLI tool, has been deprecated in favor of the Mendix Nativ
 
 The [Native Builder](/refguide8/native-builder/) is a command line input tool which helps you build your Mendix native mobile app. After the Native Builder simplifies your build process, you can do what you want most: test and publish your app. The Native Builder uses MxBuild, GitHub, and App Center to simplify the app building process. 
 
-We are heavily invested in streamlining the experience of building your apps and are continuously improving upon the tool's capabilities. For more information on using the Native Builder, see [Deploy Your First Mendix Native Mobile App](/refguide9/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/).
+We are heavily invested in streamlining the experience of building your apps and are continuously improving upon the tool's capabilities. For more information on using the Native Builder, see [Build a Mendix Native App in the Cloud](/refguide9/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/).
 
 {{% alert color="warning" %}}
-Please update to Native Builder v3.2.1 or higher. Version 3.2.1 includes the fixes required to accommodate Github's transition of using **main** instead of **master** for naming the default branch for new repositories. 
+Please update to Native Builder v3.2.1 or higher. Version 3.2.1 includes the fixes required to accommodate GitHub's transition of using **main** instead of **master** for naming the default branch for new repositories. 
 {{% /alert %}}
 
 ## 3.2.2
@@ -63,7 +63,7 @@ Please update to Native Builder v3.2.1 or higher. Version 3.2.1 includes the fix
 
 * A few factors, such as third-party services' stability, might crash the Native Builder with no visible errors. To give you more information during such a crash, we introduced the global `--verbose` argument. If provided, the Native Builder will output an extended stack trace in case of an error.
 * To simplify custom builds we introduced the `bundle` command. With the `bundle` command, you can easily generate a JavaScript bundle without having to go through the whole build process. This command will generate an iOS or an Android JavaScript bundle and all the required assets, then output the bundle to the provided path.
-* As Mendix Studio Pro and the Native Builders mature, we will be introducing new dependencies or requirements that might not fare well with older versions. For this reason we introduced the mandatory `--mendix-version` arguments for the `regenerate` and `prepare` commands. When you provide the Studio Pro version your Mendix project is built with, the Native Builder knows to select the correct version of the Native Template when generating the project. Important to know, is that if an unknown version is provided native builder will use the latest available version for creating the repository. 
+* As Mendix Studio Pro and the Native Builders mature, we will be introducing new dependencies or requirements that might not fare well with older versions. For this reason we introduced the mandatory `--mendix-version` arguments for the `regenerate` and `prepare` commands. When you provide the Studio Pro version your Mendix project is built with, the Native Builder knows to select the correct version of the Native Template when generating the project. It is important to know that if an unknown version is provided, the Native Builder will use the latest available version for creating the repository. 
 
 ### Fixes
 
@@ -113,7 +113,7 @@ Please update to Native Builder v3.2.1 or higher. Version 3.2.1 includes the fix
 
 ### Breaking Changes
 
-* This version only supports Mendix version 8.1.0 and upwards. If you have to stick with Mendix 8.0.0 please consider using Native Builder  v1.0.0.
+* This version only supports Mendix 8.1.0 and above. If you have to stick with Mendix 8.0.0, please consider using Native Builder v1.0.0.
 
 ### Known Issues
 

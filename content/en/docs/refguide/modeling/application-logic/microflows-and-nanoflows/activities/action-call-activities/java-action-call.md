@@ -2,12 +2,11 @@
 title: "Java Action Call"
 url: /refguide/java-action-call/
 weight: 10
-tags: ["studio pro", "Java", "java action call", "action call"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="warning" %}}
-This activity can only be used in **Microflows**.
+{{% alert color="info" %}}
+This activity can only be used in microflows.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -18,7 +17,7 @@ The **Java action call** activity can be used to call a [Java action](/refguide/
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/java-action-call/java-action-call-properties.png" alt="Java Action Call Properties" width="700px" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/java-action-call/java-action-call-properties.png" alt="Java Action Call Properties" max-width=80% class="no-border" >}}
 
 The **Java action call** properties pane consists of the following sections:
 
@@ -31,7 +30,7 @@ The **Action** section of the properties pane shows the action associated with t
 
 You can open a dialog box to configure this action by clicking the ellipsis (**…**) next to the action.
 
-You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
+You can also open the dialog box by double-clicking the activity, or right-clicking the activity and selecting **Properties**.
 
 ### 3.1 Java Action
 
@@ -45,7 +44,7 @@ An argument is the input data that you are passing to the Java action. For each 
 
 The values of the arguments are defined using [expressions](/refguide/expressions/):
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/java-action-call/argument-edit.png" alt="argument" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/java-action-call/argument-edit.png" alt="argument" class="no-border" >}}
 
 ### 3.3 Return Type
 

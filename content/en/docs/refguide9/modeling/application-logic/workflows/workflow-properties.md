@@ -2,7 +2,6 @@
 title: "Workflow Properties"
 url: /refguide9/workflow-properties/
 weight: 10
-tags: ["workflow", "workflows", "workflow properties", "Studio Pro"]
 ---
 
 ## 1 Introduction
@@ -44,7 +43,7 @@ You cannot change the **Name** of the workflow but you can change the [Caption](
 
 **Workflow name** is stored in the System module on the **Workflow** entity as an attribute and its data can be dynamically displayed in the running app. If you are using the **Workflow Commons** module, the **Workflow name** is used on preconfigured pages: the Admin Center and Workflow Admin page. 
 
-The **Workflow name** can contain parameters that are written between braces, e.g. {1}.
+The **Workflow name** can contain parameters that are written between braces, for example, {1}.
 
 For more information on using parameters, see the [Parameters](#parameters) section below.
 
@@ -52,7 +51,7 @@ For more information on using parameters, see the [Parameters](#parameters) sect
 
 **Workflow description** is stored in the System module on the **Workflow** entity as an attribute and its data can be dynamically displayed in the running app. If you are using the **Workflow Commons** module, the **Workflow description** is used in page templates. 
 
-The **Workflow description** can contain parameters that are written between braces, e.g. {1}.
+The **Workflow description** can contain parameters that are written between braces, for example, {1}.
 
 #### 2.3.3 Parameters {#parameters}
 
@@ -73,13 +72,13 @@ To add a parameter to the **Workflow name** or the **Workflow description**, do 
 2. In the **Edit workflow name** dialog box > **Parameters** section, click the **New** button. 
 3. In the **Template Parameter (String)** dialog box, specify the expression, and confirm your choice. 
 
-    {{< figure src="/attachments/refguide9/modeling/application-logic/workflows/workflow-properties/specifying-attribute.png" alt="Specifying the Attribute" >}}
+    {{< figure src="/attachments/refguide9/modeling/application-logic/workflows/workflow-properties/specifying-attribute.png" alt="Specifying the Attribute" class="no-border" >}}
 
     {{% alert color="info" %}}Make sure that the attribute you use in the expression is of the string type.{{% /alert %}}
 
 4. In the **Template** setting, write the text you would like to display and type **Index** of the parameter you would like to include. In the example below, to include a full name of the new hire being onboarded, you need to use {1} index:
 
-    {{< figure src="/attachments/refguide9/modeling/application-logic/workflows/workflow-properties/edit-workflow-name.png" alt="Edit Workflow Name Dialog Box" >}}
+    {{< figure src="/attachments/refguide9/modeling/application-logic/workflows/workflow-properties/edit-workflow-name.png" alt="Edit Workflow Name Dialog Box" class="no-border" >}}
 
 ##### 2.3.3.2 Performing Other Actions on Parameters
 

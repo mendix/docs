@@ -3,7 +3,6 @@ title: "Debugging Native Apps"
 url: /refguide/mobile/distributing-mobile-apps/native-debug/
 weight: 40
 description: "A guide for debugging native mobile apps using the Make It Native app."
-tags: ["debug", "testing"]
 aliases:
     - /howto/mobile/native-debug/
 ---
@@ -29,15 +28,15 @@ When the Make It Native app finishes loading your app, do the following:
 
 Your mobile app should start reloading, and a Chrome window should launch on your desktop pointing to a debugging address. Change the address in your browser's navigation bar to *localhost:8083/debugger-ui* manually and go to that page.
 
-If Chrome launches but does not load your app, check that your app is running in Mendix Studio Pro. If it is, click the **Stop** button, then click the play button (**Run Locally**) again to restart your app. 
+If Chrome launches but does not load your app, check that your app is running in Mendix Studio Pro. If it is, click **Stop** ({{% icon name="controls-stop" %}}), then click **Run Locally** ({{% icon name="controls-play" %}}) again to restart your app. 
 
 You should see this page:
 
-{{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-debug/debug-waiting.png" alt="debug waiting" >}}
+{{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-debug/debug-waiting.png" alt="debug waiting" class="no-border" >}}
 
 If the status remains at **Waiting**, use the reload command (pictured above) to refresh your app. The **Waiting** status should change and indicate an **active** session:
 
-{{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-debug/debug-active.png" alt="debug active" >}}
+{{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-debug/debug-active.png" alt="debug active" class="no-border" >}}
 
 Your browser's debugging tools should be pointing to your app. Now, you can debug your app like you would any other web app. 
 
@@ -47,7 +46,7 @@ Other tools can help you debug Mendix apps, such as the [Using React Developer T
 
 React Developer Tools is [an app](https://github.com/facebook/react/tree/main/packages/react-devtools) which will allow you to see investigate the way your native page is rendering, adjust things like spacing in a live editor, and inspect the state and props of your pluggable and native widgets. To proceed, you must also have [Node and NPM](https://nodejs.org/en/download/) installed.
 
-You can consult Facebook's [official documentation](https://reactnative.dev/docs/debugging) for extra information, but this document will teach you the basics of using React Developer Tools. 
+You can consult Facebook's [official documentation](https://reactnative.dev/docs/debugging) for extra information, but this document teaches you the basics of using React Developer Tools. 
 
 To install React Developer Tools, do the following:
 
@@ -61,7 +60,7 @@ Open your native app in iOS Simulator or Android emulator and then do the follow
 2. Run `npx react-devtools@^3`.
 3. React Developer Tools will launch and connect to Simulator. You can now inspect and modify the React Native elements the same way you could modify HTML elements in Chrome:
 
-    {{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-debug/simulator-rn-dev.png" alt="debug simulator"   width="350"  >}}
+    {{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-debug/simulator-rn-dev.png" alt="debug simulator"   width="350"  class="no-border" >}}
 
 4. In the Make It Native App, use a three-finger tap to **Toggle Element Inspector** and enable enhanced inspection capabilities.
 
@@ -76,7 +75,7 @@ To use the Make It Native app with React Developer Tools, do the following:
 5. Run `npx react-devtools@^3`.
 6. React Developer Tools will launch and connect to your device. You can now inspect and modify the React Native elements the same way you could modify HTML elements in Chrome:
 
-    {{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-debug/min-app-rn-devtools.png" alt="debug min app"   width="350"  >}}
+    {{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-debug/min-app-rn-devtools.png" alt="debug min app"   width="350"  class="no-border" >}}
 
 ## 3 Debugging Your Styling
 

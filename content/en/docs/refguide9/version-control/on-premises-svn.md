@@ -4,7 +4,6 @@ linktitle: "SVN On-Premises Version Control Server"
 url: /refguide9/on-premises-svn/
 weight: 50
 description: "Introduces how to work with SVN on-premises version control server."
-tags: ["on-premises", "svn", "version control"]
 aliases:
     - /howto9/collaboration-requirements-management/on-premises-svn-howto/
 ---
@@ -32,9 +31,9 @@ Subversion uses repositories for storing all the data of your version-controlled
 
 Mendix requires you to store each Mendix application in a separate repository. It is not possible to place multiple Mendix apps into a single repository.
 
-When uploading an app to a repository, Mendix requires the repository to be empty (except for the recommended SVN layout, as described in [Recommended Repository Layout](http://svnbook.red-bean.com/en/1.7/svn.tour.importing.html#svn.tour.importing.layout)). Specifically, this means that the repository should contain only three empty folders, called **branches**, **tags**, and **trunk**.
+When uploading an app to a repository, Mendix requires the repository to be empty (except for the recommended SVN layout, as described in [Recommended Repository Layout](https://svnbook.red-bean.com/en/1.7/svn.tour.importing.html#svn.tour.importing.layout)). Specifically, this means that the repository should contain only three empty folders, called **branches**, **tags**, and **trunk**.
 
-Usually, repositories are created and maintained by the administrator of your SVN server. For more details about repositories, see [Repository Administration](http://svnbook.red-bean.com/en/1.7/svn-book.html#svn.reposadmin).
+Usually, repositories are created and maintained by the administrator of your SVN server. For more details about repositories, see [Repository Administration](https://svnbook.red-bean.com/en/1.7/svn-book.html#svn.reposadmin).
 
 In the following sections of this document, it is assumed that you have a repository available for your application.
 
@@ -45,7 +44,7 @@ Mendix Studio Pro has a (built-in) Subversion client that uses version 1.9 of th
 {{% alert color="warning" %}}
 Mendix Studio Pro uses the Subversion 1.9 working copy. Previous versions of the Mendix Desktop Modeler used a Subversion 1.7 working copy. These working copy versions are NOT compatible.
 
-This means that, if you use a separate SVN client (for example [TortoiseSVN](https://tortoisesvn.net/)) to work on your Mendix app, you must always use the version which matches your app model. If you open a local model from Mendix version 7.x with the latest version of TortoiseSVN, **you will no longer be able to open it in Mendix**.
+This means that, if you use a separate SVN client (for example [TortoiseSVN](https://tortoisesvn.net/)) to work on your Mendix app, you must always use the version which matches your app model. If you open a local model from Mendix 7.x with the latest version of TortoiseSVN, **you will no longer be able to open it in Mendix**.
 {{% /alert %}}
 
 ## 5 Creating a New App to Store in an On-Premises SVN Server

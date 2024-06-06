@@ -92,7 +92,7 @@ We have decided to retract version 5.0.11 after we received reports that apps wo
 
 ### Disclaimer
 
-* Native Template v5.0.5 applies to apps built using Studio Pro v8.12.1 - 8.14.x.
+* Native Template v5.0.5 applies to apps built using Studio Pro 8.12.1 - 8.14.x.
 
 ### Improvements
 

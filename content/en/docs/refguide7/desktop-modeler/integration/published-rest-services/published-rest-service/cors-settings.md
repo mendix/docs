@@ -3,14 +3,13 @@ title: "CORS Settings for Published REST Services"
 url: /refguide7/cors-settings/
 weight: 60
 description: "Additional options for controlling access to a published REST service"
-tags: ["CORS", "security", "origin", "domain", "access"]
 # If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 # linked from DM: published rest > Enable CORS > Settings > Help (integration)
 ---
 
 {{% alert color="info" %}}
 
-The CORS settings feature was introduced in Mendix version 7.18.0.
+The CORS settings feature was introduced in Mendix 7.18.0.
 
 {{% /alert %}}
 

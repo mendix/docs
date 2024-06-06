@@ -1,8 +1,7 @@
 ---
 title: "Domain Model"
 url: /refguide7/domain-model/
-category: "Desktop Modeler"
-tags: ["domain model", "entity", "association", "annotation"]
+
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -11,7 +10,7 @@ The domain model is a data model that describes the information in your applicat
 
 Here is a domain model that defines customers and orders. The line between them is an association. The words 'Customer' and 'Order' are the names of the entities. The words below the entity names are the attributes of the entities.
 
-{{< figure src="/attachments/refguide7/desktop-modeler/domain-model/917531.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/domain-model/917531.png" class="no-border" >}}
 
 ## Components
 
@@ -25,7 +24,7 @@ In the database every entity is stored in one separate table and has columns for
 
 Take a look at the following domain model.
 
-{{< figure src="/attachments/refguide7/desktop-modeler/domain-model/917890.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/domain-model/917890.png" class="no-border" >}}
 
 The entity 'Customer' is stored in the table 'module$customer' which is shown below. Take note of the 'system$owner' and 'system$changedby' columns which contain the IDs of the 'User' objects from the 'System' module.
 

@@ -1,9 +1,8 @@
 ---
 title: "Community Commons"
 url: /appstore/modules/community-commons-function-library/
-category: "Modules"
+
 description: "Describes the configuration and usage of the Community Commons Function Library module, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "community commons function library", "community commons", "java action call", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -115,6 +114,7 @@ The module contains one constant: `CommunityCommons.MergeMultiplePdfs_MaxAtOnce`
 * `Base64Decode` – This converts a base-64 encoded string to the plain original string.
 * `XSSSanitize` – This removes all the potentially dangerous HTML from a string so that it can be safely displayed in a browser. This function should be applied to all HTML, which is displayed in the browser and can be entered by (untrusted) users.
 * `RandomStrongPassword` – This returns a random strong password containing a specified minimum number of digits, upper-case characters, and special characters.
+* `RandomStrongPasswordWithLowercase` – This returns a random strong password containing a specified minimum number of digits, upper-case characters, lower-case characters, and special characters.
 * `EncryptString` – This decrypts an AES-encrypted string. The key length should exactly be 16 characters (128 bit).
 * `DecryptString` – This applies AES encryption to the value string using a symmetric key. The keylength should be exactly 16 characters (at 128 bit).
 * `GenerateHMAC_SHA256_hash` – This generates a base-64 encoded asymmetric hash using the `HMAC_SHA256` hash algorithm.
@@ -128,7 +128,7 @@ The module contains one constant: `CommunityCommons.MergeMultiplePdfs_MaxAtOnce`
 
 ### 4.1 Deprecated Function Removal
 
-The `RegexTest` function had been deprecated, because you could use the `isMatch()` function in microflow expressions instead. In version 8.0.1 of this module, this function was removed.
+⚠ The `RegexTest` function had been deprecated, because you could use the `isMatch()` function in microflow expressions instead. In version 8.0.1 of this module, this function was removed.
 
 ### 4.2 Deleting Obsolete Dependencies First
 

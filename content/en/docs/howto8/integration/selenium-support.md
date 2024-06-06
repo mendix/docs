@@ -1,16 +1,15 @@
 ---
 title: "Configure Selenium Support"
 url: /howto8/integration/selenium-support/
-category: "Integration"
+
 weight: 16
-tags: ["selenium", "integration"]
 ---
 
 ## 1 Introduction
 
 Mendix uses CSS classes to identify page content like widgets and pop-up windows. You can use these classes in Selenium to manipulate pages and verify data.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Use naming conventions
 * Avoid pitfalls
@@ -35,7 +34,7 @@ Every widget has a unique class name, which means that you can use the name on i
 
 Some actions done by Selenium take time to complete, for example, animations or requesting data for a pop-up window. When clicking a search button in a grid, the search bar appears using an animation. This means that after clicking the button, the test needs to wait for the animation to complete before continuing.
 
-For more information, see the [Webdriver: Advanced Usage](http://docs.seleniumhq.org/docs/04_webdriver_advanced.jsp).
+For more information, see the WebDriver documentation on [Waiting Strategies](https://www.selenium.dev/documentation/webdriver/waits/).
 
 ## 4 Examples
 

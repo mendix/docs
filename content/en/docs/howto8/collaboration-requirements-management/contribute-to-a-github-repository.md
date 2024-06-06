@@ -1,9 +1,8 @@
 ---
 title: "Contribute to a Mendix GitHub Repository"
 url: /howto8/collaboration-requirements-management/contribute-to-a-github-repository/
-category: "Collaboration"
+
 weight: 20
-tags: ["GitHub"]
 aliases:
     - /howto8/collaboration-project-management/contribute-to-a-github-repository.html
     - /howto8/collaboration-project-management/contribute-to-a-github-repository
@@ -13,7 +12,7 @@ aliases:
 
 We like to work with our community, and we encourage you to create and contribute using pull requests!
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Contribute to a Mendix GitHub Repository according to Mendix guidelines
 
@@ -49,7 +48,6 @@ To submit changes, follow these guidelines:
 
 ## 5 Read More
 
-* [Stories](/developerportal/project-management/stories/)
 * [Start Your Own Repository](/howto8/collaboration-requirements-management/starting-your-own-repository/)
 * [Version Control](/refguide8/version-control/)
 * [Share the Development Database](/howto8/collaboration-requirements-management/sharing-the-development-database/)

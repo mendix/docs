@@ -1,15 +1,10 @@
 ---
 title: "XPath"
 url: /refguide8/xpath/
-category: "App Modeling"
+
 weight: 90
 description: "Describes how the XPath query language is used in Mendix by presenting functions and examples."
-tags: ["studio pro"]
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/xpath.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 
@@ -84,4 +79,4 @@ The following XPath functions are available:
 
 **How to find the right path to XPath**
 
-{{% youtube sdabUY-w4ZU %}}
+{{< youtube sdabUY-w4ZU >}}

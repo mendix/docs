@@ -4,7 +4,6 @@ linktitle: "Run Docker Image"
 url: /developerportal/deploy/run-mendix-docker-image/
 weight: 10
 description: "Describes running a Mendix Docker image."
-tags: ["Docker", "Cloud", "container", "CI/CD"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
@@ -14,7 +13,7 @@ Docker is an open source container technology that is used broadly in the market
 
 This how-to explains how to run a Mendix Docker image created using the Mendix Docker Buildpack. A Mendix Docker image is uniquely created for each release of a project using this buildpack. To run the Docker image, you need access to a Docker orchestration platform. See [System Requirements](/refguide/system-requirements/) for official supported orchestration platforms. 
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Check for compatibility
 * Run the Mendix Docker image

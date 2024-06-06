@@ -2,14 +2,13 @@
 title: "Parallel Split"
 url: /refguide9/parallel-split/
 weight: 50
-tags: ["workflow", "workflows", "parallel split", "Studio Pro"]
 ---
 
 ## 1 Introduction
 
 The parallel split is used to have parallel processes in your workflow. For example, when onboarding a new employee, you can have several processes running in parallel: the HR preparing necessary documents, the IT department preparing a workstation, and the Administration department scheduling a training for the employee:
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/workflows/workflow-elements/parallel-split/parallel-split.jpg" alt="Parallel Split Example" width="400" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/workflows/workflow-elements/parallel-split/parallel-split.jpg" alt="Parallel Split Example" width="400" class="no-border" >}}
 
 {{% alert color="info" %}}
 The workflow needs to complete all paths of the parallel split before it can continue to the next activity.

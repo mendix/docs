@@ -2,12 +2,11 @@
 title: "Set Up a Local Selenoid Hub"
 url: /appstore/partner-solutions/ats/ht-two-setup-local-selenoid-hub/
 description: "Describes how to set up a local selenoid hub."
-tags: ["ATS", "testing", "Selenium hub"]
 ---
 
 ## 1 Introduction
 
-This how-to shows you an example of a simple setup of a Selenoid hub with a Chrome and Firefox node on a Linux machine with docker. This works on a Windows machine with docker as well, but the commands and configuration could be different. For the official project go to: [https://github.com/aerokube/selenoid](https://github.com/aerokube/selenoid). For the official documentation go to: [http://aerokube.com/selenoid/latest/](http://aerokube.com/selenoid/latest/).
+This how-to shows you an example of a simple setup of a Selenoid hub with a Chrome and Firefox node on a Linux machine with docker. This works on a Windows machine with docker as well, but the commands and configuration could be different. For the official project, go to [https://github.com/aerokube/selenoid](https://github.com/aerokube/selenoid). For the official documentation, go to [https://aerokube.com/selenoid/latest/](https://aerokube.com/selenoid/latest/).
 
 It is possible to run Selenoid without Docker, but that is outside of the scope of this how-to. Please check out the official documentation if you would like to achieve this.
 
@@ -122,12 +121,12 @@ In case you want to record your test case as a video follow these steps:
 
 1. Add a Custom Capability to your Selenium hub configuration: **enableVideo** with a Boolean set to **true**
 
-    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-setup-local-selenium-index/ht-two-setup-local-selenoid-hub/add_capability.png" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-setup-local-selenium-index/ht-two-setup-local-selenoid-hub/add_capability.png" class="no-border" >}}
 
 2. Once the test case finishes you can find your video in: `http://yourmachinenameorIP:4444/video`. The video shows as "session-id.mp4"
 3. (Optional:) You can give the video file a custom name by adding another Custom Capability: **VideoName** with a string, for example **MyTestVideo.mp4** (don't forget the .mp4!)
 
-    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-setup-local-selenium-index/ht-two-setup-local-selenoid-hub/video_name.png" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-setup-local-selenium-index/ht-two-setup-local-selenoid-hub/video_name.png" class="no-border" >}}
 
 After executing the test case, don't forget to download the video file or give it a different name in the next session, otherwise it is overwritten!
 
@@ -220,14 +219,14 @@ To install a hub with a Portal for "Live-View" you need a different *browsers.js
 5. You can visit your portal on [http://yourmachinenameorIP:8080](http://localhost:8080)
 6. To enable "Live-View" you need to add another Custom Capability to your Selenium hub configuration: **enableVNC** with Boolean set to **true**
 
-    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-setup-local-selenium-index/ht-two-setup-local-selenoid-hub/enable_vnc.png" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-setup-local-selenium-index/ht-two-setup-local-selenoid-hub/enable_vnc.png" class="no-border" >}}
 
 7. After starting your test case you can view your session in the portal:
 
-    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-setup-local-selenium-index/ht-two-setup-local-selenoid-hub/selenoidui1.png" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-setup-local-selenium-index/ht-two-setup-local-selenoid-hub/selenoidui1.png" class="no-border" >}}
 
 8. By clicking on your session, you will be able to see your live view:
 
-    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-setup-local-selenium-index/ht-two-setup-local-selenoid-hub/selenoidui2.png" >}}
+    {{< figure src="/attachments/appstore/partner-solutions/ats/ht/v2/ht-two-setup-local-selenium-index/ht-two-setup-local-selenoid-hub/selenoidui2.png" class="no-border" >}}
 
 Congratulations you have finished setting up a local Selenoid hub. The next how-to is  [Use ATS in Combination with CI/CD](/appstore/partner-solutions/ats/ht-two-ats-and-ci-cd/). You find an overview of all the how-tos and the structure on the [ATS 2 How-tos](/appstore/partner-solutions/ats/ht-two/) page. We advise you to follow the predefined structure.

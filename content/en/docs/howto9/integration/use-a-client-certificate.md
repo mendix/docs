@@ -1,9 +1,8 @@
 ---
 title: "Use a Client Certificate"
 url: /howto9/integration/use-a-client-certificate/
-category: "Integration"
+
 description: "Describes how to configure your app to authenticate using a client certificate."
-tags: ["integration", "web service", "client certificate"]
 
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team (buildpack) know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -14,7 +13,7 @@ Some services require you to authenticate using a client certificate. This how-t
 
 Let's assume that you already have an app that calls a service. For details on how to configure this, have a look at [How to Consume a REST Service](/howto9/integration/consume-a-rest-service/) or [How to Consume a Simple Web Service](/howto9/integration/consume-a-simple-web-service/).
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Configure to run locally
 * Configure in the Mendix Cloud
@@ -46,7 +45,7 @@ This is an example:
 
 A complete configuration may look like this:
 
-{{< figure src="/attachments/howto9/integration/use-a-client-certificate/example-custom-settings.png" >}}
+{{< figure src="/attachments/howto9/integration/use-a-client-certificate/example-custom-settings.png" class="no-border" >}}
 
 You can use an empty path for `ClientCertificateUsages` to specify that you do not want to use a client certificate, even when the server accepts one. To do this, you need to add the **Value** `{"<endpoint>":""}` (replace `<endpoint>` with the actual endpoint).
 
@@ -69,7 +68,7 @@ You will only be able to follow the steps below if you have the correct access r
 To configure client certificates in the Mendix Cloud, follow these steps:
 
 1. Go to the [Mendix Developer Portal](https://home.mendix.com/) and go to the **Environments** page for your app.
-2. Each environment has its own configuration. Click **Details** next one of the environments.
+2. Each environment has its own configuration. Click **Details** next to one of the environments.
 3. Click **Network** and scroll down to **Certificates for outgoing connections**.
 4. Click **Add client certificate**. Upload the certificate files.
 5. Only follow these steps if you are using more than one client certificate in your app:

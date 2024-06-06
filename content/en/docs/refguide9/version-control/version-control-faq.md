@@ -1,7 +1,6 @@
 ---
 title: "Version Control FAQ"
 url: /refguide9/version-control-faq/
-
 weight: 30
 description: "Presents and explains several frequently asked questions about version control."
 ---

@@ -1,7 +1,6 @@
 ---
 title: "Use the Charts Widgets"
 url: /howto8/front-end/charts-tutorials/
-
 weight: 20
 description: "These how-to's will guide you in using charts in Mendix apps."
 ---

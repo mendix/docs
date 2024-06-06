@@ -1,7 +1,6 @@
 ---
 title: "Data Importer"
 url: /appstore/modules/data-importer/
-
 description: "Overview of the Data Importer in Studio Pro"
 aliases:
     -  /appstore/modules/data-importer-extension/

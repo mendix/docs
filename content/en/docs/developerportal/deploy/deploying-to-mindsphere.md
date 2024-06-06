@@ -1,7 +1,6 @@
 ---
 title: "Siemens Insights Hub"
 url: /developerportal/deploy/deploying-to-mindsphere/
-
 weight: 42
 description: "Describes how to deploy to Siemens Insights Hub by registering it with the Insights Hub Gateway and integrating it into the Insights Hub Launchpad."
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.

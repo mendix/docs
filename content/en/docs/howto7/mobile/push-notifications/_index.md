@@ -1,7 +1,6 @@
 ---
 title: "Include Push Notifications"
 url: /howto7/mobile/push-notifications/
-
 weight: 10
 no_list: false
 description_list: true 

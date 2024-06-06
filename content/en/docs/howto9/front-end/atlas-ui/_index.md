@@ -1,7 +1,6 @@
 ---
 title: "UI Design"
 url: /howto9/front-end/atlas-ui/
-
 weight: 5
 description: "Presents a list of how-tos to guide you to create customized applications using Atlas UI."
 ---

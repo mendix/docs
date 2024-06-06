@@ -1,7 +1,6 @@
 ---
 title: "Team Server"
 url: /developerportal/general/team-server/
-
 weight: 12
 description: "Describes the overview of Team Server revisions and commits."
 aliases:

@@ -2,7 +2,6 @@
 title: "Filter Data on an Overview Page Using XPath"
 linktitle: "Filter Data Using XPath"
 url: /howto8/logic-business-rules/filtering-data-on-an-overview-page/
-
 ---
 
 ## 1 Introduction

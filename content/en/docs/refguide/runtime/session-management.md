@@ -1,7 +1,6 @@
 ---
 title: "Session Management"
 url: /refguide/session-management/
-
 description: "Describes how sessions are established and managed."
 weight: 35
 ---

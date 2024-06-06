@@ -2,7 +2,6 @@
 title: "Implement SSO on a Hybrid App with Mendix and SAML"
 linktitle: "SSO on Hybrid App with SAML"
 url: /howto7/mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/
-
 weight: 30
 description: "Describes how to address the challenges of implementing SSO in hybrid mobile apps."
 ---

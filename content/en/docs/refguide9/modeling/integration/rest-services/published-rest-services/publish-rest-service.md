@@ -1,7 +1,6 @@
 ---
 title: "Publish a REST Service"
 url: /refguide9/integration/publish-rest-service/
-
 weight: 10
 description: "Describes how to create a published REST service and return the results in JSON or XML."
 aliases:

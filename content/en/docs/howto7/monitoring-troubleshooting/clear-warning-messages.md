@@ -1,7 +1,6 @@
 ---
 title: "Clear Warning Messages"
 url: /howto7/monitoring-troubleshooting/clear-warning-messages/
-
 weight: 1
 ---
 

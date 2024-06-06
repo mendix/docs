@@ -1,7 +1,6 @@
 ---
 title: "SBOM Generation"
 url: /refguide/sbom-generation/
-category: "General Info"
 weight: 60
 description: "Describes how to create an SBOM from Studio Pro."
 ---

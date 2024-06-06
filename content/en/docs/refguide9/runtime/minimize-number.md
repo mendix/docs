@@ -2,7 +2,6 @@
 title: "Minimizing the Number of In-Use Objects in Your Session"
 linktitle: "Minimizing Objects in Session"
 url: /refguide9/minimize-number/
-
 weight: 60
 description: "Describes various ways to reduce the number of in-use objects."
 ---

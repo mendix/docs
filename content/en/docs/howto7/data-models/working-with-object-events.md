@@ -1,7 +1,6 @@
 ---
 title: "Work with Object Events"
 url: /howto7/data-models/working-with-object-events/
-
 weight: 3
 #To update screenshots of these microflows in the Desktop Modeler, use the Microflow Screenshots app.
 ---

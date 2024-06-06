@@ -32,7 +32,7 @@ A full clone is the default behavior for Git. This downloads a full copy of the 
 
 ### 2.2 Partial clone
 
-The terminology 'partial clone' is used for various different types of cloning. In Studio Pro we specifically use a 'blobless clone'. When downloading the metadata of the full commit history will be downloaded, without the contents itself. 
+The terminology 'partial clone' is used for various different types of cloning. In Studio Pro we specifically use a 'blobless clone'. When performing a blobless clone, the metadata of the full commit history is downloaded without the actual file contents.
 
 {{% alert color="info" %}}
 In this case Studio Pro can see an image was changed in multiple commits, but you can't load an older version of the image without an internet connection, which is possible with a full clone.

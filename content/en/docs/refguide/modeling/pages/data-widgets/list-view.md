@@ -2,7 +2,6 @@
 title: "List View"
 url: /refguide/list-view/
 weight: 30
-tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -10,7 +9,7 @@ tags: ["studio pro"]
 
 A list view shows a list of objects. For example, you can display a list of all profiles:
 
-{{< figure src="/attachments/refguide/modeling/pages/data-widgets/list-view/list-view-example-profile.png" >}} 
+{{< figure src="/attachments/refguide/modeling/pages/data-widgets/list-view/list-view-example-profile.png" class="no-border" >}} 
 
 Each object is shown using a template. This template is defined by placing widgets inside the list view's drop-zone. The list of objects shown is determined by a [data source](#data-source).
 
@@ -24,7 +23,7 @@ To address this issue, you can use the repeater widget from [Native Mobile Resou
 
 An example of list view properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/pages/data-widgets/list-view/list-view-properties.png"   width="250"  >}}
+{{< figure src="/attachments/refguide/modeling/pages/data-widgets/list-view/list-view-properties.png"   width="250"  class="no-border" >}}
 
 List view properties consist of the following sections:
 
@@ -37,9 +36,13 @@ List view properties consist of the following sections:
 
 ### 2.1 Common Section {#common}
 
+The rows of the list view can be sorted using the `Sort order` property. It is only available for **Database** [data sources](#data-source). For more information on sorting, see [Sort Order](/refguide/sort-order/).
+
+To specify which attributes to use when searching, configure the search attributes property. It is only available for **Database** [data sources](#data-source).
+
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
-### 2.2. Data Source Section {#data-source}
+### 2.2 Data Source Section {#data-source}
 
 The data source determines which objects will be shown in a list view. For general information on data sources, see [Data Sources](/refguide/data-sources/).
 
@@ -49,11 +52,14 @@ The list view supports the following types of data sources:
 
 * [Database source](/refguide/database-source/) – objects are retrieved directly form the database. The database source can be used in [offline](/refguide/offline-first/) applications. 
 * [XPath source](/refguide/xpath-source/) – objects are retrieved directly form the database
+{{% alert color="info" %}}
+From Mendix version 10.5, the list view does not have a separate XPath source, you can apply XPath constraints to the **Database** source.
+{{% /alert %}}
 * [Microflow source](/refguide/microflow-source/) – calculates the list of objects by executing a microflow
 * [Nanoflow source](/refguide/nanoflow-source/) – calculates the list of objects by executing a nanoflow
 * [Association source](/refguide/association-source/) – follows an association to get to objects
 
-The database and XPath sources retrieve objects from the database and supports searching and sorting. 
+The database and, below version 10.5, XPath sources retrieve objects from the database and supports searching and sorting. 
 
 {{% alert color="warning" %}}Searching is not supported on native mobile pages.{{% /alert %}}
 
@@ -73,7 +79,7 @@ An on-click event defines what action is performed when a user clicks a list vie
 
 #### 2.4.3 Page Size {#page-size}
 
-the number of rows displayed on the page; after the indicated limit is reached, the **Load more...** button is displayed on the page.
+The number of rows displayed on the page; after the indicated limit is reached, the **Load more...** button is displayed on the page.
 
 {{% alert color="info" %}}The **Load more** button is not visible on native mobile pages. The list view will automatically load new items, when the last of the currently loaded items is shown.{{% /alert %}}
 

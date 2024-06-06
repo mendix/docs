@@ -2,11 +2,10 @@
 title: "Rollback Object"
 url: /refguide/rollback-object/
 weight: 70
-tags: ["studio pro", "rollback object", "activity"]
 ---
 
-{{% alert color="warning" %}}
-This activity can be used in both **Microflows** and **Nanoflows**.
+{{% alert color="info" %}}
+This activity can be used in both microflows and nanoflows.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -21,7 +20,7 @@ When the rollback object activity is performed in a sub-microflow, it rolls back
 
 An example of rollback object properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/rollback-object/rollback-properties.png" alt="rollback object properties" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/rollback-object/rollback-properties.png" alt="rollback object properties" width="650px" class="no-border" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
@@ -36,7 +35,7 @@ The **Action** section of the properties pane shows the action associated with t
 
 You can open a dialog box to configure this action by clicking the ellipsis (**…**) next to the action.
 
-You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
+You can also open the dialog box by double-clicking the activity, or right-clicking the activity and selecting **Properties**.
 
 ### 3.1 Object
 
@@ -62,9 +61,9 @@ If **Refresh in client** is set to **No**, the rollback is not reflected in the 
 
 If set to **Yes**, the object is refreshed across the client, which includes reloading the relevant [data sources](/refguide/data-sources/).
 
-#### 3.2.2 Microflow Is Called in an Offline, Native, or Hybrid App
+#### 3.2.2 Microflow Is Called in an Offline or Native App
 
-When inside a microflow that is called from an offline, native, or hybrid app, the **Refresh in client** option is ignored and functions as if it was set to **No**.
+When inside a microflow that is called from an offline or native app, the **Refresh in client** option is ignored and functions as if it was set to **No**.
 
 For more information, see the [Microflows](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/best-practices/#microflows) section of Offline-First Data.
 
@@ -96,8 +95,8 @@ Pressing a **Cancel** button or triggering a rollback object activity will initi
 * Result:
     * An object with the state **Instantiated** will be removed, and an object with any other state will be reverted back to the values it had during the last commit
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/rollback-object/during-rollback.png" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/rollback-object/during-rollback.png" class="no-border" >}}
 
-{{% alert color="info" %}}
+{{% alert color="warning" %}}
 The **Committing** state of the **IMendixObject** is deprecated since Mendix Studio Pro 7.16.
 {{% /alert %}}

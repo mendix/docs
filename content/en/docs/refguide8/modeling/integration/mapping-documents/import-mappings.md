@@ -1,13 +1,8 @@
 ---
 title: "Import Mappings"
 url: /refguide8/import-mappings/
-tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/import-mappings.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 
@@ -17,7 +12,7 @@ For an introduction to import mappings, refer to [Mapping Documents](/refguide8/
 
 Figure 1 depicts an example of an Import Mapping document in which two elements from an XML Schema have been selected using the **Select elements...** dialog. Following this the ReceivedPartners and ReceivedClient entities were added, and mapped to the Result and Client schema elements. Each time the Import Mapping is invoked, a new ReceivedPartners object is created.
 
-{{< figure src="/attachments/refguide8/modeling/integration/mapping-documents/import-mappings/16843942.png" >}}
+{{< figure src="/attachments/refguide8/modeling/integration/mapping-documents/import-mappings/16843942.png" class="no-border" >}}
 
 **Figure 1**
 
@@ -25,7 +20,7 @@ Figure 1 depicts an example of an Import Mapping document in which two elements 
 
 For each XML or JSON object, a Mendix object needs to be obtained. You can create one or you can find an existing object in the database. Alternatively, you can use a custom microflow that returns an object. You can see how a Mendix object is obtained in the window depicted in figure 2, which is shown after double clicking a specific mapping element.
 
-{{< figure src="/attachments/refguide8/modeling/integration/mapping-documents/import-mappings/16843943.png" >}}
+{{< figure src="/attachments/refguide8/modeling/integration/mapping-documents/import-mappings/16843943.png" class="no-border" >}}
 
 **Figure 2**
 
@@ -43,7 +38,7 @@ For each XML or JSON object, a Mendix object needs to be obtained. You can creat
 
 This is the action that the runtime will perform when an error occurred in the specified **Obtain Mendix Object** action.
 
-{{< figure src="/attachments/refguide8/modeling/integration/mapping-documents/import-mappings/no-object-found.png" >}}
+{{< figure src="/attachments/refguide8/modeling/integration/mapping-documents/import-mappings/no-object-found.png" class="no-border" >}}
 
 | Property | Description |
 | --- | --- |
@@ -67,13 +62,13 @@ Be aware that lists are not stored ordered in the Mendix database. XML Schema ca
 
 Each selected XML or JSON element needs to be mapped to an attribute in the domain entity. If you don't want to map certain elements, simply uncheck them in the **Select elements...** dialog box. Configuring how to map the attributes is done in the screen depicted in figure 3, which is shown after double clicking a specific mapping element.
 
-{{< figure src="/attachments/refguide8/modeling/integration/mapping-documents/import-mappings/16843943.png" >}}
+{{< figure src="/attachments/refguide8/modeling/integration/mapping-documents/import-mappings/16843943.png" class="no-border" >}}
 
 **Figure 3**
 
 Having defined the mappings for the attributes, these mappings are also shown in the mapping document. When a specific attribute is selected the schema element is also selected. This works the other way around too. An example of this is shown in figure 4, where the **dati** attribute is selected in both the Entity and the schema element (in this case dati is mapped to dati).
 
-{{< figure src="/attachments/refguide8/modeling/integration/mapping-documents/import-mappings/16843944.png" >}}
+{{< figure src="/attachments/refguide8/modeling/integration/mapping-documents/import-mappings/16843944.png" class="no-border" >}}
 
 **Figure 4**
 
@@ -84,7 +79,7 @@ Having defined the mappings for the attributes, these mappings are also shown in
 | Entity Attribute | Here you can select an attribute to map this value element to. Each value mapping needs to be mapped, except when it is used as a parameter in the microflow to obtain an object. |
 | Schema value element | The name and type of the schema value element. |
 | Occurrence | Reflects how often the element may occur. This can be **0..1** or **1**, depending on if it is required or not. If the value is empty and the minimum required occurrence of the element is 0 (as specified by the schema) the creation of the element will be skipped. In the case you want to never map a value to an optional element, simply disable it in the **Select elements...** dialog. |
-| Convert using (optional) | If the incoming data of a value element is not in the right format, you can use a microflow to convert it to a different data type. The conversion microflow should have one parameter that matches the element type. Alternatively, the parameter may be of type String, as all incoming data is in fact a String. For example, when the incoming data contains an exotic DateTime format, you can parse this format yourself by using a conversion microflow with a String parameter. If this value element maps to an attribute, the return type of the conversion microflow must match the attribute type. Conversion microflows of value elements are executed before these value elements are used as search keys or microflow parameters to obtain an object. This means that when using a value element with a conversion microflow as parameter for the microflow to obtain an object, the parameter type should match the return type of the conversion microflow. |
+| Convert using (optional) | If the incoming data of a value element is not in the right format, you can use a microflow to convert it to a different data type. The conversion microflow should have one parameter that matches the element type. Alternatively, the parameter may be of type String, as all incoming data is in fact a String. For example, when the incoming data contains an unusual DateTime format, you can parse this format yourself by using a conversion microflow with a String parameter. If this value element maps to an attribute, the return type of the conversion microflow must match the attribute type. Conversion microflows of value elements are executed before these value elements are used as search keys or microflow parameters to obtain an object. This means that when using a value element with a conversion microflow as parameter for the microflow to obtain an object, the parameter type should match the return type of the conversion microflow. |
 | Key | This property specifies whether the value element is used as search key to obtain an object. If a value element is used as search key, you must specify the attribute it maps to. The XML value will be matched to the value of this attribute when searching for an object. Attribute with 'binary' type is not supported to be set as key.
 | Map attributes by name | If this button is clicked, an attempt is made to match attributes by name. A dialog appears reporting what has been changed. |
 

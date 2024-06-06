@@ -90,7 +90,7 @@ When you set the Java heap setting to 'Custom', you can specify the amount of he
 
 {{% alert color="info" %}}
 
-Since March 18th 2020, this setting in no longer needed and will have no effect.
+Since March 18, 2020, this setting in no longer needed and will have no effect.
 
 {{% /alert %}}
 

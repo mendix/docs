@@ -1,9 +1,8 @@
 ---
 title: "Login Behavior"
 url: /refguide7/login-behavior/
-category: "Mendix Runtime"
+
 description: "Describes default and customized login behavior in Runtime."
-tags: ["Runtime", "login"]
 ---
 
 ## 1 Default Login Behavior

@@ -2,13 +2,10 @@
 title: "Datasets"
 url: /refguide/data-sets/
 weight: 50
-tags: ["studio pro", "data set", "dataset"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
-
-A dataset can be used to define the data shown in [reports](/refguide/report-widgets/) in [pages](/refguide/pages/).
 
 A dataset is defined using either an [OQL query](/refguide/oql/) or a custom [Java action](/refguide/java-actions/). To constrain a dataset, parameters can be defined which can be used in the OQL query or Java action.
 
@@ -26,7 +23,7 @@ Fields for datasets contain the following properties:
 
 The following shows an example OQL query that calculates the aggregated total order amount for all orders of a customer for a specific group of customers:
 
-```sql
+```sql {linenos=false}
 FROM CRM.Customers As CustomerObj
 INNER JOIN CustomerObj/CRM.Orders_Customer/CRM.Orders As OrderObj
 WHERE CustomerObj/CRM.Customer_Group = $ParGroup

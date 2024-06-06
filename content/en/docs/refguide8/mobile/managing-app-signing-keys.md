@@ -1,9 +1,8 @@
 ---
 title: "Managing App Signing Keys"
 url: /refguide8/managing-app-signing-keys/
-category: "Mobile"
+
 weight: 21
-tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -75,7 +74,7 @@ Once you have downloaded the signing certificate (a *.cer* file), you need to co
 
 1. Create from the signing certificate a PEM format: `"C:\OpenSSL\bin\openssl.exe" x509 -in "C:\ios.cer" -inform DER -out "C:\ios_pem.pem" -outform PEM`.
 2. Create from the PEM certificate a password secured. This action requires the PEM certificate, the private key that was created in step 3 earlier, and the password thas was given on the creation of the *ios.csr*: `"C:\OpenSSL\bin\openssl.exe" pkcs12 -export -out "C:\ios.p12" -inkey "C:\private.key" -in "C:\ios_pem.pem"`.
-3. You can upload the signing certificate (now a `.p12` file) and the distribution profile (a `.mobileprovision` file) to Adobe PhoneGap Build on your [account page](https://build.phonegap.com/people/edit). Go to the **Signing Keys** tab and click **Add a key** under **iOS**. Select the two files and give the key a name. Unlock the key by clicking the yellow lock icon on the right of the key and filling in the certificate passphrase. The key is now ready to be used by your build job.
+3. You can upload the signing certificate (now a `.p12` file) and the distribution profile (a `.mobileprovision` file) to Adobe PhoneGap Build on your [account page](https://helpx.adobe.com/experience-manager/kb/adobe-phonegap-end-of-service.html). Go to the **Signing Keys** tab and click **Add a key** under **iOS**. Select the two files and give the key a name. Unlock the key by clicking the yellow lock icon on the right of the key and filling in the certificate passphrase. The key is now ready to be used by your build job.
 
 ## 3 Android{#android}
 
@@ -89,7 +88,7 @@ To generate a keystore for Android, follow these steps:
 2. Open your **Command Prompt** and run your new *keytool.exe* located in your JDK’s bin folder.
 3. The *keytool.exe* program can be found in the bin directory of your Java installation (for example: *C:\Program Files\Java\jre1.8.0_20\bin*):
 
-    {{< figure src="/attachments/refguide8/mobile/managing-app-signing-keys/cmdjdkexe.png" alt="keytool location" >}}
+    {{< figure src="/attachments/refguide8/mobile/managing-app-signing-keys/cmdjdkexe.png" alt="keytool location" class="no-border" >}}
 
 4. Type in the following command line prompt while still pointing to the *keystore.exe*: 
 
@@ -99,17 +98,17 @@ To generate a keystore for Android, follow these steps:
 
     Be sure to replace `YOUR_ALIAS_NAME` and `YOUR_ALIAS_PWD` with your alias name and password:
 
-    {{< figure src="/attachments/refguide8/mobile/managing-app-signing-keys/ktoolsetup.png" alt="name and password" >}}
+    {{< figure src="/attachments/refguide8/mobile/managing-app-signing-keys/ktoolsetup.png" alt="name and password" class="no-border" >}}
 
 5. Answer the subsequent questions, click **Enter** after each question, and type *yes* when asked to confirm your information: 
 
-    {{< figure src="/attachments/refguide8/mobile/managing-app-signing-keys/qanda.png" alt="info questions" >}}
+    {{< figure src="/attachments/refguide8/mobile/managing-app-signing-keys/qanda.png" alt="info questions" class="no-border" >}}
 
 6. Finishing these questions generates a keystore which will be saved into a *file.keystore* file in your current working directory. 
 
 ### 3.2 Uploading Your Keystore to PhoneGap Build
 
-After creating the keystore file, upload it to Adobe PhoneGap Build on your [account page](https://build.phonegap.com/). Then, complete the following instructions:
+After creating the keystore file, upload it to Adobe PhoneGap Build on your [account page](https://helpx.adobe.com/experience-manager/kb/adobe-phonegap-end-of-service.html). Then, complete the following instructions:
 
 1. Go to the **Signing Keys** tab and click **Add a key** under **Android**. 
 2. Select the keystore file, fill in a title for the key, and fill in the alias that you noted down in the previous step. 

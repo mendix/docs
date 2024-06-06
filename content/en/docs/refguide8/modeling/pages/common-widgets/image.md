@@ -2,16 +2,11 @@
 title: "Image"
 url: /refguide8/image/
 weight: 20
-tags: ["studio pro", "image", "image widget"]
 aliases:
     - /refguide8/image-property.html
     - /refguide8/image-property
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/image.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 
@@ -19,7 +14,7 @@ The image widget can be used to show a static image on a page, layout, or snippe
 
 For example, you can configure an image clicking which a page with customer details opens:
 
-{{< figure src="/attachments/refguide8/modeling/pages/common-widgets/image/image-example.png" alt="Image Example" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/common-widgets/image/image-example.png" alt="Image Example" class="no-border" >}}
 
 {{% alert color="info" %}}
 If you want to dynamically show different images based on data, you need to add [image viewer](/refguide8/image-viewer/) on your page.
@@ -29,7 +24,7 @@ If you want to dynamically show different images based on data, you need to add 
 
 An example of image properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/pages/common-widgets/image/image-properties.png" alt="Image Properties"   width="300"  >}}
+{{< figure src="/attachments/refguide8/modeling/pages/common-widgets/image/image-properties.png" alt="Image Properties"   width="300"  class="no-border" >}}
 
 Image properties consist of the following sections:
 
@@ -64,7 +59,7 @@ The width of an image. Possible values of this property are described in the tab
 | Value      | Definition                                                   |
 | ---------- | ------------------------------------------------------------ |
 | Auto  *(default)*       | The width of the given image is used.                        |
-| Pixels     | he width is specified in a number of pixels. If you specify both width and height, the image will be scaled automatically: the proportions will be kept, the picture will not be stretched. |
+| Pixels     | The width is specified in a number of pixels. If you specify both width and height, the image will be scaled automatically: the proportions will be kept, the picture will not be stretched. |
 | Percentage | The width is specified in a percentage of the original width. It can be larger than its original width in which case the image is stretched |
 
 {{% alert color="info" %}}This property is not supported on native mobile pages.{{% /alert %}}

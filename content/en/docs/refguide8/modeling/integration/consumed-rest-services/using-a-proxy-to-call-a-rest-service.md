@@ -1,12 +1,7 @@
 ---
 title: "Using a Proxy to Call a REST Service"
 url: /refguide8/using-a-proxy-to-call-a-rest-service/
-tags: ["studio pro"]
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/using-a-proxy-to-call-a-rest-service.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 

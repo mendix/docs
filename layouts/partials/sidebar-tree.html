@@ -5,15 +5,14 @@
   {{ if not .Site.Params.ui.sidebar_search_disable -}}
   <form class="td-sidebar__search d-flex align-items-center">
     {{ partial "search-input.html" . }}
-    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-bs-toggle="collapse" data-bs-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">
     </button>
   </form>
   {{ else -}}
   <div id="content-mobile">
   <form class="td-sidebar__search d-flex align-items-center">
     {{ partial "search-input.html" . }}
-    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
-    </button>
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-bs-toggle="collapse" data-bs-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">    </button>
   </form>
   </div>
   <div id="content-desktop"></div>
@@ -43,7 +42,7 @@
 {{ $ulNr := .ulNr -}}
 {{ $ulShow := .ulShow -}}
 {{ $active := and (not $shouldDelayActive) (eq $s $p) -}}
-{{ $activePath := and (not $shouldDelayActive) ($p.IsDescendant $s) -}}
+{{ $activePath := and (not $shouldDelayActive) (or (eq $p $s) ($p.IsDescendant $s)) -}}
 {{ $show := cond (or (lt $ulNr $ulShow) $activePath (and (not $shouldDelayActive) (eq $s.Parent $p.Parent)) (and (not $shouldDelayActive) (eq $s.Parent $p)) (not $p.Site.Params.ui.sidebar_menu_compact) (and (not $shouldDelayActive) ($p.IsDescendant $s.Parent))) true false -}}
 {{ $mid := printf "m-%s" ($s.RelPermalink | anchorize) -}}
 {{ $pages_tmp := where (union $s.Pages $s.Sections).ByWeight ".Params.toc_hide" "!=" true -}}
@@ -54,11 +53,31 @@
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section{{ if $withChild }} with-child{{ else }} without-child{{ end }}{{ if $activePath }} active-path{{ end }}{{ if (not (or $show $p.Site.Params.ui.sidebar_menu_foldable )) }} collapse{{ end }}" id="{{ $mid }}-li">
   {{ if (and $p.Site.Params.ui.sidebar_menu_foldable (ge $ulNr 1)) -}}
   <input type="checkbox" id="{{ $mid }}-check"{{ if $activePath}} checked{{ end }}/>
-  <!-- NK - put in check for old_content to grey out, check for draft -->
-  <label for="{{ $mid }}-check"><a href="{{ $manualLink }}"{{ if ne $s.LinkTitle $manualLinkTitle }} title="{{ $manualLinkTitle }}"{{ end }}{{ with $s.Params.manualLinkTarget }} target="{{ . }}"{{ if eq . "_blank" }} rel="noopener"{{ end }}{{ end }} class="align-left pl-0 {{ if $active}} active{{ end }} td-sidebar-link {{ if $s.Params.old_content }}text-muted{{ end }}{{ if $s.IsPage }} td-sidebar-link__page{{ else }} td-sidebar-link__section{{ end }}{{ if $treeRoot }} tree-root{{ end }}" id="{{ $mid }}">{{ with $s.Params.Icon}}<i class="{{ . }}"></i>{{ end }}<span class="{{ if $active }}td-sidebar-nav-active-item{{ end }}">{{ if $s.Draft }}<text class="badge badge-pill badge-warning">Draft</text>{{ end }} {{ $s.LinkTitle }}</span></a></label>
+  <!-- DB - check metadata for old_content to grey out, check for draft, beta, lts, mts -->
+  <label for="{{ $mid }}-check"><a href="{{ $manualLink }}"{{ if ne $s.LinkTitle $manualLinkTitle }} title="{{ $manualLinkTitle }}"{{ end }}{{ with $s.Params.manualLinkTarget }} target="{{ . }}"{{ if eq . "_blank" }} rel="noopener"{{ end }}{{ end }} class="align-left pl-0 {{ if $active}} active{{ end }} td-sidebar-link {{ if $s.Params.old_content }}text-muted{{ end }}{{ if $s.IsPage }} td-sidebar-link__page{{ else }} td-sidebar-link__section{{ end }}{{ if $treeRoot }} tree-root{{ end }}" id="{{ $mid }}">
+    {{ with $s.Params.Icon}}<i class="{{ . }}"></i>{{ end }}
+    <span class="{{ if $active }}td-sidebar-nav-active-item{{ end }}">
+      <span class="link-title">{{ $s.LinkTitle }}</span>
+      {{ if $s.Draft }}<text class="badge badge-pill badge-draft">DRAFT</text>{{ end }}
+      {{ if $s.Params.beta }}<text class="badge badge-pill badge-beta">BETA</text>{{ end }}
+      {{ if $s.Params.lts }}<text class="badge badge-pill badge-lts">LTS</text>{{ end }}
+      {{ if $s.Params.mts }}<text class="badge badge-pill badge-mts">MTS</text>{{ end }}
+      {{ if $s.Params.deprecated }}<text class="badge badge-pill badge-deprecated">DEPRECATED</text>{{ end }}
+    </span>
+  </a></label>
   {{ else -}}
-  <!-- NK - put in check for old_content to grey out, check for draft -->
-  <a href="{{ $manualLink }}"{{ if ne $s.LinkTitle $manualLinkTitle }} title="{{ $manualLinkTitle }}"{{ end }}{{ with $s.Params.manualLinkTarget }} target="{{ . }}"{{ if eq . "_blank" }} rel="noopener"{{ end }}{{ end }} class="align-left pl-0{{ if $active}} active{{ end }} td-sidebar-link {{ if $s.Params.old_content }}text-muted{{ end }}{{ if $s.IsPage }} td-sidebar-link__page{{ else }} td-sidebar-link__section{{ end }}{{ if $treeRoot }} tree-root{{ end }}" id="{{ $mid }}">{{ with $s.Params.Icon}}<i class="{{ . }}"></i>{{ end }}<span class="{{ if $active }}td-sidebar-nav-active-item{{ end }}">{{ if $s.Draft }}<text class="badge badge-pill badge-warning">Draft</text>{{ end }} {{ $s.LinkTitle }}</span></a>
+  <!-- DB - check metadata for old_content to grey out, check for draft, beta, lts, mts -->
+  <a href="{{ $manualLink }}"{{ if ne $s.LinkTitle $manualLinkTitle }} title="{{ $manualLinkTitle }}"{{ end }}{{ with $s.Params.manualLinkTarget }} target="{{ . }}"{{ if eq . "_blank" }} rel="noopener"{{ end }}{{ end }} class="align-left pl-0{{ if $active}} active{{ end }} td-sidebar-link {{ if $s.Params.old_content }}text-muted{{ end }}{{ if $s.IsPage }} td-sidebar-link__page{{ else }} td-sidebar-link__section{{ end }}{{ if $treeRoot }} tree-root{{ end }}" id="{{ $mid }}">
+    {{ with $s.Params.Icon}}<i class="{{ . }}"></i>{{ end }}
+    <span class="{{ if $active }}td-sidebar-nav-active-item{{ end }}">
+      <span class="link-title">{{ $s.LinkTitle }}</span>
+      {{ if $s.Draft }}<text class="badge badge-pill badge-draft">DRAFT</text>{{ end }}
+      {{ if $s.Params.beta }}<text class="badge badge-pill badge-beta">BETA</text>{{ end }}
+      {{ if $s.Params.lts }}<text class="badge badge-pill badge-lts">LTS</text>{{ end }}
+      {{ if $s.Params.mts }}<text class="badge badge-pill badge-mts">MTS</text>{{ end }}
+      {{ if $s.Params.deprecated }}<text class="badge badge-pill badge-deprecated">DEPRECATED</text>{{ end }}
+    </span>
+  </a>
   {{- end }}
   {{- if $withChild }}
   {{- $ulNr := add $ulNr 1 }}

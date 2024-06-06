@@ -1,9 +1,8 @@
 ---
 title: "HTML Element"
 url: /appstore/widgets/htmlelement/
-category: "Widgets"
+
 description: "Describes the configuration and usage of the HTML Element widget, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "widget", "htmlelement", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -19,19 +18,19 @@ Almost any arbitrary custom HTML configuration can be used with HTML Element. He
 
 * Embedded video:
 
-    {{< figure src="/attachments/appstore/widgets/htmlelement/sample-embedded-html.png" >}}
+    {{< figure src="/attachments/appstore/widgets/htmlelement/sample-embedded-html.png" class="no-border" >}}
 
 * Text formatting:
 
-    {{< figure src="/attachments/appstore/widgets/htmlelement/sample-formatting-text.png" >}}
+    {{< figure src="/attachments/appstore/widgets/htmlelement/sample-formatting-text.png" class="no-border" >}}
 
 * Building a custom UI component:
 
-    {{< figure src="/attachments/appstore/widgets/htmlelement/sample-custom-ui.png" >}}
+    {{< figure src="/attachments/appstore/widgets/htmlelement/sample-custom-ui.png" class="no-border" >}}
 
 * Custom-tailored HTML:
 
-    {{< figure src="/attachments/appstore/widgets/htmlelement/sample-tailored-html.png" >}}
+    {{< figure src="/attachments/appstore/widgets/htmlelement/sample-tailored-html.png" class="no-border" >}}
 
 ## 2 Configuration
 
@@ -67,3 +66,31 @@ To configure this widget, follow these steps:
 For more information, see [Common Section](/refguide/common-widget-properties/#common-properties) in *Properties Common in the Page Editor*.
 
 {{% alert color="info" %}}For more information, see [Event Actions](/refguide/on-click-event/#actions) in *Properties Common in the Page Editor*.{{% /alert %}}
+
+## 3 Advanced Configuration
+
+### 3.4 HTML Sanitization
+
+#### 3.4.1 Sanitization Configuration
+
+This setting stores the [DOMPurify](https://cure53.de/purify) library configuration in JSON. Use this setting to fine-tune how the sanitization process handles input HTML. You can block tags, whitelist dangerous tags and values, and more.
+
+For example, here is a short config that disallows all `<style>`:
+
+```json
+{
+  "FORBID_TAGS": [
+    "style"
+  ]
+}
+```
+
+Visit the DOMPurify project [README](https://github.com/cure53/DOMPurify/blob/main/README.md) for more examples and available settings.
+
+{{% alert color="warning" %}}
+This setting requires advanced knowledge of XML/HTML to properly configure sanitization. Incorrect configuration can result in corrupted and malfunctioning widget content.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+Because this setting value should be a valid JSON, not all DOMPurify settings (such as functions, RegExps, and other complex types) are allowed.
+{{% /alert %}}

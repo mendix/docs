@@ -1,7 +1,7 @@
 ---
 title: "Logging"
 url: /refguide7/logging/
-category: "Mendix Runtime"
+
 ---
 
 

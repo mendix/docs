@@ -1,7 +1,6 @@
 ---
 title: "Chart Widgets"
 url: /refguide7/chart-widgets/
-tags: ["Charts", "Any Chart", "Desktop Modeler", "Pages"]
 ---
 
 ## 1 Introduction
@@ -37,7 +36,7 @@ With *Any Chart* you can build all the chart types that are possible with Plotly
 
 The plotly charts require a configuration based on JSON, therefore *Any Chart* has JSON as input parameters. You can create this JSON dynamically in your microflow via a JSON Structure document and use this in the *Any Chart* configuration. It is also possible to define static JSON configuration which is combined with the dynamic JSON.
 
-This module also contains several building blocks for inspiration and as starting point. If you want to create a new chart, we suggest you check out the plotly.js website.
+This module also contains several building blocks for inspiration and as starting point. If you want to create a new chart, Mendix suggests checking out the plotly.js website.
 
 See [Any Chart Widgets](/refguide7/charts-any-configuration/) to learn how to configure *Any charts* widgets.
 

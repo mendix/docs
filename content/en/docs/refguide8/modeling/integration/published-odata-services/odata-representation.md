@@ -1,12 +1,7 @@
 ---
 title: "OData Representation"
 url: /refguide8/odata-representation/
-tags: ["studio pro"]
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/odata-representation.pdf).
-{{% /alert %}}
 
 This document describes how entities are represented in a published OData service.
 

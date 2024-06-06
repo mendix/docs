@@ -38,14 +38,10 @@ As the purpose of building blocks is to facilitate design rather than functional
 
 The display name determines the name of the building block that will appear in the toolbox. 
 
-### 4.2 Image
-
-The image selected will appear in the **Building Blocks** tab of the Web Modeler's **Toolbox**. Selecting a representative image will allow users to easily distinguish between building blocks. If left blank, the Web Modeler will display a generic default image. Any image selected will be scaled down to 200x200 pixels.
-
-### 4.3 Documentation URL
+### 4.2 Documentation URL
 
 <div class="alert alert-info">
 This feature was added for Desktop Modeler version 7.17.
 </div>
 
-The documentation URL can be used to link to a documentation page for the building block. These links will appear in the **Building Blocks** tab of the Web Modeler's **Toolbox**.
+The documentation URL can be used to link to a documentation page for the building block. 

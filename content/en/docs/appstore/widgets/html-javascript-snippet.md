@@ -1,9 +1,8 @@
 ---
 title: "HTML/JavaScript Snippet"
 url: /appstore/widgets/html-javascript-snippet/
-category: "Widgets"
+
 description: "Describes the configuration and usage of the TML/JavaScript Snippet widget, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "widget", "html", "javascript", "snippet", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -38,7 +37,7 @@ The [HTML/JavaScript Snippet](https://marketplace.mendix.com/link/component/56/)
         jQuery('p').css('color', 'red')
         ```
 
-* **Contents** – the HTML or Javascript to embe
+* **Contents** – the HTML or JavaScript to embed
 * **External File** – the path to the HTML or JavaScript file you want to add
     * The root is the **theme** folder
     * This will override the **Contents** section if used

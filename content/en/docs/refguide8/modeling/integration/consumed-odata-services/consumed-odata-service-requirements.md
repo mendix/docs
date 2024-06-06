@@ -3,13 +3,8 @@ title: "Consumed OData Service Requirements"
 url: /refguide8/consumed-odata-service-requirements/
 weight: 20
 description: "Requirements on OData services consumed in Mendix."
-tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/consumed-odata-service-requirements.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 
@@ -91,11 +86,3 @@ Currently, the binary data can only be accessed by Java actions.
 An OData v3 association can only be used if it has two ends.
 
 An OData v4 navigation property can only be used as an association if it has a partner.
-
-## 4 Data Hub License Limitations {#license-limitations}
-
-Contact your [Mendix Admin](/developerportal/control-center/#company) or company admin to find out what type of Data Hub license your organization has. See [Data Hub Licenses](/data-hub/#data-hub-licences) to learn more.
-
-### 4.1 Local development
-
-Local development is subject to the same license as the freemium model. You have the ability to retrieve a total of 1000 OData objects, after which an error will occur. It is possible to reset this by restarting the App.

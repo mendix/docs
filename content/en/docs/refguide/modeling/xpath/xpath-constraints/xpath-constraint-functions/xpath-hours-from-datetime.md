@@ -1,7 +1,7 @@
 ---
 title: "XPath hours-from-dateTime"
 url: /refguide/xpath-hours-from-datetime/
-tags: ["studio pro"]
+weight: 9
 ---
 
 ## 1 Overview
@@ -22,22 +22,30 @@ hours-from-dateTime ( attribute [, timezone ] )
 
 ### 2.2 timezone
 
-{{% alert color="info" %}}
-The optional `timezone` parameter is available in [Studio Pro 9.22.0](/releasenotes/studio-pro/9.22/) and above.
-{{% /alert %}}
-
 `timezone` specifies the time zone to use for the extraction. This parameter is optional and defaults to the local time zone. It should be a string literal containing an IANA time zone or `'UTC'`. GMT offset time zones are not supported.
 
 ## 3 Examples
 
 This query returns all the logs where the hours part of `DateAttribute` is 8 in the local time zone (for example, "2011-12-30 08:00:00"):
 
-```java {linenos=false}
-//Logging.Log[hours-from-dateTime(DateAttribute) = 8]
-```
+{{< tabpane >}}
+  {{% tab header="Environments:" disabled=true /%}}
+  {{< tab header="Studio Pro" lang="StudioPro" >}}
+    [hours-from-dateTime(DateAttribute) = 8]
+    {{% /tab %}}
+  {{< tab header="Java" lang="JavaQuery" >}}
+     //Logging.Log[hours-from-dateTime(DateAttribute) = 8]
+    {{% /tab %}}
+{{< /tabpane >}}
 
 This query returns all the logs where the hours part of `DateAttribute` is 8 in the New York time zone (for example, "2011-12-30 08:00:00"):
 
-```java {linenos=false}
-//Logging.Log[hours-from-dateTime(DateAttribute, 'America/New_York') = 8]
-```
+{{< tabpane >}}
+  {{% tab header="Environments:" disabled=true /%}}
+  {{< tab header="Studio Pro" lang="StudioPro" >}}
+    [hours-from-dateTime(DateAttribute, 'America/New_York') = 8]
+    {{% /tab %}}
+  {{< tab header="Java" lang="JavaQuery" >}}
+     //Logging.Log[hours-from-dateTime(DateAttribute, 'America/New_York') = 8]
+    {{% /tab %}}
+{{< /tabpane >}}

@@ -1,11 +1,15 @@
 ---
 title: "App Switcher"
+deprecated: true
 url: /appstore/modules/app-switcher/
-category: "Modules"
+
 description: "Describes the configuration and troubleshooting of the App Switcher module, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "app switcher", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
+
+{{% alert color="warning" %}}
+This module is deprecated and has been removed from the Marketplace. Existing users can continue to use the service until June 7, 2024. The service will be switched off on that date.
+{{% /alert %}}
 
 ## 1 Introduction
 
@@ -14,11 +18,11 @@ The [App Switcher](https://marketplace.mendix.com/link/component/119451) is a mo
 ## 2 Prerequisites
 
 * Use Mendix Studio Pro [9.6.1](/releasenotes/studio-pro/9.1/) or higher
-* Install [Mendix SSO module](/appstore/modules/mendix-sso/) – we recommend having this module updated to the latest version
+* Install [Mendix SSO module](/appstore/modules/mendix-sso/) (Mendix recommends having this module updated to the latest version)
 
 ## 3 Configuration
 
-1. [Install](/appstore/general/app-store-content/) the App Switcher module.
+1. [Install](/appstore/overview/use-content/) the App Switcher module.
 2. Configure the [user roles](/refguide/user-roles/) to have access to the user AppSwitcherModule module role.
 3. Add the App Switcher widget to the desired page or layout. You can find the widget in the **Add-ons** category in the **Toolbar**.
 4. Make sure the end-user has to log in to Mendix SSO before accessing the page with the App Switcher widget.

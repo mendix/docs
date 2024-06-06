@@ -1,15 +1,14 @@
 ---
 title: "Set Up Anonymous User Security"
 url: /howto/security/set-up-anonymous-user-security/
-category: "Security"
+
 weight: 30
 description: "Describes how to set access to a non-persistable object and give anonymous users read and write access."
-tags: ["anonymous", "security"]
 ---
 
 ## 1 Introduction
 
-When setting up anonymous access for your application, you should be careful about where you give access to users. There are some guidelines for this so that you don't make your entire application accessible to the public.
+When setting up anonymous access for your application, you should be careful about where you give access to users. There are some guidelines for this so that you do not make your entire application accessible to the public.
 
 When creating an anonymous user role, always make sure you give it as little access as possible. Accordingly, you never want to re-use module rules from your named user accounts. It may be faster to reuse module rules, but this makes it much easier to give an anonymous user too much access to information in your application. When you are using anonymous users, any changes made to your object can never be traced back to the actual user, since the user was anonymous and no longer exists.
 
@@ -28,7 +27,7 @@ If you give an anonymous user write access on any field in the application, you 
 
 ## 4 Read Access
 
-If an anonymous user needs to have access to certain master data tables or needs the name of a user in an overview, the anonymous user needs read access on that entity. However, you should always limit this access. If the user doesn't need to have access to all fields, do not give it to them. If you see an anonymous user with full read access, always confirm that they cannot work with less access.
+If an anonymous user needs to have access to certain primary data tables or needs the name of a user in an overview, the anonymous user needs read access on that entity. However, you should always limit this access. If the user doesn't need to have access to all fields, do not give it to them. If you see an anonymous user with full read access, always confirm that they cannot work with less access.
 
 ## 5 Security Review
 

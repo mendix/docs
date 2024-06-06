@@ -3,19 +3,14 @@ title: "Project Settings"
 url: /refguide8/project-settings/
 weight: 10
 description: "Settings which apply to the project app as a whole."
-tags: ["project", "app", "configuration", "runtime", "Studio Pro", "languages", "certificate", "theme", "hashing", "hashing algorithm"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/project-settings.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 
 In the **Project Settings** dialog box, you can alter the settings that are applicable to the whole project:
 
-{{< figure src="/attachments/refguide8/modeling/menus/view-menu/project-explorer/project/project-settings/project-settings-configuration.png" >}}
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/project-explorer/project/project-settings/project-settings-configuration.png" class="no-border" >}}
 
 The categories described below are available.
 
@@ -115,7 +110,7 @@ This performance difference is hardly noticeable to a single user when signing i
 
 A (web service) user will sign in to execute a web service operation, wait for the operation to finish, and finally get the result back (if any).
 
-Imagine an empty microflow that returns nothing at all exposed as a published web service. We ask one user to execute this operation as many times as he can in one minute (simulated with SoapUI). First we set the hashing algorithm to BCrypt, then we set it to SSHA256. Any extra overhead here (on top of establishing the connection, building the XML message and so forth) is basically the hashing algorithm, as the operation should take near zero milliseconds and there is no result. So that leaves only the login, or, more precisely, the hashing of the password.
+Imagine an empty microflow that returns nothing at all exposed as a published web service. We ask one user to execute this operation as many times as they can in one minute (simulated with SoapUI). First we set the hashing algorithm to BCrypt, then we set it to SSHA256. Any extra overhead here (on top of establishing the connection, building the XML message and so forth) is basically the hashing algorithm, as the operation should take near zero milliseconds and there is no result. So that leaves only the login, or, more precisely, the hashing of the password.
 
 | Hashing Algorithm | Total Operations Executed | Operation per Second | Overhead in Milliseconds |
 | --- | --- | --- | --- |
@@ -241,7 +236,7 @@ Certificates can be installed in the Windows Certificate Store using the **Insta
 {{% /alert %}}
 {{% alert color="info" %}}
 
-When an SSLException occurs at runtime with the message `HelloRequest followed by an unexpected handshake message` or when a web service does not respond (Java 6 update 21 and above) when using the imported certificates, this is caused by either the client or server not being [RFC-5746](http://www.ietf.org/rfc/rfc5746.txt)-compatible.
+When an SSLException occurs at runtime with the message `HelloRequest followed by an unexpected handshake message` or when a web service does not respond (Java 6 update 21 and above) when using the imported certificates, this is caused by either the client or server not being [RFC-5746](https://www.ietf.org/rfc/rfc5746.txt)-compatible.
 
 If updating the client and server to be compatible with RFC-5746 is not feasible, the following should be added to **Extra JVM parameters** in the **Server** tab to avoid this exception:
 
@@ -251,7 +246,7 @@ Be warned that this does make the client-server communication vulnerable to an e
 
 When client and server are RFC-5746 compatible at a future point in time, this JVM parameter can be removed.
 
-For background information, see [Transport Layer Security (TLS) Renegotiation Issue Readme](http://www.oracle.com/technetwork/java/javase/documentation/tlsreadme2-176330.html).
+For background information, see [Transport Layer Security (TLS) Renegotiation Issue Readme](https://www.oracle.com/technetwork/java/javase/documentation/tlsreadme2-176330.html).
 
 {{% /alert %}}
 

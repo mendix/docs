@@ -1,12 +1,7 @@
 ---
 title: "Published App Service"
 url: /refguide8/published-app-service/
-tags: ["studio pro"]
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/published-app-service.pdf).
-{{% /alert %}}
 
 {{% alert color="info" %}}
 App services are deprecated and were removed in Studio Pro 9. Use a [published web service](/refguide8/published-web-services/) or a [published REST service](/refguide8/published-rest-services/) instead.
@@ -14,7 +9,7 @@ App services are deprecated and were removed in Studio Pro 9. Use a [published w
 
 ## 1 General Tab
 
-{{< figure src="/attachments/refguide8/modeling/integration/published-app-services/published-app-service/16843916.png" >}}
+{{< figure src="/attachments/refguide8/modeling/integration/published-app-services/published-app-service/16843916.png" class="no-border" >}}
 
 ### 1.1 Version
 
@@ -46,13 +41,13 @@ Can be used to describe what the app service is used for.
 
 ## 2 Actions
 
-{{< figure src="/attachments/refguide8/modeling/integration/published-app-services/published-app-service/16843915.png" >}}
+{{< figure src="/attachments/refguide8/modeling/integration/published-app-services/published-app-service/16843915.png" class="no-border" >}}
 
 Provide the actual actions of which the app service is composed. Each of these actions is coupled to a microflow. See [Actions](/refguide8/actions/).
 
 ## 3 Settings
 
-{{< figure src="/attachments/refguide8/modeling/integration/published-app-services/published-app-service/16843914.png" >}}
+{{< figure src="/attachments/refguide8/modeling/integration/published-app-services/published-app-service/16843914.png" class="no-border" >}}
 
 ### 3.1 Authentication
 

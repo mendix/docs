@@ -1,9 +1,8 @@
 ---
 title: "Image Crop"
 url: /appstore/modules/image-crop/
-category: "Modules"
+
 description: "Describes the configuration and usage of the Image Crop module, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "image crop", "cropper", "image", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -69,7 +68,7 @@ These are the **Cropper** widget properties:
 
 ### 4.2 Java Action Parameters
 
-* **cropImgObj** – the object that has the neccessary attributes to be resized
+* **cropImgObj** – the object that has the necessary attributes to be resized
 * **newWidth** and **newHeight** – make sure these match the **Aspect ratio** used in the [Cropper Widget](#cropper) to make sure the image does not get transformed inconsistently
     * If either **newWidth** or **newHeight** are set to *0*, the image will be scaled based on the entered value while keeping the aspect ratio
     * If both **Max width** and **Max height** are set to *0*, the width and height set by the end-user with the widget will be used

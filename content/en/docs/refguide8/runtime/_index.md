@@ -2,7 +2,8 @@
 title: "Mendix Runtime"
 url: /refguide8/runtime/
 weight: 40
-tags: ["runtime", "runtime server", "mendix client", "cluster leader"]
+no_list: false
+description_list: true 
 ---
 
 ## 1 Introduction
@@ -35,7 +36,7 @@ Where there is more than one instance of an app, one of the instances will be th
 
 More information on multiple instances is in [Clustered Mendix Runtime](/refguide8/clustered-mendix-runtime/).
 
-{{< figure src="/attachments/refguide8/runtime/runtime-overview.png" alt="An overview of the Mendix Runtime" >}}
+{{< figure src="/attachments/refguide8/runtime/runtime-overview.png" alt="An overview of the Mendix Runtime" class="no-border" >}}
 
 Each of the components of the chart is described below:
 
@@ -70,11 +71,11 @@ This is the server side of the Mendix runtime. It is described in [Runtime Serve
 ### 2.8 Load Balancer
 
 The load balancer takes incoming requests from the Mendix Client and forwards them to a Runtime Server instance. It balances the load by making sure that requests are distributed evenly to the different instances.
-The Mendix Client communicates with the load balancer using HTTPS. Communication on the server side of the load balancer, to environment instances and CDN, is performed using HTTP.
+The Mendix Client communicates with the load balancer using HTTPS. Communication on the server side of the load balancer, to environment instances, is performed using HTTP.
 
-### 2.9 CDN Static Config
+### 2.9 Static Content
 
-The CDN (Content Delivery Network) contains static configuration information which is needed by the client. These include the files needed to start the Mendix Client from a browser, Cascading Style Sheets (css files) which define the app’s theme, and JavaScript files which define client-side logic.
+Every Mendix app needs static content to be served in order to load the Mendix client in the browser. This includes the scripts needed to start the Mendix Client, CSS files which define the app's theme, and JavaScript files which define client-side logic.
 
 ### 2.10 Mendix Client
 
@@ -86,23 +87,10 @@ You need a license to run an application in production mode. Without a license, 
 
 ## 4 APIs
 
-You can extend the functionality of the Runtime Server by writing Java actions. For more information,  see the [Runtime API](/apidocs-mxsdk/apidocs/#runtime) section of *API Documentation*.
+You can extend the functionality of the Runtime Server by writing Java actions. For more information, see the [Mendix Runtime API](/apidocs-mxsdk/apidocs/runtime-api/).
 
 {{% alert color="info" %}}
 Links to available API documentation such as WSDLs for published web services are available on the URL path `/api-doc` (for example: `http://localhost:8080/api-doc/`).
 {{% /alert %}}
 
-## 5 Main Documents in This Category
-
-* [Runtime Server](/refguide8/runtime-server/) – describes the workings of the Runtime Server
-* [Mendix Client](/refguide8/mendix-client/) – describes the workings of the Mendix Client
-* [Runtime Deployment](/refguide8/runtime-deployment/) – describes how the Mendix runtime is deployed to the cloud
-* [Clustered Mendix Runtime](/refguide8/clustered-mendix-runtime/) – describes the behavior and impact of running Mendix Runtime as a cluster
-* [Runtime Customization](/refguide8/custom-settings/) – presents advanced options for customizing Runtime server settings
-* [Data Storage](/refguide8/data-storage/) – presents information on data storage configuration options, such as the following:
-* [Date and Time Handling](/refguide8/datetime-handling-faq/) – presents details on how to configure Runtime Server operations for the user's date and time
-* [Logging](/refguide8/logging/) – discusses the various log levels for Runtime
-* [Monitoring Mendix Runtime](/refguide8/monitoring-mendix-runtime/) – describes the Mendix Runtime monitoring actions that are supported (such as [state statistics](/refguide8/monitoring-mendix-runtime/#state) and [thread stack traces](/refguide8/monitoring-mendix-runtime/#thread)).
-* [Objects and Caching](/refguide8/objects-and-caching/) – presents details on what happens when objects are loaded from the database, cached, retrieved, changed, and committed
-* [Mendix Runtime and Java](/refguide8/runtime-java/) – explains some of the basic concepts of Java in Mendix
-* [Communication Patterns in the Mendix Runtime](/refguide8/communication-patterns/) – outlines the communication patterns used by the Mendix runtime
+## 5 Documents in This Category

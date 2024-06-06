@@ -2,7 +2,6 @@
 title: "Manage App Performance with New Relic"
 url: /howto8/monitoring-troubleshooting/manage-app-performance-with-new-relic/
 weight: 2
-tags: ["monitoring", "troubleshooting", "performance", "new relic"]
 ---
 
 ## 1 Introduction
@@ -14,7 +13,7 @@ To ensure your applications run smoothly, they need to be actively monitored so 
 
 New Relic is a flexible application performance management tool that provides information to help you achieve the above goals.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Set up application performance management for your Mendix application on New Relic
 
@@ -26,7 +25,7 @@ Before starting with this how-to, make sure you have completed the following pre
 
 ## 3 Setting Up
 
-In this section, we will walk through all the steps to configure New Relic so that it can be used for the [application performance diagnostics](/addons/apd-addon/) of your Mendix application.
+In this section, we will walk through all the steps to configure New Relic so that it can be used for the [application performance diagnostics](/appstore/partner-solutions/apd/) of your Mendix application.
 
 ## 3.1 Setting up New Relic (On-Premises Only)
 
@@ -34,14 +33,14 @@ The following steps are only relevant for on-premises deployments (skip to [2.2.
 
 1. Sign in to New Relic and create a new application:
 
-    {{< figure src="/attachments/howto8/monitoring-troubleshooting/manage-app-performance/manage-app-performance-with-new-relic/19398929.png" >}}
+    {{< figure src="/attachments/howto8/monitoring-troubleshooting/manage-app-performance/manage-app-performance-with-new-relic/19398929.png" class="no-border" >}}
 2. Select Java:
 
-    {{< figure src="/attachments/howto8/monitoring-troubleshooting/manage-app-performance/manage-app-performance-with-new-relic/19398930.png" >}}
+    {{< figure src="/attachments/howto8/monitoring-troubleshooting/manage-app-performance/manage-app-performance-with-new-relic/19398930.png" class="no-border" >}}
 
 3. Download the Java agent archive and save your license key:
 
-    {{< figure src="/attachments/howto8/monitoring-troubleshooting/manage-app-performance/manage-app-performance-with-new-relic/19398932.png" >}}
+    {{< figure src="/attachments/howto8/monitoring-troubleshooting/manage-app-performance/manage-app-performance-with-new-relic/19398932.png" class="no-border" >}}
 
 4. Add your license key to the *newrelic.yml* file from the downloaded archive as described here: [https://docs.newrelic.com/docs/agents/java-agent/installation/java-agent-manual-installation#h2-download-files](https://docs.newrelic.com/docs/agents/java-agent/installation/java-agent-manual-installation#h2-download-files).
 
@@ -57,7 +56,7 @@ To the `javaopts` list in your *m2ee.yaml* file, add "-javaagent:<path-to-javaag
 
 ```java
  javaopts: [
-   "-Dfile.encoding=UTF-8", "-XX:MaxPermSize=128M", "-Xmx512M", "-Xms512M",
+   "-Dfile.encoding=UTF-8", "-Xmx512M", "-Xms512M",
    "-Djava.io.tmpdir=/srv/mendix/data/tmp",
    "-javaagent:/opt/newrelic/javaagent.jar"
  ]
@@ -68,22 +67,22 @@ To the `javaopts` list in your *m2ee.yaml* file, add "-javaagent:<path-to-javaag
 1. Open your Mendix application, and click **Settings** in the **Project Explorer**.
 2. Open a configuration:
 
-    {{< figure src="/attachments/howto8/monitoring-troubleshooting/manage-app-performance/manage-app-performance-with-new-relic/19398903.png" >}}
+    {{< figure src="/attachments/howto8/monitoring-troubleshooting/manage-app-performance/manage-app-performance-with-new-relic/19398903.png" class="no-border" >}}
 
 3. In the **Extra JVM parameters** field on the **Server** tab, add: `-javaagent:<path-to-javaagent>javaagent.jar`:
 
-    {{< figure src="/attachments/howto8/monitoring-troubleshooting/manage-app-performance/manage-app-performance-with-new-relic/19398904.png" >}}
+    {{< figure src="/attachments/howto8/monitoring-troubleshooting/manage-app-performance/manage-app-performance-with-new-relic/19398904.png" class="no-border" >}}
 
 ## 4 Transactions
 
 After completing the steps described above, all the requests handled by your Mendix application should become visible together with various graphs and statistics:
 
-{{< figure src="/attachments/howto8/monitoring-troubleshooting/manage-app-performance/manage-app-performance-with-new-relic/19398943.png" >}} 
+{{< figure src="/attachments/howto8/monitoring-troubleshooting/manage-app-performance/manage-app-performance-with-new-relic/19398943.png" class="no-border" >}} 
 
 ## 5 Databases
 
 Your database calls and queries will now be visible on the database page:
-{{< figure src="/attachments/howto8/monitoring-troubleshooting/manage-app-performance/manage-app-performance-with-new-relic/19398944.png" >}} 
+{{< figure src="/attachments/howto8/monitoring-troubleshooting/manage-app-performance/manage-app-performance-with-new-relic/19398944.png" class="no-border" >}} 
 
 ## 6 Further Documentation
 

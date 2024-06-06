@@ -1,12 +1,7 @@
 ---
 title: "Microflow Properties"
 url: /refguide8/microflow/
-tags: ["microflow", "entity access"]
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/microflow.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 
@@ -16,7 +11,7 @@ This document describes the properties of a microflow. If you want to see what m
 
 An example of microflow properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/microflows/microflow/microflow-properties.png" alt="Microflow Properties"   width="250"  >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/microflows/microflow/microflow-properties.png" alt="Microflow Properties"   width="250"  class="no-border" >}}
 
 Microflow properties consist of the following sections:
 
@@ -110,7 +105,7 @@ Default: *No*
 
 There is one other property which is accessible by right-clicking in the microflow and selecting **Properties**.
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/microflows/microflow/microflow-expose.png" alt="Expose as Microflow Actin" >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/microflows/microflow/microflow-expose.png" alt="Expose as Microflow Actin" class="no-border" >}}
 
 By selecting the **Expose as microflow action**  option, you can expose the microflow as a microflow action. Exposing the microflow will make it appear in the **Toolbox** when you are editing a microflow in the category of your choice. When this action is used in a microflow, it will show the provided caption and icon.
 

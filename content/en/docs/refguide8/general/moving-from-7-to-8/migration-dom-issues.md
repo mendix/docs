@@ -3,7 +3,6 @@ title: "Troubleshooting DOM Changes"
 url: /refguide8/migration-dom-issues/
 weight: 10
 description: "This document explains the updated DOM structure for Mendix 8, and what that means for app's CSS."
-tags: ["DOM", "Widgets", "Themes", "Classes"]
 ---
 
 ## 1 Introduction
@@ -20,7 +19,11 @@ When you upgrade to Mendix 8, DOM structure changes will also alter the correlat
 
 Before Mendix 8, the client provided a large amount of default styling if your app lacked a theme. This made building your own theme difficult, as you needed to override the default styling. As of Mendix 8, all styling has been moved to AtlasUI. Now, building your own theme from scratch requires significantly less work.
 
-If you have already built your own theme from scratch in an earlier version of Mendix, you might depend on the default styling (specifically the Bootstrap files and the **mxui.css** file) not included in Mendix 8 applications by default. For this case, Mendix provides legacy **mxui.css** and Bootstrap files with defaults in this [GitHub repository](https://github.com/mendix/legacy-mxui-css). Download files from this repository to enable your custom theme.
+If you have already built your own theme from scratch in an earlier version of Mendix, you might depend on the default styling (specifically the Bootstrap files and the **mxui.css** file) not included in Mendix 8 applications by default. 
+
+For this case, Mendix provides legacy **mxui.css** and Bootstrap files with defaults in this [GitHub repository](https://github.com/mendix/legacy-mxui-css). Download files from this repository to enable your custom theme.
+
+Things differ from case to case, but in general when migrating from Mendix 7 to 8 you will probably need to add the **mxui.css** file into Mendix 7's `theme` folder. If your app uses Bootstrap CSS through its custom theme, also add those files to the `theme` folder. To finish up, include the **mxui.css** and Bootstrap files in your **index.html** file.
 
 {{% alert color="info" %}}
 If you get an error message `CE6103: We detected that you are not using Atlas UI for your theme. Please check 'Troubleshooting DOM  Changes' to ensure your theme is fully compliant with Mendix 8. Right-click to see more options`, you can clear the message by right-clicking it and selecting **Mark as Resolved**.
@@ -315,13 +318,13 @@ Text area:
 <textarea class="form-control mx-textarea-input mx-textarea mx-textarea-input-noresize"></textarea>
 ```
 
-Check box:
+Checkbox:
 
 ```html {linenos=false}
 <input type="checkbox" value="" />
 ```
 
-Check box when **Label position** is set to **After control** (in this case the label on the form group is not shown):
+Checkbox when **Label position** is set to **After control** (in this case the label on the form group is not shown):
 
 ```html
 <input type="checkbox" id="123_abc" value="" />

@@ -1,6 +1,7 @@
 ---
 title: "XPath Constraint Functions"
 url: /refguide7/xpath-constraint-functions/
+canonical_url: "https://docs.mendix.com/refguide/xpath-constraint-functions/"
 ---
 
 This section of the Mendix Reference Guide describes the functions that can be executed within constraints, such as the following:

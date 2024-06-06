@@ -1,7 +1,6 @@
 ---
 title: "Unlimited String Behavior"
 url: /refguide/unlimited-string-behavior/
-tags: ["studio pro", "strings", "sort", "case", "query", "constraint", "validation rule", "domain model"]
 weight: 20
 ---
 
@@ -25,10 +24,6 @@ You can sort by and compare unlimited strings. Uniqueness constraints on unlimit
 
 You can sort by unlimited strings. Uniqueness constraints on unlimited strings are not supported. Comparison of unlimited strings is not supported.
 
-### 2.4 DB2
-
-You can compare unlimited strings. Uniqueness constraints on unlimited strings are not supported. Sorting by unlimited strings is not supported.
-
 ### 2.5 SAP HANA
 
 Sorting by and comparison of unlimited strings is not supported. Uniqueness constraints on unlimited strings are not supported.
@@ -39,7 +34,6 @@ Sorting by and comparison of unlimited strings is not supported. Uniqueness cons
 |------------------:|:--------------:|:-------------:|:-------------------------:|
 | HSQLDB            | **Supported**  | **Supported** | **Supported**             |
 | POSTGRESQL        | **Supported**  | **Supported** | **Supported**             |
-| DB2               | **Supported**  | Not supported | Not supported             |
 | MARIADB           | **Supported**  | **Supported** | **Supported**             |
 | MYSQL             | **Supported**  | **Supported** | Not supported             |
 | ORACLE            | Not supported  | **Supported** | Not supported             |

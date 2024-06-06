@@ -1,9 +1,9 @@
 ---
 title: "Mobile Device"
+deprecated: true
 url: /appstore/widgets/mobile-device/
-category: "Widgets"
+
 description: "Describes the configuration and usage of the Mobile Device widget, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "widget", "mobile device", "cordova", "phonegap", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -21,7 +21,7 @@ The [Mobile Device](https://marketplace.mendix.com/link/component/65139/) widget
 * **App ID** – the unique identifier of your mobile app (for example, *com.mycompany.awesomeapp*)
 * **App version** – the version of your mobile app (for example, *1.2.1*)
 
-Using this widget for Mendix [hybrid mobile](/refguide/hybrid-mobile/) applications is recommended.
+This widget is used for Mendix hybrid mobile applications.
 
 ### 1.1 Features
 

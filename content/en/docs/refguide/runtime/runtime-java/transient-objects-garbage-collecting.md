@@ -2,13 +2,12 @@
 title: "Non-Persistable Objects and Garbage Collecting"
 url: /refguide/transient-objects-garbage-collecting/
 weight: 1
-description: "This page will explain the life cycle of both persistable and non-persistable objects, and how they flow through the platform memory."
-tags: ["persistable", "non-persistable", "objects", "garbage", "collecting"]
+description: "This page will explain the lifecycle of both persistable and non-persistable objects, and how they flow through the platform memory."
 ---
 
 ## 1 Introduction
 
-This page explains the life cycle of both persistable and non-persistable objects, and how they flow through the platform memory. In order to understand the behavior of non-persistable objects there are a few facts that you need to be aware of:
+This page explains the lifecycle of both persistable and non-persistable objects, and how they flow through the platform memory. In order to understand the behavior of non-persistable objects there are a few facts that you need to be aware of:
 
 * A non-persistable object is an object that is considered temporary and only exists in memory
 * Changed persistable objects that are not committed only exist in memory and behave similarly to non-persistable objects
@@ -74,7 +73,7 @@ WARNING: Request state size of 551 objects exceeds the threshold of 500 objects.
  * AnotherModule.SomeEntity: 130 objects
 ```
 
-This threshold can be configured with the custom setting `com.mendix.webui.StateSizeWarningThreshold` (the value is a number that reflects the total number of objects in the request state).
+This threshold can be configured with the custom setting `com.mendix.webui.StateSizeWarningThreshold`. See [com.mendix.webui.StateSizeWarningThreshold](/refguide/custom-settings/#commendixwebuiStateSizeWarningThreshold) in *Runtime Customization* for more information.
 
 #### 4.2.1 Choosing a Correct Threshold Level
 

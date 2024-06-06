@@ -4,14 +4,9 @@ linktitle: "Publish Microflow as REST Operation"
 url: /refguide8/publish-microflow-as-rest-operation/
 weight: 30
 description: "How to publish a Microflow as a REST Operation"
-tags: ["Microflow", "REST", "operation", "resource"]
 # If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 # linked from DM: edit microflow > (right-click) Publish as REST service operation > New > Help (integration)
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/publish-microflow-as-rest-operation.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 

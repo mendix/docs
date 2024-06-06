@@ -2,17 +2,12 @@
 title: "Enumerations"
 url: /refguide8/enumerations/
 weight: 40
-tags: ["studio pro", "enumeration", "enumeration values", "enumeration value"]
 aliases:
     - /refguide8/enumeration-values.html
     - /refguide8/enumeration-values
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 #The anchor <enum-value-properties> below is mapped, so it should not be removed or changed.
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/enumerations.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 
@@ -26,14 +21,14 @@ To create a new enumeration, do the following:
 
 1. In the [Project Explorer](/refguide8/project-explorer/), right-click the module or a folder you want to add enumeration to and in the list of actions, select **Add other** > **Enumeration**:
 
-    {{< figure src="/attachments/refguide8/modeling/resources/enumerations/add-enumeration.png" >}}
+    {{< figure src="/attachments/refguide8/modeling/resources/enumerations/add-enumeration.png" class="no-border" >}}
 
 2. In the **Add Enumeration** dialog box, fill out the name of the enumeration.
 3. In the **Enumeration** dialog box, click **New** to create enumeration values:
 
     1. Fill out **Name** and **Caption** for an enumeration value. You can set **Image** for it if necessary. For more information on enumeration properties, see the [Enumeration Properties](#enum-properties) section. <br />
 
-        {{< figure src="/attachments/refguide8/modeling/resources/enumerations/add-enum-value.png" >}}
+        {{< figure src="/attachments/refguide8/modeling/resources/enumerations/add-enum-value.png" class="no-border" >}}
 
     1. Click **OK** to save the enumeration value.
 
@@ -49,7 +44,7 @@ An enumeration has the following properties:
 * **Name** – the name of the enumeration
 * **Enumeration values** – an enumeration has one or more enumeration values. Each value represents one of the options. For more information on enumeration values and their properties, see the [Enumeration Value Properties](#enum-value-properties) section.
 
-    {{< figure src="/attachments/refguide8/modeling/resources/enumerations/enumeration-properties.png" >}}
+    {{< figure src="/attachments/refguide8/modeling/resources/enumerations/enumeration-properties.png" class="no-border" >}}
 
 ### 3.1 Enumeration Value Properties {#enum-value-properties}
 

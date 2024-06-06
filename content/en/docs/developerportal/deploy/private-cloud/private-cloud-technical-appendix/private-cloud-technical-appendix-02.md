@@ -4,7 +4,6 @@ linktitle: "2. Operator Flows"
 url: /developerportal/deploy/private-cloud-technical-appendix-02/
 description: "Describes which providers are supported by Mendix for Private Cloud"
 weight: 20
-tags: ["Private Cloud", "Technical Appendix"]
 ---
 
 ## 1 Introduction
@@ -96,7 +95,7 @@ For *Connected* clusters, Mendix for Private Cloud needs to be able to connect t
 
 The diagram below shows the steps which you need to take to install Mendix for Private Cloud in a namespace. It assumes that the Cluster Administrator has already set up the cluster so that the Developer Portal knows about it. See [Creating a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster/#create-cluster) for more information.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-technical-appendix/private-cloud-technical-appendix-02/mx4pc-installation.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-technical-appendix/private-cloud-technical-appendix-02/mx4pc-installation.png" class="no-border" >}}
 
 First, you create the namespace in the Mendix Developer Portal.
 
@@ -120,13 +119,13 @@ In standalone mode, you need to create the MendixApp CR directly in your Kuberne
 
 When it finds the MendixApp CR, the Operator will initiate processing of all the `MendixApp` dependencies, as shown in the diagram below.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-technical-appendix/private-cloud-technical-appendix-02/mx4pc-deployment.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-technical-appendix/private-cloud-technical-appendix-02/mx4pc-deployment.png" class="no-border" >}}
 
 These dependency CRs include `StorageInstance`, `Build`, and `Endpoint` CRs. Each dependency CR is handled by its own controller.
 
 Once all dependencies are processed (report their status as Ready), the Operator will process the `Runtime` CR.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-technical-appendix/private-cloud-technical-appendix-02/crd-controller-hierarchy.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-technical-appendix/private-cloud-technical-appendix-02/crd-controller-hierarchy.png" class="no-border" >}}
 
 Any time a CR's status is changed, the Operator will propagate it to the `MendixApp` CR. The Agent will receive events any time the `MendixApp` CR changes its status.
 
@@ -137,10 +136,10 @@ To ensure you see the latest status reported by the Mendix Gateway Agent in the 
 
 The diagram below provides a more detailed explanation how the Mendix Operator communicates with the `StorageInstance` controller when creating a new environment.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-technical-appendix/private-cloud-technical-appendix-02/mx4pc-provision-storage.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-technical-appendix/private-cloud-technical-appendix-02/mx4pc-provision-storage.png" class="no-border" >}}
 
 The Operator doesn't communicate with the database or file storage directly, instead, the `StorageInstance` controller runs a provisioner pod (a “task” pod) to create a new storage tenant in the database or file server.
-The `StoragePlan` CR (created earlier when the Operator was [configured with the `mxpc-cli` configuration tool](/developerportal/deploy/private-cloud-cluster/#configure-namespace)) contains blueprints for the provisioner pod, such as:
+The `StoragePlan` CR (created earlier when the Operator was [configured with the `mxpc-cli` configuration tool](/developerportal/deploy/standard-operator/#configure-namespace) contains blueprints for the provisioner pod, such as:
 
 * The provisioner image name
 * The name of the Kubernetes secret containing management credentials – such as the PostgreSQL admin username/password or AWS credentials
@@ -165,13 +164,13 @@ For a standalone environment, you need to create the `MendixApp` CR yourself and
 
 The processing of the `MendixApp` CR is shown in the diagram below.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-technical-appendix/private-cloud-technical-appendix-02/mx4pc-build-image.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-technical-appendix/private-cloud-technical-appendix-02/mx4pc-build-image.png" class="no-border" >}}
 
 When the `Build` controller detects that the source URL (`spec.sourceURL`) in the `Build` CR has changed, it will run the build pod.
 The build pod will then do the following:
 
 * download the MDA from the specified `spec.sourceURL`
-* convert the MDA into a OCI image layer (app layer)
+* convert the MDA into an OCI image layer (app layer)
 * append the app layer to a `runtime-base` image
     {{% alert color="info" %}}`runtime-base` images are prebuilt Mendix Runtime images that contain a specific version of the Mendix Runtime and all of its dependencies (JRE, fonts)<br/>Internally, the app layer is appended by using the [crane append](https://github.com/google/go-containerregistry/blob/main/cmd/crane/doc/crane_append.md) operation{{% /alert %}}
 * push the resulting image to the image registry
@@ -199,11 +198,11 @@ To use an Ingress controller, you need to install it first:
 1. Install your chosen ingress controller.
     Most ingress controllers will also create a Kubernetes load balancer service on installation
 2. Set up DNS in one of two ways:
-    * ensure that your app domain(s) (or wildcard domain) resolve to the load balancer's external IP address – see, for example, the article [Routing traffic to an ELB load balancer](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-elb-load-balancer.html), which explains how to set up Route 53
-    * install and set up Kubernetes [External DNS](https://github.com/kubernetes-sigs/external-dns) to automatically manage your DNS server
+    * Ensure that your app domains (or wildcard domain) resolve to the load balancer's external IP address – see, for example, the article [Routing traffic to an ELB load balancer](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-elb-load-balancer.html), which explains how to set up Route 53
+    * Install and set up Kubernetes [External DNS](https://github.com/kubernetes-sigs/external-dns) to automatically manage your DNS server
 3. Create a test ingress object and deploy a test app to verify that the network setup is working.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-technical-appendix/private-cloud-technical-appendix-02/mx4pc-ingress-controller.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-technical-appendix/private-cloud-technical-appendix-02/mx4pc-ingress-controller.png" class="no-border" >}}
 
 #### 4.3.2 Using OpenShift Routes
 
@@ -214,15 +213,15 @@ If you are using OpenShift Routes, the OpenShift router is already configured an
 When a new environment is created in the Mendix Operator, the Operator will create a service object (for all endpoint types: service only, ingress, or route) together with the ingress or route object, if required.
 After the `Endpoint` controller successfully creates all required objects, the `MendixApp` controller will automatically set the Runtime's ApplicationRootUrl so that a Mendix app can always know its URL. Some marketplace modules, for example [SAML](https://marketplace.mendix.com/link/component/1174), need this information to work correctly.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-technical-appendix/private-cloud-technical-appendix-02/mx4pc-applicationrooturl.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-technical-appendix/private-cloud-technical-appendix-02/mx4pc-applicationrooturl.png" class="no-border" >}}
 
 When accessing an app from a web browser through an ingress or route, the path would look like this:
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-technical-appendix/private-cloud-technical-appendix-02/mx4pc-traffic-ingress.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-technical-appendix/private-cloud-technical-appendix-02/mx4pc-traffic-ingress.png" class="no-border" >}}
 
 When accessing an app from a web browser through a load balancer service, the path would look like this:
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-technical-appendix/private-cloud-technical-appendix-02/mx4pc-traffic-service.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-technical-appendix/private-cloud-technical-appendix-02/mx4pc-traffic-service.png" class="no-border" >}}
 
 ### 4.4 Logging and Metering
 
@@ -233,4 +232,4 @@ For logging and metering, Mendix for Private Cloud relies on open industry stand
 
 If your cluster doesn't already have a logging and monitoring solution, you can follow [Monitoring Environments in Mendix for Private Cloud](/developerportal/deploy/private-cloud-monitor/) for information on how to install Grafana and start collecting logs and metrics from Mendix apps.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-technical-appendix/private-cloud-technical-appendix-02/mx4pc-logging-metering.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-technical-appendix/private-cloud-technical-appendix-02/mx4pc-logging-metering.png" class="no-border" >}}

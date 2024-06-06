@@ -2,7 +2,6 @@
 title: "Validation Rules"
 url: /refguide7/validation-rules/
 weight: 40
-tags: ["domain model", "entity", "validation rule"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -13,7 +12,7 @@ Validation rules are conditions that should be satisfied before an object is com
 
 For entity 'Customer' the name and credit need to be filled in at all times, and the expenses cannot be higher than the credit. This is visualized in the domain model editor as follows:
 
-{{< figure src="/attachments/refguide7/desktop-modeler/domain-model/entities/validation-rules/917546.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/domain-model/entities/validation-rules/917546.png" class="no-border" >}}
 
 {{% /alert %}}{{% alert color="warning" %}}
 
@@ -50,7 +49,7 @@ The rule defines which condition an attribute should satisfy.
 
 {{% alert color="warning" %}}
 
-Date values should be entered in [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) format, for example 2015-07-26.
+Date values should be entered in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format, for example 2015-07-26.
 
 {{% /alert %}}
 

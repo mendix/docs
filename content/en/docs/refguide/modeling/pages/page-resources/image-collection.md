@@ -1,9 +1,8 @@
 ---
 title: "Image Collection"
 url: /refguide/image-collection/
-weight: 5
+weight: 1
 description: "Why and how to create an image collection"
-tags: ["Studio Pro", "Images", "Image Collection"]
 ---
 
 ## 1 Introduction
@@ -30,9 +29,9 @@ To add an image collection, do the following.
 
 You can perform the following actions within image collections using the icons at the top of the image collection tab.
 
-{{< figure src="/attachments/refguide/modeling/pages/page-resources/image-collection/actions.png" alt="Image collection actions" >}}
+{{< figure src="/attachments/refguide/modeling/pages/page-resources/image-collection/actions.png" alt="Image collection actions" class="no-border" >}}
 
-Some of the actions can be applied to multiple images. You can select all images with <kbd>Ctrl</kbd>+<kbd>A</kbd>, or multiple images by combining your click with <kbd>Ctrl</kbd> or <kbd>Shift</kbd>
+Some of the actions can be applied to multiple images. You can select all images with <kbd>Ctrl</kbd>+<kbd>A</kbd>, or multiple images by combining your click with <kbd>Ctrl</kbd> or <kbd>Shift</kbd>.
 
 ### 3.1 Add
 
@@ -50,7 +49,7 @@ You can also rename an image using <kbd>F2</kbd>.
 
 ### 3.3 Delete
 
-The **Delete** button removes the selected image(s) from the image collection. You will be warned if the image or images are used elsewhere in the app.
+The **Delete** button removes the selected image (or images) from the image collection. You will be warned if the image or images are used elsewhere in the app.
 
 ### 3.4 Find Usages
 
@@ -58,7 +57,7 @@ The **Find usages** button displays, in the **Find Results** dock, all the place
 
 ### 3.5 Move to Other Image Collection
 
-The **Move to other image collection** button allows you to move the selected image(s) to another image collection. When you move the image(s), all references elsewhere in your app will also be updated.
+The **Move to other image collection** button allows you to move the selected image (or images) to another image collection. When you move the image (or images), all references elsewhere in your app will also be updated.
 
 {{% alert color="info" %}}
 It is not possible to *copy* an image, you can only *move* it. If you need to make a copy, you can export the image to a file (see below) and then add the image to a different image collection.
@@ -66,4 +65,4 @@ It is not possible to *copy* an image, you can only *move* it. If you need to ma
 
 ### 3.6 Export to File
 
-The **Export to file…** button saves the selected image(s) as image files. You can select the folder where the images will be saved and they will be given the same name as they have in the image collection. If a file with the same name already exists, you will be warned.
+The **Export to file…** button saves the selected image (or images) as image files. You can select the folder where the images will be saved and they will be given the same name as they have in the image collection. If a file with the same name already exists, you will be warned.

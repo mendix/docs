@@ -6,7 +6,7 @@ weight: 83
 
 ## 9.17.0
 
-**Release date: August 19th, 2022**
+**Release date: August 19, 2022**
 
 ### CodeActions
 

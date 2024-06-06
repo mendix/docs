@@ -1,13 +1,8 @@
 ---
 title: "Message Definitions"
 url: /refguide8/message-definitions/
-tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/message-definitions.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 
@@ -24,7 +19,7 @@ To add a message definitions document do the following:
 1. Right-click your module or a folder within a module.
 2. Choose **Add other > Message definitions**.
 
-    {{< figure src="/attachments/refguide8/modeling/integration/message-definitions/add-definitions-document.png" alt="Right-click menu - add Message definitions" >}}
+    {{< figure src="/attachments/refguide8/modeling/integration/message-definitions/add-definitions-document.png" alt="Right-click menu - add Message definitions" class="no-border" >}}
 
 3. Give your message definitions a name and click **OK**.
 
@@ -51,7 +46,7 @@ To generate mappings, do the following:
 3. Ensure that the required mapping(s) is selected.
 4. Click **OK**.
 
-    {{< figure src="/attachments/refguide8/modeling/integration/message-definitions/generate-mappings.png" alt="General mappings dialog" >}}
+    {{< figure src="/attachments/refguide8/modeling/integration/message-definitions/generate-mappings.png" alt="General mappings dialog" class="no-border" >}}
 
 ## 4 Defining a Message Definition{#message-definition}
 
@@ -61,7 +56,7 @@ In the message definitions document, click **Add** to create a new message defin
 
 The message definition is defined in the **General** tab.
 
-{{< figure src="/attachments/refguide8/modeling/integration/message-definitions/message-definition.png" alt="The Message Definition General tab" >}}
+{{< figure src="/attachments/refguide8/modeling/integration/message-definitions/message-definition.png" alt="The Message Definition General tab" class="no-border" >}}
 
 #### 4.1.1 Name
 
@@ -77,7 +72,7 @@ The structure tree shows the attributes and some of the associations of the enti
 
 | Column | Description | Can edit? | Notes |
 | --- | --- | :---: | --- |
-| Check box | Check if the attribute or association is part of the message. | y | |
+| Checkbox | Check if the attribute or association is part of the message. | y | |
 | Name | The name of the item in the Domain Model. | n | |
 | Type | The type of the item in the Domain Model. | n | |
 | Occurrence | How many times this item can occur for each parent item. | n | |

@@ -1,6 +1,7 @@
 ---
 title: "XPath Keywords and System Variables"
 url: /refguide7/xpath-keywords-and-system-variables/
+canonical_url: "https://docs.mendix.com/refguide/xpath-keywords-and-system-variables/"
 ---
 
 ## 1 Overview

@@ -2,10 +2,9 @@
 title: "Build Microflow Actions Using the Mendix Connector Kit"
 linktitle: "Microflow Actions Using Connector Kit"
 url: /howto8/extensibility/howto-connector-kit/
-category: "Extensibility"
+
 description: "Describes creating custom Microflow actions using advanced Connector Kit options."
 weight: 80
-tags: ["java", "connector kit", "microflow action", "parameter type", "aws", "amazon web services"]
 #To update screenshots of these microflows in Studio Pro, use the SlackRekognition-main-master app, which is saved locally in Other Resources > Documentation Backups (No Update).
 ---
 
@@ -15,24 +14,24 @@ The goal of the Mendix [Connector Kit](https://www.mendix.com/blog/introducing-m
 
 To illustrate the power of the Connector Kit, here's a high-level design diagram for an application Mendix recently built: a Slack bot that enables users to determine things and people in pictures taken with a mobile Slack app:
 
-{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/slack-rekogition-bot-architecture.png" alt="Slack Rekognition Bot design" >}}
+{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/slack-rekogition-bot-architecture.png" alt="Slack Rekognition Bot design" class="no-border" >}}
 
 The Mendix application consists of a small number of microflows that use Mendix microflow actions to offer a conversational user interface using [Slack](https://slack.com/) and different Amazon services: [S3](https://aws.amazon.com/s3/), [Rekognition](https://aws.amazon.com/rekognition/), and [Lex](https://aws.amazon.com/lex/).
 
 This image shows what the microflow toolbox looks like after including all the modules that provide connectors to the services used:
 
-{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/slack-rekogition-bot-toolkit.png" alt="Slack Rekognition bot toolbox" >}}
+{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/slack-rekogition-bot-toolkit.png" alt="Slack Rekognition bot toolbox" class="no-border" >}}
 
 For the basics of building toolbox actions, see the [Introducing the Mendix Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/) blog post. 
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Use advanced features when creating your own microflow actions
 * Create the **Create object list** action
 * Create the **Import string** action
 * Create the **Join objects in list** action
 
-{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/toolkit-connector-kit-demo.png" alt="Connectorkit demo toolbox" >}}
+{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/toolkit-connector-kit-demo.png" alt="Connectorkit demo toolbox" class="no-border" >}}
 
 ## 2 Creating Generic Actions Using Type Parameters
 
@@ -44,17 +43,17 @@ To create a generic action using type parameters, follow these steps:
 
 1. Define the type parameter to hold the entity used by all the parameters:
 
-    {{< figure src="/attachments/howto8/extensibility/howto-connector-kit/join_objects_type_par.png" alt="Type parameter tab" >}}
+    {{< figure src="/attachments/howto8/extensibility/howto-connector-kit/join_objects_type_par.png" alt="Type parameter tab" class="no-border" >}}
 
 2. Create parameters using the previously defined type parameter *EntityToJoin*:
 
-    {{< figure src="/attachments/howto8/extensibility/howto-connector-kit/join_objects_pars.png" alt="Type parameter use" >}}
+    {{< figure src="/attachments/howto8/extensibility/howto-connector-kit/join_objects_pars.png" alt="Type parameter use" class="no-border" >}}
 
 3. The action needs the following parameters:
     * **Entity** – this is used to specify the entity of the objects to join
         * The entity selected by the user will be stored in the type parameter *EntityToJoin*
 
-        {{< figure src="/attachments/howto8/extensibility/howto-connector-kit/join_objects_type_par_def.png" alt="Type parameter use definition" >}}
+        {{< figure src="/attachments/howto8/extensibility/howto-connector-kit/join_objects_type_par_def.png" alt="Type parameter use definition" class="no-border" >}}
 
     * **Object1** – the first object to be added to the new list
 
@@ -66,11 +65,11 @@ The Java implementation still uses strings to specify the name of an entity, whi
 
 Finally, here's the actual Java implementation of the action defined:
 
-{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/join_objects_javacode.png" alt="Java implementation join object" >}}
+{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/join_objects_javacode.png" alt="Java implementation join object" class="no-border" >}}
 
 You now have a reusable action in your toolbox that will join two objects into a list as illustrated by this example:
 
-{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/join_objects_use.png" alt="Join objects use" >}}
+{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/join_objects_use.png" alt="Join objects use" class="no-border" >}}
 
 As you can see, type parameters enable creating typesafe generic actions.
 
@@ -78,11 +77,11 @@ As you can see, type parameters enable creating typesafe generic actions.
 
 The following example illustrates how you can use microflow parameters. The microflow below creates a list of **Product** objects and calls a microflow for every project object to initialize it:
 
-{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/init-loop.png" alt="Init loop" >}}
+{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/init-loop.png" alt="Init loop" class="no-border" >}}
 
 Here's an alternative to the microflow above that uses a custom Java action to replace the loop, instantiation, and initialization of the objects with a Java action:
 
-{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/init-list-use.png" alt="Init list loop with action" >}}
+{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/init-list-use.png" alt="Init list loop with action" class="no-border" >}}
 
 The action uses the following parameters:
 
@@ -95,7 +94,7 @@ The return type is a list of new initialized objects.
 
 As you can see below, this action uses a new parameter type (**Microflow**) to indicate that the user needs to specify a microflow. When using the action, Studio Pro will show a list of microflows to make this as easy to use as possible.
 
-{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/initialize_list_mf_pars.png" alt="Initialize list using microflow action parameters" >}}
+{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/initialize_list_mf_pars.png" alt="Initialize list using microflow action parameters" class="no-border" >}}
 
 In the Java implementation for this action, you'll see the following details for the parameters:
 
@@ -104,7 +103,7 @@ In the Java implementation for this action, you'll see the following details for
 * **InitializationMicroflow** – a string containing the name of the initializing microflow
 * **ListSize** – a long variable containing the number of objects desired in the list
 
-{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/initilialize_list_java_1.png" alt="Initialize list java implementation 1" >}}
+{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/initilialize_list_java_1.png" alt="Initialize list java implementation 1" class="no-border" >}}
 
 The `executeAction` method is where all the magic happens:
 
@@ -116,7 +115,7 @@ The `executeAction` method is where all the magic happens:
 6. Add the newly instantiated and initialized object to the result list.
 7. The list of new objects is returned.
 
-{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/initilialize_list_java_2.png" alt="Initialize list java implementation 2" >}}
+{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/initilialize_list_java_2.png" alt="Initialize list java implementation 2" class="no-border" >}}
 
 Microflow parameters are especially useful for handling events. For example, the community-supported [MQTT Client](https://marketplace.mendix.com/link/component/3066/Mendix/MQTT-Client) connector (via the [GitHub MQTTClient project](https://github.com/ako/MqttClient)) will execute a microflow when receiving an IoT sensor event so it can be handled using a user-specified microflow.
 
@@ -126,7 +125,7 @@ Now we will discuss an example of how you can use mappings in your Java actions.
 
 This is an image of what we are building: an action to import JSON strings:
 
-{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/example_import_string_use.png" alt="Example import string use" >}}
+{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/example_import_string_use.png" alt="Example import string use" class="no-border" >}}
 
 The action requires the user to provide a string with the JSON to import, select an import mapping, and define the entity of the result. Finally, a name needs to be provided for the result of the import mapping.
 
@@ -137,15 +136,15 @@ The action is defined as follows:
 * **ResultEntity** – the type of object that will be the result of the import
 * **Return type** – an object of the type specified with `ResultEntity`
 
-{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/import_string_action_pars.png" alt="Import String with mapping java action parameters" >}}
+{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/import_string_action_pars.png" alt="Import String with mapping java action parameters" class="no-border" >}}
 
 Implement the action in Java as follows:
 
-1. Create an InputStream from the the JSON input so it can be read by the import mapping.
+1. Create an InputStream from the JSON input so it can be read by the import mapping.
 2. Use `Core.integration().importStream()` to import the JSON with the specified mapping.
 3. Return the first object imported.
 
-{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/import_string_java.png" alt="Import String java action" >}}
+{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/import_string_java.png" alt="Import String java action" class="no-border" >}}
 
 ## 5 Some Development Tips
 
@@ -158,7 +157,7 @@ while developing your application.
 
 In the screenshot below, observe two important points. First, the **ConnectorKitDemo** module only contains the actions you want to publish to the Marketplace. To do this, right-click the module and select **Export module package...**. Second, the **ConnectorKitDemoTests** module contains all the functionality you need while developing the reusable module: a small domain model with some sample data and some test pages. It also contains the unit test microflow **Test_InitProduct**, which will be called by the unit test module.
 
-{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/project_test.png" alt="Mendix Connector kit module project with tests" >}}
+{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/project_test.png" alt="Mendix Connector kit module project with tests" class="no-border" >}}
 
 ### 5.2 Managing Libraries
 
@@ -166,7 +165,7 @@ When you export the module package for publishing in the Marketplace, you only w
 
 The [ConnectorKitDemo](https://github.com/ako/ConnectorKitDemo) project on GitHub contains two examples of how to do this, which are described below.
 
-The first example is [Apache Ivy](http://ant.apache.org/ivy/), which is a Java library specifically created for managing dependencies. Ivy is small enough that you can include it in your Mendix project. You can create two configurations in an *ivy.xml* configuration file: one
+The first example is [Apache Ivy](https://ant.apache.org/ivy/), which is a Java library specifically created for managing dependencies. Ivy is small enough that you can include it in your Mendix project. You can create two configurations in an *ivy.xml* configuration file: one
 to specify all the jars needed to run the project and execute the tests, and one to specify the libraries that should be included when publishing the module for reuse in the Marketplace. The demo project contains two configurations called **default** and **export** in the [ivy.xml](https://github.com/ako/ConnectorKitDemo/blob/master/ivy.xml) configuration file.
 
 The second example is [Gradle](https://gradle.org/), which is a full-fledged build tool where you can define tasks to build your project. The example in the demo project uses Gradle only to manage the dependencies. Again, it defines [two build configurations](https://github.com/ako/ConnectorKitDemo/blob/master/build.gradle): one requiring all the dependencies, and one requiring the libraries needed for exporting the module (in this case, just a library to call Slack).

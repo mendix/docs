@@ -1,12 +1,7 @@
 ---
 title: "XPath Operators"
 url: /refguide8/xpath-operators/
-tags: ["studio pro"]
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/xpath-operators.pdf).
-{{% /alert %}}
 
 ## 1 For XPath Query Constraints
 

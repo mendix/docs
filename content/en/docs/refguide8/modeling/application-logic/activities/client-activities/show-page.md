@@ -2,16 +2,11 @@
 title: "Show Page"
 url: /refguide8/show-page/
 weight: 50
-tags: ["studio pro", "show page", "client activity"]
 aliases:
     - /refguide8/Show+Page.html
     - /refguide8/Show+Page
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/show-page.pdf).
-{{% /alert %}}
 
 {{% alert color="warning" %}}
 This activity can be used in both **Microflows** and **Nanoflows**.
@@ -27,13 +22,13 @@ With this activity, you can show a selected page to an end-user.
 
 You can directly drag a page from the **Project Explorer** into your microflow:
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/activities/client-activities/show-page/show-page-from-project-explorer.png" >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/client-activities/show-page/show-page-from-project-explorer.png" class="no-border" >}}
 
 ## 2 Properties
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/activities/client-activities/show-page/show-page-properties.png" >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/client-activities/show-page/show-page-properties.png" class="no-border" >}}
 
 The **Show page** properties pane consists of the following sections:
 
@@ -67,7 +62,7 @@ This feature allows you to re-use the same page for the **New** and **Edit** but
 ### 3.4 Close Pages
 
 {{% alert color="info" %}}
-This option is only available for native mobile and was introduced with Mendix Studio Pro v8.14.
+This option is only available for native mobile and was introduced with Mendix Studio Pro 8.14.
 {{% /alert %}}
 
 Often you need to have control of page history, for example to show the correct page when a user presses the hardware back button on Android. These types of actions generally will only close a single page in the current stack. **Close Pages** provides more control over this behavior. We define relevant terms as follows:

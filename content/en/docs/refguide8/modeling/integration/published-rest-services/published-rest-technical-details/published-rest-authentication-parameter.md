@@ -3,12 +3,7 @@ title: "Custom Authentication Microflow Parameters"
 url: /refguide8/published-rest-authentication-parameter/
 weight: 40
 description: "The parameters which are passed to the custom authentication microflow for a published REST service"
-tags: ["published REST", "custom authentication", "microflow", "parameters", "arguments", "query", "header"]
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/published-rest-authentication-parameter.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 

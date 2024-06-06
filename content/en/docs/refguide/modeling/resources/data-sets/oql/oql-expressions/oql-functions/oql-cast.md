@@ -1,7 +1,6 @@
 ---
 title: "OQL CAST"
 url: /refguide/oql-cast/
-tags: ["studio pro"]
 ---
 
 ## 1 Description
@@ -47,6 +46,7 @@ The table below describes which `CAST` conversions are supported:
 | INTEGER | ✘ | ✘ | ✔ | ✔ | ✔ | ✔ | ✔ |
 | LONG | ✘ | ✘ | ✔ | ✔ | ✔ | ✔ | ✔ |
 | STRING | ✘ | ✘ | ✔ | ✔ | ✔ | ✔ | ✔ |
+
 <small>[1] BOOLEAN to STRING (limited) is supported only if the resulting string length is ≥ 5. <br />[2] The conversion of DATETIME and DECIMAL to STRING (limited) is supported only if the value fully fits into the string length. The conversion can fail if the resulting string length is < 20.</small>
 
 ## 4 Examples

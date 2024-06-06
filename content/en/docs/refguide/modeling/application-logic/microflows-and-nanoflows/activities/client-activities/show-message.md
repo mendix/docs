@@ -2,32 +2,31 @@
 title: "Show Message"
 url: /refguide/show-message/
 weight: 4
-tags: ["studio pro", "show message", "client activities"]
 aliases:
     - /refguide/Show+Message.html
     - /refguide/Show+Message
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="warning" %}}
-This activity can be used in both **Microflows** and **Nanoflows**.
+{{% alert color="info" %}}
+This activity can be used in both microflows and nanoflows.
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-This action is ignored and does not work when a microflow is called from an offline, native, or hybrid app. For more information, see the [Microflows](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/best-practices/#microflows) section of *Offline-First Data*.
+This action is ignored and does not work when a microflow is called from an offline or native app. For more information, see the [Microflows](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/best-practices/#microflows) section of *Offline-First Data*.
 {{% /alert %}}
 
 ## 1 Introduction
 
 The **Show message** activity shows a blocking or non-blocking message to an end-user. For example, if the end-user did not select the customer grade in a form, you can show an error message telling them to select a grade to proceed:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/show-message/show-message.png" alt="Show Message"   width="300"  >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/show-message/show-message.png" alt="Show Message"   width="300"  class="no-border" >}}
 
 ## 2 Properties
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/show-message/show-message-properties.png" alt="Show Message Properties" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/show-message/show-message-properties.png" alt="Show Message Properties" class="no-border" >}}
 
 The **Show message** properties pane consists of the following sections:
 
@@ -40,7 +39,7 @@ The **Action** section of the properties pane shows the action associated with t
 
 You can open a dialog box to configure this action by clicking the ellipsis (**…**) next to the action.
 
-You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
+You can also open the dialog box by double-clicking the activity, or right-clicking the activity and selecting **Properties**.
 
 ### 3.1 Type
 
@@ -60,7 +59,7 @@ There are three message options:
 
 For each parameter in the template, you define an attribute of the context entity or an associated entity. The value of this attribute will be inserted at the position of the parameter. Parameters should be entered using [expressions](/refguide/expressions/) resulting in a string.
 
-With parameters you can customize your message with data specific to the situation. For example, the message "An e-mail has been sent to customer {1}." with parameter `$customer/FullName` will show the full name of the customer who an e-mail has been sent to.
+With parameters you can customize your message with data specific to the situation. For example, the message "An email has been sent to customer {1}." with parameter `$customer/FullName` will show the full name of the customer who an email has been sent to.
 
 ### 3.4 Blocking
 

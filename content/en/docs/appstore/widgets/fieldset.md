@@ -1,9 +1,8 @@
 ---
 title: "Fieldset"
 url: /appstore/widgets/fieldset/
-category: "Widgets"
+
 description: "Describes the Fieldset widget, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "widget", "fieldset", "token", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -24,5 +23,4 @@ The [Fieldset](https://marketplace.mendix.com/link/component/113922/Mendix/Field
 
 This widget is compatible with the following products:
 
-* Mendix Studio
 * Mendix Studio Pro 8.3.1 and above

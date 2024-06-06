@@ -1,7 +1,6 @@
 ---
 title: "OQL DATEPART"
 url: /refguide/oql-datepart/
-tags: ["studio pro"]
 ---
 
 ## 1 Description
@@ -12,7 +11,7 @@ The `DATEPART` function retrieves a specified element from a date/time values. T
 
 The syntax is as follows:
 
-```sql
+```sql {linenos=false}
 DATEPART ( datepart , date_expression [, timezone ] )
 ```
 
@@ -25,10 +24,6 @@ DATEPART ( datepart , date_expression [, timezone ] )
 `date_expression` specifies the date to retrieve an element from. This should be formatted in an expression which resolves to a date/time value.
 
 ### 2.3 timezone
-
-{{% alert color="info" %}}
-The optional `timezone` parameter is available in [Studio Pro 9.22.0](/releasenotes/studio-pro/9.22/) and above. 
-{{% /alert %}}
 
 `timezone` specifies the time zone to use for the retrieval. This parameter is optional and defaults to the local time zone. It should be a string literal containing an IANA time zone. GMT offset time zones are not supported.
 

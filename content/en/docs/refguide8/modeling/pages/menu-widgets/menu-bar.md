@@ -2,13 +2,8 @@
 title: "Menu Bar"
 url: /refguide8/menu-bar/
 weight: 1
-tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/menu-bar.pdf).
-{{% /alert %}}
 
 {{% alert color="warning" %}}The menu bar widget is not supported on native mobile pages.{{% /alert %}}
 
@@ -18,13 +13,13 @@ A menu bar shows menu items of a [navigation profile](/refguide8/navigation/#pro
 
 Menu bars can go two levels deep, that means menu items can have sub-items. For more information on menu items and their properties, see [Menu](/refguide8/menu/).
 
-{{< figure src="/attachments/refguide8/modeling/pages/menu-widgets/menu-bar/menu-bar.png" alt="Menu Bar" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/menu-widgets/menu-bar/menu-bar.png" alt="Menu Bar" class="no-border" >}}
 
 ## 2 Properties
 
 An example of menu bar properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/pages/menu-widgets/menu-bar/menu-bar-properties.png"   width="250"  >}}
+{{< figure src="/attachments/refguide8/modeling/pages/menu-widgets/menu-bar/menu-bar-properties.png"   width="250"  class="no-border" >}}
 
 Menu bar properties consist of the following sections:
 

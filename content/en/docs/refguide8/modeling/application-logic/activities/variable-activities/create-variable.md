@@ -1,13 +1,8 @@
 ---
 title: "Create Variable"
 url: /refguide8/create-variable/
-tags: ["studio pro", "create variable", "variable", "variable activities"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/create-variable.pdf).
-{{% /alert %}}
 
 {{% alert color="warning" %}}
 This activity can be used in both **Microflows** and **Nanoflows**.
@@ -17,13 +12,13 @@ This activity can be used in both **Microflows** and **Nanoflows**.
 
 With this action, you can create a new variable and assign a value to it. For example, you can create a *$Discount* variable and assign a value 0.5 to give customers a 50% discount and use this value to calculate a price for a customer:
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/activities/variable-activities/create-variable/create-variable.png" alt="Create Variable" >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/variable-activities/create-variable/create-variable.png" alt="Create Variable" class="no-border" >}}
 
 ## 2 Properties
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/activities/variable-activities/create-variable/create-variable-properties.png" alt="Create Variable Properties" >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/variable-activities/create-variable/create-variable-properties.png" alt="Create Variable Properties" class="no-border" >}}
 
 The **Create variable** properties pane consists of the following sections:
 

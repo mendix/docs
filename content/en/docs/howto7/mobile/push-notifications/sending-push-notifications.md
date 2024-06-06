@@ -2,7 +2,6 @@
 title: "Send Push Notifications"
 url: /howto7/mobile/sending-push-notifications/
 weight: 20
-tags: ["mobile", "push notifications", "microflow"]
 ---
 
 ## 1 Overview
@@ -39,15 +38,15 @@ You can specify actions to be performed once the recipient clicks a notification
 
 1. Locate the **Online_Snippet** or **Offline_Snippet** document and open it.
 
-    {{< figure src="/attachments/howto7/mobile/push-notifications/sending-push-notifications/push_notifications_snippets.png" >}}
+    {{< figure src="/attachments/howto7/mobile/push-notifications/sending-push-notifications/push_notifications_snippets.png" class="no-border" >}}
 
 2. Double-click the widget to open the properties.
 
-    {{< figure src="/attachments/howto7/mobile/push-notifications/sending-push-notifications/push_notifications_widget_settings.png" >}}
+    {{< figure src="/attachments/howto7/mobile/push-notifications/sending-push-notifications/push_notifications_widget_settings.png" class="no-border" >}}
 
 Use the **New** button to add new actions. Each action requires a name, an action type (Open Page or Call Microflow), and optionally an entity (the type of the context object). Depending on the action type, you should configure the page to be opened or the microflow to be called.
 
-{{< figure src="/attachments/howto7/mobile/push-notifications/sending-push-notifications/push_notifications_action.png" >}}
+{{< figure src="/attachments/howto7/mobile/push-notifications/sending-push-notifications/push_notifications_action.png" class="no-border" >}}
 
 The names of the actions can be used as the vlaue of the ActionName attribute of the MessageData entity.
 

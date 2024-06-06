@@ -3,16 +3,11 @@ title: "New Project"
 url: /refguide8/new-project/
 weight: 10
 description: "This document describes the New Project (New App) flow and the App Settings dialog box."
-tags: ["studio pro", "create app", "new app", "new project", "creating new app"]
 aliases:
     - /refguide8/app-settings-dialog.html
     - /refguide8/app-settings-dialog
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/new-project.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 
@@ -34,7 +29,7 @@ The new project is created and opened.
 
 When creating a new app, the **App Settings** dialog box is opened where you can specify an app name, whether or not to enable the online services provided by the Mendix Platform, the default language, and the location on disk where the project files for your app are stored:
 
-{{< figure src="/attachments/refguide8/modeling/menus/file-menu/new-project/app-settings-dialog.png" alt="App Settings" >}}
+{{< figure src="/attachments/refguide8/modeling/menus/file-menu/new-project/app-settings-dialog.png" alt="App Settings" class="no-border" >}}
 
 ### 2.1 Name
 
@@ -42,7 +37,7 @@ The name of your new app. This name is used as the name of the project directory
 
 ### 2.2 Enable Online Services
 
-The Mendix Platform offers online services such as [version control](/refguide8/version-control/), [cloud deployment](/developerportal/deploy/), and [collaboration](/refguide8/collaborative-development/). When enabled, this will create a project in the Developer Portal and a corresponding version control repository.
+The Mendix Platform offers online services such as [version control](/refguide8/version-control/) and [cloud deployment](/developerportal/deploy/). When enabled, this will create a project in the Developer Portal and a corresponding version control repository.
 
 If you choose *No*, you will create an app that is only stored on your local disk. At a later point you can still decide to upload this local app to a version control server and enjoy the benefits of version control.
 

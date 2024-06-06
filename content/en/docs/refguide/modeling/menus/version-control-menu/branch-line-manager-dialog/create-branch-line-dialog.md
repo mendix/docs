@@ -2,14 +2,13 @@
 title: "Create Branch Line"
 url: /refguide/create-branch-line-dialog/
 weight: 10
-tags: ["studio pro", "create branch line"]
 ---
 
 ## 1 Introduction
 
 Use the **Create Branch Line** dialog box to create a new [branch line](/refguide/version-control/#branches) via the **Branch Line Manager**:
 
-{{< figure src="/attachments/refguide/modeling/menus/version-control-menu/branch-line-manager-dialog/create-branch-line-dialog/create-branch-line.png" >}}
+{{< figure src="/attachments/refguide/modeling/menus/version-control-menu/branch-line-manager-dialog/create-branch-line-dialog/create-branch-line.png" class="no-border" width="550" >}}
 
 To view the **Create Branch Line** dialog box,  do the following:
 
@@ -39,7 +38,7 @@ Select from which revision of the main line or a branch line you want to create 
 
 This setting is only available when you select [Branch line](#branch-line) in **Create branch from**. 
 
-Select from which branch line you want to create another branch line. We recommend that you make branch lines only from the main line but in some cases branching a branch line can be useful.
+Select from which branch line you want to create another branch line. Mendix recommends making branch lines only from the main line but in some cases branching a branch line can be useful.
 
 ## 5 Tagged Version
 
@@ -62,4 +61,3 @@ Since branch line names must be unique, this option shows the existing branch li
 ## 8 Read More
 
 * [Version Control](/refguide/version-control/)
-* [Collaborative Development](/refguide/collaborative-development/)

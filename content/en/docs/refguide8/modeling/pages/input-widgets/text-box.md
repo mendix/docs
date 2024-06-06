@@ -2,13 +2,8 @@
 title: "Text Box"
 url: /refguide8/text-box/
 weight: 10
-tags: ["studio pro", "data"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/text-box.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 
@@ -25,13 +20,13 @@ A text box must be placed in a [data widget](/refguide8/data-widgets/) and displ
 
 For example, the following text box allows the end-user to see, and set, the **Name** of a customer.
 
-{{< figure src="/attachments/refguide8/modeling/pages/input-widgets/text-box/text-box.png" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/input-widgets/text-box/text-box.png" class="no-border" >}}
 
 ## 2 Properties
 
 An example of text box properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/pages/input-widgets/text-box/text-box-properties.png"   width="250"  >}}
+{{< figure src="/attachments/refguide8/modeling/pages/input-widgets/text-box/text-box-properties.png"   width="250"  class="no-border" >}}
 
 Text box properties consist of the following sections:
 

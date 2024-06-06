@@ -6,7 +6,7 @@ weight: 76
 
 ## 9.24.0
 
-**Release date: March 20th, 2023**
+**Release date: March 20, 2023**
 
 ### DomainModels
 

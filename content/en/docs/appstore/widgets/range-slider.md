@@ -1,9 +1,8 @@
 ---
 title: "Range Slider"
 url: /appstore/widgets/range-slider/
-category: "Widgets"
+
 description: "Describes the configuration and usage of the Range Slider widget, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "widget", "range slider", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -19,11 +18,11 @@ If the user needs to set one value, instead of a range, you should use the [Slid
 
 * Configure the minimum value and the maximum value, which define the limits of the slider's track, and then the user can set the lower bound value and the upper bound value of a range within these limits:
 
-    {{< figure src="/attachments/appstore/widgets/range-slider/sample-range.png" >}}
+    {{< figure src="/attachments/appstore/widgets/range-slider/sample-range.png" class="no-border" >}}
 
 * Set a step size, which is the difference between two adjacent values on the slider:
 
-    {{< figure src="/attachments/appstore/widgets/range-slider/step-value.png" >}}
+    {{< figure src="/attachments/appstore/widgets/range-slider/step-value.png" class="no-border" >}}
 
 * Set a microflow that is executed when the user changes the range value on the slider
 * Show a tooltip when the user clicks or moves a slider handle

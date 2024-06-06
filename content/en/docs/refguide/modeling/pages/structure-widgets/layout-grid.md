@@ -2,7 +2,6 @@
 title: "Layout Grid"
 url: /refguide/layout-grid/
 weight: 10
-tags: ["studio pro", "layout grid", "container widget", "column", "row", "grid", "layout"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -11,9 +10,9 @@ tags: ["studio pro", "layout grid", "container widget", "column", "row", "grid",
 The layout grid is a widget that gives structure to your pages.  
 
 A layout grid consists of [rows](#rows) and [columns](#columns): 
-{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/layout-grid/layout-grid.png" alt="Layout Grid Example" >}}
+{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/layout-grid/layout-grid.png" alt="Layout Grid Example" class="no-border" >}}
 
-In a browser, the layout grid is based on the Bootstrap grid system. For more information on the Bootstrap grid system, see the [official Bootstrap documentation](http://getbootstrap.com/css/#grid).
+In a browser, the layout grid is based on the Bootstrap grid system. For more information on the Bootstrap grid system, see the [official Bootstrap documentation](https://getbootstrap.com/css/#grid).
 
 {{% alert color="info" %}}
 Row and column properties described below are available if your app has [Atlas UI Resources](/appstore/modules/atlas-ui-resources/) version 2.4.0 or above. 
@@ -21,30 +20,23 @@ Row and column properties described below are available if your app has [Atlas U
 For more information on row and column properties, see the [Rows and Their Properties](#rows) and [Columns and Their Properties](#columns) sections. 
 {{% /alert %}}
 
-## 2 Layout Grid Properties
+## 2 Properties Pane
 
-An example of layout grid properties is represented in the image below:
+The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**.Layout grid properties consist of the following sections:
 
-{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/layout-grid/layout-grid-properties.png" alt="Layout Grid Properties"   width="250"  >}}
+Properties:
 
-Layout grid properties consist of the following sections:
-
-* [Common](#common)
-* [Design Properties](#design-properties)
 * [General](#general)
-* [Visibility](#visibility)
 
-### 2.1 Common Section {#common}
+Styling:
 
-{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+* [Common](#common-styling)
 
-### 2.2 Design Properties Section{#design-properties}
+## 3 Properties
 
-{{% snippet file="/static/_includes/refguide/design-section-link.md" %}}
+### 3.1 General Section {#general}
 
-### 2.3 General Section {#general}
-
-#### 2.3.1 Width
+#### 3.1.1 Width
 
 The **General** section contains the **Width** property, which determines the width of the layout grid. 
 
@@ -57,17 +49,19 @@ The **General** section contains the **Width** property, which determines the wi
 As the layout grid responds to the viewport width, and not to the width of its container, a fixed width layout grid should only be used on top-level.
 {{% /alert %}}
 
-### 2.4 Visibility Section {#visibility}
+## 4 Styling
 
-{{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
+### 4.1 Common Section {#common-styling}
 
-## 3 Rows and Their Properties {#rows}
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+
+## 5 Rows and Their Properties {#rows}
 
 A layout grid can contain one or more rows. Each row contains [columns](#columns) and the number of columns can differ per row.
 
 An example of layout grid row properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/layout-grid/row-properties.png" alt="Row Properties"   width="300"  >}}
+{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/layout-grid/row-properties.png" alt="Row Properties"   width="300"  class="no-border" >}}
 
 Row properties consist of the following sections:
 
@@ -75,11 +69,11 @@ Row properties consist of the following sections:
 * [General](#row-general)
 * [Visibility](#row-visibility)
 
-### 3.1 Common Section {#row-common}
+### 5.1 Common Section {#row-common}
 
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
-### 3.2 General Section {#row-general}
+### 5.2 General Section {#row-general}
 
 The **General** section of a row contains the following properties:
 
@@ -96,30 +90,30 @@ The **General** section of a row contains the following properties:
 
 * **Spacing between columns** – when set to *Yes*, adds spacing between columns
 
-### 3.3 Visibility Section {#row-visibility}
+### 5.3 Visibility Section {#row-visibility}
 
 {{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
 
-## 4 Columns and Their Properties {#columns}
+## 6 Columns and Their Properties {#columns}
 
 Columns form a row of a layout grid.
 
 An example of layout grid column properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/layout-grid/column-properties.png" alt="Column Properties"   width="300"  >}}
+{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/layout-grid/column-properties.png" alt="Column Properties"   width="300"  class="no-border" >}}
 
 Layout grid column properties consist of the following sections:
 
 * [Common](#column-common)
 * [General](#column-general)
 
-### 4.1 Common Section {#column-common}
+### 6.1 Common Section {#column-common}
 
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
-### 4.2 General Section {#column-general}
+### 6.2 General Section {#column-general}
 
-#### 4.2.1 **Width** {#column-width}
+#### 6.2.1 **Width** {#column-width}
 
 This property allows you to define the column width. 
 
@@ -137,38 +131,38 @@ Column width can be used to make your layout more flexible and adaptive to diffe
 
 For example, you have a layout grid with one row and two columns: a picture is in one column, and a text with details is in another.
 
-For the *desktop* and *tablet*, you might want to set the first column with a picture to **Auto-fit content** and and the second one to **Auto-fill**, this way the first column will adjust to the size of the picture, while the second one will take the rest of the row:
+For the *desktop* and *tablet*, you might want to set the first column with a picture to **Auto-fit content** and the second one to **Auto-fill**, this way the first column will adjust to the size of the picture, while the second one will take the rest of the row:
 
-{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/layout-grid/layout-example-desktop.png" alt="Layout Example, Desktop" >}}
+{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/layout-grid/layout-example-desktop.png" alt="Layout Example, Desktop" class="no-border" >}}
 
 For *phone*, it can be a good idea to place two columns one under another, setting them to **Manual** width of *12* (for more information on the column size property, see the [Size](#column-size) section). In this case, the second column will be automatically wrapped to another line:
 
-{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/layout-grid/layout-example-phone.png" alt="Layout Example, Phone"   width="300"  >}}
+{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/layout-grid/layout-example-phone.png" alt="Layout Example, Phone"   width="300"  class="no-border" >}}
 
 On the picture below you can see the settings for two column described above:
 
-{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/layout-grid/column-settings-example.png" >}}
+{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/layout-grid/column-settings-example.png" class="no-border" >}}
 
-#### 4.2.2 **Size** {#column-size}
+#### 6.2.2 **Size** {#column-size}
 
 The **Size** option is displayed only if the [width](#column-width) is set to **Manual**. 
 
 This setting allows you to manually set the column size for desktop, tablet, or phone by using the corresponding property: **Desktop Size**, **Tablet Size**, **Phone Size**. 
 
-#### 4.2.3 Align Vertically
+#### 6.2.3 Align Vertically
 
 The **Align vertically** property overrides the **Align columns vertically** property on the row and sets alignment for an individual column.  
 
-## 5 Performing Basic Actions
+## 7 Performing Basic Actions
 
-### 5.1 Adding a New Row or a Column
+### 7.1 Adding a New Row or a Column
 
 To add a new row, do the following:
 
 1. Select an existing row in a layout grid.
 2. Right-click and select **Insert row above** or **Insert row below**:
 
-    {{< figure src="/attachments/refguide/modeling/pages/structure-widgets/layout-grid/adding-row.png" alt="Adding a New Row" >}}
+    {{< figure src="/attachments/refguide/modeling/pages/structure-widgets/layout-grid/adding-row.png" alt="Adding a New Row" class="no-border" >}}
 
 3. Select a column layout (how many columns should be in a row and what weight columns should have).
 
@@ -185,14 +179,14 @@ A new column is added, the weight 1 is automatically set for it.
 Sometimes on a native page, data is not clearly visible when using a native layout grid. To see the data more clearly, nest the layout grid inside the scroll container.
 {{% /alert %}}
 
-### 5.2 Performing Other Actions on Rows
+### 7.2 Performing Other Actions on Rows
 
 In adding to inserting a new row, you can perform the following actions when right-clicking a row:
 
 * **Move up** – moves a row up in the layout grid, you can use a shortcut for it  <kbd>Ctrl</kbd> + <kbd>↑</kbd> 
 * **Move down** – moves a row down in the layout grid, you can use a shortcut for it  <kbd>Ctrl</kbd> + <kbd>↓</kbd> 
 
-### 5.3 Performing Other Actions on Columns
+### 7.3 Performing Other Actions on Columns
 
 In adding to inserting a new column, you can perform the following actions when right-clicking a column:
 
@@ -200,7 +194,7 @@ In adding to inserting a new column, you can perform the following actions when 
 * **Move right** – moves a column right in the row, you can use a shortcut for it  <kbd>Ctrl</kbd> + <kbd>→</kbd> 
 * **Row** – allows you to perform actions on the column's row 
 
-## 6 Read More
+## 8 Read More
 
 * [Page](/refguide/page/)
 * [Structure](/refguide/structure-widgets/)

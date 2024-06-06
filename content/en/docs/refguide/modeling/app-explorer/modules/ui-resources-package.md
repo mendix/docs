@@ -1,7 +1,6 @@
 ---
 title: "UI Resources Package"
 url: /refguide/ui-resources-package/
-tags: ["studio pro", "ui resources"]
 ---
 
 ## 1 Introduction

@@ -2,13 +2,8 @@
 title: "Layout"
 url: /refguide8/layout/
 weight: 10
-tags: ["studio pro", "layout widgets", "layout", "page template", "pages"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/layout.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 
@@ -16,21 +11,21 @@ Layouts specify what comes where. Each [page](/refguide8/page/) is based on a la
 
 A layout consists of content and [placeholders](/refguide8/placeholder/). The content is everything that should be present in every page that uses the layout, from navigation bars to sign-out buttons. Placeholders are empty areas that later form the working area for any pages that make use of the layout. The layout content remains the same in every page, but the placeholders cover what is unique to every individual page. 
 
-Layouts can be based on other layouts, in which case the generic layout is referred to as the master layout. If a layout has a master layout, it can use the placeholders defined in the master to create a more specialized configuration. If a page is based on this specialized layout, it makes use of the placeholders defined in the new layout, ignoring those of the master layout. 
+Layouts can be based on other layouts, in which case the generic layout is referred to as the primary layout. If a layout has a primary layout, it can use the placeholders defined in the primary layout to create a more specialized configuration. If a page is based on this specialized layout, it makes use of the placeholders defined in the new layout, ignoring those of the primary layout. 
 
-{{< figure src="/attachments/refguide8/modeling/pages/page-resources/layout/16843991.png" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/page-resources/layout/16843991.png" class="no-border" >}}
 
-This chain can be as long as is necessary, with a generic layout used throughout the project  as a master layout for a more specific data input layout which is, in turn, used as a master layout for a specialized edit user layout. 
+This chain can be as long as is necessary, with a generic layout used throughout the project  as a primary layout for a more specific data input layout which is, in turn, used as a primary layout for a specialized edit user layout. 
 
 When opening a new page in the browser, the content found in the layouts is not reloaded if the layout is re-used by the new page. That is, if a user transitions from page A to page B, both of which use layout X, the placeholder content is refreshed, but the layout content is unaffected. This allows for navigation between pages without losing valuable input or performing a costly refresh on elements that do not require one. Example scenarios include a tab container that does not require the user to select the correct tab every time a new page is opened, or a sidebar menu with user input that should not be cleared after every single refresh. 
 
-Mendix will intelligently detect if pages share a layout, so no user input is required. This also applies for nested layouts. If two pages have different layouts but those layouts share a common master layout, the sub-layout will reload, but the master layout will remain static.
+Mendix will intelligently detect if pages share a layout, so no user input is required. This also applies for nested layouts. If two pages have different layouts but those layouts share a common primary layout, the sub-layout will reload, but the primary layout will remain static.
 
 ## 2 Properties
 
 An example of layout properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/pages/page-resources/layout/layout-properties.png" alt="Example of the layout properties pane"   width="250"  >}}
+{{< figure src="/attachments/refguide8/modeling/pages/page-resources/layout/layout-properties.png" alt="Example of the layout properties pane"   width="250"  class="no-border" >}}
 
 Layout properties consist of the following sections:
 
@@ -62,7 +57,7 @@ Default value: *600*
 
 **Platform** can only be set when a layout is created.
 
-{{< figure src="/attachments/refguide8/modeling/pages/page-resources/layout/add-layout.png" alt="Dialog for adding a new layout" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/page-resources/layout/add-layout.png" alt="Dialog for adding a new layout" class="no-border" >}}
 
 The values for the platform property are:
 
@@ -73,7 +68,7 @@ For existing layouts, the value is read-only.
 
 #### 2.3.2 Master Layout
 
-**Master layout** specifies a layout on which this layout is based. If no master layout is specified, the layout contains a single widget (for example, a [scroll container](/refguide8/scroll-container/)) that defines the structure of pages based on this layout. If a master layout is specified, this layout fills the gaps defined by the master layout. You can introduce new gaps in this layout by using [placeholders](/refguide8/placeholder/).
+**Master layout** specifies a layout on which this layout is based. If no primary layout is specified, the layout contains a single widget (for example, a [scroll container](/refguide8/scroll-container/)) that defines the structure of pages based on this layout. If a primary layout is specified, this layout fills the gaps defined by the primary layout. You can introduce new gaps in this layout by using [placeholders](/refguide8/placeholder/).
 
 #### 2.3.3 Layout Type {#layout-type}
 

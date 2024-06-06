@@ -1,13 +1,12 @@
 ---
 title: "Use XML in Widget Development"
 url: /howto7/widget-development/use-xml-widget/
-category: "Widget Development"
-tags: ["xml", "widget"]
+
 ---
 
 ## 1 Requirements
 
-This document assumes you have a basic understanding of XML and the Mendix Modeler. For more information on XML, visit [W3 Schools - XML](http://w3schools.com/xml/).
+This document assumes you have a basic understanding of XML and the Mendix Modeler. For more information on XML, visit [W3 Schools - XML](https://www.w3schools.com/xml/).
 
 ## 2 Start of the Widget XML
 
@@ -32,7 +31,7 @@ Inside the widget element are 4 child elements.
 | --- | --- |
 | Name | The name property is what your widget will be called in the Mendix Modeler. It will also be used to name the different instances of your widget by adding a number to the end of it each time it is used in a form. |
 | Description | The description determines the mouse-over tooltip over your widget in the Custom Widgets toolbar. |
-| Icon | Every element or widget in the Modeler has its own icon. Your new widget's icon can be defined with this property. It is a [Base64](http://en.wikipedia.org/wiki/Base64) representation of the image, so that it can be used in an XML file. |
+| Icon | Every element or widget in the Modeler has its own icon. Your new widget's icon can be defined with this property. It is a [Base64](https://en.wikipedia.org/wiki/Base64) representation of the image, so that it can be used in an XML file. |
 | Properties | The individual property elements will be grouped inside the “properties” element as in the code snippet below. |
 
 ```xml
@@ -69,12 +68,12 @@ Other possible attributes are:
 | Attribute | Description |
 | --- | --- |
 | isList | Only used for the Object property type. |
-| entityProperty | Assigns a entity to a property. This should point to the **key** attribute of the **entity** to which it is related.  This could also be relative (like `"../entityName"`) when the attribute is inside a object list: `<property key="key" type="object" isList="true">`|
+| entityProperty | Assigns an entity to a property. This should point to the **key** attribute of the **entity** to which it is related.  This could also be relative (like `"../entityName"`) when the attribute is inside an object list: `<property key="key" type="object" isList="true">`|
 | allowNonPersistableEntities | Allows the selection of a non-persistable entity. (By default this is false.) |
 | defaultValue | The default value that a property starts with when it is created. |
 | required | Specifies if the property is a required field or not. Defaults to "True" if not present. |
 | isDefault | Marks a property as the default property that is selected when the widget is selected. |
-| multiline | Makes the string input mulitple lines, which is useful for long texts. |
+| multiline | Makes the string input multiple lines, which is useful for long texts. |
 | parameterIsList| Requires the parameter of a microflow to be a list of the type defined in the **entityProperty**. |
 | isPath | *("no", "optional", "yes")* The path for an attribute or entity property, it can be either "no", "optional" or "yes", where "no" is the default value if the property is left out. The "optional" means that the attribute/entity can be either the current entity (or an attribute of the current entity) or an entity (or attribute) over a 1-deep association. |
 | pathType | *("reference", "referenceSet")* This defines what sort of reference should be shown for an entity/attribute over an association, either a "reference" or a "referenceSet". |
@@ -133,7 +132,7 @@ A property of type Boolean requires the attribute defaultValue.
 
 What it looks like in the Mendix Modeler:
 
-{{< figure src="/attachments/howto7/widget-development/use-xml-widget/16844049.png" >}}
+{{< figure src="/attachments/howto7/widget-development/use-xml-widget/16844049.png" class="no-border" >}}
 
 ### 5.2.1 Entity
 
@@ -182,7 +181,7 @@ It requires a default value to be set, which should correspond with one of the e
 
 What it looks like in the Mendix Modeler:
 
-{{< figure src="/attachments/howto7/widget-development/use-xml-widget/16844042.jpg" >}}
+{{< figure src="/attachments/howto7/widget-development/use-xml-widget/16844042.jpg" class="no-border" >}}
 
 ### 5.2.4 Form
 
@@ -309,7 +308,7 @@ The object property is an array of packaged sub-properties. It packages multiple
 
 What it looks like in the Mendix Modeler:
 
-{{< figure src="/attachments/howto7/widget-development/use-xml-widget/16844048.png" >}}
+{{< figure src="/attachments/howto7/widget-development/use-xml-widget/16844048.png" class="no-border" >}}
 
 ### 5.2.10 String
 
@@ -341,10 +340,10 @@ The translatableString property is similar to a normal string property, except y
 
 What it looks like in the Mendix Modeler:
 
-{{< figure src="/attachments/howto7/widget-development/use-xml-widget/16844045.png" >}}
+{{< figure src="/attachments/howto7/widget-development/use-xml-widget/16844045.png" class="no-border" >}}
 
 {{% alert color="info" %}}
-Remember to use the correct language notation according to the [Java supported locales](http://java.sun.com/javase/6/docs/technotes/guides/intl/locale.doc.html).
+Remember to use the correct language notation according to the [Java supported locales](https://www.oracle.com/java/technologies/javase/locales.html).
 {{% /alert %}}
 
 ## 6 Read More

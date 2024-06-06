@@ -2,7 +2,6 @@
 title: "Header"
 url: /refguide/header/
 weight: 20
-tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -14,7 +13,7 @@ Headers consist of three distinct elements: a page title and a left and right [d
 
 For example, the following header has the right drop-zone selected and the user is dropping a button into the left drop-zone.
 
-{{< figure src="/attachments/refguide/modeling/pages/page-resources/layout/header/header-layout.png" >}}
+{{< figure src="/attachments/refguide/modeling/pages/page-resources/layout/header/header-layout.png" class="no-border" >}}
 
 The drop-zones are intended for confirmation buttons, such as an [action button](/refguide/button-widgets/) for creating a new object, but can easily be appropriated for any number of alternate implementations.
 
@@ -22,23 +21,33 @@ The page title placeholder is replaced by the page title setting of the page bei
 
 For example, the image below shows an edit page derived from a layout with a header. The page title is automatically set to that of the page and the drop-zones have been used to add a save and cancel button, replacing the need to add a control bar to the data view.
 
-{{< figure src="/attachments/refguide/modeling/pages/page-resources/layout/header/header-page.png"   width="350"  >}}
+{{< figure src="/attachments/refguide/modeling/pages/page-resources/layout/header/header-page.png"   width="350"  class="no-border" >}}
 
-## 2 Properties
+## 2 Properties Pane
 
-An example of header properties is represented in the image below:
+The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Header properties consist of the following sections:
 
-{{< figure src="/attachments/refguide/modeling/pages/page-resources/layout/header/header-properties.png"   width="250"  >}}
-
-Header properties consist of the following sections:
+Properties:
 
 * [Common](#common)
-* [Design Properties](#design-properties)
 
-### 2.1 Common Section{#common}
+Styling:
+
+* [Design Properties](#design-properties)
+* [Common](#common-styling)
+
+## 3 Properties
+
+### 3.1 Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
-### 2.2 Design Properties Section{#design-properties}
+## 4 Styling
+
+### 4.1 Design Properties Section {#design-properties}
 
 {{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
+
+### 4.2 Common Section {#common-styling}
+
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}

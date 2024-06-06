@@ -2,7 +2,6 @@
 title: "DateTime Handling FAQ"
 url: /refguide/datetime-handling-faq/
 notoc: true
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction
@@ -11,7 +10,7 @@ This page addresses some FAQs about DateTime.
 
 ## 2 What Is DateTime for Computer Programs?
 
-A DateTime is nothing more than a number to a computer. This number represents the amount of seconds (or milliseconds) since 1970-01-01 00:00:00 UTC. It's beyond the scope of this FAQ to explain why this date was universally chosen but you can find this by searching for Unix Epoch or reading [http://en.wikipedia.org/wiki/Unix_time](http://en.wikipedia.org/wiki/Unix_time).
+A DateTime is nothing more than a number to a computer. This number represents the amount of seconds (or milliseconds) since 1970-01-01 00:00:00 UTC. It's beyond the scope of this FAQ to explain why this date was universally chosen but you can find this by searching for Unix Epoch or reading [Unix Time](https://en.wikipedia.org/wiki/Unix_time).
 
 This also means there is NO time zone information stored in a DateTime itself. It is important to keep this in mind when reasoning about dates and times. For things such as comparing DateTime objects, nothing concerning localization or time zones is done. Only when formatting time, which means as much as making it readable to humans, or for operations such as getting the beginning of the day, time zones come into play.
 
@@ -30,6 +29,7 @@ Just like a regular time zone. If you are in Eastern Standard Time (EST, which i
 ## 6 I Planned a Scheduled Event at 02:00 Using Server Time and Set It to Repeat Every Day, Why Did My Local DST Change and Why Are Scheduled Events Starting to Run an Hour Off?
 
 This can be confusing but is expected. The scheduling of scheduled events is interval-based and not time-based. Notice that the original date of the scheduled event is still at your previous time zone (before the DST period changed), the scheduled event is simply repeating itself every 24 hour, which might mean that you will see a change in the local time it runs at, because during DST shifts a day may take 25 hours or 23 hours. This will cause a temporary shift for as long as the DST change lasts.
+
 This is only true for legacy scheduled events; the new task-queue-based scheduled events will not suffer from a one-hour shift from their intended schedule.
 
 ## 7 What If I Plan It in UTC?

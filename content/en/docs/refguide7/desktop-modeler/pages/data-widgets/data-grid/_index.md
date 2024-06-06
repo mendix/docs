@@ -1,6 +1,7 @@
 ---
 title: "Data grid"
 url: /refguide7/data-grid/
+canonical_url: "https://docs.mendix.com/refguide/data-grid/"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -8,7 +9,7 @@ The data grid shows a list of objects in a grid. For example, a data grid can sh
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide7/desktop-modeler/pages/data-widgets/data-grid/data-grid.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/data-widgets/data-grid/data-grid.png" class="no-border" >}}
 A data grid showing accounts.
 
 {{% /alert %}}
@@ -196,8 +197,8 @@ If you choose 'Custom' as the date format (see above) the custom date format det
 | G | 1 | AD | Era |
 | y | 1..n | 2010 | Year |
 | M | 1..2 | 09 | Month |
-| M | 3 | Sept |
-| M | 4 | September |
+| M | 3 | Sept | Month |
+| M | 4 | September | Month |
 | w | 1..2 | 27 | Week of Year |
 | D | 1..3 | 93 | Day of Year |
 | a | 1 | AM | AM or PM |
@@ -273,7 +274,7 @@ See [Control Bar](/refguide7/control-bar/).
 
 ### Search Bar (for the Database and XPath Data Source Types)
 
-The search bar contains search fields that allow the end-user to quickly find the information he or she needs.
+The search bar contains search fields that allow the end-user to quickly find the information they need.
 
 See [Search Bar](/refguide7/search-bar/).
 

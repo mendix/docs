@@ -2,7 +2,6 @@
 title: "Access Rules"
 url: /refguide7/access-rules/
 weight: 70
-tags: ["domain model", "entity", "access rule", "xpath constraint", "module role"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -20,7 +19,7 @@ Access rules are not inherited from an entity's generalization; rather, the secu
 
 Access rules are defined in the entity **Properties** > the **Access rules** section.
 
-{{< figure src="/attachments/refguide7/desktop-modeler/domain-model/entities/access-rules/dm-access-rules-section.png" alt="Access Rules for Entities" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/domain-model/entities/access-rules/dm-access-rules-section.png" alt="Access Rules for Entities" class="no-border" >}}
 
 {{% alert color="info" %}}
 
@@ -34,11 +33,11 @@ In this property you can describe the intention of the access rule. This helps t
 
 ### Rule applies to the following module roles
 
-The module roles to which this access rule applies have a checkmark in the box before them. All users that have at least one of the checked module roles get the access rights that the rule defines.
+The module roles to which this access rule applies have a check mark in the box before them. All users that have at least one of the checked module roles get the access rights that the rule defines.
 
 ### Allow creating new objects
 
-If this check box is checked, users are allowed to create new objects of this entity.
+If this checkbox is checked, users are allowed to create new objects of this entity.
 
 ### Allow deleting existing objects
 
@@ -62,7 +61,7 @@ The set of objects to which the member access rights apply can be limited by usi
 
 A customer is allowed to view the discount, but is not allowed to edit it. The access rights for the discount attribute are 'Read'.
 
-{{< figure src="/attachments/refguide7/desktop-modeler/domain-model/entities/access-rules/917534.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/domain-model/entities/access-rules/917534.png" class="no-border" >}}
 
 {{% /alert %}}
 
@@ -72,7 +71,7 @@ The [XPath constraint](/refguide7/xpath-constraints/) can be used to constrain t
 
 Entity 'Customer' is a specialization of entity 'User'. Entity 'Order' is associated to entity 'Customer'.
 
-{{< figure src="/attachments/refguide7/desktop-modeler/domain-model/entities/access-rules/917537.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/domain-model/entities/access-rules/917537.png" class="no-border" >}}
 
 A logged in customer is allowed to view personal orders, but is not allowed to view orders of other customers. This is accomplished by using the following XPath constraint in the access rule of entity 'Order':
 

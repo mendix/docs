@@ -1,11 +1,10 @@
 ---
 title: "Trigger Logic Using Microflows"
 url: /howto7/logic-business-rules/triggering-logic-using-microflows/
-category: "Logic and Business Rules"
+
 weight: 2
-tags: ["microflow", "logic"]
 ---
-To add custom logic to your Mendix application you can use microflows. Microflows can be triggered in various ways, as in, buttons, input fields, scheduled events, and more. This how-to will teach you how to configure the properties and settings of a microflow button placed on a grid or reference set selector. You will start with adding the microflow button to the right widget. Next you will need to configure the right properties and settings of the microflow button. 
+To add custom logic to your Mendix application you can use microflows. Microflows can be triggered in various ways, as in, buttons, input fields, scheduled events, and more. This how-to teaches you how to configure the properties and settings of a microflow button placed on a grid or reference set selector. You will start with adding the microflow button to the right widget. Next you will need to configure the right properties and settings of the microflow button. 
 
 ## 1 Preparations
 
@@ -26,7 +25,7 @@ In this exercise you will add a microflow button to a grid or a reference set se
 4. Right click the menu bar.
 5. Select **Add button** > **Action**:
 
-    {{< figure src="/attachments/howto7/logic-business-rules/triggering-logic-using-microflows/18580943.png" >}}
+    {{< figure src="/attachments/howto7/logic-business-rules/triggering-logic-using-microflows/18580943.png" class="no-border" >}}
 
 6. Double-click the new button and enter *Microflow* for the button's **Caption**. The **Microflow** button will be visible on the menu bar of the data grid.
 
@@ -38,12 +37,12 @@ At the moment there is only a button with no microflow behind it yet. In this ex
 
 1. Double-click the **Microflow** button to open its properties.
 
-    {{< figure src="/attachments/howto7/logic-business-rules/triggering-logic-using-microflows/18580941.png" >}}
+    {{< figure src="/attachments/howto7/logic-business-rules/triggering-logic-using-microflows/18580941.png" class="no-border" >}}
 
 2. In the **Edit Action Button** dialog box that opens, the first property to configure is the one that converts the action button into a button that calls a microflow. Go to **Events** > **On click** and select **Call a microflow**. This will open the **Select Microflow** dialog box, where you can specify the microflow that is executed when the button is clicked.
 3. For the purposes of this how-to, you will create a new microflow. Click **New** to create this microflow, and keep the name as **Microflow**.
 
-    {{< figure src="/attachments/howto7/logic-business-rules/triggering-logic-using-microflows/add.png" >}}
+    {{< figure src="/attachments/howto7/logic-business-rules/triggering-logic-using-microflows/add.png" class="no-border" >}}
 
 4. Back in the **Edit Action Button** dialog box, you can set the following parameters:
 
@@ -53,7 +52,7 @@ At the moment there is only a button with no microflow behind it yet. In this ex
     | **Tooltip** | This property indicates what text will be displayed when users mouse over the button. |
     | **Icon** | This property indicates which image will be shown in front of the caption of the trigger. |
     | **Button style** | This property indicates the style of the button. |
-    | **Is default button** | This property indicates whether this button is the default button of the grid or reference set selector. A grid or reference set selector can only have one default button. The default button is triggered when clicking or double clicking a row. Whether a click or a double click triggers it depends on the 'default button trigger' property of the [Data grid](/refguide7/data-grid/), [Template grid](/refguide7/template-grid/) or [Reference set selector](/refguide7/reference-set-selector/). {{< figure src="/attachments/howto7/logic-business-rules/triggering-logic-using-microflows/18580939.png" >}} |
+    | **Is default button** | This property indicates whether this button is the default button of the grid or reference set selector. A grid or reference set selector can only have one default button. The default button is triggered when clicking or double clicking a row. Whether a click or a double click triggers it depends on the 'default button trigger' property of the [Data grid](/refguide7/data-grid/), [Template grid](/refguide7/template-grid/) or [Reference set selector](/refguide7/reference-set-selector/). {{< figure src="/attachments/howto7/logic-business-rules/triggering-logic-using-microflows/18580939.png" class="no-border" >}} |
     | **Visible** | By default, whether or not an element is displayed in the browser is determined by how the page is designed and the user's roles within the application. However, the page can be configured to hide the element unless a certain condition is met. **Attribute**: When checked, this setting hides the widget unless the value of a particular attribute has a certain value. Only boolean and enumeration attributes can be assigned to this purpose. **Ignore security**: Check this box if you want the microflow button to be visible even if security says it should be hidden. |
     | **Name** | This property specifies the name of the microflow in the page builderClass: The class property allows you to specify a cascading style sheet (CSS) class for the widget. This class will be applied to the widget in the browser and the widget will get the corresponding styling. The class should be a class from the theme that is used in the project. It overrules the default styling of the widget. |
     | **Style** | The style property allows you to specify additional CSS styling. If a class is also specified, this styling is applied *after* the class. |
@@ -77,11 +76,11 @@ The microflow button has been added to the grid and the properties have been set
 1. **Right click** the microflow button.
 2. Select **Edit microflow settings**.
 
-    {{< figure src="/attachments/howto7/logic-business-rules/triggering-logic-using-microflows/18580938.png" >}}
+    {{< figure src="/attachments/howto7/logic-business-rules/triggering-logic-using-microflows/18580938.png" class="no-border" >}}
 
     The **Microflow Settings** window opens with five sections.
 
-    {{< figure src="/attachments/howto7/logic-business-rules/triggering-logic-using-microflows/18580937.png" >}}
+    {{< figure src="/attachments/howto7/logic-business-rules/triggering-logic-using-microflows/18580937.png" class="no-border" >}}
 
 3. Configure the sections described below, and then click **OK**.
 

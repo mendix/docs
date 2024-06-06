@@ -1,16 +1,15 @@
 ---
 title: "Handle Common Mendix SSO Errors"
 url: /howto7/monitoring-troubleshooting/handle-common-mendix-sso-errors/
-category: "Monitoring and Troubleshooting"
+
 weight: 4
-tags: ["monitoring", "troubleshooting", "sso", "single sign on", "error"]
 ---
 
 ## 1 Introduction
 
 Below you will find solutions for some of the most common problems you may encounter when developing an AppCloud-enabled app.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Monitor and troubleshoot common Mendix SSO errors
 

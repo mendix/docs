@@ -1,8 +1,7 @@
 ---
-title: "Configuration Module API for Pluggable Widgets"
+title: "Configuration Module API"
 url: /apidocs-mxsdk/apidocs/pluggable-widgets-config-api/
-description: A guide for understanding the configuration module API which influences the behavior of pluggable widgets in Studio Pro.
-tags: ["Widget", "Pluggable", "Custom", "Preview", "Structure Mode", "Visibility", "editorConfig"]
+description: A guide for understanding the configuration module API which influences the behavior of pluggable widgets in Mx10.
 weight: 35
 aliases:
 - /apidocs-mxsdk/apidocs/config-api-for-pluggable-widgets
@@ -10,7 +9,7 @@ aliases:
 
 ## 1 Introduction
 
-A pluggable widget's configuration module allows for several modeler experience improvements. For example, you can hide widget properties based on conditions, add consistency checks to validate the widget's configuration, and customize your widget's appearance in structure mode.
+A pluggable widget's configuration module allows for several modeler experience improvements. For example, you can hide widget properties based on conditions, add consistency checks to validate the widget's configuration, and customize your widget's appearance in **Structure mode**.
 
 It is usually located in a JavaScript file using the same name as the widget’s XML file, ending with *.editorConfig.js*. For example, next to *TextBox.xml* would be a *TextBox.editorConfig.js*.
 
@@ -22,24 +21,22 @@ Errors that are related to the configuration module are shown in the Widget Deve
 
 ## 3 Customizing the Widget’s Properties
 
-To customize the properties available in the Studios for the pluggable widget, the module should export a `getProperties` function. This function is passed three parameters:
+To customize the properties available in Studio Pro for the pluggable widget, the module should export a `getProperties` function. Two parameters are passed to this function::
 
 * The current configured values, following the [Values API](/apidocs-mxsdk/apidocs/pluggable-widgets-studio-apis/#values)
 * The default property configuration
-* An indicator for which of the Studios the properties are built for (this property is `"web"` for Studio and `"desktop"` for Studio Pro)
 
 ```typescript
 function getProperties(
     values: ValuesAPI,
-    defaultConfiguration: Properties,
-    target: "web" | "desktop"
+    defaultConfiguration: Properties
 ): Properties
 ```
 
-Using this API, it is possible to have different captions and descriptions of properties between the two Studios. It is also possible to dynamically show or hide certain properties based on configured values.
+Using this API, it is possible to dynamically show or hide certain properties based on configured values.
 
 {{% alert color="info" %}}
-Please note that when a property is hidden for both web and desktop, its value will be cleared.
+Please note that when a property is hidden,, its value will be cleared.
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -204,10 +201,6 @@ The default configuration would then be:
 
 An object grid for object properties can be customized. To do this, the property needs to have `objectHeaders` configured, which will be used as column headers. Each object also needs to have `captions` configured for the grid to be filled.
 
-{{% alert color="info" %}}
-In Studio, object values are shown as lists instead of grids. However, it is possible to customize this list similar to what you can do in Studio Pro. For each object, the first caption will be displayed as value in the list. The object headers have no effect in Studio.
-{{% /alert %}}
-
 ### 4.1 Example
 
 If you wished to use data point structure detailed above to visualize geographic coordinates, you might want to add the suffixes `° N` and `° W` to the numeric **x** and **y** values so the grid will look like this (values below are purely hypothetical):
@@ -269,7 +262,7 @@ The following code example shows an object property configuration which uses obj
 
 ## 5 Customizing Validation Using Consistency Checks
 
-By default, the Studios will validate required properties. To add extra validations to the configured data, the module can export a `check` function. This function gets the values passed following the values API, and is expected to return an array of problems found:
+By default, Studio Pro will validate required properties. To add extra validations to the configured data, the module can export a `check` function. This function gets the values passed following the values API, and is expected to return an array of problems found:
 
 ```typescript
 function check(values: ValuesAPI): Problem[]
@@ -282,13 +275,11 @@ type Problem = {
     property?: string; // key of the property, at which the problem exists
     severity?: "error" | "warning" | "deprecation"; // default = "error"
     message: string; // description of the problem
-    studioMessage?: string; // studio-specific message, defaults to message
-    url?: string; // link with more information about the problem
-    studioUrl?: string; // studio-specific link
+    url?: string; // link with more information about the problem    
 }
 ```
 
-Any problem returned from this function will be shown in the [Errors](/refguide/errors-pane/) pane in Studio Pro, and the [Checks](/studio/checks/) pane in Studio.
+Any problem returned from this function will be shown in the [Errors](/refguide/errors-pane/) pane in Studio Pro.
 
 ### 5.1 Targeting a Property of a Sub-Object
 
@@ -329,7 +320,7 @@ To configure the appearance of the custom widget in Studio Pro, export a `getPre
 
 Please note that the default colors will be automatically adjusted for dark mode (for example font color, border color, and more). However, the `isDarkMode` flag can be used when setting colors explicitly.
 
-To create a preview for different versions, you can use the third argument `version`. It contains the current Studio Pro version as an array of numbers in the format [`major`, `minor`, `build`], e.g. `[9, 18, 0]`.
+To create a preview for different versions, you can use the third argument `version`. It contains the current Studio Pro version as an array of numbers in the format [`major`, `minor`, `build`], for example, `[9, 18, 0]`.
 
 The following describes the API for the preview properties object that the `getPreview` should return.
 
@@ -387,7 +378,7 @@ export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean, _v
 };
 ```
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-image.png" alt="an svg image of a circle" width="200"  >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-image.png" alt="an svg image of a circle" width="200"  class="no-border" >}}
 
 ### 7.2 Container
 
@@ -419,7 +410,7 @@ export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean, _v
     });
 ```
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-container.png" alt="a bordered container with two texts" width="600"  >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-container.png" alt="a bordered container with two texts" width="600"  class="no-border" >}}
 
 ### 7.3 Row Layout {#row-layout}
 
@@ -438,7 +429,7 @@ Row layouts are similar to a container, and can be used to render multiple eleme
 
 When `columnSize` is not set (or set to `"fixed"`) all available space is split into fixed weights. It will then fit the child content into the column, rather than expanding and shrinking the column based on the content size. 
 
-As an example, this is useful for creating grid-like structures. By default, all columns get the equal amount of space. However, if the children have a `grow` value set, this will be used to set proportional column sizes for the children. Children without a `grow` value automatically recieve the value 1.
+As an example, this is useful for creating grid-like structures. By default, all columns get the equal amount of space. However, if the children have a `grow` value set, this will be used to set proportional column sizes for the children. Children without a `grow` value automatically receive the value 1.
 
 As an example, consider this. The following code creates a row layout with four children. The first child (`Image`) takes the first half of the available space, and the other three children (`Texts`) share the other half. This can be achieved by simply setting the `grow` property of the first child to 3:
 
@@ -456,11 +447,11 @@ export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean, _v
     });
 ```
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-row-layout-fixed.png" alt="a row layout with fixed column weights" width="1000"  >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-row-layout-fixed.png" alt="a row layout with fixed column weights" width="1000"  class="no-border" >}}
 
 ##### 7.3.1.2 Grow
 
-When the `columnSize` is set to `"grow"`, the column sizes are determined by the content. When there is leftover space, the space is distributed over all columns. To influence the relative amount of space into which a child grows, you can set a `grow` factor for each child. The column will then grow proportionally according to this factor. Children without a `grow` value automatically recieve the value 1.
+When the `columnSize` is set to `"grow"`, the column sizes are determined by the content. When there is leftover space, the space is distributed over all columns. To influence the relative amount of space into which a child grows, you can set a `grow` factor for each child. The column will then grow proportionally according to this factor. Children without a `grow` value automatically receive the value 1.
 
 If a layout has less space than the elements prefer, items are shrunk disproportionally to their `grow` factors (a high grow factor means a low shrink factor) until they reach their minimum sizes:
 
@@ -503,7 +494,7 @@ export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean, _v
     });
 ```
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-row-layout-grow.png" alt="a row layout with different grow factors" width="1000"  >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-row-layout-grow.png" alt="a row layout with different grow factors" width="1000"  class="no-border" >}}
 
 ##### 7.3.1.3 Example
 
@@ -536,7 +527,7 @@ export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean, _v
     });
 ```
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-row-layout-grow-2.png" alt="structure mode preview of a bordered container with two texts" width="600"  >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-row-layout-grow-2.png" alt="structure mode preview of a bordered container with two texts" width="600"  class="no-border" >}}
 
 ### 7.4 Text
 
@@ -596,7 +587,7 @@ exports.getPreview = (values: WidgetPreviewProps, _isDarkMode: boolean, _version
 })
 ```
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-drop-zone.png" alt="a container with a dropzone" width="600"  >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-drop-zone.png" alt="a container with a dropzone" width="600"  class="no-border" >}}
 
 ### 7.6 Selectable
 
@@ -639,7 +630,7 @@ export function getPreview(values: WidgetPreviewProps, _isDarkMode: boolean, _ve
 }
 ```
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-selectable.png" alt="a list of selectable text elements" width="600"  >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-selectable.png" alt="a list of selectable text elements" width="600"  class="no-border" >}}
 
 ### 7.7 Datasource
 
@@ -666,4 +657,4 @@ The **datasource** preview type can be used when developing a widget with a data
 
 Here is a preview of a **datasource** component containing a drop-zone with two text boxes:
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-datasource.png" alt="a widget with a datasource" width="400"  >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-datasource.png" alt="a widget with a datasource" width="400"  class="no-border" >}}

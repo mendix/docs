@@ -12,29 +12,29 @@ A Mendix app model starts with a project. A project contains several top-level o
 
 ### 1.1 Graphical Overview
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/projects-metamodel/16842800.svg" >}}
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/projects-metamodel/16842800.svg" class="no-border" >}}
 
 Studio Pro Guide | Model SDK API docs
 | --- | --- |
 | [App](/refguide/app/) | TypeScript module [projects](https://apidocs.rnd.mendix.com/modelsdk/latest/modules/projects.html) |
 | [Modules](/refguide/modules/) |[Project](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.project.html) |
-| |[Module](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.module.html) | |
-| |[ProjectDocument](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.projectdocument.html) | |
+| |[Module](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.module.html) |
+| |[ProjectDocument](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.projectdocument.html) |
 
 ### 1.2 Project Documents
 
-Project-level documents describe project security, app settings, app navigation (for the different modes of navigation) and translations of the texts in your app.
+Project-level documents describe app security, app settings, app navigation (for the different modes of navigation) and translations of the texts in your app.
 
 #### 1.2.1 Graphical Overview
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/projects-metamodel/16842801.svg" >}}
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/projects-metamodel/16842801.svg" class="no-border" >}}
 
 Studio Pro Guide | Model SDK API docs
 | --- | --- |
-| | [App Settings](/refguide/app-settings/) | [ProjectDocument](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/projects.projectdocument.html) and its inheritance hierarchy |
-| [App Security](/refguide/app-security/) | |
-| [Navigation](/refguide/navigation/) | |
-| [System Texts](/refguide/system-texts/) | |
+|[App Settings](/refguide/app-settings/)| [ProjectSettings](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/settings.ProjectSettings.html) |
+| [App Security](/refguide/app-security/) | [ProjectSecurity](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/security.ProjectSecurity.html)|
+| [Navigation](/refguide/navigation/) |[NavigationDocument](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/navigation.NavigationDocument.html)|
+| [System Texts](/refguide/system-texts/) |[SystemTextCollection](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/texts.SystemTextCollection.html) |
 
 ## 2 Modules
 
@@ -44,7 +44,7 @@ A module consists of a domain model, model security settings and zero or more do
 
 #### 2.1.1 Graphical Overview
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/projects-metamodel/18582255.svg" >}}
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/projects-metamodel/18582255.svg" class="no-border" >}}
 
 Studio Pro Guide | Model SDK API docs
 | --- | --- |
@@ -59,7 +59,7 @@ In this sense, Module and Folder behave in the exact same way, and thus inherit 
 
 #### 2.2.1 Graphical Overview
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/projects-metamodel/18582254.svg" >}}
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/projects-metamodel/18582254.svg" class="no-border" >}}
 
 Studio Pro Guide | Model SDK API docs
 | --- | --- |

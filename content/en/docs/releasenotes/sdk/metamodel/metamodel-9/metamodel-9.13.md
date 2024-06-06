@@ -6,7 +6,7 @@ weight: 87
 
 ## 9.13.0
 
-**Release date: April 20th, 2022**
+**Release date: April 20, 2022**
 
 ### Queues
 

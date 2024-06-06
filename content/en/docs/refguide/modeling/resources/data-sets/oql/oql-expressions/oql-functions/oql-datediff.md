@@ -1,7 +1,6 @@
 ---
 title: "OQL DATEDIFF"
 url: /refguide/oql-datediff/
-tags: ["studio pro"]
 ---
 
 ## 1 Description
@@ -12,7 +11,7 @@ The `DATEDIFF` function returns the difference between two given date/time value
 
 The syntax is as follows:
 
-```sql
+```sql {linenos=false}
 DATEDIFF ( unit , startdate_expression, enddate_expression [, timezone ] )
 ```
 
@@ -30,9 +29,5 @@ DATEDIFF ( unit , startdate_expression, enddate_expression [, timezone ] )
 `enddate_expression` specifies the end date of the period being calculated. This should be formatted in an expression which resolves to a date/time value.
 
 ### 2.4 timezone
-
-{{% alert color="info" %}}
-The optional `timezone` parameter is available in [Studio Pro 9.22.0](/releasenotes/studio-pro/9.22/) and above. 
-{{% /alert %}}
 
 `timezone` specifies the time zone to use for the retrieval. This parameter is optional and defaults to the local time zone. It should be a string literal containing an IANA time zone. GMT offset time zones are not supported.

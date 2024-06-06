@@ -1,12 +1,7 @@
 ---
 title: "XPath Constraint Functions"
 url: /refguide8/xpath-constraint-functions/
-tags: ["studio pro"]
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/xpath-constraint-functions.pdf).
-{{% /alert %}}
 
 The following pages describe the functions that can be executed within constraints:
 

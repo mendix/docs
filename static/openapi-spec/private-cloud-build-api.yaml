@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   title: Build API
-  version: 4.0.0
+  version: 4.3.0
   contact:
     name: Mendix Support
     url: 'https://support.mendix.com'
@@ -27,6 +27,12 @@ paths:
           $ref: '#/components/responses/error404'
       operationId: get-job
       description: Retrieve the status of an asynchronous job which has been initiated by an API call. Each API call which successfully starts a job will return the ID of the job which can be used in this API call.
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: log
+          description: Set the value to `true` to request the build log for the deployment package. The default value is `false`.
     parameters:
       - name: jobId
         in: path
@@ -121,11 +127,11 @@ paths:
                   example: 93de884c
                 description:
                   type: string
-                  description: 'An optional description of the package'
+                  description: An optional description of the package
                   example: 'Fixed issues 7733, 7734 and 7613'
                 version:
                   type: string
-                  description: 'The version of the package in x.y.z format'
+                  description: The version of the package in x.y.z format
                   maxLength: 20
                   example: 2.0.4
               required:
@@ -255,6 +261,8 @@ components:
           description: Only present if the JobRequest was for building or uploading a deployment package.
         error:
           $ref: '#/components/schemas/error-body'
+        log:
+          $ref: '#/components/schemas/log'
       required:
         - id
         - status
@@ -275,63 +283,70 @@ components:
       type: object
       description: Model for deployment package.
       properties:
-        id:
-          $ref: '#/components/schemas/packageId'
-        appId:
-          $ref: '#/components/schemas/appId'
-        modelVersion:
-          type: string
-          example: 1.3.0.623
-          description: The version of the model. This is set by the developer that created the package.
-        runtimeVersion:
-          type: string
-          example: 9.12.0.41679
-          description: The Mendix runtime version.
-        createdOn:
-          type: string
-          format: date-time
-          description: The date the package was created (uploaded or built).
-        description:
-          type: string
-          example: 'Fixed issues 7733, 7734 and 7613'
-        fileName:
-          type: string
-          example: MainLine-1.3.0.623.mda
-          description: The file name of the deployment package.
-        fileSize:
-          type: integer
-          minimum: 0
-          example: 2924125
-          description: The size of the deployment package file in bytes.
-        buildLog:
-          type: string
-          description: The build log for the deployment package. Can be used to debug potential issues encountered when creating the deployment package. Visibile only when the `log` query parameter is set to `true`.
-          example: 'Pipeline created at 2023-02-17T15:01:19Z [teamserver-discovery] 2023-02-17T15:01:24.551071428Z Project: a335e635-e0aa-4514-9437-c95aafa1fc12 [teamserver-discovery] 2023-02-17T15:01:24.551130910Z Determining repository type... '
-        url:
+        package:
           type: object
-          format: uri
-          description: Direct download URL of the deployment package file. This URL is valid for a limited time. Use the `url` query parameter set to `true` to retrieve an updated URL.
           properties:
-            location:
+            id:
+              $ref: '#/components/schemas/packageId'
+            appId:
+              $ref: '#/components/schemas/appId'
+            modelVersion:
               type: string
-              example: 'https://url/to/download/the/package/file'
-              format: uri
-              description: The URL of the deployment package file.
-            ttl:
+              example: 1.3.0.623
+              description: The version of the model. This is set by the developer that created the package.
+            runtimeVersion:
+              type: string
+              example: 9.12.0.41679
+              description: The Mendix runtime version.
+            createdOn:
+              type: string
+              format: date-time
+              description: The date the package was created (uploaded or built).
+            description:
+              type: string
+              example: 'Fixed issues 7733, 7734 and 7613'
+            fileName:
+              type: string
+              example: MainLine-1.3.0.623.mda
+              description: The file name of the deployment package.
+            fileSize:
               type: integer
-              description: The validity of the URL in seconds.
-              example: 900
+              minimum: 0
+              example: 2924125
+              description: The size of the deployment package file in bytes.
+            buildLog:
+              type: string
+              description: The build log for the deployment package. Can be used to debug potential issues encountered when creating the deployment package. Visibile only when the `log` query parameter is set to `true`.
+              example: 'Pipeline created at 2023-02-17T15:01:19Z [teamserver-discovery] 2023-02-17T15:01:24.551071428Z Project: a335e635-e0aa-4514-9437-c95aafa1fc12 [teamserver-discovery] 2023-02-17T15:01:24.551130910Z Determining repository type... '
+            expiryDate:
+              type: string
+              format: date-time
+              description: The date when the package is supposed to expire.
+            url:
+              type: object
+              format: uri
+              description: Direct download URL of the deployment package file. This URL is valid for a limited time. Use the `url` query parameter set to `true` to retrieve an updated URL.
+              properties:
+                location:
+                  type: string
+                  example: 'https://url/to/download/the/package/file'
+                  format: uri
+                  description: The URL of the deployment package file.
+                ttl:
+                  type: integer
+                  description: The validity of the URL in seconds.
+                  example: 900
+              required:
+                - location
+                - ttl
           required:
-            - location
-            - ttl
-      required:
-        - id
-        - appId
-        - modelVersion
-        - runtimeVersion
-        - createdOn
-        - fileName
-        - fileSize
+            - id
+            - appId
+            - modelVersion
+            - runtimeVersion
+            - createdOn
+            - fileName
+            - fileSize
     packages:
       title: packages
       x-stoplight:
@@ -344,14 +359,6 @@ components:
           type: array
           items:
             type: object
-            required:
-              - id
-              - appId
-              - modelVersion
-              - runtimeVersion
-              - createdOn
-              - fileName
-              - fileSize
             properties:
               id:
                 $ref: '#/components/schemas/packageId'
@@ -381,6 +388,18 @@ components:
                 description: The size of the deployment package file in bytes.
                 minimum: 0
                 example: 2924125
+              expiryDate:
+                type: string
+                format: date-time
+                description: The date when the package is supposed to expire.
+            required:
+              - id
+              - appId
+              - modelVersion
+              - runtimeVersion
+              - createdOn
+              - fileName
+              - fileSize
         pagination:
           $ref: '#/components/schemas/pagination'
       required:
@@ -399,7 +418,7 @@ components:
         limit:
           type: integer
           minimum: 1
-          description: The maximum amount of objects to retrieve. When not specified, the a default value is 20.
+          description: 'The maximum amount of objects to retrieve. When not specified, the a default value is 20.'
           example: 20
         size:
           type: integer
@@ -410,6 +429,17 @@ components:
         - offset
         - limit
         - size
+    log:
+      title: log
+      x-stoplight:
+        id: b6zu9z3560bo0
+      type: object
+      description: Model for log.
+      properties:
+        build:
+          type: string
+          example: 'Pipeline created at 2023-02-17T15:01:19Z [teamserver-discovery] 2023-02-17T15:01:24.551071428Z Project: a335e635-e0aa-4514-9437-c95aafa1fc12 [teamserver-discovery] 2023-02-17T15:01:24.551130910Z Determining repository type...'
+          description: The build log for the deployment package. Can be used to debug potential issues encountered when creating the deployment package. Visibile only when the log query parameter is set to true.
   parameters:
     offset:
       name: offset
@@ -580,7 +610,7 @@ components:
       name: Authorization
       type: apiKey
       in: header
-      description: For more information about requesting and using a token see [Create a Personal Access Token with Warden](https://docs.mendix.com/developerportal/community-tools/warden).<br/> The header must be set to `MxToken <Your PAT>`.
+      description: 'For more information about requesting and using a token see the [documentation](https://docs.mendix.com/developerportal/community-tools/mendix-profile/#pat).<br/> The header must be set to `MxToken <Your PAT>`.'
   requestBodies: {}
 tags:
   - name: packages

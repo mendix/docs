@@ -1,12 +1,7 @@
 ---
 title: "OQL Limit Clause"
 url: /refguide8/oql-limit-clause/
-tags: ["studio pro"]
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/oql-limit-clause.pdf).
-{{% /alert %}}
 
 With the limit clause a portion of the result of a query can be returned.
 
@@ -50,6 +45,6 @@ ORDER BY LastName
 LIMIT 10 OFFSET 10
 ```
 
-This query retrieves the 11the to 20the customer, sorted by their last name.
+This query retrieves the 11th to 20th customer, sorted by their last name.
 
 {{% /alert %}}

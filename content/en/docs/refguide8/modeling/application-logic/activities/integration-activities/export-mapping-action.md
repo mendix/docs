@@ -1,14 +1,9 @@
 ---
 title: "Export With Mapping"
 url: /refguide8/export-mapping-action/
-tags: ["studio pro", "integration activity", "export mapping action", "export to xml"]
 weight: 40
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/export-mapping-action.pdf).
-{{% /alert %}}
 
 {{% alert color="warning" %}}
 This activity can only be used in **Microflows**.
@@ -22,7 +17,7 @@ The **Export with mapping** activity allows you to export the data stored in [do
 
 An example of export with mapping properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/activities/integration-activities/export-mapping-action/export-with-mapping-properties.png" alt="export with mapping properties" >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/integration-activities/export-mapping-action/export-with-mapping-properties.png" alt="export with mapping properties" class="no-border" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

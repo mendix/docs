@@ -1,17 +1,17 @@
 ---
 title: "Offline"
 url: /refguide7/offline/
-category: "General"
+
 weight: 40
 ---
 
 ## 1 Introduction
 
-We define an offline application as the portion of a Mendix app that is accessible through the [Hybrid Tablet profile](/refguide7/hybrid-tablet-profile/) and/or the [Hybrid Phone profile](/refguide7/hybrid-phone-profile/). Offline support must be enabled. Pages available in these profiles can be viewed without an Internet connection. Consequently, they are subject to a number of restrictions which are explained below.
+We define an offline application as the portion of a Mendix app that is accessible through the [Hybrid Tablet profile](/refguide7/hybrid-tablet-profile/) and/or the [Hybrid Phone profile](/refguide7/hybrid-phone-profile/). Offline support must be enabled. Pages available in these profiles can be viewed without an internet connection. Consequently, they are subject to a number of restrictions which are explained below.
 
 ## 2 Availability
 
-To access the offline application, you need to have a mobile device that runs a correctly configured [PhoneGap](http://phonegap.com/) hybrid application. The app will require an internet connection the first time it is opened in order to download the necessary resources from the server. After the initial synchronization, the data will remain available in the app, even without an internet connection. Please note that the offline profile will be used, even if there is an internet connection available.
+To access the offline application, you need to have a mobile device that runs a correctly configured [PhoneGap](https://helpx.adobe.com/experience-manager/kb/adobe-phonegap-end-of-service.html) hybrid application. The app will require an internet connection the first time it is opened in order to download the necessary resources from the server. After the initial synchronization, the data will remain available in the app, even without an internet connection. Please note that the offline profile will be used, even if there is an internet connection available.
 
 ## 3 Synchronization {#synchronization}
 
@@ -97,7 +97,7 @@ For more information on offline apps, see [Configuring Hybrid Mobile Apps to Run
 
 Mendix does not have a recommended maximum app size for the synchronization process. This process depends on the amount of data as well as the connection quality and speed of the mobile device. 
 
-The timeout is set to 30 seconds per entity downloaded per the [July 3rd, 2018 Hybrid App Base and Template](/releasenotes/mobile/hybrid-app/#7318) release.
+The timeout is set to 30 seconds per entity downloaded per the [July 3, 2018 Hybrid App Base and Template](/releasenotes/mobile/hybrid-app/#7318) release.
 
 In addition, Mendix recommends limiting the amount of data and syncing as much as possible by configuring security access so that users do not sync entities they do not need.
 

@@ -2,7 +2,6 @@
 title: "Scroll Container"
 url: /refguide8/scroll-container/
 weight: 50
-tags: ["studio pro", "scroll container", "container widget", "widget"]
 aliases:
     - /refguide8/horizontal-split-pane.html
     - /refguide8/vertical-split-pane.html
@@ -10,10 +9,6 @@ aliases:
     - /refguide8/vertical-split-pane
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/scroll-container.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 
@@ -23,7 +18,7 @@ Scroll containers may be placed on navigation layouts as well as on pages.
 
 The scroll container example below divides the layout in three parts: a header containing a logo, a content part with a placeholder and a footer:
 
-{{< figure src="/attachments/refguide8/modeling/pages/container-widgets/scroll-container/scroll-container.PNG" alt="Scroll Container" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/container-widgets/scroll-container/scroll-container.PNG" alt="Scroll Container" class="no-border" >}}
 
 A scroll container can consist of several scroll container regions. For more information on scroll container regions and their properties, see the [Scroll Container Region](#scroll-container-region) section. 
 
@@ -31,7 +26,7 @@ A scroll container can consist of several scroll container regions. For more inf
 
 An example of scroll container properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/pages/container-widgets/scroll-container/scroll-container-properties.png" alt="Scroll Container Properties"   width="250"  >}}
+{{< figure src="/attachments/refguide8/modeling/pages/container-widgets/scroll-container/scroll-container-properties.png" alt="Scroll Container Properties"   width="250"  class="no-border" >}}
 
 Scroll container properties consist of the following sections:
 

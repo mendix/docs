@@ -3,13 +3,12 @@ title: "Logging in Native Apps"
 url: /refguide/mobile/building-efficient-mobile-apps/logging/
 weight: 25
 description: "Describes using logging in native mobile apps"
-tags: ["native", "logging", "troubleshooting"]
 aliases:
     - /refguide/mobile/logging/
 ---
 ## 1 Introduction
 
-In Mendix Studio Pro v9.16 and above native mobile apps are able to send logs to the [Mendix Runtime](/refguide/runtime/). Read this guide for information on native app logging configuration.
+Native mobile apps are able to send logs to the [Mendix Runtime](/refguide/runtime/). Read this guide for information on native app logging configuration.
 
 {{% alert color="warning" %}}
 Please note the following current limitations regarding native client logs:
@@ -25,7 +24,7 @@ Sending logs from native apps is disabled by default. However, sending logs can 
 Please note that after enabling or disabling sending logs to runtime, you must create and distribute a new build of the native mobile app for this change to take effect. For more information on creating and distributing builds, see [Building, Testing, and Distributing Apps](/refguide/mobile/distributing-mobile-apps/).
 {{% /alert %}}
 
-{{< figure src="/attachments/refguide/mobile/native-mobile/logging/enable-logging.png" >}}
+{{< figure src="/attachments/refguide/mobile/native-mobile/logging/enable-logging.png" class="no-border" >}}
 
 ## 3 Log Levels
 
@@ -65,7 +64,7 @@ However, you may choose to add more entry and exit points at the **Debug** level
 
 ## 4 Native Client Default Log Nodes
 
-This section provides some details on specific log nodes used by the Mendix native client. We recommend that if you write your own [log messages](/refguide/log-message/) you should also use your own log node names to avoid confusion with the Mendix log messages.
+This section provides some details on specific log nodes used by the Mendix native client. Mendix recommends that if you write your own [log messages](/refguide/log-message/), you should also use your own log node names to avoid confusion with the Mendix log messages.
 
 ### 4.1 Default Mendix Native Client Log Nodes {#native-client-log-nodes}
 
@@ -73,7 +72,7 @@ The following log nodes are used by Mendix when writing log messages:
 
 {{% alert color="warning" %}}
 
-* From Mendix Studio Pro 9.18.1 and above log messages are filtered based on the log levels set in the Cloud Portal app.
+* Log messages are filtered based on the log levels set in the Cloud Portal app.
 * Enabling the `trace` log level may cause too many logs to be sent to the [Mendix Runtime](/refguide/runtime/), so it should not be kept enabled for long periods of time.
 {{% /alert %}}
 

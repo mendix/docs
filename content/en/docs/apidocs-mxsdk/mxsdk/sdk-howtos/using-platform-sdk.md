@@ -43,15 +43,17 @@ You can pass the following options to `createNewApp`:
 | `templateDownloadURL` | The URL of the download location of the app template package file (*.mpk*). If the template package is private, this URL must be authenticated with a signature. |
 | `templateId` | The UUID of the app template on which the app should be based. |
 
-If both `templateDownloadURL` and `templateId` are left blank, the app project will be created using the standard blank app template in the latest Mendix version.
+If both `templateDownloadURL` and `templateId` are left blank, the app will be created using the standard blank app template in the latest Mendix version.
 
-Here is an example for creating a Mendix app based on the [Asset Management](https://marketplace.mendix.com/link/component/107652) template:
+Here is an example for creating a Mendix app based on the [Asset Manager App](https://marketplace.mendix.com/link/component/69674) template:
 
 ```ts
 const app = await client.createNewApp("My Asset Management", {
     templateId: "6e66fe4d-6e96-4eb8-a2b6-a61dec37a799"
 });
 ```
+
+{{% alert color="warning" %}}The [Asset Manager App](https://marketplace.mendix.com/link/component/69674) template is deprecated and was created using Studio Pro 8.14.0. You cannot open it directly in Studio Pro 10 versions. To be able to use it in Studio Pro 10, you need to first upgrade it to a Studio Pro 9 app and then upgrade it to a Studio Pro 10 app. For more instructions, see the [Prerequisites](/refguide/extending-your-application-with-custom-java/#prerequisites) section in *Extending Your Application with Custom Java*.{{% /alert %}}
 
 ## 4 Opening an Existing App {#opening-existing-app}
 

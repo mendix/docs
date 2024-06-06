@@ -1,9 +1,8 @@
 ---
 title: "Switch"
 url: /appstore/widgets/switch/
-category: "Widgets"
+
 description: "Describes the configuration and usage of the Switch widget, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "widget", "switch", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -40,4 +39,4 @@ To use this widget, place it in the context of an object that has a Boolean attr
 
 ## 4 Read More
 
-* [CAB.02 - Switch](/addons/ats-addon/ht-two-cab-02-switch/)
+* [CAB.02 - Switch](/appstore/partner-solutions/ats/ht-two-cab-02-switch/)

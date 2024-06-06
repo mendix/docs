@@ -2,13 +2,8 @@
 title: "Text Area"
 url: /refguide8/text-area/
 weight: 20
-tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/text-area.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 
@@ -18,13 +13,13 @@ A text area must be placed in a [data widget](/refguide8/data-widgets/) and disp
 
 For example, the following text area allows the end-user to see, and set, the **Notes** about a contact.
 
-{{< figure src="/attachments/refguide8/modeling/pages/input-widgets/text-area/text-area.png" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/input-widgets/text-area/text-area.png" class="no-border" >}}
 
 ## 2 Properties
 
 An example of text area properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/pages/input-widgets/text-area/text-area-properties.png"   width="250"  >}}
+{{< figure src="/attachments/refguide8/modeling/pages/input-widgets/text-area/text-area-properties.png"   width="250"  class="no-border" >}}
 
 Text area properties consist of the following sections:
 
@@ -101,13 +96,15 @@ This is the text displayed when typing in the text area. This text has two [para
 
 For example, if you use the counter message `You've used {1} characters of the {2} characters that are allowed.` for your text area, the end-user will see this message displayed below the text area widget:
 
-{{< figure src="/attachments/refguide8/modeling/pages/input-widgets/text-area/counter-message.png" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/input-widgets/text-area/counter-message.png" class="no-border" >}}
 
 #### 2.6.4 Text Too Long Message
 
 {{% alert color="info" %}}Text too long message is not supported on native mobile pages.{{% /alert %}}
 
-This is the text displayed when the number of typed characters is higher than the maximum allowed number of characters.
+This is the text displayed when the number of characters is higher than the maximum allowed number of characters.
+
+This type of message can also occur when a loaded or stored value exceeds the character limit
 
 #### 2.6.5 Maximum Length
 

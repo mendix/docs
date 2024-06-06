@@ -3,7 +3,6 @@ title: "Testing Microflows with the Unit Testing Module"
 linktitle: "Testing Microflows with Unit Test Module"
 url: /refguide/testing-microflows-with-unit-testing-module/
 weight: 3
-tags: ["test", "testing", "microflow", "unit testing"]
 ---
 
 ## 1 Introduction
@@ -12,7 +11,7 @@ Verify that your [microflow](/refguide/microflows/) works as expected by creatin
 
 The Unit Testing module provides a user-friendly interface to manage and run unit tests that are created by using microflows, as well as unit tests that are by created using JUnit.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Set up the Unit Testing module
 * Unit-test a microflow
@@ -37,12 +36,12 @@ To set up the unit testing module and run the example tests, follow these steps:
 1. Create a [new app](/refguide/new-app/).
 2. Download and install the [Unit Testing](/appstore/modules/unit-testing/) module. 
 
-    For more information, see [Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/).
+    For more information, see [Using Marketplace Content](/appstore/overview/use-content/).
 
 3. In the App Explorer, expand the **App {App name}** node, and then click **Settings**.
 4. On the **Runtime** tab of the **App settings** dialog box, select the **After startup** microflow.
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/testing/18580370.png" alt="Selecting the After startup microflow" >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/testing/18580370.png" alt="Selecting the After startup microflow" class="no-border" >}}
 
 5. Click **Unit Testing** > **_USE ME** > **Microflows** > **Startup**, and then click **Select**.
 6. Click **OK**.
@@ -51,7 +50,7 @@ To set up the unit testing module and run the example tests, follow these steps:
 9. In the **Caption** field, enter *UnitTestOverview*.
 10. In the **On click** field, select **Call a microflow**, and then select the **UnitTestOverview** microflow.
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/testing/18580363.png" alt="Selecting the UnitTestOverview microflow" >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/testing/18580363.png" alt="Selecting the UnitTestOverview microflow" class="no-border" >}}
 
 11. Click **OK**.
 12. Run the app locally.
@@ -60,19 +59,19 @@ To set up the unit testing module and run the example tests, follow these steps:
 
     The app shows the **UnitTesting** page, as in the following image:
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/testing/18580341.png" alt="A view of the UnitTesting page and default tests" >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/testing/18580341.png" alt="A view of the UnitTesting page and default tests" class="no-border" >}}
 
     You can use this page to execute unit tests, or to reset the test status back to not executed. Use the left-side navigation pane to select a module that contains unit tests. In this scenario, **UnitTesting** is the only module that contains unit tests. 
 
-15. Ensure that the **Rollback microflow tests after execution** check box is selected.
+15. Ensure that the **Rollback microflow tests after execution** checkbox is selected.
 
-    {{% alert color="warning" %}}If the check box is cleared, all changes made by the microflows that you test are saved to the database. This can result in populating the database with unwanted test data. As a best practice, do not clear the check box unless it is required by your specific use case.{{% /alert %}}
+    {{% alert color="warning" %}}If the checkbox is cleared, all changes made by the microflows that you test are saved to the database. This can result in populating the database with unwanted test data. As a best practice, do not clear the checkbox unless it is required by your specific use case.{{% /alert %}}
 
 16. Validate that the Unit Testing module is correctly set up by running the **UnitTesting.Test_ValidUnitTest** test. 
 
     The color of the test case changes to red if the test fails, and to green if it passes.
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/testing/18580358.png" alt="An example of a passed test case" >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/testing/18580358.png" alt="An example of a passed test case" class="no-border" >}}
 
 17. To view detailed test results, in the **UnitTesting.Test_ValidUnitTest** row, click **Details**.
 
@@ -86,22 +85,22 @@ For the purpose of this how-to, create a sample microflow that you can then test
 
 To create a sample microflow for testing, follow these steps:
 
-1. Create a new [enumeration](/refguide/create-a-basic-data-layer/#add-enumeration) with the following parameters:
+1. Create a new [enumeration](/refguide/configuring-a-domain-model/#add-enumeration) with the following parameters:
     * **Name** – *Level*
     * **Enumeration values** – *Junior*, *Medior*, and *Senior*.
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/testing/18580356.png" alt="Enumeration with three values" >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/testing/18580356.png" alt="Enumeration with three values" class="no-border" >}}
 
 2. Open the domain model of **MyFirstModule**.
-3. Create a new [entity](/refguide/create-a-basic-data-layer/#create-entity) with the following parameters:
+3. Create a new [entity](/refguide/configuring-a-domain-model/#create-entity) with the following parameters:
     * **Name** – *Employee*
     * **Attributes** – *Name* (of the **String** type) and *Level* ( of the  **Enumeration** > **Level** type).
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/testing/18580355.png" alt="A view of the Employee entity used by the sample microflow" >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/testing/18580355.png" alt="A view of the Employee entity used by the sample microflow" class="no-border" >}}
 
 4. Create a microflow called **Promote** that changes the Level parameter for the Employee entity based on the enumeration.
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/testing/promote.jpg" alt="A view of the sample Promote microflow" >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/testing/promote.jpg" alt="A view of the sample Promote microflow" class="no-border" >}}
 
 ### 4.2 Creating a Unit Test Microflow
 
@@ -133,7 +132,7 @@ To create a sample test microflow, follow these steps:
     * **Parameter** – **Employee**
     * **Argument** –*$NewEmployee*
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/testing/18580352.png" alt="A microflow call activity with Employee as the parameter" >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/testing/18580352.png" alt="A microflow call activity with Employee as the parameter" class="no-border" >}}
 
 10. Promote the employee to the right level by using an activity with the following parameters:
     * **Type** – **Microflow call**
@@ -154,7 +153,7 @@ To create a sample test microflow, follow these steps:
     * **Return value** – *true*
 15. Connect the activities, as shown in the following figure:
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/testing/promotetojunior.jpg" alt="A view of the sample unit test microflow" >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/testing/promotetojunior.jpg" alt="A view of the sample unit test microflow" class="no-border" >}}
 
 16. In the left-side navigation pane, in the **UnitTests** folder, duplicate the **Test_PromoteEmployeeToJunior** three times, and then rename the new microflows in the following way:
     * *Test_PromoteEmployeeToMedior*
@@ -166,7 +165,7 @@ To create a sample test microflow, follow these steps:
     * **Argument** –*$NewEmployee/Level = MyFirstModule.Level.Medior*
 18. Run the app locally and view it. 
 19. In the left-side navigation pane, click **UnitTestOverview > MyFirstModule**.
-20. Verify that the **Rollback microflow tests after execution** check box is selected.
+20. Verify that the **Rollback microflow tests after execution** checkbox is selected.
 21. Click **Run all module tests** and verify that all the test cases pass.
 
 ## 5 Read More

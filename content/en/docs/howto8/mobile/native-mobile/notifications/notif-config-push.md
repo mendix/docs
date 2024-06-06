@@ -3,12 +3,11 @@ title: "Configure Push Notifications"
 url: /howto8/mobile/notif-config-push/
 weight: 56
 description: Tutorial for configuring push notifications.
-tags: ["mobile", "native", "push", "local", "firebase"]
 ---
 
 ## 1 Introduction 
 
-This how-to will teach you to configure the runtime for using push notifications in native apps. 
+This how-to teaches you how to configure the runtime for using push notifications in native apps. 
 
 ## 2 Configure Your Notifications
 

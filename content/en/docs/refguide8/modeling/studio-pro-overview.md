@@ -1,20 +1,15 @@
 ---
 title: "Studio Pro Overview"
 url: /refguide8/studio-pro-overview/
-category: "App Modeling"
+
 description: "Describes Studio Pro in general: tabs, menus, shortcut keys."
 weight: 10
-tags: ["Studio Pro"]
 aliases:
     - /refguide8/desktop-modeler-overview.html
     - /refguide8/desktop-modeler-overview
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/studio-pro-overview.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 
@@ -28,7 +23,7 @@ When Studio Pro is open, press <kbd>F1</kbd> to quickly jump to documentation.
 
 This document describes the user interface of Mendix Studio Pro:
 
-{{< figure src="/attachments/refguide8/modeling/studio-pro-overview/studio-pro-diagram.png" alt="Studio Pro Diagram" >}}
+{{< figure src="/attachments/refguide8/modeling/studio-pro-overview/studio-pro-diagram.png" alt="Studio Pro Diagram" class="no-border" >}}
 
 ## 2 Top Bar
 
@@ -153,7 +148,7 @@ The following shortcut keys are available in the microflow editor:
 
 ### 7.5 Microflow Debugger Shortcut Keys {#debugger-shortcuts}
 
-The following shortcut keys are available for the the microflow debugger:
+The following shortcut keys are available for the microflow debugger:
 
 | Key | Description |
 | --- | --- |

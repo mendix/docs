@@ -1,9 +1,8 @@
 ---
 title: "SDK Introduction"
 url: /apidocs-mxsdk/mxsdk/sdk-intro/
-category: "Mendix Platform SDK"
+
 weight: 1
-tags: ["SDK", "Mendix SDK", "Platform SDK", "Model SDK", "metadata"]
 #When content is updated here, it should also be updated on https://developers.mendix.com/sdk/, contact Ben.
 ---
 
@@ -20,11 +19,11 @@ With the Mendix Platform SDK and Mendix Model SDK, you can do the following:
 For more information, see [Importing Legacy Code](/apidocs-mxsdk/mxsdk/sdk-use-cases/#importing) in *SDK Use Cases*.
 {{% /alert %}}
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-intro/sdk-diagram.png" >}} 
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-intro/sdk-diagram.png" class="no-border" >}} 
 
 ### 1.1 Mendix Platform SDK
 
-The Mendix Platform SDK allows you to work at the app level. Currently, the Mendix Platform SDK implements the following functionality: 
+The [Mendix Platform SDK](https://apidocs.rnd.mendix.com/platformsdk/latest/index.html) allows you to work at the app level. Currently, the Mendix Platform SDK implements the following functionality: 
 
 * Create a new app
 * Delete an app
@@ -34,13 +33,13 @@ The Mendix Platform SDK allows you to work at the app level. Currently, the Mend
 
 ### 1.2 Mendix Model SDK
 
-With the Mendix Model SDK, you can read, modify, and analyze every metamodel element of your app model. This includes domain models, microflows, pages, integrations (consumed and published web services), Java actions, custom widgets, security constraints, and so on. Anything you can access with Studio Pro, and all the technical details we abstract away in the UI, are part of the app model.
+With the [Mendix Model SDK](https://apidocs.rnd.mendix.com/modelsdk/latest/index.html), you can read, modify, and analyze every metamodel element of your app model. This includes domain models, microflows, pages, integrations (consumed and published web services), Java actions, custom widgets, security constraints, and so on. Anything you can access with Studio Pro, and all the technical details we abstract away in the UI, are part of the app model.
 
 When analyzing app models you get a lot of power: you can access every tiny detail in the model so that you can reason about the entire model, analyze it for quality, or export it completely.
 
 {{% alert color="info" %}}
 
-Because we provide full read-write access, you can also break the model easily. We have taken measures against this, of course, and it is safe to use on most of the metamodel. However, we recommend only doing read access actions on the following metamodel components, because it is easy to create an invalid model:
+Because we provide full read-write access, you can also break the model easily. We have taken measures against this, of course, and it is safe to use on most of the metamodel. However, Mendix recommends only doing read access actions on the following metamodel components, because it is easy to create an invalid model:
 
 * Consumed and published web services
 * XML schemas

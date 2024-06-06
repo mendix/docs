@@ -1,9 +1,8 @@
 ---
 title: "Solve Load and Import Errors"
 url: /howto8/monitoring-troubleshooting/solving-load-and-import-errors/
-category: "Monitoring and Troubleshooting"
+
 weight: 11
-tags: ["monitoring", "troubleshooting", "load", "import", "error"]
 aliases:
     - /howto8/solving-load-and-import-errors.html
     - /howto8/solving-load-and-import-errors
@@ -16,7 +15,7 @@ This how-to will help you to solve problems that may occur when opening a projec
 
 One possible cause of errors that prevent loading is the usage of the [Mendix Model SDK](/apidocs-mxsdk/mxsdk/) for creating or editing the project. With the Mendix Model SDK it's possible to edit your project in such a way that its format becomes invalid, and in the process preventing Studio Pro from opening it. When this happens the following message is shown:
 
-{{< figure src="/attachments/howto8/monitoring-troubleshooting/solving-load-and-import-errors/18580055.png" >}}
+{{< figure src="/attachments/howto8/monitoring-troubleshooting/solving-load-and-import-errors/18580055.png" class="no-border" >}}
 
 Read on to find out how to determine the origin of these errors, and possible ways to solve them.
 
@@ -24,7 +23,7 @@ Read on to find out how to determine the origin of these errors, and possible wa
 
 Click the **Details >>** button to show the actual errors that occurred while loading your project:
 
-{{< figure src="/attachments/howto8/monitoring-troubleshooting/solving-load-and-import-errors/18580052.png" >}}
+{{< figure src="/attachments/howto8/monitoring-troubleshooting/solving-load-and-import-errors/18580052.png" class="no-border" >}}
 
 These detailed messages tell you the following:
 
@@ -38,13 +37,13 @@ Before trying to solve the problems, it's useful to discover the origin of the p
 
 ### 3.1 Is This a Team Server Project?
 
-If your project is a [Team Server](/developerportal/collaborate/team-server/) project, and you just did a [download or update](/refguide8/using-version-control-in-studio-pro/) from the server, the problem may have been added in a revision that was recently committed to the Team Server. You can check who made the most recent commit via the [Team Server](/developerportal/collaborate/team-server/) menu item in the [Developer Portal](https://sprintr.home.mendix.com).
+If your project is a [Team Server](/developerportal/general/team-server/) project, and you just did a [download or update](/refguide8/using-version-control-in-studio-pro/) from the server, the problem may have been added in a revision that was recently committed to the Team Server. You can check who made the most recent commit via the [Team Server](/developerportal/general/team-server/) menu item in the [Developer Portal](https://sprintr.home.mendix.com).
 
 If the latest change on your branch line was committed by someone other than yourself, please inform the person about the problem.
 
 ### 3.2 Did You Obtain the Model from Someone Else?
 
-If you received the model from someone else, for example as a [project package](/howto8/integration/importing-and-exporting-objects/) (.mpk) file, then it's possible they created the model with the Mendix Model SDK. Please inform the person about the problem and ask them for a solution.
+If you received the model from someone else, for example as a [project package](/howto8/integration/importing-and-exporting-objects/) (*.mpk*) file, then it's possible they created the model with the Mendix Model SDK. Please inform the person about the problem and ask them for a solution.
 
 ### 3.3 Did You Create the Project Yourself?
 

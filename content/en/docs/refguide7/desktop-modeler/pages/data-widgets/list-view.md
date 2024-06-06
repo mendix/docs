@@ -9,7 +9,7 @@ The list view is similar to the template grid. The list view shows a list of obj
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide7/desktop-modeler/pages/data-widgets/list-view/list-view.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/data-widgets/list-view/list-view.png" class="no-border" >}}
 A read-only list view showing all profiles.
 
 {{% /alert %}}

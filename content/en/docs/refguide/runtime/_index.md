@@ -5,7 +5,6 @@ weight: 40
 description: "Gives an overview of the Mendix Runtime."
 no_list: false
 description_list: true
-tags: ["runtime", "runtime server", "mendix client", "cluster leader"]
 ---
 
 ## 1 Introduction
@@ -18,7 +17,7 @@ Each [patch version](/releasenotes/studio-pro/lts-mts/) of Mendix comes with its
 
 The Mendix Runtime consists of two parts: the [Runtime Server](/refguide/runtime-server/) and the [Mendix Client](/refguide/mendix-client/). The relationship between the two is shown in the diagram below.
 
-{{< figure src="/attachments/refguide/runtime/runtime-overview.png" alt="An overview of the Mendix Runtime" >}}
+{{< figure src="/attachments/refguide/runtime/runtime-overview.png" alt="An overview of the Mendix Runtime" class="no-border" >}}
 
 Each of the components of Mendix Runtime is described below.
 
@@ -46,7 +45,7 @@ More information on multiple instances is in [Clustered Mendix Runtime](/refguid
 
 ### 2.2 External Services
 
-External services provide data and other functions from outside your Mendix app. These can be external data sources like SAP, external display widgets like Google maps, or external data processing like IBM Watson machine learning. The Runtime Server communicates with these over HTTP(S) connections.
+External services provide data and other functions from outside your Mendix app. These can be external data sources like SAP, external display widgets like Google maps, or external data processing like IBM Watson machine learning. The Runtime Server communicates with these over HTTP (or HTTPS) connections.
 
 ### 2.3 Infrastructure
 
@@ -72,11 +71,11 @@ Also called the App Container, this launches and exposes the Runtime Server. At 
 
 The load balancer takes incoming requests from the Mendix Client and forwards them to a Runtime Server instance. It balances the load by making sure that requests are distributed evenly to the different instances.
 
-The Mendix Client communicates with the load balancer using HTTPS. Communication on the server side of the load balancer, to environment instances and CDN, is performed using HTTP.
+The Mendix Client communicates with the load balancer using HTTPS. Communication on the server side of the load balancer, to environment instances, is performed using HTTP.
 
-### 2.9 CDN Static Config
+### 2.9 Static Content
 
-The Content Delivery Network (CDN) contains static configuration information which is needed by the client. These include the files needed to start the Mendix Client from a browser, CSS files which define the app's theme, and JavaScript files which define client-side logic.
+Every Mendix app needs static content to be served in order to load the Mendix client in the browser. This includes the scripts needed to start the Mendix Client, CSS files which define the app's theme, and JavaScript files which define client-side logic.
 
 ## 3 Licensing
 
@@ -84,7 +83,7 @@ You need a license to run an application in production mode. Without a license, 
 
 ## 4 APIs
 
-You can extend the functionality of the Runtime Server by writing Java actions. For more information,  see the [Runtime API](/apidocs-mxsdk/apidocs/#runtime) section of *API Documentation*.
+You can extend the functionality of the Runtime Server by writing Java actions. For more information, see the [Mendix  Runtime API](/apidocs-mxsdk/apidocs/runtime-api/).
 
 {{% alert color="info" %}}
 If the app contains published services, links to available API documentation such as [OpenAPI documentation](/refguide/open-api/) for [published REST services](/refguide/published-rest-services/), links to [published OData services](/refguide/published-odata-services/), and WSDLs for [published web services](/refguide/published-web-services/), are available on the URL path `/api-doc` (for example: `https://myapp.mendixcloud.com/api-doc/`).

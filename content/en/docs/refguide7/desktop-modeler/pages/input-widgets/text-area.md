@@ -9,7 +9,7 @@ A text area can be used to display and/or edit a long text value that can be spl
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide7/desktop-modeler/pages/input-widgets/text-area/text-area.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/pages/input-widgets/text-area/text-area.png" class="no-border" >}}
 
 This text area allows the end-user to set the description of the product.
 
@@ -43,7 +43,9 @@ You've used {1} characters of the {2} characters that are allowed.
 
 ### Text Too Long Message
 
-This is the text displayed when the number of typed characters is higher than the maximum allowed number of characters.
+This is the text displayed when the number of characters is higher than the maximum allowed number of characters.
+
+This type of message can also occur when a loaded or stored value exceeds the character limit
 
 ### Maximum Length
 

@@ -2,12 +2,7 @@
 title: "Chart Advanced Cheat Sheet"
 url: /refguide8/charts-advanced-cheat-sheet/
 weight: 20
-tags: ["Charts", "Advanced", "Studio Pro", "Layout Controls", "Data Properties", "Series Properties", "studio pro"]
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/charts-advanced-cheat-sheet.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 
@@ -148,7 +143,7 @@ Adjust y to -0.2 for long X-axis ticks.
 }
 ```
 
-{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-advanced-cheat-sheet/advanced-layout-legend.gif" alt="Legend configurations" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-advanced-cheat-sheet/advanced-layout-legend.gif" alt="Legend configurations" class="no-border" >}}
 
 More options can be found here: [Legend configurations](https://plot.ly/javascript/reference/#layout-legend).
 
@@ -181,7 +176,7 @@ The axes properties apply to charts with x and y axes. They can be configured as
 }
 ```
 
-{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-advanced-cheat-sheet/axes.gif" alt="Axes configurations" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-advanced-cheat-sheet/axes.gif" alt="Axes configurations" class="no-border" >}}
 
 More options can be found here: [Axes configurations](https://plot.ly/javascript/reference/#layout-xaxis).
 
@@ -212,7 +207,7 @@ These properties apply to charts with more than one Y axis. They can be configur
 
 The layout properties above should be used with the corresponding [data properties](#multiple-y-axes-data-properties).
 
-{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-advanced-cheat-sheet/multiple-y.gif" alt="Multiple Y axes configurations" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-advanced-cheat-sheet/multiple-y.gif" alt="Multiple Y axes configurations" class="no-border" >}}
 
 More options can be found here: [Multiple Y axes configurations](https://plot.ly/javascript/multiple-axes/).
 
@@ -249,7 +244,7 @@ These properties apply to charts with more than one X axis. They can be configur
 
 The layout properties above should be used with the corresponding [data properties](#multiple-x-axes-data-properties).
 
-{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-advanced-cheat-sheet/multiple-x.gif" alt="Multiple X axes configurations" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-advanced-cheat-sheet/multiple-x.gif" alt="Multiple X axes configurations" class="no-border" >}}
 
 More options can be found here: [Multiple X axes configurations](https://plot.ly/javascript/multiple-axes/).
 
@@ -257,7 +252,7 @@ More options can be found here: [Multiple X axes configurations](https://plot.ly
 
 Titles, axes and series can contain complex mathematical expressions.
 
-{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-advanced-cheat-sheet/math-formula.png" alt="Math formula" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-advanced-cheat-sheet/math-formula.png" alt="Math formula" class="no-border" >}}
 
 ```latex {linenos=false}
 $\sqrt{(n_\text{c}(t|{T_\text{early}}))}$
@@ -286,13 +281,13 @@ The title appears above the chart. It can be configured as:
 }
 ```
 
-{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-advanced-cheat-sheet/title.gif" alt="Title configurations" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-advanced-cheat-sheet/title.gif" alt="Title configurations" class="no-border" >}}
 
 More options can be found here: [Title configurations](https://plot.ly/javascript/reference/#layout-title).
 
 ### 2.7 Color
 
-Sets the the background color of a graph.
+Sets the background color of a graph.
 
 ``` json
 {
@@ -317,7 +312,7 @@ Creates space around the chart.
 }
 ```
 
-{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-advanced-cheat-sheet/margin.gif" alt=" Margin configurations " >}}
+{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-advanced-cheat-sheet/margin.gif" alt=" Margin configurations " class="no-border" >}}
 
 More options can be found here: [Margin configurations](https://plot.ly/javascript/reference/#layout-margin).
 
@@ -341,7 +336,7 @@ A small pop-up box that appears when the user moves the mouse pointer over a cha
 }
 ```
 
-{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-advanced-cheat-sheet/tooltip.gif" alt="Tooltip configurations" >}}.
+{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-advanced-cheat-sheet/tooltip.gif" alt="Tooltip configurations" class="no-border" >}}.
 
 More options can be found here: [Tooltip configurations](https://plot.ly/javascript/reference/#layout-hovermode).
 
@@ -390,7 +385,7 @@ Sets the range based on the plotted values, adjusting to fit them.
 }
 ```
 
-{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-advanced-cheat-sheet/normal.gif" alt="Range mode" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-advanced-cheat-sheet/normal.gif" alt="Range mode" class="no-border" >}}
 
 **nonnegative:**
 
@@ -404,7 +399,7 @@ Shows only positive values, the range is based on the plotted positive values.
 }
 ```
 
-{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-advanced-cheat-sheet/nonnegative.gif" alt="Range mode" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-advanced-cheat-sheet/nonnegative.gif" alt="Range mode" class="no-border" >}}
 
 **tozero:**
 
@@ -418,7 +413,7 @@ This is the default range mode in charts. Both positive and negative ranges for 
 }
 ```
 
-{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-advanced-cheat-sheet/tozero.gif" alt="Range mode" >}}  
+{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-advanced-cheat-sheet/tozero.gif" alt="Range mode" class="no-border" >}}  
 
 {{% alert color="info" %}}
 When **fill** for the series is set to something other than *none*, the Y-axis range is forced to start from zero (*tozero*). For example:
@@ -443,7 +438,7 @@ When **fill** for the series is set to something other than *none*, the Y-axis r
 
 {{% /alert %}}
 
-{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-advanced-cheat-sheet/rangemode-note.gif" alt="Range mode" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-advanced-cheat-sheet/rangemode-note.gif" alt="Range mode" class="no-border" >}}
 
 More options can be found here: [range mode configurations](https://plot.ly/javascript/reference/#layout-yaxis-rangemode).
 
@@ -455,7 +450,7 @@ These properties are applied to specific types of chart only. For each chart, da
 
 A mode and line configuration can be added in the **Advanced** configuration of the series.
 
-{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-advanced-cheat-sheet/line-styles.png" alt="Line styles" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-advanced-cheat-sheet/line-styles.png" alt="Line styles" class="no-border" >}}
 
 ``` json
 [
@@ -499,7 +494,7 @@ A mode and line configuration can be added in the **Advanced** configuration of 
 
 The type of a series can be changed. For example, you can make a bar series into a line series:
 
-{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-advanced-cheat-sheet/combine-list-bar.gif" alt="Column chart data properties" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-advanced-cheat-sheet/combine-list-bar.gif" alt="Column chart data properties" class="no-border" >}}
 
 ### 3.3 Pie Chart
 
@@ -511,7 +506,7 @@ Displays a circular graph divided into slices to illustrate numerical proportion
 }
 ```
 
-{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-advanced-cheat-sheet/pie-chart.png" alt="Pie chart data properties" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-advanced-cheat-sheet/pie-chart.png" alt="Pie chart data properties" class="no-border" >}}
 
 More options can be found here: [Pie chart data properties](https://plot.ly/javascript/reference/#pie).
 
@@ -532,7 +527,7 @@ Displays a line chart with the areas below the lines filled with colors.
 }
 ```
 
-{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-advanced-cheat-sheet/area-chart.png" alt="Area chart data properties" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-advanced-cheat-sheet/area-chart.png" alt="Area chart data properties" class="no-border" >}}
 
 More options can be found here: [Area chart data properties](https://plot.ly/javascript/reference/#area).
 
@@ -540,7 +535,7 @@ More options can be found here: [Area chart data properties](https://plot.ly/jav
 
 The example below shows how you can set up filter buttons to filter a chart by time.
 
-{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-advanced-cheat-sheet/time-series-filters.png" alt="Line chart data properties" >}}.
+{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-advanced-cheat-sheet/time-series-filters.png" alt="Line chart data properties" class="no-border" >}}.
 
 ``` json
 {
@@ -604,7 +599,7 @@ Displays two different Y axes with different scales, according to the ranges of 
 ]
 ```
 
-{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-advanced-cheat-sheet/data-multiple-y.png" alt="Multiple Y axes properties" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-advanced-cheat-sheet/data-multiple-y.png" alt="Multiple Y axes properties" class="no-border" >}}
 
 ### 3.7 Multiple X Axes Data Properties {#multiple-x-axes-data-properties}
 
@@ -625,7 +620,7 @@ Displays two different X axes with different scales.
 ]
 ```
 
-{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-advanced-cheat-sheet/data-multiple-x.png" alt="Multiple X axes properties" >}}.
+{{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-advanced-cheat-sheet/data-multiple-x.png" alt="Multiple X axes properties" class="no-border" >}}.
 
 ## 4 Configurations Options (All Charts) {#config-options}
 

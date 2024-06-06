@@ -2,28 +2,23 @@
 title: "Attributes"
 url: /refguide8/attributes/
 weight: 30
-tags: ["domain model", "entity", "attribute", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/attributes.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 
 **Attributes** are characteristics that describe and/or identify an entity. Each of these attributes is given a name.
 
-A **Customer**, for example, typically has attributes for the name of the customer (for example, **FullName**), an e-mail address (for example, **EmailAddress**) and other personal information.
+A **Customer**, for example, typically has attributes for the name of the customer (for example, **FullName**), an email address (for example, **EmailAddress**) and other personal information.
 
-{{< figure src="/attachments/refguide8/modeling/domain-model/entities/attributes/customer-entity.png" alt="Example customer entity" >}}
+{{< figure src="/attachments/refguide8/modeling/domain-model/entities/attributes/customer-entity.png" alt="Example customer entity" class="no-border" >}}
 
 The domain model editor uses the following symbols to help visualize attribute properties:
 
 | Symbol | Description |
 | --- | --- |
-| {{< figure src="/attachments/refguide8/modeling/domain-model/entities/attributes/917593.png" >}} | This attribute has one or more validation rules. |
-| {{< figure src="/attachments/refguide8/modeling/domain-model/entities/attributes/917592.png" >}} | This attribute has a microflow that calculates the value of the attribute. |
+| {{< figure src="/attachments/refguide8/modeling/domain-model/entities/attributes/917593.png" class="no-border" >}} | This attribute has one or more validation rules. |
+| {{< figure src="/attachments/refguide8/modeling/domain-model/entities/attributes/917592.png" class="no-border" >}} | This attribute has a microflow that calculates the value of the attribute. |
 
 {{% alert color="info" %}}
 Attributes for external entities are specified in the **External Entity Properties**. These attributes are defined in the originating app and the only local changes that can be applied to these entities is a local name and description. For further information see the [Attributes](/refguide8/external-entities/#attributes) section of *External Entities*.
@@ -39,7 +34,7 @@ You can **Add** new attributes to [external entities](/refguide8/external-entiti
 
 An example of the attribute properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/domain-model/entities/attributes/attribute-properties.png" >}}
+{{< figure src="/attachments/refguide8/modeling/domain-model/entities/attributes/attribute-properties.png" class="no-border" >}}
 
 Attribute properties consist of the following sections:
 
@@ -80,7 +75,7 @@ AutoNumber | A positive or negative whole number.<br/>AutoNumber attributes are 
 Binary<sup><small>[1]</small></sup> | Binary data. Can only be used for persistable entities as the data is stored in the database. For example an entire file. In most cases you want to use an association to a FileDocument or Image to store file contents. | Binary |
 Boolean | True or false. | Boolean | 
 Date and time | A point in time consisting of a date and a time component accurate up to milliseconds. | Date and time |
-Decimal | A positive or negative number that can have digits after the decimal point. The Decimal type can be used for high-precision calculations. Use this type to represent amounts of money for example. When a Decimal type attribute is persisted in the database its value is validated against 2 conditions. In case the number of digits of the integral part (before the decimal separator) is more than 20, an exception is thrown. In case the number of digits of the fractional part (after the decimal separator) is more than 8, the fractional value is automatically rounded according to [the round half to even rule (also known as bankers' rounding)](https://en.wikipedia.org/wiki/Rounding#Round_half_to_even). Therefore the the maximum allowable value for the Decimal type is 99999999999999999999.99999999. | Decimal |
+Decimal | A positive or negative number that can have digits after the decimal point. The Decimal type can be used for high-precision calculations. Use this type to represent amounts of money for example. When a Decimal type attribute is persisted in the database its value is validated against 2 conditions. In case the number of digits of the integral part (before the decimal separator) is more than 20, an exception is thrown. In case the number of digits of the fractional part (after the decimal separator) is more than 8, the fractional value is automatically rounded according to [the round half to even rule (also known as bankers' rounding)](https://en.wikipedia.org/wiki/Rounding#Round_half_to_even). Therefore the maximum allowable value for the Decimal type is 99999999999999999999.99999999. | Decimal |
 Enumeration | A list of predefined attributes. For more information, see [Enumerations](/refguide8/enumerations/). | Enumeration |
 Hashed string | A string which is hashed using the algorithm specified in the [project settings](/refguide8/project-settings/#hash-algorithm). This can be used to store password hashes, for example, so that the original password is not recorded in the database.  | String |
 Integer | A whole number that can be positive (maximum 2<sup>31</sup>-1, thus 2147483647), negative (minimum -2<sup>31</sup>, thus -2147483648), or zero. | Integer/Long |
@@ -107,7 +102,7 @@ The **Password** itself should not be stored, but only its hash value, thus it i
 
 A customer can be active or inactive, which is stored in an attribute named **Active** of type **Boolean**.
 
-{{< figure src="/attachments/refguide8/modeling/domain-model/entities/attributes/customer-attribute-examples.png" >}}
+{{< figure src="/attachments/refguide8/modeling/domain-model/entities/attributes/customer-attribute-examples.png" class="no-border" >}}
 
 #### 2.2.2 Localize
 
@@ -172,7 +167,7 @@ If the value is a computation, the **Microflow** property defines which microflo
 
 For example, in a web shop, you want to show the total expenses for each customer. These are calculated by retrieving all orders associated with the customer and adding their totals.
 
-{{< figure src="/attachments/refguide8/modeling/domain-model/entities/attributes/917570.png" >}}
+{{< figure src="/attachments/refguide8/modeling/domain-model/entities/attributes/917570.png" class="no-border" >}}
 
 #### 2.3.3 Default Value
 

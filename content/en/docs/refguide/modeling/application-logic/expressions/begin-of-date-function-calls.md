@@ -3,12 +3,7 @@ title: "Begin-of Date Function Calls"
 url: /refguide/begin-of-date-function-calls/
 weight: 95
 description: Describes begin-of date function calls in Studio Pro expressions.
-tags: ["studio pro", "expressions", "begin-of date function"]
 ---
-
-{{% alert color="info" %}}
-This function is only available for Mendix Studio Pro 9.18.0 and above. 
-{{% /alert %}}
 
 ## 1 Introduction
 

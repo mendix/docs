@@ -2,7 +2,6 @@
 title: "Table"
 url: /refguide/table/
 weight: 60
-tags: ["studio pro", "table", "container widget", "widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -15,7 +14,7 @@ Tables can be used to give structure to a page. They contain [rows](/refguide/ta
 
 For example, you can create a table with text widgets, a logo, and a data view information as a customer report:
 
-{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/table/table.png" >}}
+{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/table/table.png" class="no-border" >}}
 
 ## 2 Components
 
@@ -92,32 +91,28 @@ You can perform the following actions:
 
 To merge cells to the right, left, up, or down, you can also click the corresponding icon:
 
-{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/table/merge-icons.png" alt="Merge Icons" >}}
+{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/table/merge-icons.png" alt="Merge Icons" class="no-border" >}}
 
-## 3 Properties
+## 3 Properties Pane
 
-An example of table properties is represented in the image below:
+The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Table properties consist of the following sections:
 
-{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/table/table-properties.png" alt="Table Properties"   width="250"  >}}
+Properties:
 
-Table properties consist of the following sections:
-
-* [Common](#common)
-* [Design Properties](#design-properties)
 * [General](#general)
 * [Visibility](#visibility)
+* [Common](#common)
 
-### 3.1 Common Section {#common}
+Styling:
 
-{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+* [Design Properties](#design-properties)
+* [Common](#common-styling)
 
-### 3.2 Design Properties Section {#design-properties}
+## 4 Properties
 
-{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
+### 4.1 General Section {#general}
 
-### 3.3 General Section {#general}
-
-#### 3.3.1 Width Unit
+#### 4.1.1 Width Unit
 
 The **Width Unit** defines whether the [Column widths](#column-widths) property is set in percentage or in pixels. 
 
@@ -126,11 +121,11 @@ The **Width Unit** defines whether the [Column widths](#column-widths) property 
 | Percentage  *(default)* | The **Column widths** property is specified in percentages. When resizing, columns will become wider/narrower while keeping the same relative widths. |
 | Pixels | The **Column widths** property is specified in pixels. When resizing, the pixel width columns will keep the same size; auto columns will become wider/narrower. |
 
-#### 3.3.2 Column Widths {#column-widths}
+#### 4.1.2 Column Widths {#column-widths}
 
 The **Column widths** property defines the widths of each column as a list of numbers separated by semi-colons. The **Width unit** (described above) determines if these numbers mean percentages or pixels. 
 
-{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/table/width-unit-and-column-widths.png" alt="Width Unit and Column Widths" >}}
+{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/table/width-unit-and-column-widths.png" alt="Width Unit and Column Widths" class="no-border" >}}
 
 When **Width unit** is set to *Pixels*, you can set column width to the following:
 
@@ -139,11 +134,25 @@ When **Width unit** is set to *Pixels*, you can set column width to the followin
 
 For example, you can you can have three columns of which the first is 200 pixels wide (*Fixed* width), the second is 100 pixels (*Fixed* width), and the last one is set to *Auto* which means that it will take up the rest of the space in the row.
 
-### 3.4 Visibility Section {#visibility}
+### 4.2 Visibility Section {#visibility}
 
 {{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
 
-## 4 Read More
+### 4.3 Common Section {#common}
+
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+
+## 5 Styling
+
+### 5.1 Design Properties Section {#design-properties}
+
+{{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
+
+### 5.2 Common Section {#common-styling}
+
+{{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
+
+## 6 Read More
 
 * [Page](/refguide/page/)
 * [Structure](/refguide/structure-widgets/)

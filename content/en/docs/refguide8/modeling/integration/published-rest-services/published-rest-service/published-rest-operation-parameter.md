@@ -3,13 +3,8 @@ title: "Operation Parameters for Published REST"
 url: /refguide8/published-rest-operation-parameter/
 weight: 20
 description: "Configure a published REST Operation by adding parameters to an operation "
-tags: ["published REST", "operation", "parameter", "resource", "mapping", "not found", "commit"]
 # If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/published-rest-operation-parameter.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 

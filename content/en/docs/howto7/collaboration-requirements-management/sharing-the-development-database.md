@@ -1,11 +1,10 @@
 ---
 title: "Share the Development Database"
 url: /howto7/collaboration-requirements-management/sharing-the-development-database/
-category: "Collaboration and Requirements Management"
+
 weight: 40
-tags: []
 ---
-All Mendix applications need a database running in the background. While developing an application it is advised to use the standard built-in database that is supplied with the Mendix Modeler. This how-to will teach you how to open and manage the data stored inside the built-in database.
+All Mendix applications need a database running in the background. While developing an application it is advised to use the standard built-in database that is supplied with the Mendix Modeler. This how-to teaches you how to open and manage the data stored inside the built-in database.
 
 ## 1 Prerequisites
 
@@ -31,7 +30,7 @@ One application can make use of many different databases. Take the following ste
 1. Double-click **Settings** in the **Project Explorer**.
 2. Select the preferred database configuration and click **Make active**.
 
-    {{< figure src="/attachments/howto7/collaboration-requirements-management/sharing-the-development-database/18580427.png" >}}
+    {{< figure src="/attachments/howto7/collaboration-requirements-management/sharing-the-development-database/18580427.png" class="no-border" >}}
 
 ## 4 Start the database viewer
 
@@ -39,33 +38,33 @@ To start the built in database viewer, the following steps have to be applied:
 
 1. Run the application locally (If it is the first time, the Modeler will ask to create the new database. Press 'yes'.)
 
-    {{< figure src="/attachments/howto7/collaboration-requirements-management/sharing-the-development-database/18580426.png" >}}
+    {{< figure src="/attachments/howto7/collaboration-requirements-management/sharing-the-development-database/18580426.png" class="no-border" >}}
 
 2. When the application is running, open the built in database viewer
 
-    {{< figure src="/attachments/howto7/collaboration-requirements-management/sharing-the-development-database/18580425.png" >}} 
+    {{< figure src="/attachments/howto7/collaboration-requirements-management/sharing-the-development-database/18580425.png" class="no-border" >}} 
 
 3. This will result in the following screen (depending on the data model of the application)
 
-    {{< figure src="/attachments/howto7/collaboration-requirements-management/sharing-the-development-database/18580424.png" >}}
+    {{< figure src="/attachments/howto7/collaboration-requirements-management/sharing-the-development-database/18580424.png" class="no-border" >}}
 
 This is the database manager. On the left pane all tables from all modules in the running application are showed. On the right top pane it is possible to enter SQL queries and on the right lower pane the results from the entered SQL query will be shown.
 
 ## 5 Execute queries
 
-Queries can be executed in two ways. It can be done directly from the command line (top right pane) in SQL script, or via the explorer on the left pane. For more information about SQL, visit the following page: [http://www.w3schools.com/sql/](http://www.w3schools.com/sql/). To execute queries from the database explorer (left pane), the following steps have to be applied:
+Queries can be executed in two ways. It can be done directly from the command line (top right pane) in SQL script, or via the explorer on the left pane. For more information about SQL, visit the following page: [https://www.w3schools.com/sql/](https://www.w3schools.com/sql/). To execute queries from the database explorer (left pane), the following steps have to be applied:
 
 1. Right click any table and select the preferred action
 
-    {{< figure src="/attachments/howto7/collaboration-requirements-management/sharing-the-development-database/18580423.png" >}}
+    {{< figure src="/attachments/howto7/collaboration-requirements-management/sharing-the-development-database/18580423.png" class="no-border" >}}
 
 2. To select all customers from the table CUSTOMER, click the first option. It will automatically fill the SQL command in the top right pane.
 
-    {{< figure src="/attachments/howto7/collaboration-requirements-management/sharing-the-development-database/18580422.png" >}}
+    {{< figure src="/attachments/howto7/collaboration-requirements-management/sharing-the-development-database/18580422.png" class="no-border" >}}
 
 3. Click on the 'Execute SQL' button to execute this query
 
-    {{< figure src="/attachments/howto7/collaboration-requirements-management/sharing-the-development-database/18580421.png" >}}
+    {{< figure src="/attachments/howto7/collaboration-requirements-management/sharing-the-development-database/18580421.png" class="no-border" >}}
 
 On the bottom right pane, the results are shown and a total of 50 rows is retrieved from the database. From the standard actions it is also possible to delete, update and insert records. The standard actions can also be customized to retrieve, update or delete specific data. Advanced knowledge about the SQL language is needed to get the desired results.
 
@@ -75,7 +74,7 @@ The built-in database can easily be shared with other members of the team. Like 
 
 1. Select **Project** > **More Versioning** > **Add Snapshot of Data**:
 
-    {{< figure src="/attachments/howto7/collaboration-requirements-management/sharing-the-development-database/18580420.png" >}}
+    {{< figure src="/attachments/howto7/collaboration-requirements-management/sharing-the-development-database/18580420.png" class="no-border" >}}
 
 2. Press 'Yes' to commit if one already exists, then add the informational message and press 'OK'
 3. The data is now committed to the team server and can be used by other team members
@@ -86,11 +85,11 @@ To import a data snapshot into the model, the app has to be updated since the la
 
 1. First the application has to be updated. Press update on the changes tab
 
-    {{< figure src="/attachments/howto7/collaboration-requirements-management/sharing-the-development-database/18580419.png" >}}
+    {{< figure src="/attachments/howto7/collaboration-requirements-management/sharing-the-development-database/18580419.png" class="no-border" >}}
 
 2. To implement the data snapshot, the database has to be extracted from a .zip file to the deployment directory
 
-    {{< figure src="/attachments/howto7/collaboration-requirements-management/sharing-the-development-database/18580417.png" >}}
+    {{< figure src="/attachments/howto7/collaboration-requirements-management/sharing-the-development-database/18580417.png" class="no-border" >}}
 
 3. Now copy the data directory to the data directory in the deployment directory
 
@@ -102,7 +101,6 @@ Make sure the names of the databases aren't the same or make a copy of your own 
 
 ## 8 Read More
 
-* [Stories](/developerportal/collaborate/stories/)
 * [Contributing to a GitHub repository](/howto7/collaboration-requirements-management/contribute-to-a-github-repository/)
 * [Starting your own repository](/howto7/collaboration-requirements-management/starting-your-own-repository/)
 * [Version Control](/refguide7/version-control/)

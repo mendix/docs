@@ -1,12 +1,7 @@
 ---
 title: "XPath Count"
 url: /refguide8/xpath-count/
-tags: ["studio pro"]
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/xpath-count.pdf).
-{{% /alert %}}
 
 ## 1 Overview
 

@@ -2,12 +2,7 @@
 title: "Sequence Flow"
 url: /refguide8/sequence-flow/
 weight: 30
-tags: ["studio pro", "sequence flow", "microflow"]
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/sequence-flow.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 
@@ -15,7 +10,7 @@ A sequence flow is a flow that is shown an arrow that links elements (events, ac
 
 When you have two activities that you want to link together a sequence flow is used.
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/sequence-flow/sequence-flow.png" >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/sequence-flow/sequence-flow.png" class="no-border" >}}
 
 ## 2 Condition Value
 

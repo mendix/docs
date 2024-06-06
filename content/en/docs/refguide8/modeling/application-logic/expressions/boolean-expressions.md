@@ -2,12 +2,7 @@
 title: "Boolean Expressions"
 url: /refguide8/boolean-expressions/
 weight: 50
-tags: ["studio pro", "expression", "expressions", "Boolean"]
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/boolean-expressions.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 
@@ -45,7 +40,7 @@ The `or` operator combines two Boolean expressions, and returns `true` if at lea
 
 The examples below illustrate which value the expression returns:
 
-* You have a entity called *product* that has the *price* attribute of the integer type. The *price* attribute equals 3, and you have another attribute called *recommendedPrice* that equals 2. 
+* You have an entity called *product* that has the *price* attribute of the integer type. The *price* attribute equals 3, and you have another attribute called *recommendedPrice* that equals 2. 
 
     If you use the following input:
 

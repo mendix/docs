@@ -4,10 +4,18 @@ url: /releasenotes/mobile/nt-6-rn/
 weight: 10
 description: "Native Template 6 release notes."
 ---
+## 6.3.6
 
+**Release date: June 1, 2023**
+
+### Fixes
+
+* We fixed an issue with cookie management in native apps. (Ticket 178053)
+* We fixed an issue which affected compiling a native iOS app using XCode 14 or higher.
+  
 ## 6.3.5
 
-**Release date: January 31st, 2023**
+**Release date: January 31, 2023**
 
 ### Fixes
 
@@ -15,7 +23,7 @@ description: "Native Template 6 release notes."
 
 ## 6.3.4
 
-**Release date: December 27th, 2022**
+**Release date: December 27, 2022**
 
 ### Fixes
 
@@ -23,7 +31,7 @@ description: "Native Template 6 release notes."
 
 ## 6.3.3
 
-**Release date: November 10th, 2022**
+**Release date: November 10, 2022**
 
 ### Fixes
 
@@ -38,18 +46,18 @@ Due to a library update, your Native Template must be aligned with Native Mobile
 If you already have a project in AppCenter, then you must add the following environment variable to ensure compatibility:
 
 1. Open your project in AppCenter and go to **Build** menu item.
-1. In **all branches**, click the wrench icon.
+1. In **all branches**, click the wrench icon ({{% icon name="wrench" %}}).
 1. In **Environment Variable**, add the following **Name** and **Value** (if this option is not enabled, enable it):
     1. Name: **JAVA_HOME**.
     1. Value: **$(JAVA_HOME_11_X64)**.
 
 In the end, your variable should be set up like this:
 
-{{< figure src="/attachments/releasenotes/mobile/native-template/environment-variable.png" alt="environment variable example" >}}
+{{< figure src="/attachments/releasenotes/mobile/native-template/environment-variable.png" alt="environment variable example" class="no-border" >}}
 
 ## 6.3.2
 
-**Release date: November 9th, 2022**
+**Release date: November 9, 2022**
 
 ### Fixes
 
@@ -57,7 +65,7 @@ In the end, your variable should be set up like this:
 
 ## 6.3.1
 
-**Release date: October 6th, 2022**
+**Release date: October 6, 2022**
 
 ### Fixes
 
@@ -65,7 +73,7 @@ In the end, your variable should be set up like this:
 
 ## 6.3.0
 
-**Release date: September 20th, 2022**
+**Release date: September 20, 2022**
 
 ### Improvements
 
@@ -73,7 +81,7 @@ In the end, your variable should be set up like this:
 
 ## 6.2.29
 
-**Release date: December 27th, 2022**
+**Release date: December 27, 2022**
 
 ### Fixes
 
@@ -81,7 +89,7 @@ In the end, your variable should be set up like this:
 
 ## 6.2.28
 
-**Release date: November 9th, 2022**
+**Release date: November 9, 2022**
 
 ### Fixes
 
@@ -89,7 +97,7 @@ In the end, your variable should be set up like this:
 
 ## 6.2.27
 
-**Release date: September 19th, 2022**
+**Release date: September 19, 2022**
 
 ### Improvements
 
@@ -111,7 +119,7 @@ In the end, your variable should be set up like this:
 
 ## 6.2.26
 
-**Release date: September 8th, 2022**
+**Release date: September 8, 2022**
 
 ### Improvements
 
@@ -119,7 +127,7 @@ In the end, your variable should be set up like this:
 
 ## 6.2.25
 
-**Release date: August 16th, 2022**
+**Release date: August 16, 2022**
 
 ### Fixes
 
@@ -129,7 +137,7 @@ In the end, your variable should be set up like this:
 
 ## 6.2.24
 
-**Release date: July 26th, 2022**
+**Release date: July 26, 2022**
 
 ### Fixes
 
@@ -139,7 +147,7 @@ In the end, your variable should be set up like this:
 
 ## 6.2.23
 
-**Release date: July 18th, 2022**
+**Release date: July 18, 2022**
 
 ### Improvements
 
@@ -153,7 +161,7 @@ In the end, your variable should be set up like this:
 
 ## 6.2.22
 
-**Release date: June 2nd, 2022**
+**Release date: June 2, 2022**
 
 ### Fixes
 
@@ -161,7 +169,7 @@ In the end, your variable should be set up like this:
 
 ## 6.2.21
 
-**Release date: May 31st, 2022**
+**Release date: May 31, 2022**
 
 ### Fixes
 
@@ -169,7 +177,7 @@ In the end, your variable should be set up like this:
 
 ## 6.2.20
 
-**Release date: May 30th, 2022**
+**Release date: May 30, 2022**
 
 ### Fixes
 
@@ -177,7 +185,7 @@ In the end, your variable should be set up like this:
 
 ## 6.2.19
 
-**Release date: May 11th, 2022**
+**Release date: May 11, 2022**
 
 ### Fixes
 
@@ -185,7 +193,7 @@ In the end, your variable should be set up like this:
 
 ## 6.2.18
 
-**Release date: May 10th, 2022**
+**Release date: May 10, 2022**
 
 ### Fixes
 
@@ -193,7 +201,7 @@ In the end, your variable should be set up like this:
 
 ## 6.2.16
 
-**Release date: March 30th, 2022**
+**Release date: March 30, 2022**
 
 ### Fixes
 
@@ -201,7 +209,7 @@ In the end, your variable should be set up like this:
 
 ## 6.2.15
 
-**Release date: March 23rd, 2022**
+**Release date: March 23, 2022**
 
 ### Fixes
 
@@ -209,7 +217,7 @@ In the end, your variable should be set up like this:
 
 ## 6.2.13 and 6.2.14
 
-**Release date: March 16th, 2022**
+**Release date: March 16, 2022**
 
 ### Fixes
 
@@ -218,7 +226,7 @@ In the end, your variable should be set up like this:
 
 ## 6.2.12
 
-**Release date: January 25th, 2022**
+**Release date: January 25, 2022**
 
 ### Fixes
 
@@ -226,7 +234,7 @@ In the end, your variable should be set up like this:
 
 ## 6.2.11
 
-**Release date: January 6th, 2022**
+**Release date: January 6, 2022**
 
 ### Fixes
 
@@ -235,7 +243,7 @@ In the end, your variable should be set up like this:
 
 ## 6.2.10
 
-**Release date: December 14th, 2021**
+**Release date: December 14, 2021**
 
 ### Fixes
 
@@ -243,11 +251,11 @@ In the end, your variable should be set up like this:
 
 ## 6.2.9 {#6.2.9}
 
-**Release date: November 29th, 2021**
+**Release date: November 29, 2021**
 
 ### Improvements
 
-* We added support for the new native mobile encryption features introduced with Mendix Studio Pro v9.8.
+* We added support for the new native mobile encryption features introduced with Mendix Studio Pro 9.8.
 * We added support for authentication token encryption for iOS and Android.
     * The token will be encrypted only for clients built with Mendix Studio Pro v9.8 and above. Lower Studio Pro versions do not support this feature and tokens will remain unencrypted.
 * We added support for all cookies on Android.
@@ -259,7 +267,7 @@ In the end, your variable should be set up like this:
 
 ## 6.2.8
 
-**Release date: November 5th, 2021**
+**Release date: November 5, 2021**
 
 ### Fixes
 
@@ -267,11 +275,11 @@ In the end, your variable should be set up like this:
 
 ## 6.2.7
 
-**Release date: October 25th, 2021**
+**Release date: October 25, 2021**
 
 ### Improvements
 
-* Mendix Studio Pro v9.7 brings with it a new over-the-air update mechanism. With this new mechanism you can update your apps directly via your app's runtime without using third-party services. For more information on OTA updates, see [Release Over the Air Updates with Mendix](/refguide/mobile/using-mobile-capabilities/deep-links/).
+* Mendix Studio Pro 9.7 brings with it a new over-the-air update mechanism. With this new mechanism you can update your apps directly via your app's runtime without using third-party services. For more information on OTA updates, see [Release Over the Air Updates with Mendix](/refguide/mobile/using-mobile-capabilities/deep-links/).
 
 ### Fixes
 
@@ -279,7 +287,7 @@ In the end, your variable should be set up like this:
 
 ## 6.2.6
 
-**Release date: October 4th, 2021**
+**Release date: October 4, 2021**
 
 ### Fixes
 
@@ -287,7 +295,7 @@ In the end, your variable should be set up like this:
 
 ## 6.2.5
 
-**Release date: September 29th, 2021**
+**Release date: September 29, 2021**
 
 ### Improvements
 
@@ -295,7 +303,7 @@ In the end, your variable should be set up like this:
 
 ## 6.2.4
 
-**Release date: September 23rd, 2021**
+**Release date: September 23, 2021**
 
 ### Improvements
 
@@ -303,7 +311,7 @@ In the end, your variable should be set up like this:
 
 ## 6.2.3
 
-**Release date: September 7th, 2021**
+**Release date: September 7, 2021**
 
 ### Fixes
 
@@ -311,7 +319,7 @@ In the end, your variable should be set up like this:
 
 ## 6.2.2
 
-**Release date: July 29th, 2021**
+**Release date: July 29, 2021**
 
 ### Fixes
 
@@ -319,13 +327,13 @@ In the end, your variable should be set up like this:
 
 ## 6.2.1 {#621}
 
-**Release date: July 28th, 2021**
+**Release date: July 28, 2021**
 
 This is a re-release of Native Template [6.2.0](#620).
 
 ## 6.2.0 {#620}
 
-**Release date: July 20th, 2021**
+**Release date: July 20, 2021**
 
 ### Improvements
 
@@ -339,7 +347,7 @@ This is a re-release of Native Template [6.2.0](#620).
 
 ## 6.1.7
 
-**Release date: June 30th, 2021**
+**Release date: June 30, 2021**
 
 ### Fixes
 
@@ -347,7 +355,7 @@ This is a re-release of Native Template [6.2.0](#620).
 
 ## 6.1.6
 
-**Release date: June 11th, 2021**
+**Release date: June 11, 2021**
 
 ### Improvements
 
@@ -365,7 +373,7 @@ Please note that if your app requires custom initialization, for example due to 
 
 ## 6.1.5
 
-**Release date: May 12th, 2021**
+**Release date: May 12, 2021**
 
 ### Fixes 
 
@@ -373,7 +381,7 @@ Please note that if your app requires custom initialization, for example due to 
 
 ## 6.1.3
 
-**Release date: March 31st, 2021**
+**Release date: March 31, 2021**
 
 ### Improvements
 

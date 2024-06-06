@@ -1,9 +1,8 @@
 ---
 title: "Consume a REST Service"
 url: /howto8/integration/consume-a-rest-service/
-category: "Integration"
+
 weight: 9
-tags: ["integration", "rest service", "data model", "consume", "legacy system", "legacy"]
 description: "Describes how to get information from a REST service."
 ---
 
@@ -13,7 +12,7 @@ Mendix applications frequently need to communicate with existing systems. Whethe
 
 This how-to shows you how to do this using an example in which you create an app that retrieves Wikipedia pages from a REST service. The resulting app is [available for download](/attachments/howto8/integration/consume-a-rest-service/WikipediaApi.mpk).
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Integrate with an existing system using a REST service
 * Call the REST service in a microflow
@@ -33,20 +32,20 @@ We will start by providing to Studio Pro an example of what the REST service ret
 1. Open your browser and go to [https://en.wikipedia.org/api/rest_v1/page/summary/Tahiti](https://en.wikipedia.org/api/rest_v1/page/summary/Tahiti).
 2. This calls the REST service with a GET request – the result is the summary of the [Tahiti page on Wikipedia](https://en.wikipedia.org/wiki/Tahiti) in the JSON format:
 
-    {{< figure src="/attachments/howto8/integration/consume-a-rest-service/get-call-result.png" alt="Screenshot of the result of the rest call" >}}
+    {{< figure src="/attachments/howto8/integration/consume-a-rest-service/get-call-result.png" alt="Screenshot of the result of the rest call" class="no-border" >}}
 
 3. Copy the whole JSON snippet. Make sure that you select the **Raw Data** tab to copy the whole code structure.
 4. Create a module and name it *RESTconsume*. To add a new [JSON structure](/refguide8/json-structures/) to your module with the sample JSON that you can use in the app, right-click the module in the **Project Explorer** and select **Add other** > **JSON structure**.
 5. Enter a **Name** for the structure: *JSON_structure* and click **OK**.
 6. In the **JSON Structure** dialog box, paste the JSON snippet in the **General** tab and click **Refresh**. This analyzes the structure of the JSON snippet that we can use later.
 
-    {{< figure src="/attachments/howto8/integration/consume-a-rest-service/json-structure.png" >}}
+    {{< figure src="/attachments/howto8/integration/consume-a-rest-service/json-structure.png" class="no-border" >}}
 
 7. Click **OK**.
 
 ## 3 Creating an Import Mapping
 
-An [import mapping](/refguide8/import-mappings/) specifies how the JSON relates to [entities](/refguide8/entities/). You can map the the JSON to any entity you like. The following steps describe how to generate the entities and create an import mapping:
+An [import mapping](/refguide8/import-mappings/) specifies how the JSON relates to [entities](/refguide8/entities/). You can map the JSON to any entity you like. The following steps describe how to generate the entities and create an import mapping:
 
 1. Right-click the module in the **Project Explorer** and select **Add other** > **Import Mapping**.
 2. Enter a **Name** for the import mapping: *Import_mapping* and click **OK**.
@@ -54,7 +53,7 @@ An [import mapping](/refguide8/import-mappings/) specifies how the JSON relates 
 4. Double-click **JSON_structure** in the **Select JSON Structure** dialog box.
 5. Click **Expand all** and then click **Check all**.
 
-    {{< figure src="/attachments/howto8/integration/consume-a-rest-service/import-mapping.png" >}}
+    {{< figure src="/attachments/howto8/integration/consume-a-rest-service/import-mapping.png" class="no-border" >}}
 
 6. Click **OK**. The **Import_mapping** document is displayed and the JSON structure is on the right.
 7. Click **Map automatically** in the editor toolbar. 
@@ -78,13 +77,13 @@ To add an input entity to the domain model, follow these steps:
 7. Click **OK**.
 8. Drag an association from **Input** to **Summary**.
 
-    {{< figure src="/attachments/howto8/integration/consume-a-rest-service/domain-model.png" >}}
+    {{< figure src="/attachments/howto8/integration/consume-a-rest-service/domain-model.png" class="no-border" >}}
 
 9. Go to the **Import_mapping** and from the **Connector** pane drag **Input** as the input parameter for the input mapping.
 10. Double-click **Summary**.
 11. In the **Map entity 'Summary from the object element 'Summary** dialog box, **Set association** to **Yes** and select the **RESTconsume_input_Summary** for the **Association** to have the import mapping set the association:
 
-    {{< figure src="/attachments/howto8/integration/consume-a-rest-service/map-entity-from-input-mapping.png" >}}
+    {{< figure src="/attachments/howto8/integration/consume-a-rest-service/map-entity-from-input-mapping.png" class="no-border" >}}
 
 12. Click **OK**. 
 
@@ -100,13 +99,13 @@ To call the REST service in a microflow, follow these steps:
 4. Right-click the mouse and select **Insert** > **Activity** to insert an activity to the microflow. Double-click the activity and select the **Call REST service** to change the activity.
 5. In the **Call REST** dialog box, click **Edit** for the **Location** and add the following to **Template**: `https://en.wikipedia.org/api/rest_v1/page/summary/{1}`, with the parameter being the Title attribute from the **Input** parameter `$Input/Title`. Click **OK**.
 
-    {{< figure src="/attachments/howto8/integration/consume-a-rest-service/location.png" >}}
+    {{< figure src="/attachments/howto8/integration/consume-a-rest-service/location.png" class="no-border" >}}
 
 6. In the **Response** tab, the response has to be mapped using the import mapping. For **Response handling** select **Apply import mapping**.
 7. For **Mapping**, click **Select** and double-click **Import_mapping**. For the **Parameter**, select **Input**. 
 8. For **Output** select **Yes** for **Store in variable** and specify *Summary* for the **Variable name**.
 
-    {{< figure src="/attachments/howto8/integration/consume-a-rest-service/response.png" >}}
+    {{< figure src="/attachments/howto8/integration/consume-a-rest-service/response.png" class="no-border" >}}
 
 9. Click **OK**.
 10. Right-click after the **Call REST service** object and select **Insert** > **Activity** and double-click it and change it to a **Change object**.
@@ -116,15 +115,15 @@ To call the REST service in a microflow, follow these steps:
 14. On the **Edit Change Item** dialog box, for **Member**, select **RESTconsume.Input_Summary (RESTconsume.Summary)**.
 15. Under **Value**, enter `$Summary`.
 
-    {{< figure src="/attachments/howto8/integration/consume-a-rest-service/set-association.png" >}}
+    {{< figure src="/attachments/howto8/integration/consume-a-rest-service/set-association.png" class="no-border" >}}
 
 16. Click **OK**.
 
-    {{< figure src="/attachments/howto8/integration/consume-a-rest-service/change-object.png" >}}
+    {{< figure src="/attachments/howto8/integration/consume-a-rest-service/change-object.png" class="no-border" >}}
 
 17. Click **OK**. You have created microflow that takes the title of an article as input and associates it with its summary.
 
-    {{< figure src="/attachments/howto8/integration/consume-a-rest-service/microflow.png" >}}
+    {{< figure src="/attachments/howto8/integration/consume-a-rest-service/microflow.png" class="no-border" >}}
 
 You have successfully consumed a REST service and created a microflow to show the results. The rest of this how-to describes how to use this microflow in an app so that yoyu can see the REST call in action.
 
@@ -132,7 +131,7 @@ You have successfully consumed a REST service and created a microflow to show th
 
 To create a page for this app, follow these steps:
 
-1. Open the **Homepage** and add a **Data view**.
+1. Open the **** and add a **Data view**.
 2. Right-click the **[Unknown]** bar and click, **Select entity**. Select the **Input** entity.
 3. For the **Data source – Type**, select **Microflow**.
 4. For the **Name**, enter *CreateInput*. Note that when this page loads, it needs a new **Input** object – you will define the **CreateInput** microflow that creates this object in [Filling In the Create Input Microflow](#createinput).
@@ -150,7 +149,7 @@ To create a page for this app, follow these steps:
 16. Click **OK**.
 17. Delete the **Save** and **Cancel** buttons.
 
-    {{< figure src="/attachments/howto8/integration/consume-a-rest-service/page.png" >}}
+    {{< figure src="/attachments/howto8/integration/consume-a-rest-service/page.png" class="no-border" >}}
 
 ## 7 Filling In the Create Input Microflow{#createinput}
 
@@ -175,9 +174,9 @@ Congratulations! You can now start your app and get summaries from Wikipedia.
 For Studio Pro v 8.15 and above, the **Call REST** dialog box has changed from what is shown in the video. You have to ensure that for **Output** you select **Yes** for **Store in variable** and then specify the **Variable name**.
 {{% /alert %}}
 
-{{< figure src="/attachments/howto8/integration/consume-a-rest-service/response.png" >}}
+{{< figure src="/attachments/howto8/integration/consume-a-rest-service/response.png" class="no-border" >}}
 
-{{% youtube OhzWTa1kZ00 %}}
+{{< youtube OhzWTa1kZ00 >}}
 
 ## 9 Read More
 

@@ -1,14 +1,9 @@
 ---
 title: "Metrics"
 url: /refguide/metrics/
-category: "Mendix Runtime"
-description: "Describes how to configure and report metrics in Mendix."
-tags: ["studio pro", "metrics", "micrometer"]
----
 
-{{% alert color="warning" %}}
-Custom metrics were introduced in Studio Pro [9.6.0](/releasenotes/studio-pro/9.6/#960).
-{{% /alert %}}
+description: "Describes how to configure and report metrics in Mendix."
+---
 
 ## 1 Introduction
 
@@ -70,7 +65,7 @@ The following settings can be used, depending on the type of metrics being gener
 | `flavor` | *StatsdFlavor* | No | statsd | The variant of the StatsD protocol | DATADOG | ETSY, TELEGRAF, SYSDIG |
 | `host` | *String* | No | statsd | The host name of the StatsD agent | localhost | - |
 | `port` | *Int* | No | statsd | The port of the StatsD agent | 8125 | - |
-| `step` | *Duration* | No | all | The step size (reporting frequency) to use | 1m | `1ms`, `2s`, `3m`, `4h`, `5d` or [ISO8601](https://en.wikipedia.org/wiki/ISO_8601) -> `P3Y6M4DT12H30M5S` | |
+| `step` | *Duration* | No | all | The step size (reporting frequency) to use | 1m | `1ms`, `2s`, `3m`, `4h`, `5d` or [ISO8601](https://en.wikipedia.org/wiki/ISO_8601) -> `P3Y6M4DT12H30M5S` |
 | `filters` | *Json* | No | all | Custom setting from Mendix to filter metrics | - | [See below](#filters)    
 
 #### 2.1.1 Prometheus{#prometheus}
@@ -333,7 +328,7 @@ You can use activities to provide custom metrics from your app. See [Metrics Act
 
 ## 5 Java API {#java-api}
 
-Micrometer metrics can be accessed through [Java Runtime APIs](https://docs.mendix.com/apidocs-mxsdk/apidocs/runtime-api/) as well inside Mendix. This can be achieved by using the custom runtime setting `com.mendix.metrics.Type`. This setting defaults to `micrometer`.
+Micrometer metrics can be accessed through [Mendix Runtime Java APIs](/apidocs-mxsdk/apidocs/runtime-api/) as well inside Mendix. This can be achieved by using the custom runtime setting `com.mendix.metrics.Type`. This setting defaults to `micrometer`.
 
 * Custom Runtime Setting – **Name**: `com.mendix.metrics.Type`
 * **Value**: `micrometer`
@@ -367,15 +362,14 @@ The name must adhere to the following rules:
 * The name is case-insensitive.
 
 {{% alert color="info" %}}
-It is recommended to use a common prefix that uniquely defines your organisation and application.
+It is recommended to use a common prefix that uniquely defines your organization and application.
 {{% /alert %}}
 
-### 5.2 Deprecated usages
+### 5.2 ⚠ Deprecated Usages
 
 The following deprecated usages will be removed in the future releases,
 
-1. Setting `com.mendix.metrics.Type` to `logger` and `statsd` is deprecated. You will get a warning message to advise you to start using the `micrometer` metric type.
-2. The [`Core.metrics()` Java Runtime API methods](https://apidocs.rnd.mendix.com/9/runtime/com/mendix/metrics/Metrics.html) `counter()`, `timer()`, `gauges()`, and `sets()` are deprecated.
+1. The [`Core.metrics()` Mendix Runtime Java API methods](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/metrics/Metrics.html) `counter()`, `timer()`, `gauges()`, and `sets()`, and the corresponding `Counters`, `Timers`, `Gauges` and `Sets` interfaces are deprecated.
 
 ## 6 Logging {#logging}
 
@@ -394,7 +388,6 @@ The Runtime Server produces the following metrics out-of-the-box:
 | Name | Type | Tags | Description |
 | --- | --- | --- | --- |
 | **mx.<wbr>runtime.<wbr>stats.<wbr>handler_requests** | counter | `XASId`, `name` | The total number of requests on a request handler (`name`) that were received by a node (`XASId`) since it was started. |
-| **mx.<wbr>runtime.<wbr>stats.<wbr>requests{path}** | counter | | The total number of requests on a request handler (`path`) that were received by a node;<br/>*deprecated, use `mx.runtime.stats.handler_requests` instead*. |
 | **mx.<wbr>runtime.<wbr>stats.<wbr>sessions.<wbr>named_users** | gauge | | The current number of active, named users in the database. |
 | **mx.<wbr>runtime.<wbr>stats.<wbr>sessions.<wbr>named_user_sessions** | gauge | | The current number of sessions in the database for named users. |
 | **mx.<wbr>runtime.<wbr>stats.<wbr>sessions.<wbr>anonymous_sessions** | gauge | | The current number of sessions in the database for anonymous users. |
@@ -403,14 +396,14 @@ The Runtime Server produces the following metrics out-of-the-box:
 | **mx.<wbr>runtime.<wbr>stats.<wbr>connectionbus.<wbr>inserts** | counter | `XASId` | The total number of `INSERT` statements that were executed on the database by a node (`XASId`) since it was started. |
 | **mx.<wbr>runtime.<wbr>stats.<wbr>connectionbus.<wbr>updates** | counter | `XASId` | The total number of `UPDATE` statements that were executed on the database by a node (`XASId`) since it was started. |
 | **mx.<wbr>runtime.<wbr>stats.<wbr>connectionbus.<wbr>deletes** | counter | `XASId` | The total number of `DELETE` statements that were executed on the database by a node (`XASId`) since it was started. |
-| **mx.<wbr>odata.<wbr>consume.<wbr>created** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were created using the [Send External Object activity](/refguide/send-external-object/). (introduced in Studio Pro 9.13) |
-| **mx.<wbr>odata.<wbr>consume.<wbr>updated** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were updated using the [Send External Object activity](/refguide/send-external-object/). (introduced in Studio Pro 9.13) |
-| **mx.<wbr>odata.<wbr>consume.<wbr>deleted** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were created using the [Delete External Object activity](/refguide/delete-external-object/). (introduced in Studio Pro 9.13) |
-| **mx.<wbr>odata.<wbr>publish.<wbr>objects** | counter | `entity` | The total number of objects that were served for a particular type of object (`entity`) by a [published OData service](/refguide/published-odata-services/). (introduced in Studio Pro 9.12) |
-| **mx.<wbr>odata.<wbr>publish.<wbr>created** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were created due to client requests to a [published OData service](/refguide/published-odata-services/). (introduced in Studio Pro 9.14) |
-| **mx.<wbr>odata.<wbr>publish.<wbr>updated** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were updated due to client requests to a [published OData service](/refguide/published-odata-services/). (introduced in Studio Pro 9.14) |
-| **mx.<wbr>odata.<wbr>publish.<wbr>deleted** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were deleted due to client requests to a [published OData service](/refguide/published-odata-services/). (introduced in Studio Pro 9.14) |
-| **mx.<wbr>odata.<wbr>retrieve** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were retrieved from an [OData service](/refguide/consumed-odata-service/). (introduced in Studio Pro 9.12) |
+| **mx.<wbr>odata.<wbr>consume.<wbr>created** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were created using the [Send External Object activity](/refguide/send-external-object/). |
+| **mx.<wbr>odata.<wbr>consume.<wbr>updated** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were updated using the [Send External Object activity](/refguide/send-external-object/). |
+| **mx.<wbr>odata.<wbr>consume.<wbr>deleted** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were created using the [Delete External Object activity](/refguide/delete-external-object/). |
+| **mx.<wbr>odata.<wbr>publish.<wbr>objects** | counter | `entity` | The total number of objects that were served for a particular type of object (`entity`) by a [published OData service](/refguide/published-odata-services/). |
+| **mx.<wbr>odata.<wbr>publish.<wbr>created** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were created due to client requests to a [published OData service](/refguide/published-odata-services/). |
+| **mx.<wbr>odata.<wbr>publish.<wbr>updated** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were updated due to client requests to a [published OData service](/refguide/published-odata-services/). |
+| **mx.<wbr>odata.<wbr>publish.<wbr>deleted** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were deleted due to client requests to a [published OData service](/refguide/published-odata-services/). |
+| **mx.<wbr>odata.<wbr>retrieve** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were retrieved from an [OData service](/refguide/consumed-odata-service/). |
 
 {{% alert color="info" %}}
 Note that the actual name may vary slightly depending on the back end (for example, Prometheus replaces dots by underscores).
@@ -458,7 +451,7 @@ The additional Micrometer metrics are not under our control and might change una
 | `jvm.gc.concurrent.phase.time` | timer | `action`, `cause` | The time spent in the concurrent GC phase. |
 | `jvm.gc.overhead` | gauge | | An approximation of the percent of CPU time used by GC activities over the last lookback period or since monitoring began, whichever is shorter (in the range [0…1]). |
 
-Refer to the [Java Virtual Machine documentation](https://docs.oracle.com/en/java/javase/11/docs/api/java.management/java/lang/management/ManagementFactory.html) for more details.
+Refer to the [Java Virtual Machine documentation](https://docs.oracle.com/en/java/javase/21/docs/api/java.management/java/lang/management/ManagementFactory.html) for more details.
 
 #### 7.2.3 Jetty HTTP Server Metrics
 

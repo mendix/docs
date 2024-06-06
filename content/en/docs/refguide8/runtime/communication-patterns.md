@@ -2,8 +2,7 @@
 title: "Communication Patterns in the Mendix Runtime"
 linktitle: "Communication Patterns"
 url: /refguide8/communication-patterns/
-category: "Mendix Runtime"
-tags: ["studio pro", "Mendix Runtime", "Communications", "Runtime Server", "Mendix Client"]
+
 ---
 
 ## 1 Introduction
@@ -22,7 +21,7 @@ The Mendix Platform consists of the following components:
 * Mendix Platform – a completely integrated application platform-as-a-service (aPaaS) for designing, building, deploying, and managing apps
 * Developer Portal – a web-based collaborative environment for designing, developing, and deploying apps, managing users and environments, deploying apps to the cloud with a single click, and managing and monitoring their performance
 * Marketplace – a portal with hundreds of publicly-available building blocks to speed up app development
-* Mendix Studio and Studio Pro – multi-user modeling studios of the Mendix Platform
+* Mendix Studio Pro – multi-user modeling studio of the Mendix Platform
 * Team Server – a central repository for managing application model versions
 * Mendix Runtime – runs applications using a server part (the [Runtime Server](/refguide8/runtime-server/)) and a client part ([Mendix Client](/refguide8/mendix-client/))
 * Build – a process which creates deployment packages from artifacts such as models, style sheets, and custom Java classes
@@ -40,7 +39,7 @@ Communication between these components operates as follows:
     * Static resources like pages, stylesheets, widgets, images, etc.
     * Application data-related communication, which includes CRUD commands on data and logic that may require data
 * The Runtime Server communicates with different RDBMSs using SQL statements handled by a JDBC library
-    * Application data is stored in a ER-model in an RDBMS
+    * Application data is stored in an ER-model in an RDBMS
 
 ## 3 Basic CRUD Communication Pattern
 
@@ -49,9 +48,9 @@ The core of most Mendix applications involves variations on the CRUD (create, re
 A basic scenario using an *Employee* entity can be modeled in Mendix using the following two pages:
 
 * An overview page displaying a table of data for a specific entity, like this:
-    {{< figure src="/attachments/refguide8/runtime/communication-patterns/19399028.png" >}}
+    {{< figure src="/attachments/refguide8/runtime/communication-patterns/19399028.png" class="no-border" >}}
 * A details page where a specific object of an entity can be edited, like this:
-    {{< figure src="/attachments/refguide8/runtime/communication-patterns/19399029.png" >}}
+    {{< figure src="/attachments/refguide8/runtime/communication-patterns/19399029.png" class="no-border" >}}
     * This details page can be reached from the first page using the New and Edit buttons
 
 The following sections outline the actions involved when processing these pages. As stated earlier, this pattern can be seen in many Mendix applications, but the exact runtime result depends on many details and design decisions taken while building the application. More advanced data models and pages will result in more (and more complex) queries.
@@ -66,7 +65,7 @@ Displaying a table of objects consists of the following steps:
 
 A basic sequence diagram looks like this:
 
-{{< figure src="/attachments/refguide8/runtime/communication-patterns/19399030.png" >}}
+{{< figure src="/attachments/refguide8/runtime/communication-patterns/19399030.png" class="no-border" >}}
 
 The Mendix Client uses a REST-like protocol to request data from the Runtime Server. The following example shows what this looks like when requesting objects from the Employee entity:
 
@@ -159,7 +158,7 @@ The typical create-new-object flow consists of these steps:
 3. Save the updated object in the Runtime Server.
 4. Commit the updated object to the database.
 
-{{< figure src="/attachments/refguide8/runtime/communication-patterns/19399031.png" >}}
+{{< figure src="/attachments/refguide8/runtime/communication-patterns/19399031.png" class="no-border" >}}
 
 Create a new object:
 
@@ -242,7 +241,7 @@ The typical edit-existing-object flow consists of these steps:
 6. Validate the object changes.
 7. Commit the changes in the database.
 
-{{< figure src="/attachments/refguide8/runtime/communication-patterns/19399032.png" >}}
+{{< figure src="/attachments/refguide8/runtime/communication-patterns/19399032.png" class="no-border" >}}
 
 Save the changes to the database:
 
@@ -316,7 +315,7 @@ The typical delete flow consists of these steps:
 
 The following sequence diagram outlines the typical delete scenario:
 
-{{< figure src="/attachments/refguide8/runtime/communication-patterns/19399033.png" >}}
+{{< figure src="/attachments/refguide8/runtime/communication-patterns/19399033.png" class="no-border" >}}
 
 Delete the object:
 
@@ -387,13 +386,13 @@ A data grid on a page is often directly linked to an entity in the domain model.
 
 A microflow retrieving all objects from an entity can be modeled as follows:
 
-{{< figure src="/attachments/refguide8/runtime/communication-patterns/19399034.png" >}} 
+{{< figure src="/attachments/refguide8/runtime/communication-patterns/19399034.png" class="no-border" >}} 
 
 In this situation, all objects are transported to the browser in one request. A user can page through all the objects without triggering communication to the Runtime Server.
 
 A high-level sequence diagram for this scenario looks like this:
 
-{{< figure src="/attachments/refguide8/runtime/communication-patterns/19399035.png" >}}
+{{< figure src="/attachments/refguide8/runtime/communication-patterns/19399035.png" class="no-border" >}}
 
 JSON action executed from Mendix Client to Runtime Server:
 
@@ -485,7 +484,7 @@ Data is transported between Mendix Client and database as required. The followin
 
 To facilitate (horizontal) scalability, the Mendix Runtime retains no state between requests. The overall strategy is to only have dirty objects in memory during a request. Objects are considered dirty if they have been changed, but the changes have not yet been persisted to the RDBMS.
 
-{{< figure src="/attachments/refguide8/runtime/communication-patterns/19399036.png" >}}
+{{< figure src="/attachments/refguide8/runtime/communication-patterns/19399036.png" class="no-border" >}}
 
 ### 5.3 Persistency
 

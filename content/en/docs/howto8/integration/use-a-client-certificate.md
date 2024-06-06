@@ -1,8 +1,7 @@
 ---
 title: "Use a Client Certificate"
 url: /howto8/integration/use-a-client-certificate/
-category: "Integration"
-tags: ["integration", "web service", "client certficate"]
+
 ---
 
 ## 1 Introduction
@@ -11,7 +10,7 @@ Some services require you to authenticate using a client certificate. This how-t
 
 Let's assume that you already have an app that calls a service. For details on how to configure this, have a look at [How to Consume a REST Service](/howto8/integration/consume-a-rest-service/) or [How to Consume a Simple Web Service](/howto8/integration/consume-a-simple-web-service/).
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Configure to run locally
 * Configure in the Mendix Cloud
@@ -43,7 +42,7 @@ This is an example:
 
 A complete configuration may look like this:
 
-{{< figure src="/attachments/howto8/integration/use-a-client-certificate/example-custom-settings.png" >}}
+{{< figure src="/attachments/howto8/integration/use-a-client-certificate/example-custom-settings.png" class="no-border" >}}
 
 You can use an empty path for `ClientCertificateUsages` to specify that you do not want to use a client certificate, even when the server accepts one. To do this, you need to add the **Value** `{"<endpoint>":""}` (replace `<endpoint>` with the actual endpoint).
 

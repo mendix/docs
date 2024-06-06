@@ -3,7 +3,6 @@ title: "Test the Push Notifications Implementation"
 linktitle: "Test Push Notifications"
 url: /howto8/mobile/testing-the-implementation/
 weight: 60
-tags: ["mobile", "push notification"]
 ---
 
 ## 1 Introduction
@@ -16,9 +15,9 @@ To begin testing your push notifications, you will need to build new versions of
 
 1. Navigate to the [Developer Portal](https://sprintr.home.mendix.com/index.html), then click your app.
 2. Click **Deploy** > **Mobile App**.
-3. Make sure the check box **Permissions** > **Push Notifications** is selected.
+3. Make sure the checkbox **Permissions** > **Push Notifications** is selected.
 4. Click **Publish for Mobile App Stores**.
-5. Select the **Do it yourself** check box, make sure your preferred environment is selected, and then click **Download Customizable Package**. 
+5. Select the **Do it yourself** checkbox, make sure your preferred environment is selected, and then click **Download Customizable Package**. 
 
 This will give you a *zip* app that you can use to customize your app according to the [hybrid app package documentation](https://github.com/mendix/hybrid-app-template/). The *zip* app contains a *config.xml* file that refers to *google-services.json* and *GoogleService-info.plist* files. 
 
@@ -43,7 +42,7 @@ Follow these steps to test and send a push notification to a device:
 3. Open your hybrid mobile app and sign in. If you are testing offline-mode, click the sync button to send the pending device registration request to the server.
 4. Open the **Push Notifications Administration** page. Back in the administrator view of your web application, navigate to the **Devices** tab in the Push Notifications administration page. Here you should see one device in the list of registered devices, which is the device that you used to sign in to your hybrid mobile application. Continue by selecting the device and click **New Message**.
 
-    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/push-notifications/testing-the-implementation/21168174.png" >}}
+    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/push-notifications/testing-the-implementation/21168174.png" class="no-border" >}}
 
 5. Fill in the title and the message in the form and press **Send**. Your device should receive a new push notification. If your hybrid mobile app is currently running in the foreground, the notification will be displayed in the app. Otherwise, it will be shown as a standard push notification.
 

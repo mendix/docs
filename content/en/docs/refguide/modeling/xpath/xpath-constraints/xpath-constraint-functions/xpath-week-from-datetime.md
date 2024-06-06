@@ -1,7 +1,7 @@
 ---
 title: "XPath week-from-dateTime"
 url: /refguide/xpath-week-from-datetime/
-tags: ["studio pro"]
+weight: 14
 ---
 
 ## 1 Overview
@@ -28,31 +28,39 @@ week-from-dateTime ( attribute [, timezone ] )
 
 ### 2.2 timezone
 
-{{% alert color="info" %}}
-The optional `timezone` parameter is available in [Studio Pro 9.22.0](/releasenotes/studio-pro/9.22/) and above. 
-{{% /alert %}}
-
 `timezone` specifies the time zone to use for the extraction. This parameter is optional and defaults to the local time zone. It should be a string literal containing an IANA time zone or `'UTC'`. GMT offset time zones are not supported.
 
 ## 3 Examples
 
 This query returns all the logs where the date `DateAttribute` falls in the second week of the year in the local time zone (for example, "2011-01-13"):
 
-```java {linenos=false}
-//Logging.Log[week-from-dateTime(DateAttribute) = 2]
-```
+{{< tabpane >}}
+  {{% tab header="Environments:" disabled=true /%}}
+  {{< tab header="Studio Pro" lang="StudioPro" >}}
+    [week-from-dateTime(DateAttribute) = 2]
+    {{% /tab %}}
+  {{< tab header="Java" lang="JavaQuery" >}}
+     //Logging.Log[week-from-dateTime(DateAttribute) = 2]
+    {{% /tab %}}
+{{< /tabpane >}}
 
 This query returns all the logs where the date `DateAttribute` falls in the second week of the year in the New York time zone (for example, "2011-01-13"):
 
-```java {linenos=false}
-//Logging.Log[week-from-dateTime(DateAttribute, 'America/New_York') = 2]
-```
+{{< tabpane >}}
+  {{% tab header="Environments:" disabled=true /%}}
+  {{< tab header="Studio Pro" lang="StudioPro" >}}
+    [week-from-dateTime(DateAttribute, 'America/New_York') = 2]
+    {{% /tab %}}
+  {{< tab header="Java" lang="JavaQuery" >}}
+     //Logging.Log[week-from-dateTime(DateAttribute, 'America/New_York') = 2]
+    {{% /tab %}}
+{{< /tabpane >}}
 
 ## 4 Read More
 
 The following links are for the relevant documentation on how week number is calculated for a specific date for many of the databases used with Mendix.
 
-The HSQLDB database used for testing locally uses JVM's [Calendar.WEEK_OF_YEAR](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Calendar.html).
+The HSQLDB database used for testing locally uses JVM's [Calendar.WEEK_OF_YEAR](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Calendar.html).
 
 PostgreSQL, Oracle, and MySQL follow [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601):
 
@@ -63,4 +71,3 @@ PostgreSQL, Oracle, and MySQL follow [ISO 8601](https://en.wikipedia.org/wiki/IS
 Other databases have a more specific behavior:
 
 * [SQL Server](https://docs.microsoft.com/en-us/sql/t-sql/functions/datepart-transact-sql?view=sql-server-ver15)
-* [DB2](https://www.ibm.com/support/knowledgecenter/en/SSEPEK_10.0.0/sqlref/src/tpc/db2z_bif_week.html)

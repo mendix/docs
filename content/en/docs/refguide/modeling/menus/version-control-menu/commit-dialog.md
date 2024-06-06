@@ -2,14 +2,13 @@
 title: "Commit"
 url: /refguide/commit-dialog/
 weight: 20
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction
 
 The commit dialog is used for committing changes to the Team Server. You can enter a message and, if applicable, select related stories.
 
-{{< figure src="/attachments/refguide/modeling/menus/version-control-menu/commit-dialog/commit-dialog-stories.png" alt="Version Control Menu" >}}
+{{< figure src="/attachments/refguide/modeling/menus/version-control-menu/commit-dialog/commit-dialog-stories.png" alt="Version Control Menu" class="no-border" width="400" >}}
 
 ## 2 Branch
 
@@ -17,8 +16,8 @@ At the top of the dialog box you will see the branch which you are committing. T
 
 | Branch Description | Notes |
 | --- | --- |
-| {{< figure src="/attachments/refguide/modeling/menus/version-control-menu/commit-dialog/commit-main.png" alt="Version Control Menu" >}} |  you are committing the main line |
-| {{< figure src="/attachments/refguide/modeling/menus/version-control-menu/commit-dialog/commit-branch.png" alt="Version Control Menu" >}} |  you are committing the specified branch |
+| {{< figure src="/attachments/refguide/modeling/menus/version-control-menu/commit-dialog/commit-main.png" alt="Version Control Menu" class="no-border" >}} |  you are committing the main line |
+| {{< figure src="/attachments/refguide/modeling/menus/version-control-menu/commit-dialog/commit-branch.png" alt="Version Control Menu" class="no-border" >}} |  you are committing the specified branch |
 
 ## 3 Message
 
@@ -28,20 +27,20 @@ Enter a message describing the changes you have made. This message may contain m
 
 ### 4.1 Related Stories {#stories}
 
-{{< figure src="/attachments/refguide/modeling/menus/version-control-menu/commit-dialog/commit-dialog-stories.png" alt="Version Control Menu" >}}
+{{< figure src="/attachments/refguide/modeling/menus/version-control-menu/commit-dialog/commit-dialog-stories.png" alt="Version Control Menu" class="no-border" width="400" >}}
 
-Tick the boxes next to the stories that are related to your commit. We recommend committing a small number of changes at a time, so there is usually just one related story.
+Tick the boxes next to the stories that are related to your commit. Mendix recommends committing a small number of changes at a time, so there is usually just one related story.
 
 ### 4.2 Changes in Model
 
-{{< figure src="/attachments/refguide/modeling/menus/version-control-menu/commit-dialog/commit-dialog-model-changes.png" alt="Version Control Menu" >}}
+{{< figure src="/attachments/refguide/modeling/menus/version-control-menu/commit-dialog/commit-dialog-model-changes.png" alt="Version Control Menu" class="no-border" width="400" >}}
 
-If there are changes in the model this tab shows a summary of those changes. See [Changes Pane](/refguide/changes-pane/) for a description of how changes are reported in Studio Pro.
+If there are changes in the model this tab shows a summary of those changes. For more information on how changes are reported in Studio Pro, see [Changes Pane](/refguide/changes-pane/).
 
 ### 4.3 Changes on Disk
 
-{{< figure src="/attachments/refguide/modeling/menus/version-control-menu/commit-dialog/commit-dialog-disk-changes.png" alt="Version Control Menu" >}}
+{{< figure src="/attachments/refguide/modeling/menus/version-control-menu/commit-dialog/commit-dialog-disk-changes.png" alt="Version Control Menu" class="no-border" width="400" >}}
 
 If there are changes on disk this page shows a summary of those changes. Click **Open containing folder** to open the folder containing the selected file in Windows Explorer.
 
-The tab page will be hidden if there are no disk changes. Often, there are model changes but the only change on disk is the app file (*.mpr*) reflecting these model changes. In this case, it will also be hidden, because it does not add useful information.
+The tab page is hidden if there are no disk changes. Often, there are model changes but the only change on disk is the app file (*.mpr*) reflecting these model changes. In this case, it is also hidden, because it does not add useful information.

@@ -2,9 +2,13 @@
 title: "Mendix for Private Cloud Deploy API"
 url: /apidocs-mxsdk/apidocs/private-cloud-deploy-api/
 type: swagger
-category: "API Documentation"
-weight: 38
+description: "This API allows you to manage application environments deployed to your private cloud using the Mendix Operator."
+weight: 72
 ---
+
+{{% alert color="info" %}}
+This document is about [Private Cloud](/developerportal/deploy/private-cloud/) API. For [Private Mendix Platform](/private-mendix-platform/) API, see [Private Mendix Platform API Documentation](/apidocs-mxsdk/apidocs/private-platform/).
+{{% /alert %}}
 
 ## 1 Introduction
 
@@ -20,6 +24,10 @@ The Mendix for Private Cloud Deploy API allows you to manage application environ
 The Mendix for Private Cloud Deploy API is for connected private cloud clusters only.
 {{% /alert %}}
 
+{{% alert color="info" %}}
+The Global Operator installation is not yet available in Deploy API.
+{{% /alert %}}
+
 ## 2 Using the API
 
 To help you work with the Mendix for Private Cloud Build API, the following sections of this document describe how to authenticate for the API, how to manage asynchronous API calls, and what to keep in mind when assigning unique IDs for the resources.
@@ -30,7 +38,7 @@ Authentication for the API uses a personal access token (PAT).
 
 #### 2.1.1 Generating a PAT
 
-To generate a PAT, see the [Personal Access Tokens](/developerportal/community-tools/mendix-profile/#pat) section of *Mendix Profile*.
+To generate a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section of *Mendix Profile*.
 
 Select the following as scopes:
 
@@ -42,6 +50,7 @@ For operations related to deployment packages (such as Create, Upload, Delete, a
 Store the `{GENERATED_PAT}` value in a safe location, so you can use it to authorize your Mendix for Private Cloud API calls.
 
 #### 2.1.2 Scopes explanation
+
 | Operation                   | Scopes                                       |
 |-----------------------------|----------------------------------------------|
 | Get namespace manifest      | `mx:deployment:read` or `mx:deployment:write`|
@@ -64,7 +73,7 @@ Store the `{GENERATED_PAT}` value in a safe location, so you can use it to autho
 
 Each request must contain an `Authorization` header with the value `MxToken {GENERATED_PAT}`.
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/private-cloud-deploy-api/authorization-header.png" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/private-cloud-deploy-api/authorization-header.png" class="no-border" >}}
 
 To authenticate calls when using the Open API specification below, click **Authorize** and use the value `MxToken {GENERATED_PAT}`.
 
@@ -103,19 +112,23 @@ The following steps will create a cluster, register and install a namespace, add
 12. Make an API call `POST /clusters/{clusterId}` to add/update the cluster member. You can get the manifest for this update request from `GET /clusters/{clusterId}`.
 13. Make an API call `POST /clusters/{namespaceId}` to update the namespace development mode and set `enableDevelopmentMode` to true . You can get the manifest for this update request from `GET /clusters/{namespaceId}`.
 
+{{% alert color="info" %}}
+If required, the invitation for the cluster/namespace member can be auto-accepted by setting `autoAcceptInvite` to true in the update cluster/namespace API request.
+{{% /alert %}}
+
 ### 3.2 Using the API to Restart an App {#restart}
 
 The following steps will restart an app by setting the number of instances to zero and then setting it back to the number of instances required.
 
 1. Set up your authentication PAT.
-2. Call `GET /apps/{appId}/environments/{environmentId}` to get the environment manifest for your app environment.
+2. Call `GET /apps/{appId}/namespaces/{namespaceId}/environments/{environmentId}` to get the environment manifest for your app environment.
 3. Change the `container.instances` to `0` in the manifest.
-4. Call `PUT /apps/{appId}/environments/{environmentId}` using the updated manifest.
+4. Call `PUT /apps/{appId}/namespaces/{namespaceId}/environments/{environmentId}` using the updated manifest.
 5. Verify that the job is successful using the process described in [Managing Asynchronous Jobs](#async-jobs).
 
     At this point, your app is stopped and you will not be able to access it using the `appURL`.
 6. Change the `container.instances` in the manifest to the number of instances you want to run.
-7. Call `PUT /apps/{appId}/environments/{environmentId}` using the updated manifest.
+7. Call `PUT /apps/{appId}/environments/namespaces/{namespaceId}/{environmentId}` using the updated manifest.
 8. Verify that the job is successful, as before.
 
     Your app is available once more.
@@ -138,11 +151,19 @@ The following steps will create a cluster, create a namespace, and create an env
 11. Create a `DeploymentPackage` in the Private Cloud Portal.
     You can create a deployment package by using the [Mendix for Private Cloud Build API](/apidocs-mxsdk/apidocs/private-cloud-build-api/). Once you create a deployment package, you can retrieve the `packageId` using the `GET /apps/{appId}/packages` response.
 12. Prepare a manifest for your new environment. 
-    Either use the model in the OpenAPI spec file or get the manifest of an existing environment (by calling `GET /apps/{appId}/environments/{environmentId}`, for example) and change where required. Remember to use the `{clusterID}` and `{namespace}` values for the `provider` using the cluster and namespace you have just created, and use the ID of the deployment package you have just created as the `packageId`.
+    Either use the model in the OpenAPI spec file or get the manifest of an existing environment (by calling `GET /apps/{appId}/namespaces/{namespaceId}/environments/{environmentId}`, for example) and change where required. Remember to use the `{clusterID}` and `{namespace}` values for the `provider` using the cluster and namespace you have just created, and use the ID of the deployment package you have just created as the `packageId`.
 13. Make the API call `POST /apps/{appId}/environments` using the environment manifest to create a new environment. 
 14. Verify that the job is successful using the process described in [Managing Asynchronous Jobs](#async-jobs).
-15. Now you can access the application at the `appURL` which is returned from `GET /apps/{appId}/environments/{environmentId}` of the environment.
+15. Now you can access the application at the `appURL` which is returned from `GET /apps/{appId}/namespaces/{namespaceId}/environments/{environmentId}` of the environment.
+
+{{% alert color="info" %}}
+Please note that there is a limited support for Custom permissions in Deploy APIs.
+{{% /alert %}}
 
 ## 4 API Reference
+
+{{% alert color="info" %}}
+Please note that the fields marked as non-editable in the OpenAPI .yaml file are used for read-only purposes. Any modifications made to the values of these fields will be ignored.
+{{% /alert %}}
 
 {{< swaggerui src="/openapi-spec/private-cloud-deploy-api.yaml"  >}}

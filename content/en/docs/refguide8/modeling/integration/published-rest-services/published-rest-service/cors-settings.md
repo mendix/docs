@@ -3,14 +3,9 @@ title: "CORS Settings for Published REST Services"
 url: /refguide8/cors-settings/
 weight: 60
 description: "Additional options for controlling access to a published REST service"
-tags: ["CORS", "security", "origin", "domain", "access", "studio pro"]
 # If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 # linked from DM: published rest > Enable CORS > Settings > Help (integration)
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/cors-settings.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 

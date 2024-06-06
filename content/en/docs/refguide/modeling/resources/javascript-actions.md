@@ -3,7 +3,6 @@ title: "JavaScript Actions"
 url: /refguide/javascript-actions/
 weight: 20
 description: "This reference guide details the ways JavaScript Actions can extend the functionality of your Mendix app."
-tags: ["javascript", "javascript action", "parameter", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -29,7 +28,7 @@ To learn how to create, configure, and use a JavaScript action, see these [Build
 
 After double-clicking a JavaScript action in your **App Explorer** you will see the JavaScript action's settings: 
 
-{{< figure src="/attachments/refguide/modeling/resources/javascript-actions/javascript-action-settings-no-para.png" alt="javascript settings"   width="400"  >}}
+{{< figure src="/attachments/refguide/modeling/resources/javascript-actions/javascript-action-settings-no-para.png" alt="javascript settings"   width="400"  class="no-border" >}}
 
 The settings for JavaScript actions and their implications are detailed below.
 
@@ -41,15 +40,15 @@ This setting handles a JavaScript action's name, which a nanoflow refers to when
 
 Parameters pass data to JavaScript actions. For example, if you had a JavaScript action which multiplied numbers, parameters would define the numbers to be multiplied. A JavaScript action can have zero or more parameters. Each parameter should have a unique name. You may add a parameter by clicking **Parameters** > **Add**, and then customize that parameter to pass data into a JavaScript action:
 
-{{< figure src="/attachments/refguide/modeling/resources/javascript-actions/parameter-naming.png" alt="parameter" >}}
+{{< figure src="/attachments/refguide/modeling/resources/javascript-actions/parameter-naming.png" alt="parameter" class="no-border" >}}
 
 In a JavaScript action's **Code** tab, you can see its parameters' values and handle its implementation. Each parameter has a name (1), type (2), category, description (3), and return type (4):
 
-{{< figure src="/attachments/refguide/modeling/resources/javascript-actions/parameter-code.png" alt="parameter code" >}}
+{{< figure src="/attachments/refguide/modeling/resources/javascript-actions/parameter-code.png" alt="parameter code" class="no-border" >}}
 
 You will see a parameter's category (1), parameter name (2), and description (3) in the **Call JavaScript Action** dialog box after double-clicking its activity in your nanoflow:
 
-{{< figure src="/attachments/refguide/modeling/resources/javascript-actions/call-js-action-dialog.png" alt="call javascript action dialog"   width="400"  >}}
+{{< figure src="/attachments/refguide/modeling/resources/javascript-actions/call-js-action-dialog.png" alt="call javascript action dialog"   width="400"  class="no-border" >}}
 
 The parameter types supported by JavaScript actions are described below.
 
@@ -68,7 +67,7 @@ This setting handles the parameter's name. A name is required. Names must start 
 |   Boolean   |   The Boolean parameter type allows you to pass a Boolean value to a JavaScript action.  |
 |   Date and Time   |  The date and time parameter type allows you to pass a date and time value to a JavaScript action. In the generated JavaScript action code, this type will be represented as a JavaScript `Date`.  |
 |   Decimal   |  The decimal parameter type allows you to pass a decimal value to a JavaScript action. In the generated JavaScript action code, this type will be represented as a [Big](https://www.npmjs.com/package/big-js) object.  |
-|   Enumeration   |  The enumeration parameter type allows you to pass a enumeration value to a JavaScript action. In the generated JavaScript action code, this type will be represented as a string.  |
+|   Enumeration   |  The enumeration parameter type allows you to pass an enumeration value to a JavaScript action. In the generated JavaScript action code, this type will be represented as a string.  |
 |   Integer/Long   |  The integer/long parameter type allows you to pass a decimal value to a JavaScript action. In the generated JavaScript action code, this type will be represented as a [Big](https://www.npmjs.com/package/big-js) object.  |
 |   String   |  The string parameter type allows you to pass a string value to a JavaScript action. |
 
@@ -89,7 +88,7 @@ The return parameter type determines the type of data a JavaScript action return
 JavaScript actions can be for a specific platform, they have an optional platform property with the following values:
 
 * All *(default)*
-* Web – can be used in a browser or hybrid mobile app
+* Web – can be used in a browser or web app
 * Native – can be used in a native mobile app
 
 When using a JavaScript action for a specific platform in a nanoflow, it will restrict the platform for that nanoflow. For example, only native pages can be opened in a nanoflow that contains a JavaScript action where the platform is set to **Native**.
@@ -98,7 +97,7 @@ When using a JavaScript action for a specific platform in a nanoflow, it will re
 
 A type parameter is a placeholder for an entity type which will be filled with a specific entity when called in a nanoflow. Type parameters can be used when configuring the data type of a parameter, which allows users to pass an object or list of an arbitrary entity type. They can easily be added, edited, or deleted:
 
-{{< figure src="/attachments/refguide/modeling/resources/javascript-actions/type-parameter.png" alt="type parameter" >}}
+{{< figure src="/attachments/refguide/modeling/resources/javascript-actions/type-parameter.png" alt="type parameter" class="no-border" >}}
 
 A JavaScript action can have zero or more type parameters. Each type parameter should have a unique name.
 
@@ -106,11 +105,11 @@ A JavaScript action can have zero or more type parameters. Each type parameter s
 
 In the **Expose as nanoflow action** tab, it is possible to expose a JavaScript action as a nanoflow action. This sample action has been given *Sample Action* caption text, assigned *Workshop* as its category, and given no icon or image:
 
-{{< figure src="/attachments/refguide/modeling/resources/javascript-actions/expose-jsaction.png" alt="expose action" >}}
+{{< figure src="/attachments/refguide/modeling/resources/javascript-actions/expose-jsaction.png" alt="expose action" class="no-border" >}}
 
 When the **Expose as nanoflow action** option is selected, the JavaScript will appear in the **Toolbox** of a [nanoflow editor](/refguide/nanoflows/) in the category of your choice.  When this action is used in a nanoflow, it will show the caption and icon you provided. The category and caption are apparent here, and the default icon and image are being displayed as no custom icon and image were assigned: 
 
-{{< figure src="/attachments/refguide/modeling/resources/javascript-actions/workshop-exposed.png" alt="workshop exposed" >}}
+{{< figure src="/attachments/refguide/modeling/resources/javascript-actions/workshop-exposed.png" alt="workshop exposed" class="no-border" >}}
 
 ### 4.1 Caption
 
@@ -126,7 +125,7 @@ The **Icon** property is optional when exposing a JavaScript action. The image i
 
 When no icon is selected, the default JavaScript action icon is used. The required icon size is 64x64 pixels; the required icon format is PNG. 
 
-A separate icon can be provided for the [dark mode](/refguide/preferences-dialog/#dark-mode) of Studio Pro to fit its color scheme.
+A separate icon can be provided for the [dark mode](/refguide/preferences-dialog/#studio-pro-theme) of Studio Pro to fit its color scheme.
 
 ### 4.4 Image
 
@@ -136,17 +135,17 @@ When no image and no icon is selected, the default JavaScript action image is us
 
 The required image size is 256x192 pixels; the required the image format is PNG. 
 
-A separate image can be provided for the [dark mode](/refguide/preferences-dialog/#dark-mode) of Studio Pro to fit its color scheme.
+A separate image can be provided for the [dark mode](/refguide/preferences-dialog/#studio-pro-theme) of Studio Pro to fit its color scheme.
 
 ## 5 Documentation
 
 In the **Documentation** tab, press **Edit** to document a JavaScript action: 
 
-{{< figure src="/attachments/refguide/modeling/resources/javascript-actions/documentation-pro.png" alt="documentation"   width="450"  >}}
+{{< figure src="/attachments/refguide/modeling/resources/javascript-actions/documentation-pro.png" alt="documentation"   width="450"  class="no-border" >}}
 
 Documentation is visible in the **Code** tab. Your documentation also is copied into the JavaScript action as comment on the function in the corresponding *.js* file:
 
-{{< figure src="/attachments/refguide/modeling/resources/javascript-actions/documentation-js-file.png" alt="documentation js file"   width="450"  >}}
+{{< figure src="/attachments/refguide/modeling/resources/javascript-actions/documentation-js-file.png" alt="documentation js file"   width="450"  class="no-border" >}}
 
 ## 6 Code
 

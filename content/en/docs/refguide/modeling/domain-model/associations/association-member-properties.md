@@ -2,7 +2,6 @@
 title: "Association Tab Properties"
 url: /refguide/association-member-properties/
 weight: 15
-tags: ["domain model", "association", "studio pro"]
 ---
 
 ## 1 Introduction
@@ -15,7 +14,7 @@ For more information on associations, see [Associations](/refguide/associations/
 
 An example of the **Associations** tab of the entity properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/domain-model/associations/association-member-properties/edit-entity-association.png" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/associations/association-member-properties/edit-entity-association.png" class="no-border" >}}
 
 Associations in the Association tab have the following properties:
 
@@ -62,7 +61,7 @@ Ownership is important as it defines two aspects of an association:
 * where the association is recorded
 
 {{% alert color="info" %}}
-An external entity cannot be the owner for an association between a external and a local entity.
+An external entity cannot be the owner for an association between an external and a local entity.
 {{% /alert %}}
 
 #### 2.3.1 Cardinality
@@ -79,7 +78,7 @@ Where the association is recorded has an important impact on the user of referen
 
 For example, imagine you have a many-to-many association, **Customer_Group**, between **Customer** and **Group** owned by the Customer entity. You can put an input reference set selector to select Groups from within a Customer data view. However you *cannot* put an input reference set selector to select Customers from within a Group data view.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/associations/association-member-properties/input-reference-set-selector.png" alt="Selecting Group objects through an input reference set selector in a Customer data view" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/associations/association-member-properties/input-reference-set-selector.png" alt="Selecting Group objects through an input reference set selector in a Customer data view" class="no-border" >}}
 
 If both ends own the association, you can overcome this limitation. However, this has to be balanced by the overhead associated with having to commit all entities where the association is recorded. Therefore, it is recommended that many-to-many relationships are owned by the **Default** entity, unless there is a strong business reason for needing to add the association from either end in your Mendix app.
 

@@ -2,17 +2,16 @@
 title: "Implement Best Practices for JavaScript Actions"
 linktitle: "JavaScript Actions Best Practices"
 url: /howto/extensibility/best-practices-javascript-actions/
-category: "Extensibility"
+
 weight: 60
 description: "Describes how to create high-quality JavaScript actions, use common implementation patterns, design better APIs, and use JavaScript actions in nanoflows."
-tags: ["JavaScript", "API", "nanoflow"]
 ---
 
 ## 1 Introduction
 
 JavaScript actions can extend your app with several new functions. To implement JavaScript actions most effectively, be sure to follow these best practices.
 
-**This best practices will teach you how to do the following:**
+These best practices teach you how to do the following:
 
 * Create high-quality JavaScript actions
 * Learn common implementation patterns
@@ -158,7 +157,7 @@ To customize your JavaScript actions, consult the sections below.
 
 #### 2.2.1 Understanding the Mendix Client API
 
-Within the JavaScript actions, the full Mendix Client API is available. For reference, see the [Mendix Client API](https://apidocs.rnd.mendix.com/8/client/index.html). Note that some parts of the Mendix Client API were created for widgets, and are less relevant for JavaScript actions.
+Within the JavaScript actions, the full Mendix Client API is available. For reference, see the [Mendix Client API](/apidocs-mxsdk/apidocs/client-api/). Note that some parts of the Mendix Client API were created for widgets, and are less relevant for JavaScript actions.
 
 #### 2.2.2 Using Numeric Parameters in Your JavaScript Actions
 
@@ -178,7 +177,7 @@ If you know your JavaScript action does not require this extended precision (for
 const numberValue = Number(bigJsValue); // number
 ```
 
-For information on how to use *Big.js*, consult [big.js API](https://mikemcl.github.io/big.js/).
+For information on how to use *Big.js*, consult the [big.js API](https://mikemcl.github.io/big.js/).
 
 #### 2.2.3 Creating Objects
 
@@ -196,7 +195,7 @@ mx.data.create({
 });
 ```
 
-For more information on creating objects, consult the [Create](https://apidocs.rnd.mendix.com/7/client/mx.data.html#.create) section of the *Mendix Client API*.
+For more information on creating objects, consult the [Create](https://apidocs.rnd.mendix.com/10/client/mx.data.html#.create) section of the *Mendix Client API*.
 
 #### 2.2.4 Changing Objects
 
@@ -209,7 +208,7 @@ mxobj.get("Name");               // "Henry"
 mxobj.getOriginalValue("Name")   // "Fred"
 ```
 
-For more information on changing objects, consult the [Set](https://apidocs.rnd.mendix.com/7/client/mendix_lib_MxObject.html#set) section of the *Mendix Client API*.
+For more information on changing objects, consult the [Set](https://apidocs.rnd.mendix.com/10/client/mendix_lib_MxObject.html#set) section of the *Mendix Client API*.
 
 #### 2.2.5 Loading Platform-Shipped Dependencies
 
@@ -222,10 +221,10 @@ var lang = require("mendix/lang");
 
 The following libraries are provided by the Mendix Client:
 
-* [mendix/lang](https://apidocs.rnd.mendix.com/7/client/module-mendix_lang.html)
-* [mendix/validator](https://apidocs.rnd.mendix.com/7/client/module-mendix_validator.html)
-* [mxui/dom](https://apidocs.rnd.mendix.com/7/client/module-mxui_dom.html)
-* [mxui/html/parser](https://apidocs.rnd.mendix.com/7/client/module-mxui_html_parser.html)
+* [mendix/lang](https://apidocs.rnd.mendix.com/10/client/module-mendix_lang.html)
+* [mendix/validator](https://apidocs.rnd.mendix.com/10/client/module-mendix_validator.html)
+* [mxui/dom](https://apidocs.rnd.mendix.com/10/client/module-mxui_dom.html)
+* [mxui/html/parser](https://apidocs.rnd.mendix.com/10/client/module-mxui_html_parser.html)
 
 While there are Dojo and Document Object Model (DOM) functions available, they are not recommended. For more information on Dojo and DOM functions, see the [Understanding Bad Practice](#badpractice) section of this document below. 
 
@@ -252,14 +251,6 @@ Below is an example of using an external dependency based on [pdf-lib](https://g
     
     // BEGIN EXTRA CODE
     ```
-
-#### 2.2.7 Understanding Hybrid App External Dependencies
-
-The Mendix hybrid app ships with a large set of plugins by default. For more details on default plugins, see the [November 20th, 2018 Version Upgrades](/releasenotes/mobile/hybrid-app/#upgrades-20) section of the *Hybrid App Base and Template* release notes.
-
-It is also possible to add new plugins during a mobile build.
-
-The actual list of plugins use can be found in *config.xml* inside your deployment package.
 
 ### 2.3 Understanding Returns
 
@@ -426,7 +417,7 @@ JavaScript Actions can be used in a nanoflow with a JavaScript action call activ
 
 Use **Category** to group actions, **Icon** and **Image** to give the exposed nanoflow action easy recognition inside the nanoflow:
 
-{{< figure src="/attachments/howto/extensibility/best-practices-javascript-actions/narrow-expose.png" alt="exposed nanoflow with info" width="650" >}}
+{{< figure src="/attachments/howto/extensibility/best-practices-javascript-actions/narrow-expose.png" alt="exposed nanoflow with info" width="650" class="no-border" >}}
 
 ### 3.3 Publishing JavaScript Actions
 
@@ -434,7 +425,7 @@ You can export a single action by right-clicking a JavaScript action in the App 
 
 You can import a single action by right-clicking your module in the App Explorer, and then selecting **Import document from file**. Next, select your JavaScript action file.
 
-A single nanoflow action cannot be published in the Mendix Marketplace. You may publish one as a module, but it is recommended to publish related nanoflow actions as a group within a module. For a module containing multiple nanoflow actions, group actions with a relevant data model like "entities" and provide relevant documentation for external dependencies. Export the module as a whole and upload it to the Mendix Marketplace. For further instructions, see [How to Share Marketplace Content](/appstore/general/share-app-store-content/).
+A single nanoflow action cannot be published in the Mendix Marketplace. You may publish one as a module, but it is recommended to publish related nanoflow actions as a group within a module. For a module containing multiple nanoflow actions, group actions with a relevant data model like "entities" and provide relevant documentation for external dependencies. Export the module as a whole and upload it to the Mendix Marketplace. For further instructions, see [How to Share Marketplace Content](/appstore/sharing-content/).
 
 ### 3.4 Documenting JavaScript Actions{#document}
 
@@ -458,7 +449,7 @@ Well-documented actions are easier to reuse. Consider the following when documen
 
 An extensive test app can help make a JavaScript action more robust. Within a test app, try to create all possible variations of the input, accounting for empty inputs and error cases that should be handled.
 
-When testing, make sure you to check all compatible platforms (web, hybrid, and native). The web should handle the Mendix browser compatibility. For further information about compatibility, see the [Browsers](/refguide/system-requirements/#browsers) section of *System Requirements*. 
+When testing, make sure you to check all compatible platforms (web and native). The web should handle the Mendix browser compatibility. For further information about compatibility, see the [Browsers](/refguide/system-requirements/#browsers) section of *System Requirements*. 
 
 When an action is not compatible with the platform, make sure it can be checked with an additional action before running into an error. For example, employ a `CheckCameraSupport` action before starting a camera. When an action is called but not compatible, it should fail gracefully or display a clear error message. 
 
@@ -470,7 +461,7 @@ Initially, JavaScript actions' source code is not loaded. Their source code will
 
 After the file is loaded, breakpoints can be set in the code by clicking the inline number (**A**, in the screenshot below). Alternatively, select **Pause on caught exceptions**  could be used to find issues (**B**). As a last resort, you could alter the source code by adding the line `debugger;` (**C**). This statement will start the debugging tools the first time the action is executed, and will apply a breakpoint:
 
-{{< figure src="/attachments/howto/extensibility/best-practices-javascript-actions/debugging.png" alt="debugging"   width="500"  >}}
+{{< figure src="/attachments/howto/extensibility/best-practices-javascript-actions/debugging.png" alt="debugging"   width="500"  class="no-border" >}}
 
 ## 6 Understanding Bad Practices {#badpractice}
 
@@ -486,7 +477,7 @@ Not all capabilities are recommended for use. Consider the side effects that an 
 
 * [Build JavaScript Actions](/howto/extensibility/build-javascript-actions/)
 * [JavaScript Actions](/refguide/javascript-actions/)
-* [Mendix Client API](https://apidocs.rnd.mendix.com/7/client/index.html)
+* [Mendix Client API](/apidocs-mxsdk/apidocs/client-api/)
 * JavaScript basics:
     * [Mozilla JavaScript Basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
     * [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)

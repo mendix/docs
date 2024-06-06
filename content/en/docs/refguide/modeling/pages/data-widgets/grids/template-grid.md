@@ -2,7 +2,6 @@
 title: "Template Grid"
 url: /refguide/template-grid/
 weight: 20
-tags: ["studio pro", "grid", "template grid", "data widgets"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -12,7 +11,7 @@ tags: ["studio pro", "grid", "template grid", "data widgets"]
 
 A template grid shows a list of objects in a tile view. For example, a template grid can show a list of employees with their profile pictures. Using controls provided by the template grid you can browse, search, and manipulate those objects:
 
-{{< figure src="/attachments/refguide/modeling/pages/data-widgets/grids/template-grid/template-grid.png" >}}
+{{< figure src="/attachments/refguide/modeling/pages/data-widgets/grids/template-grid/template-grid.png" class="no-border" >}}
 
 The template grid has a lot in common with a [data grid](/refguide/data-grid/). The main difference is that the objects are shown in templates instead of rows.
 
@@ -24,17 +23,13 @@ For more information, see [Control Bar](/refguide/control-bar/).
 
 ### 2.2 Search Bar
 
-**Search Bar** is only available for **Database** and **XPath** [data sources](#data-source). For more information on a search bar and its settings, see [Search Bar](/refguide/search-bar/).
-
-### 2.3 Sort Bar
-
-**Sort Bar** is only available for **Database** and **XPath** [data sources](#data-source). For more information on a sort bar and its settings, see [Sort Bar](/refguide/sort-bar/).
+**Search Bar** is only available for **Database** and, below version 10.5, **XPath** [data sources](#data-source). For more information on a search bar and its settings, see [Search Bar](/refguide/search-bar/).
 
 ## 3 Properties
 
 An example of template grid properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/pages/data-widgets/grids/template-grid/template-grid-properties.png"   width="250"  >}}
+{{< figure src="/attachments/refguide/modeling/pages/data-widgets/grids/template-grid/template-grid-properties.png"   width="250"  class="no-border" >}}
 
 Template grid properties consist of the following sections:
 
@@ -46,6 +41,8 @@ Template grid properties consist of the following sections:
 
 ### 3.1 Common Section {#common}
 
+The rows of the template grid can be sorted using the `Sort order` property. It is only available for **Database** [data sources](#data-source). For more information on sorting, see [Sort Order](/refguide/sort-order/).
+
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
 ### 3.2 Data Source Properties {#data-source}
@@ -54,14 +51,15 @@ The data source determines which objects will be shown in the template grid. For
 
 #### 3.2.1 Type
 
-The list view supports the following types of data sources: 
+The template grid supports the following types of data sources: 
 
 * [Database source](/refguide/database-source/) – objects are retrieved directly form the database
 * [XPath source](/refguide/xpath-source/) – objects are retrieved directly form the database
+    {{% alert color="info" %}}From Mendix version 10.5, the template grid widget does not have a separate XPath source, you can apply XPath constraints to the **Database** source.{{% /alert %}}
 * [Microflow source](/refguide/microflow-source/) – calculates the list of objects by executing a microflow
 * [Association source](/refguide/association-source/) – follows an association to get to objects
 
-The database and XPath sources retrieve objects from the database and supports searching and sorting. 
+The database and, below version 10.5, XPath sources retrieve objects from the database and supports searching and sorting. 
 
 ### 3.3 Design Properties Section {#design-properties}
 

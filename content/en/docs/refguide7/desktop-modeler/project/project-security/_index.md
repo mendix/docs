@@ -125,7 +125,7 @@ Each demo user can be assigned an entity and one or more user roles that apply w
 
 After signing in to your application with the administrator user, a small tab called the 'user switcher' is presented at the right side of your application. Expanding this tab shows a list with all the demo users that are defined in the project security settings. Selecting a user from this list will sign in to your application using the credentials of this user, thus allowing you to test or demo your application with the user's role(s). This allows for rapid testing of your application with different user roles.
 
-{{< figure src="/attachments/refguide7/desktop-modeler/project/project-security/16844039.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/project/project-security/16844039.png" class="no-border" >}}
 
 The user switcher is only shown and the demo users are only created when running your application locally on your development machine, or when running in a sandbox.
 
@@ -194,15 +194,15 @@ Clean up objects that were attached to the anonymous user and that you do *not* 
 
 {{% /alert %}}
 
-The sign-in microflow is executed when an end-user:
+The sign-in microflow is executed when an end-user does the following:
 
-1. Uses your application without signing in (thus as an anonymous user), and then
-2. clicks a button for which she does not have access, which causes a sign-in screen to appear, and then
-3. signs in to your application.
+1. Uses your application without signing in (thus as an anonymous user).
+2. Clicks a button for which they do not have access, which causes a sign-in screen to appear.
+3. Signs in to your application.
 
 {{% alert color="info" %}}
 
-An anonymous user in a web shop adds some items to her shopping cart and then clicks the 'Check out' button. A sign-in screen appears, and the user signs in. The sign-in microflow is executed and transfers the shopping cart of the anonymous user to the signed-in user.
+An anonymous user in a web shop adds some items to their shopping cart and then clicks the 'Check out' button. A sign-in screen appears, and the user signs in. The sign-in microflow is executed and transfers the shopping cart of the anonymous user to the signed-in user.
 
 {{% /alert %}}
 

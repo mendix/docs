@@ -1,7 +1,6 @@
 ---
 title: "Data Grid (Document Template)"
 url: /refguide8/data-grid-document-template/
-tags: ["studio pro"]
 aliases:
     - /refguide8/Data+Grid+(document+template).html
     - /refguide8/data-grid-(document-template).html
@@ -10,17 +9,13 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/data-grid-document-template.pdf).
-{{% /alert %}}
-
 ## 1 Introduction
 
 The data grid shows a list of objects in a grid. For example, a data grid can show all the orders a customer has placed.
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide8/modeling/resources/document-templates/data-grid-document-template/918138.png" >}}
+{{< figure src="/attachments/refguide8/modeling/resources/document-templates/data-grid-document-template/918138.png" class="no-border" >}}
 
 A data grid showing a list of orders with a description and the referenced customer name.
 {{% /alert %}}

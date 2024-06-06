@@ -2,7 +2,6 @@
 title: "Properties Common in the Page Editor"
 url: /refguide/common-widget-properties/
 weight: 120
-tags: ["studio pro", "widget properties", "properties", "common", "widget", "classes"]
 aliases:
     - /refguide/Conditions
 #Common Section and Visibility section anchors are used in links of common-section-link and visibility-section-link snippets. If moving or renaming them, do not forget to update snippets.
@@ -27,7 +26,7 @@ The **Screen reader caption** property can be set on the following widgets:
 * [Text Box](/refguide/text-box/)
 * [Text Area](/refguide/text-area/)
 * [Drop-down](/refguide/drop-down/)
-* [Check Box](/refguide/check-box/)
+* [Checkbox](/refguide/check-box/)
 * [Radio Buttons](/refguide/radio-buttons/)
 * [Date Picker](/refguide/date-picker/)
 * [File Manager](/refguide/file-manager/)
@@ -36,11 +35,11 @@ The **Screen reader caption** property can be set on the following widgets:
 
 ## 3 Common Section{#common-properties}
 
-{{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/common-section.png" alt="Common Section" >}}
+{{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/common-section.png" alt="Common Section" class="no-border" >}}
 
 ### 3.1 Name{#name}
 
-The internal name of the widget. You can use this to give sensible names to widgets. The name property also appears in the generated HTML: the widget DOM element automatically includes the class `mx-name-{NAME}`, which can be useful for [Selenium testing](/howto7/integration/selenium-support/).
+The internal name of the widget. You can use this to give sensible names to widgets. The name property also appears in the generated HTML: the widget DOM element automatically includes the class `mx-name-{NAME}`, which can be useful for [Selenium testing](/howto/integration/selenium-support/).
 
 ### 3.2 Tab Index{#tab-index}
 
@@ -62,25 +61,29 @@ Styling is applied in the following order:
 
 You can see which widgets in a page have styling applied via the class or style property by clicking the <strong>Show styles</strong> button.
 
-{{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/show-styles.png" >}}
+{{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/show-styles.png" class="no-border" >}}
 
 ### 3.4 Style{#style}
 
 The style property allows you to specify additional CSS styling. If a class is also specified, this styling is applied *after* the class. For example, `>background-color:lightblue; color:red;` will result in red text on a blue background:
 
-{{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/style-example.png" >}}
+{{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/style-example.png" class="no-border" >}}
 
 ### 3.5 Dynamic Classes{#dynamicclasses}
 
 The dynamic classes property allows you to specify one or more cascading stylesheet (CSS) class like the class property, but based on an [expression](/refguide/expressions/). This allows you to dynamically construct classes based on data from an enclosing data container. The dynamic classes constructed in the expression are appended to the classes defined in the [`Class`](#class) property.
 
-{{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/dynamic-classes.png" >}}
+{{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/dynamic-classes.png" class="no-border" >}}
 
 {{% alert color="info" %}}
-The dynamic classes property was introduced in Mendix Studio Pro v8.14.
+The dynamic classes property was introduced in Mendix Studio Pro 8.14.
 {{% /alert %}}
 
 You can see which widgets in a page have styling applied via the style or class property by clicking the **Show styles** button.
+
+{{% alert color="info" %}}
+On a DataGrid column, a dynamic class is only applied to the `<col>` element, not to the `<td>` element (in contrast to the class property). 
+{{% /alert %}}
 
 ### 3.6 Documentation{#documentation}
 
@@ -88,7 +91,7 @@ Some widgets, for example snippets and building blocks, have a **Documentation**
 
 ## 4 Data Source Section{#data-source}
 
-{{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/data-source-section.png" alt="Data Source Section" >}}
+{{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/data-source-section.png" alt="Data Source Section" class="no-border" >}}
 
 ### 4.1 Attribute(Path)
 
@@ -101,7 +104,7 @@ With the following widgets, the Attribute (Path) specifies the attribute which i
 * [Text Box](/refguide/text-box/)
 * [Text Area](/refguide/text-area/)
 * [Drop-down](/refguide/drop-down/)
-* [Check Box](/refguide/check-box/)
+* [Checkbox](/refguide/check-box/)
 * [Radio Buttons](/refguide/radio-buttons/)
 * [Date Picker](/refguide/date-picker/)
 
@@ -141,18 +144,19 @@ The attribute can be of one of the following [data types](/refguide/data-types/)
 
 ## 5 Editability Section{#editability}
 
-{{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/editability-section.png" alt="Common Section" >}}
+{{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/editability-section.png" alt="Common Section" class="no-border" >}}
 
 ### 5.1 Editable
 
 The editable property indicates whether the end-user will be able to change the value displayed by the widget. The possible values are:
 
-| Value       | Description                                                  |
-| ----------- | ------------------------------------------------------------ |
-| Default     | The value is editable if security allows it such as if the user that is signed in has write access to the selected attribute (default value for widgets outside a snippet). |
-| Inherited from snippet call | Set to **Default** or **Never** by the containing data container of the snippet call (default value for widgets inside a snippet). |
-| Never       | The value is never editable.                                 |
-| Conditionally | The value is editable if the specified condition holds (see below). |
+| Value | Description  |
+|--------|------------|
+| Default      | The value is editable if the containing data container is editable and if security allows it. For example, if the user that is signed in has write access to the selected attribute (the default value for widgets outside a snippet). |
+| Inherited from snippet call    | Set to **Default** or **Never** by the containing data container of the snippet call (default value for widgets inside a snippet).                                                                                           |
+| Never     | The value is never editable.    |
+| Conditionally  | The value is editable if the specified condition holds (see below).  |
+| Conditionally (combined with inherited condition) | The value is editable if the specified condition holds and the conditions for all conditional editable data containers also hold.  |
 
 ### 5.2 Condition
 
@@ -190,9 +194,9 @@ This property determines how the widget is rendered if it is read-only.
 
 ## 6 Label Section {#label}
 
-{{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/label-section.png" alt="Label Section" >}}
+{{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/label-section.png" alt="Label Section" class="no-border" >}}
 
-A label can be used to described the purpose of the widget to the user. The label is shown next to the widget in the user interface. If a label is configured, the widget will be rendered in the browser wrapped in a form group. See [Bootstrap documentation](http://getbootstrap.com/css/#forms).
+A label can be used to described the purpose of the widget to the user. The label is shown next to the widget in the user interface. If a label is configured, the widget will be rendered in the browser wrapped in a form group. See [Bootstrap documentation](https://getbootstrap.com/css/#forms).
 
 {{% alert color="info" %}}
 The position of the label in relation to the widget is configured in the **Form orientation** and **Label width (weight)** properties of the data container.
@@ -216,7 +220,7 @@ For each parameter in the template, you define an attribute of the context entit
 
 ## 7 Formatting Section{#numeric-formatting}
 
-{{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/numeric-formatting-section.png" alt="Numeric Formatting Section" >}}
+{{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/numeric-formatting-section.png" alt="Numeric Formatting Section" class="no-border" >}}
 
 Formatting describes the way that numeric attributes are displayed. These are attributes of the following data types:
 
@@ -284,7 +288,7 @@ For example, with **Group digits** set to `true`, the number `1100100.01` will b
 
 ## 8 Validation Section{#validation}
 
-{{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/validation-section.png" alt="Validation Section" >}}
+{{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/validation-section.png" alt="Validation Section" class="no-border" >}}
 
 Input elements can include validation to ensure that data is correct before it is used by the app.
 
@@ -336,7 +340,7 @@ For example, if an address field is required, the validation message for the tex
 
 ## 9 Visibility Section {#visibility-properties}
 
-{{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/visibility-section.png" alt="Visibility Section" >}}
+{{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/visibility-section.png" alt="Visibility Section" class="no-border" >}}
 
 ### 9.1 Visible
 
@@ -349,7 +353,7 @@ You can choose both **Context** conditions and **Module roles** conditions to ap
 {{% alert color="warning" %}}
 With the **Visible** property, you only hide data and do not protect it. You can hide a tab or a table row from an end-user, but if they still have access to the data then they could see it some other way. To restrict access to sensitive data, use a constraint on the domain model, not on individual pages.
 
-Depending on the condition used to set the **Visible** property, hiding an element containing a microflow or snippet will not necessarily prevent the microflow or snippet from being triggered. We recommend that you do not use this method to control whether a microflow is run or not, but include the condition in the microflow itself.
+Depending on the condition used to set the **Visible** property, hiding an element containing a microflow or snippet will not necessarily prevent the microflow or snippet from being triggered. Mendix recommends that you do not use this method to control whether a microflow is run or not, but include the condition in the microflow itself.
 {{% /alert %}}
 
 #### 9.1.1 Context
@@ -360,7 +364,24 @@ A practical example would be a web shop in which the user must submit both billi
 
 ##### 9.1.1.1 Based on Attribute Value{#visibility-based-on-attribute-value}
 
-When selected, this shows the widget while a particular attribute has a certain value. Only Boolean and enumeration attributes can be used for this purpose.
+When selected, this shows the widget while a particular attribute has a certain value. 
+
+{{% alert color="info" %}}
+Visibility based on an attribute value can be set only for widgets that are inside data containers (a data view, list view, or data grid). 
+
+Only Boolean and enumeration attributes can be used for this purpose.
+
+{{% /alert %}}
+
+For example, you have a web shop and you would like to show a field with a billing address only when a customer unchecks the **Billing address is the same as delivery address** option (it is checked by default). 
+
+A page where a customer fills in their details can look the following way:
+
+{{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/customer-page-example.png" alt="Customer Details"  width="500" class="no-border" >}}
+
+The visibility of the billing address depends whether the customer checks that the billing address is different from the delivery address. In your domain model, you have an attribute of the Boolean type called **BillingAddressSame**, so when it is set to *false*, the billing address should be visible. This means that the visibility of the billing address depends on the value of the **BillingAddressSame** attribute:
+
+{{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/condition-for-visibility-dialog.png" alt="An example of visibility properties" width="500" class="no-border" >}}
 
 ##### 9.1.1.2 Based on Expression{#visibility-based-on-expression}
 
@@ -368,7 +389,7 @@ When selected, this shows the widget while a provided [expression](/refguide/exp
 
 For example, you might want a button to only be visible if a condition is met. Assume the object has an attribute called `myAttribute`, and you want the button to be visible only if `myAttribute` actually has a value stored. To achieve this goal put this expression into the field: `$currentObject/myAttribute != empty`.
 
-{{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/visibility-example.png" alt="Visibility Example" >}}
+{{< figure src="/attachments/refguide/modeling/pages/common-widget-properties/visibility-example.png" alt="Visibility Example" class="no-border" >}}
 
 Note that the expression is evaluated in the browser, and hence, we advise against using "secret" values (like access keys) in it. In particular, we disallow usages of [constants](/refguide/constants/). Also, client-side expressions currently do not support all the functions that are available in the microflows. Please refer to an autocomplete list to know what functions are supported in your version.
 

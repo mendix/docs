@@ -1,9 +1,8 @@
 ---
 title: "Configure Your Theme"
 url: /howto7/front-end/configuring-your-theme/
-category: "Front End"
+
 weight: 15
-tags: ["theming", "UX", "front end"]
 aliases:
     - /howto7/ux/configuring-your-theme.html
     - /howto7/ux/configuring-your-theme
@@ -12,7 +11,7 @@ aliases:
 
 ## 1 Introduction
 
-This document describes how to configure the styling of your page in the Desktop Modeler and Web Modeler.
+This document describes how to configure the styling of your page in the Desktop Modeler.
 
 {{% alert color="info" %}}
 
@@ -24,7 +23,7 @@ This functionality was introduced in Mendix 7.16.
 
 The styling that is loaded when opening your Mendix application in a web browser is configured in the HTML of your index pages.
 
-To ensure that the same styling is loaded when viewing your page in the Desktop Modeler and Web Modeler, you can configure the `"cssFiles"` property in *settings.json* in the theme folder of your app. For example, in this configuration, `theme.css` is loaded when viewing a page in the Modeler:
+To ensure that the same styling is loaded when viewing your page in the Desktop Modeler, you can configure the `"cssFiles"` property in *settings.json* in the theme folder of your app. For example, in this configuration, `theme.css` is loaded when viewing a page in the Modeler:
 
 ```json
 {

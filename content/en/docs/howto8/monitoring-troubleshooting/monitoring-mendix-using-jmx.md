@@ -1,20 +1,19 @@
 ---
 title: "Monitor Mendix Using JMX"
 url: /howto8/monitoring-troubleshooting/monitoring-mendix-using-jmx/
-category: "Monitoring and Troubleshooting"
+
 weight: 10
-tags: ["monitoring", "troubleshooting", "jmx"]
 ---
 
 ## 1 Introduction
 
 This how-to is relevant if you run Mendix on-premises. If you do this, you probably have standard monitoring tooling that you use to monitor all your applications.
 
-For Java applications, most monitoring tools provide a way to hook into [JMX](http://www.oracle.com/technetwork/java/javase/tech/javamanagement-140525.html) in order to get information about the application. This how-to describes using JMX to get information on your Mendix application.
+For Java applications, most monitoring tools provide a way to hook into [JMX](https://www.oracle.com/technetwork/java/javase/tech/javamanagement-140525.html) in order to get information about the application. This how-to describes using JMX to get information on your Mendix application.
 
 Mendix doesn’t provide any runtime or application specific MBeans, which means that without writing your own MBeans, you will only be able to monitor generic JVM statistics. This how-to will also describe enabling JMX on your Mendix Runtime as well as writing custom MBeans to expose Mendix Runtime information and app-specific information.
 
-This how-to will teach you how to do the following:
+This how-to teaches you how to do the following:
 
 * Start Mendix Runtime with JMX
 * Expose management information with an MBean
@@ -31,7 +30,7 @@ To enable JMX on your Mendix Runtime, you can use the following Java options in 
 ```yaml
 javaopts: [
 
-"-Dfile.encoding=UTF-8", "-XX:MaxPermSize=64M", "-Xmx128M", "-Xms128M",
+"-Dfile.encoding=UTF-8", "-Xmx128M", "-Xms128M",
 
 "-Djava.io.tmpdir=/tmp",
 
@@ -81,7 +80,7 @@ public long getNamedUserCount();
 }
 ```
 
-This is the implementation, `MxStats.java`. The methods call the [Mendix Core](http://apidocs.rnd.mendix.com/4/runtime/classcom_1_1mendix_1_1core_1_1_core.html) class and return the value:
+This is the implementation, `MxStats.java`. The methods call the [Mendix Core](https://apidocs.rnd.mendix.com/4/runtime/classcom_1_1mendix_1_1core_1_1_core.html) class and return the value:
 
 ```java
 package jmx.actions;
@@ -142,7 +141,7 @@ import com.mendix.core.Core;
 
 Now you're able to see the result of the values exposed by this MBean in the JConsole:
 
-{{< figure src="/attachments/howto8/monitoring-troubleshooting/monitoring-mendix-using-jmx/18580003.png" >}}
+{{< figure src="/attachments/howto8/monitoring-troubleshooting/monitoring-mendix-using-jmx/18580003.png" class="no-border" >}}
 
 ## 5 MBean Exposing App-Specific Statistics
 
@@ -154,7 +153,7 @@ The idea is that you will have a Java Action that you can call in a microflow wh
 
 * [Find the Root Cause of Runtime Errors](/howto8/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
 * [Clear Warning Messages](/howto8/monitoring-troubleshooting/clear-warning-messages/)
-* [Test Web Services Using SoapUI](/howto8/testing/testing-web-services-using-soapui/)
+* [Test Web Services Using SoapUI](/howto8/integration/testing-web-services-using-soapui/)
 * [Monitor Mendix Using JMX](/howto8/monitoring-troubleshooting/monitoring-mendix-using-jmx/)
 * [Debug Java Actions Remotely](/howto8/monitoring-troubleshooting/debug-java-actions-remotely/)
 * [Log Levels](/howto8/monitoring-troubleshooting/log-levels/)

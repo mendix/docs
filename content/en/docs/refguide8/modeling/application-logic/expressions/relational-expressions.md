@@ -3,12 +3,7 @@ title: "Relational Expressions"
 url: /refguide8/relational-expressions/
 weight: 30
 description: "Describes relational expressions in Mendix."
-tags: ["studio pro", "relational expression", "expressions"]
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/relational-expressions.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 

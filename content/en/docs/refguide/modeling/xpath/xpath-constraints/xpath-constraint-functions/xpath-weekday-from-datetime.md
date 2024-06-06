@@ -1,7 +1,7 @@
 ---
 title: "XPath weekday-from-dateTime"
 url: /refguide/xpath-weekday-from-datetime/
-tags: ["studio pro"]
+weight: 15
 ---
 
 ## 1 Overview
@@ -26,22 +26,30 @@ weekday-from-dateTime ( attribute [, timezone ] )
 
 ### 2.2 timezone
 
-{{% alert color="info" %}}
-The optional `timezone` parameter is available in [Studio Pro 9.22.0](/releasenotes/studio-pro/9.22/) and above. 
-{{% /alert %}}
-
 `timezone` specifies the time zone to use for the extraction. This parameter is optional and defaults to the local time zone. It should be a string literal containing an IANA time zone or `'UTC'`. GMT offset time zones are not supported.
 
 ## 3 Examples
 
 This query returns all the logs where the day of the week in `DateAttribute` is 6 in the local time zone (Friday, for locally run apps or apps using a PostgreSQL database):
 
-```java {linenos=false}
-//Logging.Log[weekday-from-dateTime(DateAttribute) = 6]
-```
+{{< tabpane >}}
+  {{% tab header="Environments:" disabled=true /%}}
+  {{< tab header="Studio Pro" lang="StudioPro" >}}
+    [weekday-from-dateTime(DateAttribute) = 6]
+    {{% /tab %}}
+  {{< tab header="Java" lang="JavaQuery" >}}
+     //Logging.Log[weekday-from-dateTime(DateAttribute) = 6]
+    {{% /tab %}}
+{{< /tabpane >}}
 
 This query returns all the logs where the day of the week in `DateAttribute` is 6 in the New York time zone (Friday, for locally run apps or apps using a PostgreSQL database):
 
-```java {linenos=false}
-//Logging.Log[weekday-from-dateTime(DateAttribute, 'America/New_York') = 6]
-```
+{{< tabpane >}}
+  {{% tab header="Environments:" disabled=true /%}}
+  {{< tab header="Studio Pro" lang="StudioPro" >}}
+    [weekday-from-dateTime(DateAttribute, 'America/New_York') = 6]
+    {{% /tab %}}
+  {{< tab header="Java" lang="JavaQuery" >}}
+     //Logging.Log[weekday-from-dateTime(DateAttribute, 'America/New_York') = 6]
+    {{% /tab %}}
+{{< /tabpane >}}

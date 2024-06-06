@@ -2,7 +2,8 @@
 title: "Widget Development"
 url: /howto7/widget-development/
 weight: 90
-tags: ["widget", "develop widget", "customize"]
+no_list: false
+description_list: true 
 ---
 
 ## 1 Introduction
@@ -15,9 +16,9 @@ Custom widget development can be difficult at the beginning. The resources below
 
 In order to create widgets, you need a good understanding of how JavaScript works. These texts can help you get started:
 
-* [JavaScript: The Good Parts](http://shop.oreilly.com/product/9780596517748.do)
+* [JavaScript: The Good Parts](https://www.oreilly.com/library/view/javascript-the-good/9780596517748/)
 * [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS)
-* [Learning JavaScript Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
+* [Learning JavaScript Design Patterns](https://patterns.addy.ie)
 
 ## 3 Specific Widget Topics
 
@@ -29,15 +30,15 @@ The sections below describe the Mendix resources that can help you understand ho
 
 ### 3.2 Dojo
 
-Custom widgets are Dojo widgets. In order to understand how widgets are structured and what their life cycle is, you need to know how Dojo widgets are built. You can consult this quick introduction:
+Custom widgets are Dojo widgets. In order to understand how widgets are structured and what their lifecycle is, you need to know how Dojo widgets are built. You can consult this quick introduction:
 
-* [Dojo Documentation Tutorials](http://dojotoolkit.org/documentation/#tutorials)
+* [Dojo Documentation Tutorials](https://dojotoolkit.org/documentation/#tutorials)
 
-For details on the widget life cycle, reference this documentation:
+For details on the widget lifecycle, reference this documentation:
 
-* [Writing Your Own Widget](http://dojotoolkit.org/reference-guide/1.10/quickstart/writingWidgets.html)
+* [Writing Your Own Widget](https://dojotoolkit.org/reference-guide/1.10/quickstart/writingWidgets.html)
 * [dijit.\_WidgetBase](https://dojotoolkit.org/reference-guide/1.10/dijit/_WidgetBase.html)
-* [Tutorial: Widget Life Cycle](https://apidocs.rnd.mendix.com/6/client/tutorial-widget-lifecycle.html)
+* [Tutorial: Widget Lifecycle](https://apidocs.rnd.mendix.com/6/client/tutorial-widget-lifecycle.html)
 
 ### 3.3 Widget Scaffolding
 
@@ -49,7 +50,7 @@ This information is also covered in [Expert Series: Kickstart Your Widget Develo
 
 ### 3.4 Interacting with Mendix Runtime
 
-Widgets have the ability to get data from the Runtime, manipulate objects, show validations, and set references. This is done through the Client API. For the latest version of the this API, see [Client API](https://apidocs.rnd.mendix.com/7/client).
+Widgets have the ability to get data from the Runtime, manipulate objects, show validations, and set references. This is done through the Client API. For the latest version of the this API, see [Client API](/apidocs-mxsdk/apidocs/client-api/).
 
 ### 3.5 Configuring the Widget in Mendix
 
@@ -69,20 +70,16 @@ This category of how-to's presents in-depth information on how to build your own
 
 Most of the widgets in the [Mendix Marketplace](https://marketplace.mendix.com/) are open-source and available on GitHub. You can find the **View on GitHub** link on the right side of the Marketplace screen:
 
-{{< figure src="/attachments/howto7/widget-development/appstore-github-link.png" >}}
+{{< figure src="/attachments/howto7/widget-development/appstore-github-link.png" class="no-border" >}}
 
 ### 4.2 Learn by Doing
 
 Using the widget generator, you get a test project. With the test project (or your own project), you can quickly start creating widgets.
 
-By debugging your widgets, you will quickly learn where you make mistakes and how the widget life cycle works.
+By debugging your widgets, you will quickly learn where you make mistakes and how the widget lifecycle works.
 
 ### 4.3 Ask the Community
 
-Within the Mendix community of developers, there are plenty of widget developers. The [Mendix Forum](https://forum.mendixcloud.com) is the place to go to when you have questions.
+Within the Mendix community of developers, there are plenty of widget developers. The [Mendix Community](https://community.mendix.com/) is the place to go to when you have questions.
 
-## 5 Main Documents in This Category
-
-* [Build a Preview Image for a Custom Widget](/howto7/widget-development/add-a-preview-image-for-custom-widget/)
-* [Scaffold a Widget with the Yeoman Widget Generator](/howto7/widget-development/scaffold-a-widget-with-the-yeoman-widget-generator/)
-* [Use the Widget Development Plugin for Adobe Brackets](/howto7/widget-development/use-the-widget-development-plugin-for-adobe-brackets/)
+## 5 Documents in This Category

@@ -6,7 +6,7 @@ weight: 93
 
 ## 9.7.0
 
-**Release date: October 18th, 2021**
+**Release date: October 18, 2021**
 
 ### DomainModels
 

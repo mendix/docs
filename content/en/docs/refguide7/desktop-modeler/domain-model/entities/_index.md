@@ -1,7 +1,7 @@
 ---
 title: "Entities"
 url: /refguide7/entities/
-tags: ["domain model", "entity", "entities", "attribute", "validation rule", "even handler", "access rule"]
+canonical_url: "https://docs.mendix.com/refguide/entities/"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -13,7 +13,7 @@ The domain model editor uses the following symbols for visualization on entities
 
 | Symbol | Description |
 | --- | --- |
-| {{< figure src="/attachments/refguide7/desktop-modeler/domain-model/entities/917594.png" >}} | This entity has one or more event handlers. |
+| {{< figure src="/attachments/refguide7/desktop-modeler/domain-model/entities/917594.png" class="no-border" >}} | This entity has one or more event handlers. |
 
 {{% alert color="info" %}}
 
@@ -47,12 +47,12 @@ The name property defines the name of the entity. This name is used to refer to 
 
 An entity can be a more specialized version of a general entity. This means that the specialized entity has all the attributes, associations, events etcetera of the more general entity. Using the generalization property you can specify which entity is the generalization of the entity. For example, the Car entity has Vehicle as its generalization.
 
-The generalization specifies the entity of which this entity derives her properties (attributes, associations, events, etc.). This is used when entities have common attributes and can be generalized using a super entity. Using this feature it is possible to derive functionality from the System module like images from the entity 'Image' and files from the entity 'FileDocument'. In object oriented programming (OOP) the generic term for generalization and specialization is called inheritance.
+The generalization specifies the entity of which this entity derives its properties (attributes, associations, events, etc.). This is used when entities have common attributes and can be generalized using a super entity. Using this feature it is possible to derive functionality from the System module like images from the entity 'Image' and files from the entity 'FileDocument'. In object oriented programming (OOP) the generic term for generalization and specialization is called inheritance.
 
 {{% alert color="info" %}}
 
 This property can be used in a situation where one has an entity 'Student' and an entity 'Professor' which have some generic properties. They both have a name, telephone number and email address and can be a member of one or more courses. Both entities are generalized in the entity 'Member'. Contrary this means that the entity 'Member' can be specialized in the entity 'Student' and the entity 'Professor'.
-{{< figure src="/attachments/refguide7/desktop-modeler/domain-model/entities/917900.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/domain-model/entities/917900.png" class="no-border" >}}
 
 {{% /alert %}}
 
@@ -66,7 +66,7 @@ Define whether instances of this entity can be stored in the database. See [pers
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide7/desktop-modeler/domain-model/entities/4325380.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/domain-model/entities/4325380.png" class="no-border" >}}
 
 {{% /alert %}}
 

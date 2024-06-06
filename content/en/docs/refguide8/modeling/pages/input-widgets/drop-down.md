@@ -2,16 +2,11 @@
 title: "Drop-Down"
 url: /refguide8/drop-down/
 weight: 30
-tags: ["Drop-down", "input", "page", "widget", "enumeration", "studio pro"]
 aliases:
     - /refguide8/drop-down-widget.html
     - /refguide8/drop-down-widget
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-
-{{% alert color="info" %}}
-<img src="/attachments/china.png" class="d-inline-block" /> For the Simplified Chinese translation, click [中文译文](https://cdn.mendix.tencent-cloud.com/documentation/refguide8/drop-down.pdf).
-{{% /alert %}}
 
 ## 1 Introduction
 
@@ -25,13 +20,13 @@ A drop-down should not be confused with a [reference selector](/refguide8/refere
 
 For example, the following drop-down allows the end-user to see, and set, the **Region** to which a customer is allocated. The possible values for **Region** are held in an enumeration.
 
-{{< figure src="/attachments/refguide8/modeling/pages/input-widgets/drop-down/drop-down.png" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/input-widgets/drop-down/drop-down.png" class="no-border" >}}
 
 ## 2 Properties
 
 An example of drop-down properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/pages/input-widgets/drop-down/drop-down-properties.png"   width="300"  >}}
+{{< figure src="/attachments/refguide8/modeling/pages/input-widgets/drop-down/drop-down-properties.png"   width="300"  class="no-border" >}}
 
 Drop-down properties consist of the following sections:
 
@@ -93,7 +88,7 @@ Adding a caption for the empty option improves the user experience of your appli
 
 For example, the drop-down that allows the end-user to select the region allocated to a customer, where the possible values for **Region** are held in an enumeration, could have the caption `Select a region`.
 
-{{< figure src="/attachments/refguide8/modeling/pages/input-widgets/drop-down/select-a-region.png" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/input-widgets/drop-down/select-a-region.png" class="no-border" >}}
 
 ### 2.7 Label Section{#label}
 

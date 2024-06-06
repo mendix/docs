@@ -2,7 +2,6 @@
 title: "Attribute Type Migration"
 url: /refguide/attributes-type-migration/
 weight: 10
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction
@@ -13,9 +12,9 @@ Mendix allows you to change attribute and association types on existing domain m
 
 ### 2.1 Data Type Change Behavior
 
-If the type of an existing attribute is changed in Mendix Studio or Mendix Studio Pro, the existing attribute will usually be deleted and a new attribute will be created. For some attribute type changes Mendix tries to convert existing data in the database to the new type.
+If the type of an existing attribute is changed in Mendix Studio Pro, the existing attribute will usually be deleted and a new attribute will be created. For some attribute type changes Mendix tries to convert existing data in the database to the new type.
 
-If data should NOT be converted to the new type, you must remove the attribute in Studio or Studio Pro and create a new column (with the same name). If you change the type and rename the column, Mendix remembers the old column name and will try to convert the column values if possible.
+If data should NOT be converted to the new type, you must remove the attribute in Studio Pro and create a new column (with the same name). If you change the type and rename the column, Mendix remembers the old column name and will try to convert the column values if possible.
 
 ### 2.2 Conversion Table
 
@@ -27,7 +26,7 @@ Key | Means
 **\*<sup><small>note</small></sup>** | Conversion is not always possible, or data will be changed during conversion. See related note for more information. If conversion is not possible, the behavior is the same as for "**X**", below.
 **X** | Conversion not possible. The original column will be removed and a new column will be created with default values for the existing rows.
 
-{{< figure src="/attachments/refguide/runtime/data-storage/attributes-type-migration/conversion-table.png" alt="Table of conversions - click to enlarge" >}}
+{{< figure src="/attachments/refguide/runtime/data-storage/attributes-type-migration/conversion-table.png" alt="Table of conversions - click to enlarge" class="no-border" >}}
 (*Click the image to enlarge*)
 
 ### 2.3 Manual Conversion

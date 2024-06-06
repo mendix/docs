@@ -1,20 +1,20 @@
 ---
 title: "Attributes"
 url: /refguide7/attributes/
+canonical_url: "https://docs.mendix.com/refguide/attributes/"
 weight: 20
-tags: ["domain model", "entity", "attribute"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 
-Attributes are characteristics that describe and/or identify the entity. For example, a Customer entity typically has attributes for the name of the customer, an e-mail address and other personal information.
+Attributes are characteristics that describe and/or identify the entity. For example, a Customer entity typically has attributes for the name of the customer, an email address and other personal information.
 
 The domain model editor uses the following symbols for visualization of attribute properties:
 
 | Symbol | Description |
 | --- | --- |
-| {{< figure src="/attachments/refguide7/desktop-modeler/domain-model/entities/attributes/917593.png" >}} | This attribute has one or more validation rules. |
-| {{< figure src="/attachments/refguide7/desktop-modeler/domain-model/entities/attributes/917592.png" >}} | This attribute has a microflow that calculates the value of the attribute. |
+| {{< figure src="/attachments/refguide7/desktop-modeler/domain-model/entities/attributes/917593.png" class="no-border" >}} | This attribute has one or more validation rules. |
+| {{< figure src="/attachments/refguide7/desktop-modeler/domain-model/entities/attributes/917592.png" class="no-border" >}} | This attribute has a microflow that calculates the value of the attribute. |
 
 ## Common
 
@@ -39,7 +39,7 @@ Binary | Binary data. Can only be used for persistable entities as the data is s
 Boolean | True or false.
 Currency | The Currency type is deprecated. Use the high-precision Decimal type instead. The currency type is a synonym for the Float type, as in, it represents a positive or negative number that can have digits after the decimal point. It was introduced in Mendix to make it clear what type should be used when representing amounts of money. However, given the finite precision of the Float type, performing calculations with very large numbers may yield incorrect results due to rounding errors. Because of this, it is recommended to use the high-precision Decimal type for these (financial) calculations.
 Date and time | A point in time consisting of a date and a time component accurate up to milliseconds. |
-Decimal | A positive or negative number that can have digits after the decimal point. The Decimal type can be used for high-precision calculations. Use this type to represent amounts of money for example. When a Decimal type attribute is persisted in the database its value is validated against 2 conditions. In case the number of digits of the integral part (before the decimal separator) is more than 20, an exception is thrown. In case the number of digits of the fractional part (after the decimal separator) is more than 8, the fractional value is automatically rounded according to [the round half to even rule (also known as bankers' rounding)](https://en.wikipedia.org/wiki/Rounding#Round_half_to_even). Therefore the the maximum allowable value for the Decimal type is 99999999999999999999.99999999.
+Decimal | A positive or negative number that can have digits after the decimal point. The Decimal type can be used for high-precision calculations. Use this type to represent amounts of money for example. When a Decimal type attribute is persisted in the database its value is validated against 2 conditions. In case the number of digits of the integral part (before the decimal separator) is more than 20, an exception is thrown. In case the number of digits of the fractional part (after the decimal separator) is more than 8, the fractional value is automatically rounded according to [the round half to even rule (also known as bankers' rounding)](https://en.wikipedia.org/wiki/Rounding#Round_half_to_even). Therefore the maximum allowable value for the Decimal type is 99999999999999999999.99999999.
 Enumeration | One of the values of the given [enumeration](/refguide7/enumerations/).
 Float | The Float type is deprecated. Use the high-precision Decimal type instead. A positive or negative number. The number can have digits after the decimal point.
 Hashed string | The hash value of a String or set of characters. It can among others contain letters, spaces and/or numbers. This type can for example be used to store a password. Hash values are generated using the hash algorithm that is chosen in the [Project Settings](/refguide7/project-settings/).
@@ -67,7 +67,7 @@ The password itself should not be stored, but only its hash value, thus it is st
 
 A customer can be active or inactive, which is stored in an attribute named 'Active' of type Boolean.
 
-{{< figure src="/attachments/refguide7/desktop-modeler/domain-model/entities/attributes/917578.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/domain-model/entities/attributes/917578.png" class="no-border" >}}
 
 ### Localize (Only for the Date and Time Attribute Type)
 
@@ -112,7 +112,7 @@ If the value is a computation, the **Microflow** property defines which microflo
 
 In a webshop, you want to show the total expenses for each customer. These are calculated by retrieving all orders associated with the customer and adding their totals.
 
-{{< figure src="/attachments/refguide7/desktop-modeler/domain-model/entities/attributes/917570.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/domain-model/entities/attributes/917570.png" class="no-border" >}}
 
 ### Default Value (If Value Is Stored)
 

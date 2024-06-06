@@ -3,7 +3,6 @@ title: "Set Up the Apple Push Notification Server"
 linktitle: "Apple Push Notification Server"
 url: /howto8/mobile/setting-up-apple-push-notification-server/
 weight: 30
-tags: ["mobile", "push notification", "apple", "server"]
 ---
 
 ## 1 Introduction {#intro}
@@ -12,7 +11,7 @@ In order to proceed you need an Apple developer license and a device running Mac
 
 This how-to assumes that you already have the app signing key with provisioning profile and can freely build and install your mobile app (if not, please refer to [this how-to](/howto8/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores/)). Take into account that your App ID should use `Explicit App ID` and have `Push Notifications` turned on so you can receive push notifications with your app.
 
-{{< figure src="/attachments/howto8/mobile/hybrid-mobile/push-notifications/setting-up-apple-push-notification-server/20217895.png" >}}
+{{< figure src="/attachments/howto8/mobile/hybrid-mobile/push-notifications/setting-up-apple-push-notification-server/20217895.png" class="no-border" >}}
 
 If this is not the case, you need to create new App ID with `Explicit App ID` and `Push Notifications` turned on. After following the steps below, you'll need to generate and download a new provisioning profile for this App ID and use it to rebuild the mobile app.
 
@@ -31,7 +30,7 @@ Sign in to Apple Developer and navigate to [https://developer.apple.com/account/
 
 ### 2.2 Creating a Key
 
-Click the **+** icon in the upper right of the screen. This will present you with a new form. Enter a descriptive name for this key, select the **Push Notifications service** check box, and then press **Contine**. On the next page, press **Confirm**.
+Click the **+** icon in the upper right of the screen. This will present you with a new form. Enter a descriptive name for this key, select the **Push Notifications service** checkbox, and then press **Contine**. On the next page, press **Confirm**.
 
 ### 2.3 Downloading the Key
 
@@ -67,7 +66,7 @@ Click **Edit**, scroll to the **Push Notifications** section, and choose to conf
 
 The wizard now explains how to create a Certificate Signing Request (CSR). Read this description and press **Continue**. During the next step, you should be asked for your CSR file. You may use the same CSR you used to create the app signing certificate. If you do not have one, please follow the instructions as shown below.
 
-{{< figure src="/attachments/howto8/mobile/hybrid-mobile/push-notifications/setting-up-apple-push-notification-server/20217898.png" >}}
+{{< figure src="/attachments/howto8/mobile/hybrid-mobile/push-notifications/setting-up-apple-push-notification-server/20217898.png" class="no-border" >}}
 
 ### 3.4 Downloading the Certificate
 

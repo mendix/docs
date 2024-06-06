@@ -3,7 +3,6 @@ title: "JSON Schema for Published REST Operation"
 url: /refguide7/published-rest-service-json-schema/
 weight: 20
 description: "Describes the JSON schemas for operation request bodies and operation results"
-tags: ["published REST", "JSON", "Schema", "operation", "request body", "result", "message definition"]
 ---
 
 {{% alert color="info" %}}
@@ -49,7 +48,7 @@ The schema of an attribute depends on the attribute type:
 | Currency       | `{ "type": "number" }` |
 | Date and time  | `{ "type": "string", "format": "date-time" }` |
 | Decimal        | `{ "type": "number" }` |
-| Enumeration    | `{ "type": "string", "enum": ["Male", "Female"] }` |
+| Enumeration    | `{ "type": "string", "enum": ["cat", "dog"] }` |
 | Float          | `{ "type": "number" }` |
 | Hashed string  | `{ "type": "string" }` |
 | Integer        | `{ "type": "integer", "format": "int32" }` |

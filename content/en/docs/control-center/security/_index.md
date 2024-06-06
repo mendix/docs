@@ -42,4 +42,3 @@ On the **Security History** tab, you can click **Show Security History** to open
 {{< figure src="/attachments/control-center/security/security.jpg" class="no-border" >}}
 
 ## 5 Documents in This Category
-

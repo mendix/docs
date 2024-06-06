@@ -3,7 +3,6 @@ title: "Snowflake"
 url: /partners/snowflake/
 description: "Presents information about the strategic alliance between Mendix and Snowflake."
 weight: 20
-tags: ["Snowflake", "connectors", "modules"]
 ---
 
 ## 1 Introduction

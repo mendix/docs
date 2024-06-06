@@ -1,7 +1,6 @@
 ---
 title: "Third-Party Licenses"
 url: /refguide9/third-party-licenses/
-
 weight: 70
 description: "Describes where to find the available third-party licenses in Mendix."
 ---

@@ -1,7 +1,6 @@
 ---
 title: "Security"
 url: /control-center/security/
-
 description: "Describes the Security page in the Mendix Control Center."
 weight: 40
 no_list: false
@@ -43,4 +42,3 @@ On the **Security History** tab, you can click **Show Security History** to open
 {{< figure src="/attachments/control-center/security/security.jpg" class="no-border" >}}
 
 ## 5 Documents in This Category
-

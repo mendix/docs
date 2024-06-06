@@ -1,7 +1,6 @@
 ---
 title: "Debug Java Actions"
 url: /howto8/monitoring-troubleshooting/debug-java-actions/
-
 weight: 4
 ---
 

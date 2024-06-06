@@ -1,7 +1,6 @@
 ---
 title: "Third-Party Licenses"
 url: /refguide8/third-party-licenses/
-
 weight: 70
 ---
 

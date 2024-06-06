@@ -1,7 +1,6 @@
 ---
 title: "Set Up Anonymous User Security"
 url: /howto8/security/set-up-anonymous-user-security/
-
 weight: 30
 ---
 

@@ -5,7 +5,6 @@ url: /developerportal/deploy/private-cloud-tekton/
 description: "Describes how to use Tekton to create a CI/CD solution for Mendix environments in the Private Cloud"
 weight: 40
 ---
-
 {{% alert color="info" %}}
 The Tekton pipelines for Mendix are available to all customers using licensed Operators in Mendix for Private Cloud.
 

@@ -5,7 +5,6 @@ description: "Presents details on the SAP-specific modules available in the Mend
 weight: 40
 no_list: false
 description_list: true
-tags: ["marketplace", "marketplace component", "connector", "module", "SAP"]
 aliases:
     - /appstore/sap-connectors/
 ---

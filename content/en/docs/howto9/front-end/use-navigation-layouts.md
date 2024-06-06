@@ -1,7 +1,6 @@
 ---
 title: "Use Navigation Layouts"
 url: /howto9/front-end/use-navigation-layouts/
-
 weight: 12
 description: "Describes how to choose, design, and configure your navigation layouts."
 ---

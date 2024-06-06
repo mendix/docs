@@ -103,6 +103,7 @@ This section provides an example of how to set up RBAC in Snowflake for two test
     CREATE ROLE ROLETESTA;
     CREATE ROLE ROLETESTB;
     ```
+
 3. Create the following users in Snowflake:
 
     ```SQL
@@ -131,6 +132,7 @@ This section provides an example of how to set up RBAC in Snowflake for two test
     GRANT ROLE ROLETESTA TO USER Testuser1; 
     GRANT ROLE ROLETESTB TO USER Testuser2;
     ```
+
 5. Make each user role default for the user:
 
     ```SQL 

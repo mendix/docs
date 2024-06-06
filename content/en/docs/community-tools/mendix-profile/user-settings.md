@@ -1,7 +1,6 @@
 ---
 title: "User Settings"
 url: /community-tools/mendix-profile/user-settings/
-
 weight: 2
 description: "Describes the user settings for the Mendix Developer Portal."
 ---

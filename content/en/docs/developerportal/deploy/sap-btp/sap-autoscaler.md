@@ -2,7 +2,6 @@
 title: "Application Autoscaler for SAP Business Technology Platform"
 linktitle: "Application Autoscaler for SAP BTP"
 url: /developerportal/deploy/sap-cloud-platform/sap-autoscaler/
-
 weight: 47
 description: "How to set up the SAP Autoscaler"
 aliases:

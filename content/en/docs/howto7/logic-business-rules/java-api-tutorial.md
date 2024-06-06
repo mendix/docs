@@ -1,7 +1,6 @@
 ---
 title: "Use the Java API"
 url: /howto7/logic-business-rules/java-api-tutorial/
-
 weight: 13
 ---
 

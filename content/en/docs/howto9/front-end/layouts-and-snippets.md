@@ -1,7 +1,6 @@
 ---
 title: "Use Layouts and Snippets"
 url: /howto9/front-end/layouts-and-snippets/
-
 weight: 30
 description: "Describes how to create pages using layouts and snippets."
 ---

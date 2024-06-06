@@ -35,33 +35,33 @@ The Studio Pro top bar contains the following items:
 
 ### 2.1 Menus {#menus}
 
-In the Studio Pro top bar, you can see several menus, such as **Switch-to** menu, [Edit](/refguide/edit-menu/), [View](/refguide/view-menu/), and [Version Control](/refguide/version-control-menu/). Each menu contains menu items that allow you to perform various actions, for example, to [create a deployment package](/refguide/create-deployment-package-dialog/), set [preferences](/refguide/preferences-dialog/), or view the [**Errors**](/refguide/errors-pane/) pane. 
+In the Studio Pro top bar, you can see several menus, such as **Switch-to** menu, [Edit](/refguide/edit-menu/), [View](/refguide/view-menu/), and [Version Control](/refguide/version-control-menu/). Each menu contains menu items that allow you to perform various actions, such as to [create a deployment package](/refguide/create-deployment-package-dialog/), set [preferences](/refguide/preferences-dialog/), or view the [**Errors**](/refguide/errors-pane/) pane. 
 
 For more information on menus, see [Menus](/refguide/menus/). 
 
 ### 2.2 Run and View App {#run-and-view}
 
-You can deploy your app by clicking the **Publish** or **Run Locally** ({{% icon name="controls-play" %}}) buttons. To view your deployed app, click **View App**. 
+Deploy your app by clicking the **Publish** or **Run Locally** ({{% icon name="controls-play" %}}) buttons. To view your deployed app, click **View App**. 
 
 {{< figure src="/attachments/refguide/studio-pro-overview/view-and-publish.png" alt="View and Publish buttons" class="no-border" >}}
 
 For more information on deployment in Mendix, see [Deployment](/developerportal/deploy/).
 
-For more information on deploying your app and versioning it, see the [Versioning an App Deployed to the Cloud](/refguide/using-version-control-in-studio-pro/#versioning-app) section in *Using Version Control in Studio Pro*. 
+For more information on deploying and versioning your app, see the [Versioning an App Deployed to the Cloud](/refguide/using-version-control-in-studio-pro/#versioning-app) section in *Using Version Control in Studio Pro*. 
 
 ### 2.3 Links and User Profile Menu {#links}
 
 You can find links to the [Developer Portal](/developerportal/) and [Marketplace](/appstore/) in the upper-right corner of Studio Pro.
 
-Your profile picture is displayed next to them if you are signed in. When you click the profile picture, the drop-down menu is displayed with your full name and email, as well as links to your user profile, My Apps screen, and signing out option. 
+Your profile picture is displayed next to them if you are signed in. When you click the profile picture, the drop-down menu is displayed with your full name and email, as well as links to your user profile, My Apps screen, and the **Sign Out** option. 
 
 ## 3 App Structure (App Explorer)
 
-An app consists of individual files (*documents*) and settings that are grouped in folders and [modules](/refguide/modules/). The complete structure of your app can be viewed in the [App Explorer](/refguide/app-explorer/). 
+An app consists of individual files (documents) and settings that are grouped in folders and [modules](/refguide/modules/). The complete structure of your app can be viewed in the [App Explorer](/refguide/app-explorer/). 
 
 ## 4 Working Area {#working-area}
 
-A working area is a current document tab that you work in. The working area and its settings differs depending on the editor (for example, pages, microflows, domain model editors) and type of the document. 
+A working area is a current document tab that you work in. The working area and its settings differs depending on the editor (for example, pages, microflows, domain model editors) and the type of document. 
 
 ### 4.1 Document Tabs {#documents}
 
@@ -81,7 +81,7 @@ Dockable panes can be positioned around the working area and contain various ele
 
 {{< figure src="/attachments/refguide/studio-pro-overview/pane-example.png" alt="Properties Pane Example" width="300" class="no-border" >}}
 
-For example, you can view [list of errors](/refguide/errors-pane/) or run [MxAssist Best Practice bot](/refguide/mx-assist-performance-bot/), configure properties of a specific document or an element, view toolbox. For more information on panes and their layout, see [View Menu](/refguide/view-menu/).
+For example, you can view [list of errors](/refguide/errors-pane/), run [MxAssist Best Practice bot](/refguide/mx-assist-performance-bot/), configure properties of a specific document or an element, or view toolbox. For more information on panes and their layout, see [View Menu](/refguide/view-menu/).
 
 ## 6 Status Bar {#status-bar}
 
@@ -89,7 +89,7 @@ At the bottom of the Studio Pro main window pane is a status bar. On the left is
 
 {{< figure src="/attachments/refguide/studio-pro-overview/status-bar.png" alt="Status Bar Example" class="no-border" >}}
 
-On the right is the currently selected language. If you have set up multiple languages in your app you can change the currently selected language by clicking here. For more information see [Language Menu](/refguide/translatable-texts/).
+On the right is the currently selected language. If you have set up multiple languages in your app, you can change the currently selected language by clicking here. For more information, see [Language Menu](/refguide/translatable-texts/).
 
 ## 7 Shortcut Keys {#shortcuts}
 
@@ -116,7 +116,7 @@ There are alternative ways to navigate between tabs within panes:
 | <kbd>Ctrl</kbd> + <kbd>1</kbd> - <kbd>0</kbd> | Not available | Switch to tab at selected tab position in the current window. |
 | <kbd>Ctrl</kbd> + <kbd>PgUp</kbd> / <kbd>PgDn</kbd> | Not available | Switch to next/previous tab in active pane. |
 
-Most menu items also have shortcut keys assigned to them that can be used in all panes. These are shown in the menus, listed in the [Menu Shortcut Keys](#menu-shortcuts) section, below, and also listed on the documentation page for each menu under [Menus](/refguide/menus/).
+Most menu items also have shortcut keys assigned to them that can be used in all panes. These are shown in the menus, listed in the [Menu Shortcut Keys](#menu-shortcuts) section, below, and are listed on the documentation page for each menu under [Menus](/refguide/menus/).
 
 ##### 7.1.1.2 Editors Only {#editors-only}
 

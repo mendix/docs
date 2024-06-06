@@ -31,7 +31,7 @@ curl --location --request GET 'https://catalog.mendix.com/rest/search/v5/data?qu
 
 A successful `GET` call results in a `200` status code and a JSON response body that includes the details about the search results:
 
-<details><summary> Example </summary>
+<details><summary><b>Click to see JSON response body</b></summary>
 
 ```json
 {

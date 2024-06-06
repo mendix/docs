@@ -74,7 +74,7 @@ For more details on what can and cannot be provided in these fields, see the [AP
 
 You can see an example of a request below:
 
-```curl
+```bash
 curl --location --request POST 'https://catalog.mendix.com/rest/registration/v5/applications' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: MxToken <your_Personal_Access_Token>' \
@@ -92,7 +92,7 @@ A successful `POST` call results in a `201` status code and a JSON response body
 }
 ```
 
-Use the application_UUID to register your environment.
+Use the application `uuid` to register your environment.
 
 #### 4.1.2 Registering an Environment Through the Catalog Registration API {#register-environment}
 
@@ -108,7 +108,7 @@ For more details on what can and cannot be provided in these fields, see the [AP
 
 You can see an example of a request below:
 
-```curl
+```bash
 curl --location --request POST 'https://catalog.mendix.com/rest/registration/v5/applications/{application_UUID}/environments' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: MxToken <your_Personal_Access_Token>' \
@@ -132,7 +132,7 @@ A successful `POST` call results in a `201` status code and a JSON response body
 }
 ```
 
-Use the application_UUID and the environment_UUID to register one or more services.
+Use the application `uuid` and the environment `uuid` to register one or more services.
 
 #### 4.1.3 Registering Services Through the Catalog Registration API {#register-services}
 
@@ -145,7 +145,6 @@ To register services, you need the following:
 * Service version `Version` and `Security Scheme`
 * Service `Contract` with `Type` and `Value`
 
-
 {{% alert color="warning" %}}
 Once a version is released to production, any updated contracts should be given a new version. This applies even if you are only registering for a non-production environment.
 
@@ -156,7 +155,7 @@ For more details on what can and cannot be provided in these fields, see the [AP
 
 You can see an example of a request below:
 
-```curl
+```bash
 curl --location --request PUT 'https://catalog.mendix.com/rest/registration/v5/applications/{application_UUID}/environments/{environment_UUID}/published-endpoints' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: MxToken <your_Personal_Access_Token>'\
@@ -285,7 +284,7 @@ To call the Transform endpoint of the Registration API, you need the following:
 
 You can see an example of a request that converts a *dependencies.json* file below:
 
-```curl
+```bash
 curl --location --request POST 'https://catalog.mendix.com/rest/registration/v5/transform/dependenciesjson' \
 --header 'Content-Type: application/json' \
 --header 'Authorization: MxToken <your_Personal_Access_Token>' \

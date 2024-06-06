@@ -67,7 +67,7 @@ You can curate Application details from the **Application** tab as follows:
 
 1. Click **Edit** > **Application** tab.
 
-{{< figure src="/attachments/catalog/search/curation-option.png" alt="app edit screen" >}}
+    {{< figure src="/attachments/catalog/search/curation-option.png" alt="app edit screen" >}}
 
 2. The **Application** tab is displayed:
 
@@ -106,7 +106,7 @@ To add a custom **Business Owner**, follow these steps:
 
     {{% alert color="info" %}}When you create or select a custom owner for an application, this will be displayed in the **Application** tab as a link to the email specified. Custom owners will have curate or access rights to the Catalog or the asset in the Catalog. Only Mendix users that are added as an owner can curate assets they own. {{% /alert %}}
 
-2. Click **Save** to return to the **Application** tab. Click **Save** to return to the Data Source details page where the changes will be displayed in the right-hand metadata pane.
+1. Click **Save** to return to the **Application** tab. Click **Save** to return to the Data Source details page where the changes will be displayed in the right-hand metadata pane.
 
 ### 4.2 Changing the App Icon {#application-icon}
 

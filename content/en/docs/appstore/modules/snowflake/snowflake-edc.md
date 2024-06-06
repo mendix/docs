@@ -4,7 +4,6 @@ linktitle: "External Database Connector"
 url: /appstore/modules/snowflake/external-database-connector/
 description: "Describes the steps required to use the Mendix External Database connector with Snowflake."
 weight: 10
-tags: ["Snowflake", "External Database Connector"]
 ---
 
 ## 1 Introduction

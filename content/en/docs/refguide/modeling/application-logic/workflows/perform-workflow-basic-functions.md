@@ -3,7 +3,6 @@ title: "Performing Workflow Basic Functions"
 linktitle: "Perform Basic Functions"
 url: /refguide/perform-workflow-basic-functions/
 weight: 20
-tags: ["workflow", "workflows", "Studio Pro"]
 ---
 
 ## 1 Introduction

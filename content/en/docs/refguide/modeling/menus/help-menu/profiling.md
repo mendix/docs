@@ -2,7 +2,6 @@
 title: "Profiling"
 url: /refguide/profiling/
 description: "Describes how to run a performance profiler session on the local machine from within Studio-Pro."
-tags: ["monitoring", "troubleshooting", "performance", "profiling"]
 ---
 
 ## 1 Introduction

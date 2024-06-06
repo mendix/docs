@@ -74,7 +74,7 @@ If the $ChosenFolder object has **Code** `202002141355334` and **Name** `SubFold
 
 Here is a video created by our community member [Mike Kumpf](https://developer.mendixcloud.com/link/profile/overview/1360) explaining the use of `reversed()` in an expression.
 
-{{% youtube 5tznw5ZUQgk %}}
+{{< youtube 5tznw5ZUQgk >}}
 
 ### 2.3 Creating More Complex Queries {#more-complex}
 

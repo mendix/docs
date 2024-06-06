@@ -57,6 +57,9 @@ disableKinds = ["taxonomy", "term"]
         ordered = false
         startLevel = 2
 
+[module]
+replacements = "github.com/FortAwesome/Font-Awesome -> ., github.com/twbs/bootstrap -> ."
+
 # Comment out if you don't want the "print entire section" link enabled.
 [outputs]
     section = ["HTML", "print"]

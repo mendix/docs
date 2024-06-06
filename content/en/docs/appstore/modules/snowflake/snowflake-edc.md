@@ -19,9 +19,9 @@ To configure connect your Mendix application to Snowflake with the External Data
 
 1. [Install the External Database connector](/appstore/modules/external-database-connector/#installation).
 2. Run the [Connect to Database wizard](/appstore/modules/external-database-connector/#configuration) and select **Snowflake** as the database type.
-2. Provide a name for the database connection document.
-2. Provide connection details and user name and password that can be used to access Snowflake. You can either provide a connection string, or enter the connection details. If you select connection details, a constant with the connection string will be created based on your connection details.
-3. Click **Test Connection** to verify the connection details, and then click **Save**.
+3. Provide a name for the database connection document.
+4. Provide connection details and user name and password that can be used to access Snowflake. You can either provide a connection string, or enter the connection details. If you select connection details, a constant with the connection string will be created based on your connection details.
+5. Click **Test Connection** to verify the connection details, and then click **Save**.
 
 Your Mendix app now connects to Snowflake with the provided connection details. When the connection is successful, you can see your Snowflake schemas and objects in your Mendix app.
 
@@ -64,33 +64,33 @@ As shown in the above example, if your input parameters do no exactly match what
 {{% /alert %}}
 
 5. Verify that the results are correct, and then generate the required entity to collect the data in your Mendix application. For more information, see [External Database Connector: Creating an Entity from the Response](/appstore/modules/external-database-connector/#create-entity).
-5. Create a page with a gallery widget to show the results. Above the gallery widget you need form to allow the user to specify a postalcode. For this you need to create an NPE, e.g. name Filter, with one field, postalcode. The gallery widget will get its data from the Microflow in the next step. You can refresh this widget by using a nanoflow to trigger refresh of the entity shown in the Gallery widget.
+6. Create a page with a gallery widget to show the results. Above the gallery widget you need form to allow the user to specify a postalcode. For this you need to create an NPE, e.g. name Filter, with one field, postalcode. The gallery widget will get its data from the Microflow in the next step. You can refresh this widget by using a nanoflow to trigger refresh of the entity shown in the Gallery widget.
 
 {{< figure src="/attachments/appstore/modules/external-database-connector/sample-snowflake-gallery-page.png" >}}
 
-6. Create a microflow that will run the query by doing the following steps:
+7. Create a microflow that will run the query by doing the following steps:
     1. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
     2. Enter a name for your microflow, for example, *ACT_RetrieveWeatherData*, and then click **OK**.
-    2. Set the Filter NPE as input parameter for your microflow.
-    3. In your **Toolbox**, find the **Query External Database** activity and drag it onto the work area of your microflow.
-    4. Position the **Query External Database** activity between the start and end event of your microflow.
-    5. Double-click the **Query External Database** microflow activity to configure the required parameters.
-    6. In the **Database** section, select your Snowflake database.
-    7. In the **Query** list, select the query name that you entered in step 2.
-    8. In the **Parameters** section, add the following parameter:
+    3. Set the Filter NPE as input parameter for your microflow.
+    4. In your **Toolbox**, find the **Query External Database** activity and drag it onto the work area of your microflow.
+    5. Position the **Query External Database** activity between the start and end event of your microflow.
+    6. Double-click the **Query External Database** microflow activity to configure the required parameters.
+    7. In the **Database** section, select your Snowflake database.
+    8. In the **Query** list, select the query name that you entered in step 2.
+    9. In the **Parameters** section, add the following parameter:
         * **Name** - *postal_code*
         * **Type** - **String**
         * **Value** - *$Filter/PostalCode*
-    9. In the **Output** section, provide the following values:
+    10. In the **Output** section, provide the following values:
         * **Return type** - **List of *{your module name}*.CLIMATOLOGY_FORECAST**
         * **Use return value** - set to **Yes**
         * **List name** - enter *CLIMATOLOGY_DAY*
-    10. Click **OK**.
+    11. Click **OK**.
 
     {{< figure src="/attachments/appstore/modules/external-database-connector/sample-snowflake-query-basic-flow.png" >}}
 
-7. Specify the microflow as the datasource for the gallery widget.
-8. Run the page, provide a valid postalcode, and validate the result of the page.
+8. Specify the microflow as the datasource for the gallery widget.
+9. Run the page, provide a valid postalcode, and validate the result of the page.
 
 ## 4 Configuring a Filtered Query
 
@@ -115,10 +115,10 @@ limit 1000
 4. Click **Run Query**.
 5. Verify that the results are correct, and then generate the required entity to collect the data in your Mendix application. For more information, see [External Database Connector: Creating an Entity from the Response](/appstore/modules/external-database-connector/#create-entity).
 6. [Add a **Data grid 2** widget](/refguide/page/#add-elements) to the page where you want to display the query results.
-6. Similar to the previous example, add a dataview with filter fields, and a filter NPE to collect the user's filter values.
-7. Double-click the data grid widget, and give it a data source microflow by selecting **Data source** > **Type** > **Microflow**.
-8. Next to the microflow field, click the **Select** button, and then click **New**.
-9. Configure the microflow that will run the query by doing the following steps:
+7. Similar to the previous example, add a dataview with filter fields, and a filter NPE to collect the user's filter values.
+8. Double-click the data grid widget, and give it a data source microflow by selecting **Data source** > **Type** > **Microflow**.
+9. Next to the microflow field, click the **Select** button, and then click **New**.
+10. Configure the microflow that will run the query by doing the following steps:
     1. Enter a name for your microflow, for example, *ACT_RetrievFilteredResults*, and then click **OK**.
     2. Specify the Filter NPE as input parameter for your microflow.
     3. In your **Toolbox**, find the **Query External Database** activity and drag it onto the work area of your microflow.
@@ -140,7 +140,7 @@ limit 1000
         * **Use return value** - set to **Yes**
         * **List name** - enter *HISTORY_DAY*
     10. Click **OK**.
-10. Configure a nanoflow with the [Refresh entity](/appstore/modules/nanoflow-commons/) action to refresh the data grid if a user changes one of the filter values.
+11. Configure a nanoflow with the [Refresh entity](/appstore/modules/nanoflow-commons/) action to refresh the data grid if a user changes one of the filter values.
 
 ## 5 Configuring a Query to Display Data as a Chart
 

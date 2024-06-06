@@ -59,6 +59,8 @@ The list contains the following information:
 * Column customization ({{% icon name="view" %}}): You can customize the columns of the list by clicking the {{% icon name="view" %}} icon and adjusting the selection of the check boxes.
 * **View details**: Click this opens the [Component Summary](#component-summary) page, if it is available. The **View details** button is grayed out if it is not applicable.
 
+To export the information of selected items in the list to an Excel file, select the check boxes of the items in the list, and then click {{% icon name="office-sheet" %}} **Selection Export**that appears at the bottom of the page.
+
 ### 2.1 Component Summary {#component-summary}
 
 On the **Overview** tab, if you click **View Details** for an item in the list, the **Component Summary** page opens. This page shows the components of the selected app environment for your easy visual consumption.

@@ -20,7 +20,7 @@ End-users of your application only see the user roles and not the module roles.
 
 To access user roles, open **App Security** > **User roles** tab:
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/security/app-security/user-roles/user-roles-example.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/security/app-security/user-roles/user-roles-example.png" class="no-border" >}}
 
 ## 2 User Role Properties
 
@@ -31,7 +31,7 @@ The user role has the following properties:
 * [General properties](#general)
 * [User management properties](#user-management)
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/security/app-security/user-roles/user-role-properties.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/security/app-security/user-roles/user-role-properties.png" class="no-border" >}}
 
 ### 2.1 General Properties {#general}
 

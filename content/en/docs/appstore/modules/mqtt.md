@@ -1,7 +1,6 @@
 ---
 title: "MQTT"
 url: /appstore/modules/mqtt/
-
 description: "Describes the configuration and usage of the MQTT connector, which is available in the Mendix Marketplace."
 aliases:
     - /appstore/connectors/mqtt/

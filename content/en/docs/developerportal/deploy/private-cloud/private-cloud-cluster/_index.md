@@ -3,7 +3,6 @@ title: "Creating a Private Cloud Cluster"
 url: /developerportal/deploy/private-cloud-cluster/
 description: "Describes the processes for creating a Private Cloud cluster in the Mendix Developer Portal"
 weight: 10
-tags: ["Create", "Private Cloud", "Cluster", "Namespace"]
 ---
 
 ## 1 Introduction
@@ -74,7 +73,7 @@ Should you consider using a connected environment, the following URLs should be 
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/create-cluster.png" class="no-border" >}}
 
-### 3.2 Adding a Namespace {#add-namespace}
+### 3.2.1 Adding a Namespace for Connected Cluster {#add-namespace}
 
 You now need to add a namespace to your cluster. Your cluster can contain several namespaces, see [Containerized Mendix App Architecture](#containerized-architecture), below for more information.
 
@@ -99,6 +98,34 @@ To add a namespace, do the following:
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/add-namespace.png" class="no-border" >}}
 
 {{% alert color="warning" %}} If you have selected a *Connected Installation Type* please verify that the [Connected Environment Pre-requisites](#prerequisites-connected) are configured. {{% /alert %}}
+
+### 3.2.2 Adding a Namespace for Standalone Cluster {#add-standalone-namespace}
+
+If you would like to add a namespace to be added in the Standalone cluster, do the following:
+
+1. Click **Details** ({{% icon name="notes-paper-text" %}}) on the top right of the page:
+
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/empty-cluster.png" class="no-border" >}}
+
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/ClusterDetails.png" class="no-border" >}}
+
+2. Click **Add Namespace**.
+
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/namespace-details-standalone.png" class="no-border" >}}
+
+3. Enter the following details:
+
+    * **Namespace** – This is the namespace in your platform; this must conform to the namespace naming conventions of the cluster: all lower-case with hyphens allowed within the name.
+    * **Installation type** – Choose **Standalone**.
+
+4. Click **Next**.
+5. Once you click on **Next**, you will be redirected to the Installation pop up page from where you can download the mxpc-cli and get the command to install the namespace in the cluster.
+
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/standalone_downloadcli.png" class="no-border" >}}  
+
+    For existing namespaces, if you would like to download the executables for mxpc-cli, you can go [here](https://privatecloud.mendixcloud.com/rest/internal/v1/mxpc-cli?operatorVersion=latest)
+
+    In above page, once you do a json format, you will get the links for mxpc-cli for different available versions.
 
 ## 4. Installing and Configuring the Mendix Operator {#install-operator}
 
@@ -128,7 +155,7 @@ Before updating the Operator with the advanced configurations, make sure to go t
 {{% /alert %}}
 
 {{% alert color="info" %}}
-For Global Operator scenarios, if the Operator configuration in the managed namespace differa from the configuration in the Global Operator namespace, the configuration from the managed namespace will always take precedence.
+For Global Operator scenarios, if the Operator configuration in the managed namespace differs from the configuration in the Global Operator namespace, the configuration from the managed namespace will always take precedence.
 {{% /alert %}}
 
 Some advanced configuration options of the Mendix Operator are not yet available in the **Configuration Tool**.
@@ -670,7 +697,7 @@ You can set the following metrics configuration values:
 * `mxAgentInstrumentationConfig`: instrumentation configuration for the [Java instrumentation agent](https://github.com/mendix/mx-agent); collects additional metrics such as microflow execution times; can be left empty to use the default instrumentation config. This attribute is only applicable when `mode` is `native`, and `mxAgentConfig` is not empty.
 
 {{% alert color="warning" %}}
-MxAgent is a [Java instrumentation agent](https://docs.oracle.com/en/java/javase/11/docs/api/java.instrument/java/lang/instrument/Instrumentation.html) and is unrelated to the Mendix for Private Cloud Gateway Agent.
+MxAgent is a [Java instrumentation agent](https://docs.oracle.com/en/java/javase/21/docs/api/java.instrument/java/lang/instrument/Instrumentation.html) and is unrelated to the Mendix for Private Cloud Gateway Agent.
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -899,7 +926,7 @@ Here you can perform the following actions on the entire cluster:
 
 If you prefer the individual to join as a cluster manager automatically, without requiring them to manually accept the invitation, you can enable the **Automatically accept invites** option.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/AutoAcceptClusterManager.png" class="no-border" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/AutoAcceptClusterManager.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 The **Automatically accept invites** option is applicable only when the invited users have the same email domain as yours.
@@ -1157,9 +1184,7 @@ You can invite additional members to the namespace, and configure their role dep
 3. Enter the **Email** of the person you want to invite.
 4. If you prefer the individual to join as a namespace member automatically, without requiring them to manually accept the invitation, you can enable the **Automatically accept invites** option.
 
-{{% alert color="info" %}}
-The **Automatically accept invites** option is applicable only when the invited users have the same email domain as yours.
-{{% /alert %}}
+    {{% alert color="info" %}}The **Automatically accept invites** option is applicable only when the invited users have the same email domain as yours.{{% /alert %}}
 
 5. Give them the rights they need. This can be:
 

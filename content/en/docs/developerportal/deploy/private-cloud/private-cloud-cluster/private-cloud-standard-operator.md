@@ -3,7 +3,6 @@ title: "Running the Mendix Operator in Standard Mode"
 url: /developerportal/deploy/standard-operator/
 description: "Describes the processes of installing and configuring the Mendix Operator in the Private Cloud in Standard mode"
 weight: 30
-tags: ["Deploy", "Private Cloud", "Standard Operator"]
 ---
 
 ## 1 Introduction

@@ -1,10 +1,8 @@
 ---
 title: "Team"
 url: /developerportal/general/team/
-
 weight: 3
 description: "Describes the Team page of the Developer Portal."
-tags: ["Team", "Developer Portal"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
@@ -19,7 +17,7 @@ To view and manage your team members, follow these steps:
 
 ## 2 Managing the Team {#managing}
 
-Only team members with the [Scrum Master](/developerportal/general/app-roles/#team-roles) role can manage the app team.
+Team members with the [Scrum Master](/developerportal/general/app-roles/#team-roles) role or [Mendix Administrators](/control-center/company-settings/#3-mendix-admins) can manage the app team.
 
 {{< figure src="/attachments/developerportal/general/team/team.png" class="no-border" >}}
 
@@ -33,11 +31,11 @@ Navigate to the **Role Settings** tab to view and edit permissions for the team 
 
 {{< figure src="/attachments/developerportal/general/team/role-settings.png"   width="400"  class="no-border" >}}
 
-Navigate to the **History** tab to view the history of changes for the team and [node permissions](/developerportal/deploy/node-permissions/).
-
 Navigate to the **Pending Invites** tab for an overview of all sent and unaccepted invitations. You can retract pending invitations from there.
 
 ## 3 Inviting Team Members {#inviting}
+
+Anyone with invitation permissions in their app role can invite new team members. When you invite a new team member, you can select a role with the same or less permissions as your own. The notable exception is when [Mendix Administrators](/control-center/company-settings/#3-mendix-admins) invite new team members. They can appoint any role to any team member.
 
 To invite new team members, follow these steps:
 

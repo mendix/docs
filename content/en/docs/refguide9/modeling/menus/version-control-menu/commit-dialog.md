@@ -2,7 +2,6 @@
 title: "Commit"
 url: /refguide9/commit-dialog/
 weight: 20
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction

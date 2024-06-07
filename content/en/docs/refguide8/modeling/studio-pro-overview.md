@@ -1,10 +1,8 @@
 ---
 title: "Studio Pro Overview"
 url: /refguide8/studio-pro-overview/
-
 description: "Describes Studio Pro in general: tabs, menus, shortcut keys."
 weight: 10
-tags: ["Studio Pro"]
 aliases:
     - /refguide8/desktop-modeler-overview.html
     - /refguide8/desktop-modeler-overview

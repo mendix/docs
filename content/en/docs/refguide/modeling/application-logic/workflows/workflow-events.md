@@ -2,7 +2,6 @@
 title: "Workflow Events"
 url: /refguide/workflow-events/
 weight: 55
-tags: ["workflow", "workflows", "workflow-events", "workflow event"]
 ---
 
 ## 1 Introduction

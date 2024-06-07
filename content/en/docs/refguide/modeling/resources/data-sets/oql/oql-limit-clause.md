@@ -2,7 +2,6 @@
 title: "OQL Limit Clause"
 url: /refguide/oql-limit-clause/
 weight: 60
-tags: ["oql", "studio pro"]
 ---
 
 ## 1 Description

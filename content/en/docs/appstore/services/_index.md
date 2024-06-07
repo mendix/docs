@@ -5,7 +5,6 @@ description: "Presents details on the services available in the Mendix Marketpla
 weight: 6
 no_list: false
 description_list: true
-tags: ["marketplace", "marketplace component", "service"]
 ---
 
 ## 1 Introduction

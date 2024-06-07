@@ -3,7 +3,6 @@ title: "Use the Charts Theme"
 url: /appstore/widgets/charts-theme/
 weight: 40
 description: "Hos to set up a theme which will be applied to all the charts created with charts widgets in an app"
-tags: ["Charts", "Theme", "Widget", "Studio Pro"]
 aliases:
     - /howto/front-end/charts-theme/
 ---

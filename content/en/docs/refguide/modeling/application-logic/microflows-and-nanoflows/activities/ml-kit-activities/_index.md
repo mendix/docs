@@ -2,7 +2,6 @@
 title: "ML Kit Activities"
 url: /refguide/ml-kit-activities/
 weight: 82
-tags: ["studio pro"]
 ---
 
 {{% alert color="info" %}}

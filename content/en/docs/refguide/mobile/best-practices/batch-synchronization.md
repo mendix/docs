@@ -3,7 +3,6 @@ title: "Batch Synchronization"
 url: /refguide/mobile/best-practices/batch-synchronization
 weight: 30
 description: "This pattern lets you spread long synchronizations to multiple actions and present a progress to your users."
-tags: ["mobile", "best practices", "patterns", "offline-first", "synchronization"]
 ---
 
 ## 1 Introduction

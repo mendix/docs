@@ -3,7 +3,6 @@ title: "Customize Styling"
 url: /howto/front-end/customize-styling-new/
 weight: 20
 description: "This describes how developers can change apps styling and create re-usable styling."
-tags: ["build", "app", "studio pro", "style", "styling"]
 ---
 
 ## 1 Introduction

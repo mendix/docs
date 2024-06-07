@@ -3,7 +3,6 @@ title: "MxAssist Best Practice Bot"
 url: /refguide/mx-assist-performance-bot/
 weight: 30
 description: "Describes MxAssist Best Practice Bot in Mendix Studio Pro."
-tags: ["studio pro", "best practice bot", "mendix assist", "AI", "mx assist", "Mendix best practice", "anti patterns"]
 ---
 
 ## 1 Introduction 

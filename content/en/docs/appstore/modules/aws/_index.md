@@ -1,11 +1,10 @@
 ---
-title: "AWS Connectors"
+title: "AWS Modules"
 url: /appstore/aws-modules/
 description: "Presents details on the AWS-specific connectors available in the Mendix Marketplace."
 weight: 40
 no_list: false
 description_list: true
-tags: ["marketplace", "marketplace component", "connector", "AWS"]
 aliases:
     - /appstore/aws-connectors/
     - /appstore/connectors/

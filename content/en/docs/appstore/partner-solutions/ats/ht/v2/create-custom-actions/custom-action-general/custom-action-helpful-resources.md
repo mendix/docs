@@ -2,7 +2,6 @@
 title: "Helpful Resources"
 url: /appstore/partner-solutions/ats/ht-two-custom-action-helpful-resources/
 description: "This document describes helpful resources to use when creating custom actions."
-tags: ["ATS", "testing"]
 ---
 
 ## 1 Introduction

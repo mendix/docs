@@ -4,7 +4,6 @@ url: /refguide/machine-learning-kit/design-patterns/
 no_list: false
 description_list: true 
 weight: 35
-tags: ["studio pro", "machine learning", "ml kit", "models"]
 ---
 
 ## 1 Introduction

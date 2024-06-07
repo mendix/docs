@@ -2,7 +2,6 @@
 title: "SAP HANA"
 url: /refguide/saphana/
 weight: 70
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction

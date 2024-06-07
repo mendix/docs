@@ -3,7 +3,6 @@ title: "MPR dump"
 url: /refguide/mx-command-line-tool/dump-mpr
 weight: 60
 description: "Describes the command used to create a JSON description of the model of a Mendix App."
-tags: ["mx", "command-line", "tool", "mx", "studio pro", "windows", "linux", "mpr", "export"]
 ---
 
 ## 1 Introduction
@@ -14,7 +13,7 @@ The `mx dump-mpr` command enables you to export the app model of Mendix in the f
 
 Use the following command pattern: `mx dump-mpr [OPTIONS] [TARGET-FILE]`
 
-The `TARGET-FILE` points to the location of the project file, this file has the extension '.mpr'.
+The `TARGET-FILE` points to the location of the project file (this file has the extension *.mpr*).
 
 These are the `OPTIONS`:
 

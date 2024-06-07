@@ -2,7 +2,6 @@
 title: "Authentication Widgets"
 url: /refguide8/authentication-widgets/
 weight: 55
-tags: ["authentication", "widgets", "studio pro", "login", "password"]
 ---
 
 ## 1 Introduction

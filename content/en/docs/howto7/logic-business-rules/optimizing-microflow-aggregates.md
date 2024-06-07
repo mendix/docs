@@ -1,9 +1,7 @@
 ---
 title: "Optimize Microflow Aggregates"
 url: /howto7/logic-business-rules/optimizing-microflow-aggregates/
-
 weight: 7
-tags: ["microflow", "aggregate"]
 #To update screenshots of these microflows in the Desktop Modeler, use the Microflow Screenshots app.
 ---
 

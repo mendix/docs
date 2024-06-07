@@ -1,10 +1,8 @@
 ---
 title: "Mendix for Private Cloud"
 url: /releasenotes/developer-portal/mendix-for-private-cloud/
-
 weight: 20
 description: "Release notes for deployment using Mendix for Private Cloud"
-tags: ["release notes", "deployment", "Mendix for Private Cloud", "Private Cloud"]
 ---
 
 These release notes cover changes to deployment to [Mendix for Private Cloud](/developerportal/deploy/private-cloud/). There are separate release notes for other deployment targets, see [Deployment](/releasenotes/developer-portal/deployment/) release notes page for further information.
@@ -12,6 +10,16 @@ These release notes cover changes to deployment to [Mendix for Private Cloud](/d
 For information on the current status of deployment to Mendix for Private Cloud and any planned releases see [Mendix Status](https://status.mendix.com/).
 
 ## 2024
+
+### May 30th, 2024
+
+#### Portal Enhancements
+
+* Standalone cluster members are now redirected directly to the mxpc-cli download page instead of the Installation page.
+* An issue has been resolved where an incorrect notification email was sent when cluster/namespace membership was auto-accepted.
+* A new field, License Provision Error, has been added to the Environment details page for cases where license provisioning fails.
+* A problem preventing users with developer permissions from accessing the Model Option from the Environment Overview page has been fixed (Ticket [215150](https://mendixsupport.zendesk.com/agent/tickets/215150)).
+* The error message that appears when a user tries to delete the environment after the namespace is deleted directly from the cluster has been corrected.
 
 ### May 9th, 2024
 

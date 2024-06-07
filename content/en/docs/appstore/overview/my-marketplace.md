@@ -3,7 +3,6 @@ title: "My Marketplace"
 url: /appstore/overview/my-marketplace/
 weight: 1
 description: "Presents a reference for using the My Marketplace features of the Mendix Marketplace."
-tags: ["marketplace",  "my marketplace", "widget", "connector", "module", "partner"]
 ---
 
 ## 1 Introduction

@@ -2,7 +2,6 @@
 title: "Translating Your App Content"
 url: /refguide9/translate-your-app-content/
 weight: 50
-tags: ["studio pro", "translate app", "batch translate", "translate"]
 aliases:
   - /howto9/collaboration-requirements-management/translate-your-app-content/
 ---

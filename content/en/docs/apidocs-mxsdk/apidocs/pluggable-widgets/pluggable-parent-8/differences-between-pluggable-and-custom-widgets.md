@@ -3,7 +3,6 @@ title: "Compare Pluggable and Custom Widgets – Mx8"
 linktitle: "Compare Pluggable and Custom Widgets"
 url: /apidocs-mxsdk/apidocs/differences-between-pluggable-and-custom-widgets/
 description: This document explains the differences between pluggable and custom widgets.
-tags: ["Widget", "Pluggable",  "JavaScript"]
 ---
 
 ## 1 Introduction

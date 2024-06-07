@@ -3,7 +3,6 @@ title: "Starting with App from a Spreadsheet"
 url: /refguide9/app-from-spreadsheet/
 weight: 19
 description: "Describes how to import an Excel spreadsheet to your app in Mendix Studio Pro using App from a spreadsheet template."
-tags: ["studio pro", "domain model", "excel import", "spreadsheet", "app from spreadsheet"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #The anchor <after-import> below is mapped, so it should not be removed or changed.
 ---

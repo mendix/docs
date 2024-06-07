@@ -2,7 +2,6 @@
 title: "Batch Translate"
 url: /refguide8/batch-translate/
 weight: 30
-tags: ["studio pro", "translation", "languages", "translatable text"]
 ---
 
 ## 1 Introduction

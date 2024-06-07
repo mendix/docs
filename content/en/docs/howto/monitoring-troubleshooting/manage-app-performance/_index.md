@@ -1,10 +1,8 @@
 ---
 title: "Manage App Performance"
 url: /howto/monitoring-troubleshooting/manage-app-performance/
-
 weight: 12
 description: "Describes how to manage app performance by using New Relic."
-tags: ["monitoring", "troubleshooting", "performance", "new relic"]
 ---
 
 ## 1 Introduction

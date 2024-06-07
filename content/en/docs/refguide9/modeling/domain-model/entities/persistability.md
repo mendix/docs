@@ -2,7 +2,6 @@
 title: "Persistability"
 url: /refguide9/persistability/
 weight: 20
-tags: ["domain model", "entity", "persistability", "persistable", "non-persistable"]
 ---
 
 ## 1 Introduction

@@ -5,7 +5,6 @@ description: "Describes how to use the Mendix Java library and use Eclipse as an
 weight: 60
 no_list: false
 description_list: true 
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction

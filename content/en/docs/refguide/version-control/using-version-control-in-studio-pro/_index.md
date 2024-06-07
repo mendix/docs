@@ -2,10 +2,8 @@
 title: "Using Version Control in Studio Pro"
 url: /refguide/using-version-control-in-studio-pro/
 linktitle: "Using Version Control"
-
 weight: 10
 description: "Describes how to work with version control and how to resolve some issues which may arise."
-tags: ["Version Control", "Conflicts", "Resolve", "Merge", "Patch", "Branch", "Development"]
 # Renamed from version-control-scenarios
 ---
 
@@ -169,7 +167,7 @@ The history of the app is a list of all revisions that have been committed. To v
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/history-button.png" max-width=60% alt="History Button" >}}
 
-The revisions are shown in reverse chronological order (newest is at top of list). The history dialog shows you revision number, date, time, author, and message of each revision.
+For Git-based applications, revisions are sorted according to the commit history, which sometimes does not reflect the chronological order due to Git's decentralized nature and local commits. The history dialog shows you revision number, date, time, author, and message of each revision.
 
 Select a revision to see additional details, such as related Developer Portal stories, changed documents, Studio Pro version, and changes on disk. Icons summarize the kinds of changes that happened in the app.
 
@@ -388,6 +386,26 @@ To fix this, make a small commit on your branch in Studio Pro (for example, chan
 When working in different apps with different Studio Pro versions, you may one day find yourself with an app model upgraded and committed to a newer Studio Pro version, while the rest of your team is not yet ready to upgrade. 
 
 To revert this version upgrade of the app model, use the Git tool of your preference to revert the change.
+
+### 9.6 Integrating Git in a Build Pipeline
+
+When building deployment packages in a pipeline outside the Mendix platform, you will need to retrieve a specific commit from the Git server. To avoid downloading the full repository every time you can use a clone with limited depth (*shallow clone*). With a minimal amount of data to retrieve, the operation is a lot faster and takes less toll on the version control server.
+
+You can use the commands below to download a shallow clone. Note that they should only be used to download a single revision, as Studio Pro is not compatible with working on a shallow clone.
+
+```text {linenos=false}
+# make a new blank repository in the current directory
+git init
+
+# add a remote
+git remote add origin url://to/source/repository
+
+# fetch a commit (or branch or tag) of interest with limited history
+git fetch --depth 1 origin <sha1-of-commit-of-interest>
+
+# reset this repository's master branch to the commit of interest
+git reset --hard FETCH_HEAD
+```
 
 ## 10 Read More
 

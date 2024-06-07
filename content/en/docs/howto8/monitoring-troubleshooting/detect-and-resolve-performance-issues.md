@@ -1,8 +1,6 @@
 ---
 title: "Detect and Resolve Performance Issues"
 url: /howto8/monitoring-troubleshooting/detect-and-resolve-performance-issues/
-
-tags: ["monitoring", "troubleshooting", "performance issue", "performance"]
 ---
 
 ## 1 Introduction

@@ -5,7 +5,6 @@ weight: 4
 no_list: false
 description_list: true
 description: "Describes how to create and share Mendix Marketplace content."
-tags: ["marketplace", "public marketplace", "private marketplace", widget", "module"]
 aliases:
     - /appstore/overview/share-content/
     - /appstore/general/share-app-store-content/

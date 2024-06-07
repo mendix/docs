@@ -1,7 +1,6 @@
 ---
 title: "OQL REPLACE"
 url: /refguide9/oql-replace/
-tags: ["studio pro"]
 ---
 
 {{% alert color="info" %}}

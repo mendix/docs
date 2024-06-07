@@ -2,7 +2,6 @@
 title: "Search in the Catalog"
 url: /catalog/manage/search/
 description: "Describes how to find data sources and datasets in the Catalog."
-tags: ["data hub", "Catalog", "data source", "dataset"]
 aliases:
     - /data-hub/data-hub-catalog/search/
     - /data-hub/data-hub-catalog/manage-data-sources/search/
@@ -290,6 +289,7 @@ Enter a search string in the **Search** area with a minimum of 3 alphanumeric ch
 #### 3.4.2 Filters {#filter}
 
 You can filter search results by: 
+
 * Environment type (the **Production** environment filter is active by default)
 * Technology
 * [CRUD](/howto/integration/write-data/) (Creatable, Readable, Updatable, or Deletable) capabilities

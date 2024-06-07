@@ -5,7 +5,6 @@ description: "Provides information on how to obtain support for your Mendix apps
 weight: 47
 no_list: false 
 description_list: true
-tags: ["support", "sla", "standard", "premier", "platform", "extended support"]
 cascade:
     - content_type: "Mendix Support Guide"
     - mendix_version: 10
@@ -91,7 +90,7 @@ Mendix supports the Mendix Platform, and we expect you to support the applicatio
 
 For more information, see the [Support for Different Deployment Strategies](#support-by-strategy) section below.
 
-During the start phase, and through part of the scale phase, of your digital transformation journey, it might be best to let your development team (DevOps) handle the support of the applications. As the number of applications grows, it is best to let an expert service desk handle the support of your applications. You can involve your existing service desk team or outsource support to one of our support partners which you can find listed on the [Meet Our Partners](https://developer.mendixcloud.com/link/partneroverview) page.
+During the start phase, and through part of the scale phase, of your digital transformation journey, it might be best to let your development team (DevOps) handle the support of the applications. As the number of applications grows, it is best to let an expert service desk handle the support of your applications. You can involve your existing service desk team or outsource support to one of our support partners which you can find listed on the [Meet Our Partners](https://www.mendix.com/partners/find-a-partner/) page.
 
 ### 5.1 Mendix Admins
 

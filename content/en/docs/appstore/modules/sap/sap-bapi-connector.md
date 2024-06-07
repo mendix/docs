@@ -1,10 +1,8 @@
 ---
 title: "BAPI Connector for SAP Solutions"
 url: /appstore/modules/sap/sap-bapi-connector/
-
 weight: 18
 description: "Presents reference information on the use of the BAPI Connector for SAP solutions."
-tags: ["SAP", "integration", "OData", "BAPI"]
 aliases:
     - /partners/sap/sap-bapi-connector/
     - /appstore/connectors/sap/sap-bapi-connector/

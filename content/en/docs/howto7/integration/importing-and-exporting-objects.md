@@ -1,9 +1,7 @@
 ---
 title: "Import and Export Objects"
 url: /howto7/integration/importing-and-exporting-objects/
-
 weight: 2
-tags: ["mpk", "project package", "import", "export", "document", "project", "module", "widget"]
 ---
 
 ## 1 Introduction

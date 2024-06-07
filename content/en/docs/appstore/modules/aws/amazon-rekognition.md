@@ -3,7 +3,6 @@ title: "Amazon Rekognition"
 url: /appstore/modules/aws/amazon-rekognition/
 description: "Describes the configuration and usage of the Amazon Rekognition connector from the Mendix Marketplace. Amazon Rekognition offers pre-trained and customizable computer vision (CV) capabilities to extract information and insights from your images and videos.​"
 weight: 20
-tags: ["marketplace", "marketplace component", "amazon", "rekognition", "connector"]
 aliases:
     - /appstore/connectors/amazon-rekognition/
     - /appstore/connectors/aws/amazon-rekognition/
@@ -32,7 +31,7 @@ To authenticate with Amazon Web Service (AWS), you must also install and configu
 
 ### 1.3 Example
 
-{{% youtube h_R1mMtkfd8 %}}
+{{< youtube h_R1mMtkfd8 >}}
 
 ### 1.4 Licensing and Cost
 

@@ -2,7 +2,6 @@
 title: "Preferences"
 url: /refguide/preferences-dialog/
 weight: 50
-tags: ["studio pro", "preferences", "settings", "edit menu"]
 ---
 
 ## 1 Introduction
@@ -55,33 +54,35 @@ This is the directory where new apps are stored. It is used in the [App Settings
 
 ## 3 Deployment Tab {#deployment}
 
-### 3.1 Deployment
+### 3.1 JDK {#jdk}
 
-#### 3.1.1 JDK Directory {#jdk-directory}
+Here the directories of the Java Development Kit (JDK) for each supported Java version can be selected.
+These JDKs are used when you locally deploy an application.
+Usually, the correct directories are located automatically.
 
-This is the directory in which the Java Development Kit (JDK) is located on the computer on which you deploy the application. Usually, the correct directory is located automatically.
+A JDK is necessary to run Mendix applications, because the Mendix Runtime runs on the Java Virtual Machine (JVM).
 
-The JDK is necessary to run Mendix applications, because the Mendix Runtime is written in Java.
+### 3.2 Deployment
 
-#### 3.1.2 Enable Run Optimizations
+#### 3.2.2 Enable Run Optimizations
 
 Enable this setting to increase the speed at which a running application is updated after changes have been made in Studio Pro. If only pages, layouts, or snippets have been changed, then an entire restart of the application is skipped to decrease deployment time. Also, no Java compilation is performed when no relevant files have changed.
 
-#### 3.1.3 Optimize Bundle {#bundle}
+#### 3.2.3 Optimize Bundle {#bundle}
 
 This setting is visible and effective when the React client is enabled. By default, it is already enabled to reduce the size of the generated app bundle and speeds up the bundling process by disabling source maps generation. Source maps are used for debugging the bundled code during development. If you want to generate source maps for debugging pluggable widgets, you can disable this setting.
 
-### 3.2 Build
+### 3.3 Build
 
-#### 3.2.1 Gradle Directory
+#### 3.3.1 Gradle Directory
 
 A directory where Gradle is located on the computer that you use to deploy the application. The correct directory is usually located automatically.
 
-#### 3.2.2 Use Custom Repositories
+#### 3.3.2 Use Custom Repositories
 
 Enabling this option allows you to specify which repositories should be used by Gradle. For more information, see the [Custom Repositories](/refguide/managed-dependencies/#custom-repos) section in *Managed Dependencies*.
 
-#### 3.2.3 Repositories
+#### 3.3.3 Repositories
 
 Here you can specify which repositories to use for Gradle. The content of this field should be specified using Groovy syntax and is what is inside the `repositories { }` section in a Gradle build file. By default, this field contains: `mavenCentral()`.
 

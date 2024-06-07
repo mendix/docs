@@ -3,7 +3,6 @@ title: "Storage Plans"
 url: /developerportal/deploy/private-cloud-storage-plans/
 description: "Describes how to configure storage plans in Mendix for Private Cloud."
 weight: 10
-tags: ["Private Cloud","Storage","Database","File","S3","Minio","Postgres","Azure"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
@@ -1524,25 +1523,22 @@ To configure the required settings for an RDS database, do the following steps:
 1. Create a Postgres RDS instance and enable **Password and IAM database authentication**, or enable **Password and IAM database authentication** for an existing instance.
 2. Enable [IAM authentication](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.DBAccounts.html#UsingWithRDS.IAMDBAuth.DBAccounts.PostgreSQL) and grant `rds_iam` role to `database-username` role by using the below `psql` commandline to run the following jump pod commands (replacing `<database-username>` with the username specified in `database-username` and `<database-host>` with the database host):
 
-   ```sql {linenos=false}
-   kubectl run postgrestools docker.io/bitnami/postgresql:14 -ti --restart=Never --rm=true -- /bin/sh
-   export PGDATABASE=postgres
-   export PGUSER=<database-username>
-   export PGHOST=<database-host>
-   export PGPASSWORD=""
-   psql
+    ```sql {linenos=false}
+    kubectl run postgrestools docker.io/bitnami/postgresql:14 -ti --restart=Never --rm=true -- /bin/sh
+    export PGDATABASE=postgres
+    export PGUSER=<database-username>
+    export PGHOST=<database-host>
+    export PGPASSWORD=""
+    psql    
+    GRANT rds_iam TO <database-username>;
+    ALTER ROLE <database-username> WITH PASSWORD NULL;
+    ```
 
-   GRANT rds_iam TO <database-username>;
-   ALTER ROLE <database-username> WITH PASSWORD NULL;
-   ```
+    See the [RDS IAM documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.Enabling.html) for more details on enabling IAM authentication.
 
-See the [RDS IAM documentation](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.Enabling.html) for more details on enabling IAM authentication.
+    {{% alert color="info" %}}The VPC and firewall must be configured to allow connections to the database from the Kubernetes cluster. When creating the RDS instance, as a best practice, make sure that it uses the same VPC as the Kubernetes cluster. Alternatively, you can also use a publicly accessible cluster. After an RDS instance has been created, it is not possible to modify its VPC.{{% /alert %}}
 
-    {{% alert color="info" %}}The VPC and firewall must be configured to allow connections to the database from the Kubernetes cluster. When creating the RDS instance, as a best practice, make sure that it uses the same VPC as the Kubernetes cluster. Alternatively, you can also use a publicly accessible cluster. After an RDS instance has been created, it is not possible to modify its VPC.
-    {{% /alert %}}
-
-    {{% alert color="info" %}}In the case of Aurora DB, ensure that the `rds_iam` role is granted to the master database user.
-    {{% /alert %}}
+    {{% alert color="info" %}}In the case of Aurora DB, ensure that the `rds_iam` role is granted to the master database user{{% /alert %}}
 
 3. Navigate to the RDS instance details, and write down the following information:
 

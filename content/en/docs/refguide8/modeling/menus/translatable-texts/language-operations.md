@@ -2,7 +2,6 @@
 title: "Language Operations"
 url: /refguide8/language-operations/
 weight: 40
-tags: ["studio pro", "translation", "languages", "translatable text"]
 ---
 
 ## 1 Introduction

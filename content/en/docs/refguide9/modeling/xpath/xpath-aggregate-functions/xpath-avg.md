@@ -1,7 +1,6 @@
 ---
 title: "XPath avg"
 url: /refguide9/xpath-avg/
-tags: ["studio pro"]
 ---
 
 ## 1 Overview

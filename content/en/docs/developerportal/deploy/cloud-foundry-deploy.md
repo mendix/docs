@@ -1,10 +1,8 @@
 ---
 title: "Cloud Foundry"
 url: /developerportal/deploy/cloud-foundry-deploy/
-
 weight: 50
 description: "Describes how to deploy to a Cloud Foundry environment which does not have Mendix support in the Developer Portal."
-tags: ["Cloud Foundry", "Deploy", "Bind"]
 aliases:
     - /deployment/cloud-foundry/index.html
     - /howto/deploying-a-mendix-app-to-cloud-foundry.html

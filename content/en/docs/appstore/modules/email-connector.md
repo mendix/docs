@@ -1,9 +1,7 @@
 ---
 title: "Email"
 url: /appstore/modules/email-connector/
-
 description: "Describes the configuration and usage of the Email Connector module, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "imap", "pop3", "email", "platform support", "encryption", "templates"]
 aliases:
     - /appstore/connectors/email-connector/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

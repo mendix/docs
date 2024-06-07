@@ -5,7 +5,6 @@ weight: 15
 description: "Presents an overview on using Studio Pro 10."
 no_list: false
 description_list: true
-tags: ["studio pro", "developer tool", "shortcut"]
 ---
 
 ## 1 Introduction

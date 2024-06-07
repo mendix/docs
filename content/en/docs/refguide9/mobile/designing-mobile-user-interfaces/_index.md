@@ -3,7 +3,6 @@ title: "Designing Mobile User Interfaces"
 url: /refguide9/mobile/designing-mobile-user-interfaces/
 weight: 30
 description: "These documents explain best practices for designing mobile UI with Mendix."
-tags: ["UI", "mobile", "UX"]
 ---
 
 ## 1 Introduction

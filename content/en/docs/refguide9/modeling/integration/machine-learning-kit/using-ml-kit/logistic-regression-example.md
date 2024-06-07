@@ -2,7 +2,6 @@
 title: "Logistic Regression Example"
 url: /refguide9/machine-learning-kit/using-ml-kit/logistic-regression/
 weight: 20
-tags: ["studio pro", "machine learning", "ml kit", "models", "integration", "example", "logistic regression"]
 ---
 {{% alert color="info" %}}Machine learning model support is currently in [beta](/releasenotes/beta-features/), and is available in Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above.{{% /alert %}}
 

@@ -2,7 +2,6 @@
 title: "OQL Select Clause"
 url: /refguide/oql-select-clause/
 weight: 10
-tags: ["oql", "studio pro"]
 ---
 
 ## 1 Description

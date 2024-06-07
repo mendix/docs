@@ -1,7 +1,6 @@
 ---
 title: "Dialog Boxes"
 url: /refguide7/dialogs/
-
 ---
 
 The following pages describe the various dialog boxes present in the Modeler:

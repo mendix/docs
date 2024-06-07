@@ -2,7 +2,6 @@
 title: "Layout"
 url: /refguide9/layout/
 weight: 10
-tags: ["studio pro", "layout widgets", "layout", "page template", "pages"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

@@ -1,10 +1,8 @@
 ---
 title: "Settings"
 url: /developerportal/collaborate/general-settings/
-
 weight: 14
 description: "Describes general settings of your app."
-tags: ["Settings", "App", "Developer Portal"]
 aliases:
     - /developerportal/settings/general-settings
     - /developerportal/settings/api-key

@@ -66,7 +66,7 @@ To get started with building an app, click **Create App** to open a page where y
 The **Pending Invites** tab is only visible if you have any pending invites.
 {{% /alert %}}
 
-The **Pending Invites** tab presents the pending invitations to apps that you have received (which you can **Accept** or **Decline**). 
+The **Pending Invites** tab presents the pending invitations to apps that you have received. You can accept or deline the invite.
 
 {{% alert color="info" %}}
 You  get an invite only when someone invites you to an app from a different company. If someone invites you to an app from your company, you will be added automatically.

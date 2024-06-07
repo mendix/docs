@@ -20,11 +20,12 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 ### Improvements
 
-- In order to make our information architecture choices more consistent, you will now see "Apps" instead of "Developer Portal" in the top bar of some pages on the platform.
-  We also rearranged things a bit when it comes to your apps to make things easier to find:
-- The first tab is My Apps and it contains all the apps you have access to as a team member. Pinned apps are no longer found in a separate tab. If you pin an app, they will stay pinned on top of the My Apps overview. This way you can find the apps you care about more easily without an extra click.
-- The second tab is Company Apps, where you can see all the apps in your company. This used to be in the navigation topbar and but is now right next to the list of your apps.
-- The third tab is Pending Invites. Just like before, it only appears if you have an invite that needs review (that only happens across companies, if someone invites you to a project in your own company, you will be added automatically).
+- You now see **Apps** instead of **Developer Portal** on the top bar of some pages on the platform. This way the presentation of our information architecture is more consistent. 
+- We made it easier for you to find your apps in the Developer Portal. When you open the Developer Portal, you can now see the following tabs:
+  - The first tab is **My Apps**. It contains all the apps you have access to as a team member. Pinned apps are no longer found in a separate tab. If you pin an app, they will stay pinned on top of the **My Apps** overview. This enables you to see pinned apps  without an extra click.
+  - The second tab is **Company Apps**, where you can see all the apps in your company. This used to be on the top bar, but now it is right next to the **My Apps** tab.
+  - The third tab is **Pending Invites**. Just like before, it only appears if you have an invite that needs review, which only happens when you get an invite across companies—if someone invites you to an app in your own company, you will be added automatically.
+  
 
 ### May 16, 2024
 

@@ -22,7 +22,7 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 - You now see **Apps** instead of **Developer Portal** on the top bar of some pages on the platform. This way the presentation of our information architecture is more consistent. 
 - We made it easier for you to find your apps in the Developer Portal. When you open the Developer Portal, you can now see the following tabs:
-  - The first tab is **My Apps**. It contains all the apps you have access to as a team member. Pinned apps are no longer found in a separate tab. If you pin an app, they will stay pinned on top of the **My Apps** overview. This enables you to see pinned apps  without an extra click.
+  - The first tab is **My Apps**. It contains all the apps you have access to as a team member. Pinned apps no longer appear on a separate tab. If you pin an app, they stay pinned on top of the **My Apps** overview. This enables you to see pinned apps  without an extra click.
   - The second tab is **Company Apps**, where you can see all the apps in your company. This used to be on the top bar, but now it is right next to the **My Apps** tab.
   - The third tab is **Pending Invites**. Just like before, it only appears if you have an invite that needs review, which only happens when you get an invite across companies—if someone invites you to an app in your own company, you will be added automatically.
   

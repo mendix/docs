@@ -5,7 +5,7 @@ aliases:
   - /howto/mobile/distributing-mobile-apps/building-native-apps/how-to-min-versions
   - /refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-min-versions
 weight: 7
-description: "Make It Native apps information."
+description: "Information on various Make It Native apps by platform and version."
 ---
 
 ## 1 Introduction

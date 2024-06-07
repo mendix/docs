@@ -71,6 +71,10 @@ The return type determines the type of the data that the Java action returns. It
 
 As with parameters, the return type can also be an object or a list of some type parameter. The type parameter you choose for the return type must also be used by at least one of the Java action parameters.
 
+### 2.2.7 Variable Name
+
+This setting allows you to give a name to the Java action's return value if a return type is selected, which is used when the action is called from a microflow. The default value is set to **ReturnValueName**.
+
 ## 3 Type Parameters
 
 A type parameter is a placeholder for an entity type which will be filled in with a specific entity when it is called in a microflow. Type parameters can be used when configuring the data type of a parameter, to allow users to pass an object or a list of an arbitrary entity type.

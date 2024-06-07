@@ -1,5 +1,5 @@
 ---
-title: "Mendix Portal for Community"
+title: "Community"
 url: /community-tools/
 description: "Describes the main tools that Mendix maintains to support the awesome Mendix community."
 weight: 38

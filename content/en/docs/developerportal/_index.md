@@ -1,7 +1,7 @@
 ---
-title: "Mendix Portal for Developers"
+title: "Apps"
 url: /developerportal/
-description: "Describes the Apps page and links to more detailed documents in the guide."
+description: "Describes the home page of Apps and links to more detailed documents in the guide."
 weight: 30
 no_list: false
 description_list: true
@@ -14,7 +14,7 @@ cascade:
 
 ## 1 Introduction
 
-On the Mendix Portal, developers can create, deploy, and mange apps as well as collaborate with each other. To access these features, visit [Apps](https://sprintr.home.mendix.com).
+[Apps](https://sprintr.home.mendix.com) is an important part of the Mendix Portal. In **Apps**, you can create, deploy, and mange apps as well as collaborate with each other.
 
 {{% alert color="info" %}}The features in **Apps** can also be accessed via APIs, enabling third-party developers to integrate their own widgets and plugins. For more information, see [API Documentation](/apidocs-mxsdk/apidocs/).{{% /alert %}}
 

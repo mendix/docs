@@ -28,6 +28,7 @@ By following this strategy, you ensure that your development environment is equi
 ### 1.3 MIN Public Beta {#public-beta-instructions}
 
 This document also explains how you can download and install the MIN public beta:
+
 * For iOS apps, see the [Join the iOS App Public Beta](#join-ios-beta) section below.
 * For Android apps, see the [Join the Android App Public Beta](#join-android-beta) section below.
 
@@ -37,7 +38,7 @@ To ensure that you are using the correct version of the Make It Native app for y
 
 ### 2.1 Mendix Studio Pro 8.18 (LTS)
 
-For projects developed with Mendix Studio Pro 8.18 (Long-Term Support), use [**Make It Native 8**](https://docs.mendix.com/releasenotes/mobile/make-it-native-app/). This version is specifically designed to be compatible with Mendix 8 series.
+For projects developed with Mendix Studio Pro 8.18 (Long-Term Support), use [**Make It Native 8**](https://docs.mendix.com/releasenotes/mobile/make-it-native-app/). This version is specifically designed to be compatible with the Mendix 8 series.
 
 ### 2.2 Mendix Studio Pro 9.24 (LTS)
 
@@ -64,7 +65,7 @@ These builds are updated to support the latest features and improvements introdu
 
 Make It Native 10 will continue to support the latest Mendix Studio Pro MTS versions. This ensures ongoing compatibility and support for the newest updates and features.
 
-### 2.6 Other Mendix Studio Pro versions
+### 2.6 Other Mendix Studio Pro Versions
 
 For all other versions, [create a Custom Developer App](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/).
 

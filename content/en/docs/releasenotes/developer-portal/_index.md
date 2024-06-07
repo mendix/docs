@@ -20,7 +20,7 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 ### Improvements
 
-- When you open the Developer Portal, you can now see these tabs: **My Apps**, **Company Apps**, and **Pending Invites**. For details, see [Developer Portal](/developerporta;).
+- When you open the Developer Portal, you can now see these tabs: **My Apps**, **Company Apps**, and **Pending Invites**. For details, see [Developer Portal](/developerportal/).
 - On the top bar of some pages in the Developer Portal, you now see **Apps** instead of **Developer Portal**. This way the presentation of our information architecture is more consistent. 
 
 ### May 16, 2024

@@ -19,7 +19,7 @@ In summary, use the following Make It Native app versions for corresponding Mend
 * **Mendix 8.18 (LTS)**: Make It Native 8
 * **Mendix 9.24 (LTS)**: Make It Native 9
 * **Mendix 10.6 - 10.10**: Make It Native 10 from the app stores
-* **Mendix 10.11**: specific builds of Make It Native 10 (TestFlight and Google OpenTesting)
+* **Mendix 10.11**: specific builds of Make It Native 10 (TestFlight and Google OpenTesting), as well as the [MIN Public Beta]{#join-min-beta} apps
 * MIN versions hosted on the iOS and Google app stores will keep supporting their latest MTS version.
 * **Other versions**: Create a [custom developer app](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/).
 

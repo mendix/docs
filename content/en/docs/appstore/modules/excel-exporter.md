@@ -30,7 +30,7 @@ On the **Excel Exporter** page, there are the following items:
 * **New**: opens the **New template** dialog box that contains the following items:
     * **Document type**: the document type of the exported file (**Excel 97 - 2003**, **Excel 2007 or higher**, **Excel 2007 and higher (Macro-Enabled)**, or **CSV file**)
 
-    {{% alert color="info" %}}The module uses `"` by default as the quotation character during CSV export. However, you can specify any single character of your choice as the quotation character or even decide NOT to have any during export.{{% /alert %}}
+    {{% alert color="info" %}}The module uses `"` by default as the quotation character during CSV export. However, you can specify any single character of your choice as the quotation character or even decide not to have any during export.{{% /alert %}}
 
     * **Filename** : the name of the template
     * **Input object**(optional): an entity associated to your entity to be exported
@@ -105,7 +105,7 @@ On the sheet details page, you can define sheets with the following items:
 
 * **Row object**: the object data used for the rows
 
-  {{% alert color="info" %}}External Entities are NOT supported; so **Row object** and **Input object** (if specified) should be Persistent Entities from your Domain model.{{% /alert %}}
+  {{% alert color="info" %}}External Entities are not supported, so **Row object** and **Input object** (if specified) should be oersistent entities from your domain model.{{% /alert %}}
 
 * **Reference to template input object** (optional): the reference to the template input object (if **Input object** is used)
 * **Sheet input object**: the object that is the input for this sheet

@@ -23,7 +23,7 @@ If you intend to collaborate with an implementation partner on your app developm
 
 ### 3.1 You Own the App, but Not the Node
 
-If you see the name of another company in [Apps](/control-center/apps/), this means that you own the app, but this company owns the node where your app is deployed.
+If another company is the environment owner of your app in [Apps](/control-center/apps/), this means that you own the app, but this company owns the node where your app is deployed.
 
 To resolve this issue, do one of the following:
 
@@ -32,7 +32,7 @@ To resolve this issue, do one of the following:
 
 ### 3.2 You Own the Node, but Not the App
 
-If you see an app in [Deployed Apps](/control-center/deployed-apps/), but not in [Apps](/control-center/apps/), then you own the node but not the app.
+If an app appears in [Deployed Apps](/control-center/deployed-apps/), but not in [Apps](/control-center/apps/), this means that you own the node but not the app.
 
 To resolve this issue, do one of the following:
 

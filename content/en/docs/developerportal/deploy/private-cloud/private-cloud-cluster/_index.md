@@ -516,6 +516,19 @@ The liveness probe will begin returning valid responses just a few seconds after
 Starting from Mendix Operator 2.15.0, startup probes are no longer used, and changing their settings will have no effect.
 {{% /alert %}}
 
+{{% alert color="info" %}}
+Starting from Mendix Operator 2.17.0, the liveness probe health check depends on the [runtime_status](/refguide/monitoring-mendix-runtime/#runtime-status) command to check if an app is running (starting or started) and in a healthy state.
+
+If a [check_health](/refguide/monitoring-mendix-runtime/#check-health) microflow is configured, its status will also be validated.
+
+An app will return a successful health check status if all of these conditions are true:
+
+1. The Runtime replies to `ping` calls (any reply is accepted).
+    Mendix Operator versions 2.15 and 2.16 assumed an invalid `ping` reply to be an error, and failed the liveness probe. The Mendix Runtime will return a fail reply to `ping` calls if at any point a message was logged with a **critical** log level (which is [reserved for errors that require immediate attention](/refguide/logging/#21-critical), and that caused some apps to restart when running in Operator 2.15 or 2.16. Mendix Operator 2.17 ignores the `ping` reply and will no longer restart apps that have logged a **critical** log message.
+2. The Runtime's status is `created`, `starting`, `running` or `stopping`.
+3. If the Runtime is `running`, and a healthcheck microflow is configured, the healthcheck microflow needs to return a `healthy` state. If there is no `check_health` microflow configured, or the Runtime's state is not `running`, this condition is ignored.
+{{% /alert %}}
+
 #### 6.4.2 Customize Liveness Probe to Resolve Crash Loopback Scenarios
 
 The `liveness probe` informs the cluster whether the pod is dead or alive. If the pod fails to respond to the liveness probe, the pod will be restarted (this is called a `crash loopback`).
@@ -1418,6 +1431,14 @@ Starting from Mendix Operator version 1.9.0, Git Bash is no longer required.
 When running the installation tool over SSH, make sure that the SSH client supports terminal emulation and has mouse support enabled.
 
 `ssh.exe` in Windows doesn't support mouse click forwarding and another SSH client should be used instead, such as [MobaXterm](https://mobaxterm.mobatek.net/) or [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html).
+
+### 8.4 Configuration Tool - Known Issues
+
+When restoring a previously saved session, some UI elements (such as dropdowns and checkboxes) will not use the saved session and will revert to their default values.
+
+For example, the **Authentication** dropdown for Postgres will always switch to `static` authentication.
+
+Selecting the correct value from those dropdowns will restore the state of the form and any fields which might not be visible.
 
 ## 9 Troubleshooting
 

@@ -34,7 +34,7 @@ To get started with building an app, click **Create App** to open a page where y
 
 The **My Apps** tab shows you a summary of your current apps:
 
-{{< figure src="/attachments/developerportal/app-tiles.png" alt="Apps tiles" class="no-border" >}}
+{{< figure src="/attachments/developerportal/apps-overview.png" alt="Apps Overview" >}}
 
 You can pin an app by clicking **Pin** ({{% icon name="pin" %}}). All the pinned apps are displayed at the top.
 

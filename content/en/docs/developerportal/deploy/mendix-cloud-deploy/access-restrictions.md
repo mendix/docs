@@ -78,14 +78,12 @@ To apply a restriction to a specific application environment, follow these steps
 1. From the Developer Portal, open the **Environments** page for your app.
 2. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the desired environment.
 3. Go to the **Network** tab.
-4. The **Path Based Access Restrictions** section allows for applying access restrictions to a single environment.
+4. Use the **Path Based Access Restrictions** section to apply access restrictions to the environment. When you add or edit an access restriction in this section, you can specify the path and the restriction type for that path. For the restriction type, you can use a preset to allow or deny all access, or you can apply a customized access restriction profile. 
 
 {{% alert color="info" %}}
+The setting on the top-level path (`/`) applies to the entire application. It overrides any child path restrictions that are set.
 
-* The setting on the top-level path (`/`) applies to the entire application. It overrides any child path restrictions that are set.
-* The settings on any other parent paths do not override child path settings. In other words, restrictions for specific paths override the implicitly inherited profile for any parent paths that are not the top-level path.
-* Besides being able to apply a customized access restriction profile, there are also presets available for simply allowing or denying all access
-
+Settings on any other parent paths do not override child path settings. In other words, restrictions for specific paths override the implicitly inherited profile for any parent paths that are not the top-level path.
 {{% /alert %}}
 
 ### 3.1 Default Settings

@@ -12,11 +12,17 @@ cascade:
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
+{{% alert color="info" %}}
+The Mendix Portal is the whole online platform of Mendix, which includes Apps, [Control Center](/control-center/), [Community](/community-tools/), [Marketplace](/appstore/), [Catalog](/catalog/), and [Mendix Support](/support/).
+{{% /alert %}}
+
 ## 1 Introduction
 
-[Apps](https://sprintr.home.mendix.com) is an important part of the Mendix Portal. In **Apps**, you can create, deploy, and mange apps as well as collaborate with each other.
+[Apps](https://sprintr.home.mendix.com) is one of the key components of the Mendix Portal. 
 
-{{% alert color="info" %}}The features in **Apps** can also be accessed via APIs, enabling third-party developers to integrate their own widgets and plugins. For more information, see [API Documentation](/apidocs-mxsdk/apidocs/).{{% /alert %}}
+In **Apps**, you can create, deploy, and mange apps as well as collaborate with each other.
+
+The features in **Apps** can also be accessed via APIs, enabling third-party developers to integrate their own widgets and plugins. For more information, see [API Documentation](/apidocs-mxsdk/apidocs/).
 
 ## 2 Creating a New App
 
@@ -26,17 +32,13 @@ To get started with building an app, click **Create App** to open a page where y
 
 ## 3 My Apps {#my-apps}
 
-When you open **Apps**, you are brought to the **My Apps** tab, which shows you a summary of your current apps:
+The **My Apps** tab shows you a summary of your current apps:
 
 {{< figure src="/attachments/developerportal/app-tiles.png" alt="Apps tiles" class="no-border" >}}
-
-The **All** tab displays all the apps for which you are a [Team](/developerportal/general/team/) member. 
 
 You can pin an app by clicking **Pin** ({{% icon name="pin" %}}). All the pinned apps are displayed at the top.
 
 Use the drop-down menu on the right side of the page to sort the apps by **Most Recent** or in alphabetical order of **App Name**.
-
-The **Pending Invites** tab presents the pending invitations to apps that you have received (which you can **Accept** or **Decline**) in addition to the invitations you have sent.
 
 ### 3.1 App Tiles
 
@@ -65,14 +67,26 @@ The navigation pane is divided into four main categories, which correspond with 
 
 {{< figure src="/attachments/developerportal/navigation-pane.png" alt="The navigation pane" width="45%" class="no-border" >}}
 
-## 5 All Apps {#my-company-apps}
+## 4 Company Apps {#my-company-apps}
 
-On the **All Apps** tab, you can find all the apps created by members of your [company](/control-center/company-settings/).
+The **Company Apps** tab displays all the apps created by members of your [company](/control-center/company-settings/).
 
-There are also details on the app's [Target Cloud](/developerportal/deploy/), the [Total Members](/control-center/members/) who can view and edit the app, a **Summary** description of the app, and the [Technical Contact](/developerportal/general/app-roles/#technical-contact) for the app.
+There are also details on the app's [Target Cloud](/developerportal/deploy/), and the [Total Members](/control-center/members/) who can view and/or edit the app.
 
-You can also sort the order of the apps here by **Most Recent** or **App Name**.
+You can also sort the order of the apps here by **Updated Date**, **Last Created**, **App Name**, **App Name, descending**, **Oldest Updated**, or **Oldest Created**.
+
+## 5 Pending Invites {#pending-invites}
+
+{{% alert color="info" %}}
+The **Pending Invites** tab is only visible if you have any pending invites.
+{{% /alert %}}
+
+The **Pending Invites** tab presents the pending invitations to apps that you have received. You can accept or deline the invite.
+
+{{% alert color="info" %}}
+You  get an invite only when someone invites you to an app from a different company. If someone invites you to an app from your company, you will be added automatically.
+{{% /alert %}}
 
 ## 6 Guide Categories
 
-*Mendix Portal for Developers* is divided into the following categories:
+The documentation of **Apps** is divided into the following categories:

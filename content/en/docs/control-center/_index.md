@@ -12,6 +12,10 @@ aliases:
     - /developerportal/control-center
 ---
 
+{{% alert color="info" %}}
+The Mendix Portal is the whole online platform of Mendix, which includes [Apps](/developerportal/), Control Center, [Community](/community-tools/), [Marketplace](/appstore/), [Catalog](/catalog/), and [Mendix Support](/support/).
+{{% /alert %}}
+
 ## 1 Introduction
 
 When you sign up on the Mendix Platform, you are able to create new apps, invite other users to your app teams, deploy your apps, and invite app end-users to give feedback, among many other activities. Insights into these company activities are provided in Control Center in one central overview. These insights will help you to be in control and remain aware of everything happening within the Mendix landscape of your company.
@@ -28,4 +32,4 @@ If you are a Mendix Admin, you will immediately see the [Dashboard](/control-cen
 
 ## 2 Guide Categories
 
-The *Control Center Guide* is divided into the following categories:
+The documentation of **Control Center** is divided into the following categories:

@@ -5,31 +5,49 @@ weight: 8
 description: "Native Template 8 release notes."
 ---
 
+## 8.2.3 {#811}
+
+**Release date: June 7, 2024**
+
+* We have upgraded the `@mendix/native` dependency to the latest compatible version.
+
 ## 8.2.2 {#811}
+
+**Release date: May 29, 2024**
 
 * We have upgraded `react-native-gesture-handler` to 2.16.2.
 * We have upgraded the `@mendix/native` dependency to the latest compatible version.
 
 ## 8.2.1 {#810}
 
+**Release date: May 27, 2024**
+
 * We have removed Flipper from iOS Podfile.
 * We've added the support of scheduling local notifications on Android 14.
 
 ## 8.2.0 {#809}
+
+**Release date: May 17, 2024**
 
 * We have upgraded React-navigation to version 6.
 * We have added a basic privacy manifest to iOS.
 
 ## 8.1.3 {#808}
 
+**Release date: May 14, 2024**
+
 * We have made the switch to Xcode 15.1 for cloud builds (Appcenter), in response to the updated minimum iOS sdk requirements.
 * We have added support for Hermes.
 
 ## 8.1.1 {#807}
 
+**Release date: April 04, 2024**
+
 * We have upgraded the `@mendix/native` dependency to the latest compatible version.
 
 ## 8.1.0 {#806}
+
+**Release date: April 04, 2024**
 
 * We have resolved a build error related to Flipper on Xcode 15.3.
 * We have upgraded security-crypto dependency on Android to version 1.1.0-alpha06.
@@ -37,9 +55,13 @@ description: "Native Template 8 release notes."
 
 ## 8.0.5 {#805}
 
+**Release date: April 04, 2024**
+
 * We have upgraded the `@mendix/native` dependency to the latest compatible version.
 
 ## 8.0.4 {#804}
+
+**Release date: March 29, 2024**
 
 * We have removed react-native-code-push dependency. We recommend migrating to Mendix OTA instead.
 

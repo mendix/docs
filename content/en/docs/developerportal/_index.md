@@ -32,7 +32,7 @@ If you pin an app, it stays on top.
 
 Use the drop-down menu on the right side of the page to sort the apps by **Pinned**, **Recent Activity** or in alphabetical order of **App Name**.
 
-### 2.1.1 App Tiles {#app-tiles}
+#### 2.1.1 App Tiles {#app-tiles}
 
 Click an app tile to see the app [Buzz](/developerportal/general/buzz/).
 
@@ -46,7 +46,7 @@ By clicking **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) in
 
 To go to the [licensed environments](/developerportal/deploy/environments/) of your deployed app, click **Environments** at the bottom of the app tile.
 
-## 2.2 Company Apps {#my-company-apps}
+### 2.2 Company Apps {#my-company-apps}
 
 The **Company Apps** tab displays all the apps created by members of your [company](/control-center/company-settings/).
 
@@ -54,13 +54,13 @@ There are also details on the app's [Target Cloud](/developerportal/deploy/), an
 
 You can also sort the order of the apps here by **Updated Date**, **Last Created**, **App Name**, **App Name, descending**, **Oldest Updated**, or **Oldest Created**.
 
-## 2.3 Creating a New App {#new-app}
+### 2.3 Creating a New App {#new-app}
 
 To get started with building an app, click **Create App** to open a page where you can choose a starting point:
 
 {{< figure src="/attachments/developerportal/create-app.png" width="150" class="no-border" >}}
 
-## 2.4 Pending Invites {#pending-invites}
+### 2.4 Pending Invites {#pending-invites}
 
 {{% alert color="info" %}}
 The **Pending Invites** tab is only visible if you have any pending invites.

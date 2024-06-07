@@ -82,8 +82,8 @@ To apply a restriction to a specific application environment, follow these steps
 
 {{% alert color="info" %}}
 
-* The top-level path (`/`) restricts access to the entire application
-* The settings for specific paths override the implicitly inherited profile for the top level
+* The setting on the top-level path (`/`) applies to the entire application. It overrides any child path restrictions that are set.
+* The settings on any other parent paths do not override child path settings. In other words, restrictions for specific paths override the implicitly inherited profile for any parent paths that are not the top-level path.
 * Besides being able to apply a customized access restriction profile, there are also presets available for simply allowing or denying all access
 
 {{% /alert %}}

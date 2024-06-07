@@ -22,7 +22,7 @@ The Developer Portal also offers open, well-defined APIs, enabling third-party d
 
 When you open the Developer Portal, you are brought to the **Apps** page, which shows you a summary of your current apps, your company apps, and your pending invites.
 
-{{< figure src="/attachments/developerportal/apps-overview.png" alt="Apps Overivew" class="no-border" >}}
+{{< figure src="/attachments/developerportal/apps-overview.png" alt="Apps Overview" class="no-border" >}}
 
 ### 2.1 My Apps {#my-apps}
 

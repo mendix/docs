@@ -155,7 +155,7 @@ Before updating the Operator with the advanced configurations, make sure to go t
 {{% /alert %}}
 
 {{% alert color="info" %}}
-For Global Operator scenarios, if the Operator configuration in the managed namespace differa from the configuration in the Global Operator namespace, the configuration from the managed namespace will always take precedence.
+For Global Operator scenarios, if the Operator configuration in the managed namespace differs from the configuration in the Global Operator namespace, the configuration from the managed namespace will always take precedence.
 {{% /alert %}}
 
 Some advanced configuration options of the Mendix Operator are not yet available in the **Configuration Tool**.
@@ -926,7 +926,7 @@ Here you can perform the following actions on the entire cluster:
 
 If you prefer the individual to join as a cluster manager automatically, without requiring them to manually accept the invitation, you can enable the **Automatically accept invites** option.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/AutoAcceptClusterManager.png" class="no-border" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/AutoAcceptClusterManager.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 The **Automatically accept invites** option is applicable only when the invited users have the same email domain as yours.
@@ -1184,9 +1184,7 @@ You can invite additional members to the namespace, and configure their role dep
 3. Enter the **Email** of the person you want to invite.
 4. If you prefer the individual to join as a namespace member automatically, without requiring them to manually accept the invitation, you can enable the **Automatically accept invites** option.
 
-{{% alert color="info" %}}
-The **Automatically accept invites** option is applicable only when the invited users have the same email domain as yours.
-{{% /alert %}}
+    {{% alert color="info" %}}The **Automatically accept invites** option is applicable only when the invited users have the same email domain as yours.{{% /alert %}}
 
 5. Give them the rights they need. This can be:
 

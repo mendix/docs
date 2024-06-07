@@ -289,6 +289,7 @@ Enter a search string in the **Search** area with a minimum of 3 alphanumeric ch
 #### 3.4.2 Filters {#filter}
 
 You can filter search results by: 
+
 * Environment type (the **Production** environment filter is active by default)
 * Technology
 * [CRUD](/howto/integration/write-data/) (Creatable, Readable, Updatable, or Deletable) capabilities

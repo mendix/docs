@@ -1,7 +1,6 @@
 ---
 title: "Configure String Concatenation"
 url: /howto7/logic-business-rules/string-concatenation/
-
 weight: 11
 ---
 

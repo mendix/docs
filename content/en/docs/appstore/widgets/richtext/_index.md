@@ -1,7 +1,6 @@
 ---
 title: "Rich Text"
 url: /appstore/widgets/rich-text/
-
 description: "Describes the configuration and usage of the Rich Text widget, which is available in the Mendix Marketplace."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -111,7 +110,6 @@ To configure this widget, follow these steps:
         * **Native** – uses a browser's native default right-click behavior.
         * **Rich Text** – uses an editor's predefined right-click context menu.
 
-
 * **Editable** – determines when user can edit content in the editor and when it is read-only.
 
     {{% alert color="info" %}}For more information, see [Editability Section](/refguide/common-widget-properties/#editability) in the *Studio Pro Guide*.{{% /alert %}}
@@ -207,7 +205,7 @@ The full configuration of the menubar groups are as follows:
 * **Highlight on focus** - adds a blue outline to the editor when that editor is made the input focus
 * **Additional stylesheet** - allows the user to add an additional stylesheet that will be included inside the editor's iframe to apply custom styling.
     * User can include an additional stylesheet file in the theme folder and add the filename inside the **Additional stylesheet** input.  
-    * It is also possible to use built-in stylesheets called "_Default_" and "_Dark_", or alternate between them using the expression editor.
+    * It is also possible to use built-in stylesheets called `'Default'` and `'Dark'`, or alternate between them using the expression editor.
         
     {{< figure src="/attachments/appstore/widgets/rich-text/rte_style_expression.png" alt="Example" class="no-border" >}}
 

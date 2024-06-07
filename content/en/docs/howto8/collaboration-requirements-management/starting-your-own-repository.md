@@ -1,7 +1,6 @@
 ---
 title: "Start Your Own GitHub Repository"
 url: /howto8/collaboration-requirements-management/starting-your-own-repository/
-
 weight: 30
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "Catalog"
 url: /control-center/catalog-admin/
-
 weight: 60
 description: "Describes the catalog administration in the Mendix Control Center."
 aliases:

@@ -1,7 +1,6 @@
 ---
 title: "Build JavaScript Actions"
 url: /howto9/extensibility/build-javascript-actions/
-
 weight: 40
 description: "Presents a series of how-tos to build JavaScript actions step by step."
 ---

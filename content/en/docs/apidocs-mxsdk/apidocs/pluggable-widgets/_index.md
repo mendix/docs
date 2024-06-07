@@ -148,7 +148,6 @@ In Mendix Studio Pro, the widget described above would look like this:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/basic-widget-progress-card.png" alt="basic progress card in structure mode" >}}
 
-
 #### 4.2.1 Toolbox Category {#toolbox-category}
 
 To provide more clarity for Studio Pro users you can specify a toolbox category for your widgets. When provided, it determines a toolbox category for a widget in Studio Pro. It is possible to specify existing built-in categories such as **Data** or **Input** as well as new arbitrary categories like **Maps**. 
@@ -184,7 +183,6 @@ For more complex help pages you can link to a markdown page. For security reason
 * Must use HTTPS protocol
 * Host name must end with *.mendix.com* or *github.com*
 * If host name is *github.com* the full URL must end with *.md*
-
 
 #### 4.2.3 Icon {#icon}
 

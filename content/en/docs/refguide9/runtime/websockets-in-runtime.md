@@ -1,7 +1,6 @@
 ---
 title: "WebSockets"
 url: /refguide9/websockets-in-runtime/
-
 description: "Describes how to use WebSockets in the Mendix Runtime."
 ---
 

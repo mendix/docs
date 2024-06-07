@@ -58,6 +58,10 @@ To create a new component release for the Mendix Marketplace, follow these steps
 
 ## 3 Preparing Your Submission
 
+{{% alert color="info" %}}
+If you are not a component partner, you can skip this section.
+{{% /alert %}}
+
 ### 3.1 Legal and Compliance Guidelines
 
 This section covers the legal and compliance guidelines.
@@ -73,7 +77,7 @@ When considering intellectual property (IP) in the Mendix Marketplace, follow th
 * Do not copy any text, names, or other data from other components published in the Marketplace, since you do not own the copyright. Do not create unnecessary ambiguity or confusion that would mislead users of Marketplace components.
 * Do not mention components published by others within your content on the Marketplace. 
 * Make sure your component documentation only includes intellectual property that you have created. Your component should not include information or content published by others on the Marketplace, as this may lead to removing your component from the Marketplace. This also means other components can also be removed if they are using your component information or content. 
-* If you come across instances of intellectual property abuse, let us know at *AppServices_Supplier_Team@mendix.com*.
+* If you come across instances of intellectual property abuse, contact support.
 
 For more information, see [Apply IP Protection](/appstore/creating-content/sol-ip-protection/).
 
@@ -83,9 +87,7 @@ You must declare whether your product includes, uses, depends on, or distributes
 
 You must not use any restrictive or copyleft licenses such as GNU GPLv2, v3, as these limit the ability to sell commercially without disclosing source code or place restrictions on its usage. 
 
-If you have a content which has open-source license such as MIT or Apache, check if the third-party libraries being used are compatible with the license. For Example, Apache v2.0 cannot be used with GNU GPLv2.
-
-{{% todo %}}Can we give another example with a license that the users might use?GNU GPLv2 is not allowed.{{% /todo %}}
+If you have a content which has open-source license such as MIT or Apache, check if the third-party libraries being used are compatible with the license. 
 
 If you are using any [open-source licenses](https://opensource.org/licenses-old/category), make sure you have the code hosted on a public repository.  
 
@@ -103,7 +105,7 @@ If your product is not licensed as an open-source component and you would like t
 
 | Software Name and Version | Software URL | What does the Software do? Why is it needed? | License |
 | ------------------------- | ------------ | -------------------------------------------- | ------- |
-|                           |              |                                              |         |
+| Service A                 |              |                                              |         |
 
 - Export control
 - Data Privacy, including data processing agreement, as necessary 
@@ -126,10 +128,6 @@ Declare to the Marketplace team which applies to your product:
 * Personal data is not collected: the developer does not collect any data with the product.
 * Personal data is collected, but not shared: the developer collects data with the product, but does not share it with any third-party.
 * Personal data is collected and shared: the developer collects data with the product, and share it with third-parties.
-
-#### 3.1.5 Software Classification
-
-{{% todo %}}No content here. Content to be added.{{% /todo %}}
 
 #### 3.1.5 Export Control
 

@@ -30,7 +30,7 @@ The **My Apps** tab displays all the apps for which you are a [Team](/developerp
 
 Use the drop-down menu on the right side of the page to sort the apps by **Pinned**, **Recent Activity** or in alphabetical order of **App Name**.
 
-### 2.1.1 App Tiles (#app-tiles)
+### 2.1.1 App Tiles {#app-tiles}
 
 Click an app tile to see the app [Buzz](/developerportal/general/buzz/).
 
@@ -44,7 +44,7 @@ By clicking **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) in
 
 To go to the [licensed environments](/developerportal/deploy/environments/) of your deployed app, click **Environments** at the bottom of the app tile.
 
-## 2.2 Company Apps {#company-apps}
+## 2.2 Company Apps {#my-company-apps}
 
 The **Company Apps** tab displays all the apps created by members of your [company](/control-center/company-settings/).
 

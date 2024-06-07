@@ -28,6 +28,8 @@ When you open the Developer Portal, you are brought to the **Apps** page, which 
 
 The **My Apps** tab displays all the apps for which you are a [Team](/developerportal/general/team/) member.
 
+If you pin an app, it stays on top.
+
 Use the drop-down menu on the right side of the page to sort the apps by **Pinned**, **Recent Activity** or in alphabetical order of **App Name**.
 
 ### 2.1.1 App Tiles {#app-tiles}
@@ -60,7 +62,15 @@ To get started with building an app, click **Create App** to open a page where y
 
 ## 2.4 Pending Invites {#pending-invites}
 
-The **Pending Invites** tab presents the pending invitations to apps that you have received (which you can **Accept** or **Decline**). This tab is **only** visible if you have any pending invites.
+{{% alert color="info" %}}
+The **Pending Invites** tab is only visible if you have any pending invites.
+{{% /alert %}}
+
+The **Pending Invites** tab presents the pending invitations to apps that you have received (which you can **Accept** or **Decline**). 
+
+{{% alert color="info" %}}
+You  get an invite only when someone invites you to an app from a different company. If someone invites you to an app from your company, you will be added automatically.
+{{% /alert %}}
 
 ## 3 Navigation Pane {#navigation-pane}
 

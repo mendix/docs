@@ -83,3 +83,77 @@ Use this to get the list of References that may be included in the model respons
 
 ## 4 Technical Reference {#technical-reference}
 
+The main technical purpose of GenAI Commons module is to define a common domain model for generative AI use cases in Mendix applications. To help you work with the **GenAI Commons** module, the following sections list the available [entities](#domain-model), [enumerations](#enumerations), and [activities](#activities) that you can use in your application. 
+
+### 4.1 Domain Model {#domain-model} 
+
+The domain model in Mendix is a data model that describes the information in your application domain in an abstract way. For more general information, see [Domain model](/refguide/domain-model/). To learn about where the entities from the domain model are used and relevant during implementation, see the [Activities](#activities) section below.
+
+##### 4.1.1 `Request` {#request} 
+
+`Request` is the main input object for the chat completions operations and contains all content-related input needed for a model to generate a response for the given chat conversation. 
+
+| Attribute           | Description                                                  |
+| ------------------- | ------------------------------------------------------------ |
+| `Model`             | This is required for requests to OpenAI. Model is NOT considered for request to Azure OpenAI, because the model is determined by the deployment.<br />For more information, see the [compatible models](https://platform.openai.com/docs/models) in the OpenAI documentation. |
+| `Frequency_penalty` | The value should be a decimal between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood of repeating the same line verbatim. This attribute is optional. The default value is 0.0. |
+
+#### 4.1.2 `Message` {#messge}
+
+#### 4.1.3 `FileCollection` {#filecollection}
+
+#### 4.1.4 `FileContent` {#filecontent}
+
+#### 4.1.5 `ToolCollection` {#toolcollection}
+
+#### 4.1.6 `Tool` {#tool}
+
+#### 4.1.7 `Function` {#function}
+
+#### 4.1.8 `StopSeqquence` {#stopsequence}
+
+#### 4.1.9 `Response` {#response}
+
+#### 4.1.10 `ToolCall` {#toolcall}
+
+#### 4.1.11 `Reference` {#reference}
+
+#### 4.1.12 `Citation` {#citation}
+
+
+
+
+
+### 4.2 Enumerations {#enumerations} 
+
+#### 4.2.1 `ENUM_MessageRole` {#enum-messagerole}
+
+#### 4.2.2 `ENUM_MessageType` {#enum-messagetype}
+
+#### 4.2.3 `ENUM_FileContentType` {$enum-filecontenttype}
+
+#### 4.2.4 `ENUM_FileType` {#enum-filetype}
+
+#### 4.2.5 `ENUM_ToolChoice` {#enum-toolchoice}
+
+#### 4.2.6 `ENUM_SourceType` {#enum-sourcetype}
+
+
+
+### 4.3 Activities {#activities} 
+
+#### 4.3.1 Preprocessing helpers
+
+##### 4.3.1.1 Chat: Create Request
+
+##### 4.3.1.2 Chat: Add Message to Request
+
+##### 4.3.1.3 Chat: Add Stop Sequence
+
+##### 4.3.1.4 Files: Initialize Collection with File
+
+##### 4.3.1.5 Files: Add File to Collection
+
+##### 4.3.1.6 Tools: Add Function to Request
+
+##### 4.3.1.7 Tools: Set Tool Choice

@@ -34,7 +34,7 @@ The operation interface `Chat Completions (with history)` supports more complex 
 
 #### 3.1.3 Support for additional capabilities
 
-ALthough GenAi Commons technically supports additional capabilities typically found in chat completion APIs, such as image processing (vision) and tools (function calling), it depends on the connector module of choice whether these are actually implemented. Please check the documentation for any specific connector module that you are using to learn about the supported additional capabilities and for which models these can be used. 
+Although GenAI Commons technically defines additional capabilities typically found in chat completion APIs, such as image processing (vision) and tools (function calling), it depends on the connector module of choice whether these are actually implemented. Please check the documentation for any specific connector module that you are using to learn about the supported additional capabilities and for which models these can be used. 
 
 ### 3.2 Helper microflows
 
@@ -97,34 +97,114 @@ The domain model in Mendix is a data model that describes the information in you
 
 | Attribute           | Description                                                  |
 | ------------------- | ------------------------------------------------------------ |
-| `Model`             | This is required for requests to OpenAI. Model is NOT considered for request to Azure OpenAI, because the model is determined by the deployment.<br />For more information, see the [compatible models](https://platform.openai.com/docs/models) in the OpenAI documentation. |
-| `Frequency_penalty` | The value should be a decimal between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood of repeating the same line verbatim. This attribute is optional. The default value is 0.0. |
+| `SystemPrompt`             | A SystemPrompt provides the model with a context, instructions or guidelines. |
+| `MaxTokens` | Maximum number of tokens per request. |
+| `Temperature` | Temperature controls the randomness of the assistant response. Low values generate a more predictable output, while higher values allow more creativity and diversity. <br />Mendix recommendeds to only steer temperature or TopP, but not both. |
+| `TopP` | TopP is an alternative to temperature for controlling the randomness of the assistant response. TopP defines a probability threshold so that only the words with probabilities greater than or equal to the threshold will be included in the response.<br />Mendix recommends to only steer temperature or TopP, but not both. |
+| `ToolChoice` | Controls which (if any) tool is called by the model. <br />For more information, see the [ENUM_ToolChoice](#enum-toolchoice) section containing a description of the possible values |
 
 #### 4.1.2 `Message` {#messge}
 
+A message that is part of the request or the response.  Each instance contains data (text, file collection) that needs to be taken into account by the model when processing the completion request. 
+
+| Attribute           | Description                                                  |
+| ------------------- | ------------------------------------------------------------ |
+| `Role`             | The role of the message's author. <br />For more information, see the [ENUM_Role](#enum-messagerole) section. |
+| `Content`             | The text content of the message. |
+| `MessageType`             | The type of the message can be either text or file, where file means that the associated FileCollection should be taken into account. <br />For more information, see the [ENUM_MessageType](#enum-messagetype) section.|
+| `ToolCallId`             | The id of the tool call proposed by the model that this message is responding to. <br />This attribute is only applicable for messages with role `tool`.|
+
 #### 4.1.3 `FileCollection` {#filecollection}
+
+This is an optional collection of files that is part of a Message. It is used for patterns like "vision" where image files are sent along with the user message for the model to process. It functions as a wrapper entity for files and has no direct attributes.
 
 #### 4.1.4 `FileContent` {#filecontent}
 
+This is a file in the collection of files that belongs to a message. It is currently used as a part of the request. Each instance represents a single file. Currently only files of type image are supported.
+
+| Attribute           | Description                                                  |
+| ------------------- | ------------------------------------------------------------ |
+| `FileContent`             | Depending on the `ContentType`, this is either a URL or the base64-encoded file data. |
+| `ContentType` | This describes the type of file data. Supported content types are either URL or base64-encoded file data. <br />For more information, see the [ENUM_FileContentType](#enum-filecontenttype) section.
+| `FileType` | Currently only images are supported file types. In general, not all file types might not be supported by all AI providers or models. <br />For more information, see the [ENUM_FileType](#enum-filetype) section.
+| `TextContent` | An optional text content describing the file content or giving it a specific name. This can be used to refer to specific files in the prompt of the message. | 
+| `MediaType` |  This is a combination of FileType and the extension of the file, e.g. *image/png* | 
+
 #### 4.1.5 `ToolCollection` {#toolcollection}
+
+This is an optional collection of tools to be sent along with the Request. Using tool call capabilities (e.g. function calling) might not be supported by certain AI providers or models. This entity functions as a wrapper entity for files and has no direct attributes.
 
 #### 4.1.6 `Tool` {#tool}
 
+A tool in the tool collection. This is sent along with the request in order to expose a list of available tools. In the response, the model can suggest to call a certain tool (or multiple in parallel) in order to retrieve more (live) data.
+
+| Attribute           | Description                                                  |
+| ------------------- | ------------------------------------------------------------ |
+| `Name` | The name of the tool to call. This is used by the model the model in the response to identify which function needs to be called. |
+| `Description` | An optional description of the tool, used by the model in addition to the name field to choose when and how to call the tool. | 
+| `ToolType` | The type of the tool. View connector documentation for supported types. |
+
 #### 4.1.7 `Function` {#function}
 
-#### 4.1.8 `StopSeqquence` {#stopsequence}
+A tool of type function. This is a specialization of [Tool](#tool) and represents a microflow in the same Mendix application. The return value of this microflow when executed as function is sent to the model in a next iteration and hence must be of type String.
+
+| Attribute           | Description                                                  |
+| ------------------- | ------------------------------------------------------------ |
+| `Microflow` | The name (string) of the microflow that this function represents.  |
+
+{{% alert color="info" %}}Note that function microflows do not respect entity access of the current user. Make sure that you only return information that the user is allowed to view, otherwise confidential information may be visible to the current user in the assistant's response. {{% /alert %}}
+
+#### 4.1.8 `StopSequence` {#stopsequence}
+
+For many models, StopSequences can be used to pass a list of character sequences (for example a word) along with the request. The model will stop generating content when a word of that list would occur next.
+
+| Attribute           | Description                                                  |
+| ------------------- | ------------------------------------------------------------ |
+| `Sequence` | A sequence of characters that would prevent the model from generating further content. |
 
 #### 4.1.9 `Response` {#response}
 
+The response returned by model contains usage metrics as well as a response message.
+
+| Attribute           | Description                                                  |
+| ------------------- | ------------------------------------------------------------ |
+| `RequestTokens` | Number of tokens in the request.| 
+| `ResponseTokens` | Number of tokens in the generated response. |
+| `TotalTokens` | Total number of tokens (request + response). |
+| `StopReason` | The reason why the model stopped to generate further content. See connector documentation for possible values. | 
+
 #### 4.1.10 `ToolCall` {#toolcall}
+
+A tool call object may be generated by the model in certain scenarios, such as a function call pattern. This entity is only applicable for messages with role `assistant`.
+
+| Attribute           | Description                                                  |
+| ------------------- | ------------------------------------------------------------ |
+| `Name` | The name of the tool to call. This refers to the `name` field of one of the [Tools](#tool) in the Reqeust. |
+| `Arguments` | The arguments with which the tool is to be called, as generated by the model in JSON format. Note that the model does not always generate valid JSON and may halucinate parameters that are not defined by your tool's schema. Mendix recommends to validate the arguments in the code before calling the tool.
+| `ToolType` | The type of the tool. View connector documentation for supported types.|
+| `ToolCallId` | This is a model generated id of the proposed tool call. It is used in a Request in a next iteration to refer back to the proposed tool call, when the tool was called and the result is sent in a tool message.
 
 #### 4.1.11 `Reference` {#reference}
 
+An optional reference for a response message.
+
+| Attribute           | Description                                                  |
+| ------------------- | ------------------------------------------------------------ |
+| `Title` | The title of the reference. | 
+| `Content` | The content of the reference. |
+| `Source` | The source of the reference , e.g., a URL. | 
+| `SourceType` | The type of the source. <br />For more information, see the [ENUM_SourceType](#enum-sourcetype) section.|
+
 #### 4.1.12 `Citation` {#citation}
 
+An optional citation. This entity can be used to visualize the link between a part of the generated text and the actual text in the source on which the generated text was based.
 
-
-
+| Attribute           | Description                                                  |
+| ------------------- | ------------------------------------------------------------ |
+| `StartIndex` | An index that marks the beginning of a citation in a larger document. |
+| `EndIndex` | An index that marks the end of a citation in a larger document. | 
+| `Text` | The part of the generated text that contains a citation. | 
+| `Quote` | Contains the cited text from the reference. |
 
 ### 4.2 Enumerations {#enumerations} 
 

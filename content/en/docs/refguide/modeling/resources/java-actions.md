@@ -77,7 +77,7 @@ As with parameters, the return type can also be an object or a list of some type
 
 #### 2.3.2 Variable Name
 
-This setting allows you to give a name to the Java action's return value if a return type is selected, which is used when the action is called from a microflow. The default value is set to **ReturnValueName**.
+This setting allows you to give a name to the Java action's return value if a return type is selected. This name is used when you drag the action into a microflow. The default value is set to **ReturnValueName**.
 
 ## 3 Type Parameters
 

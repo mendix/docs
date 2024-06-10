@@ -89,7 +89,7 @@ The return parameter type determines the type of data a JavaScript action return
 
 #### 2.3.2 Variable Name
 
-This setting allows you to give a name to the Javascript action's return value if a return type is selected, which is used when the action is called from a nanoflow. The default value is set to **ReturnValueName**.
+This setting allows you to give a name to the Javascript action's return value if a return type is selected. This name is used when you drag the action into a nanoflow. The default value is set to **ReturnValueName**.
 
 {{% alert color="info" %}}
 The ability to name return variables was added in Mendix version 9.23.0

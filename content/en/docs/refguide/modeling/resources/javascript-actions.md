@@ -79,17 +79,19 @@ Use categories to keep parameters apart in a [JavaScript Action Call](/refguide/
 
 For apps with several parameters, descriptions serve as useful reminders of parameters' exact purposes. Descriptions also allow you to describe your parameters to app collaborators. Descriptions may contain both upper- and lower-case letters, numbers, and symbols.
 
-### 2.3 Return Type
+### 2.3 Return
+
+Your JavaScript action can return different data types to your app.
+
+#### 2.3.1 Return Type
 
 The return parameter type determines the type of data a JavaScript action returns. Because many APIs are asynchronous, you can also return a `Promise` object which resolves to this type. The return value of the JavaScript action can be given a name and stored so it can be used in the nanoflow where it is called. For all types which you can use for parameters, you can also use a return type. In addition, you can use the return type 'Nothing' if no data should return from the action.
 
-### 2.4 Variable Name
+#### 2.3.2 Variable Name
 
 This setting allows you to give a name to the Javascript action's return value if a return type is selected, which is used when the action is called from a nanoflow. The default value is set to **ReturnValueName**.
 
-{{< figure src="/attachments/refguide/modeling/resources/javascript-actions/js-variable-name.png" alt="variable name" class="no-border" >}}
-
-### 2.5 Platform {#platform}
+### 2.4 Platform {#platform}
 
 JavaScript actions can be for a specific platform, they have an optional platform property with the following values:
 

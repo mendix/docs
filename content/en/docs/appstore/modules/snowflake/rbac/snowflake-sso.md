@@ -1,5 +1,5 @@
 ---
-title: "Use Snowflake SSO with Role-Based Access Control"
+title: "Use Snowflake SSO for Role-Based Access Control"
 url: /appstore/modules/snowflake/snowflake-sso/
 description: "Describes how to use the Snowflake SSO to enable automatic role-based access control in a Mendix application."
 weight: 20
@@ -146,4 +146,4 @@ To configure your Mendix application, perform the following steps:
 
     {{< figure src="/attachments/appstore/modules/snowflake-sso/provisioning.png" >}}
 
-12. Eun the application and log in with the user that you use in Snowflake and Azure.
+12. Run the application and log in with the user that you use in Snowflake and Azure.

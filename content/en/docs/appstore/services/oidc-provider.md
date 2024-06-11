@@ -59,6 +59,24 @@ The following modules need to be imported into your app:
 * [Community Commons](https://marketplace.mendix.com/link/component/170) – see [Community Commons](/appstore/modules/community-commons-function-library/) documentation
 * [Mx Model reflection](https://marketplace.mendix.com/link/component/69) – see [Mx Model Reflection](/appstore/modules/model-reflection/) documentation
 
+### 1.4 Protocol Adherence
+
+This section provides clarity on the extent to which the OIDC Provider module supports the OIDC protocol. It is targeted at readers who are familiar with the OAuth and the OIDC protocol.
+
+The OIDC Provider module supports the following Grant Types:
+
+* supports [Authorization grant type](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3) to represent the resource owner's authorization 
+* supports [Client credentials grant type](https://datatracker.ietf.org/doc/html/rfc6749#section-4.4) to request an access token
+
+The OIDC Provider module supports the following Endpoints:
+
+* [`userInfo_endpoint`](https://openid.net/specs/openid-connect-core-1_0.html#UserInfo)
+* [`introspection_endpoint`](https://datatracker.ietf.org/doc/html/rfc7662)
+* [`authorization_endpoint`](https://openid.net/specs/openid-connect-core-1_0.html#ImplicitAuthorizationEndpoint)
+* [`token_endpoint`](https://openid.net/specs/openid-connect-core-1_0.html#ImplicitAuthorizationEndpoint)
+* [`issuer`](https://openid.net/specs/openid-connect-core-1_0.html#IssuerIdentifier)
+* [`jwks_uri`](https://openid.net/specs/openid-connect-core-1_0.html#RotateSigKeys)
+
 ## 2 Installation
 
 To install the OIDC Provider service in your IAM broker app, you need to import the following into your app:
@@ -146,14 +164,13 @@ To check that this works, you will need a tool for testing APIs (such as [Postma
     
     ```json {linenos=false}
     {
-    "client_id" : "ClientID",
-    "client_name" : "ClientName",
-    "client_secret" : "ClientSecret",
-    "redirect_uris" : [ "http://localhost:8081/oauth/v2/callback" ],
-    "backchannel_logout_uri" : "http://localhost:8081/logout",
-    "post_logout_redirect_uris" : ["http://localhost:8081/logout"],
-    "grant_types": [ "authorization_code" ],
-    "scope": "User"
+        "client_id" : "ClientID",
+        "client_name" : "ClientName",
+        "client_secret" : "ClientSecret",
+        "redirect_uris" : [ "http://localhost:8081/oauth/v2/callback" ],
+        "post_logout_redirect_uris" : ["http://localhost:8081/logout"],
+        "grant_types": [ "authorization_code" ],
+        "scope": "User"
     }
     ```
 
@@ -161,16 +178,15 @@ To check that this works, you will need a tool for testing APIs (such as [Postma
 
     ```json {linenos=false}
     {
-    "post_logout_redirect_uris": [ "http://localhost:8081/logout" ],
-    "grant_types": [ "authorization_code" ],
-    "client_secret_expires_at": 0,
-    "scope": "User",
-    "client_secret": "ClientSecret",
-    "redirect_uris": [ "http://localhost:8081/oauth/v2/callback" ],
-    "client_id_issued_at": 1675940602,
-    "backchannel_logout_uri": [ "http://localhost:8081/logout" ],
-    "client_name": "ClientName",
-    "client_id": "ClientID"
+        "post_logout_redirect_uris": [ "http://localhost:8081/logout" ],
+        "grant_types": [ "authorization_code" ],
+        "client_secret_expires_at": 0,
+        "scope": "User",
+        "client_secret": "ClientSecret",
+        "redirect_uris": [ "http://localhost:8081/oauth/v2/callback" ],
+        "client_id_issued_at": 1675940602,
+        "client_name": "ClientName",
+        "client_id": "ClientID"
     }
     ```
 
@@ -190,16 +206,15 @@ To check that this works, you will need a tool for testing APIs (such as [Postma
 
     ```json {linenos=false}
     {
-    "grant_types": [ "client_credentials" ],
-    "client_secret_expires_at": 0,
-    "scope": "openid",
-    "client_secret": "c46591bd-8fae-4f90-9efb-b5973bea04df",
-    "client_id_issued_at": 1716198475,
-    "client_name": "DemoClient",
-    "client_id": "DemoClient"
+        "grant_types": [ "client_credentials" ],
+        "client_secret_expires_at": 0,
+        "scope": "openid",
+        "client_secret": "c46591bd-8fae-4f90-9efb-b5973bea04df",
+        "client_id_issued_at": 1716198475,
+        "client_name": "DemoClient",
+        "client_id": "DemoClient"
     }
     ```
-
 
 #### 3.3.2 Manual Client Registration
 
@@ -446,7 +461,7 @@ In versions of OIDC Provider below 1.1.0, the following values are not included 
 * "name"
 * "username"
 
-In versions of the OIDC Provider below 2.0.0, the sub value was changed form an Autonumber to a UUID.
+In versions of the OIDC Provider above 2.0.0, the sub value was changed from an Autonumber to a UUID.
 
 ## 6 Troubleshooting
 

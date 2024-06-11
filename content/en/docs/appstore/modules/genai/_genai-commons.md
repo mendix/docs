@@ -22,7 +22,7 @@ If you start from a blank app, or have an existing project, and want include a C
 
 ### 3.1 Chat Completions operations (interface only)
 
-There are currently two operation interfaces defined for the category Chat Completions. These operations let the underlying Large Language Model of choice generate a text (assistant response) based input in the form of a single user message or a full conversation. Their respective use cases are briefly introduced below. For more details about how to use or develop operations that follow these principles, please take a look at the technical reference section. Also make sure to check the documentation for any specific connector module that you are using to learn about the additional specific properties.
+There are currently two operation interfaces defined for the category Chat Completions. These operations let the underlying Large Language Model of choice generate a text (model response) based input in the form of a single user message or a full conversation. Their respective use cases are briefly introduced below. For more details about how to use or develop operations that follow these principles, please take a look at the technical reference section. Also make sure to check the documentation for any specific connector module that you are using to learn about the additional specific properties.
 
 #### 3.1.1 Chat Completions without history
 
@@ -67,7 +67,7 @@ Use this microflow to add subsequent files to an existing file collection.
 
 ##### 3.2.1.6 Tools: Add Function To Request
 
-Use this microflow when you have microflows in your application that may be called as part of the GenAI interaction. If you want the model to be aware of the existance of these microflows which can be called to retrieve required information, you can use this operation to add them as functions to the request. If supported, the main chat completions operation takes care of calling the right functions based on the suggestion from the model and continuing the process until an assistant response is returned.
+Use this microflow when you have microflows in your application that may be called as part of the GenAI interaction. If you want the model to be aware of the existance of these microflows which can be called to retrieve required information, you can use this operation to add them as functions to the request. If supported, the main chat completions operation takes care of calling the right functions based on the suggestion from the model and continuing the process until a model response text is returned.
 
 ##### 3.2.1.7 Tools: Set Tool Choice
 
@@ -75,13 +75,13 @@ Use this microflow to control which function the model should leverage.
 
 #### 3.2.2 Post-processing
 
-##### 3.2.2.1 Chat: Get Assistant Response
+##### 3.2.2.1 Chat: Get Model Response Text
 
-Use this to get the assistant response text from the model response. In many cases this is the main value needed for custom further logic after the operation.
+Use this to get the response text from the model response. In many cases this is the main value needed for custom further logic after the operation.
 
 ##### 3.2.2.2. Chat: Get References
 
-Use this to get the list of References that may be included in the model response. These can be used to display source information, content and citations on which the assistant response text was based according to the language model.
+Use this to get the list of References that may be included in the model response. These can be used to display source information, content and citations on which the model response text was based according to the language model.
 
 ## 4 Technical Reference {#technical-reference}
 
@@ -99,8 +99,8 @@ The domain model in Mendix is a data model that describes the information in you
 | ------------------- | ------------------------------------------------------------ |
 | `SystemPrompt`             | A SystemPrompt provides the model with a context, instructions or guidelines. |
 | `MaxTokens` | Maximum number of tokens per request. |
-| `Temperature` | Temperature controls the randomness of the assistant response. Low values generate a more predictable output, while higher values allow more creativity and diversity. <br />Mendix recommendeds to only steer temperature or TopP, but not both. |
-| `TopP` | TopP is an alternative to temperature for controlling the randomness of the assistant response. TopP defines a probability threshold so that only the words with probabilities greater than or equal to the threshold will be included in the response.<br />Mendix recommends to only steer temperature or TopP, but not both. |
+| `Temperature` | Temperature controls the randomness of the model response. Low values generate a more predictable output, while higher values allow more creativity and diversity. <br />Mendix recommendeds to only steer temperature or TopP, but not both. |
+| `TopP` | TopP is an alternative to temperature for controlling the randomness of the model response. TopP defines a probability threshold so that only the words with probabilities greater than or equal to the threshold will be included in the response.<br />Mendix recommends to only steer temperature or TopP, but not both. |
 | `ToolChoice` | Controls which (if any) tool is called by the model. <br />For more information, see the [ENUM_ToolChoice](#enum-toolchoice) section containing a description of the possible values |
 
 #### 4.1.2 `Message` {#messge}
@@ -152,7 +152,7 @@ A tool of type function. This is a specialization of [Tool](#tool) and represent
 | ------------------- | ------------------------------------------------------------ |
 | `Microflow` | The name (string) of the microflow that this function represents.  |
 
-{{% alert color="info" %}}Note that function microflows do not respect entity access of the current user. Make sure that you only return information that the user is allowed to view, otherwise confidential information may be visible to the current user in the assistant's response. {{% /alert %}}
+{{% alert color="info" %}}Note that function microflows do not respect entity access of the current user. Make sure that you only return information that the user is allowed to view, otherwise confidential information may be visible to the current user in the model's response. {{% /alert %}}
 
 #### 4.1.8 `StopSequence` {#stopsequence}
 
@@ -367,7 +367,7 @@ Adds a new Function to a Request.
 | Request |     [Request](#request)     | Yes       | The request to add the function to. |
 | ToolName |     String     | Yes       | The name of the tool to use/call. |
 | ToolDescription |     String     | No     | An optional description of what the tool does, used by the model to choose when and how to call the tool. |
-| FunctionMicroflow |     Microflow     | Yes       | The microflow that is called within this function. A function microflow can only have a single String input parameter and returns a String. Note that function microflows do not respect entity access of the current user. Make sure that you only return information that the user is allowed to view, otherwise confidential information may be visible to the current user in the assistant's response. |
+| FunctionMicroflow |     Microflow     | Yes       | The microflow that is called within this function. A function microflow can only have a single String input parameter and returns a String. Note that function microflows do not respect entity access of the current user. Make sure that you only return information that the user is allowed to view, otherwise confidential information may be visible to the current user in the model's response. |
 
 **Return value**
 
@@ -395,8 +395,8 @@ If the ENUM_ToolChoice equals tool, the Tool input is required
 
 #### 4.3.2 Handle response (postprocessing helpers)
 
-#### 4.3.2.1 Get Assistant Response
-This microflow can be used to get the assistant response text from the responsse structure returned from the main operation.
+#### 4.3.2.1 Get Model Response Text
+This microflow can be used to get the model response text from the responsse structure returned from the main operation.
 
 **Input parameters**
 
@@ -408,7 +408,7 @@ This microflow can be used to get the assistant response text from the responsse
 
 | Name          | Type     | Description            |
 |---------------|----------|---------|
-| AssistantResponse      | String |  This is the assistant message that was generated by the model as a response to a user message. |
+| ResponseText      | String |  This is the string content on the message with role `assistant` that was generated by the model as a response to a user message. |
 
 
 #### 4.3.2.2  Get References

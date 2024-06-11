@@ -49,8 +49,10 @@ After finding the package of your choice, locate the Snippets part, containing t
 Exclusions are available in Studio Pro 10.12.0 and above.
 {{% /alert %}}
 
-In certain cases a conflict between transitive dependencies between different configured Java dependencies may appear.
-To fix this transitive dependencies can be excluded when configuring dependencies.
+In certain cases a conflict in transitive dependencies between different configured Java dependencies may appear.
+For example if two Java dependencies have the same package name and classes but a different group or artifact then they may both be included in your app, possibly causing conflicts.
+To fix this, transitive dependencies can be excluded when configuring dependencies.
+The exclusions configured here will be exported with the module, and so these dependencies are also excluded when importing the module in another app.
 When [editing a Java dependency](add-dependency) a list shows the currently specified exclusions for the dependency. You can add **New** exclusions and **Edit** or **Delete** existing exclusions. 
 
 {{< figure src="/attachments/refguide/java-programming/managed-dependencies/exclusions.png" class="no-border" >}}

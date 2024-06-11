@@ -398,10 +398,10 @@ A microflow selected for this setting will start every time a user task changes 
 The Deployment tab was renamed to Dependencies in Studio Pro 10.12.0.
 {{% /alert %}}
 
-This tab can be used to view the managed dependencies in your App and to manage the dependencies in the userlib directory.
+This tab can be used to view the managed dependencies in your app in one place and to manage the dependencies in the userlib directory.
 
 ### 8.1 Overview
-This grid shows all the managed dependencies in your app. It shows which versions of the dependencies you have and which modules they are coming from. If your app reports multiple versions of the same Group and Artifact then the highest version is used, so having multiple versions of a dependency is not necessarily a problem.
+This grid shows all the managed dependencies in your app. It shows which versions of the dependencies you have and which modules they are coming from. If your app reports multiple versions of the same group and artifact then the highest version is used, so having multiple versions of a dependency is not necessarily a problem.
 
 ### 8.2 Managed Dependency Exclusions
 These are all the managed dependencies in your app. This overview includes transitive dependencies. If you have conflicts between different dependencies, uncheck any files which you want to exclude. Ensure you leave at least one dependency which supports any calls made by your app or its dependencies.

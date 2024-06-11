@@ -366,4 +366,12 @@ Some email clients (for example, Gmail) break down the name of attached files if
 
 ## 6 Known Errors
 
+### 6.1 Widgets cannot be read
+
 If you already have the [included widgets](#included-widgets) in your app and they are not up to date, you may get a "Some widgets can not be read" error when trying to run locally.
+
+### 6.2 No argument selected or default available for parameter "Token"
+
+You may get this consistency error on importing Email Connector module in Mx 10.1 or above *"No argument has been selected for parameter "Token" and no default is available"*. This can be easily resolved by double-clicking on the error and it will take you to the problematic snippet **SNIP_EmailTemplate_NewEdit**. Click on **"Edit (default)"** button > **Edit** button against *Page settings* in the **Events** section  > click **OK** on *Page Settings* pop-up dialog as shown in the image below. The error should be resolved.
+
+{{< figure src="/attachments/appstore/modules/email-connector/consistency-error-token.png" class="no-border" >}}

@@ -15,7 +15,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 #### Mendix Operator v2.17.1 {#2.17.1}
 
-* We have fixed the known issue from previous release - memory usage when building an MDA is back to normal.
+* We have fixed a known issue from a previous release - memory usage when building an MDA is now back to normal.
 
 ### June 7th, 2024
 

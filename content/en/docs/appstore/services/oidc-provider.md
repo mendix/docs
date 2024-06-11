@@ -194,11 +194,11 @@ To check that this works, you will need a tool for testing APIs (such as [Postma
 
     ```json {linenos=false}
     {
-    "client_id" : "DemoClient",
-    "client_name" : "DemoClient",
-    "client_secret" : "c46591bd-8fae-4f90-9efb-b5973bea04df",
-    "grant_types": [ "client_credentials" ],
-    "scope": "openid" 
+        "client_id" : "DemoClient",
+        "client_name" : "DemoClient",
+        "client_secret" : "c46591bd-8fae-4f90-9efb-b5973bea04df",
+        "grant_types": [ "client_credentials" ],
+        "scope": "openid" 
     }
     ```
 

@@ -192,7 +192,7 @@ An optional reference for a response message.
 | ------------------- | ------------------------------------------------------------ |
 | `Title` | The title of the reference. | 
 | `Content` | The content of the reference. |
-| `Source` | The source of the reference , e.g., a URL. | 
+| `Source` | The source of the reference, e.g., a URL. | 
 | `SourceType` | The type of the source. <br />For more information, see the [ENUM_SourceType](#enum-sourcetype) section.|
 
 #### 4.1.12 `Citation` {#citation}
@@ -266,7 +266,7 @@ An optional citation. This entity can be used to visualize the link between a pa
 
 ### 4.3 Activities {#activities} 
 
-#### 4.3.1 Preprocessing helpers
+#### 4.3.1 Build request (preprocessing helpers)
 
 ##### 4.3.1.1 Chat: Create Request
 This microflow can be used to create a request. This is the main request object that contains the functional input for the model to generate a response
@@ -393,7 +393,7 @@ If the ENUM_ToolChoice equals tool, the Tool input is required
 |---------------|----------|---------|
 | N/A       | nothing |  This microflow does not return an object  |
 
-#### 4.3.2 Postprocessing helpers
+#### 4.3.2 Handle response (postprocessing helpers)
 
 #### 4.3.2.1 Get Assistant Response
 This microflow can be used to get the assistant response text from the responsse structure returned from the main operation.

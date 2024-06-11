@@ -21,12 +21,12 @@ All the Studio Pro examples below assume that an entity `Sales.Customer` is sele
 In Studio Pro version 10.5, a new, visual, way of constructing XPath constraints was introduced. This is called **visual Builder for XPath constraints** (Builder).
 
 {{% alert color="warning" %}}
-Visual Builder for XPath constraints is beta in Mendix version 10.5 and above and has limitations which are listed in [Builder Limitations](#limitations).
+Visual Builder for XPath constraints is out of beta since Mendix version 10.12. But, despite that, has limitations which are listed in [Builder Limitations](#limitations).
 {{% /alert %}}
 
 You can use the Builder in all places where you can retrieve data from the database, for example a [Retrieve](/refguide/retrieve/) activity in a microflow or the [Data Source](/refguide/xpath-source/) of a widget. Select **(From) Database** and click **Edit…** next to **XPath constraint** to open a dialog box where you can build your constraint.
 
-Ensure the **Builder (beta)** option is selected to use the Builder—this is the default from Mendix version 10.10. You can switch between the Builder and the XPath expression editor to view them in different ways. You can also set the Builder as the default in your [preferences](/refguide/preferences-dialog/#visual-builder).
+Ensure the **Builder** option is selected to use the Builder—this is the default from Mendix version 10.10. You can switch between the Builder and the XPath expression editor to view them in different ways. You can also set the Builder as the default in your [preferences](/refguide/preferences-dialog/#visual-builder).
 
 #### 2.1.1 Constructing an XPath Constraint
 
@@ -60,7 +60,7 @@ You can change the order of rules, or move them from one group to another using 
 
 #### 2.1.2 Builder Limitations {#limitations}
 
-Visual Builder for XPath constraints is still in beta and you cannot use it to make arbitrarily complex XPath expressions. Builder has the following limitations:
+Visual Builder for XPath constraints cannot be used to make arbitrarily complex XPath expressions. Builder has the following limitations:
 
 * It does not support all functions. It does support the following relational operators and functions:
 

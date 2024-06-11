@@ -35,7 +35,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 This issue has been fixed in Mendix Operator [version 2.17.1](#2.17.1).
 
-* Building an MDA file larger than 100 MB fails with an `OOMKilled` pod status. The image builder has a regression where the entire MDA is loaded into memory - instead of reading it in blocks from a temporary file.
+* Building an MDA file larger than 100 MB fails with an `OOMKilled` pod status. The image builder has a regression where the entire MDA is loaded into memory, instead of reading it in blocks from a temporary file.
 
 ### May 30th, 2024
 

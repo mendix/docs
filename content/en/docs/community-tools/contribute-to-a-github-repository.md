@@ -1,7 +1,6 @@
 ---
 title: "Contribute to a GitHub Repo"
 url: /community-tools/contribute-to-a-github-repository/
-
 weight: 6
 description: "Describes how to contribute to a Mendix GitHub Repository according to Mendix guidelines."
 aliases:

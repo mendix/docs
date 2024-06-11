@@ -1,7 +1,6 @@
 ---
 title: "SDK Use Cases"
 url: /apidocs-mxsdk/mxsdk/sdk-use-cases/
-
 weight: 2
 ---
 

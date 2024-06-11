@@ -2,7 +2,6 @@
 title: "New Merge Algorithm with Fine-Grained Conflict Resolution"
 linktitle: "Merge Algorithm and Conflict Resolution"
 url: /refguide9/new-merge-algorithm/
-
 weight: 10
 description: "Introduces a new merge algorithm and describes how to enable it to resolve conflicts."
 ---

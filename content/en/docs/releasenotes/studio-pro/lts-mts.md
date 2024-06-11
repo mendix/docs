@@ -1,7 +1,6 @@
 ---
 title: "LTS, MTS, and Monthly Releases"
 url: /releasenotes/studio-pro/lts-mts/
-
 weight: 1
 ---
 

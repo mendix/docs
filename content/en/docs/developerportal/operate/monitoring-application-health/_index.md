@@ -1,7 +1,6 @@
 ---
 title: "Alerts"
 url: /developerportal/operate/monitoring-application-health/
-
 weight: 20
 description: "Describes how to monitor the health and status of your app."
 aliases:

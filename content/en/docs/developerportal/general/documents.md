@@ -1,7 +1,6 @@
 ---
 title: "Documents"
 url: /developerportal/general/documents/
-
 weight: 10
 description: "Describes how to manage the documents in your app."
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.

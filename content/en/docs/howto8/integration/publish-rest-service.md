@@ -1,7 +1,6 @@
 ---
 title: "Publish a REST Service"
 url: /howto8/integration/publish-rest-service/
-
 weight: 10
 description: "Describes how to publish REST web services natively from ."
 ---

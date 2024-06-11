@@ -1,7 +1,6 @@
 ---
 title: "Developer Tool Recommendations"
 url: /refguide9/developer-tools/
-
 weight: 60
 description: "Describes the best third-party tools to use when developing with Mendix."
 ---

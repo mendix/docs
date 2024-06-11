@@ -1,7 +1,6 @@
 ---
 title: "Consume a Complex Web Service"
 url: /refguide9/integration/consume-a-complex-web-service/
-
 weight: 8
 description: "Describes how to import a web service both directly and using the wizard as well as how to configure a web service call."
 aliases:

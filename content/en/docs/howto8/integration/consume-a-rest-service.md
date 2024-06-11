@@ -1,7 +1,6 @@
 ---
 title: "Consume a REST Service"
 url: /howto8/integration/consume-a-rest-service/
-
 weight: 9
 description: "Describes how to get information from a REST service."
 ---

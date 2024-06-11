@@ -1,7 +1,6 @@
 ---
 title: "Create Custom Error Pages"
 url: /howto9/front-end/custom-error-page/
-
 weight: 55
 description: "Describes how to create a custom error page for a more tailored user experience."
 ---

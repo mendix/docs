@@ -1,7 +1,6 @@
 ---
 title: "Login Behavior"
 url: /refguide9/login-behavior/
-
 description: "Describes default and customized login behavior in the Mendix Runtime."
 ---
 

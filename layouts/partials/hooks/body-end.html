@@ -22,13 +22,3 @@
     });
   });
   </script>
-  
-  <script > 
-    /* */
-    (function() {
-      var a = document.querySelector("#td-section-nav");
-      addEventListener("beforeunload", function(b) {
-          localStorage.setItem("menu.scrollTop", a.scrollTop)
-      }), a.scrollTop = localStorage.getItem("menu.scrollTop")
-    })()
-  </script>

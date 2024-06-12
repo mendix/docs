@@ -90,6 +90,12 @@ For more details, refer to the Gradle documentation on [Declaring repositories](
 
 {{< figure src="/attachments/refguide/java-programming/managed-dependencies/custom-repository.png" class="no-border" >}}
 
+{{% alert color="info" %}}
+Custom Repositories like Nexus, JFrog etc. maybe not be configured to point to central remote repositories by default. The following sources need to be configured in your custom remote repository.
+1. Maven Repository - https://repo1.maven.org/maven2/
+2. Gradle Plugins Repository - https://plugins.gradle.org/m2/
+{{% /alert %}}
+
 ### 6.1 Required Dependencies{#custom-repos-required-dependencies}
 
 There are some dependencies that are required by Mendix. These need to be added to your configured repository. Below is a list of these dependencies:

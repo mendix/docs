@@ -46,6 +46,8 @@ The component dependencies for each non-expired, deployment package are availabl
 
 On the **Overview** tab, you can see a list of all the deployed apps and their environments, if applicable.
 
+{{< figure src="/attachments/control-center/software-composition/overview.png" >}}
+
 Above the list, you can use the search box to search for information in the list. Next to the search box, you can filter apps by selecting the type of the cloud. You can click {{% icon name="office-sheet" %}}**Export all** on the right side above the list to export all the information in the list to an Excel file.
 
 The list contains the following information:
@@ -64,6 +66,8 @@ To export the information of selected items in the list to an Excel file, select
 
 On the **Overview** tab, if you click **View Details** for an item in the list, the **Component Summary** page opens. This page shows the components of the selected app environment for your easy visual consumption.
 
+{{< figure src="/attachments/control-center/software-composition/component-summary.png" >}}
+
 On the top of the page, you can find the app name, the environment name, the Mendix Runtime version, the Technical Contact, and the type of the cloud where the deployment package is deployed.
 
 For details on the information in the list and how to search, filter, and export information in the list, see the [All Components](#all-components) section.
@@ -79,6 +83,8 @@ On the upper-right corner of the **Component Summary** page, you can click {{% i
 The **All Components** tab gives an overview of all the unique components used across your app landscape. 
 
 {{% alert color="info" %}}To be able to see the software composition information, make sure that you meet the prerequisites. For more information, see the [Prerequisites](#prerequisites) section.{{% /alert %}}
+
+{{< figure src="/attachments/control-center/software-composition/all-components.png" >}}
 
 Above the list, you can use the search box to search for a component name or a component version. Next to the search box, you can filter components by selecting the component type. You can click {{% icon name="office-sheet" %}}**Export all** on the right side above the list to export all the information in the list to an Excel file.
 
@@ -96,6 +102,8 @@ To export the information of selected items in the list to an Excel file, select
 ### 3.1 Component Usage {#component-usage}
 
 On the **All Components** tab, if you click **View details** for an item, the **Component Usage** page opens. This page lists the apps and the environments where the selected component is being used. If a security vulnerabilities is found in one of the components, then the component usage tab can be used to assess the impact radius.
+
+{{< figure src="/attachments/control-center/software-composition/component-usage.png" >}}
 
 On the top of the page, you can find the component name, the component version, the component type, the number of apps where the component is used, and the number of environments where the component is used.
 

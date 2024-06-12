@@ -1,5 +1,6 @@
 ---
-title: "Deployment"
+title: "Deployment Release Notes"
+linktitle: "Deployment"
 url: /releasenotes/developer-portal/deployment/
 description: "Release notes for deployment capabilities managed in the Mendix Developer Portal"
 weight: 25

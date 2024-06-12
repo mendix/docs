@@ -1,9 +1,6 @@
 ---
 title: "Make It Native Apps"
 url: /releasenotes/mobile/make-it-native-parent/
-aliases:
-  - /howto/mobile/distributing-mobile-apps/building-native-apps/how-to-min-versions
-  - /refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-min-versions
 weight: 7
 description: "Information on various Make It Native apps by platform and version."
 ---
@@ -27,7 +24,7 @@ By following this strategy, you ensure that your development environment is equi
 
 ### 1.3 MIN Public Beta {#public-beta-instructions}
 
-This document also explains how you can download and install the MIN public beta:
+The current publicly accessible stores version of Make It Native doesn't support Mendix 10.11. These versions are only available through the public beta of MiN 10. This document also explains how you can download and install the MIN public beta:
 
 * For iOS apps, see the [Join the iOS App Public Beta](#join-ios-beta) section below.
 * For Android apps, see the [Join the Android App Public Beta](#join-android-beta) section below.

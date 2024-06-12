@@ -1,7 +1,6 @@
 ---
 title: "Mendix Runtime and Java"
 url: /refguide/runtime-java/
-
 description: "Explains some of the basic concepts of Java in Mendix."
 ---
 

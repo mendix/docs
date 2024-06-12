@@ -1,7 +1,6 @@
 ---
 title: "Mendix Feedback"
 url: /appstore/modules/mendix-feedback/
-
 description: "Describes the configuration and usage of the Mendix Feedback module, which is available in the Mendix Marketplace."
 aliases:
     - /appstore/widgets/mendix-feedback/

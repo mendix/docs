@@ -1,7 +1,6 @@
 ---
 title: "Mx Model Reflection"
 url: /appstore/modules/model-reflection/
-
 description: "Describes the configuration and usage of the Mx Model Reflection module, which is available in the Mendix Marketplace."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -28,11 +27,11 @@ If you want the synchronization to get triggered automatically after your app st
 
 The display pattern in the token is optional. If you do not specify a value, the module will use the original behavior. 
 
-For attributes of the decimal type, the display pattern `DecimalFormat` is used (for more information, see [Class DecimalFormat](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/text/DecimalFormat.html)).
+For attributes of the decimal type, the display pattern `DecimalFormat` is used (for more information, see [Class DecimalFormat](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/text/DecimalFormat.html)).
 
-For dates, the `SimpleDateFormat` is used (for more information, see [Class SimpleDateFormat](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/text/SimpleDateFormat.html)).
+For dates, the `SimpleDateFormat` is used (for more information, see [Class SimpleDateFormat](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/text/SimpleDateFormat.html)).
 
-For all other attributes, the functions from *java.util.Formatter* are used (for details on the patterns, see [Class Formatter](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Formatter.html)).
+For all other attributes, the functions from *java.util.Formatter* are used (for details on the patterns, see [Class Formatter](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/Formatter.html)).
 
 All the patterns use the locale from the context. Based on the user's language, the pattern will change its behavior if necessary.
 

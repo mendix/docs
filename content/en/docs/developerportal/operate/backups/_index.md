@@ -1,7 +1,6 @@
 ---
 title: "Backups"
 url: /developerportal/operate/backups/
-
 weight: 40
 description: "Describes the Backups page of Apps navigation pane."
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.

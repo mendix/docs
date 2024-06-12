@@ -2,7 +2,6 @@
 title: "Implement Best Practices for App Security"
 linktitle: "Best Practices for App Security"
 url: /howto/security/best-practices-security/
-
 weight: 20
 description: "Describes the common aspects you should consider when delivering an application within the Mendix Cloud."
 aliases:

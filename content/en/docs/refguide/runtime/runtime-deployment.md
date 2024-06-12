@@ -1,7 +1,6 @@
 ---
 title: "Runtime Deployment"
 url: /refguide/runtime-deployment/
-
 description: "Describes how the Mendix Runtime is deployed."
 weight: 30
 ---

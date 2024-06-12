@@ -2,7 +2,6 @@
 title: "Communication Patterns in the Mendix Runtime"
 linktitle: "Communication Patterns"
 url: /refguide9/communication-patterns/
-
 weight: 50
 description: "Outlines the communication patterns used by the Mendix Runtime environment for some typical application use cases."
 ---

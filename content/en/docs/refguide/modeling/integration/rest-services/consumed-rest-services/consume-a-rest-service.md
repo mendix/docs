@@ -1,7 +1,6 @@
 ---
 title: "Advanced Consumed REST Services"
 url: /refguide/integration/consume-a-rest-service/
-
 weight: 9
 description: "Describes how to integrate an existing system or a legacy system into a Mendix app by calling a REST service in a microflow."
 description: "Describes how to get information from a REST service."

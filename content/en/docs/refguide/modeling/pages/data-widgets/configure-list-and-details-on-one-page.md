@@ -2,7 +2,6 @@
 title: "Configuring a List and Viewing List Item Details on One Page"
 linktitle: "Configure List and View Details on 1 Page"
 url: /refguide/configure-list-and-details-on-one-page/
-
 description: "Describes how to configure a list and view list item details on one page in Mendix Studio Pro."
 weight: 60
 ---

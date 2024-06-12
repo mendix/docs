@@ -1,7 +1,6 @@
 ---
 title: "Use Gulp and Sass"
 url: /howto7/front-end/use-gulp-and-sass/
-
 weight: 45
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "3D Viewer"
 url: /partners/siemens/3d-viewer/
-
 weight: 20
 description: "Describes the configuration and usage of the 3D Viewer app service, which enables uploading, visualizing, and operating on 3D JT files in your web apps."
 aliases:

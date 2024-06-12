@@ -1,7 +1,6 @@
 ---
 title: "Build Pluggable Web Widgets"
 url: /howto9/extensibility/pluggable-widgets/
-
 weight: 20
 description: "Describes how to use the new generation of custom-built Mendix widgets based on React."
 ---

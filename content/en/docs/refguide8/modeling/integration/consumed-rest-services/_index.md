@@ -39,4 +39,4 @@ Above, the object `person` is described with the corresponding values for the at
 
 **How to consume REST with Mendix Studio Pro 8**
 
-{{% youtube OhzWTa1kZ00 %}}
+{{< youtube OhzWTa1kZ00 >}}

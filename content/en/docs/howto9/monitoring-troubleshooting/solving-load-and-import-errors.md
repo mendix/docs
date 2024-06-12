@@ -1,7 +1,6 @@
 ---
 title: "Solve Load and Import Errors"
 url: /howto9/monitoring-troubleshooting/solving-load-and-import-errors/
-
 weight: 11
 description: "Describes how to solve problems that may occur when opening an app."
 aliases:

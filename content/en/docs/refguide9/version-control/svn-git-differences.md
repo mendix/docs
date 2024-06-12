@@ -1,7 +1,6 @@
 ---
 title: "Differences Between Git and SVN"
 url: /refguide9/svn-git-differences/
-
 weight: 45
 aliases:
     - /refguide/svn-git-differences	

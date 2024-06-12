@@ -1,7 +1,6 @@
 ---
 title: "Mendix Mini Surveys"
 url: /appstore/modules/mendix-mini-surveys/
-
 description: "Describes the configuration and usage of the Mendix Mini Surveys module, which is available in the Mendix Marketplace."
 ---
 

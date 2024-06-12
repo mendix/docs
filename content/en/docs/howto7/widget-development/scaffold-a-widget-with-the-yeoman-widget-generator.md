@@ -2,7 +2,6 @@
 title: "Scaffold a Widget with the Yeoman Widget Generator"
 linktitle: "Scaffold Widget with Yeoman"
 url: /howto7/widget-development/scaffold-a-widget-with-the-yeoman-widget-generator/
-
 ---
 
 ## 1 Introduction

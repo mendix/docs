@@ -1,7 +1,6 @@
 ---
 title: "Use Navigation Layouts"
 url: /howto8/front-end/use-navigation-layouts/
-
 weight: 12
 description: "This guide teaches you how to use navigation layouts."
 ---

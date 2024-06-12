@@ -498,7 +498,6 @@ When the namespace in which the environment is deployed is configured with PCLM 
 * **Runtime Product Type** - The product type currently provisioned for Runtime license.
 * **License Provision Error** - If the licenses are not provisioned successfully for Runtime, then the error message would be displayed under this section. Example: When there are not enough Runtime license in the bundle or requested product type is not available in License bundle.
 
-
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/LicensePCLM.png" class="no-border" >}}
 
 #### 5.1.4 Security

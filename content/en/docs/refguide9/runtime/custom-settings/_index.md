@@ -1,7 +1,6 @@
 ---
 title: "Runtime Customization"
 url: /refguide9/custom-settings/
-
 description: "Describes custom settings for server, log file, database, Amazon S3 storage service, IBM Cloud Object Storage, Microsoft Azure, IBM Bluemix object storage, web client, and proxy server in Mendix."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #The anchor #amazon-s3-storage-service-settings below is mapped, so it should not be removed or changed.

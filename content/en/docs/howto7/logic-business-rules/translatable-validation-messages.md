@@ -1,7 +1,6 @@
 ---
 title: "Use Translatable Validation Messages"
 url: /howto7/logic-business-rules/translatable-validation-messages/
-
 weight: 14
 ---
 

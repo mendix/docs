@@ -1,7 +1,6 @@
 ---
 title: "MQTT"
 url: /appstore/modules/mqtt/
-
 description: "Describes the configuration and usage of the MQTT connector, which is available in the Mendix Marketplace."
 aliases:
     - /appstore/connectors/mqtt/
@@ -19,6 +18,7 @@ The MQTT connector consists of microflow actions that enable you to do the follo
 * Publish data to the MQTT broker
 * Subscribe to the MQTT broker 
 * Unsubscribe from the MQTT broker
+* Enabled support for Secure WebSocket (WSS) protocol
 
 ## 2 Broker Configuration {#configuration}
 

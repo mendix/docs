@@ -49,16 +49,15 @@ When a data source is selected, click **Edit** to do the following:
 
 * Add or edit the description of the data source
 * Set the data source as **Validated** and/or **Discoverable** 
-  * **Validated** – indicates the data source has been validated
-  * **Discoverable** – determines if the service is visible and can be found (and consumed) by users of the Catalog; if a service is set to **Not discoverable**, only the owners of the service (**Business** and **Technical**) and curators can find the registered data source
+    * **Validated** – indicates the data source has been validated
+    * **Discoverable** – determines if the service is visible and can be found (and consumed) by users of the Catalog; if a service is set to **Not discoverable**, only the owners of the service (**Business** and **Technical**) and curators can find the registered data source
 * Add new tags to your data source
 
-
 When a dataset is selected, click **Edit the dataset** to do the following:
+
 * Add or edit the description of the dataset
 * Set the dataset as **Validated**
 * Search for and add descriptions of the attributes
-
 
 ## 4 Editing the Metadata of an App {#curate-application}
 
@@ -68,7 +67,7 @@ You can curate Application details from the **Application** tab as follows:
 
 1. Click **Edit** > **Application** tab.
 
-{{< figure src="/attachments/catalog/search/curation-option.png" alt="app edit screen" >}}
+    {{< figure src="/attachments/catalog/search/curation-option.png" alt="app edit screen" >}}
 
 2. The **Application** tab is displayed:
 
@@ -107,7 +106,7 @@ To add a custom **Business Owner**, follow these steps:
 
     {{% alert color="info" %}}When you create or select a custom owner for an application, this will be displayed in the **Application** tab as a link to the email specified. Custom owners will have curate or access rights to the Catalog or the asset in the Catalog. Only Mendix users that are added as an owner can curate assets they own. {{% /alert %}}
 
-2. Click **Save** to return to the **Application** tab. Click **Save** to return to the Data Source details page where the changes will be displayed in the right-hand metadata pane.
+1. Click **Save** to return to the **Application** tab. Click **Save** to return to the Data Source details page where the changes will be displayed in the right-hand metadata pane.
 
 ### 4.2 Changing the App Icon {#application-icon}
 

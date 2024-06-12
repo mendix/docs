@@ -1,7 +1,6 @@
 ---
 title: "Create a Basic Data Layer"
 url: /howto8/data-models/create-a-basic-data-layer/
-
 weight: 1
 ---
 

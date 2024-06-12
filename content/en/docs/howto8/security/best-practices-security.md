@@ -2,7 +2,6 @@
 title: "Implement Best Practices for App Security"
 linktitle: "Best Practices for App Security"
 url: /howto8/security/best-practices-security/
-
 weight: 20
 description: "A set of security aspects and checks to use when developing your Mendix application."
 #The anchor request-handlers below is mapped, so it should not be removed or changed.

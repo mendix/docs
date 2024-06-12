@@ -38,7 +38,7 @@ Mendix Cloud is the default deployment option when you get started with the Mend
 
 From within Mendix Studio Pro, you can view the cloud nodes you have available in Mendix Cloud. You can create a deployment package (MDA) in the Mendix Portal; from there, you can transport it and start running your application. 
 
-For more information, see [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/).
+For more information, see [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) and [Deploying an App to Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/deploying-an-app/).
 
 ### 3.1 Mendix Cloud Dedicated {#mendix-cloud-dedicated}
 

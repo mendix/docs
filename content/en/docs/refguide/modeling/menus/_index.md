@@ -1,7 +1,6 @@
 ---
 title: "Menus"
 url: /refguide/menus/
-
 description: "Describes Studio Pro menus."
 weight: 20
 ---
@@ -56,13 +55,7 @@ In the **Language** menu, you can add alternative languages to your app so that 
 
 ## 10 Help Menu {#help}
 
-| Menu Item | Description | Shortcut Key |
-| --- | --- | --- |
-| **Help** | Opens the documentation page about the currently selected element. If an entity is selected, for example, the documentation for entities will be shown. | <kbd>F1</kbd> |
-| **Help Contents** | Opens the home page of the documentation in the default web browser. |   |
-| **Ask a Question** | Opens the Mendix Community in the default web browser. |   |
-| **Open Log File Directory** | Opens the log files written by Studio Pro that can be used to see what might be the reason something went wrong in Studio Pro. Log files can also be used to share with Mendix Support when you submit a ticket. |   |
-| **About Mendix Studio Pro** | Shows information about the current version of Mendix Studio Pro. |   |
+In the **Help** menu, you can ask questions and find answers to common problems you may experience while using Studio Pro. For more information on the **Help** menu, see [Help Menu](/refguide/help-menu/).
 
 ## 11 Read More
 

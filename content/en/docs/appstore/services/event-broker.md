@@ -4,7 +4,6 @@ url: /appstore/services/event-broker/
 linktitle: "Event Broker"
 description: "Mendix Event Broker"
 aliases:
-
 ---
 
 ## 1 Introduction

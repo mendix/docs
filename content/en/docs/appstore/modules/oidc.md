@@ -1,7 +1,6 @@
 ---
 title: "OIDC SSO"
 url: /appstore/modules/oidc/
-
 description: "Describes the configuration and usage of the OIDC SSO module, which is available in the Mendix Marketplace."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 # Linked from https://marketplace.mendix.com/link/component/120371
@@ -45,28 +44,28 @@ The OIDC SSO module supports the following features:
 
 1. IdP Integration Capabilities:
 
-* Supports SSO login with one or multiple OIDC/OAuth-compatible IdPs, such as AWS Cognito, Google, Salesforce, Apple, Okta, Ping, Microsoft's Entra ID (formerly known as Azure AD), and SAP Cloud Identity Services.
-* Comes with helper microflows (DELETE, GET, PATCH, POST, and PUT) which call an API with a valid token (and automate the token refresh process).
-* Easy configuration, by leveraging the so-called well-known discovery endpoint at your IdP.
-    * For example, PKCE will be used automatically if it is detected.
-* Configuration can be controlled through constants set during your deployment (version 2.3.0 and above).
-* Supports multiple OIDC IdPs by allowing configuration of user provisioning and access token parsing microflows per IdP.
-* Supports Authentication Context Class Reference (ACR) to allow your app to suggest the desired method or level of authentication for user login to the Identity Provider (IdP) (version 2.3.0 and above).
-* Supports responsive web applications, also known as browser based applications.
-* Works with the Mendix DeepLink module.
-* Supports user provisioning to custom user entities; you can map claims onto attributes of an entity which is a specialization of the `System.User` entity.
+    * Supports SSO login with one or multiple OIDC/OAuth-compatible IdPs, such as AWS Cognito, Google, Salesforce, Apple, Okta, Ping, Microsoft's Entra ID (formerly known as Azure AD), and SAP Cloud Identity Services.
+    * Comes with helper microflows (DELETE, GET, PATCH, POST, and PUT) which call an API with a valid token (and automate the token refresh process).
+    * Easy configuration, by leveraging the so-called well-known discovery endpoint at your IdP.
+        * For example, PKCE will be used automatically if it is detected.
+    * Configuration can be controlled through constants set during your deployment (version 2.3.0 and above).
+    * Supports multiple OIDC IdPs by allowing configuration of user provisioning and access token parsing microflows per IdP.
+    * Supports Authentication Context Class Reference (ACR) to allow your app to suggest the desired method or level of authentication for user login to the Identity Provider (IdP) (version 2.3.0 and above).
+    * Supports responsive web applications, also known as browser based applications.
+    * Works with the Mendix DeepLink module.
+    * Supports user provisioning to custom user entities; you can map claims onto attributes of an entity which is a specialization of the `System.User` entity.
 
 2. Configuration Experince Features:
 
-* Easy configuration, by leveraging the so-called well-known discovery endpoint at your IdP. The IdP's well-known endpoint also indicates which user claims the IdP may provide during single sign-on. The module reads this information, so the developer does not need to configure it. The available claims can be used in custom provisioning microflow, as decsribed in the section [Custom User Provisioning Using a Microflow.](#custom-provisioning-mf)
-    * For example, PKCE will be used automatically if it is detected.
-* Configuration can be controlled through constants set during your deployment (version 2.3.0 and above). 
-* Comes with default user provisioning microflow that works with Entra ID; there you may need to build a custom user provisioning flow.
-* User provisioning microflows can be used from any other modules in your app. They do not need to be exclusively a part of the OIDC module.
+    * Easy configuration, by leveraging the so-called well-known discovery endpoint at your IdP. The IdP's well-known endpoint also indicates which user claims the IdP may provide during single sign-on. The module reads this information, so the developer does not need to configure it. The available claims can be used in custom provisioning microflow, as decsribed in the section [Custom User Provisioning Using a Microflow.](#custom-provisioning-mf)
+        * For example, PKCE will be used automatically if it is detected.
+    * Configuration can be controlled through constants set during your deployment (version 2.3.0 and above). 
+    * Comes with default user provisioning microflow that works with Entra ID; there you may need to build a custom user provisioning flow.
+    * User provisioning microflows can be used from any other modules in your app. They do not need to be exclusively a part of the OIDC module.
 
 3. Developer Experience Features:
 
-* Built primarily in standard Mendix components (minimal Java) to allow for easy customization and ongoing development.
+    * Built primarily in standard Mendix components (minimal Java) to allow for easy customization and ongoing development.
 
 #### 1.2.2 OIDC Protocol Adherence
 
@@ -288,15 +287,15 @@ In this case, the OIDC client is the app you are making.
     * Add other scopes as needed.
 10. Select your user parsing. By default, this module will use standard OpenID claims to provision end-users in your app. Also included is a flow that uses the standard UserInfo endpoint in OIDC, which is useful in the case that your IdP uses thin tokens. You can set up user provisioning by setting the following standard flows:
 
-| Default Microflow | Use |
-| --- | --- |
-| OIDC_CustomUserParsing_Standard | It implements some standard OpenID claims to find/provision a user. |
-| OIDC_CustomUserParsing_UserInfo | It is similar as standard OIDC user parsing flow, except it works with identity providers that use `opaque` tokens. |
-| OIDC_CustomUserParsing_Salesforce | It offers an `id` endpoint that retrieves information about user. You can use OpenID token (`id_token`) to map user attributes. |
+    | Default Microflow | Use |
+    | --- | --- |
+    | OIDC_CustomUserParsing_Standard | It implements some standard OpenID claims to find/provision a user. |
+    | OIDC_CustomUserParsing_UserInfo | It is similar as standard OIDC user parsing flow, except it works with identity providers that use `opaque` tokens. |
+    | OIDC_CustomUserParsing_Salesforce | It offers an `id` endpoint that retrieves information about user. You can use OpenID token (`id_token`) to map user attributes. |
 
-In version below 3.0.0 of the OIDC SSO module, you can configure the timezone and language using the `OIDC_CustomUserParsing_Standard` and `OIDC_CustomUserParsing_UserInfo` microflow. However, in version 3.0.0 and above of the OIDC SSO module, you can set the timezone and language using any standard microflow.
+    In version below 3.0.0 of the OIDC SSO module, you can configure the timezone and language using the `OIDC_CustomUserParsing_Standard` and `OIDC_CustomUserParsing_UserInfo` microflow. However, in version 3.0.0 and above of the OIDC SSO module, you can set the timezone and language using any standard microflow.
 
-You can also use your own custom user entity to manage users of the app. See the section on [Custom User Provisioning](#custom-provisioning) for more information on what you can do to implement provisioning logic which fits your business needs. The module includes a Salesforce-specific example.
+    You can also use your own custom user entity to manage users of the app. See the section on [Custom User Provisioning](#custom-provisioning) for more information on what you can do to implement provisioning logic which fits your business needs. The module includes a Salesforce-specific example.
 
 11. Optionally, you can select the `CustomAccessTokenParsing` microflow if you want to use additional information from the OIDC IdP. This can be used, for example, to assign end-user roles based on information from the IdP – see [Access Token Parsing](#access-token-parsing) for more information.
 

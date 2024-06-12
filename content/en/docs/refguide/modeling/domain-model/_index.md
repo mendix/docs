@@ -8,7 +8,7 @@ description: "Introduces the domain model in Studio Pro."
 
 ## 1 Introduction
 
-The **domain model** is the way to describe the information (or data) used by your app in a visual way. The domain model is a data model which abstracts the structure of a relational database management system (RDBMS) which stores the business data which powers your app. See [Implementation](#implementation), below, for information on the relationship between the domain model and the underlying RDBMS.
+The **domain model** describes the information (or data) used by your app in a visual way. The domain model is a data model which abstracts the structure of a relational database management system (RDBMS) which stores the business data which powers your app. See [Implementation](#implementation), below, for information on the relationship between the domain model and the underlying RDBMS.
 
 The domain model is central to the architecture of your application. Each [module](/refguide/modules/) has its own domain model which describes the data used in that module. All modules in an app can use data from all the domain models within the app.
 
@@ -22,9 +22,9 @@ You can also add [annotations](/refguide/annotations/) to your domain model to r
 
 ## 2 Representation of the Domain Model
 
-Below is a domain model that describes customers and orders. The names of the entities are `Customer` and `Order`. The line between them is an association. `Order_Customer`. One customer can have many orders, but each order is for one customer. Within the boxes representing the entities you can see the [attributes](/refguide/attributes/) of the entities together with the [type](/refguide/attributes/#type) of data they hold. There is also a [non-persistable](/refguide/persistability/) entity, `ProductQueryResults`, which is used to record product information which is retrieved from a separate product system.
+Below is a domain model that describes customers and orders. The names of the entities are `Customer` and `Order`. The line between them is an association. `Order_Customer`. One customer can have many orders, but each order is for one customer. Within the boxes representing the entities you can see the [attributes](/refguide/attributes/) of the entities together with the [type](/refguide/attributes/#type) of data they hold. There is also a [non-persistable](/refguide/persistability/) entity, `ProductQueryResults`, which is used to record product information which is retrieved from a separate product system, and an [external entity](/refguide/external-entities/), `Products`, which holds a list of products stored in a seperate system.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/annotated-domain-model.png" alt="Domain Model annotated with structure" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/annotated-domain-model.png" alt="Domain Model annotated with structure" >}}
 
 | Element | Displays |
 | --- | --- |
@@ -42,17 +42,18 @@ Below is a domain model that describes customers and orders. The names of the en
 | Attribute Name | How this [attribute](/refguide/attributes/) will be referred to in the database, *"Number"* |
 | Attribute Type | The [type](/refguide/attributes/#type) (*Autonumber*) of data stored in this attribute |
 | Non-persistable Entity | This is an entity which is not stored in a database but only stored temporarily within the app |
+| External Entity | This is an entity which represents a link to an external data source |
 
-## 3 Implementation {#implementation}
+## 3 Implementation of Persistable Entities {#implementation}
 
-Every app has its own database where it stores persistable data. This is solely for its own use and cannot be shared with another Mendix app. The persistable (persistant or permanent) data is stored in one of the [supported RDBMSs](/refguide/system-requirements/#databases), depending on where the app is being deployed. For example, an app deployed to Mendix Cloud will use a PostgreSQL database to store its data. The database structure is created during the app deployment to support the domain models in the app.
+Every app has its own database or schema where it stores persistable data. This is solely for its own use and cannot be shared with another Mendix app. The persistable (persistant or permanent) data is stored in one of the [supported RDBMSs](/refguide/system-requirements/#databases), depending on where the app is being deployed. For example, an app deployed to Mendix Cloud will use a PostgreSQL database to store its data. The database structure is created during the app deployment to support the domain models in the app.
 
 In the database, every entity is stored in a separate table and has columns for the attributes defined in Studio Pro (except those which are calculated) and the system attributes. Each row of the table contains the data for an object of this particular entity type, and every entity table contains a column holding a unique identifier for the object. If an entity has specializations there is also a column indicating which specialization the object belongs to.
 
 Associations are stored in junction tables with columns holding the identifiers (ID) of both associated objects. This allows for more flexibility when creating your domain model.
 
 {{% alert color="info" %}}
-Mendix apps cannot share data by sharing the same database. If you want two apps to share the same database, then you need to share the data from one app to the other using APIs. In Mendix, these are supported by Data Hub or the REST and OData services described in the Integration section of the Studio Pro Guide. This is referred to as a microservices architecture.
+Mendix apps cannot share data by sharing the same database. If you want two apps to share the same database, then you need to share the data from one app to the other using APIs. In Mendix, these are supported by external entities or the REST and OData services described in the [Integration](/refguide/integration/) section of the Studio Pro Guide. This is referred to as a microservices architecture.
 
 For more information on how the underlying database behaves and why data cannot be shared between apps see [Data Storage](/refguide/data-storage/).
 {{% /alert %}}
@@ -61,11 +62,11 @@ For more information on how the underlying database behaves and why data cannot 
 
 Take a look at the following domain model.
 
-{{< figure src="/attachments/refguide/modeling/domain-model/customer-order.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/domain-model/customer-order.png" >}}
 
 #### 3.1.1 Customer Entity
 
-Objects of the entity `Customer` are stored in the table `module$customer` which is shown below. The `system$owner` and `system$changedby` columns are added to tables when indicated in the entity definition and contain the IDs of objects from the `System.User` entity (the `User` entity in the `System` module domain model). This indicates the end-user who owns and the one which last changed each object.
+Objects of the entity `Customer` are stored in the table `module$customer` which is shown below. The `system$owner` and `system$changedby` columns are added to tables when indicated in the entity definition and contain the IDs of objects from the `System.User` entity (the `User` entity in the `System` module domain model). This indicates the end-user who owns, and the one which last changed, each object.
 
 | id | createddate | changeddate | system$owner | system$changedby | fullname |
 | --- | --- | --- | --- | --- | --- |

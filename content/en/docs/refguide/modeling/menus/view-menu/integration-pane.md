@@ -99,7 +99,7 @@ The search results and **User in your App** section show the following informati
 
 * **Information icon** allows you to view further details for the service and a link to go directly to the [Service Details](/catalog/manage/search/#search-details) screen in the Catalog:
 
-    {{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/data-hub-pane-info.png" alt="Integration pane Information" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/integration-pane-info.png" alt="Integration pane Information" class="no-border" >}}
 
 ### 4.2 Entities, Attributes, and Associations {#association-attributes}
 

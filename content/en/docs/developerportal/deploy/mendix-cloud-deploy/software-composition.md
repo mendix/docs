@@ -45,6 +45,8 @@ The component dependencies for each non-expired, deployment package are availabl
 
 On the **Overview** tab, you can see a list of all the deployed packages and their environments, if applicable.
 
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/software-composition/overview.png" >}}
+
 Above the list, you can use the search box to search for information in the list. Next to the search box, you can filter apps by selecting the environment type or the Mendix Runtime version. You can click {{% icon name="office-sheet" %}}**Export all** on the right side above the list to export all the information in the list to an Excel file.
 
 The list contains the following information:
@@ -58,7 +60,9 @@ The list contains the following information:
 
 ### 2.1 Component Summary {#component-summary}
 
-On the **Overview** tab, if you click **View Details** for a deployment package in the list, the **Component Summary** page opens. 
+On the **Overview** tab, if you click **View Details** for a deployment package in the list, the **Component Summary** page opens.
+
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/software-composition/component-summary.png" >}}
 
 On the top of the page, you can find the name of the deployment package, the environment name, the Mendix Runtime version, and the version of the deployment package.
 
@@ -76,6 +80,8 @@ The **All Components** tab gives an overview of all the components used across y
 
 {{% alert color="info" %}}To be able to see the software composition information, make sure that you meet the prerequisites. For more information, see the [Prerequisites](#prerequisites) section.{{% /alert %}}
 
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/software-composition/all-components.png" >}}
+
 Above the list, you can use the search box to search for a component. Next to the search box, you can filter components by selecting the component type. You can click {{% icon name="office-sheet" %}}**Export all to Excel** on the right side above the list to export all the information in the list to an Excel file.
 
 The list shows the following information about the component:
@@ -89,6 +95,8 @@ The list shows the following information about the component:
 ### 3.1 Component Usage {#component-usage}
 
 On the **All Components** tab, if you click **View details** for an item, the **Component Usage** page opens. This page lists the environments where the selected component is being used. If a security vulnerabilities is found in one of the components, then the component usage tab can be used to assess the impact radius.
+
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/software-composition/component-usage.png" >}}
 
 On the top of the page, you can find the component name, the component version, and the component type. 
 

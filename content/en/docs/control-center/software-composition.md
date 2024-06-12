@@ -18,9 +18,7 @@ A Mendix app can consist of the Mendix Model (which includes pages, domain model
 
 Over time, these dependencies can become deprecated, outdated. or vulnerable. Enterprises also have policies on which of these reusable components can or cannot be used based on support, license, etc. It is important to have an easily accessible, clear view of component dependencies through the development lifecycle in order to address any security finding raised by your admins or security teams.
 
-To enable this, visibility into these component dependencies becomes available on the **Software Composition** page in Control Center. The components displayed here will be based on the [Software Bill of Materials (SBOM).
-
-From the **Software Composition** page in Control Center, you can drill down and view the component dependencies of each app environment. Besides, you can view the usage of components across your app landscape under [All Components](#all-components), where standard marketplace modules, widgets, Java libraries, npm modules, and Mendix runtime version are available.
+To enable this, visibility into these component dependencies of each app environment becomes available on the **Software Composition** page in Control Center. The components displayed here will be based on the [Software Bill of Materials (SBOM)](/refguide/sbom-generation/).
 
 ### 1.1 Prerequisites {#prerequisites}
 

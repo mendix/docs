@@ -24,7 +24,7 @@ To enable this, the **Software Composition** page in Control Center provides vis
 
 To be able to see the software composition information, make sure that you meet the following prerequisites:
 
-* Component details and related actions are available for apps made with Studio Pro versions [9.24.22](/releasenotes/studio-pro/9.24/#92422) and above, [10.6.9](/releasenotes/studio-pro/10.6/#1069) and above, and [10.10.0](/releasenotes/studio-pro/10.10/#10100) and above, therefore, not available for apps made with Studio Pro versions below 9.24.22 and below 10.6.9, as well as versions 10.7, 10.8, and 10.9.
+* Component details and related actions are available for apps made with Studio Pro versions [9.24.22](/releasenotes/studio-pro/9.24/#92422) and above, [10.6.9](/releasenotes/studio-pro/10.6/#1069) and above, and [10.10.0](/releasenotes/studio-pro/10.10/#10100) and above, therefore, not available for apps made with Studio Pro versions below 9.24.22 and 10.6.9, as well as versions 10.7, 10.8, and 10.9.
 
   {{% alert color="info" %}}With Mendix versions 9.24.22 and above, only unmanaged Java dependencies or jars are shown. With Mendix versions 10.6.9 and above, both managed and unmanaged Java dependencies or jars will be shown.{{% /alert %}}
 

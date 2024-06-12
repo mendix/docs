@@ -23,7 +23,7 @@ To enable this, the **Software Composition** page in the Developer Portal provid
 
 To be able to see the software composition information, make sure that you meet the following prerequisites:
 
-* Component details and related actions are available for apps made with Studio Pro versions [9.24.22](/releasenotes/studio-pro/9.24/#92422) and above, [10.6.9](/releasenotes/studio-pro/10.6/#1069) and above, and [10.10.0](/releasenotes/studio-pro/10.10/#10100) and above, therefore, not available for apps made with Studio Pro versions below 9.24.22 and below 10.6.9, as well as versions 10.7, 10.8, and 10.9.
+* Component details and related actions are available for apps made with Studio Pro versions [9.24.22](/releasenotes/studio-pro/9.24/#92422) and above, [10.6.9](/releasenotes/studio-pro/10.6/#1069) and above, and [10.10.0](/releasenotes/studio-pro/10.10/#10100) and above, therefore, not available for apps made with Studio Pro versions below 9.24.22 and 10.6.9, as well as versions 10.7, 10.8, and 10.9.
 
   {{% alert color="info" %}}With Mendix versions 9.24.22 and above, only unmanaged Java dependencies or jars are shown. With Mendix versions 10.6.9 and above, both managed and unmanaged Java dependencies or jars will be shown.{{% /alert %}}
 
@@ -39,7 +39,7 @@ Components are identified in the following manner:
 
 First, when a new deployment package is created via the Developer Portal with the compatible Mendix Runtime version, a software bill of material (SBOM) is generated along with it. The log details can be viewed by clicking **View build output** in the deployment package details in the Developer Portal. For details on SBOM generation, see [SBOM Generation](/refguide/sbom-generation/).
 
-The component dependencies for each non-expired, deployment package are available in the **Software Composition** page in the Developer Portal. 
+The component dependencies for each app environment are available in the [Software Composition](/control-center/software-composition/) page in Control Center. 
 
 ## 2 Overview {#overview}
 

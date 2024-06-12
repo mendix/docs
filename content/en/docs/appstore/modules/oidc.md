@@ -456,7 +456,7 @@ You can set up custom user provisioning by setting the following constants. You 
 | PrincipalEntityAttribute | the attribute holding the unique identifier of an authenticated user | | `Name` |
 | PrincipalIdPAttribute | the IdP claim which is the unique identifier of an authenticated user | | `sub` |
 | AllowcreateUsers | allow to create users in the application | *optional* | `True` |
-| Userrole | the role which will be assigned to newly created users | *optional* - Default Userrole is assigned only at user creation - User updates do not change the default role - No bulk update for existing users when the default userrole changes | `User` |
+| Userrole | the role which will be assigned to newly created users | *optional* <br> - Default Userrole is assigned only at user creation <br> - User updates do not change the default role <br> - No bulk update for existing users when the default userrole changes | `User` |
 | UserType | assign usertype to the created users | *optional* | `Internal` |
 | CustomUserProvisioning | a custom microflow to use for user provisioning | *optional* – in the form `modulename.microflowname` – the microflow name must begin with the string `CustomUserProvisioning` | `Mymodule.CustomUserProvisioningEntra` |
 

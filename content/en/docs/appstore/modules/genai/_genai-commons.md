@@ -111,7 +111,7 @@ The `Connection` entitiy is a required input parameter for all GenAI Commons ope
 | `TopP` | TopP is an alternative to temperature for controlling the randomness of the model response. TopP defines a probability threshold so that only the words with probabilities greater than or equal to the threshold will be included in the response.<br />Mendix recommends to only steer temperature or TopP, but not both. |
 | `ToolChoice` | Controls which (if any) tool is called by the model. <br />For more information, see the [ENUM_ToolChoice](#enum-toolchoice) section containing a description of the possible values |
 
-#### 4.1.3 `Message` {#messge}
+#### 4.1.3 `Message` {#message}
 
 A message that is part of the request or the response.  Each instance contains data (text, file collection) that needs to be taken into account by the model when processing the completion request. 
 

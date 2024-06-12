@@ -17,7 +17,7 @@ A Mendix app can consist of the Mendix Model (which includes pages, domain model
 
 Over time, these dependencies can become deprecated, outdated. or vulnerable. Enterprises also have policies on which of these reusable components can or cannot be used based on support, license, etc. It is important to have an easily accessible, clear view of component dependencies through the development lifecycle in order to address any security finding raised by your admins or security teams.  
 
-To enable this, visibility into these component dependencies becomes available on the **Software Composition** page in Developer Portal. The components displayed here will be based on the [Software Bill of Materials (SBOM)](/refguide/sbom-generation/) generated in Studio Pro.
+To enable this, visibility into these component dependencies becomes available on the **Software Composition** page in Developer Portal. The components displayed here will be based on the [Software Bill of Materials (SBOM)](/refguide/sbom-generation/).
 
 From the **Software Composition** page in the Developer Portal, you can drill down and view the component dependencies of each deployment package. Besides, you can view the usage of components across your environments under [All Components](#all-components), where standard marketplace modules, widgets, Java libraries, npm modules, and Mendix runtime version are available.
 
@@ -25,14 +25,15 @@ From the **Software Composition** page in the Developer Portal, you can drill do
 
 To be able to see the software composition information, make sure that you meet the following prerequisites:
 
-* Component details and related actions are available for apps made with Studio Pro versions [9.24.22](/releasenotes/studio-pro/9.24/#92422) and above, [10.6.9](/releasenotes/studio-pro/10.6/#1069) and above, and [10.10.0](/releasenotes/studio-pro/10.10/#10100) and above, therefore, not available for apps made with Studio Pro versions 10.7, 10.8, and 10.9.
+* Component details and related actions are available for apps made with Studio Pro versions [9.24.22](/releasenotes/studio-pro/9.24/#92422) and above, [10.6.9](/releasenotes/studio-pro/10.6/#1069) and above, and [10.10.0](/releasenotes/studio-pro/10.10/#10100) and above, therefore, not available for apps made with Studio Pro versions below 9.24.22 and below 10.6.9, as well as versions 10.7, 10.8, and 10.9.
 
   {{% alert color="info" %}}With Mendix versions 9.24.22 and above, only unmanaged Java dependencies or jars are shown. With Mendix versions 10.6.9 and above, both managed and unmanaged Java dependencies or jars will be shown.{{% /alert %}}
 
-* Software composition visibility is only possible for deployment packages created via the platform services. It is not available if you manually upload the locally-created deployment package.
+* Software composition visibility is only possible for deployment packages created via the platform services. It is not available if you manually upload the locally-created deployment package. SBOMs are created behind the scenes for each deployment package. For more information, see [Create Deployment Package](/refguide/create-deployment-package-dialog/).
+
 * You must be using free or licensed Mendix Cloud or Cloud Dedicated. It will be enabled for Private Cloud later. 
-* You must create a deployment package via the team server. SBOMs are created behind the scenes for each deployment package. For more information, see [Create Deployment Package](/refguide/create-deployment-package-dialog/).
-* If your deployment package was deployed before June 14, 2024, you must create and deploy a new deployment package in order to get the software composition information populated on this page. For more information, see the [Software Composition Generation](#software-composition-generation) section.
+
+* If your deployment package was deployed before June 14, 2024, you must create and deploy a new deployment package in order to get the software composition information populated on this page.
 
 ### 1.2 Software Composition Generation {#software-composition-generation}
 
@@ -75,7 +76,7 @@ In the list on the **Overview** tab, you can click {{% icon name="download-botto
 
 The **All Components** tab gives an overview of all the components used across your environments.
 
-{{% alert color="info" %}}To be able to see the software composition information, make sure that you meet the prerequisite. For more information, see the [Prerequisites](#prerequisites) section.{{% /alert %}}
+{{% alert color="info" %}}To be able to see the software composition information, make sure that you meet the prerequisites. For more information, see the [Prerequisites](#prerequisites) section.{{% /alert %}}
 
 Above the list, you can use the search box to search for a component. Next to the search box, you can filter components by selecting the component type. You can click {{% icon name="office-sheet" %}}**Export all to Excel** on the right side above the list to export all the information in the list to an Excel file.
 

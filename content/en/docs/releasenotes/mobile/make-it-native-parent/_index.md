@@ -24,7 +24,7 @@ By following this strategy, you ensure that your development environment is equi
 
 ### 1.3 MIN Public Beta {#public-beta-instructions}
 
-Currently, Make It Native 10 offered in public online app stores does not support Mendix 10.11. To use MIN with Studio Pro 10.11, you must use the public beta of MiN 10. This document explains how you can download and install the MIN 10 public beta:
+Currently, Make It Native 10 offered in public online app stores does not support Mendix 10.11. To use MIN with Studio Pro 10.11, you must use the public beta of MIN 10. This document explains how you can download and install the MIN 10 public beta:
 
 * For iOS apps, see the [Join the iOS App Public Beta](#join-ios-beta) section below.
 * For Android apps, see the [Join the Android App Public Beta](#join-android-beta) section below.

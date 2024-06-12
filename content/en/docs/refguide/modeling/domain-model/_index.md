@@ -1,5 +1,6 @@
 ---
 title: "Domain Model"
+linktitle: "Domain Model (Data)"
 url: /refguide/domain-model/
 weight: 30
 description: "Introduces the domain model in Studio Pro."
@@ -46,7 +47,7 @@ Below is a domain model that describes customers and orders. The names of the en
 
 ## 3 Implementation of Persistable Entities {#implementation}
 
-Every app has its own database or schema where it stores persistable data. This is solely for its own use and cannot be shared with another Mendix app. The persistable (persistant or permanent) data is stored in one of the [supported RDBMSs](/refguide/system-requirements/#databases), depending on where the app is being deployed. For example, an app deployed to Mendix Cloud will use a PostgreSQL database to store its data. The database structure is created during the app deployment to support the domain models in the app.
+While data in non-persistable and external entities is maintained in the memory of the app, every app has its own database or schema where it stores persistable data. This is solely for its own use and cannot be shared with another Mendix app. The persistable (persistant or permanent) data is stored in one of the [supported RDBMSs](/refguide/system-requirements/#databases), depending on where the app is being deployed. For example, an app deployed to Mendix Cloud will use a PostgreSQL database to store its data. The database structure is created during the app deployment to support the domain models in the app.
 
 In the database, every entity is stored in a separate table and has columns for the attributes defined in Studio Pro (except those which are calculated) and the system attributes. Each row of the table contains the data for an object of this particular entity type, and every entity table contains a column holding a unique identifier for the object. If an entity has specializations there is also a column indicating which specialization the object belongs to.
 

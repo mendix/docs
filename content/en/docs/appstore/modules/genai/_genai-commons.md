@@ -91,7 +91,15 @@ The main technical purpose of GenAI Commons module is to define a common domain 
 
 The domain model in Mendix is a data model that describes the information in your application domain in an abstract way. For more general information, see [Domain model](/refguide/domain-model/). To learn about where the entities from the domain model are used and relevant during implementation, see the [Activities](#activities) section below.
 
-##### 4.1.1 `Request` {#request} 
+##### 4.1.1 `Connection` {#connection}
+
+The `Connection` entitiy is a required input parameter for all GenAI Commons operations. Based on this object, all the technical details needed to perform the interaction with the system of the Large Language Model can be retrieved. 
+
+| Attribute           | Description                                                  |
+| ------------------- | ------------------------------------------------------------ |
+| Model | The model to be used for an operation. |
+
+##### 4.1.2 `Request` {#request} 
 
 `Request` is the main input object for the chat completions operations and contains all content-related input needed for a model to generate a response for the given chat conversation. 
 
@@ -103,7 +111,7 @@ The domain model in Mendix is a data model that describes the information in you
 | `TopP` | TopP is an alternative to temperature for controlling the randomness of the model response. TopP defines a probability threshold so that only the words with probabilities greater than or equal to the threshold will be included in the response.<br />Mendix recommends to only steer temperature or TopP, but not both. |
 | `ToolChoice` | Controls which (if any) tool is called by the model. <br />For more information, see the [ENUM_ToolChoice](#enum-toolchoice) section containing a description of the possible values |
 
-#### 4.1.2 `Message` {#messge}
+#### 4.1.3 `Message` {#messge}
 
 A message that is part of the request or the response.  Each instance contains data (text, file collection) that needs to be taken into account by the model when processing the completion request. 
 
@@ -114,11 +122,11 @@ A message that is part of the request or the response.  Each instance contains d
 | `MessageType`             | The type of the message can be either text or file, where file means that the associated FileCollection should be taken into account. <br />For more information, see the [ENUM_MessageType](#enum-messagetype) section.|
 | `ToolCallId`             | The id of the tool call proposed by the model that this message is responding to. <br />This attribute is only applicable for messages with role `tool`.|
 
-#### 4.1.3 `FileCollection` {#filecollection}
+#### 4.1.4 `FileCollection` {#filecollection}
 
 This is an optional collection of files that is part of a Message. It is used for patterns like "vision" where image files are sent along with the user message for the model to process. It functions as a wrapper entity for files and has no direct attributes.
 
-#### 4.1.4 `FileContent` {#filecontent}
+#### 4.1.5 `FileContent` {#filecontent}
 
 This is a file in the collection of files that belongs to a message. It is currently used as a part of the request. Each instance represents a single file. Currently only files of type image are supported.
 
@@ -130,11 +138,11 @@ This is a file in the collection of files that belongs to a message. It is curre
 | `TextContent` | An optional text content describing the file content or giving it a specific name. This can be used to refer to specific files in the prompt of the message. | 
 | `MediaType` |  This is a combination of FileType and the extension of the file, e.g. *image/png* | 
 
-#### 4.1.5 `ToolCollection` {#toolcollection}
+#### 4.1.6 `ToolCollection` {#toolcollection}
 
 This is an optional collection of tools to be sent along with the Request. Using tool call capabilities (e.g. function calling) might not be supported by certain AI providers or models. This entity functions as a wrapper entity for files and has no direct attributes.
 
-#### 4.1.6 `Tool` {#tool}
+#### 4.1.7 `Tool` {#tool}
 
 A tool in the tool collection. This is sent along with the request in order to expose a list of available tools. In the response, the model can suggest to call a certain tool (or multiple in parallel) in order to retrieve more (live) data.
 
@@ -144,7 +152,7 @@ A tool in the tool collection. This is sent along with the request in order to e
 | `Description` | An optional description of the tool, used by the model in addition to the name field to choose when and how to call the tool. | 
 | `ToolType` | The type of the tool. View connector documentation for supported types. |
 
-#### 4.1.7 `Function` {#function}
+#### 4.1.8 `Function` {#function}
 
 A tool of type function. This is a specialization of [Tool](#tool) and represents a microflow in the same Mendix application. The return value of this microflow when executed as function is sent to the model in a next iteration and hence must be of type String.
 
@@ -154,7 +162,7 @@ A tool of type function. This is a specialization of [Tool](#tool) and represent
 
 {{% alert color="info" %}}Note that function microflows do not respect entity access of the current user. Make sure that you only return information that the user is allowed to view, otherwise confidential information may be visible to the current user in the model's response. {{% /alert %}}
 
-#### 4.1.8 `StopSequence` {#stopsequence}
+#### 4.1.9 `StopSequence` {#stopsequence}
 
 For many models, StopSequences can be used to pass a list of character sequences (for example a word) along with the request. The model will stop generating content when a word of that list would occur next.
 
@@ -162,7 +170,7 @@ For many models, StopSequences can be used to pass a list of character sequences
 | ------------------- | ------------------------------------------------------------ |
 | `Sequence` | A sequence of characters that would prevent the model from generating further content. |
 
-#### 4.1.9 `Response` {#response}
+#### 4.1.10 `Response` {#response}
 
 The response returned by model contains usage metrics as well as a response message.
 
@@ -173,7 +181,7 @@ The response returned by model contains usage metrics as well as a response mess
 | `TotalTokens` | Total number of tokens (request + response). |
 | `StopReason` | The reason why the model stopped to generate further content. See connector documentation for possible values. | 
 
-#### 4.1.10 `ToolCall` {#toolcall}
+#### 4.1.11 `ToolCall` {#toolcall}
 
 A tool call object may be generated by the model in certain scenarios, such as a function call pattern. This entity is only applicable for messages with role `assistant`.
 
@@ -184,7 +192,7 @@ A tool call object may be generated by the model in certain scenarios, such as a
 | `ToolType` | The type of the tool. View connector documentation for supported types.|
 | `ToolCallId` | This is a model generated id of the proposed tool call. It is used in a Request in a next iteration to refer back to the proposed tool call, when the tool was called and the result is sent in a tool message.
 
-#### 4.1.11 `Reference` {#reference}
+#### 4.1.12 `Reference` {#reference}
 
 An optional reference for a response message.
 
@@ -195,7 +203,7 @@ An optional reference for a response message.
 | `Source` | The source of the reference, e.g., a URL. | 
 | `SourceType` | The type of the source. <br />For more information, see the [ENUM_SourceType](#enum-sourcetype) section.|
 
-#### 4.1.12 `Citation` {#citation}
+#### 4.1.13 `Citation` {#citation}
 
 An optional citation. This entity can be used to visualize the link between a part of the generated text and the actual text in the source on which the generated text was based.
 
@@ -426,3 +434,33 @@ This microflow can be used to retrieve the references for a given model response
 |---------------|----------|---------|
 | ReferenceList      | List of [Reference](#reference) |  The references with optinional citations that were part of the response message |
 
+
+### 4.3.3 Main operations (interface only)
+The following operations are defined currently by the GenAI Commons module for the category Chat Completions: 
+- `Chat Completions (without history)`
+- `Chat Completions (with history)`
+Note that these operations are not implemented in this module; it merely describes the interface (microflow input parameters, return value, and expected behavior). It is up to connectors that adhere to the principles of GenAI Commons to provide an implementation See for example the respective sections in the [OpenAI Connector] or the [Bedrock Connector].
+
+
+#### 4.3.3.1 `Chat Completions (without history)`
+
+**Input parameters**
+
+| Name     | Type     | Mandatory | Description                                 |
+|----------|----------|-----------|---------------------------------------------|
+| Connection |   [Connection](#connection)       | Yes       | This is the connfiguration object that contains the details for the API call to the system of the language model. Connectors must implement their specific connection details on a connector-specific specialization of this entity. |
+| UserPrompt |  String | Yes | This is the user input for the model to process.
+| Request | [Request](#rerquest) | No | This is the root object that contains all content-related input needed for a model to generate a response. | 
+| FileCollection | [FileCollection](#filecollection) | No | An optional collection of files to be sent along with the UserPrompt for the models that support file and/or image analysis. |
+
+Note about the `Connection`: implementing operations are required to have the generalization [Connection](#connection) entity as input parameter. However, the actual object passed into the operation by customer implementaitons must be of the correct specialization that belongs to the connector that is targeted. If the generalization or a different specialization is passed, implementation microflows should not perform the interaction to the language model and instead log an error message. 
+
+Note about the `Request`: implementing operations are required to have the [Request](#request) entity as optional input parameter: if a Request is not passed, the imlementing microflow should create one based on the UserPrompt input string; all other values are expected to assume default values as stated in the documentation of the connector. If for a connector implementation, specific additional parameters need to be exposed for certain vendors/models, Mendix recommends connector developers to create a specific Request_Extension entity for each case in the connector domain model (see the [OpenAI Connector] or the [Bedrock Connector] for an example). In customer implementations this extension object can optionally be instantiated with the required additional parameters for the call, attached to the Request and passed into the connector operation. If the extension object is not passed, the connector microflow is expected to proceed to do the interaction to the language model and assume default values as documented.
+
+**Return value**
+
+| Name          | Type     | Description            |
+|---------------|----------|---------|
+| Response      | [Response](#response) |   The response object from the operation that contains the data generated by the model as well as usage metrics. |
+
+Note about the `Response`: implementing operations are required to have the [Response](#response) entity as return parameter, but have to return `empty` if and only if a unhappy scenario occurs. From the error log it should be clear what went wrong at all times.

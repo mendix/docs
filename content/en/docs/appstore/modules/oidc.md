@@ -344,22 +344,16 @@ The following error messages will be displayed when you try to edit/delete.
 
 By default, the `Custom_CreateIDPConfiguration` microflow in the **MOVE_ME** folder of the OIDC module uses the `Default_CreateIDPConfiguration` microflow. Review the microflow `Custom_CreateIDPConfiguration` in the **MOVE_ME** folder. This is where you can change the default IdP configuration at Deploytime Configuration.
 
-The following constants are mandatory when creating an OIDC SSO configuration and user provisioning:
+The following constants are mandatory when creating an OIDC SSO IdP configuration:
 
 * **ClientID** – the client id
 * **ClientAlias** – the client alias
 * **ClientSecret** – the client secret (see security best-practice, above)
 * **AutomaticConfigurationURL** – the URL of the well-known endpoint (ending with `/.well-known/openid-configuration`)
 
-For more information, see the [Custom User Provisioning at Deploy Time](#custom-provisioning-dep) section.
+For more information on creating user provisioning with constants, see the [Custom User Provisioning at Deploy Time](#custom-provisioning-dep) section below.
 
 The following constants are optional:
-
-* **CustomUserEntity** (*default: Administration.Account*) – a custom user entity 
-
-* **PrincipalEntityAttribute** (*default: Name*) – the attribute holding the unique identifier of an authenticated user
-
-* **PrincipalIdPAttribute** (*default: sub*) – the IdP claim which is the unique identifier of an authenticated user
 
 * **ClientAuthenticationMethod** (*default: client_secret_basic*) – the client authentication method — the caption of OIDC.ENU_ClientAuthenticationMethod
 
@@ -393,6 +387,22 @@ The following constants are optional:
 
     Example: `acr1 acr2`
 
+* **AllowcreateUsers** – allow to create users in the application
+
+    Example: `True`
+
+* **Userrole** – the role which will be assigned to newly created users
+
+    Example: `User`
+
+* **UserType** – assign usertype to the created users
+
+    Example: `Internal`
+
+* **CustomUserProvisioning** – a custom microflow for user provisioning
+
+    Example: `Mymodule.CustomUserProvisioningEntra`
+
 ## 6 User Provisioning
 
 Initially your app will not have any end-users. The OIDC module provides so-called Just-In-Time (JIT) user provisioning. This means that an end-user will be created in your app when they log in for the first time. If you do not want JIT user provisioning, it is possible to disable it as described in the section [Custom User Provisioning at Runtime](#custom-provisioning-rt).
@@ -403,7 +413,7 @@ By default, end-users are provisioned using the `Account` object in the Administ
 
 By default, the `CUSTOM_UserProvisioning` microflow in the **USE_ME** > **1. Configuration** folder of the OIDC module uses the `OIDC_CustomUserParsing_Standard` microflow. This applies the following mapping:
 
-| ID-token Provided by your IdP | Attribute of `CustomUserEntity` Object |
+| ID-token Provided by your IdP | Attribute of `Administration.Account` Object |
 | ----------------------------- | ----------------------------- |
 | sub                           | Name                          |
 | name                          | Fullname                      |
@@ -446,7 +456,7 @@ You can set up custom user provisioning by setting the following constants. You 
 | PrincipalEntityAttribute | the attribute holding the unique identifier of an authenticated user | | `Name` |
 | PrincipalIdPAttribute | the IdP claim which is the unique identifier of an authenticated user | | `sub` |
 | AllowcreateUsers | allow to create users in the application | *optional* | `True` |
-| Userrole | the role which will be assigned to newly created users | *optional* | `User` |
+| Userrole | the role which will be assigned to newly created users | *optional* - Default Userrole is assigned only at user creation - User updates do not change the default role - No bulk update for existing users when the default userrole changes | `User` |
 | UserType | assign usertype to the created users | *optional* | `Internal` |
 | CustomUserProvisioning | a custom microflow to use for user provisioning | *optional* – in the form `modulename.microflowname` – the microflow name must begin with the string `CustomUserProvisioning` | `Mymodule.CustomUserProvisioningEntra` |
 

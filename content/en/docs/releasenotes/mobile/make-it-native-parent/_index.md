@@ -16,7 +16,7 @@ In summary, use the following Make It Native app versions for corresponding Mend
 * **Mendix 8.18 (LTS)**: Make It Native 8
 * **Mendix 9.24 (LTS)**: Make It Native 9
 * **Mendix 10.6 - 10.10**: Make It Native 10 from the app stores
-* **Mendix 10.11**: specific builds of Make It Native 10 (TestFlight and Google OpenTesting), as well as the [MIN Public Beta]{#join-min-beta} apps
+* **Mendix 10.11**: specific builds of Make It Native 10 (TestFlight and Google OpenTesting), as well as the [MIN Public Beta]{#public-beta-instructions} apps
 * MIN versions hosted on the iOS and Google app stores will keep supporting their latest MTS version.
 * **Other versions**: Create a [custom developer app](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/).
 
@@ -24,7 +24,7 @@ By following this strategy, you ensure that your development environment is equi
 
 ### 1.3 MIN Public Beta {#public-beta-instructions}
 
-The current publicly accessible stores version of Make It Native doesn't support Mendix 10.11. These versions are only available through the public beta of MiN 10. This document also explains how you can download and install the MIN public beta:
+Currently, Make It Native 10 offered in public online app stores does not support Mendix 10.11. To use MIN with Studio Pro 10.11, you must use the public beta of MiN 10. This document explains how you can download and install the MIN 10 public beta:
 
 * For iOS apps, see the [Join the iOS App Public Beta](#join-ios-beta) section below.
 * For Android apps, see the [Join the Android App Public Beta](#join-android-beta) section below.

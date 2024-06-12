@@ -15,7 +15,7 @@ aliases:
 ---
 
 {{% alert color="info" %}}
-The Mendix Portal is the whole online platform of Mendix, which includes [Apps](/developerportal/), [Control Center](/control-center/), [Community](/community-tools/), [Marketplace](/appstore/), Catalog, and [Mendix Support](/support/).
+The Mendix Portal is the online platform of Mendix. It includes [Apps](/developerportal/), [Control Center](/control-center/), [Community](/community-tools/), [Marketplace](/appstore/), Catalog, and [Mendix Support](/support/).
 {{% /alert %}}
 
 ## 1 Introduction

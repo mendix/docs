@@ -39,7 +39,7 @@ Components are identified in the following manner:
 
 First, when a new deployment package is created via the Developer Portal with the compatible Mendix Runtime version, a software bill of material (SBOM) is generated along with it. The log details can be viewed by clicking **View build output** in the deployment package details in the Developer Portal. For details on SBOM generation, see [SBOM Generation](/refguide/sbom-generation/).
 
-The component dependencies for each app environment are available in the [Software Composition](/control-center/software-composition/) page in Control Center. 
+The component dependencies for each non-expired, deployment package are available in the **Software Composition** page in the Developer Portal. 
 
 ## 2 Overview {#overview}
 

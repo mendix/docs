@@ -105,7 +105,7 @@ Below are the few options you can try to configure Gradle with custom proxy sett
 ### 7.1 Gradle Proxy Settings
 
 You can create a `gradle.properties` file in the [Gradle User Home](https://docs.gradle.org/current/userguide/directory_layout.html#dir:gradle_user_home) directory and configure the proxy settings there. Just replace the values in the sample file below with your values.
-See the official [Networking with Gradle](https://docs.gradle.org/current/userguide/networking.html) guide for further details.
+See the official [Networking with Gradle](https://docs.gradle.org/current/userguide/networking.html) guide for further details. 
 
 Sample `gradle.properties` file:
 
@@ -119,6 +119,10 @@ systemProp.https.proxyPort=proxy-port
 systemProp.https.proxyUser=userid
 systemProp.https.proxyPassword=password 
 ```
+
+{{% alert color="info" %}}
+When inputting the `proxy-host-ip`, make sure to **not** add the URL prefix (for example, `http://`). 
+{{% /alert %}}
 
 If Gradle still fails to download dependencies with the correct proxy settings configured, you can configure the HTTPS/SSL certificate store that Gradle uses.
 
@@ -152,6 +156,10 @@ http.proxyPort=your.proxy.port
 https.proxyHost=your.proxy.ip.address
 https.proxyPort=your.proxy.port
 ```
+
+{{% alert color="info" %}}
+When inputting the `your.proxy.ip.address`, make sure to **not** add the URL prefix (for example, `http://`). 
+{{% /alert %}}
 
 If the above options don't work for you, please reach out to [Mendix Support](https://support.mendix.com/) for further assistance.
 

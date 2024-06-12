@@ -2,7 +2,6 @@
 title: "Using Eclipse"
 url: /refguide9/using-eclipse/
 weight: 2
-
 description: "Describes how to set up Eclipse, and how to add a Mendix application to Eclipse and launch it."
 ---
 

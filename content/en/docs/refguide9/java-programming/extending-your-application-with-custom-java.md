@@ -3,7 +3,6 @@ title: "Extending Your Application with Custom Java"
 linktitle: "Extending App with Custom Java"
 url: /refguide9/extending-your-application-with-custom-java/
 weight: 3
-
 description: "Describes how to extend your application with custom Java code."
 ---
 

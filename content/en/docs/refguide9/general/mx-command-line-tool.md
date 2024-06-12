@@ -1,7 +1,6 @@
 ---
 title: "mx Command-Line Tool"
 url: /refguide9/mx-command-line-tool/
-
 weight: 50
 description: "Describes the options of the mx command-line tool."
 ---

@@ -1,7 +1,6 @@
 ---
 title: "Debug Microflows Remotely"
 url: /howto7/monitoring-troubleshooting/debug-microflows-remotely/
-
 weight: 3
 ---
 

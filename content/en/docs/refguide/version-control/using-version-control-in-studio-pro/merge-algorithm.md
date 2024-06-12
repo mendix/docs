@@ -2,7 +2,6 @@
 title: "Combining Changes and Conflict Resolution"
 linktitle: "Combining Changes and Conflict Resolution"
 url: /refguide/merge-algorithm/
-
 weight: 10
 description: "Describes combining changes with conflict resolution flow."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

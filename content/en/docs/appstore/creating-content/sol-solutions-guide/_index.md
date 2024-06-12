@@ -2,7 +2,6 @@
 title: "Create Solutions"
 url: /appstore/creating-content/sol-solutions-guide/
 linktitle: "Create Solutions"
-
 weight: 3
 description: "Provides information and guidance on how to develop solutions you can sell both on and off the Mendix Marketplace."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

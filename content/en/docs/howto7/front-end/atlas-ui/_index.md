@@ -1,7 +1,6 @@
 ---
 title: "Atlas UI"
 url: /howto7/front-end/atlas-ui/
-
 weight: 5
 ---
 

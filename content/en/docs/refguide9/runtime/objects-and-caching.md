@@ -1,7 +1,6 @@
 ---
 title: "Objects and Caching"
 url: /refguide9/objects-and-caching/
-
 description: "Describes how objects interact with each other within a runtime request."
 ---
 

@@ -6,7 +6,6 @@ weight: 30
 aliases:
     - /private-mendix-platform-configure-k8s/
 ---
-
 ## 1 Introduction
 
 This document explains the configuration options available when configuring a Continuous Integration and Delivery (CI/CD) solution for Private Mendix Platform on a Kubernetes Cluster.

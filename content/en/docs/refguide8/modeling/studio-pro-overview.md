@@ -1,7 +1,6 @@
 ---
 title: "Studio Pro Overview"
 url: /refguide8/studio-pro-overview/
-
 description: "Describes Studio Pro in general: tabs, menus, shortcut keys."
 weight: 10
 aliases:

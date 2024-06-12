@@ -1,7 +1,6 @@
 ---
 title: "Atlas UI"
 url: /howto8/front-end/atlas-ui/
-
 weight: 5
 aliases:
     - /howto8/front-end/create-a-custom-theme-with-the-mendix-ui-framework.html

@@ -2,7 +2,6 @@
 title: "Build Microflow Actions Using the Mendix Connector Kit"
 linktitle: "Microflow Actions Using Connector Kit"
 url: /howto8/extensibility/howto-connector-kit/
-
 description: "Describes creating custom Microflow actions using advanced Connector Kit options."
 weight: 80
 #To update screenshots of these microflows in Studio Pro, use the SlackRekognition-main-master app, which is saved locally in Other Resources > Documentation Backups (No Update).

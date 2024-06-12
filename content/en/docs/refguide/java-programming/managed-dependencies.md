@@ -1,7 +1,6 @@
 ---
 title: "Managed Dependencies"
 url: /refguide/managed-dependencies/
-
 weight: 50
 description: "Describes how to use the managed dependencies feature in Studio Pro"
 ---

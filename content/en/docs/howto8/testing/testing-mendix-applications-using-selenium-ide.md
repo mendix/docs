@@ -1,7 +1,6 @@
 ---
 title: "Test Mendix Apps Using Selenium IDE"
 url: /howto8/testing/testing-mendix-applications-using-selenium-ide/
-
 weight: 40
 ---
 

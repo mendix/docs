@@ -1,7 +1,6 @@
 ---
 title: "Mobile SSO"
 url: /appstore/modules/mobile-sso/ 
-
 description: "Describes the configuration and usage of the Mobile SSO module, which is available in the Mendix Marketplace."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 # Linked from https://marketplace.mendix.com/link/component/223516

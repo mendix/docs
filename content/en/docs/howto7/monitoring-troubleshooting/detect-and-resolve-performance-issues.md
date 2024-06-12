@@ -1,7 +1,6 @@
 ---
 title: "Detect and Resolve Performance Issues"
 url: /howto7/monitoring-troubleshooting/detect-and-resolve-performance-issues/
-
 ---
 Any application can run into performance issues. Here are a number of possible performance issues you may run into, some root causes, and finally how you can resolve them.
 

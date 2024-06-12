@@ -1,7 +1,6 @@
 ---
 title: "Implement Best Practices for UX Design"
 url: /howto8/front-end/ux-best-practices/
-
 weight: 10
 ---
 

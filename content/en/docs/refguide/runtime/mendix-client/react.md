@@ -1,7 +1,6 @@
 ---
 title: "Mendix React Client"
 url: /refguide/mendix-client/react
-
 description: "Describes the React version of the Mendix Client."
 weight: 10
 ---

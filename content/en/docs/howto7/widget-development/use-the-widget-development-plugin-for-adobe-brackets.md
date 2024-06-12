@@ -2,7 +2,6 @@
 title: "Use the Widget Development Plugin for Adobe Brackets"
 linktitle: "Adobe Brackets Widget Development Plugin"
 url: /howto7/widget-development/use-the-widget-development-plugin-for-adobe-brackets/
-
 ---
 
 ## 1 Introduction

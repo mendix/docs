@@ -1,7 +1,6 @@
 ---
 title: "Make It Native Apps"
 url: /releasenotes/mobile/make-it-native-parent/
-
 weight: 7
 description: "Make It Native apps information."
 ---

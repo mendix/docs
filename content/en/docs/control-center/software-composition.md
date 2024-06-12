@@ -56,7 +56,7 @@ The list contains the following information:
 * **Technical Contact**: This shows the Technical Contact of the app.
 * **Target Cloud**: This shows the type of the cloud where the deployment package is deployed. Currently, only Mendix Free Cloud and Mendix Cloud (including Mendix Cloud Dedicated) are supported.
 * Column customization ({{% icon name="view" %}}): You can customize the columns of the list by clicking the {{% icon name="view" %}} icon and adjusting the selection of the check boxes.
-* **View details**: Click this opens the [Component Summary](#component-summary) page, if it is available. The **View details** button is grayed out if it is not applicable.
+* **View details**: Click this opens the [Component Summary](#component-summary) page, if it is available. The **View details** button is grayed out when an SBOM is not available for the selected application environment. Ensure you are on compatible runtime versions and create a new deployment package in order to get component visibility here.
 
 To export the information of selected items in the list to an Excel file, select the check boxes of the items in the list, and then click {{% icon name="office-sheet" %}} **Selection Export** that appears at the bottom of the page.
 

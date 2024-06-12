@@ -54,7 +54,7 @@ The list contains the following information:
 * **Runtime**: This shows the Mendix Runtime version.
 * **Version**: This shows the version of the deployment package on this app environment.
 * Column customization ({{% icon name="view" %}}): You can customize the columns of the list by clicking the {{% icon name="view" %}} icon and adjusting the selection of the check boxes.
-* **View details**: Click this opens the [Component Summary](#component-summary) page, if it is available. The **View details** button is grayed out if it is not applicable.
+* **View details**: Click this opens the [Component Summary](#component-summary) page, if it is available. The **View details** button is grayed out when an SBOM is not available for the selected deployment package. Ensure you are on compatible runtime versions and create a new deployment package in order to get component visibility here.
 
 ### 2.1 Component Summary {#component-summary}
 

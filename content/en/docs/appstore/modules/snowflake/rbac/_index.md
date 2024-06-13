@@ -25,9 +25,5 @@ Because of the above, implementing RBAC is essential for maintaining security an
 
 You can implement RBAC by using the following methods:
 
-* Key-pair authentication
-* Snowflake SSO
-
-For more information, refer to the links below.
-
-## 2 Documents in This Category
+* [Key-pair authentication](/appstore/modules/snowflake/key-pair-auth/)
+* [Snowflake SSO](/appstore/modules/snowflake/snowflake-sso/)

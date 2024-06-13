@@ -1,12 +1,12 @@
 ---
-title: "Community Tools"
+title: "Community"
 url: /releasenotes/community-tools/
 description: "Release notes for the community tools in the Mendix Platform."
 weight: 37
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-These release notes cover changes to the Mendix Profile, Mendix Community, and other [Mendix community tools](/community-tools/).
+These release notes cover changes to the Mendix Community,  Mendix Profile, and other [Mendix community tools](/community-tools/).
 
 ## 2024
 

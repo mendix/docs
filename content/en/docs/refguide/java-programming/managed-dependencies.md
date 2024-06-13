@@ -27,7 +27,7 @@ To enter a dependency, do the following:
 
 1. Enter the **Group ID**, **Artifact ID**, and **Version**. For example, `org.apache.poi`, `poi`, and `5.2.3`.
 
-    {{< figure src="/attachments/refguide/java-programming/managed-dependencies/edit-java-dependencies.png" class="no-border" >}}
+    {{< figure src="/attachments/refguide/java-programming/managed-dependencies/edit-java-dependencies.png" >}}
 
 1. Click **OK** to confirm your changes.
 
@@ -46,20 +46,22 @@ After finding the package of your choice, locate the Snippets part, containing t
 ## 3 Adding or Updating Exclusions
 
 {{% alert color="info" %}}
-Exclusions are available in Studio Pro 10.12.0 and above.
+Exclusions are available in Studio Pro version 10.12.0 and above.
 {{% /alert %}}
 
-In certain cases a conflict in transitive dependencies between different configured Java dependencies may appear.
-For example if two Java dependencies have the same package name and classes but a different group or artifact then they may both be included in your app, possibly causing conflicts.
-To fix this, transitive dependencies can be excluded when configuring dependencies.
-The exclusions configured here will be exported with the module, and so these dependencies are also excluded when importing the module in another app.
-When [editing a Java dependency](add-dependency) a list shows the currently specified exclusions for the dependency. You can add **New** exclusions and **Edit** or **Delete** existing exclusions. 
+Sometimes you may find a conflict in transitive dependencies between different configured Java dependencies.
+For example, if two Java dependencies have the same package name and classes but a different group or artifact then they may both be included in your app, possibly causing conflicts.
 
-{{< figure src="/attachments/refguide/java-programming/managed-dependencies/exclusions.png" class="no-border" >}}
+To fix this, transitive dependencies can be excluded when configuring dependencies.
+The exclusions configured here will be exported with the module, meaning they are also excluded when the module is imported into another app.
+
+When [editing a Java dependency](#add-dependency) a list shows the currently specified exclusions for the dependency. You can add **New** exclusions and **Edit** or **Delete** existing exclusions. 
+
+{{< figure src="/attachments/refguide/java-programming/managed-dependencies/exclusions.png" >}}
 
 Exclusions are identified through their [Maven naming convention](https://maven.apache.org/guides/mini/guide-naming-conventions.html), you do not need to specify a version number.
 
-{{< figure src="/attachments/refguide/java-programming/managed-dependencies/edit-exclusion.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/java-programming/managed-dependencies/edit-exclusion.png" >}}
 
 ## 4 Dependency Synchronization
 
@@ -106,7 +108,7 @@ mavenCentral()
 
 For more details, refer to the Gradle documentation on [Declaring repositories](https://docs.gradle.org/current/userguide/declaring_repositories.html).
 
-{{< figure src="/attachments/refguide/java-programming/managed-dependencies/custom-repository.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/java-programming/managed-dependencies/custom-repository.png" >}}
 
 ### 7.1 Required Dependencies{#custom-repos-required-dependencies}
 

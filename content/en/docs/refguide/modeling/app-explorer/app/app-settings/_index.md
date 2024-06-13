@@ -395,19 +395,22 @@ A microflow selected for this setting will start every time a user task changes 
 ## 8 Dependencies Tab {#deployment}
 
 {{% alert color="info" %}}
-The Deployment tab was renamed to Dependencies in Studio Pro 10.12.0.
+The Deployment tab was renamed to **Dependencies** in Studio Pro 10.12.0.
 {{% /alert %}}
 
-This tab can be used to view the managed dependencies in your app in one place and to manage the dependencies in the userlib directory.
+This tab can be used to view the managed dependencies in your app in one place and to manage the dependencies in the userlib directory. It contains three tabbed sections.
 
 ### 8.1 Overview
-This grid shows all the managed dependencies in your app. It shows which versions of the dependencies you have and which modules they are coming from. If your app reports multiple versions of the same group and artifact then the highest version is used, so having multiple versions of a dependency is not necessarily a problem.
+
+This shows all the managed dependencies in your app listed by group and artifact. It shows which versions of the dependencies you have and which modules they are coming from. If your app reports multiple versions of the same group and artifact then the highest version is used, so having multiple versions of a dependency is not necessarily a problem.
 
 ### 8.2 Managed Dependency Exclusions
-These are all the managed dependencies in your app. This overview includes transitive dependencies. If you have conflicts between different dependencies, uncheck any files which you want to exclude. Ensure you leave at least one dependency which supports any calls made by your app or its dependencies.
+
+This shows all the managed dependencies in your app listed by package name. This overview includes transitive dependencies. If you have conflicts between different dependencies, you can uncheck here any files which you want to exclude. Ensure you leave at least one dependency which supports any calls made by your app or its dependencies.
 
 ### 8.3 Userlib Exclusions
-This grid allows you to exclude libraries from the userlib directory from deployment. Use this, for example, if there is an add-on module that ships with a different version of a library that is already in your 'userlib' folder.
+
+This shows the libraries from the userlib directory and allows you to exclude them from deployment. Use this, for example, if there is an add-on module that ships with a different version of a library that is already in your 'userlib' folder.
 
 ## 9 Solution Tab {#solution}
 

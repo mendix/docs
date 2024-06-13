@@ -12,6 +12,12 @@ To see the current status of the Mendix Control Center, see [Mendix Status](http
 
 ## 2024
 
+### June 14, 2024
+
+#### New Features
+
+* We have released the beta version of the [Software Composition](/control-center/software-compsoition/) page, which provides visibility into the component dependencies in every app environment across your company's app landscape.
+
 ### May 16, 2024
 
 #### New Features

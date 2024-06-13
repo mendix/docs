@@ -16,6 +16,12 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 ## 2024
 
+### June 14, 2024
+
+#### New Features
+
+* We have released the beta version of the [Software Composition](/control-center/software-compsoition/) page in **Apps**, which provides visibility into the component dependencies of each deployment package.
+
 ### June 9, 2024
 
 ### Improvements

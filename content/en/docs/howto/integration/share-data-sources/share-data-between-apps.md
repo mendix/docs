@@ -121,7 +121,7 @@ Do the following:
     {{< figure src="/attachments/catalog/share-data/dh-filter-box.png" alt="Catalog screen" class="no-border" >}}
 
 5. From the new search results list on the left, select the *{yourname}CustomerODataService* service. Full details from the OData contract for the service are displayed on the right.
-6. The **Curate** bar confirms that "**You are the owner of this data source**". You have permissions edit the metadata for this service in the Catalog and a **Business Owner**.
+6. The **Curate** bar confirms that "**You are the owner of this data source**". You have permissions edit the metadata for this service in the Catalog and a **Business Owner**. 
 
     {{< figure src="/attachments/catalog/share-data/search-details-screen.png" alt="Catalog search details" class="no-border" >}}
 

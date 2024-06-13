@@ -798,7 +798,49 @@ The `ObservationRetrievedReference` holds information about a sources cited for 
 
 Activities define the actions that are executed in a microflow or a nanoflow. For more information, see [Activities](/refguide/activities/).
 
-#### 4.2.1 ListFoundationModels {#list-foundation-models}
+#### 4.2.1 GenAiCommons-based operations
+
+##### 4.2.1.1 ChatCompletions (without history) {#chat-completions-without-history}
+
+The `ChatCompletions (without history)` activity can be used for any conversations with Anthropic Claude or Amazon Titan. There is no option to keep the concersation history in mind. 
+
+The input and output for this service are shown in the table below:
+
+| Input | Output |
+| --- | --- |
+| `Userprompt (string)`, `AmazonBedrockConnection`, `GenAICommons.Request (optional)`, `FileCollection (optional)`| `GenAICommons.Response`|
+
+For Anthropic Claude, the request must be associated to an AnthropicClaudeRequest_Extension object which can be created with the `AnthropicClaudeRequest_Extension_Create` flow. This operation can easily be replaced or combined with the ChatCompletions (without History) operation inside of the [OpenAI connector](https://marketplace.mendix.com/link/component/220472).
+
+
+##### 4.2.1.2 ChatCompletions (with history) {#chat-completions-with-history}
+
+The `ChatCompletions (with history)` activity can be used for any conversations with Anthropic Claude or Amazon Titan. It is possible for it to keep the conversation history in mind.
+
+The input and output for this service are shown in the table below:
+
+| Input | Output |
+| --- | --- |
+| `GenAICommons.Request`, `AmazonBedrockConnection`| `GenAICommons.Response`|
+
+For Anthropic Claude, the request must be associated to an AnthropicClaudeRequest_Extension object which can be created with the `AnthropicClaudeRequest_Extension_Create` flow. In order to pass a conversation history to the flow, the list of previous messages must be associated to the input request. This operation can easily be replaced or combined with the ChatCompletions (with history) operation inside of the [OpenAI connector](https://marketplace.mendix.com/link/component/220472).
+
+
+##### 4.2.1.3 RetrieveAndGenerate {#retrieve-and-generate}
+
+The `Retrieve and Generate` activity can be used for conversations leveraging Retrieval Augmented Generation through a knowledge base. 
+The input and output for this service are shown in the table below:
+
+| Input | Output |
+| --- | --- |
+| `GenAICommons.Request`, `AmazonBedrockConnection`| `GenAICommons.Response`|
+
+For Anthropic Claude, the request must be associated to an AnthropicClaudeRequest_Extension object which can be created with the `AnthropicClaudeRequest_Extension_Create` flow. In order to pass a conversation history to the flow, the list of previous messages must be associated to the input request.
+
+
+#### 4.2.2 Other operations
+
+##### 4.2.2.1 ListFoundationModels {#list-foundation-models}
 
 The `ListFoundationModels` activity allows you to get all the available foundational models which Amazon Bedrock provides. It requires `ENUM_Region`, `Credentials` and `ListFoundationModelsRequest` as input parameters.
 
@@ -808,7 +850,7 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `ENUM_Region (enumeration)`, `Credentials (object)`, `ListFoundationModelsRequest (object)` | `ListFoundationModelsResponse (object)`|
 
-#### 4.2.2 InvokeModel {#invoke-model}
+##### 4.2.2.2 InvokeModel {#invoke-model}
 
 The `InvokeModel` activity allows you to invoke a model from Amazon Bedrock. This activity provides the generic parts that are equal for the invocation of every model. It requires `ENUM_Region`, `Credentials` and `InvokeModelRequest` as input parameters.
 
@@ -820,7 +862,7 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `ENUM_Region (enumeration)`, `Credentials (object)`, `InvokeModelRequest (object)` | `InvokeModelResponse (object)` |
 
-#### 4.2.3 ListKnowledgeBases {#list-knowledge-bases}
+##### 4.2.2.3 ListKnowledgeBases {#list-knowledge-bases}
 
 The `ListKnowledgeBases` activity allows you to list the knowledge bases in an account and get information about each of them.. It requires `ENUM_Region`, `Credentials` and `ListKnowledgeBasesRequest` as input parameters.
 
@@ -832,7 +874,7 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `ENUM_Region (enumeration)`, `Credentials (object)`, `ListKnowledgeBasesRequest (object)` | `ListKnowledgeBasesResponse (object)` |
 
-#### 4.2.4 Retrieve {#retrieve}
+##### 4.2.2.4 Retrieve {#retrieve}
 
 The `Retrieve` activity allows you to query a knowledge base and retrieve information from it. It requires `ENUM_Region`, `Credentials` and `RetrieveRequest` as input parameters.
 
@@ -844,7 +886,7 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `ENUM_Region (enumeration)`, `Credentials (object)`, `RetrieveRequest (object)` | `RetrieveResponse (object)` |
 
-#### 4.2.5 RetrieveAndGenerate {#retrieve-and-generate}
+##### 4.2.2.5 RetrieveAndGenerate {#retrieve-and-generate}
 
 The `RetrieveAndGenerate` activity allows you to retrieve information from a knowledge base and generate a response based on the retrieved information. It requires `ENUM_Region`, `Credentials` and `RetrieveAndGenerateRequest` as input parameters.
 
@@ -856,7 +898,7 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `ENUM_Region (enumeration)`, `Credentials (object)`, `RetrieveAndGenerateRequest (object)` | `RetrieveAndGenerateResponse (object)` |
 
-#### 4.2.6 StartIngestionJob {#start-ingestion-job}
+##### 4.2.2.6 StartIngestionJob {#start-ingestion-job}
 
 The `StartIngestionJob` activity allows you to begin an ingestion job, in which the contents of the data source S3 bucket is preprocessed and synced with the vector database of the knowledge base. It requires `ENUM_Region`, `Credentials` and `StartIngestionJobRequest` as input parameters.
 
@@ -868,7 +910,7 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `ENUM_Region (enumeration)`, `Credentials (object)`, `StartIngestionJobRequest (object)` | `StartIngestionJobResponse (object)` |
 
-#### 4.2.7 GetIngestionJob {#get-ingestion-job}
+##### 4.2.2.7 GetIngestionJob {#get-ingestion-job}
 
 The `GetIngestionJob` activity allows you to retrieve information about a ingestion job, in which the contents of the data source S3 bucket is preprocessed and synced with the vector database of the knowledge base. It requires `ENUM_Region`, `Credentials` and `GetIngestionJobRequest` as input parameters.
 
@@ -880,7 +922,7 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `ENUM_Region (enumeration)`, `Credentials (object)`, `GetIngestionJobRequest (object)` | `GetIngestionJobResponse (object)` |
 
-#### 4.2.8 InvokeAgent {#invoke-agent}
+##### 4.2.2.8 InvokeAgent {#invoke-agent}
 
 The `InvokeAgent` activity allows you to invoke an agent from Amazon Bedrock, so that you can orchestrate tasks involving foundation models and enrich the process with organizational data and user input. It requires `ENUM_Region`, `Credentials`, `InvokeAgentRequest`, a `ResponseHandlerMicroflow` and a `ErrorHandlerMicroflow` as input parameters. The microflow parameters are necessary since `InvokeAgent` is an asynchronous operation. The `ResponseHandlerMicroflow` is required to have exactly one input parameter of the `InvokeAgentResponse` entity type. It is called in a background threat once the response is available. The `ErrorHandlerMicroflow` is required to have exactly one input parameter of type String. It will be called when there is an error during the asynchronous process and the error type will be passed to it's string parameter. The Amazon Bedrock Connector includes sample response handler and error handler microflows to help you set up handlers for your implementation.
 

@@ -15,7 +15,7 @@ The domain model is central to the architecture of your application. Each [modul
 
 A domain model consists of [entities](/refguide/entities/) with their relationships to other entities represented by [associations](/refguide/associations/). Entities can be one of three types:
 
-* Persistable (blue) – entities which hold app information which needs to be held permanently or shared with other end-users of the app
+* Persistable (blue) – entities which hold app information which needs to be held permanently or shared with other end-users of the app (see [Implementation of Persistable Entities](#implementation), below, for information on how these are implemented)
 * Non-persistable (orange) – entities which hold app information which is needed while the end-user is using the app but can then be thrown away
 * External (purple) – entities, described in the [Mendix Catalog](/catalog/), which contain data which belongs to another app or service and is needed while the end-user is using the app but isn't stored in the database of the app
 
@@ -36,6 +36,7 @@ Below is a domain model that describes customers and orders. The names of the en
 | Image | An image which helps to identify the entity |
 | Validation Rule | An indication that one or more [validation rules](/refguide/validation-rules/) have been set up for this attribute, the attribute *"FullName"* |
 | Calculated Value | An indication that the value of this attribute (*"NameLength"*) is calculated |
+| Persistable Entity | This is an entity stored permanently in a database |
 | One | Indicates that one of this entity relates to the quantity of the entity at the other end of the association |
 | Association Name | How the [association](/refguide/associations/) will be referred to in the database |
 | Many | Indicates that many of these entities relate to the quantity of the entity at the other end of the association |

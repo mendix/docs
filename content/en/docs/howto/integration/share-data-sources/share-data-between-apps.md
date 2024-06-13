@@ -62,7 +62,7 @@ Follow these steps to create a simple app in Studio Pro:
 
 You have created a simple app with the entity **Customer**, and a web page where you can view and edit details for this entity. 
 
-Customize the home page further by changing the banner text.
+Customize the home page further by adding banner text.
 
 ## 4 Publishing to the Catalog {#publishing}
 
@@ -70,7 +70,7 @@ You need to register the **Customer** entity in the Catalog to use this entity i
 
 Do the following:
 
-1. In the App Explorer, right-click **MyFirstModule**. From the drop-down list, select **Add a folder** and name it *APIs*.
+1. In the App Explorer, right-click **MyFirstModule**. From the drop-down list, select **Add folder** and name it *APIs*.
 
     {{% alert color="info" %}}The published OData service functions as an API to your app. Some apps may have several published services, so it is good practice to keep them together in a folder for each module.{{% /alert %}}
 
@@ -82,25 +82,27 @@ Do the following:
 
     {{< figure src="/attachments/catalog/share-data/select-published-odata-service.png" class="no-border" >}}
 
-4. Name the published OData service *{yourname}CustomerODataService* and click **OK**.
+4. Name the published OData service *{yourname}CustomerODataService* and click **OK**. The new **{yourname}CustomerODataService** is added to the module.
+5. In the **Choose key** dialog box, move the attributes you want to add to form the entity from **Available attributes** to **Key attributes**.
 
-    The new **{yourname}CustomerODataService** is added to the module and the **Edit published resource** dialog box is displayed for the entity **Customer**. 
+    {{< figure src="/attachments/catalog/share-data/choose-key.png" class="no-border" >}}
+6. Click **OK** to see the **Edit published entity** dialog. 
 
     {{< figure src="/attachments/catalog/share-data/edit-published-resource-box.png" class="no-border" >}}
 
     {{% alert color="info" %}} Make a note of the **Exposed set name**. This defaults to the **Exposed name** with an "**s"** added to the end. When the service is registered in the Catalog, the **Exposed set name** will be displayed as the available **Dataset**. {{% /alert %}}
 
-5. Click **OK** twice to display the **OData Service** document that will be registered in the Catalog. In the **General** tab, notice the **Version** number. 
+7. Click **OK** twice to display the **OData Service** document that will be registered in the Catalog. In the **General** tab, notice the **Version** number. 
 
     {{< figure src="/attachments/catalog/share-data/customer-odata-service-page.png" class="no-border" >}}
 
     Under **Entities**, the **Customer** entity is listed. The details of the entity are displayed on the right. To expose more entities in the service, add them on this page.
 
-6. Click **Publish** in the top bar to deploy the app and publish it. When prompted, click **Save and continue** to save any unsaved changes to the app.     
+8. Click **Publish** in the top bar to deploy the app and publish it. When prompted, click **Save and continue** to save any unsaved changes to the app.     
 
-7. The app is deployed and the OData service is automatically registered in the Catalog. Click **View App** to open the app in a browser. 
-8. On the app's home page, click **Customers Overview**.
-9. Add data to the app. Click **New** to add data for a customer entry.
+9.  The app is deployed and the OData service is automatically registered in the Catalog. Click **View App** to open the app in a browser. 
+10. On the app's home page, click **Customers Overview**.
+11. Add data to the app. Click **New** to add data for a customer entry.
 
     {{< figure src="/attachments/catalog/share-data/add-data-in-app.png" alt="external entities" class="no-border" >}}
 

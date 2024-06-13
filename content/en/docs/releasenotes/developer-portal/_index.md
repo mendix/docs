@@ -16,6 +16,12 @@ To see the current status of the Mendix Portal, see [Mendix Status](https://stat
 
 ## 2024
 
+### June 14, 2024
+
+### Improvements
+
+* To provide a consistent user experience, we updated UI text and stopped using the term "Developer Portal". From now on, we use the term "Mendix Portal", which includes [Apps](/developerportal/), [Control Center](http://localhost:1313/control-center/), [Community](http://localhost:1313/community-tools/), [Marketplace](http://localhost:1313/appstore/), [Catalog](http://localhost:1313/catalog/), and [Mendix Support](http://localhost:1313/support/).      
+
 ### June 9, 2024
 
 ### Improvements

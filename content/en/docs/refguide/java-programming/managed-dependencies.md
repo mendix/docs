@@ -121,7 +121,7 @@ systemProp.https.proxyPassword=password
 ```
 
 {{% alert color="info" %}}
-When inputting the `proxy-host-ip`, make sure to **not** add the URL prefix (for example, `http://`). 
+When entering the `proxy-host-ip`, do **not** add the URL scheme/protocol (for example, `http://`). 
 {{% /alert %}}
 
 If Gradle still fails to download dependencies with the correct proxy settings configured, you can configure the HTTPS/SSL certificate store that Gradle uses.
@@ -158,7 +158,7 @@ https.proxyPort=your.proxy.port
 ```
 
 {{% alert color="info" %}}
-When inputting the `your.proxy.ip.address`, make sure to **not** add the URL prefix (for example, `http://`). 
+When entering `your.proxy.ip.address`, do **not** add the URL scheme/protocol (for example, `http://`). 
 {{% /alert %}}
 
 If the above options don't work for you, please reach out to [Mendix Support](https://support.mendix.com/) for further assistance.

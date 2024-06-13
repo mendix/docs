@@ -1,12 +1,12 @@
 ---
-title: "Mendix Portal for Developers"
+title: "Apps"
 url: /releasenotes/developer-portal/
 description: "Release notes for app management and other parts of the Mendix Portal for Developers"
 weight: 20
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-These release notes cover changes to the app management functionality and other features of the [Mendix Portal for Developers](/developerportal/).
+These release notes cover changes to the app management functionality and other features of the [Apps](/developerportal/).
 
 {{% alert color="info" %}}
 For release notes on Mendix Cloud and deployment options, see [Deployment](/releasenotes/developer-portal/deployment/).

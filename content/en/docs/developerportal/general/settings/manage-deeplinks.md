@@ -11,7 +11,6 @@ aliases:
 ## 1 Introduction
 
 To go directly to the desired element of your app in the Developer Portal, you can use deep links.
-
 This how-to teaches you how to do the following:
 
 * Find the App ID, Story ID, and Feedback Item Number for your app

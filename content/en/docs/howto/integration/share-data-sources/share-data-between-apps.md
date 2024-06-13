@@ -72,9 +72,9 @@ Do the following:
 
     {{% alert color="info" %}}The published OData service functions as an API to your app. Some apps may have several published services, so it is good practice to keep them together in a folder for each module.{{% /alert %}}
 
-2. In the **Domain model**, right-click the **Customer** entity and select **Expose as OData resource…**.
+2. In the **Domain model**, right-click the **Customer** entity and select **Publish in OData service...**.
 
-    {{< figure src="/attachments/catalog/share-data/expose-as-odata-resource.png" class="no-border" >}}
+    {{< figure src="/attachments/catalog/share-data/publish-in-odata-resource.png" class="no-border" >}}
 
 3. In the **Select Published OData Service** dialog box, select the **MyFirstModule** > **APIs** folder and click **New** to add a new OData service to this folder.
 

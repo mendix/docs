@@ -20,7 +20,7 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 #### New Features
 
-* We have released the beta version of the [Software Composition](/control-center/software-compsoition/) page in **Apps**, which provides visibility into the component dependencies of each deployment package.
+* We have launched the beta version of Software Composition, which provides visibility into component dependencies for every Mendix application environment. You can access the feature in [Control Center](/control-center/software-compsoition/) and [Apps navigation pane]([/developerportal/deploy/software-composition/). This feature is available for select Studio Pro versions for free and licensed applications deployed on Mendix Public Cloud and Mendix for Private Cloud.
 
 ### June 9, 2024
 

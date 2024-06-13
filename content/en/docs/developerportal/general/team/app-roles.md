@@ -17,7 +17,7 @@ aliases:
 
 ## 1 Introduction
 
-The roles defined in Mendix Portal for an [app](/developerportal/#my-apps) and [team](/developerportal/general/team/) are described below.
+The roles defined in **Apps** for an [app](/developerportal/#my-apps) and [team](/developerportal/general/team/) are described below.
 
 ## 2 Team Member
 

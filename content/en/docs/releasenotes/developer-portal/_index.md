@@ -1,7 +1,7 @@
 ---
 title: "Apps"
 url: /releasenotes/developer-portal/
-description: "Release notes for app management and other parts of the Mendix Portal for Developers"
+description: "Release notes for app management and other parts of Apps"
 weight: 20
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---

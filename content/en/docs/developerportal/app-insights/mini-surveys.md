@@ -13,7 +13,7 @@ The Mini Surveys feature consists of two parts:
 
 * A pop-up survey in your app for users to fill in
 
-* A back-end dashboard in the Mendix Portal for you to create surveys and aggregate your survey results.
+* A back-end dashboard in **Apps** for you to create surveys and aggregate your survey results.
 
 You begin by creating a mini survey in the Mendix Portal, and then you implement the mini survey by configuring the [Mendix Mini Surveys](/appstore/modules/mendix-mini-surveys/) module in Studio Pro. After the mini survey is running, you can view responses that have been collected in Mini Surveys in the Mendix Portal and export the responses to an XLSX file.
 

@@ -22,7 +22,7 @@ The team server API is only available to *licensed* apps which are running in a 
 
 ## 2 Authentication
 
-The Mendix Portal Management API requires its users to authenticate themselves. This can be done by using API keys; for more information about this please see [Authentication](/apidocs-mxsdk/apidocs/authentication/).
+The team server API requires its users to authenticate themselves. This can be done by using API keys; for more information about this please see [Authentication](/apidocs-mxsdk/apidocs/authentication/).
 
 ## 3 API Calls
 

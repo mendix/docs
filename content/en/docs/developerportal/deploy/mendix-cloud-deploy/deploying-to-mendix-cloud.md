@@ -1,7 +1,6 @@
 ---
 title: "Deploying an App to Mendix Cloud"
 url: /developerportal/deploy/mendix-cloud-deploy/deploying-an-app/
-
 weight: 3
 description: "Describes how to deploy to Mendix Cloud."
 aliases:

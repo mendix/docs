@@ -1,7 +1,6 @@
 ---
 title: "Query Over Self-References"
 url: /howto7/data-models/query-over/
-
 weight: 5
 ---
 

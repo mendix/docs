@@ -1,7 +1,6 @@
 ---
 title: "Translate Your App Content"
 url: /howto8/collaboration-requirements-management/translate-your-app-content/
-
 weight: 50
 ---
 

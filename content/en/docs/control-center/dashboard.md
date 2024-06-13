@@ -1,7 +1,6 @@
 ---
 title: "Dashboard"
 url: /control-center/dashboard/
-
 description: "Describes the Dashboard page in the Mendix Control Center."
 weight: 5
 no_list: true 

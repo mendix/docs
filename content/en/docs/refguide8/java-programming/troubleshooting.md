@@ -1,7 +1,6 @@
 ---
 title: "Troubleshooting"
 url: /refguide8/troubleshooting/
-
 ---
 
 ## JAR Compatibility List

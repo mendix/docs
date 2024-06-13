@@ -1,7 +1,6 @@
 ---
 title: "Mendix Cloud"
 url: /developerportal/deploy/mendix-cloud-deploy/
-
 weight: 8
 description: "Describes what Mendix Cloud is."
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.

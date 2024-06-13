@@ -1,7 +1,6 @@
 ---
 title: "Export XML Documents"
 url: /howto8/integration/export-xml-documents/
-
 weight: 4
 ---
 

@@ -3,7 +3,6 @@ title: "Page Explorer"
 url: /refguide9/page-explorer/
 weight: 50
 description: "Describes the Page Explorer pane in Mendix Studio Pro."
-
 ---
 
 ## 1 Introduction

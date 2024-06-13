@@ -1,7 +1,6 @@
 ---
 title: "Set Up the Navigation Structure"
 url: /howto8/general/setting-up-the-navigation-structure/
-
 weight: 3
 ---
 ## 1 Introduction

@@ -1,7 +1,6 @@
 ---
 title: "Logging"
 url: /refguide9/logging/
-
 description: "Describes what the various log levels of the runtime will show as output."
 ---
 

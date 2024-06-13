@@ -27,7 +27,7 @@ These are the `OPTIONS`:
 | `-d, --package-dir` | Exports the package to the directory. |
 | `--help` | Displays the help screen. |
 
-For `TARGET-FILE`, specify the *.mpr*  the app you want to export.
+For `TARGET-FILE`, specify the *.mpr* app you want to export.
 
 ### 2.2 Examples
 
@@ -65,7 +65,7 @@ These are the `OPTIONS`:
 | `-d, --package-dir` | Exports the module package to the directory. |
 | `--help` | Displays the help screen. |
 
-For `TARGET-FILE`, specify the *.mpr*  the app you want to export.
+For `TARGET-FILE`, specify the *.mpr* app you want to export.
 
 For `MODULE-NAME`, specify the name of the module you want to export.
 
@@ -105,7 +105,7 @@ These are the `OPTIONS`:
 | `-d, --package-dir` | Exports the package to the directory. |
 | `--help` | Displays the help screen. |
 
-For `TARGET-FILE`, specify the *.mpr*  the app you want to export.
+For `TARGET-FILE`, specify the *.mpr* app you want to export.
 
 ### 4.2 Examples
 

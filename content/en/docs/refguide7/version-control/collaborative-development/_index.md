@@ -1,7 +1,6 @@
 ---
 title: "Collaborative Development"
 url: /refguide7/collaborative-development/
-
 description: "Describes the process of collaborative development"
 aliases:
     - /refguide7/desktop-webmodeler.html

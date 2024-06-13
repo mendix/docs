@@ -77,7 +77,6 @@ paths:
   '/projects/{app-id}/members':
     get:
       tags:
-        - Members
         - Projects
       summary: 'Get project team members'
       description: 'Returns a list of team members of the project.</br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:metadata:read`.'
@@ -102,7 +101,6 @@ paths:
     post:
       tags:
         - Projects
-        - Members
       summary: 'Add a project team member'
       description: 'Adds a team member to the project with a specific role. The user must be an active member of the platform and belong to the same company as the user requesting the change. If the company is not yet using centralised platform roles, only the Scrum Master role can be assigned.</br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:team:write`.'
       operationId: post-project-member
@@ -127,7 +125,6 @@ paths:
     delete:
       tags:
         - Projects
-        - Members
       summary: 'Remove a project team member'
       description: 'Removes a team member from a project. The member is not removed when they are the last Scrum Master of the project, the last member of the project, or the Technical Contact of a licensed app.</br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:team:write`.'
       operationId: delete-project-member
@@ -166,7 +163,7 @@ paths:
   '/users/{user-id}/projects':
     get:
       tags:
-        - Projects
+        - Users
       summary: 'Get a list of projects the user is a team member of'
       description: 'Returns a list of projects that the specified user is a team member of. The output is restricted based on the authorization of the calling user. Mendix administrators will get a list of all projects (active or inactive) owned by their company for the specified user. This includes external users hired by them to work on their projects. Project members must be active and will get a list of all active projects that they themselves are a team member of. Project members cannot request a list of projects on behalf of someone else.<br/>The result is sorted alphabetically by project name in ascending order.</br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:metadata:read`.'
       operationId: get-user-projects
@@ -194,10 +191,10 @@ paths:
         '500':
           $ref: '#/components/responses/Http500'
 tags:
-  - name: Members
-    description: 'Team members of a Project'
+  - name: Users
+    description: 'Mendix platform users'
   - name: Projects
-    description: 'Project of Mendix platform'
+    description: 'App projects managed on the Mendix platform'
 components:
   parameters:
     app-id:

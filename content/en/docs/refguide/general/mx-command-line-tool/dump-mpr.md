@@ -13,7 +13,7 @@ The `mx dump-mpr` command enables you to export the app model of Mendix in the f
 
 Use the following command pattern: `mx dump-mpr [OPTIONS] [TARGET-FILE]`
 
-The `TARGET-FILE` points to the location of the project file, this file has the extension '.mpr'.
+The `TARGET-FILE` points to the location of the project file (this file has the extension *.mpr*).
 
 These are the `OPTIONS`:
 

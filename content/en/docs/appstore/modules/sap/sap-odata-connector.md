@@ -1,7 +1,6 @@
 ---
 title: "OData Connector for SAP Solutions"
 url: /appstore/modules/sap/sap-odata-connector/
-
 weight: 10
 description: "Presents reference information on the use of the OData Connector for SAP solutions."
 aliases:

@@ -1,7 +1,6 @@
 ---
 title: "On-Premises"
 url: /developerportal/deploy/on-premises-design/
-
 description: "Describes how to deploy to various on premises platforms."
 weight: 80
 aliases:

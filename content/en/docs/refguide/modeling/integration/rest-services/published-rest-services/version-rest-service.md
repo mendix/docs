@@ -1,7 +1,6 @@
 ---
 title: "Version a REST Service"
 url: /howto/integration/version-rest-service/
-
 weight: 10
 description: "Describes the best practices for versioning REST services in Mendix."
 ---

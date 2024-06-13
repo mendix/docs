@@ -1,7 +1,6 @@
 ---
 title: "Implement Classes"
 url: /howto9/front-end/styles/
-
 description: "Describes details on using class names for text colors, buttons, and other style elements."
 weight: 45
 ---

@@ -11,6 +11,12 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2024
 
+### June 12th, 2024
+
+#### Mendix Operator v2.17.1 {#2.17.1}
+
+* We have fixed a known issue from a previous release - memory usage when building an MDA is now back to normal.
+
 ### June 7th, 2024
 
 #### Mendix Operator v2.17.0 {#2.17.0}
@@ -24,6 +30,12 @@ For information on the current status of deployment to Mendix for Private Cloud 
 * We have fixed an issue where running the `mxpc-cli` installation and configuration tool in a pod (container) would fail to authenticate.
 * We have updated components to the latest dependency versions, in order to improve security score ratings for all container images.
 * Upgrading to Mendix Operator v2.17.0 from a previous version will restart environments managed by that version of the Operator.
+
+#### Known Issue
+
+This issue has been fixed in Mendix Operator [version 2.17.1](#2.17.1).
+
+* Building an MDA file larger than 100 MB fails with an `OOMKilled` pod status. The image builder has a regression where the entire MDA is loaded into memory, instead of reading it in blocks from a temporary file.
 
 ### May 30th, 2024
 

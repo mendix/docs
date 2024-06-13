@@ -55,8 +55,10 @@ Follow these steps to create a simple app in Studio Pro:
 
     {{< figure src="/attachments/catalog/share-data/overview-pages-for-customer-entity.png" class="no-border" >}}
 
-11. In the **App Explorer**, double-click **Home_Web** to open the **Home_Web** page.
-12. From the **App Explorer**, drag **Customer_Overview** into the empty **Auto-fill** container under the **Home** banner.
+11. In the **App Explorer**, right-click **MyFirstModule** and click **Add page**.
+12. In the right column, click **Blank**, select the Blank template, and name it *Home_Web*. Click **OK**.
+13. From the **App Explorer**, double-click the new **Home_Web** page. 
+14. Drag the **Customer_Overview** page into the empty **Auto-fill** container under the **Home** banner.
 
 You have created a simple app with the entity **Customer**, and a web page where you can view and edit details for this entity. 
 

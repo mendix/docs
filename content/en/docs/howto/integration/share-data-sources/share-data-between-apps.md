@@ -114,7 +114,7 @@ Do the following:
 
 1. Go to the [Catalog](https://catalog.mendix.com/).
 
-2. In the search field, enter the search term *{yourname}*. All services and datasets that satisfy this search string are displayed in the search results pane. However, the service does not appear in the search results yet, as by default, a filter is set to show results in **Production** environments.
+2. In the search field, enter the search term *{yourname}*. All services and datasets that satisfy this search string are displayed in the search results pane.
 3. In the panel on the left, click **Filter** to see the **Filters** dialog box.
 4. Your app was deployed to the **Mendix Free App** or **Sandbox** environment. Check **Sandbox** to include it in the search results, then click **Apply**:
 

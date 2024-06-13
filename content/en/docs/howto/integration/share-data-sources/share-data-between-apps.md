@@ -50,19 +50,17 @@ Follow these steps to create a simple app in Studio Pro:
 7. Click **OK** to save your changes.
 8. Right-click the entity and select **Generate overview pages** from the drop-down list.
 9. In the **Generate pages** dialog box, make sure **Atlas_Default (Atlas_Core)** is selected as the **Content layout** and click **OK**. 
-10. In the **Information** pop-up dialog, click **OK**. 
+10. In the **Information** pop-up dialog, click **Close**. 
     Overview pages for the new entity are added in the **OverviewPages** folder of **MyFirstModule**.
 
     {{< figure src="/attachments/catalog/share-data/overview-pages-for-customer-entity.png" class="no-border" >}}
 
-11. In the **App Explorer**, right-click **MyFirstModule** and click **Add page**.
-12. In the right column, click **Blank**, select the Blank template, and name it *Home_Web*. Click **OK**.
-13. From the **App Explorer**, double-click the new **Home_Web** page. 
-14. Drag the **Customer_Overview** page into the empty **Auto-fill** container under the **Home** banner.
+11. In the **App Explorer**, double-click **Home_Web** to open the Home_Web page. 
+14. From the **App Explorer**, drag **Customer_Overview** into the empty Auto-fill container under the Home banner.
 
 You have created a simple app with the entity **Customer**, and a web page where you can view and edit details for this entity. 
 
-Customize the home page further by adding banner text.
+Customize the home page further by changing the banner text.
 
 ## 4 Publishing to the Catalog {#publishing}
 
@@ -92,11 +90,11 @@ Do the following:
 
     {{% alert color="info" %}} Make a note of the **Exposed set name**. This defaults to the **Exposed name** with an "**s"** added to the end. When the service is registered in the Catalog, the **Exposed set name** will be displayed as the available **Dataset**. {{% /alert %}}
 
-7. Click **OK** twice to display the **OData Service** document that will be registered in the Catalog. In the **General** tab, notice the **Version** number. 
+7. Click **OK** to display the **OData Service** document that will be registered in the Catalog. In the **General** tab, notice the **Version** number. 
 
     {{< figure src="/attachments/catalog/share-data/customer-odata-service-page.png" class="no-border" >}}
 
-    Under **Entities**, the **Customer** entity is listed. The details of the entity are displayed on the right. To expose more entities in the service, add them on this page.
+    Under **Entities**, the **Customer** entity is listed. The details of the entity are displayed on the right. To expose more entities in the service, add them in this field.
 
 8. Click **Publish** in the top bar to deploy the app and publish it. When prompted, click **Save and continue** to save any unsaved changes to the app.     
 

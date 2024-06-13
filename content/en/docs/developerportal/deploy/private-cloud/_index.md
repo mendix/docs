@@ -98,7 +98,7 @@ If the customer decided to use a [Vertical Pod autoscaler](/developerportal/depl
 
 When a user sets CPU and memory limits, the JVM (JRE 8u191+) will automatically detect the container requests and limits, and automatically set Java memory limits based on the container details.
 However, by default, the JVM will limit the heap memory to 25% of the container's memory limit. Mx4PC just sets the container limits, but does not go further into configuring the JVM. 
-This percentage can be adjusted by providing a custom value in Custom JVM Options in the [Runtime tab](/developerportal/deploy/private-cloud-deploy/#54-runtime-tab) in the Private Cloud Portal, for example: *-XX:MaxRAMPercentage=75.0*.
+This percentage can be adjusted by providing a custom value in Custom JVM Options in the [Runtime tab](/developerportal/deploy/private-cloud-deploy/#runtime-tab) in the Private Cloud Portal, for example: *-XX:MaxRAMPercentage=75.0*.
 
 ## 5 Licensing Mendix for Private Cloud{#licensing}
 

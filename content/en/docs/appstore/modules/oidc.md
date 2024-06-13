@@ -225,7 +225,7 @@ Follow the instructions to [set an encryption key in the Encryption module](/app
 
 ### 5.1 OIDC Provider Configuration
 
-#### 5.1.1 General OIDC Providers
+#### 5.1.1 General OIDC Providers {#general-providers}
 
 1. In your IdP, provision a new OpenID client application. You will receive a ClientID and Client Secret.
 2. You will also need the OIDC configuration endpoint (for example: [https://accounts.google.com/.well-known/openid-configuration](https://accounts.google.com/.well-known/openid-configuration))

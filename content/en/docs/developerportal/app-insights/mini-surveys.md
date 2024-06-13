@@ -13,11 +13,11 @@ The Mini Surveys feature consists of two parts:
 
 * A pop-up survey in your app for users to fill in
 
-* A back-end dashboard in **Apps** for you to create surveys and aggregate your survey results.
+* A back-end dashboard in the [navigation pane](/developerportal/#navigation-pane) of **Apps** for you to create surveys and aggregate your survey results.
 
-You begin by creating a mini survey in the Mendix Portal, and then you implement the mini survey by configuring the [Mendix Mini Surveys](/appstore/modules/mendix-mini-surveys/) module in Studio Pro. After the mini survey is running, you can view responses that have been collected in Mini Surveys in the Mendix Portal and export the responses to an XLSX file.
+You begin by creating a mini survey from the **Mini Survey** page in the navigation pane of **Apps**, and then you implement the mini survey by configuring the [Mendix Mini Surveys](/appstore/modules/mendix-mini-surveys/) module in Studio Pro. After the mini survey is running, you can view responses that have been collected in Mini Surveys in the Mendix Portal and export the responses to an XLSX file.
 
-This document first describes all the pages in Mini Surveys in the Mendix Portal, and then it describes the procedure for running a mini survey.
+This document first describes all the pages in Mini Surveys in **Apps**, and then it describes the procedure for running a mini survey.
 
 ## 2 Mendix Mini Survey Configuration 
 
@@ -236,7 +236,7 @@ Survey opt-out rule is a variable cached to your internet browser. You can reset
 
 ### 3.6 Unfinished Surveys
 
-If a user only answers one or two questions before they close the mini survey. The answers will be stored in your app. Every 15 minutes a scheduled event will submit all unfinished surveys collected in your app to the **Mini Surveys** in the Mendix Portal. A survey answer must be more than one hour old before it is submitted by the scheduled event.
+If a user only answers one or two questions before they close the mini survey. The answers will be stored in your app. Every 15 minutes a scheduled event will submit all unfinished surveys collected in your app to the **Mini Surveys** in **Apps**. A survey answer must be more than one hour old before it is submitted by the scheduled event.
 
 ## 4 Troubleshooting & FAQ
 

@@ -8,7 +8,7 @@ description: "Describes the Team page of Apps navigation pane."
 
 ## 1 Introduction
 
-Your team can include all of your colleagues working on an app. As well as developing, team members might have other roles such as ideating or reviewing. The Mendix Portal enables developers from both IT and business with mixed experience levels to collaborate.
+Your team can include all of your colleagues working on an app. As well as developing, team members might have other roles such as ideating or reviewing. The **Team** page in the [navigation pane](/developerportal/#navigation-pane) of **Apps** enables developers from both IT and business with mixed experience levels to collaborate.
 
 To view and manage your team members, follow these steps:
 

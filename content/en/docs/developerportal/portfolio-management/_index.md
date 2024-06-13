@@ -12,7 +12,7 @@ The [Portfolio Management](https://portfolio.mendix.com) tool is available to al
 
 With the Portfolio Management tool, you can manage [active initiatives](/developerportal/portfolio-management/initiatives-overview/) and [archived initiatives](/developerportal/portfolio-management/archive/) in a portfolio. If you are Portfolio Managers, you can [manage access](/developerportal/portfolio-management/access-management/) and configure [portfolio settings](/developerportal/portfolio-management/portfolio-settings/) of a portfolio.
 
-To start the Portfolio Management app, go to the Mendix Portal, open the [Global Navigation menu](/developerportal/) ({{% icon name="layout-rounded-1-filled" %}}), and select **Portfolio**.
+To start the Portfolio Management app, open the [Global Navigation menu](/developerportal/) ({{% icon name="layout-rounded-1-filled" %}}) of the Mendix Portal, and select **Portfolio**.
 
 ## 2 Portfolio Landscape Overview {#portfolio-landscape}
 

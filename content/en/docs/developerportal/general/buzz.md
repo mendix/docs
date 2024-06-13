@@ -8,7 +8,7 @@ description: "Describes the Mendix Buzz, which is the landing page for working o
 
 ## 1 Introduction
 
-Located in the Mendix Portal, Buzz lets you see your app activity as well as collaborate and share ideas with your team. 
+Located in the [navigation pane](/developerportal/#navigation-pane) of **Apps**, Buzz lets you see your app activity as well as collaborate and share ideas with your team. 
 
 {{< figure src="/attachments/developerportal/general/buzz/app-buzz.png" >}}
 

@@ -217,7 +217,7 @@ From the [feedback details](#feedback-details) page, you can manage tags by clic
 
 You can receive a notification when new feedback lands in **Inbox** or when a reporter replies to their feedback. To receive notifications, do as follows:
 
-1. Watch the app on the [Settings](/developerportal/collaborate/general-settings/) page after you open it in the Mendix Portal.
+1. Watch the app on the [Settings](/developerportal/collaborate/general-settings/) page after you open it in [Apps](https://sprintr.home.mendix.com/).
 2. Go to Feedback again.
 3. Enable the feedback notifications as follows:
     1. In Feedback, click the **Settings** {{% icon name="cog" %}} icon on the upper-right corner of the page.

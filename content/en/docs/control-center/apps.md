@@ -45,7 +45,7 @@ The description of the items that you can select are as follows:
 
 * **EnvID**: the unique identifier of the environment.
 
-* **Environment**: the name of the environment.
+* **Environment**: the name of the environment
 
 * **Deployed Status**: whether the app has been deployed on this environment
 
@@ -57,11 +57,35 @@ The description of the items that you can select are as follows:
 
 * **Members**: the number of the team members in the app development team
 
-* **Production**: Whether the environment is a production environment
-
 * **Created Date**: the date the app was created
 
-You can filter the apps in the table. For details, see the [Filtering Apps in the Table](#filter-apps)section.
+*  **Env Owner**: the company that owns the environments of this app
+
+    {{% alert color="info" %}}If the owner fo the environments is not your company, you have limited control over the deployment of your app. For information on how to resolve this, see [How to Resolve Shared Ownership of Apps](/control-center/resolve-shared-ownership-of-apps/).{{% /alert %}}
+
+* **Env Owner Id**: the ID of the company that owns the environments of this app 
+
+*  **Cloud Resource Pack**: the resource pack for the cloud environment where the app is deployed
+
+    {{% alert color="info" %}}For the technical details of each cloud resource pack, see the [Cloud Resource Packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack) section in *Mendix Cloud*.{{% /alert %}}
+
+* **Cloud Location**: the location of the environment
+
+* **App RAM**:  the size of the RAM allocated for running the app
+
+* **DB RAM**:  the size the RAM allocation for database operations
+
+* **DB Storage**: the size of the dabase storage
+
+* **DB Storage Extra**: the extra storage of the database
+
+* **File Storage**: the size of the storage allocated for storing files
+
+*  **Fallback**: whether the data in the database is automatically copied to a database in a second availability zone.
+
+    {{% alert color="info" %}}For more information, see the [High Availability and Fallback](/developerportal/deploy/mendix-cloud-deploy/#fallback) section in *Mendix Cloud*.{{% /alert %}}
+
+You can filter the apps in the table. For details, see the [Filtering Apps in the Table](#filter-apps) section.
 
 You can export apps to an Excel file. For details, see the [Exporting Apps to an Excel File](#export-to-excel) section.
 
@@ -79,19 +103,15 @@ The description of the items that you can select are as follows:
 
 * **App Name**: the name of the app
 
-  {{% alert color="info" %}}
-  You can view the [app details](#app-details) by clicking the app name in the table.
-  {{% /alert %}}
+  {{% alert color="info" %}}You can view the [app details](#app-details) by clicking the app name in the table.{{% /alert %}}
+  
+*  **Technical Contact**: the technical contact of the app
 
-* **Technical Contact**: the technical contact of the app. 
+    {{% alert color="info" %}}You can edit the Technical Contact of an app by clicking **Edit** ({{% icon name="pencil" %}}) next to the current Technical Contact in the table.{{% /alert %}}
+  
+* **EnvID**: the unique identifier of the environment
 
-  {{% alert color="info" %}}
-  You can edit the Technical Contact of an app by clicking **Edit** ({{% icon name="pencil" %}}) next to the current Technical Contact in the table.
-  {{% /alert %}}
-
-* **EnvID**: the unique identifier of the environment.
-
-* **Environment**: the name of the environment.
+* **Environment**: the name of the environment
 
 * **Env Status**: the app deployment status on environment
 
@@ -100,6 +120,20 @@ The description of the items that you can select are as follows:
 * **Deployed Version**: the Mendix version of the deployed app
 
 * **Last Commit**: the date of the last commit in the main line
+
+* **Members**: the number of the team members in the app development team
+
+* **Created Date**: the date the app was created
+
+* **NamespaceID**: the ID of the namespace
+
+*  **Namespace**: the Kubernets namespace
+
+    {{% alert color="info" %}}For more information, see [How to Create a Cluster and Namespace](/developerportal/deploy/private-cloud-cluster/#3-creating-a-cluster-and-namespace) in *Creating a Private Cloud Cluster*.{{% /alert %}}
+
+* **Database Name**: the name of the database
+
+* **Storage Name**: the name of the storage
 
 ## 4 Mendix Free Cloud
 
@@ -113,17 +147,13 @@ The description of the items that you can select are as follows:
 
 * **AppID**: the unique identifier of the app
 
-* **App Name**: the name of the app
+*  **App Name**: the name of the app
 
-  {{% alert color="info" %}}
-  You can view the [app details](#app-details) by clicking the app name in the table.
-  {{% /alert %}}
+    {{% alert color="info" %}}You can view the [app details](#app-details) by clicking the app name in the table.{{% /alert %}}
 
-* **Technical Contact**: the technical contact of the app. 
+*  **Technical Contact**: the technical contact of the app. 
 
-  {{% alert color="info" %}}
-  You can edit the Technical Contact of an app by clicking **Edit** ({{% icon name="pencil" %}}) next to the current Technical Contact in the table.
-  {{% /alert %}}
+    {{% alert color="info" %}}You can edit the Technical Contact of an app by clicking **Edit** ({{% icon name="pencil" %}}) next to the current Technical Contact in the table.{{% /alert %}}
 
 * **EnvID**: the unique identifier of the environment.
 
@@ -138,6 +168,8 @@ The description of the items that you can select are as follows:
 * **Members**: the number of the team members in the app development team
 
 * **Created Date**: the date the app was created
+
+* **Cloud Location**: the location of the environment
 
 * **Actions**: adding the action menu ({{% icon name="three-dots-menu-horizontal" %}}) to enable you to **Deactivate App** and **Delete App** (For more information, see the [Deactivating and Deleting Apps](#deactivate-delete-apps) section.)
 
@@ -158,11 +190,9 @@ You can customize the columns of the table by clicking the column selector (the 
 The description of the items that you can select are as follows:
 
 * **AppID**: the unique identifier of the app
-* **App Name**: the name of the app
+*  **App Name**: the name of the app
 
-  {{% alert color="info" %}}
-  You can view the [app details](#app-details) by clicking the app name in the table.
-  {{% /alert %}}
+    {{% alert color="info" %}}You can view the [app details](#app-details) by clicking the app name in the table.{{% /alert %}}
 * **Last Commit**: the date of the last commit in the main line
 * **Members**: the number of the team members in the app development team
 * **Created Date**: the date the app was created
@@ -185,11 +215,9 @@ You can customize the columns of the table by clicking the column selector (the 
 The description of the items that you can select are as follows:
 
 * **AppID**: the unique identifier of the app
-* **App Name**: the name of the app
+*  **App Name**: the name of the app
 
-  {{% alert color="info" %}}
-  You can view the [app details](#app-details) by clicking the app name in the table.
-  {{% /alert %}}
+    {{% alert color="info" %}}You can view the [app details](#app-details) by clicking the app name in the table.{{% /alert %}}
 * **Created Date**: the date the app was created
 * **Mainline Version**: the Mendix version of the app on the mainline in the repository
 * **Last Commit**: the date of the last commit in the main line
@@ -204,7 +232,7 @@ You can export apps to an Excel file. For details, see the [Exporting Apps to an
 
 ## 7 Filtering Apps in the Table {#filter-apps}
 
-On each tab with an table of apps, you can find filters on the top, which allows you to filter apps using different criteria. 
+On each tab with a table of apps, you can find filters on the top, which allows you to filter apps using different criteria. 
 
 With the filter as shown below, you can search for string matches on any of the string fields in the table, for example, the app ID, app name, or environment name. Clicking the button on the left allows you to use comparisons and string operations, such as **Contains**, **Starts with**, and **Greater than**. (This filter is available on the **Mendix Cloud**, **Mendix Free Cloud**, and **Other Apps** tabs.)
 
@@ -220,7 +248,7 @@ The filter shown as below allows you to filter apps by **Deployed Status**. (Thi
 
 ## 8 Viewing App Details {#app-details}
 
-If you click the name of an app in the overview table, a page opens and shows the details of this app.
+If you click an app name on a tab, a page opens and shows the details of this app.
 
 The app details page has the following tabs:
 

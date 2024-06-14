@@ -24,13 +24,13 @@ Mendix adheres to strict security standards and considers you the sole owner of 
 
 ## 5 Retrieve and Commit + Push Actions Are Getting Slower
 
-This may be caused by the way the storage format of Git interacts with the way the Mendix model stores changes, which can accumulate substantial disk space over time. Studio Pro periodically optimized your repository if [automatic repository optimization](/refguide/preferences-dialog/#optimization) is enabled.
+This may be caused by the way the storage format of Git interacts with the way the Mendix model stores changes, which can accumulate substantial disk space over time. Studio Pro periodically optimizes your repository if [automatic repository optimization](/refguide/preferences-dialog/#optimization) is enabled.
 
 You can run `git gc` in the command line to manually optimize the repository. `git gc` runs a number of housekeeping tasks, but primarily pack files are created. Pack files store just the changes to the files, which reduces the amount of data which needs to be stored. 
 
 ## 6 Cloning my Project Takes a Long Time
 
-Cloning, or downloading, your app consists of several step. First the required data is downloaded from the server and then a local unpacking process is executed. The duration of the clone process depends on your repository size, internet connection and computer performance. In case a clone is taking a very long time, consider changing the [Clone type](/refguide/clone-type/) or check [Troubleshoot repository size](/refguide/troubleshoot-repository-size/).
+Cloning or downloading your app consists of several steps. First the required data is downloaded from the server and then a local unpacking process is executed. The duration of the clone process depends on your repository size, internet connection and computer performance. In case cloning is taking a very long time, consider changing the [Clone type](/refguide/clone-type/) or [troubleshoot repository size](/refguide/troubleshoot-repository-size/).
 
 ## 7 Can I Use the Subversion Version of the Team Server?
 

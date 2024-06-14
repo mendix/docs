@@ -32,7 +32,7 @@ To resolve this issue, do one of the following:
 
 ### 3.2 You Own the Node, but Not the App
 
-If an app appears in [Deployed Apps](/control-center/deployed-apps/), but not in [Apps](/control-center/apps/), this means that you own the node but not the app.
+If an app does not appear in **Apps**, but appears in [Deployed Apps](/control-center/deployed-apps/), or [Cloud](/control-center/cloud/#paid-environments) if you cannot access **Deployed Apps**, this means that you own the node but not the app.
 
 To resolve this issue, do one of the following:
 

@@ -64,10 +64,10 @@ Just like in the Catalog, you can see the **CRUD** capabilities of entities, att
 To consume an OData entity, do the following:
 
 1. In the **Integration** pane, enter a term in the search field. 
-2. Select your entity from the **Integration** pane. By default, the pane only shows results published to the production environment. If you also want to see results from other environments, click the filter icon and select the **Show development environment** checkbox.
+2. Select your entity from the **Integration** pane. By default, the pane only shows results published to the production environment. If you also want to see results from other environments, click the filter icon and select the **Show development environments** checkbox.
 3. Drag the entity into the domain model.
 
-Now you have an external entity in your domain model. Depending on the capabilities, you can generally use external entities to model your app as you would normally do, although there are some limitations. For more information on limitations, see the [External Entities Limitations](/refguide/external-entities/#limitations) section in *External Entities*. 
+Now you have an external entity in your domain model. Depending on the capabilities, you can use external entities to model your app as you normally would, although there are some limitations. For more information on limitations, see the [External Entities Limitations](/refguide/external-entities/#limitations) section in *External Entities*. 
 
 ## 6 Validating Data and Error Handling {#data-validation}
 

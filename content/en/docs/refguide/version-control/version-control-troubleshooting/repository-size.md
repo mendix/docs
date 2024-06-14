@@ -36,6 +36,22 @@ The *.mpr* storage format will be changed to reduce the rapid repository growth.
 
 Mendix aims to introduce the new format for new apps in Q3 2024. Existing apps will be automatically converted in a later version, targeted for H2 2024.
 
+#### 4.1.1 MPR Format
+
+An app modeled in Mendix is traditionally stored in a single *.mpr* file. This is essentially a database which contains data for all documents, such as microflows, workflows, pages. As the Mendix app is stored in a single file, your version control system only sees that a single file is changed. To show the exact documents that have changed inside the *.mpr* file a tool that comprehends the format is required, such as Studio Pro.
+
+#### 4.1.2 Repository Growth
+
+Version control systems like Git do not store a full copy of a document for every commit. Instead, they store the difference between the two revisions, also called a delta. For binary files such as the *.mpr* file Git cannot effectively calculate the delta. When a microflow is changed, a small delta of a couple of kilobytes is expected, but the storage format results in a delta of a megabyte or more. The consequence of this is that your Git repository grows more rapidly than you expected.
+
+#### 4.1.3 Future Format Change
+
+Mendix will introduce a new version of the *.mpr* format. The key difference is that all documents, such as microflows, will no longer be stored as part of the *.mpr* file but as separate files in the *mprcontents* directory. The *.mpr* file will function as an index file pointing to all the different files on disk. 
+
+This means that when you change one document, for example a page, in your app only one file on disk will change. This allows Git to calculate an efficient delta, which results in a more appropriate repository growth. Functionally there will be no differences between the split (v2) or the combined (v1) format. 
+
+As a first step we will ensure new apps are created with a new split format (v2). Converting existing apps will initially be a manual action through the **File** menu. In a later release Mendix intends to convert the MPR format from the combined version (v1) to a new split version (v2).
+
 ### 4.2 Working with a Large Repository Size
 
 When cloning an app, the default behavior of Git is to download the full history. As Mendix uses different folders on disk for different branches, downloading full history is done for each branch. To mitigate that, Mendix uses local cloning for subsequent branch downloads. When cloning a new branch, data from a local branch you already have is used to reduce data that needs to be downloaded. 

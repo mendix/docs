@@ -176,7 +176,7 @@ You can view the two apps that you have created in the Landscape and see how the
 
 1. Open the [Catalog](https://catalog.mendix.com/#/home) home page.
 2. Find your service using the search pane. Remember to use the filter to ensure you can see **Sandbox** apps. 
-3. Click the **Landscape** tab to see a visual representation of your apps (rounded squares), services (circles), and connections (lines). The number of entity sets/datasets that have been exposed appears beneath the service. 
+3. Click **Landscape View** to see a visual representation of your apps (rounded squares), services (circles), and connections (lines). The number of entity sets/datasets that have been exposed appears beneath the service. 
 
     {{< figure src="/attachments/catalog/share-data/landscape-full-screen.png" class="no-border" >}}
 

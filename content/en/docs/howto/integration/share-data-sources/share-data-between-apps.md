@@ -148,7 +148,7 @@ To do this, follow the steps below:
 6. This entity is different from the blue entity container from the first app. This purple colored entity is called an [external entity](/refguide/external-entities/). The name of the OData service it is exposed in is displayed above it. Click the information icon for the consumed service in the Integration pane to see further information about the service, and follow the link to **View in Catalog**.
 7. In the **App Explorer**, notice the service and location documents for your external entity. These documents specify the metadata for the service and provide the links for connecting to the shared data.
 8. Right-click the entity and select **Generate overview pages** for this entity. In the **Generate pages** dialog box, for **Content layout** select **Atlas_Default(Atlas_Core)** and click **OK**. Accept the **Information** box by clicking **Close**. Overview pages for the new entity are added in the **OverviewPages** folder of **MyFirstModule**.
-9. From the **App Explorer,** drag **Customer_Overview** into the empty **Auto-fill** container under the *Home* banner.
+9. From the **App Explorer**, open **Home_Web** and drag **Customer_Overview** into the empty Auto-fill container.
 10. Click **Publish** to deploy the app and pull in the data you added to the **Customer** entity in the publishing app **({yourname}CustomerServiceApp**) through the **({yourname}CustomerODataService**).
 
 ## 7 Viewing the Shared Data in Your New App 
@@ -166,7 +166,7 @@ To see an example of consumed data being updated when data is changed in the ori
 
 1. Make sure both apps are published in Mendix Studio Pro, then open both apps in separate browser windows. 
 2. Make a change to the customer list in **{yourname}CustomerServiceApp**, such as adding a few more customers or editing some existing entries.
-3. Refresh the **{yourname}CustomerActionsApp** window by doing a **Search** to see the changes in the data displayed. 
+3. Refresh the **{yourname}CustomerActionsApp** window and search to see the changes in the data displayed. 
 
 Congratulations, you have successfully used the Catalog to share data between Mendix apps! You can now see your new apps in your Landscape. 
 
@@ -182,4 +182,4 @@ You can view the two apps that you have created in the Landscape and see how the
 
     The service **{yourname}CustomerODataAPI** is linked by a solid line to the running instance of **{yourname}CustomerCustomerServiceApp**, which is deployed as a Free App.
 
-    The service is also linked by a dotted grey line to **{yourname}CustomerActionsApp**. The arrow indicates that **{yourname}CustomerActionsApp** is making a call to **{yourname}CustomerODataAPI** for data. If you click on **1 Dataset** on this dotted line, the datasets that are being consumed will be listed in the metadata panel on the right.
+    The service is also linked by a dotted grey line to **{yourname}CustomerActionsApp**. The arrow indicates that **{yourname}CustomerActionsApp** is making a call to **{yourname}CustomerODataAPI** for data. If you click **1 Dataset** on this dotted line, the datasets that are being consumed will be listed in the metadata panel on the right.

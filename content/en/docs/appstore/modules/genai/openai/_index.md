@@ -172,7 +172,7 @@ The microflow activity `Chat Completions (without history)` supports scenarios w
 
 Functionally, the prompt strings can be written in a specific way and can be tailored to get the desired result and behavior. For more information on prompt engineering, see the [Read More](#read-more) section.
 
-Optionally, you can also make use of [function calling](#chatcompletions-functioncalling) by adding a [ToolCollection](/appstore/modules/genai/genai-commons/#addfunction) to the Request or [send images](#chatcompletions-vision) along with the user prompt by passing a [FileCollection](/appstore/modules/genai/genai-commons/#initialize-filecollection).
+Optionally, you can also make use of [function calling](#chatcompletions-functioncalling) by adding a [ToolCollection](/appstore/modules/genai/genai-commons/#add-function) to the Request or [send images](#chatcompletions-vision) along with the user prompt by passing a [FileCollection](/appstore/modules/genai/genai-commons/#initialize-filecollection).
 
 For technical details, see the [Technical reference](#chat-completions-without-history-technical) section.
 
@@ -180,7 +180,7 @@ For technical details, see the [Technical reference](#chat-completions-without-h
 
 The microflow activity `Chat completions with history` supports more complex use cases where a list of (historical) messages (e.g. comprising the conversation or context so far) is sent as part of the request to the language model.
 
-Optionally, you can also make use of [function calling](#chatcompletions-functioncalling) by adding a [ToolCollection](/appstore/modules/genai/genai-commons/#addfunction) to the Request or [send images](#chatcompletions-vision) along with the user prompt by passing a [FileCollection](/appstore/modules/genai/genai-commons/#initialize-filecollection).
+Optionally, you can also make use of [function calling](#chatcompletions-functioncalling) by adding a [ToolCollection](/appstore/modules/genai/genai-commons/#add-function) to the Request or [send images](#chatcompletions-vision) along with the user prompt by passing a [FileCollection](/appstore/modules/genai/genai-commons/#initialize-filecollection).
 
 For technical details, see the [Technical reference](#chat-completions-with-history-technical) section.
 
@@ -198,7 +198,7 @@ Function calling is a very powerful capability, but this also introduces potenti
 Mendix also strongly advises that you build user confirmation logic into function microflows that have a potential impact on the world on behalf of the end-user, for example sending an email, posting online, or making a purchase.
 {{% /alert %}}
 
-You can use function calling in all chat completions operations by adding a `ToolCollection` with a `Tool` via the [Tools: Add Function to Request](/appstore/modules/genai/genai-commons/#addfunction) operation.
+You can use function calling in all chat completions operations by adding a `ToolCollection` with a `Tool` via the [Tools: Add Function to Request](/appstore/modules/genai/genai-commons/#add-function) operation.
 
 For more information, see [Function Calling](/appstore/modules/openai-connector/function-calling/).
 
@@ -211,9 +211,9 @@ You can use vision in all chat completions operations by providing the optional 
 Two helper operations are available to construct the `FileCollection` with a list of `FileDocuments` (for vision it needs to be of type `Image`) or `URLs`:
 
 * [Files: initialize Collection with File](/appstore/modules/genai/genai-commons/#initialize-filecollection) can be used to initialize a new `FileCollection` and add a new `FileDocument` to it.
-* [Files: Add File to Collection](/appstore/modules/genai/genai-commons/#addfile) can be used to add additional `FileDocuments` to an existing `FileCollection`.
+* [Files: Add File to Collection](/appstore/modules/genai/genai-commons/#add-file) can be used to add additional `FileDocuments` to an existing `FileCollection`.
 
-For `Chat Completions without History` the `Fileollection` is an optional input parameter, while for `Chat Completions with History` the `FileCollection` can optionally be added to individual user messages in [Chat: Add Message to Request](/appstore/modules/genai/genai-commons/#addmessage).
+For `Chat Completions without History` the `Fileollection` is an optional input parameter, while for `Chat Completions with History` the `FileCollection` can optionally be added to individual user messages in [Chat: Add Message to Request](/appstore/modules/genai/genai-commons/#add-message).
 
 {{% alert color="info" %}}
 OpenAI and Azure OpenAI for vision do not yet provide feature parity when it comes to combining functionalities, i.e., Azure OpenAI currently does not support the use of JSON mode and function calling in combination with image (vision) input.

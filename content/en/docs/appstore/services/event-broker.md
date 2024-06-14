@@ -34,13 +34,13 @@ The Event Broker must be enabled on both the app and specific environment levels
 
 Technical Contacts with a license to the Mendix Event Broker can manage its features on the [Event Broker Manager](https://broker.mendix.com/) page.
 
-#### 2.2.1 Users for Event Broker Manager
+#### 2.2.1 Users for Event Broker Manager 
 
 Users within the company's email domain that have a Mendix login can participate in the administration of the Mendix Event Broker as either a View or Admin user. They can also be blocked from participation.
 
 {{< figure src="/attachments/appstore/services/event-broker/event_broker_internal_user.png">}}
 
-{{< figure src="/attachments/appstore/services/event-broker/event_broker_internal.png">}}
+{{< figure src="/attachments/appstore/services/event-broker/event_broker_internal_user_2.png">}}
 
 Users that are not part of the customer organization (not within the email domain of the customer) can be invited within the same levels of access. Such users still require a standard Mendix login.
 

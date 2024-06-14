@@ -43,7 +43,7 @@ After finding the package of your choice, locate the Snippets part, containing t
 
 {{< figure src="/attachments/refguide/java-programming/managed-dependencies/junit-notation-example.png" class="no-border" >}}
 
-## 3 Dependency Synchronization
+## 3 Dependency Synchronization {#dependency-synchronization}
 
 When a change is made to a specified dependency, for example, the dependency is removed or the module is updated from the Marketplace, dependency synchronization will automatically run in the background.
 

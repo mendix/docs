@@ -10,7 +10,7 @@ aliases:
 
 ## 1 Introduction
 
-This how-to builds on the information provided in [How to Share Data Between Apps](/howto/integration/share-data/) and shows you how OData annotations give you the power to create, update, and delete data.
+This how-to builds on the information provided in [Share Data Between Apps](/howto/integration/share-data/) and shows how OData annotations give you the power to create, update, and delete data.
 
 This how-to teaches you how to do the following:
 
@@ -34,7 +34,7 @@ Note the following terminology differences described in the table below:
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Install the most recent version of [Studio Pro](https://marketplace.mendix.com/link/studiopro/)
-* Understand how read-only external entities behave by reading [How to Share Data Between Apps](/howto/integration/share-data/)
+* Understand how read-only external entities behave by reading [Share Data Between Apps](/howto/integration/share-data/)
 
 ## 3 Exposing OData Contracts in Mendix Studio Pro
 
@@ -42,7 +42,7 @@ When you publish an entity in a published OData service, the client can read the
 
 1. Open the published OData service in **MyFirstModule** > **APIs** > **{yourname}CustomerODataService**.
 2. Select the **Customer** entity and click **Edit**.
-3. Select the checkboxes to indicate whether the entity should be **Insertable**, **Updatable**, and/or **Deletable**.
+3. Select the checkboxes to indicate whether the entity should be **Insertable**, **Readable**, **Updatable**, and/or **Deletable**.
 
 ## 4 Viewing OData Capabilities in Catalog {#view-capabilities}
 

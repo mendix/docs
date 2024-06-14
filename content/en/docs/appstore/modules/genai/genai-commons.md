@@ -60,20 +60,20 @@ Use this microflow to create the main input for the chat completion operations. 
 
 Use this microflow to add stop sequences to the request. It can be used after the request has been created. If available for the connector and model of choice, stop sequences let models know when to stop generating text.
 
-##### 3.2.1.3 Chat: Add Message to Request
+##### 3.2.1.3 Chat: Add Message to Request {#addmessage}
 
 Use this microflow to add historical messages to the request. This is necessary when there is a historical conversation and a `Chat Completions (with history)` operation is used. 
 A message represents conversation text content and optionally has a collection of files attached that need to be taken into account when generating the response (e.g. images for vision). In the case of tool calls patterns (e.g. function calling) it contains the return values of functions that were called. 
 
-##### 3.2.1.4 Files: Initialize Collection with File
+##### 3.2.1.4 Files: Initialize Collection with File {#initialize-filecollection}
 
 In order to include files to a message, these must be provided in the form of a file collection. This helper microflow creates the file collection and adds the first file.
 
-##### 3.2.1.5 Files: Add File To Collection
+##### 3.2.1.5 Files: Add File To Collection {#addfile}
 
 Use this microflow to add subsequent files to an existing file collection.
 
-##### 3.2.1.6 Tools: Add Function To Request
+##### 3.2.1.6 Tools: Add Function To Request {#addfunction}
 
 Use this microflow when you have microflows in your application that may be called as part of the GenAI interaction. If you want the model to be aware of the existance of these microflows which can be called to retrieve required information, you can use this operation to add them as functions to the request. If supported, the main chat completions operation takes care of calling the right functions based on the suggestion from the model and continuing the process until a model response text is returned.
 

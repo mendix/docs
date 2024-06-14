@@ -49,8 +49,7 @@ After finding the package of your choice, locate the Snippets part, containing t
 Exclusions are available in Studio Pro version 10.12.0 and above.
 {{% /alert %}}
 
-Sometimes you may find a conflict in transitive dependencies between different configured Java dependencies.
-For example, if two Java dependencies have the same package name and classes but a different group or artifact then they may both be included in your app, possibly causing conflicts.
+Transitive (or indirect) dependencies of different configured Java dependencies might conflict. For example, a package used in your app moves to a new version of a dependency; some modules use the new dependency but some still use the old dependency. This causes the package to be defined multiple times which is not allowed.
 
 To fix this, transitive dependencies can be excluded when configuring dependencies.
 The exclusions configured here will be exported with the module, meaning they are also excluded when the module is imported into another app.

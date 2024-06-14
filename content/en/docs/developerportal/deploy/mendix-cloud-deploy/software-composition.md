@@ -1,5 +1,5 @@
 ---
- title: "Software Composition"
+title: "Software Composition"
 url: /developerportal/deploy/software-composition/
 description: "Describes the Software Composition page in Apps."
 tags: ["apps", "deployment", "software composition"]

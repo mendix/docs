@@ -1,5 +1,5 @@
 ---
-title: "Software Composition"
+ title: "Software Composition"
 url: /developerportal/deploy/software-composition/
 description: "Describes the Software Composition page in Apps."
 tags: ["apps", "deployment", "software composition"]
@@ -19,7 +19,13 @@ Over time, these dependencies can become deprecated, outdated. or vulnerable. En
 
 To enable this, the **Software Composition** page in **Apps** provides visibility into the component dependencies of each deployment package. The components displayed here will be based on the [Software Bill of Materials (SBOM)](/refguide/sbom-generation/).
 
-### 1.1 Prerequisites {#prerequisites}
+The **Software Composition** page is visible to all members of the Mendix app.
+
+### 1.1 Known Issues
+
+After the creation of a deployment package, it may take up to a day for the **Software Composition** page to become visible. Mendix is working to improve the performance on this front.
+
+### 1.2 Prerequisites {#prerequisites}
 
 To be able to see the software composition information, make sure that you meet the following prerequisites:
 
@@ -33,7 +39,7 @@ To be able to see the software composition information, make sure that you meet 
 
 * If your deployment package was deployed before June 14, 2024, you must create and deploy a new deployment package in order to get the software composition information populated on this page.
 
-### 1.2 Software Composition Generation {#software-composition-generation}
+### 1.3 Software Composition Generation {#software-composition-generation}
 
 Components are identified in the following manner:
 

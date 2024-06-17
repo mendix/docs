@@ -217,6 +217,7 @@ This helper entity extends the GenAICommons.Request entity with attributes speci
 | `KmsKeyARN` | The KMSKeyArn attribute describes the ARN of the AWS KMS key encrypting the session. |
 | `RetrieveAndGenerateType` | The RetrieveAndGenerateType describes the type of resource that is queried by the request. The only supported value currently is "KNOWLEDGE_BASE"  |
 
+It can be added to the request using the [Request: Add Retrieve And Generate Request Extension](#add-rag-extension) operation.
 
 ##### 4.1.1.6 RetrieveAndGenerateResponse {#retrieve-and-generate-response}
 
@@ -811,9 +812,6 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `Userprompt (string)`, `AmazonBedrockConnection`, `GenAICommons.Request (optional)`, `FileCollection (optional)`| `GenAICommons.Response`|
 
-For Anthropic Claude, the request must be associated to an AnthropicClaudeRequest_Extension object which can be created with the `AnthropicClaudeRequest_Extension_Create` flow. This operation can easily be replaced or combined with the ChatCompletions (without History) operation inside of the [OpenAI connector](https://marketplace.mendix.com/link/component/220472).
-
-
 ##### 4.2.1.2 ChatCompletions (with history) {#chat-completions-with-history}
 
 The `ChatCompletions (with history)` activity can be used for any conversations with Anthropic Claude or Amazon Titan. It is possible for it to keep the conversation history in mind.
@@ -824,7 +822,7 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `GenAICommons.Request`, `AmazonBedrockConnection`| `GenAICommons.Response`|
 
-For Anthropic Claude, the request must be associated to an AnthropicClaudeRequest_Extension object which can be created with the `AnthropicClaudeRequest_Extension_Create` flow. In order to pass a conversation history to the flow, the list of previous messages must be associated to the input request. This operation can easily be replaced or combined with the ChatCompletions (with history) operation inside of the [OpenAI connector](https://marketplace.mendix.com/link/component/220472).
+For Anthropic Claude, the request must be associated to an AnthropicClaudeRequest_Extension object which can be created with the [Request: Add Anthropic Claude Request Extension](#add-claude-extension) operation. In order to pass a conversation history to the flow, the list of previous messages must be associated to the input request. This operation can easily be replaced or combined with the ChatCompletions (with history) operation inside of the [OpenAI connector](https://marketplace.mendix.com/link/component/220472).
 
 ###### Anthropic Claude version 3 models capabilities
 
@@ -854,11 +852,49 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `GenAICommons.Request`, `AmazonBedrockConnection`| `GenAICommons.Response`|
 
-For Anthropic Claude, the request must be associated to an AnthropicClaudeRequest_Extension object which can be created with the `AnthropicClaudeRequest_Extension_Create` flow. In order to pass a conversation history to the flow, the list of previous messages must be associated to the input request.
+The request object passed to this operation must include a [KnowledgeBaseTool](#knowledge-base-tool) object, which can be added to the request using the [Request: Add Knowledge Base Tool to Collection](#add-knowledge-base-tool) operation. 
 
 #### 4.2.2 GenAI commons helper operations
 
-##### 4.2.2.1  {#}
+##### 4.2.2.1 Create Amazon Bedrock Connection {#create-amazon-bedrock-connection}
+
+Use this microflow to create a new [Amazon Bedrock Connection](#amazon-bedrock-connection) object.
+
+This operation contains the *AmazonBedrockConnection_Create* microflow.
+
+| Input | Output |
+| --- | --- |
+| `ENUM_Region (enumeration)`, `UseStaticCredenitals (boolean)`, `ModelId (string)` | `AmazonBedrockConnection (object)`|
+
+##### 4.2.2.2 Request: Add Anthropic Claude Request Extension {#add-claude-extension}
+
+Use this microflow to add a new [AnthropicClaudeRequest_Extension](#anthropic-claude-request-extension) object to your request. This is useful to include parameters that are unique to Anthropic Claude models.
+
+This operation contains the *AnthropicClaudeRequest_Extension_Create* microflow.
+
+| Input | Output |
+| --- | --- |
+| `GenAICommons.Request (object)`, `Version (string, optional)`, `Top_K (Integer, optional)` | `AnthropicClaudeRequest_Extension (object)`|
+
+##### 4.2.2.3 Request: Add Knowledge Base Tool to Collection {#add-knowledge-base-tool}
+
+Use this microflow to add a new [KnowledgeBaseTool](#knowledge-base-tool) object to your request. This is useful for adding additional parameters when using the [Retrieve And Generate](#retrieve-and-generate) operation.
+
+This operation contains the *RetrieveAndGenerateRequest_Extension_Create* microflow.
+
+| Input | Output |
+| --- | --- |
+| `GenAICommons.Request (object)`, `KnowledgeBaseId (string)` | *none* |
+
+##### 4.2.2.4 Request: Add Retrieve And Generate Request Extension {#add-rag-extension}
+
+Use this microflow to add a new [RetrieveAndGenerateRequest_Extension](#retrieve-and-generate-request-extension) object to your request. This is required in order to use the [Retrieve And Generate](#retrieve-and-generate) operation successfully.
+
+This operation contains the *Request_AddKnowledgeBaseTool* microflow.
+
+| Input | Output |
+| --- | --- |
+| `GenAICommons.Request (object)`, `KmsKeyArn (string, optional)`, `SessionId (string, optional)`, `Enum_RetrieveAndGenerateType (enumeration, optional)` | `RetrieveAndGenerateRequest_Extension (object)` |
 
 #### 4.2.3 Other operations
 

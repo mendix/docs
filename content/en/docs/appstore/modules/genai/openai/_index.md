@@ -213,12 +213,9 @@ Vision enables models like GPT-4 Turbo to interpret and analyze images, allowing
 
 You can use vision in all chat completions operations by providing the optional input parameter [FileCollection](/appstore/modules/genai/genai-commons/#initialize-filecollection). 
 
-Two helper operations are available to construct the `FileCollection` with a list of `FileDocuments` (for vision it needs to be of type `Image`) or `URLs`:
+Use the two helper microflows [Files: Initialize Collection with OpenAI File](#initialize-filecollection) and [Files: Add File to Collection](#add-file) to construct the input with either `FileDocuments` (for vision it needs to be of type `Image`) or `URLs`.
 
-* [Files: initialize Collection with File](/appstore/modules/genai/genai-commons/#initialize-filecollection) can be used to initialize a new `FileCollection` and add a new `FileDocument` to it.
-* [Files: Add File to Collection](/appstore/modules/genai/genai-commons/#add-file) can be used to add additional `FileDocuments` to an existing `FileCollection`.
-
-For `Chat Completions without History` the `Fileollection` is an optional input parameter, while for `Chat Completions with History` the `FileCollection` can optionally be added to individual user messages in [Chat: Add Message to Request](/appstore/modules/genai/genai-commons/#add-message).
+For `Chat Completions without History` the `FileCollection` is an optional input parameter, while for `Chat Completions with History` the `FileCollection` can optionally be added to individual user messages in [Chat: Add Message to Request](/appstore/modules/genai/genai-commons/#add-message).
 
 {{% alert color="info" %}}
 OpenAI and Azure OpenAI for vision do not yet provide feature parity when it comes to combining functionalities, i.e., Azure OpenAI currently does not support the use of JSON mode and function calling in combination with image (vision) input.
@@ -281,9 +278,36 @@ The construction of the request and handling of the response must be implemented
 
 For technical details, see the [Technical reference](#embeddings-advanced-technical) section.
 
+
+### 3.5 Helper microflows {#helper-microflows}
+
+Helper microflows assist developers to construct their requests in a drag and drop experience.
+
+#### 3.5.1 `Create OpenAI Connection` {#create-openai-connection}
+This microflow can be used to create the [OpenAIConnection](#openaiconnection) object that is needed to use the Chat Completions operations. A [Configuration](#configuration) object is required. For OpenAI (not Azure) configurations, the model name is mandatory  as well.
+
+#### 3.5.2 `Chat: Set Response Format` {#set-responseformat}
+This microflow can be used to optionally change the [ResponseFormat](#enum-responseformat-chat) of the `OpenAIRequest_Extension` object, which will be created for a `request` if not present. This describes the format that the chat completions model must output.
+
+#### 3.5.3 `Files: Initialize Collection with OpenAI File` {#initialize-filecollection}
+This microflow can be used to initialize a new `FileCollection` and add a new `FileDocument` or URL. Optionally, [Image Detail](#enum-imagedetail) or a description using `TextContent` can be passed.
+
+#### 3.5.4 `Files: Add OpenAI File to Collection` {#add-file}
+This microflow can be used to add a new `FileDocument` or URL to an existing `FileCollection`. [Image Detail](#enum-imagedetail) or a description using `TextContent` can be passed.
+
+#### 3.5.5 `Embeddings: Create DataBatch` {#create-databatch}
+This mircoflow can be used to create a data batch (wrapper entity) for [see DataChunks](#create-datachunk).
+
+#### 3.5.6 `Embeddings: Create DataChunk` {#create-datachunk}
+This microflow can be used to add a data chunk for the given content that needs te be converted into an embedding vector. The pattern uses the DataBatch to group the inputs, [see DataChunks](#create-databatch). The order of the chunks is not relevant.
+
+#### 4.1.1 Configuration {#configuration-domain-model}
+
 ## 4 Technical Reference {#technical-reference}
 
 To help you work with the **OpenAI Connector**, the following sections list the available [entities](#domain-model), [enumerations](#enumerations), and [activities](#activities) that you can use in your application. 
+
+{{% alert color="info" %}}This document describes the OpenAIConnector from version 3 and higher. Older versions are not compatible with the documentation.{{% /alert %}}
 
 ### 4.1 Domain Model {#domain-model} 
 
@@ -329,17 +353,12 @@ The domain model in Mendix is a data model that describes the information in you
 | `AssistantResponse`    | This is the assistant response returned by the chat completions API. |
 | `ChatCompletionsModel` | This is the model used for the API call.                     |
 
-#### 4.1.2 Generalizations {#generalizations-domain-model}
-
-<!-- TODO Probably remove image and whole paragraph?-->
-{{< figure src="/attachments/appstore/modules/openai-connector/domain-model-generalizations.png" >}}
-
-#### 4.1.3 Chat Completions {#chatcompletions-domain-model}
+#### 4.1.2 Chat Completions {#chatcompletions-domain-model}
 Most of the chat completions entities are part of the [GenAI Commons](/appstore/modules/genai/genai-commons/) module which represents common patterns for dealing with LLMs (see [GenAI Commons Domain Model](/appstore/modules/genai/genai-commons/#domain-model)).
 <!-- TODO Probably remove image or replace with the remaining entities -->
 {{< figure src="/attachments/appstore/modules/openai-connector/domain-model-chat-completions.png" >}}
 
-##### 4.1.3.1 `OpenAIRequest_Extension` {#openairequest-extension} 
+##### 4.1.2.1 `OpenAIRequest_Extension` {#openairequest-extension} 
 
 `OpenAIRequest_Extension` is an entity that can be used to extend the [GenAI Commons Request](/appstore/modules/genai/genai-commons/#request) object with optional and OpenAI-specific parameters. Before the request is sent to OpenAI, the parameters from this extension are mapped into the request body.
 
@@ -349,6 +368,13 @@ Most of the chat completions entities are part of the [GenAI Commons](/appstore/
 | `Frequency_penalty`     | The value should be a decimal between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood of repeating the same line verbatim. This attribute is optional. The default value is 0.0. |
 | `_Model`                | The model to be used for an operation. This attribute should not be set directly because it will be overwritten with GenAICommons.Connection.Model. |
 
+##### 4.1.2.2 `OpenAIFileContent` {#openaifile-content} 
+
+`OpenAIFileContent` is an entity that can be passed along the request, for example when using vision. Besides the attributes from its generalization [FileContent](/appstore/modules/genai/genai-commons/#filecontent), `Detail` can be used to describe the detail level of an image. 
+
+| Attribute           | Description                                                  |
+| ------------------- | ------------------------------------------------------------ |
+| `Detail`            | This describes the detail level of an image. <br />For more information, see the [ENUM_ImageDetail](#enum-imagedetail) section. |
 
 #### 4.1.4 Image Generations {#imagegenerations-domain-model}
 

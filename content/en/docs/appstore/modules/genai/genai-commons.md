@@ -46,7 +46,7 @@ Although GenAI Commons technically defines additional capabilities typically fou
 
 ### 3.2 Helper microflows {#helper-microflows}
 
-All helper microflows are intended to be used when the requiered information for GenAI operations needs to be mapped from your custom app implementation to the GenAI model and vice versa.
+All helper microflows are intended to be used when the required information for GenAI operations needs to be mapped from your custom app implementation to the GenAI model and vice versa.
 
 #### 3.2.1 Pre-processing
 

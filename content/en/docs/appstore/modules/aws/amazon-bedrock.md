@@ -228,7 +228,7 @@ This entity extends the GenAICommons.Response entity with attributes specific to
 
 ##### 4.1.1.7 KnowledgeBaseTool {#knowledge-base-tool}
 
-This entity holds information about the specified knowledge base.
+This entity extends the GenAICommons.Tool entity and holds information about the specified knowledge base. A KnowledgeBaseTool object must be used to specify the knowledge base to use for the Retrieve And Generate operation. 
 
 | Attribute | Description |
 | --- | --- |

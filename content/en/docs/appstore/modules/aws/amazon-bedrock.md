@@ -826,6 +826,24 @@ The input and output for this service are shown in the table below:
 
 For Anthropic Claude, the request must be associated to an AnthropicClaudeRequest_Extension object which can be created with the `AnthropicClaudeRequest_Extension_Create` flow. In order to pass a conversation history to the flow, the list of previous messages must be associated to the input request. This operation can easily be replaced or combined with the ChatCompletions (with history) operation inside of the [OpenAI connector](https://marketplace.mendix.com/link/component/220472).
 
+###### Anthropic Claude version 3 models capabilities
+
+Some capabilities of the chat completions operations are currently only available when using Anthropic Claude version 3 models:
+
+**1. Function Calling:**
+
+This operation supports the function calling (or tool use) capability of Anthropic Claude version 3 models using the [Claude Messages API](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters-anthropic-claude-messages.html).
+
+You can use function calling in all chat completions operations using Anthropic Claude version 3 models by adding a `ToolCollection` with a `Tool` via the [Tools: Add Function to Request](/appstore/modules/genai/genai-commons/#add-function) operation.
+
+For more information about function calling, please refer to the [Function Calling Documentation](/appstore/modules/genai/concepts/function-calling).
+
+**2. Vision:**
+
+This operation supports the vision capability of Anthropic Claude version 3 models. With vision you can send image prompts to Claude, next to the traditional text prompts. 
+
+You can use vision by adding a `FileCollection` with a `File` via the [Files: Initialize Collection with File](/appstore/modules/genai/genai-commons/#initialize-filecollection) or the [Files: Add to Collection](/appstore/modules/genai/genai-commons/#add-file) operation.
+
 
 ##### 4.2.1.3 RetrieveAndGenerate {#retrieve-and-generate}
 
@@ -840,7 +858,7 @@ For Anthropic Claude, the request must be associated to an AnthropicClaudeReques
 
 #### 4.2.2 GenAI commons helper operations
 
-##### 4.2.2.1 tbd {#}
+##### 4.2.2.1  {#}
 
 #### 4.2.3 Other operations
 

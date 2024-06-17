@@ -78,8 +78,13 @@ You should have [signed up](https://platform.openai.com/) for an OpenAI account,
 ### 1.5 Dependencies {#dependencies}
 
 * Mendix Studio Pro version [9.24.0](/releasenotes/studio-pro/9.24/#9240) or higher 
+* [GenAI Commons](LINK) module
 * [Encryption](https://marketplace.mendix.com/link/component/1011) module
 * [Community commons](https://marketplace.mendix.com/link/component/170) module
+
+<!---
+[comment]: <> TODO: insert link
+-->
 
 ## 2 Installation {#installation}
 
@@ -643,7 +648,7 @@ Other operations, for example to use [Function Calling](#chatcompletions-functio
 
 #### 4.3.2 Image Generations {#image-generations-technical} 
 
-The image generations API from OpenAI accepts a JSON structure that consists of a number of parameters including the user prompt as input and generates a structure of one or many model-generated images as output. The image is returned as a URL or as a base64-encoded string. Depending on the model used, the API can return one or many model-generated images based on the input prompt plus other optional parameters. The exposed microflows in this connector are built to abstract away part of the complexity of the input and output structures and are meant to facilitate easier implementation in certain use cases. Currently, only the OpenAI API provides support for images (not Azure OpenAI).
+The image generations API from OpenAI accepts a JSON structure that consists of a number of parameters including the user prompt as input and generates a structure of one or many model-generated images as output. The image is returned as a URL or as a base64-encoded string. Depending on the model used, the API can return one or many model-generated images based on the input prompt plus other optional parameters. The exposed microflows in this connector are built to abstract away part of the complexity of the input and output structures and are meant to facilitate easier implementation in certain use cases.
 
 ##### 4.3.2.1 Image Generations (Single Image) {#image-generations-single-technical} 
 

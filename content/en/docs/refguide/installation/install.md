@@ -16,10 +16,6 @@ Mendix Studio Pro allows you to build apps on the Mendix Platform. This document
 
 If you use a Mac device and need to use a version of Mendix Studio Pro older than 10.7, see [Configuring Parallels](/refguide/using-mendix-studio-pro-on-a-mac/) to configure your Windows virtual machine. 
 
-For a demonstration on how to install Studio Pro, follow along in the video below:
-
-{{< vidyard "WUp2tLi68nXFQd7xhPbDtt" >}}
-
 ## 2 Downloading Mendix Studio Pro
 
 Mendix Studio Pro can be installed on your Windows machine with a Windows executable file or on your Mac machine using a .pkg file. This file can be downloaded from the Mendix Marketplace. 
@@ -64,7 +60,7 @@ The prerequisites are the following:
 * [Microsoft Visual C++ 2015 and 2019 Redistributable Package](https://aka.ms/vs/16/release/vc_redist.x64.exe)
 * [Mendix Native Mobile Builder one-click Installer](https://appdev-mx-cdn.s3.amazonaws.com/native-builders/latest.exe)
 * [Git for Windows (x64)](https://git-scm.com/download/win) using the versions described below. These are the versions of Git that Studio Pro installs if the Git version installed on the system is below the suggested one.  
-    
+  
     | Studio Pro 10.0.0 - 10.1.0 | Studio Pro 10.2.0 - 10.9 | Studio Pro 10.10 and above |
     | --- | --- | --- |
     | [2.37.1](https://github.com/git-for-windows/git/releases/tag/v2.37.1.windows.1) | [2.41.0](https://github.com/git-for-windows/git/releases/tag/v2.41.0.windows.3) | [2.43.0](https://github.com/git-for-windows/git/releases/tag/v2.43.0.windows.1)|
@@ -75,14 +71,6 @@ The prerequisites are the following:
 Based on the error message you get from the installer, you can choose to install a single prerequisite, or you can try to manually install them all.
 
 Then, you can retry installing Studio Pro.
-
-### 4.2 Mac Warning {#mac-warning}
-
-On a Mac, you may get the following warning during installation:
-
-{{< figure src="/attachments/refguide/installation/install/warning-mac.png"  class="no-border" >}}
-
-To bypass this warning, right-click the installer, click **Open**, and run the installer.
 
 ## 5 Installing Mendix Studio Pro Offline {#offline}
 

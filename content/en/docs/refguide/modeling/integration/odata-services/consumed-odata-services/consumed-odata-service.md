@@ -10,7 +10,7 @@ aliases:
 
 A consumed OData service contains the connection information for OData external entities and actions.
 
-You can create a consumed OData service and specify its metadata in a file or a URL. Alternatively, when you search using the [Integration pane](/refguide/integration-pane/) and drag an entity to a domain model to have Studio Pro create a consumed OData service for you.
+You can create a consumed OData service and specify its metadata in a file or a URL. Alternatively, you can search using the [Integration pane](/refguide/integration-pane/) and drag an entity to the domain model to have Studio Pro create a consumed OData service for you.
 
 ## 2 Consumed OData Service screen
 
@@ -31,23 +31,23 @@ The **Consumed OData Service** document contains the following information:
 
 ### 2.1 Configuration
 
-There are three ways to specify the service URL, headers and proxy settings: **constants only**, **configuration microflow** and **headers microflow**.
+There are three ways to specify the service URL, headers, and proxy settings: **Constants only**, **Configuration microflow**, and **Headers microflow**.
 
-* Choose **Constants only** to specify the service URL, proxy settings and headers using constants.
-* Choose **Configuration microflow** to specify the service URL, proxy settings and headers using a microflow that returns a **System.ConsumedODataConfiguration** (this option was introduced in Studio Pro 10.12.0).
-* Choose **Headers microflow** to specify headers using a microflow that returns a list of **System.HttpHeader** and specify the service URL and proxy settings using constants.
+* **Constants only** – specify the service URL, proxy settings, and headers using constants
+* **Configuration microflow** – specify the service URL, proxy settings, and headers using a microflow that returns a **System.ConsumedODataConfiguration** (this option was introduced in Studio Pro 10.12.0)
+* **Headers microflow** – specify headers using a microflow that returns a list of **System.HttpHeader** and specify the service URL and proxy settings using constants
 
 ### 2.2 Configuration/headers microflow
 
-Choose a microflow that returns either
+Choose a microflow that returns one of the following options:
 
-* A **System.ConsumedODataConfiguration** object with associated **System.HttpHeader** objects (when using **Configuration microflow**), or
-* A list of **System.HttpHeader** objects (when using **Headers microflow**).
+* A **System.ConsumedODataConfiguration** object with associated **System.HttpHeader** objects (when using **Configuration microflow**)
+* A list of **System.HttpHeader** objects (when using **Headers microflow**)
 
-This microflow may take a parameter of type **System.HttpResponse**. The microflow is called every time a request is made. Initially, the HTTP response parameter will be empty. If the service responds with **401 Unauthorized**, the microflow is called with that HTTP response and another call is made with the new HTTP headers.
+This microflow may take a parameter of type **System.HttpResponse**. The microflow is called every time a request is made. Initially, the HTTP response parameter will be empty. If the service responds with `401 Unauthorized`, the microflow is called with that HTTP response and another call is made with the new HTTP headers.
 
 {{% alert color="info" %}}
-Custom authentication can be done with the microflow where the authentication value is retrieved (such as SSO). For further information on access and authentication, see [Using Custom HTTP Header Validation for Published Entities](/refguide/security-shared-datasets/#http-header-validation) in the *Security and Shared Datasets* document in the Studio Pro 10 guide.
+Custom authentication can be done with the microflow where the authentication value is retrieved (such as SSO). For more information on access and authentication, see [Using Custom HTTP Header Validation for Published Entities](/refguide/security-shared-datasets/#http-header-validation) in *Security and Shared Datasets*.
 {{% /alert %}}
 
 #### 2.2.1 Authenticating with Mendix SSO {#authenticate-mendix-sso}

@@ -213,8 +213,8 @@ This helper entity extends the GenAICommons.Request entity with attributes speci
 | Attribute | Description |
 | --- | --- |
 | `SessionId` | The SessionId attribute describes the unique identifier of the session. Reuse the same value to continue the same session with the knowledge base. |
-| `KmsKeyARN` |  |
-| `RetrieveAndGenerateType` |  |
+| `KmsKeyARN` | The KMSKeyArn attribute describes the ARN of the AWS KMS key encrypting the session. |
+| `RetrieveAndGenerateType` | The RetrieveAndGenerateType describes the type of resource that is queried by the request. The only supported value currently is "KNOWLEDGE_BASE"  |
 
 
 ##### 4.1.1.6 RetrieveAndGenerateResponse {#retrieve-and-generate-response}
@@ -232,7 +232,7 @@ This entity holds information about the specified knowledge base.
 
 | Attribute | Description |
 | --- | --- |
-| `KnowledgeBaseId` |  |
+| `KnowledgeBaseId` | The KnowledgeBaseId attribute describes the unique identifier of the knowledge base that is queried and the foundation model used for generation. |
 
 
 #### 4.1.2 No GenAICommons dependency

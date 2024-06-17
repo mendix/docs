@@ -2,7 +2,7 @@
 title: "Monitoring Your Mendix Apps with an APM Tool"
 linktitle: "Monitoring with APM"
 url: /developerportal/operate/monitoring-with-apm/
-weight: 30
+weight: 10
 description: "How to use an APM (application performance monitoring) tool to monitor your Mendix Cloud app."
 ---
 

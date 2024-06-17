@@ -1,7 +1,7 @@
 ---
 title: "Metrics"
 url: /developerportal/operate/metrics/
-weight: 30
+weight: 10
 description: "Describes how to monitor performance and interpret various graphs and trends in Mendix Cloud."
 aliases:
     - /developerportal/operate/trends-v4/

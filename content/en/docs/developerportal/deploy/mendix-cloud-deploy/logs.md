@@ -1,7 +1,7 @@
 ---
 title: "Logs"
 url: /developerportal/operate/logs/
-weight: 30
+weight: 12
 description: "Describes how to see the logs from your app."
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---

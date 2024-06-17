@@ -204,6 +204,7 @@ This helper entity solely serves the purpose to create a flat entity to produce 
 | `Temperature` | See `Temperature` of the `GenAICommons.Request` entity |
 | `MaxTokens` | See `MaxTokens` of the `GenAICommons.Request` entity |
 | `SystemPrompt` | See `SystemPrompt` of the `GenAICommons.Request` entity |
+| `ToolChoice` | See `ToolChoice` of the `GenAICommons.Request` entity |
 
 
 ##### 4.1.1.5 RetrieveAndGenerateRequest_Extension {#retrieve-and-generate-request-extension}

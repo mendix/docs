@@ -1,5 +1,6 @@
 ---
 title: "Deploying an App to Mendix Cloud"
+linktitle: "Deploying an App"
 url: /developerportal/deploy/mendix-cloud-deploy/deploying-an-app/
 weight: 3
 description: "Describes how to deploy to Mendix Cloud."

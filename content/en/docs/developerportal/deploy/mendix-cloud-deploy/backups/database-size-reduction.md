@@ -10,7 +10,7 @@ description: "Describes how to restore physical disk space by creating and resto
 
 Usually, the database of a Mendix application in Mendix Cloud grows over time. Here is a typical example:
 
-{{< figure src="/attachments/developerportal/operate/backups/database-size-reduction/Untitled.png" class="no-border" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/backups/database-size-reduction/Untitled.png" class="no-border" >}}
 
 The data grows in a steady fashion. If entities are removed in a major release, you may see a temporary decrease in the size of the database—but on average, the database size tends to increase over time.
 

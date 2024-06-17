@@ -1,7 +1,8 @@
 ---
 title: "Studio Pro Deployment Settings"
+linktitle: "Studio Pro Deployment"
 url: /developerportal/deploy/studio-deployment-settings/
-weight: 12
+weight: 80
 description: "Describes how to set deployment targets for Mendix Studio Pro."
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---

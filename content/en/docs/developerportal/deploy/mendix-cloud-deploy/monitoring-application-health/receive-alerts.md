@@ -29,7 +29,7 @@ If you are the Technical Contact for an app, you can grant team members the **Re
 5. Switch to the **Permissions** tab.
 6. Select the checkbox below **Receive Alerts** for the user (or users) who should receive alerts. Your changes will save automatically.
 
-    {{< figure src="/attachments/developerportal/operate/monitoring-application-health/receive-alerts/receive-alerts.png" class="no-border" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/monitoring-application-health/receive-alerts/receive-alerts.png" class="no-border" >}}
 
 ### 2.2 Alerts Page
 
@@ -44,7 +44,7 @@ To enable email alerts, follow these steps:
 5. Select the environment for which you want to set the alerts from the drop-down list at the top of the page. It is possible to set this option separately for each environment.
 6. Select the **Email Alerts** checkbox.  Your changes will save automatically.
 
-    {{< figure src="/attachments/developerportal/operate/monitoring-application-health/receive-alerts/email-alerts.png" alt="The Email Alerts checkbox" width="70%" class="no-border" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/monitoring-application-health/receive-alerts/email-alerts.png" alt="The Email Alerts checkbox" width="70%" class="no-border" >}}
 
 ## 3 Alerts Using Webhooks 
 

@@ -1,7 +1,7 @@
 ---
 title: "About Mendix Cloud"
 url: /developerportal/deploy/mxcloudv4/
-weight: 1
+weight: 90
 description: "Frequently asked questions about Mendix Cloud"
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---

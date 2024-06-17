@@ -37,21 +37,7 @@ We are available for all users of the Mendix Platform, and we are bound by servi
 
 You can check the Mendix SLA [here](https://mendix.com/sla).
 
-### 1.2 Premier Support
-
-In addition to our Premium SLA, Mendix offers **Premier Support**, with elevated support levels, specifically for customers with business critical apps.
-The Premier Support package contains the following for customers on the Mendix Public or Dedicated Cloud:
-
-* 24/7 support availability for critical and high tickets
-* 24/5 support availability for medium and low tickets
-* Direct access to a senior designated team (Support and R&D)
-* Escalation hotline for Production down issues
-* Proactive app monitoring on critical issues
-* Quarterly ticket review meetings with the senior designated team
-
-Please contact [Mendix Support](https://support.mendix.com/) or your Customer Success Manager if you want to know more.
-
-### 1.3 Extended Support {#extended-support}
+### 1.2 Extended Support {#extended-support}
 
 Extended Support may be offered in cases where the support of a major Mendix version is discontinued in line with its [end of Support date](/releasenotes/studio-pro/lts-mts/#end). Extended Support incurs an additional cost and covers support within one year following the GA release of the latest Mendix major version. 
 

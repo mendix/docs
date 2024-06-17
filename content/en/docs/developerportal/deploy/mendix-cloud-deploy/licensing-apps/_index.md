@@ -2,7 +2,7 @@
 title: "Licensing Mendix Cloud Apps"
 url: /developerportal/deploy/licensing-apps/
 #New document which replaces four others
-weight: 15
+weight: 80
 description: "Licensing apps for production by linking them to a licensed cloud node."
 aliases:
     - /developerportal/howto/how-to-link-a-different-app-to-a-node.html

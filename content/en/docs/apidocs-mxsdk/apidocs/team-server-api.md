@@ -1,7 +1,7 @@
 ---
 title: "Team Server API"
 url: /apidocs-mxsdk/apidocs/team-server-api/
-description: "This API enables retrieving information (branches, revisions) about application models stored in Mendix Team Server."
+description: "This API is deprecated. This API enables retrieving information (branches, revisions) about application models stored in Mendix Team Server."
 weight: 110
 deprecated: true
 ---

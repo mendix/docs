@@ -1,8 +1,8 @@
 ---
 title: "Migrate to a Different Cloud Node"
-linktitle: "Migrate to Other Node"
+linktitle: "Migrate Between Nodes"
 url: /developerportal/deploy/migrating-on-public-cloud/
-weight: 10
+weight: 80
 description: "How to migrate your app from one cloud node to another."
 aliases:
     - /developerportal/howto/migrating-to-v4.html

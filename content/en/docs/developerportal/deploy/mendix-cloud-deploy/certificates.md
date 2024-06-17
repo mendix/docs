@@ -1,7 +1,7 @@
 ---
 title: "Certificates"
 url: /developerportal/deploy/certificates/
-weight: 27
+weight: 80
 aliases:
     - /refguide/certificates.html
     - /refguide/certificates

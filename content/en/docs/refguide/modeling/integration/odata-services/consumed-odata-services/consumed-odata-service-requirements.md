@@ -136,7 +136,11 @@ When you publish a self-referencing association, you can only publish one side o
 
 ### 3.6 Enumerations
 
-Enumeration types that have one or more members with a name that is not a valid [enumeration value name](/refguide/enumerations/#name) are not supported.
+In Studio Pro 10.11 and earlier versions, enumeration types that have one or more members with a name that is not a valid [enumeration value name](/refguide/enumerations/#name) are not supported.
+
+{{% alert color="info" %}}
+As of Mendix version 10.12, we store the original enumeration member value separately from the enumeration member name and caption in the app model. This enables Mendix to consume enumerations that have special characters or reserved keywords as enumeration values. By default, the caption will be equal to the remote value; the name will be equal to the remote value but with any unsupported characters replaced by underscores. 
+{{% /alert %}}
 
 ## 4 Requirements on Actions {#actions}
 

@@ -798,7 +798,7 @@ The `ObservationRetrievedReference` holds information about a sources cited for 
 
 Activities define the actions that are executed in a microflow or a nanoflow. For more information, see [Activities](/refguide/activities/).
 
-#### 4.2.1 GenAiCommons-based operations
+#### 4.2.1 GenAICommons-based operations
 
 ##### 4.2.1.1 ChatCompletions (without history) {#chat-completions-without-history}
 

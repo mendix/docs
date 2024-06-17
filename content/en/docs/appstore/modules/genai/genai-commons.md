@@ -44,7 +44,7 @@ The operation interface `Chat Completions (with history)` supports more complex 
 
 Although GenAI Commons technically defines additional capabilities typically found in chat completion APIs, such as image processing (vision) and tools (function calling), it depends on the connector module of choice whether these are actually implemented. Please check the documentation for any specific connector module that you are using to learn about the supported additional capabilities and for which models these can be used. 
 
-### 3.2 Helper microflows
+### 3.2 Helper microflows {#helper-microflows}
 
 All helper microflows are intended to be used when the requiered information for GenAI operations needs to be mapped from your custom app implementation to the GenAI model and vice versa.
 

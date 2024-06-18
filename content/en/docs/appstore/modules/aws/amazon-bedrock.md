@@ -860,7 +860,7 @@ The history can be enabled using the `SessionId` parameter on the [RetrieveAndGe
 
 Use this microflow to create a new [Amazon Bedrock Connection](#amazon-bedrock-connection) object.
 
-This operation contains the *AmazonBedrockConnection_Create* microflow.
+This operation corresponds to the *AmazonBedrockConnection_Create* microflow.
 
 | Input | Output |
 | --- | --- |
@@ -870,7 +870,7 @@ This operation contains the *AmazonBedrockConnection_Create* microflow.
 
 Use this microflow to add a new [AnthropicClaudeRequest_Extension](#anthropic-claude-request-extension) object to your request. This is useful to include parameters that are unique to Anthropic Claude models.
 
-This operation contains the *AnthropicClaudeRequest_Extension_Create* microflow.
+This operation corresponds to the *AnthropicClaudeRequest_Extension_Create* microflow.
 
 | Input | Output |
 | --- | --- |
@@ -880,7 +880,7 @@ This operation contains the *AnthropicClaudeRequest_Extension_Create* microflow.
 
 Use this microflow to add a new [KnowledgeBaseTool](#knowledge-base-tool) object to your request. This is useful for adding additional parameters when using the [Retrieve And Generate](#retrieve-and-generate) operation.
 
-This operation contains the *RetrieveAndGenerateRequest_Extension_Create* microflow.
+This operation corresponds to the *RetrieveAndGenerateRequest_Extension_Create* microflow.
 
 | Input | Output |
 | --- | --- |
@@ -890,7 +890,7 @@ This operation contains the *RetrieveAndGenerateRequest_Extension_Create* microf
 
 Use this microflow to add a new [RetrieveAndGenerateRequest_Extension](#retrieve-and-generate-request-extension) object to your request. This is required in order to use the [Retrieve And Generate](#retrieve-and-generate) operation successfully.
 
-This operation contains the *Request_AddKnowledgeBaseTool* microflow.
+This operation corresponds to the *Request_AddKnowledgeBaseTool* microflow.
 
 | Input | Output |
 | --- | --- |

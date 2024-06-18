@@ -260,7 +260,11 @@ For server-based installations, the following storage types mounted by the OS ar
 * NAS 
 * SAN 
 * GFS
-* Local Storage 
+* Local Storage
+
+{{% alert color="info" %}}
+AWS S3 is also supported in the Windows Service Console.
+{{% /alert %}}
 
 ## 9 Browsers {#browsers}
 

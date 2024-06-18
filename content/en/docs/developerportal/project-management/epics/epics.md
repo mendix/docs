@@ -1,5 +1,6 @@
 ---
-title: "Epics"
+title: "Epics Overview"
+linktitle: "Epics"
 url: /developerportal/project-management/epics/epics/
 weight: 30
 description: "Describes the Epics page in Epics."

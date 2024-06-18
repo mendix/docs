@@ -1,5 +1,6 @@
 ---
-title: "Metrics"
+title: "Operation Metrics"
+linktitle: "Metrics"
 url: /developerportal/operate/metrics/
 weight: 10
 description: "Describes how to monitor performance and interpret various graphs and trends in Mendix Cloud."

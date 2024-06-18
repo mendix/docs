@@ -85,4 +85,4 @@ The table below describes what components are currently covered in the generated
 
 * [CycloneDX](https://cyclonedx.org/)
 * [Package URL spec](https://github.com/package-url/purl-spec)
-* [Software Composition](/control-center/software-composition)
+* [Software Composition](/control-center/software-composition/)

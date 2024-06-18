@@ -17,7 +17,6 @@ Amazon Bedrock is a fully managed service that makes foundation models (FMs) fro
 * Cohere Command and Embed
 * Meta Llama
 * Mistral AI
-* Snowflake Arctic
 * Stability AI Stable Diffusion XL
 
 

@@ -9,7 +9,6 @@ description: "Describes the Insights page in the Mendix Portfolio Management app
 
 The **Insights** page in the Portfolio Management app offers important data and visualizations to help you gain valuable insights into your portfolio. These insights span from allocation of your, resources per departments/apps, initiatives per stages and statuses, into average durations spent during different processes throughout the development. Insights dashboard can assist with data based decision making processes via easy to consume, in-one-place visualized portfolio data.
 
-
 ## 2 Active Initiatives per Selection
 
 {{< figure src="/attachments/developerportal/portfolio-management/insights/active-initiatives-per-property.png" >}}
@@ -17,9 +16,6 @@ The **Insights** page in the Portfolio Management app offers important data and 
 The bar chart visualizes the distribution of your active initiatives according to the selected view. You can choose to group the initiatives per: **App**, **Department**, **Location**, **Owner**, or **Use Case**.
 
 The page displays up to twenty active initiatives at a time. If there are more than twenty initiatives, click **>** in the upper-right corner to view the additional initiatives on the next page.
-
-In the example chart you can see that this company is allocating much of it resources to Legacy Migration and not enough for Innovation.
-
 
 ## 3 Active Initiatives per Stage
 

@@ -18,18 +18,18 @@ If you use the `ChatCompletions_Execute_WithoutHistory` or `ChatCompletions_Exec
 
 1. Invoke the chat completions API with a user prompt and a list of available functions (microflows) with their expected input parameter.
 
-    The model will decide which function (microflow) should be called within the OpenAI connector, if any. The response of the operation will be based on the information you provide and the response of any function (microflow) that was called.
+    The model will decide which function (microflow) should be called within the LLM connector, if any. The response of the operation will be based on the information you provide and the response of any function (microflow) that was called.
 
-This automates the following process happening inside the OpenAI connector:
+This automates the following process happening inside the LLM connector (OpenAI Connector, Amazon Bedrock Connector):
 
 1. Invoke the chat completions API with a user prompt and a list of available functions (microflows) with their expected input parameters.
 2. The model decides which function (microflow) should be called, if any, based on the user prompt and the available functions. If a function should be called, the content of the assistant's response will be a stringified JSON object containing the input parameter of the function as described in the request.  Note that the model can possibly hallucinate parameters, so they should be validated inside the function microflow before being used.
-3. The LLM connector (OpenAI Connector, Amazon Bedrock Connector) parses the string into JSON and executes the function microflow with its input parameter. 
+3. The LLM connector parses the string into JSON and executes the function microflow with its input parameter. 
 4. The existing list of messages is appended with a new tool message containing the function response. Then, the chat completions API is invoked again and the model can answer your initial prompt with the new information provided by the function.
 
 For more general information on this topic, see [OpenAI: Function Calling](https://platform.openai.com/docs/guides/function-calling) or [Anthropic Claude: Tool Use](https://docs.anthropic.com/en/docs/tool-use).
 
-## 3 Function calling with the GenAI Commons and the LLM Connectors {#llm-connector}
+## 3 Function calling with the GenAI Commons module and the LLM Connectors {#llm-connector}
 
 Both the [OpenAI Connector](/appstore/modules/genai/openai/_index) and [Amazon Bedrock Connector](/appstore/modules/aws/amazon-bedrock) support function calling by leveraging the [GenAI Commons module](/appstore/modules/genai/genai-commons/). In both connectors, function calling is supported for all chat completions operations. All entity, attribute and microflow operation names in this section refer to the GenAI Commons module. 
 
@@ -39,7 +39,7 @@ To enable function calling, a `ToolCollection` object must be added to the reque
 
 A helper operation is available in GenAI Commons to construct the `ToolCollection` with a list of `Functions`:
 
-* [Tools: Add Function to Request](/appstore/modules/genai/genai-commons/#add-function) can be used to initialize a new `FunctionCollection` and add a new `Function` to it in order to enable function calling.
+* [Tools: Add Function to Request](/appstore/modules/genai/genai-commons/#add-function) can be used to initialize a new `ToolCollection` and add a new `Function` to it in order to enable function calling.
 
 Depending on the user prompt and the available functions, the model can suggest multiple tool calls to the same or different functions or there might be multiple API calls followed by new tools calls until the model returns the final assistant's response.
 A way to steer the function calling process is the `ToolChoice` parameter. This optional attribute on the [Request](/appstore/modules/genai/genai-commons/#request) entity controls which (if any) function is called by the model.
@@ -49,7 +49,7 @@ A helper operation is available in GenAI Commons to define the Tool Choice:
 * [Tools: Set Tool Choice](/appstore/modules/genai/genai-commons/#set-toolchoice) can be used to set the `ToolChoice` parameter and the `ToolCollection_ToolChoice` association accordingly.
 
 {{% alert color="warning" %}}
-Function calling is a very powerful capability, but may be used with caution. Please note that function microflows run in the context of the current user without without enforcing entity-access. You can use `$currentUser` in XPAth queries to ensure you retrieve and return only information that the end-user is allowed to view; otherwise confidential information can be visible to the current end-user in the assistant's response.
+Function calling is a very powerful capability, but may be used with caution. Please note that function microflows run in the context of the current user without enforcing entity-access. You can use `$currentUser` in XPath queries to ensure you retrieve and return only information that the end-user is allowed to view; otherwise confidential information can be visible to the current end-user in the assistant's response.
 
 Mendix also strongly advises that you build user confirmation logic into function microflows that have a potential impact on the world on behalf of the end-user, for example sending an email, posting online, or making a purchase.
 {{% /alert %}}

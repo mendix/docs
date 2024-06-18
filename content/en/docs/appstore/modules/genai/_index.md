@@ -32,13 +32,14 @@ The main models that we support through our connectors and showcases are:
 | Architecture | Models | Category | Input | Output | Additional capabilities |
 |--------------|---------------------|---------------------|-------------------|-----------|-------------------------|
 | Azure / OpenAI | ChatGPT-3.5 | Chat completions | text | text | Function calling |
-|  | ChatGPT-4<br />ChatGPT-4o | Chat completions | text, image | text | Function calling |
+| | ChatGPT-4<br />ChatGPT-4o | Chat completions | text, image | text | Function calling |
 | | DALL·E 2<br />DALL·E 3 | Image generation | text | image | |
 | | text-embedding-ada-002<br />text-embedding-3-small<br />text-embedding-3-large	 | Embeddings | text | embeddings| |
-| AWS Bedrock | Amazon Titan Text | Chat Completions | text | text | |
-| | Amazon Titan Embeddings | Embeddings | text | embeddings| |
-|  | Anthropic Claude v2.1 | Chat Completions | text | text |  |
-| | Anthropic Claude v3 | Chat Completions | text, image | text | Function calling |
+| AWS Bedrock | Amazon Titan Text G1 - Express <br /> Amazon Titan Text G1 - Lite <br /> Amazon Titan Text G1 - Premier | Chat Completions | text | text | |
+| | Amazon Titan Image Generator G1 | Chat Completions | text | image | |
+| | Amazon Titan Embeddings G1 - Text <br /> Amazon Titan Embedding Text v2 | Embeddings | text | embeddings| |
+| | Anthropic Claude Instant v1.2 <br /> Anthropic Claude v2.0 <br /> Anthropic Claude v2.1| Chat Completions | text | text |  |
+| | Anthropic Claude v3 Sonnet <br /> Anthropic Claude v3 Haiku  <br /> Anthropic Claude v3 Opus | Chat Completions | text, image | text | Function calling |
 | | Cohere Embed | Embeddings | text | embeddings| |
 
 <!-- TODO include or exclude embeddings. -->

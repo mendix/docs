@@ -26,11 +26,11 @@ TODO: insert diagram
 | Blank GenAI App | Start from scratch to create a new application with GenAI capabilities | 10.12 |
 | [OpenAI Showcase App](https://marketplace.mendix.com/link/component/220475) | Understand what you can build with Generative AI. Understand how to implement the OpenAI & Bedrock connectors and how to integrate with the Conversational UI module  | 9.24 |
 | [Bedrock Showcase App](https://marketplace.mendix.com/link/component/223535) | Deepdive in how to use Bedrock capabilities | 9.24 |
-| Conversational UI | Create a Conversational UI | 9.24 |
-| OpenAI Connector | Connect with (Azure) OpenAI | 9.24 |
-| Bedrock Connector | Connect to with AWS Bedrock<br />Use Retrieve & Generate or Bedrock Agents | 9.24 |
-| PgVector Knowledge Base | Manage & interact with a PostgreSQL pgvector Knowledge Base | 9.24 |
-| GenAI Commons | Common capabilities for every GenAI app, like the `System` module. | 9.24 |
+| [Conversational UI](/appstore/modules/genai/conversational-ui/) | Create a Conversational UI | 9.24 |
+| [OpenAI Connector](/appstore/modules/openai-connector/) | Connect with (Azure) OpenAI | 9.24 |
+| [Bedrock Connector](/appstore/modules/genai/bedrock/) | Connect to with AWS Bedrock<br />Use Retrieve & Generate or Bedrock Agents | 9.24 |
+| [PgVector Knowledge Base](/appstore/modules/pgvector-knowledge-base/) | Manage & interact with a PostgreSQL pgvector Knowledge Base | 9.24 |
+| [GenAI Commons](/appstore/modules/genai-commons/) | Common capabilities for every GenAI app, like the `System` module. | 9.24 |
 
 ### 2.2 Available models {#models}
 

@@ -33,8 +33,6 @@ Mendix Studio Pro needs to be installed on your computer before you can start bu
 
     {{< figure src="/attachments/refguide/installation/install/setup-wizard.png"  class="no-border" >}}
 
-     On a Mac, you may get a warning during installation. For more information on how to troubleshoot this warning, see the [Mac Warning](#mac-warning) section below.
-
 2. Select **I accept the terms in the License Agreement** and click **Next**.
 
 3. Check the desktop option to create a shortcut to Studio Pro on your desktop and click **Next**.

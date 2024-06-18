@@ -33,7 +33,7 @@ This section shows the number of the active initiatives in this portfolio alongs
 
 {{< figure src="/attachments/developerportal/portfolio-management/insights/status-active-initiatives.png" >}}
 
-In this section, the pie chart provides a proportional representation of the various statuses of the active initiatives in the portfolio, providing a clear comparison of their distribution across different statuses.
+In this section, the pie chart proportionally displays the number of the active initiatives across different statuses, allowing for a clear comparison of their distribution.
 
 ## 6 Average Duration
 

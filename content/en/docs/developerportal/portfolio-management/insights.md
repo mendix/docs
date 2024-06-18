@@ -7,28 +7,36 @@ description: "Describes the Insights page in the Mendix Portfolio Management app
 
 ## 1 Introduction
 
-The **Insights** page provides you with the insights into the portfolio.
+With critical data and visualizations, the **Insights** page in the Portfolio Management app provides valuable insights into the portfolio.
 
-## 2 Bar Chart with Selectable Properties
+## 2 Active Initiatives per Property
 
-The bar chart categorizes active initiatives based on the property that you select. You can select one of the following properties: **App**, **Department**, **Location**, **Owner**, or **Use case**.
+{{< figure src="/attachments/developerportal/portfolio-management/insights/active-initiatives-per-property.png" >}}
 
-The maximum number of active initiatives the first page can show is XXX. If there are more initiatives, click  **>** to see the next page.
+The bar chart organizes the active initiatives in the portfolio according to the property you select. You can choose from the following properties: **App**, **Department**, **Location**, **Owner**, and **Use Case**. 
 
-## 3 Bar Chart Showing Active Initiatives per Stage
+The page displays up to twenty active initiatives at a time. If there are more than twenty initiatives, click **>** in the upper-right corner to view the additional initiatives on the next page.
 
-The bar chart categorizes active initiatives by their stages.
+## 3 Active Initiatives per Stage
 
-The maximum number of active initiatives the first page can show is XXX. If there are more initiatives, click  **>** to see the next page.
+{{< figure src="/attachments/developerportal/portfolio-management/insights/active-initiatives-stage.png" >}}
+
+The bar chart organizes the active initiatives in this portfolio by the stage.
 
 ## 4 Active Initiatives in this Portfolio
 
-This section shows the number of active initiatives and the related apps and epics.
+{{< figure src="/attachments/developerportal/portfolio-management/insights/number-initiatives-apps-epics.png" >}}
+
+This section shows the number of active initiatives alongside the number of their associated apps and epics.
 
 ## 5 Status of Active Initiatives
 
-The pie chart in this section proportionally represents the status of active initiatives, making it easy to compare the number of initiatives across different statuses.
+{{< figure src="/attachments/developerportal/portfolio-management/insights/status-active-initiatives.png" >}}
+
+In this section, the pie chart represents the status of active initiatives proportionally, making it easy to compare the number of initiatives across different statuses.
 
 ## 6 Average Duration
+
+{{< figure src="/attachments/developerportal/portfolio-management/insights/average-duration.png" >}}
 
 This section presents the average duration between the intake date and the start date, as well as the average duration between the start date and the go-live date. These durations are calculated using data from the active and completed initiatives.

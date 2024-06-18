@@ -87,7 +87,7 @@ Use this microflow to control how the model should determine which function is t
 
 Use this to get the response text from the model response. In many cases this is the main value needed for custom further logic after the operation.
 
-##### 3.2.2.2. Chat: Get References {#get-reference}
+##### 3.2.2.2 Chat: Get References {#get-reference}
 
 Use this to get the list of references that may be included in the model response. These can be used to display source information, content and citations on which the model response text was based according to the language model.
 

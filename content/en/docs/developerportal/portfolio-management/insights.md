@@ -21,19 +21,19 @@ The page displays up to twenty active initiatives at a time. If there are more t
 
 {{< figure src="/attachments/developerportal/portfolio-management/insights/active-initiatives-stage.png" >}}
 
-The bar chart organizes the active initiatives in this portfolio by the stage.
+The bar chart organizes the active initiatives in this portfolio based on their stages.
 
 ## 4 Active Initiatives in this Portfolio
 
 {{< figure src="/attachments/developerportal/portfolio-management/insights/number-initiatives-apps-epics.png" >}}
 
-This section shows the number of active initiatives alongside the number of their associated apps and epics.
+This section shows the number of the active initiatives in this portfolio alongside the number of their associated apps and epics.
 
 ## 5 Status of Active Initiatives
 
 {{< figure src="/attachments/developerportal/portfolio-management/insights/status-active-initiatives.png" >}}
 
-In this section, the pie chart represents the status of active initiatives proportionally, making it easy to compare the number of initiatives across different statuses.
+In this section, the pie chart provides a proportional representation of the various statuses of the active initiatives in the portfolio, providing a clear comparison of their distribution across different statuses.
 
 ## 6 Average Duration
 

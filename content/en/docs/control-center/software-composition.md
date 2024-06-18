@@ -2,7 +2,6 @@
 title: "Software Composition"
 url: /control-center/software-composition/
 description: "Describes the Software Composition page in the Mendix Control Center."
-tags: ["control center", "mendix admin", "software composition"]
 weight: 80
 status: "Public Beta"
 beta: true

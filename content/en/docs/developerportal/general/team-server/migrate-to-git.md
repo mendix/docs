@@ -21,8 +21,10 @@ To be able to migrate your app to Git, your app needs to meet the following crit
 * The main line ('main') branch in the app is Mendix version 9.24.11 or above
 * All branches in the app are Mendix version 9.12 or above
 * Current version control is in Team Server SVN
-* The size of the `.mpr` file for the latest revision of your app is less than 125MB
-* The version control history consists of fewer than 1250 commits
+* The size of the `.mpr` file for the latest revision of your app and the total number of commits in your version control history fall in one of these three categories:
+  1. <2500 commits and <50MB `.mpr` file
+  2. <2000 commits and <75MB `.mpr` file
+  3. <1250 commits and <125MB `.mpr` file
 
 {{% alert type="info" %}}
 
@@ -62,7 +64,7 @@ Inform your team members that they should commit their changes before migration.
 After migration, existing local copies are no longer linked to a working version control system. To be able to work on your app and store your changes in the version control system, you need to check out (re-download) the app from Team Server. Do the following:
 
 1. Open Studio Pro, then select the app that was migrated to Git. You can identify it by its Git icon. Click **Open** in Studio Pro to download the Git version of your app. Once this is completed you can make changes and store them in version control.
-1. Remove previous local copies of the app to avoid working on the wrong app version.
+2. Remove previous local copies of the app to avoid working on the wrong app version.
 
 ## 5 If Migration Failed
 

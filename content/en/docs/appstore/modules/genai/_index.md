@@ -65,9 +65,9 @@ Do you want to...
 * learn more about the specific capabilties of Bedrock? use the [Bedrock Showcase App](https://marketplace.mendix.com/link/component/223535).
 * be inspired of what you can do with Generative AI in general? Review the [OpenAI Showcase app](https://marketplace.mendix.com/link/component/220475).
 
-* create your own enterprise ready version of "chat.openai.com", get started with the AI Bot Starter App.
+* create your own private enterprise-ready ChatGPT-like app, get started with the AI Bot Starter App.
 * create a new application with GenAI use cases, use the Blank GenAI app so you don't have to worry about dependencies.
-* integrate Generative AI capabilities in your existing app? Download a connector and the Conversational UI and GenAI Common modules to get started.
+* integrate individual Generative AI capabilities in your existing app? Download a connector and the Conversational UI and GenAI Common modules to get started.
 
 <!-- TODO: insert links -->
 

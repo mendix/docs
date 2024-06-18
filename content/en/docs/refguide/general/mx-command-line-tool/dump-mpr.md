@@ -29,7 +29,8 @@ These are valid examples:
 * `mx dump-mpr temp.mpr --unit-type DomainModels$DomainModel`
 * `mx dump-mpr --unit-type DomainModels$DomainModel,Texts$SystemTextCollection temp.mpr`
 
-A sample output with the unit-type filter on Domain Models would be:
+A sample output with the unit type filter on domain models would be:
+
 <details>
 
 <summary>Expand for code sample</summary>

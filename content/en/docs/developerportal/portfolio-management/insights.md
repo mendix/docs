@@ -7,7 +7,7 @@ description: "Describes the Insights page in the Mendix Portfolio Management app
 
 ## 1 Introduction
 
-With critical data and visualizations, the **Insights** page in the Portfolio Management app provides valuable insights into the portfolio.
+The **Insights** page in the Portfolio Management app offers important data and visualizations to help you gain valuable insights into your portfolio.
 
 ## 2 Active Initiatives per Property
 

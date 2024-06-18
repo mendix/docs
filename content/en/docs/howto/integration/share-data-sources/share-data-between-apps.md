@@ -114,18 +114,19 @@ Do the following:
 
 1. Go to the [Catalog](https://catalog.mendix.com/).
 
-2. In the search field, enter the search term *{yourname}*. All services and datasets that satisfy this search string are displayed in the search results pane.
+2. Click **Browse** and enter the search term *{yourname}*. All services and datasets that satisfy this search string are displayed in the search results pane.
 3. In the panel on the left, click **Filter** to see the **Filters** dialog box.
 4. Your app was deployed to the **Mendix Free App** or **Sandbox** environment. Check **Sandbox** to include it in the search results, then click **Apply**:
 
     {{< figure src="/attachments/catalog/share-data/filter-box.png" alt="Catalog screen" class="no-border" >}}
 
 5. From the new search results list on the left, select the *{yourname}CustomerODataService* service. Full details from the OData contract for the service are displayed on the right.
-6. The **Curate** bar confirms that "**You are the owner of this data source**". You have permissions edit the metadata for this service in the Catalog and a **Business Owner**. 
 
-    {{< figure src="/attachments/catalog/share-data/search-details-screen.png" alt="Catalog search details" class="no-border" >}}
+You have permissions edit the metadata for this service in the Catalog and are a **Technical Owner**. To edit the metadata, click the edit icon in the top-right corner of the Data Source field. 
 
-    {{% alert color="info" %}}For more information about roles in the Catalog, see [User Roles](/catalog/manage/user-roles/).{{% /alert %}}
+{{< figure src="/attachments/catalog/share-data/search-details-screen.png" alt="Catalog search details" class="no-border" >}}
+
+{{% alert color="info" %}}For more information about roles in the Catalog, see [User Roles](/catalog/manage/user-roles/).{{% /alert %}}
 
 For more details on searching in the Catalog and the **Search Details** screen, see [Search in the Catalog](/catalog/manage/search/). You can also explore registered services in the Landscape. For more information, see [Landscape View](/catalog/manage/landscape/).
 

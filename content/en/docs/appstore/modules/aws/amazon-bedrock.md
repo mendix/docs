@@ -159,7 +159,7 @@ To help you work with the Amazon Bedrock connector, the following sections of th
 
 The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Domain Model](/refguide/domain-model/).
 
-#### 4.1.1 GenAICommons dependency
+#### 4.1.1 GenAICommons 
 
 ##### 4.1.1.1 AmazonBedrockConnection {#amazon-bedrock-connection}
 
@@ -794,7 +794,7 @@ Activities define the actions that are executed in a microflow or a nanoflow. Fo
 
 ##### 4.2.1.1 ChatCompletions (without history) {#chat-completions-without-history}
 
-The `ChatCompletions (without history)` activity can be used for any conversations with Anthropic Claude or Amazon Titan. There is no option to keep the concersation history in mind. 
+The `ChatCompletions (without history)` activity can be used for any conversations with Anthropic Claude or Amazon Titan. There is no option to keep the concersation history in mind. This operation corresponds to the *ChatCompletions_WithoutHistory_AmazonBedrock* microflow.
 
 The input and output for this service are shown in the table below:
 
@@ -802,9 +802,10 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `Userprompt (string)`, `AmazonBedrockConnection`, `GenAICommons.Request (optional)`, `FileCollection (optional)`| `GenAICommons.Response`|
 
+
 ##### 4.2.1.2 ChatCompletions (with history) {#chat-completions-with-history}
 
-The `ChatCompletions (with history)` activity can be used for any conversations with Anthropic Claude or Amazon Titan. It is possible for it to keep the conversation history in mind.
+The `ChatCompletions (with history)` activity can be used for any conversations with Anthropic Claude or Amazon Titan. It is possible for it to keep the conversation history in mind. This operation corresponds to the *ChatCompletions_WithHistory_AmazonBedrock* microflow.
 
 The input and output for this service are shown in the table below:
 
@@ -812,7 +813,8 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `GenAICommons.Request`, `AmazonBedrockConnection`| `GenAICommons.Response`|
 
-For Anthropic Claude, the request must be associated to an AnthropicClaudeRequest_Extension object which can be created with the [Request: Add Anthropic Claude Request Extension](#add-claude-extension) operation. In order to pass a conversation history to the flow, the list of previous messages must be associated to the input request. This operation can easily be replaced or combined with the ChatCompletions (with history) operation inside of the [OpenAI connector](https://marketplace.mendix.com/link/component/220472).
+For Anthropic Claude, the request must be associated to an AnthropicClaudeRequest_Extension object which can be created with the [Request: Add Anthropic Claude Request Extension](#add-claude-extension) operation. In order to pass a conversation history to the flow, the list of previous messages must be associated to the input request. This operation can easily be replaced or combined with the ChatCompletions (with history) operation inside of the [OpenAI connector](https://marketplace.mendix.com/link/component/220472). 
+
 
 ###### Anthropic Claude version 3 models capabilities
 
@@ -835,7 +837,7 @@ You can use vision by adding a `FileCollection` with a `File` via the [Files: In
 
 ##### 4.2.1.3 RetrieveAndGenerate {#retrieve-and-generate}
 
-The `Retrieve and Generate` activity can be used for conversations leveraging Retrieval Augmented Generation through a knowledge base. 
+The `Retrieve and Generate` activity can be used for conversations leveraging Retrieval Augmented Generation through a knowledge base. This operation corresponds to the *RetrieveAndGenerate* microflow.
 The input and output for this service are shown in the table below:
 
 | Input | Output |
@@ -843,6 +845,7 @@ The input and output for this service are shown in the table below:
 | `GenAICommons.Request`, `AmazonBedrockConnection`| `GenAICommons.Response`|
 
 The request object passed to this operation must include a [KnowledgeBaseTool](#knowledge-base-tool) object, which can be added to the request using the [Request: Add Knowledge Base Tool to Collection](#add-knowledge-base-tool) operation.
+
 
 ###### Chatting with History
 

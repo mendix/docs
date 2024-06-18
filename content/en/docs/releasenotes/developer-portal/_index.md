@@ -16,7 +16,7 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 ## 2024
 
-### June 20, 2024
+### June 27, 2024
 
 #### New Feature
 

@@ -7,7 +7,7 @@ description: "Describes the Insights page in the Mendix Portfolio Management app
 
 ## 1 Introduction
 
-The **Insights** page in the Portfolio Management app offers important data and visualizations to help you gain valuable insights into your portfolio. These insights span from allocation of your, resources per departments/apps, initiatives per stages and statuses, into average durations spent during different processes throughout the development. Insights dashboard can assist with data based decision making processes via easy to consume, in-one-place visualized portfolio data.
+The **Insights** page in the Portfolio Management app offers important data and visualizations to help you gain valuable insights into your portfolio.
 
 ## 2 Active Initiatives per Selection
 

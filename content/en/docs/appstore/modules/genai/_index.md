@@ -43,7 +43,7 @@ The main models that we support through our connectors and showcases are:
 | | DALL·E 2<br />DALL·E 3 | Image generation | text | image | |
 | | text-embedding-ada-002<br />text-embedding-3-small<br />text-embedding-3-large	 | Embeddings | text | embeddings| |
 | AWS Bedrock | Amazon Titan Text G1 - Express <br /> Amazon Titan Text G1 - Lite <br /> Amazon Titan Text G1 - Premier | Chat Completions | text | text | |
-| | Amazon Titan Image Generator G1 | Chat Completions | text | image | |
+| | Amazon Titan Image Generator G1 | Image generation | text | image | |
 | | Amazon Titan Embeddings G1 - Text <br /> Amazon Titan Embedding Text v2 | Embeddings | text | embeddings| |
 | | Anthropic Claude v2.0 <br /> Anthropic Claude v2.1| Chat Completions | text | text |  |
 | | Anthropic Claude v3 Sonnet <br /> Anthropic Claude v3 Haiku  <br /> Anthropic Claude v3 Opus | Chat Completions | text, image | text | Function calling |

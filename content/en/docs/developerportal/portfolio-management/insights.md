@@ -21,7 +21,7 @@ The page displays up to twenty active initiatives at a time. If there are more t
 
 {{< figure src="/attachments/developerportal/portfolio-management/insights/active-initiatives-stage.png" >}}
 
-The bar chart displays the active initiative counts in this portfolio for each stage. With this chart you can recognize the bottle-necks in your initiative pipeline.
+The bar chart displays the active initiative counts in this portfolio for each stage. With this chart you can recognize bottle-necks in your initiative pipeline.
 
 ## 4 Active Initiatives in this Portfolio
 

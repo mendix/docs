@@ -22,7 +22,11 @@ The Mendix QSM quality model is based on the SIG/TÜViT Evaluation Criteria. The
 
 The general notion of software quality embraces a variety of quality aspects, of which a taxonomy is available in the [ISO/IEC 25010](https://iso25000.com/index.php/en/iso-25000-standards/iso-25010) international standard on software product quality. The scope of the SIG/TÜViT **Evaluation Criteria** is limited to the internal quality characteristic of maintainability and its sub-characteristics of **analyzability, modifiability, testability, modularity and reusability**. The evaluation concerns the source code of a software product, not the behavior of the product in a test or production environment.
 
-## 2 Additional Information
+## 2 Implemented Checks for Best Practices
+
+As mentioned above, QSM checks whether your Mendix application adheres to the ISO 25010 standard for writing maintainable software. The model that is used for this partially overlaps with the [Mendix Development Best Practices]([https://docs.mendix.com/refguide/dev-best-practices/](https://docs.mendix.com/refguide/dev-best-practices/#microflow-dev-best-practices), specifically with regards to microflow development best practices. Information on the exact model used is available in the [QSM Model Documentation](https://www.softwareimprovementgroup.com/wp-content/uploads/SIG-TUViT-Evaluation-Criteria-Trusted-Product-Maintainability.pdf). Broader documentation on QSM as a platform and all of its features is publically available in the [QSM Documentation](https://docs.sigrid-says.com/). Note that Sigrid is the technology agnostic name for QSM, where QSM is specific to Mendix. 
+
+## 3 Additional Information
 
 {{% alert color="info" %}}
 To obtain or renew your purchased license, go to [this form](https://addon.mendix.com/index.html).
@@ -35,19 +39,11 @@ To obtain or renew your purchased license, go to [this form](https://addon.mendi
 * Mendix QSM dashboard reports are generated every night based on the latest version in your Project Team Server
     * By default, the Mendix QSM reports are based on the main line in your app's Team Server
     * We are building CI support for Mendix that will allow you to run QSM in your Mendix CI pipeline (for more information, see [SigridCI](https://github.com/Software-Improvement-Group/sigridci))
-
-## 3 Implemented Checks for Best Practices
-
-QSM includes automated checks for a subset of the [Mendix Development Best Practices](/refguide/dev-best-practices/). The following checks are currently implemented in QSM:
-
-|Check Code|Check Name|
-|----------|----------|
-|MF-1|[Microflow – elements – Using more than 25 elements in a microflow is discouraged](/refguide/dev-best-practices/#size)|
-|MF-2|[Microflow – documentation – All complex microflows (more than 10 activities and/or 2 decisions) must have an annotation describing the purpose of the microflow](/refguide/dev-best-practices/#documentation-and-annotations)|
-|DM-1|[Domain model – entities – Using more than two inheritance levels on domain entities is discouraged](/refguide/dev-best-practices/#inheritance)|
-|DM-2|[Domain model – entities – Using calculated attribute values is discouraged](/refguide/dev-best-practices/#attributes)|
+ 
 
 ## 4 Release Notes
+
+QSM is continuously improved and expanded. An overview of recently released major features is available in the [QSM documentation](https://docs.sigrid-says.com/reference/release-notes.html). 
 
 ### 2.0.0
 

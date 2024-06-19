@@ -12,6 +12,14 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2024
 
+### June 20, 2024
+
+
+### Fixes 
+
+* Fixed a bug where the share button would sometimes copy the wrong link to the clipboard
+* Improved notification messages to be more detailed
+
 ### June 6, 2024
 
 #### Fixes

@@ -9,11 +9,11 @@ description: "Describes the Insights page in the Mendix Portfolio Management app
 
 The **Insights** page in the Portfolio Management app offers important data and visualizations to help you gain valuable insights into your portfolio.
 
-## 2 Active Initiatives per Property
+## 2 Active Initiatives per Selection
 
 {{< figure src="/attachments/developerportal/portfolio-management/insights/active-initiatives-per-property.png" >}}
 
-The bar chart organizes the active initiatives in the portfolio according to the property you select. You can choose from the following properties: **App**, **Department**, **Location**, **Owner**, and **Use Case**. 
+The bar chart visualizes the distribution of your active initiatives according to the selected view. You can choose to group the initiatives per: **App**, **Department**, **Location**, **Owner**, or **Use Case**.
 
 The page displays up to twenty active initiatives at a time. If there are more than twenty initiatives, click **>** in the upper-right corner to view the additional initiatives on the next page.
 
@@ -21,7 +21,7 @@ The page displays up to twenty active initiatives at a time. If there are more t
 
 {{< figure src="/attachments/developerportal/portfolio-management/insights/active-initiatives-stage.png" >}}
 
-The bar chart organizes the active initiatives in this portfolio based on their stages.
+The bar chart displays the active initiative counts in this portfolio for each stage. With this chart you can recognize bottle-necks in your initiative pipeline.
 
 ## 4 Active Initiatives in this Portfolio
 
@@ -33,10 +33,10 @@ This section shows the number of the active initiatives in this portfolio alongs
 
 {{< figure src="/attachments/developerportal/portfolio-management/insights/status-active-initiatives.png" >}}
 
-In this section, the pie chart proportionally displays the number of the active initiatives across different statuses, allowing for a clear comparison of their distribution.
+In this section, the donut chart proportionally displays the number of the active initiatives across different statuses, allowing for a clear comparison of their distribution. This chart is a good indicator for the health of your portfolio.
 
 ## 6 Average Duration
 
 {{< figure src="/attachments/developerportal/portfolio-management/insights/average-duration.png" >}}
 
-This section presents the average duration between the intake date and the start date, as well as the average duration between the start date and the go-live date. These durations are calculated using data from the active and completed initiatives.
+This section presents the average duration between the intake date and the start date, as well as the average duration between the start date and the go-live date. These durations are calculated using data from the active and completed initiatives. This chart is a good indicator of your delivery cadence.

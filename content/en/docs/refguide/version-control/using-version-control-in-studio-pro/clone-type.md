@@ -1,8 +1,8 @@
 ---
 title: "Clone Type"
 url: /refguide/clone-type/
-weight: 20
-#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
+weight: 40
+description: Describes full and partial clone types for Git. 
 ---
 
 {{% alert color="info" %}}

@@ -59,4 +59,4 @@ Please take note of the following limitations regarding beta/experimental featur
 * Beta/experimental features and products may be incomplete
     * Future releases may include more functionality to complete the feature or product
 * Experimental features and products may be made available to a limited group of users
-* Experimental features and products may be removed at any time
+* Experimental features and products may be removed at any time from existing and future releases

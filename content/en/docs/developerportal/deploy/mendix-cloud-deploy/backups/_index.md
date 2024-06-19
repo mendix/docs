@@ -2,7 +2,7 @@
 title: "Backups"
 url: /developerportal/operate/backups/
 weight: 13
-description: "Describes the Backups page of the Developer Portal."
+description: "Describes the Backups page of Apps."
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 

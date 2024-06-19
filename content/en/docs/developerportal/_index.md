@@ -18,19 +18,11 @@ The Mendix Portal is the online platform of Mendix. It includes Apps, [Control C
 
 ## 1 Introduction
 
-[Apps](https://sprintr.home.mendix.com) is one of the key components of the Mendix Portal. 
-
-In **Apps**, you can create, deploy, and mange apps as well as collaborate with each other.
-
-The features in **Apps** can also be accessed via APIs, enabling third-party developers to integrate their own widgets and plugins. For more information, see [API Documentation](/apidocs-mxsdk/apidocs/).
-
-## 2 Apps {#apps}
-
-When you open the Developer Portal, you are brought to the **Apps** page, which shows you a summary of your current apps, your company apps, and your pending invites.
+[Apps](https://sprintr.home.mendix.com) is one of the key components of the Mendix Portal. In **Apps**, you can create, deploy, and manage apps as well as collaborate with each other. After you open **Apps**, you will get a summary of your current apps, your company apps, and your pending invites.
 
 {{< figure src="/attachments/developerportal/apps-overview.png" alt="Apps Overview" class="no-border" >}}
 
-### 2.1 My Apps {#my-apps}
+## 2 My Apps {#my-apps}
 
 The **My Apps** tab displays all the apps for which you are a [Team](/developerportal/general/team/) member.
 
@@ -38,11 +30,9 @@ If you pin an app, it stays on top.
 
 Use the drop-down menu on the right side of the page to sort the apps by **Pinned**, **Recent Activity** or in alphabetical order of **App Name**.
 
-#### 2.1.1 App Tiles {#app-tiles}
+### 2.1 App Tiles {#app-tiles}
 
-Click an app tile to see the app [Buzz](/developerportal/general/buzz/).
-
-Any app tile you pin by clicking **Pin** ({{% icon name="pin" %}}) will make them appear as first in the list.
+You can pin an app tile by clicking **Pin** ({{% icon name="pin" %}}). Pinned apps appear at the top of the list.
 
 To stop watching an app and disable notifications for that app, click the {{% icon name="view" %}} icon so that you see the **You are not watching this app** tooltip. To return to watching that app, click the {{% icon name="view-off" %}} icon so that you see the **You are watching this app** tooltip.
 
@@ -52,49 +42,11 @@ By clicking **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) in
 
 To go to the [licensed environments](/developerportal/deploy/environments/) of your deployed app, click **Environments** at the bottom of the app tile.
 
-### 2.2 Company Apps {#my-company-apps}
+### 2.2 Navigation Pane {#navigation-pane}
 
-The **Company Apps** tab displays all the apps created by members of your [company](/control-center/company-settings/).
+You can open an app in [Apps](https://sprintr.home.mendix.com/) by clicking the app tile. After an app is open, you can navigate between sections using the navigation pane on the left side of the screen. 
 
-There are also details on the app's [Target Cloud](/developerportal/deploy/), and the [Total Members](/control-center/members/) who can view and/or edit the app.
-
-You can also sort the order of the apps here by **Updated Date**, **Last Created**, **App Name**, **App Name, descending**, **Oldest Updated**, or **Oldest Created**.
-
-### 2.3 Creating a New App {#new-app}
-
-To get started with building an app, click **Create App** to open a page where you can choose a starting point:
-
-{{< figure src="/attachments/developerportal/create-app.png" width="150" class="no-border" >}}
-
-### 2.4 Pending Invites {#pending-invites}
-
-The **My Apps** tab shows you a summary of your current apps:
-
-{{< figure src="/attachments/developerportal/apps-overview.png" alt="Apps Overview" >}}
-
-You can pin an app by clicking **Pin** ({{% icon name="pin" %}}). All the pinned apps are displayed at the top.
-
-Use the drop-down menu on the right side of the page to sort the apps by **Most Recent** or in alphabetical order of **App Name**.
-
-### 3.1 App Tiles
-
-Click an app tile to see the app [Buzz](/developerportal/general/buzz/).
-
-By clicking **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) in the app tile, you can quickly perform a number of actions:
-
-{{< figure src="/attachments/developerportal/quick-action-menu.png" alt="Quick actions menu for an app" width="50%" class="no-border" >}}
-
-The actions available depend on the app selected. The default actions available are **Edit in Mendix Studio Pro** and **Leave App**.
-
-To stop watching an app and disable notifications for that app, click the {{% icon name="view" %}} icon so that you see the **You are not watching this app** tooltip. To return to watching that app, click the {{% icon name="view-off" %}} icon so that you see the **You are watching this app** tooltip.
-
-To go to the [licensed environments](/developerportal/deploy/environments/) of your deployed app, click **Environments** at the bottom of the app tile.
-
-### 3.2 Navigation Pane {#navigation-pane}
-
-When you open an app in [Apps](https://sprintr.home.mendix.com/), you can navigate between sections using the navigation pane on the left side of the screen. 
-
-The navigation pane is divided into four main categories, which correspond with the documentation in this guide:
+The navigation pane is divided into four main categories:
 
 - [General](/developerportal/general/)
 - [Project Management](/developerportal/project-management/)
@@ -103,15 +55,19 @@ The navigation pane is divided into four main categories, which correspond with 
 
 {{< figure src="/attachments/developerportal/navigation-pane.png" alt="The navigation pane" width="45%" class="no-border" >}}
 
-## 4 Company Apps {#my-company-apps}
+{{% alert color="info" %}}
+The features in the navigation pane can also be accessed via APIs, enabling third-party developers to integrate their own widgets and plugins. For more information, see [API Documentation](/apidocs-mxsdk/apidocs/).
+{{% /alert %}}
+
+## 3 Company Apps {#my-company-apps}
 
 The **Company Apps** tab displays all the apps created by members of your [company](/control-center/company-settings/).
 
-There are also details on the app's [Target Cloud](/developerportal/deploy/), and the [Total Members](/control-center/members/) who can view and/or edit the app.
+There are also details on the app's [Target Cloud](/developerportal/deploy/), and the [Total Members](/control-center/members/) who can view or edit the app.
 
 You can also sort the order of the apps here by **Updated Date**, **Last Created**, **App Name**, **App Name, descending**, **Oldest Updated**, or **Oldest Created**.
 
-## 5 Pending Invites {#pending-invites}
+## 4 Pending Invites {#pending-invites}
 
 {{% alert color="info" %}}
 The **Pending Invites** tab is only visible if you have any pending invites.
@@ -123,6 +79,6 @@ The **Pending Invites** tab presents the pending invitations to apps that you ha
 You  get an invite only when someone invites you to an app from a different company. If someone invites you to an app from your company, you will be added automatically.
 {{% /alert %}}
 
-## 6 Guide Categories
+## 5 Guide Categories
 
 The documentation of **Apps** is divided into the following categories:

@@ -2,7 +2,7 @@
 title: "General"
 url: /developerportal/deploy/general/
 weight: 5
-description: "Presents an overview of the Deployment section of the Developer Portal, focusing on topics that are relevant to more than one platform."
+description: "Presents an overview of the Deployment section of Apps navigation pane, focusing on topics that are relevant to more than one platform."
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
@@ -34,12 +34,12 @@ Starting September 1, 2024, your app will need to run Mendix version 8 or above 
 
 ## 3 Managing Your Deployed Apps
 
-For many of the platforms to which a Mendix app can be deployed, the following pages in the Developer Portal let you deploy and manage your app:
+For many of the platforms to which a Mendix app can be deployed, the following pages in the Mendix Portal let you deploy and manage your app:
 
 * Environments
 * Mobile App
 
-You can access both of these pages via the Developer Portal’s [navigation pane](/developerportal/#navigation-pane).
+You can access both of these pages via the Mendix Portal’s [navigation pane](/developerportal/#navigation-pane).
 
 ### 3.1 Environments
 

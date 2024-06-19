@@ -36,7 +36,7 @@ The Basic Package has the following features:
 
 ## 3 Purchasing a Basic Package
 
-From the [Developer Portal](https://sprintr.home.mendix.com/link/myapps), go to the **Environments** page of the Free App you want to license.
+From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of the Free App you want to license.
 
 When you view your Free App environment, you will see a banner showing that you are using a Free App.
 
@@ -75,7 +75,7 @@ To order your Mendix Basic package, do the following:
 
 9. Click **Purchase** to complete your order.
 
-10. Read the confirmation details and click **Done** to return to the Developer Portal. You will also receive a confirmation email at the email address entered in your order.
+10. Read the confirmation details and click **Done** to return to the Mendix Portal. You will also receive a confirmation email at the email address entered in your order.
 
 ## 4 Linking Your App to your Mendix Basic Node
 

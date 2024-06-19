@@ -105,7 +105,7 @@ Look at the bottom dockable pane of Studio Pro:
 
 Here you will find some separate default dockable panes:
 
-* [Stories](/refguide/stories-pane/) – displays the active user stories added on your app’s **Stories** page in the Developer Portal 
+* [Stories](/refguide/stories-pane/) – displays the active user stories added in your [project management tool](/developerportal/project-management/)
 * [Changes](/refguide/changes-pane/) – displays a list of all changes in the app since the last commit to the Team Server
 * [Errors](/refguide/errors-pane/) – displays any errors found within your app 
 

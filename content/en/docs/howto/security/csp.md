@@ -98,22 +98,39 @@ In *theme/web/index.html* do the following:
 
 Lastly, ensure you are not using any external fonts by checking your theme's styling to confirm all of the fonts are loaded locally.
 
-#### 2.1.2 Testing Your Changes Locally
+#### 2.1.2 Configuring the Header
 
-To check that your changes are working locally, you can temporarily enforce the header by adding the following *theme/web/index.html* at the top of the `<head>` tag:
+The `Content-Security-Policy` header can be configured as a [custom runtime setting](/refguide/runtime/custom-settings/#CSPHeaderTemplate). It will then be returned as a header for all HTML files.
+
+{{% alert type="warning" %}}
+The `Content-Security-Policy` header configured in the Cloud Portal overwrites this setting. We recommend only setting the custom runtime setting as it provides more flexibility and ensures the header is the same in your local and cloud environment.
+{{% /alert %}}
+
+#### 2.1.3 Testing Your Changes Locally
+
+After redeploying your app locally, it should function as normal. If your app does not load or if there are errors, check that you have completed all steps listed above, and your CSP header is configured correctly.
+
+### 2.2 Using Nonces
+For cases where you need to use a nonce in your CSP header, such as a requirement to have an inline style or script, and you cannot use CSP hashes, you can use the `{{NONCE}}` template variable in your CSP header.
+
+Example CSP header with a nonce: `default-src: 'self'; script-src 'self' 'nonce-{{NONCE}}';`
+
+When using the nonce in the header, you will also have to add the nonce to all script/style tags (depending on the configuration of your header) in your HTML files.
+
+For example, for the example header above, `script` tags would be changed to look like this (for both inline + external JS scripts):
 
 ```html
-<html>
-    <head>
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self';">
-    </head>
-</html>
+<script src="my-script.js" nonce="{{NONCE}}"></script>
 ```
 
-After redeploying your app locally, it should function as normal. If your app does not load or if there are errors, check that you have completed all steps listed above.
+When the HTML is loaded, it will always contain a unique nonce. This also means the HTML file will not be cached, since that would also cache the nonce. The exception to this is in offline web applications where the service worker can cache the HTML file with a nonce. Since this nonce is unique at the time of the request, this does not pose a security risk as the nonce will not be known up-front to attackers.
 
-After you finish testing locally, remember to remove the line of code in the `head` tag.
+### 2.3 Implementing the CSP Header in Custom Request Handlers
 
-### 2.2 Enabling the Header in the Cloud
+In case you are building a custom request handler, and have a need to serve static files. We provide Java APIs that will allow you to easily implement a correctly configured CSP header into your handler.
 
-To enable the header in the cloud, follow the instructions in the [HTTP Headers](/developerportal/deploy/environments-details/#http-headers) section of *Environment Details*.
+To check whether a custom CSP header is configured, you can check the [runtime configuration](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/core/conf/Configuration.html#getContentSecurityPolicyHeaderTemplate()) with `configuration.getContentSecurityPolicyHeaderTemplate`.
+
+You can use `response.getNonce()` to [retrieve a unique nonce for the response](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/m2ee/api/IMxRuntimeResponse.html#getNonce()). This can then be used together with your favorite templating engine when parsing HTML to add the nonce in case it is required.
+
+By using `response.addContentSecurityPolicyHeader()`, the correct headers, matching the apps configuration, will also be [added to the headers](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/m2ee/api/IMxRuntimeResponse.html#addContentSecurityPolicyHeader()) of the response.

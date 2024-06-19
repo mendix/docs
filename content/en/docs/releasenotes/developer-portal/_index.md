@@ -16,17 +16,15 @@ To see the current status of the Mendix Portal, see [Mendix Status](https://stat
 
 ## 2024
 
-### June 17, 2024
-
-### Improvements
-
-* To provide a consistent user experience, we updated UI text and stopped using the term "Developer Portal". From now on, we use the term "Mendix Portal", which includes [Apps](/developerportal/), [Control Center](/control-center/), [Community](/community-tools/), [Marketplace](/appstore/), [Catalog](/catalog/), and [Mendix Support](/support/).      
-
 ### June 14, 2024
 
 #### New Features
 
 * We have launched the beta version of Software Composition, which provides visibility into component dependencies for every Mendix application environment. You can access the feature in [Control Center](/control-center/software-composition/) and [Apps navigation pane](/developerportal/deploy/software-composition/). This feature is available for select Studio Pro versions for free and licensed applications deployed on Mendix Public Cloud and Mendix for Private Cloud.
+
+### Improvements
+
+* To provide a consistent user experience, we updated UI text and stopped using the term "Developer Portal". From now on, we use the term "Mendix Portal", which includes [Apps](/developerportal/), [Control Center](/control-center/), [Community](/community-tools/), [Marketplace](/appstore/), [Catalog](/catalog/), and [Mendix Support](/support/).
 
 ### June 9, 2024
 

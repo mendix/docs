@@ -71,13 +71,12 @@ Platform-supported Marketplace modules created by Mendix have been updated with 
 
 By default, dependencies are downloaded from the [Maven Central](https://central.sonatype.com/) repository. In some scenarios, you may want to specify a custom location. For example, if your organization has its own repository to cache downloads or as an alternative if internet access is restricted in an air-gapped setup.
 
-Custom repositories are configured in the **Repositories** setting of the **Deployment** tab in the [Preferences](/refguide/preferences-dialog/) dialog box. This setting uses the same syntax as Gradle. For internal usage of the platform, some dependencies are required which are also resolved using the configured repositories. For example, to resolve dependencies using maven from a remote nexus repository on port 8046 of your local network, enter the following:
+Custom repositories are configured in the **Repositories** setting of the **Deployment** tab in the [Preferences](/refguide/preferences-dialog/) dialog box. This setting uses the same syntax as Gradle. For internal usage of the platform, some dependencies are required which are also resolved using the configured repositories. For example:
 
 ```groovy {linenos=false}
 maven {
-    url 'http://localhost:8046/artifactory/maven-remote/'
-    allowInsecureProtocol true
-    credentials {
+    url '{url to your custom remote repository}'
+       credentials {
         username 'user'
         password 'password'
     }

@@ -19,8 +19,11 @@ To configure connect your Mendix application to Snowflake with the External Data
 1. [Install the External Database connector](/appstore/modules/external-database-connector/#installation).
 2. Run the [Connect to Database wizard](/appstore/modules/external-database-connector/#configuration) and select **Snowflake** as the database type.
 3. Provide a name for the database connection document.
-4. Provide connection details and user name and password that can be used to access Snowflake. You can either provide a connection string, or enter the connection details. If you select connection details, a constant with the connection string will be created based on your connection details.
-5. Click **Test Connection** to verify the connection details, and then click **Save**.
+4. Provide connection details that can be used to access Snowflake. You can either provide a connection string, or enter the connection details. If you select connection details, a constant with the connection string will be created based on your connection details.
+5. Provide user name and password or private key(also passphrase if private key is encrypted)
+6. Click **Test Connection** to verify the connection details, and then click **Save**.
+
+{{% alert color="info" %}}When using Private key for authentication, format the key as a single line by removing any line breaks. The format should start with "-----BEGIN [ENCRYPTED PRIVATE KEY]-----" and end with "-----END [ENCRYPTED PRIVATE KEY]-----".Note that the text [ENCRYPTED PRIVATE KEY] will vary depending on the type of key file.{{% /alert %}}
 
 Your Mendix app now connects to Snowflake with the provided connection details. When the connection is successful, you can see your Snowflake schemas and objects in your Mendix app.
 

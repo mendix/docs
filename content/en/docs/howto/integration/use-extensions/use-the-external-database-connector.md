@@ -16,7 +16,7 @@ The External Database Connector supports connections to the following databases:
 * MySQL
 * PostgreSQL
 * Oracle
-* Snowflake (Beta support from [Studio Pro 10.10](/releasenotes/studio-pro/10.10/))
+* Snowflake (GA support from [Studio Pro 10.12](/releasenotes/studio-pro/10.12/))
 
 This how-to teaches you how to do the following:
 
@@ -54,6 +54,7 @@ Click **Save** to save the connection details, which are stored in 3 constants:
 * `\<Document Name\>_DBPassword`
 
 For example: `*Database*_DBsource.`
+{{% alert color="info" %}}Values for these constants are stored in the Active configuration of the user, password is stored as a private value.{{% /alert %}}
 
 ### 3.2 Explore Schemas of a Connected Database
 

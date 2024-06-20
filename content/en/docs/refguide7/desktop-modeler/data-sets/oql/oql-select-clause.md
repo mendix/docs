@@ -49,7 +49,7 @@ SELECT Name AS CustomerName, LastName AS CustomerLastName, Birthday, Category FR
 
 See [this page](/refguide7/oql-expressions/) for more information.
 
-`column_alias` – is an alternative name to replace the column name in the result. When the attribute Name is retrieved, the result column is 'Name'. With an alias, you can specify another result column name, like 'Customer Name'. An alias can contain spaces.
+`column_alias` – is an alternative name to replace the column name in the result. When the attribute Name is retrieved, the result column is 'Name'. With an alias, you can specify another result column name, like "Customer_Name". An alias cannot contain spaces.
 
 {{% alert color="info" %}}
 
@@ -58,7 +58,7 @@ SELECT Sales.Customer.Name AS CustomerName FROM Sales.Customer
 ```
 
 ```sql {linenos=false}
-SELECT Sales.Customer.Name AS 'Customer Name' FROM Sales.Customer
+SELECT Sales.Customer.Name AS "Customer_Name" FROM Sales.Customer
 ```
 
 {{% /alert %}}

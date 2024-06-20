@@ -15,6 +15,7 @@ The GenAI Commons module combines common GenAI patterns found in a variety of ge
  If two different connectors both adhere to the GenAI Commons module, they can be rather easily swapped which reduces dependency to the model providers. In addition, the initial implementation of AI-capabilities using the connectors becomes a drag and drop experience, so that developers can quickly get started. The module exposes useful operations to build a request to a model and to process the response.
 
 Developers, who want to connect to another LLM provider or their own service, are advised to use the GenAI Commons module as well. This speeds up the development and ensures that common principles are taken into account. Lastly, other developers or consumers of the connector can adapt more quickly to it.
+
 ## 2 Installation {#installation}
 
 To use connectors that adhere to the GenAI principles in your Mendix application, you must make sure the GenAI Commons module is available in your project. The module is protected , which means it can't be changed and the logic of the microflows is not visible (for more details see [Consuming Add-on Modules and Solutions](/refguide/consume-add-on-modules-and-solutions/)). This document or the documentation inside the app will explain what each exposed operation does.
@@ -25,10 +26,9 @@ If the starting point for the project is the Blank GenAI app, or the AI Bot Star
 -->
 If you start from a blank app, or have an existing project, and want include a Connector for which the GenAI Commons module is a required module, you have to get it from marketplace manually. Follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the GenAI Commons module into your app. Make sure to include the [Community Commons](/appstore/modules/community-commons-function-library/) module, if it is not already part of your app.
 
-
 ## 3 Implementation {#implementation}
 
-### 3.1 Chat Completions operations (interface only)
+### 3.1 Chat Completions operations (interface only) {#chatcompletions}
 
 There are currently two operation interfaces defined for the category Chat Completions. These operations let the underlying Large Language Model of choice generate a text (model response) based input in the form of a single user message or a full conversation. Their respective use cases are briefly introduced below. For more details about how to use or develop operations that follow these principles, please take a look at the technical reference section. Also make sure to check the documentation for any specific connector module that you are using to learn about the additional specific properties.
 
@@ -44,13 +44,13 @@ The operation interface `Chat Completions (with history)` supports more complex 
 
 Although GenAI Commons technically defines additional capabilities typically found in chat completion APIs, such as image processing (vision) and tools (function calling), it depends on the connector module of choice whether these are actually implemented. Please check the documentation for any specific connector module that you are using to learn about the supported additional capabilities and for which models these can be used. 
 
-### 3.2 Helper microflows {#helper-microflows}
+### 3.2 Exposed microflows {#exposed-microflows}
 
-All helper microflows are intended to be used when the required information for GenAI operations needs to be mapped from your custom app implementation to the GenAI model and vice versa.
+All exposed microflows are intended to be used when the required information for GenAI operations needs to be mapped from your custom app implementation to the GenAI model and vice versa.
 
-#### 3.2.1 Pre-processing
+#### 3.2.1 Build request {#build-request}
 
-A number of generic GenAI Commons helper microflows have been made available for developers who develop a customer implementations, to aid in constructing the input request structures for the operations defined in GenAI Commons. These flows are all meant to be used in microflows before the operation is executed.
+A number of generic GenAI Commons microflows have been made available for developers who develop a customer implementations, to aid in constructing the input request structures for the operations defined in GenAI Commons. These flows are all meant to be used in microflows before the operation is executed.
 
 ##### 3.2.1.1 Chat: Create Request {#create-request}
 
@@ -81,7 +81,7 @@ Use this microflow when you have microflows in your application that may be call
 
 Use this microflow to control how the model should determine which function is to be leveraged (typically to gather additional information).
 
-#### 3.2.2 Post-processing
+#### 3.2.2 Handle Response {#handle-response}
 
 ##### 3.2.2.1 Chat: Get Model Response Text {#get-response-text}
 

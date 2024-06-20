@@ -213,7 +213,7 @@ Vision enables models like GPT-4o and GPT-4 Turbo to interpret and analyze image
 
 For `Chat Completions without History` the `FileCollection` is an optional input parameter, while for `Chat Completions with History` it can optionally be added to individual user messages using [Chat: Add Message to Request](/appstore/modules/genai/genai-commons/#add-message).
 
-Use the two helper microflows [Files: Initialize Collection with OpenAI File](#initialize-filecollection) and [Files: Add OpenAIFile to Collection](#add-file) to construct the input with either `FileDocuments` (for vision it needs to be of type `Image`) or `URLs`. The same file operations exposed by the GenAI commons module can be used for vision requests with the OpenAIConnector, however they do not support the optional `Detail` attribute of the [OpenAIFileContent](#openaifile-content) entity.
+Use the two exposed microflows [Files: Initialize Collection with OpenAI File](#initialize-filecollection) and [Files: Add OpenAIFile to Collection](#add-file) to construct the input with either `FileDocuments` (for vision it needs to be of type `Image`) or `URLs`. The same file operations exposed by the GenAI commons module can be used for vision requests with the OpenAIConnector, however they do not support the optional `Detail` attribute of the [OpenAIFileContent](#openaifile-content) entity.
 
 {{% alert color="info" %}}
 OpenAI and Azure OpenAI for vision do not yet provide feature parity when it comes to combining functionalities, i.e., Azure OpenAI currently does not support the use of JSON mode and function calling in combination with image (vision) input.
@@ -258,7 +258,7 @@ For technical details, see the [Technical reference](#embeddings-single-technica
 
 #### 3.4.2 `Embeddings (list input)` {#embeddings-list}
 
-The microflow activity `Embeddings (list input)` supports the more complex scenario where a list of strings must be vectorized in a single API call, e.g. converting a batch of text strings (chunks) from a private knowledge base into embeddings. Instead of calling the API for each string, executing a single call for a list of strings can significantly reduce HTTP overhead. The embedding vectors returned after a successful API call will be stored as `EmbeddingVector` attribute in the same `DataChunk` entity. Thus, the microflow does not return an Object or List, but only a `Success` Boolean. Use the helper microflows [Embeddings: Create DataBatch](#create-databatch) and [Embeddings: Create DataChunk](#create-datachunk) to construct the input.
+The microflow activity `Embeddings (list input)` supports the more complex scenario where a list of strings must be vectorized in a single API call, e.g. converting a batch of text strings (chunks) from a private knowledge base into embeddings. Instead of calling the API for each string, executing a single call for a list of strings can significantly reduce HTTP overhead. The embedding vectors returned after a successful API call will be stored as `EmbeddingVector` attribute in the same `DataChunk` entity. Thus, the microflow does not return an Object or List, but only a `Success` Boolean. Use the exposed microflows [Embeddings: Create DataBatch](#create-databatch) and [Embeddings: Create DataChunk](#create-datachunk) to construct the input.
 
 For technical details, see the [Technical reference](#embeddings-list-technical) section.
 
@@ -273,9 +273,9 @@ The construction of the request and handling of the response must be implemented
 
 For technical details, see the [Technical reference](#embeddings-advanced-technical) section.
 
-### 3.5 Helper microflows {#helper-microflows}
+### 3.5 Exposed microflows {#exposed-microflows}
 
-The following OpenAI specific helper microflows assist developers to construct their requests in a drag and drop experience and can be found in the toolbox in the **OpenAI Helpers** section. Generic helper microflows are described in [GenAI Commons](/appstore/modules/genai/genai-commons/#helper-microflows).
+The following OpenAI specific exposed microflows assist developers to construct their requests in a drag and drop experience and can be found in the toolbox in the **OpenAI (Build Request)** section. Generic exposed microflows are described in [GenAI Commons](/appstore/modules/genai/genai-commons/#exposed-microflows).
 
 #### 3.5.1 `Create OpenAI Connection` {#create-openai-connection}
 This microflow can be used to create the [OpenAIConnection](#openaiconnection) object that is required for the Chat Completions operations. As input, a [Configuration](#configuration) object is required. For OpenAI (not Azure OpenAI) configurations, the model name is mandatory as well.
@@ -628,7 +628,7 @@ Use the microflow `ChatCompletions_Execute_WithoutHistory` to execute a simple c
 | ----------- | ----------------------------------------------------------- | ------------------------------------------------------------ |
 | `Response`  | [Response](/appstore/modules/genai/genai-commons/#response) | A `Response` object that contains the assistant's response. The return message string can be extracted by using the [Get Model Response Text](/appstore/modules/genai/genai-commons/#get-response-text) operation.        |
 
-To construct the input for the microflow, see [OpenAI helper microflows](#helper-microflows) or [GenAI Commons helper microflows](/appstore/modules/genai/genai-commons/#helper-microflows).
+To construct the input for the microflow, see [OpenAI exposed microflows](#exposed-microflows) or [GenAI Commons exposed microflows](/appstore/modules/genai/genai-commons/#exposed-microflows).
 
 ##### 4.3.1.2 Chat Completions (with history) {#chat-completions-with-history-technical}
 
@@ -647,7 +647,7 @@ Use the microflow `ChatCompletions_Execute_WithHistory` to execute a chat comple
 | ----------- | ----------------------------------------------------------- | ------------------------------------------------------------ |
 | `Response`  | [Response](/appstore/modules/genai/genai-commons/#response) | A `Response` object that contains the assistant's response. The return message string can be extracted by using the [Get Model Response Text](/appstore/modules/genai/genai-commons/#get-response-text) operation.        |
 
-To construct the input for the microflow, see [OpenAI helper microflows](#helper-microflows) or [GenAI Commons helper microflows](/appstore/modules/genai/genai-commons/#helper-microflows).
+To construct the input for the microflow, see [OpenAI exposed microflows](#exposed-microflows) or [GenAI Commons exposed microflows](/appstore/modules/genai/genai-commons/#exposed-microflows).
 
 #### 4.3.2 Image Generations {#image-generations-technical} 
 
@@ -738,7 +738,7 @@ Use the microflow `Embeddings_Execute_ListInput` to execute an embeddings API ca
 | ----------- | ------- | ------------------------------------------------------------ |
 | `Success`   | Boolean | The value is `true` if the embeddings request was successful. The value is `false` if an error occurred or a validation failed. |
 
-To construct the input for the microflow, see [OpenAI helper microflows](#helper-microflows). Each `DataChunk` will be enriched with the corresponding embedding vector that was returned in the API call: the microflow `Embeddings_Execute_ListInput` already takes care of mapping the result onto the correct `DataChunk` entities and the operation itself only returns a `Success` Boolean.
+To construct the input for the microflow, see [OpenAI exposed microflows](#exposed-microflows). Each `DataChunk` will be enriched with the corresponding embedding vector that was returned in the API call: the microflow `Embeddings_Execute_ListInput` already takes care of mapping the result onto the correct `DataChunk` entities and the operation itself only returns a `Success` Boolean.
 
 ##### 4.3.3.3 Embeddings (Advanced) {#embeddings-advanced-technical}
 

@@ -1,7 +1,6 @@
 ---
 title: "Mendix Client"
 url: /refguide9/mendix-client/
-
 description: "Describes the Mendix Client part of the Mendix Runtime and how it functions."
 weight: 20
 ---

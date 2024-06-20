@@ -1,7 +1,6 @@
 ---
 title: "Offline"
 url: /refguide7/offline/
-
 weight: 40
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "Runtime Server"
 url: /refguide/runtime-server/
-
 description: "Describes the Runtime Server and how it functions."
 weight: 10
 ---

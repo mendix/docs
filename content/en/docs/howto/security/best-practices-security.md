@@ -2,7 +2,6 @@
 title: "Implement Best Practices for App Security"
 linktitle: "Best Practices for App Security"
 url: /howto/security/best-practices-security/
-
 weight: 20
 description: "Describes the common aspects you should consider when delivering an application within the Mendix Cloud."
 aliases:
@@ -23,7 +22,7 @@ The Mendix architecture includes the Mendix Client, which can compose its own qu
 
 {{< figure src="/attachments/howto/security/best-practices-security/mendix-runtime-architecture.png" alt="Mendix Runtime Architecture"   width="500"  class="no-border" >}}
 
-When designing an application, a developer can specify access rules on an entity (for more information, see [How to Create A Secure App](/howto/security/create-a-secure-app/)). These access rules are applied whenever a query (received from a client) should be executed, thus they constrain the data returned to the client. For example, users with the "Customer" role can only view orders that are associated to the customer of which this user is part.
+When designing an application, you can specify access rules on an entity (for more information, see [How to Create A Secure App](/howto/security/create-a-secure-app/)). These access rules are applied whenever a query (received from a client) should be executed, thus they constrain the data returned to the client. For example, users with the "Customer" role can only view orders that are associated to the customer of which this user is part.
 
 While the data that should be viewable and editable in which role is application-specific, the following best practices are key:
 
@@ -55,7 +54,7 @@ These are the common cases and best practices:
 
 A Mendix app offers various endpoints that can be used to obtain information about offered services. The paths used by these endpoints end in `-doc`. By default, access to these endpoints is disabled when deploying to a cloud node.
 
-Access restrictions can be configured within the Developer Portal. They can be found in the **Environment details** of your cloud node. This is an example of this overview showing the default settings after deploying to a new environment:
+Access restrictions can be configured within the Mendix Portal. They can be found in the **Environment details** of your cloud node. This is an example of this overview showing the default settings after deploying to a new environment:
 
 {{< figure src="/attachments/howto/security/best-practices-security/default-access-restrictions.png" alt="Mendix Cloud Access Restrictions Overview" class="no-border" >}}
 
@@ -63,7 +62,7 @@ Examples are the `ws-doc` or `rest-doc` endpoints that enumerate all the publish
 
 You can take the following preventative measures:
 
-* Disable unused endpoints within the Mendix Developer Portal completely by applying a **deny all access** preset on them
+* Disable unused endpoints within the Mendix Portal completely by applying a **deny all access** preset on them
 * Apply IP filtering or client certificate authentication to restrict access
 
 Keep the following in mind:
@@ -169,7 +168,7 @@ This data is defined within the domain model and stored within the database of y
 
 You may need to store sensitive information, such as credentials, in your app. To limit access to this sensitive information, Mendix recommends the following:
 
-* Credentials are recorded in [constants](/refguide/constants/) which can be set when your app is deployed—in the [developer portal](/developerportal/deploy/environments-details/#constants), for example, if you are deploying to Mendix Cloud.
+* Credentials are recorded in [constants](/refguide/constants/) which can be set when your app is deployed—in the [Mendix Portal](/developerportal/deploy/environments-details/#constants), for example, if you are deploying to Mendix Cloud.
 * The constants should be blank by default (not populated with the credentials) in the app.
 
     * Values for the constants can be provided during testing by creating a [configuration](/refguide/configuration/#constants).
@@ -234,13 +233,13 @@ HTTP headers can add an additional layer of security and help you detect certain
 
 An example of an attack is when an application is embedded in an iframe. Applications that can be embedded within an iframe can be misused by attackers. By using an overlay, it could trick users into clicking buttons and make them perform actions within the application on their behalf without knowing it. This approach is called [clickjacking](https://www.owasp.org/index.php/Clickjacking).
 
-By sending a header to the user’s browser, it can block the use of the Mendix application within an iframe and avoid this type of attack. The header is set by default to block embedding within an iframe. For the Mendix Cloud, this can be configured using [HTTP Headers](/developerportal/deploy/environments-details/#http-headers) in your node’s environment details within the Mendix Developer Portal. If you change this value, you will also need to ensure that *SameSite* cookies are set to the correct value. See [Iframes and Running Apps](/developerportal/deploy/running-in-iframe/) for more information.
+By sending a header to the user’s browser, it can block the use of the Mendix application within an iframe and avoid this type of attack. The header is set by default to block embedding within an iframe. For the Mendix Cloud, this can be configured using [HTTP Headers](/developerportal/deploy/environments-details/#http-headers) in your node’s environment details within the Mendix Portal. If you change this value, you will also need to ensure that *SameSite* cookies are set to the correct value. See [Iframes and Running Apps](/developerportal/deploy/running-in-iframe/) for more information.
 
 If you are running your Mendix app on Mendix for Private Cloud, you can configure the HTTP headers as part of advanced operator configuration. See the [Endpoint (network) Configuration](/developerportal/deploy/private-cloud-cluster/#advanced-network-settings) section of *Creating a Private Cloud Cluster*.
 
 The Mendix Cloud Foundry Buildpack and Mendix Docker Buildpack also provide [an option to configure HTTP headers](https://github.com/mendix/cf-mendix-buildpack#built-in-proxy-configuration).
 
-If you use a traditional deployment of your Mendix app, using Windows or Linux, you need to set up these headers on the web server in front of your Mendix application server, for example in Microsoft Internet Informations Services (IIS).
+If you use a traditional deployment of your Mendix app, using Windows or Linux, you need to set up these headers on the web server in front of your Mendix application server, for example in Microsoft Internet Information Services (IIS).
 
 ## 13 Maintaining a High Level of App Hygiene
 

@@ -1,7 +1,6 @@
 ---
 title: "Access a Samba Share"
 url: /howto8/integration/access-a-samba-share-from-the-mxcloud/
-
 weight: 11
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "Solve Load and Import Errors"
 url: /howto/monitoring-troubleshooting/solving-load-and-import-errors/
-
 weight: 11
 description: "Describes how to solve problems that may occur when opening an app."
 aliases:
@@ -38,7 +37,7 @@ Before trying to solve the problems, it is useful to discover the origin of the 
 
 ### 3.1 Is This a Team Server App?
 
-If your app is a [Team Server](/developerportal/general/team-server/) app, and you just did a [download or update](/refguide/using-version-control-in-studio-pro/) from the server, the problem may have been added in a revision that was recently committed to the Team Server. You can check who made the most recent commit via the [Team Server](/developerportal/general/team-server/) menu item in the [Developer Portal](https://sprintr.home.mendix.com).
+If your app is a [Team Server](/developerportal/general/team-server/) app, and you just did a [download or update](/refguide/using-version-control-in-studio-pro/) from the server, the problem may have been added in a revision that was recently committed to the Team Server. You can check who made the most recent commit on the [Team Server](/developerportal/general/team-server/) page of your app in [Apps](https://sprintr.home.mendix.com).
 
 If the latest change on your branch line was committed by someone other than yourself, please inform the person about the problem.
 

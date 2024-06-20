@@ -1,7 +1,6 @@
 ---
 title: "Find Your Way in an App"
 url: /howto7/general/find-your-way/
-
 weight: 6
 ---
 

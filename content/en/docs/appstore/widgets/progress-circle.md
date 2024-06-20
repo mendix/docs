@@ -1,7 +1,6 @@
 ---
 title: "Progress Circle"
 url: /appstore/widgets/progress-circle/
-
 description: "Describes the purpose, features, and configuration of the Progress Circle widget, which is available in the Mendix Marketplace."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

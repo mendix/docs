@@ -1,7 +1,6 @@
 ---
 title: "Test with ATS"
 url: /howto8/testing/testing-with-application-test-suite/
-
 weight: 20
 ---
 

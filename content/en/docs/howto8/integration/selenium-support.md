@@ -1,7 +1,6 @@
 ---
 title: "Configure Selenium Support"
 url: /howto8/integration/selenium-support/
-
 weight: 16
 ---
 

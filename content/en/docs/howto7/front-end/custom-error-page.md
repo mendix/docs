@@ -1,7 +1,6 @@
 ---
 title: "Create Custom Error Pages"
 url: /howto7/front-end/custom-error-page/
-
 weight: 50
 ---
 

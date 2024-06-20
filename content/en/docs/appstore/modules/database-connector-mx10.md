@@ -1,7 +1,6 @@
 ---
 title: "External Database Connector"
 url: /appstore/modules/external-database-connector/
-
 description: "Describes the configuration and usage of the new Database connector, which incorporates your external data directly in your Mendix app."
 aliases:
     - /appstore/connectors/external-database-connector/

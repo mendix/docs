@@ -9,7 +9,7 @@ weight: 10
 
 You can search for changes or usages of different elements, documents, XPaths, changes to various elements, in your app.  You do it via **Find**, **Find Advanced**, and **Find Usages** options under the **Edit** menu. 
 
-{{< figure src="/attachments/refguide/modeling/menus/edit-menu/find-and-find-advanced/find-options.jpg" alt="Find Options" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/menus/edit-menu/find-and-find-advanced/find-options.png" alt="Find Options" class="no-border" >}}
 
 ## 2 Find Option
 

@@ -288,7 +288,7 @@ To prevent such incidents, we no longer allow two users to edit a test case simu
 * Due to a bug, a job that failed during the initial stage did not show any logs. This has been fixed.
 * The **Value** drop-down menu closed intermittently. We have made changes to the widget to avoid this as much as possible.
 * We fixed a bug where importing failed for a test case that had a step using the output value of a previous step that was a custom action.
-* We fixed an issue where the **Log off** button did not work and instead showed some JSON. It now works correctly by first logging the user out of their current ATS session and then redirecting them to the Mendix Developer Portal.
+* We fixed an issue where the **Log off** button did not work and instead showed some JSON. It now works correctly by first logging the user out of their current ATS session and then redirecting them to the Developer Portal.
 * The links to the documentation and the desktop recorder have both been fixed.
 
 ## 2.22.0
@@ -375,7 +375,7 @@ The main goal of ATS is to test your Mendix application. Therefore, with this re
 
 #### Fetch Environment Information from the Developer Portal
 
-ATS now fetches information such as the name and URL of existing app environments for an app from the [Developer Portal](/developerportal/).
+ATS now fetches information such as the name and URL of existing app environments for an app from [Apps](/developerportal/).
 
 To distinguish these environments from ones that are manually managed, the name is suffixed with `(Sprintr)` and an additional flag is added.
 
@@ -763,7 +763,7 @@ Mendix applications that are based on [Mendix 7.22.2](/releasenotes/studio-pro/7
 
 ### Improvements
 
-* We have added the option to refresh the app roles from the App Settings page. After clicking the refresh button, the app roles for all users currently in the current app will be queried from the Mendix Developer Portal and updated in ATS, according to the standard rules for updating roles in ATS. Users who no longer have access to the corresponding project in the Developer Portal will be removed from the app. New members of an app in the Developer Portal have to log in to ATS and accept the terms and conditions before they can become members of an app in ATS.
+* We have added the option to refresh the app roles from the App Settings page. After clicking the refresh button, the app roles for all users currently in the current app will be queried from the Developer Portal and updated in ATS, according to the standard rules for updating roles in ATS. Users who no longer have access to the corresponding project in the Developer Portal will be removed from the app. New members of an app in the Developer Portal have to log in to ATS and accept the terms and conditions before they can become members of an app in ATS.
 * We have continued optimize how tests results are processed in ATS. We expect that this will reduce the delay in seeing the results for a test.
 
 ### (Potentially) Breaking change
@@ -814,7 +814,7 @@ Mendix applications that are based on Mendix 7.17 can now be tested and recorded
 
 ### Fixes
 
-* We fixed an issue where new projects from the Mendix Developer Portal were not synched to ATS.
+* We fixed an issue where new projects from the Developer Portal were not synched to ATS.
 
 ## 2.9.0
 

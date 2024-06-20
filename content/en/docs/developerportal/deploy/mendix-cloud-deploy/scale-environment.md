@@ -2,7 +2,7 @@
 title: "Scaling Your Environment in Mendix Cloud"
 linktitle: "Scaling in Mendix Cloud"
 url: /developerportal/deploy/scale-environment/
-weight: 9
+weight: 80
 description: "Describes how to scale your environments in Mendix Cloud."
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
@@ -30,19 +30,15 @@ Before following the steps outlined on this page, make sure you meet the followi
 
 To scale your licensed app in Mendix Cloud, follow these steps:
 
-1. From the [Developer Portal](https://sprintr.home.mendix.com), go to the **Environments** page of your licensed app.
-
-2. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the environment you want to scale.
-
-3. On the **General** tab, scroll down to the **Instances** row. Click **Change scaling**.
+1. From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of your licensed app.
+1. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the environment you want to scale.
+1. On the **General** tab, scroll down to the **Instances** row. Click **Change scaling**.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/scale-environment/change-scaling.png" alt="" >}}
 
-4. To set the **Memory per instance** that you want to use, drag the **Memory per instance** indicator bar.
-
-5. To set the number of **Instances** you want to use, drag the **Instances** indicator bar.
-
-6. Click **Apply**. This restarts your environment to apply the changes.
+1. To set the **Memory per instance** that you want to use, drag the **Memory per instance** indicator bar.
+1. To set the number of **Instances** you want to use, drag the **Instances** indicator bar.
+1. Click **Apply**. This restarts your environment to apply the changes.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/scale-environment/scale.png" alt="Scaling dashboard" max-width=75% >}}
 

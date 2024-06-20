@@ -40,7 +40,7 @@ If your Kubernetes environment can be accessed from the public internet, ensure 
 
 ### 2.1 Kubernetes
 
-The Mendix Operator uses the [Kubernetes API](https://kubernetes.io/docs/concepts/overview/kubernetes-api/) to manage Kubernetes resources and store its state. The Mendix Operator includes [Custom Resource Definitions (CRDs)](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/), which allow control of the Operator and query its status through the Kubernetes API. Any Kubernetes API client can be used to control the Operator, including `kubectl`, `oc`, the OpenShift Web Console, [Lens](https://k8slens.dev/), and many others. The Developer Portal can also be used to manage environments (using the Mendix Gateway Agent as the Kubernetes API client).
+The Mendix Operator uses the [Kubernetes API](https://kubernetes.io/docs/concepts/overview/kubernetes-api/) to manage Kubernetes resources and store its state. The Mendix Operator includes [Custom Resource Definitions (CRDs)](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/), which allow control of the Operator and query its status through the Kubernetes API. Any Kubernetes API client can be used to control the Operator, including `kubectl`, `oc`, the OpenShift Web Console, [Lens](https://k8slens.dev/), and many others. The Mendix Portal can also be used to manage environments (using the Mendix Gateway Agent as the Kubernetes API client).
 
 Mendix for Private Cloud doesn't access the base operating system. Kubernetes service accounts are used to call the Kubernetes API, and [Kubernetes RBAC](https://kubernetes.io/docs/reference/access-authn-authz/rbac/) ensures that each service account only gets the minimum required permissions. All container images provided by Mendix run as a non-root user/group and don't require privilege escalation. Container images can be run in OpenShift with randomized UIDs without any configuration.
 
@@ -89,21 +89,21 @@ You will need to create the container registry and provide credentials to the Me
 
 Your cluster needs network connectivity to the database and file (blob) storage.
 
-For *Connected* clusters, Mendix for Private Cloud needs to be able to connect to [Mendix Services](/developerportal/deploy/private-cloud-cluster/#prerequisites-connected). If necessary, communication can be done through an HTTPS proxy. The Mendix Operator doesn't require any internet-facing open ports (port forwarding) to communicate with Mendix services. All communication with the Developer Portal is over HTTPS and is initiated from the Kubernetes cluster. It is even possible to run Mendix for Private Cloud behind Network Address Translation (NAT) devices or even a series of NAT devices.
+For *Connected* clusters, Mendix for Private Cloud needs to be able to connect to [Mendix Services](/developerportal/deploy/private-cloud-cluster/#prerequisites-connected). If necessary, communication can be done through an HTTPS proxy. The Mendix Operator doesn't require any internet-facing open ports (port forwarding) to communicate with Mendix services. All communication with the Mendix Portal is over HTTPS and is initiated from the Kubernetes cluster. It is even possible to run Mendix for Private Cloud behind Network Address Translation (NAT) devices or even a series of NAT devices.
 
 ## 3 Installation {#installation}
 
-The diagram below shows the steps which you need to take to install Mendix for Private Cloud in a namespace. It assumes that the Cluster Administrator has already set up the cluster so that the Developer Portal knows about it. See [Creating a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster/#create-cluster) for more information.
+The diagram below shows the steps which you need to take to install Mendix for Private Cloud in a namespace. It assumes that the Cluster Administrator has already set up the cluster so that the Mendix Portal knows about it. See [Creating a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster/#create-cluster) for more information.
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-technical-appendix/private-cloud-technical-appendix-02/mx4pc-installation.png" class="no-border" >}}
 
-First, you create the namespace in the Mendix Developer Portal.
+First, you create the namespace in the Mendix Portal.
 
 You can then download `mxpc-cli`, the configuration tool, which is used to install and configure Mendix for Private Cloud components and is customized for your Kubernetes namespace.
 
 The configuration tool provides an interactive, terminal-based GUI to prepare and apply Kubernetes configuration objects (such as deployments, pods, secrets, and Mendix Operator CRs). To communicate and authenticate with the Kubernetes API, the default `KUBECONFIG` is used. If your `KUBECONFIG` has multiple contexts, clusters, or users, you must switch to the correct target context before running the `mxpc-cli` tool.
 
-In *Connected Mode*, the `mxpc-cli` tool will call the Developer Portal to create a label for the storageplan CR which is successfully created or updated in Kubernetes. Cluster members with the appropriate roles can then select this plan from a dropdown when creating a new environment. The `mxpc-cli` tool will not interact with the Developer Portal when the cluster is installed in Standalone mode.
+In *Connected Mode*, the `mxpc-cli` tool will call the Mendix Portal to create a label for the storageplan CR which is successfully created or updated in Kubernetes. Cluster members with the appropriate roles can then select this plan from a dropdown when creating a new environment. The `mxpc-cli` tool will not interact with the Mendix Portal when the cluster is installed in Standalone mode.
 
 {{% alert color="info" %}}
 The configuration tool only creates configuration objects through the Kubernetes API. It can manage Mendix for Private Cloud components (the Mendix Operator and Mendix Gateway Agent). It does not directly communicate with the Mendix for Private Cloud Operator or manage infrastructure such as AWS accounts, VMs, or databases.
@@ -113,7 +113,7 @@ The configuration tool only creates configuration objects through the Kubernetes
 
 When you want to create a new environment you need to create a `MendixApp` CR in Kubernetes.
 
-In connected mode, this is initiated in the Developer Portal, which sends the `MendixApp` CR to the Mendix Gateway Agent. The Agent will then create the `MendixApp` CR in Kubernetes.
+In connected mode, this is initiated in the Mendix Portal, which sends the `MendixApp` CR to the Mendix Gateway Agent. The Agent will then create the `MendixApp` CR in Kubernetes.
 
 In standalone mode, you need to create the MendixApp CR directly in your Kubernetes namespace, using the `mxpc-cli` tool.
 
@@ -129,8 +129,8 @@ Once all dependencies are processed (report their status as Ready), the Operator
 
 Any time a CR's status is changed, the Operator will propagate it to the `MendixApp` CR. The Agent will receive events any time the `MendixApp` CR changes its status.
 
-In connected mode, this status will be reported back to the Developer Portal.
-To ensure you see the latest status reported by the Mendix Gateway Agent in the Developer Portal, press the Refresh button.
+In connected mode, this status will be reported back to the Mendix Portal.
+To ensure you see the latest status reported by the Mendix Gateway Agent in the Mendix Portal, press the Refresh button.
 
 ### 4.1 Storage Provisioning
 
@@ -158,7 +158,7 @@ If the provisioner pod fails with an error, it is likely to be because of a conf
 
 ### 4.2 App Image Build
 
-When a new deployment package (MDA) is deployed from the Developer Portal to an environment, the Developer Portal will generate a new sourceURL (the URL where the MDA can be downloaded) and send it to the Mendix Gateway Agent. The Mendix Gateway Agent will then update the `MendixApp` CR's `spec.sourceURL` attribute.
+When a new deployment package (MDA) is deployed from the Mendix Portal to an environment, the Mendix Portal will generate a new sourceURL (the URL where the MDA can be downloaded) and send it to the Mendix Gateway Agent. The Mendix Gateway Agent will then update the `MendixApp` CR's `spec.sourceURL` attribute.
 
 For a standalone environment, you need to create the `MendixApp` CR yourself and apply it to the namespace where it should be deployed. You can find further instructions in [Using Command Line to Deploy a Mendix App to a Private Cloud Cluster](/developerportal/deploy/private-cloud-operator/).
 

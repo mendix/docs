@@ -1,7 +1,6 @@
 ---
 title: "Mendix Assist"
 url: /refguide/mx-assist-studio-pro/
-
 weight: 45
 description: "Describes Mendix Assist in Studio Pro."
 ---

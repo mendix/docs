@@ -1,19 +1,18 @@
 ---
 title: "Team"
 url: /developerportal/general/team/
-
 weight: 3
-description: "Describes the Team page of the Developer Portal."
+description: "Describes the Team page of Apps navigation pane."
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
 
-Your team can include all of your colleagues working on an app. As well as developing, team members might have other roles such as ideating or reviewing. The Mendix Developer Portal enables developers from both IT and business with mixed experience levels to collaborate.
+Your team can include all of your colleagues working on an app. As well as developing, team members might have other roles such as ideating or reviewing. The **Team** page in the [navigation pane](/developerportal/#navigation-pane) of **Apps** enables developers from both IT and business with mixed experience levels to collaborate.
 
 To view and manage your team members, follow these steps:
 
-1. In the [Developer Portal](https://sprintr.home.mendix.com), select the app you want to manage.
+1. In [Apps](https://sprintr.home.mendix.com), select the app you want to manage.
 2. In the navigation pane, click **Team**.
 
 ## 2 Managing the Team {#managing}

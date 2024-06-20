@@ -1,7 +1,6 @@
 ---
 title: "Monitoring Mendix Runtime"
 url: /refguide/monitoring-mendix-runtime/
-
 description: "Describes the supported Mendix Runtime monitoring actions."
 #The anchor request-handlers below is mapped, so it should not be removed or changed.
 ---
@@ -15,7 +14,7 @@ This is only available for local and on-premises deployments of your app.
 
 For deployments to other platforms (for example, Mendix for Private Cloud), you do not have access to the m2ee admin handler to make these requests.
 
-For deployments to Mendix Cloud, you can get the same information from various pages in the Developer Portal. For more information, see:
+For deployments to Mendix Cloud, you can get the same information from various pages in the Mendix Portal. For more information, see:
 
 * [Metrics](/developerportal/operate/metrics/)
 * [Running Now](/developerportal/deploy/mxcloud-runningnow/)

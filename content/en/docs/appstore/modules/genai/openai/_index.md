@@ -77,21 +77,21 @@ You should have [signed up](https://platform.openai.com/) for an OpenAI account,
 
 ### 1.5 Dependencies {#dependencies}
 
-* Mendix Studio Pro version [9.24.0](/releasenotes/studio-pro/9.24/#9240) or higher 
-* [GenAI Commons](LINK) module
-* [Encryption](https://marketplace.mendix.com/link/component/1011) module
-* [Community commons](https://marketplace.mendix.com/link/component/170) module
-
-<!---
-[comment]: <> TODO: insert link
--->
+* Mendix Studio Pro version [9.24.0](/releasenotes/studio-pro/9.24/#9240) or higher
+* [GenAI commons](/appstore/modules/genai/genai-commons/)
+* [Encryption](/appstore/modules/encryption/)
+* [Community commons](/appstore/modules/community-commons-function-library/)
 
 ## 2 Installation {#installation}
 
  The following modules from the marketplace need to be installed:
- * [GenAI Commons](/appstore/modules/genai/genai-commons/)
- * [Encryption](/appstore/modules/encryption/)
- * [Community Commons](/appstore/modules/community-commons-function-library/)
+ * [GenAI commons](LINK) module
+ * [Encryption](https://marketplace.mendix.com/link/component/1011) module
+ * [Community commons](https://marketplace.mendix.com/link/component/170) module
+
+<!---
+[comment]: <> TODO: insert link
+-->
 
 Follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the OpenAI Connector into your app.
 

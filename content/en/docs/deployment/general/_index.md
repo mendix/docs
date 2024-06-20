@@ -2,7 +2,7 @@
 title: "General"
 url: /developerportal/deploy/general/
 weight: 5
-description: "Presents an overview of the Deployment section of Apps navigation pane, focusing on topics that are relevant to more than one platform."
+description: "Presents an overview of deployment topics that are relevant to more than one platform."
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
@@ -12,7 +12,7 @@ Mendix apps can be deployed to many different platforms. Much of the deployment 
 
 However, several topics relate to multiple platforms. These topics are covered in this section of the documentation instead of in the platform-specific sections.
 
-The subjects covered in the *General* section are as follows:
+The subjects covered in this documentation section are as follows:
 
 * [Licensing Apps](/developerportal/deploy/licensing-apps-outside-mxcloud/)
 * [Secure Outgoing Connections from your Application](/developerportal/deploy/securing-outgoing-connections-from-your-application/)
@@ -39,7 +39,7 @@ For many of the platforms to which a Mendix app can be deployed, the following p
 * Environments
 * Mobile App
 
-You can access both of these pages via the Mendix Portal’s [navigation pane](/developerportal/#navigation-pane).
+You can access both of these pages via the **Apps** [navigation pane](/developerportal/#navigation-pane).
 
 ### 3.1 Environments
 

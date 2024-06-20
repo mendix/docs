@@ -80,7 +80,6 @@ After [installing](#installation) the connector, get started by doing the follow
 
 {{% alert color="info" %}}Connection details are stored as constants, their values are stored in the Active configuration of the user, password is stored as a private value.{{% /alert %}}
 
-
 Now you can start [querying the database](#query-database) to select data to use in your app.
 
 ### 3.2 Querying a Database {#query-database}

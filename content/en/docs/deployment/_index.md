@@ -1,6 +1,6 @@
 ---
 title: "Deployment"
-url: /developerportal/deploy/
+url: /deployment/
 description: "Describes how to deploy Mendix apps to different environments and how to manage those deployments."
 weight: 32
 no_list: false 

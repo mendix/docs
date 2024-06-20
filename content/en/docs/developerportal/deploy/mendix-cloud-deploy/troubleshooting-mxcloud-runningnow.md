@@ -1,7 +1,7 @@
 ---
 title: "Running Now"
 url: /developerportal/deploy/mxcloud-runningnow/
-weight: 20
+weight: 90
 description: "Explains how to access, navigate, and troubleshoot Running Now in your node."
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---

@@ -1,7 +1,6 @@
 ---
 title: "Scheduled Events"
 url: /refguide7/scheduled-events/
-
 description: "Options for configuring scheduled events"
 ---
 

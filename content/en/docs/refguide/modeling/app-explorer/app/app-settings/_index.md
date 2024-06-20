@@ -78,7 +78,7 @@ For Studio Pro versions 10.6.7 and 10.8.0 and above, you can choose Java 17.
 
 {{% /alert %}}
 
-For local development the JDK configured in the [Studio Pro preferences](/refguide/preferences-dialog/#jdk-directory) has to be compatible with the Java version configured here.
+For local development the Java version configured here needs to have a corresponding JDK configured in the [Studio Pro preferences](/refguide/preferences-dialog/#jdk).
 
 Applications deployed to the cloud will use this setting to select which Java version to use.
 
@@ -100,7 +100,7 @@ Here you can select a microflow that is automatically executed when a shutdown c
 
 Here you can select a microflow which performs the checks on a running app that you think are required to assess the app's health.
 
-The result of each check is returned as a string, which is displayed in the [Developer Portal](/developerportal/deploy/environments/). When the microflow returns an empty string, the application is healthy; otherwise, the string presents an explanation of why the application is not healthy.
+The result of each check is returned as a string, which is displayed in the [Mendix Portal](/developerportal/deploy/environments/). When the microflow returns an empty string, the application is healthy; otherwise, the string presents an explanation of why the application is not healthy.
 
 This microflow gets called every 10 seconds to check if the app is still healthy. This is done by executing it using m2ee on the admin port of your app. For more information, see the section [Health Check](/refguide/monitoring-mendix-runtime/#check-health) in *Monitoring Mendix Runtime*.
 

@@ -1,7 +1,6 @@
 ---
 title: "Import XML Documents"
 url: /howto8/integration/importing-xml-documents/
-
 weight: 3
 ---
 

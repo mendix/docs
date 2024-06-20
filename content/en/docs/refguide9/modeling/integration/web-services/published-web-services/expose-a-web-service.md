@@ -1,7 +1,6 @@
 ---
 title: "Expose a Web Service"
 url: /refguide9/integration/expose-a-web-service/
-
 weight: 12
 description: "Describes how Mendix supports exposing the functionality and data of your app using web services."
 aliases:

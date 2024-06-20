@@ -1,7 +1,6 @@
 ---
 title: "Date and Time Handling"
 url: /refguide7/date-and-time-handling/
-
 ---
 
 ## 1 Introduction

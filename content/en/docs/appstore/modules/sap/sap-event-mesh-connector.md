@@ -48,7 +48,7 @@ The SAP Enterprise Messaging service (Event Mesh) instance must be created with 
 
 The **Event Mesh Configurator** provides a user friendly interface to create the JSON required to configure the required Enterprise Messaging service instance with the desired configuration. To bind and configure the service, perform the following steps:
 
-1. Ensure that the **enterprise-messaging** service is in the status **Available Services** in Developer Portal. See the [Services Tab](/developerportal/deploy/sap-cloud-platform/#binding-services) section of *SAP Business Technology Platform* for more information.
+1. Ensure that the **enterprise-messaging** service is in the status **Available Services** in Mendix Portal. See the [Services Tab](/developerportal/deploy/sap-cloud-platform/#binding-services) section of *SAP Business Technology Platform* for more information.
 2. Click **Available Services** > **⚙️ Configurator** to open the configurator.
 3. Provide the required information. For more information about the parameter syntax, see [Syntax for Service Descriptor](https://help.sap.com/docs/event-mesh/event-mesh/syntax-for-service-descriptor?locale=en-US).
     * **EM Name** - Enter a display name for the service.

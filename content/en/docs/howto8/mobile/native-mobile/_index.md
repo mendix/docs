@@ -1,7 +1,6 @@
 ---
 title: "Native Mobile"
 url: /howto8/mobile/native-mobile/
-
 weight: 1
 no_list: false
 description_list: true 

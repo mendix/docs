@@ -1,7 +1,6 @@
 ---
 title: "SDK FAQ and Troubleshooting"
 url: /apidocs-mxsdk/mxsdk/sdk-faq/
-
 weight: 3
 ---
 

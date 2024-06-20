@@ -1,7 +1,7 @@
 ---
 title: "Deployment"
 url: /developerportal/deploy/
-description: "Describes the deployment section of the Developer Portal: how to deploy Mendix apps to different environments and how to manage those deployments."
+description: "Describes the deployment section of Apps navigation pane: how to deploy Mendix apps to different environments and how to manage those deployments."
 weight: 10
 no_list: false 
 description_list: true
@@ -20,7 +20,7 @@ Each app can only be deployed to one type of target platform (such as Mendix Clo
 Some features that rely on the target platform can work differently depending on what is supported (for example, in Cloud Foundry, Kubernetes, or Windows server). If you want to use a particular feature, confirm that it is supported by your chosen target platform.
 {{% /alert %}}
 
-This section of the *Developer Portal Guide* contains step-by-step instructions and additional reference material to help you deploy and manage your Mendix apps in the cloud or on premises. It is split into sections:
+This documentation category contains step-by-step instructions and additional reference material to help you deploy and manage your Mendix apps in the cloud or on premises. It is split into sections:
 
 * [General](/developerportal/deploy/general/) – contains information which applies to deployments in many different environments
 * Environment-specific sections – these contain instructions for the deployment and maintenance of apps in specific environments, such as [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) and [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/)
@@ -36,9 +36,9 @@ To speed up the development process, most changes you make within Studio Pro use
 
 Mendix Cloud is the default deployment option when you get started with the Mendix Platform. As an integrated solution, a licensed node on Mendix Cloud includes multiple environments, backups, monitoring, and high availability.
 
-From within Mendix Studio Pro, you can view the cloud nodes you have available in Mendix Cloud. You can create a deployment package (MDA) in the Developer Portal; from there, you can transport it and start running your application. 
+From within Mendix Studio Pro, you can view the cloud nodes you have available in Mendix Cloud. You can create a deployment package (MDA) in the Mendix Portal; from there, you can transport it and start running your application. 
 
-For more information, see [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/).
+For more information, see [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) and [Deploying an App to Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/deploying-an-app/).
 
 ### 3.1 Mendix Cloud Dedicated {#mendix-cloud-dedicated}
 
@@ -46,7 +46,7 @@ Organizations can also have their own Mendix Cloud, named [Mendix Cloud Dedicate
 
 ## 4 SAP Business Technology Platform (SAP BTP)
 
-If you create your app from an SAP app template, the Developer Portal will lead you through the creation of an environment on SAP BTP. You can then deploy your app to your SAP BTP environment directly from within Studio Pro.
+If you create your app from an SAP app template, the Mendix Portal will lead you through the creation of an environment on SAP BTP. You can then deploy your app to your SAP BTP environment directly from within Studio Pro.
 
 For more information, see [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/).
 

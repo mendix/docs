@@ -1,7 +1,6 @@
 ---
 title: "Database Replication"
 url: /appstore/modules/database-replication/
-
 description: "Describes the configuration and usage of the Database Replication module, which is available in the Mendix Marketplace."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -241,6 +240,8 @@ When selecting **Advanced**, you can set up the constraints yourself using the t
 ### 8.2 Data Objects
 
 When executing the import using an import call, you can optionally provide two Mendix objects to use as a constraint. This can be all types of objects (even non-persistable). However, if you are using scheduled import actions and you want to use the last successful import date as a constraint, you should select **ScheduledImportActivity** as data object 1.
+
+These objects must be provided as input explicitly in a microflow. Using these objects in an import call disallows it from being executed directly by a user action. **Import** on the **Import call** tab and **Run scheduled events** on the **Planned import action** tab will be affected, as they perform an import using import calls.
 
 ### 8.3 Constraint Type
 

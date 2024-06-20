@@ -1,5 +1,5 @@
 ---
-title: "Marketplace Guide"
+title: "Marketplace"
 url: /appstore/
 description: "Presents documentation on configuring and using the latest versions of platform-supported components."
 weight: 40
@@ -9,6 +9,10 @@ cascade:
     - content_type: "Marketplace Guide"
     - mendix_version: 10
 ---
+
+{{% alert color="info" %}}
+The Mendix Portal is the online platform of Mendix. It includes [Apps](/developerportal/), [Control Center](/control-center/), [Community](/community-tools/), Marketplace, [Catalog](/catalog/), and [Mendix Support](/support/).
+{{% /alert %}}
 
 ## 1 Introduction
 

@@ -1,7 +1,6 @@
 ---
 title: "Data Storage"
 url: /refguide8/data-storage/
-
 ---
 
 ## 1 Introduction

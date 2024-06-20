@@ -1,7 +1,6 @@
 ---
 title: "Configure Your Theme"
 url: /howto7/front-end/configuring-your-theme/
-
 weight: 15
 aliases:
     - /howto7/ux/configuring-your-theme.html

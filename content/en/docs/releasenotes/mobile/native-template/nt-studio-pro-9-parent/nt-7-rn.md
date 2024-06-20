@@ -5,6 +5,22 @@ weight: 9
 description: "Native Template 7 release notes."
 ---
 
+## 7.0.13 {#714}
+
+**Release date: June 5, 2024**
+
+### Improvements
+
+* We enhanced encrypted file sync on Android.
+
+## 7.0.12 {#711}
+
+**Release date: May 27, 2024**
+
+### Improvements
+
+* We added support for scheduling [local notifications](/refguide/mobile/using-mobile-capabilities/local-notifications/) on Android 14.
+
 ## 7.0.11 {#710}
 
 **Release date: May 13, 2024**

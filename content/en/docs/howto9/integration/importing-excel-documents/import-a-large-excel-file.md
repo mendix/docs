@@ -140,6 +140,6 @@ The XSD file is ready to be imported into. To import it, follow these steps:
 
 A video demonstrating this technique can be viewed below:  
 
-{{% youtube 8qLyIoUqKEE %}}
+{{< youtube 8qLyIoUqKEE >}}
 
 Happy modeling!

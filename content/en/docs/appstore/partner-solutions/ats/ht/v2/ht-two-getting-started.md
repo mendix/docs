@@ -48,7 +48,7 @@ You are now on the **Settings** page. Here you add environments and selenium hub
 
 {{% alert color="info" %}}
 
-Only the App admin and Scrum Master have the rights to edit the settings. You set the roles in the Developer Portal.
+Only the App admin and Scrum Master have the rights to edit the settings. You set the roles in the Mendix Portal.
 
 {{% /alert %}}
 

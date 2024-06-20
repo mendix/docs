@@ -1,7 +1,6 @@
 ---
 title: "Build Microflow Actions with Java"
 url: /howto/extensibility/howto-connector-kit/
-
 description: "Describes how to create custom microflow actions using Java."
 weight: 80
 #To update screenshots of these microflows in Studio Pro, use the SlackRekognition-main-master app, which is saved locally in Other Resources > Documentation Backups (No Update).

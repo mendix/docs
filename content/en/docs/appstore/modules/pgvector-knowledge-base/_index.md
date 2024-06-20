@@ -312,7 +312,6 @@ Use [Create Label](#create-label-technical) and [Create Chunk](#create-chunk-tec
 | -------------------- | ----------------------------------------- | ------------------------------------------------------------ |
 | `IsSuccess` | Boolean | This Boolean indicates if the addition of data to the knowledge base was successful. This can be used for custom error-handling. |
 
-
 ##### 4.3.2.4 Replace {#replace-technical}
 
 The `Replace` operation is used to replace existing chunks in a knowledge base based on the Mendix objects the chunks represent. This operation handles a list of chunks with their labels in a single operation.

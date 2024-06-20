@@ -1,7 +1,6 @@
 ---
 title: "Data Types"
 url: /refguide9/data-types/
-
 weight: 60
 description: "Presents an overview of the data types that Studio Pro supports."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

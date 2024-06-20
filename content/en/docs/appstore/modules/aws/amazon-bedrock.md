@@ -16,7 +16,7 @@ The [Amazon Bedrock](https://marketplace.mendix.com/link/component/215042) conne
 
 Amazon Bedrock is a fully managed service that makes foundation models (FMs) from Amazon and leading AI startups available through an API, so you can choose from various FMs to find the model that is best suited for your use case. With the Amazon Bedrock serverless experience, you can quickly get started, easily experiment with FMs, and seamlessly integrate and deploy them into your applications using AWS tools and capabilities. Typical use cases include the following:
 
-* Chat with an AI assistant including history
+* Chatting with an AI assistant, including a chat history.
 * Building an AI agent to answer questions about proprietary data.
 * Generating images based on text prompts and displaying them in the Mendix app.
 

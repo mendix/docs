@@ -13,7 +13,7 @@ description: "Describes the typical concepts people might implement with GenAI."
 
 ### 1.1 What is an LLM?
 
-A Large Language Model (LLM) is an advanced neural network trained on large amounts of text data. This allows the model to understand textual input, and generate input. LLMs are designed to handle a variety of natural language processing tasks, making them versatile tools for developers and businesses alike. You can use it for example to do:
+One of the most important components for Generative AI is the Large Language Model (LLM). It is an advanced neural network trained on large amounts of text data. This allows the model to understand textual input, and generate input. LLMs are designed to handle a variety of natural language processing tasks, making them versatile tools for developers and businesses alike. You can use it for example to do:
 
 - **Text Generation:** Create coherent and contextually relevant text based on given prompts.
 - **Content Creation:** Assist in writing articles, stories, and marketing copy.

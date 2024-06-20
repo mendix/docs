@@ -326,7 +326,7 @@ If you have issues that appear to be related to a content security policy, you c
 
 ### 4.3 Outgoing Connections Safelisting (Mendix Cloud Dedicated) {#connection-safelist}
 
-If you are deploying your apps to [Mendix Cloud Dedicated](/developerportal/deploy/#mendix-cloud-dedicated), all outgoing IP addresses are allowed by default.
+If you are deploying your apps to [Mendix Cloud Dedicated](/deployment/#mendix-cloud-dedicated), all outgoing IP addresses are allowed by default.
 
 If you clear the **Allow all outgoing connections** checkbox, you can define which IP addresses and ports can be used for outgoing connections.
 

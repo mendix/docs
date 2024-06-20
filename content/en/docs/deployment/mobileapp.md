@@ -102,6 +102,6 @@ For Android please follow the instructions in the [Building Your Android App Loc
 
 ## 5 Read More
 
-* [Deploy and Manage Guide](/developerportal/deploy/)
+* [Deployment](/deployment/)
 * [Offline Reference Guide](/refguide/offline-first/)
 * [Apache Cordova Reference Config.xml](https://cordova.apache.org/docs/en/latest/config_ref/)

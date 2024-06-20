@@ -15,7 +15,7 @@ cascade:
 
 The **Deployment** category in the **Apps** navigation pane provides access to built-in deployment and monitoring tools for your app.
 
-The interface and functionality of most of these pages vary depending on where your app is deployed; for details about the various deployment options, see the [Deployment](/developerportal/deploy/) section.
+The interface and functionality of most of these pages vary depending on where your app is deployed; for details about the various deployment options, see the [Deployment](/deployment/) section.
 
 * [Environments](/developerportal/deploy/environments/)
 * [Pipelines](/developerportal/deploy/pipelines/)

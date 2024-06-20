@@ -160,6 +160,6 @@ If the `/ws/` path should still be reachable from the office location without us
 ## 5 Read More
 
 * [Certificates](/developerportal/deploy/certificates/)
-* [Deployment](/developerportal/deploy/)
+* [Deployment](/deployment/)
 * [Environments](/developerportal/deploy/environments/)
 * [Environment Details](/developerportal/deploy/environments-details/)

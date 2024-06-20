@@ -66,6 +66,6 @@ For example, you can use one instance with 2 GiB RAM. The remaining 6 GiB in you
 
 ## 5 Read More
 
-* [Deployment](/developerportal/deploy/)
+* [Deployment](/deployment/)
 * [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/)
 * [About Mendix Cloud](/developerportal/deploy/mxcloudv4/)

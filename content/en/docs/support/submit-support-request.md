@@ -70,7 +70,7 @@ To submit a request with Mendix Support, follow these steps:
 4. When you select **Request for Information** or **Incident**, you then have to select the **Related Component** for the issue. The correct component will allow Mendix Support to help you more effectively. In some cases, you can also select the **Related Sub-Component** for your issue. Selecting the related sub-component is not required, but it will allow Mendix Support to help you more quickly and accurately. There are two main options for the related component:
     * **App** – select one of these components when you have issues with designing, developing, building, deploying, or operating one of your own apps built on the Mendix Platform:
         * **App - Development** – issues/questions regarding developing your app (for example, with your [domain model](/refguide/domain-model/), [widgets](/refguide/data-widgets/), or [logic](/refguide/application-logic/))
-        * **App - Deployment** – issues/questions regarding deploying your app (for example, when the app cannot be [deployed](/developerportal/deploy/) or will not start)
+        * **App - Deployment** – issues/questions regarding deploying your app (for example, when the app cannot be [deployed](/deployment/) or will not start)
         * **App - Operations** – issues/questions regarding running a deployed app (for example, when the app crashes or shows errors in the [log](/developerportal/operate/logs/))
         * **App - Add-on** – issues/questions regarding one of the Mendix add-ons (such as [ATS](/appstore/partner-solutions/ats/), [APD](/appstore/partner-solutions/apd/), or [AQM](/addons/aqm-addon/))
         * **App - Security** - issues/questions regarding the security of your Mendix app

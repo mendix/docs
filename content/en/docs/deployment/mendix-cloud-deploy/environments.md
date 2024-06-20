@@ -169,7 +169,7 @@ Once a service has been enabled for an app, Technical Contacts can selectively e
 
 ## 7 Read More
 
-* [Deployment](/developerportal/deploy/)
+* [Deployment](/deployment/)
 * [Environment Details](/developerportal/deploy/environments-details/)
 * [How to Receive Environment Status Alerts](/developerportal/operate/receive-alerts/)
 * [How to Restrict Access for Incoming Requests](/developerportal/deploy/access-restrictions/)

@@ -103,5 +103,4 @@ You can reactivate your 2FA by triggering any action that requires 2FA. Then, se
 
 ## 4 Read More
 
-* [Deploy](/developerportal/deploy/)
 * [Settings](/developerportal/settings/)

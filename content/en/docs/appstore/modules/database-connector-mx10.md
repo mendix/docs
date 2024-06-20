@@ -13,6 +13,8 @@ Connect to Microsoft SQL, MySQL, PostgreSQL, Oracle, and Snowflake (Beta support
 
 {{% alert color="info" %}}
 The External Database Connector is supported for [Studio Pro 10.6](/releasenotes/studio-pro/10.6/) and above.
+
+Versions 2.0.1 and below are not compatible with Studio Pro version 10.12 and above. You will need to upgrade to version 3.0.0 or above.
 {{% /alert %}}
 
 ### 1.1 Typical Use Cases

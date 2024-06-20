@@ -65,17 +65,16 @@ To find your existing API key or to request a new key for your app as an existin
 
 To send your runtime information to Datadog, you need to provide the Datadog API key to your environment. To do so, follow these steps:
 
-1. Go to the **Environments** page of your app in the Developer Portal.
-2. Click **Details** on the environment you wish to monitor with Datadog. 
-3. Switch to the **Runtime** tab.
-4. Click **Add** in the **Custom Environment Variables** section.
-5. In the **Name** field, select **DD_API_KEY**.
-
+1. From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of your app.
+1. Click **Details** on the environment you wish to monitor with Datadog. 
+1. Switch to the **Runtime** tab.
+1. Click **Add** in the **Custom Environment Variables** section.
+1. In the **Name** field, select **DD_API_KEY**.
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/metrics/datadog-metrics/environment-variable-dd-api-key.png" alt="Drop-down list containing custom environment variable names" width=400 class="no-border" >}}
 
-6. In the **Value** field, enter the Datadog API key that you obtained in the [Datadog API Key](#datadog-api-key) section, above.
-7. Click **Save**.
-8. Return to the **Environments** page for your app and **Deploy** or **Transport** your app into the selected environment.
+1. In the **Value** field, enter the Datadog API key that you obtained in the [Datadog API Key](#datadog-api-key) section, above.
+1. Click **Save**.
+1. Return to the **Environments** page for your app and **Deploy** or **Transport** your app into the selected environment.
 
     {{% alert color="warning" %}}To start sending data to Datadog, you must redeploy your app and then restart it. Just restarting the app is not sufficient because additional dependencies need to be included.{{% /alert %}}
     
@@ -148,12 +147,12 @@ Mendix recommends using the following tags:
 
 To set these tags, do the following:
 
-1. Go to the **Environments** page of your app in the Developer Portal.
-2. Click **Details** on an environment you are monitoring with Datadog. 
-3. Switch to the **Tags** tab.
+1. From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of your app.
+1. Click **Details** on an environment you are monitoring with Datadog. 
+1. Switch to the **Tags** tab
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/metrics/datadog-metrics/set-tags.png" alt="Example metric showing tags in Datadog" class="no-border" >}}
-4. Click **Add** and type in a string to be sent to Datadog as a tag.
-5. Restart your app.
+1. Click **Add** and type in a string to be sent to Datadog as a tag.
+1. Restart your app.
 
 Setting these values for your app causes all metrics from this environment of your app to have these tags. For example, the tags for `mx.microflow.time.avg` for this set of metrics include `app:customermanagement` and `env:accp`.
 

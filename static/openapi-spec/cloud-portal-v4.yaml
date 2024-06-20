@@ -36,7 +36,7 @@ paths:
         '500':
           $ref: '#/components/responses/error500'
       operationId: get-apps
-      description: 'Get an array of all applications for the authorized user. This API call does not return the same results as you can see within the Developer Portal. It includes all licensed and free apps on the Mendix Cloud. Free apps include all apps which have been created or edited in Studio Pro, even if they have then been deployed to a different cloud such as Mendix for Private Cloud.'
+      description: 'Get an array of all applications for the authorized user. This API call does not return the same results as you can see within the Mendix Portal. It includes all licensed and free apps on the Mendix Cloud. Free apps include all apps which have been created or edited in Studio Pro, even if they have then been deployed to a different cloud such as Mendix for Private Cloud.'
   '/apps/{appId}':
     get:
       tags:
@@ -58,7 +58,7 @@ paths:
         '500':
           $ref: '#/components/responses/error500'
       operationId: get-app
-      description: 'Get information about a single app. This API call does not return the same results as you can see within the Developer Portal. It includes all licensed and free apps on the Mendix Cloud. Free apps include all apps which have been created or edited in Studio Pro, even if they have then been deployed to a different cloud such as Mendix for Private Cloud.'
+      description: 'Get information about a single app. This API call does not return the same results as you can see within the Mendix Portal. It includes all licensed and free apps on the Mendix Cloud. Free apps include all apps which have been created or edited in Studio Pro, even if they have then been deployed to a different cloud such as Mendix for Private Cloud.'
     parameters:
       - $ref: '#/components/parameters/appId'
     patch:
@@ -329,7 +329,7 @@ components:
   requestBodies: {}
   schemas:
     app:
-      description: An app is identified by a unique App ID. This can be seen on the **General** page of the app in the Developer Portal. Additional information is added to manage the deployment of the app to the Mendix Cloud.
+      description: An app is identified by a unique App ID. This can be seen on the **General** page of the app in the Mendix Portal. Additional information is added to manage the deployment of the app to the Mendix Cloud.
       type: object
       title: app
       properties:
@@ -381,7 +381,7 @@ components:
       title: appId
       format: uuid
       example: c533ee0b-f7db-4e62-868b-1192d392ccec
-      description: The unique App ID of the app. This can be seen on the **General** page of the app in the Developer Portal. It is a UUID format.
+      description: The unique App ID of the app. This can be seen on the **General** page of the app in the Mendix Portal. It is a UUID format.
     error:
       description: An error object explaining what happened.
       type: object

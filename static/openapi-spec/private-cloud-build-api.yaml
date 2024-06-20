@@ -203,7 +203,7 @@ components:
       title: appId
       format: uuid
       example: c533ee0b-f7db-4e62-868b-1192d392ccec
-      description: 'The ID of a Mendix App. In the Developer Portal, this is shown as the App ID and it is a UUID format.'
+      description: 'The ID of a Mendix App. In the Mendix Portal, this is shown as the App ID and it is a UUID format.'
     error:
       type: object
       properties:
@@ -468,7 +468,7 @@ components:
         type: string
         format: uuid
         example: c533ee0b-f7db-4e62-868b-1192d392ccec
-      description: 'The ID of a Mendix App. In the Developer Portal, this is shown as the App ID and it is a UUID format.'
+      description: 'The ID of a Mendix App. In the Mendix Portal, this is shown as the App ID and it is a UUID format.'
     packageId:
       name: packageId
       in: path

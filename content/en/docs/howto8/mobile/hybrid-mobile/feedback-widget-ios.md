@@ -12,11 +12,11 @@ When you first start a Mendix hybrid mobile app for iOS, the feedback button fro
 
 This how-to teaches you how to do the following:
 
-* Configure your iOS hybrid mobile app to allow access to the Developer Portal [feedback management](/developerportal/app-insights/feedback/) functionality
+* Configure your iOS hybrid mobile app to allow access to th [feedback management](/developerportal/app-insights/feedback/) functionality in **Apps**.
 
 ## 2 Prerequisites
 
-* Ensure that you have access to the Developer Portal and the **Custom Cordova configuration** section on the **Mobile App** page (accessible via **DEPLOY**)
+* Ensure that you have access to the Mendix Portal and the **Custom Cordova configuration** section on the **Mobile App** page (accessible via **DEPLOY**)
 * Alternatively, you can make this change directly in the *config.xml* file, if you have that available
 
 ## 3 Extending the config.xml File

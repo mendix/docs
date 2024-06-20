@@ -1,5 +1,5 @@
 ---
-title: "Private Mendix Platform Guide"
+title: "Private Mendix Platform"
 url: /private-mendix-platform/
 description: "Presents documentation on configuring and using the Private Mendix Platform."
 weight: 42

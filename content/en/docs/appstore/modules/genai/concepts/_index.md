@@ -53,6 +53,10 @@ When executed well you can use Prompt Engineering, RAG and ReAct to build many u
 
 ### 3.1 Bedrock Retrieval Augmented Generation
 
+The knowledge of LLMs is limited to the data they have been trained on. For use cases where the LLM needs to be aware of relevant private data, such as enterprise data, Bedrock provides an easy way to leverage the RAG technique. Bedrock RAG is based on the concept of [knowledge bases for Amazon Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html), which allows you to create a repository of private information that can be used to improve an LLM's response.
+
+The easiest way to use Retrieval Augmented Generation in your Mendix application is the [Retrieve And Generate](/appstore/modules/aws/amazon-bedrock/#retrieve-and-generate) operation available in the Amazon Bedrock Connector, which provides an end-to-end flow, that includes extracting relevant information from the knowledge base, augmenting the user prompt and generating a response based on the retrieved information.
+
 ### 3.2 Azure AI Search
 
 ### 3.3 PgVector Knowledge Base
@@ -62,4 +66,8 @@ When executed well you can use Prompt Engineering, RAG and ReAct to build many u
 ## 5 Agents
 
 ### 5.1 Connect to a Bedrock Agent
+
+Agents for Amazon Bedrock provides the ability to integrate autonomous agents into your application. A Bedrock agent can orchestrate interactions between LLM's, various data sources and user conversations. In addtion, agents can be connected to a knowledge base to perform RAG and autonomously take actions by calling APIs that it has been equipped with.
+
+Connecting to an agent from a Mendix application can easily be done via the Amazon Bedrock Connector. For detailed instructions please refer to the [Connector documentation](/appstore/modules/aws/amazon-bedrock).
 

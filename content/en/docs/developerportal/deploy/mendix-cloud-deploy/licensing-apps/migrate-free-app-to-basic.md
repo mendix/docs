@@ -23,7 +23,6 @@ Before starting this how-to, make sure that the following prerequisites are met:
 
 * You have received confirmation that your Basic node is ready
 * You are the [Technical Contact](/developerportal/general/app-roles/#technical-contact) of the app
-* [Two-factor authentication](/developerportal/deploy/two-factor-authentication/) is set up on your account
 
 ## 3 Migrating to Mendix Basic
 
@@ -98,4 +97,4 @@ The final step is restoring your data. You must do this after you've deployed yo
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/migrate-free-app-to-basic/restore-backup.png" alt="" width=75% class="no-border" >}}
 
-6. Go to the **Environments** page and start your app. Now it is ready for use.
+6. Go to **Environment Details** ({{% icon name="notes-paper-edit" %}}) and start your application. Now it is ready for use.

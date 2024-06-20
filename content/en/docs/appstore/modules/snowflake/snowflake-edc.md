@@ -17,6 +17,7 @@ This how-to describes the steps required to enable your app to use the External 
 To configure connect your Mendix application to Snowflake with the External Database connector, follow these steps:
 
 1. [Install the External Database connector](/appstore/modules/external-database-connector/#installation).
+If using Studio Pro 10.12, please make sure to use latest version 3.0.0 [External Database Connector](https://marketplace.mendix.com/link/component/219862)
 2. Run the [Connect to Database wizard](/appstore/modules/external-database-connector/#configuration) and select **Snowflake** as the database type.
 3. Provide a name for the database connection document.
 4. Provide connection details that can be used to access Snowflake. You can either provide a connection string, or enter the connection details. If you select connection details, a constant with the connection string will be created based on your connection details.

@@ -790,11 +790,11 @@ The `ObservationRetrievedReference` holds information about a sources cited for 
 
 Activities define the actions that are executed in a microflow or a nanoflow. For more information, see [Activities](/refguide/activities/).
 
-#### 4.2.1 GenAICommons-based operations
+#### 4.2.1 GenAICommons-Based Operations
 
-##### 4.2.1.1 ChatCompletions (without history) {#chat-completions-without-history}
+##### 4.2.1.1 ChatCompletions (Without History) {#chat-completions-without-history}
 
-The `ChatCompletions (without history)` activity can be used for any conversations with Anthropic Claude or Amazon Titan. There is no option to keep the concersation history in mind. This operation corresponds to the *ChatCompletions_WithoutHistory_AmazonBedrock* microflow.
+The `ChatCompletions (without history)` activity can be used for any conversations with Anthropic Claude or Amazon Titan. There is no option to keep the concersation history in mind. This operation corresponds to the **ChatCompletions_WithoutHistory_AmazonBedrock** microflow.
 
 The input and output for this service are shown in the table below:
 
@@ -802,10 +802,9 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `Userprompt (string)`, `AmazonBedrockConnection`, `GenAICommons.Request (optional)`, `FileCollection (optional)`| `GenAICommons.Response`|
 
+##### 4.2.1.2 ChatCompletions (With History) {#chat-completions-with-history}
 
-##### 4.2.1.2 ChatCompletions (with history) {#chat-completions-with-history}
-
-The `ChatCompletions (with history)` activity can be used for any conversations with Anthropic Claude or Amazon Titan. It is possible for it to keep the conversation history in mind. This operation corresponds to the *ChatCompletions_WithHistory_AmazonBedrock* microflow.
+The `ChatCompletions (with history)` activity can be used for any conversations with Anthropic Claude or Amazon Titan. It is possible for it to keep the conversation history in mind. This operation corresponds to the **ChatCompletions_WithHistory_AmazonBedrock** microflow.
 
 The input and output for this service are shown in the table below:
 
@@ -815,25 +814,11 @@ The input and output for this service are shown in the table below:
 
 For Anthropic Claude, the request must be associated to an AnthropicClaudeRequest_Extension object which can be created with the [Request: Add Anthropic Claude Request Extension](#add-claude-extension) operation. In order to pass a conversation history to the flow, the list of previous messages must be associated to the input request. This operation can easily be replaced or combined with the ChatCompletions (with history) operation inside of the [OpenAI connector](https://marketplace.mendix.com/link/component/220472). 
 
-
-###### Anthropic Claude version 3 models capabilities
-
 Some capabilities of the chat completions operations are currently only available when using Anthropic Claude version 3 models:
 
-**1. Function Calling:**
+* **Function Calling** - This operation supports the *function calling* (or *tool use*) capability of Anthropic Claude version 3 models using the [Claude Messages API](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters-anthropic-claude-messages.html). You can use function calling in all chat completions operations using Anthropic Claude version 3 models by adding a `ToolCollection` with a `Tool` via the [Tools: Add Function to Request](/appstore/modules/genai/genai-commons/#add-function) operation. For more information about function calling, see [Function Calling Documentation](/appstore/modules/genai/concepts/function-calling).
 
-This operation supports the function calling (or tool use) capability of Anthropic Claude version 3 models using the [Claude Messages API](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters-anthropic-claude-messages.html).
-
-You can use function calling in all chat completions operations using Anthropic Claude version 3 models by adding a `ToolCollection` with a `Tool` via the [Tools: Add Function to Request](/appstore/modules/genai/genai-commons/#add-function) operation.
-
-For more information about function calling, please refer to the [Function Calling Documentation](/appstore/modules/genai/concepts/function-calling).
-
-**2. Vision:**
-
-This operation supports the vision capability of Anthropic Claude version 3 models. With vision you can send image prompts to Claude, next to the traditional text prompts. 
-
-You can use vision by adding a `FileCollection` with a `File` via the [Files: Initialize Collection with File](/appstore/modules/genai/genai-commons/#initialize-filecollection) or the [Files: Add to Collection](/appstore/modules/genai/genai-commons/#add-file) operation.
-
+* **Vision** - This operation supports the *vision* capability of Anthropic Claude version 3 models. With vision, you can send image prompts to Claude, in addition to the traditional text prompts. You can use vision by adding a `FileCollection` with a `File` with the [Files: Initialize Collection with File](/appstore/modules/genai/genai-commons/#initialize-filecollection) or the [Files: Add to Collection](/appstore/modules/genai/genai-commons/#add-file) operation.
 
 ##### 4.2.1.3 RetrieveAndGenerate {#retrieve-and-generate}
 
@@ -846,21 +831,19 @@ The input and output for this service are shown in the table below:
 
 The request object passed to this operation must include a [KnowledgeBaseTool](#knowledge-base-tool) object, which can be added to the request using the [Request: Add Knowledge Base Tool to Collection](#add-knowledge-base-tool) operation.
 
-
 ###### Chatting with History
 
-The `RetrieveAndGenerate` operation only allows a single user message to be part of the request. Unlike the `ChatCompletions` operation it is not supported to send a history of messages to the model. 
+The `RetrieveAndGenerate` operation only allows a single user message to be part of the request. Unlike the `ChatCompletions` operation, it is not supported to send a history of messages to the model. 
 
-The history can be enabled using the `SessionId` parameter on the [RetrieveAndGenerateRequest_Extension](#retrieve-and-generate-request-extension) entity. By reusing the same `SessionId` value the model will run in the context of the session. 
+The history can be enabled using the `SessionId` parameter on the [RetrieveAndGenerateRequest_Extension](#retrieve-and-generate-request-extension) entity. By reusing the same `SessionId` value, the model will run in the context of the session. 
 
-
-#### 4.2.2 GenAI commons helper operations
+#### 4.2.2 GenAI Commons Helper Operations
 
 ##### 4.2.2.1 Create Amazon Bedrock Connection {#create-amazon-bedrock-connection}
 
 Use this microflow to create a new [Amazon Bedrock Connection](#amazon-bedrock-connection) object.
 
-This operation corresponds to the *AmazonBedrockConnection_Create* microflow.
+This operation corresponds to the **AmazonBedrockConnection_Create** microflow.
 
 | Input | Output |
 | --- | --- |
@@ -870,7 +853,7 @@ This operation corresponds to the *AmazonBedrockConnection_Create* microflow.
 
 Use this microflow to add a new [AnthropicClaudeRequest_Extension](#anthropic-claude-request-extension) object to your request. This is useful to include parameters that are unique to Anthropic Claude models.
 
-This operation corresponds to the *AnthropicClaudeRequest_Extension_Create* microflow.
+This operation corresponds to the **AnthropicClaudeRequest_Extension_Create** microflow.
 
 | Input | Output |
 | --- | --- |
@@ -880,7 +863,7 @@ This operation corresponds to the *AnthropicClaudeRequest_Extension_Create* micr
 
 Use this microflow to add a new [KnowledgeBaseTool](#knowledge-base-tool) object to your request. This is useful for adding additional parameters when using the [Retrieve And Generate](#retrieve-and-generate) operation.
 
-This operation corresponds to the *RetrieveAndGenerateRequest_Extension_Create* microflow.
+This operation corresponds to the **RetrieveAndGenerateRequest_Extension_Create** microflow.
 
 | Input | Output |
 | --- | --- |
@@ -890,13 +873,13 @@ This operation corresponds to the *RetrieveAndGenerateRequest_Extension_Create* 
 
 Use this microflow to add a new [RetrieveAndGenerateRequest_Extension](#retrieve-and-generate-request-extension) object to your request. This is required in order to use the [Retrieve And Generate](#retrieve-and-generate) operation successfully.
 
-This operation corresponds to the *Request_AddKnowledgeBaseTool* microflow.
+This operation corresponds to the **Request_AddKnowledgeBaseTool** microflow.
 
 | Input | Output |
 | --- | --- |
 | `GenAICommons.Request (object)`, `KmsKeyArn (string, optional)`, `SessionId (string, optional)`, `Enum_RetrieveAndGenerateType (enumeration, optional)` | `RetrieveAndGenerateRequest_Extension (object)` |
 
-#### 4.2.3 Other operations
+#### 4.2.3 Other Operations
 
 ##### 4.2.3.1 ListFoundationModels {#list-foundation-models}
 

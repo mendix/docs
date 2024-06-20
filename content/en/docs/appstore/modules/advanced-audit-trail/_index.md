@@ -11,7 +11,7 @@ aliases:
 
 [Advanced Audit Trail](https://marketplace.mendix.com/link/component/120943) allows you to trace changes and conduct infinitely scalable, fully indexed historical searches through your Mendix app data. Once configured, the solution automatically creates audit snapshots of selected entities. These snapshots are sent to centralized long-term data storage, supporting complex search queries without impacting regular app performance.
 
-Advanced Audit Trail employs a managed software stack on top of Kafka and OpenSearch to deliver the service. Kafka is used for long-term immutable data storage for audit data, and OpenSearch is used to index audit data. You can find an integration diagram below:
+Advanced Audit Trail employs a managed software stack on top of Kafka and OpenSearch to deliver the service. Kafka is used for long-term immutable data storage of audit data, and OpenSearch is used to index audit data. You can find an integration diagram below:
 
 {{< figure src="/attachments/appstore/modules/advanced-audit-trail/aat_integration_diagram.png" class="no-border" >}}
 
@@ -21,13 +21,13 @@ The Advanced Audit Trail solution distinguishes itself from the [Audit Trail](/a
 
 ### 1.1 Typical Use Cases
 
-* Tracks changes to data (who made what changes, at what time, and in what context) to ensure your operation is GxP and FDA CFR 21 Part 11 compliant, which is required for medical interaction platforms as well as for processes such as credit transactions and internal IT audits for user access
-* Allows the developer to easily configure tracking changes per entity, without requiring any changes to domain models
+* Tracks changes to data (who made what changes, at what time, and in what context) to assist you in developing apps complaint with GxP and FDA CFR 21 Part 11. This compliance is required for medical interaction platforms as well as for processes such as credit transactions and internal IT audits for user access
+* Allows the developer to easily configure tracking changes per entity
 * Helps the developer debug why an object is in a specific stage
 
 ### 1.2 Features
 
-* Records the timestamp, the old value and the changed value, the microflow that triggered the change, whether the object was created, modified, or deleted, the user who made the change, and their user role
+* Records the timestamp, the old value and the new value, the microflow that triggered the change, whether the object was created, modified, or deleted, the user who made the change, and their user role
 * Supports viewing all changes that happened in the same microflow, which helps the auditor understand the context better
 * Captures the checksum, file size, and name of files that can be used for validation
 * Supports scheduled events that regularly send the stored snapshots to an external system
@@ -55,7 +55,7 @@ You need to install [Atlas Core](https://marketplace.mendix.com/link/component/1
 
 ### 2.1 Starting a Subscription {#obtain-license-key}
 
-Advanced Audit Trail is a premium Mendix product that requires a subscription fee. Although you can download the Advanced Audit Trail modules for free from the [Mendix Marketplace](https://marketplace.mendix.com/link/component/120943), you need to purchase a subscription to use the service. To start a subscription, contact your Customer Success Manager (CSM) or fill out the contact form on the [Marketplace](https://marketplace.mendix.com/link/component/120943).
+Advanced Audit Trail is a premium Mendix product that comes with a subscription fee. Although you can download the Advanced Audit Trail modules for free from the [Mendix Marketplace](https://marketplace.mendix.com/link/component/120943), you need to purchase a subscription to use the service. To start a subscription, contact your Customer Success Manager (CSM) or fill out the contact form on the [Marketplace](https://marketplace.mendix.com/link/component/120943).
 
 ### 2.2 Installing the Components in Your App
 

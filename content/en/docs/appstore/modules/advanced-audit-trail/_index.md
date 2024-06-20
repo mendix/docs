@@ -194,4 +194,4 @@ The table below provides a detailed comparison between the Advanced Audit Trail 
 
 ## 6 Read More
 
-* [Consuming Add-on Modules and Solutions](/refguide/consume-add-on-modules-and-solutions/)
+[Consuming Add-on Modules and Solutions](/refguide/consume-add-on-modules-and-solutions/)

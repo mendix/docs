@@ -22,7 +22,7 @@ A Large Language Model (LLM) is an advanced neural network trained on large amou
 - **Conversational Agents:** Power chatbots and virtual assistants to interact naturally with users.
 - **Data generation:** Generate Mendix objects by combining JSON generation & [Import mappings](/refguide/import-mapping-action/).
 
-Models such as Anthropic Claude and GPT-4o can also use Images as input. This will allow you to ask questions on images for use cases such as Object Recognition, Image to Text (OCR) and Validating 
+Models such as [Anthropic Claude](/appstore/modules/aws/amazon-bedrock/#chat-completions-with-history) and [GPT-4o](/appstore/modules/openai-connector/#chatcompletions-vision) can also use (one or multiple) Images as input. This will allow you to ask questions on images for use cases such as Object Recognition, Image to Text (OCR) and Validating whether an image is as intended.
 
 ### 1.2 What is an LLM Not?
 
@@ -47,27 +47,53 @@ When executed well you can use Prompt Engineering, RAG and ReAct to build many u
 
 ## 2 Prompt engineering
 
-[Prompt engineering](/appstore/modules/openai-connector/prompt-engineering/) is the activity of designing the input text that will be send to the LLM. This typically contains input from the end-user, enriched with instructions from the developer / administrator. With Prompt engineering you can guide the model to generate accurate, applicable and coherent responses. The quality of your prompts is of direct influence on the quality of the response.
+Prompt engineering is the activity of designing the input text that will be send to the LLM. This typically contains input from the end-user, enriched with instructions from the developer / administrator. A prompt typically contains:
+* instructions on what the model should do,
+* context & information that the model needs to follow the instructions,
+* the relevant input data (from the end-user or passed from a microflow),
+* the requested output structure (e.g. tone of voice or a JSON format).
+
+With prompt engineering you can guide the model to generate accurate, applicable and coherent responses. The quality of your prompts is of direct influence on the quality of the response. Learn more about [prompt engineering here](/appstore/modules/genai/concepts/prompt-engineering/).
 
 ## 3 Ground in data with Retrieval Augmented Generation (RAG)
 
+The knowledge of LLMs is limited to the data they have been trained on. For use cases where the LLM needs to be aware of relevant private enterprise data you can use the Retrieval Augmented Generation (RAG) pattern. This allows you to provide the LLM with large amounts of additional context to a request, without making the prompts extremely lengthy. To do RAG you need to setup a knowledge base that contains the data. When evaluating the actual user prompt, the basic pattern of RAG consists of:
+
+1. Based on the user input, **retrieve** relevant data from the knowledge base,
+2. **Augment** the prompt with the retrieved data,
+3. **Generate** the response from the LLM.
+
 ### 3.1 Bedrock Retrieval Augmented Generation
 
-The knowledge of LLMs is limited to the data they have been trained on. For use cases where the LLM needs to be aware of relevant private data, such as enterprise data, Bedrock provides an easy way to leverage the RAG technique. Bedrock RAG is based on the concept of [knowledge bases for Amazon Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html), which allows you to create a repository of private information that can be used to improve an LLM's response.
+Amazon Bedrock provides capabilities for the RAG pattern out of the box with the concept of [knowledge bases for Amazon Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html), which allows you to create a repository of private information that can be used to improve an LLM's response. This knowledge base is based on files (e.g. manuals or historical documents) in an S3 bucket. 
 
-The easiest way to use Retrieval Augmented Generation in your Mendix application is the [Retrieve And Generate](/appstore/modules/aws/amazon-bedrock/#retrieve-and-generate) operation available in the Amazon Bedrock Connector, which provides an end-to-end flow, that includes extracting relevant information from the knowledge base, augmenting the user prompt and generating a response based on the retrieved information.
+After setting up the knowledge base, use the [Retrieve And Generate](/appstore/modules/aws/amazon-bedrock/#retrieve-and-generate) operation that is available in the Amazon Bedrock Connector, which provides an end-to-end flow, that includes extracting relevant information from the knowledge base, augmenting the user prompt and generating a response based on the retrieved information.
 
-### 3.2 Azure AI Search
+ See the [Amazon Bedrock Showcase App](https://marketplace.mendix.com/link/component/223535) for more details on how to setup a knowledge base and implement this. In the [AI Bot Starter App]() a configuration is provided to create an AI Chatbot that includes the knowledge base without any additional development.
 
-### 3.3 PgVector Knowledge Base
+<!-- TODO Update AI BOT STARTER APP link -->
+
+### 3.2 PgVector Knowledge Base with OpenAI or Bedrock
+
+You can also use the [PgVector Knowledge Base module](/appstore/modules/pgvector-knowledge-base/) in combination with an OpenAI or Bedrock embeddings model, to maintain and use a knowledge base. Index and store your own knowledge in a more dynamic way, since you can use it for storing chunks of texts, or contents of Mendix objects.
+
+You can read further on [how to implement this here](/appstore/modules/openai-connector/rag-example-implementation/). The [OpenAI Showcase App](https://marketplace.mendix.com/link/component/220475) also contains examples on:
+* How to ask questions on a large piece of text.
+* How to use a multi-lingual database of historical tickets & resolutions to propose resolutions to the users based on historical input.
 
 ## 4 Interact with your application through the ReAct pattern (function calling)
+
+As a second way to provide the LLM additional information and capabilities, you can use function calling. With Function calling you can make specific microflows available to the LLM. While evaluating the prompt it can "decide" that it needs to execute a particular microflow. The Mendix Application will execute this microflow so the LLM can evaluate the prompt with the additional information from the prompt. Since this microflow runs in the context of the user, you can make sure that it only shows data that is relevant for the current user. You can also use it to execute actions on behalf of the user, or interact with page that the user is looking at.
+
+[Read more on this pattern](/appstore/modules/openai-connector/function-calling/) or download the [OpenAI Showcase App](https://marketplace.mendix.com/link/component/220475) for an example of allowing an LLM to answer a question like _What is the status of ticket 42?_ by providing it a microflow like _GetInformationForTicketID_.
+
+This pattern is supported both by [OpenAI](https://platform.openai.com/docs/guides/function-calling) and [Bedrock in the Anthropic Claude v3 models](https://docs.anthropic.com/en/docs/tool-use).
 
 ## 5 Agents
 
 ### 5.1 Connect to a Bedrock Agent
 
-Agents for Amazon Bedrock provides the ability to integrate autonomous agents into your application. A Bedrock agent can orchestrate interactions between LLM's, various data sources and user conversations. In addtion, agents can be connected to a knowledge base to perform RAG and autonomously take actions by calling APIs that it has been equipped with.
+Agents for Amazon Bedrock provides the ability to integrate autonomous agents into your application. A [Bedrock Agent](https://aws.amazon.com/bedrock/agents/) can orchestrate interactions between LLM's, various data sources and user conversations. In addtion, agents can be connected to a knowledge base to perform RAG and autonomously take actions by calling APIs that it has been equipped with.
 
 Connecting to an agent from a Mendix application can easily be done via the Amazon Bedrock Connector. For detailed instructions please refer to the [Connector documentation](/appstore/modules/aws/amazon-bedrock).
 

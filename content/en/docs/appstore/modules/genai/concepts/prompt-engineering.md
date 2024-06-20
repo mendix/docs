@@ -8,13 +8,13 @@ description: "Describes prompt engineering"
 
 ## 1 Introduction
 
-Prompt engineering is the action of designing the input text that will be send to the LLM. This typically contains input from the end-user, enriched with instructions from the developer / administrator. A prompt typically contains:
+Prompt engineering is the action of designing the input text that will be send to the model. This typically contains input from the end-user, enriched with instructions from the developer / administrator. A prompt typically contains:
 * instructions on what the model should do,
 * context & information that the model needs to follow the instructions,
 * the relevant input data (from the end-user or passed from a microflow),
 * the requested output structure (e.g. tone of voice or a JSON format).
 
-Prompt engineering is very important to instruct the LLM to do what you would like it to do. It's therefore the first step to take when creating an AI Bot. When implementing patterns like RAG and ReAct, you can still change the behavior of the system by modifying the prompt. You need to explain the system how to use the knowledge and functions that is provided, otherwise it might ignore it, or act in a different way.
+Prompt engineering is very important to instruct the model to do what you would like it to do. It's therefore the first step to take when creating an AI Bot. When implementing patterns like RAG and ReAct, you can still change the behavior of the system by modifying the prompt. You need to explain the system how to use the knowledge and functions that is provided, otherwise it might ignore it, or act in a different way.
 
 ## 2 Typical components of a prompt
 
@@ -77,13 +77,13 @@ Make it exciting and focused on developers.
 
 Tip: if you're unsure about whether a prompt is clear enough, ask a co-worker to interpret the prompt and see if they would follow the prompt and reach your desired outcome.
 
-### 4.2 Explicitly allow the LLM to think
+### 4.2 Explicitly allow the model to think
 
-When you provide the LLM with instructions to reason about a problem and identify the steps needed to solve the problem, it will actually follow those instructions. Instead of relying on the model to come up with the best strategy to solve the problem, it helps to break the larger problem down into smaller steps. As an end result the quality of the output will be higher compared to asking the LLM to come up with the answer right away. 
+When you provide the model with instructions to reason about a problem and identify the steps needed to solve the problem, it will actually follow those instructions. Instead of relying on the model to come up with the best strategy to solve the problem, it helps to break the larger problem down into smaller steps. As an end result the quality of the output will be higher compared to asking the LLM to come up with the answer right away. 
 
-### 4.3 Allow an LLM to say "I don't know"
+### 4.3 Allow the model to say "I don't know"
 
-An LLM will always try to follow the instructions and can therefore come up with a response that might not be what you expect, or worse: made up. In jargon we call this a hallucination. When you include in your system prompt that the LLM can ask for more info, or can respond that it does not know something this will make it more effective. Example components are:
+A model will always try to follow the instructions and can therefore come up with a response that might not be what you expect, or worse: made up. In jargon we call this a hallucination. When you include in your system prompt that the LLM can ask for more info, or can respond that it does not know something this will make it more effective. Example components are:
 ```
 If you are unsure how to respond, say “Sorry, I didn’t get that. Could you rephrase the question or provide more details?”
 ```
@@ -103,7 +103,7 @@ For the current question, please base the answer on the following pieces of info
 </information>
 ```
 
-### 4.4 Define the role the LLM fulfills
+### 4.4 Define the role the model fulfills
 
 You can prime the model by explaining what it does. This will create a bias of the model towards specific reasoning and increase the quality of their answer based on what you expect from the (stereotypical) persona.
 
@@ -150,7 +150,10 @@ Skip the preambule.
 
 ## 5 Learn more
 
-### 5.1 Bedrock & Anthropic Claude
+### 5.1 Showcases
+Check out the [OpenAI](https://marketplace.mendix.com/link/component/220475) and [Bedrock](https://marketplace.mendix.com/link/component/223535) Showcase Apps on the Marketplace to see how you can apply prompt engineering in practice to let a model perform specific tasks.
+
+### 5.2 Bedrock & Anthropic Claude
 
 - [AWS Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-engineering-guidelines.html)
     - [Examples](https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-templates-and-examples.html)
@@ -158,7 +161,7 @@ Skip the preambule.
   - [Prompt Library](https://docs.anthropic.com/en/prompt-library/library)
 - [Prompt Engineering Guide](https://www.promptingguide.ai/)
 
-### 5.2 OpenAI
+### 5.3 OpenAI
 
 - [OpenAI](https://platform.openai.com/docs/guides/prompt-engineering)
     - [Examples](https://platform.openai.com/docs/examples)

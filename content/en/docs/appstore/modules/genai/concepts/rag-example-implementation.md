@@ -11,6 +11,8 @@ description: "Describes the retrieval augmented generation (RAG) example impleme
 
 Retrieval augmented generation (RAG) is a framework for an AI-based search with a private or external knowledge base that combines embeddings-based knowledge retrieval with a text generation model. The starting point will be a collection of data to be considered as the private knowledge base. The final goal is that an end user of the app can ask questions about the data and the assistant responses will only be based on this knowledge base. 
 
+{{% alert color="info" %}}This document describes how to setup RAG with PgVector. When you're interested in using the Bedrock Retrieval Augmented Generation capabilities read more [here](/appstore/modules/genai/concepts/#31-bedrock-retrieval-augmented-generation-rag-bedrock).{{% /alert %}}
+
 ## 2 High-level Flow {#rag-high-level}
 
 The complete technical flow can be split up into the following three steps at a high level:

@@ -11,7 +11,7 @@ The **Insights** page in the Portfolio Management app offers important data and 
 
 ## 2 Active Initiatives per Selection
 
-{{< figure src="/attachments/developerportal/portfolio-management/insights/active-initiatives-per-property.png" >}}
+{{< figure src="/attachments/developerportal/portfolio-management/insights/active-initiatives-per-selection.png" >}}
 
 The bar chart visualizes the distribution of your active initiatives according to the selected view. You can choose to group the initiatives per: **App**, **Department**, **Location**, **Owner**, or **Use Case**.
 

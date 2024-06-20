@@ -1,7 +1,7 @@
 ---
 title: "Deployment"
 url: /developerportal/deploy/
-description: "Describes the Deployment section of the Apps navigation pane: how to deploy Mendix apps to different environments and how to manage those deployments."
+description: "Describes the Deployment section of the Apps navigation pane."
 weight: 10
 no_list: false 
 description_list: true
@@ -13,7 +13,7 @@ cascade:
 
 ## 1 Introduction
 
-The **Deployment** category in the Developer Portal’s navigation pane provides access to built-in deployment and monitoring tools for your app.
+The **Deployment** category in the **Apps** navigation pane provides access to built-in deployment and monitoring tools for your app.
 
 The interface and functionality of most of these pages vary depending on where your app is deployed; for details about the various deployment options, see the [Deployment](/developerportal/deploy/) section.
 

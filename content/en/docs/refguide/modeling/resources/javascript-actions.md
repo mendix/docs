@@ -42,7 +42,7 @@ Parameters pass data to JavaScript actions. For example, if you had a JavaScript
 
 {{< figure src="/attachments/refguide/modeling/resources/javascript-actions/parameter-naming.png" alt="parameter" class="no-border" >}}
 
-In a JavaScript action's **Code** tab, you can see its parameters' values and handle its implementation. Each parameter has a name (1), type (2), category, description (3), return type (4), and required (5):
+In a JavaScript action's **Code** tab, you can see its parameters' values and handle its implementation. Each parameter has **name** (1), **type** (2), **category**, **description** (3), **return type** (4), and **required** (5):
 
 {{< figure src="/attachments/refguide/modeling/resources/javascript-actions/parameter-code.png" alt="parameter code" class="no-border" >}}
 
@@ -81,7 +81,7 @@ For apps with several parameters, descriptions serve as useful reminders of para
 
 #### 2.2.5 Required
 
-If a parameter is set to required, a value should be selected for that parameter in every JavaScript Action Call. In order to make a parameter optional, set 'required' to 'no'. This makes it possible to call the JavaScript action without any value set for the parameter. This can be useful for flexibility and backward compatibility of JavaScript actions.
+If a parameter is set to **Required**, a value must be selected for that parameter in every JavaScript action call. In order to make a parameter optional, set **Required** to **No**. This makes it possible to call the JavaScript action without any value set for the parameter. This can make JavaScript actions more flexible and backwards compatible.
 
 If no argument is provided for an optional parameter, it defaults to `undefined` in the JavaScript action. You can handle an optional parameter within the JavaScript action by checking if it is `undefined`, allowing you to assign a default value or implement custom logic as needed. 
 

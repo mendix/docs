@@ -58,7 +58,7 @@ Embeddings are commonly used for:
 Combine embeddings with text generation capabilities and leverage specific sources of information to create a smart chat functionality tailored to your own knowledge base.
 
 {{% alert color="info" %}}
-See [RAG Example Implementation](/appstore/modules/genai/concepts/rag-example-implementation/) for more information on how to set up a vector database for retrieval augmented generation (RAG). Also, check out our [showcase app](https://marketplace.mendix.com/link/component/220475) for an example implementation.
+For more information on how to set up a vector database, see [Retrieval augmented generation (RAG)](/appstore/modules/genai/concepts/rag-example-implementation/). Also, check out our [showcase app](https://marketplace.mendix.com/link/component/220475) for an example implementation.
 {{% /alert %}}
 
 ### 1.2 Features {#features}
@@ -765,7 +765,7 @@ The following flows may be used in order to construct and handle the required in
 For more inspiration or guidance on how to use those microflows in your logic, Mendix highly recommends downloading the [showcase app](https://marketplace.mendix.com/link/component/220475) from the Marketplace that demonstrates a variety of example use cases.
 
 {{% alert color="info" %}}
-For more information on how to set up a vector database for retrieval augmented generation (RAG), see [RAG Example Implementation](/appstore/modules/openai-connector/rag-example-implementation/).
+For more information on how to set up a vector database, see [Retrieval augmented generation (RAG)](/appstore/modules/genai/concepts/rag-example-implementation/)
 {{% /alert %}}
 
 ## 6 Troubleshooting {#troubleshooting}

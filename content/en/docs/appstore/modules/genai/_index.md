@@ -46,7 +46,7 @@ The main models that we support through our connectors and showcases are:
 | | Amazon Titan Image Generator G1 | Image generation | text | image | |
 | | Amazon Titan Embeddings G1 - Text <br /> Amazon Titan Embedding Text v2 | Embeddings | text | embeddings| |
 | | Anthropic Claude v2.0 <br /> Anthropic Claude v2.1| Chat Completions | text | text |  |
-| | Anthropic Claude v3 Sonnet <br /> Anthropic Claude v3 Haiku  <br /> Anthropic Claude v3 Opus | Chat Completions | text, image | text | Function calling |
+| | Anthropic Claude v3 Sonnet <br /> Anthropic Claude v3.5 Sonnet <br /> Anthropic Claude v3 Haiku  <br /> Anthropic Claude v3 Opus | Chat Completions | text, image | text | Function calling |
 | | Cohere Embed | Embeddings | text | embeddings| |
 
 #### 2.2.1 Connect to other models

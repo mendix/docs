@@ -7,20 +7,8 @@ description: "Describes the Conversational UI marketplace module that assists de
 ---
 
 ## 1 Introduction {#introduction}
-With the Conversational UI module you can create an AI based chat user interface. It contains the needed data model, pages, snippets and building blocks to do so. You can integrate with any LLM and knowledge base to create your own full screen, sidebar or modal chat. It is the basis of our [AI Bot Starter App]() and included in the [Blank GenAI App]().
+With the Conversational UI module you can create an AI based chat user interface. It contains the needed data model, pages, snippets and building blocks to do so. You can integrate with any LLM and knowledge base to create your own full screen, sidebar or modal chat. It integrates with the Atlas framework and the is the basis of our [AI Bot Starter App]() and included in the [Blank GenAI App]().
 <!-- TODO: include links when they become available -->
-
-<!---
-[comment]: <> TODO: 
--refer to AI Bot Starter App as a starting point or
-- the OpenAI Showcase app for examples.
-
--refer to GenAICommons? as dependency and that there are operations that can be useful when implementing Conv.UI?
-
--refer to OpenAI Connector or Bedrock Connector to name the platform supported connectors that make an integration easy?
-
--explain intend
--->
 
 ### 1.1 Typical Use Cases {#use-cases}
 
@@ -179,7 +167,7 @@ The following versions are available and interchangeable:
 * Snippet_ChatContext_ConversationalUI shows both messages (user's and assistant's) on the left side of the container while
 * Snippet_ChatContext_ConversationalUI_Bubbles shows the user's message on the right side and the responses on the left side (similar to commonly known chat apps). The content is placed inside colored cards (bubbles).
 
-If the snippet does not exactly fit into your use case, you can inline the snippet to customize to your needs.
+If the snippet does not exactly fit into your use case, you can [inline the snippet](/refguide/snippet-call/#inline-snippet) to customize to your needs.
 
 #### 4.5.2 Message Snippets {#snippet-messages}
 

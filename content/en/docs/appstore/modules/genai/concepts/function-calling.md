@@ -29,7 +29,7 @@ This automates the following process happening inside the LLM connector (OpenAI 
 
 For more general information on this topic, see [OpenAI: Function Calling](https://platform.openai.com/docs/guides/function-calling) or [Anthropic Claude: Tool Use](https://docs.anthropic.com/en/docs/tool-use).
 
-## 3 Function calling with the GenAI Commons module and the LLM Connectors {#llm-connector}
+## 3 Function Calling with the GenAI Commons Module and the LLM Connectors {#llm-connector}
 
 Both the [OpenAI Connector](/appstore/modules/genai/openai/_index) and [Amazon Bedrock Connector](/appstore/modules/aws/amazon-bedrock) support function calling by leveraging the [GenAI Commons module](/appstore/modules/genai/genai-commons/). In both connectors, function calling is supported for all chat completions operations. All entity, attribute and activity names in this section refer to the GenAI Commons module. 
 
